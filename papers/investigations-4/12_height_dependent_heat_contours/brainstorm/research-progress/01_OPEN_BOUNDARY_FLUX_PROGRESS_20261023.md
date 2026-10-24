@@ -2,7 +2,9 @@
 
 23 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance. Actual recorded model **gpt-6-astra (Codex)**, reasoning effort **max**.
 
-**Current position:** the [selective analytic manuscript][book] incorporates Notes 07–08 and proves the moving-window balance, reference-level cancellation, source-mismatch bounds and an ordered complete theta head–tail formula. The ordered source estimate strictly improves its specified absolute comparator and has quadratic diagonal cancellation. The exact current limit and anchored bounds give finite allowances without derivative floors. Useful height-uniform size, earlier nonreal discrimination, improved backward width and new simplicity conclusions remain open. [Separate same-model internal review][book-review]; no specialist review.
+**Current program routing, 23 October 2026:** the [new research overview](../research-overview/02_ANALYTIC_RH_TO_SIMPLICITY_PROGRAM_20261023.md) and [SIMP register](02_ANALYTIC_RH_TO_SIMPLICITY_PROGRESS_20261023.md) govern the flexible search for the strongest analytic RH-to-simplicity result. This file remains the sole owner of OBF-01–06. Its earlier next-session instructions are historical component guidance, superseded as the overall agenda by the new overview. No OBF completion status changes in this planning update. For Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**.
+
+**Current position:** the [selective analytic manuscript][book] incorporates Notes 07–08 and proves the moving-window balance, reference-level cancellation, source-mismatch bounds and an ordered complete theta head–tail formula. The ordered source estimate strictly improves its specified absolute comparator and has quadratic diagonal cancellation. The exact current limit and anchored bounds give finite allowances without derivative floors. Useful height-uniform size for the full resource, earlier nonreal discrimination and new simplicity conclusions remain open. Note 13 now improves the exterior Euler-anchor width alone; see the update below. [Separate same-model internal review][book-review]; no specialist review.
 
 **Analytic goals govern the program; numerics are supporting work.** This is the sole status register for **OBF-01–06** in the [new overview][overview]. Existing HDC task status remains in [Investigation 12's register][hdc-register]. This register does not replace the earlier pair-spectrum program or duplicate its completed tasks.
 
@@ -106,3 +108,7 @@ The initial overview/progress/continuation package organized future work; Notes 
 [book-review]: ../../reviews/15_RELATIVE_FLUX_ANALYTIC_MANUSCRIPT_REVIEW_20261023.md
 
 [book-continuation]: ../notes/09_CONTINUATION_BOOK_PROOF_AND_ARITHMETIC_RELATIVE_FLUX_20261023.md
+
+## Logarithmic-width exterior anchor — 23 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**. [Note 13](../notes/13_COMPLETE_XI_LOGARITHMIC_HEAT_ANCHOR_20261023.md) improves the book's particular Euler anchor from an exponentially small sufficient heat width to A/log|tau| using a complete Gaussian/xi calculation, with an eventual positive margin and a directly normalized error O(1/|tau|). This is supporting progress for OBF-03/05, not their completion: enclosing-disk upper bounds, complex-time collars, full relative flux and earlier nonreal discrimination remain unpaid. Dobner already supplies the underlying Gaussian-modified Dirichlet mechanism; [Review 04](../reviews/04_ANALYTIC_SIMPLICITY_OPENING_ROUND_REVIEW_20261023.md) checks the uniform specialization and limits. No OBF completion status changes.

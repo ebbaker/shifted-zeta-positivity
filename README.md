@@ -30,6 +30,8 @@ Edward Baker — August–October 2026. **Overview updated 3 October 2026; layou
 > primary first-slab Arb certificate bundle is still outside the public tree
 > pending its [release gate](papers/weil-positivity/shifted-zeta/first-slab-positivity/CERTIFICATE_CODE.md).
 
+**Reference workflow (23 October 2026):** record relevant research articles as they are found, with versioned citations, checked passages and use notes in the affiliated investigation's `references/` folder. Follow the root [reference guidance](REFERENCE_WORKFLOW.md); third-party PDFs stay in the external reading archive, outside Git.
+
 ## Background
 
 The program grew out of a series of papers, some posted as preprints and some

@@ -4,6 +4,8 @@ Third-party PDFs consulted during the project are **not** redistributed here
 (copyright). This file lists what was used and for what, so a reader can
 retrieve the same sources.
 
+**Standing guidance, 23 October 2026:** follow [REFERENCE_WORKFLOW.md](../REFERENCE_WORKFLOW.md) whenever a relevant article is found. Maintain an investigation-local reference folder with citations, versions, checked passages and use notes; store PDF reading copies outside Git. The initial backfill for the current work is [Investigation 12's collection](../papers/investigations-4/12_height_dependent_heat_contours/references/README.md). This is not a complete repository-wide reference audit.
+
 ## Primary sources for the shifted-zeta program
 
 | Source | Used for |

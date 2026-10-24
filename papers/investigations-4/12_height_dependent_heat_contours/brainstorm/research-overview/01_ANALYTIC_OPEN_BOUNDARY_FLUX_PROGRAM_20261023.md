@@ -2,6 +2,8 @@
 
 23 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance. Actual recorded model **gpt-6-astra (Codex)**, reasoning effort **max**.
 
+**Current program routing, 23 October 2026:** the [analytic RH-to-simplicity overview](02_ANALYTIC_RH_TO_SIMPLICITY_PROGRAM_20261023.md) now governs the broader search for the strongest theorem, with its form and method open. This file retains the OBF component program and its historical opening proposals; consult the [OBF register][progress] for completed work before restarting a task. OBF is one possible route, not a required sequence for the broader program. For Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**.
+
 **Research objective:** replace a zero-free spatial wall, where it is an unnecessary restriction, by an analytically controlled boundary contribution. Determine whether this permits a useful larger backward width ε at high height and improves a completed multiplicity or cap estimate. The intended mathematical application remains RH implying simplicity, with **RH implying almost-all simplicity** the first global target compatible with a sublinear flux allowance.
 
 **The work is driven by analytic goals. Numerics have a supporting role.** Proofs, complete-source inequalities and explicit error theorems define the milestones. Computations may check an identity, challenge a conjectured estimate, or clarify constants in an already specified theorem; a numerical result alone does not complete an analytic milestone. In particular, a height scan or a search for a larger numerically admissible ε is not the opening task.

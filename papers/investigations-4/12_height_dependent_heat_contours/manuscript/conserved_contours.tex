@@ -1,0 +1,533 @@
+% Provisional research module for main.tex, not book.tex.
+% Prepared for Edward Baker, 23 October 2026.
+% Drafted with OpenAI Codex, gpt-6-astra, reasoning effort ultra.
+% Source: Research Note 16 and Review 07; no new canonical estimate is claimed.
+
+\section{Provisional conservation laws for spatial contours}
+\label{sec:conserved-contours}
+
+This section records an additional research direction, rather than a
+completed estimate for the canonical field.  The conservation identities,
+stationary actions and finite-flow bounds below are exact.  Their useful
+size at growing height, and any consequence for endpoint simplicity,
+remain unproved.  In particular, no global graph, deformation or
+collision-exclusion theorem for theta is asserted.
+
+Here time is real, and the proposed contour is spatial:
+\begin{equation}
+ \Gamma_t:\quad z=T+i\epsilon(T,t),\qquad H_t=-H_{zz}.
+ \label{eq:cc-geometry}
+\end{equation}
+The height coordinate $T$ and heat time $t$ are independent.  This is
+different from a boundary at time $-\epsilon(T)$.  On a compact time
+interval, assume that $H$ is holomorphic on a neighborhood of every
+spatial region used.  When reflection or the canonical source is needed,
+it is stated explicitly.  No curvature smoothing, restoring force or
+random source is added.
+
+\subsection{The heat current, primitive and positive metric}
+
+Write a complex velocity as $u=u_1+iu_2$.  A material point on
+\eqref{eq:cc-geometry} satisfies $\dot T=u_1$; the chain rule gives
+\begin{equation}
+ \epsilon_t+u_1\epsilon_T=u_2.
+ \label{eq:cc-graph}
+\end{equation}
+The field itself supplies a particularly simple conservation law:
+$H_t+\partial_zH_z=0$.
+
+\begin{proposition}[Material preservation of the heat form]
+\label{prop:cc-heat-form}
+On a region where $H\ne0$, put $p=H_z/H$ and let
+$Z_t=p(t,Z)$.  For every regular material arc,
+\begin{equation}
+ H(t,Z(a,t))Z_a(a,t)
+ =H(t_0,Z(a,t_0))Z_a(a,t_0).
+ \label{eq:cc-material-form}
+\end{equation}
+Thus every material subarc preserves $\int H\,dz$, and its graph obeys
+\eqref{eq:cc-graph} with $u=p$.
+\end{proposition}
+\begin{proof}
+The time derivative of the left side is
+$[H_t+\partial_z(Hp)](t,Z)Z_a=0$.
+More generally, differentiating any moving open-arc integral gives
+\begin{equation}
+ \frac{d}{dt}\int_{\Gamma_t}H\,dz
+ =[H\dot z-H_z]_{\rm endpoints}.
+ \label{eq:cc-endpoints}
+\end{equation}
+Consequently preservation of a single total integral constrains only
+its endpoints.  The closed integral of entire $H$ is identically zero.
+Local material preservation is the stronger requirement in
+\eqref{eq:cc-material-form}.  The freedom $Hu=H_z+C(t)$ also preserves
+that form; choosing the literal heat current fixes $C=0$.
+\end{proof}
+
+For an arbitrary moving graph, put
+$g(T,t)=H(t,T+i\epsilon)(1+i\epsilon_T)$.  Direct differentiation gives
+\begin{equation}
+ g_t+\partial_T\{H_z(t,T+i\epsilon)-i\epsilon_tH(t,T+i\epsilon)\}=0.
+ \label{eq:cc-graph-density}
+\end{equation}
+Under $u=p$, the expression in braces is $(\Re p)g$.
+Integrals between material height endpoints are conserved; fixed height
+endpoints retain this flux.
+
+There is also a positive planar conservation law:
+\begin{equation}
+ \partial_t|H|^2+\operatorname{div}_{x,y}(H_z\overline H)=0,
+ \qquad x=\Re z,\quad y=\Im z.
+ \label{eq:cc-positive}
+\end{equation}
+Indeed the divergence of the displayed complex current, regarded as a
+real vector, is $2\Re(H_{zz}\overline H)$.  Its velocity divided by
+density is again $p$.  Reynolds transport therefore preserves
+$\int_{D_t}|H|^2\,dx\,dy$ for compact material domains with regular
+swept boundaries.  Only a boundary tube needs a regular velocity;
+interior zeros need not be excluded.  Taking absolute values in
+\eqref{eq:cc-material-form} also preserves weighted length
+$\int_{\Gamma_t}|H|\,|dz|$ and the metric $|H|^2|dz|^2$.
+These weights degenerate at zeros: an ordinary length bound still needs
+a positive lower bound for $|H|$ along the boundary.
+
+For even $H$, define the odd primitive, distinct from the prepared
+polynomial $P$ elsewhere in this manuscript, by
+\begin{equation}
+ \mathcal P(t,z)=\int_0^zH(t,w)\,dw,
+ \qquad \mathcal P_z=H,\qquad \mathcal P_t=-H_z.
+ \label{eq:cc-primitive}
+\end{equation}
+The last identity follows from $H_z(t,0)=0$.  For a non-even field the
+same identity is obtained by choosing a time-dependent additive
+constant.  The material law is equivalently
+\begin{equation}
+ \mathcal P(t,Z(a,t))=\mathcal P(t_0,Z(a,t_0)).
+ \label{eq:cc-primitive-image}
+\end{equation}
+It continues the inverse image of a prescribed target curve.  A local
+inverse requires $H\ne0$; a global continuation also needs branch and
+escape control.  In fact the canonical primitive has the finite
+real-direction asymptotic value
+\[
+ \mathcal P(t,+\infty)=\frac12\int_{\R}H(t,x)\,dx
+                     =\frac{\pi}{2}\Phi(0),
+\]
+independent of $t$, by \eqref{eq:cc-fourier} below.
+Avoidance of critical values alone is therefore not a global inverse
+theorem: a finite-buffer boundary-image separation or another
+properness/escape estimate is needed.  Even a regular material curve
+can cease to be a graph.  For example, a patch of
+$\Im\mathcal P=c$ has
+\[
+ \epsilon_T=-\frac{\Im H}{\Re H},\qquad
+ \epsilon_t=\frac{\Im H_z}{\Re H},
+\]
+which requires the stronger condition $\Re H\ne0$.
+
+\subsection{Two Noether formulations and the adjoint hierarchy}
+
+The primitive gives a geometric first-order action.  Write
+$\mathcal P=X+iY$ and set
+\begin{equation}
+ \mathcal S_{\mathcal P}[Z]
+ =\frac12\int\Im(\overline{\mathcal P(t,Z)}\,d\mathcal P(t,Z))
+ =\frac12\int(X\,dY-Y\,dX).
+ \label{eq:cc-primitive-action}
+\end{equation}
+The curvature of its spacetime one-form is
+\[
+ |H|^2dx\wedge dy+
+ \Im(H_z\overline H)dt\wedge dx-
+ \Re(H_z\overline H)dt\wedge dy.
+\]
+Its kernel with unit time component gives $\dot z=p$ when $H\ne0$.
+Equivalently the target equations are $\dot X=\dot Y=0$.
+Translations of $X$ and $Y$ change the Lagrangian by
+$\dot Y/2$ and $-\dot X/2$, respectively.  Subtracting these endpoint
+terms in Noether's formula gives charges $-Y$ and $X$.
+This is a stationary action, linear in velocity; it supplies no positive
+energy-minimization principle.
+
+There is a complementary field-adjoint formulation
+\cite{noether,ibragimov2007,anco}.  On a real spatial interval take
+independent fields $H,\psi$ and
+\begin{equation}
+ \mathcal S[H,\psi]=\int(\psi H_t-\psi_xH_x)\,dx\,dt.
+ \label{eq:cc-adjoint-action}
+\end{equation}
+Compactly supported variations give $H_t=-H_{xx}$ and
+$\psi_t=\psi_{xx}$.  For complex fields, real and imaginary variations
+of the real part of this action give the same equations.  The exact
+scaling symmetry $(H,\psi)\mapsto(e^aH,e^{-a}\psi)$ has density
+$\psi H$ and current $\psi H_x-\psi_xH$; explicitly,
+\begin{equation}
+ \partial_t(\psi H)+\partial_x(\psi H_x-\psi_xH)
+ =\psi(H_t+H_{xx})+H(\psi_t-\psi_{xx}).
+ \label{eq:cc-adjoint-identity}
+\end{equation}
+Thus the variational statement is proved here for the doubled system,
+rather than assumed for a single-field conservative heat action.
+For holomorphic adjoints it continues with $z$ derivatives.  Its
+zero-additive-current material velocity is
+\begin{equation}
+ u_\psi=\frac{\psi H_z-\psi_zH}{\psi H}
+ =p-\frac{\psi_z}{\psi},
+ \qquad \psi H\ne0.
+ \label{eq:cc-adjoint-velocity}
+\end{equation}
+The choice $\psi=1$ recovers the primary flow.  Polynomial adjoints are
+$e^{t\partial_z^2}z^n$, beginning with
+$1,z,z^2+2t,z^3+6tz,z^4+12tz^2+12t^2$.
+
+\begin{proposition}[Canonical whole-line invariants]
+\label{prop:cc-hierarchy}
+Extend the source $\Phi$ in \eqref{eq:canonical} evenly to $\R$.
+With $\widehat H_t(\xi)=\int_\R e^{-i\xi x}H(t,x)\,dx$, one has
+\begin{align}
+ e^{-t\xi^2}\widehat H_t(\xi)&=\pi\Phi(\xi),
+ &&\xi\in\R,\label{eq:cc-fourier}\\
+ I_n(t):=\int_\R(e^{t\partial_x^2}x^n)H(t,x)\,dx
+ &=\pi i^n\Phi^{(n)}(0),
+ &&n\ge0.\label{eq:cc-polynomial-invariants}
+\end{align}
+These integrations and their time derivatives are justified uniformly
+on compact real time intervals.
+\end{proposition}
+\begin{proof}
+The theta transformation makes the even extension of $\Phi$ smooth.
+More explicitly, put
+$\vartheta(v)=\sum_{m\in\mathbb Z}e^{-\pi m^2v}$ and
+$h(u)=e^u\vartheta(e^{4u})$.
+The identity $\vartheta(v)=v^{-1/2}\vartheta(1/v)$ makes $h$ even,
+and direct differentiation of \eqref{eq:canonical} gives
+$16\Phi=h''-h$.  Its positive-half-line expansion and all derivatives
+decay superexponentially.  Consequently $e^{tu^2}\Phi(u)$ is Schwartz,
+uniformly for $t$ in a compact interval, as is its Fourier transform.
+The cosine normalization gives
+$\widehat H_t=\pi e^{t\xi^2}\Phi$.
+Finally $\int x^mH\,dx=i^m\widehat H_t^{(m)}(0)$, and the finite
+expansion of $e^{t\partial_x^2}x^n$ gives
+\[
+ I_n=i^n\left.\partial_\xi^n
+       (e^{-t\xi^2}\widehat H_t(\xi))\right|_{\xi=0}.
+\]
+This proves both formulas and pays all real-line endpoint terms.
+\end{proof}
+
+The continuum \eqref{eq:cc-fourier} determines $H$ by Fourier inversion.
+Completeness of polynomial moments for arbitrary Schwartz data is not
+asserted.  Both families have explicitly time-dependent weights:
+they encode the known linear evolution and its uniqueness.  They do
+not establish an autonomous Hamiltonian hierarchy, a Lax isospectral
+structure or a coercive conserved energy for the contour.  The separate
+KdV-hierarchy discussion in \cite{ibragimov2006} is not a theorem
+imported into this problem.
+
+\begin{proposition}[No common local material hierarchy]
+\label{prop:cc-no-common-velocity}
+On a nonempty open region with $H\ne0$, no single regular velocity
+preserves every material subarc of all three forms
+$H\,dz$, $zH\,dz$ and $(z^2+2t)H\,dz$.
+\end{proposition}
+\begin{proof}
+Divide the last two material pullback identities by the first.
+For each weight this forces $\psi_t+u\psi_z=0$.
+The weight $z$ forces $u=0$, while $z^2+2t$ then forces $2=0$.
+This argument allows arbitrary spatially constant current gauges.
+\end{proof}
+There is no conflict with simultaneous conservation of whole-line
+integrals: that weaker statement has vanishing endpoint currents.
+The hierarchy constrains the field supplying the velocity, rather than
+giving infinitely many independent local boundary conditions.
+
+Finally, on $H\ne0$, logarithmic differentiation gives the
+Cole--Hopf relation \cite{cole,hopf}
+\begin{equation}
+ p_t+\partial_z(p_z+p^2)=0,
+ \qquad U=2p:\quad U_t+UU_z=-U_{zz}.
+ \label{eq:cc-burgers}
+\end{equation}
+The factor $2p$ in Burgers advection is not the $H\,dz$ material
+velocity.  Preserving $p\,dz$ instead, with its literal current,
+selects $(p_z+p^2)/p=H_{zz}/H_z$ where defined.  This transports the
+value of $H$ and agrees at simple zeros with their usual heat velocity;
+the sign is opposite to the forward-heat convention in
+\cite{papanicolaou}.
+
+\subsection{Regularity and a positive-source collision control}
+
+The stationary solution $H=z$ has $p=1/z$ and
+$Z(t)^2=Z(t_0)^2+2(t-t_0)$.  A point initially at $iy_0$ reaches a
+simple zero after time $y_0^2/2$.  Thus the conserved material form does
+not ensure a regular flow even in the absence of multiple zeros.
+
+The following decaying example tests the hierarchy with positive source.
+For $a,b>0$ and $d=1-4at>0$, set
+\begin{equation}
+ F(t,z)=d^{-1/2}e^{-az^2/d}
+       \{1+e^{tb^2/d}\cos(bz/d)\}.
+ \label{eq:cc-gaussian-control}
+\end{equation}
+The functions
+$d^{-1/2}\exp(-az^2/d\mathbin{\pm}ibz/d+tb^2/d)$ solve backward heat
+by differentiation, as does the unmodulated Gaussian.
+Their sum proves $F_t=-F_{zz}$.
+The initial Fourier transform is strictly positive:
+\[
+ \widehat F_0(\xi)=\sqrt{\pi/a}\left\{
+ e^{-\xi^2/(4a)}+\tfrac12e^{-(\xi-b)^2/(4a)}
+                  +\tfrac12e^{-(\xi+b)^2/(4a)}\right\}.
+\]
+This even, real-type, spatially entire family is uniformly Schwartz on
+compact time intervals below $1/(4a)$; all its Fourier and polynomial
+invariants are conserved.  For $0<t<1/(4a)$, its zero equation is
+$\cos(bz/d)=-e^{-tb^2/d}\in(-1,0)$, so every zero is real and simple.
+Indeed a nonreal $w$ with real $\cos w$ has either $\Im w=0$, or
+$|\cos w|\ge1$.  At $t=0$ each $z=(2k+1)\pi/b$ is a double zero.
+Therefore positive even Schwartz source, the complete hierarchy and
+an interval of positive-time reality do not exclude endpoint doubles.
+This family has different conserved values from theta and is defined
+only below its indicated time singularity.  It tests a generic
+implication; it does not exclude an estimate using the unchanged
+canonical source and its actual constants.
+
+\subsection{A regularized zero-current comparison}
+
+A different conserved object gives a smooth finite-parameter model.
+Fix $\rho,\lambda>0$ and define
+\begin{equation}
+ k_\rho(w)=\frac{\rho^2}{\pi(|w|^2+\rho^2)^2},\quad
+ \mu_\rho=k_\rho(H)|H_z|^2,\quad
+ j_\rho=k_\rho(H)H_{zz}\overline{H_z}=j_1+ij_2.
+ \label{eq:cc-scalar-current}
+\end{equation}
+Pulling back $k_\rho(w)\,d\Re w\wedge d\Im w$ by $H(t,z)$ gives
+\begin{equation}
+ \Omega_\rho=\mu_\rho dx\wedge dy+j_2dt\wedge dx-j_1dt\wedge dy.
+ \label{eq:cc-scalar-curvature}
+\end{equation}
+The target two-form is closed, so $d\Omega_\rho=0$, equivalently
+$\partial_t\mu_\rho+\partial_xj_1+\partial_yj_2=0$.
+No division by $H_z$ is used.
+The outward upper-wall current per unit horizontal height is
+\begin{equation}
+ J_\rho=j_2-j_1\epsilon_T-\mu_\rho\epsilon_t.
+ \label{eq:cc-relative-current}
+\end{equation}
+Choosing $\lambda\epsilon_t=J_\rho$ gives
+\begin{equation}
+ (\lambda+\mu_\rho)\epsilon_t+j_1\epsilon_T=j_2,
+ \qquad u_\rho=\frac{j_\rho}{\lambda+\mu_\rho}.
+ \label{eq:cc-compliant-flow}
+\end{equation}
+This transports the augmented density $\lambda+\mu_\rho$.
+At fixed positive parameters the velocity is smooth on compact analytic
+regions, including multiple zeros.  The parameter $\lambda$ is chosen,
+not forced by heat; making it large suppresses motion by construction.
+
+The same law has the exact spacetime path action $\int\mathcal A_\rho$,
+where
+\begin{equation}
+ \mathcal A_\rho=\frac\lambda2(x\,dy-y\,dx)
+ +\frac1{2\pi}\frac{\Im(\overline H\,dH)}{|H|^2+\rho^2}.
+ \label{eq:cc-scalar-action}
+\end{equation}
+Differentiation gives
+$d\mathcal A_\rho=\lambda dx\wedge dy+\Omega_\rho$.
+For $V=\partial_t+u_1\partial_x+u_2\partial_y$, fixed-endpoint
+variations require $\iota_Vd\mathcal A_\rho=0$, precisely
+\eqref{eq:cc-compliant-flow}.  Cartan's formula then gives
+$\mathcal L_V\mathcal A_\rho=d(\mathcal A_\rho(V))$.
+Consequently complete closed material loops preserve circulation;
+Stokes identifies it with augmented enclosed mass.  The full $dt$
+component of the one-form is essential to this calculation.
+
+Assume now real type, $\epsilon\ge0$, and a fixed height band $[A,B]$.
+Then $j_2(t,T,0)=0$.  Define
+\begin{align*}
+ m(T,t)&=\int_0^{\epsilon(T,t)}\mu_\rho(t,T,y)\,dy,&
+ q(T,t)&=\int_0^{\epsilon(T,t)}j_1(t,T,y)\,dy,\\
+ M_\rho(t)&=\int_A^B m(T,t)\,dT,&
+ E_{\rm end}(t)&=q(B,t)-q(A,t).
+\end{align*}
+The continuity equation and moving upper limit give
+$m_t+q_T=-J_\rho$.  Hence, writing
+$\bar\epsilon=(B-A)^{-1}\int_A^B\epsilon\,dT$,
+\begin{equation}
+ \partial_t(m+\lambda\epsilon)+\partial_Tq=0,
+ \qquad
+ \frac d{dt}\{M_\rho+\lambda(B-A)\bar\epsilon\}=-E_{\rm end}.
+ \label{eq:cc-mean-balance}
+\end{equation}
+This retains the actual end currents; the canonical field is not
+assumed periodic.  Positivity alone implies, for $t\ge t_0$,
+\begin{equation}
+ \bar\epsilon(t)\le\bar\epsilon(t_0)+
+ \frac{M_\rho(t_0)+\int_{t_0}^t[-E_{\rm end}(s)]_+\,ds}
+      {\lambda(B-A)}.
+ \label{eq:cc-mean-bound}
+\end{equation}
+If independently $0\le M_\rho\le M_*$, the absolute change in mean is
+at most $(M_*+|\int_{t_0}^tE_{\rm end}|)/(\lambda(B-A))$.
+Neither statement controls roughness or repeated inward crossings:
+\begin{equation}
+ \int\!\int[-J_\rho]_+\,dT\,dt
+ =\lambda\int\!\int[-\epsilon_t]_+\,dT\,dt.
+ \label{eq:cc-one-sided-variation}
+\end{equation}
+Small signed mean change does not bound this positive variation.
+The earlier nonreal population, height ends and endpoint coverage
+remain necessary in any transfer to a multiplicity consumer.
+
+\subsection{Conditional graph persistence and the missing estimates}
+
+For any $C^1$ planar velocity on a buffer containing its trajectories,
+let $\mathcal F_t$ be the flow from $t_0$ and put
+\[
+ K(t)=\int_{t_0}^t\|D_{x,y}u(s,\cdot)\|_{\mathrm{op},\infty}\,ds.
+\]
+The variational equation and its integral form give
+$\|D\mathcal F_t\|\le e^K$ and
+$\|D\mathcal F_t-I\|\le e^K-1$.
+For a flat initial graph its tangent therefore has horizontal component
+at least $2-e^K$ and vertical component at most $e^K-1$.  If
+$K<\log2$, it remains a graph on its advected height interval and
+\begin{equation}
+ \|\epsilon_T\|_\infty\le\frac{e^K-1}{2-e^K}.
+ \label{eq:cc-strain-bound}
+\end{equation}
+This sufficient bound applies to $p$ on a nonvanishing buffer and to
+$u_\rho$ at fixed parameters.  It is not a canonical strain estimate.
+The exact graph slope $r=\epsilon_T$, along $\dot T=u_1$, satisfies
+\[
+ \dot r=\partial_xu_2+(\partial_yu_2-\partial_xu_1)r
+                         -(\partial_yu_1)r^2,
+\]
+so actual tangent-flow estimates can retain information discarded by
+the norm in $K$.
+
+For the scalar model, on a common height band covered by the graphs,
+a concrete additional input is the moving-trace quantity
+\[
+ \mathcal B_\rho=\int_{t_0}^{t_1}\int_A^B
+ (1+\epsilon_T^2)k_\rho(H)|H_{zz}|^2\,dT\,dt.
+\]
+Since $|j_\rho|^2=\mu_\rho k_\rho(H)|H_{zz}|^2$ and
+$\mu_\rho/(\lambda+\mu_\rho)^2\le1/(4\lambda)$,
+\begin{equation}
+ \int\!\int|\epsilon_t|^2\le\frac{\mathcal B_\rho}{4\lambda},
+ \qquad
+ \frac1{B-A}\int_A^B|\epsilon(T,t_1)-\epsilon(T,t_0)|^2\,dT
+ \le\frac{(t_1-t_0)\mathcal B_\rho}{4\lambda(B-A)}.
+ \label{eq:cc-trace-bound}
+\end{equation}
+These follow from \eqref{eq:cc-compliant-flow} and Cauchy--Schwarz.
+An independent estimate for $\mathcal B_\rho$ must retain its slope,
+small-value weight and adaptive trace.  A fixed raw-field regulator can
+freeze motion merely because the xi carrier decays.  If a prescribed
+nonvanishing carrier $B$ is removed, $f=H/B$ requires instead the exact
+current $-k_\rho(f)f_t\overline{f_z}$, with
+\[
+ -f_t=f_{zz}+2(B_z/B)f_z+(B_{zz}+B_t)f/B.
+\]
+Reflection-based bottom-flux cancellation also requires real-type $B$.
+No uniform $\rho\downarrow0$ result for these adaptive boundaries is
+asserted, nor may a variable regulator be substituted without its
+derivative terms.  A stochastic approximation would likewise require
+statistics along the actual moving trajectories: zero mean velocity
+alone does not bound accumulated displacement or positive variation.
+
+\subsection{The physical-jet connection and the topological distinction}
+
+The original topological observable uses $G=(H,H_z)$, not $H\,dz$.
+On $G\ne0$ put
+\begin{equation}
+ E=|H|^2+|H_z|^2,\qquad
+ \alpha_G=\frac{\Im(G^\dagger dG)}{2\pi E},\qquad
+ \mathcal C=\alpha_G\wedge d\alpha_G.
+ \label{eq:cc-jet-connection}
+\end{equation}
+Here the full differential for $\mathcal C$ is in complex time--space.
+Its integral over a complete regular three-dimensional boundary is the
+normalized degree of $G/\|G\|$; isolated holomorphic joint zeros inside
+contribute their positive local degrees, with the complex orientation
+and the complete-boundary convention of
+Section~\ref{sec:complete-contours}.  Regular-boundary homotopy
+invariance permits interior events and does not select a contour
+velocity.  A spatial line integral cannot replace this three-form.
+
+On the real-time slice define
+\[
+ L_G=H_z^2-HH_{zz},\quad N_G=H_zH_{zz}-HH_{zzz},\qquad
+ \mu_G=\frac{|L_G|^2}{\pi E^2},\quad
+ j_G=\frac{N_G\overline{L_G}}{\pi E^2}.
+\]
+Then the exact curvature is
+\begin{equation}
+ d\alpha_G=\mu_Gdx\wedge dy+
+             (\Im j_G)dt\wedge dx-(\Re j_G)dt\wedge dy.
+ \label{eq:cc-jet-curvature}
+\end{equation}
+To verify it, in the chart $b=H_z\ne0$, $q=H/H_z$, write
+\[
+ \alpha_G=\frac1{2\pi}\left(d\arg b+
+             \frac{\Im(\overline q\,dq)}{1+|q|^2}\right),\quad
+ d\alpha_G=\frac{d\Re q\wedge d\Im q}{\pi(1+|q|^2)^2}.
+\]
+Substitute $q_z=L_G/b^2$ and $q_t=-N_G/b^2$.
+The resulting polynomial ratios extend through $H_z=0$ wherever
+$E>0$.  They are projective curvature and current, not scalar zero
+density and current.
+
+As before, for $\lambda\ge0$ where $\lambda+\mu_G>0$, the full
+spacetime action with
+\begin{equation}
+ \mathcal A_G=\frac\lambda2(x\,dy-y\,dx)+\alpha_G
+ \quad\hbox{gives}\quad
+ u_G=\frac{j_G}{\lambda+\mu_G}.
+ \label{eq:cc-jet-action}
+\end{equation}
+The proof is the same contraction and Cartan calculation used for
+\eqref{eq:cc-scalar-action}.  For $\lambda=0$ and $L_G\ne0$ it gives
+$u_G=N_G/L_G$, preserving $q$.  Positive $\lambda$ removes an
+$L_G=0$ singularity where $E>0$, but not the joint-zero singularity
+$E=0$.  Complete closed material loops conserve $\int\mathcal A_G$;
+open arcs retain endpoint terms.  This generally noninteger circulation
+is different from the complete Chern--Hopf degree.  For example, for
+$H=z$ one has $\int_{|z|=R}\alpha_G=R^2/(1+R^2)$, whereas the
+argument-principle count is one.  The scalar regularized circulation
+may even remain conserved while actual zeros cross its boundary.
+Neither conservation law removes the complete-boundary or excision
+requirements of the physical topological calculation.
+
+\paragraph{Concrete next analytic task.}
+The primary choice is the heat current $u=p$, since its material form,
+positive density, primitive and Noether action agree without an added
+parameter.  On a prescribed compact initial contour, fix its actual
+image under $\mathcal P(t_0,\cdot)$ and continue that inverse image.
+The next result must bound its actual tangent flow and continue the
+selected inverse branch, including its spatial buffer and escape
+boundary, from complete canonical-source data on a stated height/time
+scale. Separation from every global critical value is stronger than
+necessary for a specified regular branch; a branch-local comparison
+should retain the relevant domain instead.  In particular, \eqref{eq:cc-material-form} gives the exact relation
+\[
+ Z_a(t)=\frac{H(t_0,Z_0)Z_{0,a}}{H(t,Z(t))},\qquad
+ \frac{d}{dt}\log Z_a=\partial_z(H_z/H)(t,Z(t)),
+\]
+with a continuous logarithm along a regular trajectory. Its phase controls
+turning, and its modulus controls stretching. The actual
+constants in \eqref{eq:cc-fourier}--\eqref{eq:cc-polynomial-invariants},
+not just existence of the hierarchy, must enter any new restriction.
+One should not assume a global nonzero level $\Im\mathcal P=c$ at
+bounded width: at $t=0$,
+$\Im\mathcal P(T+iy)=\int_0^y\Re H(0,T+iv)\,dv$ tends to zero for
+bounded $y$ by the xi carrier's bounded-strip decay.  Using the actual
+initial image avoids that incompatible default.
+The scalar and physical-jet models provide comparisons preserving
+different quantities.  For the scalar comparison, the unresolved
+inputs are coupled tangent strain, end flux and one-sided relative
+current, with any regulator limit proved separately.  A useful bound
+must improve a direct estimate from the same canonical information;
+the identities and collision controls above do not yet supply it.

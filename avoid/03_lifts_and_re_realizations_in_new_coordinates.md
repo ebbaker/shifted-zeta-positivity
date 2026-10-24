@@ -73,6 +73,8 @@ positive finite pencil as a string, a graph and an operator.
   Prepared for Edward Baker with substantial LLM assistance,
   **gpt-6-astra, actual effort ultra**.
 
+- **Conserved hierarchy qualification (23 October 2026).** The [spatial-contour review](../papers/investigations-4/12_height_dependent_heat_contours/brainstorm/reviews/08_CONSERVED_CONTOURS_MANUSCRIPT_REVIEW_20261023.md) records: “Explicit time-dependent weights do not establish autonomous Hamiltonian integrability or a coercive energy bound.” The full Fourier data fix the linear heat orbit, but generic conservation laws also hold for explicit collision controls with different values. This screens an inference from the existence of a hierarchy, not an estimate using actual theta constants. Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**; internal same-model review.
+
 ## What it cost
 
 Sixteen lifts plus twenty-two notes rated "promise 1/5"; CCM rounds 1–4

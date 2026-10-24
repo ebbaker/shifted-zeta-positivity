@@ -12,11 +12,8 @@
 \newcommand{\nr}{\mathrm{nr}}
 \newcommand{\all}{\mathrm{all}}
 \newcommand{\D}{\mathsf D}
-\newcommand{\HH}{\mathcal H}
 \newcommand{\FF}{\mathcal F}
 \newcommand{\BB}{\mathcal B}
-\newcommand{\NN}{\mathcal N}
-\newcommand{\LL}{\mathcal L}
 \newcommand{\WW}{\mathcal W}
 \DeclareMathOperator{\supp}{supp}
 \newtheorem{theorem}{Theorem}[section]
@@ -25,31 +22,583 @@
 \newtheorem{corollary}[theorem]{Corollary}
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
-\hypersetup{pdftitle={Heat collisions and relative zero flux},pdfauthor={Drafted for Edward Baker}}
-\title{Heat collisions and relative zero flux}
+\hypersetup{pdftitle={Conserved heat contours toward simple zeta zeros},pdfauthor={Drafted for Edward Baker}}
+\title{Conserved heat contours\\toward simple zeta zeros}
 \author{Drafted for Edward Baker}
-\date{Analytic manuscript\\23 October 2026}
+\date{23 October 2026}
 \begin{document}
 \maketitle
 
 \begin{abstract}
-A real collision in the backward heat equation consumes nonreal zeros.
-We express this loss as an exact balance between an earlier population
-and the flux through a moving window. If the window is defined by a
-reference heat field $G$, its relative flux is governed by the single
-coupled expression $H_{zz}G_z-H_zG_{zz}$: the apparent derivative
-denominator in the boundary velocity cancels. We recover the flux from
-smooth field integrals, prove sharp multiplicity bounds, and estimate the
-reference mismatch without separating colliding roots. For the theta heat
-flow, the mismatch has an exact antisymmetric integral involving the
-unchanged arithmetic source and its complete tail. The ordered square
-coefficients make the antisymmetrized source difference positive, giving
-a sharper absolute estimate with quadratic diagonal cancellation. Local analytic
-estimates make these bounds finite; obtaining useful uniform size at
-growing height remains an arithmetic problem.
+Assuming the Riemann hypothesis, with multiplicities allowed, we prove
+a relative short-time expansion for the complete theta heat field on
+strips at a fixed positive distance from the real axis. On the scale
+$s\le c/(\log Y)^2$, extracting the full complex Gaussian exponential
+gives an explicit first correction and a relative remainder
+$O((\log Y)^{-2})$. The proof controls the entire Gaussian tail relative
+to the small initial field. It acquires nonvanishing and justifies the
+actual contours preserving $H\,dz$, with displacement and tangent change
+$O((\log Y)^{-1})$, including their finite spatial containment and upward
+motion as heat time runs backward.
+
+The overarching goal is to approach the implication from the Riemann
+hypothesis to simple zeros. We connect the acquired outer wall to an
+exact collision balance and sharp multiplicity bounds, retaining the
+earlier nonreal population and one-sided inward flux. An explicit
+positive-source field with the same coarse zero count and no simple
+zeros satisfies the contour estimates. The remaining task is therefore
+a multiplicity-sensitive arithmetic estimate inside the wall. The paper
+proves the contour theorem and identifies this missing step; it proves
+no new simplicity proportion.
 \end{abstract}
 
-\section{The balance law}
+\section{The main comparison and the simplicity question}
+\label{sec:main}
+
+The Riemann hypothesis places every nontrivial zero on the critical line.
+It does not by itself state that those zeros are simple. Our objective is
+to determine what additional control can be proved from the actual theta
+source, assuming RH but retaining every possible endpoint multiplicity.
+A useful intermediate theorem must acquire an analytic estimate before
+it is used in a multiplicity argument.
+
+Use the normalization
+\begin{align}
+ H(t,z)&=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\dd u,
+ &H_t&=-H_{zz},\label{eq:theta}\\
+ \Phi(u)&=\sum_{n\ge1}
+ (2\pi^2n^4e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2e^{4u}},
+ &F(z):=H(0,z)&=\tfrac18\xi(\tfrac12+iz/2).
+ \label{eq:canonical}
+\end{align}
+Here $\xi(w)=\tfrac12w(w-1)\pi^{-w/2}\Gamma(w/2)\zeta(w)$.
+These conventions agree with \cite{polymath,DLMF}. The complete even
+source is positive and superexponentially decaying. Its decay justifies
+all fixed-strip Gaussian integrals below. The field is even, is of real
+type for real $t$, and is jointly entire in $t$ and $z$.
+
+Under RH, $F$ has only real zeros. We do not assume they are simple.
+Set $p=F'/F$, which is holomorphic in the upper half-plane. Throughout,
+$s\ge0$ denotes backward duration: the earlier field is $H(-s,z)$.
+The spatial offset $\Im z$ is a different variable.
+
+\begin{theorem}[Complete relative Gaussian comparison]
+\label{thm:gaussian}
+Assume RH. Fix $0<b_-<b_+$ and $c>0$. For $L=\log Y$, uniformly on
+\[
+ Y\le\Re z\le2Y,\qquad b_-\le\Im z\le b_+,\qquad
+ 0\le s\le cL^{-2},
+\]
+one has, as $Y\to\infty$,
+\begin{equation}
+ \boxed{\frac{H(-s,z)}{F(z)e^{sp(z)^2}}
+ =1+s p'(z)\bigl(1+2s p(z)^2\bigr)+O(L^{-2}).}
+ \label{eq:main-comparison}
+\end{equation}
+The same estimate holds with any fixed horizontal end extensions and
+on an enlarged fixed positive-offset strip. On a smaller strip with a
+fixed margin, every fixed-order spatial derivative of the remainder is
+$O_k(L^{-2})$. Constants and the sufficiently-large-height threshold may
+depend on $b_-,b_+,c$, the margins and the derivative order. At $s=0$
+the formula is exact.
+
+In particular the field is nonzero throughout this region for large
+$Y$, and, for some strip constant $C$,
+\begin{equation}
+ |H(-s,z)|\ge\tfrac12e^{-C^2c}|F(z)|.
+ \label{eq:acquired-floor}
+\end{equation}
+Writing $p_s(z)=H_z(-s,z)/H(-s,z)$, one also has
+\begin{align}
+ p_s(z)&=p(z)+2s p(z)p'(z)+O(L^{-1}),\label{eq:velocity-expansion}\\
+ \partial_zp_s(z)&=p'(z)+2s\bigl((p'(z))^2+p(z)p''(z)\bigr)
+                      +O(L^{-1})=p'(z)+O(1).
+ \label{eq:strain-expansion}
+\end{align}
+\end{theorem}
+
+This theorem has a useful geometric consequence. An initially flat
+arc $z_a=a+ib$, with $b$ fixed and positive and with fixed horizontal
+end extensions, has an actual continuation satisfying
+\begin{equation}
+ \partial_sZ(s,a)=-p_s(Z(s,a)),\qquad Z(0,a)=z_a.
+ \label{eq:material-ode-intro}
+\end{equation}
+It remains inside a prescribed finite buffer, is a graph over an
+interval covering $[Y,2Y]$, and obeys
+\begin{equation}
+ Z(s,a)=z_a-sp(z_a)+O(L^{-2}),\qquad
+ \partial_a Z(s,a)=1-sp'(z_a)+O(L^{-2}).
+ \label{eq:material-intro}
+\end{equation}
+The full statement and proof are given in Section~\ref{sec:scf-contours}.
+This motion preserves $H(-s,Z)\partial_aZ=F(z_a)$; it is the literal
+$H\,dz$ conservation law.
+
+The point is to obtain the moving contour from initial RH and complete
+field information, rather than to assume a zero-free moving tube.
+The raw xi field can be exponentially small at large height.
+Consequently an absolutely small omitted Gaussian tail would not be
+enough. The proof integrates the initial logarithmic derivative to
+control the entire tail \emph{after division by $F$}, and retains the
+phase of $e^{sp^2}$ until its relative error has been paid.
+
+The theorem is a conditional intermediate result, not a criterion
+asserted to be equivalent to RH or to simplicity. Its offsets stay
+bounded away from zero; its time is real; $c$ is fixed before $Y$ tends
+to infinity. No numerical height threshold is supplied. Sections
+\ref{sec:limits} and \ref{sec:resource} explain respectively why the
+estimates admit multiple zeros and how an additional bound on the
+complete nonreal resource would restrict them.
+
+\section{Proof of the Gaussian comparison}
+\label{scf-proof}
+
+The proof of Theorem~\ref{thm:gaussian} has two separate analytic tasks.
+The local Gaussian calculation must retain its complex leading exponential,
+and the omitted horizontal tail must be small relative to the complete
+initial field.  We first establish the bounds that accomplish both tasks.
+Throughout this section RH is assumed, with multiplicities retained.
+Constants may depend on fixed positive-offset strips, fixed margins and
+$c$, but not on $Y$, $z$ or $0\le s\le c/(\log Y)^2$.
+
+\subsection{The full product and a logarithmic anchor}
+
+Let $\mathcal Z$ be the signed multiset of zeros of $F$, and let $N_F(X)$
+count its positive members up to $X$, with multiplicity.  The classical
+order-one product, paired using evenness, gives
+\begin{equation}\label{scf-product}
+ F(z)=F(0)\prod_{\lambda>0}\left(1-\frac{z^2}{\lambda^2}\right),
+ \qquad
+ p(z)=\sum_{\lambda>0}
+ \left(\frac1{z-\lambda}+\frac1{z+\lambda}\right).
+\end{equation}
+Here $\lambda$ is twice a positive zeta ordinate.  Pairing specifies the
+convergence; evenness removes the linear exponential allowed by the
+general order-one factorization.  For every integer $k\ge1$,
+\begin{equation}\label{scf-derivative-product}
+ p^{(k)}(z)=(-1)^k k!\sum_{\lambda\in\mathcal Z}
+                     (z-\lambda)^{-k-1},
+\end{equation}
+with absolute locally uniform convergence away from the real axis.
+The zero-counting formula in the present normalization is
+\begin{equation}\label{scf-count}
+ N_F(X)=\frac{X}{4\pi}\log\frac{X}{4\pi}-\frac{X}{4\pi}
+              +O(\log(2+X)).
+\end{equation}
+These standard inputs include multiplicities; see \cite{Elkies}.
+The entire completion used here is $(w^2-w)/2$ times the meromorphic
+completion denoted by $\xi$ in that reference.
+
+\begin{lemma}[Fixed-strip logarithmic bounds]\label{scf-strip-bounds}
+For $0<\alpha<\beta<\infty$ and every fixed nonnegative integer $k$,
+\begin{equation}\label{scf-logbound}
+ |p^{(k)}(x+iy)|\le C_{k,\alpha,\beta}\log(2+|x|),
+ \qquad x\in\R,\quad \alpha\le y\le\beta.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Formula~\eqref{scf-count} bounds the number of zeros in each unit real
+interval near $v$ by $O(\log(2+|v|))$.  For $k\ge1$, grouping the absolute
+sum in \eqref{scf-derivative-product} into unit intervals about $x$ gives
+\[
+ \sum_{\lambda\in\mathcal Z}|x+iy-\lambda|^{-k-1}
+ \le C_k\sum_{n\ge0}\frac{\log(2+|x|+n)}{(1+n)^{k+1}}
+ \le C_k\log(2+|x|).
+\]
+The fixed lower bound on $y$ pays the central intervals.  This argument
+uses the coarse count with multiplicity and requires no simplicity bound.
+
+For $k=0$ we use a logarithmic anchor instead of an absolute unpaired
+reciprocal sum.  Choose $B>\max\{\beta,1\}$ with a fixed positive margin.
+The functional equation, with $w=(1+B)/2-ix/2$, yields
+\[
+ p(x+iB)=-\frac i2\left\{\frac1w+\frac1{w-1}
+ -\frac12\log\pi+\frac12\psi(w/2)
+ +\frac{\zeta'}{\zeta}(w)\right\}
+ =O(\log(2+|x|)).
+\]
+Indeed $\Re w>1$ by a fixed amount, so the Euler logarithmic derivative
+converges absolutely; the digamma estimate controls the gamma factor
+\cite[\S\S 5.11, 25.4]{DLMF}.  Bounded $x$ is handled by compactness
+and Euler nonvanishing.  Integrating $p'$ vertically from $x+iB$ to
+$x+iy$ proves \eqref{scf-logbound} for $k=0$.  RH pays this passage
+through the strip; no Euler product is asserted there.
+\end{proof}
+
+\subsection{A global relative bound for the Gaussian tail}
+
+For real $s>0$, the full theta transform gives the exact identity
+\begin{equation}\label{scf-gaussian-integral}
+ H(-s,z)=\frac1{\sqrt{4\pi s}}\int_\R
+                 e^{-u^2/(4s)}F(z+u)\,\dd u.
+\end{equation}
+To see the normalization, insert
+$F(z)=\int_\R\rho(v)e^{izv}\,\dd v$: the Gaussian integral in $u$
+contributes $e^{-sv^2}$.  The positive even theta density $\rho$ has
+superexponential decay, justifying Fubini for every fixed $\Im z$.
+This representation retains the complete source.
+
+Since $F$ has no upper-half-plane zeros under RH, integration along the
+horizontal segment gives
+\[
+ \frac{F(z+u)}{F(z)}
+       =\exp\left(\int_0^u p(z+v)\,\dd v\right).
+\]
+Consequently Lemma~\ref{scf-strip-bounds} implies, for all real $u$,
+\begin{equation}\label{scf-global-ratio}
+ \left|\frac{F(z+u)}{F(z)}\right|
+ \le\exp\{C|u|\log(2+|\Re z|+|u|)\}.
+\end{equation}
+This is already a relative estimate, even when $F(z)$ is exponentially
+small.  It covers shifts to bounded real height and arbitrarily far
+beyond the target interval.
+
+Fix $r>0$ independent of $Y$.  If $x\in[Y-O(1),2Y+O(1)]$, then for
+$v\ge r$ and sufficiently large $Y$,
+\[
+ Cv\log(2+|x|+v)\le\frac{v^2}{8s},
+ \qquad 0<s\le cL^{-2},\qquad L=\log Y.
+\]
+Indeed $\log(2+|x|+v)\le C_0+L+\log(1+v)$, and division by $v$
+bounds the right-hand expression inside this logarithmic comparison by
+$L/r+O_r(1)$, whereas $1/(8s)$ grows quadratically in $L$.
+Thus the part of \eqref{scf-gaussian-integral} with $|u|>r$, after
+division by $F(z)$, is bounded in absolute value by
+\begin{equation}\label{scf-tail}
+ C\exp\left(-\frac{r^2}{16s}\right).
+\end{equation}
+Dividing further by $e^{sp(z)^2}$ costs at most
+$\exp(s|p(z)|^2)\le\exp(C^2c)$.
+The entire relative tail is therefore $O(L^{-M})$ for every fixed $M$,
+uniformly throughout the stated real-time range.  The same Gaussian
+argument controls the tails of $e^{pu}$ times each fixed polynomial in
+$u$ that appears below.
+
+\subsection{The first correction and its spatial derivatives}
+
+For $|u|\le r$, integrate the Taylor expansion of $p$ along the real
+segment.  With $p=p(z)$ and $p'=p'(z)$ this gives
+\begin{equation}\label{scf-log-expansion}
+ \log\frac{F(z+u)}{F(z)}=pu+\frac12p'u^2+R_3(z,u),
+ \qquad |R_3(z,u)|\le CL|u|^3.
+\end{equation}
+The logarithm is continued from its value zero at $u=0$.
+Writing $A=p'u^2/2$, and taking $r$ fixed and small, the elementary
+exponential remainder estimate implies
+\begin{equation}\label{scf-exp-remainder}
+ |e^{A+R_3}-1-A|
+ \le C\{L|u|^3+L^2|u|^4\}e^{CLu^2}.
+\end{equation}
+
+Let $E_s$ denote expectation for a centered real Gaussian of variance
+$2s$.  For every fixed integer $j\ge0$,
+\begin{equation}\label{scf-weighted-moment}
+ \frac{E_s[|u|^j e^{(\Re p)u+CLu^2}]}{|e^{sp^2}|}
+ \le C_{j,c}(\sqrt{s}+sL)^j.
+\end{equation}
+For completeness, put $d=1-4CLs\ge1/2$.  Completing the real square
+changes the variance to $2s/d$, the mean to $2s\Re p/d$, and the scalar
+mass to $d^{-1/2}e^{s(\Re p)^2/d}$.  Relative to $|e^{sp^2}|$, the
+exponent of this mass is
+\[
+ s(\Im p)^2+s(\Re p)^2(d^{-1}-1)=O_c(1).
+\]
+The usual absolute moments of the shifted Gaussian prove
+\eqref{scf-weighted-moment}.  This calculation pays the possible complex
+cancellation without discarding the complex leading exponential.
+Since $\sqrt{s}+sL=O_c(L^{-1})$, integrating
+\eqref{scf-exp-remainder} gives a relative error $O(L^{-2})$.
+The discarded original and polynomial tails are covered by
+\eqref{scf-tail}.
+
+The remaining Gaussian moments are exact, also for complex $p$:
+\[
+ E_s[e^{pu}]=e^{sp^2},\qquad
+ E_s[u^2e^{pu}]=(2s+4s^2p^2)e^{sp^2}.
+\]
+Combining them with \eqref{scf-log-expansion} proves
+\begin{equation}\label{scf-first-correction}
+ \frac{H(-s,z)}{F(z)e^{sp(z)^2}}
+ =1+sp'(z)\{1+2sp(z)^2\}+O(L^{-2}),
+\end{equation}
+and hence the $1+O(L^{-1})$ comparison of
+Theorem~\ref{thm:gaussian}.  At $s=0$ the ratio is exactly one, and
+these conclusions hold by continuity with zero remainder there.
+
+Carry out the proof on a fixed larger positive-offset strip and with
+fixed horizontal extensions.  The remainder in
+\eqref{scf-first-correction} is holomorphic in $z$ on that larger
+region: its denominator $F(z)e^{sp(z)^2}$ never vanishes.
+Cauchy's estimate on fixed-radius disks then bounds every fixed spatial
+derivative of this remainder by $O_k(L^{-2})$ on the smaller region.
+The corresponding derivatives of the $O(L^{-1})$ remainder have order
+$O_k(L^{-1})$.  The margins are essential here.
+
+For sufficiently large $Y$ the relative ratio lies within $O(L^{-1})$
+of one.  It follows that $H(-s,z)$ is nonzero and
+\[
+ |H(-s,z)|\ge\tfrac12 e^{-C^2c}|F(z)|.
+\]
+Only now define the negative-time logarithmic derivative by
+\begin{equation}\label{scf-ps-definition}
+ p_s(z):=\frac{H_z(-s,z)}{H(-s,z)}.
+\end{equation}
+Taking the analytic logarithm of the relative ratio and differentiating
+in $z$ gives, with the same fixed margins,
+\begin{align}
+ p_s(z)&=p(z)+2sp(z)p'(z)+O(L^{-1}),\label{scf-ps-estimate}\\
+ \partial_zp_s(z)&=p'(z)+2s\{p'(z)^2+p(z)p''(z)\}+O(L^{-1})
+                  =p'(z)+O(1).\label{scf-ps-derivative}
+\end{align}
+All time parameters in this argument are real.  Neither complex-time
+uniformity nor uniformity as the positive offset tends to zero has been
+established.
+
+\section{Conserved spatial contours}
+\label{sec:scf-contours}
+
+The comparison theorem acquires a region on which material transport is
+well defined.  We next turn that analytic fact into an actual continued
+contour, including its horizontal coverage.  Its endpoints are allowed
+to move.
+
+\begin{theorem}[Fixed-offset material graphs]\label{scf-flow-theorem}
+Assume RH.  Fix $0<b_-<b_+$, $c>0$ and $d>0$.
+For all sufficiently large $Y$, for every $b\in[b_-,b_+]$ and every
+$a\in[Y-d,2Y+d]$, the initial point $z_a=a+ib$ has a unique material
+continuation
+\begin{equation}\label{scf-flow}
+ \partial_s Z(s,a)=-p_s(Z(s,a)),\qquad Z(0,a)=z_a,
+ \qquad 0\le s\le cL^{-2}.
+\end{equation}
+Uniformly in these parameters, with $J=\partial_a Z$,
+\begin{align}
+ Z(s,a)&=z_a-sp(z_a)+O(L^{-2}),\label{scf-position-expansion}\\
+ J(s,a)&=1-sp'(z_a)+O(L^{-2}).\label{scf-tangent-expansion}
+\end{align}
+The image is a graph over its advected real interval, covers $[Y,2Y]$,
+and has displacement, tangent angle and slope $O(L^{-1})$.
+Moreover
+\begin{equation}\label{scf-material}
+ H(-s,Z(s,a))J(s,a)=F(z_a),\qquad
+ P(-s,Z(s,a))=P(0,z_a),
+\end{equation}
+where $P(t,z)=\int_0^z H(t,w)\,\dd w$ is the canonical primitive of
+the even field.  There are constants $0<\kappa<K$ such that
+\begin{equation}\label{scf-upward}
+ \kappa sL\le\Im Z(s,a)-b\le KsL.
+\end{equation}
+At fixed real coordinate the graph also moves upward with increasing
+backward duration $s$.
+\end{theorem}
+\begin{proof}
+Choose a rectangle containing the initial segment with additional fixed
+horizontal margins and with fixed positive lower and finite upper
+imaginary margins.  Establish the comparison and derivative estimates
+on a still larger rectangle, leaving room for the Cauchy disks above.
+On the containing rectangle,
+$|p_s|+|\partial_zp_s|\le KL$.  Local ODE existence therefore applies.
+Until the first exit,
+\[
+ |Z(s,a)-z_a|\le KLs\le Kc/L.
+\]
+For sufficiently large $Y$ this is less than half every initial spatial
+buffer.  A first exit is impossible, and ordinary ODE continuation gives
+the solution on the full interval.  This is continuation in a paid
+finite rectangle; no global properness assumption is involved.
+
+Differentiating in the label gives
+\[
+ \partial_sJ=-(\partial_zp_s)(Z)J,\qquad J(0,a)=1.
+\]
+The continuous logarithm with initial value zero satisfies
+$|\log J|\le Kc/L$.  Hence $J=1+O(L^{-1})$, $\Re J>0$, and its
+continuous argument is $O(L^{-1})$.  Strict increase of $\Re Z$ in $a$
+makes the image a graph with slope $\Im J/\Re J=O(L^{-1})$.
+The fixed initial end extensions and the displacement bound put its left
+endpoint to the left of $Y$ and its right endpoint to the right of $2Y$.
+Thus the graph covers the whole target interval without fixing endpoints.
+
+For \eqref{scf-position-expansion},
+\eqref{scf-ps-estimate} and $|Z-z_a|=O(sL)$ give
+$p_s(Z)-p(z_a)=O(sL^2+L^{-1})$.  Integration over
+$0\le s\le cL^{-2}$ costs $O(L^{-2})$.
+Similarly \eqref{scf-ps-derivative} gives
+$\partial_zp_s(Z)=p'(z_a)+O(1)$, while $J=1+O(L^{-1})$.
+Inserting these into the equation for $J$ proves
+\eqref{scf-tangent-expansion}.
+
+Since $\partial_sH(-s,z)=H_{zz}(-s,z)$, differentiation gives
+\[
+ \partial_s\{H(-s,Z)J\}
+  =\bigl[H_{zz}(-s,Z)-H_z(-s,Z)p_s(Z)
+       -H(-s,Z)\partial_zp_s(Z)\bigr]J=0.
+\]
+This proves the first identity in \eqref{scf-material}.
+Evenness gives $H_z(t,0)=0$, so $P_t=-H_z$ and
+\[
+ \partial_s P(-s,Z)=H_z(-s,Z)-H(-s,Z)p_s(Z)=0.
+\]
+This proves the second identity.  The continued contour is therefore the
+selected local inverse-primitive lift.  Its finite-rectangle bound
+prevents escape to an asymptotic value on this interval; other inverse
+branches sharing the same primitive value do not affect this uniqueness.
+
+It remains to prove the direction of motion.  Taking imaginary parts in
+\eqref{scf-product} yields the absolutely convergent positive kernel
+\begin{equation}\label{scf-positive-kernel}
+ -\Im p(x+iy)=\sum_{\lambda\in\mathcal Z}
+                   \frac{y}{(x-\lambda)^2+y^2}.
+\end{equation}
+Its upper bound is $KL$ on the containing rectangle.
+For the lower bound choose a fixed $R$ sufficiently large that the main
+term in $N_F(x+R)-N_F(x-R)$,
+$(R/(2\pi))\log x+O_R(1)$, dominates the two
+$O(\log x)$ errors in \eqref{scf-count}.  A slightly enlarged fixed
+window absorbs endpoint conventions.  It contains at least a positive
+multiple of $\log x$ zeros, including multiplicity.  Each contributes a
+fixed positive amount to \eqref{scf-positive-kernel} on the containing
+strip.  Thus $\kappa_0L\le-\Im p\le K_0L$ there.
+Equation~\eqref{scf-ps-estimate} changes $p$ by only $O(1)$.
+The flow equation consequently gives
+$\kappa L\le\partial_s\Im Z\le KL$ for large $Y$, and integration
+proves \eqref{scf-upward}.
+
+Finally write the graph as $y=\varepsilon(x,s)$, where $s$ denotes
+backward duration.  Its transport equation is
+\[
+ \partial_s\varepsilon=-\Im p_s
+                   +(\Re p_s)\partial_x\varepsilon.
+\]
+The first term is bounded below by a positive multiple of $L$; the
+second is $O(1)$ because the slope is $O(L^{-1})$.
+Thus the fixed-$x$ derivative is positive for sufficiently large $Y$.
+\end{proof}
+
+The upward direction is a statement about these spatial graphs.  It is
+not a sign theorem for a regularized relative zero current or for a
+physical three-form.  Material conservation transfers the acquired
+field estimate into geometry; it does not supply an additional
+multiplicity-sensitive arithmetic estimate.
+
+\section{What regular contours do not distinguish}
+\label{sec:limits}
+
+The acquired wall is compatible with a multiple zero inside it. This
+limitation can be seen both at the local heat scale and in a complete
+positive-source field with the same two-term zero count as the target.
+It concerns the information used in the preceding estimates; it is not
+an exclusion of estimates using the exact theta arithmetic.
+
+\begin{proposition}[A positive-source field with no simple zeros]
+\label{prop:all-multiple}
+Assume RH for $F$ and set
+\begin{equation}
+ a_* =\frac{\log2}{4},\qquad
+ G_0(z)=F(z/2)^2\bigl(1+\cos(a_*z)\bigr).
+ \label{eq:all-multiple-control}
+\end{equation}
+Every zero of $G_0$ is real and has even multiplicity. Its positive zero
+count, with multiplicities, satisfies
+\begin{equation}
+ N_G(X)=\frac X{4\pi}\log\frac X{4\pi}-\frac X{4\pi}
+             +O(\log X).
+ \label{eq:matched-count}
+\end{equation}
+It is the Fourier transform of a positive even superexponentially
+decaying source. Its heat evolution obeys the Gaussian comparison and
+material-contour conclusions proved above, with its own constants.
+\end{proposition}
+\begin{proof}
+Zeros of the squared factor have even multiplicity. The other factor
+is $2\cos^2(a_*z/2)$, with double zeros at the odd multiples of
+$\pi/a_*$. Multiplicities add at coincidences. Hence
+\[
+ N_G(X)=2N_F(X/2)+a_*X/\pi+O(1).
+\]
+The first term has the main expression in \eqref{eq:matched-count}
+minus $X\log2/(4\pi)$; the second term restores exactly this linear
+term. This proves the count.
+
+The logarithmic derivative is
+\begin{equation}
+ \frac{G_0'}{G_0}(z)=p(z/2)-a_*\tan(a_*z/2).
+ \label{eq:control-log-derivative}
+\end{equation}
+The tangent and every fixed derivative are bounded on a fixed positive
+offset strip. The $F$ term inherits the bounds at the half-height and
+half-offset. Thus all the initial logarithmic estimates, the global
+horizontal ratio and the local Gaussian estimates apply. The positive
+real-zero kernel and the count give the same upward-drift lower bound.
+The exact canonical Euler factorization is absent, but the logarithmic
+bound it supplied to our proof is already present in
+\eqref{eq:control-log-derivative}.
+
+For the source, write
+$F(z)=\int_\R\rho(u)e^{izu}\dd u$ with
+$\rho=\Phi_{\mathrm{even}}/2$. Put $h(u)=2\rho(2u)$ and $q=h*h$.
+Then the full Fourier density of $G_0$ is
+\begin{equation}
+ \rho_G(u)=q(u)+\tfrac12q(u-a_*)+\tfrac12q(u+a_*).
+ \label{eq:control-source}
+\end{equation}
+It is positive and even. To check its decay, split the convolution
+integral into $|v|\ge|u|/2$ and its complement, where
+$|u-v|\ge|u|/2$. It follows that
+\[
+ q(u)\le2\|h\|_1\sup_{|v|\ge|u|/2}h(v).
+\]
+Superexponential decay therefore survives convolution and fixed shifts.
+The integral
+$G(t,z)=\int_\R e^{tu^2}\rho_G(u)e^{izu}\dd u$
+exists for every real $t$, gives $G_t=-G_{zz}$, and has the exact
+Gaussian representation. Every step of the comparison and flow proof
+now applies.
+\end{proof}
+
+The proposition shows that initial real-rootedness, the displayed coarse
+count, a positive source, and the existence of the fixed-offset bounds
+are compatible with \emph{zero simple zeros}. Their existence alone
+cannot yield even a positive simplicity proportion. The failed premise
+for this control is the exact canonical source identity, not the coarse
+bounds already acquired. An estimate using actual theta coefficients,
+exact invariant values or sharper quantitative constants may
+still distinguish the target.
+
+\subsection{The offset cannot simply be taken to zero}
+
+The local model $K(t,z)=(z-a)^2-2t$ gives, at
+$z=a+i\beta/L$ and $s=\kappa/L^2$,
+\begin{equation}
+ \frac{K(-s,z)}{K(0,z)}=1-\frac{2\kappa}{\beta^2},
+ \qquad
+ \exp\left(s\left(\frac{K_z(0,z)}{K(0,z)}\right)^2\right)
+       =e^{-4\kappa/\beta^2}.
+ \label{eq:quadratic-obstruction}
+\end{equation}
+The first expression vanishes at $\kappa=\beta^2/2$; the second never
+does. Here the initial logarithmic derivative has derivative
+$2L^2/\beta^2$, beyond the fixed-offset $O(L)$ hypothesis. This is a
+local obstruction to extending the same generic argument through an
+allowed double. To put the model literally in the growing-height band,
+one may take the translated family $a=Y$; the field then depends on $Y$.
+Proposition~\ref{prop:all-multiple} separately supplies a single fixed
+field with multiple zeros at arbitrarily large heights.
+
+A near-axis argument must therefore keep the true local zero factor and
+control its multiplicity-sensitive part. Assuming a floor through this
+model would assume away the event to be studied.
+
+\section{From a collision balance to simple zeros}
+\label{sec:resource}
+
+The contour theorem supplies a zero-free outer corridor. To use it toward
+simplicity, one must also control the nonreal population inside the
+corridor at the earlier time. The following exact balance states that
+remaining requirement without replacing one-sided motion by signed
+conservation. The time endpoints $a,b$ in this section are unrelated to
+the height label of a material arc.
 
 Let $H$ be a nonzero, jointly holomorphic solution of
 \begin{equation}
@@ -193,391 +742,193 @@ to one on its local roots, has earlier nonreal mass two and endpoint
 values $D_K=2$, $M_K=3$. It attains both constants.
 \end{proof}
 
-\subsection{A boundary on the heat scale}
 
-The backward double $z^2-2t$ suggests the contracting tube
-\[
- h(t)^2=h_0^2-2t,\qquad
- \psi(t,x+iy)=\eta(x)\zeta(y/h(t)),\qquad t\le0,
-\]
-with $h_0>0$, smooth compact cutoffs, and $\zeta$ even. Its velocity is
-$u=-iy/h(t)^2$. The relative flux pays horizontal motion as well as
-vertical motion relative to this tube.
+\subsection{The part of the resource supplied by the new wall}
+\label{sec:wall-resource}
 
-For the hard strip $(-A,A)+i(-h(t),h(t))$, the quadratic pair remains
-inside. The cubic pair of $z^3-6tz$ instead enters at
-$t=-h_0^2/4$ if $a<-h_0^2/4$. At the upper crossing, the root velocity
-is $-3/h$ and the wall velocity is $-1/h$, so the relative inward speed
-is $-2/h$. The two entering labels pay the endpoint triple. A boundary
-adapted to the double's scale therefore still needs the flux term.
+The material velocity in forward heat time is $U=H_z/H$.
+It differs from the root velocity $v=H_{zz}/H_z$ in
+\eqref{eq:velocity}. Preserving $H\,dz$ therefore does not transport
+individual zeros or annihilate their relative current.
+Nevertheless the acquired zero-free corridor has an exact use in the
+balance: the upper and lower outer transitions can be placed where
+there are no roots.
 
-More generally, for smooth moving domains with simple transverse wall
-crossings, the hard-wall analogue of \eqref{eq:balance} replaces
-$\FF^\pm$ by entry and exit counts according to the sign of
-$n\cdot(v-u)$. Endpoint wall zeros and multiple wall events need separate
-conventions. Smooth windows avoid those boundary-event conventions.
-
-\section{A natural moving boundary and its cancellation}
-\label{sec:reference}
-
-For a real window write $\D\psi=\psi_x-i\psi_y$ and
-\[
- A_\psi=\psi_t|H_z|^2+\Re\{\D\psi\,H_{zz}\overline{H_z}\}.
-\]
-This is the smooth numerator of its zero flux;
-Section~\ref{sec:field} gives its exact field-integral meaning.
-
-Choose a real-type analytic reference $G$. Let $\chi:\C\to[0,1]$ be a
-conjugation-symmetric $C^2$ cutoff of compact support and put
+\begin{corollary}[Reduction to earlier mass and height-end flux]
+\label{cor:wall-resource}
+Fix $b>0$, $c>0$ and fixed horizontal margins. Under RH, for all
+sufficiently large $Y$ there is a conjugation-symmetric smooth window
+$\psi_Y$ on $[-S,0]$, $S=c/(\log Y)^2$, equal to one at every real
+point of $[Y,2Y]$, whose upper and lower transition corridors contain
+no zeros at any time. Its nonreal flux is supported only in the fixed
+horizontal end regions. If $M_Y$ counts labels at nonsimple endpoint
+sites in $[Y,2Y]$, then
 \begin{equation}
- \psi(t,z)=\chi(G(t,z)).
- \label{eq:reference-window}
+ M_Y\le\frac32\left\{
+ N_{\psi_Y,\nr}(-S)+\FF_{\mathrm{ends},\nr}^{+}\right\}.
+ \label{eq:wall-resource-consumer}
 \end{equation}
-We use this window on a bounded spatial domain on whose collar
-$G(t,z)$ avoids $\supp\chi$ for every $t\in I$, and extend it by zero.
-This is the compact reference-packet condition. It can include several
-components at once; no component is discarded when level sets merge.
-
-For a radial cutoff, the transition boundaries are lemniscates
-$|G(t,z)|=r$. Wherever $G_z\ne0$, their normal motion is that of
-$-G_t/G_z$. If $G$ solves the heat equation, they follow its heat
-motion. At a critical level there need not be a regular material
-velocity; the smooth window \eqref{eq:reference-window} and the formula
-below remain well defined.
-
-\begin{theorem}[Reference-level flux]
-\label{thm:reference}
-For any analytic reference $G$, the moving-window numerator is
-\begin{equation}
- A_\psi=\Re\{\D\chi(G)
-              (G_tH_z-G_zH_t)\overline{H_z}\}.
- \label{eq:determinant-general}
-\end{equation}
-If both fields solve the heat equation, it is
-\begin{equation}
- \boxed{\quad A_\psi=\Re\{\D\chi(G)\,
-       \WW(H,G)\overline{H_z}\},\qquad
- \WW(H,G)=H_{zz}G_z-H_zG_{zz}.\quad}
- \label{eq:matched-determinant}
-\end{equation}
-Neither expression divides by $H_z$ or $G_z$.
-\end{theorem}
+The right-hand terms retain their full definitions; neither is estimated
+in size by the contour theorem.
+\end{corollary}
 \begin{proof}
-The chain rule gives $\D_z\psi=\D\chi(G)G_z$ and
-$\psi_t=\Re\{\D\chi(G)G_t\}$. Substitution into
-\eqref{eq:kernel} gives \eqref{eq:determinant-general}; the heat equations
-give \eqref{eq:matched-determinant}.
+Choose the strip for Theorem~\ref{thm:gaussian} to contain a fixed
+neighborhood of $y=b$, and reflect it across the real axis. Use the
+material graph $y=\varepsilon(x,-t)$ of
+Theorem~\ref{scf-flow-theorem}, with sufficiently long fixed initial end
+extensions. Its $O(1/\log Y)$ displacement leaves a fixed thin
+transition about this graph inside the zero-free strip.
+
+Take a smooth compact horizontal cutoff $\eta$, equal to one on
+$[Y,2Y]$, supported inside the covered extended interval. Choose an
+even smooth cutoff $\chi$ equal to one for $|r|\le1-\delta$ and zero
+for $|r|\ge1+\delta$, with fixed small $\delta>0$, and set
+\[
+ \psi_Y(t,x+iy)=\eta(x)
+       \chi\left(\frac{y}{\varepsilon(x,-t)}\right).
+\]
+The graph is smooth and positive. Choosing $\delta$ small and then $Y$
+large puts every point with $\chi'\ne0$ in the acquired zero-free
+corridors. At a regular root, all terms containing $\chi'$ vanish.
+The remaining window variation is exactly
+\[
+ \frac{d}{dt}\psi_Y(t,z(t))
+   =\eta'(\Re z)\chi\left(\frac{\Im z}
+                                  {\varepsilon(\Re z,-t)}\right)
+                         \Re v(t,z).
+\]
+It is supported at the horizontal ends. Corollary~\ref{cor:multiplicity}
+then proves \eqref{eq:wall-resource-consumer}.
 \end{proof}
 
-The apparent singularity of the reference boundary velocity has canceled
-against the gradient of its level window. If $G=cH$ with constant $c$,
-the relative flux vanishes exactly. This is the material case, but it
-does not estimate the earlier nonreal population.
+A fixed upper wall inside the same acquired strip would also remove
+these transition contributions. Thus the new analytic floor pays an
+outer boundary; material conservation describes a natural evolution
+of that boundary. Neither choice removes the interior earlier mass.
+The construction is independent of the field regulator used below.
 
-\paragraph{Localizing without a reference-packet assumption.}
-If the reference-packet condition is unavailable, take a fixed compact
-spatial cutoff $\eta$ and use $\psi=\eta\chi(G)$. Then the exact
-numerator is
+For $N_Y$ the total endpoint multiplicity in the covered band, the
+number of simple zeros is $N_Y-M_Y$. An acquired estimate
+$\mathcal R_Y\le\alpha N_Y$, with
+$\mathcal R_Y=N_{\psi_Y,\nr}(-S)+\FF_{\mathrm{ends},\nr}^{+}$,
+would give
+\[
+ N_Y-M_Y\ge(1-3\alpha/2)N_Y.
+\]
+A bound $\mathcal R_Y=o(N_Y)$ would give density-one simplicity on
+these bands. An individual-site window with resource below two would
+exclude a multiple zero there. These are quantitative consequences of
+the proved balance, not bounds on $\mathcal R_Y$ already obtained.
+Any cumulative conclusion also needs complete coverage of its height
+range and its exceptional low-height region.
+
+\section{The arithmetic estimate still required}
+\label{sec:next-arithmetic}
+
+The main theorem acquires a useful outer contour at the mean-spacing
+squared heat clock. It does not estimate how many nonreal zeros have
+already appeared inside that contour. The all-multiple field in
+Proposition~\ref{prop:all-multiple} demonstrates that this distinction
+persists even with the same two-term zero count and positive source.
+There are two natural ways to advance: bound the complete resource in
+\eqref{eq:wall-resource-consumer}, or obtain a near-axis comparison
+which retains the actual cluster factor and controls its
+multiplicity-sensitive part using canonical arithmetic.
+
+\subsection{A complete field quantity, with ordered limits}
+
+For $\D\psi=\psi_x-i\psi_y$, put
 \begin{equation}
- A_\psi=\eta\Re\{\D\chi(G)(G_tH_z-G_zH_t)\overline{H_z}\}
- +\chi(G)\Re\{\D\eta\,H_{zz}\overline{H_z}\}.
- \label{eq:outer-cutoff}
+ A_\psi=\psi_t|H_z|^2+
+          \Re\{\D\psi\,H_{zz}\overline{H_z}\},\qquad
+ k_\rho(w)=\frac{\rho^2}{\pi(|w|^2+\rho^2)^2}.
+ \label{eq:resource-numerator}
 \end{equation}
-The second term is the outer spatial flux. The positive part is taken
-after adding the two terms; bounding them separately is a permissible
-overestimate. Thus a natural reference boundary does not conceal the
-cost of restricting to a finite height band.
-
-\subsection{A quantitative mismatch bound}
-
-Fix a compact region containing the window and its derivatives, and put
-\[
- \NN=\int_I\#\{z\text{ in this region}:H(t,z)=0\}\dd t,
- \qquad
- \LL=\int_I\sum_{H(t,z)=0\text{ in this region}}|v(t,z)|\dd t.
-\]
-Both are complete-population quantities; independent analytic upper
-bounds are given in Section~\ref{sec:anchors}.
-
-\begin{theorem}[Flux from reference error]
-\label{thm:mismatch}
-For the window \eqref{eq:reference-window}, let $c$ be any constant and
-$e=G-cH$. If $|e_t|\le E_t$ and $|e_z|\le E_1$ on the region, then
-\begin{equation}
- \FF_{\psi,\nr}^+\le\FF_{\psi,\all}^+
- \le\|\D\chi\|_\infty(E_t\NN+E_1\LL).
- \label{eq:mismatch-bound}
-\end{equation}
-For two heat fields one may take $E_t=E_2$, where $E_2\ge|e_{zz}|$.
-For $\chi(w)=\chi_0(|w|^2/r^2)$ and $|e|\le E_0$, the factor
-$\|\D\chi\|_\infty$ can be replaced by
-\begin{equation}
- C_\chi(E_0)=\min\left\{\|\D\chi\|_\infty,
-                   \frac{2\|\chi_0'\|_\infty E_0}{r^2}\right\}.
- \label{eq:radial-improvement}
-\end{equation}
-One may minimize the entire bound over $c$, using the same $c$ in all
-error terms.
-\end{theorem}
-\begin{proof}
-Along a true root, $G=e$ and
-\[
- \frac{d}{dt}G(t,z(t))=e_t+e_zv.
-\]
-The chain rule, positive-part inequality, and integration prove
-\eqref{eq:mismatch-bound}. The radial refinement follows from
-$|\D\chi(G)|=2|\chi_0'|\,|e|/r^2$ at the root.
-\end{proof}
-
-The estimate preserves the common motion before taking absolute values.
-It needs neither a true-field nor a reference derivative floor. If the
-error lies strictly inside the plateau of $\chi$ for the whole time
-interval, the matched flux is actually zero. With an outer cutoff,
-its separate flux in \eqref{eq:outer-cutoff} still has to be paid.
-
-Endpoint coverage also has a source test. If $\chi=1$ on $|w|\le r_*$,
-then $|G(b,z)-cH(b,z)|<r_*$ on a prescribed core inside the reference-packet domain makes the window equal
-to one at every true endpoint zero there. This does not require knowing
-those zeros in advance. For an outer cutoff additionally require
-$\eta=1$ on that core.
-
-\subsection{Removing a known carrier}
-
-A high-height normalization may be useful, but its transport must be
-retained. Let $B$ be holomorphic, nonvanishing, and of real type, $f=H/B$, $g=G/B$, and
-\[
- \mathcal T_B=\partial_z^2+2\lambda\partial_z+c_B,
- \qquad \lambda=B_z/B,\qquad c_B=B_t/B+B_{zz}/B.
-\]
-Then $-f_t=\mathcal T_Bf$, and the current formulas use $-f_t$ in place
-of $H_{zz}$. For two physical heat fields and $\psi=\chi(g)$, the
-reference determinant becomes
-\begin{equation}
- \boxed{\WW_B(f,g)=g_z\mathcal T_Bf-f_z\mathcal T_Bg
- =f_{zz}g_z-f_zg_{zz}+c_B(fg_z-gf_z).}
- \label{eq:carrier}
-\end{equation}
-The common drift cancels exactly. The zeroth-order term remains,
-including at a finite field regulator. With $f=g+e$,
-\[
- \WW_B=e_{zz}g_z-e_zg_{zz}+c_B(eg_z-ge_z).
-\]
-If instead $g_t+\mathcal T_Bg=d_g$, add $d_gf_z$ to
-\eqref{eq:carrier}. The mismatch estimate still holds with the actual
-$E_t$; in normalized variables $E_t=E_2$ is generally false. For two normalized
-heat fields, $e=g-cf$ instead satisfies
-\[
- E_t\le E_2+2\|\lambda\|_\infty E_1+\|c_B\|_\infty E_0.
-\]
-
-\section{Arithmetic information from theta and xi}
-\label{sec:arithmetic}
-
-For the canonical field we use
+Let $\vartheta_\delta(y)$ vanish for $|y|\le\delta$, equal one for
+$|y|\ge2\delta$, and increase to $1_{y\ne0}$ as
+$\delta\downarrow0$. The precise field representation, proved in
+Appendix~\ref{sec:field}, is
 \begin{align}
- H(t,z)&=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\dd u,
- &8H(0,z)&=\xi(1/2+iz/2),\label{eq:theta}\\
- \Phi(u)&=\sum_{n\ge1}\Phi_n(u),
- &\Phi_n(u)&=(2\pi^2n^4e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2e^{4u}}.
- \nonumber
+ N_{\psi,\nr}(-S)
+ &=\lim_{\delta\downarrow0}\lim_{\rho\downarrow0}
+   \int\vartheta_\delta(\Im z)\psi(-S,z)
+     k_\rho(H(-S,z))|H_z(-S,z)|^2\dd A_z,
+ \label{eq:resource-population}\\
+ \FF_{\psi,\nr}^{+}
+ &=\lim_{\delta\downarrow0}\lim_{\rho\downarrow0}
+   \int_{-S}^0\int\vartheta_\delta(\Im z)
+        k_\rho(H)[A_\psi]_+\dd A_z\dd t.
+ \label{eq:resource-field-flux}
 \end{align}
-These normalizations agree with \cite{polymath}. Every summand is
-positive on $u\ge0$, and the complete source has super-exponential
-decay. Positivity supplies coarse geometric bounds. The arithmetic
-reference below uses the actual integer-square coefficients themselves.
+These are exact for each fixed analytic field and fixed smooth window.
+They do not assert uniform convergence as $Y$ grows or as a window
+itself depends on $\rho$. A finite-regulator approximation needs its
+own uniform error before such limits can be interchanged. The cutoff
+$\vartheta_\delta$ measures nonreal roots; it is not multiplied into
+$\psi$ before differentiating.
 
-\subsection{The complete source tail enters only through a determinant}
+\subsection{Retain the coupled relative current}
 
-For a fixed integer $N\ge1$, put
+One possible arithmetic reference uses another analytic field $G$ of
+real type and a smooth conjugation-symmetric cutoff
+$\chi:\C\to[0,1]$, with $\psi=\chi(G)$ on a compact packet.
+The packet condition means the reference stays outside $\supp\chi$
+on a containing spatial collar, so the window extends smoothly by zero.
+A direct chain rule gives
+\begin{equation}
+ A_\psi=\Re\{\D\chi(G)(G_tH_z-G_zH_t)\overline{H_z}\}.
+ \label{eq:reference-determinant}
+\end{equation}
+If $G_t=-G_{zz}$, the determinant in this expression is
 \[
- A_N(u)=\sum_{n\le N}\Phi_n(u),\qquad T_N(u)=\sum_{n>N}\Phi_n(u),
- \qquad G_N(t,z)=\int_0^\infty e^{tu^2}A_N(u)\cos(zu)\dd u.
+ \WW(H,G)=H_{zz}G_z-H_zG_{zz}.
 \]
-The reference $G_N$ is an exact heat field. The target remains the
-unchanged $H$, including the entire tail $E_N=H-G_N$.
+No division by either derivative is required. If
+$d_G=G_t+G_{zz}$, retain the additional term $d_GH_z$.
+For $\psi=\eta\chi(G)$ without a packet condition, the right-hand
+side of \eqref{eq:reference-determinant} is multiplied by $\eta$ and
+one must add
+$\chi(G)\Re\{\D\eta H_{zz}\overline{H_z}\}$.
+The positive part is taken after summing these terms.
 
-\begin{proposition}[Arithmetic head--tail identity]
-\label{prop:arithmetic}
-The reference-level residual is
+When $G$ is a constant multiple of $H$, the matched field-level window
+has zero relative field-level flux. Its boundary velocity, where
+regular, is $H_{zz}/H_z$, not $H_z/H$. This exact cancellation does not
+bound its earlier nonreal mass. It is a different construction from
+the conserved spatial contours of Section~\ref{sec:scf-contours}.
+
+For the complete theta source a finite prefix is an exact heat
+reference, but its entire omitted tail must remain in the determinant.
+Writing $\Phi=A_N+T_N$ and
+$G_N(t,z)=\int_0^\infty e^{tu^2}A_N(u)\cos(zu)\dd u$, one obtains
 \begin{align}
- \WW(H,G_N)
- &=\iint_{(0,\infty)^2}e^{t(u^2+v^2)}
-            A_N(u)T_N(v)K_z(u,v)\dd u\dd v,\label{eq:head-tail}\\
- K_z(u,v)&=uv\{v\sin(zu)\cos(zv)-u\cos(zu)\sin(zv)\}\nonumber\\
- &=\frac{uv}{2}\{(v-u)\sin(z(u+v))
-                     +(u+v)\sin(z(u-v))\}.\label{eq:kernel-cancel}
+ \WW(H,G_N)&=\int_0^\infty\!\int_0^\infty
+ e^{t(u^2+v^2)}A_N(u)T_N(v)K_z(u,v)\dd u\dd v,
+ \label{eq:complete-residual}\\
+ K_z(u,v)&=\frac{uv}{2}\bigl\{(v-u)\sin(z(u+v))
+                    +(u+v)\sin(z(u-v))\bigr\}.
+ \label{eq:antisymmetric-kernel}
 \end{align}
-In particular $K_z(v,u)=-K_z(u,v)$ and $K_z(u,u)=0$.
-\end{proposition}
-\begin{proof}
-The head--head terms cancel in
-$H_{zz}(G_N)_z-H_z(G_N)_{zz}$, leaving
-$(E_N)_{zz}(G_N)_z-(E_N)_z(G_N)_{zz}$.
-Differentiate the complete integrals and multiply; Fubini is justified
-by super-exponential decay. This gives the first kernel. The addition
-formulas for sine give the second.
-\end{proof}
+Indeed the prefix-prefix products cancel, and differentiating the
+complete transforms leaves precisely the displayed prefix-tail terms.
+The sine addition formulas give the stated kernel. It is
+antisymmetric in $u,v$ and vanishes on the diagonal. This is an
+available arithmetic quantity to estimate before taking absolute values;
+its identity supplies neither a flux sign nor a small-value denominator.
+A small absolute source tail is not necessarily a small relative field
+error near a high zero.
 
-Thus the boundary estimate sees a coupled head--tail interaction rather
-than two separately large derivative products. More generally, for two
-source densities $\Phi,\Psi$, with $H=H_\Phi$ and $G=H_\Psi$,
-the same kernel gives the exact antisymmetrization
-\[
- \WW(H_\Phi,H_\Psi)=\frac12\iint e^{t(u^2+v^2)}K_z(u,v)
- [\Psi(u)\Phi(v)-\Psi(v)\Phi(u)]\dd u\dd v.
-\] A constant rescaling of the source
-therefore makes the determinant vanish, just as the geometry requires.
+The proof objective is now specific: use information that the control
+\eqref{eq:all-multiple-control} does not possess to bound a complete,
+multiplicity-sensitive expression such as
+\eqref{eq:resource-population}--\eqref{eq:resource-field-flux}, with its
+height ends, near-real cutoff, errors and coverage intact. More terms in
+the fixed-offset asymptotic alone do not meet this objective. The
+contour theorem supplies a proved outer boundary from which that
+arithmetic problem can be pursued.
 
-For theta, the ordering of the actual coefficients sharpens this
-antisymmetrization further.
-\begin{proposition}[Ordered arithmetic residual]
-\label{prop:ordered-source}
-The ratio $T_N(u)/A_N(u)$ is strictly decreasing for $u\ge0$.
-Consequently, with
-\[
- D_N(u,v)=A_N(u)T_N(v)-A_N(v)T_N(u),
-\]
-one has $D_N(u,v)>0$ for $u>v$, and
-\begin{equation}
- \boxed{\WW(H,G_N)=\int_{u>v>0}e^{t(u^2+v^2)}
-                  D_N(u,v)K_z(u,v)\dd u\dd v.}
- \label{eq:ordered-source}
-\end{equation}
-\end{proposition}
-\begin{proof}
-Put $X=e^{4u}$. For $n>k\ge1$, the exact coefficients give
-\[
- \frac{\Phi_n(u)}{\Phi_k(u)}
- =\frac{n^2}{k^2}\frac{2\pi n^2X-3}{2\pi k^2X-3}
-                e^{-\pi(n^2-k^2)X},
-\]
-and hence
-\[
- \partial_X\log\frac{\Phi_n}{\Phi_k}
- =-\pi(n^2-k^2)
-  -\frac{6\pi(n^2-k^2)}{(2\pi n^2X-3)(2\pi k^2X-3)}<0.
-\]
-Thus $\Phi_k(u)\Phi_n(v)-\Phi_k(v)\Phi_n(u)>0$ for $u>v$.
-Sum these positive differences over $k\le N<n$; absolute convergence
-gives $D_N(u,v)>0$, equivalently the asserted ratio ordering. Split
-\eqref{eq:head-tail} into its two half-planes and use the antisymmetry
-of $K_z$ to obtain \eqref{eq:ordered-source}.
-\end{proof}
-
-There is a concrete improvement even in an absolute estimate. For
-$|\Im z|\le b_0$, \eqref{eq:kernel-cancel} gives
-\begin{align}
- |K_z(u,v)|\le\min\biggl\{&uv(u+v)e^{b_0(u+v)},\notag\\
- &\frac{uv|u-v|}{2}
- \left[e^{b_0(u+v)}+|z|(u+v)e^{b_0|u-v|}\right]\biggr\}.
- \label{eq:kernel-majorant}
-\end{align}
-The first entry gives the separate absolute source-moment bound; the second
-retains the diagonal cancellation. Taking their minimum is never worse
-and is strictly better on a neighborhood of $u=v>0$. This improvement
-is relative to that specified source-moment majorant, not to bounds
-that retain actual oscillatory values of the reference derivatives. The signed integral
-\eqref{eq:head-tail} may be considerably smaller; no optimal arithmetic
-estimate is asserted by taking absolute values.
-
-Denote the symmetric majorant in \eqref{eq:kernel-majorant} by
-$M_z(u,v)$. The ordered source gives the further bound
-\[
- |\WW(H,G_N)|\le\int_{u>v>0}e^{t(u^2+v^2)}D_N(u,v)M_z(u,v)\dd u\dd v.
-\]
-For every fixed real $t$ this is strictly smaller than
-$\iint e^{t(u^2+v^2)}A_N(u)T_N(v)M_z(u,v)\dd u\dd v$:
-their difference is the positive integral with density
-$2e^{t(u^2+v^2)}A_N(v)T_N(u)M_z(u,v)$ on $u>v>0$. This uses the actual ordered
-square coefficients, not positivity alone. The remaining kernel is
-oscillatory, so the source sign does not supply a sign for the flux.
-Both $D_N$ and $K_z$ vanish on the diagonal: the ordered integrand is
-locally $O((u-v)^2)$. The ratio ordering also survives positive
-reweightings of the same square terms; it does not by itself distinguish
-theta from weighted-square collision controls. No uniform factor of
-improvement is claimed.
-
-\subsection{An explicit tail allowance}
-
-Let $m=N+1$ and
-\begin{equation}
- q_m(u)=(1+1/m)^4e^{-\pi(2m+1)e^{4u}},\qquad
- \mathcal T_N(u)=
- \frac{2\pi^2m^4e^{9u}e^{-\pi m^2e^{4u}}}{1-q_m(u)}.
- \label{eq:tail-envelope}
-\end{equation}
-Then $0<q_m(u)<1$ and $0<T_N(u)\le\mathcal T_N(u)$. Indeed, after
-discarding the negative term of $\Phi_n$, consecutive terms
-$n^4e^{-\pi n^2e^{4u}}$ have ratio at most $q_m(u)$ for $n\ge m$.
-The geometric sum proves the claim. Hence, on $-\epsilon\le t\le0$
-and $|\Im z|\le b_0$,
-\begin{equation}
- |\partial_z^j E_N(t,z)|\le
- \mathcal E_{j,N}(b_0):=
-       \int_0^\infty u^j e^{b_0u}\mathcal T_N(u)\dd u.
- \label{eq:tail-jets}
-\end{equation}
-All coefficients and both infinite tails are retained in this bound.
-The exact signed source may be used instead of its envelope.
-
-Combining Theorem~\ref{thm:mismatch} with independent upper bounds
-$\NN\le\epsilon n_*$ and $\LL\le L_*$ gives
-\begin{equation}
- \boxed{\FF_{\psi,\nr}^{+}
- \le C_\chi(\mathcal E_{0,N})
-       \{\epsilon n_*\mathcal E_{2,N}+L_*\mathcal E_{1,N}\}.}
- \label{eq:arithmetic-flux-bound}
-\end{equation}
-For a nonradial cutoff use $\|\D\chi\|_\infty$ in place of
-$C_\chi$. The compact reference-packet condition, endpoint coverage,
-and any outer-cutoff flux remain part of this application.
-
-For every fixed compact band the tail budgets tend to zero as $N$
-increases. This does not imply a useful normalized estimate at growing
-height. In particular, the reference's finite source prefix does not
-inherit the full source reflection, and small absolute source errors
-can dominate an exponentially small high-height field. The unchanged
-arithmetic in \eqref{eq:head-tail} is available for a stronger estimate;
-positivity and the envelope alone do not settle that estimate.
-
-\subsection{A local reference written directly in xi}
-
-An alternative uses the exact initial field $H_0(z)=\xi(1/2+iz/2)/8$:
-\begin{equation}
- G_K(t,z)=\sum_{k=0}^{K}\frac{(-t)^k}{k!}H_0^{(2k)}(z),
- \qquad
- H_0^{(j)}(z)=\frac18(i/2)^j\xi^{(j)}(1/2+iz/2).
- \label{eq:xi-reference}
-\end{equation}
-It is an analytic reference with a known heat defect,
-\begin{equation}
- d_K=(G_K)_t+(G_K)_{zz}
-       =\frac{(-t)^K}{K!}H_0^{(2K+2)}.
- \label{eq:xi-defect}
-\end{equation}
-Its relative flux uses
-$\WW(H,G_K)+d_KH_z$, as follows directly from
-\eqref{eq:determinant-general}. Equivalently, with $e=G_K-H$,
-\[
- (G_K)_zH_{zz}+(G_K)_tH_z=e_zH_{zz}+e_tH_z.
-\]
-The temporal-error form includes the defect exactly, so it is paid only
-once in Theorem~\ref{thm:mismatch}.
-
-For $A_j(b_0)=\int_0^\infty u^je^{b_0u}\Phi(u)\dd u$, the real
-negative-time Taylor remainder gives, for $K\ge1$ and $e=G_K-H$,
-\begin{equation}
- |\partial_z^j e|\le\frac{\epsilon^{K+1}}{(K+1)!}A_{j+2K+2}(b_0),
- \qquad
- |e_t|\le\frac{\epsilon^K}{K!}A_{2K+2}(b_0).
- \label{eq:xi-error}
-\end{equation}
-These inequalities follow under the complete integral from the remainder
-of $e^{tu^2}$ for $t\le0$; they are not continuations of a
-positive-time error theorem. The exact xi coefficients can be used in
-the signed determinant before resorting to these absolute remainders.
-
-\section{Recovering the flux from the complete field}
+\appendix
+\section{The complete field representation of the resource}
 \label{sec:field}
 
 Recall the moving-window numerator $A_\psi$ and define
@@ -650,8 +1001,9 @@ The polynomial-root theorem of Parusi\'nski--Rainer
 \cite[Theorem 1]{pr} gives $L^p$ derivatives of every continuous root
 for $1<p<n/(n-1)$. Choose one admissible $p$ for the finite cover and
 sum the bounds. Degree one is immediate. Returning to physical time
-introduces the factor $|J|^{1/p-1}$ on each chart; all these factors
-and any overlaps are included. No root separation is used.
+introduces the factor $|I_{\rm chart}|^{1/p-1}$, where
+$I_{\rm chart}$ is that chart's physical time interval; all these
+factors and any overlaps are included. No root separation is used.
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{thm:current-limit}]
@@ -713,184 +1065,50 @@ These constants are local field data; no uniform height estimate is
 implicit in this observation.
 \end{remark}
 
-\section{Independent bounds and the remaining arithmetic question}
-\label{sec:anchors}
-
-The geometric quantities in \eqref{eq:arithmetic-flux-bound} need not
-be supplied by individual zero tracking.
-
-\begin{theorem}[An anchored analytic bound]
-\label{thm:anchor}
-Let $f$ be holomorphic on a neighborhood of
-\[
- \{\tau:\operatorname{dist}(\tau,I)\le d\}\times\{|z|\le4R\},
-\]
-with $|f|\le M$ and $|f(t,0)|\ge m>0$ for real $t\in I$.
-Write $\alpha=m/M$. There are constants $n_*(\alpha)$ and
-$C(\alpha)$ such that the roots in $|z|\le R$ obey
-\begin{equation}
- \#\{f(t,z)=0:|z|\le R\}\le n_*(\alpha),\qquad
- \int_I\sum_{\substack{f(t,z)=0\\|z|\le R}}|z'(t)|\dd t
- \le C(\alpha)R(1+|I|/d).
- \label{eq:anchor-bound}
-\end{equation}
-No lower bound on $f_z$ is required. The constants depend only on
-$\alpha$ and the fixed radius ratios; they are not numerically
-evaluated here.
-\end{theorem}
-\begin{proof}
-Jensen bounds the zero count in $|z|<3R$ by
-\[
- n=\max\left(1,\left\lceil\frac{\log(M/m)}{\log(4/3)}\right\rceil\right).
-\]
-At a fixed real time remove these zeros with disk Blaschke factors for
-the $3R$ disk. The remaining zero-free factor has modulus at most $M$
-and modulus at least $m$ at zero. Writing this factor as $h$, Harnack applied to the nonnegative harmonic
-function $\log(M/|h|)$ bounds its modulus below by $M\alpha^5$ on $|z|\le2R$.
-Choose $s\in[R,2R]$ at distance at least $R/(4n)$ from all the removed
-zero moduli. At most half the radius interval is excluded, so such a
-circle exists, and on it
-\[
- |f(t,z)|\ge M\alpha^5(20n)^{-n}=:\eta.
-\]
-Zeros on the factorization circle are only boundary zeros and do not
-affect Harnack in the interior.
-
-Cauchy's time estimate bounds $|f_t|$ by $2M/d$ on the half-width
-tube. Put $\beta=\eta/M$ and $\ell=d\beta/16$, and partition $I$
-into at most $1+|I|/\ell$ intervals of length at most $\ell$.
-Each midpoint's circle stays clear on its interval and a complex-time
-collar of width $\ell/2$: the field changes by at most
-$2M\ell/d=\eta/8$. Each chart encloses at most $n$ roots.
-Normalize its time interval and disk; the normalized time collar has
-width at least $1/2$. The binomial coefficient bounds, Cauchy's estimates,
-and the polynomial-root theorem used in Lemma~\ref{lem:levels} give
-\[
- \int_J\sum|z'(t)|\dd t
- =s\int_0^1\sum|\zeta_j'(u)|\dd u\le C_2(n)R.
-\]
-The physical time scale cancels in this path-length integral. Summing proves \eqref{eq:anchor-bound}; Jensen
-also gives the stated pointwise population bound.
-\end{proof}
-
-For $f=H$ on $I=[-\epsilon,0]$, actual complete-source data are
-\begin{equation}
- m=\int_0^\infty e^{-\epsilon u^2}\Phi(u)\dd u,
- \qquad
- M=\int_0^\infty e^{du^2+4Ru}\Phi(u)\dd u.
- \label{eq:theta-anchor}
-\end{equation}
-They are finite and positive, and they meet the theorem's hypotheses.
-They give a coarse earlier nonreal bound as well as the root-path bound
-needed in \eqref{eq:arithmetic-flux-bound}. A distant band can be
-enclosed in such a disk, but the resulting constants can be very large.
-
-Arithmetic also supplies anchors away from the critical line. For
-$z_*=h+ib_0$, $b_0>1$, put $s_*=(1+b_0)/2-ih/2$ and
-$\sigma=\Re s_*>1$. The functional equation \cite[\S25.4]{dlmf} and Euler product give
-\begin{equation}
- |H(0,z_*)|\ge
- \frac{|s_*(s_*-1)\Gamma(s_*/2)|}{16\pi^{\sigma/2}}
- \frac{\zeta(2\sigma)}{\zeta(\sigma)}=:m_0.
- \label{eq:euler-anchor}
-\end{equation}
-Here $|\zeta(\sigma+it)|\ge\prod_p(1+p^{-\sigma})^{-1}$.
-For negative real time,
-$|H(t,z_*)-H(0,z_*)|\le\epsilon A_2(b_0)$.
-Thus $m_0-\epsilon A_2(b_0)>0$ is a genuine local anchor when that
-inequality holds. It can be used on local disks, and reflected disks
-when symmetry is needed. This elementary continuation may force an
-extremely small width at large height; no favorable microscopic width
-is inferred from it.
-
-\paragraph{What remains to estimate.}
-The central formula is exact, and its multiplicity constants are sharp.
-The reference determinant removes a derivative denominator and retains
-the arithmetic cancellation before estimation. The bounds above give
-finite, independently sourced allowances. What is still needed for a
-useful global conclusion is a sufficiently small earlier \emph{nonreal}
-population together with sufficiently small complete relative flux on
-prescribed height bands, including outer localization and coverage.
-The generic anchor bound does not discriminate real from nonreal zeros.
-The arithmetic tail bounds and signed determinant have no proved useful
-height-uniform size here. Neither RH nor a new global simplicity
-proportion follows from the present results.
-
-For a fixed moving-window family, extending its initial time backward
-cannot decrease its exact conservative resource: rearranging
-\eqref{eq:balance} gives
-$\mathcal R_\psi=N_{\psi,\nr}(b)+\BB_\psi+\FF^-_{\psi,\nr}$.
-A better completed estimate must come from better arithmetic information
-or a better justified window, with the same endpoint coverage.
-
-\appendix
-\section{Small values and finite-regulator stability}
-
-The proof of Lemma~\ref{lem:levels} gives more than finiteness. For a
-fixed analytic $f$ and moving window put
-\[
- W_\psi(r)=\int_I\int_{|f|\le r}
-       \bigl(|\psi_t||f_z|^2+|\nabla\psi||f_tf_z|\bigr)\dd A\dd t.
-\]
-The area formula and the chart bounds give $W_\psi(r)\le\pi Lr^2$
-for small $r$, with $L$ bounded by the corresponding population and
-path-length data. The target-plane coefficient of $r^2$ has a finite
-limit when the zero-level multiple events are finite. Integrating
-$k_\rho$ against this distribution uniformly bounds the regularized
-currents. Its limit is the corresponding absolute-variation bound; the
-exact directional limit retains the coupled numerator as in
-Theorem~\ref{thm:current-limit}.
-
-That limit has no uniform rate under degeneration of the field or its
-charts. At a fixed regulator there is, however, a direct error estimate.
-For any analytic $f$ use
-\[
- A_f=\psi_t|f_z|^2+\Re\{\D\psi(-f_t)\overline{f_z}\}.
-\]
-If $g$ approximates $f$, set $e_0\ge|f-g|$ and
-$e_A\ge|A_f-A_g|$. The elementary kernel bounds
-\[
- \|k_\rho\|_\infty\le\frac1{\pi\rho^2},\qquad
- \|\nabla k_\rho\|_\infty\le\frac2{\pi\rho^3}
-\]
-and the Lipschitz property of positive part give
-\[
- |Q_\rho(f)-Q_\rho(g)|
- \le\int_I\int\left\{\frac{e_A}{\pi\rho^2}
-               +\frac{2e_0|A_g|}{\pi\rho^3}\right\}\dd A\dd t.
-\]
-Subtract the coupled numerator before bounding $e_A$. This statement
-holds for a fixed window; an approximation-dependent change of window
-needs its own error allowance. A fixed source error cannot be passed
-unchanged through $\rho\downarrow0$.
 
 \section*{Acknowledgements and status}
+
 This manuscript was drafted for Edward Baker with substantial assistance
 from OpenAI Codex, model \texttt{gpt-6-astra}, reasoning effort
 \emph{ultra}. Contributing and reviewing agents used the same model.
-The finite analytic statements have undergone internal derivation checks;
-these are not independent specialist refereeing or formal verification.
-The earlier research draft and accompanying notes retain the broader
-coefficient, spectral, contour and numerical investigations. This version
-selects the moving-boundary conservation law and its source estimates as
-one continuous argument. No priority claim is made for the classical
-ingredients or their combination.
+The new Gaussian and contour argument, its controls, and the retained
+finite collision balance have undergone internal derivation checks.
+These are not independent specialist refereeing or formal verification.
+The Riemann hypothesis is assumed in the canonical contour results;
+simplicity is the overarching objective and is not proved here.
+No priority claim is made for the classical ingredients or their
+combination. The broader research draft and earlier dated TeX versions
+retain the auxiliary spectral, source-ordering and numerical work.
 
 \begin{thebibliography}{9}
-\bibitem{pr}
-A.~Parusi\'nski and A.~Rainer,
-\emph{Optimal Sobolev regularity of roots of polynomials},
-Annales scientifiques de l'\'Ecole normale sup\'erieure (4) 51 (2018),
-1343--1387. \href{https://doi.org/10.24033/asens.2376}{doi:10.24033/asens.2376}.
+\bibitem{Elkies}
+N.~D. Elkies,
+\emph{The product formula for $\xi(s)$ and $\zeta(s)$; vertical
+distribution of zeros}, Math 259 course notes, Harvard University,
+March 7 entry, spring 2007, pp.~1--3, equations (1)--(4).
+\url{https://people.math.harvard.edu/~elkies/M259.06/zeta2.pdf}.
+The meromorphic completion in these notes differs from the entire
+$\xi$ used here by the factor $s(s-1)/2$.
+
+\bibitem{DLMF}
+NIST Digital Library of Mathematical Functions,
+\S5.11, \emph{Asymptotic expansions}, and
+\S25.4, \emph{Reflection formulas}.
+\url{https://dlmf.nist.gov/5.11};
+\url{https://dlmf.nist.gov/25.4}. Accessed 23 October 2026.
 
 \bibitem{polymath}
 D.~H.~J. Polymath,
 \emph{Effective approximation of heat flow evolution of the Riemann
 $\xi$ function, and a new upper bound for the de Bruijn--Newman constant},
 arXiv:1904.12438v2 (2019).
-\url{https://arxiv.org/abs/1904.12438}.
-\bibitem{dlmf}
-NIST Digital Library of Mathematical Functions, \S25.4,
-\emph{Reflection formulas}. \url{https://dlmf.nist.gov/25.4}.
+\url{https://arxiv.org/abs/1904.12438v2}.
+
+\bibitem{pr}
+A.~Parusi\'nski and A.~Rainer,
+\emph{Optimal Sobolev regularity of roots of polynomials},
+Annales scientifiques de l'\'Ecole normale sup\'erieure (4) 51 (2018),
+1343--1387.
+\href{https://doi.org/10.24033/asens.2376}{doi:10.24033/asens.2376}.
 \end{thebibliography}
 \end{document}

@@ -49,6 +49,9 @@ describe the data and any availability limits.
    the author's machine, no download URLs baked into code.
 6. **Third-party material.** PDFs of papers by other authors are never
    committed, whatever their size (`references/README.md`); they are cited.
+   Follow [REFERENCE_WORKFLOW.md](REFERENCE_WORKFLOW.md): add relevant articles
+   to the investigation's reference catalog when found, and retain authorized
+   local PDF reading copies outside the repository with version/hash records.
 7. **Not Git LFS, not a cloud drive.** Both were considered and rejected:
    LFS objects are not part of the tarball GitHub hands to Zenodo, so a
    release would silently omit them while appearing complete; LFS adds
