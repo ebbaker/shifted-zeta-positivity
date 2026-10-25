@@ -1,0 +1,106 @@
+\subsection{Signed-source transfer and sharper complete-source cell caps}
+\label{sec:signed-source}
+The local route can compare the signed source directly, without separating
+its multiplier into independent magnitudes. For two holomorphic fields
+with common $q=q(t,x)>0$, $r=\log q$, let $d_j$ bound their jet differences
+for $j=0,1,2$ and let common $P_1,P_2$ bound their jets and straight
+interpolation. On a common amplitude interval $[m,M]$ put
+\begin{align}
+ \mathcal S_F&=A_s(|F|)\{r_t|F_z|^2+r_x\Re(F_{zz}\overline{F_z})\},\notag\\
+ A_s(v)&=\frac{q(v^2-q)}{\pi(q+v^2)^3},\quad
+ A_s'(v)=\frac{4qv(2q-v^2)}{\pi(q+v^2)^4},\notag\\
+ A_s''(v)&=\frac{4q(2q^2-17qv^2+5v^4)}{\pi(q+v^2)^5}.
+ \label{eq:signed-radial}
+\end{align}
+The factorization follows from \eqref{eq:adaptiveSource}, and ordinary
+differentiation gives the derivatives. Let $a_s=\sup_{[m,M]}|A_s|$,
+$a_{s,1}=\sup_{[m,M]}|A_s'|$. The first maximum is attained among the
+endpoints and $\sqrt{2q}$; the second among the endpoints and
+$\sqrt{q(17\pm\sqrt{249})/10}$, retaining only points inside the
+interval. These are the stationary points from the displayed derivatives;
+interior zeros of the absolute-valued functions are minima, so endpoints
+also cover degenerate intervals.
+
+\begin{proposition}[Direct signed-source comparison]\label{prop:signed-source}
+With the common frozen caps above,
+\begin{align}
+ |\mathcal S_H-\mathcal S_F|\le E_{\mathcal S}
+ ={}&a_s\{2|r_t|P_1d_1+|r_x|(P_1d_2+P_2d_1)\}\notag\\
+ &+a_{s,1}(|r_t|P_1^2+|r_x|P_1P_2)d_0.
+ \label{eq:signed-source-bound}
+\end{align}
+No heat equation is required. For every fixed spatial derivative used,
+\begin{equation}
+ |\partial^\alpha K*(\mathcal S_H-\mathcal S_F)|
+                    \le|K_\alpha|*E_{\mathcal S}.
+ \label{eq:signed-source-filter}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Write the bracket in \eqref{eq:signed-radial} as $T_F$.
+Product comparison bounds its difference by
+$2|r_t|P_1d_1+|r_x|(P_1d_2+P_2d_1)$ and its modulus by
+$|r_t|P_1^2+|r_x|P_1P_2$. The real gradient norm of the radial map
+$A_s(|F|)$ is $|A_s'|$ along the field segment, including its smooth
+limit at zero. Telescope $A_sT$ to prove the first inequality. Transfer
+the derivative of the entire product to the fixed kernel for the second.
+Thus the varying $r_t,r_x$ stay inside the full-support integral; no
+regulator derivative is omitted or replaced by a center value.
+\end{proof}
+The row is a positive linear map in $d_0,d_1,d_2$. Freeze its coefficients
+with the total errors before separately mapping interpolation, modes,
+complete tail and nodal arithmetic. Its validity extends to fields with
+heat residuals because the signed source was defined independently.
+Note~36's optional direct $W_t,C,C_t$ envelopes instead assume exact heat
+fields; a joined or saddle field needs the residual terms in
+\eqref{eq:cj-direct-time} and Note~36 AS11. They are not imported without
+that premise \cite{n36}.
+
+For source curvature the complete signed derivative polynomial is
+\begin{equation}
+ \Phi_n''=\pi^{-1/4}n^{-1/2}e^{-A_n}A_n^{5/4}P_2(A_n),
+ \qquad P_2(A)=-75+330A-224A^2+32A^3.
+ \label{eq:signed-source-curvature}
+\end{equation}
+On $[l,l+d]$ its cubic Bernstein coefficients are
+\[
+ P_2(l),\quad P_2(l)+dP_2'(l)/3,\quad
+ P_2(l)+2dP_2'(l)/3+d^2P_2''(l)/6,\quad P_2(l+d).
+\]
+Their largest absolute value bounds $|P_2|$ continuously. Multiply by
+$\pi^{-1/4}n^{-1/2}m_{5/4}(l,l+d)$ and sum retained modes.
+For a cap sum through $N_B$, $n_0=N_B+1$ and
+$A_0=\pi n_0^2e^{4a}\ge17/4$, the full omitted-mode cap is
+\begin{equation}
+ \frac{\pi^{-1/4}n_0^{-1/2}e^{-A_0}
+ (75A_0^{5/4}+330A_0^{9/4}+224A_0^{13/4}+32A_0^{17/4})}
+ {1-(1+1/n_0)^8e^{-\pi(2n_0+1)e^{4a}}},
+ \label{eq:signed-curvature-tail}
+\end{equation}
+provided the ratio is below one. Monomial decrease and the maximum
+mode-power exponent eight prove this tail as before.
+A second valid cell bound, for midpoint $c$ and width $h$, is
+$|\Phi''(c)|+(h/2)\sup|\Phi'''|$, with complete source and derivative
+tails retained. The recurrence gives
+$P_3=-375+3270A-4232A^2+1440A^3-128A^4$; positive monomial caps
+give the full third-derivative tail, once $A_0\ge21/4$,
+\[
+ \frac{\pi^{-1/4}n_0^{-1/2}e^{-A_0}
+ \sum_{j=0}^4 |p_{3,j}|A_0^{5/4+j}}
+ {1-(1+1/n_0)^{10}e^{-\pi(2n_0+1)e^{4a}}},
+\]
+where $p_{3,j}$ are the displayed coefficients of $P_3$ and the ratio
+is required to be below one. Taking the minimum with the earlier complete-source
+cap remains valid. The finite-source mode count is separate from this
+cap evaluation count.
+
+For nonnegative time ceiling and $Y$, the weights
+$u^je^{tu^2+Yu}$ are convex on $u\ge0$. Integrate the nonnegative
+linear-interpolation remainder kernel and hats against their secant
+chord majorants. The resulting degree-at-most-three polynomial integrals
+bound the weights continuously; for constant $W$ they give $h^3W/12$
+and $hW/2$. The cubic counterparts are \eqref{eq:hermite-chords}.
+This pays a chord-majorant inequality, not floating endpoint or summation
+arithmetic. Other time domains need their own weight bound.
+The adaptive mesh heuristic and numerical comparisons remain in Note~36;
+no new numerical study is part of this integration.

@@ -1,213 +1,180 @@
-# GPT research workflow: Astra analysis, Sol numerics
+# GPT research workflow: Sol by default, Astra for exceptional difficulty
 
 24 October 2026, America/New_York. Prepared for **Edward Baker** with
-substantial LLM assistance, **gpt-6-astra (Codex), actual effort max**,
-verified from this chat's session metadata.
+substantial LLM assistance. Original guidance: gpt-6-astra, effort max.
+Revised at the author's request in chat 0010: **gpt-6-astra (Codex), actual
+effort xhigh**, verified from session metadata.
 
-This is the canonical guidance for GPT research chats in this repository,
-placed at the repository root at the author's request on 24 October 2026.
-The repository also uses Claude. This document defines the Astra/Sol
-division within GPT work; Claude's responsibilities remain governed by
-the author's separate assignments.
+This is the canonical GPT model guidance for this repository. The author's
+latest instruction is: “You can be more aggressive with the handoffs to
+Sol. Please only reserve extra high difficulty tasks for Astra.” This
+supersedes the earlier rule assigning every analytical task to Astra.
+Claude's responsibilities remain governed by the author's separate assignments.
 
 ## Standing division of work
 
-At the author's request, use this division for future GPT research work:
-
 | Owner | Responsibility |
 | --- | --- |
-| **GPT-6 Astra (`gpt-6-astra`)** | Analytical formulas, asymptotics, proofs, hypotheses, norms, error decompositions, research priorities and interpretation of numerical evidence. Astra specifies the numerical question and decides what the returned evidence permits the analytical argument to claim. |
-| **GPT-6.1 Sol (`gpt-6.1-sol`)** | All numerical implementation and execution: numerical code, evaluators, quadrature, precision and stability work, computational checks, interval or exact-arithmetic certificates, diagnostics, tables and plots. Sol reports errors and limitations explicitly. |
-| **Edward Baker** | Maintains the chats, chooses the actual models and effort, and carries the handoff between chats. |
+| **GPT-6.1 Sol (`gpt-6.1-sol`) — default** | Routine and moderately difficult research, analytical derivations, proof completion within established methods, error accounting, interpretation, reviews, manuscript work, and all numerical implementation/execution. Sol may formulate bounded questions, derive missing routine formulas, run diagnostics and certificates, and assess what the evidence establishes. |
+| **GPT-6 Astra (`gpt-6-astra`) — exceptional difficulty** | Extra high difficulty analytical bottlenecks: genuinely new proof mechanisms, difficult uniform or singular estimates, unresolved structural compatibility, and analytical problems that remain resistant after a focused Sol attempt. State the specific difficulty when recommending Astra. |
+| **Edward Baker** | Maintains the chats, chooses actual models and effort, and carries handoffs between chats. |
 
-This is a manual workflow. It does not create chats, dispatch agents, send
-messages between chats, schedule runs or change model settings. Existing
-[chat-history capture](tools/CHAT_HISTORY.md) continues under its standing rules.
-Historical results retain their actual author/model attribution.
+Default to Sol when uncertain about task difficulty. A task being analytical,
+unfinished, important, or attached to an infinite-range theorem does not by
+itself justify Astra. Astra should hand off as soon as the next tractable
+subproblem is clear. Do not wait for an entire global proof or a fully
+polished theorem before giving Sol a useful bounded analytical or numerical
+assignment. Sol can complete routine missing specifications in that assignment.
 
-Astra can inspect code and numerical reports and verify their provenance,
-but sends numerical coding, execution, debugging and reruns to Sol. This
-includes a proposed "quick numerical check" and machine-executed symbolic
-or exact-arithmetic verification. Mathematical derivations remain Astra's
-work. Ordinary file editing, links, hashes, manuscript production and chat
-capture are housekeeping and can be performed by either owner.
+Keep all numerical coding, execution, debugging, reruns, machine-symbolic
+checks and exact-arithmetic verification with Sol. Astra may inspect the
+code and evidence, derive difficult analytic inputs and prepare handoffs.
+Ordinary file edits, hashes, manuscript production and chat capture are
+housekeeping available to either model. The user-selected effort remains
+unchanged; “extra high difficulty” is a routing criterion, not an instruction
+to change an effort setting.
 
-Sol may choose and repair implementation details within the agreed scope
-and budget. If a formula is ambiguous or apparently wrong, Sol records
-the minimal evidence and returns the analytical issue to Astra. Sol does
-not silently change the source, normalization, regulator, target norm,
-domain, tolerances or theorem. A numerical counterexample or failed budget
-must be retained; ownership never overrides contrary evidence.
+Sol may correct routine formulas and resolve routine analytical ambiguities.
+Document the correction and its effect on dependent results. Preserve the
+physical source, normalization, regulator and intended target. If a change
+to a frozen mathematical contract is needed, record a new packet revision
+before applying it; never silently reinterpret old results. Escalate a
+specific hard bottleneck to Astra with the attempted route, evidence and
+unpaid term. A numerical failure or counterexample must always be retained.
+
+This remains a manual workflow. It does not authorize creating chats,
+dispatching agents, sending messages between chats, scheduling research or
+changing models. Existing [chat capture](tools/CHAT_HISTORY.md) continues.
+Historical assignments, results and model attribution remain historical;
+apply this revised division to new work rather than rewriting old records.
 
 ## End-of-chat recommendation
 
-Author instruction added 24 October 2026. Recorded by **gpt-6-astra
-(Codex), actual effort max**, in the heat-density continuation chat.
+At the end of each research reply, name the next concrete deliverable and
+owner: **Analysis — Sol**, **Numerics — Sol**, **Analysis and numerics — Sol**,
+or **Analytical — Astra**. Explain briefly what decision it advances.
+Recommend Astra only when you can identify the extra high difficulty.
+If no further task is warranted, say so rather than inventing work.
 
-At the end of every research reply, explicitly recommend the next task
-as **Analytical — Astra** or **Numerics — Sol**. Give one concrete next
-deliverable and a short reason based on the current research state. Apply
-this to status and discussion replies as well as completed research work,
-so the author knows which chat/model should take the next step. If no
-further task is warranted, say so instead of inventing work.
+For a Sol handoff, link the bounded packet and give a short pasteable prompt.
+The packet may ask Sol to finish routine analysis before computation. A
+numerical run still needs a named question, finite scope and stop rule;
+Sol can supply these within an authorized exploratory-analysis assignment.
+A completed Sol task does not automatically need another Astra turn.
+Sol may record its disposition and continue routine follow-through or close
+the packet. Use Astra review when the unresolved difficulty warrants it,
+or when the author specifically requests it. Model changes do not supply
+independent specialist review.
 
-For a Sol recommendation, identify the analytical question the computation
-will resolve and link the bounded request packet when ready. If its scope
-or error contract still needs analytical work, recommend that Astra task
-first. Do not create a numerical assignment merely to alternate models.
-For an Astra recommendation, name the missing estimate, proof or analytical
-disposition. This recommendation does not dispatch work or change models;
-the author continues to manage the chats manually.
+## Handoff cycle
 
-## The handoff cycle
+1. **Scope and route.** Read the live ledger; state the gain, evidence,
+   next bounded subproblem and any missing input. Use `ANALYSIS_READY`
+   or `ANALYSIS` while developing an analytical assignment. Sol is the
+   default owner; explain an exceptional Astra assignment.
+2. **Prepare a bounded handoff.** Complete one request packet, link its
+   revision and next owner in the existing progress register, and mark
+   `READY_FOR_SOL` (or `READY_FOR_ASTRA` for a difficult escalation).
+   Supply enough context to start; explicitly delegate routine derivations
+   instead of blocking on their absence.
+3. **Execute.** Re-read the exact request revision and live entry. Record
+   actual model/effort. Use `ANALYSIS` for analytical work and `NUMERICS`
+   for computation. Preserve failed attempts, input versions, finite work
+   limits and stop conditions. Append the return with evidence paths.
+4. **Disposition and continuation.** Sol may assess routine results and
+   close them with a recorded disposition, or prepare the next bounded
+   Sol task. Use `ANALYTIC_REVIEW` during review, and `CLOSED` only after
+   the evidence and remaining limits are recorded. Escalate to
+   `READY_FOR_ASTRA` only with a specific hard question or at the author's
+   request. Astra hands routine follow-through back to Sol promptly.
 
-1. **Astra develops the analysis.** Use `ANALYSIS_READY` before starting
-   and `ANALYSIS` while working. State the intended analytic gain and the
-   remaining estimate. Request computation only when its answer will
-   affect the proof, approximation, bound or choice of method.
-2. **Astra prepares a request and hands off to Sol.** Complete the request
-   section of one packet, link it in the existing progress register and
-   mark its handoff phase `READY_FOR_SOL`. End with the packet's absolute
-   path and a short prompt the author can paste into the Sol chat.
-3. **Sol executes the bounded request.** Re-read the live progress entry
-   and exact packet revision, record the actual model/effort, and mark
-   `NUMERICS`. Work within its budget; preserve failures and stop rules.
-   Append the return section, link the code and small records, and mark
-   `READY_FOR_ASTRA`. Hand the author the same packet path and return prompt.
-4. **Astra evaluates the return.** Mark `ANALYTIC_REVIEW`; check the result's
-   scope, assumptions and error accounting. Record whether it supplies the
-   requested input, remains diagnostic, exposes a scoped failure or leaves
-   an unresolved issue. Integrate the justified result in notes/manuscript
-   and the existing task ledger, or revise the analysis. Mark `CLOSED` only
-   when the packet has a recorded disposition. Further numerical work gets
-   an explicit new request revision or a separate packet.
+Handoff phases are separate from Complete, Partial, Ready or Gated research
+statuses. A failed computation can be a completed bounded task without
+completing its parent theorem. Each shared artifact has one current writer;
+re-read before editing and preserve other chats' updates.
 
-These are handoff phases, separate from a research task's Complete, Partial,
-Ready or Gated status. Completing a computation does not complete its parent
-theorem. A packet may return to Astra without a successful run when the
-question is ill-posed, the method fails or the budget is exhausted.
+## One compact packet in the existing progress register
 
-The author can keep several chats open. Each packet and shared artifact
-has one current writer. Before editing a shared progress entry, re-read
-it and preserve other packets' updates. Do not infer that an old chat's
-local context is newer than the files. Separate packets can proceed on
-disjoint artifacts when the author arranges that work.
-
-## One compact packet, linked from the existing progress register
-
-Create a packet only for a real numerical question. Put it in the affiliated
-investigation's `research-progress/handoffs/` directory, using its task ID
-and a sequence, for example `HDA-19-N01.md`. The example is not a current
-assignment. Keep the existing progress file as the sole task ledger; record
-the packet path, revision, handoff phase, current owner and next action there.
-Do not duplicate the whole research history in the packet.
-
-Use these three sections:
+Use the affiliated investigation's `research-progress/handoffs/` directory.
+Use a parent task ID and sequence; `-A01` can identify analytical work,
+`-N01` numerical work, and `-AN01` mixed work. Keep the existing progress
+file as the sole ledger. Do not create a new ledger or duplicate research
+history. A small, actionable packet is preferable to delaying delegation.
 
 ```text
 ID / parent task / request revision / date:
 Request author and actual model/effort:
-Next owner:
-Current phase (the progress register owns the live phase):
-Read first: exact files and sections; required repository instructions.
-Input versions: commit where available, plus hashes for relevant uncommitted inputs.
-Files this packet may write:
+Next owner and reason for routing:
+Current phase (the progress register owns live status):
+Read first / input versions / files this packet may write:
 
-REQUEST — Astra
-Analytical statement or bound being advanced, with a note/equation reference:
-Question the computation can answer and how each outcome changes the analysis:
-Exact formulas and conventions, domain, regulator, kernels and normalizations:
-Required outputs and whether diagnostic, exact or interval-certified:
-Error components to report separately; tolerance/precision requirements:
-Finite cases or adaptive selection rule; refinement and work limits:
-Numerical stopping rule; analytical remainder or infinite-range obligation:
-Existing code/results to reuse; expected output locations and return prompt:
+REQUEST
+Concrete analytical or numerical question and how outcomes affect the decision:
+Established formulas, conventions, domain, regulator, norms and source:
+Routine derivations or choices explicitly delegated to Sol:
+Outputs, evidence standard and acceptance conditions:
+For computation: finite cases, error categories, precision and work limits:
+Stop conditions, unbounded remainder and genuinely hard escalation triggers:
+Existing work to reuse; output locations:
 
-RETURN — Sol
-Actual model/effort, date, thread ID, request revision and input versions used:
-Outcome and decision-relevant numbers, including every failed requested case:
-Code and small execution-record paths; reproduction command and environment:
-Source/truncation, arithmetic and integration errors and unresolved components:
-Checks, stopping reason, actual work/runtime, and available usage data:
-Deviations from the request, implementation limitations and analytical questions:
+RETURN
+Actual model/effort, date, thread ID, revision and input versions:
+Result and failed cases; proof, code and small execution-record paths:
+Errors, limitations, reproduction details and actual work/runtime if available:
+Corrections, deviations and unresolved analytical questions:
 
-ANALYTICAL DISPOSITION — Astra
-Actual model/effort and date; exact return reviewed:
-Accepted input, diagnostic only, scoped failure or further work needed:
-What changed in the bound, domain, formula or proof; what did not follow:
-Evidence links, research-task status changes if justified, and next action:
+DISPOSITION — named owner
+Exact evidence reviewed; accepted input, diagnostic, scoped failure or open:
+What changes in the argument and what does not follow:
+Research-task status, next deliverable and justified next owner:
 ```
 
-Freeze the dispatched request revision. Sol appends its return without
-rewriting the request or prior evidence. A mathematical change creates a
-new explicitly numbered revision; retain the old request and return so
-results cannot be silently applied to different inputs. If required input
-files changed, record the mismatch and resolve it before using the result.
-Keep mathematical derivations in `notes/`, code and small execution records
-in `numerics/`, and assessments in `reviews/`; link them from the packet.
-Apply [LARGE_FILES.md](LARGE_FILES.md) to generated data and PDFs.
+Freeze a handed-off revision. Append returns rather than overwriting the
+request or prior evidence. Record a new revision for a changed contract;
+check changed input files before reusing a result. Save mathematics in
+`notes/`, code and small execution records in `numerics/`, and assessments
+in `reviews/`. Follow [LARGE_FILES.md](LARGE_FILES.md).
 
-## Usage discipline and evidential scope
-
-- Read the focused source list and current progress first, while following
-  the repository's required instructions and indexes. Reuse recorded work.
-- Astra should supply enough mathematics that Sol need not rediscover the
-  objective. Sol should return a short decision summary plus evidence links
-  so Astra need not repeat the numerical run to understand it.
-- Before dispatch, give a finite work budget and stop condition. Do not
-  automatically increase heights, sample counts, precision or refinement
-  rounds. Sol can adapt within the specified limits; a scope/budget increase
-  returns for a revised analytical request.
-- Keep the author's selected effort unless they choose another. Record
-  the actual setting, and mark unavailable metadata as unknown. A requested
-  model label is not proof of which model executed a turn. If the active
-  model does not match the role, prepare the handoff rather than doing that
-  role's research under an incorrect label.
-- Record runtime and model usage when actually available. Do not infer
-  account savings from the role assignment. Avoid
-  reruns solely to produce a nicer table or to keep the other chat busy.
-- Floating observations remain diagnostics. Exact or interval computations
-  need their stated coverage and full error accounting. An unbounded-height
-  conclusion still needs an analytical argument covering the unsampled range.
-  Different models sharing inputs do not constitute independent specialist
-  review, and a Sol numerical report alone does not fulfill HDA-20.
+## Evidence and work limits
 
 Read the [result index](result-summaries/README.md) and
 [avoid index](avoid/README.md), especially
 [numerics before a question](avoid/10_numerics_ahead_of_the_question.md),
-[shared-premise reviews](avoid/05_same_model_reviews_and_shared_premises.md),
-[parallel writers](avoid/17_parallel_writers_and_broken_registries.md)
-and [evidence/status](avoid/06_status_stronger_than_the_evidence.md).
+[shared-premise review](avoid/05_same_model_reviews_and_shared_premises.md),
+[parallel writers](avoid/17_parallel_writers_and_broken_registries.md) and
+[status](avoid/06_status_stronger_than_the_evidence.md).
 
-## Prompts for the author to carry between chats
+A bounded diagnostic is useful before certification when it chooses a
+method, exposes a failed budget or tests an explicit assumption. Do not
+require the final global error theorem before such a diagnostic. Label
+samples as samples; interval/exact claims need their actual coverage and
+separate source, arithmetic, integration and remainder payments. Sol may
+choose refinements within the request's finite limits. A scope/budget
+increase needs a revised request with its reason, not automatic expansion.
 
-Replace the packet placeholder with the actual absolute path and revision.
-These templates do not dispatch anything or change the selected model.
+Record actual model and effort from available metadata; do not infer them
+from a requested label or claim savings without usage evidence. If a task
+falls outside the active model's assigned role, prepare the appropriate
+handoff. Preserve the author's selected settings. No routine Sol proof or
+interpretation requires Astra approval solely because it is analytical.
 
-**To the Sol chat:**
+## Prompts for the author
+
+**To Sol:**
 
 > Follow `/Users/ebbaker/Documents/shifted-zeta-positivity/GPT_RESEARCH_MODEL_WORKFLOW.md`.
-> Read `[absolute packet path, revision]` and its current progress entry.
-> Execute only the specified numerical request using GPT-6.1 Sol, within its
-> budget and stop rules. Save the code and records, append the Sol return,
-> and hand it back to Astra. Keep analytical changes as questions for Astra.
+> Continue `[absolute packet path, revision]` and its live progress entry.
+> Complete the delegated analysis and/or computation within its limits,
+> save evidence and disposition, and update progress and chat history.
+> Escalate only a specifically identified extra high difficulty bottleneck.
 
-**Back to the Astra chat:**
+**To Astra when warranted:**
 
 > Follow `/Users/ebbaker/Documents/shifted-zeta-positivity/GPT_RESEARCH_MODEL_WORKFLOW.md`.
-> Review Sol's return in `[absolute packet path, revision]` using GPT-6 Astra.
-> Decide what it establishes for the analytical goal, update the research
-> notes and progress, and continue the analysis. Prepare another bounded
-> request only if a specific analytical need remains; do not rerun numerics.
-
-For model selection, the desktop app's model/effort control is beneath the
-composer; the actual options depend on the account and client. See the
-[official OpenAI model guidance](https://learn.chatgpt.com/docs/models),
-checked 24 October 2026.
-
-## Current adoption
+> Resolve the difficult analytical bottleneck in `[packet path, revision]`,
+> using Sol's return and failed attempts. Save the proof or precise failed
+> route, then hand tractable follow-through back to Sol.
 
 The [heat-density progress register](papers/investigations-5/01_heat_density_asymptotics/research-progress/01_AVERAGED_DENSITY_RESEARCH_PROGRESS_20261024.md)
-holds the current owner and next action. Its analytical infinite-height
-priority remains in force. This workflow creates no numerical assignment
-by itself and changes no research result or completion status.
+owns its live assignments. This policy revision changes routing, not the
+truth or completion status of any mathematical result.

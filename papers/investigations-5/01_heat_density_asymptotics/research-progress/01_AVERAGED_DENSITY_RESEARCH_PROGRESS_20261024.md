@@ -8,7 +8,133 @@ This is the investigation's sole research task ledger. The
 The target is the unnormalized average shape, with spatial averaging,
 time averaging, or both, and explicit fluctuation corrections.
 
-For the current starting point, read [Note 31][positive-system] and
+**Current author-directed consolidation — 25 October 2026, chat 0016;
+gpt-6-astra, actual effort max.** [Note 46](../notes/46_NOTES42_45_MANUSCRIPT_CONSOLIDATION_20261025.md)
+records the manuscript integration of Notes 42–45; [Review 28](../reviews/28_NOTES42_45_CONSOLIDATION_PRODUCTION_ASSESSMENT_20261025.md)
+records production verification. The overview and task ledger now make
+**every real x and t, controlled infinite-height and both infinite-time
+limits, and an analytic representation with useful proved errors** the
+explicit completion contract. The finite 95–97 template is an intermediate
+consumer, not the destination. Canonical H, physical q, kernels and actual
+covariance are unchanged.
+
+New HDA-22/23/24 tasks below cover fixed-width time assembly, improved
+core conditioning, and switch-uniform assembly. AN04 remains the immediate
+Sol deliverable. New packets are prepared only; no chat, computation or
+research execution is dispatched. HDA-10 is complete at the new production
+scope; HDA-17 remains Partial, HDA-18 Gated and HDA-20 unfulfilled.
+Earlier dated checkpoints below retain the status at their original
+returns; the current assignment table and task ledger govern live work.
+
+**Author-requested progress review — 25 October 2026, chat 0016;
+gpt-6-astra, actual effort xhigh.** [Review 27](../reviews/27_RECENT_PROGRESS_AND_NEXT_STEPS_REVIEW_20261025.md)
+assesses the manuscript and Notes 42–45 at focused scope, with no blocking
+error found in the inspected derivations. It confirms AN01–AN03's recorded
+analytical completion and recommends the existing AN04 r1 as the next Sol
+deliverable, followed by fixed-width time coverage and improved growing-core
+conditioning. No mathematical source/manuscript edit, numerical rerun,
+specialist audit or parent status upgrade. HDA-17 Partial, HDA-18 Gated and
+HDA-20 unfulfilled remain unchanged; AN04 is still prepared and unexecuted.
+
+**Latest continuation — 25 October 2026, chat 0015; gpt-6.1-sol,
+actual effort ultra.** [Note 45](../notes/45_EFFECTIVE_FULL_BUFFER_OUTER_FIELD_20261025.md)
+completes HDA-18-AN03 r1 with explicit full-buffer field and jet constants
+on [95,97]. For |Im z|<=5 and x=|Re z|>=2^2048,
+|H-P|<=12000 A/x^2. Derivatives through three on the smaller buffered
+strip have explicit constants through C3=36864000 at x>=2^2049.
+Every central/infinite/left/connector/middle/arithmetic term is paid;
+full Cauchy circles retain carrier control. EF23 pays the former FI23
+field debit by 1179648000/X^2<=1/16 for X>=2^2050.
+
+[Review 26](../reviews/26_EFFECTIVE_FULL_BUFFER_OUTER_FIELD_ASSESSMENT_20261025.md)
+records three separate same-model analytical audits and six selected
+scalar checks, all passed. No contour estimate failed. These huge finite
+onsets are not optimized or practical cutoffs. [AN03 r1](handoffs/HDA-18-AN03.md)
+is CLOSED — analytical scope complete; [AN04 r1](handoffs/HDA-18-AN04.md)
+is prepared for **Analysis — Sol** to make exterior collar/unit,
+signed-pole and weighted-observable constants effective and assemble one
+complete budget. No theta/source/gamma sampling or new chat dispatch.
+HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled remain unchanged.
+
+**Preceding finite-input continuation — 24 October 2026, chat 0015;
+gpt-6.1-sol, actual effort ultra.** [Note 44](../notes/44_FINITE_INPUTS_CLIPPED_SOURCE_AND_OUTER_GATE_20261024.md)
+reduces finite model/cutoff/regulator coefficients and supplies a positive
+clipped rational Hermite source with explicit cutoff, mode, cell,
+precision and description-size bounds. Its four-jet error is
+29varepsilon/64; the sufficient cell count is varepsilon^-1/4 times
+exp(O(log^2 log(1/varepsilon))). [Review 25](../reviews/25_FINITE_INPUTS_AND_SOURCE_COST_ASSESSMENT_20261024.md)
+records same-model checks and five exact scalar majorants. This is a
+constructive upper bound, not a cost lower bound or executed source.
+
+The first theta-dependent finite gap gate is FI23: the full complex-buffer
+H-P jet comparison. FS20/PE9 constants/onset remain uninstantiated; no
+particular finite X or gap index is accepted. [AN02 r1](handoffs/HDA-18-AN02.md)
+is CLOSED at this bounded analytical scope, retaining that unpaid gate.
+[AN03 r1](handoffs/HDA-18-AN03.md) is READY_FOR_SOL: make FS20 effective on
+J=[95,97] and its Cauchy circles, or return the exact unpaid contour term.
+No theta/source/gamma sampling, manuscript change or parent status upgrade.
+HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled remain unchanged.
+
+**Preceding full-support continuation — 24 October 2026, chat 0015; gpt-6.1-sol,
+actual effort ultra.** [Note 43](../notes/43_FULL_SUPPORT_FIXED_GAP_TRANSFER_20261024.md)
+completes HDA-18-AN01 r1's fixed-gap full-support comparison: weighted
+primitive assembly, paid exterior heat partition, all nonholomorphic/
+component heat terms, direct time/source rows and actual covariance.
+Finite source/gap inequalities are explicit; the largest allowance remains
+O(log^3 X/X^2), plus the retained smaller residual/exponential terms.
+[Review 24](../reviews/24_FIXED_GAP_FULL_SUPPORT_ASSESSMENT_20261024.md)
+records same-model proof checks and six polynomial cases with 76 exact
+rational assertions passed. No effective gap/source cost or accepted
+finite core is supplied. AN01 r1 is **CLOSED — analytical scope complete**;
+HDA-17 stays Partial, HDA-18 Gated and HDA-20 unfulfilled. **Analysis — Sol:**
+instantiate one finite gap and source-complexity contract before theta
+execution; moving gaps and all-time coverage remain separate.
+
+**Preceding local continuation — 24 October 2026, chat 0014; gpt-6-astra,
+actual effort xhigh.** [Review 23](../reviews/23_MI2_FOCUSED_ANALYTICAL_REVIEW_20261024.md)
+checks the actual MI2 return and matching source/output hashes, with no
+blocking integration issue found in its limited scope. [Note 42](../notes/42_GAP_LOCALIZED_SPATIAL_DEFECTS_20261024.md)
+derives the nonholomorphic spatial-join equations and explicit local
+defect allowances in a zero-free model gap on a short after-switch slab.
+The new transition costs have no inverse regulator floor and decay under
+the stated relative field input. Full-support comparison, effective gap
+and source costs, moving gaps and all-time assembly remain open.
+HDA-18 stays **Gated**. **Analysis — Sol:** [HDA-18-AN01 r1](handoffs/HDA-18-AN01.md)
+now asks for the complete support/partition/covariance transfer; no theta
+numerical widening or manuscript milestone is asserted.
+
+**MI2 production synthesis — 24 October 2026, chat 0013; gpt-6.1-sol,
+actual effort xhigh.** [Review 21][review21] assesses Notes 35–37 at limited
+cross-model scope. [Note 38][crossover] records the phase-transition
+literature and the proposed crossover/correlation direction.
+[Note 39][manuscript39] now supplies the requested introduction, scope and
+analytical-integration recommendations, now implemented under [HDA-10-MI2 r1][mi2].
+The maintained manuscript is checked at **78 pages**, through Notes 34–37
+with the scoped Note 38 interpretation. [Note 41](../notes/41_NOTE39_MANUSCRIPT_IMPLEMENTATION_20261024.md)
+and [Review 22](../reviews/22_NOTE39_ANALYTICAL_INTEGRATION_PRODUCTION_ASSESSMENT_20261024.md) record actual checks. The overview is updated in place.
+
+For the latest bounded evidence, read
+[Note 37](../notes/37_POSITIVE_HERMITE_SOURCE_AND_REMAINDERS_20261024.md),
+[AN03 r1/r2](handoffs/HDA-17-AN03.md) and
+[Review 20](../reviews/20_POSITIVE_HERMITE_SOURCE_ASSESSMENT_20261024.md).
+AN01–AN03 are CLOSED at diagnostic scope. The positive cubic-Hermite
+source has explicit continuous source/evaluator remainder inequalities;
+all 91 sampled source rows fit their allocations after directional caps.
+Nodal/source-budget/evaluator arithmetic, continuous filtering and
+domain/time coverage remain unpaid. Preserve the r1 and storage-matched
+failures. HDA-17 is **Partial**, HDA-18 **Gated**, and the full HDA-20 audit
+is unfulfilled. The next numerical deliverable remains the frozen-point
+certificate — Sol; no new run is commissioned here.
+
+The new HDA-21 analytical goal is **Ready — specification not yet
+completed**: define the crossover limit, order-parameter diagnostic,
+connected correlation, response and differentiated error requirements.
+The regulator-induced limiting jump is established in the earlier
+notes; intrinsic criticality, CFT and divergent correlation length are
+not established. This goal supports the unchanged all-time/all-height
+approximation objective.
+
+For the preceding endpoint/outer inputs, read [Note 31][positive-system] and
 [Review 13][review13], with [Note 30][full-saddle] for the complete field
 proof. The positive endpoint now includes all-height current, time,
 forcing/source and actual Q/Delta Q errors O(t^-1/2), with the exact
@@ -19,40 +145,54 @@ and review is same-assistant only. HDA-18 remains Gated by finite-core
 input and joining estimates. HDA-20 has no distinct-reviewer audit.
 The failed HDA-15 trial and unaccepted HDA-17 bridge remain unchanged.
 Analytical results extending to infinite height remain the author's
-priority; no numerical packet has been issued.
+priority; the completed AN01--AN03 diagnostics support a later bounded
+fixed-point certification task.
 
 ## Manual GPT model handoff — current assignment
 
-For GPT research, the author assigns analytical formulas and proofs to
-**GPT-6 Astra** and
-all numerical implementation/execution to **GPT-6.1 Sol**. He manages the
-chats and model selection. Use the
+For GPT research, the author now assigns routine and moderately difficult
+analysis and all numerical work to **GPT-6.1 Sol** by default. Reserve
+**GPT-6 Astra** for extra high difficulty analytical bottlenecks and hand
+tractable subproblems to Sol promptly. He manages chats and model selection. Use the
 [manual workflow and packet template](../../../../GPT_RESEARCH_MODEL_WORKFLOW.md).
 This is the sole ledger; the handoff phase does not change a research
 task's proof status.
 
 | Task or packet | Handoff phase | Next owner | Next action |
 | --- | --- | --- | --- |
-| HDA-10-MI1 r1 — manuscript production | CLOSED — production complete | Edward Baker; analytical continuation remains Astra | Integrated Notes 25--28 and 30 under the [frozen specification][integration-spec]; verified 54-page export and [production assessment][production-review]. Note 31 was deferred under that completed request; its subsequent integration is recorded in the Review 15 row below. No research-status or independent-review upgrade. |
-| HDA-10 — Review 15 manuscript revision | CLOSED — production complete | Edward Baker; next research owner Astra | Implemented the B_2^Phi notation correction, Note 31 evolution/covariance proofs and residual equations, finite inner allowances and model/domain guide; verified 65-page PDF and [production assessment][production-review16]. No HDA-17/18/20 upgrade. |
-| HDA-17/HDA-18 using endpoint/outer inputs; no numerical packet issued | ANALYSIS_READY | GPT-6 Astra | Follow [Note 32][continuation10]: specify the finite core and full overlap norms, derive the source accuracy consumed by a legitimate join, and pay curvature, forcing and actual covariance before any numerical request |
+| HDA-10-MI1 r1 — manuscript production | CLOSED — production complete | Edward Baker; historical production closed | Integrated Notes 25--28 and 30 under the [frozen specification][integration-spec]; verified 54-page export and [production assessment][production-review]. Note 31 was deferred under that completed request; its subsequent integration is recorded in the Review 15 row below. No research-status or independent-review upgrade. |
+| HDA-10 — Review 15 manuscript revision | CLOSED — production complete | Edward Baker; historical production closed | Implemented the B_2^Phi notation correction, Note 31 evolution/covariance proofs and residual equations, finite inner allowances and model/domain guide; verified 65-page PDF and [production assessment][production-review16]. No HDA-17/18/20 upgrade. |
+| HDA-17-AN01/AN02 and [AN03 r1/r2](handoffs/HDA-17-AN03.md) | CLOSED — bounded diagnostics complete | GPT-6.1 Sol for the next bounded task | [Note 37](../notes/37_POSITIVE_HERMITE_SOURCE_AND_REMAINDERS_20261024.md) retains r1 failure and r2 sampled source success; a later frozen-source arithmetic/filter certificate is optional support with a named global consumer; current analytical priorities are AN04 and HDA-22/23. No continuous core accepted. |
+| [HDA-10-MI2 r1][mi2] — Note 39 manuscript recommendations | CLOSED — production complete | Edward Baker; production closed | Integrated analytical transfer/join/source proofs and scoped crossover discussion; checked 78-page warning-free artifact, all references/links resolving and every page visually inspected. [Note 41](../notes/41_NOTE39_MANUSCRIPT_IMPLEMENTATION_20261024.md), [Review 22](../reviews/22_NOTE39_ANALYTICAL_INTEGRATION_PRODUCTION_ASSESSMENT_20261024.md). No numerical research or HDA-17/18/20 upgrade. |
+| HDA-21 — crossover/correlation specification | ANALYSIS_READY — bounded specification proposed | GPT-6.1 Sol | Use Note 38's bounded deliverable and the overview's Section 4a to define the observable/window/response and required direct differentiated estimates. No numerical sweep or criticality claim. |
+| [HDA-18-A01 r1][astra-after-sol] — post-Sol continuation | CLOSED — focused review and bounded local analytical return | GPT-6.1 Sol for follow-through | Review 23 verifies MI2 at limited scope; Note 42 supplies exact nonholomorphic identities and zero-free-gap transition allowances. Full-support comparison was unpaid at that return and is subsequently supplied by Note 43; parent HDA-18 stays Gated. |
+| [HDA-18-AN01 r1](handoffs/HDA-18-AN01.md) — gap-join full-support transfer | CLOSED — analytical scope complete | GPT-6.1 Sol for finite-input follow-through | [Note 43](../notes/43_FULL_SUPPORT_FIXED_GAP_TRANSFER_20261024.md) and [Review 24](../reviews/24_FIXED_GAP_FULL_SUPPORT_ASSESSMENT_20261024.md): full tuple, paid heat partition and actual covariance, finite source/gap gates; largest allowance O(log^3 X/X^2). Six polynomial cases/76 exact assertions pass. Effective constants/source cost and global coverage remain unpaid; no theta execution. |
+| [HDA-18-AN02 r1](handoffs/HDA-18-AN02.md) — finite inputs/source size | CLOSED — bounded analysis complete; unpaid finite outer gate retained | GPT-6.1 Sol for effective comparison | [Note 44](../notes/44_FINITE_INPUTS_CLIPPED_SOURCE_AND_OUTER_GATE_20261024.md) supplies explicit finite model/cutoff/regulator formulas and clipped-positive fourth-order source cost. FI23 was unpaid at this return and is now supplied in Note 45 above its huge onset; no accepted numerical gap or executed source. [Review 25](../reviews/25_FINITE_INPUTS_AND_SOURCE_COST_ASSESSMENT_20261024.md). |
+| [HDA-18-AN03 r1](handoffs/HDA-18-AN03.md) — effective full-buffer outer remainder | CLOSED — requested analytical scope complete | GPT-6.1 Sol for remaining exterior constants | [Note 45](../notes/45_EFFECTIVE_FULL_BUFFER_OUTER_FIELD_20261025.md): explicit 12000 A/x^2 full-strip bound and four jet constants, finite binary onsets, all contour/arithmetic pieces paid; EF23 pays FI23 in this regime. [Review 26](../reviews/26_EFFECTIVE_FULL_BUFFER_OUTER_FIELD_ASSESSMENT_20261025.md). No numerical gap/source or full-observable acceptance. |
+| [HDA-18-AN04 r1](handoffs/HDA-18-AN04.md) — effective collar and exterior budgets | READY_FOR_SOL — prepared, unexecuted | GPT-6.1 Sol | Use Note 45 to pay collar/unit, signed-pole, weighted-regulator and exterior signed-source constants; assemble one complete Note 43 tuple budget with every defect and actual covariance. Analytical work only; no theta sweep. |
+| [HDA-18-AN05 r1](handoffs/HDA-18-AN05.md) — HDA-22 fixed-width time assembly | READY_FOR_SOL — prepared, unexecuted; follows AN04 in priority | GPT-6.1 Sol | Extend to [95,97] with width independent of X, all heights and paid moving-gap/overlap time, spatial, source and actual-covariance terms; reusable compact-J theorem or exact failed loss. |
+| [HDA-17-AN04 r1](handoffs/HDA-17-AN04.md) — HDA-23 core conditioning | READY_FOR_SOL — prepared, unexecuted | GPT-6.1 Sol | Prove a local field/collar or equivalent full-tuple transfer with improved sufficient source tolerance/cost; preserve possible multiple events and the physical q. Analytical work only. |
+| [HDA-18-AN06 r1](handoffs/HDA-18-AN06.md) — HDA-24 switch-uniform assembly | GATED — prepared, unexecuted | GPT-6.1 Sol after HDA-22 | Consume the fixed-width method and compact outer theorem across 64; pay the moving layer and derivatives without a strict-after-switch exponential shortcut. |
 
-**Closing recommendation, author preference added 24 October:** every
-research reply will identify the next task as Analytical — Astra or
-Numerics — Sol, with its deliverable and reason; see the root workflow.
-The current recommendation is **Analytical — Astra**, on HDA-17/HDA-18's
-finite-core and joining error contract. [Note 31][positive-system] pays
-the missing positive endpoint and compact-time outer evolution terms;
-it does not supply an all-time splice. No decision-ready numerical
-question has been issued.
 
-**Numerical Sol queue:** empty. The old 192-cell trial is not an active assignment.
-Do not start a numerical run merely because the workflow has been created.
-When a real packet exists, link it here with its revision, phase, owner
-and next action. Use the endpoint and outer bounds as analytical inputs.
+**Closing recommendation, reaffirmed 25 October, chat 0016:**
+**Analysis — Sol**, [HDA-18-AN04 r1](handoffs/HDA-18-AN04.md): use the
+now-effective full-buffer field input to make collar/unit, signed-pole
+and weighted-exterior/source constants finite, then assemble one complete
+Note 43 budget. AN03 found no failed contour estimate. The enormous
+onset is sufficient but unoptimized. No theta numerical run or full
+finite-core/global-join acceptance follows. HDA-21 and the frozen-source
+certificate remain separate tasks; HDA-17 Partial, HDA-18 Gated and
+HDA-20 unfulfilled are unchanged.
 
-**Latest continuation, chat 0007 (24 October 2026):** [Note 32][continuation10]
-is the current entry point after Note 31. It specifies the finite-core and
+**Sol queue:** AN01–AN03 remain CLOSED at diagnostic scope and MI2 is
+CLOSED at production scope; HDA-21 is an unexecuted analytical
+specification. The frozen-point certification has not been executed.
+Sampled allowance success does not accept a continuous core or authorize
+a broader space/time sweep.
+
+**Earlier continuation, chat 0007 (24 October 2026):** [Note 32][continuation10]
+was the entry point after Note 31. It specifies the finite-core and
 joining deliverable without adding a theorem or numerical assignment.
 [Review 15][manuscript-review15] assesses the 54-page manuscript and gives
 recommendations now implemented in the 65-page revision; [input hashes][review15-inputs]
@@ -68,8 +208,8 @@ research-status upgrade.
 [Note 33](../notes/33_FINITE_CORE_JOINING_INTAKE_AND_ASTRA_HANDOFF_20261024.md)
 records the Note 32 reading, live-status reconciliation and concrete
 Astra proof checklist. The active Sol role prepared the handoff under the
-root workflow; HDA-17/HDA-18 retain **ANALYSIS_READY / next owner Astra**,
-with research statuses **Ready / Gated**. No analytical contract was proved,
+then-current root workflow; at that intake HDA-17/HDA-18 had
+**ANALYSIS_READY / next owner Astra**, with statuses **Ready / Gated**. No analytical contract was proved,
 no numerical packet or run was created, and HDA-20 is not advanced.
 
 The note also resolves the author's diagnostic-provenance question from
@@ -81,7 +221,27 @@ Chat 0009 is uniquely registered in this investigation's chat-histories.
 
 ## Research state
 
-**Latest result:** [Note 31][positive-system], PE6/PE32, bounds current,
+**Current manuscript and analytical scope, 25 October:** the maintained
+manuscript integrates Notes 42–45. The fixed-gap spatial construction
+now pays complete supports and actual covariance on a short slab; the
+clipped source is constructive and the complex-buffer H-P field gate is
+effective above the stated huge onset. AN04's remaining exterior constants
+and full budget are unexecuted. HDA-22/23/24 now track fixed-width time,
+core conditioning and the switch; parent HDA-18 owns the all-time formula
+and both endpoint overlaps. The Note 38 correlation direction remains
+supporting. See Note 46/Review 28 above for the source map and build.
+
+**Earlier finite-source diagnostics:** Note 37 retains r1's overrun,
+the storage comparator, and r2's informative source allocations at two
+frozen observations. Their arithmetic, continuous filtering and whole-core
+coverage gaps remain. They do not replace the new global consumers.
+
+**Compact analytical input:** Note 34 supplies compact full-observable
+transfer and a local holomorphic time join. Its diagnosed spatial defect
+is paid by Notes 42–43 only in the fixed-gap regime. This supersedes that
+local unpaid-defect limitation, not the remaining all-time assembly gate.
+
+**Preceding endpoint result:** [Note 31][positive-system], PE6/PE32, bounds current,
 time derivatives, forcing/source, actual Q and Delta Q by
 C t^(3/2) log^2(2+t+X)/(1+X+t log(2+t+X))^2 <= C/sqrt(t)
 on all real heights at sufficiently large positive time. It retains
@@ -195,12 +355,12 @@ covariance/Laplacian comparison bounds. A mesh with informative error
 across the full transition has not been selected or certified. A fixed
 compact source cannot supply the positive infinite-time endpoint.
 
-**Next:** HDA-17/HDA-18: specify and prove the finite-core and joining
-contract, using the negative endpoint and Notes 30--31's positive
-endpoint/compact outer system. Name the finite source/jet input needed
-for a globally informative error before refining a numerical mesh.
-HDA-20's distinct-reviewer audit remains ready. No numerical campaign
-is scheduled.
+**Next:** follow the current assignment table. AN01–AN03 are completed
+diagnostics. Note 39/MI2 is the completed analytical manuscript revision;
+HDA-21 specifies the crossover/correlation question, while the separate
+frozen-point certificate remains Sol's next numerical deliverable.
+Global spatial compatibility remains a specifically difficult Astra item.
+HDA-20's full audit remains unfulfilled.
 
 Notes 20/23 already give all-real-x absolute source/jet allowances on compact
 time slabs and bounded transverse strips. Up to t=64 the regulator also has
@@ -266,17 +426,21 @@ or proposed acceptance criteria appear in the overview.
 | HDA-07 | Find solutions satisfying compatible asymptotic, spatial and source boundary conditions | Gated — no complete transition solution | The primary route is HDA-18, using HDA-16 endpoint, HDA-17 finite-source and HDA-19 outer-height budgets, full boundary/source data and time/space joining errors. A reduced-PDE route would additionally require a usable closure and propagation stability. |
 | HDA-08 | Further constrain and refine solutions against the actual heat evolution | Gated — no assembled all-time approximation yet | Bounded diagnostics can support a named HDA-16/17/19 analytical estimate under the numerical policy. Full comparison follows HDA-18 and must pay source, mean/current, covariance, boundary and joining errors; propagation stability is required if used, and regulator bias only for the additional zero-measure claim. |
 | HDA-09 | Review and deliver a reproducible evolution approximation with its scope and error budget | Gated — full evolution approximation not available | The analytical manuscript and prior assessments are complete at their scopes. HDA-18 must supply the assembled approximation and full error theorem; HDA-20 records distinct-reviewer findings. No independent specialist review or full all-time theorem exists. |
-| HDA-10 | Consolidate current analytical results into one maintained manuscript, with numerics as supporting material and references to notes | Complete — working draft, same-assistant review | [Maintained manuscript and current build record][manuscript]; prior integrations [Reviews 07][review7] and [08][review8]; HDA-10-MI1 r1 integrated Notes 25--28 and 30 in its historical 54-page version, [assessment][production-review]. The current 65-page Review 15 implementation adds Note 31 evolution/covariance, finite inner allowances and the early guide, [production assessment][production-review16]. Production checks do not constitute independent mathematical review. |
+| HDA-10 | Consolidate current analytical results into one maintained manuscript | Complete — working draft through Notes 42–45; production scope | [Note 46](../notes/46_NOTES42_45_MANUSCRIPT_CONSOLIDATION_20261025.md), [Review 28](../reviews/28_NOTES42_45_CONSOLIDATION_PRODUCTION_ASSESSMENT_20261025.md), [maintained source/build][manuscript]. Integrates exact spatial defects, full-support transfer, constructive clipped source and effective full-buffer field proof. Prior MI1/Review 15/MI2 productions retain their historical scopes. No research gate or independent review is accepted by this production. |
 | HDA-11 | Investigate epsilon varying with height/time and write a new note with a continuation handoff | Complete — stated identity/estimate scope | [Note 14][variable], [exact checks][adaptive-checks], [review][review4] and [Note 15][continuation4]. Global positive adaptive stationarity and a boundary evolution remain open. |
 | HDA-12 | Bound the explicit adaptive forcing/current and derive differentiated inner transport | Complete — eventual inner-window scope, same-assistant review | [Note 16][transport], [exact/allowance checks][transport-checks], [six theta observations][transport-pilot], [assessment][review5] and [handoff][continuation5]. This is a source-driven moving-clock comparison, not a full covariance closure or boundary solution. |
 | HDA-13 | Replace the complete mean clock by an explicit saddle formula with paid phase and coefficient error | Complete — eventual inner-window scope, same-assistant review | [Note 19][saddle-clock], [record][saddle-record], [review][review6]. Five exact phase terms remove the previous L^-3 static allowance; differentiated error remains O(L*kappa^-7/6). No all-time or outer-height theorem. |
 | HDA-14 | Connect the endpoint formulas through finite time under one global regulator | Partial — explicit construction and comparison estimates | [Note 20][finite-bridge] gives a smooth global regulator, finite Gaussian primitives, complete source/jet allowances and actual covariance comparison. HDA-15 sharpens the estimates; its selected diagnostic mesh fails the contract. No useful full-transition budget or certified overlap. HDA-17 develops the finite bridge and HDA-18 joins it to the endpoints. Regulator-to-zero transfer through events is an additional HDA-02 obligation when that interpretation is claimed. |
 | HDA-15 | Declare the transition contract and sharpen source/nonlinear comparison bounds | Complete — proved-in-note bounds and bounded diagnostic, same-assistant review | [Note 23][local-bounds] fixes domain/buffer, kernels, regulator, derivative/boundary norms and tolerances; proves cellwise source, local nonlinear/covariance and evaluation bounds. [Record][local-record] retains rejected trial and arithmetic/filter failures. No HDA-17 acceptance. |
 | HDA-16 | Complete endpoint evolution error budgets with all-height scope | Complete — stated eventual absolute comparison scope; same-assistant review | Note 26 supplies the negative system. [Note 31][positive-system] pays positive current/time, physical potential, forcing/source, both curvature derivatives and actual Q/Delta Q, with O(t^-1/2) error, exact model residual and differentiated inner overlap. Onsets are not numerically instantiated; sharper inner scales remain Notes 16/19, all-time joining is HDA-18 and distinct review is HDA-20. |
-| HDA-17 | Produce informative finite-transition bounds supporting the global theorem | Ready — next analytical task; no accepted finite core | HDA-15 supplies bounds; the Note 23 trial fails. Identify the finite source/jet accuracy consumed by HDA-18 joining, including curvature, source and actual covariance. Prove continuous-slab errors with explicit coverage and cost before a bounded numerical request. |
-| HDA-18 | Assemble an all-time approximation with complete height coverage | Gated — finite-core and joining budgets pending | Under HDA-07--09; uses completed endpoint/outer comparison scopes HDA-16/19 and pending HDA-17 finite input. Notes 30/31 supply positive all-height coverage, differentiated inner overlap and compact-time outer evolution. Joining, compatible traces, informative finite-core errors and any required propagation stability remain. |
+| HDA-17 | Produce informative finite-transition bounds supporting the global theorem | Partial — constructive finite source; no accepted continuous core | Notes 35–37 and the closed AN01–AN03 diagnostics retain all successes/failures. Note 44 gives an explicit positive clipped source for any finite jet demand, with potentially prohibitive cost under the coarse regulator floor. HDA-23 now targets conditioning for the same full tuple. Any later fixed-point arithmetic/filter certificate must name its global consumer; full continuous source/evaluation/filtering and finite-time coverage remain unpaid. |
+| HDA-18 | Assemble an analytic approximation for all real time and height | Gated — local full-support construction exists; global assembly open | Notes 42–45 pay fixed-gap short-slab transfer and constructive source/effective field inputs. AN04 must decide the remaining complete finite observable budget; HDA-22 extends time width, HDA-23 improves core conditioning and HDA-24 handles the switch. Then join the finite central interval to both all-height endpoint theorems with effective field overlaps, cutoff/residual/covariance/curvature payments and source-derived traces. Acceptance requires domains covering R_t x R_x on the declared transverse strip, a finite analytic evaluation prescription, useful explicit errors and both time-end limits. No PDE propagation is used unless separately justified. |
 | HDA-19 | Extend the positive model to unbounded outer heights | Complete — stated outer/late-time comparison scope; same-assistant review | Notes 30/31 give the complete-source implicit saddle, actual collars, unchanged-q static and evolution/covariance comparisons, all-height late-time bounds and static/differentiated inner overlap. PE44 covers compact [32,T] outer evolution including the flat switch. Numerical onsets, distinct review and finite-core/global joining are separate unfinished obligations. |
-| HDA-20 | Obtain a distinct-reviewer audit with explicit provenance | Ready for existing proofs — not started | Supports HDA-09; review score endpoints, weak transport and covariance constants now, and HDA-18 joining claims when available. Record shared dependencies, distinguish same-model from specialist review and resolve findings. This assistant's production checks do not fulfill independent review. |
+| HDA-20 | Obtain a distinct-reviewer audit with explicit provenance | Ready for full audit — unfulfilled | Supports HDA-09; limited Review 21 does not audit the full chain; review score endpoints, weak transport and covariance constants now, and HDA-18 joining claims when available. Record shared dependencies, distinguish same-model from specialist review and resolve findings. This assistant's production checks do not fulfill independent review. |
+| HDA-21 | Specify the regulator crossover, connected correlation and response problem | Ready — literature/diagnostic proposal available; full specification not completed | [Note 38][crossover] and overview Section 4a: choose O, window/width, limiting and separation scales, centering and a perturbation/response; state required differentiated theta error bounds and regulator dependence. Next Analysis — Sol. No intrinsic criticality, CFT or correlation-length-divergence theorem. |
+| HDA-22 | Extend the spatial join to fixed positive time width | Ready — no execution | [AN05 r1](handoffs/HDA-18-AN05.md), Analysis — Sol. Start with [95,97], width independent of X, all heights and full supports; pay lambda_t(P-G), mixed curvature, overlap changes and actual covariance. Prove a reusable compact-J result or identify the exact loss; final effective budget consumes AN04. |
+| HDA-23 | Improve growing-core conditioning and sufficient source cost | Ready — no execution | [HDA-17-AN04 r1](handoffs/HDA-17-AN04.md), Analysis — Sol. Replace the coarse expanding-rectangle q floor only through a proved local comparison, retaining zeros/multiple events and all tuple rows. Report improved tolerance/cost on the same domain or a precise failed estimate. No source mesh campaign. |
+| HDA-24 | Pay switch-uniform space/time assembly across t=64 | Gated — fixed-width construction required | [AN06 r1](handoffs/HDA-18-AN06.md), Analysis — Sol. Consume HDA-22 and compact [32,T] outer estimates. Resolve nonuniform exponential regulator factors and exact-center moving layer in physical absolute units; pay direct time/source/covariance rows. Parent HDA-18 remains responsible for both endpoint joins and the final analytic formula. |
 
 
 ## HDA-16/HDA-19 checkpoint — positive evolution and actual covariance
@@ -572,7 +736,7 @@ For every completed research step, record:
 
 - Task ID, status change, date, actual model/effort and evidence paths.
 - For a model handoff: packet ID/revision, input versions, handoff phase,
-  next owner, numerical return and Astra's analytical disposition.
+  next owner, return and the named owner's analytical disposition.
 - The target function, domain, \(\epsilon\), kernels and averaging widths.
 - The analytical theorem or estimate advanced, its height/time quantifiers,
   and how a finite subresult enters the infinite-height argument.
@@ -602,19 +766,20 @@ boundary data and refine against the actual equations.
 Note 14 makes that choice explicit while preserving the earlier fixed-epsilon
 results and their scopes.
 
-**Model division fixed by the author:** GPT-6 Astra owns analytical
-formula/proof work and interpretation; GPT-6.1 Sol owns all numerical
-implementation and execution. The author coordinates the chats manually.
-Numerical completion returns to Astra for analytical assessment; it does
-not itself advance a theorem's status. See the current assignment above.
+**Model division revised by the author, 24 October, chat 0010:** Sol is
+the default for routine/moderate analytical work, interpretation and all
+numerical work. Astra is reserved for extra high difficulty analytical
+bottlenecks. Hand off useful subproblems without waiting for the complete
+global proof. Sol may close routine dispositions; only a specific hard
+issue requires an Astra return. The author coordinates chats manually.
+This changes routing, not theorem status; historical assignments remain.
 
-**Current execution choice:** retain the existing overview/progress pair
-and the author's infinite-height priority. Use Notes 26/30/31's endpoint
-and outer comparisons to derive HDA-17/HDA-18's finite-core and joining
-contract. Note 23 supplies local bounds, but its trial failed. Numerical
-refinement remains conditional on a named analytical input and stopping
-rule; the numerical Sol queue is empty. The separate manuscript
-production handoff retains its frozen scope and owner.
+**Current execution choice, 25 October:** complete [HDA-18-AN04](handoffs/HDA-18-AN04.md)
+with Sol, then the HDA-22/23 analytical extensions and gated HDA-24.
+The older fixed-point arithmetic/filter certificate remains optional
+support only when its consumer in the global contract is specified.
+No numerical work is launched by this revision. Every finite task must
+advance the analytic all-real-time/all-real-height approximation.
 
 **Fixed for the research rounds:** their finite and asymptotic domains, kernels, widths, regulator
 protocols and diagnostics. **Still open for the overall program:** further
@@ -802,3 +967,343 @@ compatibility estimates consumed by HDA-17/HDA-18 joining under Note 32.
 The numerical queue remains empty.
 
 [production-review16]: ../reviews/16_REVIEW15_REVISION_PRODUCTION_ASSESSMENT_20261024.md
+
+
+## Routing amendment and active work — 24 October 2026, chat 0010
+
+Prepared for Edward Baker with LLM assistance, **gpt-6-astra, actual effort
+xhigh**, verified from session metadata. The author revised the model
+workflow to default to Sol and reserve Astra for extra high difficulty.
+Updated the root guidance and current local guidance; historical notes and
+transcripts retain their original assignments. The present difficult step
+is preserving field/observable compatibility and all adaptive equation
+terms across a join. A compact weak-transfer estimate is being written;
+routine constant derivations and a bounded feasibility diagnostic will be
+handed to Sol without waiting for full spatial assembly. No numerical run
+or HDA-17 acceptance is claimed.
+
+
+## Compact contract completed and Sol handoff — 24 October 2026, chat 0010
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+actual effort xhigh**. [Note 34][compact-join] records the symbolic cover,
+full observable norm, explicit compact transfer from source errors of
+orders 0 and 2, accuracy table, local time-join residual and exact unpaid
+spatial cutoff term. [Review 17][compact-review] is same-assistant only.
+This completes the active estimate described in the routing amendment
+above. HDA-17 is Partial without an accepted finite core; HDA-18 stays
+Gated. No numerics, manuscript edit, effective onset or HDA-20 audit.
+
+The author explicitly asked for more aggressive Sol handoffs and Astra
+only for extra high difficulty. The root guidance and live local guidance
+now implement that choice. [HDA-17-AN01 r1][weak-packet] is READY_FOR_SOL,
+with frozen inputs, routine analytical discretion, finite cases, work
+limits and a diagnostic decision. Sol can record the routine disposition;
+the unresolved spatial compatibility is the exceptional Astra task.
+
+[compact-join]: ../notes/34_COMPACT_WEAK_TRANSFER_AND_TIME_JOIN_20261024.md
+[compact-review]: ../reviews/17_COMPACT_WEAK_TRANSFER_AND_TIME_JOIN_SELF_REVIEW_20261024.md
+[weak-packet]: handoffs/HDA-17-AN01.md
+
+
+## AN01 execution and disposition — 24 October 2026, chat 0011
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual effort ultra**. [Note 35](../notes/35_WEAK_TRANSFER_BUDGET_DECISION_20261024.md)
+and [Review 18](../reviews/18_WEAK_TRANSFER_BUDGET_ASSESSMENT_20261024.md)
+close HDA-17-AN01 r1 at **CLOSED — completed bounded floating diagnostic
+with retained failure**. The full coefficient table and exact selected
+controls are implemented; fixed source/mesh/filter limits were respected.
+The [record](../numerics/WEAK_TRANSFER_DIAGNOSTIC_20261024.json) retains
+source categories, tail logarithms, evaluator and positive/observable filter
+refinements. All eight input hashes match. Runtime 53.78 seconds for the
+retained run, conservative aggregate numerical debit below five minutes.
+
+Weak helps some peak density-time rows; local is better for the sampled
+whole covariance/source budget. Neither route pays the targets; source,
+rounding, integration and CJ27 endpoint-field obligations remain unpaid.
+No continuous box/interval, endpoint overlap, HDA-17 acceptance or HDA-18
+assembly follows. HDA-20 unchanged; review is same-model internal.
+Next: **Analysis and numerics — Sol**, improve source interpolation and
+peak-sensitive integration, derive the adaptive local source transfer,
+and retain useful componentwise weak rows. No automatic Astra escalation.
+
+
+## AN02 continuation opened — 24 October 2026, chat 0011
+
+The author authorized continued analysis and numerics after AN01.
+[HDA-17-AN02 r1](handoffs/HDA-17-AN02.md) is **ANALYSIS/NUMERICS — Sol**,
+with fixed t=64 peak observations, sharper complete-source cell/weight
+bounds, one a priori adaptive source mesh, and composite filter 8/12
+comparisons. It also derives a direct adaptive local signed-source bound.
+The packet freezes inputs and a 30-minute aggregate numerical limit.
+AN01 stays closed at diagnostic scope; HDA-17 Partial and HDA-18 Gated.
+Actual model/effort: gpt-6.1-sol, ultra.
+
+
+## AN02 source/filter decision — 24 October 2026, chat 0011
+
+Prepared for Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort
+ultra**. [AN02 r1](handoffs/HDA-17-AN02.md) is **CLOSED — completed bounded
+floating diagnostic with retained failure**. [Note 36](../notes/36_SOURCE_CURVATURE_AND_PEAK_INTEGRATION_20261024.md)
+adds continuous Bernstein/midpoint complete-source caps, positive chord
+weights and adaptive signed-source transfer. Source-only adaptive 768 gives
+24.37 times lower order-zero interpolation allowance than old uniform 768.
+[Record](../numerics/SOURCE_PEAK_DIAGNOSTIC_20261024.json) and
+[Review 19](../reviews/19_SOURCE_CURVATURE_AND_PEAK_ASSESSMENT_20261024.md)
+retain all categories and same-model scope. Actual filter indicators are
+below allocation (weak 0.00320/direct 0.78637); adaptive positive-envelope
+integration ratio 1.01162 is still unpaid. Delta Q source ratio 2056.73
+remains dominant, so the t=96 field gate is not taken. Main numerical
+execution 132.47 seconds, conservative total 142.47 seconds. HDA-17 Partial,
+HDA-18 Gated, HDA-20 unchanged. Next: bounded positive higher-order source
+with complete remainder/positivity fallback — **Analysis and numerics, Sol**.
+
+
+## AN03 Hermite continuation — 24 October 2026, chat 0011
+
+The author explicitly requested positive cubic-Hermite source approximation
+with explicit remainders at the same points. [AN03 r1](handoffs/HDA-17-AN03.md)
+is **ANALYSIS/NUMERICS — Sol**: uniform 192 and adaptive 384/768 source
+cells, Bernstein positivity/linear fallback, complete fourth-derivative
+remainder and separate derivative/arithmetic tails, at t=64,x=4,y=0,1/2.
+The packet fixes cost comparisons, source/filter Gaussian 8/12 levels and
+a 30-minute aggregate numerical limit. HDA-17 Partial/HDA-18 Gated; prior
+requests/evidence stay unchanged. Actual model/effort gpt-6.1-sol, ultra.
+
+
+## AN03 r2 cap comparison — 24 October 2026, chat 0011
+
+The frozen r1 positive-Hermite diagnostic leaves only adaptive 768 Delta Q
+above its source allocation (ratio 1.10507). [AN03 r2](handoffs/HDA-17-AN03.md)
+adds a routine directional-gradient cap comparison at the same two existing
+points, with no new source, target, filter level or precision. The r1 record
+is retained unchanged; total AN03 numerical limit remains 30 minutes.
+Phase **ANALYSIS/NUMERICS — Sol**, gpt-6.1-sol, ultra. HDA-17 Partial,
+HDA-18 Gated; sampled allowance success would not accept a continuous core.
+
+
+## AN03 positive-Hermite decision — 24 October 2026, chat 0011
+
+Prepared for Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort
+ultra**. [AN03 r1/r2](handoffs/HDA-17-AN03.md) is **CLOSED — completed bounded
+analysis and floating diagnostic**. [Note 37](../notes/37_POSITIVE_HERMITE_SOURCE_AND_REMAINDERS_20261024.md)
+and [Review 20](../reviews/20_POSITIVE_HERMITE_SOURCE_ASSESSMENT_20261024.md)
+retain complete-source fourth-order/cubic/fallback bounds, separate value/
+slope arithmetic, positive coefficients and ideal-Gauss truncation bounds.
+Adaptive 768 lowers same-mesh interpolation about 1963 times, with doubled
+nodal data. Comparable-storage 384 still fails. R1 source ratio 1.10507 is
+retained; r2 directional common caps reduce it to 0.688748, with all 91
+sampled source rows within allocation at t=64,x=4,y=0,1/2. Explicit evaluator
+truncation is small; rounding and continuous integration remain unpaid.
+Conservative numerical debit 160.042 seconds, below 1800 seconds.
+HDA-17 Partial, HDA-18 Gated, HDA-20 unchanged. Next: bounded arithmetic/
+filter certification at the frozen worst observation — Sol.
+
+
+## Notes 35–37 assessment and phase-transition literature — chat 0012
+
+24 October 2026; prepared for Edward Baker with LLM assistance,
+**gpt-6-astra, actual effort xhigh**. [Review 21](../reviews/21_NOTES35_37_PROJECT_AND_JOIN_ASSESSMENT_20261024.md)
+assesses the local source improvements and remaining certification, domain,
+endpoint and joining obligations. Separate-chat cross-model LLM scope;
+no numerical rerun, full endpoint-chain audit or HDA-20 completion.
+HDA-17 remains Partial; HDA-18 Gated.
+
+At the author’s request, [Note 38](../notes/38_PHASE_TRANSITION_LITERATURE_AND_JOIN_DIAGNOSTICS_20261024.md)
+compares the existing regulator crossover with finite-size scaling, Landau
+order parameters, connected correlations, RG/CFT and uniform asymptotics.
+It records a conditional switch-scaling calculation and a bounded next
+analytical specification for Sol. No new physical regulator, numerical
+assignment execution, criticality theorem or global join. The existing
+frozen-point certificate remains the next numerical deliverable for Sol.
+
+## Manuscript recommendations and program update — chat 0012
+
+24 October 2026; prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort xhigh**. [Note 39][manuscript39] reviews the
+current manuscript's introduction, model guide, finite-source material,
+switch layer and remaining-work scope against Notes 34–38. It specifies
+compact weak transfer and residual-bearing time joining, direct signed
+source bounds, positive cubic-Hermite remainders and finite moments, with
+numerical support referred to the notes. The existing switch theorem is
+retained and given a scoped correlation/response outlook.
+
+The existing overview, current assignment, task ledger and entry pointers
+are synchronized. HDA-21 is added as Ready for the bounded analytical
+specification. [MI2 r1][mi2] is a prepared, unexecuted Sol revision packet.
+No TeX, PDF, build record or manuscript milestone is changed by this
+recommendation task; no numerical execution or new theorem. HDA-17 stays
+Partial, HDA-18 Gated and the full HDA-20 audit unfulfilled. Historical
+research and production checkpoints remain at their original scopes.
+
+[review21]: ../reviews/21_NOTES35_37_PROJECT_AND_JOIN_ASSESSMENT_20261024.md
+[crossover]: ../notes/38_PHASE_TRANSITION_LITERATURE_AND_JOIN_DIAGNOSTICS_20261024.md
+[manuscript39]: ../notes/39_MANUSCRIPT_ANALYTICAL_RECOMMENDATIONS_20261024.md
+[mi2]: handoffs/HDA-10-MI2.md
+
+
+## Chat-history verification and Astra continuation — chat 0012
+
+24 October 2026; prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort xhigh**. The registered chat 0012 was refreshed
+and checked against the completed public source: unique registration,
+stored and canonical hashes, linear message integrity, original identity
+and exact source-message agreement all pass. The preceding Note 39 final
+reply and completed-turn record are present. The 03:10:56.878 UTC capture
+contained 21 public messages; subsequent routine captures append this
+reply. Generated history was not hand-edited.
+
+At the author's request, [Note 40][continuation40] and
+[HDA-18-A01 r1][astra-after-sol] prepare Astra's continuation after Sol's
+MI2 return. They specify actual-output verification, a focused analytical
+review, then one named hard estimate: spatial compatibility under the
+shrinking regulator by default, or a specifically escalated differentiated
+crossover estimate. Routine analysis/production/numerics remain Sol's work.
+No Sol completion, new theorem, numerical execution or research-status
+upgrade is asserted. HDA-17 Partial, HDA-18 Gated and the full HDA-20 audit
+unfulfilled remain the current recorded states.
+
+[continuation40]: ../notes/40_CONTINUATION_ASTRA_AFTER_SOL_20261024.md
+[astra-after-sol]: handoffs/HDA-18-A01.md
+
+
+## MI2 execution opened — 24 October 2026, chat 0013
+
+Prepared for Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort xhigh**, verified from turn metadata. Executing HDA-10-MI2 r1 at the author’s request. All 22 Note 39 pinned inputs match. Integrating Notes 34–37 proofs/coefficient contracts and the scoped Note 38 interpretation, then producing the maintained export with reference and visual checks. No numerical research, accepted continuous core, global join or HDA-20 upgrade is authorized or asserted. Chat 0013 is uniquely registered in this investigation.
+
+
+## MI2 production completion — 24 October 2026, chat 0013
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort xhigh**. [HDA-10-MI2 r1][mi2] is **CLOSED — production complete**. [Note 41](../notes/41_NOTE39_MANUSCRIPT_IMPLEMENTATION_20261024.md) records analytical integration of Notes 34–37 and the scoped Note 38 crossover outlook. The [78-page build record](../manuscript/BUILD_RECORD_20261024.json) and [Review 22](../reviews/22_NOTE39_ANALYTICAL_INTEGRATION_PRODUCTION_ASSESSMENT_20261024.md) pin exact source/output hashes, zero warnings/unresolved references, all 52 local/561 internal links resolving and all-page visual inspection. Original pinned inputs matched; source notes and original evidence remain unchanged. No new numerical execution, snapshot, commit or independent review. HDA-17 stays Partial, HDA-18 Gated and HDA-20 unfulfilled.
+
+The prepared [HDA-18-A01 r1][astra-after-sol] can now verify the actual return and begin its focused analytical review followed by one named hard shrinking-regulator spatial-compatibility estimate — **Analytical, Astra**. HDA-21 specification and frozen-point certification remain separate Sol tasks, unexecuted here. No automatic dispatch.
+
+## A01 focused review and gap-localized continuation — chat 0014
+
+24 October 2026; prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort xhigh**. Review 23 records matching current
+MI2 source/output hashes and 22 historical-intake pins; no blocking
+integration issue found in the inspected scope. The manuscript was not
+rebuilt or edited and HDA-20 is not fulfilled.
+
+Note 42 chooses the nonholomorphic-defect route. GS8–GS12 supply the
+actual potential/density/current/covariance equations. GS13–GS15 give
+explicit local envelopes, including the time derivative of compatibility
+curvature. On a fixed model gap and a short slab contained in (64,infinity),
+the largest new filtered transition allowance is O(log^3 X/X^2) under
+the stipulated relative field/source and gap inputs. This is a local
+defect estimate, not a whole-support approximation theorem. The latter,
+effective constants/source complexity, moving gaps and the switch remain
+open. A01 r1 closes at this bounded scope; HDA-18-AN01 r1 is READY_FOR_SOL.
+No numerical research, snapshot, milestone, commit or chat dispatch.
+
+
+## AN01 full-support analytical completion — 24 October 2026, chat 0015
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual effort ultra**, verified from turn metadata. [Note 43](../notes/43_FULL_SUPPORT_FIXED_GAP_TRANSFER_20261024.md)
+returns the frozen HDA-18-AN01 r1 and pinned Note 42. Core/exterior/gap
+absolute primitive integrals are assembled before global weak identities;
+only the signed exterior heat correction needs a test partition, whose
+first/second derivatives are paid explicitly. The full CJ14 tuple,
+TC_t and square C_tot, Delta Q, direct time/source/forcing and fixed
+boundary/time traces use kernel orders through four and actual covariance.
+The finite source contract uses core jets 0,2 plus gap jets through three.
+Weighted regulator exponentials remain in every budget.
+
+The complete largest allowance is O_J(X^-2 log^3 X+X^-3 log^2 X), with
+finite polynomial-exponential terms retained. Positive finite-source
+existence follows on the declared compact rectangle; core accuracy may
+be exponentially stringent. Actual gap/collar/outer constants, affordable
+source complexity, arithmetic/continuous integration and all-time coverage
+remain unpaid. [Review 24](../reviews/24_FIXED_GAP_FULL_SUPPORT_ASSESSMENT_20261024.md)
+records two separate same-model proof checks, a corrected convolution
+commutator sign before installation, and six rational cases/76 assertions
+passed with no failures. Final check run 0.9357732501 s; all three bounded
+executions total 2.8043347919 s. No theta sampling, manuscript edit,
+snapshot, milestone, commit, status upgrade or chat dispatch.
+
+AN01 r1 is **CLOSED — requested analytical scope complete**; no resistant
+structural estimate remains here. HDA-17 stays Partial, HDA-18 Gated and
+HDA-20 unfulfilled. Next **Analysis — Sol**: instantiate one finite model
+gap and FT19–FT20 source/cost contract, or report the first failed finite
+gate, before any later theta execution packet.
+
+
+## AN02 finite-input/source-cost return — 24 October 2026, chat 0015
+
+At the author's request, **gpt-6.1-sol, actual effort ultra** continued
+Note 43 with [Note 44](../notes/44_FINITE_INPUTS_CLIPPED_SOURCE_AND_OUTER_GATE_20261024.md).
+FI1–FI15 give finite gamma-model jet/time/gap/residual formulas, explicit
+flat cutoffs, an elementary compact regulator floor and physical/kernel
+coefficient caps. FI15a/b is a unified scalar core accuracy contract.
+FI16–FI22 give a nonnegative clipped rational Hermite source, preserving
+fourth-order interpolation, exact heat and finite Gaussian moments with
+algebraic endpoints. One finite recipe pays all four absolute jets with
+29varepsilon/64 total source error and explicit U,N,M,b/storage bounds.
+For varepsilon=e^(-aX^2), the sufficient cell count is
+exp(aX^2/4+O(log^2 X)); this is an upper construction, not a lower bound
+or an affordability claim. No source nodes were evaluated.
+
+[Review 25](../reviews/25_FINITE_INPUTS_AND_SOURCE_COST_ASSESSMENT_20261024.md)
+records separate same-model audits and five elementary rational checks,
+all passed with no failures in 0.0001837501 seconds. No theta/source/gamma
+or field sampling, numerical mesh/precision search, manuscript edit,
+snapshot, milestone, commit or dispatch. The original AN02 r1 is frozen
+and its return appended; same chat 0015 identity/history is preserved.
+
+The exact unpaid input is FI23's full analytic-buffer H-P jet estimate:
+FS20/PE9 supply eventual decay but no effective constants/onset for any
+selected finite n. Model branch/collar caps also remain unevaluated;
+pure-exterior budgets remain subsequent gates. No inequality was proved
+false and no structural obstacle is claimed. AN02 closes at bounded
+analytical scope. HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled.
+Next **Analysis — Sol**, prepared [AN03 r1](handoffs/HDA-18-AN03.md),
+make the complete FS20/Cauchy comparison effective on [95,97] or return
+the first exact contour term without a finite majorant.
+
+
+## AN03 effective full-buffer return — 25 October 2026, chat 0015
+
+At the author's request, **gpt-6.1-sol, actual effort ultra** executed
+[HDA-18-AN03 r1](handoffs/HDA-18-AN03.md). [Note 45](../notes/45_EFFECTIVE_FULL_BUFFER_OUTER_FIELD_20261025.md)
+replaces FS20/PE9's uninstantiated compact-J constants by an explicit
+field bound 12000 A/x^2 for x>=2^2048, on t in [95,97], |Im z|<=5.
+A finite gamma contraction rectangle selects the original P branch and
+keeps B away from zero. Central Gaussian remainder and actual infinite
+ends, left pieces, both oriented connectors, middle and all arithmetic
+modes are paid separately. Full Cauchy circles give C0=12000,C1=384000,
+C2=3072000,C3=36864000 on the smaller buffered strip for x>=2^2049.
+The FI23 field debit is now <=1179648000/X^2<=1/16 at X>=2^2050.
+No contour estimate failed; the onset is deliberately unoptimized.
+
+[Review 26](../reviews/26_EFFECTIVE_FULL_BUFFER_OUTER_FIELD_ASSESSMENT_20261025.md)
+records three separate same-model analytical audits and primary DLMF
+passage checks. Six selected scalar rational/integer checks pass in one
+0.0000686250-second run with no failures. They check constant margins,
+not theta/source/gamma/model/field values or a continuous interval
+certificate. Source Gaussian averaging explicitly anchors the convolution;
+no physical/model/domain change, prior-note correction, manuscript edit,
+DRAFT_HISTORY milestone, snapshot, commit or dispatch.
+
+AN03 closes at requested analytical scope. The former FI23 missing
+finite field input is paid in the stated regime; exterior collar/unit,
+signed-pole, weighted regulator/residual and full observable allocations
+remain. No numerical phase index, source or full join is accepted.
+HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled. Next **Analysis — Sol**,
+prepared/unexecuted [AN04 r1](handoffs/HDA-18-AN04.md), for the effective
+exterior constants and one complete support budget. Same chat 0015
+identity and history are preserved.
+
+## Author-directed consolidation and global objective — 25 October 2026
+
+Chat 0016; gpt-6-astra, actual effort max. The author requested the
+consolidation and revised planning, reiterating results that “extend to
+infty and across all time with an analytic form.” [Note 46](../notes/46_NOTES42_45_MANUSCRIPT_CONSOLIDATION_20261025.md)
+and [Review 28](../reviews/28_NOTES42_45_CONSOLIDATION_PRODUCTION_ASSESSMENT_20261025.md)
+record source integration and production checks. HDA-22/23 are ready
+analytical subproblems; HDA-24 is gated. AN01–AN04 requests and original
+returns are preserved. AN04 remains next. No new theorem, numerical run,
+accepted continuous core or all-time approximation is claimed, and no
+specialist review is supplied by manuscript production.

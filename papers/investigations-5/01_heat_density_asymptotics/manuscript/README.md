@@ -1,35 +1,29 @@
 # Analytical working manuscript
 
-24 October 2026. Drafted for Edward Baker with substantial LLM assistance.
-Historical analytical derivations: **gpt-6-astra (Codex), effort max**.
-Manuscript integration and production: **gpt-6.1-sol, actual effort ultra**.
-The original research reviews remain same-assistant; production is not an
-independent mathematical audit.
+25 October 2026, America/New_York. Drafted for **Edward Baker** with
+substantial LLM assistance. Current consolidation/production:
+**gpt-6-astra, actual effort max**, chat 0016. Original notes retain their
+actual Astra/Sol model and effort attribution.
 
-The one maintained [source](main.tex) now incorporates results through
-**Note 31**, following [Review 15](../reviews/15_MANUSCRIPT_REVIEW_AND_SOL_RECOMMENDATIONS_20261024.md).
-The checked local reading copy has **65 pages**. The completed earlier
-HDA-10-MI1 r1 covered Notes 25--28 and 30; its frozen specification,
-manifest and [production assessment](../reviews/14_MANUSCRIPT_INTEGRATION_PRODUCTION_REVIEW_20261024.md)
-remain historical. This subsequent revision includes all Review 15 changes.
+The one maintained [source](main.tex) now consolidates **Notes 42–45** in
+addition to the preceding analytical results and scoped Note 38 outlook.
+The checked reading copy is **92 pages**. [Note 46](../notes/46_NOTES42_45_MANUSCRIPT_CONSOLIDATION_20261025.md)
+maps the integration; [Review 28](../reviews/28_NOTES42_45_CONSOLIDATION_PRODUCTION_ASSESSMENT_20261025.md)
+records production and source-consistency checks.
 
-The new section proves positive all-height current, direct time,
-forcing/source and actual covariance comparison with absolute error
-O(t^-1/2), while retaining the sharper static density/potential-jet rate.
-A separate compact-[32,T] exterior theorem includes the flat-switch
-payment and its weaker time-error rate. Exact nonzero gamma residuals
-and both curvature derivatives remain in the model equations. The
-current/covariance and time statements keep their precise spatial orders.
-Differentiated inner overlap is an absolute comparison; the independent
-inner O(L kappa^-7/6) transport estimate remains sharper.
+Section 13 gives the gap-supported nonholomorphic field, exact equations,
+full-support primitive/observable transfer, actual covariance, paid exterior
+heat partition and shrinking-slab error. Section 14 gives finite gap/core
+inputs, the constructive clipped-positive source and the effective complete
+complex-buffer outer field/jet proof. The introduction, model guide, scope,
+source crosswalk and acknowledgments reflect these additions.
 
-The revision also corrects exactly three B_2^Phi source-bound occurrences,
-adds finite E4/moment-derivative allowances to Appendix A, and supplies an
-early five-model/domain guide and notation key. The four diagnostic
-paragraphs and failed 192-cell trial remain. Informative finite-core
-accuracy, compatibility/joining through finite heat times, effective
-onsets, autonomous closure and distinct specialist review remain separate
-obligations. No numerical research was run.
+The goal is an analytic approximation for every real height and heat time,
+with useful quantitative errors, full buffers and control at |x|→infinity
+and t→±infinity. The current fixed-gap theorem covers all heights on a
+short time slab; fixed-width time coverage, useful full budgets, the switch
+and endpoint joins remain open. HDA-17 is Partial, HDA-18 Gated and HDA-20
+unfulfilled. Production is not independent specialist review.
 
 ## Build and reading copy
 
@@ -39,21 +33,21 @@ Run from the repository root:
 python3 -B papers/investigations-5/01_heat_density_asymptotics/manuscript/build.py
 ~~~
 
-The unchanged script detects the checkout root and exports to
-`output/pdf/heat_density_asymptotics/heat_density_asymptotics.pdf`.
-Auxiliaries stay in that ignored folder's `.build/`. No generated PDF or
-auxiliary belongs beside the TeX or in Git. The built-in editor is a
-source-diagnostic fallback; this revision uses the maintained export build.
+The unchanged script exports to [the local reading copy](../../../../output/pdf/heat_density_asymptotics/heat_density_asymptotics.pdf).
+Auxiliaries stay in that ignored folder's `.build/`. The
+[current build record](BUILD_RECORD_20261025.json) pins all 20 TeX files,
+build.py and the PDF: zero warnings, 56 resolving local links, 629 resolving
+internal actions, all-page rendering and visual inspection, and selected
+readable-page checks. No numerical research was run.
 
-The [current build record](BUILD_RECORD_20261024.json) pins all 15 TeX files,
-build.py and the 65-page export. It records zero warnings, 42 resolving
-local links, internal destinations and all-page visual inspection, with
-previous 54-, 28- and 25-page export provenance retained.
-[Production assessment](../reviews/16_REVIEW15_REVISION_PRODUCTION_ASSESSMENT_20261024.md)
-documents source fidelity, actual checks and remaining work. These checks
-inspect the artifact and do not independently validate the source proofs.
+The [historical 24 October build record](BUILD_RECORD_20261024.json) is
+preserved unchanged, including its 78-, 65-, 54-, 28- and 25-page provenance.
+MI2 remains CLOSED at its original production scope; [Note 41](../notes/41_NOTE39_MANUSCRIPT_IMPLEMENTATION_20261024.md)
+and [Review 22](../reviews/22_NOTE39_ANALYTICAL_INTEGRATION_PRODUCTION_ASSESSMENT_20261024.md)
+record that milestone. No new snapshot folder or commit is created.
 
-Current research priorities and statuses remain in the
-[sole progress register](../research-progress/01_AVERAGED_DENSITY_RESEARCH_PROGRESS_20261024.md).
-Next research: Analytical — Astra on the finite-core accuracy and joining
-contract; no numerical packet has been issued.
+The [sole progress register](../research-progress/01_AVERAGED_DENSITY_RESEARCH_PROGRESS_20261024.md)
+owns live status. **Next: Analysis — Sol**, [HDA-18-AN04 r1](../research-progress/handoffs/HDA-18-AN04.md),
+for remaining exterior constants and one complete budget. HDA-22/23 then
+target fixed-width time coverage and core conditioning; HDA-24 is gated
+switch-uniform assembly before parent HDA-18's two endpoint joins.

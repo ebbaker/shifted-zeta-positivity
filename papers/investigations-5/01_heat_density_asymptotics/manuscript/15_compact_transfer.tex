@@ -1,0 +1,316 @@
+\section{Compact weak transfer and a local time join}\label{sec:compact-transfer}
+This section integrates Note~34 \cite{n34}. Fix the physical regulator
+and product kernel of Section~\ref{sec:protocol}. All caps below hold on
+a neighborhood of a \emph{compact full convolution buffer}, including
+all observation-boundary supports and initial/final time traces. In
+particular $e_*:=\min\sqrt q>0$ is a compact-domain premise, not an
+all-height lower bound after the switch. Let $H_t=-H_{zz}$ and let $F$
+be holomorphic in space and $C^1$ in real time, with
+\begin{equation}
+ E_F=F_t+F_{zz},\qquad |H-F|\le d_0,\quad
+ |H_{zz}-F_{zz}|\le d_2,\quad |E_F|\le\eta_E.
+ \label{eq:cj-inputs}
+\end{equation}
+All needed field derivatives are smooth on that neighborhood. Derivatives
+in time are at fixed physical coordinates; the filter is spatial and fixed.
+
+\subsection{Frozen coefficients and elementary comparisons}
+Choose caps $\bar d_j\ge d_j$ and $P_j\ge|F_j|+\bar d_j$ for $j=0,2$,
+where $F_j=\partial_z^jF$. On the same buffer put
+\begin{align}
+ m_-&=(|F|-\bar d_0)_+,\quad m_+=|F|+\bar d_0,\notag\\
+ a&=\sup_{m_-\le v\le m_+}\frac{v}{q+v^2},\quad
+ b_*=(q+m_-^2)^{-1},\quad
+ k_*=\sup_{m_-\le v\le m_+}\frac{2qv}{(q+v^2)^2}.
+ \label{eq:cj-caps}
+\end{align}
+For scalar tile bounds take the suprema of these quantities on the full
+buffer. They satisfy $a\le(2e_*)^{-1}$, $b_*\le e_*^{-2}$,
+$k_*\le e_*^{-1}$. Freeze the caps before refining or splitting the source
+errors. With $D_F=|F|^2+q$, define
+\begin{align}
+ c_F&=w_F(1-w_F),\quad
+ V_{\nu,F}=w_F^\nu F_{zz}\overline F/D_F,\quad
+ Z_\nu=w_F^\nu E_F\overline F/D_F,\qquad \nu=0,1,2,\notag\\
+ s&=2ad_0,\quad \upsilon=k_*d_0,\quad
+ v_\nu=ad_2+P_2b_*d_0+\nu P_2a\upsilon,\quad
+ z_E=\eta_E/(2e_*).
+ \label{eq:cj-elementary}
+\end{align}
+Here $s,\upsilon,v_\nu,z_E$ are nonnegative allowances, not fields.
+They bound respectively $|S_H-S_F|$, $|w_H-w_F|$,
+$|V_{\nu,H}-V_{\nu,F}|$ and $|Z_\nu|$; also
+$|c_H-c_F|\le\upsilon$.
+Indeed the straight segment from $F$ to $H$ has modulus between $m_-$
+and $m_+$. The real gradient norms of $\log(q+|u|^2)$ and
+$q/(q+|u|^2)$ are $2|u|/(q+|u|^2)$ and
+$2q|u|/(q+|u|^2)^2$. The operator derivative norm of
+$\overline u/(q+|u|^2)$ is at most $(q+|u|^2)^{-1}$.
+Telescope the latter map, $F_{zz}$ and $w_F^\nu$, using
+$|w_H^\nu-w_F^\nu|\le\nu|w_H-w_F|$ and the fixed $P_2$ cap.
+Finally $c(w)=w(1-w)$ is 1-Lipschitz on $[0,1]$.
+No simple-root or nonzero-field assumption is used.
+
+Set $r=\log q$, so $r_y=0$ for the physical regulator, and write
+$b=r_t+(r_{xx}+r_x^2)/2$, $c_r=r_{xx}+r_x^2$. Define buffer suprema
+\begin{align}
+ a_0&=\|r_t\|_\infty,& R_1&=\|\nabla r\|_\infty,&R_2&=\|\Delta r\|_\infty,\notag\\
+ T_1&=\|\nabla r_t\|_\infty,&T_2&=\|\Delta r_t\|_\infty,
+ &T_h&=\|2\nabla r\cdot\nabla r_t\|_\infty,\notag\\
+ b_0&=\|b\|_\infty,&c_0&=\|c_r\|_\infty.
+ \label{eq:cj-regulator-caps}
+\end{align}
+For $K_\alpha=\partial^\alpha K$, with Euclidean vector norms, put
+\begin{equation}
+ L_\alpha=\|K_\alpha\|_1,\quad
+ M_\alpha=\||\nabla K_\alpha|\|_1,\quad
+ D_\alpha=\|\Delta K_\alpha\|_1,\quad
+ B_\alpha=\|\sqd K_\alpha\|_1.
+ \label{eq:cj-kernel-caps}
+\end{equation}
+Only orders through four are used: $M_\alpha$ can be bounded by the sum
+of the two first derivative norms, and $D_\alpha,B_\alpha$ by the sum
+of the two pure second derivative norms. These are finite integrals of
+the declared polynomial kernel.
+
+For nonnegative arguments define the positive linear maps
+\begin{align}
+ \mathfrak C_\alpha(u,v)
+ &=\frac{2M_\alpha R_1u+L_\alpha(R_2u+R_1^2v)}{4\pi},\notag\\
+ \mathfrak P_\alpha(s,u,v)&=D_\alpha s/(4\pi)+\mathfrak C_\alpha(u,v),
+ \label{eq:cj-static-maps}\\
+ \mathfrak C^t_\alpha(u_t,u,v_t,v)
+ &=\frac{1}{4\pi}\bigl[2M_\alpha(R_1u_t+T_1u)\notag\\
+ &\hspace{35mm}+L_\alpha(R_2u_t+T_2u+R_1^2v_t+T_hv)\bigr],
+ \label{eq:cj-time-map}\\
+ \mathfrak J_\alpha&=\frac{M_\alpha v_0+L_\alpha R_1v_1}{2\pi},\notag\\
+ \mathfrak D^E_\alpha
+ &=\frac{[2D_\alpha+4M_\alpha R_1+2L_\alpha(R_2+3R_1^2)]z_E}{4\pi}.
+ \label{eq:cj-current-map}
+\end{align}
+The direct time allowances, whose subscripts do not differentiate an
+error bound, are
+\begin{equation}
+ s_t=2v_0+a_0\upsilon+2z_E,\quad
+ \upsilon_t=a_0\upsilon+2v_1+2z_E,\quad
+ c_t^e=a_0\upsilon+2v_1+4v_2+6z_E.
+ \label{eq:cj-time-errors}
+\end{equation}
+
+For actual covariance choose fixed caps $U_\gamma^*$ for the potential
+jets of both fields, $1\le|\gamma|\le3$. One elementary choice is
+\begin{equation}
+ U_\gamma^*=L_\gamma S_*,\qquad
+ S_* =\max\{|\log q_{\min}|,|\log(P_0^2+q_{\max})|\}.
+ \label{eq:cj-potential-caps}
+\end{equation}
+This retains the physical potential offset. Tighter enclosed fixed caps
+are permitted. Set $e_\gamma=L_\gamma s$ and
+\begin{align}
+ N_\alpha&=\sum_{i=x,y}\sum_{\beta\le\alpha}\binom{\alpha}{\beta}
+ \bigl(e_{\beta+i}U^*_{\alpha-\beta+i}
+       +U^*_{\beta+i}e_{\alpha-\beta+i}\bigr),\notag\\
+ \mathfrak Q_\alpha&=4L_\alpha v_0+B_\alpha s+L_\alpha c_0\upsilon+N_\alpha,\notag\\
+ \mathfrak T_\alpha&=D_\alpha s_t/(4\pi)
+       +\mathfrak C^t_\alpha(\upsilon_t,\upsilon,c_t^e,\upsilon).
+ \label{eq:cj-covariance-map}
+\end{align}
+Every potential index here has order at most three for $|\alpha|\le2$.
+
+\begin{theorem}[Complete compact filtered-system transfer]\label{thm:compact-transfer}
+Under the full-buffer premises above, the following table bounds the
+absolute difference between the $H$ and $F$ observables. All $Q$ and
+signed-source terms are computed from their own physical fields.
+\begingroup\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.40\textwidth}>{\raggedright\arraybackslash}p{.54\textwidth}@{}}
+\toprule Observable difference and spatial order & Allowance\\\midrule\endhead
+$\partial^\alpha U,\partial^\alpha W$, $|\alpha|\le4$ &
+$L_\alpha s,\ L_\alpha\upsilon$\\
+$\partial^\alpha R,\partial^\alpha\overline C$, $|\alpha|\le2$ &
+$\mathfrak P_\alpha(s,\upsilon,\upsilon),\ \mathfrak C_\alpha(\upsilon,\upsilon)$\\
+$\partial^\alpha J$, $|\alpha|\le3$ internally & $\mathfrak J_\alpha$\\
+$\partial^\alpha Q$, $|\alpha|\le2$ & $\mathfrak Q_\alpha$\\
+$\partial^\alpha U_t,\partial^\alpha W_t$, $|\alpha|\le2$ &
+$L_\alpha s_t,\ L_\alpha\upsilon_t$\\
+$\partial^\alpha\overline C_t$, $|\alpha|\le2$ &
+$\mathfrak C^t_\alpha(\upsilon_t,\upsilon,c_t^e,\upsilon)$\\
+$\partial^\alpha R_t$, $|\alpha|\le2$ & $\mathfrak T_\alpha$\\
+$\partial^\alpha\overline{\mathcal B}$, $|\alpha|\le2$ & $L_\alpha b_0\upsilon$\\
+$\partial^\alpha\overline{\mathcal S}$, $|\alpha|\le2$ &
+$\mathfrak T_\alpha+\mathfrak J_{\alpha+x}+\mathfrak J_{\alpha+y}+\mathfrak D^E_\alpha$\\
+\bottomrule
+\end{longtable}\endgroup
+For each row $V,\alpha$ the displayed finite substitutions give
+\begin{equation}
+ \mathcal E_{V,\alpha}=A_{V,\alpha}d_0+B_{V,\alpha}d_2
+                       +C_{V,\alpha}\eta_E,\qquad A,B,C\ge0.
+ \label{eq:cj-linear-table}
+\end{equation}
+Thus coefficients are explicit, rather than unspecified Lipschitz
+constants. Laplacians use the sum of the $xx,yy$ allowances; normal
+potential/current traces use absolute normal coefficients. Initial/final
+time traces are included. Subrectangles are allowed when their whole
+supports stay in the declared buffer.
+\end{theorem}
+\begin{proof}
+Use Lemma~\ref{lem:holomorphic-weak-density} against $K_\alpha$ and
+subtract the two fields. The curvature terms cost
+$\mathfrak C_\alpha(\upsilon,\upsilon)$, and the potential term costs
+$D_\alpha s/(4\pi)$, proving the $R,\overline C$ rows.
+Direct differentiation of $D_F$, using $r_y=0$, also gives
+\begin{align}
+ \pi j_F&=\partial_{\bar z}V_{0,F}+(\partial_{\bar z}r)V_{1,F},\notag\\
+ S_{F,x}^2-S_{F,y}^2&=4\Re V_{0,F}-\sqd S_F+c_rw_F.
+ \label{eq:cj-spatial-identities}
+\end{align}
+One integration by parts proves the current bound, since a real test has
+$|\partial_{\bar z}\psi|=|\nabla\psi|/2$.
+For direct time comparison use $F_t=-F_{zz}+E_F$ to obtain
+\begin{align}
+ S_{F,t}&=-2\Re V_{0,F}+r_tw_F+2\Re Z_0,\notag\\
+ w_{F,t}&=r_tc_F+2\Re V_{1,F}-2\Re Z_1,\notag\\
+ c_{F,t}&=r_tc_F(1-2w_F)+2\Re(V_{1,F}-2V_{2,F})
+                                  -2\Re(Z_1-2Z_2).
+ \label{eq:cj-direct-time}
+\end{align}
+The derivative of $w(1-w)(1-2w)$ is $1-6w+6w^2$, of modulus at
+most one on $[0,1]$. This proves \eqref{eq:cj-time-errors}.
+Differentiate the \emph{weak identity itself} in time. The derivatives of
+$\nabla r$, $\Delta r$ and $|\nabla r|^2$ give precisely $T_1,T_2,T_h$
+in \eqref{eq:cj-time-map}. Hence both curvature derivatives remain paid,
+as does $R_t$, without introducing $d_3$.
+
+Convolve the second identity in \eqref{eq:cj-spatial-identities} before
+subtracting the actual squared filtered gradients. Its first part costs
+$4L_\alpha v_0+B_\alpha s+L_\alpha c_0\upsilon$; Leibniz' rule for
+the two products of mean gradients gives $N_\alpha$. This proves the
+actual-covariance row, including $\Delta Q$.
+
+For the signed source retain its definition
+$\mathcal S_F=(1-2w_F)(r_t\rho_F+\nabla r\cdot\mathbf j_F)$.
+The exact balance for a residual-bearing holomorphic field is
+\begin{align}
+ \rho_{F,t}+\operatorname{div}\mathbf j_F&=\mathcal S_F+D_E,\notag\\
+ D_E&=\frac{2q\Re((E_F)_z\overline{F_z})}{\pi D_F^2}
+          -4\rho_F\Re(E_F\overline F/D_F).
+ \label{eq:cj-point-residual}
+\end{align}
+Vary the static weak identity at fixed $q$ in direction $\delta F=E_F$.
+Since $\delta S_F=2\Re Z_0$, $\delta w_F=-2\Re Z_1$ and
+$\delta c_F=-2\Re(Z_1-2Z_2)$, this gives the weak residual formula
+\begin{align}
+ 4\pi\langle D_E,\psi\rangle
+ ={}&2\Re\int Z_0\Delta\psi-4\Re\int Z_1\nabla r\cdot\nabla\psi\notag\\
+ &-2\Re\int\{Z_1\Delta r+(Z_1-2Z_2)|\nabla r|^2\}\psi.
+ \label{eq:cj-weak-residual}
+\end{align}
+It bounds the filtered residual by $\mathfrak D^E_\alpha$ without an
+unpaid $(E_F)_z$. Subtracting the two exact balances proves the last
+row of the table, for the already defined signed source.
+
+The internal third current order uses kernel derivatives only through
+four. The second orders of $R_t,Q$ also use at most four. The $C^3$
+kernel \eqref{eq:kernel} has bounded weak fourth derivatives and no
+fourth-order boundary delta. Smooth approximation therefore justifies
+all weak pairings. No fifth kernel derivative, pointwise jet-order
+reduction, moving-boundary assertion or arbitrary-filter extension is used.
+\end{proof}
+
+For an exact finite-source field $E_F=0$, use the separately recorded
+interpolation, omitted-mode, complete-tail and nodal errors only at
+orders $0,2$ in this route. After freezing caps, one sufficient choice
+for positive targets $\Theta_{V,\alpha}$ is
+\begin{equation}
+ d_0\le\min\left\{\bar d_0,\min_{A>0}\frac{0.4\Theta_{V,\alpha}}{A_{V,\alpha}}\right\},
+ \quad
+ d_2\le\min\left\{\bar d_2,\min_{B>0}\frac{0.4\Theta_{V,\alpha}}{B_{V,\alpha}}\right\}.
+ \label{eq:cj-budget}
+\end{equation}
+Empty minima impose no constraint. This reserves 80 percent for mapped
+source errors and 10 percent each for later evaluation arithmetic and
+filtering. Nodal arithmetic is inside the source ledger, separately
+from later field evaluation. Other allocations can be declared. Compact
+approximability gives existence, not an accepted mesh or manageable cost.
+The local route in Section~\ref{sec:finite} remains useful: Note~35
+\cite{n35} shows no uniform numerical dominance of weak transfer.
+Rounded independent jet samples are not automatically an exact heat field.
+
+\subsection{A holomorphic time blend with its full equations}
+\begin{theorem}[Paid compact time join]\label{thm:compact-time-join}
+On a common compact full buffer let $F_1,F_2$ have field-error bounds
+$h_{i,0},h_{i,2}$ against the \emph{same} $H$, and heat-residual bounds
+$\eta_i$. Let $0\le\theta(t)\le1$ be smooth, flat at both endpoints
+of an overlap of width $\tau>0$, constant outside it, and satisfy
+$|\theta'|\le c_\theta/\tau$. Then
+\begin{align}
+ F&=(1-\theta)F_1+\theta F_2,\notag\\
+ E_F&=(1-\theta)E_1+\theta E_2+\theta'(F_2-F_1),\notag\\
+ d_j&\le(1-\theta)h_{1,j}+\theta h_{2,j},\qquad j=0,2,\notag\\
+ \eta_E&\le(1-\theta)\eta_1+\theta\eta_2
+            +\frac{c_\theta}{\tau}(h_{1,0}+h_{2,0}).
+ \label{eq:cj-join}
+\end{align}
+Theorem~\ref{thm:compact-transfer}, with caps for this whole overlap and
+this actual $F$, proves its full observable and trace comparison.
+The additional cutoff cost in row $V,\alpha$ is
+\begin{equation}
+ C_{V,\alpha}\frac{c_\theta}{\tau}(h_{1,0}+h_{2,0}).
+ \label{eq:cj-cutoff-cost}
+\end{equation}
+With the actual $Q_F$ and $Z_0=E_F\overline F/D_F$, the exact equations are
+\begin{align}
+ (U_F)_t={}&-\tfrac12(\sqd U_F+U_{F,x}^2-U_{F,y}^2+Q_F)
+       +\overline{\mathcal B}_F+2\Re(K*Z_0),\notag\\
+ \Delta U_F={}&4\pi(R_F+\overline C_F),\label{eq:cj-join-potential}\\
+ (R_F)_t={}&-\tfrac12\sqd R_F
+       -\tfrac1{8\pi}\Delta(U_{F,x}^2-U_{F,y}^2+Q_F)
+       +\tfrac1{4\pi}\Delta\overline{\mathcal B}_F\notag\\
+ &-\overline C_{F,t}-\tfrac12\sqd\overline C_F
+       +\tfrac1{2\pi}\Delta\Re(K*Z_0),\notag\\
+ (R_F)_t+\operatorname{div}J_F={}&\overline{\mathcal S}_F+K*D_E.
+ \label{eq:cj-join-density}
+\end{align}
+The residual corrections have derivative allowances $2L_\alpha z_E$,
+$D_\alpha z_E/(2\pi)$ and $\mathfrak D^E_\alpha$, respectively, at the
+orders used above; these are separate from the comparison error.
+\end{theorem}
+\begin{proof}
+The time-only blend preserves spatial holomorphy and the component
+real/even symmetries. Differentiating it gives the exact residual in
+\eqref{eq:cj-join}; the triangle inequality through $H$ gives its bounds.
+Apply the compact theorem. Convolution of the direct potential identity
+and \eqref{eq:cj-point-residual} gives the first and last equations.
+Taking the Laplacian of the potential equation, using the static
+curvature identity, gives the density equation with both curvature
+terms. Formula~\eqref{eq:cj-weak-residual} pays its current defect.
+The covariance is computed from $S_F$; it is not the convex average of
+the component covariances. No PDE propagation estimate is used.
+\end{proof}
+
+Observable overlap alone does not supply the field errors in
+\eqref{eq:cj-cutoff-cost}. For negative $G_T$ and positive $P_*$,
+the endpoint field comparisons must hold on the whole actual overlap,
+with effective constants and component residuals. Triangle inequalities
+through $H$ give observable differences but cannot replace that input.
+A finer finite source does not remove endpoint field error or the saddle
+residual. Increasing $\tau$ changes the domain, caps and regulator floor,
+so it is not a free improvement. This is a local time join, not an
+all-height splice of a fixed compact source.
+
+\subsection{The spatial compatibility term and its later payment}
+For a real spatial cutoff $\lambda(x,y)$ the uncorrected construction
+satisfies exactly
+\begin{equation}
+ \partial_{\bar z}\bigl((1-\lambda)H_f+\lambda P_*\bigr)
+       =(\partial_{\bar z}\lambda)(P_*-H_f).
+ \label{eq:cj-spatial-defect}
+\end{equation}
+It generally loses holomorphy on the transition band. The holomorphic
+identities above cannot be applied there unchanged. This diagnoses the
+uncorrected spatial field cutoff only. Section~\ref{sec:spatial-join}
+now supplies a nonholomorphic model with every defect paid on a fixed-gap
+short slab; its source and effective outer-field inputs are developed in
+Section~\ref{sec:effective-inputs}. A finite atlas of observable charts
+alone is still not a globally joined field. Fixed-width time coverage,
+useful continuous finite-core budgets, switch-uniform joining and the
+two endpoint overlaps remain separate obligations.

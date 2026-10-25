@@ -279,3 +279,49 @@ whole-chapter review, theorem extension or PDF download was made.
 The earlier analytical inspection scopes and Astra attribution remain.
 [Production assessment](../reviews/16_REVIEW15_REVISION_PRODUCTION_ASSESSMENT_20261024.md);
 [current build record](../manuscript/BUILD_RECORD_20261024.json).
+
+
+## Phase-transition and crossover methods — chat 0012
+
+24 October 2026, prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort xhigh**. [Reading record](PHASE_TRANSITION_METHODS_20261024.md)
+records Fisher–Barber on shift/rounding, Wilson on RG, Tong on order
+parameters/correlations/scaling, and DLMF uniform-asymptotic methods.
+[Note 38](../notes/38_PHASE_TRANSITION_LITERATURE_AND_JOIN_DIAGNOSTICS_20261024.md)
+assesses their applicability without identifying a theta critical point or CFT.
+[PDF provenance](PHASE_REFERENCES_DOWNLOADS_20261024.json) retains the
+public Tong copy outside Git and Wilson local retrieval failure. No full
+literature review or imported criticality theorem is claimed.
+
+
+## Effective outer field input — chat 0015,25 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol, actual effort ultra**. [Note 45](../notes/45_EFFECTIVE_FULL_BUFFER_OUTER_FIELD_20261025.md)
+uses the following official NIST DLMF passages, inspected in primary
+HTML on 25 October 2026, DLMF 1.2.8 (released 15 September 2026):
+
+- [5.11.2 and 5.11(ii)](https://dlmf.nist.gov/5.11#ii): first omitted
+  digamma term at n=1 and its complex sector remainder. The new finite
+  alpha bounds and analytic-circle derivative constants are derived
+  from this remainder, not imported as a theta theorem. Earlier
+  24 October inspections and their scope remain recorded above.
+- [5.7.8](https://dlmf.nist.gov/5.7.E8): exact imaginary digamma series
+  at 1+iy; sum/integral comparison bounds the connector gamma-height
+  change on Re w=2. No whole-chapter review.
+- [5.12.1](https://dlmf.nist.gov/5.12.E1): beta integral with positive
+  real parts, used to bound a gamma ratio on b/2 in [1/4,1]. The endpoint
+  is treated by a limit; its conditions are retained.
+- [25.2.1/25.2.8](https://dlmf.nist.gov/25.2): complete Dirichlet series
+  on Re w>=2 and Euler summation at N=1, Re w>0. The middle estimate uses
+  (w-1)zeta(w) with its removable value, rather than bounding zeta at 1.
+- [1.9.30–1.9.31](https://dlmf.nist.gov/1.9.E31): Cauchy formula and
+  derivative formula, with the actual full analytic disks provided by
+  Note 45. The extra strip margin does not justify an arbitrary fixed
+  disk radius; the chosen radius is 1/[4log(2+x)].
+
+The effective branch, field ledger, huge onset and FI23 consumption are
+new estimates in Note 45, checked only internally by the same model.
+These references do not independently validate them. Online linked
+records suffice under REFERENCE_WORKFLOW.md; no artificial PDF copies,
+third-party PDF downloads or full-paper/whole-chapter reading claims.

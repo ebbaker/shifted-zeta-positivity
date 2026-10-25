@@ -876,3 +876,34 @@ numerical evidence for an asymptotic theorem." The source result retains
 current-manuscript deferral of Note 31, preserving HDA-10-MI1 r1 as its
 historical completed scope. No new mathematical gain, finite-core/joining
 acceptance, numerical onset or distinct specialist review is claimed.
+
+
+**Compact weak transfer and local time join, 24 October 2026 (5/01):
+proved in-note; same-assistant review only.** [Note 34](../papers/investigations-5/01_heat_density_asymptotics/notes/34_COMPACT_WEAK_TRANSFER_AND_TIME_JOIN_20261024.md)
+bounds the full fixed-filter adaptive observable norm from field errors
+of orders 0 and 2, with kernel derivatives through four. It retains actual
+covariance and pays a holomorphic time blend's component/cutoff residuals.
+Its scope is explicit: “This proves a local time-joining estimate, not an
+all-height time splice of a fixed finite source.” Numerical usefulness,
+effective endpoint constants, finite-core acceptance and spatial assembly
+remain open; [Review 17](../papers/investigations-5/01_heat_density_asymptotics/reviews/17_COMPACT_WEAK_TRANSFER_AND_TIME_JOIN_SELF_REVIEW_20261024.md)
+is same-assistant. [HDA-17-AN01](../papers/investigations-5/01_heat_density_asymptotics/research-progress/handoffs/HDA-17-AN01.md)
+assigns bounded follow-through to Sol. Prepared for Edward Baker with LLM
+assistance, **gpt-6-astra, actual effort xhigh**; no numerical execution.
+
+
+**Heat-density Notes 34–37 manuscript integration, 24 October 2026 (5/01).** Prepared for Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort xhigh**. The [78-page maintained manuscript](../papers/investigations-5/01_heat_density_asymptotics/manuscript/README.md) now integrates the compact weak transfer/time join, signed-source bounds, positive Hermite remainders/finite moments and scoped crossover outlook. [Review 22](../papers/investigations-5/01_heat_density_asymptotics/reviews/22_NOTE39_ANALYTICAL_INTEGRATION_PRODUCTION_ASSESSMENT_20261024.md) states: “Production checks are not independent mathematical review and do not accept a continuous finite core or global join.” Original in-note/diagnostic status and limited cross-model Review 21 scope remain. This supersedes the current-manuscript through-Note-31 scope above, preserving its historical production milestones; no new mathematical result or numerical certificate is claimed.
+
+**Heat-density Notes 42–45 consolidation, 25 October 2026 (5/01).**
+For Edward Baker with LLM assistance, **gpt-6-astra, actual effort max**;
+source status remains **proved in-note with internal LLM checks**, not a
+specialist audit. [Note 43](../papers/investigations-5/01_heat_density_asymptotics/notes/43_FULL_SUPPORT_FIXED_GAP_TRANSFER_20261024.md)
+completes the fixed-gap full-support comparison and states: “The construction
+covers the fixed short I with tau=O(1/L)”. Notes 44–45 add a constructive
+clipped source and explicit complete complex-buffer field/jet constants;
+full observable constants, affordability and all-time joining remain open.
+The [92-page manuscript](../papers/investigations-5/01_heat_density_asymptotics/manuscript/README.md)
+now integrates these results. [Note 46](../papers/investigations-5/01_heat_density_asymptotics/notes/46_NOTES42_45_MANUSCRIPT_CONSOLIDATION_20261025.md)
+and [Review 28](../papers/investigations-5/01_heat_density_asymptotics/reviews/28_NOTES42_45_CONSOLIDATION_PRODUCTION_ASSESSMENT_20261025.md)
+supersede the preceding current-manuscript through-Note-37 scope while
+preserving its historical milestone. No research-status upgrade follows.

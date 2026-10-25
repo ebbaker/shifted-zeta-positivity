@@ -2,10 +2,37 @@
 
 24 October 2026, America/New_York. Prepared for **Edward Baker** with
 substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**,
-verified from this turn's metadata.
+verified from the original turn's metadata.
 
-**GPT model ownership, author decision of 24 October:** GPT-6 Astra leads
-analytical formulas and proofs; GPT-6.1 Sol performs all numerical work.
+**Current consolidation and program revision, 25 October 2026, chat 0016:**
+prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+actual effort max**. The maintained manuscript now consolidates Notes
+42–45: the fixed-gap full-support comparison, constructive positive source,
+and explicit complete outer-field/jet bounds. [Note 46][integration46] maps
+the production work; [Review 28][production28] records its checks.
+[Review 27][review27] supplies the preceding focused assessment.
+AN01–AN03 are closed at their bounded analytical scopes. The next task is
+[HDA-18-AN04 r1][an04], followed by the fixed-width and conditioning work
+specified below. HDA-17 remains Partial, HDA-18 Gated, HDA-20 unfulfilled.
+
+**Author's governing goal, reaffirmed 25 October:** results must extend to
+infinite height and across all real time in an analytic form. The domain
+is every real x and t, on each declared bounded transverse strip with
+full averaging/analytic buffers; the limits |x|→infinity and t→±infinity
+must be quantitatively controlled. A finite interval, finite set of
+samples or growing window is an intermediate input with a named global
+consumer, not a substitute completion target.
+
+**Earlier program amendment, chat 0012:** 24 October 2026; gpt-6-astra, actual effort
+xhigh. Incorporates Notes 34–38 and the author's crossover, order-parameter
+and correlation goals; [Note 39][manuscript39] gives the requested analytical
+manuscript recommendations. This amendment is planning and synthesis,
+not a new theorem or manuscript build.
+
+**GPT model ownership, revised by the author on 24 October:** GPT-6.1 Sol
+is the default for routine and moderately difficult analysis and all
+numerical work. Reserve GPT-6 Astra for extra high difficulty analytical
+tasks, and hand tractable subproblems to Sol promptly.
 The author manages the chats manually. Follow the
 [shared handoff workflow](../../../../GPT_RESEARCH_MODEL_WORKFLOW.md);
 the existing progress register records the next owner and packet.
@@ -17,7 +44,7 @@ proved control extending to arbitrarily large height. Analytical estimates
 on unbounded height domains have priority; numerics support named steps
 in those estimates.
 
-**Long-term goal, clarified by Edward Baker on 24 October 2026.** The
+**Long-term goal, clarified on 24 October and reaffirmed on 25 October 2026.** The
 eventual construction must satisfy the appropriate evolution equations,
 with the required fluctuation terms retained, and the correct asymptotic,
 spatial boundary and source-anchor conditions. It must remain provably
@@ -42,6 +69,16 @@ because the physical density is unnormalized. Distinguish the error
 against the regularized theta density from the additional regulator error
 against smoothed zero counts, as in (P6) below.
 
+The final analytic representation may combine finite Gaussian primitives,
+a specified implicit gamma-saddle branch and explicit smooth joining
+functions. It must give a finite evaluation prescription at each point
+and explicit errors for the actual observables, without inserting the
+unknown H, Q or fitted data as an unspecified closure. Smooth cutoffs
+are allowed; the objective does not impose global holomorphy or real
+analyticity on a cutoff-based approximation. Simplicity and cost remain
+criteria alongside proved accuracy. A time-dependent error scale is
+allowed, but it must remain informative throughout the declared domain.
+
 Each improvement should sharpen the explicit approximation, reduce its
 proved error or extend the domain on which the bound is useful. The
 current endpoint formulas and bounded-window estimates are intermediate
@@ -52,18 +89,35 @@ construction and error theorem remain open.
 
 ## Revision decision and the current starting point
 
-**Current priority, clarified by Edward Baker on 24 October 2026:**
-analytical results extending to infinite height lead the program. The
-earlier choice to finish a bounded-window bridge before starting positive
-outer-height analysis is superseded. Notes 30--31 now supply HDA-19's positive model and HDA-16's
-all-height endpoint evolution comparison. The current analytical
-deliverable is HDA-17/HDA-18's finite-core and joining error contract.
-HDA-17 supplies finite-transition estimates needed by that global program;
-passing its existing bounded numerical pilot is not a prerequisite to
-HDA-19. The [current new-session handoff][priority] specifies the next
-finite-core and joining deliverable after Notes 30--31. The separate
-[manuscript review][manuscript-review15] has now been implemented in the
-65-page manuscript, including Note 31; this changes no research status.
+**Current priority:** complete analytic coverage of unbounded height and
+all real time. Notes 26/30/31 supply the endpoint/outer comparisons;
+Note 34 pays compact transfer and a local holomorphic time join.
+Notes 42/43 now pay a nonholomorphic spatial join on a fixed-gap short
+slab, with the complete support, curvature, current, source and actual
+covariance ledger. Note 44 supplies a constructive clipped-cubic source
+for any finite jet demand. Note 45 pays the full complex-buffer H-P jets
+on [95,97] above an explicit enormous height. The next finite consumer
+is AN04's complete observable budget. HDA-22 then targets fixed-width
+time coverage; HDA-23 improves growing-core conditioning; HDA-24 handles
+the switch before parent HDA-18 joins the two time endpoints. No numerical
+pilot or onset optimization is a completion target in isolation.
+
+The author's phase-transition suggestion adds a focused analytical question:
+explain the known regulator crossover and determine whether a precisely
+defined connected correlation or response has additional scaling.
+[Note 38][crossover] separates this question from global assembly. The
+regulator's chosen switch at 64 is not an established intrinsic critical
+time. HDA-21 first specifies the limiting regime, diagnostic order parameter,
+connected statistic and response; a criticality theorem is not assumed.
+
+The maintained manuscript integrates Notes 42–45 in addition to the
+previous Notes 34–37 and scoped Note 38 outlook. [Note 46][integration46]
+and [Review 28][production28] record this author-directed consolidation.
+The completed 78-page MI2 version remains a historical milestone in
+[Note 41](../notes/41_NOTE39_MANUSCRIPT_IMPLEMENTATION_20261024.md) and
+[Review 22](../reviews/22_NOTE39_ANALYTICAL_INTEGRATION_PRODUCTION_ASSESSMENT_20261024.md).
+The older [Note 32][priority] remains the broader assembly specification;
+this overview and the sole register supply current dependencies.
 
 Keep this overview and its existing [progress register][progress]. The
 objective, canonical source, physical density and exact equations are
@@ -77,6 +131,7 @@ this priority amendment adds no theorem or completed research task.
 | Construct and compare the approximation | Use direct source comparison or another proved analytic representation; an autonomous reduced PDE remains an alternative with its own stability obligation. |
 | Match asymptotic, boundary and source data | Pay both spatial interfaces and time overlaps, with full buffers, source-derived traces and all joining residuals. |
 | Extend the approximation globally | Work on unbounded height domains now. A bounded-height all-time result is a supporting subresult when it supplies an explicit input to the global theorem. |
+| Interpret the regulator crossover | Separate the exact-center shift and rounding width; define an order-parameter diagnostic, connected correlation and response before testing additional scaling. Do not infer intrinsic criticality from the regulator-induced limiting jump. |
 
 **HDA-15 checkpoint:** [Note 23][local-bounds] supplies a transition
 contract and sharper source, nonlinear and actual-covariance bounds. Its
@@ -84,6 +139,40 @@ contract and sharper source, nonlinear and actual-covariance bounds. Its
 but a larger mesh is not the default continuation.
 
 The present analytical inputs are:
+
+- [Notes 42][spatial42] and [43][support43] supply exact spatial defects
+  and the complete full-support transfer on a fixed gap and short slab.
+  With the stated source/gap inputs the largest allowance is
+  O_J(X^-2 log^3 X + X^-3 log^2 X), plus retained polynomial-exponential
+  terms. Every real observation height is covered; the time width shrinks
+  with X and no fixed-width or all-time assembly follows.
+- [Note 44][finite44] gives finite model/cutoff/core coefficients and a
+  clipped rational-cubic source with four-jet error 29epsilon/64 before
+  evaluation/filtering. Its sufficient cost is an upper bound; the coarse
+  core floor can force exponentially many cells. [Note 45][effective45]
+  now pays the formerly open field gate: 12000 A/x^2 on the full strip,
+  explicit jets through three and onset X>=2^2050 for the gap consumer.
+  Exterior collar/unit, signed-pole and weighted-observable constants are
+  still AN04 inputs; no selected source or complete budget is accepted.
+
+- [Note 34][compact-join] supplies an explicit compact transfer from field
+  errors of orders zero and two and the heat residual to the full filtered
+  system. It pays a local time join and identifies the uncorrected spatial
+  cutoff's nonholomorphic defect. Symbolic covering thresholds and an
+  attainable compact error tolerance do not give an informative global
+  construction.
+- [Notes 35][weak-decision], [36][source-refinement] and [37][hermite]
+  retain both weak and local transfer, sharpen complete source curvature
+  and signed-source comparison, and give a positive cubic-Hermite source
+  with explicit complete fourth-order, arithmetic-category and ideal
+  evaluator remainders. The sampled gains remain diagnostic; refer to
+  these notes for numerical evidence, including failures.
+- [Note 38][crossover] places Note 28's existing switch profile alongside
+  finite-size scaling, order parameters and connected correlations. Its
+  alternative-switch scaling calculation is conditional; it proves no
+  intrinsic phase transition, CFT structure or new differentiated layer.
+  [Review 21][review21] is a limited cross-model assessment, not the
+  complete HDA-20 audit.
 
 - [Note 31][positive-system] gives all-height positive current, time,
   forcing/source and actual Q/Delta Q errors O(t^-1/2), with derivatives
@@ -131,7 +220,8 @@ The present analytical inputs are:
   supplies static overlap with a different saddle model; positive
   current/time/covariance comparisons were open at that stage; Note 31
   supplies the later comparison. Notes 25--31 have same-assistant review
-  only. Notes 25--28 and 30--31 are now integrated in the 65-page manuscript;
+  only. Notes 25--28 and 30--31 were integrated in the 65-page revision;
+  MI2 adds Notes 34–37 and the scoped Note 38 interpretation;
   the older HDA-10-MI1 r1 freeze remains historical.
 
 - [Notes 11][negative] and [12][positive] give the all-height negative Gaussian estimate,
@@ -145,12 +235,12 @@ The present analytical inputs are:
 - [Note 20][bridge] fixes a smooth global regulator and proves finite-slab
   source/jet, density/current/time and actual covariance/Laplacian stability.
   Informative transition parameters and overlap have not been established.
-- The [maintained manuscript][manuscript] consolidates results through Note 31 with brief diagnostic support. Its 65-page
-  [build record](../manuscript/BUILD_RECORD_20261024.json) and
-  [production assessment](../reviews/16_REVIEW15_REVISION_PRODUCTION_ASSESSMENT_20261024.md) record the Review 15 revision.
-  HDA-10-MI1 r1 remains the earlier completed through-Note-30 production. [Note 21][integration] records the
-  earlier integration and sharper determinant mean term. Research review
-  remains same-assistant; Sol production is not an independent audit.
+- The [maintained manuscript][manuscript] consolidates results through
+  Notes 42–45, with the scoped Note 38 outlook and brief diagnostic support.
+  The [current build record](../manuscript/BUILD_RECORD_20261025.json),
+  [integration map][integration46] and [production assessment][production28]
+  record the revision. MI1, Review 15 and MI2 retain their original
+  historical scopes. Production is not an independent mathematical audit.
 
 The [progress register][progress] holds statuses, dependencies and the
 research history; this overview holds the objective, equations and
@@ -315,9 +405,12 @@ residual and justify any inference from that residual to solution error.
 **Primary route: analytical comparison with the canonical source.**
 Use Notes 26/30/31 for the negative endpoint, positive endpoint and
 compact-time positive exterior, including actual covariance, physical
-potential and model residuals. Next derive the finite-core and joining
-error theorem for HDA-17/HDA-18. Identify the source/jet accuracy consumed
-by the joins before selecting a finite numerical calculation. Note 19's
+potential and model residuals. Use Note 34's compact transfer and local
+time join as existing inputs; use Notes 42–45 for the fixed-gap full-support construction and its
+source/field inputs. Complete its finite observable budget and extend
+its time domain for HDA-17/HDA-18/HDA-22–24. Identify the
+source/jet accuracy consumed by the joins before selecting a finite
+numerical calculation. Note 19's
 exact-phase clock remains the sharper inner transport input; Notes 20/23
 provide finite-source bounds where their hypotheses hold. Direct
 comparison does not require closing an autonomous density PDE. A splice
@@ -357,6 +450,37 @@ terms. For example, blending two exact heat fields introduces
 chi'(t)(H_2-H_1). Density/current blends require the analogous balance and
 constraint calculation. No unestimated splice completes an all-time theorem.
 
+The current compact transfer has the explicit form
+\[
+\mathcal E_{V,\alpha}=A_{V,\alpha}d_0+B_{V,\alpha}d_2+
+C_{V,\alpha}\eta_E,\qquad \eta_E\ge|F_t+F_{zz}|,
+\tag{P8}
+\]
+with frozen positive coefficients from Note 34 CJ5–CJ14 on a full compact
+buffer, with \(d_j\ge|\partial_z^j(H-F)|\) for \(j=0,2\).
+Notes 36–37 improve the local signed-source and source interpolation
+inputs; use whichever proved route gives a useful allowance on the same
+domain. For a time blend \(F=(1-\theta)F_1+\theta F_2\),
+\[
+E_F=(1-\theta)E_1+\theta E_2+\theta'(F_2-F_1).
+\tag{P9}
+\]
+The overlap must pay the field mismatch, component residuals and actual
+joined observables. For a spatial blend, the additional defect is
+\[
+\partial_{\bar z}F=(\partial_{\bar z}\lambda)(P_*-H_f).
+\tag{P10}
+\]
+Notes 42–43 now pay this term, its mixed/time derivatives and all
+filtered equations on a fixed-gap short slab. Their proof uses weighted
+primitive integrals over complete supports before weak differentiation;
+the separate exterior heat partition retains every cutoff derivative.
+For a moving gap the extra residual lambda_t(P-H_f) and its consumers
+must be proved afresh. The fixed-band construction is not yet a fixed-width
+time cover.
+Neither enlarging a symbolic overlap nor refining a source mesh removes
+an unpaid endpoint field error or the shrinking spatial regulator floor.
+
 **Alternative route: a reduced potential-density evolution.** If a useful
 closure is obtained, formulate a compatible boundary/anchor problem and
 prove the needed existence, uniqueness and stability estimates. Do not
@@ -364,6 +488,68 @@ assume (P3a) is an ordinary forward parabolic equation or prescribe
 incompatible data at both time ends. Direct source-error estimates can
 establish approximation without such PDE propagation; a residual-based
 claim of solution accuracy still requires its own stability argument.
+
+## 4a. Resolve the crossover and test correlation scaling
+
+This is a supporting analytical direction, not a replacement for the
+all-time approximation contract. The baseline regulator and filter remain
+unchanged. Note 28 gives the exact-center relation
+\(b(t_c,X)=0\), where \(b=\log(\epsilon_g/A_X)\), and
+\[
+t_c-64\sim64/\log X,\qquad
+t=t_c-\frac{128\tau}{\pi X\log X},
+\]
+\[
+\frac{R(t,X,y)}{\log X}
+=\frac{k_h(y-\tau_+)+k_h(y+\tau_+)}{8\pi}
++O((\log X)^{-1}).
+\tag{P11}
+\]
+This is uniform for bounded \(\tau\) and \(|y|\le Y\) under Note 28's buffer conditions.
+The center's shift is much larger than the rounding width. Retain the
+implicit center on that width; the absolute error here is O(1).
+A normalized profile is a diagnostic, while the physical target remains
+unnormalized. No differentiated estimate follows from differentiating
+this static remainder.
+
+The first HDA-21 deliverable is a precise specification, using Notes
+27–28/31/38, of the following objects and estimates:
+
+- A limiting regime and the diagnostic order parameter
+  \(m_X=4\pi R(t,X,0)/(k_h(0)\log X)\), with its regulator dependence.
+- One observable \(O\), an explicit normalized averaging window \(W_X\)
+  and width, and a connected statistic
+  \[
+  \mathcal C_X(s;t)=\langle O(t,X+u)O(t,X+u+s)\rangle_{W_X}
+  -\langle O(t,X+u)\rangle_{W_X}
+   \langle O(t,X+u+s)\rangle_{W_X}.
+  \]
+  State centering, separation scales and known carrier/amplitude growth.
+  A finite-window average is not an assumed stationary Gibbs ensemble.
+- A declared perturbation and derivative defining response. An integral
+  of \(\mathcal C_X\) is not automatically susceptibility. A correlation
+  length also needs a definition appropriate to the derived decay.
+- The field, current, direct-time and actual-covariance error estimates
+  needed to compare the scaled system with theta. Existing outer
+  comparison may supply inputs; it does not automatically resolve every
+  finer scaled observable or derivative.
+
+The existing Q is a signed difference of local gradient variances, not
+the separated-point statistic above. Check individual correlations and
+regulator/filter dependence before interpreting their growth as critical.
+Any alternative regulator is a separately declared comparison target;
+Note 38's conditional switch calculation does not alter the physical q.
+
+Use the [primary-literature scope record][phase-references]: finite-size
+shift/rounding is an immediate analogy; Landau theory requires a derived
+order parameter/effective structure, RG requires a scale transformation,
+and CFT/anomalous dimensions require justified correlation scaling and
+symmetry hypotheses. Holomorphy or logarithmic growth alone supplies none
+of these. A finite-separation two-point function need not diverge even
+when correlation length or integrated response grows. Stop the first
+specification at a precise missing estimate rather than add a numerical
+sweep. A resistant uniform differentiated-layer proof can then be routed
+as a named hard analytical problem.
 
 ## 5. Constrain and improve the solutions against the actual equations
 
@@ -441,25 +627,38 @@ their provenance and shared dependencies.
 
 ## 6. Execution sequence and success conditions
 
-The [progress register][progress] owns task statuses; the following defines
-the next deliverables and their order. Earlier completed results are inputs,
-not tasks to repeat.
+The [progress register][progress] owns live statuses. Existing input
+results are not tasks to repeat. Sol is the default analytical owner;
+Astra is reserved for a documented resistant structural estimate.
 
-| Task | Next deliverable | Acceptance condition |
+| Task | Deliverable and current scope | Acceptance / global consumer |
 | --- | --- | --- |
-| HDA-19, under HDA-04 — completed comparison input | Retain Notes 30/31 outer and late-time model | Use the stated field, physical-regulator, current/time/covariance and overlap bounds. Constants/onsets remain uninstantiated and review remains same-assistant; no all-time joining is included. |
-| HDA-16, under HDA-03--06 — completed endpoint input | Retain both endpoint systems | Use Notes 26/31's exact common-regulator current/time/potential/Q/Delta Q estimates, full buffers, traces and positive model defects. The global positive absolute rate does not replace the sharper inner transport theorem. |
-| HDA-17, under HDA-14 — supporting task | Informative finite-transition bounds needed by the global comparison | Identify the analytic theorem using the finite input; prove the required whole-slab errors and height coverage with explicit cost. Finite certification is useful when coupled to analytic tails. Refining the Note 23 pilot requires a stated analytic benefit. |
-| HDA-18, under HDA-07--09 — assembly | All-time approximation with complete height coverage | Combine HDA-16/17/19: whole-tail thresholds, time and spatial overlaps, full buffers and all joining/constraint residuals. Give direct comparison or required propagation stability. A bounded-height special case is recorded only at that scope. |
-| HDA-20, supporting HDA-09 — review | Review with a distinct reviewer | Audit existing source, transport and covariance estimates and new outer/joining claims as available; record reviewer provenance and shared inputs. Same-assistant checks do not fulfill independent review. |
-| HDA-15, under HDA-14 — completed input | Transition contract and sharper source/nonlinear allowances | Note 23 supplies its declared analytical/diagnostic deliverable; its failed trial does not pass HDA-17. No repeat is scheduled merely to produce a better numerical table. |
+| HDA-16/19 — completed inputs | Retain both all-height endpoint systems and the compact-time outer comparison | Use the complete physical-regulator, current/time, potential, actual Q/Delta Q, trace and model-residual budgets. General endpoint onsets remain to be instantiated as needed for joining. |
+| HDA-18-AN04 — next, Sol | Effective remaining exterior constants and one complete fixed-gap budget on the Note 45 regime | Pay every FT7/FT9/FT15 constant, gap selection and full tuple row; state finite source tolerances/cost or the first failed row. No source/gamma/theta sampling is commissioned. This pays the finite inputs used by HDA-18 and calibrates HDA-22/23. |
+| HDA-22, under HDA-18 — ready analytical extension | Fixed positive time-width spatial assembly, initially [95,97]; [AN05 r1][an05] | Width independent of X; all real heights, full supports, all moving-gap or overlap derivatives, direct time/source rows and actual covariance. Give a decreasing error with controlled number of charts/cutoff costs, or identify the exact loss. Uniform symbolic constants may be used if their finite consumer is named. |
+| HDA-23, under HDA-17/18 — ready analytical improvement | Improve growing-core conditioning; [HDA-17-AN04 r1][core04] | Replace the coarse single expanding-rectangle regulator floor by a proved local field/collar or equivalent comparison; quantify the source-tolerance/cost gain for the same tuple and through possible core multiple events. No assumed zero separation, changed q or unaudited normalized observable. |
+| HDA-24, under HDA-18 — gated by fixed-width assembly | Switch-uniform spatial/time construction across 64; [AN06 r1][an06] | Use the compact [32,T] outer estimates and exact switch center; retain polynomial regulator derivatives where exponential smallness is nonuniform. Cover the moving layer in absolute physical units, including differentiated/covariance rows. Return a proved cover or exact singular missing estimate. |
+| HDA-17 — finite bridge | Consume the improved source/transfer contract on the finite central time region | One source representation per declared chart, complete continuous source/evaluation/filtering bounds and explicit cost. The older frozen-point certificate is optional support with a named global consumer; passing it alone does not accept HDA-17. |
+| HDA-18 — final assembly | A computable analytic approximation on all real time and height | Combine the central strip, switch construction and both endpoint regions with nonempty paid time overlaps. List domains whose union is R_t x R_x on the declared y strip; give formula selection/joins, finite prescription and full error envelope. Retain actual covariance, both curvature derivatives, source anchor, traces and endpoint limits. Direct comparison is sufficient; propagation requires its own stability proof if used. |
+| HDA-10 — consolidation | Notes 42–45 integrated, [Note 46][integration46] | Source-to-manuscript map, reproducible checked PDF and synchronized scope; production changes no research status. |
+| HDA-20 — ready, unfulfilled | Distinct-reviewer audit | Audit source, collar/unit, signed cancellation, covariance and joins with provenance and shared inputs recorded; production checks and limited LLM assessments do not complete it. |
+| HDA-21 — supporting, ready | Crossover/correlation specification | Define observable/window, limiting and separation scales, perturbation/response and needed differentiated error; no assumed intrinsic criticality or numerical sweep. |
 
-HDA-16/19 now provide the endpoint and outer inputs; their completion
-at those scopes does not depend on passing HDA-17. The next analysis
-identifies the finite input and joins needed by HDA-18. Review can
-proceed independently. HDA-18 retains the all-time objective and complete
-height coverage; a bounded-height construction is only an intermediate
-result. Its finite-core and joining obligations are not yet proved.
+The immediate sequence is AN04, then fixed-width assembly and improved
+core conditioning, then switch-uniform assembly and the two endpoint
+overlaps. HDA-22/23 analytical work can use the current symbolic estimates
+without waiting for a numerical implementation, but its final effective
+constants must be reconciled with AN04. HDA-24 is not started by preparing
+its packet. The 95–97 slab is a controlled test of a reusable joining
+mechanism; a proof confined there must state what extends to a general
+compact interval and what fails near 64 or either time endpoint. Once a
+finite gate is decided, move to the next domain/conditioning obstacle
+rather than repeatedly improve the same finite onset.
+
+Completion is assessed by the global domain and the useful error, not by
+note count, finite mesh size or formal existence with prohibitive cost.
+No single height cutoff, shrinking time cover or normalized profile may
+stand in for the stated all-time physical-density theorem.
 
 The common control screen is [the collision register][controls] and the
 source-specific discussions in Notes 19--20. Generic field stability must
@@ -532,3 +731,25 @@ Baker with substantial LLM assistance, gpt-6.1-sol, actual effort ultra.
 The 65-page revision integrates Note 31 and all recommended exposition
 changes, preserving the earlier frozen handoff and current HDA-17/HDA-18
 joining priorities. [Assessment](../reviews/16_REVIEW15_REVISION_PRODUCTION_ASSESSMENT_20261024.md).
+
+[compact-join]: ../notes/34_COMPACT_WEAK_TRANSFER_AND_TIME_JOIN_20261024.md
+[weak-decision]: ../notes/35_WEAK_TRANSFER_BUDGET_DECISION_20261024.md
+[source-refinement]: ../notes/36_SOURCE_CURVATURE_AND_PEAK_INTEGRATION_20261024.md
+[hermite]: ../notes/37_POSITIVE_HERMITE_SOURCE_AND_REMAINDERS_20261024.md
+[crossover]: ../notes/38_PHASE_TRANSITION_LITERATURE_AND_JOIN_DIAGNOSTICS_20261024.md
+[manuscript39]: ../notes/39_MANUSCRIPT_ANALYTICAL_RECOMMENDATIONS_20261024.md
+[review21]: ../reviews/21_NOTES35_37_PROJECT_AND_JOIN_ASSESSMENT_20261024.md
+[phase-references]: ../references/PHASE_TRANSITION_METHODS_20261024.md
+[mi2]: ../research-progress/handoffs/HDA-10-MI2.md
+
+[integration46]: ../notes/46_NOTES42_45_MANUSCRIPT_CONSOLIDATION_20261025.md
+[production28]: ../reviews/28_NOTES42_45_CONSOLIDATION_PRODUCTION_ASSESSMENT_20261025.md
+[review27]: ../reviews/27_RECENT_PROGRESS_AND_NEXT_STEPS_REVIEW_20261025.md
+[spatial42]: ../notes/42_GAP_LOCALIZED_SPATIAL_DEFECTS_20261024.md
+[support43]: ../notes/43_FULL_SUPPORT_FIXED_GAP_TRANSFER_20261024.md
+[finite44]: ../notes/44_FINITE_INPUTS_CLIPPED_SOURCE_AND_OUTER_GATE_20261024.md
+[effective45]: ../notes/45_EFFECTIVE_FULL_BUFFER_OUTER_FIELD_20261025.md
+[an04]: ../research-progress/handoffs/HDA-18-AN04.md
+[an05]: ../research-progress/handoffs/HDA-18-AN05.md
+[core04]: ../research-progress/handoffs/HDA-17-AN04.md
+[an06]: ../research-progress/handoffs/HDA-18-AN06.md

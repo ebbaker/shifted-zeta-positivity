@@ -8,20 +8,25 @@ gpt-6-astra (Codex), recorded effort max.
 Within GPT research, **GPT-6.1 Sol (`gpt-6.1-sol`) owns all new numerical
 work**, including code,
 execution, numerical debugging, computational checks and reruns. GPT-6
-Astra supplies the analytical request and reviews the returned evidence.
+Sol also owns routine and moderately difficult analysis and interpretation;
+Astra is reserved for extra high difficulty analytical bottlenecks.
 The author coordinates the chats. Use the
 [request/return workflow](../../../../GPT_RESEARCH_MODEL_WORKFLOW.md)
 and read the current packet in the existing progress register before work.
-No ready packet means no numerical assignment. Sol may repair implementation
-within the packet's scope and budget; mathematical changes return to Astra.
+A run needs a bounded question and stop rule; Sol may supply routine
+derivations and scope details within an analytical assignment. Sol may
+resolve routine mathematical issues and record a disposition. Revise a
+frozen contract explicitly; escalate only a named extra high difficulty
+issue. The root workflow supersedes the earlier analysis-only Astra rule.
 Historical records below retain their actual model attribution.
 
 ## Current role: support analytical results at infinite height
 
 The author's 24 October clarification gives priority to analytical estimates
-extending to unbounded height. HDA-19 outer-height analysis and HDA-16
-endpoint estimates lead; numerical refinement of HDA-17 is supporting work.
-See the [current handoff](../notes/22_CONTINUATION_FOR_FINITE_TRANSITION_CONTRACT_20261024.md)
+extending to unbounded height. HDA-19 outer-height and HDA-16 endpoint
+comparisons now exist at their stated scopes; the bounded HDA-17 task
+supports their finite-core use and HDA-18 global assembly.
+See the [current handoff](../research-progress/handoffs/HDA-17-AN01.md)
 and [progress register](../research-progress/01_AVERAGED_DENSITY_RESEARCH_PROGRESS_20261024.md).
 
 Before each new run, record:
@@ -43,6 +48,15 @@ The 192-cell Note 23 trial remains a failed diagnostic. Further source or
 filter refinement is not scheduled by default. The reproduction commands
 below document existing work and do not constitute a new campaign.
 See [avoid 10](../../../../avoid/10_numerics_ahead_of_the_question.md).
+
+## Current bounded request
+
+[HDA-17-AN01 r1](../research-progress/handoffs/HDA-17-AN01.md) is READY_FOR_SOL
+for routine coefficient derivation and a bounded weak/local transfer
+comparison. It tests Note 34's fixed-filter source orders 0/2, including
+post-switch adaptive terms, against predeclared diagnostic targets. No
+run has been executed. The prior 192-cell trial remains failed; its data
+are a baseline only. The live progress register owns assignment status.
 
 ## Existing records
 
@@ -249,3 +263,120 @@ not meet HDA-17. No interval arithmetic or continuous-domain enclosure is
 used. The local series bound pays truncation only. The retained JSON is
 small; no large derived data are stored. Prepared for Edward Baker,
 gpt-6-astra (Codex), actual effort max, 24 October 2026.
+
+
+## HDA-17-AN01 r1 — completed diagnostic, failed acceptance budgets
+
+24 October 2026; prepared for Edward Baker with LLM assistance,
+**gpt-6.1-sol, actual effort ultra**, chat 0011.
+[Decision note](../notes/35_WEAK_TRANSFER_BUDGET_DECISION_20261024.md),
+[diagnostic](weak_transfer_diagnostic.py), [coefficient maps](weak_coefficients.py),
+[exact controls](exact_controls.py), [control record](EXACT_CONTROLS_20261024.json),
+[index record](WEAK_TRANSFER_DIAGNOSTIC_20261024.json),
+and [assessment](../reviews/18_WEAK_TRANSFER_BUDGET_ASSESSMENT_20261024.md).
+The index hashes T64/T96/T128 JSON records, each below 1 MiB, with all
+requested coefficient/allowance rows and refinements. Uses only the twelve
+centers, 192/384/768 cells, source rules 6/10, filters 16/32/64, and two
+80/120-digit selected checks. Exact selected identities pass; source and
+filter allowances fail, nodal/evaluation rounding remains unproved.
+Local/default with componentwise weak gains is the decision; no continuous
+core, endpoint join or certificate. Run the controls first, then the
+diagnostic with --repo and an external/ignored --output; the index and
+three per-time parts are regenerated. NumPy and mpmath are required.
+
+
+## AN02 — source curvature and peak integration
+
+24 October 2026; prepared for Edward Baker with LLM assistance,
+**gpt-6.1-sol, ultra**, chat 0011. [Note 36](../notes/36_SOURCE_CURVATURE_AND_PEAK_INTEGRATION_20261024.md),
+[source caps/weights](source_accuracy_improvements.py),
+[diagnostic](source_peak_diagnostic.py), [controls](check_source.py),
+[control record](SOURCE_CONTROLS.json),
+[record](SOURCE_PEAK_DIAGNOSTIC_20261024.json) and
+[assessment](../reviews/19_SOURCE_CURVATURE_AND_PEAK_ASSESSMENT_20261024.md).
+Three uniform source-budget counts plus one a priori adaptive 768 mesh;
+only t=64,x=4,y=0 or 1/2 fields, uniform 192/768 and adaptive 768.
+Continuous curvature/chord formulas are evaluated in floating arithmetic.
+Composite 8/12 uses 16384/36864 field points. Source allowance gain 24.37
+times, but the Delta Q source budget remains 2056.73 times its allocation.
+Actual weak/direct filter indicators and positive-envelope indicators are
+separate; no continuous or rounding certificate. Main run 132.47 seconds.
+Run check_source.py first, then source_peak_diagnostic.py with --repo and
+an external/ignored --output. Frozen AN01 modules are imported read-only.
+
+
+## AN03 — positive cubic-Hermite source and explicit remainders
+
+24 October 2026; prepared for Edward Baker with LLM assistance,
+**gpt-6.1-sol, actual effort ultra**, chat 0011.
+[Note 37](../notes/37_POSITIVE_HERMITE_SOURCE_AND_REMAINDERS_20261024.md),
+[source module](hermite_source.py), [main diagnostic](positive_hermite_diagnostic.py),
+[exact controls](check_hermite.py), [control record](HERMITE_CONTROLS.json),
+[r1 record](POSITIVE_HERMITE_DIAGNOSTIC_20261024.json),
+[directional caps](hermite_directional_caps.py),
+[r2 record](HERMITE_DIRECTIONAL_CAPS_20261024.json) and
+[assessment](../reviews/20_POSITIVE_HERMITE_SOURCE_ASSESSMENT_20261024.md).
+Uniform 192 and adaptive 384/768 sources; exactly t=64,x=4,y=0,1/2.
+Positive stored Bernstein coefficients, paid fallback interpolation,
+complete fourth-derivative/tail and ideal-Gauss truncation formulas;
+source/nodal/evaluator rounding and continuous filter integration unpaid.
+Same-mesh interpolation gain about 1963 times is not storage-neutral;
+comparable-storage 384 still fails. R1's best source ratio 1.10507 remains;
+r2 tightens only covariance caps and gives worst source ratio 0.688748.
+All 91 rows retained/inherited. Eight exact polynomial families pass.
+Numerical debit 160.042 seconds, below the 1800-second cap.
+
+For reproduction with NumPy/mpmath, run a copy of check_hermite.py in an
+external output folder (it writes its record beside itself), then run
+positive_hermite_diagnostic.py and hermite_directional_caps.py with --repo
+and external/ignored --output paths. R2 reads and hash-checks the frozen
+r1 record in numerics; do not replace it during regeneration. Source arrays
+are regenerated in memory, and every retained artifact is below 1 MiB.
+
+
+## Fixed-gap local identity controls — HDA-18-AN01 r1
+
+24 October 2026; prepared for Edward Baker with LLM assistance,
+**gpt-6.1-sol, actual effort ultra**, chat 0015.
+[Script](exact_gs8_gs12.py) and [record](EXACT_GS8_GS12_20261024.json)
+contain six polynomial cases with 76 exact Fraction assertions: GS5,
+GS9/GS11/GS12 and the exact TC time-product derivative. Covariance
+mean-product algebra is checked separately, without convolution claims.
+Final execution 0.9357732501 seconds; three bounded executions total
+2.8043347919 seconds; no failures or theta sampling. See
+[Note 43](../notes/43_FULL_SUPPORT_FIXED_GAP_TRANSFER_20261024.md) and
+[Review 24](../reviews/24_FIXED_GAP_FULL_SUPPORT_ASSESSMENT_20261024.md).
+For reproduction, copy the script to an external temporary output folder
+and pass --investigation-root pointing to this investigation; it imports
+the unchanged rational helper and writes its record beside the copy.
+
+
+## Finite-input elementary majorants — HDA-18-AN02 r1
+
+24 October 2026; prepared for Edward Baker with LLM assistance,
+**gpt-6.1-sol, actual effort ultra**, chat 0015.
+[Script](finite_input_rational_bounds.py) and
+[record](FINITE_INPUT_RATIONAL_BOUNDS_20261024.json): five exact-rational
+scalar checks, all passed in one 0.0001837501-second execution, no failures.
+Complete-source fourth-derivative majorant/tail ratio, kernel coefficient
+sums, regulator beta' bound and saddle-bracket arithmetic only. No
+Phi/H/gamma/model-gap samples, source node evaluation, numerical search
+or full theorem certificate. Note 44's finite source recipe was derived
+and not run. Reproduce with a script copy in an external output folder;
+it writes its record beside itself and needs only Python's standard library.
+
+
+## Effective outer constant margins — HDA-18-AN03 r1
+
+25 October 2026; prepared for Edward Baker with LLM assistance,
+**gpt-6.1-sol, actual effort ultra**, chat 0015.
+[Script](effective_outer_scalar_bounds.py) and
+[record](EFFECTIVE_OUTER_SCALAR_BOUNDS_20261025.json): exactly six scalar
+rational/integer checks, all passed in one 0.0000686250-second execution,
+no failures. Alpha derivative, left/middle quadratic, arithmetic decay,
+final field constant and initial FI23 margins only. No theta/source/
+gamma/field sampling, numerical search or interval theorem certificate.
+[Note 45](../notes/45_EFFECTIVE_FULL_BUFFER_OUTER_FIELD_20261025.md) proves
+the uniform estimates; [Review 26](../reviews/26_EFFECTIVE_FULL_BUFFER_OUTER_FIELD_ASSESSMENT_20261025.md)
+records the proof checks. Reproduce with a script copy in an external
+output folder; it writes its record beside itself using Python's standard library.

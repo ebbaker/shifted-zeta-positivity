@@ -1,0 +1,228 @@
+\subsection{Positive cubic sources with complete fourth-order remainders}
+\label{sec:hermite-source}
+The linear construction remains valid. Note~37 \cite{n37} supplies a
+higher-order alternative without changing the canonical source or physical
+regulator. Put $A_n=\pi n^2e^{4u}$. For the complete theta source,
+\begin{align}
+ \Phi_n(u)&=\pi^{-1/4}n^{-1/2}e^{-A_n}A_n^{5/4}P_0(A_n),
+ &P_0(A)&=-3+2A,\notag\\
+ P_{k+1}(A)&=(5-4A)P_k(A)+4AP_k'(A),\notag\\
+ P_4(A)&=-1875+30930A-68096A^2+41408A^3-8448A^4+512A^5,\notag\\
+ \Phi^{(4)}(u)&=\pi^{-1/4}\sum_{n\ge1}n^{-1/2}e^{-A_n}A_n^{5/4}P_4(A_n).
+ \label{eq:hermite-p4}
+\end{align}
+The recurrence follows from $d/du=4A\,d/dA$. Absolute locally uniform
+convergence of the differentiated theta series justifies summation.
+
+Here is a continuous complete-source cap on a cell $[a,b]$. For
+$l_n=\pi n^2e^{4a}$, $r_n=\pi n^2e^{4b}$ put
+$m_p(l,r)=v^pe^{-v}$, $v=\min\{r,\max\{l,p\}\}$.
+Writing $P_4=\sum_{j=0}^5c_jA^j$, one retained-mode cap is
+\[
+ \pi^{-1/4}n^{-1/2}\sum_{j=0}^5|c_j|m_{5/4+j}(l_n,r_n).
+\]
+A potentially sharper cap preserves the signed polynomial. Set
+$d=r_n-l_n$, $t_j=d^jP_4^{(j)}(l_n)/j!$ and
+\begin{equation}
+ \gamma_k=\sum_{j=0}^k\frac{\binom{k}{j}}{\binom{5}{j}}t_j,
+ \qquad
+ \pi^{-1/4}n^{-1/2}m_{5/4}(l_n,r_n)\max_{0\le k\le5}|\gamma_k|.
+ \label{eq:hermite-bernstein-cap}
+\end{equation}
+The degree-five Bernstein basis is nonnegative and sums to one, proving
+the cap. Take the smaller valid cap for each retained mode.
+If the cap sum retains $n\le N_B$, let $n_0=N_B+1$,
+$A_0=\pi n_0^2e^{4a}$ and
+$r_4=(1+1/n_0)^{12}e^{-\pi(2n_0+1)e^{4a}}$. Provided
+$A_0\ge25/4$ and $r_4<1$, append the full tail
+\begin{equation}
+ B_{4,\mathrm{tail}}=
+ \frac{\pi^{-1/4}n_0^{-1/2}e^{-A_0}
+       \sum_{j=0}^5|c_j|A_0^{5/4+j}}{1-r_4}.
+ \label{eq:hermite-cap-tail}
+\end{equation}
+Each omitted monomial decreases in $u$; its mode-power exponent is
+$2(5/4+j)-1/2\le12$, and successive-mode ratios are at most $r_4$.
+Thus the retained sum plus this tail bounds $\sup|\Phi^{(4)}|$ on the
+whole cell. The constructed source's mode count $N$ and the cap count
+$N_B$ are different choices. Floating evaluation of a continuous
+inequality still needs its own arithmetic enclosure.
+
+\begin{proposition}[Complete-source cubic remainder and positivity]
+\label{prop:hermite-source}
+For $g\in C^4([a,b])$, let $\mathcal Hg$ match both endpoint values
+and slopes, and let $B_4\ge\sup|g^{(4)}|$, $h=b-a$. Then
+\begin{align}
+ |g(u)-\mathcal Hg(u)|&\le B_4(u-a)^2(b-u)^2/24,\notag\\
+ \|g-\mathcal Hg\|_\infty&\le B_4h^4/384,
+ &\int_a^b|g-\mathcal Hg|\,du&\le B_4h^5/720.
+ \label{eq:hermite-remainder}
+\end{align}
+For endpoint data $v_a,v_b,d_a,d_b$, the ideal cubic's degree-three
+Bernstein coefficients are
+\begin{equation}
+ \beta_0=v_a,\quad\beta_1=v_a+hd_a/3,\quad
+ \beta_2=v_b-hd_b/3,\quad\beta_3=v_b.
+ \label{eq:hermite-positive}
+\end{equation}
+Nonnegative exact stored coefficients $\widehat\beta_k$ define a
+nonnegative chosen source on the entire cell. This positivity does not
+by itself establish accuracy against the complete $\Phi$.
+\end{proposition}
+\begin{proof}
+Subtract the interpolant and a multiple of $(v-a)^2(v-b)^2$ chosen
+so that the difference also vanishes at the interior point $u$.
+Repeated Rolle's theorem gives
+$g(u)-\mathcal Hg(u)=g^{(4)}(\xi_u)(u-a)^2(u-b)^2/24$.
+The maximum of the product is $h^4/16$ and its integral is $h^5/30$,
+proving all constants. Endpoint errors vanish. Matching values and
+slopes in the Bernstein basis gives \eqref{eq:hermite-positive}; its
+basis functions $B_k^3(s)=\binom{3}{k} s^k(1-s)^{3-k}$ are nonnegative
+and sum to one. Exact stored dyadic coefficients can therefore define
+an exactly positive polynomial even when their accuracy is unproved.
+\end{proof}
+
+The complete-source ledger is explicit. Write $s=(u-a)/h$ and use
+\begin{align*}
+ H_{00}&=(1-s)^2(1+2s),&H_{01}&=s^2(3-2s),\\
+ H_{10}&=s(1-s)^2,&H_{11}&=-s^2(1-s).
+\end{align*}
+The right slope cardinal is negative. At a node $v$, let $n_0=N+1$,
+$A_0=\pi n_0^2e^{4v}$, and define
+\begin{align}
+ r_0(v)&=(1+1/n_0)^4e^{-\pi(2n_0+1)e^{4v}},&
+ \tau_0(v)&=\frac{2\pi^2n_0^4e^{9v-A_0}}{1-r_0(v)},\notag\\
+ r_1(v)&=(1+1/n_0)^6e^{-\pi(2n_0+1)e^{4v}},\notag\\
+ \tau_1(v)&=\frac{\pi^{-1/4}n_0^{-1/2}e^{-A_0}
+ (15A_0^{5/4}+30A_0^{9/4}+8A_0^{13/4})}{1-r_1(v)}.
+ \label{eq:hermite-nodal-tails}
+\end{align}
+For $N\ge1$, $v\ge0$ these ratios are below one, and the omitted
+monomials are decreasing. The recurrence gives $P_1=-15+30A-8A^2$;
+its positive monomial majorants prove the absolute slope-tail bound.
+Thus $0\le\Phi-\Phi_N\le\tau_0$, while
+$|\Phi'-\Phi_N'|\le\tau_1$ has no positive-tail interpretation.
+Assume stored nodal values/slopes satisfy
+$|v_i-\Phi_N(u_i)|\le\sigma_{0,i}$,
+$|d_i-\Phi_N'(u_i)|\le\sigma_{1,i}$, and the coefficient construction
+satisfies $|\widehat\beta_k-\beta_k^{\rm ideal}|\le\eta_k$.
+Apply \eqref{eq:hermite-remainder} to the complete $\Phi$, then add,
+on each cubic cell, the following distinct positive terms:
+\begin{align}
+ E_{\rm int}&=B_4(u-a)^2(b-u)^2/24,\notag\\
+ E_{\rm mode,0}&=\tau_0(a)H_{00}+\tau_0(b)H_{01},\notag\\
+ E_{\rm mode,1}&=h\tau_1(a)H_{10}+h\tau_1(b)|H_{11}|,\notag\\
+ E_{\rm arith,0}&=\sigma_{0,a}H_{00}+\sigma_{0,b}H_{01},\notag\\
+ E_{\rm arith,1}&=h\sigma_{1,a}H_{10}+h\sigma_{1,b}|H_{11}|,\notag\\
+ E_{\rm construct}&=\sum_{k=0}^3\eta_kB_k^3(s).
+ \label{eq:hermite-ledger}
+\end{align}
+The ideal construction uses the actual stored node geometry.
+Width/coefficient rounding or a reference-grid discrepancy must be paid
+there. Nodal slope arithmetic is separate from value arithmetic; a
+relative slope error is poorly conditioned near cancellation.
+If positivity cannot be established, the exact line through nonnegative
+stored endpoint values is an allowed fallback. It uses the complete-source
+\emph{second-order} remainder $B_2(u-a)(b-u)/2$, value errors only, and
+its own construction error if stored through rounded degree elevation.
+Clipping a cubic coefficient requires a construction allowance; it does
+not retain an unaltered Hermite interpolation claim.
+
+For each jet, integrate \eqref{eq:hermite-ledger} against
+$W_j(u)=u^je^{bu^2+Yu}$, sum over cells and append the complete-source
+$T_j$ beyond $U$. Here $b$ is the slab's time ceiling. This gives a
+source-to-jet error by the same cosine bound as Theorem~\ref{thm:finitejets}.
+The unweighted integral in \eqref{eq:hermite-remainder} is not a
+weighted jet bound. For a nonnegative time ceiling and $Y\ge0$,
+$W_j$ is convex for integer $j\ge0$, by its nonnegative power series.
+Its secant chord, with endpoint values $W_a,W_b$, therefore gives
+continuous upper integrals
+\begin{align}
+ J_{00}&=h(7W_a+3W_b)/20,&J_{01}&=h(3W_a+7W_b)/20,\notag\\
+ J_{10}&=h^2(W_a/20+W_b/30),&J_{11}&=h^2(W_a/30+W_b/20),\notag\\
+ J_4&=h^5(W_a+W_b)/1440,&
+ J_{B_k}&=h[(4-k)W_a+(k+1)W_b]/20.
+ \label{eq:hermite-chords}
+\end{align}
+They integrate respectively $H_{00},H_{01},hH_{10},h|H_{11}|$,
+$(u-a)^2(b-u)^2/24$ and $B_k^3$. These formulas follow by elementary
+polynomial integration; for constant weight they recover $hW/2$,
+$h^2W/12$ and $h^5W/720$. Subdivided chords remain valid and tighter.
+Negative time ceilings require another weight bound, or the safe
+nonnegative ceiling $\max\{b,0\}$. Endpoint exponential and summation
+arithmetic is additional to this chord majorant.
+
+\subsection{Finite Gaussian moments and an ideal evaluator bound}
+\label{sec:hermite-evaluator}
+For time-independent piecewise polynomial coefficients the field
+\eqref{eq:finitefield} is still entire, real/even in $z$, and solves
+$F_t=-F_{zz}$ exactly. Source derivative jumps and the cutoff jump cause
+no boundary term when differentiating the finite integral in $t,z$.
+On each cell expand the stored cubic as $\sum_{k=0}^3p_ku^k$ and put
+$I_k(t,z;a,b)=\int_a^bu^ke^{tu^2+izu}\,du$. The error-function primitive
+\eqref{eq:primitive0} gives $I_0$ by endpoint subtraction, and
+\begin{equation}
+ 2tI_k=[u^{k-1}e^{tu^2+izu}]_a^b-(k-1)I_{k-2}-izI_{k-1}
+ \label{eq:hermite-moments}
+\end{equation}
+for $k\ge2$; for $k=1$ omit the middle term. Integrating the derivative
+of $u^{k-1}e^{tu^2+izu}$ proves the recurrence. Average the $+z,-z$
+branches for cosine; differentiated jets use higher moments. At $t=0$,
+$I_0=(e^{izb}-e^{iza})/(iz)$ and
+$I_k=[u^ke^{izu}]_a^b/(iz)-kI_{k-1}/(iz)$ for $z\ne0$;
+at $t=z=0$, $I_k=(b^{k+1}-a^{k+1})/(k+1)$. These removable limits
+specify the representation without claiming stable raw primitive subtraction.
+
+\begin{proposition}[Ideal Gaussian truncation]\label{prop:hermite-gauss}
+For positive stored cubic cells let $c_i=(a_i+b_i)/2$,
+$d_i=(b_i-a_i)/2$, $h_i=b_i-a_i$ and
+$C_i=\max_k\widehat\beta_{i,k}$. For an ideal $G$-point Gauss rule
+with exact nodes and weights, set
+\begin{equation}
+ \vartheta_i=(2|t|c_i+|z|)d_i+|t|d_i^2,\qquad
+ M=\left\lfloor\frac{2G-1-j-3}{2}\right\rfloor\ge0.
+\end{equation}
+Uniformly for $|\Im z|\le Y$, the exact finite-field jet satisfies
+\begin{equation}
+ |\partial_z^jF-\mathcal G_G[\partial_z^jF]|
+ \le2\sum_i h_iC_i b_i^j e^{tc_i^2+Yc_i+\vartheta_i}
+                    \frac{\vartheta_i^{M+1}}{(M+1)!}.
+ \label{eq:hermite-gauss}
+\end{equation}
+A linear fallback can safely be treated as degree three.
+\end{proposition}
+\begin{proof}
+For $u=c_i+v$, factor each exponential branch into
+$e^{tc_i^2\pm izc_i}\exp((2tc_i\pm iz)v+tv^2)$.
+The latter exponent has modulus at most $\vartheta_i$.
+Its Taylor polynomial through power $M$, multiplied by $u^jf(u)$,
+has degree at most $2M+3+j\le2G-1$, so Gauss integrates it exactly.
+The remaining integrand is at most
+$C_ib_i^je^{tc_i^2+Yc_i+\vartheta_i}
+\vartheta_i^{M+1}/(M+1)!$.
+Both its integral and its positive Gauss sum cost at most $h_i$ times
+that bound. The cosine branches each have coefficient of modulus $1/2$,
+so their sum adds no further factor. Summing proves the result.
+\end{proof}
+This pays mathematical truncation for the ideal rule. Rounded nodes,
+weights, elementary functions and summation, source/nodal/construction
+errors, and continuous spatial filtering remain separate obligations.
+Refinement agreement does not replace this bound or those obligations.
+
+\begin{remark}[Directional common gradient caps]
+For $r_x=r_y=0$, let $G$ denote an ideal finite-field evaluator and
+freeze total source-plus-evaluator jet errors $\bar\delta_j$. With the
+amplitude constants of \eqref{eq:localrational} and
+$P_1\ge|G_z|+\bar\delta_1$, both physical gradients have error at most
+$\bar d_i=2a_*\bar\delta_1+2P_1b_*\bar\delta_0$. A common cap is
+\[
+ G_i^{\rm common}=\min\{2P_1a_*,\ |S_{G,i}|+\bar d_i\},\qquad i=x,y.
+\]
+Each entry bounds both fields by the universal rational bound and by
+triangle inequality, respectively. Substitute it in
+\eqref{eq:localcovariance}, keeping directions distinct and forming mean
+products only after full-support integration. Freeze it using total errors
+before mapping budget categories. This is Note~37's demonstrated
+$t=64$ refinement; height-dependent $q$ requires the additional regulator
+terms. Sampled gradients do not supply arithmetic or filter enclosures.
+\end{remark}

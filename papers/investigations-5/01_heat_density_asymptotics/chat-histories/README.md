@@ -118,3 +118,78 @@ execution. It also records the author's diagnostic-provenance question:
 the old Note 23 trial preceded the moving-forward Astra/Sol assignment.
 The refresh tool owns this chat's transcript and registry; no existing
 identity or history number is reused or changed.
+
+
+[0010 — Review finite-core joining intake](0010_2026-10-25T01-09-07Z_review-finite-core-joining-intake.json),
+created 24 October 2026 at 21:09 America/New_York, thread
+`01a1709a-adbd-7c81-9322-6d02e1619fbb`, records Note 34's compact weak
+transfer/time-joining proof and Review 17. Actual model **gpt-6-astra**,
+effort **xhigh**. The author revised the standing workflow to Sol by
+default, reserving Astra for extra high difficulty. HDA-17-AN01 r1
+prepares the bounded Sol follow-through; no computation was dispatched
+or executed. The history tool owns the unique transcript and registry.
+
+
+[0011 — Perform HDA-17-AN01 research](0011_2026-10-25T01-18-37Z_perform-hda-17-an01-research.json),
+created 24 October 2026 at 21:18 America/New_York, thread
+`01a170a3-5f6e-7aa2-9e33-bcae4835c782`, records the Sol AN01 r1 return:
+coefficient derivation, exact selected controls, bounded weak/local
+diagnostic, retained failures and disposition in Note 35/Review 18.
+Actual model **gpt-6.1-sol**, effort **ultra**. The refresh tool owns this
+chat's unique transcript and registry; no other chat is refreshed or moved.
+
+
+Chat 0011's next turn records the author-authorized continuation through
+[AN02](../research-progress/handoffs/HDA-17-AN02.md): Note 36 source-cap/chord
+and adaptive signed-source derivations, adaptive source/composite-filter
+diagnostic and Review 19. The same original identity/title/number remain;
+actual model/effort gpt-6.1-sol, ultra. The registry/refresh tool owns the
+transcript and final capture.
+
+
+Chat 0011's following turn continues through
+[AN03 r1/r2](../research-progress/handoffs/HDA-17-AN03.md): positive
+cubic-Hermite source, explicit complete-source/evaluator remainders,
+bounded same-point diagnostics and Review 20. R1 failure and r2 sampled
+allowance success remain distinct; no core certification. Original
+identity/title/number unchanged, gpt-6.1-sol, actual effort ultra.
+The refresh tool owns transcript/registry updates and final capture.
+
+
+[0013 — Implement Note 39 recommendations](0013_2026-10-25T03-14-00Z_implement-note-39-recommendations.json), thread `01a1710d-00d6-74d2-8e62-56d9c3f60792`, implements HDA-10-MI2 r1 and records the 78-page checked reading copy, Note 41 and Review 22. Actual model/effort **gpt-6.1-sol, xhigh**. This is its unique investigation registration. The refresh tool owns transcript/index updates; bounded exact-turn capture retains the real final response after completion.
+
+
+[0014 — Continue heat density research](0014_2026-10-25T03-23-33Z_continue-heat-density-research.json),
+thread `01a17115-c0a2-7571-97ce-9ed35f9f41ee`, follows Note 40, reviews
+the completed MI2 return and derives the gap-localized spatial defects
+in Note 42. Actual model/effort **gpt-6-astra, xhigh**. The unique history
+registration and transcript are managed by the refresh tool; bounded
+exact-turn capture waits for the actual completed final reply.
+
+
+[0015 — Complete fixed-gap spatial join](0015_2026-10-25T03-31-42Z_complete-fixed-gap-spatial-join.json),
+thread `01a1711d-376c-7de3-929c-60ec4065bddc`, returns HDA-18-AN01 r1
+in Note 43 with the full-support fixed-gap comparison, finite source/gap
+requirements and Review 24. Actual model/effort **gpt-6.1-sol, ultra**.
+The refresh tool owns its unique transcript and registry; bounded exact-turn
+capture records the actual completed final response. No prior identity,
+number or registration is reused or moved.
+
+
+Chat 0015's next turn records the author-authorized next analysis:
+[Note 44](../notes/44_FINITE_INPUTS_CLIPPED_SOURCE_AND_OUTER_GATE_20261024.md),
+AN02's finite model/regulator/source-cost contract and unpaid FI23 outer
+comparison gate, plus the prepared AN03 effective-remainder packet.
+Actual model/effort **gpt-6.1-sol, ultra**. Original identity, title,
+number and first-capture metadata remain; the refresh tool owns all
+transcript/registry updates and bounded exact-turn final capture.
+
+
+Chat 0015's following turn on 25 October 2026 executes HDA-18-AN03 r1:
+[Note 45](../notes/45_EFFECTIVE_FULL_BUFFER_OUTER_FIELD_20261025.md)
+gives explicit complete field/jet constants and huge finite onsets on
+[95,97], with FI23 paid and no failed contour bound. Review 26 and six
+constant checks record internal evidence; AN04 is prepared for remaining
+exterior constants. Actual model/effort **gpt-6.1-sol, ultra**. Original
+identity, title, number and first-capture metadata remain; the refresh
+tool manages public transcript/registry updates and final capture.

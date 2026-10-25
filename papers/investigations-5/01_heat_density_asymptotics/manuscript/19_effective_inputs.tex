@@ -1,0 +1,425 @@
+\section{Constructive source and effective outer-field inputs}\label{sec:effective-inputs}
+Notes~44--45 \cite{n44,n45} make two parts of the fixed-gap contract
+explicit: a finite positive source for any demanded absolute jet accuracy,
+and complete-source outer field constants on a very large finite regime.
+Neither alone instantiates the exterior collar and weighted-observable
+constants in Theorem~\ref{thm:sj-transfer}.
+
+\subsection{A finite model-gap template}
+Fix $J=[95,97]$, $t_0=96$, $\ell=h=Y=1$ and $Y_b=4$. A candidate
+center satisfies $\Theta_*(96,X)=n\pi$ on the established full-saddle
+branch; no particular integer is selected. Write
+\begin{align*}
+ M(p)&=\frac{p(p-1)\pi^{-p/2}\Gamma(p/2)}{16},&
+ \alpha&=M'/M,\\
+ p&=w+\tfrac t2\alpha(p),&B&=1-\tfrac t2\alpha'(p),\\
+ S_t(w)&=M(p)e^{-(p-w)^2/t}/\sqrt B.
+\end{align*}
+Here $B$ is the saddle determinant, distinct from the compatibility
+derivative in Section~\ref{sec:spatial-join}. Suppose a full branch chart
+supplies $b=\inf|B|>0$ and $a_j=\sup|\alpha^{(j)}(p)|$, $0\le j\le4$.
+For $D=(\log S_t)_w$, direct implicit differentiation bounds
+$D,D_w,D_{ww}$ by
+\begin{align}
+ D_0&=a_0+97a_2/(4b^2),\notag\\
+ D_1&=a_1/b+97a_3/(4b^3)+97^2a_2^2/(4b^4),\notag\\
+ D_2&=a_2/b^2+97a_1a_2/(2b^3)+97a_4/(4b^4)
+                  +7\cdot97^2a_2a_3/(8b^5)+97^3a_2^3/(2b^6).
+ \label{eq:fi-model-caps}
+\end{align}
+Consequently the carrier-relative jet constants in
+\eqref{eq:sj-gap} are $1$, $D_0/(2L)$,
+$(D_0^2+D_1)/(4L^2)$ and $(D_0^3+3D_0D_1+D_2)/(8L^3)$.
+The time logarithmic derivative is exactly
+\begin{equation}
+ (\log S_t)_t=\frac{\alpha^2}{4}+\frac{\alpha'}{4B}
+                            +\frac{t\alpha\alpha''}{8B^2},\qquad
+ T_0=\frac{a_0^2}{4}+\frac{a_1}{4b}+\frac{97a_0a_2}{8b^2}.
+ \label{eq:fi-time-cap}
+\end{equation}
+For compatible carrier logarithms
+$\Theta=(\log S_+-\log S_-)/(2i)$, Taylor's integral formula gives
+\begin{equation}
+ |\Re\Theta(t,x+iy)-n\pi|\le\sigma D_0+\tau T_0+2D_1
+ \quad(|x-X|\le2\sigma,\ |y|\le4).
+ \label{eq:fi-phase}
+\end{equation}
+Indeed $\Theta$ is real on the real axis, its first transverse
+displacement is imaginary, and $|\Theta_{zz}|\le D_1/4$.
+The choices
+\begin{equation}
+ \sigma=\min\left(\tfrac12,\frac{\pi}{16(D_0+1)}\right),\qquad
+ \tau\le\min\left(1,\frac{\pi}{16(T_0+1)}\right),\qquad D_1\le\pi/32
+ \label{eq:fi-gap-choice}
+\end{equation}
+give phase deviation at most $3\pi/16<\pi/4$. Since
+$|P|/A=|\cos\Theta|/\cosh(\Im\Theta)\ge|\cos(\Re\Theta)|$,
+$c_0=1/2$ suffices. One must additionally supply collar injectivity,
+separation and the root-speed gate \eqref{eq:sj-time}; a speed bound
+is $V=T_0/\Omega_{\min}$ with
+$\Omega_{\min}=\tfrac12\inf\Re D>0$ on real root charts.
+The conservative time choice here can be smaller than $O(1/L)$.
+These are finite sufficient inequalities, not an evaluated gap certificate.
+
+The exact model residual gives
+\begin{align}
+ R_0&=97a_3/(16b^3)+5\cdot97^2a_2^2/(64b^4),\notag\\
+ R_1&=97a_4/(16b^4)+97^2a_2a_3/(4b^5)
+                              +5\cdot97^3a_2^3/(32b^6),\notag\\
+ |E_P|&\le R_0A,\qquad |(E_P)_z|\le(D_0R_0+R_1)A/2.
+ \label{eq:fi-residual-caps}
+\end{align}
+These do not infer field accuracy from residual size.
+
+For a fully specified cutoff take
+$\phi(s)=e^{-1/[s(1-s)]}$ on $(0,1)$ and zero elsewhere,
+$b_*(s)=\int_{-\infty}^s\phi/\int\phi$. The integral over
+$[1/4,3/4]$ is at least $e^{-16/3}/2$, and differentiation gives
+\[
+ \|b_*'\|_\infty\le2e^{4/3},\qquad
+ \|b_*''\|_\infty\le32e^{4/3},\qquad
+ \|b_*'''\|_\infty\le832e^{4/3}.
+\]
+Thus $\lambda=b_*((|x|-X+\sigma/2)/\sigma)$ is flat inside the
+declared band, with these constants divided by $\sigma^j$.
+Use $\eta_O=b_*((|x|-X-\sigma)/\sigma)$ for the heat partition.
+The absolute value is harmless because both cutoffs are constant near
+zero. Their exact normalizing integral is part of the analytic definition.
+
+\subsection{Explicit compact demands and a clipped cubic source}
+Let $R_c=X+2\sigma+3$, increased for any additional analytic buffer.
+The real regulator saddle $L_s$ on $J$ obeys
+$1/2<L_s<1$, $226<\kappa<618$, $0<\kappa'<13$ and
+$1<M_0<e^{110}$. These follow by inserting $1/2,1$ in the real saddle
+equation, then differentiating that equation. Also
+$4e^{-4}<\Phi(0)\sqrt\pi/2<4$ from its first mode and complete
+geometric majorant. Therefore a finite core floor is
+\begin{equation}
+ e_c=E_\eta e^{-R_c^2/452},\qquad
+ E_\eta=\min((2/5)\eta e^{-4},1/618),\qquad
+ \epsilon_g(t,x)\ge e_c\quad(t\in J,\ |x|\le R_c).
+ \label{eq:fi-floor}
+\end{equation}
+The geometric interpolation defining $\epsilon_g$ is at least the
+smaller endpoint lower bound. This floor is used only on the finite core.
+
+For completeness, finite regulator caps consuming the full-support table
+are
+\begin{align}
+ A_t&=4+(118+|\log\eta|)/8+R_c^2/512,&|r_t|&\le A_t,\notag\\
+ R_1&\le R_c/113,&R_2&\le1/113,\notag\\
+ T_1&\le R_c/256,&T_2&\le1/256,\notag\\
+ T_h&\le R_c^2/14464,&c_r&\le1/113+R_c^2/113^2,\notag\\
+ b_r&\le A_t+(1/113+R_c^2/113^2)/2.
+ \label{eq:fi-regulator-caps}
+\end{align}
+Here $R_1,R_2$ again mean the regulator weights of
+Section~\ref{sec:spatial-join}, not the model residual caps above.
+To check these inequalities, use $|\chi'|<1/16$ on $J$,
+$\beta\le1/226$, $|\beta'|<1/512$ and
+$r=2\log E_0-\beta x^2$, retaining the switch amplitude mismatch.
+Kernel norms through four can be bounded by
+$k_\alpha\le a_{\alpha_x}a_{\alpha_y}$, with
+\[
+ (a_0,a_1,a_2,a_3,a_4)
+   =(315/256,315/4,315,4725/4,16065/4).
+\]
+For source-moment caps take $U_0=1+\log111$ and, for $j=0,2$,
+\[
+ P_j=1+40\left\{
+  \frac{U_0^{j+1}e^{97U_0^2+13U_0}}{j+1}
+                         +\frac{\Gamma((j+1)/2)}2\right\}.
+\]
+Freeze $\bar d_0=\bar d_2=1$, $a_C=(2e_c)^{-1}$,
+$b_C=e_c^{-2}$, $k_C=e_c^{-1}$ and declared common mean-gradient caps.
+For $d_0,d_2\le\varepsilon\le1$ put $Z=\varepsilon/e_c^2$.
+Then $s_C,w_C\le Z$,
+$v_{m,C}\le[(1+m/2)P_2+1/2]Z$, and the pointwise time rows are at
+most $(A_t+2P_2+1)Z$, $(A_t+3P_2+1)Z$ and
+$(A_t+11P_2+3)Z$ respectively. Substitute these bounds and area at most
+four into \eqref{eq:sj-curvature-ledger}--\eqref{eq:sj-source}.
+If $D_r$ is the resulting coefficient after factoring $4Z$ from row
+$r$, a sufficient common tolerance is
+\begin{equation}
+ \varepsilon\le\min\left(1,
+        e_c^2\min_{D_r>0}\frac{\theta_{c,r}}{4D_r},
+        \min_{0\le j\le3}\mu_sL^j A_{\min}\right).
+ \label{eq:fi-source-demand}
+\end{equation}
+$D_r$ is an arithmetic expression in the displayed coefficients and
+the fixed mean caps; exterior/gap debits remain outside this reserve.
+
+\begin{proposition}[Positive clipped-cubic constructor]\label{prop:fi-source}
+For every $0<\varepsilon\le1$ there is one nonnegative compact
+piecewise-cubic source $f$, with rational coefficients and algebraic
+splitting endpoints, whose exact heat field $G$ satisfies
+\begin{equation}
+ |\partial_z^j(G-H)|\le29\varepsilon/64
+ \quad(0\le j\le3,\ t\in[95,97],\ x\in\R,\ |y|\le4).
+ \label{eq:fi-source-error}
+\end{equation}
+An explicit construction is obtained by setting
+\begin{align}
+ Q_0&=\log(32/\varepsilon),&U&=\lceil4+\log(5+Q_0)\rceil,\notag\\
+ F_0&=U^4e^{97U^2+4U},&B_4&=2^{20},\notag\\
+ n_0&=\max\left(3,\left\lceil\sqrt{\log(2^{14}F_0/\varepsilon)/2}\right\rceil\right),
+ &N&=n_0-1,\notag\\
+ M&=\left\lceil U\max\{1,(B_4F_0/(48\varepsilon))^{1/4}\}\right\rceil,
+ &h_s&=U/M,\notag\\
+ b_s&=\lceil\log_2(64F_0/\varepsilon)\rceil.
+ \label{eq:fi-recipe}
+\end{align}
+Use dyadic value and slope data for $\Phi_N$ at the rational nodes
+$iU/M$, each accurate to $\varepsilon/(16F_0)$. Form the exact rational
+Hermite cubic $p_i$ and set $f_i=\max(0,p_i)$; set $f=0$ above $U$.
+Ceilings may use certified integer upper bounds, with a bounded extra
+margin, to avoid deciding transcendental equality with an integer.
+\end{proposition}
+\begin{proof}
+Since $\Phi\ge0$, clipping is a contraction:
+\[
+ |\max(0,p_i)-\Phi|\le|p_i-\Phi|
+                 \le B_4h_s^4/384+a+h_sb/4,
+\]
+where $a,b$ bound nodal value/slope errors. A cubic has at most three
+distinct real roots, so there are at most four polynomial or zero pieces
+per cell. Rational coefficients give algebraic endpoints, including
+multiple roots by exact polynomial algebra. The compact integral is
+entire and exact heat despite corners in $f$, and uses the finite
+Gaussian moments of Section~\ref{sec:hermite-source}.
+
+The complete-source fourth derivative has the global bound
+$\sup_{u\ge0}|\Phi^{(4)}(u)|<2^{20}$. To see the finite constant, use
+the complete derivative-polynomial coefficients
+\[
+ (1875,30930,68096,41408,8448,512).
+\]
+The first-mode monomial envelope
+is $75122271/80$; the geometric tail from $n=2$ is at most
+$2055936470669686996992/28821512495674177$. Their sum is below $2^{20}$.
+These are the rational majorants from the complete Hermite derivative
+formula, not a finite-mode sample.
+
+For $j\le3$, $\int_0^Uu^je^{97u^2+4u}\,du\le F_0$. The chosen
+mesh makes interpolation cost at most $\varepsilon/8$. The complete
+omitted nodal value/slope envelope is
+\[
+ \tau_0+h_s\tau_1/4\le2^{11}n_0^6e^{-3n_0^2}
+        \le2^{11}e^{-2n_0^2}\le\varepsilon/(8F_0).
+\]
+The nodal arithmetic costs at most $5\varepsilon/64$ after integration.
+For the complete tail, $U\ge4$ and the source-tail formula has
+\[
+ 4\pi e^{4U}-194U-13-j/U\ge\pi e^{4U},\qquad
+ 97U^2+13U-\pi e^{4U}\le-2e^{4U}\le\log(\varepsilon/8),
+\]
+with prefactor at most one. It therefore costs at most
+$\varepsilon/8$. Exact coefficient construction and clipping add zero.
+The four paid categories sum to $29\varepsilon/64$.
+\end{proof}
+Nodal data are constructible by finite rational enclosures of $\pi$ and
+exponentials; Note~44 gives an explicit, deliberately inefficient
+Taylor/Machin prescription. No nodal evaluation or root isolation is
+executed in this manuscript. Field evaluation, endpoint rounding and
+continuous filtering are additional costs. With
+$B_s=b_s+20+\lceil\log_2(M+1)\rceil$, a source-description upper bound
+is $64(M+1)(B_s+1)$ bits. It includes algebraic root indices and isolating
+intervals; it is not a running-time bound. As $q_0=\log(1/\varepsilon)$ grows,
+\begin{equation}
+ M=\varepsilon^{-1/4}\exp(O(\log^2q_0)),\qquad
+ b_s,B_s=O(q_0+\log^2q_0).
+ \label{eq:fi-cost}
+\end{equation}
+Thus a sufficient demand $\varepsilon=e^{-aX^2}$ can require
+$M=\exp(aX^2/4+O(\log^2X))$ in this constructor. This is an upper
+bound for this method, not a lower bound or an impossibility theorem.
+Absolute jets uniform in $x$ do not by themselves give a global
+shrinking-regulator observable comparison; the source is consumed on
+the finite core and gap.
+
+\subsection{A complete effective complex-buffer field estimate}
+\begin{theorem}[Finite outer field and Cauchy-jet constants]\label{thm:effective-outer}
+For the unchanged full saddle, $95\le t\le97$, $x=|\Re z|$ and
+$L=\log(2+x)$,
+\begin{equation}
+ |H-P|\le12000A/x^2\quad(|\Im z|\le5,\ x\ge2^{2048}).
+ \label{eq:ef-field}
+\end{equation}
+On $|\Im z|\le9/2$, $x\ge2^{2049}$,
+\begin{equation}
+ |\partial_z^j(H-P)|\le C_j A L^j/x^2\quad(0\le j\le3),\qquad
+ (C_0,C_1,C_2,C_3)=(12000,384000,3072000,36864000).
+ \label{eq:ef-jets}
+\end{equation}
+No value of $H$, gamma or a model gap is sampled to establish these
+finite constants. The field theorem is independent of the regulator.
+\end{theorem}
+\begin{proof}
+The first omitted digamma term with the complex remainder rule
+\cite{DLMFGammaOuter2026} gives
+\[
+ \psi(v)=\Log v-\frac1{2v}+R(v),\qquad
+ |R(v)|\le\frac{\sec^3(\arg(v)/2)}{12|v|^2}.
+\]
+For $\Re p\ge2$, $m=|p|\ge4096$, it follows that
+\begin{equation}
+ \alpha(p)=\tfrac12\Log(p/(2\pi))+r_0(p),\quad |r_0(p)|\le2/m,
+ \qquad |\alpha^{(j)}(p)|\le j!/m^j\quad(1\le j\le4).
+ \label{eq:ef-alpha}
+\end{equation}
+For the derivative bounds take a circle of radius $m/4$. It stays off
+the negative axis and the rational poles, and there $|r_0|\le6/m$.
+Cauchy gives $|r_0^{(j)}|\le6j!4^j/m^{j+1}$;
+$1/(2j)+6\cdot4^j/4096<1$ pays the logarithmic term as well.
+
+It suffices to work with $\lambda=\log x\ge1000$. For either arm,
+after conjugation if needed, $w=\sigma_0+iT$ with
+$-2\le\sigma_0\le3$, $T=x/2$. On the rectangle
+\[
+ \sigma_0+t\lambda/8\le\Re p\le\sigma_0+t\lambda/2,
+ \qquad T\le\Im p\le T+t,
+\]
+one has $x/2\le|p|\le x$, and
+\[
+ (\lambda-3)/2-4/x\le\Re\alpha\le\lambda/2+4/x,
+ \qquad 0<\Im\alpha<1.
+\]
+Thus the saddle map is an interior contraction with Lipschitz constant
+$97/x<1/2$. Its unique holomorphic fixed point agrees with the established
+full-saddle branch on overlapping charts. Writing $p-w=a+ih$ gives
+\begin{equation}
+ t\lambda/5\le a\le t\lambda/3,\quad 0<h<t/2,\quad
+ |B-1|\le97/x,\quad 1/2<|B|<3/2,\quad\Re B>1/2.
+ \label{eq:ef-saddle}
+\end{equation}
+
+Gaussian averaging of the canonical source, justified by its complete
+superexponential tail, gives the exact convolution
+\[
+ H(t,z)=\frac1{\sqrt{\pi t}}\int_\R e^{-v^2/t}\xi(s+v)/8\,dv,
+ \qquad s=(1+iz)/2.
+\]
+Split at real parts $2,-1$, reflect the left arm, and keep the length-three
+middle interval. Each arm is
+\begin{equation}
+ I_w=\frac1{\sqrt{\pi t}}\int_{v_0}^\infty
+              e^{-v^2/t}M(w+v)\zeta(w+v)\,dv,
+ \qquad v_0=2-\sigma_0\in[-1,4].
+ \label{eq:ef-arm}
+\end{equation}
+Shift to $v=r+ih$, retaining the oriented connector at $v_0$.
+The real part of the gamma/zeta argument is at least two. Closing at
+a finite right end and integrating the logarithmic derivative bound
+shows its vertical face tends to zero against the Gaussian. The
+following estimates also pay the actual infinite right tail.
+
+For $v=p-w+u$ with $u\ge-a/2$, Taylor integral remainders give
+\begin{align}
+ \Gamma_p(u)&=\log M(p+u)-\log M(p)-\alpha(p)u,&
+ |\Gamma_p(u)|&\le u^2/x,\notag\\
+ E_p(u)&=\Gamma_p(u)-\alpha'(p)u^2/2,&
+ |E_p(u)|&\le4|u|^3/(3x^2).
+ \label{eq:ef-taylor}
+\end{align}
+The exact normalized integrand is $e^{-Bu^2/t+E_p(u)}$.
+Both this and $e^{-Bu^2/t}$ have modulus at most $e^{-u^2/(2t)}$;
+the line segment between their exponents has the same real-part bound.
+The exponential difference integral and
+$\int_\R|u|^3e^{-u^2/(2t)}du=4t^2$ therefore bound the central unit
+arithmetic-mode error by $12t^{3/2}/x^2$, relative to $|S_t(w)|$.
+Each missing Gaussian end and the actual unit-mode right end costs
+at most $T_G=e^{-t\lambda^2/200}$; retain three such allowances.
+
+The remaining contour costs are explicit. Put $A_r=\Re p=a+\sigma_0$
+and $D_r=A_r/2+2\log(A_r/2)+2\le2A_r$ in this proof only.
+Integrating \eqref{eq:ef-alpha} on the left horizontal segment gives
+\[
+ \int_{A_r-d}^{A_r}\Re\alpha(v+i(T+h))\,dv
+                      \ge d\Re\alpha(p)-D_r.
+\]
+The bound $|\zeta|<2$ at real part at least two then gives the left
+allowance below. The digamma series \cite{DLMFDigammaSeries2026} gives
+$|\Im\alpha(2+iT)|<2$, paying the connector's factor $e^{2|h|}$.
+For the middle, reflection, the pole-canceled Euler formula
+\cite{DLMFZetaOuter2026} and the beta integral \cite{DLMFBeta2026} give
+\begin{equation}
+ \sup_{-1\le b\le2}|\xi(b+iT)/8|
+                   \le225(1+|T|)|M(2+iT)|.
+ \label{eq:ef-middle-bound}
+\end{equation}
+Indeed reflection reduces to $1/2\le b\le2$;
+$|(q-1)\zeta(q)|\le|q|(1+2|q-1|)$ from Euler summation.
+The beta integral bounds the gamma quotient by $\Gamma(b/2)<5$,
+while $\pi^{1-b/2}<3$ and
+$(2+|T|)^2/(1+T^2)\le5$. These give
+$75(3+2|T|)\le225(1+|T|)$, including the canceled pole by continuity.
+Finally the complete series has $|\zeta(q)-1|\le3\,2^{-\Re q}$.
+Integration against the paid central Gaussian controls every non-unit
+mode and its infinite right tail. The resulting per-arm relative ledger is
+\begin{align}
+ E_{\rm left}&=\frac{2|B|^{1/2}(a/2+1)}{\sqrt{\pi t}}
+                                e^{-a^2/(4t)+D_r},\notag\\
+ E_{\rm conn}&=\frac{2|B|^{1/2}|h|}{\sqrt{\pi t}}
+                         e^{-(A_r-2)^2/t+D_r+2|h|},\notag\\
+ E_{\rm mid}&=\frac{675|B|^{1/2}(1+T)}{\sqrt{\pi t}}
+                         e^{16/t-(A_r-2)^2/t+D_r+2|h|},\notag\\
+ E_{\rm arith}&=3\sqrt2|B|^{1/2}2^{-\sigma_0-a}e^{t(\log2)^2/2}.
+ \label{eq:ef-paid-ledger}
+\end{align}
+The middle is counted once and can be compared to either carrier.
+The complete zeta factor on the left and connector was already included;
+no series estimate is extended outside its convergence half-plane.
+
+For $\lambda\ge1000$, the finite reductions are
+\begin{align}
+ -a^2/(4t)+D_r&\le-95\lambda^2/100+(194/3)\lambda+6
+                                           \le-\lambda^2/2,\notag\\
+ T_G&\le x^{-3},& E_{\rm left}&\le66\lambda e^{-\lambda^2/2}\le x^{-3},\notag\\
+ E_{\rm conn}&\le194e^{-\lambda^2/2+194}\le x^{-3},\notag\\
+ E_{\rm mid}&\le1350x e^{-\lambda^2/2+195}\le x^{-3},\notag\\
+ E_{\rm arith}&\le48e^{97/2-95\lambda/10}\le x^{-3}.
+ \label{eq:ef-finite-decay}
+\end{align}
+They follow from \eqref{eq:ef-saddle}, $A_r-2\ge a/2$ and elementary
+exponential inequalities; the quadratic margins are positive at $1000$
+and increasing thereafter. Since $t^{3/2}<970$, both arms, all three
+Gaussian/unit ends per arm, both connectors, all arithmetic modes and
+the one middle give
+\[
+ |H-P|/A\le11640/x^2+7/x^3<12000/x^2.
+\]
+The finite threshold $2^{2048}$ lies within this regime because
+$\log2>1/2$.
+
+For jets use the exact identity
+$D=\alpha+t\alpha''/(4B^2)$, which gives $|D|\le\log x$.
+At $|\Im z|\le9/2$, $x\ge2^{2049}$, the full circle of radius
+$\rho=1/(4L)$ stays in $|\Im z|\le5$, with height at least $x-1$.
+Each carrier has $z$ logarithmic derivative at most $L$, so its modulus
+on that circle is less than twice its central modulus. Cauchy's formula
+\cite{DLMFCauchy1931} yields
+\[
+ \frac{|\partial_z^j(H-P)|}{A}
+   \le\frac{24000j!(4L)^j}{(x-1)^2}
+   \le\frac{96000j!4^jL^j}{x^2}.
+\]
+Retain the sharper $C_0$ from the field estimate. This proves the stated
+table without differentiating an asymptotic remainder.
+\end{proof}
+
+On a gap chart with $X\ge2^{2050}$,
+$||\Re z|-X|\le2$, $|\Im z|\le9/2$, one has local height at least
+$X/2$ and local logarithm at most $2\log(2+X)$. Hence the formerly
+uninstantiated field input in \eqref{eq:sj-source-gap} is paid by
+\begin{equation}
+ \mu_o\le\frac{32C_3}{X^2}
+             =\frac{1179648000}{X^2}\le\frac1{16}.
+ \label{eq:ef-gap-consumer}
+\end{equation}
+With $\mu_s\le1/16$, the $c_0=1/2$ floor has strict margin.
+This is a uniform full-buffer theorem on $[95,97]$, not an accepted
+phase index, finite source, full observable budget or practical onset.
+The remaining collar/unit, signed-pole and weighted-exterior constants
+are the bounded task HDA-18-AN04. Optimizing the enormous field onset
+is optional; obtaining fixed-width time coverage and a complete all-time
+analytic assembly remains the governing objective.

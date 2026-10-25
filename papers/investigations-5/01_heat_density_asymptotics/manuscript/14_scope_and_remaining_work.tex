@@ -1,5 +1,6 @@
 \section{Coverage and remaining work}\label{sec:remaining}
-The following table records the integrated source scope through Note 31.
+The following table records the integrated source scope through Notes 42--45,
+with Note 38 supplying interpretation only.
 Every estimate uses its stated full buffer and regulator; constants depend
 on the fixed widths, transverse margins and regulator parameters as
 specified in the corresponding theorem. Spatial jets do not include time
@@ -71,7 +72,44 @@ Finite-source density, current, direct time and actual covariance &
 Explicit source/jet and nonlinear allowances, including cellwise and
 amplitude-aware refinements: Theorem~\ref{thm:finitejets},
 Proposition~\ref{prop:fieldstability}, Theorem~\ref{thm:covariance} and
-Propositions~\ref{prop:localjets} and~\ref{prop:localnonlinear}.\\\bottomrule
+Propositions~\ref{prop:localjets} and~\ref{prop:localnonlinear}.\\
+Compact full buffers; Note 34 CJ14/CJ20 & Complete filtered system from
+$d_0,d_2,\eta_E$, including both curvature derivatives and actual $Q$ &
+Explicit positive coefficient table, Theorem~\ref{thm:compact-transfer}.
+Requires compact positive regulator floor and useful enclosed caps.\\
+Common compact time overlap; Note 34 CJ22--CJ27 & Holomorphic time join
+and exact potential/density/current equations &
+Theorem~\ref{thm:compact-time-join}; component and cutoff residuals retained.
+No accepted endpoint/cutoff budget; the distinct spatial construction is
+Theorem~\ref{thm:sj-transfer}.\\
+Common full buffer; Note 36 AS2--AS6 & Direct signed radial source comparison &
+Proposition~\ref{prop:signed-source}; whole-buffer coefficients and positive
+envelope integration must be bounded. No heat premise for this row.\\
+Finite positive cubic cells; Note 37 HE1--HE10/HE12 & Complete fourth-order
+remainder, finite moments and ideal evaluator bound &
+Propositions~\ref{prop:hermite-source} and~\ref{prop:hermite-gauss}.
+Nodal/construction/evaluator arithmetic, continuous filtering and space/time
+coverage remain separate. Linear fallback retains second-order remainder.\\
+Fixed-gap short $I\Subset(64,\infty)$, every real observation height &
+Full filtered tuple, actual $Q$, both curvature derivatives, source and
+spatial/heat compatibility terms &
+Theorem~\ref{thm:sj-transfer}, Corollary~\ref{cor:sj-rate}:
+$O_J(X^{-2}\log^3X+X^{-3}\log^2X)$ plus retained exponential terms,
+with a sufficiently accurate finite source; $I$ shrinks with $X$.\\
+$t\in[95,97]$, every real $x$, $|y|\le4$ &
+Clipped positive cubic source, exact heat and absolute jets through three &
+Proposition~\ref{prop:fi-source}: at most $29\varepsilon/64$ before
+field evaluation/filtering. Explicit finite cost; no affordable complete
+observable certificate.\\
+$t\in[95,97]$, full complex strips, explicit very large height &
+Complete-source $H-P$ and holomorphic jets through three &
+Theorem~\ref{thm:effective-outer}: $12000A/x^2$ for $|y|\le5$,
+$x\ge2^{2048}$; explicit Cauchy constants on $|y|\le9/2$,
+$x\ge2^{2049}$. Collar/weighted-observable constants remain separate.\\
+Existing Notes 28/38 crossover & Exact center versus rounding interpretation &
+Section~\ref{sec:crossover-outlook}; normalized allowance does not pay global
+absolute accuracy. Correlation/response specification and intrinsic
+criticality remain open.\\\bottomrule
 \end{longtable}\endgroup
 
 Here $e_*=t^{3/2}/N_*^2$, $\mathfrak e_{\rm ev}=e_*\mathcal L^2$,
@@ -86,14 +124,47 @@ model's observable equations include the additional residual corrections.
 Current research statuses are maintained in the
 \repo{research-progress/01_AVERAGED_DENSITY_RESEARCH_PROGRESS_20261024.md}{live progress register}.
 
-Same-time static and differentiated spatial overlap are distinct from
-joining through finite heat times. A smooth regulator defined for all $t$ does not by itself give an
-all-time approximation. Informative finite-core accuracy, compatible traces and joining estimates
-remain to be proved. The failed 192-cell trial remains failed, and
-HDA-17 acceptance, HDA-18 assembly and HDA-20 independent specialist
-review do not follow from this production task. A future splice must pay
-its actual cutoff, time-derivative and heat-residual terms, physical
-potential traces, adaptive curvature and forcing, and actual covariance;
-no blend is constructed here. There is no autonomous covariance closure,
-certified numerical onset, RH conclusion or earlier-time simplicity
-conclusion.
+The governing objective remains one analytic approximation for every
+$t\in\R$ and $x\in\R$ on a declared transverse strip, with explicit,
+useful errors for the unnormalized density and its required evolution
+observables. A finite special-function representation, specified saddle
+branch and explicit smooth joins are allowed; a sampled lookup table,
+unspecified covariance or finite window alone does not meet that goal.
+The construction must have a finite evaluation prescription at each
+point, quantitative full-height bounds throughout time, and controlled
+limits as $|x|\to\infty$ and $t\to\pm\infty$. Smooth cutoffs need
+not be real analytic, and the joined approximation need not be holomorphic;
+``analytic form'' here requires a mathematical representation with proved
+errors, not a new global analyticity premise. The regulator-to-zero-count
+error is additional when that interpretation is claimed.
+
+The next dependencies are concrete:
+\begin{enumerate}
+\item Complete HDA-18-AN04: make the remaining collar/unit, signed-pole,
+weighted exterior and heat-partition constants finite on the same regime,
+and decide one complete source-plus-observable budget. A failed row is
+an informative return; optimizing $2^{2050}$ alone is not the target.
+\item HDA-22: extend the spatial assembly to a fixed positive time width,
+initially $[95,97]$, by moving gaps or compatible overlaps. Pay
+$\lambda_t(P-G)$, mixed compatibility derivatives, overlap/cutoff
+terms and the actual covariance. Do not infer fixed-width coverage from
+a family whose $\tau$ tends to zero.
+\item HDA-23: improve finite-core conditioning by local field/collar
+transfer, with all multiple events and full supports treated at their
+actual scope. Quantify a better sufficient source tolerance and cost
+for the same complete tuple; numerical mesh refinement is not the proof.
+\item HDA-24 and parent HDA-18: obtain a switch-uniform spatial/time
+assembly across $64$, then connect a finite central time interval to
+the all-height negative and positive endpoint theorems. Pay both time
+overlaps and source-derived traces; list domains whose union is exactly
+$\R_t\times\R_x$ on the declared strip and give its analytic error
+envelope. The compact outer theorem through $64$ is an input, not this
+completed assembly.
+\item HDA-20: a distinct reviewer should audit the assembled source,
+collar, covariance and joining chain with recorded shared premises.
+The HDA-21 correlation specification remains a supporting direction.
+\end{enumerate}
+
+These tasks remain open: HDA-17 is Partial, HDA-18 Gated and HDA-20
+unfulfilled. No all-time theorem, RH or earlier-time simplicity conclusion
+is asserted by this consolidation.

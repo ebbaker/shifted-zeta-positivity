@@ -60,3 +60,58 @@ notation, and consolidates finite inner inputs and model navigation.
 [production assessment](reviews/16_REVIEW15_REVISION_PRODUCTION_ASSESSMENT_20261024.md).
 Prepared for Edward Baker with substantial LLM assistance, gpt-6.1-sol,
 actual effort ultra; earlier HDA-10-MI1 r1 remains historical.
+
+
+2026-10-24 — **Compact weak transfer and local time join, HDA-17/18.**
+[Note 34](notes/34_COMPACT_WEAK_TRANSFER_AND_TIME_JOIN_20261024.md), working
+tree, no commit/tag or manuscript snapshot. Reduces source-error inputs to
+orders 0/2 for the full fixed-filter norm and pays the local time-cutoff
+residual; spatial assembly and informative cost remain open.
+[Review 17](reviews/17_COMPACT_WEAK_TRANSFER_AND_TIME_JOIN_SELF_REVIEW_20261024.md);
+[Sol request](research-progress/handoffs/HDA-17-AN01.md). Prepared for Edward
+Baker with LLM assistance, gpt-6-astra, actual effort xhigh.
+
+
+24 October 2026 — **HDA-17-AN01 bounded method decision, no manuscript version.**
+[Note 35](notes/35_WEAK_TRANSFER_BUDGET_DECISION_20261024.md), working tree,
+no commit/tag/snapshot: implements weak A/B/C maps and exact selected
+controls, retains failed source/filter budgets, and chooses local/default
+with individual weak gains. HDA-17 Partial/HDA-18 Gated.
+[Review 18](reviews/18_WEAK_TRANSFER_BUDGET_ASSESSMENT_20261024.md),
+[index record](numerics/WEAK_TRANSFER_DIAGNOSTIC_20261024.json).
+Prepared for Edward Baker with LLM assistance, gpt-6.1-sol, ultra, chat 0011.
+
+
+24 October 2026 — **AN02 source/filter milestone, no manuscript version.**
+[Note 36](notes/36_SOURCE_CURVATURE_AND_PEAK_INTEGRATION_20261024.md), working
+tree, no commit/tag/snapshot: continuous source-cap/chord and signed-source
+bounds, 24.37-fold source allowance gain, composite peak integration;
+source/covariance and arithmetic/continuous gates remain.
+[Review 19](reviews/19_SOURCE_CURVATURE_AND_PEAK_ASSESSMENT_20261024.md),
+[record](numerics/SOURCE_PEAK_DIAGNOSTIC_20261024.json). Prepared for Edward
+Baker with LLM assistance, gpt-6.1-sol, ultra, chat 0011.
+
+
+24 October 2026 — **AN03 positive-Hermite source, no manuscript version.**
+[Note 37](notes/37_POSITIVE_HERMITE_SOURCE_AND_REMAINDERS_20261024.md), working
+tree, no commit/tag/snapshot: explicit positive source/remainder bounds,
+1963-fold same-mesh interpolation gain with slope storage, r1 failure
+retained, r2 sampled source allowances fit (worst ratio 0.688748).
+Arithmetic/continuous integration remain unpaid.
+[Review 20](reviews/20_POSITIVE_HERMITE_SOURCE_ASSESSMENT_20261024.md),
+[r1](numerics/POSITIVE_HERMITE_DIAGNOSTIC_20261024.json),
+[r2](numerics/HERMITE_DIRECTIONAL_CAPS_20261024.json). Prepared for Edward
+Baker with LLM assistance, gpt-6.1-sol, ultra, chat 0011.
+
+
+24 October 2026 — **HDA-10-MI2 r1, Note 39 analytical integration.** Maintained working-tree [source](manuscript/main.tex) and [build record](manuscript/BUILD_RECORD_20261024.json), no commit/tag or snapshot: checked 78-page revision adds Notes 34–37 transfer/time-join/source/Hermite proofs and scoped Note 38 interpretation. [Note 41](notes/41_NOTE39_MANUSCRIPT_IMPLEMENTATION_20261024.md), [Review 22](reviews/22_NOTE39_ANALYTICAL_INTEGRATION_PRODUCTION_ASSESSMENT_20261024.md). Production only; no numerical execution or core/global acceptance. Prepared for Edward Baker with LLM assistance, gpt-6.1-sol, actual effort xhigh, chat 0013.
+
+2026-10-25 — **Heat-density Notes 42–45 consolidation and global contract.**
+[Maintained source](manuscript/main.tex), [source/export hashes](manuscript/BUILD_RECORD_20261025.json);
+working tree, no commit or snapshot. The 92-page revision integrates the
+fixed-gap full-support theorem, clipped-source construction and effective
+complex-buffer field proof; the existing program now tracks fixed-width,
+conditioning and switch tasks toward all-height/all-time analytic coverage.
+[Note 46](notes/46_NOTES42_45_MANUSCRIPT_CONSOLIDATION_20261025.md),
+[Review 28](reviews/28_NOTES42_45_CONSOLIDATION_PRODUCTION_ASSESSMENT_20261025.md).
+For Edward Baker with LLM assistance, gpt-6-astra, actual effort max.

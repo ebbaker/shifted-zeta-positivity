@@ -1,0 +1,450 @@
+\section{Spatial joining in a model gap}\label{sec:spatial-join}
+The construction in Notes~42--43 \cite{n42,n43} pays the spatial defect
+\eqref{eq:cj-spatial-defect} by placing it in a zero-free gap of the
+explicit outer model. The result covers every real observation height
+on one fixed short time slab. Its source is finite but need not be
+affordable, and the slab width is not uniform as the joining height grows.
+The physical $H,q,K,U,Q$ remain those of Section~\ref{sec:protocol}.
+
+\subsection{Geometry and the two field defects}
+Fix $J\Subset(64,\infty)$, $t_0\in\operatorname{int}J$ and
+$Y_b=Y+h+2$. Let $P$ be the full saddle and choose a model gap
+$\Theta_*(t_0,X)=n\pi$. Write $L=\log(2+X)$ and $\sigma=c/L$.
+On both closed enlarged bands $||x|-X|\le2\sigma$, $|y|\le Y_b$,
+and an open analytic enlargement, require
+\begin{equation}
+ |P|\ge c_0 A,\qquad |\partial_z^jP|\le C_jL^j A\quad(0\le j\le3),
+ \qquad A=|S_t((1+iz)/2)|+|S_t((1-iz)/2)|.
+ \label{eq:sj-gap}
+\end{equation}
+These bands must stay a fixed scaled distance from all enlarged model
+root collars. A root-speed cap $V$ on $J$ preserves that margin on
+\begin{equation}
+ I=[t_0-\tau,t_0+\tau]\subset J,\qquad
+ 0<\tau\le \frac{c_{\rm gap}}{(V+1)L}.
+ \label{eq:sj-time}
+\end{equation}
+The eventual gap and speed estimates follow from the full-saddle phase
+and collars; finite values remain inputs until instantiated.
+
+Choose one fixed nonnegative finite source with entire exact-heat field
+$G$. On the band neighborhoods assume, for $0\le j\le3$,
+\begin{align}
+ |\partial_z^j(G-P)|&\le\mu L^j A,&
+ |\partial_z^j(H-P)|&\le\mu L^j A,\notag\\
+ |E_P|&\le dA,&|(E_P)_z|&\le C_d dLA,
+ \qquad E_P=P_t+P_{zz}.
+ \label{eq:sj-input}
+\end{align}
+Each field is within
+$\mu A$ of $P$; assume $\mu\le c_0/2$. All source bounds also hold on
+$I\times\{|x|\le X+\ell+2\sigma+2,\ |y|\le Y_b\}$, enlarged for
+every collar disk meeting a convolution support.
+
+Let $\lambda(x)$ be even, smooth and time independent, zero on the inner
+side and one on the outer side, flat near the band endpoints. Record
+$l_j=\|\lambda^{(j)}\|_\infty$, $j=1,2,3$. Define $D_0=P-G$ only
+where $P$ is established, and set $F=G$ inside, $F=G+\lambda D_0$
+on the bands, and $F=P$ outside. Thus $P$ is never evaluated in an
+unproved central region. On the actual transition set $\Sigma$,
+\begin{align}
+ B:=F_{\bar z}&=\tfrac12\lambda'D_0,&
+ B_z&=\tfrac14\lambda''D_0+\tfrac12\lambda'(D_0)_z,\notag\\
+ B_{\bar z}&=\tfrac14\lambda''D_0,&
+ B_{zz}&=\tfrac18\lambda'''D_0+\tfrac12\lambda''(D_0)_z
+                         +\tfrac12\lambda'(D_0)_{zz},\notag\\
+ E:=F_t+F_{zz}&=\lambda E_P+\lambda'(D_0)_z
+                                     +\tfrac14\lambda''D_0.
+ \label{eq:sj-defects}
+\end{align}
+Outside $\Sigma$, $B=0$ and $E$ equals $0$ or $E_P$. On the enlarged
+gap the segment from $F$ to $H$ stays within $\mu A$ of $P$, so
+$|F|,|H|$ and every intermediate modulus are at least $c_*A$,
+where $c_*=c_0/2$. This field floor replaces an inverse regulator floor
+only on the gap.
+
+\subsection{Exact nonholomorphic equations}
+For any sufficiently smooth $F$, put $a=F_z$, $c=F_{zz}$,
+$D=|F|^2+q$, $S=\log D$, $w=q/D$, $r=\log q$, and
+\[
+ \rho=\frac{q|a|^2}{\pi D^2},\quad
+ j=\frac{qc\overline a}{\pi D^2},\quad
+ V_m=w^m\frac{c\overline F}{D},\quad
+ Z_m=w^m\frac{E\overline F}{D}.
+\]
+Retain the regulator curvature $C_{\rm reg}$ of
+Section~\ref{sec:variable}, and define
+\begin{align}
+ T_C&=\frac{q|B|^2}{\pi D^2}
+   +\frac2\pi\Re\left(\frac{B_z\overline F}{D}
+                  -\frac{aB\overline F^2}{D^2}\right),
+ &C_{\rm tot}&=C_{\rm reg}+T_C,\notag\\
+ \Xi&=8\Re\frac{a\overline B}{D}
+       +4\Re\frac{F\overline{B_{\bar z}}}{D},&
+ T_J&=-\frac{B_{zz}\overline F}{D}
+                  +\frac{cB\overline F^2}{D^2}.
+ \label{eq:sj-corrections}
+\end{align}
+\begin{proposition}[Exact spatial-compatibility terms]\label{prop:sj-identities}
+With $q=q(t,x)>0$ and $\sqd=\partial_x^2-\partial_y^2$,
+\begin{align}
+ \Delta S&=4\pi(\rho+C_{\rm tot}),\notag\\
+ \pi j&=\partial_{\bar z}V_0+(\partial_{\bar z}r)V_1+T_J,\notag\\
+ S_x^2-S_y^2&=4\Re V_0-\sqd S+(r_{xx}+r_x^2)w+\Xi,\notag\\
+ S_t&=-2\Re V_0+r_tw+2\Re Z_0.
+ \label{eq:sj-primitives}
+\end{align}
+Writing $b=r_t+(r_{xx}+r_x^2)/2$, $\mathcal B=bw$,
+$T_U=\Xi/2+2\Re Z_0$ and
+$\mathcal S=(1-2w)(r_t\rho+\nabla r\cdot(\Re j,\Im j))$, the actual
+$U=K*S$, $R=K*\rho$, $J=K*j$ and
+$Q=K*(S_x^2-S_y^2)-(U_x^2-U_y^2)$ satisfy
+\begin{align}
+ U_t&=-\tfrac12(\sqd U+U_x^2-U_y^2+Q)+K*\mathcal B+K*T_U,\notag\\
+ \Delta U&=4\pi(R+K*C_{\rm tot}),\notag\\
+ R_t&=-\tfrac12\sqd R-\tfrac1{8\pi}\Delta(U_x^2-U_y^2+Q)
+       +\tfrac1{4\pi}\Delta(K*\mathcal B)\notag\\
+ &\hspace{1em}-K*(C_{\rm tot})_t-\tfrac12\sqd(K*C_{\rm tot})
+                     +\tfrac1{4\pi}\Delta(K*T_U),\notag\\
+ R_t+\operatorname{div}J&=K*\mathcal S+K*(D_E+D_B),
+ \label{eq:sj-equations}\\
+ D_E&=\frac{2q\Re(E_z\overline a)}{\pi D^2}-4\rho\Re Z_0,\notag\\
+ D_B&=\frac{2q\Re(c\overline{B_z})}{\pi D^2}
+             -\frac{4q\Re(F\overline Bc\overline a)}{\pi D^3}.
+ \label{eq:sj-current-defects}
+\end{align}
+\end{proposition}
+\begin{proof}
+Use $D_z=a\overline F+F\overline B+q_z$ and
+$D_{z\bar z}=|a|^2+|B|^2+2\Re(B_z\overline F)+q_{z\bar z}$
+for the first identity. Direct differentiation of $V_0$ proves the
+current identity. The signed-stress identity follows from
+\[
+ \sqd D=4\Re(c\overline F)+8\Re(a\overline B)
+              +4\Re(F\overline{B_{\bar z}})+q_{xx}.
+\]
+The time identity uses $F_t=-c+E$. Convolve these identities, then take
+the potential equation's Laplacian to obtain both curvature derivatives
+in the density equation. For the current balance use
+$\operatorname{div}j=2\Re(\partial_zj)$ and $a_t=-c_z+E_z$.
+The $c_z$ and $a\overline F$ terms cancel; the remaining compatibility
+terms are exactly $D_B$. No holomorphic premise is imposed on $F$.
+\end{proof}
+This $\rho$ is an approximation observable, without an asserted
+zero-count interpretation for the nonholomorphic field.
+
+\subsection{Local positive envelopes}
+On the gap define
+\[
+ A_1=|a|/|F|,\quad A_2=|c|/|F|,\quad
+ (b_0,b_1,b_b,b_2)=\frac{(|B|,|B_z|,|B_{\bar z}|,|B_{zz}|)}{|F|},
+\]
+and $e_j=|\partial_z^j E|/|F|$, $j=0,1$,
+$\gamma=q/|F|^2$, $\vartheta=\gamma/(1+\gamma)^2\le1/4$.
+The following envelopes follow term by term from the exact identities:
+\begin{align}
+ \pi|T_C|&\le\vartheta b_0^2+2b_1+2A_1b_0,&
+ |\Xi|&\le8A_1b_0+4b_b,\notag\\
+ |T_J|&\le b_2+A_2b_0,&|T_U|&\le4A_1b_0+2b_b+2e_0,\notag\\
+ \pi|D_B|&\le2\vartheta A_2b_1+\frac{4\vartheta A_2A_1b_0}{1+\gamma},\notag\\
+ \pi|D_E|&\le2\vartheta e_1A_1+\frac{4\vartheta A_1^2e_0}{1+\gamma}.
+ \label{eq:sj-envelopes}
+\end{align}
+For the time curvature put $v=|F_t|/|F|$,
+$a_t^*=|a_t|/|F|$, $b_t^*=|B_t|/|F|$,
+$h_t^*=|(B_z)_t|/|F|$ and $k=2v+|r_t|w$. Differentiating $T_C$
+before taking magnitudes gives
+\begin{align}
+ \pi|(T_C)_t|\le{}&\vartheta\{(|r_t|+2k)b_0^2+2b_0b_t^*\}\notag\\
+ &+2\{h_t^*+(v+k)b_1+a_t^*b_0+A_1b_t^*
+                                  +2(v+k)A_1b_0\}.
+ \label{eq:sj-time-curvature}
+\end{align}
+For every supported defect $T$ with displayed envelope $\mathcal E_T$,
+\begin{equation}
+ |\partial^\alpha K*T(p)|\le
+       \int_\Sigma |K_\alpha(p-u)|\mathcal E_T(u)\,du.
+ \label{eq:sj-filter}
+\end{equation}
+The area of $\Sigma\cap(p-\supp K)$ is at most $8h\sigma$,
+including both bands. Replace $K_\alpha$ by $\Delta K_\alpha$ or
+$\sqd K_\alpha$ as required; through observable order two, kernel
+derivatives through four suffice.
+
+\subsection{Full-support primitive comparison}
+For $\Omega_p=p-\supp K$ split ordinary positive integrals into
+$C_p$ with $|u_x|<X-2\sigma$, $T_p$ with $||u_x|-X|\le2\sigma$,
+and $O_p$ with $|u_x|>X+2\sigma$. The transition portion has area at
+most $16h\sigma$. Include every enlarged exterior collar meeting $O_p$
+and its larger analytic disk, even when only part of it meets the support.
+These collars are disjoint from the enlarged gap and have $F=P$.
+For a nonnegative weight $a(u)$ write
+\begin{align}
+ \mathfrak s[a]&=\int_{\Omega_p}a|S_F-S_H|,&
+ \mathfrak w[a]&=\int_{\Omega_p}a|w_F-w_H|,\notag\\
+ \mathfrak v_m[a]&=\int_{\Omega_p}a|V_{m,F}-V_{m,H}|,&
+ \mathfrak z_m[a]&=\int_{\Omega_p}a|Z_{m,F}|.
+ \label{eq:sj-ledger-def}
+\end{align}
+Here $m=0,1,2$, $\mathfrak s=\mathfrak s[1]$, and $Z_{m,H}=0$.
+Each primitive is bounded by the sum of the following three allowances.
+
+\paragraph{Core.}
+Freeze the compact coefficients $a_C,b_C,k_C,P_2$ using fixed caps on
+the source errors $d_0,d_2$. The pointwise bounds are
+\begin{align}
+ s_C&=2a_Cd_0,&w_C&=k_Cd_0,\notag\\
+ v_{m,C}&=a_Cd_2+(P_2b_C+mP_2a_Ck_C)d_0,&z_{m,C}&=0.
+ \label{eq:sj-core}
+\end{align}
+One source-independent choice is $a_C=(2e_C)^{-1}$,
+$b_C=e_C^{-2}$, $k_C=e_C^{-1}$, with $e_C=\min\sqrt q>0$ on the
+compact source rectangle and a source-moment cap for $P_2$. Integrate
+these bounds times $a$ over $C_p$; its area is at most $4\ell h$.
+
+\paragraph{Gap.}
+Put $\varepsilon_q=q/A^2$, $W_* =\min(1,\varepsilon_q/c_*^2)$,
+$\delta_j=|\partial_z^j(F-H)|/A$ and
+$C_2^*=\max(|F_{zz}|,|H_{zz}|)/A$. Along the segment floor,
+\begin{align}
+ s_T&=2\delta_0/c_*,&w_T&=\min(1,2\varepsilon_q\delta_0/c_*^3),\notag\\
+ v_{0,T}&=\delta_2/c_*+C_2^*\delta_0/c_*^2,\notag\\
+ v_{m,T}&=W_*^m v_{0,T}+mW_*^{m-1}w_T C_2^*/c_*,&
+ z_{m,T}&=W_*^m(|E|/A)/c_*.
+ \label{eq:sj-gap-ledger}
+\end{align}
+The $v_m$ formula uses $m=1,2$; the $z_m$ formula also holds for $m=0$.
+Here $\delta_0\le2\mu$ and
+$\delta_2\le2\mu L^2+l_1\mu L+l_2\mu/4$. These follow by
+differentiating the actual cutoff field, not an error bound.
+Integrate with the actual weights; retain the powers of $\varepsilon_q$
+before multiplying regulator coefficients.
+
+\paragraph{Exterior.}
+On each enlarged local exterior chart use its actual height $u$, root
+frequency $\omega$, relative field error $e$ and residual $d$.
+The collar/unit and signed-pole estimates of
+Section~\ref{sec:positive-evolution} give finite constants with
+\begin{align}
+ \mathfrak s_O[1]&\le C_Se,\notag\\
+ \mathfrak v_{m,O}[1]&\le C_pe(1+|\log e|)+C_ve\omega+C_ge\omega^2,\notag\\
+ \mathfrak z_{0,O}[1]&\le C_Zd.
+ \label{eq:sj-exterior}
+\end{align}
+For a restricted positive integral, enlarge every intersecting collar
+to its full disk and bound the complement with the carrier-sum floor.
+Thus a whole-support signed theorem is never applied to a truncated test.
+For weighted rows retain the individual regulator bounds. If
+$0<\Lambda\le1/2$ is the local carrier-relative regulator cap, set
+\[
+ B_\Lambda=\Lambda^2\left(1+\frac{1+|\log\Lambda|}{\omega}\right),
+ \quad H_\Lambda=\omega^2B_\Lambda+\Lambda,
+ \quad Z_\Lambda=B_\Lambda+\Lambda/\omega.
+\]
+With $a_O^*$ the supremum on the enlarged support,
+\begin{equation}
+ \mathfrak w_O[a]\le2C_wa_O^*B_\Lambda,\qquad
+ \mathfrak v_{m,O}[a]\le2C_ha_O^*H_\Lambda,\qquad
+ \mathfrak z_{m,O}[a]\le C_zd a_O^*Z_\Lambda\quad(m=1,2).
+ \label{eq:sj-weighted}
+\end{equation}
+The constants include collar count/enlargement and are still finite
+inputs, not numerical values supplied by the field estimate below.
+Uniformity uses these local charts for all $u\ge X-O(1)$.
+
+\subsection{Complete tuple and actual covariance}
+Set $R_1=|\nabla r|$, $R_2=|\Delta r|$, $T_1=|\nabla r_t|$,
+$T_2=|\Delta r_t|$, $T_h=2|\nabla r||\nabla r_t|$,
+$c_r=|r_{xx}+r_x^2|$ and $b_r=|b|$. Direct time identities yield
+\begin{align}
+ \mathfrak s_t[a]&=2\mathfrak v_0[a]+\mathfrak w[a|r_t|]+2\mathfrak z_0[a],\notag\\
+ \mathfrak w_t[a]&=\mathfrak w[a|r_t|]+2\mathfrak v_1[a]+2\mathfrak z_1[a],\notag\\
+ \mathfrak c_t[a]&=\mathfrak w[a|r_t|]+2\mathfrak v_1[a]+4\mathfrak v_2[a]
+                                +2\mathfrak z_1[a]+4\mathfrak z_2[a].
+ \label{eq:sj-time-ledger}
+\end{align}
+They bound weighted errors in $S_t,w_t,[w(1-w)]_t$ respectively;
+the polynomial $w(1-w)(1-2w)$ is $1$-Lipschitz on $[0,1]$.
+Define $k_\alpha=\|K_\alpha\|_\infty$,
+$n_\alpha=k_{\alpha+x}+k_{\alpha+y}$ and
+$d_\alpha=k_{\alpha+xx}+k_{\alpha+yy}$. Put
+\begin{align}
+ C_\alpha&=\frac{2n_\alpha\mathfrak w[R_1]
+             +k_\alpha(\mathfrak w[R_2]+\mathfrak w[R_1^2])}{4\pi},\notag\\
+ C^t_\alpha&=\frac1{4\pi}\bigl\{2n_\alpha(\mathfrak w_t[R_1]
+                    +\mathfrak w[T_1])\notag\\
+ &\hspace{5em}+k_\alpha(\mathfrak w_t[R_2]+\mathfrak w[T_2]
+                    +\mathfrak c_t[R_1^2]+\mathfrak w[T_h])\bigr\}.
+ \label{eq:sj-curvature-ledger}
+\end{align}
+Let $tC_\alpha,tC^t_\alpha,tJ_\alpha,\xi_\alpha$ be $k_\alpha$
+times the integrals on $\Sigma$ of the envelopes for
+$|T_C|,|(T_C)_t|,|T_J|,|\Xi|$ in
+\eqref{eq:sj-envelopes}--\eqref{eq:sj-time-curvature}.
+
+\begin{theorem}[Fixed-gap full-support transfer]\label{thm:sj-transfer}
+Under the stated gap, collar, source and full-buffer hypotheses, the
+following are upper bounds for the absolute $F-H$ comparison of every
+listed filtered derivative, at every $t\in I$, $x\in\R$, $|y|\le Y$:
+\begin{align}
+ \mathcal E_{U,\alpha}&=k_\alpha\mathfrak s,&
+ \mathcal E_{W,\alpha}&=k_\alpha\mathfrak w[1],\notag\\
+ \mathcal E_{C,\alpha}&=C_\alpha+tC_\alpha,&
+ \mathcal E_{R,\alpha}&=d_\alpha\mathfrak s/(4\pi)+\mathcal E_{C,\alpha},\notag\\
+ \mathcal E_{J,\alpha}&=\frac{n_\alpha\mathfrak v_0[1]
+                   +k_\alpha\mathfrak v_1[R_1]}{2\pi}+tJ_\alpha/\pi,\notag\\
+ \mathcal E_{U_t,\alpha}&=k_\alpha\mathfrak s_t[1],&
+ \mathcal E_{W_t,\alpha}&=k_\alpha\mathfrak w_t[1],\notag\\
+ \mathcal E_{C_t,\alpha}&=C^t_\alpha+tC^t_\alpha,&
+ \mathcal E_{R_t,\alpha}&=d_\alpha\mathfrak s_t[1]/(4\pi)
+                                        +\mathcal E_{C_t,\alpha},\notag\\
+ \mathcal E_{\mathcal B,\alpha}&=k_\alpha\mathfrak w[b_r].
+ \label{eq:sj-tuple}
+\end{align}
+Here $C$ denotes filtered total curvature. The $U,W$ rows hold through
+spatial order four; the $J$ row holds through three internally; the
+other rows hold through two. For finite common bounds
+$M_\gamma\ge\max(|\partial^\gamma U_F|,|\partial^\gamma U_H|)$,
+$1\le|\gamma|\le3$, put $e_\gamma=k_\gamma\mathfrak s$ and
+\begin{align}
+ N_\alpha&=\sum_{i=x,y}\sum_{\beta\le\alpha}\binom\alpha\beta
+   \{e_{\beta+i}M_{\alpha-\beta+i}+M_{\beta+i}e_{\alpha-\beta+i}\},\notag\\
+ \mathcal E_{Q,\alpha}&=4k_\alpha\mathfrak v_0[1]+d_\alpha\mathfrak s
+                    +k_\alpha\mathfrak w[c_r]+\xi_\alpha+N_\alpha.
+ \label{eq:sj-covariance}
+\end{align}
+This compares the actual covariance through order two.
+\end{theorem}
+\begin{proof}
+Sum the positive primitive integrals first. Apply the smooth global
+identities \eqref{eq:sj-primitives} against the complete kernel only
+afterward. There is no integration by parts on $C_p,T_p,O_p$, hence
+no derivative of their indicators. The regulator pairing is
+\[
+ \langle C_{\rm reg},\psi\rangle
+ =\frac{-2\int w\nabla r\cdot\nabla\psi
+            -\int\{w\Delta r+w(1-w)|\nabla r|^2\}\psi}{4\pi}.
+\]
+Its direct time derivative gives $T_1,T_2,T_h$ and the second row of
+\eqref{eq:sj-curvature-ledger}. The curvature, current and direct time
+identities now give \eqref{eq:sj-tuple}. For $Q$, integrate the signed
+stress identity globally and only then subtract the two actual
+mean-gradient products. Leibniz' rule gives $N_\alpha$.
+No average of component covariances or separate positive singular
+square bound is substituted. All derivatives fall on $K$ through order
+four. No small-residual propagation or differentiated big-$O$ is used.
+\end{proof}
+To preserve decrease with $X$, take a fixed central cap for the exact
+$H$ and the exterior simple-pole/unit bound
+$|\partial^\gamma U_H|\le C_H\log(2+|x|)$ elsewhere. On core/seam
+supports, first require the fixed gap/exterior debit in $e_\gamma$ to
+be less than one, then refine the source until the total is at most one.
+The common choice $M_\gamma=C_H(1+L)+1$ follows. A crude expanding
+rectangle $O(X^2)$ cap cannot replace this step in the decreasing-rate claim.
+
+\subsection{Signed source, exterior partition and finite gates}
+The one required smooth test partition is an even, time-independent
+$\eta_O$, zero for $|x|\le X+\sigma$ and one for $|x|\ge X+2\sigma$.
+It is supported where $F=P$. Record $c_j=\|\eta_O^{(j)}\|_\infty$,
+$j=1,2$, and $c_0=1$ in the following product bound only. Pair the
+holomorphic exterior residual formula with $\eta_OK_\alpha(p-\cdot)$.
+Its additional commutators are exactly
+\begin{equation}
+ \frac1{4\pi}\left\{2\Re\int Z_{0,P}
+           (-2\eta_O'K_{\alpha+x}+\eta_O''K_\alpha)
+       -4\Re\int Z_{1,P}r_x\eta_O'K_\alpha\right\}.
+ \label{eq:sj-partition}
+\end{equation}
+The sign uses $\partial_{u_x}K_\alpha(p-u)=-K_{\alpha+x}(p-u)$.
+If $\mathcal N_2$ is the sum of sup norms through order two, a finite
+allowance is
+\begin{align}
+ D_{{\rm out},\alpha}&\le C_{DE}d\,\mathcal N_2(\eta_OK_\alpha),\notag\\
+ \|\partial^\beta(\eta_OK_\alpha)\|_\infty
+ &\le\sum_{j=0}^{\beta_x}\binom{\beta_x}{j}c_j
+                                     k_{\alpha+\beta-je_x}.
+ \label{eq:sj-exterior-residual}
+\end{align}
+This is a weak signed allowance of order $dL^2$, not an absolute
+$L^1$ estimate for $D_{E_P}$. Pay $(1-\eta_O)D_E$ pointwise on the
+enlarged gap $\Sigma^+$ and $D_B$ on $\Sigma$ using
+\eqref{eq:sj-envelopes}, with allowances $D_{{\rm gap},\alpha}$ and
+$D_{B,\alpha}$. Subtracting the exact current balances then gives
+\begin{equation}
+ \mathcal E_{\mathcal S,\alpha}
+ =\mathcal E_{R_t,\alpha}+\mathcal E_{J,\alpha+x}
+   +\mathcal E_{J,\alpha+y}+D_{{\rm out},\alpha}
+                         +D_{{\rm gap},\alpha}+D_{B,\alpha}.
+ \label{eq:sj-source}
+\end{equation}
+The source is still the directly defined $\mathcal S$, not a quantity
+defined by this balance. Separate $E_{\rm comp}=\lambda E_P$ and
+$E_{\rm join}=\lambda'(D_0)_z+\lambda''D_0/4$ on the band. Their
+$z$ derivatives are respectively
+$\lambda(E_P)_z+\lambda'E_P/2$ and
+$\lambda'(D_0)_{zz}+3\lambda''(D_0)_z/4+\lambda'''D_0/8$.
+Outside, retain the exterior $E_P$. The potential defect is paid by
+$\xi_\alpha/2+2k_\alpha\mathfrak z_0[1]$; both curvature rows,
+$\Delta Q$, forcing, and fixed boundary/endpoint traces are consumers
+of the same tuple. No moving-boundary term is asserted here.
+
+For finite acceptance, split $\mu=\mu_o+\mu_s\le c_0/2$, where
+$\mu_o$ pays $H-P$. With $A_{\min}>0$ on the gap neighborhood, require
+\begin{equation}
+ d_j^{\rm gap}\le\mu_sL^j A_{\min}\quad(0\le j\le3).
+ \label{eq:sj-source-gap}
+\end{equation}
+Freeze the core and common covariance caps first. Substitution of
+\eqref{eq:sj-core} gives, in every row $r$, a finite positive expression
+$A_rd_0+B_rd_2$. For allocated core targets $\theta_{c,r}>0$, require
+\begin{equation}
+ d_0\le\min\left(\bar d_0,\min_{A_r>0}\frac{\theta_{c,r}}{2A_r}\right),
+ \qquad
+ d_2\le\min\left(\bar d_2,\min_{B_r>0}\frac{\theta_{c,r}}{2B_r}\right).
+ \label{eq:sj-source-core}
+\end{equation}
+Include the auxiliary covariance-cap rows. Each nonsource debit, its
+core allocation and any evaluation/filtering allocation must fit the
+declared total target. A nonpositive source reserve fails the gate;
+source refinement does not remove outer or partition error.
+
+\begin{corollary}[Decreasing allowance on a shrinking slab]\label{cor:sj-rate}
+On fixed $J\Subset(64,\infty)$ choose $\mu_o,\mu_s=O_J(X^{-2})$,
+$d=O_J(X^{-3})$, and refine one positive finite source until its full
+core contribution in every row is at most $X^{-2}$. Along model gaps,
+the complete comparison allowance is
+\begin{equation}
+ O_J(X^{-2}L^3+X^{-3}L^2)
+       +\text{retained polynomial--exponential terms tending to zero}.
+ \label{eq:sj-rate}
+\end{equation}
+This holds for all real observation heights on the short slab
+\eqref{eq:sj-time}.
+\end{corollary}
+\begin{proof}
+The actual derivative formulas give
+$A_1=O(L)$, $A_2=O(L^2)$,
+$b_j=O(\mu L^{j+1})$ for $j=0,1,2$,
+$b_b=O(\mu L^2)$, $e_0=O(d+\mu L^2)$ and
+$e_1=O(dL+\mu L^3)$. Use
+$(D_0)_t=-(D_0)_{zz}+E_P$ for mixed derivatives in
+\eqref{eq:sj-time-curvature}. Since $J$ is strictly after the switch,
+$\beta$ has a positive minimum and
+$\log A=-\pi X/8+O_J(\log^2X)$. Thus
+$\gamma\le C_Je^{-c_JX^2}$; its regulator-weighted products are
+retained and bounded. Multiplication by the band area gives costs
+$O(\mu L)$ for $T_C,\Xi$, $O(\mu L^2)$ for $T_J$,
+$O(\mu L^3)$ for $(T_C)_t$, and $O(d/L+\mu L)$ for $T_U$.
+The band current defects have exponentially small factors. The exterior
+primitive rows cost $O_J(eL^2+d)$ with $e=O_J(X^{-2})$; the heat
+partition adds $O(dL^2)$. The common $O(L)$ mean caps retain the stated
+rate for actual covariance. Positive finite-source approximation pays
+any strictly positive compact source demands. This proves existence
+of the finite source required by the estimate, without an affordability
+claim.
+\end{proof}
+The constants in the full exterior observable transfer remain to be
+made effective. More fundamentally, $I$ shrinks with $X$; this result
+does not cover a fixed positive time interval as $X\to\infty$, the
+switch at $64$, or either endpoint join. Those are distinct consumers
+in Section~\ref{sec:remaining}.

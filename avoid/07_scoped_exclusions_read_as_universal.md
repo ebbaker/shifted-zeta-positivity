@@ -93,3 +93,24 @@ that failure; the independent bounded-mass result is retained.
 **Scope the exterior-curvature omission control, 24 October 2026.**
 Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**.
 The polynomial array in [HDC main Section 9.4](../papers/investigations-4/12_height_dependent_heat_contours/manuscript/near_axis_cluster.tex) proves an order-one linear-carrier omission error when both cluster degree and exterior curvature can grow like log Y. It states: "Bounded degree, stronger local zero information, and other theta-specific approximations are outside this conclusion." This is a control for the declared coarse bounds, not a canonical theta counterexample or an exclusion of all linear-carrier approaches. [Internal same-model review](../papers/investigations-4/12_height_dependent_heat_contours/reviews/17_MAIN_NEAR_AXIS_INTEGRATION_REVIEW_20261024.md).
+
+
+**Scope the spatial-cutoff failure, 24 October 2026.** Prepared for Edward
+Baker with LLM assistance, **gpt-6-astra, xhigh**. [Heat-density Note 34](../papers/investigations-5/01_heat_density_asymptotics/notes/34_COMPACT_WEAK_TRANSFER_AND_TIME_JOIN_20261024.md),
+CJ28, identifies the nonzero bar derivative introduced by an uncorrected
+spatial field cutoff. It calls this “not an impossibility for corrected/nonholomorphic models or other joins.”
+Its paid compact time join does not remove that spatial obligation.
+[Same-assistant review](../papers/investigations-5/01_heat_density_asymptotics/reviews/17_COMPACT_WEAK_TRANSFER_AND_TIME_JOIN_SELF_REVIEW_20261024.md).
+
+
+Heat-density manuscript maintenance, 24 October 2026: [Review 22](../papers/investigations-5/01_heat_density_asymptotics/reviews/22_NOTE39_ANALYTICAL_INTEGRATION_PRODUCTION_ASSESSMENT_20261024.md) states: “The fixed-time off-axis obstruction is explicitly limited to the positive-terminal-value piecewise-linear class”. [Note 41](../papers/investigations-5/01_heat_density_asymptotics/notes/41_NOTE39_MANUSCRIPT_IMPLEMENTATION_20261024.md) preserves that distinction from the fixed-source infinite-time obstruction; positive cubic/tapered/corrected representations are not disposed of by the former theorem. Prepared for Edward Baker with LLM assistance, gpt-6.1-sol, actual effort xhigh.
+
+Heat-density scope maintenance, 25 October 2026: [Note 42](../papers/investigations-5/01_heat_density_asymptotics/notes/42_GAP_LOCALIZED_SPATIAL_DEFECTS_20261024.md)
+states: “A fixed-width time slab independent of X is not claimed”.
+The [Notes 42–45 consolidation](../papers/investigations-5/01_heat_density_asymptotics/notes/46_NOTES42_45_MANUSCRIPT_CONSOLIDATION_20261025.md)
+therefore separates all-height fixed-gap comparison, fixed-width time
+extension and all-time assembly. The coarse clipped-source cost is a
+sufficient upper bound, not a universal complexity obstruction. These
+limits motivate the next tasks without excluding alternative local
+comparisons or joins. For Edward Baker with LLM assistance,
+gpt-6-astra, actual effort max.
