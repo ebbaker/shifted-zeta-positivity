@@ -119,6 +119,182 @@ to the averages. Taking $|x|\to\infty$ in their discrepancy proves
 This does not exclude a different outer profile, a changing regulator,
 unbounded transverse scales, or nonlocal averages reaching the origin.
 
+
+\subsection{Quantitative tails before the spatial regulator switch}
+The fixed-regulator obstruction has the following quantitative companion
+for the complete source \cite{n25}. The field estimate is valid on any
+fixed compact time interval; transferring it to the regulated background
+uses a slab ending at $64$.
+
+\begin{lemma}[Complete-source contour jets]\label{lem:contour-jets}
+Fix a compact $I=[t_a,t_b]$, $Y\ge0$, and $0<a\le\pi/16$. Put
+\[
+ d=\cos(4a),\quad C_a=(1-16e^{-3\pi d})^{-1},\quad
+ s=\max(t_b,0),\quad D=s+Y+10,\quad V=1+\log(D/d).
+\]
+For each fixed integer $j\ge0$, define the finite constant
+\begin{align}
+ A_j={}&e^{-t_aa^2}(2\pi^2+3\pi)C_a\biggl[
+ e^{sV^2+(9+Y)V}\frac{(V+a)^{j+1}-a^{j+1}}{j+1}\notag\\
+ &\hspace{38mm}
+ +\frac12\sum_{k=0}^j\binom jk a^{j-k}
+                     \Gamma\left(\frac{k+1}{2}\right)\biggr].
+ \label{eq:contour-constant}
+\end{align}
+Then on the full height axis
+\begin{equation}
+ |\partial_z^jH(t,x+iy)|\le A_je^{-a|x|}
+ \qquad(t\in I,\ x\in\R,\ |y|\le Y).
+ \label{eq:contour-jets}
+\end{equation}
+Constants depend on the fixed compact slab; no uniformity as $t_b$ tends
+to infinity is asserted.
+\end{lemma}
+\begin{proof}
+The theta series converges normally for $|\Im u|<\pi/8$.
+Its even real reflection identity continues analytically throughout that
+strip. Termwise absolute values on $u=v\pm ia$, $v\ge0$, give the
+complete-mode estimate
+\begin{align}
+ |\Phi(v\pm ia)|
+ &\le\sum_{n\ge1}(2\pi^2n^4e^{9v}+3\pi n^2e^{5v})
+                              e^{-\pi d n^2e^{4v}}\notag\\
+ &\le(2\pi^2+3\pi)C_a e^{9v-\pi d e^{4v}}.
+ \label{eq:contour-source-envelope}
+\end{align}
+Here $d\ge1/\sqrt2$ and the successive positive-mode ratio is at most
+$16e^{-3\pi d}<1$. Analytic even reflection supplies the corresponding
+bound on the negative half-line. All theta modes remain in the bound.
+Write \eqref{eq:H} as one half of the full-line Fourier integral, and
+move the entire contour to $\R+ia$ for $x\ge0$, or $\R-ia$ for $x<0$.
+On both vertical ends at $\Re u=\pm M$, the integrand, also after
+multiplication by $(iu)^j$, is bounded by a fixed constant times a
+polynomial times
+\[
+ \exp\{sM^2+YM+|x|a-\pi d e^{4M}\},
+\]
+which tends to zero for each $x$. Thus neither a half-line endpoint nor
+an artificial cutoff boundary has been dropped.
+
+The shift contributes $e^{-a|x|}$, and the other differentiated factors
+on either half-line are at most
+$e^{-t_aa^2}(v+a)^je^{sv^2+Yv}$. The factor one half cancels the two
+half-line upper bounds. Split the remaining positive integral at $V$.
+On $[0,V]$ discard the negative exponential and integrate $(v+a)^j$.
+For $v\ge V$,
+\[
+ (s+1)v^2+(9+Y)v\le Dv^2\le\tfrac{\pi d}{2}e^{4v},
+\]
+since $e^{4v}/v^2$ increases there, $V\le D/d$, and the inequality
+holds at $V=1+\log(D/d)$. The residual exponential is at most $e^{-v^2}$.
+Expanding $(v+a)^j$ and extending this tail integral to zero gives
+\eqref{eq:contour-constant}. The same majorants justify every fixed jet
+and the directly used identity $H_t=-H_{zz}$; no asymptotic remainder is
+differentiated.
+\end{proof}
+
+\begin{theorem}[Pre-switch observable tails]\label{thm:preswitch-tail}
+Fix $I=[t_a,t_b]$ with finite $t_a\le t_b\le64$, fixed $\ell,h>0$
+and an observation strip $|y|\le Y_0$. Apply
+Lemma~\ref{lem:contour-jets} on the full transverse buffer
+$Y=Y_0+h$, all real $x$, and use its constants $A_j$.
+The exact global regulator is time-only here. Put
+\begin{align*}
+ e_*&=\frac{\eta\Phi(0)\sqrt\pi}
+ {2(1+\max(t_a^2,t_b^2))^{1/4}},&
+ b&=\sup_{t\in I}\frac{|t|}{1+t^2},\\
+ E(x)&=e^{-a\max(|x|-\ell,0)},&
+ G&=\frac{2A_0A_1}{e_*^2},\\
+ L_x&=\|K_x\|_1,\quad L_y=\|K_y\|_1,&
+ L_2&=\|\Delta K\|_1.
+\end{align*}
+The regulated measurement background is
+\begin{equation}
+ (R_0,J_0,U_0,W_0,Q_0)=(0,0,r(t),1,0).
+ \label{eq:preswitch-background}
+\end{equation}
+Uniformly for $t\in I$, all real $x$ and $|y|\le Y_0$,
+\begin{align}
+ |R|&\le\frac{A_1^2}{\pi e_*^2}E^2,&
+ |J|&\le\frac{A_1A_2}{\pi e_*^2}E^2,\notag\\
+ |U-r|&\le\frac{A_0^2}{e_*^2}E^2,&
+ |W-1|&\le\frac{A_0^2}{e_*^2}E^2,\notag\\
+ |U_i|&\le GE^2\quad(i=x,y),&
+ |U_t-r_t|&\le\frac{2A_0A_2+bA_0^2}{e_*^2}E^2.
+ \label{eq:preswitch-linear-budgets}\\
+ |K*\mathcal B_\epsilon-r_t|
+ &\le\frac{bA_0^2}{e_*^2}E^2,&
+ |K*\mathcal S_\epsilon|&\le\frac{bA_1^2}{\pi e_*^2}E^2,
+ \label{eq:preswitch-forcing}\\
+ |R_t|&\le\frac{2A_1A_3+bA_1^2}{\pi e_*^2}E^2
+          +\frac{4A_1^2A_0A_2}{\pi e_*^4}E^4,
+ \label{eq:preswitch-density-time}\\
+ |Q|&\le4G^2E^4,\qquad
+ |\Delta Q|\le[6L_2+4(L_x^2+L_y^2)]G^2E^4.
+ \label{eq:preswitch-covariance}
+\end{align}
+Spatial derivatives of the linear filtered quantities are bounded by
+convolving their corresponding pointwise allowances with
+$|\partial^\alpha K|$, through weak order four. All initial/final time
+traces and spatial normal traces inherit the full-buffer bounds.
+Spatial regulator curvature is identically zero; its time forcing and
+current source are retained.
+\end{theorem}
+\begin{proof}
+Every convolution point has
+$e^{-a|\Re z|}\le E(x)$ and lies in $|\Im z|\le Y$.
+Use $|H|^2+q\ge q$, $\log(1+|H|^2/q)\le|H|^2/q$ and
+$|S_i|\le2|H||H_z|/q$ to obtain the static bounds.
+The directly computed physical identities
+\[
+ S_t=-2\Re\frac{H_{zz}\overline H}{|H|^2+q}+r_tw,
+ \qquad
+ \rho_t=-\frac{2q\Re(H_{zzz}\overline{H_z})}{\pi(|H|^2+q)^2}
+  +r_t(1-2w)\rho+4\rho\Re\frac{H_{zz}\overline H}{|H|^2+q}
+\]
+prove \eqref{eq:preswitch-forcing}--\eqref{eq:preswitch-density-time};
+these are estimates on actual time derivatives.
+For covariance retain its actual definition: the two mean squares and
+two squared means have $|S_i|\le GE^2$.
+Move derivatives of the first squares to $K$. For $v_i=K*S_i$ use
+$\Delta(v_i^2)=2v_i\Delta v_i+2|\nabla v_i|^2$.
+The respective Laplacian coefficients are $2L_2$ and
+$4(L_2+L_x^2+L_y^2)$, giving
+\eqref{eq:preswitch-covariance}. The fixed kernel's integrable weak
+derivatives pay the remaining linear derivatives and traces. The
+background \eqref{eq:preswitch-background} itself satisfies the exact
+adaptive equations on this slab.
+\end{proof}
+
+For example a prescribed density tolerance $\delta>0$ is guaranteed on
+the whole remaining tail by the explicit threshold
+\begin{equation}
+ |x|\ge\ell+\frac1{2a}\max\left\{0,
+              \log\frac{A_1^2}{\pi e_*^2\delta}\right\}.
+ \label{eq:preswitch-tail-threshold}
+\end{equation}
+This is an absolute statement about regulated observables when the
+regulator dominates the complete field. It assigns no zero-counting
+measure to the identically zero reference field and excludes no high
+zeros. The canonical even reflection and complete coefficient envelope
+are the premises of this contour application; atoms and heat polynomials
+lack them, and changed-source controls do not inherit its constants.
+Smooth colliding sources with suitable strip bounds can have analogous
+tails. No joint large-time conclusion follows from constants on a fixed
+compact slab.
+
+For $t>64$, Section~\ref{sec:protocol} gives
+$\epsilon_g=E_0e^{-\beta x^2/2}$ with $\beta>0$.
+The smallest regulator on the horizontal buffer is
+$E_0e^{-\beta(|x|+\ell)^2/2}$. The same absolute-upper-bound/floor
+argument then pays a factor
+$\exp\{\beta(|x|+\ell)^2-2a(|x|-\ell)\}$, which diverges.
+This identifies failure of that payment, rather than divergence of the
+true density. Proposition~\ref{prop:cutoff-potential} gives a distinct
+failure of a finite-source representation for the potential.
+
+\subsection{A fixed-regulator analytic hierarchy}
+
 An absolute all-height approximation is nonetheless available.
 For $t\ge0$, define
 \begin{equation}

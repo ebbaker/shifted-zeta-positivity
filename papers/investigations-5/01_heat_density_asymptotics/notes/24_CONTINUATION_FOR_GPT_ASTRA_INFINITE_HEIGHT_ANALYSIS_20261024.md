@@ -11,6 +11,10 @@ is `ANALYSIS_READY`; those tasks have not been started by writing this note.
 handoff, superseding Note 22's entry instructions. No new mathematical
 result, numerical run or task-completion claim is added.
 
+**Later entry update, 24 October 2026:** [Note 29](29_CONTINUATION_JOINT_OUTER_TO_INNER_MATCHING_20261024.md) is now the
+current next-session continuation after Notes 25--28. The original handoff
+and priority record below are retained; consult the live progress register.
+
 ## 1. Open the correct checkout and current records
 
 Work in `/Users/ebbaker/Documents/shifted-zeta-positivity`, investigation

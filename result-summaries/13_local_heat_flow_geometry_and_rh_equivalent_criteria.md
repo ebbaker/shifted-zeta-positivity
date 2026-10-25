@@ -771,3 +771,108 @@ It also pays a local polynomial evaluator's truncation. Its disposition is:
 and all-time gates remain. [Same-assistant review](../papers/investigations-5/01_heat_density_asymptotics/reviews/08_FINITE_TRANSITION_LOCAL_BOUNDS_SELF_REVIEW_20261024.md).
 Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
 actual effort max**; no independent specialist review.
+
+
+**Outer tails and negative endpoint, 24 October 2026 (5/01): proved
+in-note; same-assistant review.** [Note 25](../papers/investigations-5/01_heat_density_asymptotics/notes/25_OUTER_CONTOUR_BOUNDS_AND_CUTOFF_OBSTRUCTION_20261024.md)
+gives explicit exponential outer observable tails on compact slabs ending
+at 64 and a fixed positive-cutoff potential obstruction at each t>64,
+on specified off-axis buffers. Its scope is “not a density-only
+impossibility theorem”. [Note 26](../papers/investigations-5/01_heat_density_asymptotics/notes/26_NEGATIVE_ENDPOINT_EVOLUTION_AND_COVARIANCE_20261024.md)
+pays negative all-height current/time/potential budgets and improves
+actual Q and Delta Q errors to O(T^-3) and O(T^-4) by retaining covariance
+cancellation. Adaptive positive outer matching and all-time assembly
+remain open; no numerical run, certified onset or independent review.
+[Same-assistant assessment](../papers/investigations-5/01_heat_density_asymptotics/reviews/09_OUTER_TAIL_AND_NEGATIVE_ENDPOINT_SELF_REVIEW_20261024.md).
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+actual effort max**.
+
+
+**Compact-time adaptive outer density, 24 October 2026 (5/01): proved
+in-note; same-assistant review.** [Note 27](../papers/investigations-5/01_heat_density_asymptotics/notes/27_COMPACT_TIME_GAMMA_OUTER_DENSITY_20261024.md)
+pays complete gamma-convolution tails, physical simple-zero collars and
+shrinking-regulator bias for each compact time interval strictly above
+64. Its five-term phase density has absolute error O(log^2|x|/|x|); the
+continuum mean adds O((log|x|)^-4). “This is not a joint large-time/height
+result”. GO33 identifies the regulator-switch layer; no instantiated onset,
+positive evolution/covariance comparison or inner overlap. HDA-19 remains
+Partial. [Same-assistant review](../papers/investigations-5/01_heat_density_asymptotics/reviews/10_GAMMA_OUTER_DENSITY_SELF_REVIEW_20261024.md).
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+actual effort max**; no numerical run or independent specialist review.
+
+
+**Joint outer range and regulator layer, 24 October 2026 (5/01): proved
+in-note; same-assistant review.** [Note 28](../papers/investigations-5/01_heat_density_asymptotics/notes/28_JOINT_OUTER_REGULATOR_TRANSFER_AND_SWITCH_LAYER_20261024.md)
+compares the two-gamma density with the same physical regulator uniformly
+through t=64, and on 32<=t<=(log X)/4 with absolute error
+O(X^-3/4(1+log^4 X)); averaged-potential spatial jets have the same rate.
+It resolves a regulator layer centered near 64+64/log X with width
+1/(X log X), retaining its exact implicit center, and pays the model heat
+residual. “These domains have **no proved overlap**” describes the remaining
+inner/outer gap. No positive current/time/covariance theorem or numerical
+onset. [Same-assistant audit](../papers/investigations-5/01_heat_density_asymptotics/reviews/11_JOINT_OUTER_AND_SWITCH_LAYER_SELF_REVIEW_20261024.md).
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+actual effort max**; HDA-19 remains Partial, no independent review.
+
+
+**Full gamma saddle and static inner overlap, 24 October 2026 (5/01):
+proved in-note; same-assistant review.** [Note 30](../papers/investigations-5/01_heat_density_asymptotics/notes/30_FULL_GAMMA_SADDLE_AND_INNER_OVERLAP_20261024.md)
+pays the full implicit gamma saddle, Gaussian determinant, both connectors,
+middle, arithmetic modes and tails. The unchanged-regulator static density
+and potential spatial jets have error O(t^(3/2)/(1+X+t log(2+t+X))^2)
+for t>=32 and sufficiently large t+X. It gives an all-height positive
+endpoint O(t^-1/2 log^-2 t) and actual inner overlap: “There is no
+remaining *static positive-time spatial gap* at sufficiently large t.”
+This supersedes the preceding **current static-gap limitation**, while
+preserving Note 28's original model and bounds. Exact nonzero residual,
+eventual onsets, retained spatial averaging and missing positive
+time/current/covariance/finite-transition budgets remain explicit.
+[Same-assistant review](../papers/investigations-5/01_heat_density_asymptotics/reviews/12_FULL_GAMMA_SADDLE_AND_INNER_OVERLAP_SELF_REVIEW_20261024.md).
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+actual effort max**; no numerical execution or independent specialist review.
+
+
+**Positive endpoint and compact-time outer evolution, 24 October 2026
+(5/01): proved in-note; same-assistant review.**
+[Note 31](../papers/investigations-5/01_heat_density_asymptotics/notes/31_POSITIVE_ALL_HEIGHT_EVOLUTION_AND_COVARIANCE_20261024.md)
+supplies the preceding entry's missing positive current/time, physical
+potential, forcing/source and actual Q/Delta Q comparison. Errors are
+O(t^-1/2) uniformly over all real heights at sufficiently large time,
+with required spatial derivatives, both curvature derivatives and the
+nonzero model residual retained. Its signed-stress identity estimates
+the actual squared gradients rather than fitting a covariance to an
+equation. On compact [32,T], outer current/Q errors are
+O_T(log^2 X/X^2); time terms have O_T(log^2 X/X) error across the flat
+switch. Differentiated inner overlap follows at the coarser absolute
+rate; sharper inner transport information is retained. HDA-16/19 are
+complete at their stated comparison scopes, while numerical onsets,
+finite-core joining, all-time assembly and distinct review remain open.
+[Same-assistant review](../papers/investigations-5/01_heat_density_asymptotics/reviews/13_POSITIVE_EVOLUTION_AND_COVARIANCE_SELF_REVIEW_20261024.md).
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+actual effort max**; no numerical execution or independent specialist audit.
+
+
+**Heat-density manuscript synchronization, 24 October 2026 (5/01).**
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual effort ultra**. [HDA-10-MI1 r1 production assessment](../papers/investigations-5/01_heat_density_asymptotics/reviews/14_MANUSCRIPT_INTEGRATION_PRODUCTION_REVIEW_20261024.md) records:
+"This revision consolidates quantitative approximation estimates with their
+existing domains; it supplies no new RH or simplicity criterion."
+The [maintained 54-page manuscript](../papers/investigations-5/01_heat_density_asymptotics/manuscript/README.md)
+now includes Notes 25--28 and 30, preserving their proved-in-note,
+same-assistant-review status and exact residuals. Note 31 is proved
+subsequently and expressly deferred from this version. Production is not
+a new mathematical gain or distinct specialist review; the live research
+statuses above and finite-core/joining obligations are unchanged.
+
+
+**Heat-density Note 31 manuscript integration, 24 October 2026 (5/01).**
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual effort ultra**. The [65-page maintained manuscript](../papers/investigations-5/01_heat_density_asymptotics/manuscript/README.md)
+now incorporates Note 31 and the complete Review 15 recommendations.
+[Production assessment](../papers/investigations-5/01_heat_density_asymptotics/reviews/16_REVIEW15_REVISION_PRODUCTION_ASSESSMENT_20261024.md)
+states: "Production checks inspect the artifact; they are not mathematical or
+numerical evidence for an asymptotic theorem." The source result retains
+**proved in-note; same-assistant review only**. This supersedes the prior
+current-manuscript deferral of Note 31, preserving HDA-10-MI1 r1 as its
+historical completed scope. No new mathematical gain, finite-core/joining
+acceptance, numerical onset or distinct specialist review is claimed.

@@ -39,6 +39,26 @@ not silently change the source, normalization, regulator, target norm,
 domain, tolerances or theorem. A numerical counterexample or failed budget
 must be retained; ownership never overrides contrary evidence.
 
+## End-of-chat recommendation
+
+Author instruction added 24 October 2026. Recorded by **gpt-6-astra
+(Codex), actual effort max**, in the heat-density continuation chat.
+
+At the end of every research reply, explicitly recommend the next task
+as **Analytical — Astra** or **Numerics — Sol**. Give one concrete next
+deliverable and a short reason based on the current research state. Apply
+this to status and discussion replies as well as completed research work,
+so the author knows which chat/model should take the next step. If no
+further task is warranted, say so instead of inventing work.
+
+For a Sol recommendation, identify the analytical question the computation
+will resolve and link the bounded request packet when ready. If its scope
+or error contract still needs analytical work, recommend that Astra task
+first. Do not create a numerical assignment merely to alternate models.
+For an Astra recommendation, name the missing estimate, proof or analytical
+disposition. This recommendation does not dispatch work or change models;
+the author continues to manage the chats manually.
+
 ## The handoff cycle
 
 1. **Astra develops the analysis.** Use `ANALYSIS_READY` before starting

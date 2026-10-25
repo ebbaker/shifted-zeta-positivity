@@ -46,7 +46,7 @@ It has its own registration; histories 0001--0003 retain their original
 identities. A new chat must register its own actual identity.
 
 
-The current research continuation is
+The preceding research continuation is
 [0005 — Continue heat density research](0005_2026-10-24T23-04-26Z_continue-heat-density-research.json),
 created 24 October 2026, thread `01a17028-8582-7571-aeb9-d9c4561ea110`.
 It continues Note 22 with the HDA-15 contract, sharper source/nonlinear
@@ -67,3 +67,54 @@ identity and records the actual per-turn configuration.
 This conversation also produced the requested
 [new-session continuation](../notes/24_CONTINUATION_FOR_GPT_ASTRA_INFINITE_HEIGHT_ANALYSIS_20261024.md). The next research chat should
 follow it and register its own actual identity in this folder.
+
+
+The preceding infinite-height research conversation is
+[0006 — Continue infinite-height analysis](0006_2026-10-24T23-42-37Z_continue-infinite-height-analysis.json),
+created 24 October 2026, thread `01a1704b-7af1-7931-a76c-38f570b1aeef`.
+It continues Note 24 with the outer contour/cutoff analysis in Note 25
+and the negative endpoint evolution/covariance estimates in Note 26,
+then the HDA-19 gamma-pair/compact-time adaptive outer density in Note 27.
+The next turn adds Note 28's uniform-switch and joint static comparisons,
+regulator-layer center/width and heat residual, and the author-requested
+next-session continuation in Note 29.
+It also records the author's standing request for an Astra-or-Sol next-task
+recommendation after each research reply.
+Its verified session configuration is gpt-6-astra, effort max. It has its
+own registration; the history tool owns its transcript and registry.
+No numerical execution or Sol handoff is claimed for this round.
+
+The new continuation is [chat 0007](0007_2026-10-25T00-13-40Z_please-read-shifted-zeta-positivity-papers-investigations-5-01-heat-density-asym.json),
+created `2026-10-25T00:13:40Z` (24 October in America/New_York), thread
+`01a17067-eabc-7872-abc9-d9319b53bc41`. It continues Note 29 with the
+full gamma saddle, static all-height positive endpoint, inner overlap
+and exact residual in Note 30. The next reply adds Note 31's direct
+positive evolution, actual covariance and compact-time switch estimates,
+with finite-core/joining work as the next analytical consumer. Its
+verified model is gpt-6-astra, effort max. The refresh tool assigned its unique number and preserves the
+original recorded title, creation and capture provenance in index.json.
+No other conversation's registration or transcript is reused. The same
+chat later records the author-requested [Note 32 continuation](../notes/32_CONTINUATION_FINITE_CORE_AND_JOINING_20261024.md)
+and [Review 15 manuscript recommendations](../reviews/15_MANUSCRIPT_REVIEW_AND_SOL_RECOMMENDATIONS_20261024.md).
+The review leaves implementation to Sol and preserves the current manuscript.
+
+
+
+**Chat 0006 manuscript handoff, 24 October 2026:** the same conversation
+also records the author's request for exact manuscript integration
+instructions for Sol 6.1 and the later instruction to defer newer results.
+The [frozen production specification](../notes/MANUSCRIPT_INTEGRATION_FOR_SOL_20261024.md)
+covers Notes 25--28 and 30. Actual configuration: gpt-6-astra, max.
+The manuscript remains unchanged; the existing 0006 registration is retained.
+
+
+The finite-core intake conversation is
+[0009 — Review finite-core continuation](0009_2026-10-25T01-00-36Z_review-finite-core-continuation.json),
+created `2026-10-25T01:00:36Z` (24 October in America/New_York), thread
+`01a17092-dfef-7fd2-9514-161edd0b177c`. Actual model **gpt-6.1-sol**,
+effort **ultra**. [Note 33](../notes/33_FINITE_CORE_JOINING_INTAKE_AND_ASTRA_HANDOFF_20261024.md)
+records the Note 32 intake and Astra handoff, without new proof or numerical
+execution. It also records the author's diagnostic-provenance question:
+the old Note 23 trial preceded the moving-forward Astra/Sol assignment.
+The refresh tool owns this chat's transcript and registry; no existing
+identity or history number is reused or changed.

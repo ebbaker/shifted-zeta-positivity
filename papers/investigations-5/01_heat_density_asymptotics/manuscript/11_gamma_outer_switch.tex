@@ -1,0 +1,714 @@
+\section{A linear gamma outer model and the regulator layer}\label{sec:gamma-outer}
+The exact gamma completion gives a static approximation on compact
+positive-time intervals and on a joint time/height range.  Its finite
+phase formula also resolves the regulator transition near $t=64$.
+The estimates in this section are those of Notes~27--28
+\cite{n27,n28}; they use the unchanged physical regulator of
+Section~\ref{sec:protocol} and fixed spatial averaging, without a time
+average.  The stronger spatial coverage in Section~\ref{sec:full-saddle}
+will use a different gamma model.
+
+Fix $\ell,h>0$, $|y|\le Y$, and the kernel \eqref{eq:kernel}.
+For $X>0$ use the full holomorphic buffer
+\[
+ \Omega_X=\{z:|\Re z-X|\le\ell+2,\quad |\Im z|\le Y+h+2\}.
+\]
+Enlarge its fixed margin once if necessary so that every collar meeting
+an averaging support lies wholly inside the buffer.  Constants may
+depend on these fixed widths, $Y$ and the regulator parameter $\eta$;
+they are independent of $t,X$ on the declared joint range.  The compact
+statements have their own interval-dependent constants.  All onsets below
+are eventual existence statements, without a numerical certificate.
+
+\subsection{The exact convolution and a two-carrier field budget}
+For every $t>0$,
+\begin{equation}
+ H(t,z)=\frac1{\sqrt{\pi t}}\int_{\R}e^{-v^2/t}
+                    \frac{\xi(s+v)}8\,dv,
+ \qquad s=\frac{1+iz}{2}.
+ \label{eq:xi-heat-convolution}
+\end{equation}
+Indeed the Gaussian average of $\cos((z-2iv)u)$ is
+$e^{tu^2}\cos(zu)$, with variance $t/2$ in the $v$ coordinate.
+The complete source is integrable against
+$e^{t_bu^2+(Y+h+2)u}$ on any compact time interval, justifying the
+interchange.  This is the all-positive-time identity in
+\cite[Section~4, equation~(35)]{polymath2019heat}; its separate high-zero
+theorem for $0<t\le1/2$ is not invoked at the times considered here.
+
+Define the exact gamma factor and its logarithmic derivative by
+\begin{align}
+ \mathcal M(w)&=\frac{w(w-1)}{16}\pi^{-w/2}\Gamma(w/2),&
+ \alpha(w)&=\frac{\mathcal M'(w)}{\mathcal M(w)}
+ =\frac1w+\frac1{w-1}-\frac{\log\pi}{2}+\frac12\psi(w/2),\notag\\
+ \mathcal G_t(w)&=\mathcal M(w)e^{t\alpha(w)^2/4},&
+ P_{\rm lin}(t,z)&=\mathcal G_t(s)+\mathcal G_t(1-s).
+ \label{eq:gamma-linear}
+\end{align}
+Here $\psi=\Gamma'/\Gamma$.  The factor $1/16$ is fixed by
+$\xi(w)/8=\mathcal M(w)\zeta(w)$, and $\mathcal M$ is distinct from
+the real source mass $M_0$.  The inner drift $\mu'/\mu$ is local to
+Section~\ref{sec:explicit}; $\alpha$ here always means the function
+in \eqref{eq:gamma-linear}.  The separate gamma factors are
+holomorphic and nonzero on the far-height buffers where used; no entire
+extension of this local model is asserted.  It is useful to record
+\begin{equation}
+ D_t(w)=\alpha(w)+\frac t2\alpha(w)\alpha'(w),\qquad
+ (P_{\rm lin})_z=\frac i2\{
+ \mathcal G_t(s)D_t(s)-\mathcal G_t(1-s)D_t(1-s)\}.
+ \label{eq:linear-derivative}
+\end{equation}
+
+\begin{proposition}[Carrier-relative linear field error]
+\label{prop:linear-field-budget}
+On $\Omega_X$, for $32\le t\le\tfrac14\log X$ and sufficiently
+large $X$,
+\begin{equation}
+ |H-P_{\rm lin}|\le C\mathcal E(t,X)
+       \{ |\mathcal G_t(s)|+|\mathcal G_t(1-s)|\},
+ \label{eq:linear-field-error}
+\end{equation}
+where, for a fixed finite $C_Y$,
+\begin{align}
+ \mathcal E(t,X)={}&\frac{e^t(t+t^2\log^2X)}X
+       +X^{-t\log2/8}+X^{C_Y}e^{-t\log^2X/128}
+       +e^{t-X^{2/3}/(16t)}\notag\\
+ &\le C X^{-3/4}(1+\log^4X).
+ \label{eq:linear-four-payments}
+\end{align}
+For each fixed finite $T\ge64$ the same carrier-relative error on
+$32\le t\le T$ is at most $C_T(1+\log^2X)/X$.
+In particular, on every compact $I=[t_a,t_b]\Subset(64,\infty)$,
+\begin{equation}
+ |H-P_{\rm lin}|\le C_I\delta(X)
+       \{ |\mathcal G_t(s)|+|\mathcal G_t(1-s)|\},\qquad
+ \delta(X)=\frac{1+\log^2X}{X}.
+ \label{eq:linear-compact-field}
+\end{equation}
+The denominator is the sum of carrier amplitudes, not the possibly
+vanishing modulus $|P_{\rm lin}|$.
+\end{proposition}
+\begin{proof}
+Write $\sigma=\Re s$. Split \eqref{eq:xi-heat-convolution} at
+$v=2-\sigma$ and $v=-1-\sigma$.  On the right use
+$\xi(w)/8=\mathcal M(w)\zeta(w)$; reflect the left by
+$\xi(w)=\xi(1-w)$ and $v\mapsto-v$.  This retains two right-arm
+problems centered at $w=s,1-s$, with bounded lower endpoints
+$2-\sigma,1+\sigma$, and the full middle strip of real parts $[-1,2]$.
+
+Sectorial log-gamma and digamma asymptotics
+\cite[5.11.1, 5.11.2, 5.11.9 and 5.11(ii)]{DLMFGammaOuter2026},
+on a slightly larger sector, give
+\begin{equation}
+ \begin{aligned}
+ a:=\Re\alpha(w)&=\tfrac12\log(X/(4\pi))+O_Y(X^{-1}),
+ &b:=\Im\alpha(w),\quad |b|\le2,\\
+ \alpha'&=O_Y(X^{-1}),&\alpha''&=O_Y(X^{-2}).
+ \end{aligned}
+ \label{eq:linear-sector-bounds}
+\end{equation}
+Cauchy's formula on disks of radius a fixed fraction of $X$ supplies
+the derivatives of the holomorphic remainders.  No real-axis remainder
+is differentiated.  With $V=X^{1/3}$ and $v_0\le v\le V$,
+\[
+ \mathcal M(w+v)=\mathcal M(w)e^{v\alpha(w)+E(w,v)},\qquad
+ |E(w,v)|\le C_Yv^2/X,\qquad |e^{E(w,v)}-1|\le C_Yv^2/X.
+\]
+The complete linear Gaussian integral is $e^{t\alpha(w)^2/4}$.
+Its absolute integral divided by the modulus of that answer costs
+$e^{tb^2/4}\le e^t$; the real tilted Gaussian has mean $ta/2$,
+variance $t/2$, and second moment $t/2+t^2a^2/4$.
+Thus the local gamma expansion pays the first term of
+\eqref{eq:linear-four-payments}.  On fixed $I$ the same calculation
+pays $C_I\delta(X)$.
+
+All other source pieces are retained.  Absolute convergence of the
+ordinary full Dirichlet series \cite[25.2.1]{DLMFZetaOuter2026} gives
+\[
+ |\zeta(w+v)-1|\le3\,2^{-\Re w-v}\qquad(\Re(w+v)\ge2).
+\]
+Changing the Gaussian tilt from $a$ to $a-\log2$ costs the factor
+\begin{equation}
+ \exp\{-ta\log2/2+t((\log2)^2+b^2)/4\}
+ \le X^{-t\log2/8}.
+ \label{eq:linear-arithmetic-payment}
+\end{equation}
+The constant terms linear in $t$ are absorbed by a fixed fraction of
+$t\log X$, uniformly after the onset.  On a fixed $I$ one may instead
+keep the sharper bound $C_I X^{-t_a\log2/4}$, whose exponent exceeds
+one.  No finite list of arithmetic modes replaces this tail.
+
+In the bounded middle, reflect into real parts $[1/2,2]$ and use Euler
+summation with $N=\lceil X\rceil$
+\cite[25.2.8]{DLMFZetaOuter2026}.  It gives the sufficient bounds
+\begin{equation}
+ |\xi(s+v)/8|\le C_YX^4e^{-\pi X/8},\qquad
+ \log|\mathcal G_t(w)|=-\pi X/8+
+       \frac t{16}\log^2(X/(4\pi))+O_{I,Y}(1+\log X)
+ \label{eq:linear-middle-carrier}
+\end{equation}
+on compact $I$.  In the joint calculation, $a\ge\log X/4$ eventually.
+Completing the square pays both the bounded middle and the missing
+lower linearized Gaussian tail by
+$CX^{C_Y}e^{-t\log^2X/128}$.  For fixed $I$ their relative allowance
+can be written
+\[
+ C_{I,Y}\exp\{-t_a\log^2(X/(4\pi))/16+C_{I,Y}(1+\log X)\},
+\]
+which is smaller than every fixed inverse power after an
+interval-dependent onset.
+
+Finally the infinite right tails are controlled on the entire ray:
+\begin{equation}
+ \log\frac{|\mathcal M(w+v)|}{|\mathcal M(w)|}
+       \le C_Yv+\tfrac12v\log(X+v)\qquad(v\ge0).
+ \label{eq:linear-ray-bound}
+\end{equation}
+For $v\ge V$ its right side is at most $v^2/(2t)$ on the joint range,
+since $X^{1/3}/\log^2X\to\infty$ and the corresponding ray ratio is
+eventually increasing.  The true and linearized tails therefore pay
+$Ce^{t-X^{2/3}/(16t)}$ relative to their carriers.  On fixed $I$ they
+pay $C_Ie^{-X^{2/3}/(4t_b)}$.  The carrier's height exponential has
+been retained in these divisions.  Summing both reflected arms and
+all four payments proves the estimates.  Since $e^t\le X^{1/4}$ and
+$t\ge32$, the displayed joint rate follows; this analytical floor is
+not a certified asymptotic onset.
+\end{proof}
+
+\subsection{Phase geometry and transfer for an arbitrary positive regulator}
+Choose conjugate-compatible logarithms on the far-right buffer and set
+\begin{align}
+ \mathcal A_{\rm lin}(t,z)&=
+ \exp\{(\log\mathcal G_t(s)+\log\mathcal G_t(1-s))/2\},\notag\\
+ \Theta_{\rm lin}(t,z)&=
+ \frac{\log\mathcal G_t(s)-\log\mathcal G_t(1-s)}{2i},\qquad
+ P_{\rm lin}=2\mathcal A_{\rm lin}\cos\Theta_{\rm lin}.
+ \label{eq:linear-phase}
+\end{align}
+The carrier is nonvanishing and positive on the real axis.  Put
+\begin{align}
+ A_X&=\mathcal A_{\rm lin}(t,X)
+      =|\mathcal G_t((1+iX)/2)|,\qquad
+ \theta=\Theta_{\rm lin}(t,X),\notag\\
+ \omega&=\partial_x\theta
+  =\tfrac12\Re\{\alpha(s_X)+\tfrac t2\alpha(s_X)\alpha'(s_X)\},
+       \qquad s_X=(1+iX)/2.
+ \label{eq:linear-frequency}
+\end{align}
+Uniformly on the joint range and full buffer,
+\begin{equation}
+ \omega=\tfrac14\log(X/(4\pi))+O(t\log X/X),\qquad
+ (\Theta_{\rm lin})_{zz}=O(X^{-1}),\qquad
+ |(\log\mathcal A_{\rm lin})_z|\le C.
+ \label{eq:linear-phase-bounds}
+\end{equation}
+The last estimate uses cancellation of the leading logarithms in the
+difference of the two reflected logarithmic derivatives.  Bounding
+them separately by $O(\log X)$ would lose this amplitude comparison.
+In particular $|\mathcal A_{\rm lin}|\asymp A_X$ on the whole buffer.
+For fixed $I$ the frequency remainder is $O_I(\log X/X)$.
+
+\begin{lemma}[Complete simple-root collars]\label{lem:linear-collars}
+Let $e=C\mathcal E(t,X)$ on the joint range, or
+$e=C_T(1+\log^2X)/X$ on $[32,T]$.  Fix a sufficiently small phase
+radius $0<r_0<\pi/10$.  Every relevant real phase root $d_j$, defined by
+$\Theta_{\rm lin}(t,d_j)=(j+1/2)\pi$, has a disjoint collar of radius
+comparable to $r_0/\omega$ containing exactly one zero $a_j$ of $H$.
+That zero is real and simple, and
+\begin{equation}
+ |a_j-d_j|\le Ce/\omega.
+ \label{eq:linear-root-shift}
+\end{equation}
+These are all zeros that can meet the averaging buffer; at most
+$C\omega$ collars meet its fixed enlargement.  For each of
+$F=H,P_{\rm lin}$, its actual-root collars have the physical floors
+\begin{equation}
+ |F|\ge cA_X\quad\hbox{off the collars},\qquad
+ |F(z)|\ge cA_X\omega|z-a_F|\quad\hbox{inside its collar}.
+ \label{eq:linear-collar-floors}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Divide \eqref{eq:linear-field-error} by the nonzero common carrier:
+\[
+ |H/\mathcal A_{\rm lin}-2\cos\Theta_{\rm lin}|
+ \le Ce\{ |e^{i\Theta_{\rm lin}}|+|e^{-i\Theta_{\rm lin}}|\}.
+\]
+On $|z-d_j|=r_0/\omega$, phase curvature in
+\eqref{eq:linear-phase-bounds} gives
+$\Theta_{\rm lin}(z)-\Theta_{\rm lin}(d_j)
+=\theta'(d_j)(z-d_j)+O(1/(X\omega^2))$.
+The cosine is bounded below there by a fixed multiple of $r_0$.
+Rouch\'e's theorem yields exactly one zero counted with multiplicity;
+conjugation makes it real, and it is simple.  The identity
+$|\cos(u+iv)|^2=\cos^2u+\sinh^2v$ forces any zero in the buffer to
+have phase distance $O(e)$ from one of these real phase roots.
+The phase derivative differs from the positive $\omega$ by $O(X^{-1})$
+on the fixed rectangle.  Integrating its real part along a segment
+gives an injective phase coordinate with inverse Lipschitz constant
+at most $2/\omega$.  This proves completeness and
+\eqref{eq:linear-root-shift}; phase spacing gives the collar count.
+
+Recenter the collars on the actual roots, using a slightly enlarged
+initial phase circle to retain boundary margins.  The trigonometric
+lower bound supplies the exterior floor for both fields.  Inside a
+collar, $F/(z-a_F)$ is holomorphic and zero-free, and its boundary
+modulus is at least $cA_X\omega$.  The maximum principle for its
+reciprocal gives the interior floor.  All disks meeting the kernel
+support are full disks inside the prescribed buffer.
+\end{proof}
+
+\begin{lemma}[A collar estimate uniform over positive $Q$]
+\label{lem:uniform-q-collar}
+On a fixed phase-scaled disk $D$, suppose
+\[
+ f(u)=uB(u),\qquad g(u)=(u-e_0)C(u),\qquad |e_0|\le Ce,
+\]
+where the holomorphic zero-free units $B,C$ have fixed upper and
+positive lower bounds, and $|B-C|\le Ce$.  For every positive function
+$Q(u)$, with no derivative or positive lower bound required,
+\begin{align}
+ &\int_D\left|\log\frac{|g(u)|^2+Q(u)}{|f(u)|^2+Q(u)}\right|dA_u
+ \notag\\[-2pt]
+ &\quad+\int_D\left|\frac{Q(u)}{|g(u)|^2+Q(u)}
+             -\frac{Q(u)}{|f(u)|^2+Q(u)}\right|dA_u\le Ce.
+ \label{eq:uniform-q-collar}
+\end{align}
+In the geometry of Lemma~\ref{lem:linear-collars}, this gives on the
+full averaging buffer $\Omega$, with the same physical $q$ in both fields,
+\begin{equation}
+ \|S_H-S_{P_{\rm lin}}\|_{L^1(\Omega)}
+       +\|w_H-w_{P_{\rm lin}}\|_{L^1(\Omega)}\le Ce.
+ \label{eq:linear-L1-transfer}
+\end{equation}
+The local estimate applies to other acquired simple-root collars with
+the same unit hypotheses.  It is not a theorem about multiple events.
+\end{lemma}
+\begin{proof}
+First replace $C$ by $B$.  Their relative error $O(e)$ changes each
+integrand by $O(e)$, uniformly in $Q$.  Put $q_0(u)=Q(u)/|B(u)|^2$.
+For the remaining root translation let $0\le s\le1$ vary the root
+from $0$ to $e_0$, holding $q_0(u)$ fixed at each spatial point.
+The absolute segment derivatives of the logarithm and rational weight
+are bounded respectively by
+\begin{equation}
+ \frac{2|e_0|}{|u-se_0|},\qquad
+ \frac{|e_0|}{2|u-se_0|}.
+ \label{eq:uniform-q-derivatives}
+\end{equation}
+For the second use
+$q_0|u-se_0|/(|u-se_0|^2+q_0)^2\le1/(4|u-se_0|)$.
+The planar function $|u-se_0|^{-1}$ has a uniformly bounded integral
+on the fixed disk.  Integrate first in $u$, then in $s$; the segment
+itself has area zero.  This proves \eqref{eq:uniform-q-collar} without
+any regularity assumption on $Q$ beyond that needed for its integrals.
+
+For the fields take $u=\omega(z-d_j)$ and divide both by the same
+nonzero $\mathcal A_{\rm lin}$.  Then
+$P_{\rm lin}/\mathcal A_{\rm lin}=uB(u)$ and
+$H/\mathcal A_{\rm lin}=(u-e_0)C(u)$, with $|e_0|=O(e)$.
+On the collar boundary the field and root errors imply $|B-C|\le Ce$;
+after filling the removable points, the maximum principle extends
+that bound to the disk.  Apply the local result with
+$Q=q/|\mathcal A_{\rm lin}|^2$.  Restoring area costs $\omega^{-2}$
+per disk and there are $O(\omega)$ disks.  Off the collars the relative
+field error is $O(e)$, so the logarithm and weight differences are
+pointwise $O(e)$, independently of $q$.  This proves
+\eqref{eq:linear-L1-transfer}.  The carrier logarithm cancels only in
+the difference; the physical $q$ and potential offsets are unchanged.
+\end{proof}
+
+\begin{theorem}[Uniform static linear-model comparison]
+\label{thm:linear-static}
+For the common physical observables $R_F,U_F,W_F$ and fixed buffer above,
+there exist $C,X_0$ such that
+\begin{align}
+ &|R_H-R_{P_{\rm lin}}|
+ +\sum_{|\gamma|\le4}\bigl(
+ |\partial^\gamma(U_H-U_{P_{\rm lin}})|
+ +|\partial^\gamma(W_H-W_{P_{\rm lin}})|\bigr)
+ \notag\\
+ &\hspace{35mm}\le C X^{-3/4}(1+\log^4X)
+ \quad(32\le t\le\tfrac14\log X,\quad |y|\le Y,\quad X\ge X_0).
+ \label{eq:linear-static-joint}
+\end{align}
+For each fixed finite $T\ge64$, on $32\le t\le T$ the right side is
+instead $C_T(1+\log^2X)/X$ after $X_0(T)$.  Here $\gamma$ is spatial;
+the potential retains its physical additive normalization.  Both bounds
+include $t=64$.  The same conclusions hold at negative heights with
+$X=|x|$.
+\end{theorem}
+\begin{proof}
+Lemma~\ref{lem:holomorphic-weak-density} needs no heat equation and
+therefore applies to $P_{\rm lin}$.  Subtract its identities for the
+two fields.  With $b_{r,1}=\|\nabla r\|_\infty$,
+$b_{r,2}=\|\Delta r\|_\infty$, and
+$|a(1-a)-b(1-b)|\le|a-b|$ on $[0,1]$, it gives
+\begin{equation}
+ |R_H-R_{P_{\rm lin}}|
+ \le Ce(1+b_{r,1}+b_{r,2}+b_{r,1}^2).
+ \label{eq:linear-weak-transfer}
+\end{equation}
+Both spatial regulator corrections are retained.  If $\beta(t)X\le\pi$,
+then $r_u=-2\beta u$ and $\Delta r=-2\beta$ are bounded on the full
+buffer, so this is $O(e)$ even in the unresolved regulator layer.
+
+For $\beta(t)X>\pi$ the weak-test factor need not be bounded.
+Compare each actual density separately with its own zero measure
+$\nu_F$.  Set
+\begin{equation}
+ \lambda_X(t)=\frac{\sup_{|u-X|\le\ell+2}\epsilon_g(t,u)}{A_X}.
+ \label{eq:linear-regulator-ratio}
+\end{equation}
+The large real saddle of the protocol satisfies, for $t\ge64$,
+\begin{equation}
+ \tfrac14<L(64)\le L(t)\le C\log(2+t),\qquad
+ ct\le\kappa(t)\le Ct\log(2+t),\qquad
+ |\log E_0(t)|\le Ct\log^2(2+t).
+ \label{eq:linear-regulator-growth}
+\end{equation}
+The saddle residual at $u=1/4$ is negative at $64$ since
+$4\pi e<41$, and $L'=2L/\kappa>0$.  Taking logarithms of
+$e^{4L}\le Ct(1+L)$ gives the upper bound for $L$; then
+$\kappa=8tL-2t+36$ gives its bounds.  Substitute
+$\pi e^{4L}=tL/2+9/4$ into $M_0,E_0$ for the last estimate.
+In particular $\beta$ is globally bounded on $t\ge32$, and
+$\beta\ge c/[t\log(2+t)]$ for $t\ge128$.
+
+For $64<t<128$, $E_0$ is bounded and
+\[
+ \log\lambda_X\le-\tfrac14\beta X^2+\pi X/8+C\log^2X
+ \le-\pi X/8+C\log^2X.
+\]
+For $t\ge128$ on the joint range,
+$\beta\ge c/[\log X\log(2+\log X)]$, whereas
+$|\log E_0|\le C\log X\log^2(2+\log X)$.
+The negative quadratic regulator exponent dominates these terms and
+the carrier's $-\pi X/8+O(\log X)+t\Re(\alpha^2)/4$ logarithm,
+whose last term is nonnegative for large $X$.  Consequently, uniformly
+in this second regime,
+$\lambda_X\le Ce^{-cX}$, $|\log\lambda_X|\le CX^2$ and
+$b_{r,1}+b_{r,2}\le C(1+X)$.
+
+The physical exterior and interior floors of
+Lemma~\ref{lem:linear-collars} give, for $F=H,P_{\rm lin}$,
+\begin{align}
+ \int_\Omega\log(1+q/|F|^2)
+ &\le C\lambda_X^2\left[
+ 1+\frac{1+\log(1+C/\lambda_X^2)}\omega\right],\notag\\
+ |R_F-K*\nu_F|
+ &\le C(1+X^2)\lambda_X^2\left[
+ 1+\frac{1+\log(1+C/\lambda_X^2)}\omega\right]
+ \le Ce^{-cX}.
+ \label{eq:linear-regulator-bias}
+\end{align}
+Indeed each full collar uses the elementary integral
+$\int_{|z|\le R}\log(1+a^2/|z|^2)\,dA
+\le\pi a^2[1+\log(1+R^2/a^2)]$ with
+$a\asymp\lambda_X/\omega$, and there are $O(\omega)$ collars.
+The weak zero-measure identity has test allowance
+\[
+ \|\Delta K\|_\infty
+ +2b_{r,1}\|\nabla K\|_\infty
+ +(b_{r,2}+b_{r,1}^2)\|K\|_\infty,
+\]
+which explains the retained polynomial factor.  Root displacement
+$O(e/\omega)$ and $O(\omega)$ roots then give
+$|K*\nu_H-K*\nu_{P_{\rm lin}}|\le Ce$.  The two regimes prove
+the density assertion; the same argument pays the compact-time rate.
+
+For the other observables apply \eqref{eq:linear-L1-transfer}
+directly.  Every weak derivative of $K$ through total order four is
+bounded: the kernel is $C^3$ and its fourth derivative is bounded and
+piecewise polynomial, without a boundary delta.  Transfer each
+spatial derivative to $K$ and multiply its supremum by the $L^1$
+error.  Since $q>0$, these weak filtered derivatives represent the
+ordinary derivatives.  Evenness and conjugation of $H$, the regulator
+and the kernels supply the negative-height statement.
+\end{proof}
+This static comparison controls neither potential time derivatives
+nor the products of unfiltered gradients in the actual covariance.
+It uses no regulator floor on an unbounded height tail.
+
+\subsection{A finite phase formula in the resolved regime}
+\begin{corollary}[Outer finite phase]\label{cor:outer-finite-phase}
+Let $I=[t_a,t_b]\Subset(64,\infty)$.  Define
+\begin{equation}
+ p_{\rm out}=\frac\pi\omega,\qquad
+ v_{\rm out}=\frac\theta\omega,\qquad
+ R_{\rm out}(t,X,y)=k_h(y)P(p_{\rm out},v_{\rm out}),
+ \label{eq:outer-finite-phase}
+\end{equation}
+where $P(p,v)$ is the existing exact five-coefficient periodization
+\eqref{eq:finiteP}.  Uniformly for $t\in I$, $|y|\le Y$,
+\begin{align}
+ |R_H-R_{\rm out}|&\le C_I\frac{1+\log^2X}{X},
+ \label{eq:outer-finite-phase-error}\\
+ \left|R_H-\frac{k_h(y)}{4\pi}\log\frac X{4\pi}\right|
+ &\le C_I\left\{(\log X)^{-4}+\frac{1+\log^2X}{X}\right\}.
+ \label{eq:outer-continuum-error}
+\end{align}
+On $128\le t\le\tfrac14\log X$ the finite phase model in
+\eqref{eq:outer-finite-phase} has the joint error
+$CX^{-3/4}(1+\log^4X)$.
+\end{corollary}
+\begin{proof}
+On fixed $I$, $\beta_*:=\min_I\beta>0$ and
+\begin{equation}
+ \log\lambda_X\le-\tfrac12\beta_*(X-\ell-2)^2
+       +\pi X/8+C_I(1+\log^2X),\qquad
+ |\log\lambda_X|\le C_I(1+X^2).
+ \label{eq:linear-compact-regulator}
+\end{equation}
+The physical-collar payment therefore gives the stronger compact bound
+\begin{equation}
+ |R_H-K*\nu_H|\le C_Ie^{-\beta_*X^2/4}.
+ \label{eq:linear-compact-bias}
+\end{equation}
+Freeze the phase roots at $X$:
+\[
+ b_j=X+\frac{(j+1/2)\pi-\theta}{\omega},\qquad
+ |a_j-b_j|\le\frac C\omega\{\delta(X)+X^{-1}\}.
+\]
+The $O(\omega)$ root count and global Lipschitz continuity of the
+zero-extended $k_\ell$ give
+\[
+ \left|K*\nu_H-k_h(y)
+  \sum_{j\in\mathbb Z}k_\ell(v_{\rm out}-(j+1/2)p_{\rm out})\right|
+ \le C_I\delta(X).
+\]
+Kernel-edge crossings cost no missing labels.  The sum is exactly
+$P(p_{\rm out},v_{\rm out})$ by \eqref{eq:latticeidentity}, so its
+finite formula has zero truncation error.  Bounded periodic Bernoulli
+polynomials in \eqref{eq:finiteP} give
+$|P(p,v)-1/p|\le C_\ell p^4$ for small $p$; this is the sharper
+degree-eight-kernel rate.  Together with
+\eqref{eq:linear-phase-bounds} it proves
+\eqref{eq:outer-continuum-error}.  For $t\ge128$ the joint range is
+uniformly in the resolved second regulator regime after one onset;
+the same argument uses \eqref{eq:linear-regulator-bias} and
+$e=C\mathcal E(t,X)$, while phase freezing costs $O(X^{-1})$.
+\end{proof}
+The finite zero-lattice formula is not applied throughout the
+unresolved regulator layer.  These estimates apply to both tails by
+$X=|x|$.  For $|y|>h$ the leading compact-time profiles vanish, and
+the regularization payment still controls the off-axis density.
+Widths and transverse strips remain fixed.
+
+\subsection{Two regularized layers and their exact switching center}
+For the linear-model amplitude and frequency in
+\eqref{eq:linear-frequency}, set
+\begin{equation}
+ b(t,X)=\log\frac{\epsilon_g(t,X)}{A_X(t)},\qquad
+ d(t,X)=\frac{b(t,X)_+}{\omega(t,X)},\qquad
+ R_{\rm layer}=\frac\omega{2\pi}
+       \{k_h(y-d)+k_h(y+d)\}.
+ \label{eq:linear-layer}
+\end{equation}
+The off-axis layers are regularized density, not nonreal zeros.
+When $d=0$ they merge into $\omega k_h(y)/\pi$; when $d$ is large
+they leave the fixed observation strip.
+
+\begin{theorem}[Coarse regulator-layer profile]\label{thm:regulator-layer}
+Uniformly on $32\le t\le\tfrac14\log X$, $|y|\le Y$,
+\begin{equation}
+ |R_H(t,X,y)-R_{\rm layer}(t,X,y)|\le C.
+ \label{eq:linear-layer-error}
+\end{equation}
+For each fixed compact $[32,T]$ the same conclusion holds with its own
+$C_T$.  Its absolute error is $O(1)$, distinct from the vanishing
+static error in Theorem~\ref{thm:linear-static}.  In particular
+\begin{equation}
+ \frac{R_H}{\log X}=
+ \frac{k_h(y-d)+k_h(y+d)}{8\pi}+O(1/\log X)
+ \label{eq:linear-layer-normalized}
+\end{equation}
+on either declared range.
+\end{theorem}
+\begin{proof}
+When $\beta X\le\pi$, the logarithmic regulator/carrier ratio varies
+by $O(1)$ on the full fixed buffer, and
+$\Im\Theta_{\rm lin}(t,u+iv)=\omega v+O(X^{-1})$.
+Outside fixed phase collars $|\cos\Theta_{\rm lin}|$ is comparable
+to $e^{|\Im\Theta_{\rm lin}|}$.  Inside a collar the only
+logarithmic singularity is bounded by
+$C+2|\log|\omega(z-d_j)||$, whose integral after phase scaling is
+bounded; $O(\omega)$ collars each have area $O(\omega^{-2})$.
+Thus, uniformly for arbitrarily positive or negative $b$,
+\begin{equation}
+ \|S_{P_{\rm lin}}-2\log|\mathcal A_{\rm lin}|
+                   -2\max(b,\omega|v|)\|_{L^1(\Omega)}\le C.
+ \label{eq:linear-layer-potential}
+\end{equation}
+For $b>0$ the $q$ term supplies the lower bound; for $b<0$ the
+integrable cosine logarithm does so.  The upper bound follows from
+$|\cos\Theta_{\rm lin}|\le e^{|\Im\Theta_{\rm lin}|}$.
+The carrier logarithm is harmonic.  The two adaptive corrections in
+Lemma~\ref{lem:holomorphic-weak-density} are $O(1)$ in this regime,
+since $0\le w\le1$ and the spatial derivatives of $r$ are bounded.
+Finally, distributionally,
+\[
+ \partial_v^2\max(b,\omega|v|)=
+ \begin{cases}
+ \omega(\delta_d+\delta_{-d}),&b>0,\\
+ 2\omega\delta_0,&b\le0.
+ \end{cases}
+\]
+Test against $K$ and use its unit horizontal integral, retaining the
+horizontal average exactly.  This proves the layer formula for
+$P_{\rm lin}$, and Theorem~\ref{thm:linear-static} transfers it to $H$.
+For $\beta X>\pi$, the preceding proof gives $b<0$ eventually;
+zero-measure transfer and finite phase yield the stronger estimate
+\[
+ R_H=\omega k_h(y)/\pi
+       +O(\mathcal E+X^{-1}+\omega^{-4}+e^{-cX}).
+\]
+Both regimes give \eqref{eq:linear-layer-error}; then
+$\omega/\log X=1/4+O(1/\log X)$ proves
+\eqref{eq:linear-layer-normalized}.
+\end{proof}
+
+\begin{corollary}[Center and resolved switch scaling]\label{cor:switch-scaling}
+For sufficiently large $X$ there is a unique $t_c(X)$ in a fixed small
+right neighborhood of $64$ satisfying the exact known-model equation
+\begin{equation}
+ b(t_c(X),X)=0,\qquad
+ \epsilon_g(t_c(X),X)
+   =|\mathcal G_{t_c(X)}((1+iX)/2)|.
+ \label{eq:linear-exact-center}
+\end{equation}
+With $\kappa_0=\kappa(64)$,
+\begin{equation}
+ t_c-64=\frac{64}{\log X+c_0+O(1/\log X)},\qquad
+ c_0=\log\frac{4e}{\pi\kappa_0}.
+ \label{eq:linear-center-location}
+\end{equation}
+For bounded $\tau$, retain this exact $t_c$ and put
+\begin{equation}
+ t_X(\tau)=t_c(X)-\frac{128\tau}{\pi X\log X},\qquad
+ \tau_+=\max(\tau,0).
+ \label{eq:linear-switch-time}
+\end{equation}
+Uniformly for bounded $\tau$ and $|y|\le Y$,
+\begin{equation}
+ \frac{R_H(t_X(\tau),X,y)}{\log X}
+ =\frac{k_h(y-\tau_+)+k_h(y+\tau_+)}{8\pi}
+       +O(1/\log X).
+ \label{eq:linear-switch-law}
+\end{equation}
+\end{corollary}
+\begin{proof}
+Bounded-real-part Stirling near $t=64$ gives
+\begin{equation}
+ \log A_X(t)=-\pi X/8+\tfrac74\log X
+       +\frac t{16}\log^2(X/(4\pi))+O(1).
+ \label{eq:linear-center-amplitude}
+\end{equation}
+Write $\Delta=t-64>0$.  Direct differentiation of the actual flat
+switch, including the denominator in $\chi$, and smoothness of the
+saddle give
+\begin{equation}
+ \log\beta(64+\Delta)
+   =-64/\Delta+1-\log\kappa_0+O(\Delta),\qquad
+ \frac{\beta'}\beta=64/\Delta^2+O(1).
+ \label{eq:linear-switch-derivatives}
+\end{equation}
+The directly computed time derivative of the known ratio is
+\begin{equation}
+ b_t=(\log E_0)'-\tfrac12\beta'X^2
+                         -\tfrac14\Re\{\alpha(s_X)^2\}.
+ \label{eq:linear-ratio-time-derivative}
+\end{equation}
+Near $64$, $\beta'>0$, the first term is bounded and the last is
+negative of order $\log^2X$.  Hence $b$ is strictly decreasing there
+for large $X$.  At $64$ it is positive of order $X$; at any fixed
+nearby time above $64$ it is negative of order $X^2$.  This proves the
+stated local existence and uniqueness, without an all-time uniqueness
+claim.  At the exact center,
+\begin{equation}
+ \begin{aligned}
+ \beta(t_c)&=\frac\pi{4X}+O(\log^2X/X^2),&
+ \omega(t_c,X)&=\tfrac14\log X+O(1),\\
+ b_t(t_c,X)&=-\frac{\pi X\log^2X}{512}
+                   (1+O(1/\log X)).
+ \end{aligned}
+ \label{eq:linear-center-derivatives}
+\end{equation}
+Taking logarithms of the first relation and using
+\eqref{eq:linear-switch-derivatives} proves
+\eqref{eq:linear-center-location}.  The fixed $\eta$ and amplitude
+constants enter finer terms, not $c_0$.
+On an interval of width $O(1/(X\log X))$ about $t_c$, the same direct
+switch derivatives give
+\begin{equation}
+ b_{tt}=O(X\log^4X).
+ \label{eq:linear-switch-second-derivative}
+\end{equation}
+This is not differentiation of the error in
+\eqref{eq:linear-center-location}. Taylor's formula and
+\eqref{eq:linear-center-derivatives} now yield
+\[
+ \frac{b(t_X(\tau),X)}{\omega(t_X(\tau),X)}
+       =\tau+O(1/\log X).
+\]
+Insert this into Theorem~\ref{thm:regulator-layer} and use Lipschitz
+continuity of $k_h$ to prove \eqref{eq:linear-switch-law}.
+\end{proof}
+The exact implicit center in \eqref{eq:linear-switch-time} cannot be
+replaced by $64+64/\log X$ or by a short inverse-logarithm expansion:
+their omitted time error is much larger than the width
+$1/(X\log X)$.  Its amplitude is specifically that of
+$P_{\rm lin}$; substituting a full-saddle amplitude would require a
+separate recentering estimate.  No numerical value of this center is
+certified here.
+
+For each fixed $y$ with $|y|<h$, the pre-switch tail and
+\eqref{eq:outer-continuum-error} also give the nonuniform fixed-time
+limit
+\begin{equation}
+ \lim_{X\to\infty}\frac{R_H(t,X,y)}{\log X}
+ =\begin{cases}
+ 0,&t\le64,\\
+ k_h(y)/(4\pi),&t>64.
+ \end{cases}
+ \label{eq:linear-fixed-time-jump}
+\end{equation}
+Every finite-height expression is continuous in time, so convergence
+to this displayed limit is not uniform on a time interval crossing
+$64$.  The chosen regulator causes the nonuniform limit; $H$ has no
+finite-height time discontinuity.  This does not obstruct a time/height
+interpolation and gives no RH or earlier-simplicity conclusion.
+
+\subsection{The exact residual and the historical spatial restriction}
+The linear pair is not an exact heat solution.  Differentiating its
+explicit factors gives
+\begin{align}
+ (\partial_t+\partial_{zz})P_{\rm lin}
+ &=\frac14\sum_{w=s,1-s}\mathcal G_t(w)
+       \{\alpha(w)^2-D_t(w)^2-D_t'(w)\},\notag\\
+ \alpha^2-D_t^2-D_t'
+ &=-\alpha'-t\alpha^2\alpha'
+       -\frac t2\{(\alpha')^2+\alpha\alpha''\}
+       -\frac{t^2}4\alpha^2(\alpha')^2.
+ \label{eq:linear-heat-residual}
+\end{align}
+In the proved joint range,
+\begin{equation}
+ |(\partial_t+\partial_{zz})P_{\rm lin}|
+ \le C\frac{1+t\log^2X}{X}
+        \{ |\mathcal G_t(s)|+|\mathcal G_t(1-s)|\}.
+ \label{eq:linear-heat-residual-bound}
+\end{equation}
+This nonzero residual is a field budget, not a propagated evolution
+error for current, density time derivative, forcing, potential time
+derivative or the actual $Q,\Delta Q$.  The static proof uses the
+holomorphic weak identity rather than imposing the exact heat-field
+evolution equations on $P_{\rm lin}$.
+
+At fixed large $t$, the sufficient joint domain above requires
+$X\ge e^{4t}$; it has no proved overlap with the polynomial inner
+window $X\asymp\kappa^{1/3}$ of Theorem~\ref{thm:explicit}.
+That restriction comes from the absolute Gaussian integration loss;
+it is not a necessary limitation of all gamma representations.
+The next section removes this spatial restriction and proves static
+inner overlap using a different, full-saddle field.

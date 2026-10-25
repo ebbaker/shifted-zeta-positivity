@@ -6,18 +6,17 @@ and its drift by explicit saddle quantities, with a separate error for
 each replacement. Throughout this section $\ell,h,Y$ are fixed,
 $Y>h$, and there is no time average.
 
-Use the large saddle in \eqref{eq:saddle} and set
-\begin{equation}
- M_0=2\pi^2e^{q_t(L)}\sqrt{2\pi/\kappa},\qquad
- \epsilon_+(t,x)=M_0\kappa^{-1}e^{-x^2/(2\kappa)},\qquad
- p=\pi/L.
- \label{eq:positiveRegulator}
-\end{equation}
+Use $L,\kappa,M_0$ and $\epsilon_+$ from Section~\ref{sec:protocol},
+and put $p=\pi/L$.
 Implicit differentiation gives $L'=2L/\kappa$ and
 $\kappa'=8L+16tL/\kappa-2$.
 The candidate below uses only $L,\kappa$, the kernel widths and
 fractional parts. Complete-source moments enter its proof and error
 allowances, not its evaluated formula.
+
+The symbol $\alpha=\mu'/\mu$ is local to this inner-clock section;
+it differs from the gamma logarithmic derivative in
+Section~\ref{sec:gamma-outer}.
 
 \subsection{A score estimate for the mean and drift}
 \begin{lemma}[Complete-source score refinement]\label{lem:score}
@@ -148,8 +147,9 @@ $\partial_x(xP-D)=-pP_p$, continuity follows, with no edge point masses.
 
 \subsection{Differentiated root motion and regulator transfer}
 We record the analytical ingredients that connect the explicit formula
-to the adaptive density; full finite constants are given in Note~16
-\cite{n16}. All moments below refer to the complete source law.
+to the adaptive density. Appendix~\ref{app:inner-transport-allowances}
+gives the finite moment and derivative inputs from Note~16 \cite{n16}.
+All moments below refer to the complete source law.
 The weighted bounds in Appendix~\ref{app:source} extend to order six.
 For $j\ge1$ one may use
 \[
@@ -157,8 +157,9 @@ For $j\ge1$ one may use
  \le2^{j-1}e^{Ye_\mu}\{A_j(Y)+e_\mu^jA_0(Y)\}.
 \]
 The Gaussian fourth-moment comparison and centering give
-$|m_4-3v^2|\le E_4=O(\kappa^{-9/4})$, with an explicit allowance
-from the same $D_0,D_2,D_4$ bounds (Note~16, AT3--AT4).
+$|m_4-3v^2|\le E_4=O(\kappa^{-9/4})$, with the explicit finite
+allowance \eqref{eq:inner-fourth-cumulant} from the same $D_0,D_2,D_4$
+bounds and the original $e_\mu$.
 Differentiating the source law, rather than a moment allowance, gives
 \begin{equation}
  \mu'=2\mu v+m_3,\quad v'=2\mu m_3+m_4-v^2,\quad
@@ -198,9 +199,12 @@ At a root $|\cos(\mu a_j)|\le\sin s$; hence
  =O(\kappa^{-7/6}).
  \label{eq:velocitybound}
 \end{equation}
-The moment identities and upper allowances replace the absolute
-moment derivatives here by finite source bounds whenever desired.
-This estimate holds uniformly over the growing zero population.
+The finite bounds \eqref{eq:inner-source-derivative-allowances} and
+\eqref{eq:inner-explicit-derivative-allowances} replace the absolute
+moment derivatives and $|\alpha|$ here by positive complete-source
+allowances, using $L+e_\mu$ in numerators and $L-e_\mu>0$ in
+denominators while retaining the displayed strict gates. This estimate
+holds uniformly over the growing zero population.
 
 For regularization use wider collars of radius $R_c=1/(4\mu)$,
 retaining $r_0$ for location accuracy, and strengthen the gate to
@@ -222,7 +226,7 @@ For $\eta=\sqrt{2\pi}/(Z_-\kappa)$ and $a_e=\eta/c$, set
                                       +n\pi^2Va_e.\label{eq:poleintegral}
 \end{align}
 Here $B_0(Y)=\E e^{Y|u-\mu|}$; the moment $B_2(Y)$ differs from
-the global source derivative constant $B_2$ in Lemma~\ref{lem:B2}.
+the global source derivative constant $B_2^{\Phi}$ in Lemma~\ref{lem:B2}.
 On a full kernel support $\Omega$,
 \begin{equation}
  \int_\Omega w\le W_0=O(\kappa^{-2}),\quad
@@ -367,3 +371,13 @@ $(R_L,J_L)$ by forcing an equation to close. The distinction matters
 because the true adaptive continuity law has the small source in
 \eqref{eq:adaptiveCurrent}, whereas the explicit reference is exactly
 conservative.
+
+Corollaries~\ref{cor:inner-static-overlap} and
+\ref{cor:inner-differentiated-overlap} supply same-time static and
+differentiated overlap with the full gamma saddle under the identical
+physical regulator. The differentiated overlap has the coarser absolute
+rate $O(t^{-1/2})$; it does not replace this theorem's sharper
+$O(L\kappa^{-7/6})=o(L/\kappa)$ inner transport estimate or extend
+its domain. Neither overlap assigns a physical potential or actual
+covariance to the explicit clock, or supplies a join through finite
+heat times.

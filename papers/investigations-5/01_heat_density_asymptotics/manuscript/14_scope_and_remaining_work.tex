@@ -1,0 +1,99 @@
+\section{Coverage and remaining work}\label{sec:remaining}
+The following table records the integrated source scope through Note 31.
+Every estimate uses its stated full buffer and regulator; constants depend
+on the fixed widths, transverse margins and regulator parameters as
+specified in the corresponding theorem. Spatial jets do not include time
+derivatives.
+\begingroup\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.22\textwidth}>{\raggedright\arraybackslash}p{.25\textwidth}>{\raggedright\arraybackslash}p{.45\textwidth}@{}}
+\toprule Domain & Observable & Error and reference\\\midrule\endhead
+$t=-T$, all real $x$, $|y|\le A_0\sqrt T$, full expanding buffer &
+Adaptive density, current, direct time and potential terms, actual covariance &
+$R$: $O(T^{-2})$; $J$: $O(T^{-5/2})$; $R_t,Q$: $O(T^{-3})$;
+$U,W$: $O(T^{-1})$; $U_t$: $O(T^{-2})$;
+$\Delta Q$: $O(T^{-4})$, with finite forcing and trace budgets:
+Theorem~\ref{thm:negative-evolution} and Proposition~\ref{prop:negative-covariance}.\\
+Fixed compact time slab with upper end $\le64$, all height tails &
+Regulated measurement background; actual $Q$ and $\Delta Q$ &
+Linear observables, time and source terms $O(E^2)$; covariance terms
+$O(E^4)$, $E=e^{-a\max(|x|-\ell,0)}$:
+Theorem~\ref{thm:preswitch-tail}.\\
+Eventual positive inner window $X\asymp\kappa^{1/3}$, buffered &
+Finite-phase density and horizontal current/time derivative &
+$O(\kappa^{-1/2})$ density; $O(L\kappa^{-7/6})$ transport:
+Theorem~\ref{thm:explicit}.\\
+Fixed $[32,T]$, $X\to\infty$; or $32\le t\le\log X/4$ &
+Linear gamma static density and $U,W$ spatial jets through order four &
+$O_T((1+\log^2X)/X)$; joint $O(X^{-3/4}(1+\log^4X))$:
+Theorem~\ref{thm:linear-static}.\\
+Compact $I\Subset(64,\infty)$; or $128\le t\le\log X/4$ &
+Linear gamma finite-phase density; phase-free consequence &
+$O_I((1+\log^2X)/X)$; joint $O(X^{-3/4}(1+\log^4X))$;
+compact continuum adds $O((\log X)^{-4})$:
+Corollary~\ref{cor:outer-finite-phase}.\\
+Linear-model regulator layer, joint range or fixed $[32,T]$ &
+Two-layer regularized density and exact-center switch scaling &
+$O(1)$ absolute layer error; $O(1/\log X)$ after normalization:
+Theorem~\ref{thm:regulator-layer}, Corollary~\ref{cor:switch-scaling}.\\
+$t\ge32$, $2+t+X$ sufficiently large, $|y|\le Y$ &
+Full-saddle static density and $U,W$ spatial jets through order four &
+$O(t^{3/2}/(1+X+t\log(2+t+X))^2)$:
+Theorem~\ref{thm:full-saddle-static}.\\
+All real $x$ at large $t$; all $t\ge32$ at large $X$; fixed $[32,T]$ &
+The same full-saddle static observables &
+$O(t^{-1/2}\log^{-2}(2+t))$;
+$O(X^{-1/2}\log^{-3/2}(2+X))$; $O_T(X^{-2})$:
+Corollary~\ref{cor:full-saddle-limits}.\\
+Eventual buffered inner window, with a nonempty inner/outer spatial overlap &
+Full-saddle versus explicit inner density with identical physical $q$ &
+$O(\kappa^{-1/2})$ by comparison through $R_H$:
+Corollary~\ref{cor:inner-static-overlap}.\\
+All real $x$, $|y|\le Y$, one eventual $t\ge T_*$ &
+Full-saddle positive evolution, actual signed covariance and adaptive terms &
+$U,W$ spatial order $\le4$ and $R,\overline C$ order $\le2$: $Ce_*$;
+$J,Q,U_t,W_t,R_t,\overline C_t,\overline{\mathcal B},\overline{\mathcal S}$
+order $\le2$: $C\mathfrak e_{\rm ev}\le Ct^{-1/2}$;
+model equation corrections $Cd_*$:
+Theorem~\ref{thm:positive-evolution}, Proposition~\ref{prop:positive-residual-equations}.\\
+Each fixed $[32,T]$, $X\ge X_T$, $|y|\le Y$, including the flat switch &
+Full-saddle static, current/covariance, direct time and equation corrections;
+orders as in the positive theorem &
+Static $O_T(X^{-2})$; current/covariance $O_T(\log^2X/X^2)$;
+time-dependent terms $O_T(\log^2X/X)$; corrections $O_T(X^{-3})$:
+Theorem~\ref{thm:compact-positive-evolution}.\\
+Eventual buffered inner window, same physical $q$ &
+Full-saddle versus explicit-clock current and density time derivative &
+$O(t^{-1/2})+O(L\kappa^{-7/6})$, an absolute comparison retaining the
+sharper independent inner theorem:
+Corollary~\ref{cor:inner-differentiated-overlap}.\\
+Any compact time slab and compact full spatial buffer; all real $x$ when its upper end is $\le64$ &
+Finite-source density, current, direct time and actual covariance &
+Explicit source/jet and nonlinear allowances, including cellwise and
+amplitude-aware refinements: Theorem~\ref{thm:finitejets},
+Proposition~\ref{prop:fieldstability}, Theorem~\ref{thm:covariance} and
+Propositions~\ref{prop:localjets} and~\ref{prop:localnonlinear}.\\\bottomrule
+\end{longtable}\endgroup
+
+Here $e_*=t^{3/2}/N_*^2$, $\mathfrak e_{\rm ev}=e_*\mathcal L^2$,
+$d_*=t/N_*^3$, $N_*=1+X+t\mathcal L$ and
+$\mathcal L=\log(2+t+X)$. The linear gamma model's sufficient restriction
+$X\ge e^{4t}$ is not the paper's final spatial limitation. The full saddle
+removes it and supplies static and direct evolution comparisons under
+their separately stated quantifiers. Both models retain exact nonzero
+heat residuals \eqref{eq:linear-heat-residual} and~\eqref{eq:full-saddle-residual}.
+Static errors are not differentiated to obtain evolution; the full-saddle
+model's observable equations include the additional residual corrections.
+Current research statuses are maintained in the
+\repo{research-progress/01_AVERAGED_DENSITY_RESEARCH_PROGRESS_20261024.md}{live progress register}.
+
+Same-time static and differentiated spatial overlap are distinct from
+joining through finite heat times. A smooth regulator defined for all $t$ does not by itself give an
+all-time approximation. Informative finite-core accuracy, compatible traces and joining estimates
+remain to be proved. The failed 192-cell trial remains failed, and
+HDA-17 acceptance, HDA-18 assembly and HDA-20 independent specialist
+review do not follow from this production task. A future splice must pay
+its actual cutoff, time-derivative and heat-residual terms, physical
+potential traces, adaptive curvature and forcing, and actual covariance;
+no blend is constructed here. There is no autonomous covariance closure,
+certified numerical onset, RH conclusion or earlier-time simplicity
+conclusion.

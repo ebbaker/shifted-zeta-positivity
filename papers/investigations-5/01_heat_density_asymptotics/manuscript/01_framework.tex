@@ -9,21 +9,29 @@ potential equation contains an actual gradient covariance.
 
 We use $z=x+iy$; height means $x$. The physical density is never divided
 by its mean except when stating a scaled limiting profile.
-Sections~\ref{sec:negative}--\ref{sec:positive} first establish the
-endpoint estimates for a fixed positive regulator.
-Section~\ref{sec:explicit} then gives the explicit differentiated clock
-for a specified adaptive regulator. Section~\ref{sec:finite} constructs
-finite-time approximants under the same globally extended measurement
-protocol. The fixed-regulator and adaptive statements are distinguished
-throughout; derivatives of an error bound are never substituted for
-bounds on the differentiated error.
+Sections~\ref{sec:negative}--\ref{sec:positive} retain the earlier
+fixed-regulator preliminaries. Section~\ref{sec:protocol} fixes the common
+adaptive measurement used for the new all-height negative evolution,
+inner differentiated clock, static gamma constructions and finite-time
+comparison. The full saddle supplies static all-height positive
+comparison and same-time inner overlap. Section~\ref{sec:positive-evolution}
+adds direct evolution and actual-covariance comparison, with separately
+proved late-time and compact-time exterior quantifiers. The joint static
+allowance is $O(t^{3/2}/(1+|x|+t\log(2+t+|x|))^2)$; the late-time
+evolution allowance is $O(t^{-1/2})$. The finite-time problem still needs
+informative finite-core and joining estimates. Derivatives of a static
+error allowance never replace a differentiated comparison.
 
-The account consolidates repository Notes~02, 04--06, 09, 11--12,
-14, 16 and 19--20 \cite{n02,n04,n05,n06,n09,n11,n12,n14,n16,n19,n20}.
-Long finite-constant derivations and computational records remain in
-those notes. All mathematical review to date is by the same assistant.
-Appendix~\ref{app:numerics} gives brief supporting checks, and
-Appendix~\ref{app:scope} records the control hypotheses and limitations.
+This version consolidates results through Note~31: Notes~02, 04--06,
+09, 11--12, 14, 16, 19--20, 23, 25--28 and 30--31
+\cite{n02,n04,n05,n06,n09,n11,n12,n14,n16,n19,n20,n23,n25,n26,n27,n28,n30,n31}.
+Their domains and regulators are stated separately. The exact heat
+identities in this framework are complemented by the residual-bearing
+model equations in Section~\ref{sec:positive-evolution}. The underlying
+research assessments are same-assistant reviews; manuscript production
+is not independent specialist mathematical review.
+Appendix~\ref{app:numerics} retains the diagnostic evidence, and
+Appendix~\ref{app:scope} maps the sources and collision-control premises.
 
 \subsection{Canonical normalization and a fixed regulator}
 Define
@@ -202,3 +210,28 @@ $\Lambda_q=\log(1+q/|H|^2)$. Then
 This retains the spatial correction without a pointwise bound on
 $H_z/H$ near its poles. Neither \eqref{eq:adaptiveR} nor
 \eqref{eq:adaptiveCurrent} is an autonomous equation for $R$ alone.
+
+\begin{lemma}[Static weak density identity]\label{lem:holomorphic-weak-density}
+Let $F$ be holomorphic on the full support buffer of a real compactly
+supported $C^2$ test $\psi$, and let $q>0$ be smooth there. With
+$S_F=\log(|F|^2+q)$, $w_F=q/(|F|^2+q)$ and $r=\log q$,
+\begin{align}
+ 4\pi\langle\rho_F,\psi\rangle
+ ={}&\int S_F\Delta\psi+2\int w_F\nabla r\cdot\nabla\psi\notag\\
+ &+\int\{w_F\Delta r+w_F(1-w_F)|\nabla r|^2\}\psi.
+ \label{eq:static-weak-density}
+\end{align}
+No heat equation is required.
+\end{lemma}
+\begin{proof}
+The spatial calculation proving \eqref{eq:adaptiveC} uses only
+holomorphy, so $\Delta S_F=4\pi(\rho_F+C_{\epsilon,F})$.
+Pair this identity with $\psi$, move the Laplacian onto the test and
+integrate the divergence in $C_{\epsilon,F}$ once. This gives the
+formula, including both spatial regulator terms \cite{n28,n30}.
+\end{proof}
+Thus this lemma applies to the residual-bearing gamma fields below.
+The exact adaptive evolution equations apply to $H$ and exact heat
+fields. For the full-saddle comparison model,
+Proposition~\ref{prop:positive-residual-equations} supplies the retained
+residual corrections; the heat-field identities cannot be applied unchanged.

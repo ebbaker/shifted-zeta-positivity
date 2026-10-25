@@ -74,6 +74,90 @@ This proves \eqref{eq:momentbounds}. For fixed $Y$,
 $D_p(Y)=O(\kappa^{-1/4})$, yielding \eqref{eq:momentorders}.
 No truncated theta source or measured variance is substituted here.
 
+
+\subsection{Finite moment inputs for inner transport}
+\label{app:inner-transport-allowances}
+The following finite inputs from Note~16, AT2--AT6 \cite{n16}, complete
+the root-velocity allowance in Section~\ref{sec:explicit}. Retain
+\eqref{eq:sourcegates}, the normalization gate $Z_->0$, and the
+complete-source $G_p,D_p,A_p$ through order six. Use the original
+$e_\mu$ in \eqref{eq:allowances}; it need not equal the refined score
+allowance $e=\min\{e_\mu,e_s\}$ of Lemma~\ref{lem:score}.
+For the centered positive moments
+$B_p(Y)=\E[|u-\mu|^pe^{Y|u-\mu|}]$, define
+\begin{align}
+ \overline B_0(Y)&=e^{Ye_\mu}A_0(Y),\notag\\
+ \overline B_p(Y)&=2^{p-1}e^{Ye_\mu}
+             \{A_p(Y)+e_\mu^pA_0(Y)\}\quad(1\le p\le6).
+ \label{eq:inner-positive-moments}
+\end{align}
+Then $B_p(Y)\le\overline B_p(Y)$, and
+$\overline B_p(Y)=O(\kappa^{-p/2})$ for fixed $p,Y$.
+These bounds follow from $|\mu-L|\le e_\mu$ and the weighted
+complete-source inequalities already established above.
+Put
+\begin{equation}
+ \overline v=A_2(0),\qquad
+ \nu_s=\frac{D_2(0)+D_0(0)}{Z_-}+\kappa e_\mu^2,
+ \qquad |\kappa v-1|\le\nu_s=O(\kappa^{-1/4}).
+ \label{eq:inner-variance-allowance}
+\end{equation}
+For the signed centered moments $m_j=\E(u-\mu)^j$, the required finite
+fourth-cumulant allowance is
+\begin{align}
+ |m_4-3v^2|\le E_4:={}&
+ \kappa^{-2}\frac{D_4(0)+3D_0(0)}{Z_-}
+ +4e_\mu A_3(0)+6e_\mu^2A_2(0)+3e_\mu^4\notag\\
+ &+3(\overline v+\kappa^{-1})\nu_s/\kappa
+ =O(\kappa^{-9/4}).
+ \label{eq:inner-fourth-cumulant}
+\end{align}
+Indeed the raw fourth moment about $L$ differs from $3/\kappa^2$
+by at most the first term, since the Gaussian fourth moment is three
+times its mass. If $d_\mu=\mu-L$, the centered fourth moment is
+\[
+ m_4=\E(u-L)^4-4d_\mu\E(u-L)^3
+                   +6d_\mu^2\E(u-L)^2-3d_\mu^4.
+\]
+The centering terms give the middle allowances in
+\eqref{eq:inner-fourth-cumulant}; comparison of $3v^2$ with
+$3/\kappa^2$ gives its last term.
+
+Differentiate the complete source law itself,
+$\partial_t(dP_t)=(u^2-\E u^2)dP_t$, to obtain the exact identities
+\[
+ \mu'=2\mu v+m_3,\qquad v'=2\mu m_3+m_4-v^2,\qquad
+ m_3'=2\mu(m_4-3v^2)+m_5-4vm_3.
+\]
+Thus the inner drift $\alpha=\mu'/\mu$ and moment derivatives have
+finite bounds
+\begin{align}
+ |\alpha|&\le2v+\overline B_3(0)/\mu,\notag\\
+ |v'|&\le2\mu\overline B_3(0)+\overline B_4(0)+v^2,\notag\\
+ |m_3'|&\le2\mu E_4+\overline B_5(0)
+                         +4v\overline B_3(0)
+             =O(L\kappa^{-9/4}).
+ \label{eq:inner-source-derivative-allowances}
+\end{align}
+Here $v\le\overline v$. For fully specified positive upper allowances,
+require the additional gate $L-e_\mu>0$ and use
+\begin{align}
+ \widehat A_\alpha&=2\overline v+
+                   \frac{\overline B_3(0)}{L-e_\mu},\notag\\
+ \widehat V_2&=2(L+e_\mu)\overline B_3(0)
+                         +\overline B_4(0)+\overline v^2,\notag\\
+ \widehat V_3&=2(L+e_\mu)E_4+\overline B_5(0)
+                         +4\overline v\overline B_3(0).
+ \label{eq:inner-explicit-derivative-allowances}
+\end{align}
+These bound $|\alpha|$, $|v'|$ and $|m_3'|$, respectively.
+More generally use $L+e_\mu$ for $\mu$ in positive numerator terms
+and $L-e_\mu>0$ in denominator terms, retaining every carrier,
+source and derivative gate, including $d_z>0$ in
+\eqref{eq:derivativegate}. They provide finite inputs for
+\eqref{eq:velocitybound}; no derivative of a static error allowance or
+numerical onset is inferred.
+
 \section{Exact cosine-cell covariance}\label{app:cosine}
 The elementary carrier also illustrates why averaging does not remove
 the fluctuation term. For $H=M\cos(Lz)$ with fixed $L>0$,
@@ -150,6 +234,10 @@ retained. The local polynomial evaluator has a separate truncation bound.
 Details and all arithmetic/filter limitations are in Note~23 and its
 record \cite{n23,localrecord}. No uniform numerical certificate is claimed.
 
+Notes~25--28 and 30--31 were derived analytically and add no numerical
+onset certificate; compilation, link checks and visual inspection are
+production checks rather than numerical support for their theorems.
+
 \section{Source crosswalk and control scope}\label{app:scope}
 The exact framework is from Note~02; the small-width expansion and
 pilot are from Note~04; fixed-region and cosine-cell formulas are from
@@ -165,8 +253,98 @@ allowances and declares a first transition trial. The improved first term in
 \eqref{eq:Vorder} follows by inserting Note~19's mean bound into the
 earlier determinant proof.
 Appendix~\ref{app:source} records explicitly the weighted extension
-of BW10 Note~20 used in this draft.
+of BW10 Note~20 used in this draft. Its
+Section~\ref{app:inner-transport-allowances} consolidates Note~16,
+AT2--AT6, including the finite fourth-cumulant and moment-derivative
+allowances used by the inner transport proof.
 The numerical appendix cites execution records separately from proofs.
+
+The additional mathematical sources are placed as follows; source equation
+numbers identify the frozen notes, while manuscript numbering is automatic.
+\begingroup\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.25\textwidth}>{\raggedright\arraybackslash}p{.69\textwidth}@{}}
+\toprule Source & Integrated result and location\\\midrule\endhead
+Note 25, OH2--OH11 & Complete contour jets and pre-switch density,
+current, time, actual covariance, forcing and trace tails, with explicit
+threshold: Lemma~\ref{lem:contour-jets} and Theorem~\ref{thm:preswitch-tail}.\\
+Note 25, OH13--OH17 & Positive-cutoff asymptotic and fixed-time off-axis
+physical-potential obstruction: Proposition~\ref{prop:cutoff-potential}.\\
+Note 26, NE1--NE24 & Exact-regulator negative evolution, finite jet and
+time budgets, composition derivatives, covariance cancellation and
+forcing/traces: Theorem~\ref{thm:negative-evolution},
+Lemma~\ref{lem:negative-spatial-jets} and
+Proposition~\ref{prop:negative-covariance}.\\
+Note 27, GO4--GO26 & Canonical convolution, exact gamma pair,
+carrier-relative error and physical collars/regulator bias:
+Section~\ref{sec:gamma-outer}.\\
+Note 27, GO27--GO33 & Exact finite phase, continuum error and fixed-time
+nonuniform switch limit: Corollary~\ref{cor:outer-finite-phase} and the
+switch discussion in Section~\ref{sec:gamma-outer}.\\
+Note 28, JT10--JT21, JT18a & Time-dependent linear-pair budget,
+arbitrary-positive-$q$ collar lemma, static potential jets and two
+regulator regimes: Proposition~\ref{prop:linear-field-budget},
+Lemma~\ref{lem:uniform-q-collar}, Theorem~\ref{thm:linear-static}.\\
+Note 28, JT22--JT33 & Two-layer shape, exact implicit center, width and
+rescaled law: Theorem~\ref{thm:regulator-layer} and
+Corollary~\ref{cor:switch-scaling}.\\
+Note 28, JT34--JT36 & Exact nonzero linear-pair heat residual:
+\eqref{eq:linear-heat-residual}; its range is a historical sufficient bound.\\
+Note 30, FS3--FS20 & Full implicit saddle, branch, determinant, both
+deformed arms/connectors, middle, every arithmetic mode and joint field
+error: Section~\ref{sec:full-saddle}.\\
+Note 30, FS21--FS31 & Actual collars, mass-anchored adaptive transfer,
+static spatial jets, uniform limits and same-time inner overlap:
+Theorem~\ref{thm:full-saddle-static}, Corollaries~\ref{cor:full-saddle-limits}
+and~\ref{cor:inner-static-overlap}.\\
+Note 30, FS32--FS34 & Direct implicit derivatives and exact nonzero
+full-saddle heat residual: \eqref{eq:full-saddle-residual}.\\
+Note 31, PE1--PE6 & Positive all-height direct-comparison theorem,
+with separate static, evolution and residual scales and explicit
+spatial derivative orders: Theorem~\ref{thm:positive-evolution}.\\
+Note 31, PE7--PE12 & Full-disk Cauchy estimates, actual root motion,
+bounded residues, residual root-speed correction and analytic regular
+parts: Lemma~\ref{lem:positive-evolution-jets}.\\
+Note 31, PE13--PE17 & Regulator-uniform regularized-pole comparison,
+smooth fractions at zeros and displacement logarithm:
+Lemma~\ref{lem:regularized-poles}.\\
+Note 31, PE18--PE21 & Exact time and mixed regulator coefficients,
+two regimes, physical mass anchor and the linear-in-$\lambda$ pole
+payment: Lemma~\ref{lem:positive-regulator-payment}.\\
+Note 31, PE22--PE27 & Direct time identities, weak current and
+differentiated weak density, retaining all regulator terms and kernel
+orders: Proposition~\ref{prop:positive-direct-evolution}.\\
+Note 31, PE28--PE32 & Actual signed gradient stress, separately paid
+squared filtered gradients, actual covariance and its Laplacian:
+Proposition~\ref{prop:positive-actual-covariance}.\\
+Note 31, PE33--PE39 & Exact residual-bearing current, potential and
+density equations, weak residual corrections and actual signed source:
+Proposition~\ref{prop:positive-residual-equations}.\\
+Note 31, PE40 & Differentiated inner overlap through $H$, at its coarser
+absolute rate, preserving the sharper inner transport theorem:
+Corollary~\ref{cor:inner-differentiated-overlap}.\\
+Note 31, PE41--PE44 & Compact-time outer evolution, flat-switch
+derivative payment and its distinct time-error rate:
+Theorem~\ref{thm:compact-positive-evolution}.\\\bottomrule
+\end{longtable}\endgroup
+Notes 24 and 29 are continuation history, and HDA-10-MI1 r1 is an
+editorial specification; none supplies a new theorem. The completed
+HDA-10-MI1 r1 revision covered Notes~25--28 and 30 under its original
+author-directed freeze. The present subsequent revision incorporates
+Note~31 \cite{n31} following the recommendations in
+\repo{reviews/15_MANUSCRIPT_REVIEW_AND_SOL_RECOMMENDATIONS_20261024.md}{Review 15};
+it does not rewrite that historical scope. Current mathematical coverage
+is through Note~31. Reviews 09--13 are the original same-assistant
+analytical assessments:
+\repo{reviews/09_OUTER_TAIL_AND_NEGATIVE_ENDPOINT_SELF_REVIEW_20261024.md}{Review 09},
+\repo{reviews/10_GAMMA_OUTER_DENSITY_SELF_REVIEW_20261024.md}{Review 10},
+\repo{reviews/11_JOINT_OUTER_AND_SWITCH_LAYER_SELF_REVIEW_20261024.md}{Review 11},
+\repo{reviews/12_FULL_GAMMA_SADDLE_AND_INNER_OVERLAP_SELF_REVIEW_20261024.md}{Review 12},
+\repo{reviews/13_POSITIVE_EVOLUTION_AND_COVARIANCE_SELF_REVIEW_20261024.md}{Review 13}.
+Review~13 was written by the assistant that derived Note~31 and retains
+the status ``proved in-note; same-assistant review only.'' Review~15 is
+also a same-assistant analytical/editorial review, not a distinct-reviewer
+or specialist audit. Sol's later integration and production assessments
+are not new mathematical audits or independent reviews.
 
 The repository's collision register \cite{controls} imposes several
 useful scope checks. Finite atomic collision controls fail the smooth
@@ -201,12 +379,42 @@ simplicity or as an unforced theta equilibrium.
 The repository's evidence and scope policies \cite{scope} are therefore
 part of the research record, not additional mathematical premises.
 
+The Gaussian/source-Taylor and generic rational-map comparisons can
+also hold for smooth colliding sources with their own constants. The
+contour theorem uses canonical even analytic reflection and the complete
+theta-coefficient envelope; atoms and heat polynomials lack that source.
+Changed-source controls do not inherit its constants. The gamma
+application requires the unchanged xi completion/reflection and the
+ordinary full Dirichlet series. Euler-factor and primitive perturbations
+change these data; weighted-square and reflected controls do not supply
+the same canonical completion and coefficient bounds. These are premise
+screens, not a claim that generic collar or covariance inequalities
+exclude those controls. The simple-root collar argument is local to its
+proved regime and excludes no multiple event elsewhere. Note~31's
+generic regularized-pole and signed-stress identities can likewise hold
+on simple-root subdomains of colliding controls; they do not exclude
+those controls' events elsewhere. Finite-field stability retains its
+validity through multiple events under its positive
+floor. The two off-axis regularized layers are not complex zeros.
+Static or late-time agreement gives neither earlier-time simplicity nor RH.
+No control numerics were rerun for this integration.
+
 \section*{Acknowledgment and preparation record}
-This manuscript was drafted for Edward Baker with substantial assistance
-from the OpenAI model \texttt{gpt-6-astra} in Codex, recorded reasoning
-effort \texttt{max}, on 24 October 2026.
-The model assisted with derivations, consolidation, code and prose.
-The mathematical results and their checks have received same-assistant
-review only; no independent mathematical review is claimed.
+This manuscript was drafted for Edward Baker with substantial LLM
+assistance. The historical derivations, analytical consolidation and
+recorded checks were prepared with OpenAI \texttt{gpt-6-astra} in Codex,
+recorded reasoning effort \texttt{max}, on 24 October 2026; the linked
+notes retain their actual preparation attribution and scope.
+The completed HDA-10-MI1 r1 integration of Notes 25--28 and 30, and this
+subsequent Review~15 revision integrating Note~31 and the existing finite
+inner transport allowances, were produced with
+\texttt{gpt-6.1-sol}, actual recorded effort \texttt{ultra}, on
+24 October 2026 (America/New\_York). Sol performed source organization,
+typesetting, reference synchronization and PDF production; the analytical
+derivations and original reviews retain their Astra attribution.
+This production work is not a
+separate mathematical audit. The original research reviews remain
+same-assistant reviews; changing the production model does not make them
+independent. No independent specialist mathematical review is claimed.
 The maintained source and linked notes preserve the derivations and
-their stated limitations. Numerical agreement is not used as a proof.
+their limitations. Numerical agreement is not used as proof.

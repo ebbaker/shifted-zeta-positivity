@@ -1,54 +1,59 @@
 # Analytical working manuscript
 
-24 October 2026. Drafted for Edward Baker with substantial LLM assistance,
-**gpt-6-astra (Codex), recorded effort max**. Same-assistant review only.
+24 October 2026. Drafted for Edward Baker with substantial LLM assistance.
+Historical analytical derivations: **gpt-6-astra (Codex), effort max**.
+Manuscript integration and production: **gpt-6.1-sol, actual effort ultra**.
+The original research reviews remain same-assistant; production is not an
+independent mathematical audit.
 
-Open [main.tex](main.tex) or this folder in the built-in LaTeX editor.
-This is the one maintained manuscript, rewritten at the author's request
-to incorporate the explicit clock and finite-time construction. The
-checked reading copy has **28 pages**. No snapshot folder was created.
+The one maintained [source](main.tex) now incorporates results through
+**Note 31**, following [Review 15](../reviews/15_MANUSCRIPT_REVIEW_AND_SOL_RECOMMENDATIONS_20261024.md).
+The checked local reading copy has **65 pages**. The completed earlier
+HDA-10-MI1 r1 covered Notes 25--28 and 30; its frozen specification,
+manifest and [production assessment](../reviews/14_MANUSCRIPT_INTEGRATION_PRODUCTION_REVIEW_20261024.md)
+remain historical. This subsequent revision includes all Review 15 changes.
 
-The argument now runs from the canonical heat field and exact fixed/adaptive
-regulator equations to the negative Gaussian endpoint, complete-source
-positive carrier, explicit differentiated saddle clock, growing-block
-Vandermonde and pair matrices, global scope, and a finite-source bridge.
-The clock has O(kappa^-1/2) density error and O(L*kappa^-7/6) current/time
-error on the buffered eventual inner window. The finite-time construction
-pays density/current/time and actual covariance/Laplacian comparison errors.
-The sharper score mean also improves one term of the determinant bound.
+The new section proves positive all-height current, direct time,
+forcing/source and actual covariance comparison with absolute error
+O(t^-1/2), while retaining the sharper static density/potential-jet rate.
+A separate compact-[32,T] exterior theorem includes the flat-switch
+payment and its weaker time-error rate. Exact nonzero gamma residuals
+and both curvature derivatives remain in the model equations. The
+current/covariance and time statements keep their precise spatial orders.
+Differentiated inner overlap is an absolute comparison; the independent
+inner O(L kappa^-7/6) transport estimate remains sharper.
 
-The manuscript incorporates Notes 14, 16, 19, 20 and 23 alongside the earlier
-fixed-regulator results. Numerical support is confined to four short
-paragraphs in Appendix C; details remain in the linked research notes and
-execution records. Useful transition overlap, actual clock covariance,
-positive outer heights and certified finite onset remain open. A smooth
-global regulator is not a completed all-time approximation.
+The revision also corrects exactly three B_2^Phi source-bound occurrences,
+adds finite E4/moment-derivative allowances to Appendix A, and supplies an
+early five-model/domain guide and notation key. The four diagnostic
+paragraphs and failed 192-cell trial remain. Informative finite-core
+accuracy, compatibility/joining through finite heat times, effective
+onsets, autonomous closure and distinct specialist review remain separate
+obligations. No numerical research was run.
 
-## Build and output policy
+## Build and reading copy
 
-From this directory run:
+Run from the repository root:
 
 ~~~sh
-python3 -B build.py
+python3 -B papers/investigations-5/01_heat_density_asymptotics/manuscript/build.py
 ~~~
 
-The script requires LaTeX and latexmk. The built-in editor can also compile
-main.tex. The script discovers the repository root and exports to
+The unchanged script detects the checkout root and exports to
+`output/pdf/heat_density_asymptotics/heat_density_asymptotics.pdf`.
+Auxiliaries stay in that ignored folder's `.build/`. No generated PDF or
+auxiliary belongs beside the TeX or in Git. The built-in editor is a
+source-diagnostic fallback; this revision uses the maintained export build.
 
-    output/pdf/heat_density_asymptotics/heat_density_asymptotics.pdf
+The [current build record](BUILD_RECORD_20261024.json) pins all 15 TeX files,
+build.py and the 65-page export. It records zero warnings, 42 resolving
+local links, internal destinations and all-page visual inspection, with
+previous 54-, 28- and 25-page export provenance retained.
+[Production assessment](../reviews/16_REVIEW15_REVISION_PRODUCTION_ASSESSMENT_20261024.md)
+documents source fidelity, actual checks and remaining work. These checks
+inspect the artifact and do not independently validate the source proofs.
 
-relative to that root. Auxiliary files and the driver stay in the ignored
-output folder's .build directory. No PDF or build auxiliary belongs in
-this manuscript directory or in Git. The local PDF links use the detected
-checkout root; the editor fallback is declared in main.tex.
-
-The [build record](BUILD_RECORD_20261024.json) identifies the current 28-page
-export, its source hashes and production checks. The previous 25-page
-integration remains documented in [Note 21](../notes/21_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261024.md).
-The current addition is [Note 23](../notes/23_FINITE_TRANSITION_CONTRACT_AND_LOCAL_BOUNDS_20261024.md),
-with [same-assistant review](../reviews/08_FINITE_TRANSITION_LOCAL_BOUNDS_SELF_REVIEW_20261024.md).
-It adds cellwise source, amplitude-aware nonlinear, actual covariance and
-local-evaluation allowances. The declared first trial does not meet its
-observable tolerances; no uniform numerical certificate or endpoint
-connection is claimed. Successful production checks do not independently
-validate mathematics.
+Current research priorities and statuses remain in the
+[sole progress register](../research-progress/01_AVERAGED_DENSITY_RESEARCH_PROGRESS_20261024.md).
+Next research: Analytical — Astra on the finite-core accuracy and joining
+contract; no numerical packet has been issued.

@@ -1,0 +1,148 @@
+\section{A common regulator and spatial averaging protocol}\label{sec:protocol}
+All new endpoint and outer theorems use fixed $\ell,h>0$ and fixed
+spatial convolution $K$. The general fixed space--time filter in
+Section~\ref{sec:framework} remains a separate exact framework; the
+new theorems do not automatically assert time-averaged evolution.
+
+Define the compact kernel
+\begin{equation}
+ k(v)=\frac{315}{256}(1-v^2)^4\mathbf1_{\{|v|\le1\}},
+ \qquad k_\ell(x)=\ell^{-1}k(x/\ell),\quad
+ K(x,y)=k_\ell(x)k_h(y).
+ \label{eq:kernel}
+\end{equation}
+It is nonnegative, normalized and $C^3$, with bounded weak derivatives through order four. 
+For sufficiently large $t$, let $L$ denote the large solution of
+\begin{equation}
+ 4\pi e^{4L}=2tL+9,\qquad \kappa=8tL-2t+36 .
+ \label{eq:saddle}
+\end{equation}
+For the large saddle in \eqref{eq:saddle}, define
+\begin{equation}
+ M_0=2\pi^2e^{tL^2+9L-\pi e^{4L}}\sqrt{2\pi/\kappa},\qquad
+ \epsilon_+(t,x)=M_0\kappa^{-1}e^{-x^2/(2\kappa)}.
+ \label{eq:positiveRegulator}
+\end{equation}
+
+\subsection{One regulator for both endpoints}
+Let $C=\Phi(0)\sqrt\pi/2$, fix $\eta>0$, and define
+\[
+ \epsilon_b(t)=\eta C(1+t^2)^{-1/4}.
+\]
+For $64<t<128$ put $v=(t-64)/64$ and
+$\chi(t)=e^{-1/v}/(e^{-1/v}+e^{-1/(1-v)})$; extend $\chi$ by zero
+for $t\le64$ and one for $t\ge128$. Set
+\begin{equation}
+ \epsilon_g(t,x)=
+ \begin{cases}
+ \epsilon_b(t),&t\le64,\\
+ \exp\{(1-\chi(t))\log\epsilon_b(t)+\chi(t)\log\epsilon_+(t,x)\},
+       &t>64.
+ \end{cases}
+ \label{eq:globalRegulator}
+\end{equation}
+This is positive and smooth at every finite $(t,x)$.
+To check that the large saddle used in $\epsilon_+$ exists throughout
+the switch, the maximum of $q_t'$ (with source exponent
+$q_t$ as in \eqref{eq:q}) is
+$(t/2)(\log(t/(8\pi))-1)+9$, attained at
+$u_*=\log(t/(8\pi))/4$.
+It is positive at $t=64$ and increasing thereafter; the larger zero
+has $\kappa>0$. Smooth extension slightly below $64$ and the flatness
+of $\chi$ justify the gluing. The switch points specify the regulator;
+they are not onset times for Theorem~\ref{thm:explicit}.
+
+At $t=-T$,
+$\epsilon_b/ (\eta C_T)=(1+T^{-2})^{-1/4}=1+O(T^{-2})$.
+Using \eqref{eq:Eminus} with this regulator and replacing $\eta$ by
+$\eta(1+T^{-2})^{-1/4}$ in \eqref{eq:adaptiveNegative} preserves its
+$O(T^{-1})$ scaled error. Indeed
+$|\partial_{\log\eta}F_\eta|\le2F_\eta$, and $F_\eta$ is bounded on
+each fixed scaled transverse strip, uniformly over real scaled heights.
+For $t\ge128$, \eqref{eq:globalRegulator} equals
+\eqref{eq:positiveRegulator} exactly.
+On a compact time and spatial buffer it has a positive lower bound.
+After the height dependence turns on, positivity alone does not supply
+such a bound over all real heights.
+
+
+It is useful to write
+\begin{equation}
+ \epsilon_g(t,x)=E_0(t)e^{-\beta(t)x^2/2},\qquad
+ \beta(t)=\begin{cases}0,&t\le64,\\\chi(t)/\kappa(t),&t>64,\end{cases}
+ \label{eq:regulator-beta}
+\end{equation}
+where $E_0=\epsilon_b$ for $t\le64$ and
+$E_0=\epsilon_b^{1-\chi}(M_0/\kappa)^\chi$ for $t>64$.
+The numbers $32,64,128$ have different roles: $32$ is an analytical time
+floor in the outer proofs, and $64,128$ are chosen regulator switch
+points. None is a certified asymptotic onset. For $t>64$ this smooth
+regulator has no positive spatial floor on an unbounded height tail.
+
+For any holomorphic comparison field $F$ on the full test buffer, use the
+same physical $q=\epsilon_g^2$, $r=\log q$, and write
+\begin{align}
+ S_F&=\log(|F|^2+q),& w_F&=q/(|F|^2+q),\notag\\
+ U_F&=K*S_F,&W_F&=K*w_F,\notag\\
+ \rho_F&=\frac{q|F_z|^2}{\pi(|F|^2+q)^2},&R_F&=K*\rho_F.
+ \label{eq:common-observables}
+\end{align}
+When current is used, $j_F=qF_{zz}\overline{F_z}/[\pi(|F|^2+q)^2]$
+and $J_F=K*j_F$; its complex value represents its real two-vector.
+The actual $Q_F$ is defined by \eqref{eq:filtereddefs} with $F$ in place
+of $H$ and this spatial kernel. Physical potential offsets are retained.
+A carrier normalization inside a proof must carry the same change in
+$q$; no harmonic correction or mass renormalization is implicit.
+
+\subsection{Models, domains and notation}
+The constructions below serve different buffered regimes. This guide
+records their roles; the complete error contracts are collected in
+Section~\ref{sec:remaining}.
+\begingroup\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.13\textwidth}>{\raggedright\arraybackslash}p{.33\textwidth}>{\raggedright\arraybackslash}p{.46\textwidth}@{}}
+\toprule
+Model & Main domain and use & Heat equation, covariance and result\\
+\midrule\endhead
+$G_T$ & Negative endpoint, all real $x$ and the expanding transverse
+buffer \eqref{eq:negative-buffer}. &
+Exact heat field; $Q_G$ is computed from its physical potential.
+Theorem~\ref{thm:negative-evolution}.\\
+$(R_L,J_L)$ & Eventual positive inner window, fully buffered and of
+size $\kappa^{1/3}$; finite lattice phase and transport. &
+Exactly conservative observable pair, with no assigned physical clock
+potential or actual covariance. Theorem~\ref{thm:explicit}.\\
+$H_f$ & Any compact time slab and compact full spatial buffer;
+finite source representation of the core. &
+Exact heat field with actual $Q_f$; its source error is paid directly.
+Theorems~\ref{thm:finitejets} and~\ref{thm:covariance}.\\
+$P_{\rm lin}$ & Large height on fixed $[32,T]$, or the historical
+joint range $32\le t\le\log X/4$; finite phase and regulator layer. &
+Nonzero heat residual; static and switch analysis uses this particular
+gamma pair. Theorems~\ref{thm:linear-static} and~\ref{thm:regulator-layer}.\\
+$P_*$ & Positive endpoint at eventual large time, all real heights;
+also the exterior of each fixed $[32,T]$. &
+Nonzero heat residual retained in the model equations; static
+comparison is supplemented by evolution and actual-covariance comparison.
+Theorems~\ref{thm:full-saddle-static}, \ref{thm:positive-evolution}
+and~\ref{thm:compact-positive-evolution}.\\
+\bottomrule
+\end{longtable}
+\endgroup
+Every row uses its stated full support buffer and fixed spatial filter.
+The exact switch-center formula belongs to $P_{\rm lin}$; the implicit
+full saddle is the distinct model $P_*$.
+
+The notation key is as follows. The real source saddle $L$ differs from
+$\mathcal L=\log(2+t+X)$, where $X=|x|$ in the exterior estimates.
+The exact source mass $M=H(t,0)$ differs from its saddle approximation
+$M_0$ in \eqref{eq:positiveRegulator} and the exact gamma factor
+$\mathcal M$ in \eqref{eq:gamma-linear}.
+The inner drift $\alpha=\mu'/\mu$ is local to
+Section~\ref{sec:explicit}; in the gamma sections,
+$\alpha=\mathcal M'/\mathcal M$. The lattice spacing $p=\pi/L$
+differs from the complex saddle $\mathfrak p_t$ in
+\eqref{eq:full-saddle-model}.
+The regulator $q=\epsilon_g^2$ differs from the source exponent $q_t(u)$.
+Finally $B_2^{\Phi}$ denotes the global source derivative bound, $B_m$
+the negative-endpoint composition budgets, and $B_j(Y)$ the inner
+centered positive moments; their local definitions remain in force.

@@ -6,7 +6,7 @@ not depend on a numerically estimated source derivative.
 \begin{lemma}[A global derivative bound]\label{lem:B2}
 Put $S_p(a)=(\max\{a,p\})^pe^{-\max\{a,p\}}$. Then
 \begin{equation}
- B_2=\pi^{-1/4}\sum_{n\ge1}n^{-1/2}
+ B_2^{\Phi}=\pi^{-1/4}\sum_{n\ge1}n^{-1/2}
  \left\{75S_{5/4}(\pi n^2)+330S_{9/4}(\pi n^2)
        +224S_{13/4}(\pi n^2)+32S_{17/4}(\pi n^2)\right\}
  \label{eq:B2}
@@ -17,7 +17,7 @@ divided by $1-r_N$, where
 \[
  r_N=\left(1+\frac1{N+1}\right)^8e^{-\pi(2N+3)}<1.
 \]
-In particular $|\Phi(u)-\phi_0|\le B_2u^2/2$ on $[0,\infty)$.
+In particular $|\Phi(u)-\phi_0|\le B_2^{\Phi}u^2/2$ on $[0,\infty)$.
 \end{lemma}
 \begin{proof}
 For $a=\pi n^2e^{4u}$, twice differentiating $e^{bu-a}$ produces
@@ -47,7 +47,7 @@ In particular the denominator retains the regulator crossover.
 Fix $A\ge0$, and put
 \[
  J_m(A)=\int_0^\infty v^me^{-v^2+Av}\,dv,\qquad
- d_j=\frac{B_2J_{j+2}(A)}{2T^{(j+3)/2}}\quad(j=0,1),
+ d_j=\frac{B_2^{\Phi}J_{j+2}(A)}{2T^{(j+3)/2}}\quad(j=0,1),
 \]
 \[
  Q_0=\frac{\phi_0J_0(A)}{\sqrt T}+d_0,\qquad
@@ -151,5 +151,308 @@ $O_A(T^{-2})$, and direct substitution yields
 The error is uniform for all real $\xi$ and $|\upsilon|\le A$.
 Thus a change of regulator changes the power of the physical scaling:
 $T^2\rho$ for fixed $\epsilon$, and $T\rho$ for this adaptive choice.
-Section~\ref{sec:finite} extends the latter to a smooth protocol at all
-finite times; the negative-time estimate survives that extension.
+Section~\ref{sec:protocol} supplies its smooth global extension; the
+following theorem uses that extension exactly.
+
+\subsection{All-height comparison of the adaptive evolution}
+The following comparison uses the exact global regulator of
+Section~\ref{sec:protocol}, rather than replacing it by its leading
+negative-time equivalent. It retains the physical additive normalization
+of the potential and the actual covariance \cite{n26}.
+Write $t=-T$, $C=\phi_0\sqrt\pi/2$, and choose fixed
+$\eta>0$, $0\le A_0<A$. With the fixed spatial kernel $K$ of
+\eqref{eq:kernel}, require
+\begin{equation}
+ T\ge T_0:=\max\{1,(h/(A-A_0))^2\},\qquad
+ x\in\R,\quad |y|\le A_0\sqrt T.
+ \label{eq:negative-buffer}
+\end{equation}
+The entire convolution buffer, and every segment between its points,
+then lies in the convex strip $|y|\le A\sqrt T$, all real $x$.
+Every time derivative below is taken at fixed physical coordinates;
+the expanding strip specifies a norm, not a moving-domain derivative.
+Set exactly
+\begin{equation}
+ e=e_T=\epsilon_g(-T,x)=\eta C(1+T^2)^{-1/4},\quad
+ q=e^2,\quad r_t=b_T:=\frac{T}{1+T^2}.
+ \label{eq:negative-exact-regulator}
+\end{equation}
+Both $H$ and $G=G_T$ from \eqref{eq:Gaussian} use this same $q$.
+For $F=H,G$, write $S_F=\log(|F|^2+q)$,
+$w_F=q/(|F|^2+q)$, $U_F=K*S_F$, $W_F=K*w_F$,
+$R_F=K*\rho_F$, $J_F=K*j_F$, and define $Q_F$ from $S_F$
+by \eqref{eq:filtereddefs}. In particular
+\begin{align}
+ \rho_G&=\frac{e^2|z|^2|G|^2}
+ {4\pi T^2(|G|^2+e^2)^2},\notag\\
+ j_G&=\frac{e^2|G|^2}{\pi(|G|^2+e^2)^2}
+ \left(\frac{\overline z}{4T^2}
+       -\frac{z^2\overline z}{8T^3}\right),
+ &S_G&=\log\left(e^2+\frac{C^2}{T}
+            e^{-(x^2-y^2)/(2T)}\right),
+ \label{eq:negative-Gaussian-current}\\
+ Q_G&=K*((S_G)_x^2-(S_G)_y^2)
+       -((K*(S_G)_x)^2-(K*(S_G)_y)^2).
+ \label{eq:negative-Gaussian-covariance}
+\end{align}
+Thus the reference is an actual heat field with its own filtered
+potential, current and covariance, without covariance fitting.
+
+\begin{theorem}[Negative-endpoint adaptive evolution]
+\label{thm:negative-evolution}
+On \eqref{eq:negative-buffer}, the following absolute errors are uniform
+in all real heights. Constants depend on $A,\eta$, the canonical source
+and the fixed kernel, and finite allowances are given below:
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Observable difference & Uniform error\\
+\midrule
+$R_H-R_G$ & $O(T^{-2})$\\
+$J_H-J_G$ & $O(T^{-5/2})$\\
+$(R_H)_t-(R_G)_t$ & $O(T^{-3})$\\
+$U_H-U_G,\ W_H-W_G$ & $O(T^{-1})$\\
+$(U_H)_t-(U_G)_t$ & $O(T^{-2})$\\
+$K*(\mathcal B_{\epsilon,H}-\mathcal B_{\epsilon,G})$
+ & $O(T^{-2})$\\
+$K*(\mathcal S_{\epsilon,H}-\mathcal S_{\epsilon,G})$
+ & $O(T^{-3})$\\
+$K*\Delta(\mathcal B_{\epsilon,H}-\mathcal B_{\epsilon,G})$
+ & $O(T^{-3})$\\
+$Q_H-Q_G$ & $O(T^{-3})$\\
+$\Delta(Q_H-Q_G)$ & $O(T^{-4})$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Here $\mathcal B_{\epsilon,F}=b_Tw_F$ and
+$\mathcal S_{\epsilon,F}=b_T(1-2w_F)\rho_F$.
+The spatial curvature corrections and all their derivatives vanish
+exactly. The first three observables have upper physical scales
+$T^{-1},T^{-3/2},T^{-2}$; after multiplying by $T,T^{3/2},T^2$,
+respectively, each comparison has error $O(T^{-1})$.
+No pointwise relative error is asserted at a zero of a reference
+observable.
+\end{theorem}
+\begin{proof}
+Extend the source estimate of Lemma~\ref{lem:B2} to jets before applying
+any nonlinear comparison. For $0\le j\le4$ put
+\begin{equation}
+ d_j=\frac{B_2^{\Phi}J_{j+2}(A)}{2T^{(j+3)/2}},\qquad
+ P_j=\frac{\phi_0J_j(A)}{T^{(j+1)/2}}+d_j.
+ \label{eq:negative-source-jets}
+\end{equation}
+Integrating $B_2^{\Phi}u^2/2$ against
+$u^je^{-Tu^2+A\sqrt T u}$, with the integrable differentiated
+majorants, gives on the whole buffer
+\begin{equation}
+ |\partial_z^j(H-G)|\le d_j,\qquad
+ |\partial_z^jH|,|\partial_z^jG|\le P_j\quad(0\le j\le4).
+ \label{eq:negative-field-jets}
+\end{equation}
+For algebraic bounds only set
+\[
+ u_j=P_j/e=O(T^{-j/2}),\qquad
+ v_j=d_j/e=O(T^{-j/2-1}),\qquad c_0=\frac{125}{54\sqrt5}.
+\]
+These are nonnegative numbers, not field values; $H/e$ is not asserted
+to solve heat. The following finite budgets compare the physical fields:
+\begin{align}
+ E_R&=\frac{2u_1v_1+c_0u_1^2v_0}{\pi},&
+ E_J&=\frac{u_1v_2+u_2v_1+c_0u_1u_2v_0}{\pi},\notag\\
+ E_{13}&=\frac{u_1v_3+u_3v_1+c_0u_1u_3v_0}{\pi},&
+ \rho_*&=\frac{u_1^2}{\pi},
+ \label{eq:negative-direct-budgets}\\
+ E_{R,t}&=2E_{13}+b_T(E_R+2\rho_*v_0)
+       +2u_2E_R+2\rho_*v_2+4\rho_*u_2v_0.
+ \label{eq:negative-time-budget}
+\end{align}
+They imply, pointwise and after positive normalized filtering,
+\begin{equation}
+ |R_H-R_G|\le E_R,\qquad |J_H-J_G|\le E_J,\qquad
+ |(R_H)_t-(R_G)_t|\le E_{R,t}.
+ \label{eq:negative-RJ-bounds}
+\end{equation}
+Indeed $(1+|a|^2)^{-2}/\pi$ has maximum $1/\pi$ and
+real gradient norm at most $c_0/\pi$. Product differences prove the
+first two bounds. For the last use the exact physical identity
+\begin{equation}
+ (\rho_F)_t=-\frac{2q\Re(F_{zzz}\overline{F_z})}
+ {\pi(|F|^2+q)^2}+b_T(1-2w_F)\rho_F
+ +4\rho_F\Re\frac{F_{zz}\overline F}{|F|^2+q}.
+ \label{eq:negative-density-time}
+\end{equation}
+The map $\overline a/(1+|a|^2)$ has norm at most $1/2$ and
+Lipschitz constant at most one; $(1+|a|^2)^{-1}$ also has Lipschitz
+constant at most one. These estimates retain the
+$b_T$ terms in \eqref{eq:negative-time-budget}. The same maps in
+\[
+ (S_F)_t=-2\Re\frac{F_{zz}\overline F}{|F|^2+q}+b_Tw_F
+\]
+give the additional finite allowances
+\begin{align}
+ |U_H-U_G|,\ |W_H-W_G|&\le v_0,\notag\\
+ |(U_H)_t-(U_G)_t|&\le v_2+(2u_2+b_T)v_0,\notag\\
+ |K*(\mathcal B_{\epsilon,H}-\mathcal B_{\epsilon,G})|
+ &\le b_Tv_0,\notag\\
+ |K*(\mathcal S_{\epsilon,H}-\mathcal S_{\epsilon,G})|
+ &\le b_T(E_R+2\rho_*v_0).
+ \label{eq:negative-potential-budgets}
+\end{align}
+The differentiated forcing and covariance bounds follow from
+Lemma~\ref{lem:negative-spatial-jets} and
+Proposition~\ref{prop:negative-covariance}, proved next; together they
+complete the table. Every time estimate was computed directly from heat,
+rather than by differentiating a static remainder.
+\end{proof}
+
+\begin{lemma}[Finite composition and spatial-jet budgets]
+\label{lem:negative-spatial-jets}
+For the bounds $u_j,v_j$ above and $m\ge1$, define
+\begin{equation}
+ C_m=\sum_{p=0}^{\lfloor m/2\rfloor}
+ \frac{m!\,(m-p-1)!}{(m-2p)!\,p!}.
+ \label{eq:negative-composition-constants}
+\end{equation}
+Let $\Pi_m$ be the partitions of $\{1,\ldots,m\}$. For $1\le m\le4$ put
+\begin{align}
+ B_m&=\sum_{\pi\in\Pi_m}C_{|\pi|}
+                      \prod_{B\in\pi}u_{|B|},\notag\\
+ D_m&=\sum_{\pi\in\Pi_m}\left[
+ C_{|\pi|+1}v_0\prod_{B\in\pi}u_{|B|}
+ +C_{|\pi|}\sum_{B\in\pi}v_{|B|}
+                \prod_{\substack{B'\in\pi\\B'\ne B}}u_{|B'|}
+ \right].
+ \label{eq:negative-partition-budgets}
+\end{align}
+The real spatial derivative tensors on the full convex buffer satisfy
+\begin{equation}
+ \|D^mS_H\|,\|D^mS_G\|\le B_m=O(T^{-m/2}),\qquad
+ \|D^m(S_H-S_G)\|\le D_m=O(T^{-m/2-1}).
+ \label{eq:negative-spatial-jets}
+\end{equation}
+For the fraction $w$, use instead
+\begin{equation}
+ C_m^w=\sum_{p=0}^{\lfloor m/2\rfloor}
+ \frac{m!\,(m-p)!}{(m-2p)!\,p!},
+ \label{eq:negative-w-constants}
+\end{equation}
+and let $D_m^w$ denote \eqref{eq:negative-partition-budgets} with every
+$C$ replaced by $C^w$. In particular
+\begin{equation}
+ |K*\Delta(\mathcal B_{\epsilon,H}-\mathcal B_{\epsilon,G})|
+ \le2b_TD_2^w=O(T^{-3}).
+ \label{eq:negative-forcing-laplacian}
+\end{equation}
+The composition $B_m$ is distinct from the source constant $B_2^{\Phi}$.
+\end{lemma}
+\begin{proof}
+For $F(a)=\log(1+|a|^2)$ on $\R^2$, apply the real composition
+partition formula to $\log g$, $g=1+|a|^2$.
+Only singleton and pair blocks survive. Their normalized bounds are
+$|Dg|/g\le1$, $\|D^2g\|/g\le2$; a partition with $p$ pairs has
+$m-p$ blocks and occurs $m!/[(m-2p)!p!2^p]$ times.
+The logarithm coefficient is $(m-p-1)!$, proving
+$\|D^mF\|\le C_m$ in all unit real directions.
+At fixed time $S_H=\log(e^2)+F(H/e)$.
+Holomorphy and \eqref{eq:negative-field-jets} bound its $j$th input
+derivative by $u_j$ and its difference by $v_j$, including mixed real
+directions. To compare the compositions, first change the argument of
+$D^{|\pi|}F$, paying $C_{|\pi|+1}v_0$, then telescope each derivative
+factor. This proves \eqref{eq:negative-partition-budgets}; fourth
+spatial differences use the supplied fifth scalar derivative $C_5$.
+The block sizes sum to $m$, giving the stated rates.
+For $(1+|a|^2)^{-1}$ the scalar coefficient is instead $(m-p)!$
+and the extra factor $1/g\le1$ gives \eqref{eq:negative-w-constants}.
+The two spatial Laplacian directions and
+$\mathcal B_{\epsilon,F}=b_Tw_F$ give
+\eqref{eq:negative-forcing-laplacian} without moving these derivatives
+to the kernel and losing their scale. No logarithmic derivative or
+root-simplicity hypothesis enters.
+\end{proof}
+
+\subsection{Cancellation in the actual filtered covariance}
+\begin{proposition}[Negative-endpoint covariance comparison]
+\label{prop:negative-covariance}
+Let $B_m,D_m$ be the preceding finite budgets and put
+\[
+ \overline a=\int aK(a)\,da=0,\qquad
+ \sigma_K^2=\int|a-\overline a|^2K(a)\,da\le\ell^2+h^2.
+\]
+Then on \eqref{eq:negative-buffer},
+\begin{align}
+ |Q_H-Q_G|&\le4\sigma_K^2B_2D_2=O(T^{-3}),
+ \label{eq:negative-Q-budget}\\
+ |\Delta(Q_H-Q_G)|&\le16\sigma_K^2B_3D_3
+       +8\sigma_K^2(B_4D_2+B_2D_4)=O(T^{-4}).
+ \label{eq:negative-lapQ-budget}
+\end{align}
+Their upper physical scales obey
+$|Q_H|,|Q_G|\le2\sigma_K^2B_2^2=O(T^{-2})$ and
+$|\Delta Q_H|,|\Delta Q_G|\le8\sigma_K^2(B_3^2+B_2B_4)=O(T^{-3})$.
+\end{proposition}
+\begin{proof}
+For a fixed positive normalized kernel,
+\begin{align}
+ \Cov_K(f,g)
+ &=\tfrac12\iint K(a)K(b)
+ [f(z-a)-f(z-b)][g(z-a)-g(z-b)]\,da\,db,\notag\\
+ |\Cov_K(f,g)|&\le\sigma_K^2\operatorname{Lip}(f)
+                                      \operatorname{Lip}(g).
+ \label{eq:negative-two-point-covariance}
+\end{align}
+The second line uses the line segments in the full convex buffer and
+$\frac12\iint|a-b|^2K(a)K(b)\,da\,db=\sigma_K^2$.
+Apply product differences to the two signed gradient covariances in
+$Q_H-Q_G$; each gradient has Lipschitz bound $B_2$, and its difference
+has bound $D_2$. This yields \eqref{eq:negative-Q-budget}.
+Before estimating the differentiated quantity, differentiate the actual
+covariance under the fixed kernel. With $s_x=1,s_y=-1$, for either field,
+\begin{equation}
+ \Delta Q_F=2\sum_{i=x,y}s_i\sum_{a=x,y}
+ \{\Cov_K((S_F)_{ia},(S_F)_{ia})
+       +\Cov_K((S_F)_i,(S_F)_{iaa})\}.
+ \label{eq:negative-differentiated-covariance}
+\end{equation}
+The Lipschitz bounds for these factors are $B_3,B_2,B_4$, with
+difference bounds $D_3,D_2,D_4$. Counting the two components and two
+derivative directions gives coefficients $16$ and $8$ in
+\eqref{eq:negative-lapQ-budget}. Separate estimates of squared first
+gradients would lose one power of $T$; no derivative of the allowance
+\eqref{eq:negative-Q-budget} is being taken.
+\end{proof}
+
+The Gaussian heat field obeys the exact same adaptive equations:
+\begin{align}
+ \Delta U_G&=4\pi R_G,\notag\\
+ (U_G)_t&=-\tfrac12\{\sqd U_G+(U_G)_x^2-(U_G)_y^2+Q_G\}
+                         +K*\mathcal B_{\epsilon,G},\notag\\
+ (R_G)_t+\operatorname{div}J_G&=K*\mathcal S_{\epsilon,G},
+ \label{eq:negative-Gaussian-evolution}\\
+ (R_G)_t&=-\tfrac12\sqd R_G
+ -\frac1{8\pi}\Delta\{(U_G)_x^2-(U_G)_y^2+Q_G\}
+ +\frac1{4\pi}\Delta(K*\mathcal B_{\epsilon,G}).
+ \notag
+\end{align}
+Potential derivatives through fourth order are supplied directly by
+\eqref{eq:negative-spatial-jets}; spatial derivatives of the linear
+filtered comparisons may also be moved to the fixed kernel, using its
+integrable weak derivatives through order four. The sharper
+\eqref{eq:negative-forcing-laplacian} pays differentiated forcing at
+order $T^{-3}$, and exact current balance gives
+$\operatorname{div}(J_H-J_G)=O(T^{-3})$.
+Potential values, their normal derivatives and normal currents on any
+observation boundary inside the declared domain inherit the full-buffer
+bounds. Initial and final time traces do so at their constituent times.
+A moving-boundary integral would additionally require its transport
+formula. The estimates compare source-anchored potentials themselves,
+so there is no freely fitted harmonic datum.
+
+This is a direct field and covariance comparison, not a closure in $R$.
+The zero-free Gaussian supplies a regulated measurement background;
+it gives no zero-count or earlier-time collision conclusion.
+Smooth colliding sources with their own finite source derivative
+constants can satisfy analogous estimates. Positive atoms and heat
+polynomials lack the smooth canonical Taylor premise, while changed
+Euler-factor, weighted-square, reflected and primitive sources do not
+inherit the canonical $\phi_0,B_2^{\Phi}$. The generic comparison
+inequalities therefore cannot serve as an arithmetic simplicity test.

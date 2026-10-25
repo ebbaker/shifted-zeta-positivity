@@ -105,6 +105,16 @@ heat time on growing height windows must not be conflated. Added for
 Edward Baker with substantial LLM assistance, gpt-6-astra, effort max.
 
 
+**Additional inspection, 24 October 2026, chat 0006; gpt-6-astra, max.**
+For [Note 25](../notes/25_OUTER_CONTOUR_BOUNDS_AND_CUTOFF_OBSTRUCTION_20261024.md),
+checked the [v2 HTML](https://arxiv.org/html/1904.12438v2): normalization
+(1)--(4), domain (5), Theorem 1.5's hypotheses and clock definition,
+and Lemma 9.2's displayed local gamma-factor formula. The high-zero
+theorem is stated for 0<t<=1/2. It is an outer-representation lead,
+not an imported theorem for t>64. Extending its parameter range and
+paying adaptive weak-transfer data remain work. No full-paper review or
+new PDF download; the existing sibling reading copy remains canonical.
+
 ## Sibling Vandermonde and saddle inputs rechecked in round three
 
 For [Note 12](../notes/12_GROWING_HEIGHT_STATIONARY_CLOCK_AND_VANDERMONDE_20261024.md),
@@ -162,3 +172,110 @@ series; no full-chapter inspection or numerical stability theorem is
 claimed. Note 23 derives its own local exponential truncation allowance.
 These are online references, with no artificial PDF copy. Prepared for
 Edward Baker with substantial LLM assistance, gpt-6-astra, actual effort max.
+
+
+## Gamma-factor outer analysis, HDA-19 continuation
+
+24 October 2026; prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra (Codex), actual effort max**, chat 0006.
+
+For [Note 27](../notes/27_COMPACT_TIME_GAMMA_OUTER_DENSITY_20261024.md),
+additionally inspected Polymath v2 Section 4 through (35),
+which states the Gaussian convolution for every t>0 and derives it from
+the complete source. The two-factor asymptotic and adaptive-density
+transfer in Note 27 are proved there with compact-time constants; they
+do not extend Theorem 1.5 by changing its stated hypotheses. The gamma
+factor used in the note is exact, unlike the paper's Stirling model.
+The existing sibling PDF and provenance remain canonical.
+
+- NIST DLMF, [Section 5.11](https://dlmf.nist.gov/5.11): inspected
+  5.11.1--5.11.2, the bounded-real-part formula 5.11.9, and the first
+  complex remainder paragraph in 5.11(ii). Used for sectorial log-gamma
+  and digamma bounds. Derivative estimates are obtained in the note on
+  smaller sectors by Cauchy's formula; no differentiation of a real-axis
+  asymptotic is assumed.
+- NIST DLMF, [Section 25.2](https://dlmf.nist.gov/25.2): inspected
+  the Dirichlet series 25.2.1 and Euler summation formula 25.2.8. These
+  give the paid arithmetic tail and a polynomial bound on the bounded
+  middle strip.
+
+Retrieved 24 October 2026. These are linked online references; no PDF
+copies or full-chapter reviews were made. The root-collar and weak-bias
+steps reuse the complex-analysis reference above and Note 14. No novelty
+claim or independent validation is implied by these citations.
+
+
+**Time-dependent continuation, chat 0006, 24 October 2026; gpt-6-astra,
+actual effort max.** [Note 28](../notes/28_JOINT_OUTER_REGULATOR_TRANSFER_AND_SWITCH_LAYER_20261024.md) reuses and rechecked
+Polymath (35), DLMF
+5.11.9/5.11(ii) and 25.2.8 in the primary HTML sources above. The new
+uniform regulator comparison, joint range and switch-layer estimates
+are derived in the note, not imported from those sources. No new PDF.
+
+Also inspected Sections 1--3 of the sibling
+[sharp C2 divisor stability note](../../../investigations-4/notes/09_SHARP_C2_DIVISOR_STABILITY_20261022.md),
+including its distinction between a compact regularization and direct
+divisor perturbation. Its proved-in-note, same-assistant status is
+retained. Note 28 uses the original rational adaptive density instead;
+its two-potential comparison and arbitrary-positive-q local lemma are
+derived separately. No multiplicity-general or independent-review claim
+is imported from this sibling inspection.
+
+**Full-saddle continuation, chat 0007, 24 October 2026; gpt-6-astra,
+actual effort max.** For [Note 30](../notes/30_FULL_GAMMA_SADDLE_AND_INNER_OVERLAP_20261024.md),
+rechecked the same primary HTML sources: Polymath v2 Section 4,
+normalization (1)--(2) and exact convolution (35); DLMF 5.11.1--5.11.2,
+5.11.9 and the first complex-remainder paragraph of 5.11(ii); and
+25.2.1/25.2.8. The fixed right-half-plane sector, implicit gamma saddle,
+uniform contour estimates, mass-anchored adaptive transfer and inner
+overlap are derived in Note 30, not imported as a theorem from Polymath.
+The small-time high-zero theorem is not extended by changing its
+hypotheses. Also reread Note 12 (3)--(6) for the complete-source mass
+bound used after the independent field proof, and Notes 27--28 for the
+collar/weak-transfer contracts. No new reference, PDF copy, full-paper
+review or numerical validation; existing bibliography and PDF provenance
+remain canonical.
+
+**Positive-evolution continuation, chat 0007, 24 October 2026;
+gpt-6-astra, actual effort max.** [Note 31](../notes/31_POSITIVE_ALL_HEIGHT_EVOLUTION_AND_COVARIANCE_20261024.md)
+uses Note 30's complete field theorem and exact residual. Inspected
+[DLMF 1.9.30--1.9.31](https://dlmf.nist.gov/1.9#iii), including the
+analytic-contour hypotheses and derivative formula, for the explicit
+Cauchy-disk transfer; rechecked the fixed-sector condition in
+[DLMF 5.11](https://dlmf.nist.gov/5.11). New pole, signed-stress,
+adaptive time and flat-switch estimates are derived in Note 31.
+Also reread Notes 14/16 for the exact weak identities, Note 20 for the
+unchanged switch, Note 28 for analytic-unit transfer, and Note 26 for
+the negative contract. No new PDF, numerical validation, whole-chapter
+review or novelty claim.
+
+
+## Manuscript production synchronization — 24 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual effort ultra**. HDA-10-MI1 r1 adds Notes 25--28 and 30 and the
+version-pinned Polymath/DLMF gamma, zeta and complex-analysis entries to
+`manuscript/06_references.tex`, the actual manual bibliography.
+`references.bib` is a reusable catalog and is not compiled by this build.
+Its BakerHeatDensityDraft2026 title now matches the retained manuscript
+title, preserving historical Astra preparation and adding Sol revision
+attribution. The five external URLs in the final PDF were opened for
+link verification. No new PDF copy, full-paper review, theorem import or
+independent mathematical audit was performed. The preceding reference
+inspection scopes remain unchanged.
+[Production assessment](../reviews/14_MANUSCRIPT_INTEGRATION_PRODUCTION_REVIEW_20261024.md);
+[current build record](../manuscript/BUILD_RECORD_20261024.json).
+
+
+## Review 15 manuscript revision — 24 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual effort ultra**. The current manual bibliography now includes Note
+31 and DLMF 1.9.31, matched by reusable catalog entries. Opened the
+[official Cauchy reference](https://dlmf.nist.gov/1.9.E31), equations
+1.9.30--31 and their contour hypotheses, for the recorded derivative
+transfer input. The full buffered disks are supplied by Note 31; no new
+whole-chapter review, theorem extension or PDF download was made.
+The earlier analytical inspection scopes and Astra attribution remain.
+[Production assessment](../reviews/16_REVIEW15_REVISION_PRODUCTION_ASSESSMENT_20261024.md);
+[current build record](../manuscript/BUILD_RECORD_20261024.json).

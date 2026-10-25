@@ -1,0 +1,533 @@
+\section{The full gamma saddle and static inner overlap}\label{sec:full-saddle}
+Keeping the full implicit gamma saddle and its Gaussian determinant
+removes the exponential time restriction of the linearized model.
+The gain is a joint static estimate, uniform at every real height for
+sufficiently large positive time, together with actual spatial overlap
+with the inner clock. The field still requires a specified
+special-function saddle and the fixed spatial average. We consolidate
+Note~30 \cite{n30}; all thresholds below are eventual.
+
+Fix $\ell,h>0$, $Y\ge0$ and the kernel of \eqref{eq:kernel}.
+The holomorphic domains include a fixed enlargement of
+\[
+ |\Re z-x|\le\ell+2,\qquad |\Im z|\le Y+h+2,
+\]
+large enough to contain the full disks of every root collar meeting
+the averaging support. All constants may depend on these fixed data
+and the regulator parameter, but are independent of $t,x$ in their
+declared domains. Write
+\begin{equation}
+ X=|x|,\quad \mathcal R=2+t+X,\quad \mathcal L=\log\mathcal R,
+ \quad N_*=1+X+t\mathcal L,\qquad e_*=\frac{t^{3/2}}{N_*^2}.
+ \label{eq:full-saddle-scales}
+\end{equation}
+The exact gamma factor $\mathcal M$ and $\alpha=\mathcal M'/\mathcal M$
+are those of Section~\ref{sec:gamma-outer}; in particular
+$\mathcal M(w)=w(w-1)\pi^{-w/2}\Gamma(w/2)/16$, distinct from
+the real source mass $M_0$ and from a Stirling model.
+
+For $w=s=(1+iz)/2$ or $1-s$, define
+\begin{align}
+ \mathfrak p_t(w)&=w+\frac t2\alpha(\mathfrak p_t(w)),&
+ v_*&=\mathfrak p_t(w)-w,&
+ B&=1-\frac t2\alpha'(\mathfrak p_t(w)),\notag\\
+ \mathcal S_t(w)&=\frac{\mathcal M(\mathfrak p_t(w))e^{-v_*^2/t}}
+                         {\sqrt B},&
+ P_*(t,z)&=\mathcal S_t(s)+\mathcal S_t(1-s).
+ \label{eq:full-saddle-model}
+\end{align}
+Here $\mathfrak p_t$ is the large branch specified below and $\sqrt B$
+is near $1$. This defines a holomorphic field on the required buffered
+domains, and on the whole fixed-width horizontal strip at late time;
+no entire continuation through all possible saddle branches is asserted.
+Use the physical quantities $S_F,w_F,U_F,W_F,\rho_F,R_F$ from
+Section~\ref{sec:gamma-outer}, always with the same $q=\epsilon_g^2$
+for $F=H,P_*$.
+
+\begin{theorem}[Joint full-saddle static comparison]\label{thm:full-saddle-static}
+There are $C,R_*>0$, depending only on the fixed buffers, kernel and
+regulator parameter, such that, for $t\ge32$, $\mathcal R\ge R_*$ and
+$|y|\le Y$,
+\begin{equation}
+ |R_H-R_{P_*}|+
+ \sum_{|\gamma|\le4}\left(
+ |\partial^\gamma(U_H-U_{P_*})|
+ +|\partial^\gamma(W_H-W_{P_*})|\right)
+ \le C\frac{t^{3/2}}{(1+X+t\log(2+t+X))^2}.
+ \label{eq:full-saddle-static}
+\end{equation}
+The multi-index $\gamma$ is spatial. On the enlarged holomorphic domain,
+\begin{equation}
+ |H-P_*|\le Ce_*\bigl(|\mathcal S_t(s)|+|\mathcal S_t(1-s)|\bigr).
+ \label{eq:full-saddle-field}
+\end{equation}
+The denominator implicit in this field comparison is the sum of carrier
+amplitudes, which stays positive, rather than $|P_*|$ at its zeros.
+\end{theorem}
+
+\subsection{The branch and the complete field estimate}
+\begin{lemma}[Specified large saddle branch]\label{lem:full-saddle-branch}
+Let $w=\sigma+i\tau_0$, with $\sigma$ in the fixed buffered interval.
+For $\tau_0\ge0$ and sufficiently large $\mathcal R$, there is exactly
+one solution of \eqref{eq:full-saddle-model} in the rectangle
+\begin{equation}
+ \sigma+t\mathcal L/8\le\Re\mathfrak p\le\sigma+t\mathcal L,
+ \qquad \tau_0\le\Im\mathfrak p\le\tau_0+t.
+ \label{eq:full-saddle-rectangle}
+\end{equation}
+Replacing $X$ by $2|\tau_0|$ only changes the scales by fixed constants.
+The reflected rectangle specifies negative $\tau_0$. On these branches,
+\begin{equation}
+ a:=\Re v_*\asymp t\mathcal L,\quad
+ |h_*|:=|\Im v_*|\le t,\quad
+ |\mathfrak p_t(w)|\asymp N_*,\quad |B-1|\le C/\mathcal L,
+ \qquad a\ge t\mathcal L/5
+ \label{eq:full-saddle-branch-bounds}
+\end{equation}
+after increasing the onset. The branch is holomorphic in $w$ on
+overlapping buffered domains.
+\end{lemma}
+\begin{proof}
+Sectorial gamma asymptotics and Cauchy differentiation of their
+holomorphic remainder on a slightly larger fixed sector give
+\begin{equation}
+ \alpha(\mathfrak p)=\tfrac12\operatorname{Log}(\mathfrak p/(2\pi))
+                         +O(|\mathfrak p|^{-1}),\qquad
+ \alpha^{(j)}(\mathfrak p)=O_j(|\mathfrak p|^{-j}),\quad j\ge1.
+ \label{eq:full-saddle-sector}
+\end{equation}
+All saddles stay in the right half-plane, with a fixed sector margin
+(for example inside $|\arg\mathfrak p|\le3\pi/4$).
+The corresponding bounds on horizontal rays with real part at least
+$2$ extend to bounded modulus by increasing constants. These are the
+gamma estimates of \cite{DLMFGammaOuter2026}, rather than a theta
+large-time theorem. Throughout \eqref{eq:full-saddle-rectangle},
+$|\mathfrak p|\asymp N_*$ and
+$\log|\mathfrak p|=\mathcal L+O(\log\mathcal L)$.
+The fixed-point map has real increment
+$t\mathcal L/4+O(t\log\mathcal L)$.
+
+To check its nonnegative imaginary increment, put $A=\Re\mathfrak p$.
+For $0\le\tau\le A$ the real part of
+$\alpha'(A+i\tau)=1/[2(A+i\tau)]+O(A^{-2})$ is positive.
+Vertical integration from the real axis gives $\Im\alpha\ge0$.
+For $\tau\ge A$, its leading half-argument is at least $\pi/8$,
+and the remainder is smaller; also $\Im\alpha\le1$ eventually.
+The map therefore sends the rectangle into itself. Its derivative is
+bounded by $Ct/N_*\le C/\mathcal L<1/2$, so contraction on this convex
+rectangle proves existence and uniqueness there. It does not prove
+uniqueness among every solution of the meromorphic saddle equation.
+The more precise identity
+$a=(t/4)\log(|\mathfrak p|/(2\pi))+O(t/|\mathfrak p|)$
+gives \eqref{eq:full-saddle-branch-bounds}.
+Conjugation gives the negative branch, including a real saddle when
+$\tau_0=0$. The implicit function theorem and $B\ne0$ give holomorphic
+extension across the real axis; uniqueness makes overlapping branches
+agree. The logarithm of $\mathcal M$ in $\Re\mathfrak p>1$ is real on
+the positive real axis, and $B$ stays in a fixed disk about $1$.
+\end{proof}
+
+\begin{lemma}[Both arms, all modes and the middle]\label{lem:full-saddle-field}
+The field bound \eqref{eq:full-saddle-field} holds before making any
+comparison involving the regulator.
+\end{lemma}
+\begin{proof}
+Start with the exact complete convolution
+\begin{equation}
+ H(t,z)=\frac1{\sqrt{\pi t}}\int_\R e^{-v^2/t}\frac{\xi(s+v)}8\,dv.
+ \label{eq:full-saddle-convolution}
+\end{equation}
+It is the canonical identity also appearing as equation~(35) of
+\cite{polymath2019heat}; its validity here does not use that paper's
+$0<t\le1/2$ high-zero theorem. Split at real parts $2$ and $-1$.
+Exact reflection $\xi(w)=\xi(1-w)$ and $v\mapsto-v$ turn the two
+unbounded arms into
+\begin{equation}
+ I_w=\frac1{\sqrt{\pi t}}\int_{v_0}^\infty
+   e^{-v^2/t}\mathcal M(w+v)\zeta(w+v)\,dv,
+ \qquad v_0=2-\Re w,\qquad w=s,1-s.
+ \label{eq:full-saddle-arms}
+\end{equation}
+The remaining middle has bounded length. This pointwise decomposition
+is used for estimates; the complete field and the model are holomorphic
+independently of the moving endpoints.
+
+Move each arm to $v=r+ih_*$, $r\ge v_0$, and retain the oriented
+connector from $v_0$ to $v_0+ih_*$. The original arm is the shifted
+horizontal integral plus that connector. First close a finite rectangle
+and then send its right endpoint to infinity. Its right face vanishes,
+since for fixed parameters the integrand is bounded by
+$\exp(-r^2/t+O(r\log(r+2)))$.
+Every arm and connector has $\Re(w+v)\ge2$, so no gamma singularity
+or zeta pole is crossed and the ordinary full Dirichlet series is valid.
+The same oriented construction works for $h_*<0$.
+
+Put $\mathfrak p=\mathfrak p_t(w)$, $m=|\mathfrak p|$ and
+$v=v_*+u$, $u\in\R$. For $u\ge-a/2$ define
+\begin{align}
+ \Gamma_{\mathfrak p}(u)
+ &=\log\mathcal M(\mathfrak p+u)-\log\mathcal M(\mathfrak p)
+                                       -\alpha(\mathfrak p)u,\notag\\
+ E_{\mathfrak p}(u)&=\Gamma_{\mathfrak p}(u)
+                              -\tfrac12\alpha'(\mathfrak p)u^2.
+ \label{eq:full-saddle-remainders}
+\end{align}
+The whole intervening segment lies in $\Re>1$ with modulus at least
+$cm$; on the positive ray that modulus only increases. Thus Taylor's
+integral remainder and \eqref{eq:full-saddle-sector} give on this
+\emph{whole} half-line
+\[
+ |\Gamma_{\mathfrak p}(u)|\le Cu^2/m,
+ \qquad |E_{\mathfrak p}(u)|\le C|u|^3/m^2.
+\]
+The exact first-order cancellation and the retained full quadratic term
+are
+\begin{equation}
+ \frac{e^{-(v_*+u)^2/t}\mathcal M(\mathfrak p+u)}
+      {e^{-v_*^2/t}\mathcal M(\mathfrak p)}
+       =e^{-Bu^2/t+E_{\mathfrak p}(u)}.
+ \label{eq:full-saddle-cancellation}
+\end{equation}
+Since $t/m\le C/\mathcal L$, both the exact exponential modulus in
+\eqref{eq:full-saddle-cancellation} and $|e^{-Bu^2/t}|$ are at most
+$e^{-cu^2/t}$, with a fixed $c>0$ (one may take $c=1/2$).
+Using $|e^E-1|\le|E|\max(1,e^{\Re E})$, rather than requiring a
+small cubic remainder at every $u$, yields the decisive payment
+\begin{equation}
+ \frac1{\sqrt{\pi t}}\int_{-a/2}^\infty
+  |e^{-Bu^2/t}(e^{E_{\mathfrak p}(u)}-1)|\,du
+ \le C\frac{t^{3/2}}{m^2}.
+ \label{eq:full-saddle-cubic-payment}
+\end{equation}
+The full complex Gaussian is $B^{-1/2}$ because $\Re B>0$.
+Its missing left tail and the true right tail beyond $u=a/2$ have
+bound $Ce^{-ca^2/t}$. There is no $e^{t(\Im\alpha)^2/4}$ loss.
+
+For the remaining horizontal segment $v_0\le r\le a/2$, put
+$d=a-r$, $A=\Re\mathfrak p$, $\tau=\Im\mathfrak p$.
+The inequality $|v+i\tau|/|A+i\tau|\ge v/A$, $2\le v\le A$,
+and \eqref{eq:full-saddle-sector} imply
+\begin{equation}
+ \int_{A-d}^A\Re\alpha(v+i\tau)\,dv
+ \ge d\Re\alpha(\mathfrak p)-CA.
+ \label{eq:full-saddle-left-integral}
+\end{equation}
+Indeed the possible logarithmic loss is at most
+$-(1/2)\int_0^A\log(v/A)\,dv=A/2$, and the bounded remainders
+contribute $O(A)$. Since $\Re\alpha(\mathfrak p)=2a/t$,
+\begin{equation}
+ \left|\frac{e^{-(r+ih_*)^2/t}\mathcal M(w+r+ih_*)}
+ {e^{-v_*^2/t}\mathcal M(\mathfrak p)}\right|
+ \le e^{-d^2/t+CA}\le e^{-ct\mathcal L^2}.
+ \label{eq:full-saddle-left-payment}
+\end{equation}
+Here $d\ge a/2$, $a\asymp t\mathcal L$ and $A=a+O(1)$;
+the segment length divided by $\sqrt t$ is absorbed by reducing $c$.
+Zeta is bounded by $\zeta(2)$ there.
+
+At the top of each connector apply
+\eqref{eq:full-saddle-left-integral} with $A-d=2$.
+On $\Re=2$, $|\Im\alpha|$ is uniformly bounded, including bounded
+height. Traversing the connector back toward $\tau_0$ costs at most
+$e^{C|h_*|}$ in gamma modulus. Its Gaussian modulus cannot increase
+relative to the top, because $\eta^2\le h_*^2$ along the segment.
+Both connectors, including their lengths divided by $\sqrt t$, therefore
+cost $Ce^{-ct\mathcal L^2}$ against their own carriers. A collapsed
+connector at $h_*=0$ costs zero.
+
+Euler summation and Stirling in bounded real strips, with exact
+reflection to the left of $1/2$ and compactness at bounded height, give
+some fixed finite $b_0$ such that
+\begin{equation}
+ \sup_{-1\le b\le2}|\xi(b+i\tau_0)/8|
+ \le C(1+|\tau_0|)^{b_0}|\mathcal M(2+i\tau_0)|.
+ \label{eq:full-saddle-middle}
+\end{equation}
+The right-hand factor never vanishes, so this estimate also covers
+$\tau_0=0$. The endpoint comparison above bounds the full middle by
+$C\mathcal R^{b_0}e^{-ct\mathcal L^2}$ relative to either carrier.
+The middle and both infinite ends have thus been retained.
+
+Finally, on $\Re(w+v)\ge2$, the complete ordinary Dirichlet series
+\cite{DLMFZetaOuter2026} gives
+$|\zeta(w+v)-1|\le3\,2^{-\Re(w+v)}$.
+For $r=a+u\ge a/2$ its tilted Gaussian payment is
+\begin{align}
+ Ce^{-a\log2}\frac1{\sqrt{\pi t}}
+       \int_\R e^{-u^2/(2t)-u\log2}\,du
+ &\le Ce^{-a\log2+t(\log2)^2/2}\notag\\
+ &\le C\mathcal R^{-t\log2/8}.
+ \label{eq:full-saddle-arithmetic}
+\end{align}
+This uses $a\ge t\mathcal L/5$ after one onset uniform in $t\ge32$;
+the other pieces already have \eqref{eq:full-saddle-left-payment}.
+Every arithmetic mode is paid, without a finite-mode replacement.
+
+Combining the complete pieces first gives the explicit three-part budget
+\begin{equation}
+ \frac{|H-P_*|}{|\mathcal S_t(s)|+|\mathcal S_t(1-s)|}
+ \le C\left\{\frac{t^{3/2}}{N_*^2}
+       +\mathcal R^{-t\log2/8}
+       +\mathcal R^{b_0}e^{-ct\mathcal L^2}\right\}.
+ \label{eq:full-saddle-three-payments}
+\end{equation}
+Because $t\log2/8>2$ at $t\ge32$ and $N_*\le C\mathcal R\log\mathcal R$,
+the last two terms are absorbed by $Ce_*$ after an eventual onset.
+This proves \eqref{eq:full-saddle-field}. The floor $32$ is an
+arithmetic allowance, distinct from the regulator switch points $64,128$
+and from any certified zero or asymptotic threshold.
+\end{proof}
+
+\subsection{Physical collars, potential jets and the regulator payment}
+\begin{lemma}[Actual full-saddle collars]\label{lem:full-saddle-collars}
+The field comparison supplies all the simple-root collars and
+analytic-unit bounds needed by Lemma~\ref{lem:uniform-q-collar} on
+the full averaging buffer. Moreover
+\begin{equation}
+ \|S_H-S_{P_*}\|_{L^1(\Omega)}
+       +\|w_H-w_{P_*}\|_{L^1(\Omega)}\le Ce_*.
+ \label{eq:full-saddle-L1}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Differentiate the implicit formula itself. With every $\alpha$ evaluated
+at $\mathfrak p=\mathfrak p_t(w)$,
+\begin{align}
+ (\mathfrak p_t)_w&=B^{-1},&
+ D_*:=(\log\mathcal S_t)'(w)&=\alpha+\frac{t\alpha''}{4B^2},\notag\\
+ D_*'&=\frac{\alpha'}B+\frac{t\alpha'''}{4B^3}
+            +\frac{t^2(\alpha'')^2}{4B^4}=O(N_*^{-1}).
+ \label{eq:full-saddle-spatial-derivatives}
+\end{align}
+Choose compatible logarithms and write
+$P_*=2\mathcal A_*\cos\Theta_*$, where
+\[
+ \mathcal A_*=
+  \exp\!\left(\frac{\log\mathcal S_t(s)+\log\mathcal S_t(1-s)}2\right),
+ \qquad
+ \Theta_*=
+  \frac{\log\mathcal S_t(s)-\log\mathcal S_t(1-s)}{2i}.
+\]
+On real $x$ the carrier is positive and the phase is real. Directly,
+\begin{align}
+ \omega_*:=\partial_x\Theta_*(t,x)
+ &=\tfrac12\Re D_*((1+ix)/2)\notag\\
+ &=\tfrac14\log\!\left(\frac{|\mathfrak p_t((1+ix)/2)|}{2\pi}\right)
+            +O(N_*^{-1}+tN_*^{-2})\asymp\mathcal L,\notag\\
+ \Theta_{*,zz}&=O(N_*^{-1}),&
+ |\partial_z\log\mathcal A_*|&\le C.
+ \label{eq:full-saddle-phase-bounds}
+\end{align}
+The last bound retains cancellation of the large real logarithms in
+$D_*(s)-D_*(1-s)$: on the real axis it equals $2i\Im D_*(s)$, which
+is bounded, and \eqref{eq:full-saddle-spatial-derivatives} extends the
+bound over the fixed transverse buffer. Thus the analytic carrier is
+comparable there to $A_X=|\mathcal S_t((1+ix)/2)|$.
+
+The phase coordinate is injective on disks of radius $c/\omega_*$.
+The cosine lower bound and Rouch\'e's theorem, applied to
+\eqref{eq:full-saddle-field}, give one real simple zero of each field
+per disjoint collar, displacement $O(e_*/\omega_*)$, exterior floor
+$cA_X$ and interior floor $cA_X\omega_*$ times distance to its actual
+zero. Reality follows from conjugation and uniqueness. These collars
+exhaust the zeros in the required strip; there are $O(\omega_*)$
+meeting the support. The enlarged buffer contains the full disks of
+edge collars. The same local phase argument and analytic-unit comparison
+as in Lemma~\ref{lem:linear-collars} apply here, with
+\eqref{eq:full-saddle-phase-bounds} and error $Ce_*$.
+Lemma~\ref{lem:uniform-q-collar} now gives
+\eqref{eq:full-saddle-L1} with the unchanged physical $q$, uniformly in
+its size. The planar translation estimate, rather than a regulator
+floor, pays the displaced roots.
+\end{proof}
+
+\begin{proof}[Completion of Theorem~\ref{thm:full-saddle-static}]
+Transfer spatial derivatives of orders at most four to $K$ in
+\eqref{eq:full-saddle-L1}. Its bounded weak derivatives have no boundary
+delta at these orders. This proves the $U,W$ part of
+\eqref{eq:full-saddle-static}, with the physical additive normalization;
+no mass normalization or harmonic correction is made.
+
+For density write exactly, as in Section~\ref{sec:protocol},
+$\epsilon_g(t,u)=E_0(t)e^{-\beta(t)u^2/2}$, $r=\log q$.
+Choose a sufficiently large fixed $B_0$ below.
+If $\beta(t)X\le B_0$, the required derivatives
+$r_x=-2\beta u$ and $\Delta r=-2\beta$ are uniformly bounded on the
+full support, since $\beta$ itself is bounded on $t\ge32$.
+Apply Lemma~\ref{lem:holomorphic-weak-density} to both fields, subtract,
+and use \eqref{eq:full-saddle-L1}; also
+$|w_H(1-w_H)-w_{P_*}(1-w_{P_*})|\le|w_H-w_{P_*}|$.
+This gives the density bound including the unresolved regulator layer
+and $t=64$.
+
+For $\beta X>B_0$ put
+\begin{equation}
+ \lambda_X=
+ \frac{\sup_{|u-x|\le\ell+2}\epsilon_g(t,u)}{A_X}.
+ \label{eq:full-saddle-regulator-ratio}
+\end{equation}
+At growing time it is essential to retain the mass anchor, since a
+separate $O(t\log^2t)$ estimate of $\log E_0$ is too costly at
+$X\asymp t\log t$.
+The complete-source normalization estimate of Appendix~\ref{app:source}
+gives explicitly
+\begin{equation}
+ \left|\frac{H(t,0)}{M_0(t)}-1\right|
+ \le\frac{D_0(0)}{\sqrt{2\pi}}=O(\kappa^{-1/4}).
+ \label{eq:full-saddle-source-anchor}
+\end{equation}
+Indeed $H(t,0)=2\pi^2e^{q_t(L)}\kappa^{-1/2}\int_\R B_t(w)\,dw$
+and $M_0=2\pi^2e^{q_t(L)}\sqrt{2\pi/\kappa}$; the appendix bounds
+the difference of that integral from $\sqrt{2\pi}$ by $D_0(0)$.
+All its complete-source gates hold eventually. The already proved field
+estimate at $x=0$, where $P_*(t,0)=2\mathcal S_t(1/2)>0$, now gives
+\begin{equation}
+ cM_0(t)\le A_0(t)=\mathcal S_t(1/2)\le CM_0(t).
+ \label{eq:full-saddle-mass-anchor}
+\end{equation}
+This is a consequence used in a bound; neither $H(t,0)$ nor a measured
+mass defines the special-function model.
+
+Integrate the bounded real-axis logarithmic carrier derivative in
+\eqref{eq:full-saddle-phase-bounds} to obtain
+$|\log(A_X/A_0)|\le C_1X$.
+For $t\ge128$, $E_0=M_0/\kappa$ exactly, so for $X$ beyond the fixed
+buffer,
+\begin{equation}
+ \log\lambda_X\le C-\log\kappa
+       -\frac{(X-\ell-2)^2}{2\kappa}+C_1X.
+ \label{eq:full-saddle-regulator-payment}
+\end{equation}
+Taking $B_0>8(C_1+1)$ makes $X/\kappa>B_0$ imply
+$\lambda_X\le Ce^{-cX}$. The two-sided versions of
+\eqref{eq:full-saddle-mass-anchor} and the amplitude bound also give
+$|\log\lambda_X|\le C(1+X^2)$, using $\kappa<X/B_0$ and its eventual
+positive lower bound. This retains the exact $M_0/\kappa$ payment.
+
+The remaining times lie in a fixed compact interval $[32,T]$.
+Sectorial expansion of \eqref{eq:full-saddle-model} gives
+$\log A_X=-\pi X/8+O_T(\log^2X)$ there. Both $E_0$ and $\beta$ are
+bounded. If $\beta X>B_0$, taking $B_0$ also larger than $\pi$ yields
+the same exponential bound on $\lambda_X$, with the same polynomial
+allowance for its logarithm. Small $X$ is excluded by enlarging $R_*$.
+This covers the entire switch interval without assigning a positive
+lower bound to $\beta$ immediately after its flat onset.
+
+Apply the actual-collar regularization bound
+\eqref{eq:linear-regulator-bias} separately to $F=H,P_*$ and its own
+real zero measure $\nu_F$. It gives
+\begin{equation}
+ |R_F-K*\nu_F|\le C(1+X^2)\lambda_X^2
+ \left[1+\frac{1+\log(1+C/\lambda_X^2)}{\omega_*}\right]
+ \le Ce^{-cX}.
+ \label{eq:full-saddle-regulator-bias}
+\end{equation}
+Both adaptive spatial curvature terms are included in this payment.
+The $O(\omega_*)$ actual roots and their $O(e_*/\omega_*)$
+displacement give $|K*\nu_H-K*\nu_{P_*}|\le Ce_*$.
+In this regime either $t$ is bounded or $\kappa<X/B_0$, hence
+$t\le C(1+X)$ and $N_*\le C(1+X)\log(2+X)$.
+The exponential bias is therefore absorbed into $Ce_*$.
+This completes the density proof. No zero-measure interpretation is
+used in the complementary unresolved-regulator regime.
+\end{proof}
+
+\subsection{Uniform limits and the same-time inner overlap}
+\begin{corollary}[Three static regimes]\label{cor:full-saddle-limits}
+Each observable or spatial jet on the left of
+\eqref{eq:full-saddle-static} has the following uniform bounds:
+\begin{align}
+ \sup_{x\in\R,\ |y|\le Y}\text{error}(t,x,y)
+ &\le\frac C{\sqrt t\log^2(2+t)},&&t\ge T_*,
+ \label{eq:full-saddle-time-limit}\\
+ \sup_{t\ge32,\ |y|\le Y}\text{error}(t,x,y)
+ &\le\frac C{\sqrt X\log^{3/2}(2+X)},&&X\ge X_*,
+ \label{eq:full-saddle-height-limit}\\
+ \sup_{32\le t\le T,\ |y|\le Y}\text{error}(t,x,y)
+ &=O_T(X^{-2}),&&X\longrightarrow\infty.
+ \label{eq:full-saddle-compact-limit}
+\end{align}
+The thresholds exist but are not numerically instantiated. In particular,
+the outer threshold $X_*$ may be chosen independent of $t\ge32$,
+and at late time the theorem includes every real height.
+\end{corollary}
+\begin{proof}
+Use $N_*\ge t\log(2+t)$ for the first claim. For the second put
+$u=t\log(2+X)/(1+X)$; boundedness of $u^{3/2}/(1+u)^2$ gives
+\[
+ \frac{t^{3/2}}{N_*^2}
+ \le\frac{C}{\sqrt{1+X}\log^{3/2}(2+X)}
+       \frac{u^{3/2}}{(1+u)^2}.
+\]
+For fixed $t\in[32,T]$, $N_*\ge1+X$ gives the third.
+The large-time domain condition is satisfied at small $x$ by $t$ itself.
+\end{proof}
+
+\begin{corollary}[Actual static inner matching]\label{cor:inner-static-overlap}
+Retain every source, carrier and collar gate and the full buffered inner
+window of Theorem~\ref{thm:explicit}, with
+$X_{\rm in}(t)\asymp\kappa^{1/3}$.
+At sufficiently large time both approximations use exactly the same
+physical $q$, and
+\begin{equation}
+ \|R_{P_*}-R_L\|_{\rm inner}
+ \le C\kappa^{-1/2}+Ct^{-1/2}\log^{-2}(2+t)
+ =O(\kappa^{-1/2}).
+ \label{eq:full-saddle-inner-overlap}
+\end{equation}
+The eventual region $2X_*\le|x|\le X_{\rm in}(t)/2$ is nonempty
+and leaves room for both buffers.
+\end{corollary}
+\begin{proof}
+For $t\ge128$ the global regulator is exactly
+\eqref{eq:positiveRegulator}. Apply the triangle inequality through
+$R_H$, using \eqref{eq:explicitDensityRate} and
+\eqref{eq:full-saddle-time-limit}. Since $\kappa\asymp t\log t$,
+the second error is bounded by a constant times $\kappa^{-1/2}$.
+The inner gates hold eventually and $X_{\rm in}(t)\to\infty$.
+No termwise matching of unrelated saddle expansions is needed.
+\end{proof}
+This closes the static positive spatial gap at sufficiently large time.
+The threshold $e^{4t}$ belongs to the earlier $P_{\rm lin}$ proof;
+it is not a condition on the different field $P_*$.
+Same-time spatial overlap does not provide overlap through finite heat
+times, nor differentiated inner matching.
+
+\subsection{The exact nonzero heat residual}
+The implicit derivatives also give, directly,
+\begin{equation}
+ \partial_t\mathfrak p_t(w)=\frac\alpha{2B},\qquad
+ \partial_t\log\mathcal S_t(w)
+ =\frac{\alpha^2}4+\frac{\alpha'}{4B}
+                         +\frac{t\alpha\alpha''}{8B^2}.
+ \label{eq:full-saddle-time-derivatives}
+\end{equation}
+Combine these with \eqref{eq:full-saddle-spatial-derivatives} and
+$\partial_{zz}\mathcal S_t((1\pm iz)/2)
+=-\partial_{ww}\mathcal S_t/4$.
+In $\partial_t\log\mathcal S_t-(D_*^2+D_*')/4$ the
+$\alpha^2$, $\alpha'/B$ and $t\alpha\alpha''$ terms cancel exactly.
+The residual is
+\begin{equation}
+ \boxed{\mathcal E_*:=(\partial_t+\partial_{zz})P_*
+ =-\sum_{w=s,1-s}\mathcal S_t(w)
+ \left\{\frac{t\alpha'''(\mathfrak p_t(w))}{16B^3}
+  +\frac{5t^2[\alpha''(\mathfrak p_t(w))]^2}{64B^4}\right\}.}
+ \label{eq:full-saddle-residual}
+\end{equation}
+Each $B$ in the sum is evaluated at its own branch
+$\mathfrak p_t(w)$. In particular the residual is nonzero, with bound
+\begin{equation}
+ |\mathcal E_*|\le C\frac{t}{N_*^3}
+       \bigl(|\mathcal S_t(s)|+|\mathcal S_t(1-s)|\bigr).
+ \label{eq:full-saddle-residual-bound}
+\end{equation}
+Neither this field residual nor a derivative of a static error supplies
+an evolution comparison by itself. Section~\ref{sec:positive-evolution}
+proves the positive current, direct time, forcing/source and actual
+covariance comparison using additional pole, weak-transfer and signed-stress
+estimates. Its model equations retain the exact residual above.
+The generic collar transfer excludes no collision-control family;
+the canonical application additionally uses the unchanged xi completion,
+reflection and full ordinary Dirichlet arithmetic. No RH or earlier-time
+simplicity conclusion follows.

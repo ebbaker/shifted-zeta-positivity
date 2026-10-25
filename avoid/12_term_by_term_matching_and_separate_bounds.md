@@ -594,3 +594,67 @@ task. [Self-review](../papers/investigations-4/reviews/03_INITIAL_CAP_AND_HEIGHT
 **Relative boundary cancellation retains localization and carrier terms, 23 October 2026.** For Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**. The [selective relative-flux paper](../papers/investigations-4/12_height_dependent_heat_contours/manuscript/book.tex) cancels the reference-velocity denominator before estimating and folds the complete theta head–tail source before taking absolute values. Under carrier normalization it states: “The common drift cancels exactly. The zeroth-order term remains”. Keep that term, the moving-window time derivative, heat defects and any outer-cutoff current. Its ordered-source gain is relative to a specified common majorant and survives positive square reweightings; it is not a flux-sign theorem. [Internal review](../papers/investigations-4/12_height_dependent_heat_contours/reviews/15_RELATIVE_FLUX_ANALYTIC_MANUSCRIPT_REVIEW_20261023.md).
 
 - **Exterior-anchor comparison, 23 October 2026.** For Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**. [HDC brainstorm Note 13](../papers/investigations-4/12_height_dependent_heat_contours/brainstorm/notes/13_COMPLETE_XI_LOGARITHMIC_HEAT_ANCHOR_20261023.md) repairs one exponential-width sufficient bound by retaining the Gaussian/gamma cancellation before estimating. It states: “No assertion is made that all prior anchors or all negative-time methods had exponentially small widths.” The logarithmic-width exterior anchor does not bound interior collision mass or provide the complex-time collar. [Internal review](../papers/investigations-4/12_height_dependent_heat_contours/brainstorm/reviews/04_ANALYTIC_SIMPLICITY_OPENING_ROUND_REVIEW_20261023.md).
+
+
+**Covariance cancellation and source cutoff terms, 24 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+actual effort max**. [Heat-density Note 26](../papers/investigations-5/01_heat_density_asymptotics/notes/26_NEGATIVE_ENDPOINT_EVOLUTION_AND_COVARIANCE_20261024.md)
+states: “separately bounding squares of first gradients would lose that
+power.” Its two-point covariance identity improves negative-endpoint Q
+and Delta Q errors to O(T^-3) and O(T^-4). Conversely,
+[Note 25](../papers/investigations-5/01_heat_density_asymptotics/notes/25_OUTER_CONTOUR_BOUNDS_AND_CUTOFF_OBSTRUCTION_20261024.md)
+retains the nonzero cutoff term g(U) sin(Uz)/z; exact heat evolution does
+not remove the resulting off-axis potential mismatch for that finite
+source class after the spatial regulator switch. Preserve both
+cancellations and boundary terms before assessing a uniform-height
+comparison. [Same-assistant review](../papers/investigations-5/01_heat_density_asymptotics/reviews/09_OUTER_TAIL_AND_NEGATIVE_ENDPOINT_SELF_REVIEW_20261024.md).
+
+
+**Pay physical collars and time layers in an outer limit, 24 October 2026.**
+For Edward Baker with substantial LLM assistance, **gpt-6-astra, max**.
+[HDA Note 27](../papers/investigations-5/01_heat_density_asymptotics/notes/27_COMPACT_TIME_GAMMA_OUTER_DENSITY_20261024.md)
+keeps the two gamma amplitudes in its field error and proves actual root
+collars before dividing by a shrinking regulator. Its compact-time density
+result also gives a discontinuous limiting R/log|x| profile at the chosen
+regulator switch: “a uniform limit of continuous functions would be
+continuous.” Keep this time/height layer and the large-time integration
+losses when joining to an inner asymptotic; the result does not obstruct
+a suitable interpolating formula. [Same-assistant audit](../papers/investigations-5/01_heat_density_asymptotics/reviews/10_GAMMA_OUTER_DENSITY_SELF_REVIEW_20261024.md).
+
+
+**A layer's location error must be smaller than its width, 24 October 2026.**
+For Edward Baker with substantial LLM assistance, **gpt-6-astra, max**.
+[HDA Note 28](../papers/investigations-5/01_heat_density_asymptotics/notes/28_JOINT_OUTER_REGULATOR_TRANSFER_AND_SWITCH_LAYER_20261024.md)
+resolves the switch using an implicit gamma/regulator center but warns:
+“The asymptotic location JT30 is much less accurate than the width in
+JT32.” An inverse-logarithm location estimate cannot center a layer of
+width 1/(X log X). Keep the exact center or acquire the finer error;
+likewise a small joint outer error does not create overlap with a separate
+inner domain. [Same-assistant review](../papers/investigations-5/01_heat_density_asymptotics/reviews/11_JOINT_OUTER_AND_SWITCH_LAYER_SELF_REVIEW_20261024.md).
+
+
+**Retain the saddle and physical mass in joint limits, 24 October 2026.**
+For Edward Baker with substantial LLM assistance, **gpt-6-astra, max**.
+[HDA Note 30](../papers/investigations-5/01_heat_density_asymptotics/notes/30_FULL_GAMMA_SADDLE_AND_INNER_OVERLAP_20261024.md)
+uses the full gamma saddle and determinant to remove the absolute-Gaussian
+loss, then anchors the regulator comparison at the proved physical mass:
+“separately bounding log E_0 by O(t log^2 t) would be inadequate”.
+Both connectors, the middle and all arithmetic modes remain paid.
+Its actual static overlap follows by comparing both models to the same
+density, without matching separate expansion terms. The lesson is scoped
+to these joint estimates; it does not turn a static error or small heat
+residual into a time/current/covariance theorem.
+[Same-assistant review](../papers/investigations-5/01_heat_density_asymptotics/reviews/12_FULL_GAMMA_SADDLE_AND_INNER_OVERLAP_SELF_REVIEW_20261024.md).
+
+
+**Keep the signed stress and switch derivative, 24 October 2026.**
+For Edward Baker with substantial LLM assistance, **gpt-6-astra, max**.
+[HDA Note 31](../papers/investigations-5/01_heat_density_asymptotics/notes/31_POSITIVE_ALL_HEIGHT_EVOLUTION_AND_COVARIANCE_20261024.md)
+uses an exact identity for the actual covariance integrand: “Bounding
+the two positive gradient squares separately would introduce a
+regulator-dependent logarithm.” Its pole comparison depends on field
+displacement rather than a regulator floor. The flat switch derivative
+is paid separately; crude boundedness would leave a nonvanishing outer
+time allowance. These are simple-root/declared-regulator estimates, not
+a multiple-event theorem or a substitute for joining analysis.
+[Same-assistant review](../papers/investigations-5/01_heat_density_asymptotics/reviews/13_POSITIVE_EVOLUTION_AND_COVARIANCE_SELF_REVIEW_20261024.md).

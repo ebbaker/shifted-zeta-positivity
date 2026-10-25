@@ -1,0 +1,694 @@
+\section{Positive evolution and actual covariance}\label{sec:positive-evolution}
+The full gamma saddle also approximates the current, time derivatives,
+regulator forcing, signed source and actual covariance, with absolute
+error $O(t^{-1/2})$ uniformly over real height at sufficiently large
+positive time. A separate compact-time outer theorem includes the flat
+regulator switch. This section integrates Note~31 \cite{n31}, beyond
+the earlier revision's coverage through Note~30. The proof uses direct
+derivative and nonlinear comparisons; it does not differentiate the
+static error allowance or propagate an error from the small residual.
+
+\subsection{Physical contract and the quantitative theorem}
+Retain $P=P_*$, its large branch $\mathfrak p_t$ and determinant $B$
+from \eqref{eq:full-saddle-model}, on the same full holomorphic buffer.
+In particular the two carriers use the exact factor $\mathcal M$, not
+a mass-fitted amplitude, and $\sqrt B$ remains near $1$.
+With $X=|x|$ use
+\begin{equation}
+ \mathcal L=\log(2+t+X),\quad N_*=1+X+t\mathcal L,\quad
+ e_*=\frac{t^{3/2}}{N_*^2},\quad
+ \mathfrak e_{\rm ev}=e_*\mathcal L^2,\quad d_*=\frac{t}{N_*^3}.
+ \label{eq:positive-evolution-scales}
+\end{equation}
+The error $\mathfrak e_{\rm ev}$ is distinct from the analytic carrier.
+Fix $\ell,h>0$, $|y|\le Y$ and $K=k_\ell k_h$ as before. Every
+estimate includes a fixed enlargement of
+$|\Re z-x|\le\ell+2$, $|\Im z|\le Y+h+2$, containing all
+intersecting collars and their larger analytic disks. There is no time
+average, moving filter or mass normalization. Both fields use the same
+unchanged $q=\epsilon_g^2$ and $r=\log q$.
+The field and collar inputs hold for $t\ge32$ and sufficiently large
+$t+X$; the all-height conclusion uses one eventual $T_*$.
+
+For $F=H,P$, write the actual observables as
+\begin{align}
+ D_F&=|F|^2+q,& S_F&=\log D_F,& w_F&=q/D_F,\notag\\
+ \rho_F&=\frac{q|F_z|^2}{\pi D_F^2},&
+ j_F&=\frac{qF_{zz}\overline{F_z}}{\pi D_F^2},&
+ \mathbf j_F&=(\Re j_F,\Im j_F),\notag\\
+ U_F&=K*S_F,&W_F&=K*w_F,&R_F&=K*\rho_F,\qquad J_F=K*j_F,\notag\\
+ Q_F&=K*((S_F)_x^2-(S_F)_y^2)
+                    -((U_F)_x^2-(U_F)_y^2).
+ \label{eq:positive-actual-observables}
+\end{align}
+Here $J_F$ represents the filtered vector current
+$\mathbf J_F=(\Re J_F,\Im J_F)$.
+For this regulator, which is independent of $y$, put
+\begin{align}
+ b&=r_t+\tfrac12(r_{xx}+r_x^2),&\mathcal B_F&=bw_F,\notag\\
+ C_F&=\Delta S_F/(4\pi)-\rho_F,&
+ \mathcal S_F&=(1-2w_F)(r_t\rho_F+\nabla r\cdot\mathbf j_F).
+ \label{eq:positive-regulator-observables}
+\end{align}
+Bars denote convolution with $K$, for example
+$\overline C_F=K*C_F$ and
+$\overline{\mathcal B}_F=K*\mathcal B_F$.
+These are the actual curvature correction, forcing and signed current
+source of \eqref{eq:adaptiveB}--\eqref{eq:adaptiveSource}; correlations
+are not replaced by products of filtered means.
+
+\begin{theorem}[All-height positive evolution comparison]
+\label{thm:positive-evolution}
+There are $T_*\ge128$ and $C$, depending only on the fixed widths,
+transverse buffer and regulator parameter, such that for every
+$t\ge T_*$, $x\in\R$ and $|y|\le Y$ the differences between $H$
+and $P$ satisfy the following absolute bounds. Every spatial
+multi-index up to the indicated order is included.
+\begin{center}
+\begin{tabular}{@{}p{.51\textwidth}cc@{}}
+\toprule
+Observable difference & Spatial order & Allowance\\
+\midrule
+$U_H-U_P$, $W_H-W_P$ & $\le4$ & $Ce_*$\\
+$R_H-R_P$, $\overline C_H-\overline C_P$ & $\le2$ & $Ce_*$\\
+$J_H-J_P$, $Q_H-Q_P$
+ & $\le2$ & $C\mathfrak e_{\rm ev}$\\
+$(U_H-U_P)_t$, $(W_H-W_P)_t$, $(R_H-R_P)_t$,
+ $(\overline C_H-\overline C_P)_t$
+ & $\le2$ & $C\mathfrak e_{\rm ev}$\\
+$\overline{\mathcal B}_H-\overline{\mathcal B}_P$,
+ $\overline{\mathcal S}_H-\overline{\mathcal S}_P$
+ & $\le2$ & $C\mathfrak e_{\rm ev}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+In particular, uniformly over all real $x$ and $|y|\le Y$,
+\begin{equation}
+ \mathfrak e_{\rm ev}\le t^{-1/2},\qquad
+ e_*\le\frac1{\sqrt t\log^2(2+t)},\qquad
+ d_*\le\frac1{t^2\log^3(2+t)}.
+ \label{eq:positive-evolution-uniform}
+\end{equation}
+The model-equation corrections below have the separate allowance
+$Cd_*$. These are absolute errors, including at zeros of an
+observable; no sign is assigned to $Q$, and no numerical onset is
+asserted. The order-two covariance comparison includes $\Delta Q$.
+\end{theorem}
+
+\subsection{Analytic derivatives, actual root motion and pole transfer}
+\begin{lemma}[Derivative input on full disks and actual roots]
+\label{lem:positive-evolution-jets}
+On the enlarged analytic buffer, put
+$\mathcal C_t(z)=|\mathcal S_t((1+iz)/2)|+
+|\mathcal S_t((1-iz)/2)|$. The complete field theorem and exact
+residual give
+\begin{equation}
+ |H-P|\le Ce_*\mathcal C_t(z),\qquad
+ \mathcal E_*=(\partial_t+\partial_{zz})P,
+ \qquad |\mathcal E_*|\le Cd_*\mathcal C_t(z).
+ \label{eq:positive-field-input}
+\end{equation}
+For fixed $0\le j\le3$,
+\begin{equation}
+ |\partial_z^j(H-P)|\le C_j e_*\mathcal L^j\mathcal C_t(z),
+ \qquad |\partial_z^jF|\le C_j\mathcal L^j\mathcal C_t(z),
+ \quad F=H,P.
+ \label{eq:positive-Cauchy-jets}
+\end{equation}
+Let $a,c$ be paired real roots of $H,P$, respectively, and
+$\omega=\Theta_{*,x}(t,x)\asymp\mathcal L$. Their disjoint collars
+and larger concentric analytic disks have radii comparable to
+$1/\omega$; $O(\omega)$ collars meet the fixed support. With
+$v_F=F_{zz}(\text{root}_F)/F_z(\text{root}_F)$,
+\begin{align}
+ |a-c|&\le Ce_*/\omega,&
+ |F_z(\text{root}_F)|&\ge c_1A_X\omega,\notag\\
+ |v_H|+|v_P|&\le C,& |v_H-v_P|&\le Ce_*\omega,\notag\\
+ a'&=v_H,&c'&=v_P-\frac{\mathcal E_*(t,c)}{P_z(t,c)},\notag\\
+ |a'-c'|&\le C(e_*\omega+d_*/\omega).
+ \label{eq:positive-root-motion}
+\end{align}
+Inside a larger collar the analytic regular parts in
+\begin{equation}
+ h_F:=F_{zz}/F=
+   \frac{v_F}{z-\text{root}_F}+g_F(z)
+ \quad\hbox{satisfy}\quad
+ |g_F|\le C\omega^2,\qquad |g_H-g_P|\le Ce_*\omega^2.
+ \label{eq:positive-pole-parts}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Every complete-source contour piece is already paid in
+\eqref{eq:full-saddle-three-payments}; the residual is exactly
+\eqref{eq:full-saddle-residual}, with its branchwise $B$, sign and
+coefficients $1/16,5/64$ retained. Each carrier has logarithmic
+derivative $O(\mathcal L)$, so its modulus changes by a bounded factor
+on a full disk of radius $c/\mathcal L$.
+Apply Cauchy's derivative formula \cite[1.9.31]{DLMFCauchy1931} to the
+holomorphic difference in \eqref{eq:positive-field-input}, with the
+bound on its whole circle. This proves \eqref{eq:positive-Cauchy-jets}.
+Time derivatives use $H_t=-H_{zz}$ and
+$P_t=-P_{zz}+\mathcal E_*$, rather than an asymptotic differentiation.
+
+The complete collars of Lemma~\ref{lem:full-saddle-collars} give the
+displacement and slope floor. At a model root, the actual implicit
+formula $P=2\mathcal A_*\cos\Theta_*$ gives
+\[
+ v_P=2(\mathcal A_*)_z/\mathcal A_*
+                       +\Theta_{*,zz}/\Theta_{*,z}=O(1).
+\]
+Compare the first and second derivatives of $H$ at $a$ and $P$ at $c$
+using \eqref{eq:positive-Cauchy-jets}; use the third derivative along
+the displacement segment. The second-derivative error divided by the
+slope is $O(e_*\omega)$ and the first-derivative relative error is
+$O(e_*)$. Increasing the onset so $e_*\omega<1$ proves the residue
+bounds. Implicit differentiation of the exact field equations gives
+the displayed root velocities. In particular the algebraic residue
+$v_P$ differs from actual model motion by its residual correction.
+Local tracks exist on a common time neighborhood; neither an integer
+root population nor a static position allowance is differentiated.
+
+Off the collars, both $|H|$ and $|P|$ are at least
+$c\mathcal C_t(z)$. This stronger carrier-sum floor follows from
+$|\cos\Theta_*|/\cosh(\Im\Theta_*)$ outside fixed phase disks and
+the phase bounds \eqref{eq:full-saddle-phase-bounds}.
+On the boundary of a larger collar, the field floor and
+\eqref{eq:positive-Cauchy-jets} give
+$|h_H-h_P|\le Ce_*\omega^2$.
+Subtract the two poles using the residue and displacement estimates;
+the same bound holds for $g_H-g_P$ on that boundary. The maximum
+principle extends it inside. The individual regular-part bound follows
+in the same way. The meromorphic $h_F$ itself is not bounded at a root.
+\end{proof}
+
+\begin{lemma}[Regularized poles with no regulator floor]
+\label{lem:regularized-poles}
+For $m=0,1,2$, define the smooth quantities by their fractions
+\begin{equation}
+ V_{m,F}=w_F^m(1-w_F)h_F
+       =w_F^m\frac{F_{zz}\overline F}{D_F},\qquad
+ Z_m=w_P^m\frac{\mathcal E_*\overline P}{D_P}.
+ \label{eq:positive-regularized-poles}
+\end{equation}
+The right-hand expressions specify their values at zeros. For every
+positive $q$, however small or spatially variable, on the full support,
+\begin{align}
+ \|V_{m,H}-V_{m,P}\|_{L^1}&\le C\mathfrak e_{\rm ev},&
+ \|Z_m\|_{L^1}&\le Cd_*,\notag\\
+ \|S_H-S_P\|_{L^1}+\|w_H-w_P\|_{L^1}&\le Ce_*.
+ \label{eq:positive-pole-L1}
+\end{align}
+Here $L^1$ uses planar area, with the physical potential offset retained.
+\end{lemma}
+\begin{proof}
+The last estimate is \eqref{eq:full-saddle-L1}.
+On a scaled larger collar put $u=\omega(z-c)$ and write
+$P/A_X=uB(u)$, $H/A_X=(u-e_0)C(u)$.
+The zero-free analytic units have fixed positive lower and upper
+bounds, $|B-C|\le Ce_*$ and $|e_0|\le Ce_*$.
+For $f=(u-a)b(u)$ and the arbitrary positive function
+$Q(u)=q/A_X^2$, define
+\begin{equation}
+ \mathcal P_m[f](u)=\frac1{u-a}
+  \left(\frac{Q}{|f|^2+Q}\right)^m
+  \frac{|f|^2}{|f|^2+Q}.
+ \label{eq:positive-scaled-pole}
+\end{equation}
+Uniformly in $Q$,
+\begin{equation}
+ \int|\mathcal P_m[(u-e_0)C]-\mathcal P_m[uB]|\,dA_u
+ \le Ce_*(1+|\log e_*|).
+ \label{eq:positive-pole-translation}
+\end{equation}
+Indeed remove disks of radius $C_2e_*$ about both centers. Their
+contribution is $O(e_*)$, since each pole has bound $1/|u-a|$.
+On the complement interpolate the root along its segment and the unit
+as $B\exp(s\log(C/B))$. The unit logarithm is $O(e_*)$ and remains
+bounded. Hold $Q$ fixed pointwise throughout: no derivative of $Q$
+occurs. The weight $w^m(1-w)$ and its derivative with respect to
+$\log|f|$ are uniformly bounded for these $m$. Differentiating the
+interpolated pole costs
+$Ce_*(|u-a_s|^{-2}+|u-a_s|^{-1})$.
+Radial integration from $C_2e_*$ to the fixed radius proves
+\eqref{eq:positive-pole-translation}; overlapping excluded disks are
+covered by enlarging constants. The logarithm is of the displacement
+error, with no $\log q$ hidden in the constant.
+
+Physical area restores $\omega^{-2}$ while the pole restores one
+factor $\omega$. Summing $O(\omega)$ collars therefore gives the
+translation allowance $Ce_*(1+|\log e_*|)$.
+The residue difference costs $Ce_*\omega$, since the total $L^1$
+norm of the unweighted simple-pole kernels is $O(1)$.
+The regular-part differences cost $Ce_*\omega^2$; changing their
+weights costs the same by the last estimate of
+\eqref{eq:positive-pole-L1} and Lipschitz dependence on $w$.
+Off the collars the derivative bound and carrier-sum floor give the
+same $Ce_*\mathcal L^2$ allowance. Finally
+$1+|\log e_*|\le C\mathcal L$ for $t\ge32$, since
+$N_*\le C(2+t+X)\log(2+t+X)$. This proves the first estimate.
+
+The quotient $\mathcal E_*/P$ has residue at most $Cd_*/\omega$
+at a model root and analytic regular part bounded by $Cd_*$.
+The boundary bound follows from \eqref{eq:positive-field-input} and
+the carrier-sum floor, and the maximum principle applies as above.
+Multiplication by $w^m(1-w)$ removes the pole at the root, and its
+$L^1$ norm is bounded by that of the simple pole. Summing collars and
+the exterior proves $\|Z_m\|_{L^1}\le Cd_*$ without a derivative of
+the residual or a reciprocal regulator loss. This argument is local to
+the acquired simple-root geometry; it is not uniform at multiple events.
+\end{proof}
+
+\subsection{The exact regulator coefficients and direct time estimates}
+\begin{lemma}[Payment of physical regulator coefficients]
+\label{lem:positive-regulator-payment}
+At late time the exact regulator has
+\begin{align}
+ r&=2\log M_0-2\log\kappa-x^2/\kappa,&
+ r_x&=-2x/\kappa,& r_{xx}&=-2/\kappa,\notag\\
+ r_t&=2L^2-3\kappa'/\kappa+x^2\kappa'/\kappa^2,&
+ r_{xt}&=2x\kappa'/\kappa^2,& r_{xxt}&=2\kappa'/\kappa^2.
+ \label{eq:positive-exact-regulator-jets}
+\end{align}
+Choose a sufficiently large fixed $B_0$ as in
+\eqref{eq:full-saddle-regulator-payment}.
+On $X/\kappa\le B_0$, the required coefficients
+$\nabla r,\Delta r,\nabla r_t,\Delta r_t$ are bounded on the full
+fixed buffer, and $|r_t|+|b|\le C\mathcal L^2$.
+On the complementary region the mass-anchored ratio
+\begin{equation}
+ \lambda=\frac{\sup_{|u-x|\le\ell+2}\epsilon_g(t,u)}{A_X}
+ \le Ce^{-cX},\qquad |\log\lambda|\le C(1+X^2)
+ \label{eq:positive-tail-ratio}
+\end{equation}
+pays every polynomially weighted term involving $w_F$, $w_Fh_F$
+and $w_P\mathcal E_*/P$ used below. In particular,
+\begin{align}
+ \int w_F&\le C\lambda^2
+                \left[1+\frac{1+|\log\lambda|}{\omega}\right],\notag\\
+ \int|w_Fh_F|&\le C\left\{
+  \omega^2\lambda^2\left[1+\frac{1+|\log\lambda|}{\omega}\right]
+                      +\lambda\right\}.
+ \label{eq:positive-tail-pole-integrals}
+\end{align}
+For $w_P\mathcal E_*/P$ the second bound is multiplied by $d_*$,
+with $\omega^2$ replaced by $1$ and $\lambda$ replaced by
+$\lambda/\omega$ in the pole term.
+\end{lemma}
+\begin{proof}
+The exact saddle equations give
+$\kappa=8tL-2t+36$ and
+$\kappa'=8L+16tL/\kappa-2=O(L)$.
+Stationarity gives $(\log M_0)'=L^2-\kappa'/(2\kappa)$,
+which proves \eqref{eq:positive-exact-regulator-jets} without
+differentiating an asymptotic mass estimate. The bounds in the first
+regime follow directly. In the other regime use the independent mass
+anchor \eqref{eq:full-saddle-mass-anchor} and
+\eqref{eq:full-saddle-regulator-payment}, preserving the exact physical
+$M_0/\kappa$ regulator. Here $t\le C(1+X)$,
+$\mathcal L\le C\log(2+X)$ and all required coefficient products
+have polynomial growth in $X$.
+
+On a collar put $a_e=C\lambda/\omega$.
+The physical floor gives
+$w_F\le a_e^2/(|z-\text{root}_F|^2+a_e^2)$;
+off collars $w_F\le C\lambda^2$.
+Elementary radial integration proves the first bound in
+\eqref{eq:positive-tail-pole-integrals}.
+The pole contribution uses
+$\int w_F/|z-a|\le Ca_e$ per disk and the bounded residues of
+\eqref{eq:positive-root-motion}; its full population costs
+$O(\lambda)$, not merely $O(\lambda^2)$.
+The regular part uses \eqref{eq:positive-pole-parts}.
+The smaller residue and regular part of $\mathcal E_*/P$ give the
+stated residual version. Additional $w$ and $1-w$ factors have modulus
+at most one. Thus the relevant weighted terms are exponentially small,
+with an additional $d_*$ in residual terms; these exponentials are
+absorbed into $e_*$ or $\mathfrak e_{\rm ev}$ since
+$N_*\le C(1+X)\log(2+X)$ in this region. The unresolved regime has
+not been assigned a zero-measure interpretation.
+\end{proof}
+
+\begin{proposition}[Direct time, current and curvature comparisons]
+\label{prop:positive-direct-evolution}
+The current, time, forcing and differentiated curvature rows of
+Theorem~\ref{thm:positive-evolution}, except the signed-source row
+proved below, hold with their stated derivative orders.
+\end{proposition}
+\begin{proof}
+Set $\chi_F=w_F(1-w_F)$, and set $Z_m=0$ for $H$.
+Direct differentiation using the respective exact field equations gives
+the smooth identities
+\begin{align}
+ (S_F)_t&=-2\Re V_{0,F}+r_tw_F+2\Re Z_0,\notag\\
+ (w_F)_t&=r_t\chi_F+2\Re V_{1,F}-2\Re Z_1,\notag\\
+ (\chi_F)_t&=r_t\chi_F(1-2w_F)
+       +2\Re(V_{1,F}-2V_{2,F})-2\Re(Z_1-2Z_2).
+ \label{eq:positive-direct-time}
+\end{align}
+Writing $\delta$ for $H$ minus $P$, the pole estimates and both
+regulator regimes yield
+\begin{equation}
+ \|\delta S_t\|_{L^1}+\|\delta w_t\|_{L^1}
+             +\|\delta\chi_t\|_{L^1}\le C\mathfrak e_{\rm ev}.
+ \label{eq:positive-time-L1}
+\end{equation}
+This retains $2L^2$, the two root-motion poles and the model residual.
+Moving up to two spatial derivatives to $K$ proves the $U_t,W_t$ rows.
+
+For any holomorphic $F$ the exact spatial identity is
+\begin{equation}
+ \pi j_F=\partial_{\bar z}V_{0,F}
+                    +(\partial_{\bar z}r)V_{1,F},\qquad
+ \partial_{\bar z}=(\partial_x+i\partial_y)/2.
+ \label{eq:positive-weak-current}
+\end{equation}
+Off roots $\partial_{\bar z}h_F=0$ and
+\[
+ \partial_{\bar z}(1-w_F)
+ =-w_F(1-w_F)\partial_{\bar z}r
+                      +qF\overline{F_z}/D_F^2.
+\]
+Equivalently differentiate the smooth fraction
+$F_{zz}\overline F/D_F$ directly. The identity extends across roots
+with no omitted point mass. Pair with a test and integrate its first
+term by parts. The pole comparison, the bounded spatial coefficient
+in the first regulator regime and its separate tail payment prove
+$|\partial^\gamma(J_H-J_P)|\le C\mathfrak e_{\rm ev}$ for
+$|\gamma|\le2$. This never divides by $F_z$ at a stationary point
+between roots.
+
+Use Lemma~\ref{lem:holomorphic-weak-density} in the form
+\begin{equation}
+ 4\pi\langle\rho_F,\psi\rangle
+ =\int S_F\Delta\psi+2\int w_F\nabla r\cdot\nabla\psi
+       +\int(w_F\Delta r+\chi_F|\nabla r|^2)\psi.
+ \label{eq:positive-weak-density}
+\end{equation}
+Differentiate this exact identity at fixed physical coordinates, giving
+\begin{align}
+ 4\pi\langle(\rho_F)_t,\psi\rangle
+ ={}&\int(S_F)_t\Delta\psi
+   +2\int\{(w_F)_t\nabla r+w_F\nabla r_t\}\cdot\nabla\psi\notag\\
+ &+\int\{(w_F)_t\Delta r+w_F\Delta r_t
+       +(\chi_F)_t|\nabla r|^2
+       +2\chi_F\nabla r\cdot\nabla r_t\}\psi.
+ \label{eq:positive-differentiated-density}
+\end{align}
+At each finite point the positive regulator has a floor on this compact
+test support, so ordinary smoothness justifies differentiation.
+Uniform bounds then come from \eqref{eq:positive-time-L1} and the
+individual tail payments, yielding
+\begin{equation}
+ |\langle\delta\rho_t,\psi\rangle|
+       \le C\mathfrak e_{\rm ev}\|\psi\|_{(2)},
+ \qquad \|\psi\|_{(2)}=
+             \sum_{|\gamma|\le2}\|\partial^\gamma\psi\|_\infty.
+ \label{eq:positive-density-time-bound}
+\end{equation}
+Take $\psi=\partial^\gamma K$, $|\gamma|\le2$.
+Without time differentiation, \eqref{eq:positive-weak-density} gives
+the same spatial orders of $R$ at error $Ce_*$.
+Subtract $\rho_F$ from $\Delta S_F/(4\pi)$, or use the remaining
+weak terms, to get $\overline C$ through order two at error $Ce_*$,
+and $\overline C_t$ through that order at error
+$C\mathfrak e_{\rm ev}$. Both the time and spatial curvature
+derivatives are therefore paid.
+
+The kernel is $C^3$ with bounded weak derivatives through order four,
+without a boundary delta. Smoothing or weak integration by parts
+extends the pairings to these tests. The maximum order is two test
+derivatives plus $|\gamma|\le2$; no fifth derivative is used.
+Finally $\overline{\mathcal B}_F=K*(bw_F)$.
+The first-regime coefficient bound times the $L^1$ weight difference,
+and the tail payment in the second, give its error
+$C\mathfrak e_{\rm ev}$ through two spatial derivatives, including
+$\Delta\overline{\mathcal B}$.
+\end{proof}
+
+\subsection{The actual signed covariance}
+\begin{proposition}[Signed gradient stress and actual covariance]
+\label{prop:positive-actual-covariance}
+The actual covariance in \eqref{eq:positive-actual-observables} satisfies
+\begin{equation}
+ |\partial^\gamma(Q_H-Q_P)|\le C\mathfrak e_{\rm ev}
+ \quad(|\gamma|\le2),\qquad
+ |Q_H-Q_P|+|\Delta Q_H-\Delta Q_P|\le C\mathfrak e_{\rm ev}.
+ \label{eq:positive-covariance-bound}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Put $G_F=(S_F)_x^2-(S_F)_y^2$. The identities
+$\sqd|F|^2=4\Re(F_{zz}\overline F)$ and
+$\sqd\log D+(\log D)_x^2-(\log D)_y^2=\sqd D/D$ give
+\begin{equation}
+ G_F=4\Re V_{0,F}-\sqd S_F+(r_{xx}+r_x^2)w_F.
+ \label{eq:positive-signed-stress}
+\end{equation}
+This spatial identity concerns the actual squared gradients; it uses
+no heat equation, fitted covariance, residual or closure assumption.
+It retains the angular cancellation of the simple-pole square.
+Separate positive gradient-square estimates could introduce a
+regulator-dependent logarithm.
+The pole and potential estimates and the regulator split give
+\begin{equation}
+ |\partial^\gamma K*(G_H-G_P)|\le C\mathfrak e_{\rm ev},
+ \qquad |\gamma|\le2.
+ \label{eq:positive-stress-bound}
+\end{equation}
+The $\sqd S$ term moves two further derivatives to $K$, again using
+at most order four.
+
+The separately paid subtraction of squared filtered gradients uses
+\begin{equation}
+ \|\nabla S_F\|_{L^1(\Omega)}\le C\mathcal L,\qquad
+ |\partial^\gamma U_F|\le C\mathcal L\quad(1\le|\gamma|\le3).
+ \label{eq:positive-filtered-gradient}
+\end{equation}
+Indeed, with $\mathcal L_F=F_z\overline F/D_F$,
+$\nabla S_F=(2\Re\mathcal L_F,-2\Im\mathcal L_F)+w_F\nabla r$.
+Off collars $|F_z/F|\le C\omega$. Inside them,
+$F_z/F=1/(z-\text{root}_F)+b_F'/b_F$, with unit derivative
+$O(\omega)$ on the smaller disks. The simple poles are integrable;
+their total $L^1$ contribution is $O(1)$.
+The regulator term is bounded in the first regime and exponentially
+small in the second. Transfer remaining derivatives to $K$ for the
+second assertion of \eqref{eq:positive-filtered-gradient}.
+Combining these individual bounds with static potential-jet
+differences $Ce_*$ yields
+\begin{equation}
+ |\partial^\gamma\{(U_H)_x^2-(U_H)_y^2
+                   -(U_P)_x^2+(U_P)_y^2\}|
+ \le Ce_*\mathcal L,\qquad |\gamma|\le2.
+ \label{eq:positive-filtered-square-difference}
+\end{equation}
+Subtract this from \eqref{eq:positive-stress-bound}.
+The resulting $Q$ is exactly the covariance defined before any equation
+comparison. No covariance has been chosen to make an evolution law hold,
+and the physical additive potential normalization is preserved.
+\end{proof}
+
+\subsection{Residual-bearing equations and the actual signed source}
+\begin{proposition}[Complete model equations and residual corrections]
+\label{prop:positive-residual-equations}
+For $D_P=|P|^2+q$, set
+\begin{equation}
+ Z_0=\frac{\mathcal E_*\overline P}{D_P},\qquad
+ \mathcal D_{\mathcal E_*}
+ =\frac{2q\Re((\mathcal E_*)_z\overline{P_z})}{\pi D_P^2}
+     -4\rho_P\Re\frac{\mathcal E_*\overline P}{D_P}.
+ \label{eq:positive-residual-density-correction}
+\end{equation}
+The exact fixed-filter model equations are
+\begin{align}
+ (U_P)_t={}&-\tfrac12\{\sqd U_P+(U_P)_x^2-(U_P)_y^2+Q_P\}
+       +\overline{\mathcal B}_P+2\Re(K*Z_0),\notag\\
+ \Delta U_P={}&4\pi(R_P+\overline C_P),
+ \label{eq:positive-residual-potential-equation}\\
+ (R_P)_t={}&-\tfrac12\sqd R_P
+ -\frac1{8\pi}\Delta\{(U_P)_x^2-(U_P)_y^2+Q_P\}
+ +\frac1{4\pi}\Delta\overline{\mathcal B}_P\notag\\
+ &-\partial_t\overline C_P-\tfrac12\sqd\overline C_P
+                    +\frac1{2\pi}\Delta\Re(K*Z_0),
+ \label{eq:positive-residual-density-equation}\\
+ (R_P)_t+\operatorname{div}\mathbf J_P
+ ={}&\overline{\mathcal S}_P+K*\mathcal D_{\mathcal E_*}.
+ \label{eq:positive-residual-current-equation}
+\end{align}
+The analogous $H$ equations have zero residual corrections.
+Each displayed model correction has allowance $Cd_*$, including spatial
+derivatives through order two where used, while
+\begin{equation}
+ |\partial^\gamma(\overline{\mathcal S}_H
+                  -\overline{\mathcal S}_P)|
+ \le C\mathfrak e_{\rm ev},\qquad |\gamma|\le2.
+ \label{eq:positive-signed-source-bound}
+\end{equation}
+\end{proposition}
+\begin{proof}
+For a general holomorphic $F$ with $F_t=-F_{zz}+E_F$, direct
+differentiation gives
+\begin{equation}
+ (\rho_F)_t+\operatorname{div}\mathbf j_F
+ =\mathcal S_F+\mathcal D_{E_F},\qquad
+ \mathcal D_{E_F}
+ =\frac{2q\Re((E_F)_z\overline{F_z})}{\pi D_F^2}
+       -4\rho_F\Re\frac{E_F\overline F}{D_F}.
+ \label{eq:positive-general-residual-balance}
+\end{equation}
+Thus $E_H=0$ and $E_P=\mathcal E_*$ give the claimed current equation.
+The correction is not bounded pointwise at narrow peaks.
+Instead vary the exact weak density identity with $\delta F=E_F$,
+holding $q$ fixed. For $P$ its equivalent weak form is
+\begin{align}
+ 4\pi\langle\mathcal D_{\mathcal E_*},\psi\rangle
+ ={}&2\Re\int Z_0\Delta\psi
+        -4\Re\int Z_1\nabla r\cdot\nabla\psi\notag\\
+ &-2\Re\int\{Z_1\Delta r
+                    +(Z_1-2Z_2)|\nabla r|^2\}\psi.
+ \label{eq:positive-weak-residual-correction}
+\end{align}
+The residual $L^1$ bound in the bounded-coefficient regime and its
+weighted tail version give
+\begin{equation}
+ |\langle\mathcal D_{\mathcal E_*},\psi\rangle|
+                       \le Cd_*\|\psi\|_{(2)}.
+ \label{eq:positive-residual-weak-bound}
+\end{equation}
+This keeps all coefficients $2,-4,-2$ and avoids reciprocal powers
+of the regulator. Apply \eqref{eq:positive-general-residual-balance}
+to the already defined signed sources. The independent current,
+density-time and residual estimates prove
+\eqref{eq:positive-signed-source-bound}. For the divergence use
+\eqref{eq:positive-weak-current} with the differentiated test; its
+maximum kernel order is $|\gamma|+2\le4$.
+This estimates the actual signed source, without replacing its
+correlations by products of means or asserting a small integral of
+its absolute value.
+
+The first time identity in \eqref{eq:positive-direct-time}, with the
+signed stress identity, gives the potential equation including
+$+2\Re(K*Z_0)$. Take its Laplacian and use
+$\Delta U_P=4\pi(R_P+\overline C_P)$ to obtain the density equation,
+including \emph{both} curvature derivatives and
+$+(2\pi)^{-1}\Delta\Re(K*Z_0)$.
+The residual $L^1$ and weak bounds pay these corrections through the
+required orders, with at most four kernel derivatives.
+This completes all rows of Theorem~\ref{thm:positive-evolution}.
+Its uniform rates follow from $N_*\ge t\mathcal L$.
+Closeness comes from the complete field comparison and the nonlinear
+transfers, not from a stability assertion for small equation defects.
+\end{proof}
+The full-buffer bounds also give $U$, its normal spatial derivative
+and the normal current on observation boundaries inside this domain.
+No harmonic datum, fitted mass or unknown theta root enters the model.
+A moving observation boundary would require a separate transport law.
+
+\begin{corollary}[Differentiated inner overlap]
+\label{cor:inner-differentiated-overlap}
+On the original buffered inner window
+$|x|\le X_{\rm in}(t)\asymp\kappa^{1/3}$, retain every source and
+collar gate of Theorem~\ref{thm:explicit}. At sufficiently large time,
+\begin{equation}
+ \|J_P-J_L\|_{\rm inner}
+  +\|(R_P)_t-(R_L)_t\|_{\rm inner}
+ \le Ct^{-1/2}+CL\kappa^{-7/6}=O(t^{-1/2}).
+ \label{eq:positive-differentiated-overlap}
+\end{equation}
+\end{corollary}
+\begin{proof}
+Both fields and the inner reference use exactly the same physical $q$.
+Compare through $H$, using Theorem~\ref{thm:positive-evolution} and
+\eqref{eq:explicitTransportRate}. This is an actual differentiated
+overlap at a coarser absolute rate than the independent inner theorem.
+It is not an error $o(L/\kappa)$: the inner theorem retains that sharper
+transport information. No clock potential or covariance is assigned
+by this comparison. At late time $P$ already covers the whole height
+axis, so a spatial splice with the clock is unnecessary for that endpoint.
+\end{proof}
+
+\subsection{Compact-time outer evolution across the flat switch}
+\begin{theorem}[Compact positive-time exterior comparison]
+\label{thm:compact-positive-evolution}
+For every fixed finite $T\ge32$ there are $C_T,X_T$ such that,
+uniformly for $32\le t\le T$, $X=|x|\ge X_T$ and $|y|\le Y$,
+with the same full buffers and spatial derivative orders as in
+Theorem~\ref{thm:positive-evolution},
+\begin{center}
+\begin{tabular}{@{}p{.65\textwidth}c@{}}
+\toprule
+Observable differences & Allowance\\
+\midrule
+$U,W,R,\overline C$ & $C_TX^{-2}$\\
+$J,Q$ (including $\Delta Q$ at order two) & $C_T\log^2X/X^2$\\
+$U_t,W_t,R_t,\overline C_t,\overline{\mathcal B},
+ \overline{\mathcal S}$ & $C_T\log^2X/X$\\
+Retained model-equation corrections & $C_TX^{-3}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The constants and threshold belong to this fixed compact slab; this
+is separate from the uniform late-time theorem.
+\end{theorem}
+\begin{proof}
+The field, collar and pole inputs above hold for $t\ge32$ and
+sufficiently large $t+X$, by Section~\ref{sec:full-saddle}.
+On the present slab $e_*=O_T(X^{-2})$, $d_*=O_T(X^{-3})$ and
+$\omega\asymp\log X$. Write the exact global regulator as
+\begin{equation}
+ r(t,x)=a(t)-\beta(t)x^2,\qquad
+ \beta=0\ (t\le64),\qquad\beta=\chi(t)/\kappa(t)\ (t>64).
+ \label{eq:compact-positive-regulator}
+\end{equation}
+Here $a=2\log E_0$ is smooth, and $\chi$ is exactly the switch of
+Section~\ref{sec:protocol}. Bounded derivatives on a compact time
+interval alone do not pay $r_t=a'-\beta'x^2$ uniformly in height.
+The actual flat switch gives the stronger bound
+\begin{equation}
+ |\beta'|\le C_T\beta\{1+\log_+^2(1/\beta)\}\quad(\beta>0),
+ \qquad \beta'=0\quad(\beta=0).
+ \label{eq:compact-flat-switch-derivative}
+\end{equation}
+Indeed for $64<t<128$ put $v=(t-64)/64$; directly,
+\[
+ \chi'=\frac{\chi(1-\chi)}{64}
+                          \{v^{-2}+(1-v)^{-2}\}.
+\]
+Near $v=0$, $\log(1/\chi)=v^{-1}+O(1)$ and $\kappa$ is bounded
+above and below, giving \eqref{eq:compact-flat-switch-derivative}.
+On the remaining compact part $\beta$ has a positive lower bound,
+so smoothness gives the result after enlarging $C_T$; the flat endpoint
+at $128$ is harmless. If $T\le64$, both sides vanish.
+
+For $\beta X\le B_0$, monotonicity of
+$u(1+\log^2(1/u))$ for $0<u\le1$ gives at large $X$
+\begin{equation}
+ |\beta'|\le C_T\frac{1+\log^2X}{X},\quad
+ |r_t|\le C_TX\log^2X,\quad
+ |\nabla r_t|\le C_T\log^2X.
+ \label{eq:compact-positive-time-coefficients}
+\end{equation}
+The case $\beta=0$, with bounded $r_t$, is included.
+The spatial coefficients $\nabla r,\Delta r$ stay bounded.
+Consequently \eqref{eq:positive-direct-time}--
+\eqref{eq:positive-density-time-bound}, with every mixed term in
+\eqref{eq:positive-differentiated-density} retained, cost
+$O_T(\log^2X/X)$ here. Current and covariance need no $r_t$ and
+retain $O_T(\log^2X/X^2)$.
+For $\beta X>B_0$, the compact-time proof of
+\eqref{eq:full-saddle-regulator-payment}--
+\eqref{eq:full-saddle-regulator-bias} gives
+$\lambda\le C_Te^{-cX}$ for a sufficiently large fixed $B_0$.
+All required space/time coefficients grow only polynomially in $X$
+on this slab and are paid by \eqref{eq:positive-tail-pole-integrals}.
+The retained residual corrections remain $O_T(X^{-3})$.
+This proves the table, including the actual flat-switch time payment;
+no exchange of compact-time and late-time limits has been assumed.
+\end{proof}
+The endpoint and compact positive-time exterior comparisons still leave
+the finite-height transition core and the joining estimates to be proved.
+The canonical completion, full reflection and ordinary Dirichlet
+coefficients remain source-specific premises. The local pole/stress
+identities can also hold on simple-root subdomains of collision controls;
+they exclude no collisions elsewhere. No all-time assembly, autonomous
+covariance closure, time-averaged evolution, effective onset, independent
+specialist review, RH or earlier-time simplicity conclusion is asserted.

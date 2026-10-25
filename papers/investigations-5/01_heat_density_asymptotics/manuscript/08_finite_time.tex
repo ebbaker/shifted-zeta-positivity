@@ -6,45 +6,10 @@ controlled at the source, then transferred to the density, current and
 actual covariance. The construction has a finite explicit cost; the
 bounds alone do not assert that this cost is small.
 
-\subsection{One regulator for both endpoints}
-Let $C=\Phi(0)\sqrt\pi/2$, fix $\eta>0$, and define
-\[
- \epsilon_b(t)=\eta C(1+t^2)^{-1/4}.
-\]
-For $64<t<128$ put $v=(t-64)/64$ and
-$\chi(t)=e^{-1/v}/(e^{-1/v}+e^{-1/(1-v)})$; extend $\chi$ by zero
-for $t\le64$ and one for $t\ge128$. Set
-\begin{equation}
- \epsilon_g(t,x)=
- \begin{cases}
- \epsilon_b(t),&t\le64,\\
- \exp\{(1-\chi(t))\log\epsilon_b(t)+\chi(t)\log\epsilon_+(t,x)\},
-       &t>64.
- \end{cases}
- \label{eq:globalRegulator}
-\end{equation}
-This is positive and smooth at every finite $(t,x)$.
-To check that the large saddle used in $\epsilon_+$ exists throughout
-the switch, the maximum of $q_t'$ is
-$(t/2)(\log(t/(8\pi))-1)+9$, attained at
-$u_*=\log(t/(8\pi))/4$.
-It is positive at $t=64$ and increasing thereafter; the larger zero
-has $\kappa>0$. Smooth extension slightly below $64$ and the flatness
-of $\chi$ justify the gluing. The switch points specify the regulator;
-they are not onset times for Theorem~\ref{thm:explicit}.
-
-At $t=-T$,
-$\epsilon_b/ (\eta C_T)=(1+T^{-2})^{-1/4}=1+O(T^{-2})$.
-Using \eqref{eq:Eminus} with this regulator and replacing $\eta$ by
-$\eta(1+T^{-2})^{-1/4}$ in \eqref{eq:adaptiveNegative} preserves its
-$O(T^{-1})$ scaled error. Indeed
-$|\partial_{\log\eta}F_\eta|\le2F_\eta$, and $F_\eta$ is bounded on
-each fixed scaled transverse strip, uniformly over real scaled heights.
-For $t\ge128$, \eqref{eq:globalRegulator} equals
-\eqref{eq:positiveRegulator} exactly.
-On a compact time and spatial buffer it has a positive lower bound.
-After the height dependence turns on, positivity alone does not supply
-such a bound over all real heights.
+The common regulator and fixed spatial kernel are defined in
+Section~\ref{sec:protocol}. On each compact full time--spatial buffer,
+$\epsilon_g$ has a positive lower bound; every finite-time comparison
+below uses that full buffer, including kernel supports and boundary traces.
 
 \subsection{A finite source field with error-function primitives}
 Choose a time slab $[a,b]$, transverse buffer $|y|\le Y$, cutoff $U>0$,
@@ -86,11 +51,11 @@ theta roots or densities. Numerical cancellation in the primitives
 requires its own evaluation allowance.
 
 \subsection{A complete source-to-jet error}
-Let $B_2$ be the source derivative bound of Lemma~\ref{lem:B2} and put
+Let $B_2^{\Phi}$ be the source derivative bound of Lemma~\ref{lem:B2} and put
 \begin{equation}
  \tau_N=\frac{2\pi^2(N+1)^4e^{-\pi(N+1)^2}}{1-\vartheta_N},\qquad
  \vartheta_N=\left(1+\frac1{N+1}\right)^4e^{-\pi(2N+3)},\qquad
- d_s=B_2h_s^2/8+\tau_N.
+ d_s=B_2^{\Phi}h_s^2/8+\tau_N.
  \label{eq:sourceinterpolation}
 \end{equation}
 For $s=\max\{b,0\}$ choose $U$ so that, for $0\le j\le3$,
@@ -123,7 +88,7 @@ are attainable by first enlarging $U$, then $N$ and the mesh resolution.
 Each omitted positive leading theta term decreases on $u\ge0$;
 its value at zero and the consecutive mode ratio give
 $0\le\Phi-\Phi_N\le\tau_N$.
-Interpolation of the complete $\Phi$ costs at most $B_2h_s^2/8$,
+Interpolation of the complete $\Phi$ costs at most $B_2^{\Phi}h_s^2/8$,
 and interpolation of its finite nodal approximations adds at most
 $\tau_N$. Thus $|\Phi-f|\le d_s$ on $[0,U]$.
 On $[U,\infty)$ the logarithm of
@@ -287,10 +252,100 @@ This exclusion is specific to a fixed compact source; it does not
 exclude growing cutoffs. It also shows why an exactly zero heat
 residual alone cannot establish approximation to theta.
 
-The remaining analytical tasks are informative transition overlap,
-a positive outer-height model and a potential/covariance comparison for
-the explicit clock on a domain suitable for evolution.
-Certified finite onset and independent mathematical review remain
-separate tasks. The endpoint asymptotics, determinant comparisons and
-finite-slab stability inequalities do not exclude earlier collisions
-or establish simplicity at a prescribed earlier time.
+
+\begin{proposition}[Positive-cutoff obstruction at fixed positive time]
+\label{prop:cutoff-potential}
+Fix $t>64$, choose $0<a\le\pi/16$, and let $f$ be a finite
+continuous piecewise-linear source on
+$[0,U_s]$, $U_s>0$, with $f(U_s)>0$, extended by zero beyond $U_s$.
+Let
+\[
+ g(u)=e^{tu^2}f(u),\qquad
+ H_f(t,z)=\int_0^{U_s}g(u)\cos(zu)\,du.
+\]
+Use the common physical regulator and fixed positive normalized kernel
+of Section~\ref{sec:protocol}, and set
+$U_f=K*\log(|H_f|^2+q)$, $U_H=K*\log(|H|^2+q)$.
+Fix an off-axis observation center
+$y_*>h$, and put $d_y=y_*-h>0$, $Y=y_*+h$. If $u_i$ are all cell
+endpoints, the finite remainder allowance
+\begin{align}
+ B_f={}&|g'(0+)|+|g'(U_s-)|e^{YU_s}
+       +\sum_{0<u_i<U_s}|[g']_{u_i}|e^{Yu_i}\notag\\
+ &+\sum_i\int_{u_i}^{u_{i+1}}|g''(u)|e^{Yu}\,du
+ \label{eq:cutoff-remainder}
+\end{align}
+gives
+\begin{equation}
+ H_f(t,z)=e^{tU_s^2}f(U_s)\frac{\sin(U_sz)}z+\mathcal E_f(z),
+ \qquad |\mathcal E_f(z)|\le\frac{B_f}{|z|^2}
+ \quad(|\Im z|\le Y).
+ \label{eq:cutoff-asymptotic}
+\end{equation}
+Let $A_0$ be \eqref{eq:contour-constant} for the singleton interval
+$[t,t]$ and this $Y$, and set $c_f=g(U_s)\sinh(U_sd_y)>0$.
+With $\epsilon_g(t,x)=E_0e^{-\beta x^2/2}$,
+$E_0>0$, $\beta>0$, whenever
+\[
+ x-\ell\ge\max\{1,2a/\beta,2B_f/c_f\},
+\]
+the source-anchored potentials satisfy the full-buffer inequality
+\begin{align}
+ U_f(t,x,y_*)-U_H(t,x,y_*)\ge{}&2a(x-\ell)
+      -\log((x+\ell)^2+Y^2)\notag\\
+ &+2\log(c_f/2)-\log(A_0^2+E_0^2)
+ \longrightarrow+\infty.
+ \label{eq:cutoff-potential-obstruction}
+\end{align}
+In particular the difference is at least $2ax-2\log x-O(1)$.
+\end{proposition}
+\begin{proof}
+Integrate by parts first on the whole interval, then cell by cell.
+The first integration has the displayed endpoint term at $U_s$; its
+zero endpoint vanishes since $\sin0=0$, and continuity cancels the
+interior terms. The second integration pays both end derivatives,
+every jump of $g'$ and each remaining integral of $g''$ in
+\eqref{eq:cutoff-remainder}. This proves
+\eqref{eq:cutoff-asymptotic}. On the whole off-axis buffer,
+$|\sin(U_sz)|\ge\sinh(U_sd_y)$, so
+\[
+ |H_f(t,z)|\ge\frac{c_f}{2|z|}
+ \quad\text{if }|z|\ge2B_f/c_f,\quad d_y\le\Im z\le Y.
+\]
+For $\xi\ge2a/\beta$, the complete-source contour bound and the exact
+regulator give
+\[
+ |H(t,\xi+iv)|^2+q(t,\xi)
+ \le(A_0^2+E_0^2)e^{-2a\xi}\qquad(|v|\le Y).
+\]
+Take physical logarithms, retaining their offsets, and average with
+positive normalized $K$. The horizontal buffer has
+$x-\ell\le\xi\le x+\ell$ and the transverse buffer has
+$d_y\le v\le Y$. Their extrema give
+\eqref{eq:cutoff-potential-obstruction}. Negative heights follow by
+evenness. No complete-field lower bound or zero information is used.
+\end{proof}
+
+This fixed-time, large-height obstruction \cite{n25} is distinct from
+Proposition~\ref{prop:fixedsource}, which takes large time at a fixed
+spatial buffer. It excludes this finite positive-endpoint source class
+from a uniform absolute comparison of the source-anchored averaged
+potential on the stated off-axis strip. It proves no density-only
+impossibility, no assertion at $y=0$, and no result for a smooth
+zero-endpoint taper, a height-dependent cutoff, a noncompact source,
+a normalized relative approximation or a weak comparison. A fixed
+additive constant cannot remove the growing discrepancy. A fixed-source
+$H_f$ still solves heat exactly; its zero heat residual does not pay this
+actual source error.
+
+The noncompact gamma constructions in Sections~\ref{sec:gamma-outer}
+and~\ref{sec:full-saddle} supply static outer-height comparison and
+same-time inner overlap. Section~\ref{sec:positive-evolution} adds positive
+evolution and actual-covariance comparison, including the compact-time
+exterior and a differentiated inner comparison. Joining through finite
+heat times still requires informative finite-core accuracy, compatible
+traces and a complete joining budget; see Section~\ref{sec:remaining}.
+The explicit clock still has no assigned physical potential or actual
+covariance. Effective onset and distinct specialist mathematical review
+remain separate obligations. These approximation results do not exclude
+earlier collisions or establish simplicity at a prescribed earlier time.

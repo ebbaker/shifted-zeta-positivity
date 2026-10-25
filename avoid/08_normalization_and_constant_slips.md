@@ -86,3 +86,15 @@ regulator. Keep the curvature correction as well as the potential forcing
 and current source when epsilon varies. This is a preventive scope check
 for the extension; the fixed-epsilon identities are unchanged.
 [Same-assistant assessment](../papers/investigations-5/01_heat_density_asymptotics/reviews/04_MANUSCRIPT_AND_VARIABLE_EPSILON_SELF_REVIEW_20261024.md).
+
+
+24 October 2026 — constant notation after integration, prepared for Edward
+Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+[Heat-density Review 15](../papers/investigations-5/01_heat_density_asymptotics/reviews/15_MANUSCRIPT_REVIEW_AND_SOL_RECOMMENDATIONS_20261024.md)
+records: "The local `B_i` remains the cell source bound. Do not globally replace
+`B_2`". Three source-bound occurrences had retained B_2 after the same
+manuscript introduced a distinct composition B_2. The
+[production correction](../papers/investigations-5/01_heat_density_asymptotics/reviews/16_REVIEW15_REVISION_PRODUCTION_ASSESSMENT_20261024.md)
+uses B_2^Phi at exactly those occurrences and centralizes the notation key;
+centered moments and composition budgets retain their own symbols. This
+repairs presentation, without changing the interpolation theorem.
