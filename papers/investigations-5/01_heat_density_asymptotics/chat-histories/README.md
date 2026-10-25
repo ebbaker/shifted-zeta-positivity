@@ -193,3 +193,132 @@ constant checks record internal evidence; AN04 is prepared for remaining
 exterior constants. Actual model/effort **gpt-6.1-sol, ultra**. Original
 identity, title, number and first-capture metadata remain; the refresh
 tool manages public transcript/registry updates and final capture.
+
+
+[0017 — Continue HDA-18-AN04 analysis](0017_2026-10-25T16-30-06Z_continue-hda-18-an04-analysis.json),
+created 25 October 2026 at 12:30 America/New_York, thread
+`01a173e5-dc96-7c31-946c-be54c871244c`, executes AN04 r1's bounded
+analytical budget in Note 47 and Review 29. Finite sufficient constants,
+source demand and onset; no numerical source/observable execution.
+Actual model **gpt-6.1-sol**, effort **ultra**. HDA-18 stays Gated and
+the all-height/all-time objective remains. The repository refresh tool
+owns this unique chat's transcript/registry and final capture; no existing
+history identity or earlier public message is changed.
+
+
+Chat 0017's following turn executes AN05 r1/HDA-22 in Note 48 and
+Review 30: one moving phase gap and fixed source give all-height coverage
+throughout [95,97], with complete moving defects and a vanishing source/
+outer error budget. Its actual configuration remains gpt-6.1-sol, ultra.
+AN06/HDA-24 is dependency-cleared but unexecuted; HDA-18 remains Gated.
+The same unique registration, title, number, filename and first-capture
+provenance are preserved; the refresh tool owns transcript updates.
+
+
+Chat0017 continues with AN06 r1/HDA-24 in Note49/Review31: all-height
+[63,97] coverage across64, complete exact-regulator tuple and vanishing
+source budget. Actual gpt-6.1-sol, ultra. AN07 is prepared/unexecuted for
+endpoint temporal joins; HDA-18 remains Gated. The original title, number,
+filename, first-capture provenance and unique registration remain.
+Only the refresh tool updates the generated transcript and registry.
+
+
+Chat0017 continues with AN07 in Note50/Review32 and the author-requested
+whole-chat results summary Note51. AN04--AN07 now supply an all-height
+negative-to-central cover through97; effective positive attachment remains
+open. Actual gpt-6.1-sol, ultra. The same title, number, filename and
+first-capture provenance remain; only the authorized refresh tool updates
+the generated public transcript and registry. AN08 is prepared/unexecuted.
+
+## Chat 0018 — author-directed manuscript review and integration
+
+[0018 — Update heat density manuscript](0018_2026-10-25T18-28-49Z_update-heat-density-manuscript.json),
+thread `01a17452-8bcd-7042-9fb5-3baa3e0e3ee5`: 25 October 2026,
+prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+actual effort max**. Reviews Summary 51 and AN04–AN07 results, integrates
+Notes 47–50 into the maintained manuscript, and saves Notes 52–53 and
+Review 33. The positive effective gate and HDA-17/18/20 statuses remain.
+The authorized refresh tool owns the public transcript and registry;
+consult index.json for current capture counts, times and hashes.
+
+
+## Chat0019 — effective positive attachment and remaining central interval
+
+[0019 — Extend HDA-18-AN08 asymptotics](0019_2026-10-25T18-46-56Z_extend-hda-18-an08-asymptotics.json),
+thread `01a17463-238b-7352-982f-f0d3c155e1c8`, 25 October2026.
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual effort ultra**. AN08 r1 returns Note54/Review34: finite all-time
+analytical existence with both limits; source cost/evaluation and HDA-20
+remain open. One unique registration; only the authorized refresh tool
+updates the generated transcript and registry. Consult index.json for
+current counts, timestamps and hashes.
+
+
+Chat0019's HDA-23 continuation, 25 October2026, **gpt-6.1-sol, actual
+effort ultra**, returns Note55/Review35: fixed-central/direct-source
+conditioning and improved complete-tuple descriptor bounds. Same title,
+number, filename, creation/first-capture provenance and unique registry.
+Only the authorized refresh tool updates public history. AN05 is prepared
+and unexecuted; no research numerics or model change.
+
+
+## Chat0020 — Integrate heat-density asymptotics
+
+[0020 — Integrate heat-density asymptotics](0020_2026-10-25T21-49-08Z_integrate-heat-density-asymptotics.json),
+thread `01a17509-f1a2-7b01-b10c-e066ccdc36ed`, 25 October2026.
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+actual effort max** for the completed review/integration turn; source
+metadata preserves the interrupted initial configuration as recorded.
+Reviews Notes54–55 and AN08's return, integrates the all-time construction
+and improved source cost into the manuscript, and writes Notes56–57 and
+Review36. No numerical research or parent acceptance upgrade. The
+repository refresh tool alone writes the public transcript and registry;
+consult index.json for current counts, timestamps, configurations and hashes.
+
+
+## Chat0021 — Prove HDA-17 positive-source bound
+
+[0021 — Prove HDA-17 positive-source bound](0021_2026-10-25T22-08-25Z_prove-hda-17-positive-source-bound.json),
+thread `01a1751b-9ac5-7192-9f6c-b9f59ec30827`, 25 October 2026.
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual effort ultra**. Continues HDA-17-AN05 r1 in Note58/Review37:
+canonical complex branch, positive polynomial, full four-jet and finite
+source-construction cost ledger. Source compression closes at bounded
+scope; evaluated working precision/filtering and HDA-20 remain open.
+The authorized refresh tool owns this chat's sole transcript and registry;
+consult index.json for current counts, hashes and times. Bounded
+exact-turn follow-up captures the actual completed final reply.
+
+
+Chat0021's next turn continues Note58 analytically in Note59/Review38,
+25 October 2026, **gpt-6.1-sol, actual effort ultra**. Finite evaluator
+working bits, auxiliary providers, full arithmetic and continuous-filter
+error are proved from certified fixed descriptor data; the literal exact
+phase-index constructor remains an identified unpaid step. No research
+runs or parent acceptance upgrade. The same unique identity, number,
+title, creation/first-capture provenance and filename remain. Only the
+authorized refresh tool updates the transcript and registry.
+
+
+Chat0021's exact phase-index continuation, 25 October 2026,
+**gpt-6.1-sol, actual effort ultra**, returns Note60/Review39. The author
+explicitly authorized **“Use existing onset freedom.”** Four admissible
+binary candidates, an explicit full-saddle phase remainder and finite
+rational interval tests construct the literal exact ceiling. Arbitrary
+previously fixed-onset equality is outside scope. No research execution
+or parent status upgrade. This remains chat0021 with the same unique
+registration, number, title, filename and original provenance. The
+authorized refresh tool alone updates the public transcript and registry;
+the bounded exact-turn worker captures the real completed final reply.
+
+
+Chat0021's complete evaluator/filter cost continuation, 25 October2026,
+**gpt-6.1-sol, actual effort ultra**, returns Note61/Review40 and the
+[whole-chat research summary, Note62](../notes/62_CHAT0021_RESEARCH_SUMMARY_20261025.md).
+For Edward Baker with substantial LLM assistance. Polynomial accuracy-bit
+work at fixed descriptor/query box for explicit scalar encodings; generic
+scalar costs and inverse-floor height dependence retained. No research
+execution or parent upgrade. All Notes58--61 research stays in this same
+unique registration, number, title, filename and original provenance.
+Only the authorized tool refreshes the transcript/registry; the bounded
+exact-turn follow-up captures the real final response after completion.

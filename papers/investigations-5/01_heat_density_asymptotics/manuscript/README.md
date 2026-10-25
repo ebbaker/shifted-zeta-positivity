@@ -1,29 +1,32 @@
 # Analytical working manuscript
 
 25 October 2026, America/New_York. Drafted for **Edward Baker** with
-substantial LLM assistance. Current consolidation/production:
-**gpt-6-astra, actual effort max**, chat 0016. Original notes retain their
-actual Astra/Sol model and effort attribution.
+substantial LLM assistance. Current focused review and integration:
+**gpt-6-astra, actual effort max**, chat **0020**. Original research notes
+retain their actual model, effort and review attribution.
 
-The one maintained [source](main.tex) now consolidates **Notes 42–45** in
-addition to the preceding analytical results and scoped Note 38 outlook.
-The checked reading copy is **92 pages**. [Note 46](../notes/46_NOTES42_45_MANUSCRIPT_CONSOLIDATION_20261025.md)
-maps the integration; [Review 28](../reviews/28_NOTES42_45_CONSOLIDATION_PRODUCTION_ASSESSMENT_20261025.md)
-records production and source-consistency checks.
+The maintained [source](main.tex) integrates **Notes54–55**, with a
+**112-page** reading copy. It now leads with the finite construction for
+**every real time and height**, |y|<=1, using one source per target,
+the same physical regulator and fixed filter, both endpoint comparisons,
+actual covariance and all spatial/temporal defects.
 
-Section 13 gives the gap-supported nonholomorphic field, exact equations,
-full-support primitive/observable transfer, actual covariance, paid exterior
-heat partition and shrinking-slab error. Section 14 gives finite gap/core
-inputs, the constructive clipped-positive source and the effective complete
-complex-buffer outer field/jet proof. The introduction, model guide, scope,
-source crosswalk and acknowledgments reflect these additions.
+Sections14–16 derive the effective positive field/collar/mean table,
+noncircular overlap choice, new compact table through T_++1, all-time
+formula, fixed-central/direct-source conditioning and sufficient source
+cost. At fixed b/eta/accuracy the explicit descriptor bound has logarithm
+pi R/32+O(log^2 R). Huge fixed constants, useful field evaluation and
+continuous averaging remain open. The main construction precedes the
+supplementary explicit-clock and geometric interpretations. Numerical
+diagnostics stay in the supporting appendix and source notes.
 
-The goal is an analytic approximation for every real height and heat time,
-with useful quantitative errors, full buffers and control at |x|→infinity
-and t→±infinity. The current fixed-gap theorem covers all heights on a
-short time slab; fixed-width time coverage, useful full budgets, the switch
-and endpoint joins remain open. HDA-17 is Partial, HDA-18 Gated and HDA-20
-unfulfilled. Production is not independent specialist review.
+[Note56](../notes/56_NOTES54_55_MANUSCRIPT_INTEGRATION_20261025.md) maps the
+integration; [Review36](../reviews/36_NOTES54_55_REVIEW_AND_INTEGRATION_20261025.md)
+records the focused cross-model LLM review and production checks.
+No blocking error was identified in the inspected new mechanisms; the
+entire inherited chain has not received a distinct full audit or specialist
+validation. [Note57](../notes/57_PROGRAM_OUTLOOK_AFTER_ALL_TIME_CONSTRUCTION_20261025.md)
+discusses the next steps. No numerical research was performed.
 
 ## Build and reading copy
 
@@ -33,21 +36,25 @@ Run from the repository root:
 python3 -B papers/investigations-5/01_heat_density_asymptotics/manuscript/build.py
 ~~~
 
-The unchanged script exports to [the local reading copy](../../../../output/pdf/heat_density_asymptotics/heat_density_asymptotics.pdf).
-Auxiliaries stay in that ignored folder's `.build/`. The
-[current build record](BUILD_RECORD_20261025.json) pins all 20 TeX files,
-build.py and the PDF: zero warnings, 56 resolving local links, 629 resolving
-internal actions, all-page rendering and visual inspection, and selected
-readable-page checks. No numerical research was run.
+The unchanged script exports to
+[the local reading copy](../../../../output/pdf/heat_density_asymptotics/heat_density_asymptotics.pdf).
+Auxiliaries stay in the ignored output folder's `.build/`.
+[Current build record](BUILD_RECORD_20261025_CHAT0020.json): 25 TeX files,
+zero warnings or unresolved references/citations, 68 resolving local PDF
+links and 738 resolving internal actions, plus rendered-page inspection.
+The generated PDF is excluded from Git regardless of its size. Hashes
+identify this production version and are not mathematical certificates.
 
-The [historical 24 October build record](BUILD_RECORD_20261024.json) is
-preserved unchanged, including its 78-, 65-, 54-, 28- and 25-page provenance.
-MI2 remains CLOSED at its original production scope; [Note 41](../notes/41_NOTE39_MANUSCRIPT_IMPLEMENTATION_20261024.md)
-and [Review 22](../reviews/22_NOTE39_ANALYTICAL_INTEGRATION_PRODUCTION_ASSESSMENT_20261024.md)
-record that milestone. No new snapshot folder or commit is created.
+The [101-page predecessor](BUILD_RECORD_20261025_CHAT0018.json),
+[92-page build](BUILD_RECORD_20261025.json) and
+[24 October record](BUILD_RECORD_20261024.json) remain unchanged.
+No snapshot folder or commit was created; the concise milestone is in
+[DRAFT_HISTORY](../DRAFT_HISTORY.md).
 
-The [sole progress register](../research-progress/01_AVERAGED_DENSITY_RESEARCH_PROGRESS_20261024.md)
-owns live status. **Next: Analysis — Sol**, [HDA-18-AN04 r1](../research-progress/handoffs/HDA-18-AN04.md),
-for remaining exterior constants and one complete budget. HDA-22/23 then
-target fixed-width time coverage and core conditioning; HDA-24 is gated
-switch-uniform assembly before parent HDA-18's two endpoint joins.
+**Next: Analysis — Sol**, existing
+[HDA-17-AN05 r1](../research-progress/handoffs/HDA-17-AN05.md): prove a
+positive compressed source with complete four-jet and descriptor-cost
+bounds, or identify the first unpaid analytic input. Source storage and
+evaluator working precision remain separate. The
+[sole progress register](../research-progress/01_AVERAGED_DENSITY_RESEARCH_PROGRESS_20261024.md)
+retains HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled.

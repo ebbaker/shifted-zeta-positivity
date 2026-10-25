@@ -1,0 +1,288 @@
+\section{One finite construction for every real time and height}
+\label{sec:all-time}
+The effective positive table selects a finite $T_+$. We must next pay the
+whole interval between the earlier switch construction and that overlap.
+The constants below explicitly depend on the now fixed $b=T_++1$.
+They do not enter the already chosen $C_+$ or $T_+$.
+
+\subsection{A compact exterior table with an arbitrary fixed upper time}
+For $J_b=[63,b]$, $b\ge128$, put
+\[
+ \Lambda_b=2^{20}(1+b)^4,\quad C_0(b)=12b^{3/2}+7,\quad
+ E_b^{\rm out}=2^{60}(1+b)^4,\quad D_b^{\rm out}=2^{32}(1+b)^4.
+\]
+Repeating the complete contour proof on $x\ge e^{\Lambda_b}$ gives
+$x/2\le|p|\le x$, $t\log x/5\le\Re(p-w)\le t\log x/3$,
+$|\Im(p-w)|<t/2$ and $|B-1|\le b/x$.
+The central error is at most $12b^{3/2}/x^2$. The remaining finite and
+infinite contour pieces are each at most $x^{-3}$: their common exponent
+is bounded by
+\[
+ -63\log^2x/100+(2b/3)\log x+6\le-\tfrac12\log^2x,
+\]
+and the complete arithmetic tail is at most
+$48e^{b/2-63\log x/10}$. These inequalities hold at $\log x\ge\Lambda_b$.
+Thus on strip five $|H-P|\le C_0(b)A_\Sigma/x^2$.
+Complete Cauchy circles give, on strip $9/2$ and
+$x\ge2e^{\Lambda_b}$,
+\begin{equation}
+ |\partial_z^j(H-P)|\le
+ 8C_0(b)j!4^j\log^j(2+x)A_\Sigma/x^2\quad(1\le j\le3).
+ \label{eq:at-compact-jets}
+\end{equation}
+The exact saddle derivatives also give the earlier phase and collar
+constants, $|X'(t)|\le8$, and residual bounds
+$|E_P|\le D_b^{\rm out}A_\Sigma/x^3$,
+$|(E_P)_z|\le D_b^{\rm out}\log(2+x)A_\Sigma/x^3$.
+The velocity estimate uses the real-part cancellation in
+\eqref{eq:ua-speed}, with $t/x^2\le b/x^2$.
+
+The full complex log-gamma expression supplies the sharper carrier
+estimate needed later:
+\begin{equation}
+ \left|\log|S_t((1\pm iz)/2)|+\pi x/8\right|
+ \le A_b^{\rm amp}(1+\log x)^2,\qquad
+ A_b^{\rm amp}=2^{16}(1+b)^2.
+ \label{eq:at-carrier}
+\end{equation}
+Indeed $\Re p\le3+b\log x/2$, the imaginary shift is at most $b/2$,
+the angular correction is bounded by a constant times $\Re p+b$,
+and the real saddle exponent by $b\log^2x/9+b/4$.
+The logarithmic, polynomial, determinant and sector-remainder terms all
+fit the displayed coefficient. At this onset it is smaller than $x/8$.
+Consequently $e^{-x}\le|S_t|$ on the full strip and
+$|S_t((1\pm ix)/2)|\le e^{-x/4}$ on the real axis.
+This is a new fixed-$b$ table, not an extrapolation of the time-$97$ table.
+
+\subsection{Regulator, moments and means on the entire interval}
+The real source saddle satisfies
+\[
+ 1/4<L_s<b+1,\quad36<\kappa<K_b:=8b(b+1)+36,
+ \quad0<\kappa'<K_b':=16(1+b)^2.
+\]
+These follow by bracketing its equation at $1/4,b+1$ and using its
+exact derivative. With $W_b=16(1+b)^3$, the source-saddle formula gives
+$e^{-3}K_b^{-1/2}\le M_0\le e^{W_b}$.
+Write $r=a-\beta x^2$ as in \eqref{eq:ua-switch-r}, and set
+\begin{align*}
+ L_{+,b}&=W_b+3+2\log(2+K_b),&
+ L_{0,b}&=|\log\eta|+4+\tfrac14\log(1+b^2),\\
+ A_b&=4[1+L_{+,b}+L_{0,b}+(1+b)^2+K_b'],&
+ B_b'&=1/36+K_b'/36^2,\\
+ Q_b&=16\eta^2+e^{2W_b},&
+ F_b&=\max(4,2K_bB_b').
+\end{align*}
+Then $|a|,|a'|\le A_b$, $e^a\le Q_b$, $\beta\le1/36$,
+$|\beta'|\le B_b'$, and
+\begin{equation}
+ |\beta'|\le F_b\beta[1+\log^2(1/\beta)],\qquad
+ E_b=\min\left(\frac{4\eta e^{-4}}{(1+b^2)^{1/4}},
+                    e^{-3}K_b^{-3/2}\right),\quad
+ \sqrt q\ge E_be^{-R^2/72}\quad(|x|\le R).
+ \label{eq:at-regulator}
+\end{equation}
+At $\beta=0$ its derivative is zero. On $[64,97]$ use the proved switch
+flatness; on $[97,b]$, $\chi\ge1/2$ gives $\beta\ge1/(2K_b)$,
+which proves the enlarged bound. The term
+$\chi'(\log\epsilon_+-\log\epsilon_b)$ is retained in $a'$.
+
+For full supports in $|x|\le R$, a sufficient physical coefficient
+table is
+\[
+ A_t=A_b+B_b'R^2,\quad R_1=R/18,\quad R_2=1/18,\quad
+ T_1=2B_b'R,\quad T_2=2B_b',\quad T_h=4B_b'R^2,
+\]
+with $c_r=1/18+R^2/324$ and $b_r=A_t+c_r/2$.
+On exterior supports the same two cases as the switch proof apply.
+If $\beta u\le16$, flatness gives $|r_t|=O_b(u\log^2(2+u))$.
+If $\beta u>16$, the relative physical regulator satisfies
+$\Lambda\le\sqrt{Q_b}e^{-2u}$ at the final onset. These cases split
+positive allowances only; no indicator is differentiated.
+
+For complete moments let $V_b=b+16$ and
+\begin{equation}
+ B_j(b)=40\left[\frac{V_b^{j+1}e^{bV_b^2+13V_b}}{j+1}
+                     +\frac{\Gamma((j+1)/2)}2\right],\quad 0\le j\le3.
+ \label{eq:at-moments}
+\end{equation}
+The source bound $\Phi(u)\le40e^{9u-\pi e^{4u}}$ and
+$bu^2+13u+u^2\le u^3\le\pi e^{4u}$ for $u\ge V_b$ prove this
+by splitting the integral at $V_b$. Thus these moments cover every
+$t\le b$, all real heights, and strip four.
+
+To specify the canonical mean coefficient without an unknown compact
+supremum, put
+\begin{align*}
+ S_b&=1+Q_b+A_b+F_b+B_b'+E_b^{\rm out}+D_b^{\rm out}+\eta^{-2},\\
+ R_b^*&=\left\lceil e^{2\Lambda_b+2S_b}\right\rceil,
+ &e_b^*&=E_be^{-(R_b^*+8)^2/72},\\
+ C_{H,b}&=\max\left(2^{100},
+ 2^{30}\left[\frac{B_0(b)+B_2(b)}{2e_b^*}+(R_b^*+8)/18+1\right]\right).
+\end{align*}
+Inside this fixed rectangle use the positive floor and moments; outside
+use the paid units, integrable poles and weighted regulator estimates.
+Moving remaining derivatives to $K$ gives
+\begin{equation}
+ |\partial^\gamma U_H|\le C_{H,b}[1+\log(2+|x|)],\quad1\le|\gamma|\le3.
+ \label{eq:at-means}
+\end{equation}
+The actual joined mean has this cap plus one after its auxiliary
+primitive rows are paid. This order avoids circular covariance bounds.
+The compact $C_{H,b}$ is never used in the late-time $C_+$.
+
+\subsection{One gap, one compact budget, one source}
+Choose a phase level at time $64$ above a finite onset $U$:
+$n=\lceil\Theta(64,U)/\pi\rceil$, $\Theta(64,X_0)=n\pi$.
+Follow this same level throughout $J_b$. The velocity bound gives
+$|X(t)-X_0|\le8\max(1,b-64)$.
+Define
+\[
+ D_{\rm mov}=8(b+1)+32,\quad a_X=X_0-D_{\rm mov},\quad
+ R_c=X_0+D_{\rm mov},\quad L=\log(2+R_c),\quad \sigma=(64L)^{-1}.
+\]
+All collar, source and averaging buffers fit inside $R_c$; the model
+and actual gap floors are respectively $1/2$ and $1/4$.
+Substitute
+\[
+ \mu_o=E_b^{\rm out}/a_X^2,\quad\mu_s=a_X^{-2},\quad
+ d=d_1=D_b^{\rm out}/a_X^3
+\]
+in the spatial and moving ledgers, retaining every actual time derivative.
+The same finite maps as in Section~\ref{sec:uniform-assembly} give the
+following sufficient coefficient and nonsource envelope:
+\begin{align}
+ C_b={}&2^{8192}
+ [1+C_{H,b}+Q_b+A_b+B_2(b)+1+F_b+B_b'
+                 +E_b^{\rm out}+D_b^{\rm out}+D_{\rm mov}]^{64},\notag\\
+ B_b(X_0)={}&C_b\{L^8/a_X+(1+R_c)^{20}e^{-a_X}\}.
+ \label{eq:at-compact-budget}
+\end{align}
+The worst time-compatibility row is $O_b(\mu uL^3)$; all other power
+tails decay at least as fast. The time length enters $D_{\rm mov}$,
+not an accumulated count of charts. The finite maps use fewer than
+sixteen powers of the displayed inputs; the sixty-fourth power and
+$2^{8192}$ dominate their profile, kernel and Leibniz coefficients.
+
+For the final positive band use $C_b^+=(1+c_b)C_b$ and the corresponding
+$B_b^+$. Given a reserve $\delta$, a sufficient binary onset is $U=2^m$,
+where
+\begin{align}
+ m\ge{}&16384+\lceil\log_2(4R_b^*+4D_{\rm mov}+1024)\rceil
+                   +\lceil8\log_2(2+C_b^+/\delta)\rceil,\notag\\
+ m\ge{}&16384+\lceil8\log_2(2+2^{64}K_{\rm br}/\delta)\rceil.
+ \label{eq:at-onset}
+\end{align}
+The phase inverse enlarges $U$ by less than one at this onset.
+Then $a_X\ge2^{m-1}$, $L\le m+3$,
+$C_b^+\le\delta2^{m/8}$ and $(m+3)^8\le2^{m/2}$;
+the exponential term is smaller still. Thus $B_b^+<\delta/4$, and
+all branch, collar and scale gates hold. The second inequality pays
+the earlier pre-switch bridge.
+
+The original sufficient core source demand is explicit. Set
+$e_c=E_be^{-R_c^2/72}$, $\rho=\min(\delta/4,B_b^+)$ and
+\[
+ \varepsilon_c=e_c^2\min_{D_r>0}\frac{\rho}{4D_r},
+ \qquad
+ e_{\min}=\frac{T_+^{3/2}}{[1+R_c+b\log(2+b+R_c)]^2}.
+\]
+Here $D_r$ are the finite compact-transfer row coefficients obtained
+from \eqref{eq:at-regulator}--\eqref{eq:at-means}, including auxiliary
+mean rows. With $T_-=\max(1,4K_-/\delta)$, choose
+\begin{equation}
+ \varepsilon\le\min\left\{1,\varepsilon_c,
+ a_X^{-2}e^{-R_c-16},T_-^{-5/2},
+ \frac{\delta}{4(1+K_{\rm mid}(T_-))},
+ \frac{\delta}{2^{69}K_{\rm br}L^3},
+ \frac{e_{\min}A_{\rm late}}{16}\right\}.
+ \label{eq:at-source-minimum}
+\end{equation}
+All entries are finite positive numbers already specified. The clipped
+constructor of Section~\ref{sec:effective-inputs} applies with upper time
+$b$ after replacing its cutoff by
+$U_s=\lceil b+4+\log(5+\log(32/\varepsilon))\rceil$ and
+$F_s=U_s^4e^{bU_s^2+4U_s}$; its complete tail has slope at least
+$\pi e^{4U_s}$ and exponent at most $-2e^{4U_s}$.
+It gives one nonnegative source whose four jets have errors
+$29\varepsilon/64$ for \emph{every} $t\le b$ and all real heights
+on strip four. Section~\ref{sec:source-conditioning} improves this
+sufficient tolerance and the source cutoff; the current prescription
+already proves finite existence.
+
+\subsection{The positive band and the global domain table}
+On $[T_+,T_++1]$ use $v_+=b_*(t-T_+)$ and
+$\lambda_+=v_++(1-v_+)\lambda$. If $B_c=(F_c)_{\bar z}$, then
+\begin{align*}
+ (\lambda_+)_t&=v_+'(1-\lambda)+(1-v_+)\lambda_t,&
+ B_+&=(1-v_+)B_c,\\
+ (B_+)_t&=(1-v_+)(B_c)_t-v_+'B_c,&
+ ((B_+)_z)_t&=(1-v_+)((B_c)_z)_t-v_+'(B_c)_z.
+\end{align*}
+The heat terms are $\lambda_+E_P$,
+$(1-v_+)[\lambda_x(P-G)_z+\lambda_{xx}(P-G)/4]$ and
+$[(1-v_+)\lambda_t+v_+'(1-\lambda)](P-G)$.
+On the band the additional compatibility variation in
+\eqref{eq:tc-signed-heat} is $O(|v_+'|\mu L^2)$; area $O(1/L)$
+makes its filtered cost $O(|v_+'|\mu L)$. This fits $B_b^+$.
+The core-containing heat pieces are paired with the global weak test;
+no holomorphic identity is applied to a sharply truncated core integral.
+All old spatial commutators and the new compatibility variation remain.
+
+\begin{theorem}[Finite all-real-time approximation]
+\label{thm:all-time}
+Fix $\eta>0$, $K=k_1k_1$ and $0<\theta\le1$. There are explicitly
+specified finite parameters and one nonnegative finite source such that
+the following smooth field controls every scalar of
+\eqref{eq:ua-contract} within $\theta/2$, uniformly on
+$\R_t\times\R_x\times\{|y|\le1\}$:
+\begin{equation}
+ F(t,z)=\begin{cases}
+ N,&t\le-2T_-,\\
+ (1-v_-)N+v_-G,&-2T_-\le t\le-T_-,\\
+ G,&-T_-\le t\le63,\\
+ G+v_0\lambda(P-G),&63\le t\le64,\\
+ G+\lambda(P-G),&64\le t\le T_+,\\
+ G+[v_++(1-v_+)\lambda](P-G),&T_+\le t\le T_++1,\\
+ P,&t\ge T_++1.
+ \end{cases}
+ \label{eq:at-field}
+\end{equation}
+Here $v_-=b_*((t+2T_-)/T_-)$, $v_0=b_*(t-63)$ and
+$N=C(-t)^{-1/2}e^{z^2/(4t)}$. The source and parameters may depend
+on $\eta,\theta$. Equation residuals have the sums of their displayed
+component allowances. Boundary traces inherit the stated derivative
+orders and full buffers.
+\end{theorem}
+\begin{proof}
+First choose $C_+,T_+$ by Section~\ref{sec:effective-positive}, then
+$b=T_++1$ and $\delta=\theta/64$. This fixes the compact table.
+Choose $T_-$ as above, then $m$, the phase level and gap, and finally
+one source satisfying \eqref{eq:at-source-minimum}.
+Section~\ref{sec:temporal-cover} pays the first four rows at reserve
+$\delta$. The compact spatial proof pays the fifth by
+$3B_b^+\le3\delta/4$. The sixth uses $\theta/8$ on its holomorphic
+core and $B_b^+$ on its spatial bands; the last uses $\theta/8$.
+Whole-support positive primitive allowances are added before the weak
+identities and actual covariance mean product are evaluated. These
+positive sums fit $\theta/2$. There is no multiplier for the number of
+time rows, since only the field active at that time is compared.
+
+Flat profiles give smooth endpoint matching. Before the late onset $P$
+is used only on its paid exterior branch; its zero cutoff extends into
+the inner region. The all-height late branch agrees with that branch by
+uniqueness. The new compact table covers $97<t<T_++1$ explicitly.
+No source coefficient uses an unknown zero of $H$ as data.
+\end{proof}
+At negative infinite time $F=N$, so the complete negative endpoint
+errors vanish at their proved rates. At positive infinite time $F=P$:
+static $U,W$ errors are at most $C_{\rm raw}e$ and the retained evolution
+and covariance errors at most $C_+e\mathcal L^2\le C_+t^{-1/2}$,
+uniformly in height. The model heat residual retains its separate $d$
+scale. These are limits of approximation errors in physical units;
+the density itself need not have a finite limit.
+
+The construction is nonholomorphic on spatial bands and has nonzero heat
+defects. Its algebraic density there is not asserted to count zeros.
+It proves finite analytical existence for each positive target. It does
+not yet give affordable source data, a working-precision theorem or a
+continuous averaging certificate.

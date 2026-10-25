@@ -1,79 +1,76 @@
 \section{Scope and exact evolution}\label{sec:framework}
 Averaging can suppress the fine peaks near individual zeros while
-preserving their spatial density and transport. The central question is
-whether this averaged quantity admits an explicit approximation whose
-error remains controlled as both time and the observed zero population
-grow. A density approximation alone is insufficient for evolution: its
-time derivative and current require separate estimates, and the filtered
-potential equation contains an actual gradient covariance.
+preserving their spatial density and transport. The question here is
+whether the averaged density of the canonical theta heat flow admits a
+mathematical formula with controlled absolute error as height and time
+range over unbounded domains. Density alone is insufficient: its time
+derivative, current and filtered potential equation require additional
+comparisons, including an actual gradient covariance.
 
-The target is an analytic approximation for every real heat time
-$t\in\R$ and every real height $x\in\R$, on each declared bounded
-transverse strip with its full buffers. It must retain quantitative
-control as $|x|\to\infty$ and $t\to\pm\infty$, under one specified
-measurement protocol for the canonical theta heat field. Its averaged density retains
-its absolute scale. A useful global formula must compare density, potential,
-current and the actual filtered gradient covariance on common support
-buffers, retaining the regulator's forcing and curvature. Direct comparison
-with the canonical source is the principal route; an autonomous reduced
-evolution would require an additional closure and stability argument.
+The governing target is every real heat time $t$ and every real height
+$x$, on declared transverse strips with full averaging and analytic
+buffers. The physical density is unnormalized. One regulator and one
+fixed spatial filter are used throughout. A finite-source formula,
+an implicitly specified analytic saddle and smooth cutoffs are allowed;
+their exact defects must be included in the observable equations.
+Direct source comparison is the route used here. A closed reduced PDE
+would require a separate closure and stability argument.
 
-Different formulas cover negative time, a finite central region, and
-positive time or large height. Joining them is a compatibility problem.
-A time-dependent blend of holomorphic fields preserves spatial
-holomorphy but adds a calculable heat residual; a spatial cutoff generally
-destroys holomorphy. Alongside compact transfer and a local time join,
-we now give a full-support spatial construction in a model zero-free gap,
-with all nonholomorphic terms paid on a short slab. The eventual formula
-may combine finite Gaussian primitives, an implicitly specified analytic
-saddle and explicit smooth cutoffs, with their own observable formulas.
-It must not conceal the unknown canonical field or covariance in a
-closure. Neither a finite grid nor an expanding spatial window completes
-the all-height, all-time target; finite subproblems must serve that target.
+\subsection{Main result and proof structure}
+Theorem~\ref{thm:all-time} gives the assembled result: for fixed
+$\eta>0$ and every prescribed positive scalar tolerance, explicitly
+specified finite parameters and one nonnegative finite source control
+the complete tuple \eqref{eq:ua-contract} for all $x,t\in\R$ on
+$|y|\le1$. The construction equals the Gaussian model at sufficiently
+negative time and the full saddle at sufficiently positive time. Both
+endpoint errors vanish uniformly in height. It retains actual covariance,
+both curvature derivatives, direct source terms and all joining defects.
+The source is fixed during a construction; changing the accuracy may
+change it. Finite analytical existence does not establish useful cost.
 
-The chosen regulator also creates a thin crossover. At finite height the
-regulated observables are smooth, but their normalized infinite-height
-limit changes at the switch. The exact center and rounding width have
-different scales. This motivates a finite-size-scaling comparison and a
-future study of connected correlations and response, without identifying
-the regulator switch as an intrinsic critical time.
+The proof has five successive tasks.
+\begin{enumerate}
+\item Fix the exact observables, equations, regulator and filter
+(Sections~\ref{sec:framework}--\ref{sec:protocol}).
+\item Derive endpoint field comparisons from the complete canonical
+source, and construct finite positive core sources with absolute errors.
+Weak signed identities transfer these errors without separate bounds on
+singular positive pole squares (Sections~\ref{sec:negative},
+\ref{sec:finite}, \ref{sec:compact-transfer}, \ref{sec:full-saddle}
+and~\ref{sec:positive-evolution}).
+\item Join a source core to the saddle in a moving gap. The exact
+nonholomorphic, moving and heat defects are retained. Flatness of the
+physical switch gives a uniform compact-time budget
+(Sections~\ref{sec:spatial-join}--\ref{sec:uniform-assembly}).
+\item Pay both temporal attachments. Finite late-time field, collar and
+mean constants select $T_+$ first; a newly explicit compact table then
+covers $[63,T_++1]$. One source satisfies all finite accuracy demands
+(Sections~\ref{sec:temporal-cover}--\ref{sec:all-time}).
+\item Improve source conditioning by restricting the inverse regulator
+to a fixed central rectangle and using direct $G/H$ collars outside it.
+For the specified clipped-cubic policy,
+$\log S_{\rm bound}=\pi R/32+O_{b,\eta,\theta}(\log^2R)$ at fixed
+$b,\eta,\theta$ (Section~\ref{sec:source-conditioning}).
+\end{enumerate}
+The finite formulas keep upper-time dependence explicit. They must be
+used when the requested accuracy changes $T_+$ and hence $b$; the
+fixed-$b$ cost asymptotic alone does not describe that joint limit.
 
-We use $z=x+iy$; height means $x$. The physical density is never divided
-by its mean except when stating a scaled limiting profile.
-Sections~\ref{sec:negative}--\ref{sec:positive} retain the earlier
-fixed-regulator preliminaries. Section~\ref{sec:protocol} fixes the common
-adaptive measurement used for the new all-height negative evolution,
-inner differentiated clock, static gamma constructions and finite-time
-comparison. The full saddle supplies static all-height positive
-comparison and same-time inner overlap. Section~\ref{sec:positive-evolution}
-adds direct evolution and actual-covariance comparison, with separately
-proved late-time and compact-time exterior quantifiers. The joint static
-allowance is $O(t^{3/2}/(1+|x|+t\log(2+t+|x|))^2)$; the late-time
-evolution allowance is $O(t^{-1/2})$. Section~\ref{sec:compact-transfer} supplies a compact time join;
-Section~\ref{sec:spatial-join} pays a fixed-gap spatial join and
-Section~\ref{sec:effective-inputs} supplies constructive source and
-effective outer-field inputs. Their finite observable budgets, fixed-width
-time extension, switch-uniform assembly and endpoint overlaps remain open. Derivatives of a static
-error allowance never replace a differentiated comparison.
+The positive inner clock, linear gamma model and exact-center crossover
+law retain their separate regimes. The more explicit phase/transport and
+geometric interpretations are collected after the construction in
+Sections~\ref{sec:explicit} and~\ref{sec:crossover-outlook}. The physical
+switch is not identified as an intrinsic critical time.
 
-This version consolidates Notes~02, 04--06, 09, 11--12, 14, 16,
-19--20, 23, 25--28, 30--31, 34--37 and 42--45
-\cite{n02,n04,n05,n06,n09,n11,n12,n14,n16,n19,n20,n23,n25,n26,n27,n28,n30,n31,n34,n35,n36,n37,n42,n43,n44,n45}.
-Note~38 supplies a scoped crossover interpretation \cite{n38}.
-Notes~42--45 add exact spatial-compatibility equations, the full-support
-comparison, a clipped positive cubic constructor and explicit complete
-outer-field/jet constants. Notes~32--33, 39, 41 and 46 are continuation,
-editorial or production records, not additional theorem sources.
-Their domains and regulators are stated separately. The exact heat
-identities in this framework are complemented by the residual-bearing
-model equations in Section~\ref{sec:positive-evolution}. The original
-research assessments retain their same-assistant scopes. Review~21 is a
-limited separate-chat cross-model LLM assessment of Notes~35--37, not a
-complete endpoint-chain audit or specialist review. Review~27 is a focused cross-model LLM assessment of the recent chain,
-not a full specialist audit. Manuscript production is not independent
-specialist mathematical review.
-Appendix~\ref{app:numerics} retains the diagnostic evidence, and
-Appendix~\ref{app:scope} maps the sources and collision-control premises.
+Notes~54--55 \cite{n54,n55} supply the effective positive attachment,
+central extension and improved source cost integrated here. Earlier
+Notes~47--50 supply the finite, moving, switch and temporal contracts.
+Appendix~\ref{app:scope} maps the sources to the derivations. Their
+in-note status is preserved: the focused cross-model LLM review checks
+the new mechanisms and their consumers, while a distinct audit of the
+entire inherited chain and specialist review remain outstanding.
+Numerical diagnostics in Appendix~\ref{app:numerics} support the
+analysis; they do not prove its unbounded-domain statements.
 
 \subsection{Canonical normalization and a fixed regulator}
 Define

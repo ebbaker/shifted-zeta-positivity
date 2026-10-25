@@ -1,0 +1,281 @@
+\section{Fixed central conditioning and sufficient source cost}
+\label{sec:source-conditioning}
+The construction above is finite, but its expanding core floor can force
+$\log(1/\varepsilon)$ to grow quadratically with the joining radius.
+Note~55 \cite{n55} removes that sufficient loss from the growing part
+of the core. The positive regulator is inverted only on a fixed central
+rectangle; direct source collars handle the rest. This changes the
+sufficient source description bound while preserving the physical
+regulator, field prescription and complete tuple.
+
+\subsection{A fixed central region and a direct source comparison}
+First fix $b$, the physical parameter $\eta$ and the scalar reserves.
+For the all-time construction $b=T_++1$ is already selected. Choose
+\[
+ R_0=2\max(R_b^*,2e^{\Lambda_b}+32)+64,\quad
+ e_0=\min(1,E_be^{-(R_0+16)^2/72}),\quad R_c\ge2R_0+64.
+\]
+Use the compact positive-regulator transfer on $|x|\le R_0+8$ with
+coefficients and mean caps evaluated at $R_0+16$. If $D_r^0$ are
+its finite row coefficients, including auxiliary mean rows, let
+\begin{equation}
+ K_0=1+\frac4{e_0^2}\max_r D_r^0.
+ \label{eq:sc-central}
+\end{equation}
+Its source error is at most $K_0\varepsilon$ per row. This argument
+allows multiple zeros. The coefficient can be extremely large, but it
+is independent of the growing $R_c$.
+
+Put $R=R_c+8$ and
+\begin{equation}
+ \Psi_b(R)=\pi R/8+A_b^{\rm amp}[1+\log(2+R)]^2,
+ \qquad \zeta=\varepsilon e^{\Psi_b(R)+32}.
+ \label{eq:sc-carrier-parameter}
+\end{equation}
+The armwise full-buffer bound \eqref{eq:at-carrier} pays this relative
+source parameter throughout the remaining core and bands. For the
+sharper fixed $[95,97]$ table one can instead use
+\begin{equation}
+ \Psi_{97}(R)=\pi R/8+12\log^2(2+R)+200\log(2+R)+202.
+ \label{eq:sc-carrier97}
+\end{equation}
+The added $32$ covers fixed carrier/collar comparisons.
+Assume $\zeta\le e^{-1}$ and $\zeta\log(2+R)\le2^{-512}$.
+
+For $\Delta=G-H$ compare $G_s=H+s\Delta$ directly with $H$ on
+its proved outer collars. Rouch\'e on a larger disk and then a small
+root circle, followed by unit comparison, gives the conservative table
+\begin{center}\small
+\begin{tabular}{@{}ll@{}}\toprule
+Quantity & Bound, with $\ell_c=\log(2+|a_H|)$\\\midrule
+Root displacement & $|a_s-a_H|\le2^{64}\zeta/\ell_c$\\
+Normalized slope and unit & between $2^{-64}$ and $2^{64}$\\
+Log unit ratio; its derivative & $2^{96}\zeta$; $2^{112}\zeta\ell_c$\\
+Residue difference; individual residues & $2^{160}\zeta\ell_c$; $32$\\
+Analytic remainder difference in $G_s''/G_s$ & $2^{192}\zeta\ell_c^2$\\\bottomrule
+\end{tabular}\end{center}
+For the residue use jets through three at the paired roots; for the
+regular part subtract both poles on the larger boundary before using
+analyticity. $P$ has supplied the geometry of $H$, but its field error
+is not an additive term in $G_s-H$. This is essential: the source column
+must tend to zero as $\varepsilon\to0$ at a fixed model and seam.
+
+With $\ell_R=\log(2+R)$, the arbitrary-positive-$q$ radial estimates give
+\begin{equation}
+ s[1],w[1]\le2^{1024}\zeta,\quad
+ v_m[1]\le2^{1024}\zeta[1+\log(1/\zeta)+\ell_R^2],\quad
+ z_m[1]=0\quad\hbox{in the pure exact-heat core}.
+ \label{eq:sc-primitives}
+\end{equation}
+To see the logarithm, remove scaled disks of radius $O(\zeta)$ about
+the two roots. Their pole integral is $O(\zeta)$. On the complement
+root/unit interpolation bounds the pole-kernel variation by
+$C\zeta(|u-a|^{-2}+|u-a|^{-1})$; radial integration gives
+$\zeta\log(1/\zeta)$. Local parameters can be smaller than $\zeta$;
+use monotonicity of $u[1+\log(1/u)]$ on $(0,1]$, not an upper bound
+on their logarithms alone.
+Every collar meeting the split at $R_0$ is included whole, with its
+fixed overlap paid centrally. Only nonnegative raw integrals are split;
+they are recombined before weak differentiation. No new interface is
+introduced into the actual field.
+
+\subsection{Band variation and the complete consumer}
+On spatial bands use the proof family
+$F_s=G_s+\lambda(P-G_s)$. Its source directions are exactly
+\begin{align}
+ \delta F&=(1-\lambda)\Delta,&
+ \delta B&=-\lambda_x\Delta/2,\notag\\
+ \delta E&=-\lambda_x\Delta_z-\lambda_{xx}\Delta/4-\lambda_t\Delta,
+ \notag\\
+ \delta E_z&=-\lambda_x\Delta_{zz}
+ -3\lambda_{xx}\Delta_z/4-\lambda_{xxx}\Delta/8
+ -\lambda_t\Delta_z-\lambda_{xt}\Delta/2.
+ \label{eq:sc-band-directions}
+\end{align}
+Time directions of $B,B_z$ use $\Delta_t=-\Delta_{zz}$ and
+$\Delta_{zt}=-\Delta_{zzz}$. Thus four spatial jets suffice even for
+the moving gap. Although the component $\lambda E_P$ has zero source
+direction, its regularized $Z_m$ varies with the actual field and weight;
+that contribution is retained. Only the pure exterior source column is
+identically zero.
+
+On the normalized gap floor, $u=\overline F/(|F|^2+q)$ satisfies
+\[
+ \delta u=\frac{\overline{\delta F}}{|F|^2+q}
+ -u\frac{2\Re(\delta F\overline F)}{|F|^2+q},\quad
+ |\delta u|\le3|\delta F|/|F|^2,\quad
+ |\delta w|\le2w(1-w)|\delta F/F|.
+\]
+Insert these identities in the exact compatibility, heat and stress
+formulas. The variations of $T_C,\Xi$ cost $C\zeta\ell_R^2$;
+those of current and potential corrections cost
+$C\zeta(\ell_R^3+\ell_R^2)$; $\delta(T_C)_t$ costs
+$C\zeta[\ell_R^4+|r_t|\ell_R^2]$.
+These are pointwise band estimates before area $O(1/\ell_R)$.
+No inverse physical regulator enters them.
+
+The physical coefficient caps at height $u$ have degrees at most two;
+the largest composed weight, $|r_t|R_1^2$, has degree four. It is used
+only on source-active supports, where $u\le R$.
+First pay the auxiliary mean rows. Actual means then have the fixed
+central cap or $C_{H,b}(1+\ell_R)+1$ on annular and seam supports.
+Apply the signed-stress identity before absolute bounds and the actual
+global mean-product subtraction afterwards. This controls $Q,\Delta Q$,
+not covariances assembled independently from field pieces.
+
+For an explicit common coefficient let $W_J$ dominate the physical
+coefficients after their stated height powers are removed, $L_{\rm prof}$
+the fixed profile constants after removal of $\ell_R^j$, and $D_{\rm mod}$
+the residual coefficient. The choices
+\[
+ W_J=2^{16}(1+A_b+B_b'),\quad
+ L_{\rm prof}=2^{64}(1+e^{4/3}),\quad D_{\rm mod}=2^{32}(1+b)^4
+\]
+suffice. With the complete moments and mean coefficient already fixed, set
+\begin{align}
+ A_J={}&1+K_0+C_{H,b}+\sum_{j=0}^3(B_j(b)+1)+W_J+L_{\rm prof}
+                        +e_0^{-1}+R_0+K_*+D_{\rm mod},\notag\\
+ C_J^{\rm src}={}&2^{8192}A_J^{128},\qquad P_R=(1+R)^8.
+ \label{eq:sc-coefficient}
+\end{align}
+The fixed-central coefficients have degree less than sixteen in these
+inputs; band variation has denominator powers at most four after
+normalization and at most three profile derivatives. The finite transfer
+maps are linear except for the mean product. Even thirty-two factors
+and $2^{16}$ terms fit \eqref{eq:sc-coefficient}. The degree-eight height
+envelope covers the degree-four physical weight and remaining profile,
+pole and mean logarithms. Thus every source-active scalar row obeys
+\begin{equation}
+ \mathcal E_{{\rm source},r}
+ \le K_0\varepsilon+\tfrac12 C_J^{\rm src}P_R
+                    \zeta[1+\log(1/\zeta)]
+ \le C_J^{\rm src}P_R\zeta[1+\log(1/\zeta)].
+ \label{eq:sc-source-map}
+\end{equation}
+This includes $U,W$ through four, the tuple and direct time/source rows
+through two, internal current order three, the heat-potential correction
+through four, and the paid traces. The source-free exterior and the
+nonsource seam/model reserves remain additional. On the late temporal
+core one uses the separate relative field premise
+\eqref{eq:ep-source-premise}, rather than treating its blend as exact heat.
+
+For $0<\theta_s\le1$ a finite inverse of the modulus is
+\begin{equation}
+ d_s=\frac{\theta_s}{C_J^{\rm src}P_R},\quad
+ H_s=1+\log(4/d_s),\quad
+ \zeta_s=\frac{d_s}{4H_s},\quad
+ \varepsilon_{\rm loc}=e^{-\Psi_b(R)-32}\zeta_s.
+ \label{eq:sc-tolerance}
+\end{equation}
+Indeed $1+\log(1/\zeta_s)=H_s+\log H_s\le2H_s$, so the
+source allowance is at most $\theta_s/2$; the large fixed coefficient
+also pays the root/unit gates. Choose
+$\theta_s=\min(\delta/4,B_b^+(X_0))$ for the all-time family.
+Then $-\log\theta_s=O_b(\log R)$ as $R\to\infty$. A fixed nonzero
+source reserve would not prove a vanishing total spatial error.
+
+\subsection{Replace every growing source constraint}
+On the fixed late central rectangle define
+\[
+ A_*=e^{-4b\log^2(b+2)-2(R_0+5)},\qquad c_*=\min(1,A_*).
+\]
+The full late core has carrier lower bound $c_*e^{-\Psi_b(R)}$:
+centrally use $A_*$ and outside use \eqref{eq:at-carrier}.
+At the spatial gap $e^{-\Psi_b(R)}$ alone suffices. Hence one can
+replace \emph{all three} coarse growing demands in
+\eqref{eq:at-source-minimum} by
+\begin{equation}
+ \varepsilon_{\rm new}=\min\left\{1,\varepsilon_{\rm loc},
+ a_X^{-2}e^{-\Psi_b(R)},T_-^{-5/2},
+ \frac{\delta}{4(1+K_{\rm mid}(T_-))},
+ \frac{\delta}{2^{69}K_{\rm br}L^3},
+ \frac{e_{\min}c_*e^{-\Psi_b(R)}}{16}\right\}.
+ \label{eq:sc-all-source}
+\end{equation}
+Keeping an old expanding core floor or coarse late carrier clause in
+this minimum would retain its larger exponent. The last entry pays the
+late field premise separately; observable transfer alone cannot pay it.
+All field formulas, temporal compatibility terms, actual mean caps and
+both endpoint comparisons of Theorem~\ref{thm:all-time} are retained.
+The original source rule remains valid and may be preferable at a
+particular finite radius.
+
+\subsection{An explicit source size and its asymptotic meaning}
+For any fixed upper time $s\ge0$ and $0<\varepsilon\le1$ put
+$q_s=\log(1/\varepsilon)$, $Q_s=\log(32/\varepsilon)$ and
+\begin{align}
+ U&=\lceil4+\log(2+s+Q_s)\rceil,& F_s&=U^4e^{sU^2+4U},\notag\\
+ n_0&=\max\left(3,\left\lceil\sqrt{\log(2^{14}F_s/\varepsilon)/2}\right\rceil\right),
+ &N&=n_0-1,\notag\\
+ M&=\left\lceil U\max\{1,(2^{20}F_s/(48\varepsilon))^{1/4}\}\right\rceil,
+ &h_s&=U/M,\notag\\
+ \beta_{\rm bits}&=\lceil\log_2(64F_s/\varepsilon)\rceil,
+ &B_{\rm bits}&=\beta_{\rm bits}+20+\lceil\log_2(M+1)\rceil.
+ \label{eq:sc-constructor}
+\end{align}
+The same dyadic Hermite values/slopes and positive clipping give at most
+$4M$ pieces and the four-jet error $29\varepsilon/64$, for all $t\le s$,
+all real heights and strip four. For the shorter tail cutoff,
+$s,Q_s\le e^{U-4}$ and $e^U\ge2U^2$ imply
+\[
+ sU^2+13U-\pi e^{4U}\le-2e^{4U},\qquad
+ 4\pi e^{4U}-2sU-13-j/U\ge\pi e^{4U}\quad(j\le3).
+\]
+The full tail is therefore at most $\varepsilon/8$; the interpolation,
+omitted-mode and nodal-arithmetic debits are unchanged. Clipping is a
+contraction toward the positive true source.
+
+An explicit descriptor upper bound is
+\begin{equation}
+ S_{\rm bound}=64(M+1)(B_{\rm bits}+1)\quad\hbox{bits}.
+ \label{eq:sc-storage}
+\end{equation}
+It stores rational data and defining polynomials/isolation labels for
+algebraic clipping endpoints. Since the maximum in the mesh formula is
+its second entry,
+\[
+ M=\left\lceil(2^{20}/48)^{1/4}U^2
+                   e^{q_s/4+sU^2/4+U}\right\rceil.
+\]
+For fixed $s$ and $q_s\to\infty$ this proves
+\begin{align}
+ \log M,\ \log S_{\rm bound}
+   &=q_s/4+(s/4)\log^2 q_s+O_s(\log q_s),\notag\\
+ \beta_{\rm bits},B_{\rm bits}&=O_s(q_s),\qquad N=\Theta_s(\sqrt{q_s}).
+ \label{eq:sc-q-cost}
+\end{align}
+Choose the displayed tolerance, rather than arbitrarily over-refining it.
+Equations~\eqref{eq:sc-tolerance}--\eqref{eq:sc-all-source} give, with
+$b,\eta,\theta$ fixed,
+\begin{equation}
+ q_s=\pi R/8+O_{b,\eta,\theta}(\log^2R),\qquad
+ \log M,\ \log S_{\rm bound}
+       =\pi R/32+O_{b,\eta,\theta}(\log^2R).
+ \label{eq:sc-radius-cost}
+\end{equation}
+For the sharper $[95,97]$ policy the log-square coefficient in the last
+expression is $(12+97)/4=109/4$; for the general fixed-$b$ policy it is
+$(A_b^{\rm amp}+b)/4$. The earlier expanding-floor policies had leading
+log cell bounds $R_c^2/904$ on $[95,97]$ and $R_c^2/144$ for the
+coarse $[63,b]$ table. These compare specified sufficient constructions,
+not necessary complexity. When $b$ changes with accuracy, use the finite
+formulas \eqref{eq:sc-constructor}--\eqref{eq:sc-storage}; the fixed-$b$
+asymptotics do not control that joint limit.
+
+The node algorithm in Note~55 has a rational arithmetic-term bound
+$O_s(Mq_s^{11/2})$. Clipping can use a pruned Sturm tree: a degree-three
+cell has at most three occupied intervals per depth, and coefficient
+height at most $2^{B_{\rm bits}}$ gives sufficient isolation depth
+$8+4B_{\rm bits}$. Repeated cubic roots are rational and are handled
+separately by the fixed-degree gcd. Thus a conservative extra bound is
+$2^{20}M(B_{\rm bits}+1)$ rational operations, without scanning the
+whole fine grid. This is an operation count, not bit complexity.
+
+Each piece contributes Gaussian moments through degree six to $G$ and
+its first three derivatives, so the symbolic prescription uses $O(M)$
+fixed-order primitive calls per point. Accuracy of complex error
+functions, endpoint rounding, cancellation, observable arithmetic and
+continuous averaging still need their own error and cost analysis.
+The source-data bits in \eqref{eq:sc-q-cost} do not bound the working
+precision of that evaluator. No source coefficients or new numerical
+experiments have been evaluated for this integration.

@@ -63,3 +63,49 @@ as part of this packet. Do not upgrade HDA-17/18/20 from a local subresult.
 Stop at a proved deliverable or a precisely identified unpaid term with
 its attempted bound and scaling. The global consumer is an analytic
 approximation for all real x and t, including both infinite time limits.
+
+
+## Return — 25 October 2026, chat 0017
+
+**Actual model/effort:** gpt-6.1-sol (Codex), ultra, verified from the
+current turn metadata; thread `01a173e5-dc96-7c31-946c-be54c871244c`.
+Executed r1; the request above remains unchanged. The
+[intake manifest](../../notes/48_FIXED_WIDTH_ASSEMBLY_INPUTS_20261025.json)
+pins the original request and consumed AN04/source versions.
+
+**Result:** [Note 48](../../notes/48_MOVING_GAP_FIXED_WIDTH_ASSEMBLY_20261025.md)
+proves the complete analytical comparison on all real heights, |y|<=1,
+for every t in **[95,97]**, with time width independent of X0. A preserved
+phase index defines X(t), |X'|<=8 and |X-X0|<=8. The cutoff width is
+frozen; MW7--MW10 and the finite increment table pay every moving E,
+E_z,B_t,(B_z)_t term with three source jets and kernel orders through
+four. One positive source on the union buffer pays all moving gap/core
+requirements. MW16--MW18 give a finite onset and a uniform bound
+3B_mov(X0)=O_eta(log^6 X0/X0^2), tending to zero with the specified
+source refinement. Actual covariance, both curvature derivatives,
+component/spatial/moving heat, q_t/B_t, direct time/source and all
+exterior spatial partition commutators remain. The controlled fixed-chart
+alternative is compared explicitly; no unproved cover is substituted.
+
+**Evidence and limits:** [Review 30](../../reviews/30_FIXED_WIDTH_MOVING_GAP_ASSESSMENT_20261025.md)
+records main-assistant and three read-only same-model derivations/audits.
+Not independent specialist review. The
+[work record](../../numerics/AN05_ANALYTICAL_WORK_RECORD_20261025.json)
+records no numerical/exact-rational/machine-symbolic research execution,
+sampling, mesh/precision search or interval campaign. Core source accuracy
+is tightened with B_mov; retaining a fixed quarter-core allowance would
+not prove the full vanishing limit. The compact-J extension is structural
+for J strictly above64 with J-dependent constants; the explicit finite
+table is instantiated for[95,97]. Gaussian suppression based on a positive
+beta_min is not uniform toward64. Neither time endpoint join is paid.
+Finite source existence and the reserved arithmetic/filter allowance do
+not establish affordability or an executed certificate.
+
+**Disposition — Analysis, Sol:** CLOSED at r1's requested analytical
+scope; HDA-22 Complete at this bounded scope. HDA-17 Partial, HDA-18
+Gated and HDA-20 unfulfilled remain. No earlier source-note/manuscript
+edit, snapshot, commit, new chat or model change. The all-height/all-time
+analytic objective and both infinite-time limits are retained.
+Next **Analysis — Sol**, existing [AN06 r1 / HDA-24](HDA-18-AN06.md),
+whose fixed-width dependency is now supplied; its switch-layer work is
+unexecuted. HDA-23 remains ready. No resistant estimate warrants Astra.

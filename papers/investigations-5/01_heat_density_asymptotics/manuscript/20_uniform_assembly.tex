@@ -1,0 +1,431 @@
+\section{Effective assembly on fixed time intervals}\label{sec:uniform-assembly}
+We now turn the transfer identities into complete finite estimates and
+then remove the shrinking-time restriction. The argument has three
+steps: make the collar and primitive constants finite, follow one phase
+gap, and control the regulator where its Gaussian coefficient vanishes.
+This section consolidates Notes~47--49 \cite{n47,n48,n49}; the large
+constant tables are recorded there, while the mechanisms and their
+consumption are derived here.
+
+\subsection{The common comparison contract}
+Fix $\eta>0$, $\ell=h=Y=1$, source and convolution buffers through
+$|\Im z|\le4$, and the analytic field buffer $|\Im z|\le5$.
+For the actual field $F$, denote filtered total curvature by
+$\mathcal C_F=K*(C_{{\rm reg},F}+T_{C,F})$ and put
+$\mathcal B_F=K*\mathcal B_{\epsilon,F}$,
+$\mathcal S_F=K*\mathcal S_{\epsilon,F}$. The finite list of scalar
+comparisons, denoted below by $\mathcal E_{\rm tup}(F,H)$, consists of
+\begin{equation}
+\begin{array}{c|c}
+\text{quantity compared with its value for }H&\text{spatial orders}\\ \hline
+ U,W&0\text{--}4\\
+ R,\mathcal C,J,Q,\mathcal B&0\text{--}2\\
+ U_t,W_t,R_t,\mathcal C_t,\mathcal S&0\text{--}2\\
+ K*T_U\quad(\text{zero for }H)&0\text{--}4
+\end{array}
+\label{eq:ua-contract}
+\end{equation}
+Real and imaginary current components are counted separately. Current
+order three is also bounded internally to pay source order two.
+The comparison controls $\Delta Q$, both curvature derivatives in
+\eqref{eq:sj-equations}, and fixed traces within these orders. It uses
+the actual covariance of $F$. A scalar target $\theta$ means that
+\emph{each} component has that allowance; a sum in an equation inherits
+the sum of its component allowances. No second time derivative or
+moving observation boundary is included.
+
+\subsection{Finite collars and a complete fixed-gap budget}
+Write $L_x=\log(2+x)$ on the positive exterior. The effective field
+theorem, the exact model derivatives, and complex Stirling with its
+sector remainder give, on $[95,97]$ beyond the stated binary onsets,
+\begin{equation}
+ \Theta_x\ge L_x/8,\quad |\Theta_z|\le0.51L_x,\quad
+ |\Theta_{zz}|\le5/(4x),\quad
+ |(\log\mathcal A)_z|\le2,
+ \label{eq:ua-geometry}
+\end{equation}
+where $P=2\mathcal A\cos\Theta$. For a declared $U\ge2^{2050}+8$,
+choose the first phase gap by
+\begin{equation}
+ n=\left\lceil\Theta(96,U)/\pi\right\rceil,\qquad
+ \Theta(96,X)=n\pi,\qquad X\ge U.
+ \label{eq:ua-first-gap}
+\end{equation}
+Monotonicity gives uniqueness and $0\le X-U\le8\pi/L_U<1$.
+Take $\sigma=(64L_X)^{-1}$ and
+$\tau=(4096L_X^2)^{-1}$. The real part of the phase stays within
+$1/8$ of $n\pi$ on the enlarged gap for $|t-96|\le\tau$.
+Thus $|P|\ge A/2$, and a comparison error at most $A/4$ leaves
+the common segment floor $A/4$.
+
+The finite collar argument is worth recording because a field estimate
+alone does not bound a signed current near a zero. At a real model root
+$c$, put $u=L_c(z-c)$ and $A_c=|S_t((1+ic)/2)|$. On $|u|\le2$,
+integration of \eqref{eq:ua-geometry} and the sine quotient gives
+$P/A_c=uB(u)$ with $1/16\le|B|\le4$. If the local relative error is
+$e\ge10^6/c^2$, Rouch\'e's theorem first on $|u|=2$, then on
+$|u|=32e$, pairs a unique simple real $H$ zero with $c$.
+Dividing out each own zero and using the maximum principle gives
+\begin{equation}
+ H/A_c=(u-e_0)C(u),\qquad
+ |e_0|\le32e,\quad 1/32\le|C|\le5,\quad |C-B|\le128e.
+ \label{eq:ua-units}
+\end{equation}
+The slopes are at least $A_cL_c/16$ and $A_cL_c/32$.
+For $h_F=F_{zz}/F$, subtract its pole at its own zero:
+$h_F=v_F/(z-a_F)+g_F$. The same analytic disks give
+\begin{equation}
+ |v_P|\le5,\quad |v_H|\le8,\quad
+ |v_H-v_P|\le2^{18}eL_c,\quad
+ |g_H-g_P|\le2^{20}eL_c^2.
+ \label{eq:ua-poles}
+\end{equation}
+For example $v_P=2(\log\mathcal A)_z+\Theta_{zz}/\Theta_z$ at a
+model zero. Cauchy's formula on the larger disks bounds the removable
+regular parts. Disks of radius $2/L_c$ are disjoint; each enlarged
+support meets at most $4L_x$ collars. The complement has
+$|P|/A\ge1/256$ and $|H|/A\ge1/512$.
+The standard complex-analysis inputs are
+\cite{DLMF110Coarse2026,DLMFCauchy1931,DLMFGammaOuter2026}; the finite
+contours and constants are the EB1--EB4 table of Note~47.
+
+To estimate a restricted exterior integral, enlarge each intersecting
+collar before integrating the nonnegative primitive. In scaled variables,
+translation of a regularized simple pole costs
+$Ce(1+|\log e|)$: remove the disk $|u|\le2|e_0|$, then integrate
+$C|e_0|/|u|^2+Ce/|u|$ radially on its complement. Interpolate the unit
+by $B\exp(s\log(C/B))$ with the physical $q/A_c^2$ held fixed at
+each point. Restore area $L_c^{-2}$, the pole factor $L_c$, and the
+collar count. With $l=\log(2+x)$, the finite allowances are
+\begin{align}
+ e&=2^{44}(x-8)^{-2},&d&=2^{20}(x-8)^{-3},\notag\\
+ \mathfrak s_O[1],\mathfrak w_O[1]&\le2^{26}e,&
+ \mathfrak v_{m,O}[1]&\le2^{44}e(1+|\log e|+l^2),\notag\\
+ \mathfrak z_{m,O}[1]&\le2^{22}d&& (m=0,1,2).
+ \label{eq:ua-raw}
+\end{align}
+These are raw integral bounds for every restricted portion, not
+whole-support signed estimates applied to a truncated test.
+
+For small carrier-relative regulator, retain
+$B_\Lambda,H_\Lambda,Z_\Lambda$ from \eqref{eq:sj-weighted}. Finite
+versions of those bounds are
+\begin{equation}
+ \mathfrak w_O[a]\le2^{25}a^*B_\Lambda,\quad
+ \mathfrak v_{m,O}[a]\le2^{37}a^*H_\Lambda,\quad
+ \mathfrak z_{m,O}[a]\le2^{33}d a^*Z_\Lambda\quad(m=1,2).
+ \label{eq:ua-weighted}
+\end{equation}
+They follow from the radial integrals of
+$b^2/(|u|^2+b^2)$ and $b^2/(|u|(|u|^2+b^2))$, with $b=32\Lambda$.
+On $[95,97]$, $q\le Q_+e^{-x^2/2000}$, $Q_+=16\eta^2+e^{220}$,
+and each carrier is at least $e^{-x}$; hence one may use
+$\Lambda\le\sqrt{Q_+}e^{-x^2/8000}$ beyond a finite
+$\eta$-dependent onset. Every polynomial regulator factor remains
+attached to its weighted primitive. Signed stress is reduced to simple
+poles before taking magnitudes.
+
+For completeness, the weak exterior heat allowance through order two is
+\begin{align}
+ D_{{\rm out},\alpha}\le\frac d{2\pi}\bigl\{
+ &2^{22}(d_\alpha+2c_1k_{\alpha+x}+c_2k_\alpha)\notag\\
+ {}+{}&2^{33}Z_\Lambda[2R_1(k_{\alpha+x}+c_1k_\alpha)
+                  +(R_2+3R_1^2)k_\alpha]\bigr\}.
+ \label{eq:ua-signed-heat}
+\end{align}
+This is the signed residual formula with the complete test partition
+\eqref{eq:sj-partition}; it is not a bound for $\int|D_E|$.
+The complementary shoulder includes the model residual $E_P$.
+
+Finally, a fixed central regulator floor and the exterior integrable
+pole estimates give a finite, source-independent $C_H$ with
+$|\partial^\gamma U_H|\le C_H(1+\log(2+|x|))$, $1\le|\gamma|\le3$.
+After first paying $k_\gamma\mathfrak s<1$, use
+$M_\gamma=C_H(1+\log(2+R_c))+1$ on core and seam supports in
+\eqref{eq:sj-covariance}. This order avoids a circular mean-product
+estimate and avoids a growing-core floor in the exterior decay rate.
+Substitution of the finite tables into
+\eqref{eq:sj-tuple}--\eqref{eq:sj-source} yields, for each nonsource
+column, the envelope
+\begin{equation}
+ C_\eta\{X^{-2}\log^6(2+X)+(1+X)^{16}e^{-X^2/32000}\}.
+ \label{eq:ua-fixed-budget}
+\end{equation}
+Here $C_\eta$ is the explicit finite expression in Note~47 EB16--EB21.
+Its source coefficients and binary onset pay arbitrary positive scalar
+targets. The powers and onset are deliberately conservative. This
+completes the finite fixed-gap budget, but its width still tends to zero.
+
+\subsection{Follow the gap, keeping its width fixed}
+The gap must be moved by its own phase equation; a root-speed bound
+alone is insufficient. Fix its index and solve
+\begin{equation}
+ \Theta(t,X(t))=n\pi,\qquad X(t_0)=X_0.
+ \label{eq:ua-moving-gap}
+\end{equation}
+On the real axis, the imaginary part of the exact formula
+\eqref{eq:fi-time-cap} gives
+\[
+ |\Theta_t|\le\log(x)/4+3/x+388|\alpha|/x^2
+              \le\tfrac12\log(2+x).
+\]
+Indeed $|\Im\alpha|<1$ and $|\Re\alpha|\le\log(x)/2+4/x$,
+so $|\Im(\alpha^2/4)|\le\log(x)/4+2/x$. The other two exact
+terms are paid by $|\alpha'|\le2/x$, $|\alpha''|\le8/x^2$ and
+$|B|\ge1/2$. Thus
+\begin{equation}
+ X'=-\Theta_t/\Theta_x,\qquad |X'|\le8.
+ \label{eq:ua-speed}
+\end{equation}
+Local inversion and this bounded displacement continue the same gap
+through the whole compact interval. For $[95,97]$, take $t_0=96$,
+$R_c=X_0+24$, $L=\log(2+R_c)$ and freeze $\sigma=(64L)^{-1}$.
+Then $|X-X_0|\le8$ and one source on the union buffer suffices.
+The real phase remains near $n\pi$; its imaginary part need not be
+small because $|\cos\Theta|/\cosh(\Im\Theta)\ge|\cos\Re\Theta|$.
+
+Put $D_0=P-G$ and
+$\lambda(t,x)=b_*((|x|-X(t)+\sigma/2)/\sigma)$.
+On either band let $v_b=\sgn(x)X'(t)$. Since $\sigma'=0$,
+\begin{equation}
+ \lambda_t=-v_b\lambda_x,\quad
+ \lambda_{xt}=-v_b\lambda_{xx},\quad
+ \lambda_{xxt}=-v_b\lambda_{xxx}.
+ \label{eq:ua-cutoff-time}
+\end{equation}
+Direct differentiation of the actual field yields
+\begin{align}
+ E={}&\lambda E_P+\lambda_x(D_0)_z+\tfrac14\lambda_{xx}D_0
+                                  +\lambda_tD_0,\notag\\
+ E_z={}&\lambda(E_P)_z+\tfrac12\lambda_xE_P
+       +\lambda_x(D_0)_{zz}+\tfrac34\lambda_{xx}(D_0)_z
+       +\tfrac18\lambda_{xxx}D_0\notag\\
+      &+\lambda_t(D_0)_z+\tfrac12\lambda_{xt}D_0,\notag\\
+ B_t={}&\tfrac12\lambda_x(-(D_0)_{zz}+E_P)
+                              +\tfrac12\lambda_{xt}D_0,\notag\\
+ (B_z)_t={}&\tfrac14\lambda_{xx}(-(D_0)_{zz}+E_P)
+       +\tfrac12\lambda_x(-(D_0)_{zzz}+(E_P)_z)\notag\\
+       &+\tfrac14\lambda_{xxt}D_0+\tfrac12\lambda_{xt}(D_0)_z.
+ \label{eq:ua-moving-defects}
+\end{align}
+These use $(D_0)_t=-(D_0)_{zz}+E_P$. They require no fourth source
+jet, $X''$, or second time derivative. Keep component, spatial, and
+moving contributions to $E$ separately until they have all been paid.
+The exact nonholomorphic identities apply unchanged with these actual
+$B,E$. Regional primitive bounds are summed at each time; they are not
+differentiated. Likewise the moving exterior test partition is used in
+an instantaneous spatial pairing, so its time derivative is not a term
+of that pairing.
+
+With the substitutions of Note~48 MW11--MW16, each nonsource column is
+bounded by the finite expression
+\begin{equation}
+ B_{\rm mov}(X_0)=C_{\rm mov}
+ \left\{\frac{L^6}{(X_0-24)^2}
+ +(1+X_0+24)^{16}e^{-(X_0-24)^2/64000}\right\}.
+ \label{eq:ua-moving-budget}
+\end{equation}
+Here $C_{\rm mov}=C_\eta^2$ with the finite $C_\eta$ above. Refine
+the same source throughout this interval so its core column is at most
+$\min(\theta/4,B_{\rm mov})$ and its band jets meet
+\eqref{eq:sj-source-gap}. Each scalar error is then at most
+$3B_{\rm mov}=O_\eta(\log^6X_0/X_0^2)$, uniformly on $[95,97]$.
+Holding the source core reserve at a fixed quarter-target would not
+prove this vanishing bound. The family has one fixed source for each
+choice of $X_0,\theta$, not one source for all $X_0$.
+
+\subsection{The two estimates that control the switch}
+To extend to $J=[63,97]$, first extend the field theorem itself. In its
+contour proof the upper-time constants remain those at $97$; the changed
+lower-time reductions, for $\lambda_0=\log x\ge1000$, are
+\[
+ -63\lambda_0^2/100+(194/3)\lambda_0+6\le-\lambda_0^2/2,
+ \quad63\lambda_0/200>3,
+ \quad48e^{97/2-63\lambda_0/10}\le e^{-3\lambda_0}.
+\]
+The central, connector, middle, arithmetic and infinite-end estimates
+therefore retain the same four jet constants and binary onsets.
+This explicitly extends Theorem~\ref{thm:effective-outer}, rather than
+using its $[95,97]$ statement outside its domain. Complex Stirling also
+gives $e^{-x}\le|S_t((1+ix)/2)|\le e^{-x/4}$, with the lower bound
+valid arm by arm on the full complex buffer.
+
+Write the exact physical regulator as
+\begin{equation}
+ r=a(t)-\beta(t)x^2,\qquad
+ a=2[(1-\chi)\ell_b+\chi\ell_+],\quad
+ \ell_b=\log\epsilon_b,\quad \ell_+=\log(M_0/\kappa).
+ \label{eq:ua-switch-r}
+\end{equation}
+In particular
+$a'=2[(1-\chi)\ell_b'+\chi\ell_+'+\chi'(\ell_+-\ell_b)]$;
+the amplitude mismatch is part of the time estimate. On $J$ the real
+source saddle gives $36<\kappa<618$, $0<\kappa'<50$ and
+$e^{-3}<M_0<e^{110}$. Put $A_\eta=512(1+|\log\eta|)$.
+Then $|a|,|a'|\le A_\eta$, $0\le\beta\le1/36$ and
+$|\beta'|\le1/8$.
+
+\begin{lemma}[Switch flatness and arbitrary-regulator transfer]
+\label{lem:ua-switch}
+On $[63,97]$, with the value zero understood at $\beta=0$,
+\begin{equation}
+ |\beta'|\le4\beta\{1+\log^2(1/\beta)\}.
+ \label{eq:ua-flatness}
+\end{equation}
+On a common segment floor $|F_s|\ge c_*A$ and with
+$\delta_0=|F-H|/A$, the gap weight difference satisfies
+\begin{equation}
+ |w_F-w_H|\le
+ \min\left(1,\frac{2(q/A^2)\delta_0}{c_*^3},
+                    \frac{\delta_0}{2c_*}\right).
+ \label{eq:ua-weight-branch}
+\end{equation}
+\end{lemma}
+\begin{proof}
+For $64<t\le97$, set $v=(t-64)/64$. The exact switch gives
+$\chi'/\chi=(1-\chi)[v^{-2}+(1-v)^{-2}]/64$ and
+$\log(1/\beta)\ge\log36+v^{-1}-64/31\ge v^{-1}$.
+Together with $\kappa'/\kappa<50/36$ these prove
+\eqref{eq:ua-flatness}. Flat matching proves it at and below $64$.
+For the last branch in \eqref{eq:ua-weight-branch}, differentiate the
+radial function $q/(|f|^2+q)$:
+\[
+ |\nabla_f w|=\frac{2q|f|}{(|f|^2+q)^2}
+       =\frac{2w(1-w)}{|f|}\le\frac1{2|f|}.
+\]
+Integrate along the field segment. The small-$q$ branch follows by
+instead using $|\nabla_fw|\le2q/|f|^3$.
+\end{proof}
+
+Split the \emph{estimates} on a support of large center height $u$ into
+$\beta u\le16$ and $\beta u>16$. In the first case, monotonicity of
+$s(1+\log^2(1/s))$ gives
+\begin{equation}
+ |r_t|\le A_\eta+2^{10}u\log^2(2+u),\quad
+ |r_x|\le64,\quad |r_{tx}|\le2^{10}\log^2(2+u).
+ \label{eq:ua-switch-weights}
+\end{equation}
+The raw bounds \eqref{eq:ua-raw} and the last branch of
+\eqref{eq:ua-weight-branch} now give vanishing time errors.
+In the second case the actual carrier-relative regulator obeys
+\[
+ \Lambda\le\sqrt{Q_+}
+   e^{u+32-\beta(u-8)^2/2}\le\sqrt{Q_+}e^{-2u}
+\]
+beyond a finite onset. Use \eqref{eq:ua-weighted}, retaining each
+polynomial regulator weight. No field is split at $\beta u=16$,
+and no derivative of that proof-case boundary occurs.
+
+The largest new band-time cost is visible directly in
+\eqref{eq:sj-time-curvature}. Its finite ratio substitutions give
+\begin{equation}
+ \pi|(T_C)_t|\le2^{160}\mu L^2(L^2+|r_t|).
+ \label{eq:ua-worst-row}
+\end{equation}
+The band area is at most $16\sigma=1/(4L)$. In the first regime
+this costs $O_\eta(\mu uL^3)=O_\eta(L^3/X_0)$.
+In the second regime each $r_t$ factor retains $w$ or $w(1-w)$,
+and so is exponentially suppressed. A constant bound on $\beta'$
+alone would give a nonvanishing $\mu X_0^2$ cost; flatness is essential.
+
+\subsection{Finite construction and uniform theorem}
+Choose the phase at $t_0=64$. On $J$, $|X-X_0|\le264$.
+Set $R_c=X_0+300$, $a_X=X_0-300$, $L=\log(2+R_c)$ and again
+freeze $\sigma=(64L)^{-1}$. Use relative band allowances
+$\mu_o=2^{52}/a_X^2$, $\mu_s=a_X^{-2}$, and residual allowances
+$d=d_1=2^{24}/a_X^3$. The new compact floor is
+\begin{equation}
+ e_c=E_{\rm sw}e^{-R_c^2/72},\qquad
+ E_{\rm sw}=\min((2/5)\eta e^{-4},e^{-3}/618).
+ \label{eq:ua-switch-floor}
+\end{equation}
+The earlier exponent $452$ was specific to $[95,97]$ and is not used
+here. A fixed central floor at
+$R_*=\lceil2^{2056}(1+Q_++A_\eta+|\log\eta|+\eta^{-2})\rceil$,
+joined to the integrable exterior poles, supplies a finite constant
+$C_{H,\rm sw}$ for the common logarithmic mean cap. Note~49 SW21
+gives its explicit expression in the source moments.
+
+Let $P_2$ be the source second-moment cap plus one and set
+\begin{align}
+ Q_\eta&=1+Q_++A_\eta+|\log\eta|+\eta^{-2},\notag\\
+ C_{\rm sw}&=2^{8192}(1+C_{H,\rm sw}+Q_\eta+A_\eta+P_2)^{64},\notag\\
+ B_{\rm sw}(X_0)&=C_{\rm sw}
+       \{L^8/a_X+(1+R_c)^{20}e^{-a_X}\}.
+ \label{eq:ua-switch-budget}
+\end{align}
+Each nonsource column is at most $B_{\rm sw}$: the first regime uses
+\eqref{eq:ua-raw}, \eqref{eq:ua-switch-weights} and
+\eqref{eq:ua-worst-row}; the second uses the exponential scale and
+the weighted bounds. The remaining logarithms, finite Leibniz sums
+and common mean products fit the displayed constant and powers.
+On pure exterior supports retain the local height until taking its
+decreasing supremum. There is no time-chart count multiplying the error.
+
+For each core row let $D_r$ be its finite coefficient after factoring
+$4\varepsilon/e_c^2$ from the positive table
+\eqref{eq:sj-curvature-ledger}--\eqref{eq:sj-source}. Use the new
+regulator coefficients of Note~49 SW9 and include the auxiliary
+mean-error rows first. With $\rho_* =\min(\theta/4,B_{\rm sw})$, impose
+\begin{equation}
+ 0<\varepsilon\le
+ \min\left(1,e_c^2\min_{D_r>0}\frac{\rho_*}{4D_r},
+                    a_X^{-2}e^{-X_0-320}\right).
+ \label{eq:ua-source-tolerance}
+\end{equation}
+The clipped positive source constructor gives four absolute jet errors
+at most $29\varepsilon/64$. Its proof uses only $e^{tu^2}\le e^{97u^2}$,
+so it applies for every $t\le97$ on its transverse source buffer;
+no lower-time restriction is needed for this absolute field statement.
+The compact observable floor is used only on the stated finite domain.
+
+\begin{theorem}[Switch-uniform all-height approximation]
+\label{thm:uniform-switch}
+For every $\eta>0$ and $0<\theta\le1$, a finite phase choice, frozen
+width and one finite nonnegative source give an actual field
+$F=G+\lambda(P-G)$ on $[63,97]$ such that every scalar component of
+\eqref{eq:ua-contract} has error at most
+\begin{equation}
+ 3B_{\rm sw}(X_0)\le3\theta/4
+ \quad\text{for every }x\in\R,\ |y|\le1,\ t\in[63,97].
+ \label{eq:ua-switch-theorem}
+\end{equation}
+The envelope is $O_\eta(\log^8X_0/X_0)$ under the simultaneous source
+refinement \eqref{eq:ua-source-tolerance}. All component, spatial and
+moving heat terms, compatibility terms and actual covariance are retained.
+\end{theorem}
+\begin{proof}
+Use the phase inverse, geometry and exact moving derivatives above in
+Theorem~\ref{thm:sj-transfer}. The preceding two-regime proof pays each
+nonsource column by $B_{\rm sw}$; the source tolerance pays the core
+column by $\rho_*\le B_{\rm sw}$. Auxiliary primitive-gradient bounds
+justify the common mean cap before it is used in covariance coefficients.
+One explicit onset is Note~49 SW25: choose $X_0$ as the first phase gap
+beyond $2^m$, where
+\begin{align*}
+ m\ge\max\{&16384+\lceil\log_2(R_*+1024)\rceil
+                 +\lceil8\log_2(2+C_{\rm sw}/\theta)\rceil,\\
+             &\lceil16\sqrt{A_\eta+16}\rceil,
+               \lceil\log_2[4e^{80}(1+A_\eta)+1024]\rceil\}.
+\end{align*}
+Then $a_X\ge2^{m-1}$, $L\le m+3$,
+$C_{\rm sw}\le\theta2^{m/8}$,
+$(m+3)^8\le2^{m/2}$ and $e^{-a_X}\le X_0^{-64}$.
+These inequalities pay $B_{\rm sw}<\theta/4$ and all collar and
+regulator gates. Sum the three columns. This is a finite sufficient
+construction, without a claim of affordable evaluation or filtering.
+\end{proof}
+
+The full-saddle crossover center is the exact root of
+$a(t)/2-\beta(t)u^2/2-\log|S_t((1+iu)/2)|=0$.
+Along the seam its derivative additionally contains
+$-[\beta X+\partial_x\log|S_t|]X'$.
+It is distinct from the earlier linear-carrier center in
+Section~\ref{sec:gamma-outer}. No displacement between these two
+centers is asserted. The uniform estimate above treats every time
+directly and needs no fitted or truncated inverse-logarithmic center.
+
+The finite onset and source tolerance establish analytical existence.
+The spare quarter-target is available for future arithmetic and continuous
+filtering; it is not an executed certificate. The theorem does not yet
+attach the positive infinite-time endpoint.

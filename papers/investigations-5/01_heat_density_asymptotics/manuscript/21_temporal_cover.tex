@@ -1,0 +1,278 @@
+\section{Temporal identities and the negative attachment}\label{sec:temporal-cover}
+The spatial construction now covers a fixed interval across the physical
+switch. To attach an endpoint, agreement of averaged observables is not
+enough: the time cutoff acts on the fields themselves. Note~50
+\cite{n50} supplies the exact temporal contract and a finite prescription
+on all $t\le97$. These identities are then consumed by the effective
+positive attachment in Section~\ref{sec:effective-positive}.
+
+\subsection{Exact field and compatibility mismatches}
+Let $F_i$ be smooth fields on a common full buffer,
+$B_i=(F_i)_{\bar z}$, $E_i=(F_i)_t+(F_i)_{zz}$, and
+$v(t)=b_*((t-a)/\tau)$. Put $D_0=F_2-F_1$ and $D_B=B_2-B_1$.
+Then $\|v'\|_\infty\le c_b/\tau$, $c_b=2e^{4/3}$, and the
+actual field $F=(1-v)F_1+vF_2$ satisfies
+\begin{align}
+ B&=(1-v)B_1+vB_2,&
+ E&=(1-v)E_1+vE_2+v'D_0,\notag\\
+ E_z&=(1-v)(E_1)_z+v(E_2)_z+v'(D_0)_z,\notag\\
+ B_t&=(1-v)(B_1)_t+v(B_2)_t+v'D_B,\notag\\
+ (B_z)_t&=(1-v)(B_1)_{zt}+v(B_2)_{zt}+v'(D_B)_z.
+ \label{eq:tc-exact}
+\end{align}
+The direct $F_t,(F_z)_t$ have the corresponding mismatch terms.
+No $v''$ is consumed by \eqref{eq:ua-contract}. On a zero-free
+support put
+\[
+ d_0=|D_0|/|F|,\quad d_1=|(D_0)_z|/|F|,\quad
+ d_B=|D_B|/|F|,\quad d_{Bz}=|(D_B)_z|/|F|.
+\]
+The added allowances for $(e_0,v)$, $(e_1,a_t^*)$, $b_t^*$ and
+$h_t^*$ in \eqref{eq:sj-envelopes}--\eqref{eq:sj-time-curvature}
+are respectively $|v'|d_0$, $|v'|d_1$, $|v'|d_B$ and $|v'|d_{Bz}$.
+Observable comparison cannot supply these field mismatches: $F_2=-F_1$
+has the same individual potential, density, current and covariance,
+but its halfway blend vanishes. This is a control on the inference,
+not a permitted modification of the canonical source.
+
+\begin{proposition}[Signed temporal heat with nonholomorphic compatibility]
+\label{prop:tc-variation}
+Let $\delta_{D_0}$ denote variation $F\mapsto F+sD_0$ with $q$ fixed.
+For $E_T=v'D_0$ and
+$Z_{m,T}=w^mE_T\overline F/(|F|^2+q)$, every real compact spatial
+test $\psi$ satisfies
+\begin{align}
+ 4\pi\langle D_{E_T},\psi\rangle={}&
+ 2\Re\int Z_{0,T}\Delta\psi
+ -4\Re\int Z_{1,T}\nabla r\cdot\nabla\psi\notag\\
+ &-2\Re\int[Z_{1,T}\Delta r
+              +(Z_{1,T}-2Z_{2,T})|\nabla r|^2]\psi\notag\\
+ &-4\pi v'\int(\delta_{D_0}T_C)\psi.
+ \label{eq:tc-signed-heat}
+\end{align}
+On the segment floor, the additional variation is bounded by
+\begin{align}
+ \pi|\delta_{D_0}T_C|\le{}&
+ \vartheta(2b_0d_B+4b_0^2d_0)\notag\\
+ &+2(d_{Bz}+3b_1d_0+d_1b_0+A_1d_B+6A_1b_0d_0).
+ \label{eq:tc-variation-bound}
+\end{align}
+\end{proposition}
+\begin{proof}
+Vary $\Delta S=4\pi(\rho+C_{\rm reg}+T_C)$ at fixed $q$.
+For the direction $E_T$, $\delta S=2\Re Z_{0,T}$,
+$\delta w=-2\Re Z_{1,T}$, and
+$\delta[w(1-w)]=-2\Re(Z_{1,T}-2Z_{2,T})$.
+Moreover $\delta\rho=D_{E_T}$ by
+\eqref{eq:sj-current-defects}. Vary the weak regulator curvature,
+move the Laplacian onto $\psi$, and retain the variation of $T_C$;
+this gives all signs in \eqref{eq:tc-signed-heat}.
+For the bound, use
+$\pi T_C=q|B|^2/D^2+2\Re(B_z u-F_zBu^2)$ with
+$D=|F|^2+q$ and $u=\overline F/D$.
+The product rule with $|u|\le1/|F|$ and
+$|\delta u|\le3d_0/|F|$ yields
+\eqref{eq:tc-variation-bound}.
+\end{proof}
+The last line of \eqref{eq:tc-signed-heat} vanishes in holomorphic
+regions, but is necessary on a spatial joining band. The physical source
+$\mathcal S=(1-2w)(r_t\rho+\nabla r\cdot\mathbf j)$ contains no
+explicit $v'$. Its occurrence in $\rho_t$ cancels the same term in
+$D_E$ before estimating the source balance. Direct time and heat-potential
+rows still require the mismatch payment. Actual $Q_F$ is computed from
+the blended field, never averaged from $Q_{F_1},Q_{F_2}$.
+
+At zeros one can instead use a positive floor $\sqrt q\ge e$.
+For absolute mismatches $D_0^*,D_1^*$ and $|F_z|\le M_1$,
+\begin{equation}
+ \pi|D_{E_T}|\le|v'|
+       (2M_1D_1^*/e^2+4M_1^2D_0^*/e^3).
+ \label{eq:tc-floor-heat}
+\end{equation}
+The rational formula for $T_C$ similarly remains smooth through multiple
+zeros. These estimates are used where the physical regulator has a
+global floor, not on a late-time unbounded height tail.
+
+\subsection{A paid negative overlap}
+Let $C=\Phi(0)\sqrt\pi/2$, $q_0=\eta C$, and write the exact
+Gaussian heat field as
+\begin{equation}
+ N(t,z)=\frac C{\sqrt{-t}}e^{z^2/(4t)}\qquad(t<0).
+ \label{eq:tc-negative-model}
+\end{equation}
+Choose $T\ge1$, $I_-=[-2T,-T]$ and
+$v_-=b_*((t+2T)/T)$. Both $N$ and the fixed positive-source field
+$G$ solve the heat equation. Their blend has $B=0$ and
+$E_-=v_-'(G-N)$.
+
+The complete-source Taylor bound of the negative endpoint gives, on
+the full $|y|\le4$ buffer,
+\[
+ |\partial_z^j(H-N)|\le g_jT^{-(j+3)/2},\qquad
+ g_j=\tfrac12 B_2^\Phi J_{j+2}(4),\quad
+ J_m(4)=\int_0^\infty v^m e^{-v^2+4v}\,dv.
+\]
+These constants are finite by the explicit Gaussian recurrence used in
+Section~\ref{sec:negative}; the global source bound is $B_2^\Phi$.
+Choose the same $G$ to have four absolute jet errors
+$\varepsilon\le T^{-5/2}$ for $-2T\le t\le97$ and every real height.
+Then
+\begin{align}
+ |H-F_-|&\le(g_0+1)T^{-3/2},&
+ |H_{zz}-(F_-)_{zz}|&\le(g_2+1)T^{-5/2},\notag\\
+ |E_-|&\le c_b(g_0+1)T^{-5/2},&
+ |(E_-)_z|&\le c_b(g_1+1)T^{-3}.
+ \label{eq:tc-negative-jets}
+\end{align}
+Here $\epsilon_g\ge q_0/(2\sqrt T)$, $|r_t|\le1/T$, and all
+spatial regulator derivatives vanish. Thus the pointwise primitives of
+the compact transfer table have finite allowances
+\begin{equation}
+ s,w\le S/T,\quad v_m\le V_m/T^2,\quad z_m\le Z/T^2,
+ \qquad s_t,w_t,c_t=O(T^{-2}),
+ \label{eq:tc-negative-primitives}
+\end{equation}
+where $S=2(g_0+1)/q_0$, $Z=c_b(g_0+1)/q_0$ and
+\[
+ V_m=(g_2+1)/q_0+4(1+m/2)p_2(g_0+1)/q_0^2,
+ \quad p_2=h_2+g_2+2,\quad h_j=\Phi(0)J_j(4)+g_j.
+\]
+The direct time coefficients are $2V_0+S+2Z$,
+$S+2V_1+2Z$, and $S+2V_1+4V_2+6Z$ respectively.
+Actual mean-gradient caps are $m_\gamma/\sqrt T$, with
+$m_\gamma=2(h_1+1)\min_{i:\gamma_i>0}\|K_{\gamma-e_i}\|_1/q_0$.
+They pay the actual mean-product subtraction in $Q$.
+
+Define $K_-$ as the maximum of the resulting finite coefficients in
+the compact transfer, source and heat-potential rows, including internal
+current order three. It is an explicit finite sum/product rule in
+$q_0,g_j,h_j,c_b$ and the kernel norms; Note~50 TJ10--TJ13 specifies
+each substitution. Because every power is $T^{-p}$ with $p\ge1$,
+\begin{equation}
+ \mathcal E_{\rm tup}(F_-,H)\le K_-/T,\qquad
+ T\ge\max(1,4K_-/\theta)
+ \label{eq:tc-negative-budget}
+\end{equation}
+pays the overlap by $\theta/4$ per scalar. The same enlarged constants
+pay the pure negative endpoint for $-t\ge2T$.
+The weaker overlap rate does not replace the sharper pure-Gaussian
+rates of Theorem~\ref{thm:negative-evolution}.
+
+\subsection{One source from the negative overlap to the switch}
+Use $G$ alone on $[-T,63]$. Its global absolute jet comparison and
+the spatially uniform floor
+\begin{equation}
+ e_{\rm mid}=q_0/[1+\max(T^2,63^2)]^{1/4}>0
+ \label{eq:tc-middle-floor}
+\end{equation}
+give a finite full-tuple coefficient $K_{\rm mid}(T)$ multiplying
+$\varepsilon$. Impose
+$\varepsilon\le\theta/[4(1+K_{\rm mid})]$.
+
+To introduce the spatial saddle only on its proved branch, use on
+$[63,64]$
+\begin{equation}
+ v_0=b_*(t-63),\qquad F_0=G+v_0\lambda(P-G).
+ \label{eq:tc-preswitch-join}
+\end{equation}
+The flat product extends by zero into the inner region, where $P$ need
+not be defined. At $63$ it is $G$ and at $64$ it is the moving spatial
+field. Throughout this overlap $\beta=0$ and $\epsilon_g\ge q_0/9$.
+The complex-buffer carrier bound gives
+$A\le2e^{5\log(2+|x|)-|x|/4}\le e^{-|x|/8}$ at the exterior onset.
+Differentiating the actual cutoff product and using its source error,
+the required spatial and first-time jet mismatches are bounded by
+\begin{equation}
+ \delta_{
+ \rm br}=2^{64}L^3(\varepsilon+e^{-a_X/8}),\qquad a_X=X_0-300.
+ \label{eq:tc-bridge-jets}
+\end{equation}
+Terms initially carrying $L^4$ retain the field remainder $a_X^{-2}$;
+$L/a_X^2\le1$ pays the extra logarithm. Source-error terms consume at
+most three cutoff derivatives.
+
+A finite coefficient converting these mismatches to the full tuple can
+be specified without excluding a core zero. Freeze the moment caps
+through three at time $97$, a common jet cap $M$, the floor $e=q_0/9$,
+and $q\le Q=16\eta^2$. Expand the exact rational observables into
+monomials $c q^a\prod_i u_i^{n_i}/D^b$, $N=\sum_i n_i$.
+A coefficient for their field variation is
+\begin{equation}
+ |c|\max(1,Q^a)
+ \{NM^{N-1}e^{-2b}+2bM^{N+1}e^{-2b-2}\},
+ \label{eq:tc-rational-coefficient}
+\end{equation}
+with the first term omitted when $N=0$; for $\log D$ use $1/e$.
+This follows by telescoping numerator factors and using
+$|\delta D|\le2M\delta$. Sum over the finitely many monomials,
+apply kernel norms through four, and include the actual mean-product
+coefficients. Their maximum and $1$ define $K_{\rm br}$.
+Then each scalar error is at most $K_{\rm br}\delta_{\rm br}$.
+First enlarge $X_0$ so the exponential part is below $\theta/32$;
+then require $\varepsilon\le\theta/(2^{69}K_{\rm br}L^3)$.
+Note~50 TJ19 gives an explicit binary sufficient choice. These demands
+are compatible with \eqref{eq:ua-source-tolerance} by refining the same
+finite source. No inverse field or simple-core-root hypothesis is used.
+
+\begin{theorem}[Finite prescription on the negative-to-central domain]
+\label{thm:negative-central-cover}
+For every fixed $\eta>0$ and $0<\theta\le1$, finite choices of
+$T,X_0$, the cutoff width, and one nonnegative finite source give the
+following smooth field prescription on all real heights and $t\le97$:
+\begin{equation}
+ F(t,z)=
+ \begin{cases}
+ N(t,z),&t\le-2T,\\
+ (1-v_-)N+v_-G,&-2T\le t\le-T,\\
+ G,&-T\le t\le63,\\
+ G+v_0\lambda(P-G),&63\le t\le64,\\
+ G+\lambda(P-G),&64\le t\le97.
+ \end{cases}
+ \label{eq:tc-domain-cover}
+\end{equation}
+Every scalar component of \eqref{eq:ua-contract} has error at most
+$\theta/4$, uniformly for $x\in\R$, $|y|\le1$, $t\le97$.
+At negative infinite time the prescription is exactly $N$ and retains
+the complete vanishing errors of the negative endpoint theorem.
+\end{theorem}
+\begin{proof}
+Choose $T$ by \eqref{eq:tc-negative-budget}. Choose $X_0$ by
+Theorem~\ref{thm:uniform-switch} at target $\theta/4$ and enlarge it
+for \eqref{eq:tc-bridge-jets}. Choose one source satisfying the minimum
+of the negative, middle, bridge and switch tolerances. All are strictly
+positive finite demands and their source weights have upper time $97$.
+The five estimates just proved pay the five rows of
+\eqref{eq:tc-domain-cover}; their union is exactly
+$(-\infty,97]\times\R_x$. Flat cutoffs give smooth matching. At any
+time only its actual field is compared, so errors are not multiplied by
+the number of rows. All defects in \eqref{eq:tc-exact} and
+\eqref{eq:ua-moving-defects} are retained in the tuple.
+\end{proof}
+This is a mathematical formula with proved errors, not an entire exact
+heat field. It is nonholomorphic on the spatial bands, and its algebraic
+density has no asserted zero-count interpretation there. Parameters and
+source may change with $\theta$. The theorem does not prove useful
+computational cost or certify arithmetic and continuous averaging.
+
+\subsection{The positive attachment contract}
+For a spatial construction $F_c=G+\lambda(P-G)$, the positive temporal
+blend must be taken at the field:
+\begin{equation}
+ F_+=(1-v_+)F_c+v_+P
+   =G+[v_++(1-v_+)\lambda](P-G),\qquad
+ v_+=b_*((t-T_+)/\Delta_t).
+ \label{eq:tc-positive-join}
+\end{equation}
+The added holomorphic-core primitive is
+\begin{equation}
+ |v_+'|\int_{\Omega_p\cap\mathrm{core}}
+ a\,w_F^m\frac{|(P-F_c)\overline F|}{|F|^2+q},\qquad m=0,1,2.
+ \label{eq:tc-unpaid-primitive}
+\end{equation}
+This was the unpaid consumer in Note~50. Section~\ref{sec:effective-positive}
+now pays it directly from a simple-root field floor, retaining $O(e)$
+for the unweighted primitive and the physical weights in its consumers.
+Observable agreement alone cannot supply the required field mismatch.
+On spatial bands the last line of \eqref{eq:tc-signed-heat} remains.
+After the finite late constants select $T_+$, the new compact table in
+Section~\ref{sec:all-time} pays the entire intervening interval.

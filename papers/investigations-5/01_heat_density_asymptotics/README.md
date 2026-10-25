@@ -3,7 +3,184 @@
 24 October 2026, America/New_York. Prepared for **Edward Baker** with
 substantial LLM assistance, **gpt-6-astra (Codex), recorded effort max**.
 
-**Current consolidation, 25 October 2026, chat 0016:** the maintained
+## Latest analytical return - complete accuracy cost and chat summary
+
+25 October 2026. For Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol, actual effort ultra**, chat0021.
+[Note61](notes/61_POLYNOMIAL_ACCURACY_EVALUATOR_AND_FILTER_COST_20261025.md)
+and [Review40](reviews/40_COMPLETE_EVALUATOR_COST_ASSESSMENT_20261025.md)
+give polynomial additional-accuracy-bit work for the complete unchanged
+IC23 evaluator/filter at fixed descriptor/query box with explicit scalar
+inputs; arbitrary computable scalar costs stay separate. Efficient gamma/
+profile providers and rational high-order quadrature retain every scalar
+and defect. Constants still carry inverse physical floors; the complete
+weak-filter height-cost consumer is next for **Analysis — Sol**.
+[Note62](notes/62_CHAT0021_RESEARCH_SUMMARY_20261025.md) summarizes all
+four research stages in this chat and their precise limits. HDA-17
+Partial, HDA-18 Gated, HDA-20 unfulfilled remain. No research execution
+or manuscript change. See the [sole progress register](research-progress/01_AVERAGED_DENSITY_RESEARCH_PROGRESS_20261024.md).
+
+## Exact phase-index checkpoint - 25 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual
+effort ultra**, chat0021. [Note60](notes/60_EXACT_PHASE_INDEX_BY_DYADIC_ONSET_SELECTION_20261025.md)
+and [Review39](reviews/39_EXACT_PHASE_INDEX_ASSESSMENT_20261025.md)
+construct the literal phase ceiling using the author's authorized existing
+onset freedom. A full-saddle phase expansion separates at least one of
+four admissible binary candidates; finite rational tests identify its
+exact index, with polynomial selector cost in the exponent. The IC23
+formulas and complete tuple remain. Equality at an arbitrary previously
+fixed onset is outside scope. Useful complete evaluation/filter cost and
+executed acceptance remain open; **next: Analysis — Sol** on that cost.
+HDA-17 Partial, HDA-18 Gated, HDA-20 unfulfilled remain. No research
+computation or manuscript change. See the [sole progress register](research-progress/01_AVERAGED_DENSITY_RESEARCH_PROGRESS_20261024.md).
+
+## Evaluator/filter checkpoint - 25 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual
+effort ultra**, chat0021. [Note59](notes/59_EVALUATOR_WORKING_PRECISION_AND_CONTINUOUS_FILTER_20261025.md)
+and [Review38](reviews/38_EVALUATOR_FILTER_LEDGER_ASSESSMENT_20261025.md)
+pay finite evaluator working precision, auxiliary providers, arithmetic
+and continuous-filter error from certified fixed descriptor data for the
+unchanged IC23 tuple. Literal exact phase-index selection remains unpaid;
+useful cost and executed acceptance remain open. No research computation
+or manuscript change. HDA-17 Partial, HDA-18 Gated, HDA-20 unfulfilled.
+**Next: Analysis — Sol**, EV21 selection and useful-cost bounds.
+
+## AN05 source-compression checkpoint - 25 October 2026, chat0021
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual
+effort ultra**. [Note58](notes/58_POSITIVE_ANALYTIC_SOURCE_COMPRESSION_20261025.md)
+and [Review37](reviews/37_POSITIVE_ANALYTIC_SOURCE_COMPRESSION_ASSESSMENT_20261025.md)
+close HDA-17-AN05 at analytical source-construction scope: full canonical
+complex branch, positive dyadic squared polynomial, complete four-jet
+error and finite construction ledger. The specified source descriptor is
+O_b,eta,theta(R^2 log R) bits at fixed b for the same IC23 demand.
+Working precision, Gaussian-moment cancellation, continuous filtering,
+useful finite cost and HDA-20 remain open. The all-time/all-height tuple
+is retained; HDA-17 Partial and HDA-18 Gated remain. **Next: Analysis —
+Sol**, evaluator/filter error. No research execution or manuscript change.
+
+## Manuscript and outlook checkpoint — 25 October 2026, chat0020
+
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual effort max**. The [112-page manuscript](manuscript/README.md)
+now integrates Notes54–55: the finite all-real-time/all-height construction
+with both endpoint comparisons, and the improved sufficient source
+size bound from fixed-central/direct-source conditioning. Exact physical
+q, fixed K, actual covariance and all joining defects are retained.
+[Note56](notes/56_NOTES54_55_MANUSCRIPT_INTEGRATION_20261025.md) maps the
+revision; [Review36](reviews/36_NOTES54_55_REVIEW_AND_INTEGRATION_20261025.md)
+records the focused cross-model LLM check and production verification;
+[Note57](notes/57_PROGRAM_OUTLOOK_AFTER_ALL_TIME_CONSTRUCTION_20261025.md)
+assesses the program and strongest next steps.
+
+**Next: Analysis — Sol**, existing
+[HDA-17-AN05 r1](research-progress/handoffs/HDA-17-AN05.md), positive
+analytic-source compression for the same four-jet consumer. Huge finite
+constants, evaluator/filtering costs and distinct full-chain review remain.
+HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled are unchanged.
+No numerical research, source evaluation, snapshot or commit was performed.
+The dated checkpoints below retain their historical scope and next tasks.
+
+## HDA-23 analytical return — 25 October2026, chat0019
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual
+effort ultra**. [Note55](notes/55_FIXED_CENTRAL_CONDITIONING_AND_SOURCE_COST_20261025.md)
+and [Review35](reviews/35_SOURCE_CONDITIONING_AND_COST_ASSESSMENT_20261025.md)
+replace the expanding-core regulator-floor source loss by a fixed
+multiple-event core and direct source collars for the complete tuple.
+The specified descriptor bound has log size pi R/32+O(log^2 R) at
+fixed slab/eta/tolerance, rather than a quadratic exponent. Constants
+and cost remain potentially prohibitive; no source/evaluator was run.
+HDA-23 Complete at bounded scope; HDA-17 Partial, HDA-18 Gated and HDA-20
+unfulfilled remain. Next Analysis — Sol, prepared/unexecuted AN05
+positive analytic-source compression. At that checkpoint the manuscript remained through50.
+
+## AN08 analytical return — 25 October2026, chat0019
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual
+effort ultra**. [Note54](notes/54_EFFECTIVE_POSITIVE_ATTACHMENT_AND_ALL_TIME_EXISTENCE_20261025.md) and
+[Review34](reviews/34_EFFECTIVE_POSITIVE_ATTACHMENT_ASSESSMENT_20261025.md) extend finite analytical existence to
+all real heights and all real times on |y|<=1, with full buffers, exact
+physical q, actual covariance and both endpoint comparisons. Earlier
+through97 statements retain their historical scope. At that checkpoint the maintained
+manuscript remained through Note50; no manuscript update was requested.
+Huge sufficient onsets/source cost, evaluated source data and full-chain
+review remain; HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled. Next
+At that checkpoint: Analysis — Sol, existing HDA-23 conditioning packet. Zero research runs.
+
+**Preceding manuscript — 25 October 2026, chat 0018:** the maintained
+[101-page manuscript](manuscript/README.md) now integrates Notes 47–50.
+It leads with the complete all-height prescription for **t <= 97**, derives
+the finite/moving/switch and temporal mechanisms, and preserves the
+conditional positive attachment. [Note 52](notes/52_NOTES47_50_MANUSCRIPT_INTEGRATION_20261025.md)
+maps the integration; [Review 33](reviews/33_NOTES47_50_REVIEW_AND_INTEGRATION_20261025.md)
+records focused cross-model LLM review and production checks;
+[Note 53](notes/53_NEXT_STEPS_AFTER_TEMPORAL_ASSEMBLY_20261025.md) prioritizes
+continuation. **Next at that checkpoint: Analysis — Sol**, existing AN08 r1 for effective
+late-time field/collar/mean constants, their positive-join consumer and the
+central extension beyond 97. HDA-23 conditioning is separate; HDA-17
+Partial, HDA-18 Gated, HDA-20 unfulfilled remain. Prepared for Edward Baker
+with substantial LLM assistance, **gpt-6-astra, actual effort max**.
+No new numerical research. Earlier dated checkpoints below are historical.
+
+**Analytical checkpoint and chat summary, 25 October 2026, chat0017:**
+[Note50](notes/50_TEMPORAL_JOINS_AND_ENDPOINT_GATE_20261025.md)
+and [Review32](reviews/32_TEMPORAL_JOIN_AND_ENDPOINT_GATE_ASSESSMENT_20261025.md)
+pay the exact time-join contract and all-height negative-to-central cover
+**-infinity<t<=97**, including the physical switch. The positive endpoint
+attachment remains gated by effective late-time field/collar/mean inputs.
+[Note51](notes/51_CHAT0017_RESULTS_SUMMARY_20261025.md) summarizes every
+result in this chat. **Next: Analysis — Sol**,
+[AN08 r1](research-progress/handoffs/HDA-18-AN08.md), prepared/unexecuted.
+HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled. No numerical research,
+executed/affordable source or manuscript change. For Edward Baker with
+substantial LLM assistance, gpt-6.1-sol, actual effort ultra.
+
+**AN06 switch checkpoint, 25 October 2026, chat0017:**
+[Note49](notes/49_SWITCH_UNIFORM_MOVING_GAP_ASSEMBLY_20261025.md)
+and [Review31](reviews/31_SWITCH_UNIFORM_ASSEMBLY_ASSESSMENT_20261025.md)
+complete AN06/HDA-24: all heights for every t in **[63,97]**, including64.
+Exact physical regulator/crossover data, one moving gap and one source
+pay the full tuple with finite onset and vanishing error. No executed/
+affordable source. **Next at that checkpoint: Analysis — Sol**,
+[AN07 r1](research-progress/handoffs/HDA-18-AN07.md), prepared/unexecuted
+for temporal joins and endpoint coverage. All-height/all-real-time
+objective and both limits remain; HDA-17 Partial, HDA-18 Gated and
+HDA-20 unfulfilled. Manuscript unchanged. For Edward Baker with
+substantial LLM assistance, gpt-6.1-sol, actual effort ultra.
+
+**AN05 fixed-width checkpoint, 25 October 2026, chat 0017:**
+[Note 48](notes/48_MOVING_GAP_FIXED_WIDTH_ASSEMBLY_20261025.md)
+and [Review 30](reviews/30_FIXED_WIDTH_MOVING_GAP_ASSESSMENT_20261025.md)
+complete AN05/HDA-22: all real heights throughout [95,97], with one
+moving phase gap, frozen width and one fixed positive source. The full
+actual-covariance tuple has an explicit vanishing error and finite onset;
+source accuracy is tightened with the joining height. No source/evaluator
+is executed or shown affordable. **Next at that checkpoint: Analysis — Sol**, existing
+[AN06 r1/HDA-24](research-progress/handoffs/HDA-18-AN06.md), whose
+fixed-width dependency is now supplied. Switch/endpoints and the
+all-height/all-real-time objective remain; HDA-17 Partial, HDA-18 Gated,
+HDA-20 unfulfilled. Manuscript unchanged. Prepared for Edward Baker
+with substantial LLM assistance, gpt-6.1-sol, actual effort ultra.
+
+**AN04 analytical checkpoint, 25 October 2026, chat 0017:**
+[Note 47](notes/47_EFFECTIVE_COLLARS_AND_COMPLETE_BUDGET_20261025.md)
+and [Review 29](reviews/29_EFFECTIVE_COLLARS_AND_COMPLETE_BUDGET_ASSESSMENT_20261025.md)
+close AN04 r1's finite complete analytical budget: effective collars,
+raw signed-pole/weighted/source bounds, actual covariance, all defects
+and a constructive common source tolerance. An explicit enormous finite
+onset pays declared positive targets on all heights on a short slab;
+no source/evaluator is executed or shown affordable. **Next at that checkpoint: Analysis — Sol**,
+[AN05 r1 / HDA-22](research-progress/handoffs/HDA-18-AN05.md), for fixed-width
+time coverage. HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled remain;
+the objective remains all real height and time with useful proved analytic
+errors and both infinite-time limits. The maintained manuscript is unchanged.
+Prepared for Edward Baker with substantial LLM assistance,
+gpt-6.1-sol, actual effort ultra.
+
+**Manuscript consolidation checkpoint, 25 October 2026, chat 0016:** the maintained
 manuscript is now **92 checked pages**, including Notes 42–45's fixed-gap
 full-support spatial comparison, constructive clipped-positive source and
 effective complete outer field/jet proof. [Note 46](notes/46_NOTES42_45_MANUSCRIPT_CONSOLIDATION_20261025.md)
@@ -12,7 +189,7 @@ record integration and checks. The author's goal remains an analytic
 approximation for every real height and time, with useful errors extending
 to infinity and both time endpoints. The existing overview/progress now
 track fixed-width time coverage, core conditioning and switch assembly.
-**Next: Analysis — Sol**, [HDA-18-AN04 r1](research-progress/handoffs/HDA-18-AN04.md).
+**Next at that checkpoint: Analysis — Sol**, [HDA-18-AN04 r1](research-progress/handoffs/HDA-18-AN04.md).
 HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled are unchanged.
 Prepared for Edward Baker with LLM assistance, gpt-6-astra, actual effort max.
 
@@ -33,7 +210,7 @@ and allow **time averaging as well as spatial averaging**.
 The research sequence is to determine the two infinite heat-time limits,
 derive the averaged evolution with fluctuation corrections, and solve a
 compatible boundary problem. Three research rounds have produced finite
-pilots and analytic endpoint estimates. The maintained analytical manuscript now incorporates results through Notes 42–45,
+pilots and analytic endpoint estimates. The maintained analytical manuscript now incorporates results through Notes 47–50,
 with the scoped Note 38 interpretation, including negative and positive
 evolution, actual covariance, gamma static comparison and inner overlap,
 alongside the adaptive regulator,
@@ -54,8 +231,8 @@ The [analytical manuscript](manuscript/README.md) consolidates the
 proofs, with brief numerical backup in the appendix and
 references to the detailed notes. The [integration note](notes/21_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261024.md)
 and [review](reviews/07_ANALYTICAL_MANUSCRIPT_INTEGRATION_SELF_REVIEW_20261024.md) record the earlier rewrite.
-The current 92-page integration is pinned by the [build record](manuscript/BUILD_RECORD_20261025.json)
-and [production assessment](reviews/28_NOTES42_45_CONSOLIDATION_PRODUCTION_ASSESSMENT_20261025.md).
+The current 101-page integration is pinned by the [build record](manuscript/BUILD_RECORD_20261025_CHAT0018.json)
+and [focused review and production assessment](reviews/33_NOTES47_50_REVIEW_AND_INTEGRATION_20261025.md).
 [Note 14](notes/14_VARIABLE_EPSILON_EVOLUTION_AND_ASYMPTOTICS_20261024.md)
 derives the potential forcing, curvature correction and current source for
 epsilon depending on height and time. It adds a weak bias bound and

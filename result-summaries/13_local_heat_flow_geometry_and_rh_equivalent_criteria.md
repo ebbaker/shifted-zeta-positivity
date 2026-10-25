@@ -907,3 +907,125 @@ now integrates these results. [Note 46](../papers/investigations-5/01_heat_densi
 and [Review 28](../papers/investigations-5/01_heat_density_asymptotics/reviews/28_NOTES42_45_CONSOLIDATION_PRODUCTION_ASSESSMENT_20261025.md)
 supersede the preceding current-manuscript through-Note-37 scope while
 preserving its historical milestone. No research-status upgrade follows.
+
+
+**Heat-density finite analytical budget, 25 October 2026 (5/01).**
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual
+effort ultra**. [Note 47](../papers/investigations-5/01_heat_density_asymptotics/notes/47_EFFECTIVE_COLLARS_AND_COMPLETE_BUDGET_20261025.md)
+is **finite sufficient analytical budget proved in-note; internal
+same-model review only**. It states: “Every nonsource column therefore
+fits its declared positive quarter-target.” Explicit collar/unit, raw
+signed-pole, weighted-regulator/source and complete actual-covariance
+constants now pay AN04 on all real heights on an X-dependent short slab.
+Its enormous finite onset and constructive positive-source tolerance
+establish finite existence, not affordability, executed arithmetic/filtering,
+fixed-width time coverage or the all-time theorem. [Review 29](../papers/investigations-5/01_heat_density_asymptotics/reviews/29_EFFECTIVE_COLLARS_AND_COMPLETE_BUDGET_ASSESSMENT_20261025.md).
+This supersedes the preceding open full-observable-constant limitation
+at this bounded scope; manuscript and parent statuses remain unchanged.
+
+
+**Heat-density fixed-width all-height assembly, 25 October 2026 (5/01).**
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual
+effort ultra**. [Note 48](../papers/investigations-5/01_heat_density_asymptotics/notes/48_MOVING_GAP_FIXED_WIDTH_ASSEMBLY_20261025.md)
+is **fixed-width all-height analytical comparison proved in-note;
+same-model internal review only**. It states: “The observation domain is
+all real x, |y|<=1, 95<=t<=97.” One moving phase gap with frozen width,
+complete time/heat/curvature/actual-covariance payments and one source
+whose accuracy shrinks with X0 give explicit error
+O_eta(log^6 X0/X0^2) and a finite onset. [Review 30](../papers/investigations-5/01_heat_density_asymptotics/reviews/30_FIXED_WIDTH_MOVING_GAP_ASSESSMENT_20261025.md).
+This supplies HDA-22 and supersedes the preceding shrinking-slab limit
+at this bounded scope. Switch/endpoint joins, affordability, executed
+arithmetic/filtering, the all-time theorem and specialist review remain.
+
+
+**Heat-density switch-uniform assembly, 25 October2026 (5/01).**
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual
+effort ultra**. [Note49](../papers/investigations-5/01_heat_density_asymptotics/notes/49_SWITCH_UNIFORM_MOVING_GAP_ASSEMBLY_20261025.md)
+is **switch-uniform all-height finite-interval comparison proved in-note;
+same-model internal review only**. It states: “The declared domain is
+**63<=t<=97, every real x, |y|<=1**”. Exact regulator and distinct exact
+centers remain. Flatness and arbitrary-q relative weight transfer pay
+the complete time/source/curvature/actual-covariance tuple, with finite
+onset and O_eta(log^8 X0/X0) error tending to zero under source refinement.
+[Review31](../papers/investigations-5/01_heat_density_asymptotics/reviews/31_SWITCH_UNIFORM_ASSEMBLY_ASSESSMENT_20261025.md).
+This supersedes the preceding unavailable switch premise at bounded scope.
+Remaining finite-time cover, both endpoint joins, useful cost, executed
+arithmetic/filtering and specialist review remain; HDA-17 Partial,
+HDA-18 Gated, HDA-20 unfulfilled. Manuscript unchanged.
+
+
+**Heat-density temporal joins and negative-to-central cover, 25 October2026 (5/01).**
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual
+effort ultra**. [Note50](../papers/investigations-5/01_heat_density_asymptotics/notes/50_TEMPORAL_JOINS_AND_ENDPOINT_GATE_20261025.md)
+is **temporal-join contract and all-height negative-to-central cover
+proved in-note; effective positive endpoint gate remains unpaid**.
+It states: “The union is **(-infinity,97] x R_x** on |y|<=1.”
+One finite positive source, a width-T Gaussian join and pre-switch
+attachment pay exact temporal compatibility/signed heat, both curvature
+rows and actual covariance at prescribed scalar accuracy. The positive
+attempt isolates an effective all-height late-time field/collar/mean
+input, with favorable conditional scaling.
+[Review32](../papers/investigations-5/01_heat_density_asymptotics/reviews/32_TEMPORAL_JOIN_AND_ENDPOINT_GATE_ASSESSMENT_20261025.md)
+is same-model internal review only.
+[Summary51](../papers/investigations-5/01_heat_density_asymptotics/notes/51_CHAT0017_RESULTS_SUMMARY_20261025.md)
+indexes this chat's four bounded packets. This supersedes the open
+negative temporal attachment at the stated scope. The positive join/
+central extension, all-time useful formula, affordable execution and
+specialist review remain; HDA-17 Partial, HDA-18 Gated, HDA-20 unfulfilled.
+
+**Heat-density manuscript integration through Note 50, 25 October 2026 (5/01).**
+For Edward Baker with substantial LLM assistance, **gpt-6-astra, actual
+effort max**, chat 0018. [Note 52](../papers/investigations-5/01_heat_density_asymptotics/notes/52_NOTES47_50_MANUSCRIPT_INTEGRATION_20261025.md)
+and [Review 33](../papers/investigations-5/01_heat_density_asymptotics/reviews/33_NOTES47_50_REVIEW_AND_INTEGRATION_20261025.md)
+record the 101-page integration of the preceding four results. The source
+status remains **proved in-note** at its bounded scopes; the review states
+“No blocking error identified in the inspected new mechanisms” and excludes
+a full inherited-chain or specialist audit. The current manuscript includes
+all-height coverage through 97, with the positive effective gate and useful
+source cost still open. This supersedes earlier current-manuscript claims
+through Notes 42–45; those dated milestones remain historical.
+
+
+**Heat-density effective positive attachment, 25 October2026 (5/01).**
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual
+effort ultra**, chat0019. [Note54](../papers/investigations-5/01_heat_density_asymptotics/notes/54_EFFECTIVE_POSITIVE_ATTACHMENT_AND_ALL_TIME_EXISTENCE_20261025.md)
+is **effective field/geometry/mean table and finite all-real-time
+analytical prescription proved in-note; same-model internal review only**.
+It states: “The union is exactly **R_t x R_x on |y|<=1**.” Finite late
+field jets, mixed collars, physical weighted primitives and actual means
+pay TJ24--TJ25 at width1; new compact constants through T_++1 pay the
+interval beyond97. One constructive positive source and actual field
+retain both endpoint comparisons, defects and actual covariance.
+[Review34](../papers/investigations-5/01_heat_density_asymptotics/reviews/34_EFFECTIVE_POSITIVE_ATTACHMENT_ASSESSMENT_20261025.md)
+records same-model checks and limits. This supersedes the earlier open
+positive attachment at finite analytical-existence scope only. Huge
+sufficient source cost, evaluated data, arithmetic/filtering and distinct
+full-chain review remain; HDA-17 Partial, HDA-18 Gated, HDA-20 unfulfilled.
+Zero numerical/exact-rational/machine-symbolic research runs. The
+maintained manuscript still stops at Note50; no manuscript milestone.
+
+
+**Heat-density source conditioning, 25 October2026 (5/01).** For Edward
+Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**,
+chat0019. [Note55](../papers/investigations-5/01_heat_density_asymptotics/notes/55_FIXED_CENTRAL_CONDITIONING_AND_SOURCE_COST_20261025.md)
+records **improved sufficient source-transfer and description-cost bounds
+proved in-note; same-model internal checks only**. It states: “The
+regulator floor is now used only on a fixed central rectangle”. Direct
+G/H collars pay the rest of the complete tuple, retaining multiple
+central events. The specified descriptor bound has leading log pi R/32
+at fixed slab/eta/tolerance, replacing the former quadratic exponential
+policy. [Review35](../papers/investigations-5/01_heat_density_asymptotics/reviews/35_SOURCE_CONDITIONING_AND_COST_ASSESSMENT_20261025.md)
+is same-model only. Fixed constants and remaining exponential cost can
+be prohibitive; no evaluated source, field precision, filter certificate
+or HDA-17/18/20 acceptance follows. Earlier source rules remain valid.
+
+
+**Heat-density integration through Notes54–55, 25 October2026 (5/01).**
+Prepared for Edward Baker with LLM assistance, **gpt-6-astra, max**, chat0020.
+[Note56](../papers/investigations-5/01_heat_density_asymptotics/notes/56_NOTES54_55_MANUSCRIPT_INTEGRATION_20261025.md)
+integrates the preceding proved-in-note all-time and source-cost results
+in the maintained manuscript; this supersedes current-manuscript pointers
+through Note50. [Review36](../papers/investigations-5/01_heat_density_asymptotics/reviews/36_NOTES54_55_REVIEW_AND_INTEGRATION_20261025.md)
+states: “no blocking error identified in the inspected new mechanisms”.
+Focused cross-model LLM review only; useful evaluation and full-chain or
+specialist validation remain open. HDA-17/18/20 statuses are unchanged.

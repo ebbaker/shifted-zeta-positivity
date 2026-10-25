@@ -380,3 +380,81 @@ gamma/field sampling, numerical search or interval theorem certificate.
 the uniform estimates; [Review 26](../reviews/26_EFFECTIVE_FULL_BUFFER_OUTER_FIELD_ASSESSMENT_20261025.md)
 records the proof checks. Reproduce with a script copy in an external
 output folder; it writes its record beside itself using Python's standard library.
+
+
+AN04 r1, 25 October 2026, chat 0017: [AN04_ANALYTICAL_WORK_RECORD_20261025.json](AN04_ANALYTICAL_WORK_RECORD_20261025.json)
+records zero optional scalar checks and no numerical research execution.
+The complete sufficient analytical budget is in Note 47; this record is
+not a numerical certificate. Prepared for Edward Baker with LLM assistance,
+gpt-6.1-sol, actual effort ultra.
+
+
+AN05 r1/HDA-22, 25 October 2026, chat 0017:
+[AN05_ANALYTICAL_WORK_RECORD_20261025.json](AN05_ANALYTICAL_WORK_RECORD_20261025.json) records no numerical or machine-symbolic research
+execution; none is authorized by this revision. Note 48 gives the
+analytical fixed-width result. Prepared for Edward Baker with substantial
+LLM assistance, gpt-6.1-sol, actual effort ultra.
+
+
+AN06 r1/HDA-24, 25 October2026, chat0017:
+[AN06_ANALYTICAL_WORK_RECORD_20261025.json](AN06_ANALYTICAL_WORK_RECORD_20261025.json) records zero numerical/exact-rational/machine-symbolic
+research executions; none authorized. Note49 supplies the analytical
+switch-interval proof. For Edward Baker with substantial LLM assistance,
+gpt-6.1-sol, actual effort ultra. No source/evaluator executed.
+
+
+AN07 r1, 25 October2026, chat0017: [AN07_ANALYTICAL_WORK_RECORD_20261025.json](AN07_ANALYTICAL_WORK_RECORD_20261025.json) records zero numerical,
+exact-rational or machine-symbolic research executions, sampling or
+mesh/precision/interval campaign. Notes50/51 record proof and chat results.
+For Edward Baker with substantial LLM assistance, gpt-6.1-sol, actual effort ultra.
+
+
+- [AN08 analytical work record](AN08_ANALYTICAL_WORK_RECORD_20261025.json):
+  25 October2026, gpt-6.1-sol, actual effort ultra, chat0019. Zero research
+  numerical/exact-rational/machine-symbolic runs; analytical constants and
+  source recipes in Note54, housekeeping hashes/links/sizes only.
+
+
+- [HDA23 analytical work record](HDA23_ANALYTICAL_WORK_RECORD_20261025.json):
+  25 October2026, gpt-6.1-sol, ultra, chat0019. Zero numerical/rational/
+  symbolic research executions; analytical source tolerance, description
+  and construction-operation bounds in Note55, housekeeping only.
+
+
+**HDA-17-AN05 analytical-only return, 25 October 2026, chat0021:**
+[zero-run work record](HDA17_AN05_ANALYTICAL_WORK_RECORD_20261025.json),
+prepared for Edward Baker with substantial LLM assistance, gpt-6.1-sol,
+actual effort ultra. Note58 proves positive analytic-source compression
+and finite construction bounds on paper. No numerical, exact-rational
+or machine-symbolic research execution, source coefficient evaluation
+or field/filter samples occurred. Hash/link/size checks are housekeeping.
+
+
+**Note58 evaluator/filter analytical continuation, 25 October 2026:**
+[zero-run record](NOTE58_EVALUATOR_FILTER_ANALYTICAL_WORK_RECORD_20261025.json),
+gpt-6.1-sol, actual effort ultra, chat0021; prepared for Edward Baker
+with substantial LLM assistance. Note59 derives working precision,
+provider and continuous-filter bounds on paper. No numerical/exact-
+rational/machine-symbolic research execution, evaluated source data,
+mesh/precision search or interval campaign. Literal phase-index
+construction remains unpaid; no executed arithmetic/filter acceptance.
+
+
+**Note59 exact phase-index analytical continuation, 25 October 2026:**
+[zero-run record](EXACT_PHASE_INDEX_ANALYTICAL_WORK_RECORD_20261025.json),
+gpt-6.1-sol, actual effort ultra, chat0021; prepared for Edward Baker
+with substantial LLM assistance. Note60 proves a finite rational selector
+on paper, using explicitly authorized existing onset freedom. No rational
+research algorithm was executed, no phase integer/source coefficient was
+evaluated, and no numerical/machine-symbolic/interval campaign occurred.
+Housekeeping hashes/links/sizes do not certify the mathematical claims.
+
+
+**Complete evaluator/filter analytical improvement and chat summary:**
+[zero-run record](COMPLETE_EVALUATOR_COST_ANALYTICAL_WORK_RECORD_20261025.json),
+25 October 2026, gpt-6.1-sol, actual effort ultra, chat0021. For Edward
+Baker with substantial LLM assistance. Note61's finite rational algorithms
+and cost bounds are derived on paper; none was executed. Zero numerical,
+exact-rational/machine-symbolic research runs, coefficients, samples or
+interval campaigns. Note62 summarizes the chat. Housekeeping hashes,
+links, sizes and history capture do not certify mathematical claims.

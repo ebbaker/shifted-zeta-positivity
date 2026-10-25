@@ -54,3 +54,47 @@ reviews; freeze this request and append its return. Update the existing
 register/chat history. If a named singular estimate resists this focused
 attempt, document it before recommending Astra. Otherwise continue with
 Sol; no global survey or onset optimization is required.
+
+
+## Return — 25 October 2026, chat 0017
+
+**Actual model/effort:** gpt-6.1-sol (Codex), ultra, verified from this
+turn's session metadata; thread `01a173e5-dc96-7c31-946c-be54c871244c`.
+Executed **r1**, with the request above unchanged. The
+[input manifest](../../notes/47_EFFECTIVE_BUDGET_INPUTS_20261025.json)
+pins its pre-return bytes and predecessor versions.
+
+**Result:** [Note 47](../../notes/47_EFFECTIVE_COLLARS_AND_COMPLETE_BUDGET_20261025.md),
+EB1--EB21, supplies finite constants for all five requested items.
+The first model gap beyond a declared onset is selected analytically;
+phase spacing, root velocity, collar margins/slopes/units and every edge
+collar are paid. Restricted raw integrals and the zero-free complement
+are bounded separately. EB6/EB9 instantiate FT7/FT9, EB12 instantiates
+the signed FT15 source/heat bound with all partition commutators.
+EB13--EB19 assemble the full Note 43 tuple with actual mean products,
+both curvature rows, direct time/source, component/join heat, q_t/B_t
+and one explicit FI18--FI20 source tolerance. EB20's finite huge onset
+pays the declared positive targets. There is no first unpaid analytical
+row or resistant singular estimate in this bounded assembly.
+
+**Evidence and limits:** [Review 29](../../reviews/29_EFFECTIVE_COLLARS_AND_COMPLETE_BUDGET_ASSESSMENT_20261025.md)
+records main-assistant and three read-only same-model audits, with
+notation/reference/proof clarifications corrected before saving. They
+are not independent specialist review. The
+[work record](../../numerics/AN04_ANALYTICAL_WORK_RECORD_20261025.json)
+records **zero** of the six optional scalar checks, zero research-check
+execution seconds; no sampling, numerical/source execution, mesh,
+precision search or interval campaign. The analytical master envelope
+is conservatively O_eta(log^6 X/X^2), not optimized. Finite source
+existence does not establish affordable construction/evaluation. The
+arithmetic/filter quarter-allocation is reserved, not certified.
+
+**Disposition — Analysis, Sol:** CLOSED at r1's bounded analytical scope.
+I=[96-tau,96+tau], tau=1/(4096log^2(2+X)); all real heights, not
+fixed-width time coverage. HDA-17 Partial, HDA-18 Gated and HDA-20
+unfulfilled remain. No manuscript edit, snapshot, commit or parent
+upgrade. The all-height/all-real-time analytic objective and both
+infinite-time limits are retained. Next **Analysis — Sol**, the existing
+[AN05 r1 / HDA-22](HDA-18-AN05.md), to pay time width independent of X.
+HDA-23 remains ready; HDA-24 remains gated. No Astra escalation is
+justified by this focused attempt.

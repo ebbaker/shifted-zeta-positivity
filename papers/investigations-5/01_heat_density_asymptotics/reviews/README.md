@@ -182,3 +182,96 @@ absolute density scale, evolution residual and control scope.
   explicit all-height/all-time analytic goal with HDA-22/23/24 tasks.
   gpt-6-astra, actual effort max; no numerical rerun, research-status
   upgrade or independent specialist audit.
+
+
+- [29 — Effective collars and complete finite budget](29_EFFECTIVE_COLLARS_AND_COMPLETE_BUDGET_ASSESSMENT_20261025.md).
+  25 October 2026; gpt-6.1-sol, actual effort ultra, chat 0017. Same-model
+  analytical audits; finite complete sufficient AN04 budget, explicit huge
+  onset and common positive-source tolerance. Zero scalar checks; no
+  executed/affordable source, specialist audit or HDA-17/18/20 upgrade.
+
+
+- [30 — Fixed-width moving-gap comparison](30_FIXED_WIDTH_MOVING_GAP_ASSESSMENT_20261025.md).
+  25 October 2026; gpt-6.1-sol, actual effort ultra, chat 0017. Same-model
+  analytical audits of AN05/HDA-22: all heights throughout [95,97], exact
+  moving defects, one source with vanishing core tolerance, finite onset.
+  No numerical/symbolic execution, affordable evaluator, specialist audit
+  or HDA-17/18/20 upgrade; switch/endpoints remain.
+
+
+- [31 — Switch-uniform moving-gap assembly](31_SWITCH_UNIFORM_ASSEMBLY_ASSESSMENT_20261025.md).
+  25 October2026; gpt-6.1-sol, actual effort ultra, chat0017. Same-model
+  analytical audits of all-height[63,97] coverage, exact regulator/centers,
+  full tuple and vanishing source budget. No numerical/symbolic execution,
+  affordable source, endpoint join, specialist audit or parent upgrade.
+
+
+- [32 — Temporal joins and effective positive gate](32_TEMPORAL_JOIN_AND_ENDPOINT_GATE_ASSESSMENT_20261025.md).
+  25 October2026; gpt-6.1-sol, actual effort ultra, chat0017. Internal
+  same-model audits: exact nonholomorphic temporal/signed heat contract,
+  all-height(-infinity,97] cover, effective positive field/unit/mean gate
+  open. No numerics, specialist review, useful execution/cost or parent upgrade.
+
+- [33 — Notes 47–50 focused review and manuscript integration](33_NOTES47_50_REVIEW_AND_INTEGRATION_20261025.md):
+  25 October 2026, chat 0018, gpt-6-astra, actual effort max; prepared for
+  Edward Baker with substantial LLM assistance. Focused cross-model LLM
+  inspection found no blocking issue in the new finite/moving/switch and
+  temporal mechanisms; inherited premises and HDA-20 remain unaudited at
+  full-chain scope. The 101-page production retains the positive effective
+  gate and source-cost limits. No numerical research.
+
+
+- [34 — Effective positive attachment and finite all-time existence](34_EFFECTIVE_POSITIVE_ATTACHMENT_ASSESSMENT_20261025.md).
+  25 October2026, gpt-6.1-sol, actual effort ultra, chat0019. Same-model
+  analytical checks of finite full-buffer field/collar/mean constants,
+  weighted TJ24--TJ25 and new central constants beyond97. No specialist
+  independence, useful source/evaluation acceptance or HDA-20 completion.
+
+
+- [35 — Fixed central conditioning and improved source cost](35_SOURCE_CONDITIONING_AND_COST_ASSESSMENT_20261025.md).
+  25 October2026, gpt-6.1-sol, actual effort ultra, chat0019. Same-model
+  full-tuple source-transfer/cost checks; possible multiple central events
+  retained. No source execution, field precision or specialist independence.
+
+
+- [36 — Notes54–55 focused review and manuscript integration](36_NOTES54_55_REVIEW_AND_INTEGRATION_20261025.md).
+  25 October 2026, gpt-6-astra, actual effort max, chat0020; prepared for
+  Edward Baker with substantial LLM assistance. No blocking error found
+  in the inspected effective-positive, all-time and source-conditioning
+  mechanisms. Focused cross-model LLM review, not HDA-20 or specialist
+  validation; 112-page production checked, no numerical research.
+
+
+- [37 — Positive analytic-source compression](37_POSITIVE_ANALYTIC_SOURCE_COMPRESSION_ASSESSMENT_20261025.md).
+  25 October 2026, gpt-6.1-sol, actual effort ultra, chat0021; prepared
+  for Edward Baker with substantial LLM assistance. Same-model internal
+  analytical assessment of Note58's canonical branch, positive polynomial,
+  complete four-jet and source-construction ledger. Fixed-b descriptor
+  O(R^2 log R) bits; evaluator/filtering and HDA-20 remain unpaid. Zero
+  research runs; no manuscript milestone or independent review.
+
+
+- [38 — Evaluator and continuous-filter ledger](38_EVALUATOR_FILTER_LEDGER_ASSESSMENT_20261025.md).
+  25 October 2026, gpt-6.1-sol, actual effort ultra, chat0021; prepared
+  for Edward Baker with substantial LLM assistance. Same-model analytical
+  assessment: finite working-bit/provider/arithmetic/filter theorem from
+  certified descriptor data, exact phase-index selection still unpaid,
+  no useful-cost or executed-certificate claim. HDA-20 remains separate.
+
+
+- [39 — Exact phase-index construction](39_EXACT_PHASE_INDEX_ASSESSMENT_20261025.md).
+  25 October 2026, gpt-6.1-sol, actual effort ultra, chat0021; prepared
+  for Edward Baker with substantial LLM assistance. Same-model internal
+  analytical assessment: explicit full-saddle remainder, separated member
+  of four admissible onsets, exact literal ceiling and finite polynomial
+  selector bit cost in the exponent. Uses author-authorized onset freedom;
+  arbitrary fixed-onset equality outside scope. No research runs or HDA-20.
+
+
+- [40 — Complete evaluator/filter accuracy cost](40_COMPLETE_EVALUATOR_COST_ASSESSMENT_20261025.md).
+  25 October 2026, gpt-6.1-sol, actual effort ultra, chat0021; for Edward
+  Baker with substantial LLM assistance. Same-model analytical assessment
+  of polynomial fixed-box accuracy-bit cost with explicit scalar encodings,
+  general scalar costs retained. Efficient gamma/profile providers and
+  rational high-order filter; inverse-floor height constants remain. Full
+  weak consumer and HDA-20 unpaid. No research computation.

@@ -115,3 +115,23 @@ conditioning and switch tasks toward all-height/all-time analytic coverage.
 [Note 46](notes/46_NOTES42_45_MANUSCRIPT_CONSOLIDATION_20261025.md),
 [Review 28](reviews/28_NOTES42_45_CONSOLIDATION_PRODUCTION_ASSESSMENT_20261025.md).
 For Edward Baker with LLM assistance, gpt-6-astra, actual effort max.
+
+2026-10-25 — **Notes 47–50 manuscript integration.** Heat-density investigation;
+[maintained source](manuscript/main.tex), [hash-bound build](manuscript/BUILD_RECORD_20261025_CHAT0018.json),
+working tree, no commit/tag or snapshot. The 101-page version derives finite,
+moving/switch and temporal budgets, leading with all-height coverage through
+97 and the conditional positive gate. [Note 52](notes/52_NOTES47_50_MANUSCRIPT_INTEGRATION_20261025.md),
+[Review 33](reviews/33_NOTES47_50_REVIEW_AND_INTEGRATION_20261025.md),
+[next steps](notes/53_NEXT_STEPS_AFTER_TEMPORAL_ASSEMBLY_20261025.md).
+For Edward Baker with LLM assistance, gpt-6-astra, actual effort max, chat 0018.
+
+
+2026-10-25 — **All-time construction and source-cost integration.** Heat-density
+investigation; [maintained source](manuscript/main.tex),
+[hash-bound 112-page build](manuscript/BUILD_RECORD_20261025_CHAT0020.json),
+working tree, no commit/tag or snapshot. Integrates Notes54–55 with effective
+positive/compact proofs, both endpoints and fixed-central/direct-source
+conditioning. [Note56](notes/56_NOTES54_55_MANUSCRIPT_INTEGRATION_20261025.md),
+[Review36](reviews/36_NOTES54_55_REVIEW_AND_INTEGRATION_20261025.md),
+[outlook](notes/57_PROGRAM_OUTLOOK_AFTER_ALL_TIME_CONSTRUCTION_20261025.md).
+For Edward Baker with LLM assistance, gpt-6-astra, actual effort max, chat0020.

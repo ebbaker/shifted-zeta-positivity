@@ -1,170 +1,97 @@
-\section{Coverage and remaining work}\label{sec:remaining}
-The following table records the integrated source scope through Notes 42--45,
-with Note 38 supplying interpretation only.
-Every estimate uses its stated full buffer and regulator; constants depend
-on the fixed widths, transverse margins and regulator parameters as
-specified in the corresponding theorem. Spatial jets do not include time
-derivatives.
+\section{What the construction establishes and what remains}
+\label{sec:remaining}
+The domain obligation is now met at finite analytical-existence scope.
+The remaining program concerns the quality, evaluation and validation of
+that construction. The following comparisons use the same physical
+regulator and fixed spatial filter, with their complete buffers.
+
 \begingroup\small
-\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.22\textwidth}>{\raggedright\arraybackslash}p{.25\textwidth}>{\raggedright\arraybackslash}p{.45\textwidth}@{}}
-\toprule Domain & Observable & Error and reference\\\midrule\endhead
-$t=-T$, all real $x$, $|y|\le A_0\sqrt T$, full expanding buffer &
-Adaptive density, current, direct time and potential terms, actual covariance &
-$R$: $O(T^{-2})$; $J$: $O(T^{-5/2})$; $R_t,Q$: $O(T^{-3})$;
-$U,W$: $O(T^{-1})$; $U_t$: $O(T^{-2})$;
-$\Delta Q$: $O(T^{-4})$, with finite forcing and trace budgets:
-Theorem~\ref{thm:negative-evolution} and Proposition~\ref{prop:negative-covariance}.\\
-Fixed compact time slab with upper end $\le64$, all height tails &
-Regulated measurement background; actual $Q$ and $\Delta Q$ &
-Linear observables, time and source terms $O(E^2)$; covariance terms
-$O(E^4)$, $E=e^{-a\max(|x|-\ell,0)}$:
-Theorem~\ref{thm:preswitch-tail}.\\
-Eventual positive inner window $X\asymp\kappa^{1/3}$, buffered &
-Finite-phase density and horizontal current/time derivative &
-$O(\kappa^{-1/2})$ density; $O(L\kappa^{-7/6})$ transport:
-Theorem~\ref{thm:explicit}.\\
-Fixed $[32,T]$, $X\to\infty$; or $32\le t\le\log X/4$ &
-Linear gamma static density and $U,W$ spatial jets through order four &
-$O_T((1+\log^2X)/X)$; joint $O(X^{-3/4}(1+\log^4X))$:
-Theorem~\ref{thm:linear-static}.\\
-Compact $I\Subset(64,\infty)$; or $128\le t\le\log X/4$ &
-Linear gamma finite-phase density; phase-free consequence &
-$O_I((1+\log^2X)/X)$; joint $O(X^{-3/4}(1+\log^4X))$;
-compact continuum adds $O((\log X)^{-4})$:
-Corollary~\ref{cor:outer-finite-phase}.\\
-Linear-model regulator layer, joint range or fixed $[32,T]$ &
-Two-layer regularized density and exact-center switch scaling &
-$O(1)$ absolute layer error; $O(1/\log X)$ after normalization:
-Theorem~\ref{thm:regulator-layer}, Corollary~\ref{cor:switch-scaling}.\\
-$t\ge32$, $2+t+X$ sufficiently large, $|y|\le Y$ &
-Full-saddle static density and $U,W$ spatial jets through order four &
-$O(t^{3/2}/(1+X+t\log(2+t+X))^2)$:
-Theorem~\ref{thm:full-saddle-static}.\\
-All real $x$ at large $t$; all $t\ge32$ at large $X$; fixed $[32,T]$ &
-The same full-saddle static observables &
-$O(t^{-1/2}\log^{-2}(2+t))$;
-$O(X^{-1/2}\log^{-3/2}(2+X))$; $O_T(X^{-2})$:
-Corollary~\ref{cor:full-saddle-limits}.\\
-Eventual buffered inner window, with a nonempty inner/outer spatial overlap &
-Full-saddle versus explicit inner density with identical physical $q$ &
-$O(\kappa^{-1/2})$ by comparison through $R_H$:
-Corollary~\ref{cor:inner-static-overlap}.\\
-All real $x$, $|y|\le Y$, one eventual $t\ge T_*$ &
-Full-saddle positive evolution, actual signed covariance and adaptive terms &
-$U,W$ spatial order $\le4$ and $R,\overline C$ order $\le2$: $Ce_*$;
-$J,Q,U_t,W_t,R_t,\overline C_t,\overline{\mathcal B},\overline{\mathcal S}$
-order $\le2$: $C\mathfrak e_{\rm ev}\le Ct^{-1/2}$;
-model equation corrections $Cd_*$:
-Theorem~\ref{thm:positive-evolution}, Proposition~\ref{prop:positive-residual-equations}.\\
-Each fixed $[32,T]$, $X\ge X_T$, $|y|\le Y$, including the flat switch &
-Full-saddle static, current/covariance, direct time and equation corrections;
-orders as in the positive theorem &
-Static $O_T(X^{-2})$; current/covariance $O_T(\log^2X/X^2)$;
-time-dependent terms $O_T(\log^2X/X)$; corrections $O_T(X^{-3})$:
-Theorem~\ref{thm:compact-positive-evolution}.\\
-Eventual buffered inner window, same physical $q$ &
-Full-saddle versus explicit-clock current and density time derivative &
-$O(t^{-1/2})+O(L\kappa^{-7/6})$, an absolute comparison retaining the
-sharper independent inner theorem:
-Corollary~\ref{cor:inner-differentiated-overlap}.\\
-Any compact time slab and compact full spatial buffer; all real $x$ when its upper end is $\le64$ &
-Finite-source density, current, direct time and actual covariance &
-Explicit source/jet and nonlinear allowances, including cellwise and
-amplitude-aware refinements: Theorem~\ref{thm:finitejets},
-Proposition~\ref{prop:fieldstability}, Theorem~\ref{thm:covariance} and
-Propositions~\ref{prop:localjets} and~\ref{prop:localnonlinear}.\\
-Compact full buffers; Note 34 CJ14/CJ20 & Complete filtered system from
-$d_0,d_2,\eta_E$, including both curvature derivatives and actual $Q$ &
-Explicit positive coefficient table, Theorem~\ref{thm:compact-transfer}.
-Requires compact positive regulator floor and useful enclosed caps.\\
-Common compact time overlap; Note 34 CJ22--CJ27 & Holomorphic time join
-and exact potential/density/current equations &
-Theorem~\ref{thm:compact-time-join}; component and cutoff residuals retained.
-No accepted endpoint/cutoff budget; the distinct spatial construction is
-Theorem~\ref{thm:sj-transfer}.\\
-Common full buffer; Note 36 AS2--AS6 & Direct signed radial source comparison &
-Proposition~\ref{prop:signed-source}; whole-buffer coefficients and positive
-envelope integration must be bounded. No heat premise for this row.\\
-Finite positive cubic cells; Note 37 HE1--HE10/HE12 & Complete fourth-order
-remainder, finite moments and ideal evaluator bound &
-Propositions~\ref{prop:hermite-source} and~\ref{prop:hermite-gauss}.
-Nodal/construction/evaluator arithmetic, continuous filtering and space/time
-coverage remain separate. Linear fallback retains second-order remainder.\\
-Fixed-gap short $I\Subset(64,\infty)$, every real observation height &
-Full filtered tuple, actual $Q$, both curvature derivatives, source and
-spatial/heat compatibility terms &
-Theorem~\ref{thm:sj-transfer}, Corollary~\ref{cor:sj-rate}:
-$O_J(X^{-2}\log^3X+X^{-3}\log^2X)$ plus retained exponential terms,
-with a sufficiently accurate finite source; $I$ shrinks with $X$.\\
-$t\in[95,97]$, every real $x$, $|y|\le4$ &
-Clipped positive cubic source, exact heat and absolute jets through three &
-Proposition~\ref{prop:fi-source}: at most $29\varepsilon/64$ before
-field evaluation/filtering. Explicit finite cost; no affordable complete
-observable certificate.\\
-$t\in[95,97]$, full complex strips, explicit very large height &
-Complete-source $H-P$ and holomorphic jets through three &
-Theorem~\ref{thm:effective-outer}: $12000A/x^2$ for $|y|\le5$,
-$x\ge2^{2048}$; explicit Cauchy constants on $|y|\le9/2$,
-$x\ge2^{2049}$. Collar/weighted-observable constants remain separate.\\
-Existing Notes 28/38 crossover & Exact center versus rounding interpretation &
-Section~\ref{sec:crossover-outlook}; normalized allowance does not pay global
-absolute accuracy. Correlation/response specification and intrinsic
-criticality remain open.\\\bottomrule
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.23\textwidth}>{\raggedright\arraybackslash}p{.34\textwidth}>{\raggedright\arraybackslash}p{.35\textwidth}@{}}
+\toprule Domain or parameter & Established comparison & Quantitative scope\\\midrule\endhead
+Every real $x,t$, $|y|\le1$ & One finite positive source, Gaussian and
+full-saddle endpoints, moving spatial gap and both temporal attachments &
+Arbitrary positive scalar accuracy for the full tuple, including actual
+covariance and all defects; Theorem~\ref{thm:all-time}.\\
+Growing seam radius $R$, fixed $b,\eta,\theta$ & Fixed central regulator
+comparison plus direct source collars on the remaining core &
+$\log S_{\rm bound}=\pi R/32+O_{b,\eta,\theta}(\log^2R)$;
+source-data bits $O(R)$ and mode count $O(\sqrt R)$;
+Section~\ref{sec:source-conditioning}.\\
+All $x$, $t=-T\to-\infty$ & Gaussian endpoint with expanding transverse
+buffer, current and direct time terms &
+$R:O(T^{-2})$, $J:O(T^{-5/2})$, $R_t,Q:O(T^{-3})$,
+$\Delta Q:O(T^{-4})$; Theorem~\ref{thm:negative-evolution}.\\
+All $x$, $t\to+\infty$ & Effective full-saddle field, static and evolution
+comparison, nonzero residual retained &
+Static $O(t^{-1/2}\log^{-2}(2+t))$, evolution/covariance
+$O(t^{-1/2})$, with finite onset and constants;
+Section~\ref{sec:effective-positive}.\\
+All $x$, fixed compact $[63,b]$ & One moving gap, frozen width and one
+source; complete switch and compact-time budget &
+$O_b(\log^8X_0/X_0)$ with source refinement and finite onset;
+\eqref{eq:at-compact-budget}. On $[95,97]$ the stronger earlier
+$O_\eta(\log^6X_0/X_0^2)$ remains.\\
+Positive inner windows and linear-carrier layer & Explicit finite phase,
+transport and exact-center crossover descriptions &
+Their original regulators and regimes remain;
+Theorems~\ref{thm:explicit} and~\ref{thm:regulator-layer}.\\
+\bottomrule
 \end{longtable}\endgroup
 
-Here $e_*=t^{3/2}/N_*^2$, $\mathfrak e_{\rm ev}=e_*\mathcal L^2$,
-$d_*=t/N_*^3$, $N_*=1+X+t\mathcal L$ and
-$\mathcal L=\log(2+t+X)$. The linear gamma model's sufficient restriction
-$X\ge e^{4t}$ is not the paper's final spatial limitation. The full saddle
-removes it and supplies static and direct evolution comparisons under
-their separately stated quantifiers. Both models retain exact nonzero
-heat residuals \eqref{eq:linear-heat-residual} and~\eqref{eq:full-saddle-residual}.
-Static errors are not differentiated to obtain evolution; the full-saddle
-model's observable equations include the additional residual corrections.
-Current research statuses are maintained in the
-\repo{research-progress/01_AVERAGED_DENSITY_RESEARCH_PROGRESS_20261024.md}{live progress register}.
+The full-saddle scales are distinct:
+$e=t^{3/2}/[1+X+t\log(2+t+X)]^2$ for static comparison,
+$e\log^2(2+t+X)$ for evolution, and
+$d=t/[1+X+t\log(2+t+X)]^3$ for the heat residual.
+A small residual has not been propagated into a field error; field
+comparison is proved directly from the source. Similarly, the all-time
+statement concerns errors in unnormalized physical observables, not
+convergence of the growing density to a finite constant.
 
-The governing objective remains one analytic approximation for every
-$t\in\R$ and $x\in\R$ on a declared transverse strip, with explicit,
-useful errors for the unnormalized density and its required evolution
-observables. A finite special-function representation, specified saddle
-branch and explicit smooth joins are allowed; a sampled lookup table,
-unspecified covariance or finite window alone does not meet that goal.
-The construction must have a finite evaluation prescription at each
-point, quantitative full-height bounds throughout time, and controlled
-limits as $|x|\to\infty$ and $t\to\pm\infty$. Smooth cutoffs need
-not be real analytic, and the joined approximation need not be holomorphic;
-``analytic form'' here requires a mathematical representation with proved
-errors, not a new global analyticity premise. The regulator-to-zero-count
-error is additional when that interpretation is claimed.
+The central positive regulator comparison allows multiple events.
+Simple-root collars are used only on domains where their field premises
+have been proved. The general fixed-source positive-infinite-time
+obstruction and the fixed-time off-axis obstruction for the
+positive-terminal-value piecewise-linear class retain their original
+scopes (Propositions~\ref{prop:fixedsource} and~\ref{prop:cutoff-potential}).
+The present construction uses a finite source only where prescribed,
+then a noncompact saddle model; those obstructions do not exclude it.
+The improved sufficient exponential cost is likewise not a lower bound
+on every possible source representation.
 
-The next dependencies are concrete:
-\begin{enumerate}
-\item Complete HDA-18-AN04: make the remaining collar/unit, signed-pole,
-weighted exterior and heat-partition constants finite on the same regime,
-and decide one complete source-plus-observable budget. A failed row is
-an informative return; optimizing $2^{2050}$ alone is not the target.
-\item HDA-22: extend the spatial assembly to a fixed positive time width,
-initially $[95,97]$, by moving gaps or compatible overlaps. Pay
-$\lambda_t(P-G)$, mixed compatibility derivatives, overlap/cutoff
-terms and the actual covariance. Do not infer fixed-width coverage from
-a family whose $\tau$ tends to zero.
-\item HDA-23: improve finite-core conditioning by local field/collar
-transfer, with all multiple events and full supports treated at their
-actual scope. Quantify a better sufficient source tolerance and cost
-for the same complete tuple; numerical mesh refinement is not the proof.
-\item HDA-24 and parent HDA-18: obtain a switch-uniform spatial/time
-assembly across $64$, then connect a finite central time interval to
-the all-height negative and positive endpoint theorems. Pay both time
-overlaps and source-derived traces; list domains whose union is exactly
-$\R_t\times\R_x$ on the declared strip and give its analytic error
-envelope. The compact outer theorem through $64$ is an input, not this
-completed assembly.
-\item HDA-20: a distinct reviewer should audit the assembled source,
-collar, covariance and joining chain with recorded shared premises.
-The HDA-21 correlation specification remains a supporting direction.
-\end{enumerate}
+The strongest next analytical task is positive source compression for
+the same four-jet tolerance \eqref{eq:sc-all-source}. An analytic
+polynomial source such as $p_n^2$ is a candidate, but positivity on the
+real axis alone gives no complex analytic square-root branch. A complete
+argument must first prove a quantitative zero-free neighborhood and norm
+bound for the canonical source (or provide an equivalent positive
+construction), then pay approximation, coefficients, conversion,
+rounding and the complete tail. Any claimed gain is judged against the
+finite descriptor bound for the same continuous four-jet consumer.
+A polynomial-cost result is not yet established.
 
-These tasks remain open: HDA-17 is Partial, HDA-18 Gated and HDA-20
-unfulfilled. No all-time theorem, RH or earlier-time simplicity conclusion
-is asserted by this consolidation.
+Even a shorter source description may be expensive to evaluate.
+Complex Gaussian moments, oscillatory cancellation, algebraic clipping
+endpoints and nonlinear observables need a working-precision analysis.
+After a representation has a proved useful bound, a frozen finite case
+can test its separate source, evaluation and continuous-filter budgets.
+The existing sampled diagnostics remain supporting evidence. Improving
+huge sufficient onsets may later matter more than the asymptotic source
+exponent; the finite $b$-dependent formulas identify that tradeoff.
+
+A distinct full-chain review (HDA-20) remains a separate obligation.
+The present focused cross-model LLM review checks Notes~54--55 and their
+immediate consumers, while inheriting the earlier contour, endpoint and
+weak-transfer chain. It does not supply specialist validation. The
+correlation/crossover work (HDA-21) should proceed only after its
+observable, window, limiting regime and response are specified.
+
+The live statuses remain HDA-17 Partial, HDA-18 Gated and HDA-20
+unfulfilled: their acceptance includes useful cost, evaluated data or
+review beyond finite existence. HDA-22, HDA-23 and HDA-24 are complete
+at their bounded analytical scopes. The
+\repo{research-progress/01_AVERAGED_DENSITY_RESEARCH_PROGRESS_20261024.md}{progress register}
+and \repo{notes/57_PROGRAM_OUTLOOK_AFTER_ALL_TIME_CONSTRUCTION_20261025.md}{program outlook}
+record the next task, Analysis---Sol, HDA-17-AN05 r1.
+No regulator-to-zero-measure error, autonomous covariance closure,
+collision exclusion, earlier-time simplicity or RH conclusion follows
+from the regulated approximation theorem alone.

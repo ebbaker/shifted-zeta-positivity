@@ -1,0 +1,310 @@
+\section{Effective positive endpoint and temporal attachment}
+\label{sec:effective-positive}
+The positive endpoint must supply constants before an overlap time can
+be chosen. We now make the full-saddle field, mixed collars and actual
+mean bounds effective. The order is field comparison, local geometry,
+regularized primitives, then the complete tuple. This is the content of
+Note~54, Sections~A--B \cite{n54}; the compact extension required after
+choosing the overlap is treated in Section~\ref{sec:all-time}.
+
+\subsection{A finite field theorem on the full complex buffer}
+Retain the implicit saddle and determinant in
+\eqref{eq:full-saddle-model}, and write
+\[
+ \mathcal L=\log(2+t+|x|),\quad \mathcal N=1+|x|+t\mathcal L,
+ \quad e=\frac{t^{3/2}}{\mathcal N^2},\quad d=\frac{t}{\mathcal N^3}.
+\]
+\[
+ A_\Sigma=|S_t((1+iz)/2)|+|S_t((1-iz)/2)|.
+\]
+\begin{theorem}[Effective all-height positive field]
+\label{thm:effective-positive-field}
+For $t\ge T_F:=\exp(4096)$, the original saddle branch is well defined
+on $|\Im z|\le6$, at every real height. On this strip,
+\[
+ |H-P|\le10000e A_\Sigma,\qquad
+ |P_t+P_{zz}|\le8192d A_\Sigma.
+\]
+On $|\Im z|\le5$,
+\begin{equation}
+ |\partial_z^j(H-P)|\le C_j e\mathcal L^j A_\Sigma,
+ \qquad C_j=2^{16}j!8^j,\quad 0\le j\le3.
+ \label{eq:ep-field}
+\end{equation}
+All constants are independent of the subsequently chosen core and source.
+\end{theorem}
+\begin{proof}
+Put $w=\sigma+i\tau_0$, $-3\le\sigma\le4$, and first take
+$\tau_0\ge0$. The gamma remainder used in
+Section~\ref{sec:effective-inputs} gives, for $\Re p\ge2$ and
+$m=|p|\ge4096$,
+\[
+ \alpha(p)=\tfrac12\Log(p/(2\pi))+r(p),\quad |r|\le2/m,
+ \quad |\alpha^{(j)}|\le j!/m^j\ (1\le j\le4),
+ \quad |r'|\le24/m^2.
+\]
+For all $m$ in this half-plane the weaker $|r|\le4/m$ also holds.
+On the rectangle
+\[
+ \sigma+t\mathcal L/8\le\Re p\le\sigma+t\mathcal L,
+ \qquad \tau_0\le\Im p\le\tau_0+t,
+\]
+the map $p\mapsto w+t\alpha(p)/2$ has Lipschitz constant at most
+$20/\mathcal L<1/2$, real increment in
+$[t\mathcal L/5,t\mathcal L/3]$, and imaginary increment in $[0,t/2]$.
+For the lower imaginary sign, if $a=\Re p>48$, then
+$\Re\alpha'(a+i\tau)\ge(a/2-24)/(a^2+\tau^2)>0$; integrate
+vertically from the real axis. Thus the fixed point is in the strict
+interior, and
+\begin{equation}
+ \mathcal N/10\le|p|\le2\mathcal N,\quad
+ a_*:=\Re(p-w)\in[t\mathcal L/5,t\mathcal L/3],\quad
+ |\Im(p-w)|\le t/2,\quad |B-1|\le20/\mathcal L<1/8.
+ \label{eq:ep-branch}
+\end{equation}
+Conjugation handles the other sign. Nonvanishing of $B$ supplies analytic
+neighborhoods; uniqueness identifies overlapping charts and the earlier
+exterior branch.
+
+Use the exact reflected-arm decomposition of the heat convolution in
+Section~\ref{sec:full-saddle}. Each arm starts at $v_0=2-\sigma$
+($|v_0|\le5$) and is moved horizontally through the same saddle, retaining
+its oriented vertical connector. The length-three middle interval is
+also retained. Close each finite contour before taking its right end to
+infinity; quadratic Gaussian decay dominates the gamma growth there.
+For the shifted variable $u\ge-a_*/2$, the Taylor integral remainder
+and its quadratic part obey
+\[
+ |\Gamma_p(u)|\le\frac{3u^2}{2m},\qquad
+ |E_p(u)|\le\frac{3|u|^3}{m^2}.
+\]
+The modulus of both exponential integrands is at most
+$e^{-u^2/(2t)}$. Interpolating their exponents and using
+$\int_\R |u|^3e^{-u^2/(2t)}du=4t^2$ bounds the central error by
+$24t^{3/2}/m^2\le2400e$ relative to its arm carrier.
+
+For the left piece the all-size gamma bound gives
+\[
+ \int_{A-h}^{A}\Re\alpha(v+i\tau)\,dv
+ \ge h\Re\alpha(p)-D(A),\qquad
+ D(A)=A/2+4\log(A/2)+4\le3A,
+\]
+where $A=\Re p$. The connector uses $|\Im\alpha(2+i\tau)|<2$,
+and the middle uses
+$\sup_{-1\le c\le2}|\xi(c+i\tau)/8|
+ \le225(1+|\tau|)|M(2+i\tau)|$.
+The resulting complete ledger, per arm where appropriate, is
+\begin{center}\small
+\begin{tabular}{@{}ll@{}}\toprule
+Piece & Relative upper allowance\\\midrule
+Central quadratic replacement & $2400e$\\
+Missing Gaussian and actual infinite ends & $e^{-t\mathcal L^2/200}$ each\\
+Left horizontal piece, connector, middle & $e^{-t\mathcal L^2/400}$ each\\
+All non-unit arithmetic modes & $128e^{-t\mathcal L/10+t/2}
+                                      \le e^{-t\mathcal L/20}$\\\bottomrule
+\end{tabular}\end{center}
+Indeed $-a_*^2/(4t)+D(A)\le-t\mathcal L^2/200$; the connector
+adds at most $t+1$, and the largest prefactor is $e^{2\mathcal L}$.
+At the declared onset these losses fit the weaker displayed exponent.
+Also $\mathcal N\le e^{\mathcal L}\mathcal L$ and
+$e\ge e^{-3\mathcal L}$, so every exponential remainder is at most $e$.
+Two arms and the middle fit the constant $10000$. No finite arithmetic
+truncation or omitted infinite end is used.
+
+For $D=(\log S_t)_w$, exact differentiation gives
+$|D|\le2\mathcal L$, $|D_w|\le3/m$, $|\Im D|\le2$.
+On a disk of radius $(8\mathcal L)^{-1}$ the carrier and $e$ each
+change by at most a factor two. Cauchy's formula therefore gives
+\eqref{eq:ep-field}; strip six pays complete disks centered in strip
+five. The exact determinant residual formula in
+Section~\ref{sec:positive-evolution}, with \eqref{eq:ep-branch}, gives
+$8192d$. In particular no asymptotic error bound is differentiated.
+\end{proof}
+
+\subsection{Acquire mixed collars before dividing by a field}
+Write $P=2\mathcal A\cos\Theta$ with compatible analytic logarithms.
+The same exact formulas yield
+\begin{equation}
+ |(\log\mathcal A)_z|\le2,\quad
+ \mathcal L/8\le\Theta_x\le\mathcal L\quad(y=0),\quad
+ |\Theta_{zz}|\le10/\mathcal N.
+ \label{eq:ep-phase}
+\end{equation}
+In particular $\Re\Theta_z>0$ throughout the full buffer. Integrating
+vertically shows that $\Im\Theta$ has the sign of $y$; the model zeros
+there are real and simple.
+
+Let the exact-heat source field $G$ satisfy
+\begin{equation}
+ |\partial_z^j(G-H)|\le e\mathcal L^j A_\Sigma/16,
+ \qquad j\le3,
+ \label{eq:ep-source-premise}
+\end{equation}
+on the used core and its complete strip-four disks. For every
+$F_s=(1-s)G+sP$, $0\le s\le1$, use the disks about a real $P$ root
+$c$ with radii $(16\mathcal L_c)^{-1}$ and
+$(64\mathcal L_c)^{-1}$. Equation~\eqref{eq:ep-phase} gives
+$|P(z)|\ge\mathcal A(c)\mathcal L_c|z-c|/32$ on these disks
+and an off-collar floor $2^{-20}A_\Sigma$.
+Rouch\'e's theorem on the two boundaries gives one simple real root
+$a_s$ and no additional zeros on the consumed support, with
+\[
+ |a_s-c|\le2^{40}e/\mathcal L_c,\qquad
+ 2^{-10}\mathcal A(c)\mathcal L_c
+ \le |(F_s)'(a_s)|\le2^{10}\mathcal A(c)\mathcal L_c.
+\]
+Reality follows from conjugation and uniqueness. On the outer disk
+factor $F_s=(z-a_s)b_s$. Boundary comparison and the maximum principle
+for $b_s$ and $1/b_s$ bound the units; on the half outer disk,
+\[
+ |\log(b_s/b_H)|\le2^{62}e,\qquad
+ |\partial_z\log(b_s/b_H)|\le2^{70}e\mathcal L_c.
+\]
+The pole residue needs the exact phase formula, rather than the coarse
+individual $O(\mathcal L)$ unit derivative:
+\[
+ v_P=2\mathcal A_z/\mathcal A+\Theta_{zz}/\Theta_z,\quad |v_P|\le8.
+\]
+Comparison at the displaced roots using jets through three gives
+\begin{equation}
+ \frac{(F_s)_{zz}}{F_s}=\frac{v_s}{z-a_s}+g_s,\quad
+ |v_s|\le16,\quad |v_s-v_H|\le2^{100}e\mathcal L_c,
+ \quad |g_s-g_H|\le2^{100}e\mathcal L_c^2.
+ \label{eq:ep-poles}
+\end{equation}
+The regular-part bound follows on a larger boundary after subtracting
+both poles, then by the maximum principle inside. All disks used here
+lie in the source-controlled strip four. These claims are restricted to
+that domain, and impose no earlier central simplicity premise.
+
+\subsection{The temporal primitive and the physical weights}
+For the holomorphic core put $\Delta=P-G$, $F=(1-v)G+vP$ and
+\[
+ T_m[a]=\int_\Omega a\,w_F^m
+                 \frac{|\Delta\overline F|}{|F|^2+q},\qquad 0\le m\le2.
+\]
+Take a full enlarged support of area $A$, at most $n_\omega\omega$
+collars of radius $r_0/\omega$, $\omega\asymp\mathcal L$, with
+$|F|\ge c_s A_X\omega|z-a_F|$ on collars and
+$|F|\ge c_g A_\Sigma,c_g A_X$ off them. Let
+$|\Delta|\le D_T e A_X$ on collars, absorbing carrier comparisons in
+$D_T$. Direct integration of the simple pole gives
+\begin{equation}
+ T_m[1]\le D_T\left(A/c_g+
+              \frac{2\pi n_\omega r_0}{c_s\omega_0}\right)e.
+ \label{eq:ep-temporal-primitive}
+\end{equation}
+Here $\omega\ge\omega_0>0$. Every intersecting collar is enlarged to a
+whole disk before integration. This proves the unweighted $O(e)$ bound
+without an inverse regulator.
+
+For $m\ge1$ put $\Lambda=\sup_\Omega\sqrt q/A_X$ and
+$a_*=\sup_\Omega a$. On a collar,
+$w_F\le h^2/(|z-a_F|^2+h^2)$ with $h=\Lambda/(c_s\omega)$.
+The radial integral $\int_0^\infty h^2/(u^2+h^2)du=\pi h/2$ gives
+\begin{equation}
+ T_m[a]\le a_*D_T e\left(
+       A\Lambda^2/c_g^3+\frac{\pi^2 n_\omega\Lambda}{c_s^2\omega}\right).
+ \label{eq:ep-weighted-primitive}
+\end{equation}
+The unweighted estimate is used for $Z_0[1]$; the spatially weighted
+terms of \eqref{eq:tc-signed-heat} retain $Z_1,Z_2$.
+Replacing those by $Z_0$ would lose the necessary suppression.
+
+The physical source saddle $L_s$ supplies a finite mass anchor.
+On $|u-L_s|\le\kappa^{-1/2}$ the source exponent decreases by at
+most two, since $\kappa\ge6t+36$ and the explicit third derivative
+remainder is bounded there. The first source mode is at least half its
+leading term and the others are positive. Hence
+\[
+ H(t,0)\ge M_0(t)/32,\qquad
+ H(t,0)\le3A_0(t),\qquad M_0(t)/A_0(t)\le96,
+ \quad A_0=S_t(1/2)>0.
+\]
+Together with $|(\log\mathcal A)_z|\le2$ this proves, for a fixed
+buffer of radius eight and $X/\kappa>128$,
+\begin{equation}
+ \Lambda\le96\kappa^{-1}
+ e^{-(X-8)^2/(2\kappa)+2X}\le96e^{-X}.
+ \label{eq:ep-mass-suppression}
+\end{equation}
+On $X/\kappa\le128$ the exact physical coefficient table
+\eqref{eq:positive-exact-regulator-jets} bounds the spatial weights by
+fixed constants and the time weights by fixed constants times
+$\mathcal L^2$. On its complement each is a stated polynomial in
+$1+X$. For any integer $n\ge0$,
+\[
+ (1+X)^n e^{-cX}\le\sum_{j=0}^n\binom njj!c^{-j}.
+\]
+This absorbs every weighted exterior term. The bounded ratio used in
+this argument is $L_s/\kappa$; the height-dependent
+$\mathcal L/\kappa$ is not bounded on all heights.
+
+\subsection{Actual covariance and a noncircular overlap choice}
+The unit replacement and pole translation arguments of
+Lemma~\ref{lem:regularized-poles} give $s,w\le C e$ and
+$v_m\le C e\mathcal L^2$ for arbitrary positive pointwise $q$.
+Pole translation retains $e(1+|\log e|)$; here
+$1+|\log e|\le5\mathcal L$.
+For actual means use
+\[
+ F_z/F=(z-a_F)^{-1}+b_F'/b_F,
+ \qquad |\nabla S_F|\le2|F_z/F|+w_F|\nabla r|.
+\]
+Whole-collar integration and \eqref{eq:ep-mass-suppression} bound its
+integral by $C\mathcal L$. Moving the remaining derivatives to $K$
+therefore bounds every actual mean through order three before applying
+the covariance product rule. On a spatial band add $F_{\bar z}/F$
+using the proved gap floor. The same cap applies to a support meeting
+both core and band. A core primitive must never be multiplied by a
+compact coefficient depending on the as-yet unchosen upper time.
+
+Here is one explicit common payment. Normalize units by
+$A_X\omega$, take $\omega=\mathcal L$, $A=n_\omega=128$,
+$r_0=3/128$, and all lower geometric constants $2^{-64}$.
+All upper geometric and jet constants can be enlarged to $2^{128}$.
+The preceding radial formulas, coefficient weights and factorial sums
+then give $C_{\rm raw}=2^{4096}$ for the raw primitives and actual
+gradient cap. The largest required exterior weight degree is finite
+(at most sixteen after absorption); each factorial sum fits $2^{128}$.
+The signed-stress identity is applied before any absolute square bound,
+and the actual global mean product is subtracted as in
+Section~\ref{sec:compact-transfer}.
+
+Let $a_i$ be the kernel constants in
+Section~\ref{sec:effective-inputs}. Define
+\begin{equation}
+ K_*=1+5\sum_{i+j\le4}a_i a_j,\qquad
+ C_+=2^{65536}(1+128+K_*)^{64}.
+ \label{eq:ep-Cplus}
+\end{equation}
+Substitution in the finite primitive maps, including
+\eqref{eq:tc-signed-heat}, gives each holomorphic scalar row the bound
+$C_+(1+c_b/\Delta_t)e\mathcal L^2$.
+The maps use sums, products, and one bilinear mean-product row; eight
+raw factors and sixty-four kernel/regime factors already overcount them.
+Thus \eqref{eq:ep-Cplus} is an explicit enlargement, independent of
+$T_+,\Delta_t,R_c$ and the source. Compact spatial-band costs retain
+their separate reserve.
+
+Since $e\mathcal L^2\le t^{-1/2}$, choose
+\begin{equation}
+ \Delta_t=1,\quad \mu_{\rm coll}=2^{-256},\quad C_{\rm jet}=2^{29},
+ \qquad
+ T_+=\max\left\{128,e^{4096},
+   [8C_+(1+c_b)/\theta]^2,[4C_{\rm jet}/\mu_{\rm coll}]^2\right\}.
+ \label{eq:ep-Tplus}
+\end{equation}
+The onset also pays the root/unit smallness gates, whose multipliers
+are at most $2^{256}$. The positive core and pure model tail now cost
+at most $\theta/8$ per scalar. For a finite core and $b=T_++1$, an
+explicit full-complex carrier floor is
+\begin{equation}
+ A_{\rm late}=\exp[-4b\log^2(b+2)-2(R_c+5)].
+ \label{eq:ep-late-floor}
+\end{equation}
+Indeed $|\mathcal A(t,z)|\ge A_0(t)e^{-2(R_c+5)}$; the gamma
+integral on $[1,2]$ and \eqref{eq:ep-branch} give
+$A_0(t)\ge e^{-4b\log^2(b+2)}$. This poor floor is used only to
+choose a finite source accuracy. It was never inverted in the temporal
+primitive or in $C_+$.

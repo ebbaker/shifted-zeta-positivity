@@ -114,3 +114,63 @@ sufficient upper bound, not a universal complexity obstruction. These
 limits motivate the next tasks without excluding alternative local
 comparisons or joins. For Edward Baker with LLM assistance,
 gpt-6-astra, actual effort max.
+
+
+Heat-density finite-budget scope, 25 October 2026: [Note 47](../papers/investigations-5/01_heat_density_asymptotics/notes/47_EFFECTIVE_COLLARS_AND_COMPLETE_BUDGET_20261025.md)
+states: “Finite existence and its potentially enormous source-size upper
+bound do not establish affordability.” Its complete scalar allowances
+are uniform in height on a shrinking fixed-gap slab; they do not supply
+fixed-width time or all-time assembly. [Review 29](../papers/investigations-5/01_heat_density_asymptotics/reviews/29_EFFECTIVE_COLLARS_AND_COMPLETE_BUDGET_ASSESSMENT_20261025.md)
+preserves equation-component allocations and the unexecuted arithmetic
+reserve. For Edward Baker with substantial LLM assistance,
+gpt-6.1-sol, actual effort ultra.
+
+
+Heat-density fixed-width scope, 25 October 2026: [Note 48](../papers/investigations-5/01_heat_density_asymptotics/notes/48_MOVING_GAP_FIXED_WIDTH_ASSEMBLY_20261025.md)
+states: “This is a family of finite sources G_(X0,theta), each fixed in t
+and z throughout J.” Its all-height comparison on [95,97] has a vanishing
+error because the source tolerance also shrinks with X0; it is not one
+unchanged finite source or an all-time cover. The first unavailable
+uniform extension toward64 is the Gaussian premise beta_min>0, not
+a universal obstruction to switch assembly. [Review 30](../papers/investigations-5/01_heat_density_asymptotics/reviews/30_FIXED_WIDTH_MOVING_GAP_ASSESSMENT_20261025.md).
+For Edward Baker with substantial LLM assistance, gpt-6.1-sol, actual effort ultra.
+
+
+Heat-density switch scope, 25 October2026: [Note49](../papers/investigations-5/01_heat_density_asymptotics/notes/49_SWITCH_UNIFORM_MOVING_GAP_ASSEMBLY_20261025.md)
+states: “There is no field/time/test partition at this boundary and no
+derivative of its indicator.” The two regimes split allowances, not the
+physical field. A lost positive uniform Gaussian rate at64 is paid by
+switch flatness and arbitrary-q relative transfer; it is not an
+obstruction to[63,97] comparison. That finite-time input is not an all-time
+theorem or affordability claim.
+[Review31](../papers/investigations-5/01_heat_density_asymptotics/reviews/31_SWITCH_UNIFORM_ASSEMBLY_ASSESSMENT_20261025.md).
+For Edward Baker with substantial LLM assistance, gpt-6.1-sol, actual effort ultra.
+
+
+Heat-density temporal scope, 25 October2026: [Note50](../papers/investigations-5/01_heat_density_asymptotics/notes/50_TEMPORAL_JOINS_AND_ENDPOINT_GATE_20261025.md)
+states: “This is failure of that bound, not a counterexample to the actual
+join or a universal obstruction.” A global core regulator floor is an
+insufficient positive-join payment; the relative collar route has favorable
+scaling but lacks finite late-time constants. Observable agreement alone
+cannot supply temporal field mismatches. The proved all-height domain
+ends at97; the missing positive rows are not an accepted all-time cover.
+[Review32](../papers/investigations-5/01_heat_density_asymptotics/reviews/32_TEMPORAL_JOIN_AND_ENDPOINT_GATE_ASSESSMENT_20261025.md).
+For Edward Baker with substantial LLM assistance, gpt-6.1-sol, actual effort ultra.
+
+Heat-density integration scope, 25 October 2026: [Review 33](../papers/investigations-5/01_heat_density_asymptotics/reviews/33_NOTES47_50_REVIEW_AND_INTEGRATION_20261025.md)
+retains Note 50's positive gate in the revised manuscript: “The interval
+from 97 to that late overlap also needs effective compact constants.”
+An eventual positive endpoint and a paid domain through 97 do not by
+themselves cover the intervening times. The failed global-floor estimate
+remains a scoped bound failure. Prepared for Edward Baker with substantial
+LLM assistance, gpt-6-astra, actual effort max, chat 0018.
+
+
+Heat-density improved-cost scope, 25 October2026: [Review36](../papers/investigations-5/01_heat_density_asymptotics/reviews/36_NOTES54_55_REVIEW_AND_INTEGRATION_20261025.md)
+states: “Nodal data bits, algebraic descriptor size, arithmetic operations,
+field working precision and continuous filtering remain different quantities.”
+Note55's linear exponential sufficient descriptor bound is neither a
+necessary complexity bound nor an evaluator certificate; Note54's finite
+all-time coverage establishes no affordability. The old positive gate is
+superseded at finite-existence scope, with the historical bound failures
+retained. For Edward Baker with LLM assistance, gpt-6-astra, max, chat0020.

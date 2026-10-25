@@ -63,3 +63,49 @@ as part of this packet. Do not upgrade HDA-17/18/20 from a local subresult.
 Stop at a proved deliverable or a precisely identified unpaid term with
 its attempted bound and scaling. The global consumer is an analytic
 approximation for all real x and t, including both infinite time limits.
+
+
+## Return — 25 October 2026, chat 0017
+
+**Actual model/effort:** gpt-6.1-sol (Codex), ultra, verified from current
+turn metadata; thread 01a173e5-dc96-7c31-946c-be54c871244c.
+Executed r1 with the request above unchanged. The
+[intake manifest](../../notes/49_SWITCH_ASSEMBLY_INPUTS_20261025.json)
+pins the frozen request and actual predecessor/source inputs.
+
+**Result:** [Note 49](../../notes/49_SWITCH_UNIFORM_MOVING_GAP_ASSEMBLY_20261025.md)
+proves the complete analytical comparison on **[63,97], every real x,
+|y|<=1**, including64 and overlapping AN05's [95,97]. Extended finite
+field bounds, one preserved-phase moving gap, frozen width and one
+positive source on the union buffer pay potential/density/current,
+direct time/source, actual Q/Delta Q, both curvature rows and all
+component/spatial/moving heat. Exact beta/beta prime/amplitude mismatch
+and distinct exact full-saddle/older-carrier centers remain.
+
+Switch flatness SW8 and the arbitrary-q relative weight branch SW12
+replace the unavailable uniform positive Gaussian premise. SW23--SW26
+give a finite onset, complete error 3B_sw=O_eta(log^8 X0/X0) and source
+refinement making the entire error tend to zero. The floor/mean cap and
+center gates are recomputed for this interval. No normalized profile
+or approximate center substitutes for physical absolute error.
+
+**Evidence and limits:** [Review 31](../../reviews/31_SWITCH_UNIFORM_ASSEMBLY_ASSESSMENT_20261025.md)
+records the derivations, corrected imports/buffers/center gates and three
+read-only same-model audits. Shared premises; no specialist independence.
+The [work record](../../numerics/AN06_ANALYTICAL_WORK_RECORD_20261025.json)
+records zero numerical/exact-rational/machine-symbolic research executions,
+sampling, mesh/precision search or interval campaign. General compact-J
+reuse has interval-dependent inputs; the explicit table is for[63,97].
+Both endpoint time joins, conditioning/useful source cost and executed
+arithmetic/filtering remain open. The reserve is not an executed
+certificate. No singular row remained unpaid in this bounded attempt.
+
+**Disposition — Analysis, Sol:** AN06 r1 CLOSED; HDA-24 Complete at bounded
+analytical scope. HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled remain.
+No earlier source-note/manuscript edit, DRAFT_HISTORY milestone, snapshot,
+commit, new chat or model change. The all-height/all-real-time analytic
+objective and both infinite-time limits remain. Next **Analysis — Sol**,
+prepared/unexecuted [AN07 r1](HDA-18-AN07.md): one nonholomorphic temporal-join
+ledger and one focused attempt at each endpoint overlap, returning a
+finite cover or exact unpaid gates. HDA-23 remains ready for conditioning.
+No named resistant estimate currently warrants Astra.

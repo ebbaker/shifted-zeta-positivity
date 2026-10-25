@@ -60,3 +60,47 @@ as part of this packet. Do not upgrade HDA-17/18/20 from a local subresult.
 Stop at a proved deliverable or a precisely identified unpaid term with
 its attempted bound and scaling. The global consumer is an analytic
 approximation for all real x and t, including both infinite time limits.
+
+
+## RETURN — r1, 25 October2026, chat0019
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual
+effort ultra**, verified from current turn metadata. Thread
+01a17463-238b-7352-982f-f0d3c155e1c8.
+[Manifest55](../../notes/55_SOURCE_CONDITIONING_INPUTS_20261025.json)
+pins the original request/current inputs. Note54/Review34 are retained.
+
+[Note55](../../notes/55_FIXED_CENTRAL_CONDITIONING_AND_SOURCE_COST_20261025.md)
+pays the full source column with a regulator floor only on a fixed
+central rectangle. Possible multiple events there remain allowed.
+Direct G/H outer collars, complete supports, signed pole translation,
+actual mean products and every time/curvature/source/defect row yield
+a finite improved tolerance map. The sharper paid gamma carrier gives
+log(1/epsilon)=pi R/8+O(log^2 R); the specified clipped-cubic descriptor
+bound has log size pi R/32+O(log^2 R) at fixed slab/eta/tolerance,
+instead of the old quadratic exponent. Nodal precision O(R), mode
+count O(sqrt R); field working precision is separate and unproved.
+The Note54 union minimum is revised in every relevant source clause,
+retaining its late relative-field premise, actual all-time formula,
+both limits and scalar allocations. The shorter tail cutoff and pruned
+cubic isolation tree have analytical cost bounds; no execution occurred.
+
+[Review35](../../reviews/35_SOURCE_CONDITIONING_AND_COST_ASSESSMENT_20261025.md)
+states same-model checks and corrected policy/component/root-isolation
+wording. [Work record](../../numerics/HDA23_ANALYTICAL_WORK_RECORD_20261025.json)
+records zero research runs. The fixed central constant remains enormous;
+the source descriptor still grows exponentially. Useful evaluated cost,
+arithmetic/continuous filtering and distinct full-chain review remain.
+No earlier-note/manuscript edit, DRAFT_HISTORY milestone, snapshot,
+commit, new user-owned chat or model change. Same unique chat0019 history.
+
+## DISPOSITION — Analysis, Sol
+
+**CLOSED — bounded analytical conditioning/cost improvement complete.**
+HDA-23 Complete at that scope; HDA-17 Partial, HDA-18 Gated and HDA-20
+unfulfilled remain. Next **Analysis — Sol**, prepared/unexecuted
+[HDA-17-AN05 r1](HDA-17-AN05.md): positive analytic-source compression
+for the exact Note55 four-jet demand, with complete coefficient/source
+error and cost ledger, or the first unpaid analytic input. No numerical
+work or automatic dispatch is commissioned. No resistant structural
+estimate was found that warrants an Astra escalation.
