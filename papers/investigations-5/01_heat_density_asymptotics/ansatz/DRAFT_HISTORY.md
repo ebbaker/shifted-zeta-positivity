@@ -56,3 +56,16 @@ Same-model internal acceptance only; Edward Baker with substantial LLM
 assistance, gpt-6.1-sol, recorded effort ultra. Next bounded regulator
 comparison [A03-AN01](research-progress/handoffs/HDA-A03-AN01.md) prepared;
 physical/all-time/cost obligations remain open.
+
+
+2026-10-25 — **Evolution-first asymptotics rewrite.** Maintained
+[manuscript](manuscript/main.tex), working tree; no commit/tag or snapshot.
+Makes controlled all-time large-height field estimates the first priority,
+integrates exact error/modulation/observable forcing equations, and retains
+the t=64 transition as supporting work. [Note09](notes/09_EVOLUTION_MANUSCRIPT_AND_PRIORITY_REVISION_20261025.md),
+[Assessment06](reviews/06_EVOLUTION_MANUSCRIPT_REWRITE_ASSESSMENT_20261025.md),
+[current overview](research-overview/02_EVOLUTION_ASYMPTOTICS_RESEARCH_OVERVIEW_20261025.md),
+[build record](manuscript/BUILD_RECORD_20261025_EVOLUTION_REWRITE.json).
+Synthesis and priority revision only; no new accepted asymptotic bound.
+For Edward Baker with substantial LLM assistance, gpt-6-astra, effort max,
+ansatz chat0002. A02-AN03 is primary next; both ansatz histories verified.

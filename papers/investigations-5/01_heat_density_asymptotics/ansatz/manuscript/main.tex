@@ -8,7 +8,7 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,
-urlcolor=MidnightBlue,pdftitle={Large-height heat-density ansatze across time},
+urlcolor=MidnightBlue,pdftitle={Evolution equations and large-height heat asymptotics},
 pdfauthor={Drafted for Edward Baker}}
 \setlength{\emergencystretch}{2em}
 \setlength{\parskip}{.35em}
@@ -26,89 +26,123 @@ pdfauthor={Drafted for Edward Baker}}
 \newtheorem{proposition}{Proposition}[section]
 \newtheorem{remark}[proposition]{Remark}
 \numberwithin{equation}{section}
-\title{Large-height heat-density ans\"atze across time\\
-\large Amplitude, phase, arithmetic crossover, and regulator layers}
+\title{Evolution equations and\\large-height heat asymptotics\\
+\large Controlled ans\"atze, arithmetic modes, and physical density}
 \author{Drafted for Edward Baker}
 \date{25 October 2026\\[.3em]\small Working research draft}
 \begin{document}
 \maketitle
 \begin{abstract}
-We organize simple analytical models for the canonical theta heat field
-and its regularized averaged zero density. The principal objective is a
-large-height description for every real heat time, with separate formulas
-where different mechanisms dominate and explicit estimates on their
-overlaps. An elementary positive-time cosine is calibrated against the
-gamma factor. At zero time a Riemann--Siegel sum retains the arithmetic
-oscillations, motivating a heat-weighted finite-sum model near zero time.
-Negative times, joint large time and height, and the regulator-induced
-transition require distinct comparisons. Existing source results, exact
-identities, formal candidates, and unproved uniform estimates are
-separated throughout. A bounded continuation proves the first corrected carrier on
-\(32\le t\le33\) and a signed-time real-axis arithmetic field
-comparison on \(|t|\log(X/(4\pi))\le8\), retaining a Riemann--Siegel
-correction. A further continuation proves the fixed-cutoff complex
-remainder and the full buffered crossover field, three spatial jets,
-and a direct first time derivative through zero. On \(1\le T=-t\le2\),
-a short formula is proved at the natural gamma scale, while a finite
-growing-order representation attains outer-carrier precision, with
-buffered spatial and time errors paid separately. That representation
-extends to \(4/L_X\le T\le2\) and joins to the crossover model with
-all time-cutoff defects paid, yielding a chartwise negative interval
-\([-2,0]\).
-This draft does not establish an all-time large-height theorem.
+We organize large-height asymptotics for the canonical theta heat field
+around its evolution equation, the residual of an approximate solution,
+and the equation satisfied by the approximation error. The objective is
+to understand and bound the field for every real heat time: first at
+fixed time, then uniformly on compact time intervals, and separately in
+joint time--height limits. Amplitude and phase equations generate
+corrections, while canonical initial data, arithmetic remainders and
+stability estimates determine whether those corrections approximate
+the actual field. Negative time is forward diffusion and makes the
+arithmetic modes' damping and phase drift explicit.
+
+The existing bounded results are retained: a corrected positive-time
+carrier on \([32,33]\), a buffered signed crossover through zero,
+two distinct accuracy scales on \(1\le -t\le2\), and a chartwise
+join on \([-2,0]\). We display the forcing that an ansatz residual
+induces in the physical potential, density and current equations.
+Improving and extending the field and derivative estimates is the
+primary research task. The regulator transition near \(t=64\) remains
+an important subsequent test of amplitude accuracy and observable
+transfer. Exact identities, inherited estimates and proposed proof
+methods are distinguished; no all-time asymptotic theorem or new
+physical-transfer estimate is asserted.
 \end{abstract}
 \noindent\textbf{LLM acknowledgement.}
-Prepared with substantial assistance from OpenAI GPT-6 Astra
-(\texttt{gpt-6-astra}), recorded reasoning effort \texttt{max}, in
-research chat0022. The bounded continuation in Ansatz Note03 was
-prepared with GPT-6.1 Sol (\texttt{gpt-6.1-sol}), recorded effort
-\texttt{ultra}, ansatz chat0001, with same-model internal checks.
-The same model and effort produced Note04's buffered crossover and
-Note05's fixed-negative-time and Note06's bridge-and-join continuations,
-with same-model checks. Note07 summarizes the complete chat0001 results.
-Mathematical statements require author verification.
-No numerical or machine-symbolic research was executed in preparing
-this draft. Compilation and layout checks are production checks.
+Drafted for Edward Baker with substantial LLM assistance. The opening
+draft was prepared with GPT-6 Astra (\texttt{gpt-6-astra}), recorded
+effort \texttt{max}, in parent research chat0022. Ansatz Notes03--06
+and their bounded estimates were prepared with GPT-6.1 Sol
+(\texttt{gpt-6.1-sol}), recorded effort \texttt{ultra}, in ansatz
+chat0001, with same-model internal checks. Note07 summarizes that
+round. The evolution perspective in Note08 and this rewrite were
+prepared with GPT-6 Astra, recorded effort \texttt{max}, in ansatz
+chat0002. This rewrite adds exposition and exact residual identities;
+it does not upgrade the mathematical review status. Author verification
+and independent specialist review remain necessary. No numerical or
+machine-symbolic research was executed for the rewrite; compilation
+and rendered-page inspection are production checks.
 \newpage
+\begingroup
+\small
+\setlength{\parskip}{0pt}
 \tableofcontents
+\endgroup
 \newpage
 
-\section{Objective and present evidence}
+\section{Objective, evidence, and the role of evolution}
 \label{sec:objective}
-The desired outcome is a useful formula for the large-height field as a
-function of time, together with the corresponding unnormalized density.
-The solution formula should be short; the error term may be elaborate.
-Different regimes are permitted. We prioritize amplitude, unwrapped
-phase, arithmetic terms, and transition matching over simplification of
-constants in existing bounds.
+The primary objective is to understand and bound the large-height
+asymptotics of \(H(t,z)\) for all real times. The field formula should
+expose amplitude, unwrapped phase and arithmetic structure. Its error
+estimate may be elaborate, and different formulas may be appropriate
+in different regions. The evolution equation is both a construction
+method for these formulas and a way to track their errors. A useful
+step must improve a stated approximation bound or extend a proved
+domain; cancelling a formal residual alone is not such a step.
+
+The program has three distinct time requirements:
+\begin{enumerate}
+\item for every fixed real \(t\), an asymptotic as \(X\to\infty\),
+with the dependence of its constants and onset on \(t\) specified;
+\item estimates uniform on prescribed compact time intervals,
+including intervals crossing zero;
+\item joint limits \(t=t(X)\), with explicit scaling regions,
+possibly unbounded positive or negative time, and controlled overlaps.
+\end{enumerate}
+None follows by substituting a moving time into a fixed-time remainder.
+The immediate bounded test is an evolution-guided improvement at
+intermediate negative times; it is a first step toward this wider
+objective, not a restriction of it.
+
+The previous research round \cite{ansatz03,ansatz04,ansatz05,ansatz06}
+established useful starting comparisons. It corrected the outer
+positive-time carrier on \([32,33]\), retained the arithmetic cutoff
+correction through zero, proved full buffered spatial and first time
+errors for that crossover, and constructed a negative-time
+representation that can be joined through zero on \([-2,0]\).
+These are \emph{proved in-note from named classical inputs, with
+same-model internal assessment only}. Their constants and onsets
+are not numerically instantiated. Section~\ref{sec:map} records the
+remaining coverage rather than treating those bounded domains as an
+all-time result.
+
+Evolution is already used in three substantive ways: the finite
+negative-time representation solves the heat equation exactly on a
+frozen chart; residual cancellation supplies a direct time-error
+estimate; and a time join retains the derivative of its cutoff.
+The next opportunity is to use the same equations systematically to
+derive simpler controlled corrections and understand the evolving
+arithmetic population. Section~\ref{sec:evolution} states the exact
+error equation and the stability obligations that make this program
+quantitative. Section~\ref{sec:observable-evolution} then records how
+the residual enters the physical observables.
 
 The parent manuscript \cite{parent} supplies a finite analytical
 all-real-time/all-height construction on its declared strip, through
-Notes54--55. Notes58--61, summarized in \cite{summary62}, subsequently
-develop positive source compression, finite evaluation and filtering
-errors, exact phase-index selection using existing onset freedom, and
-polynomial additional-accuracy-bit cost at a fixed descriptor and query
-box. Their constants can be large; useful uniform height cost and a
-distinct full-chain audit remain open. Those later notes have not yet
-been integrated into the parent manuscript.
+Notes54--55. Notes58--61, summarized in \cite{summary62}, develop
+positive source compression, finite evaluation and filtering errors,
+exact phase-index selection using onset freedom, and polynomial
+additional-accuracy-bit cost at a fixed descriptor and query box.
+Useful uniform height cost and the distinct full-chain audit remain
+open. Those results provide source and transfer machinery, but do not
+already give the short, quantitatively controlled asymptotic
+description sought here. Their status is unchanged by this rewrite.
 
-The present task is a new representation program within that
-investigation. It does not replace the complete parent construction or
-upgrade its review status. The earlier ansatz catalogue \cite{ansatz01}
-is retained, but the large-height question now takes priority over the
-Gaussian-polynomial core.
-
-Three meanings of \emph{all times} must be distinguished:
-\begin{enumerate}
-\item for each fixed real \(t\), an asymptotic as \(X\to\infty\), with
-the dependence of its onset and constants on \(t\) specified;
-\item uniform estimates on compact time intervals, especially intervals
-crossing \(t=0\) or the regulator switch;
-\item joint limits \(t=t(X)\), including unbounded positive or negative
-time, with stated scaling regions and overlap estimates.
-\end{enumerate}
-The program aims at all three. A fixed-time formula does not supply
-the other two by substitution.
+The transition near \(t=64\) belongs to the fixed physical regulator.
+It remains important because it tests very fine amplitude accuracy
+and the transfer from field to density. It follows the primary
+field-asymptotic work in the present priority order. The
+Gaussian-polynomial core and optional special-function simplifications
+remain supporting models in the wider catalogue \cite{ansatz01}.
 
 \section{Normalization, observables, and exact time anchors}
 \label{sec:normalization}
@@ -179,9 +213,145 @@ complex strips. These are exact starting identities, not short
 large-height asymptotics. The negative-time formula must not be obtained
 by substituting \(t<0\) into an uncontrolled positive-time remainder.
 
-\section{The elementary large-height cosine}
+\section{Evolution of an ansatz and its error}
+\label{sec:evolution}
+This section integrates the exact identities in Ansatz Note08
+\cite{ansatz08}. It provides a method and a checklist of estimates,
+not a new remainder theorem.
+
+\subsection{Separate the solution error from the residual}
+For an ansatz \(F\), differentiable in time and holomorphic in space,
+write
+\begin{equation}
+ \mathfrak r_F=F_t+F_{zz},\qquad E=H-F.
+ \label{eq:ansatz-defect}
+\end{equation}
+The exact equation for the error is
+\begin{equation}
+ (\partial_t+\partial_{zz})E=-\mathfrak r_F.
+ \label{eq:forced-error}
+\end{equation}
+Initial mismatch and evolution defect are separate data. In
+particular, \(\mathfrak r_F=0\) does not identify the canonical
+solution without a comparison of the initial fields. Conversely,
+a field estimate need not control its time derivative merely because
+its displayed allowance is differentiable. One can instead use
+\begin{equation}
+ E_t=-E_{zz}-\mathfrak r_F,
+ \label{eq:direct-time-error}
+\end{equation}
+with independently proved spatial and residual estimates.
+
+For a nonvanishing reference arm \(C\), put
+\(p=C_z/C\), \(r_C=(C_t+C_{zz})/C\), and \(F=C(1+c)\).
+The product rule gives exactly
+\begin{equation}
+ \frac{\mathfrak r_F}{C}
+ =c_t+c_{zz}+2p c_z+r_C(1+c).
+ \label{eq:correction-hierarchy}
+\end{equation}
+Cancelling successive orders in this expression generates a correction
+hierarchy. Its integration data must match the gamma and arithmetic
+initial expansion. The compact-positive correction in
+Section~\ref{sec:cosine} is an existing example: its field theorem
+uses the canonical integral as well as the residual calculation.
+
+\subsection{Negative time gives forward diffusion}
+Set \(T=-t\), \(h(T,z)=H(-T,z)\), \(f(T,z)=F(-T,z)\), and
+\(e=h-f\). Then
+\begin{equation}
+ d=f_T-f_{zz}=-\mathfrak r_F(-T,z),\qquad
+ e_T-e_{zz}=-d. \label{eq:negative-error}
+\end{equation}
+On the whole real line, in a function class for which the heat
+convolution and differentiations are justified, define
+\[
+ (\mathsf S_v g)(x)=\frac1{\sqrt{4\pi v}}
+ \int_\R e^{-(x-u)^2/(4v)}g(u)\dd u,\qquad v>0,
+ \quad \mathsf S_0=I.
+\]
+Duhamel's formula \cite[Section~2.7]{duhamel} yields
+\begin{equation}
+ e(T)=\mathsf S_{T-T_0}e(T_0)
+      -\int_{T_0}^{T}\mathsf S_{T-s}d(s)\dd s,
+      \qquad T\ge T_0. \label{eq:duhamel}
+\end{equation}
+For bounded real-line data and integrable bounded forcing this implies
+\begin{equation}
+ \|e(T)\|_\infty\le\|e(T_0)\|_\infty
+                  +\int_{T_0}^T\|d(s)\|_\infty\dd s.
+ \label{eq:absolute-stability}
+\end{equation}
+This is an absolute estimate. Our field allowances are often relative
+to an exponentially small carrier, and our formulas are defined on
+buffered charts. Applying \eqref{eq:duhamel} at that stronger scale
+requires a justified extension or localization, full Gaussian tails,
+complex-strip losses, and a suitable weighted stability estimate.
+For example a time-independent spatial cutoff \(\chi\) gives
+\[
+ (\partial_T-\partial_{xx})(\chi e)
+ =-\chi d-2\chi'e_x-\chi''e.
+\]
+The two commutator terms cannot be omitted.
+
+For a positive smooth weight \(\mathcal A(T,x)\), the normalized
+error \(v=e/\mathcal A\) satisfies the exact real-line identity
+\begin{equation}
+ v_T-v_{xx}-2\frac{\mathcal A_x}{\mathcal A}v_x
+ +\frac{\mathcal A_T-\mathcal A_{xx}}{\mathcal A}v
+ =-\frac d{\mathcal A}. \label{eq:weighted-error}
+\end{equation}
+Its coefficients and boundary or tail data must be estimated in the
+chosen region. No contraction in the outer-carrier norm is asserted.
+Subtracting an unevaluated Duhamel defect from \(f\) simply recovers
+the heat evolution of \(f(T_0)\); a useful asymptotic construction
+must evaluate or approximate that correction with a quantitative gain.
+
+Increasing \(T\) means moving toward more negative original time.
+Neither \eqref{eq:absolute-stability} nor \eqref{eq:duhamel} supplies
+stable recovery toward \(T=0\), or toward increasing positive \(t\)
+for arbitrary initial errors. Positive-time analysis instead uses the
+canonical analytic source, \eqref{eq:positive-anchor}, and controlled
+contour/saddle comparisons. Thus the same residual bookkeeping applies
+at all times, while the stability mechanism depends on the time region.
+
+\subsection{Amplitude and phase as evolving quantities}
+For a nonzero complex arm on a real interval, write
+\(f=a e^{i\theta}\), with \(a>0\) and real unwrapped \(\theta\).
+Then
+\begin{equation}
+ e^{-i\theta}(f_T-f_{xx})
+ =a_T-a_{xx}+a\theta_x^2
+  +i(a\theta_T-2a_x\theta_x-a\theta_{xx}).
+ \label{eq:amplitude-phase-defect}
+\end{equation}
+Consequently an exact heat arm obeys
+\begin{equation}
+ a_T=a_{xx}-a\theta_x^2,\qquad
+ \theta_T=\theta_{xx}+2(a_x/a)\theta_x.
+ \label{eq:amplitude-phase-flow}
+\end{equation}
+For an approximate arm the real and imaginary parts of
+\(e^{-i\theta}d\) are its forcing terms. Equivalently, for
+\(f=f_0(1+c)\), \(p_0=(f_0)_x/f_0\) and
+\(r_0=((f_0)_T-(f_0)_{xx})/f_0\),
+\begin{equation}
+ \frac{f_T-f_{xx}}{f_0}
+ =c_T-c_{xx}-2p_0c_x+r_0(1+c).
+ \label{eq:negative-correction-hierarchy}
+\end{equation}
+Solving the first correction equation with right side \(-r_0\)
+leaves \(r_0c\), before further truncation. This is an exact algebraic
+starting point, not a solvability or remainder result. Apply it to
+named arms and retain their signed arithmetic sum and cutoff correction;
+the full field has zeros and need not admit a global nonvanishing
+polar representation.
+
+\section{The outer carrier and its evolution correction}
 \label{sec:cosine}
-This is the primary displayed ansatz to develop. Let
+This elementary carrier isolates the first amplitude and phase.
+It is a building block whose adequacy depends on the arithmetic
+remainder at the chosen time, not a uniform all-time model. Let
 \begin{equation}
 \ell_X=\log\frac{X}{4\pi},\qquad
 F_{\mathrm o}(t,X)=A_{\mathrm o}(t,X)\cos\Theta_{\mathrm o}(t,X),
@@ -350,7 +520,7 @@ it is not a differentiated big-O allowance. No physical covariance
 transfer is inferred here.
 
 
-\section{Zero time and the arithmetic crossover}
+\section{Canonical arithmetic data and the crossover through zero}
 \label{sec:arithmetic}
 \subsection{An exact normalization at zero time}
 Let
@@ -577,7 +747,7 @@ fixed-order budget from covering a fixed compact interval of negative
 times by substitution.
 
 
-\section{Negative time and noncommuting limits}
+\section{Negative-time evolution and the two accuracy scales}
 \label{sec:negative}
 For fixed \(T>0\), the source identity gives the exact real-initial-value
 formula, also for complex \(z\),
@@ -588,7 +758,8 @@ formula, also for complex \(z\),
 \end{equation}
 Absolute Fubini follows from the real Fourier source and the Gaussian.
 On \(|\Im z|\le b\) the kernel modulus costs \(e^{b^2/(4T)}\).
-This is bounded on \(1\le T\le2\), the sole new interval treated below.
+This is bounded on \(1\le T\le2\), the fixed interval in
+Note05. The later bridge explicitly pays its small-\(T\) growth.
 No contour deformation or unproved negative-time version of a
 positive-time remainder theorem is used. A real part may remain inside
 the real initial data; it is never taken after applying a complex kernel.
@@ -635,6 +806,64 @@ error is \(O(X^{-1/2})\). This is not a lower bound on \(H\) or
 the allowance becomes
 \(X^{-3/4}e^{TL^2/16}\), which grows at fixed \(T\).
 This is a scoped failure of that bound, not a lower bound on the error.
+
+\subsection{Intermediate negative times as evolving arithmetic modes}
+The short model also has an informative exact rewriting, derived in
+Note08 \cite{ansatz08}. On the real right tail let
+\[
+ \begin{gathered}
+ a_X=\sqrt{X/(4\pi)},\quad r_n=\log(a_X/n),\quad k_n=r_n/2,\\
+ A_0=A_{\mathrm o}(0,X),\quad
+ \phi_n(0,X)=\Theta_{\mathrm o}(0,X)-(X/2)\log n.
+ \end{gathered}
+\]
+Completing the square in its weights gives
+\begin{align}
+ A_{\mathrm o}(-T,X)w_n(-T,X)
+ &=A_0n^{-1/2}e^{\pi^2T/64}e^{-Tk_n^2},\\
+ \phi_n(-T,X)&=\phi_n(0,X)-\pi T k_n/4.
+ \label{eq:negative-mode-weights}
+\end{align}
+Hence the existing corrected short formula is exactly
+\begin{equation}
+ F_N(-T,X)=e^{\pi^2T/64}\left[
+ A_0\sum_{n\le N}n^{-1/2}e^{-Tk_n^2}
+ \cos\{\phi_n(0,X)-\pi T k_n/4\}
+ +\mathcal R_N(X)\right].
+ \label{eq:negative-mode-sum}
+\end{equation}
+This identity adds no error estimate or validity domain to
+\eqref{eq:negative-natural}. For a fixed mode,
+\(\partial_X\phi_n(0,X)=k_n\). A locally frozen exponential with
+\(\lambda_n=-\pi/8+ik_n\) evolves by
+\[
+ e^{T\lambda_n^2}
+ =e^{\pi^2T/64}e^{-Tk_n^2}e^{-i\pi T k_n/4}.
+\]
+This explains the displayed damping and phase drift. The slowly
+varying amplitude and spatial phase curvature create a residual and
+are natural inputs to \eqref{eq:negative-correction-hierarchy}.
+
+There are several distinct scales. For fixed \(n\), the damping
+factor changes when \(T\log^2X=O(1)\). Ratios of two fixed-mode
+weights change when \(T\log X=O(1)\). The damping band
+\(r_n=O(T^{-1/2})\), however, contains a growing population with
+\(n\) comparable to \(\sqrt X\) at fixed \(T\).
+These are statements about components. They do not identify a dominant
+term of the signed sum, justify dropping the RS correction, or establish
+a universal transition time. The full-population bounds used in
+Note05 must remain in any proposed correction.
+
+The next bounded target is a fixed-order correction on \(1\le T\le2\)
+with field, spatial jets through order three and first time error
+\(o(|G|X^{-3/4})\). A candidate work target is
+\(|G|X^{-5/4}\) times specified logarithms; this is unproved.
+Matching the next canonical RS initial term may be necessary, because
+reducing the evolution residual does not remove the initial remainder.
+Even a successful fixed algebraic improvement must still be converted
+to the outer envelope: the factor \(e^{TL^2/16}\) remains. An
+outer-scale resummation and extension to arbitrary compact negative
+intervals are further tasks.
 
 \subsection{A finite representation at outer-carrier precision}
 The stronger target requires paying both the initial RS remainder and
@@ -861,8 +1090,10 @@ transfer remain separate obligations.
 The joined result now covers \(-2\le t\le0\), with its actual
 time defect. A compact family with arbitrary endpoints, a short formula
 at outer-carrier precision, and useful coefficient/precision/quadrature
-cost remain open. The next bounded request instead addresses the
-distinct regulator-layer accuracy and center-comparison gap.
+cost remain open. The next bounded request applies the evolution
+equations to improve the short negative-time asymptotic with its
+initial and propagated errors. General compact intervals and joint
+negative-time limits remain part of the primary research priority.
 
 The negative endpoint Gaussian
 \begin{equation}
@@ -880,7 +1111,18 @@ a small heat residual. Physical observable transfer and all-time
 assembly also remain open.
 
 
-\section{Joint positive time and height}
+\section{Positive-time continuation and joint large-height limits}
+\label{sec:positive-coverage}
+The signed crossover reaches only a shrinking positive-time window.
+The published small-positive-time input on \(0<t\le1/2\) and
+the parent comparison on \(t\ge32\) are distinct imports; their
+combination does not fill \(1/2<t<32\) or pay uniform compact-time
+joins. Closing this range with canonical arithmetic and gamma
+estimates is a primary task. The residual hierarchy remains useful,
+but positive-time error propagation requires analytic source control
+as described in Section~\ref{sec:evolution}.
+
+\subsection{Full saddle and growing positive time}
 \label{sec:joint}
 When the fixed-time cosine ceases to have a controlled error, keep the
 parent full gamma saddle as the reference:
@@ -925,9 +1167,79 @@ The \(W\) replacement needs separate field, phase, derivative and
 heat-residual bounds. It is secondary to the arithmetic and fixed-time
 outer work.
 
-\section{The regulator transition is a different phenomenon}
+\section{From field residuals to physical evolution}
+\label{sec:observable-evolution}
+The physical evolution equations already accommodate an approximate
+field. Parent Notes31 and 34 \cite{parent31,parent34}, summarized in
+Ansatz Note08, supply the following identities for a spatially
+holomorphic \(F\). Retain the physical \(q\) and fixed \(K\), put
+\(D_F=|F|^2+q\), and define
+\begin{equation}
+ \Xi_F=\frac{2\Re(\overline F\,\mathfrak r_F)}{D_F},\qquad
+ \mathcal B_F=\frac{q_t+(q_{xx}-q_{yy})/2}{D_F},\qquad
+ \square=\partial_x^2-\partial_y^2.
+ \label{eq:observable-forcing}
+\end{equation}
+The actual covariance remains \eqref{eq:covariance}. Direct
+differentiation and fixed spatial convolution give
+\begin{equation}
+ (U_F)_t=-\tfrac12\{\square U_F+(U_F)_x^2-(U_F)_y^2+Q_F\}
+           +K*\mathcal B_F+K*\Xi_F.
+ \label{eq:forced-potential}
+\end{equation}
+Define the regulator curvature by the identity
+\(\Delta S_F=4\pi(\rho_F+C_F)\), and write
+\(\overline C_F=K*C_F\). The corresponding density equation is
+\begin{equation}
+\begin{split}
+ (R_F)_t={}&-\tfrac12\square R_F
+ -\frac1{8\pi}\Delta\{(U_F)_x^2-(U_F)_y^2+Q_F\}\\
+ &+\frac1{4\pi}\Delta(K*\mathcal B_F)
+   -\partial_t\overline C_F-\tfrac12\square\overline C_F
+   +\frac1{4\pi}\Delta(K*\Xi_F).
+\end{split}
+\label{eq:forced-density}
+\end{equation}
+Thus the ansatz residual is an explicit forcing, rather than an
+unaccounted error in a putative closed density equation.
+
+In the current balance its additional forcing is
+\begin{equation}
+ \mathcal D_{\mathfrak r_F}
+ =\frac{2q\Re((\mathfrak r_F)_z\overline{F_z})}{\pi D_F^2}
+  -4\rho_F\Re\frac{\mathfrak r_F\overline F}{D_F}.
+ \label{eq:forced-current}
+\end{equation}
+It is added to the existing variable-regulator source in
+\((R_F)_t+\operatorname{div}\mathbf J_F\), after convolution
+by \(K\), with the parent's complex-to-real current convention.
+The equations for \(H\) have \(\mathfrak r_H=0\). Subtracting
+them retains differences of the already defined covariance and
+regulator terms; it does not define a closure to make them agree.
+
+For negative time the physical regulator depends on time alone, so
+\(C_F=0\), but \(\mathcal B_F=q_t/D_F\) generally remains.
+The spatial regulator curvature returns near its switch. A spatial
+join that breaks holomorphicity requires the further compatibility
+and curvature defects in parent Note42 \cite{parent42}.
+
+These formulas identify the consumers of an asymptotic error bound.
+They do not by themselves control those consumers. For example
+\( |\Xi_F|\le |\mathfrak r_F|/\sqrt q\) can be poor when the
+regulator is small; derivatives and narrow zero collars require
+additional estimates. The parent weak-transfer methods are available,
+but their hypotheses and constants must be paid for the new ansatze.
+The priority is to improve the field, its spatial jets, its direct
+time error and its residual together, then prove the physical transfer
+on the intended time regions. A coarse density tending to zero does
+not resolve the underlying normalized field.
+
+\section{The regulator transition near time 64}
 \label{sec:regulator}
-The parent physical protocol is retained exactly. With
+The regulator transition remains an important part of the all-time
+observable program. Its fine-scale analysis is supporting work after
+the immediate field-error improvements. The parent physical protocol
+is retained exactly. With
 \(C=\Phi(0)\sqrt\pi/2\), \(\eta>0\), and the positive saddle quantities
 defined in Appendix~\ref{app:catalogue}, put
 \[
@@ -1000,99 +1312,135 @@ Before the switch, a vanishing coarse density does not resolve the
 normalized field or its arithmetic oscillations. Both questions remain
 in the high-height program.
 
-\section{Regime map and error obligations}
+\clearpage
+\section{All-time coverage and quantitative acceptance}
 \label{sec:map}
-The following is a research map, not a completed covering theorem.
+The following map records the domains actually supported by the
+current sources and the remaining field-estimate tasks. It is not a
+completed covering theorem. Here \(L=\log(X/(4\pi))\).
 \begingroup\small
-\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.23\textwidth}>{\raggedright\arraybackslash}p{.33\textwidth}>{\raggedright\arraybackslash}p{.36\textwidth}@{}}
-\toprule Region & Proposed description & Current boundary of evidence\\\midrule
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.20\textwidth}>{\raggedright\arraybackslash}p{.36\textwidth}>{\raggedright\arraybackslash}p{.36\textwidth}@{}}
+\toprule Region & Present evidence & Primary remaining estimate\\\midrule
 \endhead
-Fixed \(t<0\), \(X\to\infty\) &
-Heat-smoothed arithmetic representation &
-Note05 proves two scales on \(1\le T\le2\); Note06 bridges and
-joins the finite model through zero on \([-2,0]\).
-General compact intervals and short outer-scale formulas remain open.\\
-\(t=0\) &
-Riemann--Siegel finite sum &
-Corrected fixed-cutoff complex comparison and buffered jets proved in
-Note04; physical transfer remains separate.\\
-\(t\log X=O(1)\), either sign &
-Heat-weighted finite arithmetic sum &
-Corrected buffered field, spatial jets and direct time bound proved in
-Note04 on fixed charts; physical transfer remains open.\\
-Fixed \(t>0\), away from zero &
-Elementary amplitude times cosine &
-Parent comparison for \(t\ge32\); a separate published small-positive-time
-input. Uniform joining and sharp corrections remain tasks.\\
+\(t=0\) and \(|t|L\le8\) &
+Note04: corrected fixed-cutoff complex comparison, spatial jets
+through three and direct first time error on full fixed buffers. &
+Higher controlled orders when needed; canonical initial matching
+for evolution corrections and compatibility on overlaps.\\
+\(-2\le t\le0\) &
+Note06: chartwise joined field and derivative estimates, with the
+actual time-cutoff residual retained. &
+Shorter controlled corrections; arbitrary compact-negative endpoints
+with explicit dependence on the interval.\\
+\(1\le T=-t\le2\) &
+Note05: short \(|G|X^{-3/4}\) allowance and a separate finite
+outer-scale representation. The latter extends to \(4/L\le T\le2\). &
+First evolution correction improving the natural-scale allowance;
+honest conversion to the outer scale and, later, resummation.\\
+Fixed positive time &
+Distinct published \(0<t\le1/2\) and parent \(t\ge32\) inputs;
+Note03's corrected buffered theorem on \([32,33]\). &
+Pay the intermediate positive range \(1/2<t<32\) and uniform
+compact-time overlaps; retain arithmetic terms whenever larger than
+the requested correction.\\
 Joint \(t,X\to+\infty\) &
-Full gamma saddle; possible Lambert \(W\) reduction &
-Parent full saddle retained; new replacement unproved.\\
-Near \(t_c(X)\) for the fixed regulator &
-Two translated layers &
-Inherited \(O(1)\) absolute profile; sharper center and dynamic errors open.\\
+Inherited full gamma saddle with its stated domains and constants. &
+Uniform large-height reduction and matching; a Lambert \(W\)
+replacement only if it gives a proved gain.\\
 Joint \(T=-t,X\to\infty\) &
-Negative-time representation matched to the Gaussian endpoint &
-Endpoint absolute estimates exist; high-height overlap must be identified.\\
+Inherited large-\(T\) Gaussian endpoint with absolute comparisons. &
+Identify scaling regions and prove high-height overlaps; do not
+substitute it for fixed-negative-time relative asymptotics.\\
+Regulator transition near time 64 &
+Inherited two-layer density profile with \(O(1)\) absolute error
+and an exact implicit center. &
+After the primary field work: one-arm amplitude comparison,
+recentering at the rounding scale, and direct dynamic transfer.\\
 \bottomrule
 \end{longtable}
 \endgroup
 
-For each field model record a positive carrier envelope \(\Acal(t,X)\),
-and compare \(H-F\) to that envelope rather than to \(F\) at its zeros.
-The desired ledger separates:
+For each proposed model record a positive carrier envelope
+\(\mathcal A(t,X)\), independent of the zeros of its signed sum.
+An accepted estimate must state the time domain, height onset, full
+complex buffer and parameter dependence, and supply separately:
 \begin{enumerate}
-\item gamma/Stirling amplitude and phase remainders;
-\item saddle linearization and determinant errors;
-\item all arithmetic modes, cutoff correction and distant contour tails;
-\item holomorphic spatial derivatives on full buffered charts;
-\item direct time derivatives and the actual residual \(F_t+F_{zz}\);
-\item transfer to physical \(U,W,R,J,Q\), regulator terms and derivatives;
-\item overlap and joining defects between regimes.
+\item canonical initial mismatch, including the gamma factor,
+all retained arithmetic modes and the cutoff correction;
+\item field and spatial errors through the orders needed by the
+consumer, currently at least \(j\le3\);
+\item the direct first time error and actual residual, with every
+time or spatial joining defect;
+\item the propagation estimate or direct canonical comparison that
+turns these data into a solution-error bound;
+\item overlap errors and, when claimed, transfer to the physical
+\(U,W,R,J,Q\), regulator terms and remaining parent tuple.
 \end{enumerate}
-Small residuals are consistency checks, not propagated field-error
-theorems without stability. Likewise, a field comparison does not
-automatically pay nonlinear near-zero observables.
+Keep natural-gamma-scale and outer-carrier-scale allowances distinct.
+An improvement in an absolute norm can still leave the desired
+relative estimate unproved. A residual identity alone does not
+establish a carrier-relative field error. Likewise, an algebraically
+shorter formula is not an error improvement, and a longer exact heat
+representation need not have useful evaluation cost.
 
-The first bounded tasks now supply the compact-positive corrected
-carrier and the buffered signed-time field/jet/time comparison
-\eqref{eq:buffered-crossover-jets}--\eqref{eq:buffered-crossover-time}.
-Note05 separately pays the fixed window \(1\le T\le2\) using
-growing RS and common gamma-curvature orders. Note06 pays its extension
-to \(4/L_X\le T\le2\) and the time-only join, obtaining the negative
-interval \([-2,0]\). The next bounded task addresses the separate
-regulator-center comparison. The number eight
-bounds the completed crossover study; it is not a critical constant.
-Note03's failed absolute complex Gaussian route is retained as history.
+For the immediate negative-time correction, success means a named
+\(o(|G|X^{-3/4})\) bound with the required jets and time error,
+or a precise obstruction identifying the first unpaid initial,
+coefficient, full-population or stability estimate. A claim of outer
+accuracy requires its own allowance. Extending compact intervals,
+covering the missing positive range and matching joint limits remain
+primary tasks even if this first bounded experiment succeeds.
 
-\section{Controls, scope, and the continuation order}
-The formulas are approximation models for one specified canonical
-source. They are not an RH criterion or a collision-exclusion argument.
-The control screening is analytical:
+\section{Scope, controls, and continuation priorities}
+These are approximation models for one canonical source. They are
+not an RH criterion, a simplicity theorem or a collision exclusion.
+Heat evolution, Duhamel's identity and the modulation equations also
+hold for the project's collision controls and exclude none.
+The source distinctions are analytical:
 \begin{itemize}
-\item Euler-factor perturbations change the exact arithmetic coefficients;
-they fail the canonical-source input, despite retaining positivity and
-many coarse properties.
-\item Finite weighted-square controls have different complete coefficients
-and tails; selected endpoint equalities do not supply \eqref{eq:source}.
-\item Reflected super-Gaussian, smooth-shape, and positive-primitive controls
-lack the same canonical gamma/arithmetic representation. Their shared
-positivity, reflection or coarse asymptotics cannot justify the missing
-remainder.
-\item The counter-kernels and all-multiple controls likewise do not satisfy
-the full canonical field identity. No simplicity claim is inferred from
-the density, Gaussian shape, or leading phase.
+\item Euler-factor perturbations change the ordinary Dirichlet
+coefficients. Finite-prime agreement does not recover the full
+canonical arithmetic expansion.
+\item Finite weighted-square and theta-cutoff controls have different
+complete coefficients and tails; selected endpoint equalities do not
+supply the canonical completion and RS identity.
+\item Reflected super-Gaussian, smooth-shape, positive-primitive,
+counter-kernel and fixed-event controls lack the same complete
+gamma/arithmetic identity. Their shared positivity or heat equation
+cannot pay a missing canonical remainder.
 \end{itemize}
-The source-specific quantitative comparison, rather than the name of
-the source, must do the discriminating work. See the repository result
-and avoidance indexes \cite{controls,avoidance}.
+These premise distinctions do not themselves prove a geometric
+conclusion. The source-specific quantitative comparison must do the
+work. Consult the repository result and avoidance indexes
+\cite{controls,avoidance}, especially the cautions on shared premises,
+separate bounds that lose cancellation, same-model review and statuses
+stronger than their evidence.
 
-The continuation order is:
-outer normalization and corrections; the arithmetic crossover through
-zero time; the completed negative interval and remaining compact families; regulator-layer accuracy and
-matching; joint positive and negative endpoint overlaps; complete
-observable transfer. The Gaussian-polynomial central model remains
-available but is no longer the first task. The accompanying overview,
-progress register and frozen handoff specify the next bounded request.
+The continuation order is now:
+\begin{enumerate}
+\item \textbf{Controlled large-height field asymptotics across time.}
+Begin with one explicit evolution correction at intermediate negative
+time, comparing both accuracy scales. Then extend compact negative
+families, fill the positive-time coverage gap and pay the relevant
+overlaps. Derive joint positive and negative regimes with their own
+uniform bounds; their scope is part of this first priority.
+\item \textbf{Transfer to the physical evolution and assemble regions.}
+Track the residual forcing, actual covariance, fixed regulator and
+joining errors. Transfer may be developed on completed domains without
+claiming a global result prematurely.
+\item \textbf{Resolve the fine regulator transition near time 64.}
+Retain the prepared one-arm/center-comparison task, the exact implicit
+center and the much smaller rounding scale. It is a supporting
+workstream, not the next task ahead of the asymptotic error estimates.
+\item \textbf{Simplify secondary representations and assess cost.}
+Lambert \(W\), the central Gaussian-polynomial model and evaluation
+efficiency are useful when they preserve or strengthen paid estimates.
+\end{enumerate}
+The new accompanying overview and progress register implement this
+order. The next bounded request is HDA-A02-AN03, Analysis---Sol,
+prepared but not dispatched. The regulator packet HDA-A03-AN01 is
+retained for later work. Neither planning change alters any existing
+proof or parent review status.
 
 \appendix
 \section{The remaining ansatz catalogue}
@@ -1220,7 +1568,8 @@ Ansatz Note01, 25 October 2026; GPT-6 Astra, effort max.
 \bibitem{ansatz03} Edward Baker research project,
 \emph{Outer correction and a bounded signed-time real-axis bridge},
 Ansatz Note03, 25 October 2026; GPT-6.1 Sol, effort ultra.
-Same-model internal assessment only; full buffered signed-time theorem open.
+Same-model internal assessment only. Its open complex-buffer gap
+was subsequently closed at the stated bounded scope by Note04.
 \bibitem{ansatz04} Edward Baker research project,
 \emph{Fixed-cutoff complex remainder and buffered signed-time crossover},
 Ansatz Note04, 25 October 2026; GPT-6.1 Sol, effort ultra.
@@ -1235,6 +1584,26 @@ same-model internal assessment only; interval \(1\le T\le2\).
 Ansatz Note06, 25 October 2026; GPT-6.1 Sol, effort ultra.
 Proved in-note from named inputs, same-model internal assessment only;
 joined interval \([-2,0]\). Note07 records the chat0001 research summary.
+\bibitem{ansatz08} Edward Baker research project,
+\emph{Evolution equations, ansatz residuals, and negative-time arithmetic modes},
+Ansatz Note08, 25 October 2026; GPT-6 Astra, effort max.
+Source-based synthesis and exact identities; no new asymptotic theorem.
+Note09 and Assessment06 record this manuscript integration.
+\bibitem{parent31} Edward Baker research project,
+\emph{Positive all-height evolution and covariance}, parent Note31,
+24 October 2026, equations PE33--PE39. Internal research source.
+\bibitem{parent34} Edward Baker research project,
+\emph{Compact weak transfer and time join}, parent Note34,
+24 October 2026, equations CJ25--CJ26. Internal research source.
+\bibitem{parent42} Edward Baker research project,
+\emph{Gap-localized spatial defects}, parent Note42,
+24 October 2026, equations GS7--GS12. Internal research source.
+\bibitem{duhamel} Stanford University, Math 220B,
+\emph{Heat Equation}, Section 2.7, printed pp.~32--35.
+Course handout; author and publication date not assigned here.
+\url{https://web.stanford.edu/class/math220b/handouts/heateqn.pdf}.
+Local reference catalog records the inspected copy, retrieved
+25 October 2026. Only the standard Duhamel identity is imported.
 \bibitem{polymath} D. H. J. Polymath,
 \emph{Effective approximation of heat flow evolution of the Riemann
 xi function, and a new upper bound for the de Bruijn--Newman constant},

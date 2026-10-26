@@ -68,3 +68,13 @@ after its complete consumer comparison. The S04/S05 rows, current plan
 pointers and manuscript summary are now synchronized, while original
 task contracts remain historical. [Integration review 16](../papers/investigations-3/11_arithmetic_collision_rigidity/reviews/16_SYMMETRY_PROGRAM_AND_MANUSCRIPT_INTEGRATION_REVIEW_20261019.md)
 distinguishes documentation completion from new estimating or coverage gains.
+
+
+**25 October 2026 — preserving one live ansatz plan.** For Edward Baker,
+LLM assistance **gpt-6-astra, recorded effort max**.
+[Note09](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/09_EVOLUTION_MANUSCRIPT_AND_PRIORITY_REVISION_20261025.md)
+records: “Historical frozen requests and returns are preserved.” The
+author's new evolution-first priority is carried into the manuscript,
+Overview02, Progress02 and pending-packet navigation; the old pair is
+explicitly superseded. This prevents two competing live priorities
+without rewriting historical evidence or promoting an unproved estimate.

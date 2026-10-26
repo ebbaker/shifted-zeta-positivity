@@ -255,3 +255,13 @@ differentiated.” No numerical onset, useful cost, physical transfer or
 all-time theorem. [Assessment05](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/05_NEGATIVE_BRIDGE_AND_TIME_JOIN_ASSESSMENT_20261025.md)
 records scope; [Note07](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/07_CHAT0001_RESEARCH_SUMMARY_20261025.md)
 summarizes the chat. HDA-A02 remains Partial.
+
+
+**25 October 2026 — ansatz manuscript integration (no new estimate).**
+For Edward Baker with LLM assistance, **gpt-6-astra, recorded effort max**.
+[Note09](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/09_EVOLUTION_MANUSCRIPT_AND_PRIORITY_REVISION_20261025.md)
+records: “The rewrite adds no accepted asymptotic bound.” It integrates
+exact error and observable forcing identities and prioritizes controlled
+all-time large-height estimates. Notes03--06 retain the statuses above;
+[Progress02](../papers/investigations-5/01_heat_density_asymptotics/ansatz/research-progress/02_EVOLUTION_ASYMPTOTICS_RESEARCH_PROGRESS_20261025.md)
+is the current branch ledger. This is a navigation/status update only.

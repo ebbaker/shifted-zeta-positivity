@@ -1,5 +1,11 @@
 # Research overview: large-height heat-density ansätze across time
 
+> **Superseded for live planning, 25 October 2026.** The author requested
+> evolution-driven asymptotic estimates across all times as the top priority.
+> The current document is [Evolution Asymptotics Research Overview 20261025](02_EVOLUTION_ASYMPTOTICS_RESEARCH_OVERVIEW_20261025.md);
+> earlier priorities, phase labels and returns below are historical.
+> Updated by gpt-6-astra, recorded effort max, ansatz chat0002.
+
 25 October 2026, America/New_York. Prepared for **Edward Baker** with
 substantial LLM assistance, **gpt-6-astra (Codex), actual effort max**.
 Chat0022, thread 01a17572-5411-7f32-9a12-7d1ba46ad679.
@@ -283,3 +289,26 @@ regulator-switch neighborhood and named center shifts under the exact
 physical sensitivity. General compact-negative endpoints, physical
 transfer, independent specialist review and all-time assembly remain
 open; parent statuses are unchanged.
+
+
+## Evolution as an asymptotic construction method — 25 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, recorded effort max**, ansatz chat0002. The author reaffirms
+understanding every regime, with large height emphasized, and asks whether
+the evolution equations can help explain intermediate negative times.
+[Note08](../notes/08_EVOLUTION_RESIDUAL_AND_NEGATIVE_TIME_MODES_20261025.md)
+distinguishes the substantial existing use of heat evolution and residuals
+from the remaining task of deriving a shorter asymptotic representation.
+It also identifies the parent's already established residual-forcing
+formulas for potential, density and current, with actual covariance.
+
+The supplementary [A02-AN03 packet](../research-progress/handoffs/HDA-A02-AN03.md)
+asks Analysis — Sol for a first explicit evolution correction on the
+existing fixed-negative-time interval, with initial-error control and a
+genuine quantitative gain. Its natural and outer error scales remain
+separate. This complements the unchanged A03 regulator-center packet;
+neither an arithmetic transition nor a regulator transition replaces
+the all-time large-height objective. No new asymptotic theorem, physical
+transfer, stability result or independent review is claimed by this
+discussion. The linked note gives the exact control and avoidance scope.

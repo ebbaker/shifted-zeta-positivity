@@ -1,5 +1,11 @@
 # Research progress: large-height heat-density ansätze
 
+> **Superseded for live planning, 25 October 2026.** The author requested
+> evolution-driven asymptotic estimates across all times as the top priority.
+> The current document is [Evolution Asymptotics Research Progress 20261025](02_EVOLUTION_ASYMPTOTICS_RESEARCH_PROGRESS_20261025.md);
+> earlier priorities, phase labels and returns below are historical.
+> Updated by gpt-6-astra, recorded effort max, ansatz chat0002.
+
 25 October 2026, America/New_York. Prepared for **Edward Baker** with
 substantial LLM assistance, **gpt-6-astra (Codex), actual effort max**,
 chat0022.
@@ -21,7 +27,7 @@ take precedence over central-source optimization.
 | ID | Research status | Execution phase / owner | Next deliverable |
 | --- | --- | --- | --- |
 | HDA-A01 | Complete at bounded AN01--AN02 analytical scope: compact correction and buffered signed crossover; wider program open | CLOSED — Sol, gpt-6.1-sol, ultra, ansatz chat0001; same-model assessment only | [Note04](../notes/04_COMPLEX_STRIP_REMAINDER_AND_BUFFERED_CROSSOVER_20261025.md), [Assessment03](../reviews/03_COMPLEX_STRIP_AND_BUFFERED_CROSSOVER_ASSESSMENT_20261025.md), [AN02 return](handoffs/HDA-A01-AN02.md). |
-| HDA-A02 | Partial: bounded negative interval [-2,0] proved chartwise; broader compact-negative/short-formula program open | CLOSED at bounded AN01--AN02 scope — Sol, gpt-6.1-sol, ultra, same-model only | [Note06](../notes/06_NEGATIVE_BRIDGE_AND_TIME_JOIN_20261025.md), [Assessment05](../reviews/05_NEGATIVE_BRIDGE_AND_TIME_JOIN_ASSESSMENT_20261025.md), [AN02 return](handoffs/HDA-A02-AN02.md). General compact endpoints remain open. |
+| HDA-A02 | Partial: bounded negative interval [-2,0] proved chartwise; broader compact-negative/short-formula program open | AN01--AN02 CLOSED — Sol, gpt-6.1-sol, ultra, same-model only; supplementary AN03 READY_FOR_SOL — Analysis, Sol, not dispatched | [Note06](../notes/06_NEGATIVE_BRIDGE_AND_TIME_JOIN_20261025.md), [Assessment05](../reviews/05_NEGATIVE_BRIDGE_AND_TIME_JOIN_ASSESSMENT_20261025.md), [AN02 return](handoffs/HDA-A02-AN02.md). General compact endpoints remain open. Supplementary [AN03 r1](handoffs/HDA-A02-AN03.md): evolution-guided finite-order correction and natural/outer-scale comparison. |
 | HDA-A03 | Partial, inherited coarse layer only | READY_FOR_SOL — Analysis, Sol; prepared, not dispatched | [AN01 r1](handoffs/HDA-A03-AN01.md): corrected one-arm comparison on 63<=t<=65 and named regulator-center shifts at the actual rounding scale. |
 | HDA-A04 | Partial, inherited full saddle only | Not dispatched — Analysis, Sol | Joint positive-time/height matching; assess optional Lambert-W replacement. |
 | HDA-A05 | Open | Not dispatched — Analysis, Sol | Joint negative-time/height scales and overlap with the Gaussian endpoint. |
@@ -168,3 +174,25 @@ transfer and all-time assembly remain open. The author's requested
 records Notes03--06 and all four packets. Next **Analysis — Sol** is
 [HDA-A03-AN01 r1](handoffs/HDA-A03-AN01.md), prepared without dispatch.
 No change to parent HDA-17 Partial, HDA-18 Gated or HDA-20 unfulfilled.
+
+
+## Evolution-equation discussion — 25 October 2026, ansatz chat0002
+
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, recorded effort max**. The author asks to use the evolution
+equations and their errors to understand intermediate negative times,
+retaining the regulator transition and all large-height regimes.
+[Note08](../notes/08_EVOLUTION_RESIDUAL_AND_NEGATIVE_TIME_MODES_20261025.md)
+maps existing residual/observable identities, records the exact forced
+error and amplitude/phase equations, and rewrites the short negative-time
+model as heat-damped arithmetic modes. This is interpretation and exact
+algebra, not a new accepted asymptotic or physical-transfer result.
+
+Supplementary **HDA-A02-AN03 r1 — Analysis, Sol** is prepared, not
+dispatched. It seeks one explicit evolution correction with an improved
+natural-scale error and an honest outer-scale comparison, or a precise
+failed estimate. Existing HDA-A03-AN01 stays prepared and unchanged;
+the new packet does not replace its regulator-center work. No automatic
+dispatch, numerical execution, model change or manuscript milestone.
+HDA-A01's bounded completion, HDA-A02 Partial and parent HDA-17 Partial,
+HDA-18 Gated and HDA-20 unfulfilled remain unchanged.

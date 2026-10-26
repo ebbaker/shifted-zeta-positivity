@@ -131,3 +131,27 @@ the T>=1 constants of Note05 are not assumed to hold at the new lower
 endpoint. The separate future regulator packet points to parent Note28
 JT26--33, retaining its exact named linear-arm center and actual
 b_t sensitivity; it is not an executed extension of that result.
+
+
+## Evolution-equation discussion reference — 25 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, recorded effort max**, ansatz chat0002.
+
+**Heat Equation**, Stanford University Math 220B course handout.
+The author and issue date are not identified in the inspected copy.
+[Primary PDF](https://web.stanford.edu/class/math220b/handouts/heateqn.pdf).
+Checked selected passages in Section 2.7, printed pages 32--35, covering
+Duhamel's principle, whole-space heat convolution, and the bounded-data
+estimate. This is background for
+[Note08 EV2--3](../notes/08_EVOLUTION_RESIDUAL_AND_NEGATIVE_TIME_MODES_20261025.md);
+no chartwise, complex-strip or outer-carrier-relative stability theorem
+is imported. Full reading and independent source-proof audit were not
+performed. Retrieved 25 October 2026; reusable entry StanfordHeatDuhamel.
+
+The public reading copy is outside Git:
+/Users/Shared/szp-archive/heat-density-asymptotics/references/stanford-math220b-heat-equation-retrieved-20261025.pdf.
+Size 260914 bytes; SHA-256
+ccc97d89c36337a3b11897b2efc51c1b2ef8b89ed659ddb3b1fa4ffbac8e2d8c.
+This identifies the retrieved bytes, not mathematical validity; the
+public source remains the portable reference.

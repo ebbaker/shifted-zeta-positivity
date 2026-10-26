@@ -7,9 +7,19 @@ substantial LLM assistance. Parent ansatz chat0001 records
 recorded again in the return.
 
 Parent task **HDA-A03**. Next owner **Analysis — Sol**. Prepared,
-not dispatched. The [ansatz register](../01_HIGH_HEIGHT_ANSATZ_RESEARCH_PROGRESS_20261025.md)
+not dispatched. The [ansatz register](../02_EVOLUTION_ASYMPTOTICS_RESEARCH_PROGRESS_20261025.md)
 owns live status. This is a new bounded regulator-center comparison,
 not an extension of the negative-time bridge request.
+
+## Priority amendment, 25 October 2026
+
+At the author's request this prepared packet is **DEFERRED_SUPPORTING**.
+Controlled large-height field asymptotics across all times take priority;
+[HDA-A02-AN03](HDA-A02-AN03.md) is the primary next bounded task.
+The regulator transition remains important, and this frozen mathematical
+request is unchanged. See [Overview02](../../research-overview/02_EVOLUTION_ASYMPTOTICS_RESEARCH_OVERVIEW_20261025.md).
+Amendment: gpt-6-astra, recorded effort max, ansatz chat0002.
+No new result or dispatch is recorded.
 
 ## Read first and preserve the inherited center
 
