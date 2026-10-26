@@ -1,5 +1,19 @@
 # Evolution equations and large-height heat asymptotics
 
+**Current B02 r2 integration, 26 October 2026.** Prepared for Edward
+Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+The [maintained companion](manuscript/README.md) now contains complete
+proofs for the high-height positive atlas on each fixed [0,T_*],
+T_*>=33, named one-arm switch centers and every fixed-P4 [63,65]
+physical tuple row. [Positive proof](manuscript/08_positive_bridges.tex),
+[switch/physical proof](manuscript/09_switch_consumer.tex),
+[new build identity](manuscript/BUILD_RECORD_20261026_B02_R2.json).
+Constants/onsets remain symbolic; source assessments remain same-model
+internal. No new global join, sharper simplified-layer law, bounded-height
+core, cost certificate or RH conclusion is claimed. The dated entries
+below are the preserved historical research and production sequence.
+
+
 25 October 2026. Prepared for **Edward Baker** with substantial LLM
 assistance, **gpt-6-astra (Codex), recorded effort max**, ansatz chat0002.
 
@@ -32,7 +46,7 @@ ansatz statuses and points to the recurrence register for execution.
 - [Umbrella research overview: Overview02](research-overview/02_EVOLUTION_ASYMPTOTICS_RESEARCH_OVERVIEW_20261025.md)
 - [Umbrella progress record: Progress02](research-progress/02_EVOLUTION_ASYMPTOTICS_RESEARCH_PROGRESS_20261025.md)
 - [Historical first recurrence comparison: HDA-R01-AN01 r1](../recurrence/research-progress/handoffs/HDA-R01-AN01.md)
-- [Prepared positive-time comparison: HDA-A08-AN01 r1](research-progress/handoffs/HDA-A08-AN01.md)
+- [Executed first small-positive slab: HDA-A08-AN01 r1](research-progress/handoffs/HDA-A08-AN01.md)
 - [This chat's complete research summary: Note14](notes/14_CHAT0003_RESEARCH_SUMMARY_20261025.md)
 - [AN06 compact-family integration: Note13](notes/13_AN06_MANUSCRIPT_INTEGRATION_20261025.md)
 - [AN06 integration assessment](reviews/10_AN06_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261025.md)
@@ -75,7 +89,7 @@ AN05 now proves the same powers uniformly on every declared fixed
 retains all modes, K=1 RS data and bounded correction integral; no
 zero-time/growing-time uniformity or physical transfer follows. AN06
 has integrated this family in Section6.4/Proposition6.2 and Appendix A.
-The current reading copy is 33 pages, with no warnings and all-page visual
+That historical reading copy was 33 pages, with no warnings and all-page visual
 checks; all 85 inherited mathematical blocks are preserved. This is
 integration and production evidence, with no new estimate or review upgrade.
 
@@ -132,3 +146,69 @@ remain symbolic. LT-05/broad A04 Partial; compact core and new physical
 consumers remain open. Next Analysis — Sol: existing A03-AN01 r1,
 now ready in Progress02, using Summary21. No growing-order, through-zero,
 physical-tuple or manuscript execution was performed.
+
+
+26 October 2026 — **Book technical-companion integration.** For Edward
+Baker with substantial LLM assistance, **gpt-6.1-sol, recorded effort
+ultra**, verified in the parent production session. The maintained
+manuscript is now the positive-asymptotic companion to the [Book](../book/main.tex).
+Its [new proof module](manuscript/07_positive_hierarchy.tex) integrates
+Notes17--20 in full: each fixed positive order, complete source/Bell
+remainder, exact residual and time comparison, compact arithmetic
+refinement, F1 chart and paid splice. The [current build record](manuscript/BUILD_RECORD_20261026_BOOK_COMPANION.json)
+identifies the 47-page reading copy; no warnings, all pages visually
+checked, and all 134 inherited display blocks preserved verbatim.
+The [recurrence companion](../recurrence/manuscript/main.tex) owns the
+latest negative hierarchy; older crossover/join rates and averaging
+conventions remain intact here. New physical-consumer gates and same-model
+review limits are unchanged. A later scoped supplement cites the now-closed
+[A03 named-center result](notes/22_NAMED_SWITCH_CENTERS_20261026.md) and
+[AN08 moving-endpoint result](../recurrence/notes/20_MOVING_LOWER_ENDPOINT_20261026.md).
+The historical O(1) absolute/O(1/logX) normalized layer rate remains;
+A03-AN02 is prepared/unexecuted. The negative extension excludes zero,
+retains its stronger onset and effective query restrictions, and leaves
+its full proof in the specialist note.
+
+
+26 October 2026, base chat0025, **gpt-6.1-sol, actual effort ultra**:
+[Note23](notes/23_FIXED_P4_PHYSICAL_TUPLE_20261026.md)/[Assessment17](reviews/17_FIXED_P4_PHYSICAL_TUPLE_ASSESSMENT_20261026.md)
+closes A03-AN02's actual fixed-P4 physical tuple on[63,65], at high
+height and every frozen requested rate. The new proof includes corrected
+collars, exact switch/time terms, actual covariance and retained defects.
+Finite onset is uninstantiated; internal same-model checks only. This is
+new research after the companion build, with no new reading-copy claim.
+The wider layer/core/assembly/evaluator/audit statuses remain. Next
+Analysis — Sol: existing [A08-AN01 r1](research-progress/handoffs/HDA-A08-AN01.md).
+
+26 October 2026, base chat0025, **gpt-6.1-sol, actual effort ultra**:
+[Note24](notes/24_SMALL_POSITIVE_SLAB_20261026.md)/[Assessment18](reviews/18_SMALL_POSITIVE_SLAB_ASSESSMENT_20261026.md)
+closes A08-AN01 on precisely[1/2,1], all fixed buffers. Complete
+field/jets0--3/direct-time power is X^(-t log2/4), uniformly worst
+X^(-log2/8); actual residual/residual_z are E_o Lambda²/X and
+E_o Lambda³/X. Source/arithmetic/middle/ends and endpoint model match
+are paid. Symbolic onset and same-model checks only. Wider A08 Partial;
+next [A08-AN02 r1](research-progress/handoffs/HDA-A08-AN02.md), Analysis
+— Sol, prepared corrected[3/4,33] and actual overlaps. No new manuscript
+build, wider gap closure, zero/physical transfer or cost claim.
+
+26 October 2026, base0025, **gpt-6.1-sol, actual effort ultra**:
+[Note25](notes/25_INTERMEDIATE_POSITIVE_COMPARISON_20261026.md)/[Assessment19](reviews/19_INTERMEDIATE_POSITIVE_COMPARISON_ASSESSMENT_20261026.md)
+closes A08-AN02 corrected[3/4,33], full-buffer B1, spatial0--3/direct
+time, actual residual/residual_z and both overlaps. With Notes24/20,
+the high-height field atlas covers[1/2,T] for each fixed finite T>=33.
+Constants/onsets depend on fixed T; symbolic and same-model checking
+only. Next Analysis — Sol: [AN03](research-progress/handoffs/HDA-A08-AN03.md),
+prepared retained arithmetic4/L<=t<=1 and genuine overlaps. No new
+manuscript build, time splice, physical/core/cost/audit theorem.
+
+26 October 2026, base0025, **gpt-6.1-sol, actual effort ultra**:
+[Note26](notes/26_RETAINED_ARITHMETIC_MOVING_POSITIVE_BAND_20261026.md)/[Assessment20](reviews/20_RETAINED_ARITHMETIC_MOVING_BAND_ASSESSMENT_20261026.md)
+closes A08-AN03 retained arithmetic4/L<=t<=1 with eta=Lambda²X^-3/4,
+spatial0--3/direct time, actual residual/residual_z and both genuine
+overlaps. The same frozen F_N plus inherited Note04 covers[0,1]; with
+Notes25/20 the high-height field atlas is[0,T] for each fixed finite
+T>=33. Strong negative precision through0, physical/core/global joins/
+cost/audit remain separate; checks same-model, onsets symbolic. The
+requested [whole-chat Summary67](../notes/67_CHAT0025_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md)
+covers all returns. Next Analysis — Sol: [B02-MI1](../research-progress/handoffs/HDA-B02-MI1.md),
+prepared only for production integration; no new manuscript build.

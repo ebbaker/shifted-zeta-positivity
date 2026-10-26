@@ -1,0 +1,1095 @@
+\section{The positive atlas down to zero}
+\label{sec:positive-bridges}
+This section integrates the complete arguments of Notes24--26
+\cite{ansatz24,ansatz25,ansatz26}, assessed in Assessments18--20.
+They are proved in-note from named inputs, with same-model internal
+assessment only. Constants and finite sufficient onsets remain symbolic.
+The physical regulator and filter retain their definitions in
+\eqref{eq:regulator} and \eqref{eq:kernel}; the following results are
+field comparisons, prior to any new physical transfer. In these
+source proofs $\Lambda=1+\log X$ is the quantity denoted
+$\mathcal L$ in the Book and application discussion; it is unrelated
+to the de Bruijn--Newman constant.
+
+\subsection{The elementary pair on the first small-positive slab}
+\label{sec:small-positive-slab}
+\subsubsection{Exact contract, charts and theorem}
+\label{subsec:sp-1}
+
+Use the unchanged complete \(\theta\) source and normalization
+
+\[
+H(t,z)=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\,du,
+\qquad H_t=-H_{zz},\qquad H(0,z)=\xi(s(z))/8,
+\quad s(z)=(1+iz)/2.
+\tag{SP1}\label{eq:ansatz-sp1}
+\]
+
+The physical \(q=\epsilon_{g}^{2}\) and fixed averaging \(K=k_{\ell} k_{h}\) are unchanged. This argument proves a field theorem, without a physical transfer. Fix \(\ell,h>0\), put \(r=\ell+2\), \(b=1+h+2\), and use
+
+\[
+\Omega_X=\{|\Re z-X|\le r,\ |\Im z|\le b\},\qquad
+\Omega_X^+=\{|\Re z-X|\le r+1,\ |\Im z|\le b+1\}.
+\tag{SP2}\label{eq:ansatz-sp2}
+\]
+
+All scalar field estimates are first paid on the extra analytic unit \(\Omega_{X}^+\). Take the logarithm continued from the positive real axis; write \(L_{z}=\Log(z/(4\pi))\), \(L=\log(X/(4\pi))\), \(\Lambda=1+\log X\) and
+
+\[
+b_\pm=L_z/2\pm i\pi/4,\quad \kappa=\log2/4,\quad
+\kappa_0=\log2/8,
+\]
+\[
+\begin{gathered}
+C_\pm=\frac{\pi^{1/4}z^{7/4}}{32}
+\exp\left[-\frac{\pi z}{8}
+ +\frac t{16}(L_z^2-\pi^2/4)
+ \ \pm i\left\{\frac z4(L_z-1)+\frac{\pi tL_z}{16}
+                    +\frac{7\pi}{8}\right\}\right],
+\\ F_0=C_++C_-,\qquad E_o=|C_+|+|C_-|>0.
+\end{gathered}\tag{SP3}\label{eq:ansatz-sp3}
+\]
+
+These are Note03's elementary arms, without its correction. \(E_{o}\), not \(|F_0|\), pays cancellation and the full transverse buffer. On the real axis it equals the positive cosine amplitude. Evenness gives the left tail after the right tail is proved.
+
+\begin{theorem}[Small-positive slab]\label{thm:small-positive-slab}
+ For fixed \(\ell,h\), there are finite constants \(C_{j},C_{t},C_{R}\) and a sufficient finite \(X_*\) constructed in Section~\ref{subsec:sp-7}, such that for \(X\ge X_*\), \(z\in \Omega_X\), and \(1/2\le t\le 1\),
+
+\[
+|\partial_z^j(H-F_0)|\le C_j E_o\Lambda^j X^{-t\kappa},
+\quad 0\le j\le3,\qquad
+|(H-F_0)_t|\le C_t E_o\Lambda^2X^{-t\kappa}.
+\tag{SP4}\label{eq:ansatz-sp4}
+\]
+\[
+|\operatorname{Res}F_0|\le C_R E_o\Lambda^2/X,\qquad
+|\partial_z\operatorname{Res}F_0|\le C_R E_o\Lambda^3/X,
+\quad\operatorname{Res}F=F_t+F_{zz}.
+\tag{SP5}\label{eq:ansatz-sp5}
+\]
+\end{theorem}
+
+In particular all requested envelope-normalized allowances tend to zero uniformly on this slab. A sharper field allowance is not inferred from the smaller residual. No optimality or lower-bound theorem is asserted.
+
+\subsubsection{Canonical identity and complete fixed-endpoint split}
+\label{subsec:sp-2}
+
+The exact positive Gaussian identity, parent Note27 GO6 and \href{https://arxiv.org/html/1904.12438v2#S4}{Polymath equation35}, is
+
+\[
+H(t,z)=\int_{\mathbb R}K_t(v)\,\xi(s+v)/8\,dv,
+\qquad K_t(v)=(\pi t)^{-1/2}e^{-v^2/t},\quad t>0.
+\tag{SP6}\label{eq:ansatz-sp6}
+\]
+
+It also follows directly by inserting SP1: the Gaussian average of \(\cos((z-2iv)u)\) is \(e^{tu^{2}}\cos(zu)\). Absolute Fubini is justified on SP2 by the integrable majorant \(e^{u^{2}+(b+1)u}|\Phi(u)|\); the complete \(\theta\) source decays super-exponentially. This retains every source mode. Polynomial weights for one time derivative remain integrable.
+
+Set
+
+\[
+M(w)=\frac{w(w-1)}{16}\pi^{-w/2}\Gamma(w/2),\quad
+\alpha(w)=M'(w)/M(w),\quad G(t,w)=M(w)e^{t\alpha(w)^2/4}.
+\tag{SP7}\label{eq:ansatz-sp7}
+\]
+
+Choose a fixed \(\Sigma\) bounding \(|\Re w|\) for \(w=s,1-s\) on SP2's larger chart, and set \(V=\Sigma+3\). Then \(\Re(w+v)\ge 3\) for \(v\ge V\). Split SP6 at \(-V,V\) and reflect the negative ray by \(\xi(w)=\xi(1-w)\). Exactly,
+
+\[
+\begin{split}
+H={}&J_V(t,s)+J_V(t,1-s)+A_V(t,s)+A_V(t,1-s)+I_V(t,s),\\
+J_V(t,w)={}&\int_V^\infty K_t(v)M(w+v)\,dv,\\
+A_V(t,w)={}&\int_V^\infty K_t(v)M(w+v)(\zeta(w+v)-1)\,dv,\\
+I_V(t,s)={}&\int_{-V}^V K_t(v)\xi(s+v)/8\,dv.
+\end{split}
+\tag{SP8}\label{eq:ansatz-sp8}
+\]
+
+All defining endpoints are fixed in \(t,z\). Thus the fields are holomorphic and differentiation has no moving-endpoint term. No contour is deformed in this proof, so no connectors arise. The negative-ray reflection is exact; the enlarged middle is retained, not discarded. Only the all-positive-time identity is imported from parent Note27; its GO7 error theorem above64 and the \(t\ge 32\) field theorems are not used on this slab.
+
+\subsubsection{Local gamma estimate and the complete arithmetic population}
+\label{subsec:sp-3}
+
+All rays lie in a fixed sector away from the negative real axis once \(X\) exceeds a buffer-dependent sector onset. The \href{https://dlmf.nist.gov/5.11#ii}{sectorial gamma remainder}, rational factors in SP7, and Cauchy on a larger sector give, uniformly in \(w=s,1-s\),
+
+\[
+a=\Re\alpha(w)=L/2+O(X^{-1}),\quad
+\beta=\Im\alpha(w)=O(1),\quad
+\alpha'(w)=O(X^{-1}),\quad\alpha''(w)=O(X^{-2}).
+\tag{SP9}\label{eq:ansatz-sp9}
+\]
+
+Use the proof split \(U=X^{1/3}\), with \(X\) the fixed chart parameter. On \(V\le v\le U\), Taylor's integral remainder gives
+
+\[
+\log M(w+v)=\log M(w)+\alpha(w)v+R(w,v),\qquad
+|R(w,v)|\le C_\gamma v^2/X.
+\tag{SP10}\label{eq:ansatz-sp10}
+\]
+
+Increase the onset so \(C_{\gamma} U^{2}/X\le 1\). Then \(|\exp R-1|\le e C_{\gamma} v^{2}/X\). For each fixed \(k\le 4\), completing the real square gives
+
+\[
+\frac{\int_{\mathbb R}e^{-v^2/t+av}|v|^k\,dv}
+ {\sqrt{\pi t}|e^{t\alpha^2/4}|}
+ \le C_k\Lambda^k,\qquad 1/2\le t\le1.
+\tag{SP11}\label{eq:ansatz-sp11}
+\]
+
+Indeed the mean is \(ta/2\), variance \(t/2\), and the precise loss from absolute to complex normalization is \(\exp(t \beta^{2}/4)\), uniformly bounded here. The full linear Gaussian integral equals \(\sqrt{\pi t}\exp(t \alpha^{2}/4)\): the identity for real \(\alpha\) extends to complex \(\alpha\) by entire dependence and Gaussian domination. No contour shift or omitted boundary is needed. Equations SP10--11 pay the local gamma-curvature error by \(C |G| \Lambda^{2}/X\).
+
+The ordinary \href{https://dlmf.nist.gov/25.2.E1}{Dirichlet series} yields, for \(\sigma\ge 2\),
+
+\[
+|\zeta(\sigma+i\tau)-1|\le\sum_{n\ge2}n^{-\sigma}
+ \le 2^{-\sigma}+\int_2^\infty x^{-\sigma}\,dx
+ \le3\,2^{-\sigma}.
+\tag{SP12}\label{eq:ansatz-sp12}
+\]
+
+Thus \emph{all} \(n\ge 2\) on the local ray are paid at once. Replace \(a\) by \(a-\log2\) in SP11; \(|\exp R|\le e\). Division by the complex carrier produces
+
+\[
+\exp\left[-\frac{ta\log2}{2}
+ +\frac{t(\log2)^2}{4}+\frac{t\beta^2}{4}\right]
+ \le C X^{-t\log2/4}.
+\tag{SP13}\label{eq:ansatz-sp13}
+\]
+
+The fixed factor \(2^{-\Re w}\) is absorbed in the buffer constant. This is a bound for the complete arithmetic remainder, with no truncation of its population and no changed coefficients. At these small times it cannot be silently absorbed into the \(\Lambda^{2}/X\) gamma allowance.
+
+\subsubsection{Lower completion, bounded middle and both infinite ends}
+\label{subsec:sp-4}
+
+The missing linearized integral \(v<V\), after division by \(G\), is bounded by
+
+\[
+C\exp[-tL^2/16+C_m(1+L)].
+\tag{SP14}\label{eq:ansatz-sp14}
+\]
+
+For \(a\ge 0\), its numerator is at most \(\exp(aV) \int_{\mathbb R} \exp(-v^{2}/t)dv\). The same argument includes any of the polynomial weights through degree2 needed for direct time. SP9 gives the denominator \(\exp(t(a^{2}-\beta^{2})/4)\) and hence SP14.
+
+For the true middle, all real parts of \(s+v\) lie in a fixed bounded interval. Reflection, where needed, moves them into \([1/2,D]\) for one finite buffer-dependent \(D\). Euler summation \href{https://dlmf.nist.gov/25.2.E8}{DLMF25.2.8} with integer \(N=\lceil X\rceil\) gives \(|\zeta(w)|\le C X\) there, since \(|\Im w|\) is comparable to \(X\). For example the finite sum is at most \(N\), the pole term is bounded by \(C N^{1-\Re w}/X\), and the integral remainder by \(C X N^{-\Re w}/(\Re w)\). Bounded-real-part Stirling then gives
+
+\[
+|\xi(w)/8|\le C X^{m_B}e^{-\pi X/8}
+\tag{SP15}\label{eq:ansatz-sp15}
+\]
+
+for a finite exponent \(m_{B}\) depending on the \emph{whole} buffer and \(V\). The carrier has modulus \(\exp(-\pi X/8+tL^{2}/16+O_{B}(1+L))\). Consequently the entire bounded middle, including its time-kernel derivative, also satisfies SP14. No small-strip fourth-power bound is substituted for SP15.
+
+For the infinite ends, integrate the real logarithmic derivative of \(M(w+v)\) along each horizontal ray. Fixed-sector estimates give a finite \(C_{ray}\) such that for all \(v\ge 0\),
+
+\[
+\log\frac{|M(w+v)|}{|M(w)|}
+ \le C_{\rm ray}v+\frac v2\log(X+v).
+\tag{SP16}\label{eq:ansatz-sp16}
+\]
+
+If \(C_{ray}+(1/2)\log(X+U)\le U/4\), monotonic decrease of \([C_{ray}+(1/2)\log(X+v)]/v\) for \(v\ge U\) gives an upper bound \(v^{2}/4\) on SP16. Here \(C_{ray}\) can be increased to be positive. Since \(t\le 1\), the Gaussian leaves at least \(\exp(-3v^{2}/4)\) on the entire infinite ray. Therefore both true gamma ends beyond \(U\) and their linearized ends are at most
+
+\[
+C |G|\exp(-c X^{2/3}).
+\tag{SP17}\label{eq:ansatz-sp17}
+\]
+
+For the linearized ends use \(|a|\le C \Lambda\) and \(U\ge C \Lambda\) at the onset. For the true arithmetic ends SP12 is bounded by a fixed constant, so SP17 pays those ends too. Polynomial kernel-derivative weights are absorbed by reducing the positive \(c\) once. Carrier division in SP16 retains the crucial height exponential; a global absolute source moment before this division would not establish SP17.
+
+Combining SP8--17 proves the full gamma-pair field allowance
+
+\[
+\left|H-G(t,s)-G(t,1-s)\right|
+ \le C\{ |G(t,s)|+|G(t,1-s)|\}\mathcal B(t,X),
+\]
+\[
+\mathcal B(t,X)=\Lambda^2/X+X^{-t\kappa}
+ +e^{-tL^2/16+C_m(1+L)}+e^{-cX^{2/3}}.
+\tag{SP18}\label{eq:ansatz-sp18}
+\]
+
+This is a fresh fixed-slab estimate, not a parameter substitution into a theorem whose time interval was different.
+
+\subsubsection{Explicit arms, jets and direct first time}
+\label{subsec:sp-5}
+
+Note03 CB4's fixed-sector expansions of the actual \(M,\alpha\) give
+
+\[
+\log\frac{G(t,s)}{C_+}
+ =\frac{i}{24z}-\frac{7it b_+}{4z}+O_B(\Lambda/X^2),
+\qquad G(t,s)/C_+=1+O_B(\Lambda/X).
+\tag{SP19}\label{eq:ansatz-sp19}
+\]
+
+Reflection gives the lower arm with the conjugate signs. This use of sectorial expansions does not import CB9's restricted-time field error. The two positive envelopes are comparable on all of SP2, and SP19 is below SP18's gamma allowance. Thus SP18 holds with \(F_0,E_{o}\).
+
+For \(z\in \Omega_X\), apply Cauchy's formula on the disk of radius \(\rho=1/(8 \Lambda)\) inside \(\Omega_{X}^+\). Each arm has logarithmic derivative \(O(\Lambda)\), so its modulus, hence \(E_{o}\), varies by a bounded factor on that disk. The chart center \(X\) and the proof split \(U\) remain fixed. This gives
+
+\[
+|\partial_z^j(H-F_0)|\le C_jE_o\Lambda^j\mathcal B(t,X),
+\quad0\le j\le3.
+\tag{SP20}\label{eq:ansatz-sp20}
+\]
+
+For a \textbf{direct first-time} comparison, differentiate the exact fixed kernel in SP8, before estimating:
+
+\[
+\partial_t K_t(v)=K_t(v)\left(v^2/t^2-1/(2t)\right).
+\tag{SP21}\label{eq:ansatz-sp21}
+\]
+
+Dominated convergence follows from the same Gaussian/gamma ray bounds, uniformly on a slightly larger positive time interval. The full linearized integral differentiates exactly to \(G_{t}=\alpha^{2} G/4\). Since \(t\ge 1/2\), SP21 costs at most two additional Gaussian moments. Local gamma, full local arithmetic, missing/middle, and infinite ends cost respectively
+
+\[
+C|G|\Lambda^4/X,\quad C|G|\Lambda^2X^{-t\kappa},\quad
+C|G|e^{-tL^2/16+C_m(1+L)},\quad C|G|e^{-cX^{2/3}},
+\tag{SP22}\label{eq:ansatz-sp22}
+\]
+
+with the constants \(C_{m},c\) chosen once for both field and time. The time derivative of the explicit SP19 calibration follows from \(G_{t}=\alpha^{2}G/4\), \(C_{\pm,t}=b_\pm^{2} C_\pm/4\) and \(\alpha-b_+=O(1/X)\) (and reflection). It is at most \(C E_{o} \Lambda^{3}/X\), within \(C E_{o} \Lambda^{2} \mathcal B\). Hence
+
+\[
+|(H-F_0)_t|\le C E_o\Lambda^2\mathcal B(t,X).
+\tag{SP23}\label{eq:ansatz-sp23}
+\]
+
+No big-O allowance is differentiated and no moving endpoint is hidden. There is also a consistency check using the exact identity \((H-F_0)_{t}=-(H-F_0)_{zz}-\operatorname{Res} F_0\), once Section~\ref{subsec:sp-6} is paid. It agrees with SP23 but is not a substitute for the direct source calculation.
+
+\subsubsection{Exact heat residual}
+\label{subsec:sp-6}
+
+Put \(\ell_\pm=\log C_\pm\). Direct differentiation of SP3 gives
+
+\[
+\ell_{\pm,z}=\frac{\pm i b_\pm}{2}
+ +\frac{7/4+t b_\pm/4}{z},\quad
+\ell_{\pm,t}=b_\pm^2/4,\quad (b_\pm)_z=1/(2z),
+\]
+\[
+Q_0(b)=\frac{21}{16}+\frac t8+\frac{5tb}{8}+\frac{t^2b^2}{16},
+\qquad
+R_\pm=\frac{\pm i(1+7b_\pm+t b_\pm^2)}{4z}
+              +\frac{Q_0(b_\pm)}{z^2},
+\]
+\[
+\operatorname{Res}F_0=\sum_\pm C_\pm R_\pm,\qquad
+\partial_z\operatorname{Res}F_0
+ =\sum_\pm C_\pm(\ell_{\pm,z}R_\pm+\partial_zR_\pm).
+\tag{SP24}\label{eq:ansatz-sp24}
+\]
+
+These are exact algebraic identities, re-bounded on the new slab. Here \(R_\pm=O(\Lambda^{2}/X)\), \(R_{\pm,z}=O(\Lambda^{2}/X^{2})\) and \(\ell_{\pm,z}=O(\Lambda)\), which prove SP5. A model with a small residual need not approximate the canonical field; SP6--23 supply that missing canonical source comparison here.
+
+\subsubsection{Constants, sufficient onset and named final rate}
+\label{subsec:sp-7}
+
+Fix a sector, for example \(|\arg(w/2)|\le 3\pi/4\), and a slightly larger sector for holomorphic remainder estimates. Choose \(X_{sec}\) so every buffered ray lies there with \(|w|\) comparable to \(X\) near its origin. The finite-truncation constants in DLMF5.11, explicit rational factors of \(M\), and the fixed buffer determine finite constants in SP9--10 and SP16; name \(C_{a}\) so \(|a-L/2|\le C_{a}/X\). Take \(C_{\gamma}\) to dominate \(X|\alpha'(w+q)|/2\) for \(0\le q\le U\); the sector bounds give one common finite choice beyond \(X_{sec}\). Take \(C_{ray}\) from the upper real logarithmic derivative used in SP16. Take \(C_{m}\ge 1\) larger than the finite bounded-strip polynomial exponents, missing-piece constants and the time weights in Section~\ref{subsec:sp-4}. The constants in SP11 are bounded normal moments with mean \(ta/2\) and the uniform factor \(\exp(t \beta^{2}/4)\). This specifies finite analytical constants without any data fit or numerical research.
+
+A sufficient \(X_*\) is any height beyond all these gates, holding for every larger height:
+
+\[
+\begin{gathered}
+X\ge X_{\rm sec},\quad X\ge2(r+b+V+10),\quad L\ge1,\quad L/2-C_a/X\ge0,
+\quad U\ge2V,\quad C_\gamma U^2/X\le1,\\
+C_{\rm ray}+\tfrac12\log(X+U)\le U/4,
+\quad U\ge2L+4C_a/X,\\
+\Lambda^2/X\le X^{-\kappa},\qquad
+L^2/32\ge C_m(1+L)+\kappa\log X,\qquad
+cX^{2/3}\ge\kappa\log X.
+\end{gathered}
+\tag{SP25}\label{eq:ansatz-sp25}
+\]
+
+The last majorant on the second line bounds \(4 \sup_{w} |\Re \alpha(w)|\) on the fixed largest chart by SP9. All gates are eventual; powers beat logarithms, \(\kappa<1\), and the quadratic \(L\) term beats its linear terms. One can enlarge the threshold past the finitely many turning points, or double a symbolic candidate until these sufficient majorants hold. This terminates analytically. It is not a calculated affordable height. Gates may be enlarged once for the endpoint calibration below.
+
+For \(1/2\le t\le 1\), SP25 bounds every term of \(\mathcal B\) by \(C X^{-t \kappa}\): in the middle use \(t\ge 1/2\), and in the other two comparisons use \(t\le 1\). Thus SP20/SP23 give SP4, with uniform worst power \(\kappa_0\). All absolute derivatives of order<=3 still tend to zero after division by \(E_{o}\), since any fixed logarithmic power is dominated by \(X^{-\kappa_0}\). The normalized residual statements follow likewise. Constants depend on the declared buffers and this fixed slab.
+
+\subsubsection{Endpoint comparison: what is imported and what is proved afresh}
+\label{subsec:sp-8}
+
+The signed crossover in Note04 requires \(|t|L\le 8\). At \(t=1/2\) this forces \(L\le 16\); it supplies no all-height overlap with SP4. No join through zero is concluded.
+
+For the published cutoff-free two-arm model write
+
+\[
+M^{\rm PM}_0(w)=\frac{w(w-1)}{16}\pi^{-w/2}\sqrt{2\pi}
+ \exp\{(w/2-1/2)\Log(w/2)-w/2\},
+\]
+\[
+\alpha_0(w)=\frac1{2w}+\frac1{w-1}+\tfrac12\Log(w/(2\pi)),
+\quad M^{\rm PM}_t=M^{\rm PM}_0e^{t\alpha_0^2/4},\quad
+P^{\rm PM}=M^{\rm PM}_t(s)+M^{\rm PM}_t(1-s).
+\tag{SP26}\label{eq:ansatz-sp26}
+\]
+
+\href{https://arxiv.org/html/1904.12438v2#S9}{Polymath Proposition9.1(i)} states its two-arm comparison on \(0<t\le 1/2\), \(|y|\le 10\), \(x\ge 200\), \(x\ge \exp(C/t)\), with qualitative allowance \(x^{-ct}\) for an absolute positive \(c\). At \(t=1/2\), this gives a genuine restricted-strip common-\(H\) comparison after both onsets. Spatial derivatives imported by Cauchy require interior strip margin. That source statement alone does not pay arbitrary larger buffers or a first-time derivative. Its finite-RS effective theorem has still different hypotheses; no derivative of a varying floor cutoff is used here.
+
+For this request's \textbf{full buffers}, supply the missing calibration afresh. Fixed-sector Stirling and its holomorphic remainder give
+
+\[
+\log(M/M^{\rm PM}_0)=1/(6w)+O(X^{-3}),\quad
+\alpha-\alpha_0=-1/(6w^2)+O(X^{-4}),
+\]
+\[
+\log(G/M^{\rm PM}_t)=O(X^{-1})+O(t\Lambda/X^2)=O(X^{-1})
+\quad(1/2\le t\le1).
+\tag{SP27}\label{eq:ansatz-sp27}
+\]
+
+There are no zeros or branch-cut crossings in these fixed high-height sectors. Thus SP18 plus SP27, followed by the same buffered Cauchy argument, proves \textbf{a new} full-buffer \(H-P^{PM}\) field/spatial comparison at SP4's allowance. This is derived from SP6, not an extension of Proposition9.1 by citation.
+
+Its time comparison is also paid. Put \(D=\alpha_0+(t/2)\alpha_0 \alpha_0'\); exact differentiation gives
+
+\[
+\operatorname{Res}P^{\rm PM}
+ =\tfrac14\sum_{w=s,1-s}M^{\rm PM}_t(w)
+       \{\alpha_0(w)^2-D(w)^2-D'(w)\}.
+\tag{SP28}\label{eq:ansatz-sp28}
+\]
+
+Since \(\alpha_0=O(\Lambda)\), \(\alpha_0'=O(1/X)\), \(\alpha_0''=O(1/X^{2})\), SP28 and its z derivative are bounded by \(C E_{o} \Lambda^{2}/X\) and \(C E_{o} \Lambda^{3}/X\). The exact identity \((H-P^{PM})_{t}=-(H-P^{PM})_{zz}-\operatorname{Res} P^{PM}\) then proves its first-time comparison, without differentiating a published error term. Therefore, \textbf{through their common canonical H}, at \(t=1/2\) on \(\Omega_{X}\) (with scalar calibration first on \(\Omega_{X}^+\)),
+
+\[
+|\partial_z^j(F_0-P^{\rm PM})|\le C_jE_o\Lambda^jX^{-\kappa_0},
+\quad j\le3,\qquad
+|(F_0-P^{\rm PM})_t|\le C E_o\Lambda^2X^{-\kappa_0}.
+\tag{SP29}\label{eq:ansatz-sp29}
+\]
+
+On \(|y|\le 10\) after its source onset this is compatible with the published comparison. On wider buffers the payment is our fresh SP27--28 plus SP18, explicitly distinguished from that import. There is no unpaid buffer or endpoint defect in SP29. There is no positive-width time overlap with a theorem whose upper endpoint is1/2; an assembled time splice or continuation below1/2 remains separate.
+
+\subsection{The corrected intermediate comparison and both overlaps}
+\label{sec:intermediate-positive}
+\subsubsection{Frozen contract and explicit corrected field}
+\label{subsec:ip-1}
+
+Keep the complete \(\theta\) source, canonical normalization and heat sign:
+
+\[
+H(t,z)=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\,du,
+\quad H_t=-H_{zz},\quad H(0,z)=\xi(s(z))/8,\quad s=(1+iz)/2.
+\tag{IP1}\label{eq:ansatz-ip1}
+\]
+
+Physical \(q=\epsilon_{g}^{2}\) and fixed \(K=k_{\ell} k_{h}\) are unchanged. No physical tuple is inferred from the field comparison. Fix \(\ell,h>0\), \(r=\ell+2,b=1+h+2\) and
+
+\[
+\Omega_X=\{|\Re z-X|\le r,\ |\Im z|\le b\},\quad
+\Omega_X^+=\{|\Re z-X|\le r+1,\ |\Im z|\le b+1\}.
+\tag{IP2}\label{eq:ansatz-ip2}
+\]
+
+Use the holomorphic logarithm continued from positive height and set \(L_{z}=\Log(z/(4\pi))\), \(L=\log(X/(4\pi))\), \(\Lambda=1+\log X\), \(\kappa=\log2/4\). For \(\epsilon=+1,-1\), write
+
+\[
+b_\epsilon=L_z/2+\epsilon i\pi/4,
+\]
+\[
+C_\epsilon=\frac{\pi^{1/4}z^{7/4}}{32}
+\exp\left[-\frac{\pi z}{8}+\frac t{16}(L_z^2-\pi^2/4)
+ +\epsilon i\left\{\frac z4(L_z-1)+\frac{\pi tL_z}{16}
+                         +\frac{7\pi}{8}\right\}\right],
+\]
+\[
+D_\epsilon=\frac{\epsilon i}{z}
+ \left\{\frac1{24}-\frac t4-\frac{7t b_\epsilon}{4}
+                     -\frac{t^2 b_\epsilon^2}{8}\right\},\quad
+F_1=\sum_\epsilon C_\epsilon(1+D_\epsilon),\quad
+F_0=\sum_\epsilon C_\epsilon,\quad E_o=\sum_\epsilon|C_\epsilon|>0.
+\tag{IP3}\label{eq:ansatz-ip3}
+\]
+
+This is exactly Note03 CB8 / Note20 RB6, with their phase7pi/8 and one-arm normalization. No formula correction is needed. \(E_{o}\) includes transverse growth and does not vanish when the two arms cancel.
+
+\begin{theorem}[Corrected intermediate positive interval]\label{thm:intermediate-positive}
+ On \(I=[3/4,33]\), for every fixed chart IP2 there are finite constants and a sufficient finite height \(X_*\) in Section~\ref{subsec:ip-7} such that, for \(X\ge X_*\) and \(z\in \Omega_X\),
+
+\[
+\boxed{|\partial_z^j(H-F_1)|\le C_jE_o\Lambda^j B_1(t,X),
+\quad j=0,1,2,3,\quad B_1=\Lambda^4/X^2+X^{-t\kappa},}
+\]
+\[
+\boxed{|(H-F_1)_t|\le C_tE_o\Lambda^2B_1(t,X),}
+\]
+\[
+\boxed{|\operatorname{Res}F_1|\le C_RE_o\Lambda^4/X^2,\quad
+|\partial_z\operatorname{Res}F_1|\le C_RE_o\Lambda^5/X^2.}
+\tag{IP4}\label{eq:ansatz-ip4}
+\]
+\end{theorem}
+
+Here \(\operatorname{Res} F=F_{t}+F_{zz}\). In particular \(B_{1}=o(1)\) uniformly on I; its slowest arithmetic power is \(X^{-3 \log2/16}\). A small residual is not being used to infer the canonical field error. Evenness supplies the negative-height counterpart after the right tail is established.
+
+\subsubsection{Exact source split, rebuilt on the new compact interval}
+\label{subsec:ip-2}
+
+Use only the all-positive-time exact Gaussian identity, parent Note27 GO6 / \href{https://arxiv.org/html/1904.12438v2#S4}{Polymath equation35}:
+
+\[
+H(t,z)=\int_{\mathbb R}K(t,v)\xi(s+v)/8\,dv,
+\quad K(t,v)=(\pi t)^{-1/2}e^{-v^2/t}.
+\tag{IP5}\label{eq:ansatz-ip5}
+\]
+
+It follows directly from IP1 by Gaussian averaging of \(\cos((z-2iv)u)\). Absolute Fubini, also after one time derivative, follows from the super-exponentially integrable complete source with a majorant \(C(1+u^{2})e^{34u^{2}+(b+1)u}|\Phi(u)|\). The auxiliary upper34 permits domination in a neighborhood of the endpoints; no extra time domain is claimed for IP4. No restricted error theorem is extended by citation.
+
+Put
+
+\[
+M(w)=\frac{w(w-1)}{16}\pi^{-w/2}\Gamma(w/2),\quad
+\alpha=M'/M,\quad G(t,w)=M(w)e^{t\alpha(w)^2/4}.
+\tag{IP6}\label{eq:ansatz-ip6}
+\]
+
+Choose \(\Sigma\) bounding \(|\Re w|\) for \(w=s,1-s\) on \(\Omega_{X}^+\), and choose the single fixed endpoint \(V=\Sigma+3\). Splitting IP5 at \(-V,V\) and using \(\xi(w)=\xi(1-w)\) gives exactly
+
+\[
+\begin{split}
+H={}&J_V(t,s)+J_V(t,1-s)+A_V(t,s)+A_V(t,1-s)+I_V(t,s),\\
+J_V(t,w)={}&\int_V^\infty K(t,v)M(w+v)\,dv,\\
+A_V(t,w)={}&\int_V^\infty K(t,v)M(w+v)(\zeta(w+v)-1)\,dv,\\
+I_V(t,s)={}&\int_{-V}^V K(t,v)\xi(s+v)/8\,dv.
+\end{split}
+\tag{IP7}\label{eq:ansatz-ip7}
+\]
+
+The entire ordinary arithmetic population and the true enlarged middle remain. All defining endpoints are fixed in t,z; the arm integrals are holomorphic. There are no moving-endpoint Leibniz terms. No contour is deformed, so there are no connectors to estimate or discard. The proof split \(U=X^{1/3}\) below is held fixed with the chart center X and is not part of a differentiated field definition.
+
+\subsubsection{Corrected local gamma calculation and all arithmetic modes}
+\label{subsec:ip-3}
+
+The fixed-sector \href{https://dlmf.nist.gov/5.11#ii}{gamma remainders} and their holomorphic Cauchy derivatives give, uniformly on the larger chart and its local rays,
+
+\[
+a:=\Re\alpha(w)=L/2+O(X^{-1}),\quad
+\beta:=\Im\alpha(w)=O(1),\quad
+|\alpha'|\le C_2/X,\quad |\alpha''|\le C_3/X^2.
+\tag{IP8}\label{eq:ansatz-ip8}
+\]
+
+For \(V\le v\le U\), Taylor's integral formula gives
+
+\[
+\log M(w+v)=\log M(w)+\alpha(w)v+Q(w,v)+R_3(w,v),
+\quad Q=\alpha'(w)v^2/2,\quad |R_3|\le C_3v^3/X^2.
+\tag{IP9}\label{eq:ansatz-ip9}
+\]
+
+After a gate \(C_2 U^{2}/(2X)+C_3 U^{3}/X^{2}\le 1\),
+
+\[
+|e^{Q+R_3}-1-Q|\le C(|R_3|+|Q|^2)
+ \le C(v^3+v^4)/X^2.
+\tag{IP10}\label{eq:ansatz-ip10}
+\]
+
+For each fixed \(k\le 6\), real completion of the square gives
+
+\[
+\frac{\int_{\mathbb R}e^{-v^2/t+av}|v|^k\,dv}
+ {\sqrt{\pi t}|e^{t\alpha^2/4}|}
+ \le C_{I,k}\Lambda^k.
+\tag{IP11}\label{eq:ansatz-ip11}
+\]
+
+Its real Gaussian has mean \(ta/2\), variance \(t/2\), and the exact absolute-to-complex loss \(\exp(t \beta^{2}/4)\le \exp(33 C_{\beta}^{2}/4)\). The constants are finite but not borrowed unchanged from Note24's upper time1. Polynomial Gaussian integration, valid for complex \(\alpha\) by entire continuation with domination, yields exactly
+
+\[
+\int_{\mathbb R}K(t,v)M(w)e^{\alpha v}(1+\alpha'v^2/2)\,dv
+ =G(t,w)(1+U_1(t,w)),
+\quad U_1=t\alpha'/4+t^2\alpha^2\alpha'/8.
+\tag{IP12}\label{eq:ansatz-ip12}
+\]
+
+Thus IP10--11 give the corrected local gamma error \(C |G| \Lambda^{4}/X^{2}\). We complete a polynomial, not the uncontrolled exponential of a quadratic over the missing lower half-line.
+
+For the complete arithmetic, the convergent ordinary \href{https://dlmf.nist.gov/25.2.E1}{Dirichlet series} on \(\Re(w+v)\ge 3\) implies
+
+\[
+|\zeta(w+v)-1|\le3\,2^{-\Re w-v}.
+\tag{IP13}\label{eq:ansatz-ip13}
+\]
+
+On the local ray, \(|\exp(Q+R_{3})|\le e\). Completing the real square with \(a-\log2\) in place of a gives the carrier-normalized factor
+
+\[
+\exp[-ta\log2/2+t(\log2)^2/4+t\beta^2/4]
+ \le C_I X^{-t\log2/4}.
+\tag{IP14}\label{eq:ansatz-ip14}
+\]
+
+The constants absorb \(2^{-\Re w}\), the fixed \((4\pi)^{t \kappa}\) and the bounded IP8 error. Every \(n\ge 2\) is included; this is not a mode truncation. At the lower times the arithmetic allowance remains in \(B_{1}\) and is not hidden below the corrected gamma term.
+
+\subsubsection{Lower completion, enlarged middle, infinite ends and direct time}
+\label{subsec:ip-4}
+
+The lower completion of IP12 over \(v<V\), together with its time-kernel derivative, is at most
+
+\[
+C |G|\exp[-tL^2/16+C_m(1+L)].
+\tag{IP15}\label{eq:ansatz-ip15}
+\]
+
+For \(a\ge 0\), bound the numerator, including the finite polynomial weights through degree4, by \(C e^{aV}\): \(e^{av}\le e^{aV}\) on this half-line and all corresponding Gaussian moments are bounded on I. Divide by \(|\exp(t \alpha^{2}/4)|\). This includes the omitted lower quadratic polynomial; it does not presume an exact heat equation for \(J_{V}.\)
+
+In the original middle, reflect where needed to a fixed real-part range \([1/2,D]\). Euler summation \href{https://dlmf.nist.gov/25.2.E8}{DLMF25.2.8} with \(N=\lceil X\rceil\) gives \(|\zeta(w)|\le C X\) at imaginary height comparable to X. Bounded-real-part Stirling then gives \(|\xi(w)/8|\le C X^{m_{B}} \exp(-\pi X/8)\), where \(m_{B}\) depends on the \emph{entire} buffer and V. Dividing by G retains \(\exp(-tL^{2}/16+O_{I}(1+L))\), so the full middle and its time derivative obey IP15. The fourth-power bound for a smaller earlier strip is not used on these enlarged real-part ranges.
+
+For the full infinite rays retain the carrier exponential by the ratio
+
+\[
+\log\frac{|M(w+v)|}{|M(w)|}
+ \le C_{\rm ray}v+\tfrac12v\log(X+v),\quad v\ge0.
+\tag{IP16}\label{eq:ansatz-ip16}
+\]
+
+This follows by integrating the upper real logarithmic derivative from the same fixed-sector bounds. Put \(S=34\) and impose
+
+\[
+C_{\rm ray}+\tfrac12\log(X+U)\le U/(4S),\qquad
+U\ge4S\sup_w|\Re\alpha(w)|.
+\tag{IP17}\label{eq:ansatz-ip17}
+\]
+
+The ratio \([C_{ray}+(1/2)\log(X+v)]/v\) decreases for \(v\ge U\) after a fixed onset. Thus IP16 is at most \(v^{2}/(4S)\) there. Since \(t\le 33<S\), the true Gaussian leaves at least \(\exp(-3v^{2}/(4S))\). The second gate pays the linearized-polynomial ends as well. All true gamma ends, both full arithmetic ends (using IP13), and the polynomial completion ends beyond U are bounded by
+
+\[
+C |G|\exp(-c_I X^{2/3}).
+\tag{IP18}\label{eq:ansatz-ip18}
+\]
+
+Polynomial factors through degree4 are absorbed by reducing \(c_{I}\) once. Using the old gate \(U/4\) from the upper-time1 proof would not pay these upper-time33 rays; IP17 is the new payment. A height-independent global source moment before carrier division would not establish IP18.
+
+For \textbf{direct first time}, differentiate the fixed kernel first:
+
+\[
+K_t=K(v^2/t^2-1/(2t)).
+\tag{IP19}\label{eq:ansatz-ip19}
+\]
+
+The exact integrand used in IP12, \(M \exp(\alpha v)(1+\alpha'v^{2}/2)\), is independent of t before integration. The local remainder IP10 therefore gains at most two moments, through degree6; local arithmetic gains moments through degree2. With t bounded away from zero, their time costs are \(C |G| \Lambda^{6}/X^{2}\) and \(C |G| \Lambda^{2} X^{-t \kappa}\). IP15/IP18 already include their polynomial kernel weights. Differentiation is justified in a positive time neighborhood by domination. No estimated allowance is differentiated.
+
+Combining the exact split gives, with \(Q_{\gamma}=G(t,s)(1+U_{1}(t,s))+G(t,1-s)(1+U_{1}(t,1-s))\) and \(E_{G}=|G(t,s)|+|G(t,1-s)|\),
+
+\[
+|H-Q_\gamma|\le C E_G\widetilde B_1,
+\quad |(H-Q_\gamma)_t|\le C E_G\Lambda^2\widetilde B_1,
+\]
+\[
+\widetilde B_1=\Lambda^4/X^2+X^{-t\kappa}
+ +e^{-tL^2/16+C_m(1+L)}+e^{-c_I X^{2/3}}.
+\tag{IP20}\label{eq:ansatz-ip20}
+\]
+
+For completeness the finite gamma arm itself has the exact forcing \((\partial_{t}-(1/4)\partial_{ww})J_{V} =K(t,V)[M'(w+V)+(2V/t)M(w+V)]/4\), by integration by parts. It has the same relative IP15 payment. The proof used direct kernel differentiation and never assumed that this forcing vanishes.
+
+\subsubsection{Calibration to the existing F1, spatial jets and direct time}
+\label{subsec:ip-5}
+
+For \(w_+=s,w_-=1-s\), the fixed-sector expansions checked in Note03 CB4 give, with \(\epsilon\) matching the arm,
+
+\[
+\alpha(w_\epsilon)=b_\epsilon-\epsilon7i/(2z)+O(X^{-2}),\quad
+\alpha'(w_\epsilon)=-\epsilon i/z+O(X^{-2}).
+\tag{IP21}\label{eq:ansatz-ip21}
+\]
+
+Let \(g_{\epsilon}=G(t,w_{\epsilon})/C_{\epsilon}\). Then
+
+\[
+g_\epsilon=1+A_\epsilon+O_I(\Lambda^2/X^2),\quad
+A_\epsilon=\frac{\epsilon i}{z}(1/24-7t b_\epsilon/4),
+\]
+\[
+U_1(t,w_\epsilon)=B_\epsilon+O_I(\Lambda^2/X^2),\quad
+B_\epsilon=-\frac{\epsilon i}{z}(t/4+t^2b_\epsilon^2/8).
+\tag{IP22}\label{eq:ansatz-ip22}
+\]
+
+Since \(A_{\epsilon}+B_{\epsilon}=D_{\epsilon}\), multiplication gives
+
+\[
+G(t,w_\epsilon)(1+U_1)-C_\epsilon(1+D_\epsilon)
+ =C_\epsilon O_I(\Lambda^4/X^2).
+\tag{IP23}\label{eq:ansatz-ip23}
+\]
+
+The positive envelopes \(E_{G}\) and \(E_{o}\) are comparable on the full larger chart. Only zero-time sectorial expansions and exact algebra were reused; the old \(t\ge 32\) \emph{error theorem} was not invoked outside its domain.
+
+The time calibration has a separate payment. Write exactly \(g_{\epsilon}=\exp(d_{0}(z)+t d_{1}(z))\), where \(d_{1}=(\alpha(w_{\epsilon})^{2}-b_{\epsilon}^{2})/4\). The gamma remainder gives \(d_{0}=\epsilon i/(24z)+O(X^{-2})\) and \(d_{1}=-\epsilon7i b_{\epsilon}/(4z)+O(\Lambda/X^{2})\) with no time-dependent error coefficient. Alternatively, put \(A=\alpha^{2}/4,A_{0}=b_{\epsilon}^{2}/4\) and differentiate the exact finite expression. Division by \(C_{\epsilon}\) gives
+
+\[
+\frac{\partial_t\{G(1+U_1)-C_\epsilon(1+D_\epsilon)\}}{C_\epsilon}
+ =A\{g_\epsilon(1+U_1)-(1+D_\epsilon)\}
+ +(A-A_0)(1+D_\epsilon)+g_\epsilon(U_1)_t-(D_\epsilon)_t.
+\tag{IP24}\label{eq:ansatz-ip24}
+\]
+
+Here \(A-A_{0}=-\epsilon7i b_{\epsilon}/(4z)+O(\Lambda/X^{2})\), \((U_{1})_{t}=-\epsilon i(1+t b_{\epsilon}^{2})/(4z)+O(\Lambda^{2}/X^{2})\), and exactly \((D_{\epsilon})_{t}=-\epsilon i(1+7b_{\epsilon}+t b_{\epsilon}^{2})/(4z)\). All retained \(1/z\) terms cancel in the last three terms. IP23 and these explicit bounds give \(C E_{o} \Lambda^{6}/X^{2}\) for IP24. This does not differentiate IP23's O allowance.
+
+Apply \href{https://dlmf.nist.gov/1.9.E31}{Cauchy's formula} on disks of radius \(1/(8 \Lambda)\) inside \(\Omega_{X}^+\). Each \(C_{\epsilon}\) has logarithmic z derivative \(O_{I}(\Lambda)\), so \(E_{o}\) varies by a bounded factor on these disks. The fixed center X and split U do not move. Equations IP20/IP23 give spatial j0--3 at \(C_{j} E_{o} \Lambda^{j} \widetilde B_1\) on \(\Omega_{X}\). IP19/IP24 give direct first time at \(C E_{o} \Lambda^{2} \widetilde B_1\) there. No fixed-radius transverse height loss or division by a cancelling two-arm sum is introduced.
+
+\subsubsection{Exact corrected residual and its spatial derivative}
+\label{subsec:ip-6}
+
+Let \(\ell_{\epsilon}=\log C_{\epsilon}\) and
+
+\[
+Q_0(b)=21/16+t/8+5tb/8+t^2b^2/16,
+\quad \ell_{\epsilon,z}=\epsilon i b_\epsilon/2
+                     +(7/4+t b_\epsilon/4)/z,
+\]
+\[
+R_\epsilon:=\operatorname{Res}(C_\epsilon)/C_\epsilon
+ =\frac{\epsilon i(1+7b_\epsilon+t b_\epsilon^2)}{4z}
+                         +\frac{Q_0(b_\epsilon)}{z^2}.
+\tag{IP25}\label{eq:ansatz-ip25}
+\]
+
+Direct product differentiation gives the exact residual
+
+\[
+\operatorname{Res}F_1=\sum_\epsilon C_\epsilon T_\epsilon,
+\quad T_\epsilon=(1+D_\epsilon)R_\epsilon+(D_\epsilon)_t
+           +2\ell_{\epsilon,z}(D_\epsilon)_z+(D_\epsilon)_{zz}.
+\tag{IP26}\label{eq:ansatz-ip26}
+\]
+
+The \(1/z\) part of \(R_{\epsilon}\) is exactly cancelled by \((D_{\epsilon})_{t}\). In particular,
+
+\[
+T_\epsilon=Q_0(b_\epsilon)/z^2+D_\epsilon R_\epsilon
+       +2\ell_{\epsilon,z}(D_\epsilon)_z+(D_\epsilon)_{zz}.
+\tag{IP27}\label{eq:ansatz-ip27}
+\]
+
+On the fixed interval I, \(D=O(\Lambda^{2}/X)\), \(D_{z}=O(\Lambda^{2}/X^{2})\), \(D_{zz}=O(\Lambda^{2}/X^{3})\), \(D_{zzz}=O(\Lambda^{2}/X^{4})\); \(R=O(\Lambda^{2}/X)\), \(R_{z}=O(\Lambda^{2}/X^{2})\), \(\ell_{z}=O(\Lambda)\), \(\ell_{zz}=O(1/X+\Lambda/X^{2})\). Consequently \(T=O(\Lambda^{4}/X^{2})\) and \(T_{z}=O(\Lambda^{4}/X^{3})\). The exact derivative
+
+\[
+\partial_z\operatorname{Res}F_1
+ =\sum_\epsilon C_\epsilon(\ell_{\epsilon,z}T_\epsilon
+                                      +\partial_zT_\epsilon)
+\tag{IP28}\label{eq:ansatz-ip28}
+\]
+
+pays the last two IP4 rows. These are actual finite-formula residuals; their smallness does not remove the arithmetic part of the field error. The exact identity \((H-F_{1})_{t}=-(H-F_{1})_{zz}-\operatorname{Res} F_{1}\) agrees with the direct-time proof, but is not its only justification.
+
+\subsubsection{Finite constants and a sufficient height onset}
+\label{subsec:ip-7}
+
+Choose fixed nested sectors outside the negative real axis and an \(X_{sec}\) covering the full fixed buffers. The finite gamma remainders and the rational factors in M determine finite \(C_{a},C_{\beta},C_2,C_3\) in IP8--10, with \(|a-L/2|\le C_{a}/X\). The same estimates integrated along the ray determine \(C_{ray}\ge 1\) in IP16. Fixed enlarged-strip Euler and Stirling constants determine a sufficiently large \(C_{m}\ge 1\) in IP15/IP20, including all time weights. The finite normal moments through six and \(\exp(33 C_{\beta}^{2}/4)\) determine IP11's constants. Choose a common positive \(c_{I}\) in IP18 after absorbing the finitely many polynomial factors. Sectorial calibration bounds determine a finite \(C_{cal}\) controlling \(|U_{1}|,|D_{\epsilon}|\) by \(C_{cal} \Lambda^{2}/X\).
+
+A sufficient \(X_*\) lies beyond all the following gates, holding at every larger height, with \(S=34\) and \(U=X^{1/3}:\)
+
+\[
+\begin{gathered}
+X\ge X_{\rm sec},\quad X\ge2(r+b+V+10),\quad L\ge1,
+\quad L/2-C_a/X\ge0,\quad U\ge2V,\\
+C_2U^2/(2X)+C_3U^3/X^2\le1,\quad C_{\rm cal}\Lambda^2/X\le1/4,\\
+C_{\rm ray}+\tfrac12\log(X+U)\le U/(4S),\quad
+U\ge4S(L/2+C_a/X),\\
+(3/64)L^2\ge C_m(1+L)+2\log X,\qquad
+c_I X^{2/3}\ge2\log X.
+\end{gathered}
+\tag{IP29}\label{eq:ansatz-ip29}
+\]
+
+Every gate is eventual. Powers dominate logarithms, the negative local powers vanish, and the quadratic L term dominates its linear terms. Enlarge past the finitely many turning points or use a symbolic doubling construction on these explicit majorants. This supplies a terminating finite sufficient onset, not a numerically useful certified threshold. On I, IP29 makes IP15/IP18 at most \(C X^{-2}\); these are absorbed into \(\Lambda^{4}/X^{2}\). Equations IP20--28 now give all IP4 statements.
+
+The onset/constants depend on the fixed chart and on I. They are not asserted uniform as the upper time tends to infinity or the lower time tends to zero. For a uniform worst-time summary, \(B_{1}\le C X^{-3 \log2/16}\) after a further eventual gate \(\Lambda^{4}/X^{2}\le X^{-3 \log2/16}\). The pointwise two-term B1 retains the better large-t local scale.
+
+\subsubsection{Both genuine overlaps, with their actual hypotheses}
+\label{subsec:ip-8}
+
+\textbf{Lower overlap \([3/4,1]\).} Note24 proves the canonical F0 comparison on \([1/2,1]\), the same \(\Omega_{X}\) and extra unit, after its finite onset. Take the maximum of that onset and \(X_*.\) Both errors have the same H, the same envelope and fixed branches. The triangle inequality gives
+
+\[
+|\partial_z^j(F_1-F_0)|\le C_jE_o\Lambda^j
+ \{B_1+X^{-t\kappa}\}\le C_j'E_o\Lambda^jB_1,\quad j\le3,
+\]
+\[
+|(F_1-F_0)_t|\le C E_o\Lambda^2B_1.
+\tag{IP30}\label{eq:ansatz-ip30}
+\]
+
+This is a positive-width common-H overlap, not just endpoint contact. For an additional explicit compatibility check, the exact identity \(F_{1}-F_{0}=\sum C_{\epsilon} D_{\epsilon}\) gives the stronger bounds \(C E_{o} \Lambda^{j+2}/X\) for spatial \(j\le 3\) and \(C E_{o} \Lambda^{4}/X\) for time. These follow by differentiating the displayed finite correction, not by identifying terms in two unrelated canonical error expansions.
+
+\textbf{Upper overlap \([32,33]\).} Note03's corrected pair and Note20's rechecked \([32,T]\) corrected pair are exactly IP3, with identical logarithm/phase/normalization. Their fixed proof endpoints V need not be identical: V does not occur in the elementary field. Thus the difference between the two named F1 fields is identically zero, including jets and direct time. Take the maximum of \(X_*\) and the actual Note20 onset with \(T=33\) and these same buffers. Note20 RB9 and its kernel-time proof RB8a supply every imported spatial/time premise. Also
+
+\[
+X^{-t\kappa}\le X^{-8\log2}\le X^{-2}
+\quad(32\le t\le33),
+\tag{IP31}\label{eq:ansatz-ip31}
+\]
+
+so IP4 reduces to its existing \(E_{o} \Lambda^{j+4}/X^{2}\) and \(E_{o} \Lambda^{6}/X^{2}\) rates. The common-H triangle gives the same bounds if the two theorem instances are kept as separate labels; the actual formula equality is stronger. No missing buffer or direct-time premise remains. No published small-t theorem is invoked on this upper overlap.
+
+\textbf{Covered union, without a new splice.} The actual overlaps give a high-height field atlas covering \([1/2,33]\): Note24's F0 on \([1/2,1]\) and this argument's F1 on \([3/4,33]\). With Note20 on each fixed \([32,T]\), it covers \([1/2,T]\) for every fixed finite \(T\ge 33\) after the maximum of the relevant onsets. Constants/onsets can depend on T. This closes the previously uncovered intermediate positive band at this buffered high-height field scope. It is a domain union of proved models; no assembled time-cutoff field is defined here. A future assembled field would need its own cutoff derivative residual. In particular one must not assign F1's smaller residual to an F0-to-F1 transition for free. The existing Note20 overlap with the full gamma hierarchy retains its own domain, envelope and paid time-interface terms.
+
+\subsection{Retained arithmetic on the moving positive band}
+\label{sec:retained-positive-band}
+\subsubsection{Frozen contract, finite model and theorem}
+\label{subsec:ra-1}
+
+Keep the complete canonical \(\theta\) source, heat sign and normalization
+
+\[
+H(t,z)=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\,du,
+\quad H_t=-H_{zz},\quad H(0,z)=\xi(s(z))/8,
+\quad s=(1+iz)/2.
+\tag{RA1}\label{eq:ansatz-ra1}
+\]
+
+The physical \(q=\epsilon_{g}^{2}\) and fixed averaging \(K=k_{\ell} k_{h}\) are unchanged. Fix \(r=\ell+2\), \(b=1+h+2\), the target chart \(\Omega_X=\{|\Re z-X|\le r,|\Im z|\le b\}\), and one extra analytic unit \(\Omega_X^+=\{|\Re z-X|\le r+1,|\Im z|\le b+1\}\). Branches are continued from positive real height. Write
+
+\[
+\begin{gathered}
+L=\log(X/(4\pi)),\quad\Lambda=1+\log X,\quad L_z=\Log(z/(4\pi)),\\
+a(z)=\sqrt{z/(4\pi)},\quad a_X=\sqrt{X/(4\pi)},
+\quad N=\lfloor a_X\rfloor.
+\end{gathered}\tag{RA2}\label{eq:ansatz-ra2}
+\]
+
+Freeze N and X throughout each chart and every differentiation. Put
+
+\[
+M(w)=\frac{w(w-1)}{16}\pi^{-w/2}\Gamma(w/2),\quad\alpha=M'/M,
+\quad G(z)=[M(s)M(1-s)]^{1/2},
+\]
+\[
+\mathcal C(p)=\frac{\cos(2\pi(p^2-p)-\pi/8)}{\cos(2\pi p)},\quad
+\mathcal R_N(z)=(-1)^NG(z)a(z)^{-1/2}\mathcal C(a(z)-N),
+\quad\kappa_c=\pi^2/64.
+\tag{RA3}\label{eq:ansatz-ra3}
+\]
+
+All apparent poles of $\mathcal C$ are removable. Choose G positive on the real segment. This gives a zero-free holomorphic G on the sectors used below; \(\mathcal R_N\) itself can vanish and is never divided by. Use Note25's exact arms \(C_{\epsilon}(t,z)\) and positive envelope \(E_{o}=\sum|C_{\epsilon}|\), with \(b_{\epsilon}=L_{z}/2+\epsilon i \pi/4\). Explicitly define
+
+\[
+P_{\epsilon,n}(t,z)=C_\epsilon(0,z)n^{-1/2}
+ e^{-\epsilon iz\log n/2}e^{t(b_\epsilon-\log n)^2/4},\quad
+F_N(t,z)=\sum_{\epsilon=\pm1}\sum_{n=1}^NP_{\epsilon,n}(t,z)
+                         +e^{-\kappa_ct}\mathcal R_N(z).
+\tag{RA4}\label{eq:ansatz-ra4}
+\]
+
+This is exactly Note04 CS4/CS24, with \(2N=O(\sqrt X)\) elementary mode arms and one explicit gamma/RS completion. It contains no $H$ or $\xi$ integral, no fitted data, and no unbounded arithmetic population. Its proof uses integrals; its field definition does not retain them.
+
+\begin{theorem}[Retained arithmetic on the moving band]\label{thm:retained-positive-band}
+ For all sufficiently large X, uniformly on \(\Omega_{X}\) and \(4/L\le t\le 1\), with finite constants depending on the fixed buffers,
+
+\[
+\boxed{|\partial_z^j(H-F_N)|\le C_jE_o\Lambda^j\eta(X),
+\quad j=0,1,2,3,\quad\eta=\Lambda^2X^{-3/4},}
+\]
+\[
+\boxed{|(H-F_N)_t|\le C_tE_o\Lambda^2\eta,\quad
+|\operatorname{Res}F_N|\le C_RE_o\eta,\quad
+|\partial_z\operatorname{Res}F_N|\le C_RE_o\Lambda\eta.}
+\tag{RA5}\label{eq:ansatz-ra5}
+\]
+\end{theorem}
+
+Here \(\operatorname{Res} F=F_{t}+F_{zz}\); it is generally nonzero. Section~\ref{subsec:ra-7} constructs sufficient finite onsets. No derivative of a floor or O allowance, backward-heat supremum contraction, or field inference from a residual alone is used.
+
+\subsubsection{The first potential gap and its fresh initial-error payment}
+\label{subsec:ra-2}
+
+Let
+
+\[
+S_N(z)=\sum_{n\le N}\{M(s)n^{-s}+M(1-s)n^{-(1-s)}\},\quad
+E_N(z)=H(0,z)-S_N(z)-\mathcal R_N(z).
+\tag{RA6}\label{eq:ansatz-ra6}
+\]
+
+Note04 CS3 proves, for every fixed horizontal radius and transverse width, \(|E_{N}|\le C X^{-3/4}(|M(s)|+|M(1-s)|)\), with its actual fixed-N hypothesis. Positive Gaussian evolution at time t samples imaginary shifts of size \(O(tL).\) Thus its fixed-strip constant alone cannot be used on the whole present band. The following lemma supplies that missing estimate rather than assuming it.
+
+Set \(U=X^{1/3}\). For \(z\in \Omega_X^+\), define \(z_{v}=z-2iv\), real v. Let \(\Sigma\) bound \(|\Re s|,|\Re(1-s)|\) on that chart and choose \(V=\Sigma+3\). Then, uniformly for \(|v|\le U\),
+
+\[
+|E_N(z_v)|\le C X^{-3/4}
+       \{|M(s+v)|+|M(1-s-v)|\}.
+\tag{RA7}\label{eq:ansatz-ra7}
+\]
+
+\textbf{Proof.} For \(|v|\le V\), apply CS3 on the single enlarged \emph{fixed} initial chart of transverse width \(b+1+2V\) and horizontal radius r+1. Its own finite onset and constant are retained. For \(V\le |v|\le U\), choose the dominant \(\xi\) argument \(q=s+v\) for positive v and \(q=1-s-v\) for negative v. Then \(\sigma=\Re q\ge 3\), \(\sigma\le U+\Sigma\), and \(|\Im q|\) is comparable to X. The exact functional equation and ordinary \href{https://dlmf.nist.gov/25.2.E1}{Dirichlet series} give
+
+\[
+\frac{E_N(z_v)}{M(q)}=
+ \left(\zeta(q)-\sum_{n\le N}n^{-q}\right)
+ -\frac{M(1-q)}{M(q)}\sum_{n\le N}n^{q-1}
+ -\frac{\mathcal R_N(z_v)}{M(q)}.
+\tag{RA8}\label{eq:ansatz-ra8}
+\]
+
+Both q and 1-q remain in fixed sectors even when one real part is negative. The \href{https://dlmf.nist.gov/5.11#ii}{sectorial gamma bounds} give \(\alpha'=O(1/X)\) on the entire horizontal segment joining their real parts at fixed imaginary height. Since M respects conjugation, integrate \(\Re \alpha\) along that segment to obtain
+
+\[
+\frac{|M(1-q)|}{|M(q)|}
+ \le C a_X^{1-2\sigma}\exp\{C(1+v^2)/X\}.
+\tag{RA9}\label{eq:ansatz-ra9}
+\]
+
+More explicitly, at real part1/2 the real logarithmic derivative is \(\log a_{X}+O(1/X)\); moving it by \(O(\sigma+1)\) changes it by \(O((\sigma+1)/X)\). Integration over length \(O(\sigma+1)\) gives the \(O((1+\sigma^{2})/X)\) error in the logarithm of RA9. Replacing local height Re z by X costs only \(O((1+\sigma)/X).\) Thus the constant is uniform through U; it is not a fixed-strip constant with \(\sigma\) inserted.
+
+The two growing-parameter factors are controlled before absorption:
+
+\[
+\exp\{C(1+U^2)/X\}=O(1),\quad
+(a_X/N)^{\sigma-1}\le\exp\{2(U+\Sigma)/a_X\}=O(1).
+\tag{RA10}\label{eq:ansatz-ra10}
+\]
+
+The latter uses \(N\ge a_{X}/2\) and \(N=\lfloor a_{X}\rfloor.\) Also \(|a(z_{v})-a_{X}|\le C(r+b+1+2U)/\sqrt X=o(1)\), so \(a(z_{v})-N\) stays in a fixed compact neighborhood of[0,1]. $\mathcal C$ and its needed finite derivatives are uniformly bounded there. Equations RA3/RA9 imply
+
+\[
+\frac{|\mathcal R_N(z_v)|}{|M(q)|}
+ \le C a_X^{-\sigma}\exp\{C(1+v^2)/X\}.
+\tag{RA11}\label{eq:ansatz-ra11}
+\]
+
+In RA8, absolute summation of \emph{all} \(n>N\) gives \(N^{1-\sigma}/(\sigma-1)\le C a_{X}^{1-\sigma}\). The reflected finite sum has modulus at most \(N^{\sigma},\) hence after RA9 at most \(C a_{X}^{1-\sigma}\) because \(N\le a_X\). RA11 is no larger. Since \(\sigma\ge 3,\) all three terms are \(O(X^{-1}).\) This is stronger than RA7 on these outer portions. It combines with the fixed-inner-strip estimate to prove RA7. The omitted arithmetic is paid by a complete ordinary tail; no modes or completion terms were dropped. This proof uses no growing-order RS theorem or off-domain published small-time approximation.
+
+\subsubsection{Exact positive evolution, all large shifts and the finite population}
+\label{subsec:ra-3}
+
+The exact full-source identity is
+
+\[
+H(t,z)=\int_{\mathbb R}K(t,v)H(0,z-2iv)\,dv,
+\quad K(t,v)=(\pi t)^{-1/2}e^{-v^2/t},\quad t>0.
+\tag{RA12}\label{eq:ansatz-ra12}
+\]
+
+It follows directly from RA1 by Gaussian averaging and complete super-exponential source domination, and agrees with \href{https://arxiv.org/html/1904.12438v2#S4}{Polymath(35)}. Split the proof at fixed-with-chart \(\pm U\). On its inner interval insert RA6 and RA7. No contour is deformed: there are no connectors. U and N are fixed before t,z derivatives; artificial endpoint terms are not silently differentiated. Direct time differentiates the fixed kernel.
+
+On the local tube fixed-sector Taylor bounds give
+
+\[
+M(w+v)=M(w)e^{\alpha(w)v+R_2(w,v)},\quad
+|R_2|\le C v^2/X\le C U^2/X\le1.
+\tag{RA13}\label{eq:ansatz-ra13}
+\]
+
+Reflection of v treats the second arm identically. Normalized Gaussian moments against \(\exp(-v^{2}/t+a v)\) have mean \(ta/2\), variance \(t/2\) and absolute-to-complex factor \(\exp(t(\Im \alpha)^{2}/4)\), bounded for \(0<t\le 1\). In particular RA7 integrates to
+
+\[
+\left|\int_{-U}^UK E_N(z_v)\,dv\right|
+ \le C E_o X^{-3/4}.
+\tag{RA14}\label{eq:ansatz-ra14}
+\]
+
+Here \(\sum |M(w)\exp(t \alpha(w)^{2}/4)|\) and \(E_{o}\) are comparable for \(0\le t\le 1\) by the zero-time sectorial expansion, re-bounded on this interval. Its logarithmic calibration is \(O(\Lambda/X);\) no positive-time field theorem is being extended to obtain this comparison.
+
+For the true infinite ends reflect the \(\xi\) argument to \(\Re\ge 3\) and use the full absolutely convergent \(\zeta\) series. Retain the gamma ratio
+
+\[
+\log\frac{|M(w+v)|}{|M(w)|}
+ \le C_{\rm ray}v+\tfrac12v\log(X+v),\quad v\ge0.
+\tag{RA15}\label{eq:ansatz-ra15}
+\]
+
+Choose the finite onset so \(C_{ray}+(1/2)\log(X+U)\le U/(4S)\), \(S=2,\) and \(U\ge 4S C_{\alpha} \Lambda\). The ratio of the left coefficient to v decreases for \(v\ge U.\) The Gaussian then pays both complete source ends by \(C E_{o} \exp(-cU^{2})\). The same gates pay the artificial full \emph{linear} mode Gaussians below, including their complete finite population. Polynomial kernel-time factors are absorbed by reducing c once; on the band, \(1/t\le L/4\). The height exponential is retained through RA15, not replaced by a height-independent source mass near U.
+
+For every \(n\le N,\) the positive multiplier in an elementary mode obeys
+
+\[
+\frac{|P_{\epsilon,n}(t,z)|}{|C_\epsilon(t,z)|}
+ =n^{(\epsilon\Im z-1)/2}
+   \exp\{t\log n(\log n-\Re L_z)/4\}.
+\tag{RA16}\label{eq:ansatz-ra16}
+\]
+
+The exponential is \(\le 1\) after \(\log N\le \Re L_{z}\), an eventual gate. For \(y\ge 0,\) the suppressed arm satisfies \(|C_+|/E_{o}\le C X^{-y/2}\) and its population costs at most \(C N^{(y+1)/2}\). The other arm costs at most \(C N^{1/2}\). Reflect for negative y. Consequently, uniformly on the full larger buffer,
+
+\[
+\sum_{\epsilon,n\le N}|P_{\epsilon,n}(t,z)|
+ \le C E_o X^{1/4},\quad0\le t\le1.
+\tag{RA17}\label{eq:ansatz-ra17}
+\]
+
+This is the entire finite population, not a bounded-n estimate. No assumption \(tL\le 8\) was needed for the positive-time multiplier.
+
+\subsubsection{Mode curvature, gamma calibration and RS completion}
+\label{subsec:ra-4}
+
+For \(w=s,1-s\) and \(k_{n}=\log n,\) linearizing the gamma factor in each local initial mode and completing its Gaussian gives
+
+\[
+\mathcal P_{w,n}(t,z)=M(w)n^{-w}
+            \exp\{t(\alpha(w)-k_n)^2/4\}.
+\tag{RA18}\label{eq:ansatz-ra18}
+\]
+
+The negative v sign of the reflected initial arm is removed by Gaussian symmetry. RA13 gives \(|\exp R_{2}-1|\le C v^{2}/X\). With \(a_{n}=\Re \alpha(w)-k_{n}\), \(|a_{n}|\le C \Lambda\), the normalized second moment is \(O(t+t^{2} a_{n}^{2})\). Thus the per-mode curvature error is \(C(t+t^{2} \Lambda^{2})/X\) times its nonzero evolved gamma arm modulus.
+
+The exact-gamma to elementary calibration costs \(C(1+t \Lambda)/X\) per mode on this longer interval: M/C(0) has relative error \(O(1/X),\) and \(\alpha-b_{\epsilon}=O(1/X),\) so the difference of the two heat exponents is \(O(t \Lambda/X).\) These are explicit finite formulas. Their moduli are comparable after a finite onset uniformly for all \(n\le N.\) Summing with RA17 pays the complete local mode error by
+
+\[
+C E_o\Lambda^2 X^{-3/4}.
+\tag{RA19}\label{eq:ansatz-ra19}
+\]
+
+Artificial tails from completing these \emph{linear} Gaussians are bounded using means of size \(O(\Lambda),\) the bounded complex loss and the gates after RA15. All N modes are included in their payment. The true nonlinear gamma modes or the actual RS correction are not extended uncontrolled to infinite shifts.
+
+For the correction write \(f_N=a^{-1/2}\mathcal C(a-N)\). On the whole local tube its argument lies in the same fixed compact set as RA11. Hence
+
+\[
+|f_N|\le C X^{-1/4},\quad |f_N'|\le C X^{-3/4},\quad
+|f_N''|\le C X^{-5/4}.
+\tag{RA20}\label{eq:ansatz-ra20}
+\]
+
+Fixed-sector expansions, re-derived uniformly for \(|\Im z|=O(U)\), give \(G'/G=-\pi/8+7/(4z)+O(X^{-2})\) there. Indeed \(\alpha(s)-\alpha(1-s)=i \pi/2-7i/z+O(X^{-2})\) uniformly in this sector; multiplying by i/4 gives the displayed derivative. The log-height terms cancel before any growing-shift bound is taken. Integration along the local vertical segment, and RA20, give
+
+\[
+|\mathcal R_N(z-2iv)-e^{i\pi v/4}\mathcal R_N(z)|
+ \le C|G(z)|X^{-3/4}(|v|+v^2),\quad |v|\le U.
+\tag{RA21}\label{eq:ansatz-ra21}
+\]
+
+The full Gaussian of the elementary exponential is exactly \(\exp(-\pi^{2} t/64) \mathcal R_N(z)\). Its local error is bounded by \(C|G|X^{-3/4}(\sqrt t+t)\le C E_{o} X^{-3/4}\). Only that elementary exponential is completed past U. The true \(\mathcal R_N\) is used exclusively on the local tube where RA11/RA20 justify it. RA14, RA19, RA21 and all true/artificial tails prove the scalar field part of RA5 on \(\Omega_{X}^+.\)
+
+\subsubsection{Direct first time and spatial jets}
+\label{subsec:ra-5}
+
+Differentiate RA12's fixed kernel before estimating:
+
+\[
+K_t=K(v^2/t^2-1/(2t)).
+\tag{RA22}\label{eq:ansatz-ra22}
+\]
+
+All integral differentiations are justified by source and gamma domination in a positive neighborhood of each time. The lower bound \(t\ge 4/L\) is applied to estimates, not differentiated. For the initial RS remainder RA7, the weighted Gaussian average adds \(C(1/t+\Lambda^{2})\le C \Lambda^{2}\), so its direct-time cost is \(C E_{o} \Lambda^{2} X^{-3/4}\).
+
+For mode curvature, integrate the weights \emph{before} using the lower time endpoint. For a real Gaussian of mean \(ta_{n}/2\) and variance t/2,
+
+\[
+\frac{\mathbb E|v|^4}{t^2}+\frac{\mathbb E|v|^2}{t}
+ \le C(1+t a_n^2+t^2a_n^4)\le C\Lambda^4.
+\tag{RA23}\label{eq:ansatz-ra23}
+\]
+
+This pays \(C \Lambda^{4}/X\) per mode. It avoids an unnecessary loss from bounding \(1/t^{2}\) before computing moments. Direct time calibration of RA18 uses the exact exponential derivatives. If \(A_{n}=(\alpha-k_{n})^{2}/4\), \(A_{0,n}=(b_{\epsilon}-k_{n})^{2}/4\), then
+
+\((\mathcal P-P)_{t}=A_{n}(\mathcal P-P)+(A_{n}-A_{0,n})P\).
+
+Here \(|A_{n}|\le C \Lambda^{2}\), \(|A_{n}-A_{0,n}|\le C \Lambda/X\); the explicit field calibration gives a time cost at most \(C \Lambda^{3}/X\) per mode, inside the same \(\Lambda^{4}/X\) budget. No O allowance was differentiated. RA17 gives the total mode time error \(C E_{o} \Lambda^{4} X^{-3/4}\).
+
+RA21 under the kernel derivative costs \(C|G|X^{-3/4}(1+t^{-1/2})\le C E_{o} \Lambda X^{-3/4}\), within that budget. All large-shift time tails have already been paid after RA15. Therefore RA22--23 prove the direct-time row of RA5.
+
+For spatial derivatives use disks of radius \(1/(8 \Lambda)\) within the extra analytic unit. The positive envelope varies by a bounded factor there because \((\log C_{\epsilon})_{z}=O(\Lambda)\) for \(t\le 1.\) Cauchy's formula on the scalar field error gives spatial0--3 on \(\Omega_{X}\) with the stated \(\Lambda^{j}\) loss. X,N,U are fixed during this argument. The growing initial tube in RA7 has supplied the required scalar bound first; holomorphy alone is not used to infer a growing-strip estimate.
+
+\subsubsection{Actual residual and its spatial derivative}
+\label{subsec:ra-6}
+
+For each elementary mode let \(c=b_{\epsilon}-\log n\). Exact differentiation gives
+
+\[
+\frac{\operatorname{Res}P_{\epsilon,n}}{P_{\epsilon,n}}
+ =\frac{\epsilon i(1+7c+t c^2)}{4z}
+  +\frac{21/16+t/8+5tc/8+t^2c^2/16}{z^2}
+ =:\mathcal Q_{\epsilon,n}.
+\tag{RA24}\label{eq:ansatz-ra24}
+\]
+
+Now \(|c|\le C \Lambda\), \(t\le 1,\) so \(|\mathcal Q_{\epsilon,n}|\le C \Lambda^{2}/X\). This is the longer-time bound; the old shrinking-window \(\Lambda/X\) estimate is not reused here. Also \(|\partial_{z} \mathcal Q_{\epsilon,n}|\le C \Lambda^{2}/X^{2}\) and \(|\partial_{z} P_{\epsilon,n}|\le C \Lambda|P_{\epsilon,n}|\). On fixed target buffers, Note04 CS25/CS27 or direct differentiation of RA3/RA20 gives \(\mathcal R_N''-\kappa_{c} \mathcal R_N=O(|G|X^{-3/4})\), and its z derivative fits the same bound with one \(\Lambda\) loss on the paid analytic margin. The exact full residual is
+
+\[
+\operatorname{Res}F_N=\sum_{\epsilon,n\le N}
+ P_{\epsilon,n}\mathcal Q_{\epsilon,n}
+ +e^{-\kappa_ct}(\mathcal R_N''-\kappa_c\mathcal R_N).
+\tag{RA25}\label{eq:ansatz-ra25}
+\]
+
+Its z derivative follows by the product rule or paid Cauchy. Summing RA24 with RA17 proves respectively \(C E_{o} \Lambda^{2} X^{-3/4}\) and \(C E_{o} \Lambda^{3} X^{-3/4}\), as in RA5. These nonzero residuals do not remove the source comparison requirement. The exact heat identity for \(H-F_{N}\) checks the direct-time rate already proved from RA22.
+
+\subsubsection{Constants and sufficient finite onset}
+\label{subsec:ra-7}
+
+All constants come from finitely many named inputs: CS3 on the fixed enlarged inner strip; sectorial log-gamma/digamma bounds on a slightly larger fixed sector; $\mathcal C$ and its derivatives on a fixed compact neighborhood K of[0,1]; finite real Gaussian moments; and the complete ordinary Dirichlet tail. None depends on a moving strip width through an unrecorded theorem constant. Choose the ray constant before U gates.
+
+For example impose \(L\ge 16,\) all inherited CS3 onsets on the enlarged fixed chart, the sector/buffer onset, and the following eventual gates:
+
+\[
+\begin{gathered}
+U=X^{1/3}\ge2V,\quad a_X\ge2,\quad
+4(U+\Sigma+1)/a_X\le1,\quad C_\gamma(1+U^2)/X\le1,\\
+C_a(r+b+1+2U)/\sqrt X\le\operatorname{dist}([0,1],\partial K),
+\quad C_{\rm cal}\Lambda/X\le1/4,\\
+C_{\rm ray}+\tfrac12\log(X+U)\le U/(4S),\quad
+U\ge4S C_\alpha\Lambda,\quad S=2,\\
+\log N\le\inf_{z\in\Omega_X^+}\Re L_z,\quad
+cU^2\ge2\log X,\quad\Lambda^2X^{-3/4}\le1/4.
+\end{gathered}
+\tag{RA26}\label{eq:ansatz-ra26}
+\]
+
+One may replace the N gate by its sufficient continuous bound \((1/2)L\le \log((X-r-1)/(4\pi))\); \(N\le a_{X}\) makes this valid eventually. The floor-sensitive RA10 factor is controlled by the displayed continuous majorant \(4(U+\Sigma+1)/a_{X}\), not by checking only selected cutoff values. Reduce c once for the finitely many tail polynomial weights before fixing its gate. All these gates hold at every larger height after a finite threshold; powers beat logarithms and \(U/a_{X}\) tends to zero. A symbolic doubling construction on their majorants therefore terminates. No numerical onset or affordability is asserted.
+
+\subsubsection{Both genuine overlaps and the covered union}
+\label{subsec:ra-8}
+
+\textbf{Signed-window overlap \(4\le tL\le 8\).} For sufficiently large X this lies in both the present band and Note04's nonnegative signed window. After the maximum of actual onsets, on the same target chart and frozen N, Note04 CS4 and RA4 are the \emph{same formula}, including the RS term, branches and one-arm normalization. Their difference is identically zero. In particular comparison through their common H is valid at the sum of the two proved errors. Note04 retains its stronger \(X^{-3/4}\) allowance on this smaller positive window; the present theorem has the coarser \(\eta\) appropriate to the longer band. The overlap has positive width4/L for each chart and fixed scaled-time width4.
+
+\textbf{Corrected-pair overlap \([3/4,1]\).} Note25's F1 theorem applies on these same buffers after its own onset. Through common canonical H, with \(\kappa_{a}=\log2/4\) and \(B_{1}=\Lambda^{4}/X^{2}+X^{-t \kappa_{a}}\),
+
+\[
+|\partial_z^j(F_N-F_1)|\le C_jE_o\Lambda^j(\eta+B_1),
+\quad j\le3,\qquad
+|(F_N-F_1)_t|\le C E_o\Lambda^2(\eta+B_1).
+\tag{RA27}\label{eq:ansatz-ra27}
+\]
+
+An optional eventual gate \(\Lambda^{2}\le X^{3/4-\kappa_{a}}\) absorbs \(\eta\) into B1 throughout this overlap. The slower omitted-arithmetic power is still present in the F1 comparison; it is not replaced by \(\eta.\) No termwise match of canonical error expansions or fitted modes is used.
+
+\textbf{Positive-time field coverage.} CS6/CS7 of Note04 on \(0\le tL\le 8\) and RA5 on \(4/L\le t\le 1\) give the \emph{same fixed-N model} uniformly on \(0\le t\le 1\), with the RA5 allowance (and stronger inherited bounds near zero). The residual bounds follow on this union from RA24--25, including \(t=0.\) No moving time cutoff or interface defect is needed because the formula agrees exactly on the overlap. This is a new positive-side covered union, not a stronger recurrence error at zero.
+
+Together with Note25 and Note20 this supplies a buffered high-height field atlas on \([0,T]\) for every fixed finite \(T\ge 33,\) after the maximum of their finite T-dependent onsets. Models \(F_{N}\) and F1 have a genuine overlap; no single time-spliced global formula is defined here. Existing negative-side Note04/Note06 joins retain their weaker rates and source domains. The new strong negative recurrence \(\exp(-L^{2}/4)\) theorem still excludes zero. No new global spatial join across changes of N, physical tuple, bounded-height core, growing-time/order uniformity or evaluator cost theorem follows from this field atlas alone.
+
+
+\begin{theorem}[Buffered positive atlas for each fixed finite horizon]
+\label{thm:positive-atlas}
+Fix $\ell,h>0$ and a finite $T_*\ge33$. There is a finite
+$X_*(T_*,\ell,h)$ such that the following high-height field atlas
+covers $[0,T_*]$ on the fixed target rectangles above, after scalar
+estimates on their extra analytic unit. On $[0,1]$ use the same frozen
+$F_N$ with $N=\lfloor\sqrt{X/(4\pi)}\rfloor$ and
+$\epsilon_X=(1+\log X)^2X^{-3/4}$:
+\[
+ |\partial_z^j(H-F_N)|\le C_jE_o(1+\log X)^j\epsilon_X,
+ \quad |(H-F_N)_t|\le CE_o(1+\log X)^2\epsilon_X,
+ \quad 0\le j\le3.
+\]
+The actual residual is $CE_o\epsilon_X$ and its $z$ derivative is
+$CE_o(1+\log X)\epsilon_X$. On $0\le tL\le8$ retain the
+stronger inherited signed-window estimates of
+the signed-window bounds~\eqref{eq:buffered-crossover-jets}--\eqref{eq:buffered-crossover-time}; the coarser allowance here
+does not supersede them. The formula is identical on $4\le tL\le8$.
+On $[3/4,33]$ use $F_1$ with
+$B_1=(1+\log X)^4/X^2+X^{-t\log2/4}$ and the spatial, direct-time
+and residual orders of Theorem~\ref{thm:intermediate-positive}.
+On every fixed $[32,T_*]$ use the identical $F_1$ formula of
+Proposition~\ref{prop:elementary-compact}, with its full budget.
+If $T_*=33$ this last overlap is still $[32,33]$.
+\end{theorem}
+\begin{proof}
+Take the maximum of the finite onsets in the signed-window result,
+Theorems~\ref{thm:retained-positive-band} and
+\ref{thm:intermediate-positive}, and
+Proposition~\ref{prop:elementary-compact} at the chosen $T_*$.
+The identical-$F_N$ overlap has zero model difference, so their
+union gives the stated $[0,1]$ bounds without a cutoff derivative.
+On $[3/4,1]$ the $F_N,F_1$ difference has the full
+$\epsilon_X+B_1$ allowance in \eqref{eq:ansatz-ra27}, including
+spatial jets and direct time. On $[32,33]$ the two $F_1$ formulas
+are identical and \eqref{eq:ansatz-ip31} pays the older compact
+orders. These overlaps cover the displayed domain.
+\end{proof}
+This is an atlas of separately proved formulas. It defines no new
+$F_N/F_1$ time splice and supplies no globally differentiable floor
+cutoff, spatial chart join, bounded-height core, small-positive
+physical tuple, growing-$T_*$ uniformity, useful evaluator height cost,
+or strong negative recurrence precision at zero. More positive gamma
+orders retain their arithmetic allowance and the fixed-$J$ quantifier
+order in Theorem~\ref{thm:positive-fixed}.

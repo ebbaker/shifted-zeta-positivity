@@ -37,11 +37,25 @@ required the large-positive-time hierarchy **without RH**, then authorized
 arbitrary fixed order and starting regional bridges. Under Progress03,
 A04-AN01–AN03 are now CLOSED at fixed-order field/derivative/residual
 scope; AN04 closes the first compact-positive high-height field bridge.
-Broad A04 remains Partial. **Next: Analysis — Sol, existing
-[A03-AN01 r1](handoffs/HDA-A03-AN01.md), READY_FOR_SOL**, exact named-center
-sensitivity/shifts using Note20's new compact field/arm inputs; prepared
-only, not dispatched or executed. A08-AN01 and recurrence R05-AN08 retain
-their frozen requests for later regions. The originating recurrence
+Broad A04 remains Partial. **Current 26 October return, base chat0025:
+A03-AN01 and AN02 r1 CLOSED** at their bounded center/physical scopes.
+[Note22](../notes/22_NAMED_SWITCH_CENTERS_20261026.md)/Assessment16 pays
+all named-center shifts below rounding width; [Note23](../notes/23_FIXED_P4_PHYSICAL_TUPLE_20261026.md)/Assessment17
+now proves every frozen fixed-P4 physical rate on[63,65]. **A08-AN01 r1 now also CLOSED**: [Note24](../notes/24_SMALL_POSITIVE_SLAB_20261026.md)/Assessment18
+proves the first small-positive slab[1/2,1], complete arithmetic power
+X^(-t log2/4), full buffered spatial0--3/direct time and actual residual.
+**A08-AN02 r1 now also CLOSED**: [Note25](../notes/25_INTERMEDIATE_POSITIVE_COMPARISON_20261026.md)/Assessment19
+proves corrected F1 on[3/4,33], complete B1, spatial0--3/direct time,
+actual residual/residual_z and both genuine overlaps. The buffered
+high-height atlas now covers[1/2,T] for each fixed finite T>=33.
+**A08-AN03 r1 now also CLOSED**: [Note26](../notes/26_RETAINED_ARITHMETIC_MOVING_POSITIVE_BAND_20261026.md)/Assessment20
+proves retained arithmetic4/L<=t<=1 at eta=Lambda²X^-3/4, full
+spatial0--3/direct time, residual/residual_z and both genuine overlaps.
+The same F_N plus inherited Note04 covers0<=t<=1; the fixed-T
+high-height field atlas is now[0,T]. [Whole-chat Summary67](../../notes/67_CHAT0025_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md)
+is the complete handoff. **Next Analysis — Sol:** [B02-MI1](../../research-progress/handoffs/HDA-B02-MI1.md),
+READY_FOR_SOL prepared only, Book/companion production integration. Recurrence R05-AN08 has separately
+closed its moving-endpoint scope in its sole register. The originating recurrence
 chat0007 [discussion](../../recurrence/brainstorm/03_POSITIVE_TIME_HIERARCHIES_AND_BRIDGES_20261026.md)
 remains historical; its formal remainder target is now paid by Notes17–19.
 Prepared for Edward Baker with substantial LLM assistance,
@@ -52,17 +66,20 @@ and [Summary21](../notes/21_CHAT0005_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md).
 | --- | --- | --- | --- |
 | HDA-A01 | Complete only at AN01--AN02 bounded analytical scope | CLOSED; Sol, gpt-6.1-sol, ultra, chat0001; same-model assessment | Preserve Notes03--04. No all-time or physical-transfer completion is inferred. |
 | HDA-A02 | Partial: chartwise [-2,0] join and arbitrary fixed compact-away-zero natural-scale family proved in-note; short outer-scale, growing-time and physical/assembly obligations open | Recurrence execution tracked in its [sole register](../../recurrence/research-progress/01_RECURRENCE_RESEARCH_PROGRESS_20261026.md); R01--R03 r1 CLOSED at bounded analytical scopes, gpt-6.1-sol, ultra, 26 October 2026. Old AN07 superseded before execution. AN01--AN06 remain CLOSED at their bounded scopes. | Consume recurrence Notes02--04/Reviews01--03 for fixed p,K=2p, X^-(p+3/4), full buffered field/jet/time norm and declared fixed compact families; all modes and integral remain. That branch owns those dispositions. Preserve [AN06 return](handoffs/HDA-A02-AN06.md), Note12/Review09 and integrated Proposition6.2/Appendix A. Fixed compact-away-zero gamma-scale bounds are paid; short outer-scale, enlarged joins, joint limits and physical transfer remain open. |
-| HDA-A08 | Open: compact positive-time coverage and uniform joining | **READY_FOR_SOL — Analysis, Sol**, [AN01 r1](handoffs/HDA-A08-AN01.md), prepared only, not dispatched | Prepared for later bridging, after the large-t hierarchy priority. First missing slab [1/2,1]: canonical buffered field/j<=3/direct-time/residual estimate with actual source hypotheses. The wider 1/2<t<32 gap and overlaps remain open. |
+| HDA-A08 | Partial as wider queue; high-height compact-positive field coverage and regional matching Complete at the recorded rates | **AN01--AN03 r1 CLOSED — Analysis, Sol**, gpt-6.1-sol actual ultra, base chat0025 | [Note26](../notes/26_RETAINED_ARITHMETIC_MOVING_POSITIVE_BAND_20261026.md)/[Assessment20](../reviews/20_RETAINED_ARITHMETIC_MOVING_BAND_ASSESSMENT_20261026.md): eta=Lambda²X^-3/4 on4/L<=t<=1, j0--3 adds Lambda^j, direct time Lambda², residual eta/residual_z Lambda eta, both overlaps. Fixed-T atlas[0,T] with Notes04/25/20. [Summary67](../../notes/67_CHAT0025_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md); next B02 production, prepared only in Book register. Strong refinement/physical/core/global assembly separate. |
 | HDA-A04 | Partial as program: arbitrary fixed-order hierarchy now proved; first high-height regional field bridge paid | Execution owned solely by [Progress03](03_LARGE_POSITIVE_TIME_HIERARCHY_RESEARCH_PROGRESS_20261026.md); [AN01 r1](handoffs/HDA-A04-AN01.md) is its first request | Unconditional large-t hierarchy first; later bridges through64, intermediate positive time and zero to the negative hierarchy. Read Progress03 for live status; this row is a routing record. |
 | HDA-A05 | Open: joint negative-time/height asymptotics | Primary joint-limit queue; Analysis, Sol; not dispatched | Identify and bound the overlap between compact-negative arithmetic evolution and the large-T Gaussian endpoint. |
-| HDA-A06 | Open: physical transfer and full assembly for these ansatze | Follows usable estimates on each domain; Analysis, Sol; not dispatched | Transfer field and residual bounds to actual physical observables; pay regulator/covariance and all joining defects, then prove the domain union. |
-| HDA-A03 | Partial: inherited coarse regulator layer; corrected compact field/arm inputs now paid in Note20 | **READY_FOR_SOL — Analysis, Sol**, existing AN01 r1; not dispatched or executed | [AN01](handoffs/HDA-A03-AN01.md), unchanged scope: consume new Note20/Assessment15 and finish exact named-center sensitivity/shifts at the rounding scale. New physical-layer consumer remains separate. |
+| HDA-A06 | Open for wider physical transfer and full assembly; fixed-P4 switch consumer now paid | Follows usable estimates on each domain; Analysis, Sol | [A03-AN02](handoffs/HDA-A03-AN02.md)/Note23 supplies the high-height[63,65] full tuple. Other regimes, joins and domain union remain open. |
+| HDA-A03 | Partial as wider layer program: named centers and fixed-P4 high-height physical tuple proved | **AN01/AN02 r1 CLOSED — Analysis, Sol**, gpt-6.1-sol actual ultra, base chat0025 | [Note23](../notes/23_FIXED_P4_PHYSICAL_TUPLE_20261026.md)/[Assessment17](../reviews/17_FIXED_P4_PHYSICAL_TUPLE_ASSESSMENT_20261026.md): all frozen physical rates paid. Sharper simple-layer law/core/assembly remain separate; A08 field continuation now closed; next B02 production. |
 | HDA-A07 | Candidate family only | Deprioritized supporting analysis | Gaussian-polynomial core and ancillary central models; earlier parent core packet remains unexecuted. |
 
 HDA-A08 is a new ownership entry for an already documented gap, not a
 newly discovered obstruction or a result. Priority labels rank work;
 phase labels do not certify mathematics. AN03--AN06 were executed at the
-user's request in chat0003; A08-AN01 is prepared only and not dispatched.
+user's request in chat0003; A08-AN01 is now CLOSED at its first-slab
+scope; AN02 now also closes its corrected interval/overlaps, and
+AN03 now also closes its moving-band field/overlap scope. The broader
+A08 refinement/physical/core/assembly goals retain their separate limits.
 
 ## Accepted evidence carried forward
 
@@ -480,3 +497,234 @@ is recorded. Next Analysis — Sol should consume Note20's PartA inputs,
 complete uniform exact-switch sensitivity and named-center shifts, and
 state the first unpaid physical consumer. A08 and recurrence AN08 remain
 prepared for later regions; their scopes and statuses are unchanged.
+
+## A03-AN01 execution opened — 26 October 2026
+
+At the author's request through base Note64, **Analysis — Sol**,
+**gpt-6.1-sol, actual recorded effort ultra**, base chat0025, thread
+`01a179ab-8856-7ba0-89a2-500b2d854c80`. Execute the unchanged r1
+contract analytically on [63,65], using actual compact Note20, with fixed
+q/K and historical linear center. [Inputs22](../notes/22_NAMED_SWITCH_CENTERS_INPUTS_20261026.json)
+pins the sources. Root is sole ansatz-file writer; contributing agents
+check algebra/next consumer read-only. A separate agent owns recurrence
+AN08. Concurrent base chat0024 owns manuscript production; this return
+will supply notes and an integration pointer without editing its sources.
+This conversation remains uniquely archived as base chat0025.
+
+## A03-AN01 return and next consumer — 26 October 2026
+
+**AN01 r1 CLOSED**, **gpt-6.1-sol, actual recorded effort ultra**, base
+chat0025. Note22 NC15--19 supplies uniform exact-switch sensitivity and
+finite-height center shifts relative to the actual rounding width.
+Corrected centers move earlier by O(1/(X²logX)); the elementary center
+moves later by O(1/(X²log²X)). Factor-two centering is separately paid.
+The inherited layer accuracy stays O(1) absolute/O(1/logX) normalized;
+no direct density-time/current/covariance estimate is inferred.
+Assessment16 is same-model only; onsets uninstantiated. Frozen request,
+return/disposition and source hashes are linked above. No manuscript
+was edited by this research return; concurrent base chat0024 owns it.
+
+**A03-AN02 r1 READY_FOR_SOL**, prepared not executed: fixed P4 on[63,65]
+with requested static X^-7, current/covariance X^-7 Lambda²,
+time/source X^-6 Lambda² and residual-correction X^-7 rates, including
+all listed derivative orders and exact-q/actual-covariance payments.
+These are targets only. LT-06 points here and does not own a second
+live phase. HDA-A03 stays Partial and parent statuses remain unchanged.
+
+> Execute HDA-A03-AN02 r1 on [63,65]. Prove the fixed-P4 actual physical
+> tuple at its declared output-specific rates with corrected collars,
+> weak poles, flat-switch derivatives, full means/covariance and exact
+> residual corrections, or record the first precise unpaid estimate.
+
+This conversation is uniquely base chat0025. The registry refresh and
+bounded exact-turn final capture use that home; branch subagents do not
+create additional public chat registrations.
+
+
+## A03-AN02 execution opened — 26 October 2026, base chat0025
+
+Explicit author request: prove the frozen fixed-P4 physical tuple or
+identify the first unpaid estimate. **ANALYSIS — Sol**, actual model
+**gpt-6.1-sol, recorded effort ultra**, turn
+`01a179ec-1178-7b91-a108-042fe3108232`, same thread/archive identity.
+[Inputs23](../notes/23_FIXED_P4_PHYSICAL_TUPLE_INPUTS_20261026.json)
+re-pins the exact request and current physical sources. Root is sole
+writer; three contributing agents supply read-only same-model checks
+of collars/poles, covariance/defects and regulator/derivative accounting.
+No numerical/symbolic campaign or manuscript edit. Prior READY notices
+are historical; this dated entry owns current AN02 execution.
+
+
+## A03-AN02 return — 26 October 2026, base chat0025
+
+**Complete/CLOSED at frozen fixed-P4 high-height physical scope**, actual
+**gpt-6.1-sol, recorded effort ultra**. [Note23](../notes/23_FIXED_P4_PHYSICAL_TUPLE_20261026.md)
+proves corrected collars/units/poles, the exact flat-switch coefficient
+split, direct time/curvature, actual current/covariance/full means,
+actual signed source and retained equation defects. [Assessment17](../reviews/17_FIXED_P4_PHYSICAL_TUPLE_ASSESSMENT_20261026.md)
+accepts every requested row with same-model internal checks only.
+
+Static X^-7 (U/W through4; R/C through2), current/covariance
+X^-7 Lambda² (J internal3), time/source X^-6 Lambda² through2,
+heat-potential corrections X^-7 through4 and D_E through2 all hold.
+No requested estimate remains unpaid. One onset-summary quantifier was
+corrected: beta X<=B0 is an estimate regime, while B0/X<=1/2 is the
+actual eventual gate. Both regimes and the full[63,65] interval remain.
+Onsets/constants are finite and uninstantiated; no numerical campaign.
+The exact request is preserved with appended return/disposition; the
+work record and source hashes identify the research checkpoint.
+
+HDA-A03 remains Partial for the wider physical-layer program; the
+simple-layer error is unchanged. LT-06 points to this completed bounded
+consumer and does not own a duplicate phase. Compact core, wider
+physical assembly, evaluator height cost and independent audit remain.
+Parent HDA-17 Partial, HDA-18 Gated, HDA-20 unfulfilled unchanged.
+No manuscript production is claimed; source integration is separate.
+
+**Next Analysis — Sol:** existing [A08-AN01 r1](handoffs/HDA-A08-AN01.md),
+READY_FOR_SOL, prepared not executed, the first small-positive slab.
+
+> Execute HDA-A08-AN01 r1. Prove the full buffered canonical comparison
+> on[1/2,1], including spatial0--3, direct time and actual residual,
+> or record the first precise unpaid estimate. Preserve source/q/K.
+
+This is the same base chat0025 registration. Completed public text is
+refreshed with the authorized tool, then its exact-turn final capture
+is arranged; no branch/subagent registration or transcript editing.
+
+
+## A08-AN01 execution opened — 26 October 2026, base chat0025
+
+At the author's explicit request, **ANALYSIS — Sol**, actual
+**gpt-6.1-sol, effort ultra**, turn
+`01a179fa-f57d-7c12-a5a5-64a777f84e21`, same public chat/history.
+Inputs24 pins the frozen request and working-tree versions. Root is
+sole writer; three read-only same-model agents check local/residual
+algebra, complete source budgets and the t=1/2 endpoint. The candidate
+is the explicit elementary n=1 pair F0, with all omitted arithmetic
+paid, not assumed below its gamma error. No positive t>=32 error
+theorem is substituted outside its domain. No numerical/symbolic
+campaign, physical consumer or manuscript production is included.
+
+## A08-AN01 assessed return — 26 October 2026, base chat0025
+
+**AN01 r1 Complete/CLOSED at frozen scope; HDA-A08 Partial.** Actual
+**gpt-6.1-sol, effort ultra**. [Note24](../notes/24_SMALL_POSITIVE_SLAB_20261026.md)/[Assessment18](../reviews/18_SMALL_POSITIVE_SLAB_ASSESSMENT_20261026.md)
+proves F0 on[1/2,1], full fixed buffers, all spatial0--3 and direct time
+at the complete arithmetic power X^(-t log2/4), worst X^(-log2/8).
+Actual residual/residual_z are E_o Lambda²/X and E_o Lambda³/X.
+Every canonical source, arithmetic, gamma, completion, middle and
+infinite-tail row is paid. A fresh full-buffer common-H calibration
+closes the t=1/2 model comparison without extending the source theorem's
+strip. No requested estimate remains unpaid. Onsets are symbolic;
+same-model checks only. Frozen packet has appended return/disposition;
+Inputs24 and the analytical work record pin evidence. No manuscript,
+research computation or physical transfer was executed.
+
+**Next Analysis — Sol: [A08-AN02 r1](handoffs/HDA-A08-AN02.md),
+READY_FOR_SOL, prepared not executed.** Target corrected F1 on[3/4,33]
+with complete Lambda^4/X²+X^(-t log2/4), jets/time/residual and both
+genuine overlaps. This new target is not supplied by AN01's proof.
+The remaining1<t<32 coverage, t>=32 join, strong near-zero overlap,
+physical/core/cost/audit and parent HDA-17/18/20 statuses remain separate.
+This sole register owns execution; Progress03 LT-07 and Book rows point
+here. Same unique base chat0025; exact-turn final capture is arranged.
+
+> Execute HDA-A08-AN02 r1. Prove the corrected full-buffer canonical
+> comparison on[3/4,33], including complete arithmetic, spatial0--3,
+> direct time, exact residual and both genuine overlaps, or identify the
+> first precise unpaid estimate. Update sole Progress02 and chat history.
+
+
+## A08-AN02 execution opened — 26 October 2026, base chat0025
+
+Explicit author request, **ANALYSIS — Sol**, actual **gpt-6.1-sol, effort
+ultra**, turn `01a17a09-302e-7591-9d08-98462459262f`. Execute frozen r1
+on precisely[3/4,33], corrected F1 and both genuine overlap comparisons.
+[Inputs25](../notes/25_INTERMEDIATE_POSITIVE_INPUTS_20261026.json) pins
+current sources, including Note24 and the restricted[32,T] input. Root
+is sole writer; three read-only same-model agents check complete source
+budgets, correction/residual algebra and overlaps. Analytical only; no
+research computation, physical transfer or manuscript production. The
+existing unique base chat0025 is refreshed; its preceding final capture
+succeeded. Prior prepared-only AN02 notices are now historical.
+
+## A08-AN02 assessed return — 26 October 2026, base chat0025
+
+**AN02 r1 Complete/CLOSED**, actual **gpt-6.1-sol, effort ultra**.
+[Note25](../notes/25_INTERMEDIATE_POSITIVE_COMPARISON_20261026.md)/[Assessment19](../reviews/19_INTERMEDIATE_POSITIVE_COMPARISON_ASSESSMENT_20261026.md)
+proves unchanged F1 on[3/4,33], full buffers: complete
+B1=Lambda^4/X²+X^(-t log2/4), spatial0--3 at Lambda^j B1, direct
+time Lambda² B1, actual residual Lambda^4/X² and residual_z
+Lambda^5/X², all with E_o. No frozen row remains unpaid. All arithmetic,
+gamma, lower/middle and infinite-end payments are retained, with new
+upper-time gates and direct finite calibration. Onsets remain symbolic;
+root and three contributing checks are internal same-model only.
+
+Both genuine overlaps close: common H on[3/4,1], exact older F1 formula
+on[32,33] with Note20's actual buffers/onset and direct-time proof.
+Together with Note24/Note20 this gives the high-height field atlas
+[1/2,T] for each fixed finite T>=33, with T-dependent constants/onset.
+It closes the intermediate positive gap at that scope, without defining
+a new time splice or proving physical/core/cost/all-time uniformity.
+Wider HDA-A08/LT-07 Partial; parent statuses unchanged. Frozen request,
+return, Inputs25 and work record retain evidence. No manuscript or
+research computation was executed.
+
+**Next Analysis — Sol:** [A08-AN03 r1](handoffs/HDA-A08-AN03.md),
+READY_FOR_SOL, prepared only, retained-arithmetic comparison on4/L<=t<=1
+and genuine signed-window/F1 overlaps. Its rate is to be derived before
+acceptance. No bounded-tL n=1 obstruction or sharp lower bound is claimed.
+Progress03/Book are pointers; this remains the sole A08 live register.
+Same unique base0025; completed public history refreshed and final
+capture arranged after the actual reply.
+
+> Execute HDA-A08-AN03 r1. Prove a complete retained-arithmetic buffered
+> comparison on4/L<=t<=1 with a named vanishing allowance, spatial0--3,
+> direct time, exact residual and both genuine overlaps, or identify
+> its first precise unpaid estimate. Save evidence and update history.
+
+
+## A08-AN03 execution opened — 26 October 2026, base chat0025
+
+Explicit author request, **Analysis — Sol**, actual **gpt-6.1-sol, effort
+ultra**, turn `01a17a16-0370-7781-8a60-d6653eb9a8f4`. Frozen r1
+takes4/L<=t<=1, full buffers, retained arithmetic and both overlaps.
+[Inputs26](../notes/26_RETAINED_ARITHMETIC_INPUTS_20261026.json) pins
+current source versions. Root sole writer; three read-only same-model
+agents check the growing-shift RS estimate, complete mode/time budgets
+and actual overlaps. The focused route retains the existing frozen-N
+elementary family plus its RS completion, deriving the missing extended
+initial remainder rather than substituting into a fixed-strip constant.
+No research computation or manuscript edit. Whole-chat handoff requested;
+same unique base0025 history refreshed, prior final capture succeeded.
+
+## A08-AN03 assessed return and whole-chat handoff — 26 October 2026
+
+**AN03 r1 Complete/CLOSED**, actual **gpt-6.1-sol, effort ultra**, base0025.
+[Note26](../notes/26_RETAINED_ARITHMETIC_MOVING_POSITIVE_BAND_20261026.md)/[Assessment20](../reviews/20_RETAINED_ARITHMETIC_MOVING_BAND_ASSESSMENT_20261026.md)
+proves the existing finite F_N/RS completion on4/L<=t<=1 with
+eta=Lambda²X^-3/4. Field/j0--3, direct time, actual residual and
+residual_z have respectively E_o Lambda^j eta, E_o Lambda² eta,
+E_o eta and E_o Lambda eta. All requested estimates and both genuine
+overlaps are paid. The fresh growing-shift initial-error lemma bypasses
+the failed use of a fixed-strip constant at width O(tL). Every ordinary
+omitted mode, retained population, completion, gamma and infinite-tail
+term is accounted for. No research computation or manuscript edit.
+
+The lower overlap has identical frozen F_N; the upper compares through
+H at eta+B1. Inherited Note04 plus the same F_N covers[0,1]; Notes25/20
+give a high-height field atlas[0,T] for each fixed finite T>=33 after
+T-dependent onsets. Thus the previous moving-band field gap is closed
+at eta. Strong negative exp(-L²/4) precision through zero, new physical
+transfer/core/global spatial or time assembly/cost/audit remain separate.
+Wider A08/LT-07 Partial; high-height compact-positive field/matching
+coverage Complete at sourced rates; parent statuses unchanged.
+
+[Summary67](../../notes/67_CHAT0025_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md)
+is the requested all-results handoff: A03 centers and P4 physical tuple,
+R05 moving endpoint, and A08 AN01--AN03. Next **Analysis — Sol**:
+[B02-MI1 r1](../../research-progress/handoffs/HDA-B02-MI1.md), prepared
+only for manuscript production; Book progress alone owns that phase.
+This branch has no new dispatched research packet. Same-model internal
+assessment, symbolic onset and unique base0025 history remain explicit.

@@ -291,3 +291,28 @@ absolute density scale, evolution residual and control scope.
   production assessment, not the full-chain audit. Companion revisions
   remain planned in HDA-B01-MI1. Prepared for Edward Baker with substantial
   LLM assistance, gpt-6-astra, actual effort max, 26 October 2026.
+
+
+- [Review43: Book and companion integration](43_BOOK_COMPANION_INTEGRATION_PRODUCTION_REVIEW_20261026.md) — HDA-B01 production completion, common contract matrix, phase-selector margin correction, four fresh builds/visual checks and open research scopes; gpt-6.1-sol, actual effort ultra, base chat0024.
+
+
+- [44 — Heat-density research and RH applications](44_HEAT_DENSITY_TO_RH_APPLICATIONS_REVIEW_20261026.md).
+  26 October 2026; prepared for Edward Baker with substantial LLM assistance,
+  gpt-6-astra, actual effort max, chat 0026. Focused review of the Book,
+  parent contracts, Summary67 and the applications program. Identifies the
+  through-zero field gain, remaining margins/energy/core/cost obligations,
+  and manuscript status lag; no full-chain audit or new zero certificate.
+
+
+- [46 — Complete weak-filter puncture consumer](46_WEAK_FILTER_PUNCTURE_ASSESSMENT_20261026.md).
+  26 October 2026; for Edward Baker with substantial LLM assistance, gpt-6.1-sol, actual effort ultra, chat0028. Same-model assessment of full weak inventory, retained nonholomorphic correction, primitive post-filter allocation, spatial kernel4 boundary modulus and conditional time modulus. Normalized acquisition/provider and useful joint accuracy/height cost remain open; no research execution.
+
+- [45 — B02 r2 regional manuscript integration](45_B02_R2_MANUSCRIPT_INTEGRATION_PRODUCTION_ASSESSMENT_20261026.md).
+  Six integrated proof homes, exact parent/Book interfaces and conditional
+  application scope; four clean builds and rendered reading-copy QA.
+  Same-model production/source-contract checks only. Edward Baker with LLM
+  assistance, gpt-6.1-sol, actual effort ultra, 26 October 2026, chat0027.
+
+
+- [47 — Graded weak-filter and acquisition cost](47_GRADED_WEAK_FILTER_COST_ASSESSMENT_20261026.md).
+  26 October 2026; for Edward Baker with substantial LLM assistance, gpt-6.1-sol, actual effort ultra, chat0028. Same-model assessment of the fixed-family joint numerical-height/source-demand/accuracy cost proof, all actual acquisition/provider/cancellation terms charged. Work degree80, streaming storage degree32; huge uninstantiated constants, no research execution or global-time theorem.

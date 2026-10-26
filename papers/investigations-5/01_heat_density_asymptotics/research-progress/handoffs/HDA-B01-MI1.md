@@ -62,3 +62,18 @@ conditions are met, leaving all scientific statuses at their supported
 scopes. Otherwise record Partial and the specific remaining work. The next
 scientific session should use the existing A03-AN01 or R05-AN08 request,
 selected by the author, rather than infer a new dispatch from this packet.
+
+
+## RETURN — executed r1, 26 October 2026, base chat0024
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual recorded effort ultra**, thread `01a179ab-5062-7e31-8f9c-9c6fad3540e3`. [Inputs65](../../notes/65_COMPANION_INTEGRATION_INPUTS_20261026.json) rehashes all169 baseline files and pins subsequent source supplements. All baseline companion TeX/proof notes matched; four post-Manifest63 navigation files were re-read. The [integration note](../../notes/65_BOOK_COMPANION_INTEGRATION_20261026.md) gives the shared theorem-contract matrix and exact corrections.
+
+Full Ansatz Notes17--20 and parent Notes58--61 are integrated; recurrence's detailed proofs and all inherited physical data/rates are preserved. Book proof links/current scope/navigation agree. A new phase-selector statement was narrowed from selection>1/100 to existence>1/100/selected>1/200, matching source PI21--22; exact ceiling/costs unchanged. Book Q/RS/provider clarifications are recorded. Concurrent A03-AN01 and R05-AN08 closed during production; their exact results are linked as source supplements, with full new proofs left in their original notes. No AN02 target rate is promoted.
+
+[Review43](../../reviews/43_BOOK_COMPANION_INTEGRATION_PRODUCTION_REVIEW_20261026.md) links four fresh source/PDF/build/visual records. Every reading copy builds cleanly with resolved citations/labels and all-page rendered inspection plus dense/changed-page checks. PDFs remain in ignored root output. No research numerics, snapshot, staging or commit; frozen requests/original evidence/chat identities preserved.
+
+## DISPOSITION — Analysis, Sol
+
+**HDA-B01-MI1 r1 Complete/CLOSED at production scope.** Four consistent reading copies and detailed proof ownership meet the bounded acceptance conditions. Internal LLM production checks do not constitute independent specialist/HDA-20 validation. Strong through-zero, compact corrected core, positive growing order, corrected physical tuple, useful uniform height cost, full implementation and historical audit gates retain their sourced statuses.
+
+Next **Analysis — Sol**: existing [A03-AN02 r1](../../ansatz/research-progress/handoffs/HDA-A03-AN02.md), prepared/unexecuted fixed-P4 physical consumer. Prove the declared output rates with all required payments or record the first precise unpaid term. This production disposition dispatches no scientific task.

@@ -335,3 +335,36 @@ record the assessment and next production deliverable. No mathematical
 status or manuscript proof is changed. The shared refresh tool owns the
 archive/registry; the bounded exact-turn follow-up captures the actual
 completed final reply. Other conversations retain their existing homes.
+
+
+## Chat0025 — Research heat density asymptotics, 26 October 2026
+
+[Research heat density asymptotics](0025_2026-10-26T19-24-07Z_research-heat-density-asymptotics.json),
+thread `01a179ab-8856-7ba0-89a2-500b2d854c80`, is this cross-branch
+research return to Note64: A03-AN01 named centers and R05-AN08 moving
+negative endpoint, with the next fixed-P4 physical request. For Edward
+Baker with substantial LLM assistance, **gpt-6.1-sol, actual recorded
+effort ultra**. [Return66](../notes/66_BOOK_RESEARCH_RETURN_20261026.md)
+links evidence and scope. This new research chat has one base registration;
+no prior chat was moved or renumbered, and contributing agents create no
+extra public history. The authorized refresh tool owns archive/index;
+current counts/hashes/times are in index.json. Bounded exact-turn capture
+saves the real final only after it is recorded and the turn completes.
+
+
+Chat0025 continues in the same registration with the author's explicit
+A03-AN02 request: [Ansatz Note23](../ansatz/notes/23_FIXED_P4_PHYSICAL_TUPLE_20261026.md)
+and Assessment17 prove the frozen fixed-P4 physical tuple on[63,65].
+Actual configuration remains **gpt-6.1-sol, ultra**, turn
+`01a179ec-1178-7b91-a108-042fe3108232`. The previous exact-turn worker
+status was checked; the prior final is present. The wrapper refreshes
+completed public text and captures this turn's real final only after
+completion. No original identity, title, number or provenance is changed.
+
+The manuscript-production conversation is
+[0027 — Apply manuscript update plan](0027_2026-10-26T22-52-05Z_apply-manuscript-update-plan.json),
+thread `01a17a69-f0cf-7372-b7aa-4da4c470cda0`, created26 October 2026.
+It executes B02 r2/Plan68, integrates the six regional proof returns,
+reconciles parent/Book/application scope and records four builds/QA.
+Its unique registration belongs here; earlier histories retain their
+original identities. Configuration: gpt-6.1-sol, actual effort ultra.

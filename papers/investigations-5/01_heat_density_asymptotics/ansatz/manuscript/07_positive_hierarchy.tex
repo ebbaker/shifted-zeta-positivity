@@ -1,0 +1,841 @@
+\section{Every fixed positive correction order and the compact field bridge}
+\label{sec:positive-hierarchy}
+This section supplies the detailed positive-time proofs for the Book
+\cite{book}, integrating Ansatz Notes17--20 \cite{ansatz17,ansatz18,ansatz19,ansatz20}.
+They are unconditional canonical-source approximation theorems, proved
+in-note from named inputs with same-model internal assessment only.
+The finite construction is not a convergent infinite expansion. The
+negative order $p_-$ used in the recurrence companion, its
+Riemann--Siegel coefficients $C_k^{\rm RS}$, and our fixed positive
+order $J$ and coefficients $C_{2j}^{+}$ are different objects.
+
+For each fixed correction order $J$, choose its constants and onset
+after fixing the buffers. The analytic domain floor $t\ge32$ below is
+not a numerical value of the eventual all-height onset $t_{*,J}$.
+Increasing $J$ does not remove the complete arithmetic allowance.
+
+\subsection{Contract, branch, and the complete joint budget}
+Fix finite observation widths $H_0,Y_0$ and an analytic margin $b>0$.
+For every real center $x$ prove the field estimate first on
+\[
+ |\Re z-x|\le H_0+2b,\qquad |\Im z|\le Y_0+2b;
+\]
+report derivatives on the smaller rectangle with $b$ in place of $2b$.
+All widths are fixed before constants and onset. In particular an
+all-height theorem always concerns a fixed transverse strip, with
+its full buffers. For $t>0$ put
+\begin{equation}
+ X=|x|,\quad R=2+t+X,\quad L_+=\log R,\quad N_+=1+X+tL_+.
+ \label{eq:positive-scales}
+\end{equation}
+Use the full $\Mc$ in \eqref{eq:gamma}, $f=\log\Mc$, and
+$\alpha=f'$. The logarithm is holomorphic in $\Re p>1$, real for
+$p>1$; the saddle is the selected large right-half-plane solution in
+\eqref{eq:full-saddle}, with $B^{-1/2}$ near one. Define
+\begin{equation}
+ \Acal_+(t,z)=|\Sc_t(s)|+|\Sc_t(1-s)|>0,\qquad
+ a_r=\alpha^{(r)}(p),\quad m=|p|,\quad a=\Re(p-w).
+ \label{eq:positive-envelope}
+\end{equation}
+The $p,B,a_r$ on each arm belong to that arm's $w=s,1-s$.
+The norm divides by this positive sum, never by $H$ or a signed model.
+
+For completeness, sectorial log-gamma estimates \cite{dlmf-gamma}
+give $\alpha(p)=\tfrac12\Log(p/(2\pi))+O(m^{-1})$ and
+$|\alpha^{(r)}(p)|\le K_rm^{-r}$ on a fixed enlarged exterior
+sector. For $w=\sigma+i\tau_0$, $\tau_0\ge0$, the map
+$p\mapsto w+t\alpha(p)/2$ contracts the rectangle
+\[
+ \sigma+tL_+/8\le\Re p\le\sigma+tL_+,
+ \qquad \tau_0\le\Im p\le\tau_0+t
+\]
+after a uniform onset. Its real increment is
+$tL_+/4+O(t\log L_+)$ and its derivative is
+$O(t/N_+)=O(1/L_+)$. Near the real axis
+$\Re\alpha'(A+i\tau)>0$ for $0\le\tau\le A$; farther up,
+the half-argument term of $\alpha$ gives $\Im\alpha\ge0$.
+Thus the imaginary increment has the stated sign, including the real
+saddle at $\tau_0=0$. Conjugation treats negative $\tau_0$.
+Uniqueness and $B\ne0$ give holomorphic dependence, with
+\begin{equation}
+ a\asymp tL_+,\quad a\ge tL_+/5,\quad m\asymp N_+,
+ \quad |\Im(p-w)|\le t,\quad |B-1|\le1/4,\quad m\ge t.
+ \label{eq:positive-branch-gates}
+\end{equation}
+Every fixed enlargement is chosen before this onset, which uses no
+zero hypothesis. This is the branch of parent Note30, audited in
+Note17; no new saddle or fitted normalization is substituted.
+
+Fix an integer $J\ge0$ before choosing constants. Write $n=2J+2$,
+and define the finite coefficients below and
+\begin{align}
+ P_{2J}(t,z)&=\sum_{w=s,1-s}\Sc_t(w)\sum_{j=0}^J C_{2j}^{+}(t,w),\notag\\
+ b_J&=\sum_{k=1}^{n}\frac{t^{n/2+k}}{N_+^{n+k}},
+ &\delta_J&=\frac{b_J}{t}
+ =\sum_{h=J+1}^{3J+2}\frac{t^h}{N_+^{h+J+2}},\notag\\
+ E_J&=b_J+R^{-\kappa_at}+R^{b_0}e^{-ctL_+^2},
+ &\kappa_a&=\frac{\log2}{8}.
+ \label{eq:positive-full-budget}
+\end{align}
+Here $b_0$ is a fixed middle-strip polynomial exponent; the contour
+rate $c>0$ may be decreased to at most $1/400$, independently of
+$J$. Finite polynomial-tail prefactors depend on $J$.
+
+\begin{theorem}[Every fixed positive correction order]
+\label{thm:positive-fixed}
+For every fixed $J,H_0,Y_0,b$ there are finite constants
+$C_{J,d},C_{t,J},C_{r,J},R_{0,J}$ such that for $t\ge32$ and
+$R\ge R_{0,J}$,
+\begin{align}
+ |\partial_z^d(H-P_{2J})|&\le C_{J,d}\Acal_+L_+^dE_J,
+                         &&0\le d\le3,\notag\\
+ |(H-P_{2J})_t|&\le C_{t,J}\Acal_+(L_+^2E_J+\delta_J),\notag\\
+ |(\partial_t+\partial_{zz})P_{2J}|&\le C_{r,J}\Acal_+\delta_J.
+ \label{eq:positive-joint-error}
+\end{align}
+The field bound holds on the larger rectangle; derivatives are on
+its paid interior, also for mixed real spatial derivatives of total
+order $d$. There is a sufficient $t_{*,J}$, independent of real $x$,
+for which the arithmetic and contour budgets are absorbed into $b_J$.
+For $t\ge t_{*,J}$, uniformly over all real centers and their fixed
+rectangles,
+\begin{align}
+ \frac{|\partial_z^d(H-P_{2J})|}{\Acal_+}
+ &\le\frac{C_{J,d}}{t^{J+1}\log^{2J+3-d}(2+t)},&&0\le d\le3,\notag\\
+ \frac{|(H-P_{2J})_t|}{\Acal_+}
+ &\le\frac{C_{t,J}}{t^{J+1}\log^{2J+1}(2+t)},\notag\\
+ \frac{|(\partial_t+\partial_{zz})P_{2J}|}{\Acal_+}
+ &\le\frac{C_{r,J}}{t^{J+2}\log^{2J+3}(2+t)}.
+ \label{eq:positive-eventual-error}
+\end{align}
+All constants are finite constructions in the fixed sectorial and
+source constants; none has been numerically instantiated. The
+quantifier is ``for each fixed $J$, there exist constants and an
+onset.'' It supplies no $J=J(t)$, optimal-truncation or convergence
+theorem.
+\end{theorem}
+
+\subsection{Finite partition algebra, with both worked corrections}
+\begin{proposition}[Finite positive coefficients]
+\label{prop:positive-coefficients}
+Put $\beta_r=a_{r+1}/(r+2)!$ and
+$\mathcal P_\ell=\{\nu\in\mathbb Z_{\ge0}^{\ell}:\sum r\nu_r=\ell\}$,
+with $k=|\nu|=\sum\nu_r$ and the empty partition at $\ell=0$.
+Then
+\begin{align}
+ A_\ell(u)&=\sum_{\nu\in\mathcal P_\ell}u^{\ell+2k}
+                  \prod_r\frac{\beta_r^{\nu_r}}{\nu_r!},
+ &\ell A_\ell&=\sum_{r=1}^{\ell}r\beta_ru^{r+2}A_{\ell-r},\notag\\
+ C_{2j}^{+}&=\sum_{\nu\in\mathcal P_{2j}}
+ \frac{(2j+2k-1)!!}{2^{j+k}}\left(\frac tB\right)^{j+k}
+ \prod_r\frac{a_{r+1}^{\nu_r}}{(r+2)!^{\nu_r}\nu_r!}.
+ \label{eq:positive-partition}
+\end{align}
+Here $A_0=C_0^+=1$, $(-1)!!=1$. In particular
+\begin{align}
+ C_2^+&=\frac{t^2a_3}{32B^2}+\frac{5t^3a_2^2}{192B^3},\notag\\
+ C_4^+&=\frac{t^3a_5}{384B^3}
+ +\frac{t^4}{B^4}\left(\frac{7a_2a_4}{768}
+                         +\frac{35a_3^2}{6144}\right)
+ +\frac{35t^5a_2^2a_3}{2048B^5}
+ +\frac{385t^6a_2^4}{73728B^6}.
+ \label{eq:positive-c2-c4}
+\end{align}
+\end{proposition}
+\begin{proof}
+Extract one coefficient at a time from the formal exponential
+$\exp(\sum_{r\ge1}\beta_ru^{r+2}\lambda^r)$; differentiating in
+$\lambda$ gives the recurrence. Every monomial of $A_\ell$ has
+degree $\ell+2k$, hence parity $\ell$. For $\Re B>0$ the normalized
+Gaussian moment of $u^{2v}$ is $(2v-1)!!(t/B)^v/2^v$, and odd
+moments vanish. This proves \eqref{eq:positive-partition} by finite
+algebra. The grade-four polynomial is
+\[
+ A_4=\beta_4u^6+(\beta_1\beta_3+\beta_2^2/2)u^8
+       +\beta_1^2\beta_2u^{10}/2+\beta_1^4u^{12}/24.
+\]
+Its five partitions give the five displayed $C_4^+$ monomials;
+$A_2=a_3u^4/24+a_2^2u^6/72$ gives $C_2^+$. The contour
+justification of these moments follows next; convergence of the
+formal series at $\lambda=1$ is never used.
+\end{proof}
+
+\subsection{Finite interpolation, Bell remainder, and actual parity}
+We prove the central estimate in Theorem~\ref{thm:positive-fixed}.
+Only derivatives through $2J+3=n+1$ are needed. For example, write
+$\alpha(q)=\tfrac12\Log(q/(2\pi))+g(q)$ with
+$|g(q)|\le G/|q|$ on a larger exterior sector. Disks of radius
+$|q|/4$ there give the finite sufficient family
+\begin{equation}
+ K_r=\tfrac12(r-1)!+\tfrac43G\,4^rr!/m_0,
+ \qquad1\le r\le n+1,
+ \label{eq:positive-sector-constants}
+\end{equation}
+provided those disks lie in $|q|\ge m_0$; increase the onset
+accordingly. This follows directly from Cauchy's derivative estimate
+for $g$ and the differentiated logarithm.
+
+On the actual shifted horizontal segment $\mathcal U=[-a/2,a/2]$
+write $v=p-w+u$, $u\in\R$, and put
+\begin{equation}
+ E_\lambda(u)=u^2\int_0^1(1-r)
+              [f''(p+r\lambda u)-f''(p)]\dd r,
+ \qquad0\le\lambda\le1.
+ \label{eq:positive-interpolation}
+\end{equation}
+It vanishes at zero and equals the exact nonquadratic exponent at
+one. Onset ensures $|p+r\lambda u|\ge m/3$. Differentiating this
+finite integral gives
+\begin{equation}
+ |\partial_\lambda^rE_\lambda|
+ \le d_r|u|^{r+2}m^{-r-1},\qquad
+ d_r=\frac{3^{r+1}K_{r+1}}{(r+1)(r+2)},\quad1\le r\le n.
+ \label{eq:positive-interpolation-derivatives}
+\end{equation}
+The identity
+\[
+ -Bu^2/t+E_\lambda
+ =-u^2/t+u^2\int_0^1(1-r)f''(p+r\lambda u)\dd r
+\]
+shows that $3K_1t/(2m)\le1/2$ suffices for the common majorant
+$|e^{-Bu^2/t+E_\lambda}|\le e^{-u^2/(2t)}$ on the whole segment
+and all real interpolation parameters. No uniform smallness of
+$E_\lambda$ is assumed. Define the finite Bell constants
+\begin{equation}
+ D_{n,k}=\sum_{\substack{\nu\in\mathcal P_n\\|\nu|=k}}
+             \prod_{r=1}^n\frac{(d_r/r!)^{\nu_r}}{\nu_r!}.
+ \label{eq:positive-bell-constants}
+\end{equation}
+Taylor's integral remainder for $e^{E_\lambda}$ through degree
+$n-1$ proves
+\begin{equation}
+ \left|e^{-Bu^2/t}\left(e^{E_1}-\sum_{\ell=0}^{n-1}A_\ell\right)\right|
+ \le e^{-u^2/(2t)}\sum_{k=1}^nD_{n,k}
+                               \frac{|u|^{n+2k}}{m^{n+k}}.
+ \label{eq:positive-bell-remainder}
+\end{equation}
+Indeed the $n!$ of the Bell polynomial cancels the Taylor denominator;
+a partition of derivative order $n$ into $k$ factors has exactly
+the displayed powers. This is a finite real Taylor argument.
+With
+\[
+ G_v(\eta)=\frac{(2v-1)!!}{2^v\eta^{v+1/2}},\qquad
+ (\pi t)^{-1/2}\int_\R u^{2v}e^{-\eta u^2/t}\dd u
+ =G_v(\eta)t^v,
+\]
+and $m\ge c_mN_+$, a sufficient local per-arm constant is
+\begin{equation}
+ C_{{\rm loc},J}=\max_{1\le k\le n}
+  \sqrt{5/4}\,D_{n,k}G_{n/2+k}(1/2)c_m^{-n-k}.
+ \label{eq:positive-local-constant}
+\end{equation}
+The normalized local integral is at most $C_{{\rm loc},J}b_J$;
+$\sqrt{5/4}$ converts the saddle prefactor to $|\Sc|$.
+
+Odd $A_\ell$ integrate to zero on the actual symmetric $\mathcal U$
+against its even, generally complex Gaussian. Extend only
+$A_0,A_2,\ldots,A_{2J}$ to full-line moments. Their maximum degree
+is $6J$. With $b_r=K_{r+1}/(r+2)!$, their omitted tails relative
+to $|\Sc|$ are at most
+\begin{equation}
+ \sqrt{5/4}\,Q_Je^{-3a^2/(32t)}
+ \le\sqrt{5/4}\,Q_Je^{-tL_+^2/400},\qquad
+ Q_J=\sum_{j=0}^J\sum_{\nu\in\mathcal P_{2j}}
+     G_{j+k}(3/8)\prod_r\frac{b_r^{\nu_r}}{\nu_r!}.
+ \label{eq:positive-polynomial-tail}
+\end{equation}
+Split $e^{-3u^2/(4t)}$ into equal Gaussian factors, use
+$|u|\ge a/2$ in one, and full moments in the other.
+The remaining factors $t^{j+k}/m^{2j+k}$ are at most one since
+$m\ge t\ge1$. No actual gamma integrand has been extended through
+poles into a fictitious negative half-line.
+
+For the first worked order, this gives exactly
+$b_1=t^3/N_+^5+t^4/N_+^6+t^5/N_+^7+t^6/N_+^8$; for the
+second, $b_2=\sum_{k=1}^6t^{k+3}/N_+^{k+6}$. Thus the general
+finite proof includes both Notes17--18 without suppressing their
+parity gain or changing their rates.
+
+\subsection{Both original ends, connectors, middle, and full arithmetic}
+The exact positive convolution \eqref{eq:positive-anchor} is
+\begin{equation}
+ H(t,z)=(\pi t)^{-1/2}\int_\R e^{-v^2/t}\xi(s+v)/8\dd v.
+ \label{eq:positive-canonical-integral}
+\end{equation}
+This follows from the Gaussian identity and Fubini for the complete
+canonical source, with the normalization checked in \cite{polymath}.
+Split at $\Re(s+v)=2,-1$. Reflection $\xi(w)=\xi(1-w)$ and
+$v\mapsto-v$ give two arms
+\[
+ I_w=(\pi t)^{-1/2}\int_{v_0}^{\infty}
+    e^{-v^2/t}\Mc(w+v)\zeta(w+v)\dd v,\qquad v_0=2-\Re w,
+\]
+plus the bounded original middle. Shift an arm to
+$v=r+ih$, $h=\Im(p-w)$, retaining the oriented connector from
+$v_0$ to $v_0+ih$. Every piece stays in $\Re(w+v)\ge2$, so
+no gamma singularity or zeta pole is crossed and the full ordinary
+Dirichlet series applies. First close a finite rectangle: its far
+vertical face tends to zero by
+$\exp[-r^2/t+O(r\log(r+2))]$ for each fixed $t,z$.
+Uniform infinite-tail payments follow from the following quadratic
+bound, rather than an unspecified finite cutoff.
+
+For $u\ge-a/2$ the segment from $p$ to $p+u$ stays in $\Re>1$
+and has modulus at least $c_0m$ (increasing for $u\ge0$).
+The integral Taylor bounds
+\[
+ |f(p+u)-f(p)-\alpha(p)u|\le Cu^2/m,
+ \qquad |e^{-Bu^2/t+E_1(u)}|\le e^{-c_0u^2/t}
+\]
+follow after increasing onset so $Ct/m$ is small. This pays the
+true infinite right tail outside $\mathcal U$, even when its cubic
+Taylor term is large.
+
+On the remaining left horizontal segment write $A=\Re p$ and
+$d=a-r\ge a/2$. Horizontal integration gives
+\[
+ \int_{A-d}^A\Re\alpha(v+i\Im p)\dd v
+ \ge d\Re\alpha(p)-CA.
+\]
+Indeed $|v+i\tau|/|A+i\tau|\ge v/A$ and the logarithmic loss
+is at most $\tfrac12\int_0^A-\log(v/A)\dd v=A/2$; bounded
+remainders add $O(A)$. Since $\Re\alpha(p)=2a/t$, the normalized
+integrand is at most $e^{-d^2/t+CA}\le e^{-ctL_+^2}$.
+Its length divided by $\sqrt t$ is absorbed by decreasing $c$.
+At the connector's top use this comparison down to real part two;
+$|\Im\alpha|$ is bounded there, so vertical gamma motion costs
+$e^{C|h|}\le e^{Ct}$. The Gaussian does not increase as $|\Im v|$
+decreases; its length is paid in the same way. A collapsed connector
+has exactly zero contribution.
+
+For the original middle, fixed-real-strip Euler summation, reflection
+and Stirling give a finite $b_0$ with
+\[
+ \sup_{-1\le\beta\le2}|\xi(\beta+i\tau_0)/8|
+ \le C(1+|\tau_0|)^{b_0}|\Mc(2+i\tau_0)|.
+\]
+At bounded height use compactness of the entire $\xi$ and the
+nonvanishing denominator, rather than a high-height estimate at zero.
+The preceding endpoint-to-saddle comparison pays the whole middle by
+$CR^{b_0}e^{-ctL_+^2}$ relative to the arm envelope.
+
+Finally $|\zeta(q)-1|\le3\,2^{-\Re q}$ for $\Re q\ge2$.
+For the central/right part $r\ge a/2$, the whole-ray Gaussian and
+completion of the $\log2$ tilt give
+\begin{equation}
+ \frac{\hbox{complete arithmetic arm error}}{|\Sc|}
+ \le C_{\rm ar}e^{-a\log2+t(\log2)^2/2}
+ \le C_{\rm ar}R^{-\kappa_at},\qquad
+ C_{\rm ar}=3\,2^\Sigma\sqrt{5/2},
+ \label{eq:positive-arithmetic}
+\end{equation}
+where $\Re w\ge-\Sigma$ on the buffers. The last inequality
+uses $a\ge tL_+/5$ and $L_+\ge20\log2/3$. Every $n\ge2$
+is included. On the other segments use $|\zeta|\le\zeta(2)$ in
+the already paid contour bounds. In summary:
+\begin{center}\small
+\begin{tabular}{@{}p{.55\textwidth}p{.37\textwidth}@{}}\toprule
+Complete contribution & Payment relative to its own arm\\\midrule
+Actual central truncation & $C_{{\rm loc},J}b_J$\\
+Finite even polynomial tails & explicit \eqref{eq:positive-polynomial-tail}\\
+True infinite right ray outside $\mathcal U$ & $Ce^{-ctL_+^2}$\\
+Left horizontal segment and oriented connector & $Ce^{-ctL_+^2}$\\
+Original bounded middle & $CR^{b_0}e^{-ctL_+^2}$\\
+Full $n\ge2$ on central/right portion & $C_{\rm ar}R^{-\kappa_at}$\\
+Other arithmetic & included with $|\zeta|\le\zeta(2)$\\\bottomrule
+\end{tabular}
+\end{center}
+Reflection pays the other original infinite end. Summing the two arms
+and middle proves the field part of \eqref{eq:positive-joint-error}
+with all three budgets visible. The constants in the nonlocal rows
+are independent of $J$ except for the explicit finite polynomial-tail
+prefactor. Neither a generic saddle citation nor a formal residual
+cancellation replaces these canonical payments.
+
+\subsection{The exact transport recurrence and nonzero residual}
+\begin{proposition}[Finite saddle transport and telescope]
+\label{prop:positive-residual}
+In each arm define
+\begin{equation}
+ \mathcal Q_+=\frac1{4B^2}\partial_{pp}
+  +\frac{ta_2}{4B^3}\partial_p+k_0,\qquad
+ k_0=\frac{ta_3}{16B^3}+\frac{5t^2a_2^2}{64B^4}.
+ \label{eq:positive-Q}
+\end{equation}
+For any coefficient $F(t,p)$,
+\begin{align}
+ \Sc^{-1}(\partial_t-\tfrac14\partial_{ww})(\Sc F)
+      &=(\partial_t|_p-\mathcal Q_+)F,\notag\\
+ \partial_t|_p C_{2j+2}^+&=\mathcal Q_+C_{2j}^+,\notag\\
+ (\partial_t+\partial_{zz})P_{2J}
+      &=-\sum_{w=s,1-s}\Sc_t(w)\mathcal Q_+C_{2J}^+.
+ \label{eq:positive-exact-residual}
+\end{align}
+The final residual is eventually nonzero at $z=0$ for each fixed $J$.
+\end{proposition}
+\begin{proof}
+Implicit differentiation gives $p_w=B^{-1}$,
+$p_t=\alpha/(2B)$ and
+$(\log\Sc)_w=\alpha+ta_2/(4B^2)$. Direct product and chain
+rules give the first identity, including $\Sc^{-1}
+(\partial_t-\tfrac14\partial_{ww})\Sc=-k_0$.
+To prove the coefficient identity at every finite grade, put
+$\rho=t/B$ and define the polynomial Gaussian functional
+$\mathcal G_\rho[u^{2v}]=(2v-1)!!(\rho/2)^v$,
+$\mathcal G_\rho[u^{2v+1}]=0$. Monomial checks give
+\begin{align}
+ \mathcal G_\rho(uF)&=\tfrac\rho2\mathcal G_\rho(F_u),\notag\\
+ \mathcal G_\rho(u^2F)&=\tfrac\rho2\mathcal G_\rho F
+                       +\tfrac{\rho^2}4\mathcal G_\rho(F_{uu}),\notag\\
+ \partial_\rho\mathcal G_\rho F&=\tfrac14\mathcal G_\rho(F_{uu})
+ \quad\hbox{if $F$ is $\rho$-independent}.
+ \label{eq:positive-gaussian-functional}
+\end{align}
+Read the formal expressions
+\[
+ g_\lambda=\exp\!\left(\sum_{r\ge1}
+             \frac{a_{r+1}u^{r+2}}{(r+2)!}\lambda^r\right),
+ \qquad \mathcal C_\lambda=\mathcal G_\rho g_\lambda
+                =\sum_{j\ge0}C_{2j}^+\lambda^{2j}
+\]
+modulo any sufficiently high finite power of $\lambda$. Each
+coefficient is a finite polynomial. Exactly
+\[
+ g_{\lambda,u}=\lambda g_{\lambda,p}
+           +\lambda a_2u^2g_\lambda/2,\qquad
+ \rho_p=a_2\rho^2/2,\quad \rho_t|_p=B^{-2}.
+\]
+For $h=\rho a_2/4$, the $\rho_p$ term cancels when the first
+moment identity is applied, leaving
+$\mathcal G_\rho(g_{\lambda,u})
+ =\lambda(\mathcal C_{\lambda,p}+h\mathcal C_\lambda)$.
+Differentiating the $g$ identity in $u$, applying the same finite
+moments, and then using it again gives
+\[
+ \mathcal G_\rho(g_{\lambda,uu})
+ =\lambda^2\{\mathcal C_{\lambda,pp}+4h\mathcal C_{\lambda,p}
+                         +(h_p+3h^2)\mathcal C_\lambda\},
+ \quad h_p+3h^2=\rho a_3/4+5\rho^2a_2^2/16.
+\]
+Since $g_\lambda$ is $t$-independent at fixed $p$, the last
+moment identity proves
+$\partial_t|_p\mathcal C_\lambda=\lambda^2\mathcal Q_+
+\mathcal C_\lambda$. Extraction gives the stated recurrence.
+Finite telescoping of $\sum_{j=0}^JC_{2j}^+$ gives the residual;
+both affine arms have $(w_z)^2=-1/4$.
+
+To exhibit its nonvanishing, the single-factor partition of
+$C_{2J+2}^+$ and sectorial differentiation give
+\[
+ \mathcal Q_+C_{2J}^+
+ =\frac{t^{J+1}\alpha^{(2J+3)}(p)}
+        {4^{J+2}(J+1)!B^{J+3}}\{1+o(1)\}
+ =\frac{(2J+2)!}{2\,4^{J+2}(J+1)!}
+       \frac{t^{J+1}}{p^{2J+3}}\{1+o(1)\}
+\]
+at $z=0$, as $t\to\infty$. There $p,\Sc$ are positive real,
+so the two arms do not cancel. This residual statement is separate
+from the field comparison.
+\end{proof}
+
+For direct checks of the worked orders, $\mathcal Q_+C_2^+$ is
+\begin{equation}
+ G_4=\frac{t^2a_5}{128B^4}
+ +\frac{t^3}{B^5}\left(\frac{35a_3^2}{1536}
+                         +\frac{7a_2a_4}{192}\right)
+ +\frac{175t^4a_2^2a_3}{2048B^6}
+ +\frac{385t^5a_2^4}{12288B^7}.
+ \label{eq:positive-G4}
+\end{equation}
+Also $\partial_t|_p C_2^+=k_0$, $\partial_t|_pC_4^+=G_4$,
+using $\partial_t|_p(t^vB^{-v})=vt^{v-1}B^{-v-1}$.
+The next exact residual is $-\sum_w\Sc_t(w)G_6$, where
+\begin{align}
+ G_6={}&\frac{t^3a_7}{1536B^5}
+ +\frac{t^4}{B^6}\left(\frac{5a_2a_6}{1024}
+              +\frac{35a_3a_5}{4096}+\frac{21a_4^2}{4096}\right)\notag\\
+ &+\frac{t^5}{B^7}\left(\frac{77a_2^2a_5}{4096}
+       +\frac{231a_2a_3a_4}{4096}+\frac{385a_3^3}{32768}\right)\notag\\
+ &+\frac{t^6}{B^8}\left(\frac{7007a_2^3a_4}{147456}
+                       +\frac{35035a_2^2a_3^2}{393216}\right)
+ +\frac{25025t^7a_2^4a_3}{294912B^9}
+ +\frac{85085t^8a_2^6}{4718592B^{10}}.
+ \label{eq:positive-G6}
+\end{align}
+Thus both original corrections retain their actual nonzero residuals,
+not merely a formal cancellation count.
+
+\subsection{Finite residual constants, jets, time error, and onset}
+Group the finite coefficient as
+\[
+ C_{2J}^+=\sum_vt^vB^{-v}U_{J,v},\qquad
+ U_{J,v}=\sum_{\substack{\nu\in\mathcal P_{2J}\\|\nu|=v-J}}
+  \frac{(2v-1)!!}{2^v}
+       \prod_r\frac{a_{r+1}^{\nu_r}}{(r+2)!^{\nu_r}\nu_r!}.
+\]
+For $J\ge1$, $J+1\le v\le3J$; set $U_{0,0}=1$ and
+out-of-range terms to zero. They have positive coefficients and
+weight $v+J$ if $a_r$ has weight $r$. Let $\mathfrak d a_r=a_{r+1}$.
+Using $B_p=-ta_2/2$, finite product rules give
+\begin{align}
+ \mathcal Q_+[t^vB^{-v}U]={}&\frac{t^v\mathfrak d^2U}{4B^{v+2}}
+ +\frac{(v+1)t^{v+1}a_2\mathfrak dU}{4B^{v+3}}\notag\\
+ &+\frac{(2v+1)t^{v+1}a_3U}{16B^{v+3}}
+ +\frac{(2v+1)(2v+5)t^{v+2}a_2^2U}{64B^{v+4}}.
+ \label{eq:positive-product-residual}
+\end{align}
+Put $\widehat K_r=K_rc_m^{-r}$ and $\beta=4/3$. For
+$J+1\le q\le3J+2$ define
+\begin{align}
+ V_{J,q}=\beta^{q+2}\bigg\{&\tfrac14(\mathfrak d^2U_{J,q})(\widehat K)
+ +\tfrac q4\widehat K_2(\mathfrak dU_{J,q-1})(\widehat K)\notag\\
+ &+\tfrac{2q-1}{16}\widehat K_3U_{J,q-1}(\widehat K)
+ +\tfrac{(2q-3)(2q+1)}{64}\widehat K_2^2U_{J,q-2}(\widehat K)\bigg\}.
+ \label{eq:positive-residual-constants}
+\end{align}
+Weights and coefficient positivity bound $|\mathcal Q_+C_{2J}^+|$
+by $\sum_q V_{J,q}t^q/N_+^{q+J+2}$, so
+$\max_qV_{J,q}$ suffices for its $\delta_J$ constant. For $J=0$
+the same formula with $U_{0,0}=1$ supplies the two terms of $k_0$.
+Only $K_r$ through $2J+3$ are used; this also verifies the expanded
+worked residuals above.
+
+For spatial jets apply Cauchy's formula to the complete holomorphic
+difference on disks of radius $c_d/L_+$ inside the larger buffers.
+Since $|(\log\Sc)_w|\le CL_+$, each arm modulus changes by a
+fixed factor there, and $R,L_+,N_+,E_J$ are locally comparable.
+This pays the $L_+^d$ losses in \eqref{eq:positive-joint-error};
+no real-axis $O$ bound is differentiated. For time, differentiate the
+original fixed contour \eqref{eq:positive-canonical-integral} first:
+\[
+ \partial_t K_t(v)=(v^2/t^2-1/(2t))K_t(v)
+                  =\tfrac14\partial_{vv}K_t(v),\qquad
+ K_t(v)=(\pi t)^{-1/2}e^{-v^2/t}.
+\]
+Gaussian domination versus $e^{O(|v|\log(|v|+2))}$ justifies local
+differentiation and two integrations by parts. Both infinite endpoint
+terms vanish, proving the exact $H_t=-H_{zz}$ and hence
+\begin{equation}
+ (H-P_{2J})_t=-(H-P_{2J})_{zz}
+                         -(\partial_t+\partial_{zz})P_{2J}.
+ \label{eq:positive-direct-time}
+\end{equation}
+The already paid $d=2$ circle norm and actual residual prove the time
+estimate. Artificial moving split/saddle endpoints are absent because
+the fixed integral is differentiated before splitting. Odd local
+moments cannot simply be dropped after inserting a time multiplier;
+the exact identity retains their contributions. No backward-heat
+contraction or inference of field error from residual size is used.
+
+Finally choose $L_{0,J}$ beyond all branch, sector, buffer, common
+Gaussian and finite polynomial-tail gates, with $N_+\le C_NR L_+$.
+Increase it past the finite turning points so, for every $L\ge L_{0,J}$,
+\begin{equation}
+ C_N^{n+1}L^{n+1}e^{-L}\le1,\qquad
+ C_N^{n+1}L^{n+1}e^{(b_0+n+1)L-32cL^2}\le1.
+ \label{eq:positive-onset-gates}
+\end{equation}
+It suffices to take
+\begin{equation}
+ t_{*,J}\ge\max\{32,(n+2)/\kappa_a,e^{L_{0,J}}\}.
+ \label{eq:positive-symbolic-onset}
+\end{equation}
+Indeed $b_J\ge t^{n/2+1}/N_+^{n+1}$ and $\kappa_at\ge n+2$
+give
+\begin{align*}
+ \frac{R^{-\kappa_at}}{b_J}
+ &\le C_N^{n+1}t^{-n/2-1}L_+^{n+1}R^{n+1-\kappa_at}\le1,\\
+ \frac{R^{b_0}e^{-ctL_+^2}}{b_J}
+ &\le C_N^{n+1}t^{-n/2-1}L_+^{n+1}
+           e^{(b_0+n+1)L_+-ctL_+^2}\le1.
+\end{align*}
+Fixed prefactors remain in the final constants or may be included in
+the gates. The arithmetic floors $48/\log2$ for $J=1$ and
+$64/\log2$ for $J=2$ are convenient margins, not certified onsets.
+In particular they imply no claim at $t=64$. For every $t\ge32$
+retain the full joint budget: its coarse arithmetic power cannot pay
+arbitrarily high inverse-height precision. This limits that upper
+bound, not the actual error from below. Since $N_+\ge tL_+$,
+$b_J\le n t^{-J-1}L_+^{-2J-3}$ and
+$\delta_J\le n t^{-J-2}L_+^{-2J-3}$. The exponents
+$d-2J-3\le0$ allow monotonicity in $L_+\ge\log(2+t)$, proving
+\eqref{eq:positive-eventual-error} and finishing the theorem.
+
+For fixed $j\ge1$ the single-factor partition dominates:
+\[
+ C_{2j}^+=\frac{(2j)!}{2^{2j+3}(j+1)!}
+          \frac{t^{j+1}}{p^{2j+1}}
+       \{1+O_j(t/m+m^{-1})\}.
+\]
+At fixed height $p=(t/4)\log t\,(1+o(1))$, giving
+$C_{2j}^+\sim2^{2j-1}(2j)!t^{-j}\log^{-2j-1}t/(j+1)!$,
+including the constants $2$ and $32$. These are arm sizes, not
+signed two-arm error equivalents. The allowance has scales
+$t^{-J-1}L_+^{-2J-3}$ for $X\lesssim tL_+$ and
+$t^{J+2}X^{-2J-3}$ for $X\gg tL_+$; spatial order $d$ adds
+$L_+^d$, time adds $L_+^2$, and residual divides by $t$.
+After their separate absorptions,
+$b_{J+1}/b_J\le C_Jt/N_+^2\le C_J/(t\log^2(2+t))$.
+Even $J=0$ improves the leading saddle by paid parity to
+$O(t^{-1}\log^{-3}t)$ uniformly in height. No growth control on
+$J$ follows from these fixed-order comparisons.
+
+\subsection{Compact arithmetic refinement, including the switch slab}
+\begin{theorem}[Compact positive field bridge]
+\label{thm:compact-positive}
+Fix $J$, buffers, and a finite interval $I=[a_0,T]\subset[32,\infty)$.
+For positive center $X$ sufficiently large, uniformly in $t\in I$,
+\begin{align}
+ |\partial_z^d(H-P_{2J})|&\le C_{J,I,d}\Acal_+(1+\log X)^d
+       [X^{-2J-3}+X^{-t\log2/4}],&&0\le d\le3,\notag\\
+ |(H-P_{2J})_t|&\le C_{J,I}\Acal_+(1+\log X)^2
+       [X^{-2J-3}+X^{-t\log2/4}],\notag\\
+ |(\partial_t+\partial_{zz})P_{2J}|&\le C_{J,I}\Acal_+X^{-2J-3}.
+ \label{eq:compact-positive-error}
+\end{align}
+Evenness supplies negative-height charts. In particular $P_2$ has
+pure $X^{-5}$ allowance on each fixed $[32,T]$, and $P_4$ has pure
+$X^{-7}$ allowance on $[63,65]$, with these same jet/time losses.
+Constants and onset may depend on $J,I$ and buffers; $T$ cannot grow
+with $X$ in this theorem.
+\end{theorem}
+\begin{proof}
+For bounded $t$ the actual implicit equation gives
+\[
+ p-w=O_T(\log X),\quad |p|=X/2+O_T(\log X),\quad
+ a=\frac t4\log\frac{X}{4\pi}+O_T(\log X/X).
+\]
+Replace only the coarse position gate in
+\eqref{eq:positive-arithmetic}: its complete arithmetic allowance
+becomes $C_IX^{-t\log2/4}$. If its position error is at most one,
+a sufficient loose finite prefactor is
+\[
+ C_I=2[3\,2^\Sigma\sqrt{5/2}]
+          (4\pi)^{T\log2/4}e^{T(\log2)^2/2}.
+\]
+All arithmetic on the remaining segments/connectors stays paid by
+the separate contour ledger. The local error is
+$O_{J,I}(X^{-2J-3})$. Every nonlocal contour, middle and finite
+moment tail retains $R^{b_0}e^{-ct\log^2R}$, smaller than any
+specified fixed inverse power on $I$ after increasing height onset.
+The complete circle norms and \eqref{eq:positive-direct-time} give
+the displayed jets and time bound. Since $8\log2>5$ and
+$63\log2/4>7$, the two stated pure-power instances follow.
+This is a compact-domain proof at $64$, not substitution into an
+uninstantiated $t_{*,J}$. Retain the arithmetic term at higher $J$
+whenever $a_0\log2/4$ does not pay $2J+3$.
+\end{proof}
+
+\subsection{Rechecked elementary carrier and finite-endpoint forcing}
+\begin{proposition}[Elementary compact chart]
+\label{prop:elementary-compact}
+For each fixed finite $[32,T]$, continue $L_z=\Log(z/(4\pi))$
+from the positive real axis on the full buffered tail. Put
+\begin{align}
+ C_\pm(t,z)&=\frac{\pi^{1/4}z^{7/4}}{32}
+ \exp\!\left[-\frac{\pi z}{8}
+       +\frac t{16}(L_z^2-\pi^2/4)\right]\notag\\
+ &\qquad\times\exp\!\left[\pm i\left\{
+    \frac z4(L_z-1)+\frac{\pi tL_z}{16}+\frac{7\pi}{8}\right\}\right],\notag\\
+ b_\pm&=L_z/2\pm i\pi/4,\qquad
+ D_\pm=\frac{\pm i}{z}
+       \left\{\frac1{24}-\frac t4-\frac{7t}4b_\pm
+                                      -\frac{t^2}8b_\pm^2\right\},\notag\\
+ F_1&=\sum_\pm C_\pm(1+D_\pm),\qquad
+ E_o=|C_+|+|C_-|.
+ \label{eq:compact-elementary-model}
+\end{align}
+For sufficiently large $X$, with constants depending on $T$ and buffers,
+\begin{align}
+ |\partial_z^d(H-F_1)|&\le C_{T,d}E_o
+                     \frac{1+\log^{4+d}X}{X^2},&&0\le d\le3,\notag\\
+ |(H-F_1)_t|&\le C_TE_o\frac{1+\log^6X}{X^2},\notag\\
+ |(\partial_t+\partial_{zz})F_1|&\le C_TE_o
+                                     \frac{1+\log^4X}{X^2}.
+ \label{eq:compact-elementary-error}
+\end{align}
+The one-arm amplitude is half the cosine amplitude and the unwrapped
+phase is $7\pi/8$, preserving the earlier normalization.
+\end{proposition}
+\begin{proof}
+Choose a single constant $V$ so $\Re(w+v)\ge2$ for $v\ge V$
+on all buffers. Split the exact convolution at $\pm V$, keeping
+the bounded middle and complete arithmetic on both rays. The gamma
+arms
+\[
+ J_V(t,w)=(\pi t)^{-1/2}\int_V^\infty e^{-v^2/t}\Mc(w+v)\dd v
+\]
+have a fixed endpoint. On $V\le v\le X^{1/3}$, sectorial Taylor
+estimates give
+$\log\Mc(w+v)=\log\Mc(w)+\alpha v+\alpha'v^2/2+O(v^3/X^2)$,
+$|\alpha'|\le C/X$. Tilted absolute Gaussian moments have size
+$C_{T,k}(1+\log^kX)$ relative to
+$G_t(w)=\Mc(w)e^{t\alpha(w)^2/4}$; the absolute-to-complex
+Gaussian loss $e^{t(\Im\alpha)^2/4}$ is bounded on the fixed
+interval. Cubic and squared-quadratic remainders are therefore
+$O_T((1+\log^4X)/X^2)$. Increase onset so $X^{1/3}$ exceeds a
+fixed $T$-dependent multiple of $1+\log X$. Expanding the quadratic
+Gaussian and its determinant gives the near-one logarithmic comparison
+\begin{equation}
+ \log J_V=\log\Mc+\frac t4\alpha^2+\frac t4\alpha'
+                      +\frac{t^2}8\alpha^2\alpha'
+                      +O_T((1+\log^4X)/X^2).
+ \label{eq:compact-log-arm}
+\end{equation}
+The logarithm is of a near-one ratio to nonzero $G_t$, never of $H$
+or a cosine. The complete omitted contributions, normalized by the
+corresponding linear carrier, are
+\begin{center}\small
+\begin{tabular}{@{}p{.53\textwidth}p{.39\textwidth}@{}}\toprule
+Contribution & Payment on fixed $[32,T]$\\\midrule
+Full ordinary arithmetic on both rays & $C_TX^{-t\log2/4}$\\
+Original middle and missing lower linear-Gaussian tail &
+$C_Te^{-2L_X^2+C_T(1+L_X)}$\\
+Both true infinite gamma ends beyond $X^{1/3}$ &
+$C_Te^{-c_TX^{2/3}}$\\
+Local cubic and quadratic-square errors &
+$C_T(1+\log^4X)/X^2$\\\bottomrule
+\end{tabular}
+\end{center}
+Here $L_X=\log(X/(4\pi))$. On the enlarged real strip determined
+by $V$, Euler summation/reflection and Stirling bound the middle by
+a finite polynomial times $e^{-\pi X/8}$; division by $G_t$
+retains $e^{-tL_X^2/16+O_T(L_X)}$, paid by the displayed row since
+$t\ge32$. For the far rays retain the height exponential using
+$\log(|\Mc(w+v)|/|\Mc(w)|)\le Cv+(v/2)\log(X+v)$ and then
+Gaussian domination with $t\le T$. A global source bound at the
+local endpoint would not pay the exponentially small carrier.
+Arithmetic follows by its full $\log2$ Gaussian tilt; far-tail
+pieces are already paid in their own row.
+
+For a direct time bound approximate the fixed gamma integrand by
+$\Mc(w)e^{\alpha v}(1+\alpha'v^2/2)$, which is independent of $t$
+before integration. Differentiate the original Gaussian kernel first:
+its multiplier $v^2/t^2-1/(2t)$ raises required moments by at most
+two powers. Thus the gamma error and its time derivative have
+allowances $O_T((1+\log^4X)/X^2)$ and
+$O_T((1+\log^6X)/X^2)$, and every nonlocal row retains its payment.
+Writing $T_{\log}$ for the four explicit terms of
+\eqref{eq:compact-log-arm}, division by $G_t$ and its near-one
+logarithm gives
+\begin{equation}
+ |\partial_t(\log J_V-T_{\log})|
+                 \le C_T(1+\log^6X)/X^2.
+ \label{eq:compact-log-time}
+\end{equation}
+No lower Leibniz term occurs because $V$ is fixed, but $J_V$ is
+not an exact heat solution: direct integration by parts gives
+\begin{equation}
+ (\partial_t-\tfrac14\partial_{ww})J_V
+  =\frac{K_t(V)}4
+          [\Mc'(w+V)+(2V/t)\Mc(w+V)].
+ \label{eq:compact-endpoint-forcing}
+\end{equation}
+This forcing is superalgebraic relative to $G_t$ on the compact
+domain, with the middle/missing-Gaussian payment above. It is retained.
+
+The zero-time sectorial gamma expansion used in
+Section~\ref{sec:cosine}, followed by \eqref{eq:compact-log-arm},
+gives precisely \eqref{eq:compact-elementary-model}. Arithmetic is
+below $X^{-2}$ because $8\log2>2$. Cauchy disks of radius
+$c/(1+\log X)$ inside the larger buffers pay the spatial jets.
+For an independent exact residual check put
+$Q_0(b)=21/16+t/8+5tb/8+t^2b^2/16$ and $L_\pm=\log C_\pm$.
+Then
+\begin{align}
+ R_\pm&=\frac{(\partial_t+\partial_{zz})C_\pm}{C_\pm}
+ =\frac{\pm i(1+7b_\pm+tb_\pm^2)}{4z}
+                                      +\frac{Q_0(b_\pm)}{z^2},\notag\\
+ (\partial_t+\partial_{zz})F_1
+ &=\sum_\pm C_\pm\{(1+D_\pm)R_\pm+(D_\pm)_t
+           +2(L_\pm)_z(D_\pm)_z+(D_\pm)_{zz}\}.
+ \label{eq:compact-elementary-residual}
+\end{align}
+Elementary differentiation cancels the $1/z$ terms and bounds the
+remaining expression by $C_TE_o(1+\log^4X)/X^2$.
+The exact heat identity for $H-F_1$ supplies the time estimate,
+consistent with the direct kernel argument above. No derivative of
+an error allowance is used. This redoes the proof on every newly
+declared fixed $[32,T]$; it does not cite the older $[32,33]$ theorem
+outside its domain.
+\end{proof}
+
+\subsection{Compatible envelopes, real overlap, and a paid optional splice}
+\begin{proposition}[Positive overlap and optional time splice]
+\label{prop:positive-overlap-splice}
+On each fixed $[32,T]$, $\Acal_+\asymp E_o$ on the full complex
+buffers. On the actual common domain $X\ge X_{J,T}$,
+\begin{align}
+ |\partial_z^d(P_{2J}-F_1)|\le C_{J,T}E_o\bigg[&
+ (1+\log X)^d\{X^{-2J-3}+X^{-t\log2/4}\}\notag\\
+ &+\frac{1+\log^{4+d}X}{X^2}\bigg],\quad0\le d\le3.
+ \label{eq:positive-model-overlap}
+\end{align}
+The direct-time difference is paid by the sum of the two time errors.
+For any fixed $C^1$ cutoff $0\le\chi\le1$ whose derivative is
+supported within a declared compact common interval,
+$F_\chi=\chi P_{2J}+(1-\chi)F_1$ has exact residual
+\begin{equation}
+ (\partial_t+\partial_{zz})F_\chi
+ =\chi\operatorname{Res}P_{2J}+(1-\chi)\operatorname{Res}F_1
+                         +\chi'(P_{2J}-F_1).
+ \label{eq:positive-paid-splice}
+\end{equation}
+Its jet/time/residual bounds retain the last defect and inherit the
+coarser carrier rate. For $J=2$ on $[63,65]$ these are respectively
+$C_\chi E_o(1+\log^{4+d}X)/X^2$,
+$C_\chi E_o(1+\log^6X)/X^2$, and
+$C_\chi E_o(1+\log^4X)/X^2$.
+\end{proposition}
+\begin{proof}
+Since $p-w=O_T(\log X)$ and $\alpha'=O(X^{-1})$, substitute the
+implicit displacement into $\log\Mc(p)-(p-w)^2/t$ and expand
+$\log B$. All intervening points stay in a fixed sector with modulus
+comparable to $X$, giving
+\[
+ \log\Sc_t(w)=T_{\log}+O_T((1+\log^4X)/X^2).
+\]
+For its time remainder expand the exact identity
+$(\log\Sc)_t=\alpha(p)^2/4+\alpha'(p)/(4B)
++t\alpha(p)\alpha''(p)/(8B^2)$ about $w$. Subtracting
+$\partial_tT_{\log}$ cancels the retained terms and leaves
+$O_T((1+\log^6X)/X^2)$. This and
+\eqref{eq:compact-log-time} pay both direct log-arm time comparisons;
+spatial derivatives use the same buffered Cauchy disks.
+The gamma-to-elementary expansion then gives arm by arm
+$\Sc_t(w)/C_\pm=1+O_T((1+\log^2X)/X)$, hence envelope
+comparability including transverse growth. The real-axis amplitude
+alone would not pay that comparison. Both models approximate the
+same exact $H$, so the triangle inequality gives
+\eqref{eq:positive-model-overlap}. Product differentiation gives the
+splice identity, and this bound pays its final term. No spatial cutoff
+is introduced, so holomorphy in $z$ is preserved.
+\end{proof}
+
+Choosing any fixed finite $T>\max\{65,t_{*,J}\}$ gives a genuine
+high-height overlap $t_{*,J}\le t\le T$, $X\ge X_{J,T}$ with the
+eventual all-height theorem, while the compact chart reaches
+$[63,65]$. Thresholds are finite but uninstantiated. The remaining
+bounded-height compact core is
+\[
+ 32\le t<t_{*,J},\qquad |x|<X_{J,T}.
+\]
+The same formula $P_{2J}$ serves on the two proved domains without a
+cutoff; their union is not an all-time/all-height cover. The separate
+field arguments in Section~\ref{sec:positive-bridges} now fill the
+high-height intermediate and moving-positive bands and prove
+Theorem~\ref{thm:positive-atlas}. Their $F_N,F_1$ overlap retains
+$\epsilon_X+B_1$; no new differentiable cutoff or global splice is inferred.
+
+For $J=2$, the complete physical transfer on $[63,65]$ is now proved
+in Theorem~\ref{thm:fixed-p4-consumer}: corrected collars, analytic
+units/poles, direct-time and unchanged-$q$ regulator derivatives, actual
+means/covariance and retained nonzero residual are all paid there.
+Other orders, regions, core refinements and new global joins still
+need their own physical payments. Proposition~\ref{prop:named-switch-centres}
+retains the exact historical linear-carrier center and proves the
+finite-height shifts of every named one-arm modulus. The inherited
+$O(1)$ absolute/$O(1/\log X)$ normalized simplified-layer law is
+unchanged. Generic heat/Gaussian structures exclude none of the
+collision controls; the complete canonical source premise remains
+necessary.

@@ -1,5 +1,15 @@
 # Progress register: averaged zero-density evolution
 
+
+## Current scaled weak-filter return — 26 October 2026, chat0028
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual recorded effort ultra**. [Note72](../notes/72_GRADED_WEAK_FILTER_AND_ACQUISITION_COST_20261026.md)/[Review47](../reviews/47_GRADED_WEAK_FILTER_COST_ASSESSMENT_20261026.md) close **AN06 r2** at fixed-family analytical scope. Dyadic square rings, area-scaled simple-pole bounds, offset-uniform logistic estimates and actual source/phase/root/provider costs give sufficient work C T^80 and streaming storage C T^32, T=1+R+q_s+p+I. The family is the unchanged t64-anchored IC23/Note49 construction restricted to[95,97]. Constants/onsets are uninstantiated; R is numerical height, p only additional evaluation bits. No executed certificate or practical speedup. **AN06 r3 READY_FOR_SOL, prepared only**: pure-P exterior query cost in p+logR, preserving separate global source-construction cost. Broader HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled remain; no manuscript/snapshot/commit.
+
+
+## Historical r1 weak-filter return — 26 October 2026, chat0028
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual recorded effort ultra**. [Note71](../notes/71_WEAK_FILTER_PUNCTURE_CONSUMER_20261026.md)/[Review46](../reviews/46_WEAK_FILTER_PUNCTURE_ASSESSMENT_20261026.md) close [HDA-17-AN06 r1](handoffs/HDA-17-AN06.md) at finite-data consumer scope: complete weak inventory, nonholomorphic source correction, primitive puncture/post-filter allocation and explicit spatial kernel4 boundary modulus, with a guarded extra-jet time modulus. The alternate midpoint consumer removes the expanding outer q inverse but can cost O(e^-6); PC1's polynomial-accuracy result and useful joint height cost are not combined. Fixed central multiple-event floor and normalized acquisition/provider costs remain. At that checkpoint, **r2 READY_FOR_SOL, prepared only**, for a complete scaled-integration/data-cost ledger on the existing moving-gap family. No numerical research, manuscript, snapshot or parent status upgrade. HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled remain. B02 and RT retain their separate live owners.
+
 ## Current coordination 26 October 2026
 
 The author requested a new [Book manuscript](../book/README.md),
@@ -8,8 +18,10 @@ and [coordination register](02_BOOK_UNIFIED_HEAT_FLOW_RESEARCH_PROGRESS_20261026
 This file retains the parent HDA scientific tasks and their live execution
 phases. The new register owns only Book production and cross-branch
 priorities. The old HDA-10-MI3 production proposal below is superseded,
-unexecuted; [HDA-B01-MI1](handoffs/HDA-B01-MI1.md) is the current Sol revision
-packet. Parent HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled remain.
+unexecuted; [HDA-B01-MI1](handoffs/HDA-B01-MI1.md) is now CLOSED at production
+scope, with [Note65](../notes/65_BOOK_COMPANION_INTEGRATION_20261026.md) and
+[Review43](../reviews/43_BOOK_COMPANION_INTEGRATION_PRODUCTION_REVIEW_20261026.md).
+Parent HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled remain.
 For Edward Baker with LLM assistance, **gpt-6-astra, actual effort max**.
 
 24 October 2026, America/New_York. Prepared for **Edward Baker** with
@@ -513,7 +525,7 @@ task's proof status.
 
 | Task or packet | Handoff phase | Next owner | Next action |
 | --- | --- | --- | --- |
-| HDA-17/18 — complete weak-filter height cost | ANALYSIS_READY — proposed next, unexecuted | Analysis — GPT-6.1 Sol | Consume Note61 PC17 with full weak inventory, collar guards, normalized providers, L1 post-filter/actual-mean caps and coordinate trace/time moduli. Fixed-box polynomial accuracy-bit cost is proved at its explicit scalar-input scope. No numerical dispatch. |
+| HDA-17/18 — complete weak-filter height cost | r1/r2 CLOSED bounded; r3 READY_FOR_SOL, prepared only — [HDA-17-AN06](handoffs/HDA-17-AN06.md) | Analysis — GPT-6.1 Sol | [Note72](../notes/72_GRADED_WEAK_FILTER_AND_ACQUISITION_COST_20261026.md)/[Review47](../reviews/47_GRADED_WEAK_FILTER_COST_ASSESSMENT_20261026.md): graded full-tuple work C(1+R+q_s+p+I)^80 and storage degree32 for the fixed t64 family on[95,97], construction/acquisition/providers charged. Next pure-P exterior binary-height query refinement; implementation/global-time/global-query cost remains open. |
 | HDA-20 — full-chain review | Ready; unfulfilled, reviewer not assigned | Distinct reviewer, to be selected by Edward Baker | Audit the source/contour/transfer/join chain through Notes54--55, Note58's source replacement and Notes59--61's evaluator, authorized free-onset phase selector and improved accuracy-cost scope, including the positive attachment and new central extension. Record inherited premises and distinguish limited LLM review from independent specialist validation. |
 | HDA-21 — supporting specification | ANALYSIS_READY — proposed, unexecuted | Analysis — GPT-6.1 Sol | Use Note38 and overview Section4a to define the observable/window/response and required differentiated estimates. This is separate from the completed finite all-time construction. |
 
@@ -856,8 +868,8 @@ or proposed acceptance criteria appear in the overview.
 | HDA-14 | Connect endpoint formulas through finite time under one global regulator | Partial — finite analytical all-time construction; useful execution open | Notes47--50 and54 pay both endpoint attachments and central extension with one source and exact q. No affordable/evaluated source or regulator-to-zero theorem is supplied. |
 | HDA-15 | Declare the transition contract and sharpen source/nonlinear comparison bounds | Complete — proved-in-note bounds and bounded diagnostic, same-assistant review | [Note 23][local-bounds] fixes domain/buffer, kernels, regulator, derivative/boundary norms and tolerances; proves cellwise source, local nonlinear/covariance and evaluation bounds. [Record][local-record] retains rejected trial and arithmetic/filter failures. No HDA-17 acceptance. |
 | HDA-16 | Complete endpoint evolution error budgets with all-height scope | Complete — stated absolute comparison scope, same-model review | Notes26/31 give both endpoint systems; Note54 makes the all-height late field/collar/mean constants and consumer onset finite. Sharper inner scales remain Notes16/19. Useful all-time evaluation and distinct review remain HDA-17/18/20. |
-| HDA-17 | Produce useful finite-transition bounds supporting the global theorem | Partial — improved complete accuracy cost; useful height cost open | Notes55/58 improve source conditioning/compression; Notes59--60 pay finite evaluation and free-onset exact phase selection. Note61 gives complete fixed-box polynomial accuracy-bit cost for explicit scalar encodings, with external scalar costs retained. Useful uniform height/time/descriptor cost and executed source/filter acceptance remain. |
-| HDA-18 | Assemble an analytic approximation for all real time and height | Gated — finite analytical existence; useful data/cost/review open | Note54 supplies all-real-time/all-height finite existence. Notes55/58--61 supply improved source, finite error/evaluation, phase selection and fixed-box accuracy cost at their scopes. Useful height/time cost, evaluated source/filter data and distinct full-chain assessment remain. |
+| HDA-17 | Produce useful finite-transition bounds supporting the global theorem | Partial — fixed-family joint cost; global practical/evaluated cost open | Notes55/58 improve source conditioning/compression; Notes59–61 pay fixed-data evaluation/selection and accuracy-bit cost. [Note72](../notes/72_GRADED_WEAK_FILTER_AND_ACQUISITION_COST_20261026.md)/Review47 adds full construction/acquisition/query cost polynomial in numerical height and evaluation bits for the t64 family restricted to[95,97]. Huge constants and no implementation/practical crossover; global-time/global-query and binary-height refinement remain. |
+| HDA-18 | Assemble an analytic approximation for all real time and height | Gated — finite analytical existence; global practical/evaluated cost/review open | Note54 supplies all-real-time/all-height finite existence. Notes55/58–61 improve source/evaluation and fixed-box cost; Note72 supplies only the stated positive fixed-family joint-cost theorem. Complete implemented source/filter acceptance, useful global-time/global-query cost and distinct inherited-chain assessment remain. |
 | HDA-19 | Extend the positive model to unbounded outer heights | Complete — stated outer/late-time comparison scope, same-model review | Notes30/31 give complete-source implicit-saddle comparisons, actual collars and both static/evolution limits. Note54 pays the finite late table and selected finite central extension. Numerical evaluation, useful cost and distinct full-chain review remain open. |
 | HDA-20 | Obtain a distinct-reviewer full-chain audit with explicit provenance | Ready for full audit — unfulfilled | Audit source/contour premises, full-buffer collars/units, signed weak transfer, actual covariance and all space/time joins through Notes54--55 plus Notes58--61's source/evaluator/free-onset phase/accuracy-cost construction. Reviews21/33--40 are limited internal LLM assessments, not the distinct full audit. Record shared dependencies and resolve findings; reviewer remains unassigned. |
 | HDA-21 | Specify the regulator crossover, connected correlation and response problem | Ready — supporting specification, unexecuted | Note38 and overview Section4a: fix observable/window, limit and separation scales, centering and response; state differentiated estimates. Analysis — Sol, supporting the completed finite AN08 prescription. No intrinsic criticality/CFT claim or numerical sweep. |
@@ -2152,3 +2164,11 @@ summarizes all Notes58--61 research in this chat. Input identity and zero
 research executions are recorded in Manifest61 and the work record.
 HDA-17 Partial, HDA-18 Gated remain. No research computation, manuscript/
 DRAFT_HISTORY change, snapshot, commit or new user-owned chat.
+
+## Weak-filter continuation opened — 26 October 2026, chat0028
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual recorded effort ultra**. Author-requested continuation of Note69. [HDA-17-AN06 r1](handoffs/HDA-17-AN06.md) executes the independent Note61 PC17 consumer, with opening pins in [Inputs71](../notes/71_WEAK_FILTER_PUNCTURE_INPUTS_20261026.json). B02 production and RT application execution remain with their active chats. Analytical work only. HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled remain.
+
+## HDA-17-AN06 r2 opened — 26 October 2026, chat0028
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual recorded effort ultra**. The author requested scaled integration and data-acquisition costs. r2 is ANALYSIS, selecting the existing t64-anchored IC23/Note49 moving-gap family restricted to J=[95,97], with actual source and phase acquisition charged. Prior final capture succeeded and the registered chat was refreshed. HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled remain. No research execution or manuscript change.

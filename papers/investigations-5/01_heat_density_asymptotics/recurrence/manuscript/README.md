@@ -9,20 +9,32 @@ effort ultra**, chat0006. Source notes retain their original attribution.
 - [Local reading PDF](../../../../../output/pdf/heat-density-recurrence/heat-density-recurrence.pdf)
 - [Current integration note and source correspondence](../notes/14_EFFECTIVE_MANUSCRIPT_INTEGRATION_20261026.md)
 - [Same-session authoring assessment](../reviews/13_UNIFORM_RS_BOUND_ASSESSMENT_20261026.md)
-- [Current build record](BUILD_RECORD_AN07_20261026.json)
+- [Current B02 r2 build record](BUILD_RECORD_20261026_B02_R2.json)
+- [Preceding Book-companion build record](BUILD_RECORD_20261026_BOOK_COMPANION.json)
+- [Preceding analytical integration record](BUILD_RECORD_AN07_20261026.json)
 - [Next analytical continuation](../notes/19_ANALYTICAL_CONTINUATION_AFTER_RS_BOUNDS_20261026.md)
 
-The 46-page manuscript joins the canonical heat representation and finite
+This is the negative-time technical companion to the [central Book](../../book/main.tex),
+which gives the common notation and cross-region proof map. Detailed frozen
+hierarchy, matched Riemann–Siegel, onset, provider and cost proofs remain
+here. The [ansatz companion](../../ansatz/manuscript/main.tex) owns the
+positive fixed-order hierarchy and compact positive bridge; its common
+finite partition algebra does not transfer domains or physical-consumer
+bounds. [Note63](../../notes/63_BOOK_SYNTHESIS_AND_COMPANION_REVISION_PLAN_20261026.md)
+sets the production contract. Companion reconciliation: **gpt-6.1-sol,
+actual effort ultra**, 26 October 2026.
+
+The manuscript joins the canonical heat representation and finite
 fluctuation recurrence to an effective evaluation theorem. Sections 1–5
 develop the approximation choices, fixed-order and compact-time estimates,
 and controlled order growth. Sections 6–7 establish coefficient regularity
-and the modular evaluation budget. Sections 8–10 supply finite algorithms,
-explicit uniform calibration and all-height onset, then the total accuracy,
-bit-work and streamed-space bounds. Section 11 orders the further
-analytical questions. Appendices retain the finite error gates, population
+and the modular evaluation budget. The following sections supply finite algorithms, explicit uniform
+calibration and all-height onset, then total accuracy, bit work and
+streamed-space bounds. The dedicated moving-endpoint section integrates
+the complete expanded-domain proof before the outstanding questions. Appendices retain the finite error gates, population
 bounds, source correspondence, elementary enclosures and Gauss conditioning.
 
-The analytical results of Notes09–11,16 and 18 are now integrated. The
+The analytical results of Notes09–11,16,18 and 20 are now integrated. The
 new linear-onset theorem proves L>=64nu, nu=ceil(r+b+2)+1, improving
 the retained 2^22nu^4 fallback by 2^16nu³ without changing accuracy,
 inputs or any retained component. Note12's finite
@@ -36,7 +48,20 @@ bounded real completion integral. Its explicit height is sufficient and
 very conservative. It proves a terminating analytical construction under
 the named source inputs; complete evaluator software and independent
 specialist validation remain open. The [sole progress register](../research-progress/01_RECURRENCE_RESEARCH_PROGRESS_20261026.md)
-owns status, and broad R05 remains Partial.
+owns status, and broad R05 remains Partial. Its subsequent AN08 return
+is Complete/CLOSED: [Note20](../notes/20_MOVING_LOWER_ENDPOINT_20261026.md)/
+[Review14](../reviews/14_MOVING_ENDPOINT_ASSESSMENT_20261026.md) prove
+[1/L,2] at sufficient L>=1024nu² with the same strong target. The full proof now has its own manuscript section,
+[14_moving_endpoint.tex](sections/14_moving_endpoint.tex), with durable
+label `thm:moving-endpoint-delivery` and distinct channel norm
+`def:moving-channel-norm`. It retains complete kernel, population, tail,
+normalization and delivered-error ledgers, strict rational time witnesses,
+a separately paid literal endpoint tag, O(L³) sufficient outer nodes and
+leading delivered precision 3L²/(8 log 2). Provider-internal and witness
+search costs remain separate. The [1,2] proof and sharper 64nu onset remain
+in place; strong negative precision through zero, physical transfer and
+complete software certification remain open. B02 r2 integration:
+**gpt-6.1-sol, actual effort ultra**, 26 October 2026.
 
 ## Build and provenance
 

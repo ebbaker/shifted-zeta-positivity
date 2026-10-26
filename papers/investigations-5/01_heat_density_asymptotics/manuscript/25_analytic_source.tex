@@ -1,0 +1,307 @@
+\section{Positive analytic compression of the canonical source}
+\label{sec:analytic-source}
+This section integrates Note~58 \cite{n58}. It changes the source
+representation in Theorem~\ref{thm:all-time}, while retaining its
+field table, physical regulator, fixed filter and four-jet consumer.
+First fix the upper time $b$ selected there, then a dyadic
+$0<\varepsilon\le1$ satisfying every entry of
+\eqref{eq:sc-all-source}. A rational upper bound $s\ge\max(0,b)$
+or certified recipe integers are inputs to the algorithm. In particular,
+fixed-$b$ complexity below excludes the cost of obtaining the upstream
+contour and transfer constants. The source remains fixed at all queries.
+
+\subsection{A buffered complex square root of the complete source}
+\begin{proposition}[Canonical analytic branch]\label{prop:ac-root}
+On $\mathcal D=\{w:\Re w>-1/16,\ |\Im w|<1/16\}$, the
+complete source has a holomorphic square root $h$ positive on $[0,\infty)$,
+with $|h|<9$ and $|h'(u)|\le288$ for real $u\ge0$.
+\end{proposition}
+\begin{proof}
+Set $E=e^{4w}$ and factor the whole canonical series as
+\begin{align}
+ \Phi(w)&=A(w)(1+\mathcal R(w)),\notag\\
+ A(w)&=\pi e^{5w}(2\pi E-3)e^{-\pi E},\notag\\
+ \mathcal R(w)&=\sum_{r\ge2}
+ r^2\frac{2\pi r^2E-3}{2\pi E-3}e^{-\pi(r^2-1)E}.
+ \label{eq:ac-factor}
+\end{align}
+Here $|E|>3/4$, $\Re E>93/128>2/3$, using
+$e^{-1/4}>3/4$ and $\cos(1/4)\ge31/32$. Since $3<\pi<4$,
+$|2\pi E-3|>2|E|$ and $\Re(2\pi E-3)>87/64>0$.
+Each relative summand is bounded by
+$t_r=6r^4e^{-2(r^2-1)}$. Now $t_2=96e^{-6}$ and
+$t_{r+1}/t_r\le(3/2)^4e^{-10}<1/4$, so normal convergence gives
+\begin{equation}
+ |\mathcal R|\le128e^{-6}<1/2.
+ \label{eq:ac-relative-tail}
+\end{equation}
+Both logarithm factors in
+\begin{equation}
+ h(w)=\exp\left\{\frac{\log\pi+5w+\Log(2\pi E-3)
+                     -\pi E+\Log(1+\mathcal R(w))}{2}\right\}
+ \label{eq:ac-root}
+\end{equation}
+therefore use their principal right-half-plane branches. This proves
+$h^2=\Phi$ and real positivity, with no inference of a complex branch
+from real positivity alone. If $y=e^{4\Re w}$, then
+\[
+ |A|\le(32y^{9/4}+12y^{5/4})e^{-93y/32}\le44.
+\]
+For either exponent $a=9/4,5/4$, the maximum is
+$(32a/(93e))^a<1$. Hence $|\Phi|<66$, $|h|<9$.
+Cauchy's circle of radius $1/32$ about each $u\ge0$ lies fully
+inside $\mathcal D$ and gives $|h'(u)|\le288<512$.
+\end{proof}
+
+\subsection{Interpolation, finite coefficient construction and positivity}
+Put
+\begin{align}
+ Q_s&=\log(32/\varepsilon),&
+ U&=\lceil4+\log(2+s+Q_s)\rceil,\notag\\
+ F_s&=U^4e^{sU^2+4U},&\delta&=\varepsilon/(160F_s),&
+ \rho&=1+1/(8U).
+ \label{eq:ac-cutoff}
+\end{align}
+Certified upper integers with bounded slack may replace transcendental
+ceilings; if $U$ increases, recompute all later parameters. The full
+source-tail proof of Section~\ref{sec:source-conditioning} gives
+\begin{equation}
+ \int_U^\infty u^je^{su^2+4u}\Phi(u)\,du\le\varepsilon/8,
+ \qquad 0\le j\le3.
+ \label{eq:ac-full-tail}
+\end{equation}
+Indeed $s,Q_s\le e^{U-4}$,
+$4\pi e^{4U}-2sU-13-j/U\ge\pi e^{4U}$ and
+$sU^2+13U-\pi e^{4U}\le-2e^{4U}\le-Q_s$; the complete
+tail prefactor is at most one. This is the entire source tail.
+
+Under $w=U(1+v)/2$, the closed Bernstein ellipse of parameter $\rho$
+has imaginary extent $U(\rho-\rho^{-1})/4<1/16$ and left
+extension $U(\rho+\rho^{-1}-2)/4<1/(256U)$. It lies in
+$\mathcal D$. For $g(v)=h(U(1+v)/2)$, the Laurent expansion in
+$v=(\zeta+\zeta^{-1})/2$ gives Chebyshev coefficients
+$|a_k|\le18\rho^{-k}$. At the roots of $T_{n+1}$ every $T_k$
+aliases to $0$ or $\pm T_r$, $r\le n$; thus the interpolation
+operator has norm at most one on each individual Chebyshev mode.
+Applying this to the convergent tail proves
+\[
+ \|g-I_ng\|_\infty\le36\rho^{-n}/(\rho-1)
+                         =288U\rho^{-n}.
+\]
+Since $\log\rho\ge1/(8U+1)$, the finite choice
+\begin{equation}
+ n=\lceil16U\log(1152U/\delta)\rceil,\qquad m=n+1
+ \label{eq:ac-degree}
+\end{equation}
+pays interpolation error at most $\delta/4$.
+
+Here is a finite coefficient recipe, including source arithmetic.
+Define
+\begin{align}
+ \eta_n&=\delta/(16m),&\zeta_n&=\delta/(160m),&
+ \beta&=\lceil\log_2(8m/\delta)\rceil,\notag\\
+ \alpha_n&=\min\{\eta_n/(4096U),\zeta_n/m^2,1/4\},&
+ B_c&=\lceil\log_2(8/\alpha_n)\rceil,&D_{\cos}&=B_c+46.
+ \label{eq:ac-node-recipe}
+\end{align}
+At $\theta_l=(2l+1)\pi/(2m)$ use finite Machin series for $\pi$
+to error $2^{-B_c-10}$ and cosine Taylor degree $D_{\cos}$ at
+arguments of modulus at most four. Its factorial remainder is at most
+$2^{-B_c-10}$. Round to the $B_c$-bit dyadic grid and project onto
+$[-1,1]$, obtaining $|\widehat c_l-\cos\theta_l|\le\alpha_n$.
+Set $\widehat u_l=U(1+\widehat c_l)/2$ exactly. The branch bound gives
+nodal displacement error $\le\eta_n/16$ in $h$. The recurrence for
+$T_r$ gives exact rational weights $T_r(\widehat c_l)$; since
+$|T_r'|\le r^2$ on $[-1,1]$, weight error is at most $\zeta_n$.
+The derivative inequality follows directly from
+$\sin(r\theta)/\sin\theta$ having modulus at most $r$.
+
+For each source value choose
+\begin{align}
+ n_0&=\max\{3,\lceil\sqrt{\log(2^{18}/\eta_n^2)/2}\rceil\},
+ &N&=n_0-1,\notag\\
+ B_\Phi&=\lceil\log_2(4096/\eta_n^2)\rceil,&
+ B_h&=\lceil\log_2(128/\eta_n)\rceil,\notag\\
+ T&=\lceil10N^2e^{4U}+13U+1\rceil,&
+ D_{\exp}&=\lceil P+8T+4\rceil,\notag\\
+ P&=B_\Phi+20+\lceil9\log_2(N+1)+26U/\log2\rceil.
+ \label{eq:ac-source-arithmetic}
+\end{align}
+The complete omitted-value envelope is
+$64n_0^6e^{-3n_0^2}\le64e^{-2n_0^2}\le\eta_n^2/4096$.
+Note~44's finite Machin/Taylor recipe \cite{n44} with these parameters
+computes $\Phi_N(\widehat u_l)$ to error at most
+$2^{-B_\Phi}\le\eta_n^2/4096$. To make the arithmetic explicit,
+approximate $\pi$ and positive exponentials first; their exact rational
+product is the argument of the negative exponential, whose argument
+derivative is at most one. The full finite-product error is bounded by
+$2^{16}N^9e^{26U}2^{-P}$ before $B_\Phi$-bit rounding.
+Degree $D_{\exp}$ pays the largest argument $T$ by the factorial
+Taylor bound. Thus no nodal-value oracle is used.
+
+Project that value onto $[0,\infty)$ and perform $B_h$ dyadic
+square-root bisections on $[0,16]$. The true value is below $82$;
+projection cannot increase its error. Since
+$|\sqrt a-\sqrt b|\le\sqrt{|a-b|}$ for $a,b\ge0$, the
+source/mode square-root error is at most $\eta_n/\sqrt{2048}$,
+and bisection costs at most $\eta_n/8$. Together with node
+displacement this gives dyadic $0\le\widehat h_l\le10$ with
+$|\widehat h_l-h(U(1+\cos\theta_l)/2)|\le\eta_n$.
+The squared accuracy in \eqref{eq:ac-source-arithmetic} is essential;
+no inverse lower bound for $\Phi$ near $U$ is required.
+
+Form, by exact rational sums,
+\[
+ \widehat a_0=m^{-1}\sum_l\widehat h_l,\qquad
+ \widehat a_r=(2/m)\sum_l\widehat h_lT_r(\widehat c_l),\quad1\le r<m.
+\]
+Round each once to grid $2^{-\beta}$, obtaining $\bar a_r$, and set
+\begin{equation}
+ p(u)=\sum_{r=0}^n\bar a_rT_r(2u/U-1),\qquad
+ f(u)=p(u)^2\mathbf1_{[0,U]}(u).
+ \label{eq:ac-positive-source}
+\end{equation}
+The stored polynomial is real, and source positivity is exact.
+
+\begin{theorem}[Compressed source and complete four-jet bound]
+\label{thm:ac-source}
+The finite source \eqref{eq:ac-positive-source} has exact-heat field
+$G(t,z)=\int_0^Ue^{tu^2}f(u)\cos(zu)\,du$ satisfying
+\begin{equation}
+ |\partial_z^j(G-H)|\le51\varepsilon/256,
+ \quad 0\le j\le3,\quad t\le b,\quad x\in\R,\quad |y|\le4.
+ \label{eq:ac-four-jets}
+\end{equation}
+Its source and cutoff are independent of the queried $t,x,y$.
+\end{theorem}
+\begin{proof}
+Data perturbation costs at most $2m\eta_n=\delta/8$ in polynomial
+norm; weight perturbation costs $20m\zeta_n=\delta/8$; coefficient
+rounding costs $m2^{-\beta}\le\delta/8$. Hence
+$\|p-h\|\le5\delta/8<\delta$, and
+$|p^2-\Phi|\le(18+\delta)|p-h|\le19|p-h|$.
+Each jet's weight is bounded by $u^je^{4u}$, with integral at most
+$F_s$. The separate debits are
+\begin{center}\small
+\begin{tabular}{@{}lr@{}}\toprule
+Full analytic interpolation & $19\varepsilon/640$\\
+Nodal data (mode, arithmetic, square root and node) & $19\varepsilon/1280$\\
+Dyadic-node DCT weights & $19\varepsilon/1280$\\
+Stored coefficient rounding & $19\varepsilon/1280$\\
+Complete source tail & $\varepsilon/8$\\\bottomrule
+\end{tabular}
+\end{center}
+Their sum is $51\varepsilon/256$. Exact conversion, squaring and
+positivity add no approximation error; the factor $19$ already pays
+the squaring cross terms. Compact integration permits all
+differentiations and gives $G_t=-G_{zz}$ exactly, even if $f$ jumps
+at $U$. The source approximation asserts only these four jets;
+later evaluation of higher jets does not strengthen this comparison.
+\end{proof}
+
+\subsection{Descriptor and construction costs}
+\begin{theorem}[Explicit source costs]\label{thm:ac-construction}
+With the certified recipe parameters above, a sufficient compressed
+descriptor and a normalized-power descriptor satisfy
+\begin{align}
+ S_{\rm Cheb}&\le64m[\beta+\lceil\log_2(U+m+2)\rceil+1],\notag\\
+ L_d&=2\beta+6m+\lceil\log_2(m+1)\rceil+10,\notag\\
+ S_{\rm power}&\le64(2m+1)[L_d+\lceil\log_2(U+m+2)\rceil+1].
+ \label{eq:ac-descriptors}
+\end{align}
+Put $K_{\rm int}=2+U+m+N+\beta+B_\Phi+B_c+B_h+P+D_{\exp}+D_{\cos}$.
+The source construction needs at most $2^{20}K_{\rm int}^4$
+integer/rational operations with operands at most
+$2^{20}K_{\rm int}^4$ bits; a sufficient schoolbook bit bound is
+$2^{100}K_{\rm int}^{12}$. At fixed $s$, as $q_s=\log(1/\varepsilon)
+\to\infty$,
+\begin{align}
+ n&=O_s(q_s\log q_s),&\beta&=O_s(q_s),\notag\\
+ S_{\rm Cheb}&=O_s(q_s^2\log q_s),&
+ S_{\rm power}&=O_s(q_s^2\log^2q_s),
+ \label{eq:ac-asymptotic-cost}
+\end{align}
+and the stated constructor has the deliberately coarse bit bound
+$O_s(q_s^{60})$.
+\end{theorem}
+\begin{proof}
+The rounded DCT coefficients have modulus at most $21$. For
+$Q_r(v)=T_r(2v-1)$, the recurrence gives
+$\|Q_r\|_{\ell^1}\le7^r$, so the expanded $p$ has coefficient
+norm $<4\cdot7^m$. Squaring gives denominator $2^{2\beta}$ and
+numerator lengths at most $L_d$; its exponential coefficient growth
+is explicitly included in $6m$. Conversion and squaring use
+$O(m^2)$ exact operations. Literal powers of $u$ would additionally
+need up to $2n\log_2U$ denominator bits per coefficient.
+
+To control rational operands, evaluate a Taylor polynomial at $a=p/q$
+using common denominator $q^D D!$, then round each elementary output
+to its assigned dyadic grid before source products. All Taylor arguments
+have at most $32K_{\rm int}$ bits; degrees are at most $K_{\rm int}$.
+The denominator has at most
+$32K_{\rm int}D+D\log_2D+1$ bits and scaled sums at most
+$64K_{\rm int}^2$. Machin staging fits $128K_{\rm int}^2$ bits.
+DCT denominators can share $m2^{rB_c+B_h}$; their operands,
+source products and conversion fit the same enlarged cap. This avoids
+unbounded denominator accumulation or an unspecified reduction oracle.
+A sufficient operation count is
+\[
+ 2^{16}\{m(N+1)(D_{\exp}+P+1)^2
+       +m(D_{\cos}+B_c+1)^2+m^2+mB_h+1\}
+       \le2^{20}K_{\rm int}^4.
+\]
+Schoolbook arithmetic on the preceding operand cap gives the claimed
+bit bound, including divisions and bisections. At fixed $s$,
+$U=O(\log q_s)$, $\log F_s=O_s(\log^2q_s)$,
+$N=O_s(\sqrt{q_s})$, and all accuracy lengths other than degree are
+$O_s(q_s)$; $T,D_{\exp},K_{\rm int}=O_s(q_s^5)$ suffice.
+Substitution proves the asymptotic bounds.
+\end{proof}
+For varying $s$, use the finite recipes: $U\le5+\log(2+s+Q_s)$,
+$e^{4U}\le e^{20}(2+s+Q_s)^4$ and
+$\log F_s=sU^2+4U+4\log U$. No polynomial in $\log b$ or joint
+global accuracy/time theorem follows. For the specified fixed-$b$
+policy \eqref{eq:sc-radius-cost}, $q_s=\pi R/8+O(\log^2R)$,
+so the new sufficient compressed descriptor is $O(R^2\log R)$ bits.
+This improves the earlier sufficient clipped-cubic upper bound; it
+does not supply a lower bound or a useful finite crossover.
+
+\subsection{Finite Gaussian moments and the cancellation debit}
+\begin{proposition}[An entire moment representation]\label{prop:ac-moments}
+Write the exact converted source as
+\[ f(u)=\sum_{k=0}^{2n}d_k(u/U)^k,\qquad
+ M_k(a,c)=\int_0^1v^ke^{av^2+cv}\,dv. \]
+Then
+\begin{equation}
+ G(t,z)=\frac U2\sum_kd_k[M_k(tU^2,izU)+M_k(tU^2,-izU)].
+ \label{eq:ac-moments}
+\end{equation}
+Jets shift $k$ and multiply by powers of $\pm iU$. For $a\ne0$,
+$A=\sqrt{-a}$ gives
+\begin{align}
+ M_0&=\frac{\sqrt\pi}{2A}e^{-c^2/(4a)}
+       [\operatorname{erf}(A-c/(2A))-\operatorname{erf}(-c/(2A))],\notag\\
+ 2aM_1&=e^{a+c}-1-cM_0,\notag\\
+ 2aM_{k+1}&=e^{a+c}-kM_{k-1}-cM_k\quad(k\ge1).
+ \label{eq:ac-moment-recurrence}
+\end{align}
+At $a=0,c\ne0$, use $M_0=(e^c-1)/c$ and
+$M_k=(e^c-kM_{k-1})/c$; at $a=c=0$, use $M_k=1/(k+1)$.
+These branches define the same entire field.
+\end{proposition}
+\begin{proof}
+Substitute $u=Uv$, complete the square for $M_0$, and integrate the
+derivatives of $e^{av^2+cv}$ and $v^ke^{av^2+cv}$. Changing the
+square-root branch changes neither $M_0$ nor the integral. The integral
+proves removability and gives the entire expansion
+\begin{equation}
+ M_k(a,c)=\sum_{r,s\ge0}\frac{a^rc^s}{r!s!(k+2r+s+1)}.
+ \label{eq:ac-entire-moments}
+\end{equation}
+\end{proof}
+The symbolic formula has $O(m)$ shared moment nodes, after $O(m^2)$
+exact source conversion. This does not count evaluation precision:
+near-zero divisions, opposite moment terms and large power coefficients
+can cancel. Section~\ref{sec:complete-evaluation} pays those errors
+using \eqref{eq:ac-entire-moments} rather than assuming stability of
+the error-function or forward recurrence formulas.

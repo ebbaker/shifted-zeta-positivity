@@ -155,7 +155,9 @@ are kept separately. Spatial and time kernel derivatives are bounded
 on larger buffers before restriction. This proves the asserted norm
 with the explicit finite constant construction in \cite{recurrence}.
 \end{proof}
-The constants contain inverse powers of $\tau$ and factors such as
+The detailed proof is the recurrence companion's
+\src{recurrence/manuscript/sections/04_comparison.tex}{fixed-order theorem}
+(\texttt{thm:fixed}). The constants contain inverse powers of $\tau$ and factors such as
 $e^{(b+1)^2/(4\tau)+2B}$. The theorem does not allow an unproved
 substitution $\tau=\tau(X)$ or $B=B(X)$.
 
@@ -176,6 +178,8 @@ is at most $e^{-\eta L^2}$ in the outer version of
 $p=\lfloor L/2\rfloor$ permits $\eta=1/4$.
 \end{theorem}
 
+The recurrence companion gives the full growing-order proof
+(\src{recurrence/manuscript/sections/05_growing_order.tex}{\texttt{thm:growing}}).
 For this specified $a=1/2$ construction, write
 $\nu=\lceil r+b+2\rceil+1$. The sharpened sufficient analytic onset is
 \begin{equation}
@@ -195,20 +199,48 @@ the delivered precision has scale
  P=\frac{3L^2}{8\log2}+O(L\log L).
 \]
 With $Q$ the sum of input length, delivered precision, separation bits,
-$\lceil L^2\rceil$ and a fixed offset, the proved coarse bounds are
+$(\lceil L\rceil)^2$ and a fixed offset, the proved coarse bounds are
 \begin{equation}
  \operatorname{work}\le C(N+1)Q^{40},\qquad
  \operatorname{memory}\le C Q^{20}.
  \label{eq:negative-complexity}
 \end{equation}
 The arithmetic population $N\asymp\sqrt X$ has not disappeared.
-Improved uniform Riemann--Siegel majorants reduce a stated bound by
-more than a factor of ten; a separate contour improvement permits eleven
-fewer Gauss nodes per edge, forty-four in the four-edge rule, at the
-same target. These are analytical count improvements, not measured
-runtime claims. Component replays support the finite provider recipes;
+The uniform majorants $B_F$ and every $D_k$ are multiplied by
+$\operatorname{csch}(\pi)<1/10$. Separately, the enlarged-contour
+majorant $B_c/16$ permits eleven fewer Gauss nodes per edge,
+forty-four per instantiated four-edge rule, at the same target.
+These are analytical contour-count improvements; they do not reduce
+the outer completion-integral nodes or establish measured runtime gains.
+The exact input guards, half-target onset and delivered evaluation contract
+are in the recurrence companion's
+\src{recurrence/manuscript/sections/11_calibration_and_onset.tex}{\texttt{thm:linear-onset}}
+and \src{recurrence/manuscript/sections/12_effective_evaluation.tex}{\texttt{thm:effective}, \texttt{thm:bit-cost}}. Component replays support the finite provider recipes;
 a complete software implementation is a separate task.
 
-The next frozen recurrence request is to extend the same strong target
-to $L^{-1}\le T\le2$. It is not yet a theorem and would still leave
-a through-zero bridge to be proved.
+\subsection{The integrated moving lower endpoint}
+Recurrence Note 20's proof is integrated as
+\src{recurrence/manuscript/sections/14_moving_endpoint.tex}{\texttt{thm:moving-endpoint-delivery}},
+with its distinct \texttt{def:moving-channel-norm} \cite{rec-moving}.
+It delivers field, spatial orders zero through three and direct time
+error together in the outer $(3,1)$ norm on $L^{-1}\le T\le2$:
+\[
+ \|H(-T,\cdot)-\widehat F\|_{\mathrm o,[1/L,2]}^{(3,1)}
+ \le e^{-L^2/4},\qquad L\ge1024\nu^2.
+\]
+The construction keeps $p=\lfloor L/2\rfloor$, $K=2p$,
+$V=8\sqrt2L$, all arithmetic modes, exact adjacent-cutoff transfers
+and the bounded completion integral. The new proof pays
+$e^{Y^2/(4T)}$, the Gaussian normalization, inverse-time powers,
+complete population and degree-dependent evolved moments jointly.
+Substitution into a fixed-$\tau$ theorem would not supply these payments.
+
+Ordinary rational queries carry a strict witness $T L^->1$ for a
+certified rational lower bound $L^-\le L$. The literal $T=1/L$ tag
+has a separately paid time-input error channel, including $F_{TT}$.
+There is no arbitrary-real equality oracle. Delivered precision remains
+$3L^2/(8\log2)+O(L\log L)$, but the unchanged outer ellipse now needs
+$O_{r,b}(L^3)$ sufficient completion-quadrature nodes. Internal provider
+work and query separation are additional costs. The preserved $[1,2]$
+theorem retains its smaller $64\nu$ onset and its own outer-node count.
+Neither theorem includes $T=0$ or a complete certified software evaluator.

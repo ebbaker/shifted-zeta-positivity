@@ -62,9 +62,9 @@ are symbolic. [Summary21][summary] is the whole-chat next handoff.
 | LT-03 | Every declared fixed correction order: finite recurrence, complete truncation/arithmetic/contour budgets, actual derivative losses and order-dependent constants. | Complete at arbitrary fixed order | **AN03 r1 CLOSED**, Note19/Assessment14; J is fixed before constants/onsets. No growing-order or convergence claim. |
 | LT-04 | Determine whether controlled growing order or optimal truncation gives a further quantitative gain; identify cost and arithmetic floors. | Open, optional refinement | Requires LT-03 constant control. Formal coefficients alone are insufficient. This need not block all later bridges. |
 | LT-05 | Extend the understood positive hierarchy into a genuine overlap with finite positive-time models reaching the 64 neighborhood. | Partial: high-height compact-positive field bridge proved | **AN04 r1 CLOSED**, Note20/Assessment15. P4 X^-7 on[63,65], F1 compact chart and actual late overlap; compact bounded-height core still open. |
-| LT-06 | Bridge across the 64 regulator layer, preserving q/K and the exact implicit center; transfer the necessary density/current/time/covariance estimates. | Open for new physical consumers; corrected field inputs paid | Next existing [A03-AN01 r1][switch], Analysis — Sol, READY_FOR_SOL in Progress02: named-center sensitivity/shifts. No new center or physical tuple theorem yet. |
-| LT-07 | Cover intermediate and small positive times with the needed arithmetic population and complete buffered field estimates. | Later goal; desired compact-positive coverage incomplete | Follows the higher-positive region. Existing [A08-AN01][small] covers only [1/2,1] if executed successfully; it does not close the whole gap. |
-| LT-08 | Bridge through zero and into the negative recurrence, using compatible envelopes, jets, completion and paid interfaces. | Later goal; weaker signed crossover available | Use actual overlaps; [R05-AN08][negative] remains a separate prepared approach to T=1/L, excluding zero itself. |
+| LT-06 | Bridge across64, named centers and actual corrected physical transfer with fixed q/K | Partial as wider goal: named-center and fixed-P4 high-height tuple consumers Complete | [A03-AN01](handoffs/HDA-A03-AN01.md)/Note22 and [A03-AN02](handoffs/HDA-A03-AN02.md)/Note23 CLOSED at bounded scopes in sole Progress02. Sharper simple layer/core/assembly remain separate; A08 field continuation closed; next B02 production. |
+| LT-07 | Cover intermediate and small positive times with retained arithmetic and complete buffered field estimates. | Partial as wider goal; high-height compact-positive field coverage/matching Complete at sourced rates | [A08-AN03](handoffs/HDA-A08-AN03.md)/Note26/Assessment20 CLOSED in sole Progress02. eta=Lambda²X^-3/4 on4/L<=t<=1, both overlaps; atlas[0,T] with Notes04/25/20. Strong refinement, physical/core/global assembly separate. Next B02 production prepared only. |
+| LT-08 | Bridge through zero and into negative recurrence with paid errors and interfaces. | Partial: positive F_N union through0 and older weaker negative join paid; strong negative recurrence precision through0 remains open | Note26 plus Note04 covers[0,1]; R05-AN08 closes its separate1/L negative endpoint excluding0. Do not infer exp(-L²/4) precision through0 from this coarser field union. |
 | LT-09 | Assemble the proved region chain and state remaining gaps; transfer physical observables where separately justified. | Later goal | Requires coverage and every interface defect. No automatic all-time/all-height or RH conclusion. |
 
 The LT-05--LT-09 goals are explicit parts of the program. Their later
@@ -321,3 +321,64 @@ No automatic chat dispatch, model switch or duplicate request.
 [r14]: ../reviews/14_ARBITRARY_FIXED_ORDER_ASSESSMENT_20261026.md
 [r15]: ../reviews/15_COMPACT_POSITIVE_FIELD_BRIDGE_ASSESSMENT_20261026.md
 [summary]: ../notes/21_CHAT0005_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md
+
+
+## LT-06 dependency return — 26 October 2026, base chat0025
+
+For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+[Note22](../notes/22_NAMED_SWITCH_CENTERS_20261026.md)/[Assessment16](../reviews/16_NAMED_SWITCH_CENTERS_ASSESSMENT_20261026.md)
+closes existing A03-AN01 at named-center scope. Uniform sensitivity
+contains X(logX)²; all named one-arm displacements are o(rounding width).
+Inherited layer rates remain unchanged. The next [A03-AN02 r1](handoffs/HDA-A03-AN02.md)
+freezes the actual P4 physical tuple and explicit requested improved
+rates; it is not executed. Progress02 owns its live phase. LT-06 remains
+open for these consumers, LT-05 Partial and broad A04 Partial. No duplicate
+assignment, current manuscript build, physical result or RH claim.
+
+
+## LT-06 physical consumer returned — 26 October 2026
+
+For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**,
+same base chat0025. [Note23](../notes/23_FIXED_P4_PHYSICAL_TUPLE_20261026.md)/[Assessment17](../reviews/17_FIXED_P4_PHYSICAL_TUPLE_ASSESSMENT_20261026.md)
+closes A03-AN02 r1 at every frozen rate, fixed P4 on[63,65] and high
+height. This is the actual full tuple including direct time, signed
+covariance/means, exact regulator and residual corrections. It is not
+an improved simplified-layer law or bounded-height core theorem.
+LT-06 records the bounded consumer Complete while the wider goal stays
+Partial. Progress02 alone owns execution. Next Analysis — Sol is the
+existing A08-AN01 first slab[1/2,1]; no new dispatch or parent upgrade.
+
+## A08 first-slab pointer — 26 October 2026, base chat0025
+
+For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+[Note24](../notes/24_SMALL_POSITIVE_SLAB_20261026.md)/[Assessment18](../reviews/18_SMALL_POSITIVE_SLAB_ASSESSMENT_20261026.md)
+closes A08-AN01 on[1/2,1]: full-buffer field/jets/time at complete
+X^(-t log2/4), worst X^(-log2/8), actual residual and endpoint match.
+LT-07 is Partial; this is not the remaining positive-range or zero join.
+Sole Progress02 owns the CLOSED return and next unexecuted AN02 r1.
+No new A04 phase is created; LT-03/04/05/06 and parent statuses retain
+their precise scopes. No numerical onset or independent audit is claimed.
+
+## A08 intermediate-positive pointer — 26 October 2026, base chat0025
+
+For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+[Note25](../notes/25_INTERMEDIATE_POSITIVE_COMPARISON_20261026.md)/Assessment19
+closes A08-AN02 corrected[3/4,33], complete B1, jets/direct time,
+actual residual/residual_z and both genuine overlaps. Notes24/20 give
+the resulting fixed-T high-height atlas[1/2,T]. LT-07 stays Partial
+for the remaining near-zero/physical/core scopes. Sole Progress02 owns
+the completed return and next prepared AN03; no new A04 phase is created.
+All earlier parent/large-order/physical statuses retain their limits.
+
+## Moving positive band closed — 26 October 2026, base chat0025
+
+For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+[Note26](../notes/26_RETAINED_ARITHMETIC_MOVING_POSITIVE_BAND_20261026.md)/Assessment20
+closes A08-AN03: finite retained arithmetic4/L<=t<=1 at eta=Lambda²X^-3/4,
+buffered jets/direct time/residual and both overlaps. The positive field
+atlas is now[0,T] for each fixed finite T>=33 with inherited Notes04/25/20.
+High-height compact-positive field coverage/matching is paid; wider
+LT-07 physical/core/refinement and LT-08 strong negative precision retain
+their limits. Sole Progress02 owns the closed scientific return;
+[Summary67](../../notes/67_CHAT0025_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md)
+and Book-owned prepared B02 production are next, with no new A04 phase.

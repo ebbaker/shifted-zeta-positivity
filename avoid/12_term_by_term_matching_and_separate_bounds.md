@@ -911,3 +911,91 @@ and [Assessment15](../papers/investigations-5/01_heat_density_asymptotics/ansatz
 also retain the truncated arm's finite-endpoint forcing and the time-splice
 mismatch. A compact arithmetic improvement rechecks its domain; it does
 not change the global theorem's time quantifiers or prove physical transfer.
+
+
+**26 October 2026 — moving endpoint costs belong to distinct ledgers.**
+For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**,
+base chat0025. [Recurrence Note20](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/20_MOVING_LOWER_ENDPOINT_20261026.md)
+states: “Pi_m does NOT obey the order-independent ratio in Section3.”
+Its common lower-time multiplier bounds truncation after integrating the
+real initial population; evolved high-degree moments retain their own
+order-dependent factor. The local node bound and the larger complex
+ellipse bound likewise have different roles: using the exp(O(L³)) ellipse
+bound as a real-node precision cost would conflate quadrature truncation
+with delivered arithmetic accuracy. [Review14](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/14_MOVING_ENDPOINT_ASSESSMENT_20261026.md)
+records the separate budgets and O(L³) sufficient outer-node cost.
+This pays the specified tau=1/L class; it is no lower bound on better
+quadrature or obstruction to a different approach to zero.
+
+
+**26 October 2026 — weights and kernel orders in physical transfer.**
+For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**,
+same base chat0025. [Ansatz Note23](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/23_FIXED_P4_PHYSICAL_TUPLE_20261026.md)
+retains: “V0 and Z0 are not declared exponentially small”. Only their
+regulator-weighted companions can pay large flat-switch coefficients
+by exponential decay. Its actual covariance is compared in signed
+form before subtracting full mean products; its source uses an
+independently proved direct density-time row and internal current
+order3. [Assessment17](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/17_FIXED_P4_PHYSICAL_TUPLE_ASSESSMENT_20261026.md)
+checks that all consumers fit K4. Bounding positive gradient squares
+separately or differentiating the whole density PDE twice would lose
+that accounting. This closes the declared fixed-P4 consumer, not the
+separate weak-filter height-cost algorithm or sharper two-layer shape.
+
+**26 October 2026 — small-time arithmetic keeps its own rate.**
+For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**,
+base0025. [Ansatz Note24](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/24_SMALL_POSITIVE_SLAB_20261026.md)
+states: “At these small times it cannot be silently absorbed into the
+`Lambda^2/X` gamma allowance.” The complete n>=2 population costs
+X^(-t log2/4) on[1/2,1]; the earlier t>=32 ordering is not inherited.
+Its enlarged middle also retains a buffer-dependent polynomial power.
+Endpoint comparison beyond a published strip is paid by a fresh proof,
+not by extending its domain in prose. [Assessment18](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/18_SMALL_POSITIVE_SLAB_ASSESSMENT_20261026.md)
+records these separate payments. This proves the declared upper allowance;
+it neither proves optimality nor excludes a larger retained arithmetic
+family.
+
+**26 October 2026 — an enlarged time interval needs enlarged tail gates.**
+For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**,
+base0025. [Ansatz Note25](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/25_INTERMEDIATE_POSITIVE_COMPARISON_20261026.md)
+requires `C_ray+(1/2)log(X+U)<=U/(4S)`, S=34, and states:
+“Using the old gate `U/4` from the upper-time1 proof would not pay these
+upper-time33 rays”. Its corrected polynomial needs six Gaussian moments
+for direct time; exact finite calibration cancels retained1/z terms.
+[Assessment19](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/19_INTERMEDIATE_POSITIVE_COMPARISON_ASSESSMENT_20261026.md)
+checks those payments. Actual overlapping field domains do not alone
+define a time splice or grant its transition the corrected residual rate.
+
+**26 October 2026 — pay growing shifts before reusing a fixed-strip RS error.**
+For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**,
+base0025. [Ansatz Note26](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/26_RETAINED_ARITHMETIC_MOVING_POSITIVE_BAND_20261026.md)
+states: “its fixed-strip constant alone cannot be used on the whole
+present band.” It proves the new initial-error tube by complete ordinary
+tail grouping, retaining exp(Cv²/X), exp(O(U/sqrt X)), the reflected
+finite arm and actual correction before absorption. Direct-time Gaussian
+moments are integrated before substituting t>=4/L. [Assessment20](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/20_RETAINED_ARITHMETIC_MOVING_BAND_ASSESSMENT_20261026.md)
+checks eta=Lambda²X^-3/4 and both overlaps. The same formula on overlapping
+domains needs no interface, while a change to F1 still needs a separately
+paid time splice if one is later defined.
+
+**Common-motion cancellation needs a matched gap/buffer comparison,
+26 October 2026.** For Edward Baker with LLM assistance,
+**gpt-6.1-sol, actual effort ultra**. In the canonical compact
+[RT r2 pilot](../papers/investigations-5/02_heat_flow_rh_applications/rodgers_tao/notes/03_CANONICAL_TWO_ROOT_MARGINS_AND_FORCE_BUDGET_20261026.md),
+paired inverse-square transfer costs 6.88721 times the separate-drift
+allowance because their matched log-bound ratio is g_min/b. Its complete
+contour upper budget also loses to direct actual-root jets by 309.53.
+The note states: “More source approximation orders cannot substantially
+improve this particular budget.”
+[Assessment02](../papers/investigations-5/02_heat_flow_rh_applications/rodgers_tao/reviews/02_CANONICAL_TWO_ROOT_ACQUISITION_ASSESSMENT_20261026.md)
+retains the known-covered, fixed-family scope. Better singular gap order
+is not automatically a smaller finite allowance; compare the actual
+buffer, model-unit payment and equally informed direct consumer.
+
+
+**26 October 2026 — weak cancellation before numerical puncturing.**
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**, heat-density chat0028. [Note71](../papers/investigations-5/01_heat_density_asymptotics/notes/71_WEAK_FILTER_PUNCTURE_CONSUMER_20261026.md), checked in [Review46](../papers/investigations-5/01_heat_density_asymptotics/reviews/46_WEAK_FILTER_PUNCTURE_ASSESSMENT_20261026.md), states: “Always evaluate (WF3) before masking.” Deleting raw density disks loses mass; differentiating moving punctures adds nonvanishing possible simple-pole boundary flux. Reduce the full weak identity first, retain Note50's nonholomorphic variation correction and actual mean products, and mask only the resulting primitive integrals. The finite consumer still charges central multiple-event conditioning and normalized provider/acquisition cost; removing a regulator inverse alone does not give joint efficient height/accuracy cost.
+
+
+**26 October 2026 — pay scaled integration and actual cancellation together.**
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**, chat0028. [Note72](../papers/investigations-5/01_heat_density_asymptotics/notes/72_GRADED_WEAK_FILTER_AND_ACQUISITION_COST_20261026.md), assessed in [Review47](../papers/investigations-5/01_heat_density_asymptotics/reviews/47_GRADED_WEAK_FILTER_COST_ASSESSMENT_20261026.md), records: “The separate source power-coefficient cancellation is still EV5's 6m+4 debit, not replaced by SI16.” A compact source descriptor, logarithmic formula or q-inverse-free puncture estimate alone does not pay query cost. The fixed-family joint proof requires area-scaled rings, constant-offset-uniform logistic derivatives, kernel-edge clipping, complete phase/root acquisition and source/provider precision. Its polynomial is in numerical height and has no measured practical crossover.

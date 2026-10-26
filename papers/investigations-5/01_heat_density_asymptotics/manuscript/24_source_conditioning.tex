@@ -273,9 +273,12 @@ whole fine grid. This is an operation count, not bit complexity.
 
 Each piece contributes Gaussian moments through degree six to $G$ and
 its first three derivatives, so the symbolic prescription uses $O(M)$
-fixed-order primitive calls per point. Accuracy of complex error
-functions, endpoint rounding, cancellation, observable arithmetic and
-continuous averaging still need their own error and cost analysis.
+fixed-order primitive calls per point. For this clipped-source alternative, accuracy of complex error
+functions and algebraic endpoints needs a separate implementation ledger.
+Sections~\ref{sec:analytic-source} and~\ref{sec:complete-evaluation}
+provide a compressed positive polynomial alternative with paid source
+cancellation, observable arithmetic and continuous-filter error/cost
+analysis. They do not presume stability of this predecessor's primitives.
 The source-data bits in \eqref{eq:sc-q-cost} do not bound the working
 precision of that evaluator. No source coefficients or new numerical
 experiments have been evaluated for this integration.

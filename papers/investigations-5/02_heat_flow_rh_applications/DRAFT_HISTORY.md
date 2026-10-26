@@ -1,0 +1,11 @@
+# Milestone history
+
+26 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+gpt-6-astra, actual recorded effort max.
+
+| Date | Investigation / version | Why it matters | Sources |
+| --- | --- | --- | --- |
+| 2026-10-26 | 02 heat-flow RH applications; opening working-tree note, no commit/tag or manuscript snapshot | Opens flexible RH applications and aspirational bound design to inform the intermediate estimates; retains Rodgers–Tao, Newman upper bounds and simplicity; registers chat 0001 | [Brainstorm](notes/01_HEAT_FLOW_RH_APPLICATIONS_BRAINSTORM_20261026.md), [review](reviews/01_BOOK_APPLICATION_REVIEW_20261026.md), [input identities](reviews/BOOK_REVIEW_INPUTS_20261026.json), [chat](chat-histories/README.md) |
+| 2026-10-26 | 02 heat-flow RH applications; maintained summary v1 and Note 02, working tree, no commit/tag | Preserves the brainstorm agenda and eight bound targets; develops the positive-threshold Rodgers–Tao question and its local collision obligations | [Current summary](summary/CURRENT_SUMMARY.md), [sign analysis](notes/02_RODGERS_TAO_POSITIVE_THRESHOLD_20261026.md), [source catalog](references/sources.json), [chat](chat-histories/README.md) |
+| 2026-10-26 | Rodgers–Tao subfolder and opening program; working tree, no commit/tag | Creates the initial-results synthesis and paired overview/progress register; maps eight bound targets to ten research tasks and records the newer through-zero high-height field input | [Branch](rodgers_tao/README.md), [initial note](rodgers_tao/notes/01_INITIAL_RESULTS_AND_BOUND_REQUIREMENTS_20261026.md), [overview](rodgers_tao/research-overview/01_RODGERS_TAO_RESEARCH_OVERVIEW_20261026.md), [progress](rodgers_tao/research-progress/01_RODGERS_TAO_RESEARCH_PROGRESS_20261026.md) |
+| 2026-10-26 | Application summary integrates RT r1/r2; working tree, no commit/tag | Presents acquired compact margins and force budgets, the matched direct-comparator lesson, and remaining B1–B8 bounds at a high level, with detail left in the research notes. Summary update: gpt-6.1-sol, actual recorded effort ultra | [Summary](summary/CURRENT_SUMMARY.md), [r1 note](rodgers_tao/notes/02_CORRECTED_PROPAGATION_AND_CONTOUR_FORCE_TRANSFER_20261026.md), [r2 note](rodgers_tao/notes/03_CANONICAL_TWO_ROOT_MARGINS_AND_FORCE_BUDGET_20261026.md) |

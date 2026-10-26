@@ -84,3 +84,56 @@ Pending. Prepared only; no mathematical result or execution is recorded.
 [ledger]: ../02_EVOLUTION_ASYMPTOTICS_RESEARCH_PROGRESS_20261025.md
 [overview]: ../../research-overview/02_EVOLUTION_ASYMPTOTICS_RESEARCH_OVERVIEW_20261025.md
 [summary]: ../../notes/14_CHAT0003_RESEARCH_SUMMARY_20261025.md
+
+
+## Navigation/readiness update — 26 October 2026, base chat0025
+
+For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+A03-AN01/AN02 now close their bounded center/fixed-P4 physical scopes in
+Notes22--23. Earlier statements here that A03 was deferred are historical.
+This unchanged A08 r1 is the next recommended Analysis — Sol research
+packet, **READY_FOR_SOL, prepared not executed**, in sole Progress02.
+It still takes only[1/2,1]; no broader gap or physical theorem is supplied.
+
+## Executed return and disposition — 26 October 2026, base chat0025
+
+At the author's explicit request, **Analysis — Sol**, actual model
+**gpt-6.1-sol, recorded effort ultra**, thread
+`01a179ab-8856-7ba0-89a2-500b2d854c80`, turn
+`01a179fa-f57d-7c12-a5a5-64a777f84e21`. The frozen r1 above is preserved.
+[Inputs24](../../notes/24_SMALL_POSITIVE_SLAB_INPUTS_20261026.json) pins
+opening sources. Earlier pending/prepared notices are historical.
+
+**Complete/CLOSED at the bounded [1/2,1] high-height field scope.**
+[Note24](../../notes/24_SMALL_POSITIVE_SLAB_20261026.md), SP1--29,
+proves the explicit leading elementary pair F0 with full fixed buffers:
+field/spatial j0--3 `C E_o Lambda^j X^(-t log2/4)`, direct first time
+`C E_o Lambda^2 X^(-t log2/4)`. The uniform worst power is log2/8.
+The actual residual is `C E_o Lambda^2/X`, residual_z
+`C E_o Lambda^3/X`. Complete source/arithmetic, gamma curvature,
+lower completion, enlarged middle and both infinite rays are separately
+paid; no contour deformation creates unpaid connectors. Endpoints are
+fixed, and the proof split is not differentiated.
+
+The t=1/2 cutoff-free published-model match is through common H. A fresh
+gamma calibration pays arbitrary fixed buffers; the published restricted
+strip theorem is not extended by citation. Its time comparison uses an
+exact residual, not a differentiated published error. The signed
+crossover supplies no all-height overlap at this fixed endpoint.
+
+[Assessment18](../../reviews/18_SMALL_POSITIVE_SLAB_ASSESSMENT_20261026.md)
+accepts this scope with same-model internal checks only. One derivative
+margin phrase was clarified before closure. No first unpaid estimate
+remains in this request. Constants/sufficient onsets are finite and
+uninstantiated; no numerical, symbolic or interval campaign, physical
+transfer, manuscript edit or cost certificate was performed. The
+[analytical work record](../../numerics/A08_AN01_ANALYTICAL_WORK_RECORD_20261026.json)
+identifies the files and source checks.
+
+Wider A08 is **Partial**. No whole 1/2<t<32 gap, join to t>=32,
+near-zero/negative bridge, core, growing-time or physical theorem is
+claimed. Parent statuses remain unchanged. Next **Analysis — Sol**:
+[A08-AN02 r1](HDA-A08-AN02.md), **READY_FOR_SOL, prepared only**, for
+the separate corrected [3/4,33] field estimate and both genuine
+overlaps. Progress02 alone owns that live phase. This public chat keeps
+its unique base chat0025 archive and uses the authorized refresh tool.

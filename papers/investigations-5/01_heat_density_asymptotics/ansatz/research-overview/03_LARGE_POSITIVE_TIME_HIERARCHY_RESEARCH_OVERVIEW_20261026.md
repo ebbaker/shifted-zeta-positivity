@@ -1,5 +1,23 @@
 # Research overview: the unconditional positive-time hierarchy and regional bridges
 
+**Current research return, 26 October 2026, base chat0025 — gpt-6.1-sol,
+actual effort ultra:** [Note26](../notes/26_RETAINED_ARITHMETIC_MOVING_POSITIVE_BAND_20261026.md)
+and [Assessment20](../reviews/20_RETAINED_ARITHMETIC_MOVING_BAND_ASSESSMENT_20261026.md)
+close A08-AN03 on4/L<=t<=1. The existing frozen-N arithmetic/RS family
+has eta=Lambda²X^-3/4, full spatial0--3/direct time, actual residual
+E_o eta and residual_z E_o Lambda eta. Both genuine overlaps close.
+Together with inherited Note04, the same F_N covers[0,1]; Notes25/20
+give a buffered high-height field atlas[0,T] for each fixed finite
+T>=33 after T-dependent onsets. The moving-band field gap is closed
+at this rate. Strong negative precision through0, new physical/core/
+global assembly/cost/audit remain separate. Onsets symbolic, assessment
+same-model only. [Summary67](../../notes/67_CHAT0025_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md)
+is the requested whole-chat handoff. **Next Analysis — Sol:**
+[B02-MI1 r1](../../research-progress/handoffs/HDA-B02-MI1.md), READY_FOR_SOL,
+prepared only, production integration. Progress02 alone owns closed A08
+science; Book progress owns B02. Earlier incompatible priorities below
+are historical. No new manuscript build or parent-status upgrade.
+
 26 October 2026, America/New_York. Prepared for **Edward Baker** with
 substantial LLM assistance, **gpt-6-astra (Codex), actual effort max**,
 verified from session metadata. Origin: recurrence **chat0007**, thread
@@ -197,7 +215,7 @@ an independently chosen number of retained arithmetic modes.
 | --- | --- | --- |
 | Large t to bounded positive times reaching the neighborhood of64 | Note19 joint theorem and Note20 new compact proof; P4 pure X^-7 on[63,65], rechecked F1 chart and comparable envelopes | High-height overlap and optional time-splice defect are paid. A compact bounded-height core remains; no eventual onset was evaluated at64. |
 | Across the regulated transition near 64 | Note28/31 baseline physical results; Note20 corrected field/arm inputs | Existing A03-AN01 r1 is next ready: exact named-center neighborhood/sensitivity and shifts. New physical/current/covariance and sharper layer consumers remain unpaid. |
-| From that positive-time region toward small positive t | Parent t>=32 results, restricted published small-positive estimates, and prepared [A08-AN01][small] on [1/2,1] | A quantitatively covered chain through the remaining positive intervals, including the documented 1/2<t<32 gap in the desired buffered estimates. Each new slab must pay its complete arithmetic remainder. |
+| From that positive-time region toward small positive t | Notes04/26/25/20 give a buffered high-height atlas[0,T] for each fixed finite T>=33, with both genuine overlaps and retained arithmetic | Strong negative precision through zero, physical/core/global joins and joint limits retain their own open targets. A08-AN03 is CLOSED in sole Progress02; B02 production is prepared only. |
 | Through t=0 into negative time | Signed \(\lvert t\rvert L\le8\) crossover, weaker negative join and prepared [R05-AN08][negative] approaching T=1/L | Compatible errors and derivatives on overlaps, full completion terms, and an explicit connection to the negative recurrence. The exact field is regular at zero; the representation and error scales change. |
 | Assembled description on the covered union | The preceding separate models | A proved domain union, stated uncovered regions, and every cutoff/interface defect; no all-time claim from disconnected estimates. |
 

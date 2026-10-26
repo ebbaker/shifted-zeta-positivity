@@ -1,50 +1,43 @@
 # Research progress: recurrence and fluctuation hierarchies
 
 26 October 2026, America/New_York. Prepared for **Edward Baker** with
-substantial LLM assistance, **gpt-6.1-sol (Codex), actual effort ultra**.
-Current return: recurrence **chat0006**, thread
-`01a178a3-9572-7bf2-b0a0-bd4d47f796ab`. Earlier entries retain their
-original model, effort and bounded evidence scope.
+substantial LLM assistance. Current AN08 return uses inherited parent
+**gpt-6.1-sol, ultra**, verified by the orchestrator from its metadata;
+parent base heat-density **chat0025**, thread
+`01a179ab-8856-7ba0-89a2-500b2d854c80`. No separate subagent settings
+verification or history registration. Earlier recurrence chat0006 and
+all other entries retain their original identities and provenance.
 
-**Sole live recurrence register.** The [overview][overview] orders the
-analytical agenda; [Continuation19][continuation] retains the prepared negative-endpoint handoff. The positive-time priority below is newer.
-**HDA-R05-AN07 r1 is Complete/CLOSED** at its bounded analytical scope.
-[Note18](../notes/18_UNIFORM_RS_BOUND_STRENGTHENING_20261026.md)/
-[Review13](../reviews/13_UNIFORM_RS_BOUND_ASSESSMENT_20261026.md) prove
-a uniform factor csch(pi)<1/10 for jet/coefficient majorants and a
-separate B_c/16 contour bound. At identical jet tolerance each old
-certified contour order can lose 11 nodes per edge, saving44 locations
-per instantiated rule. Complete data/rounding and transfer terms remain.
-No numerical or machine-symbolic research run was executed.
+**Sole live recurrence register. HDA-R05-AN08 r1 Complete/CLOSED** at
+its bounded analytical scope. [Note20](../notes/20_MOVING_LOWER_ENDPOINT_20261026.md)
+and [Review14](../reviews/14_MOVING_ENDPOINT_ASSESSMENT_20261026.md)
+prove the same exp(-L²/4) outer field/spatial0--3/first-time accuracy on
+1/L<=T<=2 for L>=1024nu², nu=ceil(r+b+2)+1, at unchanged p,K,V and
+complete canonical data. Half-target truncation and all five delivered
+categories are paid; the fixed rho=2 outer provider now uses O(L³) nodes
+per branch. Ordinary rational queries require strict time witnesses;
+the exact endpoint tag has its own paid input channel. No numerical
+campaign or manuscript work was executed by this return.
 
-AN06's L>=64nu onset and total exp(-L²/4) accuracy remain, with the
-old onset and provider retained as fallbacks. All modes, every C_k,
-bounded integral, buffers, strict descriptors and [1,2] are unchanged.
-
-**Author's current next priority, 26 October 2026, recurrence chat0007:**
-understand the large-positive-time hierarchy **without RH before bridging**.
-[HDA-A04-AN01 r1](../../ansatz/research-progress/handoffs/HDA-A04-AN01.md)
-is prepared for Analysis — Sol; the
-[new focused register](../../ansatz/research-progress/03_LARGE_POSITIVE_TIME_HIERARCHY_RESEARCH_PROGRESS_20261026.md)
-alone owns its execution. [Brainstorm03](../brainstorm/03_POSITIVE_TIME_HIERARCHIES_AND_BRIDGES_20261026.md)
-records the discussion and formal candidate. Prepared for Edward Baker
-with substantial LLM assistance, gpt-6-astra, actual effort max.
-
-[HDA-R05-AN08 r1](handoffs/HDA-R05-AN08.md) remains READY_FOR_SOL,
-unexecuted, for later bridge work at tau(L)=1/L<=T<=2 with unchanged
-p,K,V and target. [N02](handoffs/HDA-R05-N02.md) remains supporting
-with unchanged cases/caps. No new time extension or saddle remainder
-theorem follows from this priority update.
+AN06's L>=64nu [1,2] theorem and AN07's coefficient/contour improvements
+remain valid, with old providers/onsets retained as fallbacks. Broad
+R05 remains Partial at complete evaluator software/certification.
+The [overview][overview] and [unified coordination register](../../research-progress/02_BOOK_UNIFIED_HEAT_FLOW_RESEARCH_PROGRESS_20261026.md)
+route later work; the existing [physical-consumer packet](../../ansatz/research-progress/handoffs/HDA-A03-AN02.md)
+is owned by its ansatz register. N02 remains supporting with unchanged
+cases/caps and is not executed. No RH or physical-consumer result follows.
 
 ## Current disposition
 
-R01–R03, R05-AN01–AN07 and N01 are **CLOSED at their bounded scopes**.
+R01–R03, R05-AN01–AN08 and N01 are **CLOSED at their bounded scopes**.
 The analytical results are **proved in-note from named inputs**, with
 same-model internal assessments. Broad **R05 remains Partial** at the
 complete canonical-field evaluator software/certification. The manuscript
-integrates Note18's closed coefficient/contour gain; its
-[current build record](../manuscript/BUILD_RECORD_AN07_20261026.json)
-owns production evidence. Component replay remains supporting evidence.
+integrates Note18's closed coefficient/contour gain; its historical
+[AN07 build record](../manuscript/BUILD_RECORD_AN07_20261026.json)
+retains that production evidence. The [manuscript README](../manuscript/README.md)
+owns newer production records. This AN08 return edits no manuscript.
+Component replay remains supporting evidence.
 
 | ID | Research status | Execution / owner | Evidence or next gate |
 | --- | --- | --- | --- |
@@ -52,33 +45,31 @@ owns production evidence. Component replay remains supporting evidence.
 | HDA-R02 | Complete at fixed-order scope | CLOSED — Analysis, Sol | Note03/Review02, K=2p and X^-(p+3/4). |
 | HDA-R03 | Complete at fixed compact-family scope | CLOSED — Analysis, Sol | Note04/Review03, explicit endpoint costs. |
 | HDA-R04 | Open exploratory question | NOT_STARTED | Quantitative continuous-s remainder/reconstruction. |
-| HDA-R05 | Partial: effective analytical construction established; full software/certification open | AN01–AN07 and N01 CLOSED; **AN08 r1 READY_FOR_SOL — Analysis** | Note18/Review13 close uniform RS-bound strengthening; AN08 asks for tau=1/L, now later than the author-prioritized large-t work in ansatz A04. N02 stays supporting. |
+| HDA-R05 | Partial: effective analytical construction established; full software/certification open | AN01–AN08 and N01 CLOSED — Analysis, Sol | Note20/Review14 extend the complete target to1/L<=T<=2 at L>=1024nu²; O(L³) sufficient outer nodes and explicit query witnesses. N02 stays supporting. |
 | HDA-R06 | Exploratory analogies | NOT_STARTED | A quantified canonical-norm gain is required. |
 
 ## Ordered next work
 
-1. **Large-positive-time hierarchy without RH.** Execute the bounded
-   [A04-AN01 r1](../../ansatz/research-progress/handoffs/HDA-A04-AN01.md)
-   under its sole ansatz register; no duplicate recurrence task is created.
-   Understand the positive regime before bridging.
-2. **AN08 r1 — later specified moving lower endpoint.** Pay kernel buffers,
-   inverse-time spatial/time factors, moments and every source/tail
-   simultaneously on 1/L<=T<=2. Require a sufficient all-height onset
-   or an exact scoped unresolved inequality. Prepared, not executed.
-3. **Further coefficient/integral gains.** AN07's requested comparison
-   is closed. Order dependence, local delivery or a tighter full integral
-   allowance would require another quantitative comparison.
-4. **Onset/parameter refinement.** Smaller sufficient constants or
-   changed windows/orders need another simultaneous audit; 64nu is not
-   asserted optimal.
-5. **Compression/deformation and a defined physical consumer.** Require
-   actual reconstruction/error norms before computation.
+1. **A specified physical consumer — Analysis, Sol.** The existing
+   [A03-AN02 r1](../../ansatz/research-progress/handoffs/HDA-A03-AN02.md)
+   is owned by its ansatz register; unified coordination owns the research
+   order. Pay the corrected center/sensitivity and actual observable
+   rates rather than interpreting an approximation theorem as a consumer.
+2. **Further coefficient/integral gains.** AN07's comparison and AN08's
+   specified endpoint are closed. A better outer-rule count, local delivery
+   or integral bound requires a new quantitative comparison. None is
+   silently inferred from the retained coefficient majorant gain.
+3. **Onset/parameter refinement.** The [1,2] bound64nu and moving-time
+   bound1024nu² are sufficient. Smaller constants or changed windows/orders
+   require another simultaneous audit; no optimality is asserted.
+4. **Compression/deformation.** Require actual reconstruction/error norms
+   before computation; R04/R06 remain NOT_STARTED.
 
 Independent specialist validation and primary coefficient-proof checking
 remain open. No field/zero sweep or huge-height run is prepared.
-R04/R06 NOT_STARTED, HDA-A02 Partial, HDA-17 Partial, HDA-18 Gated
-and HDA-20 unfulfilled remain. Earlier next-item recommendations below
-are historical; the current priority above routes first to ansatz A04-AN01. AN08 retains its frozen later request.
+HDA-A02 Partial, HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled
+remain. Earlier next-item recommendations below are historical. AN08's
+frozen request is preserved with its appended return/disposition.
 
 ## Evidence retained at opening
 
@@ -500,3 +491,34 @@ through64, intermediate positive time and zero to this negative hierarchy.
 Progress03 alone owns A04 execution; this register retains the recurrence
 tasks and historical evidence. The discussion/history remain recurrence
 chat0007. For Edward Baker, gpt-6-astra, actual effort max; no new result.
+
+## R05-AN08 execution opened — 26 October 2026
+
+For Edward Baker with substantial LLM assistance, inherited parent model
+**gpt-6.1-sol, ultra** (orchestrator-reported; no separately verified
+subagent configuration). The author's book-continuation request activates
+AN08 r1. [Input versions](../notes/20_MOVING_ENDPOINT_INPUTS_20261026.json)
+are pinned before the research return. Scope retains tau=1/L, upper endpoint2,
+p,K,V, full canonical data and exp(-L²/4) output target. Analysis only;
+no numerical campaign or manuscript work. Public history belongs to the
+parent research chat; no subagent chat is registered. Broad R05 Partial.
+
+## R05-AN08 execution disposition — 26 October 2026
+
+Inherited parent **gpt-6.1-sol, ultra**, base heat-density chat0025;
+configuration verified by the orchestrator, not separately for the subagent.
+Saved [Note20](../notes/20_MOVING_LOWER_ENDPOINT_20261026.md),
+[Review14](../reviews/14_MOVING_ENDPOINT_ASSESSMENT_20261026.md),
+[input/work records](../notes/20_MOVING_ENDPOINT_WORK_RECORD_20261026.json)
+and [AN08 return/disposition](handoffs/HDA-R05-AN08.md). All kernel,
+normalization, inverse-time, weighted moments, source matching and true/
+artificial tails are paid simultaneously. The explicit continuous onset
+L>=1024nu² covers every p,N jump at unchanged exp(-L²/4) accuracy.
+Delivery retains all five categories, strict query/descriptor witnesses,
+optional paid endpoint tag, and updated O(L³) sufficient outer Gauss nodes.
+Delivered precision and provider-internal work remain separate. One
+read-only same-model full-note check and authoring checks are internal
+only. No numerical/symbolic research run, provider replay, field evaluation
+or manuscript edit. AN08 Complete/CLOSED; broad R05 Partial, all parent
+physical/RH statuses unchanged. Parent chat capture remains the root
+agent's responsibility; earlier recurrence histories are preserved.

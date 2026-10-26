@@ -131,3 +131,41 @@ Prepared for Edward Baker with substantial LLM assistance,
   [Continuation19](notes/19_ANALYTICAL_CONTINUATION_AFTER_RS_BOUNDS_20261026.md)
   prepares AN08. Edward Baker with LLM assistance, gpt-6.1-sol, actual
   effort ultra, same chat0006. Broad R05 Partial; parent statuses unchanged.
+
+
+- **2026-10-26 — Book-companion reconciliation.** Working
+  [manuscript](manuscript/main.tex), no commit/tag or snapshot. Added
+  reciprocal Book and ansatz proof links and a scoped comparison with the
+  positive fixed-order hierarchy; audited fixed/growing-order norms,
+  onset/fallback/guards, RS count scope and software limits against
+  Notes16/18/19. The subsequently closed AN08 source return is cited as a
+  supplement with its exact guards/costs; its full proof remains in Note20
+  and the detailed [1,2] proof is preserved. Broad R05 remains Partial.
+  [Note63](../notes/63_BOOK_SYNTHESIS_AND_COMPANION_REVISION_PLAN_20261026.md),
+  [fresh build record](manuscript/BUILD_RECORD_20261026_BOOK_COMPANION.json).
+  Prepared for Edward Baker with LLM assistance, gpt-6.1-sol, actual
+  effort ultra.
+
+- **2026-10-26 — specified moving lower endpoint completed.** Working
+  tree; no commit/tag or manuscript snapshot. [Note20](notes/20_MOVING_LOWER_ENDPOINT_20261026.md)
+  and [Review14](reviews/14_MOVING_ENDPOINT_ASSESSMENT_20261026.md) close
+  AN08 at unchanged accuracy/data on1/L<=T<=2 for sufficient L>=1024nu².
+  All endpoint/tail/delivery gates are paid; the unchanged outer ellipse
+  now has O(L³) sufficient nodes. [1,2]/old providers remain fallbacks;
+  no numerical campaign or manuscript edit. Edward Baker with LLM
+  assistance, inherited parent gpt-6.1-sol, ultra (orchestrator verified),
+  base chat0025. Broad R05 Partial; physical/RH statuses unchanged.
+
+- **2026-10-26 — B02 r2 moving-endpoint proof integrated.** Working
+  [manuscript](manuscript/main.tex); no commit/tag or snapshot.
+  [Note20](notes/20_MOVING_LOWER_ENDPOINT_20261026.md) /
+  [Review14](reviews/14_MOVING_ENDPOINT_ASSESSMENT_20261026.md) now have
+  their detailed proof home in
+  [the moving-endpoint section](manuscript/sections/14_moving_endpoint.tex),
+  `thm:moving-endpoint-delivery`: [1/L,2], sufficient 1024nu², strict
+  rational queries/paid endpoint tag, complete ledgers and O(L³) outer
+  nodes. The [1,2]/64nu theorem remains.
+  [Fresh build record](manuscript/BUILD_RECORD_20261026_B02_R2.json).
+  Prepared for Edward Baker with LLM assistance, gpt-6.1-sol, actual effort
+  ultra. Broad R05 Partial; strong precision through zero and complete
+  evaluator software/certification remain open.

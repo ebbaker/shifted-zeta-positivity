@@ -90,3 +90,15 @@ Current navigation marks the earlier central-parent proposal superseded;
 the new coordination register links existing scientific owners instead of
 creating competing live phases. Publication of a synthesis must not make
 an older companion appear already synchronized.
+
+
+**26 October 2026 — companion lag resolved.** For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**, chat0024. [Review43](../papers/investigations-5/01_heat_density_asymptotics/reviews/43_BOOK_COMPANION_INTEGRATION_PRODUCTION_REVIEW_20261026.md) states: “Companion production is complete; scientific claims retain their sourced scopes.” The earlier Review42 checkpoint remains historical. New source proofs are integrated at their actual technical homes, a phase-selector existence/selection-margin slip is corrected against the original source, and current navigation/build records now agree. Concurrent later research returns are explicitly pinned as source supplements rather than silently folded into earlier proof provenance.
+
+**26 October 2026 — six bounded closures and their manuscript interfaces.**
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort
+ultra**, chat0027. [B02 Review45](../papers/investigations-5/01_heat_density_asymptotics/reviews/45_B02_R2_MANUSCRIPT_INTEGRATION_PRODUCTION_ASSESSMENT_20261026.md)
+records: “Production completion changes proof placement and current navigation,
+not scientific evidence status.” Current manuscripts/READMEs no longer call
+completed regional field and fixed-P4 returns unexecuted. Frozen requests,
+source notes, older builds and wider physical/core/cost/audit gates retain
+their original scope; production status is reconciled in its sole Book register.

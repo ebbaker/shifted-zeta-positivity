@@ -3,7 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern,microtype}
 \usepackage[margin=1in]{geometry}
-\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
 \usepackage{booktabs,longtable,array}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{hyperref}
@@ -25,11 +25,12 @@ pdfauthor={Drafted for Edward Baker}}
 \newcommand{\arsinh}{\operatorname{arsinh}}
 \newtheorem{proposition}{Proposition}[section]
 \newtheorem{remark}[proposition]{Remark}
+\newtheorem{theorem}[proposition]{Theorem}
 \numberwithin{equation}{section}
 \title{Evolution equations and\\large-height heat asymptotics\\
 \large Controlled ans\"atze, arithmetic modes, and physical density}
 \author{Drafted for Edward Baker}
-\date{25 October 2026\\[.3em]\small Working research draft}
+\date{26 October 2026\\[.3em]\small Working research draft}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -44,27 +45,28 @@ stability estimates determine whether those corrections approximate
 the actual field. Negative time is forward diffusion and makes the
 arithmetic modes' damping and phase drift explicit.
 
-The existing bounded results are retained: a corrected positive-time
-carrier on \([32,33]\), a buffered signed crossover through zero,
-two distinct accuracy scales on \(1\le -t\le2\), and a chartwise
-join on \([-2,0]\). A first evaluated evolution correction, retaining
-one further Riemann--Siegel term and a bounded correction integral,
-improves the fixed-negative-time field, spatial jets through three and
-first time error to \(O(|G|X^{-5/4})\). Its actual residual is
-\(O(|G|X^{-7/4})\); the remaining outer-relative allowance still grows
-at fixed negative time. The exact-gamma model now extends uniformly
-to every declared fixed compact negative interval bounded away from
-zero, with explicit endpoint factors and sufficient onset gates.
-Those factors deteriorate toward zero or infinite time. We display
-the forcing that an ansatz residual
-induces in the physical potential, density and current equations.
-Improving and extending the field and derivative estimates is the
-primary research task. The regulator transition near \(t=64\) remains
-an important subsequent test of amplitude accuracy and observable
-transfer. Exact identities, inherited estimates and proposed proof
-methods are distinguished; no all-time asymptotic theorem or new
-physical-transfer estimate is asserted.
+The signed crossover through zero and the earlier negative-time models
+retain their original domains and rates. The recurrence companion now
+owns the sharper negative hierarchy. Here we give the full positive
+hierarchy proof: each fixed correction order has a finite partition
+recurrence, a complete canonical-source field remainder, buffered
+spatial jets through three, a direct first time estimate, and an exact
+nonzero heat residual. At sufficiently late time these estimates hold
+uniformly at every real height in fixed transverse strips. A separate
+compact-positive proof improves the arithmetic budget and gives the
+second corrected field an envelope allowance of order $X^{-7}$ on
+$[63,65]$, together with an elementary chart and a paid optional splice.
+Constants and onsets are order dependent and uninstantiated. The positive atlas now reaches zero: the same retained-arithmetic field
+covers $[0,1]$, a corrected pair covers $[3/4,33]$, and the compact
+hierarchy continues it to each fixed finite horizon. We also give the
+full named-center and fixed-$P_4$ physical proofs on $[63,65]$, with
+output-specific spatial, direct-time, covariance and residual rates.
+The bounded-height compact core, growing positive order, new global
+joins and further physical/effectivity consumers remain separate.
+The negative moving-endpoint extension belongs to the recurrence companion. The existing finite global physical construction belongs to the
+parent and is not strengthened by replacing its field input here.
 \end{abstract}
+\begingroup\footnotesize
 \noindent\textbf{LLM acknowledgement.}
 Drafted for Edward Baker with substantial LLM assistance. The opening
 was prepared with GPT-6 Astra (\texttt{gpt-6-astra}), recorded effort
@@ -79,6 +81,15 @@ inputs, with same-model internal analytical assessment only. Author
 verification and independent specialist review remain necessary.
 No numerical or machine-symbolic research was executed for this
 integration; compilation and rendered-page checks are production evidence.
+The positive hierarchy and compact bridge (Notes17--20) used GPT-6.1
+Sol, effort \texttt{ultra}, in ansatz chat0005. Their manuscript
+integration on 26 October 2026 uses the same model and effort, verified
+in the parent production session. The source statements retain their
+same-model internal assessment status. The B02 r2 integration of
+Notes22--26 and Assessments16--20 also uses GPT-6.1 Sol, effort
+\texttt{ultra}, verified in the parent production session; compilation
+and reading-copy inspection are production checks.
+\par\endgroup
 \newpage
 \begingroup
 \small
@@ -89,6 +100,14 @@ integration; compilation and rendered-page checks are production evidence.
 
 \section{Objective, evidence, and the role of evolution}
 \label{sec:objective}
+This is the positive-asymptotic technical companion to the Book
+manuscript \cite{book}, whose central narrative and coverage atlas
+link back to the detailed proofs here. The parent \cite{parent} owns
+the physical construction and effective source machinery; the recurrence
+companion \cite{recurrence} owns the negative hierarchy. One current
+source tree is maintained for each manuscript. The Book is a synthesis,
+not authority for strengthening any source theorem.
+
 The primary objective is to understand and bound the large-height
 asymptotics of \(H(t,z)\) for all real times. The field formula should
 expose amplitude, unwrapped phase and arithmetic structure. Its error
@@ -113,8 +132,13 @@ is now proved at a bounded natural-scale scope in
 Proposition~\ref{prop:first-negative-correction}. The exact-gamma
 family is now controlled on every declared fixed compact negative
 interval bounded away from zero in
-Proposition~\ref{prop:compact-negative-family}. Through-zero assembly,
-positive-time gaps and joint limits remain part of the wider objective.
+Proposition~\ref{prop:compact-negative-family}. Theorem~\ref{thm:positive-fixed} now supplies every fixed positive
+order, including joint time--height limits on its stated domain;
+Theorem~\ref{thm:compact-positive} supplies the high-height compact
+bridge. Theorem~\ref{thm:positive-atlas} now supplies the high-height positive
+atlas on every fixed $[0,T_*]$, $T_*\ge33$. Strong negative precision
+through zero, new global joins and the bounded-height compact core
+remain part of the wider objective.
 
 The previous research round \cite{ansatz03,ansatz04,ansatz05,ansatz06}
 established useful starting comparisons. It corrected the outer
@@ -136,8 +160,10 @@ The first such evaluated arithmetic correction is now supplied by
 Note10 \cite{ansatz10}; it pays a separate canonical initial-data
 improvement and retains the full evolving arithmetic population.
 Note12 \cite{ansatz12} makes the fixed compact-negative-time endpoint
-and onset dependence explicit. Further corrections, through-zero
-assembly and outer-scale resummation remain open. Section~\ref{sec:evolution} states the exact
+and onset dependence explicit. The negative companion now contains the later fixed-order and
+controlled growing-order hierarchy \cite{recurrence}; the earlier
+models remain useful historical alternatives. Through-zero assembly
+and outer-scale questions retain their distinct scopes. Section~\ref{sec:evolution} states the exact
 error equation and the stability obligations that make this program
 quantitative. Section~\ref{sec:observable-evolution} then records how
 the residual enters the physical observables.
@@ -1476,14 +1502,18 @@ assembly also remain open.
 
 \section{Positive-time continuation and joint large-height limits}
 \label{sec:positive-coverage}
-The signed crossover reaches only a shrinking positive-time window.
-The published small-positive-time input on \(0<t\le1/2\) and
-the parent comparison on \(t\ge32\) are distinct imports; their
-combination does not fill \(1/2<t<32\) or pay uniform compact-time
-joins. Closing this range with canonical arithmetic and gamma
-estimates is a primary task. The residual hierarchy remains useful,
-but positive-time error propagation requires analytic source control
-as described in Section~\ref{sec:evolution}.
+The signed crossover and the retained-arithmetic continuation now use
+the same frozen finite model on an actual overlap. Section~\ref{sec:positive-bridges}
+gives full canonical source proofs for $F_0$ on $[1/2,1]$, $F_1$ on
+$[3/4,33]$ and $F_N$ on $4/L\le t\le1$. Their buffered spatial,
+direct-time and actual residual estimates yield the high-height atlas
+of Theorem~\ref{thm:positive-atlas} on every fixed $[0,T_*]$,
+$T_*\ge33$. Onsets depend on the chosen finite horizon. The published
+small-positive-time comparison retains its original hypotheses;
+the full-buffer endpoint calibration below is proved afresh.
+The fixed-$J$ hierarchy and its compact bridge remain in
+Section~\ref{sec:positive-hierarchy}. A new splice would need its own
+cutoff-derivative residual and is not part of this atlas.
 
 \subsection{Full saddle and growing positive time}
 \label{sec:joint}
@@ -1505,7 +1535,10 @@ N_*=1+X+t\log(2+t+X),
 their characteristic scales are respectively
 \(t^{3/2}/N_*^2\), that quantity times \(\log^2(2+t+X)\), and
 \(t/N_*^3\). Their actual domains and finite constants stay attached
-to the original results.
+to the original results. They remain valid baseline estimates.
+Theorem~\ref{thm:positive-fixed} supplies the sharper parity-improved
+$J=0$ bound and every fixed corrected order, with their full budgets
+before eventual absorption.
 
 An optional simplification replaces the digamma saddle by
 \begin{equation}
@@ -1529,6 +1562,9 @@ argument is not a valid global prescription \cite{dlmf-W}.
 The \(W\) replacement needs separate field, phase, derivative and
 heat-residual bounds. It is secondary to the arithmetic and fixed-time
 outer work.
+
+\input{07_positive_hierarchy}
+\input{08_positive_bridges}
 
 \section{From field residuals to physical evolution}
 \label{sec:observable-evolution}
@@ -1599,6 +1635,13 @@ For negative time the physical regulator depends on time alone, so
 The spatial regulator curvature returns near its switch. A spatial
 join that breaks holomorphicity requires the further compatibility
 and curvature defects in parent Note42 \cite{parent42}.
+
+Theorem~\ref{thm:fixed-p4-consumer} below now pays the complete fixed-$P_4$
+physical consumer on $[63,65]$, including corrected collars, weak log/unit
+and pole bounds, exact flat-switch derivatives, actual signed covariance,
+full mean products and retained residual corrections. Its proof is in
+Section~\ref{sec:switch-consumer}; the negative models and new
+small-positive physical consumers retain their separate unpaid hypotheses.
 
 These formulas identify the consumers of an asymptotic error bound.
 They do not by themselves control those consumers. For example
@@ -1674,8 +1717,10 @@ The symbol \(\sigma\) here is unrelated to the arithmetic coordinate
 Replacing \(t_c\) by a short inverse-logarithmic expansion is not justified
 at the scale \eqref{eq:rounding}. For the next-order transition, even
 the factor two between \(A_{\mathrm o}\) and \(A_X\) matters:
-it changes \(b\) by a nonzero constant. Substituting an elementary or
-full-saddle amplitude for \(A_X\) needs an explicit recentering estimate.
+it changes \(b\) by a nonzero constant. Proposition~\ref{prop:named-switch-centres} supplies the explicit
+recentering estimate for elementary, corrected, truncated-gamma,
+full-saddle and $P_4$ one-arm moduli. Their complete amplitude and
+neighborhood proof follows in Section~\ref{sec:switch-consumer}.
 Direct time derivatives of this transition must be derived separately,
 not obtained by differentiating an \(O(1)\) density allowance.
 
@@ -1689,12 +1734,15 @@ Before the switch, a vanishing coarse density does not resolve the
 normalized field or its arithmetic oscillations. Both questions remain
 in the high-height program.
 
+\input{09_switch_consumer}
+
 \clearpage
 \section{All-time coverage and quantitative acceptance}
 \label{sec:map}
 The following map records the domains actually supported by the
-current sources and the remaining field-estimate tasks. It is not a
-completed covering theorem. Here \(L=\log(X/(4\pi))\).
+current sources and the remaining field-estimate tasks. The positive high-height atlas is now complete at each fixed finite
+horizon as in Theorem~\ref{thm:positive-atlas}; the table retains the
+separate all-region physical and constructive obligations. Here \(L=\log(X/(4\pi))\).
 \begingroup\small
 \begin{longtable}{@{}>{\raggedright\arraybackslash}p{.20\textwidth}>{\raggedright\arraybackslash}p{.36\textwidth}>{\raggedright\arraybackslash}p{.36\textwidth}@{}}
 \toprule Region & Present evidence & Primary remaining estimate\\\midrule
@@ -1722,25 +1770,45 @@ factors/onsets, \(|G|X^{-5/4}\) field/jets/time and
 \(|G|X^{-7/4}\) residual. &
 No zero/growing-time substitution. Constants deteriorate at endpoints;
 outer allowance still grows. Physical transfer remains unpaid.\\
-Fixed positive time &
-Distinct published \(0<t\le1/2\) and parent \(t\ge32\) inputs;
-Note03's corrected buffered theorem on \([32,33]\). &
-Pay the intermediate positive range \(1/2<t<32\) and uniform
-compact-time overlaps; retain arithmetic terms whenever larger than
-the requested correction.\\
+Fixed positive time $t\ge32$ &
+Notes19--20, Theorems~\ref{thm:positive-fixed} and
+\ref{thm:compact-positive}: each fixed $J$ has complete
+$X^{-2J-3}+X^{-t\log2/4}$ allowance on fixed $[32,T]$.
+$P_2$ is $X^{-5}$ there; $P_4$ is $X^{-7}$ on $[63,65]$. &
+Bounded-height compact core; higher orders retain arithmetic when its
+exponent is too small. Constants depend on the fixed compact interval.\\
+Small positive time &
+Theorems~\ref{thm:small-positive-slab}, \ref{thm:intermediate-positive}
+and \ref{thm:retained-positive-band}: $F_N$ on $[0,1]$,
+$F_0$ on $[1/2,1]$ and $F_1$ on $[3/4,33]$; all jets/time/residuals
+and actual overlaps paid. &
+Refine constants/onsets and physical consumers; retain the arithmetic
+term in $B_1$. The atlas creates no new time or spatial join.\\
 Joint \(t,X\to+\infty\) &
-Inherited full gamma saddle with its stated domains and constants. &
-Uniform large-height reduction and matching; a Lambert \(W\)
-replacement only if it gives a proved gain.\\
+Theorem~\ref{thm:positive-fixed}: each fixed $J$ has all-real-height
+field allowance $t^{-J-1}\log^{-2J-3}(2+t)$ after an
+order-dependent onset; jets/time/residual have separate losses. &
+Growing/optimal order, bounded compact core and corrected physical
+consumers; a Lambert \(W\) replacement needs its own gain.\\
+Negative hierarchy (separate companion) &
+Current recurrence manuscript: fixed $\tau,B,p_-$ in natural gamma
+norm; separate $e^{L_X^2/8}$ outer conversion; growing order only
+on fixed $[1,2]$, with every arithmetic mode and tail retained. &
+The later Note20 supplement proves $1/L_X\le T\le2$ at
+$L_X\ge1024\nu^2$, with frozen chart selection and explicit query
+witnesses. Zero and complete evaluator software remain outside it.\\
 Joint \(T=-t,X\to\infty\) &
 Inherited large-\(T\) Gaussian endpoint with absolute comparisons. &
-Identify scaling regions and prove high-height overlaps; do not
-substitute it for fixed-negative-time relative asymptotics.\\
+Identify scaling regions and prove high-height overlaps; no substitution
+for fixed-negative-time relative asymptotics.\\
 Regulator transition near time 64 &
 Inherited two-layer density profile with \(O(1)\) absolute error
 and an exact implicit center. &
-After the primary field work: one-arm amplitude comparison,
-recentering at the rounding scale, and direct dynamic transfer.\\
+Note22 now pays named-center sensitivity and shifts at the rounding
+scale, retaining $O(1)$ absolute/$O(1/\log X)$ normalized layer error.
+Theorem~\ref{thm:fixed-p4-consumer} pays the fixed-$P_4$ tuple:
+$e=X^{-7}$ static/residual, $e(1+\log X)^2$ current/covariance and
+$eX(1+\log X)^2$ time/source; sharper simple-layer error remains open.\\
 \bottomrule
 \end{longtable}
 \endgroup
@@ -1776,8 +1844,14 @@ cancellation. Its outer allowance \eqref{eq:first-remaining-outer-loss}
 still fails; no actual error lower bound is inferred. The fixed
 compact-negative extension is now paid by
 Proposition~\ref{prop:compact-negative-family}, with the full explicit
-ledger in Appendix~\ref{app:compact-endpoints}. Through-zero assembly,
-the missing positive range and matching joint limits remain primary tasks.
+ledger in Appendix~\ref{app:compact-endpoints}. The positive fixed-order hierarchy and its high-height compact
+overlap are now integrated in Section~\ref{sec:positive-hierarchy}.
+The negative recurrence specialist \cite{recurrence} supersedes any
+reading of these earlier local models as the latest negative result;
+it does not upgrade their historical joins. Strong negative precision through zero, bounded compact core, new
+all-region assembly and further physical/effectivity consumers remain
+tasks. The high-height compact-positive field atlas and fixed-$P_4$
+compact physical tuple are now integrated at their stated scopes.
 
 \section{Scope, controls, and continuation priorities}
 These are approximation models for one canonical source. They are
@@ -1804,39 +1878,42 @@ work. Consult the repository result and avoidance indexes
 separate bounds that lose cancellation, same-model review and statuses
 stronger than their evidence.
 
-The continuation order is now:
-\begin{enumerate}
-\item \textbf{Controlled large-height field asymptotics across time.}
-The first explicit evolution correction at intermediate negative
-time is integrated in Section~\ref{sec:negative-first-correction},
-with its two accuracy scales and retained integral. The declared
-fixed compact-negative family is now integrated in
-Section~\ref{sec:compact-negative-family}. Next fill the positive-time
-coverage gap and pay the relevant compact-family and through-zero
-overlaps. Derive joint positive and negative regimes with their own
-uniform bounds; their scope is part of this first priority.
-\item \textbf{Transfer to the physical evolution and assemble regions.}
-Track the residual forcing, actual covariance, fixed regulator and
-joining errors. Transfer may be developed on completed domains without
-claiming a global result prematurely.
-\item \textbf{Resolve the fine regulator transition near time 64.}
-Retain the prepared one-arm/center-comparison task, the exact implicit
-center and the much smaller rounding scale. It is a supporting
-workstream, not the next task ahead of the asymptotic error estimates.
-\item \textbf{Simplify secondary representations and assess cost.}
-Lambert \(W\), the central Gaussian-polynomial model and evaluation
-efficiency are useful when they preserve or strengthen paid estimates.
-\end{enumerate}
-The accompanying overview and progress register implement this order.
-HDA-A02-AN03 and AN05 close their bounded analytical results; AN04
-and AN06 record the respective assessed-result integrations. The
-broader HDA-A02 remains Partial. The next prepared bounded field task
-is HDA-A08-AN01, Analysis---Sol, a canonical buffered estimate on the
-first missing positive-time slab \([1/2,1]\). It is prepared only;
-no positive-time extension follows from the negative-time integration. The regulator packet HDA-A03-AN01 remains retained for later
-work. Parent HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled are
-unchanged. No independent review or physical-transfer completion is
-inferred from integration or compilation.
+The current continuation follows the integrated fixed-positive hierarchy,
+positive atlas and named-switch/fixed-$P_4$ physical comparison in
+Sections~\ref{sec:positive-hierarchy}, \ref{sec:positive-bridges} and
+\ref{sec:switch-consumer}. Notes22--26 \cite{ansatz22,ansatz23,ansatz24,ansatz25,ansatz26}
+close their bounded packets with symbolic constants/onsets and
+same-model internal assessment only. Wider A03, A08/LT-07 and growing
+positive order remain Partial programs. Priorities now include actual
+constants/onsets, lower-margin acquisition, bounded-height refinement,
+new physical consumers and complete cost/assembly payments. A small
+field error alone neither acquires a contour floor nor supplies a new
+global join or sharpened simplified-layer law.
+
+The later closed recurrence AN08 supplement \cite{recurrence20} extends
+the negative domain to $1/L_X\le T\le2$ at sufficient
+$L_X\ge1024\nu^2$, with $\nu=\lceil r+b+2\rceil+1$ and fixed chart
+radii. It retains frozen $p=\lfloor L_X/2\rfloor$, $K=2p$,
+$V=8\sqrt2L_X$, all modes/tails and the $e^{-L_X^2/4}$ independently
+delivered field/spatial0--3/first-time target. Ordinary rational queries
+need a strict lower-time witness; an optional literal endpoint tag has
+its own paid time-input channel. Its sufficient outer rule has
+$O(L_X^3)$ nodes, with provider work and witness separation retained.
+The original $[1,2]$ theorem remains the sharper-onset fallback. This
+new evidence is integrated in the recurrence companion's moving-endpoint
+section, with its original $[1,2]$ theorem and source Note20 retained. Neither it nor common recurrence algebra
+supplies a $T=0$ or strong through-zero theorem.
+
+Earlier signed crossover and chartwise negative joins retain their
+original algebraic rates; the sharper negative hierarchy has its own
+proofs, natural gamma norm and growing-order restrictions in the
+recurrence companion \cite{recurrence}. The parent global physical
+construction and its named regulator, actual covariance and interface
+defects stay intact. No new RH, all-time asymptotic, uniform affordability
+or independent specialist-review claim follows from this integration.
+The Book \cite{book} owns the central cross-region narrative and links
+these specialist theorem contracts; each original proof note remains
+the authority for its historical result and status.
 
 \clearpage
 \appendix
@@ -2135,10 +2212,71 @@ remainder machinery. They need not be simplified to obtain a useful
 short solution ansatz.
 
 \begin{thebibliography}{99}
+\bibitem{book} Edward Baker research project,
+\emph{The Book: one canonical heat field and three finite approximation
+mechanisms}, maintained central manuscript, 26 October 2026.
+\href{../../../papers/investigations-5/01_heat_density_asymptotics/book/main.tex}{Book source}.
+\bibitem{recurrence} Edward Baker research project,
+\emph{Finite Fluctuation Hierarchies for the Negative-Time Riemann Heat
+Flow}, maintained technical companion, 26 October 2026.
+\href{../../../papers/investigations-5/01_heat_density_asymptotics/recurrence/manuscript/main.tex}{Recurrence source}.
+\bibitem{ansatz17} Edward Baker research project,
+\emph{First corrected full gamma saddle at large positive time},
+Ansatz Note17, 26 October 2026; GPT-6.1 Sol, effort ultra.
+Proved in-note from named inputs; same-model assessment only.
+\href{../../../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/17_FIRST_CORRECTED_LARGE_POSITIVE_TIME_20261026.md}{Source note}.
+\bibitem{ansatz18} Edward Baker research project,
+\emph{Second fixed full-gamma correction at large positive time},
+Ansatz Note18, 26 October 2026; GPT-6.1 Sol, effort ultra.
+Same-model internal assessment only.
+\href{../../../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/18_SECOND_CORRECTED_LARGE_POSITIVE_TIME_20261026.md}{Source note}.
+\bibitem{ansatz19} Edward Baker research project,
+\emph{Arbitrary fixed order of the unconditional full-gamma saddle},
+Ansatz Note19, 26 October 2026; GPT-6.1 Sol, effort ultra.
+Same-model internal assessment only.
+\href{../../../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/19_ARBITRARY_FIXED_POSITIVE_TIME_ORDER_20261026.md}{Source note}.
+\bibitem{ansatz22} Edward Baker research project,
+\emph{Named centers at the physical regulator switch}, Ansatz Note22,
+26 October 2026; GPT-6.1 Sol, effort ultra, base chat0025.
+Proved in-note at compact field/arm/center scope; same-model Assessment16.
+\href{../../../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/22_NAMED_SWITCH_CENTERS_20261026.md}{Later scoped source}.
+\bibitem{ansatz23} Edward Baker research project,
+\emph{Fixed-$P_4$ physical tuple on the compact regulator switch},
+Ansatz Note23 and Assessment17, 26 October 2026.
+GPT-6.1 Sol, effort ultra; proved in-note from named inputs,
+same-model internal assessment only.
+\bibitem{ansatz24} Edward Baker research project,
+\emph{First small-positive slab: a complete buffered canonical comparison},
+Ansatz Note24 and Assessment18, 26 October 2026.
+GPT-6.1 Sol, effort ultra; proved in-note from named inputs,
+same-model internal assessment only.
+\bibitem{ansatz25} Edward Baker research project,
+\emph{Corrected buffered comparison on $[3/4,33]$ and its two overlaps},
+Ansatz Note25 and Assessment19, 26 October 2026.
+GPT-6.1 Sol, effort ultra; proved in-note from named inputs,
+same-model internal assessment only.
+\bibitem{ansatz26} Edward Baker research project,
+\emph{Retained arithmetic on the moving positive band and both overlaps},
+Ansatz Note26 and Assessment20, 26 October 2026.
+GPT-6.1 Sol, effort ultra; proved in-note from named inputs,
+same-model internal assessment only.
+\bibitem{recurrence20} Edward Baker research project,
+\emph{R05-AN08: the specified moving lower endpoint tau(L)=1/L},
+Recurrence Note20, 26 October 2026; GPT-6.1 Sol, effort ultra,
+base chat0025. Proved in-note at its bounded analytical scope;
+same-model Review14.
+\href{../../../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/20_MOVING_LOWER_ENDPOINT_20261026.md}{Later scoped source}.
+\bibitem{ansatz20} Edward Baker research project,
+\emph{First regional bridge: compact positive-time fields through the
+switch}, Ansatz Note20, 26 October 2026; GPT-6.1 Sol, effort ultra.
+Same-model internal assessment only; high-height field scope.
+\href{../../../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/20_COMPACT_POSITIVE_FIELD_BRIDGE_20261026.md}{Source note}.
+
 \bibitem{parent} Edward Baker research project,
 \emph{Heat-density asymptotics}, maintained parent manuscript,
-25 October 2026, through Notes54--55.
-Local source: \texttt{../../manuscript/main.tex}.
+26 October 2026, global construction through Notes54--55 and
+current effectivity through Notes58--61.
+\href{../../../papers/investigations-5/01_heat_density_asymptotics/manuscript/main.tex}{Parent source}.
 \bibitem{summary62} Edward Baker research project,
 \emph{Chat0021: research results, dependencies and remaining work},
 Note62, 25 October 2026; GPT-6.1 Sol, effort ultra.

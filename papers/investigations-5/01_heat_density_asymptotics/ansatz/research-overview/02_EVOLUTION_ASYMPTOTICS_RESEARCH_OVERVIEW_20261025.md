@@ -1,5 +1,23 @@
 # Research overview: evolution-driven large-height asymptotics across time
 
+**Current research return, 26 October 2026, base chat0025 — gpt-6.1-sol,
+actual effort ultra:** [Note26](../notes/26_RETAINED_ARITHMETIC_MOVING_POSITIVE_BAND_20261026.md)
+and [Assessment20](../reviews/20_RETAINED_ARITHMETIC_MOVING_BAND_ASSESSMENT_20261026.md)
+close A08-AN03 on4/L<=t<=1. The existing frozen-N arithmetic/RS family
+has eta=Lambda²X^-3/4, full spatial0--3/direct time, actual residual
+E_o eta and residual_z E_o Lambda eta. Both genuine overlaps close.
+Together with inherited Note04, the same F_N covers[0,1]; Notes25/20
+give a buffered high-height field atlas[0,T] for each fixed finite
+T>=33 after T-dependent onsets. The moving-band field gap is closed
+at this rate. Strong negative precision through0, new physical/core/
+global assembly/cost/audit remain separate. Onsets symbolic, assessment
+same-model only. [Summary67](../../notes/67_CHAT0025_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md)
+is the requested whole-chat handoff. **Next Analysis — Sol:**
+[B02-MI1 r1](../../research-progress/handoffs/HDA-B02-MI1.md), READY_FOR_SOL,
+prepared only, production integration. Progress02 alone owns closed A08
+science; Book progress owns B02. Earlier incompatible priorities below
+are historical. No new manuscript build or parent-status upgrade.
+
 25 October 2026, America/New_York. Prepared for **Edward Baker** with
 substantial LLM assistance, **gpt-6-astra (Codex), recorded effort max**.
 Ansatz chat0002, thread `01a17600-b15f-7f52-8713-31fa13599341`.
@@ -147,7 +165,7 @@ intermediate negative times, and also the main cancellation obligation.
 | Priority | Workstream | Required quantitative outcome |
 | --- | --- | --- |
 | **1: large-height field estimates for all times** | HDA-A02: evolution corrections at negative time, then arbitrary compact negative intervals. | Improve an explicit field/jet/time allowance; state the remaining outer-scale loss and pay joins. |
-| **1: same objective** | HDA-A08: compact positive-time coverage, especially the gap 1/2<t<32 and matching to the crossover and parent outer range. | A buffered canonical field comparison uniform on declared intervals, with direct time error and residual. Published small-positive and parent t>=32 inputs keep their separate hypotheses. |
+| **1: same objective** | HDA-A08 high-height compact-positive field coverage and crossover matching are now paid by Note26; stronger refinement, physical/core and global-assembly targets remain separate. | A buffered canonical field comparison uniform on declared intervals, with direct time error and residual. Published small-positive and parent t>=32 inputs keep their separate hypotheses. |
 | **1: same objective** | HDA-A04 and HDA-A05: joint positive and negative time-height limits. | Scaling regions, uniform remainders and proved overlaps; match the negative Gaussian endpoint without confusing absolute and relative error. |
 | **2: physical meaning and assembly** | HDA-A06: transfer on completed domains, then full region assembly. | U,W,R,J,Q and the rest of the parent tuple, actual covariance, residual forcing, regulator derivatives and spatial/time joining defects. |
 | **3: retained supporting work** | HDA-A03: the fine transition near t=64. | Named one-arm comparison and center shifts at the true rounding scale, then direct dynamic observable bounds. The existing packet is preserved. |

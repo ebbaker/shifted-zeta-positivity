@@ -1,6 +1,6 @@
 \section{Finite-time approximation under a global regulator}\label{sec:finite}
-The two endpoint formulas do not yet provide informative overlap through
-the intervening times. We now fix one smooth measurement protocol and
+This section supplies the earlier piecewise-linear and Hermite source
+alternatives used on finite intervening slabs. We fix one smooth measurement protocol and
 construct a finite heat field on any compact time slab. Its error is
 controlled at the source, then transferred to the density, current and
 actual covariance. The construction has a finite explicit cost; the
@@ -105,7 +105,8 @@ The heat equation also pays the corresponding time derivatives:
 $\partial_t\partial_z^j(H-H_f)=-\partial_z^{j+2}(H-H_f)$.
 Nodal arithmetic error $d_{\rm num}$ adds $d_{\rm num}F_j$ to
 $\delta_j$. Primitive evaluation and spatial averaging errors remain
-separate. Refining the mesh alone cannot remove a fixed mode or tail
+separate; Section~\ref{sec:complete-evaluation} pays them for the
+compressed polynomial representation. Refining the mesh alone cannot remove a fixed mode or tail
 allowance.
 
 \input{16_positive_hermite}
@@ -227,7 +228,10 @@ the clock's transport error to an unknown clock covariance.
 The construction proves approximability on each compact slab.
 The later assembly selects finite $U,N$, mesh, widths and time
 intervals for each prescribed $\eta$ and accuracy, using the complete
-endpoint overlap budgets. Useful evaluation remains a separate task.
+endpoint overlap budgets. Sections~\ref{sec:analytic-source} and
+\ref{sec:complete-evaluation} now supply a smaller source and a finite
+complete evaluator, with polynomial additional-accuracy work at fixed data.
+Uniformly affordable height/time work remains a separate task.
 Where two independently paid approximations overlap, the triangle
 inequality bounds their difference. A time blend of heat fields has
 an additional heat residual: $(1-\chi)H_f+\chi G$ contributes

@@ -1,0 +1,812 @@
+\section{Exact phase selection using the free onset}
+\label{sec:effective-phase}
+The ceiling in the all-time construction is a literal integer, not a
+safe upper integer. Approximation alone cannot decide it at an arbitrary
+prescribed onset if equality has not been excluded. Note~60 \cite{n60}
+uses the existing freedom to enlarge that onset before choosing $X_0$
+or the source. The unwrapped phase here is fixed by
+\begin{align}
+ w&=(1+ix)/2,&p&=w+32\alpha(p),&v&=p-w,&B&=1-32\alpha'(p),\notag\\
+ \log S&=\log M(p)-v^2/64-\tfrac12\Log B,&
+ \Theta(64,x)&=\Im\log S.
+ \label{eq:pi-normalization}
+\end{align}
+The log-gamma branch is analytic in the right half-plane, real on the
+positive axis and normalized by $\log\Gamma(1)=0$. No principal
+argument of the final small arm replaces it.
+
+\begin{lemma}[Full-saddle phase remainder]\label{lem:pi-phase}
+For $x\ge e^{1000}$, $\lambda=\log x$ and $L=\log(x/(4\pi))$,
+\begin{equation}
+ \Theta(64,x)=\frac x4(L-1)+4\pi L+\frac{7\pi}8+E(x),\qquad
+ |E(x)|\le2^{16}(1+\lambda)^2/x.
+ \label{eq:pi-expansion}
+\end{equation}
+\end{lemma}
+\begin{proof}
+The proved saddle rectangle gives $\Re p>2$, $|p|\ge x/2$,
+$|v|\le32\lambda$,
+$|\alpha(p)-\frac12\Log(p/(2\pi))|\le4/x$ and
+$|B-1|\le97/x$. Stirling on that right-half-plane branch gives
+\[
+ \log M(p)=F(p)+\tfrac32\Log p+\log(\sqrt\pi/8)
+                       +\Log(1-1/p)+R_1(p/2),
+ \quad F(z)=\tfrac z2[\Log(z/(2\pi))-1].
+\]
+Both last errors have modulus at most $4/x$: use the convergent
+logarithm series and the sector remainder
+$\sec^2(\arg z/2)/(12|z|)$ \cite{DLMFGammaOuter2026}.
+The identity first holds for positive $p$ and then by continuation;
+there is no undetermined phase translation.
+
+Put $q=ix/2$, $h=p-q=v+1/2$ and
+$\alpha_0=\frac12\Log(q/(2\pi))=L/2+i\pi/4$. The segment from
+$q$ to $p$ avoids the cut, has $|z|\ge x/4$ and $|h|\le64\lambda$.
+Taylor's integral formula, with $F''=1/(2z)$, gives
+\[
+ |F(p)-F(q)-\alpha_0h|\le4096\lambda^2/x,\quad
+ |\Log p-\Log q|\le256\lambda/x,
+\]
+and comparison of $\alpha$ at $p$ gives
+$|\alpha(p)-\alpha_0|\le129\lambda/x$,
+$|v-32\alpha_0|\le2^{13}\lambda/x$. Complete the square exactly:
+\[
+ \alpha_0v-v^2/64=16\alpha_0^2-(v-32\alpha_0)^2/64.
+\]
+The last error is at most $\lambda^2/x$, and
+$|\Log B|/2\le97/x$. Thus
+\[
+ \log S=F(q)+\alpha_0/2+\tfrac32\Log q+16\alpha_0^2
+                          +\log(\sqrt\pi/8)+R,
+ \quad |R|<5000\lambda^2/x.
+\]
+The respective imaginary parts are $x(L-1)/4$, $\pi/8$,
+$3\pi/4$, and $4\pi L$. This proves the claimed expansion of the
+implicit full saddle, including its displacement payment.
+\end{proof}
+
+\begin{theorem}[Literal phase index with free onset]
+\label{thm:phase-selector}
+Let $K\ge2048$ be a certified integer upper bound for every onset
+exponent gate of Theorem~\ref{thm:all-time}, including the enlarged
+positive band and pre-switch bridge gates. Among $U_j=2^{K+j}$,
+$0\le j\le3$, at least one has phase distance greater than $1/100$
+from an integer. A finite selector returns a possibly different onset with
+\[
+ \operatorname{dist}(\Theta(64,U_j)/\pi,\mathbb Z)>1/200
+\]
+and its exact $n=\lceil\Theta(64,U_j)/\pi\rceil$.
+For $P_*=K+3+\lceil\log_2(K+4)\rceil+20$, sufficient selector
+cost and storage bounds are $2^{100}(P_*+1)^{10}$ bit operations
+and $2^{20}(P_*+1)^3$ bits. They exclude determining $K$ and the
+remaining construction.
+\end{theorem}
+\begin{proof}
+Writing $Q_l=\Theta(64,2^l)/\pi$, Lemma~\ref{lem:pi-phase} gives
+\begin{align*}
+ Q_l&=A_l+r_l,\\
+ A_l&=\frac{2^{l-2}}\pi[(l-2)\log2-\log\pi-1]
+                 +4[(l-2)\log2-\log\pi]+7/8,\\
+ |r_l|&\le2^{16}(1+l\log2)^2 2^{-l}.
+\end{align*}
+For $l\ge K$, the error is $<2^{-26}$: use $\lambda>K/2\ge1024$,
+$e^\lambda\ge\lambda^8/8!$ and $8!<2^{16}$.
+For $c=(-4,8,-5,1)$,
+$\sum c_j2^j=\sum c_jj2^j=\sum c_j=0$, $\sum c_jj=1$,
+and $\sum|c_j|=18$. Hence
+\[
+ D=Q_{K+3}-5Q_{K+2}+8Q_{K+1}-4Q_K,
+ \qquad |D-4\log2|<1/100.
+\]
+The positive atanh series proves $2/3<\log2<7/10$; consequently
+$\operatorname{dist}(D,\mathbb Z)>19/100$. Nearest integers to
+the four $Q$'s would give
+$\operatorname{dist}(D,\mathbb Z)\le18\max_j
+\operatorname{dist}(Q_{K+j},\mathbb Z)$, so one distance exceeds
+$19/1800>1/100$.
+
+Here is a terminating rational selection, which may reject equalities.
+For each $l=K,\ldots,K+3$, set
+$P=l+\lceil\log_2(l+1)\rceil+20$, $N=P+10$. Compute
+\begin{align*}
+ \pi_N&=16\sum_{r<N}\frac{(-1)^r}{(2r+1)5^{2r+1}}
+         -4\sum_{r<N}\frac{(-1)^r}{(2r+1)239^{2r+1}},\\
+ \widehat a&=2\sum_{r<N}\frac{3^{-2r-1}}{2r+1}.
+\end{align*}
+Round $\pi_N$ to grid $2^{-P-4}$, obtaining $3\le\widehat\pi\le4$,
+$|\widehat\pi-\pi|<2^{-P-4}$; the alternating Machin tails are
+$<20\cdot25^{-N}<2^{-P-6}$. Set
+$\rho=(\widehat\pi-1)/(\widehat\pi+1)\in[1/2,3/5]$ and
+$\widehat b=2\sum_{r<N}\rho^{2r+1}/(2r+1)$. The atanh tails
+give $|\widehat a-\log2|,|\widehat b-\log\pi|<2^{-P}$,
+including the separate logarithm-input error
+$|\widehat\pi-\pi|/3$.
+
+Form exact rationals
+\[
+ \widehat L=(l-2)\widehat a-\widehat b,\quad
+ \widehat Q=2^{l-2}(\widehat L-1)/\widehat\pi+4\widehat L+7/8,
+ \quad I_l=[\widehat Q-1/1000,\widehat Q+1/1000].
+\]
+The leading-phase constant error obeys
+$|\widehat Q-A_l|\le2^ll2^{-P}<2^{-20}$; adding $r_l$ gives
+$|\widehat Q-Q_l|<2^{-19}$. Thus $I_l$ encloses $Q_l$.
+Compute $n=\lfloor\inf I_l\rfloor+1$ by rational division and
+accept the first interval with
+\[
+ n-1+1/200<\inf I_l,\qquad \sup I_l<n-1/200.
+\]
+A rational tie means rejection. The separated member has whole
+interval distance $>1/100-2^{-19}-1/1000>1/200$, so one test passes.
+Its two inequalities prove the literal ceiling and strict margin.
+
+Common denominators $(2N)!5^{2N}239^{2N}$ and $(2N)!3^{2N}$
+suffice for Machin and $\log2$. If $\rho=R/S$, its numerator and
+denominator have at most $P+8$ bits after the prescribed rounding;
+$(2N)!S^{2N}$ suffices for $\log\widehat\pi$. All operands,
+scaled sums and comparisons fit $2^{10}(P_*+1)^2$ bits, using
+fewer than $2^{10}(P_*+1)^2$ integer operations. Schoolbook
+arithmetic and streaming give the stated generous cost/storage bounds.
+The integer returned has $O(K+\log(K+1))$ bits.
+\end{proof}
+
+The order of choices is part of the theorem. First fix $\eta,\theta$,
+$C_+,T_+$, then $b=T_++1$, $\delta=\theta/64$, $T_-$,
+$K_{\rm mid}$ and $K_{\rm br}$. With the original notation of the
+compact table, $K$ must dominate
+\begin{align*}
+ 16384+\lceil\log_2(4R_b^*+4D_{\rm mov}+1024)\rceil
+           +\lceil8\log_2(2+C_b^+/\delta)\rceil,\\
+ 16384+\lceil8\log_2(2+2^{64}K_{\rm br}/\delta)\rceil,
+ \qquad2048,
+\end{align*}
+where $C_b^+=(1+c_b)C_b$, and any auxiliary gate remains included.
+Their permitted strict upper integers require no exact-real ceiling.
+All four candidate exponents retain the monotone gates, including
+$a_X\ge2^{k-1}$, $L\le k+3$, $C_b^+\le\delta2^{k/8}$ and
+$(k+3)^8\le2^{k/2}$. Select the winner before fixing $X_0$; then
+invert $\Theta(64,X_0)=n\pi$ in $[U_0,U_0+32]$, and choose
+the moving gap and one source from the resulting full minimum.
+No source chosen at a rejected onset is reused. This resolves the
+discrete input for the authorized free-onset family. Equality at an
+arbitrary already prescribed dyadic exponent remains outside the result.
+
+\section{A complete evaluator and continuous-filter ledger}
+\label{sec:complete-evaluation}
+Notes~59--61 \cite{n59,n60,n61} give analytical algorithms for the
+same complete tuple \eqref{eq:ua-contract}. A certified descriptor
+contains the exact dyadic source, $U,m,\beta$, the exact phase index
+from Section~\ref{sec:effective-phase}, encoded $\eta>0$ with a positive
+lower bound, thresholds, widths and branch/guard margins. Independent
+scalar data are rational/dyadic or come with computable approximation
+routines and separately charged costs. Unspecified exact real inputs
+are not algorithmic data. No coefficients or research numerical runs
+are produced by the following proofs.
+
+\subsection{Cancellation-safe evaluation of the stored source}
+The expanded source satisfies
+\begin{equation}
+ D_f=\sum_k|d_k|\le16\cdot49^m<2^{6m+4},\qquad
+ 0\le f(u)<100\quad(0\le u\le U).
+ \label{eq:ev-source-caps}
+\end{equation}
+These are different caps: the first pays coefficient cancellation;
+the second supplies better coordinate and smoothness bounds.
+For $a=tU^2$, $c_\pm=\pm izU$, absolute convergence gives
+\begin{equation}
+ \partial_t^h\partial_z^jG=\frac{U^{2h+j+1}}2\sum_kd_k
+ [i^jM_{k+2h+j}(a,c_+)+(-i)^jM_{k+2h+j}(a,c_-)].
+ \label{eq:ev-jets}
+\end{equation}
+There is no division by $a$ or $c$ in the series
+\eqref{eq:ac-entire-moments}, so this evaluates the same field across
+$t=0,z=0$ without assuming a stable forward recurrence.
+
+\begin{theorem}[Finite working-bit source evaluator]\label{thm:ev-source}
+Fix $2h+j\le J_e$, with $J_e=8$ sufficient below, and a rational
+query/slack rectangle $-\tau\le t\le b$, $|x|\le X$, $|y|\le Y\le4$.
+For $0<\nu\le1$, set $s_b=\max(0,b)$ and
+\begin{align}
+ A_e&=(\tau+s_b+2)U^2+U(X+Y+2),&T_e&=\lceil A_e\rceil,\notag\\
+ p_e&=\left\lceil\log_2(4\cdot2^{6m+4}U^{J_e+1}/\nu)\right\rceil,
+ &D_e&=8(T_e+1)+p_e-1.
+ \label{eq:ev-truncation}
+\end{align}
+Truncate each moment series at $r+s\le D_e$. There is a finite
+exact-rational implementation with total jet error $<\nu$, including
+coordinate rounding and final output rounding. With the explicit
+integer $K_e$ defined below, sufficient operation, operand and
+schoolbook bit bounds are respectively
+$2^{20}K_e^5$, $2^{20}K_e^3$ bits and $2^{100}K_e^{11}$.
+\end{theorem}
+\begin{proof}
+With $N=D_e+1\ge8A_e$, the joint exponential tail is
+\[
+ e^{A_e}A_e^N/N!\le2^{2A_e-N}\le2^{-p_e},
+\]
+using $N!\ge(N/e)^N$ and $e<3$. Multiplication by
+$D_fU^{J_e+1}$ pays $\nu/4$, including all coefficient cancellation.
+For rounding the three coordinates, every next real derivative is at
+most
+\[
+ V_J=100U^{J_e+3}e^{(s_b+1)U^2+(Y+1)U}.
+\]
+Choose common coordinate denominator $2^{B_e}$ with
+$B_e\ge\max(0,\lceil\log_2(12V_J/\nu)\rceil)$;
+the displacement segment is in the declared slack box and costs
+$\nu/4$. Exact dyadic coordinates need no displacement debit.
+
+Set $H_e=2m+J_e+2D_e+2$ and
+\[
+ Q_e=2^{2\beta+B_eD_e+1}D_e!H_e!,\qquad
+ p_{\rm out}=\lceil\log_2(8/\nu)\rceil.
+\]
+Each series term has this common denominator, since
+$D_e!/(r!s!)$ and $H_e!/(k+2h+j+2r+s+1)$ are integers.
+Generate Gaussian-integer powers, sum exactly, and round only the final
+complex output to $p_{\rm out}$ fractional bits, costing $\nu/4$.
+Put
+\begin{align*}
+ \ell_e&=\lceil\log_2(U+T_e+D_e+H_e+m+\beta+B_e+p_{\rm out}+J_e+8)\rceil,\\
+ L_e&=64[2\beta+B_e(D_e+1)+(D_e+H_e+J_e+4)\ell_e
+                      +6m+2T_e+p_{\rm out}+16],\\
+ K_e&=2+U+m+\beta+B_e+D_e+J_e+T_e+p_{\rm out}.
+\end{align*}
+The denominator length is at most
+$2\beta+B_eD_e+1+D_e\log_2D_e+H_e\log_2H_e$;
+numerator powers cost at most
+$D_e(B_e+\log_2(T_e+1)+3)$ bits. Absolute partial sums add at most
+$\log_2D_f+2T_e+(J_e+1)\log_2U+4$ bits. Thus all operands fit
+$L_e\le2^{20}K_e^3$. There are $O(mD_e^2)$ terms; even naive
+power/factorial scaling fits $2^{20}K_e^5$ operations. Schoolbook
+arithmetic gives the stated bit bound. If query encoding length is
+$I$, add at most $2^{20}(I+B_e+1)^2$ reading/rounding work and
+$I+B_e$ storage. Large rational denominators are paid, not dropped.
+\end{proof}
+These are exact-field evaluation bounds. Source-to-$H$ accuracy is
+still only \eqref{eq:ac-four-jets}. The source is active at every
+real height on the negative attachment, middle interval and initial
+switch; its active time is bounded. No spatial cutoff is introduced.
+
+\subsection{All nonsource leaves and the finite jet recursion}
+For the complex saddle retain its paid contraction rectangle and
+$|B_s|\ge1/2$. Inexact fixed-point iteration with local error
+$\eta_{\rm it}$ obeys
+\[
+ |p_k-p|\le2^{-k}D_{\rm rect}+2\eta_{\rm it}.
+\]
+Choosing $k\ge\lceil\log_2(4D_{\rm rect}/\delta)\rceil$ and
+$\eta_{\rm it}\le\delta/8$ pays a $\delta$ value target, with
+separate final rounding. Projection onto a closed rational rectangle
+inside the inherited strict margins preserves its domain. The actual
+arm logarithm is
+\begin{equation}
+ \log S=\Log p+\Log(p-1)-\tfrac p2\log\pi+\log\Gamma(p/2)
+       -\log16-(p-w)^2/t-\tfrac12\Log B_s.
+ \label{eq:ev-arm-log}
+\end{equation}
+It is used only at $t\ge63$. In the truncated real Taylor ring in
+$t,x,y$, each highest positive-degree coefficient of
+$p-w-t\alpha(p)/2=0$ has multiplier $B_s$; solve with that paid
+floor. Product, inverse and exponential recurrences then give all
+fixed jets. This differentiates the actual implicit equation.
+
+With $n$ fixed, phase inversion is also constructive. On a width-$w$
+bracket with $\Theta_x\ge c>0$, evaluate the midpoint residual to
+error $cw/16$. A certified sign chooses a half-bracket. Otherwise its
+true residual has modulus $\le cw/8$, so the interval of radius
+$w/8$ about the midpoint contains the root. Each step halves width
+without a root-equality test. The velocity is
+$X'=-\Theta_t/\Theta_x$ and higher finite jets use the same
+implicit-coefficient rule. This does not select $n$; that is paid by
+Theorem~\ref{thm:phase-selector}.
+
+The physical source saddle on $[63,B_q]$ uses
+\[
+ L_s=\tfrac14\log[(2tL_s+9)/(4\pi)],\quad
+ 1/4\le L_s\le B_q+1,\quad
+ \rho_q=B_q/(B_q+18)<1.
+\]
+Projected inexact iteration takes at most
+$\lceil(B_q+18)\log(4(B_q+1)/\delta)/18\rceil$ steps when its
+local error is at most $(1-\rho_q)\delta/4$. Compute
+$\kappa=8tL_s-2t+36\ge36$, $\log M_0$, and the actual
+$r=a(t)-\beta_q(t)x^2$ with their finite jets. At any late query
+take $B_q\ge t+1$; no time-uniform runtime follows.
+
+For $\phi(s)=e^{-1/[s(1-s)]}$ on $(0,1)$, zero outside,
+$N_\phi=\int_0^1\phi>2^{-11}$. Finite differentiation partitions
+give, for $r\ge1$,
+\begin{equation}
+ \|\phi^{(r)}\|\le r!2^r(2r)^{2r}\le64^r(r!)^3,
+ \qquad\|b_*^{(r)}\|\le2^{11}\|\phi^{(r-1)}\|.
+ \label{eq:ev-flat-jets}
+\end{equation}
+Indeed $v=1/s+1/(1-s)$ has
+$|v^{(j)}|\le j!v^{j+1}$ and differentiation bounds each expression
+by $r!2^rv^{2r}e^{-v}$. The physical switch uses the separate
+quotient of $e^{-1/s}$ and $e^{-1/(1-s)}$, with denominator
+$\ge e^{-2}$; the same argument applies. Their efficient integrals
+are paid below. Normalized values and jets retain the separate
+$N_\phi$ floor and arithmetic debits.
+
+To avoid undefined inactive components, use rational overlapping guards
+inside the flat-zero cutoff region and above the saddle's exterior
+onset. Skip $P$ on the inner side and $N$ near $t=0$; after $T_+$
+the full-height late branch is paid. Harmless evaluations of $G$ on a
+guard overlap enlarge its finite time/slack box and all evaluator caps.
+This extends an exact-$G$ evaluation domain, not its comparison to $H$.
+
+\subsection{The actual tuple and an explicit arithmetic allocation}
+Actual $F$ spatial jets through four with one time derivative and $r$
+spatial jets through three with one time derivative suffice; add one
+time jet for coordinate moduli of a time row. $J_e=8$ covers the
+source leaves. Every spatial, moving and temporal contribution survives.
+For one blend $F=(1-h)F_0+hF_1$, for example,
+\begin{align}
+ B&=(1-h)B_0+hB_1+\tfrac12h_x(F_1-F_0),\notag\\
+ E_{\rm comp}&=(1-h)E_0+hE_1,&
+ E_{\rm temporal}&=h_t(F_1-F_0),\notag\\
+ E_{\rm spatial}&=h_x(F_1-F_0)_z+\tfrac14h_{xx}(F_1-F_0).
+ \label{eq:ev-defects}
+\end{align}
+Their sum is $F_t+F_{zz}$; $h_t$ includes the moving-gap term.
+Apply the same identities recursively to nested blends.
+
+For support plus coordinate slack put
+\begin{align}
+ X_q&=|x|+3,&T_q&=|t|+2,&B_q&=\max(97,\lceil T_q\rceil),\notag\\
+ K_q&=8B_q(B_q+1)+36,&
+ e_b&=4\eta e^{-4}(1+T_q^2)^{-1/4},\notag\\
+ e_+&=e^{-3}K_q^{-3/2}e^{-X_q^2/72},&
+ d_q&=\min(1,e_b,e_+)^2.
+ \label{eq:ev-local-floor}
+\end{align}
+The actual regulator satisfies $q\ge d_q$ there. Geometric
+interpolation is at least the smaller arm; the preceding source saddle
+and complete $\Phi(0)$ bounds pay both arms. For $t\le64$ the
+stronger time-only floor $\min(1,e_b)^2$ may be used. This is a local
+evaluation floor; it does not replace the improved source-comparison
+conditioning or assert a global floor after the switch.
+
+There is a mechanical bound for every real gate. Give each input jet
+caps $(V,L,A)$ for magnitude, first coordinate derivatives and error
+amplification, initially $A=1$. Propagate
+\begin{center}\small
+\begin{tabular}{@{}llll@{}}\toprule
+Gate & $V$ & $L$ & $A$\\\midrule
+$u+v$ & $V_u+V_v$ & $L_u+L_v$ & $A_u+A_v+1$\\
+$uv$ & $V_uV_v$ & $V_uL_v+V_vL_u$
+ & $(V_u+1)A_v+(V_v+1)A_u+1$\\
+$1/u$, $u\ge d$ & $1/d$ & $L_u/d^2$ & $2A_u/d^2+1$\\
+$\log u$, $u\ge d$ & $V_u+1/d$ & $L_u/d$ & $2A_u/d+1$\\
+$e^u$ & $e^{V_u}$ & $e^{V_u}L_u$ & $e^{V_u+1}A_u+1$\\\bottomrule
+\end{tabular}
+\end{center}
+Split complex operations into real ones and implement complex inverse
+through the positive modulus square. Induction proves error $\le A\tau$
+when every input and gate debit is at most $\tau$, intermediate errors
+are at most one and inverse/log inputs stay within $d/2$. For maxima
+$V_*,L_*,A_*$ over the finite circuits and minimum floor $d_*$,
+the choice
+\begin{equation}
+ \tau=\min\{e/(64A_*),1/(2A_*),d_*/(4A_*)\},\qquad
+ p_{\rm arith}=\lceil\log_2(1/\tau)\rceil+2
+ \label{eq:ev-arithmetic}
+\end{equation}
+proves integrand error $\le e/64$ and preserves every floor.
+Magnitude storage also pays $\lceil\log_2(2+V_*)\rceil$ integer
+bits. Provider internal precision is paid by its own recursion at this
+output tolerance; $p_{\rm arith}$ is not a unit-cost oracle.
+
+The raw integrand inventory, with the inherited exact definitions, is
+\begin{center}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.66\textwidth}>{\raggedright\arraybackslash}p{.28\textwidth}@{}}\toprule
+Quantity & Kernel orders\\\midrule
+$S=\log D$, $w=q/D$ & through four\\
+$\rho$, direct $\rho_t$, $S_t$, $w_t$ & through two\\
+$j=qF_{zz}\overline{F_z}/(\pi D^2)$ & through three internally\\
+$C_{\rm reg},T_C,(C_{\rm reg})_t,(T_C)_t$ & through two\\
+$b_{\rm reg}w$, actual $\mathcal S$, $V_0$, $c_rw$, $\Xi$ & through two\\
+$T_U=\Xi/2+2\Re Z$ & through four\\
+$D_E,D_B,T_J$ and separate defect addends & through two; $T_J$ through three\\\bottomrule
+\end{tabular}
+\end{center}
+Direct time arithmetic uses $D_t=2\Re(F_t\bar F)+q_t$,
+$S_t=D_t/D$, $w_t=q_t/D-qD_t/D^2$, and, with $a=F_z$,
+\begin{equation}
+ \rho_t=\frac{q_t|a|^2+2q\Re(a_t\bar a)}{\pi D^2}
+                         -2\rho D_t/D.
+ \label{eq:ev-direct-rhot}
+\end{equation}
+Thus $R_t$ is evaluated directly rather than defined by its PDE.
+For $r_y=0$, the complete curvature time row is
+\begin{align*}
+ C_{\rm reg}&=(2w_xr_x+wr_{xx}-\chi_r r_x^2)/(4\pi),\quad\chi_r=w(1-w),\\
+ (C_{\rm reg})_t&=[2w_{xt}r_x+2w_xr_{xt}+w_tr_{xx}+wr_{xxt}
+       -(1-2w)w_tr_x^2-2\chi_r r_xr_{xt}]/(4\pi),\\
+ w_{xt}&=q_{xt}/D-(q_xD_t+q_tD_x+qD_{xt})/D^2+2qD_xD_t/D^3.
+\end{align*}
+Differentiate the exact $T_C$ formula by the product rule for its time
+row. Both curvature derivatives remain in the density equation.
+
+For covariance apply the signed-stress identity first. For $|\alpha|\le2$,
+\begin{align}
+ P_\alpha={}&4\Re\langle K_\alpha,V_0\rangle
+  -\langle K_{\alpha+xx}-K_{\alpha+yy},S\rangle
+  +\langle K_\alpha,c_rw\rangle+\langle K_\alpha,\Xi\rangle,\notag\\
+ Q_\alpha={}&P_\alpha-\sum_{i=x,y}s_i
+       \sum_{\beta\le\alpha}\binom\alpha\beta
+       U_{\beta+i}U_{\alpha-\beta+i},\quad s_x=1,\ s_y=-1.
+ \label{eq:ev-actual-covariance}
+\end{align}
+These are actual full filtered mean products. If every elementary
+filter/mean error is at most $e\le1$ and mean derivatives through
+three are at most $M_{\rm mean}\ge1$, the complete Leibniz sums
+give $|\operatorname{error}Q_\alpha|\le(8+24M_{\rm mean})e$.
+$\Delta Q$ adds the two second-order rows with its own allocation.
+No component covariance or separately positive pole square substitutes
+for this signed recombination.
+
+Apply the same gate rule to the finite post-filter circuit, treating
+each raw integral as an input of error $e$, cap $4V$ and derivative
+cap $4L$. Its maxima $A_{\rm post},V_{\rm post},L_{\rm post}$
+are fixed before choosing $e$. For final scalar allowance $\zeta$, take
+\begin{equation}
+ e=\min\{1,\zeta/(16A_{\rm post}),
+                 \zeta/[2^{20}(1+M_{\rm mean})^2]\}.
+ \label{eq:ev-post-allocation}
+\end{equation}
+Rounding each post-filter gate with debit $e$ then gives final error
+$\le A_{\rm post}e\le\zeta/16$. This includes all equation sums,
+heat-potential correction, current derivatives and declared traces.
+It does not presume a scalar target pays every equation component.
+
+\begin{theorem}[Complete finite evaluator]\label{thm:complete-evaluator}
+From a certified fixed descriptor and rational query/slack box, every
+retained scalar of the full tuple has a computable finite absolute-error
+evaluation algorithm, including the continuous filter, direct time
+rows, actual covariance and all joining defects. For scalar comparison
+targets $\theta_r$, put $\theta=\min(1,\min_r\theta_r)$ and
+\begin{equation}
+ \zeta(t,x)=\frac{\theta}{4(1+t^2)(1+x^2)}.
+ \label{eq:ev-endpoint-schedule}
+\end{equation}
+Adding evaluator error at most $\zeta$ to the inherited analytical
+reserve $\theta_r/2$ gives total $\le3\theta_r/4$, with separate
+component allocations. Evaluation errors vanish at both infinite-time
+and height ends. Boxes may be placed at every real height and time;
+no uniform finite work budget over those boxes is asserted.
+\end{theorem}
+\begin{proof}
+The source provider was proved above. One finite fallback gamma
+provider on $\Re v>0$, $|v|\le A_v$, uses
+\[
+ L_N(v)=-\Log v-\gamma_Nv+
+       \sum_{k=1}^N[v/k-\Log(1+v/k)],\quad
+ \gamma_N=\sum_{k=1}^N1/k-\log N.
+\]
+For $N\ge2A_v$, its log-gamma value error is at most
+$(A_v^2+A_v)/N$, first derivative error $(A_v+1)/N$, and
+order-$r\ge2$ error $(r-2)!N^{1-r}$. The convergent product,
+$|\gamma-\gamma_N|\le1/N$, $|z-\Log(1+z)|\le|z|^2$ and
+integrated derivative tails prove these bounds \cite{DLMFEulerGamma}.
+For example $N=\lceil2A_v+4(r_0!+1)(1+A_v)^2/\delta\rceil$
+pays any fixed jet order $r_0$ with separate arithmetic reserve.
+Elementary logarithms use their finite atanh series with the declared
+right-half-plane floor; exponentials use factorial series, roots use
+bisection or the right-half-plane log. The preceding saddle, phase
+and profile recipes then terminate. Midpoint integration of $\phi$
+has error at most $2/M$; separately approximate $N_\phi$ and the
+partial integral, with ratio error at most $2^{13}\eta$ when their
+errors are $\eta\le2^{-13}$. Tiny endpoint tails are bounded directly
+by the exponential derivative estimate rather than inverted distances.
+
+For a finite continuous-filter fallback, use interior polynomial
+derivatives of $k(v)=(315/256)(1-v^2)^4$ on $[-1,1]$. Their caps
+are
+\[
+ \kappa_i=\frac{315}{256}\sum_{2j\ge i}
+               \binom4j(2j)!/(2j-i)!,\quad0\le i\le5.
+\]
+The fifth is only an interior quadrature derivative; the weak tuple
+uses the zero extension only through order four. The gate rules give
+a common spatial first-derivative cap $L_*$ for every raw integrand.
+Tensor midpoint with $M_q=\max(1,\lceil64L_*/e\rceil)$ cells per
+axis costs at most $4L_*/M_q\le e/16$, including variation between
+nodes and across smooth seams. Node errors $e/64$ cost at most
+$e/16$. Sum common-grid numerators exactly, multiply by $4/M_q^2$,
+and round the final division within $e/8$. Thus each continuous raw
+filter has error $<e$, and \eqref{eq:ev-post-allocation} finishes.
+
+Every cap is a positive finite expression, not an unknown compact
+supremum. For $G$ use \eqref{eq:ev-source-caps}; for the saddle use
+its rectangle cap and a coarse gamma bound at tolerance $1/4$, then
+positive finite jet recurrences. $N,q,r$ are explicit Gaussian or
+polynomial leaves, and all profiles use \eqref{eq:ev-flat-jets}.
+The inverse floors are \eqref{eq:ev-local-floor} or the stronger
+paid branch floors. The provider hierarchy and circuit recursion are
+finite and acyclic. Its direct finite cost is $M_q^2$ times provider
+and scalar-gate costs plus exact-sum/post-filter costs; no special
+function is counted as unit cost. This fallback may be exponential
+in accuracy bits. The next subsection improves that dependence.
+
+For supplied coordinate balls, propagate the first-derivative caps
+through the same post-filter circuit to obtain $L_{\rm final}$. At
+rational center $(t_0,x_0,y_0)$ set
+$\zeta_0=\theta/[4(1+(|t_0|+1)^2)(1+(|x_0|+1)^2)]$ and require
+each radius at most $\min(1,\zeta_0/[64(1+L_{\rm final})])$.
+The coordinate contribution $\le3\zeta_0/64$, plus arithmetic
+$\le\zeta_0/16$, stays below $\zeta_0$. Extra time jets supply
+moduli for time rows. This is a contract on encoded coordinates.
+Finally \eqref{eq:ev-endpoint-schedule} proves the stated limits.
+\end{proof}
+
+\subsection{Polynomial additional-accuracy work on a fixed box}
+The preceding fallback is deliberately inefficient. Fix its descriptor
+and compact rational query/slack box $\mathcal Q$ before requesting
+additional accuracy. Write $\mathcal G_3(V,A)$ for pure-axis bounds
+\begin{equation}
+ |\partial_i^rf|\le VA^r(r!)^3\quad(r\ge0),\qquad V,A\ge1.
+ \label{eq:pc-gevrey}
+\end{equation}
+Only pure $x$ and pure $y$ derivatives are needed for quadrature.
+Each required fixed mixed spatial/time jet is first supplied as its
+own leaf. Pure-axis bounds alone would not bound transverse derivatives.
+
+The following closure rules prove explicit $V,A$ for all raw circuits:
+addition uses $(V_f+V_g,\max A)$; product uses
+$(3V_fV_g,\max A)$; one derivative uses $(V_fA_f,8A_f)$;
+inverse with $f\ge d$ uses $(1/d,2A_f(1+V_f/d))$;
+exponential uses $(e^{V_f},16A_f(1+V_f))$; logarithm uses
+\[
+ \left(\max(V_f+1/d,3V_fA_f/d),
+       \max(8A_f,2A_f(1+V_f/d))\right).
+\]
+Pad all constants to one. For products,
+$\sum_j\binom rj^{-2}\le3$ bounds the normalized Leibniz sum;
+for derivatives use $(r+1)^3\le8^r$ for $r\ge1$. The inverse
+recurrence is controlled by the geometric sum of
+$(A_f/A_{\rm out})^j$, times $V_f/d\le A_{\rm out}/(2A_f)$.
+The differential equation $(e^f)'=f'e^f$ gives the exponential rule;
+apply $f'/f$ for the logarithm rule. These prove the claimed closure,
+including $r=0$ by the value caps.
+
+The leaves satisfy \eqref{eq:pc-gevrey}: $G$ follows by direct source
+integration, with pure derivative growth at most $\max(1,U)^r$;
+$N,q,r$ use their explicit formulas. Full-buffer analytic saddle
+disks of radius $1/64$ and the explicit coarse arm/jet cap $M$ give
+$M64^rr!$ by Cauchy, hence the weaker cubic-factorial bound. The
+full late strip includes the glued real-height branch; its determinant
+floor and holomorphy supply disks even when a real saddle lies on the
+imaginary edge of its half-rectangle. Profiles satisfy
+\eqref{eq:ev-flat-jets}; translating preserves their bounds and a
+scale $h\le1$ replaces $A$ by $A/h$. Flat guarded extensions and
+the cutoffs involving $|x|$ are constant near zero and smooth at joins.
+Time rows retain $X'$ and all moving terms as fixed coefficients.
+Thus the closure rules give common computable $V,A$ on the whole
+support, independent of requested accuracy.
+
+For an efficient gamma provider, request fixed derivatives through
+$J_\Gamma$ to error $2^{-P}$ on $\Re z>1$ and put
+\begin{align}
+ m_\Gamma=N_\Gamma&=P+J_\Gamma+\lceil\log_2(J_\Gamma!)\rceil+8,\notag\\
+ T_m(w)&=(w-1/2)\Log w-w+\tfrac12\log(2\pi)
+       +\sum_{k=1}^{m-1}\frac{B_{2k}}{2k(2k-1)w^{2k-1}},\notag\\
+ g(z)&=T_{m_\Gamma}(z+N_\Gamma)
+                       -\sum_{a=0}^{N_\Gamma-1}\Log(z+a).
+ \label{eq:pc-gamma}
+\end{align}
+Gamma recurrence preserves the normalized analytic logarithm exactly.
+The sectorial Stirling bound and
+$|B_{2m}|\le4(2m)!/6^{2m}$ give, on $|\zeta-z|\le1/2$,
+$|R_m(\zeta+N)|\le(2/9)^m/m<2^{-2m}$; here
+$\Re(\zeta+N)>m$ and $\sec^2(\arg(\zeta+N)/2)\le2$.
+Cauchy then bounds derivative error by
+$j!2^j2^{-2m}<2^{-P-4}$. This differentiates an analytic remainder,
+not an asymptotic inequality \cite{DLMFGammaOuter2026,DLMFBernoulli}.
+
+All elementary logarithms have geometric-precision algorithms. For
+$w=x+iy$, $x>0$, binary-scale $x^2+y^2$ into $2^hs$, $1\le s<2$;
+the atanh series for $\log s$ has ratio at most $1/3$. Invert
+$|y|/x$ if needed, and for $0\le u\le1$ use
+\[
+ \arctan u=\arctan(1/2)
+                 +\arctan((u-1/2)/(1+u/2)),
+\]
+whose Taylor arguments have modulus at most $1/2$. Machin $\pi$
+and atanh $\log2$ were explicitly provided above. Bernoulli numbers
+need no oracle: $b_n=(n+1)!B_n$ is the integer recurrence
+$b_0=1$, $b_n=-\sum_{j<n}\binom{n+1}j[n!/(j+1)!]b_j$.
+For input length $I_z$, $|z|\le A_z$, set
+\[
+ L=P+\lceil\log_2[32(A_z+2m+2)]\rceil+4,\qquad
+ H_\Gamma=I_z+L+m+J_\Gamma+\lceil\log_2(A_z+m+4)\rceil+32.
+\]
+Round elementary logs to total complex error $2^{-L}$ on a common
+grid and assemble the rational jet expressions exactly, then round
+to $P+4$ fractional bits. The log coefficients sum in modulus to at
+most $A_z+2m+2$ in the value row, at most one in the first derivative;
+higher rows have rational powers only. Common denominators and factorial
+lengths give sufficient bounds
+$2^{100(J_\Gamma+1)}H_\Gamma^{10}$ work and
+$2^{20(J_\Gamma+1)}H_\Gamma^3$ storage. Round nonrational saddle
+inputs first, using the next fixed gamma derivative for displacement.
+This is a log-gamma/jet bound. Absolute-error gamma values and
+$\exp(\log S)$ retain their magnitude and cancellation payments.
+
+For continuous filters, let $t_j=-1+2j/n$ and $\ell_j$ be their
+Lagrange polynomials, $0\le j\le n$, $n\ge1$. Then
+\[
+ \sum_j|\ell_j(t)|\le2^nn^n/n!<6^n\quad(-1\le t\le1).
+\]
+Use exact rational weights $w_j=\int_{-1}^1\ell_j$ on $M$ panels
+per axis. Taylor degree $n$ on a panel has remainder
+$V(A/M)^{n+1}((n+1)!)^2$. Interpolation amplification and tensor
+splitting give
+\begin{equation}
+ |I_xI_yf-Q_xQ_yf|
+ \le4(1+6^n)^2V(A/M)^{n+1}((n+1)!)^2.
+ \label{eq:pc-filter-remainder}
+\end{equation}
+For a raw target $e\le1$, choose
+\begin{equation}
+ n=\max(1,\lceil\log_2(64V/e)\rceil),\quad
+ M=\max(1,\lceil2^{16}A(n+1)^2\rceil),\quad
+ N_{\rm nodes}=[M(n+1)]^2\le2^{34}A^2(n+1)^6.
+ \label{eq:pc-filter-nodes}
+\end{equation}
+Using $r!\le r^r$, the error is at most
+$V2^{-10n-12}<e/16$. Only pure-axis derivatives were used.
+The tensor weight norm is at most $4\cdot36^n$; hence node
+error $e2^{-6n-10}$ contributes $<e/256$. Pass this accuracy through
+\eqref{eq:ev-arithmetic}, preserving all magnitude and floor reserves.
+
+Use the interior polynomial trace of each weak $K$ derivative at
+endpoint nodes. Changing that boundary representative does not change
+its continuous integral. High quadrature order differentiates this
+interior polynomial integrand; it asserts no bounded fifth weak
+derivative of the zero extension. Exact weights share denominator
+$W=2^nn!(n+1)!$: write each numerator as
+$\prod_{a\ne j}[nt-(2a-n)]$, with denominator
+$2^n(-1)^{n-j}j!(n-j)!$, and integrate monomials. All monomial
+denominators divide $(n+1)!$. Weight lengths are $O(n\log(n+1))$.
+If node outputs share denominator $2^B$, the mapped tensor sum shares
+\begin{equation}
+ 2^BM^2W^2.
+ \label{eq:pc-sum-denominator}
+\end{equation}
+Stream integer numerators, rather than multiply a denominator per node,
+and round the final division within $e/16$. Storage is
+$O(B+\log M+n\log(n+1)+\log(2+V)+\log N_{\rm nodes}+n)$,
+in addition to provider workspace. Thus raw filter error is $<e$,
+uniformly between nodes and across the actual smooth seams.
+
+The one-dimensional rule with $V=1,A=64$ evaluates $N_\phi$ and
+partial integrals to $2^{-P}$ using $O((P+1)^3)$ nodes. Their
+normalizer and ratio errors retain $N_\phi>2^{-11}$. For profile
+derivatives through fixed $J_e$, if $v=1/[s(1-s)]$ satisfies
+\[
+ v\ge\max\{16J_e^2,2[B+J_e+\lceil\log_2(J_e!)\rceil+2]\},
+\]
+return zero with the proved leaf error $2^{-B}$; on the complement,
+$v=O(B)$ and Bell/rational factors have polynomial length. Partial
+integral tails include the normalizer and near one use one minus the
+reflected tail. Endpoints are exact. The separate physical switch has
+the same mechanism and its own paid denominator floor. This prevents
+inverse-distance work at extremely small encoded endpoint distances.
+
+At fixed descriptor/box, the source evaluator has degree-eleven
+sufficient accuracy work, the saddle has $O(P+1)$ contraction steps
+using the gamma provider, and phase inversion has $O(P+1)$ such
+saddle calls. The physical real saddle has fixed contraction factor.
+Elementary bounded-argument exponentials/trigonometric functions have
+$O(P+1)$ Taylor length. The source constant $\Phi(0)$ needs only
+$P+20$ modes: for $r\ge4$ its summand is at most
+$64r^4e^{-3r^2}<2^{11-2r^2}\le2^{-r-4}$, since
+$r^4\le24e^r$. Its retained exponential arguments are $O(P^2)$,
+so their factorial lengths remain polynomial. Independent input
+rounding is separately paid. Consequently all point providers fit
+\begin{equation}
+ C_{\rm point}(P,I)\le C_{\mathcal Q}(1+P+I)^{20},\qquad
+ S_{\rm point}(P,I)\le C_{\mathcal Q}(1+P+I)^8.
+ \label{eq:pc-point-cost}
+\end{equation}
+The two nested linear iterations give degree twelve before remaining
+arithmetic; the displayed degree twenty is deliberately generous.
+
+\begin{theorem}[Polynomial additional-accuracy cost at fixed data]
+\label{thm:polynomial-accuracy}
+Fix a certified descriptor and compact rational query/slack box
+$\mathcal Q$. For rational/dyadic independent scalar parameters and
+the explicit canonical providers, additional absolute accuracy $p$
+bits and query encoding length $I$ have sufficient bounds
+\begin{equation}
+ C\le C_{\rm desc,\mathcal Q}(1+p+I)^{40},\qquad
+ S\le C_{\rm desc,\mathcal Q}(1+p+I)^8.
+ \label{eq:pc-complete-cost}
+\end{equation}
+For other computable fixed scalar inputs, let $C_{\rm ext}(P)$,
+$S_{\rm ext}(P)$ bound one request to all their providers. Multiply
+the work bound by
+$1+C_{\rm ext}(C_{\rm desc,\mathcal Q}(1+p+I))$ and add
+$S_{\rm ext}(C_{\rm desc,\mathcal Q}(1+p+I))$ to storage.
+No uniform polynomial in height, time or descriptor length is asserted.
+\end{theorem}
+\begin{proof}
+Use every circuit and actual mean product in
+\eqref{eq:ev-actual-covariance}, with all direct time, curvature and
+defect rows. The fixed post-filter caps make
+$\log_2(1/e)=p+O_{\rm desc,\mathcal Q}(1)$ in
+\eqref{eq:ev-post-allocation}. Thus $n=O(p+1)$,
+$M=O((p+1)^2)$ and $N_{\rm nodes}=O((p+1)^6)$.
+Node accuracy and each provider accuracy require $O(p+1)$ bits.
+Node encoding length is $I+O(\log M+\log(n+1))$. Multiplying
+the degree-twenty point cost by degree-six node count gives degree
+twenty-six; degree forty pays weights, reading, exact summation,
+rounding and post-filter gates with slack. Streaming nodes preserves
+degree-eight storage. External scalar costs are explicitly substituted,
+since a computable fixed scalar may have arbitrarily slow digits.
+Coordinate balls require $p+O_{\rm desc,\mathcal Q}(1)$ bits by
+the preceding finite derivative recursion, with no change of scope.
+The endpoint schedule and total $3\theta_r/4$ comparison are unchanged.
+\end{proof}
+
+\subsection{A proved puncture bound and the remaining height consumer}
+The inverse gate in the Gevrey rules still contains $V/d_q$. Hence
+$A$ and the filter panel count can be exponential in height squared.
+This is a sufficient cost, not a complexity lower bound. The local
+model $F=a(z-c)$ with nearly constant $q$ has
+$\rho(c)=|a|^2/(\pi q)=1/(\pi\delta^2)$,
+$\delta=\sqrt q/|a|$: its narrow peak has finite mass.
+It cannot be discarded to improve a quadrature estimate.
+
+On holomorphic regions define smooth fractions
+\[
+ V_m=w^mF_{zz}\bar F/D,\qquad Z_m=w^mE\bar F/D,
+ \qquad D=|F|^2+q,
+\]
+including at zeros. The exact identities are
+\[
+ S_t=-2\Re V_0+r_tw+2\Re Z_0,\quad
+ w_t=r_tw(1-w)+2\Re V_1-2\Re Z_1,
+\quad (w(1-w))_t=(1-2w)w_t.
+\]
+They retain actual $E$ and its separate addends.
+\begin{lemma}[Weak-primitive punctures]\label{lemma:weak-punctures}
+In a paid simple-root collar suppose $F=(z-a)b$, $|b|\ge s>0$,
+$|F_{zz}/F|\le V_*/|z-a|+G_0$,
+$|E/F|\le E_*/|z-a|+G_E$, and
+$q_{\min}\le q\le q_{\max}$, $|F|\le F_{\max}$. Put
+$B_{\log}=\max(1,|\log q_{\min}|,
+|\log(F_{\max}^2+q_{\max})|)$. For a disk of radius $h$ in that
+collar and any $m\ge0$,
+\begin{align}
+ \int_{|z-a|<h}|S|&\le\pi h^2B_{\log},\notag\\
+ \int|V_m|&\le2\pi V_*h+\pi G_0h^2,&
+ \int|Z_m|&\le2\pi E_*h+\pi G_Eh^2.
+ \label{eq:pc-punctures}
+\end{align}
+These bounds have no inverse $q_{\min}$ factor.
+\end{lemma}
+\begin{proof}
+The logarithm lies between the two stated endpoint logarithms.
+Also $(1-w)w^m\le1$; multiply the pole-plus-regular estimates by
+this factor and integrate $1/r$ in polar coordinates. Bounded
+polynomials in $w,w(1-w)$ cost their bound times $\pi h^2$.
+Multiplying by the actual weak test supremum pays its disk contribution.
+For $N$ collars and coefficient cap $C$, choosing
+$h\le e/[CN(1+B_{\log})]$ within the collar radius pays the
+total after enlarging $C$ for displaced-disk guards.
+\end{proof}
+The first unpaid height-cost theorem must consume this lemma for the
+complete inventory: construct and guard every intersecting collar,
+bound normalized retained providers away from punctures, retain all
+joining-test commutators and nonholomorphic $B$ terms, and replace
+pointwise post-filter caps by primitive $L^1$ and actual mean bounds.
+Coordinate balls additionally need highest-kernel boundary traces and
+time moduli: differentiating the fourth weak kernel derivative can
+produce boundary line measures. The present lemma does not pay them.
+First derive the exact weak representation; deleting disks from raw
+$\rho,j,D_E$ would lose mass or signed dipoles. Neither this lemma
+nor efficient gamma alone proves uniformly affordable all-height work.

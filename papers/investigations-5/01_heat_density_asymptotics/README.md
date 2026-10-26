@@ -6,18 +6,31 @@ The author's new [Book manuscript](book/README.md) is the central synthesis.
 The existing parent, ansatz and recurrence papers are its technical
 companions. [Note63](notes/63_BOOK_SYNTHESIS_AND_COMPANION_REVISION_PLAN_20261026.md)
 and [HDA-B01-MI1 r1](research-progress/handoffs/HDA-B01-MI1.md) specify their
-next revisions for **Analysis — Sol**, unexecuted.
+revisions, now complete at production scope. See the [integration note](notes/65_BOOK_COMPANION_INTEGRATION_20261026.md) and [production assessment](reviews/43_BOOK_COMPANION_INTEGRATION_PRODUCTION_REVIEW_20261026.md).
 
 Use the [unified overview](research-overview/02_BOOK_UNIFIED_HEAT_FLOW_RESEARCH_OVERVIEW_20261026.md),
 [coordination register](research-progress/02_BOOK_UNIFIED_HEAT_FLOW_RESEARCH_PROGRESS_20261026.md),
-[continuation](notes/64_BOOK_CONTINUATION_20261026.md) and
-[production review](reviews/42_BOOK_SYNTHESIS_PRODUCTION_REVIEW_20261026.md).
+[current production note](notes/70_B02_R2_MANUSCRIPT_INTEGRATION_20261026.md) and
+[production assessment](reviews/45_B02_R2_MANUSCRIPT_INTEGRATION_PRODUCTION_ASSESSMENT_20261026.md).
+The six regional returns from Summary67 are now integrated under
+[Plan68](notes/68_MANUSCRIPT_UPDATE_PLAN_AFTER_RH_APPLICATION_REVIEW_20261026.md)
+and [B02-MI1 r2](research-progress/handoffs/HDA-B02-MI1.md), **Complete/CLOSED
+at production scope**, with four freshly built and inspected reading copies.
+B01's earlier records remain historical. The high-height field atlas reaches
+zero and the compact P4 tuple has its actual differentiated rates; the existing
+all-time physical construction retains its numerical content and quantifiers.
+The Book's conditional application discussion prioritizes independent lower
+contour/cluster data and complete energy payments. Broader physical/core/cost/
+audit gates remain open at their existing statuses. B02 production:
+Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**,
+26 October 2026, chat0027.
+
 Existing scientific registers retain their own task IDs and execution
 phases. The dated checkpoints below are historical; the earlier proposal
 to make the old parent paper the synthesis is superseded by this request.
 No open mathematical or audit gate is promoted by the new manuscript.
 Prepared for Edward Baker with substantial LLM assistance,
-**gpt-6-astra, actual recorded effort max**, base chat0023.
+**gpt-6-astra, actual recorded effort max**, base chat0023; companion integration **gpt-6.1-sol, actual recorded effort ultra**, base chat0024.
 
 24 October 2026, America/New_York. Prepared for **Edward Baker** with
 substantial LLM assistance, **gpt-6-astra (Codex), recorded effort max**.
@@ -520,3 +533,34 @@ pay controlled-order outer accuracy e^-L²/4 on [1,2] for p=floor(L/2),
 K=2p, with all modes and the bounded RS integral. Same-model internal
 assessment only; evaluator/precision/quadrature and parent statuses
 remain open/unchanged. No manuscript or numerical campaign.
+
+26 October 2026 — **first small-positive slab research**, for Edward
+Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**, base0025.
+[Ansatz Note24](ansatz/notes/24_SMALL_POSITIVE_SLAB_20261026.md)/Assessment18
+proves[1/2,1] full buffered canonical field/jets/direct time at complete
+X^(-t log2/4), exact residual and t=1/2 model match. A08-AN01 closes;
+wider A08 remains Partial. Next Analysis — Sol: separately prepared
+[A08-AN02](ansatz/research-progress/handoffs/HDA-A08-AN02.md). The
+research follows the companion build; no new reading-copy or independent
+audit claim is made.
+
+26 October 2026 — **corrected intermediate positive range**, for Edward
+Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**, base0025.
+[Ansatz Note25](ansatz/notes/25_INTERMEDIATE_POSITIVE_COMPARISON_20261026.md)/Assessment19
+closes A08-AN02 on[3/4,33], complete B1, buffered jets/direct time,
+exact residual and both overlaps. The field atlas now covers[1/2,T]
+for each fixed finite T>=33, high height with T-dependent onset. Next
+Analysis — Sol: separately prepared [AN03](ansatz/research-progress/handoffs/HDA-A08-AN03.md),
+retained arithmetic toward the signed window. No manuscript build or
+physical/core/cost/audit upgrade; checks same-model, onsets symbolic.
+
+26 October 2026 — **base0025 complete research handoff**, for Edward
+Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+[Summary67](notes/67_CHAT0025_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md)
+covers every result from this chat. The final [Ansatz Note26](ansatz/notes/26_RETAINED_ARITHMETIC_MOVING_POSITIVE_BAND_20261026.md)/Assessment20
+closes retained arithmetic4/L<=t<=1 at eta=Lambda²X^-3/4 and both
+overlaps. The fixed-T high-height positive field atlas reaches[0,T];
+strong negative precision through0 and physical/core/global/cost/audit
+remain separate. Next Analysis — Sol: [B02-MI1](research-progress/handoffs/HDA-B02-MI1.md),
+prepared only to integrate all new research into Book/companions and
+check builds. The separate B01 production result is preserved.

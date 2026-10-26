@@ -1,0 +1,818 @@
+{
+  "schema": "rt03-rt04-r2-canonical-two-root-v1",
+  "status": "PASS",
+  "date_local": "2026-10-26",
+  "prepared_for": "Edward Baker",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "ultra",
+  "LLM_assistance": "substantial",
+  "review_independence": "same-model internal review only",
+  "injected_extra_wall_error": "0",
+  "script_sha256": "05e26c57a1ae191fda22296209d88a8ba512e73ac39f6a9c4095e7d308e204cb",
+  "core_path": "papers/investigations-4/12_height_dependent_heat_contours/numerics/hdc13_theta_core.py",
+  "core_sha256": "d340a3cc8400a94b72fa4ca23e254a962cdb4563aacf01789fad7c354ae66edb",
+  "python": "3.12.14",
+  "python_flint": "0.9.0",
+  "domain": {
+    "time": [
+      "1/20000",
+      "1/10000"
+    ],
+    "delta_time": "1/20000",
+    "rectangle_x": [
+      "26",
+      "46"
+    ],
+    "rectangle_y": [
+      "-2",
+      "2"
+    ],
+    "real_core_J": [
+      "28",
+      "43"
+    ],
+    "contour_length": 48,
+    "buffer": 2
+  },
+  "finite_model": "F_t=sum_{k=0}^5(-t)^k P95^(2k)/k!, canonical H0 Taylor at36; exact coefficients enclosed by Arb",
+  "source_oracle": {
+    "bits": 192,
+    "spatial_terms": 96,
+    "heat_terms": 6,
+    "cell_order": 6,
+    "center": 36,
+    "physical_radius": 11,
+    "physical_imaginary_bound": 2,
+    "cauchy_radius": 24,
+    "collar_radius": 12,
+    "source_time_disk_radius": "1/5000",
+    "target_time_square": [
+      "-1/10000",
+      "1/10000"
+    ],
+    "source_Cphi": "[19.764728867530999228006523000601 +/- 2.43e-31]",
+    "cauchy_majorant_H0_i24": "[1.2978420121593401978491713481335 +/- 3.99e-32]",
+    "low_source_H0_i2": "[0.063591379840790494753208904584014 +/- 3.00e-35]",
+    "spatial_collar_remainder": "[3.2762138385468048605590486961742e-29 +/- 4.51e-61]",
+    "moment_bounds": [
+      "[0.063604099388671042414018734140450 +/- 2.31e-34]",
+      "[0.063604099388671042414018734140450 +/- 2.31e-34]",
+      "[0.063604099388671042414018734140450 +/- 2.31e-34]",
+      "[0.063604099388671042414018734140450 +/- 2.31e-34]"
+    ],
+    "uniform_source_errors": [
+      "[5.6864729824356146877176070595977e-27 +/- 4.37e-59]",
+      "[5.6864992552390463667058892045785e-27 +/- 4.04e-60]",
+      "[5.7193797320166653113737994262357e-27 +/- 3.18e-59]",
+      "[5.8510601634343958185076048215144e-27 +/- 3.50e-59]"
+    ],
+    "setup_seconds": 0.020147208007983863,
+    "counts": {
+      "cell_jet_calls": 162,
+      "point_jet_calls": 162
+    }
+  },
+  "contour": {
+    "segments": 16,
+    "H_floor_lower": "[4.942508153632069734235505429551229625587e-7 +/- 3.93e-47]",
+    "F_floor_lower": "[4.942508153632069734178640699726873478709e-7 +/- 4.32e-47]",
+    "cells": [
+      {
+        "from": [
+          "26",
+          "-2"
+        ],
+        "to": [
+          "57/2",
+          "-2"
+        ],
+        "length": "2.500000000000000000000000000000000000000",
+        "canonical_H_floor": "[6.224378662614158989122925116857800551858e-5 +/- 4.54e-45]",
+        "model_F_floor": "[6.224378662614158989122356469559556990390e-5 +/- 3.19e-45]",
+        "model_Fprime_upper": "[0.0002786145844376183221892571243740485207731 +/- 7.90e-45]",
+        "quotient_error_upper": "[5.002940065744468588185920552447230781222e-22 +/- 1.22e-62]",
+        "log_ratio_error_upper": "[9.135808231897268869703759465719377187476e-23 +/- 4.73e-63]"
+      },
+      {
+        "from": [
+          "57/2",
+          "-2"
+        ],
+        "to": [
+          "31",
+          "-2"
+        ],
+        "length": "2.500000000000000000000000000000000000000",
+        "canonical_H_floor": "[0.0001085296511600752969380258248825605013823 +/- 2.46e-44]",
+        "model_F_floor": "[0.0001085296511600752969380201384095780657676 +/- 3.68e-44]",
+        "model_Fprime_upper": "[9.722196417239921338008307657350156594395e-5 +/- 1.50e-45]",
+        "quotient_error_upper": "[9.933229686393988264505477854961216304238e-23 +/- 1.03e-63]",
+        "log_ratio_error_upper": "[5.239557044229671567754473026318623462303e-23 +/- 4.15e-63]"
+      },
+      {
+        "from": [
+          "31",
+          "-2"
+        ],
+        "to": [
+          "36",
+          "-2"
+        ],
+        "length": "5.000000000000000000000000000000000000000",
+        "canonical_H_floor": "[1.094818864275175720371974541095583581042e-5 +/- 5.63e-46]",
+        "model_F_floor": "[1.094818864275175720371405893797340019573e-5 +/- 2.85e-45]",
+        "model_Fprime_upper": "[4.653296342091686060013877880704175284343e-5 +/- 2.90e-45]",
+        "quotient_error_upper": "[2.726994627285696151463947755545115948325e-21 +/- 1.94e-61]",
+        "log_ratio_error_upper": "[5.193985204301664341369029911888748776804e-22 +/- 2.48e-62]"
+      },
+      {
+        "from": [
+          "36",
+          "-2"
+        ],
+        "to": [
+          "77/2",
+          "-2"
+        ],
+        "length": "2.500000000000000000000000000000000000000",
+        "canonical_H_floor": "[1.199599886788130563368819694447501464908e-5 +/- 4.11e-45]",
+        "model_F_floor": "[1.199599886788130563368251047149257903440e-5 +/- 3.62e-45]",
+        "model_Fprime_upper": "[1.600018608300821391275791119089046941591e-5 +/- 7.48e-46]",
+        "quotient_error_upper": "[1.106292228508075067317183261371380622135e-21 +/- 1.60e-61]",
+        "log_ratio_error_upper": "[4.740308035257376679471034320511810154780e-22 +/- 2.24e-63]"
+      },
+      {
+        "from": [
+          "77/2",
+          "-2"
+        ],
+        "to": [
+          "41",
+          "-2"
+        ],
+        "length": "2.500000000000000000000000000000000000000",
+        "canonical_H_floor": "[2.161920224298018486075393172965439340699e-6 +/- 3.59e-46]",
+        "model_F_floor": "[2.161920224298018486069706699983003726012e-6 +/- 3.59e-46]",
+        "model_Fprime_upper": "[7.762396055532458583231399525056898690693e-6 +/- 3.34e-46]",
+        "quotient_error_upper": "[1.207437570113933453431110433729871179898e-20 +/- 3.31e-60]",
+        "log_ratio_error_upper": "[2.630288073780348806270226667349499694246e-21 +/- 4.13e-62]"
+      },
+      {
+        "from": [
+          "41",
+          "-2"
+        ],
+        "to": [
+          "87/2",
+          "-2"
+        ],
+        "length": "2.500000000000000000000000000000000000000",
+        "canonical_H_floor": "[7.709148977320689617877828983691676318991e-7 +/- 4.62e-47]",
+        "model_F_floor": "[7.709148977320689617820964253867320172114e-7 +/- 2.86e-47]",
+        "model_Fprime_upper": "[2.760912454081004310920885454765498659309e-6 +/- 2.89e-46]",
+        "quotient_error_upper": "[3.379325355233989578165370392342830764504e-20 +/- 2.92e-60]",
+        "log_ratio_error_upper": "[7.376265524462526560070127591858881393010e-21 +/- 4.89e-61]"
+      },
+      {
+        "from": [
+          "87/2",
+          "-2"
+        ],
+        "to": [
+          "46",
+          "-2"
+        ],
+        "length": "2.500000000000000000000000000000000000000",
+        "canonical_H_floor": "[6.461589787332693721862213239788727489133e-7 +/- 1.66e-47]",
+        "model_F_floor": "[6.461589787332693721805348509964371342256e-7 +/- 1.09e-48]",
+        "model_Fprime_upper": "[8.946836944929401391149659608864671487216e-7 +/- 6.31e-48]",
+        "quotient_error_upper": "[2.098569478477397419015364681009783423195e-20 +/- 2.10e-61]",
+        "log_ratio_error_upper": "[8.800423997176950636458034550652370557411e-21 +/- 2.36e-62]"
+      },
+      {
+        "from": [
+          "46",
+          "-2"
+        ],
+        "to": [
+          "46",
+          "2"
+        ],
+        "length": "4.000000000000000000000000000000000000000",
+        "canonical_H_floor": "[4.942508153632069734235505429551229625587e-7 +/- 3.93e-47]",
+        "model_F_floor": "[4.942508153632069734178640699726873478709e-7 +/- 4.32e-47]",
+        "model_Fprime_upper": "[4.595623451628093938521218321166912028358e-7 +/- 9.98e-48]",
+        "quotient_error_upper": "[2.220304511536563442696031577488672909158e-20 +/- 3.53e-60]",
+        "log_ratio_error_upper": "[1.150523743346145462823135654892856104333e-20 +/- 2.55e-60]"
+      },
+      {
+        "from": [
+          "46",
+          "2"
+        ],
+        "to": [
+          "87/2",
+          "2"
+        ],
+        "length": "2.500000000000000000000000000000000000000",
+        "canonical_H_floor": "[6.461589787332693721862213239788727489133e-7 +/- 1.66e-47]",
+        "model_F_floor": "[6.461589787332693721805348509964371342256e-7 +/- 1.09e-48]",
+        "model_Fprime_upper": "[8.946836944929401391149659608864671487216e-7 +/- 6.31e-48]",
+        "quotient_error_upper": "[2.098569478477397419015364681009783423195e-20 +/- 2.10e-61]",
+        "log_ratio_error_upper": "[8.800423997176950636458034550652370557411e-21 +/- 2.36e-62]"
+      },
+      {
+        "from": [
+          "87/2",
+          "2"
+        ],
+        "to": [
+          "41",
+          "2"
+        ],
+        "length": "2.500000000000000000000000000000000000000",
+        "canonical_H_floor": "[7.709148977320689617877828983691676318991e-7 +/- 4.62e-47]",
+        "model_F_floor": "[7.709148977320689617820964253867320172114e-7 +/- 2.86e-47]",
+        "model_Fprime_upper": "[2.760912454081004310920885454765498659309e-6 +/- 2.89e-46]",
+        "quotient_error_upper": "[3.379325355233989578165370392342830764504e-20 +/- 2.92e-60]",
+        "log_ratio_error_upper": "[7.376265524462526560070127591858881393010e-21 +/- 4.89e-61]"
+      },
+      {
+        "from": [
+          "41",
+          "2"
+        ],
+        "to": [
+          "77/2",
+          "2"
+        ],
+        "length": "2.500000000000000000000000000000000000000",
+        "canonical_H_floor": "[2.161920224298018486075393172965439340699e-6 +/- 3.59e-46]",
+        "model_F_floor": "[2.161920224298018486069706699983003726012e-6 +/- 3.59e-46]",
+        "model_Fprime_upper": "[7.762396055532458583231399525056898690693e-6 +/- 3.34e-46]",
+        "quotient_error_upper": "[1.207437570113933453431110433729871179898e-20 +/- 3.31e-60]",
+        "log_ratio_error_upper": "[2.630288073780348806270226667349499694246e-21 +/- 4.13e-62]"
+      },
+      {
+        "from": [
+          "77/2",
+          "2"
+        ],
+        "to": [
+          "36",
+          "2"
+        ],
+        "length": "2.500000000000000000000000000000000000000",
+        "canonical_H_floor": "[1.199599886788130563368819694447501464908e-5 +/- 4.11e-45]",
+        "model_F_floor": "[1.199599886788130563368251047149257903440e-5 +/- 3.62e-45]",
+        "model_Fprime_upper": "[1.600018608300821391275791119089046941591e-5 +/- 7.48e-46]",
+        "quotient_error_upper": "[1.106292228508075067317183261371380622135e-21 +/- 1.60e-61]",
+        "log_ratio_error_upper": "[4.740308035257376679471034320511810154780e-22 +/- 2.24e-63]"
+      },
+      {
+        "from": [
+          "36",
+          "2"
+        ],
+        "to": [
+          "31",
+          "2"
+        ],
+        "length": "5.000000000000000000000000000000000000000",
+        "canonical_H_floor": "[1.094818864275175720371974541095583581042e-5 +/- 5.63e-46]",
+        "model_F_floor": "[1.094818864275175720371405893797340019573e-5 +/- 2.85e-45]",
+        "model_Fprime_upper": "[4.653296342091686060013877880704175284343e-5 +/- 2.90e-45]",
+        "quotient_error_upper": "[2.726994627285696151463947755545115948325e-21 +/- 1.94e-61]",
+        "log_ratio_error_upper": "[5.193985204301664341369029911888748776804e-22 +/- 2.48e-62]"
+      },
+      {
+        "from": [
+          "31",
+          "2"
+        ],
+        "to": [
+          "57/2",
+          "2"
+        ],
+        "length": "2.500000000000000000000000000000000000000",
+        "canonical_H_floor": "[0.0001085296511600752969380258248825605013823 +/- 2.46e-44]",
+        "model_F_floor": "[0.0001085296511600752969380201384095780657676 +/- 3.68e-44]",
+        "model_Fprime_upper": "[9.722196417239921338008307657350156594395e-5 +/- 1.50e-45]",
+        "quotient_error_upper": "[9.933229686393988264505477854961216304238e-23 +/- 1.03e-63]",
+        "log_ratio_error_upper": "[5.239557044229671567754473026318623462303e-23 +/- 4.15e-63]"
+      },
+      {
+        "from": [
+          "57/2",
+          "2"
+        ],
+        "to": [
+          "26",
+          "2"
+        ],
+        "length": "2.500000000000000000000000000000000000000",
+        "canonical_H_floor": "[6.224378662614158989122925116857800551858e-5 +/- 4.54e-45]",
+        "model_F_floor": "[6.224378662614158989122356469559556990390e-5 +/- 3.19e-45]",
+        "model_Fprime_upper": "[0.0002786145844376183221892571243740485207731 +/- 7.90e-45]",
+        "quotient_error_upper": "[5.002940065744468588185920552447230781222e-22 +/- 1.22e-62]",
+        "log_ratio_error_upper": "[9.135808231897268869703759465719377187476e-23 +/- 4.73e-63]"
+      },
+      {
+        "from": [
+          "26",
+          "2"
+        ],
+        "to": [
+          "26",
+          "-2"
+        ],
+        "length": "4.000000000000000000000000000000000000000",
+        "canonical_H_floor": "[0.0001621021595664854409084013066374737004079 +/- 3.90e-44]",
+        "model_F_floor": "[0.0001621021595664854409083956201644912647933 +/- 4.88e-44]",
+        "model_Fprime_upper": "[0.0003660490057494620995882570065109594583580 +/- 4.12e-45]",
+        "quotient_error_upper": "[1.142942117885742031890858655331622284598e-22 +/- 1.37e-62]",
+        "log_ratio_error_upper": "[3.507956339164830465290596697284554537233e-23 +/- 3.31e-63]"
+      }
+    ]
+  },
+  "initial_complete_zero_count": {
+    "enclosure": "[1.999999999999999999993223736421965597287 +/- 2.62e-12] + [+/- 2.62e-12]j",
+    "count": 2,
+    "complete_quotient_correction": "[7.310551797789645633195151459093381088118e-20 +/- 1.39e-60]",
+    "uniform_continuation": "fixed Gamma nonzero over connected real slab"
+  },
+  "roots": {
+    "bisection_steps": 32,
+    "initial": [
+      [
+        "3794257499/134217728",
+        "121416239969/4294967296"
+      ],
+      [
+        "180577783353/4294967296",
+        "90288891677/2147483648"
+      ]
+    ],
+    "terminal": [
+      [
+        "60708057747/2147483648",
+        "121416115495/4294967296"
+      ],
+      [
+        "180577621219/4294967296",
+        "45144405305/1073741824"
+      ]
+    ],
+    "uniform": [
+      [
+        "151769763089713/5368709120000",
+        "151770836831537/5368709120000"
+      ],
+      [
+        "225721692320963/5368709120000",
+        "225722766062787/5368709120000"
+      ]
+    ],
+    "uniform_sign_enclosures": [
+      [
+        "[7.389965785503803342039707602944765956107e-9 +/- 1.26e-9]",
+        "[-9.894052345350866752445772608740384403070e-9 +/- 1.26e-9]"
+      ],
+      [
+        "[-9.000148732315872306732513049951732698263e-11 +/- 2.10e-11]",
+        "[1.318716582206777341279216613801253549650e-10 +/- 2.10e-11]"
+      ]
+    ],
+    "gap_lower": "[13.77442022588588297367095947265625000000 +/- 3e-43]",
+    "gap_upper": "[13.77482022588588297367095947265625000000 +/- 3e-43]",
+    "initial_E_lower": "[0.01054073093950392976948073055685640828810 +/- 4.96e-42]",
+    "initial_E_upper": "[0.01054073094021660427638230651701362195714 +/- 3.46e-42]",
+    "uniform_E_lower": "[0.01054042485515657497348145799383499037222 +/- 7.36e-43]",
+    "uniform_E_upper": "[0.01054103703789680012663140703174355698072 +/- 3.57e-43]",
+    "terminal_E_lower": "[0.01054074435917770772914621176712671905429 +/- 4.92e-42]",
+    "terminal_E_upper": "[0.01054074435989038359703439646481849116795 +/- 3.54e-42]",
+    "energy_increment": "[1.341967377864015878557903758998850489196e-8 +/- 7.13e-13]"
+  },
+  "contour_force": {
+    "model_derivative_A_F_upper": "[10.46969009961041386505522294596946406709 +/- 8.81e-40]",
+    "transfer_kappa_jet_upper": "[3.655275898894822816597575729546690544059e-20 +/- 6.92e-61]",
+    "transfer_kappa_log_upper": "[1.181558844688108779699862050038879061615e-20 +/- 4.15e-60]",
+    "transfer_kappa_selected_upper": "[1.181558844688108779699862050038879061615e-20 +/- 4.15e-60]",
+    "separate_drift_A0_jet_upper": "[7.310551797789645633195151459093381088118e-20 +/- 1.39e-60]",
+    "separate_drift_A0_log_upper": "[1.181558844688108779699862050038879061615e-20 +/- 4.15e-60]",
+    "separate_drift_A0_selected_upper": "[1.181558844688108779699862050038879061615e-20 +/- 4.15e-60]",
+    "integral_E_upper": "[5.270518518948400063315703515871778490360e-7 +/- 1.79e-47]",
+    "model_force_integral_upper": "[1.103613911152948112295676327779199583719e-5 +/- 1.71e-45]",
+    "coupled_transfer_integral_upper": "[1.245485554431190748183987456054197921979e-26 +/- 4.84e-66]",
+    "separate_transfer_integral_upper": "[1.808403597402356802804430824989299596456e-27 +/- 5.00e-67]",
+    "selected_transfer_integral_upper": "[1.808403597402356802804430824989299596456e-27 +/- 5.00e-67]",
+    "complete_force_integral_upper": "[1.103613911152948112295857168138939819399e-5 +/- 1.11e-45]",
+    "coupled_over_separate_budget_ratio": "[6.887210112942941486835479736328125000000 +/- 1e-44]"
+  },
+  "direct_force": {
+    "root_slope_floors": [
+      "[8.641464661082985436952390056877159194713e-5 +/- 2.39e-45]",
+      "[1.109273000195139964699953521384093537711e-6 +/- 3.53e-46]"
+    ],
+    "root_cell_H_Hz_Hzz": [
+      [
+        "[-1.252293739259954990637358686475939991005e-9 +/- 9.90e-9]",
+        "[-8.642009062529130752001242410233937816387e-5 +/- 5.45e-9]",
+        "[5.009186728156602430175990383854479518747e-5 +/- 1.84e-9]"
+      ],
+      [
+        "[2.093927329894857369942598018356211511898e-11 +/- 1.32e-10]",
+        "[1.109365727121320820240014098297768132545e-6 +/- 9.28e-11]",
+        "[-8.375700377461441102031631174953495667896e-7 +/- 3.79e-11]"
+      ]
+    ],
+    "root_velocity_intervals": [
+      "[-0.5796322040259838104248046875000000000000 +/- 5.78e-5]",
+      "[-0.7549990289844572544097900390625000000000 +/- 9.73e-5]"
+    ],
+    "B_H_interval": "[0.0007128194069991877768188714981079101562500 +/- 2.75e-7]",
+    "B_H_integral_interval": "[3.564097034995938884094357490539550781250e-8 +/- 1.38e-11]",
+    "integral_upper": "[3.565470526611935753180659958161413669586e-8 +/- 1.82e-48]",
+    "contour_over_direct_upper_budget_ratio": "[309.5282664421993596476713402935592248986 +/- 7.94e-39]",
+    "internal_dissipation_integral": "[2.222140177741307968635658484864426454813e-8 +/- 1.30e-12]",
+    "complete_balance_increment_interval": "[1.341956857254630915458699005675124326437e-8 +/- 1.51e-11]",
+    "method": "B_H=-4(v2-v1)/g^3+16/g^4, vi=Hzz(ai)/Hz(ai), same actual root cells"
+  },
+  "checks": [
+    "full time interval lies in source disk",
+    "complete source errors below fixed budgets",
+    "injected uncertainty nonnegative",
+    "16 exact closed wall segments",
+    "entire exact cell satisfies transverse source domain",
+    "entire exact cell satisfies physical disk domain",
+    "complete canonical and model wall floors positive",
+    "model floor exceeds complete error",
+    "entire exact cell satisfies transverse source domain",
+    "entire exact cell satisfies physical disk domain",
+    "complete canonical and model wall floors positive",
+    "model floor exceeds complete error",
+    "entire exact cell satisfies transverse source domain",
+    "entire exact cell satisfies physical disk domain",
+    "complete canonical and model wall floors positive",
+    "model floor exceeds complete error",
+    "entire exact cell satisfies transverse source domain",
+    "entire exact cell satisfies physical disk domain",
+    "complete canonical and model wall floors positive",
+    "model floor exceeds complete error",
+    "entire exact cell satisfies transverse source domain",
+    "entire exact cell satisfies physical disk domain",
+    "complete canonical and model wall floors positive",
+    "model floor exceeds complete error",
+    "entire exact cell satisfies transverse source domain",
+    "entire exact cell satisfies physical disk domain",
+    "complete canonical and model wall floors positive",
+    "model floor exceeds complete error",
+    "entire exact cell satisfies transverse source domain",
+    "entire exact cell satisfies physical disk domain",
+    "complete canonical and model wall floors positive",
+    "model floor exceeds complete error",
+    "entire exact cell satisfies transverse source domain",
+    "entire exact cell satisfies physical disk domain",
+    "complete canonical and model wall floors positive",
+    "model floor exceeds complete error",
+    "entire exact cell satisfies transverse source domain",
+    "entire exact cell satisfies physical disk domain",
+    "complete canonical and model wall floors positive",
+    "model floor exceeds complete error",
+    "entire exact cell satisfies transverse source domain",
+    "entire exact cell satisfies physical disk domain",
+    "complete canonical and model wall floors positive",
+    "model floor exceeds complete error",
+    "entire exact cell satisfies transverse source domain",
+    "entire exact cell satisfies physical disk domain",
+    "complete canonical and model wall floors positive",
+    "model floor exceeds complete error",
+    "entire exact cell satisfies transverse source domain",
+    "entire exact cell satisfies physical disk domain",
+    "complete canonical and model wall floors positive",
+    "model floor exceeds complete error",
+    "entire exact cell satisfies transverse source domain",
+    "entire exact cell satisfies physical disk domain",
+    "complete canonical and model wall floors positive",
+    "model floor exceeds complete error",
+    "entire exact cell satisfies transverse source domain",
+    "entire exact cell satisfies physical disk domain",
+    "complete canonical and model wall floors positive",
+    "model floor exceeds complete error",
+    "entire exact cell satisfies transverse source domain",
+    "entire exact cell satisfies physical disk domain",
+    "complete canonical and model wall floors positive",
+    "model floor exceeds complete error",
+    "entire exact cell satisfies transverse source domain",
+    "entire exact cell satisfies physical disk domain",
+    "complete canonical and model wall floors positive",
+    "model floor exceeds complete error",
+    "exact contour length 48",
+    "fixed declared canonical and model margins pass",
+    "finite validated analytic count integral",
+    "finite validated analytic count integral",
+    "finite validated analytic count integral",
+    "finite validated analytic count integral",
+    "complete initial argument-principle count equals two",
+    "real-type canonical field at real data",
+    "real-type canonical field at real data",
+    "uniform sign-changing real root interval",
+    "real-type canonical field at real data",
+    "real-type canonical field at real data",
+    "uniform sign-changing real root interval",
+    "real-type canonical field at real data",
+    "real-type canonical field at real data",
+    "endpoint root bisection initial signs",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "real-type canonical field at real data",
+    "endpoint root bisection initial signs",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "real-type canonical field at real data",
+    "endpoint root bisection initial signs",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "real-type canonical field at real data",
+    "endpoint root bisection initial signs",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "certified bisection sign excludes zero",
+    "real-type canonical field at real data",
+    "real-type canonical field at real data",
+    "narrow whole-slab root bracket certified",
+    "real-type canonical field at real data",
+    "real-type canonical field at real data",
+    "narrow whole-slab root bracket certified",
+    "fixed block gap range",
+    "whole population in fixed real core J",
+    "model curvature below declared 10.47 bound",
+    "complete drift variation error below declared budget",
+    "real root-cell jets respect real symmetry",
+    "independent root slope floor on entire root cell",
+    "real root-cell jets respect real symmetry",
+    "independent root slope floor on entire root cell",
+    "direct exterior contribution positive over whole slab",
+    "direct same-source force payment sharper than contour bound",
+    "complete energy balance and endpoint root data consistent",
+    "endpoint energy increment positive"
+  ],
+  "cost": {
+    "validated_count_integrals": 4,
+    "wall_cells": 16,
+    "root_bisection_steps_per_endpoint_root": 32,
+    "direct_extra_root_jet_cells": 2,
+    "elapsed_seconds": 2.073670041980222
+  },
+  "scope": "Known-covered compact source-acquisition and named exterior-term pilot; no new Newman bound, high-height uniformity, endpoint exclusion or RT dyadic assembly."
+}

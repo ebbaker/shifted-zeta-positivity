@@ -25,20 +25,25 @@ The existing manuscripts remain technical companions:
 
 Their updates are specified in the [revision plan](../notes/63_BOOK_SYNTHESIS_AND_COMPANION_REVISION_PLAN_20261026.md)
 and [Sol packet](../research-progress/handoffs/HDA-B01-MI1.md). Those revisions
-are unexecuted. The Book currently cites the newer proof notes directly.
+are complete at production scope. The Book links durable companion theorem labels and retains the original notes as proof provenance. B02 r2 additionally integrates all six returns from Summary67: named centers, the fixed-P4 physical tuple, the moving negative endpoint and the three positive field bridges. Their full proofs live in the ansatz/recurrence companions; the Book summarizes the mechanisms, output-specific norms and conditional application frontier. The positive atlas reaches zero on each fixed finite high-height time slab; the strong negative theorem still excludes zero. Constants/onsets, lower margins, initial cluster data and complete exterior/energy payments remain explicit obligations. The [integration note](../notes/65_BOOK_COMPANION_INTEGRATION_20261026.md) records the exact scopes and corrections.
 
 Build from the repository root with
 `python3 papers/investigations-5/01_heat_density_asymptotics/book/build.py`.
 The PDF is written to the ignored repository output tree at
 [heat_density_book.pdf](../../../../output/pdf/heat_density_book/heat_density_book.pdf).
-The [build record](BUILD_RECORD_20261026.json) pins source and output hashes;
-the [production review](../reviews/42_BOOK_SYNTHESIS_PRODUCTION_REVIEW_20261026.md)
-records the actual checks. Local proof links use the checkout path supplied
+The [current build record](BUILD_RECORD_B02_R2_20261026.json) pins source and output hashes;
+the [B02 r2 production assessment](../reviews/45_B02_R2_MANUSCRIPT_INTEGRATION_PRODUCTION_ASSESSMENT_20261026.md) records the actual checks across all four manuscripts. The previous [r1 production review](../reviews/43_BOOK_COMPANION_INTEGRATION_PRODUCTION_REVIEW_20261026.md) retains its historical scope. Local proof links use the checkout path supplied
 by the build helper. Public circulation needs stable public proof links
 or the supporting source bundle.
 
 The [unified overview](../research-overview/02_BOOK_UNIFIED_HEAT_FLOW_RESEARCH_OVERVIEW_20261026.md)
 defines the program; the [coordination register](../research-progress/02_BOOK_UNIFIED_HEAT_FLOW_RESEARCH_PROGRESS_20261026.md)
-tracks cross-branch work; the [continuation note](../notes/64_BOOK_CONTINUATION_20261026.md)
-is the next-session entry point. No new mathematical acceptance or full-chain
+tracks cross-branch work; the [current production plan](../notes/68_MANUSCRIPT_UPDATE_PLAN_AFTER_RH_APPLICATION_REVIEW_20261026.md) and [Summary67](../notes/67_CHAT0025_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md) give the six-return input baseline. No new mathematical acceptance or full-chain
 audit is implied by this production milestone.
+
+
+Companion production attribution: prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual recorded effort ultra**, base chat0024, 26 October 2026. The earlier Book build record and Review42 retain their historical provenance.
+
+B02 r2 production attribution: **gpt-6.1-sol, actual recorded effort ultra**, 26 October 2026. The RT discussion is pinned to Note02/Assessment01; it does not execute or change the concurrent RT-03/RT-04 continuation. No new manuscript snapshots were created.
+
+The [B02 r2 integration record](../notes/70_B02_R2_MANUSCRIPT_INTEGRATION_20261026.md) gives the current source-to-statement matrix, production corrections and retained limits.

@@ -1,0 +1,539 @@
+\section{The moving lower endpoint \texorpdfstring{$T=1/L$}{T=1/L}}
+\label{sec:moving-endpoint}
+This section integrates the closed moving-endpoint argument of
+\cite{rec20,rec20review}. It uses the earlier fixed-domain machinery
+with an explicit new endpoint ledger; the norms and proofs on
+\([1,2]\) retain their original meaning. Put
+\begin{equation}
+ \begin{gathered}
+ R=r+1,\quad Y=b+1,\quad W=R+Y,\quad
+ \nu=\lceil W\rceil+1=\lceil r+b+2\rceil+1,\\
+ L=\log(X/(4\pi)),\quad p=\lfloor L/2\rfloor,\quad
+ K=2p,\quad V=8\sqrt2L.
+ \end{gathered}
+ \label{eq:moving-data}
+\end{equation}
+Every descriptor and the lower endpoint are frozen under \(z,T\)
+differentiation. The original unit buffers remain, as do both arms,
+every \(n\le N\), every \(C_0,\ldots,C_K\), the exact adjacent-cutoff
+transfer, and the bounded real completion integral in \eqref{eq:model}.
+
+\begin{definition}[Moving-domain channel norm]
+\label{def:moving-channel-norm}
+For independently supplied channels
+\(\mathbf E=(E_0,E_1,E_2,E_3,E_T)\), define
+\begin{equation}
+ \lVert\mathbf E\rVert_{\mathrm o;X;\mathrm{mov}}^{(3,1)}
+ =\sup_{\substack{L^{-1}\le T\le2\\z\in\Omega_X(r,b)}}
+ \frac{\max_{0\le j\le3}|E_j(T,z)|+|E_T(T,z)|}
+      {\calE_{\mathrm o}(-T,z)}.
+ \label{eq:moving-norm}
+\end{equation}
+For an actual smooth field \(E\), use its derivative tuple in this
+notation. Replacing the denominator by \(\abs{G(z)}\) gives the
+moving natural norm, and by \(g=G(X)\) the moving center norm.
+The norm \(\lVert\cdot\rVert_{\mathrm o;X;1,2}^{(3,1)}\) is unchanged.
+\end{definition}
+
+\begin{theorem}[Moving-endpoint canonical delivery]
+\label{thm:moving-endpoint-delivery}
+Fix positive dyadic chart radii \(r,b\). With the canonical normalization
+\eqref{eq:canonical}, \eqref{eq:moving-data} and the unchanged calibration
+\eqref{eq:explicit-calibration}, a sufficient all-height onset is
+\begin{equation}
+ L\ge L_{\mathrm{mov}}=1024\nu^2.
+ \qquad X\ge X_{\mathrm{mov}}=2^{2048\nu^2+8}
+ \quad\hbox{is a stronger sufficient condition}.
+ \label{eq:moving-onset}
+\end{equation}
+The exact completed model has moving outer comparison error
+at most \(\tfrac12\e^{-L^2/4}\). On the strictly witnessed rational
+queries, or the literal endpoint tag, specified in
+\cref{subsec:moving-input}, finite constructions deliver independent
+field, spatial-through-three and first-time channels with
+\begin{equation}
+ \bigl\lVert
+   (\widehat h_j-\partial_z^jh)_{j=0}^3,
+                  \widehat h_T-\partial_Th
+ \bigr\rVert_{\mathrm o;X;\mathrm{mov}}^{(3,1)}
+ \le\e^{-L^2/4}.
+ \label{eq:moving-delivery}
+\end{equation}
+Here the supremum is over accepted queries in the displayed domain;
+the exact mathematical comparison includes its closed lower endpoint.
+Sufficient outer quadrature order per branch is \(O_{r,b}(L^3)\), while
+sufficient delivered precision is
+\begin{equation}
+ P=\frac{3L^2}{8\log2}+O_{r,b}(L\log(L+2)).
+ \label{eq:moving-precision}
+\end{equation}
+Provider-internal work and witness search costs are separate, as in
+\cref{subsec:moving-cost}. On \([1,2]\), the sharper sufficient onset
+\(L\ge64\nu\) in \cref{thm:linear-onset,thm:effective} remains valid.
+\end{theorem}
+The theorem is proved by the following kernel, truncation, delivery and
+input arguments. It concerns an analytical finite construction; complete
+canonical evaluator software and its certification remain open.
+
+\subsection{Kernel normalization and integrated moments}
+\label{subsec:moving-moments}
+For \(z=x+\ii y\), \(v=u-x\), the exact modulus is
+\begin{equation}
+ |k_T(z-u)|=(4\pi T)^{-1/2}
+       \exp(y^2/(4T))\exp(-v^2/(4T)).
+ \label{eq:moving-kernel}
+\end{equation}
+Thus \(T\ge1/L\) costs normalization at most
+\(\sqrt L/\sqrt{4\pi}\), transverse growth at most
+\(\e^{Y^2L/4}\), and actual inverse-time derivative factors.
+For each nonnegative integer \(a\) set
+\begin{equation}
+ \mathsf P_{a,L}(s)=a!\sum_{j=0}^{\lfloor a/2\rfloor}
+       \frac{(sL/2)^{a-2j}(L/4)^j}{(a-2j)!j!}.
+ \label{eq:moving-kernel-polynomial}
+\end{equation}
+The differentiated Gaussian formula gives
+\(|\partial_z^ak_T|\le\mathsf P_{a,L}(|z-u|)|k_T|\).
+In particular the direct first-time factor is
+\(L/2+L^2|z-u|^2/4\), by \eqref{eq:time-kernel}; this is a bound for
+an actual derivative channel.
+
+The integrated local moments at \(B=2\) are
+\begin{subequations}\label{eq:moving-local-moments}
+\begin{align}
+ M_m[L]&=\sqrt2\e^{R+Y^2L/4+4}
+       \sum_{k=0}^m\binom{m}{k}W^{m-k}4^k
+                  \frac{\Gamma((k+1)/2)}{\sqrt\pi},\\
+ M_m^t[L]&=(L/2)M_m[L]+(L^2/4)M_{m+2}[L].
+\end{align}
+\end{subequations}
+Indeed \(\abs q\le R+\abs v\),
+\(\max(\abs q,\abs{z-u})\le W+\abs v\), and
+\(\abs v\le v^2/(8T)+2T\). After actual rescaling, the normalized
+\(k\)-th Gaussian moment is
+\(\sqrt2(8T)^{k/2}\Gamma((k+1)/2)/\sqrt\pi\).
+The factor \(T^{-1/2}\) has canceled by integration; now using
+\(T\le2\) proves the formulas. With
+\(f_L=\exp(Y^2(L-1)/4)\), simultaneously for every \(m\),
+\begin{equation}
+ M_m[L]=f_LM_m[1],\qquad
+ M_m^t[L]\le L^2f_LM_m^t[1].
+ \label{eq:moving-local-ratios}
+\end{equation}
+The finite Bell remainder \(\mathsf B_{p+1}\) in
+\cref{lem:weighted} retains degrees through \(2p+2\) for field and
+\(2p+4\) for direct time. The complete initial population
+\eqref{eq:population} is still
+\(C_{\mathrm{pop}}gX^{1/4}\e^{|q|}\),
+\(C_{\mathrm{pop}}=4(4\pi)^{-1/4}\). Its integration has no additional
+inverse-time cost beyond \eqref{eq:moving-local-moments}.
+Radius-\(1/2\) Cauchy disks in the original unit buffers cost at most
+\(48\) for spatial orders zero through three.
+
+\subsection{The separate evolved-population ledger}
+\label{subsec:moving-population}
+Put \(v_n=\log(a_X/n)\), \(a_0=\pi/8\) and
+\(c_+=\max((Y-1)/2,0)\). The original slope gates imply
+\[
+ |\e^{T\lambda_{\epsilon n}^2}|
+      \le\e^{2a_0^2+1}\e^{-v_n^2/(4L)}.
+\]
+The shell proof of \cref{app:population}, including the final weakly
+damped cutoff shells, gives \(\Pi_m(1/L,2)\) from \eqref{eq:Pi}, with
+\begin{equation}
+ W_m(1/L)=2^m+\frac{3^m}{2}\sum_{k=0}^m\binom{m}{k}
+                    (8L)^{(k+1)/2}\Gamma((k+1)/2).
+ \label{eq:moving-shell-moments}
+\end{equation}
+Every term then gives
+\begin{equation}
+ \Pi_m(1/L,2)\le
+   \e^{2c_+^2(L-1)}L^{(m+1)/2}\Pi_m(1,2).
+ \label{eq:moving-evolved-ratio}
+\end{equation}
+Keep the unchanged shifted moment majorant
+\[
+ Z_m(2)=m!\sum_{j=0}^{\lfloor m/2\rfloor}
+               \frac{2^j(W+4)^{m-2j}}{j!(m-2j)!}.
+\]
+The whole shifted \(m\)-th moment sum is bounded by
+\(Z_m(2)\Pi_m(1/L,2)gX^{1/4}\). For \(m\le2p+5\), its logarithmic
+cost is \(O_{r,b}(L\log(L+2))\), by the same factorial bounds as
+\cref{sec:growing}. The degree-dependent power in
+\eqref{eq:moving-evolved-ratio} must remain. The real initial population
+was already integrated to prove the truncation error; this evolved-mode
+bound pays retained-model reconstruction and delivery, and is not an
+extra multiplier on that truncation ledger.
+
+\subsection{Moderate, artificial and remote tails}
+\label{subsec:moving-tails}
+Keep \(\theta=1/2\), \(\delta=1/4\), \(t_R=1+R/4\).
+At \(\abs q\ge V\), the same refined split proves
+\[
+ -(q-\Rea d)^2/8+\abs q
+       \le-q^2/16-q^2/32+8t_R^2.
+\]
+Using \(|z-u|\le2|q|\) and integrating the remaining Gaussian gives
+\begin{subequations}\label{eq:moving-tail-moments}
+\begin{align}
+ \mathsf D_m[L]&=\frac{\sqrt L}{\sqrt{4\pi}}
+      \e^{Y^2L/4+8t_R^2}2^m32^{(m+1)/2}\Gamma((m+1)/2),\\
+ \mathsf D_m^t[L]&=(L/2)\mathsf D_m[L]+(L^2/4)\mathsf D_{m+2}[L],\\
+ \mathsf J_m[L]&=\frac{\sqrt L}{\sqrt{4\pi}}\e^{Y^2L/4}
+       \sum_{k=0}^m\binom{m}{k}Y^{m-k}16^{(k+1)/2}
+                                      \Gamma((k+1)/2),\\
+ \mathsf J_m^t[L]&=(L/2)\mathsf J_m[L]+(L^2/4)\mathsf J_{m+2}[L].
+\end{align}
+\end{subequations}
+The \(\mathsf D\) moments multiply
+\(\e^{-V^2/16}=\e^{-8L^2}\); the remote true-data \(\mathsf J\)
+moments multiply \(\e^{\pi X/8-X^2/256}\).
+Only the remote term uses the complete global source mass. The moderate
+term retains \(X^{9/4}\) from the height-sensitive source, and artificial
+rays contain only the finite polynomial completion with its full
+\(X^{1/4}\) population.
+
+With the actual finite positive polynomials
+\(\mathsf B_{p+1},\mathsf H_p\) in \eqref{eq:majorant-polynomials}, set
+\begin{subequations}\label{eq:moving-truncation-constants}
+\begin{align}
+ Q_p[L]&=48\{C_{2p}M_0[L]
+                    +C_{\mathrm{pop}}\e\,\mathsf B_{p+1}[M[L]]\}
+                      \nonumber\\
+ &\quad+C_{2p}M_0^t[L]
+                    +C_{\mathrm{pop}}\e\,\mathsf B_{p+1}[M^t[L]],\\
+ A_{\mathrm{mod}}[L]&=640\max(\mathsf D_0[L],\mathsf D_0^t[L]),\\
+ A_{\mathrm{art},p}[L]&=C_{\mathrm{pop}}
+           \max\{\mathsf H_p[\mathsf D[L]],\mathsf H_p[\mathsf D^t[L]]\},\\
+ A_{\mathrm{far}}[L]&=16\max(\mathsf J_0[L],\mathsf J_0^t[L]).
+\end{align}
+\end{subequations}
+The real initial mismatch has the unchanged all-positive-integer-order
+constant
+\[
+ C_{2p}=\frac{2^{7/4}}7\Gamma(p+1/2)1.1^{2p+1}(8\pi)^{p+3/4},
+\]
+and the separate retained-size gate \(K\le a_{\min}^2\) remains.
+Since every \(\mathsf D_m[L]=\sqrt L f_L\mathsf D_m[1]\), and the
+same holds for \(\mathsf J\), a common multiplier for these four
+truncation prefactors is
+\begin{equation}
+ \rho_{\mathrm{tr}}(L)=L^{5/2}\exp(Y^2(L-1)/4).
+ \label{eq:moving-truncation-ratio}
+\end{equation}
+The time versions cost at most another \(L^2\). Positivity of the finite
+polynomial sums proves this multiplier uniformly in every retained
+order. It does not bound all evolved moments in
+\eqref{eq:moving-evolved-ratio}, or all complex provider magnitudes.
+
+Insert the exact initial identity into \eqref{eq:heat-convolution},
+cancel the bounded \(Q\)-integral and subtract the whole-line polynomial
+transforms exactly as in \cref{thm:fixed}. The result before absorption is
+\begin{align}
+ \lVert h-F_X^{[p,2p]}\rVert_{\gamma;X;\mathrm{mov}}^{(3,1)}
+ \le C_\chi\bigl[&Q_p[L]X^{-(p+3/4)}\nonumber\\
+ &+49\{A_{\mathrm{mod}}[L]X^{9/4}
+                 +A_{\mathrm{art},p}[L]X^{1/4}\}\e^{-8L^2}\nonumber\\
+ &+49A_{\mathrm{far}}[L]X^{-7/4}
+                                  \e^{\pi X/8-X^2/256}\bigr].
+ \label{eq:moving-unabsorbed}
+\end{align}
+This pays source mismatch, local weighted remainder, moderate true data,
+artificial polynomial tails and remote true data separately. No real-part
+operation is moved across a complex-kernel integral; no true gamma or
+Riemann--Siegel function is extended along artificial polynomial rays.
+
+For each frozen chart, \(1/L>0\). Dominated differentiation of the fixed
+bounded integral and the finite Gaussian transforms proves
+\((\partial_T-\partial_z^2)F=0\) and its first spatial derivative on a
+positive-time neighborhood. This exact identity does not discard any of
+the preceding comparison errors.
+
+\subsection{Continuous onset and half-target slack}
+\label{subsec:moving-onset-proof}
+The envelope proof in \cref{sec:calibration} uses time only through
+\(0<T\le2\): its logarithmic discrepancy is multiplied by \(T/16\).
+Thus \eqref{eq:explicit-envelope-lower} and
+\(c_{\mathrm o}=1\) extend to this entire range, giving
+\[
+ \calE_{\mathrm o}(-T,z)\ge|G(z)|
+                 \e^{-TL^2/16+\pi^2T/64}.
+\]
+Natural-to-outer conversion therefore still costs at most
+\(\e^{L^2/8}\). The disk, slope and complete-source calibration constants
+are independent of the lower time endpoint. Every structural gate in
+\cref{thm:linear-onset} follows from \(L\ge64\nu\); none is replaced by
+a fixed-order tail absorption gate.
+
+For \(L\ge1024\nu^2\), \(L\ge16384\), \(Y<\nu\) and the continuous
+logarithm estimate used in \cref{subsec:linear-onset} gives
+\(\log L\le L/32\). Hence
+\begin{equation}
+ \log\rho_{\mathrm{tr}}(L)
+ \le\nu^2L/4+(5/2)\log L
+ \le L^2/4096+5L/64\le L^2/2048.
+ \label{eq:moving-rho-slack}
+\end{equation}
+The last step needs only \(L\ge320\).
+Add this loss to the actual additive envelopes in the proof of
+\cref{thm:linear-onset}, retaining the half-target factors \(8,392\):
+\begin{align}
+ \Lp(8C_{\mathrm o}Q_p[L]),\quad
+ \Lp(392C_{\mathrm o}A_{\mathrm{art},p}[L])
+                      &<193L^2/2048,\nonumber\\
+ \Lp(392C_{\mathrm o}A_{\mathrm{mod}}[L]),\quad
+ \Lp(392C_{\mathrm o}A_{\mathrm{far}}[L])
+                      &\le65L^2/2048.
+ \label{eq:moving-prefactor-slack}
+\end{align}
+Here \(C_{\mathrm o}=C_\chi/c_{\mathrm o}=3^{\nu-1}\).
+The first half-target gap satisfies
+\[
+ (p+3/4)\log X-3L^2/8\ge7L^2/64=224L^2/2048,
+\]
+leaving strict slack \(31L^2/2048\). The moderate and artificial
+right sides of \eqref{eq:growing-gates} cost at most
+\(577L^2/2048\) and \(321L^2/2048\), respectively, each less than
+\(61L^2/8\). For the remote gate the same earlier proof gives
+\(\pi X/8<X^2/512\) and
+\(X^2/512>9L^2/8>(3/8+65/2048)L^2\).
+Thus all four half-target inequalities close. After outer conversion,
+\eqref{eq:moving-unabsorbed} uses at most \(\tfrac12\e^{-L^2/4}\).
+
+Only the floor bounds \(L/2-1\le p\le L/2\) enter these continuous
+majorants. The complete population bound and exact adjacent-cutoff
+transfer hold through every later \(p,N\) jump. No monotonicity of the
+actual constants or continuity of the selected model in \(X\) is assumed.
+The dyadic sufficient condition follows from
+\((2L_{\mathrm{mov}}+8)\log2-\log(4\pi)>L_{\mathrm{mov}}+1\).
+The moving sufficient log-height is \(16\nu\) times the old \(64\nu\)
+bound; this is the cost of this proof, rather than a necessary threshold.
+
+\subsection{Recomposition of all delivered-error channels}
+\label{subsec:moving-allocation}
+Retain the original five evaluation categories plus scale. The center
+budget and its comparable finite rational choice are
+\begin{equation}
+ \varepsilon_X=\frac{1}{2C_\chi}\e^{-3L^2/8},\qquad
+ \frac{1}{8C_\chi}\e^{-3L^2/8}<e<
+                  \frac{1}{4C_\chi}\e^{-3L^2/8}.
+ \label{eq:moving-budget}
+\end{equation}
+Use factor-controlled rational upper enclosures in the finite allocation
+of \cref{subsec:finite-allocation}, making the following explicit
+substitutions.
+
+\begin{enumerate}[leftmargin=*,itemsep=.55em]
+\item \textbf{Arithmetic data and scale.}
+Use \eqref{eq:moving-local-moments} in place of \(M,M^t\), so that
+\(\mathfrak M_m[L]=48M_m[L]+M_m^t[L]\).
+Recompute \(\mathcal D_p,\mathcal D_p^{(1)},\mathcal C_p,
+\mathcal S_p\) in \cref{sec:evaluation}. The exact coefficient
+sensitivity \eqref{eq:coefficient-sensitivity} and full population
+in \eqref{eq:arithmetic-error} remain. Complete-square carrier bounds
+become \(\exp(R+2+Y^2L/4)\), and
+\eqref{eq:moving-evolved-ratio} pays the distinct evolved reconstruction.
+Keep the slope neighborhood, all \(O(X)\) phase multipliers, unrestricted
+scale exponents and all \(N\) summands. The recomputed bounds require
+\(E_{\mathrm{ar}}\le\varepsilon_X/20\) and
+\(\varepsilon_gA_0\le\varepsilon_X/2\).
+
+\item \textbf{Provider-domain kernels and retained data.}
+Keep the original \(B_Q,B_Q^{\mathrm{loc}},a_*\), real branches and
+holomorphic extensions of \cref{sec:quadrature,sec:evaluation}; replace only
+their kernel bounds by
+\begin{subequations}\label{eq:moving-provider-kernels}
+\begin{align}
+ K_E[L]&=\frac{\sqrt L}{\sqrt{4\pi}}
+       \e^{L(Y+3V/4)^2/4}
+       \left[\max_{a\le3}\mathsf P_{a,L}(W+2V)
+                           +\mathsf P_{2,L}(W+2V)\right],\\
+ K_{\mathrm{loc}}[L]&=\frac{\sqrt L}{\sqrt{4\pi}}
+       \e^{L(Y+1)^2/4}
+       \left[\max_{a\le3}\mathsf P_{a,L}(W+V+4)
+                           +\mathsf P_{2,L}(W+V+4)\right].
+\end{align}
+\end{subequations}
+Set \(B_E[L]=B_QK_E[L]\),
+\(B_{\mathrm{loc}}[L]=B_Q^{\mathrm{loc}}K_{\mathrm{loc}}[L]\), and
+\[
+ A_0=C_{\mathrm{pop}}X^{1/4}\mathsf H_p[\mathfrak M[L]]
+                            +2VB_{\mathrm{loc}}[L].
+\]
+The normalized weighted-table and pole-safe contour constructions retain
+every \(C_k\). Either \cref{prop:sharper-rs,prop:smaller-contour} or the
+old provider applies. Its coefficient gain is not applied to an entire
+transfer-containing bound. All contour, data, node, weight and \(\pi\)
+errors, including the constant \(+1\) in \eqref{eq:Ck-delivery}, remain.
+Recompute \cref{eq:node-data-error,eq:RS-data-budget} with the new local
+kernel, choosing the old finite tolerances to give
+\(E_{\mathrm{RS}}\le\varepsilon_X/20\).
+
+\item \textbf{Exact outer quadrature.}
+The same positivity and Chebyshev proof gives
+\[
+ E_{\mathrm{quad}}\le16VB_E[L]4^{-n}.
+\]
+Choose \(n\ge1\) by the strict rational test
+\(16\overline V\overline B_E[L]4^{-n}<e/80\).
+The test terminates and pays \(E_{\mathrm{quad}}\le\varepsilon_X/20\).
+For the unchanged ellipse of parameter \(2\),
+\begin{equation}
+ \Lp B_E[L]=O_{r,b}(L^3+L\log(L+2)),\qquad
+ n=O_{r,b}(L^3).
+ \label{eq:moving-outer-order}
+\end{equation}
+Its imaginary height is \(O(L)\); the squared kernel displacement is
+divided by \(1/L\). This explains the cubic cost. It is a sufficient
+rule for this provider, not a lower bound on all quadrature rules.
+
+\item \textbf{Frozen geometry.}
+Retain exact branch labels, interior rational guards and
+\eqref{eq:geometry-error}, now with the recomputed bound:
+\[
+ E_{\mathrm{geo}}\le B_{\mathrm{loc}}[L]
+  \{\varepsilon_w+2(2V+\varepsilon_w)\varepsilon_u+6\varepsilon_b\}.
+\]
+The same finite tolerances give \(E_{\mathrm{geo}}\le\varepsilon_X/20\).
+No new real edge-equality decision is introduced. Reference intervals
+remain inside true branches, and mapped node/weight effects are charged
+once.
+
+\item \textbf{Remaining circuit and rounded outputs.}
+Use \cref{eq:roundoff-updates,eq:channel-formulas} with the actual new
+kernel and carrier bounds, safe reciprocals and full accumulation count.
+Earlier preprocessing errors are paid once. Refine primitive and
+operation tolerances until \(E_{\mathrm{round}}\le\varepsilon_X/20\).
+For the literal endpoint tag, its time-input split in
+\cref{subsec:moving-input} is included in this category. Exact rational
+queries have no time-input error.
+\end{enumerate}
+Consequently
+\(\varepsilon_gA_0+(1+\varepsilon_g)\sum E_i\le\varepsilon_X\).
+Together with the half-target comparison, this proves
+\eqref{eq:moving-delivery}, subject to the input construction below.
+The exact frozen residual does not remove any category. Independently
+rounded channels have only the sum-of-channel heat-defect allowance;
+its spatial derivative still requires an additional mixed channel.
+
+\subsection{Strict rational queries and the literal endpoint tag}
+\label{subsec:moving-input}
+Keep the exact positive dyadic \(X,r,b\), supplied \(p,N\), and strict
+rational descriptor enclosures from \cref{subsec:input-class}:
+\begin{equation}
+ 2p<L^-\le L\le L^+<2p+2,\qquad
+ N<a^-\le\sqrt{X/(4\pi)}\le a^+<N+1.
+ \label{eq:moving-descriptors}
+\end{equation}
+Include strict gate/half-target witnesses and exact rational displacement
+\(d=z-X\) inside the original buffered chart. An ordinary query supplies
+exact rational \(T\le2\) and the additional finite witness
+\begin{equation}
+ TL^->1.
+ \label{eq:moving-strict-time-witness}
+\end{equation}
+Invalid finite witnesses are rejected. Every rational \(T>1/L\) has a
+witness after refinement; the search has nonuniform separation
+\(TL-1\). A rational query below the lower endpoint is rejected.
+No equality oracle for \(T=1/L\), descriptor boundaries or arbitrary
+computable reals is supplied. The mathematical comparison is uniform
+on the closed interval, whereas this ordinary interface has a strict
+input class.
+
+The endpoint has a separate finite interface: the literal tag
+\(\texttt{T=1/log(X/(4pi))}\) defines one computable number from the
+already exact \(X\). It is not an equality test on an arbitrary input.
+\begin{enumerate}[leftmargin=*,itemsep=.5em]
+\item Refine positive bounds until \(L^+/L^-<2\) and \(L^->1\).
+On the coarse interval \(I=[1/L^+,1/L^-]=[T_-,T_+]\),
+\(T_->1/(2L)\) and \(T_+<2/L\le2\).
+
+\item Freeze all delivered coefficients, nodes, weights and data and
+regard their center-normalized finite polynomial/Gauss model as a function
+of real \(T\).
+It solves heat exactly, so
+\(\partial_T\partial_z^a=\partial_z^{a+2}\) and
+\(\partial_T^2=\partial_z^4\). Bound the time derivative of every
+requested channel on \(I\) by one rational \(B_T\): use the finite spatial
+formula \eqref{eq:channel-formulas} through order five for the arithmetic
+part, and \eqref{eq:moving-kernel-polynomial} through order five with
+inverse time \(1/T_-\) for every kernel node. Twice the maximum of these
+center-normalized spatial orders zero through five pays the combined
+center channel norm.
+Positive coefficient/node bounds and unrestricted exponent ranges make
+this bound finite and computable. This pays \(F_{TT}\), which is needed
+when the first-time output is approximated.
+
+\item Refine the endpoint enclosure to width
+\(\delta_T<e/[640(1+B_T)]\), evaluate at its rational midpoint, and charge
+\(B_T\delta_T<e/640\) as time-input error to \(E_{\mathrm{round}}\).
+Use safe inverse time \(1/T_-\) throughout that circuit. Allocate the
+remaining new circuit and quantization error below \(e/160\); together
+they are below \(e/80<\varepsilon_X/20\). Earlier coefficient, RS-data
+and geometry payments are not charged again.
+\end{enumerate}
+The midpoint may be slightly below \(1/L\). Only the fixed delivered
+model is evaluated there; truncation is invoked at the exact tagged time.
+The coarse interval is bounded away from zero, so refinement terminates.
+For fixed charts the derivative bound has log-magnitude
+\(O_{r,b}(L\log(L+2))\), by the finite moment/path bounds with
+\(T_->1/(2L)\). Thus the tag fits \eqref{eq:moving-precision}, counted
+in the actual input and tolerance lengths. It adds no general uncertain
+coordinate theorem or mixed-residual certification. This completes the
+input and delivery proof of \cref{thm:moving-endpoint-delivery}.
+
+\subsection{Delivered precision, internal work and remaining scope}
+\label{subsec:moving-cost}
+On the real/local strip,
+\(\Lp B_{\mathrm{loc}}[L]=O_{r,b}(L\log(L+2))\), as for arithmetic
+conditioning and positive circuit paths. The allocations above therefore
+require tolerance at worst
+\(\exp[-3L^2/8-O_{r,b}(L\log(L+2))]\), proving
+\eqref{eq:moving-precision}. Full summation and \(O(L^3)\) outer nodes
+add their logarithmic counts. The off-real ellipse magnitude pays
+quadrature truncation; it must not be substituted for the real-node
+precision bound. The RS contour order remains
+\(O_{r,b}(L^2+L\log(L+2))\); its direct scalar composition count becomes
+\(O(L^6)\), in addition to the full \(O(Np)\) arithmetic work.
+
+Provider-internal root/weight separation depths can greatly exceed
+requested delivered precision. For the deliberately loose bound parallel
+to \cref{thm:bit-cost}, let \(\mathcal B\) count actual finite input and
+witness lengths, retain the descriptor separation \(s_\sigma\), and put
+\begin{equation}
+ \begin{gathered}
+ s_T=\left\lceil\log_2^+\frac1{TL-1}\right\rceil
+       \quad\hbox{for searched ordinary rational witnesses},\\
+ s_T=0\quad\hbox{for the literal endpoint tag},\qquad
+ Q_{\mathrm{mov}}=2+\mathcal B+P+s_\sigma+s_T+\lceil L\rceil^3.
+ \end{gathered}
+ \label{eq:moving-work-parameter}
+\end{equation}
+Verification of supplied witnesses is charged through their actual
+length in \(\mathcal B\); \(s_T\) records their nonuniform acquisition
+cost when they are found by refinement. Then the same degree accounting
+gives effective chart constants with
+\begin{equation}
+ T_{\mathrm{bit}}\le C(r,b)(N+1)Q_{\mathrm{mov}}^{40},\qquad
+ M_{\mathrm{bits}}\le C(r,b)Q_{\mathrm{mov}}^{20}.
+ \label{eq:moving-work}
+\end{equation}
+Indeed \(n,q,p,K\) and the gamma shift order are \(O(Q_{\mathrm{mov}})\),
+inverse time is \(O(Q_{\mathrm{mov}})\), and real-node magnitude bit
+lengths remain polynomial. Gauss isolation depth is
+\(O(Q_{\mathrm{mov}}^4)\), mapped-weight lengths
+\(O(Q_{\mathrm{mov}}^5)\), gamma work
+\(O(Q_{\mathrm{mov}}^{24})\) per call and
+\(O(Q_{\mathrm{mov}}^{25})\) over all such calls. Remaining
+\(O((N+1)Q_{\mathrm{mov}}^{35})\) work fits the displayed bound, with
+the same streaming argument. The original \(\lceil L\rceil^2\) work
+parameter is not silently reused.
+
+These bounds do not claim measured speed, sharp complexity or complete
+software validation. The theorem excludes \(T=0\), a fixed-height limit
+as \(T\downarrow0\), uniform unbounded radii, physical-observable
+transfer and any conclusion about zeros. Strong negative precision
+through zero remains open. The positive signed-crossover atlas in
+\cite{ansatzcomp} has its own weaker field allowances and does not
+extend the present strong precision target. The old \([1,2]\) theorem,
+its \(64\nu\) onset and original providers remain valid fallbacks.

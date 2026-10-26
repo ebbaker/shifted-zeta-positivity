@@ -61,3 +61,52 @@ affiliated chat and arrange its exact-turn final capture.
 This is an approximation/evaluation milestone. Name the complete
 canonical premises absent from collision controls. Broad R05 and all
 parent physical/RH statuses remain unchanged by preparing this packet.
+
+## RETURN — 26 October 2026, HDA-R05-AN08 r1
+
+Prepared for Edward Baker with substantial LLM assistance. Inherited
+parent **gpt-6.1-sol, effort ultra**, verified by the orchestrator from
+its actual turn metadata. Parent base chat0025, thread
+`01a179ab-8856-7ba0-89a2-500b2d854c80`; no separate subagent configuration
+verification or history registration. [Exact input versions](../../notes/20_MOVING_ENDPOINT_INPUTS_20261026.json)
+were saved before analysis; [work/output record](../../notes/20_MOVING_ENDPOINT_WORK_RECORD_20261026.json)
+records final identities and the additional guidance read before disposition.
+
+[Note20](../../notes/20_MOVING_LOWER_ENDPOINT_20261026.md) proves the specified
+closed time interval1/L<=T<=2 at sufficient L>=1024nu²,
+nu=ceil(r+b+2)+1, with unchanged p=floor(L/2),K=2p,V=8sqrt(2)L and
+exp(-L²/4) total outer (3,1) target. The joint truncation multiplier
+L^(5/2)exp(Y²(L-1)/4) is paid by continuous all-height margins. Evolved
+shifted moments retain their separate order-dependent factor. Every
+source/tail, complete population, buffer, calibration and retained-order
+gate stays visible, including exact cutoff transfer through jumps.
+
+All five delivered-error categories and scale are recomposed. The unchanged
+rho=2 outer ellipse needs a sufficient O(L³)-node rule; local delivered
+precision retains leading3L²/(8log2) with O_(r,b)(L log L) guards.
+Provider internal work, all N modes and descriptor/time-witness search
+separations remain costs. Exact rational queries require a strict
+T L^->1 witness; an optional literal endpoint tag has a separately paid
+time-input allowance including F_TT. No arbitrary-real equality decision,
+uniform separation, T=0 extension or optimal-onset claim.
+
+No numerical/symbolic research campaign, field/zero sweep, provider replay
+or manuscript edit was run. Original [1,2] theorem and providers remain
+fallbacks. The only scoped failed shortcut is carrying O(L²) outer nodes
+over the unchanged ellipse without paying its exp(O(L³)) kernel bound;
+this is not an impossibility theorem for better rules.
+
+## DISPOSITION — Analysis, Sol
+
+Accept Note20 M1--22 and its finite endpoint interface with
+[Review14](../../reviews/14_MOVING_ENDPOINT_ASSESSMENT_20261026.md), a
+same-model internal assessment including a separate read-only full-note
+check. AN08 r1 **Complete/CLOSED** at its bounded analytical scope.
+Broad R05 **Partial** at complete evaluator software/certification;
+R04/R06 NOT_STARTED, HDA-A02 Partial, HDA-17 Partial, HDA-18 Gated and
+HDA-20 unfulfilled unchanged. N02's matrix/caps are untouched. The next
+concrete deliverable is existing [A03-AN02 r1](../../../ansatz/research-progress/handoffs/HDA-A03-AN02.md),
+**Analysis — Sol**, under its ansatz register: pay the corrected physical
+consumer at explicit rates. This return supplies no physical/RH conclusion.
+Public chat capture belongs to the parent research chat; earlier recurrence
+registrations and frozen request text above are preserved.

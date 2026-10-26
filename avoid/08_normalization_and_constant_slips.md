@@ -98,3 +98,17 @@ manuscript introduced a distinct composition B_2. The
 uses B_2^Phi at exactly those occurrences and centralizes the notation key;
 centered moments and composition budgets retain their own symbols. This
 repairs presentation, without changing the interpolation theorem.
+
+
+26 October 2026 — **use the actual sensitivity before judging center accuracy.**
+For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**,
+base chat0025. [Heat-density Ansatz Note22](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/22_NAMED_SWITCH_CENTERS_20261026.md)
+warns to retain “the essential X factor” in switch sensitivity. The
+proved derivative is of order X(logX)^2; omitting X would misjudge an
+O(logX/X) amplitude correction against the 1/(XlogX) rounding width.
+All named one-arm center shifts are already sub-width; even factor two
+has a sub-width center effect, separately larger than curvature shifts.
+[Assessment16](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/16_NAMED_SWITCH_CENTERS_ASSESSMENT_20261026.md)
+retains the exact historical center and finite-height denominator.
+This preventive check improves centering analysis; it supplies no sharper
+physical layer or time/covariance consumer.

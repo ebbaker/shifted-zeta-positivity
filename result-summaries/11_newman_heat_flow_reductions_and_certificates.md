@@ -512,7 +512,9 @@ with [same-model Assessment15](../papers/investigations-5/01_heat_density_asympt
 gives compact arithmetic X^(-tlog2/4), hence P4 X^-7 on[63,65], a rechecked
 F1 chart and actual outer overlap. Earlier two-example-only LT-03 status
 is superseded at fixed order. Compact core, new physical/center consumers,
-growing order and all-time assembly remain open; onsets symbolic.
+growing order and all-time assembly remain open; onsets symbolic. The
+named-center status is superseded by the later Note22 entry below;
+new actual physical consumers remain open.
 
 
 **26 October 2026 — central Book synthesis of the established heat-flow results.**
@@ -525,3 +527,123 @@ states: “This synthesis does not promote an open bridge or a historical
 audit gate to a completed theorem.” Status remains production completion
 with inherited in-note mathematical scopes; companion revision is planned.
 This is a new entry point, not an additional approximation theorem.
+
+
+**26 October 2026 — named physical-switch centers at actual compact scope.**
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual
+recorded effort ultra**, base chat0025. [Ansatz Note22](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/22_NAMED_SWITCH_CENTERS_20261026.md)
+is **proved in-note from named inputs**, with [same-model Assessment16](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/16_NAMED_SWITCH_CENTERS_ASSESSMENT_20261026.md).
+On[63,65], exact-switch sensitivity is -pi X(logX)^2/512[1+O(1/logX)]
+uniformly across the rounding neighborhood. Elementary/corrected/J/S/P4
+one-arm centers have explicit finite-height shifts, each o(1/(XlogX));
+factor two is separately paid. Quote: “The existing density-layer error
+is not sharpened by these statements.” A03-AN01 closes; new corrected
+physical transfer is a frozen target, not a theorem. HDA-A03 Partial,
+onsets uninstantiated; no independent specialist validation or RH claim.
+
+
+**26 October 2026 — recurrence at the moving lower endpoint1/L.**
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual
+recorded effort ultra**, parent base chat0025. [Recurrence Note20](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/20_MOVING_LOWER_ENDPOINT_20261026.md)
+is **proved in-note from named inputs**, with [same-model Review14](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/14_MOVING_ENDPOINT_ASSESSMENT_20261026.md).
+At sufficient L>=1024nu², the complete delivered field/spatial0--3/direct-
+first-time outer error remains exp(-L²/4) on1/L<=T<=2, with unchanged
+p=floor(L/2),K=2p,V=8sqrt(2)L and complete modes/integral/transfers.
+Quote: “the bound does not give a T=0 theorem”. The lower-time costs and
+all delivered categories are paid; the retained ellipse now needs O(L³)
+outer nodes, while local tolerance retains leading quadratic bits.
+Strict witnesses and a paid literal endpoint tag define the query class.
+AN08 Complete/CLOSED; broad R05 Partial at full implementation/certification.
+Old[1,2]/providers remain fallbacks; no independent validation or RH claim.
+
+
+**26 October 2026 — HDA-B01 companion production closure.** For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**, chat0024. [Review43](../papers/investigations-5/01_heat_density_asymptotics/reviews/43_BOOK_COMPANION_INTEGRATION_PRODUCTION_REVIEW_20261026.md) records: “Companion production is complete; scientific claims retain their sourced scopes.” Full positive hierarchy/compact proofs and parent source/evaluation proofs now have current technical manuscript homes; the recurrence structure is preserved and the Book links durable labels. Subsequent named-center/moving-endpoint proofs stay in their original notes with explicit supplements. The [integration note](../papers/investigations-5/01_heat_density_asymptotics/notes/65_BOOK_COMPANION_INTEGRATION_20261026.md) and four fresh build records bind the scope and artifacts. No new approximation theorem, sharper physical consumer, affordable height cost or full-chain audit is inferred from production.
+
+
+**26 October 2026 — corrected fixed-P4 physical tuple through64.**
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual
+recorded effort ultra**, same base chat0025. [Ansatz Note23](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/23_FIXED_P4_PHYSICAL_TUPLE_20261026.md)
+is **proved in-note from named inputs**, with [same-model Assessment17](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/17_FIXED_P4_PHYSICAL_TUPLE_ASSESSMENT_20261026.md).
+For fixed[63,65], physical strip/buffers and sufficiently large X,
+static U/W<=4 and R/C<=2 errors are X^-7; J/Q<=2 (J internal3)
+are X^-7 Lambda²; direct time/source<=2 are X^-6 Lambda²;
+heat-potential<=4 and residual density/current<=2 corrections are X^-7.
+Here Lambda=1+logX, with exact q/K, actual full covariance and means.
+Quote: “No estimate in the frozen requested rows is unpaid.” AN02
+Complete/CLOSED; earlier target-only status is superseded at this scope.
+Finite onset is uninstantiated; no sharper simple-layer/core/global-
+reassembly/evaluator-height/RH or independent specialist-review claim.
+HDA-A03 and wider parent gates retain their stated open scopes.
+
+### First small-positive buffered slab — 26 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual
+effort ultra**, base0025. **Proved in-note from named classical inputs;
+same-model internal assessment only:** [Ansatz Note24](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/24_SMALL_POSITIVE_SLAB_20261026.md)
+gives the explicit leading two-arm canonical comparison on precisely
+[1/2,1], arbitrary fixed buffers, field/spatial0--3 at
+C E_o Lambda^j X^(-t log2/4) and direct time at
+C E_o Lambda² X^(-t log2/4). Uniform worst power is log2/8.
+The actual residual/residual_z are E_o Lambda²/X and E_o Lambda³/X.
+All arithmetic modes, source, lower completion, enlarged middle and
+infinite ends are paid; a fresh gamma calibration supplies the full-buffer
+t=1/2 common-H model match. [Assessment18](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/18_SMALL_POSITIVE_SLAB_ASSESSMENT_20261026.md).
+AN01 CLOSED, wider A08 Partial. Symbolic onset only; no sharper-rate
+optimality, literature priority, wider positive-gap/zero/physical
+theorem, useful-cost certificate or independent audit is claimed.
+
+### Corrected intermediate positive range — 26 October 2026
+
+For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**,
+base0025. **Proved in-note from named classical inputs; same-model
+internal assessment only:** [Ansatz Note25](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/25_INTERMEDIATE_POSITIVE_COMPARISON_20261026.md)
+proves corrected F1 on[3/4,33], arbitrary fixed buffers, complete
+B1=Lambda^4/X²+X^(-t log2/4). Spatial0--3 adds Lambda^j; direct time
+adds Lambda². Actual residual/residual_z are E_o Lambda^4/X² and
+E_o Lambda^5/X². Both genuine overlaps close, giving with Notes24/20
+a high-height atlas[1/2,T] for each fixed finite T>=33, with T-dependent
+onset. [Assessment19](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/19_INTERMEDIATE_POSITIVE_COMPARISON_ASSESSMENT_20261026.md).
+AN02 CLOSED; wider A08 Partial. Symbolic onsets only; no new time splice,
+near-zero/physical/core/cost theorem, sharp lower bound or independent
+audit. The next retained-arithmetic moving-band packet is prepared only.
+
+### Retained arithmetic on the moving positive band — 26 October 2026
+
+For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**,
+base0025. **Proved in-note from named inputs; same-model internal
+assessment only:** [Ansatz Note26](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/26_RETAINED_ARITHMETIC_MOVING_POSITIVE_BAND_20261026.md)
+extends the existing frozen-N finite-mode/RS completion to4/L<=t<=1
+at eta=Lambda²X^-3/4. Full-buffer j0--3 adds Lambda^j, direct time
+Lambda², actual residual is E_o eta and residual_z E_o Lambda eta.
+A fresh growing-shift initial remainder pays all ordinary arithmetic,
+floor powers, gamma/completion and infinite ends. Both overlaps close;
+the identical inherited signed-window model supplies the positive union
+[0,1], then a fixed-T high-height atlas[0,T] with Notes25/20.
+[Assessment20](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/20_RETAINED_ARITHMETIC_MOVING_BAND_ASSESSMENT_20261026.md),
+[whole-chat Summary67](../papers/investigations-5/01_heat_density_asymptotics/notes/67_CHAT0025_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md).
+AN03 CLOSED; symbolic onset, O(sqrt X) retained modes. No strong negative
+exp(-L²/4) precision through0, global splice/physical/core/cost theorem,
+sharp lower bound, literature priority or independent audit is claimed.
+
+
+### Complete weak-filter puncture consumer — 26 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**, heat-density chat0028. **Proved in-note at finite-data scope; same-model internal assessment:** [Note71](../papers/investigations-5/01_heat_density_asymptotics/notes/71_WEAK_FILTER_PUNCTURE_CONSUMER_20261026.md)/[Review46](../papers/investigations-5/01_heat_density_asymptotics/reviews/46_WEAK_FILTER_PUNCTURE_ASSESSMENT_20261026.md) gives the full unchanged weak scalar inventory, nonholomorphic heat-variation correction, primitive puncture/post-filter allocation and a square-root spatial modulus through kernel order4; a cube-root time modulus requires extra jets/tracks. Quote: “This is a conditional consumer, not an acquired canonical numerical certificate or a complete useful joint height/accuracy theorem.” Fixed central multiple-event floor and normalized data/provider costs remain. The alternate midpoint bound can cost O(e^-6), so polynomial accuracy-bit cost and useful height cost are not combined. AN06 r1 closed bounded; r2 was prepared only at that checkpoint and is returned below. No RH or parent-status gain.
+
+### Six regional returns integrated — 26 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort
+ultra**, chat0027. [Note70](../papers/investigations-5/01_heat_density_asymptotics/notes/70_B02_R2_MANUSCRIPT_INTEGRATION_20261026.md)
+maps each of the six returns above to its durable detailed manuscript
+proof. [Review45](../papers/investigations-5/01_heat_density_asymptotics/reviews/45_B02_R2_MANUSCRIPT_INTEGRATION_PRODUCTION_ASSESSMENT_20261026.md)
+records: “Production completion changes proof placement and current navigation,
+not scientific evidence status.” All remain proved in-note from named inputs,
+same-model internal assessment only. Four clean reading-copy builds and QA
+supply production evidence, with no new global splice, endpoint exclusion,
+canonical lower-margin acquisition or independent audit. Earlier dated
+next-task pointers are superseded at production scope by this B02 r2 return.
+
+
+### Graded weak filtering and data-acquisition cost — 26 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**, heat-density chat0028. **Proved in-note from named analytical inputs; same-model internal assessment:** [Note72](../papers/investigations-5/01_heat_density_asymptotics/notes/72_GRADED_WEAK_FILTER_AND_ACQUISITION_COST_20261026.md)/[Review47](../papers/investigations-5/01_heat_density_asymptotics/reviews/47_GRADED_WEAK_FILTER_COST_ASSESSMENT_20261026.md) give full-tuple work C T^80, streaming storage C T^32, T=1+R+q_s+p+I, for the unchanged t64-anchored IC23 family restricted to[95,97], with source construction, admissible phase/root acquisition, normalized providers and signed integration charged. Quote: “Polynomial here means in the numerical height R, not its binary length log R.” Dyadic rings remove the earlier inverse-tolerance grid blowup. Constants/onsets uninstantiated, no numerical run or practical crossover; external scalar costs retained. p evaluates the fixed field, not arbitrary total H-error. AN06 r2 closed bounded, r3 prepared for pure-exterior query refinement. Parent/global-time/global-query/audit gates remain.

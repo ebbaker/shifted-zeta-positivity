@@ -49,7 +49,8 @@ polynomial bit cost, bounded by $O_b(q_s^{60})$ in the stated model.
 The bit-cost statement uses a dyadic tolerance and a rational upper bound
 for $b$, or supplied certified recipe integers. It excludes the cost of
 obtaining the upstream all-time contour and transfer constants.
-This is Note 58's construction \cite{compression}. It supplies the
+This is Note 58's construction \cite{compression}, now proved in the
+parent companion's \src{manuscript/25_analytic_source.tex}{\texttt{thm:ac-source}, \texttt{thm:ac-construction}}. It supplies the
 same four jets consumed by the global theorem. The source changes
 when the requested tolerance changes, but remains fixed during one
 construction and independent of the queried $t,x,y$.
@@ -113,12 +114,13 @@ $j=0,1,2,3$, then
 \end{equation}
 The right side stays more than $19/100$ from an integer. The absolute
 coefficient sum is eighteen, so at least one $Q_j$ stays more than
-$1/100$ from every integer. Certified phase intervals then determine
-an exact ceiling with a strict margin. With $K\ge2048$ and all other
+$1/100$ from every integer. Certified phase intervals select a candidate with distance greater than
+$1/200$ from the integers and determine its exact ceiling. With $K\ge2048$ and all other
 onset gates, the cost is polynomial in $K$, not in $\log K$.
 This solves the phase selection needed by the construction; it is
 not an algorithm for deciding equality at an arbitrary prescribed
-onset \cite{phase}.
+onset. The parent companion's \src{manuscript/26_complete_evaluation.tex}{\texttt{thm:phase-selector}}
+contains the finite selector proof \cite{phase}.
 
 \subsection{The full evaluator and its cost}
 Notes 59--61 treat every scalar of \eqref{eq:global-tuple}, including
@@ -151,12 +153,18 @@ $p$ and query encoding length $I$ have sufficient bit bounds
  \operatorname{storage}\le C_{\rm desc,\mathcal Q}(1+p+I)^8.
  \label{eq:physical-complexity}
 \end{equation}
-For general computable scalar inputs their provider costs are retained
-explicitly. No uniform polynomial cost in height, time or descriptor
+For general computable scalar inputs let $C_{\rm ext}(P)$ and
+$S_{\rm ext}(P)$ bound one request to all external scalar providers.
+With $P_*=C_{\rm desc,\mathcal Q}(1+p+I)$, multiply the displayed work
+bound by $1+C_{\rm ext}(P_*)$ and add $S_{\rm ext}(P_*)$ to storage.
+An arbitrarily slow computable scalar's digits cannot be hidden in a
+fixed constant. No uniform polynomial cost in height, time or descriptor
 size is claimed.
 \end{theorem}
 The constants still contain inverse physical floors and can be
-enormous. This is the bounded theorem of Note 61 \cite{cost}; it
+enormous. An application must separately acquire contour or first-jet margins, isolated zero counts/locations and initial energy, then pay buffers, complete mode counts, height onsets, separation and contour evaluation. In the moving-negative theorem even the outer sufficient quadrature count is $O(L^3)$; provider work is additional. None of these acquisitions is hidden in the fixed-data polynomial precision statement. The full evaluator and cost proofs are the parent companion's
+\src{manuscript/26_complete_evaluation.tex}{\texttt{thm:complete-evaluator}, \texttt{thm:polynomial-accuracy}},
+from Notes 59--61 \cite{evaluation,phase,cost}; the result
 does not close the historical full-certificate or full-audit gates.
 
 \subsection{Where the next cost improvement must occur}

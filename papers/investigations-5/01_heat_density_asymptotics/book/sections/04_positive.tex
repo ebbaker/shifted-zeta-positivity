@@ -15,14 +15,14 @@ near one. Fix the observation widths and a positive analytic margin;
 all estimates start on the rectangle with twice that margin. For a
 real center $x$ put
 \begin{equation}
- X=|x|,\quad R=2+t+X,\quad \Ls=\log R,\quad
- \Ns=1+X+t\Ls,\qquad
+ X=|x|,\quad R=2+t+X,\quad \mathcal L_+=\log R,\quad
+ \Ns=1+X+t\mathcal L_+,\qquad
  \A=|\Sc_t(s)|+|\Sc_t(1-s)|.
  \label{eq:positive-scales}
 \end{equation}
 At a sufficient onset, contraction in a fixed sector gives
 \begin{equation}
- |p|\asymp\Ns,\quad \Re(p-w)\ge t\Ls/5,\quad
+ |p|\asymp\Ns,\quad \Re(p-w)\ge t\mathcal L_+/5,\quad
  |\Im(p-w)|\le t,\quad |B-1|\le1/4,\quad |p|\ge t.
  \label{eq:saddle-gates}
 \end{equation}
@@ -69,7 +69,7 @@ For $n=2J+2$ define
 \begin{equation}
  b_J=\sum_{k=1}^{2J+2}\frac{t^{J+1+k}}{\Ns^{2J+2+k}},\qquad
  \delta_J=b_J/t,\qquad
- E_J=b_J+R^{-\kappa_a t}+R^{b_0}e^{-ct\Ls^2},
+ E_J=b_J+R^{-\kappa_a t}+R^{b_0}e^{-ct\mathcal L_+^2},
  \quad\kappa_a=\frac{\log2}{8}.
  \label{eq:positive-budget}
 \end{equation}
@@ -82,9 +82,9 @@ remainder and the nonlocal contour pieces.
 Fix $J\ge0$ and fixed observation buffers. There are finite constants
 and $R_{0,J}$ such that for $t\ge32$ and $R\ge R_{0,J}$,
 \begin{align}
- |\partial_z^d(H-P_{2J})|&\le C_{J,d}\A\Ls^dE_J,
+ |\partial_z^d(H-P_{2J})|&\le C_{J,d}\A\mathcal L_+^dE_J,
                          &&0\le d\le3,\\
- |(H-P_{2J})_t|&\le C_{t,J}\A(\Ls^2E_J+\delta_J),\\
+ |(H-P_{2J})_t|&\le C_{t,J}\A(\mathcal L_+^2E_J+\delta_J),\\
  |\Res P_{2J}|&\le C_{r,J}\A\delta_J,
  &\Res&=\partial_t+\partial_{zz}.
  \label{eq:positive-full-error}
@@ -102,7 +102,9 @@ There is a sufficient $t_{*,J}$ for which, at every real height,
 The field bound is first proved on the larger analytic rectangle;
 the jet bounds use its smaller interior.
 \end{theorem}
-This is the result proved in Ansatz Note 19 \cite{positive}. Its
+The full proof is now integrated in the ansatz companion's
+\src{ansatz/manuscript/07_positive_hierarchy.tex}{\texttt{thm:positive-fixed}},
+from the original Ansatz Note 19 \cite{positive}. Its
 quantifier is ``for every fixed $J$, there exist constants and an
 onset.'' The constants are specified by finite constructions and named
 source constants, but are not numerically instantiated. The theorem
@@ -154,7 +156,7 @@ $\alpha^{(2J+3)}$ are needed. Integrating the even powers against
 the Gaussian yields $t^{n/2+k}/m^{n+k}$, hence $b_J$.
 Odd grades cancel on the actual symmetric segment. Only the retained
 even polynomials are extended to whole Gaussian moments; their finite
-tails are at most $C_J e^{-t\Ls^2/400}$.
+tails are at most $C_J e^{-t\mathcal L_+^2/400}$.
 
 The remainder proof is incomplete until the rest of the canonical
 integral is paid. In \eqref{eq:positive-heat}, split at real parts
@@ -197,14 +199,16 @@ $\rho_p=\alpha''\rho^2/2$. Thus
  (H-P_{2J})_t=-(H-P_{2J})_{zz}-\Res P_{2J}.
  \label{eq:residual-telescope}
 \end{equation}
+The coefficient and transport proofs are in the ansatz companion's
+\src{ansatz/manuscript/07_positive_hierarchy.tex}{\texttt{prop:positive-coefficients}, \texttt{prop:positive-residual}}.
 The final grade is not identically zero; in particular it is eventually
 nonzero at $z=0$. Formula~\eqref{eq:residual-telescope} supplies the
 time estimate without differentiating a big-$O$ bound.
 
 \subsection{The improvement has two useful faces}
-For $X\gg t\Ls$, the allowance is
+For $X\gg t\mathcal L_+$, the allowance is
 $b_J\asymp_J t^{J+2}X^{-2J-3}$. In the time-dominated or comparable
-region it is $O_J(t^{-J-1}\Ls^{-2J-3})$. The next allowance satisfies
+region it is $O_J(t^{-J-1}\mathcal L_+^{-2J-3})$. The next allowance satisfies
 \begin{equation}
  \frac{b_{J+1}}{b_J}=O_J(t/\Ns^2)
               =O_J(1/(t\log^2(2+t))).
@@ -251,7 +255,12 @@ This is a new compact-domain proof, not substitution of $64$ into an
 uninstantiated eventual onset. At higher orders the arithmetic term
 must remain whenever its exponent does not pay the local precision.
 It is an upper-bound budget, not a proved lower bound or a sharpness
-claim \cite{bridge}.
+claim. The full compact proof, finite-endpoint forcing and optional
+splice are in the ansatz companion's
+\src{ansatz/manuscript/07_positive_hierarchy.tex}{\texttt{thm:compact-positive}},
+\src{ansatz/manuscript/07_positive_hierarchy.tex}{\texttt{prop:elementary-compact}}
+and \src{ansatz/manuscript/07_positive_hierarchy.tex}{\texttt{prop:positive-overlap-splice}},
+with original source Note 20 \cite{bridge}.
 
 For comparison, an elementary corrected carrier is
 \begin{equation}
@@ -261,12 +270,29 @@ For comparison, an elementary corrected carrier is
  \quad b_\pm=L_z/2\pm\ii\pi/4.
  \label{eq:elementary-correction}
 \end{equation}
-On each fixed $[32,T]$, the rechecked contour proof gives
-$|\partial_z^d(H-F_1)|\le C_{T,d}\Eo(1+\log^{4+d}X)/X^2$ and
-$|(H-F_1)_t|\le C_T\Eo(1+\log^6X)/X^2$.
-The envelopes $\A$ and $\Eo$ are comparable on the full buffers.
-The truncated gamma arm used in that proof has a finite-endpoint
-forcing, which is explicitly paid; it is not an exact heat solution.
+With $\Ls=1+\log X$, the new complete comparison on $[3/4,33]$
+is
+\begin{align}
+ B_1(t,X)&=\Ls^4/X^2+X^{-t\log2/4},\notag\\
+ |\partial_z^j(H-F_1)|&\le C_j\Eo\Ls^jB_1,&&j\le3,\notag\\
+ |(H-F_1)_t|&\le C_t\Eo\Ls^2B_1,\label{eq:intermediate-band}\\
+ |\Res F_1|&\le C\Eo\Ls^4/X^2,
+ &|\partial_z\Res F_1|&\le C\Eo\Ls^5/X^2.\notag
+\end{align}
+Its proof uses the complete fixed-endpoint canonical split and a
+corrected local gamma calculation, retaining all arithmetic and the
+actual middle and infinite ends \cite{intermediate}. It is integrated
+as the ansatz companion's
+\src{ansatz/manuscript/08_positive_bridges.tex}{\texttt{thm:intermediate-positive}}.
+On $[3/4,1]$, comparison of $F_0$ and $F_1$ through $H$ pays the sum
+of their complete allowances; comparison of $F_N$ and $F_1$ pays
+$\epsilon_X+B_1$ with $\Ls^j$ for jets and $\Ls^2$ for time.
+The omitted-arithmetic term in $B_1$ is retained. On $[32,33]$ this
+is precisely the existing elementary $F_1$ formula; the common buffered
+jet/time premises are checked, and $\A\asymp\Eo$. That identifies
+its overlap with the compact fixed-order hierarchy without a new splice.
+The truncated gamma arm's finite-endpoint forcing is separately paid;
+it is not treated as an exact heat solution.
 
 For a time profile $\chi$, any optional splice obeys
 \begin{equation}

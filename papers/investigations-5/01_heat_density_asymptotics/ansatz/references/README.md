@@ -348,3 +348,77 @@ canonical fixed-endpoint proof on each new fixed compact[32,T] and its
 stronger arithmetic bound; no restricted evolved Polymath approximation
 is extended by citation. Existing bibliography and PDF provenance remain;
 no new PDF, article record or full-source proof audit is claimed.
+
+
+## A03-AN01 source check — 26 October 2026
+
+For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**,
+base chat0025. Reopened [DLMF5.11](https://dlmf.nist.gov/5.11) for the
+sectorial log-Gamma/digamma conventions already used by Note03/Note20.
+Note22's real coefficients, flat-switch sensitivity and inverse-center
+lemma are derived in-note; no new external theorem, article or PDF is
+introduced. Existing bibliography and reading-copy provenance remain.
+
+
+## A03-AN02 classical analytic checks — 26 October 2026
+
+For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**,
+same base chat0025. Rechecked primary [DLMF1.9.31](https://dlmf.nist.gov/1.9.E31)
+(Cauchy derivatives), [DLMF1.10](https://dlmf.nist.gov/1.10#iv)
+(Rouche and maximum-modulus hypotheses) and [DLMF5.11](https://dlmf.nist.gov/5.11#ii)
+(fixed-sector gamma asymptotics/remainders). All contours/disks are
+supplied inside the already paid buffers; Note23 derives the new
+physical consumer in-note. These statements do not supply its nonlinear
+rates by citation. No new research article or PDF reading copy is added;
+existing bibliography/provenance remains. No independent full-source
+proof audit is claimed.
+
+## A08-AN01 checked passages — 26 October 2026
+
+For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**,
+base0025. Reopened [Polymath v2](https://arxiv.org/html/1904.12438v2):
+equation35 is exact; Proposition9.1(i) has t<=1/2, |y|<=10 and a
+time-dependent onset. [Note24](../notes/24_SMALL_POSITIVE_SLAB_20261026.md)
+derives its new slab and wider-buffer endpoint control afresh. The
+displayed Re(s_*) coefficient following(99) appears stronger than follows
+from definition(17) and Proposition6.6(ii), consistent with
+alpha_0~(1/2)log(x/(4pi)); no stronger coefficient
+is imported. Only the qualitative stated endpoint allowance is carried.
+Our t log2/4 exponent comes directly from the exact Gaussian shift.
+
+Reopened [DLMF25.2](https://dlmf.nist.gov/25.2) for the full Dirichlet
+series and Euler summation25.2.8 on Re>0, and
+[DLMF5.11(ii)](https://dlmf.nist.gov/5.11#ii) for fixed-sector finite
+gamma remainders. The new proof supplies its own finite constants,
+buffers, tails, moments and time derivative. Existing canonical
+bibliography and PDF provenance are preserved; no new article record,
+PDF download or independent full-source audit is claimed.
+
+## A08-AN02 fixed-compact source check — 26 October 2026
+
+For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**,
+base0025. Reopened [Polymath v2 Section4](https://arxiv.org/html/1904.12438v2#S4)
+for exact equation35, [DLMF5.11(ii)](https://dlmf.nist.gov/5.11#ii)
+for finite fixed-sector gamma remainders and [Cauchy1.9.31](https://dlmf.nist.gov/1.9.E31).
+The already checked [Euler formula25.2.8](https://dlmf.nist.gov/25.2.E8)
+pays the enlarged bounded-real-part middle. [Note25](../notes/25_INTERMEDIATE_POSITIVE_COMPARISON_20261026.md)
+derives its own quadratic polynomial remainder, six-moment time bound,
+upper33 tail gates and complete ordinary arithmetic on the new interval.
+No restricted published approximation is extended by citation. Existing
+canonical bibliography/PDF provenance is preserved; no new article,
+download or independent full-source proof audit is claimed.
+
+## A08-AN03 retained-arithmetic source check — 26 October 2026
+
+For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**,
+base0025. Reopened [DLMF5.11(ii)](https://dlmf.nist.gov/5.11#ii),
+[ordinary series25.2.1](https://dlmf.nist.gov/25.2.E1) and
+[Polymath v2 Section4](https://arxiv.org/html/1904.12438v2#S4), exact(35).
+[Note26](../notes/26_RETAINED_ARITHMETIC_MOVING_POSITIVE_BAND_20261026.md)
+uses Note04's assessed fixed-strip initial RS theorem only on a fixed
+inner strip, then derives the growing-shift estimate from exact ordinary
+tail grouping and sectorial gamma transport. It does not import a
+growing-strip RS error or extend a restricted positive-time theorem by
+citation. The full finite family and correction remain explicit. Existing
+canonical article/bibliography/PDF provenance is preserved; no new
+download or independent full-source audit is claimed.

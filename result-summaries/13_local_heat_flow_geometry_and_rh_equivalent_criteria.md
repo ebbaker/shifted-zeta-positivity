@@ -1029,3 +1029,17 @@ through Note50. [Review36](../papers/investigations-5/01_heat_density_asymptotic
 states: “no blocking error identified in the inspected new mechanisms”.
 Focused cross-model LLM review only; useful evaluation and full-chain or
 specialist validation remain open. HDA-17/18/20 statuses are unchanged.
+
+**Rodgers–Tao compact force acquisition, 26 October 2026.** Prepared for
+Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+[Note03](../papers/investigations-5/02_heat_flow_rh_applications/rodgers_tao/notes/03_CANONICAL_TWO_ROOT_MARGINS_AND_FORCE_BUDGET_20261026.md)
+is **interval-certified; same-model internal review** on
+`t in[1/20000,1/10000]`, rectangle[26,46]×[-2,2]: canonical wall floor
+>4.94e−7, count2, actual root data, and integrated exterior force
+<3.565471e−8. The source states: “This is a ratio of certified upper
+allowances, not a measured speedup or a lower bound for all contour
+estimators.” The contour budget is 309.53 times larger; paired transfer
+also loses to separate drift on this wide-gap pilot.
+[Assessment02](../papers/investigations-5/02_heat_flow_rh_applications/rodgers_tao/reviews/02_CANONICAL_TWO_ROOT_ACQUISITION_ASSESSMENT_20261026.md).
+Reusable finite force calibration; known-covered region, no new Newman
+bound, endpoint exclusion, global numbering or dyadic RT assembly.

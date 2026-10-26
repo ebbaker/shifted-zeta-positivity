@@ -146,3 +146,70 @@ and source/evaluation results; technical companions retain proof ownership.
 [production review](reviews/42_BOOK_SYNTHESIS_PRODUCTION_REVIEW_20261026.md),
 [continuation](notes/64_BOOK_CONTINUATION_20261026.md).
 For Edward Baker with LLM assistance, gpt-6-astra, actual effort max, chat0023.
+
+
+2026-10-26 — **Research after Book continuation.** Heat-density working
+tree at [Return66](notes/66_BOOK_RESEARCH_RETURN_20261026.md), no new
+snapshot/commit. Named switch centers are paid below rounding width;
+negative exp(-L²/4) delivered comparison extends to[1/L,2] at stated
+sufficient onset and revised quadrature cost. [Ansatz Assessment16](ansatz/reviews/16_NAMED_SWITCH_CENTERS_ASSESSMENT_20261026.md),
+[Recurrence Review14](recurrence/reviews/14_MOVING_ENDPOINT_ASSESSMENT_20261026.md).
+For Edward Baker with LLM assistance, gpt-6.1-sol, actual ultra, base0025;
+internal same-model checks, physical consumers and software still open.
+
+
+2026-10-26 — **Companion integration HDA-B01.** Current [Book](book/main.tex), [parent](manuscript/main.tex), [ansatz](ansatz/manuscript/main.tex) and [recurrence](recurrence/manuscript/main.tex) source trees; no snapshot or commit. Full positive/source/evaluator proofs integrated, common contracts and durable proof links reconciled, subsequent closed-source supplements linked. See [Note65](notes/65_BOOK_COMPANION_INTEGRATION_20261026.md), [Review43](reviews/43_BOOK_COMPANION_INTEGRATION_PRODUCTION_REVIEW_20261026.md) and linked fresh build/hash records. For Edward Baker with LLM assistance, gpt-6.1-sol, actual effort ultra, chat0024. Scientific scopes retained.
+
+
+2026-10-26 — **Fixed-P4 switch physical consumer.** Heat-density research
+working tree at [Ansatz Note23](ansatz/notes/23_FIXED_P4_PHYSICAL_TUPLE_20261026.md),
+no new manuscript snapshot/commit. All requested physical rates on
+[63,65] close, including actual covariance, direct time and residual
+defects. [Assessment17](ansatz/reviews/17_FIXED_P4_PHYSICAL_TUPLE_ASSESSMENT_20261026.md),
+[AN02 disposition](ansatz/research-progress/handoffs/HDA-A03-AN02.md).
+For Edward Baker with LLM assistance, gpt-6.1-sol, actual ultra, same
+base0025; symbolic onset, same-model checks and wider open scopes retained.
+
+2026-10-26 — **A08 first small-positive slab.** Research working tree,
+[Ansatz Note24](ansatz/notes/24_SMALL_POSITIVE_SLAB_20261026.md)/[Assessment18](ansatz/reviews/18_SMALL_POSITIVE_SLAB_ASSESSMENT_20261026.md).
+Complete full-buffer canonical[1/2,1] field/jets/time arithmetic power
+X^(-t log2/4), exact residual and endpoint match. AN01 CLOSED; wider
+range/zero/physical/cost/audit remain separate. No snapshot, commit or
+new build. Edward Baker with LLM assistance, gpt-6.1-sol, actual ultra,
+base0025; symbolic onset and internal same-model assessment.
+
+2026-10-26 — **Corrected[3/4,33] field bridge.** Working-tree
+[Ansatz Note25](ansatz/notes/25_INTERMEDIATE_POSITIVE_COMPARISON_20261026.md)/[Assessment19](ansatz/reviews/19_INTERMEDIATE_POSITIVE_COMPARISON_ASSESSMENT_20261026.md)
+closes A08-AN02 at complete B1, buffered jets/direct time, residual and
+both overlaps; fixed-T high-height atlas[1/2,T] with prior sources.
+No snapshot/commit/build. Edward Baker with LLM assistance, gpt-6.1-sol,
+actual ultra, base0025. Symbolic onset, internal same-model assessment;
+near-zero/physical/core/cost/audit remain separate.
+
+2026-10-26 — **Final moving-band result and base0025 handoff.** Research
+working tree at [Ansatz Note26](ansatz/notes/26_RETAINED_ARITHMETIC_MOVING_POSITIVE_BAND_20261026.md)/[Assessment20](ansatz/reviews/20_RETAINED_ARITHMETIC_MOVING_BAND_ASSESSMENT_20261026.md).
+Retained arithmetic4/L<=t<=1 at eta=Lambda²X^-3/4 and both overlaps;
+high-height positive atlas[0,T] with inherited sources. [Summary67](notes/67_CHAT0025_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md)
+records all chat results and prepared B02 production. No snapshot/commit/
+build. Edward Baker with LLM assistance, gpt-6.1-sol, actual ultra;
+symbolic onset, same-model assessment and separate physical/cost/audit gates.
+
+2026-10-26 — **B02 r2 preparation and application priorities.** Heat-density
+working-tree [Plan68](notes/68_MANUSCRIPT_UPDATE_PLAN_AFTER_RH_APPLICATION_REVIEW_20261026.md)
+and [Continuation69](notes/69_CONTINUATION_AFTER_APPLICATION_REVIEW_20261026.md);
+no snapshot/commit or new manuscript build. Reconciles the current
+overview and assigns the six regional proofs to their companion homes,
+with lower-margin/exterior-energy priorities from
+[Review44](reviews/44_HEAT_DENSITY_TO_RH_APPLICATIONS_REVIEW_20261026.md)
+and the newer RT Note02. For Edward Baker with LLM assistance,
+gpt-6-astra, actual effort max, base0026. B02 remains prepared for Sol;
+scientific acceptance states are unchanged.
+
+2026-10-26 — **B02 r2 regional integration and application frontier.**
+Working-tree milestone bound by [Note70](notes/70_B02_R2_MANUSCRIPT_INTEGRATION_20261026.md),
+[four-source/PDF records](notes/70_B02_R2_PRODUCTION_VERIFICATION_20261026.json)
+and [Review45](reviews/45_B02_R2_MANUSCRIPT_INTEGRATION_PRODUCTION_ASSESSMENT_20261026.md).
+Six regional arguments now have integrated companion proof homes, exact
+parent interfaces and a current Book atlas/conditional application account;
+four clean builds and rendered QA. No snapshot/commit or scientific gate
+upgrade. Edward Baker with LLM assistance, gpt-6.1-sol, actual ultra, chat0027.

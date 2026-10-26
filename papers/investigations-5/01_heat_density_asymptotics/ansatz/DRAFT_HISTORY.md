@@ -151,3 +151,83 @@ with an actual outer overlap. [Assessments14](reviews/14_ARBITRARY_FIXED_ORDER_A
 Symbolic onsets, same-model assessment; core/physical/zero/growing-order
 obligations remain. Edward Baker with LLM assistance, gpt-6.1-sol, ultra,
 same ansatz chat0005.
+
+
+2026-10-26 — **Book positive-asymptotic companion.** Maintained
+[main](manuscript/main.tex) and [full positive proof module](manuscript/07_positive_hierarchy.tex),
+working tree; no commit/tag or snapshot. Integrates Notes17--20 with
+exact domains, budgets, recurrence/residual, compact bridge and open
+gates; links the Book and current negative specialist. [Build record](manuscript/BUILD_RECORD_20261026_BOOK_COMPANION.json).
+47 pages, no warnings, all-page visual checks; all 134 inherited display
+blocks preserved. Production integration, no new result or independent
+review. Prepared for Edward Baker with substantial LLM assistance,
+gpt-6.1-sol, recorded effort ultra (parent session verified). Later scoped source supplements acknowledge
+[Note22](notes/22_NAMED_SWITCH_CENTERS_20261026.md) and the closed
+[AN08 moving endpoint](../recurrence/notes/20_MOVING_LOWER_ENDPOINT_20261026.md),
+retaining the historical layer rate and excluding unexecuted A03-AN02
+physical targets.
+
+
+2026-10-26 — **A03-AN01 named centers.** Research working tree at
+[Note22](notes/22_NAMED_SWITCH_CENTERS_20261026.md), no new manuscript
+snapshot/commit. Exact uniform switch sensitivity pays every named
+one-arm center below the physical rounding width; finite-height first
+shifts and layer-data changes are explicit. [Assessment16](reviews/16_NAMED_SWITCH_CENTERS_ASSESSMENT_20261026.md),
+[AN02 next consumer](research-progress/handoffs/HDA-A03-AN02.md).
+Existing layer error unchanged; corrected physical rates are targets.
+Prepared for Edward Baker with LLM assistance, gpt-6.1-sol, actual ultra,
+base chat0025; same-model checks only.
+
+
+2026-10-26 — **A03-AN02 fixed-P4 physical tuple.** Research working tree
+at [Note23](notes/23_FIXED_P4_PHYSICAL_TUPLE_20261026.md), no new manuscript
+snapshot/commit. Every frozen[63,65] high-height tuple rate closes:
+static X^-7, current/covariance X^-7 log²X, time/source X^-6 log²X,
+residual corrections X^-7. [Assessment17](reviews/17_FIXED_P4_PHYSICAL_TUPLE_ASSESSMENT_20261026.md),
+[return/disposition](research-progress/handoffs/HDA-A03-AN02.md).
+For Edward Baker with LLM assistance, gpt-6.1-sol, actual ultra, same
+base0025; finite symbolic onset and internal same-model checks only.
+
+2026-10-26 — **A08-AN01 first small-positive slab.** Working-tree
+[Note24](notes/24_SMALL_POSITIVE_SLAB_20261026.md), no snapshot/commit.
+Full buffered[1/2,1] F0 comparison pays all arithmetic at
+X^(-t log2/4), spatial0--3/direct time, actual residual and t=1/2
+model match. [Assessment18](reviews/18_SMALL_POSITIVE_SLAB_ASSESSMENT_20261026.md),
+[return](research-progress/handoffs/HDA-A08-AN01.md). Symbolic onset,
+same-model checks; wider A08 Partial. Edward Baker with LLM assistance,
+gpt-6.1-sol, actual ultra, base0025. Manuscript integration is separate.
+
+2026-10-26 — **A08-AN02 corrected intermediate positive range.** Research
+working tree at [Note25](notes/25_INTERMEDIATE_POSITIVE_COMPARISON_20261026.md),
+no snapshot/commit. Full buffered[3/4,33] B1 comparison, spatial0--3,
+direct time, actual residual and both overlaps close the intermediate
+field band. [Assessment19](reviews/19_INTERMEDIATE_POSITIVE_COMPARISON_ASSESSMENT_20261026.md),
+[return](research-progress/handoffs/HDA-A08-AN02.md). Edward Baker with
+LLM assistance, gpt-6.1-sol, actual ultra, base0025; symbolic onset and
+same-model checks. No new manuscript build or near-zero/physical theorem.
+
+2026-10-26 — **A08-AN03 moving positive arithmetic band.** Working-tree
+[Note26](notes/26_RETAINED_ARITHMETIC_MOVING_POSITIVE_BAND_20261026.md),
+no snapshot/commit/build. Fresh growing-shift RS remainder pays existing
+finite F_N on4/L<=t<=1 at eta=Lambda²X^-3/4, buffered jets/direct time,
+residual and both overlaps; inherited union yields positive atlas[0,T].
+[Assessment20](reviews/20_RETAINED_ARITHMETIC_MOVING_BAND_ASSESSMENT_20261026.md),
+[whole-chat handoff](../notes/67_CHAT0025_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md).
+Edward Baker with LLM assistance, gpt-6.1-sol, actual ultra, base0025;
+symbolic onset/same-model checks, strong negative/physical/core/cost separate.
+
+
+2026-10-26 — **B02 r2 positive atlas and fixed-P4 consumer integrated.**
+Maintained [positive bridges](manuscript/08_positive_bridges.tex) and
+[switch consumer](manuscript/09_switch_consumer.tex), working tree;
+no new snapshot/commit/tag. Complete Notes22–26 arguments now prove the
+[0,T_*] high-height atlas for each fixed finite T_*>=33, named-center
+shifts and full fixed-P4 [63,65] physical tuple with exact q/K,
+actual covariance and retained residual corrections.
+[Source handoff](../notes/67_CHAT0025_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md),
+[Plan68](../notes/68_MANUSCRIPT_UPDATE_PLAN_AFTER_RH_APPLICATION_REVIEW_20261026.md),
+[build record](manuscript/BUILD_RECORD_20261026_B02_R2.json).
+84 pages, no compilation warnings; parent production assessment records
+rendered checks. Symbolic onsets, same-model source assessments and wider
+core/physical/global/cost/audit limitations retained. For Edward Baker
+with substantial LLM assistance, gpt-6.1-sol, actual effort ultra.

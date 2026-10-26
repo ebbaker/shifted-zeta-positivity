@@ -262,3 +262,34 @@ shifts still require execution. Preserve the historical A_lin definition
 and exact q/K. [Whole-chat Summary21](../../notes/21_CHAT0005_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md)
 gives the next prompt and complete evidence map. No duplicate packet or
 automatic chat dispatch is created.
+
+
+## RETURN — r1, 26 October 2026, base chat0025
+
+**gpt-6.1-sol (Codex), actual recorded effort ultra**, thread
+`01a179ab-8856-7ba0-89a2-500b2d854c80`. [Inputs22](../../notes/22_NAMED_SWITCH_CENTERS_INPUTS_20261026.json)
+pins the exact request and source versions. [Note22](../../notes/22_NAMED_SWITCH_CENTERS_20261026.md)
+NC1--7 consumes actual compact field/arm bounds; NC8--15 establishes the
+exact physical-switch sensitivity uniformly at the rounding width;
+NC16--19 proves the named-center shifts, signs and finite-height error.
+All named one-arm shifts are o(1/(X logX)). NC20--21 pays the layer-data
+change and retains only the historical O(1) absolute density-layer rate.
+No numerical/symbolic research, instantiated onset or physical tuple
+transfer is supplied. Root is sole ansatz writer; same-model contributing
+read-only checks are recorded in [Assessment16](../../reviews/16_NAMED_SWITCH_CENTERS_ASSESSMENT_20261026.md).
+
+## DISPOSITION — Analysis, Sol, 26 October 2026
+
+**AN01 r1 CLOSED** at its frozen field/arm/center and unpaid-consumer
+scope. This supersedes the pending checkpoint and earlier ready notices,
+not the frozen request or historical center. HDA-A03 remains Partial;
+LT-06 physical consumers remain open. Parent statuses unchanged.
+
+Next **Analysis — Sol**, [A03-AN02 r1](HDA-A03-AN02.md), READY_FOR_SOL,
+prepared not executed. It freezes the same fixed P4 model on [63,65],
+explicit output-specific physical rates, all actual covariance/means,
+regulator and residual payments. This base conversation retains its
+unique base0025 history; no ansatz re-registration is created.
+Manuscript integration pointer: concurrent base chat0024 owns production;
+Note22 is new research evidence requiring a distinct scoped integration,
+not covered by its opening input manifest. No changed reading-copy claim.
