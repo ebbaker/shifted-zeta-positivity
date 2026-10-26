@@ -1,0 +1,217 @@
+\section{Finite onset conditions and order-dependent constants}
+\label{app:onsets}
+The following sufficient conditions make the fixed-order theorem
+fully parameterized. In addition to the classical real
+Riemann--Siegel and sectorial gamma onsets, impose
+\begin{subequations}\label{eq:structural-gates}
+\begin{align}
+ &L\ge16,\quad X\ge\max(1,4(R+Y+1)),\quad V_B\le X/4,\quad
+                         X-V_B\ge X/2,\\
+ &a(X+V_B)-a(X-V_B)<1,\qquad
+                       2p\le (X-V_B)/(4\pi),\\
+ &DV_B/X\le1/2,\qquad 2AV_B^2/X\le1,\\
+ &D_0/X\le1-\pi/8,\qquad
+ B\{(D_0/X)(\pi/4+L/2)+D_0^2/X^2\}\le1,\\
+ &V_B\ge\max(2R,W+1,32B).
+\end{align}
+\end{subequations}
+Here \(D_0\) is a fixed constant in the sectorial slope formula
+\[
+ \lambda_{\epsilon n}=-\pi/8+\epsilon\ii v_n/2+\delta_\epsilon,
+ \qquad
+ v_n=\log(a_X/n),\qquad \abs{\delta_\epsilon}\le D_0/X.
+\]
+The optional inherited real-chart restriction
+\(V_B\le\log^2X\) is also eventual.
+Writing \(\log^+a=\max(0,\log a)\), the fixed-order tail
+conditions are
+\begin{subequations}\label{eq:fixed-tail-gates}
+\begin{align}
+ L^2&\ge(P_0+p-1)\log X+\log^+ A_{\mathrm{mod}},\\
+ L^2&\ge(p+1)\log X+\log^+ A_{\mathrm{art},p},\\
+ X^2/(128B)&\ge\pi X/8+(p-1)\log X+\log^+ A_{\mathrm{far}}.
+\end{align}
+\end{subequations}
+They put each tail in \cref{sec:comparison} below
+\(X^{-(p+3/4)}\). Every condition is eventual for fixed
+\(p,\tau,B,r,b\). The factors
+\(\e^{Y^2/(4\tau)}\), \(\tau^{-1}\), \(\tau^{-2}\),
+and the full moments in \cref{eq:gaussian-budgets,eq:tail-moments}
+remain in these constants.
+
+\subsection{Common gates at growing order}
+\label{app:growing-gates}
+For \(1\le p\le cL\), \(B=2,\tau=1\), replace the retained-order
+condition in \eqref{eq:structural-gates} by
+\(2cL\le(X-V)/(4\pi)\).
+Include the fixed outer-calibration gate
+\(C_{\mathrm{cal}}(1+L)/X\le1\).
+Do not impose \eqref{eq:fixed-tail-gates} at growing order.
+Instead, with \(C_{\mathrm o}=C_\chi/c_{\mathrm o}\), the following
+four inequalities suffice for \cref{thm:growing}:
+\begin{subequations}\label{eq:growing-gates}
+\begin{align}
+ (p+3/4)\log X
+ &\ge(\eta+1/8)L^2+\log^+(4C_{\mathrm o}Q_p),\\
+ (16\theta-\eta-1/8)L^2
+ &\ge(P_0-7/4)\log X+
+                   \log^+(196C_{\mathrm o}A_{\mathrm{mod}}^\theta),\\
+ (16\theta-\eta-1/8)L^2
+ &\ge\tfrac14\log X+
+                   \log^+(196C_{\mathrm o}A_{\mathrm{art},p}^\theta),\\
+ X^2/256
+ &\ge\pi X/8+(\eta+1/8)L^2+
+                   \log^+(196C_{\mathrm o}A_{\mathrm{far}}).
+\end{align}
+\end{subequations}
+Each pays at most one quarter of the target.
+For the half-target truncation required in
+\cref{sec:evaluation}, replace \(4,196\) by \(8,392\).
+These are the operative finite inequalities.
+\Cref{thm:explicit-onset} now supplies an explicit sufficient all-height
+threshold; a smaller height can be accepted by its finite verifier.
+
+\section{Evolved population bounds and finite level size}
+\label{app:population}
+The error proof used the real initial population. One can also
+bound the entire evolved population without discarding the
+near-cutoff modes. Put \(a_0=\pi/8\), \(c_Y=(Y-1)/2\),
+\(c_Y^+=\max(c_Y,0)\), and for an integer \(d_0\ge0\) define
+\begin{subequations}\label{eq:Pi}
+\begin{align}
+ W_{d_0}(\tau)
+ &=2^{d_0}+\frac{3^{d_0}}2\sum_{k=0}^{d_0}\binom{d_0}{k}
+              (8/\tau)^{(k+1)/2}\Gamma((k+1)/2),\\
+ \Pi_{d_0}(\tau,B)
+ &=4(4\pi)^{-1/4}4^{d_0}
+   \exp\{R+Y+Ba_0^2+1+(Y+1)/2+2(c_Y^+)^2/\tau\}
+                   W_{d_0}(\tau).
+\end{align}
+\end{subequations}
+The slope gates in \eqref{eq:structural-gates} imply
+\[
+ \abs{\e^{T\lambda_{\epsilon n}^2}}
+       \le\e^{Ba_0^2+1}\e^{-\tau v_n^2/4},
+ \qquad
+ \abs{\e^{\lambda_{\epsilon n}d}}
+       \le\e^{R+Y}\e^{Yv_n/2}.
+\]
+Also \(1+\abs\lambda\le4(1+v_n)\).
+The shell \(j\le v_n<j+1\) contains at most \(2a_X\e^{-j}\)
+integers. This remains true in the last nonempty shell,
+where \(a_X\e^{-j}\ge1\).
+In that shell \(n^{-1/2}\le a_X^{-1/2}\e^{(j+1)/2}\).
+Use
+\[
+ c_Yj-\tau j^2/4
+       \le2(c_Y^+)^2/\tau-\tau j^2/8.
+\]
+For \(j\ge1\), compare with the integral on \([j-1,j]\);
+\(j+2\le3(v+1)\) there and
+\(\e^{-\tau j^2/8}\le\e^{-\tau v^2/8}\).
+The half-Gaussian moments give exactly the bound \(W_{d_0}\).
+Summing both arms proves
+\begin{equation}
+ \sum_{\epsilon,n\le N}
+ \abs{b_{\epsilon n}\e^{\lambda_{\epsilon n}d+T\lambda_{\epsilon n}^2}}
+       (1+\abs{\lambda_{\epsilon n}})^{d_0}
+       \le \Pi_{d_0}(\tau,B)gX^{1/4}.
+ \label{eq:evolved-population}
+\end{equation}
+
+For the moment polynomial define
+\[
+ Z_m(B)=m!\sum_{\nu=0}^{\lfloor m/2\rfloor}
+       \frac{B^\nu(W+2B)^{m-2\nu}}{\nu!(m-2\nu)!}.
+\]
+Since \(\abs{d+2T\lambda}\le(W+2B)(1+\abs\lambda)\),
+the whole \(m\)-th moment sum is at most
+\(Z_m\Pi_m gX^{1/4}\).
+For \(j\ge1\) this gives
+\begin{equation}
+ \sum_{\epsilon=\pm1}\abs{U_{\epsilon,j}}
+ \le gX^{1/4-j}
+       \sum_{k=1}^j\frac{A^kD^{j-k}}{k!}\binom{j-1}{k-1}
+                                   Z_{j+k}\Pi_{j+k}.
+ \label{eq:level-size}
+\end{equation}
+On the slab \([1,2]\), the explicit factorial sums give fixed
+\(K_0,K_1\) such that \(Z_m\Pi_m\le K_0K_1^m(m!)^2\).
+For example, \(Z_m/m!\) is a coefficient of
+\(\exp((W+4)s+2s^2)\), so \(Z_m\le m!\e^{W+6}\);
+the half-gamma bound similarly controls \(\Pi_m\).
+Consequently the \(j\)-th level has the absolute envelope
+\[
+ gX^{1/4-j}\exp(O((j+1)\log(j+2))).
+\]
+This is a bound for the entire population, not a signed leading
+asymptotic, a monotonicity statement, or a convergence theorem
+for the sum over all levels.
+
+\section{Sources, scope, and manuscript correspondence}
+\label{app:provenance}
+Internal note paths in the bibliography are relative to
+\nolinkurl{papers/investigations-5/01_heat_density_asymptotics/}.
+The analytical inputs and their derived uses are deliberately
+separated:
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.26\textwidth}>{\raggedright\arraybackslash}p{.34\textwidth}>{\raggedright\arraybackslash}p{.29\textwidth}@{}}
+\toprule
+Input or research note & Use here & Scope retained\\
+\midrule
+Polymath Proposition 6.2 &
+Real canonical remainder for each positive \(K\) &
+No evolved negative-time theorem imported\\[3pt]
+DLMF gamma asymptotics &
+Sectorial derivative and calibration bounds &
+Fixed sectors, explicit eventual gates\\[3pt]
+Arias exact identities &
+Weighted coefficients and \(F_0\) derivatives &
+Preliminary precision conclusions excluded\\[3pt]
+DLMF Gauss properties &
+Positivity and degree \(2n-1\) exactness &
+Complex error bound derived here\\[3pt]
+Recurrence Notes 02--04 &
+Finite hierarchy and compact comparison &
+Fixed \(p,\tau,B\) first\\[3pt]
+Recurrence Note 05 &
+Simultaneous order costs and outer accuracy &
+\(p=O(L)\) on \([1,2]\)\\[3pt]
+Recurrence Note 06 &
+Regularity, conditioning, and evaluation budget &
+Modular provider and arithmetic contracts\\[3pt]
+Recurrence Note 09 &
+Finite elementary, scale, coefficient and guard constructions &
+Strict descriptors and exact queries\\[3pt]
+Recurrence Note 10 &
+Shifted gamma, Gauss root counts, total bit work and storage &
+All modes and actual separation retained\\[3pt]
+Recurrence Note 11 &
+Uniform constants and explicit all-height onset &
+Fixed radii, \(1\le T\le2\)\\[3pt]
+Recurrence Note 12 &
+Linked finite component replay &
+Supporting evidence only\\
+\bottomrule
+\end{tabular}
+\end{center}
+The preceding ansatz results in \cref{subsec:retention} are
+retained as separately sourced theorems with their original
+domains. Their first-correction formula is reconciled with
+the present one in \cref{subsec:low-orders}; no differentiation
+rule is transferred from one construction to the other.
+The repository result index and control screen
+\cite{results,controls}, together with its scoped-error cautions
+\cite{avoid}, govern the interpretation.
+
+The source notes were developed and internally assessed with
+gpt-6.1-sol, recorded effort ultra. This manuscript was drafted
+for Edward Baker with gpt-6-astra, recorded effort max.
+The mathematical status remains that of the stated proofs
+from named inputs. The modular contracts are supplied by finite
+constructions on the declared input class; complete software
+certification and independent specialist review remain open.
+Compilation, reference checks, and visual inspection concern
+document production. They are not numerical evidence for
+the analytical estimates.

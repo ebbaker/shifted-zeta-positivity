@@ -785,3 +785,67 @@ keeps actual scale, phase, node/weight, boundary and rounding costs;
 concrete provider certification remains open. These are scoped failures
 of shortcuts, not impossibility results for a certified evaluator.
 [Same-model assessment](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/05_EVALUATION_ERROR_ASSESSMENT_20261026.md).
+
+**Retain the matched approximation, 26 October 2026.**
+For Edward Baker with LLM assistance, **gpt-6-astra, max**. The
+[recurrence manuscript assessment](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/06_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261026.md)
+states: “Higher fluctuation order must retain the matched Riemann–Siegel
+completion and the full arithmetic population.” Its retention guide
+keeps C0 through C2 for frozen p=1 and through C4 for p=2. Agreement
+of the earlier target-dependent correction with a frozen expression at
+the chart center does not identify their derivatives or heat residuals.
+This preserves the existing separate-error lesson; it adds no exclusion
+of other approximations with separately proved remainders.
+
+**Provider output accuracy differs from internal work, 26 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance, actual
+**gpt-6.1-sol, ultra**, recurrence chat0003.
+[Note09](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/09_FINITE_PROVIDER_ALGORITHMS_20261026.md)
+states: “Requested output accuracy is not internal precision or useful
+runtime.” Its long gamma sum can violate the accumulation guard if
+run at output-level roundoff; exact rational sums or finer internal
+accuracy repair that scoped shortcut. Guard strips pay endpoint omissions
+once, and already paid input errors are reset before final-circuit
+accounting. [Review07](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/07_FINITE_PROVIDER_ALGORITHM_ASSESSMENT_20261026.md)
+also qualifies work rates by controlled tolerance choices and fixed
+calibration data. Finite provider existence supersedes the earlier
+provider-open wording on its explicit certified input class, without
+claiming a fast or implemented evaluator or a universal precision lower bound.
+
+**A conditional onset still needs uniform calibration data, 26 October 2026.**
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**,
+chat0003. [Note10](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/10_EFFICIENT_PROVIDERS_AND_TOTAL_COST_20261026.md)
+states: “Fast evaluation at one point cannot prove the uniform assertions.”
+Its polynomial bit work/streamed storage and explicit parameterized
+all-height threshold do not instantiate symbolic gamma/source/envelope
+constants. Classical argument onsets must be translated to center/window
+domains, and p-floor jumps require continuous majorants.
+[Review08](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/08_EFFICIENT_PROVIDER_AND_COST_ASSESSMENT_20261026.md)
+also separates reduced mantissa accuracy from absolute error after a large
+exponential rescaling. The slow provider costs are superseded at this
+proved algorithmic scope; no affordability or universal numeric height
+is inferred.
+
+**Pay the full complex domain and actual envelope, 26 October 2026.**
+For Edward Baker with LLM assistance, **gpt-6.1-sol, ultra**, chat0003.
+[Note11](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/11_EXPLICIT_CALIBRATION_AND_HEIGHT_ONSET_20261026.md)
+states: “Real-axis gamma samples would not prove U4 or U5.” Its uniform
+disk proof precedes the growing-order coefficient bound; source argument
+thresholds are translated to center/window onsets. The actual two-arm
+outer envelope is bounded below without discarding transverse growth.
+Continuous factorial/moment majorants pay every later floor jump, rather
+than extrapolating a successful one-height test. [Review09](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/09_EXPLICIT_CALIBRATION_ASSESSMENT_20261026.md)
+accepts this analytical calibration scope only. The earlier symbolic-onset
+gap is now paid; practical runtime and software certification are not.
+
+**Keep effective construction and finite replay separate, 26 October 2026.**
+Prepared for Edward Baker with LLM assistance, **gpt-6-astra, max**,
+recurrence chat0005. [Integration Note14](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/14_EFFECTIVE_MANUSCRIPT_INTEGRATION_20261026.md)
+states: “Finite replay supports the component constructions; it is not a
+premise of the analytical theorems.” The manuscript now supplies finite
+algorithms and explicit calibration after the modular error budget, while
+retaining all modes, strict descriptor separation, internal precision and
+all-height gates. Finite software evidence does not close the full
+evaluator or sharpen the onset. [Review11](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/11_EFFECTIVE_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261026.md)
+records this integration check; the next onset task must prove continuous
+coverage through floor jumps, not extrapolate a successful height.

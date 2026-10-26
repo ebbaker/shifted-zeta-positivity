@@ -39,3 +39,14 @@ the first-slab normalization check C1 and the human checklist still open.
 
 Label every review with its model and whether it is same-model or
 cross-model, as the [investigations-2 README](../papers/investigations-2/README.md) asks ("Distinguish internal LLM checks from independent review"); route every manuscript through at least one cross-model round before any status word stronger than "working draft"; bind a `PASS` to the hash of what passed; and keep the human-verification columns of the [blueprint](../papers/weil-positivity/shifted-zeta/first-slab-positivity/blueprint/statements.md) in view. No result in this repository has had independent specialist human review, and the result summaries say so.
+
+**Finite replay still binds inputs and premises, 26 October 2026.**
+For Edward Baker with LLM assistance, **gpt-6.1-sol, ultra**, chat0003.
+[Note12](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/12_PROVIDER_IMPLEMENTATION_REPLAY_20261026.md)
+states: “valid capped certificates are never counted as successful delivery”.
+N01 preflight repaired primitive-kind/input binding and prevented valid
+capped certificates from being counted as delivery; ten altered-data
+checks then rejected. Separate processes and a separately written Gauss
+checker still share analytical premises and do not supply specialist
+review. [Review10](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/10_PROVIDER_REPLAY_ASSESSMENT_20261026.md)
+accepts finite component evidence only, with actual source/data hashes.

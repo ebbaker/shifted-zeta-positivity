@@ -360,3 +360,88 @@ has been verified here”. Broad R05 Partial at certified primitive/scale,
 Gauss geometry and frozen descriptor handling; no runtime, RH or physical
 transfer conclusion. Earlier exact residual statements do not certify
 independently rounded channel outputs.
+
+**26 October 2026 — recurrence analytical manuscript integration.**
+For Edward Baker with substantial LLM assistance, **gpt-6-astra, max**.
+The [manuscript](../papers/investigations-5/01_heat_density_asymptotics/recurrence/manuscript/main.tex)
+systematically derives the saved comparison, growing-order and conditional
+evaluation results and explains the preceding simplest/higher approximations.
+Its [same-session authoring assessment](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/06_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261026.md)
+states: “Manuscript integration preserves the existing analytical scopes;
+it does not close the concrete-provider task.” Broad R05 remains Partial;
+this is source integration, not a new theorem or independent validation.
+
+**26 October 2026 — finite recurrence provider algorithms.**
+For Edward Baker with substantial LLM assistance, actual **gpt-6.1-sol,
+ultra**, recurrence chat0003. [Note09](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/09_FINITE_PROVIDER_ALGORITHMS_20261026.md)
+is **proved in-note from the named inputs**, with
+[same-model internal Review07](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/07_FINITE_PROVIDER_ALGORITHM_ASSESSMENT_20261026.md).
+It supplies every Note06 scalar/gamma, scale, Gauss/RS and geometry
+provider on certified dyadic-center/rational-query inputs, retaining all
+N modes, integral, buffers and channels. Source limit: “The algorithms
+are specified analytically”. Explicit tails and finite error tests prove
+termination; the deliberately expensive gamma/root constructions supply
+no useful runtime or software certificate. Note06's named provider gap
+is superseded at this algorithm-existence scope only; its delivered-bit
+specification remains distinct from provider internal precision. Inherited
+calibrations/onsets and source assumptions remain. Broad R05 Partial;
+no specialist validation, RH or physical-transfer conclusion.
+
+**26 October 2026 — polynomial recurrence providers and conditional total cost.**
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**,
+chat0003. [Note10](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/10_EFFICIENT_PROVIDERS_AND_TOTAL_COST_20261026.md)
+is **proved in-note from named inputs**, with
+[same-model Review08](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/08_EFFICIENT_PROVIDER_AND_COST_ASSESSMENT_20261026.md).
+Shifted Stirling jets and exact Legendre variation counting supersede
+Note09's deliberately slow provider costs, preserving its exact-input
+class, complete N-mode population and RS integral. Effective sufficient
+bounds are C(N+1)Q^40 bit work and CQ^20 streamed storage for fixed
+chart/valid calibration data. C21 gives an all-height onset in those
+data, accounting for p-floor jumps. Source limit: “No universal numerical
+X0 is claimed.” Actual uniform constant/domain/onset values remain
+uninstantiated. No useful measured runtime, implemented evaluator,
+software/specialist certificate or RH/physical-transfer conclusion.
+Broad R05 Partial; older provider-existence results retain their scopes.
+
+**26 October 2026 — explicit recurrence calibration and all-height onset.**
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, ultra**,
+chat0003. [Note11](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/11_EXPLICIT_CALIBRATION_AND_HEIGHT_ONSET_20261026.md)
+is **proved in-note from named inputs**, with
+[same-model internal Review09](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/09_EXPLICIT_CALIBRATION_ASSESSMENT_20261026.md).
+It supplies rational uniform gamma/source/chart/envelope constants with
+actual domains and L_*=2^22(ceil(r+b+2)+1)^4, X_*=2^(2L_*+8), sufficient
+for every accepted P1 center above that height, retaining all floor jumps,
+buffers, modes and the RS integral. Note10's formerly symbolic calibration
+dependency is superseded at this scope. Source limit: “This is a
+chart-dependent explicit sufficient height, not a useful-runtime claim.”
+AN05 CLOSED, broad R05 Partial at concrete evaluator implementation and
+certification; no numerical campaign, independent specialist review,
+RH or physical-transfer conclusion. Manuscript integration pending.
+
+**26 October 2026 — finite recurrence gamma/Gauss software replay.**
+For Edward Baker with LLM assistance, **gpt-6.1-sol, ultra**, chat0003.
+[Note12](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/12_PROVIDER_IMPLEMENTATION_REPLAY_20261026.md)
+and [same-model internal Review10](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/10_PROVIDER_REPLAY_ASSESSMENT_20261026.md)
+accept all36 gamma cases/156 normalized jets and15 Gauss bases/45 maps
+as **finite component provider evidence**. Final51-certificate hash-bound
+archive replay passes;558 moment checks and ten altered-data rejection
+controls pass. Initial OSlimit-setup failure is preserved; after runner
+repair no matrix delivery fails. Source limit: “This is a bounded component
+implementation and finite certificate replay”. Actual computation below
+50.4055seconds, peak primary-run child RSS about19.5MiB; no asymptotic
+performance law or complete field evaluator. N01 CLOSED; broad R05
+Partial at remaining providers/evaluator. [Whole-chat summary](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/13_CHAT0003_RESULTS_SUMMARY_20261026.md)
+collects AN03--AN05/N01. No RH/physical result or specialist validation.
+
+**26 October 2026 — effective recurrence manuscript integration.**
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+recorded effort max**, recurrence chat0005. The [maintained manuscript](../papers/investigations-5/01_heat_density_asymptotics/recurrence/manuscript/main.tex)
+now incorporates Notes09–11, joining finite provider constructions,
+explicit calibration/onset and full-population bit bounds to the earlier
+hierarchy and error budget. [Integration Note14](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/14_EFFECTIVE_MANUSCRIPT_INTEGRATION_20261026.md)
+states: “No new analytical theorem or independent specialist validation
+is claimed.” [Review11](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/11_EFFECTIVE_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261026.md)
+is a same-session authoring assessment. Earlier pending-integration
+statements are superseded only as manuscript status; analytical sources
+retain their scopes. Broad R05 remains Partial. [Continuation Note15](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/15_ANALYTIC_STRENGTHENING_CONTINUATION_20261026.md)
+prioritizes a sharper all-height proof; numerical work remains supporting.

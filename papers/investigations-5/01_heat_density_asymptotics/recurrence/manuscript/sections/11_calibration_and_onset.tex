@@ -1,0 +1,306 @@
+\section{Explicit calibration and an all-height onset}
+\label{sec:calibration}
+The constants used in the preceding comparisons can be chosen
+explicitly. The point of this section is their uniform domains:
+a scalar evaluation at a large height would not prove a disk bound,
+an all-order coefficient estimate, or a statement through every change
+of \(p\) and \(N\). We give the calibration of \cite{rec11} and its
+continuous majorants before using it in the effective construction.
+
+Set
+\[
+ W=R+Y,\qquad d_{\rm ch}=\lceil W\rceil,\qquad
+ \nu=d_{\rm ch}+1\ge4.
+\]
+The chart integer \(d_{\rm ch}\) is distinct from the displacement
+\(d=z-X\). A sufficient rational record is
+\begin{equation}
+\begin{gathered}
+ H=A=C_\Gamma=c_{\mathrm o}=1,\quad D=4,\quad D_0=3,
+ \quad g_-=1/64,\\
+ C_H=M_H^*=1/4,\quad C_{\rm tail}=640,\quad
+ C_\chi=3^{d_{\rm ch}},\quad C_{\rm cal}=32+d_{\rm ch},
+ \quad X_{\rm cl}=64\nu.
+\end{gathered}
+\label{eq:explicit-calibration}
+\end{equation}
+Here \(M_H^*\) bounds the complete source mass \(M_H\), rather than
+denoting its exact value. The domain statements follow.
+
+\subsection{A complex-disk estimate before differentiation}
+\label{subsec:disk-calibration}
+The digamma remainder \cite[\S5.11(ii)]{dlmfgamma} gives
+\begin{equation}
+ \psi(t)=\Log t-\frac1{2t}+E(t),\qquad
+ \abs{E(t)}\le\frac{\sec^3(\arg t/2)}{12\abs t^2},
+ \quad\abs{\arg t}<\pi.
+ \label{eq:digamma-calibration}
+\end{equation}
+For \(t_\pm=(1\pm\ii z)/4\) on \(\abs{z-X}\le X/2\),
+one has \(\abs t\ge X/8\), \(\abs{\arg t}<3\pi/4\).
+Since \(\sec(3\pi/8)<3\), \(\abs E\le144/X^2\).
+Each point of the inner \(X/4\) disk has a \(t\)-disk of radius
+\(X/16\) in this larger region. Thus \(\abs{E'}\le2304/X^3\).
+Using \(\abs t\ge3X/16\) and
+\(\abs w,\abs{w-1}\ge3X/8\) on the inner disk in the exact
+formula for \(\ell_\pm''\) proves
+\begin{equation}
+ \sup_{\abs{z-X}\le X/4}\abs{\ell_\pm''(z)}
+ \le\frac1{3X}+\frac{40}{9X^2}+\frac{144}{X^3}
+ \le\frac1X\qquad(X\ge32).
+ \label{eq:explicit-disk}
+\end{equation}
+At \(X=32\), multiplication by \(X\) gives \(353/576<1\);
+the bound decreases thereafter. Cauchy's estimate now supplies all
+orders simultaneously:
+\[
+ \abs{c_{\epsilon k}}\le
+       \frac{4^{k-1}}{k(k+1)}X^{-k}\le4^{k-1}X^{-k}.
+\]
+
+At a real center, direct differentiation of
+\eqref{eq:provider-logM} yields
+\begin{align*}
+ \ell_+'(X)&=-\pi/8+\ii L/4+\delta(X),\\
+ \delta(X)&=\frac{2X}{1+X^2}+\frac\ii4\Log(1-\ii/X)
+             -\frac\ii{8t}+\frac\ii4E(t),\quad t=(1+\ii X)/4.
+\end{align*}
+Here \(\abs E\le4/X^2\), and for \(X\ge32\),
+\begin{equation}
+ \abs\delta\le\frac2X+\frac1{4(X-1)}+
+                  \frac1{2X}+\frac1{X^2}<\frac3X.
+ \label{eq:explicit-slope}
+\end{equation}
+Reflection gives the other arm. Along real \(u\ge32\),
+\(\abs{(\log G)'(u)}\le\pi/8+3/u<1\). Hence
+\(G(X+q)\le g\e^{\abs q}\) for real \(\abs q\le X/2\),
+\(X\ge64\), proving \(C_\Gamma=1\).
+
+Stirling's formula with its first omitted-term bound gives exactly
+\begin{equation}
+ G(X)=\frac{\pi^{1/4}}{32}(1+X^2)^{7/8}\e^{-\pi X/8}
+  \exp\left\{\frac X4\arctan(1/X)-\frac14+\Rea R_\Gamma(t)\right\},
+ \quad\abs{R_\Gamma(t)}\le\frac2{3X}.
+ \label{eq:exact-real-gamma-calibration}
+\end{equation}
+The final exponent exceeds \(-1/2\) for \(X\ge32\), giving
+\(g\ge X^{7/4}\e^{-\pi X/8}/64\).
+For \(X\ge\max(64,4W)\), integrate \((\log G)'\) from the real
+center through the buffered rectangle and use \eqref{eq:explicit-disk}.
+Its modulus stays below one, so both
+\(g/\abs{G(z)}\) and \(\abs{G(z)}/g\) are at most
+\(\e^W\le3^{d_{\rm ch}}\).
+
+\subsection{Bounds for the complete real source}
+The beta integral and half-gamma modulus \cite{dlmfbeta,dlmfhalf}
+give, for real \(v\),
+\[
+ \left|\frac{\Gamma(1/4+\ii v)}{\Gamma(1/2+\ii v)}\right|
+ \le\frac{\Gamma(1/4)}{\Gamma(1/2)},\qquad
+ \abs{\Gamma(1/4+\ii v)}<8\e^{-\pi\abs v/2}.
+\]
+For the last inequality split the positive integral for \(\Gamma(1/4)\)
+at one to obtain \(\Gamma(1/4)<5\), and use
+\(\cosh(\pi v)\ge\e^{\pi\abs v}/2\).
+The finite-sum zeta identity \cite{dlmfzeta} at \(N=1\) reads
+\[
+ \zeta(s)=\frac{s}{s-1}-s\int_1^\infty\{x\}x^{-s-1}\dd x.
+\]
+For \(s=(1+\ii u)/2\), it gives
+\(\abs{\zeta(s)}\le1+2\abs s\le2(1+\abs u)\).
+The exact normalization \(H(0,u)=M(s)\zeta(s)\) therefore yields
+\begin{equation}
+ \abs{H(0,u)}\le\tfrac14(1+\abs u)^4\e^{-\pi\abs u/8}
+ \qquad(u\in\R).
+ \label{eq:global-source-calibration}
+\end{equation}
+Every summand of \(\Phi(v)\) is positive for \(v\ge0\), since
+\(2\pi n^2\e^{4v}>3\). Thus, without a source cutoff,
+\begin{equation}
+ M_H=\int_0^\infty\abs\Phi=H(0,0)\le1/4.
+ \label{eq:complete-source-mass}
+\end{equation}
+For \(\abs q\le X/2\), \(X\ge32\),
+\(1+X+q\le(5/2)X\). Dividing
+\eqref{eq:global-source-calibration} by the lower gamma scale gives
+\[
+ \frac{\abs{H(0,X+q)}}g
+     \le640X^{9/4}\e^{-\pi q/8}.
+\]
+Consequently the moderate and remote constants can be taken as
+\begin{equation}
+ A_{\rm mod}^{\theta}=640\max(\mathsf D_0^\theta,
+                    (\mathsf D_0^\theta)^t),\qquad
+ A_{\rm far}=16\max(\mathsf J_0,\mathsf J_0^t).
+ \label{eq:explicit-tail-calibration}
+\end{equation}
+
+\subsection{Calibration of the actual outer envelope}
+Put \(L_z=\Log(z/(4\pi))\),
+\(G_0(z)=\pi^{1/4}z^{7/4}\e^{-\pi z/8}/32\), and
+\(\theta_0=z(L_z-1)/4+7\pi/8\).
+On the buffered rectangle, when \(X\ge\max(16,2(W+2))\),
+the exact sectorial formula gives
+\begin{equation}
+ \ell_\pm(z)=\log G_0(z)\pm\ii\theta_0(z)+\delta_\pm(z),
+ \qquad\abs{\delta_\pm(z)}\le8/\abs z\le16/X.
+ \label{eq:complex-gamma-calibration}
+\end{equation}
+For the plus arm the remainder is
+\[
+ \Log(1+z^{-2})+\frac{\ii z-1}{4}\Log(1-\ii/z)
+                      -\frac14+R_\Gamma(t_+).
+\]
+The logarithm series and \(\abs{R_\Gamma(t_+)}\le16/(3\abs z)\)
+bound this by \(8/\abs z\); conjugate reflection gives the minus arm.
+The branches are fixed at positive real height. Averaging preserves the
+canonical \(G\) and gives \(\abs{\log(G/G_0)}\le16/X\).
+
+The original amplitude is
+\(A_{\mathrm o}(-T,z)=2G_0(z)\e^{-TL_z^2/16+\pi^2T/64}\).
+Since \(\abs{L_z-L}\le2W/X\),
+\(\abs{L_z^2-L^2}\le4W(1+L)/X\) for \(L\ge0\), one obtains
+\begin{equation}
+ \left|\log\frac{\abs{A_{\mathrm o}(-T,z)}}
+ {2\abs{G(z)}\e^{-TL^2/16+\pi^2T/64}}\right|
+ \le\frac{C_{\rm cal}}2\frac{1+L}{X}.
+ \label{eq:explicit-envelope-calibration}
+\end{equation}
+Under \(X\ge X_{\rm cl}\) and
+\(C_{\rm cal}(1+L)/X\le1\), AM--GM for the two original arms gives
+\begin{equation}
+ \calE_{\mathrm o}(-T,z)\ge\abs{A_{\mathrm o}(-T,z)}
+ \ge\abs{G(z)}\e^{-TL^2/16+\pi^2T/64}.
+ \label{eq:explicit-envelope-lower}
+\end{equation}
+The amplitude ratio in \eqref{eq:explicit-envelope-calibration}
+differs from one by at most \(C_{\rm cal}(1+L)/X\).
+This proves \(c_{\mathrm o}=1\) while retaining the transverse growth
+of the actual two-arm envelope. The common center onset \(64\nu\)
+covers the full gamma disk, real window, and buffered chart;
+the remaining height-dependent structural gates are paid next.
+
+\subsection{Continuous majorants through every order jump}
+\label{subsec:explicit-onset}
+For clarity first retain a valid general calibration record.
+Let \(\theta=1/2\), \(C_{\mathrm o}=C_\chi/c_{\mathrm o}\),
+and choose fixed constants \(S,M\) so that
+\begin{align}
+ \log\mathcal J(p),\log\mathcal J_\theta(p)
+   &\le S(p+1)\log(p+2),\qquad S\ge1,\nonumber\\
+ M&=\max\{0,\log^+(8C_{\mathrm o}C_Q),
+       \log^+(392C_{\mathrm o}C_{\rm pop}),\nonumber\\
+ &\hspace{36mm}\log^+(392C_{\mathrm o}A_{\rm mod}^\theta),
+       \log^+(392C_{\mathrm o}A_{\rm far})\},
+ \label{eq:onset-log-costs}
+\end{align}
+where \(Q_p\le C_Q\mathcal J(p)\) and
+\(A_{\rm art,p}^\theta\le C_{\rm pop}\mathcal J_\theta(p)\).
+For example \(C_Q=48M_0+M_0^t+49C_{\rm pop}\e\) works.
+The factorial estimates in \cref{sec:growing} supply these constants.
+With \(A=\max(1,H),D=4\), a sufficient general onset is
+\begin{align}
+ L_{\rm rate}&=\max\{16,(32S)^2,\sqrt{32M}\},\nonumber\\
+ L_0&=\max\bigl\{L_{\rm rate},(2R+W+1)/8,\log(1+4(W+1)),
+       2\log(1+24A),\nonumber\\
+ &\hspace{22mm}2\log(1+D_0),2\log(1+C_{\rm cal}),
+                  \log(1+X_{\rm cl}/(4\pi))\bigr\}.
+ \label{eq:parameterized-onset}
+\end{align}
+Here \(X_{\rm cl}\) must already be a valid \emph{center} onset
+for every classical domain, including the real window.
+
+Indeed, for \(p=\lfloor L/2\rfloor\), \(L\ge16\),
+\[
+ (p+1)\log(p+2)\le L\log(L+2)\le L^{3/2},\qquad
+ (p+3/4)\log X-3L^2/8\ge7L^2/64.
+\]
+At \(L\ge L_{\rm rate}\), \(M+SL^{3/2}\le L^2/16\),
+so the local half-target gate holds strictly.
+The moderate and artificial gates have available quadratic coefficient
+\(61/8\); their height powers and logarithmic costs fit with slack.
+For the remote gate, \(\pi X/8\le X^2/512\) and
+\(X^2/512\ge9L^2/8>(3/8+1/32)L^2\).
+These are the four conditions \eqref{eq:growing-gates} with factors
+\(8,392\), reserving half the total target for evaluation.
+
+The structural conditions also follow from \eqref{eq:parameterized-onset}.
+For \(L\ge16\), \(V\le12L\), \(X\ge12\e^L\), and
+\(\sqrt{2\pi X}\ge8\e^{L/2}\). Hence
+\[
+ \frac{4(V+2)}{\sqrt{2\pi X}}\le(6L+1)\e^{-L/2}<\frac12,
+ \quad2(V+2)\le X/4,\quad K\le L\le(X-V)/(4\pi).
+\]
+The buffer terms in \(L_0\) give the window gates;
+\(L\ge2\log(1+24A)\) pays \(2AV^2/X\le1\).
+The slope terms give \(X\ge10D_0\) and \(X\ge2D_0(L+2)\),
+which pay both the stronger real-slope gate and the separate damping
+condition in \eqref{eq:structural-gates}.
+The calibration term pays \(C_{\rm cal}(1+L)/X\le1\).
+Strong geometry gives the remaining ellipse/logarithm bounds.
+No monotonicity of a factorial expression across floor jumps is assumed.
+
+\begin{theorem}[Explicit sufficient onset]\label{thm:explicit-onset}
+For the record \eqref{eq:explicit-calibration}, let
+\begin{equation}
+ L_*=2^{22}\nu^4,\qquad X_*=2^{2L_*+8}.
+ \label{eq:closed-onset}
+\end{equation}
+Every center with \(L\ge L_*\) meets the uniform classical domains,
+structural gates, and half-target truncation gates for
+\(p=\lfloor L/2\rfloor,K=2p,1\le T\le2\).
+The condition \(X\ge X_*\) is a stronger explicit dyadic sufficient
+condition. Finite evaluation additionally retains
+\eqref{eq:descriptor-certificates} and its separation dependence.
+\end{theorem}
+\begin{proof}
+Use the rational majorants
+\[
+ \overline E=3^{8\nu^2},\quad\overline S=32\nu,\quad
+ \overline Q=32\overline S^2=2^{15}\nu^2,\quad
+ \overline T=\overline E\,\overline S^2,
+\]
+and \(\overline{\mathcal J}(p)=
+\overline T(p+2)\overline Q^{p+1}(2p+4)!\).
+They dominate both moment systems in \cref{sec:growing}:
+\(1+R/4\le\nu/2\), the largest refined-tail exponent is at most
+\(9\nu^2/4\), and \(\overline S\) dominates every moment base.
+Also the RS constants satisfy \(Q_R<64,C_R<32\).
+The factorial bound gives
+\[
+ \log\overline{\mathcal J}(p)
+ \le(6+\log\overline Q+\log\overline T)(p+1)\log(p+2),
+ \quad\log\overline T\le18\nu^2,\quad\log\overline Q\le2\nu^2.
+\]
+The explicit moments imply
+\(M_0\le\overline E\), \(M_0^t\le\overline T\),
+\(\mathsf D_0^\theta,(\mathsf D_0^\theta)^t,
+\mathsf J_0,\mathsf J_0^t\le\overline T\).
+For the remote moments one may use
+\(\mathsf J_m\le2\e^{Y^2/4}m!(Y+4)^m\).
+It follows that
+\[
+ C_Q\le48\overline E+\overline T+588\le3\overline T,
+ \quad A_{\rm mod}^\theta\le640\overline T,
+ \quad A_{\rm far}\le16\overline T.
+\]
+Since \(C_{\mathrm o}=3^{d_{\rm ch}}\), every fixed logarithmic
+cost in \eqref{eq:onset-log-costs} is bounded using a multiplier
+below \(2^{18}\). Thus \(S,M\le32\nu^2\), and
+\(L_{\rm rate}\le2^{20}\nu^4\).
+All remaining terms of \eqref{eq:parameterized-onset} are smaller than
+\(2^{22}\nu^4\). Finally \(\log2>1/2\), \(\log(4\pi)<3\)
+give \(\log(X_*/(4\pi))>L_*+1\).
+\end{proof}
+The threshold is deliberately conservative. Its role is effectiveness,
+not a practical starting height. The radii and any inherited regulator
+dependence are fixed before height grows. Neither an endpoint-uniform
+time theorem nor a uniform lower bound on center separation follows.
+
+At a smaller specified height there is also a finite verifier: recompute
+outward rational enclosures for \eqref{eq:descriptor-certificates}, all
+structural/domain gates, and the four half-target inequalities, and
+accept only certified strict margins. A finite unsuccessful witness is
+rejected or inconclusive. Every strictly admissible height has a finite
+successful witness. This does not promote a single-height verification
+to an all-height theorem.

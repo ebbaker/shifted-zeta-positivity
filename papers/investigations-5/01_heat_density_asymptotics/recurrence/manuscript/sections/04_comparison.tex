@@ -1,0 +1,255 @@
+\section{The fixed-order comparison on compact time intervals}
+\label{sec:comparison}
+\subsection{Integrate the polynomial remainder before bounding the window}
+For \(m\ge0\) define
+\begin{subequations}\label{eq:gaussian-budgets}
+\begin{align}
+ M_m&=\sqrt2\,\e^{R+Y^2/(4\tau)+2B}
+   \sum_{k=0}^m\binom{m}{k}W^{m-k}(8B)^{k/2}
+                        \frac{\Gamma((k+1)/2)}{\sqrt\pi},\\
+ M_m^t&=\frac{M_m}{2\tau}+\frac{M_{m+2}}{4\tau^2}.
+\end{align}
+\end{subequations}
+Dependence on \(\tau,B,r,b\) is suppressed in these symbols.
+\begin{lemma}[Complex Gaussian moments]\label{lem:moments}
+For \(z\in\Omega_X(R,Y)\), \(\tau\le T\le B\), and \(q=u-X\),
+\begin{subequations}\label{eq:moment-bounds}
+\begin{align}
+ \int_\R\abs{k_T(z-u)}\e^{\abs q}\abs q^m\dd u&\le M_m,\\
+ \int_\R\abs{\partial_Tk_T(z-u)}\e^{\abs q}\abs q^m\dd u&\le M_m^t.
+\end{align}
+\end{subequations}
+\end{lemma}
+\begin{proof}
+Put \(v=u-\Rea z\).
+Then \(\abs q\le R+\abs v\) and
+\(\max(\abs q,\abs{z-u})\le W+\abs v\).
+The inequality \(\abs v\le v^2/(8T)+2T\) leaves the Gaussian
+\(\e^{-v^2/(8T)}\).
+Its \(k\)-th absolute moment, including the original kernel
+normalization, is
+\(\sqrt2(8T)^{k/2}\Gamma((k+1)/2)/\sqrt\pi\).
+The binomial theorem proves the first inequality.
+For the second differentiate the actual kernel:
+\begin{equation}
+ \partial_Tk_T(z-u)
+ =\left(\frac{(z-u)^2}{4T^2}-\frac1{2T}\right)k_T(z-u).
+ \label{eq:time-kernel}
+\end{equation}
+The same moment calculation proves \eqref{eq:gaussian-budgets},
+including both inverse-time factors.
+\end{proof}
+
+At the real center \(\abs{b_{\epsilon n}}=g n^{-1/2}\).
+Sectorial calibration gives \(\abs{\Rea\lambda_{\epsilon n}}\le1\)
+after a fixed onset. Therefore
+\begin{equation}
+ \sum_{\epsilon=\pm1}\sum_{n=1}^N
+       \abs{b_{\epsilon n}\e^{\lambda_{\epsilon n}q}}
+ \le C_{\mathrm{pop}}gX^{1/4}\e^{\abs q},
+ \qquad C_{\mathrm{pop}}=4(4\pi)^{-1/4}.
+ \label{eq:population}
+\end{equation}
+Here \(\sum_{n\le N}n^{-1/2}\le2\sqrt N\).
+Combining \cref{lem:weighted,lem:moments} with
+\eqref{eq:population} gives local field and direct-time errors
+\begin{equation}
+ C_{\mathrm{pop}}\e\,gX^{-(p+3/4)}\mathsf B_{p+1}[M],
+ \qquad
+ C_{\mathrm{pop}}\e\,gX^{-(p+3/4)}\mathsf B_{p+1}[M^t].
+ \label{eq:local-payments}
+\end{equation}
+The time bound uses moments through degree \(2p+4\).
+No factor \((\log X)^{2p+2}\) appears: the powers of \(q\) were
+integrated, not replaced by \(V_B\).
+
+\subsection{Why the completion order must track the curvature order}
+\label{subsec:matching}
+On the window, sectorial gamma estimates give
+\(G(X+q)\le C_\Gamma g\e^{\abs q}\).
+If \(X-V_B\ge X/2\), \eqref{eq:rs-remainder} becomes
+\begin{subequations}\label{eq:CK}
+\begin{align}
+ \abs{H(0,u)-f_K(u)}
+ &\le C_Kg\e^{\abs q}X^{-(K/2+3/4)},\\
+ C_K&=C_\Gamma\frac{2^{7/4}}7
+ \Gamma((K+1)/2)1.1^{K+1}(8\pi)^{K/2+3/4}.
+\end{align}
+\end{subequations}
+Its field and direct-time integrals cost \(C_KM_0\) and \(C_KM_0^t\)
+at this power. Thus the local curvature remainder and the canonical
+initial remainder have the same exponent precisely when
+\begin{equation}
+ K=2p.
+ \label{eq:matching}
+\end{equation}
+This is the least integer order supporting that rate by the
+displayed upper bound. It is not a lower bound on the actual
+Riemann--Siegel error. Retaining only \(K=2p-1\) leaves an
+\(X^{-(p+1/4)}\) allowance even though the arithmetic approximation
+has improved further.
+
+\subsection{True tails and artificial tails}
+The whole-line polynomial transform in \cref{sec:hierarchy} creates
+an artificial tail outside the local window. It is distinct from
+the true initial tail of \eqref{eq:heat-convolution}.
+Introduce
+\begin{subequations}\label{eq:tail-moments}
+\begin{align}
+ \mathsf D_m&=\frac{\e^{Y^2/(4\tau)}}{\sqrt{4\pi\tau}}\,
+      2^m(64B)^{(m+1)/2}\Gamma((m+1)/2),&
+ \mathsf D_m^t&=\frac{\mathsf D_m}{2\tau}
+                        +\frac{\mathsf D_{m+2}}{4\tau^2},\\
+ \mathsf J_m&=\frac{\e^{Y^2/(4\tau)}}{\sqrt{4\pi\tau}}
+  \sum_{k=0}^m\binom{m}{k}Y^{m-k}
+                 (8B)^{(k+1)/2}\Gamma((k+1)/2),&
+ \mathsf J_m^t&=\frac{\mathsf J_m}{2\tau}
+                        +\frac{\mathsf J_{m+2}}{4\tau^2}.
+\end{align}
+\end{subequations}
+When \(V_B\ge\max(2R,W+1,32B)\), for \(\abs q\ge V_B\),
+\[
+ -\frac{(q-\Rea d)^2}{4B}+\abs q\le-\frac{q^2}{32B},
+ \qquad \abs{z-u}\le2\abs q.
+\]
+Splitting the last Gaussian in half and extracting its value at
+\(V_B\) gives the tail moment bounds
+\(\mathsf D_m\e^{-V_B^2/(64B)}\le\mathsf D_m\e^{-L^2}\)
+and their direct-time versions.
+
+The real canonical initial field has the height-sensitive estimate
+\[
+ \abs{H(0,X+q)}
+ \le C X^{P_0}\e^{-\pi X/8+\pi\abs q/8},
+ \qquad \abs q\le X/2,\qquad P_0=4.
+\]
+It follows from the gamma exponential and a polynomial vertical-strip
+bound for zeta; the deliberately coarse exponent \(4\) is sufficient.
+Only beyond \(\abs q>X/2\) do we use the global bound
+\(\abs{H(0,u)}\le M_H=\int_0^\infty\abs{\Phi(v)}\dd v\).
+For \(X\ge4R\), that region has
+\(\abs{u-\Rea z}\ge X/4\). Splitting its Gaussian gives the
+remote factor \(\e^{-X^2/(128B)}\), and division by \(g\)
+costs \(\e^{\pi X/8}X^{-7/4}/g_-\).
+
+Absorbing only fixed source constants into \(C_{\mathrm{tail}}\), set
+\begin{subequations}\label{eq:tail-constants}
+\begin{align}
+ A_{\mathrm{mod}}&=C_{\mathrm{tail}}
+                 \max(\mathsf D_0,\mathsf D_0^t),\\
+ A_{\mathrm{art},p}&=C_{\mathrm{pop}}
+       \max\{\mathsf H_p[\mathsf D],\mathsf H_p[\mathsf D^t]\},\\
+ A_{\mathrm{far}}&=(M_H/g_-)\max(\mathsf J_0,\mathsf J_0^t).
+\end{align}
+\end{subequations}
+The following bounds hold for both the field and the directly
+computed time derivative, after division by \(g\):
+\begin{center}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Contribution & Upper bound\\
+\midrule
+True data, \(V_B<\abs q\le X/2\) &
+\(A_{\mathrm{mod}}X^{P_0-7/4}\e^{-L^2}\)\\
+Artificial polynomial data, \(\abs q>V_B\) &
+\(A_{\mathrm{art},p}X^{1/4}\e^{-L^2}\)\\
+True data, \(\abs q>X/2\) &
+\(A_{\mathrm{far}}X^{-7/4}\e^{\pi X/8-X^2/(128B)}\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+No gamma function or Riemann--Siegel function is extended onto
+the artificial tails.
+
+\subsection{The theorem and its derivation}
+\begin{theorem}[Fixed order on a fixed compact time family]
+\label{thm:fixed}
+Fix \(p\ge1\), \(r,b>0\), and \(0<\tau\le B<\infty\).
+For \(K=2p\), the model \eqref{eq:model} satisfies, for all
+sufficiently large \(X\),
+\begin{equation}
+ \normg{h-F_{X,B}^{[p,2p]}}
+ \le C_{p,r,b}(\tau,B)X^{-(p+3/4)}.
+ \label{eq:fixed-result}
+\end{equation}
+A sufficient constant is
+\begin{subequations}\label{eq:fixed-constant}
+\begin{align}
+ A_{f,p}&=C_{2p}M_0+C_{\mathrm{pop}}\e\,\mathsf B_{p+1}[M]+3,\\
+ A_{t,p}&=C_{2p}M_0^t+C_{\mathrm{pop}}\e\,\mathsf B_{p+1}[M^t]+3,\\
+ C_{p,r,b}(\tau,B)&=C_\chi(48A_{f,p}+A_{t,p}).
+\end{align}
+\end{subequations}
+The sufficient onset is specified in \cref{app:onsets}.
+The frozen heat residual and its first spatial derivative vanish.
+\end{theorem}
+\begin{proof}
+Split \eqref{eq:heat-convolution} at \(I_{X,B}\), and on that
+window insert
+\[
+ H(0,u)=S_N(u)+Q_{X,2p}(u)+[H(0,u)-f_{2p}(u)].
+\]
+The \(Q\)-integral cancels exactly against the retained completion.
+For each mode subtract the whole-line polynomial transform.
+The remaining local difference is bounded by
+\eqref{eq:local-payments}; the initial mismatch is bounded by
+\eqref{eq:CK}; the three tails are bounded above.
+The onset inequalities in \cref{app:onsets} put each tail below
+\(X^{-(p+3/4)}\). This proves the field bound \(gA_{f,p}X^{-(p+3/4)}\)
+on the enlarged chart and, independently, the time bound
+\(gA_{t,p}X^{-(p+3/4)}\).
+
+Both fields are holomorphic in \(z\). Radius-\(1/2\) Cauchy disks
+fit inside the enlarged chart, and give factors \(j!2^j\le48\)
+for \(0\le j\le3\). Convert from \(g\) to \(\abs{G(z)}\)
+using \(C_\chi\). This proves \eqref{eq:fixed-constant}.
+The residual assertion follows from \cref{prop:residual}.
+\end{proof}
+The theorem includes a one-point time interval \(\tau=B\), since
+the underlying smooth functions are defined for \(T>0\).
+Its time derivative is not a derivative of an error allowance.
+The explicit constants deteriorate through
+\(\e^{Y^2/(4\tau)+2B}\), powers of \(B\), and
+\(\tau^{-1},\tau^{-2}\). No uniform limit at \(\tau=0\)
+or \(B=\infty\) is asserted.
+
+\subsection{Low-order formulas and the earlier first correction}
+\label{subsec:low-orders}
+Write \(\gamma_\epsilon=\ell_\epsilon''(X)\) and
+\(\eta_\epsilon=\ell_\epsilon'''(X)\). Then
+\[
+ U_{\epsilon,1}=\frac{\gamma_\epsilon}{2}\calQ_T^2U_{\epsilon,0},
+ \quad
+ U_{\epsilon,2}=\left(\frac{\eta_\epsilon}{6}\calQ_T^3+
+             \frac{\gamma_\epsilon^2}{8}\calQ_T^4\right)U_{\epsilon,0}.
+\]
+For one mode the first corrected expression is
+\begin{equation}
+ b\e^{\lambda d+T\lambda^2}
+       \left[1+\frac{\gamma}{2}\{(d+2T\lambda)^2+2T\}\right].
+ \label{eq:first-frozen}
+\end{equation}
+At \(d=0\), its bracket is
+\(1+\gamma(T+2T^2\lambda^2)\).
+This agrees with the arithmetic value of the earlier
+target-dependent correction \cite{ans10},
+\[
+ h_{\epsilon n}(z)\e^{T\beta_{\epsilon n}(z)^2}
+    [1+\gamma_\epsilon(z)(T+2T^2\beta_{\epsilon n}(z)^2)],
+ \quad
+ \beta_{\epsilon n}(z)=\partial_z\log h_{\epsilon n}(z),
+\]
+evaluated at \(z=X\). In that formula, however, the gamma data
+vary with the target. Its spatial derivatives differ from those
+of \eqref{eq:first-frozen}, and its residual is
+\(O(\abs G X^{-7/4})\), not identically zero.
+Its \(K=1\) completion gives a total \(X^{-5/4}\) error allowance.
+For the frozen model, the local first-level allowance is
+\(X^{-7/4}\); retaining \(K=2\) supports it. At the second level
+the mixed curvature-square term and \(C_0,\ldots,C_4\) must all
+remain to support \(X^{-11/4}\).
+
+Thus higher approximation means retaining all partitions of the
+chosen fluctuation weight and matching the completion order.
+Adding only one higher derivative of gamma does not implement
+the next level.

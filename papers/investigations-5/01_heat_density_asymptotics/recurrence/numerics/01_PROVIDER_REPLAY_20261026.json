@@ -1,0 +1,787 @@
+{
+  "date": "2026-10-26",
+  "prepared_for": "Edward Baker",
+  "llm_assistance": "substantial",
+  "model": "gpt-6.1-sol",
+  "effort": "ultra",
+  "thread_id": "01a176ea-3f14-7972-bc9c-9aeb6fb50fd4",
+  "turn_id": "01a17838-69d0-76c1-82a0-8e808ec78797",
+  "request": "HDA-R05-N01 r1 and whole-chat summary",
+  "environment": {
+    "python": "3.10.0 (v3.10.0:b494f5935c, Oct  4 2021, 14:59:19) [Clang 12.0.5 (clang-1205.0.22.11)]",
+    "executable": "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "backend": "Python standard library Fraction and arbitrary precision int; no external installation"
+  },
+  "status": "All36 gamma cases and15Gauss bases/45maps delivered and separately replayed; N01 Complete at bounded component scope; R05 Partial",
+  "measurements": {
+    "gamma_cases": 36,
+    "gamma_jets": 156,
+    "gauss_base": 15,
+    "gauss_mapped": 45,
+    "moment_checks": 558,
+    "gamma_terms_plus_shifts": [
+      72,
+      296
+    ],
+    "gamma_fraction_bits": [
+      47,
+      145
+    ],
+    "gamma_primitive_requested_bits": [
+      50,
+      151
+    ],
+    "gamma_series_terms_total_percase": [
+      1150,
+      30261
+    ],
+    "gamma_series_terms_max": 73,
+    "gamma_visible_fraction_num_bits": 9056,
+    "gamma_visible_fraction_den_bits": 9196,
+    "gauss_depth": [
+      1,
+      147
+    ],
+    "gauss_queries": [
+      1,
+      2241
+    ],
+    "gauss_globaldepth": [
+      34,
+      113247
+    ],
+    "gauss_globaldepth_exceedcap_count": 6,
+    "gauss_integer_bits": 2395,
+    "gauss_fraction_bits": 113246,
+    "gauss_actualdepth_s16": [
+      {
+        "P": 128,
+        "depth": 147,
+        "global_depth": 113247
+      },
+      {
+        "P": 32,
+        "depth": 51,
+        "global_depth": 113247
+      },
+      {
+        "P": 64,
+        "depth": 83,
+        "global_depth": 113247
+      }
+    ],
+    "total_compute_seconds": 50.40540237398818,
+    "peak_worker_rss_bytes": 20430848,
+    "cert_total_bytes": 3645034,
+    "cert_largest_bytes": 201229
+  },
+  "limits": {
+    "total_compute_seconds": 900,
+    "measured_process_storage_bytes": 536870912,
+    "gauss_max_depth": 8192,
+    "gauss_sign_query_cap": 250000,
+    "gamma_expansion_terms_plus_shifts": 4096,
+    "primitive_requested_bits": 8192,
+    "extra_per_scalar_series_term_cap": 4096,
+    "per_child_time_allocation_seconds": 60
+  },
+  "initial_failure": "Preserved OSresource-limit configuration failure before any gamma computation. Samefrozen gamma code then passed under documented measured-RSS method.",
+  "storage_method": "OSsetrlimit rejected on this Darwin runtime; actual ru_maxrss high-water checked per child against512MiB, 20ms sampling watchdog; no hard ASlimit claimed.",
+  "preflight_corrections": [
+    "Bind atan/pi child kinds in gamma replay",
+    "Bind mathematical certificate args to requested worker args",
+    "Do not count validcapped certificates as delivered",
+    "Freeze source copies/hash actualworker code",
+    "Persist conservative child time reservations atomically"
+  ],
+  "negative_controls": {
+    "positive_controls": 2,
+    "altered_certificates_rejected": 10,
+    "record": "01_N01_NEGATIVE_CHECKS_20261026.json"
+  },
+  "archive_lookup": {
+    "normal_path": "numerics/<certificate path>",
+    "environment_variable": "HDA_RECURRENCE_ARCHIVES",
+    "fallback": "<environment root>/<certificate path>",
+    "local_archive_root": "/Users/Shared/szp-archive/heat-density-recurrence/numerics-archives",
+    "guide": "../ARCHIVES.md",
+    "content_hash_scope": "Canonical sorted compact JSON excluding only top-level observational metrics/stats; includes all mathematical witnesses and output radii."
+  },
+  "independence": "Same-model implementation/internal inspection; separate process replay; Gauss checker separately coded, gammachecker shares finiteformulahelpers. Not specialistvalidation/formalproof.",
+  "source_files": [
+    {
+      "path": "provider_replay/gamma_provider.py",
+      "bytes": 23494,
+      "sha256": "4309c7469e133053eec71b5981660531bade388025854b41e1d2c9106214db30"
+    },
+    {
+      "path": "provider_replay/gauss_provider.py",
+      "bytes": 15552,
+      "sha256": "800714cbf3c80a827db2f4e0087724f91e61129095e9951027c115c36cc966ed"
+    },
+    {
+      "path": "provider_replay/gauss_replay.py",
+      "bytes": 16017,
+      "sha256": "13efe3b332b714d28f5fbac15f3cf7f50ef7abd5a47ddb389b8eba3f19c159c7"
+    },
+    {
+      "path": "provider_replay/n01_negative_checks.py",
+      "bytes": 5387,
+      "sha256": "26c2c66db3891cf1e5a20c448613e78ef2536a56ac098e841e44af5ec5561e89"
+    },
+    {
+      "path": "provider_replay/n01_replay_archive.py",
+      "bytes": 2533,
+      "sha256": "5b0828e8754cb813f6799a70a3c2b979c784dd7592fae19a26905ac4c03fc49a"
+    },
+    {
+      "path": "provider_replay/n01_run.py",
+      "bytes": 6738,
+      "sha256": "1d0d3c54a70389800d2e347fb83140275b207aa2acc08231323c14f5248283d4"
+    },
+    {
+      "path": "provider_replay/n01_worker.py",
+      "bytes": 3204,
+      "sha256": "a6b2403b14b1459b00a2ce3365fdf7115ec0d5ff0b4ace619e36bbc5ac2f9516"
+    }
+  ],
+  "attempt_records": [
+    {
+      "path": "01_N01_INITIAL_LIMIT_FAILURE_20261026.json",
+      "bytes": 11545,
+      "sha256": "6f2c03da769739fb7a4a96322a5aa9faaee52e99fc6562b5231d9e875bb5fe1b"
+    },
+    {
+      "path": "01_N01_GAMMA_EXECUTION_20261026.json",
+      "bytes": 144161,
+      "sha256": "7ba9d234177fa923bf1000c5ec35ea43a3a7b2f7c60d59410bab10dc986cefec"
+    },
+    {
+      "path": "01_N01_GAUSS_EXECUTION_20261026.json",
+      "bytes": 53419,
+      "sha256": "db2848ed76b333bef3b09c73fc885c7baa529702d0eb97ffe3d20cbddf45ba8b"
+    },
+    {
+      "path": "01_N01_NEGATIVE_CHECKS_20261026.json",
+      "bytes": 2508,
+      "sha256": "4efccd2750869e7e461e4794926cb7dc56917f77ba5b8888ea47f9e95f7ce3a1"
+    },
+    {
+      "path": "01_N01_INSTALLED_ARCHIVE_REPLAY_20261026.json",
+      "bytes": 899,
+      "sha256": "3c036b11b2d14fce45b0bb7659cddd4d2d6f75ffc1bb87865c9a5a80f040ac7a"
+    },
+    {
+      "path": "01_N01_COMPUTE_BUDGET_20261026.json",
+      "bytes": 478,
+      "sha256": "9c109c4b01490594bfc274c658fcbc737adbdf99849fbe0e78dbd386052990b4"
+    }
+  ],
+  "certificates": [
+    {
+      "path": "output/n01/gamma_1_0_128.json",
+      "family": "gamma",
+      "args": [
+        1,
+        0,
+        128
+      ],
+      "bytes": 138645,
+      "sha256": "1abc71ac066be533ae723b3b004ca77494b7c7e11e241bc2d70ba3aff743d883",
+      "mathematical_content_sha256": "e0ce7afeea5f2c7edefdc32a064a8caf8e5cb17bf4193572c378f8fed04921d6"
+    },
+    {
+      "path": "output/n01/gamma_1_0_32.json",
+      "family": "gamma",
+      "args": [
+        1,
+        0,
+        32
+      ],
+      "bytes": 24803,
+      "sha256": "8b7616fc2e69739837a7698b09c78d0fb6b7cbd2bb7c2f9f2fb710434459d2dc",
+      "mathematical_content_sha256": "aa66de97b5255fc7f642a3ec085ef145aefa795d40518fd4aa6a0ca7cc179cad"
+    },
+    {
+      "path": "output/n01/gamma_1_0_64.json",
+      "family": "gamma",
+      "args": [
+        1,
+        0,
+        64
+      ],
+      "bytes": 53709,
+      "sha256": "a63ba69446beaa7921f56549676bf3747fa05d0d702fbec781ee3a6146f3f044",
+      "mathematical_content_sha256": "e264acc19bdb8031bd1d626c7ca2a5cba0e3dbeeceb6ed392c3b50d38704159f"
+    },
+    {
+      "path": "output/n01/gamma_1_2_128.json",
+      "family": "gamma",
+      "args": [
+        1,
+        2,
+        128
+      ],
+      "bytes": 143710,
+      "sha256": "6a79a7fc44624555fb3c1b7d8e5287409ae5229cd7f348ccc1fddd4071204192",
+      "mathematical_content_sha256": "dcf6216866bbdd87ff31c74ce60d5082f5d75e1583e41cb89bf82fd9d44c4cfb"
+    },
+    {
+      "path": "output/n01/gamma_1_2_32.json",
+      "family": "gamma",
+      "args": [
+        1,
+        2,
+        32
+      ],
+      "bytes": 27691,
+      "sha256": "a424ab2bd170d6af0ce6c08cbc3e2355641cc9f34f4ff91a939a1d7afdf42055",
+      "mathematical_content_sha256": "c54bc6d57215c7419dff330e66706532d7980b243e1cb41622267d5e799f8329"
+    },
+    {
+      "path": "output/n01/gamma_1_2_64.json",
+      "family": "gamma",
+      "args": [
+        1,
+        2,
+        64
+      ],
+      "bytes": 57323,
+      "sha256": "89c6eec5f096a143964dc849e087ebd913a90ef23447cf2aa734af330d4a1c50",
+      "mathematical_content_sha256": "5c93e6c0947405801338440ebeadc7ea69d1d2faa67746d90405cc1ec43f9909"
+    },
+    {
+      "path": "output/n01/gamma_1_8_128.json",
+      "family": "gamma",
+      "args": [
+        1,
+        8,
+        128
+      ],
+      "bytes": 158809,
+      "sha256": "ee813fae92ad680cfa0956a90e3318f1058833d81b506a59117cf8b545d49ac2",
+      "mathematical_content_sha256": "77db0c61be63de36a6eb584afa928d768018fcc90d89e6029ada61c98e2d64eb"
+    },
+    {
+      "path": "output/n01/gamma_1_8_32.json",
+      "family": "gamma",
+      "args": [
+        1,
+        8,
+        32
+      ],
+      "bytes": 36422,
+      "sha256": "6e436bad90a48094f017662ceee6f1f6762854d0bdfb80376e932b19d938eb17",
+      "mathematical_content_sha256": "c291fc9c232bf413ec7b653b5f6384be10063761634be95ec444592aec9012b3"
+    },
+    {
+      "path": "output/n01/gamma_1_8_64.json",
+      "family": "gamma",
+      "args": [
+        1,
+        8,
+        64
+      ],
+      "bytes": 68221,
+      "sha256": "9e3ba1a11f8d3527a356e2b3156681d3e9ec4ecd3e8035e6e5b561469bfa3b86",
+      "mathematical_content_sha256": "e80b6dfec15f0316ab9ef5873e981c7231ed6edf0a75f10a3e37c38cb1375874"
+    },
+    {
+      "path": "output/n01/gamma_256_0_128.json",
+      "family": "gamma",
+      "args": [
+        256,
+        0,
+        128
+      ],
+      "bytes": 150602,
+      "sha256": "b914b6a3af1aaecd89d9ccf0aef741608b320c16dd058bcd056fddb8edfa80c3",
+      "mathematical_content_sha256": "0e8dd15306b554ded4f52387cae158183ff6debe2fe70623cac70fa06406532d"
+    },
+    {
+      "path": "output/n01/gamma_256_0_32.json",
+      "family": "gamma",
+      "args": [
+        256,
+        0,
+        32
+      ],
+      "bytes": 29042,
+      "sha256": "f92e7e57614ac1ba7fca0c5e18bb362385dbea09ea46de35d1805ba85c333ef8",
+      "mathematical_content_sha256": "3dc2a6042e43511143fd77dddede615d6afcbd0667943ec3b66cb2b1e33a6805"
+    },
+    {
+      "path": "output/n01/gamma_256_0_64.json",
+      "family": "gamma",
+      "args": [
+        256,
+        0,
+        64
+      ],
+      "bytes": 62294,
+      "sha256": "472b18550a606992a1caa48e1cc913b5b5cfa5266d5203277688368e807f72f7",
+      "mathematical_content_sha256": "e370400efe92695e872e47f31ce315933febb6386f1b9364d0768a8924297975"
+    },
+    {
+      "path": "output/n01/gamma_256_2_128.json",
+      "family": "gamma",
+      "args": [
+        256,
+        2,
+        128
+      ],
+      "bytes": 155701,
+      "sha256": "bb79feb3635b9e7e368ac4df4372d08483ca0f03a2e61e66ca08f16a3ed18d61",
+      "mathematical_content_sha256": "67f68bc47e207eb5e8ac5b95b3b12b1e29cc5355a1560221fd78a40b8a72924c"
+    },
+    {
+      "path": "output/n01/gamma_256_2_32.json",
+      "family": "gamma",
+      "args": [
+        256,
+        2,
+        32
+      ],
+      "bytes": 32571,
+      "sha256": "5e019bfa19805f917bc40d3f279ab6cbf1ef436489b50bdcbb1f8cb442068b6f",
+      "mathematical_content_sha256": "9ebcc3b0b3a69b61c50dbd5fa1b946f5fc81384568f5162696f1632bf3fe2877"
+    },
+    {
+      "path": "output/n01/gamma_256_2_64.json",
+      "family": "gamma",
+      "args": [
+        256,
+        2,
+        64
+      ],
+      "bytes": 66139,
+      "sha256": "e10e3c531864ef38c41623c1822ee3ad3129574bff5947e3a31941d65cba2c71",
+      "mathematical_content_sha256": "ab91be32417c0ff13c99ff3c0a94ed4687eaafde13252e5ef5b8610954ce5055"
+    },
+    {
+      "path": "output/n01/gamma_256_8_128.json",
+      "family": "gamma",
+      "args": [
+        256,
+        8,
+        128
+      ],
+      "bytes": 170798,
+      "sha256": "b6ea03ef160c8f854545e775639fb0ab9d1377d6b1997b084c0ca18f55e5e6f0",
+      "mathematical_content_sha256": "2a18430cc24919eafc63eee270888acdd9ef5306d66f1a597a34b91561151626"
+    },
+    {
+      "path": "output/n01/gamma_256_8_32.json",
+      "family": "gamma",
+      "args": [
+        256,
+        8,
+        32
+      ],
+      "bytes": 42950,
+      "sha256": "82967b997508ba8f3722b96b9d0fa60833fcf951c1009d8eccbb113a304b116e",
+      "mathematical_content_sha256": "f36beecb0679dc924782f11c10704cfcfcf234c347be955112a888e7c74f6575"
+    },
+    {
+      "path": "output/n01/gamma_256_8_64.json",
+      "family": "gamma",
+      "args": [
+        256,
+        8,
+        64
+      ],
+      "bytes": 77591,
+      "sha256": "ca1aa91459f76d6de3d0d2fadec37dc5f2d500849a3e34cab60dd5c2a6b346c6",
+      "mathematical_content_sha256": "7d2965c18dbded0d56d821d284a8e5832fc196845a40ad379c38275d5b13c5b0"
+    },
+    {
+      "path": "output/n01/gamma_32_0_128.json",
+      "family": "gamma",
+      "args": [
+        32,
+        0,
+        128
+      ],
+      "bytes": 140839,
+      "sha256": "54618de43cb4de9a01fbbfc5e9a6bf1d3b4caea8034a6863ebc9a67ee09ffa18",
+      "mathematical_content_sha256": "a877850386450e6db688db50cfbb5c7f661b07d124a3b47b0c1a456ff4e4dd3c"
+    },
+    {
+      "path": "output/n01/gamma_32_0_32.json",
+      "family": "gamma",
+      "args": [
+        32,
+        0,
+        32
+      ],
+      "bytes": 26288,
+      "sha256": "631c5948cdb8fdb2eb1c8de51a60ea223d115eb74c157ea130169fd84567e37e",
+      "mathematical_content_sha256": "1c60b25f55923d33192289e443eff4f4832c343bc79f63701427596fc477f498"
+    },
+    {
+      "path": "output/n01/gamma_32_0_64.json",
+      "family": "gamma",
+      "args": [
+        32,
+        0,
+        64
+      ],
+      "bytes": 55511,
+      "sha256": "010a30ae7e98e924165e319d1b98b9063d5e9a9dc8a3c1c729270d38951e45fc",
+      "mathematical_content_sha256": "2db75906834f76007b1bfbd34d8d34ecd6be4c003233e9d9a8a48c4b6f33bb21"
+    },
+    {
+      "path": "output/n01/gamma_32_2_128.json",
+      "family": "gamma",
+      "args": [
+        32,
+        2,
+        128
+      ],
+      "bytes": 145930,
+      "sha256": "2bb620c8d298b69ea2a3d0a2efb239d277837d8de90efa502d1949bb5588b439",
+      "mathematical_content_sha256": "4657721cb661136699e120245811114d4887e04217205eab7dbdd37f8676318b"
+    },
+    {
+      "path": "output/n01/gamma_32_2_32.json",
+      "family": "gamma",
+      "args": [
+        32,
+        2,
+        32
+      ],
+      "bytes": 29201,
+      "sha256": "41481f1c1f3732449262524461fe274d4be6bd0f765a5e134ced151fd2d7ac01",
+      "mathematical_content_sha256": "90647a93922f2f31cac09ab5c5a9730afe24edde2261f834c75ab355e7dd4b29"
+    },
+    {
+      "path": "output/n01/gamma_32_2_64.json",
+      "family": "gamma",
+      "args": [
+        32,
+        2,
+        64
+      ],
+      "bytes": 59152,
+      "sha256": "3e364359d6ad837ff1e0f1b17f2793ef7bc8e5f0a2a8648df637cfd4cbe2bc4c",
+      "mathematical_content_sha256": "76ba7e4fda81fefcce719a83893e872312cc307b9b3443a9770002aa38af6b38"
+    },
+    {
+      "path": "output/n01/gamma_32_8_128.json",
+      "family": "gamma",
+      "args": [
+        32,
+        8,
+        128
+      ],
+      "bytes": 161039,
+      "sha256": "35ab2b89e5fb7b6e2c0288f98cb2749621d23af36b7d7aceca95813515d3cb52",
+      "mathematical_content_sha256": "ec0912f0ab29b79b956df3f3718e6e7196cc58ac3486b3f4e814aae44b5e7db7"
+    },
+    {
+      "path": "output/n01/gamma_32_8_32.json",
+      "family": "gamma",
+      "args": [
+        32,
+        8,
+        32
+      ],
+      "bytes": 37936,
+      "sha256": "d42cf3d19a470d45774e974c3227257cf3629f89f7f05d4e539d65f52c875498",
+      "mathematical_content_sha256": "783c060bd81c0a58fdabcba3c7f0f3c02e286ff6c7d2b4765b265f14845138c2"
+    },
+    {
+      "path": "output/n01/gamma_32_8_64.json",
+      "family": "gamma",
+      "args": [
+        32,
+        8,
+        64
+      ],
+      "bytes": 70069,
+      "sha256": "f645fb8384da4f98e76b4d3341794f9cca0d55c5b05e7fb6963bc62a0ed1ea62",
+      "mathematical_content_sha256": "cf1715d72b0627e4363e6db413d793c222dff7af4b475170333241904289a87c"
+    },
+    {
+      "path": "output/n01/gamma_4096_0_128.json",
+      "family": "gamma",
+      "args": [
+        4096,
+        0,
+        128
+      ],
+      "bytes": 153528,
+      "sha256": "39fe897bbca05c6b35a08eb8df2eb45cacb67c198a9e57a4aa49440d8d532eef",
+      "mathematical_content_sha256": "85aa19c3acd378a496ace08e9b7bdd65b29497a4847eda43704ca4167ee1c4d3"
+    },
+    {
+      "path": "output/n01/gamma_4096_0_32.json",
+      "family": "gamma",
+      "args": [
+        4096,
+        0,
+        32
+      ],
+      "bytes": 29085,
+      "sha256": "85bc9fe4ed9b3aee837e90921f1a7ebd7ceedfe3c6c26398bfd9d0ba47d1581e",
+      "mathematical_content_sha256": "f60129f4414cbe73c863e641871578ffd1b3fd376b16cc79f21c4c1c963a4ff9"
+    },
+    {
+      "path": "output/n01/gamma_4096_0_64.json",
+      "family": "gamma",
+      "args": [
+        4096,
+        0,
+        64
+      ],
+      "bytes": 61535,
+      "sha256": "3b5c32d9dfe67522323e910fe48c6d52930d8e194a298eaa3f4befb4f472d4ed",
+      "mathematical_content_sha256": "00e3ba885f9afdacc3c5ea6c6d1975b8d55649804ec5fb33ee917d669fac6b06"
+    },
+    {
+      "path": "output/n01/gamma_4096_2_128.json",
+      "family": "gamma",
+      "args": [
+        4096,
+        2,
+        128
+      ],
+      "bytes": 159015,
+      "sha256": "08b6329ae44f5234e6aef33d5233eb188107ddf455d669fe09fba5f40998830a",
+      "mathematical_content_sha256": "2f8c6b5dff970d2142c83b9e416fbe07bf610fffdae9ce2efa3d34bfa158a6c1"
+    },
+    {
+      "path": "output/n01/gamma_4096_2_32.json",
+      "family": "gamma",
+      "args": [
+        4096,
+        2,
+        32
+      ],
+      "bytes": 32407,
+      "sha256": "cd500f54f4dd3a4f27d63338c6d349fdd6c399cb172b2eea1009d74afb7469b2",
+      "mathematical_content_sha256": "f5a33efb953249ee645d46db32659c600f17ca993907ac5a06b47b0b0982ba35"
+    },
+    {
+      "path": "output/n01/gamma_4096_2_64.json",
+      "family": "gamma",
+      "args": [
+        4096,
+        2,
+        64
+      ],
+      "bytes": 65589,
+      "sha256": "3fe045cfefbc02123bbb133d44ecf588830cf66490c09eab6f2b65e602942d6d",
+      "mathematical_content_sha256": "d55e4b283aa9e51d83a5358884a26f175fe585bd2954a953c35a222b5b7161b5"
+    },
+    {
+      "path": "output/n01/gamma_4096_8_128.json",
+      "family": "gamma",
+      "args": [
+        4096,
+        8,
+        128
+      ],
+      "bytes": 175244,
+      "sha256": "617ab09d1ad0c15fff0324ecbd178bb1b1d3f5e2f632be2fc7c8fe56946f6e47",
+      "mathematical_content_sha256": "9adb47675dd401cc905436c6d8bf8e048f87692724648744ccbcf45f8ba2ed31"
+    },
+    {
+      "path": "output/n01/gamma_4096_8_32.json",
+      "family": "gamma",
+      "args": [
+        4096,
+        8,
+        32
+      ],
+      "bytes": 42219,
+      "sha256": "769b597e2bac53ffda2f37340cf7ab5282c5d24383cae50755536e3705bba9f8",
+      "mathematical_content_sha256": "4e7660ce16b92bdc7c9c5dc73040512bc8ccc50695ba33a588a83b8a2851c201"
+    },
+    {
+      "path": "output/n01/gamma_4096_8_64.json",
+      "family": "gamma",
+      "args": [
+        4096,
+        8,
+        64
+      ],
+      "bytes": 77609,
+      "sha256": "227cab45f025a9f42f57611bb9ff135497a0858dd746c81454b586f89f5ecc65",
+      "mathematical_content_sha256": "b003bac4d2ab0047436cb841e3944709ea6b237a8440379d976468e8c2b402c5"
+    },
+    {
+      "path": "output/n01/gauss_16_128.json",
+      "family": "gauss",
+      "args": [
+        16,
+        128
+      ],
+      "bytes": 201229,
+      "sha256": "1a1ba73ebd6ca389b2407d766c94aab4d9c4a74962742869e051a5c79fec7812",
+      "mathematical_content_sha256": "6049b5c7444e1b65b9a6f5d4dbf6713fa2a0b14cbff455faaab5fe77f6e7e7f3"
+    },
+    {
+      "path": "output/n01/gauss_16_32.json",
+      "family": "gauss",
+      "args": [
+        16,
+        32
+      ],
+      "bytes": 90552,
+      "sha256": "3c16793b54ba30224bb860ae16c221e63c96af7927ab57ac2473fd6a4e07a473",
+      "mathematical_content_sha256": "965d5fecb193c7442c491a21f9fe3c8bba935f562570720f8fbaf654b1306a32"
+    },
+    {
+      "path": "output/n01/gauss_16_64.json",
+      "family": "gauss",
+      "args": [
+        16,
+        64
+      ],
+      "bytes": 127260,
+      "sha256": "b03f084445f7eb4b31ffa7d389a83629f30e4fd6418d35894fd2c8c6d8806517",
+      "mathematical_content_sha256": "cf1587545ed0107b901e645555e9720f0803d969d5830446cf48b4cc22baee2e"
+    },
+    {
+      "path": "output/n01/gauss_1_128.json",
+      "family": "gauss",
+      "args": [
+        1,
+        128
+      ],
+      "bytes": 4245,
+      "sha256": "276d8db015deed87ccfc0facb4f2b2bb579ee8febbd245db031b3baa66066c6a",
+      "mathematical_content_sha256": "ec5d334b3523d4628bef560665104aeeee10e6982a08d22b2b05cf86acdfbfa2"
+    },
+    {
+      "path": "output/n01/gauss_1_32.json",
+      "family": "gauss",
+      "args": [
+        1,
+        32
+      ],
+      "bytes": 4072,
+      "sha256": "b211c1ea4e8bdafeba194477b8e2a89a944c7dbd9ae11b5a8f2b3dadc6be6f84",
+      "mathematical_content_sha256": "398749f95581b2fa3c126693b9021a68a26aadd97fb71d5a3a03c2572454bbd9"
+    },
+    {
+      "path": "output/n01/gauss_1_64.json",
+      "family": "gauss",
+      "args": [
+        1,
+        64
+      ],
+      "bytes": 4128,
+      "sha256": "224ede45dc00b185efd87eecb3ff6be116c8b5be561210f71dc3db037b3b4d91",
+      "mathematical_content_sha256": "fc53e131f0cec5816ca83172cbed294332acddf9b6149121982f635998053f6f"
+    },
+    {
+      "path": "output/n01/gauss_2_128.json",
+      "family": "gauss",
+      "args": [
+        2,
+        128
+      ],
+      "bytes": 8477,
+      "sha256": "028820f246386985174ffd13b09e983960c9b4155f0c9de9bc69dd7720c7f40b",
+      "mathematical_content_sha256": "4e6c88aa324dc4c7f0c15bb7887fae2844a828f5d586e0146383f43ab547f575"
+    },
+    {
+      "path": "output/n01/gauss_2_32.json",
+      "family": "gauss",
+      "args": [
+        2,
+        32
+      ],
+      "bytes": 6554,
+      "sha256": "394b02604d31ae155a3ad3d9b53f30a34d39484a3d93aa6d620c7234d9b57bfd",
+      "mathematical_content_sha256": "df24570e6ee0f5608aa5b34eabac6b300f4a5516140559f053611b582f320fa9"
+    },
+    {
+      "path": "output/n01/gauss_2_64.json",
+      "family": "gauss",
+      "args": [
+        2,
+        64
+      ],
+      "bytes": 7197,
+      "sha256": "ae3376e18e04f9d43ea97c83aa7a9b33864caf4b05aa6126e5c5cd62cb256dce",
+      "mathematical_content_sha256": "4e04621bf298f1fd5171d5e391fac4b5fb07f98fef170bf1fb294140b7fee831"
+    },
+    {
+      "path": "output/n01/gauss_4_128.json",
+      "family": "gauss",
+      "args": [
+        4,
+        128
+      ],
+      "bytes": 19565,
+      "sha256": "61bf769b9686e84c1106bc5c71a31aaf308fa488fe42e18fddcbbb366449cc62",
+      "mathematical_content_sha256": "b635ed9d751a5f78b89dd3ebde498ae992455c5db18aea426613b5d28479989c"
+    },
+    {
+      "path": "output/n01/gauss_4_32.json",
+      "family": "gauss",
+      "args": [
+        4,
+        32
+      ],
+      "bytes": 12382,
+      "sha256": "acca21dc9230e728e0fc80a19693df0133c41842d57d3c917a144307dff8b327",
+      "mathematical_content_sha256": "77eb169748c0ba7b3590b6d5bd6bdb20c1aee88a76ddad227e5b260f6bbfcc2c"
+    },
+    {
+      "path": "output/n01/gauss_4_64.json",
+      "family": "gauss",
+      "args": [
+        4,
+        64
+      ],
+      "bytes": 14772,
+      "sha256": "c38f7f4a9b62aac513070bfae2fd6f83c4d2126bd73f5c0762ff79371d2fdc48",
+      "mathematical_content_sha256": "51a4f7cf48f77a3e48ec877de4e076bc593d109461e5d83a14d257c716391597"
+    },
+    {
+      "path": "output/n01/gauss_8_128.json",
+      "family": "gauss",
+      "args": [
+        8,
+        128
+      ],
+      "bytes": 57274,
+      "sha256": "490256e20ea39bf7ad30e159ae33a7b8fa22718ced3b6578f00af371082e7452",
+      "mathematical_content_sha256": "6d8f3f9748f7a52c53a9205459a202e447ae10e7eead4c85c95f5864aa16ae06"
+    },
+    {
+      "path": "output/n01/gauss_8_32.json",
+      "family": "gauss",
+      "args": [
+        8,
+        32
+      ],
+      "bytes": 29385,
+      "sha256": "cddda994a66543a6f2fa77c67c835b5f5b7dd573ac60ecd27b79e0af4c1a67ce",
+      "mathematical_content_sha256": "6ac22278443116b1fc8b6b4c2a43f11d872e97b50839083768c4310645eddc08"
+    },
+    {
+      "path": "output/n01/gauss_8_64.json",
+      "family": "gauss",
+      "args": [
+        8,
+        64
+      ],
+      "bytes": 38725,
+      "sha256": "20c4735b54b1c0c7cf3dbf0a5e65f05d98263a276327189548f52923cf327a58",
+      "mathematical_content_sha256": "cea480d5e795dbe18c936439739767311cbd6e2637dcc151a96f2b04174cef0d"
+    }
+  ],
+  "final_installed_archive_replay": {
+    "record": "01_N01_INSTALLED_ARCHIVE_REPLAY_20261026.json",
+    "all_51_replayed": true,
+    "elapsed_seconds": 13.99603954097256,
+    "source_and_certificate_hashes_checked": true,
+    "manifest_version_checked_sha256": "9447c6411b987bd60b661aec733adcbe51a0a3250ff7f5b905f2cee1e54a5cc7"
+  }
+}

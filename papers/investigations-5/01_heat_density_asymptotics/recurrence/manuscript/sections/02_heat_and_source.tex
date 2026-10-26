@@ -1,0 +1,185 @@
+\section{Canonical heat evolution and the real initial-data completion}
+\label{sec:source}
+\subsection{Normalization and exact evolution}
+Use the classical normalization \cite{polymath}
+\begin{subequations}\label{eq:canonical}
+\begin{align}
+ \Phi(v)&=\sum_{n=1}^{\infty}
+ (2\pi^2n^4\e^{9v}-3\pi n^2\e^{5v})\e^{-\pi n^2\e^{4v}},\\
+ H(t,z)&=\int_0^\infty \e^{tv^2}\Phi(v)\cos(zv)\dd v,
+ & H(0,z)&=\frac18\xi\left(\frac{1+\ii z}{2}\right).
+\end{align}
+\end{subequations}
+The source is integrable and decays faster than a Gaussian.
+Differentiation gives \(H_t=-H_{zz}\).
+We write \(h(T,z)=H(-T,z)\), so \(h_T=h_{zz}\).
+Let
+\[
+ k_T(v)=\frac1{\sqrt{4\pi T}}\exp\left(-\frac{v^2}{4T}\right),
+ \qquad T>0.
+\]
+\begin{lemma}[Real initial-value formula]\label{lem:heat}
+For every \(T>0\) and \(z\in\C\),
+\begin{equation}
+ h(T,z)=\int_\R k_T(z-u)H(0,u)\dd u.
+ \label{eq:heat-convolution}
+\end{equation}
+The integral and its spatial and time derivatives converge uniformly
+on compact subsets with \(T>0\).
+\end{lemma}
+\begin{proof}
+Insert the cosine transform of \(H(0,u)\).
+For real \(u\), the cosine is bounded, while
+\[
+ \abs{k_T(z-u)}
+ =\frac{\e^{(\Ima z)^2/(4T)}}{\sqrt{4\pi T}}
+      \e^{-(u-\Rea z)^2/(4T)}.
+\]
+Integrability of \(\Phi\) permits Fubini. The Fourier transform of
+the Gaussian is \(\e^{-Tv^2+\ii zv}\), giving
+\eqref{eq:heat-convolution}. Derivatives introduce fixed polynomial
+factors and inverse powers of \(T\), still integrable on the stated
+compact sets.
+\end{proof}
+This identity is the reason real Riemann--Siegel data can be used
+without asserting a complex remainder theorem: the heat kernel
+produces the holomorphic field.
+
+\subsection{Charts, gamma scale, and frozen data}
+Fix \(r,b>0\), \(0<\tau\le B<\infty\), and
+\[
+ \Omega_X(r,b)=\{z:\abs{\Rea z-X}\le r,\ \abs{\Ima z}\le b\},
+ \quad R=r+1,\quad Y=b+1,\quad W=R+Y.
+\]
+The enlarged chart is \(\Omega_X(R,Y)\).
+For physical applications the inherited choice is
+\(r=\ell+2\), \(b=1+h_{\mathrm{av}}+2\); no physical estimate is
+deduced here.
+Throughout put
+\[
+ L=\log(X/(4\pi)),\quad a_X=\sqrt{X/(4\pi)},\quad
+ N=\lfloor a_X\rfloor,\quad
+ \bar B=\max(1,B),\quad V_B=8\sqrt{\bar B}\,L.
+\]
+The center \(X\), the orders, all coefficients, all real partitions,
+and the endpoints \(X\pm V_B\) are fixed under both \(z\)- and
+\(T\)-differentiation.
+
+Define
+\begin{subequations}\label{eq:gamma-scale}
+\begin{align}
+ w_\epsilon(z)&=(1+\epsilon\ii z)/2,\qquad \epsilon=\pm1,\\
+ M(w)&=\frac{w(w-1)}{16}\pi^{-w/2}\Gamma(w/2),\\
+ G(z)&=\{M(w_+(z))M(w_-(z))\}^{1/2},\qquad g=G(X)>0.
+\end{align}
+\end{subequations}
+The square root is positive on the real segment and holomorphic
+on sufficiently high fixed charts. Sectorial gamma estimates
+\cite{dlmfgamma} give
+\begin{equation}
+ \frac{G'(z)}{G(z)}=-\frac{\pi}{8}+O(X^{-1}),\qquad
+ G(X)\ge g_-X^{7/4}\e^{-\pi X/8},\qquad
+ C_\chi\ge\sup_{\Omega_X(r,b)}\frac{g}{\abs{G(z)}},
+ \label{eq:gamma-comparison}
+\end{equation}
+with fixed positive constants after a fixed onset.
+For the growing-order slab, \cref{sec:calibration} supplies their explicit
+values, full complex domains, and a common sufficient center onset.
+Here and below classical constants may depend on fixed sectors
+and chart radii, but not on an order subsequently allowed to grow.
+
+For a field \(E\), the natural comparison norm is
+\begin{equation}
+ \normg{E}=\sup_{\substack{\tau\le T\le B\\z\in\Omega_X(r,b)}}
+ \frac{\max_{0\le j\le3}\abs{\partial_z^jE(T,z)}
+                      +\abs{\partial_TE(T,z)}}{\abs{G(z)}}.
+ \label{eq:natural-norm}
+\end{equation}
+The center norm replaces \(\abs{G(z)}\) by \(g\); later the outer
+norm replaces it by a positive amplitude envelope.
+None divides by the field itself.
+
+\subsection{Classical real Riemann--Siegel input}
+\label{subsec:rs-input}
+For real \(u\) in \(I_{X,B}=[X-V_B,X+V_B]\), write
+\[
+ a(u)=\sqrt{u/(4\pi)},\quad m(u)=\lfloor a(u)\rfloor,\quad
+ \chi(u)=1-2(a(u)-m(u)),
+\]
+\[
+ U(u)=\exp\left[-\ii\left\{\frac u4\log\frac u{4\pi}
+                                   -\frac u4-\frac{\pi}{8}\right\}\right].
+\]
+The fractional coordinate \(\chi\) is distinct from the fluctuation
+order \(p\). Set
+\begin{subequations}\label{eq:real-completion}
+\begin{align}
+ S_m(u)&=\sum_{\epsilon=\pm1}\sum_{n=1}^m
+                 M(w_\epsilon(u))n^{-w_\epsilon(u)},\\
+ R_{m,K}(u)&=2\Rea\left\{(-1)^{m-1}M(w_+(u))U(u)a(u)^{-1/2}
+                 \sum_{k=0}^{K}C_k(\chi(u),1/2)a(u)^{-k}\right\},\\
+ f_K(u)&=S_{m(u)}(u)+R_{m(u),K}(u).
+\end{align}
+\end{subequations}
+The coefficient normalization is the complex one in Polymath,
+Proposition 6.2, equations (53)--(56) \cite{polymath}.
+At \(\sigma=1/2\), for every positive integer \(K\), its
+real initial-data remainder gives
+\begin{equation}
+ \abs{H(0,u)-f_K(u)}
+ \le\frac{2^{7/4}}7G(u)a(u)^{-1/2}
+       \Gamma((K+1)/2)\left(\frac{1.1}{a(u)}\right)^{K+1}.
+ \label{eq:rs-remainder}
+\end{equation}
+Only this real initial formula is imported. No positive-time
+evolved remainder is continued to negative time.
+
+The complete change of cutoff is retained by setting
+\begin{subequations}\label{eq:retained-integral}
+\begin{align}
+ Q_{X,K}(u)&=S_{m(u)}(u)-S_N(u)+R_{m(u),K}(u),\\
+ \mathcal I_{X,K,B}(T,z)&=\int_{I_{X,B}}k_T(z-u)Q_{X,K}(u)\dd u.
+\end{align}
+\end{subequations}
+If \(a(X+V_B)-a(X-V_B)<1\), there is at most one threshold
+\(4\pi n^2\) in the window, and at most two real branches.
+Their endpoints are independent of \(z,T\). Possible values at a
+threshold have measure zero. The real-part operation remains inside
+the initial data in \eqref{eq:real-completion}; moving it outside
+the complex-kernel integral would change the function.
+
+For completeness, the classical real coefficient estimate
+\(\abs{C_k}\le (3\sqrt2/(2\pi))\Gamma(k/2)/2^k\), \(k\ge1\),
+and \(\abs{C_0}\le1/2\), imply a bounded retained coefficient sum
+when \(K\le a_{\min}^2\), where
+\(a_{\min}^2=(X-V_B)/(4\pi)\). Indeed successive terms of each
+parity have ratio \(k/(8a(u)^2)\le1/8\).
+Together with the at-most-one exact transfer this gives
+\(\abs{Q_{X,K}(u)}\le C G(u)X^{-1/4}\).
+This is a size bound, not a regularity or quadrature theorem.
+
+\subsection{The smaller outer envelope}
+Let \(C_\pm(t,z)=A_{\mathrm o}(t,z)\e^{\pm\ii\Theta_{\mathrm o}(t,z)}/2\)
+and \(\calE_{\mathrm o}(t,z)=\abs{C_+}+\abs{C_-}\).
+For \(1\le T\le2\), gamma calibration yields
+\begin{equation}
+ \calE_{\mathrm o}(-T,z)\ge
+ c_{\mathrm o}\abs{G(z)}
+    \exp\left(-\frac{TL^2}{16}+\frac{\pi^2T}{64}\right).
+ \label{eq:outer-calibration}
+\end{equation}
+One way to see the scale is to compare the modulus of
+\(A_{\mathrm o}(0,z)\) with \(\abs{G(z)}\) by sectorial Stirling.
+On a fixed chart \(L(z)=L+O(X^{-1})\), so the heat factor changes
+by \(\exp(O((1+L)/X))\). Finally
+\((\abs{\e^{\ii\Theta}}+\abs{\e^{-\ii\Theta}})/2\ge1\).
+After increasing the onset, fixed comparison constants give
+\eqref{eq:outer-calibration}, as in \cite{ans03,ans05}.
+Thus
+\begin{equation}
+ \normo{E}\le c_{\mathrm o}^{-1}\e^{L^2/8}
+       \lVert E\rVert_{\gamma;X;1,2}^{(3,1)}.
+ \label{eq:outer-conversion}
+\end{equation}
+The factor \(\e^{L^2/8}\) is why fixed algebraic error estimates
+alone do not establish the desired outer accuracy.

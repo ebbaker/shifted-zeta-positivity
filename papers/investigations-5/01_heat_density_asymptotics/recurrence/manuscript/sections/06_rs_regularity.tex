@@ -1,0 +1,212 @@
+\section{Analytic regularity and quadrature for the retained completion}
+\label{sec:quadrature}
+The approximation theorem leaves a finite bounded integral.
+Controlling its evaluation requires more than the real size
+estimate in \cref{subsec:rs-input}. We now specialize throughout
+to \(1\le T\le2\), \(p=\lfloor L/2\rfloor\), \(K=2p\).
+The statements below concern the finite retained expression, not
+an analytic continuation of the real Riemann--Siegel error theorem.
+
+\subsection{Remove apparent poles before estimating coefficients}
+The exact coefficient identities used here are those recorded in
+Arias de Reyna, Part II, (29), (62), (86)--(89)
+\cite{ariasII}, attributed there to the published Part I
+\cite{ariasI}. The underlying Part I proof has not been independently
+rechecked in this project. Part II contains preliminary precision
+arguments; its unproved technical inequalities are not imported.
+We use the named identities and derive the following bounds directly.
+
+In the same complex normalization as \cref{subsec:rs-input}, set
+\begin{subequations}\label{eq:rs-coefficient-identity}
+\begin{align}
+ F_0(\chi)&=
+ \frac{\e^{\pi\ii(\chi^2/2+3/8)}
+                     -\ii\sqrt2\cos(\pi\chi/2)}{2\cos(\pi\chi)},\\
+ C_k(\chi,1/2)&=\pi^{-2k}
+  \sum_{j=0}^{\lfloor3k/2\rfloor}
+       \left(\frac{\pi}{2\ii}\right)^j
+                  d_j^{(k)}F_0^{(3k-2j)}(\chi).
+\end{align}
+\end{subequations}
+At \(\chi=n+1/2\) the two numerator terms are both
+\(\ii(-1)^{n(n+1)/2}\). Every zero of the denominator is simple
+and removable, so \(F_0\) is entire.
+This fact alone would not make direct numerical division near
+those points stable.
+
+\begin{lemma}[Weighted coefficient recurrence]\label{lem:weighted-rs}
+Let \(e_j^{(k)}=(3k-2j)!\,d_j^{(k)}\), with \(e_0^{(0)}=1\)
+and out-of-range entries zero. For \(m=3k-2j>0\),
+\begin{equation}
+ e_j^{(k)}
+ =\frac{(m-1)(m-2)}4e_j^{(k-1)}-e_{j-2}^{(k-1)}.
+ \label{eq:weighted-rs}
+\end{equation}
+The first term is structurally absent when \(m=1,2\).
+For positive even \(k\), with \(j=3k/2\), the endpoint is
+\begin{equation}
+ e_j^{(k)}=-\sum_{h=1}^{j}\frac{(-1)^h}{h!}e_{j-h}^{(k)}.
+ \label{eq:rs-endpoint}
+\end{equation}
+The values and their positive recurrence majorants satisfy
+\begin{equation}
+ \max_j\abs{e_j^{(k)}}\le E_k:=8^k(k!)^2.
+ \label{eq:weighted-rs-bound}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Multiply the exact coefficient recurrence at \(\sigma=1/2\)
+by \(m!\). The previous-order derivative indices are \(m-3\)
+and \(m+1\), which gives \eqref{eq:weighted-rs}.
+The exact endpoint relation gives \eqref{eq:rs-endpoint}.
+The sum of absolute interior coefficients is at most
+\((9/4)k^2\). The endpoint contributes a factor at most
+\(\sum_{h\ge1}1/h!<2\) times the largest interior majorant.
+Thus a row costs at most \((9/2)k^2\) times the preceding row.
+Induction with \(8k^2\) proves \eqref{eq:weighted-rs-bound},
+also for intermediate positive sums.
+\end{proof}
+
+\begin{proposition}[Explicit complex coefficient bounds]
+\label{prop:rs-complex}
+Put
+\[
+ B_F=\tfrac12\{\e^{2\pi}+\sqrt2\cosh(\pi/2)\}.
+\]
+For \(\abs{\Rea\chi}\le3/2\), \(\abs{\Ima\chi}\le1/2\),
+\begin{equation}
+ \abs{C_k(\chi,1/2)}\le
+ D_k:=\frac{B_F}{1-\pi/8}
+                   (64/\pi^2)^k(k!)^2.
+ \label{eq:complex-Ck}
+\end{equation}
+At real \(\chi\in[-1,1]\), for each fixed \(s\ge0\),
+\begin{equation}
+ \abs{\partial_\chi^sC_k(\chi,1/2)}
+ \le B_F\pi^{-2k}E_k
+       \sum_{j=0}^{\lfloor3k/2\rfloor}
+       (\pi/2)^j\frac{(3k-2j+s)!}{(3k-2j)!}.
+ \label{eq:real-Ck-derivative}
+\end{equation}
+\end{proposition}
+\begin{proof}
+On the rectangle \(\abs{\Rea\chi}\le2,\abs{\Ima\chi}\le1\),
+the quotient is bounded by \(B_F\) on its boundary:
+the denominator has modulus at least \(2\) on the vertical
+sides and at least \(2\sinh\pi\) on the horizontal sides.
+Maximum modulus applies to the entire continuation.
+Radius-\(1/2\) Cauchy disks then give
+\(\abs{F_0^{(m)}}\le B_Fm!2^m\) on the smaller rectangle.
+Substitute \eqref{eq:weighted-rs-bound} into
+\eqref{eq:rs-coefficient-identity} and sum
+\(\sum_{j\ge0}(\pi/8)^j\), proving \eqref{eq:complex-Ck}.
+At real \(\chi\in[-1,1]\), radius-one Cauchy disks prove
+\eqref{eq:real-Ck-derivative}.
+\end{proof}
+In particular \(\log^+D_k=O((k+1)\log(k+2))\).
+The complex normalization is essential; the real cosine quotient
+\(\mathcal C\) in \eqref{eq:short} is not substituted for \(F_0\).
+
+\subsection{Holomorphic extension of each finite branch}
+Split \(I_X\) at its exact thresholds \(4\pi n^2\).
+On a branch \(J\), fix \(m\) and use
+\(\chi_m(u)=1-2(\sqrt{u/(4\pi)}-m)\).
+If \(A_m(u)\) denotes the finite complex expression inside
+the real part in \eqref{eq:real-completion}, then
+\[
+ A_m(u)+\overline{A_m(\bar u)}
+\]
+is holomorphic wherever the displayed finite factors are, and
+agrees with the real initial correction on \(J\).
+Add the two analytic transfer arms. This extends the retained
+branch \(Q_m\) holomorphically; it makes no assertion about the
+discarded remainder off the real axis.
+
+Use the Bernstein ellipse of parameter \(\rho=2\) for each \(J\).
+It lies within \(\abs{u-X}\le2V\), \(\abs{\Ima u}\le3V/4\),
+and every point on it is within \(V\) of a real point of \(J\).
+The gates
+\[
+ 2V\le X/4,\qquad V/\sqrt{2\pi X}\le1/2
+\]
+ensure that the branch stays in the coefficient rectangle of
+\cref{prop:rs-complex}. Write
+\begin{subequations}\label{eq:ellipse-data}
+\begin{align}
+ a_*&=\sqrt{(X-2V)/(4\pi)},\\
+ H_M&=\exp(2V\abs{\ell_+'(X)}+2HV^2/X),&
+ H_U&=\exp(V(L+1)/2),\\
+ \mathcal T_X&=\sum_{n\in\mathcal T}n^{-1/2}\e^{V\log n},&
+ B_Q&=2H_M\left(\mathcal T_X+
+                    H_Ua_*^{-1/2}\sum_{k=0}^KD_ka_*^{-k}\right).
+\end{align}
+\end{subequations}
+Here \(\mathcal T\) is the union of actual transfer indices
+over the branches; it contains at most one index.
+The gamma bound follows from \cref{lem:coeff}.
+For \(U\), integrate its logarithmic derivative
+\(-\ii\Log(u/(4\pi))/4\), imposing the eventual gate
+\(\sup_{\abs{q}\le2V}\abs{\Log((X+q)/(4\pi))}\le L+1\).
+Thus \(\abs{Q_m(u)/g}\le B_Q\) on every branch ellipse.
+
+Define nonnegative kernel polynomials
+\[
+ \mathsf K_a(v)=a!\sum_{j=0}^{\lfloor a/2\rfloor}
+       \frac{(v/2)^{a-2j}(1/4)^j}{(a-2j)!j!},
+ \qquad 0\le a\le3,
+\]
+and
+\begin{equation}
+ K_E=\frac{\e^{(Y+3V/4)^2/4}}{\sqrt{4\pi}}
+       \left[\max_{0\le a\le3}\mathsf K_a(W+2V)
+                       +\mathsf K_2(W+2V)\right],
+ \qquad B_E=B_QK_E.
+ \label{eq:ellipse-kernel}
+\end{equation}
+The sum of the maximum spatial channel and the time channel
+of the normalized integrand is bounded by \(B_E\).
+For the latter use \(\partial_Tk_T=\partial_z^2k_T\);
+these are actual kernel derivatives.
+The estimates retain the off-real kernel growth, giving
+\(\log^+B_E=O(L^2)+O(K\log(K+2))\).
+
+\subsection{Analytic Gauss error}
+\begin{lemma}[A complex-valued Gauss bound]\label{lem:gauss}
+If an analytic integrand is bounded by \(B\) on the
+Bernstein \(\rho\)-ellipse of a real interval \(J\), its
+\(n\)-node Gauss--Legendre rule has error at most
+\[
+ 4\abs J B\,\frac{\rho^{-2n+1}}{\rho-1}.
+\]
+The statement also holds for a finite-dimensional vector integrand
+in any norm.
+\end{lemma}
+\begin{proof}
+Under the Joukowski map, Cauchy's coefficient estimate gives
+Chebyshev coefficients bounded by \(2B\rho^{-j}\).
+Truncation at degree \(2n-1\) has uniform remainder at most
+\(2B\rho^{-2n+1}/(\rho-1)\).
+Gauss weights are positive, sum to \(\abs J\), and the rule
+is exact through degree \(2n-1\) \cite{dlmfgauss}.
+Subtract the polynomial; the integral and the quadrature
+each cost at most \(\abs J\) times the uniform remainder.
+The same argument applies to the channel norm. It uses no
+real mean-value formula for complex-valued data.
+\end{proof}
+Summing branch lengths, \(\sum_J\abs J=2V\), and setting
+\(\rho=2\) gives
+\begin{equation}
+ E_{\mathrm{quad}}\le16VB_E4^{-n}.
+ \label{eq:quadrature-bound}
+\end{equation}
+For any assigned center-normalized budget \(\varepsilon/20\),
+it is sufficient to take
+\begin{equation}
+ n\ge\max\left\{1,\left\lceil
+           \frac{\log(320VB_E/\varepsilon)}{\log4}\right\rceil\right\}.
+ \label{eq:quadrature-order}
+\end{equation}
+When \(-\log\varepsilon=O(L^2)\) and \(K=O(L)\), this is
+\(n=O(L^2)\) on each of at most two branches.
+Node, weight, and input-data errors have not been included
+in \eqref{eq:quadrature-bound}; they are paid next.

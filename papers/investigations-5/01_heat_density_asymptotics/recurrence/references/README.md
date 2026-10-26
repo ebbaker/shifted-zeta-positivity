@@ -69,3 +69,32 @@ now identifies the authorized PartII v1 reading copy outside Git, with
 size/hash and PartI access limits. DLMF3.5(v) positive Gauss weights and
 polynomial exactness were checked for the derived Note06 analytic bound;
 its shared bibliography record remains canonical.
+
+## R05-AN03 finite providers — 26 October 2026
+
+For Edward Baker with substantial LLM assistance, actual **gpt-6.1-sol,
+ultra**, recurrence chat0003. [Source Audit03](03_FINITE_PROVIDER_SOURCE_AUDIT_20261026.md)
+records DLMF infinite products, special values/recurrence and Gauss
+reading, with limits and links. The new gamma-product bibliography entry
+is in [references.bib](references.bib). The finite truncation, root and
+rounding bounds are derived in Note09, not imported as library guarantees.
+
+## R05-AN04 efficient providers — 26 October 2026
+
+For Edward Baker with substantial LLM assistance, actual **gpt-6.1-sol,
+ultra**, recurrence chat0003. [Source Audit04](04_EFFICIENT_PROVIDER_SOURCE_AUDIT_20261026.md)
+checks the complex log-gamma remainder, Bernoulli Fourier bound and
+Legendre identities used in Note10. New Bernoulli/Legendre entries are
+in the local bibliography; the shared ansatz DLMF5.11 entry remains
+canonical. Polynomial bit-cost and onset arguments are derived in Note10,
+not imported library guarantees. No third-party PDF added.
+
+## R05-AN05 explicit calibration — 26 October 2026
+
+For Edward Baker with substantial LLM assistance, actual **gpt-6.1-sol,
+ultra**, recurrence chat0003. [Source Audit05](05_EXPLICIT_CALIBRATION_SOURCE_AUDIT_20261026.md)
+checks the sectorial digamma/log-gamma errors, beta integral, exact
+half-gamma modulus and the N=1 finite-sum zeta representation. The shared
+gamma and local special-value records remain canonical; new beta/zeta
+entries are in the local bibliography. Explicit uniform constants and
+all-height arguments are derived in Note11, not imported library claims.

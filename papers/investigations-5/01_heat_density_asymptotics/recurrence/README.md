@@ -1,78 +1,58 @@
-# Recurrence, fluctuations, and generalized transform components
+# Recurrence and fluctuation hierarchies
 
 26 October 2026, America/New_York. Prepared for **Edward Baker** with
 substantial LLM assistance, **gpt-6-astra (Codex), recorded effort max**.
+Current integration and priority refresh: recurrence chat0005. The
+analytical source returns retain their **gpt-6.1-sol, ultra** attribution.
 
-This branch of [heat-density asymptotics](../README.md) gathers the related
-ideas about rewriting the heat ansatz as a hierarchy: generalized Fourier
-components, increasing fluctuation order, continuous smoothing and Laplace
-parameters, and the geometric and physical examples motivating them.
+The [current 42-page manuscript](manuscript/README.md) now develops one
+continuous argument from the canonical heat representation and finite
+fluctuation hierarchy to effective evaluation with explicit accuracy,
+calibration, all-height onset, and bit-work/storage bounds. It incorporates
+the analytical results of Notes09–11. Computational evidence appears only
+as support, with details in [Note12](notes/12_PROVIDER_IMPLEMENTATION_REPLAY_20261026.md)
+and the [chat0003 results summary](notes/13_CHAT0003_RESULTS_SUMMARY_20261026.md).
 
-Start with the [initial brainstorm](brainstorm/01_RECURRENCE_AND_GENERALIZED_TRANSFORM_HIERARCHIES_20261026.md).
-It gives the current mathematical starting point, the recurrence and its
-first levels, the analogies, and questions for later development.
-**Status: R01--R03 completed at their bounded analytical scopes; proved
-in-note with same-model internal assessments, gpt-6.1-sol, ultra,
-26 October 2026.**
+Start the next session with the [continuation](notes/15_ANALYTIC_STRENGTHENING_CONTINUATION_20261026.md),
+[current overview](research-overview/01_RECURRENCE_RESEARCH_OVERVIEW_20261026.md)
+and [sole live progress register](research-progress/01_RECURRENCE_RESEARCH_PROGRESS_20261026.md).
+The primary analytical task is [AN06 r1](research-progress/handoffs/HDA-R05-AN06.md):
+sharpen the sufficient all-height onset at the same target, frozen orders,
+buffers and full arithmetic population. It is READY_FOR_SOL, not executed.
+[N02 r1](research-progress/handoffs/HDA-R05-N02.md) remains a separate,
+bounded supporting software task; it is not a prerequisite for AN06.
 
-- [Research overview](research-overview/01_RECURRENCE_RESEARCH_OVERVIEW_20261026.md)
-- [Sole live recurrence progress register](research-progress/01_RECURRENCE_RESEARCH_PROGRESS_20261026.md)
-- [Three-round analysis continuation](notes/01_ANALYSIS_CONTINUATION_20261026.md)
-
+R01–R03 and R05-AN01–AN05 are closed at their bounded analytical scopes,
+proved in-note from named inputs with same-model internal assessments.
+N01 is closed at its finite component implementation/replay scope.
+Broad **R05 remains Partial** at complete evaluator implementation and
+certification. Manuscript integration supplies no new theorem, independent
+specialist validation, RH conclusion or physical-transfer result.
 
 | Folder | Purpose |
 | --- | --- |
+| [manuscript](manuscript/README.md) | Maintained analytical sources, reading PDF and build record. |
+| [notes](notes/README.md) | Detailed proofs, integration record and current continuation. |
+| [research-overview](research-overview/README.md) | Results, scope and ordered analytical priorities. |
+| [research-progress](research-progress/README.md) | Sole live task status and frozen handoffs. |
+| [reviews](reviews/README.md) | Assessments with explicit provenance and independence limits. |
+| [numerics](numerics/README.md) | Bounded supporting computations and small execution records. |
+| [references](references/README.md) | Primary-source guide and audits. |
 | [brainstorm](brainstorm/README.md) | Opening synthesis and alternative mechanisms. |
-| [notes](notes/README.md) | Subsequent derivations and bounded analytical attempts. |
-| [numerics](numerics/README.md) | Reproducible computations and small execution records. |
-| [reviews](reviews/README.md) | Assessments of identified claims and versions. |
-| [research-overview](research-overview/README.md) | Research questions, evidence and ordered analysis program. |
-| [research-progress](research-progress/README.md) | Live task status, dispositions and bounded handoffs. |
-| [references](references/README.md) | Primary-source guide and reusable bibliography. |
-| [manuscript](manuscript/README.md) | Future manuscript sources and build records. |
-| [chat-histories](chat-histories/README.md) | Conversation provenance and future affiliated histories. |
+| [chat-histories](chat-histories/README.md) | Unique conversation registrations and public provenance. |
 
 The [ansatz manuscript](../ansatz/manuscript/main.tex) remains the source
-of the existing theorems. Historical [Note15](../ansatz/notes/15_GENERALIZED_TRANSFORMS_AND_HEAT_COMPONENT_HIERARCHIES_20261026.md)
-and [Note16](../ansatz/notes/16_GAUSSIAN_FLUCTUATION_HIERARCHY_20261026.md)
-retain their original locations and attribution. Their ideas are gathered
-in the opening brainstorm here. [Ansatz Progress02](../ansatz/research-progress/02_EVOLUTION_ASYMPTOTICS_RESEARCH_PROGRESS_20261025.md)
-retains ownership of HDA-A02 and the wider ansatz queue. Recurrence
-execution is owned by the register linked above. HDA-R01-AN01 r1 now
-supersedes prepared AN07 as the active first comparison; the old request
-remains historical.
+of the preceding ansatz theorems. The [opening brainstorm](brainstorm/01_RECURRENCE_AND_GENERALIZED_TRANSFORM_HIERARCHIES_20261026.md)
+gathers the historical [transform note](../ansatz/notes/15_GENERALIZED_TRANSFORMS_AND_HEAT_COMPONENT_HIERARCHIES_20261026.md)
+and [fluctuation note](../ansatz/notes/16_GAUSSIAN_FLUCTUATION_HIERARCHY_20261026.md)
+without relocating their provenance. [Ansatz Progress02](../ansatz/research-progress/02_EVOLUTION_ASYMPTOTICS_RESEARCH_PROGRESS_20261025.md)
+retains HDA-A02 and wider ansatz ownership; parent statuses are unchanged.
 
-The completed sequence gives [p=2](notes/02_FIRST_FINITE_FLUCTUATION_COMPARISON_20261026.md)
-error X^-11/4, [each fixed p](notes/03_FIXED_ORDER_FLUCTUATION_HIERARCHY_20261026.md)
-error X^-(p+3/4) with K=2p, and the [fixed compact-time family](notes/04_COMPACT_TIME_RECURRENCE_FAMILY_20261026.md)
-with explicit endpoint/onset costs, in the full buffered field/jet/time norm.
-All modes and the bounded RS integral remain. No manuscript or numerical
-campaign; parent statuses unchanged. **Next recommended owner: Analysis —
-Sol**, controlled-order-growth audit after a new request; not started.
-
-Read the [result summaries](../../../../result-summaries/README.md) and
-[patterns to avoid](../../../../avoid/README.md). See the concise
-[draft history](DRAFT_HISTORY.md) for this branch's organizational origin.
-
-26 October 2026, actual **gpt-6.1-sol, ultra**: the authorized
-[controlled-order audit](notes/05_CONTROLLED_ORDER_GROWTH_AUDIT_20261026.md),
-with [internal assessment](reviews/04_CONTROLLED_ORDER_GROWTH_ASSESSMENT_20261026.md),
-now pays the outer-envelope (3,1) error e^-L²/4 on [1,2] with
-p=floor(L/2),K=2p. Its common-onset ledger covers 1<=p<=cL for each
-fixed c; the full chosen-order/rate statement and actual costs are saved.
-Every mode and the bounded RS integral remain. R05's bounded audit is
-CLOSED; broad evaluator/precision/quadrature cost remains Partial.
-No manuscript or numerical campaign; next recommended deliverable is
-Analysis — Sol's analytical evaluation-error budget, not started.
-
-26 October 2026, actual **gpt-6.1-sol, ultra**: the authorized
-[evaluation-error audit](notes/06_COEFFICIENT_ROUNDING_AND_RS_QUADRATURE_20261026.md)
-and [internal assessment](reviews/05_EVALUATION_ERROR_ASSESSMENT_20261026.md)
-now supply explicit coefficient, rounding, scale and retained-integral
-quadrature/geometry allowances for the same e^-L²/4 target. The missing
-RS analytic quadrature step is paid, O(L²) nodes per branch. The
-3L²/(8log2)+O(Llog L) requested accuracy is a **conditional specification**;
-concrete certified providers and descriptor handling remain the first
-unpaid step. AN02 CLOSED, broad R05 Partial. This supersedes the earlier
-next-item recommendation. Next owner: **Analysis — Sol**, an analytical
-provider-algorithm audit, not started. No manuscript or numerics.
+Read the repository [result index](../../../../result-summaries/README.md),
+[heat-flow cluster](../../../../result-summaries/11_newman_heat_flow_reductions_and_certificates.md)
+and [patterns to avoid](../../../../avoid/README.md), particularly
+[separate error bounds](../../../../avoid/12_term_by_term_matching_and_separate_bounds.md).
+[Note14](notes/14_EFFECTIVE_MANUSCRIPT_INTEGRATION_20261026.md) records the
+current synthesis. Earlier stages, superseded next-task recommendations
+and their evidence remain in [DRAFT_HISTORY.md](DRAFT_HISTORY.md), the
+progress register and source notes; they are not current instructions.

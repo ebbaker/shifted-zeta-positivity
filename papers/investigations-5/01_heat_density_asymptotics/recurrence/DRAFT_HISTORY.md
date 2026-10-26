@@ -48,3 +48,65 @@ Prepared for Edward Baker with substantial LLM assistance,
   Broad R05 Partial at concrete provider certification. Same-model internal
   assessment, actual gpt-6.1-sol, ultra, Edward Baker with LLM assistance.
   No manuscript or numerical campaign.
+
+- **2026-10-26 — analytical manuscript integrated.** Working source
+  [manuscript/main.tex](manuscript/main.tex); no commit/tag or new snapshot.
+  Systematic derivations join fixed-order, compact-time, growing-order and
+  conditional evaluation results, with an explicit simplest/higher-order
+  retention guide and outstanding tasks. [Note07](notes/07_MANUSCRIPT_INTEGRATION_20261026.md),
+  [Review06](reviews/06_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261026.md).
+  Edward Baker with substantial LLM assistance, gpt-6-astra, effort max;
+  broad R05 remains Partial.
+
+- **2026-10-26 — current priorities and next session prepared.** Working
+  tree; no new commit/tag or manuscript snapshot. The overview and sole
+  register now lead with the completed results and provider-first agenda.
+  [Note08](notes/08_PROVIDER_AUDIT_CONTINUATION_20261026.md) and
+  [AN03 r1](research-progress/handoffs/HDA-R05-AN03.md) prepare the next
+  bounded Analysis — Sol audit, READY_FOR_SOL, not executed. Planning
+  only; manuscript and mathematical statuses unchanged. Edward Baker
+  with substantial LLM assistance, gpt-6-astra, effort max.
+
+- **2026-10-26 — finite provider theorem.** Working tree; no commit/tag
+  or new snapshot. [Note09](notes/09_FINITE_PROVIDER_ALGORITHMS_20261026.md)
+  and [Review07](reviews/07_FINITE_PROVIDER_ALGORITHM_ASSESSMENT_20261026.md)
+  close AN03 on a certified exact-input class, with explicit series/tails,
+  gamma jets, Gauss/RS data and guard geometry. Expensive constructions
+  prove effectiveness; efficient costs/evaluator remain open. Manuscript
+  integration is pending. Edward Baker with substantial LLM assistance,
+  actual gpt-6.1-sol, ultra, recurrence chat0003.
+
+- **2026-10-26 — polynomial provider and conditional cost milestone.**
+  Working tree; no commit/tag or new snapshot. [Note10](notes/10_EFFICIENT_PROVIDERS_AND_TOTAL_COST_20261026.md)
+  and [Review08](reviews/08_EFFICIENT_PROVIDER_AND_COST_ASSESSMENT_20261026.md)
+  replace exponential provider costs, retain full N-mode work, bound
+  streamed storage and give an explicit onset in uniform calibration
+  data. Actual constant values/software remain open; manuscript integration
+  pending. Edward Baker with LLM assistance, gpt-6.1-sol, ultra, chat0003.
+
+- **2026-10-26 — explicit uniform calibration and onset milestone.**
+  Working tree; no commit/tag or snapshot. [Note11](notes/11_EXPLICIT_CALIBRATION_AND_HEIGHT_ONSET_20261026.md)
+  and [Review09](reviews/09_EXPLICIT_CALIBRATION_ASSESSMENT_20261026.md)
+  instantiate every requested calibration constant/domain and a conservative
+  all-height threshold for fixed buffered charts. AN05 CLOSED, broad R05
+  Partial at implementation/certification; manuscript integration pending.
+  Edward Baker with LLM assistance, gpt-6.1-sol, ultra, chat0003.
+
+- **2026-10-26 — finite provider software and chat synthesis.** Working
+  tree; no commit/tag or snapshot. [Note12](notes/12_PROVIDER_IMPLEMENTATION_REPLAY_20261026.md)
+  and [Review10](reviews/10_PROVIDER_REPLAY_ASSESSMENT_20261026.md) close
+  N01's finite gamma/Gauss matrix with hash-bound replay, retained runner
+  failure and measured costs. [Note13](notes/13_CHAT0003_RESULTS_SUMMARY_20261026.md)
+  summarizes AN03--AN05/N01. Broad R05 Partial; manuscript integration
+  pending. Edward Baker with LLM assistance, gpt-6.1-sol, ultra, chat0003.
+
+- **2026-10-26 — effective evaluation manuscript integrated.** Working
+  [main source](manuscript/main.tex); no commit/tag or snapshot folder.
+  Notes09–11 now supply the finite constructions, polynomial total costs,
+  explicit calibration and all-height onset in one 42-page argument.
+  Numerical details remain linked supporting notes. [Note14](notes/14_EFFECTIVE_MANUSCRIPT_INTEGRATION_20261026.md),
+  [Review11](reviews/11_EFFECTIVE_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261026.md)
+  and [continuation Note15](notes/15_ANALYTIC_STRENGTHENING_CONTINUATION_20261026.md).
+  Analytical onset sharpening is prepared as AN06; N02 remains supporting.
+  Statuses unchanged. Edward Baker with LLM assistance, gpt-6-astra,
+  recorded effort max, recurrence chat0005.

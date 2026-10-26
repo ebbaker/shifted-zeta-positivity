@@ -1,0 +1,197 @@
+\section{The finite fluctuation hierarchy}
+\label{sec:hierarchy}
+\subsection{A common logarithmic shape}
+On the high-height disk choose an analytic logarithm
+\(\ell_\epsilon(z)=\log M(w_\epsilon(z))\), and put
+\begin{subequations}\label{eq:frozen-data}
+\begin{align}
+ b_{\epsilon n}&=M(w_\epsilon(X))n^{-w_\epsilon(X)},&
+ \lambda_{\epsilon n}&=\ell_\epsilon'(X)-\epsilon\ii\log n/2,\\
+ c_{\epsilon r}&=\frac{\ell_\epsilon^{(r+1)}(X)}{(r+1)!},&
+ A_\epsilon(q)&=\exp\{\ell_\epsilon(X+q)-\ell_\epsilon(X)
+                                      -\ell_\epsilon'(X)q\}.
+\end{align}
+\end{subequations}
+Then, exactly for local real \(q\),
+\[
+ M(w_\epsilon(X+q))n^{-w_\epsilon(X+q)}
+       =b_{\epsilon n}\e^{\lambda_{\epsilon n}q}A_\epsilon(q).
+\]
+All modes in one arm share the same shape \(A_\epsilon\).
+This separates arithmetic frequency from gamma curvature.
+
+\begin{lemma}[Simultaneous coefficient bound]\label{lem:coeff}
+There are fixed \(A,H\ge1\), \(D\ge4\), and a fixed onset such that
+\begin{equation}
+ \sup_{\abs{q}\le X/4}\abs{\ell_\epsilon''(X+q)}\le H/X,
+ \qquad
+ \abs{c_{\epsilon r}}\le
+ \frac{H4^{r-1}}{r(r+1)}X^{-r}\le AD^{r-1}X^{-r}
+ \quad(r\ge1).
+ \label{eq:coefficient-bound}
+\end{equation}
+\end{lemma}
+\begin{proof}
+The arguments \(w_\epsilon(z)/2\) stay in fixed sectors away from
+the negative real ray and have modulus comparable to \(X\).
+Sectorial digamma asymptotics and an interior Cauchy estimate give
+\(\psi'(v)=1/v+O(\abs v^{-2})\). Direct differentiation gives
+\[
+ \ell_\epsilon''(z)=\frac1{4w_\epsilon(z)^2}
+ +\frac1{4(w_\epsilon(z)-1)^2}
+ -\frac1{16}\psi'(w_\epsilon(z)/2)=O(X^{-1}).
+\]
+Cauchy's estimate for the \((r-1)\)-st derivative of
+\(\ell_\epsilon''\), divided by \((r+1)!\), proves
+\eqref{eq:coefficient-bound}. The sector can first be slightly
+enlarged to justify the estimate on the closed disk.
+\end{proof}
+This analytic disk bound is stronger than a list of fixed-\(r\)
+asymptotic statements: it controls all coefficient orders at once.
+
+\subsection{Grading by fluctuation weight}
+Suppress \(\epsilon\) temporarily. Define the finite polynomials
+\begin{subequations}\label{eq:partition}
+\begin{align}
+ a_0(q)&=1,\\
+ a_j(q)&=\sum_{\substack{k_1,\ldots,k_j\ge0\\\sum_{r=1}^j rk_r=j}}
+           \prod_{r=1}^j\frac{(c_rq^{r+1})^{k_r}}{k_r!},
+ &P_p(q)&=\sum_{j=0}^p a_j(q).
+\end{align}
+\end{subequations}
+For \(j\ge1\), the degrees of \(a_j\) run from \(j+1\) to \(2j\).
+The index \(j\) is the power of \(X^{-1}\) suggested by
+\eqref{eq:coefficient-bound}, not ordinary polynomial degree.
+Locally the convergent generating function is
+\[
+ \exp\left(\sum_{r\ge1}c_rq^{r+1}s^r\right)=\sum_{j\ge0}a_j(q)s^j.
+\]
+Differentiating with respect to \(s\) gives the exact recurrence
+\begin{equation}
+ j a_j(q)=\sum_{r=1}^j r c_rq^{r+1}a_{j-r}(q).
+ \label{eq:initial-recurrence}
+\end{equation}
+The first levels are
+\begin{equation}
+ P_1=1+c_1q^2,\qquad
+ P_2=1+c_1q^2+c_2q^3+\tfrac12c_1^2q^4.
+ \label{eq:first-polynomials}
+\end{equation}
+A degree-four Taylor polynomial would also include \(c_3q^4\),
+which has fluctuation weight three. The two truncations are
+therefore different even at low order.
+
+\subsection{Gaussian moments and the evolved recurrence}
+Let \(d=z-X\) and \(\calQ_T=d+2T\partial_d\).
+The kernel identity \(\calQ_Tk_T(d-q)=qk_T(d-q)\) gives
+\begin{subequations}\label{eq:moment}
+\begin{align}
+ \int_\R k_T(d-q)\e^{\lambda q}q^m\dd q
+ &=\e^{\lambda d+T\lambda^2}\calH_m(d+2T\lambda,T),\\
+ \calH_m(t,T)&=m!\sum_{\nu=0}^{\lfloor m/2\rfloor}
+            \frac{T^\nu t^{m-2\nu}}{\nu!(m-2\nu)!}.
+\end{align}
+\end{subequations}
+Equivalently,
+\(\sum_m\calH_m(t,T)s^m/m!=\e^{ts+Ts^2}\), whence
+\begin{equation}
+ \calH_0=1,\quad\calH_1=t,\quad
+ \calH_m=t\calH_{m-1}+2T(m-1)\calH_{m-2}.
+ \label{eq:moment-recurrence}
+\end{equation}
+Define
+\[
+ U_{\epsilon,j}(T,d)
+  =\sum_{n=1}^N\int_\R k_T(d-q)b_{\epsilon n}
+                         \e^{\lambda_{\epsilon n}q}a_{\epsilon,j}(q)\dd q.
+\]
+All these integrals are absolutely convergent. Evolving
+\eqref{eq:initial-recurrence} yields
+\begin{equation}
+ U_{\epsilon,0}=\sum_{n=1}^Nb_{\epsilon n}
+                      \e^{\lambda_{\epsilon n}d+T\lambda_{\epsilon n}^2},
+ \qquad
+ jU_{\epsilon,j}=\sum_{r=1}^j
+                  r c_{\epsilon r}\calQ_T^{r+1}U_{\epsilon,j-r}.
+ \label{eq:evolved-recurrence}
+\end{equation}
+There is no noncommutative ordering ambiguity: all operators on the
+right are powers of the same \(\calQ_T\).
+
+\begin{definition}[Finite completed model]\label{def:model}
+For finite \(p,K\), let
+\begin{equation}
+ F_{X,B}^{[p,K]}(T,z)=
+       \sum_{\epsilon=\pm1}\sum_{j=0}^p U_{\epsilon,j}(T,z-X)
+                    +\mathcal I_{X,K,B}(T,z).
+ \label{eq:model}
+\end{equation}
+\end{definition}
+\begin{proposition}[Exact frozen evolution]\label{prop:residual}
+Every model \eqref{eq:model} satisfies
+\[
+ (\partial_T-\partial_z^2)F_{X,B}^{[p,K]}=0,\qquad
+ \partial_z(\partial_T-\partial_z^2)F_{X,B}^{[p,K]}=0.
+\]
+\end{proposition}
+\begin{proof}
+Either differentiate the Gaussian transforms or use
+\([\,\partial_T-\partial_d^2,\calQ_T\,]=0\).
+The base exponentials solve heat exactly. The retained integral
+also does, because its data, partitions, and endpoints are fixed.
+\end{proof}
+These identities concern the model's evolution. They do not yet
+compare its initial data with the canonical source.
+
+\subsection{A local remainder with explicit order dependence}
+For a polynomial \(P(x)=\sum_m P_mx^m\) and a sequence \(M_m\), write
+\(P[M]=\sum_mP_mM_m\). Introduce the positive polynomials
+\begin{subequations}\label{eq:majorant-polynomials}
+\begin{align}
+ \mathsf C_j(x)&=\sum_{k=1}^j
+     \frac{A^kD^{j-k}}{k!}\binom{j-1}{k-1}x^{j+k},
+ &\mathsf H_p(x)&=1+\sum_{j=1}^p\mathsf C_j(x),\\
+ \mathsf B_m(x)&=\sum_{k=1}^m
+       \frac{2^{m+k}A^kD^{m-k}}{k!}\binom{m-1}{k-1}x^{m+k}.
+\end{align}
+\end{subequations}
+\begin{lemma}[Weighted remainder]\label{lem:weighted}
+If \(DV_B/X\le1/2\) and \(2AV_B^2/X\le1\), then for every integer
+\(p\ge0\) and \(\abs q\le V_B\),
+\begin{equation}
+ \abs{A_\epsilon(q)-P_{\epsilon,p}(q)}
+      \le \e X^{-(p+1)}\mathsf B_{p+1}(\abs q).
+ \label{eq:weighted-remainder}
+\end{equation}
+Also \(\abs{a_{\epsilon,j}(q)}\le X^{-j}\mathsf C_j(\abs q)\),
+and, for \(X\ge1\), \(\abs{P_{\epsilon,p}(q)}\le\mathsf H_p(\abs q)\)
+on the whole real line.
+\end{lemma}
+\begin{proof}
+Grouping a partition by \(k=\sum k_r\) uses
+\[
+ \sum_{\substack{\sum rk_r=j\\\sum k_r=k}}\frac1{\prod k_r!}
+                 =\frac1{k!}\binom{j-1}{k-1}.
+\]
+This follows by taking the coefficient of \(t^j\) in
+\((t+t^2+\cdots)^k/k!\), and proves the coefficient majorant.
+For the remainder set
+\(f(s)=\sum_{r\ge1}c_rq^{r+1}s^r\), \(x=\abs q\), \(0\le s\le1\).
+The geometric majorant gives \(\abs{f(s)}\le1\) and
+\[
+ \frac{\abs{f^{(r)}(s)}}{r!}
+ \le AD^{r-1}X^{-r}x^{r+1}(1-Dsx/X)^{-r-1}
+ \le2^{r+1}AD^{r-1}X^{-r}x^{r+1}.
+\]
+The finite partition formula for the \(m\)-th derivative of
+\(\e^{f(s)}\) consequently bounds its magnitude divided by \(m!\)
+by \(\e X^{-m}\mathsf B_m(x)\).
+Taylor's integral remainder at \(s=1\), with \(m=p+1\), has
+factor \(m\int_0^1(1-s)^{m-1}\dd s=1\), proving
+\eqref{eq:weighted-remainder}.
+\end{proof}
+The generating function has a local continuous deformation
+\(A_s(q)=\exp(\log A(sq)/s)\), extended by \(A_0=1\).
+It explains the grading, but the argument uses a finite Taylor
+remainder. It does not exchange an infinite hierarchy with a
+whole-line heat integral.

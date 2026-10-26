@@ -1,0 +1,152 @@
+\section{Introduction and the approximation choices}
+\label{sec:intro}
+The useful question for a finite asymptotic formula is what its
+retained terms buy. Here there are two separate resolutions: the
+curvature of the arithmetic carriers and the order of their
+Riemann--Siegel completion. Improving either in isolation need not
+improve the approximation to the canonical field. This paper derives
+their matching, then controls the constants sufficiently well to let
+the chosen order increase with height.
+
+The development synthesizes the comparison and evaluation results in
+recurrence Notes 02--06 and 09--11
+\cite{rec02,rec03,rec04,rec05,rec06,rec09,rec10,rec11}. The comparison is always to the
+same complete theta-source heat flow. In particular, a finite
+polynomial hierarchy is not a truncation of the theta source or
+of the retained arithmetic population. Its exact heat evolution
+is useful structure, but the error is proved by matching initial
+data, local remainders, and tails.
+
+\subsection{What survives from the preceding ansatz investigation}
+\label{subsec:retention}
+The preceding investigation separated the elementary outer carrier
+from the complete short arithmetic approximation
+\cite{ans03,ans04,ans05,ans10,ans12}. We retain that distinction.
+Put \(L(z)=\Log(z/(4\pi))\), with the branch continued from the
+positive real axis, and define
+\begin{subequations}\label{eq:outer-arms}
+\begin{align}
+ A_{\mathrm o}(t,z)&=\frac{\pi^{1/4}}{16}z^{7/4}
+ \exp\left\{-\frac{\pi z}{8}
+       +\frac t{16}\left(L(z)^2-\frac{\pi^2}{4}\right)\right\},\\
+ \Theta_{\mathrm o}(t,z)&=\frac z4(L(z)-1)
+                  +\frac{\pi t}{16}L(z)+\frac{7\pi}{8}.
+\end{align}
+\end{subequations}
+The elementary cosine \(A_{\mathrm o}\cos\Theta_{\mathrm o}\)
+describes the first carrier. Its adequacy is regime-dependent.
+In the negative-time regime studied here, the full arithmetic
+population cannot be replaced by that carrier using the present
+estimates.
+
+For a fixed chart cutoff \(N=\lfloor\sqrt{X/(4\pi)}\rfloor\), the
+earlier simplest complete short formula is
+\begin{subequations}\label{eq:short}
+\begin{align}
+ F_{\mathrm{short}}(t,z)
+ &=A_{\mathrm o}(t,z)\sum_{n=1}^{N}w_n(t,z)\cos\phi_n(t,z)
+       +\e^{-\pi^2t/64}\mathcal R_N(z),\\
+ w_n(t,z)&=n^{-1/2}
+     \exp\left\{\frac t4\bigl((\log n)^2-L(z)\log n\bigr)\right\},\\
+ \phi_n(t,z)&=\Theta_{\mathrm o}(t,z)
+                  -\left(\frac z2+\frac{\pi t}{8}\right)\log n,\\
+ \mathcal R_N(z)&=(-1)^NG(z)a(z)^{-1/2}\mathcal C(a(z)-N),\\
+ \mathcal C(v)&=\frac{\cos(2\pi(v^2-v)-\pi/8)}{\cos(2\pi v)},
+ \qquad a(z)=\sqrt{z/(4\pi)}.
+\end{align}
+\end{subequations}
+Here \(G\) is defined in \cref{eq:gamma-scale}, and removable
+singularities in \(\mathcal C\) are filled analytically.
+The cutoff is frozen when differentiating. Ansatz Note 05 proves
+natural-scale \(O(X^{-3/4})\) field, spatial-through-three, and
+first-time errors on \(1\le T=-t\le2\).
+Ansatz Note 04 separately proves its signed crossover estimates on
+\(\abs t\log(X/(4\pi))\le8\). These are different domains and
+different weighted statements.
+
+The first higher approximation replaces the elementary arithmetic
+carriers by exact gamma modes with a curvature correction. Its
+Riemann--Siegel completion must also improve: the earlier
+target-dependent construction retains \(C_0,C_1\) in a bounded
+real-data heat integral and has \(O(X^{-5/4})\) error. The present
+frozen first level retains \(C_0,C_1,C_2\) and has
+\(O(X^{-7/4})\) error. The source of this difference will be
+derived in \cref{subsec:matching,subsec:low-orders}.
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.21\textwidth}>{\raggedright\arraybackslash}p{.29\textwidth}>{\raggedright\arraybackslash}p{.24\textwidth}>{\raggedright\arraybackslash}p{.14\textwidth}@{}}
+\toprule
+Approximation & Arithmetic terms retained & Completion retained &
+Natural-scale error\\
+\midrule
+Earlier short formula &
+All \(n\le N\), both elementary arms &
+Leading \(\mathcal R_N\), with its heat factor &
+\(X^{-3/4}\)\\[3pt]
+Earlier first curvature correction &
+All exact gamma modes, target-dependent quadratic correction &
+Bounded integral through \(C_1\), exact transfer &
+\(X^{-5/4}\)\\[3pt]
+Frozen first level &
+\(U_0+U_1\), all modes &
+Bounded integral through \(C_2\) &
+\(X^{-7/4}\)\\[3pt]
+Frozen second level &
+\(U_0+U_1+U_2\), all modes &
+Bounded integral through \(C_4\) &
+\(X^{-11/4}\)\\[3pt]
+Frozen order \(p\ge1\) &
+\(\sum_{j=0}^pU_j\), all modes &
+Bounded integral through \(C_{2p}\) &
+\(X^{-(p+3/4)}\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+All rows apply on \(1\le T\le2\) with fixed buffers and sufficiently
+large height; the frozen fixed-order rows extend to any declared
+fixed compact interval \(0<\tau\le T\le B\).
+Every integral row includes the exact change between the natural
+cutoff at the integration point and the chart cutoff \(N\).
+The table compares proved upper allowances, not pointwise
+monotonicity of approximation error.
+
+\subsection{Main conclusions and proof architecture}
+The paper develops three connected conclusions. First,
+\cref{thm:fixed,thm:growing} quantify the gain from each retained
+fluctuation level, first at fixed order and then at controlled growing
+order. The completion order must track the arithmetic curvature order:
+improving one without the other can leave the error rate unchanged.
+
+Second, \cref{thm:effective} turns this comparison into a terminating
+finite evaluation construction. Analytic coefficient bounds, quadrature,
+input sensitivity, and roundoff are allocated separately. Shifted gamma
+expansions, exact Gauss root counts, pole-safe coefficient formulas, and
+interior branch guards then supply every data contract. The accepted
+input class consists of dyadic centers with strict certified descriptors
+and exact rational queries; its separation dependence is explicit.
+
+Third, \cref{thm:explicit-onset,thm:bit-cost} make the construction
+effective in height and cost. With \(\nu=\lceil r+b+2\rceil+1\),
+a sufficient log-height is \(L_*=2^{22}\nu^4\). The bit-work bound
+retains all \(N\asymp\sqrt X\) modes, while streaming avoids storing
+them all. These conservative bounds establish a finite procedure; their
+size does not assert practical evaluation at the sufficient onset.
+
+The proofs proceed from the real initial-value heat formula to the local
+generating function. Integrating its weighted remainder against Gaussian
+moments preserves the useful powers of height; the full population costs
+\(X^{1/4}\), and matching the initial Riemann--Siegel remainder fixes
+\(K=2p\). True and artificial tails are kept separate. Only after their
+order dependence is controlled do we change to the smaller outer envelope.
+The evaluation budget is then proved as a modular theorem, supplied by
+finite algorithms, and closed with explicit uniform calibration.
+
+The analytical claims are proved from the named classical inputs.
+Their source notes have same-model internal assessments, and this
+manuscript provides an internal synthesis check. Supporting component
+computations are linked in \cref{sec:effective}; they are not premises of
+the theorems. Independent specialist validation, including the source
+proofs behind the imported coefficient identities, remains open.
+No claim of priority, infinite-series convergence, or a conclusion about
+zeros from approximation accuracy alone is made.

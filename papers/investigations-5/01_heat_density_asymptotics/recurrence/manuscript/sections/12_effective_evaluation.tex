@@ -1,0 +1,213 @@
+\section{Effective evaluation of the canonical field}
+\label{sec:effective}
+We combine the approximation, finite data constructions, and explicit
+calibration into a single algorithm theorem. The exact-input restriction,
+the full arithmetic population, and the cost of small separation remain
+part of the statement. The numerical implementation status is separate.
+
+\subsection{A finite allocation that meets every contract}
+\label{subsec:finite-allocation}
+Use \eqref{eq:explicit-calibration}, the comparable budget
+\eqref{eq:comparable-budget}, and rational upper enclosures of the
+positive quantities below. A bar denotes an upper enclosure; it is
+suppressed when this creates no ambiguity. Each can be chosen below
+twice one plus the exact quantity.
+
+\begin{enumerate}[leftmargin=*,itemsep=.5em]
+\item \textbf{Common scale.}
+Take \(\varepsilon_g\le\min(1/2,e/[8(1+A_0)])\).
+Then \(\varepsilon_gA_0\le e/8\).
+
+\item \textbf{Arithmetic inputs.}
+Put
+\[
+ C_{\rm ar}=C_{\rm pop}X^{1/4}
+       [\mathcal D_p+2(\mathcal D_p^{(1)}+\mathcal C_p+\mathcal S_p)],
+ \qquad\delta_{\rm ar}\le\min(1/4,e/[80(1+C_{\rm ar})]).
+\]
+Deliver \(\beta\) with error \(\delta_{\rm ar}n^{-1/2}\), and
+\(\lambda,c_r\) with error \(\delta_{\rm ar}\).
+The shape table is exact rational at the delivered \(c_r\), or is
+stored with error at most \(\delta_{\rm ar}\). Thus
+\eqref{eq:arithmetic-error} is at most \(e/80\); input perturbation
+and preprocessing error are charged once.
+
+\item \textbf{Geometry and exact quadrature.}
+Set
+\[
+ \Delta=\min\left(\frac18,
+     \frac{e}{2048(1+B_{\rm loc})(1+\overline V)}\right).
+\]
+Use guards \(\eta\le\Delta\), base-node errors at most
+\(\Delta/(1+\overline V)\), and split that total base-weight allowance
+over the retained intervals. Then
+\(\varepsilon_b,\varepsilon_u,\varepsilon_w\le\Delta\), so
+\eqref{eq:geometry-error} is below \(e/100\).
+Choose the outer Gauss order \(n\ge1\) by the strict rational test
+\(16\overline V\overline B_E4^{-n}<e/80\).
+This is a terminating geometric test, with \(n=O(L^2)\).
+
+\item \textbf{Retained-integral data.}
+Set
+\[
+ \varepsilon_Q=\frac{e}{80[1+(2\overline V+\Delta)K_{\rm loc}]},
+\]
+and choose real-node upper bounds \(\overline A,\overline R_k\)
+for the factors in \eqref{eq:node-data-error}. With
+\[
+ M_Q=1+2\sum_{k=0}^K
+  [\overline R_kD_k+(\overline A+1)(D_k+\overline R_k+1)],
+ \quad\delta_{\rm RS}\le\min(1/4,\varepsilon_Q/[4(1+M_Q)]),
+\]
+deliver each amplitude, power, coefficient, and exact-transfer
+approximation to error \(\delta_{\rm RS}\).
+Then \eqref{eq:node-data-error} is at most \(\varepsilon_Q/4\)
+and \eqref{eq:RS-data-budget} at most \(e/80\).
+Use \eqref{eq:contour-delivery}--\eqref{eq:Ck-delivery} for the
+coefficients, keeping every \(k\le K\).
+The contour order is \(O(L^2+L\log L)\).
+
+\item \textbf{Final circuit.}
+Evaluate the finite moment, kernel, and derivative-channel recurrences
+at the already delivered inputs. Their input differences have been paid
+in the preceding categories. In this final comparison treat those
+delivered inputs as exact, and propagate only new primitive and operation
+errors using \eqref{eq:roundoff-updates} and the elementary tail bounds.
+Refine their dyadic tolerances until the finite positive error sum is
+below \(e/160\), reserving another \(e/160\) for final quantization.
+Every division has a positive certified separation; the graph is finite,
+so its bound tends to zero as the new tolerances tend to zero.
+This proves finite termination with \(E_{\rm round}<e/80\).
+\end{enumerate}
+The exact-rational reference construction has zero internal operation
+rounding. For bounded bit work, evaluate individual rational terms,
+quantize to a common dyadic grid, and accumulate as integers. A sum of
+\(S\) terms costs its actual \(S\) quantization allowances and
+\(\lceil\log_2S\rceil\) guard bits. A floating alternative uses
+\eqref{eq:roundoff-updates} and \(uS_{\rm lin}\le1/4\).
+Provider-internal errors are included in their delivered radii, not
+charged again as final-circuit errors.
+
+\begin{theorem}[Effective canonical evaluation]\label{thm:effective}
+Fix positive dyadic \(r,b\), and use the canonical source
+\eqref{eq:canonical}. For each accepted exact query of
+\cref{subsec:input-class} with \(L\ge L_*\) in
+\eqref{eq:closed-onset}, there is a terminating finite algorithm
+delivering the field, spatial derivatives through order three, and first
+time derivative, with the combined output error
+\[
+ \frac{\max_{0\le j\le3}|\widehat h_j-\partial_z^jh|
+          +|\widehat h_T-\partial_Th|}{\calE_{\mathrm o}(-T,z)}
+ \le\e^{-L^2/4}.
+\] The same conclusion holds at any smaller height
+whose structural and half-target gates are strictly certified.
+
+The construction retains both arms, all \(n\le N\), all
+\(C_0,\ldots,C_{2p}\), the exact adjacent-cutoff transfer, and the
+bounded real completion integral. It returns a common scale as a
+rational mantissa and an unrestricted binary integer exponent.
+\end{theorem}
+\begin{proof}
+\Cref{thm:explicit-onset} pays the structural hypotheses and half-target
+truncation. \Cref{sec:providers} supplies every delivered quantity in
+the preceding finite allocation. Its five evaluation categories are
+at most \(e/80<\varepsilon_X/20\), and scale error at most
+\(e/8<\varepsilon_X/2\). \Cref{thm:evaluation} now gives the total
+target. Each majorant, tail test, and strict descriptor comparison is
+effective, and each refinement has been shown to terminate.
+\end{proof}
+
+This theorem supplies an analytical algorithm, not a claim that a
+complete software implementation has been certified for every input.
+Exact coordinates are part of the contract. Uncertain input coordinates
+need an additional derivative-based error budget. The exact frozen model
+has zero heat residual; separately rounded channels have a defect bounded
+by their paid errors. Its spatial derivative requires the mixed \(T,z\)
+channel, as explained in \cref{sec:evaluation}.
+
+\subsection{Delivered precision, total bit work, and streaming}
+\label{subsec:bit-complexity}
+Use elementary multiplication and division of \(B\)-bit integers at
+cost \(O(B^2)\). Let \(\mathcal B\) be actual binary input length,
+including center, query, and descriptor witnesses, and define
+\[
+ s_\sigma=\lceil\log_2^+(1/\sigma)\rceil,\qquad
+ Q=2+\mathcal B+P+s_\sigma+\lceil L\rceil^2.
+\]
+Here \(P\ge1\) covers every externally delivered provider tolerance
+and final-circuit primitive/quantization request, including large-phase
+and full-sum allowances. Supplied descriptor witnesses can be verified
+at their actual length; \(s_\sigma\) retains the dependence of finding
+them by refinement. The boundary guard construction requires no further
+edge-separation parameter.
+
+For fixed chart data and factor-controlled allocations,
+\begin{equation}
+ P=\frac{3L^2}{8\log2}+O_{r,b}(L\log L)
+ \label{eq:effective-precision}
+\end{equation}
+is sufficient. Indeed all conditioning and positive path costs have
+logarithms \(O(L\log L)\), both quadrature orders are \(O(L^2)\),
+and \(\log N=O(L)\). This bounds delivered-data and final-circuit
+accuracy requests; provider-internal isolation and temporary operand
+lengths are counted separately.
+
+\begin{theorem}[Effective work and space]\label{thm:bit-cost}
+For the construction in \cref{thm:effective}, an effective
+chart-dependent constant \(C(r,b)\) gives the sufficient bounds
+\begin{equation}
+ T_{\rm bit}\le C(r,b)(N+1)Q^{40},\qquad
+ M_{\rm bits}\le C(r,b)Q^{20}.
+ \label{eq:total-bit-cost}
+\end{equation}
+Space uses streaming of arithmetic modes and sequential gamma calls.
+General input/tolerance choices retain their actual \(\mathcal B,P\).
+\end{theorem}
+\begin{proof}
+The finite majorants give outer and contour orders \(n,q=O(Q)\)
+and \(p,K,J,m=O(Q)\). Gauss isolation depth and physical-node input
+length are \(O(Q^4)\); weight numerators and denominators have
+\(O(Q^5)\) bits. \Cref{prop:gauss-provider} costs \(O(Q^{16})\)
+for the two reusable base rules. Outer-node gamma calls have
+\(b_\Gamma=O(Q^4)\), so \cref{prop:gamma-provider} costs
+\(O(Q^{24})\) each and \(O(Q^{25})\) over their \(O(Q)\) calls,
+with \(O(Q^{12})\) workspace.
+
+Common shape and weighted coefficient preprocessing use
+\(O(p^3+K^2)\) scalar operations. Reusable contour samples and their
+composition use \(O(n(qK+K^2))\); arithmetic moments and channels use
+\(O(Np)\). Every remaining individual input or temporary operand is
+bounded by \(O(Q^5)\) bits, including reciprocal powers through
+\(O(K)\). The elementary-series construction in \cref{app:elementary}
+therefore costs \(O(Q^{30})\) per call. At most
+\((N+1)O(Q^5)\) such calls and term operations occur.
+Their \(O((N+1)Q^{35})\) work, together with rounding, verification,
+and finite error-ledger arithmetic, fits \eqref{eq:total-bit-cost}.
+
+Retain the common polynomial tables, two base Gauss rules, and contour
+samples, but process one outer node or arithmetic mode at a time.
+The remaining elementary workspace is \(O(Q^{15})\); all tables and
+accumulators fit \(O(Q^{20})\). A full linear sum adds only
+\(O(\log N)\) integer bits. No product of \(N\) unrelated rational
+denominators is accumulated. The scale exponent has \(O(L)\) bits;
+its expanded denominator is never materialized. Substitution of
+\eqref{eq:explicit-calibration} makes every fixed constant effective.
+\end{proof}
+The exponents \(40,20\) are deliberately loose upper bounds.
+Since \(N\asymp\e^{L/2}\), this is not polynomial total work in
+\(L\). Materializing all mode data would also change the storage bound.
+No practical runtime at \(X_*\), sharp complexity, or arithmetic
+compression is asserted. Likewise the compact encoding of \(X_*\)
+does not make its expanded input length disappear: its binary expansion
+has \(2L_*+9\) bits, whereas its exponent has \(O(\log\nu)\) bits.
+
+\subsection{Supporting computational evidence}
+Finite scalar/gamma and Gauss implementations and certificate replay
+support parts of these constructions. The linked computational note
+\cite{rec12} contains the exact cases, error witnesses, rejection controls,
+resource accounting, preserved failed launch, and reproduction guide;
+\cite{rec13} places that evidence in the research sequence.
+The analytical theorems above do not depend on those finite tests.
+The complete canonical-field evaluator and its software certification
+remain unfinished, and separate replay does not supply independent
+specialist validation of the mathematical premises.

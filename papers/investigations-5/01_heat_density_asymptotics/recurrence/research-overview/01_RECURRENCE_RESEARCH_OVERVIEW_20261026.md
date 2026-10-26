@@ -2,259 +2,115 @@
 
 26 October 2026, America/New_York. Prepared for **Edward Baker** with
 substantial LLM assistance, **gpt-6-astra (Codex), recorded effort max**.
-Origin: ansatz chat0004, thread 01a1765a-5c4e-7dd1-9de8-d70dd1725e34.
+Current synthesis and priority refresh: recurrence **chat0005**, thread
+`01a1785a-2938-7de0-adc4-3b60db706199`. The source analytical returns in
+Notes02–06 and09–11 and supporting Note12 were developed with
+**gpt-6.1-sol, ultra**; their original provenance is retained.
 
-**Current recurrence overview.** The [progress register][progress] owns
-execution status; the [analysis continuation][continuation] supplies a
-three-round sequence. These documents develop the [opening brainstorm][brainstorm].
-They were originally prepared without new analysis. The execution update
-below records the subsequently saved results; the progress register owns
-live dispositions.
+## Current accomplishment
 
-## Objective and useful outcomes
+The [maintained manuscript](../manuscript/main.tex) now joins the fixed-order
+hierarchy, controlled order growth, modular evaluation budget, finite
+provider algorithms, explicit calibration, all-height onset, and total
+bit-work/storage bounds. [Integration Note14](../notes/14_EFFECTIVE_MANUSCRIPT_INTEGRATION_20261026.md)
+records source correspondence and checks. The complete canonical field
+evaluator remains unimplemented/uncertified. Broad **HDA-R05 stays Partial**.
+The [sole progress register](../research-progress/01_RECURRENCE_RESEARCH_PROGRESS_20261026.md)
+owns execution status; the [continuation](../notes/15_ANALYTIC_STRENGTHENING_CONTINUATION_20261026.md)
+owns the next-session handoff.
 
-Organize the canonical heat asymptotics into recursively generated
-fluctuation levels, and prove what a finite number of levels buys in
-field accuracy, derivative accuracy and retained complexity. The index
-should reflect increasingly complicated shape corrections. Continuous
-smoothing and a continuous generating parameter are complementary
-descriptions of the same structure.
+The immediate primary task is **Analysis — Sol,
+[HDA-R05-AN06 r1](../research-progress/handoffs/HDA-R05-AN06.md), READY_FOR_SOL,
+not executed**: sharpen the sufficient all-height onset at unchanged
+accuracy and frozen choices. The existing [N02 provider packet](../research-progress/handoffs/HDA-R05-N02.md)
+remains ready as a supporting component task, with its original finite
+cases/caps. It is not a prerequisite for the onset proof and is no longer
+the primary research recommendation. No task is dispatched by this update.
 
-The immediate objective is a controlled finite-order hierarchy. The
-larger questions concern order selection, cancellation-preserving
-reconstruction and the relation between discrete levels and continuous
-scales. A shorter formula is an organizational gain; an improved estimate
-or a newly covered domain is a separate analytical gain. Neither exact
-heat evolution nor a new name for the components proves the latter.
+## Established analytical results
 
-## Starting point and inherited evidence
+All rows retain the source status **proved in-note from named inputs**,
+with same-model internal assessments. Manuscript synthesis and selected
+source-formula checks do not supply independent specialist validation.
 
-The canonical normalization is
-\[
-H_t=-H_{zz},\qquad H(0,z)=\tfrac18\xi((1+iz)/2),\qquad
-h(T,z)=H(-T,z),\quad h_T=h_{zz}.
-\]
-The complete theta source and both exact gamma arms are retained.
-Physical regulators, averaging kernels, signed covariance and joining
-defects remain those of the parent investigation; this branch's opening
-sequence estimates the field, without claiming physical transfer.
-
-| Input | Available evidence | Limit to retain |
+| Result | Scope and quantitative gain | Source and limit |
 | --- | --- | --- |
-| Ansatz [Notes05–06][note05] | Proved in-note finite representations at natural gamma and outer-carrier scales, with the separate growing-degree construction and a paid through-zero join. | The outer-scale construction uses its original polynomial-degree cutoff and bounded RS integral. |
-| Ansatz [Notes10–12][note12] | First target-centered curvature correction: \(O(|G|X^{-5/4})\) field, spatial-through-three and first-time errors on declared fixed compact negative-time families; actual residual and its spatial derivative \(O(|G|X^{-7/4})\). | Endpoint constants and height onsets depend on the family; source status and same-model internal assessments remain unchanged. |
-| Ansatz [Notes15–16][note16] | Exact Gaussian-moment identities, the finite recurrence, and a local continuous deformation. | No new truncation-error or infinite-series convergence theorem. |
-| AN06 [manuscript][manuscript] and [Review11][review11] | Integrated 33-page reading version and subsequent source-level internal review. | Production checks and internal reviews do not close the full-chain or specialist-review requirements. |
+| Fixed-order hierarchy | Every fixed p>=1 with K=2p gives natural gamma-scale O(X^-(p+3/4)); field, spatial orders0–3 and first time together. | [Note03](../notes/03_FIXED_ORDER_FLUCTUATION_HIERARCHY_20261026.md); the p=2 base is [Note02](../notes/02_FIRST_FINITE_FLUCTUATION_COMPARISON_20261026.md). |
+| Compact time family | Same rate for each fixed 0<tau<=T<=B, with explicit endpoint costs and onsets. | [Note04](../notes/04_COMPACT_TIME_RECURRENCE_FAMILY_20261026.md); no moving-endpoint theorem. |
+| Controlled order growth | p=floor(L/2),K=2p gives outer-envelope error exp(-L²/4), L=log(X/(4pi)), on [1,2]. | [Note05](../notes/05_CONTROLLED_ORDER_GROWTH_AUDIT_20261026.md); simultaneous factorial costs and true/artificial tails. |
+| Modular evaluation budget | Scale, input, RS data, geometry, quadrature and circuit errors preserve the same target; O(L²) outer nodes per branch. | [Note06](../notes/06_COEFFICIENT_ROUNDING_AND_RS_QUADRATURE_20261026.md); delivered-data contracts supplied by later notes. |
+| Finite provider constructions | Rational elementary tails, normalized gamma data/scale, Gauss and pole-safe RS coefficients, exact interior guards. | [Note09](../notes/09_FINITE_PROVIDER_ALGORITHMS_20261026.md); dyadic centers with strict descriptor witnesses, exact rational queries; separation remains. |
+| Polynomial providers and full cost | Shifted Stirling jets and exact Legendre variation counts; effective C(N+1)Q^40 work and CQ^20 streamed space. | [Note10](../notes/10_EFFICIENT_PROVIDERS_AND_TOTAL_COST_20261026.md); all N~sqrt(X) modes remain, bounds are loose. |
+| Explicit uniform calibration and onset | H=A=C_Gamma=c_o=1,D=4,D0=3,g_-=1/64,C_tail=640,M_H^*=1/4,C_chi=3^d,C_cal=32+d. L_*=2^22(d+1)^4, d=ceil(r+b+2). | [Note11](../notes/11_EXPLICIT_CALIBRATION_AND_HEIGHT_ONSET_20261026.md); X_*=2^(2L_*+8) is a stronger sufficient condition; no practical-height claim. |
+| Effective composition | Those finite algorithms and constants close the modular contracts on the accepted input class. Sufficient delivered precision is 3L²/(8log2)+O_(r,b)(L log L). | Manuscript effective evaluation and bit-cost theorems; input length, provider-internal work and center separation are counted separately. |
 
-For fixed \(X\), set \(d=z-X\), \(L=\log(X/(4\pi))\),
-\(N=\lfloor\sqrt{X/(4\pi)}\rfloor\). With
-\[
-M(w)=\frac{w(w-1)}{16}\pi^{-w/2}\Gamma(w/2),\qquad
-w_\epsilon(z)=\frac{1+\epsilon iz}{2},
-\]
-put \(h_{\epsilon n}(z)=M(w_\epsilon(z))n^{-w_\epsilon(z)}\),
-\(b_{\epsilon n}=h_{\epsilon n}(X)\),
-\(\lambda_{\epsilon n}=(\log h_{\epsilon n})'(X)\), and
-\(\kappa_{\epsilon,r}=(\log M(w_\epsilon))^{(r)}(X)\), \(r\ge2\).
-The latter are independent of \(n\) and have fixed-\(r\) coefficient
-size \(O_r(X^{1-r})\).
+Supporting finite gamma/Gauss implementation and replay are recorded in
+[Note12](../notes/12_PROVIDER_IMPLEMENTATION_REPLAY_20261026.md) and
+[Review10](../reviews/10_PROVIDER_REPLAY_ASSESSMENT_20261026.md); the
+[chat0003 summary](../notes/13_CHAT0003_RESULTS_SUMMARY_20261026.md) gives
+their context. These finite checks support components and do not prove
+the analytical theorems or certify the complete field calculation.
+Detailed numerical tables and measurements stay in those linked notes.
 
-The working hierarchy is
-\[
-U_{\epsilon,0}=\sum_{n=1}^N b_{\epsilon n}
-e^{\lambda_{\epsilon n}d+T\lambda_{\epsilon n}^2},\qquad
-\mathcal Q_T=d+2T\partial_d,
-\]
-\[
-\mathcal D_{\epsilon,r}
-=\frac{\kappa_{\epsilon,r+1}}{(r+1)!}\mathcal Q_T^{r+1},
-\qquad
-jU_{\epsilon,j}=\sum_{r=1}^j r\mathcal D_{\epsilon,r}U_{\epsilon,j-r}.
-\]
-Every finite level solves forward heat evolution on a frozen chart.
-The approximation is
-\[
-F^{[p,K]}(T,z)=
-\sum_{\epsilon=\pm1}\sum_{j=0}^p U_{\epsilon,j}(T,z-X)
-+\mathcal I_{X,K}(T,z),
-\]
-where \(\mathcal I_{X,K}\) is the bounded Gaussian integral of the
-real RS coefficients through \(K\), including exact cutoff transfer.
-The [continuation][continuation] specifies the comparison norm, buffers
-and the terms that must be paid. No arithmetic mode is discarded.
+## Canonical model and retained information
 
-## Questions and order of work
+Keep h(T,z)=H(-T,z), h_T=h_zz and H(0,z)=xi((1+iz)/2)/8.
+On each fixed chart, N=floor(sqrt(X/(4pi))) and all coefficients,
+partitions and endpoints are frozen under differentiation. The hierarchy
+organizes the logarithmic gamma curvature by fluctuation weight, with
+j U_j=sum_(r=1)^j r c_r Q_T^(r+1) U_(j-r), Q_T=d+2T partial_d.
+Both arms, all n<=N, every chosen coefficient, the exact cutoff transfer,
+and the bounded real RS completion remain. Exact heat evolution and
+canonical approximation are separately proved.
 
-| ID | Question / concrete output | Dependency |
+The first frozen level retains C0–C2 and gives X^-7/4; the second retains
+C0–C4 and gives X^-11/4. The preceding simplest and first-correction
+ansatz allowances X^-3/4 and X^-5/4 keep their own formulas/domains.
+The earlier target-dependent correction agrees at the center with the
+first frozen arithmetic value but has different differentiated formulas.
+These are upper allowances, not pointwise monotonicity of actual error.
+The earlier ansatz growing-degree approximation also retains its separate
+status; the recurrence theorem establishes the fluctuation grading.
+
+## Ordered analytical agenda
+
+| Priority | Proof deliverable and measurable gain | Supporting checks and boundary |
 | --- | --- | --- |
-| HDA-R01 | Prove the \(p=2,\ K=4\) comparison on \(1\le T\le2\), or identify the precise failing estimate. | Existing recurrence and classical real RS input. Completed; Note02/Review01 in the execution update. |
-| HDA-R02 | Derive a theorem for every fixed finite \(p\), a matching RS choice \(K(p)\), and the actual order-dependent constants/onsets on the same slab. | R01 accepted; completed in Note03/Review02. |
-| HDA-R03 | Extend the proved fixed-order statement to declared \(0<\tau\le T\le B<\infty\), retaining explicit endpoint dependence. | R02 accepted; full fixed-p family completed in Note04/Review03. |
-| HDA-R04 | Quantify the continuous fluctuation deformation and its truncation remainder; compare its usefulness with the discrete recurrence. | A paid finite-order norm and remainder mechanism; not in the opening three rounds. |
-| HDA-R05 | Determine whether growing order, a different grouping, or resummation gives useful outer-carrier accuracy or cost. | Bounded R05-AN01 r1 completed in Note05/Review04; broad evaluator-cost question remains Partial. |
-| HDA-R06 | Explore a more structural transform or a controlled moment closure only when it produces a specific reconstruction estimate. | A concrete operator/data/reconstruction proposal and a test against existing estimates. Exploratory. |
+| 1. Sharper sufficient onset | [AN06 r1](../research-progress/handoffs/HDA-R05-AN06.md): replace the largest coarse moment/factorial/logarithmic envelopes, derive an explicit smaller all-height threshold with the same p,K,V, target, buffers and channels. Prove coverage through every floor jump. | Optional finite interval evaluation can check derived inequalities or identify their dominant term. A passed height or fitted law does not close the task. |
+| 2. Better coefficient/integral bounds | Prove uniform local pole cancellation, normalized-jet tails and C_k propagation, or sharpen ellipse/contour majorants. Require a strict finite bound or cost improvement over the current construction at identical accuracy. | N02's bounded replay can test a proved method. Preserve its cap and report a stopped method; no forced large contour run. |
+| 3. Joint time/order/height | Declare a specific tau(X),B(X),p(X). Start with a lower endpoint tending toward zero and fixed upper endpoint; pay exp(Y²/(4tau)), inverse-time channels and every tail simultaneously. | Numerical time samples cannot establish uniformity. The compact-family theorem and sibling through-zero/positive-time results retain their own scopes. |
+| 4. Arithmetic compression or continuous deformation | Prove reconstruction in the same field/derivative norm and quantify a reduction of the N-mode cost, or a uniform continuous-s remainder. | R04/R06 NOT_STARTED; exact identities, small model examples and moment closure analogies alone are insufficient. |
+| 5. A specified physical consumer | Derive an explicit observable/covariance/joining-defect bound, including regulator dependence, from the required channels. | Parent ownership unchanged. Select checks only after the analytic consumer and its error budget are specified. |
 
-R01 inherits the bounded mathematical question from the prepared
-[ansatz AN07 request][oldpacket]. The active successor and output home
-are now [R01-AN01][packet1] and this branch. R02 and R03 have prepared,
-dependency-gated requests. This prevents duplicate execution while
-supporting the author's practice of continuing for several rounds.
+Independent specialist review and checking the primary coefficient proofs
+remain standing needs throughout. The declared source identities and
+remainder domains must be retained; selected Part II identities do not
+license its preliminary precision conclusions.
 
-The first target is \(O(|G|X^{-11/4})\) for R01, suggested by formal
-counting. R02 may test \(K=2p\) and an exponent \(p+3/4\). These are
-initial candidate outcomes, not opening inputs or promises. The execution
-update below records their later proofs at fixed-order scope.
-If the proof supports another rate, state it with its actual logarithmic
-and parameter losses. A focused failed estimate is a legitimate return,
-but it does not complete the desired quantitative theorem.
+The full implementation remains a separate delivery obligation within
+R05: RS jets/coefficients, large phases and common scale, frozen center/
+guard geometry, retained-integral data and the complete mode/derivative
+circuit. Its finite certificates should exercise an already stated
+analytic contract and reject altered witnesses. No unbounded field or
+height sweep is a priority of this agenda.
 
-## How the continuous and physical ideas enter
+## Scope, controls and evidence discipline
 
-The exact Fourier and Laplace forms are
-\[
-h(T,z)=\int_{\mathbb R}e^{-Tu^2+izu}\rho(u)\,du
-=\int_0^\infty e^{-TE}
-\frac{\Phi(\sqrt E)\cos(z\sqrt E)}{2\sqrt E}\,dE .
-\]
-Thus \(T\) is smoothing time and \(E=u^2\) is spectral energy.
-Separately, the local deformation
-\[
-A_{\epsilon,s}(q)=
-\exp\!\left(\frac{\log A_\epsilon(sq)}s\right),\qquad A_{\epsilon,0}=1,
-\]
-generates the fluctuation order \(j\). Its bounded-window meaning is
-established algebraically; replacing it by an infinite whole-line
-operator series still needs convergence and tail estimates.
+This is an approximation/evaluation milestone under
+[avoid01](../../../../../avoid/01_restating_the_target.md), not an RH
+criterion. Read the [result index](../../../../../result-summaries/README.md),
+[heat cluster](../../../../../result-summaries/11_newman_heat_flow_reductions_and_certificates.md),
+[control screen](../../../../../result-summaries/12_collision_controls_and_screening.md)
+and [avoid index](../../../../../avoid/README.md), especially
+[separate bounds](../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md)
+and [shared-premise review limits](../../../../../avoid/05_same_model_reviews_and_shared_premises.md).
+Euler-factor/finite-prime controls lack unchanged canonical coefficients;
+weighted-square/cutoff controls lack the full canonical xi/RS completion;
+reflected, smooth and positive-primitive controls lack the same complete
+gamma/arithmetic identity. Their heat equations can survive. This checks
+applicability premises; it supplies no collision exclusion.
 
-The literal moments satisfy
-\(\partial_T\mu_j=-\mu_{j+2}\) and
-\(\partial_z\mu_j=i\mu_{j+1}\). Their closure problem is different from
-truncating the \(U_j\) hierarchy. The indices for arithmetic carriers,
-fluctuations, RS completion and spectral energy must stay distinct.
-
-Twistor/ADHM and inverse scattering motivate structured reconstruction;
-KdV and sine-Gordon illustrate evolution simplified in transform data.
-Quantum chemistry motivates independent basis/correlation resolutions,
-and BBGKY motivates explicit closure errors. These remain useful
-comparisons, not imported theorems or constructed correspondences.
-The [reference guide][refs] records exactly which sources were inspected.
-The particular Atiyah passage recalled in the discussion remains unidentified.
-
-## Acceptance, controls, and downstream boundaries
-
-Each round must compare to the same canonical \(H\), on the full fixed
-complex chart, with spatial derivatives through three, first time error,
-the actual model residual, and an explicit initial/local/tail error budget.
-Do not differentiate a scalar error allowance or infer holomorphic
-derivatives of real RS coefficient functions. Keep the real coefficient
-data inside their fixed-window integral.
-
-The currently displayed outer-relative allowance
-\[
-X^{-5/4}\exp(TL^2/16-\pi^2T/64)
-\]
-grows at fixed \(T>0\). No fixed algebraic exponent by itself compensates
-for this conversion. That says what the allowance fails to prove; it is
-not an actual-error lower bound or an exclusion of cancellation-preserving
-methods. A fixed-\(p\) result also does not license \(p=p(X)\).
-
-This is an approximation program under [avoid01][a01], not an RH criterion.
-Read the [result index][results], [heat-flow cluster][heat],
-[controls12][controls] and [avoid index][avoid], especially
-[shared premises][a02], [scoped conclusions][a07] and
-[separate bounds][a12]. The heat/recurrence structure is shared by
-suitable noncanonical sources. Euler-factor/finite-prime controls fail
-the unchanged full canonical coefficients; weighted-square/cutoff
-controls fail the full canonical completion; reflected, smooth and
-positive-primitive controls lack the complete canonical gamma/arithmetic
-identity. No collision is excluded by the organizing identities alone.
-
-HDA-A02 remains Partial; HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled
-remain. Positive-time comparison A08, through-zero/growing-time assembly,
-physical transfer, numerical certification, coefficient-evaluation cost and
-manuscript integration are outside this opening sequence. At its close,
-report what the broader ansatz program can actually consume and recommend
-the next bounded task. **Next owner: Analysis — Sol**, beginning R01.
-
-[progress]: ../research-progress/01_RECURRENCE_RESEARCH_PROGRESS_20261026.md
-[continuation]: ../notes/01_ANALYSIS_CONTINUATION_20261026.md
-[brainstorm]: ../brainstorm/01_RECURRENCE_AND_GENERALIZED_TRANSFORM_HIERARCHIES_20261026.md
-[note05]: ../../ansatz/notes/05_FIXED_NEGATIVE_TIME_REPRESENTATIONS_20261025.md
-[note12]: ../../ansatz/notes/12_COMPACT_NEGATIVE_TIME_FAMILY_20261025.md
-[note16]: ../../ansatz/notes/16_GAUSSIAN_FLUCTUATION_HIERARCHY_20261026.md
-[manuscript]: ../../ansatz/manuscript/main.tex
-[review11]: ../../ansatz/reviews/11_CURRENT_ANSATZ_AND_NEXT_STEPS_REVIEW_20261026.md
-[oldpacket]: ../../ansatz/research-progress/handoffs/HDA-A02-AN07.md
-[packet1]: ../research-progress/handoffs/HDA-R01-AN01.md
-[refs]: ../references/README.md
-[results]: ../../../../../result-summaries/README.md
-[heat]: ../../../../../result-summaries/11_newman_heat_flow_reductions_and_certificates.md
-[controls]: ../../../../../result-summaries/12_collision_controls_and_screening.md
-[avoid]: ../../../../../avoid/README.md
-[a01]: ../../../../../avoid/01_restating_the_target.md
-[a02]: ../../../../../avoid/02_shape_only_arguments_and_the_controls.md
-[a07]: ../../../../../avoid/07_scoped_exclusions_read_as_universal.md
-[a12]: ../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md
-
-## Execution update — 26 October 2026
-
-Prepared for Edward Baker with substantial LLM assistance, actual
-**gpt-6.1-sol, ultra**, recurrence chat0001. [Note02](../notes/02_FIRST_FINITE_FLUCTUATION_COMPARISON_20261026.md),
-[Note03](../notes/03_FIXED_ORDER_FLUCTUATION_HIERARCHY_20261026.md) and
-[Note04](../notes/04_COMPACT_TIME_RECURRENCE_FAMILY_20261026.md), with
-[Review01](../reviews/01_FIRST_FINITE_FLUCTUATION_ASSESSMENT_20261026.md),
-[Review02](../reviews/02_FIXED_ORDER_HIERARCHY_ASSESSMENT_20261026.md) and
-[Review03](../reviews/03_COMPACT_TIME_RECURRENCE_ASSESSMENT_20261026.md),
-are proved in-note from named inputs, same-model internal assessments only.
-R01: p=2,K=4, X^-11/4 on [1,2]. R02: every fixed p>=1,K=2p,
-X^-(p+3/4) on [1,2]. R03: the same fixed-order rate on declared fixed
-0<tau<=T<=B, with explicit endpoint factors and sufficient onsets. All
-are in the full buffered (3,1) norm, no logarithmic loss. The bounded
-real RS integral and every mode remain; frozen residual=residual_z=0.
-
-The first unpaid outer-scale step is a simultaneous estimate for order
-growth, constants and onsets before converting the natural scale. The
-closing R03 recommendation chooses that bounded Analysis — Sol audit;
-it is not started. Continuous-s, growing-time, useful evaluation cost,
-physical transfer and manuscript integration are still outside the proved
-sequence. HDA-A02 and all parent statuses remain unchanged.
-
-## Controlled-order execution update — 26 October 2026
-
-For Edward Baker with substantial LLM assistance, actual gpt-6.1-sol,
-ultra. [Note05](../notes/05_CONTROLLED_ORDER_GROWTH_AUDIT_20261026.md) and
-[Review04](../reviews/04_CONTROLLED_ORDER_GROWTH_ASSESSMENT_20261026.md)
-separately establish growing-order scope on [1,2]: simultaneous finite
-costs for 1<=p<=cL, fixed c, K=2p; chosen p=floor(L/2) pays e^-L²/4
-outer-envelope field/spatial-through-three/direct-time accuracy. The
-full rate range, failed old absorption, stronger fixed-theta tail costs
-and common onsets are in Note05. All modes and bounded RS integral remain.
-This closes the formerly recommended order-growth audit, not the broad
-R05 evaluator-cost program. Same-model internal review only.
-
-Next unpaid step: coefficient/carrier input sensitivity, rounding and
-bounded-integral quadrature error at that chosen outer accuracy. The
-formal O(p³+Np) scalar arithmetic count does not pay those costs. No
-new time-endpoint, infinite-series, physical-transfer or manuscript result;
-parent statuses unchanged. Next Analysis — Sol deliverable is bounded in
-the R05 packet and remains unexecuted pending a new request.
-
-## Evaluation-error audit update — 26 October 2026
-
-For Edward Baker with substantial LLM assistance, actual **gpt-6.1-sol,
-ultra**, recurrence chat0001. [Note06](../notes/06_COEFFICIENT_ROUNDING_AND_RS_QUADRATURE_20261026.md)
-and [Review05](../reviews/05_EVALUATION_ERROR_ASSESSMENT_20261026.md)
-close R05-AN02 r1 at its bounded analytical scope. The total e^-L²/4
-outer target at p=floor(L/2),K=2p now has explicit coefficient/carrier,
-scale, rounding, RS-data, quadrature and geometry budgets. Named exact
-coefficient identities and derived complex bounds pay RS regularity and
-O(L²)-node-per-branch quadrature. All modes, integral and buffers remain.
-
-The sufficient requested normalized input/circuit accuracy is
-3L²/(8log2)+O(Llog L) bits under the declared provider contracts.
-Concrete providers, their internal precision/runtime and frozen descriptor
-handling are unverified; broad R05 stays Partial, with no parent-status
-change. This is a conditional evaluator specification, same-model
-internal assessment only. **Next recommended owner: Analysis — Sol**,
-a new analytical provider-algorithm audit, not executed. No manuscript
-or numerical campaign. The live register owns the disposition.
+HDA-A02 Partial, HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled remain
+unchanged. Detailed earlier requests and dispositions remain in the sole
+progress register, source notes and their registered chats. This overview
+supersedes their earlier next-task recommendations, not their results.

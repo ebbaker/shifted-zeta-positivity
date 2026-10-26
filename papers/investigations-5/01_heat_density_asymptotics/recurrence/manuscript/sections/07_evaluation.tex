@@ -1,0 +1,436 @@
+\section{Evaluation error budgets}
+\label{sec:evaluation}
+The theorem in this section is a reusable implication from delivered-data
+contracts to field accuracy. Sections~\ref{sec:providers}--\ref{sec:effective}
+subsequently construct those data and prove an effective total result.
+
+\subsection{Normalize first and allocate the total error}
+Take \(p=\lfloor L/2\rfloor\), \(K=2p\).
+Increase the strict-margin onset in \cref{thm:growing} so that
+the mathematical truncation uses at most
+\(\tfrac12\e^{-L^2/4}\) of the outer budget.
+By \eqref{eq:outer-conversion} a sufficient center-normalized
+evaluation tolerance is
+\begin{equation}
+ \varepsilon_X=\frac{c_{\mathrm o}}{2C_\chi}\e^{-3L^2/8}.
+ \label{eq:epsilonX}
+\end{equation}
+Write \(\beta_{\epsilon n}=b_{\epsilon n}/g\) and
+\(P_{\epsilon,p}(q)=\sum_{m=0}^{2p}t_{\epsilon m}q^m\).
+The normalized exact expression is
+\begin{align}
+ F/g={}&\sum_{\epsilon,n\le N}\beta_{\epsilon n}
+       \e^{\lambda_{\epsilon n}d+T\lambda_{\epsilon n}^2}
+       \sum_{m=0}^{2p}t_{\epsilon m}
+              \calH_m(d+2T\lambda_{\epsilon n},T)\nonumber\\
+ &+\int_{X-V}^{X+V}k_T(z-u)Q_{X,K}(u)/g\dd u.
+ \label{eq:normalized-evaluation}
+\end{align}
+Let \(A_0\) bound its combined center-scaled channel magnitudes.
+If \(\abs{\widehat g/g-1}\le\varepsilon_g\le1\), it suffices that
+\begin{equation}
+ \varepsilon_g A_0\le\varepsilon_X/2,\qquad
+ E_{\mathrm{ar}},E_{\mathrm{RS}},E_{\mathrm{quad}},
+ E_{\mathrm{geo}},E_{\mathrm{round}}\le\varepsilon_X/20.
+ \label{eq:allocation}
+\end{equation}
+Indeed the center-normalized output error is bounded by
+\(\varepsilon_gA_0+(1+\varepsilon_g)\sum E_i\le\varepsilon_X\).
+The five categories are, respectively, arithmetic inputs and
+preprocessing, retained-integral data, exact quadrature, geometry,
+and remaining operation rounding. Scale error is separate.
+
+\subsection{Arithmetic input conditioning}
+Use the moments at \(\tau=1,B=2\), and set
+\[
+ \mathfrak M_m=48M_m+M_m^t,\quad
+ \mathcal D_p=\mathsf H_p[\mathfrak M],\quad
+ \mathcal D_p^{(1)}=\mathsf H_p[q\mathfrak M],\quad
+ \mathcal S_p=\sum_{m=0}^{2p}\mathfrak M_m.
+\]
+The notation \(\mathsf H_p[q\mathfrak M]\) pairs its \(q^m\)
+coefficient with \(\mathfrak M_{m+1}\).
+The factor \(48\) includes the buffered spatial Cauchy costs.
+
+\begin{lemma}[Finite coefficient sensitivity]\label{lem:sensitivity}
+For \(1\le r\le p\),
+\begin{equation}
+ \partial_{c_r}P_p(q)=q^{r+1}P_{p-r}(q).
+ \label{eq:coefficient-sensitivity}
+\end{equation}
+For perturbations \(\abs{\delta c_r}\le\varepsilon_c\le1\),
+let \(\mathsf C_j^+\) denote \(\mathsf C_j\) with \(A\) replaced
+by \(A+1\), and \(\mathsf C_0^+=1\). Then a sufficient condition
+sum is
+\begin{equation}
+ \mathcal C_p=\sum_{r=1}^p\sum_{j=0}^{p-r}
+                     \mathsf C_j^+[q^{r+1}\mathfrak M].
+ \label{eq:condition-sum}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Differentiate the local generating function: differentiation
+in \(c_r\) multiplies it by \(q^{r+1}s^r\), proving
+\eqref{eq:coefficient-sensitivity} coefficient by coefficient.
+Along the segment of perturbed coefficients,
+\(\abs{c_r'}\le(A+1)D^{r-1}\), after dropping the favorable
+\(X^{-r}\). Apply the positive partition majorant and integrate
+the derivative along that segment. Then use the Gaussian
+channel moments, giving \eqref{eq:condition-sum}.
+\end{proof}
+
+Impose
+\(D_0/X\le1/2-\pi/8\) and \(\varepsilon_\lambda\le1/2\).
+The sectorial slope formula ensures that the original slopes
+and their perturbed connecting segments have real part of
+absolute value at most one.
+For
+\[
+ \abs{\delta\beta_{\epsilon n}}\le\varepsilon_\beta n^{-1/2},
+ \quad\abs{\delta\lambda_{\epsilon n}}\le\varepsilon_\lambda,
+ \quad\abs{\delta c_{\epsilon r}}\le\varepsilon_c,\quad
+ \abs{\delta t_{\epsilon m}^{\mathrm{store}}}\le\varepsilon_t,
+\]
+one has
+\begin{equation}
+\begin{split}
+ E_{\mathrm{ar}}\le C_{\mathrm{pop}}X^{1/4}
+ \bigl[\varepsilon_\beta\mathcal D_p
+ +(1+\varepsilon_\beta)
+ \{\varepsilon_\lambda\mathcal D_p^{(1)}
+               +\varepsilon_c\mathcal C_p+\varepsilon_t\mathcal S_p\}\bigr].
+\end{split}
+\label{eq:arithmetic-error}
+\end{equation}
+To verify the estimate, change \(\beta\) first with the exact
+polynomial and slope, then the slope, then the shape coefficients
+and stored output. Differentiation in \(\lambda\) inside the
+real Gaussian transform inserts \(q\).
+The real tilt remains bounded by \(\e^{\abs q}\), so the same
+moments apply. This ordering avoids using an unperturbed
+polynomial majorant for perturbed coefficients.
+The error \(\varepsilon_t\) includes the certified error of
+preprocessing at the supplied \(c_r\); it is charged here
+only once.
+
+The logarithms of all finite condition sums are
+\(O((p+1)\log(p+2))\), by the factorial bounds and the finite
+partition formulas. There is no division by a possibly vanishing
+field or correction.
+
+\subsection{Large phases and very small scales}
+At real \(X\),
+\[
+ \beta_{\epsilon n}=n^{-1/2}
+    \e^{\ii(\theta_\epsilon(X)-\epsilon X\log n/2)},\qquad
+ g=\e^{\Rea\ell_+(X)}.
+\]
+If the error in the carrier logarithm is at most \(q_{\mathrm{err}}\),
+then
+\(\abs{\delta\beta_{\epsilon n}}
+\le n^{-1/2}\e^{q_{\mathrm{err}}}q_{\mathrm{err}}\).
+A sufficient allowance is
+\begin{align}
+ q_{\mathrm{err}}\le{}&
+ \abs{\delta\theta}
+ +(X/2+1/2)\abs{\delta\log n}
+ +\tfrac12\log n\abs{\delta X}
+ +\tfrac12\abs{\delta X\,\delta\log n}\nonumber\\
+ &+\abs{\delta(\Rea\log M-\log g)}.
+ \label{eq:phase-budget}
+\end{align}
+Also
+\(\abs{\delta\lambda}\le\abs{\delta\ell'}+
+\abs{\delta\log n}/2\) at fixed \(X\).
+Thus logarithms of mode indices must be accurate to order
+\(\varepsilon_\beta/X\).
+Unreduced phases have size \(O(XL)\), requiring
+\(O(L+\log L)\) guard bits when formed by relative arithmetic.
+Normalized gamma ratios should be formed from log differences.
+Dividing separately underflowed values of \(M\) and \(g\)
+does not implement this specification.
+Sufficient exponent range is part of the model.
+
+\subsection{Real-node data and geometry}
+At a real node on branch \(m\), write
+\[
+ A=(-1)^{m-1}M(w_+(u))U(u)a(u)^{-1/2}/g,\qquad R_k=a(u)^{-k}.
+\]
+If the errors in \(A,R_k,C_k\), and the normalized transfer
+are bounded by \(\varepsilon_A,\varepsilon_{R_k},
+\varepsilon_{C_k},\varepsilon_{\mathrm{tr}}\), respectively, then
+\begin{equation}
+\begin{split}
+ \abs{\widehat Q_m/g-Q_m/g}
+ \le\varepsilon_{\mathrm{tr}}+2\sum_{k=0}^K
+ \bigl[&\varepsilon_A R_k\abs{C_k}\\
+ &+(\abs A+\varepsilon_A)
+ \{\varepsilon_{R_k}\abs{C_k}
+           +(R_k+\varepsilon_{R_k})\varepsilon_{C_k}\}\bigr].
+\end{split}
+\label{eq:node-data-error}
+\end{equation}
+This is just the product rule for finite perturbations.
+It retains every coefficient and the exact transfer.
+
+Geometry errors use a local strip bound rather than the much
+larger branch-ellipse bound. Require \(V\ge3\),
+\[
+ 4(V+2)/\sqrt{2\pi X}\le1/2,\qquad 2(V+2)\le X/4.
+\]
+Define
+\begin{subequations}\label{eq:local-strip}
+\begin{align}
+ H_M^{\mathrm{loc}}
+ &=\exp\left\{\frac{\pi}{8}(V+2)+\frac L4+
+             \frac{D_0(V+3)}X+\frac{H(V+3)^2}{2X}\right\},\\
+ H_U^{\mathrm{loc}}&=\e^{(L+1)/4},\\
+ B_Q^{\mathrm{loc}}
+ &=2H_M^{\mathrm{loc}}\left[
+       \sum_{n\in\mathcal T} n^{-1/2}n^{1/2}
+       +H_U^{\mathrm{loc}}a_*^{-1/2}\sum_{k=0}^KD_ka_*^{-k}\right],\\
+ K_{\mathrm{loc}}
+ &=\frac{\e^{(Y+1)^2/4}}{\sqrt{4\pi}}
+       \left[\max_{a\le3}\mathsf K_a(W+V+4)
+                         +\mathsf K_2(W+V+4)\right],\\
+ B_{\mathrm{loc}}&=B_Q^{\mathrm{loc}}K_{\mathrm{loc}}.
+\end{align}
+\end{subequations}
+On \(\abs{\Rea u-X}\le V+2,\abs{\Ima u}\le1\), these bound
+the normalized integrand channels. For gamma, use
+\(\ell_+'(X)=-\pi/8+\ii L/4+O(D_0/X)\) and bound real and
+imaginary displacements separately. This proves the displayed
+\(H_M^{\mathrm{loc}}\); using \(\abs{\ell'}\) times the full
+window instead would lose the useful bound
+\[
+ \log^+B_{\mathrm{loc}}=O(L)+O(K\log(K+2)).
+ \label{eq:local-strip-growth}
+\]
+Radius-\(1/2\) Cauchy estimates bound each derivative in \(u\)
+by twice its local bound.
+
+Let \(\varepsilon_w\) be the sum of absolute physical weight
+errors, and let real approximate nodes have maximum displacement
+\(\varepsilon_u\le1/4\). Use their fixed reference branch labels.
+If omitted boundary strips have total length at most
+\(6\varepsilon_b\), \(0\le\varepsilon_b\le1/4\), then
+\begin{equation}
+ E_{\mathrm{geo}}\le B_{\mathrm{loc}}
+   \{\varepsilon_w+2(2V+\varepsilon_w)\varepsilon_u
+                                      +6\varepsilon_b\}.
+ \label{eq:geometry-error}
+\end{equation}
+The terms follow by changing weights, then nodes, and integrating
+over omitted strips. Such strips must lie inside the true fixed
+branches. There are at most three boundaries, so two-sided
+width-\(\varepsilon_b\) strips have the stated total length.
+For exact reference endpoints take \(\varepsilon_b=0\);
+endpoint errors propagated into node and weight errors are not
+charged again. Rules extending outside the original window need
+a new length and ellipse analysis.
+
+If \eqref{eq:node-data-error} is bounded by \(\varepsilon_Q\)
+at every approximate node, then the separate data cost is
+\begin{equation}
+ E_{\mathrm{RS}}\le(2V+\varepsilon_w)K_{\mathrm{loc}}\varepsilon_Q.
+ \label{eq:RS-data-budget}
+\end{equation}
+An explicit scale bound for \eqref{eq:allocation} is
+\begin{equation}
+ A_0=C_{\mathrm{pop}}X^{1/4}\mathsf H_p[\mathfrak M]
+                                      +2VB_{\mathrm{loc}}.
+ \label{eq:A0}
+\end{equation}
+Its logarithm is \(O(L\log L)\).
+
+\subsection{A coefficient construction away from apparent poles}
+Let \(h_m(\chi)=F_0^{(m)}(\chi)/m!\).
+On the rectangle \(\Gamma\) with vertices \(\pm2\pm\ii\),
+Cauchy's formula gives
+\begin{equation}
+ h_m(\chi)=\frac1{2\pi\ii}\oint_\Gamma
+                         \frac{F_0(\zeta)}{(\zeta-\chi)^{m+1}}\dd\zeta.
+ \label{eq:contour-jet}
+\end{equation}
+For \(\abs{\Rea\chi}\le3/2,\abs{\Ima\chi}\le1/2\), use
+a Gauss rule with \(q_c\) nodes on each straight edge and ellipse
+parameter \(\rho_c=9/8\).
+The edge ellipses have semiaxis ratios \(145/144,17/144\);
+they satisfy
+\[
+ \abs{\Rea\zeta}\le9/4,\quad\abs{\Ima\zeta}\le5/4,\quad
+ \abs{2\cos(\pi\zeta)}\ge1,\quad
+ \operatorname{dist}(\zeta,\chi)\ge1/4.
+\]
+For the vertical edges the real deviation from \(\pm2\) is
+at most \(17/144\); for the horizontal edges the imaginary
+distance from the real line is at least \(1-34/144\).
+These give the denominator bounds and the stated separation.
+With \(B_c=\e^{45\pi/16}+\sqrt2\cosh(5\pi/8)\), the integrand
+is bounded by \(B_c4^{m+1}\).
+The total contour length is \(12\). Applying \cref{lem:gauss}
+and the factor \(1/(2\pi)\) proves
+\begin{equation}
+ \varepsilon_{h,m}^{\mathrm{quad}}
+ \le\frac{24}{\pi}B_c4^{m+1}
+                  \frac{\rho_c^{-2q_c+1}}{\rho_c-1}.
+ \label{eq:contour-error}
+\end{equation}
+For all \(m\le3K\), a requested error
+\(\exp[-3L^2/8-O(L\log L)]\) is reached with
+\(q_c=O(L^2+L\log L)\).
+The identities now take the normalized form
+\[
+ C_k=\pi^{-2k}\sum_j(\pi/(2\ii))^j e_j^{(k)}h_{3k-2j}.
+\]
+Each perturbation term is bounded by
+\(\abs{e_j}\varepsilon_h+\abs{h_{3k-2j}}\varepsilon_e+
+\varepsilon_e\varepsilon_h\), times the displayed powers of \(\pi\).
+Errors in those powers also require their product bounds.
+This construction supplies an analytical way around the apparent
+poles; primitive, node, weight, and rounding errors still have to
+be certified. The fixed contour samples can be reused for all
+outer quadrature nodes.
+
+\subsection{Rounding and sufficient requested precision}
+Use real-component arithmetic with unit roundoff \(u\), sufficient
+exponent range, and certified bounds \(\abs a\le A_a\),
+\(\abs b\le A_b\), with propagated errors \(E_a,E_b\).
+For addition, multiplication, and division by an exact positive
+integer \(j\), valid updates are
+\begin{subequations}\label{eq:roundoff-updates}
+\begin{align}
+ E_+&=E_a+E_b+u(A_a+A_b+E_a+E_b),\\
+ E_\times&=A_aE_b+A_bE_a+E_aE_b
+                          +u(A_a+E_a)(A_b+E_b),\\
+ E_{\div j}&=[E_a+u(A_a+E_a)]/j.
+\end{align}
+\end{subequations}
+Noninteger reciprocals require certified separation and their
+own error. Nonlinear primitives are not automatically covered
+by these arithmetic updates. For example, if real exponential
+relative error and sine/cosine absolute error are at most \(u\),
+then, for \(u\le1/16\), a complex exponential with exact real
+part at most \(C_0\) and argument error \(E_{\mathrm{arg}}\) has
+error at most
+\[
+ \e^{C_0}(\e^{E_{\mathrm{arg}}}-1)
+                  +4u\e^{C_0+E_{\mathrm{arg}}}.
+\]
+
+The exact derivative channels are also finite recurrences:
+\begin{subequations}\label{eq:channel-formulas}
+\begin{align}
+ \partial_d^a(\beta\e^{\lambda d+T\lambda^2}\calH_m)
+ &=\beta\e^{\lambda d+T\lambda^2}
+   \sum_{j\le\min(a,m)}\binom aj(m)_j
+                  \lambda^{a-j}\calH_{m-j},\\
+ \partial_T(\beta\e^{\lambda d+T\lambda^2}\calH_m)
+ &=\beta\e^{\lambda d+T\lambda^2}
+   [\lambda^2\calH_m+2m\lambda\calH_{m-1}
+                           +m(m-1)\calH_{m-2}].
+\end{align}
+\end{subequations}
+All \(\calH\)'s here have argument \(d+2T\lambda,T\), and
+\((m)_j=m!/(m-j)!\).
+Evaluation needs retained moments only through \(2p\).
+The error analysis still needs moments through \(2p+4\).
+
+To bound intermediate magnitudes, take
+\(\Lambda=1+L/4\ge\abs\lambda\) after an additional slope gate,
+\(t_*=W+4\Lambda\), and
+\[
+ h_0^*=1,\quad h_1^*=t_*,\quad
+ h_m^*=t_*h_{m-1}^*+4(m-1)h_{m-2}^*.
+\]
+Completing the square in \(\Ima\lambda\), with
+\(\abs{\Rea\lambda}\le1\), gives
+\[
+ \abs{\e^{\lambda d+T\lambda^2}}
+                  \le\e^{R+2+Y^2/4}.
+\]
+Thus no artificial \(\e^{+L^2}\) carrier bound is required
+in the actual real-node circuits.
+The triangular coefficient recurrence, moment recurrence,
+weighted Riemann--Siegel recurrence, and finite linear sums
+have positive path majorants of size
+\((N+1)\exp(O(L\log L))\) times a polynomial in the node counts.
+One can see this by expanding the triangular recurrences:
+their depth is \(O(p+K)\), their factors are polynomial in
+\(p,K,L\), and their partition paths have
+\(\exp(O((p+K)\log(p+K+2)))\) total weight.
+Linear accumulation contributes its actual length, not
+an exponential in \(N\). Impose
+\(uS_{\mathrm{lin}}\le1/4\), where \(S_{\mathrm{lin}}\)
+is the longest actual linear accumulation count.
+
+\begin{theorem}[Modular total evaluation accuracy]
+\label{thm:evaluation}
+Assume the half-target truncation onset, the displayed slope and
+geometry gates, exact query coordinates, and exact frozen
+descriptors or a certified guard-strip procedure. Suppose
+certified inputs, nodes, weights, scale, and the arithmetic
+recurrences satisfy
+\cref{eq:allocation,eq:arithmetic-error,eq:node-data-error,eq:geometry-error,eq:RS-data-budget,eq:roundoff-updates}.
+Then the separately computed field, spatial-through-three, and
+first-time outputs have total outer-envelope error at most
+\(\e^{-L^2/4}\).
+A sufficient asymptotic requested normalized accuracy is
+\begin{equation}
+ P_{\mathrm{req}}=
+             \frac{3L^2}{8\log2}+O_{r,b}(L\log L)
+ \quad\hbox{bits}.
+ \label{eq:precision}
+\end{equation}
+The finite displayed inequalities, rather than the \(O\)-term
+alone, specify acceptance at a chosen height.
+\end{theorem}
+\begin{proof}
+The truncation uses half the target.
+The allocation proof after \eqref{eq:allocation}, followed by
+\eqref{eq:outer-conversion}, bounds the evaluation error by
+the other half.
+For \eqref{eq:precision}, every real-node conditioning and
+intermediate-size cost has logarithm \(O(L\log L)\).
+Also \(\log N=L/2+O(1)\) and both quadrature orders are
+\(O(L^2)\). The positive error recurrences therefore require
+normalized input errors and roundoff can be made sufficiently
+small by choosing them at most
+\(\exp[-3L^2/8-C_{r,b}L\log L]\), with \(C_{r,b}\)
+large enough for their finite majorants.
+Taking base-two logarithms gives \eqref{eq:precision}.
+The phase guards in \eqref{eq:phase-budget} and the small
+accumulation guard are lower-order requirements within that
+choice.
+\end{proof}
+The precision is sufficient, not necessary. It specifies
+delivered input accuracy and the declared arithmetic model;
+it does not bound a concrete provider's internal precision,
+iteration count, or bit complexity. Those costs are supplied separately
+in \cref{sec:providers,subsec:bit-complexity}.
+For arbitrary real coordinates, exact floor decisions can require
+arbitrarily fine discrimination near a threshold. Rounded
+floor tests are not part of the theorem. Uncertainty in \(z,T\)
+also needs its own derivative-based error allocation.
+
+\subsection{Costs and the meaning of an exact residual}
+With named data already supplied, polynomial preprocessing uses
+\(O(p^3)\) scalar arithmetic, and all arithmetic channels use
+\(O(Np)\). The weighted Riemann--Siegel table uses \(O(K^2)\).
+The contour construction at all outer nodes uses
+\(O(n(q_cK+K^2))=O(L^5)\) scalar arithmetic, with fixed contour
+values reused. This last count is for the completion part only;
+it does not replace the \(N\asymp\sqrt X\) arithmetic modes.
+All counts exclude provider bit costs.
+
+Three residual statements must remain distinct.
+The exact frozen model solves heat exactly.
+A symbolic model with fixed perturbed coefficients and fixed
+quadrature nodes, weights, and node data also solves heat
+exactly, since it is a sum of heat solutions.
+Independently rounded channel outputs have only a bounded
+defect: their \(T\)-minus-\(zz\) discrepancy is bounded by
+the sum of the paid channel errors.
+A rounded spatial derivative of that defect would require
+an additional mixed \(T,z\) output channel. It is not supplied
+by differentiating a pointwise rounding allowance.

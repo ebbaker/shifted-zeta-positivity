@@ -1,0 +1,167 @@
+\section{Elementary enclosures and alternative gamma construction}
+\label{app:elementary}
+This appendix records the finite tails behind \cref{lem:elementary}.
+For positive rational \(x=2^ky\), \(1\le y<2\), put
+\(t=(y-1)/(y+1)\), so \(\abs t\le1/3\). Then
+\begin{equation}
+ \log y=2\sum_{j=0}^{M-1}\frac{t^{2j+1}}{2j+1}+R_M,
+ \qquad\abs{R_M}\le
+ \frac{2\abs t^{2M+1}}{(2M+1)(1-t^2)}.
+ \label{eq:log-series-provider}
+\end{equation}
+Use \(t=1/3\) for \(\log2\), with its error multiplied by \(\abs k\).
+Positive interval logarithms use monotonicity and separated endpoints.
+Square roots use exact square comparisons and bisection after scaling
+to \([1,4]\).
+
+For \(\abs t\le1/2\), the first \(M\) arctangent terms have
+remainder at most \(\abs t^{2M+1}/(2M+1)\). Reduce
+\(1/2\le t\le1\) by
+\(\arctan t=\arctan(1/2)+\arctan((t-1/2)/(1+t/2))\),
+whose new argument is at most \(1/3\); use oddness and
+\(\arctan t=\pi/2-\arctan(1/t)\) for the other ranges.
+Tangent addition and the angle range give
+\(\pi=4[\arctan(1/2)+\arctan(1/3)]\).
+For \(x>0\),
+\(\Log(x+\ii y)=\log(x^2+y^2)/2+\ii\arctan(y/x)\).
+Rational reduction boundaries can be subdivided; either valid neighboring
+formula agrees at the boundary.
+
+Enclose \(a/\log2\) to width at most \(1/8\) and round its rational
+midpoint to an integer \(k\). This is an encoding choice. Refinement
+with that \(k\) fixed certifies \(\abs{a-k\log2}<2\).
+For a reduced real argument of modulus at most two, the degree-\(M\)
+Taylor error is at most \(9\,2^{M+1}/(M+1)!\).
+For phase reduction choose a nearby multiple of \(2\pi\) from an
+enclosure of width \(1/8\); its residual has modulus at most
+\(9\pi/8<4\). The corresponding complex Taylor error is at most
+\(81\,4^{M+1}/(M+1)!\).
+Refine \(\pi\) and \(\log2\) with the actual chosen multipliers.
+Relative real-exponential error \(\tau\) is obtained by absolute
+Taylor error at most \(\tau/9\), since the reduced exponential
+is at least \(1/9\), together with a separate input-error allowance.
+For complex input perturbation use
+\[
+ \abs{\e^{z+q}-\e^z}\le\e^{\Rea z}(\e^{\abs q}-1).
+\]
+If \(\abs a\ge d_0>0\) and \(\abs{\widehat a-a}\le\eta<d_0\),
+then the reciprocal error is at most \(\eta/[d_0(d_0-\eta)]\).
+
+Every truncation is chosen by a strict rational tail test. For a reduced
+series with \(b\)-bit rational input and requested \(P\)-bit accuracy,
+\(O(P+b)\) terms suffice. Explicit common denominators such as
+\(q^{2M+1}(2M+1)!\) have \(O((P+b+10)^2)\) bits.
+Elementary integer arithmetic gives the conservative
+\(O((P+b+10)^6)\) work bound used in \cref{thm:bit-cost}.
+This refers to reduced arguments and mantissa accuracy. Absolute
+accuracy after rescaling an exponential additionally counts its output
+magnitude; there is no polynomial absolute-error assertion for an
+unrestricted enormous exponential.
+
+\subsection{Euler-product fallback and its internal error}
+\label{app:euler-provider}
+The elementary construction of \cite{rec09} remains useful as a second
+finite formula. Let \(\zeta=(1+\ii u)/4\), \(v=\zeta-1\),
+choose rational \(B_\Gamma\ge\abs v\), and take integer
+\(s\ge\max(2B_\Gamma,2)\). Set \(q=B_\Gamma/(s+1)\le1/2\) and
+\[
+ F_s(v)=v\log s-\sum_{j=1}^s\Log(1+v/j).
+\]
+Euler's product \cite{dlmfgammaproduct} and the harmonic-sum remainder
+give
+\begin{align}
+ \abs{F_s-\log\Gamma(1+v)}
+   &\le B_\Gamma/s+B_\Gamma^2/[2s(1-q)],\nonumber\\
+ \abs{F_s'-(\log\Gamma)'(1+v)}
+   &\le1/s+B_\Gamma/[s(1-q)],\nonumber\\
+ \left|\frac{F_s^{(m)}-(\log\Gamma)^{(m)}(1+v)}{m!}\right|
+   &\le\frac1{m(m-1)(1-q)^m s^{m-1}}\quad(m\ge2).
+ \label{eq:euler-fallback-tails}
+\end{align}
+To verify these inequalities subtract the locally convergent logarithmic
+product. Its linear coefficient differs by
+\(H_s-\log s-\gamma\in[0,1/s]\); the remaining log terms obey
+\(\abs{\Log(1+v/j)-v/j}\le\abs{v/j}^2/[2(1-q)]\).
+Differentiate the tail and use
+\(\sum_{j>s}j^{-m}\le s^{1-m}/(m-1)\).
+The finite derivative formulas are
+\[
+ F_s'=\log s-\sum_{j=1}^s(j+v)^{-1},\qquad
+ F_s^{(m)}/m!=\frac{(-1)^m}{m}\sum_{j=1}^s(j+v)^{-m}.
+\]
+All denominators have real part at least \(1/4\).
+A common cutoff
+\(s\ge\max(2B_\Gamma,2,2(1+B_\Gamma+B_\Gamma^2)/\delta)\)
+makes every truncation error at most \(\delta\).
+
+For desired output error \(\eta\), choose \(\delta=\eta/4\).
+Deliver each value logarithm to
+\(\eta/[8(s+1)(B_\Gamma+1)]\), \(\log s\) to
+\(\eta/[8(B_\Gamma+1)]\), each normalized reciprocal-power summand
+to \(\eta/[8(s+1)]\), and the derivative's \(\log s\) to
+\(\eta/8\). Exact rational summation then leaves output slack.
+This takes \(O((1+B_\Gamma^2)/\delta)\) terms. Using only
+output-level unit roundoff in this much longer sum need not meet the
+accumulation guard. Termwise precision or exact summation is essential;
+\cref{prop:gamma-provider} subsequently improves the term count.
+
+\section{Explicit conditioning for Gauss data}
+\label{app:gauss-conditioning}
+For \(s\ge1\) let \(A_s=2^ss!P_s\in\mathbb Z[x]\), with leading
+coefficient \(a_s=(2s)!/s!\), and let \(c_s\) be that of \(P_s\).
+Define
+\begin{align*}
+ \sigma_s&=[a_s^{2s-1}2^{s(s-1)}]^{-1},&
+ d_s&=c_s\sigma_s^{s-1},\\
+ S_1&=\sum_jj\abs{[x^j]P_s},&
+ S_2&=\sum_jj(j-1)\abs{[x^j]P_s},\\
+ J_*&=\sum_j\abs{[x^j]J_s},&
+ J_1&=\sum_jj\abs{[x^j]J_s},\\
+ L_w&=2J_1/d_s+4J_*S_2/d_s^2,&
+ \mu_s&=[4\max(1,2sS_1/d_s)]^{-1}.
+\end{align*}
+For \(s\ge2\), the nonzero integer resultant of \(A_s,A_s'\)
+equals, up to sign, \(a_s^{2s-1}\) times the squared-gap product.
+All gaps are at most two, so every gap is at least \(\sigma_s\).
+For \(s=1\) there is no gap condition. Likewise the nonzero integers
+\(A_s(\pm1)\) give endpoint distances at least
+\(1/(a_s2^{s-1})\). At a root \(\abs{P_s'}\ge d_s\).
+On an interval of width at most \(d_s/[2\max(1,S_2)]\), its
+derivative has modulus at least \(d_s/2\); differentiation of
+\(J_s/P_s'\) gives Lipschitz bound \(L_w\).
+
+For the nodal Lagrange polynomial,
+\(\abs{l_i'}\le sS_1/d_s\) and \(l_i(\xi_i)=1\).
+Integrating its square toward the farther endpoint gives
+\(\omega_i\ge\mu_s\). Thus it suffices to isolate to width
+\begin{equation}
+ \delta_*\le\min\left\{\frac18,\frac{\sigma_s}4,
+ \frac{d_s}{4\max(1,S_2)},\eta_x,
+ \frac{\eta_w}{2s\max(1,L_w)},
+ \frac{\mu_s}{2\max(1,L_w)}\right\}.
+ \label{eq:gauss-isolation-target}
+\end{equation}
+Take \(2^{1-h}\le\delta_*\). All conditioning lengths are
+\(O(s^3\log(s+2))\), giving the depth in \cref{prop:gauss-provider}.
+
+For weight arithmetic form
+\[
+ Q_s(c)=s!\int_{-1}^1\frac{A_s(t)-A_s(c)}{t-c}\dd t,
+ \qquad
+ [c^r]Q_s=2\sum_{\substack{j>r\\j-r\ {m odd}}}
+                   [t^j]A_s\frac{s!}{j-r}.
+\]
+Both integer polynomials have \(O(s\log(s+2))\)-bit coefficients.
+The rational weight at a midpoint is
+\(Q_s(\widehat\xi)/(s!A_s'(\widehat\xi))\).
+At \(\widehat\xi=c/q\), homogeneous evaluation cancels the common
+\(q^{s-1}\), giving \(O(sU_s)\)-bit numerators and denominators.
+This proves the weight-size assertion used in the total cost ledger.
+
+The global depth is sufficient, not mandatory. An isolating interval
+with a certified nonzero \(P_s'\) can instead use direct interval
+evaluation of \(J_s/P_s'\). If its node and true-weight enclosures
+already meet the assigned radii and positivity tests, it is a valid
+earlier stopping certificate for the same algorithm. This observation
+does not improve the stated worst-case complexity; its bounded software
+use is documented in the supporting note \cite{rec12}.

@@ -1,0 +1,178 @@
+\section{Growing order and outer-envelope accuracy}
+\label{sec:growing}
+We now specialize to \(1\le T\le2\) and
+\(V=8\sqrt2L\). The fixed-order theorem cannot be used by
+substituting \(p=p(X)\) into an unspecified \(C_p\).
+We instead retain the pre-absorption error estimates and bound
+their constants simultaneously.
+
+\subsection{Factorial bounds for the actual finite constants}
+Put
+\begin{align}
+ E_*&=\max\{1,\sqrt2\e^{R+Y^2/4+4},
+                         4\sqrt2\e^{Y^2/4}\},\\
+ S_*&=\max\{1,W+4,16\sqrt2\},\qquad C_*=\max(1,A,D).
+\end{align}
+The half-integer gamma recurrence gives
+\(\Gamma((m+1)/2)/\sqrt\pi\le m!\).
+The finite moment sums consequently imply
+\[
+ M_m,\mathsf D_m\le E_*m!S_*^m,\qquad
+ M_m^t,\mathsf D_m^t\le E_*(m+2)!S_*^{m+2}.
+\]
+Grouping the sums in \eqref{eq:majorant-polynomials} gives
+\begin{subequations}\label{eq:factorial-majorants}
+\begin{align}
+ \mathsf B_m[M]&\le E_*(8C_*S_*^2)^m(2m)!,\\
+ \mathsf B_m[M^t]&\le E_*S_*^2(8C_*S_*^2)^m(2m+2)!,\\
+ \max\{\mathsf H_p[\mathsf D],\mathsf H_p[\mathsf D^t]\}
+ &\le E_*S_*^2(p+1)(2C_*S_*^2)^p(2p+2)!.
+\end{align}
+\end{subequations}
+For example, in the first line bound
+\((m+k)!\le(2m)!\), \(S_*^{m+k}\le S_*^{2m}\),
+and \(\sum_{k=1}^m\binom{m-1}{k-1}/k!\le2^{m-1}\).
+Also
+\begin{equation}
+ C_{2p}\le C_RQ_R^p p!,\quad
+ C_R=C_\Gamma\frac{2^{7/4}}7\sqrt\pi\,1.1(8\pi)^{3/4},
+ \quad Q_R=1.1^2(8\pi).
+ \label{eq:rs-factorial}
+\end{equation}
+Let \(Q_*=\max(1,8C_*S_*^2,2C_*S_*^2,Q_R)\),
+\(T_*=\max(1,E_*S_*^2,C_R)\). The common explicit majorant
+\[
+ \mathcal J(p)=T_*(p+2)Q_*^{p+1}(2p+4)!
+\]
+bounds each cost in \eqref{eq:factorial-majorants} and \(C_{2p}\).
+In particular
+\begin{equation}
+ \log\mathcal J(p)=O((p+1)\log(p+2)).
+ \label{eq:log-growth}
+\end{equation}
+This bound precedes any choice \(p=O(L)\).
+It follows directly from \(n!\le n^n\), with constants fixed
+by the chart. The original finite sums remain the operative
+constants when checking a particular height.
+
+\subsection{Keep the tails before normalizing}
+Write
+\[
+ Q_p=48\{C_{2p}M_0+C_{\mathrm{pop}}\e\,\mathsf B_{p+1}[M]\}
+       +C_{2p}M_0^t+C_{\mathrm{pop}}\e\,\mathsf B_{p+1}[M^t].
+\]
+The proof of \cref{thm:fixed}, before tail absorption, gives
+\begin{align}
+ \lVert h-F_X^{[p,2p]}\rVert_{\gamma;X;1,2}^{(3,1)}
+ \le C_\chi\bigl\{&
+ Q_pX^{-(p+3/4)}
+ +49(A_{\mathrm{mod}}X^{P_0-7/4}
+                   +A_{\mathrm{art},p}X^{1/4})\e^{-L^2}\nonumber\\
+ &+49A_{\mathrm{far}}X^{-7/4}
+                       \e^{\pi X/8-X^2/256}\bigr\}.
+ \label{eq:unabsorbed}
+\end{align}
+This estimate has common structural onsets for \(1\le p\le cL\),
+each fixed \(c>0\): replace the retained-order condition by
+\(2cL\le(X-V)/(4\pi)\). All other structural gates are
+independent of \(p\).
+
+The old fixed-order absorption condition
+\[
+ L^2\ge(p+1)\log X+\Lp A_{\mathrm{art},p}
+\]
+fails already at \(p=\lfloor L\rfloor\), because
+\((p+1)\log X>L^2\).
+That failure concerns an unnecessarily strong intermediate bound.
+The unabsorbed estimate \eqref{eq:unabsorbed} remains available.
+
+\subsection{A stronger Gaussian tail with visible costs}
+Fix \(0<\theta<1\), put \(\delta=(1-\theta)/2\) and \(t_R=1+R/4\).
+For \(\abs q\ge V\),
+\[
+ -\frac{(q-\Rea d)^2}{8}+\abs q
+ \le-\frac{q^2}{8}+t_R\abs q
+ \le-\frac{\theta q^2}{8}-\frac{\delta q^2}{8}
+                         +\frac{2t_R^2}{\delta}.
+\]
+Define
+\begin{subequations}\label{eq:theta-moments}
+\begin{align}
+ \mathsf D_m^\theta
+ &=\frac{\e^{Y^2/4+2t_R^2/\delta}}{\sqrt{4\pi}}\,
+          2^m(8/\delta)^{(m+1)/2}\Gamma((m+1)/2),\\
+ (\mathsf D_m^\theta)^t
+ &=\mathsf D_m^\theta/2+\mathsf D_{m+2}^\theta/4.
+\end{align}
+\end{subequations}
+Extracting \(\e^{-\theta V^2/8}=\e^{-16\theta L^2}\)
+and integrating the remaining Gaussian proves the refined tail
+bound. Define \(A_{\mathrm{mod}}^\theta,A_{\mathrm{art},p}^\theta\)
+by \eqref{eq:tail-constants} with these moments.
+Then \eqref{eq:unabsorbed} holds with these constants and
+\(\e^{-16\theta L^2}\) replacing \(\e^{-L^2}\).
+
+The cost of the sharper tail is explicit. Use
+\[
+ E_\theta=\max\{1,\sqrt2\e^{R+Y^2/4+4},
+        \e^{Y^2/4+2t_R^2/\delta}\sqrt{2/\delta}\},
+ \quad
+ S_\theta=\max\{1,W+4,4\sqrt{2/\delta}\}
+\]
+in \eqref{eq:factorial-majorants}.
+Thus \(\log^+A_{\mathrm{art},p}^\theta
+=O_\theta((p+1)\log(p+2))\).
+The parameter \(\theta\) is fixed before the height tends to
+infinity; the constants are not uniform as \(\theta\to1\).
+
+\begin{theorem}[Controlled growing order]\label{thm:growing}
+Fix \(r,b>0\), \(c>0\), and \(a\) with \(1/8<a\le c\).
+For \(p=\lfloor aL\rfloor\), \(K=2p\), and every
+\[
+ 0<\eta<\min(a-1/8,127/8),
+\]
+the full frozen model on \(1\le T\le2\) satisfies, eventually,
+\begin{equation}
+ \normo{h-F_X^{[p,2p]}}\le\e^{-\eta L^2}.
+ \label{eq:growing-result}
+\end{equation}
+In particular \(p=\lfloor L/2\rfloor\), \(K=2p\) gives
+\(\normo{h-F_X^{[p,2p]}}\le\e^{-L^2/4}\).
+The estimate retains both arms, every \(n\le N\), and the bounded
+completion integral.
+\end{theorem}
+\begin{proof}
+Choose a fixed \(\theta<1\) such that
+\(\eta<16\theta-1/8\).
+By \eqref{eq:log-growth}, the logarithm of the source/local
+constant is \(O_a(L\log L)\).
+After \eqref{eq:outer-conversion}, its exponent is at most
+\[
+ -(p+3/4)\log X+L^2/8+O_a(L\log L)
+ =-(a-1/8)L^2+O_a(L\log L).
+\]
+The moderate and artificial tails have exponents at most
+\[
+ -(16\theta-1/8)L^2+O_{a,\theta}(L\log L).
+\]
+The remote true tail is smaller still, with a negative quadratic
+term in \(X\).
+The strict inequalities for \(\eta\) make these bounds summably
+smaller than the target after a common onset.
+The finite four-part allocation is given in \cref{app:growing-gates}.
+Taking \(\theta=1/2\), \(a=1/2\), \(\eta=1/4\) proves the
+stated concrete choice.
+\end{proof}
+The range is sufficient, not asserted sharp. A cap \(p\le cL\)
+alone would include \(p=1\) and would not imply outer decay.
+The bound is relative to the positive envelope, including near
+zeros of the signed field. Selection of \(p(X)\) does not permit
+setting \(X=\Rea z\) during differentiation or differentiating
+the floor. Each chart remains frozen.
+
+The earlier ansatz investigation already supplied a separate
+growing-degree outer approximation \cite{ans05}.
+The present result establishes the corresponding accuracy for
+the fluctuation grading, with simultaneous factorial costs and
+the same canonical completion. It does not claim that the first
+outer approximation has only now been obtained.

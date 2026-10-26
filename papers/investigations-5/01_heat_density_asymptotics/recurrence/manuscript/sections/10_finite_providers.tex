@@ -1,0 +1,349 @@
+\section{Finite algorithms for the evaluation data}
+\label{sec:providers}
+We now supply the data required by \cref{thm:evaluation}.
+The construction separates delivered accuracy from the arithmetic used
+to obtain it. Elementary rational series, a shifted Stirling expansion,
+exact polynomial root counts, and a guarded real partition suffice.
+This section integrates the finite constructions of \cite{rec09,rec10};
+\cref{sec:effective} composes them with the explicit calibration below.
+
+\subsection{Exact inputs and certified frozen descriptors}
+\label{subsec:input-class}
+Fix positive dyadic radii \(r,b\). A query consists of a positive dyadic
+center \(X\), exact rational \(d=z-X\) and \(T\), with
+\(z\in\Omega_X(r,b)\), \(1\le T\le2\), and finite rational
+certificates for integers \(p,N\) satisfying
+\begin{equation}
+ 2p<L^-\le L\le L^+<2p+2,\qquad
+ N<a^-\le a_X\le a^+<N+1.
+ \label{eq:descriptor-certificates}
+\end{equation}
+The constants are proved on the enlarged rectangle
+\(\Omega_X(R,Y)\), where \(R=r+1,Y=b+1\), before obtaining the
+target derivative bounds. A larger target rectangle is handled by
+declaring its own radii and buffers.
+Invalid certificates are rejected. Strict centers admit such witnesses
+by refinement, with separation
+\begin{equation}
+ \sigma=\min\{L-2p,2p+2-L,a_X-N,N+1-a_X\}>0.
+ \label{eq:center-separation}
+\end{equation}
+This is an input restriction, not an equality test for arbitrary
+computable reals. No lower bound on \(\sigma\) is implicit.
+All certified descriptors, coefficients, partitions, and reference
+geometry are fixed under differentiation.
+
+Let \(c_-\le c_{\mathrm o}\) and \(C_+\ge C_\chi\) be valid
+positive rational calibration bounds. Choose a dyadic budget \(e>0\)
+by strict enclosure tests so that
+\begin{equation}
+ \frac{c_-}{8C_+}\e^{-3L^2/8}<e<
+ \frac{c_-}{4C_+}\e^{-3L^2/8}\le\varepsilon_X/2.
+ \label{eq:comparable-budget}
+\end{equation}
+All positive finite majorants can be enclosed from above within a factor
+of two of one plus their value. Tolerances chosen within a fixed factor
+of the caps below give the stated asymptotic precision bounds. Smaller
+tolerances remain valid, with their actual cost counted.
+
+\subsection{Elementary data, logarithmic normalization, and scale}
+\label{subsec:elementary-providers}
+\begin{lemma}[Finite elementary enclosures]\label{lem:elementary}
+Rational input admits terminating rational enclosures for \(\pi\),
+positive logarithms and square roots, right-half-plane logarithms,
+reduced real and complex exponentials, and reciprocals with a certified
+positive separation. Every requested output tolerance can be met by
+an explicit series-tail or bisection test.
+\end{lemma}
+\begin{proof}
+The series and their remainders are given in
+\cref{app:elementary}. Exact rational partial sums have no operation
+rounding. Range reduction uses a freely chosen encoding integer,
+then refines its multiplied input errors. The noninteger denominators
+have declared positive lower bounds. Every displayed tail tends to zero.
+\end{proof}
+All half-integer moment constants are also effective, using
+\(\Gamma(j+1/2)=(2j)!\sqrt\pi/(4^jj!)\).
+
+For real \(u>0\), a compatible logarithm of the exact gamma factor is
+\begin{equation}
+ \ell_+(u)=\log\frac{1+u^2}{64}
+       -\frac{1+\ii u}{4}\log\pi
+       +\log\Gamma\left(\frac{1+\ii u}{4}\right)+\ii\pi.
+ \label{eq:provider-logM}
+\end{equation}
+The other arm is its conjugate. If
+\(D_m=(\log\Gamma)^{(m)}((1+\ii u)/4)/m!\), then
+\begin{equation}
+ \frac{\ell_+^{(m)}(u)}{m!}
+ =\frac{(-1)^{m-1}}m\{(u-\ii)^{-m}+(u+\ii)^{-m}\}
+   +(\ii/4)^mD_m-\mathbf1_{m=1}(\ii/4)\log\pi.
+ \label{eq:provider-logM-jets}
+\end{equation}
+This supplies the normalized curvature coefficients and slopes without
+forming derivative factorials. Use log differences to construct
+\[
+ \beta_{+,n}=n^{-1/2}\e^{\ii(\Ima\ell_+(X)-X\log n/2)},\qquad
+ \frac{M(w_+(u))}{g}=\e^{\ell_+(u)-\Rea\ell_+(X)}.
+\]
+The phase budget \eqref{eq:phase-budget} remains in force; in particular
+the error in \(\log n\) is multiplied by \(X/2\).
+
+For the common scale write \(g=\e^t\), \(t=\Rea\ell_+(X)\).
+Choose an integer \(k\) from a coarse enclosure of \(t/\log2\),
+then certify \(\abs{t-k\log2}\le2\). Deliver both the log-scale
+error and the relative reduced-exponential error below
+\(\varepsilon_g/8\). For \(\varepsilon_g\le1/2\) their product
+gives \(\abs{\widehat g/g-1}\le\varepsilon_g\).
+Return \(\widehat g=\widehat m2^k\), with unrestricted integer exponent.
+Here \(\abs k=O(X+\log X)\), but its binary length is \(O(\log X)\).
+The accuracy requested for \(\log2\) includes its multiplier \(\abs k\).
+
+\subsection{A short gamma construction with simultaneous jet errors}
+\label{subsec:short-gamma}
+\begin{proposition}[Shifted Stirling provider]\label{prop:gamma-provider}
+Let \(u>0\) be rational with binary input length \(b_\Gamma\).
+For integers \(P\ge1,J\ge0\), normalized log-gamma derivatives
+through order \(J\), including the value, can be delivered with
+error at most \(2^{-P}\). With
+\(t_\Gamma=P+J+b_\Gamma+10\), sufficient bounds are
+\[
+ O(t_\Gamma^6)\quad\text{bit operations},\qquad
+ O(t_\Gamma^3)\quad\text{bits of storage}.
+\]
+The expansion and recurrence use \(O(P+J)\) terms and shifts.
+\end{proposition}
+\begin{proof}
+Put \(\zeta=(1+\ii u)/4\), \(m=P+2J+4\), \(a=m+1\),
+and \(W_\Gamma=\zeta+a\). Define
+\begin{equation}
+ S_m(w)=(w-\tfrac12)\Log w-w+\tfrac12\log(2\pi)
+       +\sum_{k=1}^{m-1}\frac{B_{2k}}{2k(2k-1)w^{2k-1}}.
+ \label{eq:short-stirling}
+\end{equation}
+The complex log-gamma remainder in \cite[\S5.11(ii)]{dlmfgamma}
+is bounded by the first omitted term times
+\(\sec^{2m}(\arg w/2)\). The Bernoulli Fourier formula
+\cite{dlmfbernoulli} gives \(\abs{B_{2m}}\le4(2m)!/6^{2m}\).
+For \(\Rea w\ge m\), consequently,
+\begin{equation}
+ \abs{\log\Gamma(w)-S_m(w)}
+ \le \frac{2^m4(2m)!}{6^{2m}2m(2m-1)m^{2m-1}}
+ \le\frac{(2/9)^m}{m}\le\frac{4^{-m}}m.
+ \label{eq:short-gamma-remainder}
+\end{equation}
+This bound holds throughout \(w=W_\Gamma+s\), \(\abs s\le1/8\).
+The analytic gamma recurrence, with logarithms fixed from positive real
+values, gives
+\[
+ \log\Gamma(\zeta+s)=S_m(W_\Gamma+s)
+       -\sum_{h=0}^{a-1}\Log(\zeta+h+s)+R_m(W_\Gamma+s).
+\]
+There is no principal-log phase reset. Cauchy's formula gives, for
+\(0\le j\le J\),
+\begin{equation}
+ \abs{[s^j]R_m(W_\Gamma+s)}
+       \le8^j4^{-m}/m\le2^{-P-8}.
+ \label{eq:gamma-jet-remainder}
+\end{equation}
+The remaining coefficients are finite rational expressions and logarithms:
+\[
+ [s^j](w+s)^{-(2k-1)}
+   =(-1)^j\binom{2k+j-2}{j}w^{-2k-j+1},\quad
+ [s^j]\Log(w+s)=\frac{(-1)^{j-1}}{jw^j}\quad(j\ge1).
+\]
+Writing \(L_0=\Log W_\Gamma\),
+\(L_j=(-1)^{j-1}/(jW_\Gamma^j)\), the leading Stirling part has
+coefficients \((W_\Gamma-1/2)L_0-W_\Gamma+\log(2\pi)/2\),
+\((W_\Gamma-1/2)L_1+L_0-1\), and
+\((W_\Gamma-1/2)L_j+L_{j-1}\) for \(j\ge2\).
+
+Here is one complete internal allowance. Put \(\epsilon=2^{-P}\),
+\(T_\Gamma=a+m+J+10\), and
+\(U_\Gamma=a+1+(\abs u+1)/4\ge\abs{W_\Gamma}\).
+Deliver \(\Log W_\Gamma\), \(\log(2\pi)\), and each shift logarithm
+to errors \(\epsilon/[64(1+U_\Gamma)]\), \(\epsilon/32\), and
+\(\epsilon/(64a)\), respectively. Compute each rational term exactly,
+quantize its complex value to error \(\epsilon/(64T_\Gamma)\), and
+sum on a common dyadic grid. Fewer than \(T_\Gamma\) terms enter any
+jet. These errors, \eqref{eq:gamma-jet-remainder}, and final quantization
+sum to less than \(\epsilon\).
+
+All shift denominators have modulus at least \(1/4\). The binomial
+factor divided by \(\abs{W_\Gamma}^j\) is at most \(3^j/j!<27\);
+the correction terms are bounded by \(27/(m9^k)\), the shift jets
+by \(a4^J\). A sufficient internal dyadic width is
+\(P+O(\log(2+\abs u)+J+\log(P+J+2))\).
+Bernoullis are generated by their triangular rational recurrence;
+their denominators divide \((n+1)!\). Cached powers and elementary-series
+denominators have \(O(t_\Gamma^2)\) bits. There are
+\(O(t_\Gamma^2)\) integer operations, each costing
+\(O(t_\Gamma^4)\) with elementary multiplication and division.
+Processing shift arrays sequentially gives the stated cubic space.
+Exact temporary operands can exceed the delivered precision.
+\end{proof}
+The elementary Euler-product alternative in \cref{app:euler-provider}
+also proves finite delivery, but needs a much longer sum.
+Its accumulation error explains why output accuracy alone cannot be
+used as a provider's internal roundoff allowance.
+
+\subsection{Exact Gauss root counts and polynomial work}
+\label{subsec:gauss-provider}
+Let \(P_s\) be the Rodrigues Legendre polynomial. Orthogonality implies
+\(s\) simple roots in \((-1,1)\): otherwise the product of its fewer
+sign-changing factors would contradict orthogonality.
+Define \(V_s(x)\) as the sign variation of
+\((P_s(x),\ldots,P_0(x))\), with zeros omitted.
+The identities
+\[
+ (k+1)P_{k+1}=(2k+1)xP_k-kP_{k-1},\qquad
+ (1-x^2)P_s'=s(P_{s-1}-xP_s)
+\]
+follow from Rodrigues' formula; see also \cite{dlmflegendre}.
+At an internal-chain zero the neighbors have opposite signs, so variation
+is unchanged. At a root of \(P_s\) it drops by one, and omitting the
+leading zero gives its right limit. Hence the exact root count in an
+open interval is
+\begin{equation}
+ \#\{\xi_i\in(A,B)\}
+ =V_s(A)-V_s(B)-\mathbf1_{P_s(B)=0}.
+ \label{eq:legendre-open-count}
+\end{equation}
+Bisect positive-count dyadic intervals, record midpoint roots as
+singletons, and discard empty children. At most \(s\) intervals remain
+at each depth, giving \(O(sh)\) count queries through depth \(h\).
+For \(x=c/q\), compute signs using integers
+\begin{equation}
+ b_0=1,\quad b_1=2c,\quad
+ b_{k+1}=2(2k+1)c b_k-4k^2q^2b_{k-1},
+ \quad b_k=q^k2^kk!P_k(c/q).
+ \label{eq:integer-legendre}
+\end{equation}
+Thus no rational sign oracle or unhandled endpoint equality is needed.
+
+Define the polynomial
+\(J_s(a)=\int_{-1}^1(P_s(t)-P_s(a))/(t-a)\dd t\).
+The exact Gauss weights are
+\begin{equation}
+ \omega_i=J_s(\xi_i)/P_s'(\xi_i).
+ \label{eq:rational-gauss-weight}
+\end{equation}
+Polynomial division proves exactness through degree \(2s-1\), while
+the nodal Lagrange polynomial gives
+\(\omega_i=\int_{-1}^1l_i^2>0\) and \(\sum_i\omega_i=2\).
+Explicit separation and conditioning constants are recorded in
+\cref{app:gauss-conditioning}; they prove the following bound.
+
+\begin{proposition}[Finite Gauss data]\label{prop:gauss-provider}
+For base-node error \(\eta_x\), total base-weight error \(\eta_w\),
+and rational input length \(\ell_{\rm in}\), put
+\[
+ U_s=P_{\rm samp}+\ell_{\rm in}
+                 +s^3\lceil\log_2(s+2)\rceil+10,
+\]
+where \(P_{\rm samp}\ge1\) bounds both negative binary log tolerances.
+Positive rational weights and interior rational nodes can be delivered
+with those errors in \(O(s^4U_s^3)\) bit work and \(O(s^2U_s)\) space.
+The required isolation depth is
+\(O(P_{\rm samp}+\ell_{\rm in}+s^3\log(s+2))\).
+\end{proposition}
+\begin{proof}
+Use \eqref{eq:legendre-open-count} until the explicit root/weight
+allowances in \cref{app:gauss-conditioning} hold. Each variation query
+uses \(O(s)\) operations on \(O(s(h+\log(s+2)))\)-bit integers.
+Exact homogeneous weight evaluation and coefficient construction fit
+the same work and space bounds. A singleton root is handled exactly.
+\end{proof}
+
+\subsection{Guarded geometry at cutoff transitions}
+\label{subsec:guard-geometry}
+Write \(\alpha=X-V,\beta=X+V,\vartheta_j=4\pi j^2\).
+For rational \(0<\eta\le\min(\varepsilon_b,1/4)\), compute strict
+rational enclosures of width at most \(\eta\) for \(\alpha,\beta\)
+and \(\vartheta_N,\vartheta_{N+1}\). Padding supplies strictness even
+at a rational endpoint. A threshold is a candidate if its enclosure
+intersects the enclosing window. The local-strip gates imply
+\[
+ a'(u)\le\frac1{2\sqrt{2\pi X}},\qquad
+ \operatorname{span}_{[X-(V+1),X+(V+1)]}a
+ \le\frac{V+1}{\sqrt{2\pi X}}\le\frac18.
+\]
+There is therefore at most one candidate, and every true threshold
+is a candidate. Only \(N,N+1\) need be considered.
+With enclosures \([\alpha^-,\alpha^+]\), \([\beta^-,\beta^+]\),
+\([\vartheta_j^-,\vartheta_j^+]\), retain
+\begin{equation}
+ [\alpha^+,\min(\beta^-,\vartheta_j^-)],\quad
+ [\max(\alpha^+,\vartheta_j^+),\beta^-]
+ \label{eq:interior-branches}
+\end{equation}
+with labels \(j-1,j\). Without a candidate retain
+\([\alpha^+,\beta^-]\) with label \(N\).
+Discard nonpositive intervals and pieces of length at most \(\eta\).
+Endpoint and threshold trimming omit at most \(3\eta\); discarding
+short pieces adds at most \(2\eta\). Thus the total missing integral
+is bounded by \(5\eta B_{\rm loc}\le6\varepsilon_b B_{\rm loc}\).
+Every retained piece is inside the correct original branch, including
+when a threshold equals a window edge or lies just outside it.
+
+Apply the Gauss rule by the exact rational affine map
+\(u=c+h\xi\), \(\mu=h\omega\), with \(0<h\le V\).
+Base errors give physical errors at most \(V\eta_x,V\eta_w\);
+split the total weight allowance across the at most two branches.
+Each subinterval ellipse lies inside its parent ellipse, so
+\eqref{eq:quadrature-bound} still applies. No division by branch length
+occurs, no rounded floor relabels a node, and trimming is charged once.
+
+\subsection{Pole-safe coefficient delivery}
+\label{subsec:pole-safe-delivery}
+Use the contour formula \eqref{eq:contour-jet}, the exact weighted
+recurrence \eqref{eq:weighted-rs}--\eqref{eq:rs-endpoint}, and all
+\(m\le M:=3K\). The contour has length \(12\), denominator
+\(\abs{2\cos(\pi\zeta)}\ge1\), and target separation at least
+\(1/4\). The entire continuation, maximum modulus, and Cauchy give
+\[
+ B=B_c4^{M+1},\qquad L_\zeta=4(M+2)B,\qquad L_\chi=4(M+1)B
+\]
+as common magnitude and Lipschitz bounds for its integrands.
+Keep \(\widehat\chi\) within \(1/8\) of the exact real value.
+If the contour's total weight, node, target-coordinate, primitive, and
+\(\kappa=1/(2\pi\ii)\) errors are
+\(\eta_w,\eta_\zeta,\eta_\chi,\eta_H,\eta_\kappa\), the additional
+error in any normalized jet is at most
+\begin{equation}
+ \frac{\eta_wB+(12+\eta_w)
+       (L_\zeta\eta_\zeta+L_\chi\eta_\chi+\eta_H)}{2\pi}
+ +\eta_\kappa(12+\eta_w)(B+\eta_H).
+ \label{eq:contour-delivery}
+\end{equation}
+For common errors at most \(\delta\le1/8\), bound this by
+\(\delta C_c\), where
+\(C_c=[B+13(L_\zeta+L_\chi+1)]/6+13(B+1)\).
+Choose \eqref{eq:contour-error} below \(\tau_h/4\) and
+\(\delta\le\min(1/8,\tau_h/[4(1+C_c)])\); final quantization can
+use another \(\tau_h/4\). At contour nodes, numerator and denominator
+errors give \(\abs{\widehat F_0-F_0}\le2\eta_N+2B_c\eta_D\)
+when \(\eta_D\le1/2\). Requiring this below
+\(\eta_H4^{-M-1}\) supplies the primitive allowance.
+
+For explicit coefficient propagation put
+\begin{align*}
+ A_{kj}&=\abs{e_j^{(k)}}2^{-j}3^{j-2k},&
+ S_C&=\max_{k\le K}\sum_jA_{kj},\\
+ T_C&=\max_{k\le K}\sum_j\frac{2k-j}{3}A_{kj}
+                         (B_F2^{3k-2j}+1).
+\end{align*}
+Since \(j\le3k/2\), the powers of \(\pi\) have nonpositive
+exponents. The mean value theorem, \(\pi,\widehat\pi\ge3\), and
+\(\tau_h\le1\) imply
+\begin{equation}
+ \abs{\widehat C_k-C_k}\le\tau_hS_C+
+                           \abs{\widehat\pi-\pi}T_C.
+ \label{eq:Ck-delivery}
+\end{equation}
+Taking the two terms below \(\varepsilon_C/4\) leaves quantization
+slack. Both condition sums have logarithms \(O(K\log(K+2))\).
+This constructs every coefficient, including at removable poles.
+It uses the named exact identities, with their source-review scope
+stated in \cref{sec:quadrature}; no preliminary precision assertion
+from the coefficient literature is imported.
