@@ -1,0 +1,1258 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,
+urlcolor=MidnightBlue,pdftitle={Large-height heat-density ansatze across time},
+pdfauthor={Drafted for Edward Baker}}
+\setlength{\emergencystretch}{2em}
+\setlength{\parskip}{.35em}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\epsg}{\epsilon_g}
+\newcommand{\Mc}{\mathcal M}
+\newcommand{\Sc}{\mathcal S}
+\newcommand{\Gc}{\mathcal G}
+\newcommand{\Acal}{\mathcal A}
+\newcommand{\Log}{\operatorname{Log}}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\arsinh}{\operatorname{arsinh}}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{remark}[proposition]{Remark}
+\numberwithin{equation}{section}
+\title{Large-height heat-density ans\"atze across time\\
+\large Amplitude, phase, arithmetic crossover, and regulator layers}
+\author{Drafted for Edward Baker}
+\date{25 October 2026\\[.3em]\small Working research draft}
+\begin{document}
+\maketitle
+\begin{abstract}
+We organize simple analytical models for the canonical theta heat field
+and its regularized averaged zero density. The principal objective is a
+large-height description for every real heat time, with separate formulas
+where different mechanisms dominate and explicit estimates on their
+overlaps. An elementary positive-time cosine is calibrated against the
+gamma factor. At zero time a Riemann--Siegel sum retains the arithmetic
+oscillations, motivating a heat-weighted finite-sum model near zero time.
+Negative times, joint large time and height, and the regulator-induced
+transition require distinct comparisons. Existing source results, exact
+identities, formal candidates, and unproved uniform estimates are
+separated throughout. A bounded continuation proves the first corrected carrier on
+\(32\le t\le33\) and a signed-time real-axis arithmetic field
+comparison on \(|t|\log(X/(4\pi))\le8\), retaining a Riemann--Siegel
+correction. A further continuation proves the fixed-cutoff complex
+remainder and the full buffered crossover field, three spatial jets,
+and a direct first time derivative through zero. On \(1\le T=-t\le2\),
+a short formula is proved at the natural gamma scale, while a finite
+growing-order representation attains outer-carrier precision, with
+buffered spatial and time errors paid separately. That representation
+extends to \(4/L_X\le T\le2\) and joins to the crossover model with
+all time-cutoff defects paid, yielding a chartwise negative interval
+\([-2,0]\).
+This draft does not establish an all-time large-height theorem.
+\end{abstract}
+\noindent\textbf{LLM acknowledgement.}
+Prepared with substantial assistance from OpenAI GPT-6 Astra
+(\texttt{gpt-6-astra}), recorded reasoning effort \texttt{max}, in
+research chat0022. The bounded continuation in Ansatz Note03 was
+prepared with GPT-6.1 Sol (\texttt{gpt-6.1-sol}), recorded effort
+\texttt{ultra}, ansatz chat0001, with same-model internal checks.
+The same model and effort produced Note04's buffered crossover and
+Note05's fixed-negative-time and Note06's bridge-and-join continuations,
+with same-model checks. Note07 summarizes the complete chat0001 results.
+Mathematical statements require author verification.
+No numerical or machine-symbolic research was executed in preparing
+this draft. Compilation and layout checks are production checks.
+\newpage
+\tableofcontents
+\newpage
+
+\section{Objective and present evidence}
+\label{sec:objective}
+The desired outcome is a useful formula for the large-height field as a
+function of time, together with the corresponding unnormalized density.
+The solution formula should be short; the error term may be elaborate.
+Different regimes are permitted. We prioritize amplitude, unwrapped
+phase, arithmetic terms, and transition matching over simplification of
+constants in existing bounds.
+
+The parent manuscript \cite{parent} supplies a finite analytical
+all-real-time/all-height construction on its declared strip, through
+Notes54--55. Notes58--61, summarized in \cite{summary62}, subsequently
+develop positive source compression, finite evaluation and filtering
+errors, exact phase-index selection using existing onset freedom, and
+polynomial additional-accuracy-bit cost at a fixed descriptor and query
+box. Their constants can be large; useful uniform height cost and a
+distinct full-chain audit remain open. Those later notes have not yet
+been integrated into the parent manuscript.
+
+The present task is a new representation program within that
+investigation. It does not replace the complete parent construction or
+upgrade its review status. The earlier ansatz catalogue \cite{ansatz01}
+is retained, but the large-height question now takes priority over the
+Gaussian-polynomial core.
+
+Three meanings of \emph{all times} must be distinguished:
+\begin{enumerate}
+\item for each fixed real \(t\), an asymptotic as \(X\to\infty\), with
+the dependence of its onset and constants on \(t\) specified;
+\item uniform estimates on compact time intervals, especially intervals
+crossing \(t=0\) or the regulator switch;
+\item joint limits \(t=t(X)\), including unbounded positive or negative
+time, with stated scaling regions and overlap estimates.
+\end{enumerate}
+The program aims at all three. A fixed-time formula does not supply
+the other two by substitution.
+
+\section{Normalization, observables, and exact time anchors}
+\label{sec:normalization}
+Throughout,
+\begin{align}
+\Phi(u)&=\sum_{n\ge1}
+ (2\pi^2n^4e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2e^{4u}},
+ \qquad u\ge0, \label{eq:source}\\
+H(t,z)&=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\dd u,
+ \qquad H_t=-H_{zz}, \label{eq:heat}\\
+H(0,z)&=\frac18\xi(s)=\Mc(s)\zeta(s),
+ \qquad s=\frac{1+iz}{2}, \label{eq:anchor-zero}\\
+\Mc(w)&=\frac{w(w-1)}{16}\pi^{-w/2}\Gamma(w/2).
+ \label{eq:gamma}
+\end{align}
+The source has an even extension. The time variable \(t\) is heat time;
+the usual zeta height is \(x/2\), not \(x\). Write \(z=x+iy\) and \(X=|x|\).
+The displayed real-height formulas are analytically continued on each
+separate buffered tail; \(|x|\) itself is not a holomorphic coordinate.
+
+The fixed normalized spatial kernel is
+\begin{equation}
+k(v)=\frac{315}{256}(1-v^2)^4\mathbf1_{\{|v|\le1\}},\qquad
+k_\ell(x)=\ell^{-1}k(x/\ell),\qquad K(x,y)=k_\ell(x)k_h(y),
+\label{eq:kernel}
+\end{equation}
+with fixed positive widths \(\ell,h\).
+
+For a holomorphic model \(F\), keep the same physical regulator
+\(q=\epsg^2\) and fixed spatial kernel as for \(H\):
+\begin{align}
+S_F&=\log(|F|^2+q),&
+\rho_F&=\frac{q|F_z|^2}{\pi(|F|^2+q)^2},&
+R_F&=K*\rho_F, \label{eq:density}\\
+U_F&=K*S_F,&
+j_F&=\frac{qF_{zz}\overline{F_z}}{\pi(|F|^2+q)^2},&
+J_F&=K*j_F. \label{eq:current}
+\end{align}
+The actual signed covariance is
+\begin{equation}
+Q_F=K*((S_F)_x^2-(S_F)_y^2)
+       -((U_F)_x^2-(U_F)_y^2).
+\label{eq:covariance}
+\end{equation}
+The variable-regulator terms in the parent evolution equations remain.
+A convenient exact identity, away from zeros, is
+\begin{equation}
+\rho_F=\frac1{4\pi}\left|\frac{F_z}{F}\right|^2
+ \sech^2\!\left(\log\frac{|F|}{\sqrt q}\right).
+\label{eq:sech}
+\end{equation}
+At zeros use \eqref{eq:density}. Rescaling \(F\) without rescaling \(q\)
+changes the density, so an accurate phase alone is not sufficient.
+
+\subsection{Convolutions on the two sides of zero time}
+For \(t>0\), the exact Gaussian identity \cite[Eq.~(35)]{polymath} is
+\begin{equation}
+H(t,z)=\frac1{\sqrt{\pi t}}\int_\R e^{-v^2/t}
+                      \frac{\xi(s+v)}8\dd v.       \label{eq:positive-anchor}
+\end{equation}
+For \(T>0\), direct Gaussian integration in \eqref{eq:heat} gives
+\begin{equation}
+H(-T,z)=\frac1{\sqrt{4\pi T}}\int_\R e^{-v^2/(4T)}
+                                      H(0,z-v)\dd v. \label{eq:negative-anchor}
+\end{equation}
+The even source and its rapid decay justify interchange on fixed
+complex strips. These are exact starting identities, not short
+large-height asymptotics. The negative-time formula must not be obtained
+by substituting \(t<0\) into an uncontrolled positive-time remainder.
+
+\section{The elementary large-height cosine}
+\label{sec:cosine}
+This is the primary displayed ansatz to develop. Let
+\begin{equation}
+\ell_X=\log\frac{X}{4\pi},\qquad
+F_{\mathrm o}(t,X)=A_{\mathrm o}(t,X)\cos\Theta_{\mathrm o}(t,X),
+\label{eq:outer}
+\end{equation}
+where
+\begin{align}
+A_{\mathrm o}(t,X)&=\frac{\pi^{1/4}}{16}X^{7/4}
+\exp\left\{-\frac{\pi X}{8}
+             +\frac t{16}\left(\ell_X^2-\frac{\pi^2}{4}\right)\right\},
+\label{eq:amplitude}\\
+\Theta_{\mathrm o}(t,X)&=\frac X4(\ell_X-1)
+                         +\frac{\pi t}{16}\ell_X+\frac{7\pi}{8}.
+\label{eq:phase}
+\end{align}
+The amplitude in \eqref{eq:amplitude} is the full cosine amplitude.
+Each individual exponential carrier has half this amplitude.
+
+\subsection{Calibration against the linear gamma model}
+Define the exact logarithmic derivative
+\begin{equation}
+\alpha(w)=\frac{\Mc'(w)}{\Mc(w)}
+=\frac1w+\frac1{w-1}-\frac{\log\pi}{2}+\frac12\psi(w/2),
+\end{equation}
+and the parent linear model
+\begin{equation}
+\Gc_t(w)=\Mc(w)e^{t\alpha(w)^2/4},\qquad
+P_{\rm lin}(t,z)=\Gc_t(s)+\Gc_t(1-s). \label{eq:linear}
+\end{equation}
+Sectorial Stirling expansions \cite{dlmf-gamma}, at \(s_X=(1+iX)/2\),
+give the following leading quantities:
+\begin{align}
+|\Mc(s_X)|&=\frac{\pi^{1/4}}{32}X^{7/4}e^{-\pi X/8}
+                          (1+O(X^{-1})), \label{eq:gamma-amplitude}\\
+\arg\Mc(s_X)&=\frac X4(\ell_X-1)+\frac{7\pi}{8}+O(X^{-1}),\\
+\alpha(s_X)&=\frac{\ell_X}{2}+\frac{i\pi}{4}+O(X^{-1}).
+\label{eq:alpha-leading}
+\end{align}
+The phase is an unwrapped, conjugate-compatible branch.
+Indeed \(|s_X(s_X-1)|=(1+X^2)/4\); multiplying this by
+\(\pi^{-1/4}|\Gamma(1/4+iX/4)|/16\) produces the constant \(1/32\).
+The polynomial factor contributes the phase \(\pi\), while the gamma
+factor contributes the constant \(-\pi/8\).
+Finally
+\[
+\frac t4\left(\frac{\ell_X}{2}+\frac{i\pi}{4}\right)^2
+=\frac t{16}\left(\ell_X^2-\frac{\pi^2}{4}\right)
+ +i\frac{\pi t}{16}\ell_X.
+\]
+Pairing the conjugate carriers yields
+\eqref{eq:amplitude}--\eqref{eq:phase}.
+
+\begin{proposition}[Leading reduction on a fixed positive interval]
+For a fixed \(32\le t\le T_0<\infty\), the parent linear-carrier
+comparison and the preceding Stirling reduction give, on the real axis,
+\begin{equation}
+H(t,X)=F_{\mathrm o}(t,X)
+ +A_{\mathrm o}(t,X)\,
+        O_{T_0}\!\left(\frac{1+\log^2X}{X}\right).
+\label{eq:outer-fixed}
+\end{equation}
+This statement retains the in-manuscript status of the imported
+comparison. It asserts no relative error divided by the cosine at a zero.
+\end{proposition}
+\begin{proof}
+For bounded \(t\), \eqref{eq:alpha-leading} changes the exponent in
+\eqref{eq:linear} by \(O_{T_0}((1+\log X)/X)\).
+The gamma amplitude and phase changes cost \(O(X^{-1})\).
+These estimates compare each nonzero carrier to its elementary
+counterpart. Add the two errors and then the parent error
+\(O_{T_0}((1+\log^2X)/X)\) times the carrier sum.
+\end{proof}
+
+The compact complex-buffer, differentiated and first-correction version
+on \(32\le t\le33\) is proved below at its in-note status. Constants
+and onset gates are finite but not numerically instantiated. Expansion
+and joining of the time ranges remain separate tasks.
+The analytical floor \(32\) is not a physical transition. The published
+small-positive-time asymptotics in \cite[Prop.~9.1]{polymath} provide a
+separate starting range \(0<t\le1/2\), with an onset growing as
+\(\exp(C/t)\); their hypotheses and errors must be reconciled before
+joining the ranges. The interval between these imported ranges is not
+declared covered by this draft.
+
+\subsection{What a higher-order expansion must include}
+A two-term formula is not obtained by expanding only the gamma factor.
+The heat convolution, displacement of the saddle, and Gaussian
+determinant contribute at the same orders. As a formal fixed-\(t\)
+checkpoint, Gaussian completion suggests the correction
+\begin{equation}
+\log(\hbox{one gamma heat carrier})
+\sim \log\Mc(w)+\frac t4\alpha(w)^2
+       +\frac t4\alpha'(w)+\frac{t^2}{8}\alpha(w)^2\alpha'(w)+\cdots .
+\label{eq:formal-correction}
+\end{equation}
+Ansatz Note03 proves this checkpoint, with a remainder, on
+\(32\le t\le33\), as recorded below. Outside that bounded result it
+remains a formal guide. Arithmetic modes may exceed a \(1/X\)
+correction at small positive time. The next term must be selected by comparing all error
+sources, rather than by automatically writing an inverse-height series.
+At \(t=64\), \eqref{eq:phase} agrees with the leading full-saddle phase
+in parent Note60, including \(4\pi\ell_X+7\pi/8\); agreement of those
+leading coefficients does not identify the higher corrections.
+
+\subsection{First corrected carrier on a compact positive interval}
+Ansatz Note03 \cite{ansatz03} proves the preceding checkpoint on
+\(32\le t\le33\), including the complete arithmetic and contour errors.
+Fix \(\ell,h>0\). The spatial target includes
+\( |\Re z-X|\le\ell+2\), \( |\Im z|\le1+h+2\), with one further
+unit of analytic margin. On the right tail put
+\[
+ L=\Log(z/(4\pi)),\quad b_\pm=L/2\pm i\pi/4,\quad
+ C_\pm=\tfrac12 A_{\mathrm o}(t,z)e^{\pm i\Theta_{\mathrm o}(t,z)},
+ \qquad \mathcal E_o=|C_+|+|C_-|.
+\]
+The powers use the branch continued from positive real height. Define
+\begin{equation}
+ D_\pm=\frac{\pm i}{z}\left(
+ \frac1{24}-\frac t4-\frac{7t b_\pm}{4}-\frac{t^2b_\pm^2}{8}\right),
+ \qquad F_1=\sum_\pm C_\pm(1+D_\pm).
+ \label{eq:corrected-outer}
+\end{equation}
+For sufficiently large \(X\), uniformly on the buffered domain,
+\begin{align}
+ |\partial_z^j(H-F_1)|&\le C_j\mathcal E_o
+       \frac{1+\log^{4+j}X}{X^2},\qquad 0\le j\le3,
+       \label{eq:corrected-jets}\\
+ |\partial_t(H-F_1)|&\le C\mathcal E_o
+       \frac{1+\log^6X}{X^2}.
+       \label{eq:corrected-time}
+\end{align}
+Constants depend on the fixed buffers and are not numerically
+instantiated. These are proved-in-note estimates with same-model
+internal assessment, not independent specialist validation.
+
+On the real axis the same field can be written, within the error in
+\eqref{eq:corrected-jets}, as
+\begin{align}
+ H(t,X)&=A_{\mathrm o}e^{a_1/X}
+              \cos(\Theta_{\mathrm o}+p_1/X)
+              +A_{\mathrm o}O((1+\ell_X^4)/X^2),\\
+ a_1&=\frac{7\pi t}{16}+\frac{\pi t^2\ell_X}{32},\\
+ p_1&=\frac1{24}-\frac t4-\frac{7t\ell_X}{8}
+       -\frac{t^2\ell_X^2}{32}+\frac{\pi^2t^2}{128}.
+\end{align}
+The derivation uses the actual fixed-endpoint gamma Gaussian integral.
+Its logarithm equals the four terms in
+\eqref{eq:formal-correction}, with remainder
+\(O((1+\log^4X)/X^2)\). The determinant contributes
+\(t\alpha'/4\); the displaced Gaussian mean contributes
+\(t^2\alpha^2\alpha'/8\). On this interval the full arithmetic
+remainder is \(O(X^{-t\log2/4})\), below the retained error.
+The bounded middle and both infinite tails are paid separately.
+
+For a direct consistency check put
+\(Q(b)=21/16+t/8+5tb/8+t^2b^2/16\). The exact elementary residual is
+\begin{equation}
+ \frac{(\partial_t+\partial_{zz})C_\pm}{C_\pm}
+ =\frac{\pm i(1+7b_\pm+tb_\pm^2)}{4z}+\frac{Q(b_\pm)}{z^2}.
+ \label{eq:elementary-residual}
+\end{equation}
+The correction cancels its \(1/z\) term, leaving residual
+\(O(\mathcal E_o(1+\log^4X)/X^2)\). The time comparison follows
+directly from the heat equation, spatial jets and this actual residual;
+it is not a differentiated big-O allowance. No physical covariance
+transfer is inferred here.
+
+
+\section{Zero time and the arithmetic crossover}
+\label{sec:arithmetic}
+\subsection{An exact normalization at zero time}
+Let
+\begin{align}
+N_0(X)&=\left\lfloor\sqrt{X/(4\pi)}\right\rfloor,\\
+\theta_\Gamma(X)&=\arg\Gamma(1/4+iX/4)-\frac X4\log\pi+\pi,\\
+A_\Gamma(X)&=2|\Mc(s_X)|.
+\end{align}
+The classical Riemann--Siegel formula \cite[25.10.1--25.10.3]{dlmf-rs}
+then gives
+\begin{equation}
+H(0,X)=A_\Gamma(X)
+ \sum_{n=1}^{N_0(X)}\frac{\cos(\theta_\Gamma(X)-\tfrac X2\log n)}{\sqrt n}
+ +A_\Gamma(X)\,O(X^{-1/4}).
+\label{eq:RS-zero}
+\end{equation}
+To check the sign, write \(Z(r)=e^{i\vartheta(r)}\zeta(1/2+ir)\).
+Since \(s_X(s_X-1)<0\), \(H(0,X)=-|\Mc(s_X)|Z(X/2)\);
+adding \(\pi\) to \(\vartheta(X/2)\) gives \eqref{eq:RS-zero}.
+
+The terms with \(n\ge2\) are part of the leading arithmetic expression.
+No estimate in this draft licenses replacing their sum by zero.
+Thus \eqref{eq:outer-fixed} is not extended uniformly to \(t=0\).
+
+\subsection{A finite-sum ansatz near zero time}
+A natural candidate retains these modes with heat-dependent weights:
+\begin{align}
+w_n(t,X)&=n^{-1/2}
+ \exp\left\{\frac t4\big((\log n)^2-\ell_X\log n\big)\right\},
+\label{eq:weights}\\
+\varphi_n(t,X)&=\Theta_{\mathrm o}(t,X)
+                   -\left(\frac X2+\frac{\pi t}{8}\right)\log n,\\
+F_{\rm arith}(t,X)&=
+ A_{\mathrm o}(t,X)\sum_{n\le N(t,X)}
+                              w_n(t,X)\cos\varphi_n(t,X).
+\label{eq:arithmetic-candidate}
+\end{align}
+These expressions are a proposed leading reduction. They do not include
+an automatically small cutoff correction.
+
+Here is the algebra behind the weights. Linearizing one gamma arm in
+\eqref{eq:positive-anchor}, a Dirichlet term \(n^{-w-v}\) has Gaussian
+factor
+\[
+\frac1{\sqrt{\pi t}}\int_\R
+ e^{-v^2/t+v(\alpha(w)-\log n)}\dd v
+ =\exp\left\{\frac t4(\alpha(w)-\log n)^2\right\}.
+\]
+Factoring out \(e^{t\alpha(w)^2/4}\) and using
+\eqref{eq:alpha-leading} gives \eqref{eq:weights} and the displayed
+phase shift. Interchanging this local calculation with a complete
+Dirichlet sum or contour deformation requires its own justification.
+
+Polymath's finite-sum construction \cite[Eqs.~(14)--(19)]{polymath}
+uses \(N=\lfloor\sqrt{X/(4\pi)+t/16}\rfloor\), for
+\(0<t\le1/2\), \(0\le y\le1\), \(X\ge200\). Its corrected version
+retains a separate Riemann--Siegel term. That domain is a positive-time
+input, not a theorem for \(t<0\). For holomorphic derivatives, use a
+cutoff fixed on each analytic chart, or a proved corrected
+representation across cutoff changes. Differentiating the floor
+function as though the resulting field were holomorphic is invalid.
+
+\subsection{A candidate time scale, not a universal transition law}
+For fixed \(n\), set \(\tau=t\ell_X\). If \(t=\tau/\ell_X\), then
+\begin{equation}
+w_n(t,X)\longrightarrow n^{-1/2-\tau/4}. \label{eq:tau}
+\end{equation}
+This makes \(t\log X\) a natural coordinate for the loss of fixed
+arithmetic modes. It does not prove a one-variable limiting profile:
+\(N\) grows with \(X\), and the collective contribution near the cutoff
+must also be estimated. No finite universal critical value of \(\tau\)
+is asserted. At bounded \(\tau\), even the fixed \(n=2\) coefficient
+does not tend to zero. Negative \(\tau\) increases its relative weight.
+
+The first crossover task is therefore a uniform finite-sum comparison
+through zero time, not a fitted sigmoid between two cosines.
+
+\subsection{A retained correction and a signed real-axis comparison}
+The following bounded result is proved in Ansatz Note03
+\cite{ansatz03}. It does not supply the full buffered complex theorem.
+On a fixed far-height chart choose
+\(N=\lfloor\sqrt{X/(4\pi)}\rfloor\) once, and set
+\begin{align}
+ a(z)&=\sqrt{z/(4\pi)},&
+ G(z)&=\sqrt{\Mc(s(z))\Mc(1-s(z))},\\
+ \mathfrak C(p)&=
+ \frac{\cos(2\pi(p^2-p)-\pi/8)}{\cos(2\pi p)},&
+ \mathcal R_N(z)&=(-1)^NG(z)a(z)^{-1/2}
+                           \mathfrak C(a(z)-N).
+ \label{eq:fixed-rs-correction}
+\end{align}
+Choose \(G\) positive on the real segment. All apparent poles of
+\(\mathfrak C\) are removable. Its recurrence
+\[
+ \mathfrak C(p)+\mathfrak C(p-1)
+       =2\cos(2\pi(p-1)^2-\pi/8)
+\]
+pays the adjacent cutoff mode. At zero time this yields a corrected
+real-axis remainder \(O(GX^{-3/4})\), uniformly across a cutoff.
+
+Use the weights and phases in \eqref{eq:weights} and define
+\begin{equation}
+ F_N(t,u)=A_{\mathrm o}(t,u)\sum_{n\le N}w_n(t,u)\cos\varphi_n(t,u)
+                    +e^{-\pi^2t/64}\mathcal R_N(u).
+ \label{eq:common-real-bridge}
+\end{equation}
+For real \(u\) in a fixed horizontal target window and sufficiently
+large chart center, uniformly for \(|t|\log(u/(4\pi))\le8\),
+\begin{equation}
+ |H(t,u)-F_N(t,u)|\le C A_{\mathrm o}(t,u)u^{-1/4}.
+ \label{eq:real-bridge-bound}
+\end{equation}
+Finite analytical constants and onset gates are specified in Note03;
+no numerical onset is certified.
+
+For \(t=-T<0\), the proof uses the exact real Gaussian convolution,
+the full \(|v|\le16\) window, gamma-envelope tails up to
+\(|v|=u/2\), and the complete-source bound beyond it. All modes
+through \(N\) are paid using
+\(\sum w_n\le C u^{1/4}e^{T\ell_u^2/16}\).
+The corrected source remainder costs at most
+\(u^{-3/4}e^{T\ell_u^2/16}\le C u^{-1/4}\) at the requested edge.
+The bare \(u^{-1/4}\) Riemann--Siegel error would not give decay
+throughout this window. Smoothing the correction gives the displayed
+factor \(e^{\pi^2T/64}\), within the proved error.
+
+For \(0<t\ell_u\le8\), Polymath Theorem~1.3 in its real-axis
+domain pays the field, gamma replacement and adjacent cutoff term.
+Adding the explicit correction in \eqref{eq:common-real-bridge} is
+within the same coarse error. This does not identify it with the full
+positive-time \(C_t\) at finer precision.
+
+\subsection{Complex remainder and the full buffered crossover}
+Ansatz Note04 \cite{ansatz04} closes the preceding complex estimate
+without an \(X^\epsilon\) loss. For any fixed radii \(r,b>0\),
+\begin{equation}
+ |H(0,z)-S_N(z)-\mathcal R_N(z)|
+ \le C_{r,b}X^{-3/4}\{ |\Mc(s)|+|\Mc(1-s)|\},
+ \quad |\Re z-X|\le r,\quad |\Im z|\le b.
+ \label{eq:buffer-rs}
+\end{equation}
+Here \(N=\lfloor\sqrt{X/(4\pi)}\rfloor\) remains fixed on the chart.
+Constants and finite onset gates depend on the declared fixed buffers;
+they are not numerically instantiated. The result is proved in-note
+from named classical inputs, with same-model internal assessment only.
+
+The proof pays the analytic boundary rather than extending real values
+by assertion. Set \(A=\log^2X\), \(D=\max(4,b+1)\), and normalize
+the error by the nonzero dominant arm \(\Mc(1-s)\) on the rectangle
+\( |\Re z-X|\le A\), \(0\le\Im z\le D\). The corrected real
+Riemann--Siegel formula and adjacent-cutoff recurrence give the lower
+edge bound \(O(X^{-3/4})\). On the upper edge, combine
+\(H/\Mc(1-s)\) with its dominant finite sum as one ordinary Dirichlet
+tail. That tail and the reflected finite sum are
+\(O(X^{(1-D)/4})\), hence \(O(X^{-3/4})\); the correction is smaller.
+Euler summation bounds the vertical edges by \(O(X^{1/2})\).
+The analytic multiplier \(X^{3/4}e^{-(z-X)^2}\) suppresses those
+edges. The maximum principle and reflection prove
+\eqref{eq:buffer-rs} on the fixed target core. The growing real-edge
+cutoff error and all onset gates are given in Note04.
+
+Use the same \(F_N\) as in \eqref{eq:common-real-bridge}, now
+holomorphically defined on a fixed chart. Let
+\[
+ L_X=\log(X/(4\pi)),\quad \Lambda_X=1+L_X,\quad
+ t_-=\max(-t,0),\qquad
+ \delta(t,X)=X^{-3/4}e^{t_-L_X^2/16}.
+\]
+For the full fixed physical, averaging and analytic buffers, uniformly
+for \(|t|L_X\le8\) and sufficiently large \(X\),
+\begin{align}
+ |\partial_z^j(H-F_N)|&\le C_j\mathcal E_o\delta\Lambda_X^j,
+                       \qquad 0\le j\le3,
+                       \label{eq:buffered-crossover-jets}\\
+ |\partial_t(H-F_N)|&\le C\mathcal E_o\delta\Lambda_X^2.
+                       \label{eq:buffered-crossover-time}
+\end{align}
+In particular \(\delta\le C X^{-1/4}\) throughout the signed window,
+and \(\delta=X^{-3/4}\) at nonnegative times, including zero.
+The physical choice is \(r=\ell+2\), \(b=1+h+2\), with an
+additional analytic margin. No cosine is used as a denominator.
+
+For negative time the exact real Gaussian convolution consumes
+\eqref{eq:buffer-rs}; for positive time the exact imaginary Gaussian
+convolution does so. Both use a fixed window \(V_b\), chosen sufficiently
+large from the declared source/ray constants, with initial radius
+\(r+V_b+2\) or strip \(b+1+2V_b\), respectively. Near tails retain
+the gamma height exponential and distant tails are separately paid.
+All \(N\) modes are counted through
+\[
+ \sum_{\pm,n\le N}|P_{\pm,n}(t,z)|
+ \le C\mathcal E_o X^{1/4}e^{t_-L_X^2/16},
+\]
+where \(P_{\pm,n}\) are the two elementary mode arms.
+This proves the field error and \(1/\log X\) Cauchy disks prove the
+spatial jets. The positive-time proof does not extend the domain of
+the published evolved remainder theorem by assertion.
+
+The direct time estimate follows from an exact residual. With
+\(c=b_\pm-\log n\),
+\begin{equation}
+ \frac{(\partial_t+\partial_{zz})P_{\pm,n}}{P_{\pm,n}}
+ =\frac{\pm i(1+7c+tc^2)}{4z}
+ +\frac{21/16+t/8+5tc/8+t^2c^2/16}{z^2}.
+ \label{eq:mode-residual}
+\end{equation}
+The correction satisfies
+\(\mathcal R_N''-(\pi^2/64)\mathcal R_N=O(|G|X^{-3/4})\).
+Their sum is bounded by \(C\mathcal E_o\delta\Lambda_X\).
+The identity
+\[
+ \partial_t(H-F_N)=-(H-F_N)_{zz}
+                   -(\partial_t+\partial_{zz})F_N
+\]
+then proves \eqref{eq:buffered-crossover-time} through zero, without a
+\(1/|t|\) loss or differentiation of an error allowance.
+
+This closes the bounded AN01--AN02 field/jet/time request. A globally
+floor-valued formula is not silently differentiated; overlapping fixed
+charts compare through the same \(H\). Physical transfer and join
+defects, independent specialist review, and all-time assembly remain
+separate. In particular the factor \(e^{TL_X^2/16}\) prevents this
+fixed-order budget from covering a fixed compact interval of negative
+times by substitution.
+
+
+\section{Negative time and noncommuting limits}
+\label{sec:negative}
+For fixed \(T>0\), the source identity gives the exact real-initial-value
+formula, also for complex \(z\),
+\begin{equation}
+ H(-T,z)=\frac1{\sqrt{4\pi T}}\int_{\R}
+ e^{-(z-u)^2/(4T)}H(0,u)\dd u.
+ \label{eq:negative-real-initial}
+\end{equation}
+Absolute Fubini follows from the real Fourier source and the Gaussian.
+On \(|\Im z|\le b\) the kernel modulus costs \(e^{b^2/(4T)}\).
+This is bounded on \(1\le T\le2\), the sole new interval treated below.
+No contour deformation or unproved negative-time version of a
+positive-time remainder theorem is used. A real part may remain inside
+the real initial data; it is never taken after applying a complex kernel.
+
+\subsection{A short formula at the natural gamma scale}
+Ansatz Note05 \cite{ansatz05} extends the same short corrected formula
+\(F_N\) of \eqref{eq:common-real-bridge} to fixed negative times at a
+different comparison scale. Set
+\[
+ G(z)=\{\Mc(s)\Mc(1-s)\}^{1/2},\qquad
+ L=\log(X/(4\pi)),\qquad N=\lfloor\sqrt{X/(4\pi)}\rfloor,
+\]
+using the branch positive on the real segment. For all sufficiently
+large \(X\), uniformly on every full fixed buffered chart and
+\(1\le T\le2\),
+\begin{align}
+ |\partial_z^j(H-F_N)(-T,z)|&\le C_j|G(z)|X^{-3/4},
+                &&0\le j\le3,\label{eq:negative-natural}\\
+ |\partial_t(H-F_N)(-T,z)|&\le C|G(z)|X^{-3/4}.
+ \label{eq:negative-natural-time}
+\end{align}
+The physical chart has radii \(r=\ell+2\), \(b=1+h+2\), with an
+extra fixed analytic margin. On such charts \(G'/G=-\pi/8+O(X^{-1})\),
+so fixed-radius Cauchy disks incur no logarithmic jet loss.
+
+The proof smooths the real corrected fixed-cutoff remainder on
+\(|u-X|\le8L\), within Note04's growing real chart. Per-mode logarithmic
+curvature is \(O(X^{-1})\), independently of \(n\). The transverse
+mode powers cancel when comparison is made against real initial data.
+All logarithmic moments of the elementary heat-mode population satisfy
+\[
+ \sum_{\pm,n\le N}(1+|b_\pm-\log n|)^d|P_{\pm,n}(-T,z)|
+ \le C_{b,d}|G(z)|X^{1/4},\qquad d\ \hbox{fixed}.
+\]
+This pays both the full mode count and gamma-to-elementary replacement.
+The correction smooths to \(e^{\pi^2T/64}\mathcal R_N\), within the
+stated error. Its residual and \eqref{eq:mode-residual}, summed with
+these moment bounds, prove the direct time estimate. Genuine and
+artificial Gaussian tails are separately paid in Note05.
+
+Relative to the positive correction envelope \(|G|X^{-1/4}\), the
+error is \(O(X^{-1/2})\). This is not a lower bound on \(H\) or
+\(\mathcal R_N\), which can vanish. At the real outer-carrier scale
+the allowance becomes
+\(X^{-3/4}e^{TL^2/16}\), which grows at fixed \(T\).
+This is a scoped failure of that bound, not a lower bound on the error.
+
+\subsection{A finite representation at outer-carrier precision}
+The stronger target requires paying both the initial RS remainder and
+all arithmetic heat curvature to growing order. Freeze at the center
+\begin{equation}
+ V=8L,\qquad K=\lceil L\rceil,\qquad J=\lceil3L\rceil,
+ \qquad R=X^{1/3},\qquad I_X=[X-V,X+V].
+ \label{eq:negative-orders}
+\end{equation}
+For real \(u\in I_X\), put
+\[
+ a_u=\sqrt{u/(4\pi)},\quad m(u)=\lfloor a_u\rfloor,
+ \quad p_u=1-2(a_u-m(u)),\quad s_u=\tfrac12+\tfrac{iu}2,
+\]
+\[
+ U_u=\exp\{-i[(u/4)\log(u/(4\pi))-u/4-\pi/8]\}.
+\]
+Let \(C_k(p,1/2)\) denote the classical RS coefficients in
+Polymath Proposition~6.2 \cite{polymath}. Define real initial data
+\begin{align}
+ R_{m,K}(u)&=2\Re\left\{(-1)^{m-1}\Mc(s_u)U_u a_u^{-1/2}
+              \sum_{k=0}^K C_k(p_u,1/2)a_u^{-k}\right\},\\
+ f_K(u)&=S_{m(u)}(u)+R_{m(u),K}(u),\\
+ Q_{X,K}(u)&=S_{m(u)}(u)-S_N(u)+R_{m(u),K}(u).
+ \label{eq:negative-initial-data}
+\end{align}
+The cutoff transfer is exact. Eventually there is at most one adjacent
+mode; its initial-data partition is fixed independently of \(z,T\).
+No floor is differentiated. The imported bounds at \(\sigma=1/2\) are
+\begin{gather}
+ |C_0|\le\tfrac12,\qquad
+ |C_k|\le\frac{3\sqrt2}{2\pi}\frac{\Gamma(k/2)}{2^k},\quad k\ge1,
+ \label{eq:negative-coefficients}\\
+ |H(0,u)-f_K(u)|\le C G(u)a_u^{-1/2}
+ \Gamma((K+1)/2)(1.1/a_u)^{K+1}.
+ \label{eq:negative-high-order-remainder}
+\end{gather}
+For \(K\le a_{\min}^2\), odd/even ratio summation gives
+\(\sum_{k=1}^K|C_k|a_u^{-k}\le C/a_u\), without hiding a
+\(K\)-dependent exponential. In particular
+\(|Q_{X,K}(u)|\le C G(u)X^{-1/4}\).
+Exact \(\Mc\) is retained, rather than a fixed-order Stirling factor.
+
+Already the bounded heat transform of \(f_K\) is a finite representation
+at the requested outer precision. To replace its arithmetic integrals
+by explicit Gaussian moments, set, for \(\epsilon=\pm1\),
+\begin{gather}
+ w_\epsilon=(1+\epsilon iX)/2,\quad
+ h_{\epsilon n}=\Mc(w_\epsilon)n^{-w_\epsilon},\quad
+ \lambda_{\epsilon n}=\frac{\epsilon i}{2}
+                    [\alpha(w_\epsilon)-\log n],\\
+ A_\epsilon(q)=\frac{\Mc(w_\epsilon+\epsilon iq/2)}{\Mc(w_\epsilon)}
+       e^{-\epsilon i\alpha(w_\epsilon)q/2},\qquad
+ a_{\epsilon k}=A_\epsilon^{(k)}(0)/k!.
+ \label{eq:negative-common-curvature}
+\end{gather}
+The factor \(A_\epsilon\) is independent of \(n\).
+Sectorial gamma bounds give \(|\log A_\epsilon(q)|\le C|q|^2/X\)
+on \(|q|\le R\). For a sufficiently large onset, Cauchy's formula gives
+\[
+ |a_{\epsilon k}|\le2R^{-k},\qquad
+ \left|A_\epsilon(q)-\sum_{k=0}^Ja_{\epsilon k}q^k\right|
+ \le4(V/R)^{J+1},\qquad |q|\le V.
+\]
+Thus the entire arithmetic heat sum is approximated by the finite moments
+\begin{equation}
+ \mathcal M_{X,N,J}(T,z)=\sum_{\epsilon=\pm1}\sum_{n\le N}
+ h_{\epsilon n}\sum_{k=0}^J a_{\epsilon k}
+ \left.\partial_\lambda^k e^{\lambda(z-X)+T\lambda^2}
+ \right|_{\lambda=\lambda_{\epsilon n}}.
+ \label{eq:negative-moment-sum}
+\end{equation}
+The final representation is
+\begin{equation}
+ \widehat F_X(-T,z)=\mathcal M_{X,N,J}(T,z)
+ +\frac1{\sqrt{4\pi T}}\int_{I_X}
+       e^{-(z-u)^2/(4T)}Q_{X,K}(u)\dd u.
+ \label{eq:negative-finite-representation}
+\end{equation}
+It retains every main arithmetic mode and \(K+1\) RS terms, with a
+bounded correction integral of named functions. It is not a short
+elementary cosine or a useful-cost theorem.
+
+\begin{proposition}[Bounded fixed-negative-time comparison]
+Uniformly for \(1\le T\le2\), on every full fixed buffered chart,
+after a finite onset depending on those buffers,
+\begin{align}
+ |\partial_z^j(H-\widehat F_X)(-T,z)|
+       &\le C_j\mathcal E_o(-T,z)e^{-L^2/4},&&0\le j\le3,
+       \label{eq:negative-outer-jets}\\
+ |\partial_t(H-\widehat F_X)(-T,z)|
+       &\le C\mathcal E_o(-T,z)e^{-L^2/4}.
+       \label{eq:negative-outer-time}
+\end{align}
+This is proved in-note from named classical inputs, with same-model
+internal assessment only. No numerical onset is supplied.
+\end{proposition}
+
+For the proof, use \(\mathcal E_o(-T,z)\ge cG(X)e^{-TL^2/16}\).
+The integrated initial remainder has outer-relative logarithm at most
+\(-3L^2/8+(L\log L)/2+O(L)\); this includes
+\(\Gamma((K+1)/2)\). The complete arithmetic population is bounded
+by \(CG(X)X^{1/4}\), with uniformly bounded real exponential tilts.
+The common curvature error has logarithm at most
+\(-7L^2/8+3L\log L+O(L)\) after outer conversion.
+The artificial polynomial tails are bounded by that population times
+\(e^{-V^2/64}+e^{-R^2/128}\); the Gaussian dominates the degree
+\(J=O(\log X)\) on the whole far ray.
+
+The genuine tails on \(V<|u-X|\le X/2\) retain
+\(X^P e^{-\pi X/8+\pi|u-X|/8}\), for fixed \(P\), before Gaussian
+integration. Their outer-relative leading exponent is \(-7L^2/8+O(L)\).
+Only beyond \(|u-X|=X/2\) is the global source bound used.
+Spatial kernel derivatives through order three add fixed polynomial
+moments on this interval. Finally both terms of
+\eqref{eq:negative-finite-representation} solve \(\partial_TF=F_{zz}\)
+exactly, with all parameters and endpoints frozen. The time comparison
+therefore follows from the proved second spatial derivative, without
+differentiating an error allowance. Note05 supplies the full estimates
+and eventual absorption gates.
+
+\subsection{The shrinking-to-fixed bridge and a paid time join}
+Ansatz Note06 \cite{ansatz06} extends the unchanged finite model
+\eqref{eq:negative-finite-representation} to \(4/L\le T\le2\).
+The new issue is the complex kernel as its lower time endpoint shrinks.
+For fixed \(B\ge r+b+1\), set
+\[
+ D_j(T,B)=T^{-j/2}(1+B/\sqrt T)^j,\qquad D_0=1.
+\]
+Gaussian rescaling, after Hermite differentiation of the kernel, gives
+\begin{equation}
+ \int_{\R}\left|\partial_z^j
+       \frac{e^{-(z-X-q)^2/(4T)}}{\sqrt{4\pi T}}\right|
+       e^{c|q|}\dd q
+ \le C_j e^{b^2/(4T)}D_j(T,B),\qquad j\le3,\quad0<T\le2.
+ \label{eq:bridge-kernel}
+\end{equation}
+The original \(T^{-1/2}\) normalization cancels only at this rescaling
+step. On \(T\ge4/L\), the new transverse factor is at most
+\(e^{b^2L/16}\) and \(D_j\le C_j(1+L)^j\).
+These losses add \(O_{r,b}(L+\log L)\) to the previously paid
+logarithmic error budgets; they do not consume their quadratic slack.
+
+In particular the RS remainder's outer-relative logarithm is at most
+\(-3L^2/8+(L\log L)/2+O_{r,b}(L)+j\log(1+L)\).
+The full arithmetic curvature term has
+\(-7L^2/8+3L\log L+O_{r,b}(L)+j\log(1+L)\).
+The genuine intermediate tail retains its height exponential and costs
+\[
+ C_jX^{P-7/4}D_j(T,B)
+ e^{TL^2/16+b^2/(4T)-V^2/(16T)}.
+\]
+The distant true tail and both artificial polynomial tails are also
+paid in Note06, uniformly in the moving time domain. All parameters
+and exact cutoff transfers remain frozen. Consequently
+\begin{equation}
+ |\partial_z^j(H-\widehat F_X)(-T,z)|
+ \le C_j\mathcal E_o e^{-L^2/4},\quad j\le3,\qquad
+ |\partial_t(H-\widehat F_X)|\le C\mathcal E_o e^{-L^2/4}
+ \label{eq:bridge-theorem}
+\end{equation}
+on \(4/L\le T\le2\). The exact heat identity of this frozen model
+is unchanged; its direct time comparison consumes the second spatial
+comparison. No constraint defining the moving domain is differentiated.
+
+To join through zero, let \(F_c=F_N\) be exactly Note04's crossover
+model, \(F_b=\widehat F_X\), and choose a fixed smooth scalar step
+\(\chi(s)\) equal to zero for \(s\le4\) and one for \(s\ge8\), flat
+at both endpoints. Use \(F_c\) for \(TL\le4\), \(F_b\) for
+\(TL\ge8\), and on the paid overlap set
+\begin{equation}
+ F_{\rm j}(-T,z)=(1-\chi(TL))F_c(-T,z)+\chi(TL)F_b(-T,z).
+ \label{eq:negative-time-join}
+\end{equation}
+This piecewise definition avoids evaluating \(F_b\) at \(T=0\).
+Near zero it inherits Note04's through-zero regularity. Since \(L\)
+is frozen at X, the weight has no spatial derivatives.
+
+Write \(a=1-\chi(TL)\), \(\theta=\chi(TL)\),
+\(\delta=X^{-3/4}e^{TL^2/16}\) only where \(TL\le8\), and
+\(\rho=e^{-L^2/4}\) only where \(TL\ge4\).
+Absent branch terms below are omitted. The more precise allowances are
+\begin{align}
+ |\partial_z^j(H-F_{\rm j})|
+  &\le C_j\mathcal E_o(a\delta\Lambda_X^j+\theta\rho),\quad j\le3,
+       \label{eq:joined-weighted-jets}\\
+ |\partial_t(H-F_{\rm j})|
+  &\le C\mathcal E_o\{a\delta\Lambda_X^2+\theta\rho
+          +L|\chi'(TL)|(\delta+\rho)\}.
+       \label{eq:joined-weighted-time}
+\end{align}
+The extra time term follows from \(\partial_t\chi(TL)=-L\chi'(TL)\)
+and \(|F_b-F_c|\le C\mathcal E_o(\delta+\rho)\), proved by comparing
+both models with H. It cannot be dropped.
+
+With \(R_c=(\partial_t+\partial_{zz})F_c\), the actual signed
+heat residual is
+\begin{align}
+ R_{\rm j}&=aR_c-L\chi'(TL)(F_b-F_c),
+             \label{eq:joined-residual}\\
+ |R_{\rm j}|&\le C\mathcal E_o\{a\delta\Lambda_X
+                  +L|\chi'(TL)|(\delta+\rho)\}.
+\end{align}
+Only the derivative-of-step term is confined to the overlap. The total
+residual also contains the crossover residual near zero, and vanishes
+for \(TL\ge8\). Thus the complete negative interval has the uniform
+chartwise estimates
+\begin{align}
+ |\partial_z^j(H-F_{\rm j})|&\le C_j\mathcal E_oX^{-1/4}\Lambda_X^j,
+                           &&0\le j\le3,\quad -2\le t\le0,
+                       \label{eq:negative-interval-jets}\\
+ |\partial_t(H-F_{\rm j})|&\le C\mathcal E_oX^{-1/4}\Lambda_X^2,
+ & |R_{\rm j}|&\le C\mathcal E_oX^{-1/4}\Lambda_X.
+                       \label{eq:negative-interval-time}
+\end{align}
+For \(TL\ge8\), the stronger exponential field/jet/time bound holds
+and the residual is exactly zero. These are proved-in-note estimates
+from named inputs, with same-model internal assessment only and no
+evaluated onset. Physical spatial joins and nonlinear observable
+transfer remain separate obligations.
+
+
+\subsection{Remaining negative-time limits}
+The joined result now covers \(-2\le t\le0\), with its actual
+time defect. A compact family with arbitrary endpoints, a short formula
+at outer-carrier precision, and useful coefficient/precision/quadrature
+cost remain open. The next bounded request instead addresses the
+distinct regulator-layer accuracy and center-comparison gap.
+
+The negative endpoint Gaussian
+\begin{equation}
+F_-(t,z)=\frac{\Phi(0)\sqrt\pi}{2\sqrt T}
+                       e^{-z^2/(4T)},\qquad t=-T,
+\label{eq:negative-gaussian}
+\end{equation}
+is an inherited large-\(T\) approximation, with strong absolute density
+comparisons in the parent construction. This does not make it a
+carrier-relative large-\(X\) approximation at fixed \(T\). An absolute
+error can exceed an exponentially small leading field. Growing negative
+times and a proved overlap with \eqref{eq:negative-gaussian} remain
+separate; their scales are not inferred from a positive-time saddle or
+a small heat residual. Physical observable transfer and all-time
+assembly also remain open.
+
+
+\section{Joint positive time and height}
+\label{sec:joint}
+When the fixed-time cosine ceases to have a controlled error, keep the
+parent full gamma saddle as the reference:
+\begin{align}
+p_t(w)&=w+\frac t2\alpha(p_t(w)),&
+B_t(w)&=1-\frac t2\alpha'(p_t(w)),\\
+\Sc_t(w)&=\frac{\Mc(p_t(w))}
+ {\sqrt{B_t(w)}}\exp\left\{-\frac{(p_t(w)-w)^2}{t}\right\},\\
+P_*(t,z)&=\Sc_t(s)+\Sc_t(1-s). \label{eq:full-saddle}
+\end{align}
+Use the specified large branch and the square root near one.
+The parent controls distinguish static error, evolution error and heat
+residual. With
+\[
+N_*=1+X+t\log(2+t+X),
+\]
+their characteristic scales are respectively
+\(t^{3/2}/N_*^2\), that quantity times \(\log^2(2+t+X)\), and
+\(t/N_*^3\). Their actual domains and finite constants stay attached
+to the original results.
+
+An optional simplification replaces the digamma saddle by
+\begin{equation}
+p_0=w+\frac t4\Log\frac{p_0}{2\pi}
+ =-\frac t4W_{\mathcal B}\left(-\frac{8\pi}{t}e^{-4w/t}\right).
+\label{eq:W-saddle}
+\end{equation}
+Set
+\begin{align}
+\Mc_{\rm el}(p)&=\frac{\sqrt\pi}{8}p^{1/2}(p-1)
+ \exp\left\{\frac p2\left(\Log\frac p{2\pi}-1\right)\right\},\\
+\mathcal C_W(t,w)&=
+\frac{\Mc_{\rm el}(p_0)e^{-(p_0-w)^2/t}}
+     {\sqrt{1-t/(4p_0)}},&
+F_W&=\mathcal C_W(t,s)+\mathcal C_W(t,1-s).
+\label{eq:W-field}
+\end{align}
+This is a candidate. The branch is continued in \(w\) and reflected
+conjugately; a fixed Lambert branch index on a winding exponential
+argument is not a valid global prescription \cite{dlmf-W}.
+The \(W\) replacement needs separate field, phase, derivative and
+heat-residual bounds. It is secondary to the arithmetic and fixed-time
+outer work.
+
+\section{The regulator transition is a different phenomenon}
+\label{sec:regulator}
+The parent physical protocol is retained exactly. With
+\(C=\Phi(0)\sqrt\pi/2\), \(\eta>0\), and the positive saddle quantities
+defined in Appendix~\ref{app:catalogue}, put
+\[
+\epsilon_b(t)=\eta C(1+t^2)^{-1/4},\qquad
+\epsilon_+(t,x)=M_0(t)\kappa(t)^{-1}e^{-x^2/(2\kappa(t))}.
+\]
+For \(64<t<128\), let \(v=(t-64)/64\) and
+\[
+\chi(t)=\frac{e^{-1/v}}{e^{-1/v}+e^{-1/(1-v)}}.
+\]
+Extend \(\chi\) by zero before 64 and one after 128. Then
+\begin{equation}
+\epsg(t,x)=
+\begin{cases}
+\epsilon_b(t),&t\le64,\\
+\epsilon_b(t)^{1-\chi(t)}\epsilon_+(t,x)^{\chi(t)},&t>64.
+\end{cases}                                      \label{eq:regulator}
+\end{equation}
+These numbers specify the measurement protocol, not intrinsic critical
+times of \(H\).
+
+Use the \emph{one-arm} linear amplitude
+\(A_X(t)=|\Gc_t((1+iX)/2)|\), its exact local phase derivative
+\(\omega(t,X)\), and
+\begin{equation}
+b(t,X)=\log\frac{\epsg(t,X)}{A_X(t)},\qquad
+d(t,X)=\frac{b(t,X)_+}{\omega(t,X)}.
+\end{equation}
+The inherited coarse model is
+\begin{equation}
+R_{\rm layer}(t,X,y)=\frac{\omega(t,X)}{2\pi}
+              [k_h(y-d)+k_h(y+d)].                 \label{eq:layers}
+\end{equation}
+On its declared domains its absolute error is \(O(1)\), while
+\(\omega\sim\frac14\log(X/(4\pi))\). These are layers of regularized
+density, not nonreal zeros.
+
+The exact model center is \(b(t_c(X),X)=0\).
+The parent gives
+\begin{equation}
+t_c-64=\frac{64}{\log X+c_0+O(1/\log X)},\qquad
+c_0=\log\frac{4e}{\pi\kappa(64)}.
+\label{eq:center}
+\end{equation}
+Its rounding scale is much smaller:
+\begin{equation}
+t_X(\sigma)=t_c(X)-\frac{128\sigma}{\pi X\log X},\qquad
+\frac{R_H(t_X(\sigma),X,y)}{\log X}
+=\frac{k_h(y-\sigma_+)+k_h(y+\sigma_+)}{8\pi}
+ +O(1/\log X).                                    \label{eq:rounding}
+\end{equation}
+The symbol \(\sigma\) here is unrelated to the arithmetic coordinate
+\(\tau=t\ell_X\).
+
+Replacing \(t_c\) by a short inverse-logarithmic expansion is not justified
+at the scale \eqref{eq:rounding}. For the next-order transition, even
+the factor two between \(A_{\mathrm o}\) and \(A_X\) matters:
+it changes \(b\) by a nonzero constant. Substituting an elementary or
+full-saddle amplitude for \(A_X\) needs an explicit recentering estimate.
+Direct time derivatives of this transition must be derived separately,
+not obtained by differentiating an \(O(1)\) density allowance.
+
+At fixed time the parent protocol has the nonuniform limit
+\[
+\frac{R_H(t,X,y)}{\log X}\longrightarrow
+\begin{cases}0,&t\le64,\\ k_h(y)/(4\pi),&t>64,\end{cases}
+\qquad |y|<h.
+\]
+Before the switch, a vanishing coarse density does not resolve the
+normalized field or its arithmetic oscillations. Both questions remain
+in the high-height program.
+
+\section{Regime map and error obligations}
+\label{sec:map}
+The following is a research map, not a completed covering theorem.
+\begingroup\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.23\textwidth}>{\raggedright\arraybackslash}p{.33\textwidth}>{\raggedright\arraybackslash}p{.36\textwidth}@{}}
+\toprule Region & Proposed description & Current boundary of evidence\\\midrule
+\endhead
+Fixed \(t<0\), \(X\to\infty\) &
+Heat-smoothed arithmetic representation &
+Note05 proves two scales on \(1\le T\le2\); Note06 bridges and
+joins the finite model through zero on \([-2,0]\).
+General compact intervals and short outer-scale formulas remain open.\\
+\(t=0\) &
+Riemann--Siegel finite sum &
+Corrected fixed-cutoff complex comparison and buffered jets proved in
+Note04; physical transfer remains separate.\\
+\(t\log X=O(1)\), either sign &
+Heat-weighted finite arithmetic sum &
+Corrected buffered field, spatial jets and direct time bound proved in
+Note04 on fixed charts; physical transfer remains open.\\
+Fixed \(t>0\), away from zero &
+Elementary amplitude times cosine &
+Parent comparison for \(t\ge32\); a separate published small-positive-time
+input. Uniform joining and sharp corrections remain tasks.\\
+Joint \(t,X\to+\infty\) &
+Full gamma saddle; possible Lambert \(W\) reduction &
+Parent full saddle retained; new replacement unproved.\\
+Near \(t_c(X)\) for the fixed regulator &
+Two translated layers &
+Inherited \(O(1)\) absolute profile; sharper center and dynamic errors open.\\
+Joint \(T=-t,X\to\infty\) &
+Negative-time representation matched to the Gaussian endpoint &
+Endpoint absolute estimates exist; high-height overlap must be identified.\\
+\bottomrule
+\end{longtable}
+\endgroup
+
+For each field model record a positive carrier envelope \(\Acal(t,X)\),
+and compare \(H-F\) to that envelope rather than to \(F\) at its zeros.
+The desired ledger separates:
+\begin{enumerate}
+\item gamma/Stirling amplitude and phase remainders;
+\item saddle linearization and determinant errors;
+\item all arithmetic modes, cutoff correction and distant contour tails;
+\item holomorphic spatial derivatives on full buffered charts;
+\item direct time derivatives and the actual residual \(F_t+F_{zz}\);
+\item transfer to physical \(U,W,R,J,Q\), regulator terms and derivatives;
+\item overlap and joining defects between regimes.
+\end{enumerate}
+Small residuals are consistency checks, not propagated field-error
+theorems without stability. Likewise, a field comparison does not
+automatically pay nonlinear near-zero observables.
+
+The first bounded tasks now supply the compact-positive corrected
+carrier and the buffered signed-time field/jet/time comparison
+\eqref{eq:buffered-crossover-jets}--\eqref{eq:buffered-crossover-time}.
+Note05 separately pays the fixed window \(1\le T\le2\) using
+growing RS and common gamma-curvature orders. Note06 pays its extension
+to \(4/L_X\le T\le2\) and the time-only join, obtaining the negative
+interval \([-2,0]\). The next bounded task addresses the separate
+regulator-center comparison. The number eight
+bounds the completed crossover study; it is not a critical constant.
+Note03's failed absolute complex Gaussian route is retained as history.
+
+\section{Controls, scope, and the continuation order}
+The formulas are approximation models for one specified canonical
+source. They are not an RH criterion or a collision-exclusion argument.
+The control screening is analytical:
+\begin{itemize}
+\item Euler-factor perturbations change the exact arithmetic coefficients;
+they fail the canonical-source input, despite retaining positivity and
+many coarse properties.
+\item Finite weighted-square controls have different complete coefficients
+and tails; selected endpoint equalities do not supply \eqref{eq:source}.
+\item Reflected super-Gaussian, smooth-shape, and positive-primitive controls
+lack the same canonical gamma/arithmetic representation. Their shared
+positivity, reflection or coarse asymptotics cannot justify the missing
+remainder.
+\item The counter-kernels and all-multiple controls likewise do not satisfy
+the full canonical field identity. No simplicity claim is inferred from
+the density, Gaussian shape, or leading phase.
+\end{itemize}
+The source-specific quantitative comparison, rather than the name of
+the source, must do the discriminating work. See the repository result
+and avoidance indexes \cite{controls,avoidance}.
+
+The continuation order is:
+outer normalization and corrections; the arithmetic crossover through
+zero time; the completed negative interval and remaining compact families; regulator-layer accuracy and
+matching; joint positive and negative endpoint overlaps; complete
+observable transfer. The Gaussian-polynomial central model remains
+available but is no longer the first task. The accompanying overview,
+progress register and frozen handoff specify the next bounded request.
+
+\appendix
+\section{The remaining ansatz catalogue}
+\label{app:catalogue}
+These formulas preserve the earlier scope while the main effort moves
+to large height.
+
+\subsection{A finite-time Gaussian-polynomial core}
+Choose \(a>b\) and a real polynomial \(p_m\), fixed once per accuracy.
+The nonnegative source \(e^{-au^2}p_m(u^2)^2\) has exact heat field
+\begin{equation}
+F_{\rm c}(t,z)=[p_m(-\partial_z^2)]^2
+ \left[\frac{\sqrt\pi}{2\sqrt{a-t}}e^{-z^2/[4(a-t)]}\right],
+ \qquad t<a.                                      \label{eq:core}
+\end{equation}
+It is a Gaussian times a finite even polynomial. With
+\(p_m(v)^2=\sum_{k=0}^{2m}c_kv^k\) and \(a-t=\nu\),
+\[
+F_{\rm c}=\frac{\sqrt\pi}{2\sqrt\nu}e^{-z^2/(4\nu)}
+ \sum_{k=0}^{2m}\frac{(-1)^kc_k}{(4\nu)^k}
+ H_{2k}\!\left(\frac z{2\sqrt\nu}\right).
+\]
+The Hermite convention is the physicists' one.
+Gaussian weighted \(L^2\) approximation of
+\(e^{au^2/2}\sqrt{\Phi(u)}\), followed by Cauchy--Schwarz, gives
+an existence route for absolute field jets on \(t\le b\) and fixed
+strips \cite{ansatz01,dlmf-Hermite}. It does not give a useful degree
+bound or a high-height relative comparison. This model is not a fixed
+source for the positive infinite-time endpoint.
+
+\subsection{The positive inner cosine}
+Let \(L\) be the large real solution and define
+\begin{align}
+4\pi e^{4L}&=2tL+9,&\kappa&=8tL-2t+36,\\
+M_0&=2\pi^2e^{tL^2+9L-\pi e^{4L}}\sqrt{2\pi/\kappa}.
+\end{align}
+The simplified candidate is
+\[
+F_{\rm in}=M_0e^{-z^2/(2\kappa)}\cos(Lz).
+\]
+The parent moment carrier is \(M(1-vz^2/2)\cos(\mu z)\).
+Replacing its envelope, mass and frequency must be paid separately,
+initially on its buffered \(O(\kappa^{1/3})\) inner window.
+The exact real saddle can be written
+\[
+L=-\tfrac14W_{-1}(-(8\pi/t)e^{-18/t})-\frac9{2t}.
+\]
+A low-order log-log expansion of \(L\) can create an unacceptable
+phase error when multiplied by a growing height.
+
+\subsection{Local zero peaks and the clock}
+For the local monomial \(F=c(z-a)^m\), freezing the regulator and setting
+\(\delta=(\epsg/|c|)^{1/m}\) gives
+\[
+\rho_{\rm local}=
+\frac{m^2\delta^{2m}|z-a|^{2m-2}}
+     {\pi(|z-a|^{2m}+\delta^{2m})^2}.
+\]
+This is exact for the model, not a simplicity assertion for \(H\).
+
+The finite Bernoulli clock formula is exactly the locally finite sum
+\begin{align}
+d_j&=(j+\tfrac12)\pi/L,\\
+R_L&=k_h(y)\sum_j k_\ell(x-d_j),&
+J_L&=-\frac2\kappa k_h(y)\sum_jd_jk_\ell(x-d_j).
+\end{align}
+This pair satisfies continuity. Its continuum leading densities are
+\[
+R_{\rm in}\simeq Lk_h(y)/\pi,\qquad
+R_{\rm out}\simeq \ell_X k_h(y)/(4\pi)
+\]
+on the respective resolved regimes. Discarding phase is not harmless
+for differentiated estimates.
+
+\subsection{Cosine-cell and narrow-filter covariance}
+For \(F=M\cos(kz)\), fixed \(k\), constant regulator \(\epsilon\), and
+\(M'=k^2M\), let \(\eta_c=\epsilon/M\),
+\(a_c=\sinh^2(ky)+\eta_c^2\), and \(d_c=\sqrt{a_c(a_c+1)}\).
+The exact phase-cell formulas are
+\begin{align}
+U_c&=2\log M+2\arsinh\sqrt{a_c}-2\log2,\\
+R_c&=\frac{k^2\eta_c^2}{2\pi}
+\frac{2a_c(a_c+1)+1-\eta_c^2(2a_c+1)}{d_c^3},\\
+Q_c&=4\pi R_c+(U_c)_y^2-4k^2+\frac{4k^2\eta_c^2}{d_c}.
+\end{align}
+Cell averaging is not the parent compact filter; additional transverse
+averaging changes the covariance.
+Separately, under the parent's small-width, fixed-regulator and smoothness
+hypotheses,
+\[
+Q\simeq v_t(U_{xt}^2-U_{yt}^2)
+       +v_x(U_{xx}^2-U_{xy}^2)+v_y(U_{xy}^2-U_{yy}^2).
+\]
+This is not an unrestricted closure.
+
+\subsection{Assembly and bounds that need no new ansatz}
+A short notation for a joined field is
+\[
+F=\chi_-F_-+\chi_{\rm c}F_{\rm c}+\chi_+F_+,\qquad
+\chi_-+\chi_{\rm c}+\chi_+=1.
+\]
+Every support, overlap and derivative of these weights must be specified
+and paid. Spatial joins can be nonholomorphic. The actual covariance of
+the joined field is not the weighted sum of individual covariances.
+
+Finite xi-derivative Taylor formulas remain representations; a formal
+heat exponential does not simplify their content. Source derivative
+bounds such as parent Lemma B2, tail majorants, moment bounds,
+conditioning estimates and evaluation error budgets belong in the
+remainder machinery. They need not be simplified to obtain a useful
+short solution ansatz.
+
+\begin{thebibliography}{99}
+\bibitem{parent} Edward Baker research project,
+\emph{Heat-density asymptotics}, maintained parent manuscript,
+25 October 2026, through Notes54--55.
+Local source: \texttt{../../manuscript/main.tex}.
+\bibitem{summary62} Edward Baker research project,
+\emph{Chat0021: research results, dependencies and remaining work},
+Note62, 25 October 2026; GPT-6.1 Sol, effort ultra.
+Local source: parent \texttt{notes/62\_CHAT0021\_RESEARCH\_SUMMARY\_20261025.md}.
+\bibitem{ansatz01} Edward Baker research project,
+\emph{Simple solution ansatze, separated by regime},
+Ansatz Note01, 25 October 2026; GPT-6 Astra, effort max.
+\bibitem{ansatz03} Edward Baker research project,
+\emph{Outer correction and a bounded signed-time real-axis bridge},
+Ansatz Note03, 25 October 2026; GPT-6.1 Sol, effort ultra.
+Same-model internal assessment only; full buffered signed-time theorem open.
+\bibitem{ansatz04} Edward Baker research project,
+\emph{Fixed-cutoff complex remainder and buffered signed-time crossover},
+Ansatz Note04, 25 October 2026; GPT-6.1 Sol, effort ultra.
+Proved in-note from named inputs, same-model internal assessment only.
+\bibitem{ansatz05} Edward Baker research project,
+\emph{Fixed negative times: a short natural-scale model and an
+outer-scale representation}, Ansatz Note05, 25 October 2026;
+GPT-6.1 Sol, effort ultra. Proved in-note from named inputs,
+same-model internal assessment only; interval \(1\le T\le2\).
+\bibitem{ansatz06} Edward Baker research project,
+\emph{Negative-time bridge and a paid time join through zero},
+Ansatz Note06, 25 October 2026; GPT-6.1 Sol, effort ultra.
+Proved in-note from named inputs, same-model internal assessment only;
+joined interval \([-2,0]\). Note07 records the chat0001 research summary.
+\bibitem{polymath} D. H. J. Polymath,
+\emph{Effective approximation of heat flow evolution of the Riemann
+xi function, and a new upper bound for the de Bruijn--Newman constant},
+arXiv:1904.12438v2 (4 August 2019).
+\url{https://arxiv.org/html/1904.12438v2}.
+\bibitem{dlmf-gamma} NIST Digital Library of Mathematical Functions,
+Section 5.11, equations 5.11.1--5.11.3 and 5.11.9, and sectorial
+remainder bounds. \url{https://dlmf.nist.gov/5.11}.
+\bibitem{dlmf-rs} NIST DLMF, Section 25.10, equations
+25.10.1--25.10.4. \url{https://dlmf.nist.gov/25.10}.
+\bibitem{dlmf-W} NIST DLMF, Section 4.13, Lambert W and its branches.
+\url{https://dlmf.nist.gov/4.13}.
+\bibitem{dlmf-Hermite} NIST DLMF, Section 18.18(i), Hermite expansions
+and weighted \(L^2\) convergence. \url{https://dlmf.nist.gov/18.18}.
+\bibitem{controls} Repository \emph{Result summaries}, especially
+clusters 11--13: corrected Riemann--Siegel interface, collision controls,
+and local heat-flow geometry. See the accompanying overview for links.
+\bibitem{avoidance} Repository \emph{Patterns to avoid}, especially
+01, 02, 05--08, 12, 16 and 19. See the accompanying overview for links.
+\end{thebibliography}
+\end{document}

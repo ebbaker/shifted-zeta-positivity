@@ -98,6 +98,22 @@ LLM assistance: **gpt-6-astra (Codex)**, reasoning effort **ultra**.
   external analytic inputs. Added 17 October 2026 for Edward Baker with
   substantial LLM assistance, **gpt-6-astra (Codex), ultra**.
 
+- **Bounded high-height ansatz calibration (Investigation 5/01, 25 October).**
+  Ansatz [Note03](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/03_OUTER_CORRECTION_AND_SIGNED_REAL_BRIDGE_20261025.md)
+  proves the first true-field gamma/heat correction on 32<=t<=33,
+  with buffered jets j<=3 and direct first time error, and a corrected
+  signed real-axis field comparison with O(A_o X^-1/4) error on
+  |t| log(X/(4pi))<=8. Source status: “proved in-note from named classical
+  inputs; same-model internal assessment only.” The formerly open complex
+  remainder is now closed by [Note04](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/04_COMPLEX_STRIP_REMAINDER_AND_BUFFERED_CROSSOVER_20261025.md)
+  with no epsilon loss; it proves full fixed-buffer signed field,
+  jets j<=3 and direct time error through zero, with
+  delta=X^-3/4 exp(t_- L_X^2/16)<=C X^-1/4 on |t|L_X<=8.
+  [Assessment03](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/03_COMPLEX_STRIP_AND_BUFFERED_CROSSOVER_ASSESSMENT_20261025.md)
+  retains same-model status. Constants/onsets are unevaluated; no fixed
+  negative-time, physical-transfer or RH conclusion. [Assessment02](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/02_CALIBRATION_AND_REAL_BRIDGE_ASSESSMENT_20261025.md).
+  Prepared for Edward Baker with LLM assistance, gpt-6.1-sol, effort ultra.
+
 ## Status
 
 Reductions: proved (Polymath imports named). Counter-kernels: proved.
@@ -209,3 +225,33 @@ Earlier transport Notes 20–22 already establish the correction and jump
 machinery; no superiority to their best correlated-error method, signed
 lower bound or new coverage is claimed. For Edward Baker with substantial
 LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+
+**25 October 2026 — bounded fixed-negative-time ansatz return.** For
+Edward Baker with substantial LLM assistance, **gpt-6.1-sol, recorded
+effort ultra**. [Ansatz Note05](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/05_FIXED_NEGATIVE_TIME_REPRESENTATIONS_20261025.md)
+is **proved in-note from named classical inputs; same-model internal
+assessment only** on 1<=T<=2. It proves a short corrected arithmetic
+model with O(|G|X^-3/4) errors, separately from a finite growing-order
+representation with C E_o exp(-L_X^2/4) errors, including full fixed
+buffers, spatial j<=3 and first time. Growing RS constants and all-mode
+heat curvature are paid; a bounded correction integral remains. The
+source states: “FN5 is the short natural-scale result; FN26 is a different,
+more elaborate outer-scale representation.” No numerical onset, useful
+cost, correction dominance, physical transfer or all-time theorem.
+[Assessment04](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/04_FIXED_NEGATIVE_TIME_ASSESSMENT_20261025.md)
+records the review scope; HDA-A02 remains Partial.
+
+**25 October 2026 — negative bridge and paid time join.** For Edward
+Baker with substantial LLM assistance, **gpt-6.1-sol, recorded effort
+ultra**. [Ansatz Note06](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/06_NEGATIVE_BRIDGE_AND_TIME_JOIN_20261025.md)
+is **proved in-note from named inputs; same-model internal assessment
+only**. It extends Note05's unchanged finite representation to
+4/L_X<=T<=2 with E_o exp(-L_X^2/4) errors and pays a time-only join
+to Note04 on [-2,0]. Spatial j<=3 errors are C E_o X^-1/4 Lambda_X^j,
+first time C E_o X^-1/4 Lambda_X^2, and actual heat residual
+C E_o X^-1/4 Lambda_X. The residual vanishes above T L_X=8 but
+persists near zero. Source: “The domain constraint `T>=4/L` is not
+differentiated.” No numerical onset, useful cost, physical transfer or
+all-time theorem. [Assessment05](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/05_NEGATIVE_BRIDGE_AND_TIME_JOIN_ASSESSMENT_20261025.md)
+records scope; [Note07](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/07_CHAT0001_RESEARCH_SUMMARY_20261025.md)
+summarizes the chat. HDA-A02 remains Partial.

@@ -325,3 +325,35 @@ new estimates in Note 45, checked only internally by the same model.
 These references do not independently validate them. Online linked
 records suffice under REFERENCE_WORKFLOW.md; no artificial PDF copies,
 third-party PDF downloads or full-paper/whole-chapter reading claims.
+
+## Simple solution ansätze — 25 October 2026, chat0022
+
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra (Codex), actual effort max**, for
+[Ansatz Note01](../ansatz/notes/01_REGIME_BY_REGIME_SOLUTION_ANSATZE_20261025.md).
+
+- NIST Digital Library of Mathematical Functions,
+  [§18.18(i), Hermite expansions](https://dlmf.nist.gov/18.18#i).
+  Equations 18.18.6–18.18.7 and the subsequent L² convergence paragraph
+  inspected 25 October 2026. The imported fact is completeness in the
+  Gaussian weighted L² space, after rescaling and restricting to even
+  functions. The source-specific weighted four-jet argument is derived
+  in the note. No approximation rate, finite coefficient constructor or
+  theta error bound is imported. Reusable key DLMFHermiteAnsatz2026.
+- NIST Digital Library of Mathematical Functions,
+  [§4.13, Lambert W](https://dlmf.nist.gov/4.13).
+  Equation 4.13.1, real branches and the complex branch discussion
+  inspected 25 October 2026. These support algebraic inversion of the
+  leading logarithmic saddle and the branch caution. They do not prove
+  the new field comparison or its heat residual.
+  Reusable key DLMFLambertAnsatz2026.
+- Existing reference DLMFGammaOuter2026,
+  [§5.11](https://dlmf.nist.gov/5.11), rechecked 25 October 2026:
+  5.11.1–5.11.3, 5.11.9 and the opening sectorial remainder paragraph
+  of §5.11(ii). Used to derive the leading elementary amplitude and
+  phase from the manuscript's linear gamma model and to propose the
+  Stirling/Lambert saddle. The original comparison domains and the
+  missing differentiated budgets are stated in Ansatz Note01.
+
+Online primary references are retained as links; no PDF copy was
+created. No full-chapter review or independent validation is claimed.

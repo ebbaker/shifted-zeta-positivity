@@ -8,6 +8,51 @@ This is the investigation's sole research task ledger. The
 The target is the unnormalized average shape, with spatial averaging,
 time averaging, or both, and explicit fluctuation corrections.
 
+## Ansatz branch manuscript and high-height priority — 25 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra (Codex), actual effort max**, chat0022. The author now
+prioritizes the high-height cosine and other large-height formulas
+**across all real times**, allowing piecewise regimes and complex errors.
+The new [ansatz manuscript](../ansatz/manuscript/main.tex),
+[overview](../ansatz/research-overview/01_HIGH_HEIGHT_ANSATZ_RESEARCH_OVERVIEW_20261025.md)
+and [branch progress register](../ansatz/research-progress/01_HIGH_HEIGHT_ANSATZ_RESEARCH_PROGRESS_20261025.md)
+implement the explicit request for a separate manuscript/program.
+The branch register owns HDA-A01–A07; this parent register retains parent
+HDA statuses and the separate weak-filter cost task.
+
+Next **Analysis — Sol**:
+[HDA-A01-AN01 r1](../ansatz/research-progress/handoffs/HDA-A01-AN01.md),
+outer amplitude/phase calibration and a bounded signed-time arithmetic
+bridge through zero. The earlier core packet HDA-18-AN09 remains
+unexecuted and is deprioritized, with an appended disposition.
+The opening draft separates the arithmetic crossover from the chosen
+regulator layer and does not claim a new all-time asymptotic theorem.
+HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled remain.
+No research computation, automatic dispatch, model change or commit.
+
+## Author-requested ansatz exploration — 25 October 2026, chat0022
+
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra (Codex), actual effort max**. The author requested simpler
+solution ansätze for all approximation families, permits different
+regimes and complicated error terms, and requested **ansatz/notes/** as
+their home. [Ansatz Note01](../ansatz/notes/01_REGIME_BY_REGIME_SOLUTION_ANSATZE_20261025.md)
+maps the manuscript families, records an elementary outer cosine and
+proposes a positive Gaussian-polynomial core and Lambert-W saddle
+reduction. New candidates do not inherit the full tuple estimates.
+
+| Packet | Phase / owner | Bounded next deliverable |
+| --- | --- | --- |
+| [HDA-18-AN09 r1](handoffs/HDA-18-AN09.md) | Deprioritized, unexecuted — Analysis, Sol | Effective positive Gaussian-polynomial core construction with weighted four-jet degree/error ledger, or the first exact obstruction. Analytical only. |
+
+This is an additional author-requested representation task; the existing
+weak-filter height-cost queue and review obligation below are preserved.
+HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled remain. No
+numerical/exact-arithmetic/machine-symbolic research, manuscript edit,
+new chat, dispatch, snapshot or commit. Chat0022 retains its original
+unique registration in this investigation's chat-histories folder.
+
 ## Current priorities - 25 October 2026, improved complete evaluator/filter cost
 
 Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,

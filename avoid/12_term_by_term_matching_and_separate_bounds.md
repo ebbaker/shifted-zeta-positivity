@@ -658,3 +658,54 @@ is paid separately; crude boundedness would leave a nonvanishing outer
 time allowance. These are simple-root/declared-regulator estimates, not
 a multiple-event theorem or a substitute for joining analysis.
 [Same-assistant review](../papers/investigations-5/01_heat_density_asymptotics/reviews/13_POSITIVE_EVOLUTION_AND_COVARIANCE_SELF_REVIEW_20261024.md).
+
+
+**Signed-time carrier conversion retains the RS correction, 25 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+actual effort ultra**. [Ansatz Note03](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/03_OUTER_CORRECTION_AND_SIGNED_REAL_BRIDGE_20261025.md)
+states: “This is a failure of that error budget, not a lower bound
+for the actual error and not a no-go theorem for negative time.”
+On T log(X/(4pi))<=8, conversion to the outer carrier loses up to
+X^1/2. The bare RS remainder does not give decay across the whole
+window; retaining its first correction does for real-axis fields.
+Full complex buffers still need their own remainder theorem; real-axis
+control and analytic formulas alone do not pay it.
+[Same-model assessment](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/02_CALIBRATION_AND_REAL_BRIDGE_ASSESSMENT_20261025.md).
+
+
+**Pay the upper-edge tail before interpolating, 25 October 2026.**
+Prepared for Edward Baker with LLM assistance, **gpt-6.1-sol, effort ultra**.
+[Ansatz Note04](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/04_COMPLEX_STRIP_REMAINDER_AND_BUFFERED_CROSSOVER_20261025.md)
+states: “Their exact grouping as a Dirichlet tail is what preserves
+the exponent.” Grouping H/Mdom with its dominant finite sum pays the
+upper rectangle edge at X^-3/4 and closes the formerly open complex
+buffer remainder without epsilon loss. The proof also pays vertical
+edges and frozen-cutoff crossings; real values plus holomorphy alone
+would not establish the estimate. This supersedes the open-buffer
+status after Note03, without changing that note's historical failed route.
+[Same-model assessment](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/03_COMPLEX_STRIP_AND_BUFFERED_CROSSOVER_ASSESSMENT_20261025.md).
+
+**Pay both growing orders at the requested scale, 25 October 2026.**
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, recorded
+effort ultra**. [Ansatz Note05](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/05_FIXED_NEGATIVE_TIME_REPRESENTATIONS_20261025.md)
+states: “Increasing only the initial RS order would not have done this.”
+On 1<=T<=2, its finite outer-scale representation pays both the
+Gamma(K/2) growth of a K~log X initial RS expansion and the gamma
+curvature of every arithmetic heat mode using a common J~3log X
+polynomial. The short model's natural gamma-scale estimate remains a
+distinct result; its outer-relative bound fails without establishing
+an actual error lower bound. A retained correction integral and exact
+cutoff transfer prevent an unpaid simplification.
+[Same-model assessment](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/04_FIXED_NEGATIVE_TIME_ASSESSMENT_20261025.md).
+
+**A time join carries two residual contributions, 25 October 2026.**
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, recorded
+effort ultra**. [Ansatz Note06](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/06_NEGATIVE_BRIDGE_AND_TIME_JOIN_20261025.md)
+states: “Only the derivative-of-chi contribution is confined to 4<TL<8.”
+Its exact joined residual includes both the weighted crossover residual
+near zero and -L chi'(TL)(F_b-F_c) on the overlap. Field comparisons
+through the same H pay their difference. The exact-heat finite model
+does not make the joined residual vanish near zero. All shrinking-T
+kernel and derivative losses are retained before absorption; a fixed
+chart center avoids spurious spatial derivatives of the time cutoff.
+[Same-model assessment](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/05_NEGATIVE_BRIDGE_AND_TIME_JOIN_ASSESSMENT_20261025.md).
