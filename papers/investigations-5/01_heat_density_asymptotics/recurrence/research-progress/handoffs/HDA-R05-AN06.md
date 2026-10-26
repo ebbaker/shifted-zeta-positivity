@@ -3,7 +3,7 @@
 26 October 2026, America/New_York. Prepared for **Edward Baker** with
 substantial LLM assistance, **gpt-6-astra (Codex), recorded effort max**,
 recurrence chat0005. Parent HDA-R05. Owner **Analysis — Sol**.
-**READY_FOR_SOL, not executed.** This request implements the author's
+**CLOSED — Complete at the bounded analytical scope, 26 October 2026, recurrence chat0006.** This request implements the author's
 priority of analytical advancement with computations only in support.
 The sole progress register owns phase; this file dispatches no task.
 
@@ -78,3 +78,31 @@ overview and concise DRAFT_HISTORY. Update the manuscript only for a
 closed result. Refresh and verify the actual chat at its unique registered
 home, and arrange the exact-turn final capture. Completion of this bounded
 audit does not close broad R05 or promote a parent physical/RH status.
+
+## Execution opened — 26 October 2026
+
+Actual **gpt-6.1-sol (Codex), ultra**, verified from current turn metadata.
+Thread `01a178a3-9572-7bf2-b0a0-bd4d47f796ab`; input versions in
+[Note16 manifest](../../notes/16_SHARPER_ONSET_INPUTS_20261026.json).
+Analytical scope only; no supporting numerical run has been declared.
+
+## RETURN — 26 October 2026
+
+Actual **gpt-6.1-sol, ultra**, recurrence chat0006. [Note16](../../notes/16_SHARPER_ALL_HEIGHT_ONSET_20261026.md)
+proves L_new=64nu and sufficient X_new=2^(128nu+8), at exactly the
+frozen inputs, p,K,V, [1,2], full channels and half-target reservation.
+Keeping log Tbar additive gives a local cost <=5647L²/65536<3L²/32,
+below its 7L²/64 margin. Every true/artificial/remote tail and structural/
+calibration gate closes continuously through every p,N jump. The old
+L_*=2^22nu^4 remains valid; log-height ratio is 2^16nu³>=2^22 on every
+positive dyadic chart. No numerical research check was run.
+
+## DISPOSITION — 26 October 2026
+
+Accept with [same-model internal Review12](../../reviews/12_SHARPER_ONSET_ASSESSMENT_20261026.md);
+AN06 r1 **Complete, CLOSED**. The manuscript integrates only this closed
+result. Broad R05 stays Partial, parent statuses unchanged. Exact
+descriptor separation, complete modes/integral, provider contracts and
+specialist/source-review limits remain. Next [AN07 r1](HDA-R05-AN07.md)
+is prepared, READY_FOR_SOL, not executed; N02 stays supporting with its
+original cases/caps. No new thread is dispatched.

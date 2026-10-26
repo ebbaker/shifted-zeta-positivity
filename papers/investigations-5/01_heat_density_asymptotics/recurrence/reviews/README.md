@@ -48,3 +48,13 @@ review. Existing ansatz assessments remain in their original folder.
   26 October 2026, gpt-6-astra, recorded effort max, chat0005. Same-session
   authoring assessment of source correspondence, scope, selected formulas
   and document production; no independent specialist validation.
+
+- [Review12: linear sufficient all-height onset](12_SHARPER_ONSET_ASSESSMENT_20261026.md),
+  26 October 2026, gpt-6.1-sol, actual effort ultra, chat0006. Same-model
+  internal assessment of all four rates, every gate, input/derivative
+  quantifiers, error composition and manuscript correspondence.
+
+- [Review13: uniform RS-bound strengthening](13_UNIFORM_RS_BOUND_ASSESSMENT_20261026.md),
+  26 October 2026, gpt-6.1-sol, actual effort ultra, chat0006. Same-model
+  internal assessment of both full rectangles, every jet/coefficient,
+  eleven-node saving and complete delivered-error preservation.

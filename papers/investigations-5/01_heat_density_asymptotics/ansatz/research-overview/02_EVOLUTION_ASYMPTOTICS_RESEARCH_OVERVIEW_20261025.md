@@ -4,7 +4,7 @@
 substantial LLM assistance, **gpt-6-astra (Codex), recorded effort max**.
 Ansatz chat0002, thread `01a17600-b15f-7f52-8713-31fa13599341`.
 
-**Current overview.** This replaces Overview01 as the branch's planning
+**Umbrella overview.** This replaced Overview01 as the branch's planning
 document at the author's request. [Overview01](01_HIGH_HEIGHT_ANSATZ_RESEARCH_OVERVIEW_20261025.md)
 remains a historical record. The corresponding
 [Progress02](../research-progress/02_EVOLUTION_ASYMPTOTICS_RESEARCH_PROGRESS_20261025.md)
@@ -27,20 +27,24 @@ comparison and a controlled solution error. Understanding the regulator
 transition near t=64 remains important, but its fine analysis follows
 this primary asymptotic-estimate work.
 
-**Immediate focus, 26 October 2026:** the author's recurrence branch
-now owns a three-round hierarchy sequence: p=2 on [1,2], every fixed
-order on that slab, then a declared compact-time family with endpoint
-dependence. See the [recurrence overview](../../recurrence/research-overview/01_RECURRENCE_RESEARCH_OVERVIEW_20261026.md),
-[live register](../../recurrence/research-progress/01_RECURRENCE_RESEARCH_PROGRESS_20261026.md) and
-[continuation](../../recurrence/notes/01_ANALYSIS_CONTINUATION_20261026.md).
-[R01-AN01 r1](../../recurrence/research-progress/handoffs/HDA-R01-AN01.md)
-is the active prepared successor to A02-AN07; the original request remains
-historical and is not a second execution job. Note16's finite recurrence
-changes the truncation and does not inherit the growing-degree theorem
-by renaming its index. A08-AN01 stays prepared outside this sequence.
-This updates ownership and the bounded continuation, not the all-time
-objective, accepted domains or mathematical status. Prepared for Edward
-Baker with substantial LLM assistance, gpt-6-astra, recorded effort max.
+**Immediate focus, updated 26 October 2026, recurrence chat0007:**
+the author requests that we understand the **large-positive-time hierarchy
+without assuming RH before bridging the regimes**. The inherited full
+gamma saddle supplies the leading unconditional estimate. The
+[new discussion](../../recurrence/brainstorm/03_POSITIVE_TIME_HIERARCHIES_AND_BRIDGES_20261026.md)
+gives formal coefficient recurrences, a candidate first correction and
+the remaining complete-error obligation.
+[HDA-A04-AN01 r1](../research-progress/handoffs/HDA-A04-AN01.md),
+Analysis — Sol, is prepared for the first corrected large-t bound,
+uniform in real height. It is not dispatched or proved.
+
+The completed negative-time hierarchy and all historical evidence remain
+in the [recurrence register](../../recurrence/research-progress/01_RECURRENCE_RESEARCH_PROGRESS_20261026.md).
+The prepared A08-AN01 small-positive slab and R05-AN08 moving negative
+endpoint are later bridge work; fine analysis near the regulator switch64
+is supporting. This supersedes earlier immediate priorities, not any
+accepted domain or result. For Edward Baker with substantial LLM
+assistance, gpt-6-astra, actual effort max.
 
 Three meanings of all times must be covered separately:
 
@@ -234,3 +238,15 @@ and input identities in notes/, assessments in reviews/, small work
 records in numerics/, and milestones in DRAFT_HISTORY.md. The unique
 [chat histories](../chat-histories/README.md) preserve their original
 numbers and provenance; historical planning files are not live ledgers.
+
+## Focused program successor — 26 October 2026
+
+The author requested a new overview/progress pair for the unconditional
+large-positive-time hierarchy and later bridges across multiple regions.
+[Overview03](03_LARGE_POSITIVE_TIME_HIERARCHY_RESEARCH_OVERVIEW_20261026.md)
+now defines that focused program; [Progress03](../research-progress/03_LARGE_POSITIVE_TIME_HIERARCHY_RESEARCH_PROGRESS_20261026.md)
+owns its live milestones and HDA-A04 execution. Its sequence is large t
+first, then64, intermediate positive times, zero and the negative hierarchy.
+This document retains the wider all-time objective and historical context.
+For Edward Baker, gpt-6-astra, actual effort max, recurrence chat0007;
+planning and routing only, no new theorem.

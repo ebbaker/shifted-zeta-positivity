@@ -4,10 +4,12 @@
 substantial LLM assistance, **gpt-6-astra (Codex), recorded effort max**.
 Ansatz chat0002, thread `01a17600-b15f-7f52-8713-31fa13599341`.
 
-**Sole live ansatz ledger.** This supersedes
+**Umbrella ansatz progress record.** This supersedes
 [Progress01](01_HIGH_HEIGHT_ANSATZ_RESEARCH_PROGRESS_20261025.md) for
-current priorities and execution phases; its historical returns remain
-intact. [Overview02](../research-overview/02_EVOLUTION_ASYMPTOTICS_RESEARCH_OVERVIEW_20261025.md)
+the wider queues; its historical returns remain intact. The new
+[Progress03](03_LARGE_POSITIVE_TIME_HIERARCHY_RESEARCH_PROGRESS_20261026.md)
+is now the sole live record for HDA-A04 and the author's focused
+unconditional large-t hierarchy and later regional-bridge program. [Overview02](../research-overview/02_EVOLUTION_ASYMPTOTICS_RESEARCH_OVERVIEW_20261025.md)
 owns the current objective and acceptance contract. The
 [parent register](../../research-progress/01_AVERAGED_DENSITY_RESEARCH_PROGRESS_20261024.md)
 continues to own parent HDA statuses and the separate source-cost queue.
@@ -30,20 +32,31 @@ recurrence execution is recorded at [recurrence R01-AN01](../../recurrence/resea
 the active successor to historical A02-AN07. The
 [recurrence register](../../recurrence/research-progress/01_RECURRENCE_RESEARCH_PROGRESS_20261026.md)
 owns the completed R01--R03 dispositions and the remaining recurrence queue.
-A08-AN01 remains prepared outside that sequence for the canonical
-positive-time estimate on [1/2,1]. Compact positive-time coverage and
-joint positive/negative time-height limits have the same primary research
-priority. Fine t=64 analysis remains important supporting work.
+**Current priority, 26 October2026, ansatz chat0005:** the author first
+required the large-positive-time hierarchy **without RH**, then authorized
+arbitrary fixed order and starting regional bridges. Under Progress03,
+A04-AN01–AN03 are now CLOSED at fixed-order field/derivative/residual
+scope; AN04 closes the first compact-positive high-height field bridge.
+Broad A04 remains Partial. **Next: Analysis — Sol, existing
+[A03-AN01 r1](handoffs/HDA-A03-AN01.md), READY_FOR_SOL**, exact named-center
+sensitivity/shifts using Note20's new compact field/arm inputs; prepared
+only, not dispatched or executed. A08-AN01 and recurrence R05-AN08 retain
+their frozen requests for later regions. The originating recurrence
+chat0007 [discussion](../../recurrence/brainstorm/03_POSITIVE_TIME_HIERARCHIES_AND_BRIDGES_20261026.md)
+remains historical; its formal remainder target is now paid by Notes17–19.
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol, recorded effort ultra**. See the final dated return below
+and [Summary21](../notes/21_CHAT0005_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md).
 
 | ID | Research status | Execution phase / owner | Next bounded output or dependency |
 | --- | --- | --- | --- |
 | HDA-A01 | Complete only at AN01--AN02 bounded analytical scope | CLOSED; Sol, gpt-6.1-sol, ultra, chat0001; same-model assessment | Preserve Notes03--04. No all-time or physical-transfer completion is inferred. |
 | HDA-A02 | Partial: chartwise [-2,0] join and arbitrary fixed compact-away-zero natural-scale family proved in-note; short outer-scale, growing-time and physical/assembly obligations open | Recurrence execution tracked in its [sole register](../../recurrence/research-progress/01_RECURRENCE_RESEARCH_PROGRESS_20261026.md); R01--R03 r1 CLOSED at bounded analytical scopes, gpt-6.1-sol, ultra, 26 October 2026. Old AN07 superseded before execution. AN01--AN06 remain CLOSED at their bounded scopes. | Consume recurrence Notes02--04/Reviews01--03 for fixed p,K=2p, X^-(p+3/4), full buffered field/jet/time norm and declared fixed compact families; all modes and integral remain. That branch owns those dispositions. Preserve [AN06 return](handoffs/HDA-A02-AN06.md), Note12/Review09 and integrated Proposition6.2/Appendix A. Fixed compact-away-zero gamma-scale bounds are paid; short outer-scale, enlarged joins, joint limits and physical transfer remain open. |
-| HDA-A08 | Open: compact positive-time coverage and uniform joining | **READY_FOR_SOL — Analysis, Sol**, [AN01 r1](handoffs/HDA-A08-AN01.md), prepared only, not dispatched | Retained outside the current three-round recurrence sequence; revisit after its disposition or a scoped stop. First missing slab [1/2,1]: canonical buffered field/j<=3/direct-time/residual estimate with actual source hypotheses. The wider 1/2<t<32 gap and overlaps remain open. |
-| HDA-A04 | Partial: inherited full gamma saddle | Primary joint-limit queue; Analysis, Sol; not dispatched | Establish useful uniform time-height ranges and matching. Lambert-W simplification is optional supporting work, not the acceptance condition. |
+| HDA-A08 | Open: compact positive-time coverage and uniform joining | **READY_FOR_SOL — Analysis, Sol**, [AN01 r1](handoffs/HDA-A08-AN01.md), prepared only, not dispatched | Prepared for later bridging, after the large-t hierarchy priority. First missing slab [1/2,1]: canonical buffered field/j<=3/direct-time/residual estimate with actual source hypotheses. The wider 1/2<t<32 gap and overlaps remain open. |
+| HDA-A04 | Partial as program: arbitrary fixed-order hierarchy now proved; first high-height regional field bridge paid | Execution owned solely by [Progress03](03_LARGE_POSITIVE_TIME_HIERARCHY_RESEARCH_PROGRESS_20261026.md); [AN01 r1](handoffs/HDA-A04-AN01.md) is its first request | Unconditional large-t hierarchy first; later bridges through64, intermediate positive time and zero to the negative hierarchy. Read Progress03 for live status; this row is a routing record. |
 | HDA-A05 | Open: joint negative-time/height asymptotics | Primary joint-limit queue; Analysis, Sol; not dispatched | Identify and bound the overlap between compact-negative arithmetic evolution and the large-T Gaussian endpoint. |
 | HDA-A06 | Open: physical transfer and full assembly for these ansatze | Follows usable estimates on each domain; Analysis, Sol; not dispatched | Transfer field and residual bounds to actual physical observables; pay regulator/covariance and all joining defects, then prove the domain union. |
-| HDA-A03 | Partial: inherited coarse regulator layer | **DEFERRED_SUPPORTING**; Analysis, Sol; AN01 r1 remains prepared, not dispatched | [AN01](handoffs/HDA-A03-AN01.md): corrected named one-arm comparisons on 63<=t<=65 and center shifts at the rounding scale. Mathematical scope unchanged. |
+| HDA-A03 | Partial: inherited coarse regulator layer; corrected compact field/arm inputs now paid in Note20 | **READY_FOR_SOL — Analysis, Sol**, existing AN01 r1; not dispatched or executed | [AN01](handoffs/HDA-A03-AN01.md), unchanged scope: consume new Note20/Assessment15 and finish exact named-center sensitivity/shifts at the rounding scale. New physical-layer consumer remains separate. |
 | HDA-A07 | Candidate family only | Deprioritized supporting analysis | Gaussian-polynomial core and ancillary central models; earlier parent core packet remains unexecuted. |
 
 HDA-A08 is a new ownership entry for an already documented gap, not a
@@ -421,3 +434,49 @@ retained-RS quadrature/geometry costs, all modes and integral retained.
 Requested precision is conditional on certified providers; none is yet
 implemented or verified. Broad R05 and A02 remain Partial. No manuscript,
 numerics, endpoint extension or physical transfer.
+
+## Large positive time before bridging — 26 October 2026
+
+For Edward Baker, substantial LLM assistance, **gpt-6-astra, actual effort
+max**, recurrence chat0007. The author explicitly prioritizes understanding
+large positive time before connecting the positive and negative regimes,
+and prohibits assuming RH. [Brainstorm03](../../recurrence/brainstorm/03_POSITIVE_TIME_HIERARCHIES_AND_BRIDGES_20261026.md)
+records the inherited Note30 result and formal saddle recurrence/first
+correction. **HDA-A04-AN01 r1, Analysis — Sol, READY_FOR_SOL** is prepared
+for the first fully paid corrected large-t estimate, uniformly in real
+height. No dispatch, numerical run, remainder theorem, manuscript change
+or parent status upgrade. A08-AN01, R05-AN08 and fine64 work remain for
+later; their frozen mathematical requests are unchanged. This dated
+priority supersedes earlier next-item recommendations.
+
+## New focused program documents — 26 October 2026
+
+At the author's request, [Overview03](../research-overview/03_LARGE_POSITIVE_TIME_HIERARCHY_RESEARCH_OVERVIEW_20261026.md)
+and [Progress03](03_LARGE_POSITIVE_TIME_HIERARCHY_RESEARCH_PROGRESS_20261026.md)
+now own the unconditional large-positive-time program, with later bridges
+through64, intermediate positive times and zero to the negative hierarchy.
+Progress03 alone owns A04 execution. This file remains the umbrella for
+other ansatz queues; A08 and A03 requests are not duplicated or dispatched.
+Routing update only, for Edward Baker with substantial LLM assistance,
+gpt-6-astra, actual effort max, recurrence chat0007.
+
+
+## Regional readiness after the fixed-order theorem — 26 October2026
+
+For Edward Baker with LLM assistance, **gpt-6.1-sol, recorded effort ultra**,
+ansatz chat0005. The author explicitly requested arbitrary fixed order,
+allowed starting regional bridges and requested a whole-chat handoff.
+[Progress03](03_LARGE_POSITIVE_TIME_HIERARCHY_RESEARCH_PROGRESS_20261026.md)
+records AN03/AN04 closure: [Note19](../notes/19_ARBITRARY_FIXED_POSITIVE_TIME_ORDER_20261026.md)
+proves fixed J; [Note20](../notes/20_COMPACT_POSITIVE_FIELD_BRIDGE_20261026.md)
+proves compact-positive high-height field/arm inputs through[63,65].
+[Summary21](../notes/21_CHAT0005_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md)
+covers the whole chat and supplies the pasteable next prompt.
+
+Existing **A03-AN01 r1 is now READY_FOR_SOL**, replacing its former
+priority deferral only. The frozen mathematics is unchanged; the packet
+is not dispatched or executed and no new center/physical-layer theorem
+is recorded. Next Analysis — Sol should consume Note20's PartA inputs,
+complete uniform exact-switch sensitivity and named-center shifts, and
+state the first unpaid physical consumer. A08 and recurrence AN08 remain
+prepared for later regions; their scopes and statuses are unchanged.

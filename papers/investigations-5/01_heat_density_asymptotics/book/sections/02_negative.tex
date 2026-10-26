@@ -1,0 +1,214 @@
+\section{Negative time: smoothing and the completed fluctuation hierarchy}
+\label{sec:negative}
+
+\subsection{The remote negative endpoint}
+Let $\phi_0=\Phi(0)>0$, $C=\phi_0\sqrt\pi/2$, and
+\begin{equation}
+ N_T(z)=C T^{-1/2}e^{-z^2/(4T)}.
+ \label{eq:negative-gaussian}
+\end{equation}
+An explicit convergent source-series majorant supplies
+$B_{2,\Phi}\ge\sup_{u\ge0}|\Phi''(u)|$. Evenness gives
+$|\Phi(u)-\phi_0|\le B_{2,\Phi}u^2/2$. Substitution in
+\eqref{eq:source}, followed by $v=\sqrt T u$, proves
+\begin{equation}
+ |\partial_z^j(H(-T,z)-N_T(z))|
+ \le\frac{B_{2,\Phi}}2 T^{-(j+3)/2}J_{j+2}(A),
+ \quad |y|\le A\sqrt T,
+ \label{eq:negative-absolute}
+\end{equation}
+for each fixed derivative order $j$, uniformly in real $x$. Here
+\begin{align*}
+ J_m(A)&=\int_0^\infty v^m e^{-v^2+Av}\dd v,\\
+ J_0(A)&=\frac{\sqrt\pi}2e^{A^2/4}\operatorname{erfc}(-A/2),
+ &J_1(A)&=\frac{1+AJ_0(A)}2,\\
+ J_{m+1}(A)&=\frac{mJ_{m-1}(A)+AJ_m(A)}2\quad(m\ge1).
+\end{align*}
+This elementary proof also explains the normalization of the Gaussian.
+It is an absolute estimate. At very large heights the Gaussian can be
+far smaller than its error; no uniform relative high-height asymptotic
+is asserted.
+
+For a fixed constant regulator $\epsilon>0$, the unaveraged density
+defined in Section~\ref{sec:physical} has the scaled endpoint profile
+\begin{equation}
+ T^2\rho_{\epsilon}(-T,\sqrt T(\xi+\ii\upsilon))
+ =\frac{\phi_0^2}{16\epsilon^2}(\xi^2+\upsilon^2)
+       e^{-(\xi^2-\upsilon^2)/2}+O(T^{-1})
+ \label{eq:negative-density-profile}
+\end{equation}
+on compact $(\xi,\upsilon)$ sets. The physical adaptive regulator used
+later is different; its endpoint transfer has its own error rates.
+The parent endpoint proof gives both accounts \cite{parent}.
+
+\subsection{Frozen high-height charts}
+Fix $0<\tau\le T\le B$, observation widths $r,b$, and a large real
+center $X$. Write
+\[
+ L=\log(X/(4\pi)),\quad N=\lfloor\sqrt{X/(4\pi)}\rfloor,
+ \quad V_B=8\sqrt{\max(1,B)}L,\quad d=z-X.
+\]
+All of these choices are frozen on the chart. Put
+\[
+ w_\epsilon(z)=\frac{1+\epsilon\ii z}2,\quad
+ \ell_\epsilon(z)=\log M(w_\epsilon(z)),\quad
+ G(z)=\sqrt{M(w_+(z))M(w_-(z))},\qquad \epsilon\in\{+1,-1\},
+\]
+with compatible analytic branches and $G(X)>0$. On fixed buffers,
+$|G(z)|$ has the scale $X^{7/4}e^{-\pi X/8}$ up to bounded ratios.
+The gamma norm is
+\begin{equation}
+ \|E\|_\gamma^{(3,1)}=
+ \sup_{\substack{\tau\le T\le B\\|\Re z-X|\le r,\ |\Im z|\le b}}
+ \frac{\max_{0\le j\le3}|\partial_z^j E|+|\partial_T E|}{|G(z)|}.
+ \label{eq:gamma-norm}
+\end{equation}
+
+For each arm and arithmetic mode set
+\begin{align*}
+ b_{\epsilon n}&=M(w_\epsilon(X))n^{-w_\epsilon(X)},\\
+ \lambda_{\epsilon n}&=\ell_\epsilon'(X)-\epsilon\ii\log n/2,
+ &c_{\epsilon r}&=\frac{\ell_\epsilon^{(r+1)}(X)}{(r+1)!}.
+\end{align*}
+The fluctuation factor is
+\[
+ \exp\{\ell_\epsilon(X+q)-\ell_\epsilon(X)-\ell_\epsilon'(X)q\}.
+\]
+Its finite weighted polynomials are \eqref{eq:finite-partition} with
+$d=1$ and $c_r=c_{\epsilon r}$. A simultaneous Cauchy estimate on a
+large disk gives $|c_{\epsilon r}|\le A D^{r-1}X^{-r}$ for every needed
+index. This common bound, rather than separate unspecified constants
+at each order, makes controlled order growth possible.
+
+Gaussian evolution of a polynomial is explicit. With
+\begin{equation}
+ \mathcal H_m(u,T)=m!\sum_{\nu=0}^{\lfloor m/2\rfloor}
+                 \frac{T^\nu u^{m-2\nu}}{\nu!(m-2\nu)!},
+ \quad \mathcal H_m=u\mathcal H_{m-1}+2T(m-1)\mathcal H_{m-2},
+ \label{eq:heat-moments}
+\end{equation}
+the heat transform of $q^m e^{\lambda q}$ is
+$e^{\lambda d+T\lambda^2}\mathcal H_m(d+2T\lambda,T)$.
+Equivalently, define $Q_T=d+2T\partial_d$ and
+\begin{align}
+ U_{\epsilon0}&=\sum_{n\le N}b_{\epsilon n}
+                          e^{\lambda_{\epsilon n}d+T\lambda_{\epsilon n}^2},\\
+ jU_{\epsilon j}&=\sum_{r=1}^j r c_{\epsilon r}
+                            Q_T^{r+1}U_{\epsilon,j-r}.
+ \label{eq:negative-recurrence}
+\end{align}
+Thus every retained grade is a finite Gaussian evolution of fixed real
+initial data and solves the heat equation exactly in $T$.
+
+\subsection{The arithmetic completion is part of the model}
+A bare frozen sum misses cutoff crossings and the Riemann--Siegel
+remainder. On $[X-V_B,X+V_B]$ let
+\[
+ a(u)=\sqrt{u/(4\pi)},\quad m(u)=\lfloor a(u)\rfloor,
+ \quad\chi(u)=1-2(a(u)-m(u)),
+\]
+and let $S_m(u)=\sum_{\epsilon,n\le m}M(w_\epsilon(u))n^{-w_\epsilon(u)}$.
+Use the fixed real Riemann--Siegel correction
+\begin{align*}
+ \mathcal U(u)&=\exp\{-\ii[u\log(u/(4\pi))/4-u/4-\pi/8]\},\\
+ R_{m,K}(u)&=2\Re\left\{(-1)^{m-1}M(w_+(u))\mathcal U(u)a(u)^{-1/2}
+       \sum_{k=0}^K C_k^{\rm RS}(\chi(u),1/2)a(u)^{-k}\right\}.
+\end{align*}
+The coefficient functions $C_k^{\rm RS}$ are the fixed canonical
+functions in the supporting recurrence manuscript, with its finite
+providers and removable-value conventions. Define
+\begin{align}
+ I_{X,K,B}(T,z)&=\int_{X-V_B}^{X+V_B}
+ \frac{e^{-(z-u)^2/(4T)}}{\sqrt{4\pi T}}
+       [S_{m(u)}(u)-S_N(u)+R_{m(u),K}(u)]\dd u,\\
+ F^{[p,K]}(T,z)&=\sum_{\epsilon=\pm1}\sum_{j=0}^p U_{\epsilon j}(T,z)
+                     +I_{X,K,B}(T,z).
+ \label{eq:negative-completed}
+\end{align}
+The integrand is evaluated as fixed real data on its fixed partition.
+No moving arithmetic floor is differentiated. Consequently
+$(\partial_T-\partial_{zz})F^{[p,K]}=0$ exactly. Finite-precision outputs
+have a separate evaluation error; their rounded values are not themselves
+claimed to satisfy an exact differential equation.
+
+\begin{theorem}[Completed fixed order; recurrence manuscript]
+\label{thm:negative-fixed}
+For fixed $p\ge1$, $0<\tau\le B$ and fixed observation buffers, there
+are finite constants and a sufficient height onset such that
+\begin{equation}
+ \|H(-T,\cdot)-F^{[p,2p]}(T,\cdot)\|_\gamma^{(3,1)}
+          \le C_{p,r,b}(\tau,B)X^{-p-3/4}.
+ \label{eq:negative-fixed-error}
+\end{equation}
+\end{theorem}
+\begin{proof}[Proof mechanism]
+The local weighted-exponential remainder is paid with its Gaussian
+moments. Summing the absolute arithmetic population costs $X^{1/4}$.
+The canonical Riemann--Siegel initial remainder is bounded by
+\[
+ \frac{2^{7/4}}7G(u)a(u)^{-1/2}
+       \Gamma((K+1)/2)\left(\frac{1.1}{a(u)}\right)^{K+1},
+\]
+so $K=2p$ gives the same power $X^{-p-3/4}$ after heat propagation.
+The cutoff correction pays every jump; the omitted real heat tails
+are kept separately. Spatial and time kernel derivatives are bounded
+on larger buffers before restriction. This proves the asserted norm
+with the explicit finite constant construction in \cite{recurrence}.
+\end{proof}
+The constants contain inverse powers of $\tau$ and factors such as
+$e^{(b+1)^2/(4\tau)+2B}$. The theorem does not allow an unproved
+substitution $\tau=\tau(X)$ or $B=B(X)$.
+
+\subsection{Growing order, onset and finite evaluation}
+Passing from the gamma envelope to the outer envelope of
+Section~\ref{sec:crossover} costs at most a fixed multiple of
+$e^{L^2/8}$ on $1\le T\le2$. The simultaneous coefficient estimates
+control the remaining order dependence by $e^{O(L\log L)}$.
+Keeping the heat tails leads to the following stronger conclusion
+\cite{recurrence,rec-onset,rec-bounds}.
+
+\begin{theorem}[Controlled growing order]
+\label{thm:negative-growing}
+For fixed $a>1/8$, $p=\lfloor aL\rfloor$, and
+$0<\eta<\min(a-1/8,127/8)$, the completed error on $1\le T\le2$
+is at most $e^{-\eta L^2}$ in the outer version of
+\eqref{eq:gamma-norm}, beyond a sufficient onset. In particular
+$p=\lfloor L/2\rfloor$ permits $\eta=1/4$.
+\end{theorem}
+
+For this specified $a=1/2$ construction, write
+$\nu=\lceil r+b+2\rceil+1$. The sharpened sufficient analytic onset is
+\begin{equation}
+ L\ge64\nu;
+ \qquad X\ge2^{128\nu+8}\quad\hbox{is a sufficient dyadic choice}.
+ \label{eq:rec-onset}
+\end{equation}
+The older $L\ge2^{22}\nu^4$ onset remains a valid fallback, not the
+preferred requirement. Strict domain and denominator guards remain
+part of the certified descriptors.
+
+The finite evaluator returns the field, spatial derivatives through
+three and the time derivative with a combined analytic and evaluation
+allowance $\Eo e^{-L^2/4}$. For rational query data and dyadic centers,
+the delivered precision has scale
+\[
+ P=\frac{3L^2}{8\log2}+O(L\log L).
+\]
+With $Q$ the sum of input length, delivered precision, separation bits,
+$\lceil L^2\rceil$ and a fixed offset, the proved coarse bounds are
+\begin{equation}
+ \operatorname{work}\le C(N+1)Q^{40},\qquad
+ \operatorname{memory}\le C Q^{20}.
+ \label{eq:negative-complexity}
+\end{equation}
+The arithmetic population $N\asymp\sqrt X$ has not disappeared.
+Improved uniform Riemann--Siegel majorants reduce a stated bound by
+more than a factor of ten; a separate contour improvement permits eleven
+fewer Gauss nodes per edge, forty-four in the four-edge rule, at the
+same target. These are analytical count improvements, not measured
+runtime claims. Component replays support the finite provider recipes;
+a complete software implementation is a separate task.
+
+The next frozen recurrence request is to extend the same strong target
+to $L^{-1}\le T\le2$. It is not yet a theorem and would still leave
+a through-zero bridge to be proved.

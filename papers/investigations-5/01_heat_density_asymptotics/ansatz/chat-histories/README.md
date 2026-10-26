@@ -90,3 +90,39 @@ ansatz formulas and next steps. [Review11](../reviews/11_CURRENT_ANSATZ_AND_NEXT
 records its internal scope and recommendation. Registry metadata remain
 authoritative; the recorder captures the actual completed public response.
 No prior registration was moved or renumbered.
+
+
+## Chat0005 first corrected large positive time — 26 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, recorded
+effort ultra**. [0005 — Derive uniform large-time estimate](0005_2026-10-26T16-10-47Z_derive-uniform-large-time-estimate.json),
+thread `01a178fa-8a72-7f23-9a7f-47e284eab9a3`, executes AN01 r1 under
+Overview03/Progress03. [Note17](../notes/17_FIRST_CORRECTED_LARGE_POSITIVE_TIME_20261026.md)
+and [Assessment12](../reviews/12_FIRST_CORRECTED_LARGE_POSITIVE_TIME_ASSESSMENT_20261026.md)
+record the complete unconditional first correction, buffered spatial/time
+bounds and actual residual. The registry owns current counts and hashes.
+The shared recorder preserves this new chat's unique registration; no
+prior chat was moved or renumbered. Final text is captured by a bounded
+exact-turn follow-up after completion; native hook activation is not presumed.
+
+
+The same chat0005 subsequently executes [AN02 r1](../research-progress/handoffs/HDA-A04-AN02.md)
+at the author's request. [Note18](../notes/18_SECOND_CORRECTED_LARGE_POSITIVE_TIME_20261026.md)
+and [Assessment13](../reviews/13_SECOND_CORRECTED_LARGE_POSITIVE_TIME_ASSESSMENT_20261026.md)
+record C4, the complete e6 budget, finite constants, buffered jets/time
+and actual residual. Model gpt-6.1-sol, effort ultra, 26 October2026.
+Its existing number, filename and provenance remain unchanged. The prior
+turn's bounded final capture succeeded; this continuation uses the same
+shared recorder and arranges capture of its real completed final reply.
+
+
+Chat0005's third research turn executes AN03–AN04 at the author's request:
+[Note19](../notes/19_ARBITRARY_FIXED_POSITIVE_TIME_ORDER_20261026.md),
+[Note20](../notes/20_COMPACT_POSITIVE_FIELD_BRIDGE_20261026.md) and
+[Assessments14](../reviews/14_ARBITRARY_FIXED_ORDER_ASSESSMENT_20261026.md)–[15](../reviews/15_COMPACT_POSITIVE_FIELD_BRIDGE_ASSESSMENT_20261026.md).
+The requested [whole-chat Summary21](../notes/21_CHAT0005_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md)
+covers all four packets, their limits and the next existing A03 handoff.
+Model gpt-6.1-sol, effort ultra, 26 October2026. Unique history identity,
+number and first-capture provenance remain unchanged; registry owns current
+counts/hashes. Previous bounded final captures completed successfully;
+current final text is saved only after the actual turn completes.

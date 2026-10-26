@@ -91,8 +91,8 @@ charged again as final-circuit errors.
 \begin{theorem}[Effective canonical evaluation]\label{thm:effective}
 Fix positive dyadic \(r,b\), and use the canonical source
 \eqref{eq:canonical}. For each accepted exact query of
-\cref{subsec:input-class} with \(L\ge L_*\) in
-\eqref{eq:closed-onset}, there is a terminating finite algorithm
+\cref{subsec:input-class} with \(L\ge64\nu\) in
+\eqref{eq:linear-onset}, there is a terminating finite algorithm
 delivering the field, spatial derivatives through order three, and first
 time derivative, with the combined output error
 \[
@@ -108,7 +108,7 @@ bounded real completion integral. It returns a common scale as a
 rational mantissa and an unrestricted binary integer exponent.
 \end{theorem}
 \begin{proof}
-\Cref{thm:explicit-onset} pays the structural hypotheses and half-target
+\Cref{thm:linear-onset} pays the structural hypotheses and half-target
 truncation. \Cref{sec:providers} supplies every delivered quantity in
 the preceding finite allocation. Its five evaluation categories are
 at most \(e/80<\varepsilon_X/20\), and scale error at most
@@ -196,10 +196,11 @@ its expanded denominator is never materialized. Substitution of
 The exponents \(40,20\) are deliberately loose upper bounds.
 Since \(N\asymp\e^{L/2}\), this is not polynomial total work in
 \(L\). Materializing all mode data would also change the storage bound.
-No practical runtime at \(X_*\), sharp complexity, or arithmetic
-compression is asserted. Likewise the compact encoding of \(X_*\)
+No practical runtime at \(X_{\rm new}\), sharp complexity, or arithmetic
+compression is asserted. Likewise the compact encoding of \(X_{\rm new}\)
 does not make its expanded input length disappear: its binary expansion
-has \(2L_*+9\) bits, whereas its exponent has \(O(\log\nu)\) bits.
+has \(128\nu+9\) bits, whereas its exponent has \(O(\log\nu)\) bits.
+The earlier \(X_*\) remains a sufficient fallback.
 
 \subsection{Supporting computational evidence}
 Finite scalar/gamma and Gauss implementations and certificate replay

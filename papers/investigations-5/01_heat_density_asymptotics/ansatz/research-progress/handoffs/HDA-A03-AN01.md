@@ -242,3 +242,23 @@ Pending. HDA-A03 remains Partial at its inherited scope. The current
 packet supplies no new center or layer theorem until its return is
 written and assessed. Parent HDA-17 Partial, HDA-18 Gated and HDA-20
 unfulfilled remain unchanged.
+
+
+## Input-readiness update — 26 October2026
+
+For Edward Baker with LLM assistance, **gpt-6.1-sol, recorded effort ultra**,
+ansatz chat0005. The author's new permission to start regional bridges
+and the fixed-order closure now make this existing packet the next ready
+Analysis — Sol task; Progress02 records READY_FOR_SOL. This supersedes
+the earlier priority deferral, not the frozen mathematical contract.
+No execution, center comparison or layer theorem is supplied by this update.
+
+[Note20](../../notes/20_COMPACT_POSITIVE_FIELD_BRIDGE_20261026.md) and
+[Assessment15](../../reviews/15_COMPACT_POSITIVE_FIELD_BRIDGE_ASSESSMENT_20261026.md)
+provide reusable compact field/arm inputs to PartA, including direct-time
+log remainders and the truncated arm's paid finite-endpoint forcing.
+PartB's uniform physical-switch neighborhood/sensitivity and named-center
+shifts still require execution. Preserve the historical A_lin definition
+and exact q/K. [Whole-chat Summary21](../../notes/21_CHAT0005_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md)
+gives the next prompt and complete evidence map. No duplicate packet or
+automatic chat dispatch is created.

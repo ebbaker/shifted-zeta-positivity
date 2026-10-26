@@ -1,0 +1,217 @@
+\section{The physical observables: exact equations before approximation}
+\label{sec:physical}
+
+\subsection{One prescribed regulator and one fixed spatial filter}
+Let
+\begin{equation}
+ k(v)=\frac{315}{256}(1-v^2)^4\mathbf1_{|v|\le1},\quad
+ k_\ell(x)=\ell^{-1}k(x/\ell),\quad K(x,y)=k_\ell(x)k_h(y).
+ \label{eq:kernel}
+\end{equation}
+The widths are fixed; there is no time average. The kernel is $C^3$
+with integrable weak derivatives through order four. The global theorem
+below specializes to $\ell=h=1$.
+
+For positive time let $\ell_s$ be the large real source saddle and set
+\begin{align}
+ 4\pi e^{4\ell_s}&=2t\ell_s+9,
+ &\kappa_s&=8t\ell_s-2t+36,\\
+ M_0&=2\pi^2e^{t\ell_s^2+9\ell_s-\pi e^{4\ell_s}}
+                  \sqrt{2\pi/\kappa_s},
+ &\epsilon_+(t,x)&=M_0\kappa_s^{-1}e^{-x^2/(2\kappa_s)}.
+ \label{eq:source-saddle}
+\end{align}
+With $C$ from \eqref{eq:negative-gaussian}, fix $\eta>0$ and
+$\epsilon_b(t)=\eta C(1+t^2)^{-1/4}$. Let
+\[
+ b_*(v)=\frac{e^{-1/v}}{e^{-1/v}+e^{-1/(1-v)}}\quad(0<v<1),
+\]
+extended by zero and one at the respective ends, and put
+$\chi(t)=b_*((t-64)/64)$. The physical regulator is
+\begin{equation}
+ \epsilon_g(t,x)=
+ \begin{cases}\epsilon_b(t),&t\le64,\\
+ \epsilon_b(t)^{1-\chi(t)}\epsilon_+(t,x)^{\chi(t)},&t>64,
+ \end{cases}
+ \qquad q=\epsilon_g^2,\quad r=\log q.
+ \label{eq:physical-regulator}
+\end{equation}
+The numbers $64$ and $128$ are prescribed switch times. The analytical
+floor $32$ has a different origin. None is claimed to be an intrinsic
+critical time of $H$.
+
+For a holomorphic field $F$ define
+\begin{align}
+ D&=|F|^2+q,& S&=\log D,& w&=q/D,\\
+ \rho&=\frac{q|F_z|^2}{\pi D^2},&
+ j&=\frac{qF_{zz}\overline{F_z}}{\pi D^2},&
+ U&=K*S,\quad W=K*w,\\
+ R&=K*\rho,&J&=K*j,&
+ Q&=K*(S_x^2-S_y^2)-(U_x^2-U_y^2).
+ \label{eq:physical-definitions}
+\end{align}
+The complex current represents the vector $(\Re J,\Im J)$.
+$Q$ is the actual difference of two gradient variances. It is not a
+chosen closure term or a function of density variance alone.
+
+\subsection{Adaptive potential, curvature and current}
+Write $\Dt=\partial_x^2-\partial_y^2$ and define
+\begin{align}
+ \mathcal B_\epsilon&=w\{r_t+\tfrac12(r_{xx}-r_{yy}+r_x^2-r_y^2)\},\\
+ 4\pi C_{\rm reg}&=2\operatorname{div}(w\nabla r)-w\Delta r
+                                     -w(1-w)|\nabla r|^2,\\
+ \mathcal S_\epsilon&=(1-2w)(r_t\rho+\nabla r\cdot\mathbf j).
+ \label{eq:regulator-corrections}
+\end{align}
+For the exact heat field $H$, differentiation and convolution give
+\begin{align}
+ U_t&=-\tfrac12(\Dt U+U_x^2-U_y^2+Q)+K*\mathcal B_\epsilon,
+ &\Delta U&=4\pi(R+K*C_{\rm reg}),\label{eq:physical-potential}\\
+ R_t&=-\tfrac12\Dt R-\tfrac1{8\pi}\Delta(U_x^2-U_y^2+Q)
+       +\tfrac1{4\pi}\Delta(K*\mathcal B_\epsilon)\notag\\
+       &\hspace{1em}-\partial_t(K*C_{\rm reg})-\tfrac12\Dt(K*C_{\rm reg}),
+ \label{eq:physical-density}\\
+ R_t+\operatorname{div}J&=K*\mathcal S_\epsilon.
+ \label{eq:physical-current}
+\end{align}
+For example, the first curvature identity follows by differentiating
+$\log(|H|^2+q)$, using holomorphy, and collecting the $q$ derivatives.
+Taking the potential equation's Laplacian proves
+\eqref{eq:physical-density}; this retains both the time and signed
+spatial derivatives of curvature. The full algebra is in \cite{parent}.
+
+For constant $q$ these regulator terms vanish. In that special case,
+\[
+ \Delta Q=2\{\operatorname{Var}_K(S_{xx})-\operatorname{Var}_K(S_{yy})\}
+ +8\pi\{\Cov_K(S_x,\rho_x)-\Cov_K(S_y,\rho_y)\}.
+\]
+A small-width, even-filter expansion gives a local gradient approximation
+to $Q$ with fourth-order width error under a bounded $C^7$ premise.
+That consistency result is not a stability theorem for a closed PDE.
+Changing the filter widths with height would add commutators.
+
+\subsection{Weak primitives preserve cancellation near zeros}
+For a compactly supported real $C^2$ test $\psi$, the curvature identity
+can be written
+\begin{equation}
+ 4\pi\langle\rho,\psi\rangle
+ =\int S\Delta\psi+2\int w\nabla r\cdot\nabla\psi
+       +\int\{w\Delta r+w(1-w)|\nabla r|^2\}\psi.
+ \label{eq:weak-density}
+\end{equation}
+This replaces a sharply peaked positive density by logarithmic and
+bounded primitives. Near a simple zero, unit factorizations and
+integrable poles then control signed current and stress expressions.
+The mean product $U_x^2-U_y^2$ must still be paid separately with
+bounds on the actual means. Separately estimating large positive pole
+squares can destroy the cancellation that makes the estimate useful.
+
+For a holomorphic approximate field let $E=F_t+F_{zz}$ and
+$\Xi_E=2\Re(\overline F E)/D$. The potential equation acquires
+$K*\Xi_E$ and the density equation acquires
+$\Delta(K*\Xi_E)/(4\pi)$. The current balance acquires
+\begin{equation}
+ K*D_E,\qquad
+ D_E=\frac{2q\Re(E_z\overline{F_z})}{\pi D^2}
+             -4\rho\Re(E\overline F/D).
+ \label{eq:holomorphic-defect}
+\end{equation}
+These exact identities identify the transfer obligations. They do not
+by themselves prove that a small envelope error makes every physical
+quantity small: direct inverse-$q$ estimates can be extremely costly.
+
+\subsection{An explicit clock, with differentiated transport}
+The complete source probability law, proportional to $e^{tu^2}\Phi(u)$,
+has mean $\mu$ and variance $v$. Its score identity, with the half-line
+endpoint retained, yields
+\begin{equation}
+ |\mu-\ell_s|=O(\kappa_s^{-1}),\quad
+ |v-\kappa_s^{-1}|=O(\kappa_s^{-3/2}),\quad
+ |\mu'/\mu-2/\kappa_s|=O(\kappa_s^{-3/2}).
+ \label{eq:score-refinement}
+\end{equation}
+Since $\ell_s'=2\ell_s/\kappa_s$, the locally finite sums
+\begin{align}
+ d_j&=(j+\tfrac12)\pi/\ell_s,\qquad
+ R_L(t,x,y)=k_h(y)\sum_{j\in\mathbb Z}k_\ell(x-d_j),\\
+ J_L(t,x,y)&=-\frac2{\kappa_s}k_h(y)
+                       \sum_{j\in\mathbb Z}d_j k_\ell(x-d_j)
+ \label{eq:clock}
+\end{align}
+satisfy $\partial_tR_L+\partial_xJ_L=0$ exactly. Polynomial
+periodization gives equivalent finite Bernoulli-polynomial formulas;
+there is no omitted Fourier-phase tail. On the proved inner window of
+height scale $\kappa_s^{1/3}$, with the stated buffers, the density
+error is $O(\kappa_s^{-1/2})$ and the current and direct time errors
+are $O(\ell_s\kappa_s^{-7/6})=o(\ell_s/\kappa_s)$.
+The clock has not been assigned a potential or covariance reproducing
+the entire physical tuple. Its overlap with the full saddle retains
+the separate existing transfer allowance \cite{parent}.
+
+The geometry of a block of $m$ clock roots is also explicit:
+\begin{equation}
+ \Delta_m^{\rm clock}
+   =\left(\frac\pi{\ell_s}\right)^{m(m-1)}
+                         \prod_{k=1}^{m-1}(k!)^2.
+ \label{eq:clock-vandermonde}
+\end{equation}
+If $\mu a_i/\pi=c+i+e_i$, $|e_i|\le e<1/2$, and
+$|\mu-\ell_s|\le e_s<\ell_s$, pairwise comparison gives
+\begin{equation}
+ \left|\log\frac{\Delta_m}{\Delta_m^{\rm clock}}\right|
+ \le\frac{m(m-1)e_s}{\ell_s-e_s}
+   +\frac{4e}{1-2e}\{mH_{m-1}-(m-1)\}.
+ \label{eq:vandermonde-error}
+\end{equation}
+For the proved growing block, $m=O(\ell_s\kappa_s^{1/3})$,
+$e=O(\kappa_s^{-1/2})$ and $e_s=O(\kappa_s^{-1})$, this tends to zero.
+The pair Laplacian with weights $(a_i-a_j)^{-2}$ has corresponding
+Loewner bounds with factors $(\mu/\ell_s)^2(1\pm2e)^{-2}$,
+including its constant zero mode. These are geometric comparisons,
+not a closed zero-motion law. A factorization $H=U_0\prod_i(z-a_i)$
+retains the unit drift $2(U_{0,z}/U_0)(a_i)$ in the root equation;
+unfolding adds the derivative of the unfolding scale.
+
+\subsection{The regulator layer and the importance of a named center}
+The earlier outer analysis uses the one-arm linear carrier
+\[
+ A_{\rm lin}(t,X)=|M(s_X)e^{t\alpha(s_X)^2/4}|,
+ \qquad b_{\rm lin}=\log(\epsilon_g/A_{\rm lin}),\quad
+ \omega\sim\tfrac14\log(X/(4\pi)).
+\]
+Its layer location is $d=(b_{\rm lin})_+/\omega$, and its leading
+density is
+\begin{equation}
+ R_{\rm layer}=\frac{\omega}{2\pi}
+                       \{k_h(y-d)+k_h(y+d)\},
+ \label{eq:layer}
+\end{equation}
+with the stated $O(1)$ absolute error in the source theorem. Define
+the exact center by $b_{\rm lin}(t_c(X),X)=0$. Then
+\begin{align}
+ t_c-64&=\frac{64}{\log X+c_0+O(1/\log X)},
+ &c_0&=\log\frac{4e}{\pi\kappa_s(64)},\\
+ t_X(\sigma)&=t_c(X)-\frac{128\sigma}{\pi X\log X},\\
+ \frac{R_H(t_X(\sigma),X,y)}{\log X}
+ &=\frac{k_h(y-\sigma_+)+k_h(y+\sigma_+)}{8\pi}
+                           +O(1/\log X).
+ \label{eq:resolved-layer}
+\end{align}
+The scaled-time statement is uniform for bounded $\sigma$ on its
+declared spatial domain. At the exact center,
+\begin{equation}
+ \partial_t b_{\rm lin}(t_c,X)
+   =-\frac\pi{512}X(\log X)^2[1+O(1/\log X)].
+ \label{eq:center-sensitivity}
+\end{equation}
+The center shift $O(1/\log X)$ is far larger than the rounding width
+$O(1/(X\log X))$. Substituting its coarse asymptotic expansion into
+the resolved law is therefore invalid. The full-saddle center and any
+corrected-saddle center are separate named objects until their
+displacements are bounded. The compact $P_4$ theorem supplies a much
+sharper field input for this task, not its completed physical proof.
+
+For each fixed time, the existing physical tail law is
+$R_H/\log X\to0$ for $t\le64$ and $R_H/\log X\to k_h(y)/(4\pi)$
+for $t>64$ on $|y|<h$. This is a consequence of the prescribed
+regulator. It does not identify a critical time of the unregulated field.

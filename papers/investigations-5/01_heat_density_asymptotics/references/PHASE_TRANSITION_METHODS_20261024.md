@@ -31,3 +31,17 @@ Author's pedagogical exposition, not a theta theorem. Gibbs response identities,
 [Section 2.11](https://dlmf.nist.gov/2.11), **Remainder Terms; Stokes Phenomenon**: remainder caution inspected; Section (iv) identified as further reading. No Stokes smoothing formula imported, and regulator/carrier competition not identified as a Stokes multiplier.
 
 Online references accessed 24 October 2026; exact online release version not checked this turn. No artificial PDF copies or full-chapter review. Reusable citations are in references.bib.
+
+## Added simple-saddle reading — 26 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6-astra, actual
+effort max**, recurrence chat0007. [DLMF2.4(iv)](https://dlmf.nist.gov/2.4#iv)
+was checked for its analytic contour setting, interior simple saddle,
+equations2.4.15--16 and the higher-coefficient pointer. It supplies context
+for the formal Gaussian coefficient algebra in
+[recurrence Brainstorm03](../recurrence/brainstorm/03_POSITIVE_TIME_HIERARCHIES_AND_BRIDGES_20261026.md).
+Its fixed-phase setup is not an imported theorem uniform in our moving
+time/height parameters. No coalescence, convergent infinite expansion or
+new canonical-source error estimate is inferred. Online HTML accessed on
+26 October; the exact current release version was not checked, and no
+artificial PDF copy was created. Earlier reading scopes remain intact.

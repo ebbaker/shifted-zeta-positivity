@@ -445,3 +445,83 @@ is a same-session authoring assessment. Earlier pending-integration
 statements are superseded only as manuscript status; analytical sources
 retain their scopes. Broad R05 remains Partial. [Continuation Note15](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/15_ANALYTIC_STRENGTHENING_CONTINUATION_20261026.md)
 prioritizes a sharper all-height proof; numerical work remains supporting.
+
+
+**26 October 2026 — linear sufficient recurrence onset.** Prepared for
+Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**,
+chat0006. [Note16](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/16_SHARPER_ALL_HEIGHT_ONSET_20261026.md)
+is **proved in-note from named inputs**, with [same-model Review12](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/12_SHARPER_ONSET_ASSESSMENT_20261026.md).
+L>=64nu, nu=ceil(r+b+2)+1, pays every all-height gate and the unchanged
+exp(-L²/4) full-channel target. Quote: “The old aggregation obscured a
+sufficient linear chart scale.” The earlier 2^22nu^4 onset is superseded
+as the recommended sufficient bound and retained as a valid fallback.
+The gain 2^16nu³>=2^22 concerns sufficient log-height; all modes/integral,
+strict descriptors and [1,2] remain. No numerical campaign, optimal-onset,
+runtime, software or RH claim. Broad R05 Partial; no specialist review.
+
+
+**26 October 2026 — strict uniform recurrence RS-bound improvement.**
+For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**,
+same chat0006. [Note18](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/18_UNIFORM_RS_BOUND_STRENGTHENING_20261026.md)
+is **proved in-note from named inputs**, with [same-model Review13](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/13_UNIFORM_RS_BOUND_ASSESSMENT_20261026.md).
+Every normalized-jet/coefficient majorant improves by csch(pi)<1/10 on
+unchanged domains. A separate full enlarged-rectangle bound B_c/16
+permits11 fewer nodes per contour edge at identical tolerance, saving44
+locations per rule. Quote: “The old provider is a valid fallback.”
+All K coefficients, complete modes, data/rounding, transfer, buffers and
+[1,2] remain. Earlier constants are superseded as recommended upper
+bounds and retained as fallbacks. No numerical run, total-runtime,
+software or time-extension claim; broad R05 Partial, no specialist review.
+
+
+**26 October 2026 — first corrected full gamma saddle, eventual all heights.**
+For Edward Baker with LLM assistance, **gpt-6.1-sol, recorded effort ultra**,
+ansatz chat0005. [Note17](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/17_FIRST_CORRECTED_LARGE_POSITIVE_TIME_20261026.md)
+is **proved in-note from named inputs**, with [same-model Assessment12](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/12_FIRST_CORRECTED_LARGE_POSITIVE_TIME_ASSESSMENT_20261026.md).
+The complete canonical two-arm error is e4 plus retained arithmetic and
+contour budgets; eventual absorption gives envelope field O(t^-2 log^-5 t),
+spatial j<=3 O(t^-2 log^(j-5)t), direct time O(t^-2 log^-3 t), actual
+nonzero residual O(t^-3 log^-5 t), uniformly in real height without RH.
+Quote: “The sufficient onset is symbolic”. AN01 r1 closes; broad A04
+hierarchy remains Partial. No bridge, physical-transfer, higher-order,
+numerical-onset or independent-validation claim.
+
+
+**26 October2026 — second fixed full-gamma correction.** For Edward Baker
+with LLM assistance, **gpt-6.1-sol, recorded effort ultra**, same ansatz
+chat0005. [Note18](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/18_SECOND_CORRECTED_LARGE_POSITIVE_TIME_20261026.md)
+is **proved in-note from named inputs**, with [same-model Assessment13](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/13_SECOND_CORRECTED_LARGE_POSITIVE_TIME_ASSESSMENT_20261026.md).
+C4 plus the complete e6 budget gives eventual all-height envelope field
+O(t^-3 log^-7 t), spatial j<=3 O(t^-3 log^(j-7)t), direct time
+O(t^-3 log^-5 t), actual residual O(t^-4 log^-7 t), without RH.
+Finite constants and a strict arithmetic margin are explicit; onset is
+symbolic. Quote: “two worked corrections are not an arbitrary-fixed-order
+theorem.” AN02 closes, LT-03/A04 remain Partial. No growing-order,
+bridge, physical-transfer, numerical-onset or independent-validation claim.
+
+
+**26 October2026 — arbitrary fixed-order full-gamma theorem and first regional field bridge.**
+For Edward Baker with LLM assistance, **gpt-6.1-sol, ultra**, ansatz chat0005.
+[Note19](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/19_ARBITRARY_FIXED_POSITIVE_TIME_ORDER_20261026.md)
+is **proved in-note from named inputs**, with [same-model Assessment14](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/14_ARBITRARY_FIXED_ORDER_ASSESSMENT_20261026.md):
+each fixed J has complete bJ/error, jets/time and exact residual -sum S Q C2J.
+Quote: “Each order is fixed before the sufficient onset and constants are chosen.”
+The field rate is t^(-J-1)log^(-2J-3)t uniformly in height, without RH.
+[Note20](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/20_COMPACT_POSITIVE_FIELD_BRIDGE_20261026.md)
+with [same-model Assessment15](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/15_COMPACT_POSITIVE_FIELD_BRIDGE_ASSESSMENT_20261026.md)
+gives compact arithmetic X^(-tlog2/4), hence P4 X^-7 on[63,65], a rechecked
+F1 chart and actual outer overlap. Earlier two-example-only LT-03 status
+is superseded at fixed order. Compact core, new physical/center consumers,
+growing order and all-time assembly remain open; onsets symbolic.
+
+
+**26 October 2026 — central Book synthesis of the established heat-flow results.**
+For Edward Baker with substantial LLM assistance, **gpt-6-astra, actual
+effort max**. The [Book manuscript](../papers/investigations-5/01_heat_density_asymptotics/book/README.md)
+provides the common domain/norm atlas and proof map for negative recurrence,
+positive fixed order, the existing all-time physical construction and
+source/evaluation bounds. [Production Review42](../papers/investigations-5/01_heat_density_asymptotics/reviews/42_BOOK_SYNTHESIS_PRODUCTION_REVIEW_20261026.md)
+states: “This synthesis does not promote an open bridge or a historical
+audit gate to a completed theorem.” Status remains production completion
+with inherited in-note mathematical scopes; companion revision is planned.
+This is a new entry point, not an additional approximation theorem.

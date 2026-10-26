@@ -135,3 +135,14 @@ conditioning. [Note56](notes/56_NOTES54_55_MANUSCRIPT_INTEGRATION_20261025.md),
 [Review36](reviews/36_NOTES54_55_REVIEW_AND_INTEGRATION_20261025.md),
 [outlook](notes/57_PROGRAM_OUTLOOK_AFTER_ALL_TIME_CONSTRUCTION_20261025.md).
 For Edward Baker with LLM assistance, gpt-6-astra, actual effort max, chat0020.
+
+
+2026-10-26 — **First Book synthesis.** Heat-density investigation;
+[new maintained source](book/main.tex), [build record](book/BUILD_RECORD_20261026.json),
+working tree, no commit/tag or snapshot. Unifies the negative recurrence,
+positive fixed-order hierarchy/compact bridge, global physical construction
+and source/evaluation results; technical companions retain proof ownership.
+[Revision plan](notes/63_BOOK_SYNTHESIS_AND_COMPANION_REVISION_PLAN_20261026.md),
+[production review](reviews/42_BOOK_SYNTHESIS_PRODUCTION_REVIEW_20261026.md),
+[continuation](notes/64_BOOK_CONTINUATION_20261026.md).
+For Edward Baker with LLM assistance, gpt-6-astra, actual effort max, chat0023.

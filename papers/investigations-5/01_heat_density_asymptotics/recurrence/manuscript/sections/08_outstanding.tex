@@ -7,38 +7,37 @@ The following order separates analytical goals from the computations
 that can support their development.
 
 \begin{enumerate}[leftmargin=*,itemsep=.65em]
-\item \textbf{Sharpen the sufficient height and parameter choices.}
-The closed onset loses heavily when factorial and moment costs are
-replaced by a single quadratic chart constant and
-\(L\log(L+2)\le L^{3/2}\). Retaining the actual finite constants,
-or tighter continuous envelopes, may give a substantially smaller
-sufficient onset. The target is an explicit all-height improvement at
-the same field and derivative accuracy, with every floor jump, buffer,
-source tail, and half-target reservation preserved. Optimizing the
-window and retained orders is useful only after a simultaneous estimate
-permits their change. A bounded interval check may help compare proved
-bounds; a successful isolated height cannot replace this theorem.
-
-\item \textbf{Improve coefficient and integral evaluation analytically.}
-The contour construction proves finite pole-safe delivery but carries
-conservative derivative and nested-quadrature costs. A local analytic
-factorization at the removable half-integer zeros could yield shorter
-normalized-jet recurrences, provided it proves denominator separation,
-uniform remainders through every required order, and the full
-\(C_0,\ldots,C_K\) propagation bound. Alternatively, sharper complex
-bounds or a different justified quadrature could reduce the retained
-integral cost. Compare the resulting finite bounds at identical input
-and output accuracy before undertaking a numerical campaign.
-
 \item \textbf{Establish a specified joint time--height--order regime.}
 The compact-family theorem fixes \(\tau,B,p\); the effective growing-order
-construction fixes \(1\le T\le2\). A useful extension should declare
+construction fixes \(1\le T\le2\). The next bounded question fixes \(\tau(X)=1/L\) and \(B=2\), retaining
+\(p=\lfloor L/2\rfloor\) and the same accuracy. It should explicitly pay
+the simultaneous factors. More general extensions should declare
 \(\tau(X),B(X),p(X)\) and prove simultaneous control of the buffered
 factor \(\e^{Y^2/(4\tau)}\), the inverse-time derivative factors,
 Gaussian moments, and tails. Beginning with a lower endpoint approaching
 zero while keeping the upper endpoint fixed is a narrower problem than
 both endpoints moving. The earlier through-zero and positive-time
 results retain their own errors and must be joined explicitly.
+
+
+\item \textbf{Further coefficient and integral improvements.}
+\Cref{prop:sharper-rs,prop:smaller-contour} already reduce the uniform
+coefficient constants by more than ten and save eleven nodes on each
+contour edge at unchanged accuracy. Further work should improve the
+order dependence, denominator-safe local delivery, or the actual
+retained-integral allowance. The weighted-table factorial bound and
+arithmetic-transfer costs remain. A new count or error gain must be
+proved before selecting supporting computations; the closed constant
+comparison should not be repeated as an open task.
+
+\item \textbf{Refine the remaining onset and parameter choices.}
+\Cref{thm:linear-onset} replaces the earlier quartic sufficient
+log-height by \(64\nu\) with every original gate intact. A further gain
+must compare a proved smaller continuous envelope, or audit simultaneous
+changes in window and retained orders. The current linear bound is
+sufficient, not optimal; one isolated verified height does not replace
+an all-height theorem. Such refinement follows the completed additive-cost
+comparison rather than repeating its former coarse-envelope target.
 
 \item \textbf{Quantify any compression or continuous deformation.}
 The full \(N\asymp\sqrt X\) arithmetic population dominates the present

@@ -1,0 +1,280 @@
+\section{Positive time: the moving saddle and every fixed correction order}
+\label{sec:positive}
+
+\subsection{The saddle absorbs the large motion}
+Write $\alpha=(\log M)'$. For each $w=s,1-s$, use the large
+right-half-plane solution
+\begin{equation}
+ p=w+\frac t2\alpha(p),\qquad
+ B=1-\frac t2\alpha'(p),\qquad
+ \Sc_t(w)=M(p)e^{-(p-w)^2/t}B^{-1/2}.
+ \label{eq:positive-saddle}
+\end{equation}
+The logarithm of $M$ is real on $p>1$ and $B^{-1/2}$ is the branch
+near one. Fix the observation widths and a positive analytic margin;
+all estimates start on the rectangle with twice that margin. For a
+real center $x$ put
+\begin{equation}
+ X=|x|,\quad R=2+t+X,\quad \Ls=\log R,\quad
+ \Ns=1+X+t\Ls,\qquad
+ \A=|\Sc_t(s)|+|\Sc_t(1-s)|.
+ \label{eq:positive-scales}
+\end{equation}
+At a sufficient onset, contraction in a fixed sector gives
+\begin{equation}
+ |p|\asymp\Ns,\quad \Re(p-w)\ge t\Ls/5,\quad
+ |\Im(p-w)|\le t,\quad |B-1|\le1/4,\quad |p|\ge t.
+ \label{eq:saddle-gates}
+\end{equation}
+These gates include bounded heights and the real center $x=0$.
+
+\subsection{Finite coefficients}
+Let $a_r=\alpha^{(r)}(p)$, $\beta_r=a_{r+1}/(r+2)!$, and
+$\mathcal P_\ell=\{\nu\ge0:\sum r\nu_r=\ell\}$. With $k=|\nu|$,
+define
+\begin{align}
+ A_\ell(u)&=\sum_{\nu\in\mathcal P_\ell}u^{\ell+2k}
+                       \prod_r\frac{\beta_r^{\nu_r}}{\nu_r!},
+ &\ell A_\ell&=\sum_{r=1}^\ell r\beta_r u^{r+2}A_{\ell-r},\\
+ C_{2j}^{+}&=\sum_{\nu\in\mathcal P_{2j}}
+ \frac{(2j+2k-1)!!}{2^{j+k}}
+ \left(\frac tB\right)^{j+k}
+ \prod_r\frac{a_{r+1}^{\nu_r}}{(r+2)!^{\nu_r}\nu_r!}.
+ \label{eq:positive-coefficients}
+\end{align}
+The empty partition gives $C_0^+=1$. The superscript distinguishes
+these coefficients from the negative-time Riemann--Siegel coefficients.
+Parity kills every odd grade in the Gaussian moment. The first two
+nonconstant coefficients are
+\begin{align}
+ C_2^+&=\frac{t^2\alpha'''(p)}{32B^2}
+               +\frac{5t^3\alpha''(p)^2}{192B^3},\label{eq:c2}\\
+ C_4^+&=\frac{t^3\alpha^{(5)}(p)}{384B^3}
+ +\frac{t^4}{B^4}\left\{\frac{7\alpha''(p)\alpha^{(4)}(p)}{768}
+                  +\frac{35\alpha'''(p)^2}{6144}\right\}\notag\\
+ &\hspace{1em}+\frac{35t^5\alpha''(p)^2\alpha'''(p)}{2048B^5}
+                  +\frac{385t^6\alpha''(p)^4}{73728B^6}.
+ \label{eq:c4}
+\end{align}
+The approximation is
+\begin{equation}
+ P_{2J}(t,z)=\sum_{w=s,1-s}\Sc_t(w)\sum_{j=0}^J C_{2j}^+(t,w).
+ \label{eq:positive-model}
+\end{equation}
+Every sum is finite. Nothing in this definition asserts convergence
+of the infinite correction series.
+
+\subsection{The complete error, before simplification}
+For $n=2J+2$ define
+\begin{equation}
+ b_J=\sum_{k=1}^{2J+2}\frac{t^{J+1+k}}{\Ns^{2J+2+k}},\qquad
+ \delta_J=b_J/t,\qquad
+ E_J=b_J+R^{-\kappa_a t}+R^{b_0}e^{-ct\Ls^2},
+ \quad\kappa_a=\frac{\log2}{8}.
+ \label{eq:positive-budget}
+\end{equation}
+Here $b_0$ is a fixed middle-strip exponent and $c>0$ may be decreased
+to at most $1/400$. The last two terms pay the complete arithmetic
+remainder and the nonlocal contour pieces.
+
+\begin{theorem}[Every fixed positive order]
+\label{thm:positive-fixed}
+Fix $J\ge0$ and fixed observation buffers. There are finite constants
+and $R_{0,J}$ such that for $t\ge32$ and $R\ge R_{0,J}$,
+\begin{align}
+ |\partial_z^d(H-P_{2J})|&\le C_{J,d}\A\Ls^dE_J,
+                         &&0\le d\le3,\\
+ |(H-P_{2J})_t|&\le C_{t,J}\A(\Ls^2E_J+\delta_J),\\
+ |\Res P_{2J}|&\le C_{r,J}\A\delta_J,
+ &\Res&=\partial_t+\partial_{zz}.
+ \label{eq:positive-full-error}
+\end{align}
+There is a sufficient $t_{*,J}$ for which, at every real height,
+\begin{align}
+ \frac{|\partial_z^d(H-P_{2J})|}{\A}
+  &\le\frac{C_{J,d}}{t^{J+1}\log^{2J+3-d}(2+t)},&&0\le d\le3,\\
+ \frac{|(H-P_{2J})_t|}{\A}
+  &\le\frac{C_{t,J}}{t^{J+1}\log^{2J+1}(2+t)},\\
+ \frac{|\Res P_{2J}|}{\A}
+  &\le\frac{C_{r,J}}{t^{J+2}\log^{2J+3}(2+t)}.
+ \label{eq:positive-eventual}
+\end{align}
+The field bound is first proved on the larger analytic rectangle;
+the jet bounds use its smaller interior.
+\end{theorem}
+This is the result proved in Ansatz Note 19 \cite{positive}. Its
+quantifier is ``for every fixed $J$, there exist constants and an
+onset.'' The constants are specified by finite constructions and named
+source constants, but are not numerically instantiated. The theorem
+does not make $t=32$ an all-height onset for every $J$.
+
+\subsection{Why the finite remainder has this form}
+The following argument is the central reason the hierarchy is
+systematically improvable at fixed order. Set $f=\log M$,
+$a=\Re(p-w)$, $m=|p|$, and use the actual symmetric central segment
+$\mathcal U=[-a/2,a/2]$. For $0\le\lambda\le1$ introduce
+\begin{equation}
+ E_\lambda(u)=u^2\int_0^1(1-r)
+                  [f''(p+r\lambda u)-f''(p)]\dd r.
+ \label{eq:interpolation}
+\end{equation}
+At $\lambda=1$ this is the exact nonquadratic exponent; at zero it
+vanishes. Sectorial gamma estimates and Cauchy disks supply finite
+$K_r$ with $|\alpha^{(r)}(q)|\le K_r|q|^{-r}$. After increasing the
+onset, $|p+r\lambda u|\ge m/3$ and
+\begin{equation}
+ |\partial_\lambda^rE_\lambda|
+ \le d_r\frac{|u|^{r+2}}{m^{r+1}},\qquad
+ d_r=\frac{3^{r+1}K_{r+1}}{(r+1)(r+2)},\quad1\le r\le n.
+ \label{eq:lambda-derivatives}
+\end{equation}
+The full interpolated Gaussian, not the nonquadratic factor by itself,
+satisfies
+\begin{equation}
+ |e^{-Bu^2/t+E_\lambda(u)}|\le e^{-u^2/(2t)}.
+ \label{eq:common-gaussian}
+\end{equation}
+Indeed its exponent is $-u^2/t+u^2\int_0^1(1-r)f''(p+r\lambda u)\dd r$;
+the sufficient gate $3K_1t/(2m)\le1/2$ pays the second term.
+
+Define the finite Bell constants
+\[
+ D_{n,k}=\sum_{\substack{\nu\in\mathcal P_n\\|\nu|=k}}
+                   \prod_{r=1}^n\frac{(d_r/r!)^{\nu_r}}{\nu_r!}.
+\]
+Real Taylor's theorem in $\lambda$ through degree $n-1$ gives
+\begin{equation}
+ \left|e^{-Bu^2/t}\left(e^{E_1(u)}-\sum_{\ell=0}^{n-1}A_\ell(u)\right)\right|
+ \le e^{-u^2/(2t)}\sum_{k=1}^nD_{n,k}
+                            \frac{|u|^{n+2k}}{m^{n+k}}.
+ \label{eq:bell-remainder}
+\end{equation}
+Every operation is finite, and only derivatives through
+$\alpha^{(2J+3)}$ are needed. Integrating the even powers against
+the Gaussian yields $t^{n/2+k}/m^{n+k}$, hence $b_J$.
+Odd grades cancel on the actual symmetric segment. Only the retained
+even polynomials are extended to whole Gaussian moments; their finite
+tails are at most $C_J e^{-t\Ls^2/400}$.
+
+The remainder proof is incomplete until the rest of the canonical
+integral is paid. In \eqref{eq:positive-heat}, split at real parts
+$2$ and $-1$, reflect the left arm using $\xi(w)=\xi(1-w)$, and
+keep the original bounded middle. Shift the two right rays to their
+saddles with their oriented connectors. Each shifted ray and connector
+stays in a half-plane where the full ordinary Dirichlet series
+converges. Both actual infinite ends, the noncentral parts, connectors,
+middle, and all $n\ge2$ are retained in the error account. A gamma
+integrand is never extended through its poles to an invented whole-line
+contour. These payments give the last two terms of
+\eqref{eq:positive-budget}. A sufficient eventual absorption includes
+$\kappa_a t\ge2J+4$ and an order-dependent logarithmic onset.
+This is why the full bound must precede its elegant simplified form.
+
+\subsection{The residual recurrence and the direct time estimate}
+The approximation has a nonzero heat residual, with a simple exact
+description. In the saddle coordinate $p$ define
+\begin{equation}
+ \mathcal Q_+=\frac1{4B^2}\partial_{pp}
+ +\frac{t\alpha''}{4B^3}\partial_p
+ +\frac{t\alpha'''}{16B^3}
+ +\frac{5t^2(\alpha'')^2}{64B^4}.
+ \label{eq:positive-operator}
+\end{equation}
+Exact differentiation of \eqref{eq:positive-saddle} gives
+\begin{equation}
+ \Sc^{-1}(\partial_t-\tfrac14\partial_{ww})(\Sc F)
+             =(\partial_t|_p-\mathcal Q_+)F,
+ \qquad
+ \partial_t|_p C_{2j+2}^+=\mathcal Q_+C_{2j}^+.
+ \label{eq:positive-transport}
+\end{equation}
+One proves the coefficient identity with finite Gaussian moments and
+$\rho=t/B$: differentiation uses $\rho_t|_p=B^{-2}$ and
+$\rho_p=\alpha''\rho^2/2$. Thus
+\begin{equation}
+ \Res P_{2J}=-\sum_{w=s,1-s}\Sc_t(w)\mathcal Q_+C_{2J}^+,
+ \qquad
+ (H-P_{2J})_t=-(H-P_{2J})_{zz}-\Res P_{2J}.
+ \label{eq:residual-telescope}
+\end{equation}
+The final grade is not identically zero; in particular it is eventually
+nonzero at $z=0$. Formula~\eqref{eq:residual-telescope} supplies the
+time estimate without differentiating a big-$O$ bound.
+
+\subsection{The improvement has two useful faces}
+For $X\gg t\Ls$, the allowance is
+$b_J\asymp_J t^{J+2}X^{-2J-3}$. In the time-dominated or comparable
+region it is $O_J(t^{-J-1}\Ls^{-2J-3})$. The next allowance satisfies
+\begin{equation}
+ \frac{b_{J+1}}{b_J}=O_J(t/\Ns^2)
+              =O_J(1/(t\log^2(2+t))).
+ \label{eq:order-gain}
+\end{equation}
+This compares proved positive bounds, not successive signed errors.
+At each fixed height, a single arm's coefficient has asymptotic form
+\[
+ C_{2j}^+\sim\frac{2^{2j-1}(2j)!}{(j+1)!}
+                     t^{-j}\log^{-2j-1}t\quad(j\ge1).
+\]
+The first omitted correction explains the field scales
+$t^{-1}\log^{-3}t$, $t^{-2}\log^{-5}t$, and $t^{-3}\log^{-7}t$
+for $P_0,P_2,P_4$. These sharpen the field description; existing
+coarser physical-transfer theorems do not improve automatically.
+
+\subsection{A compact-positive refinement reaches the switch}
+Fix $I=[a,T]\subset[32,\infty)$, with finite $T$, and let $X\to\infty$.
+The actual saddle equation gives
+\[
+ p-w=O_T(\log X),\quad |p|=X/2+O_T(\log X),\quad
+ \Re(p-w)=\frac t4\log(X/(4\pi))+O_T(\log X/X).
+\]
+Using this position instead of the coarser all-height gate improves
+the complete arithmetic allowance to $C_I X^{-t\log2/4}$.
+
+\begin{theorem}[Compact positive field bridge]
+\label{thm:compact-positive}
+For each fixed $J,I$ and fixed buffers,
+\begin{align}
+ |\partial_z^d(H-P_{2J})|&\le C_{J,I,d}\A(1+\log X)^d
+                      [X^{-2J-3}+X^{-t\log2/4}],&&0\le d\le3,\\
+ |(H-P_{2J})_t|&\le C_{J,I}\A(1+\log X)^2
+                      [X^{-2J-3}+X^{-t\log2/4}],\\
+ |\Res P_{2J}|&\le C_{J,I}\A X^{-2J-3}.
+ \label{eq:compact-positive}
+\end{align}
+In particular $P_2$ has pure $X^{-5}$ field allowance on every fixed
+$[32,T]$, and $P_4$ has pure $X^{-7}$ allowance on $[63,65]$, with
+the displayed jet and time losses.
+\end{theorem}
+The numerical inequalities are $8\log2>5$ and $63\log2/4>7$.
+This is a new compact-domain proof, not substitution of $64$ into an
+uninstantiated eventual onset. At higher orders the arithmetic term
+must remain whenever its exponent does not pay the local precision.
+It is an upper-bound budget, not a proved lower bound or a sharpness
+claim \cite{bridge}.
+
+For comparison, an elementary corrected carrier is
+\begin{equation}
+ F_1=\sum_\pm C_\pm(1+D_\pm),\quad
+ D_\pm=\frac{\pm\ii}{z}
+  \left\{\frac1{24}-\frac t4-\frac{7t}4b_\pm-\frac{t^2}8b_\pm^2\right\},
+ \quad b_\pm=L_z/2\pm\ii\pi/4.
+ \label{eq:elementary-correction}
+\end{equation}
+On each fixed $[32,T]$, the rechecked contour proof gives
+$|\partial_z^d(H-F_1)|\le C_{T,d}\Eo(1+\log^{4+d}X)/X^2$ and
+$|(H-F_1)_t|\le C_T\Eo(1+\log^6X)/X^2$.
+The envelopes $\A$ and $\Eo$ are comparable on the full buffers.
+The truncated gamma arm used in that proof has a finite-endpoint
+forcing, which is explicitly paid; it is not an exact heat solution.
+
+For a time profile $\chi$, any optional splice obeys
+\begin{equation}
+ \Res[\chi P_{2J}+(1-\chi)F_1]
+ =\chi\Res P_{2J}+(1-\chi)\Res F_1+\chi'(P_{2J}-F_1).
+ \label{eq:positive-splice}
+\end{equation}
+It inherits the coarser carrier error unless an additional cancellation
+is proved. Choosing fixed $T>\max(65,t_{*,J})$ gives a high-height
+overlap with the all-height theorem. The remaining bounded-height
+compact core is still a separate approximation task.

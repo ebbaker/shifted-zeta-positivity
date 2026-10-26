@@ -849,3 +849,65 @@ all-height gates. Finite software evidence does not close the full
 evaluator or sharpen the onset. [Review11](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/11_EFFECTIVE_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261026.md)
 records this integration check; the next onset task must prove continuous
 coverage through floor jumps, not extrapolate a successful height.
+
+
+**Keep fixed chart costs additive before absorbing order growth, 26 October 2026.**
+For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+[Recurrence Note16](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/16_SHARPER_ALL_HEIGHT_ONSET_20261026.md)
+states: “The old aggregation obscured a sufficient linear chart scale.”
+Keeping log Tbar additive in the factorial ledger reduces sufficient
+log-height from 2^22nu^4 to 64nu, while paying all separate source/tail
+terms and budgets. [Same-model Review12](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/12_SHARPER_ONSET_ASSESSMENT_20261026.md)
+checks that the local prefactor and common moment bound both contribute
+log Tbar. Do not multiply a fixed chart penalty by order before comparing
+continuous rate margins; retain both copies when the actual product has
+two. This improves a sufficient estimate, not an actual-error lower bound.
+
+
+**A smaller coefficient domain cannot pay a larger contour, 26 October 2026.**
+For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+[Recurrence Note18](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/18_UNIFORM_RS_BOUND_STRENGTHENING_20261026.md)
+states: “An R_F bound alone would not pay E27”. The sharper coefficient
+constant needs a separate full expanded-rectangle proof before reducing
+contour order. [Review13](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/13_UNIFORM_RS_BOUND_ASSESSMENT_20261026.md)
+also keeps the transfer term and P15's +1: neither inherits the common
+coefficient factor. Preserve each domain and additive term before
+turning a local gain into an evaluator or runtime claim. This is a
+scoped substitution limit, not an obstruction to better providers.
+
+
+**Pay the arithmetic floor after a saddle-order improvement, 26 October2026.**
+For Edward Baker with LLM assistance, **gpt-6.1-sol, recorded effort ultra**.
+[Ansatz Note17](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/17_FIRST_CORRECTED_LARGE_POSITIVE_TIME_20261026.md)
+states: “the inherited A_ar has power32 log2/8<5, so that bound cannot
+be absorbed into t³/N⁵”. Its complete first-correction proof retains
+arithmetic and contour terms, then increases the symbolic eventual time
+onset to pay them at the improved scale. [Assessment12](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/12_FIRST_CORRECTED_LARGE_POSITIVE_TIME_ASSESSMENT_20261026.md)
+also checks that odd moments cancel only on an actual symmetric contour
+segment, with every omitted piece paid separately. A local parity gain
+cannot inherit an old arithmetic absorption unchanged. This rejects the
+specified upper-bound shortcut, not the true error or sharper arithmetic.
+
+
+**Keep the exponential factor inside a finite Taylor payment, 26 October2026.**
+For Edward Baker with LLM assistance, **gpt-6.1-sol, recorded effort ultra**.
+[Ansatz Note18](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/18_SECOND_CORRECTED_LARGE_POSITIVE_TIME_20261026.md)
+uses a finite interpolation and a common Gaussian bound for every
+interpolation parameter: “This pays the full Taylor remainder's exponential
+factor uniformly.” Its sixth Bell polynomial gives explicit finite local
+constants before any parity cancellation; genuine contour/arithmetic
+pieces remain separate. [Assessment13](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/13_SECOND_CORRECTED_LARGE_POSITIVE_TIME_ASSESSMENT_20261026.md)
+also preserves the finite-sum factor on passing to suprema. This proves
+one fixed order, not uniform constants for an order growing with time.
+
+
+**Differentiate the moving Gaussian functional, not only its polynomial, 26 October2026.**
+For Edward Baker with LLM assistance, **gpt-6.1-sol, ultra**. [Note19](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/19_ARBITRARY_FIXED_POSITIVE_TIME_ORDER_20261026.md)
+states: “The p derivative of the Gaussian functional includes its rho dependence”.
+Keeping rho_p proves the exact finite residual recurrence rather than
+extrapolating C2/C4 cancellations. [Assessment14](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/14_ARBITRARY_FIXED_ORDER_ASSESSMENT_20261026.md)
+checks this term. [Note20](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/20_COMPACT_POSITIVE_FIELD_BRIDGE_20261026.md)
+and [Assessment15](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/15_COMPACT_POSITIVE_FIELD_BRIDGE_ASSESSMENT_20261026.md)
+also retain the truncated arm's finite-endpoint forcing and the time-splice
+mismatch. A compact arithmetic improvement rechecks its domain; it does
+not change the global theorem's time quantifiers or prove physical transfer.

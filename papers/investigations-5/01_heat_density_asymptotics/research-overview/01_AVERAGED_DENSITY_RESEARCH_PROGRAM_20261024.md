@@ -1,5 +1,17 @@
 # Research program: asymptotics and evolution of averaged zero density
 
+## Current unified program 26 October 2026
+
+The [Book overview](02_BOOK_UNIFIED_HEAT_FLOW_RESEARCH_OVERVIEW_20261026.md)
+now coordinates the whole field/physical/evaluation program at the
+author's request. This file remains the detailed parent physical program
+and historical priority record. The
+[new register](../research-progress/02_BOOK_UNIFIED_HEAT_FLOW_RESEARCH_PROGRESS_20261026.md)
+coordinates Book production and cross-branch priorities; existing parent
+and branch registers keep their scientific execution phases and evidence.
+No theorem or historical acceptance gate changes through this routing.
+For Edward Baker with LLM assistance, **gpt-6-astra, actual effort max**.
+
 24 October 2026, America/New_York. Prepared for **Edward Baker** with
 substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**,
 verified from the original turn's metadata.

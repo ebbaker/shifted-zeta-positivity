@@ -295,6 +295,13 @@ Each subinterval ellipse lies inside its parent ellipse, so
 occurs, no rounded floor relabels a node, and trimming is charged once.
 
 \subsection{Pole-safe coefficient delivery}
+Use the sharpened constants of \cref{prop:sharper-rs,subsec:smaller-contour}.
+An old certified contour order may be replaced by \(q-11\) when
+\(0<\tau_h\le1\), with unchanged data-error allocations.
+The original constants and rule remain valid fallbacks. Rational upper
+enclosures may be divided by ten for \(B_F\) and by sixteen for
+\(B_c\), avoiding a new transcendental primitive.
+
 \label{subsec:pole-safe-delivery}
 Use the contour formula \eqref{eq:contour-jet}, the exact weighted
 recurrence \eqref{eq:weighted-rs}--\eqref{eq:rs-endpoint}, and all
@@ -302,7 +309,7 @@ recurrence \eqref{eq:weighted-rs}--\eqref{eq:rs-endpoint}, and all
 \(\abs{2\cos(\pi\zeta)}\ge1\), and target separation at least
 \(1/4\). The entire continuation, maximum modulus, and Cauchy give
 \[
- B=B_c4^{M+1},\qquad L_\zeta=4(M+2)B,\qquad L_\chi=4(M+1)B
+ B=B_c^{\rm new}4^{M+1},\qquad L_\zeta=4(M+2)B,\qquad L_\chi=4(M+1)B
 \]
 as common magnitude and Lipschitz bounds for its integrands.
 Keep \(\widehat\chi\) within \(1/8\) of the exact real value.
@@ -319,10 +326,11 @@ error in any normalized jet is at most
 For common errors at most \(\delta\le1/8\), bound this by
 \(\delta C_c\), where
 \(C_c=[B+13(L_\zeta+L_\chi+1)]/6+13(B+1)\).
-Choose \eqref{eq:contour-error} below \(\tau_h/4\) and
+Choose the sharpened version of \eqref{eq:contour-error}, with
+\(B_c^{\rm new}\), below \(\tau_h/4\) and
 \(\delta\le\min(1/8,\tau_h/[4(1+C_c)])\); final quantization can
 use another \(\tau_h/4\). At contour nodes, numerator and denominator
-errors give \(\abs{\widehat F_0-F_0}\le2\eta_N+2B_c\eta_D\)
+errors give \(\abs{\widehat F_0-F_0}\le2\eta_N+2B_c^{\rm new}\eta_D\)
 when \(\eta_D\le1/2\). Requiring this below
 \(\eta_H4^{-M-1}\) supplies the primitive allowance.
 
@@ -331,7 +339,7 @@ For explicit coefficient propagation put
  A_{kj}&=\abs{e_j^{(k)}}2^{-j}3^{j-2k},&
  S_C&=\max_{k\le K}\sum_jA_{kj},\\
  T_C&=\max_{k\le K}\sum_j\frac{2k-j}{3}A_{kj}
-                         (B_F2^{3k-2j}+1).
+                         (B_F^\sharp2^{3k-2j}+1).
 \end{align*}
 Since \(j\le3k/2\), the powers of \(\pi\) have nonpositive
 exponents. The mean value theorem, \(\pi,\widehat\pi\ge3\), and

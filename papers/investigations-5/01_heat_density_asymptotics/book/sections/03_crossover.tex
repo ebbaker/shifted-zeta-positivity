@@ -1,0 +1,78 @@
+\section{The height carrier and the narrow crossover through zero}
+\label{sec:crossover}
+
+On a right-hand high-height chart use $L_z=\Log(z/(4\pi))$, continued
+from the positive real axis, and define
+\begin{align}
+ A_o(t,z)&=\frac{\pi^{1/4}z^{7/4}}{16}
+  \exp\left\{-\frac{\pi z}8+\frac t{16}(L_z^2-\pi^2/4)\right\},\\
+ \Theta_o(t,z)&=\frac z4(L_z-1)+\frac{\pi tL_z}{16}+\frac{7\pi}8,
+ \quad C_\pm=\tfrac12 A_o e^{\pm\ii\Theta_o},
+ \quad \Eo=|C_+|+|C_-|.
+ \label{eq:outer-arms}
+\end{align}
+The phase is unwrapped as written; each arm has half the cosine
+amplitude. The envelope includes transverse growth. A real-axis
+amplitude alone would not pay the buffered comparison.
+
+Put $a(z)=\sqrt{z/(4\pi)}$, freeze $N=\lfloor a(X)\rfloor$, and set
+\begin{align*}
+ w_n(t,z)&=n^{-1/2}\exp\{t[(\log n)^2-L_z\log n]/4\},\\
+ \varphi_n(t,z)&=\Theta_o(t,z)-(z/2+\pi t/8)\log n,\\
+ \mathfrak C(v)&=\frac{\cos(2\pi(v^2-v)-\pi/8)}{\cos(2\pi v)},\\
+ R_N(z)&=(-1)^N G(z)a(z)^{-1/2}\mathfrak C(a(z)-N),\\
+ F_N(t,z)&=A_o(t,z)\sum_{n\le N}w_n(t,z)\cos\varphi_n(t,z)
+                           +e^{-\pi^2t/64}R_N(z).
+\end{align*}
+Values at the apparent poles of $\mathfrak C$ are taken by removable
+continuation. The identity
+\begin{equation}
+ \mathfrak C(v)+\mathfrak C(v-1)
+        =2\cos(2\pi(v-1)^2-\pi/8)
+ \label{eq:cutoff-identity}
+\end{equation}
+pays the adjacent cutoff change. This leading completion is simpler
+than the high-order completion of Section~\ref{sec:negative}; it also
+has a weaker error.
+
+\begin{theorem}[Buffered signed crossover]
+\label{thm:crossover}
+On fixed buffered charts with $L_X=\log(X/(4\pi))$ and
+$|t|L_X\le8$, let $t_-=\max(0,-t)$ and
+$\delta=X^{-3/4}e^{t_-L_X^2/16}$. The completed canonical estimate is
+\begin{align}
+ |\partial_z^j(H-F_N)|&\le C_j\Eo\delta(1+L_X)^j,
+                         &&0\le j\le3,\\
+ |\partial_t(H-F_N)|&\le C\Eo\delta(1+L_X)^2,\\
+ |(\partial_t+\partial_{zz})F_N|&\le C\Eo\delta(1+L_X).
+ \label{eq:crossover-errors}
+\end{align}
+In the whole signed window $\delta=O(X^{-1/4})$; on its positive
+half $\delta=X^{-3/4}$.
+\end{theorem}
+The proof retains both canonical arms, the complete arithmetic
+population and cutoff payment on the larger strip. The time estimate
+comes from the exact heat error identity and the actual residual; it
+does not introduce a singular $1/t$ by differentiating an error
+allowance. See \src{ansatz/notes/04_COMPLEX_STRIP_REMAINDER_AND_BUFFERED_CROSSOVER_20261025.md}{Ansatz Note 04}
+and the supporting manuscript \cite{ansatz}.
+
+This theorem explains a genuine but narrow two-sided passage through
+zero. It does not extend the $e^{-L^2/4}$ recurrence estimate to zero.
+An earlier paid chartwise negative-time join on $[-2,0]$ also uses
+its own weaker representation and error account
+(\src{ansatz/notes/06_NEGATIVE_BRIDGE_AND_TIME_JOIN_20261025.md}{Ansatz Note 06}).
+Likewise, the proposed small-positive compact bridge on $[1/2,1]$
+remains an unexecuted request.
+
+For each fixed arithmetic mode, the scaling $t=\tau/L_X$ gives
+$w_n\to n^{-1/2-\tau/4}$. The number of relevant modes grows with
+height, so this pointwise observation is not a theorem about a
+universal transition of the whole sum. A useful next bridge must
+control that population and the remainder together.
+
+The large interval between the shrinking window and the positive
+saddle range $t\ge32$ is therefore a principal asymptotic gap.
+The finite source construction covers it for absolute physical
+approximation, but a comparably economical hierarchy across that
+interval is not yet established.

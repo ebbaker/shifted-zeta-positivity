@@ -1,78 +1,84 @@
 # Research progress: recurrence and fluctuation hierarchies
 
 26 October 2026, America/New_York. Prepared for **Edward Baker** with
-substantial LLM assistance, **gpt-6-astra (Codex), recorded effort max**.
-Current integration and priority refresh: recurrence **chat0005**, thread
-`01a1785a-2938-7de0-adc4-3b60db706199`. Earlier entries retain their own
-model, effort, chat identity and evidence scope.
+substantial LLM assistance, **gpt-6.1-sol (Codex), actual effort ultra**.
+Current return: recurrence **chat0006**, thread
+`01a178a3-9572-7bf2-b0a0-bd4d47f796ab`. Earlier entries retain their
+original model, effort and bounded evidence scope.
 
-**Sole live recurrence register.** The [overview][overview] supplies the
-analytical agenda and [current continuation][continuation] the handoff.
-**Next primary task: [HDA-R05-AN06 r1](handoffs/HDA-R05-AN06.md),
-READY_FOR_SOL — Analysis, not executed.** It seeks a smaller proved
-all-height onset at unchanged accuracy and frozen choices. Existing
-[N02 r1](handoffs/HDA-R05-N02.md) remains READY_FOR_SOL as a bounded
-supporting component task; no numerical run is launched by this update.
-[Ansatz Progress02][ansatzprogress] and [the parent register][parentprogress]
-retain ownership of HDA-A02 and parent HDA statuses.
+**Sole live recurrence register.** The [overview][overview] orders the
+analytical agenda; [Continuation19][continuation] retains the prepared negative-endpoint handoff. The positive-time priority below is newer.
+**HDA-R05-AN07 r1 is Complete/CLOSED** at its bounded analytical scope.
+[Note18](../notes/18_UNIFORM_RS_BOUND_STRENGTHENING_20261026.md)/
+[Review13](../reviews/13_UNIFORM_RS_BOUND_ASSESSMENT_20261026.md) prove
+a uniform factor csch(pi)<1/10 for jet/coefficient majorants and a
+separate B_c/16 contour bound. At identical jet tolerance each old
+certified contour order can lose 11 nodes per edge, saving44 locations
+per instantiated rule. Complete data/rounding and transfer terms remain.
+No numerical or machine-symbolic research run was executed.
+
+AN06's L>=64nu onset and total exp(-L²/4) accuracy remain, with the
+old onset and provider retained as fallbacks. All modes, every C_k,
+bounded integral, buffers, strict descriptors and [1,2] are unchanged.
+
+**Author's current next priority, 26 October 2026, recurrence chat0007:**
+understand the large-positive-time hierarchy **without RH before bridging**.
+[HDA-A04-AN01 r1](../../ansatz/research-progress/handoffs/HDA-A04-AN01.md)
+is prepared for Analysis — Sol; the
+[new focused register](../../ansatz/research-progress/03_LARGE_POSITIVE_TIME_HIERARCHY_RESEARCH_PROGRESS_20261026.md)
+alone owns its execution. [Brainstorm03](../brainstorm/03_POSITIVE_TIME_HIERARCHIES_AND_BRIDGES_20261026.md)
+records the discussion and formal candidate. Prepared for Edward Baker
+with substantial LLM assistance, gpt-6-astra, actual effort max.
+
+[HDA-R05-AN08 r1](handoffs/HDA-R05-AN08.md) remains READY_FOR_SOL,
+unexecuted, for later bridge work at tau(L)=1/L<=T<=2 with unchanged
+p,K,V and target. [N02](handoffs/HDA-R05-N02.md) remains supporting
+with unchanged cases/caps. No new time extension or saddle remainder
+theorem follows from this priority update.
 
 ## Current disposition
 
-R01–R03, R05-AN01–AN05 and N01 are **CLOSED at their bounded scopes**.
-Notes02–06 and09–11 are proved in-note from named inputs, with same-model
-internal assessments by gpt-6.1-sol, ultra. Note12 supplies finite
-component replay. Broad **HDA-R05 remains Partial** because the complete
-canonical-field software and its certification remain open.
-
-The [manuscript](../manuscript/README.md) now integrates every analytical
-result through Note11, including the effective evaluation theorem,
-explicit calibration/onset and total bit-work/storage bounds. Note12's
-computations are supporting references only; detailed evidence stays in
-that note. [Note14](../notes/14_EFFECTIVE_MANUSCRIPT_INTEGRATION_20261026.md)
-and [Review11](../reviews/11_EFFECTIVE_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261026.md)
-record integration and checking. This preserves proof scope and adds no
-new mathematical result, independent validation or software certification.
+R01–R03, R05-AN01–AN07 and N01 are **CLOSED at their bounded scopes**.
+The analytical results are **proved in-note from named inputs**, with
+same-model internal assessments. Broad **R05 remains Partial** at the
+complete canonical-field evaluator software/certification. The manuscript
+integrates Note18's closed coefficient/contour gain; its
+[current build record](../manuscript/BUILD_RECORD_AN07_20261026.json)
+owns production evidence. Component replay remains supporting evidence.
 
 | ID | Research status | Execution / owner | Evidence or next gate |
 | --- | --- | --- | --- |
-| HDA-R01 | Complete at finite p=2 scope | CLOSED — Analysis, Sol; [AN01][packet1] | Note02/Review01, X^-11/4, full (3,1), K=4. |
-| HDA-R02 | Complete at fixed-order scope | CLOSED — Analysis, Sol; [AN01][packet2] | Note03/Review02, K=2p and X^-(p+3/4). |
-| HDA-R03 | Complete at fixed compact-family scope | CLOSED — Analysis, Sol; [AN01][packet3] | Note04/Review03, explicit endpoint costs; no joint-limit theorem. |
-| HDA-R04 | Open exploratory question | NOT_STARTED | Continuous-s uniform remainder/reconstruction, after a quantitative goal is specified. |
-| HDA-R05 | Partial: effective analytical construction established; complete software/certification open | AN01–AN05 and N01 CLOSED; **AN06 r1 READY_FOR_SOL — Analysis** | [AN06](handoffs/HDA-R05-AN06.md) is the primary next proof task. [N02](handoffs/HDA-R05-N02.md) remains ready, supporting and bounded. |
-| HDA-R06 | Exploratory analogies | NOT_STARTED | A concrete transform or moment closure needs a quantified gain in the canonical norm. |
+| HDA-R01 | Complete at finite p=2 scope | CLOSED — Analysis, Sol | Note02/Review01, K=4 and X^-11/4. |
+| HDA-R02 | Complete at fixed-order scope | CLOSED — Analysis, Sol | Note03/Review02, K=2p and X^-(p+3/4). |
+| HDA-R03 | Complete at fixed compact-family scope | CLOSED — Analysis, Sol | Note04/Review03, explicit endpoint costs. |
+| HDA-R04 | Open exploratory question | NOT_STARTED | Quantitative continuous-s remainder/reconstruction. |
+| HDA-R05 | Partial: effective analytical construction established; full software/certification open | AN01–AN07 and N01 CLOSED; **AN08 r1 READY_FOR_SOL — Analysis** | Note18/Review13 close uniform RS-bound strengthening; AN08 asks for tau=1/L, now later than the author-prioritized large-t work in ansatz A04. N02 stays supporting. |
+| HDA-R06 | Exploratory analogies | NOT_STARTED | A quantified canonical-norm gain is required. |
 
 ## Ordered next work
 
-1. **AN06 r1 — sharpen the sufficient height analytically.** Freeze
-   p=floor(L/2), K=2p, V=8sqrt(2)L, [1,2], all modes, buffers and the
-   total exp(-L²/4) target. Identify the dominant coarse envelopes, prove
-   replacements and a smaller explicit all-height threshold. Cover every
-   order jump and preserve the half-target truncation reservation. Phase
-   stays READY_FOR_SOL until the request is explicitly resumed.
-2. **Improve the RS coefficient/integral bounds.** A local analytic
-   pole factorization or better complex majorant must supply all growing
-   jets and C_k errors and demonstrate a quantitative bound/cost gain.
-   Existing N02 can supply bounded supporting implementation/replay under
-   its unchanged request and caps; it is not a gate for AN06.
-3. **Prove a specified joint time/height/order regime.** Begin with a
-   moving lower endpoint and fixed upper endpoint, paying complex buffers,
-   inverse-time derivative factors, moments and tails together. No
-   uniform extension follows merely from the fixed-family result.
-4. **Quantitative compression/continuous deformation, then a defined
-   physical consumer.** Require a reconstruction or consumer estimate
-   in the actual field/derivative norm before choosing numerical checks.
-   R04/R06 and parent statuses remain unchanged.
+1. **Large-positive-time hierarchy without RH.** Execute the bounded
+   [A04-AN01 r1](../../ansatz/research-progress/handoffs/HDA-A04-AN01.md)
+   under its sole ansatz register; no duplicate recurrence task is created.
+   Understand the positive regime before bridging.
+2. **AN08 r1 — later specified moving lower endpoint.** Pay kernel buffers,
+   inverse-time spatial/time factors, moments and every source/tail
+   simultaneously on 1/L<=T<=2. Require a sufficient all-height onset
+   or an exact scoped unresolved inequality. Prepared, not executed.
+3. **Further coefficient/integral gains.** AN07's requested comparison
+   is closed. Order dependence, local delivery or a tighter full integral
+   allowance would require another quantitative comparison.
+4. **Onset/parameter refinement.** Smaller sufficient constants or
+   changed windows/orders need another simultaneous audit; 64nu is not
+   asserted optimal.
+5. **Compression/deformation and a defined physical consumer.** Require
+   actual reconstruction/error norms before computation.
 
-Numerical checks are supporting evidence for a stated analytic question.
-A finite pass, resource measurement or fitted law cannot replace a
-uniform estimate. No full-field campaign or sweep toward the enormous
-onset is prepared here. Independent specialist validation and checking
-the primary source proofs remain standing review needs.
-
-HDA-A02 Partial, HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled are
-unchanged. Earlier complete tasks are not reopened; the new agenda
-changes continuation priority, not their mathematical status.
+Independent specialist validation and primary coefficient-proof checking
+remain open. No field/zero sweep or huge-height run is prepared.
+R04/R06 NOT_STARTED, HDA-A02 Partial, HDA-17 Partial, HDA-18 Gated
+and HDA-20 unfulfilled remain. Earlier next-item recommendations below
+are historical; the current priority above routes first to ansatz A04-AN01. AN08 retains its frozen later request.
 
 ## Evidence retained at opening
 
@@ -99,12 +105,14 @@ packet return/disposition, and then update this register. Preserve failed
 estimates with their scope. A completed bounded audit may leave its
 parent research question Partial or Open.
 
-The author may carry [the current continuation][continuation] to the next
-session. Model selection and chat handoffs remain manual under the
+The author may carry [A04-AN01 r1](../../ansatz/research-progress/handoffs/HDA-A04-AN01.md)
+to the next session; [Continuation19][continuation] remains the later
+negative-endpoint continuation. Model selection and chat handoffs remain manual under the
 repository workflow; this preparation dispatches no agent or chat.
 The opening chat remains in ansatz, recurrence chat0001 owns the original
 analysis, recurrence chat0002 owns the first synthesis, and recurrence
-chat0005 owns the effective-manuscript integration and current continuation.
+chat0005 owns the effective-manuscript integration; chat0006 owns AN06/AN07
+and the current continuation.
 Preserve each registration and use the authorized capture tool at its
 actual home. Future numerical or symbolic work belongs to Sol.
 
@@ -112,7 +120,7 @@ actual home. Future numerical or symbolic work belongs to Sol.
 
 The following dated entries preserve earlier requests and returns.
 Their next-item recommendations are historical; the current table and
-AN06 r1 above govern continuation; historical next-item recommendations do not.
+current priority above govern continuation; historical next-item recommendations do not.
 
 ### Planning disposition — 26 October 2026
 
@@ -130,7 +138,7 @@ dependencies are established. Read the [result index][results],
 premises and the limits of the proposed estimates.
 
 [overview]: ../research-overview/01_RECURRENCE_RESEARCH_OVERVIEW_20261026.md
-[continuation]: ../notes/15_ANALYTIC_STRENGTHENING_CONTINUATION_20261026.md
+[continuation]: ../notes/19_ANALYTICAL_CONTINUATION_AFTER_RS_BOUNDS_20261026.md
 [openingcontinuation]: ../notes/01_ANALYSIS_CONTINUATION_20261026.md
 [packet5next]: handoffs/HDA-R05-AN06.md
 [packet1]: handoffs/HDA-R01-AN01.md
@@ -418,3 +426,77 @@ The existing N02 r1 remains ready as supporting provider work, with no
 change to its frozen request/caps. [Continuation Note15](../notes/15_ANALYTIC_STRENGTHENING_CONTINUATION_20261026.md)
 replaces older continuation routing. Current chat0005 registration and
 history integrity are recorded there; no chat is moved or renumbered.
+
+### R05-AN06 execution opened — 26 October 2026
+
+Actual **gpt-6.1-sol (Codex), ultra**, recurrence chat0006, thread
+`01a178a3-9572-7bf2-b0a0-bd4d47f796ab`. The author resumes AN06 r1
+from Note15. [Input versions](../notes/16_SHARPER_ONSET_INPUTS_20261026.json)
+are pinned before installation of new research results. Scope is analytical
+sharpening of the sufficient all-height onset at unchanged accuracy,
+full channels, frozen p,K,V and time interval. Two read-only subagent
+audits examine the additive factorial ledger and structural gates; they
+share model/premises and are internal checks, not independent validation.
+No numerical campaign or new provider replay is authorized or executed.
+Broad R05 remains Partial.
+
+### R05-AN06 execution disposition — 26 October 2026
+
+Actual **gpt-6.1-sol, ultra**, recurrence chat0006. Saved
+[Note16](../notes/16_SHARPER_ALL_HEIGHT_ONSET_20261026.md),
+[Review12](../reviews/12_SHARPER_ONSET_ASSESSMENT_20261026.md),
+[input/work provenance](../notes/16_SHARPER_ONSET_WORK_RECORD_20261026.json)
+and [AN06 return/disposition](handoffs/HDA-R05-AN06.md). L_new=64nu
+strictly improves 2^22nu^4 while preserving the complete canonical
+construction and error contracts through every p,N jump. The manuscript
+integrates the closed result and retains the old onset as fallback.
+No research numerical campaign or provider/field evaluation was run.
+Three same-model read-only checks supply internal assessment only.
+AN06 CLOSED, bounded task Complete; broad R05 Partial. Parent statuses
+unchanged. Next [AN07 r1](handoffs/HDA-R05-AN07.md), READY_FOR_SOL,
+Analysis, not executed. [Note17][continuation] supersedes Note15's
+next-task routing, not its historical provenance or completed results.
+
+### R05-AN07 execution opened — 26 October 2026
+
+Actual **gpt-6.1-sol, ultra**, same recurrence chat0006; author resumes
+AN07 r1. [Input record](../notes/18_UNIFORM_RS_BOUND_INPUTS_20261026.json)
+pins exact versions and the family before result installation. Analytical
+targets are a strict common F_0/jet/C_k majorant gain and an improved
+enlarged-contour bound at identical delivered accuracy. No numerical or
+machine-symbolic research check is planned. Broad R05 stays Partial.
+
+### R05-AN07 execution disposition — 26 October 2026
+
+Actual **gpt-6.1-sol, ultra**, same chat0006. Saved Note18/Review13,
+[input/work record](../notes/18_UNIFORM_RS_BOUND_WORK_RECORD_20261026.json)
+and AN07 return/disposition. Same-domain coefficient/jet bounds improve
+by csch(pi)<1/10, full contour bound by 16, and an old certified rule
+can use 11 fewer nodes on each edge at identical accuracy. All contracts
+and retained canonical data remain. The manuscript integrates the closed
+result; three read-only checks are same-model internal only. No numerical
+research run, field evaluation or provider replay. AN07 Complete/CLOSED;
+broad R05 Partial, parent statuses unchanged. [AN08 r1](handoffs/HDA-R05-AN08.md)
+is prepared READY_FOR_SOL, not executed. [Continuation19][continuation]
+supersedes Note17's next-task routing; original provenance remains.
+
+## Discussion and priority update — 26 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6-astra, actual
+effort max**, recurrence chat0007. [Brainstorm03](../brainstorm/03_POSITIVE_TIME_HIERARCHIES_AND_BRIDGES_20261026.md)
+records the proposed positive saddle hierarchy, confirmed regulator
+transition64, and the author's order: large positive time first, with no
+RH assumption; bridges later. The bounded A04-AN01 request lives in ansatz
+under its existing parent and sole register. No new recurrence execution,
+uniform remainder, numerical result, manuscript edit or status upgrade.
+The registered history remains recurrence chat0007.
+
+## Dedicated positive-time program home — 26 October 2026
+
+The author requested [Overview03](../../ansatz/research-overview/03_LARGE_POSITIVE_TIME_HIERARCHY_RESEARCH_OVERVIEW_20261026.md)
+and [Progress03](../../ansatz/research-progress/03_LARGE_POSITIVE_TIME_HIERARCHY_RESEARCH_PROGRESS_20261026.md).
+They cover the unconditional large-t hierarchy first and later bridges
+through64, intermediate positive time and zero to this negative hierarchy.
+Progress03 alone owns A04 execution; this register retains the recurrence
+tasks and historical evidence. The discussion/history remain recurrence
+chat0007. For Edward Baker, gpt-6-astra, actual effort max; no new result.

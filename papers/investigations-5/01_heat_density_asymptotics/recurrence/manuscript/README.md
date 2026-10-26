@@ -1,17 +1,18 @@
 # Finite Fluctuation Hierarchies for the Negative-Time Riemann Heat Flow
 
 26 October 2026. Analytical working manuscript for **Edward Baker**,
-with substantial LLM assistance, **gpt-6-astra, recorded effort max**,
-recurrence chat0005. Source analytical notes: **gpt-6.1-sol, ultra**.
+with substantial LLM assistance. Original integration: **gpt-6-astra, max**,
+chat0005. Linear-onset strengthening/integration: **gpt-6.1-sol, actual
+effort ultra**, chat0006. Source notes retain their original attribution.
 
 - [Editable main document](main.tex)
 - [Local reading PDF](../../../../../output/pdf/heat-density-recurrence/heat-density-recurrence.pdf)
 - [Current integration note and source correspondence](../notes/14_EFFECTIVE_MANUSCRIPT_INTEGRATION_20261026.md)
-- [Same-session authoring assessment](../reviews/11_EFFECTIVE_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261026.md)
-- [Current build record](BUILD_RECORD_20261026.json)
-- [Next analytical continuation](../notes/15_ANALYTIC_STRENGTHENING_CONTINUATION_20261026.md)
+- [Same-session authoring assessment](../reviews/13_UNIFORM_RS_BOUND_ASSESSMENT_20261026.md)
+- [Current build record](BUILD_RECORD_AN07_20261026.json)
+- [Next analytical continuation](../notes/19_ANALYTICAL_CONTINUATION_AFTER_RS_BOUNDS_20261026.md)
 
-The 42-page manuscript joins the canonical heat representation and finite
+The 46-page manuscript joins the canonical heat representation and finite
 fluctuation recurrence to an effective evaluation theorem. Sections 1–5
 develop the approximation choices, fixed-order and compact-time estimates,
 and controlled order growth. Sections 6–7 establish coefficient regularity
@@ -21,7 +22,10 @@ bit-work and streamed-space bounds. Section 11 orders the further
 analytical questions. Appendices retain the finite error gates, population
 bounds, source correspondence, elementary enclosures and Gauss conditioning.
 
-The analytical results of Notes09–11 are now integrated. Note12's finite
+The analytical results of Notes09–11,16 and 18 are now integrated. The
+new linear-onset theorem proves L>=64nu, nu=ceil(r+b+2)+1, improving
+the retained 2^22nu^4 fallback by 2^16nu³ without changing accuracy,
+inputs or any retained component. Note12's finite
 component implementation and replay are cited only as supporting evidence,
 with clickable links to the notes for the cases, measurements and limits.
 Neither numerical samples nor compilation supply a premise of the theorems.
@@ -57,3 +61,11 @@ and [Review06](../reviews/06_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261026.md).
 The current [input manifest](../notes/14_MANUSCRIPT_INPUTS_20261026.json)
 identifies the preceding source and build record. Earlier statements that
 Notes09–11 awaited integration describe the historical stages.
+
+The integrated Note18 theorem improves B_F and every D_k by csch(pi)<1/10
+on identical domains. A separate enlarged-contour proof gives B_c/16 and
+permits eleven fewer nodes per edge at identical jet tolerance. The
+finite delivery section retains all node/weight, pi, rounding and transfer
+terms. Old bounds and provider remain fallbacks; these are analytical
+allowance/count improvements, not a measured whole-evaluator speedup.
+Uniform-bound integration: gpt-6.1-sol, actual effort ultra, chat0006.

@@ -322,3 +322,16 @@ execution or parent upgrade. All Notes58--61 research stays in this same
 unique registration, number, title, filename and original provenance.
 Only the authorized tool refreshes the transcript/registry; the bounded
 exact-turn follow-up captures the real final response after completion.
+
+## Chat0023 — manuscript placement review, 26 October 2026
+
+[Review heat density manuscripts](0023_2026-10-26T17-51-52Z_review-heat-density-manuscripts.json),
+thread `01a17957-144d-71f3-9efc-069a2698f4ec`, is uniquely registered in
+this base investigation because it compares both branches and the parent.
+For Edward Baker with substantial LLM assistance, **gpt-6-astra, actual
+effort max**. [Review41](../reviews/41_MANUSCRIPT_PLACEMENT_AND_CONSOLIDATION_REVIEW_20261026.md)
+and proposed [HDA-10-MI3 r1](../research-progress/handoffs/HDA-10-MI3.md)
+record the assessment and next production deliverable. No mathematical
+status or manuscript proof is changed. The shared refresh tool owns the
+archive/registry; the bounded exact-turn follow-up captures the actual
+completed final reply. Other conversations retain their existing homes.

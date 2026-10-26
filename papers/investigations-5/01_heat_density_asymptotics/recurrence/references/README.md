@@ -98,3 +98,19 @@ half-gamma modulus and the N=1 finite-sum zeta representation. The shared
 gamma and local special-value records remain canonical; new beta/zeta
 entries are in the local bibliography. Explicit uniform constants and
 all-height arguments are derived in Note11, not imported library claims.
+
+## Positive-time hierarchy discussion — 26 October 2026
+
+For Edward Baker, substantial LLM assistance, **gpt-6-astra, actual effort
+max**, recurrence chat0007. For [Brainstorm03](../brainstorm/03_POSITIVE_TIME_HIERARCHIES_AND_BRIDGES_20261026.md),
+rechecked [Polymath v2 Section4](https://arxiv.org/html/1904.12438v2#S4),
+equation35 and the adjacent36--41 source/contour conditions. This is the
+exact positive-time identity; the paper's restricted approximation theorems
+are not extended by it. Existing canonical records/reading copies remain
+in the ansatz/parent catalogs; no new PDF copy or full-paper reading.
+Checked [DLMF2.4(iv)](https://dlmf.nist.gov/2.4#iv), simple-saddle premises
+and2.4.15--16, including the route to higher coefficients. The
+[parent DLMF record](../../references/PHASE_TRANSITION_METHODS_20261024.md)
+and [bibliography](../../references/references.bib) now retain this added
+reading scope. General saddle asymptotics do not supply the proposed
+uniform canonical remainder without its own contour and parameter proof.

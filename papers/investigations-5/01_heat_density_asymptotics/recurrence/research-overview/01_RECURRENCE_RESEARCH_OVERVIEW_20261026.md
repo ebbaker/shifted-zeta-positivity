@@ -1,9 +1,10 @@
 # Research overview: recurrence and fluctuation hierarchies
 
 26 October 2026, America/New_York. Prepared for **Edward Baker** with
-substantial LLM assistance, **gpt-6-astra (Codex), recorded effort max**.
-Current synthesis and priority refresh: recurrence **chat0005**, thread
-`01a1785a-2938-7de0-adc4-3b60db706199`. The source analytical returns in
+substantial LLM assistance, **gpt-6.1-sol (Codex), actual effort ultra**.
+Current analytical return and priority refresh: recurrence **chat0006**, thread
+`01a178a3-9572-7bf2-b0a0-bd4d47f796ab`. Earlier manuscript integration
+retains its gpt-6-astra, max attribution. The source analytical returns in
 Notes02–06 and09–11 and supporting Note12 were developed with
 **gpt-6.1-sol, ultra**; their original provenance is retained.
 
@@ -12,20 +13,38 @@ Notes02–06 and09–11 and supporting Note12 were developed with
 The [maintained manuscript](../manuscript/main.tex) now joins the fixed-order
 hierarchy, controlled order growth, modular evaluation budget, finite
 provider algorithms, explicit calibration, all-height onset, and total
-bit-work/storage bounds. [Integration Note14](../notes/14_EFFECTIVE_MANUSCRIPT_INTEGRATION_20261026.md)
+bit-work/storage bounds. [Note16](../notes/16_SHARPER_ALL_HEIGHT_ONSET_20261026.md)
+now sharpens the sufficient log-height to 64nu, with every gate proved;
+[Review12](../reviews/12_SHARPER_ONSET_ASSESSMENT_20261026.md) supplies
+same-model internal assessment and the manuscript integrates the result. [Integration Note14](../notes/14_EFFECTIVE_MANUSCRIPT_INTEGRATION_20261026.md)
 records source correspondence and checks. The complete canonical field
 evaluator remains unimplemented/uncertified. Broad **HDA-R05 stays Partial**.
 The [sole progress register](../research-progress/01_RECURRENCE_RESEARCH_PROGRESS_20261026.md)
-owns execution status; the [continuation](../notes/15_ANALYTIC_STRENGTHENING_CONTINUATION_20261026.md)
-owns the next-session handoff.
+owns execution status; the [continuation](../notes/19_ANALYTICAL_CONTINUATION_AFTER_RS_BOUNDS_20261026.md)
+retains the negative-endpoint handoff; the newer positive-time priority is below.
 
-The immediate primary task is **Analysis — Sol,
-[HDA-R05-AN06 r1](../research-progress/handoffs/HDA-R05-AN06.md), READY_FOR_SOL,
-not executed**: sharpen the sufficient all-height onset at unchanged
-accuracy and frozen choices. The existing [N02 provider packet](../research-progress/handoffs/HDA-R05-N02.md)
-remains ready as a supporting component task, with its original finite
-cases/caps. It is not a prerequisite for the onset proof and is no longer
-the primary research recommendation. No task is dispatched by this update.
+AN06 and AN07 are Complete/CLOSED at their bounded analytical scopes.
+[Note18](../notes/18_UNIFORM_RS_BOUND_STRENGTHENING_20261026.md)/
+[Review13](../reviews/13_UNIFORM_RS_BOUND_ASSESSMENT_20261026.md) add a
+strict uniform csch(pi)<1/10 coefficient/jet majorant gain and a
+separate 16-fold contour bound. The same delivery can use 11 fewer nodes
+per edge, with every input/rounding, transfer and complete-data contract
+retained. No total-runtime or outer-node saving is asserted.
+
+**Updated priority, 26 October 2026, recurrence chat0007:** the author
+requests understanding the large-positive-time hierarchy **without RH
+before bridging**. [Brainstorm03](../brainstorm/03_POSITIVE_TIME_HIERARCHIES_AND_BRIDGES_20261026.md)
+records the leading full saddle and formal corrections.
+[A04-AN01 r1](../../ansatz/research-progress/handoffs/HDA-A04-AN01.md),
+Analysis — Sol, is the next bounded request; its sole execution register
+is ansatz. Prepared only, not dispatched. This update is for Edward Baker
+with substantial LLM assistance, gpt-6-astra, actual effort max.
+
+[AN08 r1](../research-progress/handoffs/HDA-R05-AN08.md) remains
+READY_FOR_SOL and unexecuted for later negative-endpoint bridge work,
+with unchanged target and p,K,V. N02 remains supporting with unchanged
+cases/caps. The priority change establishes no new time extension,
+saddle remainder or software result.
 
 ## Established analytical results
 
@@ -42,6 +61,8 @@ source-formula checks do not supply independent specialist validation.
 | Finite provider constructions | Rational elementary tails, normalized gamma data/scale, Gauss and pole-safe RS coefficients, exact interior guards. | [Note09](../notes/09_FINITE_PROVIDER_ALGORITHMS_20261026.md); dyadic centers with strict descriptor witnesses, exact rational queries; separation remains. |
 | Polynomial providers and full cost | Shifted Stirling jets and exact Legendre variation counts; effective C(N+1)Q^40 work and CQ^20 streamed space. | [Note10](../notes/10_EFFICIENT_PROVIDERS_AND_TOTAL_COST_20261026.md); all N~sqrt(X) modes remain, bounds are loose. |
 | Explicit uniform calibration and onset | H=A=C_Gamma=c_o=1,D=4,D0=3,g_-=1/64,C_tail=640,M_H^*=1/4,C_chi=3^d,C_cal=32+d. L_*=2^22(d+1)^4, d=ceil(r+b+2). | [Note11](../notes/11_EXPLICIT_CALIBRATION_AND_HEIGHT_ONSET_20261026.md); X_*=2^(2L_*+8) is a stronger sufficient condition; no practical-height claim. |
+| Linear sufficient onset | L_new=64nu, X_new=2^(128nu+8); exact log-height improvement2^16nu³>=2^22 over the retained 2^22nu^4 fallback. | [Note16](../notes/16_SHARPER_ALL_HEIGHT_ONSET_20261026.md)/[Review12](../reviews/12_SHARPER_ONSET_ASSESSMENT_20261026.md); all original accuracy, buffers, inputs, modes and gates preserved continuously. |
+| Uniform RS-bound strengthening | B_F and every D_k scale by csch(pi)<1/10 on unchanged domains; B_c/16 on full expanded contour rectangle permits11 fewer nodes per edge at identical tolerance. | [Note18](../notes/18_UNIFORM_RS_BOUND_STRENGTHENING_20261026.md)/[Review13](../reviews/13_UNIFORM_RS_BOUND_ASSESSMENT_20261026.md); +1, transfer, all data errors and fallback retained; no total-runtime claim. |
 | Effective composition | Those finite algorithms and constants close the modular contracts on the accepted input class. Sufficient delivered precision is 3L²/(8log2)+O_(r,b)(L log L). | Manuscript effective evaluation and bit-cost theorems; input length, provider-internal work and center separation are counted separately. |
 
 Supporting finite gamma/Gauss implementation and replay are recorded in
@@ -74,13 +95,18 @@ status; the recurrence theorem establishes the fluctuation grading.
 
 ## Ordered analytical agenda
 
+The author-prioritized first task is now the unconditional large-positive-time
+[A04-AN01 r1](../../ansatz/research-progress/handoffs/HDA-A04-AN01.md).
+The table below retains the recurrence branch agenda for subsequent work;
+its moving-endpoint step no longer precedes understanding large positive time.
+
 | Priority | Proof deliverable and measurable gain | Supporting checks and boundary |
 | --- | --- | --- |
-| 1. Sharper sufficient onset | [AN06 r1](../research-progress/handoffs/HDA-R05-AN06.md): replace the largest coarse moment/factorial/logarithmic envelopes, derive an explicit smaller all-height threshold with the same p,K,V, target, buffers and channels. Prove coverage through every floor jump. | Optional finite interval evaluation can check derived inequalities or identify their dominant term. A passed height or fitted law does not close the task. |
-| 2. Better coefficient/integral bounds | Prove uniform local pole cancellation, normalized-jet tails and C_k propagation, or sharpen ellipse/contour majorants. Require a strict finite bound or cost improvement over the current construction at identical accuracy. | N02's bounded replay can test a proved method. Preserve its cap and report a stopped method; no forced large contour run. |
-| 3. Joint time/order/height | Declare a specific tau(X),B(X),p(X). Start with a lower endpoint tending toward zero and fixed upper endpoint; pay exp(Y²/(4tau)), inverse-time channels and every tail simultaneously. | Numerical time samples cannot establish uniformity. The compact-family theorem and sibling through-zero/positive-time results retain their own scopes. |
-| 4. Arithmetic compression or continuous deformation | Prove reconstruction in the same field/derivative norm and quantify a reduction of the N-mode cost, or a uniform continuous-s remainder. | R04/R06 NOT_STARTED; exact identities, small model examples and moment closure analogies alone are insufficient. |
-| 5. A specified physical consumer | Derive an explicit observable/covariance/joining-defect bound, including regulator dependence, from the required channels. | Parent ownership unchanged. Select checks only after the analytic consumer and its error budget are specified. |
+| Completed onset comparison | AN06 proves L_new=64nu by keeping chart costs additive, with all four half-target rates and structural/calibration gates. Further parameter optimization is a separate question. | No research numerical check was required or run; old onset remains a fallback. |
+| Completed coefficient/contour comparison | AN07 closes uniform bounds and the certified11-node-per-edge gain. Further order/local/full-integral improvements remain separate. | No numerical check or replay; original provider remains a fallback. |
+| 1. Joint time/order/height | [AN08 r1](../research-progress/handoffs/HDA-R05-AN08.md), READY_FOR_SOL: tau(L)=1/L, upper endpoint2, fixed p,K,V and error target. Pay every inverse-time/buffer/moment/source/tail factor with a sufficient all-height onset. | Fixed-tau theorems and time samples do not establish the new quantifiers; T=0 is excluded. |
+| 2. Arithmetic compression or continuous deformation | Prove reconstruction in the same field/derivative norm and quantify a reduction of the N-mode cost, or a uniform continuous-s remainder. | R04/R06 NOT_STARTED; exact identities, small model examples and moment closure analogies alone are insufficient. |
+| 3. A specified physical consumer | Derive an explicit observable/covariance/joining-defect bound, including regulator dependence, from the required channels. | Parent ownership unchanged. Select checks only after the analytic consumer and its error budget are specified. |
 
 Independent specialist review and checking the primary coefficient proofs
 remain standing needs throughout. The declared source identities and
@@ -114,3 +140,13 @@ HDA-A02 Partial, HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled remain
 unchanged. Detailed earlier requests and dispositions remain in the sole
 progress register, source notes and their registered chats. This overview
 supersedes their earlier next-task recommendations, not their results.
+
+## Focused positive-time program — 26 October 2026
+
+The new [Overview03](../../ansatz/research-overview/03_LARGE_POSITIVE_TIME_HIERARCHY_RESEARCH_OVERVIEW_20261026.md)
+and [Progress03](../../ansatz/research-progress/03_LARGE_POSITIVE_TIME_HIERARCHY_RESEARCH_PROGRESS_20261026.md)
+record the author's whole program: understand the unconditional large-t
+hierarchy, then bridge64, intermediate positive times and zero to the
+negative hierarchy. They own A04 planning/execution; this overview retains
+the negative recurrence results and later dependencies. Prepared for
+Edward Baker, gpt-6-astra, actual effort max, recurrence chat0007.

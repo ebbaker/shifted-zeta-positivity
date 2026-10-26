@@ -22,9 +22,16 @@ ansatz statuses and points to the recurrence register for execution.
 
 - [Maintained manuscript](manuscript/main.tex) and [build guide](manuscript/README.md)
 - [Generated reading PDF](../../../../output/pdf/heat_density_ansatz/heat_density_ansatz.pdf)
-- [Current research overview: Overview02](research-overview/02_EVOLUTION_ASYMPTOTICS_RESEARCH_OVERVIEW_20261025.md)
-- [Sole live progress register: Progress02](research-progress/02_EVOLUTION_ASYMPTOTICS_RESEARCH_PROGRESS_20261025.md)
-- [Active prepared hierarchy comparison: HDA-R01-AN01 r1](../recurrence/research-progress/handoffs/HDA-R01-AN01.md)
+- [Focused unconditional large-t program: Overview03](research-overview/03_LARGE_POSITIVE_TIME_HIERARCHY_RESEARCH_OVERVIEW_20261026.md)
+- [Focused program and A04 live register: Progress03](research-progress/03_LARGE_POSITIVE_TIME_HIERARCHY_RESEARCH_PROGRESS_20261026.md)
+- [Executed first large-t correction: A04-AN01 r1](research-progress/handoffs/HDA-A04-AN01.md)
+- [Executed second fixed large-t correction: A04-AN02 r1](research-progress/handoffs/HDA-A04-AN02.md)
+- [Arbitrary fixed-order theorem: Note19](notes/19_ARBITRARY_FIXED_POSITIVE_TIME_ORDER_20261026.md)
+- [First regional field bridge: Note20](notes/20_COMPACT_POSITIVE_FIELD_BRIDGE_20261026.md)
+- [Whole-chat next handoff: Summary21](notes/21_CHAT0005_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md)
+- [Umbrella research overview: Overview02](research-overview/02_EVOLUTION_ASYMPTOTICS_RESEARCH_OVERVIEW_20261025.md)
+- [Umbrella progress record: Progress02](research-progress/02_EVOLUTION_ASYMPTOTICS_RESEARCH_PROGRESS_20261025.md)
+- [Historical first recurrence comparison: HDA-R01-AN01 r1](../recurrence/research-progress/handoffs/HDA-R01-AN01.md)
 - [Prepared positive-time comparison: HDA-A08-AN01 r1](research-progress/handoffs/HDA-A08-AN01.md)
 - [This chat's complete research summary: Note14](notes/14_CHAT0003_RESEARCH_SUMMARY_20261025.md)
 - [AN06 compact-family integration: Note13](notes/13_AN06_MANUSCRIPT_INTEGRATION_20261025.md)
@@ -84,5 +91,44 @@ on [1/2,1]. Current planning is in Progress02 and the recurrence guide.
 
 The PDF is a generated local reading copy in the ignored output tree;
 rebuild it in a fresh checkout. Parent chat0022 retains its original
-registration. Ansatz chats0001--0004 have their unique histories here;
+registration. Ansatz chats0001--0005 have their unique histories here;
 no historical chat is relocated, duplicated or renumbered.
+
+26 October 2026, recurrence chat0007, **gpt-6-astra, actual effort max**:
+the author requested a new program overview/progress pair. Overview03
+and Progress03 now organize large positive time **without RH first**,
+then bridges through64, intermediate positive times and zero to the
+negative hierarchy. The original A04-AN01 preparation is superseded by the execution update below. Progress02 remains the umbrella for other queues. The original
+discussion/history stay in recurrence, with no registration move.
+
+
+26 October 2026 execution, **gpt-6.1-sol, recorded effort ultra**, ansatz
+chat0005: [Note17](notes/17_FIRST_CORRECTED_LARGE_POSITIVE_TIME_20261026.md)
+proves the first corrected full gamma saddle with complete eventual
+all-height envelope error O(t^-2 log^-5 t), spatial0–3 and direct first-time
+bounds, plus its exact nonzero residual. [Assessment12](reviews/12_FIRST_CORRECTED_LARGE_POSITIVE_TIME_ASSESSMENT_20261026.md)
+is same-model only; onset is symbolic. AN01 r1 CLOSED, HDA-A04 Partial;
+Overview03/Progress03 own this result and the later fixed-order/bridge
+sequence. No RH premise, bridge execution or manuscript revision.
+
+
+Same chat0005 continuation, 26 October2026, **gpt-6.1-sol, recorded effort
+ultra**: [Note18](notes/18_SECOND_CORRECTED_LARGE_POSITIVE_TIME_20261026.md)
+and [Assessment13](reviews/13_SECOND_CORRECTED_LARGE_POSITIVE_TIME_ASSESSMENT_20261026.md)
+close AN02 r1, one second fixed correction C4. Complete uniform envelope
+field error improves to O(t^-3 log^-7 t), with spatial0–3, direct time,
+finite constants and exact nonzero residual paid. Onset is symbolic and
+assessment same-model. LT-03/HDA-A04 remain Partial pending a general
+fixed-order theorem; regional bridges and growing-order work stay deferred.
+
+
+Latest same-chat continuation, 26 October2026, **gpt-6.1-sol, ultra**:
+AN03 establishes arbitrary fixed order with complete bJ budgets, buffered
+jets/time and exact finite residual recurrence; LT-03 Complete at that
+scope. AN04 gives compact-positive high-height field overlap and P4 X^-7
+accuracy on[63,65], rechecks F1 on fixed[32,T] and pays its time-splice
+and finite-endpoint terms. Assessments14–15 are same-model only; onsets
+remain symbolic. LT-05/broad A04 Partial; compact core and new physical
+consumers remain open. Next Analysis — Sol: existing A03-AN01 r1,
+now ready in Progress02, using Summary21. No growing-order, through-zero,
+physical-tuple or manuscript execution was performed.

@@ -1,0 +1,123 @@
+\section{One field, three approximation mechanisms}
+\label{sec:canonical}
+
+\subsection{The canonical object}
+For $u\ge0$ set
+\begin{equation}
+ \Phi(u)=\sum_{n\ge1}
+ (2\pi^2n^4e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2e^{4u}},
+ \qquad H(t,z)=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\dd u.
+ \label{eq:source}
+\end{equation}
+The source has a smooth even extension, is positive on the real axis,
+and decays faster than every Gaussian. Its full arithmetic series is
+part of the definition. Termwise differentiation on compact sets gives
+\begin{equation}
+ H_t=-H_{zz},\qquad
+ H(0,z)=\frac18\xi\left(\frac{1+\ii z}{2}\right),\qquad
+ \frac18\xi(w)=M(w)\zeta(w).
+ \label{eq:normalization}
+\end{equation}
+The gamma factor is
+\[
+ M(w)=\frac{w(w-1)}{16}\pi^{-w/2}\Gamma(w/2).
+ \]
+Thus $H$ is entire in $z$, real on the real axis, and even. We call
+$x=\Re z$ the height and $y=\Im z$ the transverse coordinate.
+Throughout, ``all heights'' means every real $x$ on a specified bounded
+transverse strip, not every complex $z$ with a strip-independent constant.
+
+Two exact evolution formulas explain the different useful approximations.
+For $T=-t>0$ and $s=(1+\ii z)/2$,
+\begin{align}
+ H(-T,z)&=\frac1{\sqrt{4\pi T}}
+   \int_\R e^{-(z-u)^2/(4T)}H(0,u)\dd u,\label{eq:negative-heat}\\
+ H(t,z)&=\frac1{\sqrt{\pi t}}
+   \int_\R e^{-v^2/t}\frac{\xi(s+v)}8\dd v\quad(t>0).
+ \label{eq:positive-heat}
+\end{align}
+The first evolves the initial field by forward heat flow in $T$.
+The second moves the gamma saddle into a right half-plane, where the
+ordinary Dirichlet series can be estimated in full. These identities
+use no hypothesis about zeros. The normalization and canonical contour
+input are recorded in the parent manuscript and its references
+\cite{parent,positive,poly}.
+
+\subsection{What is already global, and what remains regional}
+There are two distinct achievements. First, for every prescribed
+tolerance there is one finite construction approximating a specified
+regulated, averaged physical tuple at every real time and height
+(Theorem~\ref{thm:global}). Its constants are large but finite, its
+covariance is the actual covariance, and its joining errors are paid.
+Second, there are much sharper asymptotic formulas on particular regions.
+Table~\ref{tab:atlas} displays their leading field allowances. It is an
+atlas of proved domains, not a single theorem permitting free exchange
+of their quantifiers.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{p{.22\textwidth}p{.30\textwidth}p{.38\textwidth}}
+\toprule
+Region & Approximation & Allowance and scope\\
+\midrule
+$t=-T\to-\infty$ & Gaussian endpoint & Absolute $O(T^{-3/2})$ field error on $|y|\le A\sqrt T$, all $x$.\\
+$\tau\le T\le B$ & Completed negative hierarchy, order $p$ & $O(X^{-p-3/4})$ in the gamma norm; fixed $p,\tau,B$.\\
+$1\le T\le2$ & Order $\lfloor\tfrac12\log(X/(4\pi))\rfloor$ & $e^{-\log^2(X/(4\pi))/4}$ in the outer norm.\\
+$|t|\log(X/(4\pi))\le8$ & Completed crossover carrier & $X^{-3/4}e^{t_-\log^2(X/(4\pi))/16}$ in the outer envelope.\\
+$t\ge t_{*,J}$ & Positive saddle $P_{2J}$ & $t^{-J-1}\log^{-2J-3}(2+t)$, every height, each fixed $J$.\\
+Fixed $[a,T]\subset[32,\infty)$ & Positive saddle $P_{2J}$ & $X^{-2J-3}+X^{-t\log2/4}$; constants depend on $J,a,T$.\\
+Every $t,x$, $|y|\le1$ & Finite global assembly & Arbitrary prescribed absolute tolerance for the full physical tuple.\\
+\bottomrule
+\end{tabular}
+\caption{Principal established regimes. Spatial and time losses, residuals,
+buffers and effectivity qualifications are given in the corresponding sections.}
+\label{tab:atlas}
+\end{table}
+
+The global construction is therefore a foundation, not a reason to stop
+improving the atlas. The research aim is to replace costly intermediate
+pieces with transparent, refinable formulas and to transfer their sharper
+errors through the nonlinear physical observables without losing the gain.
+
+\subsection{A shared finite algebra}
+Both hierarchies start from a finite weighted expansion of an exponential.
+If $c_r$ are coefficients and $d$ is fixed, define
+\begin{equation}
+ A_\ell(q)=\sum_{\substack{\nu_1,\ldots,\nu_\ell\ge0\\
+                          \sum r\nu_r=\ell}}
+ q^{\ell+d|\nu|}\prod_{r=1}^{\ell}\frac{c_r^{\nu_r}}{\nu_r!},
+ \qquad A_0=1.
+ \label{eq:finite-partition}
+\end{equation}
+Finite coefficient extraction yields
+\begin{equation}
+ \ell A_\ell(q)=\sum_{r=1}^{\ell}r c_r q^{r+d}A_{\ell-r}(q).
+ \label{eq:shared-recurrence}
+\end{equation}
+For negative time $d=1$: the expansion retains curvature beyond a
+linear gamma carrier. For positive time $d=2$: the saddle and its
+quadratic Gaussian have already been removed, so odd grades integrate
+to zero. The algebra is common; the analytic remainder and its domain
+must be proved separately. A formal recurrence alone implies neither
+convergence nor a permissible order growing with a large parameter.
+
+\subsection{Conventions that preserve the meaning of an error}
+A chart centered at $X$ comes with a larger analytic rectangle.
+Spatial derivatives are estimated only after that larger rectangle is
+paid. The center $X$, arithmetic cutoff, hierarchy order and real
+integration endpoints are frozen under differentiation. A time or
+height dependent choice of order describes a family of formulas; it is
+not silently differentiated as one smooth formula.
+
+Field errors are divided by a positive sum of arm moduli, never by
+$H$ or by a signed approximation at its zeros. We keep four accounts:
+field and spatial jets; direct time error; the exact model residual;
+and evaluation error. Nonlinear physical transfer introduces a fifth
+account involving the prescribed regulator and averaging kernel.
+None of these accounts can replace another without an explicit identity.
+
+The results quoted here retain the status of their supporting notes.
+This manuscript reorganizes their proofs and principal formulas; it is
+not an independent specialist verification of every source constant.
+Appendix~\ref{sec:sources} specifies the proof dependencies and the
+division of work among the supporting manuscripts.

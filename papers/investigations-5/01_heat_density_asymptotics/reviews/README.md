@@ -275,3 +275,19 @@ absolute density scale, evolution residual and control scope.
   general scalar costs retained. Efficient gamma/profile providers and
   rational high-order filter; inverse-floor height constants remain. Full
   weak consumer and HDA-20 unpaid. No research computation.
+
+- [41 — Manuscript placement and consolidation](41_MANUSCRIPT_PLACEMENT_AND_CONSOLIDATION_REVIEW_20261026.md).
+  26 October 2026, gpt-6-astra, actual effort max, parent chat0023;
+  prepared for Edward Baker with substantial LLM assistance. Internal
+  editorial/theorem-contract review of the base, ansatz and recurrence
+  papers against current summaries. Recommends the base as main synthesis
+  and preserves specialist proof homes; identifies stale parent cost and
+  ansatz coverage claims. Source/PDF hashes match prior builds. Proposed
+  HDA-10-MI3 integration, no manuscript edit or full-chain validation.
+
+
+- [Book synthesis production review](42_BOOK_SYNTHESIS_PRODUCTION_REVIEW_20261026.md).
+  Current source integration, theorem-contract and PDF checks; same-assistant
+  production assessment, not the full-chain audit. Companion revisions
+  remain planned in HDA-B01-MI1. Prepared for Edward Baker with substantial
+  LLM assistance, gpt-6-astra, actual effort max, 26 October 2026.

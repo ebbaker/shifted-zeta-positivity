@@ -1,12 +1,48 @@
 # Progress register: averaged zero-density evolution
 
+## Current coordination 26 October 2026
+
+The author requested a new [Book manuscript](../book/README.md),
+[unified overview](../research-overview/02_BOOK_UNIFIED_HEAT_FLOW_RESEARCH_OVERVIEW_20261026.md)
+and [coordination register](02_BOOK_UNIFIED_HEAT_FLOW_RESEARCH_PROGRESS_20261026.md).
+This file retains the parent HDA scientific tasks and their live execution
+phases. The new register owns only Book production and cross-branch
+priorities. The old HDA-10-MI3 production proposal below is superseded,
+unexecuted; [HDA-B01-MI1](handoffs/HDA-B01-MI1.md) is the current Sol revision
+packet. Parent HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled remain.
+For Edward Baker with LLM assistance, **gpt-6-astra, actual effort max**.
+
 24 October 2026, America/New_York. Prepared for **Edward Baker** with
 substantial LLM assistance, **gpt-6-astra (Codex), recorded effort max**.
 
-This is the investigation's sole research task ledger. The
+This is the parent physical/constructive research task ledger. The
 [overview][overview] defines the objective and equation contracts.
 The target is the unnormalized average shape, with spatial averaging,
 time averaging, or both, and explicit fluctuation corrections.
+
+## Manuscript synthesis review — 26 October 2026, chat0023
+
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra (Codex), actual effort max**. The author requested a review
+of the base, ansatz and recurrence manuscripts and Ansatz Summary21.
+[Review41](../reviews/41_MANUSCRIPT_PLACEMENT_AND_CONSOLIDATION_REVIEW_20261026.md)
+recommends a current base synthesis with technical companions. Parent
+Notes58–61 and the new positive hierarchy/compact bridge are absent from
+the base production; the ansatz coverage table also predates recurrence's
+stronger results. The three source/PDF identities match their build records.
+No TeX proof or mathematical acceptance status changes in this review.
+
+| Production packet | Phase | Next owner and deliverable |
+| --- | --- | --- |
+| [HDA-10-MI3 r1](handoffs/HDA-10-MI3.md) | SUPERSEDED — unexecuted; see HDA-B01-MI1 | **Analysis — Sol**: integrate parent source/evaluation advances and a scoped two-branch theorem/domain map into the base paper; synchronize companion navigation and produce checked reading copies. |
+
+Earlier HDA-10 production milestones remain closed at their recorded
+scopes. This production recommendation does not reprioritize or duplicate
+the branch scientific packets: positive hierarchy Progress03 and umbrella
+Progress02 retain A03/A08, and recurrence retains R05-AN08. The parent's
+weak-filter height-cost task remains open. HDA-17 Partial, HDA-18 Gated
+and HDA-20 unfulfilled remain; this is not the full-chain audit. No task
+was dispatched, manuscript rebuilt, snapshot created or commit made.
 
 ## Ansatz branch manuscript and high-height priority — 25 October 2026
 

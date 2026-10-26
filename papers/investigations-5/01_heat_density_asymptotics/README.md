@@ -1,7 +1,40 @@
 # Heat-density asymptotics and averaged evolution
 
+## Current central manuscript and program 26 October 2026
+
+The author's new [Book manuscript](book/README.md) is the central synthesis.
+The existing parent, ansatz and recurrence papers are its technical
+companions. [Note63](notes/63_BOOK_SYNTHESIS_AND_COMPANION_REVISION_PLAN_20261026.md)
+and [HDA-B01-MI1 r1](research-progress/handoffs/HDA-B01-MI1.md) specify their
+next revisions for **Analysis — Sol**, unexecuted.
+
+Use the [unified overview](research-overview/02_BOOK_UNIFIED_HEAT_FLOW_RESEARCH_OVERVIEW_20261026.md),
+[coordination register](research-progress/02_BOOK_UNIFIED_HEAT_FLOW_RESEARCH_PROGRESS_20261026.md),
+[continuation](notes/64_BOOK_CONTINUATION_20261026.md) and
+[production review](reviews/42_BOOK_SYNTHESIS_PRODUCTION_REVIEW_20261026.md).
+Existing scientific registers retain their own task IDs and execution
+phases. The dated checkpoints below are historical; the earlier proposal
+to make the old parent paper the synthesis is superseded by this request.
+No open mathematical or audit gate is promoted by the new manuscript.
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra, actual recorded effort max**, base chat0023.
+
 24 October 2026, America/New_York. Prepared for **Edward Baker** with
 substantial LLM assistance, **gpt-6-astra (Codex), recorded effort max**.
+
+## Earlier placement recommendation 26 October 2026
+
+[Review41](reviews/41_MANUSCRIPT_PLACEMENT_AND_CONSOLIDATION_REVIEW_20261026.md)
+recommended updating the base manuscript as the main synthesis, with the
+positive hierarchy/bridges in the ansatz technical companion and the
+negative hierarchy/evaluator in recurrence. It identifies the unintegrated
+parent Notes58–61 and Ansatz Notes19–20, with distinct field, physical and
+evaluation scopes. [HDA-10-MI3 r1](research-progress/handoffs/HDA-10-MI3.md)
+was the proposed, unexecuted integration request; its direction is now
+superseded by HDA-B01-MI1.
+The existing manuscripts and mathematical statuses are unchanged.
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra,
+actual effort max**, parent chat0023; this is not HDA-20 or specialist review.
 
 ## Related branches — 26 October 2026
 

@@ -110,3 +110,24 @@ Prepared for Edward Baker with substantial LLM assistance,
   Analytical onset sharpening is prepared as AN06; N02 remains supporting.
   Statuses unchanged. Edward Baker with LLM assistance, gpt-6-astra,
   recorded effort max, recurrence chat0005.
+
+- **2026-10-26 — linear sufficient all-height onset.** Working
+  [manuscript](manuscript/main.tex); no commit/tag or snapshot folder.
+  [Note16](notes/16_SHARPER_ALL_HEIGHT_ONSET_20261026.md) and
+  [Review12](reviews/12_SHARPER_ONSET_ASSESSMENT_20261026.md) replace
+  sufficient 2^22nu^4 by64nu at unchanged accuracy/contracts, keeping the
+  old theorem as fallback. All gates and jumps are paid; no numerical
+  campaign. [Note17](notes/17_ANALYTICAL_CONTINUATION_AFTER_ONSET_20261026.md)
+  prepares AN07. Edward Baker with LLM assistance, gpt-6.1-sol, actual
+  effort ultra, chat0006. Broad R05 Partial; parent statuses unchanged.
+
+- **2026-10-26 — strict uniform RS-bound and contour-count gain.** Working
+  [manuscript](manuscript/main.tex), no commit/tag or snapshot.
+  [Note18](notes/18_UNIFORM_RS_BOUND_STRENGTHENING_20261026.md)/
+  [Review13](reviews/13_UNIFORM_RS_BOUND_ASSESSMENT_20261026.md) prove
+  csch(pi)<1/10 coefficient/jet majorants and B_c/16 on the full contour
+  region, permitting 11 fewer nodes per edge at unchanged delivery.
+  Every mode/coefficient and error term remains; no numerical campaign.
+  [Continuation19](notes/19_ANALYTICAL_CONTINUATION_AFTER_RS_BOUNDS_20261026.md)
+  prepares AN08. Edward Baker with LLM assistance, gpt-6.1-sol, actual
+  effort ultra, same chat0006. Broad R05 Partial; parent statuses unchanged.

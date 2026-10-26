@@ -1,11 +1,13 @@
 # Recurrence research notes
 
-For the next session, start with the [analytical continuation](15_ANALYTIC_STRENGTHENING_CONTINUATION_20261026.md),
-[current integration](14_EFFECTIVE_MANUSCRIPT_INTEGRATION_20261026.md),
-and [AN06 r1](../research-progress/handoffs/HDA-R05-AN06.md):
-READY_FOR_SOL, Analysis — Sol, not executed. Tightening the all-height
-onset is the primary analytical task. [N02 r1](../research-progress/handoffs/HDA-R05-N02.md)
-remains a bounded supporting component task, not a prerequisite.
+Start with [Continuation19](19_ANALYTICAL_CONTINUATION_AFTER_RS_BOUNDS_20261026.md),
+[Note18](18_UNIFORM_RS_BOUND_STRENGTHENING_20261026.md)/
+[Review13](../reviews/13_UNIFORM_RS_BOUND_ASSESSMENT_20261026.md), the
+current overview/register and [AN08 r1](../research-progress/handoffs/HDA-R05-AN08.md).
+AN07 is Complete/CLOSED: csch(pi)<1/10 coefficient/jet constants,
+B_c/16 on the full contour region, and 11 fewer nodes per edge at
+identical accuracy. AN08 is READY_FOR_SOL, not executed; N02 remains
+supporting with unchanged cases/caps. Note17's AN07 routing is historical.
 
 [Note13](13_CHAT0003_RESULTS_SUMMARY_20261026.md) summarizes AN03–AN05/N01.
 [Note08](08_PROVIDER_AUDIT_CONTINUATION_20261026.md) and the
@@ -86,3 +88,19 @@ Completed analytical returns (26 October 2026, gpt-6.1-sol, ultra):
   26 October 2026, gpt-6-astra, max, chat0005. Primary AN06 request,
   supporting N02 boundary, reading order and pasteable prompt;
   [history verification receipt](15_CHAT_HISTORY_VERIFICATION_20261026.json).
+
+- [Note16: linear sufficient all-height onset](16_SHARPER_ALL_HEIGHT_ONSET_20261026.md),
+  26 October 2026, gpt-6.1-sol, ultra, chat0006. Proves 64nu against
+  earlier 2^22nu^4, with all gates and delivered-error budgets unchanged.
+  [Inputs](16_SHARPER_ONSET_INPUTS_20261026.json),
+  [work record](16_SHARPER_ONSET_WORK_RECORD_20261026.json).
+- [Note17: continuation after onset comparison](17_ANALYTICAL_CONTINUATION_AFTER_ONSET_20261026.md),
+  same provenance; prepares AN07 and preserves supporting N02 boundaries.
+
+- [Note18: uniform RS bounds and fewer contour nodes](18_UNIFORM_RS_BOUND_STRENGTHENING_20261026.md),
+  26 October 2026, gpt-6.1-sol, ultra, same chat0006. Same domains,
+  all coefficients/jet orders, full error delivery and explicit count gain.
+  [Inputs](18_UNIFORM_RS_BOUND_INPUTS_20261026.json),
+  [work record](18_UNIFORM_RS_BOUND_WORK_RECORD_20261026.json).
+- [Note19: continuation after RS-bound strengthening](19_ANALYTICAL_CONTINUATION_AFTER_RS_BOUNDS_20261026.md),
+  same provenance; prepares AN08's specified moving lower time endpoint.

@@ -292,6 +292,65 @@ poles; primitive, node, weight, and rounding errors still have to
 be certified. The fixed contour samples can be reused for all
 outer quadrature nodes.
 
+\subsection{A smaller contour bound at identical delivery accuracy}
+\label{subsec:smaller-contour}
+The bound \(B_F^\sharp\) applies on a smaller rectangle than the
+edge ellipses. A separate argument is needed for the contour constant.
+On \(\abs{\Rea\zeta}\le9/4,\abs{\Ima\zeta}\le5/4\), the
+horizontal boundary bound is \(B_c/[2\sinh(5\pi/4)]\).
+On its vertical boundary, with \(t=\pi\abs{\Ima\zeta}\),
+\[
+ |2\cos(\pi\zeta)|^2=2+4\sinh^2t\ge2\cosh^2t.
+\]
+\Cref{lem:rs-boundary}, at \(a=9/4\), bounds that boundary by
+\(B_c/[\sqrt2\cosh(5\pi/4)]\). For \(t=5\pi/4>15/4\),
+\[
+ \cosh t>1+\frac{(15/4)^2}{2}+\frac{(15/4)^4}{24}
+       =\frac{99969}{6144}>16,\qquad
+ 2\sinh t>2(15/4)+\frac{(15/4)^3}{3}=\frac{1605}{64}>16.
+\]
+Maximum modulus proves the uniform replacement
+\begin{equation}
+ B_c^{\rm new}=B_c/16
+ \label{eq:smaller-contour-constant}
+\end{equation}
+throughout the enlarged rectangle, including the disks used to pay
+contour-node perturbations. The original \(B_c\) remains a fallback.
+
+\begin{proposition}[Eleven fewer nodes on every contour edge]
+\label{prop:smaller-contour}
+Let \(K\ge0\), \(0<\tau_h\le1\), and let an old integer order
+\(q\) satisfy \eqref{eq:contour-error} at \(m=3K\) with right side
+at most \(\tau_h/4\). Then \(q\ge12\), and \(q_{\rm new}=q-11\)
+using \(B_c^{\rm new}\) meets the same tolerance simultaneously
+for every \(m\le3K\).
+\end{proposition}
+\begin{proof}
+Write \(\rho=9/8\). Exact rational comparisons give
+\[
+ \rho^4<13/8,\quad\rho^3<3/2,\quad
+ \rho^{22}<(13/8)^4(3/2)^2=257049/16384<16.
+\]
+At \(q=11\), the old bound exceeds
+\(192\rho^{-21}>12>\tau_h/4\), since \(\pi<4\), \(B_c>1\)
+and \(4^{3K+1}\ge4\). It decreases in \(q\), so any accepted
+old order is at least twelve. The new bound divided by the old
+bound at the corresponding orders is
+\[
+ \frac1{16}\rho^{22}<\frac{257049}{262144}<1.
+\]
+The common worst-case factor remains \(4^{3K+1}\).
+\end{proof}
+This compares supplied certified orders, including those found by
+the old terminating rational test. It needs no decision at a ceiling
+equality. The family is unbounded as \(\tau_h\) tends to zero.
+Every instantiated four-edge rule uses forty-four fewer locations;
+forming all jets for one \(\chi\) saves \(44(3K+1)\) summands.
+Reused samples are counted once. Nodes and weights of the new rule
+still require their original delivered-error contracts. The count
+does not claim measured runtime, a lower bit-complexity degree, or
+fewer outer-integral nodes \cite{rec18}.
+
 \subsection{Rounding and sufficient requested precision}
 Use real-component arithmetic with unit roundoff \(u\), sufficient
 exponent range, and certified bounds \(\abs a\le A_a\),

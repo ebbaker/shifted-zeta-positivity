@@ -116,3 +116,38 @@ rates, explicit endpoint/onset ledger, RS integral and outer loss.
 33 pages, no warnings; production only, no new result or independent
 validation. Edward Baker with substantial LLM assistance, gpt-6.1-sol,
 ultra, chat0003. A02 Partial; A08-AN01 prepared only, A03 retained.
+
+
+2026-10-26 — **AN01 first corrected large positive time.** Research
+working tree at [Note17](notes/17_FIRST_CORRECTED_LARGE_POSITIVE_TIME_20261026.md),
+no commit/tag, manuscript revision or snapshot. Complete canonical
+all-height field error improves to O(t^-2 log^-5 t), with spatial0–3,
+direct time and exact residual paid. [Assessment12](reviews/12_FIRST_CORRECTED_LARGE_POSITIVE_TIME_ASSESSMENT_20261026.md),
+[Progress03](research-progress/03_LARGE_POSITIVE_TIME_HIERARCHY_RESEARCH_PROGRESS_20261026.md).
+Symbolic onset and same-model review only; hierarchy and regional bridges
+remain open. For Edward Baker with LLM assistance, gpt-6.1-sol, ultra,
+ansatz chat0005.
+
+
+2026-10-26 — **AN02 second fixed positive-time correction.** Research
+working tree at [Note18](notes/18_SECOND_CORRECTED_LARGE_POSITIVE_TIME_20261026.md),
+no commit/tag, manuscript revision or snapshot. Complete canonical
+all-height envelope field improves to O(t^-3 log^-7 t), with finite
+constants, buffered jets/time and exact residual cancellation.
+[Assessment13](reviews/13_SECOND_CORRECTED_LARGE_POSITIVE_TIME_ASSESSMENT_20261026.md),
+[Progress03](research-progress/03_LARGE_POSITIVE_TIME_HIERARCHY_RESEARCH_PROGRESS_20261026.md).
+Symbolic onset, same-model assessment only; arbitrary fixed orders and
+bridges remain open. Edward Baker with LLM assistance, gpt-6.1-sol,
+ultra, same ansatz chat0005.
+
+
+2026-10-26 — **AN03 fixed-order theorem and AN04 first regional field bridge.**
+Research working tree, [Note19](notes/19_ARBITRARY_FIXED_POSITIVE_TIME_ORDER_20261026.md)
+and [Note20](notes/20_COMPACT_POSITIVE_FIELD_BRIDGE_20261026.md); no commit/tag,
+manuscript change or snapshot. Arbitrary fixed J now has complete errors
+and exact residual recurrence; compact refinement gives P4 X^-7 on[63,65]
+with an actual outer overlap. [Assessments14](reviews/14_ARBITRARY_FIXED_ORDER_ASSESSMENT_20261026.md)–[15](reviews/15_COMPACT_POSITIVE_FIELD_BRIDGE_ASSESSMENT_20261026.md),
+[Summary21](notes/21_CHAT0005_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md).
+Symbolic onsets, same-model assessment; core/physical/zero/growing-order
+obligations remain. Edward Baker with LLM assistance, gpt-6.1-sol, ultra,
+same ansatz chat0005.

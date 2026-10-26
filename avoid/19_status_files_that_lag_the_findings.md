@@ -78,3 +78,15 @@ author's new evolution-first priority is carried into the manuscript,
 Overview02, Progress02 and pending-packet navigation; the old pair is
 explicitly superseded. This prevents two competing live priorities
 without rewriting historical evidence or promoting an unproved estimate.
+
+
+**26 October 2026 — separate central synthesis from pending companion revision.**
+For Edward Baker with LLM assistance, **gpt-6-astra, actual effort max**.
+The [Book production review](../papers/investigations-5/01_heat_density_asymptotics/reviews/42_BOOK_SYNTHESIS_PRODUCTION_REVIEW_20261026.md)
+records: “Companion revisions are planned, not executed.” The Book cites
+the newer positive hierarchy and evaluation proof notes directly while
+the three older manuscripts await their explicit Sol revision packet.
+Current navigation marks the earlier central-parent proposal superseded;
+the new coordination register links existing scientific owners instead of
+creating competing live phases. Publication of a synthesis must not make
+an older companion appear already synchronized.

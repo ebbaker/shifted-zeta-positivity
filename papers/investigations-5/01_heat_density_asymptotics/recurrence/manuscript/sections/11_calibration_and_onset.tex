@@ -304,3 +304,127 @@ accept only certified strict margins. A finite unsuccessful witness is
 rejected or inconclusive. Every strictly admissible height has a finite
 successful witness. This does not promote a single-height verification
 to an all-height theorem.
+
+\subsection{A smaller onset from additive costs}
+\label{subsec:linear-onset}
+The preceding onset is a valid fallback. Its main loss comes from
+multiplying the fixed chart cost \(\log\overline T\) by
+\((p+1)\log(p+2)\), followed by \(L\log(L+2)\le L^{3/2}\).
+Keeping that cost additive gives the following improvement
+\cite{rec16}. The moment and factorial majorants themselves need not change.
+
+\begin{theorem}[Linear sufficient log-height]\label{thm:linear-onset}
+With the same calibration record and frozen choices, every center with
+\begin{equation}
+ L\ge L_{\rm new}=64\nu
+ \label{eq:linear-onset}
+\end{equation}
+meets all classical, structural, calibration and half-target truncation
+gates of \cref{thm:explicit-onset}. A stronger dyadic sufficient condition is
+\begin{equation}
+ X\ge X_{\rm new}=2^{128\nu+8}.
+ \label{eq:linear-dyadic-onset}
+\end{equation}
+All input and descriptor restrictions remain. In particular the theorem
+does not admit excluded boundary centers or bound their separation uniformly.
+\end{theorem}
+\begin{proof}
+Keep \(\overline E,\overline S,\overline Q,\overline T\) and
+\(\overline{\mathcal J}(p)\) from the preceding proof.
+They dominate both moment systems, with
+\[
+ Q_p\le C_Q\overline{\mathcal J}(p),\quad C_Q\le3\overline T,
+ \quad A_{\rm art,p}^{1/2}\le C_{\rm pop}\overline{\mathcal J}(p),
+ \quad \log\overline T\le18\nu^2,\quad
+ \log\overline Q\le15+2\nu\le23\nu/4.
+\]
+The superscript \(1/2\) labels \(\theta\).
+For every \(L\ge64\nu\ge256\),
+\begin{equation}
+ \log(L+4)\le L/32,\quad p+1\le129L/256,\quad
+ 2p+4\le65L/64.
+ \label{eq:linear-elementary-bounds}
+\end{equation}
+Indeed \(\e^8>260\) by the exponential series through degree four,
+and \(L/32-\log(L+4)\) increases on this interval.
+Since \(\log24+(\nu-1)\log3\le\nu^2\),
+the local logarithmic cost satisfies
+\begin{align}
+ \Lp(8C_{\mathrm o}Q_p)
+ &\le37\nu^2+\log(p+2)+(p+1)\log\overline Q
+                         +\log((2p+4)!)\nonumber\\
+ &\le\frac{592+8+2967+2080}{65536}L^2
+   <\frac3{32}L^2.
+ \label{eq:linear-local-cost}
+\end{align}
+Here \(m!\le m^m\) pays the factorial, and the four rational
+summands bound the four terms in the first line, respectively.
+Also \(8C_Q\ge392C_{\rm pop}\e>392C_{\rm pop}\), so the same
+bound applies to \(\Lp(392C_{\mathrm o}A_{\rm art,p}^{1/2})\).
+The unchanged floor lower bound gives
+\[
+ (p+3/4)\log X-3L^2/8\ge7L^2/64>3L^2/32,
+\]
+paying the local half-target gate with strict slack.
+
+For the true tails, the preceding moment estimates give
+\[
+ \Lp(392C_{\mathrm o}A_{\rm mod}^{1/2}),\quad
+ \Lp(392C_{\mathrm o}A_{\rm far})
+ \le18+2\nu+18\nu^2\le20\nu^2<L^2/32.
+\]
+Since \(\log X<L+3\), the moderate height power costs at most
+\(L^2/4\), and the artificial one at most \(L^2/16\).
+Their combined right sides are below \(9L^2/32\) and \(5L^2/32\),
+respectively, both smaller than \(61L^2/8\).
+Finally \(X>24L\), \(X>64\pi\), whence
+\[
+ \pi X/8<X^2/512,\qquad
+ X^2/512>9L^2/8>(3/8+1/32)L^2.
+\]
+This pays the remote half-target gate. The factors \(8,392\),
+and hence the half-target reservation for evaluation, are unchanged.
+
+For completeness every non-rate gate holds on this smaller domain.
+Use \(W\le\nu-1<L/64\), \(V\le12L\) and
+\(X>12\e^L\ge2L^3\).
+These give \(X>X_{\rm cl}=64\nu\), \(X>4(W+1)\),
+\(V<X/4\), and \(2(V+2)<X/4\).
+The strong ellipse and cutoff-span estimates already proved for
+\(L\ge16\) apply. Also
+\[
+ K\le L\le(X-V)/(4\pi),\quad
+ DV/X<24/L^2<1/2,\quad 2AV^2/X<128/L\le1/2,
+\]
+and \(V>\max(2R,W+1,64)\).
+Since \(X>30\) and \(\pi<16/5\), the stronger slope gate holds.
+The separate damping gate follows from
+\[
+ 2\{(3/X)(\pi/4+L/2)+9/X^2\}
+ <3(L+2)/X+18/X^2<1,
+\]
+using \(X>6(L+2)\) and \(X>6\).
+Finally \(C_{\rm cal}=\nu+31<L\), so
+\(C_{\rm cal}(1+L)<2L^2<X\).
+Strong geometry supplies the ellipse logarithm bound as before.
+Provider tolerances and strict descriptor witnesses retain their
+separate finite contracts.
+
+All estimates hold continuously for every \(L\ge64\nu\), using
+\(L/2-1\le p\le L/2\), and the full-population bounds and exact cutoff
+transfer cover every later \(N\) jump. No monotonicity of actual
+factorial costs, or differentiation across chart changes, is asserted.
+Lastly \(\log2>1/2\), \(\log(4\pi)<3\) give
+\(\log(X_{\rm new}/(4\pi))>64\nu+1\).
+\end{proof}
+
+The old and new sufficient log-heights have exact ratio
+\(L_*/L_{\rm new}=2^{16}\nu^3\ge2^{22}\).
+For example on the dyadic chart family \(r=b=(\nu-3)/2\),
+\(\nu=4,8,16\) gives new bounds \(256,512,1024\), against
+\(2^{30},2^{34},2^{38}\).
+These are symbolic comparisons of sufficient bounds, not field
+measurements. The proof retains every arithmetic mode and completion
+coefficient, both arms, the bounded integral, all buffers and channels,
+and the fixed time interval. Optimal onset, useful runtime, moving
+time endpoints and complete evaluator certification remain separate questions.

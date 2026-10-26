@@ -1,0 +1,173 @@
+\section{Positive source compression and finite evaluation}
+\label{sec:effectivity}
+
+\subsection{Approximate a square root, then square}
+The fixed-source ingredient can be made substantially smaller without
+changing the global physical theorem. On
+\[
+ \mathcal D=\{u\in\C:\Re u>-1/16,\ |\Im u|<1/16\}
+\]
+the complete canonical series admits the factorization
+\begin{align*}
+ \Phi(u)&=A(u)(1+\mathcal R(u)),\\
+ A(u)&=\pi e^{5u}(2\pi e^{4u}-3)e^{-\pi e^{4u}},\qquad
+ |\mathcal R(u)|<1/2.
+\end{align*}
+Both factors used for their logarithms lie in a right half-plane.
+Hence
+\begin{equation}
+ h(u)=\exp\{[\log\pi+5u+\Log(2\pi e^{4u}-3)
+                           -\pi e^{4u}+\Log(1+\mathcal R(u))]/2\}
+ \label{eq:source-root}
+\end{equation}
+is an explicitly selected analytic square root, positive on the real
+half-line, with $|h|<9$ on $\mathcal D$. The tail bound includes
+every arithmetic mode; real positivity alone would not have supplied
+this complex branch.
+
+Approximate $h$ on $[0,U]$ by a polynomial with real dyadic coefficients
+in a normalized Chebyshev basis, round those coefficients with a paid
+error, and set $f=p^2$ on $[0,U]$, zero beyond it. Positivity is then
+exact. The full tail above $U$, interpolation error, squaring error
+and coefficient error give
+\begin{theorem}[Compressed positive source]
+\label{thm:source-compression}
+Fix a finite upper time $b$. For $0<\varepsilon\le1$ there is a
+finite nonnegative polynomial source with exact-heat field $G_s$ such that
+\begin{equation}
+ |\partial_z^j(G_s-H)|\le51\varepsilon/256,
+ \qquad0\le j\le3,\quad t\le b,\quad x\in\R,\quad |y|\le4.
+ \label{eq:source-four-jets}
+\end{equation}
+As $q_s=\log(1/\varepsilon)\to\infty$ at fixed $b$, its sufficient
+degree is $O_b(q_s\log q_s)$, coefficient fractional precision is
+$O_b(q_s)$, and compressed descriptor length is
+$O_b(q_s^2\log q_s)$ bits. Expansion into normalized powers costs
+$O_b(q_s^2\log^2q_s)$ bits. A finite coarse construction recipe has
+polynomial bit cost, bounded by $O_b(q_s^{60})$ in the stated model.
+\end{theorem}
+The bit-cost statement uses a dyadic tolerance and a rational upper bound
+for $b$, or supplied certified recipe integers. It excludes the cost of
+obtaining the upstream all-time contour and transfer constants.
+This is Note 58's construction \cite{compression}. It supplies the
+same four jets consumed by the global theorem. The source changes
+when the requested tolerance changes, but remains fixed during one
+construction and independent of the queried $t,x,y$.
+
+The improved fixed-central conditioning argument gives, at fixed
+$b,\eta,\theta$ and source comparison radius $R_c$,
+\begin{equation}
+ q_s=\pi R_c/8+O_{b,\eta,\theta}(\log^2R_c).
+ \label{eq:source-demand}
+\end{equation}
+Consequently the sufficient compressed descriptor is
+$O_{b,\eta,\theta}(R_c^2\log R_c)$ bits. This improves the earlier
+specified clipped-cubic sufficient exponential descriptor bound.
+It is an upper bound for this construction, not a lower bound,
+an affordable finite crossover, or a uniform statement when $b$ grows
+with the accuracy request. Earlier positive Hermite and signed-source
+constructors remain valid alternatives with their recorded scopes.
+
+\subsection{Finite source moments and removable formulas}
+If $f(u)=\sum_{k=0}^d d_k(u/U)^k$ on $[0,U]$, put
+\[
+ M_k(a,c)=\int_0^1v^ke^{av^2+cv}\dd v.
+\]
+Then
+\begin{equation}
+ G_s(t,z)=\frac U2\sum_{k=0}^d d_k
+                  [M_k(tU^2,\ii zU)+M_k(tU^2,-\ii zU)].
+ \label{eq:source-moments}
+\end{equation}
+Spatial jets shift $k$ and introduce powers of $\pm\ii U$.
+Integration by parts gives
+\[
+ 2aM_1=e^{a+c}-1-cM_0,\qquad
+ 2aM_{k+1}=e^{a+c}-kM_{k-1}-cM_k\quad(k\ge1).
+\]
+The entire expansion
+\begin{equation}
+ M_k(a,c)=\sum_{r,s\ge0}
+                 \frac{a^rc^s}{r!s!(k+2r+s+1)}
+ \label{eq:entire-moments}
+\end{equation}
+provides a route across removable denominators. An infinite series is
+not itself a finite evaluator: the evaluation recipe chooses a finite
+truncation, bounds its tail and pays cancellation in the coefficient sum.
+
+\subsection{Selecting a phase index without an equality oracle}
+The global construction may enlarge its onset. Note 60 uses that
+freedom to choose a dyadic starting height with certified distance
+from an integer phase. For the canonical phase at time $64$,
+\[
+ \Theta(64,x)=\frac x4(\log(x/(4\pi))-1)
+              +4\pi\log(x/(4\pi))+\frac{7\pi}8+E(x),
+ \qquad |E(x)|\le2^{16}(1+\log x)^2/x
+\]
+at the declared large onset. If $Q_j=\Theta(64,2^{K+j})/\pi$,
+$j=0,1,2,3$, then
+\begin{equation}
+ Q_3-5Q_2+8Q_1-4Q_0=4\log2+\text{error},
+ \qquad |\text{error}|<1/100.
+ \label{eq:phase-stencil}
+\end{equation}
+The right side stays more than $19/100$ from an integer. The absolute
+coefficient sum is eighteen, so at least one $Q_j$ stays more than
+$1/100$ from every integer. Certified phase intervals then determine
+an exact ceiling with a strict margin. With $K\ge2048$ and all other
+onset gates, the cost is polynomial in $K$, not in $\log K$.
+This solves the phase selection needed by the construction; it is
+not an algorithm for deciding equality at an arbitrary prescribed
+onset \cite{phase}.
+
+\subsection{The full evaluator and its cost}
+Notes 59--61 treat every scalar of \eqref{eq:global-tuple}, including
+the regulator, gamma saddle, profiles, source, actual covariance mean
+product, continuous convolution and signed defects. One additional
+local reserve can be chosen proportional to
+\[
+ \zeta(t,x)=\frac{\theta}{4(1+t^2)(1+x^2)},
+\]
+so the evaluation error does not erase the endpoint limits. It is
+combined with the analytical construction's reserve component by
+component, not treated as an exact arithmetic output.
+
+The improved cost proof uses explicit pure-axis Gevrey bounds
+$|\partial_i^rf|\le V A^r(r!)^3$ on each fixed query/slack box.
+Rational interpolation of degree $n=O(\log(1/e))$ on
+$O(An^2)$ panels per axis gives $O(A^2n^6)$ tensor nodes. Negative
+interpolation weights and their amplification are paid. Shifted
+Stirling with a number of shifts and terms linear in precision supplies
+normalized log-gamma and fixed jets; gamma is not a unit-cost oracle.
+
+\begin{theorem}[Polynomial additional-accuracy cost at fixed data]
+\label{thm:cost}
+Fix a certified descriptor and a compact rational query/slack box
+$\mathcal Q$. For rational or dyadic independent scalar inputs, with
+the specified canonical providers, additional absolute output precision
+$p$ and query encoding length $I$ have sufficient bit bounds
+\begin{equation}
+ \operatorname{work}\le C_{\rm desc,\mathcal Q}(1+p+I)^{40},\qquad
+ \operatorname{storage}\le C_{\rm desc,\mathcal Q}(1+p+I)^8.
+ \label{eq:physical-complexity}
+\end{equation}
+For general computable scalar inputs their provider costs are retained
+explicitly. No uniform polynomial cost in height, time or descriptor
+size is claimed.
+\end{theorem}
+The constants still contain inverse physical floors and can be
+enormous. This is the bounded theorem of Note 61 \cite{cost}; it
+does not close the historical full-certificate or full-audit gates.
+
+\subsection{Where the next cost improvement must occur}
+The same note proves local puncture estimates for weak logarithmic
+and pole primitives whose small-disk costs are respectively of order
+$h^2$ times a logarithmic factor and $h$, with only logarithmic
+regulator dependence. This suggests a route to avoid global inverse-$q$
+constants. It still needs a complete filter consumer: collars, joining
+commutators, actual mean products, time rows and coordinate moduli,
+including the fourth weak kernel derivatives, must all be paid.
+One cannot simply delete small disks. A regularized simple-zero density
+has a peak of size $1/(\pi\delta^2)$ on width $\delta$ and carries
+nonvanishing mass. The useful improvement must preserve that mass
+through weak identities.

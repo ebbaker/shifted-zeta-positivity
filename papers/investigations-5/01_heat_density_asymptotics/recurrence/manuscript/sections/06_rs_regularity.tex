@@ -107,6 +107,76 @@ In particular \(\log^+D_k=O((k+1)\log(k+2))\).
 The complex normalization is essential; the real cosine quotient
 \(\mathcal C\) in \eqref{eq:short} is not substituted for \(F_0\).
 
+\subsection{Sharper uniform majorants on the same domains}
+\label{subsec:sharper-rs}
+The preceding bounds remain valid fallbacks. Preserving the boundary
+denominator gives a strict uniform improvement without changing the
+function or the domains \cite{rec18}.
+
+\begin{lemma}[A boundary monotonicity bound]\label{lem:rs-boundary}
+For \(a\ge2\), the function
+\[
+ f_a(t)=\frac{\e^{at}+\sqrt2\cosh(t/2)}{\cosh t}
+\]
+is strictly increasing for \(t\ge0\).
+\end{lemma}
+\begin{proof}
+Write \(g_a=\e^{at}/\cosh t\), \(v=\tanh t\), and
+\(q_0=\cosh(t/2)/\cosh t\). Direct differentiation gives
+\[
+ g_a''=g_a(a^2-1-2av+2v^2)\ge(a-1)^2g_a>0.
+\]
+The quadratic decreases on \(0\le v\le1\), since \(a\ge2\).
+Thus \(g_a'\ge g_a'(0)=a\). Also \(0<q_0\le1\) and
+\(q_0'=\sinh(t/2)/(2\cosh t)-q_0\tanh t\ge-1\).
+Consequently \(f_a'\ge a-\sqrt2>0\).
+\end{proof}
+
+\begin{proposition}[A strict common coefficient improvement]
+\label{prop:sharper-rs}
+Set \(\alpha=(\sinh\pi)^{-1}\),
+\(B_F^\sharp=\alpha B_F\), \(D_k^\sharp=\alpha D_k\).
+Then \(0<\alpha<1/10\), and on the original coefficient rectangle,
+for every integer \(m,k\ge0\),
+\begin{equation}
+ \left|\frac{F_0^{(m)}(\chi)}{m!}\right|
+ \le B_F^\sharp2^m,\qquad
+ \abs{C_k(\chi,1/2)}\le D_k^\sharp.
+ \label{eq:sharper-rs}
+\end{equation}
+The real derivative bound \eqref{eq:real-Ck-derivative} also holds
+with \(B_F^\sharp\) for every fixed derivative order.
+\end{proposition}
+\begin{proof}
+On the horizontal edges of \(\abs{\Rea z}\le2,\abs{\Ima z}\le1\),
+the numerator has modulus at most \(2B_F\), and the denominator
+at least \(2\sinh\pi\). On the vertical edges put \(t=\pi\abs{\Ima z}\).
+The quotient is at most \(f_2(t)/2\), whose maximum is
+\(B_F/\cosh\pi<B_F/\sinh\pi\) by \cref{lem:rs-boundary}.
+Maximum modulus applies to the entire continuation. Moreover
+\[
+ \sinh\pi>\sinh3>
+ 3+\frac{27}{6}+\frac{243}{120}+\frac{2187}{5040}
+     +\frac{19683}{362880}=\frac{44859}{4480}>10.
+\]
+The same radius-\(1/2\) and radius-one Cauchy disks used above now
+give the sharper jet bounds. The coefficient sums are linear in
+\(B_F\), proving all the stated inequalities without changing
+\(e_j^{(k)}\), their factorial bound, or any normalization factor.
+\end{proof}
+Every later retained-integral majorant may therefore replace
+\(D_k\) by \(D_k^\sharp\). The arithmetic-transfer term remains:
+if its old ellipse bracket is \(\mathcal T_X+S_{\rm RS}\),
+its new ratio is
+\[
+ \frac{\mathcal T_X+\alpha S_{\rm RS}}
+      {\mathcal T_X+S_{\rm RS}}\in[\alpha,1),
+ \qquad S_{\rm RS}>0.
+\]
+There is no common \(\alpha\) factor for the full integral when
+transfer is present. The weighted recurrence bound \(E_k\) itself
+has not improved.
+
 \subsection{Holomorphic extension of each finite branch}
 Split \(I_X\) at its exact thresholds \(4\pi n^2\).
 On a branch \(J\), fix \(m\) and use

@@ -286,3 +286,65 @@ External PDF provenance, retrieval26 October2026, is recorded in
 Files live under /Users/Shared/szp-archive/heat-density-asymptotics/references/.
 Their hashes identify bytes, not mathematical validity. No third-party
 PDF is stored in Git; all canonical public links remain above.
+
+
+## HDA-A04-AN01 rechecked source scope — 26 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, recorded
+effort ultra**, ansatz chat0005. Reopened D. H. J. Polymath, *Effective
+approximation of heat flow evolution of the Riemann xi function, and a
+new upper bound for the de Bruijn–Newman constant*, arXiv:1904.12438v2
+(4 August2019), [Section4, equation35](https://arxiv.org/html/1904.12438v2#S4).
+Checked the Gaussian identity/Fubini derivation and xi/8 normalization for
+every t>0 and complex z. This exact identity needs no RH; no restricted
+evolved finite-sum approximation theorem or zero theorem is imported.
+Existing v2 reading-copy provenance is retained; no new PDF was downloaded.
+
+Reopened [DLMF2.4(iv)](https://dlmf.nist.gov/2.4#iv), especially2.4.14–15:
+analytic phase/amplitude, an interior stationary point with nonzero
+quadratic term, appropriate convergence/end behavior and sector/branch
+conditions underlie the usual fixed-parameter simple-saddle expansion.
+That passage supplies context and coefficient parity, not uniformity for
+this moving saddle or the complete canonical arithmetic/contour budget.
+[Note17](../notes/17_FIRST_CORRECTED_LARGE_POSITIVE_TIME_20261026.md)
+derives those estimates directly on its actual contour.
+
+Reopened [DLMF5.11](https://dlmf.nist.gov/5.11), equations5.11.1–2 and the
+finite-truncation error discussion in(ii). The log-Gamma/digamma expansions
+have a fixed sector |arg p|<=pi-delta; holomorphic remainder/Cauchy on a
+larger sector gives the finite derivative bounds used through alpha^(5).
+No shrinking sector or all-order uniform constant is assumed. Inspected
+passages only, not full-source proof audits; DLMF remains an online source.
+Retrieval/check date26 October2026. Existing canonical bibliography entries
+remain in use; no duplicate article/reference record or third-party PDF
+was added to Git.
+
+
+## HDA-A04-AN02 finite-derivative source check — 26 October2026
+
+For Edward Baker with LLM assistance, **gpt-6.1-sol, recorded effort ultra**,
+same ansatz chat0005. Reopened [DLMF5.11](https://dlmf.nist.gov/5.11#ii)
+and [DLMF2.4(iv)](https://dlmf.nist.gov/2.4#iv). The previously recorded
+fixed-sector digamma remainder, with Cauchy's formula on a larger sector,
+supplies the finite bounds through alpha^(7) needed in Note18; SC11
+exposes one constructive finite constant choice. No order-uniform theorem
+or new moving-parameter expansion is imported from DLMF. The finite
+interpolation/Bell remainder and complete canonical contour estimates
+are proved in Note18 using the exact source already checked in AN01.
+Existing canonical bibliography/PDF provenance is retained; no new article,
+PDF download or full-source proof audit is claimed.
+
+
+## AN03–AN04 checked-source scope — 26 October2026
+
+For Edward Baker with LLM assistance, **gpt-6.1-sol, recorded effort ultra**,
+same ansatz chat0005. Reopened the recorded [Polymath1904.12438v2](https://arxiv.org/html/1904.12438v2#S4)
+exact equation35 and [DLMF5.11](https://dlmf.nist.gov/5.11#ii), plus
+[DLMF2.4(iv)](https://dlmf.nist.gov/2.4#iv) as simple-saddle context.
+Note19 derives indexed finite constants by Cauchy on a fixed larger sector;
+its coefficientwise Gaussian residual identity is proved in-note, not
+imported as a convergent or growing-order expansion. Note20 rechecks the
+canonical fixed-endpoint proof on each new fixed compact[32,T] and its
+stronger arithmetic bound; no restricted evolved Polymath approximation
+is extended by citation. Existing bibliography and PDF provenance remain;
+no new PDF, article record or full-source proof audit is claimed.
