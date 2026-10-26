@@ -27,6 +27,21 @@ comparison and a controlled solution error. Understanding the regulator
 transition near t=64 remains important, but its fine analysis follows
 this primary asymptotic-estimate work.
 
+**Immediate focus, 26 October 2026:** the author's recurrence branch
+now owns a three-round hierarchy sequence: p=2 on [1,2], every fixed
+order on that slab, then a declared compact-time family with endpoint
+dependence. See the [recurrence overview](../../recurrence/research-overview/01_RECURRENCE_RESEARCH_OVERVIEW_20261026.md),
+[live register](../../recurrence/research-progress/01_RECURRENCE_RESEARCH_PROGRESS_20261026.md) and
+[continuation](../../recurrence/notes/01_ANALYSIS_CONTINUATION_20261026.md).
+[R01-AN01 r1](../../recurrence/research-progress/handoffs/HDA-R01-AN01.md)
+is the active prepared successor to A02-AN07; the original request remains
+historical and is not a second execution job. Note16's finite recurrence
+changes the truncation and does not inherit the growing-degree theorem
+by renaming its index. A08-AN01 stays prepared outside this sequence.
+This updates ownership and the bounded continuation, not the all-time
+objective, accepted domains or mathematical status. Prepared for Edward
+Baker with substantial LLM assistance, gpt-6-astra, recorded effort max.
+
 Three meanings of all times must be covered separately:
 
 1. Every fixed real t, as X tends to infinity, with the t-dependence of
@@ -37,8 +52,8 @@ Three meanings of all times must be covered separately:
    negative times, with explicit scaling regions and matching.
 
 No common onset for the entire real time axis is assumed. Substituting a
-moving time into a fixed-time error is not a uniform theorem. The next
-bounded packet concerns 1<=T=-t<=2; the research objective is wider.
+moving time into a fixed-time error is not a uniform theorem. The bounded correction on 1<=T=-t<=2 is now proved in Note10 in the
+retained-RS-integral class; the research objective is wider.
 
 ## What the last round established
 
@@ -140,32 +155,54 @@ as a domain's input estimates are ready. The regulator transition is
 retained as a concrete accuracy test, without displacing the missing
 all-time asymptotic bounds.
 
-## Immediate bounded next step
+## Current bounded return and next step
 
-**Analysis — Sol**, [HDA-A02-AN03 r1](../research-progress/handoffs/HDA-A02-AN03.md),
-is the primary next packet, prepared and not dispatched. The author's
-new priority changes its queue position; its frozen mathematical
-request is unchanged.
+25 October 2026 continuation, **gpt-6.1-sol, recorded effort ultra**,
+ansatz chat0003. [Note10](../notes/10_FIRST_NEGATIVE_TIME_EVOLUTION_CORRECTION_20261025.md)
+and [Assessment07](../reviews/07_FIRST_NEGATIVE_CORRECTION_ASSESSMENT_20261025.md)
+close [AN03](../research-progress/handoffs/HDA-A02-AN03.md) at its bounded
+natural-scale gain/two-scale-comparison stop rule. One evaluated quadratic
+evolution correction, K=1 initial RS data and exact adjacent transfer give
+C |G|X^-5/4 field/j<=3/time and C |G|X^-7/4 residual/residual_z on 1<=T<=2.
+Full N-mode populations, complex buffers and tails are paid. The formula
+retains a bounded RS correction integral; no integral-free short formula
+or physical transfer is accepted. Same-model internal assessment only.
 
-On 1<=T<=2 and the full fixed complex buffers, derive one explicit
-evolution correction to the existing short F_N and prove a named
-o(|G|X^-3/4) error for the field, spatial derivatives through three and
-first time derivative. |G|X^-5/4 with specified logarithms is a work
-target, not a promised rate. Supply the actual residual, canonical
-initial matching, full mode-population bounds and separate natural/
-outer-scale comparison. Stop at a precise failed estimate if the
-focused attempt cannot establish a gain. A formally smaller residual
-or an unevaluated Duhamel correction alone does not close the packet.
+The outer allowance remains X^-5/4 exp(TL²/16), still growing for fixed T;
+this limits the bound, not every resummation. The existing growing-order
+outer-scale representation remains stronger. HDA-A02 stays Partial.
 
-> Continue HDA-A02-AN03 r1 under Overview02 and Progress02. Derive one
-> explicit negative-time evolution correction on 1<=T<=2 and prove an
-> improved natural-scale field/jet/time error, with its actual residual
-> and honest outer-scale conversion. Retain all arithmetic modes and
-> canonical initial corrections; stop at the first precise unpaid estimate.
+AN04 has now integrated that assessed result into manuscript Section6.3,
+Proposition6.1; [Note11](../notes/11_AN04_MANUSCRIPT_INTEGRATION_20261025.md)
+and [Assessment08](../reviews/08_AN04_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261025.md)
+record the successful 29-page build and same-model fidelity checks. This
+adds no estimate or independent mathematical validation.
 
-The task is analytical only. Routine derivations, constants and branch
-bookkeeping are delegated to Sol within the packet. No automatic chat
-creation, agent dispatch, model change or numerical campaign is implied.
+AN05 now proves that fixed compact-negative-time family in
+[Note12](../notes/12_COMPACT_NEGATIVE_TIME_FAMILY_20261025.md), assessed by
+[Review09](../reviews/09_COMPACT_NEGATIVE_FAMILY_ASSESSMENT_20261025.md).
+For every declared fixed 0<tau<=T<=B, field/j<=3/time errors are
+C(tau,B,r,b)|G|X^-5/4 and actual residual/residual_z is
+C(tau,B,r,b)|G|X^-7/4, with displayed endpoint functions and sufficient
+onset gates. The window is V_B=8 sqrt(max(1,B))L; all modes and the
+bounded RS/exact-transfer integral remain. Same-model internal assessment
+only. Outer allowances still grow at fixed T; constants are not uniform
+at zero or infinite time. No new through-zero join or physical transfer.
+
+AN06 now integrates that assessed result in Section6.4/Proposition6.2
+and explicit endpoint/onset Appendix A. [Note13](../notes/13_AN06_MANUSCRIPT_INTEGRATION_20261025.md),
+[Assessment10](../reviews/10_AN06_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261025.md)
+and [build record](../manuscript/BUILD_RECORD_20261025_A02_AN06.json)
+record the warning-free 33-page production milestone. No estimate or
+review-status upgrade follows. [Note14](../notes/14_CHAT0003_RESEARCH_SUMMARY_20261025.md)
+summarizes this whole chat and its limits.
+
+**Analysis — Sol**, [HDA-A08-AN01 r1](../research-progress/handoffs/HDA-A08-AN01.md),
+is prepared only, not dispatched: derive one canonical buffered estimate
+on [1/2,1], with field/j<=3/direct-time error and actual residual. Pin
+actual published and parent hypotheses before reuse; no positive-time
+result follows from AN06. Broader priorities and retained A03 remain;
+A02 Partial and parent statuses are unchanged.
 
 ## Evidence discipline and controls
 

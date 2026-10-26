@@ -69,3 +69,50 @@ the t=64 transition as supporting work. [Note09](notes/09_EVOLUTION_MANUSCRIPT_A
 Synthesis and priority revision only; no new accepted asymptotic bound.
 For Edward Baker with substantial LLM assistance, gpt-6-astra, effort max,
 ansatz chat0002. A02-AN03 is primary next; both ansatz histories verified.
+
+
+2026-10-25 — **AN03 fixed-order negative-time correction.** Research
+working tree, no commit/tag or snapshot; manuscript integration pending.
+One evaluated mode correction and K=1 RS/exact-transfer bounded integral
+improve field/j<=3/time to C |G|X^-5/4 on 1<=T<=2; actual residual is
+C |G|X^-7/4. Remaining outer allowance still grows. [Note10](notes/10_FIRST_NEGATIVE_TIME_EVOLUTION_CORRECTION_20261025.md),
+[Assessment07](reviews/07_FIRST_NEGATIVE_CORRECTION_ASSESSMENT_20261025.md),
+[next integration packet](research-progress/handoffs/HDA-A02-AN04.md).
+For Edward Baker with substantial LLM assistance, gpt-6.1-sol, ultra,
+chat0003; same-model assessment only, broader A02 Partial.
+
+
+2026-10-25 — **AN04 first negative-time correction integrated.** Maintained
+[manuscript](manuscript/main.tex), working tree, no commit/tag or snapshot.
+Section6.3/Proposition6.1 integrates Note10's fixed-order retained-integral
+gain and failed outer allowance; earlier stronger theorem preserved.
+[Note11](notes/11_AN04_MANUSCRIPT_INTEGRATION_20261025.md),
+[Assessment08](reviews/08_AN04_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261025.md),
+[build record](manuscript/BUILD_RECORD_20261025_A02_AN04.json).
+29 pages, no warnings; production only, no new mathematical result or
+review-status promotion. Edward Baker, with substantial LLM assistance,
+gpt-6.1-sol, ultra, chat0003. A02 Partial; AN05 prepared, not dispatched.
+
+
+2026-10-25 — **AN05 fixed compact-negative-time family.** Research working
+tree, no commit/tag or snapshot; manuscript integration pending. For
+declared fixed 0<tau<=T<=B, preserves X^-5/4 field/jets/time and X^-7/4
+actual residual rates with explicit endpoint functions and onset ledger.
+RS integral and growing outer allowance remain. [Note12](notes/12_COMPACT_NEGATIVE_TIME_FAMILY_20261025.md),
+[Assessment09](reviews/09_COMPACT_NEGATIVE_FAMILY_ASSESSMENT_20261025.md),
+[next integration packet](research-progress/handoffs/HDA-A02-AN06.md).
+For Edward Baker with substantial LLM assistance, gpt-6.1-sol, ultra,
+chat0003; same-model assessment only, A02 Partial.
+
+
+2026-10-25 — **AN06 compact-negative family integrated.** Maintained
+[manuscript](manuscript/main.tex), working tree; no commit/tag or snapshot.
+Section6.4/Proposition6.2 and Appendix A retain the assessed fixed-family
+rates, explicit endpoint/onset ledger, RS integral and outer loss.
+[Note13](notes/13_AN06_MANUSCRIPT_INTEGRATION_20261025.md),
+[Assessment10](reviews/10_AN06_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261025.md),
+[build record](manuscript/BUILD_RECORD_20261025_A02_AN06.json),
+[whole-chat summary](notes/14_CHAT0003_RESEARCH_SUMMARY_20261025.md).
+33 pages, no warnings; production only, no new result or independent
+validation. Edward Baker with substantial LLM assistance, gpt-6.1-sol,
+ultra, chat0003. A02 Partial; A08-AN01 prepared only, A03 retained.

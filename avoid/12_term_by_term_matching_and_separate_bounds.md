@@ -709,3 +709,79 @@ does not make the joined residual vanish near zero. All shrinking-T
 kernel and derivative losses are retained before absorption; a fixed
 chart center avoids spurious spatial derivatives of the time cutoff.
 [Same-model assessment](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/05_NEGATIVE_BRIDGE_AND_TIME_JOIN_ASSESSMENT_20261025.md).
+
+
+**Initial mismatch survives residual cancellation, 25 October 2026.**
+For Edward Baker with LLM assistance, **gpt-6.1-sol, ultra**.
+[Ansatz Note10](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/10_FIRST_NEGATIVE_TIME_EVOLUTION_CORRECTION_20261025.md)
+states: “The RS term must also improve”. Its first arithmetic evolution
+correction reduces the residual, but leading RS data alone leave the
+old X^-3/4 initial allowance. Retaining K=1 and separately paying the
+full population, complex kernels and tails yields the X^-5/4 solution
+bound. A coefficient size bound does not justify a derivative or cutoff
+recurrence; the bounded RS integral retains that payment explicitly.
+[Same-model assessment](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/07_FIRST_NEGATIVE_CORRECTION_ASSESSMENT_20261025.md).
+
+The [AN04 integration assessment](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/08_AN04_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261025.md)
+preserves that separate initial-error payment and the retained integral
+in manuscript Proposition6.1. It states: “Compilation is production
+evidence, not mathematical validation.” 25 October 2026, gpt-6.1-sol, ultra.
+
+
+**Endpoint dependence is part of a compact-time extension, 25 October 2026.**
+For Edward Baker with LLM assistance, **gpt-6.1-sol, ultra**.
+[Ansatz Note12](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/12_COMPACT_NEGATIVE_TIME_FAMILY_20261025.md)
+states: “the theorem has no endpoint-independent height onset.” Its
+fixed compact-negative family separately pays complex-kernel exponential,
+inverse-time factors, all-mode damping and true/artificial tails before
+retaining the X^-5/4 rate. The displayed constants degenerate as the
+lower endpoint tends to zero or the upper endpoint grows. Do not read
+that fixed-family result as a joint-time or through-zero theorem.
+[Same-model assessment](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/09_COMPACT_NEGATIVE_FAMILY_ASSESSMENT_20261025.md).
+
+
+The [AN06 integration assessment](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/10_AN06_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261025.md)
+preserves this distinction in Proposition6.2 and Appendix A: “Endpoint
+factors are not asserted uniform at tau=0 or B=infinity.” Faithful
+integration and a clean 33-page build do not convert a fixed compact
+family into a through-zero or growing-time theorem. 25 October 2026,
+Edward Baker with substantial LLM assistance, gpt-6.1-sol, ultra.
+
+
+**Fluctuation weight still pays initial data and population, 26 October 2026.**
+For Edward Baker with substantial LLM assistance, actual gpt-6.1-sol,
+ultra. [Recurrence Note03](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/03_FIXED_ORDER_FLUCTUATION_HIERARCHY_20261026.md)
+states: “No q-power is replaced by V before integration.” Its
+[compact successor](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/04_COMPACT_TIME_RECURRENCE_FAMILY_20261026.md)
+keeps the same payment with explicit endpoint dependence. Keep each Gaussian moment rather than replacing q by the growing
+window, and pay the full X^1/4 population plus matched K=2p RS mismatch.
+Zero frozen heat residual alone pays neither. The accepted fixed-p bound
+does not supply growing-order or outer-relative smallness.
+[Same-model assessment](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/02_FIXED_ORDER_HIERARCHY_ASSESSMENT_20261026.md).
+
+
+**Do not inherit fixed-p tail absorption at growing order, 26 October 2026.**
+For Edward Baker with substantial LLM assistance, actual gpt-6.1-sol,
+ultra. [Recurrence Note05](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/05_CONTROLLED_ORDER_GROWTH_AUDIT_20261026.md)
+records at p=floor L that “this gate fails already without its positive
+constant.” The old requirement absorbing every tail into X^-(p+3/4)
+was stronger than outer accuracy needed. Preserve it as a scoped bound
+failure; keep the actual tails, order-dependent factorials and common
+onsets in one ledger before normalizing. The paid growing-order result
+retains all modes and the integral; the old 7/8 tail ceiling is superseded
+only as a conservative estimate, not claimed intrinsic.
+[Same-model assessment](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/04_CONTROLLED_ORDER_GROWTH_ASSESSMENT_20261026.md).
+
+**Evaluation accuracy needs regularity and provider costs, 26 October 2026.**
+For Edward Baker with substantial LLM assistance, actual gpt-6.1-sol,
+ultra. [Recurrence Note06](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/06_COEFFICIENT_ROUNDING_AND_RS_QUADRATURE_20261026.md)
+records: “real size alone gives no quadrature rate”. Named exact
+coefficient identities, derived complex bounds and positive Gauss rules
+pay the missing quadrature step; real-node conditioning separately pays
+requested accuracy. A removable pole does not certify naive quotient
+stability, scalar counts do not pay roundoff, and exact residual does
+not validate independent rounded jets. The conditional specification
+keeps actual scale, phase, node/weight, boundary and rounding costs;
+concrete provider certification remains open. These are scoped failures
+of shortcuts, not impossibility results for a certified evaluator.
+[Same-model assessment](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/05_EVALUATION_ERROR_ASSESSMENT_20261026.md).

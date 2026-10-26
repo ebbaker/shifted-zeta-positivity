@@ -3,6 +3,24 @@
 24 October 2026, America/New_York. Prepared for **Edward Baker** with
 substantial LLM assistance, **gpt-6-astra (Codex), recorded effort max**.
 
+## Related branches — 26 October 2026
+
+- [Ansatz](ansatz/README.md): maintained large-height heat asymptotics,
+  manuscript, and existing analytical results.
+- [Recurrence](recurrence/README.md): the new home for generalized transform
+  components, fluctuation hierarchies and continuous smoothing. Start with
+  its [initial brainstorm](recurrence/brainstorm/01_RECURRENCE_AND_GENERALIZED_TRANSFORM_HIERARCHIES_20261026.md);
+  [overview](recurrence/research-overview/01_RECURRENCE_RESEARCH_OVERVIEW_20261026.md),
+  [progress register](recurrence/research-progress/01_RECURRENCE_RESEARCH_PROGRESS_20261026.md), and
+  [three-round continuation](recurrence/notes/01_ANALYSIS_CONTINUATION_20261026.md)
+  now have saved R01--R03 mathematical returns and same-model internal
+  assessments: fixed p,K=2p, X^-(p+3/4) in the buffered (3,1) norm on
+  declared fixed compact negative-time families. All modes and integral remain.
+
+Organization prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra (Codex), recorded effort max**. No theorem or task-status
+change is made by opening this branch.
+
 ## Latest analytical return - complete accuracy cost and chat summary
 
 25 October 2026. For Edward Baker with substantial LLM assistance,
@@ -461,3 +479,11 @@ compatibility or differentiated-crossover estimate. Entry requires checking
 Sol's actual return; completion is not assumed. Chat 0012's archive was
 verified, including the preceding final response. Prepared for Edward
 Baker with substantial LLM assistance, gpt-6-astra, actual effort xhigh.
+
+Recurrence update, 26 October 2026, gpt-6.1-sol, ultra:
+[Note05](recurrence/notes/05_CONTROLLED_ORDER_GROWTH_AUDIT_20261026.md)
+and [Review04](recurrence/reviews/04_CONTROLLED_ORDER_GROWTH_ASSESSMENT_20261026.md)
+pay controlled-order outer accuracy e^-L²/4 on [1,2] for p=floor(L/2),
+K=2p, with all modes and the bounded RS integral. Same-model internal
+assessment only; evaluator/precision/quadrature and parent statuses
+remain open/unchanged. No manuscript or numerical campaign.

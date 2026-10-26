@@ -265,3 +265,98 @@ exact error and observable forcing identities and prioritizes controlled
 all-time large-height estimates. Notes03--06 retain the statuses above;
 [Progress02](../papers/investigations-5/01_heat_density_asymptotics/ansatz/research-progress/02_EVOLUTION_ASYMPTOTICS_RESEARCH_PROGRESS_20261025.md)
 is the current branch ledger. This is a navigation/status update only.
+
+
+**25 October 2026 — fixed-order negative-time evolution correction (5/01 ansatz).**
+For Edward Baker with LLM assistance, **gpt-6.1-sol, ultra**.
+[Note10](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/10_FIRST_NEGATIVE_TIME_EVOLUTION_CORRECTION_20261025.md)
+is “proved in-note from named classical inputs; same-model internal
+analytical assessment only.” On 1<=T=-t<=2, one evaluated quadratic
+mode correction plus K=1 RS/exact-transfer bounded integral gives
+C |G|X^-5/4 field/j<=3/time and C |G|X^-7/4 residual/residual_z.
+All N modes remain; an integral-free short formula and physical transfer
+are open. The outer allowance X^-5/4 exp(TL²/16) still grows, without
+being an actual error lower bound. [Assessment07](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/07_FIRST_NEGATIVE_CORRECTION_ASSESSMENT_20261025.md).
+
+AN04 integrates that same bounded result into maintained manuscript
+Section6.3, Proposition6.1; [Note11](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/11_AN04_MANUSCRIPT_INTEGRATION_20261025.md)
+and [Assessment08](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/08_AN04_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261025.md)
+record production and same-model fidelity checks. No new estimate or
+mathematical review-status promotion. 25 October 2026, gpt-6.1-sol, ultra.
+
+
+**25 October 2026 — fixed compact-negative-time family (5/01 ansatz).**
+For Edward Baker with LLM assistance, **gpt-6.1-sol, ultra**.
+[Note12](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/12_COMPACT_NEGATIVE_TIME_FAMILY_20261025.md)
+is “proved in-note from the named classical inputs of Notes05/10;
+same-model internal analytical assessment only.” Every declared fixed
+0<tau<=T<=B has C(tau,B,r,b)|G|X^-5/4 field/j<=3/time and
+C(tau,B,r,b)|G|X^-7/4 residual/residual_z, with explicit endpoint
+factors and sufficient onsets. All modes and the bounded RS integral
+remain. Constants degenerate at zero/infinite endpoints, and outer
+allowances still grow at fixed T. No through-zero/growing-time or
+physical-transfer theorem. [Assessment09](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/09_COMPACT_NEGATIVE_FAMILY_ASSESSMENT_20261025.md).
+
+
+25 October 2026, Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol, ultra**: [AN06 Note13](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/13_AN06_MANUSCRIPT_INTEGRATION_20261025.md)
+records faithful integration of Note12/Review09 as manuscript
+Proposition6.2 and explicit endpoint/onset Appendix A: “no new
+mathematical estimate or review-status promotion.” The 33-page clean
+build is production evidence. [Whole-chat summary](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/14_CHAT0003_RESEARCH_SUMMARY_20261025.md)
+collects AN03--AN06, retained integral/outer loss and unpaid physical
+consumer. A02 Partial and parent statuses unchanged; A08-AN01 is
+prepared only for [1/2,1].
+
+
+**26 October 2026 — recurrence fixed-order/compact-family comparison (5/01).**
+For Edward Baker with substantial LLM assistance, actual **gpt-6.1-sol,
+ultra**. [Recurrence Note02](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/02_FIRST_FINITE_FLUCTUATION_COMPARISON_20261026.md),
+[Note03](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/03_FIXED_ORDER_FLUCTUATION_HIERARCHY_20261026.md)
+and [Note04](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/04_COMPACT_TIME_RECURRENCE_FAMILY_20261026.md)
+are **proved in-note from named classical inputs; same-model internal
+assessments only**. Every fixed p>=1 with K=2p has natural-scale
+C(p,tau,B,r,b)|G|X^-(p+3/4) field/spatial-through-three/direct-time
+error on declared fixed 0<tau<=T=-t<=B; p=2,K=4 gives X^-11/4 on [1,2].
+No logarithmic loss. Explicit weighted remainder, full X^1/4 population,
+real initial RS mismatch, true/artificial tails and endpoint/onset costs
+are paid. The frozen residual and residual_z vanish exactly. All N modes
+and the bounded completion integral remain. Source limit: “The quantifiers
+are fixed p, then sufficiently large X.” [Review03](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/03_COMPACT_TIME_RECURRENCE_ASSESSMENT_20261026.md)
+links the sequence and scope. No growing-order, endpoint-uniform, useful
+cost, physical-transfer or RH result; HDA-A02 and parent statuses unchanged.
+
+
+**26 October 2026 — controlled fluctuation-order growth (5/01 recurrence).**
+For Edward Baker with substantial LLM assistance, actual **gpt-6.1-sol,
+ultra**. [Recurrence Note05](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/05_CONTROLLED_ORDER_GROWTH_AUDIT_20261026.md)
+is **proved in-note from named inputs; same-model internal analytical
+assessment only**, with [Review04](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/04_CONTROLLED_ORDER_GROWTH_ASSESSMENT_20261026.md).
+The actual Bell/moment/RS costs have logarithms O((p+1)log(p+2)), and
+unabsorbed tails/common onsets give a simultaneous ledger for each fixed
+finite c>0,1<=p<=cL,K=2p on full buffered [1,2]. Chosen p=floor(L/2)
+pays e^-L²/4 outer-envelope field/spatial-through-three/first-time error.
+All N modes, exact transfer and bounded RS integral remain; residual and
+residual_z are zero on frozen charts. Source limit: “An upper order cap
+alone does not promise outer decay.” The full strict rate range and
+fixed-theta tail costs are in the note. Formal scalar arithmetic
+O(p³+Np) excludes providers/integral/precision/bit costs. Broad R05
+remains Partial; no evaluator, growing-time, physical-transfer or RH
+result. Earlier fixed-p statements keep their original scope.
+
+**26 October 2026 — conditional recurrence evaluation-error specification.**
+For Edward Baker with substantial LLM assistance, actual **gpt-6.1-sol,
+ultra**. [Recurrence Note06](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/06_COEFFICIENT_ROUNDING_AND_RS_QUADRATURE_20261026.md)
+contains **proved deterministic bounds and a conditional evaluator
+accuracy specification**, with [same-model internal Review05](../papers/investigations-5/01_heat_density_asymptotics/recurrence/reviews/05_EVALUATION_ERROR_ASSESSMENT_20261026.md).
+At p=floor(L/2),K=2p, full-buffer [1,2], explicit coefficient/carrier,
+scale, rounding, RS-data and geometry budgets suffice for e^-L²/4 total
+outer error. Derived coefficient regularity and analytic Gauss bounds pay
+O(L²) nodes per branch, at most two. All N modes and the real bounded
+integral remain. Requested accuracy 3L²/(8log2)+O(Llog L) bits is under
+certified data/rounding contracts; formal RS-only O(L^5) excludes provider
+bit costs. Source limit: “No concrete library or implemented evaluator
+has been verified here”. Broad R05 Partial at certified primitive/scale,
+Gauss geometry and frozen descriptor handling; no runtime, RH or physical
+transfer conclusion. Earlier exact residual statements do not certify
+independently rounded channel outputs.

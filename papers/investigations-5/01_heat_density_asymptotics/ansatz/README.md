@@ -9,11 +9,32 @@ error bounds, with fixed-time, compact-time and joint time-height
 regimes treated separately. The fine regulator transition near t=64
 remains important supporting work.
 
+26 October 2026 organization, **gpt-6-astra (Codex), recorded effort max**:
+the generalized-transform and fluctuation discussion now has a dedicated
+[recurrence branch](../recurrence/README.md) and
+[opening brainstorm](../recurrence/brainstorm/01_RECURRENCE_AND_GENERALIZED_TRANSFORM_HIERARCHIES_20261026.md).
+Historical Notes15–16 remain here as source records. The recurrence
+[overview](../recurrence/research-overview/01_RECURRENCE_RESEARCH_OVERVIEW_20261026.md),
+[register](../recurrence/research-progress/01_RECURRENCE_RESEARCH_PROGRESS_20261026.md) and
+[three-round continuation](../recurrence/notes/01_ANALYSIS_CONTINUATION_20261026.md)
+now own the hierarchy analysis sequence. Progress02 retains the wider
+ansatz statuses and points to the recurrence register for execution.
+
 - [Maintained manuscript](manuscript/main.tex) and [build guide](manuscript/README.md)
 - [Generated reading PDF](../../../../output/pdf/heat_density_ansatz/heat_density_ansatz.pdf)
 - [Current research overview: Overview02](research-overview/02_EVOLUTION_ASYMPTOTICS_RESEARCH_OVERVIEW_20261025.md)
 - [Sole live progress register: Progress02](research-progress/02_EVOLUTION_ASYMPTOTICS_RESEARCH_PROGRESS_20261025.md)
-- [Primary next packet: HDA-A02-AN03 r1](research-progress/handoffs/HDA-A02-AN03.md)
+- [Active prepared hierarchy comparison: HDA-R01-AN01 r1](../recurrence/research-progress/handoffs/HDA-R01-AN01.md)
+- [Prepared positive-time comparison: HDA-A08-AN01 r1](research-progress/handoffs/HDA-A08-AN01.md)
+- [This chat's complete research summary: Note14](notes/14_CHAT0003_RESEARCH_SUMMARY_20261025.md)
+- [AN06 compact-family integration: Note13](notes/13_AN06_MANUSCRIPT_INTEGRATION_20261025.md)
+- [AN06 integration assessment](reviews/10_AN06_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261025.md)
+- [Compact-negative-time family: Note12](notes/12_COMPACT_NEGATIVE_TIME_FAMILY_20261025.md)
+- [Compact-family assessment](reviews/09_COMPACT_NEGATIVE_FAMILY_ASSESSMENT_20261025.md)
+- [AN04 manuscript integration: Note11](notes/11_AN04_MANUSCRIPT_INTEGRATION_20261025.md)
+- [Integration assessment](reviews/08_AN04_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261025.md)
+- [First negative-time correction: Note10](notes/10_FIRST_NEGATIVE_TIME_EVOLUTION_CORRECTION_20261025.md)
+- [Correction assessment](reviews/07_FIRST_NEGATIVE_CORRECTION_ASSESSMENT_20261025.md)
 - [Retained supporting regulator packet: HDA-A03-AN01 r1](research-progress/handoffs/HDA-A03-AN01.md)
 - [Evolution equations and negative-time modes: Note08](notes/08_EVOLUTION_RESIDUAL_AND_NEGATIVE_TIME_MODES_20261025.md)
 - [Rewrite and priority record: Note09](notes/09_EVOLUTION_MANUSCRIPT_AND_PRIORITY_REVISION_20261025.md)
@@ -30,15 +51,38 @@ asymptotic bound or all-time theorem. [Overview01](research-overview/01_HIGH_HEI
 and [Progress01](research-progress/01_HIGH_HEIGHT_ANSATZ_RESEARCH_PROGRESS_20261025.md)
 retain the historical development and are superseded for live planning.
 
-Next owner: **Analysis — Sol**, prepared and not dispatched.
+25 October 2026 continuation: **gpt-6.1-sol, recorded effort ultra**,
+chat0003. Note10 improves the 1<=T=-t<=2 natural-scale field, j<=3 and
+time allowance to C |G|X^-5/4, with actual residual C |G|X^-7/4. This
+is a fixed-order Gaussian-moment formula with a retained bounded RS
+integral and all N modes. The remaining outer allowance
+X^-5/4 exp(TL²/16) still fails at fixed T; physical transfer and an
+integral-free formula remain open. Same-model internal assessment only.
 
-> Continue HDA-A02-AN03 r1 under Overview02 and Progress02. Derive one
-> explicit negative-time evolution correction on 1<=T<=2 and prove an
-> improved natural-scale field/jet/time error, with its actual residual
-> and honest outer-scale conversion. Retain all arithmetic modes and
-> canonical initial corrections; stop at the first precise unpaid estimate.
+AN04 has integrated the assessed result in manuscript Section6.3,
+Proposition6.1. The reading PDF builds to 29 pages without warnings;
+the production record does not upgrade mathematical review status.
+
+AN05 now proves the same powers uniformly on every declared fixed
+0<tau<=T<=B, with explicit endpoint factors and onset gates. Note12
+retains all modes, K=1 RS data and bounded correction integral; no
+zero-time/growing-time uniformity or physical transfer follows. AN06
+has integrated this family in Section6.4/Proposition6.2 and Appendix A.
+The current reading copy is 33 pages, with no warnings and all-page visual
+checks; all 85 inherited mathematical blocks are preserved. This is
+integration and production evidence, with no new estimate or review upgrade.
+
+Historical next-owner recommendation, 25 October 2026, before the
+26 October hierarchy discussion: **Analysis — Sol**, A08-AN01 prepared
+only, not dispatched, for one bounded canonical positive-time estimate
+on [1/2,1]. Current planning is in Progress02 and the recurrence guide.
+
+> Execute HDA-A08-AN01 r1. Pin actual source hypotheses and derive a
+> canonical buffered field comparison on [1/2,1], with spatial j<=3,
+> direct first time and actual residual. Pay every arithmetic/contour
+> term; stop at one proved slab or a precise failed estimate.
 
 The PDF is a generated local reading copy in the ignored output tree;
 rebuild it in a fresh checkout. Parent chat0022 retains its original
-registration. Ansatz chats0001 and0002 have their unique histories here;
+registration. Ansatz chats0001--0004 have their unique histories here;
 no historical chat is relocated, duplicated or renumbered.

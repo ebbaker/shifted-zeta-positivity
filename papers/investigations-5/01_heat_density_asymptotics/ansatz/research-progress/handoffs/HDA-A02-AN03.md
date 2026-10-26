@@ -105,6 +105,37 @@ No automatic dispatch, model change or manuscript snapshot.
 
 ## Return / disposition
 
-Pending. Preparation supplies no improved negative-time theorem or
-physical transfer. HDA-A02 remains Partial; parent HDA-17 Partial,
-HDA-18 Gated and HDA-20 unfulfilled are unchanged.
+**25 October 2026 — CLOSED at bounded gain/two-scale scope.** Returned by
+Analysis — Sol, **gpt-6.1-sol, recorded effort ultra**, ansatz chat0003,
+thread `01a17626-abf5-7a90-9ba2-7a2395254aee`.
+
+[Note10](../../notes/10_FIRST_NEGATIVE_TIME_EVOLUTION_CORRECTION_20261025.md)
+derives the explicit arithmetic correction
+`h exp(T beta²)[1+gamma(T+2T² beta²)]`, matching exact gamma initial
+modes, and retains K=1 RS data plus exact adjacent transfers in a bounded
+correction integral. On the full fixed charts, 1<=T<=2, field, spatial
+j<=3 and direct first time errors improve to **C |G|X^-5/4**, without
+log losses; actual residual and its first spatial derivative are
+**C |G|X^-7/4**. Canonical initial mismatch, full population and all tails
+are paid independently of residual cancellation.
+
+Acceptance is in the **fixed-order Gaussian-moment/retained-RS-integral
+class**, not an integral-free elementary correction of every part of F_N.
+The evaluated mode correction is not a full unevaluated Duhamel term.
+The remaining outer-relative allowance is
+`X^-5/4 exp(TL²/16)`, still growing at every fixed T: a failure of this
+finite-order allowance, not an actual error lower bound or no-go theorem.
+Parent PE37--39 residual forcing is identified; its first unpaid consumer
+is a regulator-uniform weak/collar transfer for this model.
+
+[Assessment07](../../reviews/07_FIRST_NEGATIVE_CORRECTION_ASSESSMENT_20261025.md)
+records same-model internal analytical acceptance only; the
+[work record](../../numerics/AN03_ANALYTICAL_WORK_RECORD_20261025.json)
+binds provenance. No numerical/symbolic execution, physical transfer,
+onset evaluation, useful cost theorem or specialist review.
+
+HDA-A02 remains **Partial**; parent HDA-17 Partial, HDA-18 Gated and
+HDA-20 unfulfilled are unchanged. A03-AN01 is preserved. Next owner
+**Analysis — Sol**, [AN04 r1](HDA-A02-AN04.md), assessed-result manuscript
+integration, prepared and not dispatched. No resistant mechanism requires
+Astra for this routine follow-through.

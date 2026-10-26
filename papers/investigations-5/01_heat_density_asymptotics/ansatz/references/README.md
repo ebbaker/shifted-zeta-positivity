@@ -155,3 +155,134 @@ Size 260914 bytes; SHA-256
 ccc97d89c36337a3b11897b2efc51c1b2ef8b89ed659ddb3b1fa4ffbac8e2d8c.
 This identifies the retrieved bytes, not mathematical validity; the
 public source remains the portable reference.
+
+## HDA-A02-AN03 checked scope — 25 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+recorded effort ultra**, chat0003. Reopened the existing version-pinned
+Polymath v2 primary HTML, equations36--38 and Proposition6.2, especially
+54/56 at sigma=1/2 and K=1. These give the two retained RS coefficients
+and initial remainder used in Note10 EC4--5. The coefficient C1 is named
+by that classical construction; its size bound is not used to infer
+derivatives, analyticity or endpoint parity. Keeping the real RS data
+inside the bounded correction integral bypasses those unacquired inputs.
+No negative-time evolved theorem or positive-time error is imported.
+DLMF5.11 sectorial gamma inputs were reopened; Note10 derives its own
+evolution correction, all-mode error and tails. Existing PDF provenance
+above and in the parent catalog is retained; no new PDF or new article.
+
+## HDA-A02-AN05 reused input scope — 25 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol,
+recorded effort ultra**, chat0003. Note12 reuses only the previously
+inspected real K=1, sigma=1/2 RS import of Notes05/10 and their sectorial
+gamma inputs. It derives the endpoint-dependent kernel, population,
+residual and tail estimates directly. No new external theorem, C1
+derivative/endpoint identity, negative-time literature bound or PDF is
+imported. Existing primary-source links and reading-copy provenance
+remain canonical above.
+
+
+## AN06 discussion and next-step source check — 26 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6-astra,
+recorded effort max**, ansatz chat0004. Reopened the existing pinned
+Polymath v2 HTML: exact Gaussian identity35, contour decomposition36--38,
+initial RS Proposition6.2, and positive-time Proposition9.1. The latter's
+two-arm estimate requires 0<t<=1/2, |y|<=10 and eventual x>=exp(C/t);
+it does not supply [1/2,1] or arbitrary larger buffers by substitution.
+DLMF5.11's sectorial gamma/digamma expansions were also reopened.
+[Review11](../reviews/11_CURRENT_ANSATZ_AND_NEXT_STEPS_REVIEW_20261026.md)
+uses these checks for normalization and scope. No new article, PDF,
+coefficient regularity input or independent source-proof audit.
+
+## Generalized-transform discussion — 26 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6-astra, recorded
+effort max**, ansatz chat0004. These sources support the comparisons in
+[Note15](../notes/15_GENERALIZED_TRANSFORMS_AND_HEAT_COMPONENT_HIERARCHIES_20261026.md).
+They are contextual references, not imports of new heat-density estimates.
+The source inspections were selective; no complete literature survey,
+novelty claim, or independent proof audit is implied.
+
+- **R. S. Ward**, *Infinite-Parameter ADHM Transform*, arXiv:2006.01459v2,
+  26 July 2020; published in *Quarterly Journal of Mathematics* 72(1–2),
+  407–415 (2021), DOI [10.1093/qmath/haaa054](https://doi.org/10.1093/qmath/haaa054).
+  [Pinned primary HTML](https://arxiv.org/html/2006.01459v2).
+  Checked Introduction and selected Sections 2–3, including the stated
+  transform analogy, ADHM constraints/reconstruction (5)–(8), and the
+  boundary-data interpretation (12)–(13). The setting is self-dual gauge
+  fields with the stated geometric conditions. No theorem transfers to
+  xi heat evolution. The HTML rendering displays a later automatic date;
+  the pinned arXiv v2 date is 26 July 2020. The Durham metadata verifies
+  the publication identity. The reading copy is listed in the manifest.
+- **M. J. Ablowitz, D. J. Kaup, A. C. Newell, H. Segur**,
+  *The Inverse Scattering Transform–Fourier Analysis for Nonlinear
+  Problems*, *Studies in Applied Mathematics* 53(4), 249–315 (December
+  1974), [DOI](https://doi.org/10.1002/sapm1974534249).
+  Publisher abstract and bibliography inspected: it explicitly presents
+  inverse scattering as an extension of Fourier analysis for its
+  integrable evolution classes. Full text and specific scattering-data
+  normalizations were not checked. No public accessible PDF was
+  established in this inspection; no copy retained.
+- **C. S. Gardner, J. M. Greene, M. D. Kruskal, R. M. Miura**,
+  *Method for Solving the Korteweg-deVries Equation*, *Physical Review
+  Letters* 19, 1095–1097 (6 November 1967),
+  [DOI](https://doi.org/10.1103/PhysRevLett.19.1095).
+  Publisher-indexed abstract/discovery only. Its initial-value method
+  assumes sufficiently rapid approach to a constant at spatial infinity;
+  no unrestricted or periodic-data statement imported. No accessible
+  public reading copy established here.
+- **M. J. Ablowitz, D. J. Kaup, A. C. Newell, H. Segur**,
+  *Method for Solving the Sine-Gordon Equation*, *Physical Review Letters*
+  30, 1262–1264 (18 June 1973),
+  [DOI](https://doi.org/10.1103/PhysRevLett.30.1262).
+  Publisher-indexed abstract and authors' institutional bibliographic
+  records inspected. Used only for the inverse-scattering example.
+  Detailed hypotheses and formulas were not checked; no public
+  accessible PDF established in this inspection.
+- **John A. Pople**, *Nobel Lecture: Quantum chemical models*,
+  *Reviews of Modern Physics* 71, 1267–1274 (1 October 1999),
+  [DOI](https://doi.org/10.1103/RevModPhys.71.1267).
+  Inspected publisher metadata and the indexed official Nobel lecture
+  passage headed “Correlated models,” printed p.253, on reference
+  determinants, virtual orbitals and correlation approximations.
+  [Official lecture PDF](https://www.nobelprize.org/uploads/2018/06/pople-lecture.pdf).
+  Used only for the interpretation of approximation choices; no
+  convergence, monotonicity, or accuracy theorem imported. Full reading
+  was not performed. Official Nobel and APS PDF retrieval returned403;
+  no local copy retained.
+- **Ali Akbari, Mohammad Javad Hashemi, Risto M. Nieminen, Robert van
+  Leeuwen, Angel Rubio**, *Challenges in Truncating the Hierarchy of
+  Time-Dependent Reduced Density Matrices Equations: Open Problems*,
+  arXiv:1204.4395, first submitted 19 April 2012.
+  [Primary record](https://arxiv.org/abs/1204.4395).
+  Abstract inspected: coupled one-/two-body evolution, higher-order
+  closure, and compatibility/positivity issues in the studied fermionic
+  dynamics. The conclusions are scoped to that setting. A v1 PDF was
+  retained, but its full text was not read. No universal statement that
+  every closure fails and no quantitative closure bound imported.
+- **Michael Updike and Joshua Burby**, *A BBGKY-like Hierarchy for
+  Quantum Field Theories*, arXiv:2310.10940v1, 17 October 2023.
+  [Primary record](https://arxiv.org/abs/2310.10940v1).
+  Abstract-only contextual discovery: hierarchies and finite closures
+  for reduced density matrices. No Hamiltonian or approximation theorem
+  imported. A v1 reading copy is retained; full text not read.
+- **NIST DLMF §18.12**, [equation18.12.15](https://dlmf.nist.gov/18.12.E15).
+  Checked the physicists' Hermite generating function. Note15 obtains
+  its Gaussian moments by elementary differentiation. No orthogonality,
+  completeness, convergence rate, or global basis claim is imported.
+- **S. K. Donaldson and P. B. Kronheimer**, *The Fourier Transform and
+  ADHM Construction*, chapter3 of *The Geometry of Four-Manifolds*,
+  Oxford University Press (1990), pp.75–125,
+  [publisher record](https://academic.oup.com/book/52942/chapter-abstract/421958992),
+  DOI10.1093/oso/9780198535539.003.0003. Publisher-indexed abstract and
+  title discovered; direct chapter access failed. Contextual terminology
+  only, not an inspected theorem or an attribution of exact words to
+  Atiyah. No PDF retained.
+
+External PDF provenance, retrieval26 October2026, is recorded in
+[the small manifest](TRANSFORM_REFERENCE_RETRIEVAL_20261026.json).
+Files live under /Users/Shared/szp-archive/heat-density-asymptotics/references/.
+Their hashes identify bytes, not mathematical validity. No third-party
+PDF is stored in Git; all canonical public links remain above.

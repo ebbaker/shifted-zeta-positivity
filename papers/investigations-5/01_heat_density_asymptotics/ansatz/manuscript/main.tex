@@ -47,7 +47,16 @@ arithmetic modes' damping and phase drift explicit.
 The existing bounded results are retained: a corrected positive-time
 carrier on \([32,33]\), a buffered signed crossover through zero,
 two distinct accuracy scales on \(1\le -t\le2\), and a chartwise
-join on \([-2,0]\). We display the forcing that an ansatz residual
+join on \([-2,0]\). A first evaluated evolution correction, retaining
+one further Riemann--Siegel term and a bounded correction integral,
+improves the fixed-negative-time field, spatial jets through three and
+first time error to \(O(|G|X^{-5/4})\). Its actual residual is
+\(O(|G|X^{-7/4})\); the remaining outer-relative allowance still grows
+at fixed negative time. The exact-gamma model now extends uniformly
+to every declared fixed compact negative interval bounded away from
+zero, with explicit endpoint factors and sufficient onset gates.
+Those factors deteriorate toward zero or infinite time. We display
+the forcing that an ansatz residual
 induces in the physical potential, density and current equations.
 Improving and extending the field and derivative estimates is the
 primary research task. The regulator transition near \(t=64\) remains
@@ -58,18 +67,18 @@ physical-transfer estimate is asserted.
 \end{abstract}
 \noindent\textbf{LLM acknowledgement.}
 Drafted for Edward Baker with substantial LLM assistance. The opening
-draft was prepared with GPT-6 Astra (\texttt{gpt-6-astra}), recorded
-effort \texttt{max}, in parent research chat0022. Ansatz Notes03--06
-and their bounded estimates were prepared with GPT-6.1 Sol
-(\texttt{gpt-6.1-sol}), recorded effort \texttt{ultra}, in ansatz
-chat0001, with same-model internal checks. Note07 summarizes that
-round. The evolution perspective in Note08 and this rewrite were
-prepared with GPT-6 Astra, recorded effort \texttt{max}, in ansatz
-chat0002. This rewrite adds exposition and exact residual identities;
-it does not upgrade the mathematical review status. Author verification
-and independent specialist review remain necessary. No numerical or
-machine-symbolic research was executed for the rewrite; compilation
-and rendered-page inspection are production checks.
+was prepared with GPT-6 Astra (\texttt{gpt-6-astra}), recorded effort
+\texttt{max}, in parent chat0022. Notes03--06 used GPT-6.1 Sol
+(\texttt{gpt-6.1-sol}), effort \texttt{ultra}, in ansatz chat0001;
+Note07 summarizes that round. The evolution rewrite, Notes08--09,
+used GPT-6 Astra, effort \texttt{max}, in chat0002. The correction and
+compact-family results (Notes10/12, Reviews07/09), and their integrations
+AN04/AN06 (Notes11/13), used GPT-6.1 Sol, effort \texttt{ultra}, in
+chat0003. Their status remains proved in-note from named classical
+inputs, with same-model internal analytical assessment only. Author
+verification and independent specialist review remain necessary.
+No numerical or machine-symbolic research was executed for this
+integration; compilation and rendered-page checks are production evidence.
 \newpage
 \begingroup
 \small
@@ -99,9 +108,13 @@ including intervals crossing zero;
 possibly unbounded positive or negative time, and controlled overlaps.
 \end{enumerate}
 None follows by substituting a moving time into a fixed-time remainder.
-The immediate bounded test is an evolution-guided improvement at
-intermediate negative times; it is a first step toward this wider
-objective, not a restriction of it.
+The first evolution-guided improvement at intermediate negative times
+is now proved at a bounded natural-scale scope in
+Proposition~\ref{prop:first-negative-correction}. The exact-gamma
+family is now controlled on every declared fixed compact negative
+interval bounded away from zero in
+Proposition~\ref{prop:compact-negative-family}. Through-zero assembly,
+positive-time gaps and joint limits remain part of the wider objective.
 
 The previous research round \cite{ansatz03,ansatz04,ansatz05,ansatz06}
 established useful starting comparisons. It corrected the outer
@@ -119,9 +132,12 @@ Evolution is already used in three substantive ways: the finite
 negative-time representation solves the heat equation exactly on a
 frozen chart; residual cancellation supplies a direct time-error
 estimate; and a time join retains the derivative of its cutoff.
-The next opportunity is to use the same equations systematically to
-derive simpler controlled corrections and understand the evolving
-arithmetic population. Section~\ref{sec:evolution} states the exact
+The first such evaluated arithmetic correction is now supplied by
+Note10 \cite{ansatz10}; it pays a separate canonical initial-data
+improvement and retains the full evolving arithmetic population.
+Note12 \cite{ansatz12} makes the fixed compact-negative-time endpoint
+and onset dependence explicit. Further corrections, through-zero
+assembly and outer-scale resummation remain open. Section~\ref{sec:evolution} states the exact
 error equation and the stability obligations that make this program
 quantitative. Section~\ref{sec:observable-evolution} then records how
 the residual enters the physical observables.
@@ -854,20 +870,362 @@ term of the signed sum, justify dropping the RS correction, or establish
 a universal transition time. The full-population bounds used in
 Note05 must remain in any proposed correction.
 
-The next bounded target is a fixed-order correction on \(1\le T\le2\)
-with field, spatial jets through order three and first time error
-\(o(|G|X^{-3/4})\). A candidate work target is
-\(|G|X^{-5/4}\) times specified logarithms; this is unproved.
-Matching the next canonical RS initial term may be necessary, because
-reducing the evolution residual does not remove the initial remainder.
-Even a successful fixed algebraic improvement must still be converted
-to the outer envelope: the factor \(e^{TL^2/16}\) remains. An
-outer-scale resummation and extension to arbitrary compact negative
-intervals are further tasks.
+\subsection{One evaluated correction at fixed order}
+\label{sec:negative-first-correction}
+Ansatz Note10, assessed in Review07 \cite{ansatz10,review07}, now pays
+the first natural-scale improvement. Freeze \(L,N\) as above and
+\(V=8L\), \(I_X=[X-V,X+V]\). The chart radii are
+\(r=\ell+2\), \(b=1+h+2\), with an extra analytic unit.
+For \(\epsilon=\pm1\), \(n\le N\), define target-dependent exact modes
+\begin{align}
+ w_\epsilon(z)&=(1+\epsilon iz)/2,&
+ h_{\epsilon n}(z)&=\Mc(w_\epsilon(z))n^{-w_\epsilon(z)},\\
+ \beta_{\epsilon n}(z)&=\frac{\epsilon i}{2}
+             [\alpha(w_\epsilon(z))-\log n],&
+ \gamma_\epsilon(z)&=\beta_{\epsilon n}'(z)
+                    =-\alpha'(w_\epsilon(z))/4.
+ \label{eq:first-mode-data}
+\end{align}
+The curvature \(\gamma_\epsilon\) is independent of \(n\).
+The evaluated first evolution correction is
+\begin{equation}
+ \mathcal A_{\epsilon n}(T,z)
+ =h_{\epsilon n}(z)e^{T\beta_{\epsilon n}(z)^2}
+ \left[1+\gamma_\epsilon(z)
+          \{T+2T^2\beta_{\epsilon n}(z)^2\}\right].
+ \label{eq:first-evaluated-correction}
+\end{equation}
+It matches the exact gamma mode at \(T=0\).
+
+The initial RS datum must also improve. For real \(u\in I_X\) put
+\(a_u=\sqrt{u/(4\pi)}\), \(m=m(u)=\lfloor a_u\rfloor\),
+\(p_u=1-2(a_u-m)\), \(s_u=(1+iu)/2\), and
+\(U_u=e^{-i\{(u/4)\log(u/(4\pi))-u/4-\pi/8\}}\).
+Retain \(K=1\) in Polymath Proposition~6.2 \cite{polymath}:
+\begin{align}
+ R_{m,1}(u)&=2\Re\left\{(-1)^{m-1}\Mc(s_u)U_u a_u^{-1/2}
+              [C_0(p_u)+a_u^{-1}C_1(p_u,1/2)]\right\},\\
+ Q_{X,1}(u)&=S_{m(u)}(u)-S_N(u)+R_{m(u),1}(u),\\
+ \mathcal I_1(T,z)&=\frac1{\sqrt{4\pi T}}\int_{I_X}
+                 e^{-(z-u)^2/(4T)}Q_{X,1}(u)\dd u.
+ \label{eq:first-rs-integral}
+\end{align}
+The \emph{exact} adjacent transfer \(S_m-S_N\) remains in the real
+initial data. Under \(a(X+V)-a(X-V)<1\), at most one threshold occurs.
+Its partitions and both endpoints are frozen independently of \(z,T\),
+so \((\mathcal I_1)_T=(\mathcal I_1)_{zz}\) exactly. No regularity or
+endpoint identity for \(C_1\) is inferred from its size bound.
+Define the fixed-order representation
+\begin{equation}
+ F_X^{[1]}(-T,z)=\sum_{\epsilon=\pm1}\sum_{n\le N}
+                  \mathcal A_{\epsilon n}(T,z)+\mathcal I_1(T,z).
+ \label{eq:first-negative-model}
+\end{equation}
+This is a Gaussian-moment formula with a retained bounded RS integral.
+It contains all \(N\) modes. The integral uses named initial
+coefficients and exact transfers, not an unknown remainder or a full
+unevaluated Duhamel forcing.
+
+\begin{proposition}[Fixed-order natural-scale improvement]
+\label{prop:first-negative-correction}
+Uniformly for \(1\le T\le2\), on the full fixed buffered charts, for
+sufficiently large \(X\) depending on those buffers,
+\begin{align}
+ |\partial_z^j(H-F_X^{[1]})(-T,z)|
+       &\le C_j|G(z)|X^{-5/4},&&0\le j\le3,
+       \label{eq:first-negative-jets}\\
+ |\partial_t(H-F_X^{[1]})(-T,z)|
+       &\le C|G(z)|X^{-5/4},
+       \label{eq:first-negative-time}\\
+ |\mathfrak r_{F_X^{[1]}}|+|\partial_z\mathfrak r_{F_X^{[1]}}|
+       &\le C|G(z)|X^{-7/4},
+       \label{eq:first-negative-residual}
+\end{align}
+where \(\mathfrak r_F=F_t+F_{zz}\). There is no logarithmic loss.
+Status is proved in-note from named classical inputs, with same-model
+internal assessment only. Constants and onset are not numerically
+instantiated. No RH or simplicity premise is used.
+\end{proposition}
+
+\begin{proof}
+First derive the correction, separately from proving solution error.
+Suppress the mode indices; set \(f_0=he^{T\beta^2}\),
+\(\gamma=\beta'\), \(\eta=\beta''\), and \(p=(f_0)_z/f_0\).
+Direct differentiation gives
+\begin{align}
+ p&=\beta+2T\beta\gamma,\\
+ r_0:=\frac{(f_0)_T-(f_0)_{zz}}{f_0}
+   &=-\gamma(1+4T\beta^2)+r_2,\\
+ r_2&=-2T(\gamma^2+\beta\eta)-4T^2\beta^2\gamma^2.
+ \label{eq:first-product-data}
+\end{align}
+The product equation \eqref{eq:negative-correction-hierarchy} selects
+\(c=\gamma(T+2T^2\beta^2)\), since
+\(c_T=\gamma(1+4T\beta^2)\). The full residual is exactly
+\begin{equation}
+ \frac{\mathcal A_T-\mathcal A_{zz}}{f_0}
+       =r_2+r_0c-c_{zz}-2pc_z.
+ \label{eq:first-exact-residual}
+\end{equation}
+In particular transport and coefficient derivatives have not vanished.
+Sectorial gamma bounds give
+\(\gamma=O(X^{-1})\), \(\eta=O(X^{-2})\),
+\(\beta'''=O(X^{-3})\). More explicitly,
+\[
+ \begin{aligned}
+ A&=T+2T^2\beta^2,&c_z&=\eta A+4T^2\beta\gamma^2,\\
+ c_{zz}&=\beta'''A+12T^2\beta\gamma\eta+4T^2\gamma^3.
+ \end{aligned}
+\]
+Thus \(|\mathcal A_T-\mathcal A_{zz}|
+\le C|f_0|X^{-2}(1+|\beta|^4)\).
+
+For every fixed integer \(d\ge0\), the \emph{complete} population obeys
+\begin{equation}
+ \sum_{\epsilon,n\le N}|h_{\epsilon n}e^{T\beta_{\epsilon n}^2}|
+       (1+|\beta_{\epsilon n}|)^d
+       \le C_{b,d}G(X)X^{1/4}.
+ \label{eq:first-population}
+\end{equation}
+Indeed \(\Re\beta=-\pi/8+O(X^{-1})\) and
+\(\Im\beta=\epsilon r_n/2+O_b(X^{-1})\).
+Off-axis powers combine into \(e^{C_b r_n}\); a mode is bounded by
+\(CG(X)a_X^{-1/2}e^{C_b r_n-r_n^2/8}\).
+The shell \(j\le r_n<j+1\) contains at most \(2a_Xe^{-j}\)
+integers. Summing every fixed polynomial moment proves
+\eqref{eq:first-population}. It pays the residual just computed.
+Fixed-margin Cauchy on the summed holomorphic residual gives its first
+spatial derivative, proving \eqref{eq:first-negative-residual}; original
+time residual is the negative of the \(T\)-heat defect.
+
+For the solution comparison, the classical \(K=1\) initial remainder
+is independently
+\begin{equation}
+ |H(0,u)-S_{m(u)}(u)-R_{m(u),1}(u)|
+ \le \frac{2^{7/4}1.1^2}{7}G(u)a_u^{-5/2}
+ \le CG(u)X^{-5/4}.
+ \label{eq:first-initial-remainder}
+\end{equation}
+Split \eqref{eq:negative-real-initial} at \(I_X\) and insert this
+datum with \(S_N+Q_{X,1}\). On the enlarged target chart the complex
+kernel modulus contributes bounded \(e^{(b+1)^2/(4T)}\), and moments
+against \(G(u)/G(X)\le Ce^{\pi|u-X|/8}\) are bounded on
+\([1,2]\). The integrated initial error is therefore
+\(CG(X)X^{-5/4}\).
+
+For each arithmetic mode let \(v=u-z\). Sectorial Taylor expansion gives
+\begin{equation}
+ \frac{h(u)}{h(z)e^{\beta(z)v}}
+ =1+\frac{\gamma(z)v^2}{2}
+ +O\!\left(\frac{|v|^3+|v|^4}{X^2}e^{C|v|^2/X}\right).
+ \label{eq:first-local-remainder}
+\end{equation}
+For \(z=x+iy\), comparison to the real initial line retains the
+transverse cancellation
+\[
+ |h(z)e^{-iy\beta(z)}|\le C_b|h(x)|=C_bG(x)n^{-1/2},
+ \qquad |\Re\beta(z)|\le C_b.
+\]
+Bounded weighted Gaussian moments give arithmetic error
+\(CG(X)n^{-1/2}X^{-2}\) per mode. The entire initial population
+\(\sum_{n\le N}n^{-1/2}=O(X^{1/4})\) costs
+\(CG(X)X^{-7/4}\). Completing only the tangent-quadratic polynomial
+to the real line evaluates its quadratic moment as
+\((2T+4T^2\beta^2)e^{T\beta^2}\), exactly
+\eqref{eq:first-evaluated-correction}.
+
+All completions have paid tails. On
+\(V<|u-X|\le X/2\), retain the true initial bound
+\(CX^P e^{-\pi X/8+\pi|u-X|/8}\), for a fixed \(P\).
+Gaussian dominance gives at most
+\(CG(X)X^{P-7/4}(1+V^5)e^{-V^2/64}\).
+Only beyond \(X/2\) use the global complete-source bound, where the
+relative cost is \(CX^C e^{-cX^2+\pi X/8}\).
+Artificial tangent-quadratic tails cost at most
+\(CG(X)X^{1/4}(1+V^7)e^{-V^2/64}\), including all modes.
+Since \(V=8L\), every tail is eventually below the required inverse
+power. No true gamma mode is extended through remote poles, and no
+analytic RS correction is continued along an unbounded ray.
+Together with the initial remainder this proves the field estimate on
+the enlarged chart. Note10 gives the explicit eventual smallness gates.
+
+The target-centered polynomial depends on \(z\); spatial derivatives
+do not merely hit its kernel. Instead fixed-radius Cauchy on the
+holomorphic error, with \(|G|\) varying by only a bounded factor,
+proves \eqref{eq:first-negative-jets} through three without log loss.
+At fixed \(z\), direct \(T\) differentiation does hit only the
+kernel and inserts the bounded-moment polynomial
+\((z-u)^2/(4T^2)-1/(2T)\). Alternatively, the already proved
+second spatial error and residual give
+\(\partial_t(H-F)=-(H-F)_{zz}-\mathfrak r_F\), proving
+\eqref{eq:first-negative-time}. No residual estimate was substituted
+for a solution comparison, and no asymptotic allowance was differentiated.
+The fixed initial-window split is not a spatially localized error PDE;
+there is no omitted commutator or whole-line supremum contraction.
+\end{proof}
+
+An equivalent elementary-arm display, at the theorem's accuracy, retains
+every \(P_{\epsilon n}\) and sets \(B=b_\epsilon-\log n\):
+\begin{equation}
+ D_{\epsilon n}(t,z)=\frac{\epsilon i}{z}
+       \{1/24-t/4-(7t/4)B-(t^2/8)B^2\}.
+ \label{eq:first-elementary-correction}
+\end{equation}
+Replacing \(\mathcal A_{\epsilon n}\) by
+\(P_{\epsilon n}(-T,z)[1+D_{\epsilon n}(-T,z)]\) costs, in total,
+\(C|G|X^{-7/4}\), including the required jets. It keeps both the
+initial gamma phase and slope corrections. The old
+\(e^{\pi^2T/64}\mathcal R_N\) is replaced by \(\mathcal I_1\).
+The elementary product residual cancels its leading \(1/z\) term;
+Note10 EC26 and the full moment bound give the same residual and direct
+time allowances. Keeping only the old leading RS remainder would leave
+\(C|G|X^{-3/4}\), irrespective of improved mode residuals.
+
+The near-cutoff population still has order \(\sqrt X\) modes and
+absolute arm weight comparable to \(GX^{1/4}\); first mode corrections
+total \(O(GX^{-3/4})\). Neither is a leading asymptotic for the signed
+sum. The integral in \eqref{eq:first-rs-integral} remains: an
+integral-free short correction needs separately paid \(C_1\) regularity,
+cutoff transfer and heat approximation, and no useful cost theorem follows.
+
+Finally \(\mathcal E_o(-T,z)\ge c|G(z)|e^{-TL^2/16}\) converts the
+solution and residual bounds only to the respective allowances
+\begin{equation}
+ \delta_1=X^{-5/4}e^{TL^2/16},\qquad
+ \delta_{\mathrm{res},1}=X^{-7/4}e^{TL^2/16}.
+ \label{eq:first-remaining-outer-loss}
+\end{equation}
+Their logarithms are \(TL^2/16-5L/4+O(1)\) and
+\(TL^2/16-7L/4+O(1)\). Both grow at each fixed \(T\in[1,2]\).
+The solution allowance improves by \(X^{-1/2}\), but no vanishing
+outer-relative error is proved. This limits these finite algebraic
+allowances, not all short resummations; it is no actual error lower bound.
+The growing-order result below retains its stronger outer accuracy
+and zero frozen-chart residual.
+
+\subsection{Every declared fixed compact-negative-time family}
+\label{sec:compact-negative-family}
+Note12, assessed in Review09 \cite{ansatz12,review09}, extends the
+exact-gamma correction to every declared pair of fixed constants
+\(0<\tau\le B<\infty\). This is a uniform statement for
+\(\tau\le T\le B\), not a substitution of moving endpoints into a
+fixed-time estimate. Freeze
+\begin{equation}
+ \overline B=\max(1,B),\qquad V_B=8\sqrt{\overline B}\,L,
+ \qquad I_{X,B}=[X-V_B,X+V_B].
+ \label{eq:compact-negative-window}
+\end{equation}
+Use the same \(N\), exact-gamma modes
+\eqref{eq:first-mode-data}, evaluated corrections
+\eqref{eq:first-evaluated-correction}, and real RS/exact-transfer
+datum \(Q_{X,1}\) in \eqref{eq:first-rs-integral}. Define
+\begin{equation}
+ F_{X,B}^{[1]}(-T,z)=\sum_{\epsilon=\pm1}\sum_{n\le N}
+ \mathcal A_{\epsilon n}(T,z)
+ +\int_{I_{X,B}} k_T(z-u)Q_{X,1}(u)\dd u,
+ \quad k_T(v)=\frac{e^{-v^2/(4T)}}{\sqrt{4\pi T}}.
+ \label{eq:compact-negative-model}
+\end{equation}
+All endpoints and real initial partitions are frozen in \(z,T\).
+Every arithmetic mode, the \(K=1\) RS data and exact adjacent transfer
+remain; the bounded integral again has zero heat residual. This family
+is not identified with \(F_X^{[1]}\) when the windows differ.
+
+\begin{proposition}[Endpoint-dependent compact-negative family]
+\label{prop:compact-negative-family}
+For declared fixed \(0<\tau\le B<\infty\), the sufficient onset
+ledger in Appendix~\ref{app:compact-endpoints} yields, uniformly on
+\(\tau\le T\le B\) and the full fixed target charts,
+\begin{align}
+ |\partial_z^j(H-F_{X,B}^{[1]})(-T,z)|
+   &\le C_{r,b,j}\mathcal E\,|G(z)|X^{-5/4},&&0\le j\le3,\\
+ |\partial_t(H-F_{X,B}^{[1]})(-T,z)|
+   &\le C_{r,b}\mathcal E_t\,|G(z)|X^{-5/4},\\
+ |\mathfrak r_{F_{X,B}^{[1]}}|
+       +|\partial_z\mathfrak r_{F_{X,B}^{[1]}}|
+   &\le C_{r,b}\mathcal R\,|G(z)|X^{-7/4}.
+ \label{eq:compact-negative-bounds}
+\end{align}
+The explicit endpoint factors \(\mathcal E,\mathcal E_t,\mathcal R\)
+are defined in \eqref{eq:compact-error-factors}; all remaining constants
+depend only on the fixed buffers and named classical inputs, not on
+\(\tau,B\). There is no logarithmic loss or numerically evaluated
+onset. Status is proved in-note from the named inputs of Notes05/10,
+with same-model internal analytical assessment only.
+\end{proposition}
+
+\begin{proof}
+The exact canonical convolution \eqref{eq:negative-real-initial}
+is split at \(I_{X,B}\). On that window the independent initial
+\(K=1\) remainder \eqref{eq:first-initial-remainder} contributes
+\(CG(X)X^{-5/4}\mathcal M_0\); its direct time derivative costs
+\(CG(X)X^{-5/4}\mathcal T_0\).
+For each arithmetic mode use \eqref{eq:first-local-remainder} and
+the curvature gate in \eqref{eq:compact-local-onsets}, which bounds
+its remainder exponential by \(e\). Transverse cancellation
+\(|h(z)e^{-iy\beta(z)}|\le C|h(x)|=CG(x)n^{-1/2}\) precedes
+absolute estimation. The local arithmetic comparison costs
+\(CG(X)n^{-1/2}X^{-2}(\mathcal M_3+\mathcal M_4)\) per mode;
+summing every \(n\le N\) gives \(GX^{-7/4}\).
+Direct time uses \(\mathcal T_3+\mathcal T_4\), including moments
+through six. The evaluated quadratic Gaussian moment is unchanged.
+
+Appendix~\ref{app:compact-endpoints} pays the full evolved mode
+population and both true and artificial tails before any final
+allowance. The genuine intermediate tail retains its gamma height
+exponential; only beyond distance \(X/2\) is global source
+boundedness used. The two initial-window complements are paid, not
+discarded as localization commutators. Fixed-margin Cauchy on the
+holomorphic error gives spatial jets through three without log loss.
+The target-centered polynomial depends on \(z\), so those derivatives
+cannot be assigned to the kernel alone.
+
+The exact product identity \eqref{eq:first-exact-residual}, with
+the full population \eqref{eq:compact-population}, gives the last
+bound; the integral contributes zero. Cauchy on the summed residual
+gives its first spatial derivative. The independently proved second
+spatial error and \(\partial_t(H-F)=-(H-F)_{zz}-\mathfrak r_F\)
+also yield a time factor \(C_{r,b}(\mathcal E+\mathcal R)\).
+No residual bound replaces the canonical solution comparison, and
+no error allowance is differentiated.
+\end{proof}
+
+The carrier is re-derived on this interval. The gate
+\(C_0B(1+L)/X\le1\), rather than an imported \(T\le2\) constant,
+gives
+\begin{equation}
+ \mathcal E_o(-T,z)\ge c_{r,b}|G(z)|
+       e^{-TL^2/16+\pi^2T/64}.
+ \label{eq:compact-carrier-conversion}
+\end{equation}
+The solution and residual outer-relative allowances therefore retain
+\begin{equation}
+ X^{-5/4}e^{TL^2/16-\pi^2T/64},\qquad
+ X^{-7/4}e^{TL^2/16-\pi^2T/64},
+ \label{eq:compact-outer-loss}
+\end{equation}
+multiplied by the respective paid endpoint factors. They still grow
+at every fixed \(T>0\), limiting these finite algebraic bounds without
+giving an actual error lower bound or a universal no-go for resummation.
+The factors in the appendix deteriorate as \(\tau\downarrow0\) or
+\(B\uparrow\infty\); no endpoint-independent onset, growing-time
+substitution or new through-zero join follows.
+
+On \([\tau,B]\cap[1,2]\), after \emph{both} height onsets, compare
+\(F_{X,B}^{[1]}\) and \(F_X^{[1]}\) through the same canonical
+\(H\), with the sum of their proved allowances. Different windows
+are not identified, even though their integral difference is itself
+an exact heat solution. The elementary display
+\eqref{eq:first-elementary-correction}, the older growing-order model
+and the time join below retain their existing separate scopes.
+This theorem concerns the exact-gamma family, with a retained RS
+integral and no useful-cost or physical-transfer claim.
 
 \subsection{A finite representation at outer-carrier precision}
-The stronger target requires paying both the initial RS remainder and
-all arithmetic heat curvature to growing order. Freeze at the center
+The stronger outer-scale target is paid by the earlier growing-order
+construction \cite{ansatz05}, which remains distinct from
+\eqref{eq:first-negative-model}. It controls both the initial RS
+remainder and arithmetic heat curvature. Freeze at the center
 \begin{equation}
  V=8L,\qquad K=\lceil L\rceil,\qquad J=\lceil3L\rceil,
  \qquad R=X^{1/3},\qquad I_X=[X-V,X+V].
@@ -909,7 +1267,10 @@ Exact \(\Mc\) is retained, rather than a fixed-order Stirling factor.
 
 Already the bounded heat transform of \(f_K\) is a finite representation
 at the requested outer precision. To replace its arithmetic integrals
-by explicit Gaussian moments, set, for \(\epsilon=\pm1\),
+by explicit Gaussian moments, set, for \(\epsilon=\pm1\), the following
+center-frozen data. Here \(w_\epsilon,h_{\epsilon n}\) are evaluated
+at \(X\), in contrast to the target-dependent functions in
+\eqref{eq:first-mode-data}:
 \begin{gather}
  w_\epsilon=(1+\epsilon iX)/2,\quad
  h_{\epsilon n}=\Mc(w_\epsilon)n^{-w_\epsilon},\quad
@@ -1087,13 +1448,15 @@ transfer remain separate obligations.
 
 
 \subsection{Remaining negative-time limits}
-The joined result now covers \(-2\le t\le0\), with its actual
-time defect. A compact family with arbitrary endpoints, a short formula
-at outer-carrier precision, and useful coefficient/precision/quadrature
-cost remain open. The next bounded request applies the evolution
-equations to improve the short negative-time asymptotic with its
-initial and propagated errors. General compact intervals and joint
-negative-time limits remain part of the primary research priority.
+The joined result retains its original \(-2\le t\le0\) scope,
+with actual time defect. Proposition~\ref{prop:compact-negative-family}
+now pays arbitrary declared fixed compact negative intervals bounded
+away from zero at the natural gamma scale, with explicit endpoint
+dependence. It does not itself join those models through zero or
+extend the older joined outer-scale theorem. Integral-free short
+formulas, outer-scale resummation, useful coefficient/precision/quadrature
+cost and joint negative-time limits remain open. The RS integral and
+growing outer-relative allowance are retained.
 
 The negative endpoint Gaussian
 \begin{equation}
@@ -1217,6 +1580,20 @@ The equations for \(H\) have \(\mathfrak r_H=0\). Subtracting
 them retains differences of the already defined covariance and
 regulator terms; it does not define a closure to make them agree.
 
+For the models \eqref{eq:first-negative-model} and
+\eqref{eq:compact-negative-model}, insert their respective actual
+residuals \eqref{eq:first-negative-residual} and
+\eqref{eq:compact-negative-bounds}. In parent notation PE37--PE39,
+\(Z_0=\mathfrak r_F\overline F/D_F\); the potential adds
+\(2\Re K*Z_0\), density adds
+\(\Delta\Re K*Z_0/(2\pi)\), and current balance adds
+\(K*\mathcal D_{\mathfrak r_F}\). The numerator bounds are paid,
+but the first unpaid physical consumer is a regulator-uniform
+weak/collar comparison for this model and \(H\), sufficient for the
+parent PE14/PE35 estimates and the actual signed \(Q\) comparison.
+No simple-root collar or outer-relative smallness has been acquired
+here; the positive-time parent transfer theorem cannot simply be invoked.
+
 For negative time the physical regulator depends on time alone, so
 \(C_F=0\), but \(\mathcal B_F=q_t/D_F\) generally remains.
 The spatial regulator curvature returns near its switch. A spatial
@@ -1330,13 +1707,21 @@ for evolution corrections and compatibility on overlaps.\\
 \(-2\le t\le0\) &
 Note06: chartwise joined field and derivative estimates, with the
 actual time-cutoff residual retained. &
-Shorter controlled corrections; arbitrary compact-negative endpoints
-with explicit dependence on the interval.\\
+Pay a declared join to the separate compact-away-zero family,
+retaining the component and cutoff residuals; no enlarged join is
+claimed here.\\
 \(1\le T=-t\le2\) &
-Note05: short \(|G|X^{-3/4}\) allowance and a separate finite
-outer-scale representation. The latter extends to \(4/L\le T\le2\). &
-First evolution correction improving the natural-scale allowance;
-honest conversion to the outer scale and, later, resummation.\\
+Note10: fixed-order retained-integral formula at \(|G|X^{-5/4}\)
+field/jet/time error and \(|G|X^{-7/4}\) residual. Note05's stronger
+growing-order outer model remains. &
+Integral-free simplification and outer-scale resummation: allowance
+\(X^{-5/4}e^{TL^2/16}\) still grows. Physical weak/collar transfer unpaid.\\
+Declared fixed \(0<\tau\le T\le B\) &
+Note12: exact-gamma retained-integral model with explicit endpoint
+factors/onsets, \(|G|X^{-5/4}\) field/jets/time and
+\(|G|X^{-7/4}\) residual. &
+No zero/growing-time substitution. Constants deteriorate at endpoints;
+outer allowance still grows. Physical transfer remains unpaid.\\
 Fixed positive time &
 Distinct published \(0<t\le1/2\) and parent \(t\ge32\) inputs;
 Note03's corrected buffered theorem on \([32,33]\). &
@@ -1383,13 +1768,16 @@ establish a carrier-relative field error. Likewise, an algebraically
 shorter formula is not an error improvement, and a longer exact heat
 representation need not have useful evaluation cost.
 
-For the immediate negative-time correction, success means a named
-\(o(|G|X^{-3/4})\) bound with the required jets and time error,
-or a precise obstruction identifying the first unpaid initial,
-coefficient, full-population or stability estimate. A claim of outer
-accuracy requires its own allowance. Extending compact intervals,
-covering the missing positive range and matching joint limits remain
-primary tasks even if this first bounded experiment succeeds.
+The first bounded negative-time experiment now attains
+\(C|G|X^{-5/4}=o(|G|X^{-3/4})\) with the required jets and time
+error, in the fixed-order retained-RS-integral class. The initial,
+population, kernel and tail estimates are separate from residual
+cancellation. Its outer allowance \eqref{eq:first-remaining-outer-loss}
+still fails; no actual error lower bound is inferred. The fixed
+compact-negative extension is now paid by
+Proposition~\ref{prop:compact-negative-family}, with the full explicit
+ledger in Appendix~\ref{app:compact-endpoints}. Through-zero assembly,
+the missing positive range and matching joint limits remain primary tasks.
 
 \section{Scope, controls, and continuation priorities}
 These are approximation models for one canonical source. They are
@@ -1419,9 +1807,12 @@ stronger than their evidence.
 The continuation order is now:
 \begin{enumerate}
 \item \textbf{Controlled large-height field asymptotics across time.}
-Begin with one explicit evolution correction at intermediate negative
-time, comparing both accuracy scales. Then extend compact negative
-families, fill the positive-time coverage gap and pay the relevant
+The first explicit evolution correction at intermediate negative
+time is integrated in Section~\ref{sec:negative-first-correction},
+with its two accuracy scales and retained integral. The declared
+fixed compact-negative family is now integrated in
+Section~\ref{sec:compact-negative-family}. Next fill the positive-time
+coverage gap and pay the relevant compact-family and through-zero
 overlaps. Derive joint positive and negative regimes with their own
 uniform bounds; their scope is part of this first priority.
 \item \textbf{Transfer to the physical evolution and assemble regions.}
@@ -1436,13 +1827,203 @@ workstream, not the next task ahead of the asymptotic error estimates.
 Lambert \(W\), the central Gaussian-polynomial model and evaluation
 efficiency are useful when they preserve or strengthen paid estimates.
 \end{enumerate}
-The new accompanying overview and progress register implement this
-order. The next bounded request is HDA-A02-AN03, Analysis---Sol,
-prepared but not dispatched. The regulator packet HDA-A03-AN01 is
-retained for later work. Neither planning change alters any existing
-proof or parent review status.
+The accompanying overview and progress register implement this order.
+HDA-A02-AN03 and AN05 close their bounded analytical results; AN04
+and AN06 record the respective assessed-result integrations. The
+broader HDA-A02 remains Partial. The next prepared bounded field task
+is HDA-A08-AN01, Analysis---Sol, a canonical buffered estimate on the
+first missing positive-time slab \([1/2,1]\). It is prepared only;
+no positive-time extension follows from the negative-time integration. The regulator packet HDA-A03-AN01 remains retained for later
+work. Parent HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled are
+unchanged. No independent review or physical-transfer completion is
+inferred from integration or compilation.
 
+\clearpage
 \appendix
+\section{Endpoint factors and onsets for the compact-negative family}
+\label{app:compact-endpoints}
+This ledger supplies the explicit dependence in
+Proposition~\ref{prop:compact-negative-family}; it is not a new
+zero-time or growing-time theorem. Follow Note12 CF4--CF30
+\cite{ansatz12}, with target \(r=\ell+2\), \(b=1+h+2\), enlarged
+\(R=r+1\), \(Y=b+1\), and radius-\(1/2\) Cauchy disks.
+The \(R\) here is a fixed chart radius, distinct from the
+\(X^{1/3}\) Taylor radius in \eqref{eq:negative-orders}.
+Set \(a_0=\pi/8\). Fixed classical constants
+\(C_0,D,g_1,g_2,g_3,g_->0\) and \(X_\Gamma(R,Y)\), independent
+of \(\tau,B\), are chosen to satisfy the gamma/RS bounds
+\begin{gather}
+ G(X)\ge g_-X^{7/4}e^{-\pi X/8},\quad |G(z)|\asymp_{R,Y}G(X),
+ \quad G(u)/G(X)\le C_0e^{|u-X|},\\
+ \beta=-a_0+\epsilon ir_n/2+\delta,\quad |\delta|\le D/X,
+ \quad |\gamma|\le g_1/X,\quad |\beta''|\le g_2/X^2,
+ \quad |\beta'''|\le g_3/X^3.
+ \label{eq:compact-classical-data}
+\end{gather}
+The initial \(K=1\) mismatch is bounded by \(C_0G(u)X^{-5/4}\) and
+\(|Q_{X,1}(u)|\le C_0G(u)X^{-1/4}\) on the frozen window.
+The classical constants and onset are analytical, not numerically
+instantiated. Real initial boundedness is
+\(M_H=\int_0^\infty|\Phi(v)|\dd v\).
+
+\subsection{Kernel and complete-population factors}
+For integers \(m,d\ge0\), define
+\begin{align}
+ \mathcal M_m&=\sqrt2e^{R+Y^2/(4\tau)+2B}
+ \sum_{k=0}^m\binom mk Y^{m-k}(8B)^{k/2}
+                  \frac{\Gamma((k+1)/2)}{\sqrt\pi},\\
+ \mathcal T_m&=\frac{\mathcal M_m}{2\tau}
+                     +\frac{\mathcal M_{m+2}}{4\tau^2}.
+ \label{eq:compact-kernel-factors}
+\end{align}
+They majorize, respectively,
+\(\int|k_T(z-u)|e^{|u-X|}|u-z|^m\dd u\) and the same integral
+with \(|\partial_Tk_T|\). Indeed \(|u-X|\le|u-x|+R\),
+\(|u-z|\le|u-x|+Y\), and
+\(|u-x|\le (u-x)^2/(8T)+2T\). The resulting real Gaussian
+moments are exactly the Gamma factors displayed above. Time inserts
+\((z-u)^2/(4T^2)-1/(2T)\). Thus the transverse exponential and
+inverse-time costs are explicit.
+
+Put \(c_Y=(Y-1)/2\) and
+\begin{align}
+ W_d(\tau)&=2^d+\frac{3^d}{2}\sum_{k=0}^d\binom dk
+          (8/\tau)^{(k+1)/2}\Gamma((k+1)/2),\\
+ \Pi_d&=C_0^{d+1}e^{Ba_0^2+1+(Y+1)/2}
+                 e^{2(c_Y)_+^2/\tau}W_d(\tau).
+ \label{eq:compact-population-factors}
+\end{align}
+Under the slope gate below,
+\begin{equation}
+ \sum_{\epsilon,n\le N}|h_{\epsilon n}e^{T\beta_{\epsilon n}^2}|
+       (1+|\beta_{\epsilon n}|)^d
+       \le \Pi_dG(X)X^{1/4}.
+ \label{eq:compact-population}
+\end{equation}
+To see this, \(|e^{T\beta^2}|\le e^{Ba_0^2+1}e^{-\tau r_n^2/4}\)
+and \(|h(z)|\le C_0G(X)n^{-1/2}e^{Yr_n/2}\).
+Each shell \(j\le r_n<j+1\) has at most \(2a_Xe^{-j}\)
+integers. Use
+\(c_Yj-\tau j^2/4\le2(c_Y)_+^2/\tau-\tau j^2/8\).
+For \(j\ge1\), \((j+2)^d\le3^dj^d\), and comparison with the
+integral of \((x+1)^de^{-\tau x^2/8}\) over \([j-1,j]\)
+gives \(W_d\). All modes are paid before estimating the signed sum.
+The first correction's absolute population is bounded by
+\(g_1(B\Pi_d+2B^2\Pi_{d+2})G(X)X^{-3/4}\) after the same moment
+weight. This is not a leading asymptotic for \(H\).
+
+The exact residual expansion of \eqref{eq:first-exact-residual} gives
+\(|(\mathcal A_T-\mathcal A_{zz})/(he^{T\beta^2})|
+\le X^{-2}(P_2+X^{-1}P_3)(1+|\beta|)^4\), where
+\begin{align}
+ P_2(B)&=g_1^2(3B+18B^2+8B^3)+4g_2(B+B^2),\\
+ P_3(B)&=g_3(B+2B^2)+g_1g_2(18B^2+12B^3)\notag\\
+       &\hspace{1em}+g_1^3(6B^2+24B^3+8B^4).
+ \label{eq:compact-residual-polynomials}
+\end{align}
+The factors used in the theorem are
+\begin{equation}
+ \begin{gathered}
+ \mathcal E=3+\mathcal M_0+\mathcal M_3+\mathcal M_4,\qquad
+ \mathcal E_t=3+\mathcal T_0+\mathcal T_3+\mathcal T_4,\\
+ \mathcal R=\Pi_4\{P_2(B)+P_3(B)\}.
+ \end{gathered}
+ \label{eq:compact-error-factors}
+\end{equation}
+The fixed Cauchy/gamma comparison constants are absorbed into
+\(C_{r,b,j}\) and \(C_{r,b}\), independently of \(\tau,B\).
+
+\subsection{True and artificial tails}
+Put \(v=u-X\); physical regulator \(q\) is unchanged.
+Define
+\begin{align}
+ \mathcal D_m&=\frac{e^{Y^2/(4\tau)}}{\sqrt{4\pi\tau}}
+       2^m(64B)^{(m+1)/2}\Gamma((m+1)/2),\\
+ \mathcal J_m&=\frac{e^{Y^2/(4\tau)}}{\sqrt{4\pi\tau}}
+ \sum_{k=0}^m\binom mk Y^{m-k}(8B)^{(k+1)/2}\Gamma((k+1)/2).
+ \label{eq:compact-tail-factors}
+\end{align}
+For either family let \(A_m^t=A_m/(2\tau)+A_{m+2}/(4\tau^2)\).
+If \(V_B\ge\max(2R,R+Y+1,32B)\), the kernel with real tilt obeys
+\[
+ -\frac{(v-(x-X))^2}{4B}+|v|\le-\frac{v^2}{32B},\qquad
+ |u-z|^m\le(2|v|)^m\quad(|v|\ge V_B).
+\]
+Its tail moments are at most
+\(\mathcal D_m e^{-V_B^2/(64B)}\le\mathcal D_m e^{-L^2}\),
+with time factor \(\mathcal D_m^t\).
+The genuine moderate field bound retains
+\(C_0X^Pe^{-\pi X/8+\pi|v|/8}\), with \(P=4\) admissible.
+Thus moderate and artificial tail errors, divided by \(G(X)\), are
+respectively at most
+\begin{gather}
+ C_0X^{P-7/4}\mathcal D_0e^{-L^2},\qquad
+ C_0X^{1/4}(\mathcal D_0+g_1X^{-1}\mathcal D_2)e^{-L^2}.
+ \label{eq:compact-near-tails}
+\end{gather}
+For time use \(\mathcal D_0^t,\mathcal D_2^t\).
+Only for \(|v|>X/2\), with \(X\ge4R\), apply the global bound
+\(M_H\). The remote field tail divided by \(G(X)\) is at most
+\begin{equation}
+ \frac{M_H}{g_-}X^{-7/4}\mathcal J_0
+                  e^{\pi X/8-X^2/(128B)},
+ \label{eq:compact-remote-tail}
+\end{equation}
+with \(\mathcal J_0^t\) for time. No exact gamma or analytic RS
+function is continued through remote poles for a polynomial completion.
+
+Set
+\begin{align}
+ A_{\rm mod}&=C_0\max(\mathcal D_0,\mathcal D_0^t),\\
+ A_{\rm art}&=C_0\max(\mathcal D_0+g_1\mathcal D_2,
+                       \mathcal D_0^t+g_1\mathcal D_2^t),\\
+ A_{\rm far}&=(M_H/g_-)\max(\mathcal J_0,\mathcal J_0^t).
+ \label{eq:compact-tail-absorption}
+\end{align}
+The following sufficient gates place every field and direct-time tail
+below \(G(X)X^{-7/4}\):
+\begin{gather}
+ L\ge P+\sqrt{\log^+[A_{\rm mod}(4\pi)^P]},\quad
+ L\ge2+\sqrt{\log^+[A_{\rm art}(4\pi)^2]},\\
+ X\ge32\pi B,\quad X\ge\sqrt{256B\log^+A_{\rm far}},
+ \qquad\log^+v=\max(0,\log v).
+ \label{eq:compact-tail-onsets}
+\end{gather}
+They imply \(A_{\rm mod}X^Pe^{-L^2}\le1\),
+\(A_{\rm art}X^2e^{-L^2}\le1\), and
+\(A_{\rm far}e^{\pi X/8-X^2/(128B)}\le1\).
+
+\subsection{Complete sufficient onset and endpoint limits}
+In addition to \(X\ge X_\Gamma(R,Y)\), the real RS onset and
+\eqref{eq:compact-tail-onsets}, impose
+\begin{gather}
+ L\ge16,\quad X\ge\max(1,4R),\quad X-V_B\ge X/2,\quad
+ a(X+V_B)-a(X-V_B)<1,\\
+ V_B\ge\max(2R,R+Y+1,32B),\qquad
+ C_0(V_B+R+Y)^2/X\le1,\qquad D/X\le1-a_0,\\
+ B\{(D/X)(2a_0+L/2)+D^2/X^2\}\le1,\qquad
+ C_0B(1+L)/X\le1,\\
+ 2g_1\{B+2B^2[a_0+1+(\log2)/2]^2\}\le X.
+ \label{eq:compact-local-onsets}
+\end{gather}
+Here \(a(u)=\sqrt{u/(4\pi)}\). The last gate ensures
+\(|1+c|\ge1/2\) in the near-cutoff band for its lower absolute
+population comparison; the upper error theorem does not need that
+lower comparison. Every gate is eventual for fixed \(\tau,B,r,b\).
+They specify a sufficient analytical onset, not a certified numerical
+height or an endpoint-independent \(X_0\).
+
+As \(\tau\downarrow0\), the kernel/tail factors contain
+\(e^{Y^2/(4\tau)}\), with \(\tau^{-1},\tau^{-2}\) in direct
+time estimates. The population has
+\(e^{(Y-1)_+^2/(2\tau)}\) and powers through
+\(\tau^{-(d+1)/2}\). These displayed majorants need not be optimal.
+For increasing fixed \(B\), the kernel factor has \(e^{2B}\)
+times finite moments, population has \(e^{\pi^2B/64}\), and
+\(P_2,P_3\) have degree at most four. Window and onset costs also
+depend on \(B\). None licenses \(\tau=\tau(X)\), \(B=B(X)\),
+a uniform zero-time join, or a large-negative-time overlap.
+
 \section{The remaining ansatz catalogue}
 \label{app:catalogue}
 These formulas preserve the earlier scope while the main effort moves
@@ -1589,6 +2170,24 @@ joined interval \([-2,0]\). Note07 records the chat0001 research summary.
 Ansatz Note08, 25 October 2026; GPT-6 Astra, effort max.
 Source-based synthesis and exact identities; no new asymptotic theorem.
 Note09 and Assessment06 record this manuscript integration.
+\bibitem{ansatz10} Edward Baker research project,
+\emph{First negative-time evolution correction with a retained RS integral},
+Ansatz Note10, 25 October 2026; GPT-6.1 Sol, effort ultra, chat0003.
+Proved in-note from named classical inputs; same-model internal
+analytical assessment only. Equations EC4--EC30.
+\bibitem{review07} Edward Baker research project,
+\emph{Assessment: first negative-time correction and remaining outer loss},
+Ansatz Review07, 25 October 2026; GPT-6.1 Sol, effort ultra.
+Same-model internal analytical assessment; no specialist review.
+\bibitem{ansatz12} Edward Baker research project,
+\emph{A fixed compact-negative-time family with endpoint-dependent
+allowances}, Ansatz Note12, 25 October 2026; GPT-6.1 Sol, effort ultra.
+Proved in-note from the named inputs of Notes05/10; same-model internal
+analytical assessment only. Equations CF1--CF32.
+\bibitem{review09} Edward Baker research project,
+\emph{Assessment: compact-negative-time family and endpoint dependence},
+Ansatz Review09, 25 October 2026; GPT-6.1 Sol, effort ultra.
+Same-model internal analytical assessment; no specialist review.
 \bibitem{parent31} Edward Baker research project,
 \emph{Positive all-height evolution and covariance}, parent Note31,
 24 October 2026, equations PE33--PE39. Internal research source.
