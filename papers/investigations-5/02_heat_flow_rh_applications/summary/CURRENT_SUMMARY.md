@@ -9,6 +9,8 @@ Rodgers–Tao r1/r2 results and high-level bound priorities updated
 26 October 2026 for Edward Baker with
 substantial LLM assistance, **gpt-6.1-sol, actual recorded effort ultra**;
 same-model internal assessment only.
+RH-conditional simplicity targets J/P/V/E integrated 26 October 2026
+with substantial LLM assistance, **gpt-6-astra, actual recorded effort max**.
 
 This preserves the ideas in
 [Brainstorm 01](../notes/01_HEAT_FLOW_RH_APPLICATIONS_BRAINSTORM_20261026.md).
@@ -33,7 +35,7 @@ being developed.
 | I1 | **Rodgers–Tao dynamics and energy: lead direction.** Study the complete interaction of a local zero block with its exterior. | Match one corrected energy/boundary term to a field-and-derivative bound; identify a quantitative gain or the exact missing estimate. |
 | I2 | **Assume \(\Lambda>0\): current follow-up.** Investigate a possible finite collision at the threshold, using I1's methods. | Specify an estimate that prevents local energy concentration, or a complete first-jet margin on a declared positive-time slab. No such exclusion is proved here. |
 | I3 | **Lower a specified positive Newman upper bound.** Use a complete existing certificate as the consumer. | Improve its total margin, covered parameter, onset, or certified cost; retain all initial, barrier, and exterior obligations. |
-| I4 | **RH implies simple zeros.** Connect to the existing BW-10 endpoint program. | Identify a theta-specific estimate that beats the multiple-root endpoint behavior; preserve the distinction between this target and I2. |
+| I4 | **RH implies simple zeros.** Connect to the existing BW-10 endpoint program. | Pursue the four calibrated J/P/V/E bounds below in 01_heat_density_asymptotics; each would contradict a multiple endpoint under RH. These remain unproved targets, distinct from I2. |
 | I5 | **Effective negative-time witnesses.** Quantify where a nonreal zero can be found. | A certified search region or cost as time approaches zero, compared with existing negative-time results. |
 | I6 | **Moving-time zero geometry, counts, and certification.** Retain useful outcomes short of RH. | A new uniformity range, sharper complete count or interaction estimate, or an objective reduction in certificate cost. |
 | I7 | **Aspirational bound design.** This accompanies every direction above. | A precise domain, norm, margin, parameter dependence, and consumer implication before committing to proving the estimate. |
@@ -166,7 +168,7 @@ spatial distances of order \(1/\log X\) and times of order
 | B4 | Control of the relative force exerted by zeros outside a block, including its variation and the complete exterior contribution | Paid for r2's finite block. Desired next: a sharper estimate useful at the new scale, with an advantage over the direct method demonstrated rather than assumed. |
 | B5 | A complete localized energy balance, including exterior forces, changing boundaries, cutoffs and reference-energy corrections | The raw two-root balance is calibrated. The corrected renormalized block and dyadic-boundary assembly remain open. |
 | B6 | Stable transfer as spatial smoothing and regulator widths shrink, retaining derivative and localization costs | Fixed-resolution results do not supply this uniformity. Resolving near-collision geometry requires its own quantitative budget. |
-| B7 | Under RH, a theta-specific arithmetic endpoint bound stronger than the universal multiple-root collision behavior | Still a final-strength simplicity target, coordinated with BW-10; no such discriminator is acquired by the compact pilot. |
+| B7 | Under RH, a theta-specific arithmetic endpoint bound stronger than the universal multiple-root collision behavior | Specified by J/P/V/E below, with P the closest density/energy route and J the direct field-transfer benchmark. No favorable canonical bound is yet acquired. |
 | B8 | A joint effective bound on the total work needed for a complete application as height grows, time shrinks and margins deteriorate | Include source acquisition, all modes, working precision, starting heights and coverage. A finite replay or a fixed-data accuracy bound is not the full cost comparison. |
 
 The immediate emphasis is **B3–B5 at a new scale**, supported by B2, B6
@@ -181,6 +183,38 @@ more slowly than \(1/(t-T)\) at a hypothetical positive threshold \(T\).
 Note 02 explains its strength, required uniformity, and failure on
 collision controls. Naming that estimate is planning progress, not a
 weaker proof of RH.
+
+### RH-conditional simplicity: four bounds to pursue
+
+The [simplicity target note](../rh_simple_zeros/notes/02_TARGET_BOUNDS_FOR_RH_TO_SIMPLICITY_20261026.md)
+turns I4/B7 into estimates to attempt in **01_heat_density_asymptotics**.
+Assume RH and a multiple zero at time zero; each bound below would
+contradict its local heat evolution. In the canonical convention
+\(H_t=-H_{zz}\), the targets are:
+
+| Target | Bound to seek | Why it would exclude a multiple endpoint |
+| --- | --- | --- |
+| **J — joint value/derivative margin** | A normalized joint norm for the complete finite arithmetic model at least \(cX^{-\beta}\), with \(\beta<3/4\). | This beats the current \(O(X^{-3/4})\) through-zero error and prevents the exact field and derivative from vanishing together. |
+| **P — density second moment** | The Poisson density's normalized second moment, after subtracting its known self term, is strictly below \(2/3\) at width \(\sqrt t\), including all errors. | Descendants of any multiple endpoint force excess at least \(2/3\). An absolute bound below one collision is needed; a relative averaged asymptotic is insufficient. |
+| **V — negative-time vertical moment** | After removing the auxiliary regulator, a localized vertical second moment at time \(-s\) is \(o(s)\), or has limiting upper coefficient below \(4\). | A double endpoint already contributes \(4s+o(s)\); higher multiplicity contributes more. |
+| **E — Rodgers–Tao energy** | Ordered inverse-square pair energy obeys \(E_I(t)\le A_I t^{\alpha-1}+e_I/t\), with \(\alpha>0\), \(e_I<1/4\), uniformly down to zero. | A multiple endpoint forces a \(1/t\) coefficient at least \(1/4\). An integrated bound with logarithmic coefficient below \(1/4\) is an alternative. |
+
+**These are unproved canonical bounds with derived conditional
+implications.** P is the closest density/energy application; J is the most
+direct benchmark for the existing approximation theorem. P needs new
+second-moment and shrinking-resolution control, V needs regulator-uniform
+negative-time weak estimates, and E needs additional arithmetic energy
+control. Generic heat repulsion alone permits the collision coefficients.
+
+The chosen target must cover every sufficiently high endpoint core, with
+complete populations where used and a certified bounded-height remainder.
+The [target note](../rh_simple_zeros/notes/02_TARGET_BOUNDS_FOR_RH_TO_SIMPLICITY_20261026.md)
+gives the definitions, parameter order, transfer errors, tails, source-controlled
+rates and earlier BW-10/HDC connections.
+Its [assessment](../rh_simple_zeros/reviews/02_TARGET_BOUNDS_ASSESSMENT_20261026.md)
+records the calculation checks and their limits;
+the [baseline review](../rh_simple_zeros/notes/01_RODGERS_TAO_REVIEW_AND_RH_SIMPLICITY_20261026.md)
+explains what the existing Book and Rodgers–Tao inputs already supply.
 
 ## 5. What to do next
 
@@ -200,7 +234,9 @@ weaker proof of RH.
 4. **Keep the endpoint question separate.** A positive-threshold
    contradiction still needs new canonical arithmetic information
    uniform toward a possible collision. RH-conditional simplicity has
-   its distinct time-zero premise and remains coordinated with BW-10.
+   its distinct time-zero premise. Pursue P and J above as initial
+   density/energy and field-margin targets, retaining V and E and the
+   existing BW-10/HDC connections.
 5. **Retain the other useful routes.** Effective negative-time witnesses
    and moving-time geometry remain alternatives. For negative
    microscopic time, pay the narrow transverse buffers and derivative

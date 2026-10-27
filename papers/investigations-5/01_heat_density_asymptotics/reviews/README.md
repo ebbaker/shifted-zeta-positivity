@@ -316,3 +316,15 @@ absolute density scale, evolution residual and control scope.
 
 - [47 — Graded weak-filter and acquisition cost](47_GRADED_WEAK_FILTER_COST_ASSESSMENT_20261026.md).
   26 October 2026; for Edward Baker with substantial LLM assistance, gpt-6.1-sol, actual effort ultra, chat0028. Same-model assessment of the fixed-family joint numerical-height/source-demand/accuracy cost proof, all actual acquisition/provider/cancellation terms charged. Work degree80, streaming storage degree32; huge uninstantiated constants, no research execution or global-time theorem.
+
+
+- [48 — Binary-height pure-P exterior query cost](48_BINARY_HEIGHT_PURE_P_ASSESSMENT_20261026.md).
+  26 October 2026; for Edward Baker with substantial LLM assistance, gpt-6.1-sol, actual effort ultra, chat0028. Same-model assessment of the complete physical-tuple query proof in evaluation bits and binary exterior height, with full saturation/integration/root/provider costs. Global source construction separate, constants uninstantiated; no research execution, practical-speed claim or inherited-chain validation.
+
+
+- [49 — Complete all-height query-cost ledger](49_ALL_HEIGHT_QUERY_COST_ASSESSMENT_20261026.md).
+  26 October 2026; for Edward Baker with substantial LLM assistance, gpt-6.1-sol, actual effort ultra, chat0028. Same-model assessment of complete fixed-field query coverage on J=[95,97], including central multiple events and every band-crossing kernel. Work/storage degrees80/32 in numerical global parameters and binary query height; constructor separate, constants uninstantiated and zero research runs. No global-time or independent-validation upgrade.
+
+
+- [50 — Complete binary-height pure-G query cost](50_PURE_G_BINARY_HEIGHT_ASSESSMENT_20261026.md).
+  26 October 2026; for Edward Baker with substantial LLM assistance, gpt-6.1-sol, actual effort ultra, chat0028. Same-model assessment of the finite endpoint source provider, exact cancellation/phase bits and complete fixed-floor filtering on[62,63], with arbitrary roots. Work/storage80/32, constructor separate, zero research runs. [Summary76](../notes/76_CHAT0028_RESEARCH_SUMMARY_20261026.md) covers the full chat; actual temporal blend/global-time cost and independent validation remain open.

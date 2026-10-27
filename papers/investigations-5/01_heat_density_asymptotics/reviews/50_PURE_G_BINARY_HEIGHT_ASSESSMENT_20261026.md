@@ -1,0 +1,28 @@
+# Complete pure-G binary-height query cost: internal assessment
+
+26 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6.1-sol, actual recorded effort ultra**, heat-density chat0028. Same-model internal assessment of [Note75](../notes/75_BINARY_HEIGHT_PURE_G_QUERY_COST_20261026.md), with three parallel read-only analytical checks. This is not independent specialist validation, implementation review, numerical certification or HDA-20.
+
+**Disposition: accept HDA-17-AN06 r5 at complete analytical binary-height pure-G query scope on[62,63].** For the unchanged fixed canonical source/global descriptor, work C T_G^80 and streaming storage C T_G^32 suffice for the full retained tuple. T_G contains actual source parameters/data length, requested evaluation bits, query/header input length and binary height; under the canonical encoding it is polynomially equivalent to1+q_s+D+p+I+k. The one-time source constructor and whole-global descriptor constructor remain separate.
+
+## Mathematical and cost checks
+
+- The field table really is pure G on[62,63], a subset of[-T_-,63]. The original physical regulator is positive and time-only. The lower bound in PG5 is a q floor after squaring the epsilon_g bound, independent of horizontal height. At63 the temporal cutoff is flat. The actual63<t<64 blend is not called pure G.
+- Global strip4 G-H value comparison and fixed canonical moment caps give Cauchy bounds independent of source size and height. PC2 with the fixed denominator floor therefore supplies uniform G3 constants, actual-mean caps and post-filter amplification. Large source coefficient or exp(bU²) bounds are not incorrectly used as smoothness constants.
+- E,B,compatibility and total regulator curvature rows vanish for exact-heat holomorphic G and spatially constant q. Direct S_t,w_t,chi_t retain r_t w and r_t chi. calB=r_t W, the actual signed source, signed stress/covariance and actual full mean products remain. Arbitrary G-root multiplicities cause no division or root-acquisition premise.
+- PG10 bounds the interior polynomial amplitude on unit complex disks, including the u^l fixed-jet factor. The analytic bound is not applied to the discontinuous zero extension of f. Cauchy yields2^L r!, and M=P+L+ceil log2(U+1)+8 gives the finite remainder U2^L M!/|x|^M<2^(-P-8) for exact |x|>=4M.
+- Both0/U endpoint series in PG13–16 are retained. The fixed source cutoff causes endpoint terms in this value algorithm and no heat defect in G. The recurrence Q_(r+1)=Q_r'+(2tu-sigma y)Q_r gives exact polynomial endpoint jets, without numerical differentiation.
+- PG17's common denominator pays normalized-power conversion, rational t/y and x powers. B_x powers are numerator factors. Exact Gaussian-rational endpoint sums pay cancellation even when G or either endpoint result is tiny; no relative endpoint floor is assumed.
+- PG18 gives the absolute weighted endpoint cap and, because the endpoint real exponent is nonnegative on the provider guard, the unweighted B_U cap. These pay both elementary errors and their cross term at the declared P+L+20 accuracy. Exact-coordinate high-frequency dispatch avoids a rounded-frequency ambiguity.
+- Rational nearest-integer reduction uses only P+L+k+O(log U) pi bits; any selected integer preserves the exponential. Bounded-angle series replace a numerical-height phase series. The positive endpoint exponential has argument O(U²), not |x|U.
+- The low-frequency branch has X<=4M+1, hence EV7 K_e<=C Q³ and work Q33. Its direct series estimates are explicitly reused with provider Y=5 and rounding slack; this does not enlarge the canonical strip4 comparison. EV6 separately pays internal source-coordinate errors.
+- High recurrence/common denominator bits<=C Q4 and streamed elementary operations fit work Q24. Both branches fit per-node Q40/workspace Q16. Uniform quadrature uses O((p+1)^6) nodes, so complete work46 and smaller workspace fit the conservative80/32 envelope. Exact weights, kernel4 edge trace, source reading and actual post-filter products remain charged.
+
+## Evidence and limitations
+
+The checks found no blocking error in the stated proof. The only final clarification explicitly separates the source provider's entire-function Y=5 guard from the canonical strip4 comparison. [Inputs75](../notes/75_PURE_G_BINARY_HEIGHT_INPUTS_20261026.json) pins opening bytes; the [work record](../numerics/PURE_G_BINARY_HEIGHT_WORK_RECORD_20261026.json) records zero numerical/exact-rational/machine-symbolic research executions. No coefficients, roots or field values were acquired.
+
+The author-requested [Summary76](../notes/76_CHAT0028_RESEARCH_SUMMARY_20261026.md) maps all five chat stages, their proof/assessment/record homes, preserved contracts and remaining limits. It is navigation and synthesis, not a new theorem or review-independence claim.
+
+Fixed physical conditioning/canonical moments and onsets remain huge/uninstantiated. Additional evaluation p is separate from fixed source/model error; no implementation, practical crossover, arbitrary eta/floor-uniform bound, cheaper global constructor, time-coordinate-ball upgrade or all-real-time query theorem follows. The three checks share the same model and inherited premises. The generic cost algorithm supplies no favorable sign or collision exclusion.
+
+**r5 CLOSED bounded; HDA-17 Partial, HDA-18 Gated and HDA-20 unfulfilled remain.** Next **Analysis — Sol**, [AN06 r6](../research-progress/handoffs/HDA-17-AN06.md), prepared only: actual[63,64] temporal blend with every active compatibility/source defect. No manuscript or numerical campaign was executed.

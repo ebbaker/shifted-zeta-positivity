@@ -1,0 +1,111 @@
+{
+  "date_local": "2026-10-26",
+  "prepared_for": "Edward Baker",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_reasoning_effort": "max",
+  "LLM_assistance": "substantial",
+  "review_scope": "same-assistant execution and algebra checks; no independent specialist review",
+  "baseline_pass": "PASS",
+  "differences_excluding_seconds": [],
+  "rejection": {
+    "injected_wall_error": "1/1000000",
+    "exit_code": 1,
+    "output_created": false,
+    "stderr_tail": "Traceback (most recent call last):\n  File \"/Users/ebbaker/Documents/shifted-zeta-positivity/papers/investigations-5/02_heat_flow_rh_applications/rodgers_tao/numerics/certify_rt03_rt04_r2.py\", line 311, in <module>\n    main()\n  File \"/Users/ebbaker/Documents/shifted-zeta-positivity/papers/investigations-5/02_heat_flow_rh_applications/rodgers_tao/numerics/certify_rt03_rt04_r2.py\", line 305, in main\n    out=run(args.repo_root.resolve(),args.inject_wall_error)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ebbaker/Documents/shifted-zeta-positivity/papers/investigations-5/02_heat_flow_rh_applications/rodgers_tao/numerics/certify_rt03_rt04_r2.py\", line 97, in run\n    require(mf > 0, 'complete canonical and model wall floors positive')\n  File \"/Users/ebbaker/Documents/shifted-zeta-positivity/papers/investigations-5/02_heat_flow_rh_applications/rodgers_tao/numerics/certify_rt03_rt04_r2.py\", line 64, in require\n    raise ArithmeticError(name)\nArithmeticError: complete canonical and model wall floors positive\n"
+  },
+  "contour_force": {
+    "model_derivative_A_F_upper": "[10.46969009961041386505522294596946406709 +/- 8.81e-40]",
+    "transfer_kappa_jet_upper": "[3.655275898894822816597575729546690544059e-20 +/- 6.92e-61]",
+    "transfer_kappa_log_upper": "[1.181558844688108779699862050038879061615e-20 +/- 4.15e-60]",
+    "transfer_kappa_selected_upper": "[1.181558844688108779699862050038879061615e-20 +/- 4.15e-60]",
+    "separate_drift_A0_jet_upper": "[7.310551797789645633195151459093381088118e-20 +/- 1.39e-60]",
+    "separate_drift_A0_log_upper": "[1.181558844688108779699862050038879061615e-20 +/- 4.15e-60]",
+    "separate_drift_A0_selected_upper": "[1.181558844688108779699862050038879061615e-20 +/- 4.15e-60]",
+    "integral_E_upper": "[5.270518518948400063315703515871778490360e-7 +/- 1.79e-47]",
+    "model_force_integral_upper": "[1.103613911152948112295676327779199583719e-5 +/- 1.71e-45]",
+    "coupled_transfer_integral_upper": "[1.245485554431190748183987456054197921979e-26 +/- 4.84e-66]",
+    "separate_transfer_integral_upper": "[1.808403597402356802804430824989299596456e-27 +/- 5.00e-67]",
+    "selected_transfer_integral_upper": "[1.808403597402356802804430824989299596456e-27 +/- 5.00e-67]",
+    "complete_force_integral_upper": "[1.103613911152948112295857168138939819399e-5 +/- 1.11e-45]",
+    "coupled_over_separate_budget_ratio": "[6.887210112942941486835479736328125000000 +/- 1e-44]"
+  },
+  "direct_force": {
+    "root_slope_floors": [
+      "[8.641464661082985436952390056877159194713e-5 +/- 2.39e-45]",
+      "[1.109273000195139964699953521384093537711e-6 +/- 3.53e-46]"
+    ],
+    "root_cell_H_Hz_Hzz": [
+      [
+        "[-1.252293739259954990637358686475939991005e-9 +/- 9.90e-9]",
+        "[-8.642009062529130752001242410233937816387e-5 +/- 5.45e-9]",
+        "[5.009186728156602430175990383854479518747e-5 +/- 1.84e-9]"
+      ],
+      [
+        "[2.093927329894857369942598018356211511898e-11 +/- 1.32e-10]",
+        "[1.109365727121320820240014098297768132545e-6 +/- 9.28e-11]",
+        "[-8.375700377461441102031631174953495667896e-7 +/- 3.79e-11]"
+      ]
+    ],
+    "root_velocity_intervals": [
+      "[-0.5796322040259838104248046875000000000000 +/- 5.78e-5]",
+      "[-0.7549990289844572544097900390625000000000 +/- 9.73e-5]"
+    ],
+    "B_H_interval": "[0.0007128194069991877768188714981079101562500 +/- 2.75e-7]",
+    "B_H_integral_interval": "[3.564097034995938884094357490539550781250e-8 +/- 1.38e-11]",
+    "integral_upper": "[3.565470526611935753180659958161413669586e-8 +/- 1.82e-48]",
+    "contour_over_direct_upper_budget_ratio": "[309.5282664421993596476713402935592248986 +/- 7.94e-39]",
+    "internal_dissipation_integral": "[2.222140177741307968635658484864426454813e-8 +/- 1.30e-12]",
+    "complete_balance_increment_interval": "[1.341956857254630915458699005675124326437e-8 +/- 1.51e-11]",
+    "method": "B_H=-4(v2-v1)/g^3+16/g^4, vi=Hzz(ai)/Hz(ai), same actual root cells"
+  },
+  "replay_cost": {
+    "validated_count_integrals": 4,
+    "wall_cells": 16,
+    "root_bisection_steps_per_endpoint_root": 32,
+    "direct_extra_root_jet_cells": 2,
+    "elapsed_seconds": 2.1199025420937687
+  },
+  "source_script_sha256": "05e26c57a1ae191fda22296209d88a8ba512e73ac39f6a9c4095e7d308e204cb",
+  "core_sha256": "d340a3cc8400a94b72fa4ca23e254a962cdb4563aacf01789fad7c354ae66edb",
+  "python": "3.12.14",
+  "python_flint": "0.9.0",
+  "artifact_original_authoring_configuration": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "ultra",
+    "note": "Inherited certificate fields describe original authoring, not this replay."
+  },
+  "checks_count": 367,
+  "distinct_checks": [
+    "full time interval lies in source disk",
+    "complete source errors below fixed budgets",
+    "injected uncertainty nonnegative",
+    "16 exact closed wall segments",
+    "entire exact cell satisfies transverse source domain",
+    "entire exact cell satisfies physical disk domain",
+    "complete canonical and model wall floors positive",
+    "model floor exceeds complete error",
+    "exact contour length 48",
+    "fixed declared canonical and model margins pass",
+    "finite validated analytic count integral",
+    "complete initial argument-principle count equals two",
+    "real-type canonical field at real data",
+    "uniform sign-changing real root interval",
+    "endpoint root bisection initial signs",
+    "certified bisection sign excludes zero",
+    "narrow whole-slab root bracket certified",
+    "fixed block gap range",
+    "whole population in fixed real core J",
+    "model curvature below declared 10.47 bound",
+    "complete drift variation error below declared budget",
+    "real root-cell jets respect real symmetry",
+    "independent root slope floor on entire root cell",
+    "direct exterior contribution positive over whole slab",
+    "direct same-source force payment sharper than contour bound",
+    "complete energy balance and endpoint root data consistent",
+    "endpoint energy increment positive"
+  ],
+  "original_certificate": "papers/investigations-5/02_heat_flow_rh_applications/rodgers_tao/numerics/R2_CANONICAL_TWO_ROOT_CERTIFICATE_20261026.json",
+  "unmodified_replay_command_from_repository_root": "python3 -B papers/investigations-5/02_heat_flow_rh_applications/rodgers_tao/numerics/certify_rt03_rt04_r2.py --repo-root . --output /tmp/rt-r2-replay.json",
+  "rejection_command_note": "Use the same command with a fresh output path and --inject-wall-error 1/1000000; python-flint 0.9.0 was used.",
+  "mathematical_comparison": "Recursive comparison of every certificate field, excluding keys ending in _seconds; all equal."
+}
