@@ -47,3 +47,16 @@ Companion production attribution: prepared for Edward Baker with substantial LLM
 B02 r2 production attribution: **gpt-6.1-sol, actual recorded effort ultra**, 26 October 2026. The RT discussion is pinned to Note02/Assessment01; it does not execute or change the concurrent RT-03/RT-04 continuation. No new manuscript snapshots were created.
 
 The [B02 r2 integration record](../notes/70_B02_R2_MANUSCRIPT_INTEGRATION_20261026.md) gives the current source-to-statement matrix, production corrections and retained limits.
+
+## Current edition: Summary76 and application frontier
+
+26 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**, heat-density chat0029.
+
+The 34-page Book now includes Notes71–75's complete weak consumer and
+scoped work/storage bounds, the completed RT pilot, and J/P/V/E with
+their endpoint limitations. The abstract, effectivity/frontier, source map,
+bibliography and production records agree. The detailed new cost proofs
+remain in their original notes; companions were not rewritten by this
+Book-only update. The [new collision-bounds investigation](../../03_heat_flow_collision_bounds/README.md)
+owns combined transfer/acquisition work. HDA-B03 is complete at production
+scope; independent validation and wider scientific tasks remain open.

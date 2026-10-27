@@ -20,21 +20,22 @@ new progress file while avoiding competing scientific histories.
 | HDA-B00 | New Book synthesis, overview, coordination register and continuation | Complete at production scope; see Review42 and build record | CLOSED — this session, Astra max |
 | HDA-B01 | Bring all three existing manuscripts up to date as technical companions; reconcile Book proof links | Complete at production scope; [Note65](../notes/65_BOOK_COMPANION_INTEGRATION_20261026.md), [Review43](../reviews/43_BOOK_COMPANION_INTEGRATION_PRODUCTION_REVIEW_20261026.md), four checked reading copies | CLOSED — **Analysis — Sol**, gpt-6.1-sol ultra, chat0024; [HDA-B01-MI1 r1](handoffs/HDA-B01-MI1.md) |
 | HDA-B02 | Integrate the six closed regional returns and reconcile the application discussion across Book/companions | Complete at bounded production scope; [Note70](../notes/70_B02_R2_MANUSCRIPT_INTEGRATION_20261026.md), [Review45](../reviews/45_B02_R2_MANUSCRIPT_INTEGRATION_PRODUCTION_ASSESSMENT_20261026.md), four clean builds and inspected reading copies | CLOSED — **Analysis — Sol**, gpt-6.1-sol ultra, chat0027; [B02-MI1 r2](handoffs/HDA-B02-MI1.md) |
+| HDA-B03 | Update the Book through Summary76 and the completed RT/J/P/V/E frontier; link new combined investigation | Complete at Book production scope; [Note77](../notes/77_BOOK_SUMMARY76_INTEGRATION_20261026.md), [Review52](../reviews/52_BOOK_SUMMARY76_PRODUCTION_REVIEW_20261026.md), clean build/QA | CLOSED — gpt-6-astra max, chat0029; no scientific-status upgrade |
 
 The earlier [HDA-10-MI3 r1](handoffs/HDA-10-MI3.md) proposed making the
 existing parent paper the synthesis. Its unexecuted production direction
 is superseded by the author's Book request; the frozen packet and earlier
 closed HDA-10 milestones remain historical. [Note63](../notes/63_BOOK_SYNTHESIS_AND_COMPANION_REVISION_PLAN_20261026.md)
-gives the earlier revision sequence. [Plan68](../notes/68_MANUSCRIPT_UPDATE_PLAN_AFTER_RH_APPLICATION_REVIEW_20261026.md) and B02 r2 now specify the next integration and acceptance conditions.
+gives the earlier revision sequence. [Plan68](../notes/68_MANUSCRIPT_UPDATE_PLAN_AFTER_RH_APPLICATION_REVIEW_20261026.md) and B02 r2 retain the earlier integration contract; Note77/Review52 record the current B03 production.
 
 ## Scientific frontier and next deliverables
 
 | Coordination topic | Current evidence | Next measurable deliverable and owner | Execution authority |
 | --- | --- | --- | --- |
 | Named positive switch centers | [Ansatz Note22](../ansatz/notes/22_NAMED_SWITCH_CENTERS_20261026.md)/Assessment16: exact sensitivity, explicit shifts, all named one-arm centers o(rounding width); AN01 closed at bounded scope | Consume the center return without sharpening inherited layer rates; **Analysis — Sol** | [A03-AN01](../ansatz/research-progress/handoffs/HDA-A03-AN01.md), sole [ansatz Progress02](../ansatz/research-progress/02_EVOLUTION_ASYMPTOTICS_RESEARCH_PROGRESS_20261025.md) |
-| Corrected positive physical transfer | [Ansatz Note23](../ansatz/notes/23_FIXED_P4_PHYSICAL_TUPLE_20261026.md)/Assessment17 proves every frozen fixed-P4 actual tuple rate on[63,65], high height and exact q/K | AN02 closed at bounded scope; retain simple-layer/core/assembly and evaluator limits. Regional A08 field continuation now closed; next B02 production; **Analysis — Sol** | [A03-AN02 r1](../ansatz/research-progress/handoffs/HDA-A03-AN02.md), CLOSED in sole ansatz Progress02; LT-06 pointer only |
+| Corrected positive physical transfer | [Ansatz Note23](../ansatz/notes/23_FIXED_P4_PHYSICAL_TUPLE_20261026.md)/Assessment17 proves every frozen fixed-P4 actual tuple rate on[63,65], high height and exact q/K | AN02 closed at bounded scope; retain simple-layer/core/assembly and evaluator limits. Regional A08 field continuation now closed; B02 production complete; **Analysis — Sol** | [A03-AN02 r1](../ansatz/research-progress/handoffs/HDA-A03-AN02.md), CLOSED in sole ansatz Progress02; LT-06 pointer only |
 | Moving negative lower endpoint | [Recurrence Note20](../recurrence/notes/20_MOVING_LOWER_ENDPOINT_20261026.md)/Review14: unchanged exp(-L²/4) delivered target on[1/L,2], sufficient L>=1024nu²; outer nodes O(L³) | AN08 closed at bounded analytical scope; implementation and a strong through-zero join remain separate; **Analysis — Sol** | [R05-AN08](../recurrence/research-progress/handoffs/HDA-R05-AN08.md), sole [recurrence register](../recurrence/research-progress/01_RECURRENCE_RESEARCH_PROGRESS_20261026.md) |
-| Small-positive and zero bridge | [Ansatz Note26](../ansatz/notes/26_RETAINED_ARITHMETIC_MOVING_POSITIVE_BAND_20261026.md)/Assessment20 proves retained arithmetic4/L<=t<=1, eta=Lambda²X^-3/4, buffered jets/direct time/residual and both overlaps; inherited union gives atlas[0,T] for fixed finite T>=33 | AN03 CLOSED; integrate in B02, **Analysis — Sol**; strong negative precision/physical/core/global-assembly targets separate | [A08-AN03 r1](../ansatz/research-progress/handoffs/HDA-A08-AN03.md), CLOSED in sole ansatz Progress02; B02 production phase owned here |
+| Small-positive and zero bridge | [Ansatz Note26](../ansatz/notes/26_RETAINED_ARITHMETIC_MOVING_POSITIVE_BAND_20261026.md)/Assessment20 proves retained arithmetic4/L<=t<=1, eta=Lambda²X^-3/4, buffered jets/direct time/residual and both overlaps; inherited union gives atlas[0,T] for fixed finite T>=33 | AN03 CLOSED; integrated in B02, **Analysis — Sol**; strong negative precision/physical/core/global-assembly targets separate | [A08-AN03 r1](../ansatz/research-progress/handoffs/HDA-A08-AN03.md), CLOSED in sole ansatz Progress02; B02 production phase owned here |
 | Compact bounded-height core | Finite source coverage; no sharp corrected-saddle theorem over whole core | Specify finite field domain and target gain before a new packet; **Analysis — Sol** | Positive Progress03 LT-05 and existing parent core records |
 | Weak-filter height cost | [Note75](../notes/75_BINARY_HEIGHT_PURE_G_QUERY_COST_20261026.md)/Review50: complete pure-G binary-height queries on[62,63]; Note74 retains all-height[95,97] cover, constructor separate. [Summary76](../notes/76_CHAT0028_RESEARCH_SUMMARY_20261026.md) maps chat0028; no executed certificate | Actual[63,64] temporal-blend complete query ledger, **Analysis — Sol**;64<t<95/practical/global-time cost remain | Sole [parent register](01_AVERAGED_DENSITY_RESEARCH_PROGRESS_20261024.md), [AN06 r6](handoffs/HDA-17-AN06.md) prepared only; r1–r5 closed bounded |
 | Fixed-positive arithmetic refinement | Retained X^(-t log2/4) upper allowance | Propose a bounded finite-mode extension and a complete omitted-mode error; **Analysis — Sol**, later | No frozen packet; coordinate with positive hierarchy owner |
@@ -51,7 +52,7 @@ AN03 now also closes the moving positive band and both overlaps in
 Note26. B02-MI1 r2 is now complete at production scope; its appended return and Review45 own the current production evidence.
 No external research chat was dispatched or existing chat relocated.
 
-## Current application feedback and production plan — base chat0026
+## Historical application feedback and production plan — base chat0026
 
 26 October 2026. Prepared for Edward Baker with substantial LLM assistance,
 **gpt-6-astra (Codex), actual recorded effort max**.
@@ -76,6 +77,16 @@ the six mathematical contracts while specifying their detailed proof
 homes and a concise application discussion. No manuscript source/build
 or scientific acceptance state changes in this planning turn. The author
 will dispatch Sol; B02 remains READY_FOR_SOL.
+
+## Current application feedback — base chat0029
+
+The RT r2 pilot is complete at its finite-family scope; the direct force
+budget is about309 times smaller. RT-05 owns the next scale/boundary
+question in its existing register. New combined P/J transfer and canonical
+acquisition work belongs to [Investigation03](../../03_heat_flow_collision_bounds/README.md)
+and its sole HCB register. HCB-02 is Ready; no new RT phase is created here.
+Summary76's AN06 r6 stays in the parent register. Earlier prepared-only
+application/production paragraphs above retain their dated historical scope.
 
 ## Status boundaries
 
@@ -117,7 +128,7 @@ bounded exact-turn follow-up. The
 ## Historical research checkpoints
 
 The dated returns below preserve their original next-task recommendations.
-Use the current tables and B02 r2 above for present production ownership.
+Use the current tables and B03 record above for present production ownership.
 
 ## Research return — 26 October 2026, base chat0025
 

@@ -328,3 +328,19 @@ absolute density scale, evolution residual and control scope.
 
 - [50 — Complete binary-height pure-G query cost](50_PURE_G_BINARY_HEIGHT_ASSESSMENT_20261026.md).
   26 October 2026; for Edward Baker with substantial LLM assistance, gpt-6.1-sol, actual effort ultra, chat0028. Same-model assessment of the finite endpoint source provider, exact cancellation/phase bits and complete fixed-floor filtering on[62,63], with arbitrary roots. Work/storage80/32, constructor separate, zero research runs. [Summary76](../notes/76_CHAT0028_RESEARCH_SUMMARY_20261026.md) covers the full chat; actual temporal blend/global-time cost and independent validation remain open.
+
+
+- [51 — RH target gaps and research priorities](51_RH_TARGET_GAP_ANALYSIS_AND_RESEARCH_PRIORITIES_20261026.md).
+  26 October 2026; prepared for Edward Baker with substantial LLM assistance,
+  gpt-6-astra, actual effort max, chat0029. Source-grounded assessment of
+  Summary76, the Book and companion contracts against B1–B8 and J/P/V/E.
+  Prioritizes whole-cluster Poisson transfer, a joint-jet benchmark and a
+  new microscopic/growing-block Rodgers–Tao comparison; distinguishes
+  fixed-floor query cost from shrinking-resolution application cost.
+  No new endpoint theorem, certificate replay, status upgrade or HDA-20.
+
+- [52 — Book Summary76 production review](52_BOOK_SUMMARY76_PRODUCTION_REVIEW_20261026.md).
+  26 October 2026; Edward Baker with substantial LLM assistance,
+  gpt-6-astra, actual effort max, chat0029. Complete weak-filter/scoped-cost
+  synthesis, current RT/J/P/V/E frontier, 34-page clean build and rendered
+  QA. Book production only; no companion proof or scientific-status upgrade.

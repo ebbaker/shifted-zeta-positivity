@@ -61,3 +61,15 @@ estimate is proved. Keep a small-positive-time certificate comparison
 alongside it if its hypotheses can be met.
 This recommendation is a research judgment, not a claim that the other
 directions cannot succeed.
+
+## Combined collision-bounds continuation
+
+26 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**, heat-density chat0029.
+
+The author has opened [Investigation03](../03_heat_flow_collision_bounds/README.md)
+for the new transfer, canonical acquisition and arithmetic bounds combining
+01 with this application's criteria. Original J/P/V/E definitions and RT
+task IDs stay here. New HCB work has one
+[progress register](../03_heat_flow_collision_bounds/research-progress/01_COLLISION_BOUNDS_RESEARCH_PROGRESS_20261026.md).
+This refines the ownership statement above: 02 retains the application
+contracts and existing comparisons; 03 develops the new combined consumers.

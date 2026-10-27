@@ -368,3 +368,14 @@ It executes B02 r2/Plan68, integrates the six regional proof returns,
 reconciles parent/Book/application scope and records four builds/QA.
 Its unique registration belongs here; earlier histories retain their
 original identities. Configuration: gpt-6.1-sol, actual effort ultra.
+
+## Chat0029 — Evaluate heat bounds for RH
+
+[0029 — Evaluate heat bounds for RH](0029_2026-10-27T00-07-40Z_evaluate-heat-bounds-for-rh.json),
+thread 01a17aaf-22af-7911-8e55-198ee85602f6, remains uniquely registered
+here. It records Review51, the author-requested Book Summary76 update and
+the setup of [Investigation03](../../03_heat_flow_collision_bounds/README.md),
+including its next-handoff continuation. Prepared for Edward Baker with
+LLM assistance, gpt-6-astra, actual effort max. The new investigation's
+history README points here; no relocation, renumbering or duplicate
+registration occurs. The authorized refresh tool owns transcript/index.

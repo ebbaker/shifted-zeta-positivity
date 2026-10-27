@@ -73,3 +73,17 @@ case the correct identities are kept and the sign is where it was.
 ## Instead
 
 Classify every proposal at the outset (Reply 18 §7, [Review 19](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/19_PATHS_FORWARD_AFTER_THE_SECOND_ROUND_CLAUDE_20261015.md) §5): if it implies RH and RH implies it, it is a reformulation, to be stated once and not supported by checks, since no check can be evidence for a statement that is true if and only if RH; if it does not imply RH, it is a milestone, judged by its number. The portfolio README's rule 7 says the same: "Continue only for a new applicable estimate, complete certified gain, faithful diagnostic, or precise obstruction" ([investigations-2 README](../papers/investigations-2/README.md)), and the [program meta-analysis](../papers/investigations/program-meta-analysis/reviews/PROGRAM_META_ANALYSIS_20260926.md) §4.1 asks of every representation "what theorem has become easier to prove, and why?" Equivalence by itself is not circularity (the same README, rule 1); the mistake is counting it as progress.
+
+
+26 October 2026 — **HCB high-order acquisition interface**, for Edward
+Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
+[Note07](../papers/investigations-5/03_heat_flow_collision_bounds/notes/07_HIGH_ORDER_ENDPOINT_PROBES_AND_UNIFORM_COUNT_GATE_20261026.md)
+pays detector source amplification, conditional endpoint exponent and
+integer-count leakage, while stating: “The actual uniform endpoint
+inequalities and counts are **not acquired**.” These are quantified
+interface gains, not evidence that the frozen arithmetic sequence passes
+the detector; another conditional transfer cannot substitute for that
+actual estimate. The uniform gate may fail, and no impossibility or
+RH-equivalence is asserted. [Review05](../papers/investigations-5/03_heat_flow_collision_bounds/reviews/05_UNIFORM_PROBE_AND_COUNT_INTERNAL_REVIEW_20261026.md)
+keeps the conditional scope; [complete handoff](../papers/investigations-5/03_heat_flow_collision_bounds/notes/08_CHAT0001_RESULTS_AND_HANDOFF_20261026.md)
+identifies the next unpaid arithmetic input.

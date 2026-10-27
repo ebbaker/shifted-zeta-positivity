@@ -662,3 +662,54 @@ For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort u
 ### Binary-height source-active pure-G queries — 26 October 2026
 
 For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**, heat-density chat0028. **Proved in-note from named analytical inputs; same-model internal assessment:** [Note75](../papers/investigations-5/01_heat_density_asymptotics/notes/75_BINARY_HEIGHT_PURE_G_QUERY_COST_20261026.md)/[Review50](../papers/investigations-5/01_heat_density_asymptotics/reviews/50_PURE_G_BINARY_HEIGHT_ASSESSMENT_20261026.md) give complete query work/storage C T_G^80/C T_G^32 on the actual pure-G plateau[62,63], polynomial in canonical source parameters, accuracy/input bits and binary query height. A finite high-frequency endpoint expansion with exact rational sums and reduced phase, plus the polynomial low-frequency entire-series fallback, pays actual source values. Quote: “Retain both endpoints0 and U.” Uniform fixed-floor filtering needs O((p+1)^6) nodes and permits arbitrary multiplicities. Constructor/model error separate; no implementation, practical constants, all-real-time cost or sign claim. [Summary76](../papers/investigations-5/01_heat_density_asymptotics/notes/76_CHAT0028_RESEARCH_SUMMARY_20261026.md) maps r1–r5. r5 closed bounded, r6 actual[63,64] blend prepared; parent/audit gates remain.
+
+### Book cost update and collision consumer — 26 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6-astra, actual
+effort max**, chat0029. [Book Note77](../papers/investigations-5/01_heat_density_asymptotics/notes/77_BOOK_SUMMARY76_INTEGRATION_20261026.md)
+integrates Notes71–75 at their original analytical scopes.
+[Review52](../papers/investigations-5/01_heat_density_asymptotics/reviews/52_BOOK_SUMMARY76_PRODUCTION_REVIEW_20261026.md):
+“The complete weak consumer is no longer an open fixed-data task;
+shrinking-resolution and practical global-time cost remain separate.”
+The new [collision Note01](../papers/investigations-5/03_heat_flow_collision_bounds/notes/01_WHOLE_CLUSTER_POISSON_TRANSFER_AND_ACQUISITION_20261026.md)
+derives an elementary conditional coefficient-to-Poisson L2/tail bound
+permitting internal multiplicities, with explicit y^-n conditioning;
+[Review01](../papers/investigations-5/03_heat_flow_collision_bounds/reviews/01_OPENING_TRANSFER_ASSESSMENT_20261026.md)
+is same-assistant internal assessment. Canonical inputs and an upper bound
+below2/3 remain unacquired; no novelty, endpoint exclusion or new Newman
+bound is claimed. This is a finite-data interface and production update,
+not independent validation of inherited sources.
+
+
+### Frozen microscopic endpoint/count witness — 26 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual
+effort ultra**, HCB chat0001. [Note06](../papers/investigations-5/03_heat_flow_collision_bounds/notes/06_REAL_ENDPOINT_TRANSPORT_AND_FINITE_COUNT_20261026.md)
+gives generic real-zero Gaussian endpoint transport and a finite
+interval-arithmetic witness **under RH** for m=16, X=4πe^16. Throughout
+0≤τ≤X^(-1/4), endpoint moduli exceed 0.8144/0.2789, complete count is 1
+including multiplicity, and the canonical rectangle floor exceeds0.0697.
+The prescribed contour integration failed and remains stopped; the
+count is a post hoc consequence of retained corner/endpoint data with
+no new source calls. [Review04](../papers/investigations-5/03_heat_flow_collision_bounds/reviews/04_REAL_ENDPOINT_AND_FINITE_COUNT_INTERNAL_REVIEW_20261026.md)
+is separate-agent same-model internal review: “One finite case does not
+acquire the frozen sequence.” Uniform-m, F_N source/coefficient transfer
+and favorable Poisson moment remain open. HCB-02 stays Partial; no
+new RH/Newman result or zero-exclusion region is claimed.
+
+
+### Conditional high-order endpoint/count interface and chat handoff — 26 October 2026
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual
+effort ultra**, HCB chat0001. [Note07](../papers/investigations-5/03_heat_flow_collision_bounds/notes/07_HIGH_ORDER_ENDPOINT_PROBES_AND_UNIFORM_COUNT_GATE_20261026.md)
+is **proved in-note at conditional analytical-transfer scope**: a
+q=floor(√L) positive endpoint detector has source amplification at most
+4^qν. If its unproved actual budgets hold, it resolves a shrinking boundary
+band, supplies endpoint/full-wall floor X^(-5/8-o(1)) and permits integer
+extraction with variable population and paid count leakage. Quote:
+“The actual uniform endpoint inequalities and counts are **not acquired**.”
+[Review05](../papers/investigations-5/03_heat_flow_collision_bounds/reviews/05_UNIFORM_PROBE_AND_COUNT_INTERNAL_REVIEW_20261026.md)
+is separate-agent same-model internal assessment. No new source values or
+numerical replay occurred; the m=16 witness retains its scope. HCB-02
+remains Partial. [Note08](../papers/investigations-5/03_heat_flow_collision_bounds/notes/08_CHAT0001_RESULTS_AND_HANDOFF_20261026.md)
+is the complete chat handoff; no new RH/simplicity/Newman result.

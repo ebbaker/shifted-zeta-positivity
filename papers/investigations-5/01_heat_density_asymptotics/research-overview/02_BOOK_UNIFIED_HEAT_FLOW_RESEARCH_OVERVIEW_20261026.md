@@ -131,11 +131,13 @@ than adding gamma corrections alone.
 ## Application feedback: lower data before additional orders
 
 The [applications summary][app-summary] and [Rodgers–Tao register][rt-ledger]
-now incorporate RT Note02 and its [same-model assessment][rt-review].
-RT-01 r1 is complete at bounded selected-source audit scope; RT-02–04
-have a chosen finite observable and conditional transfer. The next
-prepared research request is **RT-03/RT-04 r2**, owned there. Do not
-restart RT-01 on the basis of the earlier Review44 recommendation.
+now incorporate the completed RT Note03 finite pilot as well as Note02.
+RT-01's bounded audit and RT-03/RT-04 r2's finite acquisition are complete.
+The pilot's direct force budget is about309 times smaller than the contour
+budget, with negligible field error. RT-05 owns the next scale/boundary
+question. Do not reopen the completed known-region comparison. New
+combined P/J transfer and acquisition belong to
+[Investigation03](../../03_heat_flow_collision_bounds/README.md).
 
 The new conditional gain is concrete. On an isolated finite block,
 contour projection extracts the whole exterior unit drift
@@ -195,13 +197,13 @@ bound or zero-exclusion region is established here.
 
 ## Remaining approximation and effectivity program
 
-**First application-driven work:** use existing RT-03/RT-04 r2 to acquire
-one fixed family's lower data and complete the named payment. Explicit
-Note26 constants/onsets and evaluator requirements should be developed
-against that consumer. If the margin fails, identify the contour segment,
-arithmetic cancellation or unpaid term before requesting extra orders.
-A successful pilot in an already known real-zero region is a methods
-result; a new global upper bound needs complete additional coverage.
+**First application-driven work:** the r2 finite pilot has returned its
+lower data and comparison. The new HCB program now freezes a microscopic
+whole-cluster P consumer and acquires its canonical coefficient/wall data,
+using J as a direct benchmark; existing RT-05 retains the complete force
+and boundary application. Develop sharper source estimates only against
+a demonstrated consumer demand. A known-region method pilot remains
+distinct from a complete global upper bound.
 
 **Independent physical/effectivity work:** [Summary76](../notes/76_CHAT0028_RESEARCH_SUMMARY_20261026.md) maps the five completed bounded AN06 stages in chat0028. Notes71–73 pay the weak consumer, graded/acquired numerical-height cost and binary-height pure-P exterior cost. [Note74](../notes/74_ALL_HEIGHT_QUERY_COST_LEDGER_20261026.md)/Review49 completes all-height queries on[95,97] for one fixed descriptor, including central and band-crossing supports, with numerical global core/source parameters and binary query height. [Note75](../notes/75_BINARY_HEIGHT_PURE_G_QUERY_COST_20261026.md)/[Review50](../reviews/50_PURE_G_BINARY_HEIGHT_ASSESSMENT_20261026.md) adds complete binary-height pure-G queries on[62,63]: finite endpoint source expansion/exact sums plus a low-frequency series fallback, uniform fixed-floor filtering and arbitrary multiplicities. Both use conservative work/storage degrees80/32, one-time construction separate and all actual source/time/mean terms retained. Huge constants/conditioning, no implementation, optional time-coordinate jets and independent validation remain. The [sole parent register](../research-progress/01_AVERAGED_DENSITY_RESEARCH_PROGRESS_20261024.md) prepares r6 for the actual[63,64] temporal blend. The64<t<95 approach and practical/global-time cost remain separate; no small-positive or shrinking-filter theorem is inferred.
 
@@ -247,10 +249,12 @@ and [Review45](../reviews/45_B02_R2_MANUSCRIPT_INTEGRATION_PRODUCTION_ASSESSMENT
 record integrated proof homes, exact source contracts, four clean builds
 and rendered reading-copy checks. Plan68 and Continuation69 remain the
 historical execution request; B01 retains its earlier checkpoint.
-The next scientific deliverable is **Analysis — Sol**, application-owned
-lower contour/cluster data and complete matched exterior-energy payment.
-The sole RT register owns its current execution; this production task
-dispatches no scientific work and changes no scientific acceptance gate.
+The newer **HDA-B03 Book update is complete**, gpt-6-astra max, chat0029:
+[Note77](../notes/77_BOOK_SUMMARY76_INTEGRATION_20261026.md) and
+[Review52](../reviews/52_BOOK_SUMMARY76_PRODUCTION_REVIEW_20261026.md).
+The new combined consumer is owned by Investigation03's HCB register;
+RT-05 and parent AN06 r6 retain their existing owners. No other chat has
+been dispatched and no scientific acceptance gate changes.
 
 Earlier dated checkpoints and their superseded next-task recommendations
 remain in [Return66](../notes/66_BOOK_RESEARCH_RETURN_20261026.md),

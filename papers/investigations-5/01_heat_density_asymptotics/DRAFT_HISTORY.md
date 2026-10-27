@@ -213,3 +213,11 @@ Six regional arguments now have integrated companion proof homes, exact
 parent interfaces and a current Book atlas/conditional application account;
 four clean builds and rendered QA. No snapshot/commit or scientific gate
 upgrade. Edward Baker with LLM assistance, gpt-6.1-sol, actual ultra, chat0027.
+
+2026-10-26 — **HDA-B03 Summary76 and current application update.**
+[Maintained Book](book/main.tex), [build record](book/BUILD_RECORD_B03_20261026.json);
+working tree, no commit/tag or snapshot. Adds the complete weak consumer,
+scoped query costs and current RT/J/P/V/E frontier, then links the new
+collision-bounds investigation. [Note77](notes/77_BOOK_SUMMARY76_INTEGRATION_20261026.md),
+[Review52](reviews/52_BOOK_SUMMARY76_PRODUCTION_REVIEW_20261026.md).
+For Edward Baker with LLM assistance, gpt-6-astra, actual effort max, chat0029.

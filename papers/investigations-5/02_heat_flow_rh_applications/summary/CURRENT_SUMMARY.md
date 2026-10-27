@@ -187,7 +187,7 @@ weaker proof of RH.
 ### RH-conditional simplicity: four bounds to pursue
 
 The [simplicity target note](../rh_simple_zeros/notes/02_TARGET_BOUNDS_FOR_RH_TO_SIMPLICITY_20261026.md)
-turns I4/B7 into estimates to attempt in **01_heat_density_asymptotics**.
+turns I4/B7 into estimates to attempt using the inputs of **01_heat_density_asymptotics**. The new combined transfer/acquisition work is now owned by [03_heat_flow_collision_bounds](../../03_heat_flow_collision_bounds/README.md).
 Assume RH and a multiple zero at time zero; each bound below would
 contradict its local heat evolution. In the canonical convention
 \(H_t=-H_{zz}\), the targets are:
@@ -264,3 +264,6 @@ and the [avoid index](../../../../avoid/README.md), especially
 and [scoped conclusions](../../../../avoid/07_scoped_exclusions_read_as_universal.md),
 remain the shared research memory. The proposed direction is not ruled
 out by the limitations of the direct sign reversal.
+
+
+26 October 2026 — **Combined consumer investigation opened.** For Edward Baker with LLM assistance, gpt-6-astra, actual effort max, parent heat-density chat0029. [Investigation03](../../03_heat_flow_collision_bounds/README.md) owns new HCB transfer/acquisition work and its [continuation](../../03_heat_flow_collision_bounds/notes/02_CONTINUATION_FOR_CANONICAL_CLUSTER_ACQUISITION_20261026.md). Original RT tasks and J/P/V/E definitions retain their homes. Its opening polynomial transfer is conditional; canonical inputs and a bound below2/3 remain unacquired.

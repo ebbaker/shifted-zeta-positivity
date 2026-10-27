@@ -102,3 +102,14 @@ not scientific evidence status.” Current manuscripts/READMEs no longer call
 completed regional field and fixed-P4 returns unexecuted. Frozen requests,
 source notes, older builds and wider physical/core/cost/audit gates retain
 their original scope; production status is reconciled in its sole Book register.
+
+**26 October 2026 — Summary76 and completed pilot synchronized.**
+For Edward Baker with LLM assistance, **gpt-6-astra, actual effort max**.
+[Book Review52](../papers/investigations-5/01_heat_density_asymptotics/reviews/52_BOOK_SUMMARY76_PRODUCTION_REVIEW_20261026.md)
+records: “The complete weak consumer is no longer an open fixed-data task;
+shrinking-resolution and practical global-time cost remain separate.”
+The synthesis now includes Notes71–75 and the completed RT pilot while
+preserving their bounded hypotheses. New combined work has one HCB
+register in Investigation03; original RT/HDA IDs and dated requests remain
+in their existing homes. Closing a scoped consumer does not close its
+shrinking-resolution or global-cost extension.

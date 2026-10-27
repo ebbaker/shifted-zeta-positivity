@@ -10,8 +10,13 @@ revisions, now complete at production scope. See the [integration note](notes/65
 
 Use the [unified overview](research-overview/02_BOOK_UNIFIED_HEAT_FLOW_RESEARCH_OVERVIEW_20261026.md),
 [coordination register](research-progress/02_BOOK_UNIFIED_HEAT_FLOW_RESEARCH_PROGRESS_20261026.md),
-[current production note](notes/70_B02_R2_MANUSCRIPT_INTEGRATION_20261026.md) and
-[production assessment](reviews/45_B02_R2_MANUSCRIPT_INTEGRATION_PRODUCTION_ASSESSMENT_20261026.md).
+[current production note](notes/77_BOOK_SUMMARY76_INTEGRATION_20261026.md) and
+[production assessment](reviews/52_BOOK_SUMMARY76_PRODUCTION_REVIEW_20261026.md).
+HDA-B03 updates the Book through Summary76 and the completed application pilot;
+its proof sources and scientific statuses retain their stated scopes. The new
+[collision-bounds investigation](../03_heat_flow_collision_bounds/README.md)
+combines this machinery with 02’s targets. The following B02 history records
+the preceding companion integration.
 The six regional returns from Summary67 are now integrated under
 [Plan68](notes/68_MANUSCRIPT_UPDATE_PLAN_AFTER_RH_APPLICATION_REVIEW_20261026.md)
 and [B02-MI1 r2](research-progress/handoffs/HDA-B02-MI1.md), **Complete/CLOSED
