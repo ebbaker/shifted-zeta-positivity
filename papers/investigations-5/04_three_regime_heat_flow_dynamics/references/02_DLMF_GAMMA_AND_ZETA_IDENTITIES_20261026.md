@@ -29,3 +29,11 @@ DLMF 25.10 was also inspected for context; no zero-count asymptotic from
 it is imported. Jensen's formula and the source envelope in Note03 give
 the count upper bound directly. These online-reference records require
 no artificial PDF copy under the repository reference workflow.
+
+
+27 October 2026 subsequent use, chat0006. Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra (Codex), actual effort max**.
+Checked [20.7.32](https://dlmf.nist.gov/20.7.E32) at theta argument zero
+and lattice parameter i r^2, r>0, for Theta(r)=r^(-1)Theta(1/r).
+[Note20](../notes/20_THREE_DIMENSIONAL_RADIAL_THETA_AND_KELVIN_REDUCTION_20261027.md)
+derives its radial interpretation; [Reference03](03_RADIAL_LAPLACIAN_AND_KELVIN_REFERENCES_20261027.md)
+records the paired Kelvin input. No full chapter audit or PDF acquisition.

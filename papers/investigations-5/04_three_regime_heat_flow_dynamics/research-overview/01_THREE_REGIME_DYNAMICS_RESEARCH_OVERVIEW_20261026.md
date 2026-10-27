@@ -18,6 +18,16 @@ The existing approximation, application and collision-bound tasks keep
 their original owners. In particular, the narrower acquisition work in 03
 does not establish that the positive-threshold approaches in 02 are weaker.
 
+**27 October continuation:** the author has selected the parameter based
+[collision energy program](02_COLLISION_ENERGY_RESEARCH_OVERVIEW_20261027.md)
+for a dedicated analytical session. Its
+[CE subtask register](../research-progress/02_COLLISION_ENERGY_RESEARCH_PROGRESS_20261027.md)
+and [handoff](../notes/08_COLLISION_ENERGY_CONTINUATION_20261027.md)
+expand the positive-threshold direction while keeping the original TRD
+register authoritative for its existing tasks. This setup adds no new
+canonical exclusion estimate. Prepared for Edward Baker with substantial
+LLM assistance, gpt-6-astra, actual recorded effort max.
+
 The [result index][results] and [avoid index][avoid] apply throughout.
 Relevant inputs are [heat-flow results][heat], [local geometry][geometry]
 and [collision controls][controls]. Classify every proposed implication

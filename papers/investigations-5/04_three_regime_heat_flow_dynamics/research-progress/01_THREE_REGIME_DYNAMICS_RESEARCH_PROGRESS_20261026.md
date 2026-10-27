@@ -5,9 +5,17 @@ substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
 
 ## Current position
 
-This is the sole live TRD task register. The [overview][overview] defines
-the program. The opening [response][response] and [transport][budget]
-work remains available. The Dobner continuation now proves the improved
+This is the authoritative register for TRD-00 through TRD-08. The
+[overview][overview] defines the parent program. The dedicated
+[CE register](02_COLLISION_ENERGY_RESEARCH_PROGRESS_20261027.md) owns the
+new parameter based collision energy subtasks; its
+[overview](../research-overview/02_COLLISION_ENERGY_RESEARCH_OVERVIEW_20261027.md)
+and [handoff](../notes/08_COLLISION_ENERGY_CONTINUATION_20261027.md)
+implement the author's 27 October continuation request. Existing TRD
+scientific statuses remain unchanged.
+
+The opening [response][response] and [transport][budget] work remains
+available. The Dobner continuation now proves the improved
 source-derived envelope R_*(tau)<=exp exp(C_d/sqrt(tau)) on0<tau<=1 in
 [Note05][narrow]. Its actual narrower O(sqrt(tau)) seed family, fixed
 scaled count/floor and full sharper tail/recurrence are acquired on
@@ -19,9 +27,10 @@ The published approximation constants remain uninstantiated. No numerical
 first-zero location, lower escape rate, population bound or regime
 exclusion has been obtained.
 
-At the user's request this chat now focuses on Dobner. The response and
-growing-window continuation is left for a separate chat; its scientific
-tasks and statuses are retained here without duplicate ownership.
+Chat0001 focuses on Dobner. Chat0002 owns the response and growing-window
+continuation; their scientific tasks and statuses remain here without
+duplicate ownership. The CE program originated in chat0003 and is tracked
+in its own subtask register.
 
 Latest Dobner/summary update, 27 October 2026, prepared for Edward Baker
 with substantial LLM assistance: **gpt-6.1-sol (Codex), actual recorded effort ultra**.
@@ -268,3 +277,50 @@ are linked here.
 [narrow]: ../notes/05_NARROW_SMALL_TIME_DOBNER_SEEDS_20261027.md
 [chatsummary]: ../notes/06_CHAT0001_RESEARCH_SUMMARY_20261027.md
 [narrowreview]: ../reviews/03_NARROW_SMALL_TIME_DOBNER_REVIEW_20261027.md
+
+
+## Collision scale analysis from chat0003
+
+**27 October 2026**, prepared for Edward Baker with substantial LLM
+assistance, **gpt-6-astra (Codex), actual recorded effort max**.
+[Note07](../notes/07_COLLISION_SCALE_RESOLUTION_AND_PROOF_MECHANISMS_20261027.md) and its
+[same-assistant assessment](../reviews/04_COLLISION_SCALE_MECHANISMS_SELF_ASSESSMENT_20261027.md) explain which
+fixed-strip Gaussian losses disappear on shrinking collision neighborhoods,
+and retain the field-amplitude, derivative, regulator and source-shift costs.
+The conditional Hermite cluster has unordered pair energy
+m(m-1)/(16s)+O(s^(-1/2)), hence a fixed signal on each logarithmic time
+annulus. This makes the inherited endpoint-energy target concrete but
+acquires no independent canonical upper bound. A scaled local transverse
+response and possible matching mechanisms are classified as diagnostic
+interfaces or final-strength targets, with the applicable controls named.
+
+TRD-01 through TRD-08 retain their existing statuses. The Dobner and
+chat0002 response continuations keep their existing ownership and next
+tasks. The proposed signed-source comparison is brainstorming, not a new
+dispatched research packet or numerical campaign. No manuscript milestone
+or Git commit is recorded. This discussion is archived in the existing
+chat0003 identity.
+
+**27 October follow-up, chat0003:** Note07 Section 9 clarifies the
+conditional route from a source energy bound on a fixed positive slab to
+Lambda<=b, and separates exact recentering from the unproved transfer of
+the negative-time hierarchy's remainder theorem. Summable scale errors
+and errors affecting the logarithmic coefficient are distinguished.
+No new canonical energy estimate or numerical upper bound is acquired;
+all statuses and ownership above remain unchanged. Prepared for Edward
+Baker with substantial LLM assistance, gpt-6-astra, actual effort max;
+the linked same-assistant assessment includes this clarification.
+
+**27 October program setup, chat0003:** at Edward Baker's request, the
+[new overview](../research-overview/02_COLLISION_ENERGY_RESEARCH_OVERVIEW_20261027.md),
+[CE register](02_COLLISION_ENERGY_RESEARCH_PROGRESS_20261027.md) and
+[continuation note](../notes/08_COLLISION_ENERGY_CONTINUATION_20261027.md)
+turn the collision energy discussion into an approved analytical program.
+Keep t_c, b, a and multiplicity as parameters, pursue several connected
+goals before a new brainstorm, and distinguish eventwise exclusion at
+every positive time from uniform bounds through zero. CE-01 through CE-08
+are Open; TRD-07/08 remain Open pending an acquired source-dependent bound.
+This setup supersedes the earlier description of the direction as only
+brainstorming, while preserving the earlier scientific findings. Prepared
+for Edward Baker with substantial LLM assistance, gpt-6-astra, actual
+recorded effort max.

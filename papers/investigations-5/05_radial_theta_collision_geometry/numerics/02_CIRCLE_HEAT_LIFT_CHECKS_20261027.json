@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-27",
+  "timezone": "America/New_York",
+  "prepared_for": "Edward Baker",
+  "llm_assistance": "substantial",
+  "model": "gpt-6-astra",
+  "effort": "max",
+  "status": "passed",
+  "scope": "Exact rational normal-form differential-operator algebra and inherited Gaussian control; no theta sampling",
+  "variables": "x,p,t,lambda; delta=partial_x+2p partial_p; p=pi*n^2*exp(2x)",
+  "verified": {
+    "source_polynomial": "4p^2-6p",
+    "source_channels": "P U=2U; P V=4V; (P-2)(P-4)G=0",
+    "time_compatibility": "partial_t h = partial_x(x^2/4)",
+    "commutator": "[P,A]=(t-8p)D-8p on each mode",
+    "higher_commutator": "[P^2-6P+8,A]=P C+C P-6C",
+    "source_endpoint_derivative": "-8p^3+30p^2-15p",
+    "response_boundary_y_coefficient": "4p-lambda-t/2",
+    "response_boundary_beta_coefficient": "2p-1/2",
+    "inversion_prefactor_coefficients": [
+      "-1+4z",
+      "4z^2-6z"
+    ],
+    "gaussian_control": {
+      "lambda": 6,
+      "N_over_I0": "27",
+      "C_over_I0": "-27",
+      "sum": "0"
+    }
+  },
+  "not_computationally_verified": [
+    "Infinite-series convergence and all justified limit interchanges: proved in Note03",
+    "Large-lattice-index boundary limit and nonzero residual: proved in Note03",
+    "Finite invariant transverse-space obstruction: proved in Note03",
+    "No collision exclusion, physical-height onset, or numerical certificate is claimed"
+  ],
+  "review_scope": "same-assistant exact algebra check, not independent review"
+}

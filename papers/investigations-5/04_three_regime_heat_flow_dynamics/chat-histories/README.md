@@ -45,3 +45,37 @@ covers this conversation's five analytical deliverables and its current
 Dobner bound. Prepared for Edward Baker with substantial LLM assistance,
 **gpt-6.1-sol, recorded effort ultra**. Its archive number, filename,
 creation/first-capture provenance and registration remain unchanged.
+
+27 October 2026: **Continue collision energy research** is uniquely
+registered here as
+[chat0004](0004_2026-10-27T16-25-42Z_continue-collision-energy-research.json),
+thread `01a17e2e-8b79-7b91-9be0-f1405597eb03`. It produced CE Notes09-11
+and Review05. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra (Codex), actual recorded effort max**. Current captures and
+integrity metadata are in [the registry](index.json). The history is
+maintained only through the authorized refresh tool; the exact-turn final
+capture is dispatched at the end of the reply and verified on the next turn.
+
+27 October 2026, chat0005. Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol (Codex), actual recorded effort ultra**.
+**Continue heat-flow research** is uniquely registered as
+[chat0005](0005_2026-10-27T16-46-30Z_continue-heat-flow-research.json),
+thread `01a17e41-99d3-79c1-b932-2bae84ad0d47`. This is distinct from
+chat0002 with the same title. It produced Notes12-14, Review06 and the
+second CE replay. Current capture times, message counts and hashes remain
+in [the registry](index.json); refresh only through the authorized history
+tool. The exact-turn follow-up captures the actual final reply after it
+is recorded, with verification on the next turn.
+
+On 27 October 2026, the same chat0005 continued the requested raw-versus-shifted
+source comparison, producing Notes15-17, Review07 and the third scalar replay.
+Its thread, original number, title and first-capture identity are unchanged.
+27 October 2026, chat0005 continuation. Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol (Codex), actual recorded effort ultra**. Refreshes and the exact-turn final capture use the standing tool;
+no second registration or manually edited transcript is created.
+
+27 October 2026: [the consolidated chat0005 handoff](../notes/18_CHAT0005_RESEARCH_HANDOFF_20261027.md)
+summarizes both research returns in this existing conversation. Prepared
+for Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual
+recorded effort ultra**. The archive's unique identity and provenance
+remain unchanged; refresh and final capture use the authorized tool.
+
+27 October 2026: **Review three-regime heat-flow notes** is uniquely registered here as [chat0006](0006_2026-10-27T17-28-28Z_review-three-regime-heat-flow-notes.json), thread `01a17e68-028c-7472-8317-c38eefa4c2f0`. It produced Review08 and Notes19–21, and founded [Investigation05](../../05_radial_theta_collision_geometry/README.md). This existing archive and number remain unchanged; the new investigation links here rather than importing a second history. Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
