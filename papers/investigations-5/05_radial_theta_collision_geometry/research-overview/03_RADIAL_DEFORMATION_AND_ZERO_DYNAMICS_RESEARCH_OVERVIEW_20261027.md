@@ -6,6 +6,8 @@
 
 The priority is to understand radial deformations and their zero dynamics **before deciding how to use them against theta forcing**. A clearer structural theory can be worthwhile before it supplies a sharper theta estimate. The longer-term motivation is an alternative view of the system that could contribute to a contradiction under a hypothetical positive de Bruijn-Newman threshold. That application remains open.
 
+**27 October scope extension, chat0007.** Edward Baker specified preservation of the complete radial integrand as the sole invariant and requested auxiliary dynamics for localization. [Note20](../notes/20_AUXILIARY_ANGULAR_FLOWS_AND_COLLISION_LOCALIZATION_20261027.md) now supplies a normalized angular flow, transport flow, exact deformed operator and boundary map, cap costs and a steered first-moment representation. [Brainstorm02](../brainstorm/02_AUXILIARY_FLOWS_FOR_COLLISION_LOCALIZATION_20261027.md) proposes further tube and projected-Laplacian work. The Darboux-specific contracts below apply to that branch; they do not restrict all admissible realizations. Broad RDZ tasks remain open. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra, actual effort max.
+
 ## The starting result
 
 The [working manuscript][manuscript] consolidates the initial results, with the editable source in this investigation's base folder. It contains the canonical radial source and flux, the selected forced response, the exact Darboux family, a conserved integral, physical and auxiliary evolution laws, the complete energy comparison, and a colliding control. [Note17][n17] supplies the original family; [Note18][n18] records the elementary zero-motion corollaries. [Review11][review] states the verification and manuscript scope.

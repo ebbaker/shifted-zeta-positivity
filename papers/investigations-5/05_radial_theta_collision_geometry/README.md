@@ -6,6 +6,8 @@
 
 The [working manuscript](radial_deformations_and_zero_dynamics.tex) consolidates the exact radial Darboux family, conserved observation, full forcing and time laws, energy comparison, colliding control and elementary zero-motion formulas. The editable source is in this base folder; [build instructions](MANUSCRIPT_BUILD.md) identify the generated reading PDF. [Review11](reviews/11_INITIAL_DEFORMATION_MANUSCRIPT_AND_PROGRAM_ASSESSMENT_20261027.md) records the scope and verification. The first phase studies the deformations and their interior zeros before selecting theta-specific estimates. A positive-Lambda contradiction remains a later motivation.
 
+The [collision-localization brainstorm](brainstorm/01_RADIAL_INTEGRAND_PRESERVING_DEFORMATIONS_AND_COLLISION_LOCALIZATION_20261027.md) records Edward Baker’s broader proposal: preserve the complete radial integrand as the sole invariant while changing the equations or higher-dimensional realization. Its invariant and explicit auxiliary flows are now integrated into manuscript Sections 9–10. [Note20](notes/20_AUXILIARY_ANGULAR_FLOWS_AND_COLLISION_LOCALIZATION_20261027.md) records the exact equations, boundary map and cap costs; [Brainstorm02](brainstorm/02_AUXILIARY_FLOWS_FOR_COLLISION_LOCALIZATION_20261027.md) develops further localization tools, including a proposed projected Laplacian descent. [Review12](reviews/12_RADIAL_INVARIANT_AND_ANGULAR_FLOW_SELF_ASSESSMENT_20261027.md) states verification scope. No theta exclusion is claimed.
+
 The earlier RTC and RLC programs, including [Note16's flux and moment return](notes/16_CANONICAL_FLUX_MOMENT_RESTRICTION_AND_DIRECT_COMPARISON_20261027.md), remain preserved historical foundations. The following paragraphs summarize earlier branches; their next-session instructions do not override the current RDZ continuation.
 
 The [flat Dirac continuation](notes/12_FLAT_QUATERNION_DIRAC_AND_DYADIC_LATTICE_H_20261027.md) uses the standard quaternion operator, actual spatial radius r=exp(2u), and one Gaussian exponential field with t,z in each summand. Its complete three-dimensional H integral is exact; a dyadic parity rule and completion remain. Nonaxial shells contribute essentially. [Review07](reviews/07_FLAT_DIRAC_DYADIC_LATTICE_SELF_REVIEW_20261027.md) and [record10](numerics/10_FLAT_DIRAC_DYADIC_LATTICE_CHECKS_20261027.json) distinguish the analytical identity from normalization diagnostics. A first-order Fueter evolution and overall simplification remain open.
@@ -31,6 +33,7 @@ The [changed three-dimensional lattice definitions](notes/08_GENUINE_THREE_DIMEN
 | Folder | Use |
 | --- | --- |
 | `notes/` | Analytical development and continuation |
+| `brainstorm/` | Proposed directions, including radial integrand preserving deformations |
 | `research-overview/` | Program, tasks, dependencies and decision criteria |
 | `research-proposal/` | Current RDZ work-package contracts and first bounded task |
 | `research-progress/` | Authoritative RDZ statuses; historical RTC and RLC registers |

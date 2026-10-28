@@ -15,15 +15,19 @@ The [base-folder manuscript][manuscript] consolidates the exact radial Darboux f
 | RDZ-01 | Initial family available; full structural study open | Note17, manuscript Sections 2-5; inverse and compact parameter domains | A new domain, endpoint or geometric result for the selected family |
 | RDZ-02 | Initial time and deformation laws available; coupled study open | Note17 physical/auxiliary laws; Note18 boundary time law | Complete compatibility and a structural consequence or scoped closure result |
 | RDZ-03 | Simple-node formulas available; bifurcations and transport open | Note18; exact colliding control | Local multiple-node classification and complete spatial boundary accounting |
-| RDZ-04 | Not started | Classical factorization and explicit cosh seed | One admissible extension/composition with its observation and exceptional-parameter map |
+| RDZ-04 | Explicit angular extension established; broader study open | Note20 and manuscript Sections 9–10: finite-s conjugated operator, forcing, inverse and boundary map | Assess nonmultiplicative deformations or a complete localization estimate |
 | RDZ-05 | Ordinary energy transport known; further invariants open | Note17 equation (11), invariant integral | An additional conservation/comparison/independence result, or a scoped candidate failure |
 | RDZ-06 | Later phase; no new canonical distinction selected | Existing theta flux, tails and source equations | A theta application identified by the preceding structural results |
 | RDZ-07 | Later phase; no new transfer result | Existing positive-threshold finite-event reduction | Exact implication from a proved RDZ result with complete range and multiplicity coverage |
 | RDZ-08 | Initial manuscript/program assessment recorded; ongoing | Review11, build record and source provenance | Verification of each subsequent analytic return |
 
+## Angular flow return on 27 October 2026
+
+[Note20](../notes/20_AUXILIARY_ANGULAR_FLOWS_AND_COLLISION_LOCALIZATION_20261027.md) establishes explicit normalized concentration and angular transport, a complete finite-s deformed equation and boundary observation, exact cap leakage, a norm cost, and a collision-adapted angular first-moment representation. These are generic structural results checked by the same assistant, gpt-6-astra, actual effort max; [Review12](../reviews/12_RADIAL_INVARIANT_AND_ANGULAR_FLOW_SELF_ASSESSMENT_20261027.md) states scope. The invariant is the complete radial integrand, following Edward Baker’s clarification. [Brainstorm02](../brainstorm/02_AUXILIARY_FLOWS_FOR_COLLISION_LOCALIZATION_20261027.md) proposes a steered-tube estimate and a projected Laplacian descent. Its annular energy law is conditional on a smooth solution; no global PDE result or theta exclusion is claimed. RDZ-04 has an explicit extension, not completion of every proposed extension study.
+
 ## Next work
 
-The [continuation note][handoff] starts the first bounded RDZ-01/02/03 package: analyze interior nodal events and their relation to the fixed physical observation in the existing family. Do not replace it with an immediate forcing estimate, the previous moment-radius comparison, a new lattice construction, or a broad numerical scan. The earlier source estimates remain available when a structural calculation needs them.
+The [continuation note][handoff], read with its chat0007 update and Note20, retains the earlier bounded RDZ-01/02/03 package: analyze interior nodal events and their relation to the fixed physical observation in the existing family. The new angular-flow and localization questions are also within the user-authorized scope. An immediate forcing estimate, previous moment-radius comparison, new lattice construction, or broad numerical scan is not implied by this extension. The earlier source estimates remain available when a structural calculation needs them.
 
 The package is complete only after a focused proof note and assessment establish a new local classification, a complete transport relation, or a precise obstruction to a proposed correspondence. Generic structural progress need not distinguish theta immediately. Any later claim of theta separation must identify its additional source premise and prove its effect on the relevant controls.
 

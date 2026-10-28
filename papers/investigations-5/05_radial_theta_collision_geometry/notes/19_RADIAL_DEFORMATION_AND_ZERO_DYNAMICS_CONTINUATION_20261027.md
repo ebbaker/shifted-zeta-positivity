@@ -4,6 +4,8 @@
 
 **Start here.** Edward Baker requested that the deformations be understood well before deciding how to use them against theta forcing. The new [RDZ overview][overview], [research proposal][proposal] and [progress register][progress] supersede both the RTC and RLC programs for current work. Their mathematical results remain valid at their stated scopes. In particular, Note15's flux-first task and Note17's immediate forcing-estimate suggestion no longer govern the next session.
 
+**27 October follow-up in chat0007.** Edward Baker broadened the search to preserve the complete radial integrand as the sole invariant, and requested manuscript integration plus auxiliary localization dynamics. Read [Note20](20_AUXILIARY_ANGULAR_FLOWS_AND_COLLISION_LOCALIZATION_20261027.md) and [Brainstorm02](../brainstorm/02_AUXILIARY_FLOWS_FOR_COLLISION_LOCALIZATION_20261027.md) with this handoff. Manuscript Sections 9–10 now contain explicit angular flows and their complete equation/boundary map. The original Darboux first task below remains an open branch, not a restriction on the broader search. This update retains chat0006’s historical identity; the new work belongs to chat0007. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra, actual effort max.
+
 ## Read first
 
 1. Repository AGENTS.md, [the chat-history workflow][chatworkflow], [result summaries][results] and [patterns to avoid][avoid]. The specific [collision controls][controls], [local collision geometry][geometry] and [scoped-conclusion rule][scope] are relevant.

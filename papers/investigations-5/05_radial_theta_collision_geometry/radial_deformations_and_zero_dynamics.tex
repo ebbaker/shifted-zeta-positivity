@@ -8,7 +8,7 @@
 \usepackage{hyperref}
 \definecolor{linkblue}{RGB}{28,65,105}
 \hypersetup{colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue,
- pdftitle={Radial Darboux Deformations and the Theta Observation},
+ pdftitle={Deformations Preserving the Radial Theta Observation},
  pdfauthor={Drafted for Edward Baker}}
 \numberwithin{equation}{section}
 \newtheorem{theorem}{Theorem}[section]
@@ -24,28 +24,29 @@
 \newcommand{\D}{\partial_x}
 \newcommand{\R}{\mathbb R}
 \setlength{\emergencystretch}{2em}
-\title{Radial Darboux Deformations and the Theta Observation}
+\title{Deformations Preserving the Radial Theta Observation}
 \author{Drafted for Edward Baker}
-\date{27 October 2026\\[3pt]\small Initial working manuscript}
+\date{27 October 2026\\[3pt]\small Working manuscript}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
 The canonical theta heat transform has a three-dimensional radial source
-and a forced boundary realization. We consolidate an explicit Darboux
-family of that realization. The family changes the radial potential and
-forcing while preserving the complete physical observation, its spectral
-derivatives, and every finite positive-frequency zero multiplicity. We
-give the inverse map, a conserved integral, the physical-time and auxiliary
-deformation equations, and the full transformed energy identity. We also
-distinguish physical zero motion from the motion of interior response
-zeros and record their elementary velocity formulas. An exact colliding
-source survives every finite deformation and shows the scope of the
-energy comparison. These results provide a foundation for studying the
-deformations before seeking theta-specific collision estimates. They do
-not establish a new bound for the de Bruijn--Newman constant or an
-all-height simplicity theorem.
+and a forced boundary realization. We develop an explicit Darboux family
+preserving its complete observation, and a broader class preserving the
+radial integrand pointwise after spherical averaging. The latter class
+admits auxiliary angular concentration and transport equations. We give
+an exact deformed differential operator, its forcing and boundary
+observation, and a profile that concentrates the two physical collision
+conditions near a spatial curve. Explicit cap bounds quantify the
+localization, while derivative and norm costs identify what it does not
+supply. The Darboux energy identity and the induced energy of the
+multiplicative angular realization transport existing cancellations.
+An exact colliding source survives these constructions. The results
+provide concrete systems for investigating localization and zero
+geometry; they establish no new de Bruijn--Newman bound or all-height
+simplicity theorem.
 \end{abstract}
 
 \section{Purpose and the variables of the problem}
@@ -55,9 +56,10 @@ systems can retain the integral defining the theta observation while
 making its dynamics easier to understand. An equality of observations
 does not by itself provide a sharper estimate. It can nevertheless expose
 a useful factorization, a different boundary description, or a tractable
-auxiliary zero geometry. The present manuscript develops one explicit
-family and identifies what is already preserved before choosing such an
-application.
+auxiliary zero geometry. The manuscript first develops an explicit radial family, then broadens
+the equations to preserve the radial integrand under angular deformation.
+Auxiliary flows make the localization question concrete before a
+collision-excluding application is selected.
 
 The underlying Darboux factorization is classical
 \cite{KravchenkoTorba}. The contribution recorded here is its complete
@@ -66,14 +68,17 @@ the physical readout, time law, boundary terms and comparison control.
 The source calculations and initial family are developed in the internal
 notes \cite{RadialNotes,FluxNote,DarbouxNote}. Section~\ref{sec:zeros}
 records elementary consequences for zero motion, expanded in
-\cite{ZeroNote}. No novelty claim is made for the classical transformation.
+\cite{ZeroNote}. Sections~\ref{sec:radialinvariant}--\ref{sec:angularflows} develop
+the broader invariant and auxiliary flows proposed by Edward Baker,
+with details in \cite{AngularNote}. No novelty claim is made for the
+classical transformations or angular concentration formulas.
 
-We use four distinct variables:
+We distinguish the following variables:
 \begin{itemize}
 \item $r=e^{2u}$ is the spatial radius and $x=\log r=2u$ its logarithm;
 \item $a>0$ is the physical observation frequency, with $\lambda=a^2/4$;
 \item $t$ is Newman time, for which $H_t=-H_{aa}$;
-\item $\kappa\ge0$ is an auxiliary deformation parameter.
+\item $\kappa\ge0$ and $s\ge0$ parameterize the Darboux and angular deformations.
 \end{itemize}
 The capital $\Lambda$, used only in the discussion of possible
 applications, denotes the de Bruijn--Newman threshold. It is unrelated to
@@ -507,14 +512,267 @@ endpoint controls alter their stated arithmetic inputs. Atomic sources
 require a distributional formulation beyond this manuscript. This is
 premise screening, not a rerun of their numerical certificates.
 
+\section{Preserving the radial integrand}\label{sec:radialinvariant}
+
+Edward Baker proposed a broader deformation problem: retain the complete
+one-dimensional radial integrand as the sole invariant, while changing
+the equations and higher-dimensional realization to make a hypothetical
+collision easier to study. Radial symmetry, a fixed potential, positivity,
+and spectral or energy invariance are not additional requirements of this
+search. Particular constructions can have some of those properties.
+
+Put $\dd\nu=\dd\Omega/(4\pi)$ on $S^2$ and
+$\mathcal PF(r)=\int_{S^2}F(r,\omega)\dd\nu$. The prescribed density is
+\begin{equation}\label{eq:radialdensity}
+\mathcal I(t,z;r)=\frac18r^{3/2}Q_t(r)
+              \cos\!\left(\frac z2\log r\right).
+\end{equation}
+An admissible representation has $\mathcal P\mathcal J_s=\mathcal I$
+at every $r\ge1$, where $s$ is an auxiliary parameter. In the coordinate
+$u$, the corresponding density is $e^{tu^2}\Phi(u)\cos(zu)$; the
+Jacobian $\dd r=2r\dd u$ accompanies the coordinate change.
+For example, a field $F_{s,t}$ satisfying $\mathcal PF_{s,t}=Q_t$ gives
+\begin{equation}\label{eq:angularH}
+H(t,z)=\frac1{32\pi}\int_{|X|\ge1}|X|^{-1/2}F_{s,t}(X)
+             \cos\!\left(\frac z2\log|X|\right)\dd^3X.
+\end{equation}
+The spherical integration recovers \eqref{eq:radialdensity} pointwise.
+This source construction is sufficient, not a restriction on every
+possible factorization of the retained integrand.
+
+\begin{proposition}[Laplacian preservation of the radial average]
+For smooth fields on spherical shells,
+\begin{equation}\label{eq:projectionlaplace}
+\mathcal P\Delta F=\Delta_3\mathcal PF.
+\end{equation}
+Consequently $F_s=Q+\Delta\Psi_s$ has $\mathcal PF_s=Q$ whenever
+$\mathcal P\Psi_s=0$. Taking $F_{s,t}=e^{t\log^2r/4}F_s$ then
+preserves \eqref{eq:radialdensity}.
+\end{proposition}
+\begin{proof}
+In spherical coordinates,
+$\Delta=\partial_r^2+2r^{-1}\partial_r+r^{-2}\Delta_{S^2}$.
+The integral of $\Delta_{S^2}F$ on the boundaryless sphere is zero.
+Commuting radial differentiation with spherical integration proves the
+identity and the stated consequences.
+\end{proof}
+
+For a smooth bump $\chi$ supported in $1<r_-<r<r_+<\infty$ and a unit
+vector $n$, the explicit potential perturbation
+$\Psi_s=s\chi(r)(\omega\cdot n)$ gives
+\begin{equation}\label{eq:angularbump}
+F_s=Q+s\left(\chi''+\frac2r\chi'-\frac2{r^2}\chi\right)(\omega\cdot n).
+\end{equation}
+Here $\Delta_{S^2}(\omega\cdot n)=-2\omega\cdot n$; the spherical
+harmonic convention is recorded in \cite{DLMFSphere}. The perturbation
+is confined to the annulus and leaves the radial density unchanged.
+Multiplying the source by its physical time weight does not mean
+applying $\Delta$ to the time-weighted potential: the latter operation
+has extra radial derivative terms.
+
+The earlier Darboux pairing preserves an integral. Its local relation is
+\begin{equation}\label{eq:pairingdensitycorrection}
+p_\kappa h_\kappa=-g_t\cos(\sqrt\lambda x)+(p_\kappa g_t)'.
+\end{equation}
+Thus its displayed density agrees pointwise only after retaining the
+derivative correction. The broader operator freedom here and the
+pointwise density requirement are distinct from that earlier pairing.
+
+\section{Auxiliary flows for angular localization}\label{sec:angularflows}
+
+The following constructions give actual auxiliary differential equations.
+They localize a representation of the source and, in a second example,
+the directions contributing to the physical first jet. They do not move
+the physical collision, because $H$ remains unchanged.
+
+\subsection{A normalized concentration flow}
+
+Let $q(r,\omega)$ be a smooth bounded real function, independent of the
+physical variables $t,z$. Define, for finite $s\ge0$,
+\begin{equation}\label{eq:scoreflow}
+Z_s(r)=\mathcal P(e^{sq}),\qquad
+A_s=\frac{e^{sq}}{Z_s},\qquad
+\overline q_s=\mathcal P(qA_s).
+\end{equation}
+Then $A_0=1$, $A_s>0$, and direct differentiation proves
+\begin{equation}\label{eq:replicator}
+\partial_s A_s=(q-\overline q_s)A_s,\qquad
+\mathcal PA_s=1,\qquad
+\partial_s\overline q_s=\mathcal P[(q-\overline q_s)^2A_s]\ge0.
+\end{equation}
+Consequently $F_{s,t}=A_sQ_t$ preserves the complete radial density.
+For bounded $s$, boundedness of $q$ supplies uniform domination for the
+observation and its finite physical derivatives. Differential-equation
+claims also require regularity of the spatial derivatives; both explicit
+examples below have derivative growth compatible with the selected tails.
+
+For $q=\omega\cdot n$, $|n|=1$, elementary integration gives
+\begin{equation}\label{eq:capdensity}
+Z_s=\frac{\sinh s}{s},\qquad
+A_s=\frac{s e^{s\omega\cdot n}}{\sinh s}.
+\end{equation}
+Values at $s=0$ are removable. For $s>0$ and $0<\delta<\pi$,
+\begin{equation}\label{eq:captail}
+\mathcal P\bigl(A_s\boldsymbol1_{\{\omega\cdot n\le\cos\delta\}}\bigr)
+=\frac{e^{s\cos\delta}-e^{-s}}{e^s-e^{-s}}
+\le\frac{e^{-s(1-\cos\delta)}}{1-e^{-2s}}.
+\end{equation}
+This is an explicit confinement bound outside an angular cap. It follows
+by integrating $e^{sv}\dd v/2$ over $-1\le v\le\cos\delta$.
+
+A spatial transport equation provides another driver. At each radius,
+\begin{equation}\label{eq:angulartransport}
+\partial_s A_s+\operatorname{div}_{S^2}(A_s\nabla_{S^2}q)=0,
+\qquad A_0=1.
+\end{equation}
+Its integral is conserved. When $q=\omega\cdot n$ with $n$ fixed on
+that sphere, its explicit solution is
+\begin{equation}\label{eq:transportdensity}
+A_s^{\rm tr}(\omega)=(\cosh s-(\omega\cdot n)\sinh s)^{-2}.
+\end{equation}
+Indeed the angular coordinate $v=\omega\cdot n$ follows
+$\dot v=1-v^2$, so $v=\tanh(s+\operatorname{arctanh}v_0)$;
+the derivative of the inverse map is \eqref{eq:transportdensity}.
+Half the transported angular mass lies in $v\ge\tanh s$.
+Both drivers are smooth for every finite $s$. Pure angular diffusion
+from $A_0=1$ would be stationary; the concentrating drift is essential
+for this example.
+
+\subsection{The deformed equations and boundary observation}
+
+An exact equation realization is available for any smooth positive
+$A_s$ with $\mathcal PA_s=1$ independent of $t,\lambda$. Start with
+\begin{equation}\label{eq:basefulloperator}
+\psi(t,r;\lambda)=r^{-1/2}Y(t,\log r;\lambda),\qquad
+L_\lambda=\Delta+\frac{\lambda+1/4}{r^2},\qquad
+L_\lambda\psi=Q_t.
+\end{equation}
+Let $\ell_s=\log A_s$, $\psi_s=A_s\psi$, and
+\begin{align}
+L_{\lambda,s}&=A_sL_\lambda A_s^{-1}\notag\\
+ &=\Delta-2\nabla\ell_s\cdot\nabla+
+ \frac{\lambda+1/4}{r^2}+|\nabla\ell_s|^2-\Delta\ell_s.
+\label{eq:gaugeoperator}
+\end{align}
+The product rule proves the complete equation
+\begin{equation}\label{eq:gaugeforcing}
+L_{\lambda,s}\psi_s=A_sQ_t=F_{s,t}.
+\end{equation}
+This operator has angular drift and need not be a radial scalar-potential
+operator. For the flow \eqref{eq:replicator}, with
+$a_s=q-\overline q_s$, it also satisfies
+\begin{equation}\label{eq:gaugeflow}
+\partial_s\psi_s=a_s\psi_s,\qquad
+\partial_sF_{s,t}=a_sF_{s,t},\qquad
+\partial_sL_{\lambda,s}=[a_s,L_{\lambda,s}],
+\end{equation}
+where $a_s$ denotes multiplication. These identities are direct
+conjugation formulas; they assert no autonomous integrable hierarchy.
+
+The physical boundary operator must change with the field. Define
+\begin{equation}\label{eq:gaugeboundary}
+\mathcal R_s f=\left[(r\partial_r+\tfrac12-r\partial_r\ell_s)f\right]_{r=1}.
+\end{equation}
+Then $\mathcal R_s\psi_s=A_s(1,\omega)B(t,\lambda)$ and
+\begin{equation}\label{eq:gaugejet}
+\mathcal P\mathcal R_s\psi_s=B,
+\qquad
+\mathcal P\mathcal R_s\partial_\lambda\psi_s=B_\lambda.
+\end{equation}
+These follow by applying $r\partial_r+1/2$ to $r^{-1/2}Y$ and using
+$\mathcal PA_s=1$. All finite physical multiplicities are retained.
+The selected response is explicitly $A_s\psi$, with inverse
+$A_s^{-1}\psi_s$ at finite $s$; no unspecified uniqueness theorem for a
+new homogeneous boundary problem is needed. Physical time is still
+Newman time, and $\partial_tF_{s,t}=(\log^2r/4)F_{s,t}$.
+
+\subsection{A profile adapted to the two collision conditions}
+
+Fix a proposed real event frequency $a_*>0$ and a scale $b>0$. For
+$u\ge0$ put
+\begin{equation}\label{eq:jetdirection}
+v(u)=(\cos(a_*u),-bu\sin(a_*u),0),\quad
+m(u)=|v(u)|,\quad n(u)=v(u)/m(u).
+\end{equation}
+The vector never vanishes: at $u=0$ its first component is one, and
+for $u>0$ sine and cosine cannot vanish together. Thus $n$ is smooth.
+Choose the fixed score $q(r,\omega)=n(\log r/2)\cdot\omega$ in
+\eqref{eq:scoreflow}. It is independent of the running frequency $z$,
+so the complete $H(t,z)$ remains unchanged for all $z$.
+
+Rotational symmetry and differentiation of $Z_s$ give
+\begin{equation}\label{eq:firstangularmoment}
+\mathcal P(\omega A_s)=\left(\coth s-\frac1s\right)n(u)
+ =:\mathfrak l(s)n(u).
+\end{equation}
+For $s>0$, $\mathfrak l(s)>0$; its value at zero is zero. With
+$\rho_T(u)=e^{Tu^2}\Phi(u)$, integration yields the exact vector identity
+\begin{equation}\label{eq:eventmoment}
+\int_0^\infty\rho_T(u)m(u)\mathcal P(\omega A_s)\dd u
+=\mathfrak l(s)(H(T,a_*),bH_a(T,a_*),0).
+\end{equation}
+Therefore a collision is a zero weighted angular first moment for every
+$s>0$. The concentration is around the curve
+$\Gamma(u)=e^{2u}n(u)$, with the uniform angular tail bound
+\eqref{eq:captail}. In particular, the weighted mass outside those caps
+is at most its right-hand side times $\int\rho_Tm\dd u<\infty$.
+This localizes the representation of the two cancellations near a curve,
+not the radial support or the physical event to a new point. The retained
+radial density prevents discarding nonzero radial contributions.
+
+\subsection{Costs and the remaining analytical question}
+
+For the exponential cap profile,
+\begin{equation}\label{eq:angularcost}
+\mathcal P(A_s^2)=s\coth s\ge1.
+\end{equation}
+More generally $\mathcal PA^2\ge(\mathcal PA)^2=1$. Thus redistribution
+alone cannot decrease a full source $L^2$ norm with a positive radial
+weight. For the conjugated equation, the exact norm identity is
+\[
+\|A_sf\|_{L^2(A_s^{-2}\dd^3X)}=\|f\|_{L^2(\dd^3X)}.
+\]
+Complete integration-by-parts identities in this induced weight, with
+the conjugated boundaries, pull back to the original identities.
+These are limitations of these norm and conjugation comparisons,
+not exclusions of localized signed estimates or other deformations.
+
+If $n=n(r)$ in the score, its spatial derivative costs are explicit:
+\begin{align}
+|\nabla\ell_s|^2&=s^2\left[(n'(r)\cdot\omega)^2+
+                              \frac{1-q^2}{r^2}\right],\notag\\
+\Delta\ell_s&=s\left[(n''(r)+2n'(r)/r)\cdot\omega-\frac{2q}{r^2}\right].
+\label{eq:steeringcost}
+\end{align}
+The normalization is independent of $r$ because $|n(r)|=1$.
+A tube calculation must retain these terms, its lateral and radial
+boundaries, and any cutoff commutators. The inverse weight is not
+uniformly bounded as $s\to\infty$.
+
+All these constructions also preserve the exact colliding control and
+the smooth controls on their actual convergence domains. In particular,
+zero angular first moment is permitted; it is not an impossible dynamics
+by itself. The open question is whether the fixed canonical radial data
+allow a useful signed or boundary estimate in a suitably chosen
+representation. The additional work is recorded in \cite{AngularNote};
+no theta collision exclusion follows from angular concentration alone.
+
+
 \section{A program beginning with deformation theory}
 
-The immediate objective is to understand the admissible systems and
-their zero geometry before choosing a theta-specific forcing estimate.
+The immediate objective is to understand admissible systems and their
+zero geometry before choosing a theta-specific estimate. The complete
+radial integrand is the sole required invariant in the broader search;
+the Darboux and multiplicative angular families are explicit examples.
 The following questions are intentionally separated from the proved
 identities above.
 
 \begin{enumerate}
+\item Can the steered angular profiles yield a complete signed tube or
+boundary estimate with their derivative and leakage costs included?
+Can a projected Laplacian descent choose a useful deformation while
+preserving the radial density? These are research questions, not
+consequences of concentration alone.
 \item How do interior nodal sets change under the auxiliary evolution,
 including multiple interior zeros and spatial boundary crossings?
 What information, beyond the simple-root formulas, survives the map
@@ -543,8 +801,8 @@ automatically a physical collision.
 
 A future application must establish its new compatibility restriction,
 connect it to the unchanged physical first jet, and cover the required
-times, heights and multiplicities. The present exact family supplies a
-setting for those questions. It does not answer them by construction.
+times, heights and multiplicities. The explicit families supply settings
+for those questions. It does not answer them by construction.
 
 \appendix
 \section{The inherited fourth-moment restriction}
@@ -585,7 +843,10 @@ This working manuscript was prepared for Edward Baker with substantial
 assistance from OpenAI's GPT-6-astra in Codex, at the recorded reasoning
 effort \emph{max}, on 27 October 2026. The same assistant checked the
 factorizations, normalization, boundary and time terms, the explicit
-control, and the local zero-velocity corollaries. These checks are
+control, local zero-velocity corollaries, angular normalization and
+transport, deformed boundary map, cap and norm costs, and the first-moment
+identity. Edward Baker proposed preserving the radial integrand as the
+sole invariant and using auxiliary dynamics for localization. These checks are
 internal and do not constitute independent specialist review. No
 research numerical experiment or new interval certificate is used.
 
@@ -621,6 +882,19 @@ E. Baker research archive, prepared with LLM assistance,
 \emph{Physical zeros and interior zeros under radial deformation},
 Investigation05, Note18, 27 October 2026. Elementary corollaries
 recorded with this manuscript.
+
+\bibitem{AngularNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Auxiliary angular flows preserving the radial integrand},
+Investigation05, Note20, 27 October 2026; proposed extensions in
+Brainstorm02 and internal assessment in Review12.
+
+\bibitem{DLMFSphere}
+NIST, \emph{Digital Library of Mathematical Functions},
+\href{https://dlmf.nist.gov/14.30}{Section 14.30},
+equations (14.30.1), (14.30.10)--(14.30.12).
+Selected spherical harmonic and Laplacian conventions inspected
+27 October 2026; reference annotation09.
 
 \bibitem{ThresholdNote}
 E. Baker research archive, prepared with LLM assistance,

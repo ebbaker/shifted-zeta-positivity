@@ -6,6 +6,8 @@
 
 The initial [manuscript][manuscript] supplies an exact family of radial systems with unchanged physical H. This proposal asks what can be learned from that family as a dynamical and geometric object. The eventual positive-Lambda contradiction is a motivation, not an assumption about the intermediate results.
 
+**27 October scope extension, chat0007.** Edward Baker specified preservation of the complete radial integrand as the sole invariant and requested auxiliary dynamics for localization. [Note20](../notes/20_AUXILIARY_ANGULAR_FLOWS_AND_COLLISION_LOCALIZATION_20261027.md) now supplies a normalized angular flow, transport flow, exact deformed operator and boundary map, cap costs and a steered first-moment representation. [Brainstorm02](../brainstorm/02_AUXILIARY_FLOWS_FOR_COLLISION_LOCALIZATION_20261027.md) proposes further tube and projected-Laplacian work. The Darboux-specific contracts below apply to that branch; they do not restrict all admissible realizations. Broad RDZ tasks remain open. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra, actual effort max.
+
 ## Common mathematical contract
 
 Use the complete selected response Y, its source g_t, and the definitions in [Notes17][n17] and [18][n18]. Physical time t, spectral parameter lambda=a^2/4, spatial coordinate x=log r, and deformation parameter kappa are distinct. For the first tasks choose symbolic compact sets 0<=t<=T, 0<lambda_-<=lambda<=lambda_+, 0<=kappa<=K, and 0<=x<=X as needed. Localizing in x does not replace the selected tail or silently impose a new endpoint condition.

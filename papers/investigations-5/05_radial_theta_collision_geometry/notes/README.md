@@ -40,3 +40,5 @@ Start with [19 - Current RDZ continuation](19_RADIAL_DEFORMATION_AND_ZERO_DYNAMI
 - [18 - Physical and interior zero dynamics](18_PHYSICAL_AND_INTERIOR_ZERO_DYNAMICS_FOUNDATION_20261027.md): elementary physical and interior simple-zero velocities, regular parameter mu=kappa^2, control and scope; not a bifurcation classification.
 
 - [19 - Current RDZ continuation](19_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_CONTINUATION_20261027.md): structure-first program, exact equations, reading order, first nodal-geometry task and archive continuity. Supersedes prior RTC/RLC next-session priorities.
+
+- [20 - Auxiliary angular flows and collision localization](20_AUXILIARY_ANGULAR_FLOWS_AND_COLLISION_LOCALIZATION_20261027.md): normalized concentration and transport flows, full deformed operator and boundary map, explicit cap/norm costs, and a collision-adapted first-moment representation. Generic finite-parameter constructions; no theta exclusion.
