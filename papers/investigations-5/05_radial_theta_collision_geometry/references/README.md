@@ -36,3 +36,5 @@ The [spherical Laplacian and angular flow annotation](09_SPHERICAL_LAPLACIAN_AND
 The [projected evolution and elliptic response annotation](10_PROJECTED_EVOLUTION_AND_ELLIPTIC_RESPONSE_20261027.md) records selected Schnaubelt and Hunter passages for Note23, including their domain and regularity hypotheses. Both public PDFs are archived outside Git with version dates and hashes. 27 October 2026; for Edward Baker with LLM assistance, gpt-6-astra, actual effort max, chat0008.
 
 - [11 — Conservative feedback and diffusion contraction](11_CONSERVATIVE_FEEDBACK_AND_DIFFUSION_CONTRACTION_20261028.md): Hunter heat-smoothing/contraction template and Eberle v3 synchronous-coupling context for Note28; selected passages checked, external PDF receipt retained. 28 October 2026; gpt-6-astra, actual effort max.
+
+- [12 — General relative entropy and the carrier comparison](12_GENERAL_RELATIVE_ENTROPY_CARRIER_COMPARISON_20261028.md): classical attribution for Note29; selected lemma checked and public author PDF archived externally. 28 October 2026; prepared for Edward Baker with LLM assistance, gpt-6-astra, actual effort max, chat0010.

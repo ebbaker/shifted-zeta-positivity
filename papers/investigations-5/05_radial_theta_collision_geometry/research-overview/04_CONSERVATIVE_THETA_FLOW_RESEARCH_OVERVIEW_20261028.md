@@ -4,7 +4,11 @@
 
 **Aim:** find a simple spatial evolution of the explicit theta integrand that preserves the entire observation H(t,a) and makes a hypothetical collision H=H_a=0 yield a useful quantitative constraint. The radial density may change, and no preferred direction is required. The immediate tasks are to measure the existing heat diagnostic's finite-time usefulness and decide what stronger conservative dynamics, if any, is worth developing.
 
-This is a new program overview. It supersedes overview03 for current priorities while retaining its results and task meanings. The [new progress register][progress] is the sole live ledger, and [continuation26][continuation] gives the next-session routing. The initial planning return added no mathematical theorem or numerical result. **28 October B01 return:** [Note28][return28] now supplies a conservative feedback magnifier and finite collision deadline; [assessment16][review16] states its proof scope. Global regularity is a pointwise reformulation. The generic initializer payments are analytically too weak, so B02 is the substantive next task and [E02 R1][packet2] is an optional scalar loss audit. Progress04 owns their live status.
+This is a new program overview. It supersedes overview03 for current priorities while retaining its results and task meanings. The [new progress register][progress] is the sole live ledger, and [continuation26][continuation] preserves its initial routing; [Continuation32][continuation32] is the latest handoff. The initial planning return added no mathematical theorem or numerical result. **28 October B01 return:** [Note28][return28] now supplies a conservative feedback magnifier and finite collision deadline; [assessment16][review16] states its proof scope. Global regularity is a pointwise reformulation. The generic initializer payments are analytically too weak, so B02 is the substantive next task and [E02 R1][packet2] is an optional scalar loss audit. Progress04 owns their live status.
+
+**28 October B02 first return:** [Note29][return29] and [assessment17][review17] give a sharp mass–energy–moment inequality and explicit regularity bounds from an independently known first-jet margin. The positive-carrier dissipation supplies no such margin; the exact control’s relative energy tends to zero at breakdown. Applying the bound to Note16’s existing fourth-moment region gives no enlarged exclusion domain. B02 remains partial; [Continuation30][continuation30] supplied the second bounded test completed below. Prepared for Edward Baker with LLM assistance, actual gpt-6-astra / max, chat0010.
+
+**28 October B02 second return:** [Note31][return31] and [assessment18][review18] prove that the fixed theta logarithmic-source relation is lost under the mandatory preparation, with explicit nonzero sphere residuals and subsequent second-order commutator forcing. Dropping the residual causes a false gradient divergence; the uncut coefficient also fails the unweighted L2 domain at the origin on actual small-frequency data. This stops the fixed zero-residual variant. A coupled signed estimate retaining these terms remains open under [Continuation32][continuation32]. No new canonical exclusion, numerical task or manuscript revision follows. Prepared for Edward Baker with LLM assistance, actual gpt-6-astra / max, chat0010.
 
 ## Established starting point
 
@@ -111,3 +115,11 @@ Keep proved identities, floating measurements, interval certificates and propose
 [return28]: ../notes/28_ENERGY_NORMALIZED_CONSERVATIVE_COLLISION_MAGNIFIER_20261028.md
 [review16]: ../reviews/16_CONSERVATIVE_FEEDBACK_MAGNIFIER_B01_ASSESSMENT_20261028.md
 [packet2]: ../research-progress/handoffs/CTF-E02_FEEDBACK_DEADLINE_PAYMENTS_REQUEST_R1_20261028.md
+
+[return29]: ../notes/29_POSITIVE_CARRIER_COMPARISON_AND_QUANTITATIVE_REGULARITY_20261028.md
+[review17]: ../reviews/17_POSITIVE_CARRIER_AND_REGULARITY_B02_ASSESSMENT_20261028.md
+[continuation30]: ../notes/30_CONSERVATIVE_CARRIER_COMPARISON_CONTINUATION_20261028.md
+
+[return31]: ../notes/31_CANONICAL_SOURCE_RELATION_AND_PREPARATORY_COMMUTATOR_20261028.md
+[review18]: ../reviews/18_CANONICAL_SOURCE_RELATION_PROPAGATION_ASSESSMENT_20261028.md
+[continuation32]: ../notes/32_SOURCE_RELATION_COMMUTATOR_CONTINUATION_20261028.md

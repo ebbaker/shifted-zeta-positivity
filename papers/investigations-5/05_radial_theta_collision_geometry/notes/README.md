@@ -2,7 +2,7 @@
 
 27 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
 
-Start with [28 — CTF-B01 conservative feedback magnifier](28_ENERGY_NORMALIZED_CONSERVATIVE_COLLISION_MAGNIFIER_20261028.md), then [27 — CTF-E01 finite heat return](27_CONSERVATIVE_HEAT_BASELINE_E01_RETURN_20261028.md). [26 — Conservative-flow continuation](26_CONSERVATIVE_THETA_FLOW_CONTINUATION_20261028.md) preserves the original task contracts; Note28 gives the current continuation prompt. The [current overview](../research-overview/04_CONSERVATIVE_THETA_FLOW_RESEARCH_OVERVIEW_20261028.md) and [sole live progress register](../research-progress/04_CONSERVATIVE_THETA_FLOW_RESEARCH_PROGRESS_20261028.md) govern current CTF priorities. Earlier LOC and Darboux notes remain supporting history.
+Start with [30 — Latest continuation](30_CONSERVATIVE_CARRIER_COMPARISON_CONTINUATION_20261028.md) and [29 — Positive-carrier comparison](29_POSITIVE_CARRIER_COMPARISON_AND_QUANTITATIVE_REGULARITY_20261028.md), then [28 — Fixed feedback magnifier](28_ENERGY_NORMALIZED_CONSERVATIVE_COLLISION_MAGNIFIER_20261028.md). The [current overview](../research-overview/04_CONSERVATIVE_THETA_FLOW_RESEARCH_OVERVIEW_20261028.md) and [sole live progress register](../research-progress/04_CONSERVATIVE_THETA_FLOW_RESEARCH_PROGRESS_20261028.md) govern CTF priorities. Earlier continuation notes preserve their historical contracts.
 
 - [01 — Initial analytical development](01_RADIAL_THETA_GEOMETRY_AND_COLLISION_MECHANISMS_20261027.md): radial/Kelvin source, evolved potential, forced boundary equation, exact transfer and time evolution, Wronskian control, and research choices.
 - [02 — Continuation and session handoff](02_CONTINUATION_AND_SESSION_HANDOFF_20261027.md): reading order, current task states, exact formulas, next bounded analysis and provenance.
@@ -57,3 +57,11 @@ Start with [28 — CTF-B01 conservative feedback magnifier](28_ENERGY_NORMALIZED
 - [27 — CTF-E01 finite heat measurement return](27_CONSERVATIVE_HEAT_BASELINE_E01_RETURN_20261028.md): complete fixed R1 grid, moment allowances, exact collision control, tail/error accounting and matched cost. Floating evidence; no collision exclusion. 28 October 2026; gpt-6.1-sol, actual effort ultra, chat0009.
 
 - [28 — Conservative feedback collision magnifier](28_ENERGY_NORMALIZED_CONSERVATIVE_COLLISION_MAGNIFIER_20261028.md): B01 complete; conservative marked-jet flow, local existence, finite collision deadline, global-regularity equivalence and an analytic <1/100 limitation for the generic initializer comparison. Same-assistant proof checks; no theta exclusion. Next B02; optional E02 scalar audit. 28 October 2026; gpt-6-astra, actual effort max, chat0009.
+
+- [29 — Positive carrier and quantitative regularity](29_POSITIVE_CARRIER_COMPARISON_AND_QUANTITATIVE_REGULARITY_20261028.md): first bounded B02 return; sharp moment inequality, explicit flow bounds from a direct first-jet margin, exact carrier-collapse control, and no new exclusion region. Prepared for Edward Baker with LLM assistance, gpt-6-astra / max, chat0010, 28 October 2026.
+
+- [30 — Continuation after the carrier comparison](30_CONSERVATIVE_CARRIER_COMPARISON_CONTINUATION_20261028.md): first carrier return’s reading order, signed-production question, stop rule, B/E routing and pasteable prompt. Same provenance as Note29.
+
+- [31 — Canonical source relation and preparatory commutator](31_CANONICAL_SOURCE_RELATION_AND_PREPARATORY_COMMUTATOR_20261028.md): second bounded B02 return; explicit actual-theta preparation defect, full residual evolution, essential sphere cancellation and uncut origin-domain failure. Fixed zero-residual variant stopped; broader B02 partial. Prepared for Edward Baker with LLM assistance, gpt-6-astra / max, chat0010, 28 October 2026.
+
+- [32 — Continuation after the source-relation test](32_SOURCE_RELATION_COMMUTATOR_CONTINUATION_20261028.md): latest handoff, retained defects and precise bounded contract for a coupled signed estimate, B/E routing and pasteable prompt. Same provenance as Note31.
