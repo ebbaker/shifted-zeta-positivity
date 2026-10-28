@@ -25,3 +25,18 @@ The spherical eigenvalue convention needed for the constant2 in Note23 remains t
 ## Additional heat passages for Note25
 
 The same Hunter PDF was consulted for Section5.1, formulas(5.5)–(5.6), printed pp.129–130, and Theorem5.5 with the Gaussian normalization discussion on printed p.131. These support the explicit heat kernel, positive-time smoothing and initial L¹ convergence. Section5.B.3, printed p.171, was also inspected for the L¹ Fourier convention. Note25 supplies its own Gaussian-convolution argument for cosine-transform uniqueness, its theta normalization, conservation by Fubini, and its central moment-remainder calculation. The ordinary heat theory is classical; no collision-specific result is imported from Hunter. The existing archived reading copy and retrieval hash above are retained.
+
+
+**28 October 2026, chat0013 — geometric interpretation and symmetry.** Prepared for Edward Baker with LLM assistance, gpt-6-astra / max. Rechecked the heat-kernel discussion and Theorem5.5 in Section5.1, and additionally inspected Theorem5.12 on uniqueness of the generalized heat solution in H^s. Taking the Sobolev exponent zero applies to the initial L2 theta density; uniqueness together with rotation invariance gives the radiality argument in [Brainstorm05](../brainstorm/05_FIELD_VARIABLES_AND_NONRADIAL_FLOWS_20261028.md). The elementary shear and energy identities there are derived directly, not imported as theorems from Hunter. The same archived version and provenance above remain applicable.
+
+## Fourier inversion for the Book setup, 28 October 2026
+
+Prepared for Edward Baker with LLM assistance, gpt-6-astra / max, chat0013.
+Inspected Section5.B.2, Theorem5.66, printed p.169 (PDF page174), in the
+same Hunter reading copy. It gives the Schwartz-space Fourier transform
+and inverse. Hunter's forward convention uses (2 pi)^(-n) and a negative
+exponential; the [Book manuscript](../book/main.tex) uses no forward
+prefactor and a positive exponential, hence inverse factor 1/(2 pi) and
+negative exponential in one dimension. The radial inverse and the
+angular information loss follow from the manuscript's own Jacobian and
+factorization. Existing version, archived file and hash above are retained.

@@ -13,3 +13,13 @@ Source: **National Institute of Standards and Technology, NIST Digital Library o
 The series also directly verifies the heat factor. The full modular formula sends a real auxiliary argument to an imaginary argument. Only the zero-argument restriction directly supplies the scalar reflection used here.
 
 [Note03](../notes/03_CIRCLE_HEAT_LIFT_AND_BOUNDARY_TRANSFER_OBSTRUCTION_20261027.md) derives the radial differential combination, commutators, tail conditions and boundary obstruction separately. Those deductions are not attributed to DLMF. No further theorem or literature-priority conclusion is imported. This is an online reference; no artificial PDF or new book download was made. The existing Axler PDF and its provenance remain unchanged.
+
+## Fixed transform setup, 28 October 2026
+
+Prepared for Edward Baker with LLM assistance, gpt-6-astra / max, chat0013.
+Rechecked Eq.20.7.32 at zero argument and lattice parameter ir^2 for the
+[Book manuscript](../book/main.tex): Theta(r)=r^(-1)Theta(1/r).
+The radial-Laplacian reflection Q(r)=r^(-5)Q(1/r), whole-line even source,
+and normalized spatial density are derived in the manuscript, rather
+than attributed to DLMF. This is a new use of the existing source identity;
+no new downloaded reference or whole-chapter audit.

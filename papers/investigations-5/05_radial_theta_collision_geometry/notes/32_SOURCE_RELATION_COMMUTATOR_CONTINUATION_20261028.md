@@ -9,7 +9,7 @@
 | **CTF-B02, coupled signed estimate — default conceptual continuation** | **B** | **Astra:** a new signed source estimate is still missing | Ready for one bounded proof attempt retaining Note31's residual, actual second spectral derivative, commutator and whole unit ball; return an actual bound or one exact unresolved inequality |
 | CTF-E02, request R1 — optional | E | Sol: fixed saved-data arithmetic | Unchanged optional payment-gap audit; zero new integration or PDE |
 | CTF-E03 | E | Sol: finite rigorous acquisition once an estimate exists | Gated; neither L2/L4 nor O0/O2 alone decides a new separating estimate |
-| CTF-E04 — optional integration | E | Sol: routine production from recorded results | Notes28–29,31 and Reviews16–18 supply the scope; integrate selected results in the existing manuscript, compile and record actual verification |
+| CTF-E04 — integration completed after this handoff | E | Sol was recommended; actual execution gpt-6-astra / max | [Note33](33_NOTES28_29_31_MANUSCRIPT_INTEGRATION_20261028.md), [Review19](../reviews/19_CONSERVATIVE_FEEDBACK_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261028.md) and [record17](../numerics/17_CONSERVATIVE_FEEDBACK_MANUSCRIPT_BUILD_RECORD_20261028.json): Notes28–29,31 integrated; B02 remains partial |
 | CTF-B03 | B | Astra: uniformity and threshold transfer | Gated on a substantive canonical result |
 
 These are recommendations, not dispatches, model changes or scheduled work. The next estimate has not already been proved by writing down its variables.
@@ -85,7 +85,7 @@ Do not create an E03 acquisition task simply to evaluate the positive moments in
 ## Records and provenance
 
 - [Note31][n31] contains the proofs and full control table; [assessment18][review] records same-assistant checking.
-- Notes28–29 and31 remain research notes beyond the current manuscript. No integration, new snapshot, milestone, numerical run or independent specialist review occurred in this return.
+- At the original B02 return, Notes28–29 and31 remained beyond the manuscript and no integration, snapshot, milestone, numerical run or independent specialist review occurred. **Subsequent author-requested E04 integration, 28 October 2026:** [Note33](33_NOTES28_29_31_MANUSCRIPT_INTEGRATION_20261028.md) and [Review19](../reviews/19_CONSERVATIVE_FEEDBACK_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261028.md) record their inclusion in manuscript Sections12–14, with successful compilation and layout inspection. This dated update changes integration status only; the next B02 contract above is unchanged.
 - Refresh [chat0010][history] through the standing tool. Retain its unique identity; current capture metadata belong to the [registry][registry]. Arrange the exact-turn bounded final capture unless trusted hook activation has been verified.
 - Update Progress04 for the next actual task; do not maintain a second live task ledger here.
 
@@ -110,3 +110,5 @@ Do not create an E03 acquisition task simply to evaluate the positive moments in
 [a02]: ../../../../avoid/02_shape_only_arguments_and_the_controls.md
 [a07]: ../../../../avoid/07_scoped_exclusions_read_as_universal.md
 [a11]: ../../../../avoid/11_certifying_the_known_and_tests_that_cannot_fail.md
+
+Integration-status update: 28 October 2026, for Edward Baker with substantial LLM assistance, actual gpt-6-astra / max, chat0011.

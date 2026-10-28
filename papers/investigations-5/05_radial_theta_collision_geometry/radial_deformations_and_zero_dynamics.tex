@@ -8,93 +8,87 @@
 \usepackage{hyperref}
 \definecolor{linkblue}{RGB}{28,65,105}
 \hypersetup{colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue,
- pdftitle={Deformations Preserving the Radial Theta Observation},
+ pdftitle={Conservative Theta Flows and Collision Amplification},
  pdfauthor={Drafted for Edward Baker}}
 \numberwithin{equation}{section}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{corollary}[theorem]{Corollary}
-\theoremstyle{definition}
-\newtheorem{definition}[theorem]{Definition}
-\theoremstyle{remark}
-\newtheorem{remark}[theorem]{Remark}
-\DeclareMathOperator{\sech}{sech}
 \newcommand{\dd}{\,\mathrm d}
-\newcommand{\D}{\partial_x}
 \newcommand{\R}{\mathbb R}
 \setlength{\emergencystretch}{2em}
-\title{Deformations Preserving the Radial Theta Observation}
+\title{Conservative Theta Flows and Collision Amplification}
 \author{Drafted for Edward Baker}
-\date{27 October 2026\\[3pt]\small Working manuscript}
+\date{28 October 2026\\[3pt]\small Working manuscript}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-The canonical theta heat transform admits several three-dimensional
-representations preserving its complete observation. After an explicit
-forced Darboux realization, we study a projected annular source flow:
-its equation, global auxiliary solution, quantified cost decrease,
-exterior response, and local signed adjoint are given explicitly.
-The source is the full theta sum, with controlled termwise application.
-A previously tested multiplicative tube comparison is summarized through
-its supporting notes. We then relax pointwise radial-integrand
-preservation to conservation of the entire integral. Ordinary
-three-dimensional heat flow of the full signed density gives a local,
-direction-independent example. At a collision, the density and its first
-spectral derivative both lose their leading central diffusion term;
-an explicit remainder quantifies the additional decay. This is a
-collision diagnostic, not a growing instability or a theta-specific
-exclusion. The constructions also apply to colliding controls, and
-establish no new de Bruijn--Newman bound.
+We study conservative flows of the complete theta observation and its
+actual frequency derivative, allowing their densities to redistribute
+across radii. Ordinary spatial heat preserves the entire integral and
+gives an explicit central decay diagnostic for simultaneous cancellation.
+An energy-normalized conservative feedback fixes the joint spatial
+$L^2$ energy of the observation and its marked first derivative. A
+collision forces gradient, drift-response, and amplitude divergence
+before an explicit finite auxiliary deadline; global regularity is
+equivalent to pointwise noncollision in the stated class. Two estimate
+tests delimit the remaining problem. A sharp positive-carrier comparison
+gives quantitative regularity only from an independently established
+first-jet margin. The complete canonical source relation instead
+acquires a nonzero preparation residual and second-order commutator
+forcing. Its unit-sphere cancellation, inner-ball energy, and admissible
+origin domain must be retained. The fixed zero-residual substitution
+fails, while coupled signed estimates remain open. The exact colliding
+control satisfies the generic heat and feedback premises. No new theta
+collision exclusion or de Bruijn--Newman bound is obtained.
 \end{abstract}
 
-\section{Purpose and the variables of the problem}
+\section{Purpose and conserved observation}
 
-The question is whether a three-dimensional evolution can preserve the
-integral defining the theta observation while making a hypothetical
-collision easier to analyze. Edward Baker's current requirement is
-preservation of the \emph{entire integral}; its radial integrand may
-change. The earlier pointwise radial requirement is retained below as
-a useful stronger subclass, not imposed on every admissible system.
-No preferred spatial direction is required.
+The invariant is the complete theta observation $H(t,a)$, together with
+its actual frequency derivative $H_a(t,a)$. The collision question is
+whether these two quantities can vanish simultaneously at a physical
+mark $(T,A)$. Our strategy is to preserve their integrals, magnify their
+simultaneous cancellation by a conservative evolution, and seek an
+independent estimate from the unchanged complete theta source that
+controls the magnifier through its collision deadline.
 
-The classical Darboux factorization \cite{KravchenkoTorba} provides the
-forced realization in Sections~3--8, including its physical readout,
-time law, boundaries and control. The main source-flow development is
-Section~\ref{sec:angularflows}: a proved projected evolution and its
-actual response variation, expanded in \cite{ProjectedNote,ExplicitThetaNote}.
-Section~\ref{sec:conservative} implements the weaker integral invariant
-with a fully specified heat flow and a collision diagnostic
-\cite{ConservativeNote}. The first multiplicative localization approach
-and its complete tube comparison are referred to
-\cite{AngularNote,TubeNote}. No novelty claim is made for classical
-transformations, heat kernels, or semigroup theory. The mathematical
-question is whether these representations support an additional useful
-estimate from the complete theta data.
+The admissible search permits redistribution across radii. The theta
+heat and feedback solutions considered here remain radially symmetric,
+but their radial profiles change with auxiliary time. Radial symmetry
+does not preserve the radial integrand. The density, including its
+frequency dependence, is what evolves on all of $\R^3$; its initially
+empty unit ball belongs to the evolution.
 
-We distinguish the following variables:
-\begin{itemize}
-\item $r=e^{2u}$ is the spatial radius and $x=\log r=2u$ its logarithm;
-\item $a>0$ is the physical observation frequency, with $\lambda=a^2/4$;
-\item $t$ is Newman time, for which $H_t=-H_{aa}$;
-\item $\kappa\ge0$ and $s\ge0$ parameterize the Darboux and auxiliary deformations.
-\end{itemize}
-The capital $\Lambda$, used only in the discussion of possible
-applications, denotes the de Bruijn--Newman threshold. It is unrelated to
-the spectral coordinate $\lambda$.
+After the source setup, Section~\ref{sec:conservative} constructs the
+whole-integral heat flow, states its exact colliding control, and derives
+the central decay diagnostic \cite{ConservativeNote}.
+Section~\ref{sec:feedback} fixes the energy-normalized feedback and its
+finite collision deadline \cite{FeedbackNote}.
+Sections~\ref{sec:carrier} and \ref{sec:sourcerelation} test,
+respectively, positive-carrier comparison and the canonical source
+relation with its residual \cite{CarrierNote,SourceRelationNote}.
+Section~\ref{sec:remaining} states the remaining signed theta estimate.
+The classical heat and semigroup inputs support these constructions;
+the missing estimate must use canonical information beyond their
+generic premises.
 
+We use $r=e^{2u}$, with $u=\frac12\log r$ on the source exterior,
+$a$ for the physical frequency, $t$ for Newman time, and $s\ge0$ for
+auxiliary time. Newman time satisfies $H_t=-H_{aa}$. In the feedback
+construction the mark $p=(T,A)$ is fixed while the running frequency
+$a$ is differentiated; neither physical parameter evolves with $s$.
 Unless a wider scope is stated, uniform assertions concern compact sets
 \begin{equation}\label{eq:domain}
-0\le t\le T<\infty,\qquad
-0<\lambda_-\le\lambda\le\lambda_+<\infty,\qquad
-0\le\kappa\le K<\infty.
+0\le t\le T_+<\infty,\qquad
+0<a_-\le a\le a_+<\infty.
 \end{equation}
-The radial response equations are posed on the exterior $r\ge1$.
-No unspecified whole-space operator domain is used.
+The source-function, smoothing, and operator domains, and the control's
+convergence domain, are specified where they are used.
 
-\section{The canonical radial source and flux}
+\section{The canonical theta source and observation}
 
 Define
 \begin{align}
@@ -103,7 +97,7 @@ Define
 Q(r)&=\Delta_3\Theta(r)
 =4\pi\sum_{n\ge1}n^2(2\pi n^2r^2-3)e^{-\pi n^2r^2},\label{eq:Q}\\
 \Phi(u)&=\frac14r^{5/2}Q(r),
-&Q_t(r)&=e^{t\log^2r/4}Q(r),\qquad r=e^{2u}.
+&Q_t(r)&=e^{t\log^2r/4}Q(r),\qquad r=e^{2u}.\label{eq:fullthetaflow}
 \end{align}
 For $r\ge1$, every summand in \eqref{eq:Q} is positive. The complete
 physical observation is
@@ -118,7 +112,7 @@ inversion-related interior integral is not to be added again.
 \begin{lemma}[Tails and parameter differentiation]\label{lem:tails}
 The canonical source and the finite spatial and parameter derivatives
 used below have integrable majorants on \eqref{eq:domain}. In the
-coordinate $x\ge0$, they decay faster than every fixed exponential,
+coordinate $u\ge0$, they decay faster than every fixed exponential,
 uniformly on compact parameter sets.
 \end{lemma}
 \begin{proof}
@@ -134,694 +128,18 @@ of the positive Gaussian exponent. For the time multiplier, the explicit
 inequalities
 \[
 \log^2r\le\frac{4r}{e^2},\qquad
-\frac{Tr}{e^2}\le\frac\pi2r^2+\frac{T^2}{2\pi e^4}
+\frac{T_+r}{e^2}\le\frac\pi2r^2+\frac{T_+^2}{2\pi e^4}
 \]
 give a uniform bound by a constant times $e^{-\pi r^2/2}$.
-Since $r=e^x$, this also proves the asserted exponential domination in
-$x$. It justifies the differentiations and outer boundary limits below.
+Since $r=e^{2u}$, this also proves the asserted exponential domination in
+$u$. It justifies the differentiations and outer boundary limits below.
 \end{proof}
-
-Let $\omega_t(r)=e^{t\log^2r/4}$ and introduce the tail flux
-\begin{equation}\label{eq:flux}
-S_t(r)=\int_r^\infty s^2Q_t(s)\dd s.
-\end{equation}
-At time zero,
-\begin{equation}\label{eq:S0}
-S_0(r)=-r^2\Theta'(r)
-=4\pi r^3\sum_{n\ge1}n^2e^{-\pi n^2r^2}.
-\end{equation}
-The difference of polynomial weights in $Q$ has become one positive
-Gaussian sum. Integration by parts, with its outer boundary controlled
-by Lemma~\ref{lem:tails}, yields
-\begin{equation}\label{eq:St}
-S_t(r)=\omega_t(r)S_0(r)
- +\frac t2\int_r^\infty\frac{\log s}{s}\omega_t(s)S_0(s)\dd s.
-\end{equation}
-Both terms are nonnegative for $t\ge0$ and $r\ge1$. The correction
-vanishes at $t=0$ and must be retained at positive time. These formulas
-supply the simpler radial background; the deformation below concerns
-the forced observation equation.
-
-\section{The selected forced response}
-
-Set
-\begin{equation}\label{eq:g}
-g_t(x)=4e^{tx^2/4}\Phi(x/2)=r^{5/2}Q_t(r),\qquad x=\log r.
-\end{equation}
-Define the response by its actual tail integral:
-\begin{equation}\label{eq:Y}
-Y(t,x;\lambda)=\int_x^\infty
- \frac{\sin(\sqrt\lambda(s-x))}{\sqrt\lambda}g_t(s)\dd s.
-\end{equation}
-Direct differentiation gives
-\begin{equation}\label{eq:forced}
-Y''+\lambda Y=g_t,\qquad Z:=Y_\lambda,\qquad
-Z''+\lambda Z=-Y.
-\end{equation}
-Primes denote $x$ derivatives. The responses and their parameter
-derivatives have the tails inherited from \eqref{eq:Y}. In particular,
-the boundary function is
-\begin{equation}\label{eq:B}
-B(t,\lambda):=Y'(t,0;\lambda)
-=-\int_0^\infty g_t(s)\cos(\sqrt\lambda s)\dd s
-=-8H(t,2\sqrt\lambda).
-\end{equation}
-Consequently
-\begin{equation}\label{eq:Bjet}
-B_\lambda=-\frac{16}{a}H_a,\qquad a=2\sqrt\lambda>0.
-\end{equation}
-The change between $a$ and $\lambda$ preserves finite multiplicity
-at every positive frequency.
-
-The response is forced even when $B=0$. That boundary condition does
-not make it an eigenfunction of the homogeneous operator. For example,
-the complete Wronskian identity is
-\begin{equation}\label{eq:oldenergy}
-I:=\int_0^\infty(Y^2+g_tZ)\dd x
-=Y(0)B_\lambda-BZ(0).
-\end{equation}
-Indeed $(YZ'-Y'Z)'=-Y^2-g_tZ$, and the outer boundary vanishes.
-At a multiple physical zero, the forcing integral cancels the norm term.
-
-\section{A radial Darboux family preserving the observation}
-
-Define
-\begin{equation}\label{eq:w}
-w_\kappa(x)=\kappa\tanh(\kappa x),\qquad
-A_\kappa=\D-w_\kappa,\qquad c=\lambda+\kappa^2.
-\end{equation}
-We abbreviate $w=w_\kappa$ where no ambiguity arises. The identities
-\begin{equation}\label{eq:riccati}
-w'+w^2=\kappa^2,\qquad w(0)=0
-\end{equation}
-are the factorization equations associated with the nonvanishing seed
-$\cosh(\kappa x)$.
-
-\begin{theorem}[Exact deformation]\label{thm:family}
-Let $Y,Z$ be the selected responses in \eqref{eq:Y}--\eqref{eq:forced}.
-For $\kappa\ge0$ put
-\begin{equation}\label{eq:transformed}
-U_\kappa=A_\kappa Y,\qquad
-V_\kappa=A_\kappa Z,\qquad h_\kappa=A_\kappa g_t.
-\end{equation}
-Then $V_\kappa=\partial_\lambda U_\kappa$ and
-\begin{align}
-U_\kappa''+(\lambda+2w')U_\kappa&=h_\kappa,\label{eq:Uode}\\
-V_\kappa''+(\lambda+2w')V_\kappa&=-U_\kappa.\label{eq:Vode}
-\end{align}
-The physical boundary values are independent of the deformation:
-\begin{equation}\label{eq:fixedboundary}
-U_\kappa(0)=B=-8H(t,a),\qquad
-V_\kappa(0)=B_\lambda=-\frac{16}{a}H_a(t,a).
-\end{equation}
-The inverse on the selected forced responses is
-\begin{equation}\label{eq:inverse}
-Y=\frac{g_t-(\D+w)U_\kappa}{\lambda+\kappa^2}.
-\end{equation}
-Thus all finite positive-frequency physical zero multiplicities are
-preserved for every finite $\kappa$.
-\end{theorem}
-\begin{proof}
-The factorizations
-\[
-(\D+w)(\D-w)=\D^2-\kappa^2,\qquad
-(\D-w)(\D+w)=\D^2-\kappa^2+2w'
-\]
-imply
-\[
-(\D^2+\lambda+2w')A_\kappa=A_\kappa(\D^2+\lambda).
-\]
-Applying this equality to $Y$ and $Z$ proves the forced equations.
-Since $A_\kappa$ is independent of $\lambda$, it commutes with
-parameter differentiation. Equation \eqref{eq:fixedboundary} follows
-from $w(0)=0$. Also
-\[
-(\D+w)U_\kappa=(\D^2-\kappa^2)Y=g_t-cY,
-\]
-which proves \eqref{eq:inverse}. Here $c>0$ in the stated physical
-range. The exact equality of the boundary functions, and then
-\eqref{eq:Bjet}, proves the multiplicity assertion. The selected tails
-are preserved by the bounded coefficient $w$ and its derivatives on
-compact $\kappa$ ranges.
-\end{proof}
-
-At $\kappa=0$, the family begins with $U_0=Y'$, the differentiated
-free realization. It does not begin with an identity map on $Y$;
-\eqref{eq:inverse} recovers $Y$ there because $\lambda>0$.
-Theorem~\ref{thm:family} is a statement about forced responses and their
-observations. It makes no identification of $H$ with a homogeneous
-characteristic determinant.
-
-\subsection{The three-dimensional equation}
-
-For $r\ge1$ let $\psi_\kappa(r)=r^{-1/2}U_\kappa(\log r)$. The
-elementary conjugation
-\[
-\Delta_3[r^{-1/2}v(\log r)]=r^{-5/2}(v''-v/4)
-\]
-turns \eqref{eq:Uode} into
-\begin{equation}\label{eq:radialU}
-\left[\Delta_3+
-\frac{(1+a^2)/4+2\kappa^2\sech^2(\kappa\log r)}{r^2}\right]
-\psi_\kappa(r)=r^{-5/2}h_\kappa(\log r).
-\end{equation}
-This retains the usual radial Laplacian and rotational symmetry, with
-an additional radial potential. The transformed forcing is
-\begin{equation}\label{eq:radialh}
-r^{-5/2}h_\kappa(\log r)
-=r\partial_rQ_t+(5/2-w_\kappa(\log r))Q_t.
-\end{equation}
-It need not be positive. Since $g_t$ is even in $x$ and $w_\kappa$
-is odd, $h_\kappa$ is odd and $h_\kappa(0)=0$. Its inversion parity
-differs from that of the original source. Neither that distinction nor
-the forcing in \eqref{eq:radialU} may be removed in an energy argument.
-
-\section{A conserved integral and two evolution laws}
-
-\begin{proposition}[Integral preservation]\label{prop:integral}
-Set
-\begin{equation}\label{eq:p}
-p_\kappa(x;\lambda)=
-\frac{\sqrt\lambda\sin(\sqrt\lambda x)
-      +w_\kappa(x)\cos(\sqrt\lambda x)}{\lambda+\kappa^2}.
-\end{equation}
-Then
-\begin{equation}\label{eq:conserved}
-\int_0^\infty p_\kappa h_\kappa\dd x
-=-8H(t,2\sqrt\lambda)
-\end{equation}
-for every finite $\kappa\ge0$. The equality persists under finite
-spectral differentiation on \eqref{eq:domain}.
-\end{proposition}
-\begin{proof}
-One checks
-\[
-p_\kappa(0)=0,\quad p_\kappa'(0)=1,\quad
-p_\kappa'+w_\kappa p_\kappa=\cos(\sqrt\lambda x),
-\]
-and $p_\kappa''+(\lambda+2w')p_\kappa=0$.
-Integration by parts gives
-\[
-\int_0^\infty p_\kappa(g_t'-wg_t)\dd x
-=[p_\kappa g_t]_0^\infty
- -\int_0^\infty(p_\kappa'+wp_\kappa)g_t\dd x.
-\]
-The lower boundary is zero and the upper boundary vanishes by
-Lemma~\ref{lem:tails}. The resulting cosine integral is \eqref{eq:B}.
-The same domination justifies the parameter derivatives.
-\end{proof}
-
-Both the source and the test solution change in \eqref{eq:conserved}.
-Their coupled change preserves the complete observation; preserving
-only total source charge would be a different, weaker assertion.
-
-\begin{proposition}[Physical time and auxiliary deformation]\label{prop:flows}
-Writing $\dot w=\partial_\kappa w_\kappa$, the exact laws are
-\begin{align}
-\partial_tg_t&=\frac{x^2}{4}g_t,
-&\partial_th_\kappa&=\frac{x^2}{4}h_\kappa+\frac{x}{2}g_t,\label{eq:time}\\
-\partial_\kappa U_\kappa
-&=-\frac{\dot w}{\lambda+\kappa^2}
-       [g_t-(\D+w)U_\kappa],
-&\partial_\kappa h_\kappa&=-\dot w\,g_t,\label{eq:aux}
-\end{align}
-where $\dot w=\tanh(\kappa x)+\kappa x\sech^2(\kappa x)$.
-\end{proposition}
-\begin{proof}
-Apply $A_\kappa$ to $(x^2/4)g_t$. Its derivative contributes
-$xg_t/2$, proving \eqref{eq:time}. Differentiating
-$U_\kappa=Y'-wY$ at fixed $t,x,\lambda$ gives
-$\partial_\kappa U_\kappa=-\dot wY$; substitution of
-\eqref{eq:inverse} proves \eqref{eq:aux}. The source formula is
-immediate.
-\end{proof}
-
-In particular, $\dot w(0)=0$ directly preserves the boundary readout
-along the auxiliary evolution. Physical time remains Newman time; it
-has not become radial diffusion. The displayed laws do not assert a
-bounded semigroup on an unspecified function space.
-
-\section{Physical zeros and interior response zeros}\label{sec:zeros}
-
-Three different objects must be kept separate: zeros of $H(t,a)$ in
-frequency, zeros of $U_\kappa(t,x;\lambda)$ in the interior spatial
-coordinate, and eigenvalues of a homogeneous operator with a specified
-domain. Only the first are the physical zeros under investigation.
-Theorem~\ref{thm:family} makes their boundary description exact; it
-does not identify the other two objects with them.
-
-\begin{proposition}[Elementary zero velocities]\label{prop:zeros}
-At a simple physical zero $a(t)>0$,
-\begin{equation}\label{eq:physicalvelocity}
-\frac{\mathrm da}{\mathrm dt}=\frac{H_{aa}}{H_a}.
-\end{equation}
-Equivalently, for a simple zero of $B$,
-\begin{equation}\label{eq:lambdavelocity}
-\frac{\mathrm d\lambda}{\mathrm dt}
-=\lambda\frac{B_{\lambda\lambda}}{B_\lambda}+\frac12.
-\end{equation}
-These velocities are independent of $\kappa$.
-At fixed $t,\lambda$, let $x(\kappa)>0$ be a simple interior zero
-of $U_\kappa$. Then
-\begin{equation}\label{eq:bulkvelocity}
-\frac{\mathrm dx}{\mathrm d\kappa}
-=\frac{(\partial_\kappa w_\kappa)(x)Y(t,x;\lambda)}
-       {g_t(x)-(\lambda+\kappa^2)Y(t,x;\lambda)},
-\end{equation}
-where the nonzero denominator is $\partial_xU_\kappa$ at that zero.
-\end{proposition}
-\begin{proof}
-Differentiate $H(t,a(t))=0$ and use $H_t=-H_{aa}$. From
-\eqref{eq:B} one also obtains
-\[
-B_t=-\lambda B_{\lambda\lambda}-\tfrac12B_\lambda,
-\]
-which proves \eqref{eq:lambdavelocity}. The boundary function is the
-same for all $\kappa$. In the interior,
-\[
-\partial_xU_\kappa=g_t-(\lambda+\kappa^2)Y-w_\kappa U_\kappa,
-\qquad \partial_\kappa U_\kappa=-(\partial_\kappa w_\kappa)Y.
-\]
-The implicit-function theorem at a simple zero yields
-\eqref{eq:bulkvelocity}.
-\end{proof}
-
-These are local formulas. They do not continue a root through a
-multiple zero, prove a monotone zero count, or justify dividing by a
-vanishing derivative. Multiple interior zeros and boundary crossings
-require separate analysis.
-
-The coordinate $\kappa$ is degenerate at zero for this even family:
-$\partial_\kappa w_\kappa|_{\kappa=0}=0$. Locally on compact $x$
-sets, $\mu=\kappa^2$ removes that parametrization issue, since
-\begin{equation}\label{eq:mu}
-w=\mu x-\frac{\mu^2x^3}{3}+O(\mu^3),\qquad
-\left.\partial_\mu U\right|_{\mu=0}=-xY.
-\end{equation}
-The corresponding simple-root formula follows by replacing the
-$\kappa$ derivative in \eqref{eq:bulkvelocity} by the $\mu$
-derivative. This local expansion is not a uniform assertion as
-$x\to\infty$.
-
-\section{The complete energy comparison}
-
-\begin{proposition}[Transport of the energy identity]\label{prop:energy}
-For real parameters let
-\[
-I_\kappa=\int_0^\infty
- (U_\kappa^2+h_\kappa V_\kappa)\dd x.
-\]
-Then, with $I$ from \eqref{eq:oldenergy},
-\begin{equation}\label{eq:energytransport}
-I_\kappa=(\lambda+\kappa^2)I-Y(0)B-g_t(0)B_\lambda.
-\end{equation}
-At a multiple physical zero, $I_\kappa=(\lambda+\kappa^2)I=0$.
-\end{proposition}
-\begin{proof}
-The lower derivatives are
-\[
-U_\kappa'(0)=g_t(0)-cY(0),\qquad
-V_\kappa'(0)=-Y(0)-cZ(0).
-\]
-The Wronskian of \eqref{eq:Uode}--\eqref{eq:Vode} gives
-$I_\kappa=U_\kappa(0)V_\kappa'(0)-U_\kappa'(0)V_\kappa(0)$.
-Substituting \eqref{eq:fixedboundary} proves the result.
-
-For a direct check, integration by parts with $w(0)=0$ gives
-\begin{align*}
-\int_0^\infty(A_\kappa Y)^2\dd x
- &=c\int_0^\infty Y^2\dd x-\int_0^\infty g_tY\dd x-Y(0)B,\\
-\int_0^\infty(A_\kappa g_t)(A_\kappa Z)\dd x
- &=c\int_0^\infty g_tZ\dd x+\int_0^\infty g_tY\dd x-g_t(0)B_\lambda.
-\end{align*}
-The cross terms cancel, including their full boundary contributions.
-\end{proof}
-
-Thus this particular complete energy identity, together with its
-$\kappa$ derivatives, provides no additional scalar event condition.
-This conclusion concerns that identity. It does not establish that a
-different current, a spatial nodal argument, or a new estimate in the
-deformed system cannot help. Understanding those possibilities is the
-next research phase.
-
-\section{An exact colliding control}
-
-At $\lambda=6$ consider
-\begin{equation}\label{eq:control}
-g_*=(16x^4+24)e^{-x^2},\qquad
-Y_*=(4x^2+4)e^{-x^2},\qquad Z_*=-e^{-x^2}.
-\end{equation}
-These satisfy $Y_*''+6Y_*=g_*$, $Z_*''+6Z_*=-Y_*$,
-and $Y_*'(0)=Z_*'(0)=0$. The spectral derivative is taken with
-the source fixed. The cosine transform is
-\[
-\int_0^\infty g_*(x)\cos(\sqrt\lambda x)\dd x
-=\frac{\sqrt\pi}{2}(\lambda-6)^2e^{-\lambda/4},
-\]
-so the boundary zero is exactly double.
-
-For every $\kappa\ge0$ the transformed fields are
-\begin{align}
-U_{\kappa,*}&=[-8x^3-4w(x)(x^2+1)]e^{-x^2},\label{eq:controlU}\\
-V_{\kappa,*}&=[2x+w(x)]e^{-x^2}.\label{eq:controlV}
-\end{align}
-Both boundary values remain zero. Moreover
-\[
-g_*'=-16x\{2(x^2-1)^2+1\}e^{-x^2}<0\qquad(x>0).
-\]
-Hence $h_{\kappa,*}<0$, $U_{\kappa,*}<0$ and
-$V_{\kappa,*}>0$ in the interior, while
-\eqref{eq:energytransport} remains zero. These signs do not prevent
-the physical event. In particular, an absence of interior zeros of
-$U_\kappa$ need not exclude a multiple boundary observation.
-
-For any prescribed $T_c>0$, this control belongs locally to the
-positive-source heat family
-\[
-\Phi_*(u)=(64u^4+6)e^{-(4+T_c)u^2},
-\]
-whose event at $t=T_c$ has $a=2\sqrt6$. Its heat integral converges
-for $t<T_c+4$. It lacks theta's complete arithmetic and tails, and
-no global finite Newman threshold is claimed for it.
-
-The deformation identities apply more generally to smooth sources with
-the required tails. Other registered controls retain their observations
-on their actual convergence domains. Weighted-square and finite-prime
-controls alter coefficients or full reflection; reflected smooth and
-primitive controls lack the complete square source; Euler-factor and
-endpoint controls alter their stated arithmetic inputs. Atomic sources
-require a distributional formulation beyond this manuscript. This is
-premise screening, not a rerun of their numerical certificates.
-
-\section{Preserving the radial integrand}\label{sec:radialinvariant}
-
-The earlier angular constructions preserve the complete radial integrand
-at each radius. This section defines that stronger invariant.
-Section~\ref{sec:conservative} subsequently permits radial redistribution
-while keeping only the entire observation fixed. Radial symmetry, a
-fixed potential, source positivity, and energy invariance are not
-additional requirements of the general search.
-
-Put $\dd\nu=\dd\Omega/(4\pi)$ on $S^2$ and
-$\mathcal PF(r)=\int_{S^2}F(r,\omega)\dd\nu$. The prescribed density is
-\begin{equation}\label{eq:radialdensity}
-\mathcal I(t,z;r)=\frac18r^{3/2}Q_t(r)
-              \cos\!\left(\frac z2\log r\right).
-\end{equation}
-An admissible representation has $\mathcal P\mathcal J_s=\mathcal I$
-at every $r\ge1$, where $s$ is an auxiliary parameter. In the coordinate
-$u$, the corresponding density is $e^{tu^2}\Phi(u)\cos(zu)$; the
-Jacobian $\dd r=2r\dd u$ accompanies the coordinate change.
-For example, a field $F_{s,t}$ satisfying $\mathcal PF_{s,t}=Q_t$ gives
-\begin{equation}\label{eq:angularH}
-H(t,z)=\frac1{32\pi}\int_{|X|\ge1}|X|^{-1/2}F_{s,t}(X)
-             \cos\!\left(\frac z2\log|X|\right)\dd^3X.
-\end{equation}
-The spherical integration recovers \eqref{eq:radialdensity} pointwise.
-This source construction is sufficient, not a restriction on every
-possible factorization of the retained integrand.
-
-\begin{proposition}[Laplacian preservation of the radial average]
-For smooth fields on spherical shells,
-\begin{equation}\label{eq:projectionlaplace}
-\mathcal P\Delta F=\Delta_3\mathcal PF.
-\end{equation}
-Consequently $F_s=Q+\Delta\Psi_s$ has $\mathcal PF_s=Q$ whenever
-$\mathcal P\Psi_s=0$. Taking $F_{s,t}=e^{t\log^2r/4}F_s$ then
-preserves \eqref{eq:radialdensity}.
-\end{proposition}
-\begin{proof}
-In spherical coordinates,
-$\Delta=\partial_r^2+2r^{-1}\partial_r+r^{-2}\Delta_{S^2}$.
-The integral of $\Delta_{S^2}F$ on the boundaryless sphere is zero.
-Commuting radial differentiation with spherical integration proves the
-identity and the stated consequences.
-\end{proof}
-
-For a smooth bump $\chi$ supported in $1<r_-<r<r_+<\infty$ and a unit
-vector $n$, the explicit potential perturbation
-$\Psi_s=s\chi(r)(\omega\cdot n)$ gives
-\begin{equation}\label{eq:angularbump}
-F_s=Q+s\left(\chi''+\frac2r\chi'-\frac2{r^2}\chi\right)(\omega\cdot n).
-\end{equation}
-Here $\Delta_{S^2}(\omega\cdot n)=-2\omega\cdot n$; the spherical
-harmonic convention is recorded in \cite{DLMFSphere}. The perturbation
-is confined to the annulus and leaves the radial density unchanged.
-Multiplying the source by its physical time weight does not mean
-applying $\Delta$ to the time-weighted potential: the latter operation
-has extra radial derivative terms.
-
-The earlier Darboux pairing preserves an integral. Its local relation is
-\begin{equation}\label{eq:pairingdensitycorrection}
-p_\kappa h_\kappa=-g_t\cos(\sqrt\lambda x)+(p_\kappa g_t)'.
-\end{equation}
-Thus its displayed density agrees pointwise only after retaining the
-derivative correction. The broader operator freedom here and the
-pointwise density requirement are distinct from that earlier pairing.
-
-\subsection{The multiplicative approach and its tested limitation}
-
-The first approach takes $F_s=A_sQ_t$, $\mathcal PA_s=1$, for example
-$A_s=e^{sq}/\mathcal P(e^{sq})$. It has the explicit flow
-$\partial_sA_s=(q-\mathcal P(qA_s))A_s$.
-For $q=n(r)\cdot\omega$, it concentrates around a radial family of
-directions. Multiplying the response by $A_s$ requires the conjugated
-operator $A_sL_\lambda A_s^{-1}$ and the conjugated boundary map.
-The complete construction, angular transport variant, cap bounds and
-collision-adapted first moment are in \cite{AngularNote}.
-
-The completed fixed-width, axisymmetric tube comparison
-\cite{TubeNote} includes both radial faces, the side current, steering
-terms, angular complement and radial tails. In the induced measure
-$A_s^{-2}\dd^3X$, the identity pulls back to the radial one. In ordinary
-volume, the signed bulk and its absolute allowance acquire the same
-positive factor. Thus that matched comparison gives no gain.
-The side current can be nonzero pointwise even when its signed angular
-integral vanishes. Variable widths, other profiles and currents, and
-additive responses are outside this limitation. We therefore develop
-the second approach in detail.
-
-\section{Projected source flow and its response}\label{sec:angularflows}
-
-\subsection{The equation and its theta input}
-
-Fix physical time $t$ and an annulus
-$D=\{R_0<|X|<R_1\}$, $1<R_0<R_1<\infty$.
-Let $\mathcal P$ be spherical averaging, $\Pi=I-\mathcal P$,
-and $\varepsilon>0$. The radial input is explicitly
-\begin{equation}\label{eq:fullthetaflow}
-Q_t(r)=4\pi e^{t(\log r)^2/4}
- \sum_{n\ge1}n^2(2\pi n^2r^2-3)e^{-\pi n^2r^2}.
-\end{equation}
-Choose any smooth real $\chi\ge0$ on $\overline D$.
-This is the $\chi_{\rm out}$ of the earlier proposal: a freely chosen
-spatial penalty, large where the deformed source is to be penalized.
-It is not determined by theta or by the collision equations.
-Write $F_s=Q_t+G_s$ on $D$. The actual flow is
-\begin{equation}\label{eq:projectedflow}
-\boxed{\begin{aligned}
-\partial_sG&=\varepsilon\Delta G-\chi(Q_t+G)
-                      +\mathcal P[\chi(Q_t+G)],\\
-G_0&=0,\qquad G|_{\partial D}=0.
-\end{aligned}}
-\end{equation}
-The averaging term makes $\mathcal PG=0$ and hence $\mathcal PF_s=Q_t$.
-The derivatives are local, but the projection couples angles on a sphere.
-The equation acts on the perturbation $G$; it is not heat flow of the
-full source with its radial part left to evolve.
-
-\begin{theorem}[Bounded projected evolution]\label{thm:projected}
-On $\mathcal H=\ker\mathcal P\subset L^2(D)$ put
-\[
-\mathsf A=-\varepsilon\Delta_D+\Pi\chi,\qquad
-\mathcal D(\mathsf A)=H^2(D)\cap H^1_0(D)\cap\mathcal H,\qquad
-h=Q_t\Pi\chi.
-\]
-Then $\mathsf A$ is self-adjoint and
-\begin{equation}\label{eq:annulargamma}
-\mathsf A\ge\gamma I,\qquad
-\gamma=\varepsilon\left\{\frac{\pi^2}{(R_1-R_0)^2}
-                                      +\frac2{R_1^2}\right\}>0.
-\end{equation}
-The unique solution is
-\begin{equation}\label{eq:projectedsolution}
-G_s=-\mathsf A^{-1}(I-e^{-s\mathsf A})h,\quad
-\partial_sG_s=-e^{-s\mathsf A}h,\quad
-G_\infty=-\mathsf A^{-1}h.
-\end{equation}
-It lies in $C([0,\infty);\mathcal D(\mathsf A))\cap
-C^1([0,\infty);\mathcal H)$ and is smooth in space for $s>0$.
-Moreover
-\begin{equation}\label{eq:flowconvergence}
-\|G_s-G_\infty\|_2\le e^{-\gamma s}\|G_\infty\|_2.
-\end{equation}
-For
-\[
-\mathcal E(G)=\frac12\int_D\chi(Q_t+G)^2\dd X+
-                  \frac\varepsilon2\int_D|\nabla G|^2\dd X
-\]
-one has
-\begin{align}
-\frac{\dd}{\dd s}\mathcal E(G_s)&=-\|\partial_sG_s\|_2^2,
-\label{eq:flowdissipation}\\
-\mathcal E(G_\infty)&=\mathcal E(0)
-                  -\tfrac12\langle h,\mathsf A^{-1}h\rangle.
-\end{align}
-Writing $M_s=\int_D\chi(Q_t+G_s)^2\dd X$,
-\begin{equation}\label{eq:sourcecost}
-M_s\le M_0-
- \langle h,\mathsf A^{-1}(I-e^{-2s\mathsf A})h\rangle.
-\end{equation}
-Thus $M_s<M_0$ for every $s>0$ if $h\ne0$.
-\end{theorem}
-
-\begin{proof}
-Spherical averaging commutes with the Dirichlet Laplacian and preserves
-$H^1_0(D)$. On $\mathcal H$, the bounded operator $\Pi\chi$ is symmetric,
-with quadratic form $\int\chi vw$.
-For $\widetilde v=rv$, the radial Dirichlet energy satisfies
-$\int r^2|v_r|^2\dd r=\int|\widetilde v_r|^2\dd r$.
-The interval Poincare inequality and the first nonconstant spherical
-eigenvalue $2$ give \eqref{eq:annulargamma}.
-The classical form and semigroup results
-\cite{SchnaubeltEvolution,HunterPDE} therefore apply.
-
-Spectral calculus proves \eqref{eq:projectedsolution}, including graph
-continuity through $\mathsf AG_s=-(I-e^{-s\mathsf A})h$.
-It also proves uniqueness and \eqref{eq:flowconvergence}.
-Elliptic regularity and analytic-semigroup smoothing give the
-positive-$s$ spatial regularity. The quadratic expansion
-\[
-\mathcal E(G)=\mathcal E(0)+\langle h,G\rangle+
-                       \tfrac12\langle G,\mathsf AG\rangle
-\]
-gives dissipation and
-\[
-2\{\mathcal E(0)-\mathcal E(G_s)\}
-=\langle h,\mathsf A^{-1}(I-e^{-2s\mathsf A})h\rangle.
-\]
-Dropping the nonnegative gradient term from $2\mathcal E(G_s)$ gives
-\eqref{eq:sourcecost}.
-\end{proof}
-
-Smoothness at the initial boundary corner requires compatibility and
-is not part of the theorem. Choosing $\chi$ supported away from the
-radial faces suffices for all zero-data compatibility orders.
-For positive $Q_t$, $h\ne0$ exactly when $\chi$ is not radial almost
-everywhere. The energy $\mathcal E$ is monotone; monotonicity of $M_s$
-itself has not been asserted. No positivity of $Q_t+G_s$ is required.
-A quantitative lower bound useful for this cost is
-\[
-\langle h,\mathsf A^{-1}h\rangle
-\ge\frac{|\langle h,v\rangle|^2}
-{\varepsilon\|\nabla v\|_2^2+\int_D\chi v^2\dd X},
-\qquad 0\ne v\in H^1_0(D)\cap\mathcal H.
-\]
-
-The bounded solution operator in \eqref{eq:projectedsolution} applies
-termwise to the full sum \eqref{eq:fullthetaflow}.
-If $0\le Q_t-Q_{t,N}\le R_N$ on $D$, define
-$V_\chi=\|\Pi\chi\|_{L^2(D)}$. Then
-\begin{equation}\label{eq:thetatotalerror}
-\|G_s-G_s^{(N)}\|_2
- \le\frac{1-e^{-\gamma s}}{\gamma}R_NV_\chi.
-\end{equation}
-An explicit geometric-series bound for $R_N$ is given in
-\cite{ExplicitThetaNote}. Keeping the full $Q_t$ in
-$F_s^{(N)}=Q_t+G_s^{(N)}$ retains its radial average exactly.
-This is an analytic application to theta; no numerical theta evolution
-is used here.
-
-\subsection{The whole exterior response and radial joins}
-
-Let $E=\{|X|>1\}$ and let $J_D$ denote zero extension from $D$ to $E$.
-Then $F_s=Q_t+J_DG_s$ has the required radial average.
-For positive $s$, its artificial radial joins satisfy in distributions
-\begin{equation}\label{eq:join}
-\Delta(J_DG_s)=J_D\Delta G_s-(\partial_NG_s)\delta_{\partial D}.
-\end{equation}
-Thus the annular evolution is not an unqualified smooth heat equation
-on all of $E$.
-
-Fix $\mu>0$ and define on the zero-average subspace
-\begin{equation}\label{eq:additiveresponse}
-\mathsf K_\mu=-\Delta_E^D+\mu^2,\qquad
-U_s=-\mathsf K_\mu^{-1}J_DG_s,\qquad f_s=\psi+U_s,
-\end{equation}
-where $\psi=r^{-1/2}Y$ is the selected radial response.
-The inverse is specified by the coercive form on
-$H^1_0(E)\cap\ker\mathcal P$; the mass $\mu^2$ supplies coercivity
-on the unbounded domain. Rotation invariance gives $\mathcal PU_s=0$.
-Its global $H^1$ selection and local elliptic regularity imply
-\[
-\|U_s\|_2\le\mu^{-2}\|G_s\|_2,\qquad
-\|\nabla U_s\|_2\le\mu^{-1}\|G_s\|_2.
-\]
-The response is locally $H^2$, and here locally $H^3$ because
-$J_DG_s\in H^1$, including across the artificial faces.
-There is no surface source or response flux jump in this single weak
-elliptic equation.
-
-The complete response operator and readout are
-\begin{equation}\label{eq:projectedresponseoperator}
-\mathcal L_\lambda=\Delta+\frac{\lambda+1/4}{r^2}\mathcal P-\mu^2\Pi,
-\qquad \mathcal L_\lambda f_s=F_s,
-\end{equation}
-\begin{equation}\label{eq:projectedboundary}
-\mathcal Pf_s=\psi,\qquad
-\mathcal P[(r\partial_r+\tfrac12)f_s]_{r=1}=B(t,\lambda).
-\end{equation}
-The operator is explicitly nonlocal in angle through $\mathcal P$.
-Since the forcing and inverse in \eqref{eq:additiveresponse} are
-independent of the running $\lambda$, with $\zeta=\partial_\lambda\psi$,
-\begin{equation}\label{eq:projectedspectral}
-\partial_\lambda f_s=\zeta,\qquad
-\mathcal L_\lambda\zeta=-\psi/r^2,\qquad
-\mathcal P[(r\partial_r+\tfrac12)\zeta]_{r=1}=B_\lambda.
-\end{equation}
-In particular the right-hand side is $-\psi/r^2$, not $-f_s/r^2$.
-The fixed radial response and the coercive complementary channel
-specify the selection completely.
-
-\subsection{The signed local functional is not the source cost}
-
-Set $V=(\lambda+1/4)/r^2$ and
-$\boldsymbol{\mathfrak j}=f_s\nabla\zeta-\zeta\nabla f_s$.
-Subtracting the actual equations gives
-\begin{align}
-\operatorname{div}\boldsymbol{\mathfrak j}
- &=-[D_0+\sigma U_s+\zeta J_DG_s],\label{eq:localcurrent}\\
-D_0&=\psi^2/r^2+Q_t\zeta,\qquad
-\sigma=\psi/r^2+(V+\mu^2)\zeta.
-\end{align}
-The projected-potential term in $\sigma$ does not cancel on a local
-angular region. For a smooth real cutoff $\eta$ compactly supported in
-$D$, put
-\[
-\mathcal S_\eta(G)=\int_E\eta[D_0+\sigma U+\zeta J_DG]\dd X.
-\]
-Integration by parts retains the transition current:
-$\mathcal S_\eta=\int_E\nabla\eta\cdot\boldsymbol{\mathfrak j}\dd X$.
-The variation $\delta U=-\mathsf K_\mu^{-1}J_D\delta G$ and
-self-adjointness give
-\begin{align}
-\mathcal S_\eta(G)&=\mathcal S_\eta(0)+\langle k_\eta,G\rangle,\\
-k_\eta&=\Pi_DJ_D^*
- [\,\eta\zeta-\mathsf K_\mu^{-1}\Pi_E(\eta\sigma)\,],\label{eq:localadjoint}\\
-\frac{\dd}{\dd s}\mathcal S_\eta(G_s)
- &=-\langle k_\eta,e^{-s\mathsf A}h\rangle.\label{eq:signedflow}
-\end{align}
-Here $J_D^*$ is restriction to $D$ and the subscripts specify the
-averaging domains. The complete complementary current remains part of
-any local comparison. Dissipation of $\mathcal E$ gives no sign to
-\eqref{eq:signedflow}. This is the precise outstanding signed estimate
-for this response, not a consequence of the source-cost theorem.
 
 \section{Conserving the entire integral}\label{sec:conservative}
 
 \subsection{A local conservation equation}
 
-The weaker requirement is a density $j_s$ with
+The chosen invariant is represented by a density $j_s$ with
 \begin{equation}\label{eq:integralconservation}
 \int_\Omega j_s(t,a;X)\dd X=H(t,a).
 \end{equation}
@@ -833,15 +151,22 @@ The divergence theorem preserves \eqref{eq:integralconservation} when
 the complete boundary flux, including any outer limit, is zero.
 A subregion instead gains or loses precisely its boundary flux.
 
-There is an important distinction from diffusing $Q_t$ alone.
-If a frequency-independent source $F_s$ is still tested against
-$r^{-1/2}\cos(a\log r/2)$ at every real $a$, invariance of those integrals
-forces $\mathcal PF_s=Q_t$ whenever the weighted difference is integrable:
-the change of variables $r=e^{2u}$ reduces the assertion to uniqueness
-of the cosine transform. Gaussian convolution of the even extension
-proves that uniqueness. Thus a genuinely weaker construction must permit
-the full density to depend on $a$, or move the testing kernel along with
-the source. No division by the cosine at its zeros is appropriate.
+To distinguish this evolution from diffusion of $Q_t$ alone, define
+the spherical average of an exterior source by
+\[
+ \mathcal P F_s(r)=\frac1{4\pi}\int_{S^2}F_s(r\omega)\dd\omega,
+ \qquad r\ge1.
+\]
+If a frequency-independent $F_s$ is tested against the same fixed
+kernel $r^{-1/2}\cos(a\log r/2)$ at every real $a$, invariance of those
+exterior integrals forces $\mathcal P F_s=Q_t$, provided
+$r^{3/2}(\mathcal P F_s-Q_t)\in L^1([1,\infty))$.
+Indeed $r=e^{2u}$ reduces the difference to an integrable cosine
+transform; Gaussian convolution of its even extension proves uniqueness.
+Evolving the full frequency-dependent density, as below, permits radial
+redistribution without that fixed-source constraint. Moving the testing
+kernel together with the source is another possibility. No division by
+the cosine at its zeros is appropriate.
 
 For example, transporting a density and phase by
 \[
@@ -881,7 +206,9 @@ It preserves $H$ and all finite spectral derivatives:
 \qquad \partial_tj_s=-\partial_a^2j_s.
 \end{equation}
 The theta sum in \eqref{eq:fullthetaflow} passes termwise through this
-evolution in $L^1$. For its $N$-term density,
+evolution in $L^1$. Let $Q_{t,N}$ be the first $N$ summands of
+$Q$ in \eqref{eq:Q}, multiplied by $e^{t\log^2r/4}$, and let
+$j_s^{(N)}$ be the corresponding heat-evolved density. Then
 \[
 \|j_s-j_s^{(N)}\|_1\le
  \frac18\int_1^\infty r^{3/2}(Q_t-Q_{t,N})\dd r.
@@ -907,10 +234,35 @@ in \eqref{eq:conservedjets} includes it. This local differential equation
 has Gaussian spreading and no finite propagation speed.
 It starts from the full signed density, so it is nontrivial even though
 the initial data and operator are rotationally symmetric.
-By contrast, dropping the drive from
-$\partial_sG=\varepsilon\Delta G-\nu G+\text{drive}$ with $G_0=0$
-leaves that \emph{perturbation} identically zero. These are different
-initial-value problems.
+
+\subsection{An exact colliding control}\label{sec:control}
+
+For any prescribed $T_c>0$, consider the positive source
+\begin{equation}\label{eq:control}
+ \Phi_*(u)=(64u^4+6)e^{-(4+T_c)u^2},\qquad
+ H_*(t,a)=\int_0^\infty e^{tu^2}\Phi_*(u)\cos(au)\dd u.
+\end{equation}
+Its heat integral converges for $t<T_c+4$. At $t=T_c$, Gaussian
+integration gives
+\begin{equation}\label{eq:controlevent}
+ H_*(T_c,a)=\frac{\sqrt\pi}{16}(a^2/4-6)^2e^{-a^2/16},
+ \qquad A_*=2\sqrt6.
+\end{equation}
+Thus $H_*(T_c,A_*)=\partial_aH_*(T_c,A_*)=0$, with an exactly
+double physical zero. Its exterior density is obtained from
+\eqref{eq:densityinitial} by replacing the canonical amplitude
+$Q_t(r)/(32\pi\sqrt r)$ by
+$e^{tu^2}\Phi_*(u)/(8\pi r^3)$, where $u=\frac12\log r$.
+It has the finite moments and parameter derivatives used by the heat
+and prepared feedback arguments on its stated convergence domain.
+The fixed example below uses $T_c=1/4$.
+
+The control lacks the complete canonical square source and its theta
+tail, but those are not separating premises of the generic heat or
+feedback theorem. No global finite Newman threshold is claimed for this
+family. Other smooth controls retain their own convergence and moment
+domains; atomic inputs require a distributional formulation outside
+these source-function statements \cite{CollisionControls}.
 
 \subsection{A quantified collision diagnostic}
 
@@ -941,43 +293,827 @@ of the two cancellations, with an explicit moment allowance.
 It is a faster-decay statement at the specified observation, not a
 growing instability or an all-height uniform estimate.
 
-The exact control in Section~8 has the same two cancellations and finite
+The exact control in Section~\ref{sec:control} has the same two cancellations and finite
 moments on its actual convergence domain, so it has the same extra
 decay. The other applicable smooth controls also pass this generic
 conservation mechanism. No premise of the heat theorem distinguishes
 theta from those controls. Details, the radial convolution formula and
 the fixed-kernel qualification are in \cite{ConservativeNote}.
 
-\section{The remaining collision dynamics question}
+\section{An energy-normalized conservative feedback}\label{sec:feedback}
 
-The current objective is a simple conservative evolution that makes
-collision degeneracy analytically useful. Preservation of the entire
-observation is sufficient; the radial integrand may change, and no
-preferred direction is imposed. The projected flow supplies a proved
-source-cost descent and a derived signed adjoint. The ordinary heat
-example supplies an explicit theta evolution and the disappearance of
-two leading diffusion coefficients at a collision.
+Ordinary heat makes a collision visible through additional decay.
+The following construction instead forces a finite-time singularity
+of a specified response. It is the fixed candidate of
+\cite{FeedbackNote}; its global regularity is a pointwise noncollision
+reformulation, not an independent theta estimate.
 
-A stronger amplification mechanism would require a stated field or
-response, a well-posed evolution, a collision-sensitive quantitative law,
-and a canonical theta estimate controlling that behavior. None is
-obtained merely by choosing a source penalty or by inverting a vanishing
-heat signal. A general collision magnifier may also amplify colliding
-controls; an eventual excluding estimate must use the additional theta
-information and retain every boundary, tail and parameter-derivative
-term. The known first-jet condition is not a new criterion.
+\subsection{Preparation, marked derivatives, and conservation}
 
-Any application to a hypothetical positive de Bruijn--Newman threshold
-also needs the time, height and multiplicity coverage in the existing
-finite-event reduction \cite{ThresholdNote}. No such new global theorem
-is proved here. The next investigation should compare a concrete
-conservative dynamics and its full estimate with the same direct theta
-information, rather than repeat conservation as evidence of exclusion.
+Write $f(t,a;X)$ for the raw density in \eqref{eq:densityinitial} and
+fix the preparatory smoothing time to one:
+\[
+ f^\delta(t,a)=K_1*f(t,a),\qquad
+ K_\sigma(X)=(4\pi\sigma)^{-3/2}e^{-|X|^2/(4\sigma)}.
+\]
+The smoothing is needed because the original jump at $r=1$ need not
+belong to $H^1(\R^3)$. The prepared theta density and each finite
+parameter derivative are Schwartz functions. The same holds for the
+Gaussian-polynomial control on its convergence domain. The full unit
+ball belongs to the evolved domain.
+
+Fix a mark $p=(T,A)$, where $A$ is the physical frequency. Construct a common family
+$j_s^p(t,a;X)$ with initial value $f^\delta(t,a;X)$ and put
+\begin{equation}\label{eq:feedbackpair}
+ U_s=j_s^p(T,A),\qquad
+ V_s=\left.\partial_a j_s^p(T,a)\right|_{a=A},\qquad W_s=(U_s,V_s).
+\end{equation}
+All unqualified spatial integrals in this and the next two sections
+are over $\R^3$. Choose
+\begin{align}
+ v(X)&=X+\frac{X}{1+|X|^2},&
+ d(X)&=\operatorname{div}v
+       =3+\frac{3+|X|^2}{(1+|X|^2)^2},\label{eq:feedbackdrift}\\
+ E(s)&=\|W_s\|_2^2,&G(s)&=\|\nabla W_s\|_2^2,\qquad
+ D(s)=\int d|W_s|^2.
+\end{align}
+The equation and scalar feedback are
+\begin{equation}\label{eq:feedbackpde}
+ \boxed{\partial_sj=\Delta j+\alpha(s)\operatorname{div}(vj),
+ \qquad \alpha(s)=\frac{2G(s)}{D(s)}.}
+\end{equation}
+Diffusivity, spatial scale, preparatory time, and relative weight of
+the two components have all been fixed to one. The drift is radial,
+but its profile is a design choice, not an identity of theta arithmetic.
+The dependence of $\alpha$ on spatial integrals makes the feedback
+nonlocal in the state.
+
+First solve the pair $W$; its resulting scalar coefficient then defines
+one linear propagator for the running parameters $(t,a)$. Uniqueness
+identifies the marked value and actual derivative with
+\eqref{eq:feedbackpair}. At fixed $p$, that propagator preserves
+\begin{equation}\label{eq:feedbackobservations}
+ \int j_s^p(t,a)=H(t,a),\qquad
+ \int\partial_a^kj_s^p(t,a)=\partial_a^kH(t,a),\qquad
+ \partial_tj_s^p=-\partial_a^2j_s^p.
+\end{equation}
+Indeed the flux is $-\nabla j-\alpha vj$, so
+\[
+ \frac{d}{ds}\int_{|X|<R}j
+   =\int_{|X|=R}(\partial_rj+\alpha v_rj)\,dS.
+\]
+Smoothness at the origin and weighted decay at infinity remove only
+those limiting boundaries; flux through $r=1$ is retained. The same
+argument applies to the finite parameter derivatives on their
+convergence domains.
+
+Moving the mark is a different differentiation. For
+$z=\partial_Aj_s^p(t,a)$ with $(t,a)$ held fixed,
+\begin{equation}\label{eq:feedbackmarkresponse}
+ \partial_sz=\Delta z+\alpha\operatorname{div}(vz)
+               +\alpha_A\operatorname{div}(vj),\qquad z_0=0,
+ \qquad \alpha_A=\frac{2G_A}{D}-\frac{2GD_A}{D^2}.
+\end{equation}
+The diagonal frequency derivative is $V+z$, not $V$. The additional
+response has zero complete integral. Different marks generally have
+different feedback paths; one path is not claimed to magnify every
+frequency simultaneously.
+
+Direct differentiation gives, with $q=|X|^2$,
+\begin{equation}\label{eq:feedbackcoefficients}
+ \frac78I\le Dv\le2I,\qquad 3\le d\le6,\qquad
+ \Delta d=\frac{2q^2+20q-30}{(1+q)^4},\qquad |\Delta d|\le30.
+\end{equation}
+Integration by parts therefore yields
+\begin{equation}\label{eq:feedbackenergy}
+ E'=-2G+\alpha D=0,\qquad E=E_0>0,\qquad
+ 3E_0\le D\le6E_0,\qquad
+ \frac{G}{3E_0}\le\alpha\le\frac{2G}{3E_0}.
+\end{equation}
+In particular the denominator is positive even at a collision.
+
+\subsection{Local construction and the exact gradient identity}
+
+\begin{proposition}[Construction and continuation]\label{prop:feedbackexistence}
+For nonzero Schwartz initial data $W_0$, the pair equation has a unique
+local $H^1$ solution, smooth with the weighted decay needed above on
+compact intervals of its maximal lifespan $[0,S_{\max})$.
+Let $B(s)=\int_0^s\alpha(q)\dd q$. Then
+\begin{equation}\label{eq:feedbackgradientbound}
+ G(s)+3E_0\le(G(0)+3E_0)e^{10B(s)}.
+\end{equation}
+A finite maximal endpoint requires $B(s)\to\infty$; a bound for $G$
+through a finite endpoint gives continuation.
+\end{proposition}
+
+\begin{proof}
+Set $w(X)=X/(1+|X|^2)$ and remove only the affine part of the drift by
+$W_s(X)=b^3Z_\tau(bX)$, $d\tau/ds=b^2$. For a nonzero $Z\in H^1$ set
+\[
+ e=\|Z\|_2^2,\quad g=\|\nabla Z\|_2^2,\quad
+ b=(E_0/e)^{1/3},\quad
+ \widetilde D=\int d(Y/b)|Z(Y)|^2\dd Y.
+\]
+The transformed equation is
+\begin{equation}\label{eq:feedbacktransformed}
+ \partial_\tau Z=\Delta Z+
+ \frac{2bg}{\widetilde D}\operatorname{div}_Y
+                    \{w(Y/b)Z\},\qquad Z_0=W_0.
+\end{equation}
+On $H^1$ balls with $e$ bounded away from zero, this nonlinearity is
+locally Lipschitz from $H^1$ to $L^2$: $3e\le\widetilde D\le6e$,
+and the multiplier, its spatial derivatives and its $b$ derivatives
+are uniformly bounded while $b$ stays in a compact positive interval.
+The heat bound $L^2\to H^1$ is at most $C(1+\tau^{-1/2})$ on bounded
+time intervals. Its integrable singularity makes the Duhamel map
+contractive on $C([0,h];H^1)$ for small $h$; see the heat-smoothing
+argument in \cite[Lemmas 5.50--5.51]{HunterPDE}.
+
+In these variables $e_\tau=-6ge/\widetilde D$, hence
+$b_\tau/b=2g/\widetilde D$ and $b_s/b=2b^2g/\widetilde D=\alpha$.
+Thus the transformation recovers exactly \eqref{eq:feedbackpde}.
+After the affine dilation the common linear equation has bounded
+smooth drift on each compact lifespan interval. Its smoothing and
+weighted estimates propagate the stated data and parameter derivatives.
+The local construction also depends smoothly on the mark on common
+compact lifespan intervals, giving \eqref{eq:feedbackmarkresponse}.
+
+For later use retain the full gradient identity
+\begin{align}
+ G'&=-2N+\frac{2G}{D}\mathcal K,
+       &N&=\|\Delta W\|_2^2,\label{eq:feedbackgradientexact}\\
+ \mathcal K&=2\sum_{\ell=1}^2\int
+       \nabla W_\ell^{\,T}Dv\,\nabla W_\ell
+       +\int d|\nabla W|^2-\int(\Delta d)|W|^2.\nonumber
+\end{align}
+The diffusion term is nonpositive and \eqref{eq:feedbackcoefficients}
+gives $G'\le10\alpha G+30\alpha E_0$, proving
+\eqref{eq:feedbackgradientbound}. A bounded $G$ and the fixed positive
+$E_0$ give a uniform local continuation interval through the same
+construction. Since $B$ is nondecreasing, a finite maximal endpoint
+therefore forces $B\to\infty$.
+\end{proof}
+
+\subsection{A finite collision deadline and its converse}
+
+\begin{theorem}[Collision-driven divergence]\label{thm:feedbackdeadline}
+For the prepared theta pair, or the admitted smooth control pair, put
+\[
+ m=\int W_0=(H(T,A),H_a(T,A)),\qquad
+ \mathsf P_0=\int |X|\,|W_0(X)|\dd X.
+\]
+If $m=0$, then
+\begin{equation}\label{eq:feedbackdeadline}
+ S_{\max}\le S_*:=
+ \frac{60}{7(5\pi^2)^{2/5}}\frac{\mathsf P_0^{4/5}}{E_0^{2/5}}
+ <\infty.
+\end{equation}
+At this finite endpoint $B$, $\alpha$, $G$, and
+$\|W_s\|_\infty$ diverge. Moreover, within the stated initial-data class,
+\begin{equation}\label{eq:feedbackequivalence}
+ S_{\max}=\infty\quad\Longleftrightarrow\quad m\ne0.
+\end{equation}
+No nondegeneracy of the physical collision is required.
+\end{theorem}
+
+\begin{proof}
+On a compact lifespan interval use the positive mass-preserving
+transition kernel of the drift $-\alpha(s)v$ and diffusion $\sqrt2$.
+Two trajectories with the same Brownian increments satisfy
+\[
+ \frac{d}{ds}|X_s-Y_s|^2
+  \le-2\varkappa\alpha(s)|X_s-Y_s|^2,\qquad \varkappa=7/8.
+\]
+Thus the backward propagator contracts Lipschitz constants by
+$e^{-\varkappa B(s)}$. This is the synchronous-coupling argument for
+convex confinement discussed in \cite{EberleCoupling}; the scalar
+coefficient is continuous on the interval, and $v$ is globally
+Lipschitz with linear growth.
+
+For the unnormalized transform
+$\widehat W(\xi)=\int e^{-i\xi\cdot X}W(X)\dd X$, subtract the
+backward exponential's value at zero and use $m=0$ to obtain
+\[
+ |\widehat W_s(\xi)|\le |\xi|\mathsf P_0e^{-\varkappa B(s)}.
+\]
+Plancherel split at radius $R$ gives
+\begin{equation}\label{eq:feedbackfouriersplit}
+ E_0\le\frac{\mathsf P_0^2e^{-2\varkappa B}R^5}{10\pi^2}
+                         +\frac{G}{R^2}.
+\end{equation}
+Choose $R^5=5\pi^2E_0e^{2\varkappa B}/\mathsf P_0^2$ and use
+\eqref{eq:feedbackenergy}. This yields
+\[
+ B'=\alpha\ge c_0e^{\beta B},\qquad
+ c_0=\frac{(5\pi^2)^{2/5}}6\frac{E_0^{2/5}}{\mathsf P_0^{4/5}},
+ \qquad \beta=\frac7{10}.
+\]
+Hence $e^{-\beta B(s)}\le1-\beta c_0s$, proving
+\eqref{eq:feedbackdeadline}. Proposition~\ref{prop:feedbackexistence}
+forces $B\to\infty$ at the finite endpoint; the last bound and
+\eqref{eq:feedbackenergy} then force $\alpha,G\to\infty$.
+
+For the converse let $h$ solve the same scalar equation with
+$h_0=|W_0|$. Positivity gives $|W_s|\le h_s$ and conserved mass
+$M_0=\int h_0$. Its second moment $R_h=\int|X|^2h$ satisfies
+\begin{equation}\label{eq:feedbackenvelopemoment}
+ R_h(s)\le e^{-2B(s)}R_h(0)
+    +6M_0\int_0^se^{-2(B(s)-B(q))}\dd q.
+\end{equation}
+At a finite maximal endpoint dominated convergence gives $R_h\to0$.
+For each radius $r>0$,
+\[
+ |m|\le\|W_s\|_1
+ \le |B_r|^{1/2}E_0^{1/2}+R_h(s)/r^2.
+\]
+First taking the endpoint limit and then $r\downarrow0$ proves $m=0$
+and also $\|W_s\|_1\to0$. Since
+$E_0\le\|W_s\|_\infty\|W_s\|_1$, the amplitude diverges.
+Together with the first implication this proves
+\eqref{eq:feedbackequivalence}.
+\end{proof}
+
+The theorem supplies a quantitative magnifier, not a blow-up profile,
+a rate in the remaining auxiliary time, or a continuation past the
+singularity. The exact control of Section~\ref{sec:control}, with
+$T_c=1/4$, has the same finite breakdown at $(T_c,A_*)$.
+All generic hypotheses of the magnifier hold for that control.
+Other admitted smooth controls retain their original moment domains;
+atomic inputs are not included in this source-function statement.
+An excluding estimate must provide additional canonical information.
+
+\subsection{The fixed generic initializer comparison is insufficient}
+
+There is a useful scoped failure even before any flow simulation.
+From \eqref{eq:feedbackenergy} and \eqref{eq:feedbackgradientbound},
+\begin{equation}\label{eq:feedbacklocallife}
+ G'\le\frac{20}{3E_0}G(G+3E_0),\qquad
+ S_{\rm local}=\frac1{20}\log\left(1+\frac{3E_0}{G(0)}\right)
+\end{equation}
+is a guaranteed lower lifespan, with existence for $s<S_{\rm local}$.
+To state the assigned initial bounds, write
+$f_k=\partial_a^kf(T,A)$ and
+\[
+ C_{j,k}=\int |X|^j|f_k(X)|\dd X,\qquad
+ F_{4,k}=\int e^{-|X|^2/16}f_k(X)\dd X,\qquad C=C_{0,0}+C_{0,1}.
+\]
+The specified Gaussian and moment bounds are
+\begin{align}
+ \overline P&=\sqrt{C_{0,0}C_{2,0}}+
+       \sqrt{C_{0,1}C_{2,1}}+\frac4{\sqrt\pi}C,
+       &\mathsf P_0&\le\overline P,\nonumber\\
+ \overline G&=\tfrac34(8\pi)^{-3/2}C^2,
+       &G(0)&\le\overline G,\label{eq:feedbackinitializer}\\
+ \underline E&=\frac{(24\pi)^{3/2}}{(16\pi)^3}
+                       (F_{4,0}^2+F_{4,1}^2),
+       &E_0&\ge\underline E.\nonumber
+\end{align}
+For the first bound use the mean radius $4/\sqrt\pi$ of $K_1$ and
+Cauchy--Schwarz on each raw first moment. For the second use Young's
+inequality and $\|\nabla K_1\|_2^2=\tfrac34(8\pi)^{-3/2}$.
+For the third evaluate $K_3*W_0=K_4*(f_0,f_1)$ at zero and apply
+Cauchy--Schwarz with $\|K_3\|_2^2=(24\pi)^{-3/2}$.
+
+Let $\eta=(F_{4,0}^2+F_{4,1}^2)/C^2$ and $p_0=\overline P/C$.
+Then $0\le\eta\le1$ and $p_0\ge1+4/\sqrt\pi>3$, since the raw
+support has $r\ge1$. Substitution into the lower lifespan and upper
+collision deadline gives, when $\eta>0$,
+\begin{equation}\label{eq:feedbackpaymentfailure}
+ \frac{\underline S_{\rm local}}{\overline S_*}
+ =\frac7{1200}\left(\frac{15\sqrt{6\pi}}{256}\right)^{2/5}
+   \frac{\eta^{2/5}}{p_0^{4/5}}
+   \log\left(1+\frac{3\sqrt3}{2}\eta\right)
+ <\frac7{1200}<\frac1{100}.
+\end{equation}
+Here $\underline S_{\rm local}$ replaces $E_0,G(0)$ in
+\eqref{eq:feedbacklocallife} by $\underline E,\overline G$, and
+$\overline S_*$ replaces $\mathsf P_0,E_0$ in
+\eqref{eq:feedbackdeadline} by $\overline P,\underline E$.
+The bound follows because the parenthesized factor is less than one,
+$p_0^{4/5}>2$, and the logarithm is less than two. If $\eta=0$ there is
+no positive lower-energy payment. These particular initial bounds
+cannot certify existence through the assigned collision deadline,
+even with exact arithmetic. This is not a bound on the true lifespan
+or an obstruction to sharper estimates.
+
+\section{Positive-carrier comparison and quantitative regularity}
+\label{sec:carrier}
+
+The first estimate tested for the feedback uses a positive carrier
+for the complete theta source \cite{CarrierNote}. It gives explicit
+regularity once a physical first-jet margin is independently known,
+but does not produce that margin.
+
+\subsection{The carrier and its relative-density dissipation}
+
+At the fixed mark put $q_T(u)=e^{Tu^2}\Phi(u)$ and, on $r\ge1$,
+$\rho_T(r)=q_T(\log r/2)/(8\pi r^3)$. Define
+\[
+ W^{\rm raw}=\mathbf1_{r\ge1}\rho_T
+             (\cos(Au),-u\sin(Au)),\qquad
+ h^{\rm raw}=\mathbf1_{r\ge1}\rho_T(1+u^2),\qquad u=\tfrac12\log r,
+\]
+and prepare both by $K_1$ convolution. Let $h$ solve the same scalar
+equation as $W$, with the existing feedback path $\alpha(s)$.
+Since $|W^{\rm raw}|\le h^{\rm raw}$, positivity gives
+\begin{equation}\label{eq:carrierdomination}
+ h>0,\qquad |W|\le h,\qquad
+ M:=\int h=P_0(T)+P_2(T),\qquad
+ P_j(T)=\int_0^\infty u^jq_T(u)\dd u.
+\end{equation}
+Writing $R=\int|X|^2h$ and $\mu=|m|$, one has
+\begin{equation}\label{eq:carriermoment}
+ R_0=\int_0^\infty e^{4u}(1+u^2)q_T(u)\dd u+6M,
+ \qquad R'\le6M-2\alpha R.
+\end{equation}
+The $6M$ in the preparation comes from the second moment of $K_1$.
+
+Set $Z=W/h$ and
+\[
+ \mathcal F=\int h|Z|^2=\int\frac{|W|^2}{h},\qquad
+ \mathcal I=\int h|\nabla Z|^2.
+\]
+Subtracting the equations for $W$ and $h$ gives the quadratic
+general-relative-entropy identity \cite[Lemma 1.1]{MichelMischlerPerthame}:
+\begin{align}
+ \partial_sZ&=\Delta Z+(2\nabla\log h+\alpha v)\cdot\nabla Z,\nonumber\\
+ \partial_s(h|Z|^2)&=\Delta(h|Z|^2)
+      +\alpha\operatorname{div}(vh|Z|^2)-2h|\nabla Z|^2,\nonumber\\
+ \mathcal F(s)+2\int_0^s\mathcal I(q)\dd q&=\mathcal F(0).
+ \label{eq:carrierentropy}
+\end{align}
+To justify complete-space integration, use nonnegative radial cutoffs.
+As $|Z|\le1$, the Laplacian cutoff error is at most
+$CR_{\rm cut}^{-2}M$ and the drift error is at most
+$C\sup\alpha\int_{|X|\ge R_{\rm cut}}h$, on a compact lifespan
+interval. Both vanish. Monotone convergence for the nonnegative
+dissipation and continuity at the prepared initial data give
+\eqref{eq:carrierentropy}.
+
+Cauchy--Schwarz in the preparatory convolution and complete integration
+give
+\begin{equation}\label{eq:carrierinitialentropy}
+ \mathcal F(0)\le\int_0^\infty q_T(u)
+       \frac{\cos^2(Au)+u^2\sin^2(Au)}{1+u^2}\dd u\le P_0(T).
+\end{equation}
+The exact decomposition at every later time is
+\begin{equation}\label{eq:carrierdecomposition}
+ \mathcal F(s)=\frac{\mu^2}{M}
+       +\int h_s\left|Z_s-\frac mM\right|^2.
+\end{equation}
+Its constant floor is $\mu^2/M$. Neither positivity of $M$ nor the
+upper bound \eqref{eq:carrierinitialentropy} supplies a positive
+lower bound for $\mu$. A decreasing positive quantity need not retain
+a positive uniform floor.
+
+\subsection{A sharp mass--energy--moment inequality}
+
+\begin{lemma}\label{lem:carriersharp}
+If $W\in L^1\cap L^2$, $E=\|W\|_2^2>0$, and $h\ge|W|$ is
+nonnegative with finite $R=\int|X|^2h$, then
+\begin{equation}\label{eq:carriersharp}
+ R\ge c_3\frac{\|W\|_1^{7/3}}{E^{2/3}}
+   \ge c_3\frac{|\int W|^{7/3}}{E^{2/3}},\qquad
+ c_3=\frac37\left(\frac{15}{14\pi}\right)^{2/3}.
+\end{equation}
+The constant is sharp in this general comparison class.
+\end{lemma}
+\begin{proof}
+For $L>0$, split the mass using $1-|X|^2/L^2$, discard its negative
+part, and use Cauchy--Schwarz:
+\[
+ \|W\|_1\le a_3E^{1/2}L^{3/2}+R/L^2,\qquad
+ a_3^2=\int_{|Y|<1}(1-|Y|^2)^2\dd Y=\frac{32\pi}{105}.
+\]
+Maximizing $\|W\|_1L^2-a_3E^{1/2}L^{7/2}$ gives
+$L^{3/2}=4\|W\|_1/(7a_3E^{1/2})$ and the stated constant.
+Equality is attained by $W=eC(1-|X|^2/L^2)_+$, $h=|W|$, for a
+constant unit vector $e$: its mass, energy and moment are respectively
+$8\pi CL^3/15$, $32\pi C^2L^3/105$ and $8\pi CL^5/35$.
+This extremizer is not asserted to be a theta trajectory.
+\end{proof}
+
+\begin{proposition}[Regularity from an independent first-jet margin]
+\label{prop:carriermargin}
+If $\mu>0$ is independently established, put
+$r_\mu=c_3\mu^{7/3}E_0^{-2/3}$. Then for every $s\ge0$,
+\begin{align}
+ B(s)&\le\tfrac12\log(R_0/r_\mu)+3Ms/r_\mu,
+       \label{eq:carrierBbound}\\
+ G(s)+3E_0&\le(G(0)+3E_0)(R_0/r_\mu)^5
+                     \exp(30Ms/r_\mu).\label{eq:carrierGbound}
+\end{align}
+The response obeys $\alpha\le2G/(3E_0)$.
+\end{proposition}
+\begin{proof}
+Before the maximal endpoint, Lemma~\ref{lem:carriersharp} gives
+$R\ge r_\mu$. Dividing \eqref{eq:carriermoment} by $R$ and integrating
+yields \eqref{eq:carrierBbound}; use $R(s)\ge r_\mu$ at the upper
+endpoint. Equation~\eqref{eq:feedbackgradientbound} then gives
+\eqref{eq:carrierGbound}. These bounds are finite on each finite
+interval, so Proposition~\ref{prop:feedbackexistence} extends the
+solution to every $s\ge0$.
+\end{proof}
+
+The exponential rate in this sufficient estimate deteriorates as
+$\mu^{-7/3}$ with the other budgets fixed. This is not a sharp rate for
+the actual trajectory. With budgets
+$\mu\ge\underline\mu>0$, $E_0\le\overline E$, $M\le\overline M$,
+$R_0\le\overline R$ and $G(0)\le\overline G$, one can replace
+$r_\mu$ by $r_*=c_3\underline\mu^{7/3}\overline E^{-2/3}$ and the
+other constants by their upper bounds. At time zero the same lemma
+also gives
+\begin{equation}\label{eq:carrierlowerenergy}
+ E_0\ge c_3^{3/2}\underline\mu^{7/2}\overline R^{-3/2}>0,
+\end{equation}
+which supplies a uniform denominator for the response bound.
+
+At a finite breakdown endpoint, \eqref{eq:carriermoment} implies
+$R(s)\to0$, as in \eqref{eq:feedbackenvelopemoment}. The stronger
+mass inequality gives the quantitative statements
+\begin{align}
+ \mathcal F(s)&\le\|W_s\|_1
+       \le c_3^{-3/7}E_0^{2/7}R(s)^{3/7}\longrightarrow0,
+       \label{eq:carrierentropycollapse}\\
+ \|W_s\|_\infty&\ge c_3^{3/7}E_0^{5/7}R(s)^{-3/7}
+                      \longrightarrow\infty.\label{eq:carrieramplitude}
+\end{align}
+For the exact control at $(T_c,2\sqrt6)$,
+$P_0=9\sqrt\pi/4$, $P_2=21\sqrt\pi/32$ and
+$M=93\sqrt\pi/32>0$, while $\mu=0$. Its initial relative energy is
+positive but tends to zero by \eqref{eq:carrierentropycollapse}.
+Thus the displayed positive-carrier premises and dissipation alone
+do not provide a floor through the collision deadline. The control
+lacks the complete theta arithmetic and tail, but this comparison
+has not used those features as a separating premise.
+
+\subsection{Theta specialization and the matched direct comparison}
+
+Fix finite $T_+,A_+\ge0$ with
+\[
+ \vartheta=\frac{A_+^4P_4(T_+)}{24P_0(T_+)}<1.
+\]
+The inherited fourth-moment bound in Appendix~\ref{sec:fourthmoment}
+gives, on $0\le T\le T_+$ and $0\le A\le A_+$,
+\begin{equation}\label{eq:carrierthetamargin}
+ H(T,A)-\tfrac A2H_a(T,A)\ge P_0(0)(1-\vartheta),\qquad
+ \mu\ge\underline\mu:=
+ \frac{P_0(0)(1-\vartheta)}{\sqrt{1+A_+^2/4}}>0.
+\end{equation}
+At $A=0$ the first inequality follows directly from positivity.
+The finite complete-source budgets
+\begin{align*}
+ \overline M&=P_0(T_+)+P_2(T_+),&
+ \overline E&=(8\pi)^{-3/2}\overline M^2,\\
+ \overline G&=\tfrac34(8\pi)^{-3/2}\overline M^2,&
+ \overline R&=\int_0^\infty e^{4u}(1+u^2)q_{T_+}(u)\dd u+6\overline M
+\end{align*}
+follow from the Gaussian Young bounds and source monotonicity.
+They supply the uniform version of
+\eqref{eq:carrierBbound}--\eqref{eq:carrierlowerenergy}.
+Every point in this domain was already separated by
+\eqref{eq:carrierthetamargin}; the flow gives no larger domain or
+independent exclusion. The exact control has
+$A_*^4P_4/P_0=123>24$ at its event, so it fails this direct-margin
+condition. The conclusion concerns this tested comparison, not every
+possible estimate from canonical moments or signed source relations.
+
+\section{The canonical source relation and its residual}
+\label{sec:sourcerelation}
+
+The second estimate tested for the same feedback uses the unchanged
+complete source's logarithmic derivative \cite{SourceRelationNote}.
+The raw relation is exact, but preparation and evolution do not
+preserve it with zero residual. The following calculations identify
+the terms that a valid coupled estimate must retain.
+
+\subsection{The fixed operator and its admissible extension}
+
+On $r\ge1$, write
+\[
+ \rho_T(r)=\frac{Q_T(r)}{32\pi\sqrt r}
+          =\frac{q_T(\log r/2)}{8\pi r^3},\qquad
+ \ell_T(r)=\log\rho_T(r),\qquad a_0(r)=r\log r.
+\]
+Here $Q_T$ is the complete sum in \eqref{eq:Q} multiplied by the
+physical heat weight; all its square coefficients remain one.
+For the raw frequency derivatives put
+\begin{align*}
+ F_0&=\mathbf1_{r\ge1}\rho_T\cos(Au),&
+ F_1&=-\mathbf1_{r\ge1}u\rho_T\sin(Au),&
+ F_2&=-\mathbf1_{r\ge1}u^2\rho_T\cos(Au).
+\end{align*}
+The exterior operator
+\begin{equation}\label{eq:sourceoperator}
+ \mathcal A_T=a_0(r)(\partial_r-\ell_T'(r))
+\end{equation}
+satisfies
+\begin{equation}\label{eq:sourcerawrelation}
+ \mathcal A_TF_0=AF_1,\qquad
+ \mathcal A_TF_1=F_1+AF_2,
+\end{equation}
+because $a_0/(2r)=u$. The second relation is the actual frequency
+derivative of the first and does not close on two components.
+
+To specify a smooth whole-space operator, use canonical reflection
+to extend $\rho_T$ positively to $r>0$, as justified below.
+Choose a smooth radial cutoff $\eta=0$ on $r\le1/2$, $\eta=1$ on
+$r\ge3/4$, and define
+\begin{equation}\label{eq:sourceextension}
+ b(X)=\eta(r)\log r\,X,\qquad
+ c_T(r)=-\eta(r)r\log r\,\ell_T'(r),\qquad
+ \mathcal A_T=b\cdot\nabla+c_T.
+\end{equation}
+For instance, on $1/2<r<3/4$ use $\eta(r)=\chi(4r-2)$ with
+$\chi(t)=e^{-1/t}/(e^{-1/t}+e^{-1/(1-t)})$ for $0<t<1$.
+This changes the comparison operator near the origin, not the source
+or feedback equation. All cutoff derivatives are retained below.
+The identities \eqref{eq:sourcerawrelation} also hold distributionally
+across $r=1$: the jump of $F_0$ has a surface delta multiplied by
+$a_0(1)=0$, while $F_1,F_2$ vanish on that sphere.
+
+\subsection{Preparation creates a nonzero canonical defect}
+
+Distributional integration by parts gives, for a raw density $f$,
+\begin{align}
+ [\mathcal A_T,K_\delta*]f(X)
+ =\int\big\{&(b(X)-b(Y))\cdot\nabla_XK_\delta(X-Y)\nonumber\\
+ &+[c_T(X)-c_T(Y)+\operatorname{div}b(Y)]
+                      K_\delta(X-Y)\big\}f(Y)\dd Y.
+ \label{eq:sourcepreparecommutator}
+\end{align}
+In particular, the divergence term has a plus sign and the raw
+surface jump has already been accounted for.
+
+With the mark $p$ fixed, let
+\[
+ J_{2,s}=\left.\partial_a^2j_s^p(T,a)\right|_{a=A},\qquad
+ J_{2,0}=K_1*F_2,
+ \qquad L_s=\Delta+\alpha(s)(v\cdot\nabla+d).
+\]
+Then $\partial_sJ_2=L_sJ_2$. It is not in general equal to $-u^2U_s$
+after smoothing. Define the relation vector and its residual by
+\begin{equation}\label{eq:sourceresidual}
+ \mathcal T_s=(AV_s,V_s+AJ_{2,s}),\qquad
+ \mathcal R_s=\mathcal A_TW_s-\mathcal T_s.
+\end{equation}
+At preparation and at the unit sphere, respectively,
+\begin{align}
+ \mathcal R_0&=([\mathcal A_T,K_1*]F_0,
+               [\mathcal A_T,K_1*]F_1),\label{eq:sourceinitialresidual}\\
+ \mathcal R_s(1)&=(-AV_s(1),-V_s(1)-AJ_{2,s}(1))
+                 =-\mathcal T_s(1).\label{eq:sourcespheretrace}
+\end{align}
+The latter follows from $b=c_T=0$ at $r=1$, and is independent of
+the chosen inner extension.
+
+\begin{proposition}[Actual-theta preparation defect]
+\label{prop:sourcepreparationdefect}
+For a unit vector $X_1$ and $j=2,4$ put
+\begin{align}
+ L_j(T)&=\int_{|Y|\ge1}K_1(X_1-Y)\rho_T(|Y|)u(Y)^j\dd Y\nonumber\\
+ &=\int_0^\infty q_T(u)u^j k(e^{2u})\dd u,
+ \qquad
+ k(r)=(4\pi)^{-3/2}e^{-(1+r^2)/4}\frac{\sinh(r/2)}{r/2}.
+ \label{eq:sourcemoments}
+\end{align}
+These numbers are finite and strictly positive at every real $T$.
+For
+$0<A^2\le3L_2(T)/(2L_4(T))$,
+\begin{equation}\label{eq:sourcedefectlower}
+ \mathcal R_{U,0}(1)\ge\tfrac34A^2L_2(T)>0,
+ \qquad \mathcal R_{V,0}(1)\ge A L_2(T)>0.
+\end{equation}
+The fixed zero-residual relation therefore cannot hold on an open
+frequency interval after preparation.
+\end{proposition}
+
+\begin{proof}
+Spherical averaging of the heat kernel gives
+\eqref{eq:sourcemoments}. Equations~\eqref{eq:sourcespheretrace} and
+the raw derivatives show that the two initial trace components are
+the integrals of $A u\sin(Au)$ and
+$u\sin(Au)+Au^2\cos(Au)$ against $K_1(X_1-Y)\rho_T(|Y|)\dd Y$.
+Using $|\sin x-x|\le|x|^3/6$ and
+$|\cos x-1|\le x^2/2$ gives
+\begin{equation}\label{eq:sourcedefecterror}
+ |\mathcal R_{U,0}(1)-A^2L_2|\le A^4L_4/6,\qquad
+ |\mathcal R_{V,0}(1)-2AL_2|\le\tfrac23A^3L_4.
+\end{equation}
+The asserted interval yields \eqref{eq:sourcedefectlower}.
+The first component is an entire even function of $A$, by the
+complete theta tails, with nonzero quadratic coefficient $L_2$.
+Its possible positive real zeros are isolated, proving the last
+assertion.
+\end{proof}
+
+This argument does not determine the trace at a hypothetical collision
+among those exceptional frequencies, and does not exclude an
+event-conditioned estimate. It does refute the unchanged zero-residual
+substitution directly on actual canonical data.
+
+\subsection{The full residual equation and the sphere cancellation}
+
+Because the same $L_s$ acts on $U,V,J_2$, one has
+\begin{equation}\label{eq:sourceresidualevolution}
+ \partial_s\mathcal R=L_s\mathcal R+[\mathcal A_T,L_s]W.
+\end{equation}
+With repeated spatial indices summed and $c=c_T$, the complete
+commutator is
+\begin{align}
+ [\mathcal A_T,L_s]={}&-2(\partial_jb_i)\partial_{ij}
+  -(\Delta b+2\nabla c)\cdot\nabla-\Delta c\nonumber\\
+ &+\alpha\big\{(b\cdot\nabla v-v\cdot\nabla b)\cdot\nabla
+                 +b\cdot\nabla d-v\cdot\nabla c\big\}.
+ \label{eq:sourcefullcommutator}
+\end{align}
+The terms without a derivative to their right are multiplication
+operators. All derivatives of the cutoff in
+\eqref{eq:sourceextension} are included. There is no derivative of
+$\alpha$: this is a spatial commutator with the mark fixed.
+On the exterior,
+\[
+ \partial_jb_i=\log r\,\delta_{ij}+X_iX_j/r^2,
+ \qquad \Delta b=3X/r^2,
+\]
+so the second-order part is
+\begin{equation}\label{eq:sourceprincipalcommutator}
+ -2\big((\log r)\Delta+\partial_{rr}\big).
+\end{equation}
+If $v=\gamma(r)X$, $\gamma=1+1/(1+r^2)$, the first-order Lie
+coefficient is $(r\gamma'\log r-\gamma)X$.
+Writing $P_{s,q}$ for the common propagator along the fixed mark,
+\begin{equation}\label{eq:sourceresidualduhamel}
+ \mathcal R_s=P_{s,0}\mathcal R_0+
+       \int_0^sP_{s,q}[\mathcal A_T,L_q]W_q\dd q.
+\end{equation}
+The weighted smoothness justifies these identities on compact lifespan
+intervals. They do not give a sign or a smallness bound for the forcing.
+
+The theta pair $W$ remains radial by rotational invariance and
+uniqueness. For $r>1$, the exact relation gives
+$\partial_rW=\ell_T'W+(\mathcal T+\mathcal R)/(r\log r)$.
+Consequently the actual gradient energy is
+\begin{equation}\label{eq:sourcegradientrepresentation}
+ \begin{split}
+ G={}&4\pi\int_0^1r^2|\partial_rW|^2\dd r\\
+ &+4\pi\int_1^\infty r^2
+   \left|\ell_T'W+\frac{\mathcal T+\mathcal R}{r\log r}\right|^2\dd r.
+ \end{split}
+\end{equation}
+The numerator $\mathcal T+\mathcal R$ vanishes at $r=1$ by
+\eqref{eq:sourcespheretrace} and is $O(r-1)$ there. This cancellation
+keeps the exterior integral finite. On the interval in
+Proposition~\ref{prop:sourcepreparationdefect}, however,
+$\mathcal T_{U,0}(1)=-\mathcal R_{U,0}(1)\ne0$.
+Removing $\mathcal R$ would produce a false divergence proportional
+to $\int_1^{1+\varepsilon}(r-1)^{-2}\dd r$, although $W_0$ is
+Schwartz. Separately estimating the two singular quotients also loses
+the cancellation required for finiteness. The interior integral and
+the actual second frequency derivative must be retained as well.
+
+\subsection{The uncut coefficient fails at the origin}
+
+The theta inversion identity $\Theta(r)=r^{-1}\Theta(1/r)$
+\cite{RadialNotes}, together with
+\[
+ \Delta_3[r^{-1}h(1/r)]=r^{-5}(\Delta_3h)(1/r),
+\]
+and the inversion-invariant heat weight, gives the complete reflection
+law
+\begin{equation}\label{eq:sourcereflection}
+ Q_T(r)=r^{-5}Q_T(1/r),\qquad
+ \rho_T(r)=r^{-6}\rho_T(1/r),\qquad r>0.
+\end{equation}
+The first square term of the unchanged series, with its differentiable
+Gaussian tail, gives
+\[
+ \rho_T(r)=\frac\pi4r^{3/2}e^{-\pi r^2+(T/4)(\log r)^2}
+ \left(1-\frac3{2\pi r^2}+O(e^{-3\pi r^2})\right)
+ \quad(r\to\infty).
+\]
+Reflection therefore yields, as $r\downarrow0$,
+\begin{align}
+ \rho_T(r)&=\frac\pi4r^{-15/2}e^{-\pi/r^2+(T/4)(\log r)^2}
+       \left(1-\frac{3r^2}{2\pi}+O(e^{-3\pi/r^2})\right),\nonumber\\
+ \ell_T'(r)&=\frac{2\pi}{r^3}-\frac{15}{2r}
+                   +\frac{T\log r}{2r}+O(r),\nonumber\\
+ c_T^{\rm uncut}(r)&=-\frac{2\pi\log r}{r^2}
+       +\frac{15}{2}\log r-\frac T2(\log r)^2+O(r^2\log r).
+       \label{eq:sourceoriginsingularity}
+\end{align}
+For a smooth radial prepared field with $U_0(0)\ne0$,
+\begin{equation}\label{eq:sourceoriginLtwo}
+ \mathcal A_T^{\rm uncut}U_0(r)
+   =-\frac{2\pi U_0(0)\log r}{r^2}+O((\log r)^2)
+   \notin L^2(4\pi r^2\dd r)\quad\hbox{near zero}.
+\end{equation}
+This occurs for actual theta data. Define the positive finite moments
+\[
+ O_j(T)=(4\pi)^{-3/2}\int_0^\infty
+          q_T(u)u^j e^{-e^{4u}/4}\dd u,\qquad j=0,2.
+\]
+Then $\cos x\ge1-x^2/2$ gives
+\[
+ U_0(0;A)\ge O_0-A^2O_2/2\ge O_0/2>0
+       \quad\hbox{when }A^2\le O_0/O_2.
+\]
+Thus the uncut, unweighted $L^2$ operator-energy argument is not
+admissible on this interval. The smooth extension
+\eqref{eq:sourceextension} repairs the domain issue, while keeping
+its transition terms and the actual inner-ball energy. Other weights,
+subtractions or operator domains are outside this scoped failure.
+The carrier-moment collapse alone does not specify an $L^2$
+concentration profile at the origin.
+
+\subsection{What the fixed source premise distinguishes}
+
+For another positive smooth exterior amplitude $\rho_*$ and its own
+raw pair, the operator frozen to theta satisfies
+\begin{equation}\label{eq:sourcecomparison}
+ \mathcal A_TF_{*,0}-AF_{*,1}
+ =\mathbf1_{r\ge1}r\log r\,\rho_*
+       \big((\log\rho_*)'-\ell_T'\big)\cos(Au).
+\end{equation}
+For each fixed $A\ge0$ this vanishes identically exactly when
+$\rho_*=C\rho_T$ on $r>1$; the isolated cosine zeros do not change
+the conclusion by continuity. Normalization fixes $C$ when required.
+Thus the literal fixed coefficient identifies the complete source up
+to scale. Constructing a separate logarithmic derivative for each
+positive source is generic and gives no such distinction.
+
+The Gaussian-polynomial control fails this fixed theta coefficient
+because its tail differs. Weighted-square and finite-prime controls
+change the full square coefficients; reflected, smooth-shape and
+positive-primitive controls lack the full canonical square source;
+Euler-factor controls change the source and conductor. Their own
+logarithmic-source relations remain available, and the applicable
+smooth controls still satisfy the generic feedback mechanism.
+Atomic controls are outside this smooth-amplitude formulation.
+These are the premise distinctions of the repository's control
+register \cite{CollisionControls}, not a sign estimate for the
+evolved canonical field.
+
+The stopped variant is precisely the propagation or substitution of
+this fixed relation with zero residual. A coupled estimate retaining
+\eqref{eq:sourceresidualevolution} and
+\eqref{eq:sourcegradientrepresentation} remains open. Its second-order
+forcing could interact with the negative term $-2N$ in
+\eqref{eq:feedbackgradientexact}, but no such controlling inequality,
+or finite closed hierarchy after further differentiation, has been
+established here.
+
+\section{The remaining signed theta estimate}\label{sec:remaining}
+
+The conservative magnifier is now explicit, locally constructed, and
+quantified by Theorem~\ref{thm:feedbackdeadline}. Its central missing
+input is an independent bound for $G$ or $\alpha$ through the collision
+deadline, using the unchanged complete theta source. Global regularity
+already reformulates pointwise noncollision by
+\eqref{eq:feedbackequivalence}; asserting it or checking known
+noncolliding points would not supply that bound
+\cite{TargetClassification}.
+
+The two tested estimates delimit the next problem.
+The positive carrier gives \eqref{eq:carrierGbound} only after an
+independent first-jet margin is supplied, and its theta specialization
+recovers the already separated fourth-moment domain. The fixed source
+relation distinguishes the complete canonical amplitude, but
+preparation produces the nonzero residual in
+Proposition~\ref{prop:sourcepreparationdefect}; its forced evolution
+contains second spatial derivatives. Discarding that residual destroys
+a cancellation needed for finite gradient energy, while using the
+uncut coefficient creates a separate origin-domain failure.
+
+A continuation with this operator must therefore begin with an
+origin-admissible functional coupling $W$, its actual second frequency
+derivative, and $\mathcal R$. It must retain the full commutator,
+unit-sphere cancellation, and whole evolving ball when estimating
+\eqref{eq:feedbackgradientexact}. Further differentiation may require
+higher derivatives; a finite closed hierarchy has not been proved.
+No new sign for $\mathcal K$ or $ND-G\mathcal K$, and no other
+controlling signed inequality through the deadline, is established
+here. These missing estimates are not supplied by evaluating the
+positive moments that already prove the preparation and domain defects.
+
+Any successful estimate must state the canonical premise that the
+colliding controls fail \cite{CollisionControls}, and compare its
+information with a direct estimate for $(H,H_a)$.
+The failures above concern the specified carrier comparison, fixed
+zero-residual substitution, and uncut unweighted domain. They do not
+exclude residual-retaining bounds, other admissible weights or source
+relations. A different feedback equation would be a separate choice.
+
+An application to a hypothetical positive de Bruijn--Newman threshold
+would additionally require the time, height, multiplicity, and endpoint
+coverage in the existing finite-event reduction \cite{ThresholdNote}.
+The fixed-mark results provide no new uniform transfer or threshold
+bound. No numerical evolution or new interval certificate is claimed.
 
 \appendix
-\section{The inherited fourth-moment restriction}
+\section{The inherited fourth-moment restriction}\label{sec:fourthmoment}
 
-For comparison with the earlier flux program, set
+Set
 $P_j(t)=\int_0^\infty u^je^{tu^2}\Phi(u)\dd u$. The elementary
 function
 \[
@@ -1005,32 +1141,31 @@ Note16 \cite{FluxNote} gives fully specified conservative bounds for
 these moments. It also proves that the matched direct-$u$ argument has
 identical constants. Improvement over the ordinary second-moment
 radius is equivalent to $P_0P_4<6P_2^2$, not proved here. This
-inherited bounded result is not a new outcome of the deformation.
+inherited bounded result is not a new outcome of the conservative flow.
 
 \section*{Acknowledgments and verification status}
 
-This manuscript was drafted for Edward Baker with substantial assistance
-from OpenAI's GPT-6-astra in Codex, at the recorded reasoning effort
-\emph{max}, on 27 October 2026. Edward Baker proposed the deformation and
-collision-localization program, emphasized simplifying the dynamics and
-magnifying collisions without a prescribed direction, and relaxed the
-required invariant to the entire integral. The proofs and internal
-assessment in Notes22--25 and Reviews13--14 were prepared by the same
-assistant. Exact control algebra and floating manufactured
-operator/geometry checks accompany Note22 and Note23; they are not a
-theta PDE simulation or an interval certificate. The new heat comparison
-is analytic. None of these checks constitutes independent specialist
-review.
+This manuscript was drafted for Edward Baker with substantial LLM
+assistance. The retained conservative constructions were prepared with
+OpenAI's GPT-6-astra in Codex, at the actual recorded reasoning effort
+\emph{max}, on 27--28 October 2026. The inherited fourth-moment
+comparison in Note16 was prepared with GPT-6.1-sol at effort
+\emph{ultra} on 27 October 2026. The present editorial refocus, CTF-E05 request
+R1, was carried out with GPT-6.1-sol at the actual recorded effort
+\emph{ultra} on 28 October 2026. Edward Baker specified whole-integral
+conservation as the organizing principle and proposed the program of
+magnifying collisions without a prescribed spatial direction.
+
+The proofs and internal assessments in Notes25,28--29,31 and
+Reviews14,16--19 record the retained constructions and their scopes.
+These are analytical results with the classical inputs identified below;
+their LLM assessments do not constitute independent specialist review.
+The editorial return records source checks and the built-in compiler's
+actual result. Compilation does not validate a mathematical proof.
+No numerical evolution of the nonlinear theta feedback or new interval
+certificate is claimed.
 
 \begin{thebibliography}{99}
-\bibitem{KravchenkoTorba}
-V.~V. Kravchenko and S.~M. Torba,
-\emph{Transmutations for Darboux transformed operators with applications},
-J. Phys. A: Math. Theor. \textbf{45} (2012), 075201.
-\href{https://doi.org/10.1088/1751-8113/45/7/075201}{doi:10.1088/1751-8113/45/7/075201}.
-Version inspected: \href{https://arxiv.org/abs/1111.4449v1}{arXiv:1111.4449v1},
-Section 3.1, equations (42)--(43).
-
 \bibitem{RadialNotes}
 E. Baker research archive, prepared with LLM assistance,
 \emph{Radial theta geometry and possible collision mechanisms}
@@ -1043,51 +1178,57 @@ E. Baker research archive, prepared with LLM assistance,
 Investigation05, Note16, 27 October 2026. Internal research note;
 assessment in Review09.
 
-\bibitem{DarbouxNote}
-E. Baker research archive, prepared with LLM assistance,
-\emph{Radial Darboux systems preserving the physical observation},
-Investigation05, Note17, 27 October 2026. Internal research note;
-assessment in Review10.
-
-\bibitem{ZeroNote}
-E. Baker research archive, prepared with LLM assistance,
-\emph{Physical zeros and interior zeros under radial deformation},
-Investigation05, Note18, 27 October 2026. Elementary corollaries
-recorded with this manuscript.
-
-\bibitem{AngularNote}
-E. Baker research archive, prepared with LLM assistance,
-\emph{Auxiliary angular flows preserving the radial integrand},
-Investigation05, Note20, 27 October 2026; proposed extensions in
-Brainstorm02 and internal assessment in Review12.
-
-\bibitem{TubeNote}
-E. Baker research archive, prepared with LLM assistance,
-\emph{Steered tube Green identity and matched comparison},
-Investigation05, Note22, 27 October 2026; internal assessment in Review13.
-
-\bibitem{ProjectedNote}
-E. Baker research archive, prepared with LLM assistance,
-\emph{Projected annular flow, a complete response, and the local signed adjoint},
-Investigation05, Note23, 27 October 2026; internal assessment in Review13.
-
-\bibitem{ExplicitThetaNote}
-E. Baker research archive, prepared with LLM assistance,
-\emph{The explicit theta input, simplified drivers, and collision magnification},
-Investigation05, Note24, 27 October 2026; internal assessment in Review14.
-
 \bibitem{ConservativeNote}
 E. Baker research archive, prepared with LLM assistance,
 \emph{Total integral conservation and a direction independent heat flow},
 Investigation05, Note25, 27 October 2026; internal assessment in Review14.
 
-\bibitem{SchnaubeltEvolution}
-R. Schnaubelt, \emph{Lecture Notes: Evolution Equations},
-version 19 March 2026.
-\href{https://iana.math.kit.edu/downloads/iana3/schnaubelt/Skripten/evgl-skript.pdf}
-{Author's KIT notes}.
-Inspected Theorem1.50, Corollary2.28, Example2.30 and Theorem3.4;
-retrieval and scope in reference annotation10.
+\bibitem{FeedbackNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{A conservative flow with collision-driven response blow-up},
+Investigation05, Note28, 28 October 2026; same-assistant assessment
+in Review16.
+
+\bibitem{CarrierNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Positive-carrier comparison and quantitative regularity},
+Investigation05, Note29, 28 October 2026; same-assistant assessment
+in Review17.
+
+\bibitem{SourceRelationNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{The fixed canonical source relation and its preparatory commutator},
+Investigation05, Note31, 28 October 2026; same-assistant assessment
+in Review18. Integration in this manuscript is assessed in Review19.
+
+\bibitem{EberleCoupling}
+A. Eberle, \emph{Reflection couplings and contraction rates for diffusions},
+\href{https://arxiv.org/abs/1305.1233v3}{arXiv:1305.1233v3}, 2 June 2014.
+Inspected introduction, pp.~1--2, on synchronous coupling for convex
+confinement; reference annotation11 records the scope. The feedback
+equation and collision deadline here are not imported from that paper.
+
+\bibitem{MichelMischlerPerthame}
+P. Michel, S. Mischler and B. Perthame,
+\emph{General relative entropy inequality: an illustration on growth models},
+J. Math. Pures Appl. \textbf{84} (2005), 1235--1260.
+\href{https://www.ceremade.dauphine.fr/~mischler/articles/41Galentropy.pdf}
+{Author manuscript}, 3 March 2005, Lemma~1.1 and equations (1.1)--(1.3).
+Selected-passage provenance and application in reference annotation12.
+
+\bibitem{CollisionControls}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Collision controls and the screening they impose},
+repository result summary12,
+\path{result-summaries/12_collision_controls_and_screening.md}.
+This register routes to the original control proofs and certificates;
+each family's stated hypotheses and review scope are retained.
+
+\bibitem{TargetClassification}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Restating the target in new words and counting it as progress},
+repository pattern01, \path{avoid/01_restating_the_target.md}.
+Classification guidance, not a source of a new mathematical theorem.
 
 \bibitem{HunterPDE}
 J. K. Hunter, \emph{Notes on Partial Differential Equations},
@@ -1096,13 +1237,8 @@ revision 18 June 2014.
 {Author's UC Davis notes}.
 Inspected Theorem4.20, Section4.12, and the heat-kernel formulas
 and Theorem5.5 in Section5.1; scope in reference annotation10.
-
-\bibitem{DLMFSphere}
-NIST, \emph{Digital Library of Mathematical Functions},
-\href{https://dlmf.nist.gov/14.30}{Section 14.30},
-equations (14.30.1), (14.30.10)--(14.30.12).
-Selected spherical harmonic and Laplacian conventions inspected
-27 October 2026; reference annotation09.
+Lemmas5.50--5.51 and the Plancherel convention in Theorem5.71
+were additionally checked for the feedback construction; annotation11.
 
 \bibitem{ThresholdNote}
 E. Baker research archive, prepared with LLM assistance,

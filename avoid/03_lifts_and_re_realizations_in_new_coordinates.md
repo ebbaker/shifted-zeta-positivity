@@ -77,6 +77,8 @@ positive finite pencil as a string, a graph and an operator.
 
 - **Radial Darboux energy transport (27 October 2026).** [Review11](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/11_INITIAL_DEFORMATION_MANUSCRIPT_AND_PROGRAM_ASSESSMENT_20261027.md) states: “The transported ordinary energy identity gives no additional scalar event condition; this does not rule out other uses of the deformation family.” Its boundary terms and forcing cannot be dropped. The control also separates absence of interior nodes from simplicity of the physical observation. This limits the tested identity and inference; the user-requested study of deformation structure remains open. Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort max**.
 
+- **Fixed-kernel conservation distinction (28 October 2026).** The [Book setup](../papers/investigations-5/05_radial_theta_collision_geometry/book/main.tex), Section6, distinguishes mass from conservation of the complete spectral function: "It does not by itself preserve the other spectral values." With its exponential log-radius kernel, all spectral pairings fix the spherical average, but allow angular changes. This is a scoped constraint on that observation map, not a rejection of other kernels or nonradial dynamics. [Same-assistant assessment20](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/20_BOOK_TRANSFORM_SETUP_ASSESSMENT_20261028.md). Prepared for Edward Baker with LLM assistance, **gpt-6-astra / max**, chat0013.
+
 ## What it cost
 
 Sixteen lifts plus twenty-two notes rated "promise 1/5"; CCM rounds 1–4
