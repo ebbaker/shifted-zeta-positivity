@@ -182,6 +182,8 @@ signed integral bounds. Write \(h_j=\partial_x^jH\),
   no numerical theta floor or specialist review. Prepared for Edward
   Baker with substantial LLM assistance, **gpt-6-astra, actual effort max**.
 
+- **Radial Darboux family (27 October 2026).** The [initial manuscript](../papers/investigations-5/05_radial_theta_collision_geometry/radial_deformations_and_zero_dynamics.tex) proves an exact forced radial family preserving H and its positive-frequency multiplicities, an invariant integral, full time/auxiliary laws and energy transport. [Note18](../papers/investigations-5/05_radial_theta_collision_geometry/notes/18_PHYSICAL_AND_INTERIOR_ZERO_DYNAMICS_FOUNDATION_20261027.md) adds local simple-node velocities and the regular parameter kappa^2. [Review11](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/11_INITIAL_DEFORMATION_MANUSCRIPT_AND_PROGRAM_ASSESSMENT_20261027.md) records: “initial working manuscript with proofs of the stated identities and elementary local corollaries; same-assistant checking only.” The explicit colliding control survives every finite deformation. No nodal classification, new theta estimate or threshold bound is claimed. Reusable for the structure-first RDZ study. Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort max**.
+
 ## Status
 
 The cited notes give analytic proofs and exact algebraic checks, with

@@ -75,6 +75,8 @@ positive finite pencil as a string, a graph and an operator.
 
 - **Conserved hierarchy qualification (23 October 2026).** The [spatial-contour review](../papers/investigations-4/12_height_dependent_heat_contours/brainstorm/reviews/08_CONSERVED_CONTOURS_MANUSCRIPT_REVIEW_20261023.md) records: “Explicit time-dependent weights do not establish autonomous Hamiltonian integrability or a coercive energy bound.” The full Fourier data fix the linear heat orbit, but generic conservation laws also hold for explicit collision controls with different values. This screens an inference from the existence of a hierarchy, not an estimate using actual theta constants. Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**; internal same-model review.
 
+- **Radial Darboux energy transport (27 October 2026).** [Review11](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/11_INITIAL_DEFORMATION_MANUSCRIPT_AND_PROGRAM_ASSESSMENT_20261027.md) states: “The transported ordinary energy identity gives no additional scalar event condition; this does not rule out other uses of the deformation family.” Its boundary terms and forcing cannot be dropped. The control also separates absence of interior nodes from simplicity of the physical observation. This limits the tested identity and inference; the user-requested study of deformation structure remains open. Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort max**.
+
 ## What it cost
 
 Sixteen lifts plus twenty-two notes rated "promise 1/5"; CCM rounds 1–4

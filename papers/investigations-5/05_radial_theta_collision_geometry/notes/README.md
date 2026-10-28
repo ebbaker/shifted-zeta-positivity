@@ -2,7 +2,7 @@
 
 27 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
 
-Start with [13 — Radial Laplacian continuation](13_RADIAL_LAPLACIAN_CONTINUATION_20261027.md) for the current direction: retain the original one-dimensional theta sum and develop its three-dimensional radial geometry. The higher-rank lattice constructions remain background.
+Start with [19 - Current RDZ continuation](19_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_CONTINUATION_20261027.md), [17 - Exact radial deformation](17_RADIAL_DARBOUX_SYSTEMS_PRESERVING_PHYSICAL_OBSERVATION_20261027.md), and [18 - Physical and interior zero dynamics](18_PHYSICAL_AND_INTERIOR_ZERO_DYNAMICS_FOUNDATION_20261027.md). The [base-folder manuscript](../radial_deformations_and_zero_dynamics.tex) consolidates these foundations. Earlier next-session instructions remain historical and are superseded by Note19.
 
 - [01 — Initial analytical development](01_RADIAL_THETA_GEOMETRY_AND_COLLISION_MECHANISMS_20261027.md): radial/Kelvin source, evolved potential, forced boundary equation, exact transfer and time evolution, Wronskian control, and research choices.
 - [02 — Continuation and session handoff](02_CONTINUATION_AND_SESSION_HANDOFF_20261027.md): reading order, current task states, exact formulas, next bounded analysis and provenance.
@@ -27,4 +27,16 @@ Start with [13 — Radial Laplacian continuation](13_RADIAL_LAPLACIAN_CONTINUATI
 
 - [12 — Flat quaternion Dirac and one dyadic lattice field](12_FLAT_QUATERNION_DIRAC_AND_DYADIC_LATTICE_H_20261027.md): standard D, actual spatial r=exp(2u), quaternionic exponential primitive, one Gaussian field with t,z inside each summand, and exact three-dimensional H observations. Dyadic parity and completion costs remain explicit.
 
-- [13 — Continuation from the three-dimensional radial Laplacian](13_RADIAL_LAPLACIAN_CONTINUATION_20261027.md): current user-requested starting point; fixed theta arithmetic, standard radial operator, exact observation and time law, flux/Kelvin/potential identities, reading order and next bounded work. Planning update, not a new mathematical return.
+- [13 — Continuation from the three-dimensional radial Laplacian](13_RADIAL_LAPLACIAN_CONTINUATION_20261027.md): historical radial starting point; fixed theta arithmetic, standard radial operator, exact observation and time law, flux/Kelvin/potential identities, reading order and next bounded work. Planning update, not a new mathematical return.
+
+- [14 — Radial flux and possible restrictions on collisions](14_RADIAL_FLUX_AND_COLLISION_RESTRICTIONS_BRAINSTORM_20261027.md): brainstorming continuation; positive flux formula at nonnegative Newman time, joint shell-charge observations, the radial Hardy threshold, and scoped structural alternatives. No new collision exclusion or completed bounded return. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra, actual effort max, 27 October 2026.
+
+- [15 — Radial Laplacian collision program handoff](15_RADIAL_LAPLACIAN_COLLISION_PROGRAM_HANDOFF_20261027.md): historical RLC program, reading order and first bounded contract; superseded in priority by Note19.
+
+- [16 — Canonical flux, coupled moment restriction and direct comparison](16_CANONICAL_FLUX_MOMENT_RESTRICTION_AND_DIRECT_COMPARISON_20261027.md): complete theta remainders and time-corrected flux; necessary a^4 P4>24 P0 at any collision, explicit bounded exclusion, exact direct-u equality and larger separate flux allowance. No demonstrated radial advantage or enlargement of existing coverage. 27 October 2026 — Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol (Codex), actual recorded effort ultra**, chat0005 **Begin radial collision research**.
+
+- [17 — Radial Darboux systems preserving H](17_RADIAL_DARBOUX_SYSTEMS_PRESERVING_PHYSICAL_OBSERVATION_20261027.md): explicit deformed radial potential, exact invariant integral and boundary observation, full transformed time/forcing law, energy comparison and collision control. Exploratory RLC-04 input; no stronger collision estimate. 27 October 2026, prepared for Edward Baker with substantial LLM assistance, gpt-6-astra, actual effort max, chat0006.
+
+- [18 - Physical and interior zero dynamics](18_PHYSICAL_AND_INTERIOR_ZERO_DYNAMICS_FOUNDATION_20261027.md): elementary physical and interior simple-zero velocities, regular parameter mu=kappa^2, control and scope; not a bifurcation classification.
+
+- [19 - Current RDZ continuation](19_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_CONTINUATION_20261027.md): structure-first program, exact equations, reading order, first nodal-geometry task and archive continuity. Supersedes prior RTC/RLC next-session priorities.

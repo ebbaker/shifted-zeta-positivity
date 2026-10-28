@@ -1,0 +1,632 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\definecolor{linkblue}{RGB}{28,65,105}
+\hypersetup{colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue,
+ pdftitle={Radial Darboux Deformations and the Theta Observation},
+ pdfauthor={Drafted for Edward Baker}}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\sech}{sech}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\D}{\partial_x}
+\newcommand{\R}{\mathbb R}
+\setlength{\emergencystretch}{2em}
+\title{Radial Darboux Deformations and the Theta Observation}
+\author{Drafted for Edward Baker}
+\date{27 October 2026\\[3pt]\small Initial working manuscript}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The canonical theta heat transform has a three-dimensional radial source
+and a forced boundary realization. We consolidate an explicit Darboux
+family of that realization. The family changes the radial potential and
+forcing while preserving the complete physical observation, its spectral
+derivatives, and every finite positive-frequency zero multiplicity. We
+give the inverse map, a conserved integral, the physical-time and auxiliary
+deformation equations, and the full transformed energy identity. We also
+distinguish physical zero motion from the motion of interior response
+zeros and record their elementary velocity formulas. An exact colliding
+source survives every finite deformation and shows the scope of the
+energy comparison. These results provide a foundation for studying the
+deformations before seeking theta-specific collision estimates. They do
+not establish a new bound for the de Bruijn--Newman constant or an
+all-height simplicity theorem.
+\end{abstract}
+
+\section{Purpose and the variables of the problem}
+
+The starting question is whether different three-dimensional radial
+systems can retain the integral defining the theta observation while
+making its dynamics easier to understand. An equality of observations
+does not by itself provide a sharper estimate. It can nevertheless expose
+a useful factorization, a different boundary description, or a tractable
+auxiliary zero geometry. The present manuscript develops one explicit
+family and identifies what is already preserved before choosing such an
+application.
+
+The underlying Darboux factorization is classical
+\cite{KravchenkoTorba}. The contribution recorded here is its complete
+forced realization in the conventions of this investigation, including
+the physical readout, time law, boundary terms and comparison control.
+The source calculations and initial family are developed in the internal
+notes \cite{RadialNotes,FluxNote,DarbouxNote}. Section~\ref{sec:zeros}
+records elementary consequences for zero motion, expanded in
+\cite{ZeroNote}. No novelty claim is made for the classical transformation.
+
+We use four distinct variables:
+\begin{itemize}
+\item $r=e^{2u}$ is the spatial radius and $x=\log r=2u$ its logarithm;
+\item $a>0$ is the physical observation frequency, with $\lambda=a^2/4$;
+\item $t$ is Newman time, for which $H_t=-H_{aa}$;
+\item $\kappa\ge0$ is an auxiliary deformation parameter.
+\end{itemize}
+The capital $\Lambda$, used only in the discussion of possible
+applications, denotes the de Bruijn--Newman threshold. It is unrelated to
+the spectral coordinate $\lambda$.
+
+Unless a wider scope is stated, uniform assertions concern compact sets
+\begin{equation}\label{eq:domain}
+0\le t\le T<\infty,\qquad
+0<\lambda_-\le\lambda\le\lambda_+<\infty,\qquad
+0\le\kappa\le K<\infty.
+\end{equation}
+The radial response equations are posed on the exterior $r\ge1$.
+No unspecified whole-space operator domain is used.
+
+\section{The canonical radial source and flux}
+
+Define
+\begin{align}
+\Theta(r)&=1+2\sum_{n\ge1}e^{-\pi n^2r^2},
+&\Delta_3&=\partial_r^2+\frac2r\partial_r,\label{eq:theta}\\
+Q(r)&=\Delta_3\Theta(r)
+=4\pi\sum_{n\ge1}n^2(2\pi n^2r^2-3)e^{-\pi n^2r^2},\label{eq:Q}\\
+\Phi(u)&=\frac14r^{5/2}Q(r),
+&Q_t(r)&=e^{t\log^2r/4}Q(r),\qquad r=e^{2u}.
+\end{align}
+For $r\ge1$, every summand in \eqref{eq:Q} is positive. The complete
+physical observation is
+\begin{equation}\label{eq:H}
+H(t,a)=\int_0^\infty e^{tu^2}\Phi(u)\cos(au)\dd u
+=\frac18\int_1^\infty r^{3/2}Q_t(r)
+             \cos\!\left(\frac a2\log r\right)\dd r.
+\end{equation}
+The second formula already represents the full first integral. An
+inversion-related interior integral is not to be added again.
+
+\begin{lemma}[Tails and parameter differentiation]\label{lem:tails}
+The canonical source and the finite spatial and parameter derivatives
+used below have integrable majorants on \eqref{eq:domain}. In the
+coordinate $x\ge0$, they decay faster than every fixed exponential,
+uniformly on compact parameter sets.
+\end{lemma}
+\begin{proof}
+For an integer $p\ge0$ and $r\ge1$,
+\[
+\sum_{n\ge1}n^p e^{-\pi n^2r^2}
+\le C_p e^{-\pi r^2},\qquad
+C_p=\sum_{j\ge0}(1+j)^p e^{-3\pi j}<\infty,
+\]
+because $(1+j)^2\ge1+3j$. Finite differentiation adds polynomial
+powers of $n,r$ and $\log r$. These are absorbed by a slight decrease
+of the positive Gaussian exponent. For the time multiplier, the explicit
+inequalities
+\[
+\log^2r\le\frac{4r}{e^2},\qquad
+\frac{Tr}{e^2}\le\frac\pi2r^2+\frac{T^2}{2\pi e^4}
+\]
+give a uniform bound by a constant times $e^{-\pi r^2/2}$.
+Since $r=e^x$, this also proves the asserted exponential domination in
+$x$. It justifies the differentiations and outer boundary limits below.
+\end{proof}
+
+Let $\omega_t(r)=e^{t\log^2r/4}$ and introduce the tail flux
+\begin{equation}\label{eq:flux}
+S_t(r)=\int_r^\infty s^2Q_t(s)\dd s.
+\end{equation}
+At time zero,
+\begin{equation}\label{eq:S0}
+S_0(r)=-r^2\Theta'(r)
+=4\pi r^3\sum_{n\ge1}n^2e^{-\pi n^2r^2}.
+\end{equation}
+The difference of polynomial weights in $Q$ has become one positive
+Gaussian sum. Integration by parts, with its outer boundary controlled
+by Lemma~\ref{lem:tails}, yields
+\begin{equation}\label{eq:St}
+S_t(r)=\omega_t(r)S_0(r)
+ +\frac t2\int_r^\infty\frac{\log s}{s}\omega_t(s)S_0(s)\dd s.
+\end{equation}
+Both terms are nonnegative for $t\ge0$ and $r\ge1$. The correction
+vanishes at $t=0$ and must be retained at positive time. These formulas
+supply the simpler radial background; the deformation below concerns
+the forced observation equation.
+
+\section{The selected forced response}
+
+Set
+\begin{equation}\label{eq:g}
+g_t(x)=4e^{tx^2/4}\Phi(x/2)=r^{5/2}Q_t(r),\qquad x=\log r.
+\end{equation}
+Define the response by its actual tail integral:
+\begin{equation}\label{eq:Y}
+Y(t,x;\lambda)=\int_x^\infty
+ \frac{\sin(\sqrt\lambda(s-x))}{\sqrt\lambda}g_t(s)\dd s.
+\end{equation}
+Direct differentiation gives
+\begin{equation}\label{eq:forced}
+Y''+\lambda Y=g_t,\qquad Z:=Y_\lambda,\qquad
+Z''+\lambda Z=-Y.
+\end{equation}
+Primes denote $x$ derivatives. The responses and their parameter
+derivatives have the tails inherited from \eqref{eq:Y}. In particular,
+the boundary function is
+\begin{equation}\label{eq:B}
+B(t,\lambda):=Y'(t,0;\lambda)
+=-\int_0^\infty g_t(s)\cos(\sqrt\lambda s)\dd s
+=-8H(t,2\sqrt\lambda).
+\end{equation}
+Consequently
+\begin{equation}\label{eq:Bjet}
+B_\lambda=-\frac{16}{a}H_a,\qquad a=2\sqrt\lambda>0.
+\end{equation}
+The change between $a$ and $\lambda$ preserves finite multiplicity
+at every positive frequency.
+
+The response is forced even when $B=0$. That boundary condition does
+not make it an eigenfunction of the homogeneous operator. For example,
+the complete Wronskian identity is
+\begin{equation}\label{eq:oldenergy}
+I:=\int_0^\infty(Y^2+g_tZ)\dd x
+=Y(0)B_\lambda-BZ(0).
+\end{equation}
+Indeed $(YZ'-Y'Z)'=-Y^2-g_tZ$, and the outer boundary vanishes.
+At a multiple physical zero, the forcing integral cancels the norm term.
+
+\section{A radial Darboux family preserving the observation}
+
+Define
+\begin{equation}\label{eq:w}
+w_\kappa(x)=\kappa\tanh(\kappa x),\qquad
+A_\kappa=\D-w_\kappa,\qquad c=\lambda+\kappa^2.
+\end{equation}
+We abbreviate $w=w_\kappa$ where no ambiguity arises. The identities
+\begin{equation}\label{eq:riccati}
+w'+w^2=\kappa^2,\qquad w(0)=0
+\end{equation}
+are the factorization equations associated with the nonvanishing seed
+$\cosh(\kappa x)$.
+
+\begin{theorem}[Exact deformation]\label{thm:family}
+Let $Y,Z$ be the selected responses in \eqref{eq:Y}--\eqref{eq:forced}.
+For $\kappa\ge0$ put
+\begin{equation}\label{eq:transformed}
+U_\kappa=A_\kappa Y,\qquad
+V_\kappa=A_\kappa Z,\qquad h_\kappa=A_\kappa g_t.
+\end{equation}
+Then $V_\kappa=\partial_\lambda U_\kappa$ and
+\begin{align}
+U_\kappa''+(\lambda+2w')U_\kappa&=h_\kappa,\label{eq:Uode}\\
+V_\kappa''+(\lambda+2w')V_\kappa&=-U_\kappa.\label{eq:Vode}
+\end{align}
+The physical boundary values are independent of the deformation:
+\begin{equation}\label{eq:fixedboundary}
+U_\kappa(0)=B=-8H(t,a),\qquad
+V_\kappa(0)=B_\lambda=-\frac{16}{a}H_a(t,a).
+\end{equation}
+The inverse on the selected forced responses is
+\begin{equation}\label{eq:inverse}
+Y=\frac{g_t-(\D+w)U_\kappa}{\lambda+\kappa^2}.
+\end{equation}
+Thus all finite positive-frequency physical zero multiplicities are
+preserved for every finite $\kappa$.
+\end{theorem}
+\begin{proof}
+The factorizations
+\[
+(\D+w)(\D-w)=\D^2-\kappa^2,\qquad
+(\D-w)(\D+w)=\D^2-\kappa^2+2w'
+\]
+imply
+\[
+(\D^2+\lambda+2w')A_\kappa=A_\kappa(\D^2+\lambda).
+\]
+Applying this equality to $Y$ and $Z$ proves the forced equations.
+Since $A_\kappa$ is independent of $\lambda$, it commutes with
+parameter differentiation. Equation \eqref{eq:fixedboundary} follows
+from $w(0)=0$. Also
+\[
+(\D+w)U_\kappa=(\D^2-\kappa^2)Y=g_t-cY,
+\]
+which proves \eqref{eq:inverse}. Here $c>0$ in the stated physical
+range. The exact equality of the boundary functions, and then
+\eqref{eq:Bjet}, proves the multiplicity assertion. The selected tails
+are preserved by the bounded coefficient $w$ and its derivatives on
+compact $\kappa$ ranges.
+\end{proof}
+
+At $\kappa=0$, the family begins with $U_0=Y'$, the differentiated
+free realization. It does not begin with an identity map on $Y$;
+\eqref{eq:inverse} recovers $Y$ there because $\lambda>0$.
+Theorem~\ref{thm:family} is a statement about forced responses and their
+observations. It makes no identification of $H$ with a homogeneous
+characteristic determinant.
+
+\subsection{The three-dimensional equation}
+
+For $r\ge1$ let $\psi_\kappa(r)=r^{-1/2}U_\kappa(\log r)$. The
+elementary conjugation
+\[
+\Delta_3[r^{-1/2}v(\log r)]=r^{-5/2}(v''-v/4)
+\]
+turns \eqref{eq:Uode} into
+\begin{equation}\label{eq:radialU}
+\left[\Delta_3+
+\frac{(1+a^2)/4+2\kappa^2\sech^2(\kappa\log r)}{r^2}\right]
+\psi_\kappa(r)=r^{-5/2}h_\kappa(\log r).
+\end{equation}
+This retains the usual radial Laplacian and rotational symmetry, with
+an additional radial potential. The transformed forcing is
+\begin{equation}\label{eq:radialh}
+r^{-5/2}h_\kappa(\log r)
+=r\partial_rQ_t+(5/2-w_\kappa(\log r))Q_t.
+\end{equation}
+It need not be positive. Since $g_t$ is even in $x$ and $w_\kappa$
+is odd, $h_\kappa$ is odd and $h_\kappa(0)=0$. Its inversion parity
+differs from that of the original source. Neither that distinction nor
+the forcing in \eqref{eq:radialU} may be removed in an energy argument.
+
+\section{A conserved integral and two evolution laws}
+
+\begin{proposition}[Integral preservation]\label{prop:integral}
+Set
+\begin{equation}\label{eq:p}
+p_\kappa(x;\lambda)=
+\frac{\sqrt\lambda\sin(\sqrt\lambda x)
+      +w_\kappa(x)\cos(\sqrt\lambda x)}{\lambda+\kappa^2}.
+\end{equation}
+Then
+\begin{equation}\label{eq:conserved}
+\int_0^\infty p_\kappa h_\kappa\dd x
+=-8H(t,2\sqrt\lambda)
+\end{equation}
+for every finite $\kappa\ge0$. The equality persists under finite
+spectral differentiation on \eqref{eq:domain}.
+\end{proposition}
+\begin{proof}
+One checks
+\[
+p_\kappa(0)=0,\quad p_\kappa'(0)=1,\quad
+p_\kappa'+w_\kappa p_\kappa=\cos(\sqrt\lambda x),
+\]
+and $p_\kappa''+(\lambda+2w')p_\kappa=0$.
+Integration by parts gives
+\[
+\int_0^\infty p_\kappa(g_t'-wg_t)\dd x
+=[p_\kappa g_t]_0^\infty
+ -\int_0^\infty(p_\kappa'+wp_\kappa)g_t\dd x.
+\]
+The lower boundary is zero and the upper boundary vanishes by
+Lemma~\ref{lem:tails}. The resulting cosine integral is \eqref{eq:B}.
+The same domination justifies the parameter derivatives.
+\end{proof}
+
+Both the source and the test solution change in \eqref{eq:conserved}.
+Their coupled change preserves the complete observation; preserving
+only total source charge would be a different, weaker assertion.
+
+\begin{proposition}[Physical time and auxiliary deformation]\label{prop:flows}
+Writing $\dot w=\partial_\kappa w_\kappa$, the exact laws are
+\begin{align}
+\partial_tg_t&=\frac{x^2}{4}g_t,
+&\partial_th_\kappa&=\frac{x^2}{4}h_\kappa+\frac{x}{2}g_t,\label{eq:time}\\
+\partial_\kappa U_\kappa
+&=-\frac{\dot w}{\lambda+\kappa^2}
+       [g_t-(\D+w)U_\kappa],
+&\partial_\kappa h_\kappa&=-\dot w\,g_t,\label{eq:aux}
+\end{align}
+where $\dot w=\tanh(\kappa x)+\kappa x\sech^2(\kappa x)$.
+\end{proposition}
+\begin{proof}
+Apply $A_\kappa$ to $(x^2/4)g_t$. Its derivative contributes
+$xg_t/2$, proving \eqref{eq:time}. Differentiating
+$U_\kappa=Y'-wY$ at fixed $t,x,\lambda$ gives
+$\partial_\kappa U_\kappa=-\dot wY$; substitution of
+\eqref{eq:inverse} proves \eqref{eq:aux}. The source formula is
+immediate.
+\end{proof}
+
+In particular, $\dot w(0)=0$ directly preserves the boundary readout
+along the auxiliary evolution. Physical time remains Newman time; it
+has not become radial diffusion. The displayed laws do not assert a
+bounded semigroup on an unspecified function space.
+
+\section{Physical zeros and interior response zeros}\label{sec:zeros}
+
+Three different objects must be kept separate: zeros of $H(t,a)$ in
+frequency, zeros of $U_\kappa(t,x;\lambda)$ in the interior spatial
+coordinate, and eigenvalues of a homogeneous operator with a specified
+domain. Only the first are the physical zeros under investigation.
+Theorem~\ref{thm:family} makes their boundary description exact; it
+does not identify the other two objects with them.
+
+\begin{proposition}[Elementary zero velocities]\label{prop:zeros}
+At a simple physical zero $a(t)>0$,
+\begin{equation}\label{eq:physicalvelocity}
+\frac{\mathrm da}{\mathrm dt}=\frac{H_{aa}}{H_a}.
+\end{equation}
+Equivalently, for a simple zero of $B$,
+\begin{equation}\label{eq:lambdavelocity}
+\frac{\mathrm d\lambda}{\mathrm dt}
+=\lambda\frac{B_{\lambda\lambda}}{B_\lambda}+\frac12.
+\end{equation}
+These velocities are independent of $\kappa$.
+At fixed $t,\lambda$, let $x(\kappa)>0$ be a simple interior zero
+of $U_\kappa$. Then
+\begin{equation}\label{eq:bulkvelocity}
+\frac{\mathrm dx}{\mathrm d\kappa}
+=\frac{(\partial_\kappa w_\kappa)(x)Y(t,x;\lambda)}
+       {g_t(x)-(\lambda+\kappa^2)Y(t,x;\lambda)},
+\end{equation}
+where the nonzero denominator is $\partial_xU_\kappa$ at that zero.
+\end{proposition}
+\begin{proof}
+Differentiate $H(t,a(t))=0$ and use $H_t=-H_{aa}$. From
+\eqref{eq:B} one also obtains
+\[
+B_t=-\lambda B_{\lambda\lambda}-\tfrac12B_\lambda,
+\]
+which proves \eqref{eq:lambdavelocity}. The boundary function is the
+same for all $\kappa$. In the interior,
+\[
+\partial_xU_\kappa=g_t-(\lambda+\kappa^2)Y-w_\kappa U_\kappa,
+\qquad \partial_\kappa U_\kappa=-(\partial_\kappa w_\kappa)Y.
+\]
+The implicit-function theorem at a simple zero yields
+\eqref{eq:bulkvelocity}.
+\end{proof}
+
+These are local formulas. They do not continue a root through a
+multiple zero, prove a monotone zero count, or justify dividing by a
+vanishing derivative. Multiple interior zeros and boundary crossings
+require separate analysis.
+
+The coordinate $\kappa$ is degenerate at zero for this even family:
+$\partial_\kappa w_\kappa|_{\kappa=0}=0$. Locally on compact $x$
+sets, $\mu=\kappa^2$ removes that parametrization issue, since
+\begin{equation}\label{eq:mu}
+w=\mu x-\frac{\mu^2x^3}{3}+O(\mu^3),\qquad
+\left.\partial_\mu U\right|_{\mu=0}=-xY.
+\end{equation}
+The corresponding simple-root formula follows by replacing the
+$\kappa$ derivative in \eqref{eq:bulkvelocity} by the $\mu$
+derivative. This local expansion is not a uniform assertion as
+$x\to\infty$.
+
+\section{The complete energy comparison}
+
+\begin{proposition}[Transport of the energy identity]\label{prop:energy}
+For real parameters let
+\[
+I_\kappa=\int_0^\infty
+ (U_\kappa^2+h_\kappa V_\kappa)\dd x.
+\]
+Then, with $I$ from \eqref{eq:oldenergy},
+\begin{equation}\label{eq:energytransport}
+I_\kappa=(\lambda+\kappa^2)I-Y(0)B-g_t(0)B_\lambda.
+\end{equation}
+At a multiple physical zero, $I_\kappa=(\lambda+\kappa^2)I=0$.
+\end{proposition}
+\begin{proof}
+The lower derivatives are
+\[
+U_\kappa'(0)=g_t(0)-cY(0),\qquad
+V_\kappa'(0)=-Y(0)-cZ(0).
+\]
+The Wronskian of \eqref{eq:Uode}--\eqref{eq:Vode} gives
+$I_\kappa=U_\kappa(0)V_\kappa'(0)-U_\kappa'(0)V_\kappa(0)$.
+Substituting \eqref{eq:fixedboundary} proves the result.
+
+For a direct check, integration by parts with $w(0)=0$ gives
+\begin{align*}
+\int_0^\infty(A_\kappa Y)^2\dd x
+ &=c\int_0^\infty Y^2\dd x-\int_0^\infty g_tY\dd x-Y(0)B,\\
+\int_0^\infty(A_\kappa g_t)(A_\kappa Z)\dd x
+ &=c\int_0^\infty g_tZ\dd x+\int_0^\infty g_tY\dd x-g_t(0)B_\lambda.
+\end{align*}
+The cross terms cancel, including their full boundary contributions.
+\end{proof}
+
+Thus this particular complete energy identity, together with its
+$\kappa$ derivatives, provides no additional scalar event condition.
+This conclusion concerns that identity. It does not establish that a
+different current, a spatial nodal argument, or a new estimate in the
+deformed system cannot help. Understanding those possibilities is the
+next research phase.
+
+\section{An exact colliding control}
+
+At $\lambda=6$ consider
+\begin{equation}\label{eq:control}
+g_*=(16x^4+24)e^{-x^2},\qquad
+Y_*=(4x^2+4)e^{-x^2},\qquad Z_*=-e^{-x^2}.
+\end{equation}
+These satisfy $Y_*''+6Y_*=g_*$, $Z_*''+6Z_*=-Y_*$,
+and $Y_*'(0)=Z_*'(0)=0$. The spectral derivative is taken with
+the source fixed. The cosine transform is
+\[
+\int_0^\infty g_*(x)\cos(\sqrt\lambda x)\dd x
+=\frac{\sqrt\pi}{2}(\lambda-6)^2e^{-\lambda/4},
+\]
+so the boundary zero is exactly double.
+
+For every $\kappa\ge0$ the transformed fields are
+\begin{align}
+U_{\kappa,*}&=[-8x^3-4w(x)(x^2+1)]e^{-x^2},\label{eq:controlU}\\
+V_{\kappa,*}&=[2x+w(x)]e^{-x^2}.\label{eq:controlV}
+\end{align}
+Both boundary values remain zero. Moreover
+\[
+g_*'=-16x\{2(x^2-1)^2+1\}e^{-x^2}<0\qquad(x>0).
+\]
+Hence $h_{\kappa,*}<0$, $U_{\kappa,*}<0$ and
+$V_{\kappa,*}>0$ in the interior, while
+\eqref{eq:energytransport} remains zero. These signs do not prevent
+the physical event. In particular, an absence of interior zeros of
+$U_\kappa$ need not exclude a multiple boundary observation.
+
+For any prescribed $T_c>0$, this control belongs locally to the
+positive-source heat family
+\[
+\Phi_*(u)=(64u^4+6)e^{-(4+T_c)u^2},
+\]
+whose event at $t=T_c$ has $a=2\sqrt6$. Its heat integral converges
+for $t<T_c+4$. It lacks theta's complete arithmetic and tails, and
+no global finite Newman threshold is claimed for it.
+
+The deformation identities apply more generally to smooth sources with
+the required tails. Other registered controls retain their observations
+on their actual convergence domains. Weighted-square and finite-prime
+controls alter coefficients or full reflection; reflected smooth and
+primitive controls lack the complete square source; Euler-factor and
+endpoint controls alter their stated arithmetic inputs. Atomic sources
+require a distributional formulation beyond this manuscript. This is
+premise screening, not a rerun of their numerical certificates.
+
+\section{A program beginning with deformation theory}
+
+The immediate objective is to understand the admissible systems and
+their zero geometry before choosing a theta-specific forcing estimate.
+The following questions are intentionally separated from the proved
+identities above.
+
+\begin{enumerate}
+\item How do interior nodal sets change under the auxiliary evolution,
+including multiple interior zeros and spatial boundary crossings?
+What information, beyond the simple-root formulas, survives the map
+back to the physical observation?
+\item Which seeds, compositions and more general intertwiners preserve
+the boundary readout and selected tails? What exceptions arise in
+their inverse maps or limiting parameter regimes?
+\item Which additional pairings, differential identities or geometric
+constraints express information beyond
+\eqref{eq:energytransport}? Commutation of parameter derivatives
+alone is not a new collision restriction.
+\item After this structure is understood, which constraints can use
+the complete theta source to distinguish it quantitatively from
+colliding controls?
+\end{enumerate}
+
+The long-term motivation is an alternative description of the dynamics
+that could contribute to a contradiction under $\Lambda>0$. The
+existing positive-threshold reduction requires localization uniform
+near the hypothetical threshold and a finite multiple event; its
+assumptions and multiplicity scope are recorded separately in
+\cite{ThresholdNote}. No such global theorem is proved or used in
+the construction here. Real ordered-zero arguments are only available
+where their hypotheses hold, and an auxiliary interior node is not
+automatically a physical collision.
+
+A future application must establish its new compatibility restriction,
+connect it to the unchanged physical first jet, and cover the required
+times, heights and multiplicities. The present exact family supplies a
+setting for those questions. It does not answer them by construction.
+
+\appendix
+\section{The inherited fourth-moment restriction}
+
+For comparison with the earlier flux program, set
+$P_j(t)=\int_0^\infty u^je^{tu^2}\Phi(u)\dd u$. The elementary
+function
+\[
+G(\theta)=\cos\theta+\frac\theta2\sin\theta-1+\frac{\theta^4}{24}
+\]
+satisfies $G(0)=G'(0)=0$ and
+$G''(\theta)=\theta(\theta-\sin\theta)/2>0$ for $\theta>0$.
+Integration against the positive source proves
+\begin{equation}\label{eq:moment}
+H(t,a)-\frac a2H_a(t,a)>P_0(t)-\frac{a^4}{24}P_4(t),\qquad a>0.
+\end{equation}
+Thus every multiple real zero requires $a^4P_4(t)>24P_0(t)$.
+Since
+\[
+\frac{\mathrm d}{\mathrm dt}\frac{P_4}{P_0}
+=\frac{P_6P_0-P_4P_2}{P_0^2}>0,
+\]
+as follows by symmetrizing the positive double integral,
+there is no simultaneous zero for
+\[
+0\le t\le T,\qquad
+0<a\le\left(\frac{24P_0(T)}{P_4(T)}\right)^{1/4}.
+\]
+Note16 \cite{FluxNote} gives fully specified conservative bounds for
+these moments. It also proves that the matched direct-$u$ argument has
+identical constants. Improvement over the ordinary second-moment
+radius is equivalent to $P_0P_4<6P_2^2$, not proved here. This
+inherited bounded result is not a new outcome of the deformation.
+
+\section*{Acknowledgments and verification status}
+
+This working manuscript was prepared for Edward Baker with substantial
+assistance from OpenAI's GPT-6-astra in Codex, at the recorded reasoning
+effort \emph{max}, on 27 October 2026. The same assistant checked the
+factorizations, normalization, boundary and time terms, the explicit
+control, and the local zero-velocity corollaries. These checks are
+internal and do not constitute independent specialist review. No
+research numerical experiment or new interval certificate is used.
+
+\begin{thebibliography}{9}
+\bibitem{KravchenkoTorba}
+V.~V. Kravchenko and S.~M. Torba,
+\emph{Transmutations for Darboux transformed operators with applications},
+J. Phys. A: Math. Theor. \textbf{45} (2012), 075201.
+\href{https://doi.org/10.1088/1751-8113/45/7/075201}{doi:10.1088/1751-8113/45/7/075201}.
+Version inspected: \href{https://arxiv.org/abs/1111.4449v1}{arXiv:1111.4449v1},
+Section 3.1, equations (42)--(43).
+
+\bibitem{RadialNotes}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Radial theta geometry and possible collision mechanisms}
+and \emph{Radial flux and possible restrictions on collisions},
+Investigation05, Notes01 and 14, 27 October 2026. Internal research notes.
+
+\bibitem{FluxNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Canonical flux bounds, a coupled moment restriction, and the direct comparison},
+Investigation05, Note16, 27 October 2026. Internal research note;
+assessment in Review09.
+
+\bibitem{DarbouxNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Radial Darboux systems preserving the physical observation},
+Investigation05, Note17, 27 October 2026. Internal research note;
+assessment in Review10.
+
+\bibitem{ZeroNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Physical zeros and interior zeros under radial deformation},
+Investigation05, Note18, 27 October 2026. Elementary corollaries
+recorded with this manuscript.
+
+\bibitem{ThresholdNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Rodgers--Tao with a positive-threshold contradiction hypothesis},
+Investigation02, Note02, 26 October 2026. Internal exposition of the
+previously recorded threshold reduction and its named external inputs;
+not an upper-bound theorem from this manuscript.
+\end{thebibliography}
+\end{document}
