@@ -25,3 +25,11 @@
 - [11 - Initial deformation manuscript and program assessment](11_INITIAL_DEFORMATION_MANUSCRIPT_AND_PROGRAM_ASSESSMENT_20261027.md): same-assistant review of the consolidated proofs, local zero-motion corollaries, structure-first program and nine-page manuscript build. No new theta exclusion or independent specialist review. 27 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
 
 - [12 - Radial invariant and angular flow assessment](12_RADIAL_INVARIANT_AND_ANGULAR_FLOW_SELF_ASSESSMENT_20261027.md): same-assistant checks of the complete angular realization, cap and norm formulas, collision controls, proposed projected PDE, and manuscript build. 27 October 2026; gpt-6-astra, actual effort max.
+
+- [13 — Tube comparison and projected-flow assessment](13_TUBE_COMPARISON_AND_PROJECTED_FLOW_SELF_ASSESSMENT_20261027.md): same-assistant check of Notes22–23, exact control algebra, floating geometry/operator diagnostics, classical inputs, regularity and control scope. No theta certificate or specialist review. 27 October 2026; for Edward Baker with LLM assistance, gpt-6-astra, actual effort max, chat0008.
+
+- [Projected-flow manuscript and collision scope](14_PROJECTED_FLOW_MANUSCRIPT_AND_COLLISION_SCOPE_20261027.md): same-assistant assessment of Notes24–25 and manuscript integration, including the relaxed invariant and controls.
+
+- [15 — CTF-E01 baseline assessment](15_CONSERVATIVE_HEAT_BASELINE_E01_ASSESSMENT_20261028.md): same-model checks of tail/control formulas, all finite samples, corrected reporting and matched cost. Floating evidence only; E01 complete, B01 next. 28 October 2026; gpt-6.1-sol, actual effort ultra, chat0009.
+
+- [16 — CTF-B01 feedback magnifier assessment](16_CONSERVATIVE_FEEDBACK_MAGNIFIER_B01_ASSESSMENT_20261028.md): same-assistant checks of the marked derivative, complete flux, existence clock, response deadline, converse, exact control and generic-payment limitation. No independent specialist review or numerical flow run. B01 complete; B02 next, E02 optional. 28 October 2026; gpt-6-astra, actual effort max, chat0009.

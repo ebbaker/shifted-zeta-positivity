@@ -1,48 +1,50 @@
-# Research progress on radial integrand preservation and collision localization
+# Research progress on integral preserving collision dynamics
 
 27 October 2026, America/New_York. Rewritten for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**. Investigation05 chat0007, **Explore collision-localizing deforms**.
 
-**This is the authoritative progress register for the revised localization program.** The [overview][overview] makes preservation of the complete radial integrand the sole required invariant and auxiliary localization dynamics the first research priority. Existing constructions are foundations; the new LOC tasks below remain open. Rewriting the plan does not complete those tasks.
+**Historical register — superseded for live status on 28 October 2026 by [Progress04](04_CONSERVATIVE_THETA_FLOW_RESEARCH_PROGRESS_20261028.md).** Its LOC/RDZ history remains intact; the new register provides the task crosswalk and advance B/E model routing. Chat0008 now broadens the required invariant to the entire observation integral, allowing the radial integrand to change, and prioritizes direction-independent collision dynamics. The earlier LOC task meanings and completed stronger special cases remain recorded below. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra, actual effort max, 27 October 2026.
 
 ## Current position
 
-The [manuscript][manuscript], Sections 9–10, and [Note20][n20] establish explicit finite-parameter flows that concentrate angular contributions while retaining the full radial density, a complete conjugated equation and boundary map, and a representation of \((H,H_z)\) near a radius-dependent curve. These are elementary constructions proved by direct calculation with same-assistant checking, as recorded in [Review12][review12].
+**27 October 2026 update, chat0008: gpt-6-astra (Codex), actual effort max; prepared for Edward Baker with substantial LLM assistance.** [Note22][n22] completes the fixed-width multiplicative tube comparison, including its complete boundary and complement accounting. It gives exactly the same normalized signed identity and absolute bulk allowance as the radial calculation. The result is a scoped limitation of that comparison.
 
-The missing step is a complete localized comparison or a new auxiliary evolution whose controlled behavior yields information about the collision conditions. No signed tube estimate distinguishing theta, global projected-flow realization, all-height bound or positive-threshold contradiction has been established.
+[Note23][n23] proves the bounded projected flow, an explicit coercivity/convergence rate and a strict source-localization cost decrease. It supplies a complete exterior response with angular projection in its operator, the radial-join qualification, and a local signed current with its derived adjoint. These are proved in-note using stated classical inputs, with [same-assistant assessment][review13]. There is no useful theta-specific signed estimate, all-height gain, or positive-threshold contradiction.
+
+[Notes24](../notes/24_EXPLICIT_THETA_FLOW_AND_COLLISION_MAGNIFICATION_SCOPE_20261027.md) and [25][n25] add the explicit theta interface, relaxed invariant, conservative full-density heat evolution, and a quantified central decay diagnostic. The existing manuscript now incorporates these and Notes22–23, emphasizing the second approach. [Review14][review14] records the current same-assistant assessment. A growing collision instability or separating theta bound remains open.
 
 ## Available results and their scope
 
-| Foundation | Recorded status and domain | What remains outside it |
+| Foundation or return | Recorded status and domain | What remains outside it |
 | --- | --- | --- |
-| Radial integrand invariant and Laplacian projection | Pointwise spherical averaging and \(P\Delta=\Delta_3P\), with smooth-shell and compact-potential examples; manuscript Section 9 | A classification of all density-preserving equations or factorizations |
-| Normalized angular ODE and transport PDE | Explicit smooth solutions for finite auxiliary parameter; normalization and cap formulas in Note20 | An infinite-concentration operator limit or a useful signed response estimate |
-| Complete multiplicative realization | Explicit transformed operator, source, selected response, inverse and boundary map for the stated positive profiles | A general nonmultiplicative response construction or an unspecified homogeneous spectral theorem |
-| Collision-adapted angular moment | Exact multiple of \((H(T,a_*),bH_z(T,a_*),0)\); finite weighted leakage bound for fixed \(a_*,b\) | All-height derivative bounds, higher-jet classification, or exclusion from a zero vector moment |
-| Localization costs | Exact ordinary square-norm factor \(s\coth s\); induced energy pulls back to the original identity | A prohibition on other signed local estimates or other deformation classes |
-| Projected annular Laplacian proposal | Preservation of zero spherical average and energy dissipation, conditional on a smooth solution of the stated bounded problem; [Brainstorm02][b02] | Established existence/regularity, smooth radial joins, full response map or a collision-sensitive objective |
-| Darboux family and local node laws | Earlier proved identities and local corollaries in [Notes17][n17] and [18][n18], assessed in [Review11][review11] | Complete interior-node classification or an unqualified correspondence between interior nodes and physical collisions |
+| Radial integrand and angular constructions | Note20 and the manuscript summary in Section9: exact finite-parameter projection, concentration, transformed operator, boundary map and first moment | Theta separation, infinite-concentration operator limit, all-height estimates |
+| Fixed-width steered tube | Note22: complete induced/ordinary Green identities, normals, faces, drift/potential cancellation, complements and explicit radial allowances | Other profiles, widths, currents, source information or additive responses |
+| Matched radial comparison | Note22: signed and absolute bulk terms have the same positive factor; no gain in the stated comparison | No general impossibility statement about localization |
+| Projected annular evolution | Note23(1)–(12): strong solution in the stated graph/L² spaces, positive-s smoothing, explicit convergence, dissipation and strict source-cost decrease | Unqualified corner smoothness, source positivity, or a collision-sensitive monotonicity law |
+| Additive exterior response | Note23(13)–(20): global weak elliptic response, local regularity across joins, preserved radial density and boundary jets | A global smooth extension of the annular parabolic equation or an unchanged local angular operator |
+| Local signed functional and adjoint | Note23(21)–(25): complete local current, cutoff flux, affine variation, adjoint and sharp energy-ball allowance | A canonical sign for its coupling to the source flow, or a collision exclusion |
+| Conservative theta heat and diagnostic | Note25: full H and finite spectral jets conserved; exact central asymptotic with moment remainder | Growing collision amplification, theta separation, or uniform all-height estimates |
+| Darboux family and local node laws | Earlier Notes17–18 and Review11 retain their scopes | Full interior-node classification or a new event exclusion |
 
-The explicit constructions preserve their controls' collisions. The [existing analytic screen][b01] identifies the canonical premises those controls lack; [Review12][review12] records that the numerical control certificates were not rerun. This program rewrite adds no new mathematical result or numerical certificate.
+The exact Gaussian-polynomial collision survives both constructions. The other smooth registered controls pass the generic analytic screen on their stated domains; atomic/conditional scopes remain qualified. Earlier collision certificates were not rerun. [Record14][checks14] contains exact control algebra and floating operator/geometry diagnostics only, not theta measurements or a numerical PDE proof.
 
 ## Active task ledger
 
 | ID | Priority and current state | Next deliverable | Completion evidence |
 | --- | --- | --- | --- |
-| LOC-01 | Supporting task; explicit examples available, broader theory open | Derive the density, response and boundary maps for any additional family actually needed by LOC-02 or LOC-03 | Proof on a stated parameter/function domain with all parameter derivatives and boundary terms |
-| LOC-02 | **Immediate task; complete tube calculation not started** | Use the steered finite-width tube to derive a full signed identity and compare it with the radial calculation | A complete comparison with quantified costs, a new controlled structural consequence, or a scoped obstruction; the cap formula alone is insufficient |
-| LOC-03 | Early complementary route; proposed bounded PDE only | Establish the annular evolution and its dissipation, then derive the response variation and a relevant objective | Well-posedness and regularity at a stated scope; boundary/join accounting before any global claim |
-| LOC-04 | Open; no separating theta estimate selected | Use the fixed canonical source in a signed estimate or compatibility relation identified by the preceding work | An actual proved bound or relation and an explicit premise/estimate screen on colliding controls |
-| LOC-05 | Later application; no new transfer result | Connect an adequate localized theorem to the existing positive-threshold finite-event reduction | Required time, height, multiplicity and tail coverage, or a precise remaining gap |
+| LOC-01 | Supporting; explicit additive response added | Further maps only when needed for a defined comparison | Note23(13)–(20), Review13; broader classification remains open |
+| LOC-02 | **Complete for the fixed-width axisymmetric multiplicative Wronskian comparison** | Do not repeat that matched comparison without changing a named hypothesis | Note22: all boundaries and complements, exact same-factor comparison, control and scoped limitation |
+| LOC-03 | **Bounded prototype proved; collision usefulness open** | Assess the local signed current and its coupling to the source descent | Note23: well-posedness, quantitative dissipation, joins, exterior response and actual adjoint; no unqualified global smooth flow claim |
+| LOC-04 | **Canonical estimate remains open** | Derive a useful theta comparison for the chosen dynamics; Note23's local adjoint remains one option | A quantitative gain or scoped limitation with control behavior and every allowance |
+| LOC-05 | Later application; no new transfer result | Use only an adequate canonical theorem for the inherited positive-threshold reduction | Required time, height, multiplicity and tail coverage remains unacquired |
+| LOC-06 | **Current question; conservative heat baseline proved** | Find useful direction-independent collision amplification with only the entire integral fixed | Note25 proves conservation, direct theta evolution and extra central decay; no growing mechanism or separating bound |
 
-The [overview][overview] defines these tasks. LOC identifiers are new tracking entries; no previous RDZ result is being counted again as a completed LOC task. A full classification under LOC-01 is not required before the bounded LOC-02 calculation begins.
+No old RDZ foundation is counted as a new LOC completion. The bounded scope of LOC-02/03 is explicit; neither establishes the application tasks.
 
 ## Next session
 
-Read manuscript Sections 9–10, Note20, Review12 and Brainstorm02. Then carry out the overview's bounded LOC-02 package: fix finite parameters and a radial annulus, derive the Green identity for the steered response and its spectral derivative on the angular tube, and keep lateral flux, both radial faces, drift, potential and steering derivatives.
+Start with [Note25][n25] and [Review14][review14], then Note23 if its specific signed response is useful. The current invariant is the complete integral, not a fixed radial marginal. The heat example changes the radial integrand and needs no preferred direction; it supplies a generic faster-decay diagnostic at collisions.
 
-Reconnect the calculation to the complete observation with the omitted angular and radial contributions included. Compare it with the one-dimensional identity using the same source information. Test the exact Gaussian-polynomial collision during the calculation. The useful return is an assessed comparison or structural conclusion, not another statement that angular normalization preserves \(H\).
-
-If the complete comparison only transports the known cancellation, record that result for the tested class and develop LOC-03's specified projected flow. Neither branch requires a singular concentration limit or a broad numerical scan as its first step. New computations should have a defined analytic role.
+Specify a conservative local dynamics, any auxiliary response or spectral-jet variables, and the exact growth or concentration quantity to be studied. Account for complete boundaries, tails and parameter derivatives. Assess its behavior on the exact control before a numerical campaign, and determine what actual theta information can improve the estimate. A new quantitative comparison or a precise scoped limitation is required; another statement of integral conservation is not a collision-exclusion milestone.
 
 ## Disposition of the earlier RDZ tasks
 
@@ -65,8 +67,10 @@ RTC and RLC progress registers remain historical records. The [flux/moment resul
 | 27 October 2026, chat0006 | Initial Darboux manuscript and deformation/zero-dynamics program | Notes17–19, Review11 and [build record12][build12]; broader RDZ tasks were not completed |
 | 27 October 2026, chat0007 | Sole radial-integrand invariant and auxiliary angular flows integrated into the manuscript | Note20, Brainstorms01–02, Review12 and [build record13][build13]; exact finite-parameter constructions with same-assistant checks |
 | 27 October 2026, chat0007 | Overview and progress rewritten around collision localization at Edward Baker's request | Research priorities and navigation revised; LOC-02 selected as the bounded next calculation, LOC-03 retained as an early complementary route; no additional theorem claimed |
+| 27 October 2026, chat0008 | Fixed-width tube comparison and bounded projected-flow return | Notes22–23, Review13 and record14: scoped same-factor limitation; proved evolution, quantitative source-cost decrease, exterior response and local signed adjoint. At that earlier return, no manuscript edit or theta exclusion. |
+| 27 October 2026, chat0008 | Manuscript integration and relaxation to total-integral conservation | Notes24–25 and Review14: explicit theta interface, conservative heat evolution, finite-jet preservation and central collision decay diagnostic; projected flow emphasized, multiplicative details referred to notes. |
 
-The current conversation keeps its unique **chat0007** registration in the [history registry][history]. Earlier chat0006 provenance is preserved. [DRAFT_HISTORY.md][draft] records concise milestones without manuscript snapshots.
+The program rewrite retains its **chat0007** provenance. The continuation is uniquely registered as **chat0008**, **Continue radial theta investigation**, in the [history registry][history]. Earlier identities are preserved. [DRAFT_HISTORY.md][draft] retains the actual manuscript milestones; the current source is updated in place with a built-in compilation record, without a manuscript snapshot.
 
 ## Recording future progress
 
@@ -95,3 +99,11 @@ Consult the [result index][results] and [avoid index][avoid], especially [collis
 [a01]: ../../../../avoid/01_restating_the_target.md
 [a03]: ../../../../avoid/03_lifts_and_re_realizations_in_new_coordinates.md
 [a07]: ../../../../avoid/07_scoped_exclusions_read_as_universal.md
+
+[n22]: ../notes/22_STEERED_TUBE_GREEN_IDENTITY_AND_MATCHED_COMPARISON_20261027.md
+[n23]: ../notes/23_PROJECTED_ANNULAR_FLOW_RESPONSE_AND_LOCAL_ADJOINT_20261027.md
+[review13]: ../reviews/13_TUBE_COMPARISON_AND_PROJECTED_FLOW_SELF_ASSESSMENT_20261027.md
+[checks14]: ../numerics/14_TUBE_AND_PROJECTED_FLOW_CHECKS_20261027.json
+
+[n25]: ../notes/25_TOTAL_INTEGRAL_CONSERVATION_AND_DIRECTION_FREE_HEAT_FLOW_20261027.md
+[review14]: ../reviews/14_PROJECTED_FLOW_MANUSCRIPT_AND_COLLISION_SCOPE_20261027.md

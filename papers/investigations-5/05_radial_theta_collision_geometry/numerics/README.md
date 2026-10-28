@@ -27,3 +27,17 @@ Run `python3 papers/investigations-5/05_radial_theta_collision_geometry/numerics
 - [12 - Initial manuscript build and preservation record](12_INITIAL_DEFORMATION_MANUSCRIPT_BUILD_RECORD_20261027.json): source/PDF hashes, compilation and layout checks, and unchanged hashes for earlier numbered research documents. This is a document-build receipt, not a numerical experiment or mathematical certificate. 27 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
 
 - [13 - Angular flow manuscript build record](13_ANGULAR_FLOW_MANUSCRIPT_BUILD_RECORD_20261027.json): source/PDF hashes, compilation and page inspection, preservation of the earlier mathematical core. Document verification, not a numerical research experiment or mathematical certificate. 27 October 2026; gpt-6-astra, actual effort max.
+
+- [14 — Tube and projected-response checks](14_TUBE_AND_PROJECTED_FLOW_CHECKS_20261027.json), [checker](14_check_tube_and_projected_flow_20261027.py): exact integer control algebra; separately labeled floating Cartesian operator, direct surface-normal, variable-width side-flux and manufactured additive-current diagnostics. Requires NumPy. From this folder run `python3 14_check_tube_and_projected_flow_20261027.py --output 14_TUBE_AND_PROJECTED_FLOW_CHECKS_20261027.json`. No theta sampling, interval certificate or infinite-dimensional PDE simulation. 27 October 2026; for Edward Baker with LLM assistance, gpt-6-astra, actual effort max, chat0008.
+
+- [Current manuscript compilation record](15_PROJECTED_AND_CONSERVATIVE_MANUSCRIPT_BUILD_RECORD_20261027.json): saved source hash and built-in compilation diagnostics; no separate PDF build or theta PDE simulation.
+
+- [16 — Conservative heat baseline measurements](16_CONSERVATIVE_HEAT_BASELINE_MEASUREMENTS_20261028.json), [program](16_measure_conservative_heat_baseline_20261028.py): CTF-E01 R1, 110 scalar F values at 30/50 digits; complete source tails and error/cost categories, with raw observations and executed/delivered code hashes. Floating, not interval-certified. No additional run was made for reporting corrections. Prepared for Edward Baker with substantial LLM assistance, gpt-6.1-sol, actual effort ultra, 28 October 2026, chat0009.
+
+To reproduce the fixed packet with Python and mpmath, run from this folder:
+
+```sh
+python3 16_measure_conservative_heat_baseline_20261028.py --output /tmp/CTF-E01-measurements.json
+```
+
+The default investigation path is derived from the script. The recorded environment used Python 3.12.14 and mpmath 1.4.1 (Python backend). A run has a shared 250,000-call / 900-second cap. `--reprocess` rebuilds reporting from a saved record without quadrature. Wall-clock times and generated metadata are machine-specific; compare scientific values and the request-contract hash.

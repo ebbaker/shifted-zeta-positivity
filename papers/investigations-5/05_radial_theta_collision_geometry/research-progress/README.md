@@ -1,7 +1,7 @@
 # Research progress registers
 
-27 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
+28 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**, chat0008.
 
-The [current register](03_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_RESEARCH_PROGRESS_20261027.md) was rewritten alongside the [overview](../research-overview/03_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_RESEARCH_OVERVIEW_20261027.md) to track radial integrand preservation and collision localization. It separates the established finite-parameter constructions from open LOC tasks and retains the disposition of the original RDZ tasks. The unchanged filename preserves existing links.
+The [current register](04_CONSERVATIVE_THETA_FLOW_RESEARCH_PROGRESS_20261028.md) is the sole live ledger for the conservative-flow program. Every task has a B/E type, recommended model, dependency and completion condition. [Overview04](../research-overview/04_CONSERVATIVE_THETA_FLOW_RESEARCH_OVERVIEW_20261028.md) supplies its mathematical rationale, and [continuation26](../notes/26_CONSERVATIVE_THETA_FLOW_CONTINUATION_20261028.md) identifies the next task.
 
-The [RTC register](01_RADIAL_THETA_COLLISION_RESEARCH_PROGRESS_20261027.md) and [RLC register](02_RADIAL_LAPLACIAN_COLLISION_RESEARCH_PROGRESS_20261027.md) remain historical records. Their results are not recounted as completed LOC work.
+The [previous register](03_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_RESEARCH_PROGRESS_20261027.md) retains LOC/RDZ history and is superseded for live status. Its task identities are mapped in the new register. The RTC and RLC registers remain historical; their results are not recounted as new completions.

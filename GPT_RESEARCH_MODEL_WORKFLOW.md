@@ -1,180 +1,104 @@
-# GPT research workflow: Sol by default, Astra for exceptional difficulty
+# GPT research workflow with tasks classified before execution
 
-24 October 2026, America/New_York. Prepared for **Edward Baker** with
-substantial LLM assistance. Original guidance: gpt-6-astra, effort max.
-Revised at the author's request in chat 0010: **gpt-6-astra (Codex), actual
-effort xhigh**, verified from session metadata.
+28 October 2026, America/New_York. Revised for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**, Investigation05 chat0008. The original 24 October guidance and its Sol-first revision were prepared with gpt-6-astra, at the recorded efforts max and xhigh respectively.
 
-This is the canonical GPT model guidance for this repository. The author's
-latest instruction is: “You can be more aggressive with the handoffs to
-Sol. Please only reserve extra high difficulty tasks for Astra.” This
-supersedes the earlier rule assigning every analytical task to Astra.
-Claude's responsibilities remain governed by the author's separate assignments.
+This is the canonical GPT research-model guidance for the repository. Edward Baker now asks that upcoming work be divided into conceptual tasks and straightforward execution **when the research plan is written**, so he can choose Astra or Sol before starting. The current model must not keep ownership merely because it has the context. This supersedes routing decided only after a research session. Straightforward analytical work remains suitable for Sol.
 
-## Standing division of work
+## Two task types
 
-| Owner | Responsibility |
-| --- | --- |
-| **GPT-6.1 Sol (`gpt-6.1-sol`) — default** | Routine and moderately difficult research, analytical derivations, proof completion within established methods, error accounting, interpretation, reviews, manuscript work, and all numerical implementation/execution. Sol may formulate bounded questions, derive missing routine formulas, run diagnostics and certificates, and assess what the evidence establishes. |
-| **GPT-6 Astra (`gpt-6-astra`) — exceptional difficulty** | Extra high difficulty analytical bottlenecks: genuinely new proof mechanisms, difficult uniform or singular estimates, unresolved structural compatibility, and analytical problems that remain resistant after a focused Sol attempt. State the specific difficulty when recommending Astra. |
-| **Edward Baker** | Maintains the chats, chooses actual models and effort, and carries handoffs between chats. |
+| Shorthand | Meaning | Default recommendation |
+| --- | --- | --- |
+| **B — brainstorm** | A consequential conceptual choice remains: selecting or changing a mechanism, equation, observable, proof strategy, or research direction; resolving a difficult structural bottleneck. The output is a mathematical decision, argument, or a usable contract for further work. | **Astra** for these open or difficult decisions; state the actual conceptual difficulty. A bounded, modest comparison can be explicitly assigned to Sol before it starts. |
+| **E — execution** | The objective, mathematical route, inputs and completion test are specified. Includes routine analytical derivations, algebra, implementing a fixed formula, bounded numerics, debugging, error accounting, checking a stated proof, and integrating accepted results. | **Sol**. A task does not become B merely because it contains a proof, analysis, or careful verification. |
+| **Author decision** | Selecting the actual model, effort and chat, or overriding a recommendation. | **Edward Baker**. Record an override without changing what the task type means. |
 
-Default to Sol when uncertain about task difficulty. A task being analytical,
-unfinished, important, or attached to an infinite-range theorem does not by
-itself justify Astra. Astra should hand off as soon as the next tractable
-subproblem is clear. Do not wait for an entire global proof or a fully
-polished theorem before giving Sol a useful bounded analytical or numerical
-assignment. Sol can complete routine missing specifications in that assignment.
+Use the available GPT-6 Astra and GPT-6.1 Sol choices for these recommendations. The labels describe the work; they are not a claim that either model is incapable of the other type. A mixed task should normally become a B decision followed by a separately identified E task, with its dependency recorded. Do not label an unresolved design choice E just because it ends in a computation.
 
-Keep all numerical coding, execution, debugging, reruns, machine-symbolic
-checks and exact-arithmetic verification with Sol. Astra may inspect the
-code and evidence, derive difficult analytic inputs and prepare handoffs.
-Ordinary file edits, hashes, manuscript production and chat capture are
-housekeeping available to either model. The user-selected effort remains
-unchanged; “extra high difficulty” is a routing criterion, not an instruction
-to change an effort setting.
+OpenAI's [model-selection guidance](https://learn.chatgpt.com/docs/model-selection), consulted 28 October 2026, describes Astra for ambiguous and deep analytical work and Sol for complex work with time and cost constraints. The B/E split here is the author's research policy, not an official product taxonomy or a measured savings claim. Preserve the user-selected effort; this policy does not change model settings.
 
-Sol may correct routine formulas and resolve routine analytical ambiguities.
-Document the correction and its effect on dependent results. Preserve the
-physical source, normalization, regulator and intended target. If a change
-to a frozen mathematical contract is needed, record a new packet revision
-before applying it; never silently reinterpret old results. Escalate a
-specific hard bottleneck to Astra with the attempted route, evidence and
-unpaid term. A numerical failure or counterexample must always be retained.
+## Classify before work starts
 
-This remains a manual workflow. It does not authorize creating chats,
-dispatching agents, sending messages between chats, scheduling research or
-changing models. Existing [chat capture](tools/CHAT_HISTORY.md) continues.
-Historical assignments, results and model attribution remain historical;
-apply this revised division to new work rather than rewriting old records.
+Every active research task in an overview or progress register must state:
 
-## End-of-chat recommendation
+- stable task ID and **B** or **E** type;
+- recommended model and a task-specific reason;
+- readiness and dependencies;
+- concrete deliverable, evidence standard and completion condition;
+- finite scope or work limit, and the event requiring a return to conceptual work.
 
-At the end of each research reply, name the next concrete deliverable and
-owner: **Analysis — Sol**, **Numerics — Sol**, **Analysis and numerics — Sol**,
-or **Analytical — Astra**. Explain briefly what decision it advances.
-Recommend Astra only when you can identify the extra high difficulty.
-If no further task is warranted, say so rather than inventing work.
+Record this before the first substantive research action. If a task arrives unclassified, classify it at the start from its requirements, rather than postponing that decision until after the work. Routine inspection needed to understand the task is allowed.
 
-For a Sol handoff, link the bounded packet and give a short pasteable prompt.
-The packet may ask Sol to finish routine analysis before computation. A
-numerical run still needs a named question, finite scope and stop rule;
-Sol can supply these within an authorized exploratory-analysis assignment.
-A completed Sol task does not automatically need another Astra turn.
-Sol may record its disposition and continue routine follow-through or close
-the packet. Use Astra review when the unresolved difficulty warrants it,
-or when the author specifically requests it. Model changes do not supply
-independent specialist review.
+An E task may resolve ordinary implementation choices, fix a normalization slip, complete a standard estimate or refine within its declared limits. It may not silently change the physical source, invariant, observable, equation, mathematical target or evidence standard. If such a change is needed, retain the current evidence, identify the affected dependency, and create or update a B task before continuing that dependent work. Continue unaffected work within the existing E scope.
 
-## Handoff cycle
+Reclassification requires a dated reason tied to new evidence: what conceptual choice appeared or what has now been settled. Keep the original task identity and prior results. Do not increase difficulty merely because the current model is Astra, or call a speculative problem routine because the current model is Sol.
 
-1. **Scope and route.** Read the live ledger; state the gain, evidence,
-   next bounded subproblem and any missing input. Use `ANALYSIS_READY`
-   or `ANALYSIS` while developing an analytical assignment. Sol is the
-   default owner; explain an exceptional Astra assignment.
-2. **Prepare a bounded handoff.** Complete one request packet, link its
-   revision and next owner in the existing progress register, and mark
-   `READY_FOR_SOL` (or `READY_FOR_ASTRA` for a difficult escalation).
-   Supply enough context to start; explicitly delegate routine derivations
-   instead of blocking on their absence.
-3. **Execute.** Re-read the exact request revision and live entry. Record
-   actual model/effort. Use `ANALYSIS` for analytical work and `NUMERICS`
-   for computation. Preserve failed attempts, input versions, finite work
-   limits and stop conditions. Append the return with evidence paths.
-4. **Disposition and continuation.** Sol may assess routine results and
-   close them with a recorded disposition, or prepare the next bounded
-   Sol task. Use `ANALYTIC_REVIEW` during review, and `CLOSED` only after
-   the evidence and remaining limits are recorded. Escalate to
-   `READY_FOR_ASTRA` only with a specific hard question or at the author's
-   request. Astra hands routine follow-through back to Sol promptly.
+## Prevent model inertia at task boundaries
 
-Handoff phases are separate from Complete, Partial, Ready or Gated research
-statuses. A failed computation can be a completed bounded task without
-completing its parent theorem. Each shared artifact has one current writer;
-re-read before editing and preserve other chats' updates.
+Once a B task supplies a tractable contract, list its E follow-through and recommend Sol immediately. Do not keep numerical coding, debugging, routine derivations or manuscript production attached to the B task to preserve the current model's ownership. Numerical implementation and execution are assigned to Sol; ordinary document edits, hashes and chat capture remain housekeeping available to either model.
 
-## One compact packet in the existing progress register
+Once an E task meets its completion condition, record its result and stop at that boundary. An unfavorable measurement or a precise failed bound can complete an E task. It does not authorize a wider scan, a new PDE, a revised observable or a larger campaign. Follow a previously declared E dependency when authorized, or identify the B decision needed next.
 
-Use the affiliated investigation's `research-progress/handoffs/` directory.
-Use a parent task ID and sequence; `-A01` can identify analytical work,
-`-N01` numerical work, and `-AN01` mixed work. Keep the existing progress
-file as the sole ledger. Do not create a new ledger or duplicate research
-history. A small, actionable packet is preferable to delaying delegation.
+Sol may close an E task and assess its routine evidence without mandatory Astra approval. A numerical discrepancy first gets bounded implementation diagnosis within the packet; an unresolved mathematical premise is a B escalation. A model change is not independent specialist review.
 
-```text
-ID / parent task / request revision / date:
-Request author and actual model/effort:
-Next owner and reason for routing:
-Current phase (the progress register owns live status):
-Read first / input versions / files this packet may write:
+## Continuation notes and final recommendations
 
-REQUEST
-Concrete analytical or numerical question and how outcomes affect the decision:
-Established formulas, conventions, domain, regulator, norms and source:
-Routine derivations or choices explicitly delegated to Sol:
-Outputs, evidence standard and acceptance conditions:
-For computation: finite cases, error categories, precision and work limits:
-Stop conditions, unbounded remainder and genuinely hard escalation triggers:
-Existing work to reuse; output locations:
+Put a small routing table near the start of every continuation note:
 
-RETURN
-Actual model/effort, date, thread ID, revision and input versions:
-Result and failed cases; proof, code and small execution-record paths:
-Errors, limitations, reproduction details and actual work/runtime if available:
-Corrections, deviations and unresolved analytical questions:
+| Next task | Type | Recommended model | Ready or dependency | Expected output |
+| --- | --- | --- | --- | --- |
+| Named bounded task | E — execution | Sol | Ready | Concrete measured or calculated return |
+| Named conceptual decision | B — brainstorm | Astra, with reason | Ready or named input | Decision, proof route or frozen contract |
 
-DISPOSITION — named owner
-Exact evidence reviewed; accepted input, diagnostic, scoped failure or open:
-What changes in the argument and what does not follow:
-Research-task status, next deliverable and justified next owner:
-```
+Select one default next task when the priority is clear. Label alternatives explicitly. Explain the next unresolved decision, not merely that more research is needed. Link the existing task specification or a bounded packet and give a short pasteable prompt.
 
-Freeze a handed-off revision. Append returns rather than overwriting the
-request or prior evidence. Record a new revision for a changed contract;
-check changed input files before reusing a result. Save mathematics in
-`notes/`, code and small execution records in `numerics/`, and assessments
-in `reviews/`. Follow [LARGE_FILES.md](LARGE_FILES.md).
+At the end of a research reply use, when further work is warranted, **Next: [B] TASK — Astra** or **Next: [E] TASK — Sol**, with the deliverable. Use the classification already recorded in the plan. Do not invent an additional task to justify keeping the session active, and do not silently reroute based on the current model. If no further work is warranted, say so.
 
-## Evidence and work limits
+This is a manual workflow. It does not authorize creating chats, dispatching agents, messaging other chats, scheduling research or changing models. Edward Baker chooses when and where to continue. Claude's responsibilities remain governed by the author's separate assignments. Existing [chat capture](tools/CHAT_HISTORY.md) continues.
 
-Read the [result index](result-summaries/README.md) and
-[avoid index](avoid/README.md), especially
-[numerics before a question](avoid/10_numerics_ahead_of_the_question.md),
-[shared-premise review](avoid/05_same_model_reviews_and_shared_premises.md),
-[parallel writers](avoid/17_parallel_writers_and_broken_registries.md) and
-[status](avoid/06_status_stronger_than_the_evidence.md).
+## One live register and a bounded request
 
-A bounded diagnostic is useful before certification when it chooses a
-method, exposes a failed budget or tests an explicit assumption. Do not
-require the final global error theorem before such a diagnostic. Label
-samples as samples; interval/exact claims need their actual coverage and
-separate source, arithmetic, integration and remainder payments. Sol may
-choose refinements within the request's finite limits. A scope/budget
-increase needs a revised request with its reason, not automatic expansion.
+The affiliated investigation's progress file owns live task status. Use its research-progress/handoffs directory when a separate execution packet helps. Do not create competing live ledgers. If the author explicitly requests a new progress file, designate it as the sole current register, mark the previous one historical, and include a task crosswalk instead of duplicating its ongoing status.
 
-Record actual model and effort from available metadata; do not infer them
-from a requested label or claim savings without usage evidence. If a task
-falls outside the active model's assigned role, prepare the appropriate
-handoff. Preserve the author's selected settings. No routine Sol proof or
-interpretation requires Astra approval solely because it is analytical.
+Use stable B/E task IDs in new programs. Existing analytical/numerical IDs need not be renamed: add Type and Recommended model fields. Research status and work type are separate: B is not a status, and Ready does not mean proved.
 
-## Prompts for the author
+Existing handoff phases such as ANALYSIS, NUMERICS, READY_FOR_SOL and ANALYTIC_REVIEW may be retained alongside the new type field; B/E does not overwrite their meaning. Each shared artifact has one current writer. Re-read the live entry before editing and preserve other chats’ updates and historical assignments.
 
-**To Sol:**
+A compact packet records:
 
-> Follow `/Users/ebbaker/Documents/shifted-zeta-positivity/GPT_RESEARCH_MODEL_WORKFLOW.md`.
-> Continue `[absolute packet path, revision]` and its live progress entry.
-> Complete the delegated analysis and/or computation within its limits,
-> save evidence and disposition, and update progress and chat history.
-> Escalate only a specifically identified extra high difficulty bottleneck.
+    ID, parent, request revision, date, author and actual model/effort
+    Type: B or E; recommended model; reason
+    Live progress entry and prerequisite versions
+    Question and how each possible outcome affects the next decision
+    Fixed source, equations, normalization, domain and observation
+    Routine choices explicitly permitted
+    Outputs, acceptance condition and evidence standard
+    Finite cases, precision/refinement/work limits when applicable
+    Stop rule and named B escalation trigger
+    Files permitted to change; prior work to reuse
 
-**To Astra when warranted:**
+    Return: actual model/effort, date, revision and input versions
+    Result, failed cases, proof/code/record paths and actual errors
+    Corrections, deviations and unresolved premises
+    Disposition: status, consequence, next declared task/type/model
 
-> Follow `/Users/ebbaker/Documents/shifted-zeta-positivity/GPT_RESEARCH_MODEL_WORKFLOW.md`.
-> Resolve the difficult analytical bottleneck in `[packet path, revision]`,
-> using Sol's return and failed attempts. Save the proof or precise failed
-> route, then hand tractable follow-through back to Sol.
+Freeze an issued request revision. Append the return or link a separate return; do not overwrite its request or failed evidence. Revise the request explicitly when its mathematical contract changes. Mathematical notes belong in notes, code and small records in numerics, and assessments in reviews. Follow [LARGE_FILES.md](LARGE_FILES.md).
 
-The [heat-density progress register](papers/investigations-5/01_heat_density_asymptotics/research-progress/01_AVERAGED_DENSITY_RESEARCH_PROGRESS_20261024.md)
-owns its live assignments. This policy revision changes routing, not the
-truth or completion status of any mathematical result.
+## Evidence and cost discipline
+
+Read the [result index](result-summaries/README.md) and [avoid index](avoid/README.md), especially [numerics before a question](avoid/10_numerics_ahead_of_the_question.md), [tests of what is already known](avoid/11_certifying_the_known_and_tests_that_cannot_fail.md), [shared-premise review](avoid/05_same_model_reviews_and_shared_premises.md), [parallel writers](avoid/17_parallel_writers_and_broken_registries.md), and [status](avoid/06_status_stronger_than_the_evidence.md).
+
+A bounded diagnostic can measure feasibility, constants or a failed allowance before certification. It needs a predeclared question, finite cases and stop rule. Routine adaptive choices may be delegated inside those bounds. Selecting a new scientific question or changing direction belongs in B and must be visible before the dependent execution.
+
+Record actual model and effort from available session metadata; do not infer them from the recommended model or requested label. Keep floating samples, exact checks, interval certificates and universal proofs distinct. Record the actual source, arithmetic, quadrature and tail payments. Report measured runtime or usage only when available; a routing preference does not establish a numerical saving.
+
+The current investigation's [conservative-flow progress register](papers/investigations-5/05_radial_theta_collision_geometry/research-progress/04_CONSERVATIVE_THETA_FLOW_RESEARCH_PROGRESS_20261028.md) is an initial application. Other investigations retain their current mathematical statuses and history; apply the classification to their next planned tasks.
+
+## Short prompts for the author
+
+**Execution:**
+
+> Read the root GPT_RESEARCH_MODEL_WORKFLOW.md and the current progress entry for [task ID]. Complete [E] [task ID], request [revision], within its declared method and limits. Save the evidence and disposition. If a new mechanism or change of mathematical target is required, record the specific B decision instead of expanding the task.
+
+**Brainstorm:**
+
+> Read the root GPT_RESEARCH_MODEL_WORKFLOW.md and the current progress entry for [task ID]. Resolve [B] [task ID]'s named conceptual choice. Preserve the invariant and controls. Return a usable argument or a scoped failed route, and specify the resulting E task for Sol before numerical implementation.

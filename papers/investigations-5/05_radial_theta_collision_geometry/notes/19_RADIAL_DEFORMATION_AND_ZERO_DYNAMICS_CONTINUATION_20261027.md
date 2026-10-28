@@ -2,6 +2,8 @@
 
 27 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**. Investigation05 chat0006, **Review radial collision progress**, thread `01a18012-c543-7320-ab04-91728654f3ba`.
 
+**Next-session handoff:** [Note21](21_RADIAL_INTEGRAND_LOCALIZATION_CONTINUATION_20261027.md) consolidates the current equations, bounded localization task and continuation requirements. The earlier handoff below is retained for context.
+
 **Current priority, 27 October 2026, chat0007.** Edward Baker requested that the overview and progress document be rewritten around radial integrand preservation and collision localization. The [overview][overview] and [progress register][progress] now govern current work. The complete radial integrand is the sole required invariant; Darboux form and interior-node classification are not prerequisites. The earlier [proposal][proposal] and the Darboux task retained below are supporting branch records. This amendment preserves chat0006’s original provenance; the revised program belongs to chat0007. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra, actual effort max.
 
 **Next bounded calculation: LOC-02.** Use the steered finite-parameter flow in [Note20](20_AUXILIARY_ANGULAR_FLOWS_AND_COLLISION_LOCALIZATION_20261027.md) to derive the full signed Green identity on a finite angular tube. Keep the drift, steering derivatives, lateral boundary, both radial faces and complementary angular/radial contributions. Compare with the radial calculation and the exact colliding control. The overview states the domain and completion criteria; the new task is not completed by the existing cap formula.

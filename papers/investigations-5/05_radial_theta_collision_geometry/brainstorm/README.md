@@ -9,3 +9,5 @@ Ideas and exploratory constructions for this investigation. Their individual not
 The [active research proposal](../research-proposal/03_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_RESEARCH_PROPOSAL_20261027.md) and [progress register](../research-progress/03_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_RESEARCH_PROGRESS_20261027.md) retain the distinction between exploratory ideas and completed tasks.
 
 - [Auxiliary flows for localizing collision cancellation](02_AUXILIARY_FLOWS_FOR_COLLISION_LOCALIZATION_20261027.md): explicit concentration and transport drivers, a steered tube, a diffusion variant, and a proposed projected Laplacian descent with conditional energy dissipation. Chat0007.
+
+- [Collisions without a prescribed spatial direction](03_DIRECTION_INDEPENDENT_COLLISION_MAGNIFICATION_20261027.md): Edward Baker’s objective and subsequent relaxation from fixed radial density to the entire integral; Note25 supplies a conservative heat baseline.

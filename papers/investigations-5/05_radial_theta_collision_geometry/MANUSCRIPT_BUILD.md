@@ -1,20 +1,11 @@
-# Working manuscript and reading PDF
+# Working manuscript and built in preview
 
-27 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
+27 October 2026, America/New_York. Updated for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**, chat0008.
 
-The single active manuscript is [Deformations Preserving the Radial Theta Observation](radial_deformations_and_zero_dynamics.tex), in this investigation's base folder. It was drafted for Edward Baker and includes an acknowledgment of LLM assistance and the internal verification scope. The current version has thirteen pages, including the radial-integrand invariant and auxiliary angular flows in Sections 9–10. See [the current assessment](reviews/12_RADIAL_INVARIANT_AND_ANGULAR_FLOW_SELF_ASSESSMENT_20261027.md) and [current build record](numerics/13_ANGULAR_FLOW_MANUSCRIPT_BUILD_RECORD_20261027.json). The initial version had nine pages. See [the assessment](reviews/11_INITIAL_DEFORMATION_MANUSCRIPT_AND_PROGRAM_ASSESSMENT_20261027.md) and [build record](numerics/12_INITIAL_DEFORMATION_MANUSCRIPT_BUILD_RECORD_20261027.json).
+The single active source is [Deformations Preserving the Radial Theta Observation](radial_deformations_and_zero_dynamics.tex). The current revision develops the projected source flow and its response in Section10 and total-integral conservation with an explicit heat example in Section11. It is drafted for Edward Baker and retains the LLM acknowledgment. [Review14](reviews/14_PROJECTED_FLOW_MANUSCRIPT_AND_COLLISION_SCOPE_20261027.md) records the mathematical scope; [record15](numerics/15_PROJECTED_AND_CONSERVATIVE_MANUSCRIPT_BUILD_RECORD_20261027.json) identifies the saved source and actual compiler result.
 
-The local [reading PDF](../../../output/pdf/radial-theta-collision-geometry/radial_deformations_and_zero_dynamics.pdf) is generated, ignored output. It is not a tracked manuscript snapshot. Its absence in a fresh clone is expected; regenerate it from the source. Keep future revisions in the same source file and record notable milestones in [DRAFT_HISTORY.md](DRAFT_HISTORY.md).
+Edit this existing source in place and keep its current editor tab. The preferred reading route is the app's built-in LaTeX editor and PDF preview. Compile the saved source with the built-in compiler and inspect its diagnostics. Do not create a replacement document or a separate working PDF for this revision. The source uses standard article, geometry, lmodern, amsmath, amssymb, amsthm, mathtools, microtype, xcolor and hyperref; no external image or shell escape is required.
 
-Run from the repository root with a TeX installation providing latexmk, pdfLaTeX, geometry, lmodern, amsmath, amsthm, mathtools, microtype, xcolor and hyperref:
+The historical separate [reading PDF](../../../output/pdf/radial-theta-collision-geometry/radial_deformations_and_zero_dynamics.pdf), if present, belongs to the earlier thirteen-page revision recorded in [record13](numerics/13_ANGULAR_FLOW_MANUSCRIPT_BUILD_RECORD_20261027.json). It has not been regenerated and is **not the current manuscript**. The initial nine-page version is recorded in [record12](numerics/12_INITIAL_DEFORMATION_MANUSCRIPT_BUILD_RECORD_20261027.json). Those source/PDF hashes describe historical builds; the current source is identified separately. No new snapshot folder is created.
 
-```sh
-mkdir -p output/pdf/radial-theta-collision-geometry
-latexmk -pdf -interaction=nonstopmode -halt-on-error \
-  -outdir=output/pdf/radial-theta-collision-geometry \
-  papers/investigations-5/05_radial_theta_collision_geometry/radial_deformations_and_zero_dynamics.tex
-```
-
-The initial build used TeX Live 2023 and latexmk 4.79. Auxiliary files also belong in the output folder. No external image, bibliography download or shell escape is needed. After content changes, review the compilation diagnostics and render the complete PDF for layout inspection; a successful build alone is not mathematical verification. The manuscript can also be opened in the app's TeX editor for source editing and preview.
-
-The current [overview](research-overview/03_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_RESEARCH_OVERVIEW_20261027.md), [proposal](research-proposal/03_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_RESEARCH_PROPOSAL_20261027.md) and [continuation note](notes/19_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_CONTINUATION_20261027.md) govern the next research session.
+A successful compiler result establishes successful typesetting, not mathematical verification. The current record states the actual diagnostic and visual inspection scope without inventing a PDF hash or page count. Keep future milestones concise in [DRAFT_HISTORY.md](DRAFT_HISTORY.md); detailed research history belongs in the linked notes and reviews.

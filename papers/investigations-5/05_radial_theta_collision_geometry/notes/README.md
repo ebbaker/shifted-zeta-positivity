@@ -2,7 +2,7 @@
 
 27 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
 
-Start with [19 - Current collision localization continuation](19_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_CONTINUATION_20261027.md), [20 - Auxiliary angular flows](20_AUXILIARY_ANGULAR_FLOWS_AND_COLLISION_LOCALIZATION_20261027.md), and [Brainstorm02](../brainstorm/02_AUXILIARY_FLOWS_FOR_COLLISION_LOCALIZATION_20261027.md). The rewritten [overview](../research-overview/03_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_RESEARCH_OVERVIEW_20261027.md) and [progress register](../research-progress/03_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_RESEARCH_PROGRESS_20261027.md) govern current LOC priorities. Manuscript Sections 9–10 supply the established constructions; Notes17–18 retain the earlier Darboux foundation.
+Start with [28 — CTF-B01 conservative feedback magnifier](28_ENERGY_NORMALIZED_CONSERVATIVE_COLLISION_MAGNIFIER_20261028.md), then [27 — CTF-E01 finite heat return](27_CONSERVATIVE_HEAT_BASELINE_E01_RETURN_20261028.md). [26 — Conservative-flow continuation](26_CONSERVATIVE_THETA_FLOW_CONTINUATION_20261028.md) preserves the original task contracts; Note28 gives the current continuation prompt. The [current overview](../research-overview/04_CONSERVATIVE_THETA_FLOW_RESEARCH_OVERVIEW_20261028.md) and [sole live progress register](../research-progress/04_CONSERVATIVE_THETA_FLOW_RESEARCH_PROGRESS_20261028.md) govern current CTF priorities. Earlier LOC and Darboux notes remain supporting history.
 
 - [01 — Initial analytical development](01_RADIAL_THETA_GEOMETRY_AND_COLLISION_MECHANISMS_20261027.md): radial/Kelvin source, evolved potential, forced boundary equation, exact transfer and time evolution, Wronskian control, and research choices.
 - [02 — Continuation and session handoff](02_CONTINUATION_AND_SESSION_HANDOFF_20261027.md): reading order, current task states, exact formulas, next bounded analysis and provenance.
@@ -39,6 +39,21 @@ Start with [19 - Current collision localization continuation](19_RADIAL_DEFORMAT
 
 - [18 - Physical and interior zero dynamics](18_PHYSICAL_AND_INTERIOR_ZERO_DYNAMICS_FOUNDATION_20261027.md): elementary physical and interior simple-zero velocities, regular parameter mu=kappa^2, control and scope; not a bifurcation classification.
 
-- [19 - Current collision localization continuation](19_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_CONTINUATION_20261027.md): updated LOC-02 tube calculation and LOC-03 projected-flow priorities, reading order and archive continuity; earlier Darboux equations and nodal task retained as an optional branch.
+- [19 - Earlier deformation continuation](19_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_CONTINUATION_20261027.md): original Darboux handoff and subsequent priority amendment, retained for continuity. [Note21](21_RADIAL_INTEGRAND_LOCALIZATION_CONTINUATION_20261027.md) records the later localization handoff; [Note23](23_PROJECTED_ANNULAR_FLOW_RESPONSE_AND_LOCAL_ADJOINT_20261027.md) now supplies the current continuation point.
 
 - [20 - Auxiliary angular flows and collision localization](20_AUXILIARY_ANGULAR_FLOWS_AND_COLLISION_LOCALIZATION_20261027.md): normalized concentration and transport flows, full deformed operator and boundary map, explicit cap/norm costs, and a collision-adapted first-moment representation. Generic finite-parameter constructions; no theta exclusion.
+
+- [21 - Radial integrand localization continuation](21_RADIAL_INTEGRAND_LOCALIZATION_CONTINUATION_20261027.md): earlier working equations and instructions for LOC-02/03, control checks, completion criteria and session provenance. Planning handoff, now answered by Notes22–23; no new mathematical result in Note21 itself.
+
+- [22 — Complete steered-tube identity and matched comparison](22_STEERED_TUBE_GREEN_IDENTITY_AND_MATCHED_COMPARISON_20261027.md): full finite-tube current, all boundaries and complements, explicit costs, and a scoped same-factor limitation. Proved in-note with same-assistant checking; no theta exclusion.
+
+- [23 — Projected annular flow, exterior response and local signed adjoint](23_PROJECTED_ANNULAR_FLOW_RESPONSE_AND_LOCAL_ADJOINT_20261027.md): bounded existence/convergence, strict source-cost reduction, radial joins, preserved physical observation and a derived adjoint. Its final section is the current continuation point. 27 October 2026; prepared for Edward Baker with substantial LLM assistance, gpt-6-astra, actual effort max, chat0008.
+
+- [Explicit theta input and simplified flow scope](24_EXPLICIT_THETA_FLOW_AND_COLLISION_MAGNIFICATION_SCOPE_20261027.md): the actual projected equation, meaning of its symbols, direct theta sum and truncation bound.
+- [Total integral conservation and direction-independent heat](25_TOTAL_INTEGRAL_CONSERVATION_AND_DIRECTION_FREE_HEAT_FLOW_20261027.md): conservation baseline; full-density heat, spectral-jet conservation and central collision decay diagnostic.
+
+- [Conservative theta flow continuation](26_CONSERVATIVE_THETA_FLOW_CONTINUATION_20261028.md): current handoff, 28 October 2026; preassigned B/E tasks, model recommendations, a bounded Sol request and Astra conceptual brief.
+
+- [27 — CTF-E01 finite heat measurement return](27_CONSERVATIVE_HEAT_BASELINE_E01_RETURN_20261028.md): complete fixed R1 grid, moment allowances, exact collision control, tail/error accounting and matched cost. Floating evidence; no collision exclusion. 28 October 2026; gpt-6.1-sol, actual effort ultra, chat0009.
+
+- [28 — Conservative feedback collision magnifier](28_ENERGY_NORMALIZED_CONSERVATIVE_COLLISION_MAGNIFIER_20261028.md): B01 complete; conservative marked-jet flow, local existence, finite collision deadline, global-regularity equivalence and an analytic <1/100 limitation for the generic initializer comparison. Same-assistant proof checks; no theta exclusion. Next B02; optional E02 scalar audit. 28 October 2026; gpt-6-astra, actual effort max, chat0009.
