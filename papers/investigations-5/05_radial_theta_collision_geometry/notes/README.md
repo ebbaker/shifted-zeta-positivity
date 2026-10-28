@@ -2,7 +2,7 @@
 
 27 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
 
-Start with [19 - Current RDZ continuation](19_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_CONTINUATION_20261027.md), [17 - Exact radial deformation](17_RADIAL_DARBOUX_SYSTEMS_PRESERVING_PHYSICAL_OBSERVATION_20261027.md), and [18 - Physical and interior zero dynamics](18_PHYSICAL_AND_INTERIOR_ZERO_DYNAMICS_FOUNDATION_20261027.md). The [base-folder manuscript](../radial_deformations_and_zero_dynamics.tex) consolidates these foundations. Earlier next-session instructions remain historical and are superseded by Note19.
+Start with [19 - Current collision localization continuation](19_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_CONTINUATION_20261027.md), [20 - Auxiliary angular flows](20_AUXILIARY_ANGULAR_FLOWS_AND_COLLISION_LOCALIZATION_20261027.md), and [Brainstorm02](../brainstorm/02_AUXILIARY_FLOWS_FOR_COLLISION_LOCALIZATION_20261027.md). The rewritten [overview](../research-overview/03_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_RESEARCH_OVERVIEW_20261027.md) and [progress register](../research-progress/03_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_RESEARCH_PROGRESS_20261027.md) govern current LOC priorities. Manuscript Sections 9–10 supply the established constructions; Notes17–18 retain the earlier Darboux foundation.
 
 - [01 — Initial analytical development](01_RADIAL_THETA_GEOMETRY_AND_COLLISION_MECHANISMS_20261027.md): radial/Kelvin source, evolved potential, forced boundary equation, exact transfer and time evolution, Wronskian control, and research choices.
 - [02 — Continuation and session handoff](02_CONTINUATION_AND_SESSION_HANDOFF_20261027.md): reading order, current task states, exact formulas, next bounded analysis and provenance.
@@ -39,6 +39,6 @@ Start with [19 - Current RDZ continuation](19_RADIAL_DEFORMATION_AND_ZERO_DYNAMI
 
 - [18 - Physical and interior zero dynamics](18_PHYSICAL_AND_INTERIOR_ZERO_DYNAMICS_FOUNDATION_20261027.md): elementary physical and interior simple-zero velocities, regular parameter mu=kappa^2, control and scope; not a bifurcation classification.
 
-- [19 - Current RDZ continuation](19_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_CONTINUATION_20261027.md): structure-first program, exact equations, reading order, first nodal-geometry task and archive continuity. Supersedes prior RTC/RLC next-session priorities.
+- [19 - Current collision localization continuation](19_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_CONTINUATION_20261027.md): updated LOC-02 tube calculation and LOC-03 projected-flow priorities, reading order and archive continuity; earlier Darboux equations and nodal task retained as an optional branch.
 
 - [20 - Auxiliary angular flows and collision localization](20_AUXILIARY_ANGULAR_FLOWS_AND_COLLISION_LOCALIZATION_20261027.md): normalized concentration and transport flows, full deformed operator and boundary map, explicit cap/norm costs, and a collision-adapted first-moment representation. Generic finite-parameter constructions; no theta exclusion.

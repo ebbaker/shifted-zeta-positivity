@@ -1,107 +1,173 @@
-# Radial deformations and zero dynamics research overview
+# Research overview for radial integrand preservation and collision localization
 
-27 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**. Investigation05 chat0006, **Review radial collision progress**.
+27 October 2026, America/New_York. Rewritten for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**. Investigation05 chat0007, **Explore collision-localizing deforms**.
 
-**This is the primary research program for Investigation05.** At Edward Baker's request, it supersedes both the [RTC overview][rtc] and the [RLC overview][rlc] for research priority, together with their earlier next-session instructions. Their proofs, controls and historical progress remain intact. The new [proposal][proposal] defines the work packages, the new [progress register][progress] records what is actually established, and the [continuation note][handoff] specifies the next session.
+**The primary program is to use deformations preserving the complete radial integrand to localize the cancellation at a hypothetical positive-time collision.** The equations, fields and auxiliary dynamics may change. The question is whether this freedom can expose a signed integral, boundary relation or dynamical constraint that is easier to control using the canonical theta data.
 
-The priority is to understand radial deformations and their zero dynamics **before deciding how to use them against theta forcing**. A clearer structural theory can be worthwhile before it supplies a sharper theta estimate. The longer-term motivation is an alternative view of the system that could contribute to a contradiction under a hypothetical positive de Bruijn-Newman threshold. That application remains open.
+This overview and the rewritten [progress register][progress] govern current priorities. They replace the earlier sequence that began with interior nodes of the Darboux family. The existing filenames remain stable. The [earlier proposal][proposal] retains that branch's contracts; its first task is no longer the default continuation. The RTC and RLC programs remain historical foundations.
 
-**27 October scope extension, chat0007.** Edward Baker specified preservation of the complete radial integrand as the sole invariant and requested auxiliary dynamics for localization. [Note20](../notes/20_AUXILIARY_ANGULAR_FLOWS_AND_COLLISION_LOCALIZATION_20261027.md) now supplies a normalized angular flow, transport flow, exact deformed operator and boundary map, cap costs and a steered first-moment representation. [Brainstorm02](../brainstorm/02_AUXILIARY_FLOWS_FOR_COLLISION_LOCALIZATION_20261027.md) proposes further tube and projected-Laplacian work. The Darboux-specific contracts below apply to that branch; they do not restrict all admissible realizations. Broad RDZ tasks remain open. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra, actual effort max.
+## The invariant and the available freedom
 
-## The starting result
-
-The [working manuscript][manuscript] consolidates the initial results, with the editable source in this investigation's base folder. It contains the canonical radial source and flux, the selected forced response, the exact Darboux family, a conserved integral, physical and auxiliary evolution laws, the complete energy comparison, and a colliding control. [Note17][n17] supplies the original family; [Note18][n18] records the elementary zero-motion corollaries. [Review11][review] states the verification and manuscript scope.
-
-With x=log r, lambda=a^2/4>0 and g_t(x)=4 exp(t x^2/4) Phi(x/2), retain
+Write
 
 \[
-Y_{xx}+\lambda Y=g_t,\qquad B=Y_x(0)=-8H(t,a).
+H(t,z)=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\,du
+      =\int_1^\infty\mathcal I(t,z;r)\,dr,
+\qquad
+\mathcal I(t,z;r)=\frac18r^{3/2}Q_t(r)
+                         \cos\!\left(\frac z2\log r\right).
 \]
 
-For kappa>=0, define
+The variables satisfy \(r=e^{2u}\), with \(dr=2r\,du\). For normalized spherical averaging \(P\), the general requirement is
 
 \[
-w_\kappa=\kappa\tanh(\kappa x),\quad
-U_\kappa=(\partial_x-w_\kappa)Y,\quad
-h_\kappa=(\partial_x-w_\kappa)g_t.
+\boxed{P\mathcal J_s(t,z;r,\cdot)=\mathcal I(t,z;r)
+       \quad\text{at every radius}.}
 \]
 
-Then
+Here \(s\) is an auxiliary deformation parameter, separate from physical time \(t\). Preserving only the final integral is weaker than this requirement. In the \(u\) coordinate, the preserved density includes the corresponding Jacobian. A sufficient construction is a source field \(F_{s,t}\) with \(PF_{s,t}=Q_t\), but this factorization does not define the whole admissible class.
+
+Radial symmetry, positivity of the deformed fields, a fixed potential, a fixed spectrum, an unchanged energy and Darboux form are not additional invariants. They may be useful features of a particular construction. Each proposed equation still needs a well-defined solution and observation map, with the regularity, convergence and boundary terms required by its argument. If a deformation depends on the running physical or spectral parameters, those derivatives must be included when recovering the physical jet.
+
+The Laplacian gives a natural way to organize the freedom:
 
 \[
-U_{\kappa,xx}+[\lambda+2\kappa^2\operatorname{sech}^2(\kappa x)]U_\kappa=h_\kappa,
-\qquad U_\kappa(t,0;\lambda)=B(t,\lambda).
+P\Delta F=\Delta_3PF,\qquad
+\Delta_3=\partial_r^2+\frac2r\partial_r.
 \]
 
-The physical observation and its finite multiplicities are exactly unchanged. An explicit integral also retains -8H. In r, the system uses the usual three-dimensional radial Laplacian with an additional radial potential. Its forcing and inversion parity change in a specified way. The complete energy identity transports the old forcing cancellation; that fact limits that identity, not the entire deformation perspective.
+Thus zero-average angular components can evolve while the radial component stays fixed. The compact potential perturbation \(F=Q+\Delta\Psi\), \(P\Psi=0\), in [manuscript Section 9][manuscript] is one example. General preservation of the full density also permits other factorizations and equations.
 
-## The central distinction between zero sets
+## What localization is meant to achieve
 
-| Object | What varies | What is currently known |
+Assume a candidate event
+
+\[
+H(T,a_*)=H_z(T,a_*)=0,\qquad T>0,\quad a_*>0.
+\]
+
+An exact deformation preserving \(H\) retains this event. It can change where the higher-dimensional fields carry the cancellation, which boundaries carry its flux, and how the signed contributions are estimated. It cannot erase a nonzero radial contribution by discarding its radius. Radial truncations therefore retain a complementary contribution or a proved tail bound.
+
+The initial goal is a useful localization theorem on a declared finite domain. Possible gains include a signed boundary identity with more tractable terms, a controlled concentration law, or an auxiliary evolution that reduces a cost relevant to the collision equations. The eventual contradiction would require proving that the retained theta data cannot satisfy the localized event conditions. An impossible terminal state cannot simply be stipulated as the destination of the flow.
+
+## Established constructions to build on
+
+[Note20][n20] and [manuscript Sections 9–10][manuscript] give the following finite-parameter results, with [same-assistant assessment][review12].
+
+| Construction | Available result | Consequence for the next calculation |
 | --- | --- | --- |
-| Physical zeros H(t,a)=0 | Observation frequency a and physical time t | Their locations and multiplicities are independent of kappa in the exact family |
-| Interior response zeros U_kappa(t,x;lambda)=0 | Spatial coordinate x under t, lambda and kappa | A local simple-node velocity is available; bifurcations and complete zero transport remain to be studied |
-| Physical multiple events | U_kappa(0)=partial_lambda U_kappa(0)=0 | These are spectral boundary conditions, not interior double nodes in x |
-| Homogeneous characteristic zeros | A specified operator, domain and boundary problem | No characteristic determinant equal to H has been constructed |
+| Normalized angular flow | \(A_s=e^{sq}/P(e^{sq})\), \(\partial_sA_s=(q-P(qA_s))A_s\), \(A_0=1\), \(PA_s=1\) | A continuous auxiliary ODE preserves the radial source exactly |
+| Angular transport | \(\partial_sA+\operatorname{div}_{S^2}(A\nabla_{S^2}q)=0\), with an explicit solution for \(q=\omega\cdot n\) | A different driver moves angular mass along each sphere |
+| Complete equation realization | \(\psi_s=A_s\psi\), \(L_{\lambda,s}=A_sL_\lambda A_s^{-1}\), with the derived forcing and boundary operator | The averaged boundary observation remains \(-8H\), including its spectral derivatives when \(A_s\) is independent of the running spectral parameter |
+| Collision-adapted directions | A radius-dependent axis gives an angular moment proportional to \((H,H_z,0)\) | The two collision cancellations have a concrete three-dimensional geometry |
 
-The fact that physical zeros stay fixed under kappa does not make the auxiliary dynamics uninteresting. It makes any geometric information about the family available at the same physical event. A bridge from interior geometry to the boundary observation is a separate theorem. The explicit control already has no interior U zeros while retaining a multiple boundary zero, so that bridge cannot be an unqualified nodal-absence assertion.
+For a fixed unit axis, \(q=\omega\cdot n\) and \(A_s=s e^{sq}/\sinh s\). For \(s>0\) and cap angle \(0<\delta<\pi\),
 
-## Three phases of work
+\[
+P(A_s\mathbf1_{q\le\cos\delta})
+\le\frac{e^{-s(1-\cos\delta)}}{1-e^{-2s}},
+\qquad P(A_s^2)=s\coth s.
+\]
 
-**Phase I: understand the deformation systems.** Study their regular parameterization, inverses, selected tails, coupled evolution, interior nodal sets, boundary crossings, composition and invariant pairings. Start with the cosh seed and broaden only after its behavior is understood. Generic source results and exact controls are useful outputs of this phase. Immediate theta separation is not its completion test.
+The first formula quantifies angular leakage. The second records the increasing ordinary squared norm of a multiplied radial field. These are different parts of the localization budget.
 
-**Phase II: locate additional information.** Determine which structural quantities can use the actual theta source, or which deformations make an otherwise difficult constraint accessible. Distinguish identities forced by exact equivalence from an additional estimate or compatibility relation. The earlier source, flux and nonlinear theta equations remain available inputs, without dictating the first task.
+To align the construction with the event, freeze \(a_*\) and a scale \(b>0\), and set
 
-**Phase III: connect the structure to the positive-threshold problem.** A later result must be transferred to the physical first jet with its full parameter coverage and multiplicity scope. A contradiction under Lambda>0 would require the existing finite-event reduction and a new reason its canonical event cannot occur. Alternative mechanisms may involve zero transport, compatibility, a global quantity with complete boundaries, or a valid characteristic realization; no one mechanism is selected in advance.
+\[
+v(u)=(\cos(a_*u),-bu\sin(a_*u),0),\quad
+m(u)=|v(u)|,\quad n(u)=v(u)/m(u).
+\]
 
-## Work packages
+With \(q(r,\omega)=n(\log r/2)\cdot\omega\) and \(\rho_T=e^{Tu^2}\Phi(u)\),
 
-| ID | Subject | Intended output |
+\[
+\int_0^\infty\rho_Tm\,P(\omega A_s)\,du
+=(\coth s-1/s)(H(T,a_*),bH_z(T,a_*),0).
+\]
+
+This concentrates the vector cancellation near the curve \(\Gamma(u)=e^{2u}n(u)\). The candidate frequency is a fixed construction parameter; it is not differentiated as the running argument of \(H\). The formula covers the first-jet condition at any multiplicity at least two, but supplies no higher-jet classification or all-height uniform estimates.
+
+## A flow that selects the deformation
+
+The prescribed cap families are starting models. [Brainstorm02][b02] proposes a broader Laplacian flow that chooses a zero-average perturbation by decreasing a localization cost.
+
+For a fixed physical time, write \(F=Q_t+G\) on a bounded annulus \(\Omega=\{r_-<|X|<r_+\}\), \(r_->1\). Set \(G=0\) on its radial boundaries and \(G_0=0\). For a smooth exterior weight \(\chi_{\rm out}\ge0\) and \(\varepsilon>0\), the proposed equation is
+
+\[
+\partial_sG=\varepsilon\Delta G
+ -(I-P)[\chi_{\rm out}(Q_t+G)].
+\]
+
+For smooth solutions, \(PG=0\) persists and
+
+\[
+\mathcal E(G)=\frac12\int_\Omega\chi_{\rm out}(Q_t+G)^2\,d^3X
+ +\frac\varepsilon2\int_\Omega|\nabla G|^2\,d^3X,
+\qquad
+\frac{d\mathcal E}{ds}=-\int_\Omega|\partial_sG|^2\,d^3X.
+\]
+
+These conditional identities do not yet supply a global smooth realization. Existence and regularity, radial joins, the response equation and its boundary observation remain to be developed. The present objective measures source localization; deriving an objective from the actual collision identity would require the response variation and its adjoint. This task can be pursued without restricting the whole program to positive fields or multiplicative conjugation.
+
+## Research questions and completion criteria
+
+The LOC identifiers below track this revised program. They do not rename or mark complete the earlier RDZ tasks; their disposition is recorded in the [progress register][progress].
+
+| ID | Research question | Required return |
 | --- | --- | --- |
-| RDZ-01 | Geometry and regularity of the explicit family | Precise parameter domains, inverse maps, endpoint behavior, radial interpretation and admissible limits |
-| RDZ-02 | Physical, spectral and deformation evolution | Complete coupled laws and compatibility, with source, boundary and tail terms retained |
-| RDZ-03 | Interior zeros and their relation to physical zeros | Local event classification and complete transport on a stated domain; a proved boundary correspondence or its exact limitations |
-| RDZ-04 | Wider deformation classes and composition | One explicit admissible extension or classification, including its physical observation map and exceptional parameters |
-| RDZ-05 | Invariant pairings and structural constraints | A conservation or comparison theorem beyond merely reprinting the transported energy identity |
-| RDZ-06 | Canonical theta specialization | A demonstrated theta-dependent structural or quantitative distinction, after the relevant deformation theory is understood |
-| RDZ-07 | Positive-threshold transfer | A fully scoped implication toward excluding a hypothetical positive threshold, or an exact record of the remaining obstruction |
-| RDZ-08 | Verification, literature and records | Accurate proofs, control tests, provenance and reproducible supporting computations throughout |
+| LOC-01 | Which auxiliary equations preserve the complete radial density and give usable response maps? | A stated family, parameter domain, observation and derivative map, with full forcing, boundaries and regularity; extend beyond the existing examples only for a defined use |
+| LOC-02 | Does localization near the collision-adapted curve improve a signed calculation? | A complete finite-tube identity and quantitative comparison including exterior mass, radial tails, steering derivatives and all boundary terms; or a precise limitation for the tested comparison |
+| LOC-03 | Can a projected Laplacian flow choose a useful deformation? | A well-posed bounded evolution and proved dissipation law, followed by a justified response/boundary realization and assessment of the objective's relevance to collision cancellation |
+| LOC-04 | Which estimate uses the fixed canonical marginal to distinguish theta? | A proved signed estimate or compatibility relation on a stated domain, with its canonical input and its behavior on colliding controls identified |
+| LOC-05 | Can a localized result exclude the event required by a positive threshold? | The logical transfer with the necessary time, height, tail and multiplicity coverage, or an exact statement of the remaining gap |
 
-The [proposal][proposal] gives the full contracts. The first bounded package joins RDZ-01 through RDZ-03: interior nodal geometry of the existing family, including regularization by mu=kappa^2, local degeneracies and spatial boundary accounting. Re-deriving the conserved integral is a setup check, not the entire return.
+LOC-02 is the immediate bounded calculation. LOC-03 is an early complementary route if the prescribed concentration families only transport the old difficulty. LOC-01 supports both as needed; a classification of every possible deformation is not a prerequisite. LOC-04 begins when an actual signed quantity or response functional has been identified. LOC-05 depends on a proved result adequate for the [existing finite-event reduction][threshold].
 
-## How earlier work is used
+## The next bounded calculation
 
-- The [radial foundation][n01], flux formulas and canonical tail bounds remain common input.
-- [Note16][n16]'s fourth-moment exclusion and exact estimator comparison remain valid at their stated scopes. Optimizing that radius is no longer the default next task.
-- [Note17][n17]'s final suggestion to seek an immediate forcing estimate is superseded by the structure-first order here.
-- The Gaussian deformation's moving-event and boundary costs remain a comparison case. The present exact family keeps events fixed at every finite kappa; a singular infinite-parameter limit still needs its own analysis.
-- The tested scalar multiplier and separate absolute flux losses remain scoped results. They do not establish a prohibition on studying other systems or stronger arguments in equivalent representations.
-- Lattice and quaternionic constructions are background; no additional dimension or lattice is required by this program.
+Fix a finite candidate \((T,a_*)\), a finite deformation range \(0\le s\le S\), a cap angle, and a bounded radial annulus. Use the explicit steered profile and its selected response from Note20. On the angular tube
 
-## Standards and status
+\[
+\Omega_\delta=\{r_-<r<r_+,\ \omega\cdot n(\log r/2)>\cos\delta\},
+\]
 
-Use the [result index][results] and [avoid index][avoid], especially [collision controls][controls], [local geometry][geometry], [geometric realizations][realizations], [target classification][a01], [scope][a07] and [coupled estimates][a12]. A structural theorem can complete a declared Phase I task without excluding theta collisions. Its content must be stated precisely: a new classification, correspondence, law, invariant, or scoped obstruction. A plan or repeated formula is not a completed theorem.
+derive the complete forced Green identity for the response and its spectral derivative. Retain the drift and potential introduced by conjugation, the lateral boundary, both radial faces and the dependence of the axis on radius. A physical event does not impose an unproved zero condition on an arbitrary tube boundary.
 
-The unchanged-theta all-positive-time collision exclusion remains the previously recorded final-strength target. It is not a newly established criterion. A finite-domain result is assessed on that domain; a generic law is checked against controls rather than required to exclude them. When theta separation is claimed, identify and prove the effect of the canonical premise used.
+Then reconnect this finite calculation to the full observation: account for the complementary angular region and the omitted radial intervals. The cap estimate bounds angular mass; it does not automatically bound every response or boundary term. Determine which parts are exact pullbacks of the radial identity and which signed term has become more tractable. Compare against the one-dimensional calculation using the same source information and error allowances.
 
-Analytic work leads. Supporting computation may check algebra, illustrate a proved local model, or certify a constant required by a written theorem. Sampling does not decide bifurcation completeness, all-height behavior or threshold transfer. New proofs go in notes/, assessments in reviews/, and computations with small records in numerics/. Keep one active manuscript and the concise DRAFT_HISTORY entry; create no manuscript snapshots.
+Check the exact Gaussian-polynomial collision during the derivation. A complete return is a proved localized identity with a substantive comparison, a new controlled structural consequence, or a scoped obstruction for the chosen estimate. Merely recovering \(H\) again does not complete LOC-02. Save the derivation and assessment before selecting a larger family or a numerical campaign.
 
-[manuscript]: ../radial_deformations_and_zero_dynamics.tex
-[proposal]: ../research-proposal/03_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_RESEARCH_PROPOSAL_20261027.md
+## Controls and the standard for progress
+
+The existing [control screen][b01] shows that the normalized constructions retain the Gaussian-polynomial event and the observations of the applicable smooth [registered controls][controls] on their convergence domains. The controls lack the fixed canonical marginal in the specified ways; that alone does not show they fail an unproved separating inequality. Atomic controls require a measure or distribution formulation rather than an assumed smooth PDE.
+
+Structural results may hold for colliding controls. A claimed theta exclusion must identify the canonical input actually used and prove its effect on the proposed estimate. The complete energy in the induced measure \(A_s^{-2}d^3X\) pulls back to the original identity; ordinary full source norms with radial weights do not improve under normalized multiplication. Those comparisons leave other signed local estimates and nonmultiplicative deformations open.
+
+Use the [result index][results] and [avoid index][avoid], especially [geometric realizations][realizations], [target classification][a01], [control screening][a02], [transported identities][a03] and [scoped exclusions][a07]. The all-positive-time collision exclusion remains the existing final-strength target, not a new criterion validated by these constructions. Finite-domain gains and precise structural theorems are assessed at their actual scope.
+
+## Earlier work and records
+
+The Darboux family and local zero-motion formulas in [Notes17][n17] and [18][n18] remain available comparison tools. Its conserved pairing is an integrated observation: pointwise preservation requires the derivative correction displayed in manuscript Section 9. Interior Darboux node classification is an optional supporting branch, not a gate before studying localization. Earlier flux, moment, lattice and Gaussian-deformation results retain their stated scopes.
+
+Keep one active manuscript. Put research derivations in `notes/`, assessments in `reviews/`, and justified computations with small records in `numerics/`. The [progress register][progress] owns current task states, [CURRENT_RESEARCH_PROGRAM.md][current] routes the next session, and [Note19][handoff] carries the updated continuation priority. This rewrite reorganizes the program around the user's invariant; it adds no collision-excluding theorem.
+
 [progress]: ../research-progress/03_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_RESEARCH_PROGRESS_20261027.md
-[handoff]: ../notes/19_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_CONTINUATION_20261027.md
-[review]: ../reviews/11_INITIAL_DEFORMATION_MANUSCRIPT_AND_PROGRAM_ASSESSMENT_20261027.md
-[rtc]: 01_RADIAL_THETA_COLLISION_RESEARCH_OVERVIEW_20261027.md
-[rlc]: 02_RADIAL_LAPLACIAN_COLLISION_RESEARCH_OVERVIEW_20261027.md
-[n01]: ../notes/01_RADIAL_THETA_GEOMETRY_AND_COLLISION_MECHANISMS_20261027.md
-[n16]: ../notes/16_CANONICAL_FLUX_MOMENT_RESTRICTION_AND_DIRECT_COMPARISON_20261027.md
+[proposal]: ../research-proposal/03_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_RESEARCH_PROPOSAL_20261027.md
+[manuscript]: ../radial_deformations_and_zero_dynamics.tex
+[n20]: ../notes/20_AUXILIARY_ANGULAR_FLOWS_AND_COLLISION_LOCALIZATION_20261027.md
+[review12]: ../reviews/12_RADIAL_INVARIANT_AND_ANGULAR_FLOW_SELF_ASSESSMENT_20261027.md
+[b01]: ../brainstorm/01_RADIAL_INTEGRAND_PRESERVING_DEFORMATIONS_AND_COLLISION_LOCALIZATION_20261027.md
+[b02]: ../brainstorm/02_AUXILIARY_FLOWS_FOR_COLLISION_LOCALIZATION_20261027.md
 [n17]: ../notes/17_RADIAL_DARBOUX_SYSTEMS_PRESERVING_PHYSICAL_OBSERVATION_20261027.md
 [n18]: ../notes/18_PHYSICAL_AND_INTERIOR_ZERO_DYNAMICS_FOUNDATION_20261027.md
+[threshold]: ../../02_heat_flow_rh_applications/notes/02_RODGERS_TAO_POSITIVE_THRESHOLD_20261026.md
 [results]: ../../../../result-summaries/README.md
 [avoid]: ../../../../avoid/README.md
 [controls]: ../../../../result-summaries/12_collision_controls_and_screening.md
-[geometry]: ../../../../result-summaries/13_local_heat_flow_geometry_and_rh_equivalent_criteria.md
 [realizations]: ../../../../result-summaries/16_hypercomplex_reductions_and_geometric_realizations.md
 [a01]: ../../../../avoid/01_restating_the_target.md
+[a02]: ../../../../avoid/02_shape_only_arguments_and_the_controls.md
+[a03]: ../../../../avoid/03_lifts_and_re_realizations_in_new_coordinates.md
 [a07]: ../../../../avoid/07_scoped_exclusions_read_as_universal.md
-[a12]: ../../../../avoid/12_term_by_term_matching_and_separate_bounds.md
+[current]: ../CURRENT_RESEARCH_PROGRAM.md
+[handoff]: ../notes/19_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_CONTINUATION_20261027.md

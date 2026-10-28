@@ -2,19 +2,21 @@
 
 27 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**. Investigation05 chat0006, **Review radial collision progress**, thread `01a18012-c543-7320-ab04-91728654f3ba`.
 
-**Start here.** Edward Baker requested that the deformations be understood well before deciding how to use them against theta forcing. The new [RDZ overview][overview], [research proposal][proposal] and [progress register][progress] supersede both the RTC and RLC programs for current work. Their mathematical results remain valid at their stated scopes. In particular, Note15's flux-first task and Note17's immediate forcing-estimate suggestion no longer govern the next session.
+**Current priority, 27 October 2026, chat0007.** Edward Baker requested that the overview and progress document be rewritten around radial integrand preservation and collision localization. The [overview][overview] and [progress register][progress] now govern current work. The complete radial integrand is the sole required invariant; Darboux form and interior-node classification are not prerequisites. The earlier [proposal][proposal] and the Darboux task retained below are supporting branch records. This amendment preserves chat0006’s original provenance; the revised program belongs to chat0007. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra, actual effort max.
 
-**27 October follow-up in chat0007.** Edward Baker broadened the search to preserve the complete radial integrand as the sole invariant, and requested manuscript integration plus auxiliary localization dynamics. Read [Note20](20_AUXILIARY_ANGULAR_FLOWS_AND_COLLISION_LOCALIZATION_20261027.md) and [Brainstorm02](../brainstorm/02_AUXILIARY_FLOWS_FOR_COLLISION_LOCALIZATION_20261027.md) with this handoff. Manuscript Sections 9–10 now contain explicit angular flows and their complete equation/boundary map. The original Darboux first task below remains an open branch, not a restriction on the broader search. This update retains chat0006’s historical identity; the new work belongs to chat0007. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra, actual effort max.
+**Next bounded calculation: LOC-02.** Use the steered finite-parameter flow in [Note20](20_AUXILIARY_ANGULAR_FLOWS_AND_COLLISION_LOCALIZATION_20261027.md) to derive the full signed Green identity on a finite angular tube. Keep the drift, steering derivatives, lateral boundary, both radial faces and complementary angular/radial contributions. Compare with the radial calculation and the exact colliding control. The overview states the domain and completion criteria; the new task is not completed by the existing cap formula.
+
+**Early complementary route: LOC-03.** [Brainstorm02](../brainstorm/02_AUXILIARY_FLOWS_FOR_COLLISION_LOCALIZATION_20261027.md) proposes a projected annular Laplacian flow. Its preservation and dissipation identities are conditional on a smooth solution. Existence, regularity, radial joins and a complete response/boundary realization remain open, as does an objective tied to collision cancellation.
 
 ## Read first
 
 1. Repository AGENTS.md, [the chat-history workflow][chatworkflow], [result summaries][results] and [patterns to avoid][avoid]. The specific [collision controls][controls], [local collision geometry][geometry] and [scoped-conclusion rule][scope] are relevant.
-2. The new overview, proposal and progress register. These distinguish structural study from a later theta application.
-3. The [base-folder manuscript][manuscript], especially Sections 3-8. Its [build instructions][buildinstructions] identify the shared PDF output; [Review11][review] states verification scope.
+2. The rewritten overview and progress register for the LOC tasks and current priorities. Consult the earlier RDZ proposal only for a specific supporting branch.
+3. The [base-folder manuscript][manuscript], especially Sections 9–10, Note20, Brainstorm02 and [Review12](../reviews/12_RADIAL_INVARIANT_AND_ANGULAR_FLOW_SELF_ASSESSMENT_20261027.md). Use Sections 3–8 and [Review11][review] for the earlier Darboux comparison. [Build instructions][buildinstructions] identify the shared PDF output.
 4. [Note17][n17] for the full deformation construction and [Note18][n18] for physical versus interior zero dynamics. Use [Note01][n01] for normalization and selected tails.
 5. Consult earlier flux, Gaussian deformation, multiplier and lattice results only when a specific question needs them. Before a positive-Lambda application, read the existing [threshold reduction][threshold] and its original inputs.
 
-## What is established
+## Earlier Darboux foundation
 
 With x=log r, lambda=a^2/4>0, g_t=4 exp(t x^2/4) Phi(x/2), and the selected Y satisfying Y_xx+lambda Y=g_t, let
 
@@ -48,16 +50,16 @@ with nonzero denominator U_x. At kappa=0, use mu=kappa^2 to avoid mistaking the 
 
 The Gaussian-polynomial control retains a double physical boundary zero but has U<0 throughout x>0. Absence of interior nodes is therefore not the missing physical exclusion by itself. The transformed equation is forced, and its source need not be positive or retain the original Kelvin parity.
 
-## First bounded task
+## Earlier Darboux task retained as an optional branch
 
-Study interior nodal events in this existing family before choosing a theta-forcing estimate.
+The following package records the previous first task. It remains open and may be selected for a specific supporting question; LOC-02 above is the current default. Its subject is interior nodal events in the existing Darboux family.
 
 - Fix symbolic compact parameter and spatial domains and an explicit smooth-source class. Keep the complete selected tails when using a finite spatial interval.
 - Derive the local jets needed at U=U_x=0, using the exact inverse and time/deformation laws. Treat mu near zero and kappa away from zero consistently.
 - Prove a classification or orientation for a stated nondegenerate event class, or identify exactly why its sign is not determined. A generic double-node model does not cover higher multiplicity automatically.
 - Include x=0 and outer spatial boundary crossings in any count law. Keep U_lambda(0)=0 distinct from U_x=0.
 - Check the exact colliding control and explain what any auxiliary invariant says about the unchanged physical first jet. A scoped failed correspondence is a valid structural return.
-- Save the derivation in notes/, its assessment in reviews/, and only then select any useful supporting computation. Update the RDZ register, not the old RTC/RLC task counts.
+- Save the derivation in notes/, its assessment in reviews/, and only then select any useful supporting computation. Record the result under the earlier RDZ branch in the current progress register, without counting it as completion of an unrelated LOC task.
 
 The existing simple-node velocity and conserved integral are starting identities. A complete return must answer a new structural question. It need not yet prove a theta-specific separation. No broad numerical scan, large-kappa terminal limit, new lattice, or repeated scalar energy identity is the default continuation.
 
@@ -65,7 +67,7 @@ The existing simple-node velocity and conserved integral are starting identities
 
 The single active manuscript source is `radial_deformations_and_zero_dynamics.tex` in this investigation's base folder. Edit it in place when a result is ready for inclusion. Keep generated PDFs under the repository-root output/pdf/radial-theta-collision-geometry/ folder, following [LARGE_FILES.md][largefiles]. Retain the author/drafted-for field and LLM acknowledgment. Save detailed work in notes and reviews; DRAFT_HISTORY.md remains concise and no snapshot folders are created.
 
-This chat has one canonical registration: **chat0006**, thread `01a18012-c543-7320-ab04-91728654f3ba`, in this investigation's [registry][history]. A new chat must use its own actual id and title, not reuse chat0006. Refresh an existing registration at the beginning of a reply. At the end, refresh completed public text and use the documented bounded exact-turn follow-up as the last tool action, then send the actual final reply. The future reply must not be written into the archive in advance. Native completion-hook activation has not been verified here.
+The original handoff belongs to **chat0006**, thread `01a18012-c543-7320-ab04-91728654f3ba`. The localization work and priority amendment belong to **chat0007**, thread `01a18047-0177-7ad2-878f-19ed2eaa1a37`. Both retain their unique registrations in this investigation's [registry][history]. A new chat must use its own actual id and title, not reuse either identity. Refresh an existing registration at the beginning of a reply. At the end, refresh completed public text and use the documented bounded exact-turn follow-up as the last tool action, then send the actual final reply. The future reply must not be written into the archive in advance. Native completion-hook activation has not been verified here.
 
 [overview]: ../research-overview/03_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_RESEARCH_OVERVIEW_20261027.md
 [proposal]: ../research-proposal/03_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_RESEARCH_PROPOSAL_20261027.md

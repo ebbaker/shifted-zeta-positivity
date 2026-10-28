@@ -1,8 +1,8 @@
-# Research proposal for radial deformations and zero dynamics
+# Earlier research proposal for radial deformations and zero dynamics
 
 27 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**. Investigation05 chat0006, **Review radial collision progress**.
 
-**Priority.** This proposal and the new [overview][overview] supersede the earlier RTC and RLC research plans for selecting future work. Edward Baker requested a thorough study of the deformations before deciding how they help with theta forcing. The earlier plans and their results remain historical inputs. The new [progress register][progress] alone owns RDZ task states; no RTC or RLC completion is counted again.
+**Priority superseded, 27 October 2026, chat0007.** At Edward Baker’s request, the [overview][overview] and [progress register][progress] have been rewritten around radial integrand preservation and collision localization. They govern current work. The RDZ contracts and first-task instructions below retain the earlier plan for reference and optional supporting work; they do not impose a Darboux classification before localization. The current register preserves the earlier task states without relabeling them as completed LOC tasks. Update prepared for Edward Baker with substantial LLM assistance, gpt-6-astra, actual effort max.
 
 The initial [manuscript][manuscript] supplies an exact family of radial systems with unchanged physical H. This proposal asks what can be learned from that family as a dynamical and geometric object. The eventual positive-Lambda contradiction is a motivation, not an assumption about the intermediate results.
 
@@ -66,7 +66,7 @@ Use direct proofs first. When needed, an exact algebra replay may check the para
 
 Test the explicit colliding source first, then the relevant [registered control families][controls] at their actual premises and convergence domains. Generic Phase I laws should remain compatible with their events. A canonical separating claim must identify the additional premise and prove its quantitative effect. Keep same-assistant review, separate-model review and specialist review distinct.
 
-## First bounded work package
+## Earlier first bounded work package
 
 **Selected question:** how do simple interior zeros and their first degeneracies behave in the existing radial family, and what can their transport say about the fixed boundary observation?
 
@@ -83,7 +83,7 @@ A complete local classification or a precise failed correspondence can satisfy t
 
 Follow the [result index][results] and [avoid index][avoid], especially [local collision geometry][geometry], [controls][controls], [target classification][a01], [scoped exclusions][a07] and [coupled estimates][a12]. Respect the [large-file policy][largefiles], [reference workflow][references] and [chat-history workflow][history]. Notes, numerics and reviews remain in their established folders. Edit the single base-folder manuscript in place and record concise milestones in DRAFT_HISTORY.md; no snapshot folders are created.
 
-The first session follows the [continuation note][handoff]. Current results and proposed work are separated in the [progress register][progress]. The creation of this proposal is not completion of its research tasks.
+For current work, follow the rewritten [overview][overview], [progress register][progress] and the priority update in the [continuation note][handoff]. This earlier proposal remains a record of the original RDZ contracts, not their completion.
 
 [overview]: ../research-overview/03_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_RESEARCH_OVERVIEW_20261027.md
 [progress]: ../research-progress/03_RADIAL_DEFORMATION_AND_ZERO_DYNAMICS_RESEARCH_PROGRESS_20261027.md
