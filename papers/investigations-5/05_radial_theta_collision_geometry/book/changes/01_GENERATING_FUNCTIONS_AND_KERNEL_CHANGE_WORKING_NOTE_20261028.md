@@ -377,6 +377,18 @@ with \(A\), and the full-space pairing with the explicitly subtracted
 \(\Theta\). These are equivalent canonical observations with different
 kernels and boundary bookkeeping, not a selected auxiliary evolution.
 
+## Related zero-time rescaling brainstorm
+
+Edward Baker subsequently requests focusing on \(t=0\) and reconsidering
+how auxiliary and Newman evolution should be related. The
+[rescaling brainstorm](../../brainstorm/08_ZERO_TIME_RESCALINGS_AND_FLOW_BRAINSTORM_20261028.md)
+compares the smooth potential \(1+r^{-1}-\Theta(r)\), the square-root
+rescaling and the three-dimensional cylinder. Its
+[continuation](../../brainstorm/09_GENERATING_THETA_AND_FLOW_CONTINUATION_20261028.md)
+summarizes the formulas and flow choices. These remain options for this
+working change list; the manuscript has not been changed and no preferred
+flow or relaxation of the invariant has been approved.
+
 ## Decisions to settle before the combined manuscript revision
 
 - Choose whether \(A\), \(\Theta\), or both should lead the definitions.

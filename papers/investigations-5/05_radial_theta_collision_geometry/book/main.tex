@@ -2,7 +2,7 @@
 \usepackage[letterpaper,margin=1in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern,microtype}
-\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
 \usepackage{booktabs,tabularx,array}
 \usepackage{xcolor,hyperref}
 \definecolor{inkblue}{RGB}{30,61,92}
@@ -11,623 +11,763 @@
  pdfauthor={Drafted for Edward Baker}}
 \newtheorem{proposition}{Proposition}[section]
 \newtheorem{lemma}[proposition]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[proposition]{Remark}
 \numberwithin{equation}{section}
 \newcommand{\R}{\mathbb R}
 \newcommand{\C}{\mathbb C}
-\newcommand{\dd}{\,\mathrm d}
-\newcommand{\T}{\mathcal T}
 \newcommand{\Sph}{\mathbb S^2}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\dd}{\,\mathrm d}
 \newcommand{\Sch}{\mathcal S}
 \setlength{\emergencystretch}{2em}
 \setlength{\parskip}{3pt}
 \title{The Theta Transform in Three Dimensions\\[4pt]
- \large Density, geometry, and observation}
+\large Generators, potentials, and deformations}
 \author{Drafted for Edward Baker}
 \date{28 October 2026}
 \begin{document}
 \maketitle
 
 \begin{abstract}
-The Gaussian coefficients of the theta source identify a weighted
-three-dimensional radial Laplacian. Starting from this identity, we
-realize the source as a positive spatial density and recover the complete function \(H(t,z)\) by an explicit
-integral transform. The density is independent of the spectral variable
-\(z\); all spectral dependence belongs to the kernel. Logarithmic radius
-identifies the transform as a one-dimensional Fourier transform after
-angular integration. This gives a precise account of the information
-retained by the observation, the information it forgets, and a restricted
-inverse when radiality is prescribed. We then characterize the densities that preserve every spectral value
-under this working kernel. Its choice remains open for further
-investigation; no auxiliary dynamics is selected.
+The theta source of the Riemann xi function admits a smooth positive
+potential in three-dimensional Euclidean space. A square-root rescaling
+and logarithmic radius convert this potential into an even generator
+\(G\) satisfying \((1-\partial_u^2)G=8\Phi\). Its Fourier observation
+recovers the original function through the factor \(1+z^2\).
+We derive these identities from the theta series, retain their
+three-dimensional cylinder formulation, and explain the convergence
+strip and entire continuation. The resulting transform determines the
+spherical mean of a spatial field, while leaving angular information
+free. We then compare exact preservation of the observation with
+preservation of its zeros, and describe the ordinary cylinder heat flow,
+the transported Newman flow, and an exactly soluble linear combination.
+An additional section gives a normalized three-dimensional notation for
+the same identities.
 \end{abstract}
 
-\section{Why the theta source leads to three dimensions}\label{sec:source}
+\section{From the Riemann xi function to the theta generator}
+\label{sec:opening}
 
-The spatial formulation begins with a differential identity already
-present in the theta source \cite[Note01, Sections~2--3]{Archive}.
-In the normalization of this investigation,
-\begin{equation}\label{eq:originalsource}
- \Phi(u)=\sum_{n\ge1}
- \bigl(2\pi^2n^4e^{9u}-3\pi n^2e^{5u}\bigr)
- e^{-\pi n^2e^{4u}}.
+\subsection{The completed function and its deformation}
+
+The Riemann xi function is
+\begin{equation}\label{eq:xi}
+ \xi(\lambda)=\frac12\lambda(\lambda-1)\pi^{-\lambda/2}
+ \Gamma(\lambda/2)\zeta(\lambda).
 \end{equation}
-The function \(H(t,z)\) is the cosine observation of
-\(e^{tu^2}\Phi(u)\) on \(u\ge0\). We seek a spatial description
-that retains this complete source and explains its differential structure.
-
-\subsection{The Gaussian radius and the Laplacian}
-
-The exponential in \eqref{eq:originalsource} suggests
-\(r=e^{2u}\): each factor becomes the radial Gaussian
-\(e^{-\pi n^2r^2}\). For a radial profile in dimension \(d\),
-\begin{equation}\label{eq:gaussianlaplacian}
- \Delta_d=\partial_r^2+\frac{d-1}{r}\partial_r,
- \qquad
- \Delta_d e^{-\pi n^2r^2}
- =\bigl(4\pi^2n^4r^2-2d\pi n^2\bigr)e^{-\pi n^2r^2}.
-\end{equation}
-Consequently
-\[
- \tfrac12r^{5/2}\Delta_d e^{-\pi n^2r^2}
- =\bigl(2\pi^2n^4r^{9/2}-d\pi n^2r^{5/2}\bigr)e^{-\pi n^2r^2}.
-\]
-The coefficient \(-3\pi n^2\) in the source selects \(d=3\)
-within this radial Gaussian realization. Define
+It is entire and satisfies \(\xi(1-\lambda)=\xi(\lambda)\).
+The coordinate \(\lambda=(1+iz)/2\) sends the real \(z\)-axis to
+the critical line. In the normalization used throughout this investigation,
 \begin{align}
- A(r)&=\sum_{n\ge1}e^{-\pi n^2r^2},\qquad
- \Theta(r)=1+2A(r),\label{eq:theta}\\
- Q(r)&=\Delta_3\Theta(r)
-   =4\pi\sum_{n\ge1}n^2(2\pi n^2r^2-3)e^{-\pi n^2r^2}.
- \label{eq:Q}
+ \Phi(u)&=\sum_{n\ge1}
+ \bigl(2\pi^2n^4e^{9u}-3\pi n^2e^{5u}\bigr)
+ e^{-\pi n^2e^{4u}},\label{eq:phi}\\
+ H(t,z)&=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\dd u
+ =\frac12\int_{\R}e^{tu^2}\Phi(u)e^{izu}\dd u,\label{eq:H}\\
+ 8H(0,z)&=\xi\!\left(\frac{1+iz}{2}\right).\label{eq:normalization}
 \end{align}
-The series and its derivatives converge locally uniformly for \(r>0\),
-so summing the Gaussian identity gives
-\begin{equation}\label{eq:radialmotivation}
- \boxed{\displaystyle
- \Phi(u)=\tfrac12r^{5/2}\Delta_3 A(r)
-        =\tfrac14r^{5/2}Q(r),\qquad r=e^{2u}.}
+The source \(\Phi\) is positive and even; it decays faster than every
+Gaussian at both ends. These properties will also follow from the theta
+identities below. They justify differentiation under the integral for
+every real \(t\) and complex \(z\), locally uniformly in the parameters.
+In particular,
+\begin{equation}\label{eq:backwardheat}
+ \boxed{\partial_t H=-\partial_z^2 H.}
 \end{equation}
-Thus three dimensions arise from the original differential coefficients.
-The summation index remains \(n\in\mathbb N\); introducing a
-three-dimensional lattice would change the source.
 
-This is also the earlier primitive identity in spatial coordinates.
-For \(\psi(u)=r^{1/2}A(r)\), the relation
-\(\partial_u=2r\partial_r\) gives
-\begin{equation}\label{eq:primitiveconjugation}
- (\partial_u^2-1)\psi(u)
- =4r^{5/2}\left(A''(r)+\frac2rA'(r)\right)=8\Phi(u).
-\end{equation}
-The source coordinate \(u\) is a logarithmic radius, not itself a
-Euclidean radius. Equation~\eqref{eq:primitiveconjugation} is the
-operator identity motivating the spatial definitions below.
+Changing the source in a Fourier representation gives a natural way to
+deform the completed zeta function. The multiplier \(e^{tu^2}\)
+produces the de Bruijn--Newman family. There is a real constant
+\(\Lambda\) such that all zeros of \(H(t,\cdot)\) are real exactly
+when \(t\ge\Lambda\). RH is equivalent to \(\Lambda\le0\), and
+the theorem \(\Lambda\ge0\) makes it equivalent to \(\Lambda=0\).
+Dobner's introduction \cite[Section~1]{Dobner} gives this progression
+from the completed function to source deformations and the threshold,
+and describes the historical work of P\'olya, de Bruijn, Newman, and
+Rodgers--Tao. It provides the expository starting point here.
 
-\subsection{Reflection becomes spherical inversion}
+Dobner's source is \(4\Phi\) in our notation, so his deformed
+completed function is \(\xi_t((1+iz)/2)=8H(t,z)\), with the same
+time parameter. Increasing \(t\) in \eqref{eq:backwardheat} is
+backward heat in the real spectral coordinate. The source integral
+\eqref{eq:H} specifies the analytic family; no arbitrary backward-heat
+initial-value problem is being posed.
 
-The Jacobi identity at zero argument is
-\begin{equation}\label{eq:jacobi}
- \Theta(r)=r^{-1}\Theta(1/r).
-\end{equation}
-It follows from the modular transformation of \(\theta_3\) with
-lattice parameter \(ir^2\) \cite[Eq.~20.7.32]{DLMF}.
+We now set \(t=0\) and derive the spatial state from which these
+observations arise. The symbols \(t\), \(s\), and \(\lambda\)
+will distinguish Newman time, a possible auxiliary time, and the
+completed-function coordinate.
 
-The three-dimensional radial Laplacian makes the reflection especially
-simple. Direct differentiation gives
-\[
- \left(\partial_r^2+\frac2r\partial_r\right)
-        \big[r^{-1}f(1/r)\big]
- =r^{-5}\left(f''(1/r)+2r f'(1/r)\right).
-\]
-Applying this identity to \eqref{eq:jacobi} yields
-\begin{equation}\label{eq:Qreflection}
- Q(r)=r^{-5}Q(1/r).
-\end{equation}
-Every summand of \(Q\) is positive for \(r\ge1\), since
-\(2\pi n^2r^2-3>0\). Reflection therefore gives \(Q(r)>0\) for every \(r>0\).
-
-
-Here \(Q=\Delta_3\Theta\) is a classical identity on \(r>0\).
-There is a point source if the Laplacian is taken on all of \(\R^3\):
-modularity gives \(\Theta(r)=r^{-1}\) plus a remainder flat at zero,
-and hence, distributionally,
-\begin{equation}\label{eq:pointsource}
- \Delta_{\R^3}\Theta=Q(|X|)-4\pi\delta_0.
-\end{equation}
-The smooth function \(Q\) is the regular part used in the observation;
-we do not substitute the full distributional Laplacian for it.
+\subsection{The theta series and the radial Laplacian}
 
 Set
+\begin{equation}\label{eq:theta}
+ A(r)=\sum_{n\ge1}e^{-\pi n^2r^2},\qquad
+ \Theta(r)=1+2A(r)=\sum_{n\in\mathbb Z}e^{-\pi n^2r^2},
+ \qquad r=e^{2u}.
+\end{equation}
+The Gaussian radius is suggested directly by the exponent in
+\eqref{eq:phi}. For a radial profile in dimension \(d\),
+\begin{equation}\label{eq:gaussian}
+ \Delta_d=\partial_r^2+\frac{d-1}{r}\partial_r,\qquad
+ \Delta_d e^{-\pi n^2r^2}
+ =(4\pi^2n^4r^2-2d\pi n^2)e^{-\pi n^2r^2}.
+\end{equation}
+Multiplication by \(r^{5/2}/2\) gives the two powers of \(r\)
+occurring in \eqref{eq:phi}; its coefficient \(-3\pi n^2\)
+selects \(d=3\) within this realization. Consequently,
 \begin{equation}\label{eq:source}
- q_t(u)=e^{tu^2}\Phi(u),\qquad u\in\R.
-\end{equation}
-Reflection exactly cancels the power \(r^{5/2}\) in
-\eqref{eq:radialmotivation}, so
-\begin{equation}\label{eq:even}
- \Phi(-u)=\Phi(u),\qquad q_t(-u)=q_t(u).
-\end{equation}
-The original half-line observation consequently has the two equivalent
-forms
-\begin{equation}\label{eq:originalH}
- H(t,z)=\int_0^\infty q_t(u)\cos(zu)\dd u
-       =\frac12\int_{\R}q_t(u)e^{izu}\dd u.
-\end{equation}
-The factor \(1/2\) is essential: the whole line contains both reflected
-halves of the original source.
-
-\begin{lemma}[Decay]\label{lem:decay}
-For every real \(t\), \(q_t\) is an even, positive Schwartz function.
-For every \(B\ge0\) and integer \(k\ge0\),
-\[
- \int_{\R}|u|^k e^{B|u|}q_t(u)\dd u<\infty.
-\]
-The same domination holds for the derivatives needed below, uniformly
-when \(t\) ranges over a compact real interval.
-\end{lemma}
-\begin{proof}
-For \(r\ge1\), differentiated theta sums are bounded by a polynomial
-in \(r\), times \(e^{-c r^2}\), for some \(c>0\).
-Indeed, for each fixed integer \(m\),
-\(\sum_{n\ge1}n^m e^{-\pi n^2r^2}\le C_m e^{-\pi r^2}\);
-finite differentiation changes only the polynomial factors.
-Substituting \(r=e^{2u}\) gives domination of the form
-\(C\exp(C' u+T u^2-c e^{4u})\) on \(u\ge0\), including
-each fixed derivative. Reflection supplies the other half-line.
-Smoothness at \(u=0\) follows from the smooth identity
-\eqref{eq:Qreflection}.
-\end{proof}
-
-\subsection{What this suggests about the kernel}
-
-Substituting \(u=\tfrac12\log r\) and \(\dd u=\dd r/(2r)\)
-in the whole-line observation yields
-\begin{equation}\label{eq:radialobservation}
- H(t,z)=\frac1{16}\int_0^\infty
- e^{t\log^2r/4}Q(r)\,r^{3/2}\,r^{iz/2}\dd r.
-\end{equation}
-The oscillatory factor is therefore the Fourier character of logarithmic
-radius, \(r^{iz/2}=e^{iz\log r/2}\). With Euclidean volume
-\(\dd X=r^2\dd r\dd\omega\), the remaining radial weight leads to
-the positive spatial density derived in Section~\ref{sec:lift}.
-This is the motivation for the working kernel
-\(K(z,X)=e^{iz\ell(X)}\), where \(\ell(X)=\tfrac12\log|X|\).
-
-The Laplacian identity motivates the geometry without selecting a unique
-observation kernel or an auxiliary evolution. The exponential kernel
-keeps the original Fourier character visible; the cosine kernel agrees
-on the initial even source but retains less information on general
-later densities, as Section~\ref{sec:information} explains. The choice
-remains open as the kernel and evolution are considered together.
-In particular, the occurrence of \(\Delta_3\) in the source identity
-is not a heat equation for the density. The physical parameter \(t\)
-multiplies the source by \(e^{tu^2}\); an auxiliary parameter \(s\)
-would require its own law preserving the chosen observations.
-
-\section{The objects and their meanings}\label{sec:objects}
-
-The basic relation will be
-\begin{equation}\label{eq:master}
  \boxed{\displaystyle
- H(t,z)=\int_{\R^3}\rho(t;X)\,K(z,X)\dd X.}
+ \Phi(u)=\frac12r^{5/2}\Delta_3 A(r)
+        =\frac14r^{5/2}\Delta_3\Theta(r),\qquad r=e^{2u}.}
 \end{equation}
-Here \(X\) is a spatial variable and \(z\) is a spectral variable.
-The density \(\rho\) describes where the source is placed.
-The kernel \(K\) describes how that source is observed.
-The scalar \(H\) is the result of the observation.
+The series and its derivatives converge locally uniformly for \(r>0\),
+which justifies the termwise calculation. The arithmetic sum is still
+indexed by integers. Three-dimensional space enters through the
+differential operator, not through a replacement of the integer lattice.
 
-For real \(t\), the canonical density constructed below is positive.
-Cancellation occurs in the oscillatory kernel. Thus the signed density
-from the earlier formulation is replaced by a density--kernel pairing:
-the factor carrying \(z\) is displayed, not absorbed into \(\rho\).
-
-\begin{center}
-\renewcommand{\arraystretch}{1.15}
-\begin{tabularx}{\textwidth}{@{}>{$}l<{$}X@{}}
-\toprule
-\text{Symbol}&Meaning\\
-\midrule
-t & Newman deformation parameter; changing it changes the source.\\
-z\in\C & Spectral argument of \(H\). On the real axis we write \(z=a\).\\
-u\in\R & Logarithmic source coordinate.\\
-X=(x,y,w),\ r=|X| & Auxiliary position and its Euclidean radius.\\
-\ell(X) & The source label read from a spatial point.\\
-\rho(t;X) & Spatial density, independent of \(z\).\\
-j(t;X) & Spatial gradient \(\nabla_X\rho(t;X)\), a vector field.\\
-s & A possible later parameter indexing densities, distinct from \(t\); the kernel stays fixed.\\
-\bottomrule
-\end{tabularx}
-\end{center}
-
-The third Cartesian coordinate is written \(w\), so it cannot be confused
-with the spectral variable \(z\). Spatial differentiation always means
+The Jacobi transformation \cite[Eq.~20.7.32]{DLMF} is
+\begin{equation}\label{eq:kelvin}
+ \Theta(r)=r^{-1}\Theta(1/r).
+\end{equation}
+Differentiation gives its radial covariance,
+\begin{equation}\label{eq:sourcekelvin}
+ (\Delta_3\Theta)(r)=r^{-5}(\Delta_3\Theta)(1/r).
+\end{equation}
+For \(r\ge1\), every term of
 \[
- \nabla_X=(\partial_x,\partial_y,\partial_w),
- \qquad \Delta_X=\partial_x^2+\partial_y^2+\partial_w^2.
+ \Delta_3\Theta(r)=4\pi\sum_{n\ge1}
+ n^2(2\pi n^2r^2-3)e^{-\pi n^2r^2}
 \]
-A conservation flux would require a separate definition.
-Here \(j\) means the gradient only; no additional capital \(J\) is used.
+is positive. Equation~\eqref{eq:sourcekelvin} supplies positivity for
+\(0<r<1\), and \eqref{eq:source} gives \(\Phi(-u)=\Phi(u)\).
+Gaussian decay in \(r\ge1\) becomes double-exponential decay in
+\(u\ge0\); reflection supplies the other end.
 
-\section{A spatial realization without spectral dependence}\label{sec:lift}
+\subsection{A smooth positive potential}
 
-Write \(X=r\omega\), with \(\omega\in\Sph\), and let
-\(\dd\sigma=\dd\omega/(4\pi)\) be normalized area measure on the sphere.
-Our source label is
-\begin{equation}\label{eq:phase}
- \ell(X)=\frac12\log|X|,\qquad X\ne0.
+The undifferentiated theta function approaches \(1\) at infinity and
+\(1/r\) at zero. Subtracting these harmonic backgrounds leads to
+\begin{equation}\label{eq:V}
+ \boxed{V(r)=1+r^{-1}-\Theta(r)=r^{-1}-2A(r).}
 \end{equation}
-The map \(X=e^{2u}\omega\) identifies punctured three-dimensional
-space with \(\R\times\Sph\). Its volume element is
-\begin{equation}\label{eq:jacobian}
- \dd X=r^2\dd r\dd\omega
-       =8\pi r^3\dd u\dd\sigma(\omega).
+The alternative expression
+\begin{equation}\label{eq:Vendpoints}
+ V(r)=1-2r^{-1}A(1/r),\qquad V(r)=r^{-1}V(1/r)
 \end{equation}
-We distribute the measure \(\tfrac12q_t(u)\dd u\) uniformly over the
-angular variables. Equations \eqref{eq:radialmotivation}, \eqref{eq:source}, and
-\eqref{eq:jacobian} then force the density
-\begin{equation}\label{eq:rho}
- \boxed{\displaystyle
- \rho(t;X)=\frac{q_t(\ell(X))}{16\pi |X|^3}
- =\frac{e^{t\log^2r/4}Q(r)}{64\pi\sqrt r},\qquad r=|X|>0.}
-\end{equation}
-Equivalently, the entire construction is the measure identity
-\begin{equation}\label{eq:measure}
- \rho(t;X)\dd X=\tfrac12q_t(u)\dd u\dd\sigma(\omega).
-\end{equation}
-Thus the angular variables initially carry no additional source data.
-They provide a spatial realization of the original logarithmic coordinate.
+follows from \eqref{eq:kelvin}. It shows that \(V(|X|)\) extends
+smoothly to \(X=0\), with value 1 and every positive-order derivative
+zero there. At infinity, \(V(r)=r^{-1}+O(e^{-\pi r^2})\).
 
-\begin{proposition}[The spatial transform]\label{prop:transform}
-With
-\begin{equation}\label{eq:kernel}
- K(z,X)=e^{iz\ell(X)},
+\begin{proposition}[The theta potential]\label{prop:potential}
+The potential \(V\) is positive and satisfies, on \(\R^3\),
+\begin{equation}\label{eq:poisson}
+ -\Delta_XV(|X|)=(\Delta_3\Theta)(|X|).
 \end{equation}
-the density \eqref{eq:rho} satisfies \eqref{eq:master} for every real
-\(t\) and complex \(z\). It extends by \(\rho(t;0)=0\) to a smooth
-Schwartz function on \(\R^3\), positive away from the origin.
-Its total mass is \(H(t,0)\).
+The right side is the regular radial derivative, smoothly extended at
+zero. More explicitly,
+\begin{equation}\label{eq:newtonian}
+ V(r)=\frac1r\int_0^r v^2\Delta_3\Theta(v)\dd v
+       +\int_r^\infty v\Delta_3\Theta(v)\dd v,
+ \qquad \int_0^\infty v^2\Delta_3\Theta(v)\dd v=1.
+\end{equation}
 \end{proposition}
 \begin{proof}
-Integrating \eqref{eq:measure} over the sphere gives
+Off the origin, \(1+1/r\) is harmonic, giving \eqref{eq:poisson}.
+Distributionally, \(\Delta_X(1/r)=-4\pi\delta_0\), and the same
+central term occurs in \(\Delta_X\Theta\) by \eqref{eq:kelvin}.
+They cancel in \(V\). The radial flux is
 \[
- \int_{\R^3}\rho(t;X)e^{iz\ell(X)}\dd X
- =\tfrac12\int_{\R}q_t(u)e^{izu}\dd u=H(t,z).
+ \int_0^\infty v^2\Delta_3\Theta(v)\dd v
+ =[v^2\Theta'(v)]_0^\infty=0-(-1)=1.
 \]
-Absolute convergence follows from Lemma~\ref{lem:decay}.
-At large \(r\), the density and each spatial derivative have Gaussian
-decay after polynomial and logarithmic factors are absorbed.
-Equations \eqref{eq:even} and \eqref{eq:rho} give
-\begin{equation}\label{eq:rhokelvin}
- \rho(t;r)=r^{-6}\rho(t;1/r).
-\end{equation}
-Near zero, the Gaussian at \(1/r\) dominates every inverse power of
-\(r\), including all factors produced by differentiation. Every
-Cartesian derivative therefore extends to zero with value zero.
+Integrating the radial Poisson equation with regularity at zero and
+decay at infinity gives \eqref{eq:newtonian}. Its integrands are
+positive by \eqref{eq:sourcekelvin} and the preceding series calculation.
 \end{proof}
 
-The phase \(\ell\) is singular at the origin, but the density is not.
-The value of \(K\) at that one point may be assigned arbitrarily;
-it does not change any integral. For complex \(z\), the magnitude
-of the kernel is \(r^{-\operatorname{Im}z/2}\), which is dominated
-by the density at both ends.
+There is no interface at \(r=1\) in this construction. The potential
+is a single smooth function on Euclidean space.
 
-This symmetric realization uses the full space.
-The regions \(r>1\) and \(r<1\) each contribute half of the
-\emph{cosine} observation. The earlier exterior-only realization used
-\(q_t(\ell)/(8\pi r^3)\) on \(r\ge1\) and zero inside.
-Here its exterior density is halved before the reflected interior
-is included. Thus no copy of \(H\) has been added twice, and no jump
-has been introduced at the unit sphere.
+\subsection{From the Euclidean potential to the generator}
 
-The requested gradient notation is now unambiguous:
-\begin{equation}\label{eq:gradient}
- j(t;X):=\nabla_X\rho(t;X),\qquad
- j(t;X)=\partial_r\rho(t;r)\frac Xr\quad(r>0),\qquad j(t;0)=0.
+With ordinary Euclidean volume \(\dd X=r^2\dd r\dd\omega\),
+the substitution in \eqref{eq:H} gives
+\begin{equation}\label{eq:euclidean-source}
+ H(0,z)=\frac1{64\pi}\int_{\R^3}
+ (\Delta_3\Theta)(|X|)|X|^{-1/2+iz/2}\dd X.
 \end{equation}
-It measures spatial steepness. In particular,
-\(\nabla_X\cdot j=\Delta_X\rho\) is a differential identity,
-not an evolution equation.
+This source integral is entire in \(z\). To transfer the differential
+operator to the kernel, compute
+\begin{equation}\label{eq:powerkernel}
+ -\Delta_3r^{-1/2+iz/2}
+ =\frac{1+z^2}{4}r^{-5/2+iz/2}.
+\end{equation}
+Green's identity and \eqref{eq:poisson} then yield
+\begin{equation}\label{eq:euclidean-potential}
+ \boxed{\displaystyle
+ H(0,z)=\frac{1+z^2}{256\pi}\int_{\R^3}
+ [1+|X|^{-1}-\Theta(|X|)]|X|^{-5/2+iz/2}\dd X,}
+\end{equation}
+initially for \(|\operatorname{Im}z|<1\). Indeed, with
+\(b=\operatorname{Im}z\), the radial absolute integrand behaves as
+\(r^{-1/2-b/2}\) at zero and \(r^{-3/2-b/2}\) at infinity.
+Both endpoints converge exactly in that strip, where the Green boundary
+terms vanish. The potential \(V\) is smooth, although the weighted
+Euclidean density \(V(r)r^{-5/2}\) is singular at zero.
 
-\section{What the transform sees}\label{sec:information}
+The natural rescaled generator is
+\begin{equation}\label{eq:G}
+ \boxed{\displaystyle
+ u=\tfrac12\log r,\qquad
+ G(u)=\tfrac12e^uV(e^{2u})
+     =\cosh u-\tfrac12e^u\Theta(e^{2u}).}
+\end{equation}
+The power \(\sqrt r\) has two complementary roles. It turns the
+weight-one inversion of \(V\) into ordinary reflection, so \(G\)
+is even. It also removes the first derivative from the logarithmic
+radial Laplacian. For \(x=\log r\) and an angularly dependent profile,
+\begin{equation}\label{eq:conjugation}
+ \Delta_X[r^{-a}f(x,\omega)]
+ =r^{-a-2}\bigl[\partial_x^2+(1-2a)\partial_x
+    +\Delta_{\Sph}+a(a-1)\bigr]f.
+\end{equation}
+Thus \(a=1/2\) is the unique power eliminating \(\partial_x\).
 
-To understand the forward map, fix \(t\) and temporarily write
-\(\rho(X)\) for any integrable spatial density.
+\begin{proposition}[The generating equation]\label{prop:generator}
+The function \(G\) is smooth, positive and even, and
+\begin{align}
+ (1-\partial_u^2)G&=8\Phi,\label{eq:generator}\\
+ G(u)&=4\int_{\R}e^{-|u-v|}\Phi(v)\dd v,\label{eq:Green}\\
+ 16H(0,z)&=(1+z^2)\int_{\R}G(u)e^{izu}\dd u,
+ \qquad |\operatorname{Im}z|<1.\label{eq:G-observation}
+\end{align}
+Moreover \(G(u)\sim\tfrac12e^{-|u|}\) at both ends.
+\end{proposition}
+\begin{proof}
+Using \(\partial_u=2r\partial_r\), one obtains
+\[
+ (\partial_u^2-1)[e^u\Theta(e^{2u})]
+ =4r^{5/2}\Delta_3\Theta(r)=16\Phi(u).
+\]
+Equation~\eqref{eq:generator} follows from \eqref{eq:G}.
+The Green kernel of \(1-\partial_u^2\) on the line is
+\(\tfrac12e^{-|u|}\), giving \eqref{eq:Green}; uniqueness among
+solutions decaying at both ends follows because neither nonzero
+homogeneous combination of \(e^u,e^{-u}\) decays at both ends.
+Positivity follows from the positive kernel. The explicit expression
+\[
+ G(u)=\tfrac12e^{-|u|}-e^{|u|}A(e^{2|u|})
+\]
+gives the tails. Smoothness follows from \eqref{eq:G}, including the
+cancellation of the two cusps in this last expression. Integrating
+\eqref{eq:generator} against \(e^{izu}\), with vanishing boundary
+terms in the strip, gives \eqref{eq:G-observation}.
+\end{proof}
+
+\subsection{The three-dimensional cylinder}
+
+The change \(X=e^{2u}\omega\) identifies punctured Euclidean space
+with \(\cC=\R\times\Sph\). Put
+\begin{equation}\label{eq:measure}
+ \dd\sigma=\frac{\dd\omega}{4\pi},\qquad
+ \dd\mu=\dd u\dd\sigma=\frac{\dd X}{8\pi|X|^3}.
+\end{equation}
+We equip the cylinder with the product metric and operator
+\begin{equation}\label{eq:cylinder}
+ g_{\cC}=\dd u^2+\tfrac14g_{\Sph},\qquad
+ \Delta_{\cC}=\partial_u^2+4\Delta_{\Sph},\qquad
+ \cL=1-\Delta_{\cC}.
+\end{equation}
+The convention is \(\Delta_{\Sph}Y_{\ell m}=-\ell(\ell+1)Y_{\ell m}\).
+The ordinary metric volume is \(\dd V_{\cC}=\pi\dd\mu\), and the
+Euclidean metric is \(4e^{4u}g_{\cC}\). Thus the product metric is
+conformally related to Euclidean space, rather than being the original
+Euclidean metric expressed in new coordinates.
+
+Equation~\eqref{eq:conjugation} takes the form
+\begin{equation}\label{eq:cylinderconjugation}
+ \Delta_X[r^{-1/2}f(u,\omega)]
+ =-\tfrac14r^{-5/2}\cL f.
+\end{equation}
+Regard the initial generator as a field constant on each sphere. The
+equations reached by the opening derivation are
+\begin{equation}\label{eq:master}
+ \boxed{\begin{gathered}
+ G(u)=\cosh u-\tfrac12e^u\Theta(e^{2u}),\qquad \cL G=8\Phi(u),\\
+ \cL e^{izu}=(1+z^2)e^{izu},\\
+ 16H(0,z)=\int_{\cC}G(u)\cL e^{izu}\dd\mu
+         =(1+z^2)\int_{\cC}G(u)e^{izu}\dd\mu,
+ \quad |\operatorname{Im}z|<1.
+ \end{gathered}}
+\end{equation}
+This is a three-dimensional integral: \(u\) is one coordinate and
+\(\omega\) supplies two angular coordinates. The field is independent
+of the spectral parameter; the spectral dependence is in the kernel.
+The radial integral in \eqref{eq:G-observation} results from performing
+the angular integration of this initial field.
+
+\section{Equivalent representations and entire continuation}
+\label{sec:continuation}
+
+\subsection{The Mellin form}
+
+The same potential gives a direct expression in the original
+completed-function coordinate. Set \(\lambda=(1+iz)/2\), so
+\(1+z^2=4\lambda(1-\lambda)\). Substituting \(r=e^{2u}\) in
+\eqref{eq:G-observation} gives
+\begin{equation}\label{eq:mellin}
+ \boxed{\displaystyle
+ 16H(0,z)=2\xi(\lambda)
+ =\lambda(1-\lambda)\int_0^\infty
+ [1+r^{-1}-\Theta(r)]r^{\lambda-1}\dd r,}
+\end{equation}
+for \(0<\operatorname{Re}\lambda<1\). With Euclidean volume this is
+\begin{equation}\label{eq:mellin3d}
+ 16H(0,z)=\frac{\lambda(1-\lambda)}{4\pi}
+ \int_{\R^3}[1+|X|^{-1}-\Theta(|X|)]|X|^{\lambda-3}\dd X.
+\end{equation}
+The strip is the same as \(|\operatorname{Im}z|<1\).
+Changing \(r\) to \(1/r\) and using \eqref{eq:Vendpoints} shows
+that the Mellin integral is invariant under
+\(\lambda\mapsto1-\lambda\). Functional reflection, Kelvin inversion,
+and evenness of \(G\) therefore describe the same symmetry.
+
+\subsection{A rapidly decaying companion}
+
+The smoothness of \(G\) comes with exponential tails. To recover a
+defining integral valid for every complex spectral argument, set
+\begin{equation}\label{eq:P}
+ P(u)=e^{|u|}A(e^{2|u|}),\qquad
+ G(u)=\tfrac12e^{-|u|}-P(u).
+\end{equation}
+The function \(P\) has double-exponential tails. Its derivative has
+the jump \(P'(0+)-P'(0-)=-1\): differentiating \eqref{eq:kelvin}
+at 1 gives \(A'(1)+A(1)/2=-1/4\), and hence \(P'(0+)=-1/2\).
+Thus \(P\) is continuous but is not smooth at the origin.
+
+In the common strip,
+\(\int_{\R}\tfrac12e^{-|u|}e^{izu}\dd u=(1+z^2)^{-1}\).
+Substitution in \eqref{eq:G-observation} gives
+\begin{equation}\label{eq:entire-companion}
+ \boxed{\displaystyle
+ 16H(0,z)=1-(1+z^2)\int_{\R}P(u)e^{izu}\dd u,
+ \qquad z\in\C.}
+\end{equation}
+The right side is entire, so equality on the strip extends it everywhere.
+In particular,
+\begin{equation}\label{eq:endpoint}
+ H(0,i)=H(0,-i)=\frac1{16}.
+\end{equation}
+The prefactor in \eqref{eq:G-observation} cannot be evaluated at
+\(z=\pm i\) while treating the divergent \(G\) integral as finite.
+Equation~\eqref{eq:entire-companion} keeps the boundary contribution
+exactly. The two forms exchange smoothness and stronger tail decay;
+they recover the same completed function.
+
+\section{What the spatial observation determines}
+\label{sec:information}
+
+\subsection{The spherical mean and the radial inverse}
+
+For an integrable field \(W(u,\omega)\) on the cylinder, define
+\begin{equation}\label{eq:observation}
+ (\mathcal TW)(z)=\frac{1+z^2}{16}
+ \int_{\cC}W(u,\omega)e^{izu}\dd\mu,
+ \qquad z\in\R.
+\end{equation}
+The letter \(W\) here denotes an arbitrary spatial field; the canonical
+initial field is \(G\). If \(W\) has the corresponding exponential
+moments, the same formula is defined for complex \(z\) in a strip.
 Let
 \[
- \overline\rho(r)=\int_{\Sph}\rho(r\omega)\dd\sigma(\omega),
- \qquad
- g_\rho(u)=8\pi e^{6u}\overline\rho(e^{2u}).
+ \overline W(u)=\int_{\Sph}W(u,\omega)\dd\sigma(\omega).
 \]
-Then \(g_\rho(u)\dd u\) is the distribution of logarithmic radius,
-and
-\begin{equation}\label{eq:factorization}
- (\T\rho)(z)
- :=\int_{\R^3}\rho(X)e^{iz\ell(X)}\dd X
- =\int_{\R}g_\rho(u)e^{izu}\dd u
+Then
+\begin{equation}\label{eq:mean}
+ (\mathcal TW)(z)=\frac{1+z^2}{16}
+ \int_{\R}\overline W(u)e^{izu}\dd u.
 \end{equation}
-whenever the integral converges. For the canonical density,
-\(g_\rho=q_t/2\).
+The observation first averages over the angles and then takes a
+one-dimensional Fourier transform. It therefore determines the spherical
+mean, but cannot determine an unrestricted angular dependence.
 
-This factorization describes the information content:
-\[
- \text{spatial density}
- \ \longrightarrow\
- \text{logarithmic-radius distribution}
- \ \longrightarrow\
- \text{spectral function}.
-\]
-The first arrow averages over angles. The second is a Fourier transform
-with the sign convention displayed in \eqref{eq:factorization}.
-In radial variables the kernel is \(r^{iz/2}\), so the same observation
-is also a Mellin-type transform.
-
-\subsection{Angular information is lost}
-
-A function with zero spherical average at every radius is invisible to
-\(\T\). This failure of injectivity persists among positive smooth
-densities. For example, if \(\rho\) is the canonical density, then
-\begin{equation}\label{eq:angularambiguity}
- \rho_\varepsilon(r\omega)
- =\rho(r)\big[1+\varepsilon(\omega_1^2-\omega_2^2)\big],
+For example,
+\begin{equation}\label{eq:angular}
+ W_\varepsilon(u,\omega)
+ =G(u)[1+\varepsilon(\omega_1^2-\omega_2^2)],
  \qquad |\varepsilon|<1,
 \end{equation}
-has the same transform for every \(z\).
-The multiplier is positive, and the added angular term has mean zero.
-Flatness of \(\rho\) at the origin gives a smooth extension there.
-Thus the forward map is not invertible on unrestricted three-dimensional
-densities. This is an explicit ambiguity, not an inference merely from
-a comparison of dimensions.
+is smooth and positive on the cylinder, and has the same observation
+as \(G\). The added spherical harmonic has mean zero.
+This gives an explicit ambiguity within positive smooth fields.
 
-\subsection{A restricted inverse}
-
-If \(g_\rho\in\Sch(\R)\), Fourier inversion gives
+If \(\overline W\in\Sch(\R)\), Fourier inversion in the convention
+of \eqref{eq:mean} gives
 \begin{equation}\label{eq:inverse}
- g_\rho(u)=\frac1{2\pi}\int_{\R}(\T\rho)(a)e^{-iau}\dd a.
+ \overline W(u)=\frac8\pi\int_{\R}
+ \frac{(\mathcal TW)(a)}{1+a^2}e^{-iau}\dd a.
 \end{equation}
-This is the standard Schwartz-space inversion theorem
-\cite[Theorem~5.66]{Hunter}, with the forward normalization changed
-to the one in \eqref{eq:factorization}.
-Consequently the observed function determines the spherical average
-\(\overline\rho\). If radiality is prescribed, it determines the full
-density, for \(r>0\), by
-\begin{equation}\label{eq:radialinverse}
- \rho(r)=\frac1{16\pi^2r^3}
-        \int_{\R}(\T\rho)(a)e^{-ia\log r/2}\dd a.
+The canonical \(G\), whose derivatives have exponential tails, belongs
+to this class. Prescribing angular independence makes this a full inverse
+for the spatial field. In particular, it reconstructs
+\begin{equation}\label{eq:inverseV}
+ V(r)=\frac{16}{\pi\sqrt r}\int_{\R}
+ \frac{H(0,a)}{1+a^2}e^{-ia\log r/2}\dd a.
 \end{equation}
-For the canonical source, evenness reduces this to
-\begin{equation}\label{eq:canonicalinverse}
- \rho(t;r)=\frac1{8\pi^2r^3}
-       \int_0^\infty H(t,a)\cos\!\left(\frac a2\log r\right)\dd a.
-\end{equation}
-There is therefore a natural inverse on a specified radial class.
-It is not an inverse for the angular freedom in
-\eqref{eq:angularambiguity}, and it does not recover an unknown later
-spatial deformation.
+For general integrable fields, uniqueness of the spherical mean still
+holds: the Fourier transform of the difference vanishes, and convolution
+with a Gaussian followed by an approximate-identity limit makes that
+difference zero almost everywhere. A pointwise inversion formula needs
+its own regularity assumptions, as in \eqref{eq:inverse}.
 
-\subsection{Why the kernel choice matters}
+For the initial even field, the exponential character can be replaced
+by its cosine. On a general field, however, the cosine observation sees
+only the even part of \(\overline W\). The exponential form is retained
+when the full spherical mean is the intended datum.
 
-For the canonical density, reflection \(u\mapsto-u\) cancels the sine
-part of \(e^{izu}\). Hence we may equally write
+\subsection{Exact preservation and angular freedom}
+
+\begin{proposition}[The invariant mean]\label{prop:invariant}
+Let \(W_s\in L^1(\cC,\dd\mu)\). Then
+\(\mathcal TW_s=H(0,\cdot)\) on the real spectral axis if and only if
+\(\overline W_s=G\) almost everywhere.
+\end{proposition}
+\begin{proof}
+In \eqref{eq:mean}, \(1+a^2\) is nonzero for every real \(a\).
+Divide by this factor and use Fourier uniqueness. The converse follows
+directly by angular integration.
+\end{proof}
+
+Thus exact preservation of all observations fixes the field if radiality
+is imposed. It permits nonradial changes such as \eqref{eq:angular}.
+By contrast, conservation of total spatial mass fixes only
+\((\mathcal TW_s)(0)\). These are distinct requirements on a deformation.
+
+There is also a separate dynamical symmetry statement. Suppose an
+evolution is equivariant under rotations of the sphere and has a unique
+solution in its stated class. Rotating a solution from radial initial
+data gives another solution with the same initial data; uniqueness makes
+the solutions identical. Such an evolution stays radial. Creating
+angular structure therefore requires additional fields, asymmetric data,
+or a change to these hypotheses.
+
+\subsection{Spectral multiplicity as cancellation}
+
+For \(|\operatorname{Im}z|<1\), all polynomial moments of \(G\)
+remain integrable against \(e^{izu}\). Put
+\(I(z)=\int_{\cC}G(u)e^{izu}\dd\mu\). Then
 \[
- H(t,z)=\int_{\R^3}\rho(t;X)\cos(z\ell(X))\dd X.
+ 16H(0,z)=(1+z^2)I(z),\qquad
+ 16H_z(0,z)=2zI(z)+(1+z^2)I'(z).
 \]
-For a general density these two kernel families carry different
-information. The exponential kernel recovers all of \(g_\rho\);
-the cosine kernel recovers only its even part
-\[
- g_\rho^{\rm even}(u)=\tfrac12\big(g_\rho(u)+g_\rho(-u)\big).
-\]
-Thus retaining the exponential representation fixes more data than
-retaining only the cosine observation on an unrestricted class.
-The two choices agree on the canonical even source, but their
-constraints on a future representation should not be conflated.
-
-\section{Spectral differentiation and collisions}\label{sec:collisions}
-
-All spectral dependence is now explicit in the kernel.
-Lemma~\ref{lem:decay} permits differentiation under the integral,
-uniformly on compact subsets of \(\C\):
-\begin{equation}\label{eq:spectraljets}
- \partial_z^k H(t,z)
-   =\int_{\R^3}(i\ell(X))^k\rho(t;X)e^{iz\ell(X)}\dd X.
+At a real zero \(a\), the first term in the derivative vanishes.
+Consequently a multiple real zero is characterized by
+\begin{equation}\label{eq:double}
+ \int_{\cC}G(u)e^{iau}\dd\mu=0,\qquad
+ \int_{\cC}iuG(u)e^{iau}\dd\mu=0.
 \end{equation}
-In particular \(H(t,\cdot)\) is entire.
-The physical parameter has the separate meaning
-\(\partial_t\rho=\ell^2\rho\), so the same integral gives
-\begin{equation}\label{eq:newman}
- H_t=-H_{zz}.
-\end{equation}
-No spatial evolution is used to derive this identity.
-
-At a real observation \(z=a\), evenness of \(q_t\) gives the real formulas
-\begin{align}
- H(t,a)&=\int_{\R^3}\rho(t;X)\cos(a\ell(X))\dd X,\label{eq:realH}\\
- H_a(t,a)&=-\int_{\R^3}\ell(X)\rho(t;X)
-                         \sin(a\ell(X))\dd X.\label{eq:realderivative}
-\end{align}
-A collision at \((T,A)\) means that both integrals vanish.
-Equivalently, the positive measure \(\rho(T;X)\dd X\) has zero pairing
-with the two test functions
+Because \(G\) is even, these are equivalently the real cancellations
 \[
- \cos(A\ell(X)),\qquad -\ell(X)\sin(A\ell(X)).
+ \int_{\cC}G(u)\cos(au)\dd\mu=0,\qquad
+ \int_{\cC}uG(u)\sin(au)\dd\mu=0.
 \]
-These are two global cancellation conditions.
-They do not specify a spatial point at which the density vanishes.
-Nor is the spatial gradient \(j=\nabla_X\rho\) the spectral derivative
-of \(H\): the latter differentiates the kernel, as
-\eqref{eq:spectraljets} shows.
+Higher multiplicity is expressed by further vanished Fourier moments,
+since the prefactor does not vanish on the real axis. These are global
+pairings, not statements that the positive field vanishes at a spatial
+point. A spatial gradient and a spectral derivative describe different
+operations. Equation~\eqref{eq:double} is a characterization of the
+event, not an exclusion of it.
 
-A multiple zero in the complex spectral plane has the analogous
-conditions \(H=H_z=0\); a zero of higher multiplicity imposes
-further vanishing pairings in \eqref{eq:spectraljets}.
-This is a transform description of the event, not an exclusion mechanism.
+\section{An additional three-dimensional normalization}
+\label{sec:alternative}
 
-\section{The invariant pairing with a fixed kernel}
-\label{sec:representations}
+The preceding sections retain the original \(H,V,G\) notation. A
+second presentation can shorten the three-dimensional observation itself.
+It is useful to keep the conversion explicit, so either convention can
+be used without changing the mathematics.
 
-The transform is fixed before any auxiliary evolution is chosen.
-Let \(s\) index densities \(\rho_s(t;X)\), with
-\(\rho_0(t;X)=\rho(t;X)\), and define
-\[
- j_s(t;X)=\nabla_X\rho_s(t;X).
-\]
-The spatial coordinates, volume measure, and kernel remain the same:
-\begin{equation}\label{eq:fixedkernel}
- K(z,X)=e^{iz\ell(X)},\qquad \ell(X)=\tfrac12\log|X|.
+Write a cylinder point as \(p=(u,\omega)\), and define
+\begin{equation}\label{eq:alternative-defs}
+ \begin{aligned}
+ F(z)&=16H(0,z)=2\xi\!\left(\frac{1+iz}{2}\right),\\
+ G_\Theta(p)&=\cosh u-\tfrac12e^u\Theta(e^{2u}),\qquad
+ \dd\mu(p)=\dd u\,\frac{\dd\omega}{4\pi}.
+ \end{aligned}
 \end{equation}
-Neither \(\rho_s\) nor \(j_s\) contains a spectral argument, and
-\(K\) contains no auxiliary parameter \(s\).
-
-The defining requirement for an admissible family is
-\begin{equation}\label{eq:invariant}
+The field \(G_\Theta\) is the same \(G\), now explicitly regarded
+as a function on the cylinder. The observation becomes
+\begin{equation}\label{eq:alternative-cylinder}
  \boxed{\displaystyle
- \int_{\R^3}\rho_s(t;X)K(z,X)\dd X=H(t,z)
- \quad\hbox{for every }z\hbox{ and every admitted }s.}
+ F(z)=(1+z^2)\int_{\cC}G_\Theta(p)e^{izu(p)}\dd\mu(p).}
 \end{equation}
-The same forward integral then recovers \(H\) from the current density
-at any \(s\). An inverse transform is unnecessary for this recovery.
-We require the integrability needed to make the observation meaningful;
-for an entire spectral function, a convenient condition is
-\[
- \int_{\R^3}e^{B|\ell(X)|}|\rho_s(t;X)|\dd X<\infty
- \qquad\hbox{for every }B\ge0.
-\]
+If \(K_z(p)=\cL e^{izu(p)}\), this is simply
+\(F(z)=\int_{\cC}G_\Theta(p)K_z(p)\dd\mu(p)\).
+The completed function has been normalized to \(F(\pm i)=1\).
 
-The quantifier \emph{for every \(z\)} is substantive.
-Since \(K(0,X)=1\), conservation of total mass preserves \(H(t,0)\).
-It does not by itself preserve the other spectral values.
-The full invariant is a family of pairings with a fixed family of
-kernels. Fixing the kernel defines the observation map; requiring its
-output to stay constant is an additional condition.
-
-There are three distinct levels of preservation:
-\[
- \rho_s=\rho
- \quad\Longrightarrow\quad
- \T\rho_s=\T\rho
- \quad\Longrightarrow\quad
- \int_{\R^3}\rho_s\dd X=\int_{\R^3}\rho\dd X.
-\]
-The first fixes the spatial integrand pointwise, the second fixes every
-spectral observation, and the third fixes only total mass.
-The middle condition is the one imposed here.
-
-\subsection{Exactly what is fixed}
-
-Fourier uniqueness and \eqref{eq:factorization} make
-\eqref{eq:invariant} equivalent to
-\begin{equation}\label{eq:marginalinvariant}
- g_{\rho_s(t;\cdot)}(u)=\tfrac12q_t(u)
- \quad\hbox{for almost every }u,
+In ordinary Euclidean volume, set
+\begin{equation}\label{eq:alternative-density}
+ u(X)=\tfrac12\log|X|,\qquad
+ \rho_\Theta(X)=\frac{1+|X|^{-1}-\Theta(|X|)}{16\pi|X|^{5/2}}.
 \end{equation}
-or, equivalently,
-\begin{equation}\label{eq:sphericalinvariant}
- \overline{\rho_s}(t;r)=\rho(t;r)
- \quad\hbox{for almost every }r>0.
+Then the equivalent full-space formula is
+\begin{equation}\label{eq:alternative-euclidean}
+ \boxed{\displaystyle
+ F(z)=(1+z^2)\int_{\R^3}\rho_\Theta(X)e^{izu(X)}\dd X.}
 \end{equation}
-For integrable densities, uniqueness follows, for example, by convolving
-the difference of the marginals with a Gaussian and taking an
-approximate-identity limit. Equality on the real spectral axis suffices;
-the exponential moments justify the complex observations as well.
+Indeed, \(X=e^{2u}\omega\) gives
+\(\rho_\Theta(X)\dd X=G_\Theta(p)\dd\mu(p)\).
+The Euclidean density is integrably singular at zero, whereas the
+cylinder field is smooth. Both ordinary integrals have the strip
+\(|\operatorname{Im}z|<1\); the complete products have the entire
+continuation already described in Section~\ref{sec:continuation}.
 
-Thus preserving every integral recovers a pointwise statement
-\emph{after angular integration}: the one-dimensional integrand
-\(g_{\rho_s}(u)e^{izu}=\tfrac12q_t(u)e^{izu}\) is fixed for almost
-every \(u\). The three-dimensional integrand
-\(\rho_s(X)K(z,X)\) may still change.
-This explains how an integral-preserving requirement can retain the
-radial information that a pointwise requirement was meant to protect.
-It follows from the information seen by this particular kernel.
-
-If a later density is also radial,
-\eqref{eq:sphericalinvariant} forces it to equal the initial density.
-This is a consequence of the fixed observation map, not a dynamical
-symmetry theorem.
-
-\subsection{The nonradial freedom}
-
-Fixing a spherical average does not fix the density at every angle.
-Since the canonical density is positive for \(r>0\), the same constraint
-can be expressed as
-\begin{equation}\label{eq:angularfreedom}
- \rho_s(t;r\omega)=\rho(t;r)A_s(t;r,\omega),\qquad
- \int_{\Sph}A_s(t;r,\omega)\dd\sigma(\omega)=1.
+To display all three integration variables, take spherical angles
+\((\theta,\varphi)\). Equation~\eqref{eq:alternative-cylinder} reads
+\begin{equation}\label{eq:triple}
+ \begin{split}
+ F(z)=\frac{1+z^2}{4\pi}
+ \int_{-\infty}^\infty\int_0^\pi\int_0^{2\pi}
+ &\left[\cosh u-\tfrac12e^u\Theta(e^{2u})\right]\\[-2pt]
+ &\hspace{-18mm}\times e^{izu}\sin\theta\dd\varphi\dd\theta\dd u.
+ \end{split}
 \end{equation}
-For nonnegative densities, \(A_s\ge0\); signed densities can be
-admitted with the stated absolute-integrability condition.
-Equation~\eqref{eq:angularfreedom} is a description of the allowed
-representations, not a chosen evolution equation.
-The example \eqref{eq:angularambiguity} exhibits this freedom explicitly.
+For the initial field, angular integration returns \(4\pi\).
+Keeping the angular variables permits a later field
+\(G_s(u,\theta,\varphi)\), whose spherical mean is the datum seen
+by the observation. This normalization is an alternative presentation;
+the flow discussion below returns to \(H\).
 
-A nonradial density can change at a given spatial point while the
-average over that sphere stays fixed. Changes at different radii may
-also be coupled, provided each spherical average is retained.
-The observation does not specify how those changes should occur.
-For smooth members the gradient records their geometry through
+\section{Deformations of the generating field}
+\label{sec:flows}
+
+The initial equations do not select an auxiliary evolution. A useful
+comparison begins by distinguishing exact preservation of the observation
+from preservation up to a known nonvanishing factor. Proposition
+\ref{prop:invariant} describes the former. The latter permits a simple
+radial evolution while retaining every spectral zero and its multiplicity.
+
+\subsection{Ordinary heat on the cylinder}
+
+Let \(G_s=e^{s\Delta_{\cC}}G\), \(s\ge0\). Since the initial field
+is independent of the angles, this is ordinary heat convolution on the
+line:
+\begin{equation}\label{eq:cylinderheat}
+ G_s(u)=\frac1{\sqrt{4\pi s}}\int_{\R}
+ e^{-(u-v)^2/(4s)}G(v)\dd v,\qquad s>0.
+\end{equation}
+The kernel is positive, so \(G_s>0\). Define its observation by
+\(\mathscr H_s=\mathcal TG_s\). Fourier transformation gives
+\begin{equation}\label{eq:heat-observation}
+ \boxed{\mathscr H_s(z)=e^{-sz^2}H(0,z).}
+\end{equation}
+The identity follows directly in the strip and then defines its entire
+continuation. The Gaussian factor never vanishes, so every zero and its
+multiplicity are preserved; the original \(H\) is recovered by
+multiplication by \(e^{sz^2}\). Exact numerical values of all pairings
+are not preserved. Adopting this flow therefore requires choosing the
+weaker invariant deliberately.
+
+\subsection{Newman time in the generating variable}
+
+For the canonical family, define
+\begin{equation}\label{eq:Gt}
+ G_t(u)=4\int_{\R}e^{-|u-v|}e^{tv^2}\Phi(v)\dd v.
+\end{equation}
+Double-exponential source decay makes this well-defined for every real
+\(t\). It is positive, even, and decays at both ends. The same Green
+calculation gives
+\begin{align}
+ \cL G_t&=8e^{tu^2}\Phi(u),\label{eq:sourceflow}\\
+ 16H(t,z)&=(1+z^2)\int_{\cC}G_t(u)e^{izu}\dd\mu,
+ \qquad |\operatorname{Im}z|<1.\label{eq:time-observation}
+\end{align}
+Differentiating the source identity therefore yields
+\begin{equation}\label{eq:newman-generator}
+ \boxed{\partial_tG_t=\cL^{-1}u^2\cL G_t.}
+\end{equation}
+Here \(\cL^{-1}\) means the decaying inverse in the canonical radial
+sector. Multiplication of the exponentially decaying \(G\) itself by
+\(e^{tu^2}\) would not give this evolution, and would destroy
+integrability for \(t>0\). The time multiplier belongs to the source
+\(\cL G_t\).
+
+\subsection{An exactly soluble linear combination}
+
+For constants \(\alpha,\beta\ge0\), consider the benchmark
+\begin{equation}\label{eq:combined-generator}
+ \partial_\tau G
+ =\alpha\cL^{-1}u^2\cL G+\beta\Delta_{\cC}G.
+\end{equation}
+Whenever a spatial solution has the integrability and differentiability
+needed to take its observation, the source \(S=\cL G\) satisfies
+\(S_\tau=\alpha u^2S+\beta\Delta_{\cC}S\). Integration by parts
+then gives
+\begin{equation}\label{eq:combined-observation}
+ \partial_\tau\mathscr H
+ =-\alpha\partial_z^2\mathscr H-\beta z^2\mathscr H,
+ \qquad\mathscr H(0,z)=H(0,z).
+\end{equation}
+This implication does not assert global existence for arbitrary spatial
+initial states. The canonical observation equation has the following
+explicit analytic solution.
+
+\begin{proposition}[The linear benchmark]\label{prop:combined}
+Suppose \(\alpha\beta>0\), and put
+\begin{equation}\label{eq:combined-coeffs}
+ \begin{gathered}
+ \gamma=2\sqrt{\alpha\beta},\qquad
+ c(\tau)=\sec(\gamma\tau),\\
+ T(\tau)=\tfrac12\sqrt{\alpha/\beta}\tan(\gamma\tau),\qquad
+ b(\tau)=\tfrac12\sqrt{\beta/\alpha}\tan(\gamma\tau).
+ \end{gathered}
+\end{equation}
+Then
+\begin{equation}\label{eq:combined-solution}
+ \boxed{\displaystyle
+ \mathscr H(\tau,z)=\sqrt{c(\tau)}\,e^{-b(\tau)z^2}
+ H\bigl(T(\tau),c(\tau)z\bigr),\qquad
+ 0\le\tau<\frac{\pi}{4\sqrt{\alpha\beta}},}
+\end{equation}
+solves \eqref{eq:combined-observation}. For \(\beta=0\), the solution
+is \(H(\alpha\tau,z)\); for \(\alpha=0\), it is
+\(e^{-\beta\tau z^2}H(0,z)\).
+\end{proposition}
+\begin{proof}
+Substitute \(a(\tau)e^{-b(\tau)z^2}H(T(\tau),c(\tau)z)\)
+in \eqref{eq:combined-observation} and use \(H_t=-H_{zz}\).
+Matching the coefficients of \(H_{zz}\), \(zH_z\), \(z^2H\),
+and \(H\) gives
 \[
- j_s=A_s\,\nabla_X\rho+\rho\,\nabla_X A_s.
+ T'=\alpha c^2,\qquad c'=4\alpha bc,\qquad
+ b'=4\alpha b^2+\beta,\qquad a'/a=2\alpha b.
 \]
-In particular, an angularly varying \(A_s\) produces tangential
-components of \(j_s\), even though the initial gradient is radial.
+The functions in \eqref{eq:combined-coeffs}, with \(a=\sqrt c\),
+satisfy these equations and the initial conditions
+\(T=b=0\), \(c=a=1\). The degenerate cases follow by direct
+substitution.
+\end{proof}
 
-The same information can be stated without coordinates. Let
-\(\nu_{s,t}\) be the distribution of the fixed label \(\ell\):
+On this interval \(c>0\) and the Gaussian factor is nonzero. Thus a
+zero at \(A\) of \(H(T,\cdot)\) is carried to \(A/c\), with its
+multiplicity unchanged. This particular constant linear combination
+reparametrizes the existing Newman zeros and collisions. It supplies a
+comparison formula, rather than a new collision-exclusion mechanism.
+Nonlinear or coupled-field evolutions lie outside this statement.
+
+The two separate generators do not commute:
+\begin{equation}\label{eq:commutator}
+ [-\partial_z^2,-z^2]=4z\partial_z+2.
+\end{equation}
+Consequently, prescribing both time directions as independent equations
+requires a compatibility rule. The single combined evolution
+\eqref{eq:combined-observation} does not impose such commutation.
+
+\section{Scope of the formulation}
+\label{sec:scope}
+
+The main gain of the representation is the short chain from the theta
+series to a positive potential and then to a smooth generating field:
 \[
- \nu_{s,t}(B)=\int_{\ell^{-1}(B)}\rho_s(t;X)\dd X,
- \qquad B\subset\R\ \hbox{Borel}.
+ \Theta(r)\quad\longrightarrow\quad
+ 1+r^{-1}-\Theta(r)\quad\longrightarrow\quad
+ \cosh u-\tfrac12e^u\Theta(e^{2u}).
 \]
-Then the invariant transform is exactly the assertion
-\[
- \dd\nu_{s,t}(u)=\tfrac12q_t(u)\dd u.
-\]
-For nonnegative densities this fixed marginal also supplies every
-required exponential moment. The forward transform is therefore
-recoverable at every admitted \(s\), while the unresolved angular
-information remains in the spatial density.
+The arithmetic series remains visible throughout, while the observation
+and the differential operator acquire simple forms. Neither positivity
+nor the change of coordinates alone gives a simplicity theorem.
 
-This formulation fixes the density, gradient, kernel, and conserved
-observation before any auxiliary equation is proposed. Choosing a
-useful dynamics inside this class is a separate problem.
+For a concrete comparison, fix \(T_*>0\) and consider the positive
+even source from the investigation's founding note \cite[Note01,
+Section~7]{Archive},
+\begin{equation}\label{eq:control-source}
+ \Phi_*(u)=(64u^4+6)e^{-(4+T_*)u^2}.
+\end{equation}
+Its cosine heat observation is defined for \(\operatorname{Re}t<T_*+4\).
+Gaussian Fourier differentiation gives
+\begin{equation}\label{eq:control-event}
+ H_*(T_*,z)=\frac{\sqrt\pi}{16}
+ \left(\frac{z^2}{4}-6\right)^2e^{-z^2/16}.
+\end{equation}
+It has double zeros at \(z=\pm2\sqrt6\). Its decaying generator
+\(G_*=4e^{-|\cdot|}*\Phi_*\) is smooth, positive and even, and
+satisfies the same Green-kernel and observation identities. The linear
+benchmark carries its event whenever the transformed time lies in its
+admitted domain. This control lacks the canonical integer-square theta
+expansion, canonical completion, and double-exponential tails; no global
+finite Newman threshold is claimed for it.
 
-\section*{Acknowledgments and scope}
+The broader control register \cite{Controls} separates other missing
+premises: Euler-factor controls change the source and conductor;
+weighted-square controls lack full reflection and an all-real heat time;
+reflected and positive-primitive controls lack the canonical square
+expansion. The implications shared by these controls cannot alone
+exclude their collisions. A further argument would need a quantified
+use of additional canonical information.
+
+The present draft therefore establishes the representation and its exact
+flow comparisons, while leaving the auxiliary evolution open. Exact
+observation preservation fixes the spherical mean. Preservation up to a
+specified nonvanishing factor permits cylinder heat. Choosing between
+these requirements is part of designing the next evolution; the initial
+identities do not decide it.
+
+\section*{Acknowledgments and status}
 
 Drafted for Edward Baker with substantial assistance from OpenAI's
-GPT-6-astra in Codex, at the recorded reasoning effort \emph{max},
-28 October 2026. Edward Baker proposed separating the density from the
-spectral kernel, clarifying the transformed space and its possible
-inverse, keeping the kernel independent of the auxiliary parameter,
-and developing the setup before selecting auxiliary flows.
-The Laplacian motivation was restored at his request on 28 October 2026
-with assistance from GPT-6-astra in Codex, recorded reasoning effort
-\emph{xhigh} (chat0014).
-The aspiration to a Book exposition is an aspiration to clarity and
-economy, in the sense associated with Paul Erd\H{o}s.
+GPT-6-astra in Codex, recorded reasoning effort \emph{xhigh},
+28 October 2026, chat0015. Edward Baker requested the rewrite around the
+theta generator, the brief deformation background, and the inclusion of
+both the original notation and a separate three-dimensional normalization.
+The underlying calculations are recorded in the investigation's
+Brainstorm08--09 and earlier notes \cite{Archive}.
 
-The theta normalization and reflection are inherited from the investigation;
-Fourier inversion is classical. The calculations here organize those
-ingredients into a transform formulation. Internal checking does not
-constitute independent specialist review. No new zero-exclusion or
-de Bruijn--Newman bound is asserted.
+This is a first working draft with same-assistant analytical and layout
+checks. It has not had independent specialist review. The exact
+identities improve the formulation; no new collision exclusion or bound
+on the de Bruijn--Newman constant is asserted. The repository's result
+and pattern registers \cite{Results,Patterns} record the inherited scope.
 
 \begin{thebibliography}{9}
+\bibitem{Dobner}
+A.~Dobner, \emph{A proof of Newman's conjecture for the extended Selberg
+class}, Acta Arithmetica \textbf{201} (2021), 29--62.
+\href{https://doi.org/10.4064/aa200603-23-7}{doi:10.4064/aa200603-23-7}.
+Version consulted: \href{https://arxiv.org/abs/2005.05142v2}
+{arXiv:2005.05142v2}, 10 January 2026, Section~1.
+
 \bibitem{DLMF}
 NIST Digital Library of Mathematical Functions,
-Chapter~20, especially
-\href{https://dlmf.nist.gov/20.2.E3}{Eq.~20.2.3} and
-\href{https://dlmf.nist.gov/20.7.E32}{Eq.~20.7.32}.
-The zero-argument transformation is used in \eqref{eq:jacobi}.
-
-\bibitem{Hunter}
-J.~K. Hunter, \emph{Notes on Partial Differential Equations},
-revision 18 June 2014, Section~5.B.2, Theorem~5.66.
-\href{https://www.math.ucdavis.edu/~hunter/pdes/pde_notes.pdf}
-{Author's UC Davis notes}.
-Our forward Fourier integral has no prefactor; its inverse has
-the factor \(1/(2\pi)\) in one dimension.
+\href{https://dlmf.nist.gov/20.7.E32}{Eq.~20.7.32}, theta modularity;
+\href{https://dlmf.nist.gov/1.14.iv}{Section~1.14(iv)}, Mellin convention.
 
 \bibitem{Archive}
-E. Baker research archive, prepared with LLM assistance,
-\emph{Conservative Theta Flows and Collision Amplification},
-28 October 2026, Section~2, and Investigation05 Notes01 and25.
-This manuscript retains that definition of \(H\), while using the
-symmetric full-space density \eqref{eq:rho}.
+E.~Baker research archive, with LLM assistance,
+\emph{Radial Theta Collision Geometry}, Investigation05.
+Note01 (27 October 2026), Brainstorm08--09 (28 October 2026),
+and book change note02 (28 October 2026).
+\href{https://github.com/ebbaker/shifted-zeta-positivity/tree/main/papers/investigations-5/05_radial_theta_collision_geometry}
+{Repository investigation}; this working draft may precede its public commit.
+
+\bibitem{Controls}
+E.~Baker research archive, \emph{Collision controls and the screening
+they impose}, result summary12 and its cited source notes.
+\href{https://github.com/ebbaker/shifted-zeta-positivity/blob/main/result-summaries/12_collision_controls_and_screening.md}
+{Control register}.
+
+\bibitem{Results}
+E.~Baker research archive, \emph{Result summaries}, especially
+summary16 on geometric realizations.
+\href{https://github.com/ebbaker/shifted-zeta-positivity/tree/main/result-summaries}
+{Result index}.
+
+\bibitem{Patterns}
+E.~Baker research archive, \emph{Patterns to avoid}, especially
+01 (target classification), 02 (shared control premises),
+03 (coordinate re-realizations), and 07 (scoped exclusions).
+\href{https://github.com/ebbaker/shifted-zeta-positivity/tree/main/avoid}
+{Pattern index}.
 \end{thebibliography}
 \end{document}

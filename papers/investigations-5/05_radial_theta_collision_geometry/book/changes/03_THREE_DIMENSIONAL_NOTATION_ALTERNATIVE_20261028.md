@@ -1,0 +1,620 @@
+# Rewrite
+
+28 October 2026, America/New_York. Prepared for **Edward Baker** with
+substantial LLM assistance, **gpt-6-astra (Codex), recorded effort xhigh**.
+Chat0015, *Draft book rewrite change note*.
+
+**Status: opening plan for a complete rewrite of the book.** This note
+collects the preferred starting equations and their derivation, then
+separates material for later sections from decisions still to be made.
+The immediate deliverable is this change note; the book source has not
+yet been rewritten. This is the new planning home for the rewrite;
+[change01](01_GENERATING_FUNCTIONS_AND_KERNEL_CHANGE_WORKING_NOTE_20261028.md)
+remains the record of the earlier generating-function and kernel proposals.
+
+The main inputs are [Brainstorm09](../../brainstorm/09_GENERATING_THETA_AND_FLOW_CONTINUATION_20261028.md)
+and its derivations in [Brainstorm08](../../brainstorm/08_ZERO_TIME_RESCALINGS_AND_FLOW_BRAINSTORM_20261028.md).
+Their status remains **exact identities with proposed notation and flow
+choices**, checked by the same assistant. This rewrite is an expository
+project; it does not claim a new collision bound or an RH proof.
+
+## 1. Let the three-dimensional formula determine the notation
+
+**Editorial priority, specified by Edward Baker on 28 October 2026:**
+choose the definitions and variables to make the three-dimensional
+integral maximally simple. Use the radial integral as a derived reduction.
+The working choice is the cylinder, where the measure absorbs the radial
+weights and the observation uses an ordinary exponential character.
+
+Write a spatial point as \(p=(u,\omega)\) and set
+\[
+\mathcal C=\mathbb R\times\mathbb S^2,\qquad
+d\mu(p)=du\,d\sigma(\omega),\qquad
+d\sigma=\frac{d\omega}{4\pi},\qquad
+\int_{\mathbb S^2}d\sigma=1.
+\]
+The basic definitions are
+\[
+\boxed{
+\begin{aligned}
+\Theta(r)&=\sum_{n\in\mathbb Z}e^{-\pi n^2r^2},\\
+V(r)&=1+r^{-1}-\Theta(r),\\
+G_\Theta(p)&=\cosh u-\frac12e^u\Theta(e^{2u})
+           =\frac12e^uV(e^{2u}),\\
+F(z)&=2\xi\!\left(\frac{1+iz}{2}\right)=16H(0,z).
+\end{aligned}
+}
+\tag{R1}
+\]
+The factor in \(F\) normalizes the completed function to
+\(F(\pm i)=1\), and removes the repeated factor 16 from the main
+observation formula. This is an explicit normalization of the same
+entire function; zeros and their multiplicities are unchanged.
+
+The principal three-dimensional formula is now
+\[
+\boxed{
+F(z)=(1+z^2)\int_{\mathcal C}G_\Theta(p)e^{izu(p)}\,d\mu(p),
+\qquad |\operatorname{Im}z|<1.
+}
+\tag{R2}
+\]
+The scalar field \(G_\Theta\) is initially independent of \(\omega\),
+but its domain is the three-dimensional cylinder. Its theta definition
+stays explicit. No radial powers or additive boundary term remain in
+the pairing.
+
+Use the metric and operator
+\[
+g_{\mathcal C}=du^2+\tfrac14g_{\mathbb S^2},\qquad
+\mathcal L=1-\Delta_{\mathcal C}
+=1-\partial_u^2-4\Delta_{\mathbb S^2}.
+\]
+Then \(\mathcal Le^{izu}=(1+z^2)e^{izu}\). If kernel notation is
+useful, define \(K_z(p)=\mathcal Le^{izu(p)}\) and write simply
+\(F(z)=\int_{\mathcal C}G_\Theta(p)K_z(p)\,d\mu(p)\).
+The metric volume is \(dV_{\mathcal C}=\pi d\mu\); normalizing the
+angular measure is a stated convention, not an omitted volume factor.
+
+For an ordinary Euclidean-volume integral, put
+\[
+X=(X_1,X_2,X_3),\qquad r=|X|,\qquad
+u(X)=\tfrac12\log r,\qquad
+\rho_\Theta(X)=\frac{1+r^{-1}-\Theta(r)}{16\pi r^{5/2}}.
+\]
+The same observation has the identical short form
+\[
+\boxed{
+F(z)=(1+z^2)\int_{\mathbb R^3}
+\rho_\Theta(X)e^{izu(X)}\,dX,
+\qquad dX=dX_1\,dX_2\,dX_3.
+}
+\tag{R2a}
+\]
+Here the radial weight is in the explicitly defined density.
+The potential \(V\) is smooth at the origin; \(\rho_\Theta\) is
+integrably singular there. The cylinder formula avoids this singular
+density, which is a reason to prefer it for the book's main notation.
+The exact conversion is
+\[
+X=e^{2u}\omega,\qquad dX=8\pi r^3d\mu,
+\qquad \rho_\Theta(X)\,dX=G_\Theta(p)\,d\mu(p).
+\]
+
+The corresponding field equations are
+\[
+-\Delta_XV(|X|)=(\Delta_3\Theta)(|X|),\qquad
+\mathcal LG_\Theta=8\Phi(u).
+\]
+The first holds on the whole space with the central point sources
+cancelled, and the second uses the cylinder operator above. Writing
+\(G(u)=G_\Theta(u,\omega)\) for the initial radial profile and integrating
+the angles gives the secondary one-dimensional formulas
+\[
+(1-\partial_u^2)G=8\Phi,\qquad
+F(z)=(1+z^2)\int_{\mathbb R}G(u)e^{izu}\,du.
+\tag{R2b}
+\]
+
+The ordinary integrals (R2), (R2a) and (R2b) converge in the same strip
+\(|\operatorname{Im}z|<1\); their complete products continue to the
+entire \(F\). The factor \(1+z^2\) records the differential operator.
+Absorbing it into \(K_z\) shortens the notation without changing the
+target; discarding it would instead give \(F/(1+z^2)\), which has poles
+at \(z=\pm i\).
+
+The proposed first section is **“From the Riemann xi function to the theta
+generator.”** It should derive (R2) in three dimensions. The following
+derivation retains \(H\) as a cross-reference to the research notes;
+the proposed book should use \(F\) in its principal zero-time formulas.
+The spatial field, measure and kernel should be defined before any radial
+reduction. These presentation choices use the same recorded model and
+effort as the note header.
+
+
+## 2. Proposed opening section: the derivation
+
+### 2.1. The function, the deformation, and the background
+
+Use the opening progression of
+[Dobner, arXiv:2005.05142v2, Section 1](https://arxiv.org/html/2005.05142v2#S1)
+as a model: completed function, Fourier representation, source deformation,
+and the de Bruijn–Newman threshold. Keep this background brief, then turn
+to the spatial generator that is the subject of this book.
+
+Start with
+\[
+\xi(\lambda)=\frac12\lambda(\lambda-1)\pi^{-\lambda/2}
+\Gamma(\lambda/2)\zeta(\lambda),
+\qquad \xi(1-\lambda)=\xi(\lambda).
+\tag{R3}
+\]
+With \(\lambda=(1+iz)/2\), the critical line becomes the real
+\(z\)-axis. Preserve the investigation's normalization:
+\[
+\begin{aligned}
+\Phi(u)&=\sum_{n\ge1}
+ \bigl(2\pi^2n^4e^{9u}-3\pi n^2e^{5u}\bigr)
+ e^{-\pi n^2e^{4u}},\\
+H(t,z)&=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\,du
+       =\frac12\int_{\mathbb R}e^{tu^2}\Phi(u)e^{izu}\,du,\\
+8H(0,z)&=\xi\!\left(\frac{1+iz}{2}\right).
+\end{aligned}
+\tag{R4}
+\]
+The source is even and decays faster than any Gaussian at both ends;
+the integral defines an entire function of \(z\) for every real \(t\).
+Differentiation gives
+\[
+\boxed{\partial_tH=-\partial_z^2H.}
+\tag{R5}
+\]
+This is backward heat in the real spectral coordinate for increasing
+\(t\). The source-defined analytic family is the intended meaning of
+this equation; it is not an arbitrary backward-heat initial-value problem.
+
+The classical background is that there is a real constant \(\Lambda\)
+such that \(H(t,\cdot)\) has only real zeros exactly when
+\(t\ge\Lambda\). RH is equivalent to \(\Lambda\le0\), and the
+theorem \(\Lambda\ge0\) makes RH equivalent to \(\Lambda=0\).
+Dobner's introduction describes this deformation viewpoint and the
+historical role of Pólya, de Bruijn, Newman, and Rodgers–Tao; his article
+also proves nonnegativity in the extended Selberg class. This supplies
+background, not a claim that the new geometry inherits a collision theorem.
+
+**Normalization note.** Dobner's source in equation (2) is \(4\Phi\)
+in our notation, so his \(\xi_t((1+iz)/2)=8H(t,z)\), with the same
+time parameter. Consequently \(16H(0,z)=2\xi((1+iz)/2)\).
+Keep this one conversion explicit instead of silently renormalizing
+\(H\). Reserve \(\lambda\) for the completed-function coordinate,
+\(t\) for Newman time, and \(s\) for a possible auxiliary time.
+
+Now set \(t=0\). The rest of the opening derives the initial spatial
+state; subsequent evolution can be introduced after that state is clear.
+
+### 2.2. The theta source selects the radial Laplacian
+
+Set
+\[
+A(r)=\sum_{n\ge1}e^{-\pi n^2r^2},\qquad
+\Theta(r)=1+2A(r),\qquad r=e^{2u}.
+\tag{R6}
+\]
+For a radial Gaussian in dimension \(d\),
+\[
+\Delta_d e^{-\pi n^2r^2}
+=(4\pi^2n^4r^2-2d\pi n^2)e^{-\pi n^2r^2}.
+\]
+Matching the coefficient \(-3\pi n^2\) in (R4) selects \(d=3\)
+within this radial Gaussian realization. Thus
+\[
+\boxed{
+\Phi(u)=\frac14r^{5/2}\Delta_3\Theta(r),
+\qquad \Delta_3=\partial_r^2+\frac2r\partial_r.
+}
+\tag{R7}
+\]
+The arithmetic summation remains one-dimensional: \(n\in\mathbb Z\).
+The three-dimensional space comes from the differential operator.
+
+The Jacobi relation becomes Kelvin symmetry:
+\[
+\Theta(r)=r^{-1}\Theta(1/r),\qquad
+(\Delta_3\Theta)(r)=r^{-5}(\Delta_3\Theta)(1/r).
+\tag{R8}
+\]
+For \(r\ge1\), every summand of
+\[
+\Delta_3\Theta(r)=4\pi\sum_{n\ge1}
+n^2(2\pi n^2r^2-3)e^{-\pi n^2r^2}
+\]
+is positive. Reflection gives positivity for every \(r>0\), and (R7)
+gives the evenness of \(\Phi\). These short calculations explain the
+source properties used in the introductory Fourier formula.
+
+### 2.3. Harmonic subtraction gives a smooth positive potential
+
+Define
+\[
+\boxed{V(r)=1+r^{-1}-\Theta(r)=r^{-1}-2A(r).}
+\tag{R9}
+\]
+Modularity supplies the complementary expression
+\(V(r)=1-2r^{-1}A(1/r)\) near the origin. Hence \(V(|X|)\) is smooth
+on all of \(\mathbb R^3\), \(V(0)=1\), and its positive-order
+derivatives vanish at zero. At infinity, \(V(r)\sim r^{-1}\).
+There is no interface at the unit sphere. Moreover,
+\[
+\boxed{
+V(r)=r^{-1}V(1/r),\qquad
+-\Delta_XV(|X|)=(\Delta_3\Theta)(|X|).
+}
+\tag{R10}
+\]
+Here the right side means the regular radial derivative. The central
+point sources of \(1/r\) and \(\Theta\) cancel in their difference,
+so (R10) also holds distributionally on the whole space.
+
+The potential has the useful positive representation
+\[
+V(r)=\frac1r\int_0^r a^2\Delta_3\Theta(a)\,da
+       +\int_r^\infty a\Delta_3\Theta(a)\,da>0,
+\qquad
+\int_0^\infty a^2\Delta_3\Theta(a)\,da=1.
+\tag{R11}
+\]
+This identifies the subtraction as the decaying Newtonian potential of
+the positive radial source, with its normalization fixed.
+
+The original Euclidean observation and its potential form are
+\[
+\begin{aligned}
+H(0,z)&=\frac1{64\pi}\int_{\mathbb R^3}
+(\Delta_3\Theta)(|X|)|X|^{-1/2+iz/2}\,dX,\\
+H(0,z)&=\frac{1+z^2}{256\pi}\int_{\mathbb R^3}
+[1+|X|^{-1}-\Theta(|X|)]|X|^{-5/2+iz/2}\,dX.
+\end{aligned}
+\tag{R12}
+\]
+The first integral is entire in \(z\); the second converges for
+\(|\operatorname{Im}z|<1\). The calculation behind the second line is
+just Green's identity and
+\[
+-\Delta_3r^{-1/2+iz/2}
+=\frac{1+z^2}{4}r^{-5/2+iz/2}.
+\]
+If \(b=\operatorname{Im}z\), its radial integrand behaves as
+\(r^{-1/2-b/2}\) at zero and \(r^{-3/2-b/2}\) at infinity.
+These powers give exactly the stated strip and make the Green boundary
+terms vanish there. Although \(V\) is smooth, the weighted density
+\(V(r)r^{-5/2}\) relative to Euclidean volume is singular at zero.
+
+### 2.4. The square-root rescaling turns inversion into reflection
+
+Introduce
+\[
+\boxed{
+u=\frac12\log r,\qquad
+G(u)=\frac12\sqrt r\,V(r)
+=\cosh u-\frac12e^u\Theta(e^{2u}).
+}
+\tag{R13}
+\]
+This rescaling has two reasons. First, multiplying a Kelvin-symmetric
+profile by \(\sqrt r\) converts inversion \(r\mapsto1/r\) into
+ordinary reflection \(u\mapsto-u\). Second, it removes the first
+derivative from the logarithmic radial Laplacian. Indeed, for
+\(x=\log r\),
+\[
+\Delta_X[r^{-a}F(x,\omega)]
+=r^{-a-2}[\partial_x^2+(1-2a)\partial_x+
+\Delta_{\mathbb S^2}+a(a-1)]F,
+\]
+so \(a=1/2\) is the unique power with no \(\partial_x\) term.
+
+The resulting \(G\) is smooth, positive and even, with
+\[
+G(u)=\frac12e^{-|u|}-e^{|u|}A(e^{2|u|})
+\sim\frac12e^{-|u|}.
+\tag{R14}
+\]
+Applying \(1-\partial_u^2\) to (R13) gives the first identity in
+(R2b). Equivalently,
+\[
+\boxed{G(u)=4\int_{\mathbb R}e^{-|u-v|}\Phi(v)\,dv.}
+\tag{R15}
+\]
+This is the unique solution of \((1-\partial_u^2)G=8\Phi\) decaying
+at both ends. The positive Green kernel explains both positivity and
+the exponential tails. Fourier transformation gives the second identity
+in (R2b), with the normalization \(F=16H(0,\cdot)\).
+
+### 2.5. Retain the geometry on the cylinder
+
+The same change of variables gives
+\[
+\begin{gathered}
+\mathcal C=\mathbb R\times\mathbb S^2,\qquad
+g_{\mathcal C}=du^2+\tfrac14g_{\mathbb S^2},\\
+d\mu=du\,\frac{d\omega}{4\pi}
+=\frac{dX}{8\pi|X|^3},\qquad
+\Delta_{\mathcal C}=\partial_u^2+4\Delta_{\mathbb S^2},\qquad
+\mathcal L=1-\Delta_{\mathcal C}.
+\end{gathered}
+\tag{R16}
+\]
+Use the convention that the spherical Laplacian has eigenvalues
+\(-\ell(\ell+1)\). The cylinder volume is \(dV_{\mathcal C}=\pi d\mu\),
+and the Euclidean metric is \(4e^{4u}g_{\mathcal C}\).
+Thus the product metric is conformally related to Euclidean space.
+The operator relation is
+\[
+\Delta_X[r^{-1/2}F(u,\omega)]
+=-\frac14r^{-5/2}\mathcal L F.
+\tag{R17}
+\]
+
+The opening section can now end with its principal geometric equations:
+\[
+\boxed{
+\begin{gathered}
+G(u)=\cosh u-\tfrac12e^u\Theta(e^{2u}),\qquad \mathcal LG=8\Phi,\\
+\mathcal Le^{izu}=(1+z^2)e^{izu},\\
+16H(0,z)=\int_{\mathcal C}G(u)\mathcal Le^{izu}\,d\mu
+       =(1+z^2)\int_{\mathcal C}G(u)e^{izu}\,d\mu,
+\quad |\operatorname{Im}z|<1.
+\end{gathered}
+}
+\tag{R18}
+\]
+The initial field is constant in the angular variables. Later fields
+may depend on them. Throughout, the field is independent of \(z\),
+while the observation character is fixed.
+
+For a fully expanded three-dimensional integral, write
+\(\omega=(\sin\theta\cos\varphi,\sin\theta\sin\varphi,\cos\theta)\).
+Then (R18) is
+\[
+\boxed{
+16H(0,z)=\frac{1+z^2}{4\pi}
+\int_{-\infty}^{\infty}\int_0^\pi\int_0^{2\pi}
+\left[\cosh u-\tfrac12e^u\Theta(e^{2u})\right]
+e^{izu}\sin\theta\,d\varphi\,d\theta\,du.
+}
+\tag{R18a}
+\]
+The two angular integrations produce \(4\pi\) for the canonical radial
+state. Keeping them visible also leaves room for a later field
+\(G_s(u,\theta,\varphi)\); the observation then depends on its spherical
+mean, as discussed in Section 4.
+
+## 3. Two short companion results
+
+These clarify the opening without needing to become competing main
+notations. They can appear as remarks immediately after (R18).
+
+**Mellin form and functional equation.** With \(\lambda=(1+iz)/2\),
+\[
+\boxed{
+16H(0,z)=2\xi(\lambda)
+=\lambda(1-\lambda)\int_0^\infty
+[1+r^{-1}-\Theta(r)]r^{\lambda-1}\,dr,
+\qquad 0<\operatorname{Re}\lambda<1.
+}
+\tag{R19}
+\]
+Substitution \(r\mapsto1/r\) makes the Mellin integral invariant under
+\(\lambda\mapsto1-\lambda\). This places the functional equation,
+Kelvin inversion and reflection of \(G\) in one chain. The real
+\(z\)-axis corresponds to \(\operatorname{Re}\lambda=1/2\).
+
+**An entire-integral companion.** Put
+\[
+P(u)=e^{|u|}A(e^{2|u|}),\qquad
+G(u)=\tfrac12e^{-|u|}-P(u).
+\]
+Then
+\[
+\boxed{
+16H(0,z)=1-(1+z^2)\int_{\mathbb R}P(u)e^{izu}\,du,
+\qquad z\in\mathbb C.
+}
+\tag{R20}
+\]
+The \(P\) integral is entire, but \(P'\) has a jump of \(-1\) at zero.
+The two cusp contributions cancel in \(G\). Formula (R20) also proves
+that the apparent zeros at \(z=\pm i\) in (R18) are spurious:
+the \(G\) integral diverges there, while its continued product gives
+\(H(0,\pm i)=1/16\). The additive constant in (R20) is essential.
+
+**Working recommendation:** lead with the three-dimensional cylinder
+formula (R2), the normalized function \(F\), and the smooth \(V,G\) formulation
+and its strip, and use (R20) to explain entire continuation. This is a
+proposed editorial choice for the rewrite, not a silent change to the
+admissible fields or to the auxiliary-flow invariant.
+
+## 4. Elegant results to reserve for the later flow section
+
+The opening needs only the historical heat flow (R5). The following
+results from Brainstorm08 belong after the initial geometry is established.
+
+### Exact observation preservation determines the spherical mean
+
+For integrable cylinder fields define
+\[
+\mathscr H_s(z)=\frac{1+z^2}{16}
+\int_{\mathcal C}G_s(u,\omega)e^{izu}\,d\mu.
+\]
+If \(\mathscr H_s(z)=H(0,z)\) for every real \(z\), Fourier uniqueness
+implies \(\int_{\mathbb S^2}G_s(u,\omega)\,d\sigma=G(u)\) almost
+everywhere. Thus exact preservation permits angular changes but fixes the
+radial mean. A unique rotation-equivariant evolution from radial data
+stays radial unless additional structure is supplied.
+
+At a real mark \(a\), a zero and simultaneous first-derivative zero are
+exactly the cancellations
+\[
+\int_{\mathbb R}G(u)e^{iau}\,du=0,\qquad
+\int_{\mathbb R}iuG(u)e^{iau}\,du=0.
+\tag{R21}
+\]
+These characterize multiplicity at least two. They supply a clear
+diagnostic, not an exclusion of the event.
+
+### Cylinder heat preserves the zeros through a known factor
+
+For \(s\ge0\),
+\[
+\boxed{
+\partial_sG_s=\Delta_{\mathcal C}G_s
+\quad\Longrightarrow\quad
+\mathscr H_s(z)=e^{-sz^2}H(0,z).
+}
+\tag{R22}
+\]
+The pairing proves the identity in the strip; the right side supplies
+its entire continuation. Every zero and its multiplicity are preserved.
+This is available if the required invariant is broadened from equality
+of every observation to equality up to a known nonvanishing factor.
+That choice remains open.
+
+### Newman flow in the same variable
+
+On the canonical radial class, define the decaying inverse by
+\[
+G_t(u)=4\int_{\mathbb R}e^{-|u-v|}e^{tv^2}\Phi(v)\,dv.
+\]
+Then
+\[
+\boxed{
+\mathcal LG_t=8e^{tu^2}\Phi,\qquad
+\partial_tG_t=\mathcal L^{-1}u^2\mathcal LG_t.
+}
+\tag{R23}
+\]
+This source-defined evolution is not multiplication of \(G\) by
+\(e^{tu^2}\). The latter would destroy integrability for \(t>0\).
+
+### The constant linear combination is exactly soluble
+
+For constants \(\alpha,\beta\ge0\), the benchmark
+\[
+\partial_\tau G=\alpha\mathcal L^{-1}u^2\mathcal LG
+                    +\beta\Delta_{\mathcal C}G
+\]
+induces
+\[
+\partial_\tau\mathscr H=-\alpha\mathscr H_{zz}-\beta z^2\mathscr H.
+\tag{R24}
+\]
+If \(\alpha\beta>0\), put
+\[
+\gamma=2\sqrt{\alpha\beta},\quad
+c=\sec(\gamma\tau),\quad
+T=\tfrac12\sqrt{\alpha/\beta}\tan(\gamma\tau),\quad
+b=\tfrac12\sqrt{\beta/\alpha}\tan(\gamma\tau).
+\]
+The canonical observation has the exact solution
+\[
+\boxed{
+\mathscr H(\tau,z)=\sqrt{c(\tau)}e^{-b(\tau)z^2}
+H(T(\tau),c(\tau)z),
+\qquad 0\le\tau<\frac{\pi}{4\sqrt{\alpha\beta}}.
+}
+\tag{R25}
+\]
+Substitution uses \(T'=\alpha c^2\), \(c'=4\alpha bc\),
+\(b'=4\alpha b^2+\beta\), and \((\log\sqrt c)'=2\alpha b\).
+The limits are \(H(\alpha\tau,z)\) when \(\beta=0\) and
+\(e^{-\beta\tau z^2}H(0,z)\) when \(\alpha=0\).
+The nonvanishing factor and positive rescaling transport precisely the
+Newman zeros and their multiplicities over this interval. This benchmark
+therefore adds no new collision exclusion by itself. It is a comparison
+for this constant-coefficient linear combination, not a limitation on
+all nonlinear or coupled-field flows. Nor does the observation formula
+assert global existence for arbitrary spatial initial data.
+
+Finally,
+\[
+[-\partial_z^2,-z^2]=4z\partial_z+2,
+\tag{R26}
+\]
+so independently prescribing both time directions requires a compatibility
+rule. One combined evolution parameter avoids imposing commuting flows.
+
+## 5. Provisional architecture and the next planning decisions
+
+| Book section | Intended job |
+| --- | --- |
+| 1. From xi to the theta generator | Brief deformation background, then derive (R18), with (R19)–(R20) as companion remarks. |
+| 2. Observation, symmetry and information | Define the state space, convergence, spherical mean, radial inverse, and zero multiplicity. |
+| 3. Deforming the spatial state | State the chosen invariant before introducing an auxiliary evolution; compare (R22)–(R25). |
+| 4 onward | Plan after the geometry and invariant are settled; introduce any collision mechanism with its actual additional estimate. |
+
+Keep \(\Theta\) primary and introduce \(A,V,G\) through their displayed
+formulas. Carry the existing book's Gaussian/Laplacian motivation forward,
+but rebuild its density and inverse discussion for the new state and
+measure. The old Schwartz-density assumptions cannot simply be inherited
+by the exponentially decaying \(G\) or the weighted Euclidean potential.
+
+Three choices remain for the next planning discussion:
+
+1. Adopt the smooth strip representation as the main formulation, with
+   the entire companion as a supporting remark, or require an everywhere
+   convergent defining integral.
+2. Use the cylinder as the principal geometry for evolution, with Euclidean
+   space explaining its origin, or keep the Euclidean potential primary.
+3. Require exact preservation of the observation, or allow a specified
+   nonvanishing factor. The latter admits (R22); it should be an explicit
+   design decision before choosing a new flow.
+
+The current recommendation is to write Section 1 through (R18) first,
+keeping these later evolution choices visible. There is no need to choose
+a nonlinear mechanism in order to explain the initial equations well.
+
+## 6. Scope, control comparison and provenance
+
+The [result index](../../../../../result-summaries/README.md), especially
+[geometric realizations](../../../../../result-summaries/16_hypercomplex_reductions_and_geometric_realizations.md),
+and the [pattern index](../../../../../avoid/README.md), especially
+[target classification](../../../../../avoid/01_restating_the_target.md),
+[shared control premises](../../../../../avoid/02_shape_only_arguments_and_the_controls.md),
+[coordinate re-realizations](../../../../../avoid/03_lifts_and_re_realizations_in_new_coordinates.md)
+and [scoped exclusions](../../../../../avoid/07_scoped_exclusions_read_as_universal.md),
+set the interpretation: these identities make an existing observation
+more transparent. No numerical estimate toward collision exclusion is
+being claimed.
+
+The analytical control comparison is inherited from
+[the control register](../../../../../result-summaries/12_collision_controls_and_screening.md)
+and [Note01, Section 7](../../notes/01_RADIAL_THETA_GEOMETRY_AND_COLLISION_MECHANISMS_20261027.md):
+
+| Control | Premise it does not share with the canonical application |
+| --- | --- |
+| Euler-factor threshold controls | The unchanged theta source and its canonical conductor. |
+| Weighted-square controls | Full source reflection and a global all-real heat time; matching finitely many endpoints does not give these. |
+| Reflected super-Gaussian and positive-primitive controls | The canonical integer-square theta expansion. |
+| Note01's positive Gaussian-polynomial double-zero control | The integer-square theta expansion, canonical completion and double-exponential tails; its heat family has only the stated local time domain. |
+
+The Green-kernel, Fourier and constant linear-flow calculations do not
+use the full canonical arithmetic to separate these controls. In
+particular (R25) transports Note01's double event whenever its source
+family is defined at \(T(\tau)\). Positivity and smoothness therefore
+are not presented as a simplicity theorem. No new numerical control run
+or independent review is claimed.
+
+Dobner v2's introduction and equations (1)–(2) were checked online on
+28 October 2026 for the opening progression and normalization. The
+[existing canonical reference annotation](../../../04_three_regime_heat_flow_dynamics/references/01_DOBNER_FUNCTIONAL_APPROXIMATION_20261026.md)
+retains the PDF provenance; its already archived reading copy was reused
+and its header, size and SHA-256 rechecked. This use does not audit the
+full proof or import its later approximation estimates. The investigation's
+[reference catalog](../../references/sources.json) records this selected
+inspection. The derivations of the spatial identities remain in
+Brainstorm08; the constants, strip, endpoint values and flow substitution
+were checked again while preparing this plan.
+
+Future manuscript text should retain **Edward Baker** in the author
+field, or state that it was drafted for him, and include an appropriate
+acknowledgement of LLM assistance. This planning note creates no manuscript
+snapshot and does not mark the rewrite as completed.

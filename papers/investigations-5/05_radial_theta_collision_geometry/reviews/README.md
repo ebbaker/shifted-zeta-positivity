@@ -41,3 +41,10 @@
 - [19 — Conservative-feedback manuscript integration](19_CONSERVATIVE_FEEDBACK_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261028.md): same-assistant source/claim consistency assessment, compiled 27-page layout check, control and remaining-estimate scope. No independent review or new theta exclusion. For Edward Baker with LLM assistance, gpt-6-astra / max, chat0011, 28 October 2026.
 
 - [20 - Fixed theta transform setup](20_BOOK_TRANSFORM_SETUP_ASSESSMENT_20261028.md): same-assistant check of the whole-space normalization, restricted inverse, fixed-kernel invariant, angular freedom and eight-page manuscript layout. No auxiliary flow or new collision exclusion. Prepared for Edward Baker with LLM assistance, gpt-6-astra / max, 28 October 2026, chat0013.
+
+- [21 - Book rewrite assessment](21_BOOK_REWRITE_ASSESSMENT_20261028.md):
+  original H,V,G derivation and separate normalized three-dimensional
+  section, constants, strip/continuation, inverse, flow comparison, and
+  11-page layout checks. Same-assistant checking; no new collision
+  exclusion. Prepared for Edward Baker with LLM assistance,
+  gpt-6-astra / xhigh, 28 October 2026, chat0015.

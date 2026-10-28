@@ -17,6 +17,8 @@
 | 28 October 2026 | 05 theta transform setup | [Book companion](book/main.tex); working tree, hashes in record18, no commit assigned | Spectral-independent density, fixed kernel, restricted inverse and exact invariant marginal; eight-page setup without selecting auxiliary flows | [Brainstorm06](brainstorm/06_BOOK_TRANSFORM_SETUP_20261028.md), [Review20](reviews/20_BOOK_TRANSFORM_SETUP_ASSESSMENT_20261028.md), [record18](numerics/18_BOOK_TRANSFORM_SETUP_BUILD_RECORD_20261028.json) |
 | 28 October 2026 | 05 theta transform motivation | [Book companion](book/main.tex); working tree, hashes in record19, no commit assigned | Opens with the Gaussian coefficient match selecting the radial Laplacian in dimension three, the primitive identity, and the logarithmic-radius kernel motivation; kernel choice remains open | [Founding Note01](notes/01_RADIAL_THETA_GEOMETRY_AND_COLLISION_MECHANISMS_20261027.md), [Continuation07](brainstorm/07_NATURAL_AUXILIARY_EVOLUTION_CONTINUATION_20261028.md), [record19](numerics/19_BOOK_LAPLACIAN_MOTIVATION_BUILD_RECORD_20261028.json) |
 
+| 28 October 2026 | 05 theta transform book rewrite | [Book](book/main.tex); working tree, hashes in record20, no commit assigned | Original H,V,G formulation drafted through the theta potential and cylinder, with normalized three-dimensional notation retained separately in Section 4; 11-page reading copy | [Change02](book/changes/02_REWRITE_20261028.md), [preserved change03](book/changes/03_THREE_DIMENSIONAL_NOTATION_ALTERNATIVE_20261028.md), [Review21](reviews/21_BOOK_REWRITE_ASSESSMENT_20261028.md), [record20](numerics/20_BOOK_REWRITE_BUILD_RECORD_20261028.json) |
+
 The investigation has the conservative-flow manuscript in its base and the new setup companion in book/main.tex; there is no snapshot directory. Historical builds have source/PDF hashes; Note34 identifies the current source and built-in-only compilation, while the E04 temporary layout-check record remains historical; no commit or tag is invented. Future committed milestones should link to their actual commit or tag and concise supporting records.
 
 Integration entry prepared for Edward Baker with substantial LLM assistance, gpt-6-astra, actual effort max, chat0011, 28 October 2026.
@@ -26,3 +28,5 @@ Editorial refocus entry prepared for Edward Baker with substantial LLM assistanc
 Book setup entry prepared for Edward Baker with substantial LLM assistance, gpt-6-astra, actual effort max, chat0013, 28 October 2026.
 
 Laplacian motivation entry prepared for Edward Baker with substantial LLM assistance, gpt-6-astra, recorded effort xhigh, chat0014, 28 October 2026.
+
+Book rewrite entry prepared for Edward Baker with substantial LLM assistance, gpt-6-astra, recorded effort xhigh, chat0015, 28 October 2026.

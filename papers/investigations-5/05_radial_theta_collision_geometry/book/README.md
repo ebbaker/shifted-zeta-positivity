@@ -1,43 +1,42 @@
 # The theta transform in three dimensions
 
 28 October 2026. Drafted for Edward Baker with substantial LLM assistance,
-**gpt-6-astra (Codex), recorded effort max**, chat0013.
+**gpt-6-astra (Codex), recorded effort xhigh**, chat0015.
 
-The [manuscript](main.tex) opens with the Gaussian coefficient derivation
-of the three-dimensional radial Laplacian from
-[Note01](../notes/01_RADIAL_THETA_GEOMETRY_AND_COLLISION_MECHANISMS_20261027.md),
-the earlier primitive identity, and the resulting logarithmic-radius
-observation. It then sets up the density, spatial variables, fixed
-observation kernel, restricted inverse, and meaning of a collision under
-the transform. The kernel is independent of the auxiliary parameter; the
-density is independent of the spectral argument. No auxiliary evolution
-is selected.
+The [current book draft](main.tex) follows the restored
+[rewrite plan](changes/02_REWRITE_20261028.md). Section 1 starts with xi
+and the de Bruijn-Newman deformation, then derives the smooth theta
+potential V, the rescaled generator G, and the cylinder equations using
+the original H normalization. Sections 2–3 treat Mellin symmetry, entire
+continuation, spherical means, inversion, and spectral cancellation.
 
-The distinction between preserving a density, preserving every spectral
-observation, and preserving total mass appears in Section 6. For this
-logarithmic-radius kernel, preserving every observation fixes the
-spherical average at each radius, while allowing nonradial densities.
+Section 4 separately presents the normalized three-dimensional notation.
+Its [alternative planning note](changes/03_THREE_DIMENSIONAL_NOTATION_ALTERNATIVE_20261028.md)
+is preserved unchanged from before the reversion. Both approaches are
+therefore available without replacing the main notation. Section 5 gives
+the cylinder heat, transported Newman, and exact linear-combination
+comparisons; Section 6 retains the control scope and open flow choice.
 
-The local [nine-page reading copy](../../../../output/pdf/radial-theta-collision-geometry-book/theta-transform.pdf)
+The [11-page reading copy](../../../../output/pdf/radial-theta-collision-geometry-book/theta-transform.pdf)
 is generated and ignored by Git. Open this folder in the built-in LaTeX
-editor to edit the source and preview it. A terminal build, from this
-folder, is:
+editor for the editable source and live preview. To build from this folder:
 
     latexmk -pdf -interaction=nonstopmode -halt-on-error \
       -outdir=../../../../output/pdf/radial-theta-collision-geometry-book main.tex
 
-This command produces main.pdf in the shared output folder; the delivered
-reading copy is named theta-transform.pdf. Working PDFs do not belong in
-this source folder.
+That command produces main.pdf; the delivered reading copy is named
+theta-transform.pdf. Working PDFs remain outside the source folder.
 
-[Research note](../brainstorm/06_BOOK_TRANSFORM_SETUP_20261028.md),
-[same-assistant assessment](../reviews/20_BOOK_TRANSFORM_SETUP_ASSESSMENT_20261028.md),
-and [build record](../numerics/18_BOOK_TRANSFORM_SETUP_BUILD_RECORD_20261028.json)
-record the choices and verification. The existing conservative-flow
-manuscript remains a separate research document.
+[Assessment21](../reviews/21_BOOK_REWRITE_ASSESSMENT_20261028.md) and
+[build record20](../numerics/20_BOOK_REWRITE_BUILD_RECORD_20261028.json)
+record the analytical and all-page layout checks. The draft compiled
+successfully locally and in the desktop editor. No new collision
+exclusion or independent specialist review is claimed.
 
-Laplacian motivation revision: 28 October 2026, drafted for Edward Baker
-with substantial LLM assistance, **gpt-6-astra (Codex), recorded effort
-xhigh**, chat0014. The exponential kernel remains a working choice.
-[Revision build record](../numerics/19_BOOK_LAPLACIAN_MOTIVATION_BUILD_RECORD_20261028.json)
-records the current nine-page build; record18 describes the earlier setup.
+Earlier setup and motivation remain documented in
+[Brainstorm06](../brainstorm/06_BOOK_TRANSFORM_SETUP_20261028.md),
+[Assessment20](../reviews/20_BOOK_TRANSFORM_SETUP_ASSESSMENT_20261028.md),
+and build records [18](../numerics/18_BOOK_TRANSFORM_SETUP_BUILD_RECORD_20261028.json)
+and [19](../numerics/19_BOOK_LAPLACIAN_MOTIVATION_BUILD_RECORD_20261028.json).
+The separate conservative-flow manuscript remains in the investigation
+root. No manuscript snapshot folder was created.

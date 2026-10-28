@@ -97,3 +97,13 @@ that survives the Newman deformation and fails for the controls (Review 16
 - **Angular localization and induced norms (27 October 2026).** [Review12](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/12_RADIAL_INVARIANT_AND_ANGULAR_FLOW_SELF_ASSESSMENT_20261027.md) states: “Angular concentration does not, by itself, exclude a collision.” The explicit flows retain the radial integrand and colliding controls; a complete energy in the induced weight pulls back to the original identity, while an ordinary full source norm with radial weight cannot decrease. This scopes those comparisons, not signed tube estimates or general nonmultiplicative deformations. The finite-parameter construction is a structural result, not a theta sign estimate. Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort max**.
 
 - **Conservative collision diagnostics (27 October 2026).** [Review14](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/14_PROJECTED_FLOW_MANUSCRIPT_AND_COLLISION_SCOPE_20261027.md) states: “Source-cost decrease and loss of a leading diffusion mode are not, by themselves, a collision-excluding estimate.” The projected-flow theorem and conservative heat diagnostic are genuine stated construction results, but the exact control also has the two vanished leading coefficients. The user now permits radial redistribution with only the entire integral fixed. The earlier fixed-marginal symmetry limitation does not exclude this wider class; a useful amplification and canonical estimate remain open. Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort max**; same-assistant assessment.
+
+
+- **Theta-generator linear benchmark (28 October 2026).**
+  [Assessment21](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/21_BOOK_REWRITE_ASSESSMENT_20261028.md)
+  states: “The linear combination transports existing zeros; it supplies no
+  additional collision exclusion.” The scoped result concerns the constant
+  nonnegative linear combination of Newman and cylinder heat on its stated
+  interval. The positive control is transported as well; nonlinear and
+  coupled-field constructions remain outside this conclusion. Prepared for
+  Edward Baker with LLM assistance, **gpt-6-astra / xhigh**, chat0015.

@@ -38,3 +38,17 @@ The [projected evolution and elliptic response annotation](10_PROJECTED_EVOLUTIO
 - [11 — Conservative feedback and diffusion contraction](11_CONSERVATIVE_FEEDBACK_AND_DIFFUSION_CONTRACTION_20261028.md): Hunter heat-smoothing/contraction template and Eberle v3 synchronous-coupling context for Note28; selected passages checked, external PDF receipt retained. 28 October 2026; gpt-6-astra, actual effort max.
 
 - [12 — General relative entropy and the carrier comparison](12_GENERAL_RELATIVE_ENTROPY_CARRIER_COMPARISON_20261028.md): classical attribution for Note29; selected lemma checked and public author PDF archived externally. 28 October 2026; prepared for Edward Baker with LLM assistance, gpt-6-astra, actual effort max, chat0010.
+
+The [zero-time rescaling brainstorm](../brainstorm/08_ZERO_TIME_RESCALINGS_AND_FLOW_BRAINSTORM_20261028.md) records selected online inspection of DLMF20.7.32 and 1.14.32 with its following convergence-strip statement. The potential, square-root conjugation, cylinder geometry and linear unified-flow formula are derived in the note; no external nonlinear-PDE theorem or new PDF is imported. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / xhigh, 28 October 2026, chat0014.
+
+
+The [book rewrite plan](../book/changes/02_REWRITE_20261028.md) uses
+[Dobner v2, Section 1](https://arxiv.org/html/2005.05142v2#S1) as an
+expository model and checks the normalization of equations (1)–(2).
+Selected introductory passages were read on 28 October 2026; no full
+proof audit or later approximation theorem is imported. The
+[canonical annotation and PDF receipt](../../04_three_regime_heat_flow_dynamics/references/01_DOBNER_FUNCTIONAL_APPROXIMATION_20261026.md)
+are reused; the existing external PDF's header, size and hash were
+rechecked. The catalog and bibliography now include this use.
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra (Codex), recorded effort xhigh**, chat0015.
