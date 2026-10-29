@@ -3,7 +3,7 @@
 24 October 2026, America/New_York. Prepared for **Edward Baker** with
 substantial LLM assistance, **gpt-6-astra (Codex), recorded effort max**.
 
-This collection studies canonical heat-flow approximations, their RH applications, collision bounds, conditional dynamics across three Newman-threshold and endpoint-multiplicity regimes, and radial theta collision geometry.
+This collection studies canonical heat-flow approximations, their RH applications, collision bounds, conditional dynamics across three Newman-threshold and endpoint-multiplicity regimes, radial theta collision geometry, and auxiliary flows for collision analysis.
 
 | Investigation | Purpose | Status |
 | --- | --- | --- |
@@ -12,6 +12,7 @@ This collection studies canonical heat-flow approximations, their RH application
 | [03 — Heat-flow collision bounds](03_heat_flow_collision_bounds/README.md) | Combine 01’s approximations with 02’s endpoint consumers; whole-cluster Poisson transfer, canonical acquisition and arithmetic bounds | [Overview](03_heat_flow_collision_bounds/research-overview/02_POST_CALIBRATION_RESEARCH_OVERVIEW_20261028.md), [progress](03_heat_flow_collision_bounds/research-progress/02_POST_CALIBRATION_RESEARCH_PROGRESS_20261028.md) after Note10: exterior calibration complete, tested absolute-sum variant stopped, signed-arithmetic continuation prepared; canonical endpoint bound open |
 | [04 — Three regime heat flow dynamics](04_three_regime_heat_flow_dynamics/README.md) | Compare the conditional solutions for a positive threshold, a zero threshold with multiple zeros, and simple RH across time, height and resolution | [Overview](04_three_regime_heat_flow_dynamics/research-overview/01_THREE_REGIME_DYNAMICS_RESEARCH_OVERVIEW_20261026.md) and [progress](04_three_regime_heat_flow_dynamics/research-progress/01_THREE_REGIME_DYNAMICS_RESEARCH_PROGRESS_20261026.md); setup and selected Dobner source inspection complete, quantitative comparisons open |
 | [05 — Radial theta collision geometry](05_radial_theta_collision_geometry/README.md) | Develop the three-dimensional theta/Kelvin source and reconsider collision mechanisms through boundary, oscillation and global-index arguments | [Initial analysis](05_radial_theta_collision_geometry/notes/01_RADIAL_THETA_GEOMETRY_AND_COLLISION_MECHANISMS_20261027.md), [overview](05_radial_theta_collision_geometry/research-overview/01_RADIAL_THETA_COLLISION_RESEARCH_OVERVIEW_20261027.md) and [progress](05_radial_theta_collision_geometry/research-progress/01_RADIAL_THETA_COLLISION_RESEARCH_PROGRESS_20261027.md); exact forced-boundary diagnostics and control, canonical exclusion open |
+| [06 — Auxiliary flows for collision analysis](06_auxiliary_collision_flows/README.md) | Explore modified Newman and auxiliary source evolutions for clearer collision responses and useful estimates | [Initial overview](06_auxiliary_collision_flows/research-overview/01_AUXILIARY_COLLISION_FLOWS_RESEARCH_OVERVIEW_20261028.md); background for brainstorming, research plan deferred |
 
 Each investigation keeps its own notes, numerics, reviews and chat
 histories. The [result summaries](../../result-summaries/README.md),
@@ -32,3 +33,9 @@ assistance, **gpt-6-astra (Codex), actual recorded effort max**.
 27 October 2026 — Investigation05 opened at Edward Baker’s request for an analytical radial/Kelvin and collision-mechanism program. Prepared with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**. The founding chat retains its unique Investigation04 registration.
 
 28 October 2026 — [Portfolio route assessment](reviews/01_PORTFOLIO_ROUTE_ASSESSMENT_20261028.md) compares the current arithmetic, cluster-density, Dobner, energy and geometric directions. Internal assessment for Edward Baker with substantial LLM assistance, gpt-6-astra / xhigh; existing task statuses are unchanged.
+
+28 October 2026 — Investigation06 opened at Edward Baker’s request for
+auxiliary and modified Newman flows. Its overview preserves the existing
+background; the research plan is deferred until after further brainstorming.
+Prepared with substantial LLM assistance, **gpt-6-astra (Codex), recorded
+effort max**. The founding chat retains its Investigation05 registration.

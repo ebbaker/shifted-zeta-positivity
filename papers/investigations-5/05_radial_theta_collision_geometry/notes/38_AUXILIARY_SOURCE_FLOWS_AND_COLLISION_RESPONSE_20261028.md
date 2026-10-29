@@ -48,7 +48,8 @@ At a nondegenerate double event, write
 \[
 H(T,a)=H_z(T,a)=0,\qquad A=H_{zz}(T,a)\ne0.
 \]
-For a proposed regular equation
+For a proposed equation with regular coefficients and a solution
+holomorphic in z,
 \[
 F_\tau=-F_{zz}+b(\tau,z)F_z+c(\tau,z)F,
 \]
@@ -57,16 +58,26 @@ still satisfies \((z-a)^2\sim2(\tau-\tau_*)\). This is only a statement
 about the leading local law: nonconstant coefficients can change global
 motion, higher terms and energy estimates.
 
-For constant b,c the reduction is stronger and exact:
+For constant drift b and reaction c, the exact solution is
+\[
+F(\tau,z)=e^{c\tau}H(\tau,z+b\tau),
+\qquad F_\tau=-F_{zz}+bF_z+cF.
+\]
+For the linear drift coefficient bz, the corresponding formula is
 \[
 F(\tau,z)=e^{c\tau}H\bigl(\sigma(\tau),e^{b\tau}z\bigr),
-\qquad \sigma'=e^{2b\tau},\quad\sigma(0)=0.
+\qquad \sigma'=e^{2b\tau},\quad\sigma(0)=0,
+\qquad F_\tau=-F_{zz}+bzF_z+cF.
 \]
-These terms rescale amplitude, position and time. Likewise, the particular
+These changes translate or rescale the existing zeros. The distinction
+between constant and linear drift was corrected on 28 October 2026 while
+preparing Investigation06: the initial text incorrectly attached the
+linear-drift dilation formula to constant drift. The local response
+formulas below are unchanged. Likewise, the particular
 quadratic-potential combination already solved in [Brainstorm08,
 Section7][b08] transports the old zeros by an explicit Gaussian factor and
 rescaling. Neither calculation excludes other drift, potential or coupled
-equations. A smooth nonlinear addition N(F,F_z) with N(0,0)=0 also vanishes
+equations. An analytic nonlinear addition N(F,F_z) with N(0,0)=0 also vanishes
 at the event; singular feedback requires its own independent bounds.
 
 ## 3 Keep the new parameter separate from Newman time

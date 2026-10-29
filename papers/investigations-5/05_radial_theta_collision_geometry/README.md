@@ -11,6 +11,15 @@ the existing CTF program and task states remain unchanged. Prepared for
 Edward Baker with substantial LLM assistance, gpt-6-astra / xhigh,
 chat0016.
 
+**Separate auxiliary-flow investigation, 28 October 2026:** Edward Baker
+has opened [Investigation06](../06_auxiliary_collision_flows/README.md) to
+explore modifications of Newman flow and related collision responses. Its
+[initial overview](../06_auxiliary_collision_flows/research-overview/01_AUXILIARY_COLLISION_FLOWS_RESEARCH_OVERVIEW_20261028.md)
+starts from [Note38](notes/38_AUXILIARY_SOURCE_FLOWS_AND_COLLISION_RESPONSE_20261028.md); further brainstorming precedes a
+research plan. The CTF program below retains its existing status, and the
+founding chat0017 remains registered here. Prepared for Edward Baker with
+substantial LLM assistance, **gpt-6-astra / max**.
+
 [CURRENT_RESEARCH_PROGRAM.md](CURRENT_RESEARCH_PROGRAM.md) routes work to **conservative theta flows and collision amplification**. The entire H(t,a) is invariant; its radial integrand may change and no spatial direction is prescribed.
 
 **Current manuscript, 28 October 2026:** [Conservative Theta Flows and Collision Amplification](radial_deformations_and_zero_dynamics.tex) now moves directly from purpose and canonical source to conservation as Section3. Feedback, carrier comparison and source residual occupy Sections4–6; Section7 retains the remaining signed estimate. [The E05 R1 editorial return](notes/34_CTF_E05_MANUSCRIPT_REFOCUS_RETURN_R1_20261028.md) records hashes, dependency checks and successful built-in compilation. No separate build or visual inspection was performed for this refocus; the E04 layout check remains historical in Note33/Review19/record17. No new theta exclusion or threshold bound. Prepared for Edward Baker with LLM assistance, gpt-6.1-sol / ultra, chat0012.
