@@ -174,3 +174,15 @@ necessary complexity bound nor an evaluator certificate; Note54's finite
 all-time coverage establishes no affordability. The old positive gate is
 superseded at finite-existence scope, with the historical bound failures
 retained. For Edward Baker with LLM assistance, gpt-6-astra, max, chat0020.
+
+**A source identity does not freeze an omitted observation kernel,
+29 October 2026.** Prepared for Edward Baker with substantial LLM
+assistance, **gpt-6.1-sol / ultra**, chat0025.
+[Review28](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/28_RAW_COMPATIBILITY_E08_R6_ASSESSMENT_20261029.md)
+accepts Note51's comparison and states: “The comparison fails the full
+cosine oscillator and physical Newman equation.” Fixing theta's amplitude
+and its first-order source relation while varying K permits an attained
+zero first-jet ratio, even with each prescribed finite cosine prefix.
+Keep that kernel quantifier with every negative conclusion; it does not
+exclude estimates using literal cosine or quantitative remainder control.
+Different-model internal assessment retains shared inherited premises.

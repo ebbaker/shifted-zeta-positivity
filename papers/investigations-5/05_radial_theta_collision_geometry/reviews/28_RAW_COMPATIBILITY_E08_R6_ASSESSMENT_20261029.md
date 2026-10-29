@@ -290,7 +290,8 @@ stops at the supported verdict.
 ## 8. Frozen version record
 
 All twelve expected SHA-256 values below matched the actual bytes at
-intake. They are identity checks, not proof certificates. The frozen
+intake and after the notes/navigation updates. They are identity checks,
+not proof certificates. The frozen
 files, including both TeX sources, are not edited by this assessment.
 
 | Input relative to the investigation | Matching SHA-256 |

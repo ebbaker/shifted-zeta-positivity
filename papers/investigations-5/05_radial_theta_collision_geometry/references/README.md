@@ -58,3 +58,5 @@ Prepared for Edward Baker with substantial LLM assistance,
 - [14 — Newman flow and source perturbations](14_NEWMAN_FLOW_AND_SOURCE_PERTURBATION_REFERENCES_20261028.md): Rodgers–Tao v5 normalization and Newman–Wu v2 source-weighting background for Note38; selected passages only, existing Rodgers–Tao PDF reused and Newman–Wu PDF archived externally. 28 October 2026; gpt-6-astra / max, chat0017.
 
 - [15 — Cosine kernel compatibility](15_COSINE_KERNEL_COMPATIBILITY_REFERENCES_20261029.md): DLMF4.19.2, version 1.2.8, selected formula checked for Note51; the polynomial comparison and source-compatibility result are derived in-note. 29 October 2026; prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / max, chat0024.
+
+- [Uniform-feedback classical input receipt](11_CONSERVATIVE_FEEDBACK_AND_DIFFUSION_CONTRACTION_20261028.md): selected DLMF1.14.1/8 and4.19.1--2 inspection for Note67; the direct uniform-feedback estimate is derived in-note. No new PDF or theorem import. 29 October 2026, gpt-6-astra / max, chat0031.

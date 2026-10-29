@@ -84,3 +84,134 @@ changes and use the standing refresh tool; current capture metadata
 belong to the registry. No cross-model or specialist review is claimed.
 
 The same **chat0024** also records the author-requested **[B] CTF-B02 R6** in [Note51](../notes/51_ZERO_RAW_MISMATCH_KERNEL_FREEDOM_B02_R6_20261029.md), [Self-assessment27](../reviews/27_ZERO_RAW_MISMATCH_B02_R6_SELF_ASSESSMENT_20261029.md) and [Continuation52](../notes/52_RAW_COMPATIBILITY_SOL_CONTINUATION_20261029.md). Actual gpt-6-astra / max, 29 October 2026, prepared for Edward Baker with substantial LLM assistance; no subagents. The scoped variable-kernel comparison fails the full cosine/Newman identity; manuscript unchanged. Preserve this chat’s unique registration through model changes; use the standing refresh tool.
+
+**Assess CTF-E08 R6 proof** is uniquely registered here as **chat0025**,
+thread 01a188e0-3fd6-7032-a319-f43edccd5cc6.
+[Public archive](0025_2026-10-29T18-16-00Z_assess-ctf-e08-r6-proof.json);
+[registry](index.json). The opening Astra/max inspection was interrupted;
+the author switched to **gpt-6.1-sol / ultra** for the substantive fixed
+assessment in [Review28](../reviews/28_RAW_COMPATIBILITY_E08_R6_ASSESSMENT_20261029.md),
+[Return53](../notes/53_RAW_COMPATIBILITY_E08_R6_RESEARCH_RETURN_20261029.md) and
+[Continuation54](../notes/54_RAW_COMPATIBILITY_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md).
+Prepared for Edward Baker with substantial LLM assistance, 29 October 2026.
+Preserve this registration through model changes and refresh it with the
+standing history tool; current counts, hashes and configurations belong
+to the registry. Different-model internal review shares inherited premises;
+no specialist independence or subagents. Manuscript unchanged.
+
+**Continue radial theta collision research** is uniquely registered here
+as **chat0026**, thread 01a18911-d6d6-7650-ba07-adcf6916da3a.
+[Public archive](0026_2026-10-29T19-10-10Z_continue-radial-theta-collision-research.json); [registry](index.json).
+It records [Note55](../notes/55_COSINE_JET_CORRELATION_B02_R7_20261029.md), [Self-assessment29](../reviews/29_COSINE_JET_CORRELATION_B02_R7_SELF_ASSESSMENT_20261029.md)
+and [Continuation56](../notes/56_COSINE_JET_CORRELATION_AND_MODEL_CONTINUATION_20261029.md), the bounded CTF-B02 R7 supporting
+jet-energy gain and Sol assessment handoff. Prepared for Edward Baker
+with substantial LLM assistance, **gpt-6-astra / actual effort max**,
+29 October 2026. Preserve this sole registration through model changes;
+current counts and hashes belong to the registry. No subagents or separate
+review; manuscript unchanged.
+
+**Assess CTF-E08 R7 proof** is uniquely registered here as **chat0027**,
+thread 01a1894b-f63e-7ab2-94e1-b09d8857cd52.
+[Public archive](0027_2026-10-29T20-13-39Z_assess-ctf-e08-r7-proof.json);
+[registry](index.json). It records [Review30](../reviews/30_COSINE_JET_CORRELATION_E08_R7_ASSESSMENT_20261029.md),
+[Return57](../notes/57_COSINE_JET_CORRELATION_E08_R7_RESEARCH_RETURN_20261029.md) and
+[Continuation58](../notes/58_COMPRESSION_CONTROL_AND_MODEL_CONTINUATION_20261029.md).
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol / actual effort ultra**, 29 October 2026. Three read-only
+same-model subagent audits supported the internal assessment, with shared
+inherited premises and no specialist independence. Preserve this number,
+creation time and identity across model changes; current capture counts,
+hashes and model configurations belong to the registry. Chat0026 retains
+its own separate identity. Manuscript unchanged.
+
+**Continue CTF-B02 with Astra** is uniquely registered here as **chat0028**,
+thread `01a18952-7213-7501-9ef1-a7aeddd83e80`.
+[Public archive](0028_2026-10-29T20-20-44Z_continue-ctf-b02-with-astra.json);
+[registry](index.json). [Note59](../notes/59_DIFFUSION_VARIANCE_COMPRESSION_BOUND_B02_R8_20261029.md)
+and [Continuation60](../notes/60_DIFFUSION_VARIANCE_AND_MODEL_CONTINUATION_20261029.md)
+record the diffusion-variance finite-horizon return and fixed E08 assessment
+handoff. Actual research gpt-6-astra / max; interrupted Sol/ultra opening
+retained in provenance. Prepared for Edward Baker with substantial LLM
+assistance, 29 October 2026. Preserve this identity through a model change;
+refresh only through the standing tool. Current counts/hashes belong to
+the registry.
+
+**Assess CTF-E08 R8 Sol** is uniquely registered here as **chat0029**,
+thread `01a18979-6e1c-7f90-bb67-6314ffd057e6`.
+[Public archive](0029_2026-10-29T21-03-19Z_assess-ctf-e08-r8-sol.json);
+[registry](index.json). It records [Review32](../reviews/32_DIFFUSION_VARIANCE_E08_R8_ASSESSMENT_20261029.md),
+[Return61](../notes/61_DIFFUSION_VARIANCE_E08_R8_RESEARCH_RETURN_20261029.md) and
+[Continuation62](../notes/62_COMPRESSION_HORIZON_AND_MODEL_CONTINUATION_20261029.md).
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol /
+actual effort ultra**, 29 October 2026. Three read-only same-model contributing
+audits supported the internal different-model assessment, with shared inherited
+premises and no specialist independence. Preserve its number, filename,
+creation and first-capture identity through model changes; current capture
+counts, configurations and hashes belong to the registry. Chat0028 retains
+its separate identity. Use only the standing refresh tool for archive writes.
+
+**Assess CTF-B02 deadline control** is uniquely registered as **chat0030**,
+thread `01a18980-963d-7950-9620-bd1694a4cc30`.
+[Public archive](0030_2026-10-29T21-11-08Z_assess-ctf-b02-deadline-control.json); [registry](index.json).
+It records [R9](../notes/63_RADIAL_SECOND_CANCELLATION_DEADLINE_B02_R9_20261029.md) and [Continuation64](../notes/64_RADIAL_DEADLINE_AND_MODEL_CONTINUATION_20261029.md):
+radial second cancellation, a fully paid smaller conditional upper
+deadline and its stronger direct comparison. Research/self-check:
+**gpt-6-astra / max**, 29 October 2026, prepared for Edward Baker with
+substantial LLM assistance. The interrupted Sol/ultra opening is retained
+in provenance and produced no research result. Preserve this registration
+through an in-place model change; use the standing refresh tool. Current
+capture counts, times and hashes belong to the registry.
+
+Chat0029's subsequent B02 continuation preserves that same registration
+and title **Assess CTF-E08 R8 Sol**. Actual model remains **gpt-6.1-sol /
+ultra**; the R9 conceptual author is the separate **gpt-6-astra / max**
+chat0030. This chat found R9 already active, preserved its sole shared-file
+writer, and saved the [stronger direct comparison and model-change guidance](../notes/CTF_B02_R9_WEIGHTED_DIRECT_COMPARISON_CHAT0029_20261029.md)
+and [supporting progress receipt](../research-progress/handoffs/CTF-B02_R9_CHAT0029_COMPARISON_RECEIPT_20261029.md).
+Two read-only same-model contributing agents supported the bounded check;
+no second B candidate or formal E08 verdict was issued. Prepared for Edward
+Baker with substantial LLM assistance, 29 October 2026. Both chats retain
+their unique identities; archive writes use the standing refresh tool.
+
+Chat0029 also records the author-requested **formal E08 R9 assessment**,
+turn `01a1898e-7cea-7f93-adc2-6bdd140d351e`, **gpt-6.1-sol / actual effort
+ultra**. [Review34](../reviews/34_RADIAL_SECOND_CANCELLATION_E08_R9_ASSESSMENT_20261029.md),
+[Return65](../notes/65_RADIAL_DEADLINE_E08_R9_RESEARCH_RETURN_20261029.md) and
+[Continuation66](../notes/66_RADIAL_DEADLINE_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md)
+accept the scoped theorem and preserve Sw<S9. Three read-only same-model
+contributing audits supported the parent review, with prior supporting
+contributor overlap and shared premises. This is not specialist independence.
+Prepared for Edward Baker with substantial LLM assistance, 29 October 2026.
+Preserve chat0029's existing title, number, filename and creation/first-capture
+identity through model changes; chat0030 retains separate authoring identity.
+Current capture counts, configurations and hashes belong to the registry;
+archive writes use the standing refresh tool.
+
+**29 October 2026, chat0031:** [Continue CTF-B02 Astra assessment](0031_2026-10-29T22-26-27Z_continue-ctf-b02-astra-assessment.json),
+thread 01a189c5-8cc0-7870-9ab3-7a816387871a, actual research
+gpt-6-astra / max. This is its unique investigation registration.
+Preserve the number, filename and creation/first-capture identity through
+model changes; current counts, configurations and hashes live in index.json.
+The standing refresh tool owns the transcript and registry.
+
+**29 October 2026, chat0032:** [Assess CTF-E08 R10 obligations](0032_2026-10-29T22-38-58Z_assess-ctf-e08-r10-obligations.json),
+thread 01a189d1-039b-7be3-a47f-0851ddf494ba, actual assessment
+**gpt-6.1-sol / ultra**. [Review36](../reviews/36_UNIFORM_FEEDBACK_E08_R10_ASSESSMENT_20261029.md),
+[Return69](../notes/69_UNIFORM_FEEDBACK_E08_R10_RESEARCH_RETURN_20261029.md) and [Continuation70](../notes/70_UNIFORM_FEEDBACK_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md)
+complete the fixed eight-obligation assessment. This is this new chat's
+sole registration; keep its number, filename, title and original
+creation/first-capture identity through in-place model changes. Chat0031
+retains the distinct proof-author identity. Three read-only same-model
+contributing audits and inherited premises do not supply specialist
+independence. Current capture counts/configurations/hashes belong to
+index.json; the standing refresh tool owns archive and registry writes.
+Prepared for Edward Baker with substantial LLM assistance.
+
+**29 October 2026, chat0031 manuscript continuation:** the existing
+[Continue CTF-B02 Astra assessment](0031_2026-10-29T22-26-27Z_continue-ctf-b02-astra-assessment.json)
+also records the author's analytical manuscript request and CTF-E05 R2
+integration. [Note71](../notes/71_ANALYTICAL_MANUSCRIPT_CONSOLIDATION_20261029.md) and
+[Continuation72](../notes/72_ANALYTICAL_MANUSCRIPT_AND_MODEL_CONTINUATION_20261029.md) document the result and model-change
+handoff. Actual gpt-6-astra / max. The official refresh tool preserves
+this conversation's existing identity; chat0032 remains the separate Sol
+assessment. Current counts and hashes belong to index.json.

@@ -2,6 +2,12 @@
 
 27 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
 
+Current manuscript build: [27 — analytical consolidation](27_ANALYTICAL_MANUSCRIPT_BUILD_RECORD_20261029.json).
+CTF-E05 R2, 29 October 2026, gpt-6-astra / max, chat0031. Saved source/PDF/log
+hashes, local and desktop compilation, all 28 rendered pages inspected,
+and preservation of 123 earlier proof/review/handoff/companion files.
+This is a build receipt, not a numerical research experiment.
+
 [The standard-library checker](01_check_forced_wronskian_control_20261027.py) verifies the Gaussian-polynomial forcing control in Note01. [Its exact record](01_FORCED_WRONSKIAN_CONTROL_CHECKS_20261027.json) reports the positive norm coefficient 27 and forcing coefficient -27 against the same Gaussian integral.
 
 Run `python3 papers/investigations-5/05_radial_theta_collision_geometry/numerics/01_check_forced_wronskian_control_20261027.py` from the repository root. This is finite exact algebra, not theta sampling, a numerical collision certificate, independent review, or a global threshold test. The analytical proof and its scope are in [Note01](../notes/01_RADIAL_THETA_GEOMETRY_AND_COLLISION_MECHANISMS_20261027.md).
@@ -30,7 +36,7 @@ Run `python3 papers/investigations-5/05_radial_theta_collision_geometry/numerics
 
 - [14 — Tube and projected-response checks](14_TUBE_AND_PROJECTED_FLOW_CHECKS_20261027.json), [checker](14_check_tube_and_projected_flow_20261027.py): exact integer control algebra; separately labeled floating Cartesian operator, direct surface-normal, variable-width side-flux and manufactured additive-current diagnostics. Requires NumPy. From this folder run `python3 14_check_tube_and_projected_flow_20261027.py --output 14_TUBE_AND_PROJECTED_FLOW_CHECKS_20261027.json`. No theta sampling, interval certificate or infinite-dimensional PDE simulation. 27 October 2026; for Edward Baker with LLM assistance, gpt-6-astra, actual effort max, chat0008.
 
-- [Current manuscript compilation record](15_PROJECTED_AND_CONSERVATIVE_MANUSCRIPT_BUILD_RECORD_20261027.json): saved source hash and built-in compilation diagnostics; no separate PDF build or theta PDE simulation.
+- [27 October manuscript compilation record](15_PROJECTED_AND_CONSERVATIVE_MANUSCRIPT_BUILD_RECORD_20261027.json): saved source hash and built-in compilation diagnostics; no separate PDF build or theta PDE simulation.
 
 - [16 — Conservative heat baseline measurements](16_CONSERVATIVE_HEAT_BASELINE_MEASUREMENTS_20261028.json), [program](16_measure_conservative_heat_baseline_20261028.py): CTF-E01 R1, 110 scalar F values at 30/50 digits; complete source tails and error/cost categories, with raw observations and executed/delivered code hashes. Floating, not interval-certified. No additional run was made for reporting corrections. Prepared for Edward Baker with substantial LLM assistance, gpt-6.1-sol, actual effort ultra, 28 October 2026, chat0009.
 
@@ -49,3 +55,7 @@ The default investigation path is derived from the script. The recorded environm
 - [23 — Strict compact-gain integration build record](23_RADIAL_COMPACT_GAIN_INTEGRATION_BUILD_RECORD_20261029.json): source/PDF/log hashes, successful built-in/local 25-page compilation,13 preserved proofs and one added proof, frozen-input checks and bounded visual scope. Document checks only; no numerical theta acquisition. gpt-6.1-sol / ultra, chat0022, 29 October 2026.
 
 - [24 — Source-coupling integration build record](24_SOURCE_COUPLING_INTEGRATION_BUILD_RECORD_20261029.json): source/PDF/log hashes, successful built-in/local 28-page compilation,14 preserved proofs and one added, exact finite arithmetic transcription checks and bounded layout scope. No source acquisition or PDE simulation. gpt-6-astra / max, chat0024, 29 October 2026.
+
+- [25 — Diffusion-variance constant checks](25_check_diffusion_variance_constants_20261029.py), [small record](25_DIFFUSION_VARIANCE_CONSTANT_CHECKS_20261029.json): exact combinatorial/Gaussian constants and three illustrative rational endpoint identities. No source acquisition, flow computation or general proof by samples. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / max, chat0028, 29 October 2026.
+
+- [26 — Radial deadline constants](26_RADIAL_DEADLINE_CONSTANT_CHECKS_20261029.json), from [the check script](26_check_radial_deadline_constants_20261029.py): twelve exact rational checks and labeled floating constant illustrations only. No theta acquisition, quadrature, PDE simulation or source certificate. For Edward Baker with substantial LLM assistance, gpt-6-astra / max, chat0030, 29 October 2026.

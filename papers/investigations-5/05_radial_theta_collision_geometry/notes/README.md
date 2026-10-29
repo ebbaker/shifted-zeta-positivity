@@ -10,15 +10,35 @@ bookmark leaves the CTF task states below unchanged. 28 October 2026;
 prepared for Edward Baker with substantial LLM assistance, gpt-6-astra /
 xhigh.
 
-Start with [52 — Raw compatibility and model continuation](52_RAW_COMPATIBILITY_SOL_CONTINUATION_20261029.md).
-**Next: [E] CTF-E08 R6 — Sol**, fixed assessment of [Note51](51_ZERO_RAW_MISMATCH_KERNEL_FREEDOM_B02_R6_20261029.md) and
-[Self-assessment27](../reviews/27_ZERO_RAW_MISMATCH_B02_R6_SELF_ASSESSMENT_20261029.md). The exact variable-kernel
-comparison keeps theta's amplitude and zero raw mismatch but fails the
-full cosine/Newman identity. B02 R6 is complete in-note; parent B02 remains
-partial. The manuscript is unchanged. [Progress05](../research-progress/05_CONSERVATIVE_THETA_FLOW_ESTIMATES_RESEARCH_PROGRESS_20261029.md)
-owns live status. Prepared for Edward Baker with substantial LLM
-assistance, gpt-6-astra / max, chat0024, 29 October 2026; same-assistant
-checks, no subagents or independent review.
+**Latest conceptual follow-up:** [73 — Integration by parts from the theta primitive to feedback pairings](73_BOOK_INTEGRATION_BY_PARTS_AND_FEEDBACK_PAIRINGS_20261029.md)
+responds to the author's return to the book's original motivation. It
+retains the initial sphere terms while transferring the primitive identity
+through preparation and the common adjoint flow. No improved estimate is
+claimed; the next comparison must include all transported-test costs.
+This supplements Note72's continuation. 29 October 2026; gpt-6-astra / max,
+chat0031.
+
+Start with [72 — analytical manuscript and model continuation](72_ANALYTICAL_MANUSCRIPT_AND_MODEL_CONTINUATION_20261029.md).
+[Note71](71_ANALYTICAL_MANUSCRIPT_CONSOLIDATION_20261029.md) records the author-requested E05 R2 analytical consolidation,
+successful 28-page build and full-page visual check. The main manuscript
+now integrates the accepted direct uniform-feedback result; no new
+mathematical result or numerical acquisition is claimed. Actual
+gpt-6-astra / max, chat0031; [Review37](../reviews/37_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md) is a same-assistant
+editorial assessment. Next research remains [B] CTF-B02 — Astra.
+
+Prior scientific continuation: [70 — R10 assessment and model continuation](70_UNIFORM_FEEDBACK_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md).
+**CTF-E08 R10 complete:** [Return69](69_UNIFORM_FEEDBACK_E08_R10_RESEARCH_RETURN_20261029.md) and
+[Review36](../reviews/36_UNIFORM_FEEDBACK_E08_R10_ASSESSMENT_20261029.md) accept all eight obligations without
+mathematical correction; field-energy notation is clarified. The complete
+direct uniform-feedback bound is paid by a preexisting physical margin.
+No source-residual advantage or larger domain follows; B is unbounded,
+full residual control finite-horizon, and Sw<S9 keeps its upper-deadline scope.
+**Next: [B] CTF-B02 — Astra**, one still unpaid consumer or precise advantage
+under the complete direct/control comparison.
+[Progress05](../research-progress/05_CONSERVATIVE_THETA_FLOW_ESTIMATES_RESEARCH_PROGRESS_20261029.md)
+owns status. For Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol / ultra**, chat0032, 29 October 2026; three read-only same-model
+internal contributing audits, shared premises, no specialist independence.
 
 - [01 — Initial analytical development](01_RADIAL_THETA_GEOMETRY_AND_COLLISION_MECHANISMS_20261027.md): radial/Kelvin source, evolved potential, forced boundary equation, exact transfer and time evolution, Wronskian control, and research choices.
 - [02 — Continuation and session handoff](02_CONTINUATION_AND_SESSION_HANDOFF_20261027.md): reading order, current task states, exact formulas, next bounded analysis and provenance.
@@ -122,3 +142,33 @@ checks, no subagents or independent review.
 - [51 — Zero raw mismatch and kernel freedom](51_ZERO_RAW_MISMATCH_KERNEL_FREEDOM_B02_R6_20261029.md): exact ratio-zero comparison at (1/4,2), any finite cosine prefix, genuine prepared residual and inherited auxiliary deadline; explicitly outside full cosine/Newman class. Proved in-note, same-assistant checks. 29 October 2026; gpt-6-astra / max, chat0024.
 
 - [52 — Raw-compatibility continuation for model changes](52_RAW_COMPATIBILITY_SOL_CONTINUATION_20261029.md): fixed E08 R6/Sol assessment, precise scope and future B02 boundary; manuscript unchanged. 29 October 2026; gpt-6-astra / max, chat0024.
+
+- [53 — Raw-compatibility E08 R6 research return](53_RAW_COMPATIBILITY_E08_R6_RESEARCH_RETURN_20261029.md): accepted without mathematical correction in the fixed-amplitude variable-kernel prepared class; all seven checks and twelve frozen input hashes, inherited deadline constant, failed cosine/Newman premise and research disposition. Sol/ultra, chat0025.
+- [54 — Assessment and model continuation](54_RAW_COMPATIBILITY_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md): one bounded next B02 decision, actual multiplication/preparation/propagation order, stop rule and unique chat0025 identity across model changes. No next candidate selected or tested.
+
+- [55 — Literal cosine jet correlation](55_COSINE_JET_CORRELATION_B02_R7_20261029.md): CTF-B02 R7; at (1/4,2), M4/M2<1/24 and a 12/13 prepared norm ratio improve the same-B second-jet allowance after a stated threshold. Same-assistant proof; no deadline/domain gain. Astra/max, chat0026, 29 October 2026.
+- [56 — R7 continuation and model-change handoff](56_COSINE_JET_CORRELATION_AND_MODEL_CONTINUATION_20261029.md): default fixed E08 R7 assessment for Sol; one-mark scope, comparison limits and unique chat0026 history. Same provenance.
+
+- [57 — Cosine-jet E08 R7 research return](57_COSINE_JET_CORRELATION_E08_R7_RESEARCH_RETURN_20261029.md): accepted without mathematical correction; seven checks, 11 frozen inputs, 12/13 ratio and threshold 169/196, direct/control limits. Sol/ultra, chat0027, 29 October 2026; three read-only same-model audits, inherited shared premises, no specialist independence.
+- [58 — Independent compression control and model continuation](58_COMPRESSION_CONTROL_AND_MODEL_CONTINUATION_20261029.md): default [B] CTF-B02 — Astra; one declared consumer/payment for B, finite stopping rule and unique chat0027 identity across model changes. No next candidate selected or numerical stage issued. Same assessment provenance.
+
+- [59 — Diffusion variance and finite compression](59_DIFFUSION_VARIANCE_COMPRESSION_BOUND_B02_R8_20261029.md): positive initial spatial gap, complete H3 budget, strict restart and finite B at the closed old endpoint; generic, no deadline or global iteration claim. Astra/max, chat0028.
+- [60 — R8 continuation and model change](60_DIFFUSION_VARIANCE_AND_MODEL_CONTINUATION_20261029.md): fixed E08 R8/Sol assessment, exact horizon/cost/control limits and unique chat0028 identity. No further candidate selected.
+
+- [61 — E08 R8 research return](61_DIFFUSION_VARIANCE_E08_R8_RESEARCH_RETURN_20261029.md): all eight checks accepted; complete initial-data B bound at the closed old endpoint, open new lifespan, stronger direct comparison and shared-control limits. Sol/ultra, chat0029.
+- [62 — Compression horizon and model continuation](62_COMPRESSION_HORIZON_AND_MODEL_CONTINUATION_20261029.md): next B02/Astra decision toward the unpaid source-specific deadline objective; no candidate selected, exact chat0029 identity and model-change guidance.
+
+- [63 — Radial second-cancellation deadline](63_RADIAL_SECOND_CANCELLATION_DEADLINE_B02_R9_20261029.md): complete carrier concentration, full transition Hessian and explicit small reduction of an optimized carrier-paid upper deadline; no independent regularity or theta separation.
+
+- [64 — Deadline and model continuation](64_RADIAL_DEADLINE_AND_MODEL_CONTINUATION_20261029.md): E08 R9 assessment, exact-P0/direct/control comparison limits and unique model-change history.
+
+- [R9 stronger direct comparison and model-change guidance, chat0029](CTF_B02_R9_WEIGHTED_DIRECT_COMPARISON_CHAT0029_20261029.md): weighted Plancherel from the identical first-moment cap gives Sw=(2/7)^(2/5) S1,opt<S9. R9's scoped split theorem remains; no demonstrated advantage over this stronger direct benchmark. Prepared for Edward Baker with substantial LLM assistance, gpt-6.1-sol / ultra, 29 October 2026; supporting internal check, not E08.
+
+- [65 — E08 R9 research return](65_RADIAL_DEADLINE_E08_R9_RESEARCH_RETURN_20261029.md): scoped theorem accepted; all eight checks and complete costs pass, with stronger same-data direct bound Sw<S9 retained. Sol/ultra, chat0029.
+- [66 — R9 assessment and model continuation](66_RADIAL_DEADLINE_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md): next B02/Astra decision must identify a still unpaid consumer against Sw and the known direct margin; no candidate selected, unique chat0029 history/model guidance.
+
+- [67 — Uniform feedback and stronger direct comparison](67_UNIFORM_FEEDBACK_DIRECT_COMPARISON_B02_R10_20261029.md): H>(70/73)M and explicit time-uniform G/E0 and alpha; the direct method pays this new consumer, without source-residual advantage or wider physical domain. Same-assistant proof/checks, gpt-6-astra / max, chat0031, 29 October 2026.
+- [68 — Uniform-feedback continuation and model change](68_UNIFORM_FEEDBACK_AND_MODEL_CONTINUATION_20261029.md): default fixed E08 R10 assessment for Sol; eight checks, direct/control limits and unique chat0031 history. No next conceptual candidate selected.
+
+- [69 — E08 R10 research return](69_UNIFORM_FEEDBACK_E08_R10_RESEARCH_RETURN_20261029.md): all eight obligations accepted; complete analytical uniform-feedback costs and same-diffusion crossover, physical-margin and finite-residual limitations. Sol/ultra, chat0032.
+- [70 — R10 assessment and model continuation](70_UNIFORM_FEEDBACK_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md): next B02/Astra consumer/advantage decision, strongest direct/control boundary and unique chat0032 model-change guidance; no new mechanism selected.

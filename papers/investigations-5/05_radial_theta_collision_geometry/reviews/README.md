@@ -2,6 +2,12 @@
 
 27 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
 
+Latest editorial review: [37 — analytical manuscript integration](37_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md).
+CTF-E05 R2, 29 October 2026, gpt-6-astra / max, chat0031. Same-assistant
+dependency/transcription and full-page layout checks; no new independent
+proof assessment. The underlying R10 result retains Review36's
+different-model internal assessment.
+
 [Founding analytical self-assessment](01_FOUNDING_ANALYTICAL_SELF_ASSESSMENT_20261027.md): same-assistant check of the identities, boundaries, forcing control, exact replay and program scope. Independent mathematical review remains open.
 
 [Circle heat lift self-assessment](02_CIRCLE_HEAT_LIFT_SELF_ASSESSMENT_20261027.md): same-assistant audit of Note03's source equations, commutator, full reflection, residual observation costs, large-lattice-index proof, current scope and exact algebra replay. Independent review remains open.
@@ -60,3 +66,21 @@
 - [26 — Source-coupling E08 R5 assessment and integration](26_SOURCE_COUPLING_E08_R5_ASSESSMENT_20261029.md): accepted without correction; full-tail, signed completion, actual-jet/inner and control checks; Proposition 7.8, 28-page compilation/layout check,14 inherited proofs preserved. Separate-chat same-model Astra/max assessment, chat0024; no specialist review or deadline claim.
 
 - [27 — Zero raw mismatch, B02 R6 self-assessment](27_ZERO_RAW_MISMATCH_B02_R6_SELF_ASSESSMENT_20261029.md): analytical checks of the exact variable-kernel comparison, finite-prefix quantifiers, real prepared residual and inherited deadline; full cosine/Newman premise fails. Same assistant as author, no independent review. 29 October 2026, prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / max, chat0024. Fixed E08 R6 assessment remains unexecuted.
+
+- [28 — Raw compatibility E08 R6 assessment](28_RAW_COMPATIBILITY_E08_R6_ASSESSMENT_20261029.md): accepted without mathematical correction within the fixed-amplitude variable-kernel prepared class; seven fixed checks, finite-prefix quantifiers, actual residual/forcing, inherited deadline constant, failed physical premise and twelve frozen hashes. Different-model internal assessment with shared inherited premises, no specialist independence. Prepared for Edward Baker with substantial LLM assistance, gpt-6.1-sol / actual effort ultra, chat0025, 29 October 2026.
+
+[29 — Cosine jet correlation self-assessment](29_COSINE_JET_CORRELATION_B02_R7_SELF_ASSESSMENT_20261029.md): seven same-assistant checks of Note55's complete source, oscillator remainder, prepared Gaussian test, 12/13 ratio, propagation threshold and control/direct comparison. E08 R7 remains ready, not executed; no separate or specialist review. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / max, chat0026, 29 October 2026.
+
+- [30 — Cosine-jet E08 R7 assessment](30_COSINE_JET_CORRELATION_E08_R7_ASSESSMENT_20261029.md): accepted without mathematical correction at (1/4,2); all seven obligations, complete source/prepared constants, Q/Theta crossings, residual and control scopes. Eleven frozen inputs match; no manuscript change or independent B bound. Prepared for Edward Baker with substantial LLM assistance, gpt-6.1-sol / actual effort ultra, chat0027, 29 October 2026; three read-only same-model audits and inherited shared premises, no specialist independence. Supersedes Review29's ready-for-E08 status.
+
+- [31 — Diffusion variance self-assessment](31_DIFFUSION_VARIANCE_B02_R8_SELF_ASSESSMENT_20261029.md): same-assistant checks of positive spatial variance, C3=11038, complete persistence/restart and finite closed-horizon costs; generic scope, no deadline/global iteration claim. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / max, chat0028, 29 October 2026. E08 R8 was unexecuted at issue; its completed assessment is Review32 below.
+
+- [32 — E08 R8 diffusion-variance assessment](32_DIFFUSION_VARIANCE_E08_R8_ASSESSMENT_20261029.md): accepted without mathematical correction in the inherited prepared radial class; all eight fixed checks, 16 frozen hashes and constant replay pass. Generic closed-endpoint compression gain, no deadline/global-iteration claim; full residual and stronger direct alternative retained. Prepared for Edward Baker with substantial LLM assistance, gpt-6.1-sol / ultra, chat0029, 29 October 2026; three read-only same-model contributing audits, different-model internal review with shared premises, no specialist independence. Review31 remains the historical same-assistant check; E08 R8 is now complete.
+
+- [33 — R9 radial second-cancellation self-assessment](33_RADIAL_SECOND_CANCELLATION_B02_R9_SELF_ASSESSMENT_20261029.md): same-assistant proof/cost/scope checks; smaller carrier-paid conditional upper deadline, full curvature cost and weighted-square admission. E08 was unexecuted at issue; Review34 below supplies the completed assessment. For Edward Baker with substantial LLM assistance, gpt-6-astra / max, chat0030, 29 October 2026.
+
+- [34 — E08 R9 radial deadline assessment](34_RADIAL_SECOND_CANCELLATION_E08_R9_ASSESSMENT_20261029.md): accepted without mathematical correction within inherited prepared radial/displayed-split scope; all eight checks, 17 frozen hashes and constant replay pass. Stronger same-data direct deadline Sw<S9 verified; no source-specific regularity or physical-domain gain. Prepared for Edward Baker with substantial LLM assistance, gpt-6.1-sol / actual effort ultra, chat0029, 29 October 2026; three read-only same-model contributing audits, prior contributor overlap and inherited premises, no specialist independence.
+
+- [35 — Uniform-feedback R10 self-assessment](35_UNIFORM_FEEDBACK_B02_R10_SELF_ASSESSMENT_20261029.md): same-assistant checks of full source/mass payment, Fourier/carrier bounds, retained diffusion, sliding interval, explicit constants and the stronger direct comparison. E08 R10 ready, unexecuted; no specialist review. gpt-6-astra / max, chat0031, 29 October 2026.
+
+- [36 — E08 R10 uniform-feedback assessment](36_UNIFORM_FEEDBACK_E08_R10_ASSESSMENT_20261029.md): accepted without mathematical correction within the inherited prepared radial class at (1/4,2); field-energy notation clarified. All eight obligations, full analytical K_infinity<=K_theta, same-diffusion crossover and actual residual/control scope pass. All 17 frozen inputs, packet and 121 inherited proof/review/TeX/handoff files unchanged. For Edward Baker with substantial LLM assistance, gpt-6.1-sol / ultra, chat0032, 29 October 2026; three read-only same-model contributing audits, shared premises, no specialist independence. Review35 remains the historical same-assistant check; E08 R10 is now complete. Manuscripts unchanged.

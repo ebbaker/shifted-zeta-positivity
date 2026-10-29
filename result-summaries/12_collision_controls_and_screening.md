@@ -146,6 +146,22 @@ only those properties proves a false statement.
   Added for Edward Baker with substantial LLM assistance, **gpt-6-astra,
   effort ultra**; no specialist review or priority claim.
 
+**Fixed amplitude with variable observation kernel (Investigation5/05,
+29 October 2026).** For Edward Baker with LLM assistance; proof
+Astra/max, chat0024, assessment Sol/ultra, chat0025.
+[Note51](../papers/investigations-5/05_radial_theta_collision_geometry/notes/51_ZERO_RAW_MISMATCH_KERNEL_FREEDOM_B02_R6_20261029.md)
+is **proved in-note**; [Review28](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/28_RAW_COMPATIBILITY_E08_R6_ASSESSMENT_20261029.md)
+states: “accepted without mathematical correction” within its explicitly
+reduced class. With the complete theta amplitude and source operator
+fixed, polynomial kernels retain zero raw mismatch and any separately
+prescribed finite cosine prefix while attaining |m|²/E0=0 at (1/4,2).
+Their true prepared residual is nonzero and the inherited auxiliary
+deadline applies. They fail the full cosine oscillator/Newman equation;
+these are not physical theta collisions or counterexamples to estimates
+using actual cosine. Reusable as a scoped information-sufficiency screen.
+Different-model internal assessment shares inherited premises; no
+specialist independence or uniform-in-prefix bounds.
+
 ## Status
 
 19: proved and certified; the manuscript "awaits independent review" and

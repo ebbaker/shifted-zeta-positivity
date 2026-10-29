@@ -267,3 +267,95 @@ colliding control with both residual terms. Assessment is separate-chat
 same-model internal work with shared premises, not specialist review.
 It supersedes the earlier source-coefficient allowance only; actual
 trajectory separation and collision/threshold coverage remain open.
+
+**One-mark cosine jet gain, 29 October 2026.** Prepared for Edward Baker
+with substantial LLM assistance; authoring **gpt-6-astra / max**, chat0026,
+assessment **gpt-6.1-sol / ultra**, chat0027.
+[Note55](../papers/investigations-5/05_radial_theta_collision_geometry/notes/55_COSINE_JET_CORRELATION_B02_R7_20261029.md)
+is **proved in-note**; [Review30](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/30_COSINE_JET_CORRELATION_E08_R7_ASSESSMENT_20261029.md)
+states: “accepted without mathematical correction at the single frozen
+mark (T,A)=(1/4,2), within the inherited prepared whole-space solution
+class.” Complete theta moments and a fully paid prepared Gaussian test
+prove ||2J2,0-V0||2<=(12/13)||J2,0||2. The actual second-jet and stated
+exterior Theta allowances improve at the same B after the explicit
+threshold (1/6)log(169E0/(196Q0)); the sharp Q allowance ratio tends
+algebraically to 36/169. Reusable as a supporting-energy estimate, with
+no improved R5 compact coefficient, independent B bound, deadline payment
+or larger domain. The same moments give a direct first-jet margin;
+positive weighted-square sources share the sufficient moment input at
+this mark. Separate-chat, different-model internal assessment with three
+read-only same-model subagent audits retains shared inherited premises;
+no specialist independence or numerical acquisition. Manuscript unchanged.
+
+**Finite diffusion-variance compression horizon, 29 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance; proof
+**gpt-6-astra / max**, chat0028, assessment **gpt-6.1-sol / ultra**, chat0029.
+[Note59](../papers/investigations-5/05_radial_theta_collision_geometry/notes/59_DIFFUSION_VARIANCE_COMPRESSION_BOUND_B02_R8_20261029.md)
+is **proved in-note**; [Review32](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/32_DIFFUSION_VARIANCE_E08_R8_ASSESSMENT_20261029.md)
+states: “accepted without mathematical correction at the fixed mark”.
+Strict positive spatial variance plus paid H3 persistence (C3=11038)
+produce finite B on the closed old Riccati horizon S_tar=L(g0), with
+Smax>=h+L(g1)>S_tar and complete weighted-residual costs. Reusable within
+the inherited prepared radial class as a generic finite-horizon bound,
+not a deadline/global-iteration theorem or theta separator. Smooth colliding
+controls share its premises; no numerical horizon is acquired. At this
+mark Note55+29's direct margin already pays every finite horizon, so no
+new physical domain or acquisition advantage follows. Separate-chat,
+different-model internal review with three read-only same-model contributing
+audits retains shared premises; no specialist independence. Manuscripts unchanged.
+
+**Radial second-cancellation deadline, 29 October 2026.** Prepared for
+Edward Baker with substantial LLM assistance; proof **gpt-6-astra / max**,
+chat0030, assessment **gpt-6.1-sol / ultra**, chat0029.
+[Note63](../papers/investigations-5/05_radial_theta_collision_geometry/notes/63_RADIAL_SECOND_CANCELLATION_DEADLINE_B02_R9_20261029.md)
+is **proved in-note**; [Review33](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/33_RADIAL_SECOND_CANCELLATION_B02_R9_SELF_ASSESSMENT_20261029.md)
+remains its author's same-assistant check. [Review34](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/34_RADIAL_SECOND_CANCELLATION_E08_R9_ASSESSMENT_20261029.md)
+accepts the theorem without mathematical correction within its declared
+split comparison. Full carrier concentration and transition curvature
+costs give conditional upper deadline S9=(1-epsilon9)S1,opt. The review
+also verifies the prior [same-data direct comparison](../papers/investigations-5/05_radial_theta_collision_geometry/notes/CTF_B02_R9_WEIGHTED_DIRECT_COMPARISON_CHAT0029_20261029.md):
+Sw=(2/7)^(2/5)S1,opt<S9 from the identical first-moment cap. It states:
+“R9's issued deadline does not improve this stronger same-information direct comparator.”
+Reuse the scoped theorem and paid source/kernel estimates, with this utility
+limit. No independent regularity, theta separator, exact-P0 ranking or
+physical-domain gain follows. Weighted-square collision controls share
+the premises; the direct first-jet margin already covers every finite
+horizon at the theta mark. E08 is complete. Different-model internal review
+with three read-only same-model contributing audits has prior contributor
+overlap and shared premises, not specialist independence. Manuscripts unchanged.
+
+**Direct uniform feedback from a paid physical margin, 29 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance; proof
+**gpt-6-astra / max**, chat0031; assessment **gpt-6.1-sol / ultra**, chat0032.
+[Note67](../papers/investigations-5/05_radial_theta_collision_geometry/notes/67_UNIFORM_FEEDBACK_DIRECT_COMPARISON_B02_R10_20261029.md)
+is **proved in-note**; [Review36](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/36_UNIFORM_FEEDBACK_E08_R10_ASSESSMENT_20261029.md)
+states: “Accepted without mathematical correction within the inherited prepared
+radial solution class, at the fixed theta mark (T,A)=(1/4,2).” The complete
+source slope pays H>(70/73)M. A generic carrier/Fourier/retained-diffusion
+argument then pays explicit time-uniform G/E0<=K_infinity<=K_theta and
+alpha<=2K_infinity/3. Reusable as a quantitative direct regularity bound;
+its min allowance beats the equally informed exponent-7 growing bound
+after an explicit crossover. The physical margin precedes evolution and
+is essential. B>=a_*s is unbounded; residual/higher-jet control remains
+finite-horizon. No source-residual advantage, larger domain, optimized
+constant or measured cost saving follows. Weighted squares share the
+low-mark sufficient bound; actual admitted events fail positive mass.
+This supersedes the horizon-growing displayed direct allowance for this
+consumer, not earlier scoped results. Different-model internal assessment
+with three same-model contributing audits retains shared premises;
+no specialist independence. Frozen inputs/manuscripts unchanged.
+
+**Analytical manuscript consolidation, 29 October 2026.** Prepared for
+Edward Baker with substantial LLM assistance, **gpt-6-astra / max**,
+chat0031. [Note71](../papers/investigations-5/05_radial_theta_collision_geometry/notes/71_ANALYTICAL_MANUSCRIPT_CONSOLIDATION_20261029.md)
+states: “Completed editorial integration; no new mathematical result claimed.”
+The [main manuscript](../papers/investigations-5/05_radial_theta_collision_geometry/radial_deformations_and_zero_dynamics.tex)
+now leads with the stronger direct deadline and accepted uniform-feedback
+bound, retaining the physical-margin premise and finite-horizon residual
+scope. Source compatibility, its kernel-freedom limitation and the final
+coupled closure follow in dependency order. The [editorial review](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/37_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md)
+and [build record](../papers/investigations-5/05_radial_theta_collision_geometry/numerics/27_ANALYTICAL_MANUSCRIPT_BUILD_RECORD_20261029.json)
+identify the 28-page checked version. Earlier proof and assessment sources
+and the companion remain unchanged; only the active main manuscript is
+superseded by this later authorized version. Internal same-assistant
+editorial checking, not independent mathematical review.

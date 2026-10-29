@@ -57,11 +57,17 @@ estimate from that identity is asserted here.
 
 ## Records and continuation
 
-All twelve frozen input hashes match at intake; Review28 contains their
-exact values. The prior notes, issued packet, manuscript and companion
+All twelve frozen input hashes match at intake and final recheck; Review28
+contains their exact values. The prior notes, issued packet, manuscript and companion
 are preserved. There was no numerical acquisition or new candidate.
 The existing manuscript remains the [R5 build24][build] source version;
 no new build or editor tab was needed.
+
+File verification found 597 resolving local link targets and 215 defined
+named-reference uses across the assessment, notes and updated navigation;
+the three new documents have balanced math delimiters and remain below
+1 MiB. The repository diff has no whitespace errors. These checks concern
+files and notation, separately from the analytical verdict above.
 
 This is separate-chat, different-model internal review of Astra's R6,
 with shared inherited premises, including Sol's Note40. The opening

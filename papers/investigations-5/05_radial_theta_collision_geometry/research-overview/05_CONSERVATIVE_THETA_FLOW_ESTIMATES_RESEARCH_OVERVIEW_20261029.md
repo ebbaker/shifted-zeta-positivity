@@ -10,24 +10,161 @@ This overview supersedes [Overview04][old-overview] for current priorities.
 **[Progress05][progress] is the sole current register.** Existing CTF
 task identities are retained. R3/E07 R1 and R4 are complete in Notes39–42;
 [Review22][r22] and [Review23][r23] record their completed assessments
-and manuscript integrations. Section 7.4 now also contains the assessed R2 compact gain below;
-prior build records retain their historical versions.
+and manuscript integrations. The current E05 R2 revision consolidates
+those results by logical dependence; prior build records retain their
+historical versions.
 
-**Default next: [E] CTF-E08 R6 — Sol**, assess the fixed [packet][e08r6].
-[Note51][n51] completes B02 R6 as a proved in-note scoped negative:
-the unchanged theta amplitude with a variable observation kernel admits
-zero raw mismatch, m=0 and E0>0 at (1/4,2). Any prescribed finite cosine
-Taylor prefix can be retained. The genuine preparatory residual and
-inherited auxiliary deadline remain. The comparison fails the full cosine
-oscillator/Newman identity; no physical theta collision is claimed.
+**CTF-E05 R2 complete — analytical manuscript consolidated at the
+author's request.** [Note71](../notes/71_ANALYTICAL_MANUSCRIPT_CONSOLIDATION_20261029.md) and
+[Review37](../reviews/37_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md) record the integration:
+the stronger weighted Fourier deadline, uniform radial feedback,
+complete analytical theta input, scoped kernel freedom, and the final
+coupled residual theorem. The 28-page reading copy compiles in both
+local and desktop compilers; every page was visually checked.
+[Record27](../numerics/27_ANALYTICAL_MANUSCRIPT_BUILD_RECORD_20261029.json) binds the saved version and preservation
+checks. This is editorial integration, not a new mathematical result.
 
-[Self-assessment27][r27] records same-assistant checks, and
-[Continuation52][n52] gives model-change guidance. Actual R6:
-gpt-6-astra / max, chat0024, 29 October 2026, for Edward Baker with
-substantial LLM assistance; no subagents or independent review. Parent
-B02 remains partial; E03/B03 remain gated. A future estimate using joint
-actual cosine/source compatibility is unselected and requires a new
-recorded B02 candidate after assessment.
+Actual **gpt-6-astra / max**, chat0031; author-requested execution in this
+chat while Sol assessed R10. Sol's assessment finished before manuscript
+installation. All 123 preexisting protected proof/review/handoff/companion
+files are unchanged; the main source intentionally has a later version.
+The [editorial receipt](../research-progress/handoffs/CTF-E05_ANALYTICAL_MANUSCRIPT_REVISION_R2_20261029.md)
+preserves intake and completion.
+
+**Next: [B] CTF-B02 — Astra**, select one still unpaid quantity or precise
+advantage beyond the accepted direct uniform bound, under
+[Continuation72](../notes/72_ANALYTICAL_MANUSCRIPT_AND_MODEL_CONTINUATION_20261029.md). Outstanding tasks include control
+without a preestablished physical margin, uniform residual/higher-jet
+estimates, physical-parameter coverage and independent mathematical review.
+Parent B02 remains partial; E03/B03 gated. No new candidate or numerical
+work was executed by this editorial task.
+
+### Completed R10 scientific assessment — before this editorial integration
+
+**CTF-E08 R10 complete — accepted without mathematical correction at
+(T,A)=(1/4,2), within the inherited prepared radial solution class.**
+[Review36][r36] checks all eight frozen [packet][e08r10] obligations;
+[Return69][n69] records the result. The complete source margin, Fourier
+coefficient 1/(15 pi²), carrier moments/increments, retained diffusion,
+sliding interval and all analytical constants K_infinity<=K_theta pass.
+The assessment clarifies E0 as the preserved field energy, not the norm
+of its time derivative; frozen proof sources remain unchanged.
+
+The stronger direct method pays the entire time-uniform G/E0 and alpha
+consumer from a physical margin acquired before evolution. The combined
+min{U7,K_infinity} allowance is strictly better than the equally informed
+exponent-7 direct allowance after finite sc>=delta. **No source-residual
+advantage, larger physical domain, optimized numerical constant or
+acquisition saving is established.** B>=a_*s remains unbounded; full
+residual/higher-jet control remains finite-horizon. Sw<S9 retains its
+conditional zero-mass upper-deadline direction. Positive weighted-square
+sources share the sufficient low-mark source bound; actual events fail
+the positive mass premise. Other controls retain their actual scopes.
+
+**Next: [B] CTF-B02 — Astra**, identify one still unpaid consumer or
+precise independent information/cost/proof advantage against the accepted
+direct uniform bound, then declare its complete matched comparison and
+control contract. [Continuation70][n70] gives model-change/history
+guidance; no mechanism or next revision is selected. Parent B02 remains
+partial; E03/B03 gated. No acquisition, new mark, PDE evolution or
+manuscript edit/build occurred.
+
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol / actual recorded effort ultra**, chat0032,
+**Assess CTF-E08 R10 obligations**, 29 October 2026. Three read-only
+same-model contributing audits supported the parent review of Astra/max's
+proof; shared inherited premises remain, without specialist or formal
+independence. All 17 issued hashes, the packet and 121 inherited
+proof/review/TeX/handoff files retain their intake bytes. File validation
+is separate from the analytical assessment.
+
+**R10 issue-stage proof and pending assessment are preserved in [Note67][n67],
+[Continuation68][n68] and the historical intake in [Progress05][progress].**
+
+**Prior assessment: CTF-E08 R9 complete — accepted without mathematical correction within
+the inherited prepared radial class and declared displayed-split comparison.**
+[Review34][r34] answers all eight fixed [packet][e08r9] obligations;
+[Return65][n65] records the result. Full-source concentration R0/M<26/3<9,
+preparation costs, actual transition second variation, curvature term,
+finite compression window and exact epsilon9 integration all pass.
+All 17 frozen inputs and the packet match; the twelve exact constant
+checks pass and the saved JSON replays byte-identically.
+
+**Comparative utility remains limited:** the verified [weighted direct
+addendum](../notes/CTF_B02_R9_WEIGHTED_DIRECT_COMPARISON_CHAT0029_20261029.md)
+gives Sw=(2/7)^(2/5) S1,opt<S9 from identical M,R0,E0, without radial
+second cancellation or concentration. R9's narrow split gain is valid,
+but its issued deadline does not improve that stronger same-information
+direct bound. Note55+29's direct margin already covers every finite
+horizon at the actual theta mark. No source-specific B through the
+deadline, larger physical domain, exact-P0 ranking or acquisition
+advantage follows. Weighted-square collision controls remain admitted.
+R8's closed local/open extended endpoints and all residual, actual-jet,
+commutator/cutoff, sphere and inner-ball obligations remain.
+
+**Next: [B] CTF-B02 — Astra**, choose one still unpaid source-specific
+consumer and complete comparison under [Continuation66][n66]. No next
+mechanism or scientific revision is selected; another improvement over
+S1,opt alone does not establish an advantage over the direct method.
+Parent B02 remains partial; E03/B03 remain gated. No source acquisition,
+k/b0 optimization, PDE evolution, manuscript edit or build occurred.
+
+Assessment prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol / ultra**, chat0029, 29 October 2026; three read-only
+same-model contributing audits, prior contributor overlap and shared
+inherited premises, no specialist independence.
+
+The following R6/R7 assessment summaries retain their historical routing.
+
+**CTF-E08 R6 complete**, accepted without mathematical correction in
+[Review28][r28], with the [research return53][n53] and [Continuation54][n54].
+[Note51][n51]'s exact ratio-zero result is proved in-note and assessed
+only for the fixed-amplitude variable-kernel class. Every separately
+fixed finite cosine prefix is compatible with zero raw mismatch, m=0
+and E0>0; the true preparation residual and inherited deadline remain.
+The kernels fail full cosine/Newman compatibility. This supplies no
+physical theta collision or obstruction to estimates using actual cosine.
+All twelve frozen source hashes match; prior notes and both TeX sources
+are preserved.
+
+**CTF-E08 R7 complete — accepted without mathematical correction at
+(T,A)=(1/4,2).** [Review30][r30] checks all seven obligations in the
+[frozen packet][e08r7]; [Return57][n57] records the research result.
+[Note55][n55]'s complete-source moment bound, prepared norm ratio 12/13,
+same-B Q/Theta allowances and threshold 169/196 are supported. The
+limiting sharp allowance ratio is 36/169; 72/169 belongs to its weaker
+Young form. All eleven frozen inputs match, and both TeX sources retain
+their R5 bytes.
+
+The estimate still permits exp(6B) growth. It provides no independent
+compression/deadline bound, improved compact R5 coefficient or larger
+physical domain. The same moment budget already gives the direct
+margin 35M2/18. Positive weighted-square sources share the sufficient
+moment premise at this low mark; their high-height collisions remain
+outside it. R6 lacks applicability of the literal-cosine raw formula,
+not necessarily the final norm inequality.
+
+**Next at the R7 closure (historical): [B] CTF-B02 — Astra**, select one bounded route to independent
+compression control under [Continuation58][n58]. The conceptual choice
+is which retained diffusion or signed source term can close a finite
+bound on B through a stated horizon. A smaller positive prefactor on
+exp(cB) alone does not meet this objective. No next candidate is selected
+or tested here; parent B02 remains partial and E03/B03 remain gated.
+
+Assessment: **gpt-6.1-sol / actual effort ultra**, Investigation05
+**chat0027**, **Assess CTF-E08 R7 proof**, 29 October 2026, prepared for
+Edward Baker with substantial LLM assistance. Three read-only same-model
+subagent audits supported this separate-chat, different-model internal
+assessment of Astra/max's R7. Inherited shared premises include Sol's
+Note40; there is no specialist or formal independence. No numerical
+acquisition, mark extension, manuscript edit or build occurred.
+
+Assessment provenance, 29 October 2026: prepared for Edward Baker with
+substantial LLM assistance, **gpt-6.1-sol / ultra**, chat0025. Its opening
+Astra/max inspection was interrupted before the model switch and substantive
+assessment. R6 authoring was Astra/max, chat0024; the separate-chat,
+different-model internal assessment shares inherited premises, including
+Sol's Note40, without subagents or specialist independence.
 
 The earlier R5 result remains accepted in [Review26][r26] and
 [Note49][n49]: coefficient gain 49/600, same-B allowance ratio
@@ -43,9 +180,18 @@ Follow [GPT_RESEARCH_MODEL_WORKFLOW][workflow]. **B** means an unresolved concep
 
 | Task | Type and recommended model | Readiness and dependency | Bounded output |
 | --- | --- | --- | --- |
-| **CTF-E08 R6 — default** | **E — Sol:** fixed proof and scope assessment | Ready; [packet][e08r6], [Note51][n51] and [Self-assessment27][r27] | One accepted/corrected verdict or precise gap; notes/navigation only, no manuscript integration |
-| **CTF-B02 R6** | **B — Astra:** sufficiency of zero raw mismatch | Complete in-note; same-assistant checks, parent partial | Exact zero first-jet ratio in the fixed-amplitude variable-kernel class; finite cosine prefix retained, full cosine/Newman identity fails |
-| **CTF-B02 future bounded revision** | **B — Astra:** joint actual cosine/source estimating route is unselected | Follows R6 assessment; [Note52][n52] | Record one new quantitative candidate before testing; no automatic second candidate |
+| **CTF-E08 R10** | **E — Sol:** proof route and eight checks fixed | Complete; accepted in [Review36][r36], [Return69][n69] | Uniform direct bound and full costs accepted; field-energy notation clarified, physical-margin/control limits retained; no manuscript integration |
+| **CTF-B02 R10** | **B — Astra:** time-uniform consumer and direct comparison | Complete in [Note67][n67], internally assessed in [Review36][r36] | Direct method pays the uniform gradient/feedback consumer; parent partial, no source-residual advantage |
+| **CTF-B02 subsequent decision — default next** | **B — Astra:** selecting an unpaid consumer or precise independent advantage remains conceptual | Ready to formulate under [Continuation70][n70]; no next candidate chosen | One declared useful information/consumer/cost/proof gain with strongest direct/control comparison |
+| **CTF-E08 R9** | **E — Sol:** eight fixed proof/cost/control checks | Complete; [Review34][r34], [Return65][n65] | Scoped split theorem accepted; stronger same-data direct Sw<S9 verified; 17 frozen inputs match |
+| **CTF-B02 R9** | **B — Astra:** radial second-cancellation deadline | Proved in Note63; assessed in Review34; parent partial | Valid split-class conditional upper-deadline gain, no advantage over Sw or independent regularity |
+| **CTF-E08 R8** | **E — Sol:** eight fixed proof/cost/scope checks | Complete; [Review32][r32] and [Return61][n61] | Accepted without mathematical correction;16 frozen inputs match, manuscripts unchanged |
+| **CTF-B02 R8** | **B — Astra:** retain spatial diffusion variance | Proved in Note59, assessed in Review32; parent partial | Complete finite B at closed S_tar with strict open lifespan extension; generic, no deadline/global iteration |
+| **CTF-E08 R7** | **E — Sol:** seven fixed proof/scope checks | Complete; [Review30][r30] and [Return57][n57] | Accepted without mathematical correction;11 frozen inputs match, manuscript unchanged |
+| **CTF-B02 R7** | **B — Astra:** select a useful joint cosine/source correlation | Proved in [Note55][n55], assessed in [Review30][r30] | 12/13 prepared norm ratio; same-B jet allowance after Bc; no deadline or domain gain |
+| **CTF-E08 R6** | **E — Sol:** fixed proof and scope assessment | Complete in [Review28][r28], Sol/ultra, chat0025 | Accepted without mathematical correction within the reduced kernel class; [Return53][n53], all twelve frozen hashes match; no manuscript integration |
+| **CTF-B02 R6** | **B — Astra:** sufficiency of zero raw mismatch | Complete in-note; assessed in [Review28][r28], parent partial | Exact zero first-jet ratio in the fixed-amplitude variable-kernel class; finite cosine prefix retained, full cosine/Newman identity fails |
+| **CTF-B02 subsequent revision** | **B — Astra:** source-specific regularity remains conceptual | After assessed R9; no further candidate selected | Record one unpaid horizon/consumer and full strongest-direct comparison under Continuation66 |
 | **CTF-B02 R5** | **B — Astra:** select a source-coefficient coupled estimate | Complete in [Note47][n47]; assessed in [Review26][r26] | Full theta tail and signed residual/actual-jet coupling lower compact coefficient 49/600; exact control remains admitted |
 | **CTF-E08 R5** | **E — Sol:** fixed proof assessment/integration; actual Astra/max | Complete in [Review26][r26] and [Note49][n49] | Proposition 7.8, 28-page build/layout check,14 inherited proofs preserved; same-model internal scope |
 | **CTF-B02 R3** | **B — Astra:** select one coupled functional and estimating route | Complete design in [Note39][n39], executed in [Note40][n40] | One finite weighted residual estimate proved; signed collision restriction remains open |
@@ -176,12 +322,14 @@ New work belongs in notes, numerics, and reviews with actual model and effort. R
 
 ## Current continuation
 
-**Next: [B] CTF-B02 — Astra**, one bounded conceptual revision under
-[Note50][n50]. E08 R5 is complete in Review26; the accepted coefficient
-gain is integrated and does not distinguish the theta trajectory from
-the admitted colliding control. Record the next candidate and its
-quantitative comparison before testing; no candidate is chosen here.
-[Progress05][progress] owns live status. E03/B03 remain gated.
+**Next: [B] CTF-B02 — Astra**, select one bounded route to independent
+compression control under [Continuation58][n58]. [Review30][r30] accepts
+the fixed R7 proof without mathematical correction. Its smaller same-B
+jet allowance retains exp(6B) growth. Keep the complete source, original
+feedback, actual prepared jets and all residual terms. Record a consumer,
+complete payment, comparison and control premises before one test;
+no next candidate is selected here. [Progress05][progress] owns status;
+E03/B03 remain gated.
 
 ## Original R3 continuation prompt
 
@@ -251,3 +399,43 @@ quantitative comparison before testing; no candidate is chosen here.
 [n52]: ../notes/52_RAW_COMPATIBILITY_SOL_CONTINUATION_20261029.md
 [r27]: ../reviews/27_ZERO_RAW_MISMATCH_B02_R6_SELF_ASSESSMENT_20261029.md
 [e08r6]: ../research-progress/handoffs/CTF-E08_RAW_COMPATIBILITY_ASSESSMENT_REQUEST_R6_20261029.md
+
+[n53]: ../notes/53_RAW_COMPATIBILITY_E08_R6_RESEARCH_RETURN_20261029.md
+[n54]: ../notes/54_RAW_COMPATIBILITY_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md
+[r28]: ../reviews/28_RAW_COMPATIBILITY_E08_R6_ASSESSMENT_20261029.md
+
+[n55]: ../notes/55_COSINE_JET_CORRELATION_B02_R7_20261029.md
+[n56]: ../notes/56_COSINE_JET_CORRELATION_AND_MODEL_CONTINUATION_20261029.md
+[r29]: ../reviews/29_COSINE_JET_CORRELATION_B02_R7_SELF_ASSESSMENT_20261029.md
+[e08r7]: ../research-progress/handoffs/CTF-E08_COSINE_JET_CORRELATION_ASSESSMENT_REQUEST_R7_20261029.md
+
+[r30]: ../reviews/30_COSINE_JET_CORRELATION_E08_R7_ASSESSMENT_20261029.md
+[n57]: ../notes/57_COSINE_JET_CORRELATION_E08_R7_RESEARCH_RETURN_20261029.md
+[n58]: ../notes/58_COMPRESSION_CONTROL_AND_MODEL_CONTINUATION_20261029.md
+
+[n59]: ../notes/59_DIFFUSION_VARIANCE_COMPRESSION_BOUND_B02_R8_20261029.md
+[n60]: ../notes/60_DIFFUSION_VARIANCE_AND_MODEL_CONTINUATION_20261029.md
+[r31]: ../reviews/31_DIFFUSION_VARIANCE_B02_R8_SELF_ASSESSMENT_20261029.md
+[e08r8]: ../research-progress/handoffs/CTF-E08_DIFFUSION_VARIANCE_ASSESSMENT_REQUEST_R8_20261029.md
+
+[r32]: ../reviews/32_DIFFUSION_VARIANCE_E08_R8_ASSESSMENT_20261029.md
+[n61]: ../notes/61_DIFFUSION_VARIANCE_E08_R8_RESEARCH_RETURN_20261029.md
+[n62]: ../notes/62_COMPRESSION_HORIZON_AND_MODEL_CONTINUATION_20261029.md
+
+[n63]: ../notes/63_RADIAL_SECOND_CANCELLATION_DEADLINE_B02_R9_20261029.md
+[n64]: ../notes/64_RADIAL_DEADLINE_AND_MODEL_CONTINUATION_20261029.md
+[r33]: ../reviews/33_RADIAL_SECOND_CANCELLATION_B02_R9_SELF_ASSESSMENT_20261029.md
+[e08r9]: ../research-progress/handoffs/CTF-E08_RADIAL_SECOND_CANCELLATION_ASSESSMENT_REQUEST_R9_20261029.md
+
+[r34]: ../reviews/34_RADIAL_SECOND_CANCELLATION_E08_R9_ASSESSMENT_20261029.md
+[n65]: ../notes/65_RADIAL_DEADLINE_E08_R9_RESEARCH_RETURN_20261029.md
+[n66]: ../notes/66_RADIAL_DEADLINE_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md
+
+[n67]: ../notes/67_UNIFORM_FEEDBACK_DIRECT_COMPARISON_B02_R10_20261029.md
+[n68]: ../notes/68_UNIFORM_FEEDBACK_AND_MODEL_CONTINUATION_20261029.md
+[r35]: ../reviews/35_UNIFORM_FEEDBACK_B02_R10_SELF_ASSESSMENT_20261029.md
+[e08r10]: ../research-progress/handoffs/CTF-E08_UNIFORM_FEEDBACK_ASSESSMENT_REQUEST_R10_20261029.md
+
+[r36]: ../reviews/36_UNIFORM_FEEDBACK_E08_R10_ASSESSMENT_20261029.md
+[n69]: ../notes/69_UNIFORM_FEEDBACK_E08_R10_RESEARCH_RETURN_20261029.md
+[n70]: ../notes/70_UNIFORM_FEEDBACK_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md
