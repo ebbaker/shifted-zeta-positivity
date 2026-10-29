@@ -48,3 +48,15 @@
   11-page layout checks. Same-assistant checking; no new collision
   exclusion. Prepared for Edward Baker with LLM assistance,
   gpt-6-astra / xhigh, 28 October 2026, chat0015.
+
+- [22 — Weighted residual closure assessment and integration](22_WEIGHTED_RESIDUAL_CLOSURE_E08_ASSESSMENT_20261029.md): complete CTF-E08; accepts Note40’s fixed weighted/local result, integrates manuscript Section 7 and updates the remaining estimate in Section 8. Different-model internal assessment of Sol execution by the original Astra designer, with shared inherited premises; not specialist review. Built-in/local compilation and 21-page layout check recorded in record21. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / max, chat0018, 29 October 2026.
+
+- [23 — Radial drift improvement E08 integration](23_RADIAL_DRIFT_IMPROVEMENT_E08_INTEGRATION_20261029.md): accepted Note42 within radial prepared scope; Section 7.4 integration, 24-page built-in/local build and bounded visual check, ten inherited proofs preserved. Internal prior-contributor Sol/ultra assessment, no specialist independence or deadline claim. For Edward Baker with LLM assistance, chat0021, 29 October 2026.
+
+- [24 — Strict compact-gain E08 assessment/integration](24_RADIAL_COMPACT_GAIN_E08_ASSESSMENT_20261029.md): Note44 accepted without mathematical correction, exact cutoff fixed, Proposition 7.7 integrated with gap>=41/24 and same-B factor<=exp[-41B/24]. All 13 inherited proofs preserved; successful 25-page built-in/local build and bounded layout inspection. Same-parent/internal same-model assessment with shared premises, no specialist independence. For Edward Baker with substantial LLM assistance, gpt-6.1-sol / ultra, chat0022, 29 October 2026.
+
+- [25 — Source-coupling R5 self-assessment](25_SOURCE_COUPLING_B02_R5_SELF_ASSESSMENT_20261029.md): same-assistant checks of the complete-tail slope, signed residual completion, jet/inner payments and 49/600 compact gain. E08 not executed; no control exclusion or specialist review. gpt-6-astra / max, chat0023, 29 October 2026.
+
+- [26 — Source-coupling E08 R5 assessment and integration](26_SOURCE_COUPLING_E08_R5_ASSESSMENT_20261029.md): accepted without correction; full-tail, signed completion, actual-jet/inner and control checks; Proposition 7.8, 28-page compilation/layout check,14 inherited proofs preserved. Separate-chat same-model Astra/max assessment, chat0024; no specialist review or deadline claim.
+
+- [27 — Zero raw mismatch, B02 R6 self-assessment](27_ZERO_RAW_MISMATCH_B02_R6_SELF_ASSESSMENT_20261029.md): analytical checks of the exact variable-kernel comparison, finite-prefix quantifiers, real prepared residual and inherited deadline; full cosine/Newman premise fails. Same assistant as author, no independent review. 29 October 2026, prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / max, chat0024. Fixed E08 R6 assessment remains unexecuted.

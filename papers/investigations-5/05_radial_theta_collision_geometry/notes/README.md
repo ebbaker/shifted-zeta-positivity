@@ -10,7 +10,15 @@ bookmark leaves the CTF task states below unchanged. 28 October 2026;
 prepared for Edward Baker with substantial LLM assistance, gpt-6-astra /
 xhigh.
 
-Start with [32 — Latest research continuation](32_SOURCE_RELATION_COMMUTATOR_CONTINUATION_20261028.md) and [34 — E05 editorial refocus](34_CTF_E05_MANUSCRIPT_REFOCUS_RETURN_R1_20261028.md). Notes28–29 and31 are retained in current manuscript Sections4–6; [33 — Manuscript integration](33_NOTES28_29_31_MANUSCRIPT_INTEGRATION_20261028.md) records the preceding E04 version. The [current overview](../research-overview/04_CONSERVATIVE_THETA_FLOW_RESEARCH_OVERVIEW_20261028.md) and [sole live progress register](../research-progress/04_CONSERVATIVE_THETA_FLOW_RESEARCH_PROGRESS_20261028.md) govern CTF priorities; the missing coupled signed estimate remains open. Earlier continuation notes preserve their historical contracts.
+Start with [52 — Raw compatibility and model continuation](52_RAW_COMPATIBILITY_SOL_CONTINUATION_20261029.md).
+**Next: [E] CTF-E08 R6 — Sol**, fixed assessment of [Note51](51_ZERO_RAW_MISMATCH_KERNEL_FREEDOM_B02_R6_20261029.md) and
+[Self-assessment27](../reviews/27_ZERO_RAW_MISMATCH_B02_R6_SELF_ASSESSMENT_20261029.md). The exact variable-kernel
+comparison keeps theta's amplitude and zero raw mismatch but fails the
+full cosine/Newman identity. B02 R6 is complete in-note; parent B02 remains
+partial. The manuscript is unchanged. [Progress05](../research-progress/05_CONSERVATIVE_THETA_FLOW_ESTIMATES_RESEARCH_PROGRESS_20261029.md)
+owns live status. Prepared for Edward Baker with substantial LLM
+assistance, gpt-6-astra / max, chat0024, 29 October 2026; same-assistant
+checks, no subagents or independent review.
 
 - [01 — Initial analytical development](01_RADIAL_THETA_GEOMETRY_AND_COLLISION_MECHANISMS_20261027.md): radial/Kelvin source, evolved potential, forced boundary equation, exact transfer and time evolution, Wronskian control, and research choices.
 - [02 — Continuation and session handoff](02_CONTINUATION_AND_SESSION_HANDOFF_20261027.md): reading order, current task states, exact formulas, next bounded analysis and provenance.
@@ -85,3 +93,32 @@ Start with [32 — Latest research continuation](32_SOURCE_RELATION_COMMUTATOR_C
 - [37 — Geometry discussion and return continuation](37_GEOMETRY_DISCUSSION_AND_RETURN_CONTINUATION_20261028.md): preserves the discussion and a flexible starting point for a different geometric idea, with exact identities, scoped limitations, zero-information questions and the current arithmetic return path. Planning only; gpt-6-astra / xhigh, chat0016, 28 October 2026.
 
 - [38 — Auxiliary source flows and collision response](38_AUXILIARY_SOURCE_FLOWS_AND_COLLISION_RESPONSE_20261028.md): exploratory flow assessment; bounded cosine source tilt with a definite local collision response, exact control, and scoped drift/fourth-derivative checks. No demonstrated sensitivity gain or collision exclusion. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / max, chat0017, 28 October 2026.
+
+- [CTF-E06 — Manuscript cleanup and classical attribution](CTF_E06_MANUSCRIPT_CLEANUP_RETURN_20261029.md): complete bounded editorial pass; explicit density/Jacobian and parameter roles, early estimate target, classical Mellin attribution and repaired routing. Both sources compile; proof blocks unchanged. Prepared for Edward Baker with substantial LLM assistance, gpt-6.1-sol / ultra, chat0019, 29 October 2026.
+
+- [39 — Weighted residual and second-jet estimate](39_WEIGHTED_RESIDUAL_COUPLED_ESTIMATE_B02_R3_20261029.md): B02 R3 design return; one fixed functional, formal full production and a finite analytical E07 R1 contract. Lemma unverified at design issue; subsequently verified in Note40 with weighted/local scope. No signed theta separation or collision exclusion. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / max, chat0018, 29 October 2026.
+
+- [40 — Verified weighted residual closure](40_WEIGHTED_RESIDUAL_CLOSURE_E07_R1_RETURN_20261029.md): E07 R1 complete; all four analytical items pass with unchanged constants, integrated dissipation, local residual and lifespan bounds. Full signed production and control mismatch retained; no deadline coverage or signed theta separator. Internal same-model checks. Prepared for Edward Baker with substantial LLM assistance, gpt-6.1-sol / ultra, chat0020, 29 October 2026. Next E08; B02 partial.
+
+- [41 — Continuation after finite weighted residual closure](41_WEIGHTED_CLOSURE_CONTINUATION_20261029.md): proved baseline and precise loss of signed correlations in the upper estimate; plans one bounded B02 R4 improvement or alternate admissible functional with comparison and stopping rule. No new candidate tested. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / max, chat0018, 29 October 2026.
+
+- [42 — Radial drift-production improvement](42_RADIAL_DRIFT_PRODUCTION_IMPROVEMENT_B02_R4_20261029.md): one proved B02 R4 supporting lemma, 30 to 21/4 energy allowance with exact nonnegative radial square, improved conditional gradient/expanded weighted bound and local interval versus the old diffusion-retaining comparison. Generic gain admits the colliding control; no deadline coverage or numerics. For Edward Baker with substantial LLM assistance, Astra/max conceptual contribution and Sol/ultra parent/checks, chat0021, 29 October 2026. Next E08 assessment/integration.
+
+- [43 — Sol continuation after radial drift integration](43_RADIAL_DRIFT_INTEGRATION_SOL_CONTINUATION_20261029.md): issue-stage handoff after completed R4 E08; fixed E07 R2 all-radius B1 proof targeting the already named strict compact-gap condition, with frozen request, reading order, acceptance/stop rules and prompt. No new bound executed. For Edward Baker with LLM assistance, gpt-6.1-sol / ultra, chat0021, 29 October 2026.
+
+
+- [44 — All-radius compact-coefficient bound](44_RADIAL_COMPACT_COEFFICIENT_E07_R2_RETURN_20261029.md): E07 R2 complete; B1<=69/4, exact eta' and full tail paid, compact gap>=41/24 and same-B allowance factor<=exp[-41B/24]. Generic analytical gain admits colliding control; no deadline bound or numerics. For Edward Baker with substantial LLM assistance, gpt-6.1-sol / ultra, chat0022, 29 October 2026; same-model internal checks.
+
+- [45 — Continuation after the strict compact gain](45_RADIAL_COMPACT_GAIN_CONTINUATION_20261029.md): bounded E08 R2 assessment/integration, reading order, routing, scope and prompt. No E08 execution or further estimate. Same provenance as Note44.
+
+- [46 — Continuation after strict compact-gain integration](46_STRICT_COMPACT_GAIN_INTEGRATION_CONTINUATION_20261029.md): E08 R2 complete in Review24, current manuscript/build and next B02 conceptual boundary, retained controls and pasteable prompt. No next candidate tested. Prepared for Edward Baker with substantial LLM assistance, gpt-6.1-sol / ultra, chat0022, 29 October 2026.
+
+- [47 — Exterior source/residual coupling](47_EXTERIOR_SOURCE_RESIDUAL_COUPLING_B02_R5_20261029.md): CTF-B02 R5, complete analytical source-coefficient gain 49/600 with all jet/inner costs; exact control admitted, no deadline bound.
+- [48 — Source coupling Sol continuation](48_SOURCE_COUPLING_SOL_CONTINUATION_20261029.md): frozen E08 R5 assessment/integration handoff and the remaining trajectory-sensitive conceptual boundary.
+
+- [49 — Source-coupling E08 R5 research return](49_SOURCE_COUPLING_E08_R5_RESEARCH_RETURN_20261029.md): accepted gain and completed Proposition 7.8 integration; 28-page build and bounded layout check,14 inherited proofs preserved; no deadline control. Astra/max, chat0024.
+- [50 — Source-coupling integration and model continuation](50_SOURCE_COUPLING_INTEGRATION_AND_MODEL_CONTINUATION_20261029.md): next B02 conceptual boundary, actual same-model review provenance, model routing and pasteable prompt; no new candidate tested. Astra/max, chat0024.
+
+- [51 — Zero raw mismatch and kernel freedom](51_ZERO_RAW_MISMATCH_KERNEL_FREEDOM_B02_R6_20261029.md): exact ratio-zero comparison at (1/4,2), any finite cosine prefix, genuine prepared residual and inherited auxiliary deadline; explicitly outside full cosine/Newman class. Proved in-note, same-assistant checks. 29 October 2026; gpt-6-astra / max, chat0024.
+
+- [52 — Raw-compatibility continuation for model changes](52_RAW_COMPATIBILITY_SOL_CONTINUATION_20261029.md): fixed E08 R6/Sol assessment, precise scope and future B02 boundary; manuscript unchanged. 29 October 2026; gpt-6-astra / max, chat0024.

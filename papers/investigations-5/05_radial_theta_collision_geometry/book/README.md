@@ -3,7 +3,7 @@
 28 October 2026. Drafted for Edward Baker with substantial LLM assistance,
 **gpt-6-astra (Codex), recorded effort xhigh**, chat0015.
 
-**Research routing, 29 October 2026:** the renewed conservative-flow estimate work belongs to [Overview05](../research-overview/05_CONSERVATIVE_THETA_FLOW_ESTIMATES_RESEARCH_OVERVIEW_20261029.md) and the sole current [Progress05](../research-progress/05_CONSERVATIVE_THETA_FLOW_ESTIMATES_RESEARCH_PROGRESS_20261029.md). The main research text is [Conservative Theta Flows and Collision Amplification](../radial_deformations_and_zero_dynamics.tex); this book remains a background companion. [Note35](../notes/35_CLASSICAL_THETA_MELLIN_ATTRIBUTION_20261028.md) identifies its scalar Mellin formula as classical. The separate E06 task permits a bounded attribution/navigation cleanup; the book source has not been rewritten in this planning update. Prepared for Edward Baker with LLM assistance, gpt-6-astra / max, Investigation06 chat0004.
+**Current routing, 29 October 2026:** [Overview05](../research-overview/05_CONSERVATIVE_THETA_FLOW_ESTIMATES_RESEARCH_OVERVIEW_20261029.md) defines the renewed conservative-flow contracts and [Progress05](../research-progress/05_CONSERVATIVE_THETA_FLOW_ESTIMATES_RESEARCH_PROGRESS_20261029.md) owns live status. The main research text is [Conservative Theta Flows and Collision Amplification](../radial_deformations_and_zero_dynamics.tex); this book remains a background companion. **[E] CTF-E06 is complete** in the [editorial return](../notes/CTF_E06_MANUSCRIPT_CLEANUP_RETURN_20261029.md): its scalar Mellin identity is attributed to Riemann and DLMF following Note35, and current-program routing is corrected. Source derivations and all four proof blocks are unchanged. Prepared for Edward Baker with substantial LLM assistance, gpt-6.1-sol / ultra, chat0019.
 
 The [current book draft](main.tex) follows the restored
 [rewrite plan](changes/02_REWRITE_20261028.md). Section 1 starts with xi
@@ -17,9 +17,10 @@ Its [alternative planning note](changes/03_THREE_DIMENSIONAL_NOTATION_ALTERNATIV
 is preserved unchanged from before the reversion. Both approaches are
 therefore available without replacing the main notation. Section 5 gives
 the cylinder heat, transported Newman, and exact linear-combination
-comparisons; Section 6 retains the control scope and open flow choice.
+comparisons; Section 6 retains the control scope and links the current
+conservative-flow estimate program.
 
-The [11-page reading copy](../../../../output/pdf/radial-theta-collision-geometry-book/theta-transform.pdf)
+The [12-page reading copy](../../../../output/pdf/radial-theta-collision-geometry-book/theta-transform.pdf)
 is generated and ignored by Git. Open this folder in the built-in LaTeX
 editor for the editable source and live preview. To build from this folder:
 
@@ -31,9 +32,12 @@ theta-transform.pdf. Working PDFs remain outside the source folder.
 
 [Assessment21](../reviews/21_BOOK_REWRITE_ASSESSMENT_20261028.md) and
 [build record20](../numerics/20_BOOK_REWRITE_BUILD_RECORD_20261028.json)
-record the analytical and all-page layout checks. The draft compiled
-successfully locally and in the desktop editor. No new collision
-exclusion or independent specialist review is claimed.
+record the historical rewrite's analytical and all-page layout checks.
+The [E06 build record](../numerics/CTF_E06_MANUSCRIPT_BUILD_RECORD_20261029.json) identifies the current
+source and PDF: built-in and local compilation succeeded; all 12 pages
+were viewed in contact-sheet overview, with individual PNG inspection of
+pp.5,11,12. No new collision exclusion or independent specialist review
+is claimed.
 
 Earlier setup and motivation remain documented in
 [Brainstorm06](../brainstorm/06_BOOK_TRANSFORM_SETUP_20261028.md),

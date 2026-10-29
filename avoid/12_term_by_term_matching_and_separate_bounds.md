@@ -724,7 +724,7 @@ recurrence; the bounded RS integral retains that payment explicitly.
 
 The [AN04 integration assessment](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/08_AN04_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261025.md)
 preserves that separate initial-error payment and the retained integral
-in manuscript Proposition6.1. It states: “Compilation is production
+in manuscript Proposition 6.1. It states: “Compilation is production
 evidence, not mathematical validation.” 25 October 2026, gpt-6.1-sol, ultra.
 
 
@@ -741,7 +741,7 @@ that fixed-family result as a joint-time or through-zero theorem.
 
 
 The [AN06 integration assessment](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/10_AN06_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261025.md)
-preserves this distinction in Proposition6.2 and Appendix A: “Endpoint
+preserves this distinction in Proposition 6.2 and Appendix A: “Endpoint
 factors are not asserted uniform at tau=0 or B=infinity.” Faithful
 integration and a clean 33-page build do not convert a fixed compact
 family into a through-zero or growing-time theorem. 25 October 2026,
@@ -876,7 +876,7 @@ turning a local gain into an evaluator or runtime claim. This is a
 scoped substitution limit, not an obstruction to better providers.
 
 
-**Pay the arithmetic floor after a saddle-order improvement, 26 October2026.**
+**Pay the arithmetic floor after a saddle-order improvement, 26 October 2026.**
 For Edward Baker with LLM assistance, **gpt-6.1-sol, recorded effort ultra**.
 [Ansatz Note17](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/17_FIRST_CORRECTED_LARGE_POSITIVE_TIME_20261026.md)
 states: “the inherited A_ar has power32 log2/8<5, so that bound cannot
@@ -889,7 +889,7 @@ cannot inherit an old arithmetic absorption unchanged. This rejects the
 specified upper-bound shortcut, not the true error or sharper arithmetic.
 
 
-**Keep the exponential factor inside a finite Taylor payment, 26 October2026.**
+**Keep the exponential factor inside a finite Taylor payment, 26 October 2026.**
 For Edward Baker with LLM assistance, **gpt-6.1-sol, recorded effort ultra**.
 [Ansatz Note18](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/18_SECOND_CORRECTED_LARGE_POSITIVE_TIME_20261026.md)
 uses a finite interpolation and a common Gaussian bound for every
@@ -901,7 +901,7 @@ also preserves the finite-sum factor on passing to suprema. This proves
 one fixed order, not uniform constants for an order growing with time.
 
 
-**Differentiate the moving Gaussian functional, not only its polynomial, 26 October2026.**
+**Differentiate the moving Gaussian functional, not only its polynomial, 26 October 2026.**
 For Edward Baker with LLM assistance, **gpt-6.1-sol, ultra**. [Note19](../papers/investigations-5/01_heat_density_asymptotics/ansatz/notes/19_ARBITRARY_FIXED_POSITIVE_TIME_ORDER_20261026.md)
 states: “The p derivative of the Gaussian functional includes its rho dependence”.
 Keeping rho_p proves the exact finite residual recurrence rather than
@@ -916,7 +916,7 @@ not change the global theorem's time quantifiers or prove physical transfer.
 **26 October 2026 — moving endpoint costs belong to distinct ledgers.**
 For Edward Baker with LLM assistance, **gpt-6.1-sol, actual effort ultra**,
 base chat0025. [Recurrence Note20](../papers/investigations-5/01_heat_density_asymptotics/recurrence/notes/20_MOVING_LOWER_ENDPOINT_20261026.md)
-states: “Pi_m does NOT obey the order-independent ratio in Section3.”
+states: “Pi_m does NOT obey the order-independent ratio in Section 3.”
 Its common lower-time multiplier bounds truncation after integrating the
 real initial population; evolved high-degree moments retain their own
 order-dependent factor. The local node bound and the larger complex
@@ -1012,7 +1012,7 @@ For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort u
 **26 October 2026 — a fixed floor does not pay an oscillatory source provider.**
 For Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**, chat0028. [Note75](../papers/investigations-5/01_heat_density_asymptotics/notes/75_BINARY_HEIGHT_PURE_G_QUERY_COST_20261026.md), assessed in [Review50](../papers/investigations-5/01_heat_density_asymptotics/reviews/50_PURE_G_BINARY_HEIGHT_ASSESSMENT_20261026.md), states: “A fixed q floor alone does not shorten EV5's large-frequency series.” Its complete binary-height query proof separately pays finite endpoint integration by parts, a Cauchy remainder, exact endpoint cancellation and reduced phase, using the original entire-series evaluator only below a polynomial frequency threshold. The analytic amplitude is the interior polynomial, not the zero-extended source; both compact endpoints remain. No source/root lower floor, source change or favorable-sign inference is introduced.
 
-**Keep the preparation residual inside the sphere cancellation, 28 October 2026.** Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort max**, chat0011. [Note31](../papers/investigations-5/05_radial_theta_collision_geometry/notes/31_CANONICAL_SOURCE_RELATION_AND_PREPARATORY_COMMUTATOR_20261028.md), Section4, states: “Separately bounding T/(r log r) and R/(r log r) by ordinary squared norms would also lose a cancellation required for finiteness”. For the fixed theta operator after K1 preparation, T+R vanishes at r=1 although its individual terms need not; dropping the nonzero residual produces a false infinite gradient of smooth actual data. [Manuscript Section14](../papers/investigations-5/05_radial_theta_collision_geometry/radial_deformations_and_zero_dynamics.tex) retains this joint numerator, the full forced residual, the origin-admissible extension and the evolving inner ball. This stops the specified zero-residual substitution, not all coupled signed estimates. [Integration assessment](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/19_CONSERVATIVE_FEEDBACK_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261028.md).
+**Keep the preparation residual inside the sphere cancellation, 28 October 2026.** Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort max**, chat0011. [Note31](../papers/investigations-5/05_radial_theta_collision_geometry/notes/31_CANONICAL_SOURCE_RELATION_AND_PREPARATORY_COMMUTATOR_20261028.md), Section 4, states: “Separately bounding T/(r log r) and R/(r log r) by ordinary squared norms would also lose a cancellation required for finiteness”. For the fixed theta operator after K1 preparation, T+R vanishes at r=1 although its individual terms need not; dropping the nonzero residual produces a false infinite gradient of smooth actual data. [Manuscript Section 14](../papers/investigations-5/05_radial_theta_collision_geometry/radial_deformations_and_zero_dynamics.tex) retains this joint numerator, the full forced residual, the origin-admissible extension and the evolving inner ball. This stops the specified zero-residual substitution, not all coupled signed estimates. [Integration assessment](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/19_CONSERVATIVE_FEEDBACK_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261028.md).
 
 **Signed arithmetic can add constructively, 28 October 2026.** Prepared for
 Edward Baker with substantial LLM assistance, **gpt-6.1-sol, actual effort ultra**.
@@ -1023,3 +1023,22 @@ The stop is the declared leading-pair-versus-whole-remainder triangle
 in its fixed norm at tL=2; full squares, other main blocks/norms and J
 generally are outside it. [Review09](../papers/investigations-5/03_heat_flow_collision_bounds/reviews/09_SIGNED_LAG_RESONATOR_INTERNAL_REVIEW_20261028.md)
 retains the same-model and existential-witness scope.
+
+**Residual squares retain correlations that a later upper bound can discard, 29 October 2026.** Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra / max**, chat0018; source execution **gpt-6.1-sol / ultra**, chat0020. [Note40](../papers/investigations-5/05_radial_theta_collision_geometry/notes/40_WEIGHTED_RESIDUAL_CLOSURE_E07_R1_RETURN_20261029.md) states that “Young's payments in (14) discard their signs and correlations.” Its exact residual square and full production still contain signed mixed terms; replacing them by coefficient suprema, products of norms and positive Young allowances proves one finite weighted closure but uses no favorable theta alignment. [Review22](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/22_WEIGHTED_RESIDUAL_CLOSURE_E08_ASSESSMENT_20261029.md) retains that gain and limit. Sphere cancellation establishes compatibility, not a whole-space production sign. This finding does not exclude all norm estimates, sharper joint bounds or alternate admissible functionals; any next attempt must state a measurable gain and its domain before testing.
+
+**Retain coefficient variation before taking separate suprema, 29 October 2026.** Prepared for Edward Baker with substantial LLM assistance, gpt-6.1-sol / ultra, chat0021. [Note42](../papers/investigations-5/05_radial_theta_collision_geometry/notes/42_RADIAL_DRIFT_PRODUCTION_IMPROVEMENT_B02_R4_20261029.md)'s exact radial square lowers the 30E0 gradient-production allowance to (21/4)E0 while retaining the entire inner ball. [Review23](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/23_RADIAL_DRIFT_IMPROVEMENT_E08_INTEGRATION_20261029.md) also cautions: “strict compact improvement has not yet been acquired.” An improved expanded coefficient need not lower a maximum dominated elsewhere. Compare the actual compact constants and an equally informed diffusion-retaining bound. This generic radial gain admits the colliding control; it is not a theta sign.
+
+
+**The compact-gap condition is subsequently paid, 29 October 2026.** Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol / ultra**, chat0022. The preceding Review23 caveat retains its dated meaning; [Note44](../papers/investigations-5/05_radial_theta_collision_geometry/notes/44_RADIAL_COMPACT_COEFFICIENT_E07_R2_RETURN_20261029.md) and [Review24](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/24_RADIAL_COMPACT_GAIN_E08_ASSESSMENT_20261029.md) now pay B1<=69/4 for the unchanged exact cutoff, including eta' and the infinite tail. The actual compact maximum gap is at least 41/24, so the former unpaid-gap status is superseded within that fixed-cutoff scope. Note44 cautions: “No control fails the scalar cutoff/drift inequality itself.” A generic coefficient gain does not control B through a collision deadline; keep the same-information comparison and the exact admitted control. Assessment remains same-parent/internal same-model, with shared premises, not specialist review.
+
+**A source-coefficient coupling need not separate trajectories, 29 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra /
+max**, chat0024. [Note47](../papers/investigations-5/05_radial_theta_collision_geometry/notes/47_EXTERIOR_SOURCE_RESIDUAL_COUPLING_B02_R5_20261029.md)
+states: “They do not use the additional theta-only statement that the raw
+source mismatch vanishes.” Keeping the signed source multiplication term
+with its actual residual before taking norms gives the verified 49/600
+compact gain, including actual-jet and inner costs. [Review26](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/26_SOURCE_COUPLING_E08_R5_ASSESSMENT_20261029.md)
+checks that the exact colliding control still satisfies the same-operator
+bound. Distinguish using theta's coefficients from using information
+that constrains theta's actual trajectory. The latter remains unproved
+here; this is not an exclusion of all possible coupled estimates.

@@ -40,3 +40,47 @@ The requested [next-session continuation](../notes/21_RADIAL_INTEGRAND_LOCALIZAT
 **Continue radial theta collision** is uniquely registered here as **chat0010**, thread 01a180f1-331d-7851-b60f-8930195db5c4. [Public archive](0010_2026-10-28T05-17-33Z_continue-radial-theta-collision.json); [registry](index.json). It records the first bounded CTF-B02 carrier comparison in [Note29](../notes/29_POSITIVE_CARRIER_COMPARISON_AND_QUANTITATIVE_REGULARITY_20261028.md) and [Continuation30](../notes/30_CONSERVATIVE_CARRIER_COMPARISON_CONTINUATION_20261028.md). Preserve this identity and use the standing refresh tool; current capture counts and hashes belong to the registry. Research return prepared for Edward Baker with substantial LLM assistance, gpt-6-astra, actual effort max, 28 October 2026. The archive retains the preceding interrupted inspection turn and its recorded model separately.
 
 The same **chat0010** continues CTF-B02 at the author’s request with [Note31](../notes/31_CANONICAL_SOURCE_RELATION_AND_PREPARATORY_COMMUTATOR_20261028.md), [assessment18](../reviews/18_CANONICAL_SOURCE_RELATION_PROPAGATION_ASSESSMENT_20261028.md) and [Continuation32](../notes/32_SOURCE_RELATION_COMMUTATOR_CONTINUATION_20261028.md): the bounded fixed-source propagation test and its explicit canonical defects. Preserve its existing registration. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / max, 28 October 2026.
+
+**Derive coupled CTF-B02 R3 estimate** is uniquely registered here as **chat0018**, thread 01a187c4-d338-73c3-bf91-f5c85f638fe8. [Public archive](0018_2026-10-29T13-06-25Z_derive-coupled-ctf-b02-r3-estimate.json); [registry](index.json). It records [Note39](../notes/39_WEIGHTED_RESIDUAL_COUPLED_ESTIMATE_B02_R3_20261029.md) and the [E07 R1 contract](../research-progress/handoffs/CTF-E07_WEIGHTED_RESIDUAL_CLOSURE_REQUEST_R1_20261029.md). At its issue-stage return, R3 supplied one functional and formal estimating route with an unverified lemma. Sol’s later Note40 proves that weighted estimate. At the author’s request, this same chat then completed [E08 assessment and integration](../reviews/22_WEIGHTED_RESIDUAL_CLOSURE_E08_ASSESSMENT_20261029.md) and prepared [Continuation41](../notes/41_WEIGHTED_CLOSURE_CONTINUATION_20261029.md) for B02 R4; no R4 candidate is tested. Preserve this registration and use the standing refresh tool. Actual gpt-6-astra / max, 29 October 2026, prepared for Edward Baker with substantial LLM assistance.
+
+**Verify CTF-E07 weighted residual** is uniquely registered here as **chat0020**, thread `01a187d2-e789-7180-bf38-a969c909c55f`. [Public archive](0020_2026-10-29T13-21-48Z_verify-ctf-e07-weighted-residual.json); [registry](index.json). It executes [E07 R1](../research-progress/handoffs/CTF-E07_WEIGHTED_RESIDUAL_CLOSURE_REQUEST_R1_20261029.md) in [Note40](../notes/40_WEIGHTED_RESIDUAL_CLOSURE_E07_R1_RETURN_20261029.md), verifying the finite weighted estimate with local/conditional scope and internal same-model checks. Preserve this identity and refresh through the standing tool; current capture counts and hashes belong to the registry. Prepared for Edward Baker with substantial LLM assistance, actual gpt-6.1-sol / ultra, 29 October 2026. Next E08; no specialist review or collision exclusion.
+
+**Continue CTF-B02 R4 estimate** is uniquely registered here as **chat0021**,
+thread `01a187ec-edf4-7df2-9876-4e6fc8e540af`.
+[Public archive](0021_2026-10-29T13-50-14Z_continue-ctf-b02-r4-estimate.json);
+[registry](index.json). It records [Note42](../notes/42_RADIAL_DRIFT_PRODUCTION_IMPROVEMENT_B02_R4_20261029.md),
+one radial drift-production improvement and its bounded comparisons.
+Actual parent gpt-6.1-sol / ultra; author-requested conceptual contribution
+from a delegated gpt-6-astra / max agent, verified in recorded metadata.
+Only public parent text is captured; subagent correspondence is excluded.
+Prepared for Edward Baker with substantial LLM assistance, 29 October 2026.
+Preserve this identity and use the standing history tool; counts/hashes
+belong to the registry. Next E08 assessment/integration; no deadline claim.
+
+The same **chat0021** also records the author-requested R4 manuscript
+integration in [Review23](../reviews/23_RADIAL_DRIFT_IMPROVEMENT_E08_INTEGRATION_20261029.md)
+and [Continuation43](../notes/43_RADIAL_DRIFT_INTEGRATION_SOL_CONTINUATION_20261029.md)
+for Sol. Actual integration model gpt-6.1-sol / ultra; the existing unique
+registration and original creation/provenance are retained.
+
+**Continue CTF-B02 coupled estimate** is uniquely registered here as
+**chat0023**, thread 01a1889e-676b-7513-903a-476d0eb5a4ce.
+[Public archive](0023_2026-10-29T17-04-04Z_continue-ctf-b02-coupled-estimate.json);
+[registry](index.json). It records [Note47](../notes/47_EXTERIOR_SOURCE_RESIDUAL_COUPLING_B02_R5_20261029.md) and
+[Continuation48](../notes/48_SOURCE_COUPLING_SOL_CONTINUATION_20261029.md), CTF-B02 R5's bounded source/residual
+coupling and Sol assessment handoff. Prepared for Edward Baker with
+substantial LLM assistance, gpt-6-astra / actual effort max,
+29 October 2026. Preserve this identity across model changes and refresh
+through the standing tool; current counts and hashes belong to the registry.
+
+**Continue radial theta research** is uniquely registered here as
+**chat0024**, thread 01a188b4-0e1a-7522-8c93-30235f85ae00.
+[Public archive](0024_2026-10-29T17-27-43Z_continue-radial-theta-research.json); [registry](index.json). It records E08 R5's
+same-model assessment/integration in [Review26](../reviews/26_SOURCE_COUPLING_E08_R5_ASSESSMENT_20261029.md),
+[Note49](../notes/49_SOURCE_COUPLING_E08_R5_RESEARCH_RETURN_20261029.md) and [Continuation50](../notes/50_SOURCE_COUPLING_INTEGRATION_AND_MODEL_CONTINUATION_20261029.md). Actual
+configuration gpt-6-astra / max; prepared for Edward Baker with substantial
+LLM assistance, 29 October 2026. Preserve this identity through model
+changes and use the standing refresh tool; current capture metadata
+belong to the registry. No cross-model or specialist review is claimed.
+
+The same **chat0024** also records the author-requested **[B] CTF-B02 R6** in [Note51](../notes/51_ZERO_RAW_MISMATCH_KERNEL_FREEDOM_B02_R6_20261029.md), [Self-assessment27](../reviews/27_ZERO_RAW_MISMATCH_B02_R6_SELF_ASSESSMENT_20261029.md) and [Continuation52](../notes/52_RAW_COMPATIBILITY_SOL_CONTINUATION_20261029.md). Actual gpt-6-astra / max, 29 October 2026, prepared for Edward Baker with substantial LLM assistance; no subagents. The scoped variable-kernel comparison fails the full cosine/Newman identity; manuscript unchanged. Preserve this chat’s unique registration through model changes; use the standing refresh tool.

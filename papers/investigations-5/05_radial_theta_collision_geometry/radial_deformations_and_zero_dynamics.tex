@@ -3,6 +3,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathrsfs}
 \usepackage{microtype}
 \usepackage{xcolor}
 \usepackage{hyperref}
@@ -19,7 +20,7 @@
 \setlength{\emergencystretch}{2em}
 \title{Conservative Theta Flows and Collision Amplification}
 \author{Drafted for Edward Baker}
-\date{28 October 2026\\[3pt]\small Working manuscript}
+\date{29 October 2026\\[3pt]\small Working manuscript}
 
 \begin{document}
 \maketitle
@@ -33,15 +34,27 @@ An energy-normalized conservative feedback fixes the joint spatial
 $L^2$ energy of the observation and its marked first derivative. A
 collision forces gradient, drift-response, and amplitude divergence
 before an explicit finite auxiliary deadline; global regularity is
-equivalent to pointwise noncollision in the stated class. Two estimate
-tests delimit the remaining problem. A sharp positive-carrier comparison
+equivalent to pointwise noncollision in the stated class. A sharp
+positive-carrier comparison
 gives quantitative regularity only from an independently established
 first-jet margin. The complete canonical source relation instead
 acquires a nonzero preparation residual and second-order commutator
 forcing. Its unit-sphere cancellation, inner-ball energy, and admissible
-origin domain must be retained. The fixed zero-residual substitution
-fails, while coupled signed estimates remain open. The exact colliding
-control satisfies the generic heat and feedback premises. No new theta
+origin domain must be retained. A weighted energy coupling the gradient,
+residual and actual second spectral derivative absorbs the commutator's
+second spatial derivatives into diffusion. It yields integrated
+dissipation and a local existence bound without a third spectral jet.
+An exact radial drift square further lowers the gradient-production
+energy allowance from $30E_0$ to $21E_0/4$ and gives a longer local
+interval, including comparison with the old bound retaining diffusion.
+An all-radius cutoff estimate also makes the compact weighted
+coefficient gain strict, with gap at least $41/24$.
+Coupling the complete source coefficient to the actual residual lowers
+that compact coefficient by a further $49/600$, with all jet and inner
+costs paid. This source-coefficient gain still admits the exact colliding
+control. These bounds retain no separating arithmetic sign and do not control
+the collision deadline. The exact colliding control
+satisfies the generic heat, feedback and weighted-estimate premises. No new theta
 collision exclusion or de Bruijn--Newman bound is obtained.
 \end{abstract}
 
@@ -70,7 +83,13 @@ finite collision deadline \cite{FeedbackNote}.
 Sections~\ref{sec:carrier} and \ref{sec:sourcerelation} test,
 respectively, positive-carrier comparison and the canonical source
 relation with its residual \cite{CarrierNote,SourceRelationNote}.
-Section~\ref{sec:remaining} states the remaining signed theta estimate.
+Section~\ref{sec:weightedclosure} proves finite weighted residual closure
+\cite{WeightedClosureNote}. Section~\ref{sec:radialgain} sharpens its
+gradient-production allowance by an exact radial square
+\cite{RadialDriftNote}. Section~\ref{sec:sourcecoupling} retains the
+source--residual product for a further compact gain \cite{SourceCouplingNote}.
+Section~\ref{sec:remaining} identifies the
+remaining improvement and collision-deadline obligations.
 The classical heat and semigroup inputs support these constructions;
 the missing estimate must use canonical information beyond their
 generic premises.
@@ -78,8 +97,10 @@ generic premises.
 We use $r=e^{2u}$, with $u=\frac12\log r$ on the source exterior,
 $a$ for the physical frequency, $t$ for Newman time, and $s\ge0$ for
 auxiliary time. Newman time satisfies $H_t=-H_{aa}$. In the feedback
-construction the mark $p=(T,A)$ is fixed while the running frequency
-$a$ is differentiated; neither physical parameter evolves with $s$.
+construction the mark $p=(T,A)$ is fixed while the running parameters
+$(t,a)$ vary. A spectral derivative differentiates $a$ with $p$ held
+fixed; changing $A$ also changes the feedback path. Neither physical
+parameter evolves with $s$.
 Unless a wider scope is stated, uniform assertions concern compact sets
 \begin{equation}\label{eq:domain}
 0\le t\le T_+<\infty,\qquad
@@ -87,6 +108,22 @@ Unless a wider scope is stated, uniform assertions concern compact sets
 \end{equation}
 The source-function, smoothing, and operator domains, and the control's
 convergence domain, are specified where they are used.
+
+The remaining estimate can be stated before the construction. For the
+marked pair $W=(U,V)$ of Section~\ref{sec:feedback}, write
+$G(s)=\|\nabla W_s\|_2^2$. The target is an independent bound for
+$G$, or its feedback response $\alpha$, that keeps the solution regular
+through the explicit collision deadline $S_*$ in
+Theorem~\ref{thm:feedbackdeadline}. Its exact gradient balance is
+\eqref{eq:feedbackgradientexact}. A bounded improvement in gradient or
+residual control is an intermediate result if its consequence for that
+balance is quantified. Section~\ref{sec:weightedclosure} establishes such
+a weighted residual estimate and a generic radial gradient improvement,
+while deadline transfer remains open.
+A collision-excluding bound must use the complete theta source
+without assuming the nonzero physical first jet that it is meant to
+establish. Sections~\ref{sec:carrier}--\ref{sec:remaining} retain the
+tested estimates and the remaining gap.
 
 \section{The canonical theta source and observation}
 
@@ -108,6 +145,10 @@ H(t,a)=\int_0^\infty e^{tu^2}\Phi(u)\cos(au)\dd u
 \end{equation}
 The second formula already represents the full first integral. An
 inversion-related interior integral is not to be added again.
+The transform companion derives the related classical theta--Mellin
+formula in this normalization \cite{ThetaCompanion}; its potential and
+cylinder fields are background representations, while the density
+specified in Section~\ref{sec:conservative} is the field evolved here.
 
 \begin{lemma}[Tails and parameter differentiation]\label{lem:tails}
 The canonical source and the finite spatial and parameter derivatives
@@ -187,9 +228,20 @@ j_0(t,a;X)=
  0,&r<1.
  \end{cases}
 \end{equation}
-The empty initial ball is part of the auxiliary domain, not a second
-inverted theta contribution. Spherical integration gives
-$\int j_0\dd X=H(t,a)$.
+On the exterior this is equivalently
+$j_0=e^{tu^2}\Phi(u)\cos(au)/(8\pi r^3)$, with
+$u=\frac12\log r$. It is a signed density with respect to ordinary
+Euclidean volume $\dd X$, not with respect to $\dd r$. The spherical
+Jacobian is
+\begin{equation}\label{eq:densityjacobian}
+ \frac{4\pi r^2\dd r}{8\pi r^3}
+ =\frac{\dd r}{2r}=\dd u,\qquad
+ \int_{\R^3}j_0(t,a;X)\dd X=H(t,a).
+\end{equation}
+The subscript zero means auxiliary time $s=0$; Newman time $t$ remains
+free. The empty initial ball is part of the auxiliary domain, not a
+second inverted theta contribution. It imposes no boundary at $r=1$
+after evolution begins.
 
 \begin{proposition}[Conservative theta heat evolution]\label{prop:conservative}
 For $\varepsilon>0$ define
@@ -349,7 +401,9 @@ The dependence of $\alpha$ on spatial integrals makes the feedback
 nonlocal in the state.
 
 First solve the pair $W$; its resulting scalar coefficient then defines
-one linear propagator for the running parameters $(t,a)$. Uniqueness
+one linear propagator for the running parameters $(t,a)$, with $p$
+held fixed. In particular, $\alpha$ is independent of the running
+frequency $a$ in this family. Uniqueness
 identifies the marked value and actual derivative with
 \eqref{eq:feedbackpair}. At fixed $p$, that propagator preserves
 \begin{equation}\label{eq:feedbackobservations}
@@ -453,6 +507,10 @@ $E_0$ give a uniform local continuation interval through the same
 construction. Since $B$ is nondecreasing, a finite maximal endpoint
 therefore forces $B\to\infty$.
 \end{proof}
+
+For the radial prepared theta and control fields,
+Lemma~\ref{lem:radialdriftsquare} strengthens the conditional gradient
+allowance; the preceding construction also applies to nonradial data.
 
 \subsection{A finite collision deadline and its converse}
 
@@ -824,7 +882,9 @@ $r\ge3/4$, and define
  c_T(r)=-\eta(r)r\log r\,\ell_T'(r),\qquad
  \mathcal A_T=b\cdot\nabla+c_T.
 \end{equation}
-For instance, on $1/2<r<3/4$ use $\eta(r)=\chi(4r-2)$ with
+For the explicit coefficient bound in
+Proposition~\ref{prop:radialcompactstrict}, fix $\eta(r)=\chi(4r-2)$,
+where $\chi=0$ for $t\le0$, $\chi=1$ for $t\ge1$, and
 $\chi(t)=e^{-1/t}/(e^{-1/t}+e^{-1/(1-t)})$ for $0<t<1$.
 This changes the comparison operator near the origin, not the source
 or feedback equation. All cutoff derivatives are retained below.
@@ -1055,60 +1115,780 @@ register \cite{CollisionControls}, not a sign estimate for the
 evolved canonical field.
 
 The stopped variant is precisely the propagation or substitution of
-this fixed relation with zero residual. A coupled estimate retaining
+this fixed relation with zero residual. The next section retains
 \eqref{eq:sourceresidualevolution} and
-\eqref{eq:sourcegradientrepresentation} remains open. Its second-order
-forcing could interact with the negative term $-2N$ in
-\eqref{eq:feedbackgradientexact}, but no such controlling inequality,
-or finite closed hierarchy after further differentiation, has been
-established here.
+\eqref{eq:sourcegradientrepresentation} and absorbs its second-order
+forcing in one finite weighted energy. The stronger signed control
+through the collision deadline remains open.
+
+\section{A finite weighted residual estimate}\label{sec:weightedclosure}
+
+The source residual can be retained in a finite coupled energy estimate
+\cite{WeightedClosureNote}. Fix the explicit cutoff in
+\eqref{eq:sourceextension}, the original feedback, and the physical marks
+\begin{equation}\label{eq:weightedmarks}
+ \mathscr P=[0,1/2]\times[1,6],\qquad p=(T,A).
+\end{equation}
+Keep the actual second running frequency derivative $J_2$ and the full
+residual $\mathcal R$ of \eqref{eq:sourceresidual}. Set
+\begin{equation}\label{eq:weightedenergy}
+ \omega=(1+r^2)^{-2},\qquad Z_{\mathrm R}=\omega\mathcal R,
+ \qquad Y=\|Z_{\mathrm R}\|_2^2,\qquad Q_2=\|J_2\|_2^2,
+ \qquad \mathcal F_{\mathrm R}=G+Y+Q_2.
+\end{equation}
+The subscript distinguishes this energy and weighted residual from the
+carrier quantities in Section~\ref{sec:carrier}. They are denoted
+$\mathcal F$ and $Z$ in the source note. No new evolved field or feedback
+coefficient is introduced. All spatial integrals remain over $\R^3$.
+
+\subsection{Coefficient bounds and prepared data}
+
+Write $[\mathcal A_T,L_s]=\mathscr C_0+\alpha\mathscr C_1$, where
+$\mathscr C_0$ and $\mathscr C_1$ are respectively the full constant and
+$\alpha$ coefficients in \eqref{eq:sourcefullcommutator}. In particular,
+their multiplication terms and all derivatives of the cutoff remain.
+Define
+\begin{align}
+ A_2&=2\sup\omega|Db|_{\mathrm F},&
+ A_1&=\sup\omega|\Delta b+2\nabla c_T|,\nonumber\\
+ A_0&=\sup\omega|\Delta c_T|,&
+ B_1&=\sup\omega|b\cdot\nabla v-v\cdot\nabla b|,\nonumber\\
+ B_0&=\sup\omega|b\cdot\nabla d-v\cdot\nabla c_T|.
+ \label{eq:weightedcoefficients}
+\end{align}
+The matrix norm is Frobenius. Suprema are over all space and, for
+coefficients depending on $T$, over $0\le T\le1/2$.
+
+\begin{lemma}[Admissible coefficients and data]\label{lem:weighteddata}
+All constants in \eqref{eq:weightedcoefficients} are finite. The prepared
+energies are continuous on $\mathscr P$, with $E_0>0$, $Y(0)>0$, and
+\begin{equation}\label{eq:weightedinitialcompactness}
+ X_0:=\max_{p\in\mathscr P}
+       \left(1+\frac{\mathcal F_{\mathrm R}(0;p)}{E_0(p)}\right)<\infty.
+\end{equation}
+These are spatial-energy statements; no physical first-jet margin is
+assumed.
+\end{lemma}
+\begin{proof}
+Put $\beta=3/(2\pi)$. The complete series gives, for $r\ge1$,
+\begin{align*}
+ \rho_T(r)&=\frac\pi4r^{3/2}
+   e^{-\pi r^2+(T/4)(\log r)^2}P(r),\\
+ P(r)&=1-\beta r^{-2}+\tau(r),\qquad
+ \tau(r)=\sum_{n\ge2}(n^4-\beta n^2r^{-2})
+                   e^{-\pi(n^2-1)r^2}.
+\end{align*}
+Every summand in $\tau$ is positive, so $P\ge1-\beta>0$.
+Through order three, differentiated tails obey
+$\tau^{(k)}=O_k(r^ke^{-3\pi r^2})$: after extracting the displayed
+exponential, the remaining sums are bounded by polynomials in $n$
+against $e^{-\pi(n^2-4)}$. The remainder is independent of $T$.
+It follows uniformly on the stated time interval that
+\[
+ c_T=2\pi r^2\log r-\tfrac32\log r
+       -\tfrac T2(\log r)^2+e(r),\qquad
+ e^{(k)}=O(r^{-2-k}\log r)\quad(0\le k\le2).
+\]
+Consequently $c_T=O(r^2\log r)$, $\nabla c_T=O(r\log r)$ and
+$\Delta c_T=O(\log r)$ at infinity. The other coefficients in
+\eqref{eq:weightedcoefficients} grow at most as $r^2\log r$;
+multiplication by $\omega=O(r^{-4})$ bounds them. On $[1/2,1]$,
+the positive reflected source \eqref{eq:sourcereflection} is smooth
+uniformly in $T$, so its logarithmic derivatives and all fixed cutoff
+terms are bounded. Both $b$ and $c_T$ vanish near the origin.
+
+All weighted $L^1$ moments of $F_0,F_1,F_2$ and their needed parameter
+derivatives are uniformly finite. Differentiated Gaussian convolution,
+using $(1+|X|)^m\le(1+|X-Y|)^m(1+|Y|)^m$, maps these data continuously
+into Schwartz space. The coefficient bounds give continuity of the
+prepared residual norms as well. Since $F_0$ is nonzero near $u=0$
+and the heat multiplier $e^{-|\xi|^2}$ never vanishes, $U_0\ne0$.
+Thus $E_0>0$, and compactness gives a positive minimum for $E_0$ and
+\eqref{eq:weightedinitialcompactness}.
+
+The preparation residual remains exactly
+\eqref{eq:sourceinitialresidual}. On the open cutoff ball,
+$\mathcal R_{U,0}=-AV_0$. For $A\in[1,6]$, the raw $F_1$ is nonzero
+on a short exterior interval. Its Gaussian convolution is real analytic;
+if it vanished on the whole ball, analytic continuation and heat
+injectivity would force $F_1=0$. Hence $Y(0)>0$. This does not assert
+nonzero trace at every frequency on the sphere $r=1$.
+\end{proof}
+
+\subsection{Signed production and absorption of second derivatives}
+
+For $l=\log\omega$, the exact residual equation gives
+\begin{align}
+ \partial_sZ_{\mathrm R}={}&\Delta Z_{\mathrm R}
+   +(\alpha v-2\nabla l)\cdot\nabla Z_{\mathrm R}\nonumber\\
+ &+(\alpha d+|\nabla l|^2-\Delta l-\alpha v\cdot\nabla l)Z_{\mathrm R}
+   +\omega(\mathscr C_0+\alpha\mathscr C_1)W.
+ \label{eq:weightedconjugation}
+\end{align}
+Set $h_\omega=d-2v\cdot\nabla l$. Adding the energies for
+$G,Z_{\mathrm R},J_2$ yields the full signed identity
+\begin{align}
+ \mathcal F_{\mathrm R}'={}&-2N-2\|\nabla Z_{\mathrm R}\|_2^2
+   -2\|\nabla J_2\|_2^2
+   +2\int|\nabla l|^2|Z_{\mathrm R}|^2
+   +2\langle Z_{\mathrm R},\omega\mathscr C_0W\rangle\nonumber\\
+ &+\alpha\left\{\mathcal K+\int h_\omega|Z_{\mathrm R}|^2
+   +\int d|J_2|^2
+   +2\langle Z_{\mathrm R},\omega\mathscr C_1W\rangle\right\}.
+ \label{eq:weightedsignedproduction}
+\end{align}
+Here $N$ and $\mathcal K$ are those of
+\eqref{eq:feedbackgradientexact}. In the residual energy, the advection
+contributes $-\int(\alpha d-2\Delta l)|Z_{\mathrm R}|^2$, canceling
+the Laplacians of $l$ from the multiplication term. With $q=r^2$,
+\begin{equation}\label{eq:weightedweightconstants}
+ 2|\nabla l|^2=\frac{32q}{(1+q)^2}\le8,\qquad
+ h_\omega=11+\frac{q-5}{(1+q)^2}\le\frac{265}{24}.
+\end{equation}
+The maxima occur at $q=1$ and $q=11$, respectively. All integrations
+are justified on compact lifespan intervals by inherited Schwartz
+regularity and polynomial coefficient growth, including at $s=0$
+after preparation. Large-radius cutoff errors vanish. There is no
+artificial boundary at $r=1$; \eqref{eq:sourcespheretrace} and the
+combined numerator in \eqref{eq:sourcegradientrepresentation} remain.
+
+\begin{theorem}[Finite weighted residual closure]\label{thm:weightedclosure}
+For each mark in \eqref{eq:weightedmarks}, throughout its smooth lifespan,
+\begin{align}
+ \mathcal F_{\mathrm R}'+N+2\|\nabla Z_{\mathrm R}\|_2^2
+       +2\|\nabla J_2\|_2^2
+ \le{}&[A_1+\alpha(10+B_1)]G\nonumber\\
+ &+[8+A_2^2+A_1+A_0
+       +\alpha(265/24+B_1+B_0)]Y\nonumber\\
+ &+6\alpha Q_2+[A_0+\alpha(30+B_0)]E_0.
+ \label{eq:weightedexpandedbound}
+\end{align}
+In particular, define
+\begin{align}
+ \kappa_0&=8+A_2^2+A_1+A_0,\nonumber\\
+ \kappa_1&=\max\{10+B_1,265/24+B_1+B_0,6,30+B_0\},\nonumber\\
+ \mathscr D_{\mathrm R}&=N+2\|\nabla Z_{\mathrm R}\|_2^2
+                              +2\|\nabla J_2\|_2^2.
+ \label{eq:weightedconstants}
+\end{align}
+Then
+\begin{equation}\label{eq:weightedclosure}
+ \mathcal F_{\mathrm R}'+\mathscr D_{\mathrm R}
+       \le(\kappa_0+\kappa_1\alpha)(\mathcal F_{\mathrm R}+E_0).
+\end{equation}
+The constants are defined finite source budgets, not acquired numerical
+values, and contain no dependence on the unknown gradient or lifespan.
+\end{theorem}
+\begin{proof}
+Whole-space integration by parts gives
+$\|D^2W\|_2^2=\|\Delta W\|_2^2=N$. Frobenius Cauchy--Schwarz and
+the triangle inequality therefore give
+\begin{align*}
+ \|\omega\mathscr C_0W\|_2&\le A_2\sqrt N+A_1\sqrt G+A_0\sqrt{E_0},\\
+ \|\omega\mathscr C_1W\|_2&\le B_1\sqrt G+B_0\sqrt{E_0}.
+\end{align*}
+Use $2A_2\sqrt{YN}\le N+A_2^2Y$ to absorb one of the two units of
+diffusion $N$ in \eqref{eq:weightedsignedproduction}. The remaining
+payments are
+$2A_1\sqrt{YG}\le A_1(Y+G)$,
+$2A_0\sqrt{YE_0}\le A_0(Y+E_0)$ and the same inequalities with
+$A_1,A_0$ replaced by $B_1,B_0$. Since $\alpha\ge0$,
+$\mathcal K\le10G+30E_0$, $d\le6$, and
+\eqref{eq:weightedweightconstants} hold, these give
+\eqref{eq:weightedexpandedbound}. The coefficient maxima give
+\eqref{eq:weightedclosure}. No differentiated residual equation or
+third spectral jet is required.
+\end{proof}
+
+\subsection{Integrated dissipation, local existence and scope}
+
+\begin{proposition}\label{prop:weightedconsequences}
+Let $B(s)=\int_0^s\alpha(q)\dd q$ and
+$\Xi(s)=\kappa_0s+\kappa_1B(s)$. For $s<S_{\max}$,
+\begin{equation}\label{eq:weightedintegrated}
+ e^{-\Xi(s)}(\mathcal F_{\mathrm R}(s)+E_0)
+ +\int_0^se^{-\Xi(q)}\mathscr D_{\mathrm R}(q)\dd q
+ \le\mathcal F_{\mathrm R}(0)+E_0.
+\end{equation}
+Put $x_0=1+\mathcal F_{\mathrm R}(0)/E_0$ and
+$C=\kappa_0+2\kappa_1/3$. Then
+\begin{equation}\label{eq:weightedlifespan}
+ 1+\frac{\mathcal F_{\mathrm R}(s)}{E_0}
+ \le\frac{x_0}{1-Cx_0s}\quad(0\le s<(Cx_0)^{-1}),
+ \qquad S_{\max}(p)\ge(Cx_0(p))^{-1}\ge(CX_0)^{-1}.
+\end{equation}
+For every fixed spatial ball,
+\begin{equation}\label{eq:weightedlocalresidual}
+ \|\mathcal R(s)\|_{L^2(B_{R_b})}^2\le(1+R_b^2)^4Y(s).
+\end{equation}
+\end{proposition}
+\begin{proof}
+Multiply \eqref{eq:weightedclosure} by $e^{-\Xi}$ and integrate.
+For $x=1+\mathcal F_{\mathrm R}/E_0$, the feedback bound
+$\alpha\le2G/(3E_0)\le2\mathcal F_{\mathrm R}/(3E_0)$ gives
+$x'\le[\kappa_0+(2\kappa_1/3)(x-1)]x\le Cx^2$.
+Integrating the inequality for $1/x$ proves the comparison first for
+$s<\min\{S_{\max},(Cx_0)^{-1}\}$. If $S_{\max}<(Cx_0)^{-1}$,
+it bounds $G$ up to that endpoint, contradicting
+Proposition~\ref{prop:feedbackexistence}. Compactness from
+Lemma~\ref{lem:weighteddata} gives the uniform open interval. The last
+bound uses $\omega^{-2}\le(1+R_b^2)^4$ on the ball.
+\end{proof}
+
+This closes one weighted energy and its integrated dissipation. It
+does not control the unweighted residual at infinity or every higher
+derivative. The bound conditional on $B$ is
+$\mathcal F_{\mathrm R}(s)+E_0\le(\mathcal F_{\mathrm R}(0)+E_0)e^{\Xi(s)}$;
+no independent bound for $B$ through the collision deadline has been
+supplied. For this original closure, $\kappa_1\ge30$, whereas
+\eqref{eq:feedbackgradientbound} already controls $G+3E_0$ with exponent
+$10B$. That closure alone does not sharpen the gradient allowance.
+The radial square in Section~\ref{sec:radialgain} supplies the additional
+quantitative improvement.
+
+The exact control at $(1/4,2\sqrt6)$ lies in $\mathscr P$ and remains
+admitted by the same theta operator and coefficient budgets. Its
+prepared fields are Schwartz for $T<17/4$, but its residual must include
+the raw source mismatch:
+\begin{equation}\label{eq:weightedcontrolresidual}
+ \mathcal R_{*,0}=[\mathcal A_T,K_1*]W_*^{\rm raw}
+       +K_1*(\mathcal A_TW_*^{\rm raw}-\mathcal T_*^{\rm raw}).
+\end{equation}
+The second summand vanishes for theta and not for this control. Its
+local interval is compatible with its finite collision deadline in
+Theorem~\ref{thm:feedbackdeadline}. The complete source enters the
+coefficients and initial data, but the Young payments discard the
+mixed terms' signed correlations. No new physical first-jet margin,
+collision-free rectangle, numerical cost advantage or threshold bound
+follows. The other controls retain the premise and witness-domain
+qualifications of \cite{CollisionControls,WeightedClosureNote}.
+
+
+\subsection{A radial improvement of gradient production}
+\label{sec:radialgain}
+
+The complete prepared theta fields and the exact control remain radial
+by rotational invariance and uniqueness. Retaining the spatial variation
+in $\mathcal K$ gives a stronger gradient allowance without changing
+$\mathcal F_{\mathrm R}$ or its source operator \cite{RadialDriftNote}.
+The gain uses radiality and smooth decay; it does not use an arithmetic
+sign distinguishing theta from the control.
+
+\begin{lemma}[Exact radial drift square]\label{lem:radialdriftsquare}
+For the smooth radial pair $W$ throughout the inherited lifespan, put
+\begin{align}
+ c_v(q)&=\frac{11+5q}{(1+q)^2},&
+ p_v(q)&=\frac{q(203+59q+69q^2+21q^3)}{4(1+q)^4},\nonumber\\
+ \mathscr H_{\rm rad}(W)&=
+ \int c_v(r^2)\left|X\cdot\nabla W+\tfrac32W\right|^2
+ +\int p_v(r^2)|W|^2\ge0.\label{eq:radialremainder}
+\end{align}
+Then
+\begin{equation}\label{eq:radialdriftsquare}
+ \mathcal K=10G+\frac{21}{4}E_0-\mathscr H_{\rm rad}(W).
+\end{equation}
+All integrals are over $\R^3$, including the inner ball.
+\end{lemma}
+\begin{proof}
+Set $q=r^2$. The radial eigenvalue of $Dv$ is
+$\nu=1+(1-q)/(1+q)^2$. Thus the gradient coefficient in $\mathcal K$
+is
+\[
+ a_v=2\nu+d=5+\frac{5-q}{(1+q)^2},\qquad
+ h_v=10-a_v=\frac{q(11+5q)}{(1+q)^2}.
+\]
+For a radial component $f$, completion of one square gives
+\[
+ \int_0^\infty r^2h_v|f'|^2\dd r
+ =\int_0^\infty r^2h_v\left|f'+\frac{3f}{2r}\right|^2\dd r
+ +\int_0^\infty r^2
+  \left(\frac{3h_v'}{2r}-\frac{3h_v}{4r^2}\right)|f|^2\dd r.
+\]
+Here the prime on $h_v$ denotes its radial derivative. The boundary
+term $rh_v|f|^2$ vanishes: $h_v=11r^2+O(r^4)$ at zero and the field
+has the inherited decay at infinity. There is no boundary at $r=1$.
+Using \eqref{eq:feedbackcoefficients}, the remaining potential is
+\[
+ -\Delta d-\frac{3h_v'}{2r}+\frac{3h_v}{4r^2}
+ =\frac{21-119q+67q^2+15q^3}{4(1+q)^4}
+ =\frac{21}{4}-p_v(q).
+\]
+Multiply by $4\pi$, sum over the components, and use
+$h_v=r^2c_v(r^2)$ to obtain \eqref{eq:radialdriftsquare}.
+The expression \eqref{eq:radialremainder} is smooth at the origin;
+no singular operator or omitted interior contribution is involved.
+\end{proof}
+
+\begin{proposition}[Radial gradient and local compression bounds]
+\label{prop:radiallocal}
+For each mark in \eqref{eq:weightedmarks},
+\begin{equation}\label{eq:radialgradientbound}
+ G(s)\le\left(G(0)+\frac{21}{40}E_0\right)e^{10B(s)}
+                  -\frac{21}{40}E_0.
+\end{equation}
+Put $g_0=G(0)/E_0>0$ and define
+\begin{equation}\label{eq:radialclock}
+ \delta(s)=1-\frac{4g_0}{3}(e^{7s/2}-1),\qquad
+ L_{\rm rad}=\frac27\log\left(1+\frac{3}{4g_0}\right).
+\end{equation}
+Then $S_{\max}\ge L_{\rm rad}$, and on the open interval
+$0\le s<L_{\rm rad}$,
+\begin{equation}\label{eq:radiallocalbounds}
+ \frac{G(s)}{E_0}\le\frac{g_0e^{7s/2}}{\delta(s)},\qquad
+ \alpha(s)\le\frac{2g_0e^{7s/2}}{3\delta(s)},\qquad
+ B(s)\le-\frac17\log\delta(s).
+\end{equation}
+The uniform lower lifespan follows by replacing $g_0$ in
+\eqref{eq:radialclock} by
+$\Gamma_0=\max_{p\in\mathscr P}G(0;p)/E_0(p)<\infty$.
+\end{proposition}
+\begin{proof}
+The exact gradient identity and Lemma~\ref{lem:radialdriftsquare} give
+\begin{equation}\label{eq:radialgradientproduction}
+ G'+2N+\alpha\mathscr H_{\rm rad}
+ =10\alpha\left(G+\frac{21}{40}E_0\right).
+\end{equation}
+Multiplication by $e^{-10B}$ and integration prove
+\eqref{eq:radialgradientbound}. Next,
+$G=-\langle W,\Delta W\rangle$ gives $N\ge G^2/E_0$.
+With $g=G/E_0$ and $\alpha\le2g/3$, this yields
+\[
+ g'\le\frac{14}{3}g^2+\frac72g.
+\]
+Nonzero $L^2$ data have $g_0>0$. Solving this scalar comparison gives
+the first two bounds in \eqref{eq:radiallocalbounds} before both the
+lifespan and $L_{\rm rad}$. Integrating the alpha bound gives the last,
+since $\delta'=-(14/3)g_0e^{7s/2}$. A finite maximal endpoint strictly
+below $L_{\rm rad}$ would have bounded $G$, contradicting
+Proposition~\ref{prop:feedbackexistence}. Lemma~\ref{lem:weighteddata}
+gives continuity and compactness for the uniform assertion.
+\end{proof}
+
+At the same actual $B$, the allowance in
+\eqref{eq:radialgradientbound} is smaller than
+\eqref{eq:feedbackgradientbound} by
+$(99/40)E_0(e^{10B}-1)$, strictly positive for $B>0$.
+For a matched comparison, retaining $N\ge G^2/E_0$ under the old
+$\mathcal K\le10G+30E_0$ gives the local interval
+\[
+ L_{\rm old,diff}=\frac1{20}\log\left(1+\frac{30}{7g_0}\right).
+\]
+For every $g_0>0$,
+\begin{equation}\label{eq:radiallifespancomparison}
+ L_{\rm rad}>L_{\rm old,diff}>
+ \frac1{20}\log\left(1+\frac3{g_0}\right).
+\end{equation}
+Indeed, $\int_{g_0}^\infty(Ag^2+bg)^{-1}\dd g$ strictly increases
+when $b$ decreases from $20$ to $7/2$, with $A=14/3$ fixed.
+The final interval is the earlier diffusion-discarded comparison.
+Direct analysis with the same $E_0,G(0)$ and radiality obtains this
+same gain; residual coordinates acquire no additional first-jet
+information or cost advantage.
+
+\begin{proposition}[Refined radial weighted estimate]
+\label{prop:radialweighted}
+With precisely the previous functional, source budgets and Young
+payments, the stronger expanded estimate is
+\begin{align}
+ \mathcal F_{\mathrm R}'+\mathscr D_{\mathrm R}
+       +\alpha\mathscr H_{\rm rad}
+ \le{}&[A_1+\alpha(10+B_1)]G\nonumber\\
+ &+[\kappa_0+\alpha(265/24+B_1+B_0)]Y\nonumber\\
+ &+6\alpha Q_2+[A_0+\alpha(21/4+B_0)]E_0.
+ \label{eq:radialweightedexpanded}
+\end{align}
+Set
+\[
+ \kappa_{1,\rm rad}=\frac{265}{24}+B_1+B_0,\qquad
+ \Xi_{\rm rad}(s)=\kappa_0s+\kappa_{1,\rm rad}B(s).
+\]
+Then
+\begin{align}
+ &e^{-\Xi_{\rm rad}(s)}(\mathcal F_{\mathrm R}(s)+E_0)
+ +\int_0^s e^{-\Xi_{\rm rad}(q)}
+    (\mathscr D_{\mathrm R}+\alpha\mathscr H_{\rm rad})(q)\dd q
+ \le\mathcal F_{\mathrm R}(0)+E_0,\label{eq:radialweightedintegrated}\\
+ &\mathcal F_{\mathrm R}(s)+E_0
+ \le(\mathcal F_{\mathrm R}(0)+E_0)e^{\kappa_0s}
+                   \delta(s)^{-\kappa_{1,\rm rad}/7}
+ \quad(0\le s<L_{\rm rad}).\label{eq:radialweightedlocal}
+\end{align}
+The fixed-ball residual estimate \eqref{eq:weightedlocalresidual} remains.
+\end{proposition}
+\begin{proof}
+Insert \eqref{eq:radialdriftsquare} in the full signed production
+\eqref{eq:weightedsignedproduction} and repeat the unchanged absorption
+proof of Theorem~\ref{thm:weightedclosure}. Only the $30+B_0$
+coefficient of $\alpha E_0$ is replaced by $21/4+B_0$, giving
+\eqref{eq:radialweightedexpanded}. The entry
+$265/24+B_1+B_0$ dominates $10+B_1$, $6$ and $21/4+B_0$.
+Multiplying the compact estimate by $e^{-\Xi_{\rm rad}}$ and
+integrating proves \eqref{eq:radialweightedintegrated}; use
+\eqref{eq:radiallocalbounds} for \eqref{eq:radialweightedlocal}.
+\end{proof}
+
+The expanded $\alpha E_0$ allowance decreases by exactly
+$(99/4)\alpha E_0$. For the compact constant, the precise comparison is
+\begin{equation}\label{eq:radialcompactgap}
+ \kappa_1-\kappa_{1,\rm rad}
+ =\max\{0,455/24-B_1\}.
+\end{equation}
+The fixed cutoff above pays this threshold analytically
+\cite{RadialCompactNote}.
+
+\begin{proposition}[Strict compact coefficient gain]
+\label{prop:radialcompactstrict}
+For the exact exponential cutoff $\eta(r)=\chi(4r-2)$ in
+\eqref{eq:sourceextension}, with the unchanged drift and weight,
+\begin{equation}\label{eq:radialcompactcoefficients}
+\begin{aligned}
+ B_1&\le\frac{69}{4},& \kappa_1&=30+B_0,\\
+ \kappa_{1,\rm rad}&\le\frac{679}{24}+B_0,&
+ \kappa_1-\kappa_{1,\rm rad}&\ge\frac{41}{24}.
+\end{aligned}
+\end{equation}
+Define the old and radial compact upper allowances, for the same energy,
+data and actual $B(s)$, by
+\[
+ U_j(s)=(\mathcal F_{\mathrm R}(0)+E_0)
+          e^{\kappa_0s+\kappa_j B(s)},\qquad
+ \kappa_{\rm old}=\kappa_1,\quad
+ \kappa_{\rm rad}=\kappa_{1,\rm rad}.
+\]
+Then
+\begin{equation}\label{eq:radialcompactfactor}
+ \frac{U_{\rm rad}(s)}{U_{\rm old}(s)}
+ =e^{-(455/24-B_1)B(s)}\le e^{-41B(s)/24},
+\end{equation}
+strictly below one if $B(s)>0$. In particular,
+\begin{equation}\label{eq:radialcompactexplicit}
+ \mathcal F_{\mathrm R}(s)+E_0
+ \le(\mathcal F_{\mathrm R}(0)+E_0)
+       e^{\kappa_0s+(679/24+B_0)B(s)}
+\end{equation}
+on the inherited lifespan. The coefficient acquisition is independent
+of the physical mark and the source logarithmic derivative.
+\end{proposition}
+\begin{proof}
+Write $v=\lambda X$, $\lambda=1+(1+r^2)^{-1}$, and
+$b=\beta X$, $\beta=\eta\log r$. Direct differentiation gives
+$(b\cdot\nabla)v-(v\cdot\nabla)b
+=r(\beta\lambda'-\lambda\beta')X$. Hence
+\[
+ B_1=\sup_{r\ge0}p(r)
+ \left|\eta\{r\lambda'\log r-\lambda\}
+             -\lambda r\eta'\log r\right|,
+ \qquad p(r)=\frac r{(1+r^2)^2}.
+\]
+The zero continuation at the origin is smooth. We use
+$p\le1/2$, $\lambda\le2$, $r^2/(1+r^2)^2\le1/4$ and
+$|r\lambda'|\le1/2$.
+
+For $0<t\le1/2$, differentiating the displayed cutoff yields
+\[
+ 0\le\chi'(t)\le e^{-1/t+1/(1-t)}
+                 \{t^{-2}+(1-t)^{-2}\}\le8.
+\]
+Indeed, $e^{1/(1-t)}\le e^2$, and each term in
+$e^{-1/t}\{t^{-2}+(1-t)^{-2}\}$ is at most $4e^{-2}$:
+$x^2e^{-x}$ decreases for $x=1/t\ge2$, while
+$(1-t)^{-2}\le4$. Reflection
+$\chi(1-t)=1-\chi(t)$ gives the same bound on the other half.
+Thus $0\le\eta'\le32$. The constant extensions are smooth and flat;
+near $t=0$ the denominator tends to $e^{-1}>0$ and the numerator
+$e^{-1/t}$ is flat, and the other endpoint follows by reflection.
+
+For $r\le1/2$ the coefficient vanishes. On $1/2<r<3/4$,
+$|\log r|\le\log2<1$, and the two contributions satisfy
+\[
+ p\eta\bigl(|r\lambda'||\log r|+\lambda\bigr)\le\frac54,
+ \qquad
+ p\lambda r|\eta'||\log r|
+ =\lambda|\eta'||\log r|\frac{r^2}{(1+r^2)^2}\le16.
+\]
+Here $\log2<1$ follows by integrating $1/u<1$ from $1$ to $2$.
+On $3/4\le r\le1$, $\eta=1$, $\eta'=0$ and
+$|\log r|\le\log(4/3)<1$, giving $5/4$ again.
+For every $r\ge1$, $\log r\le r$ implies $p\log r\le1/4$,
+so the entire infinite tail is at most
+$p\lambda+(p\log r)|r\lambda'|\le1+1/8=9/8$.
+Smoothness includes both cutoff endpoints. Thus $B_1\le69/4$.
+
+In \eqref{eq:radialcompactgap},
+$455/24-B_1\ge455/24-69/4=41/24>0$.
+The old maximum is therefore exactly $30+B_0$, and
+$265/24+B_1+B_0\le679/24+B_0$.
+Taking the ratio of the two allowances proves
+\eqref{eq:radialcompactfactor}; $B\ge0$ and
+\eqref{eq:radialweightedintegrated} give
+\eqref{eq:radialcompactexplicit}.
+\end{proof}
+
+The ratio compares upper allowances, not actual solution energies.
+All commutator,
+preparation-residual and actual-jet terms, the cancellation at $r=1$,
+and the evolved inner ball remain unchanged. The exact colliding
+control satisfies the radial hypotheses, with both terms of
+\eqref{eq:weightedcontrolresidual} retained. Its finite breakdown
+is compatible with these longer local intervals. Neither
+\eqref{eq:radialgradientbound} in the unknown $B$ nor
+\eqref{eq:radialweightedlocal} before its singular endpoint controls
+a collision deadline. No theta separator is supplied.
+
+
+
+\subsection{Exterior source--residual coupling}\label{sec:sourcecoupling}
+
+The full theta coefficient permits a further bounded improvement
+\cite{SourceCouplingNote}. Keep the same physical rectangle, source,
+preparation, cutoff, actual jets and energy. Write
+$\Theta=\mathcal T=(AV,V+AJ_2)$ and use subscripts in/out only for
+restrictions of volume integrals to $r<2$ and $r\ge2$.
+
+\begin{proposition}[Source-coefficient compact gain]
+\label{prop:sourcecoupling}
+On $r\ge2$, the complete source has $c_T>0$ and
+\begin{equation}\label{eq:sourceslope}
+ 2\le k:=\frac{v\cdot\nabla c_T-b\cdot\nabla d}{c_T}\le6.
+\end{equation}
+Its signed coupling to the actual residual satisfies
+\begin{equation}\label{eq:sourceexteriorpayment}
+ 2\langle Z_{\mathrm R},\omega\mathscr C_1W\rangle_{\rm out}
+ \le-2Y_{\rm out}+\frac{48}{625}G_{\rm out}
+                   +\frac{12}{625}\|\Theta\|_{\rm out}^2.
+\end{equation}
+Define
+\begin{equation}\label{eq:sourcecompactconstant}
+ \kappa_{1,\rm src}=\frac{274}{25}+B_1+B_0
+       =\kappa_{1,\rm rad}-\frac{49}{600},\qquad
+ \Xi_{\rm src}(s)=\kappa_0s+\kappa_{1,\rm src}B(s).
+\end{equation}
+Then the unchanged whole-space quantities obey
+\begin{equation}\label{eq:sourcecompactbound}
+ \mathcal F_{\mathrm R}'+\mathscr D_{\mathrm R}
+       +\alpha\mathscr H_{\rm rad}
+ \le(\kappa_0+\kappa_{1,\rm src}\alpha)
+                         (\mathcal F_{\mathrm R}+E_0).
+\end{equation}
+For $s<S_{\max}$ this gives
+\begin{equation}\label{eq:sourceintegrated}
+ \begin{split}
+ &e^{-\Xi_{\rm src}(s)}(\mathcal F_{\mathrm R}(s)+E_0)\\
+ &\quad+\int_0^s e^{-\Xi_{\rm src}(q)}
+       (\mathscr D_{\mathrm R}+\alpha\mathscr H_{\rm rad})(q)\dd q
+ \le\mathcal F_{\mathrm R}(0)+E_0.
+ \end{split}
+\end{equation}
+The same-data upper allowance
+$U_{\rm src}=(\mathcal F_{\mathrm R}(0)+E_0)e^{\Xi_{\rm src}}$
+therefore satisfies
+\begin{equation}\label{eq:sourceallowancecomparison}
+ \frac{U_{\rm src}}{U_{\rm rad}}=e^{-49B/600},\qquad
+ \kappa_{1,\rm src}\le\frac{2821}{100}+B_0,\qquad
+ \kappa_1-\kappa_{1,\rm src}\ge\frac{179}{100}.
+\end{equation}
+The ratio is strict for $B>0$ and equals one at $B=0$.
+\end{proposition}
+\begin{proof}
+First pay the complete differentiated tail. With $q=r^2\ge4$ and
+$\beta=3/(2\pi)<1/2$, the exact factor in the proof of
+Lemma~\ref{lem:weighteddata}, now written as a function of $q$, is
+\[
+ P(q)=1-\frac\beta q+\tau(q),\qquad
+ \tau(q)=\sum_{n\ge2}\left(n^4-\frac{\beta n^2}{q}\right)
+                       e^{-\pi(n^2-1)q}.
+\]
+For $x=\pi(n^2-1)q\ge36$, the absolute zeroth, $q$-weighted first
+and $q^2$-weighted second derivatives of each summand are bounded by
+$n^4e^{-x}$, $n^4(1+x)e^{-x}$ and
+$n^4(x^2+2x+2)e^{-x}$, respectively. Each is at most
+$2n^4e^{-x/2}$: the polynomial factors are at most $2x^2$, and
+$e^{x/2}\ge x^4/384\ge x^2$.
+Since $n^4\le16^{n-1}$ and $n^2-1\ge3+5(n-2)$,
+\[
+ 2\sum_{n\ge2}n^4e^{-6(n^2-1)}
+ \le\frac{32e^{-18}}{1-16e^{-30}}
+ <64e^{-18}<\frac1{4096}<\varepsilon:=\frac1{100}.
+\]
+Thus $0\le\tau<\varepsilon$, $|q\tau_q|<\varepsilon$ and
+$|q^2\tau_{qq}|<\varepsilon$ uniformly; these summable bounds also
+justify both differentiations. Set $p_0=1-\beta/q$ and $t=\tau/p_0$.
+Using $p_0\ge7/8$, $|qp_{0,q}|\le1/8$ and
+$|q^2p_{0,qq}|\le1/4$, the quotient rule gives
+\[
+ |qt_q|\le\frac{64}{49}\varepsilon<\frac32\varepsilon,
+ \qquad |q^2t_{qq}|\le\frac{632}{343}\varepsilon<2\varepsilon.
+\]
+For $z=2qP_q/P=z_0+2qt_q/(1+t)$, $z_0=2\beta/(q-\beta)$,
+and $t\ge0$, it follows that
+\[
+ |z|\le\frac27+3\varepsilon<\frac13,\qquad
+ |2qz_q|\le\frac{32}{49}+14\varepsilon+9\varepsilon^2<1.
+\]
+The last term retains the squared first derivative of $t$.
+
+Put $L=-r\ell_T'=2\pi q-3/2-(T/2)\log r-z$. Uniformly for
+$0\le T\le1/2$, $3<\pi<4$ and $\log r\le q$ give
+\[
+ L\ge6q-\frac{11}{6}-\frac q4\ge5q>0,\qquad
+ rL'\le16q+1\le\frac{65}{4}q.
+\]
+Also $rL'-2L=3-T/2+T\log r+2z-2qz_q\ge13/12>0$.
+Since $\log r\ge\log2\ge2/3$, these imply
+\[
+ c_T=(\log r)L>0,\qquad
+ 2\le\frac{rc_T'}{c_T}
+      =\frac1{\log r}+\frac{rL'}L\le\frac{19}{4}.
+\]
+The lower bound for $\log2$ follows by pairing $1/x$ and $1/(3-x)$
+on $[1,2]$. Here $\lambda\le6/5$ and
+$-rd'=2q(q+5)/(1+q)^3\in[0,2]$, so
+$k=\lambda rc_T'/c_T-rd'/L\in[2,29/5]\subset[2,6]$.
+Division by $c_T$ has only been used on $r\ge2$.
+
+On this exterior set $a_b=r\log r$ and
+$a_1=r(r\lambda'\log r-\lambda)<0$. The full radial commutator is
+$\mathscr C_1W=a_1W'-kc_TW$. The residual definition gives exactly
+\begin{equation}\label{eq:sourcecompletion}
+ \omega\mathscr C_1W=-kZ_{\mathrm R}
+       +\omega\{(a_1+ka_b)W'-k\Theta\}.
+\end{equation}
+Because $|a_1|/a_b=\lambda/\log r-r\lambda'\le53/25<4\le2k$,
+we have $|a_1+ka_b|\le ka_b$. Also $\log r\le r/2$ on $r\ge2$,
+so $\omega a_b\le2/25$ and $\omega\le1/25$.
+Writing $F_c$ for the final term in \eqref{eq:sourcecompletion}, use
+$2Z_{\mathrm R}\cdot F_c\le k|Z_{\mathrm R}|^2+|F_c|^2/k$ and
+$|F_c|^2/k\le2k\omega^2(a_b^2|W'|^2+|\Theta|^2)$.
+This proves \eqref{eq:sourceexteriorpayment}, including the actual-jet
+cost. In fact, since $A\le6$,
+\[
+ |\Theta|^2\le(A^2+2)|V|^2+2A^2|J_2|^2
+             \le38|W|^2+72|J_2|^2.
+\]
+
+In the full signed production \eqref{eq:weightedsignedproduction},
+retain all the original $\mathscr C_0$ payments and
+$\mathscr H_{\rm rad}$ from \eqref{eq:radialdriftsquare}.
+On $r<2$ keep the pointwise payment
+$B_1|\nabla W|^2+(B_1+B_0)|Z_{\mathrm R}|^2+B_0|W|^2$.
+The weight production there is at most $h_\omega(4)=274/25$;
+outside it is at most $265/24$. The complete coefficients of the
+restricted energies in the $\alpha$ allowance are
+\[
+\begin{array}{c|cc}
+ &r<2&r\ge2\\ \hline
+ G&10+B_1&10+48/625\\
+ Y&274/25+B_1+B_0&217/24\\
+ Q_2&6&6+864/625\\
+ E&21/4+B_0&21/4+456/625
+\end{array}
+\]
+Every exterior entry is less than $274/25$; all entries are at most
+$\kappa_{1,\rm src}$. The unchanged non-$\alpha$ allowance is at
+most $\kappa_0(\mathcal F_{\mathrm R}+E_0)$ after absorbing one
+unit of $N$. This proves \eqref{eq:sourcecompactbound}.
+The split partitions a previously derived volume integral: no indicator
+is differentiated and no flux is added at $r=2$. The original cutoff,
+whole inner ball and joint cancellation at $r=1$ remain.
+Multiplication by $e^{-\Xi_{\rm src}}$ proves
+\eqref{eq:sourceintegrated}. Finally
+$265/24-274/25=49/600$, and $B_1\le69/4$ gives
+$274/25+B_1\le2821/100$, proving
+\eqref{eq:sourceallowancecomparison}.
+\end{proof}
+
+On each fixed ball the improved consequence is
+\begin{equation}\label{eq:sourceballbound}
+ \|\mathcal R(s)\|_{L^2(B_{R_b})}^2
+ \le(1+R_b^2)^4
+       \{(\mathcal F_{\mathrm R}(0)+E_0)e^{\Xi_{\rm src}(s)}-E_0\}.
+\end{equation}
+These are smaller upper allowances for the same actual $B$, not ratios
+of actual energies. The independent gradient-only interval
+$L_{\rm rad}$ is unchanged. Direct analysis with the same source
+coefficients, fields and jets obtains the same improvement.
+
+The theta coefficient is essential to \eqref{eq:sourceslope}, but the
+resulting inequality holds for every admitted radial comparison field
+with its true residual and common evolution. It never uses the
+theta-only vanishing of the raw source mismatch. In particular the
+exact control at $(1/4,2\sqrt6)$ remains admitted, with both terms of
+\eqref{eq:weightedcontrolresidual}. Its finite deadline is unchanged.
+The new gain therefore supplies no independent compression bound through
+a deadline, physical first-jet floor or enlarged collision-free region.
 
 \section{The remaining signed theta estimate}\label{sec:remaining}
 
-The conservative magnifier is now explicit, locally constructed, and
+The conservative magnifier is explicit, locally constructed, and
 quantified by Theorem~\ref{thm:feedbackdeadline}. Its central missing
-input is an independent bound for $G$ or $\alpha$ through the collision
-deadline, using the unchanged complete theta source. Global regularity
-already reformulates pointwise noncollision by
+input remains an independent bound for $G$ or $\alpha$ through the
+collision deadline, using the unchanged complete theta source.
+Global regularity reformulates pointwise noncollision by
 \eqref{eq:feedbackequivalence}; asserting it or checking known
-noncolliding points would not supply that bound
-\cite{TargetClassification}.
+noncolliding points does not supply that bound \cite{TargetClassification}.
 
-The two tested estimates delimit the next problem.
-The positive carrier gives \eqref{eq:carrierGbound} only after an
-independent first-jet margin is supplied, and its theta specialization
-recovers the already separated fourth-moment domain. The fixed source
-relation distinguishes the complete canonical amplitude, but
-preparation produces the nonzero residual in
-Proposition~\ref{prop:sourcepreparationdefect}; its forced evolution
-contains second spatial derivatives. Discarding that residual destroys
-a cancellation needed for finite gradient energy, while using the
-uncut coefficient creates a separate origin-domain failure.
+The carrier estimate \eqref{eq:carrierGbound} needs an independently
+supplied first-jet margin and recovers its already separated domain.
+The fixed source relation acquires a nonzero preparation residual;
+discarding it destroys the sphere cancellation, and the uncut operator
+has an origin-domain failure. Theorem~\ref{thm:weightedclosure} now
+resolves one narrower issue: its origin-admissible weighted energy
+absorbs the second-order commutator forcing with the existing diffusion,
+without a third spectral jet. The integrated and local consequences
+are \eqref{eq:weightedintegrated}--\eqref{eq:weightedlocalresidual}.
+The exact radial square further gives
+\eqref{eq:radialgradientbound}--\eqref{eq:radialweightedlocal}, including
+a strictly longer local interval than the old diffusion-retaining
+comparison. Proposition~\ref{prop:radialcompactstrict} now acquires
+$B_1\le69/4$ for the fixed exponential cutoff, making the compact
+coefficient gain strict with gap at least $41/24$. These are generic
+radial and cutoff estimates; they do not bound the compression integral
+through the collision deadline.
 
-A continuation with this operator must therefore begin with an
-origin-admissible functional coupling $W$, its actual second frequency
-derivative, and $\mathcal R$. It must retain the full commutator,
-unit-sphere cancellation, and whole evolving ball when estimating
-\eqref{eq:feedbackgradientexact}. Further differentiation may require
-higher derivatives; a finite closed hierarchy has not been proved.
-No new sign for $\mathcal K$ or $ND-G\mathcal K$, and no other
-controlling signed inequality through the deadline, is established
-here. These missing estimates are not supplied by evaluating the
-positive moments that already prove the preparation and domain defects.
+Proposition~\ref{prop:sourcecoupling} uses the complete theta tail and
+the signed source--residual product to lower the compact coefficient by
+a further $49/600$, paying the actual second jet and whole inner region.
+Its full signed starting point is \eqref{eq:weightedsignedproduction}.
+This improves the residual allowance, but only uses coefficients of the
+fixed theta operator. It remains valid for the exact colliding control
+with its true residual; the theta-only vanishing of the raw source
+mismatch has not been consumed. The next unresolved issue is how
+information about the actual canonical trajectory or its prepared data
+can strengthen the estimate beyond this control-admitting class.
+Retaining $(\mathcal T+\mathcal R)(1)=0$ ensures domain compatibility;
+that trace identity alone does not fix a whole-space production sign.
 
-Any successful estimate must state the canonical premise that the
-colliding controls fail \cite{CollisionControls}, and compare its
-information with a direct estimate for $(H,H_a)$.
-The failures above concern the specified carrier comparison, fixed
-zero-residual substitution, and uncut unweighted domain. They do not
-exclude residual-retaining bounds, other admissible weights or source
-relations. A different feedback equation would be a separate choice.
+A further estimate may improve the joint production bound or use a
+different admissible functional for the same flow. Each attempt must
+specify its domain and quantitative comparison before calculation,
+retain the actual spectral derivatives, complete source, preparation
+residual, full commutator and whole evolving ball, and identify its
+additional source input. Favorable cancellation need not occur in
+each term separately. A useful improvement must change a stated
+residual, gradient, compression or existence allowance, or reduce a
+specified information requirement; a representation alone does not
+supply the missing control. Neither all norm estimates nor all alternate
+formulations are excluded by the present Young bound.
+
+Any collision-excluding application must state why relevant controls
+fail its complete premises on domains containing their witnesses
+\cite{CollisionControls}, and compare with direct analysis using the
+same source information. No sign for $ND-G\mathcal K$, independent
+compression bound through the deadline, or stronger collision-free
+domain is established here. The finite weighted closure does not imply
+a closed hierarchy for arbitrary further derivatives.
 
 An application to a hypothetical positive de Bruijn--Newman threshold
-would additionally require the time, height, multiplicity, and endpoint
+would additionally require the time, height, multiplicity and endpoint
 coverage in the existing finite-event reduction \cite{ThresholdNote}.
-The fixed-mark results provide no new uniform transfer or threshold
-bound. No numerical evolution or new interval certificate is claimed.
+No numerical evolution or new interval certificate is claimed.
+Overview05 and Progress05 \cite{ConservativeProgram} own current routing;
+the current continuation returns the still-missing source-specific
+trajectory estimate to conceptual CTF-B02 work \cite{SourceContinuation}.
+The coefficient proofs are complete \cite{RadialCompactNote,SourceCouplingNote}; the original
+issued continuation \cite{RadialContinuation} and the older R4 brief
+\cite{WeightedContinuation} retain their historical scopes.
+
 
 \appendix
 \section{The inherited fourth-moment restriction}\label{sec:fourthmoment}
@@ -1154,18 +1934,65 @@ comparison in Note16 was prepared with GPT-6.1-sol at effort
 R1, was carried out with GPT-6.1-sol at the actual recorded effort
 \emph{ultra} on 28 October 2026. Edward Baker specified whole-integral
 conservation as the organizing principle and proposed the program of
-magnifying collisions without a prescribed spatial direction.
+magnifying collisions without a prescribed spatial direction. The bounded
+CTF-E06 cleanup on 29 October 2026 was carried out with GPT-6.1-sol,
+actual recorded effort \emph{ultra}, chat0019; it clarifies normalization,
+parameter roles, attribution, and routing without changing the proofs.
+The weighted estimate was designed in Note39 with GPT-6-astra at effort
+\emph{max} and proved in Note40 with GPT-6.1-sol at effort \emph{ultra},
+including delegated same-model checks. Its CTF-E08 assessment and
+integration were requested in the original design chat and carried out
+with GPT-6-astra at actual recorded effort \emph{max} on 29 October 2026.
+This is a different-model assessment of Sol's execution by the original
+designer, with shared inherited premises, not independent specialist
+review.
 
 The proofs and internal assessments in Notes25,28--29,31 and
 Reviews14,16--19 record the retained constructions and their scopes.
 These are analytical results with the classical inputs identified below;
 their LLM assessments do not constitute independent specialist review.
-The editorial return records source checks and the built-in compiler's
+Note40 and Review22 record the weighted lemma and its integration scope.
+Note42 adds the radial drift square: its conceptual choice and proof were
+contributed by a delegated GPT-6-astra agent at recorded effort
+\emph{max}; parent drafting/checking used GPT-6.1-sol at recorded effort
+\emph{ultra}, chat0021. The present R4 assessment and manuscript
+integration were carried out by GPT-6.1-sol, effort \emph{ultra}, in
+that same chat on 29 October 2026, with a prior contributing Sol checker.
+Review23 records this internal assessment with shared premises and
+contributor overlap; it is not an independent specialist review.
+Note44 proves the fixed cutoff coefficient bound and strict compact
+gain with GPT-6.1-sol, actual effort \emph{ultra}, chat0022. Its
+user-requested E08 assessment and integration in the same chat used
+GPT-6.1-sol at effort \emph{ultra} with two read-only same-model
+checks. The parent also prepared the proof; Review24 records this
+contributor overlap and shared inherited premises, without independent
+specialist review.
+Note47's source--residual coupling was derived with GPT-6-astra at
+actual effort \emph{max}, chat0023. The frozen R5 assessment and present
+integration were completed with GPT-6-astra at actual effort \emph{max},
+chat0024, on 29 October 2026. Review26 records a separate-chat same-model
+internal assessment with shared inherited premises; no subagents,
+cross-model assessment or specialist independence are claimed.
+The build record records source checks and the built-in compiler's
 actual result. Compilation does not validate a mathematical proof.
 No numerical evolution of the nonlinear theta feedback or new interval
 certificate is claimed.
 
 \begin{thebibliography}{99}
+\bibitem{ThetaCompanion}
+E. Baker research archive, drafted with LLM assistance,
+\emph{The Theta Transform in Three Dimensions}, Investigation05,
+\path{book/main.tex}, Sections~1--2. Background companion; its scalar
+theta--Mellin identity is classical (Riemann, 1859; DLMF~25.5.13--14).
+Note35 records the normalization and attribution check.
+
+\bibitem{ConservativeProgram}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Research overview for conservative theta flow estimates} and
+\emph{Research progress for conservative theta flow estimates},
+Investigation05, Overview05 and Progress05, 29 October 2026.
+The overview specifies the bounded contracts; Progress05 owns live status.
+
 \bibitem{RadialNotes}
 E. Baker research archive, prepared with LLM assistance,
 \emph{Radial theta geometry and possible collision mechanisms}
@@ -1200,6 +2027,62 @@ E. Baker research archive, prepared with LLM assistance,
 \emph{The fixed canonical source relation and its preparatory commutator},
 Investigation05, Note31, 28 October 2026; same-assistant assessment
 in Review18. Integration in this manuscript is assessed in Review19.
+
+\bibitem{WeightedClosureNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{A weighted residual and second-jet estimate} and
+\emph{Verified weighted residual closure}, Investigation05,
+Notes39--40, 29 October 2026. Note39: GPT-6-astra, effort max;
+Note40: GPT-6.1-sol, effort ultra, internal same-model execution checks.
+CTF-E08 assessment and integration in Review22 by the original designer;
+no independent specialist review.
+
+\bibitem{RadialDriftNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{CTF-B02 R4: one radial drift-production improvement},
+Investigation05, Note42, 29 October 2026. Astra/max conceptual contribution;
+Sol/ultra parent drafting and internal checks. Assessment/integration in
+Review23, Sol/ultra; no independent specialist review.
+
+\bibitem{RadialCompactNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{CTF-E07 R2: all-radius compact-coefficient bound},
+Investigation05, Note44, 29 October 2026. GPT-6.1-sol, effort ultra;
+user-requested E08 assessment and integration in Review24, same model
+and parent contributor with shared premises, not specialist review.
+
+\bibitem{SourceCouplingNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{CTF-B02 R5: exterior source/residual coupling}, Investigation05,
+Note47, 29 October 2026. GPT-6-astra, effort max, chat0023;
+same-model E08 R5 assessment and integration in Review26 and Note49,
+chat0024. Internal LLM work with shared premises, not specialist review.
+
+\bibitem{SourceContinuation}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Continuation after source-coupling assessment and integration},
+Investigation05, Note50, 29 October 2026. The next task is a bounded
+conceptual choice about actual-trajectory information; no new candidate
+is tested by the continuation.
+
+\bibitem{CompactContinuation}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Continuation after strict compact-gain integration},
+Investigation05, Note46, 29 October 2026. Records the assessed result
+and the next conceptual source-specific estimate; no further estimate
+is executed by that continuation.
+
+\bibitem{RadialContinuation}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Continuation after radial drift integration}, Investigation05,
+Note43, 29 October 2026. Fixed Sol analytical follow-through for the
+existing coefficient $B_1$; not an executed additional estimate.
+
+\bibitem{WeightedContinuation}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Continuation after weighted residual closure}, Investigation05,
+Note41, 29 October 2026. Integration record and bounded CTF-B02 R4
+brief; the proposed next round is not an additional established estimate.
 
 \bibitem{EberleCoupling}
 A. Eberle, \emph{Reflection couplings and contraction rates for diffusions},

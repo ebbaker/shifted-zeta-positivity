@@ -41,3 +41,11 @@ python3 16_measure_conservative_heat_baseline_20261028.py --output /tmp/CTF-E01-
 ```
 
 The default investigation path is derived from the script. The recorded environment used Python 3.12.14 and mpmath 1.4.1 (Python backend). A run has a shared 250,000-call / 900-second cap. `--reprocess` rebuilds reporting from a saved record without quadrature. Wall-clock times and generated metadata are machine-specific; compare scientific values and the request-contract hash.
+
+- [21 — Weighted residual integration build record](21_WEIGHTED_RESIDUAL_INTEGRATION_BUILD_RECORD_20261029.json): CTF-E08 source/PDF/log hashes, successful built-in and local compilation, 21-page layout scope, seven preserved proof blocks and three added proofs. This records document checks, not a numerical theta calculation or collision certificate. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / max, chat0018, 29 October 2026.
+
+- [22 — Radial drift integration build record](22_RADIAL_DRIFT_INTEGRATION_BUILD_RECORD_20261029.json): source/PDF/log hashes, successful built-in/local 24-page compilation, proof preservation, source checks and actual layout inspection scope. No new numerical research. gpt-6.1-sol / ultra, chat0021, 29 October 2026.
+
+- [23 — Strict compact-gain integration build record](23_RADIAL_COMPACT_GAIN_INTEGRATION_BUILD_RECORD_20261029.json): source/PDF/log hashes, successful built-in/local 25-page compilation,13 preserved proofs and one added proof, frozen-input checks and bounded visual scope. Document checks only; no numerical theta acquisition. gpt-6.1-sol / ultra, chat0022, 29 October 2026.
+
+- [24 — Source-coupling integration build record](24_SOURCE_COUPLING_INTEGRATION_BUILD_RECORD_20261029.json): source/PDF/log hashes, successful built-in/local 28-page compilation,14 preserved proofs and one added, exact finite arithmetic transcription checks and bounded layout scope. No source acquisition or PDE simulation. gpt-6-astra / max, chat0024, 29 October 2026.

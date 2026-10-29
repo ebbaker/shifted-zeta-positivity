@@ -26,7 +26,7 @@
 \title{The Theta Transform in Three Dimensions\\[4pt]
 \large Generators, potentials, and deformations}
 \author{Drafted for Edward Baker}
-\date{28 October 2026}
+\date{29 October 2026}
 \begin{document}
 \maketitle
 
@@ -36,8 +36,9 @@ potential in three-dimensional Euclidean space. A square-root rescaling
 and logarithmic radius convert this potential into an even generator
 \(G\) satisfying \((1-\partial_u^2)G=8\Phi\). Its Fourier observation
 recovers the original function through the factor \(1+z^2\).
-We derive these identities from the theta series, retain their
-three-dimensional cylinder formulation, and explain the convergence
+We derive the classical scalar theta--Mellin identity in this
+normalization, retain the three-dimensional cylinder formulation, and
+explain the convergence
 strip and entire continuation. The resulting transform determines the
 spherical mean of a spatial field, while leaving angular information
 free. We then compare exact preservation of the observation with
@@ -98,7 +99,12 @@ initial-value problem is being posed.
 We now set \(t=0\) and derive the spatial state from which these
 observations arise. The symbols \(t\), \(s\), and \(\lambda\)
 will distinguish Newman time, a possible auxiliary time, and the
-completed-function coordinate.
+completed-function coordinate. This is a background companion to
+\emph{Conservative Theta Flows and Collision Amplification}
+\cite{ConservativeFlow}; that manuscript evolves the full signed spatial
+density and fixes the conservative feedback used by the current program.
+The present potential and cylinder formulations retain their own fields
+and observation kernels.
 
 \subsection{The theta series and the radial Laplacian}
 
@@ -324,7 +330,25 @@ completed-function coordinate. Set \(\lambda=(1+iz)/2\), so
  =\lambda(1-\lambda)\int_0^\infty
  [1+r^{-1}-\Theta(r)]r^{\lambda-1}\dd r,}
 \end{equation}
-for \(0<\operatorname{Re}\lambda<1\). With Euclidean volume this is
+for \(0<\operatorname{Re}\lambda<1\). This is Riemann's classical
+theta--Mellin representation, with the endpoint terms combined in
+\(V\) \cite[printed p.~3]{Riemann1859}; the modern split formula is
+\cite[Eqs.~25.5.13--14]{DLMF}. More precisely,
+\begin{equation}\label{eq:classical-mellin}
+ \int_0^\infty V(r)r^{\lambda-1}\dd r
+ =-\pi^{-\lambda/2}\Gamma(\lambda/2)\zeta(\lambda),
+ \qquad 0<\operatorname{Re}\lambda<1.
+\end{equation}
+Splitting at \(r=1\), applying theta reflection to the lower interval,
+and setting \(x=r^2\) in the theta remainder gives that classical
+formula. The xi normalization in \eqref{eq:xi} then gives exactly
+\eqref{eq:mellin}; Note35 \cite{Archive} records the comparison.
+Since \(V(r)\to1\) at zero and \(V(r)\sim r^{-1}\) at infinity,
+this is an ordinary absolutely convergent integral precisely in the
+stated strip. Its three summands cannot be integrated separately over
+the whole positive axis. No new scalar zeta representation is claimed.
+
+With Euclidean volume, \eqref{eq:mellin} is
 \begin{equation}\label{eq:mellin3d}
  16H(0,z)=\frac{\lambda(1-\lambda)}{4\pi}
  \int_{\R^3}[1+|X|^{-1}-\Theta(|X|)]|X|^{\lambda-3}\dd X.
@@ -707,12 +731,18 @@ expansion. The implications shared by these controls cannot alone
 exclude their collisions. A further argument would need a quantified
 use of additional canonical information.
 
-The present draft therefore establishes the representation and its exact
-flow comparisons, while leaving the auxiliary evolution open. Exact
-observation preservation fixes the spherical mean. Preservation up to a
-specified nonvanishing factor permits cylinder heat. Choosing between
-these requirements is part of designing the next evolution; the initial
-identities do not decide it.
+This companion records the theta-potential representation and its exact
+linear-flow comparisons. Exact observation preservation fixes its
+spherical mean; preservation up to a specified nonvanishing factor
+permits cylinder heat. The current conservative-flow program is developed
+in \emph{Conservative Theta Flows and Collision Amplification}
+\cite{ConservativeFlow}. It evolves a parameter-dependent signed spatial
+density, preserves its complete integral, and fixes an energy-normalized
+feedback. The remaining task there is an independent estimate from the
+complete theta source controlling concentration through the collision
+deadline. The background generators and alternative notation here do not
+replace that evolved field or its invariant. Overview05 defines the
+current task contracts and Progress05 owns their live status.
 
 \section*{Acknowledgments and status}
 
@@ -722,11 +752,15 @@ GPT-6-astra in Codex, recorded reasoning effort \emph{xhigh},
 theta generator, the brief deformation background, and the inclusion of
 both the original notation and a separate three-dimensional normalization.
 The underlying calculations are recorded in the investigation's
-Brainstorm08--09 and earlier notes \cite{Archive}.
+Brainstorm08--09 and earlier notes \cite{Archive}. The bounded CTF-E06
+attribution and navigation corrections on 29 October 2026 were prepared
+with GPT-6.1-sol, actual recorded effort \emph{ultra}, chat0019;
+the source derivations and proof blocks are unchanged.
 
-This is a first working draft with same-assistant analytical and layout
-checks. It has not had independent specialist review. The exact
-identities improve the formulation; no new collision exclusion or bound
+The original working draft had same-assistant analytical and layout
+checks; the E06 return separately records its compilation and layout
+scope. It has not had independent specialist review. The identities
+provide a common formulation; no new collision exclusion or bound
 on the de Bruijn--Newman constant is asserted. The repository's result
 and pattern registers \cite{Results,Patterns} record the inherited scope.
 
@@ -741,13 +775,36 @@ Version consulted: \href{https://arxiv.org/abs/2005.05142v2}
 \bibitem{DLMF}
 NIST Digital Library of Mathematical Functions,
 \href{https://dlmf.nist.gov/20.7.E32}{Eq.~20.7.32}, theta modularity;
-\href{https://dlmf.nist.gov/1.14.iv}{Section~1.14(iv)}, Mellin convention.
+\href{https://dlmf.nist.gov/1.14.iv}{Section~1.14(iv)}, Mellin convention;
+\href{https://dlmf.nist.gov/25.5.E13}{Eqs.~25.5.13--14}, classical
+theta integral; \href{https://dlmf.nist.gov/25.4.E4}{Eq.~25.4.4},
+xi normalization.
+
+\bibitem{Riemann1859}
+B. Riemann, \emph{Ueber die Anzahl der Primzahlen unter einer gegebenen
+Gr\"osse}, Monatsberichte der Berliner Akademie, November 1859.
+Version consulted: D. R. Wilkins's English translation,
+\emph{On the Number of Prime Numbers less than a Given Quantity},
+preliminary version December 1998, printed p.~3.
+\href{https://www.maths.tcd.ie/pub/HistMath/People/Riemann/Zeta/EZeta.pdf}
+{Primary-hosted translation}. Selected theta--Mellin passages only;
+reference annotation13 records provenance and normalization scope.
+
+\bibitem{ConservativeFlow}
+E. Baker research archive, drafted with LLM assistance,
+\emph{Conservative Theta Flows and Collision Amplification},
+Investigation05, \path{radial_deformations_and_zero_dynamics.tex}.
+\href{https://github.com/ebbaker/shifted-zeta-positivity/tree/main/papers/investigations-5/05_radial_theta_collision_geometry}
+{Investigation repository}; Overview05 gives the conservative-flow
+estimate contracts and Progress05 owns live status, 29 October 2026.
+The local working sources may precede their public commit.
 
 \bibitem{Archive}
 E.~Baker research archive, with LLM assistance,
 \emph{Radial Theta Collision Geometry}, Investigation05.
 Note01 (27 October 2026), Brainstorm08--09 (28 October 2026),
-and book change note02 (28 October 2026).
+book change note02 (28 October 2026), and Note35 on the classical
+Mellin attribution (28 October 2026).
 \href{https://github.com/ebbaker/shifted-zeta-positivity/tree/main/papers/investigations-5/05_radial_theta_collision_geometry}
 {Repository investigation}; this working draft may precede its public commit.
 

@@ -6,7 +6,36 @@ Resume Investigation05's conservative feedback flow and seek an estimate from th
 
 The author selected this return after the [auxiliary-flow comparisons][comparison] in Investigation06. Those comparisons help prioritize the next attempt within the tested families. They establish neither general superiority nor historical novelty of the conservative construction. The present task is an author-requested research plan; the mathematical returns retain their existing evidence status.
 
-This overview supersedes [Overview04][old-overview] for current priorities. **[Progress05][progress] is the sole current register.** Existing CTF task identities are retained. CTF-B02 remains partial after two completed bounded returns; its next round, R3, is ready for conceptual work and has not started. [Continuation32][continuation] remains the detailed source-residual handoff.
+This overview supersedes [Overview04][old-overview] for current priorities.
+**[Progress05][progress] is the sole current register.** Existing CTF
+task identities are retained. R3/E07 R1 and R4 are complete in Notes39–42;
+[Review22][r22] and [Review23][r23] record their completed assessments
+and manuscript integrations. Section 7.4 now also contains the assessed R2 compact gain below;
+prior build records retain their historical versions.
+
+**Default next: [E] CTF-E08 R6 — Sol**, assess the fixed [packet][e08r6].
+[Note51][n51] completes B02 R6 as a proved in-note scoped negative:
+the unchanged theta amplitude with a variable observation kernel admits
+zero raw mismatch, m=0 and E0>0 at (1/4,2). Any prescribed finite cosine
+Taylor prefix can be retained. The genuine preparatory residual and
+inherited auxiliary deadline remain. The comparison fails the full cosine
+oscillator/Newman identity; no physical theta collision is claimed.
+
+[Self-assessment27][r27] records same-assistant checks, and
+[Continuation52][n52] gives model-change guidance. Actual R6:
+gpt-6-astra / max, chat0024, 29 October 2026, for Edward Baker with
+substantial LLM assistance; no subagents or independent review. Parent
+B02 remains partial; E03/B03 remain gated. A future estimate using joint
+actual cosine/source compatibility is unselected and requires a new
+recorded B02 candidate after assessment.
+
+The earlier R5 result remains accepted in [Review26][r26] and
+[Note49][n49]: coefficient gain 49/600, same-B allowance ratio
+exp(-49B/600), with all source/jet/inner costs paid and its earlier
+colliding control admitted. The current 28-page [record24][build24]
+manuscript and companion are unchanged in R6. No new numerical acquisition
+or manuscript integration occurred; older packets retain their dates
+and scopes.
 
 ## Task routing before research begins
 
@@ -14,15 +43,24 @@ Follow [GPT_RESEARCH_MODEL_WORKFLOW][workflow]. **B** means an unresolved concep
 
 | Task | Type and recommended model | Readiness and dependency | Bounded output |
 | --- | --- | --- | --- |
-| **CTF-B02 R3** | **B — Astra:** a useful coupled functional and signed estimating argument remain to be found | Ready from Notes28–32; default next research task | One admissible functional and one coupled estimate attempt, returning a proved advance, a tractable execution contract, or one precise unresolved inequality |
-| **CTF-E06** | **E — Sol:** the manuscript starting point and editorial scope are fixed below | Ready as a separate editorial task; not a prerequisite for B02 | One bounded cleanup pass on the existing flow manuscript, with minimal companion-book attribution/navigation corrections |
-| **CTF-E07** | **E — Sol:** routine analytical completion after the route is fixed | Gated on a versioned B02 contract | The specified identities or lemma, with domains, residuals, and error terms checked |
+| **CTF-E08 R6 — default** | **E — Sol:** fixed proof and scope assessment | Ready; [packet][e08r6], [Note51][n51] and [Self-assessment27][r27] | One accepted/corrected verdict or precise gap; notes/navigation only, no manuscript integration |
+| **CTF-B02 R6** | **B — Astra:** sufficiency of zero raw mismatch | Complete in-note; same-assistant checks, parent partial | Exact zero first-jet ratio in the fixed-amplitude variable-kernel class; finite cosine prefix retained, full cosine/Newman identity fails |
+| **CTF-B02 future bounded revision** | **B — Astra:** joint actual cosine/source estimating route is unselected | Follows R6 assessment; [Note52][n52] | Record one new quantitative candidate before testing; no automatic second candidate |
+| **CTF-B02 R5** | **B — Astra:** select a source-coefficient coupled estimate | Complete in [Note47][n47]; assessed in [Review26][r26] | Full theta tail and signed residual/actual-jet coupling lower compact coefficient 49/600; exact control remains admitted |
+| **CTF-E08 R5** | **E — Sol:** fixed proof assessment/integration; actual Astra/max | Complete in [Review26][r26] and [Note49][n49] | Proposition 7.8, 28-page build/layout check,14 inherited proofs preserved; same-model internal scope |
+| **CTF-B02 R3** | **B — Astra:** select one coupled functional and estimating route | Complete design in [Note39][n39], executed in [Note40][n40] | One finite weighted residual estimate proved; signed collision restriction remains open |
+| **CTF-B02 R4** | **B — Astra:** choose one improved supporting estimate | Complete in [Note42][n42]; parent B02 partial | Exact radial square lowers 30E0 to (21/4)E0, with improved G/alpha/local allowances; generic gain, exact colliding control admitted |
+| **CTF-E06** | **E — Sol:** the manuscript starting point and editorial scope are fixed below | Complete in the [E06 return][e06-return], 29 October 2026; independent of B02 | One bounded cleanup pass completed on the existing flow manuscript, with minimal companion-book attribution/navigation corrections; live evidence status in Progress05 |
+| **CTF-E07 R1** | **E — Sol:** fixed coefficient, energy and comparison proof | Complete in [Note40][n40]; live status in Progress05 | Finite weighted closure, integrated dissipation and local continuation proved with unchanged constants |
 | **CTF-E03** | **E — Sol:** rigorous finite acquisition for a stated estimate | Optional and gated on named quantities actually consumed by B02/E07 | One frozen finite calculation or certificate with complete errors and a stopping limit |
-| **CTF-E08** | **E — Sol:** assess one frozen return and integrate supported conclusions | Gated on one completed B02/E07 return and any required E03 evidence | One scoped assessment and a proportionate update of the existing text and research navigation |
+| **CTF-E08: R2 assessment** | **E — Sol:** fixed coefficient proof and supported manuscript consequence | Complete in [Review24][r24], Sol/ultra, chat0022 | Proposition 7.7,25-page built-in/local compilation and bounded layout check;13 inherited proofs preserved |
+| **CTF-E08: R4 assessment** | **E — Sol:** fixed proof assessment and integration | Complete in [Review23][r23], Sol/ultra, chat0021, author request | Section 7.4, successful 24-page build and bounded layout check; all ten prior proofs preserved |
+| **CTF-E07 R2** | **E — Sol:** one cutoff/drift coefficient proof with a fixed threshold | Complete in [Note44][n44]; live status in Progress05 | B1<=69/4, compact gap>=41/24, same-B factor<=exp[-41B/24]; E08 R2 complete in [Review24][r24]; [Note46][n46] is the dated continuation |
+| **CTF-E08** | **E — Sol:** assess one frozen return and integrate supported conclusions; author selected Astra chat | Complete in [Review22][r22], gpt-6-astra / max | Weighted result in manuscript Section 7, remaining gap in Section 8, successful compilation and bounded layout check; R4 continuation prepared |
 | **CTF-B03** | **B — Astra:** extension and threshold transfer require a new conceptual decision | Gated on an assessed substantive canonical gain | One time, height, or threshold-transfer question with its remaining coverage obligations |
 | **CTF-E02 R1** | **E — Sol:** arithmetic propagation of already saved data | Existing optional packet; lower priority and unchanged | The known initializer-payment gap audit, with zero new source integration or PDE evolution |
 
-Creating these documents completes no B or E research task. Ordinary inspection, navigation, and chat capture are housekeeping available to the current model. The contracts below separate proof design from its later routine execution.
+The original planning documents did not themselves complete a research task. The dated linked returns supply the later execution evidence. Ordinary inspection, navigation, and chat capture remain housekeeping; the contracts below separate proof design from routine execution.
 
 ## The fixed starting construction
 
@@ -75,7 +113,8 @@ No nondegeneracy of the physical double event is needed for this implication. Gl
 | [Note25][n25] and [Note27][n27] | Conserved-density heat, loss of leading diffusion modes at collision, and a completed floating baseline measurement | Generic diagnostic; no measured advantage over direct acquisition in the tested comparison |
 | [Note28][n28] and [Review16][r16] | Energy-normalized feedback, local construction, continuation criterion, and explicit collision deadline | Same-assistant analytical checks; the fixed generic initializer payments cannot reach their paid deadline |
 | [Note29][n29] and [Review17][r17] | Positive carrier, sharp mass–energy–moment inequality, and quantitative regularity from a physical first-jet margin | The comparison does not acquire that margin or enlarge the previously separated domain |
-| [Note31][n31] and [Review18][r18] | Actual-theta preparation defect, forced residual evolution, sphere cancellation, and origin-domain obstruction for the uncut operator | The fixed zero-residual substitution fails; coupled estimates retaining the residual remain open |
+| [Note31][n31] and [Review18][r18] | Actual-theta preparation defect, forced residual evolution, sphere cancellation, and origin-domain obstruction for the uncut operator | The fixed zero-residual substitution fails; one subsequent weighted estimate is supplied by Note40 below |
+| [Note40][n40] and [Review22][r22] | Finite weighted residual/second-jet closure, integrated dissipation, ball residual bound and positive local existence interval | No signed theta separator, sharper G allowance or collision-deadline coverage; different-model assessment by original designer, not specialist review |
 | Investigation06 [R1][r1] and [R2][r2] | Scoped failures of the tested normalized source responses and two algebraic relative-recovery comparisons | These tests do not exclude all auxiliary flows or prove the conservative flow superior |
 
 The exact gradient consumer is
@@ -94,11 +133,13 @@ where J_2 is the actual second running spectral derivative. Use Note31's smooth 
 \mathcal R_s=L_s\mathcal R+[\mathcal A_T,L_s]W,
 \qquad L_s=\Delta+\alpha\operatorname{div}(v\,\cdot).
 \]
-The preparation residual is nonzero for actual theta data on the proved interval. The commutator contains second spatial derivatives. At r=1 the combination (aV,V+aJ_2)+R cancels; separately estimating its singular quotients loses a cancellation required for finiteness. The inner-ball energy and the extension's coefficient terms also remain. No finite closed derivative hierarchy has yet been established.
+The preparation residual is nonzero for actual theta data on the proved interval. The commutator contains second spatial derivatives. At r=1 the combination (aV,V+aJ_2)+R cancels; separately estimating its singular quotients loses a cancellation required for finiteness. The inner-ball energy and the extension's coefficient terms also remain. Note40 closes one finite weighted energy without a third spectral jet. A hierarchy for arbitrary higher derivatives is not established.
 
-## The next conceptual round
+## R3 conceptual contract and dated return
 
-**CTF-B02 R3 — B, Astra.** Start with the fixed flow, complete source, preparation, and physical observation above. The unresolved choice is an admissible coupled functional and a plausible way to estimate its production. Discovering that choice is the work; the author need not supply the missing theorem in advance.
+**R3 issue-stage return, 29 October 2026:** [Note39][n39] selects G + ||(1+r²)^(-2) R||₂² + ||J₂||₂² on [0,1/2] x [1,6]. Its formal production supplied the fixed [E07 R1 verification][e07]. That design return did not itself prove the proposed lemma. The subsequent [Note40][n40] proof and [Review22][r22] integration now establish its weighted/local conclusion. Neither gives collision-deadline control. Original design and current routing update: gpt-6-astra / max, Investigation05 chat0018; execution: gpt-6.1-sol / ultra, chat0020.
+
+**Original frozen CTF-B02 R3 contract — B, Astra.** Start with the fixed flow, complete source, preparation, and physical observation above. The unresolved choice is an admissible coupled functional and a plausible way to estimate its production. Discovering that choice is the work; the author need not supply the missing theorem in advance.
 
 Take one marked point or one explicitly stated compact rectangle inside \(0\le T\le1/2\) and \(0<a_-\le a\le a_+<\infty\). Specify the proposed domain and functional before testing its estimate. In this round attempt **one** coupled functional or one named supporting lemma. Retain the actual spectral jets, nonzero residual, full commutator, unit-sphere cancellation, and origin-admissible whole-space domain. Identify which property of the complete theta source enters the proposed signed bound.
 
@@ -108,7 +149,7 @@ Complete the round with one of: a proved bounded advance; a fixed analytical rou
 
 ## Execution contracts and conceptual return boundaries
 
-**CTF-E06 — E, Sol, manuscript cleanup.** The main working text is [Conservative Theta Flows and Collision Amplification][manuscript]. Its existing Sections 3–7 already contain conservation, feedback, carrier, residual, and the open estimate; [Note34][n34] records the prior refocus. Reuse that source and its proofs. Make one editorial pass that clarifies the spatial density and Jacobian, keeps the two times and fixed mark distinct, states the remaining estimate early, and repairs any stale routing or unsupported novelty wording. Keep the author field and LLM acknowledgment.
+**CTF-E06 — E, Sol, manuscript cleanup.** The main working text is [Conservative Theta Flows and Collision Amplification][manuscript]. At the E06 intake, its Sections 3–7 contained conservation, feedback, carrier, residual, and the open estimate; [Note34][n34] records the prior refocus. Reuse that source and its proofs. Make one editorial pass that clarifies the spatial density and Jacobian, keeps the two times and fixed mark distinct, states the remaining estimate early, and repairs any stale routing or unsupported novelty wording. Keep the author field and LLM acknowledgment.
 
 The separate [book companion][book] is background for transform and cylinder formulations. [Note35][n35] identifies its scalar Mellin identity as classical. Correct that attribution in the companion where needed and link the current flow program; a full book rewrite or merger is outside this pass. Preserve useful source derivations without requiring the research to pass through their alternative notation. Geometric or notational changes that alter the evolved field, invariant, or proof need a B02 decision. A short change note, resolved references, and successful built-in compilation of each edited TeX source complete E06. Keep any generated PDF in the repository output directory and report the actual layout-check scope. E06 is independent of B02 and is not a prerequisite for beginning the estimate.
 
@@ -133,7 +174,16 @@ It collides at a=2sqrt(6), satisfies the generic prepared feedback hypotheses on
 
 New work belongs in notes, numerics, and reviews with actual model and effort. Retain failed evidence and complete source terms. The comparison record in Investigation06 remains there; the existing chat0004 history is linked rather than copied or relocated. Future milestones use commits or tags when available and concise entries in DRAFT_HISTORY.md, with no new manuscript snapshot folders.
 
-## Continuation prompt
+## Current continuation
+
+**Next: [B] CTF-B02 — Astra**, one bounded conceptual revision under
+[Note50][n50]. E08 R5 is complete in Review26; the accepted coefficient
+gain is integrated and does not distinguish the theta trajectory from
+the admitted colliding control. Record the next candidate and its
+quantitative comparison before testing; no candidate is chosen here.
+[Progress05][progress] owns live status. E03/B03 remain gated.
+
+## Original R3 continuation prompt
 
 > Continue [B] CTF-B02 R3 in Investigation05 from Overview05, Progress05, Notes28–32, and the Investigation06 comparison summary. Follow GPT_RESEARCH_MODEL_WORKFLOW. Keep the conservative feedback equation, complete theta source, unit heat preparation, and actual marked spectral derivatives. Choose one origin-admissible coupled functional or supporting lemma that could improve gradient or residual control on a stated bounded physical domain. Retain the source residual, full commutator, sphere cancellation, and inner-ball energy. Explain the canonical input, the control outcome, and the implication for the existing gradient balance. Return a bounded advance, a fixed E07 contract for Sol, or one precise unresolved inequality. Keep manuscript cleanup in E06; issue numerics only for quantities a specified estimate consumes. Save the result and update Progress05 with actual model, effort, evidence status, and the next B/E task.
 
@@ -165,3 +215,39 @@ New work belongs in notes, numerics, and reviews with actual model and effort. R
 [a07]: ../../../../avoid/07_scoped_exclusions_read_as_universal.md
 [a10]: ../../../../avoid/10_numerics_ahead_of_the_question.md
 [a20]: ../../../../avoid/20_volume_without_a_gain.md
+
+[e06-return]: ../notes/CTF_E06_MANUSCRIPT_CLEANUP_RETURN_20261029.md
+
+[n39]: ../notes/39_WEIGHTED_RESIDUAL_COUPLED_ESTIMATE_B02_R3_20261029.md
+[e07]: ../research-progress/handoffs/CTF-E07_WEIGHTED_RESIDUAL_CLOSURE_REQUEST_R1_20261029.md
+
+[n40]: ../notes/40_WEIGHTED_RESIDUAL_CLOSURE_E07_R1_RETURN_20261029.md
+[n41]: ../notes/41_WEIGHTED_CLOSURE_CONTINUATION_20261029.md
+[r22]: ../reviews/22_WEIGHTED_RESIDUAL_CLOSURE_E08_ASSESSMENT_20261029.md
+
+[n42]: ../notes/42_RADIAL_DRIFT_PRODUCTION_IMPROVEMENT_B02_R4_20261029.md
+
+[n43]: ../notes/43_RADIAL_DRIFT_INTEGRATION_SOL_CONTINUATION_20261029.md
+[r23]: ../reviews/23_RADIAL_DRIFT_IMPROVEMENT_E08_INTEGRATION_20261029.md
+[e07r2]: ../research-progress/handoffs/CTF-E07_RADIAL_COMPACT_COEFFICIENT_REQUEST_R2_20261029.md
+
+[n44]: ../notes/44_RADIAL_COMPACT_COEFFICIENT_E07_R2_RETURN_20261029.md
+[n45]: ../notes/45_RADIAL_COMPACT_GAIN_CONTINUATION_20261029.md
+
+[r24]: ../reviews/24_RADIAL_COMPACT_GAIN_E08_ASSESSMENT_20261029.md
+[n46]: ../notes/46_STRICT_COMPACT_GAIN_INTEGRATION_CONTINUATION_20261029.md
+
+[n47]: ../notes/47_EXTERIOR_SOURCE_RESIDUAL_COUPLING_B02_R5_20261029.md
+[n48]: ../notes/48_SOURCE_COUPLING_SOL_CONTINUATION_20261029.md
+[r25]: ../reviews/25_SOURCE_COUPLING_B02_R5_SELF_ASSESSMENT_20261029.md
+[e08r5]: ../research-progress/handoffs/CTF-E08_SOURCE_COUPLING_ASSESSMENT_REQUEST_R5_20261029.md
+
+[n49]: ../notes/49_SOURCE_COUPLING_E08_R5_RESEARCH_RETURN_20261029.md
+[n50]: ../notes/50_SOURCE_COUPLING_INTEGRATION_AND_MODEL_CONTINUATION_20261029.md
+[r26]: ../reviews/26_SOURCE_COUPLING_E08_R5_ASSESSMENT_20261029.md
+[build24]: ../numerics/24_SOURCE_COUPLING_INTEGRATION_BUILD_RECORD_20261029.json
+
+[n51]: ../notes/51_ZERO_RAW_MISMATCH_KERNEL_FREEDOM_B02_R6_20261029.md
+[n52]: ../notes/52_RAW_COMPATIBILITY_SOL_CONTINUATION_20261029.md
+[r27]: ../reviews/27_ZERO_RAW_MISMATCH_B02_R6_SELF_ASSESSMENT_20261029.md
+[e08r6]: ../research-progress/handoffs/CTF-E08_RAW_COMPATIBILITY_ASSESSMENT_REQUEST_R6_20261029.md

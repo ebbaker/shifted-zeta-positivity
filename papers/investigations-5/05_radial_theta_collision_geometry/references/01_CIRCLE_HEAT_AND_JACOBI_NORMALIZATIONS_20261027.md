@@ -23,3 +23,24 @@ The radial-Laplacian reflection Q(r)=r^(-5)Q(1/r), whole-line even source,
 and normalized spatial density are derived in the manuscript, rather
 than attributed to DLMF. This is a new use of the existing source identity;
 no new downloaded reference or whole-chapter audit.
+
+## R5 source-coupling normalization recheck, 29 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra /
+actual effort max, chat0023. Re-read the full Fourier series in
+[DLMF 20.2.3](https://dlmf.nist.gov/20.2.E3) online. This confirms only the
+classical complete integer-square series convention already cataloged.
+[Note47](../notes/47_EXTERIOR_SOURCE_RESIDUAL_COUPLING_B02_R5_20261029.md) imports its density factorization from Note40
+and derives its differentiated-tail and source-slope inequalities
+directly. Those inequalities and the coupled energy estimate are not
+attributed to DLMF. Selected formula only; no whole-chapter audit,
+novelty assertion, new source identity or PDF copy.
+
+## E08 R5 formula recheck, 29 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra /
+actual effort max, chat0024. Rechecked the same [DLMF 20.2.3](https://dlmf.nist.gov/20.2.E3)
+complete integer-square Fourier series while assessing Note47.
+[Review26](../reviews/26_SOURCE_COUPLING_E08_R5_ASSESSMENT_20261029.md) retains the distinction between this
+classical normalization and the directly derived slope/energy bounds.
+No newly examined theorem, chapter-wide audit or PDF acquisition.
