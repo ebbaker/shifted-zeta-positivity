@@ -68,3 +68,5 @@ passages only, not a full audit. Existing PDF provenance is reused.
 records Axler–Bourdon–Ramey, Chapter 4 and Proposition 4.6, with an
 author-hosted PDF archived outside Git, and the DLMF 20.7.32 theta
 modular transformation used in Note20. Selected passages only.
+
+28 October 2026, portfolio comparison, gpt-6-astra / xhigh, prepared for Edward Baker with substantial LLM assistance. [Route assessment](../../reviews/01_PORTFOLIO_ROUTE_ASSESSMENT_20261028.md) rechecks Polymath v2 Theorem1.5 and introduction, Dobner v2 abstract/introduction, and Rodgers–Tao v5 abstract/version record. These limited checks establish comparison scope only; no full proof audit or new PDF. Existing canonical records and archived PDFs remain in place.

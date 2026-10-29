@@ -52,3 +52,7 @@ are reused; the existing external PDF's header, size and hash were
 rechecked. The catalog and bibliography now include this use.
 Prepared for Edward Baker with substantial LLM assistance,
 **gpt-6-astra (Codex), recorded effort xhigh**, chat0015.
+
+- [13 — Classical theta–Mellin attribution](13_RIEMANN_THETA_MELLIN_ATTRIBUTION_20261028.md): Riemann 1859 (Wilkins December 1998 translation, printed p.3) and DLMF25.5.13–14/25.4.4; exact comparison with book (2.1) in Note35. Selected passages only. 28 October 2026; gpt-6-astra / xhigh, chat0016.
+
+- [14 — Newman flow and source perturbations](14_NEWMAN_FLOW_AND_SOURCE_PERTURBATION_REFERENCES_20261028.md): Rodgers–Tao v5 normalization and Newman–Wu v2 source-weighting background for Note38; selected passages only, existing Rodgers–Tao PDF reused and Newman–Wu PDF archived externally. 28 October 2026; gpt-6-astra / max, chat0017.

@@ -23,14 +23,60 @@ result. The latest return is prepared for Edward Baker with substantial
 LLM assistance, gpt-6.1-sol (Codex), actual recorded effort ultra; its
 review is same-model internal.
 
-Start with the [research overview](research-overview/01_COLLISION_BOUNDS_RESEARCH_OVERVIEW_20261026.md),
-the sole [HCB progress register](research-progress/01_COLLISION_BOUNDS_RESEARCH_PROGRESS_20261026.md),
+Start with the [research overview](research-overview/02_POST_CALIBRATION_RESEARCH_OVERVIEW_20261028.md),
+the sole [HCB progress register](research-progress/02_POST_CALIBRATION_RESEARCH_PROGRESS_20261028.md),
 and the [initial note](notes/01_WHOLE_CLUSTER_POISSON_TRANSFER_AND_ACQUISITION_20261026.md).
 The [current summary](summary/CURRENT_SUMMARY.md) is a short navigation aid.
+The [complete chat0003 summary](notes/15_CHAT0003_RESULTS_AND_HANDOFF_20261028.md) collects all results of
+Notes10 and12--14, their error budgets, review status and precise limits.
 
-The lead direction is P: the Poisson density's second moment after its
-known self term is subtracted. J, a joint value/derivative lower bound,
-is the direct benchmark. Whole-cluster data can also feed the existing
+**Round-1 calibration — 28 October 2026:** [Note10](notes/10_DIRECT_ARITHMETIC_JET_CALIBRATION_AND_STOP_20261028.md)
+executes Note09: a complete physical first-jet floor of 1/384 eventually
+on 6<=t log(X/(4pi))<=8, with uninstantiated inherited constants/onsets.
+This is classical exterior calibration; its absolute-sum comparison
+fails near tL=4, and the bounded variant stops. HCB-05 remains open at
+time zero. [Review06](reviews/06_DIRECT_ARITHMETIC_JET_INTERNAL_REVIEW_20261028.md) is separate-agent same-model
+internal review only. Prepared for Edward Baker with substantial LLM
+assistance, gpt-6.1-sol (Codex), actual recorded effort ultra.
+
+**Latest signed return — 28 October 2026:** [Note14](notes/14_SIGNED_LAG_RESONATOR_AND_ACTUAL_REMAINDER_20261028.md)
+retains all signed lags and proves a complete finite-resonator estimate.
+The actual transformed remainder has leading-direction projection >7/6
+at a center in every sufficiently large dyadic interval on tL=2. Thus
+even perfect signed Fejer cannot rescue the declared leading-pair
+triangle. Full completion/source payments also give an auxiliary exact
+full-jet witness floor >17/48, with uninstantiated onset; this is not
+uniform coverage or a finite certificate. [Review09](reviews/09_SIGNED_LAG_RESONATOR_INTERNAL_REVIEW_20261028.md)
+is same-model internal. HCB-05 remains Open; other main blocks/norms and
+full-square estimates remain outside the stop. No source evaluation or
+numerical sweep ran. Prepared for Edward Baker with substantial LLM
+assistance, gpt-6.1-sol, actual effort ultra.
+
+**Round-3 return — 28 October 2026:** [Note13](notes/13_GLOBAL_PHYSICAL_CORRELATION_TEST_AND_SCOPED_STOP_20261028.md)
+tests a global physical-jet correlation estimate retaining signed pairs
+between the former blocks inside each lag. Replacing signed lags by
+absolute allowances still fails: on an unbounded canonical sequence,
+every shift length has allocated remainder radius >=sqrt(17)/4>1.
+The completion and complete-field source errors are paid separately.
+This stops that consumer; signed-lag/full-square estimates and HCB-05
+remain Open. [Review08](reviews/08_GLOBAL_CORRELATION_TEST_INTERNAL_REVIEW_20261028.md) is same-model internal only.
+No source values, numerical research or sweep ran. Prepared for Edward
+Baker with substantial LLM assistance, gpt-6.1-sol, actual effort ultra.
+
+**Round-2 return — 28 October 2026:** [Note12](notes/12_SIGNED_EXPONENT_PAIR_TEST_AND_SCOPED_STOP_20261028.md)
+completes Note11's signed-arithmetic test at tL=2. The inherited five-pair
+maximal-interval bound applies to the full heat weights and derivative,
+but its allocated high-block error outgrows even the exact retained-low
+jet upper bound. Best exponent: **321/9950**, versus low power **1/50**.
+This consumer stops with no new jet floor or exclusion region; HCB-05
+remains Open. [Review07](reviews/07_SIGNED_ARITHMETIC_TEST_INTERNAL_REVIEW_20261028.md) is same-model internal.
+Register02 remains the sole current list; the historical register is
+preserved. Prepared for Edward Baker with substantial LLM assistance,
+gpt-6.1-sol (Codex), actual effort ultra.
+
+P, the Poisson density's self-subtracted second moment, remains the main
+alternative, subject to a specific integrated arithmetic estimate and
+a complete event-scale error budget. Whole-cluster data can also feed the existing
 Rodgers–Tao force comparison. Negative-time V and complete energy E remain
 conditional alternatives; a specified positive Newman-bound improvement
 is a separate quantitative objective.

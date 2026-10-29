@@ -2,6 +2,14 @@
 
 27 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
 
+**Geometry discussion and optional return:** [Note37](37_GEOMETRY_DISCUSSION_AND_RETURN_CONTINUATION_20261028.md) preserves
+chat0016's Mellin attribution, dimension/transform questions, zero-density
+connection and conditions for exploring a different idea. It also points
+to the newer arithmetic handoff in Investigation03. This conceptual
+bookmark leaves the CTF task states below unchanged. 28 October 2026;
+prepared for Edward Baker with substantial LLM assistance, gpt-6-astra /
+xhigh.
+
 Start with [32 — Latest research continuation](32_SOURCE_RELATION_COMMUTATOR_CONTINUATION_20261028.md) and [34 — E05 editorial refocus](34_CTF_E05_MANUSCRIPT_REFOCUS_RETURN_R1_20261028.md). Notes28–29 and31 are retained in current manuscript Sections4–6; [33 — Manuscript integration](33_NOTES28_29_31_MANUSCRIPT_INTEGRATION_20261028.md) records the preceding E04 version. The [current overview](../research-overview/04_CONSERVATIVE_THETA_FLOW_RESEARCH_OVERVIEW_20261028.md) and [sole live progress register](../research-progress/04_CONSERVATIVE_THETA_FLOW_RESEARCH_PROGRESS_20261028.md) govern CTF priorities; the missing coupled signed estimate remains open. Earlier continuation notes preserve their historical contracts.
 
 - [01 — Initial analytical development](01_RADIAL_THETA_GEOMETRY_AND_COLLISION_MECHANISMS_20261027.md): radial/Kelvin source, evolved potential, forced boundary equation, exact transfer and time evolution, Wronskian control, and research choices.
@@ -69,3 +77,11 @@ Start with [32 — Latest research continuation](32_SOURCE_RELATION_COMMUTATOR_C
 - [33 — Notes28–29,31 manuscript integration](33_NOTES28_29_31_MANUSCRIPT_INTEGRATION_20261028.md): CTF-E04 complete; source-to-section map, compilation/layout verification and unchanged research boundary. For Edward Baker with LLM assistance, gpt-6-astra / max, chat0011, 28 October 2026.
 
 - [34 — CTF-E05 manuscript refocus R1](34_CTF_E05_MANUSCRIPT_REFOCUS_RETURN_R1_20261028.md): completed whole-integral-first rewrite of the existing source, section map, dependency repairs, input/output hashes and built-in compiler success; no new mathematical claim. For Edward Baker with LLM assistance, gpt-6.1-sol / ultra, chat0012, 28 October 2026.
+
+- [35 — Classical theta–Mellin attribution](35_CLASSICAL_THETA_MELLIN_ATTRIBUTION_20261028.md): identifies book (2.1) with Riemann’s classical theta formula, checking sign, factors and the convergence strip. Attribution check only; book unchanged. 28 October 2026; prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / xhigh, chat0016.
+
+- [36 — Dimension, transform, and zero density](36_DIMENSION_TRANSFORM_AND_ZERO_DENSITY_COMPARISON_20261028.md): distinguishes the algebraic origin of dimension three, spectral zero counting and multiplicity observables, and the dimension-independent source heat diagnostic. Comparison of existing results; no new collision bound. 28 October 2026; prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / xhigh, chat0016.
+
+- [37 — Geometry discussion and return continuation](37_GEOMETRY_DISCUSSION_AND_RETURN_CONTINUATION_20261028.md): preserves the discussion and a flexible starting point for a different geometric idea, with exact identities, scoped limitations, zero-information questions and the current arithmetic return path. Planning only; gpt-6-astra / xhigh, chat0016, 28 October 2026.
+
+- [38 — Auxiliary source flows and collision response](38_AUXILIARY_SOURCE_FLOWS_AND_COLLISION_RESPONSE_20261028.md): exploratory flow assessment; bounded cosine source tilt with a definite local collision response, exact control, and scoped drift/fourth-derivative checks. No demonstrated sensitivity gain or collision exclusion. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / max, chat0017, 28 October 2026.

@@ -2,8 +2,16 @@
 
 26 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
 
-This is the sole live register for new **HCB** tasks in the
-[overview](../research-overview/01_COLLISION_BOUNDS_RESEARCH_OVERVIEW_20261026.md).
+**Historical register — superseded on 28 October 2026.** The sole current
+register is [Register02](02_POST_CALIBRATION_RESEARCH_PROGRESS_20261028.md), paired with
+[Overview02](../research-overview/02_POST_CALIBRATION_RESEARCH_OVERVIEW_20261028.md). Existing HCB IDs continue
+there. This file preserves the earlier task table and full chronology
+through Note10; do not maintain a second live task list here. Supersession
+prepared for Edward Baker with LLM assistance, gpt-6-astra (Codex),
+recorded effort xhigh.
+
+The founding tasks belonged to the
+[original overview](../research-overview/01_COLLISION_BOUNDS_RESEARCH_OVERVIEW_20261026.md).
 Original HDA, HDC and RT IDs remain with their existing owners.
 Opening setup dispatched no other chat or automated research run. On 26 October 2026, HCB chat0001 began HCB-02 with two read-only research subagents; no automated research run was created.
 
@@ -14,7 +22,7 @@ Opening setup dispatched no other chat or automated research run. On 26 October 
 | HCB-02 | Acquire canonical count, enclosing wall and monic coefficient errors for a frozen microscopic family | **Partial — finite canonical wall/count acquired under RH** | Note06: m=16 endpoint floors, full-wall floor >0.0697 and complete count 1; Note07 conditional uniform interface; actual all-m and F_N coefficient inputs remain open |
 | HCB-03 | Sharpen P transfer/second moment to retain an absolute collision margin; matched J/direct comparison | Open — sharpening target specified | Note03 §5 and Note04 §5: recover double calibration by integrated error; specified binomial fallback cannot accept n≥6 at large height with retained allowance |
 | HCB-04 | Favorable canonical P bound with high-height and bounded-core coverage | Aspirational | Complete bound below \(2/3\); no instance acquired here |
-| HCB-05 | Joint first-jet J lower bound beating \(X^{-3/4}\) | Open benchmark | Complete oscillatory sum; \(\beta<3/4\) |
+| HCB-05 | Joint first-jet J lower bound beating \(X^{-3/4}\) | **Open at time zero; bounded exterior calibration complete** | [Note10](../notes/10_DIRECT_ARITHMETIC_JET_CALIBRATION_AND_STOP_20261028.md): eventual exact physical-jet floor 1/384 on 6<=tL<=8; complete errors paid, inherited onset uninstantiated; absolute-sum variant stops near tL=4, no new coverage |
 | HCB-06 | New-scale whole-cluster force/data comparison for RT | Open dependency | Coordinate with RT-05; retain full model exterior and corrected boundaries |
 | HCB-07 | Quantify V's negative-time/regulator requirements | Deferred until consumer demand is explicit | Fixed-core limit, multiplicities and signed cutoffs |
 | HCB-08 | Select and complete a specified positive Newman-bound improvement | Unselected | Document baseline and all initial/exterior/barrier requirements |
@@ -168,3 +176,48 @@ finite replay instructions and remaining tasks. [Current input identities](../no
 record provenance and comparisons, not mathematical validation. The same
 unique history is refreshed; its actual final text is captured only after
 the authorized bounded exact-turn follow-up sees the completed reply.
+
+
+## HCB-05 continuation prepared — 28 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra
+(Codex), recorded effort xhigh**. [Note09](../notes/09_CONTINUATION_FOR_DIRECT_ARITHMETIC_JET_TEST_20261028.md)
+specifies the next bounded arithmetic comparison on 4≤t log(X/(4π))≤8,
+using the complete retained model and physical first derivative. Acceptance
+requires a quantitative gain, an explicitly classical calibration with
+its extension obstacle, or a scoped failed estimate. The classical
+positive-time exterior is the comparison baseline. This is preparation,
+not execution or acquisition; HCB-05 remains Open. P remains the main
+alternative and HCB-02 remains Partial. No source values, new chat,
+automation or independent review were produced. The originating chat
+retains its unique Investigation05/chat0016 history registration.
+
+## HCB-05 direct arithmetic bounded return — 28 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol
+(Codex), actual recorded effort ultra**, new unique HCB chat0003. Two
+read-only analyses and a third separate same-model review checked this
+return; no independent specialist validation is claimed.
+
+[Note10](../notes/10_DIRECT_ARITHMETIC_JET_CALIBRATION_AND_STOP_20261028.md) executes Note09. The ordinary
+phase-insensitive Euclidean majorant loses the paired ellipse's derivative
+scale. An invertible weighted norm restores an exact leading radius and
+pays all n>=2 arms, the RS completion and the separate CS6 value/derivative
+errors. It proves an eventual exact physical-jet floor **1/384** on
+|u|<=1, **6<=tL<=8**, with finite uninstantiated inherited constants/onsets.
+This is classical exterior calibration: no new coverage, evaluated onset,
+matched earlier-margin improvement or complete-cost gain is established.
+
+At tL=4 a fixed finite block of the absolute weights already exceeds one.
+This precisely stops that triangle budget even with zero approximation
+error; it is not an actual cancellation or a no-go for correlated J
+methods. Note09's stopping rule is applied. HCB-05 remains Open at time
+zero; HCB-02 remains Partial, and its finite acquisition and unpaid
+uniform gate are unchanged. No new P task, source evaluation, numerical
+sweep, manuscript milestone or snapshot was created.
+
+[Review06](../reviews/06_DIRECT_ARITHMETIC_JET_INTERNAL_REVIEW_20261028.md) records the corrections and scope;
+[current input identities](../notes/DIRECT_JET_INPUTS_20261028.json) record
+provenance rather than proof validation. The bounded variant is complete;
+new work needs a genuinely correlated arithmetic payment or a separately
+specified integrated P quantity with a below-one-event budget.

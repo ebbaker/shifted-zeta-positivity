@@ -114,6 +114,17 @@ LLM assistance: **gpt-6-astra (Codex)**, reasoning effort **ultra**.
   negative-time, physical-transfer or RH conclusion. [Assessment02](../papers/investigations-5/01_heat_density_asymptotics/ansatz/reviews/02_CALIBRATION_AND_REAL_BRIDGE_ASSESSMENT_20261025.md).
   Prepared for Edward Baker with LLM assistance, gpt-6.1-sol, effort ultra.
 
+- **Signed arithmetic remainder diagnostic (Investigation5/03, 28 October).**
+  [Note14](../papers/investigations-5/03_heat_flow_collision_bounds/notes/14_SIGNED_LAG_RESONATOR_AND_ACTUAL_REMAINDER_20261028.md)
+  proves at tL=2 that every sufficiently large dyadic interval contains a
+  center with actual transformed remainder projection >7/6. A fixed
+  finite resonator retains all lag signs and defeats the declared uniform
+  leading-pair triangle in that norm; the fully paid auxiliary exact-jet
+  floor >17/48 is existential only. **Proved in-note; separate-agent
+  same-model internal review**, [Review09](../papers/investigations-5/03_heat_flow_collision_bounds/reviews/09_SIGNED_LAG_RESONATOR_INTERNAL_REVIEW_20261028.md).
+  No evaluated onset, finite certificate, uniform exclusion or RH result.
+  Prepared for Edward Baker with LLM assistance, gpt-6.1-sol, actual effort ultra.
+
 ## Status
 
 Reductions: proved (Polymath imports named). Counter-kernels: proved.

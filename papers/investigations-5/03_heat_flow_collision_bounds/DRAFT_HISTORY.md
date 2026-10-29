@@ -21,3 +21,12 @@ No manuscript snapshot was created; the detailed failure and successful post-sto
 | Date | Investigation | Version pointer | Why it matters | Supporting material |
 | --- | --- | --- | --- | --- |
 | 2026-10-26 | HCB-02 conditional uniform interface and handoff | [Note07](notes/07_HIGH_ORDER_ENDPOINT_PROBES_AND_UNIFORM_COUNT_GATE_20261026.md), [complete chat handoff](notes/08_CHAT0001_RESULTS_AND_HANDOFF_20261026.md); working tree, no commit/tag | Pays high-order detector resolution/source error, conditional endpoint exponent and variable-population count leakage; actual uniform arithmetic gate remains open | [Review05](reviews/05_UNIFORM_PROBE_AND_COUNT_INTERNAL_REVIEW_20261026.md), sole progress register |
+
+28 October 2026 research record, prepared for Edward Baker with substantial
+LLM assistance, gpt-6.1-sol (Codex), actual effort ultra:
+
+| Date | Investigation | Version pointer | Why it matters | Supporting material |
+| --- | --- | --- | --- | --- |
+| 2026-10-28 | HCB-05 fully signed arithmetic diagnostic | [Note14](notes/14_SIGNED_LAG_RESONATOR_AND_ACTUAL_REMAINDER_20261028.md); working tree, no commit/tag | Replaces allocated-budget failures by an actual remainder obstruction to the declared leading-pair triangle; auxiliary full-jet witnesses remain existential | [Review09](reviews/09_SIGNED_LAG_RESONATOR_INTERNAL_REVIEW_20261028.md), current Register02, Notes12–13 |
+
+No manuscript snapshot or manuscript milestone was created.

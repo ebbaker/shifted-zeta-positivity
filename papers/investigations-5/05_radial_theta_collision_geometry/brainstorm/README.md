@@ -4,7 +4,26 @@
 
 Ideas and exploratory constructions for this investigation. Their individual notes distinguish proposals from established results.
 
-**Next conceptual continuation:** [The rescaled theta generator and flow choices](09_GENERATING_THETA_AND_FLOW_CONTINUATION_20261028.md). Start at zero time with the smooth Euclidean potential and logarithmic cylinder formulas; compare exact observation preservation with recovery up to a known nonvanishing factor. The [rescaling brainstorm](08_ZERO_TIME_RESCALINGS_AND_FLOW_BRAINSTORM_20261028.md) includes the exact linear unified-flow benchmark. The [earlier handoff](07_NATURAL_AUXILIARY_EVOLUTION_CONTINUATION_20261028.md) retains the original design requirements. Manuscript edits remain pending in [book changes note01](../book/changes/01_GENERATING_FUNCTIONS_AND_KERNEL_CHANGE_WORKING_NOTE_20261028.md). Prepared for Edward Baker with LLM assistance, gpt-6-astra / xhigh, 28 October 2026, chat0014.
+**For a different geometric idea after the Mellin discussion:**
+[Note37](../notes/37_GEOMETRY_DISCUSSION_AND_RETURN_CONTINUATION_20261028.md) preserves the conceptual starting point and
+the parallel arithmetic return path. It does not select a new flow or
+supersede the existing flow-led contract below. 28 October 2026, prepared
+for Edward Baker with substantial LLM assistance, gpt-6-astra / xhigh,
+chat0016.
+
+**Current continuation:** [The book state and flow-led choices](10_BOOK_STATE_AND_FLOW_FIRST_CONTINUATION_20261028.md).
+Keep the completed book draft as it stands, with the original H,V,G
+presentation and its separate normalized three-dimensional section.
+Compare the actual Euclidean and cylinder flow equations before choosing
+the geometry or invariant. Exact observation preservation versus a known
+nonvanishing multiplier remains open. Preserve substantial alternatives
+in new numbered notes. Prepared for Edward Baker with LLM assistance,
+gpt-6-astra / xhigh, 28 October 2026, chat0015.
+
+The [earlier handoff09](09_GENERATING_THETA_AND_FLOW_CONTINUATION_20261028.md)
+and [rescaling derivations08](08_ZERO_TIME_RESCALINGS_AND_FLOW_BRAINSTORM_20261028.md)
+remain the mathematical background. Handoff09's hold on manuscript edits
+predates the implemented rewrite; continuation10 records the current state.
 
 - [Deformations preserving the radial integrand and localizing a collision](01_RADIAL_INTEGRAND_PRESERVING_DEFORMATIONS_AND_COLLISION_LOCALIZATION_20261027.md): Edward Baker’s proposal and clarifications, with the radial integrand as the sole invariant; Laplacian-generated angular perturbations, transport and concentration; connection to the existing deformation program and collision controls. Chat0007.
 
@@ -23,3 +42,9 @@ The [active research proposal](../research-proposal/03_RADIAL_DEFORMATION_AND_ZE
 - [Rescalings of the theta generator at zero time](08_ZERO_TIME_RESCALINGS_AND_FLOW_BRAINSTORM_20261028.md): smooth harmonic subtraction, the square-root rescaling, three-dimensional cylinder and Mellin alternatives; exact Gaussian effect of auxiliary heat and the scoped linear unified-flow reduction. Prepared for Edward Baker with LLM assistance, gpt-6-astra / xhigh, 28 October 2026, chat0014.
 
 - [Continuation from the rescaled theta generator](09_GENERATING_THETA_AND_FLOW_CONTINUATION_20261028.md): clean formulas, convergence and geometry tradeoffs, and the next flow-design decisions. Chat0014.
+
+
+- [Book state and flow-led continuation](10_BOOK_STATE_AND_FLOW_FIRST_CONTINUATION_20261028.md):
+  settled presentation, preserved alternatives, open geometry/invariant
+  choices, exact flow benchmarks, and a bounded comparison of Euclidean
+  potential heat with cylinder generator heat. Chat0015.

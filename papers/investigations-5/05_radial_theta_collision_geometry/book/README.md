@@ -40,3 +40,10 @@ and build records [18](../numerics/18_BOOK_TRANSFORM_SETUP_BUILD_RECORD_20261028
 and [19](../numerics/19_BOOK_LAPLACIAN_MOTIVATION_BUILD_RECORD_20261028.json).
 The separate conservative-flow manuscript remains in the investigation
 root. No manuscript snapshot folder was created.
+
+
+The [current continuation](../brainstorm/10_BOOK_STATE_AND_FLOW_FIRST_CONTINUATION_20261028.md)
+records the decision to retain this draft and let the actual flow equations
+guide later choices of geometry, field, and preservation requirement.
+New alternatives should be developed in separate numbered notes.
+28 October 2026; gpt-6-astra / xhigh, chat0015.

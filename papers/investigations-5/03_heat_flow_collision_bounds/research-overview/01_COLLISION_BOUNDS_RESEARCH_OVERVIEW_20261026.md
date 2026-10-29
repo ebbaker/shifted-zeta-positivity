@@ -2,6 +2,12 @@
 
 26 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
 
+**Historical overview — superseded for future work on 28 October 2026.**
+Use [Overview02](02_POST_CALIBRATION_RESEARCH_OVERVIEW_20261028.md) and its paired current register. This file
+retains the founding plan and dated returns; their statements are not
+withdrawn. Supersession prepared for Edward Baker with LLM assistance,
+gpt-6-astra (Codex), recorded effort xhigh.
+
 ## Objective and classification
 
 Turn complete canonical field approximations into estimates that distinguish

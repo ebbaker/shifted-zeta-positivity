@@ -2,6 +2,15 @@
 
 27 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
 
+**Optional return to the geometry discussion, 28 October 2026:**
+[Continuation37](notes/37_GEOMETRY_DISCUSSION_AND_RETURN_CONTINUATION_20261028.md) records this chat's classical Mellin
+attribution, the role and limits of dimension three, and the connection
+to spectral zero-density tools. It leaves room for a different idea and
+links the current arithmetic handoff. This is a discussion bookmark;
+the existing CTF program and task states remain unchanged. Prepared for
+Edward Baker with substantial LLM assistance, gpt-6-astra / xhigh,
+chat0016.
+
 [CURRENT_RESEARCH_PROGRAM.md](CURRENT_RESEARCH_PROGRAM.md) routes work to **conservative theta flows and collision amplification**. The entire H(t,a) is invariant; its radial integrand may change and no spatial direction is prescribed.
 
 **Current manuscript, 28 October 2026:** [Conservative Theta Flows and Collision Amplification](radial_deformations_and_zero_dynamics.tex) now moves directly from purpose and canonical source to conservation as Section3. Feedback, carrier comparison and source residual occupy Sections4–6; Section7 retains the remaining signed estimate. [The E05 R1 editorial return](notes/34_CTF_E05_MANUSCRIPT_REFOCUS_RETURN_R1_20261028.md) records hashes, dependency checks and successful built-in compilation. No separate build or visual inspection was performed for this refocus; the E04 layout check remains historical in Note33/Review19/record17. No new theta exclusion or threshold bound. Prepared for Edward Baker with LLM assistance, gpt-6.1-sol / ultra, chat0012.
