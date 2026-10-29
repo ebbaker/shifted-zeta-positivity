@@ -3,6 +3,8 @@
 28 October 2026. Drafted for Edward Baker with substantial LLM assistance,
 **gpt-6-astra (Codex), recorded effort xhigh**, chat0015.
 
+**Research routing, 29 October 2026:** the renewed conservative-flow estimate work belongs to [Overview05](../research-overview/05_CONSERVATIVE_THETA_FLOW_ESTIMATES_RESEARCH_OVERVIEW_20261029.md) and the sole current [Progress05](../research-progress/05_CONSERVATIVE_THETA_FLOW_ESTIMATES_RESEARCH_PROGRESS_20261029.md). The main research text is [Conservative Theta Flows and Collision Amplification](../radial_deformations_and_zero_dynamics.tex); this book remains a background companion. [Note35](../notes/35_CLASSICAL_THETA_MELLIN_ATTRIBUTION_20261028.md) identifies its scalar Mellin formula as classical. The separate E06 task permits a bounded attribution/navigation cleanup; the book source has not been rewritten in this planning update. Prepared for Edward Baker with LLM assistance, gpt-6-astra / max, Investigation06 chat0004.
+
 The [current book draft](main.tex) follows the restored
 [rewrite plan](changes/02_REWRITE_20261028.md). Section 1 starts with xi
 and the de Bruijn-Newman deformation, then derives the smooth theta
@@ -42,7 +44,7 @@ The separate conservative-flow manuscript remains in the investigation
 root. No manuscript snapshot folder was created.
 
 
-The [current continuation](../brainstorm/10_BOOK_STATE_AND_FLOW_FIRST_CONTINUATION_20261028.md)
+The [28 October continuation](../brainstorm/10_BOOK_STATE_AND_FLOW_FIRST_CONTINUATION_20261028.md)
 records the decision to retain this draft and let the actual flow equations
 guide later choices of geometry, field, and preservation requirement.
 New alternatives should be developed in separate numbered notes.

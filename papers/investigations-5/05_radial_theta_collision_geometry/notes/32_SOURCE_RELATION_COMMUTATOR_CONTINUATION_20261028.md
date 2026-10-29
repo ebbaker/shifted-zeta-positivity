@@ -2,7 +2,9 @@
 
 28 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**, Investigation05 chat0010, **Continue radial theta collision**.
 
-**Current state:** [Note31][n31] completes the second bounded CTF-B02 route. It proves an explicit nonzero preparation residual for the actual theta source, derives its full forced evolution, and identifies the sphere cancellation and origin-domain issue a valid estimate must retain. The fixed zero-residual variant is stopped. **B02 remains partial; no new theta exclusion or threshold bound was obtained.** [Progress04][progress] is the sole live register.
+**Routing update, 29 October 2026:** [Overview05](../research-overview/05_CONSERVATIVE_THETA_FLOW_ESTIMATES_RESEARCH_OVERVIEW_20261029.md) resumes this mathematical contract as CTF-B02 R3 and separates manuscript cleanup into E06. [Progress05](../research-progress/05_CONSERVATIVE_THETA_FLOW_ESTIMATES_RESEARCH_PROGRESS_20261029.md) is now the sole current register; Progress04 is historical. The equations, scoped failure, and earlier return below are retained. Prepared for Edward Baker with LLM assistance, gpt-6-astra / max, Investigation06 chat0004.
+
+**Current state:** [Note31][n31] completes the second bounded CTF-B02 route. It proves an explicit nonzero preparation residual for the actual theta source, derives its full forced evolution, and identifies the sphere cancellation and origin-domain issue a valid estimate must retain. The fixed zero-residual variant is stopped. **B02 remains partial; no new theta exclusion or threshold bound was obtained.** [Progress04][progress] held live status at that return; use Progress05 above for current status.
 
 | Next task | Type | Recommended model and reason | Status and bounded output |
 | --- | --- | --- | --- |

@@ -2,7 +2,7 @@
 
 Updated 28 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6.1-sol (Codex), recorded effort ultra**.
 
-The canonical current annotations are in the [forty-reference literature survey](../lit_survey/01_AUXILIARY_COLLISION_FLOWS_ANNOTATED_LITERATURE_SURVEY_20261028.md). It expands the initial two-source collection with thirty-eight additional references and new selected-passage inspections. Earlier inherited inspections from [Investigation05 Reference14](../../05_radial_theta_collision_geometry/references/14_NEWMAN_FLOW_AND_SOURCE_PERTURBATION_REFERENCES_20261028.md) remain preserved as provenance in the catalog.
+The canonical current annotations are in the [forty-reference literature survey](../lit-survey/01_AUXILIARY_COLLISION_FLOWS_ANNOTATED_LITERATURE_SURVEY_20261028.md). It expands the initial two-source collection with thirty-eight additional references and new selected-passage inspections. Earlier inherited inspections from [Investigation05 Reference14](../../05_radial_theta_collision_geometry/references/14_NEWMAN_FLOW_AND_SOURCE_PERTURBATION_REFERENCES_20261028.md) remain preserved as provenance in the catalog.
 
 | Survey entries | Subject | Reading scope |
 | --- | --- | --- |
@@ -14,3 +14,14 @@ The canonical current annotations are in the [forty-reference literature survey]
 Use the [BibTeX bibliography](sources.bib), [machine-readable catalog](sources.json) and [reading-copy manifest](lit_survey_pdf_manifest_20261028.json). The original citation keys `RodgersTao2020` and `NewmanWu2019` are retained; the latter now includes its 2020 journal publication metadata. Cardon's corrected **arXiv:1401.0237v3, 20 October 2026**, is the inspected version; the published 2015 text has errors and withdrawn conjectures described in ZP11.
 
 Third-party PDFs are outside Git in `/Users/Shared/szp-archive/auxiliary-collision-flows/references/`; each successful receipt records source URL, version, bytes and SHA-256. Unavailable/linked-only records state the limitation. Files identify reading copies, not verified mathematics. Public links remain authoritative reader entry points. Follow [REFERENCE_WORKFLOW.md](../../../../REFERENCE_WORKFLOW.md) and [LARGE_FILES.md](../../../../LARGE_FILES.md).
+
+## R2 primary reference addition
+
+29 October 2026, prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra / max**. Catalog entry `DLMF20_PairHeat` records the checked
+[DLMF theta Fourier series](https://dlmf.nist.gov/20.2.E3) and
+[modular transform](https://dlmf.nist.gov/20.7.E32), including the branch
+convention. They justify the periodic Gaussian kernel used in
+[Note04](../notes/04_SIGNED_SQUARE_MODE_DAMPING_AND_ENDPOINT_CORRECTION_20261029.md).
+This linked online reference is an addition after the forty-reference
+survey; no PDF or new survey entry is created.
