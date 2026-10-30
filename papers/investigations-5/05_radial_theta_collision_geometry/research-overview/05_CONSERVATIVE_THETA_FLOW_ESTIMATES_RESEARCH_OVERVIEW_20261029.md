@@ -12,6 +12,38 @@ R13 proof: **gpt-6-astra / ultra**, chat0033. Current R13 assessment:
 **gpt-6.1-sol / actual effort ultra**, existing chat0034.
 Each conversation retains its own registration.
 
+**Current manuscript milestone: CTF-E05 R6 complete.** 29 October 2026,
+for Edward Baker with substantial LLM assistance, **gpt-6-astra / actual
+effort ultra**, existing chat0038. [Return103](../notes/103_ANALYTICAL_MANUSCRIPT_INTEGRATION_R6_20261029.md),
+[Review52](../reviews/52_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_R6_20261029.md) and [record42](../numerics/42_ANALYTICAL_MANUSCRIPT_INTEGRATION_BUILD_RECORD_R6_20261029.json) bind the in-place
+integration of complete R13 transfer/scalar reduction, R14 entropy/topology,
+R15 actual H1 attraction and the scoped R16 mass-free closure test. The
+analytical proofs are primary. Final native compilation succeeds; all 24
+inherited proofs and the companion remain. No fresh page inspection or
+standalone PDF. R13–R15 are accepted; R16's E08 is still pending.
+**Default next: [E] CTF-E08 R16 — Sol.** [Note104](../notes/104_NEXT_ASTRA_HANDOFF_AFTER_ANALYTICAL_INTEGRATION_20261029.md) provides the
+requested next **[B] CTF-B02 — Astra** signed-feedback decision after its
+disposition, with one independently paid source input and one consumer.
+No mass premise is removed and no new request revision is issued here.
+The [result index][results], [control screen][controls] and [avoid index][avoid]
+remain governing references; Progress05 alone owns live status.
+
+**R16 research return — scoped failed mass-free closure; E08 ready.**
+29 October 2026, for Edward Baker with substantial LLM assistance,
+**gpt-6-astra / ultra**, new chat0038. [Note101](../notes/101_MASS_FREE_FEEDBACK_DEFECT_AND_SLOPE_CLOSURE_TEST_R16_20261029.md)
+proves a denominator-safe feedback identity and pointwise envelope. Its
+selected norm-only bootstrap gives F(L)>L for every finite positive L;
+a genuine weighted-square event shares the preparation-slope seed.
+No physical-mass premise is removed from the accepted R10–R15 chain.
+[Review51](../reviews/51_MASS_FREE_FEEDBACK_CLOSURE_INTERNAL_REVIEW_R16_20261029.md)
+is same-model internal checking; [Progress05][progress] owns live status.
+**Default next: [E] CTF-E08 R16 — Sol**, the [fixed packet](../research-progress/handoffs/CTF-E08_MASS_FREE_FEEDBACK_CLOSURE_ASSESSMENT_R16_20261029.md),
+under [Continuation102](../notes/102_MASS_DEPENDENCY_DECISION_AND_MODEL_CONTINUATION_R16_20261029.md).
+R15 remains accepted and E07 is unready. The R16 research return left the
+manuscripts unchanged; E05 R6 now integrates the results as recorded above.
+The [result index][results], [control screen][controls] and [avoid index][avoid]
+retain the target/scope/circularity distinctions stated in Note101.
+
 The primitive production comparison is accepted without mathematical
 correction by the completed E08 R11 assessment.
 [Note75](../notes/75_PRIMITIVE_TEST_COSTS_AND_SIGNED_COMPARISON_R11_20261029.md) pays all actual transported-test derivatives and
@@ -116,15 +148,16 @@ and parent synthesis retain shared premises; no specialist/formal review.
 Note98/Review49 and the issued packet remain unchanged; their pending
 status is historical. The R14 entropy obstruction remains accepted.
 
-**Default next: [B] CTF-B02 physical-mass dependency decision — Astra**,
+**Historical next after R15: [B] CTF-B02 physical-mass dependency decision — Astra**,
 under the author-requested [Note100](../notes/100_NEXT_ASTRA_HANDOFF_AFTER_RADIAL_ATTRACTION_20261029.md)
 and [assessment continuation](../notes/CTF_E08_R15_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md).
 Its accepted-R15 branch now applies: identify one mass-dependent estimate,
 an independent replacement input and one consumer; original-alpha control
-is the suggested first dependency. No route has been selected or started.
+was the suggested first dependency. R16 now returns the bounded test above.
 Do not feed R15 backward through its global-alpha/defect/energy premises.
 [Progress05][progress] owns live status. No R15 E07 convergence execution
-remains. Parent B02 is partial; E03/B03 gated; E05 needs separate scope.
+remains. Parent B02 is partial and E03/B03 gated. The separately scoped
+E05 R6 manuscript integration is now complete.
 Both R5 manuscripts and chat0035's original identity are preserved.
 
 ## Established analytical starting point
@@ -315,7 +348,9 @@ names finite quantities whose acquisition changes the conclusion.
 | **CTF-E08 R13** | E — Sol, ten fixed checks | Complete; accepted without mathematical correction in Review46, existing chat0034; internal shared-premise assessment |
 | **CTF-B02 R14 / CTF-E08 R14** | B — Astra / E — Sol | Scoped universal-entropy obstruction accepted in Review48; actual-path attraction not excluded |
 | **CTF-B02 R15 / CTF-E08 R15** | B — Astra / E — Sol | Actual H1 attraction and both feedback limits accepted without correction in Review50, Sol/ultra chat0037, with physical mass retained |
-| **CTF-B02 physical-mass dependency decision** | B — Astra, replacement estimate and consumer remain conceptual | Default next under Note100; ready for one bounded decision, not started; no noncircular replacement selected |
+| **CTF-B02 R16 physical-mass dependency decision** | B — Astra, one bounded replacement test | Complete in-note: mass-free pointwise envelope, specified norm-only closure fails; E08 pending, no prior mass premise removed |
+| **CTF-E08 R16** | E — Sol, seven fixed checks | Ready; [packet](../research-progress/handoffs/CTF-E08_MASS_FREE_FEEDBACK_CLOSURE_ASSESSMENT_R16_20261029.md), [Continuation102](../notes/102_MASS_DEPENDENCY_DECISION_AND_MODEL_CONTINUATION_R16_20261029.md) |
+| **CTF-E05 R6** | E — Sol; author-selected Astra/ultra chat0038 | Complete: [Return103](../notes/103_ANALYTICAL_MANUSCRIPT_INTEGRATION_R6_20261029.md), native compile/source checks; E08 R16 pending, [next-Astra handoff104](../notes/104_NEXT_ASTRA_HANDOFF_AFTER_ANALYTICAL_INTEGRATION_20261029.md) |
 | **CTF-E03** | E — Sol, finite acquisition | Gated on an estimate that consumes specified finite data; no simulation by default |
 | **CTF-B03** | B — Astra, physical-parameter coverage | Gated on an assessed applicable gain; time, height, multiplicity and endpoint coverage remain separate |
 

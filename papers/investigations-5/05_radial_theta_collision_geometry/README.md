@@ -2,7 +2,20 @@
 
 27 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
 
-**Current, 29 October 2026: CTF-E08 R13 complete — accepted without
+**Current, 29 October 2026: CTF-E05 R6 complete.** For Edward Baker with
+substantial LLM assistance, **gpt-6-astra / actual effort ultra**, chat0038.
+The [main manuscript](radial_deformations_and_zero_dynamics.tex) now develops
+complete balance transfer, scalar feedback/Gibbs selection, the scoped
+entropy obstruction, actual H1 attraction and both feedback limits, and
+the mass-free closure test. [Return103](notes/103_ANALYTICAL_MANUSCRIPT_INTEGRATION_R6_20261029.md), [Review52](reviews/52_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_R6_20261029.md)
+and [record42](numerics/42_ANALYTICAL_MANUSCRIPT_INTEGRATION_BUILD_RECORD_R6_20261029.json) record final native compilation and source
+checks; no fresh visual review or separate PDF. Physical mass is retained.
+R13–R15 are accepted; R16 remains pending fixed assessment.
+**Default next: [E] CTF-E08 R16 — Sol.** [Note104](notes/104_NEXT_ASTRA_HANDOFF_AFTER_ANALYTICAL_INTEGRATION_20261029.md) gives the
+requested subsequent Astra handoff. [Progress05](research-progress/05_CONSERVATIVE_THETA_FLOW_ESTIMATES_RESEARCH_PROGRESS_20261029.md)
+owns status. Earlier dated routing below is historical.
+
+**Historical assessment, 29 October 2026: CTF-E08 R13 complete — accepted without
 mathematical correction.** [Review46](reviews/46_COMPLETE_CARRIER_REDUCTION_E08_R13_ASSESSMENT_20261029.md) and [Return92](notes/92_COMPLETE_CARRIER_R13_E08_RESEARCH_RETURN_20261029.md) assess the complete finite production/dissipation differences, feedback
 defect, weak scalar forcing, scalar-energy limit and unique stationary
 candidate. The physical margin remains; no profile/coefficient attraction,

@@ -101,3 +101,27 @@ mass-independent estimate must pay its own original-feedback and defect
 costs; substituting n=0 into E0/n is outside the accepted hypotheses.
 This is a preventive dependency warning, not a reported retraction or a
 universal obstruction to replacement estimates.
+
+**A protected denominator does not pay its numerator, 29 October 2026.**
+For Edward Baker with substantial LLM assistance, **gpt-6-astra / ultra**,
+chat0038. [R16 Note101](../papers/investigations-5/05_radial_theta_collision_geometry/notes/101_MASS_FREE_FEEDBACK_DEFECT_AND_SLOPE_CLOSURE_TEST_R16_20261029.md)
+proves a mass-free original-feedback identity, but states: “It removes
+no physical-mass premise from R10's global estimate, R12 synchronization,
+R13 defect decay or R15 attraction.” Its complete unsigned-error envelope
+and local bootstrap budgets give F(L)>L, so they do not close the assumed
+alpha ceiling. Reusing R12 decay there would import that ceiling upstream.
+The failure is limited to this norm-only closure; full-source signed
+estimates are not excluded. [Review51](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/51_MASS_FREE_FEEDBACK_CLOSURE_INTERNAL_REVIEW_R16_20261029.md)
+is same-model internal checking; E08 pending.
+
+**Analytical manuscript checkpoint, E05 R6, 29 October 2026.** For Edward
+Baker with substantial LLM assistance, **gpt-6-astra / ultra**, chat0038.
+[Return103](../papers/investigations-5/05_radial_theta_collision_geometry/notes/103_ANALYTICAL_MANUSCRIPT_INTEGRATION_R6_20261029.md)
+retains the precise lesson: “The denominator replacement succeeds as
+algebra; the selected norm-only carrier-slope closure fails.” The manuscript
+now derives the actual attraction result before separating this upstream
+mass-dependency test. Integration does not upgrade the pending E08 R16
+assessment or permit the accepted convergence chain to pay its own mass
+premise. [Review52](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/52_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_R6_20261029.md)
+checks that distinction; this is no universal obstruction to a signed
+source-sensitive replacement.

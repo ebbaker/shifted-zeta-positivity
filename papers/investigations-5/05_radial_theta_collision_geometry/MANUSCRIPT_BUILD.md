@@ -1,6 +1,40 @@
 # Working manuscript and compilation status
 
 29 October 2026, America/New_York. Prepared for **Edward Baker** with
+substantial LLM assistance, **gpt-6-astra / actual recorded effort ultra**,
+existing Investigation05 **chat0038**, *Test original-alpha mass estimate*.
+
+**Current: CTF-E05 R6 complete in the existing source.** The manuscript
+now integrates the full R13 balance/scalar reduction, R14 entropy and
+topology estimates, R15 actual-path H1 attraction, and R16's scoped mass-free
+closure test. [Return103](notes/103_ANALYTICAL_MANUSCRIPT_INTEGRATION_R6_20261029.md), [Review52](reviews/52_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_R6_20261029.md) and
+[record42](numerics/42_ANALYTICAL_MANUSCRIPT_INTEGRATION_BUILD_RECORD_R6_20261029.json) bind the exact saved source and final compiler
+response. R13–R15 are accepted; E08 R16 remains pending.
+
+The final source compiled successfully with the built-in desktop editor
+compiler. Source checks confirm 278 unique labels, 39 bibliography keys,
+resolved references/citations and balanced environments. All 24 preexisting
+proof blocks and the companion are preserved. The updated source contains
+37 proof blocks. No new numerical acquisition was performed.
+
+**Layout limitation:** the compiler exposes no detailed log, page count or
+nonfatal-warning list; document-control tools report no connected preview
+session. No fresh visual inspection is claimed. Keep the existing editor
+and built-in compiler workflow. No standalone PDF or alternate tab was
+created. Export/build a separate PDF only if explicitly requested.
+The existing standalone 35-page R4 reading copy is historical and must not
+be presented as output of this R6 source.
+
+[Progress05](research-progress/05_CONSERVATIVE_THETA_FLOW_ESTIMATES_RESEARCH_PROGRESS_20261029.md) owns status.
+**Default next: [E] CTF-E08 R16 — Sol.** The requested next-Astra handoff is
+[Note104](notes/104_NEXT_ASTRA_HANDOFF_AFTER_ANALYTICAL_INTEGRATION_20261029.md), conditional on that assessment's disposition.
+No new research theorem, snapshot, commit or tag. The following blocks are
+historical evidence for their own versions and do not authorize a separate
+build in the current workflow.
+
+# Historical E05 R5 build status at issue
+
+29 October 2026, America/New_York. Prepared for **Edward Baker** with
 substantial LLM assistance, **gpt-6.1-sol / actual recorded effort ultra**,
 existing Investigation05 **chat0034**, *Continue radial theta collision
 research*.

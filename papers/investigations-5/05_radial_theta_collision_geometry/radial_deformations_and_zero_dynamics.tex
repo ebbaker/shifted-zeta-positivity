@@ -26,34 +26,38 @@
 \maketitle
 
 \begin{abstract}
-A conservative evolution can turn simultaneous cancellation of a
-function and its derivative into concentration of a spatial density.
-We develop this construction for the complete theta observation.
-After a fixed Gaussian preparation, a scalar feedback preserves the
-joint $L^2$ energy of the observation density and its actual frequency
-derivative. Zero conserved mass forces finite-time breakdown, with an
-explicit deadline obtained from diffusion contraction and a weighted
-Fourier estimate. Conversely, for radial data, a positive physical
-mass margin gives an explicit uniform bound for the gradient and
-feedback. The proof combines an exact radial drift square, a sharp
-mass--energy--moment inequality, and a sliding-interval argument.
-For theta at $(T,A)=(1/4,2)$, the complete source establishes this margin
-analytically. We then retain its logarithmic source relation through
-preparation and evolution: the resulting nonzero residual and actual
-second frequency derivative satisfy a complete weighted energy estimate.
-At the paid theta mark, the same direct method makes this energy and
-each fixed frequency jet uniform in auxiliary time, with complete
-dissipation bounded on sliding windows. The first three jets also
-synchronize in $H^1$ with conserved-mass multiples of one moving positive
-carrier. Their centered residual has finite total dissipation, and the
-selected signed production differs from its carrier component by a
-finite accumulated correction. The carrier production's sign remains unproved.
-Gaussian preparation also pays the derivatives and sphere traces in
-the theta primitive's propagated tests. No additional signed advantage is established by the exact
-joint reconstruction. These results strengthen quantitative regularity
-on an already separated domain;
-the residual estimate supplies no new theta collision exclusion or
-de Bruijn--Newman bound.
+We study a conservative spatial evolution of the complete theta
+observation and its actual frequency derivative. A scalar feedback
+preserves their joint $L^2$ energy, while conservation of their two
+integrals gives a precise dichotomy: simultaneous physical cancellation
+forces finite-time concentration, whereas a supplied positive vector-mass
+margin yields an explicit uniform gradient and feedback bound. The
+complete theta source pays that margin analytically at $(T,A)=(1/4,2)$.
+Its logarithmic source relation survives preparation and evolution with
+a genuine residual, whose weighted energy and each fixed frequency jet
+are then controlled uniformly in auxiliary time.
+
+The first three jets synchronize in $H^1$ with mass multiples of the
+same moving positive carrier. We extend this comparison to the full
+production and dissipation balance, paying finite absolute correction
+tails without assuming finite original-field dissipation. The actual
+carrier has an integrable feedback defect, a limiting scalar energy,
+and a unique Gibbs candidate at that energy. A universal fixed-candidate
+entropy sign nevertheless fails arbitrarily close to equilibrium in
+$H^1$ at exact mass and energy. The actual theta carrier converges by a
+different argument: the complete source pays an initial radial-slope
+interval, linear commutation propagates it, and the exact feedback
+defect contracts its width. Gaussian normalization and a separate
+gradient estimate yield $H^1$ convergence and the limits of both scalar
+and original feedback.
+
+All these global conclusions retain the upstream physical-mass premise.
+A final protected-denominator comparison avoids an explicit inverse
+mass, but its specified norm-only bootstrap cannot close an alpha
+ceiling. The results provide a coherent quantitative description at an
+already separated mark; they give no new theta collision exclusion or
+de Bruijn--Newman bound. The main arguments are analytical, with
+inherited numerical controls used only as supporting evidence.
 \end{abstract}
 
 \section{Introduction}
@@ -76,46 +80,49 @@ alternative: zero mass produces finite-time concentration, whereas a
 positive mass margin controls the evolution for all auxiliary time.
 The conserved observation is unchanged in either construction.
 
-The main analytical statements are Theorem~\ref{thm:feedbackdeadline},
-which gives the collision deadline and its converse, and
-Theorem~\ref{thm:uniformfeedback}, which bounds the radial feedback
-uniformly from a supplied physical margin. The latter uses only
-positive-carrier and diffusion estimates. Proposition~\ref{prop:thetamargin}
-supplies the needed margin at one theta mark without quadrature.
-These direct bounds set the comparison for source-based refinements.
+The development has four stages. First,
+Theorem~\ref{thm:feedbackdeadline} proves the finite collision deadline
+and its converse. Theorem~\ref{thm:uniformfeedback} then converts a
+positive physical mass margin into uniform radial feedback by an exact
+radial square, a mass--energy--moment inequality and a sliding-interval
+argument. Proposition~\ref{prop:thetamargin} supplies that margin at one
+theta mark without quadrature. These direct bounds set the comparison
+for every later source-based estimate.
 
-The remaining development asks what extra information the complete
-source relation contributes. Gaussian preparation creates a genuine
-commutator residual, and its evolution has second-order spatial
-forcing. Theorem~\ref{thm:weightedclosure} closes a coupled energy for
-the gradient, weighted residual and actual second frequency derivative.
-The complete source improves its signed production, but the general
-finite-horizon bound still applies to admitted colliding controls with
-their true residuals. At the already separated theta mark,
-Theorem~\ref{thm:uniformresidual} uses the supplied uniform feedback
-to bound the entire energy, each fixed jet, and complete dissipation
-on sliding windows. No further physical margin is acquired.
-Proposition~\ref{prop:kernelfreedom} also shows why the raw relation
-alone cannot replace the literal cosine observation.
+Second, we retain the complete logarithmic source relation through
+Gaussian preparation and the common feedback path. Its nonzero
+commutator residual has second-order spatial forcing.
+Theorem~\ref{thm:weightedclosure} closes its coupled energy, and
+Theorem~\ref{thm:uniformresidual} makes the full residual and each fixed
+jet uniform at the paid mark. The primitive-duality calculation in
+Section~\ref{sec:primitiveduality} pays all transported test derivatives
+and sphere traces. Exact reconstruction gives no additional signed
+advantage by itself. The literal cosine remains an essential physical
+input; raw source compatibility alone leaves the kernel freedom in
+Proposition~\ref{prop:kernelfreedom}.
 
-The source also has an undifferentiated theta primitive. Its radial
-Laplacian representation permits integration by parts before taking
-absolute bounds. Section~\ref{sec:primitiveduality} carries this identity
-through the same preparation and feedback propagator, then identifies
-the signed residual-production term to which it can be applied. The
-actual test derivatives and both sphere traces are paid by unit
-preparation. The joint expression reconstructs the same prepared source
-available to the direct method; a primitive-specific signed advantage
-remains to be proved.
+Third, Theorem~\ref{thm:commoncarrier} synchronizes the first three jets
+with conserved-mass multiples of one moving carrier. Section~\ref{sec:fullcarriertransfer}
+compares the full exact production and dissipation, rather than a single
+selected term. Section~\ref{sec:scalarcarrier} identifies the actual
+feedback defect and the unique Gibbs density at the limiting scalar
+energy. An entropy principle is not automatic:
+Section~\ref{sec:entropyobstruction} constructs smooth positive radial
+states of the exact candidate mass and energy with positive entropy
+production, arbitrarily close in $H^1$. This state-class obstruction
+does not assert nonconvergence of the actual theta orbit.
 
-Section~\ref{sec:commoncarrier} then uses the same bounded feedback path
-to synchronize $J_0,J_1,J_2$ with mass multiples of the moving carrier.
-Theorem~\ref{thm:commoncarrier} pays the whole-time $H^1$ errors;
-Propositions~\ref{prop:centereddissipation} and
-\ref{prop:finiteproductioncorrection} give finite centered dissipation
-and an integrable correction in the selected signed term. These direct
-results do not establish a stationary carrier, finite original-field
-dissipation, or a sign for the remaining carrier production.
+Finally, Theorem~\ref{r15:attraction} proves that actual convergence by
+radial logarithmic-slope squeezing. The source and fixed preparation
+pay the seed; bounded linear commutation pays the global interval;
+the exact defect pays contraction; normalization and a separate gradient
+identity pay $H^1$ convergence and the original-alpha limit. The
+physical-mass dependency is retained throughout. Section~\ref{sec:massdependency}
+then tests one proposed removal of that dependency. Its denominator-safe
+identity is valid even at zero physical mass, but the completed
+norm-only allowance exceeds every proposed bootstrap ceiling. This
+last conclusion excludes that specified closure, not all possible
+signed estimates from the full source.
 
 We distinguish physical time $t$, physical frequency $a$, and auxiliary
 time $s\ge0$. A spectral derivative varies $a$ while the feedback mark
@@ -1821,7 +1828,7 @@ Sliding-window dissipation is not pointwise or finite total dissipation.
 At an admitted double event the positive mass premise supplying $K$
 fails; the earlier control admission does not import this theorem there.
 No larger physical region, bounded total $B$, convergence or
-primitive-specific signed benefit follows.
+primitive-specific signed benefit follows from this estimate alone.
 
 \section{The theta primitive in evolving pairings}
 \label{sec:primitiveduality}
@@ -2174,7 +2181,8 @@ scalar diffusion and radial remainder:
 \end{align*}
 The same scalar barriers bound $\|h\|_2^2$ by $M^2\mathcal D(K)$ and
 $\|\nabla h\|_2^2$ by $M^2\mathcal D(K)\max\{3/4,r_{\rm u}\}$.
-Neither carrier norm is asserted constant or convergent.
+These bounds alone assert neither constancy nor convergence of the carrier norms.
+The later scalar reduction and slope argument determine their asymptotic behavior.
 
 \subsection{The genuine centered residual and its dissipation}
 
@@ -2371,8 +2379,9 @@ against every possible direct allowance. The surviving term is
 It retains the moving carrier, complete source and actual feedback path.
 Neither its sign nor a finite $\int\alpha|I_c|$ is proved.
 Finite centered dissipation is not finite original-field dissipation;
-a finite correction in $I_1$ is not a full-production error theorem or
-a smaller complete actual-energy allowance.
+a finite correction in $I_1$ alone is not a full-production error theorem.
+Section~\ref{sec:fullcarriertransfer} pays that complete comparison; it
+still gives no favorable sign or smaller complete actual-energy allowance.
 
 Controls with the admitted moments and globally bounded common path
 share the generic mixing argument. At an actual double event the
@@ -2382,69 +2391,1817 @@ force its conserved positive energy to zero. This reads the known
 zero-mass obstruction, rather than a new collision exclusion.
 Weighted-square sources can pass the low-mark payment and collide
 elsewhere; variable observation kernels fail the upstream literal-cosine
-payment. No stationary profile, alpha limit, mass-only reduction,
-margin-free regularity or larger physical domain follows.
+payment. These synchronization estimates alone do not give a stationary profile
+or alpha limit. Those limits are proved in Section~\ref{sec:carrierattraction}
+under the same physical-mass premise; no margin-free regularity or larger
+physical domain follows.
 
-\section{Outstanding tasks}\label{sec:remaining}
+\section{Transfer of the complete production and dissipation}
+\label{sec:fullcarriertransfer}
 
-The conserved pair now has a clear analytical dichotomy.
-Zero mass forces breakdown before an explicit upper deadline;
-a supplied positive mass margin yields uniform radial feedback.
-The latter conclusion is achieved by direct estimates and does
-not require the source residual. A source-based continuation must
-therefore specify an advantage beyond this comparison.
+The selected-term estimate in Section~\ref{sec:commoncarrier} extends
+to the entire signed balance, including the second spatial derivatives
+in $\mathscr C_0$. We give the complete argument from
+\cite{FullCarrierNote}. Throughout this section the physical mark is
+$(T,A)=(1/4,2)$, the original path satisfies
+$a_*\le\alpha\le\bar\alpha=2K/3$, and every source, preparation,
+residual and jet is unchanged. In particular, the physical vector-mass
+payment used to obtain $K$ remains an input.
 
-The primitive test costs are paid, and
-Section~\ref{sec:commoncarrier} now also proves relative $H^1$ decay
-toward the moving carrier, complete finite centered dissipation and an
-integrable selected-term correction. The remaining carrier expression
-\eqref{eq:survivingcarrierproduction} still needs a useful sign or
-complete-cost estimate. A proposed refinement must state its benefit
-before estimating another term and compare against the equally informed
-direct method, which already proves the present decay and correction.
-Primitive positivity and exact transfer alone do not supply that benefit.
+\subsection{Three exact balances and their domains}
 
-The central open task is to obtain useful control from the unchanged
-complete theta source at physical marks where a nonzero first jet
-has not already been established. An estimate that assumes a positive
-mass margin cannot serve that purpose. Any proposed improvement should
-state its domain, the quantity it bounds, the source information it
-consumes, and why an equally informed direct method does not already
-give the same result.
+Use the genuine residual decomposition
+\eqref{eq:commoncarrierresidual}, and put
+\[
+ W_c=\mathfrak ah,\qquad J_c=\mathfrak a_2h,\qquad
+ \mathsf X_a=(W,Z_{\mathrm R},J_2),\quad
+ \mathsf X_c=(W_c,Z_c,J_c),\quad
+ \mathsf X_e=(e,Z_e,e_2).
+\]
+Thus $\mathsf X_a=\mathsf X_c+\mathsf X_e$. For a radial spatial triple
+$\mathsf X=(w,z,j)$, with $w,z$ two-component fields and $j$ scalar,
+define
+\begin{align}
+ E(\mathsf X)&=\|w\|_2^2,&G(\mathsf X)&=\|\nabla w\|_2^2,&
+ N(\mathsf X)&=\|\Delta w\|_2^2,\nonumber\\
+ Y(\mathsf X)&=\|z\|_2^2,&Q_2(\mathsf X)&=\|j\|_2^2,&
+ F(\mathsf X)&=G(\mathsf X)+Y(\mathsf X)+Q_2(\mathsf X).
+ \label{r13:triplenorms}
+\end{align}
+In particular $F(\mathsf X_a)=\mathcal F_{\mathrm R}$ and
+$F(\mathsf X_e)=\mathcal F_e$. All norms and integrals are over
+$\R^3$. With $l=\log\omega$, $h_\omega=d-2v\cdot\nabla l$ and
+$\nu=21/4$, set
+\begin{align}
+ \mathcal D^{\rm ex}_s(\mathsf X)
+  ={}&2N(\mathsf X)+2\|\nabla z\|_2^2+2\|\nabla j\|_2^2
+                   +\alpha(s)\mathscr H_{\rm rad}(w),
+ \label{r13:exactdissipation}\\
+ \mathcal P_s(\mathsf X)
+  ={}&2\int|\nabla l|^2|z|^2
+          +2\langle z,\omega\mathscr C_0w\rangle\nonumber\\
+ &+\alpha(s)\left\{10G(\mathsf X)+\nu E(\mathsf X)
+       +\int h_\omega|z|^2+\int d|j|^2
+                 +2\langle z,\omega\mathscr C_1w\rangle\right\}.
+ \label{r13:exactproduction}
+\end{align}
+The superscript ``ex'' records the two units of $N$ before absorption.
+The retained dissipation in \eqref{eq:weightedclosure} and
+\eqref{eq:centeredfullproduction} has only one unit.
 
-Theorem~\ref{thm:uniformresidual} gives uniform weighted residual and
-every fixed-order jet control at $(1/4,2)$; the new synchronization theorem
-adds decay for exactly the three specified centered jets. Uniformity in
-order or physical parameters, a stationary carrier limit, an alpha limit,
-finite total dissipation of the original fields and a better complete
-actual-energy allowance remain unresolved. The finite centered
-and selected-term tails do not settle those questions. Since
-$B(s)\ge a_*s$, bounded cumulative compression is unavailable in this
-positive-margin regime. Future signed arguments must retain the carrier
-cost rather than assume a finite total $B$.
+For each of the three actual-path triples separately,
+\begin{equation}\label{r13:threebalances}
+ \frac{\dd}{\dd s}F(\mathsf X(s))
+       +\mathcal D^{\rm ex}_s(\mathsf X(s))
+       =\mathcal P_s(\mathsf X(s)).
+\end{equation}
+Indeed $w$ and $j$ solve the same linear equation with the actual
+$\alpha$, while the weighted residual satisfies
+\eqref{eq:weightedconjugation} with $W$ replaced by $w$.
+The spatial radial identity gives
+$G'+2N+\alpha\mathscr H_{\rm rad}(w)=\alpha(10G+\nu E)$.
+Multiplying the weighted residual equation by $2z$ gives
+\[
+ Y'=-2\|\nabla z\|_2^2+2\int|\nabla l|^2|z|^2
+    +\alpha\int h_\omega|z|^2
+    +2\langle z,\omega(\mathscr C_0+\alpha\mathscr C_1)w\rangle.
+\]
+The remaining equation gives
+$Q_2'=-2\|\nabla j\|_2^2+\alpha\int d|j|^2$.
+Adding proves \eqref{r13:threebalances}. Here $E(\mathsf X_c)$ and
+$E(\mathsf X_e)$ are their instantaneous energies: neither is replaced
+by $E_0$ or assumed constant. No derivative of $\alpha$ appears.
 
-The exact comparisons specify the required premises. The
-Gaussian-polynomial control shares the generic evolution and weighted
-closure; the polynomial-kernel comparison shares the complete
-amplitude and raw compatibility but lacks the full cosine identity.
-Neither comparison rules out a genuinely stronger use of the
-canonical trajectory. Every future estimate must retain the actual
-frequency derivatives, multiplication before preparation, the genuine
-residual, the full commutator, the combined unit-sphere cancellation,
-and the whole evolving inner ball.
+The residuals in these identities retain exactly
+\eqref{eq:centeredpreparationmismatch}--\eqref{eq:centeredprimitiveboundary}.
+Their own relation vectors cancel their own residuals at the unit
+sphere. These are whole-space identities with the evolved inner ball;
+no sphere boundary condition or zero preparation mismatch is imposed.
+Smooth weighted decay on compact time intervals justifies the initial
+integrations. The estimates below require time-integrated second
+spatial derivatives, rather than a uniform pointwise $H^2$ bound.
+
+\subsection{Window budgets and a summation lemma}
+
+Retain $C_E=\Lambda_0+\Lambda_1$ and
+$C_{\rm en}=\Gamma_0+\Gamma_1+C_Z^2+\Lambda_2$ from
+Proposition~\ref{prop:centereddissipation}. Define
+\begin{align}
+ \varrho(s)&=e^{-B(s)/4},&
+ C_*&=\kappa_0+\kappa_1\bar\alpha,\nonumber\\
+ Q_A&=\mathcal F_*+C_*(\mathcal F_*+E_0),&
+ U_A&=\mathcal F_*+E_0,\nonumber\\
+ \Lambda_{\rm diss}
+  &=C_{\rm en}+2(C_{\rm en}+C_E)(\kappa_0/a_*+\kappa_1).
+ &&\label{r13:transferbudgets}
+\end{align}
+Theorem~\ref{thm:uniformresidual} and
+Proposition~\ref{prop:centereddissipation} give, for every $t\ge0$,
+\begin{align}
+ F(\mathsf X_a)&\le\mathcal F_*,&E(\mathsf X_a)&=E_0,
+ \nonumber\\
+ F(\mathsf X_e)&\le C_{\rm en}\varrho^2,&
+ E(\mathsf X_e)&\le C_E\varrho^2,
+ \label{r13:pointwisebudgets}\\
+ \int_t^{t+1}\!\left[N(W)+2\|\nabla Z_{\mathrm R}\|_2^2
+        +2\|\nabla J_2\|_2^2+\alpha\mathscr H_{\rm rad}(W)\right]\dd s
+ &\le Q_A,\nonumber\\
+ \int_t^\infty\!\left[N(e)+2\|\nabla Z_e\|_2^2
+        +2\|\nabla e_2\|_2^2+\alpha\mathscr H_{\rm rad}(e)\right]\dd s
+ &\le\Lambda_{\rm diss}\varrho(t)^2.
+ \label{r13:retainedbudgets}
+\end{align}
+In these two integrals $N(W)=\|\Delta W\|_2^2$ and
+$N(e)=\|\Delta e\|_2^2$. Set
+\begin{equation}\label{r13:augmentednorm}
+ \mathscr V(\mathsf X)=N(\mathsf X)+E(\mathsf X)+F(\mathsf X),
+ \quad V_A=Q_A+U_A,\quad
+ V_e=\Lambda_{\rm diss}+\frac2{a_*}(C_{\rm en}+C_E).
+\end{equation}
+Since $B(s)-B(t)\ge a_*(s-t)$, integration of the low-order error
+budgets yields
+\begin{equation}\label{r13:augmentedbudgets}
+ \int_t^{t+1}\mathscr V(\mathsf X_a)\dd s\le V_A,
+ \qquad
+ \int_t^\infty\mathscr V(\mathsf X_e)\dd s
+                         \le V_e\varrho(t)^2.
+\end{equation}
+The first bound is a uniform unit-window bound; it does not assert a
+finite actual half-line integral.
+
+\begin{lemma}[Shifted unit-window comparison]\label{r13:windowlemma}
+Suppose nonnegative locally integrable functions $A_e,E_e$ satisfy
+\[
+ \int_t^{t+1}A_e\dd s\le A_*,\qquad
+ \int_t^\infty E_e\dd s\le E_*\varrho(t)^2
+ \quad(t\ge0).
+\]
+Then, with $S_{\rm win}=(1-e^{-a_*/4})^{-1}$,
+\begin{equation}\label{r13:windowlemmaestimate}
+ \int_t^\infty\sqrt{A_eE_e}\dd s
+        \le S_{\rm win}\sqrt{A_*E_*}\varrho(t).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Cauchy--Schwarz on $[t+k,t+k+1]$ bounds its integral by
+$\sqrt{A_*E_*}\varrho(t+k)$. Since
+$\varrho(t+k)\le\varrho(t)e^{-a_*k/4}$, the sum over integers
+$k\ge0$ is the geometric series in \eqref{r13:windowlemmaestimate}.
+The initial window is included. No actual half-line integrability or
+optimized window length is required.
+\end{proof}
+
+\subsection{Full quadratic transfer}
+
+Define the following complete production constant:
+\begin{equation}\label{r13:productionconstant}
+ \begin{split}
+ C_P=\max\big\{&A_2,\quad A_1+\bar\alpha B_1+10\bar\alpha,
+       \quad A_0+\bar\alpha B_0+\nu\bar\alpha,\\
+ &8+A_2+A_1+A_0+\bar\alpha(265/24+B_1+B_0),
+       \quad6\bar\alpha\big\}.
+ \end{split}
+\end{equation}
+The coefficients are precisely the complete cutoff coefficients in
+\eqref{eq:weightedcoefficients}. No new source acquisition is used.
+
+\begin{theorem}[Complete production and dissipation transfer]
+\label{r13:fulltransfer}
+Let
+\[
+ \delta P=\mathcal P_s(\mathsf X_a)-\mathcal P_s(\mathsf X_c),\quad
+ \delta D=\mathcal D^{\rm ex}_s(\mathsf X_a)
+                         -\mathcal D^{\rm ex}_s(\mathsf X_c),\quad
+ \delta F=F(\mathsf X_a)-F(\mathsf X_c).
+\]
+For every $t\ge0$,
+\begin{align}
+ \int_t^\infty|\delta P|\dd s
+ &\le2C_PS_{\rm win}\sqrt{V_AV_e}\varrho(t)+C_PV_e\varrho(t)^2,
+ \label{r13:productiontail}\\
+ \int_t^\infty|\delta D|\dd s
+ &\le4S_{\rm win}\sqrt{Q_A\Lambda_{\rm diss}}\varrho(t)
+                         +2\Lambda_{\rm diss}\varrho(t)^2,
+ \label{r13:dissipationtail}\\
+ |\delta F(t)|
+ &\le2\sqrt{\mathcal F_*C_{\rm en}}\varrho(t)
+                          +C_{\rm en}\varrho(t)^2.
+ \label{r13:energydifferencetail}
+\end{align}
+Moreover,
+\begin{equation}\label{r13:fieldenergydifference}
+ |E_0-E(\mathsf X_c(t))|
+       \le2\sqrt{E_0C_E}\varrho(t)+C_E\varrho(t)^2,
+\end{equation}
+and the complete limiting balance is
+\begin{equation}\label{r13:limitingbalance}
+ \int_t^\infty(\delta P-\delta D)\dd s=-\delta F(t).
+\end{equation}
+The correction functions are absolutely integrable. No finite
+half-line integral of either individual production or dissipation is
+asserted by this comparison.
+\end{theorem}
+\begin{proof}
+Freeze the actual value $\alpha(s)$ at a given time. For an arbitrary
+radial spatial triple $\mathsf X=(w,z,j)$ with $w\in H^2(\R^3)$ and
+$z,j\in L^2(\R^3)$, the coefficient bounds give
+\begin{align*}
+ \|\omega\mathscr C_0w\|_2
+   &\le A_2\sqrt{N(\mathsf X)}+A_1\sqrt{G(\mathsf X)}
+                                      +A_0\sqrt{E(\mathsf X)},\\
+ \|\omega\mathscr C_1w\|_2
+   &\le B_1\sqrt{G(\mathsf X)}+B_0\sqrt{E(\mathsf X)}.
+\end{align*}
+Here $\|D^2w\|_2^2=\|\Delta w\|_2^2$ follows by whole-space
+integration by parts, or componentwise Fourier transformation. In
+\eqref{r13:exactproduction}, use
+$2|\nabla l|^2\le8$, $h_\omega\le265/24$, $d\le6$ and
+$2\sqrt{xy}\le x+y$. The coefficients of $N,G,E,Y,Q_2$ are,
+respectively, the five entries in \eqref{r13:productionconstant}.
+Consequently
+\begin{equation}\label{r13:diagonalformbound}
+ |\mathcal P_s(\mathsf X)|\le C_P\mathscr V(\mathsf X).
+\end{equation}
+This is a bound on arbitrary spatial triples, not merely on solutions
+or triples satisfying a canonical residual relation. It absorbs no
+diffusion. The spatial domain, including the second derivatives in
+$\mathscr C_0$, is essential for the next polarization.
+
+Let $p_s$ be the symmetric real bilinear polarization of
+$\mathcal P_s$. Since $\mathscr V$ is a squared Hilbert norm,
+\eqref{r13:diagonalformbound} applied to $\mathsf X\pm\mathsf Y$ gives
+\[
+ |p_s(\mathsf X,\mathsf Y)|
+ \le\tfrac12C_P[\mathscr V(\mathsf X)+\mathscr V(\mathsf Y)].
+\]
+Replace $\mathsf X,\mathsf Y$ by
+$\lambda\mathsf X,\lambda^{-1}\mathsf Y$ and minimize over
+$\lambda>0$. This proves
+\[
+ |p_s(\mathsf X,\mathsf Y)|
+       \le C_P\sqrt{\mathscr V(\mathsf X)\mathscr V(\mathsf Y)}.
+\]
+The coefficient $\alpha(s)$ stays frozen under this rescaling. As
+$\mathsf X_c=\mathsf X_a-\mathsf X_e$,
+\[
+ \delta P=2p_s(\mathsf X_a,\mathsf X_e)-\mathcal P_s(\mathsf X_e),
+ \quad
+ |\delta P|\le2C_P\sqrt{\mathscr V(\mathsf X_a)\mathscr V(\mathsf X_e)}
+                                  +C_P\mathscr V(\mathsf X_e).
+\]
+Equations \eqref{r13:augmentedbudgets} and
+\eqref{r13:windowlemmaestimate} prove \eqref{r13:productiontail}.
+
+The exact dissipation also has a full quadratic representation. With
+$q=|X|^2$, the radial square is
+\begin{align}
+ \mathscr H_{\rm rad}(w)
+ &=\int g_v(q)|X\cdot\nabla w+\tfrac32w|^2
+                      +\int p_v(q)|w|^2,\nonumber\\
+ g_v(q)&=\frac{11+5q}{(1+q)^2},\qquad
+ p_v(q)=\frac{q(203+59q+69q^2+21q^3)}{4(1+q)^4}\ge0.
+ \label{r13:radialfeatures}
+\end{align}
+Thus $\mathcal D^{\rm ex}_s(\mathsf X)$ is the squared norm of
+\[
+ \left(\sqrt2\Delta w,\sqrt2\nabla z,\sqrt2\nabla j,
+ \sqrt\alpha\sqrt{g_v}(X\cdot\nabla w+\tfrac32w),
+ \sqrt\alpha\sqrt{p_v}w\right).
+\]
+This representation is used where $w\in H^2$ and $z,j\in H^1$;
+the bounded weighted coefficients make the radial features finite.
+The smooth actual triples satisfy these conditions on finite intervals,
+and \eqref{r13:retainedbudgets} pays their time integrals. The same
+actual $\alpha$ occurs in all three feature vectors. There is no
+$\alpha'$ term and no independently postulated carrier $H^2$ bound.
+
+The nonnegativity of each feature implies that exact dissipation is
+at most twice the retained integrand in
+\eqref{r13:retainedbudgets}. Therefore
+\[
+ \int_t^{t+1}\mathcal D^{\rm ex}_s(\mathsf X_a)\dd s\le2Q_A,
+ \qquad
+ \int_t^\infty\mathcal D^{\rm ex}_s(\mathsf X_e)\dd s
+                              \le2\Lambda_{\rm diss}\varrho(t)^2.
+\]
+Polarization gives
+\[
+ |\delta D|\le2\sqrt{\mathcal D^{\rm ex}_s(\mathsf X_a)
+                         \mathcal D^{\rm ex}_s(\mathsf X_e)}
+                             +\mathcal D^{\rm ex}_s(\mathsf X_e).
+\]
+The window lemma gives \eqref{r13:dissipationtail}, including its
+factor $4$. Carrier finite-window second-derivative control also follows
+from $\mathsf X_c=\mathsf X_a-\mathsf X_e$ and these bounds.
+
+Polarizing the squared norms $F$ and $E$ similarly, using
+\eqref{r13:pointwisebudgets}, proves
+\eqref{r13:energydifferencetail}--\eqref{r13:fieldenergydifference}.
+Subtract \eqref{r13:threebalances} for actual and carrier triples:
+$\delta F'+\delta D=\delta P$. Integrate from $t$ to $S$ and let
+$S\to\infty$. The two absolute correction tails are finite and
+$\delta F(S)\to0$, giving \eqref{r13:limitingbalance} with the stated
+minus sign. Differences are formed at finite time before integration;
+no subtraction of separately divergent total integrals occurs.
+\end{proof}
+
+The theorem controls the complete error, rather than adding a second
+payment for the already isolated $I_1$. It gives finite total variation
+of $\delta F$, but no sign for the surviving carrier production and no
+convergence of the complete weighted energy from this argument alone.
+The equally informed direct method has the same input budgets and
+obtains the same transfer. The physical mass, complete source, genuine
+residual, preparation mismatch, sphere cancellation and inner ball remain.
+
+\section{Feedback defect, scalar energy, and the Gibbs candidate}
+\label{sec:scalarcarrier}
+
+The preceding comparison uses the same actual path for every field.
+We now quantify how its original vector feedback differs from the
+scalar quotient of the actual carrier, following \cite{CarrierDefectNote}.
+This gives a forced scalar identity and an energy-selected candidate.
+The later attraction theorem, Theorem~\ref{r15:attraction}, supplies the
+additional profile argument; existence of a unique candidate alone is
+not used as attraction.
+
+\subsection{A protected denominator and the full defect}
+
+For clarity write $G_W=G=\|\nabla W\|_2^2$ and
+$D_W=D=\int d|W|^2$ for the original vector quantities. Define
+\begin{equation}\label{r13:scalarquantities}
+ E_h=\|h\|_2^2,\quad G_h=\|\nabla h\|_2^2,\quad
+ D_h=\int dh^2,\quad \beta=\frac{2G_h}{D_h},\quad
+ n=|\mathfrak a|^2=\frac{\mu^2}{M^2},\quad n_*=(70/73)^2.
+\end{equation}
+The physical mass payment gives $n_*\le n\le1$; the upper bound
+uses $|\int W|\le M$. Carrier domination gives the further payment
+\begin{equation}\label{r13:protecteddenominator}
+ D_h\ge3E_h\ge3E_0>0,\qquad nD_h\ge3n_*E_0.
+\end{equation}
+There is no division by an individual signed jet mass. Put
+\begin{equation}\label{r13:errorandscalarconstants}
+ \Lambda_\Sigma=\Lambda_0+\Lambda_1,
+ \quad\Gamma_\Sigma=\Gamma_0+\Gamma_1,
+ \quad\mathcal H(K)=\mathcal D(K)\max\{3/4,r_{\rm u}\}.
+\end{equation}
+The preceding synchronization and scalar barriers give
+\[
+ \|e\|_2^2\le\Lambda_\Sigma e^{-B/2},\quad
+ \|\nabla e\|_2^2\le\Gamma_\Sigma e^{-B/2},\quad
+ E_h\le\overline E:=M^2\mathcal D(K),\quad
+ G_h\le\overline G:=M^2\mathcal H(K).
+\]
+In particular the scalar upper budgets have already been paid on this
+same path.
+
+\begin{theorem}[Actual feedback defect and its tails]\label{r13:defect}
+Set
+\begin{align}
+ d_1&=\frac{4\sqrt{KE_0\Gamma_\Sigma}
+                  +12\bar\alpha\sqrt{E_0\Lambda_\Sigma}}{3n_*E_0},
+ &d_2&=\frac{2\Gamma_\Sigma+6\bar\alpha\Lambda_\Sigma}{3n_*E_0},
+ \label{r13:defectconstants}\\
+ A_\delta(t)&=4d_1e^{-B(t)/4}+2d_2e^{-B(t)/2}.
+ &&\label{r13:defecttailconstant}
+\end{align}
+For all $s,t\ge0$,
+\begin{align}
+ |\alpha(s)-\beta(s)|
+   &\le d_1e^{-B(s)/4}+d_2e^{-B(s)/2},
+ \label{r13:defectbound}\\
+ \int_t^\infty\alpha|\alpha-\beta|\dd s
+   &\le A_\delta(t),&
+ \int_t^\infty|\alpha-\beta|\dd s
+   &\le A_\delta(t)/a_*.
+ \label{r13:defecttails}
+\end{align}
+Moreover,
+\begin{equation}\label{r13:betabounds}
+ a_*\le\beta(s)\le\frac{2M^2\mathcal H(K)}{3E_0}.
+\end{equation}
+If $B_h(t)=\int_0^t\beta(s)\dd s$, then $B-B_h$ has a finite limit
+$c_\infty$, with
+\begin{equation}\label{r13:compressionoffset}
+ |c_\infty-[B(t)-B_h(t)]|\le A_\delta(t)/a_*.
+\end{equation}
+\end{theorem}
+\begin{proof}
+The exact identities obtained from $\mathfrak ah=W-e$ are
+\begin{align}
+ \Delta G&:=G_W-nG_h
+       =2\langle\nabla W,\nabla e\rangle-\|\nabla e\|_2^2,
+ \nonumber\\
+ \Delta D&:=D_W-nD_h
+       =2\langle dW,e\rangle-\int d|e|^2.
+ \label{r13:exactdifferences}
+\end{align}
+In particular both error squares have minus signs. Using
+$\alpha D_W=2G_W$ and $\beta D_h=2G_h$ gives
+\begin{equation}\label{r13:exactdefect}
+ \alpha-\beta=\frac{2\Delta G-\alpha\Delta D}{nD_h}.
+\end{equation}
+The numerator contains the original coefficient $\alpha$.
+Whole-space Cauchy--Schwarz and $d\le6$ give
+\begin{align*}
+ |\Delta G|&\le2\sqrt{KE_0\Gamma_\Sigma}e^{-B/4}
+                                  +\Gamma_\Sigma e^{-B/2},\\
+ |\Delta D|&\le12\sqrt{E_0\Lambda_\Sigma}e^{-B/4}
+                                  +6\Lambda_\Sigma e^{-B/2}.
+\end{align*}
+Insert these estimates and \eqref{r13:protecteddenominator} into
+\eqref{r13:exactdefect}; this proves
+\eqref{r13:defectbound} with exactly \eqref{r13:defectconstants}.
+All bounds include the initial interval. Integrating in
+$\dd B=\alpha\dd s$ gives the factors $4,2$ in $A_\delta$;
+ordinary time integration costs at most $a_*^{-1}$.
+
+The already proved Nash inequality gives
+$G_h\ge c_NE_h^{5/3}M^{-4/3}$. Thus $D_h\le6E_h$ and $E_h\ge E_0$
+imply
+\[
+ \beta\ge(c_N/3)(E_h/M^2)^{2/3}
+       \ge\tfrac15(6\pi^2E_0/M^2)^{2/3}=a_*.
+\]
+Its upper bound is immediate from $G_h\le M^2\mathcal H(K)$ and
+$D_h\ge3E_0$. The unweighted absolute defect tail proves that
+$B-B_h$ converges and gives \eqref{r13:compressionoffset}.
+Both $B$ and $B_h$ still grow at least linearly. A finite limiting
+difference of their integrals, by itself, would not establish limits
+of the instantaneous coefficients.
+\end{proof}
+
+\subsection{The actual weak forcing and scalar energy}
+
+The full prepared moment $R_0$ in \eqref{eq:carriermoment} includes
+$6M$. Since $R_h=\int|X|^2h$ obeys
+$R_h'\le6M-2\alpha R_h$, define
+\begin{equation}\label{r13:forcingmoment}
+ \overline R=\max\{R_0,3M/a_*\},\qquad
+ V_1=2\sqrt{M\overline R}.
+\end{equation}
+Then $R_h\le\overline R$ and, as $|v|\le2|X|$,
+$\int|v|h\le V_1$. For a distribution $f$ define the explicit seminorm
+\[
+ \|f\|_{\mathrm{Lip}^*}
+ =\sup\{|\langle f,\varphi\rangle|:
+       \varphi\in C_c^\infty(\R^3),\ \|\nabla\varphi\|_\infty\le1\}.
+\]
+Integration by parts gives
+\[
+ |\langle\operatorname{div}(vh),\varphi\rangle|
+   =\left|\int vh\cdot\nabla\varphi\right|
+       \le V_1\|\nabla\varphi\|_\infty.
+\]
+Thus the spatially unbounded drift has a paid test norm. This calculation
+does not claim an $L^2$ norm of $vh$ or an $H^{-1}$ forcing bound.
+
+For a positive admissible profile define
+\[
+ \mathcal N(h)=\Delta h+\frac{2\|\nabla h\|_2^2}{\int dh^2}
+                                        \operatorname{div}(vh).
+\]
+The actual carrier satisfies the exact identity
+\begin{equation}\label{r13:forcedscalaridentity}
+ \partial_sh=\mathcal N(h)+\mathfrak f_s,\qquad
+ \mathfrak f_s=(\alpha-\beta)\operatorname{div}(vh).
+\end{equation}
+It introduces no separately evolved scalar solution. The preceding
+norm and Theorem~\ref{r13:defect} give
+\begin{align}
+ \|\mathfrak f_s\|_{\mathrm{Lip}^*}
+  &\le V_1(d_1e^{-B(s)/4}+d_2e^{-B(s)/2}),\nonumber\\
+ \int_t^\infty\|\mathfrak f_s\|_{\mathrm{Lip}^*}\dd s
+  &\le V_1A_\delta(t)/a_*,&
+ \int_t^\infty\alpha\|\mathfrak f_s\|_{\mathrm{Lip}^*}\dd s
+  &\le V_1A_\delta(t).
+ \label{r13:forcingtails}
+\end{align}
+
+By the definition of $\beta$,
+$2\langle h,\mathcal N(h)\rangle=-2G_h+\beta D_h=0$.
+Taking the energy identity on the original smooth path therefore gives
+\begin{equation}\label{r13:scalarenergyderivative}
+ E_h'=(\alpha-\beta)D_h,
+ \qquad
+ \int_t^\infty|E_h'|\dd s
+        \le\frac{6M^2\mathcal D(K)}{a_*}A_\delta(t).
+\end{equation}
+The last bound uses $D_h\le6M^2\mathcal D(K)$. Independently, expanding
+$\|W-e\|_2^2=nE_h$ gives
+$E_0-nE_h=2\langle W,e\rangle-\|e\|_2^2$, whence
+\begin{equation}\label{r13:scalarenergylimit}
+ \left|E_h(s)-\frac{E_0}{n}\right|
+ \le\frac{2\sqrt{E_0\Lambda_\Sigma}}{n}e^{-B(s)/4}
+           +\frac{\Lambda_\Sigma}{n}e^{-B(s)/2}.
+\end{equation}
+In particular $E_h\to E_0/n$ with a paid total-variation tail.
+This step is an energy assertion; the profile and gradient convergence
+proved later require the separate argument of
+Theorem~\ref{r15:attraction}.
+
+\subsection{The unique smooth radial stationary candidate}
+
+The potential of the fixed drift is
+\begin{equation}\label{r13:potential}
+ \mathcal V(X)=\frac{|X|^2}{2}+\frac12\log(1+|X|^2),
+ \qquad\nabla\mathcal V=v.
+\end{equation}
+For $\lambda>0$ set
+\begin{equation}\label{r13:gibbsdefinitions}
+ Z(\lambda)=\int_{\R^3}e^{-\lambda\mathcal V(X)}\dd X,
+ \quad q_\lambda(X)=\frac{M e^{-\lambda\mathcal V(X)}}{Z(\lambda)},
+ \quad\mathcal Q(\lambda)=\|q_\lambda\|_2^2
+                         =M^2\frac{Z(2\lambda)}{Z(\lambda)^2}.
+\end{equation}
+The symbol $\mathcal Q$ distinguishes this scalar energy map from the
+canonical radial observation $Q$ and from the second-jet energy $Q_2$.
+The frozen-coefficient Gibbs form is classical \cite{JKO}; its radial
+classification and energy selection are derived here, without importing
+a nonlinear-feedback convergence theorem.
+
+\begin{theorem}[Classification and energy selection]\label{r13:gibbs}
+The nonnegative, nonzero, smooth radial stationary solutions of
+$\partial_sh=\mathcal N(h)$ with mass $M$ and finite $H^1$ norm are
+exactly $q_\lambda$, $\lambda>0$. Each has scalar feedback $\beta=\lambda$.
+The map $\mathcal Q$ is continuously differentiable, strictly increasing
+from zero to infinity, with $\mathcal Q'(\lambda)>0$. Hence there is a
+unique $\lambda_*>0$ satisfying
+\begin{equation}\label{r13:energyselection}
+ \mathcal Q(\lambda_*)=E_0/n.
+\end{equation}
+It obeys the analytical bracket
+\begin{equation}\label{r13:lambdabracket}
+ \pi(E_0/\mu^2)^{2/3}\le\lambda_*
+                    \le8\pi(E_0/\mu^2)^{2/3}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+For $q_\lambda$, the flux vanishes pointwise:
+$\nabla q_\lambda+\lambda vq_\lambda=0$. Its Gaussian decay gives finite
+$H^1$ norm and justifies integration of the stationary equation against
+$q_\lambda$, yielding
+$2\|\nabla q_\lambda\|_2^2=\lambda\int dq_\lambda^2$.
+Thus its own feedback is $\lambda$ and $\mathcal N(q_\lambda)=0$.
+
+Conversely, let $f$ lie in the stated stationary class. Its coefficient
+$\lambda=2\|\nabla f\|_2^2/\int df^2$ is finite and positive: a nonzero
+constant cannot be integrable on $\R^3$. In radial coordinates its
+stationary equation reads
+\[
+ \frac{\dd}{\dd r}\{r^2[f'(r)+\lambda\mathcal V'(r)f(r)]\}=0.
+\]
+Smoothness at the origin makes the constant radial flux zero.
+Consequently $f'+\lambda\mathcal V'f=0$, and the mass normalization
+gives $f=q_\lambda$. This uses exactly the stated smooth radial class;
+it makes no classification claim for arbitrary weak stationary objects.
+
+Write $\mathbb E_\lambda$ for expectation under the normalized density
+$e^{-\lambda\mathcal V}/Z(\lambda)$. Gaussian domination on every compact
+positive $\lambda$ interval justifies differentiation and gives
+\[
+ (\log Z)'=-\mathbb E_\lambda\mathcal V,
+ \qquad
+ \frac{\dd}{\dd\lambda}\mathbb E_\lambda\mathcal V
+                       =-\operatorname{Var}_\lambda(\mathcal V)<0.
+\]
+The variance is strictly positive because $\mathcal V$ is nonconstant
+and its Gibbs density is positive everywhere. Hence
+\begin{equation}\label{r13:gibbsmonotonicity}
+ \frac{\mathcal Q'(\lambda)}{\mathcal Q(\lambda)}
+ =2(\mathbb E_\lambda\mathcal V-\mathbb E_{2\lambda}\mathcal V)
+ =2\int_\lambda^{2\lambda}\operatorname{Var}_u(\mathcal V)\dd u>0.
+\end{equation}
+The same domination proves continuity of this positive derivative.
+Moreover $r^2/2\le\mathcal V(r)\le r^2$, so
+\[
+ (\pi/\lambda)^{3/2}\le Z(\lambda)\le(2\pi/\lambda)^{3/2},
+ \qquad
+ M^2(\lambda/(8\pi))^{3/2}\le\mathcal Q(\lambda)
+                              \le M^2(\lambda/\pi)^{3/2}.
+\]
+These bounds give the limits at zero and infinity. Continuity and strict
+monotonicity yield the unique solution of \eqref{r13:energyselection}.
+Using $n=\mu^2/M^2$ in the same bounds gives
+\eqref{r13:lambdabracket}.
+\end{proof}
+
+The preceding results identify a stationary candidate and the actual
+energy limit without equating them to profile attraction. The
+common-path synchronization compares fields driven by the same
+$\alpha(s)$, whereas $q_{\lambda_*}$ is stationary under the constant
+coefficient $\lambda_*$. In that comparison, the difference
+$\beta(h(s))-\lambda_*$ remains after the paid defect
+$\alpha(s)-\beta(h(s))$ has been removed. Theorem~\ref{r15:attraction}
+resolves this additional issue by its source-paid slope argument; no
+arbitrary-forcing stability result is inferred from
+\eqref{r13:forcingtails}.
+
+Section~\ref{sec:entropyobstruction} examines the fixed-potential entropy
+sign on its specified state class, retaining the conditional finiteness
+and integration-by-parts hypotheses of that calculation. The weak
+forcing norm in \eqref{r13:forcingtails} does not itself pay a stronger
+entropy or stability estimate.
+
+All conclusions here retain $n\ge n_*>0$ and the upstream mass-paid
+bound $K$. An admitted double event has $n=0$ and loses those premises;
+substituting $n=0$ into $E_0/n$ is outside the argument. The direct
+comparator has the identical complete source and path information and
+obtains every displayed estimate. No new physical frequency domain,
+primitive-specific advantage or mass-independent collision exclusion
+is asserted.
+
+\section{Fixed-candidate entropy and its obstruction}
+\label{sec:entropyobstruction}
+
+The scalar energy and the unique Gibbs candidate do not by themselves
+supply an entropy dissipation principle. We now pay the entropy chain
+rule and the actual forcing costs, and then show that the remaining
+scalar-feedback production has no universal favorable sign on the
+smooth radial mass--energy class. This result concerns a proposed
+functional on a class of states. The actual carrier's convergence will
+instead follow from its radial slope in
+Section~\ref{sec:carrierattraction}; the obstruction below does not
+contradict Theorem~\ref{r15:attraction} \cite{EntropyObstructionNote}.
+
+\subsection{Production along the actual path}
+
+Keep the potential $\mathcal V=(r^2+\log(1+r^2))/2$, the drift
+$v=\nabla\mathcal V$ and $d=\operatorname{div}v$. Thus
+$3\le d\le6$, $|v|\le2r$ and $0\le\mathcal V\le r^2$.
+For fixed $\lambda>0$, write
+\[
+ q_\lambda=\frac{M}{Z(\lambda)}e^{-\lambda\mathcal V},
+ \qquad \mathcal F_\lambda(f)=\int_{\R^3}f\log(f/q_\lambda)\dd X.
+\]
+The actual candidate has $\lambda=\lambda_*$ and
+$\mathcal Q(\lambda_*)=E_0/n$, with $n=|\mathfrak a|^2>0$.
+The following notation distinguishes linear moment functionals from
+quadratic energy functionals:
+\begin{align}
+ G(f)&=\int|\nabla f|^2,& D(f)&=\int df^2,&
+ \beta(f)&=\frac{2G(f)}{D(f)},\nonumber\\
+ A(f)&=\int df,& C(f)&=\int|v|^2f,&
+ T_\lambda(f)&=A(f)-\lambda C(f),\label{r14:functionals}\\
+ I(f)&=\int\frac{|\nabla f|^2}{f},&
+ J_\lambda(f)&=\int f|\nabla\log f+\lambda v|^2.
+ \nonumber
+\end{align}
+These symbols are local to the entropy calculation; $A(f)$ is not the
+physical frequency and $C(f)$ is not a commutator coefficient. For smooth
+positive profiles with the displayed integrals finite, set
+\[
+ \mathcal N(f)=\Delta f+\beta(f)\operatorname{div}(vf).
+\]
+An integration by parts gives
+\begin{align}
+ \mathcal P_\lambda(f)
+ &:=\langle\log(f/q_\lambda)+1,\mathcal N(f)\rangle\nonumber\\
+ &=-I(f)+\lambda A(f)+\beta(f)T_\lambda(f)\nonumber\\
+ &=-J_\lambda(f)+(\beta(f)-\lambda)T_\lambda(f).
+ \label{r14:production}
+\end{align}
+Indeed $J_\lambda=I-2\lambda A+\lambda^2C$ and
+$\int v\cdot\nabla f=-A(f)$. At $q_\lambda$, one has
+$T_\lambda(q_\lambda)=0$, $\beta(q_\lambda)=\lambda$ and
+$\mathcal P_\lambda(q_\lambda)=0$. The second term on the last line
+of \eqref{r14:production} is part of the scalar-feedback production;
+it is not the forcing error $\alpha-\beta$.
+
+For the actual carrier, the previously established constants give
+\begin{align}
+ \bar E&=M^2\mathcal D(K),&
+ \bar G&=M^2\mathcal H(K),&
+ \bar R&=\max\{R_0,3M/a_*\},\nonumber\\
+ \|h(s)\|_2^2&\le\bar E,&
+ \|\nabla h(s)\|_2^2&\le\bar G,&
+ \int r^2h(s)&\le\bar R.\label{r14:budgets}
+\end{align}
+Here $\mathcal H(K)=\mathcal D(K)\max\{3/4,r_{\rm u}\}$, with
+$r_{\rm u}$ as in \eqref{eq:commoncarrierinitial}; the same scalar
+barrier calculation applied to $h$, with mass $M$, proves the first two bounds. The constant
+$R_0$ retains the full $6M$ preparation contribution. Put
+\begin{equation}\label{r14:defecttail}
+ \delta(s)=\alpha(s)-\beta(h(s)),\qquad
+ A_\delta(t)=4d_1e^{-B(t)/4}+2d_2e^{-B(t)/2}.
+\end{equation}
+Thus $A_\delta$ is the defect-tail allowance already used above.
+The original feedback satisfies $a_*\le\alpha\le\bar\alpha$, and
+the preceding defect estimate gives
+\[
+ \int_t^\infty|\delta(s)|\dd s
+ \le A_\delta(t)/a_*,\qquad
+ \int_t^\infty\alpha(s)|\delta(s)|\dd s
+ \le A_\delta(t).
+\]
+All these global inputs retain the physical vector-mass premise.
+
+\begin{proposition}[Actual-path entropy and Fisher payments]
+\label{r14:entropypayment}
+For every fixed $\lambda>0$, $\mathcal F_\lambda(h(s))$ is finite
+and locally absolutely continuous, and
+\begin{equation}\label{r14:actualentropy}
+ \frac{\dd}{\dd s}\mathcal F_\lambda(h(s))
+ =\mathcal P_\lambda(h(s))+\delta(s)T_\lambda(h(s))
+ \quad\text{for almost every }s\ge0.
+\end{equation}
+With
+\[
+ C_S=\bar E+\bar R+\pi^{3/2}/e,\qquad
+ K_\lambda=6M+4\lambda\bar R,
+\]
+one has, for every $u\ge0$,
+\begin{equation}\label{r14:fisherwindow}
+ \int_u^{u+1}I(h(s))\dd s\le2C_S+6\bar\alpha M.
+\end{equation}
+The special entropy pairing of the actual forcing satisfies
+\begin{align}
+ \int_t^\infty|\delta T_\lambda(h)|\dd s
+ &\le (K_\lambda/a_*)A_\delta(t),\nonumber\\
+ \int_t^\infty\alpha|\delta T_\lambda(h)|\dd s
+ &\le K_\lambda A_\delta(t).
+ \label{r14:entropyforcing}
+\end{align}
+\end{proposition}
+\begin{proof}
+For $h\ge1$, $h\log h\le h^2$, while
+\[
+ h\log h\ge-r^2h-e^{-r^2}/e
+\]
+follows by applying $x\log x\ge-1/e$ to $x=he^{r^2}$.
+Consequently $\int|h\log h|\le C_S$ and
+$\int\mathcal Vh\le\bar R$. These pay the entropy at every endpoint,
+without a positive pointwise lower bound for $h$.
+
+To justify differentiation, for $0<\eta\le1$ define
+\[
+ \Phi_\eta(z)=(z+\eta)\log(z+\eta)-\eta\log\eta,
+ \qquad g_\eta(z)=z-\eta\log(1+z/\eta).
+\]
+The smooth positive actual solution satisfies locally
+\begin{equation}\label{r14:regularizedchain}
+ \partial_s\Phi_\eta(h)=\Delta\Phi_\eta(h)
+ -\frac{|\nabla h|^2}{h+\eta}
+ +\alpha\operatorname{div}(v\Phi_\eta(h))
+ +\alpha d g_\eta(h).
+\end{equation}
+The last term uses $h\Phi_\eta'(h)-\Phi_\eta(h)=g_\eta(h)$.
+Integrate against nonnegative increasing radial cutoffs $\chi_R$,
+equal to one on $B_R$ and zero outside $B_{2R}$, with first and
+second derivatives bounded by $c/R,c/R^2$. For fixed $\eta$,
+$|\Phi_\eta(h)|\le c_\eta h+h^2$. The diffusion boundary terms vanish
+as $R\to\infty$; the drift boundary term is bounded by a constant
+times $\int_{R<r<2R}|\Phi_\eta(h)|$, since $|v|\le2r$.
+After time integration both vanish by dominated convergence and
+\eqref{r14:budgets}. Monotone convergence pays the nonnegative gradient
+term. Thus, with $S_\eta(s)=\int\Phi_\eta(h(s))$,
+\[
+ S_\eta(t)-S_\eta(u)
+ =-\int_u^t\!\int\frac{|\nabla h|^2}{h+\eta}
+   +\int_u^t\alpha(s)\!\int d g_\eta(h)\dd s.
+\]
+Now $0\le g_\eta(h)\le h$, $\Phi_\eta(h)\downarrow h\log h$, and
+\[
+ |\Phi_\eta(h)|\le|h\log h|+(h+1)\log(h+1)
+                 \le|h\log h|+2h+2h^2.
+\]
+Endpoint dominated convergence and gradient monotone convergence give
+\begin{equation}\label{r14:integratedentropy}
+ S(t)-S(u)=-\int_u^tI(h(s))\dd s
+                    +\int_u^t\alpha(s)A(h(s))\dd s,
+ \qquad S(s)=\int h(s)\log h(s).
+\end{equation}
+This proves compact-time Fisher integrability as part of the chain
+rule. Since $A(h)\le6M$ and $|S|\le C_S$, it also proves
+\eqref{r14:fisherwindow}.
+
+Testing the original carrier equation with $\chi_R\mathcal V$ gives,
+after passage to the limit,
+\[
+ \frac{\dd}{\dd s}\int\mathcal Vh=A(h)-\alpha C(h)
+\]
+in integrated form. Diffusion cutoff errors cost at most
+$c\int_{R<r<2R}h$; drift cutoff errors cost at most
+$c\int_{R<r<2R}r^2h$. Their time-integrated limits vanish by the mass
+and second-moment bounds. Combining this identity with
+\eqref{r14:integratedentropy} gives \eqref{r14:actualentropy}.
+Finally $|T_\lambda(h)|\le6M+4\lambda\bar R$ proves both tails in
+\eqref{r14:entropyforcing}.
+\end{proof}
+
+The Fisher conclusion is an integrated unit-window estimate. It is
+neither a pointwise uniform Fisher bound nor a finite half-line Fisher
+integral. The forcing bound uses the exact divergence structure
+$\delta\operatorname{div}(vh)$; it does not treat the logarithmic entropy
+test as a bounded dual-Lipschitz test.
+
+\subsection{Positive production at exact mass and energy}
+
+\begin{theorem}[Failure of universal fixed-candidate dissipation]
+\label{r14:obstruction}
+For every $M,\lambda>0$, there are smooth strictly positive radial
+profiles $f_j$ on $\R^3$, each equal to $q_\lambda$ outside a compact
+set, such that
+\begin{align}
+ \int f_j&=M,& \|f_j\|_2^2&=\mathcal Q(\lambda),&
+ \mathcal P_\lambda(f_j)&>0,\label{r14:exactcounterstates}\\
+ f_j&\longrightarrow q_\lambda\quad\text{in }H^1,&
+ \mathcal F_\lambda(f_j)&\longrightarrow0,&
+ \beta(f_j)&\longrightarrow\lambda.\nonumber
+\end{align}
+Their second moments and Fisher informations tend to those of
+$q_\lambda$. Every individual profile has all polynomial moments and
+finite Sobolev norms. No uniform bound on peak heights or higher
+Sobolev norms is asserted.
+\end{theorem}
+\begin{proof}
+We give the exact constraint repair and the concentration cost, since
+both are needed to obtain the asserted $H^1$-local conclusion. Write
+$q=q_\lambda$, $Q=\mathcal Q(\lambda)$ and
+$k=d-\lambda|v|^2$ for this proof.
+
+\emph{A mass--energy base with positive $T_\lambda$.}
+On every exterior radial domain, the functions $1,q,k$ are linearly
+independent: $k(r)\to-\infty$ and $q(r)\to0$ first eliminate the
+coefficient of $k$ from a linear relation, then the constant coefficient,
+and finally the coefficient of $q$. The corresponding moment map on
+radial compactly supported smooth functions is therefore onto $\R^3$.
+Indeed otherwise a nonzero linear functional would annihilate its image,
+contradicting that independence. Choose radial $w,u$, supported in a
+fixed annulus away from the origin, with
+\begin{equation}\label{r14:basemoments}
+ (\int w,\langle q,w\rangle,\int kw)=(0,0,1),\qquad
+ (\int u,\langle q,u\rangle,\int ku)=(0,1,0).
+\end{equation}
+For small $\tau>0$ the equation
+\[
+ 2c+\tau^2\|w\|_2^2+2\tau c\langle w,u\rangle+c^2\|u\|_2^2=0
+\]
+has the small smooth root
+$c(\tau)=-\tau^2\|w\|_2^2/2+O(\tau^3)$, because its derivative in
+$c$ at $(0,0)$ is $2$. Hence
+\begin{equation}\label{r14:baseprofile}
+ b_\tau=q+\tau w+c(\tau)u>0,\qquad
+ \int b_\tau=M,\quad \|b_\tau\|_2^2=Q,\quad
+ T_\lambda(b_\tau)=\tau.
+\end{equation}
+The positive minimum of $q$ on the annulus pays positivity; outside it
+$b_\tau=q$. All the entropy integrations by parts are therefore valid.
+
+For every compact smooth perturbation $j$, differentiation gives
+\[
+ DI(q)[j]=2\lambda\int dj-\lambda^2\int|v|^2j,
+ \qquad D\mathcal P_\lambda(q)[j]=0.
+\]
+The first identity follows from $\nabla q/q=-\lambda v$; substitution
+in \eqref{r14:production}, with $T_\lambda(q)=0$ and
+$\beta(q)=\lambda$, proves the second. Smoothness on the finite-dimensional
+positive compact perturbations then supplies finite constants
+$C_{\rm Tay},D_{\max}$ and $\tau_0>0$ such that
+\begin{equation}\label{r14:baseproduction}
+ \mathcal P_\lambda(b_\tau)\ge-C_{\rm Tay}\tau^2,
+ \qquad 0<D(b_\tau)\le D_{\max}\qquad(0<\tau<\tau_0).
+\end{equation}
+The constants are bounded Taylor derivatives on a compact positive
+parameter interval; they do not depend on the concentration scale below.
+
+\emph{The spike and its complete scaling costs.}
+Choose a nonzero nonnegative smooth radial bump $\phi$, supported in
+the unit ball and positive in its interior, and set $\psi=\phi^2$.
+For $a>0$ and $\epsilon>0$ let
+\[
+ z_{\epsilon,a}(X)=a\epsilon^{-1/2}\psi(X/\epsilon).
+\]
+Changes of variables give
+\begin{align}
+ \int z_{\epsilon,a}&=a\epsilon^{5/2}\int\psi,&
+ \|z_{\epsilon,a}\|_2^2&=a^2\epsilon^2\|\psi\|_2^2,\nonumber\\
+ G(z_{\epsilon,a})&=a^2G(\psi),&
+ I(z_{\epsilon,a})&=a\epsilon^{1/2}I(\psi),
+ \label{r14:spikescalings}\\
+ \int r^2z_{\epsilon,a}&=a\epsilon^{9/2}\int r^2\psi,&
+ I(\psi)&=4\|\nabla\phi\|_2^2<\infty.\nonumber
+\end{align}
+The quotient defining $I(\psi)$ has its zero extension at the zeros
+of $\psi$. In particular $G(\psi)>0$.
+
+\emph{Exact repair of both constraints.}
+Choose a smooth radial $p$ supported in the same outer annulus with
+$\int p=1$, and write $z=z_{\epsilon,a}$ and $m_\epsilon=-\int z$.
+For fixed small $\tau$ and fixed $a$, define
+\begin{equation}\label{r14:repairedprofile}
+ b_{\tau,\epsilon}=b_\tau+m_\epsilon p+\ell_\epsilon u,
+ \qquad f_{\tau,\epsilon}=b_{\tau,\epsilon}+z.
+\end{equation}
+Take $\epsilon$ small enough that the spike and annulus supports are
+disjoint. Put
+\begin{align*}
+ U&=\|u\|_2^2,\qquad
+ B_\epsilon=\langle b_\tau+m_\epsilon p,u\rangle,\\
+ R_\epsilon&=2m_\epsilon\langle b_\tau,p\rangle
+ +m_\epsilon^2\|p\|_2^2+2\langle b_\tau,z\rangle+\|z\|_2^2.
+\end{align*}
+The mass is already exactly $M$, because $\int u=0$. The energy
+constraint is the exact quadratic
+\[
+ U\ell_\epsilon^2+2B_\epsilon\ell_\epsilon+R_\epsilon=0.
+\]
+For small $\tau,\epsilon$, $B_\epsilon=1+O(\tau)+O(\epsilon^{5/2})>0$
+and $R_\epsilon=O(\epsilon^2)$. The root continuous at zero is
+\begin{equation}\label{r14:repairroot}
+ \ell_\epsilon=-\frac{R_\epsilon}
+ {B_\epsilon+\sqrt{B_\epsilon^2-U R_\epsilon}}
+ =O(\epsilon^2).
+\end{equation}
+Thus both constraints hold exactly. The annular corrections tend
+smoothly to zero and preserve positivity. Near the spike the base is
+exactly $q$, and the spike is nonnegative, so $f_{\tau,\epsilon}>0$
+everywhere.
+
+\emph{Production and Fisher limits.}
+For fixed $\tau,a$, the gradient cross term tends to zero: integration
+by parts on the spike ball bounds it by
+$\|\Delta q\|_\infty\int z$. The annular corrections vanish smoothly.
+Thus
+\begin{align}
+ G(f_{\tau,\epsilon})&\longrightarrow G(b_\tau)+a^2G(\psi),&
+ D(f_{\tau,\epsilon})&\longrightarrow D(b_\tau),\nonumber\\
+ (A,C,T_\lambda)(f_{\tau,\epsilon})
+ &\longrightarrow(A,C,T_\lambda)(b_\tau),&
+ f_{\tau,\epsilon}&\longrightarrow b_\tau\quad\text{in }L^2.
+ \label{r14:spikelimits}
+\end{align}
+Fisher convergence needs its own payment. The pointwise
+Cauchy--Schwarz inequality gives $I(f+g)\le I(f)+I(g)$ for positive
+$f$ and nonnegative $g$. With \eqref{r14:spikescalings} this yields
+$\limsup I(f_{\tau,\epsilon})\le I(b_\tau)$. Outside the shrinking
+spike ball the profile is $b_{\tau,\epsilon}$, and the omitted base
+Fisher integral tends to zero. This proves the matching lower limit.
+Combining these limits with \eqref{r14:production} gives
+\begin{equation}\label{r14:productionlimit}
+ \mathcal P_\lambda(f_{\tau,\epsilon})\longrightarrow
+ \mathcal P_\lambda(b_\tau)
+       +\frac{2a^2G(\psi)\tau}{D(b_\tau)}.
+\end{equation}
+
+\emph{An $H^1$-small positive-production diagonal.}
+Choose one finite $L>0$ such that
+$2LG(\psi)/D_{\max}>C_{\rm Tay}+2$ and set $a^2=L\tau$.
+The limit in \eqref{r14:productionlimit} is then greater than
+$2\tau^2$. For each sufficiently small $\tau$, choose $\epsilon(\tau)$
+so that the production error is below $\tau^2$, the moment and Fisher
+errors and the $H^1$ norm of the constraint correction are at most
+$\tau$, and $\epsilon(\tau)<\tau^2$. Then
+$\mathcal P_\lambda(f_{\tau,\epsilon(\tau)})>\tau^2$ at exact mass
+and energy. Moreover
+\[
+ \|b_\tau-q\|_{H^1}=O(\tau),\qquad
+ \|\nabla z_{\epsilon,a}\|_2^2=L\tau G(\psi),
+ \qquad\|z_{\epsilon,a}\|_2\longrightarrow0.
+\]
+Hence $f_{\tau,\epsilon(\tau)}\to q$ in $H^1$. The second-moment,
+Fisher and feedback limits follow from the preceding estimates.
+
+Entropy also converges. On the annulus the convergence is smooth with
+a uniform positive lower bound. On the spike ball $q$ has a fixed
+positive lower bound. With $H=a\epsilon^{-1/2}$,
+$q\log(1+z/q)\le z$ gives
+\[
+ (q+z)\log(1+z/q)\le z[1+\log(1+C H)].
+\]
+Its integral is at most
+$C a\epsilon^{5/2}[1+\log(1+C a\epsilon^{-1/2})]$, which tends to
+zero along the chosen diagonal. Elsewhere the profile equals $q$.
+Equality of masses and convexity give $\mathcal F_\lambda\ge0$,
+consistent with the positive instantaneous production. Taking a sequence
+$\tau\downarrow0$ proves the theorem.
+\end{proof}
+
+The theorem disproves $\mathcal P_\lambda\le0$ on the specified
+state class, even in every $H^1$ neighborhood of $q_\lambda$.
+It does not place these profiles on the original theta trajectory or
+construct a nonconvergent solution. Their higher derivatives and peak
+heights are uncontrolled; compatibility with arbitrarily sharp numerical
+allowances or stronger actual-path restrictions is not asserted. In
+particular the actual-path slope information in the next section is
+additional information. The construction does not change the source,
+feedback, genuine residual, raw/prepared mismatch, sphere terms or
+inner-ball evolution of the actual problem.
+
+\subsection{Spatial compactness and a stronger forcing topology}
+
+The same actual-path budgets also pay an $H^{-1}$ forcing norm and
+spatial $L^2$ compactness. These are useful analytic facts but do not
+supply a sign for \eqref{r14:production}.
+
+\begin{proposition}[Radial forcing and spatial tails]
+\label{r14:topology}
+Define
+\[
+ C_r=\frac{(\bar E\bar G)^{1/4}}{\sqrt{2\pi}},\qquad
+ V_2=2C_r^{1/2}(M\bar R)^{1/4}.
+\]
+For the actual carrier and
+$\mathfrak f_s=\delta(s)\operatorname{div}(vh(s))$,
+\begin{align}
+ \|vh(s)\|_2&\le V_2,&
+ \|\mathfrak f_s\|_{H^{-1}}&\le V_2|\delta(s)|,
+ \label{r14:hminusone}\\
+ \int_t^\infty\|\mathfrak f_s\|_{H^{-1}}\dd s
+ &\le(V_2/a_*)A_\delta(t),&
+ \int_t^\infty\alpha\|\mathfrak f_s\|_{H^{-1}}\dd s
+ &\le V_2A_\delta(t).\nonumber
+\end{align}
+Furthermore
+\begin{equation}\label{r14:spatialtail}
+ \int_{r>R}h(s)^2\dd X\le C_r\bar R/R^3,
+\end{equation}
+and the set $\{h(s):s\ge0\}$ is precompact in $L^2(\R^3)$.
+\end{proposition}
+\begin{proof}
+For a smooth decaying radial function, integration of $(r^2h^2)'$
+and Cauchy--Schwarz give
+\[
+ r^2h(r)^2=-2\int_r^\infty th(t)^2\dd t
+           -2\int_r^\infty t^2h(t)h'(t)\dd t
+ \le\frac{\|h\|_2\|\nabla h\|_2}{2\pi}.
+\]
+The constant includes the $4\pi$ radial volume factor in each norm.
+An endpoint subsequence, or approximation in radial $H^1$, justifies
+the integration at infinity. Since $h\ge0$, it follows that $rh\le C_r$
+and
+\[
+ \int r^2h^2\le C_r\int rh\le C_r\sqrt{M\bar R}.
+\]
+Using $|v|\le2r$ proves the bound for $\|vh\|_2$. Duality against the
+standard $H^1$ norm gives
+$|\langle\operatorname{div}(vh),\varphi\rangle|
+ \le\|vh\|_2\|\nabla\varphi\|_2$ and hence both forcing tails.
+Finally
+\[
+ \int_{r>R}h^2\le(C_r/R)\int_{r>R}h
+              \le C_r\bar R/R^3.
+\]
+The uniform $H^1$ bound gives local $L^2$ compactness on each ball;
+a diagonal subsequence and this uniform tail give global $L^2$
+precompactness.
+\end{proof}
+
+The $H^{-1}$ conclusion is a bound on the divergence as a distribution,
+not an $L^2$ bound on that divergence. Spatial precompactness alone
+neither makes an accumulation point stationary nor passes the
+quotient $\beta$ through arbitrary bounded-$H^1$, $L^2$ convergence:
+the fixed-$\tau,a$ sequence in \eqref{r14:spikelimits} retains a
+positive gradient-energy defect. These cautions delimit the entropy
+argument, while the actual-path $H^1$ convergence proved next supplies
+the stronger conclusion. An equally informed direct comparison has all
+of the entropy, forcing and compactness estimates above and encounters
+the same state-class obstruction.
+
+\section{Attraction through the radial logarithmic slope}
+\label{sec:carrierattraction}
+
+The scalar energy identifies a unique Gibbs candidate, but neither that
+identification nor compactness proves attraction. We now obtain a
+quantitative approximation to the Gibbs family along the actual carrier
+path, and only then use the energy to select its parameter. The new
+spatial input is a positive two-sided bound for the radial logarithmic
+slope, paid directly by the complete source and the prescribed unit heat
+preparation \cite{RadialAttractionNote}.
+
+Throughout this section $(T,A)=(1/4,2)$, and all previously supplied
+physical-mass hypotheses remain in force. In particular,
+\[
+ 0<a_*\le\alpha(s)\le\bar\alpha,\qquad B(s)\ge a_*s,\qquad
+ \delta(s)=\alpha(s)-\beta(h(s)),
+\]
+\begin{align*}
+ |\delta(s)|&\le d_1e^{-B(s)/4}+d_2e^{-B(s)/2},\\
+ \big|E_h(s)-E_0/n\big|&\le\epsilon_E(s),\\
+ \epsilon_E(s)&=\frac{2\sqrt{E_0\Lambda_\Sigma}}n e^{-B(s)/4}
+              +\frac{\Lambda_\Sigma}n e^{-B(s)/2}.
+\end{align*}
+These are the actual-path estimates of
+Theorem~\ref{r13:defect} and \eqref{r13:scalarenergylimit},
+not consequences of the argument below.
+The carrier's uniform $H^1$ bound was likewise paid in
+Section~\ref{sec:commoncarrier}. Write
+\begin{equation}\label{r15:radialcoefficients}
+ \begin{split}
+ b(r)&=\mathcal V'(r)=r+\frac r{1+r^2},\qquad
+ b'=1+\frac{1-r^2}{(1+r^2)^2}\in[7/8,2],\\
+ \gamma(r)&=-\frac{d'(r)}{b(r)}
+ =\frac{2(r^2+5)}{(1+r^2)^2(r^2+2)}\in[0,5].
+ \end{split}
+\end{equation}
+The ratios at zero have their smooth even extensions, and $1\le b/r\le2$.
+The physical equations and integrals continue to live in $\R^3$.
+
+\subsection{The complete source pays a prepared slope interval}
+
+\begin{lemma}[Initial logarithmic slope]\label{r15:seed}
+For the prescribed positive carrier $h_0=K_1*h^{\rm raw}$, define
+\[
+ z(0,r)=-\frac{\partial_rh_0(r)}{b(r)h_0(r)},\qquad
+ z(0,0)=-\frac{\partial_r^2h_0(0)}{2h_0(0)}.
+\]
+Then on the entire prepared domain, including $0\le r<1$,
+\begin{equation}\label{r15:seedband}
+ m_{\rm seed}:=\frac{41}{304}\le z(0,r)\le
+ L_{\rm seed}:=\frac12.
+\end{equation}
+This assertion uses the complete source and preparation, independently
+of a positive physical vector-mass floor.
+\end{lemma}
+\begin{proof}
+For $R\ge1$, the complete source density has the positive expansion
+\[
+ \rho_T(R)=\frac\pi4R^{3/2}e^{(T/4)(\log R)^2}
+ \sum_{j\ge1}(j^4-c_\theta j^2/R^2)e^{-\pi j^2R^2},
+ \qquad c_\theta=\frac3{2\pi}<\frac12.
+\]
+Lemma~\ref{lem:tails} also dominates its differentiated series uniformly
+on $R\ge1$. The logarithmic derivative of the sum is therefore the
+positive weighted average of those of its summands. Each obeys
+\[
+ R(\log\rho_{T,j})'
+ =\frac32+\frac T2\log R-2\pi j^2R^2
+             +\frac{2c_\theta}{j^2R^2-c_\theta}.
+\]
+Let
+\[
+ f(R)=\rho_{1/4}(R)\left[1+\frac{(\log R)^2}{4}\right]e^{-R^2/4}.
+\]
+The logarithmic derivative of the bracket contributes at most $1/2$,
+since $2\log R/[4+(\log R)^2]\le1/2$. Using $\pi>3$ and
+$2c_\theta/(j^2R^2-c_\theta)<2$, we find
+\begin{equation}\label{r15:sourcelogslope}
+ R(\log f)'\le4+\frac18\log R-\frac{13}{2}R^2
+             \le-\frac{19}{8}R^2.
+\end{equation}
+The last inequality follows from $4\le4R^2$ and $\log R\le R^2$.
+For $g(q)=f(\sqrt q)$, $q\ge1$, this gives $(\log g)'\le-19/16$.
+Translating the inequality and integrating yields, for $a\ge1$ and $t\ge0$,
+\begin{equation}\label{r15:excesstail}
+ \frac{\int_{a+t}^{\infty}g(q)\dd q}{\int_a^{\infty}g(q)\dd q}
+ \le e^{-19t/16},\qquad
+ \mathbb E[q-a\mid q\ge a]\le\frac{16}{19}.
+\end{equation}
+Here the expectation has density proportional to $g$ on the indicated
+tail; its second bound is the integral of the first.
+
+Project the radial density $\mathbf1_{|Y|\ge1}f(|Y|)$ onto its first
+coordinate. The resulting one-dimensional density is
+\[
+ \nu_{\rm pr}(y)=2\pi\int_{\max(1,|y|)}^\infty Rf(R)\dd R.
+\]
+It is positive and even, continuous at $\pm1$, and has Gaussian tails.
+Define its integration factor by the classical tail formula
+\cite{SteinKernelRef}
+\[
+ \tau_{\rm pr}(y)\nu_{\rm pr}(y)
+       =\int_y^\infty u\nu_{\rm pr}(u)\dd u.
+\]
+For $y\ge0$, Fubini gives
+\[
+ \tau_{\rm pr}(y)
+ =\frac12\mathbb E[R^2-y^2\mid R\ge\max(1,y)],
+\]
+where the radial density is proportional to $Rf(R)$. Evenness extends
+this formula to negative $y$. The change of variable $q=R^2$ and
+\eqref{r15:excesstail} show that
+\begin{equation}\label{r15:steinbounds}
+ 0<\tau_{\rm pr}(y)\le
+ \begin{cases}
+ 35/38,& |y|\le1,\\
+ 8/19,& |y|\ge1.
+ \end{cases}
+\end{equation}
+Indeed the inner case costs $(1+16/19)/2$, and the outer case costs
+$(16/19)/2$. Although $\nu_{\rm pr}'$ jumps at $\pm1$, the product
+$\tau_{\rm pr}\nu_{\rm pr}$ is continuously differentiable and satisfies
+$(\tau_{\rm pr}\nu_{\rm pr})'=-y\nu_{\rm pr}$. Splitting an integration
+by parts at $\pm1$ therefore cancels both internal traces. Gaussian
+tails remove the two infinite endpoints even after exponential tilting.
+For expectation under density proportional to $e^{ty}\nu_{\rm pr}(y)$,
+we obtain
+\[
+ \mathbb E_tY=t\mathbb E_t\tau_{\rm pr}.
+\]
+
+The actual unit preparation, with its normalization unchanged, is
+\[
+ h_0(r)=(4\pi)^{-3/2}e^{-r^2/4}
+                 \int_{\R}e^{ry/2}\nu_{\rm pr}(y)\dd y.
+\]
+Differentiation and \eqref{r15:steinbounds} give
+\[
+ -\frac{h_0'(r)}{rh_0(r)}
+ =\frac12-\frac14\mathbb E_{r/2}\tau_{\rm pr}
+ \in\left[\frac{41}{152},\frac12\right].
+\]
+Dividing by $b/r\in[1,2]$ proves \eqref{r15:seedband}. The same Gaussian
+domination permits the limit $r\downarrow0$ and yields the stated
+origin value. The raw exterior indicator has been retained in the
+projection; it is not reapplied after convolution.
+\end{proof}
+
+\subsection{Confinement by a linear commuted equation}
+
+Define
+\begin{equation}\label{r15:bandconstants}
+ m_z=\min\{m_{\rm seed},a_*\}>0,\qquad
+ L_z=\max\{L_{\rm seed},\bar\alpha\}<\infty.
+\end{equation}
+We first justify comparison without assuming that the quotient
+$-h_r/(bh)$ is bounded. Integrating the seed, and using the mass M to
+bound its value at the origin, gives
+\[
+ h_0(r)\le A_{\rm seed}e^{-m_{\rm seed}\mathcal V(r)},\qquad
+ |\nabla h_0|\le L_{\rm seed}b h_0,\qquad
+ A_{\rm seed}=\frac{M}{Z(L_{\rm seed})}.
+\]
+Since $b\le2r$ and $\mathcal V\ge r^2/2$,
+\begin{equation}\label{r15:initialsup}
+ \|h_0^2+|\nabla h_0|^2\|_\infty\le C_{\rm init}:=
+ A_{\rm seed}^2\left(1+\frac{4L_{\rm seed}^2}{e m_{\rm seed}}\right).
+\end{equation}
+Here $C_{\rm init}$ is separate from the source commutator coefficients.
+
+Let $F=h^2+|\nabla h|^2$. Direct differentiation of the actual carrier
+equation gives
+\[
+ (\partial_s-\Delta-\alpha v\cdot\nabla)F
+ \le26\bar\alpha F.
+\]
+The $h^2$ contribution is at most $12\alpha h^2$; the gradient
+contribution is at most
+$16\alpha|\nabla h|^2+20\alpha|h||\nabla h|$.
+The last term is at most $10\alpha(h^2+|\nabla h|^2)$, and the negative
+Hessian terms may be discarded. We used $d\le6$, $\|Dv\|\le2$ and
+$|\nabla d|\le10$, all consequences of the fixed drift. No derivative
+of $\alpha$ appears.
+
+For a whole-space justification, apply smooth convex approximation
+to $(e^{-26\bar\alpha s}F-C_{\rm init})_+$. The resulting nonnegative
+subsolution $w$ satisfies $w_s\le\Delta w+\alpha v\cdot\nabla w$.
+Its space-time L1 norm is finite on every bounded interval by the
+already proved carrier $H^1$ bound. Integrating against expanding
+radial cutoffs, the drift contributes $-\alpha\int d w\le0$.
+The remaining cutoff errors on $[0,t]$ are bounded by
+\[
+ CR^{-2}\int_0^t\|w(s)\|_1\dd s+
+ C\bar\alpha\int_0^t\int_{R\le|X|\le2R}w(s,X)\dd X\dd s,
+\]
+and both vanish as $R\to\infty$. The initial positive part is zero,
+so
+\begin{equation}\label{r15:finitesup}
+ \|h(s)^2+|\nabla h(s)|^2\|_\infty
+ \le C_{\rm init}e^{26\bar\alpha s}.
+\end{equation}
+This is a finite-window bound, not an extra uniform higher-derivative
+hypothesis.
+
+\begin{lemma}[Invariant logarithmic-slope interval]\label{r15:invariantband}
+The actual carrier has
+\begin{equation}\label{r15:globalband}
+ m_z\le z(s,r):=-\frac{h_r(s,r)}{b(r)h(s,r)}\le L_z
+ \qquad(s\ge0,\ r\ge0),
+\end{equation}
+with the smooth even extension at the origin.
+\end{lemma}
+\begin{proof}
+For constant $c>0$, commute the linear quantity
+$\xi_c=h_r/b+ch$. Its origin value is $h_{rr}(s,0)/2+ch(s,0)$.
+It is bounded on every finite time window: outside the unit ball use
+\eqref{r15:finitesup} and $b\ge r$, and on its closure use the
+inherited local classical regularity. Direct differentiation gives
+\begin{equation}\label{r15:commuted}
+ \begin{split}
+ (\xi_c)_s={}&(\xi_c)_{rr}
+ +\left(\frac{2b'}b+\frac2r+\alpha b\right)(\xi_c)_r\\
+ &+\left[\frac{d'}b+2(\alpha-c)b'+\alpha d\right]\xi_c
+ -(\alpha-c)\left(2cb'-\frac{d'}b\right)h.
+ \end{split}
+\end{equation}
+Its singular drift is
+\begin{equation}\label{r15:comparisonlift}
+ \frac{2b'}b+\frac2r+\alpha b
+ =\frac4r+r\left[-\frac4{(1+r^2)(2+r^2)}
+                       +\alpha\frac{2+r^2}{1+r^2}\right].
+\end{equation}
+Thus an even smooth profile satisfies a radial comparison equation in
+$\mathbb R^5$: $4/r$ is its radial Laplacian coefficient, the remaining
+vector drift is smooth with at most linear growth, and the potential
+is bounded on every finite window. This is solely a comparison device;
+no physical equation or spatial integral has changed dimension.
+
+For completeness, the whole-space sign principle for this bounded
+comparison follows by subtracting
+$\varepsilon e^{Cs}(1+r^2)$ from a subsolution. Choose $C$ above the
+finite-window potential and drift bounds. Any positive maximum then
+lies in a compact set; an additional time exponential removes the
+potential's upper bound and permits the local maximum principle.
+Letting $\varepsilon\downarrow0$ establishes nonpositivity without
+boundary data at infinity or an attained spatial extremum.
+
+For $c=m_z$, the source in \eqref{r15:commuted} is nonpositive, since
+$\alpha-c\ge0$ and $2cb'-d'/b>0$, while $\xi_{m_z}(0)\le0$ by the seed.
+Hence $\xi_{m_z}\le0$. For $c=L_z$ both signs reverse, giving
+$\xi_{L_z}\ge0$. Since the actual carrier is positive, local division
+by $h$ proves \eqref{r15:globalband}. No positive spatially uniform
+lower bound for $h$ is assumed.
+\end{proof}
+
+The slope band has a useful normalization consequence. Put
+\[
+ \Psi_s(r)=\int_0^r z(s,t)b(t)\dd t,\qquad
+ J_s=\int_{\R^3}e^{-\Psi_s(|X|)}\dd X.
+\]
+Then
+\begin{equation}\label{r15:gaussianconfinement}
+ \begin{gathered}
+ h(s,r)=\frac{M e^{-\Psi_s(r)}}{J_s},\qquad
+ m_z\mathcal V\le\Psi_s\le L_z\mathcal V,\qquad
+ Z(L_z)\le J_s\le Z(m_z),\\
+ h(s,r)\le A_ze^{-m_z\mathcal V(r)},\qquad A_z=\frac{M}{Z(L_z)},\\
+ |\nabla h(s,r)|\le L_z|v(r)|A_ze^{-m_z\mathcal V(r)}.
+ \end{gathered}
+\end{equation}
+These bounds pay all polynomial moments of $h,h^2$ and weighted first
+derivatives used below, uniformly in time.
+
+\subsection{The feedback average and contraction of the slope range}
+
+Differentiating the logarithmic equation now gives the bounded smooth
+slope equation
+\begin{equation}\label{r15:slopeequation}
+ z_s=z_{rr}+
+ \left(\frac{2b'}b+\frac2r+(\alpha-2z)b\right)z_r
+ +(\alpha-z)\left(2b'z-\frac{d'}b\right).
+\end{equation}
+The origin interpretation in \eqref{r15:comparisonlift} is unchanged;
+the remaining drift has at most linear growth by
+\eqref{r15:globalband}. In physical dimension three, the Gaussian
+bounds and regularity at zero justify integration of
+$\operatorname{div}(vh^2)$. Consequently
+\begin{equation}\label{r15:betaaverage}
+ D_h=-2\int vh\cdot\nabla h
+       =2\int z|v|^2h^2,\qquad
+ \beta(h)=\frac{\int z^2|v|^2h^2}{\int z|v|^2h^2}.
+\end{equation}
+The denominator is positive because $z\ge m_z>0$ and $h>0$.
+Thus $\beta$ is a positive weighted spatial average of the actual slope.
+
+\begin{proposition}[Actual-defect range contraction]\label{r15:squeeze}
+Set
+\[
+ k_z=\frac{7m_z}{4},\qquad K_z=4L_z+5,
+\]
+and define the completely paid allowance
+\begin{equation}\label{r15:omega}
+ \Omega(s)=\frac{111}{304}e^{-k_zs}
+ +(K_z-k_z)\int_0^s e^{-k_z(s-t)}|\delta(t)|\dd t.
+\end{equation}
+Then
+\[
+ \sup_{r\ge0}z(s,r)-\inf_{r\ge0}z(s,r)\le\Omega(s),\qquad
+ |z(s,r)-\beta(h(s))|\le\Omega(s),
+\]
+and $\Omega(s)\to0$ as $s\to\infty$.
+\end{proposition}
+\begin{proof}
+For every $z\in[m_z,L_z]$, \eqref{r15:radialcoefficients} gives
+$k_z\le2b'z-d'/b\le K_z$. Along the same actual coefficient path solve
+\begin{align*}
+ u'&=k_z(\alpha-u)+(K_z-k_z)(\alpha-u)_+,
+ &u(0)&=L_{\rm seed},\\
+ \ell'&=k_z(\alpha-\ell)-(K_z-k_z)(\ell-\alpha)_+,
+ &\ell(0)&=m_{\rm seed}.
+\end{align*}
+Each equation preserves $[m_z,L_z]$, since $\alpha$ lies in that
+interval. At contact the upper derivative is at least the lower, so
+$\ell\le u$. Their derivatives are the maximum and minimum of
+$c(\alpha-u)$ and $c(\alpha-\ell)$ over $c\in[k_z,K_z]$.
+They are therefore, respectively, a supersolution and subsolution of
+\eqref{r15:slopeequation}. Freeze the actual bounded $z$ in its drift;
+the reaction is uniformly Lipschitz on the band, and the already proved
+whole-space comparison applies to the differences. Hence
+\[
+ \ell(s)\le z(s,r)\le u(s),\qquad
+ \ell(s)\le\beta(h(s))\le u(s).
+\]
+For $w=u-\ell$, subtraction gives the exact identity
+\[
+ w'=-k_zw+(K_z-k_z)
+       \big[(\alpha-u)_++(\ell-\alpha)_+\big]
+ =-k_zw+(K_z-k_z)\operatorname{dist}(\alpha,[\ell,u]).
+\]
+Since $\beta\in[\ell,u]$, the distance is at most $|\delta|$.
+Integrating, with $w(0)=111/304$, proves \eqref{r15:omega} and both
+range assertions. If
+\[
+ \mathscr J_{k,c}(s)=
+ \begin{cases}
+ (e^{-cs}-e^{-ks})/(k-c),&k\ne c,\\
+ se^{-ks},&k=c,
+ \end{cases}
+\]
+then the actual defect and $B(s)\ge a_*s$ give the explicit bound
+\begin{equation}\label{r15:omegadecay}
+ \Omega(s)\le\frac{111}{304}e^{-k_zs}
+ +(K_z-k_z)\{d_1\mathscr J_{k_z,a_*/4}(s)
+                  +d_2\mathscr J_{k_z,a_*/2}(s)\}\longrightarrow0.
+\end{equation}
+The expression also covers resonance. Every estimate begins at time
+zero, so no unestimated initial interval is omitted.
+\end{proof}
+
+The forcing cost in this argument is specific to the actual equation.
+The coefficient defect contributes $(K_z-k_z)|\delta|$ to the range
+estimate; its transport contribution vanishes on spatially constant
+barriers. There is no derivative of $\delta$, nor an assertion that an
+arbitrary small forcing in a weak topology would yield the same result.
+
+\subsection{Normalized profile approximation and energy selection}
+
+\begin{theorem}[Actual-carrier attraction]\label{r15:attraction}
+Under the fixed theta, preparation and physical-mass inputs above,
+let $\lambda_*>0$ be selected by
+$\mathcal Q(\lambda_*)=E_0/n$. Then
+\begin{equation}\label{r15:limits}
+ \|h(s)-q_{\lambda_*}\|_{H^1(\R^3)}\longrightarrow0,\qquad
+ \beta(h(s))\longrightarrow\lambda_*,\qquad
+ \alpha(s)\longrightarrow\lambda_*.
+\end{equation}
+The bounds below pay the profile, gradient and parameter errors explicitly.
+\end{theorem}
+\begin{proof}
+Set $c(s)=\beta(h(s))\in[m_z,L_z]$. The range estimate implies
+\[
+ |\Psi_s(r)-c(s)\mathcal V(r)|\le\Omega(s)\mathcal V(r).
+\]
+Both exponents are at least $m_z\mathcal V$. The mean value theorem
+therefore bounds their exponential difference by
+$\Omega\mathcal V e^{-m_z\mathcal V}$. Define
+\begin{align*}
+ J_{\mathcal V}&=\int\mathcal V e^{-m_z\mathcal V},\qquad Z_L=Z(L_z),\\
+ P_z(r)&=A_z\left(\mathcal V(r)+\frac{J_{\mathcal V}}{Z_L}\right)
+                        e^{-m_z\mathcal V(r)}.
+\end{align*}
+Because $|J_s-Z(c)|\le\Omega J_{\mathcal V}$ and both normalizations
+are at least $Z_L$, subtraction of the normalized exponentials gives
+\begin{equation}\label{r15:profileapproximation}
+ |h(s,r)-q_{c(s)}(r)|\le\Omega(s)P_z(r).
+\end{equation}
+An independent derivative identity pays the additional $H^1$ cost:
+\begin{equation}\label{r15:gradientapproximation}
+ \nabla h-\nabla q_c=-(z-c)vh-cv(h-q_c).
+\end{equation}
+Both $h$ and $q_c$ are at most $A_ze^{-m_z\mathcal V}$; hence
+\begin{equation}\label{r15:H1approximation}
+ \begin{gathered}
+ \|h-q_c\|_{H^1}\le C_H\Omega,\\
+ C_H=\|P_z\|_2+A_z\||v|e^{-m_z\mathcal V}\|_2
+                         +L_z\||v|P_z\|_2<\infty.
+ \end{gathered}
+\end{equation}
+The sum of the separate L2 and gradient estimates dominates the $H^1$
+norm. All displayed integrals are finite because
+$\mathcal V\ge r^2/2$, $|v|\le2r$, and $\mathcal V$ grows at most
+quadratically plus a logarithm. No new numerical acquisition, Fisher
+hypothesis, compactness theorem or higher derivative is used.
+
+Put $B_2=A_z\sqrt{Z(2m_z)}$, which bounds both L2 norms.
+The scalar energy estimate and \eqref{r15:profileapproximation} yield
+\begin{equation}\label{r15:selectionerror}
+ |\mathcal Q(c(s))-\mathcal Q(\lambda_*)|
+ \le\epsilon_E(s)+2B_2\|P_z\|_2\Omega(s)
+ =:\mathcal E_z(s)\longrightarrow0.
+\end{equation}
+The function $\mathcal Q$ is continuous with positive derivative by
+Theorem~\ref{r13:gibbs}. Since $c(s)$ stays in the compact interval
+$[m_z,L_z]$, \eqref{r15:selectionerror} first places $\lambda_*$ in
+that interval and then forces $c(s)\to\lambda_*$. We have used an
+actual-profile approximation before energy selection, rather than
+assuming that a limit point is stationary.
+
+For explicit conversion constants, set
+\[
+ q_*:=\min_{\lambda\in[m_z,L_z]}\mathcal Q'(\lambda)>0,
+ \qquad
+ L_H:=\sup_{\lambda\in[m_z,L_z]}
+                     \|\partial_\lambda q_\lambda\|_{H^1}<\infty.
+\]
+The first inequality is continuity and strict positivity on a compact
+positive interval. For the second,
+\[
+ \partial_\lambda q_\lambda
+  =(\mathbb E_\lambda\mathcal V-\mathcal V)q_\lambda,
+\]
+whose gradient consists of the same factor times
+$-\lambda vq_\lambda$ and the additional term $-vq_\lambda$.
+Gaussian domination on $[m_z,L_z]$ pays both terms. Thus
+\begin{align}
+ |\beta(h(s))-\lambda_*|&\le\mathcal E_z(s)/q_*,
+ \label{r15:betaconvergence}\\
+ \|h(s)-q_{\lambda_*}\|_{H^1}
+ &\le C_H\Omega(s)+L_H\mathcal E_z(s)/q_*,
+ \label{r15:carrierconvergence}\\
+ |\alpha(s)-\lambda_*|
+ &\le|\delta(s)|+\mathcal E_z(s)/q_*,
+ \label{r15:alphaconvergence}
+\end{align}
+and all three right-hand sides tend to zero.
+
+The original feedback can also be checked through its own spatial
+derivatives, without relying solely on the defect comparison. Since
+$W=\mathfrak a h+e$,
+\[
+ \|W-\mathfrak a q_{\lambda_*}\|_{H^1}
+ \le\sqrt n\|h-q_{\lambda_*}\|_{H^1}
+       +\sqrt{\Lambda_\Sigma+\Gamma_\Sigma}\,e^{-B/4}\longrightarrow0.
+\]
+It follows that
+$G_W\to n\|\nabla q_{\lambda_*}\|_2^2$ and
+$D_W\to n\int d q_{\lambda_*}^2>0$.
+The zero Gibbs flux gives
+$2\|\nabla q_{\lambda_*}\|_2^2=\lambda_*\int d q_{\lambda_*}^2$,
+so the unchanged quotient $2G_W/D_W$ tends to $\lambda_*$.
+This uses $H^1$ convergence, not L2 convergence alone. No assertion
+about a temporal derivative $\alpha'$ is made or needed.
+\end{proof}
+
+The argument establishes attraction of the actual carrier while preserving
+all earlier costs. It neither changes the canonical source or feedback
+path nor discards the genuine residual, raw/prepared mismatch, primitive
+endpoints, commutators, sphere cancellation or evolving inner ball.
+Positive instantaneous entropy production on the broader mass--energy
+state class is compatible with the range contraction just proved; no new
+universal entropy sign follows.
+
+An equally informed direct method has every input and every conclusion
+of this section. Positive weighted-square sources inherit the termwise
+preparation seed when the same summands and preparation are used; at
+an admitted double event their zero vector mass violates the positive
+mass and global-feedback inputs of this theorem. Thus the seed is not
+itself a collision discriminator. The other control families retain
+their own preparation, regularity and conditionality requirements.
+In particular, a variable observation receives no literal-cosine mass
+payment, and a negative Euler--Laguerre witness is not automatically a
+double event. The attraction theorem applies at the already separated
+physical mark and removes none of the upstream physical-mass dependency.
+
+\section{The physical-mass dependency and a failed closure}
+\label{sec:massdependency}
+
+The attraction theorem is downstream of uniform original feedback.
+Its positive preparation seed is independent of the physical vector
+mass, but its global upper slope uses $\bar\alpha$, and its decaying
+coefficient defect uses the synchronization estimates. It is therefore
+natural to ask whether a comparison with a protected energy denominator
+can close the feedback estimate before that chain is invoked. The
+following calculation gives an exact comparison and identifies the
+failure of one specified norm-only use of it \cite{MassFreeClosureNote}.
+
+\subsection{A comparison without an inverse physical mass}
+
+For this subsection work on any compact interval of the maximal regular
+path, retaining the same complete source and unit preparation. Set
+\[
+ \mathfrak a=\frac{\int W}{M},\qquad
+ n=|\mathfrak a|^2\in[0,1],\qquad e=W-\mathfrak ah,
+ \qquad E_e=\|e\|_2^2,\quad G_e=\|\nabla e\|_2^2.
+\]
+We do not assume $n>0$ or import a mass-dependent global upper bound.
+The elementary protections
+\[
+ D_W\ge3E_0>0,\qquad D_h\ge3\|h\|_2^2\ge3E_0,
+ \qquad \beta=2G_h/D_h
+\]
+still hold. The positive carrier mass $M$ and conserved spatial energy
+$E_0$ are different from the possibly vanishing physical vector mass.
+
+\begin{proposition}[Protected-denominator comparison]
+\label{r16:envelope}
+Put $x=G_e/E_0$ and $y=E_e/E_0$. On every such regular interval,
+\begin{equation}\label{r16:pointwise}
+ \alpha\le\mathfrak F(\beta,x,y):=
+ \left[2\sqrt{x/3}+
+ \sqrt{\beta(1+4\sqrt y+2y)+2x}\right]^2.
+\end{equation}
+No inverse physical mass occurs, but the actual error norms remain
+inputs. In particular this statement does not assert their decay.
+\end{proposition}
+\begin{proof}
+Use $\mathfrak ah=W-e$ to write
+\begin{align*}
+ \Delta G&=G_W-nG_h
+       =2\langle\nabla W,\nabla e\rangle-G_e,\\
+ \Delta D&=D_W-nD_h
+       =2\langle dW,e\rangle-\int d|e|^2.
+\end{align*}
+Since $2G_h=\beta D_h$, the exact subtraction is
+\begin{equation}\label{r16:exactdefect}
+ (\alpha-\beta)D_W=2\Delta G-\beta\Delta D.
+\end{equation}
+Cauchy--Schwarz and $d\le6$ give
+\[
+ |\Delta G|\le2\sqrt{G_WG_e}+G_e,\qquad
+ |\Delta D|\le12\sqrt{E_0E_e}+6E_e.
+\]
+Moreover $G_W=\alpha D_W/2\le3\alpha E_0$. Consequently
+\begin{equation}\label{r16:quadraticbound}
+ |\alpha-\beta|\le\frac4{\sqrt3}\sqrt{\alpha x}
+                   +\frac23x+\beta(4\sqrt y+2y).
+\end{equation}
+The resulting quadratic inequality in $t=\sqrt\alpha$ is
+\[
+ t^2-\frac4{\sqrt3}\sqrt x\,t
+       -\left[\beta(1+4\sqrt y+2y)+\frac23x\right]\le0.
+\]
+Its nonnegative root gives \eqref{r16:pointwise}; the two contributions
+$4x/3$ and $2x/3$ combine to $2x$ under the radical.
+\end{proof}
+
+The exact signed quantity behind this norm comparison is also useful.
+For a scalar or vector field $f$, define
+\[
+ \mathscr Q_\beta(f)=2\|\nabla f\|_2^2-\beta\int d|f|^2.
+\]
+Since $\mathscr Q_\beta(h)=0$, expansion gives
+\begin{equation}\label{r16:signeddefect}
+ \begin{split}
+ (\alpha-\beta)D_W={}&\mathscr Q_\beta(e)\\
+ &+2\sum_{j=0}^1\mathfrak a_j
+  \bigl(2\langle\nabla h,\nabla e_j\rangle
+                         -\beta\langle dh,e_j\rangle\bigr).
+ \end{split}
+\end{equation}
+After integration by parts the mixed term is
+$-2\sum_j\mathfrak a_j\int e_j(2\Delta h+\beta dh)$.
+The zero mass of $e_j$ does not cancel its spatially varying multiplier.
+At $n=0$, $e=W$ and \eqref{r16:exactdefect} is a valid identity,
+but becomes exactly $(\alpha-\beta)D_W=2G_W-\beta D_W$.
+A protected denominator alone has paid no sign for the numerator.
+
+\subsection{Testing a constant-ceiling bootstrap}
+
+The initial source calculation in Section~\ref{sec:carrierattraction}
+gives $41/304\le z(0,r)\le1/2$ without a physical-mass floor.
+The Fourier part of Theorem~\ref{thm:uniformfeedback} likewise gives
+$\alpha\ge a_*>0$ before $S_{\max}$ without that floor. Choose a finite
+$L>\max\{\alpha(0),1/2,a_*\}$, and work until a possible first exit
+from $\alpha<L$. Under this local assumption, the same linear
+commutation and comparison used for the slope theorem give
+\[
+ \min\{41/304,a_*\}\le z(s,r)\le L,\qquad \beta(h(s))\le L.
+\]
+Only the finite-interval proof is used, not the accepted global
+attraction theorem. In the equation for $\xi_c=h_r/b+ch$, the source is
+$-(\alpha-c)(2cb'+\gamma)h$, with $b'\ge7/8$ and $\gamma=-d'/b\ge0$.
+Its sign preserves the upper barrier precisely while $\alpha\le L$.
+That is the assumption to be closed.
+
+The required finite-interval regularity and error costs can be paid
+under the same assumption. Let
+\begin{align}
+ \ell&=2M,\qquad c_G=(8\pi)^{-3/2},\qquad
+ c_N=\tfrac35(6\pi^2)^{2/3},\qquad\nu=21/4,\nonumber\\
+ D_L&=\max\{c_G,(3L/c_N)^{3/2}\},\qquad
+ r_L=\frac{5L+\sqrt{25L^2+2\nu L}}2,\nonumber\\
+ H_L&=D_L\max\{3/4,r_L\}.
+ \label{r16:localconstants}
+\end{align}
+The raw centered vector is $W^{\rm raw}-\mathfrak ah^{\rm raw}$;
+its $L^1$ norm is at most $2M$. Gaussian preparation and positivity of
+the common propagator give
+\[
+ \|e(s)\|_1\le\ell,\qquad
+ E_e(0)\le c_G\ell^2,\qquad G_e(0)\le3c_G\ell^2/4.
+\]
+The Fourier inequality applies to the vector norm, and summing the
+radial-square identity preserves $G_e^2\le\|\Delta e\|_2^2E_e$.
+Exactly the local scalar comparison used earlier yields
+\[
+ E_e'\le-2c_NE_e^{5/3}\ell^{-4/3}+6LE_e,\qquad
+ E_e\le\ell^2D_L,
+\]
+\[
+ G_e'\le-2G_e^2/(\ell^2D_L)+10LG_e+\nu L\ell^2D_L,
+ \qquad G_e\le\ell^2H_L.
+\]
+The carrier has the same local $H^1$ payment with $\ell=M$. The
+finite-window boundedness and origin/infinity comparison for $\xi_c$
+therefore require no global feedback estimate. Positive slope bounds
+then supply Gaussian confinement and justify beta's average identity.
+
+\begin{proposition}[Failure of the specified norm-only closure]
+\label{r16:failedbootstrap}
+With $x_L=\ell^2H_L/E_0>0$ and $y_L=\ell^2D_L/E_0>0$, substitution of
+these bounds and $\beta\le L$ into \eqref{r16:pointwise} gives
+\begin{equation}\label{r16:noclosure}
+ \alpha\le\mathfrak F(L,x_L,y_L),\qquad
+             \mathfrak F(L,x_L,y_L)>L.
+\end{equation}
+Thus this norm/barrier comparison does not improve its assumed ceiling,
+for any finite positive choice of L.
+\end{proposition}
+\begin{proof}
+The function $\mathfrak F$ is increasing in each nonnegative argument.
+Its inner radical at $(L,x_L,y_L)$ already exceeds $\sqrt L$, and its
+first term is positive. Squaring proves the strict inequality.
+\end{proof}
+
+The conclusion concerns the stated upper allowance, not the actual
+value of alpha. It excludes neither a sharper signed estimate in
+\eqref{r16:signeddefect} nor a separately paid gap between beta and L.
+Importing the global synchronization errors to close this first
+feedback bound would be circular. No physical-mass premise has been
+removed from the global theorems by \eqref{r16:pointwise}.
+
+\subsection{What the preparation seed distinguishes}
+
+The seed proof is stable under positive weights on the square summands:
+each logarithmic derivative obeys the same bound, and taking a positive
+weighted average preserves it. In particular the registered
+three-square control \cite{WeightedSquareControl} has the same carrier
+construction and seed at $T=1/4$. For that fixed weighted source the
+initial carrier is independent of the frequency A. It is not the
+canonical theta carrier. Its inherited validated double event lies in
+$44.1303<A_*<44.1304$, rather than at A=2. The event certificate is
+supporting control evidence; the analytic failure
+\eqref{r16:noclosure} does not depend on this calculation.
+
+For every A the raw cosine pair is dominated by
+$\rho(1+u^2)$. Unit heat preparation gives nonzero radial Schwartz data
+with all required moments. At the control's zero-vector-mass event,
+Theorem~\ref{thm:feedbackdeadline} forces finite original-feedback
+breakdown despite the seed and protected denominator. Full reflection
+and equal theta coefficients fail for that control; neither is used
+by the per-summand seed estimate. Its finite source need not have an
+all-real heat time, and none is assumed by the auxiliary deadline.
+
+These facts screen an exclusion based only on the shared qualitative
+carrier premises. They do not rule out a quantitative signed estimate
+using the unchanged full theta data and literal frequency A=2.
+The equally informed direct comparison receives every estimate in this
+section and encounters the same specified closure failure. The source,
+actual forcing, genuine residual, raw/prepared mismatch, sphere
+cancellation and whole inner ball remain unchanged.
+
+
+\section{Consequences and outstanding estimates}\label{sec:remaining}
+
+The analysis now has a complete dependency order. A physical vector-mass
+margin pays uniform original feedback. That bound pays common-carrier
+synchronization and complete balance corrections. The carrier's actual
+feedback defect and limiting energy then select the unique Gibbs profile,
+and the source-paid slope seed with defect-driven squeezing proves
+$H^1$ attraction and both coefficient limits. In particular stationary
+carrier convergence and the original-alpha limit are no longer open at
+the fixed paid theta mark. The generic entropy obstruction remains
+compatible with this actual-path theorem.
+
+The unresolved issue is upstream: obtain useful control from the
+unchanged complete theta source where a nonzero physical first jet has
+not already been established. The protected-denominator identity in
+\eqref{r16:exactdefect} does not resolve it. Its signed numerator
+\eqref{r16:signeddefect} still needs independently paid information;
+its specified unsigned-norm completion does not close. A future estimate
+must identify a discriminating source input, a precise consumer and its
+finite domain. A new name for the same unpaid sign is not a reduction.
+The equally informed direct method receives every source datum and
+estimate used by the auxiliary formulation.
+
+Complete actual-to-carrier corrections are finite, but this does not
+make the two original production or dissipation integrals separately
+finite. The surviving carrier production still lacks a favorable sign.
+Uniformity over all jet orders or physical parameters, a smaller
+complete actual-energy allowance, and physical-mass-independent control
+remain separate questions. Since $B(s)\ge a_*s$, bounded total
+compression is unavailable in the positive-margin regime. No subsequent
+argument may discard a carrier cost by assuming otherwise.
+
+The source, literal frequency derivatives, multiplication before
+preparation, actual forcing, genuine residual, full commutators,
+combined unit-sphere cancellation and entire inner ball must remain in
+any comparison. Controls retain their own hypotheses: a negative
+Euler/Laguerre witness is not a double event, an atomic source needs a
+separate regularity extension, and an RH-conditional endpoint remains
+conditional. The weighted-square seed comparison in
+Section~\ref{sec:massdependency} concerns its own higher event frequency;
+it supplies no collision at $(1/4,2)$.
 
 For an eventual application to a hypothetical positive
 de Bruijn--Newman threshold, the separate time, height, multiplicity
-and endpoint coverage of the finite-event reduction must also be
-proved \cite{ThresholdNote}. One low physical mark cannot supply that
-coverage. Numerical acquisition should follow a specified consumer;
-it may sharpen paid constants or support a check, but none of the
-analytical conclusions above depends on a numerical evolution.
-
-Finally, the proofs require independent mathematical review.
-The repository contains internal LLM assessments with the model and
-contributor relationships recorded. They provide a research audit
-trail, not specialist or formal verification.
+and endpoint coverage of the finite-event reduction must also be proved
+\cite{ThresholdNote}. One low physical mark cannot supply that coverage.
+Numerical acquisition should serve a stated analytical consumer; it may
+sharpen constants or check a control, but no evolution simulation is used
+to prove the analytical conclusions developed here. The internal LLM
+assessments retain their stated provenance and shared premises. Independent
+specialist mathematical review remains necessary before stronger claims
+are made from this research manuscript.
 
 
 \clearpage
@@ -2709,7 +4466,7 @@ spatial direction. He also identified integration by parts and the
 relation to the undifferentiated theta function as central motivations
 for the three-dimensional realization. The underlying constructions and successive
 analytical refinements were developed on 27--29 October 2026 using
-OpenAI GPT-6-astra at recorded effort \emph{max} and GPT-6.1-sol at
+OpenAI GPT-6-astra at recorded efforts \emph{max} and \emph{ultra}, and GPT-6.1-sol at
 recorded effort \emph{ultra}. The research notes and reviews cited
 below preserve the detailed contribution and assessment history.
 
@@ -2737,12 +4494,26 @@ independent specialist review.
 The common-carrier decay and finite centered-production costs were proved
 in Notes82--83 by GPT-6-astra, actual effort \emph{ultra}, chat0033,
 and accepted without mathematical correction in Review43 by
-GPT-6.1-sol, actual effort \emph{ultra}, chat0034. The present
+GPT-6.1-sol, actual effort \emph{ultra}, chat0034. The earlier
 E05 R5 integration was requested by the author in that same Sol chat
 and configuration. Three read-only same-model contributing checks
 support the editorial assessment; prior contributor overlap and shared
 inherited premises remain. The editor's compiler checks the saved source;
-a separate PDF or fresh visual-layout pass is not claimed for this revision.
+a separate PDF or fresh visual-layout pass was not claimed for that integration.
+
+The present author-requested E05 R6 integration was prepared in
+chat0038 with GPT-6-astra, actual recorded effort \emph{ultra}.
+It develops the full transfer and scalar reduction of Notes89--90,
+accepted in Review46; the entropy obstruction of Note94, accepted in
+Review48; and the actual attraction theorem of Note98, accepted in
+Review50. Those fixed assessments used GPT-6.1-sol at effort
+\emph{ultra}. The protected-denominator comparison and scoped failed
+closure from Note101 have same-model internal checking in Review51;
+the separate fixed E08 R16 assessment remains pending. Their inclusion
+here does not change that status. Three contributing section derivations
+and subsequent read-only checks support the editorial synthesis; the
+parent alone edits the manuscript. All reviews remain internal with
+shared inherited premises, rather than independent specialist review.
 
 The source proofs are analytical. Existing arithmetic checks of local
 variance and deadline constants remain supporting records; no new
@@ -2971,6 +4742,65 @@ NIST Digital Library of Mathematical Functions,
 and \href{https://dlmf.nist.gov/1.14.E8}{Parseval identity, equation 1.14.8}.
 Inspected 29 October 2026. The unitary convention is converted here
 to the unnormalized transform with Parseval factor $(2\pi)^{-3}$.
+
+
+\bibitem{FullCarrierNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Complete actual-to-carrier production and dissipation transfer},
+Investigation05, Note89, 29 October 2026. GPT-6-astra/ultra;
+accepted without correction in Review46, GPT-6.1-sol/ultra.
+
+\bibitem{CarrierDefectNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Carrier feedback defect and the unique stationary candidate},
+Investigation05, Note90, 29 October 2026. GPT-6-astra/ultra;
+accepted without correction in Review46, GPT-6.1-sol/ultra.
+
+\bibitem{EntropyObstructionNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Fixed-candidate entropy fails as a scalar-feedback Lyapunov mechanism},
+Investigation05, Note94, 29 October 2026. GPT-6-astra/ultra;
+accepted without correction in Review48, GPT-6.1-sol/ultra.
+The exclusion concerns the stated mass--energy state class, not
+nonconvergence of the actual theta trajectory.
+
+\bibitem{RadialAttractionNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Actual-carrier attraction by radial logarithmic-slope squeezing},
+Investigation05, Note98, 29 October 2026. GPT-6-astra/ultra;
+accepted without correction in Review50, GPT-6.1-sol/ultra.
+The original physical-mass premise is retained.
+
+\bibitem{MassFreeClosureNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Mass-free feedback defect and the failed norm-only slope closure},
+Investigation05, Note101, 29 October 2026. GPT-6-astra/ultra, chat0038;
+same-model internal checks in Review51. Fixed E08 R16 assessment
+pending at this manuscript revision.
+
+\bibitem{WeightedSquareControl}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Square-support constraints admit a collision even with the first
+source endpoint}, Investigation22, control-family Note01,
+15 October 2026. GPT-6-astra/ultra. Analytical construction with an
+inherited validated event and separate numerical replay; used here as
+supporting control evidence, not as a calculation of the theta trajectory.
+
+\bibitem{SteinKernelRef}
+A. Saumard, \emph{Weighted Poincar\'e inequalities, concentration
+inequalities and tail bounds related to Stein kernels in dimension one},
+\href{https://arxiv.org/abs/1804.03926v3}{arXiv:1804.03926v3},
+23 November 2018, Section 2, equations (5)--(6).
+The tail integration factor is attributed here; its needed endpoint
+and exponential-test bounds are derived in the text.
+
+\bibitem{JKO}
+R. Jordan, D. Kinderlehrer and F. Otto,
+\emph{The variational formulation of the Fokker--Planck equation},
+SIAM Journal on Mathematical Analysis \textbf{29} (1998), 1--17,
+\href{https://doi.org/10.1137/S0036141096303359}{doi:10.1137/S0036141096303359}.
+Classical fixed-potential Gibbs and free-energy context only; no
+nonlinear-feedback convergence theorem is imported.
 
 \end{thebibliography}
 \end{document}

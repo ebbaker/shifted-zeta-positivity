@@ -478,3 +478,34 @@ margin removal, new collision exclusion, full-production sign or domain
 expansion. Internal different-model assessment with shared premises,
 not independent specialist review. [Continuation](../papers/investigations-5/05_radial_theta_collision_geometry/notes/CTF_E08_R15_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md)
 routes the next physical-mass dependency decision; R5 manuscripts remain unchanged.
+
+### Investigation05 R16: scoped mass-free closure failure, internal review
+
+29 October 2026, for Edward Baker with substantial LLM assistance,
+**gpt-6-astra / ultra**, chat0038. [Note101](../papers/investigations-5/05_radial_theta_collision_geometry/notes/101_MASS_FREE_FEEDBACK_DEFECT_AND_SLOPE_CLOSURE_TEST_R16_20261029.md)
+records: “The denominator replacement succeeds as algebra; the selected
+norm-only carrier-slope closure fails.” A protected D_W denominator gives
+a pointwise mass-free alpha envelope conditional on actual error norms;
+the stated local norm/barrier substitution yields F(L)>L for every finite
+positive ceiling. A weighted-square collision shares the seed proof at
+its high event frequency. No actual-theta alpha violation or universal
+impossibility is proved; R10–R15 retain their physical-mass premises.
+[Review51](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/51_MASS_FREE_FEEDBACK_CLOSURE_INTERNAL_REVIEW_R16_20261029.md)
+is same-model internal checking; E08 pending, no specialist review.
+Reusable as an exact comparison and a screen against this circular
+closure; [Continuation102](../papers/investigations-5/05_radial_theta_collision_geometry/notes/102_MASS_DEPENDENCY_DECISION_AND_MODEL_CONTINUATION_R16_20261029.md)
+routes the fixed assessment.
+
+### Investigation05 analytical manuscript checkpoint, E05 R6
+
+29 October 2026, for Edward Baker with substantial LLM assistance,
+**gpt-6-astra / ultra**, chat0038. [Return103](../papers/investigations-5/05_radial_theta_collision_geometry/notes/103_ANALYTICAL_MANUSCRIPT_INTEGRATION_R6_20261029.md)
+states: “This is an editorial integration, not a new research theorem or an
+E08 R16 assessment.” The existing manuscript now contains full R13 transfer
+and scalar reduction, R14 entropy/topology, R15 actual H1 attraction and
+feedback limits, and R16's scoped failed norm closure. R13–R15 retain their
+accepted assessments; R16 remains pending. Final native compilation passes;
+24 inherited proofs and companion preserved. Prior unchanged-manuscript
+statements above describe their at-issue returns. [Review52](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/52_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_R6_20261029.md)
+and [next Astra104](../papers/investigations-5/05_radial_theta_collision_geometry/notes/104_NEXT_ASTRA_HANDOFF_AFTER_ANALYTICAL_INTEGRATION_20261029.md)
+record scope and continuation; no mass removal or new physical coverage.

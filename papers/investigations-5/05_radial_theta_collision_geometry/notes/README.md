@@ -1,6 +1,16 @@
 # Radial theta collision notes
 
-Current assessment: **E08 R14 accepted without mathematical correction
+Current integration: **E05 R6 complete**, 29 October 2026, for Edward Baker
+with substantial LLM assistance, **gpt-6-astra / actual effort ultra**,
+chat0038. [Return103](103_ANALYTICAL_MANUSCRIPT_INTEGRATION_R6_20261029.md) records the full R13–R16 analytical manuscript
+integration and successful native compile. [Note104](104_NEXT_ASTRA_HANDOFF_AFTER_ANALYTICAL_INTEGRATION_20261029.md) is the requested
+next-Astra research/model handoff. R13–R15 are accepted; R16's fixed
+assessment remains pending. **Default next: [E] CTF-E08 R16 — Sol**;
+then one bounded Astra source-sensitive signed-feedback decision. No mass
+premise removed, fresh visual review or standalone PDF. Earlier routing
+below is historical; Progress05 owns live status.
+
+Historical assessment: **E08 R14 accepted without mathematical correction
 on all seven obligations**. [Review48](../reviews/48_FIXED_CANDIDATE_ENTROPY_E08_R14_ASSESSMENT_20261029.md), [Return96](96_FIXED_CANDIDATE_ENTROPY_R14_E08_RESEARCH_RETURN_20261029.md) and [Continuation97](97_ENTROPY_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md) record the scoped entropy failure and actual-path/topology payments.
 **Next: [B] CTF-B02 actual-carrier attraction — Astra**, one stronger paid
 actual-path estimate or another mechanism; E07 convergence is not ready.
@@ -15,7 +25,7 @@ gap. Next: **[B] CTF-B02 scalar-attraction decision — Astra**, no route
 selected. For Edward Baker with LLM assistance, gpt-6.1-sol / ultra,
 existing chat0034, 29 October 2026. Earlier routing is historical.
 
-Current integration: **E05 R5 complete** in the existing open manuscript.
+Historical integration: **E05 R5 complete** in the existing open manuscript.
 [Return87](87_COMMON_CARRIER_MANUSCRIPT_INTEGRATION_RETURN_20261029.md), [Review44](../reviews/44_COMMON_CARRIER_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md) and [Continuation88](88_COMMON_CARRIER_INTEGRATION_AND_MODEL_CONTINUATION_20261029.md) record the accepted R12 integration, built-in compilation and model
 handoff. No fresh preview inspection or separate PDF. Next: **[B] CTF-B02
 — Astra**, one unpaid carrier/source benefit. For Edward Baker with LLM

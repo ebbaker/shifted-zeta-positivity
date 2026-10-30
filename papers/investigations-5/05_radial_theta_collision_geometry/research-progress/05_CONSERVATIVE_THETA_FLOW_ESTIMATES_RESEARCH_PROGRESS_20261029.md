@@ -6,7 +6,145 @@
 
 ## Current priority
 
-### CTF-E08 R15 complete — all nine obligations accepted
+### CTF-E05 R6 complete — systematic analytical integration
+
+29 October 2026, America/New_York. Prepared for Edward Baker with substantial
+LLM assistance, **gpt-6-astra / actual recorded effort ultra**, existing
+**chat0038**, *Test original-alpha mass estimate*. Type **E**; Sol recommended,
+author requested the work in this Astra chat. [Return103](../notes/103_ANALYTICAL_MANUSCRIPT_INTEGRATION_R6_20261029.md)
+records the existing manuscript's complete R13–R16 integration in Sections
+10–14 and revised dependency narrative/consequences. Analytical derivations
+are primary; inherited numerical event evidence is supporting only.
+
+The final saved source compiled with the built-in editor compiler. All 24
+inherited proofs and the companion are preserved; source checks pass.
+[Review52](../reviews/52_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_R6_20261029.md) records parent plus three same-model integration
+checks; [record42](../numerics/42_ANALYTICAL_MANUSCRIPT_INTEGRATION_BUILD_RECORD_R6_20261029.json) binds exact versions. No new numerical
+acquisition, separate PDF, fresh rendered-page inspection, snapshot, commit
+or tag. R13–R15 remain accepted; **E08 R16 remains pending**. The mass-free
+identity does not remove the mass hypothesis from the global results.
+
+**Default next: [E] CTF-E08 R16 — Sol**, the existing seven-check packet.
+[Note104](../notes/104_NEXT_ASTRA_HANDOFF_AFTER_ANALYTICAL_INTEGRATION_20261029.md) supplies the requested **next Astra [B] CTF-B02
+source-sensitive signed-feedback decision**, after the assessment's accepted
+or corrected disposition; pending assessment permits only independent
+inventory preparation. One input, one consumer and one finite test must be
+selected before research; no R17 request is issued here. E07 remains unready,
+parent B02 partial and E03/B03 gated. Existing chat0038 is refreshed in place.
+The earlier returns and intakes below retain their at-issue scope.
+
+### Historical CTF-E05 R6 intake — systematic analytical manuscript integration
+
+29 October 2026, America/New_York. Prepared for Edward Baker with substantial
+LLM assistance, **gpt-6-astra / actual recorded effort ultra**, existing
+**chat0038**, *Test original-alpha mass estimate*. **Type E; recommended
+Sol for fixed analytical/editorial integration; the author requests this
+work in the present Astra chat.** This intake precedes manuscript drafting.
+
+Scope: compare the existing main manuscript with Notes89–90,94,98,101
+and their current assessments; integrate missing analytical results in a
+coherent dependency order, with complete relevant derivations. R13–R15
+are accepted; R16 has same-model internal checks and fixed E08 pending.
+Preserve that distinction, all retained physical-mass hypotheses and the
+unchanged complete source/vector feedback/residual/preparation/sphere/inner
+ball. Numerical event evidence remains supporting evidence, not an
+analytical hypothesis manufactured from samples. No new research mechanism,
+parameter coverage, simulation or certificate campaign is assigned.
+
+Parent alone edits the main TeX and shared registers; contributing agents
+may prepare separate temporary section fragments and read-only reviews.
+Keep the transform companion unchanged unless a substantive discrepancy
+requires a documented correction. Preserve prior valid proofs while updating
+obsolete global statements and open problems. Use the existing built-in
+manuscript compiler/editor workflow; no new snapshot or standalone PDF.
+Completion: coherent saved manuscript, successful compile or accurately
+reported compiler limitation, bounded source/derivation checks, integration
+review/record, updated progress and a next-Astra continuation note. R16's
+fixed assessment is not silently declared complete by integration.
+
+### CTF-B02 R16 complete — scoped failed mass-free closure; E08 ready
+
+29 October 2026, America/New_York. Prepared for Edward Baker with substantial
+LLM assistance, **gpt-6-astra / actual recorded effort ultra**, **chat0038**,
+*Test original-alpha mass estimate*. [Note101](../notes/101_MASS_FREE_FEEDBACK_DEFECT_AND_SLOPE_CLOSURE_TEST_R16_20261029.md)
+returns the one bounded route recorded below. A denominator-safe exact
+feedback defect and completed mass-free pointwise envelope are proved
+in-note. The local norm/barrier substitution gives `F(L)>L` for every
+finite positive L, so this specified ceiling bootstrap does not close.
+A genuine high-frequency weighted-square collision shares the prepared
+slope seed and generic local premises. No actual A=2 alpha violation,
+universal impossibility or new physical coverage is claimed.
+
+The inverse-mass denominator is removed from the comparison identity
+only; no physical-mass premise is removed from R10–R15. The complete
+signed error production remains unpaid. The direct comparator receives
+the same information and result. Original source/vector feedback,
+actual forcing, residual/raw mismatch, sphere and whole inner ball remain.
+[Review51](../reviews/51_MASS_FREE_FEEDBACK_CLOSURE_INTERNAL_REVIEW_R16_20261029.md)
+records parent synthesis and two read-only same-model audits; shared
+premises remain, no specialist/formal independence. No scan, numerical
+acquisition, manuscript edit/build, snapshot, commit or tag.
+
+**Next: [E] CTF-E08 R16 — Sol**, the [fixed seven-check packet](handoffs/CTF-E08_MASS_FREE_FEEDBACK_CLOSURE_ASSESSMENT_R16_20261029.md).
+[Continuation102](../notes/102_MASS_DEPENDENCY_DECISION_AND_MODEL_CONTINUATION_R16_20261029.md)
+contains research and model-change guidance; [record41](../numerics/41_MASS_FREE_FEEDBACK_CLOSURE_ANALYTICAL_RECORD_R16_20261029.json)
+records exact issued versions and preservation checks. E07 is not ready:
+no closing source estimate has been selected. Parent B02 remains partial;
+E03/B03 gated; E05 requires a separate scope. R15 remains accepted in
+Review50. The stale R15 live-table rows and next prompt have been
+synchronized to that already recorded disposition; issued notes and
+historical intakes are preserved. Chat0038 is uniquely registered in
+this investigation; chat0035/chat0037 retain their identities.
+
+### Historical CTF-B02 R16 intake — mass-free denominator and carrier-slope closure test
+
+29 October 2026, America/New_York. Prepared for **Edward Baker** with
+substantial LLM assistance, **gpt-6-astra / actual recorded effort ultra**,
+new **chat0038**, *Test original-alpha mass estimate*. Type **B**;
+recommended **Astra** because the replacement estimate and closure
+mechanism need a conceptual decision. R15 is accepted in Review50;
+Note100's accepted-assessment branch applies. This intake fixes one
+bounded test before substantive analysis.
+
+**Named estimate to replace:** R13's original-feedback comparison
+`|alpha-beta| <= d1 exp(-B/4)+d2 exp(-B/2)`, whose constants use both
+R10's mass-paid global alpha ceiling and `n>=n_*>0`. **One consumer:**
+closing an a priori ceiling for the original alpha from R15's independently
+paid source/preparation slope seed, on the maximal regular path, before
+invoking R10 global regularity. No R12/R13 decay or R15 attraction may be
+used as an upstream input.
+
+**One proposed replacement:** use the exact defect with denominator
+`D_W>=3E0`, then test a first-exit carrier-slope comparison with the
+complete signed gradient defect retained. Define the raw/prepared
+centered error on the same actual path, allowing `n=0`, and determine
+whether the original energy, source seed and independently available
+local identities pay the sign or size needed to close this ceiling.
+The mathematical test is finite: derive the denominator-safe identity;
+check its full signed production and the upper slope boundary; screen
+one same-carrier weighted-square collision and the registered control
+families; give the direct comparator precisely the same data. No
+parameter scan, numerical acquisition, alternative equation or second
+replacement route is authorized by this intake.
+
+**Classification:** an unquantified global-alpha assertion repeats the
+pointwise noncollision target of Note28. A successful bounded argument
+must pay its own signed estimate and state precisely what mass use it
+removes; at this already separated mark it is not new physical coverage.
+If closure needs the old global alpha bound, a physical mass floor, or an
+unpaid signed error estimate, return that scoped failure. Do not declare
+a universal obstruction or silently replace the source, literal cosine,
+feedback, residual, raw/prepared mismatch, sphere or entire inner ball.
+
+Read-only same-model dependency/control checks may support parent
+synthesis. Parent is the sole writer of shared files. Completion is one
+paid argument, one scoped failed route, or a frozen E07/Sol contract only
+if every conceptual choice and acceptance test is fixed. Preserve prior
+issued notes and R5 manuscripts. The official recorder registered the
+actual thread `01a18aa0-7558-7a92-93c9-8b7e889822d5` as chat0038;
+chat0035 and chat0037 retain their existing identities.
+
+### Historical CTF-E08 R15 complete — all nine obligations accepted
 
 29 October 2026, America/New_York. Prepared for Edward Baker with substantial
 LLM assistance, **gpt-6.1-sol / actual recorded effort ultra**, **chat0037**,
@@ -1600,10 +1738,12 @@ The linked overview owns each contract's mathematical details. This table owns l
 | **CTF-E08 R13** | **E — Sol:** ten fixed proof/cost/topology/scope checks | **Complete — accepted without mathematical correction, Sol/ultra chat0034** | [Review46](../reviews/46_COMPLETE_CARRIER_REDUCTION_E08_R13_ASSESSMENT_20261029.md), [Return92](../notes/92_COMPLETE_CARRIER_R13_E08_RESEARCH_RETURN_20261029.md); all ten obligations and issued versions preserved | Full finite differences and scalar interpretation accepted; no profile/coefficient convergence, integration or campaign |
 | **CTF-B02 R14** | **B — Astra:** test one fixed-candidate entropy mechanism | **Complete — scoped failed route; E08 R14 accepted without mathematical correction, Sol/ultra chat0036** | Exact mass-energy, arbitrarily H1-local positive entropy production; actual entropy/Fisher/forcing and H-minus-one/compactness costs paid | Universal entropy dissipation fails; no actual-path nonconvergence or attraction theorem; stop selected route |
 | **CTF-E08 R14** | **E — Sol:** seven fixed proof, cost and scope checks | **Complete — accepted without mathematical correction, Sol/ultra chat0036** | [Review48](../reviews/48_FIXED_CANDIDATE_ENTROPY_E08_R14_ASSESSMENT_20261029.md), [Return96](../notes/96_FIXED_CANDIDATE_ENTROPY_R14_E08_RESEARCH_RETURN_20261029.md); all seven obligations and ten issued hashes pass; 266 protected files unchanged | Scoped universal entropy failure accepted; no actual attraction/nonconvergence or coefficient limit; [Continuation97](../notes/97_ENTROPY_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md) |
-| **CTF-B02 R15 actual-carrier attraction** | **B — Astra:** choose and pay one stability mechanism | **Complete in-note — Astra/ultra chat0035; E08 pending** | [Note98](../notes/98_RADIAL_LOG_SLOPE_ATTRACTION_B02_R15_20261029.md); complete-source slope seed, invariant interval, defect-paid width contraction, Gaussian H1/energy selection and actual feedback derivative limit | Stop with this proof; physical mass retained, direct comparator gains the same result; no collision exclusion or integration |
-| **CTF-E08 R15** | **E — Sol:** nine fixed proof, cost and scope checks | **Ready; not executed** | [Frozen packet](handoffs/CTF-E08_RADIAL_LOG_SLOPE_ATTRACTION_ASSESSMENT_R15_20261029.md), [Review49](../reviews/49_RADIAL_LOG_SLOPE_ATTRACTION_INTERNAL_REVIEW_R15_20261029.md), [Continuation99](../notes/99_RADIAL_ATTRACTION_AND_MODEL_CONTINUATION_R15_20261029.md) | One supported acceptance, explicit correction or scoped rejection; no new mechanism, scan or manuscript work |
-| **CTF-B02 next Astra handoff** | **B — Astra:** one noncircular physical-mass dependency/consumer decision | **Conditional; not started** | [Note100](../notes/100_NEXT_ASTRA_HANDOFF_AFTER_RADIAL_ATTRACTION_20261029.md); inspect actual E08 R15 disposition first, no accepted-result use while pending | One argument, scoped failure or fixed E07 contract; no scan or integration |
-| **CTF-E07 convergence** | **E — Sol:** only for a future fixed unexecuted proof contract | **No new assignment** | The formerly unready gap is supplied by B02 R15's complete in-note argument, pending E08 | Do not launch a redundant or unspecified execution route |
+| **CTF-B02 R15 actual-carrier attraction** | **B — Astra:** choose and pay one stability mechanism | **Complete in-note — Astra/ultra chat0035; accepted by E08 R15, Review50** | [Note98](../notes/98_RADIAL_LOG_SLOPE_ATTRACTION_B02_R15_20261029.md); complete-source slope seed, invariant interval, defect-paid width contraction, Gaussian H1/energy selection and original-alpha limit | Stop with this proof; physical mass retained, direct comparator gains the same result; no collision exclusion or integration |
+| **CTF-E08 R15** | **E — Sol:** nine fixed checks | **Complete — accepted without correction, Sol/ultra chat0037, Review50** | [Review50](../reviews/50_RADIAL_LOG_SLOPE_ATTRACTION_E08_R15_ASSESSMENT_20261029.md); physical-mass inputs retained | Actual H1 attraction and both feedback limits accepted; no new physical coverage |
+| **CTF-B02 R16 physical-mass dependency decision** | **B — Astra:** select and test one replacement | **Complete in-note — scoped failed route, Astra/ultra chat0038; E08 pending** | [Note101](../notes/101_MASS_FREE_FEEDBACK_DEFECT_AND_SLOPE_CLOSURE_TEST_R16_20261029.md); protected denominator, complete pointwise envelope, F(L)>L and weighted-square screen | One selected norm-only closure fails; no mass premise removed from accepted chain |
+| **CTF-E08 R16** | **E — Sol:** seven fixed algebra/dependency/control checks | **Ready; not executed** | [Packet](handoffs/CTF-E08_MASS_FREE_FEEDBACK_CLOSURE_ASSESSMENT_R16_20261029.md), [Review51](../reviews/51_MASS_FREE_FEEDBACK_CLOSURE_INTERNAL_REVIEW_R16_20261029.md) | Acceptance, correction or scoped rejection; no new mechanism, scan or integration |
+| **CTF-E05 R6** | **E — Sol:** fixed analytical integration; author selected present Astra chat | **Complete — Astra/ultra chat0038** | [Return103](../notes/103_ANALYTICAL_MANUSCRIPT_INTEGRATION_R6_20261029.md), [Review52](../reviews/52_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_R6_20261029.md), [record42](../numerics/42_ANALYTICAL_MANUSCRIPT_INTEGRATION_BUILD_RECORD_R6_20261029.json); final native compile and bounded source/derivation checks | R13–R16 integrated with assessment scopes retained; 24 prior proofs/companion preserved; E08 R16 pending, [next Astra note104](../notes/104_NEXT_ASTRA_HANDOFF_AFTER_ANALYTICAL_INTEGRATION_20261029.md) |
+| **CTF-E07 replacement execution** | **E — Sol:** only for a future frozen closing argument | **Unready; no new assignment** | R15 attraction is already accepted; R16 supplies no closing replacement estimate | Do not launch a redundant convergence proof or unspecified signed-estimate execution |
 | **CTF-E05 R3** | **E — editorial integration; author-selected Astra/max** | **Complete** | Primitive lemma and common-path proposition integrated; 17 earlier proofs preserved, built-in compiler success, same-assistant [Review38](../reviews/38_PRIMITIVE_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md) | Historical next was R11, now returned above; no quantitative gain or fresh visual review claimed by this editorial task |
 | **CTF-E08 R10** | **E — Sol:** fixed eight proof/cost/comparison/scope checks | **Complete — accepted without mathematical correction; notation clarified, Sol/ultra, chat0032** | [Review36][r36], [Return69][n69]; 17 frozen inputs, packet and 121 inherited files unchanged | Uniform direct bound accepted; no source-residual or domain advantage; [Continuation70][n70]; no acquisition or manuscript integration |
 | **CTF-B02 R10** | **B — Astra:** select an unpaid uniform-feedback consumer and strongest comparison | **Complete — proved in-note; assessed in [Review36][r36]** | [Note67][n67], [Self-assessment35][r35]; actual Astra/max, chat0031 | Direct method pays uniform G/E0 and alpha with explicit constants; no source-residual advantage or new physical region |
@@ -1724,21 +1864,27 @@ Later rows must give source/return paths, actual model and effort, evidence stat
 
 | 29 October 2026 | CTF-B02 R15 radial logarithmic-slope attraction | gpt-6-astra / ultra, existing chat0035; three read-only same-model checks and parent synthesis | [Note98](../notes/98_RADIAL_LOG_SLOPE_ATTRACTION_B02_R15_20261029.md), [Review49](../reviews/49_RADIAL_LOG_SLOPE_ATTRACTION_INTERNAL_REVIEW_R15_20261029.md): complete-source seed, invariant positive slope interval, defect-paid contraction, actual H1 attraction and both feedback limits; physical mass retained, prior inputs/manuscripts preserved | **[E] CTF-E08 R15 — Sol**, nine-check packet; [Continuation99](../notes/99_RADIAL_ATTRACTION_AND_MODEL_CONTINUATION_R15_20261029.md); stop complete proof, no E07/integration/scan |
 
+| 29 October 2026 | CTF-B02 R16 mass-free closure test | gpt-6-astra / ultra, chat0038; two read-only same-model audits | [Note101](../notes/101_MASS_FREE_FEEDBACK_DEFECT_AND_SLOPE_CLOSURE_TEST_R16_20261029.md), [Review51](../reviews/51_MASS_FREE_FEEDBACK_CLOSURE_INTERNAL_REVIEW_R16_20261029.md): exact mass-free envelope, specified F(L)>L failure and same-seed collision screen; physical premise unreplaced | **[E] CTF-E08 R16 — Sol**, seven-check packet; [Continuation102](../notes/102_MASS_DEPENDENCY_DECISION_AND_MODEL_CONTINUATION_R16_20261029.md) |
+
+| 29 October 2026 | CTF-E05 R6 analytical integration | gpt-6-astra / ultra, existing chat0038; three same-model contributors, parent sole shared writer | [Return103](../notes/103_ANALYTICAL_MANUSCRIPT_INTEGRATION_R6_20261029.md), [Review52](../reviews/52_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_R6_20261029.md), [record42](../numerics/42_ANALYTICAL_MANUSCRIPT_INTEGRATION_BUILD_RECORD_R6_20261029.json): full R13–R16 analytical development integrated; final native compile, 24 inherited proofs preserved, no separate PDF/fresh visual check | **[E] CTF-E08 R16 — Sol** still pending; [Note104](../notes/104_NEXT_ASTRA_HANDOFF_AFTER_ANALYTICAL_INTEGRATION_20261029.md) bounds subsequent Astra signed-feedback decision |
+
 ## Next reply prompt
 
-> Continue **[E] CTF-E08 R15 — Sol**, the fixed nine-check assessment in
-> CTF-E08_RADIAL_LOG_SLOPE_ATTRACTION_ASSESSMENT_R15_20261029.md.
+> Continue **[E] CTF-E08 R16 — Sol**, the fixed seven-check assessment in
+> CTF-E08_MASS_FREE_FEEDBACK_CLOSURE_ASSESSMENT_R16_20261029.md.
 > Read the root workflow, result/avoid indexes, Overview05/Progress05,
-> Note98, Review49, Reference17 and Continuation99. R13/R14 are accepted;
-> R15 is complete in-note, pending assessment. Audit complete-source
-> seed, noncircular regularity and commuted comparison, slope/average,
-> defect-paid width, H1/energy selection and original feedback derivatives.
-> Preserve physical mass, unchanged source/alpha, actual forcing,
-> residual/preparation/sphere/inner ball, equally informed direct method
-> and Sol's R5 manuscript. Return one qualified assessment, research and
-> model-continuation note; stop without scan, new mechanism or integration.
-> Preserve this chat's unique history identity across model changes.
+> Note101, Review51 and Continuation102. Audit dependency separation,
+> exact signed defect, completed pointwise envelope, local barriers,
+> symbolic F(L)>L failure, genuine weighted-square control and preservation.
+> R15 remains accepted with physical mass. Return acceptance, correction
+> or scoped rejection; do not infer an actual alpha violation or universal
+> impossibility from a failed allowance. No new mechanism, scan or
+> integration. Preserve each actual chat's unique history identity.
 
+
+After that disposition, the requested next-Astra research/model handoff is
+[Note104](../notes/104_NEXT_ASTRA_HANDOFF_AFTER_ANALYTICAL_INTEGRATION_20261029.md). E05 R6 is complete; do not repeat the integration
+or silently turn it into an R16 assessment.
 
 [overview]: ../research-overview/05_CONSERVATIVE_THETA_FLOW_ESTIMATES_RESEARCH_OVERVIEW_20261029.md
 [previous]: 04_CONSERVATIVE_THETA_FLOW_RESEARCH_PROGRESS_20261028.md
