@@ -1,11 +1,19 @@
 # Radial theta collision reviews
 
-Latest research review: [45 — complete carrier reduction](45_COMPLETE_CARRIER_REDUCTION_INTERNAL_REVIEW_R13_20261029.md),
+Latest research review: [48 — E08 R14 fixed-candidate entropy assessment](48_FIXED_CANDIDATE_ENTROPY_E08_R14_ASSESSMENT_20261029.md), **accepted without mathematical correction on all seven obligations**.
+29 October 2026, prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol / actual effort ultra**, chat0036. Different-model internal
+assessment with three read-only Sol contributions and shared premises;
+no specialist/formal independence. Universal entropy failure retains its
+exact mass–energy/H1 state-class scope; actual attraction remains open.
+[47 — proof-author internal review](47_FIXED_CANDIDATE_ENTROPY_INTERNAL_REVIEW_R14_20261029.md) is preserved as issued.
+
+Historical research review: [45 — complete carrier reduction](45_COMPLETE_CARRIER_REDUCTION_INTERNAL_REVIEW_R13_20261029.md),
 29 October 2026, gpt-6-astra / ultra, chat0033. Same-model contributing
 checks with shared premises; fixed E08 R13 is pending. Review44 remains
 the completed E05 R5 editorial assessment.
 
-Latest research review: [42 — common-carrier and centered production](42_COMMON_CARRIER_AND_PRODUCTION_INTERNAL_REVIEW_R12_20261029.md),
+Historical research review: [42 — common-carrier and centered production](42_COMMON_CARRIER_AND_PRODUCTION_INTERNAL_REVIEW_R12_20261029.md),
 29 October 2026, gpt-6-astra / ultra, chat0033. Same-model contributing
 checks with shared premises; fixed E08 R12 assessment pending.
 
@@ -110,3 +118,7 @@ different-model internal assessment.
 - [44 — E05 R5 common-carrier manuscript integration](44_COMMON_CARRIER_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md): complete; accepted Notes82–83/Review43 integrated with full initial/mismatch/sphere/centered-production costs and unchanged physical-margin scope. Final built-in compilation succeeds; no detailed log or fresh visual pass. All 21 prior proofs and 199 protected research/companion files preserved. For Edward Baker with LLM assistance, gpt-6.1-sol / actual effort ultra, existing chat0034, 29 October 2026; same-parent editorial checks with three read-only contributions, prior overlap/shared premises, no specialist independence.
 
 - [46 — E08 R13 complete-carrier assessment](46_COMPLETE_CARRIER_REDUCTION_E08_R13_ASSESSMENT_20261029.md): accepted without mathematical correction at (1/4,2) in the inherited prepared radial/common-path class. All ten balance/window/polarization, feedback/forcing, scalar-energy and candidate/entropy/control obligations pass. Unique stationary candidate is not attraction. Both manuscripts, 19 issued inputs and 229 protected files preserved. For Edward Baker with LLM assistance, gpt-6.1-sol / actual effort ultra, existing chat0034, 29 October 2026; three read-only contributing audits, prior overlap/shared premises, no specialist/formal independence.
+
+- [49 — R15 radial logarithmic-slope attraction internal review](49_RADIAL_LOG_SLOPE_ATTRACTION_INTERNAL_REVIEW_R15_20261029.md): complete-source seed, noncircular comparison, defect-paid contraction and actual H1/feedback limits; same-model parent/contributor review, E08 pending. Edward Baker, substantial LLM assistance, gpt-6-astra / ultra, chat0035, 29 October 2026.
+
+- [50 — E08 R15 radial logarithmic-slope attraction assessment](50_RADIAL_LOG_SLOPE_ATTRACTION_E08_R15_ASSESSMENT_20261029.md): all nine fixed obligations accepted without mathematical correction at (1/4,2), retaining the accepted physical-vector-mass inputs. Complete source/endpoints, noncircular comparison, actual-defect squeezing, quantitative H1/parameter and genuine original feedback limits pass. R14 preserved; no theta exclusion or integration. Edward Baker, substantial LLM assistance, gpt-6.1-sol / ultra, chat0037, 29 October 2026; three read-only contributor audits plus parent, shared inherited premises, no specialist/formal independence.

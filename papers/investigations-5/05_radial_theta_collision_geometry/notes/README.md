@@ -1,6 +1,15 @@
 # Radial theta collision notes
 
-Current assessment: **E08 R13 accepted without mathematical correction**.
+Current assessment: **E08 R14 accepted without mathematical correction
+on all seven obligations**. [Review48](../reviews/48_FIXED_CANDIDATE_ENTROPY_E08_R14_ASSESSMENT_20261029.md), [Return96](96_FIXED_CANDIDATE_ENTROPY_R14_E08_RESEARCH_RETURN_20261029.md) and [Continuation97](97_ENTROPY_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md) record the scoped entropy failure and actual-path/topology payments.
+**Next: [B] CTF-B02 actual-carrier attraction — Astra**, one stronger paid
+actual-path estimate or another mechanism; E07 convergence is not ready.
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol / actual
+effort ultra**, chat0036, 29 October 2026. Shared inherited premises remain;
+internal different-model assessment, no specialist independence. R5 main
+manuscript and companion are preserved. Earlier routing below is historical.
+
+Historical assessment: **E08 R13 accepted without mathematical correction**.
 [Review46](../reviews/46_COMPLETE_CARRIER_REDUCTION_E08_R13_ASSESSMENT_20261029.md), [Return92](92_COMPLETE_CARRIER_R13_E08_RESEARCH_RETURN_20261029.md) and [Continuation93](93_COMPLETE_CARRIER_R13_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md) record the complete balance/feedback result and remaining scalar-attraction
 gap. Next: **[B] CTF-B02 scalar-attraction decision — Astra**, no route
 selected. For Edward Baker with LLM assistance, gpt-6.1-sol / ultra,
@@ -22,7 +31,7 @@ bookmark leaves the CTF task states below unchanged. 28 October 2026;
 prepared for Edward Baker with substantial LLM assistance, gpt-6-astra /
 xhigh.
 
-**Current continuation:** [93 — R13 assessment and model continuation](93_COMPLETE_CARRIER_R13_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md).
+**Historical R13 continuation:** [93 — R13 assessment and model continuation](93_COMPLETE_CARRIER_R13_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md).
 **Next: [B] CTF-B02 scalar-attraction decision — Astra**, one paid
 stability/weak-forcing-transfer strategy or scoped failure. No mechanism
 selected. [Return92](92_COMPLETE_CARRIER_R13_E08_RESEARCH_RETURN_20261029.md) and [Review46](../reviews/46_COMPLETE_CARRIER_REDUCTION_E08_R13_ASSESSMENT_20261029.md) record acceptance and exact remaining scope. Earlier continuations
@@ -233,3 +242,24 @@ checking with shared inherited premises.
 For Edward Baker with substantial LLM assistance, gpt-6.1-sol / actual
 effort ultra, existing chat0034, 29 October 2026; internal assessment with
 prior contributor overlap and shared inherited premises.
+
+- [94 — fixed-candidate entropy obstruction](94_FIXED_CANDIDATE_ENTROPY_OBSTRUCTION_B02_R14_20261029.md): proof of H1-local positive entropy production at exact mass/energy; actual entropy/Fisher/forcing and radial topology costs; Astra/ultra chat0035.
+- [95 — R14 proof disposition and model continuation](95_ENTROPY_ROUTE_DISPOSITION_AND_MODEL_CONTINUATION_R14_20261029.md): historical seven-check E08 handoff, preserved as issued.
+- [96 — E08 R14 research return](96_FIXED_CANDIDATE_ENTROPY_R14_E08_RESEARCH_RETURN_20261029.md): all seven checks accepted; precise actual-path and control limitations; Sol/ultra chat0036.
+- [97 — entropy assessment and model continuation](97_ENTROPY_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md): next B02/Astra actual-path estimate or mechanism decision, E07 gate and unique chat0036 identity.
+
+- [98 — actual-carrier radial logarithmic-slope attraction](98_RADIAL_LOG_SLOPE_ATTRACTION_B02_R15_20261029.md): complete in-note H1 attraction and both feedback limits; complete-source seed and actual-path costs paid, physical mass retained, E08 pending.
+- [99 — R15 research and model continuation](99_RADIAL_ATTRACTION_AND_MODEL_CONTINUATION_R15_20261029.md): fixed nine-check E08/Sol next action, no E07 execution or integration, preserved chat0035 identity.
+
+Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra /
+actual effort ultra, existing chat0035, 29 October 2026. Same-model
+internal checks with shared premises; R14 entropy obstruction remains valid.
+
+- [100 — next Astra handoff after radial attraction](100_NEXT_ASTRA_HANDOFF_AFTER_RADIAL_ATTRACTION_20261029.md): supplemental conditional B02 physical-mass dependency decision; E08 R15/Sol remains immediate priority, no new mechanism or result selected. Astra/ultra, existing chat0035, 29 October 2026.
+
+- [E08 R15 research return](CTF_E08_R15_RADIAL_ATTRACTION_RESEARCH_RETURN_20261029.md): nine checks accepted without mathematical correction; actual H1 attraction and beta/original-alpha limits under the accepted physical mass; Sol/ultra chat0037.
+- [R15 assessment and model continuation](CTF_E08_R15_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md): accepted branch of Note100, next B02/Astra physical-mass dependency decision, exact chat0035/chat0037 identities and pasteable prompt.
+
+Prepared for Edward Baker with substantial LLM assistance, gpt-6.1-sol /
+actual effort ultra, chat0037, 29 October 2026. Internal different-model
+assessment with shared inherited premises, no specialist independence.

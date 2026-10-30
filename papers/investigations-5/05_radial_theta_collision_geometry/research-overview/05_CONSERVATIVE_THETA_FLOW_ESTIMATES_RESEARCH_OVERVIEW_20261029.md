@@ -63,13 +63,69 @@ limit and unique stationary candidate. The candidate is not a profile or
 coefficient convergence theorem. This internal different-model assessment
 retains prior contributor overlap and shared inherited premises.
 
-**Default next: [B] CTF-B02 scalar-attraction decision — Astra**, select
-one state-dependent scalar stability route with a weak-forcing transfer
-contract, or scoped failure. [Continuation93][next] supplies model/history
-guidance. No route or new revision selected; a distinct physical-margin
-benefit is an alternative. Later E05 integration requires a bounded
-assignment. [Progress05][progress] owns status; parent partial, E03/B03
-gated. The R5 manuscript and companion remain unchanged.
+**CTF-B02 R14 is complete as a precisely scoped failed entropy route.**
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra /
+actual effort ultra**, chat0035, 29 October 2026.
+[Note94](../notes/94_FIXED_CANDIDATE_ENTROPY_OBSTRUCTION_B02_R14_20261029.md) proves positive fixed-candidate entropy production at smooth
+positive radial states of exact candidate mass/energy, arbitrarily close
+in H1. This defeats universal monotonicity in that class; it does not
+establish actual-carrier nonconvergence or exclude stronger actual-path
+estimates. Uniform peak/higher-derivative bounds are not part of the
+counterexample. The actual entropy chain rule, integrated Fisher cost
+and special forcing pairing are paid. Radial H1 additionally gives an
+H-minus-one forcing tail and spatial L2 compactness, without stationarity.
+
+[Review47](../reviews/47_FIXED_CANDIDATE_ENTROPY_INTERNAL_REVIEW_R14_20261029.md) is the proof-author same-model internal checking.
+**CTF-E08 R14 is complete: accepted without mathematical correction on
+all seven fixed obligations** in [Review48](../reviews/48_FIXED_CANDIDATE_ENTROPY_E08_R14_ASSESSMENT_20261029.md); [Return96](../notes/96_FIXED_CANDIDATE_ENTROPY_R14_E08_RESEARCH_RETURN_20261029.md) records the consequence.
+29 October 2026, **gpt-6.1-sol / actual effort ultra**, new unique chat0036,
+*Assess CTF-E08 R14 obligations*. Three read-only Sol contributors and
+parent checking retain shared premises; no specialist/formal independence.
+The ten issued hashes, packet and 266 protected files are unchanged.
+
+The R14 entropy route stopped at that scoped failure. Its historical
+continuation was B02/Astra; the next author-requested return is below.
+
+**CTF-B02 R15 proof return — historical pending-at-issue status.**
+29 October 2026, **gpt-6-astra / actual effort ultra**, existing chat0035.
+[Note98](../notes/98_RADIAL_LOG_SLOPE_ATTRACTION_B02_R15_20261029.md) proves H1 attraction of the actual prepared carrier to
+h_lambda*, and beta(h),alpha→lambda*, at (T,A)=(1/4,2). The original
+complete source and unit preparation pay a positive finite logarithmic-
+slope seed. Linear commuted comparison preserves an interval; beta is
+a weighted slope average, and scalar envelope width contracts with the
+paid R13 coefficient defect. Gaussian normalization, an explicit spatial
+gradient estimate and the energy limit select the stationary candidate.
+Original W-gradient convergence also checks its genuine feedback quotient.
+
+At proof issue this closed the chosen actual-attraction question in-note,
+pending the now-completed fixed assessment below. It does not repair
+universal entropy monotonicity, assert
+arbitrary weak-forcing shadowing or remove the physical-mass premise.
+The direct comparator gains the same theorem; residual/preparation,
+sphere and full inner-ball costs remain. [Review49](../reviews/49_RADIAL_LOG_SLOPE_ATTRACTION_INTERNAL_REVIEW_R15_20261029.md) records
+same-model internal checks, without specialist independence. R5 main
+manuscript/companion are unchanged; no scan or integration occurred.
+
+**CTF-E08 R15 is complete: accepted without mathematical correction**
+on all nine fixed checks in [Review50](../reviews/50_RADIAL_LOG_SLOPE_ATTRACTION_E08_R15_ASSESSMENT_20261029.md).
+Assessment: Edward Baker, substantial LLM assistance, **gpt-6.1-sol / ultra**,
+new **chat0037**, 29 October 2026. [The research return](../notes/CTF_E08_R15_RADIAL_ATTRACTION_RESEARCH_RETURN_20261029.md)
+records the actual-carrier H1 attraction and both feedback limits under
+the unchanged accepted physical-mass inputs. Three read-only Sol audits
+and parent synthesis retain shared premises; no specialist/formal review.
+Note98/Review49 and the issued packet remain unchanged; their pending
+status is historical. The R14 entropy obstruction remains accepted.
+
+**Default next: [B] CTF-B02 physical-mass dependency decision — Astra**,
+under the author-requested [Note100](../notes/100_NEXT_ASTRA_HANDOFF_AFTER_RADIAL_ATTRACTION_20261029.md)
+and [assessment continuation](../notes/CTF_E08_R15_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md).
+Its accepted-R15 branch now applies: identify one mass-dependent estimate,
+an independent replacement input and one consumer; original-alpha control
+is the suggested first dependency. No route has been selected or started.
+Do not feed R15 backward through its global-alpha/defect/energy premises.
+[Progress05][progress] owns live status. No R15 E07 convergence execution
+remains. Parent B02 is partial; E03/B03 gated; E05 needs separate scope.
+Both R5 manuscripts and chat0035's original identity are preserved.
 
 ## Established analytical starting point
 
@@ -257,7 +313,9 @@ names finite quantities whose acquisition changes the conclusion.
 | **CTF-E05 R5** | E — Sol, fixed accepted-result integration | Complete in the existing source, Sol/ultra chat0034; final built-in compilation, source checks and recorded preview limitation |
 | **CTF-B02 R13** | B — Astra, complete carrier and feedback comparison | Complete in-note and assessed; full-balance finite corrections and paid feedback interpretation; unique stationary candidate only |
 | **CTF-E08 R13** | E — Sol, ten fixed checks | Complete; accepted without mathematical correction in Review46, existing chat0034; internal shared-premise assessment |
-| **CTF-B02 later revision** | B — Astra, scalar attraction or distinct physical-margin benefit | Default next bounded scalar-attraction decision; no route selected; complete transfer/weak forcing and candidate selection already paid |
+| **CTF-B02 R14 / CTF-E08 R14** | B — Astra / E — Sol | Scoped universal-entropy obstruction accepted in Review48; actual-path attraction not excluded |
+| **CTF-B02 R15 / CTF-E08 R15** | B — Astra / E — Sol | Actual H1 attraction and both feedback limits accepted without correction in Review50, Sol/ultra chat0037, with physical mass retained |
+| **CTF-B02 physical-mass dependency decision** | B — Astra, replacement estimate and consumer remain conceptual | Default next under Note100; ready for one bounded decision, not started; no noncircular replacement selected |
 | **CTF-E03** | E — Sol, finite acquisition | Gated on an estimate that consumes specified finite data; no simulation by default |
 | **CTF-B03** | B — Astra, physical-parameter coverage | Gated on an assessed applicable gain; time, height, multiplicity and endpoint coverage remain separate |
 

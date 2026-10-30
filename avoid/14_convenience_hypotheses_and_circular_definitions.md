@@ -86,3 +86,18 @@ higher-root controls do not close the source-sign obligation.
 [Same-model integration review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/12_relative_chern_hopf_charges/reviews/09_MANUSCRIPT_INTEGRATION_REVIEW_20261021.md);
 prepared for Edward Baker with substantial LLM assistance,
 **gpt-6-astra, actual effort ultra**. No broader impossibility claim.
+
+**Do not reverse a paid physical-mass dependency chain, 29 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol / ultra**, chat0037. The accepted R15 attraction theorem
+retains positive physical vector mass upstream of global original-alpha
+control, R12/R13 synchronization/defect and energy selection. Its complete-
+source preparation seed is independent of that chain; its global squeeze
+is not. [The assessment return](../papers/investigations-5/05_radial_theta_collision_geometry/notes/CTF_E08_R15_RADIAL_ATTRACTION_RESEARCH_RETURN_20261029.md)
+states: “The chain cannot be used backward to remove its own premise”.
+[Review50](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/50_RADIAL_LOG_SLOPE_ATTRACTION_E08_R15_ASSESSMENT_20261029.md)
+accepts the auxiliary theorem without a collision exclusion. A future
+mass-independent estimate must pay its own original-feedback and defect
+costs; substituting n=0 into E0/n is outside the accepted hypotheses.
+This is a preventive dependency warning, not a reported retraction or a
+universal obstruction to replacement estimates.

@@ -457,3 +457,24 @@ and weak integrable forcing do not show an omega-limit is stationary.”
 [Continuation93](../papers/investigations-5/05_radial_theta_collision_geometry/notes/93_COMPLETE_CARRIER_R13_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md)
 routes the remaining scalar-attraction decision; both manuscripts remain
 at their pre-assessment versions.
+
+### Investigation05 R15: actual-carrier attraction, assessed
+
+29 October 2026, prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol / ultra**, chat0037; proof Astra/ultra, chat0035.
+[Note98](../papers/investigations-5/05_radial_theta_collision_geometry/notes/98_RADIAL_LOG_SLOPE_ATTRACTION_B02_R15_20261029.md)
+is **proved in-note**; [Review50](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/50_RADIAL_LOG_SLOPE_ATTRACTION_E08_R15_ASSESSMENT_20261029.md)
+states: “accepted without mathematical correction” on all nine fixed
+checks. At (T,A)=(1/4,2), under accepted R10–R13 physical-mass inputs,
+the actual prepared carrier converges in H1 to the energy-selected Gibbs
+profile and both beta and original alpha converge to its parameter.
+Complete-source preparation pays a positive slope seed; bounded linear
+comparison and a beta weighted-average identity yield defect-paid spatial
+range contraction. Explicit normalization/gradient costs pay H1 and
+original feedback passage. R13 alone did not prove these limits; R15 now
+closes that actual-path gap. R14's scoped entropy obstruction survives.
+The equally informed direct method gets the same theorem. No physical-
+margin removal, new collision exclusion, full-production sign or domain
+expansion. Internal different-model assessment with shared premises,
+not independent specialist review. [Continuation](../papers/investigations-5/05_radial_theta_collision_geometry/notes/CTF_E08_R15_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md)
+routes the next physical-mass dependency decision; R5 manuscripts remain unchanged.

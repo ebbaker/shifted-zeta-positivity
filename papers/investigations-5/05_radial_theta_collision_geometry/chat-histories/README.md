@@ -266,3 +266,56 @@ number, filename and first-capture/creation provenance persist; the R13
 proof remains in chat0033. The preceding final capture succeeded. Current
 counts/configurations/hashes belong to index.json, maintained by the
 official recorder. Prepared for Edward Baker with substantial LLM assistance.
+
+**Chat0035, 29 October 2026:** *Test scalar carrier attraction*, thread
+`01a18a6d-d86b-7c93-8cd7-c22cb9dc2226`, is uniquely registered as
+[0035 public history](0035_2026-10-30T01-30-17Z_test-scalar-carrier-attraction.json).
+Actual model/effort **gpt-6-astra / ultra**. [Note94](../notes/94_FIXED_CANDIDATE_ENTROPY_OBSTRUCTION_B02_R14_20261029.md), [Review47](../reviews/47_FIXED_CANDIDATE_ENTROPY_INTERNAL_REVIEW_R14_20261029.md) and [Continuation95](../notes/95_ENTROPY_ROUTE_DISPOSITION_AND_MODEL_CONTINUATION_R14_20261029.md)
+record the scoped entropy-route failure, paid actual entropy/topology
+costs and next fixed Sol assessment. Prepared for Edward Baker with
+substantial LLM assistance. UTC creation is 30 October; research date is
+29 October in America/New_York. Preserve this identity through model
+changes; prior chats remain distinct. Registry counts/configurations/
+hashes belong to index.json, maintained only by the official recorder.
+
+**Assess CTF-E08 R14 obligations** is uniquely registered as **chat0036**,
+thread `01a18a81-d774-7ee1-8a50-9d7ecf58a338`.
+[Public archive](0036_2026-10-30T01-52-07Z_assess-ctf-e08-r14-obligations.json);
+[registry](index.json). It records [Review48](../reviews/48_FIXED_CANDIDATE_ENTROPY_E08_R14_ASSESSMENT_20261029.md), [Return96](../notes/96_FIXED_CANDIDATE_ENTROPY_R14_E08_RESEARCH_RETURN_20261029.md) and [Continuation97](../notes/97_ENTROPY_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md): all seven fixed R14 obligations accepted without mathematical correction,
+with actual attraction and coefficient limits still open. Prepared for
+Edward Baker with substantial LLM assistance, **gpt-6.1-sol / actual effort
+ultra**, 29 October 2026 America/New_York. Creation is 30 October UTC.
+This new assessment chat is distinct from proof-author chat0035 and Sol's
+earlier chat0034. Preserve its registration across an in-place model change;
+use the official recorder. Current counts, hashes and model configurations
+belong to the registry. Only public parent text is captured; contributing
+agent correspondence is excluded.
+
+**Chat0035 R15 continuation, 29 October 2026:** the author requested
+Continuation97 in this same chat. [Note98](../notes/98_RADIAL_LOG_SLOPE_ATTRACTION_B02_R15_20261029.md),
+[Review49](../reviews/49_RADIAL_LOG_SLOPE_ATTRACTION_INTERNAL_REVIEW_R15_20261029.md) and
+[Continuation99](../notes/99_RADIAL_ATTRACTION_AND_MODEL_CONTINUATION_R15_20261029.md) record the complete
+in-note actual-carrier H1 attraction and feedback-limit argument, pending
+fixed E08 assessment. Prepared for Edward Baker with substantial LLM
+assistance, actual gpt-6-astra / ultra. The original number, filename,
+creation time and first-capture provenance persist. Chat0036 remains
+a distinct Sol assessment conversation. Counts/model records/hashes are
+maintained only by the official history recorder in index.json.
+
+**Chat0035 supplemental Astra handoff, 29 October 2026:**
+[Note100](../notes/100_NEXT_ASTRA_HANDOFF_AFTER_RADIAL_ATTRACTION_20261029.md) records the author-requested conditional
+next B02/Astra decision while E08 R15/Sol remains pending and immediate.
+Actual gpt-6-astra / ultra; no new research result or registration. The
+existing identity and issued R15 artifacts remain unchanged.
+
+The R15 assessment runs in distinct **chat0037**, *Continue CTF-E08 R15
+assessment*, thread `01a18a98-68d1-7703-95cb-7bde96eeaca7`, public archive
+[0037](0037_2026-10-30T02-16-46Z_continue-ctf-e08-r15-assessment.json).
+Chat0035 remains the original proof-author conversation and preserves its
+number, filename and provenance; the real new chat is linked, not merged.
+[Review50](../reviews/50_RADIAL_LOG_SLOPE_ATTRACTION_E08_R15_ASSESSMENT_20261029.md)
+accepts all nine R15 checks without mathematical correction.
+[The model continuation](../notes/CTF_E08_R15_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md)
+records both identities. Prepared for Edward Baker with substantial LLM
+assistance, actual gpt-6.1-sol / ultra, 29 October 2026. Changing counts,
+models and hashes remain exclusively the official recorder's responsibility.
