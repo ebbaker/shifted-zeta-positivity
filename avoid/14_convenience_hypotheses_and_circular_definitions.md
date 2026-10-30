@@ -112,7 +112,12 @@ and local bootstrap budgets give F(L)>L, so they do not close the assumed
 alpha ceiling. Reusing R12 decay there would import that ceiling upstream.
 The failure is limited to this norm-only closure; full-source signed
 estimates are not excluded. [Review51](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/51_MASS_FREE_FEEDBACK_CLOSURE_INTERNAL_REVIEW_R16_20261029.md)
-is same-model internal checking; E08 pending.
+is the same-model check at issue. Subsequent
+[Review53](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/53_MASS_FREE_FEEDBACK_CLOSURE_E08_R16_ASSESSMENT_20261029.md) accepts all seven E08 R16
+obligations without mathematical correction (gpt-6.1-sol / actual effort
+ultra, chat0039; 29 October 2026, prepared for Edward Baker with substantial
+LLM assistance). This different-model internal assessment retains shared
+premises and the same scoped failure; it removes no physical-mass premise.
 
 **Analytical manuscript checkpoint, E05 R6, 29 October 2026.** For Edward
 Baker with substantial LLM assistance, **gpt-6-astra / ultra**, chat0038.
@@ -120,8 +125,8 @@ Baker with substantial LLM assistance, **gpt-6-astra / ultra**, chat0038.
 retains the precise lesson: “The denominator replacement succeeds as
 algebra; the selected norm-only carrier-slope closure fails.” The manuscript
 now derives the actual attraction result before separating this upstream
-mass-dependency test. Integration does not upgrade the pending E08 R16
-assessment or permit the accepted convergence chain to pay its own mass
-premise. [Review52](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/52_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_R6_20261029.md)
+mass-dependency test. Integration did not itself assess R16; the subsequent E08 disposition
+is linked above. Neither integration nor assessment permits the accepted
+convergence chain to pay its own mass premise. [Review52](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/52_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_R6_20261029.md)
 checks that distinction; this is no universal obstruction to a signed
 source-sensitive replacement.

@@ -319,3 +319,14 @@ accepts all nine R15 checks without mathematical correction.
 records both identities. Prepared for Edward Baker with substantial LLM
 assistance, actual gpt-6.1-sol / ultra, 29 October 2026. Changing counts,
 models and hashes remain exclusively the official recorder's responsibility.
+
+Chat0039 is the new *Continue radial theta collision research*, thread
+`01a18ab7-a7f6-7562-aaec-a9b8bbc4678e`, public archive
+[0039](0039_2026-10-30T02-50-54Z_continue-radial-theta-collision-research.json).
+[Review53](../reviews/53_MASS_FREE_FEEDBACK_CLOSURE_E08_R16_ASSESSMENT_20261029.md) accepts the seven R16 checks.
+[Continuation106](../notes/106_MASS_FREE_FEEDBACK_ASSESSMENT_AND_MODEL_CONTINUATION_R16_20261029.md) records the exact model-change
+identity; chats0037 and 0038 remain separate. Prepared for Edward Baker with substantial LLM assistance, gpt-6.1-sol / actual recorded effort ultra, new chat0039, 29 October 2026. Internal different-model assessment with shared inherited premises; no specialist/formal independence. Changing counts, models and hashes remain owned by the official recorder.
+
+New **chat0040**, *Continue radial theta research*, thread `01a18abb-65f6-7f93-b6dd-d4285ddc937b`, is registered in [its sole archive](0040_2026-10-30T02-54-59Z_continue-radial-theta-research.json). [Note107](../notes/107_PREPARED_SIGNED_CROSS_PRODUCTION_TAIL_TEST_R17_20261029.md) records the R17 scoped failed pointwise route; [Continuation108](../notes/108_SIGNED_TAIL_ROUTE_DISPOSITION_AND_MODEL_CONTINUATION_R17_20261029.md) preserves this identity for model changes. Prepared for Edward Baker with substantial LLM assistance, actual gpt-6-astra / ultra, 29 October 2026. Counts, models, sizes and hashes remain owned by the official recorder; chats0038/0039 remain separate.
+
+New **chat0041**, *Continue CTF-E08 R17*, thread `01a18acf-b6b7-7db0-a1db-0e249cc2cc5a`, is registered solely in [its official archive](0041_2026-10-30T03-17-10Z_continue-ctf-e08-r17.json). [Review55](../reviews/55_PREPARED_CROSS_PRODUCTION_TAIL_E08_R17_ASSESSMENT_20261029.md) accepts the six fixed R17 checks; [Continuation110](../notes/110_INTEGRATED_CANCELLATION_AND_MODEL_CONTINUATION_AFTER_R17_20261029.md) records the author-required integrated-cancellation branch and exact identity for model changes. Prepared for Edward Baker with substantial LLM assistance, actual gpt-6.1-sol / ultra, 29 October 2026. Chats0039/0040 remain distinct; changing counts, models, sizes and hashes belong to the official recorder.

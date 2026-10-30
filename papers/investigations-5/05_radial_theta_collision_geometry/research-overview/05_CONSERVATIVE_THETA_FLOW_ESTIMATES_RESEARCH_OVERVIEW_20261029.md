@@ -1,5 +1,7 @@
 # Research overview for conservative theta flow estimates
 
+**Planning transition, 30 October 2026:** [Overview06](06_FIXED_COEFFICIENT_PARAMETER_GEOMETRY_RESEARCH_OVERVIEW_20261030.md#research-plan) now contains the author-requested iterative collision-signature/theta-input plan. [Progress06](../research-progress/06_FIXED_COEFFICIENT_PARAMETER_GEOMETRY_RESEARCH_PROGRESS_20261030.md) is the sole current register and preserves unfinished CTF tasks through its crosswalk. This overview remains the mathematical specification and dated record of the conservative-flow program; its earlier routing and references to Progress05 as current are historical. Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra / actual effort xhigh**, chat0042.
+
 29 October 2026, America/New_York. Prepared for **Edward Baker** with
 substantial LLM assistance. Original planning provenance: Investigation06
 chat0004. Prior primitive integration: Astra/max, chat0031. R11 proof:
@@ -12,7 +14,50 @@ R13 proof: **gpt-6-astra / ultra**, chat0033. Current R13 assessment:
 **gpt-6.1-sol / actual effort ultra**, existing chat0034.
 Each conversation retains its own registration.
 
-**Current manuscript milestone: CTF-E05 R6 complete.** 29 October 2026,
+**Current assessment: CTF-E08 R17 complete, accepted without mathematical
+correction on all six checks.** 29 October 2026, for Edward Baker with
+substantial LLM assistance, **gpt-6.1-sol / actual effort ultra**, new
+chat0041. [Review55](../reviews/55_PREPARED_CROSS_PRODUCTION_TAIL_E08_R17_ASSESSMENT_20261029.md) accepts Note107's exact positive
+complete-source prepared tail C_beta0/(r²h0²)->16n[pi/(1+4pi)]².
+The result stops the specified pointwise density lemma at preparation;
+no integrated sign, alpha failure or physical-mass replacement follows.
+[Return109](../notes/109_PREPARED_CROSS_PRODUCTION_TAIL_R17_E08_RESEARCH_RETURN_20261029.md) and [Record45](../numerics/45_PREPARED_CROSS_PRODUCTION_TAIL_R17_E08_ASSESSMENT_RECORD_20261029.json) bind the
+assessment, input identities and 252 preserved research/source artifacts.
+Different-model internal assessment with shared premises; manuscripts
+remain unchanged.
+
+**Default next: [B] CTF-B02 integrated signed-feedback cancellation decision
+— Astra**, under [Continuation110](../notes/110_INTEGRATED_CANCELLATION_AND_MODEL_CONTINUATION_AFTER_R17_20261029.md). Subsequent research
+must address integrated cancellation while retaining the positive tail,
+as the author requests. One mechanism, independent complete-source input,
+original-alpha consumer, required improvement and finite test must be
+recorded before analysis. No mechanism is selected here; E07 remains
+unready and Progress05 alone owns status. Follow the [result index][results],
+[control screen][controls] and [avoid index][avoid], especially scoped
+exclusions and retained integrated cancellation.
+
+**Historical assessment: CTF-E08 R16 complete, accepted without mathematical
+correction.** 29 October 2026, for Edward Baker with substantial LLM
+assistance, **gpt-6.1-sol / actual recorded effort ultra**, new chat0039.
+[Review53](../reviews/53_MASS_FREE_FEEDBACK_CLOSURE_E08_R16_ASSESSMENT_20261029.md) accepts all seven fixed checks;
+[Return105](../notes/105_MASS_FREE_FEEDBACK_R16_E08_RESEARCH_RETURN_20261029.md) and [record43](../numerics/43_MASS_FREE_FEEDBACK_R16_E08_ASSESSMENT_RECORD_20261029.json)
+bind the result and unchanged inputs. The mass-free envelope is valid;
+its specified local norm substitution gives F(L)>L. The weighted-square
+control shares the seed but has a distinct source/event frequency.
+No physical-mass premise is removed from R10–R15, and no actual-theta
+violation or universal impossibility is inferred. R6-integrated sources
+remain unchanged. Three read-only contributors plus parent synthesis
+are internal different-model checking with shared inherited premises.
+
+**Historical next after R16: [B] CTF-B02 source-sensitive signed-feedback decision —
+Astra**, under [Continuation106](../notes/106_MASS_FREE_FEEDBACK_ASSESSMENT_AND_MODEL_CONTINUATION_R16_20261029.md) and Note104.
+The assessment prerequisite is met; one source input, one signed quantity
+or ceiling gap, one consumer and one finite test must be recorded before
+analysis. No new mechanism is selected here. E07 remains unready;
+Progress05 remains the sole live register. The result/avoid indexes and
+their specific control, target, scope and circularity guidance still apply.
+
+**Historical manuscript milestone: CTF-E05 R6 complete.** 29 October 2026,
 for Edward Baker with substantial LLM assistance, **gpt-6-astra / actual
 effort ultra**, existing chat0038. [Return103](../notes/103_ANALYTICAL_MANUSCRIPT_INTEGRATION_R6_20261029.md),
 [Review52](../reviews/52_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_R6_20261029.md) and [record42](../numerics/42_ANALYTICAL_MANUSCRIPT_INTEGRATION_BUILD_RECORD_R6_20261029.json) bind the in-place
@@ -28,7 +73,7 @@ No mass premise is removed and no new request revision is issued here.
 The [result index][results], [control screen][controls] and [avoid index][avoid]
 remain governing references; Progress05 alone owns live status.
 
-**R16 research return — scoped failed mass-free closure; E08 ready.**
+**Historical R16 research return — scoped failed mass-free closure; E08 ready at issue.**
 29 October 2026, for Edward Baker with substantial LLM assistance,
 **gpt-6-astra / ultra**, new chat0038. [Note101](../notes/101_MASS_FREE_FEEDBACK_DEFECT_AND_SLOPE_CLOSURE_TEST_R16_20261029.md)
 proves a denominator-safe feedback identity and pointwise envelope. Its
@@ -348,9 +393,11 @@ names finite quantities whose acquisition changes the conclusion.
 | **CTF-E08 R13** | E — Sol, ten fixed checks | Complete; accepted without mathematical correction in Review46, existing chat0034; internal shared-premise assessment |
 | **CTF-B02 R14 / CTF-E08 R14** | B — Astra / E — Sol | Scoped universal-entropy obstruction accepted in Review48; actual-path attraction not excluded |
 | **CTF-B02 R15 / CTF-E08 R15** | B — Astra / E — Sol | Actual H1 attraction and both feedback limits accepted without correction in Review50, Sol/ultra chat0037, with physical mass retained |
-| **CTF-B02 R16 physical-mass dependency decision** | B — Astra, one bounded replacement test | Complete in-note: mass-free pointwise envelope, specified norm-only closure fails; E08 pending, no prior mass premise removed |
-| **CTF-E08 R16** | E — Sol, seven fixed checks | Ready; [packet](../research-progress/handoffs/CTF-E08_MASS_FREE_FEEDBACK_CLOSURE_ASSESSMENT_R16_20261029.md), [Continuation102](../notes/102_MASS_DEPENDENCY_DECISION_AND_MODEL_CONTINUATION_R16_20261029.md) |
-| **CTF-E05 R6** | E — Sol; author-selected Astra/ultra chat0038 | Complete: [Return103](../notes/103_ANALYTICAL_MANUSCRIPT_INTEGRATION_R6_20261029.md), native compile/source checks; E08 R16 pending, [next-Astra handoff104](../notes/104_NEXT_ASTRA_HANDOFF_AFTER_ANALYTICAL_INTEGRATION_20261029.md) |
+| **CTF-B02 R16 physical-mass dependency decision** | B — Astra, one bounded replacement test | Complete in-note: mass-free pointwise envelope, specified norm-only closure fails; accepted by E08 R16, no prior mass premise removed |
+| **CTF-E08 R16** | E — Sol, seven fixed checks | Complete; accepted without mathematical correction in [Review53](../reviews/53_MASS_FREE_FEEDBACK_CLOSURE_E08_R16_ASSESSMENT_20261029.md), Sol/ultra chat0039; [Continuation106](../notes/106_MASS_FREE_FEEDBACK_ASSESSMENT_AND_MODEL_CONTINUATION_R16_20261029.md) |
+| **CTF-B02 R17 / CTF-E08 R17** | B — Astra / E — Sol, fixed six-check assessment | Scoped prepared pointwise sign failure accepted without mathematical correction in [Review55](../reviews/55_PREPARED_CROSS_PRODUCTION_TAIL_E08_R17_ASSESSMENT_20261029.md), Sol/ultra chat0041; integrated sign remains open |
+| **CTF-B02 integrated signed-feedback cancellation decision** | B — Astra, unresolved spatial compensation mechanism | Ready for one bounded intake under [Continuation110](../notes/110_INTEGRATED_CANCELLATION_AND_MODEL_CONTINUATION_AFTER_R17_20261029.md); positive tail retained and paid, E07 unready |
+| **CTF-E05 R6** | E — Sol; author-selected Astra/ultra chat0038 | Complete: [Return103](../notes/103_ANALYTICAL_MANUSCRIPT_INTEGRATION_R6_20261029.md), native compile/source checks; E08 R16 subsequently accepted, [next-Astra handoff104](../notes/104_NEXT_ASTRA_HANDOFF_AFTER_ANALYTICAL_INTEGRATION_20261029.md) |
 | **CTF-E03** | E — Sol, finite acquisition | Gated on an estimate that consumes specified finite data; no simulation by default |
 | **CTF-B03** | B — Astra, physical-parameter coverage | Gated on an assessed applicable gain; time, height, multiplicity and endpoint coverage remain separate |
 

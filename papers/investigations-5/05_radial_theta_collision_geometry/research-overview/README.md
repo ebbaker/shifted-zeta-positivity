@@ -1,5 +1,11 @@
 # Research overviews
 
+**Current plan, 30 October 2026:** [Overview06 — fixed-coefficient flows and parameter-space collision geometry](06_FIXED_COEFFICIENT_PARAMETER_GEOMETRY_RESEARCH_OVERVIEW_20261030.md#research-plan) contains both the background and the iterative research plan. [Progress06](../research-progress/06_FIXED_COEFFICIENT_PARAMETER_GEOMETRY_RESEARCH_PROGRESS_20261030.md) is the sole current register; its default next task is **[B] FCG-B01 — Astra**, a bounded collision-signature shortlist with early theta connections. [Dedicated notes folder](../notes/fixed_coefficient_parameter_geometry/README.md). Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra / actual effort xhigh**, chat0042. Progress05 is historical; its unfinished tasks remain in Progress06's crosswalk.
+
+## Historical entries
+
+The dated routing below is retained as history; consult Progress06 for live status.
+
 Current: **CTF-E08 R13 accepted without mathematical correction**.
 [Review46](../reviews/46_COMPLETE_CARRIER_REDUCTION_E08_R13_ASSESSMENT_20261029.md) and [Return92](../notes/92_COMPLETE_CARRIER_R13_E08_RESEARCH_RETURN_20261029.md) identify the ten-check result. **Next: [B] CTF-B02 scalar-attraction
 decision — Astra**, under [Continuation93](../notes/93_COMPLETE_CARRIER_R13_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md). No route selected; parent B02 partial, E03/B03 gated. The R5 source

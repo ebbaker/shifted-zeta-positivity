@@ -479,7 +479,7 @@ expansion. Internal different-model assessment with shared premises,
 not independent specialist review. [Continuation](../papers/investigations-5/05_radial_theta_collision_geometry/notes/CTF_E08_R15_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md)
 routes the next physical-mass dependency decision; R5 manuscripts remain unchanged.
 
-### Investigation05 R16: scoped mass-free closure failure, internal review
+### Investigation05 R16: scoped mass-free closure failure, internally assessed
 
 29 October 2026, for Edward Baker with substantial LLM assistance,
 **gpt-6-astra / ultra**, chat0038. [Note101](../papers/investigations-5/05_radial_theta_collision_geometry/notes/101_MASS_FREE_FEEDBACK_DEFECT_AND_SLOPE_CLOSURE_TEST_R16_20261029.md)
@@ -491,10 +491,15 @@ positive ceiling. A weighted-square collision shares the seed proof at
 its high event frequency. No actual-theta alpha violation or universal
 impossibility is proved; R10–R15 retain their physical-mass premises.
 [Review51](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/51_MASS_FREE_FEEDBACK_CLOSURE_INTERNAL_REVIEW_R16_20261029.md)
-is same-model internal checking; E08 pending, no specialist review.
-Reusable as an exact comparison and a screen against this circular
-closure; [Continuation102](../papers/investigations-5/05_radial_theta_collision_geometry/notes/102_MASS_DEPENDENCY_DECISION_AND_MODEL_CONTINUATION_R16_20261029.md)
-routes the fixed assessment.
+is the original same-model check. **E08 R16 subsequently accepted all
+seven obligations without mathematical correction** in
+[Review53](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/53_MASS_FREE_FEEDBACK_CLOSURE_E08_R16_ASSESSMENT_20261029.md), 29 October 2026,
+prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol /
+actual effort ultra**, chat0039. Different-model internal assessment with
+three contributors and shared inherited premises, no specialist independence.
+Reusable as an exact comparison and a screen against this circular closure;
+[Continuation106](../papers/investigations-5/05_radial_theta_collision_geometry/notes/106_MASS_FREE_FEEDBACK_ASSESSMENT_AND_MODEL_CONTINUATION_R16_20261029.md) routes the next bounded
+source-sensitive signed-feedback decision. No mass premise was removed.
 
 ### Investigation05 analytical manuscript checkpoint, E05 R6
 
@@ -504,8 +509,15 @@ states: “This is an editorial integration, not a new research theorem or an
 E08 R16 assessment.” The existing manuscript now contains full R13 transfer
 and scalar reduction, R14 entropy/topology, R15 actual H1 attraction and
 feedback limits, and R16's scoped failed norm closure. R13–R15 retain their
-accepted assessments; R16 remains pending. Final native compilation passes;
+accepted assessments; R16 was pending at integration and was subsequently
+accepted by E08 R16 above. Final native compilation passes;
 24 inherited proofs and companion preserved. Prior unchanged-manuscript
 statements above describe their at-issue returns. [Review52](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/52_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_R6_20261029.md)
 and [next Astra104](../papers/investigations-5/05_radial_theta_collision_geometry/notes/104_NEXT_ASTRA_HANDOFF_AFTER_ANALYTICAL_INTEGRATION_20261029.md)
 record scope and continuation; no mass removal or new physical coverage.
+
+### Investigation05 R17: prepared pointwise cross-sign failure
+
+29 October 2026, for Edward Baker with substantial LLM assistance, **gpt-6-astra / ultra**, chat0040. [Note107](../papers/investigations-5/05_radial_theta_collision_geometry/notes/107_PREPARED_SIGNED_CROSS_PRODUCTION_TAIL_TEST_R17_20261029.md) is **proved in-note, pending E08 R17 assessment** and states: “This refutes only the everywhere-nonpositive mixed-density lemma in (2).” Complete Gaussian conditioning pays W0/h0->0 and Delta h0/(r²h0)->4kappa², so the specific cross density divided by r²h0² tends to 16n kappa²>0 at the actual mark. No integrated sign, alpha failure or physical-mass removal follows. [Review54](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/54_PREPARED_CROSS_PRODUCTION_TAIL_INTERNAL_REVIEW_R17_20261029.md) is same-model internal checking with shared premises. Reusable for distinguishing raw moment concentration from uniformly conditioned relative bounds; weighted-square events have n=0 and zero cross term.
+
+**R17 assessment update, 29 October 2026.** Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol / ultra**, chat0041. [Review55](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/55_PREPARED_CROSS_PRODUCTION_TAIL_E08_R17_ASSESSMENT_20261029.md) states: “accepted without mathematical correction on all six fixed obligations.” This supersedes the pending assessment status above, preserving Note107's pointwise initial-time scope. The integrable positive tail leaves the full mixed integral and numerator unsigned. Record45 preserves the issued proof and 252 research/source artifacts. [Continuation110](../papers/investigations-5/05_radial_theta_collision_geometry/notes/110_INTEGRATED_CANCELLATION_AND_MODEL_CONTINUATION_AFTER_R17_20261029.md) selects the author-required next B02/Astra integrated-cancellation branch with the positive tail retained. Different-model internal assessment shares inherited premises; no specialist independence or mass replacement.

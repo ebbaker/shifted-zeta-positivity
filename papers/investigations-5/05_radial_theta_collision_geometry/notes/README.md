@@ -1,5 +1,7 @@
 # Radial theta collision notes
 
+**Current exploratory branch, 30 October 2026:** [Fixed-coefficient flows and parameter-space collision geometry](fixed_coefficient_parameter_geometry/README.md) has a dedicated notes folder. The background and iterative research plan are together in [Overview06](../research-overview/06_FIXED_COEFFICIENT_PARAMETER_GEOMETRY_RESEARCH_OVERVIEW_20261030.md#research-plan); [Progress06](../research-progress/06_FIXED_COEFFICIENT_PARAMETER_GEOMETRY_RESEARCH_PROGRESS_20261030.md) is the sole live register. **Next: [B] FCG-B01 — Astra**, a bounded collision-signature shortlist with early theta connections. Existing precursor notes remain at their original paths. Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra / actual effort xhigh**, chat0042. The earlier routing below is historical; unresolved CTF work is preserved in Progress06's crosswalk.
+
 Current integration: **E05 R6 complete**, 29 October 2026, for Edward Baker
 with substantial LLM assistance, **gpt-6-astra / actual effort ultra**,
 chat0038. [Return103](103_ANALYTICAL_MANUSCRIPT_INTEGRATION_R6_20261029.md) records the full R13–R16 analytical manuscript
@@ -273,3 +275,15 @@ internal checks with shared premises; R14 entropy obstruction remains valid.
 Prepared for Edward Baker with substantial LLM assistance, gpt-6.1-sol /
 actual effort ultra, chat0037, 29 October 2026. Internal different-model
 assessment with shared inherited premises, no specialist independence.
+
+- [105 — E08 R16 research return](105_MASS_FREE_FEEDBACK_R16_E08_RESEARCH_RETURN_20261029.md): all seven checks accepted without mathematical correction; valid pointwise envelope, specified failed bootstrap, physical mass retained.
+- [106 — E08 R16 research/model continuation](106_MASS_FREE_FEEDBACK_ASSESSMENT_AND_MODEL_CONTINUATION_R16_20261029.md): next bounded B02/Astra source-sensitive signed-feedback decision; exact chat0039 identity and in-place model-change guidance.
+
+Prepared for Edward Baker with substantial LLM assistance, gpt-6.1-sol / actual recorded effort ultra, new chat0039, 29 October 2026. Internal different-model assessment with shared inherited premises; no specialist/formal independence.
+
+- [107 — prepared signed cross-production tail test](107_PREPARED_SIGNED_CROSS_PRODUCTION_TAIL_TEST_R17_20261029.md): positive actual-theta tail density; scoped pointwise-route failure, no integrated sign or mass replacement.
+- [108 — R17 research and model continuation](108_SIGNED_TAIL_ROUTE_DISPOSITION_AND_MODEL_CONTINUATION_R17_20261029.md): fixed six-check E08/Sol assessment, later integrated-payment boundary and exact chat0040 identity.
+
+Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / actual effort ultra, chat0040, 29 October 2026. Same-model internal checks; E08 R17 pending.
+
+- [109 — R17 E08 research return](109_PREPARED_CROSS_PRODUCTION_TAIL_R17_E08_RESEARCH_RETURN_20261029.md): all six checks accepted without mathematical correction; pointwise initial-time scope, positive tail and physical-mass dependency retained. [110 — Integrated cancellation and model continuation](110_INTEGRATED_CANCELLATION_AND_MODEL_CONTINUATION_AFTER_R17_20261029.md) gives the author-selected next B02/Astra branch and exact chat0041 identity. Prepared for Edward Baker with substantial LLM assistance, gpt-6.1-sol / actual effort ultra, 29 October 2026.

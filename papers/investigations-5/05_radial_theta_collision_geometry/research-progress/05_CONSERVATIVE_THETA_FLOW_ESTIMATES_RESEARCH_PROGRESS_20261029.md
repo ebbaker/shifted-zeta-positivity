@@ -1,12 +1,211 @@
 # Research progress for conservative theta flow estimates
 
+**Historical register — superseded for live status on 30 October 2026 by [Progress06](06_FIXED_COEFFICIENT_PARAMETER_GEOMETRY_RESEARCH_PROGRESS_20261030.md).** The author requested an iterative fixed-coefficient collision-geometry plan, following GPT_RESEARCH_MODEL_WORKFLOW's one-register rule. Progress06 carries the unresolved CTF identities and their dispositions in its crosswalk; completed results, issued packets, and all dated returns below retain their original scope. Earlier default-next instructions below are historical. Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra / actual effort xhigh**, existing chat0042.
+
 29 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**. Prepared in Investigation06 chat0004, **List modified evolution equations**; [the existing archive][history] retains its unique identity.
 
-**This is the sole current research-progress register for Investigation05.** [Overview05][overview] defines the renewed program and bounded task contracts. [Progress04][previous] is historical; its completed returns and stable CTF task meanings are retained through the crosswalk below. This author-requested planning update records the return to the conservative feedback direction after the Investigation06 comparisons.
+**At issue, this was the sole current research-progress register for Investigation05; it is now historical.** [Overview05][overview] defines the renewed program and bounded task contracts. [Progress04][previous] is historical; its completed returns and stable CTF task meanings are retained through the crosswalk below. This author-requested planning update records the return to the conservative feedback direction after the Investigation06 comparisons.
 
 ## Current priority
 
-### CTF-E05 R6 complete — systematic analytical integration
+### CTF-E08 R17 complete — all six obligations accepted
+
+29 October 2026, America/New_York. Prepared for **Edward Baker** with
+substantial LLM assistance, **gpt-6.1-sol (Codex), actual recorded effort
+ultra**, Investigation05 **chat0041**, *Continue CTF-E08 R17*.
+
+**Type E; recommended Sol. Accepted without mathematical correction** in
+[Review55](../reviews/55_PREPARED_CROSS_PRODUCTION_TAIL_E08_R17_ASSESSMENT_20261029.md), parent synthesis and two read-only Sol
+contributors with shared premises; internal different-model assessment,
+not specialist or formal independence. [Return109](../notes/109_PREPARED_CROSS_PRODUCTION_TAIL_R17_E08_RESEARCH_RETURN_20261029.md) and
+[Record45](../numerics/45_PREPARED_CROSS_PRODUCTION_TAIL_R17_E08_ASSESSMENT_RECORD_20261029.json) record the disposition and identities.
+The exact complete-source conditional moment and kernel derivative
+arguments pay the limit C_beta0/(r²h0²)->16n[pi/(1+4pi)]²>0.
+Physical mass makes the counter-sign strict only; n=0 gives C_beta=0.
+
+Only the selected everywhere-nonpositive density lemma fails at initial
+preparation. The positive tail is integrable; the spatial integral,
+Q_beta, full numerator, alpha-beta and positive time remain unsigned.
+All nine inherited input and four issued hashes match, and 252 preexisting
+research/source artifacts, including the packet and manuscripts, are
+preserved. No numerical campaign, changed source/PDE or manuscript edit.
+
+**Default next: [B] CTF-B02 integrated signed-feedback cancellation decision
+— Astra.** The author requires subsequent research to address integrated
+cancellation while retaining the positive tail. [Continuation110](../notes/110_INTEGRATED_CANCELLATION_AND_MODEL_CONTINUATION_AFTER_R17_20261029.md)
+fixes that branch: write one bounded intake with an independent source
+input, original-alpha consumer, quantitative improvement and finite test;
+return one paid integrated argument, scoped failed route or frozen E07
+contract. Ready for conceptual intake; no mechanism selected or tested.
+E07 remains unready, B02 partial and E03/B03 gated. E08 R17 stops here.
+
+### Historical CTF-E08 R17 intake — fixed six-check assessment
+
+29 October 2026, America/New_York. Prepared for **Edward Baker** with
+substantial LLM assistance, actual **gpt-6.1-sol / ultra**, new **chat0041**,
+*Continue CTF-E08 R17*, thread `01a18acf-b6b7-7db0-a1db-0e249cc2cc5a`.
+**Type E; recommended Sol:** the [issued six-check packet](handoffs/CTF-E08_PREPARED_CROSS_PRODUCTION_TAIL_ASSESSMENT_R17_20261029.md)
+fixes proof, dependencies, controls and pointwise-only completion test.
+Notes107–108, Review54, Record44 and accepted R16 are the inputs.
+Parent is sole shared writer; two read-only Sol contributors check the
+Gaussian proof and dependencies/controls with shared inherited premises.
+
+**Scope and stop:** return acceptance, explicit correction or scoped
+rejection of the six obligations; preserve issued files. No new mechanism,
+parameter scan, numerical campaign, changed PDE or manuscript integration.
+An unresolved source/moment/scope premise returns to B02/Astra. Save the
+assessment, concise research return, model continuation and small identity
+record; update this sole register and current pointers. E07 remains unready.
+The author's subsequent-research constraint is **integrated cancellation
+with the positive tail retained**; record it in the next B task, without
+solving or selecting that mechanism inside this E assessment.
+
+### Historical CTF-B02 R17 return — scoped prepared cross-production sign failure
+
+29 October 2026, America/New_York. Prepared for **Edward Baker** with
+substantial LLM assistance, **gpt-6-astra / actual recorded effort ultra**,
+new **chat0040**, *Continue radial theta research*. **Type B; recommended
+Astra:** one source-to-sign mechanism selected at the intake below.
+[Note107](../notes/107_PREPARED_SIGNED_CROSS_PRODUCTION_TAIL_TEST_R17_20261029.md) proves C_beta0/(r²h0²) -> 16n[pi/(1+4pi)]²>0,
+using exact complete-source Gaussian conditioning and a paid second
+moment. Thus the selected everywhere-nonpositive mixed-density lemma
+fails at the actual unit-prepared mark (1/4,2). The calculation also
+pays W0/h0->0 and Delta h0/(r²h0)->4[pi/(1+4pi)]².
+
+This is a scoped pointwise failure, not a sign for the integrated mixed
+term, Q_beta(e), total numerator, alpha-beta or positive time. The old
+source-paid n>0 makes the counter-sign strict only; no mass premise is
+removed. Weighted squares at A=2 share the failure; at their event n=0
+and this cross term is identically zero. No arithmetic discriminator or
+direct-method advantage was found. [Review54](../reviews/54_PREPARED_CROSS_PRODUCTION_TAIL_INTERNAL_REVIEW_R17_20261029.md) records parent
+and three read-only same-model checks with shared premises, not specialist
+or formal independence. All 247 inherited protected artifacts, including
+the manuscripts, are unchanged. No numerical campaign, changed source/PDE,
+parameter expansion, manuscript edit, snapshot, commit or tag.
+
+**Default next: [E] CTF-E08 R17 — Sol**, the [six-check packet](handoffs/CTF-E08_PREPARED_CROSS_PRODUCTION_TAIL_ASSESSMENT_R17_20261029.md).
+[Continuation108](../notes/108_SIGNED_TAIL_ROUTE_DISPOSITION_AND_MODEL_CONTINUATION_R17_20261029.md) records research and model-change guidance.
+E08 R17 is ready, not assessed; E07 remains unready, parent B02 partial,
+E03/B03 gated. A later B decision must select an integrated payment or
+another consumer after assessment; no such route is selected here.
+
+### Historical CTF-B02 R17 intake — complete-source prepared cross-production sign test
+
+29 October 2026, America/New_York. Prepared for **Edward Baker** with
+substantial LLM assistance, **gpt-6-astra / actual recorded effort ultra**,
+new **chat0040**, *Continue radial theta research*. **Type B; recommended
+Astra:** choosing an upstream source-to-signed-production mechanism is
+conceptual. E08 R16 is accepted in Review53. This intake precedes the
+selected mathematical test; parent alone edits shared files.
+
+**One route:** test a pointwise source-based sign for the cross-production
+in Note101 (8), after the prescribed unit Gaussian preparation. With
+`a=int W/M`, `e=W-a h`, define
+`C_beta(X)=-2(a dot e)(2 Delta h+beta d h)`.
+The proposed local sign lemma is `C_beta(0,X)<=0` everywhere, obtained
+from the complete theta density and literal A=2, before trying to
+propagate it on compact intervals before Smax. This is only one necessary
+lemma of the selected pointwise decomposition route; a full nonpositive
+numerator would also need the Q_beta(e) payment. No such payment is
+assumed. The exact original-alpha consumer is `alpha<=beta<=L` on the
+R16 first-exit interval, replacing its failed positive norm allowance
+and avoiding the mass-paid R10 ceiling/R13 defect as inputs.
+
+**Independent input and finite test:** use the exact full radial source,
+unit heat kernel, and raw observation ratio
+`chi(u)=(cos(2u),-u sin(2u))/(1+u^2)`. Derive its true conditional
+Gaussian representation and determine the sign of C_beta at preparation
+by a whole-tail analytical limit. Retain the full source sum, raw sphere
+and entire prepared ball. This is one initial-time test, with no numerical
+acquisition, parameter scan, changed source/PDE or independent scalar
+path. If the pointwise lemma fails at any radius, stop this route and
+record only that scope; neither the integrated cross sign nor the full
+numerator sign then follows.
+
+**Control discriminator and fair comparison:** literal A=2 excludes the
+weighted-square event frequency A*>44, but the complete positive-square
+tail and qualitative preparation premises are shared. The test must
+establish whether the proposed pointwise implication actually exploits
+that distinction; full theta coefficients cannot merely be named as a
+separator. Give the direct comparator the identical conditional formula
+and result. Do not use M2/M0 solely to re-pay the physical mass bound.
+
+**Stop/output:** one proved sign lemma plus all remaining costs fixed into
+E07, or a scoped failed pointwise route with proof and internal audit.
+No global alpha conclusion, manuscript growth or E07 execution follows
+from an identity alone. Save Note107, Review54 and Continuation108;
+issue only a bounded E08 assessment if a substantive proof is obtained.
+The original forcing/residual/raw mismatch/C0/C1/sphere/inner-ball
+obligations remain; no R12–R15 downstream bound is imported upstream.
+
+### Historical CTF-E08 R16 complete — all seven obligations accepted
+
+29 October 2026, America/New_York. Prepared for **Edward Baker** with
+substantial LLM assistance, **gpt-6.1-sol / actual recorded effort ultra**,
+new **chat0039**, *Continue radial theta collision research*. **Type E;
+recommended Sol.** [Review53](../reviews/53_MASS_FREE_FEEDBACK_CLOSURE_E08_R16_ASSESSMENT_20261029.md) accepts all seven
+fixed obligations **without mathematical correction**. [Return105](../notes/105_MASS_FREE_FEEDBACK_R16_E08_RESEARCH_RETURN_20261029.md)
+records the bounded result; [record43](../numerics/43_MASS_FREE_FEEDBACK_R16_E08_ASSESSMENT_RECORD_20261029.json) binds
+the evidence and preservation checks.
+
+The protected denominator, both Delta signs, complete signed expansion,
+quadratic envelope, vector local barriers and spatial endpoints pass.
+The specified positive upper budgets give F(L)>L for every finite L>0;
+this is a failure to close that allowance, not actual alpha>L or a
+universal obstruction. The genuine weighted-square source shares the
+seed proof, has its own A-independent carrier and a double event at
+(T,A*)=(1/4,A*), A* in (44.1303,44.1304). No A=2 event or finite
+all-real threshold is inferred. All prior physical-mass premises,
+actual forcing/residual/preparation/sphere and full inner ball remain.
+
+All four issued R16 hashes and ten inherited non-manuscript hashes match
+record41. Its prior main-manuscript hash is superseded by the documented
+E05 R6 integration; the current source matches record42's final hash.
+The 243 preexisting protected artifacts remain unchanged in this turn.
+The event certificate was inspected, not replayed. Parent synthesis plus
+three read-only Sol audits is internal different-model checking with
+shared inherited premises, not specialist/formal independence. No scan,
+numerical acquisition, new PDE, manuscript edit/build, snapshot, commit
+or tag was made.
+
+**Default next: [B] CTF-B02 source-sensitive signed-feedback decision —
+Astra.** Note104's assessment dependency is satisfied. Before testing,
+record one independently paid complete-source input, one signed quantity
+or ceiling gap, one original-alpha consumer and one finite test.
+[Continuation106](../notes/106_MASS_FREE_FEEDBACK_ASSESSMENT_AND_MODEL_CONTINUATION_R16_20261029.md) gives research and model-change
+guidance. No new mechanism or R17 contract is selected by this assessment;
+E07 remains unready, parent B02 partial, E03/B03 gated. E05 R6 is complete
+and is not repeated. Chat0039 is uniquely registered here; chats0035,
+0037 and 0038 retain their identities.
+
+### Historical CTF-E08 R16 intake — fixed mass-free closure assessment
+
+29 October 2026, America/New_York. Prepared for **Edward Baker** with
+substantial LLM assistance, **gpt-6.1-sol / actual recorded effort ultra**,
+new **chat0039**, *Continue radial theta collision research*. **Type E;
+recommended Sol:** seven algebra/dependency/control checks and the stop
+condition are fixed in the issued R16 packet. Actual thread
+`01a18ab7-a7f6-7562-aaec-a9b8bbc4678e`; this is a new registration,
+not chat0038 or a model change of that conversation.
+
+Scope: assess Note101/Review51 against the seven issued obligations,
+retain the issued hashes, verify current inherited inputs, and return
+acceptance, explicit correction or scoped rejection. Read Notes28,29,67,
+82,90,98 and the genuine weighted-square source; preserve R15's physical
+mass and all R6-integrated manuscript sources. The later E05 R6 integration
+is complete and is not repeated. Parent is sole shared-file writer; three
+read-only contributing audits cover algebra/dependencies, local estimates
+and control/scope. This remains internal review with shared inherited
+premises. No event replay, numerical acquisition, scan, new mechanism,
+independent scalar path, parameter expansion or manuscript integration.
+
+Outputs: assessment in reviews/, research return and model continuation
+in notes/, small provenance/preservation record in numerics/, and this
+sole register plus overview/milestone pointers. Stop at the seven-check
+disposition. The subsequent **[B] CTF-B02 source-sensitive signed-feedback
+decision — Astra** remains governed by Note104; E07 is unready.
+
+### Historical CTF-E05 R6 complete — systematic analytical integration
 
 29 October 2026, America/New_York. Prepared for Edward Baker with substantial
 LLM assistance, **gpt-6-astra / actual recorded effort ultra**, existing
@@ -62,7 +261,7 @@ reported compiler limitation, bounded source/derivation checks, integration
 review/record, updated progress and a next-Astra continuation note. R16's
 fixed assessment is not silently declared complete by integration.
 
-### CTF-B02 R16 complete — scoped failed mass-free closure; E08 ready
+### Historical CTF-B02 R16 complete — scoped failed mass-free closure; E08 ready at issue
 
 29 October 2026, America/New_York. Prepared for Edward Baker with substantial
 LLM assistance, **gpt-6-astra / actual recorded effort ultra**, **chat0038**,
@@ -1740,10 +1939,13 @@ The linked overview owns each contract's mathematical details. This table owns l
 | **CTF-E08 R14** | **E — Sol:** seven fixed proof, cost and scope checks | **Complete — accepted without mathematical correction, Sol/ultra chat0036** | [Review48](../reviews/48_FIXED_CANDIDATE_ENTROPY_E08_R14_ASSESSMENT_20261029.md), [Return96](../notes/96_FIXED_CANDIDATE_ENTROPY_R14_E08_RESEARCH_RETURN_20261029.md); all seven obligations and ten issued hashes pass; 266 protected files unchanged | Scoped universal entropy failure accepted; no actual attraction/nonconvergence or coefficient limit; [Continuation97](../notes/97_ENTROPY_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md) |
 | **CTF-B02 R15 actual-carrier attraction** | **B — Astra:** choose and pay one stability mechanism | **Complete in-note — Astra/ultra chat0035; accepted by E08 R15, Review50** | [Note98](../notes/98_RADIAL_LOG_SLOPE_ATTRACTION_B02_R15_20261029.md); complete-source slope seed, invariant interval, defect-paid width contraction, Gaussian H1/energy selection and original-alpha limit | Stop with this proof; physical mass retained, direct comparator gains the same result; no collision exclusion or integration |
 | **CTF-E08 R15** | **E — Sol:** nine fixed checks | **Complete — accepted without correction, Sol/ultra chat0037, Review50** | [Review50](../reviews/50_RADIAL_LOG_SLOPE_ATTRACTION_E08_R15_ASSESSMENT_20261029.md); physical-mass inputs retained | Actual H1 attraction and both feedback limits accepted; no new physical coverage |
-| **CTF-B02 R16 physical-mass dependency decision** | **B — Astra:** select and test one replacement | **Complete in-note — scoped failed route, Astra/ultra chat0038; E08 pending** | [Note101](../notes/101_MASS_FREE_FEEDBACK_DEFECT_AND_SLOPE_CLOSURE_TEST_R16_20261029.md); protected denominator, complete pointwise envelope, F(L)>L and weighted-square screen | One selected norm-only closure fails; no mass premise removed from accepted chain |
-| **CTF-E08 R16** | **E — Sol:** seven fixed algebra/dependency/control checks | **Ready; not executed** | [Packet](handoffs/CTF-E08_MASS_FREE_FEEDBACK_CLOSURE_ASSESSMENT_R16_20261029.md), [Review51](../reviews/51_MASS_FREE_FEEDBACK_CLOSURE_INTERNAL_REVIEW_R16_20261029.md) | Acceptance, correction or scoped rejection; no new mechanism, scan or integration |
-| **CTF-E05 R6** | **E — Sol:** fixed analytical integration; author selected present Astra chat | **Complete — Astra/ultra chat0038** | [Return103](../notes/103_ANALYTICAL_MANUSCRIPT_INTEGRATION_R6_20261029.md), [Review52](../reviews/52_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_R6_20261029.md), [record42](../numerics/42_ANALYTICAL_MANUSCRIPT_INTEGRATION_BUILD_RECORD_R6_20261029.json); final native compile and bounded source/derivation checks | R13–R16 integrated with assessment scopes retained; 24 prior proofs/companion preserved; E08 R16 pending, [next Astra note104](../notes/104_NEXT_ASTRA_HANDOFF_AFTER_ANALYTICAL_INTEGRATION_20261029.md) |
-| **CTF-E07 replacement execution** | **E — Sol:** only for a future frozen closing argument | **Unready; no new assignment** | R15 attraction is already accepted; R16 supplies no closing replacement estimate | Do not launch a redundant convergence proof or unspecified signed-estimate execution |
+| **CTF-B02 R16 physical-mass dependency decision** | **B — Astra:** one bounded replacement test | **Complete; scoped failure accepted by E08 R16** | [Note101](../notes/101_MASS_FREE_FEEDBACK_DEFECT_AND_SLOPE_CLOSURE_TEST_R16_20261029.md), [Review53](../reviews/53_MASS_FREE_FEEDBACK_CLOSURE_E08_R16_ASSESSMENT_20261029.md) | Protected identity/envelope valid; specified F(L)>L route fails; physical mass unreplaced |
+| **CTF-E08 R16** | **E — Sol:** seven fixed checks | **Complete; accepted without mathematical correction, Sol/ultra chat0039** | [Review53](../reviews/53_MASS_FREE_FEEDBACK_CLOSURE_E08_R16_ASSESSMENT_20261029.md), [Return105](../notes/105_MASS_FREE_FEEDBACK_R16_E08_RESEARCH_RETURN_20261029.md), [record43](../numerics/43_MASS_FREE_FEEDBACK_R16_E08_ASSESSMENT_RECORD_20261029.json) | No actual-theta violation or universal no-go; [next B02/Astra](../notes/106_MASS_FREE_FEEDBACK_ASSESSMENT_AND_MODEL_CONTINUATION_R16_20261029.md) |
+| **CTF-E05 R6** | **E — Sol:** fixed analytical integration; author selected present Astra chat | **Complete — Astra/ultra chat0038** | [Return103](../notes/103_ANALYTICAL_MANUSCRIPT_INTEGRATION_R6_20261029.md), [Review52](../reviews/52_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_R6_20261029.md), [record42](../numerics/42_ANALYTICAL_MANUSCRIPT_INTEGRATION_BUILD_RECORD_R6_20261029.json); final native compile and bounded source/derivation checks | R13–R16 integrated with assessment scopes retained; 24 prior proofs/companion preserved; E08 R16 subsequently accepted in Review53, [next Astra note104](../notes/104_NEXT_ASTRA_HANDOFF_AFTER_ANALYTICAL_INTEGRATION_20261029.md) |
+| **CTF-B02 R17 source-sensitive signed-feedback decision** | **B — Astra:** one prepared pointwise cross-sign test | **Complete; scoped failure accepted by E08 R17** | [Note107](../notes/107_PREPARED_SIGNED_CROSS_PRODUCTION_TAIL_TEST_R17_20261029.md), [Review54](../reviews/54_PREPARED_CROSS_PRODUCTION_TAIL_INTERNAL_REVIEW_R17_20261029.md) | Stops this pointwise density route only; integrated sign and mass replacement remain unpaid |
+| **CTF-E08 R17** | **E — Sol:** six fixed proof/dependency/scope checks | **Complete; accepted without mathematical correction, Sol/ultra chat0041** | [Review55](../reviews/55_PREPARED_CROSS_PRODUCTION_TAIL_E08_R17_ASSESSMENT_20261029.md), [Return109](../notes/109_PREPARED_CROSS_PRODUCTION_TAIL_R17_E08_RESEARCH_RETURN_20261029.md), [Record45](../numerics/45_PREPARED_CROSS_PRODUCTION_TAIL_R17_E08_ASSESSMENT_RECORD_20261029.json); issued packet preserved | Pointwise-only initial-time failure; integrated cancellation remains open |
+| **CTF-B02 integrated signed-feedback cancellation decision** | **B — Astra:** unresolved spatial compensation mechanism | **Ready for one bounded intake; no mechanism selected** | [Continuation110](../notes/110_INTEGRATED_CANCELLATION_AND_MODEL_CONTINUATION_AFTER_R17_20261029.md); author requires retaining and paying the positive tail | One integrated argument, scoped failed route or frozen E07 contract; E07 unready |
+| **CTF-E07 replacement execution** | **E — Sol:** only for a future frozen closing argument | **Unready; no new assignment** | R15 attraction is already accepted; R16 and R17 supply no closing replacement estimate | Do not launch a redundant convergence proof or unspecified signed-estimate execution |
 | **CTF-E05 R3** | **E — editorial integration; author-selected Astra/max** | **Complete** | Primitive lemma and common-path proposition integrated; 17 earlier proofs preserved, built-in compiler success, same-assistant [Review38](../reviews/38_PRIMITIVE_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md) | Historical next was R11, now returned above; no quantitative gain or fresh visual review claimed by this editorial task |
 | **CTF-E08 R10** | **E — Sol:** fixed eight proof/cost/comparison/scope checks | **Complete — accepted without mathematical correction; notation clarified, Sol/ultra, chat0032** | [Review36][r36], [Return69][n69]; 17 frozen inputs, packet and 121 inherited files unchanged | Uniform direct bound accepted; no source-residual or domain advantage; [Continuation70][n70]; no acquisition or manuscript integration |
 | **CTF-B02 R10** | **B — Astra:** select an unpaid uniform-feedback consumer and strongest comparison | **Complete — proved in-note; assessed in [Review36][r36]** | [Note67][n67], [Self-assessment35][r35]; actual Astra/max, chat0031 | Direct method pays uniform G/E0 and alpha with explicit constants; no source-residual advantage or new physical region |
@@ -1868,23 +2070,33 @@ Later rows must give source/return paths, actual model and effort, evidence stat
 
 | 29 October 2026 | CTF-E05 R6 analytical integration | gpt-6-astra / ultra, existing chat0038; three same-model contributors, parent sole shared writer | [Return103](../notes/103_ANALYTICAL_MANUSCRIPT_INTEGRATION_R6_20261029.md), [Review52](../reviews/52_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_R6_20261029.md), [record42](../numerics/42_ANALYTICAL_MANUSCRIPT_INTEGRATION_BUILD_RECORD_R6_20261029.json): full R13–R16 analytical development integrated; final native compile, 24 inherited proofs preserved, no separate PDF/fresh visual check | **[E] CTF-E08 R16 — Sol** still pending; [Note104](../notes/104_NEXT_ASTRA_HANDOFF_AFTER_ANALYTICAL_INTEGRATION_20261029.md) bounds subsequent Astra signed-feedback decision |
 
+| 29 October 2026 | CTF-E08 R16 mass-free closure assessment | gpt-6.1-sol / ultra, new chat0039; three read-only contributing audits, shared inherited premises | [Review53](../reviews/53_MASS_FREE_FEEDBACK_CLOSURE_E08_R16_ASSESSMENT_20261029.md), [Return105](../notes/105_MASS_FREE_FEEDBACK_R16_E08_RESEARCH_RETURN_20261029.md): all seven checks accepted without correction; mass-free pointwise bound and specified F(L)>L failure, genuine control, physical mass retained; 243 protected artifacts unchanged | **[B] CTF-B02 source-sensitive signed-feedback decision — Astra**, [Continuation106](../notes/106_MASS_FREE_FEEDBACK_ASSESSMENT_AND_MODEL_CONTINUATION_R16_20261029.md); one bounded intake before testing; E07 unready |
+
+| 29 October 2026 | CTF-B02 R17 prepared cross-production test | gpt-6-astra / ultra, chat0040; three read-only same-model contributors | [Note107](../notes/107_PREPARED_SIGNED_CROSS_PRODUCTION_TAIL_TEST_R17_20261029.md), [Review54](../reviews/54_PREPARED_CROSS_PRODUCTION_TAIL_INTERNAL_REVIEW_R17_20261029.md): positive actual-theta cross-density tail; pointwise lemma fails, integrated sign and mass unreplaced; 247 artifacts preserved | **[E] CTF-E08 R17 — Sol**, [packet](handoffs/CTF-E08_PREPARED_CROSS_PRODUCTION_TAIL_ASSESSMENT_R17_20261029.md), [Continuation108](../notes/108_SIGNED_TAIL_ROUTE_DISPOSITION_AND_MODEL_CONTINUATION_R17_20261029.md); E07 unready |
+
+| 29 October 2026 | CTF-E08 R17 fixed six-check assessment | gpt-6.1-sol / ultra, new chat0041; two read-only contributors, shared premises | [Review55](../reviews/55_PREPARED_CROSS_PRODUCTION_TAIL_E08_R17_ASSESSMENT_20261029.md), [Return109](../notes/109_PREPARED_CROSS_PRODUCTION_TAIL_R17_E08_RESEARCH_RETURN_20261029.md), [Record45](../numerics/45_PREPARED_CROSS_PRODUCTION_TAIL_R17_E08_ASSESSMENT_RECORD_20261029.json): all six accepted without correction, exact positive-tail coefficient and second moment, pointwise scope; 252 protected artifacts unchanged | **[B] CTF-B02 integrated signed-feedback cancellation decision — Astra**, [Continuation110](../notes/110_INTEGRATED_CANCELLATION_AND_MODEL_CONTINUATION_AFTER_R17_20261029.md); positive tail retained, E07 unready |
+
 ## Next reply prompt
 
-> Continue **[E] CTF-E08 R16 — Sol**, the fixed seven-check assessment in
-> CTF-E08_MASS_FREE_FEEDBACK_CLOSURE_ASSESSMENT_R16_20261029.md.
-> Read the root workflow, result/avoid indexes, Overview05/Progress05,
-> Note101, Review51 and Continuation102. Audit dependency separation,
-> exact signed defect, completed pointwise envelope, local barriers,
-> symbolic F(L)>L failure, genuine weighted-square control and preservation.
-> R15 remains accepted with physical mass. Return acceptance, correction
-> or scoped rejection; do not infer an actual alpha violation or universal
-> impossibility from a failed allowance. No new mechanism, scan or
-> integration. Preserve each actual chat's unique history identity.
+> Continue **[B] CTF-B02 integrated signed-feedback cancellation decision
+> — Astra** after accepted E08 R17. Read Notes101,107–110, Reviews53–55,
+> Record45, Progress05 and the root model/result/avoid guidance. Address
+> integrated cancellation while retaining and paying the known positive
+> tail. Before analysis, record one mechanism, independently available
+> complete-theta/frequency input, original-alpha consumer with its required
+> improvement, and finite test. Pay Q_beta, full spatial compensation,
+> boundaries and propagation; preserve source/vector feedback, actual
+> forcing/residual/preparation, sphere cancellation and the whole ball.
+> Keep weighted-square A=2 and n=0 event tests distinct, give direct analysis
+> identical data, and retain the upstream dependency boundary. Return one
+> paid integrated argument, scoped failed route or fixed E07/Sol contract,
+> then stop. Track progress, notes and official chat history, preserving
+> this chat's identity on an in-place model change.
 
-
-After that disposition, the requested next-Astra research/model handoff is
-[Note104](../notes/104_NEXT_ASTRA_HANDOFF_AFTER_ANALYTICAL_INTEGRATION_20261029.md). E05 R6 is complete; do not repeat the integration
-or silently turn it into an R16 assessment.
+[Continuation110](../notes/110_INTEGRATED_CANCELLATION_AND_MODEL_CONTINUATION_AFTER_R17_20261029.md)
+is the current research/model handoff. E08 R17 is complete: all six checks
+accepted without mathematical correction in Review55. R16 remains accepted.
+E07 is unready; B02 remains partial and E03/B03 gated.
 
 [overview]: ../research-overview/05_CONSERVATIVE_THETA_FLOW_ESTIMATES_RESEARCH_OVERVIEW_20261029.md
 [previous]: 04_CONSERVATIVE_THETA_FLOW_RESEARCH_PROGRESS_20261028.md
