@@ -1,0 +1,15 @@
+# B03 R9 signed transport: same-model self-check
+
+30 October 2026. Prepared for **Edward Baker** with substantial LLM assistance. Actual **gpt-6.1-sol / ultra**, Investigation05 chat0051. Parent reconciles two read-only same-Sol contributions. This is same-model internal proof/implementation checking, with shared complete-source premises; E02 R9 remains a separate, unstarted fixed assessment.
+
+The [proof](../../notes/fixed_coefficient_parameter_geometry/B03_R9_SIGNED_SOURCE_TRANSPORT_20261030.md) and [exact record](../../numerics/fixed_coefficient_parameter_geometry/fcg_b03_r9_signed_transport_20261030.json) were checked for these substantive dependencies:
+
+- Weighted cutoff uses only complete h0..h17; omitted source powers are >=18. The core is all theta modes on [0,1], bounded by complete M4. Every exterior moment pays `source_upper + mode_upper`; retaining only the eight-mode exterior would be insufficient.
+- Factorial geometric ratios pay the complete complement of the finite (32,64) coefficient rectangle. Both signs of time are admitted, and source decay justifies the full expansion.
+- Exact interval polynomial products form D_P before Bernstein bounds. Affine substitution, separable power-to-Bernstein conversion and the physical discriminant discrepancy payment are valid. Bounds cover the full rectangle without sampling/subdivision. Opposite H endpoint signs plus strictly negative H_A imply exactly one simple zero at every time.
+- At N=1, g10=−h1h3, g01=0, so the signed F1 is retained. The independent 2b²rho remains separate. Correct pb is rho²(2u²+3u³+u⁴); its twice differentiated envelope has constant4rho², confirming why the generic primitive X1 rule fails at N=1 even though the direct rule works. The direct tail constants, uniform time slack and exact c normalization are correct.
+- The matched derivative polynomial h1−h3t+bx and its scalar tail prove the reported local derivative floor with the same data. No joint-information or flow advantage follows.
+
+The sole development failure was a reporting cap: e3=1.00263832004e-12 exceeds1e-12. The checker now reports1.1e-12 and retains exact errors in every mathematical cost; no formula/domain/degree/radius changed. Polynomial derivative identities are proved analytically in the note and labeled accordingly in the record, not presented as a runtime formal proof.
+
+All mathematical output thresholds pass in the fixed calculation. Source intervals, original quadrature and tail-guard correctness remain inherited dependencies. This establishes a finite uniform margin across a simple-zero curve, not a height-uniform theta mechanism or RH/Newman result. Each control keeps its own source, domain and failed premise as in the proof. No specialist/formal independence, new source acquisition, source precision replication, parameter scan, manuscript or result-summary promotion is claimed. [Progress06](../../research-progress/06_FIXED_COEFFICIENT_PARAMETER_GEOMETRY_RESEARCH_PROGRESS_20261030.md) owns live status; [continuation](../../notes/fixed_coefficient_parameter_geometry/B03_R9_RETURN_AND_MODEL_HANDOFF_20261030.md) owns the bounded next-action guidance.
