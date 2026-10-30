@@ -1046,3 +1046,34 @@ here; this is not an exclusion of all possible coupled estimates.
 **A pointwise cross-sign can fail while the integrated problem remains open, 29 October 2026.** For Edward Baker with substantial LLM assistance, **gpt-6-astra / ultra**, chat0040. [Note107](../papers/investigations-5/05_radial_theta_collision_geometry/notes/107_PREPARED_SIGNED_CROSS_PRODUCTION_TAIL_TEST_R17_20261029.md) states: “The absolute tail is Gaussian-small and all the integrals in (2) are finite.” It proves positive far-tail mixed density for the actual prepared theta source, stopping only the selected everywhere-nonpositive density lemma. A small raw source moment does not bound the observation-dependent conditional source radius uniformly. [Review54](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/54_PREPARED_CROSS_PRODUCTION_TAIL_INTERNAL_REVIEW_R17_20261029.md) retains the pointwise-only scope: neither the integrated cross term nor the full numerator has been signed. Same-model internal checking; E08 pending.
 
 **R17 assessment update, 29 October 2026.** For Edward Baker with substantial LLM assistance, **gpt-6.1-sol / ultra**, chat0041. [Review55](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/55_PREPARED_CROSS_PRODUCTION_TAIL_E08_R17_ASSESSMENT_20261029.md) accepts all six checks and states: “The positive tail is integrable.” Its integrated payment remains open; a favorable core sign cannot omit that tail. The original pending E08 status above is superseded by this different-model internal assessment with shared premises. [Continuation110](../papers/investigations-5/05_radial_theta_collision_geometry/notes/110_INTEGRATED_CANCELLATION_AND_MODEL_CONTINUATION_AFTER_R17_20261029.md) requires a complete spatial payment, coupled Q_beta control and original-alpha consumer before the next mechanism is tested.
+
+**A regularizing window does not preserve a relative signed margin,
+30 October 2026.** For Edward Baker with substantial LLM assistance,
+**gpt-6-astra / max**, chat0043. [FCG-E02 R1](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/fixed_coefficient_parameter_geometry/01_FCG_E02_R1_POISSON_LOCALIZATION_ASSESSMENT_20261030.md)
+(Sol/ultra, chat0044, different-model internal assessment) accepts B02's
+prepared-cone calculation and states: “The divergent budget measures
+discarded cancellation.” Its endpoint absolute-mode cost grows at rate
+T²/ε although the complete-source absolute integral stays bounded.
+Absolute exterior payment loses exactly Δ=2∫(1−χ)Ψ₊dμ, not a quantity
+proved relative to the vanishing field. Keep this scope: neither every
+fixed-window certificate nor every infinite regrouping is excluded.
+[B03](../papers/investigations-5/05_radial_theta_collision_geometry/notes/fixed_coefficient_parameter_geometry/07_C01_DISPOSITION_AFTER_E02_20261030.md) records scoped inactivity; merely restoring the
+original signed integral supplies no new sign estimate. This prevents a
+repeat of the tested unpaid comparison, not all use of Poisson summation.
+
+
+**Signed coefficients still need a suitable tail and complete boundary,
+30 October 2026.** For Edward Baker with substantial LLM assistance,
+**gpt-6-astra / max**, chat0048.
+[Note22](../papers/investigations-5/05_radial_theta_collision_geometry/notes/fixed_coefficient_parameter_geometry/22_FIXED_DEGREE_TAIL_AND_QUADRATIC_TIME_LIMITS_B03_R4_20261030.md),
+accepted in E02 R4, shows that finite coefficient cancellations do not
+repair the unchanged fixed-radius/finite-cap absolute Cauchy tail at
+arbitrarily high theta frequency. This stops only that allowance.
+[Note26](../papers/investigations-5/05_radial_theta_collision_geometry/notes/fixed_coefficient_parameter_geometry/26_ADAPTIVE_RADIUS_AND_PHASE_ALIGNED_IBP_B03_R5_20261030.md)
+states: “Choosing \(aU=k\pi\) does not cancel this whole boundary.”
+The complete primitive removes its lower endpoint, while the finite
+upper boundary and infinite exterior remain. The adaptive derivative
+formula pays both. Distinguish local and finite numerical improvements
+from efficient global coverage. Adaptive proofs and Sol's subsequent
+finite comparison retain their internal checking status, pending E02 R5;
+the [integration review](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/fixed_coefficient_parameter_geometry/10_ANALYTICAL_MANUSCRIPT_INTEGRATION_E03_R1_SELF_ASSESSMENT_20261030.md) does not upgrade it.

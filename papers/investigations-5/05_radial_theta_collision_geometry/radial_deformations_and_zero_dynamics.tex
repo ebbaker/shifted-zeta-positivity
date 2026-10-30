@@ -9,7 +9,7 @@
 \usepackage{hyperref}
 \definecolor{linkblue}{RGB}{28,65,105}
 \hypersetup{colorlinks=true,linkcolor=linkblue,citecolor=linkblue,urlcolor=linkblue,
- pdftitle={Conservative Theta Flows and Collision Amplification},
+ pdftitle={Theta Collision Geometry and Conservative Flows},
  pdfauthor={Drafted for Edward Baker}}
 \numberwithin{equation}{section}
 \newtheorem{theorem}{Theorem}[section]
@@ -18,47 +18,51 @@
 \newcommand{\dd}{\,\mathrm d}
 \newcommand{\R}{\mathbb R}
 \setlength{\emergencystretch}{2em}
-\title{Conservative Theta Flows and Collision Amplification}
+\title{Theta Collision Geometry and Conservative Flows}
 \author{Drafted for Edward Baker}
-\date{29 October 2026\\[3pt]\small Working manuscript}
+\date{30 October 2026\\[3pt]\small Working manuscript}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-We study a conservative spatial evolution of the complete theta
-observation and its actual frequency derivative. A scalar feedback
-preserves their joint $L^2$ energy, while conservation of their two
-integrals gives a precise dichotomy: simultaneous physical cancellation
-forces finite-time concentration, whereas a supplied positive vector-mass
-margin yields an explicit uniform gradient and feedback bound. The
-complete theta source pays that margin analytically at $(T,A)=(1/4,2)$.
-Its logarithmic source relation survives preparation and evolution with
-a genuine residual, whose weighted energy and each fixed frequency jet
-are then controlled uniformly in auxiliary time.
+We develop source estimates for the physical theta jet $(H,H_A)$ and
+study their consequences under conservative spatial evolution.
+A quadratic heat polynomial gives an exact polynomial combination of
+the two jet components, with a complete signed Taylor remainder.
+Separating an outer analytic neighborhood from an inner parameter ball
+proves monotonicity in radius and retained degree. Whenever the center
+discriminant is nonzero, an explicit scale-invariant radius makes
+degree one sufficient. Integration by parts supplies frequency-dependent
+complex derivative bounds and phase-aligned finite boundaries with
+their full exteriors. A second transfer to the theta primitive removes
+the lower endpoint term of the combined remainder exactly.
 
-The first three jets synchronize in $H^1$ with mass multiples of the
-same moving positive carrier. We extend this comparison to the full
-production and dissipation balance, paying finite absolute correction
-tails without assuming finite original-field dissipation. The actual
-carrier has an integrable feedback defect, a limiting scalar energy,
-and a unique Gibbs candidate at that energy. A universal fixed-candidate
-entropy sign nevertheless fails arbitrarily close to equilibrium in
-$H^1$ at exact mass and energy. The actual theta carrier converges by a
-different argument: the complete source pays an initial radial-slope
-interval, linear commutation propagates it, and the exact feedback
-defect contracts its width. Gaussian normalization and a separate
-gradient estimate yield $H^1$ convergence and the limits of both scalar
-and original feedback.
+One fixed positive spatial coefficient transports a proved regional
+jet margin into an explicit energy lower bound for every auxiliary
+time. Fixed-coefficient evolution is nevertheless bounded at collisions;
+its stationary component then vanishes. We derive its parameter
+geometry and distinguish regional noncollapse from automatic boundedness.
+For the original absolute-moment remainder, every fixed radius and
+finite degree cap eventually fail at high frequency. A separate
+Gaussian example isolates a loss from the quadratic time allowance.
+These scoped results motivate adaptation without proving global coverage.
 
-All these global conclusions retain the upstream physical-mass premise.
-A final protected-denominator comparison avoids an explicit inverse
-mass, but its specified norm-only bootstrap cannot close an alpha
-ceiling. The results provide a coherent quantitative description at an
-already separated mark; they give no new theta collision exclusion or
-de Bruijn--Newman bound. The main arguments are analytical, with
-inherited numerical controls used only as supporting evidence.
+The energy-preserving feedback supplies a complementary description:
+zero vector mass forces a finite collision deadline, while a supplied
+positive margin controls the flow uniformly. Complete source-residual
+estimates, common-carrier synchronization and finite balance corrections
+lead to actual carrier attraction by radial slope contraction. A
+fixed-candidate entropy sign and a specified mass-free closure both
+fail in their stated classes. All arguments retain their physical-mass
+dependencies; no global theta collision exclusion or improved
+de Bruijn--Newman bound follows. Analytical proofs are primary, with
+finite numerical comparisons recorded only as supporting evidence.
 \end{abstract}
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+\clearpage
 
 \section{Introduction}
 
@@ -80,49 +84,62 @@ alternative: zero mass produces finite-time concentration, whereas a
 positive mass margin controls the evolution for all auxiliary time.
 The conserved observation is unchanged in either construction.
 
-The development has four stages. First,
-Theorem~\ref{thm:feedbackdeadline} proves the finite collision deadline
-and its converse. Theorem~\ref{thm:uniformfeedback} then converts a
-positive physical mass margin into uniform radial feedback by an exact
-radial square, a mass--energy--moment inequality and a sliding-interval
-argument. Proposition~\ref{prop:thetamargin} supplies that margin at one
-theta mark without quadrature. These direct bounds set the comparison
-for every later source-based estimate.
+The development separates the source estimate from its spatial
+consumer. First, Theorem~\ref{thm:feedbackdeadline} proves the finite
+collision deadline for the energy-preserving flow.
+Theorem~\ref{thm:uniformfeedback} converts a supplied positive physical
+mass margin into uniform radial feedback. The complete source pays
+such a margin analytically at one mark and on a parameter ball in
+Propositions~\ref{prop:thetamargin} and \ref{fcg:momentcalibration}.
+These direct estimates provide the comparison for later constructions.
 
-Second, we retain the complete logarithmic source relation through
+Second, Section~\ref{fcg:geometry} develops a local certificate that
+uses both physical jet components and can remain positive across a
+simple zero of $H$. Its main quantitative result is
+Theorem~\ref{fcg:radius}: a nonzero center discriminant gives an explicit
+degree-one radius. The radius may shrink, or the retained degree
+increase, with the center frequency. Section~\ref{fcg:ibp} derives
+complete oscillatory error bounds and identifies the exact endpoint
+cancellation obtained by transferring the combined remainder to the
+theta primitive. Section~\ref{fcg:fixedflow} proves the corresponding
+all-time energy floor for one coefficient fixed across the region,
+and derives the fixed family's collision geometry. The limitations in
+Section~\ref{fcg:limits} specify which uniform-budget continuations fail;
+they do not reject the adaptive regional problem.
+
+Third, we retain the complete logarithmic source relation through
 Gaussian preparation and the common feedback path. Its nonzero
 commutator residual has second-order spatial forcing.
 Theorem~\ref{thm:weightedclosure} closes its coupled energy, and
 Theorem~\ref{thm:uniformresidual} makes the full residual and each fixed
 jet uniform at the paid mark. The primitive-duality calculation in
-Section~\ref{sec:primitiveduality} pays all transported test derivatives
-and sphere traces. Exact reconstruction gives no additional signed
-advantage by itself. The literal cosine remains an essential physical
-input; raw source compatibility alone leaves the kernel freedom in
+Section~\ref{sec:primitiveduality} includes all transported test
+derivatives and sphere traces. Exact reconstruction gives no additional
+signed advantage by itself. The literal cosine remains essential;
+raw source compatibility alone leaves the kernel freedom in
 Proposition~\ref{prop:kernelfreedom}.
 
-Third, Theorem~\ref{thm:commoncarrier} synchronizes the first three jets
-with conserved-mass multiples of one moving carrier. Section~\ref{sec:fullcarriertransfer}
-compares the full exact production and dissipation, rather than a single
-selected term. Section~\ref{sec:scalarcarrier} identifies the actual
-feedback defect and the unique Gibbs density at the limiting scalar
-energy. An entropy principle is not automatic:
+Fourth, Theorem~\ref{thm:commoncarrier} synchronizes the first three jets
+with conserved-mass multiples of one moving carrier.
+Section~\ref{sec:fullcarriertransfer} compares the full production and
+dissipation balances. Section~\ref{sec:scalarcarrier} identifies the
+actual feedback defect and the unique Gibbs density at the limiting
+scalar energy. An entropy principle is not automatic:
 Section~\ref{sec:entropyobstruction} constructs smooth positive radial
 states of the exact candidate mass and energy with positive entropy
 production, arbitrarily close in $H^1$. This state-class obstruction
 does not assert nonconvergence of the actual theta orbit.
 
-Finally, Theorem~\ref{r15:attraction} proves that actual convergence by
-radial logarithmic-slope squeezing. The source and fixed preparation
-pay the seed; bounded linear commutation pays the global interval;
-the exact defect pays contraction; normalization and a separate gradient
-identity pay $H^1$ convergence and the original-alpha limit. The
-physical-mass dependency is retained throughout. Section~\ref{sec:massdependency}
-then tests one proposed removal of that dependency. Its denominator-safe
-identity is valid even at zero physical mass, but the completed
-norm-only allowance exceeds every proposed bootstrap ceiling. This
-last conclusion excludes that specified closure, not all possible
-signed estimates from the full source.
+Finally, Theorem~\ref{r15:attraction} proves actual convergence by radial
+logarithmic-slope contraction. The source and fixed preparation bound
+the initial slope; linear commutation preserves its interval; the exact
+defect contracts its width; normalization and a separate gradient
+identity give $H^1$ convergence and the original-feedback limit.
+The physical-mass dependency remains throughout.
+Section~\ref{sec:massdependency} tests one proposed removal: its
+denominator-safe identity is valid even at zero physical mass, but the
+completed norm-only allowance exceeds every proposed bootstrap ceiling.
+This excludes that specified closure, not all signed source estimates.
 
 We distinguish physical time $t$, physical frequency $a$, and auxiliary
 time $s\ge0$. A spectral derivative varies $a$ while the feedback mark
@@ -1074,6 +1091,91 @@ Substitution into \eqref{eq:uniformconstant} proves
 \eqref{eq:uniformtheta}. Positive rescaling of the source changes none
 of these gradient or feedback constants.
 
+\subsection{A complete-source margin on a parameter ball}
+\label{fcg:momentsection}
+
+The same elementary principle can be made regional before any physical
+jet is evaluated. Write
+\[
+ P_j(T)=\int_0^\infty u^j e^{Tu^2}\Phi(u)\dd u,
+ \qquad
+ c_{\rm mom}=1-\frac{A_+^2P_2(T_+)}{2P_0(T_-)}.
+\]
+For a region with $T_-\le T\le T_+$ and $|A|\le A_+$,
+positivity of the complete source gives
+\begin{equation}\label{fcg:momentmargin}
+ H(T,A)\ge P_0(T_-)-\tfrac12 A_+^2P_2(T_+)
+             =P_0(T_-)c_{\rm mom}.
+\end{equation}
+The denominator in $c_{\rm mom}$ is positive independently of the
+physical observation. Its sign is a sufficient source condition, rather
+than a definition using an unknown minimum of $|(H,H_A)|$.
+
+\begin{proposition}[An analytical regional calibration]
+\label{fcg:momentcalibration}
+On the closed Euclidean parameter ball
+\[
+ \mathcal B_0=\{(T,A):(T-1/4)^2+(A-2\sqrt6)^2\le1/256\},
+\]
+take $T_-=3/16$, $T_+=5/16$, and $A_+=2\sqrt6+1/16<5$.
+Then
+\begin{equation}\label{fcg:momentconstants}
+ P_0(T_-)>\frac3{50},\qquad P_2(T_+)<\frac3{800},\qquad
+ c_{\rm mom}>\frac7{32},\qquad H(T,A)>\frac{21}{1600}.
+\end{equation}
+These bounds include every theta summand and the whole source half-line.
+\end{proposition}
+\begin{proof}
+Lemma~\ref{lem:primitivetransfer} with $f=1$ gives
+\[
+ P_0(0)=\frac1{16}-\frac18\int_0^\infty\psi_\theta(u)\dd u.
+\]
+Since $n^2\ge1+3(n-1)$,
+\[
+ \mathcal S:=\sum_{n\ge1}n e^{-\pi n^2}
+ \le\frac{e^{-\pi}}{(1-e^{-3\pi})^2}<\frac1{21}.
+\]
+For the rational comparison, $\pi>31/10$, $e^3>20$ and
+$e^{1/10}>11/10$ give $e^\pi>22$; substitution gives
+$(1/22)(1-22^{-3})^{-2}<1/21$. Also $e^{4u}\ge1+4u$ and
+$4\pi n^2-1>11$ imply
+\[
+ \int_0^\infty\psi_\theta\dd u
+ \le\sum_{n\ge1}\frac{e^{-\pi n^2}}{4\pi n^2-1}
+ <\frac1{231}.
+\]
+Thus $P_0(T_-)\ge P_0(0)>1/16-1/1848>3/50$.
+
+For an upper bound on $P_2$, discard only the negative term in each
+positive theta summand. Using $e^{4u}\ge1+4u+8u^2$ yields
+\[
+ e^{T_+u^2}\Phi(u)
+ \le2\pi^2\sum_{n\ge1}n^4 e^{-\pi n^2}
+ e^{-(4\pi n^2-9)u-(8\pi n^2-T_+)u^2}.
+\]
+The linear exponent is nonpositive and
+$8\pi n^2-5/16\ge n^2(8\pi-5/16)>24n^2$.
+Tonelli's theorem and the Gaussian integral therefore give
+\[
+ P_2(T_+)
+ \le\frac{\pi^{5/2}}{2(8\pi-5/16)^{3/2}}\mathcal S
+ <\frac5{64}\mathcal S<\frac5{1344}<\frac3{800}.
+\]
+Here $\pi^2<10$, $\sqrt\pi<9/5$ and $\sqrt{24}>24/5$
+prove the displayed prefactor bound. Finally
+$A_+^2P_2(T_+)/[2P_0(T_-)]<25/32$ and
+\eqref{fcg:momentmargin} prove the remaining claims.
+\end{proof}
+
+This calibration is analytical \cite{FCGMoment}; it is not a new
+literature-level zero-free region. It also exposes why a joint-jet
+construction is needed. For a nonnegative source of positive mass away
+from $u=0$, the inequality $\cos(Au)>1-A^2u^2/2$ is strict after
+integration when $A\ne0$. At any zero of $H$ one therefore has
+$P_0(T)-A^2P_2(T)/2<0$. Every containing regional moment bound
+\eqref{fcg:momentmargin} fails there, even if the zero is simple and
+$H_A\ne0$. The following construction preserves both jet components.
+
 \subsection{Scope of the direct method}
 
 The source slope is sufficient at this low mark; positive weighted
@@ -1096,6 +1198,886 @@ budgets make Theorem~\ref{thm:uniformfeedback} uniform on any such
 rectangle. Each point was separated before auxiliary evolution;
 the flow supplies quantitative regularity on that domain.
 
+
+\section{Local separation by a quadratic heat polynomial}
+\label{fcg:geometry}
+
+A useful regional estimate must allow an ordinary zero of $H$ while
+excluding simultaneous cancellation of $H$ and $H_A$. The quadratic
+heat polynomial supplies an elementary polynomial combination of the
+two components. Forming its complete signed remainder first preserves
+cancellations that separate component estimates lose
+\cite{FCGQuadratic,FCGAdaptive}.
+
+\subsection{The reference polynomial and its exact remainder}
+
+Fix a real center $(\tau,a)$ with $\tau>0$, and write
+\[
+ t=T-\tau,\qquad x=A-a,\qquad
+ h_j=\partial_A^jH(\tau,a),\qquad b=h_2.
+\]
+Throughout this section $t,x$ are offsets; $T,A$ are the physical
+parameters. Choose an outer analytic radius $R>0$ and an inner radius
+$0<r\le R/2$, $r<\tau$. Denote the real closed ball by
+$\mathcal B_r=\{t^2+x^2\le r^2\}$ and the complex bidisk by
+$\mathbb D_R=\{|t|,|x|\le R\}$. The complete theta transform is jointly
+entire: on any complex compact, the integrand and every fixed
+derivative are dominated by a polynomial in $u$ times
+$e^{C u^2+C u}\Phi(u)$, integrable by Lemma~\ref{lem:tails}.
+
+Set
+\begin{align}
+ P(t,x)&=h_0+h_1x+b(x^2/2-t),&
+ D_0&=h_1^2-2bh_0,\label{fcg:polynomial}\\
+ \mathcal R_0&=H(\tau+t,a+x)-P(t,x),\nonumber\\
+ \mathcal R_1&=H_A(\tau+t,a+x)-P_x(t,x),\nonumber\\
+ \mathcal G(t,x)&=-2b\mathcal R_0+(h_1+bx)\mathcal R_1,&
+ w(t,x)&=(-2b,h_1+bx).\label{fcg:remainder}
+\end{align}
+The sign in the $t$ term follows from $H_T=-H_{AA}$.
+Direct expansion, with $J=(H,H_A)$, gives
+\begin{equation}\label{fcg:bezout}
+ P_x^2-2bP=D_0+2b^2t,\qquad
+ w\cdot J=D_0+2b^2t+\mathcal G(t,x).
+\end{equation}
+This is the B\'ezout identity used here; no resultant theorem is
+needed. At a simple center zero, $h_0=0$, $h_1\ne0$, its center
+discriminant is $D_0=h_1^2>0$.
+
+\begin{lemma}[A complete complex remainder bound]
+\label{fcg:complexremainder}
+Suppose $U_3,U_4$ are nonnegative bounds for $|H_{AAA}|,|H_{AAAA}|$
+on $\mathbb D_R$. For $0\le z\le R$ put
+\begin{align}
+ e_0(z)&=(z^3/6+z^2)U_3+(z^2/2)U_4,&
+ e_1(z)&=(z+z^2/2)U_3,\label{fcg:componenterrors}\\
+ M_G&=2|b|e_0(R)+(|h_1|+R|b|)e_1(R).\label{fcg:outerbound}
+\end{align}
+Then $|\mathcal R_i|\le e_i(z)$ on $\mathbb D_z$, and
+$|\mathcal G|\le M_G$ on $\mathbb D_R$.
+\end{lemma}
+\begin{proof}
+Taylor-expand $H(\tau,a+x)$ to order two in $x$. Its remainder is
+at most $|x|^3U_3/6$. Next write
+\[
+ H(\tau+t,a+x)=H(\tau,a+x)-tH_{AA}(\tau,a+x)
+                         +\mathcal E_t,
+ \qquad |\mathcal E_t|\le |t|^2U_4/2.
+\]
+The difference $H_{AA}(\tau,a+x)-b$ is at most $|x|U_3$.
+Thus $|\mathcal R_0|\le(|x|^3/6+|tx|)U_3+|t|^2U_4/2$.
+For $H_A$, first-order expansion in $x$ has remainder
+$|x|^2U_3/2$, and its time increment is at most $|t|U_3$.
+All integral Taylor paths stay in the complex bidisk. These estimates
+prove \eqref{fcg:componenterrors}; the row in
+\eqref{fcg:remainder} proves \eqref{fcg:outerbound}.
+\end{proof}
+
+One immediate choice is the complete positive moment
+\begin{equation}\label{fcg:plainmoments}
+ U_j=\mathcal M_j(R):=
+ \int_0^\infty u^j e^{(\tau+R)u^2+Ru}\Phi(u)\dd u,
+ \qquad j=3,4.
+\end{equation}
+Section~\ref{fcg:ibp} derives smaller alternatives that retain
+oscillation. The separation theorem requires any valid bounds, and
+is consequently independent of how those bounds are acquired.
+
+\subsection{Signed coefficients and the degree payment}
+
+Write $H(\tau+t,a+x)=\sum f_{mn}t^mx^n$ and
+$P=\sum p_{mn}t^mx^n$. The heat equation gives
+\begin{align}
+ f_{mn}&=\frac{(-1)^m h_{2m+n}}{m!\,n!},&
+ q_{mn}&=f_{mn}-p_{mn},\label{fcg:heatcoefficients}
+\end{align}
+\[
+ p_{00}=h_0,\qquad p_{01}=h_1,\qquad p_{02}=b/2,\qquad p_{10}=-b,
+\]
+with all other $p_{mn}$ zero. Since $\mathcal R_1=\partial_x\mathcal R_0$,
+the coefficients of $\mathcal G=\sum g_{mn}t^mx^n$ are exactly
+\begin{equation}\label{fcg:signedcoefficients}
+ g_{mn}=b(n-2)q_{mn}+h_1(n+1)q_{m,n+1}.
+\end{equation}
+In particular,
+\[
+ g_{00}=g_{01}=0,\quad g_{10}=-h_1h_3,\quad
+ g_{02}=\tfrac12h_1h_3,\quad g_{11}=bh_3-h_1h_4.
+\]
+These expressions are formed from the complete signed jets before
+taking absolute values.
+
+For an integer $N\ge1$ and $q=r/R<1$ define
+\begin{align}
+ T_N(q)&=\sum_{k>N}(k+1)q^k
+       =\frac{q^{N+1}[(N+2)-(N+1)q]}{(1-q)^2},\label{fcg:taylortail}\\
+ \Gamma_N(r)&=\sum_{1\le m+n\le N}|g_{mn}|r^{m+n}
+                                      +M_GT_N(r/R),\label{fcg:gamma}\\
+ d_N(r)&=|D_0|-2b^2r-\Gamma_N(r),&
+ c_N(r)&=\frac{d_N(r)}{1+h_0^2+h_1^2+b^2}.\label{fcg:margin}
+\end{align}
+The dependence on the fixed center, $R$, and $U_3,U_4$ is suppressed.
+The \emph{degree cap} is a maximum allowed value of the total degree
+$m+n$ retained in $\mathcal G$. It is distinct from the degree two of $P$ and
+from the number of theta summands. The coefficients through degree
+$N$ require at most $h_0,\ldots,h_{2N+1}$.
+
+\begin{theorem}[Quantitative regional first-jet separation]
+\label{fcg:separation}
+The bound $|\mathcal G|\le\Gamma_N(r)$ holds on the real rectangle
+$|t|,|x|\le r$, and hence on $\mathcal B_r$. If $d_N(r)>0$, then
+\begin{equation}\label{fcg:jetfloor}
+ \begin{gathered}
+ |J(T,A)|\ge\mu_N:=\frac{d_N(r)}{K_r}>0
+       \qquad ((T,A)\in\mathcal B_r),\\
+ K_r=\sqrt{4b^2+(|h_1|+r|b|)^2}.
+ \end{gathered}
+\end{equation}
+The coefficient $c_N(r)$ is finite and real before its sign is known;
+its positivity is equivalent to the sufficient inequality $d_N(r)>0$.
+\end{theorem}
+\begin{proof}
+Cauchy's coefficient bound on the outer bidisk gives
+$|g_{mn}|\le M_GR^{-m-n}$. There are $k+1$ pairs with $m+n=k$.
+Summing the omitted degrees proves \eqref{fcg:gamma}; the tail formula
+follows by differentiating $q^{N+2}/(1-q)$.
+The exact identity \eqref{fcg:bezout} then yields
+$|w\cdot J|\ge |D_0|-2b^2r-\Gamma_N=d_N$.
+Since $|w|\le K_r$, Cauchy--Schwarz gives \eqref{fcg:jetfloor}.
+If $K_r=0$, then $b=h_1=0$, so $D_0=0$ and $d_N\le0$;
+thus the division is legitimate under the stated premise.
+\end{proof}
+
+An actual collision anywhere in the closed ball forces $d_N\le0$:
+at that point \eqref{fcg:bezout} gives
+$|D_0|\le2b^2r+\Gamma_N$. This includes boundary points and every
+multiplicity. The converse is false. In particular $D_0=0$ forces
+failure at every radius, even when $J(\tau,a)\ne0$.
+
+The identical source information gives the direct strip
+\begin{equation}\label{fcg:directstrip}
+ \begin{gathered}
+ \bigl|w\cdot J-(D_0+2b^2t)\bigr|\le\Gamma_N(r),\\
+ |J|\ge\frac{(|D_0+2b^2t|-\Gamma_N(r))_+}{|w|}.
+ \end{gathered}
+\end{equation}
+where $w\ne0$. Under $d_N>0$ the row never vanishes on the ball,
+and this pointwise estimate is at least as strong as
+\eqref{fcg:jetfloor}. The same data also give
+\begin{align}
+ |H|&\ge|h_0|-r|h_1|-|b|(r+r^2/2)-e_0(r),\nonumber\\
+ |H_A|&\ge|h_1|-r|b|-e_1(r).\label{fcg:scalarcomparators}
+\end{align}
+These comparisons identify whether a successful certificate actually
+needs both components. At a simple center zero, sufficiently small
+balls already satisfy the derivative-only estimate in
+\eqref{fcg:scalarcomparators}; local joint-jet capability alone does
+not establish a comparative advantage.
+
+\subsection{Separate analytic and certified radii}
+
+Keep the center, the outer radius and its derivative bounds fixed while
+varying $r$ and $N$. This separation permits source information to be
+reused on nested balls.
+
+\begin{proposition}[Radius and degree monotonicity]
+\label{fcg:monotonicity}
+The exact margin $d_N(r)$ is nonincreasing in $r$ and nondecreasing
+in $N$. Thus shrinking the certified ball weakly lowers the smallest
+successful degree, with the value $+\infty$ allowed if no degree
+succeeds. The uncomputed Taylor tail is $O(r^{N+1})$ at fixed $R$.
+\end{proposition}
+\begin{proof}
+Every term subtracted in \eqref{fcg:margin} is nondecreasing in
+$r\ge0$. For the degree comparison, Cauchy's bound gives
+\[
+ \Gamma_N-\Gamma_{N+1}
+ =M_G(N+2)(r/R)^{N+1}
+       -r^{N+1}\sum_{m+n=N+1}|g_{mn}|\ge0.
+\]
+The last assertion follows from \eqref{fcg:taylortail}.
+\end{proof}
+
+This is monotonicity of the defined exact bound; independently rounded
+interval outputs can have additional enclosure loss. The full
+$\Gamma_N$ retains its lower-degree terms and is generally not
+$O(r^{N+1})$. In the earlier choice $R=2r$, the geometric tail factor
+is fixed at $T_N(1/2)=(N+3)/2^N$; only the outer majorant changes
+with $r$. Separating $R$ and $r$ provides another way to reduce the
+tail, without claiming that it wins at every prescribed radius.
+
+\begin{theorem}[An explicit degree-one radius]
+\label{fcg:radius}
+Suppose $D:=|D_0|>0$, and put
+\[
+ L_0=2b^2+|h_1h_3|,\qquad M=M_G,\qquad
+ r_{\rm quad}=\min\left\{\frac R2,\frac\tau2,
+ \frac{D}{L_0+\sqrt{L_0^2+16MD/R^2}}\right\}.
+\]
+If $M=L_0=0$, the third entry is interpreted as $+\infty$.
+Then $r_{\rm quad}>0$ and every $0<r\le r_{\rm quad}$ has
+$d_1(r)\ge D/2>0$. This is the largest radius permitted by the
+quadratic payment used in the proof and the two displayed caps.
+\end{theorem}
+\begin{proof}
+Only $g_{10}=-h_1h_3$ contributes at degree one. For $0\le q\le1/2$,
+\[
+ T_1(q)=\frac{q^2(3-2q)}{(1-q)^2}\le8q^2,\qquad
+ d_1(r)\ge D-L_0r-\frac{8M}{R^2}r^2.
+\]
+The tail inequality follows from $5-14q+8q^2=(1-2q)(5-4q)\ge0$.
+The function subtracted is nondecreasing. When $(L_0,M)\ne(0,0)$,
+its unique positive solution at value $D/2$ is
+\[
+ r=\frac{D}{L_0+\sqrt{L_0^2+16MD/R^2}},
+\]
+obtained by rationalizing the quadratic formula; it also gives
+$D/(2L_0)$ if $M=0<L_0$. The remaining case has no payment.
+Intersecting with the two caps proves the result.
+\end{proof}
+
+The radius is explicit in the center data and complete derivative
+bounds. No regional jet minimum occurs in its definition. It is not
+the largest actual collision-free radius or the optimal radius for
+\eqref{fcg:margin}. Lowering $M$ weakly increases $r_{\rm quad}$,
+strictly when the quadratic root rather than a fixed cap controls it.
+Positive rescaling of the source leaves the radius unchanged: $D,L_0,M$
+all scale by the same amplitude squared. This is the useful
+scale-respecting refinement of the earlier radius rule
+\cite{FCGSharpRadius}.
+
+Every simple center zero satisfies the theorem's discriminant premise.
+For general centers that premise remains a separate source question.
+The theorem permits the radius, the retained degree, or both to vary
+with frequency. It provides local feasibility, not an efficient
+covering of an unbounded parameter region.
+
+\section{Oscillatory bounds from integration by parts}
+\label{fcg:ibp}
+
+The local theorem isolates a concrete analytic task: bound two complete
+complex derivatives on a fixed outer neighborhood. Absolute moments
+do so, but discard the center frequency. Integration by parts retains
+that frequency in the denominator. A suitable finite source boundary
+can retain additional phase information, provided its boundary and
+exterior are both included \cite{FCGAdaptive}.
+
+\subsection{Complete derivative envelopes on a complex neighborhood}
+
+Assume $a>R$ and set, for $j=3,4$,
+\begin{align}
+ f(u)&=e^{\tau u^2}\Phi(u),&
+ f_j^+(u)&=u^j e^{Ru^2}f(u),\nonumber\\
+ D_j(u)&=(u^jf(u))',&
+ B_j(u)&=e^{Ru^2}\bigl(|D_j(u)|+2R u^{j+1}f(u)\bigr),
+ \qquad \phi_j=j\pi/2.\label{fcg:ibpweights}
+\end{align}
+The complete signed derivative $D_j$ is formed before taking its
+absolute value. Every integral below is finite, including those with
+$B_j$: differentiation of the complete source adds only polynomial
+powers of $u,n,e^u$ to the domination in Lemma~\ref{lem:tails}.
+For $|t|\le R$,
+\begin{equation}\label{fcg:ibpweightbounds}
+ |u^j e^{(\tau+t)u^2}\Phi|\le f_j^+,\qquad
+ |(u^j e^{(\tau+t)u^2}\Phi)'|\le B_j.
+\end{equation}
+The latter follows by differentiating $e^{tu^2}u^jf$; it preserves
+the cancellation already present in $D_j$.
+
+\begin{proposition}[Whole-line and phase-boundary estimates]
+\label{fcg:ibpenvelope}
+Define
+\begin{equation}\label{fcg:ibpwhole}
+ M_j=\int_0^\infty f_j^+(u)e^{Ru}\dd u,\qquad
+ I_j=\frac1{a-R}\int_0^\infty B_j(u)e^{Ru}\dd u.
+\end{equation}
+Fix $u_j^*>0$ at the center frequency, with
+$au_j^*+\phi_j=k_j\pi$, $k_j\in\mathbb Z$, and define
+\begin{align}
+ S_j(u)&=|\sin(au+\phi_j)|\cosh(Ru)
+                  +|\cos(au+\phi_j)|\sinh(Ru),\nonumber\\
+ C_j(u)&=|\cos(au+\phi_j)|\cosh(Ru)
+                  +|\sin(au+\phi_j)|\sinh(Ru),\label{fcg:phaseweights}\\
+ W_j&=\frac{f_j^+(u_j^*)\sinh(Ru_j^*)+
+                     \int_0^{u_j^*}B_j(u)S_j(u)\dd u}{a-R}
+                 +\int_{u_j^*}^\infty f_j^+(u)C_j(u)\dd u.
+ \label{fcg:phasebound}
+\end{align}
+Then each of $M_j,I_j,W_j$ bounds
+$|\partial_A^jH(\tau+t,a+x)|$ on $\mathbb D_R$. Consequently
+\begin{equation}\label{fcg:ibpminimum}
+ U_j=\min\{M_j,I_j,W_j\},\qquad j=3,4,
+\end{equation}
+is an admissible choice in Lemma~\ref{fcg:complexremainder}.
+The source cutoff $u_j^*$ is held fixed throughout the bidisk.
+\end{proposition}
+\begin{proof}
+Put $A=a+x$ and $F_j(u)=u^j e^{(\tau+t)u^2}\Phi(u)$.
+Differentiation of the cosine gives
+$H_j:=\partial_A^jH=\int_0^\infty F_j\cos(Au+\phi_j)\dd u$.
+The bound $|\cos(Au+\phi_j)|\le e^{Ru}$ proves the $M_j$ estimate.
+Integration by parts gives exactly
+\begin{equation}\label{fcg:ibpexact}
+ H_j=-\frac1A\int_0^\infty F_j'(u)\sin(Au+\phi_j)\dd u.
+\end{equation}
+At zero, $F_j(0)=0$; at infinity, the complete theta tail dominates
+every allowed complex factor. Since $|A|\ge a-R$ and the sine
+also has bound $e^{Ru}$, \eqref{fcg:ibpweightbounds} proves $I_j$.
+
+For the finite boundary, apply the same integration by parts only
+on $[0,u_j^*]$:
+\begin{equation}\label{fcg:ibpfiniteidentity}
+ \begin{aligned}
+ H_j={}&\frac{F_j(u_j^*)\sin(Au_j^*+\phi_j)}A
+ -\frac1A\int_0^{u_j^*}F_j'\sin(Au+\phi_j)\dd u\\
+ &+\int_{u_j^*}^\infty F_j\cos(Au+\phi_j)\dd u.
+ \end{aligned}
+\end{equation}
+Power-series bounds give $|\cos(xu)|\le\cosh(Ru)$ and
+$|\sin(xu)|\le\sinh(Ru)$ for complex $|x|\le R$.
+The addition formulas thus bound the sine by $S_j$ and the cosine
+by $C_j$. At the chosen cutoff,
+$|\sin(Au_j^*+\phi_j)|=|\sin(xu_j^*)|\le\sinh(Ru_j^*)$.
+Taking absolute values only after this identity proves
+\eqref{fcg:phasebound}. The minimum of three valid bounds remains valid.
+\end{proof}
+
+For fixed $\tau,R$, the numerator in $I_j$ is independent of $a$.
+Thus this envelope is $O((a-R)^{-1})$, and is strictly smaller than
+$M_j$ once
+\[
+ a>R+\frac{\int_0^\infty B_j(u)e^{Ru}\dd u}{M_j}.
+\]
+This is a finite source-defined threshold, not an acquired numerical
+height. Using \eqref{fcg:ibpminimum} can only decrease $M_G$,
+increase the margin, and weakly enlarge the explicit radius in
+Theorem~\ref{fcg:radius}. It does not establish a lower bound for
+$|D_0|$, nor a useful global radius schedule.
+
+The phase boundary vanishes at the center $x=0$, not throughout the
+complex neighborhood. Its $\sinh(Ru_j^*)$ term is therefore essential.
+The cutoff is an integration device in the source coordinate $u$;
+it neither truncates the physical source nor imposes a spatial boundary
+condition. If a cutoff instead moved with the actual frequency $A$,
+differentiating the split integral would introduce compensating Leibniz
+terms in its core and exterior. Freezing it at the center avoids that
+additional bookkeeping.
+
+\subsection{Transfer of the combined remainder to the theta primitive}
+
+A second use of integration by parts simplifies the complete scalar
+remainder before any estimate. Retain $t,x,h_j,b$ from
+Section~\ref{fcg:geometry}, and define the source kernels
+\begin{align}
+ \mathscr R(u;t,x)
+ &=e^{\tau u^2}\bigl[
+ e^{tu^2}\cos((a+x)u)-\cos(au)+xu\sin(au)\nonumber\\
+ &\hspace{34mm}+(x^2/2-t)u^2\cos(au)\bigr],\nonumber\\
+ \mathscr K(u;t,x)
+ &=-2b\mathscr R+(h_1+bx)\partial_x\mathscr R.
+ \label{fcg:primitivekernel}
+\end{align}
+Then $\mathcal G(t,x)=\int_0^\infty\Phi(u)\mathscr K(u;t,x)\dd u$.
+
+\begin{proposition}[No lower endpoint term for the correlated remainder]
+\label{fcg:primitivecancellation}
+For every parameter in a compact complex neighborhood,
+\begin{equation}\label{fcg:primitivefull}
+ \mathcal G(t,x)=\frac18\int_0^\infty
+                  \psi_\theta(u)(\mathscr K''-\mathscr K)(u;t,x)\dd u.
+\end{equation}
+For a finite fixed $U>0$, the exact split is
+\begin{align}
+ \mathcal G(t,x)
+ &=\frac{\psi_\theta'(U)\mathscr K(U)-\psi_\theta(U)\mathscr K'(U)}8\nonumber\\
+ &\quad+\frac18\int_0^U\psi_\theta(\mathscr K''-\mathscr K)\dd u
+   +\int_U^\infty\Phi\mathscr K\dd u.
+ \label{fcg:primitivefinite}
+\end{align}
+Primes in these formulas differentiate $u$.
+\end{proposition}
+\begin{proof}
+The constant coefficient and the coefficient of $u^2$ in
+$\mathscr R$ cancel identically. For the latter, the sum is
+\[
+ t-\tfrac12(a+x)^2+\tfrac12a^2+ax+\tfrac12x^2-t=0.
+\]
+All terms are even functions of $u$, so
+$\mathscr R,\partial_x\mathscr R=O(u^4)$, uniformly on compact
+parameter sets. Consequently $\mathscr K(0)=\mathscr K'(0)=0$.
+Apply Lemma~\ref{lem:primitivetransfer} to $\mathscr K$.
+Its derivative growth satisfies that lemma, and both lower endpoint
+terms vanish. This proves \eqref{fcg:primitivefull}.
+Applying the same two integrations by parts only on $[0,U]$,
+and retaining the original exterior, proves
+\eqref{fcg:primitivefinite}.
+\end{proof}
+
+The scalar reconstruction of $H$ has its necessary $1/16$ endpoint
+constant. The correlated remainder has none because its source kernel
+has already cancelled to fourth order at the origin. This is an
+algebraic simplification, not a positivity theorem for the remaining
+integral.
+
+Choosing $aU=k\pi$ does not eliminate the upper boundary in
+\eqref{fcg:primitivefinite}. For instance, at $x=0$,
+\[
+ \mathscr R(U;t,0)=(-1)^k e^{\tau U^2}
+                         (e^{tU^2}-1-tU^2),
+\]
+which is generally nonzero; the derivative boundary must also remain.
+No improved numerical allowance from this second primitive transfer
+has yet been established. The explicit envelopes
+\eqref{fcg:ibpwhole}--\eqref{fcg:ibpminimum} do not rely on such a gain.
+
+There is a precise limitation to selecting a fixed number of favorable
+cosine lobes. For fixed $K>0$ and $f=e^{\tau u^2}\Phi>0$, a scalar
+lower estimate that retains $[0,K/a]$ and pays its exterior by the
+whole absolute source mass is at most
+\[
+ 2\int_0^{K/a}f(u)\dd u-\int_0^\infty f(u)\dd u
+       \longrightarrow-\int_0^\infty f(u)\dd u<0.
+\]
+It therefore cannot establish high-frequency scalar positivity.
+This excludes only that shrinking-core, absolute-exterior estimate.
+It leaves signed exterior estimates, cutoffs near a fixed positive
+source radius, and the complete remainder identity open.
+
+\section{Fixed compression and regional noncollapse}
+\label{fcg:fixedflow}
+
+The source margin and its spatial consequence are separate results.
+To state the latter, freeze the original drift coefficient at one
+$c>0$ throughout both auxiliary time and the physical parameter
+region:
+\begin{equation}\label{fcg:fixedpde}
+ \partial_sW_c=\Delta W_c+c\operatorname{div}(vW_c),\qquad
+ v(X)=X+\frac{X}{1+|X|^2},\qquad W_c=(U_c,\partial_AU_c).
+\end{equation}
+The initial field is the same complete raw theta pair with the same
+unit Gaussian preparation as in Section~\ref{sec:conservative}.
+The common positive conservative propagator is denoted $P_s^c$.
+The globally Lipschitz drift gives a global linear evolution; the
+conserved vector mass is $J=(H,H_A)$. In contrast to the normalized
+feedback, its energy need not be constant.
+
+\subsection{Boundedness and the stationary physical jet}
+
+The following calculation makes explicit which property can detect
+a collision \cite{FCGFixedFamily,FCGClarification}.
+
+\begin{proposition}[Fixed-flow bounds and absolute convergence]
+\label{fcg:fixedlimit}
+For each fixed $c>0$, the prepared family is bounded in $H^1$ for all
+$s\ge0$, uniformly on compact physical parameter sets. Put
+\[
+ \begin{gathered}
+ \mathcal V(X)=\tfrac12\bigl(|X|^2+\log(1+|X|^2)\bigr),\\
+ Z(c)=\int_{\R^3}e^{-c\mathcal V(X)}\dd X,\qquad
+ \varpi_c(X)=Z(c)^{-1}e^{-c\mathcal V(X)},\qquad Q_c=\|\varpi_c\|_2^2>0.
+ \end{gathered}
+\]
+For every compact parameter set $K$ and every fixed multi-index $\nu$,
+\begin{equation}\label{fcg:uniformfixedlimit}
+ \sup_{p\in K}
+ \|\partial_p^\nu[W_c(s;p)-J(p)\varpi_c]\|_2^2
+ \le C_{K,\nu,c}e^{-cs/2}.
+\end{equation}
+No positive lower bound for $|J|$ is assumed.
+\end{proposition}
+\begin{proof}
+The flux $\nabla\varpi_c+cv\varpi_c$ vanishes. Its normalization
+and all moments are finite because
+$|X|^2/2\le\mathcal V(X)\le|X|^2$.
+For a solution $F$ of the same fixed equation, let
+$\ell=\|F(0)\|_1$, $\mathsf E=\|F\|_2^2$,
+$\mathsf G=\|\nabla F\|_2^2$, and
+$\mathsf N=\|\Delta F\|_2^2$. Positivity gives
+$\|F(s)\|_1\le\ell$. The Fourier argument in
+Theorem~\ref{thm:uniformfeedback}, which uses only this L1 bound, gives
+\[
+ \mathsf G\ge c_{\rm Nash}\mathsf E^{5/3}\ell^{-4/3},
+ \qquad c_{\rm Nash}=\tfrac35(6\pi^2)^{2/3}.
+\]
+Since $d=\operatorname{div}v\le6$,
+\[
+ \mathsf E'=-2\mathsf G+c\int d|F|^2
+ \le-2c_{\rm Nash}\mathsf E^{5/3}\ell^{-4/3}+6c\mathsf E.
+\]
+For nonzero data this implies
+\[
+ \mathsf E(s)\le\overline{\mathsf E}:=
+ \max\{\mathsf E(0),(3c/c_{\rm Nash})^{3/2}\ell^2\}.
+\]
+The general drift calculation in
+\eqref{eq:feedbackgradientexact} uses no constancy of the field energy
+before the feedback coefficient is substituted. With that coefficient
+fixed at $c$, it gives
+\[
+ \mathsf G'\le-2\mathsf N+10c\mathsf G+30c\mathsf E,\qquad
+ \mathsf G^2\le\mathsf N\mathsf E.
+\]
+Scalar comparison therefore yields
+\[
+ \mathsf G(s)\le\overline{\mathsf G}:=
+ \max\left\{\mathsf G(0),
+ \overline{\mathsf E}\,
+       \frac{5c+\sqrt{25c^2+60c}}2\right\}.
+\]
+The zero-data case is immediate. These estimates prove the claimed
+uniform bounds from the finite compact source and preparation budgets.
+
+For convergence apply these bounds to
+$F=W_c-J\varpi_c$, which has zero vector mass. Let
+$P=\int|X|\,|F(0,X)|\dd X<\infty$. The synchronous contraction
+argument in Theorem~\ref{thm:feedbackdeadline}, now with $B(s)=cs$,
+gives
+\[
+ |\widehat F(s,\xi)|\le|\xi|P e^{-\kappa cs},\qquad \kappa=7/8.
+\]
+Splitting Plancherel at frequency $\Lambda>0$ gives
+\[
+ \mathsf E(s)\le
+ \frac{P^2e^{-2\kappa cs}\Lambda^5}{10\pi^2}
+                         +\frac{\overline{\mathsf G}}{\Lambda^2}.
+\]
+Choose $\Lambda=e^{2\kappa cs/7}$ and use $4\kappa/7=1/2$.
+The right side is
+$[P^2/(10\pi^2)+\overline{\mathsf G}]e^{-cs/2}$.
+All fixed physical derivatives commute with the same propagator.
+Applying this calculation to each derivative after subtracting its own
+stationary mass proves \eqref{fcg:uniformfixedlimit}; the constants
+are uniform on $K$ by the complete-source domination and preparation
+bounds. All integrations first hold on arbitrary finite intervals,
+where smoothness and weighted moments justify the cutoffs.
+\end{proof}
+
+Thus bounded fixed-coefficient evolution occurs at a collision as well
+as away from one. At a collision its stationary component vanishes;
+at other marks its limiting energy is $Q_c|J|^2>0$.
+For comparison, $c=0$ gives
+$\|W_0(s;p)\|_2^2\le(8\pi s)^{-3/2}\|W_0(0;p)\|_1^2$ for $s>0$.
+For $c<0$, the inequality $d\ge3$ gives
+$E_c'\le3cE_c$. Both cases have energy tending to zero, even at
+noncolliding marks; the normalized Gibbs density is unavailable for
+$c\le0$.
+
+\subsection{A fully explicit all-time lower bound}
+
+The converse direction admits a direct proof that does not wait for
+the stationary limit.
+
+\begin{theorem}[Propagation of a regional source margin]
+\label{fcg:carrierfloor}
+Let $K$ be a compact physical region with $T\le T_+$, and suppose
+$|J(p)|\ge\mu>0$ on $K$. Set
+\begin{align}
+ L&=\int_0^\infty e^{T_+u^2}\Phi(u)(1+u)\dd u,&
+ R_2&=\int_0^\infty e^{T_+u^2+4u}\Phi(u)(1+u)\dd u,\nonumber\\
+ \overline N_c&=\max\{R_2+6L,3L/c\}.&&\label{fcg:carrierbudgets}
+\end{align}
+For every fixed $c>0$,
+\begin{equation}\label{fcg:alltimefloor}
+ E_c(s;p):=\|W_c(s;p)\|_2^2
+ \ge\frac{3\mu^2}{16\pi}
+       \left(\frac{\mu}{2\overline N_c}\right)^{3/2}>0
+ \qquad(p\in K,\ s\ge0).
+\end{equation}
+In particular, Theorem~\ref{fcg:separation} supplies this conclusion
+with $c=c_N(r)>0$ and $\mu=\mu_N$ on $\mathcal B_r$.
+\end{theorem}
+\begin{proof}
+For $u=\tfrac12\log|X|$ define
+\[
+ \rho_{T_+}(X)=\mathbf1_{|X|\ge1}
+       \frac{e^{T_+u^2}\Phi(u)}{8\pi|X|^3},\qquad
+ \Sigma_c(s)=P_s^c K_1*[\rho_{T_+}(1+u)].
+\]
+The Euclidean norm of the raw vector
+$(\cos(Au),-u\sin(Au))$ is at most $1+u$.
+Positivity of preparation and of the same scalar kernel on both
+components gives $|W_c(s;p)|\le\Sigma_c(s)$.
+Polar integration gives $\int\Sigma_c=L$ and
+\[
+ N_c(0):=\int|X|^2\Sigma_c(0,X)\dd X=R_2+6L.
+\]
+The term $6L$ is the full unit-Gaussian second-moment contribution.
+With spatial cutoffs followed by their complete-space limit,
+\[
+ N_c'=6L-2c\int X\cdot v(X)\Sigma_c\dd X
+       \le6L-2cN_c,
+\]
+because $X\cdot v\ge|X|^2$. Thus $N_c(s)\le\overline N_c$.
+
+Choose a spatial radius $R_X^2=2\overline N_c/\mu$.
+Mass conservation, the full exterior estimate and Cauchy--Schwarz give
+\[
+ \mu\le|J(p)|
+ \le\int_{|X|\le R_X}|W_c|+\int_{|X|>R_X}\Sigma_c
+ \le(4\pi R_X^3/3)^{1/2}E_c(s;p)^{1/2}+\mu/2.
+\]
+Rearranging proves \eqref{fcg:alltimefloor}. No sphere is removed
+from the evolving spatial domain.
+\end{proof}
+
+For a compact $K$, regional nonvanishing of $J$ is therefore equivalent
+to a uniform positive energy floor for one fixed $c>0$, and to such
+a floor for every fixed $c>0$ (with different constants).
+Indeed compactness gives $\mu=\min_K|J|>0$ in one direction, and
+Proposition~\ref{fcg:fixedlimit} excludes a floor at any collision
+in the other. This equivalence classifies the target. It is
+\eqref{fcg:momentmargin} or \eqref{fcg:margin}, proved from source
+data without that unknown minimum, which provides an actual
+sufficient estimate. Choosing a positive $c$ alone does not.
+
+\subsection{Geometry near a double event and the curvature comparison}
+
+Suppose $p_0$ is a nondegenerate real double:
+$H(p_0)=H_A(p_0)=0$, $b=H_{AA}(p_0)\ne0$. Put
+$d_0=H_{AT}(p_0)$ and write $\delta p=(t,x)$. The heat equation gives
+\[
+ J(p_0+\delta p)=
+ \begin{pmatrix}-b&0\\d_0&b\end{pmatrix}\delta p+O(|\delta p|^2).
+\]
+The determinant is $-b^2$, so the local real index is $-1$, and
+\begin{equation}\label{fcg:doubleenergy}
+ E_{c,\infty}(p_0+(t,x))
+ =Q_c\{b^2t^2+(d_0t+bx)^2\}+O(|(t,x)|^3).
+\end{equation}
+The limiting energy has a positive-definite quadratic Hessian;
+the finite-time energy need not vanish at the event. The stationary
+parameter-derivative energy at the event is $Q_c(2b^2+d_0^2)>0$.
+Its ratio to the limiting field energy is therefore comparable to
+$|\delta p|^{-2}$ nearby. Higher multiplicities require their own
+expansion; no quadratic law is asserted for them.
+
+For a prescribed positive target energy, stationary matching asks for
+$|J(p)|^2Q_{c_*(p)}=E_{\rm tar}(p)$.
+The partition-function calculation in Theorem~\ref{r13:gibbs}, at
+unit mass, proves $Q_c=Z(2c)/Z(c)^2$ strictly increasing from zero to
+infinity, with
+$(c/(8\pi))^{3/2}\le Q_c\le(c/\pi)^{3/2}$.
+Consequently matching is uniquely possible when $J\ne0$, and
+\[
+ \pi(E_{\rm tar}/|J|^2)^{2/3}
+ \le c_*(p)\le8\pi(E_{\rm tar}/|J|^2)^{2/3}.
+\]
+For continuous positive $E_{\rm tar}$ near the double,
+$c_*(p)\asymp|p-p_0|^{-4/3}$. The singular quantity is this
+parameter-dependent matching coefficient, not a fixed-$c$ solution.
+Defining it does not supply an independent nonvanishing estimate.
+
+The same source information also feeds a curvature comparison.
+On a certified ball put
+\[
+ B_2=|b|+r(U_3+U_4),\qquad
+ E_J=H^2+H_A^2,\qquad \mathcal L=H_A^2-HH_{AA}.
+\]
+Straight-line variation gives $|H_{AA}|\le B_2$. If $|J|\ge\mu$,
+then, with $C=1+B_2/\mu$,
+\begin{equation}\label{fcg:curvaturecomparison}
+ \mathcal L+CE_J\ge E_J\ge\mu^2.
+\end{equation}
+Indeed $|H||H_{AA}|\le B_2|J|\le(B_2/\mu)|J|^2$.
+For the fixed spatial flow, define
+$\mathcal D_c=\|U_{c,A}\|_2^2-\langle U_c,U_{c,AA}\rangle$.
+The compact-uniform limits of these three fields give
+\[
+ \mathcal D_c+CE_c\longrightarrow Q_c(\mathcal L+CE_J)
+                                      \ge Q_c\mu^2.
+\]
+It is positive uniformly for all sufficiently large auxiliary times.
+Here $C$ is a comparison coefficient and $c$ the spatial coefficient.
+This consequence uses the same source margin; the all-time bound
+\eqref{fcg:alltimefloor} needs no convergence time.
+
+\subsection{Why a common quadratic form on the entire span cannot help}
+
+Take three distinct positive frequencies in any open frequency interval
+at a fixed physical time, and let their prepared pairs be $F_1,F_2,F_3$.
+They are linearly independent. Gaussian convolution is injective
+because its Fourier multiplier never vanishes; a relation among their
+raw first components would give
+$\sum_i a_i\cos(A_i u)=0$ on $u>0$. Derivatives of orders $0,2,4$
+give a Vandermonde system in the distinct $A_i^2$, so all $a_i=0$.
+Their mass vectors lie in $\R^2$ and are linearly dependent.
+Some nonzero $F=\sum_i a_iF_i$ therefore has zero mass.
+Proposition~\ref{fcg:fixedlimit} gives $\|P_s^cF\|_2\to0$.
+
+It follows that no time-independent quadratic form on the span and
+its propagated fields can simultaneously satisfy
+\[
+ a_c\|F\|_2^2\le\mathscr Q_c(F)\le b_c\|F\|_2^2,\qquad
+ 0<a_c\le b_c<\infty,
+\]
+and be nondecreasing under $P_s^c$ for every linear combination.
+For the nonzero zero-mass combination its initial value is positive,
+while its upper bound tends to zero. This excludes only the common
+bounded coercive quadratic form on the entire linear span, not the
+literal parameter family, a smaller positive cone, or a nonlinear
+source estimate. The extra linear-combination premise is the source
+of this obstruction \cite{FCGMoment}.
+
+\section{Limits of the quadratic certificate}
+\label{fcg:limits}
+
+The radius theorem explains local capability. Two separate losses
+explain why it should not be read as a uniform high-frequency result.
+The first concerns the original absolute-moment tail for the actual
+theta source; the second concerns the time variation of the quadratic
+reference and is demonstrated by a different, noncolliding source
+\cite{FCGLimits}.
+
+\subsection{A fixed radius and bounded degree eventually fail}
+
+Fix $\tau>r>0$, set $R=2r$, and use the original moment bounds
+$U_j=\mathcal M_j(R)$ of \eqref{fcg:plainmoments}. These bounds do not
+depend on the center frequency $a$. Set
+\[
+ \varepsilon_0=e_0(R)>0,\qquad \varepsilon_1=e_1(R)>0,\qquad
+ \kappa_N=(N+3)2^{-N},
+\]
+\[
+ Z=2|b|\varepsilon_0+|h_1|\varepsilon_1,\qquad
+ \nu(a)=\max\{|h_0|/\varepsilon_0,\ |h_1|/\varepsilon_1\}.
+\]
+In this notation $M_G=Z+R|b|\varepsilon_1$. Denote the finite sum
+in \eqref{fcg:gamma} by $F_N\ge0$.
+
+\begin{proposition}[Exact rejection for a fixed degree cap]
+\label{fcg:fixedcap}
+For this unchanged moment-based allowance,
+\begin{equation}\label{fcg:rejection}
+ d_N\le(\nu-\kappa_N)Z-\kappa_NR|b|\varepsilon_1-2b^2r-F_N.
+\end{equation}
+For every finite $N_{\max}$, there is a finite source-defined height
+beyond which $d_N\le0$ simultaneously for all $1\le N\le N_{\max}$.
+\end{proposition}
+\begin{proof}
+The inequality
+$|D_0|\le h_1^2+2|b||h_0|\le\nu Z$ proves
+\eqref{fcg:rejection}. In particular $\nu\le\kappa_N$ implies rejection.
+If $Z=0$, then $b=h_1=0$, the whole row and remainder vanish, and
+$d_N=0$ directly.
+
+For the constructive height, let $f=e^{\tau u^2}\Phi$ and put
+\[
+ V_0=\int_0^\infty|f'|\dd u,\qquad
+ V_1=\int_0^\infty|(uf)'|\dd u,\qquad
+ C_{\tau,r}=\max\{V_0/\varepsilon_0,V_1/\varepsilon_1\}.
+\]
+Both integrals are finite. With $\lambda_n=\pi n^2$, termwise
+differentiation gives
+\begin{equation}\label{fcg:sourcederivative}
+ \Phi_n'=
+ (30\lambda_n^2e^{9u}-15\lambda_ne^{5u}
+                     -8\lambda_n^3e^{13u})e^{-\lambda_ne^{4u}}.
+\end{equation}
+The sum of the three absolute terms, multiplied by any fixed
+polynomial and $e^{\tau u^2}$, is integrable by the same complete-index
+domination as Lemma~\ref{lem:tails}. It bounds $f'$ and $(uf)'$ and
+pays the upper endpoints in the following integrations by parts:
+\[
+ h_0=-\frac1a\int_0^\infty f'(u)\sin(au)\dd u,\qquad
+ h_1=-\frac1a\int_0^\infty(uf(u))'\cos(au)\dd u.
+\]
+The lower endpoints vanish by $\sin0=0$ and $uf(0)=0$.
+Thus $\nu(a)\le C_{\tau,r}/a$. Since $\kappa_N$ strictly decreases,
+every degree in the cap is rejected for
+\[
+ a\ge A_*:=\max\{r,C_{\tau,r}/\kappa_{N_{\max}}\}.
+\]
+This is finite and defined by complete source integrals.
+\end{proof}
+
+No numerical height is assigned to $A_*$. This is an obstruction to
+the unchanged fixed-radius, bounded-degree, absolute-moment Cauchy
+tail, not to all quadratic certificates or to theta nonvanishing.
+For $\nu>0$, positivity necessarily requires
+\[
+ N\log2-\log(N+3)>\log(1/\nu);
+\]
+paying this degree condition alone does not control $F_N$, the time
+term, or a small discriminant. A shrinking radius, increasing degree,
+or the frequency-dependent derivative envelopes of
+Section~\ref{fcg:ibp} changes the hypotheses of the proposition.
+
+\subsection{A time penalty that increasing degree cannot repair}
+
+Even a zero remainder would leave the necessary condition
+$|D_0|>2b^2r$. Its failure need not correspond to a collision.
+Consider the positive Gaussian source
+$\Phi_{\rm G}(u)=e^{-\beta u^2}$ on its domain $T<\beta$.
+At a center with $q_0=\beta-\tau>2r$, its complete local moments
+are admissible on the required complex bidisk, and
+\[
+ H_{\rm G}(T,A)=\frac{\sqrt\pi}{2\sqrt{\beta-T}}
+                 e^{-A^2/[4(\beta-T)]}>0.
+\]
+The formula follows from the Gaussian integral; alternatively its
+integration-by-parts equation is
+$H_A=-A H/[2(\beta-T)]$, with the displayed value at $A=0$.
+Write $y=a^2/(2q_0)$. Differentiation gives
+\[
+ h_1=-\frac{a}{2q_0}h_0,\qquad
+ b=\frac{y-1}{2q_0}h_0,\qquad
+ D_0=\frac{2-y}{2q_0}h_0^2.
+\]
+Consequently
+\begin{equation}\label{fcg:gaussiantime}
+ |D_0|-2b^2r=
+ \frac{h_0^2}{2q_0^2}\{q_0|2-y|-r(y-1)^2\}<0
+ \qquad\text{if }y\ge1+q_0/r.
+\end{equation}
+Indeed $y>2$ and
+$r(y-1)^2\ge q_0(y-1)>q_0(y-2)$, including at the stated endpoint.
+Every degree therefore fails this particular time payment, although
+the exact transform is positive and
+$H_A^2-HH_{AA}=H^2/[2(\beta-T)]>0$.
+This is a failure of generic adequacy for that payment; it is not a
+theta time obstruction.
+
+The adaptive theorem remains consistent with this example. Apart
+from $y=2$, its discriminant is nonzero and some degree-one radius
+succeeds. The necessary time-only restriction at large $a$ is
+\[
+ r<\frac{q_0|2-y|}{(y-1)^2}\sim\frac{2q_0^2}{a^2},
+\]
+while the complete radius can be smaller because it also pays the
+remainder. Feasibility of shrinking balls and efficiency of their
+coverage are different questions.
+
+\subsection{Controls and the remaining theta obligation}
+
+The estimates above are sufficient conditions in a stated complete
+source class. At an actual collision the exact row identity forces
+their sign premise to fail. The Gaussian-polynomial control at
+$(1/4,2\sqrt6)$ has $h_0=h_1=0$, $b\ne0$, hence $D_0=0$ at
+its center; its scalar moment coefficient also fails. It does not
+have theta's complete arithmetic source. The inherited
+three-positive-square event likewise forces $d_N\le0$ on its own
+event-containing ball, using its own jets and tail bounds; unit
+coefficients and full reflection are absent.
+
+The remaining controls in \cite{CollisionControls} retain their
+separate domains. Reflected and positive-primitive sources need not
+have theta's integer-square expansion; finite-measurement and
+finite-prime controls do not fix the complete jets and remainder;
+atomic controls require the appropriate measure formulation or their
+stated continuous extension. An Euler-factor negative-Laguerre
+witness is not itself a double event. A conditional endpoint stays
+conditional, and an altered observation is not the literal cosine.
+No common event location or theta tail constant is transferred among
+these families.
+
+The quantitative task left by the local theorem is to pay the
+discriminant and error on useful actual theta regions. The adaptive
+radius and degree monotonicity, and the complete IBP envelopes, are
+analytical tools for that task. They do not yet give a uniform center
+discriminant, a finite-cost height-dependent cover, or a new
+de Bruijn--Newman bound. The finite numerical pilot and adaptive
+comparison are documented separately in
+Appendix~\ref{fcg:supportingevidence}.
 
 \section{The canonical source relation and its residual}
 \label{sec:sourcerelation}
@@ -4162,6 +5144,20 @@ carrier convergence and the original-alpha limit are no longer open at
 the fixed paid theta mark. The generic entropy obstruction remains
 compatible with this actual-path theorem.
 
+On the parameter side, Theorem~\ref{fcg:radius} gives a fully
+explicit local response to a nonzero center discriminant: shrink the
+ball until degree one suffices. The exact margin improves with smaller
+radius or larger retained degree at a fixed analytic neighborhood.
+Integration by parts supplies complete frequency-dependent derivative
+bounds and a paid phase-boundary alternative. These improvements can
+enlarge the certified radius, but no universal discriminant lower
+bound or efficient height-dependent covering has been proved.
+The fixed-cap obstruction applies only to the original moment-tail
+allowance. The Gaussian time example is a separate generic limitation,
+not a theta collision. The fixed-flow lower bound transports a proved
+source margin for all auxiliary times; its equivalence to regional
+nonvanishing supplies no new margin by itself.
+
 The unresolved issue is upstream: obtain useful control from the
 unchanged complete theta source where a nonzero physical first jet has
 not already been established. The protected-denominator identity in
@@ -4457,6 +5453,153 @@ identical constants. Improvement over the ordinary second-moment
 radius is equivalent to $P_0P_4<6P_2^2$, not proved here. This
 inherited bounded result is not a new outcome of the conservative flow.
 
+\section{Complete-source tails and supporting numerical evidence}
+\label{fcg:supportingevidence}
+
+\subsection{Analytical bounds for source acquisition}
+
+All formulas in Sections~\ref{fcg:geometry}--\ref{fcg:limits} refer to
+the complete source. A finite acquisition must therefore add both
+omitted source indices on the full half-line and the exterior of every
+retained index. The following elementary bounds provide those payments
+\cite{FCGQuadratic,FCGAdaptive}.
+
+For $\lambda_n=\pi n^2$, consider a nonnegative majorant term
+\[
+ C\lambda_n^p u^k
+       e^{T u^2+(q_0+Y)u-\lambda_ne^{4u}},
+ \qquad C>0,\quad p,k\in\mathbb Z_{\ge0}.
+\]
+For indices $n\ge m$, assume
+\[
+ \beta_m=4\pi m^2-q_0-Y>0,\quad
+ T\le8\pi m^2,\quad
+ \rho_m=\left(\frac{m+1}{m}\right)^{2p}e^{-\pi(2m+1)}<1.
+\]
+Then
+\begin{equation}\label{fcg:modetail}
+ \sum_{n\ge m}\int_0^\infty
+ C\lambda_n^p u^k e^{T u^2+(q_0+Y)u-\lambda_ne^{4u}}\dd u
+ \le
+ \frac{C\pi^p m^{2p}e^{-\pi m^2}}{1-\rho_m}
+                  \frac{k!}{\beta_m^{k+1}}.
+\end{equation}
+Indeed $e^{4u}\ge1+4u+8u^2$ removes a nonpositive quadratic
+exponent and bounds the remaining one by $-\beta_m u$.
+The ratios of $n^{2p}e^{-\pi n^2}$ decrease with $n$ and are at
+most $\rho_m$; integrate $u^ke^{-\beta_m u}$ and sum the geometric
+majorant.
+
+For a retained index and a cutoff $U>0$, assume
+\[
+ \alpha=4\lambda_ne^{4U}-(q_0+Y)-2TU-k/U>0,\qquad
+ 16\lambda_ne^{4U}>2T.
+\]
+Then
+\begin{equation}\label{fcg:spatialtail}
+ \int_U^\infty C\lambda_n^p u^k
+        e^{T u^2+(q_0+Y)u-\lambda_ne^{4u}}\dd u
+ \le\frac{C\lambda_n^p U^k
+        e^{TU^2+(q_0+Y)U-\lambda_ne^{4U}}}{\alpha}.
+\end{equation}
+The logarithm of the integrand has derivative $-\alpha$ at $U$
+and second derivative
+$-k/u^2+2T-16\lambda_ne^{4u}<0$ for $u\ge U$.
+Its tangent therefore bounds the whole exterior, proving the formula.
+
+The source itself is bounded by the term $(C,p,q_0)=(2,2,9)$.
+The derivative \eqref{fcg:sourcederivative} has an absolute majorant
+given by the three terms $(30,2,9)$, $(15,1,5)$ and $(8,3,13)$.
+Thus these same bounds pay the differentiated exteriors used in the
+IBP envelopes. Finite retained derivatives are still combined with
+their signs before the absolute value in $D_j$ is formed; applying
+positive majorants to the two omitted complements does not replace
+that signed core. Any quadrature of absolute values must enclose a
+real, possibly nonsmooth integrand rather than assume holomorphy
+across its zeros.
+
+\subsection{What the existing pilot establishes}
+
+The inherited interval record concerns precisely the closed ball
+centered at
+$(\tau,a)=(1/4,882607/20000)$ with $r=1/64$, $R=2r$, the plain
+moments \eqref{fcg:plainmoments}, and $N=8$.
+The 256- and 384-bit stages, including both complete tails above,
+give the reported conservative floors
+\[
+ d_8>5.07\,10^{-13},\qquad c_8>5.07\,10^{-13},\qquad
+ \mu_8>1.01\,10^{-6},\qquad E_{c_8}(s;p)>8.6\,10^{-41}.
+\]
+The last bound holds for every $s\ge0$ by
+Theorem~\ref{fcg:carrierfloor}. Its saved-input arithmetic and source
+payments were internally assessed in \cite{FCGPilot}.
+
+The same already acquired component data also prove
+$H(T,A)>9.9\,10^{-7}$ throughout the containing rectangle.
+Consequently this pilot does not demonstrate a ball crossing an
+actual simple zero. The analytical theorem's simple-zero capability
+and this particular numerical example are distinct facts.
+The direct strip uses the identical signed source information and
+has at least the same separation. No numerical result is used to
+prove the general radius, monotonicity, IBP, or fixed-cap theorems.
+
+\subsection{The finite adaptive comparison}
+
+A subsequent execution at $(\tau,a,R)=(1/4,64,1/32)$ compares the
+coupled-radius moment rule A, the fixed-outer-radius moment rule B,
+and the fixed-outer-radius IBP minimum rule C
+\cite{FCGAdaptiveComparison}. The retained degrees are precisely
+$1,2,4,8$; the source cutoffs are $u_3^*=41\pi/128$ and
+$u_4^*=21\pi/64$. The recorded outward intervals at 256 and 384 bits
+decide all 36 rule/case margins at each precision. The first passing
+degree \emph{among those issued choices} is:
+\[
+ \begin{array}{c|ccc}
+ \text{Inner radius}&\text{A: coupled moment}
+       &\text{B: separate moment}&\text{C: separate IBP}\\ \hline
+ 1/64&\text{none through 8}&\text{none through 8}&\text{none through 8}\\
+ 1/128&\text{none through 8}&8&8\\
+ 1/256&\text{none through 8}&8&4
+ \end{array}
+\]
+For both derivative orders the recorded intervals give $W_j<I_j<M_j$,
+with $U_3/M_3<0.134$ and $U_4/M_4<0.140$.
+At $r=1/256$ this improvement changes the degree-four margin from
+negative to positive. It is a finite improvement of the paid allowance,
+not a general law for minimum degrees.
+
+The same data enclose the quadratic radius from
+Theorem~\ref{fcg:radius} by
+\[
+ r_{\rm quad}^{B}\in[8.4593,8.4594]\,10^{-5},\qquad
+ r_{\rm quad}^{C}\in[2.3160,2.6591]\,10^{-4}.
+\]
+The latter's lower endpoint exceeds the former's upper endpoint by
+a factor greater than $2.7$. Downward rounding to the largest
+power-of-two radius below the confirmed C lower endpoint gives
+$r=1/8192$; the recorded degree-one evaluation has $d_1\ge D/2$.
+These are radii licensed by the stated quadratic payment, not optimal
+true collision-free radii.
+
+At the prescribed representative C, $r=1/128,N=8$, both simple
+component floors in \eqref{fcg:scalarcomparators} fail while the joint
+certificate passes. The report gives $c>1.78\,10^{-19}$,
+$\mu>4.25\,10^{-10}$ and, with the complete carrier data,
+$E_c(s;p)>2.7\,10^{-62}$ for every $s\ge0$ on that ball.
+Failure of those component floors does not prove an actual scalar
+zero or superiority over all direct methods: the identical-information
+strip \eqref{fcg:directstrip} still has at least the same separation.
+The smaller positive balls already have a positive scalar-$H$ floor.
+
+This execution has internal self-checking; its separate E02 R5
+proof-and-data assessment is pending. It was completed in parallel
+with manuscript integration and is included only as supporting
+evidence. No general theorem above uses its numerical values, and
+no end-to-end runtime advantage follows from smaller bounds or degrees.
+The complete-remainder primitive identity \eqref{fcg:primitivefull}
+was not implemented as a competing bound and still has no acquired
+improved allowance. The live research register owns subsequent status.
+
 \section*{Acknowledgments and verification}
 
 Drafted for Edward Baker with substantial LLM assistance.
@@ -4465,7 +5608,7 @@ principle and proposed magnifying collisions without a prescribed
 spatial direction. He also identified integration by parts and the
 relation to the undifferentiated theta function as central motivations
 for the three-dimensional realization. The underlying constructions and successive
-analytical refinements were developed on 27--29 October 2026 using
+analytical refinements were developed on 27--30 October 2026 using
 OpenAI GPT-6-astra at recorded efforts \emph{max} and \emph{ultra}, and GPT-6.1-sol at
 recorded effort \emph{ultra}. The research notes and reviews cited
 below preserve the detailed contribution and assessment history.
@@ -4501,19 +5644,37 @@ support the editorial assessment; prior contributor overlap and shared
 inherited premises remain. The editor's compiler checks the saved source;
 a separate PDF or fresh visual-layout pass was not claimed for that integration.
 
-The present author-requested E05 R6 integration was prepared in
+The earlier author-requested E05 R6 integration was prepared in
 chat0038 with GPT-6-astra, actual recorded effort \emph{ultra}.
 It develops the full transfer and scalar reduction of Notes89--90,
 accepted in Review46; the entropy obstruction of Note94, accepted in
 Review48; and the actual attraction theorem of Note98, accepted in
 Review50. Those fixed assessments used GPT-6.1-sol at effort
 \emph{ultra}. The protected-denominator comparison and scoped failed
-closure from Note101 have same-model internal checking in Review51;
-the separate fixed E08 R16 assessment remains pending. Their inclusion
-here does not change that status. Three contributing section derivations
+closure from Note101 received same-model internal checking in Review51
+and were subsequently accepted without mathematical correction in
+the seven-check E08 R16 Review53 by GPT-6.1-sol/ultra. The latter
+assessment was pending at the earlier integration and is now recorded
+with its accepted scope. Three contributing section derivations
 and subsequent read-only checks support the editorial synthesis; the
 parent alone edits the manuscript. All reviews remain internal with
 shared inherited premises, rather than independent specialist review.
+
+The present FCG-E03 R1 integration was requested by the author on
+30 October 2026 and prepared in chat0048 with GPT-6-astra, actual
+recorded effort \emph{max}. Edward Baker proposed allowing the radius
+and degree cap to vary with height, shrinking the ball to reduce the
+degree, and choosing source boundaries suited to the cosine in
+integration by parts. The resulting adaptive construction and its
+quadratic radius refinement are in fixed-coefficient Notes26 and 28.
+They have proof-author checks only; manuscript inclusion does not
+upgrade them to a separate assessment. The earlier moment, quadratic
+certificate and fixed-cap results were accepted in E02 R2--R4
+Reviews03,06,08 by GPT-6.1-sol at effort \emph{ultra}, with shared
+premises and the stated contributor overlap. The fixed-family
+clarifications retain their own internal checking status.
+The current integration adds no source acquisition, global coverage,
+specialist assessment or formal verification.
 
 The source proofs are analytical. Existing arithmetic checks of local
 variance and deadline constants remain supporting records; no new
@@ -4775,8 +5936,10 @@ The original physical-mass premise is retained.
 E. Baker research archive, prepared with LLM assistance,
 \emph{Mass-free feedback defect and the failed norm-only slope closure},
 Investigation05, Note101, 29 October 2026. GPT-6-astra/ultra, chat0038;
-same-model internal checks in Review51. Fixed E08 R16 assessment
-pending at this manuscript revision.
+same-model internal checks in Review51; all seven fixed E08 R16
+obligations subsequently accepted without mathematical correction in
+Review53, GPT-6.1-sol/ultra. The failed closure retains its specified
+norm-only scope.
 
 \bibitem{WeightedSquareControl}
 E. Baker research archive, prepared with LLM assistance,
@@ -4801,6 +5964,83 @@ SIAM Journal on Mathematical Analysis \textbf{29} (1998), 1--17,
 \href{https://doi.org/10.1137/S0036141096303359}{doi:10.1137/S0036141096303359}.
 Classical fixed-potential Gibbs and free-energy context only; no
 nonlinear-feedback convergence theorem is imported.
+
+\bibitem{FCGFixedFamily}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Fixed compression and normalization: comparison of two different
+flows} and \emph{Fixed-flow parameter families and collision indices},
+Investigation05, CHAT0042 notes, 30 October 2026.
+GPT-6-astra, effort xhigh; same-assistant derivations.
+The zero-mass and compact-uniform derivative limits were inspected as
+dependencies in the fixed-coefficient E02 R2 assessment.
+
+\bibitem{FCGClarification}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Fixed flow boundedness and local collision geometry},
+fixed-coefficient Note10, 30 October 2026.
+GPT-6-astra, effort xhigh, chat0045; explanatory derivation and
+author clarification, same-assistant checking only.
+
+\bibitem{FCGMoment}
+E. Baker research archive, prepared with LLM assistance,
+\emph{A regional moment coefficient and the limits of common flow
+propagation}, fixed-coefficient Note12, 30 October 2026.
+GPT-6-astra/max, chat0046; seven obligations accepted without
+mathematical correction in E02 R2 Review03 by GPT-6.1-sol/ultra,
+chat0047. Internal different-model assessment with shared premises.
+
+\bibitem{FCGQuadratic}
+E. Baker research archive, prepared with LLM assistance,
+\emph{A quadratic heat-polynomial coefficient using the complete first jet},
+fixed-coefficient Note16, 30 October 2026.
+GPT-6-astra/max, chat0046; the joint-jet theorem and original complete
+remainder were accepted in E02 R3 Review06 by GPT-6.1-sol/ultra.
+
+\bibitem{FCGPilot}
+E. Baker research archive, prepared with LLM assistance,
+fixed-coefficient Notes18 and 20 and E02 R3 Review06,
+30 October 2026. GPT-6.1-sol/ultra, chat0047.
+Complete-source interval pilot and saved-input reconciliation;
+the same information proves scalar $H$ positivity on the pilot ball.
+The small record is
+\path{numerics/fixed_coefficient_parameter_geometry/}
+\path{fcg_e01_r1_joint_jet_coefficient_20261030.json}.
+Execution and assessment have contributor overlap and shared premises.
+
+\bibitem{FCGLimits}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Fixed-degree tail and quadratic-time limits of C04 R2},
+fixed-coefficient Note22, 30 October 2026.
+GPT-6-astra/max, chat0048; all seven obligations accepted without
+mathematical correction in E02 R4 Review08 by GPT-6.1-sol/ultra,
+chat0047. The fixed-cap theta obstruction and non-theta Gaussian
+time example retain their separate scopes.
+
+\bibitem{FCGAdaptive}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Adaptive radius, a separate analytic neighborhood, and
+phase-aligned integration by parts}, fixed-coefficient Note26,
+30 October 2026. GPT-6-astra/max, chat0048; proof-author
+self-assessment09 only. The subsequent finite comparison is recorded
+separately in \cite{FCGAdaptiveComparison}.
+
+\bibitem{FCGSharpRadius}
+E. Baker research archive, prepared with LLM assistance,
+\emph{A sharper explicit radius for the degree-one payment},
+fixed-coefficient Note28, 30 October 2026.
+GPT-6-astra/max, chat0048; same-assistant refinement.
+Its quadratic radius rule is the issued E01 R2 amendment A1.
+
+\bibitem{FCGAdaptiveComparison}
+E. Baker research archive, prepared with LLM assistance,
+\emph{FCG-E01 R2: completed adaptive-radius and IBP comparison},
+30 October 2026. GPT-6.1-sol/ultra, chat0047.
+The complete outward record is
+\path{numerics/fixed_coefficient_parameter_geometry/}
+\path{fcg_e01_r2_adaptive_ibp_20261030.json}.
+Internal execution self-checking with shared premises; the separate
+nine-obligation E02 R5 assessment remains pending. No global coverage
+or end-to-end runtime advantage is claimed.
 
 \end{thebibliography}
 \end{document}

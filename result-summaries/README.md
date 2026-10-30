@@ -72,7 +72,7 @@ relative to this folder. Cluster files:
 | [11](11_newman_heat_flow_reductions_and_certificates.md) | Heat-flow reductions, counter-kernels, finite Newman certificates, the corrected Riemann–Siegel interface, the Gomila audit | quasi-rh-exponent-descent, investigations-2 |
 | [12](12_collision_controls_and_screening.md) | Euler-factor, weighted-square, reflected and positive-primitive controls; reflection rigidity and scoped screening | investigations-2 (19, 21, 22) |
 | [13](13_local_heat_flow_geometry_and_rh_equivalent_criteria.md) | Local collision laws, real/complex multiplicities, marked surface topology and RH-equivalent criteria | investigations-2 (21, 22) |
-| [14](14_theta_identities_and_arithmetic_bookkeeping.md) | Positive theta primitive, finite E8 bridge, covariant source, coefficient stability, complete arithmetic identities and scoped obstructions | investigations-2 |
+| [14](14_theta_identities_and_arithmetic_bookkeeping.md) | Positive theta primitive, finite E8 bridge, covariant source, coefficient stability, complete arithmetic identities and scoped obstructions | investigations-2; investigations-5 (05) |
 | [15](15_verification_infrastructure.md) | The reusable machinery: blueprint and ledger, check-programme conventions, certificate formats, chat recorders, hygiene checks | repository-wide |
 | [16](16_hypercomplex_reductions_and_geometric_realizations.md) | Quaternion/octonion reductions, sharp signed averages, physical jet surfaces, hyperkähler metrics and theta connections | investigations-2 (21, 22) |
 | [17](17_constructive_stable_model_obstructions.md) | Scoped spin/quartic exclusions, weak closure, all-base-time rollback and diverging-heat stable control | investigations-3 (05) |

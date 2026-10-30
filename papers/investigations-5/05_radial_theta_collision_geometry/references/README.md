@@ -76,3 +76,5 @@ gpt-6-astra / ultra, chat0033. New estimates are derived in-note; no new
 external theorem or PDF is imported.
 
 - [17 — Classical Stein-kernel preparation identity](17_STEIN_KERNEL_PREPARATION_IDENTITY_SCOPE_20261029.md): Saumard v3, Section 2 equations (5)–(6), selected passages checked for Note98; the actual source bound and attraction are derived in-note. External PDF archived; Astra/ultra chat0035, 29 October 2026.
+
+- [17 — Fixed-flow correlation formula checks](17_FIXED_FLOW_CORRELATION_REFERENCE_CHECK_20261030.md): additional selected DLMF 1.8.14 and 20.7.32 inspection for FCG-B01; extends the existing source identity. The inherited parity–Poisson product supplies no sign theorem. Online reference only, 30 October 2026, actual gpt-6-astra / xhigh, chat0043.

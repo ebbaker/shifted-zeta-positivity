@@ -648,3 +648,49 @@ close specific unpaid transfers; they do not rule out every use of heat
 flow or every possible completion.” The [integration record](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/10_rh_implies_simple_zeros/brainstorm/03_HEAT_ROOT_MOTION_AND_HIGHER_DIMENSIONAL_CONTOURS_20261021.md)
 also discusses cap motion and signed higher-dimensional boundaries; no
 new simplicity estimate is claimed.
+
+**Prepared-cone Poisson localization, 30 October 2026.** For Edward Baker
+with substantial LLM assistance, **gpt-6-astra / max**, chat0043; assessment
+**gpt-6.1-sol / ultra**, chat0044. [B02's proof](../papers/investigations-5/05_radial_theta_collision_geometry/notes/fixed_coefficient_parameter_geometry/03_POISSON_LOCALIZATION_AND_RELATIVE_LOSS_B02_20261030.md)
+has the [E02 R1 disposition](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/fixed_coefficient_parameter_geometry/01_FCG_E02_R1_POISSON_LOCALIZATION_ASSESSMENT_20261030.md)
+“accept all six fixed obligations without mathematical correction”. On
+c=1, K*=[1/8,3/8]×[4,45], complete-source quartic localization has an
+absolute moment allowance through order six. The undamped zero mode has
+infinite positive part on the prepared cone; the termwise absolute budget
+has ε log Aε→T² at B₀ and Q(1). Paying the exterior absolutely loses an
+explicit positive quantity; its failure at a theta double is conditional
+on that hypothetical event. No whole signed integral is declared +∞,
+intermediate-time lower rate or theta exclusion is claimed. Reusable for
+screening this particular absolute-budget method. Fixed-window signed
+certificates and infinite regrouping remain open. [B03's disposition](../papers/investigations-5/05_radial_theta_collision_geometry/notes/fixed_coefficient_parameter_geometry/07_C01_DISPOSITION_AFTER_E02_20261030.md)
+makes C01 inactive within the tested scope, not universally impossible.
+Review is internal and different-model with shared premises, not
+specialist/formal independence. B03's additional regrouping derivation
+was not assessed by E02.
+
+
+**Regional quadratic separation and adaptive IBP, 30 October 2026.**
+For Edward Baker with substantial LLM assistance, **gpt-6-astra / max**,
+chat0048. The [analytical integration](../papers/investigations-5/05_radial_theta_collision_geometry/notes/fixed_coefficient_parameter_geometry/29_ANALYTICAL_MANUSCRIPT_INTEGRATION_E03_R1_20261030.md)
+develops complete-source moment calibration, signed quadratic first-jet
+separation and an all-time fixed-flow floor. E02 R2–R4 accepted the earlier
+moment/quadratic results and scoped old fixed-cap obstruction internally
+(Sol/ultra, shared premises). The Gaussian time loss is not a theta example.
+
+[Note26](../papers/investigations-5/05_radial_theta_collision_geometry/notes/fixed_coefficient_parameter_geometry/26_ADAPTIVE_RADIUS_AND_PHASE_ALIGNED_IBP_B03_R5_20261030.md)
+states: “A nonzero center discriminant gives an explicit positive radius
+at **degree one**.” It derives exact radius/degree monotonicity and complete
+complex IBP envelopes with paid phase boundaries and exteriors.
+[Note28](../papers/investigations-5/05_radial_theta_collision_geometry/notes/fixed_coefficient_parameter_geometry/28_SHARP_QUADRATIC_RADIUS_PAYMENT_B03_R5_20261030.md)
+sharpens the radius by solving the quadratic payment. **Adaptive proof
+status: proved in-note, proof-author checks only; E02 R5 pending.**
+Reusable for local error/radius design, not a universal theta
+discriminant or efficient global cover.
+
+Sol's concurrent [finite comparison](../papers/investigations-5/05_radial_theta_collision_geometry/notes/fixed_coefficient_parameter_geometry/E01_R2_ADAPTIVE_RADIUS_IBP_EXECUTION_20261030.md)
+records degree 8 to 4 among issued choices at radius 1/256 and a
+greater-than-2.7 improvement in the quadratic-payment radius. **Execution
+self-checking, separate assessment pending**; no actual zero crossing,
+global coverage or runtime saving is inferred. The equally informed
+direct strip remains at least as strong. Manuscript inclusion does not
+upgrade review status or supply specialist/formal independence.
