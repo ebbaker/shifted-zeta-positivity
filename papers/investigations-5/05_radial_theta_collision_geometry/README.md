@@ -2,14 +2,52 @@
 
 27 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
 
-**Current manuscript integration, 29 October 2026: CTF-E05 R2 complete.**
-[Note71](notes/71_ANALYTICAL_MANUSCRIPT_CONSOLIDATION_20261029.md) records the analytical consolidation and
-[Continuation72](notes/72_ANALYTICAL_MANUSCRIPT_AND_MODEL_CONTINUATION_20261029.md) gives outstanding tasks and model-change
-guidance. The strongest direct deadline and assessed uniform-feedback
-proof now lead the development; numerical records remain supporting
-evidence. **Next research: [B] CTF-B02 — Astra**, one unpaid consumer or
-precise advantage over the accepted direct bound. Actual editorial work:
-**gpt-6-astra / max**, chat0031, at the author's request.
+**Current, 29 October 2026: CTF-E08 R13 complete — accepted without
+mathematical correction.** [Review46](reviews/46_COMPLETE_CARRIER_REDUCTION_E08_R13_ASSESSMENT_20261029.md) and [Return92](notes/92_COMPLETE_CARRIER_R13_E08_RESEARCH_RETURN_20261029.md) assess the complete finite production/dissipation differences, feedback
+defect, weak scalar forcing, scalar-energy limit and unique stationary
+candidate. The physical margin remains; no profile/coefficient attraction,
+carrier-production sign or actual-energy/domain gain is established.
+Both manuscripts and the existing editor are preserved.
+
+**Next: [B] CTF-B02 scalar-attraction decision — Astra**, one stability
+route with complete weak-forcing/comparator/control contract under
+[Continuation93](notes/93_COMPLETE_CARRIER_R13_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md). No route selected; a distinct physical-margin benefit is an alternative.
+Later integration needs a bounded assignment. Parent B02 partial, E03/B03
+gated. Actual gpt-6.1-sol / ultra, existing chat0034; internal different-
+model assessment with prior overlap/shared premises, no specialist review.
+Earlier dated routing is historical.
+
+**Previous integration, 29 October 2026: CTF-E05 R5 complete.**
+The [existing manuscript](radial_deformations_and_zero_dynamics.tex) now
+integrates accepted R12 in Section 9: common-carrier H1 decay, genuine
+centered residual/dissipation and finite selected-production correction.
+[Return87](notes/87_COMMON_CARRIER_MANUSCRIPT_INTEGRATION_RETURN_20261029.md), [Review44](reviews/44_COMMON_CARRIER_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md) and [record34](numerics/34_COMMON_CARRIER_MANUSCRIPT_BUILD_RECORD_20261029.json) record final built-in compilation and source checks. All 21 previous
+proofs and the companion are preserved. No fresh visual preview pass or
+separate PDF was produced; the editor stays open. The physical margin
+and unpaid carrier-production/full actual-energy scope remain explicit.
+
+**Next: [B] CTF-B02 — Astra**, one unpaid surviving-carrier/source benefit
+with complete matched comparator/control contract under
+[Continuation88](notes/88_COMMON_CARRIER_INTEGRATION_AND_MODEL_CONTINUATION_20261029.md). No mechanism selected; parent B02 partial, E03/B03 gated. Actual
+gpt-6.1-sol / ultra, existing chat0034; same-parent editorial checking with
+three read-only contributions, prior overlap and shared premises, no
+specialist independence. Earlier dated routing is historical.
+
+**Previous integration, 29 October 2026: CTF-E05 R4 complete.**
+The [existing manuscript](radial_deformations_and_zero_dynamics.tex) now
+integrates the accepted uniform full weighted residual energy, fixed-order
+jets, complete sliding dissipation and paid primitive tests/traces.
+[Return80](notes/80_UNIFORM_RESIDUAL_MANUSCRIPT_INTEGRATION_RETURN_20261029.md), [Review41](reviews/41_UNIFORM_RESIDUAL_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md) and [record31](numerics/31_UNIFORM_RESIDUAL_MANUSCRIPT_BUILD_RECORD_20261029.json) record the successful 35-page built-in/local build and bounded layout
+check. All 19 previous proofs and the companion are preserved. The
+positive physical mass premise remains; no extra primitive signed
+advantage or physical coverage is established.
+
+**Next: [B] CTF-B02 — Astra**, one unpaid source/path benefit with a
+complete matched comparator/control contract under
+[Continuation81](notes/81_UNIFORM_RESIDUAL_INTEGRATION_AND_MODEL_CONTINUATION_20261029.md). No new mechanism selected; parent B02 partial, E03/B03 gated.
+Actual **gpt-6.1-sol / ultra**, same chat0034; same-parent editorial
+checking with three read-only contributing checks and shared inherited
+premises, no independent specialist review.
 
 **Previous assessment continuation, 29 October 2026: CTF-E08 R10 complete — accepted
 without mathematical correction; field-energy notation clarified.**
@@ -71,7 +109,14 @@ substantial LLM assistance, **gpt-6-astra / max**.
 
 [CURRENT_RESEARCH_PROGRAM.md](CURRENT_RESEARCH_PROGRAM.md) routes work to **conservative theta flows and collision amplification**. The entire H(t,a) is invariant; its radial integrand may change and no spatial direction is prescribed.
 
-**Current manuscript, 29 October 2026:** [Conservative Theta Flows and Collision Amplification](radial_deformations_and_zero_dynamics.tex) now presents the collision deadline, uniform radial feedback, analytical theta application and coupled residual estimate in logical order. Section 8 lists the remaining tasks; technical coefficient proofs are in the appendices. The [28-page reading copy](../../../output/pdf/radial-theta-collision-geometry/conservative-theta-flows.pdf), [build guide](MANUSCRIPT_BUILD.md), [record27](numerics/27_ANALYTICAL_MANUSCRIPT_BUILD_RECORD_20261029.json) and [editorial review37](reviews/37_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md) identify the checked version. No new collision exclusion; the companion and prior proof records are preserved.
+**Current manuscript, 29 October 2026:** [Conservative Theta Flows and Collision Amplification](radial_deformations_and_zero_dynamics.tex)
+retains the collision deadline, uniform-feedback theorem and coupled
+residual estimate, and adds the primitive transfer and proposed production
+comparison. Section 9 lists the outstanding tasks. The saved source
+compiled in the existing editor; no separate PDF was generated.
+The existing standalone 28-page reading copy and record27 identify the
+earlier E05 R2 version. The companion and all inherited proof blocks
+are unchanged. See the [current record28](numerics/28_PRIMITIVE_MANUSCRIPT_INTEGRATION_RECORD_20261029.json).
 
 **Companion Book setup, 28 October 2026:** [The Theta Transform in Three Dimensions](book/main.tex) separates the density from a fixed spectral kernel, derives a restricted radial inverse, and distinguishes preservation of every observation from preservation of total mass. For this kernel the spherical average is fixed while angular geometry may vary. [Book guide](book/README.md), [Brainstorm06](brainstorm/06_BOOK_TRANSFORM_SETUP_20261028.md), [Review20](reviews/20_BOOK_TRANSFORM_SETUP_ASSESSMENT_20261028.md), and [record18](numerics/18_BOOK_TRANSFORM_SETUP_BUILD_RECORD_20261028.json) document the eight-page setup and checks. No auxiliary flow is selected; the conservative-flow program below retains its separate open estimate. Prepared for Edward Baker with LLM assistance, gpt-6-astra / max, chat0013.
 

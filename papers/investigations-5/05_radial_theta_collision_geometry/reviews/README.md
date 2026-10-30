@@ -1,8 +1,17 @@
 # Radial theta collision reviews
 
+Latest research review: [45 — complete carrier reduction](45_COMPLETE_CARRIER_REDUCTION_INTERNAL_REVIEW_R13_20261029.md),
+29 October 2026, gpt-6-astra / ultra, chat0033. Same-model contributing
+checks with shared premises; fixed E08 R13 is pending. Review44 remains
+the completed E05 R5 editorial assessment.
+
+Latest research review: [42 — common-carrier and centered production](42_COMMON_CARRIER_AND_PRODUCTION_INTERNAL_REVIEW_R12_20261029.md),
+29 October 2026, gpt-6-astra / ultra, chat0033. Same-model contributing
+checks with shared premises; fixed E08 R12 assessment pending.
+
 27 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
 
-Latest editorial review: [37 — analytical manuscript integration](37_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md).
+Historical editorial review: [37 — analytical manuscript integration](37_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md).
 CTF-E05 R2, 29 October 2026, gpt-6-astra / max, chat0031. Same-assistant
 dependency/transcription and full-page layout checks; no new independent
 proof assessment. The underlying R10 result retains Review36's
@@ -84,3 +93,20 @@ different-model internal assessment.
 - [35 — Uniform-feedback R10 self-assessment](35_UNIFORM_FEEDBACK_B02_R10_SELF_ASSESSMENT_20261029.md): same-assistant checks of full source/mass payment, Fourier/carrier bounds, retained diffusion, sliding interval, explicit constants and the stronger direct comparison. E08 R10 ready, unexecuted; no specialist review. gpt-6-astra / max, chat0031, 29 October 2026.
 
 - [36 — E08 R10 uniform-feedback assessment](36_UNIFORM_FEEDBACK_E08_R10_ASSESSMENT_20261029.md): accepted without mathematical correction within the inherited prepared radial class at (1/4,2); field-energy notation clarified. All eight obligations, full analytical K_infinity<=K_theta, same-diffusion crossover and actual residual/control scope pass. All 17 frozen inputs, packet and 121 inherited proof/review/TeX/handoff files unchanged. For Edward Baker with substantial LLM assistance, gpt-6.1-sol / ultra, chat0032, 29 October 2026; three read-only same-model contributing audits, shared premises, no specialist independence. Review35 remains the historical same-assistant check; E08 R10 is now complete. Manuscripts unchanged.
+
+- [39 — R11 primitive tests and uniform closure internal review](39_PRIMITIVE_TEST_AND_UNIFORM_CLOSURE_INTERNAL_REVIEW_20261029.md):
+  full test/trace, direct complete allowance and control-scope checks;
+  one preliminary trace-sign correction recorded. Same-model contributing
+  internal review, E08 pending, no specialist independence. Prepared for
+  Edward Baker with LLM assistance, gpt-6-astra / ultra, chat0033,
+  29 October 2026.
+
+- [40 — E08 R11 primitive tests and uniform closure](40_PRIMITIVE_TEST_AND_UNIFORM_CLOSURE_E08_R11_ASSESSMENT_20261029.md): accepted without mathematical correction at (1/4,2) in the inherited prepared radial class; all ten obligations, complete uniform F_R, fixed jets, sliding dissipation, primitive test costs and exact control/sign limits. Supersedes Review39's assessment-pending status. For Edward Baker with substantial LLM assistance, gpt-6.1-sol / actual effort ultra, chat0034, 29 October 2026; three read-only same-model contributing audits and shared premises, no specialist independence. Manuscripts preserved; E05 R4 ready.
+
+- [41 — E05 R4 uniform residual manuscript integration](41_UNIFORM_RESIDUAL_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md): complete; accepted Notes75–76/Review40 integrated with explicit physical-margin dependency, full production and strongest direct comparison. Both compilers succeed; 35 final pages rendered/contact-checked and key changed pages inspected in detail. All 19 prior proofs, companion and 142 protected files preserved. Same-parent editorial checks with three read-only contributing checks; no specialist independence. For Edward Baker with LLM assistance, gpt-6.1-sol / actual effort ultra, same chat0034, 29 October 2026.
+
+- [43 — E08 R12 common-carrier/production assessment](43_COMMON_CARRIER_AND_PRODUCTION_E08_R12_ASSESSMENT_20261029.md): accepted without mathematical correction at (1/4,2) under inherited prepared radial/common-path/R10/R11 premises; all ten obligations, raw mismatch and centered endpoints, complete centered dissipation and finite selected I1 correction. Review42's pending status is historical. Both manuscripts and issued sources preserved. For Edward Baker with LLM assistance, gpt-6.1-sol / actual effort ultra, existing chat0034, 29 October 2026; three read-only contributing audits, prior overlap and shared inherited premises, no specialist/formal independence.
+
+- [44 — E05 R5 common-carrier manuscript integration](44_COMMON_CARRIER_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md): complete; accepted Notes82–83/Review43 integrated with full initial/mismatch/sphere/centered-production costs and unchanged physical-margin scope. Final built-in compilation succeeds; no detailed log or fresh visual pass. All 21 prior proofs and 199 protected research/companion files preserved. For Edward Baker with LLM assistance, gpt-6.1-sol / actual effort ultra, existing chat0034, 29 October 2026; same-parent editorial checks with three read-only contributions, prior overlap/shared premises, no specialist independence.
+
+- [46 — E08 R13 complete-carrier assessment](46_COMPLETE_CARRIER_REDUCTION_E08_R13_ASSESSMENT_20261029.md): accepted without mathematical correction at (1/4,2) in the inherited prepared radial/common-path class. All ten balance/window/polarization, feedback/forcing, scalar-energy and candidate/entropy/control obligations pass. Unique stationary candidate is not attraction. Both manuscripts, 19 issued inputs and 229 protected files preserved. For Edward Baker with LLM assistance, gpt-6.1-sol / actual effort ultra, existing chat0034, 29 October 2026; three read-only contributing audits, prior overlap/shared premises, no specialist/formal independence.

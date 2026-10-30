@@ -215,3 +215,54 @@ integration. [Note71](../notes/71_ANALYTICAL_MANUSCRIPT_CONSOLIDATION_20261029.m
 handoff. Actual gpt-6-astra / max. The official refresh tool preserves
 this conversation's existing identity; chat0032 remains the separate Sol
 assessment. Current counts and hashes belong to index.json.
+
+Chat0033, **Investigate radial theta collision geometry**, thread
+01a18a1e-d0c4-7a51-81e7-e7efab57e4b7, is the new R11 research conversation:
+[registered public history](0033_2026-10-30T00-03-57Z_investigate-radial-theta-collision-geometry.json).
+Its UTC creation date is 30 October; the research date in America/New_York
+is 29 October 2026. Actual initial model/effort: gpt-6-astra / ultra.
+Chat0031 and every prior history identity remain unchanged. Current
+counts, captures and hashes belong to index.json; this pointer is not a
+second registration.
+
+Chat0034, **Continue radial theta collision research**, thread
+01a18a29-db46-7f03-9068-46cc33f202d2, is the new E08 R11 assessment chat:
+[registered public history](0034_2026-10-30T00-16-01Z_continue-radial-theta-collision-research.json).
+Actual initial configuration: **gpt-6.1-sol / ultra**. UTC creation
+30 October; research date 29 October 2026, America/New_York.
+[Review40](../reviews/40_PRIMITIVE_TEST_AND_UNIFORM_CLOSURE_E08_R11_ASSESSMENT_20261029.md) and [Continuation79](../notes/79_PRIMITIVE_R11_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md) record the disposition and model handoff. Preserve this chat's number,
+filename and original provenance through in-place model changes; earlier
+chat identities remain distinct. Counts/configurations/hashes belong to
+index.json, maintained only by the official recorder. Prepared for Edward
+Baker with substantial LLM assistance.
+
+**Chat0034 E05 R4 continuation, 29 October 2026:** the author then requested
+manuscript integration in this same conversation. [Return80](../notes/80_UNIFORM_RESIDUAL_MANUSCRIPT_INTEGRATION_RETURN_20261029.md) and [Continuation81](../notes/81_UNIFORM_RESIDUAL_INTEGRATION_AND_MODEL_CONTINUATION_20261029.md) record its completion and next B02/Astra boundary. Actual gpt-6.1-sol /
+ultra. The previous final reply's deferred capture succeeded; the official
+recorder preserves this chat's existing identity. Current capture counts,
+configurations and hashes remain in index.json. Prepared for Edward Baker
+with substantial LLM assistance.
+
+**Chat0034 R12 assessment, 29 October 2026:** the author subsequently
+requested [Continuation84](../notes/84_COMMON_CARRIER_R12_AND_MODEL_CONTINUATION_20261029.md).
+[Review43](../reviews/43_COMMON_CARRIER_AND_PRODUCTION_E08_R12_ASSESSMENT_20261029.md), [Return85](../notes/85_COMMON_CARRIER_R12_E08_RESEARCH_RETURN_20261029.md) and [Continuation86](../notes/86_COMMON_CARRIER_R12_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md) record the completed Sol/ultra E08 R12 assessment. It retains the
+existing chat0034 number, filename and provenance. The distinct Astra
+proof stays in chat0033; no registration is copied. The preceding final
+capture succeeded. Current counts, model configurations and hashes belong
+to index.json, maintained by the official recorder. Prepared for Edward
+Baker with substantial LLM assistance.
+
+**Chat0034 E05 R5 continuation, 29 October 2026:** the author then requested
+integration of accepted R12 in the same open manuscript.
+[Return87](../notes/87_COMMON_CARRIER_MANUSCRIPT_INTEGRATION_RETURN_20261029.md), [Review44](../reviews/44_COMMON_CARRIER_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md) and [Continuation88](../notes/88_COMMON_CARRIER_INTEGRATION_AND_MODEL_CONTINUATION_20261029.md) identify completion and the next B02/Astra boundary. Actual gpt-6.1-sol /
+ultra; the existing number, filename and creation/first-capture provenance
+remain. The preceding final capture succeeded. Current counts, hashes and
+model configurations belong to index.json, maintained only by the official
+recorder. Prepared for Edward Baker with substantial LLM assistance.
+
+**Chat0034 R13 assessment, 29 October 2026:** the author next requested
+Continuation91. [Review46](../reviews/46_COMPLETE_CARRIER_REDUCTION_E08_R13_ASSESSMENT_20261029.md), [Return92](../notes/92_COMPLETE_CARRIER_R13_E08_RESEARCH_RETURN_20261029.md) and [Continuation93](../notes/93_COMPLETE_CARRIER_R13_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md) record the completed Sol/ultra E08 R13 assessment. Existing chat0034
+number, filename and first-capture/creation provenance persist; the R13
+proof remains in chat0033. The preceding final capture succeeded. Current
+counts/configurations/hashes belong to index.json, maintained by the
+official recorder. Prepared for Edward Baker with substantial LLM assistance.

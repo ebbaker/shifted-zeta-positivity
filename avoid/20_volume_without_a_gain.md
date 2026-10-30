@@ -132,3 +132,101 @@ margin and finite-horizon residual limitation. This is editorial integration
 of existing results, not evidence of an additional mathematical advance;
 [Review37](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/37_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md)
 records same-assistant checks and the remaining independent-review need.
+
+
+**A transported test still needs its own estimate, 29 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra / max**, chat0031.
+[Review38](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/38_PRIMITIVE_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md)
+states: “A transported test is not a free estimate.”
+The author-requested primitive integration retains both test derivatives,
+the initial sphere traces and the full cutoff adjoint in one signed
+pairing. Their presence is an exact interface, not an acquired energy
+bound. [Continuation74](../papers/investigations-5/05_radial_theta_collision_geometry/notes/74_PRIMITIVE_PRODUCTION_ANALYSIS_AND_MODEL_CONTINUATION_20261029.md)
+requires one complete comparison against an equally informed direct
+method before claiming a gain. This limits what the present identity
+establishes; it does not rule out the integration-by-parts direction.
+
+**Pay test costs without treating smoothing as arithmetic separation,
+29 October 2026.** For Edward Baker with substantial LLM assistance,
+**gpt-6-astra / ultra**, chat0033.
+[Review39](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/39_PRIMITIVE_TEST_AND_UNIFORM_CLOSURE_INTERNAL_REVIEW_20261029.md)
+states: “The uniform consumer closes directly; primitive test
+admissibility is not an arithmetic separator.” R11's Gaussian derivative
+payment and complete uniform residual allowance are useful proved-in-note
+supporting results. They retain the positive physical mass premise and
+do not establish a primitive-specific signed advantage. Compare any next
+candidate with this stronger direct baseline before another campaign;
+the scoped coefficient-only sign test excludes no actual theta-path
+correlation method. Same-model contributing review at issue. **E08 R11 subsequently completed**
+without mathematical correction in [Review40](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/40_PRIMITIVE_TEST_AND_UNIFORM_CLOSURE_E08_R11_ASSESSMENT_20261029.md),
+which states: “The direct comparator has the same source, physical mass and retained
+diffusion.” The paid uniform consumer is the new direct baseline, not a
+reason to repeat that consumer as a primitive gain. Assessment for Edward
+Baker with LLM assistance, **gpt-6.1-sol / ultra**, chat0034,
+29 October 2026; internal different-model review with shared premises.
+[Continuation79](../papers/investigations-5/05_radial_theta_collision_geometry/notes/79_PRIMITIVE_R11_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md)
+gives the next boundary; no actual theta-path correlation method is excluded.
+
+**Keep integration distinct from another result, 29 October 2026.**
+For Edward Baker with LLM assistance, **gpt-6.1-sol / ultra**, same
+chat0034. [Return80](../papers/investigations-5/05_radial_theta_collision_geometry/notes/80_UNIFORM_RESIDUAL_MANUSCRIPT_INTEGRATION_RETURN_20261029.md)
+states: “This integration establishes no additional mathematical result.”
+E05 R4 replaces obsolete finite-only status with the accepted complete
+uniform baseline, retaining its physical margin and direct comparison.
+[Review41](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/41_UNIFORM_RESIDUAL_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md)
+checks preservation/build/layout, not another proof of theta separation.
+The next conceptual task must name a benefit unpaid by that stronger
+baseline; same-parent editorial checking supplies no specialist independence.
+
+### A finite selected-term correction is not a complete energy gain
+
+29 October 2026, prepared for Edward Baker with substantial LLM assistance,
+gpt-6-astra / ultra, chat0033. [Note83](../papers/investigations-5/05_radial_theta_collision_geometry/notes/83_FINITE_CENTERED_PRODUCTION_CORRECTION_R12_20261029.md) proves
+finite accumulated I1−Ic error and complete centered dissipation, but
+states: “The carrier contribution retains its full source and feedback-path
+dependence and has no newly proved sign.” Keep that contribution and
+other actual production terms paid separately; do not describe the result
+as a finite correction to the entire production or a smaller full actual
+energy allowance. The equally informed direct route supplies this useful
+consumer, so the declared comparison stops. This is a scope/cost lesson,
+not an exclusion of future correlated primitive estimates. E08 was pending
+at issue. **E08 R12 is now accepted without mathematical correction** in
+[Review43](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/43_COMMON_CARRIER_AND_PRODUCTION_E08_R12_ASSESSMENT_20261029.md),
+which states: “A finite correction for this single term is not an error
+theorem for the entire actual production.” For Edward Baker with LLM
+assistance, gpt-6.1-sol / ultra, existing chat0034, 29 October 2026;
+internal different-model assessment with prior overlap and shared premises.
+[Continuation86](../papers/investigations-5/05_radial_theta_collision_geometry/notes/86_COMMON_CARRIER_R12_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md)
+retains this boundary for integration and later conceptual work.
+
+The subsequent E05 R5 integration keeps that distinction in the manuscript.
+[Return87](../papers/investigations-5/05_radial_theta_collision_geometry/notes/87_COMMON_CARRIER_MANUSCRIPT_INTEGRATION_RETURN_20261029.md)
+states: “Integration adds no new mathematical result.” [Review44](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/44_COMMON_CARRIER_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md)
+records built-in compilation and source preservation, with no unseen
+preview pass. The remaining carrier production must change a specified
+complete cost or physical-margin dependency before another expansion.
+For Edward Baker with LLM assistance, gpt-6.1-sol / ultra, existing
+chat0034, 29 October 2026; same-parent editorial checking/shared premises.
+
+### A complete finite difference still needs a carrier conclusion
+
+29 October 2026, prepared for Edward Baker with substantial LLM assistance,
+gpt-6-astra / ultra, chat0033. [Note89](../papers/investigations-5/05_radial_theta_collision_geometry/notes/89_COMPLETE_CARRIER_PRODUCTION_TRANSFER_R13_20261029.md) now pays
+the full difference that R12 left open, including C0 second derivatives
+and exact dissipation. This supersedes that unpaid-cost statement only
+within its declared fixed-mark, supplied-margin setting. It does not pay
+the carrier's sign or total dissipation. [Note90](../papers/investigations-5/05_radial_theta_collision_geometry/notes/90_CARRIER_FEEDBACK_DEFECT_AND_STATIONARY_CANDIDATE_R13_20261029.md)
+states: “Convergence of the actual profile to that candidate, convergence
+of either feedback coefficient, and nonlinear shadowing remain unproved.”
+Unique equilibrium plus scalar-norm convergence is not attraction.
+Require a stability argument with the stated forcing topology before
+promoting the reduction. Internal R13 checks passed at issue. **E08 R13 is now accepted without
+mathematical correction** in [Review46](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/46_COMPLETE_CARRIER_REDUCTION_E08_R13_ASSESSMENT_20261029.md),
+which states: “Unique stationary candidate, scalar-energy convergence
+and weak integrable forcing do not show an omega-limit is stationary.”
+[Continuation93](../papers/investigations-5/05_radial_theta_collision_geometry/notes/93_COMPLETE_CARRIER_R13_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md)
+keeps the missing scalar stability/forcing-transfer argument as a B02
+choice. For Edward Baker with LLM assistance, gpt-6.1-sol / ultra, existing
+chat0034, 29 October 2026; internal different-model assessment with prior
+overlap/shared premises, not a universal obstruction.

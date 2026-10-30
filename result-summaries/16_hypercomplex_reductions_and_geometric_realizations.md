@@ -359,3 +359,101 @@ identify the 28-page checked version. Earlier proof and assessment sources
 and the companion remain unchanged; only the active main manuscript is
 superseded by this later authorized version. Internal same-assistant
 editorial checking, not independent mathematical review.
+
+
+**Primitive integration, 29 October 2026.** For Edward Baker with substantial
+LLM assistance, **gpt-6-astra / max**, chat0031.
+[Review38](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/38_PRIMITIVE_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md)
+states: “Integrated analytical interface; no improved estimate claimed.”
+The [manuscript](../papers/investigations-5/05_radial_theta_collision_geometry/radial_deformations_and_zero_dynamics.tex)
+now proves primitive transfer with both endpoint terms and common-path
+duality under explicit test hypotheses, following
+[Note73](../papers/investigations-5/05_radial_theta_collision_geometry/notes/73_BOOK_INTEGRATION_BY_PARTS_AND_FEEDBACK_PAIRINGS_20261029.md).
+It identifies the actual signed drift-production test; bounding its
+derivatives and traces remains open. The classical scalar formula is
+reused, and colliding controls still admit positive primitives.
+All 17 earlier proof blocks and the companion are preserved.
+Same-assistant analytical/editorial checks, built-in compilation only;
+no independent specialist review or new collision exclusion.
+
+**R11 primitive tests and uniform residual closure, 29 October 2026.**
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra /
+ultra**, chat0033. [Note75](../papers/investigations-5/05_radial_theta_collision_geometry/notes/75_PRIMITIVE_TEST_COSTS_AND_SIGNED_COMPARISON_R11_20261029.md)
+and [Note76](../papers/investigations-5/05_radial_theta_collision_geometry/notes/76_UNIFORM_RESIDUAL_AND_FIXED_JET_CLOSURE_R11_20261029.md)
+are **proved in-note**, with same-model contributing checks in
+[Review39](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/39_PRIMITIVE_TEST_AND_UNIFORM_CLOSURE_INTERNAL_REVIEW_20261029.md).
+**E08 R11 is now complete:** [Review40](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/40_PRIMITIVE_TEST_AND_UNIFORM_CLOSURE_E08_R11_ASSESSMENT_20261029.md)
+accepts all ten obligations without mathematical correction. Assessment:
+for Edward Baker with LLM assistance, **gpt-6.1-sol / ultra**, chat0034,
+29 October 2026; different-model internal review with contributing
+same-model audits and shared inherited premises, no specialist independence. They pay all actual primitive test derivatives/traces and,
+using R10's physical-margin feedback bound, give uniform full weighted
+residual energy, each fixed common-path jet and fixed-window complete
+dissipation. This supersedes the earlier finite-only residual allowance
+at (1/4,2), while preserving it as a valid envelope. The review states:
+“The uniform consumer closes directly; primitive test admissibility is
+not an arithmetic separator.” No primitive-specific signed gain, larger
+physical region, margin-free regularity or specialist review is claimed.
+The opposite-sign test concerns a broader coefficient/residual class,
+not actual theta trajectories; fixed-order is not uniform-in-order.
+Review40 states: “The direct comparator has the same source, physical mass and retained
+diffusion.” **E05 R4 integration is complete:** [Return80](../papers/investigations-5/05_radial_theta_collision_geometry/notes/80_UNIFORM_RESIDUAL_MANUSCRIPT_INTEGRATION_RETURN_20261029.md)
+and [Review41](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/41_UNIFORM_RESIDUAL_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md)
+identify the 35-page manuscript, successful build/layout check and
+preservation of 19 prior proofs. Return80 states: “This integration
+establishes no additional mathematical result.” Editorial revision for
+Edward Baker with LLM assistance, gpt-6.1-sol / ultra, same chat0034,
+29 October 2026; same-parent checking with shared premises. [Continuation81](../papers/investigations-5/05_radial_theta_collision_geometry/notes/81_UNIFORM_RESIDUAL_INTEGRATION_AND_MODEL_CONTINUATION_20261029.md)
+routes the next conceptual decision.
+
+### Investigation05 R12: common-carrier decay, assessed
+
+29 October 2026, prepared for Edward Baker with substantial LLM assistance,
+gpt-6-astra / ultra, chat0033. [Note82](../papers/investigations-5/05_radial_theta_collision_geometry/notes/82_COMMON_CARRIER_SYNCHRONIZATION_R12_20261029.md) states
+“proved in-note under the accepted prepared-solution, common-kernel and
+R10 uniform-feedback inputs”. **E08 R12 is complete:** [Review43](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/43_COMMON_CARRIER_AND_PRODUCTION_E08_R12_ASSESSMENT_20261029.md)
+accepts all ten obligations without mathematical correction. Assessment
+for Edward Baker with LLM assistance, gpt-6.1-sol / ultra, existing chat0034,
+29 October 2026; internal different-model review with prior contributor
+overlap and shared inherited premises, no specialist independence. The first three
+centered jets have squared-H1 allowance exp(−B/2).
+[Note83](../papers/investigations-5/05_radial_theta_collision_geometry/notes/83_FINITE_CENTERED_PRODUCTION_CORRECTION_R12_20261029.md) pays complete centered dissipation and a
+finite alpha-weighted correction in I1. The direct method proves both.
+The known physical margin remains, the carrier sign is unpaid and no
+full actual-energy or collision-domain improvement is claimed.
+[Review42](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/42_COMMON_CARRIER_AND_PRODUCTION_INTERNAL_REVIEW_R12_20261029.md) is same-model contributing checking.
+Earlier accepted results keep their existing scope.
+Review43 states: “A finite correction for this single term is not an error
+theorem for the entire actual production.” **E05 R5 integration is now complete:** [Return87](../papers/investigations-5/05_radial_theta_collision_geometry/notes/87_COMMON_CARRIER_MANUSCRIPT_INTEGRATION_RETURN_20261029.md)
+and [Review44](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/44_COMMON_CARRIER_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md)
+identify Section 9 and successful built-in compilation, with source checks
+and no fresh preview/standalone PDF. Return87 states: “Integration adds no
+new mathematical result.” All 21 prior proofs and the companion remain.
+For Edward Baker with LLM assistance, gpt-6.1-sol / ultra, existing
+chat0034, 29 October 2026; same-parent editorial checking/shared premises.
+[Continuation88](../papers/investigations-5/05_radial_theta_collision_geometry/notes/88_COMMON_CARRIER_INTEGRATION_AND_MODEL_CONTINUATION_20261029.md)
+routes the next bounded conceptual decision.
+
+### Investigation05 R13: complete carrier transfer, assessed
+
+29 October 2026, prepared for Edward Baker with substantial LLM assistance,
+gpt-6-astra / ultra, chat0033. [Note89](../papers/investigations-5/05_radial_theta_collision_geometry/notes/89_COMPLETE_CARRIER_PRODUCTION_TRANSFER_R13_20261029.md) states
+“proved in-note from the accepted R11/R12 inputs”. **E08 R13 is complete**:
+[Review46](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/46_COMPLETE_CARRIER_REDUCTION_E08_R13_ASSESSMENT_20261029.md)
+accepts all ten obligations without mathematical correction. Assessment
+for Edward Baker with LLM assistance, gpt-6.1-sol / ultra, existing
+chat0034, 29 October 2026; internal different-model review with prior
+overlap and shared premises, no specialist independence.
+Complete production and exact dissipation differences now have finite
+absolute tails. [Note90](../papers/investigations-5/05_radial_theta_collision_geometry/notes/90_CARRIER_FEEDBACK_DEFECT_AND_STATIONARY_CANDIDATE_R13_20261029.md) pays the feedback defect
+and dual-Lipschitz scalar forcing, proves a scalar-energy limit and
+selects a unique possible radial Gibbs profile. No profile/coefficient
+convergence, favorable carrier sign, physical-margin removal or
+primitive-specific gain follows. [Review45](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/45_COMPLETE_CARRIER_REDUCTION_INTERNAL_REVIEW_R13_20261029.md)
+is same-model contributing checking. R12's selected-term scope remains
+historically correct; R13 pays its previously unproved full difference.
+Review46 states: “Unique stationary candidate, scalar-energy convergence
+and weak integrable forcing do not show an omega-limit is stationary.”
+[Continuation93](../papers/investigations-5/05_radial_theta_collision_geometry/notes/93_COMPLETE_CARRIER_R13_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md)
+routes the remaining scalar-attraction decision; both manuscripts remain
+at their pre-assessment versions.

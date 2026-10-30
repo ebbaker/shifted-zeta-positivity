@@ -6,20 +6,515 @@
 
 ## Current priority
 
-**Author-directed integration-by-parts follow-up, 29 October 2026.**
+### CTF-E08 R13 complete — accepted without mathematical correction
+
+29 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol / actual recorded effort ultra**, existing **chat0034**,
+*Continue radial theta collision research*. [Review46](../reviews/46_COMPLETE_CARRIER_REDUCTION_E08_R13_ASSESSMENT_20261029.md) covers all ten fixed obligations; [Return92](../notes/92_COMPLETE_CARRIER_R13_E08_RESEARCH_RETURN_20261029.md) records the consequence. This is the current research disposition;
+prior proof/intake and completed integration records below are historical.
+
+Complete actual-to-carrier production and exact-dissipation differences
+have finite absolute integrals with paid tails. Arbitrary spatial form
+bounds precede polarization; unit-window Cauchy–Schwarz pays all shifted
+and initial windows, C0 second derivatives and exact two-N costs. The
+full radial feature remains. Differences are formed before integration,
+not by subtracting divergent individual totals.
+
+The nD_h denominator, original-alpha defect, both signs, all-time d1/d2,
+ordinary/alpha tails and finite B−B_h offset pass. The prepared moment
+pays the unbounded drift only in the stated dual-Lipschitz forcing
+seminorm. Scalar energy has finite variation and limit E0/n. The smooth
+radial stationary Gibbs class has exactly one candidate at that level,
+with the analytic bracket. Conditional entropy retains its extra
+integrability assumptions. None proves profile/coefficient convergence,
+shadowing, favorable carrier sign, smaller actual-energy allowance,
+physical-margin removal or new coverage. Direct comparison pays the result.
+
+[Record36](../numerics/36_COMPLETE_CARRIER_R13_E08_ASSESSMENT_RECORD_20261029.json) records all 19 issued hashes, frozen request and 229 protected
+research/source/reference files unchanged, including R5 manuscript and
+companion. No edit/build/export/tab action, scan or new campaign occurred.
+Three read-only Sol contributing audits, prior overlap and shared premises
+support different-model internal assessment; no specialist/formal review.
+
+**Default next: [B] CTF-B02 scalar-attraction decision — Astra**, choose
+one state-dependent-coefficient stability strategy and weak-forcing
+transfer contract, or scoped failed route, under [Continuation93](../notes/93_COMPLETE_CARRIER_R13_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md). No route or new revision selected. A distinct physical-margin benefit
+is an alternative. Later E05 integration needs a bounded author assignment;
+no new packet issued. Parent B02 partial, E03/B03 gated. No snapshot,
+commit or tag created.
+
+### CTF-E08 R13 intake — fixed assessment, existing chat0034
+
+29 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol / actual recorded effort ultra**, existing **chat0034**,
+*Continue radial theta collision research*. The author requests
+[Continuation91](../notes/91_COMPLETE_CARRIER_REDUCTION_AND_MODEL_CONTINUATION_R13_20261029.md), whose default is **[E] CTF-E08 R13 — Sol** under the
+[frozen packet](handoffs/CTF-E08_COMPLETE_CARRIER_REDUCTION_R13_20261029.md).
+Statements, proof route, topology and ten obligations are fixed; no new
+conceptual choice is delegated. Chat0034 retains its unique registration;
+chat0033 remains the distinct proof-author conversation.
+
+The parent is the sole writer. Three read-only contributing audits cover
+complete quadratic balance/window/polarization costs; scalar feedback
+and weak forcing/energy; and stationary classification/entropy/control
+scope. Return one supported disposition, research return and model
+continuation, updating live progress/navigation. Preserve issued notes,
+records, references and the completed R5 manuscript/companion. No edit,
+compile, separate PDF, new tab, integration, parameter scan or scalar
+attraction campaign. A new scientific premise or consumer returns to B02;
+complete unaffected checks. All 19 issued input hashes and frozen request
+match. Prior contributor overlap and shared inherited premises remain;
+this is internal different-model assessment, not specialist/formal review.
+The preceding final capture succeeded and this chat was refreshed at start.
+
+### Historical CTF-B02 R13 return — assessment pending at issue
+
+29 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra / actual recorded effort ultra**, existing **chat0033**.
+**Complete in-note; E08 R13 pending at issue.** The accepted assessment
+is above; this preserves the proof-return disposition at issue. The author assigned this task while Sol completed E05 R5.
+The [frozen intake](handoffs/CTF-B02_COMPLETE_CARRIER_REDUCTION_R13_INTAKE_20261029.md) records the B classification,
+consumer, costs and writer separation before substantive derivation.
+This lane waited for Sol's completed turn before updating shared files.
+The manuscript remains at Sol's final R5 bytes; no integration here.
+
+[Note89](../notes/89_COMPLETE_CARRIER_PRODUCTION_TRANSFER_R13_20261029.md) extends R12's selected-I1 result to the **complete**
+production and exact dissipation differences. Arbitrary radial spatial
+form bounds, all C0 second derivatives, full radial-square polarization
+and unit-window Cauchy–Schwarz give finite absolute integrals with
+exp(−B/4) and exp(−B/2) tails. The exact dissipation's two N units are
+paid against the retained one-N estimate. Differences are formed before
+integration, never as subtraction of divergent totals.
+
+[Note90](../notes/90_CARRIER_FEEDBACK_DEFECT_AND_STATIONARY_CANDIDATE_R13_20261029.md) pays the feedback defect, its time/alpha-weighted
+tails, the unbounded drift in a dual-Lipschitz forcing seminorm, and the
+carrier scalar-energy limit E0/|a|² with finite variation. The smooth
+radial Gibbs family has a unique candidate at that energy, with an
+analytic parameter bracket. No stationary attraction, coefficient limit,
+strong forcing norm or independent nonlinear trajectory is inferred.
+
+The equally informed direct method proves all of this. The physical mass
+margin remains; no primitive gain, favorable carrier sign, smaller actual
+energy allowance or new domain. The declared comparison stops.
+[Review45](../reviews/45_COMPLETE_CARRIER_REDUCTION_INTERNAL_REVIEW_R13_20261029.md) records same-model contributing checks with
+shared premises; [record35](../numerics/35_COMPLETE_CARRIER_R13_ANALYTICAL_RECORD_20261029.json) records issued versions
+and preservation. **Next: [E] CTF-E08 R13 — Sol**, the
+[ten-check packet](handoffs/CTF-E08_COMPLETE_CARRIER_REDUCTION_R13_20261029.md), with [Continuation91](../notes/91_COMPLETE_CARRIER_REDUCTION_AND_MODEL_CONTINUATION_R13_20261029.md).
+Parent B02 partial; E03/B03 gated. Earlier records below are historical.
+
+### Historical CTF-E05 R5 complete — accepted common-carrier results integrated
+
+29 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol / actual recorded effort ultra**, existing **chat0034**,
+*Continue radial theta collision research*. The author-requested R5
+integration is complete in the [existing manuscript][manuscript].
+[Return87](../notes/87_COMMON_CARRIER_MANUSCRIPT_INTEGRATION_RETURN_20261029.md), [Review44](../reviews/44_COMMON_CARRIER_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md) and [record34](../numerics/34_COMMON_CARRIER_MANUSCRIPT_BUILD_RECORD_20261029.json) identify the exact saved source, built-in compiler success and evidence
+scope. This is integration of accepted results, not a new theorem.
+
+New Section 9 gives full H1 synchronization costs, the moving-carrier
+and genuine centered residual, raw mismatch/changed sphere endpoints,
+complete centered dissipation and finite selected I1 correction. It
+retains instantaneous error energy, actual path, all C0/C1/cutoff/diffusion
+and inner-ball costs. The physical margin remains upstream. The remaining
+carrier production has no proved sign or finite absolute integral; no
+stationary/alpha limit, original-field finite total dissipation, full
+actual-energy gain, mass-only reduction or new physical domain is claimed.
+
+All five issued hashes matched before editing; main source intentionally
+revised. All 21 prior proof blocks and 199 protected research/companion
+files are unchanged; three new proof blocks implement accepted R12.
+Final built-in compilation succeeded. Source references/citations resolve
+with 171 unique labels and balanced environments. No detailed typesetting
+log was returned. Live preview access is unavailable; no fresh visual
+pass is claimed. The existing editor is preserved; no separate PDF,
+replacement document or new tab was created. The standalone 35-page
+reading copy remains R4. Three read-only contributing checks support
+same-parent editorial review, with prior overlap and shared premises.
+
+**Next: [B] CTF-B02 — Astra**, select one unpaid surviving-carrier/source
+benefit with a complete strongest-direct comparator/control contract under
+[Continuation88](../notes/88_COMMON_CARRIER_INTEGRATION_AND_MODEL_CONTINUATION_20261029.md). No new mechanism selected; parent B02 partial, E03/B03 gated.
+No scan, numerical campaign, snapshot, commit or tag created. This is the
+current disposition; earlier request/assessment routing below is historical.
+
+### CTF-E05 R5 intake — author-requested integration, existing chat0034
+
+29 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol / actual recorded effort ultra**, existing **chat0034**,
+*Continue radial theta collision research*. The author explicitly requests
+**[E] CTF-E05 R5** under the [frozen packet](handoffs/CTF-E05_COMMON_CARRIER_INTEGRATION_R5_20261029.md).
+The accepted formulas and editorial completion test are fixed; recommended
+Sol. The parent is the sole writer, with three read-only contributing
+checks for synchronization, residual/production and scope/provenance.
+
+Integrate R12 proportionately in the existing open TeX source, preserve
+all prior accepted proofs and issued inputs, and use the built-in compiler.
+Keep the editor open; no replacement document, separate PDF or new tab.
+Five issued hashes match; 21 preexisting proof blocks and 199 protected
+research/companion files have a preservation baseline. The editor preview
+is unavailable through connected document tools and computer use, so no
+new visual pass will be claimed. Source/editor compilation evidence will
+be recorded honestly. The physical margin, moving carrier, centered raw
+mismatch/endpoints, instantaneous error energy and actual-production
+bookkeeping remain explicit. No new carrier sign, convergence theorem,
+actual-energy gain, scan or mechanism. A new scientific premise returns
+to B02 while unaffected editorial work continues. The previous final
+history capture succeeded; chat0034 retains its unique registration.
+
+### Prior CTF-E08 R12 completion — accepted without mathematical correction
+
+29 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol / actual recorded effort ultra**, existing **chat0034**,
+*Continue radial theta collision research*. [Review43](../reviews/43_COMMON_CARRIER_AND_PRODUCTION_E08_R12_ASSESSMENT_20261029.md) covers all ten fixed obligations; [Return85](../notes/85_COMMON_CARRIER_R12_E08_RESEARCH_RETURN_20261029.md) records the result. This is the current disposition; earlier intake
+and completion records below remain historical evidence.
+
+The three specified actual common-path jets have complete squared-H1
+decay exp(−B/2) toward their mass multiples of the moving carrier, with
+norm decay exp(−B/4). Prepared +6M, both Gaussian costs, radial 21/4,
+synchronous 7/8, Fourier 1/(35pi²), both roots and all initial intervals
+pass. The genuine centered residual retains its raw mismatch and both
+changed sphere traces. Its complete dissipation is finite with the
+explicit tail, using instantaneous E_e and direct integration of F_e'.
+The selected I1−I_c correction has finite cost 4A_I+2B_I and tail.
+Only I1 is split in the actual production; no double I_c payment.
+
+The equally informed direct method pays the complete declared consumer.
+R10's positive physical mass remains upstream. Carrier/source/path
+information survives in I_c; its sign and finite absolute integral are
+unpaid. No improved full actual-energy allowance, original-field finite
+total dissipation, stationary profile, alpha limit, mass-only formula,
+new physical coverage or primitive-specific gain is established.
+
+[Record33](../numerics/33_COMMON_CARRIER_R12_E08_ASSESSMENT_RECORD_20261029.json) records all 18 issued hashes, the frozen packet and 195 protected
+files unchanged, including both manuscripts and prior numerical records.
+No manuscript edit/build/export or new campaign occurred; the editor stays
+open. Three read-only same-model contributing audits with prior R11
+contributor overlap support this different-model internal assessment;
+shared inherited premises remain, without specialist/formal independence.
+
+**Default next: [E] CTF-E05 R5 — Sol**, proportionate integration under
+the [new bounded packet](handoffs/CTF-E05_COMMON_CARRIER_INTEGRATION_R5_20261029.md) if assigned. [Continuation86](../notes/86_COMMON_CARRIER_R12_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md) gives exact model/history guidance. Alternative B02/Astra conceptual
+work must choose one unpaid carrier/source-path benefit and complete
+comparator/control contract; no new mechanism selected. Parent B02 partial;
+E03/B03 remain gated. No commit/tag or snapshot created.
+
+### CTF-E08 R12 intake — fixed assessment, existing chat0034
+
+29 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol / actual recorded effort ultra**, existing **chat0034**,
+*Continue radial theta collision research*. The author requests
+[Continuation84](../notes/84_COMMON_CARRIER_R12_AND_MODEL_CONTINUATION_20261029.md), whose default is **[E] CTF-E08 R12 — Sol** under the
+[frozen packet](handoffs/CTF-E08_COMMON_CARRIER_AND_PRODUCTION_R12_20261029.md).
+The proof, constants and ten acceptance obligations are fixed; no new
+conceptual choice is delegated. This assessment retains chat0034's unique
+registration; chat0033 remains the distinct R12 proof conversation.
+
+The parent is the sole writer. Three read-only contributing audits cover
+synchronization/barriers/Fourier costs; residual/preparation/primitive/I1
+assembly; and complete centered production plus dependency/control scope.
+Return one supported ten-check disposition, research return and model
+continuation, with current progress/navigation. Preserve issued notes,
+packets, earlier records and both manuscripts. No manuscript integration,
+parameter scan, PDE experiment, new source/path or mechanism. A new
+scientific premise/consumer returns to B02 while unaffected checks continue.
+All 18 issued input hashes and the packet match at intake. Same-model
+contributing checks and different-model assessment share inherited
+premises; they do not provide specialist or formal independence.
+The previous reply's bounded history capture succeeded; ordinary refresh
+has retained the existing history identity.
+
+### Historical CTF-B02 R12 return — assessment pending at issue
+
+29 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra / actual recorded effort ultra**, existing **chat0033**.
+**Complete in-note; fixed E08 R12 pending at issue.** The current
+accepted disposition is above; this proof return retains its issue scope.
+
+[Note82](../notes/82_COMMON_CARRIER_SYNCHRONIZATION_R12_20261029.md) proves, from s=0,
+||J_j−(m_j/M)h||_H1² <= (L_j+T_j)exp(−B/2), j=0,1,2.
+Existing prepared R0, raw moments, Gaussian costs, full Fourier deficit
+1/(35pi²), and radial coefficient 21/4 pay every constant and transient.
+[Note83](../notes/83_FINITE_CENTERED_PRODUCTION_CORRECTION_R12_20261029.md) proves decay of the genuine centered residual,
+finite complete centered dissipation and
+integral alpha|I1−Ic| <= 4A_I+2B_I with an explicit decreasing tail.
+Centered primitive boundary coefficients delta_j0−m_j/M and the true raw
+residual mismatch remain; full C0/C1, sphere, diffusion and inner ball
+are kept. No feedback is recomputed from the centered fields.
+
+The direct comparator supplies every result; the single selected
+comparison stops. The global K still spends the accepted physical mass
+margin. The carrier term retains source/path dependence and no favorable
+sign; no improved complete actual-energy allowance, stationary limit,
+finite actual total dissipation, new physical domain or primitive-specific
+gain is established. This is a quantitative supporting theorem.
+
+[Review42](../reviews/42_COMMON_CARRIER_AND_PRODUCTION_INTERNAL_REVIEW_R12_20261029.md) records same-model contributing checks with
+shared premises. [Record32](../numerics/32_COMMON_CARRIER_R12_ANALYTICAL_RECORD_20261029.json) identifies issued inputs
+and preservation evidence; no numerical research run or manuscript edit.
+**Next: [E] CTF-E08 R12 — Sol**, ten fixed checks under the
+[frozen packet](handoffs/CTF-E08_COMMON_CARRIER_AND_PRODUCTION_R12_20261029.md) and
+[Continuation84](../notes/84_COMMON_CARRIER_R12_AND_MODEL_CONTINUATION_20261029.md). Parent B02 remains partial; E03/B03 gated.
+
+### Historical CTF-B02 R12 intake — common-carrier correlation and signed production
+
+29 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra / actual recorded effort ultra**, existing **chat0033**.
+The Sol handoff in Note81 is read; E08 R11 and E05 R4 are complete.
+Type **B**; recommended Astra because a useful correlation consumer and
+comparison route must be selected. This records the selection before
+executing its proof. The parent is the sole repository writer; three
+read-only same-model contributors may supply derivations/checks in
+separate temporary files. No history identities or earlier proofs change.
+
+**Single declared consumer:** at the unchanged mark (T,A)=(1/4,2), test
+whether common-path mixing yields decay of e_j=J_j−m_j h/M for j=0,1,2,
+with m_j=int J_j and the existing positive carrier h. Use these exact
+errors to decompose the genuine weighted residual and the same signed
+production I1=2<Z_R,omega C1 W>. Seek an explicit finite accumulated
+alpha-weighted correction between I1 and its common-carrier component,
+with every derivative, coefficient, trace and transient paid. This is a
+quantitative correlation/production reduction, not a stationary-profile
+or collision-exclusion claim. The carrier and source operator still
+retain source and feedback information; do not call the result mass-only.
+
+**Fixed route and comparator:** use the inherited synchronous contraction,
+complete Fourier deficit, unit preparation, accepted uniform feedback,
+and the scalar energy identities. Give the direct side all of this same
+information. First determine whether it already pays the chosen decay
+and cumulative consumer; if so, record that useful direct improvement
+and stop this comparison. Do not switch consumer or mechanism midstream.
+The exact primitive reconstruction remains available to either side.
+
+**Inputs/scope:** full theta, literal cosine, original feedback, actual
+common-path jets, known physical mass margin, complete prepared moments
+and the R11 coefficient/energy budgets. No parameter scan, numerical
+acquisition, altered PDE, unproved stationary convergence or new physical
+domain. Retain the genuine residual, full C0/C1, cutoff derivatives,
+combined sphere cancellation, diffusion and entire inner ball. Any
+extension beyond j=0,1,2 is outside the declared comparison. A finite
+cumulative correction is not a sign for the remaining carrier production.
+
+Return one complete quantified bound, a fixed E07 contract, or a scoped
+failed/unpaid cost, then route the fixed proof to E08/Sol. Preserve the
+collision-control premises and result/avoid guidance from Note81.
+Progress05 remains the sole live register; parent B02 remains partial.
+
+### Historical CTF-E05 R4 complete — uniform residual and primitive test integration
+
+29 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol / actual effort ultra**, same **chat0034**, *Continue radial
+theta collision research*. The author-requested fixed integration is
+complete in the [existing manuscript][manuscript]. [Return80](../notes/80_UNIFORM_RESIDUAL_MANUSCRIPT_INTEGRATION_RETURN_20261029.md), [Review41](../reviews/41_UNIFORM_RESIDUAL_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md) and [record31](../numerics/31_UNIFORM_RESIDUAL_MANUSCRIPT_BUILD_RECORD_20261029.json) identify the exact source, build and preservation evidence.
+
+Section 7.5 gives uniform full weighted residual energy, every fixed
+common-path jet, complete sliding-window dissipation, linear cumulative
+allowance and finite crossover. Section 8 pays the full primitive adjoint,
+Gaussian derivatives, both sphere traces and exact joint reconstruction.
+The positive physical mass premise remains explicit; the stronger direct
+method pays the consumer and no extra primitive signed gain is claimed.
+Abstract, introduction, outstanding tasks and provenance are current.
+This integrates accepted results; it adds no scientific conclusion.
+
+Both final built-in and local compilations succeeded. The 35-page reading
+PDF is in ignored root output/pdf/. Final log: no unresolved references,
+citations or box warnings. All pages were rendered and inspected in
+contact sheets, with detailed image checks on pages 1, 2, 23–28, 32, 33.
+All 19 preexisting proof blocks and 142 protected research/companion files
+are unchanged; two new proof blocks implement accepted results. The main
+source is the intended revision of the five matched issued inputs.
+Three read-only same-model contributing checks support same-parent
+editorial assessment; no specialist or formal independence is claimed.
+
+**Next: [B] CTF-B02 — Astra**, one genuinely unpaid source/path benefit
+with a complete equally informed comparator/control contract, under
+[Continuation81](../notes/81_UNIFORM_RESIDUAL_INTEGRATION_AND_MODEL_CONTINUATION_20261029.md). No mechanism or new revision selected. Parent B02 stays partial;
+E03/B03 remain gated. No new scan, acquisition, PDE campaign, snapshot,
+commit or tag was created. The intake and previous dispositions below
+are historical; this is the current status.
+
+### CTF-E05 R4 intake — author-requested integration, chat0034
+
+29 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol / actual recorded effort ultra**, same **chat0034**,
+*Continue radial theta collision research*. The author explicitly asks to
+continue **[E] CTF-E05 R4**. Type E; recommended Sol because the accepted
+proof, formulas and editorial completion test are fixed in the
+[frozen packet](handoffs/CTF-E05_UNIFORM_RESIDUAL_INTEGRATION_R4_20261029.md).
+
+The parent is the sole writer. Integrate the uniform full weighted energy,
+each fixed common-path jet, complete sliding dissipation/crossover and
+proportionate primitive test/trace payment into the existing manuscript.
+Update obsolete finite-only language, compile, visually verify layout,
+and save the small build/editorial record and research/model continuation.
+Three read-only contributing checks cover energy, primitive and scope.
+All five issued hashes match; 19 inherited proof blocks and protected
+research/companion bytes have a separate preservation baseline. Keep the
+physical margin and all production/preparation/sphere/inner-ball costs.
+No new mechanism, parameter scan or coverage claim. A new scientific
+premise returns to B02; complete unaffected editorial work. Earlier E08
+assessment and this conversation's unique history registration persist.
+
+### Prior CTF-E08 R11 completion — accepted without mathematical correction
+
+29 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol / actual effort ultra**, **chat0034**, *Continue radial theta
+collision research*. [Review40](../reviews/40_PRIMITIVE_TEST_AND_UNIFORM_CLOSURE_E08_R11_ASSESSMENT_20261029.md) covers all ten frozen obligations;
+[Return78](../notes/78_PRIMITIVE_R11_E08_RESEARCH_RETURN_20261029.md) records the research consequence. This is the current disposition;
+the intake and earlier returns below remain historical evidence.
+
+The accepted direct baseline now pays **uniform full F_R=G+Y+Q2,
+every fixed common-path jet, and complete dissipation on every fixed-length
+window**, including alpha H_rad. Cb<=1/4 and Cc<=3B0+3/4 use existing
+budgets. The explicit finite crossover improves the old exponential
+allowance. All primitive test derivatives and both sphere traces are paid;
+the joint Bochner formula reconstructs the same prepared source. No
+primitive-specific signed advantage is established. R10's positive physical
+mass margin remains essential. No new domain, margin-free theorem,
+uniform-in-order bound, bounded B, finite total dissipation or convergence.
+
+The full cutoff adjoint, +3/4 terminal derivative sign, Gaussian seeds,
+Fourier 1/(15pi²), uniform barriers, 73²e_- normalization, coefficient
+payments, complete production, crossover and control scopes pass.
+All 17 issued inputs, the packet and 139 protected inherited files,
+including both manuscripts, retain their intake bytes. [Record30](../numerics/30_PRIMITIVE_R11_E08_ASSESSMENT_RECORD_20261029.json) separates version/file checks from proof status. Three read-only
+same-model contributing audits support this different-model internal
+assessment of Astra's proof; inherited premises remain shared. No
+specialist, formal or interval review is claimed.
+
+**Default next: [E] CTF-E05 R4 — Sol**, ready under the
+[bounded integration packet](handoffs/CTF-E05_UNIFORM_RESIDUAL_INTEGRATION_R4_20261029.md); proportionately integrate the accepted proof and update obsolete
+finite-only language. [Continuation79](../notes/79_PRIMITIVE_R11_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md) gives the model/history handoff. No manuscript edit/build, numerical
+campaign or new B02 mechanism occurred here. Parent B02 stays partial;
+its next conceptual revision is an alternative requiring one genuinely
+unpaid benefit and matched direct/control contract. E03/B03 remain gated.
+
+### CTF-E08 R11 intake — chat0034, 29 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6.1-sol / actual recorded effort ultra**, **chat0034**,
+*Continue radial theta collision research*. Type **E — execution**;
+recommended **Sol**, because the ten obligations and proof route in the
+[frozen R11 packet](handoffs/CTF-E08_PRIMITIVE_TEST_AND_UNIFORM_CLOSURE_R11_20261029.md)
+are fixed. This is a new conversation with its own history identity.
+
+The parent is the sole writer; three read-only same-model contributing
+audits cover adjoint/primitive, uniform closure/constants, and imported
+production/physical-premise scope. Return one ten-check assessment,
+research return and model continuation, updating this register and current
+navigation. Stop at this bounded disposition; no manuscript integration,
+new mechanism, parameter scan or PDE campaign. A new scientific premise
+or changed consumer returns to B02; continue unaffected checks.
+All 17 issued hashes and the packet match. A separate local baseline
+protects 139 inherited proof/review/handoff/companion files, including
+both manuscripts. Chat0034 is registered through the official recorder.
+Internal contributing checks and a model change do not provide specialist
+or formal independence.
+
+### Historical CTF-B02 R11 return — E08 pending at issue
+
+29 October 2026. Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra / actual effort ultra**, **chat0033**, *Investigate radial
+theta collision geometry*. This is the current disposition; the intake
+and earlier completion records below remain historical evidence.
+
+**Declared consumer paid:** [Note76](../notes/76_UNIFORM_RESIDUAL_AND_FIXED_JET_CLOSURE_R11_20261029.md) proves uniform
+F_R=G+Y+Q2 and uniform dissipation on every fixed-length sliding window,
+including alpha H_rad. It also bounds each fixed common-path jet.
+L1/Fourier diffusion and the actual defining residual identity suffice;
+Cb<=1/4 and Cc<=3B0+3/4 incur no new coefficient acquisition.
+The complete allowance improves the inherited exponential envelope after
+an explicit finite crossover. The stronger direct method obtains it.
+
+[Note75](../notes/75_PRIMITIVE_TEST_COSTS_AND_SIGNED_COMPARISON_R11_20261029.md) pays the full primitive terminal test,
+transported derivatives and both sphere traces with the existing residual
+budget and fixed preparation. The finite-B version needs no mass floor;
+its uniform version imports R10's alpha bound. The exact joint spherical
+Gaussian identity retains source/path correlations. A sign-indefinite
+coefficient-only form screens only arbitrary compatible triples, not
+actual theta trajectories. No unpayable higher residual derivative remains.
+
+**Limits retained:** R10's positive physical mass margin; no primitive-
+specific signed gain, larger physical domain, margin-free regularity,
+bounded total B, uniform-in-order jet estimate or convergence. Actual
+jets, preparation defect, C0/C1, cutoff derivatives, combined sphere
+cancellation, diffusion and the whole inner ball remain.
+
+**Next: [E] CTF-E08 R11 — Sol**, the frozen ten-check
+[packet](handoffs/CTF-E08_PRIMITIVE_TEST_AND_UNIFORM_CLOSURE_R11_20261029.md); ready, not executed.
+[Review39](../reviews/39_PRIMITIVE_TEST_AND_UNIFORM_CLOSURE_INTERNAL_REVIEW_20261029.md) is same-model contributing internal checking
+with shared premises, including one corrected preliminary terminal-trace
+sign. [Continuation77](../notes/77_PRIMITIVE_R11_RESEARCH_AND_MODEL_CONTINUATION_20261029.md) gives model/history guidance.
+No numerical campaign or manuscript edit occurred. Parent B02 remains
+partial; E03/B03 gated. The bounded R11 comparison stops because the
+equally informed direct method pays its declared consumer.
+
+### CTF-B02 R11 intake — chat0033, 29 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance; actual session
+model **gpt-6-astra**, effort **ultra**. This new conversation has its own
+chat0033 registration. Parent chat0031 and all historical records remain.
+Type **B**, recommended Astra because the signed primitive estimate and
+its useful comparison remain open. The author requests a deeper research
+session and permits several overview objectives; this first return keeps
+R11's fixed source, mark, propagator and selected I1 term.
+
+**Consumer declared before analysis:** a time-uniform bound on the full
+weighted energy F_R=G+Y+Q2 and a time-uniform unit-interval integrated
+dissipation allowance, at (T,A)=(1/4,2), conditional on the accepted R10
+physical-margin/feedback theorem. Test whether ordinary L1/diffusion and
+the defining residual identity already pay this consumer. In parallel,
+derive the actual primitive terminal test, including cutoff derivatives,
+unit preparation, transported derivatives and both sphere traces, and
+assess one joint signed estimate against that fully informed direct
+method. If the direct argument pays the consumer, stop this comparison
+and record the result without claiming a primitive advantage. Otherwise
+identify a precise missing derivative/trace/sign payment or fixed E07
+contract. No source acquisition, parameter scan or alternate PDE.
+
+The parent is the sole repository writer. Three contributing agents may
+supply read-only analytical derivations and checks in temporary files;
+these are same-model internal contributions, not independent review.
+Read result-summaries/README.md and avoid/README.md, especially collision
+controls, target restatement, separate bounds and quantitative utility.
+Actual jets, true preparation residual, whole ball, C0/C1, combined sphere
+cancellation and diffusion remain mandatory. Progress05 stays the sole
+live register. All earlier dirty files are preserved.
+
+### Historical E05 R3 completion and R11 direction at intake
+
+**CTF-E05 R3 complete — primitive integration at the author's request.**
+The [existing manuscript][manuscript] now gives the primitive transfer
+near the theta source and a new Section 8 on common-path duality and
+the signed source–residual drift term. [Review38](../reviews/38_PRIMITIVE_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md)
+records same-assistant analytical/editorial checks;
+[record28](../numerics/28_PRIMITIVE_MANUSCRIPT_INTEGRATION_RECORD_20261029.json)
+identifies the saved source and successful built-in compilation.
+All 17 inherited proof blocks and the companion are unchanged.
+No separate PDF, fresh visual review, or new quantitative gain is claimed.
+Actual gpt-6-astra / max, chat0031, 29 October 2026.
+
+**Default next: [B] CTF-B02 R11 — Astra**, ready for analysis, not executed.
+[Overview05][overview] fixes one primitive comparison at (T,A)=(1/4,2):
+I1=2<ZR,omega C1 W>, with actual terminal test
+eta=2 C1*(omega ZR), followed by the existing common-path adjoint and
+unit heat preparation. Its energy contribution is alpha I1.
+[Continuation74](../notes/74_PRIMITIVE_PRODUCTION_ANALYSIS_AND_MODEL_CONTINUATION_20261029.md)
+gives the reading order, finite scope, stop rule and model-change guidance.
 [Note73](../notes/73_BOOK_INTEGRATION_BY_PARTS_AND_FEEDBACK_PAIRINGS_20261029.md)
-connects the book's theta primitive and Note12's existing positive-time
-formula to the current prepared, evolved densities through adjoint test
-functions. The complete initial sphere terms and transported-test
-derivatives are retained. This is an exact analytical interface with
-same-assistant checking, not an improved bound or collision exclusion.
-Next B02 should test one specific evolving production term against the
-same-information direct estimate, including its derivative and trace costs.
-[Continuation72](../notes/72_ANALYTICAL_MANUSCRIPT_AND_MODEL_CONTINUATION_20261029.md)
-remains the main handoff; Note73 supplements its conceptual direction and
-model-change guidance. Parent B02 remains partial. No flow or manuscript
-change, proof packet or numerical acquisition. Actual gpt-6-astra / max,
-chat0031.
+remains the underlying analytical bridge.
+
+The unresolved choice is a signed estimating route that pays the two
+transported-test derivatives, sphere traces, cutoff terms and the rest
+of the production within a declared energy/dissipation budget. Before
+estimating, freeze the resulting allowance and finite or uniform horizon.
+The direct comparator receives the same source, tests, physical margin,
+retained diffusion and accepted uniform-feedback bound, and may use
+integration by parts itself. Return one proved useful allowance, a fixed
+E07 contract, or a precisely scoped failed/unresolved cost. One term and
+one route only; no parameter scan or numerical campaign. Parent B02 remains
+partial; E03/B03 gated. No proof of the improved estimate has been issued.
+
+### Prior analytical integration and scientific baseline
 
 **CTF-E05 R2 complete — analytical manuscript consolidated at the
 author's request.** [Note71](../notes/71_ANALYTICAL_MANUSCRIPT_CONSOLIDATION_20261029.md) and
@@ -38,8 +533,9 @@ files are unchanged; the main source intentionally has a later version.
 The [editorial receipt](handoffs/CTF-E05_ANALYTICAL_MANUSCRIPT_REVISION_R2_20261029.md)
 preserves intake and completion.
 
-**Next: [B] CTF-B02 — Astra**, select one still unpaid quantity or precise
-advantage beyond the accepted direct uniform bound, under
+**Historical next step at E05 R2**, now specified by R11 above: select
+one still unpaid quantity or precise advantage beyond the accepted direct
+uniform bound, under
 [Continuation72](../notes/72_ANALYTICAL_MANUSCRIPT_AND_MODEL_CONTINUATION_20261029.md). Outstanding tasks include control
 without a preestablished physical margin, uniform residual/higher-jet
 estimates, physical-parameter coverage and independent mathematical review.
@@ -799,6 +1295,16 @@ The linked overview owns each contract's mathematical details. This table owns l
 | Task | Type and recommended model with reason | Status | Dependency and finite scope | Completion and return boundary |
 | --- | --- | --- | --- | --- |
 | **CTF-E05 R2** | **E — Sol** for fixed editorial work; author chose this Astra chat | **Complete — Astra/max, chat0031** | [Note71](../notes/71_ANALYTICAL_MANUSCRIPT_CONSOLIDATION_20261029.md), [Review37](../reviews/37_ANALYTICAL_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md), [record27](../numerics/27_ANALYTICAL_MANUSCRIPT_BUILD_RECORD_20261029.json); analytical reorganization and 28-page build/visual check | Main manuscript updated after R10 assessment; proof sources/companion preserved; [Continuation72](../notes/72_ANALYTICAL_MANUSCRIPT_AND_MODEL_CONTINUATION_20261029.md); no new research result |
+| **CTF-B02 R11** | **B — Astra:** primitive/direct production comparison | **Complete in-note — Astra/ultra, chat0033; accepted by E08 R11** | [Note75](../notes/75_PRIMITIVE_TEST_COSTS_AND_SIGNED_COMPARISON_R11_20261029.md), [Note76](../notes/76_UNIFORM_RESIDUAL_AND_FIXED_JET_CLOSURE_R11_20261029.md); fixed mark/source/path; complete derivative/trace and full-energy costs | Stronger direct method pays uniform F_R and fixed-window dissipation; no primitive-specific gain or new domain; stop this comparison |
+| **CTF-E08 R11** | **E — Sol:** ten fixed proof/cost/scope checks | **Complete — accepted without mathematical correction, Sol/ultra chat0034** | [Review40](../reviews/40_PRIMITIVE_TEST_AND_UNIFORM_CLOSURE_E08_R11_ASSESSMENT_20261029.md), [Return78](../notes/78_PRIMITIVE_R11_E08_RESEARCH_RETURN_20261029.md); all ten obligations, issued sources preserved | Physical-margin, fixed-order and sign-class scopes retained; E05 R4 ready; no new mechanism |
+| **CTF-E05 R4** | **E — Sol:** proportionate integration of accepted R11 results | **Complete — Sol/ultra chat0034, author request** | [Return80](../notes/80_UNIFORM_RESIDUAL_MANUSCRIPT_INTEGRATION_RETURN_20261029.md), [Review41](../reviews/41_UNIFORM_RESIDUAL_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md), [record31](../numerics/31_UNIFORM_RESIDUAL_MANUSCRIPT_BUILD_RECORD_20261029.json); 35-page final build/layout check | Accepted results integrated; 19 prior proofs and companion preserved; no new scientific result |
+| **CTF-B02 R12** | **B — Astra:** select common-carrier production consumer | **Complete in-note — Astra/ultra chat0033; accepted by E08 R12** | [Note82](../notes/82_COMMON_CARRIER_SYNCHRONIZATION_R12_20261029.md), [Note83](../notes/83_FINITE_CENTERED_PRODUCTION_CORRECTION_R12_20261029.md); j=0,1,2 at fixed mark, complete preparation and centered residual costs | Direct method pays H1 decay, finite centered dissipation and finite I1 correction; stop selected comparison; no carrier sign or physical-margin removal |
+| **CTF-E08 R12** | **E — Sol:** ten fixed proof/cost/scope checks | **Complete — accepted without mathematical correction, Sol/ultra chat0034** | [Review43](../reviews/43_COMMON_CARRIER_AND_PRODUCTION_E08_R12_ASSESSMENT_20261029.md), [Return85](../notes/85_COMMON_CARRIER_R12_E08_RESEARCH_RETURN_20261029.md); all ten checks and issued versions preserved | Physical-margin, moving-carrier and selected-term/centered scopes retained; no integration or scan |
+| **CTF-E05 R5** | **E — Sol:** accepted-result integration, fixed scope | **Complete — Sol/ultra chat0034, author request** | [Return87](../notes/87_COMMON_CARRIER_MANUSCRIPT_INTEGRATION_RETURN_20261029.md), [Review44](../reviews/44_COMMON_CARRIER_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md), [record34](../numerics/34_COMMON_CARRIER_MANUSCRIPT_BUILD_RECORD_20261029.json); final built-in compilation, source checks and recorded preview limitation | Existing source revised in place, 21 prior proofs/companion preserved; no separate PDF or new result |
+| **CTF-B02 R13** | **B — Astra:** complete carrier/feedback reduction | **Complete in-note — Astra/ultra, chat0033; accepted by E08 R13** | [Note89](../notes/89_COMPLETE_CARRIER_PRODUCTION_TRANSFER_R13_20261029.md), [Note90](../notes/90_CARRIER_FEEDBACK_DEFECT_AND_STATIONARY_CANDIDATE_R13_20261029.md); full-balance finite errors, feedback forcing and unique stationary candidate, all costs paid | Direct consumer paid; no attraction, carrier sign or physical-margin removal; stop selected comparison |
+| **CTF-E08 R13** | **E — Sol:** ten fixed proof/cost/topology/scope checks | **Complete — accepted without mathematical correction, Sol/ultra chat0034** | [Review46](../reviews/46_COMPLETE_CARRIER_REDUCTION_E08_R13_ASSESSMENT_20261029.md), [Return92](../notes/92_COMPLETE_CARRIER_R13_E08_RESEARCH_RETURN_20261029.md); all ten obligations and issued versions preserved | Full finite differences and scalar interpretation accepted; no profile/coefficient convergence, integration or campaign |
+| **CTF-B02 later revision** | **B — Astra:** scalar attraction or distinct physical-margin benefit | **Default next: bounded scalar-attraction decision; no route selected** | [Continuation93](../notes/93_COMPLETE_CARRIER_R13_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md); state-dependent scalar stability and transfer of the paid weak forcing remain unpaid | Declare one consumer, topology, hypotheses and matched direct/control contract; fixed E task or scoped failure; E03/B03 gated |
+| **CTF-E05 R3** | **E — editorial integration; author-selected Astra/max** | **Complete** | Primitive lemma and common-path proposition integrated; 17 earlier proofs preserved, built-in compiler success, same-assistant [Review38](../reviews/38_PRIMITIVE_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md) | Historical next was R11, now returned above; no quantitative gain or fresh visual review claimed by this editorial task |
 | **CTF-E08 R10** | **E — Sol:** fixed eight proof/cost/comparison/scope checks | **Complete — accepted without mathematical correction; notation clarified, Sol/ultra, chat0032** | [Review36][r36], [Return69][n69]; 17 frozen inputs, packet and 121 inherited files unchanged | Uniform direct bound accepted; no source-residual or domain advantage; [Continuation70][n70]; no acquisition or manuscript integration |
 | **CTF-B02 R10** | **B — Astra:** select an unpaid uniform-feedback consumer and strongest comparison | **Complete — proved in-note; assessed in [Review36][r36]** | [Note67][n67], [Self-assessment35][r35]; actual Astra/max, chat0031 | Direct method pays uniform G/E0 and alpha with explicit constants; no source-residual advantage or new physical region |
 | **CTF-E08 R9** | **E — Sol:** fixed proof, cost and scope assessment | **Complete — accepted without mathematical correction in the declared split class, Sol/ultra, chat0029** | [Review34][r34], [Return65][n65]; eight checks, 17 frozen hashes and constant replay pass | Scoped theorem accepted; verified Sw<S9 defeats superiority over stronger direct bound; [Continuation66][n66], no manuscript expansion |
@@ -809,7 +1315,7 @@ The linked overview owns each contract's mathematical details. This table owns l
 | **CTF-B02 R7** | **B — Astra:** select a quantitative actual-cosine jet correlation | **Complete — proved in-note; assessed in [Review30][r30]; parent partial** | Fixed mark (1/4,2), full source, unit preparation; 12/13 norm ratio and strict same-B Q/Theta allowance after Bc | No independent B or deadline control; direct margin already available; manuscript unchanged |
 | **CTF-E08 R6** | **E — Sol:** the proof, class and scope audit are fixed | **Complete — accepted without mathematical correction, Sol/ultra, chat0025** | [Review28][r28], [Return53][n53]; all twelve frozen input hashes match | Reduced variable-kernel scope accepted; inherited deadline constant checked; no manuscript change or new candidate. [Continuation54][n54] |
 | **CTF-B02 R6** | **B — Astra:** test what zero raw mismatch determines | **Complete — proved in-note; assessed in [Review28][r28]; parent partial** | Fixed-amplitude polynomial comparison: m=0, E0>0; finite cosine prefix retained, true residual nonzero | Reduced-class infimum zero; fails full cosine/Newman identity; no physical theta exclusion. [Continuation52][n52] |
-| **CTF-B02 subsequent bounded revision — default next** | **B — Astra:** choose a still unpaid consumer or precise independent information/cost/proof advantage | **Ready to formulate; parent partial, no next candidate selected** | [Continuation70][n70]; accepted direct uniform bound, Sw<S9 and actual controls | One declared useful gain or scoped failure; no automatic acquisition, domain extension or manuscript expansion |
+| **CTF-B02 post-R10 conceptual choice — historical** | **B — Astra:** choose an unpaid consumer or precise advantage | **Superseded by the selected R11 direction above; parent partial** | [Continuation70][n70] preserves the earlier open choice; [Continuation74](../notes/74_PRIMITIVE_PRODUCTION_ANALYSIS_AND_MODEL_CONTINUATION_20261029.md) now fixes the primitive comparison | Historical routing only; no automatic acquisition or domain extension |
 | **CTF-B02 R5** | **B — Astra:** select one source-coefficient coupled estimate | **Complete — proved in-note; assessed in Review26; parent partial** | Fixed P and r=2; full tail, signed residual and actual jets give compact gain 49/600 | E08 R5 complete; exact control admitted, no independent deadline bound |
 | **CTF-E08 R5 assessment** | **E — Sol:** one frozen proof and supported integration; actual Astra/max chat | **Complete — Review26, chat0024** | [Note49][n49], [record24][build24]: Proposition 7.8, 28-page build/layout check,14 inherited proofs preserved | Same-model internal assessment; no mathematical correction, new candidate or deadline claim. [Continuation50][n50] returns to B02 |
 | **CTF-B02 R3** | **B — Astra:** choose one coupled functional and estimating route | **Complete — design; its weighted lemma subsequently verified by E07. Parent B02 partial** | [Note39][n39] fixes the functional on [0,1/2] x [1,6]; [Note40][n40] verifies its prescribed analytical estimate | Signed theta separation and deadline coverage remain unresolved. Another functional, signed hypothesis or mechanism requires a recorded B02 revision |
@@ -900,20 +1406,34 @@ An issued E07/E03/E08 packet belongs in research-progress/handoffs and fixes inp
 
 | 29 October 2026 | CTF-E08 R10 uniform-feedback assessment | gpt-6.1-sol / ultra, chat0032; three read-only same-model contributing audits | [Review36][r36], [Return69][n69]: all eight checks accepted without mathematical correction; field-energy notation clarified. Complete analytical constants and same-diffusion crossover pass; 17 frozen hashes, packet and 121 inherited files unchanged. Internal different-model assessment with shared premises; no acquisition, PDE run or manuscript change | **[B] CTF-B02 — Astra**, one still unpaid consumer/precise advantage under [Continuation70][n70]; parent partial, E03/B03 gated |
 
+| 29 October 2026 | CTF-E05 R3 primitive integration and R11 direction | gpt-6-astra / max, chat0031; same-assistant checks | [Note73](../notes/73_BOOK_INTEGRATION_BY_PARTS_AND_FEEDBACK_PAIRINGS_20261029.md), [Review38](../reviews/38_PRIMITIVE_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md), [record28](../numerics/28_PRIMITIVE_MANUSCRIPT_INTEGRATION_RECORD_20261029.json): exact primitive/adjoint interface, endpoint terms and actual I1 test integrated; 17 inherited proofs preserved, built-in compilation success, no separate PDF or visual-review claim | **[B] CTF-B02 R11 — Astra**, [Continuation74](../notes/74_PRIMITIVE_PRODUCTION_ANALYSIS_AND_MODEL_CONTINUATION_20261029.md); ready, improved estimate not executed |
+
+| 29 October 2026 | CTF-B02 R11 primitive test and uniform consumer | gpt-6-astra / ultra, chat0033; three same-model contributing derivations/checks | [Note75](../notes/75_PRIMITIVE_TEST_COSTS_AND_SIGNED_COMPARISON_R11_20261029.md), [Note76](../notes/76_UNIFORM_RESIDUAL_AND_FIXED_JET_CLOSURE_R11_20261029.md), [Review39](../reviews/39_PRIMITIVE_TEST_AND_UNIFORM_CLOSURE_INTERNAL_REVIEW_20261029.md): all test costs paid, full uniform direct energy/fixed-jet/window estimates; no new physical domain or primitive-specific signed gain; manuscripts unchanged | **[E] CTF-E08 R11 — Sol**, frozen [packet](handoffs/CTF-E08_PRIMITIVE_TEST_AND_UNIFORM_CLOSURE_R11_20261029.md); [Continuation77](../notes/77_PRIMITIVE_R11_RESEARCH_AND_MODEL_CONTINUATION_20261029.md); parent partial |
+| 29 October 2026 | CTF-E08 R11 assessment | gpt-6.1-sol / ultra, chat0034; three read-only contributing audits, inherited premises | [Review40](../reviews/40_PRIMITIVE_TEST_AND_UNIFORM_CLOSURE_E08_R11_ASSESSMENT_20261029.md), [Return78](../notes/78_PRIMITIVE_R11_E08_RESEARCH_RETURN_20261029.md): all ten checks accepted without mathematical correction; uniform full direct consumer and primitive test costs, no extra signed/domain gain | **[E] CTF-E05 R4 — Sol**, [packet](handoffs/CTF-E05_UNIFORM_RESIDUAL_INTEGRATION_R4_20261029.md), [Continuation79](../notes/79_PRIMITIVE_R11_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md); parent partial |
+| 29 October 2026 | CTF-E05 R4 manuscript integration | gpt-6.1-sol / ultra, same chat0034; three read-only contributing checks | [Return80](../notes/80_UNIFORM_RESIDUAL_MANUSCRIPT_INTEGRATION_RETURN_20261029.md), [Review41](../reviews/41_UNIFORM_RESIDUAL_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md), [record31](../numerics/31_UNIFORM_RESIDUAL_MANUSCRIPT_BUILD_RECORD_20261029.json): uniform residual/fixed-jet/window and primitive test results integrated; 35-page build/layout check, 19 prior proofs preserved | **[B] CTF-B02 — Astra**, [Continuation81](../notes/81_UNIFORM_RESIDUAL_INTEGRATION_AND_MODEL_CONTINUATION_20261029.md); no next mechanism selected, parent partial |
+
 Later rows must give source/return paths, actual model and effort, evidence status, failed premises or allowances, and the next classified task. Use [DRAFT_HISTORY.md][draft-history] for concise actual milestones, with commits/tags when available; create no new manuscript snapshot folders. The [result index][results] and [avoid index][avoid] retain their source-based inclusion rules, especially [scoped failures][a07] and [useful gain before expansion][a20].
+
+| 29 October 2026 | CTF-B02 R12 common-carrier synchronization | gpt-6-astra / ultra, existing chat0033; three read-only same-model contributors | [Note82](../notes/82_COMMON_CARRIER_SYNCHRONIZATION_R12_20261029.md), [Note83](../notes/83_FINITE_CENTERED_PRODUCTION_CORRECTION_R12_20261029.md), [Review42](../reviews/42_COMMON_CARRIER_AND_PRODUCTION_INTERNAL_REVIEW_R12_20261029.md): whole-time H1 decay, complete finite centered dissipation and finite I1 correction; all costs retained, direct consumer paid, manuscript unchanged | **[E] CTF-E08 R12 — Sol**, fixed packet ready; parent B02 partial, physical margin/carrier sign remain |
+| 29 October 2026 | CTF-E08 R12 assessment | gpt-6.1-sol / ultra, existing chat0034; three contributing audits, prior overlap and shared premises | [Review43](../reviews/43_COMMON_CARRIER_AND_PRODUCTION_E08_R12_ASSESSMENT_20261029.md), [Return85](../notes/85_COMMON_CARRIER_R12_E08_RESEARCH_RETURN_20261029.md): all ten checks accepted without mathematical correction; centered H1/dissipation and finite selected-term correction, no full actual-energy gain | **[E] CTF-E05 R5 — Sol**, [packet](handoffs/CTF-E05_COMMON_CARRIER_INTEGRATION_R5_20261029.md), [Continuation86](../notes/86_COMMON_CARRIER_R12_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md); ready, no new mechanism |
+| 29 October 2026 | CTF-E05 R5 common-carrier integration | gpt-6.1-sol / ultra, existing chat0034; three read-only contributors | [Return87](../notes/87_COMMON_CARRIER_MANUSCRIPT_INTEGRATION_RETURN_20261029.md), [Review44](../reviews/44_COMMON_CARRIER_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md), [record34](../numerics/34_COMMON_CARRIER_MANUSCRIPT_BUILD_RECORD_20261029.json): accepted R12 integrated, final built-in success; 21 prior proofs/199 protected files preserved, no fresh preview or separate PDF | **[B] CTF-B02 — Astra**, [Continuation88](../notes/88_COMMON_CARRIER_INTEGRATION_AND_MODEL_CONTINUATION_20261029.md); one unpaid carrier/source benefit, no candidate selected |
+| 29 October 2026 | CTF-E08 R13 assessment | gpt-6.1-sol / ultra, existing chat0034; three contributing audits, prior overlap/shared premises | [Review46](../reviews/46_COMPLETE_CARRIER_REDUCTION_E08_R13_ASSESSMENT_20261029.md), [Return92](../notes/92_COMPLETE_CARRIER_R13_E08_RESEARCH_RETURN_20261029.md): all ten checks accepted without mathematical correction; full finite balance differences, paid weak scalar forcing/energy limit and unique candidate, not attraction | **[B] CTF-B02 scalar-attraction decision — Astra**, [Continuation93](../notes/93_COMPLETE_CARRIER_R13_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md); no route selected, E05 requires bounded assignment |
 
 ## Next reply prompt
 
-> Continue [B] CTF-B02 from Continuation70 after accepted E08 R10.
-> Identify one consumer not already paid by the direct uniform-feedback
-> bound, or a precise independent information/cost/proof advantage.
-> Declare one bounded question, full costs, strongest equally informed
-> direct comparison and actual control premises before testing a mechanism.
-> Preserve the physical-margin dependency, unbounded total B,
-> finite-horizon residual scope, Sw<S9 and full source/jet/domain obligations.
-> Stop with one useful bound, scoped failure or fixed E/Sol contract;
-> no automatic acquisition, new mark, PDE run or manuscript expansion.
-> Update progress, notes and unique history with actual model/effort.
+> Resolve [B] CTF-B02 scalar-attraction decision — Astra after reading
+> Overview05/Progress05, Notes89–90, Review46, Return92 and Continuation93.
+> Choose one Lyapunov, contraction or stability strategy for the scalar
+> state-dependent coefficient and justify transfer of the paid
+> dual-Lipschitz forcing. Declare consumer, topology/domain, hypotheses,
+> strongest equally informed comparator and exact control premises
+> before estimating. Retain the physical mass and full source/path
+> information. Return a usable argument, fixed Sol task or scoped failed
+> route. No stationary inference from a unique candidate/scalar-energy
+> limit, stronger unproved forcing norm, unassigned scan or integration.
+> No route is preselected; a distinct physical-margin benefit is an
+> alternative conceptual decision.
+
 
 [overview]: ../research-overview/05_CONSERVATIVE_THETA_FLOW_ESTIMATES_RESEARCH_OVERVIEW_20261029.md
 [previous]: 04_CONSERVATIVE_THETA_FLOW_RESEARCH_PROGRESS_20261028.md

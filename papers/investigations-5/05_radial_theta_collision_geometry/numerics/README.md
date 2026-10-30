@@ -1,8 +1,18 @@
 # Radial theta collision exact checks
 
+Latest analytical identity record: [35 — complete carrier R13](35_COMPLETE_CARRIER_R13_ANALYTICAL_RECORD_20261029.json),
+29 October 2026, gpt-6-astra / ultra, chat0033. Issued hashes and
+preservation evidence; no numerical research run. Manuscript build34
+remains Sol's completed R5 integration.
+
+Latest analytical identity record: [32 — common-carrier R12](32_COMMON_CARRIER_R12_ANALYTICAL_RECORD_20261029.json),
+29 October 2026, gpt-6-astra / ultra, chat0033. Issued source hashes and
+preservation checks only; no numerical research experiment or PDE run.
+Current manuscript build remains record31 (E05 R4).
+
 27 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
 
-Current manuscript build: [27 — analytical consolidation](27_ANALYTICAL_MANUSCRIPT_BUILD_RECORD_20261029.json).
+Historical manuscript build: [27 — analytical consolidation](27_ANALYTICAL_MANUSCRIPT_BUILD_RECORD_20261029.json).
 CTF-E05 R2, 29 October 2026, gpt-6-astra / max, chat0031. Saved source/PDF/log
 hashes, local and desktop compilation, all 28 rendered pages inspected,
 and preservation of 123 earlier proof/review/handoff/companion files.
@@ -59,3 +69,13 @@ The default investigation path is derived from the script. The recorded environm
 - [25 — Diffusion-variance constant checks](25_check_diffusion_variance_constants_20261029.py), [small record](25_DIFFUSION_VARIANCE_CONSTANT_CHECKS_20261029.json): exact combinatorial/Gaussian constants and three illustrative rational endpoint identities. No source acquisition, flow computation or general proof by samples. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / max, chat0028, 29 October 2026.
 
 - [26 — Radial deadline constants](26_RADIAL_DEADLINE_CONSTANT_CHECKS_20261029.json), from [the check script](26_check_radial_deadline_constants_20261029.py): twelve exact rational checks and labeled floating constant illustrations only. No theta acquisition, quadrature, PDE simulation or source certificate. For Edward Baker with substantial LLM assistance, gpt-6-astra / max, chat0030, 29 October 2026.
+
+- [30 — E08 R11 assessment record](30_PRIMITIVE_R11_E08_ASSESSMENT_RECORD_20261029.json): issued hashes, protected-source preservation, analytical check disposition and document checks; no numerical acquisition or PDE experiment. For Edward Baker with LLM assistance, gpt-6.1-sol / ultra, chat0034, 29 October 2026.
+
+- [31 — E05 R4 manuscript build record](31_UNIFORM_RESIDUAL_MANUSCRIPT_BUILD_RECORD_20261029.json): final source/PDF/log hashes, successful built-in/local compilation, 35-page bounded layout check and preservation of 19 prior proofs/142 protected files. For Edward Baker with LLM assistance, gpt-6.1-sol / ultra, chat0034, 29 October 2026; no new numerical acquisition.
+
+- [33 — E08 R12 assessment record](33_COMMON_CARRIER_R12_E08_ASSESSMENT_RECORD_20261029.json): 18 issued hashes, frozen request, 195 protected source/research identities, analytical disposition and document checks. No numerical campaign or manuscript build. For Edward Baker with LLM assistance, gpt-6.1-sol / ultra, existing chat0034, 29 October 2026.
+
+- [34 — E05 R5 manuscript source/build record](34_COMMON_CARRIER_MANUSCRIPT_BUILD_RECORD_20261029.json): final source hash and built-in compiler diagnostic, source/reference/preservation checks, no detailed typesetting/visual evidence or new PDF. Standalone R4 reading-copy identity retained separately. For Edward Baker with LLM assistance, gpt-6.1-sol / ultra, existing chat0034, 29 October 2026.
+
+- [36 — E08 R13 assessment record](36_COMPLETE_CARRIER_R13_E08_ASSESSMENT_RECORD_20261029.json): 19 issued hashes, frozen packet, 229 protected research/source/reference identities and analytical/document disposition. No numerical run or manuscript build. For Edward Baker with LLM assistance, gpt-6.1-sol / ultra, existing chat0034, 29 October 2026.

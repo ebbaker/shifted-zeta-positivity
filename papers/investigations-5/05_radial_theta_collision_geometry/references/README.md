@@ -1,5 +1,13 @@
 # Radial theta source references
 
+New selected reference: [16 — fixed-drift Gibbs and feedback scope](16_FIXED_DRIFT_GIBBS_AND_FEEDBACK_SCOPE_20261029.md),
+Jordan–Kinderlehrer–Otto, published 1998; university manuscript dated
+4 February 1999, selected Section 2 passages checked for R13.
+Classical frozen-drift attribution only; no nonlinear convergence theorem
+imported. Public reading PDF archived outside Git with version/hash.
+Prepared for Edward Baker with LLM assistance, gpt-6-astra / ultra,
+29 October 2026.
+
 27 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
 
 This program reuses the primary passages already checked in the founding conversation. The canonical annotations and PDF provenance remain in Investigation04; they are linked rather than duplicated.
@@ -60,3 +68,9 @@ Prepared for Edward Baker with substantial LLM assistance,
 - [15 — Cosine kernel compatibility](15_COSINE_KERNEL_COMPATIBILITY_REFERENCES_20261029.md): DLMF4.19.2, version 1.2.8, selected formula checked for Note51; the polynomial comparison and source-compatibility result are derived in-note. 29 October 2026; prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / max, chat0024.
 
 - [Uniform-feedback classical input receipt](11_CONSERVATIVE_FEEDBACK_AND_DIFFUSION_CONTRACTION_20261028.md): selected DLMF1.14.1/8 and4.19.1--2 inspection for Note67; the direct uniform-feedback estimate is derived in-note. No new PDF or theorem import. 29 October 2026, gpt-6-astra / max, chat0031.
+
+R11 reuses the existing [Fourier/diffusion annotation](11_CONSERVATIVE_FEEDBACK_AND_DIFFUSION_CONTRACTION_20261028.md)
+and [theta–Mellin annotation](13_RIEMANN_THETA_MELLIN_ATTRIBUTION_20261028.md):
+selected DLMF normalization checks for Notes75–76, 29 October 2026,
+gpt-6-astra / ultra, chat0033. New estimates are derived in-note; no new
+external theorem or PDF is imported.

@@ -52,3 +52,11 @@ strip and the distinction between convergence and continuation. These
 sources establish the classical scalar identity; they do not establish
 novelty or non-novelty of the separate geometric or flow constructions.
 No artificial DLMF PDF was created.
+
+R11 selected-passage receipt, 29 October 2026: for Edward Baker with
+LLM assistance, **gpt-6-astra / ultra**, chat0033. Rechecked
+[DLMF 25.5.13–14](https://dlmf.nist.gov/25.5#E13), including the
+theta-sum normalization. [Note75](../notes/75_PRIMITIVE_TEST_COSTS_AND_SIGNED_COMPARISON_R11_20261029.md) retains the classical
+primitive attribution from Note73; its new work is the actual propagated
+test cost, not a new scalar theta–Mellin formula. Selected passages only,
+no full-source or novelty audit and no new PDF.

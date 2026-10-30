@@ -37,3 +37,31 @@ and elementary sliding-interval proof are derived in that note; no
 external feedback or uniform-Gronwall theorem is imported. This is not
 a chapter audit, priority search or new PDF acquisition. The earlier
 Hunter and Eberle reading/version records remain unchanged.
+
+## R11 normalization receipt, 29 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra / actual effort ultra**, chat0033. For
+[Notes75](../notes/75_PRIMITIVE_TEST_COSTS_AND_SIGNED_COMPARISON_R11_20261029.md)–[76](../notes/76_UNIFORM_RESIDUAL_AND_FIXED_JET_CLOSURE_R11_20261029.md), rechecked the selected
+online formulas [DLMF 1.14.1](https://dlmf.nist.gov/1.14.E1) and
+[1.14.8](https://dlmf.nist.gov/1.14.E8): the unitary Fourier convention
+and Parseval identity, converted here to the unnormalized three-coordinate
+convention with (2pi)^(-3). The weighted Fourier deficit, sufficient
+Nash constant, scalar barriers and full residual theorem are derived in
+the notes, not imported as an external nonlinear-feedback theorem.
+No optimal constant or literature-priority claim; no new PDF acquired.
+The existing Hunter/Eberle source/version records remain unchanged.
+
+## R12 selected-passage revisit, 29 October 2026
+
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra / actual effort ultra**, existing chat0033. For
+[Note82](../notes/82_COMMON_CARRIER_SYNCHRONIZATION_R12_20261029.md), revisited Eberle's versioned v3 introductory
+pp.1–2 and equation (1.1), and [DLMF 1.14.8](https://dlmf.nist.gov/1.14.E8).
+The synchronous coupling is derived pathwise with the actual time-dependent
+alpha and kappa=7/8. Parseval is converted to the unnormalized
+three-dimensional convention. The Fourier deficit, gradient barriers
+and synchronization theorem are proved in-note; no external feedback or
+stationary-convergence theorem is imported. This is a selected-passage
+check, not a full-paper or priority audit. Existing external PDF/version
+records are reused unchanged; no new PDF acquisition.

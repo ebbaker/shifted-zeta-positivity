@@ -1,5 +1,17 @@
 # Radial theta collision notes
 
+Current assessment: **E08 R13 accepted without mathematical correction**.
+[Review46](../reviews/46_COMPLETE_CARRIER_REDUCTION_E08_R13_ASSESSMENT_20261029.md), [Return92](92_COMPLETE_CARRIER_R13_E08_RESEARCH_RETURN_20261029.md) and [Continuation93](93_COMPLETE_CARRIER_R13_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md) record the complete balance/feedback result and remaining scalar-attraction
+gap. Next: **[B] CTF-B02 scalar-attraction decision — Astra**, no route
+selected. For Edward Baker with LLM assistance, gpt-6.1-sol / ultra,
+existing chat0034, 29 October 2026. Earlier routing is historical.
+
+Current integration: **E05 R5 complete** in the existing open manuscript.
+[Return87](87_COMMON_CARRIER_MANUSCRIPT_INTEGRATION_RETURN_20261029.md), [Review44](../reviews/44_COMMON_CARRIER_MANUSCRIPT_INTEGRATION_REVIEW_20261029.md) and [Continuation88](88_COMMON_CARRIER_INTEGRATION_AND_MODEL_CONTINUATION_20261029.md) record the accepted R12 integration, built-in compilation and model
+handoff. No fresh preview inspection or separate PDF. Next: **[B] CTF-B02
+— Astra**, one unpaid carrier/source benefit. For Edward Baker with LLM
+assistance, gpt-6.1-sol / ultra, existing chat0034, 29 October 2026.
+
 27 October 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
 
 **Geometry discussion and optional return:** [Note37](37_GEOMETRY_DISCUSSION_AND_RETURN_CONTINUATION_20261028.md) preserves
@@ -10,7 +22,13 @@ bookmark leaves the CTF task states below unchanged. 28 October 2026;
 prepared for Edward Baker with substantial LLM assistance, gpt-6-astra /
 xhigh.
 
-**Latest conceptual follow-up:** [73 — Integration by parts from the theta primitive to feedback pairings](73_BOOK_INTEGRATION_BY_PARTS_AND_FEEDBACK_PAIRINGS_20261029.md)
+**Current continuation:** [93 — R13 assessment and model continuation](93_COMPLETE_CARRIER_R13_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md).
+**Next: [B] CTF-B02 scalar-attraction decision — Astra**, one paid
+stability/weak-forcing-transfer strategy or scoped failure. No mechanism
+selected. [Return92](92_COMPLETE_CARRIER_R13_E08_RESEARCH_RETURN_20261029.md) and [Review46](../reviews/46_COMPLETE_CARRIER_REDUCTION_E08_R13_ASSESSMENT_20261029.md) record acceptance and exact remaining scope. Earlier continuations
+below retain their historical meanings.
+
+**Underlying conceptual follow-up:** [73 — Integration by parts from the theta primitive to feedback pairings](73_BOOK_INTEGRATION_BY_PARTS_AND_FEEDBACK_PAIRINGS_20261029.md)
 responds to the author's return to the book's original motivation. It
 retains the initial sphere terms while transferring the primitive identity
 through preparation and the common adjoint flow. No improved estimate is
@@ -18,7 +36,7 @@ claimed; the next comparison must include all transported-test costs.
 This supplements Note72's continuation. 29 October 2026; gpt-6-astra / max,
 chat0031.
 
-Start with [72 — analytical manuscript and model continuation](72_ANALYTICAL_MANUSCRIPT_AND_MODEL_CONTINUATION_20261029.md).
+Prior editorial continuation: [72 — analytical manuscript and model continuation](72_ANALYTICAL_MANUSCRIPT_AND_MODEL_CONTINUATION_20261029.md).
 [Note71](71_ANALYTICAL_MANUSCRIPT_CONSOLIDATION_20261029.md) records the author-requested E05 R2 analytical consolidation,
 successful 28-page build and full-page visual check. The main manuscript
 now integrates the accepted direct uniform-feedback result; no new
@@ -172,3 +190,46 @@ internal contributing audits, shared premises, no specialist independence.
 
 - [69 — E08 R10 research return](69_UNIFORM_FEEDBACK_E08_R10_RESEARCH_RETURN_20261029.md): all eight obligations accepted; complete analytical uniform-feedback costs and same-diffusion crossover, physical-margin and finite-residual limitations. Sol/ultra, chat0032.
 - [70 — R10 assessment and model continuation](70_UNIFORM_FEEDBACK_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md): next B02/Astra consumer/advantage decision, strongest direct/control boundary and unique chat0032 model-change guidance; no new mechanism selected.
+
+- [75 — Primitive test costs and signed comparison](75_PRIMITIVE_TEST_COSTS_AND_SIGNED_COMPARISON_R11_20261029.md): full actual adjoint, unit Gaussian derivative/trace payment, joint prepared-source identity and scoped coefficient-only sign test; no primitive-specific signed gain.
+- [76 — Uniform residual and fixed-jet closure](76_UNIFORM_RESIDUAL_AND_FIXED_JET_CLOSURE_R11_20261029.md): stronger direct method gives uniform full weighted energy, every fixed common-path jet and complete fixed-window dissipation; explicit envelope crossover, physical mass margin retained.
+- [77 — Research and model continuation](77_PRIMITIVE_R11_RESEARCH_AND_MODEL_CONTINUATION_20261029.md): default fixed E08 R11/Sol assessment; next conceptual boundary and unique chat0033 identity.
+
+These R11 notes were prepared for Edward Baker with substantial LLM
+assistance, **gpt-6-astra / actual effort ultra**, chat0033,
+29 October 2026. Same-model contributing checks, E08 pending.
+
+- [78 — E08 R11 research return](78_PRIMITIVE_R11_E08_RESEARCH_RETURN_20261029.md): ten-check acceptance, full uniform direct baseline and exact remaining physical-margin/sign scope.
+- [79 — R11 assessment and model continuation](79_PRIMITIVE_R11_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md): default E05 R4/Sol integration, alternative B02/Astra conceptual boundary, and unique chat0034 history guidance.
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol /
+actual effort ultra**, chat0034, 29 October 2026. Review40 completes the
+E08 assessment that was pending in Notes75–77; those issued notes remain
+unchanged. Internal different-model assessment, shared inherited premises.
+
+- [80 — E05 R4 manuscript integration return](80_UNIFORM_RESIDUAL_MANUSCRIPT_INTEGRATION_RETURN_20261029.md): accepted uniform energy/fixed-jet/window and primitive tests integrated; 35-page built-in/local build and bounded layout check; no new scientific conclusion.
+- [81 — Integration and model continuation](81_UNIFORM_RESIDUAL_INTEGRATION_AND_MODEL_CONTINUATION_20261029.md): next B02/Astra conceptual boundary, stronger direct baseline, fixed scopes and preserved chat0034 identity.
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol /
+actual effort ultra**, chat0034, 29 October 2026. Same-parent editorial
+checking with contributing audits and shared inherited premises.
+
+- [85 — E08 R12 research return](85_COMMON_CARRIER_R12_E08_RESEARCH_RETURN_20261029.md): ten-check acceptance, complete centered decay/dissipation and finite selected-term correction, with physical-margin and unpaid carrier scope.
+- [86 — R12 assessment and model continuation](86_COMMON_CARRIER_R12_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md): bounded E05 R5/Sol next integration, alternative B02 conceptual boundary, current-editor constraints and preserved chat0034 identity.
+
+For Edward Baker with substantial LLM assistance, **gpt-6.1-sol / ultra**,
+existing chat0034, 29 October 2026; internal assessment with shared premises.
+
+- [87 — E05 R5 common-carrier integration return](87_COMMON_CARRIER_MANUSCRIPT_INTEGRATION_RETURN_20261029.md): accepted R12 integrated in Section 9; built-in compiler success, 21 prior proofs/199 protected files preserved, no separate PDF or fresh preview claim.
+- [88 — Common-carrier integration and model continuation](88_COMMON_CARRIER_INTEGRATION_AND_MODEL_CONTINUATION_20261029.md): next B02/Astra conceptual boundary, unpaid carrier-production scope and exact existing chat0034/editor constraints.
+
+For Edward Baker with substantial LLM assistance, gpt-6.1-sol / actual
+effort ultra, existing chat0034, 29 October 2026; same-parent editorial
+checking with shared inherited premises.
+
+- [92 — E08 R13 research return](92_COMPLETE_CARRIER_R13_E08_RESEARCH_RETURN_20261029.md): all ten obligations accepted, complete finite differences and scalar interpretation/candidate, with attraction unproved.
+- [93 — R13 assessment and model continuation](93_COMPLETE_CARRIER_R13_ASSESSMENT_AND_MODEL_CONTINUATION_20261029.md): next B02/Astra scalar-attraction choice, weak-forcing topology/physical-margin boundaries and preserved chat0034/editor identity.
+
+For Edward Baker with substantial LLM assistance, gpt-6.1-sol / actual
+effort ultra, existing chat0034, 29 October 2026; internal assessment with
+prior contributor overlap and shared inherited premises.

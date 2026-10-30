@@ -40,10 +40,18 @@ mass--energy--moment inequality, and a sliding-interval argument.
 For theta at $(T,A)=(1/4,2)$, the complete source establishes this margin
 analytically. We then retain its logarithmic source relation through
 preparation and evolution: the resulting nonzero residual and actual
-second frequency derivative satisfy a finite weighted energy estimate
-with all commutator and boundary costs included. Exact comparisons
-identify the information still missing. The uniform feedback theorem
-strengthens quantitative regularity on an already separated domain;
+second frequency derivative satisfy a complete weighted energy estimate.
+At the paid theta mark, the same direct method makes this energy and
+each fixed frequency jet uniform in auxiliary time, with complete
+dissipation bounded on sliding windows. The first three jets also
+synchronize in $H^1$ with conserved-mass multiples of one moving positive
+carrier. Their centered residual has finite total dissipation, and the
+selected signed production differs from its carrier component by a
+finite accumulated correction. The carrier production's sign remains unproved.
+Gaussian preparation also pays the derivatives and sphere traces in
+the theta primitive's propagated tests. No additional signed advantage is established by the exact
+joint reconstruction. These results strengthen quantitative regularity
+on an already separated domain;
 the residual estimate supplies no new theta collision exclusion or
 de Bruijn--Newman bound.
 \end{abstract}
@@ -81,10 +89,33 @@ source relation contributes. Gaussian preparation creates a genuine
 commutator residual, and its evolution has second-order spatial
 forcing. Theorem~\ref{thm:weightedclosure} closes a coupled energy for
 the gradient, weighted residual and actual second frequency derivative.
-The complete source improves its signed production, but the bound
-still applies to admitted colliding controls with their true residuals.
+The complete source improves its signed production, but the general
+finite-horizon bound still applies to admitted colliding controls with
+their true residuals. At the already separated theta mark,
+Theorem~\ref{thm:uniformresidual} uses the supplied uniform feedback
+to bound the entire energy, each fixed jet, and complete dissipation
+on sliding windows. No further physical margin is acquired.
 Proposition~\ref{prop:kernelfreedom} also shows why the raw relation
 alone cannot replace the literal cosine observation.
+
+The source also has an undifferentiated theta primitive. Its radial
+Laplacian representation permits integration by parts before taking
+absolute bounds. Section~\ref{sec:primitiveduality} carries this identity
+through the same preparation and feedback propagator, then identifies
+the signed residual-production term to which it can be applied. The
+actual test derivatives and both sphere traces are paid by unit
+preparation. The joint expression reconstructs the same prepared source
+available to the direct method; a primitive-specific signed advantage
+remains to be proved.
+
+Section~\ref{sec:commoncarrier} then uses the same bounded feedback path
+to synchronize $J_0,J_1,J_2$ with mass multiples of the moving carrier.
+Theorem~\ref{thm:commoncarrier} pays the whole-time $H^1$ errors;
+Propositions~\ref{prop:centereddissipation} and
+\ref{prop:finiteproductioncorrection} give finite centered dissipation
+and an integrable correction in the selected signed term. These direct
+results do not establish a stationary carrier, finite original-field
+dissipation, or a sign for the remaining carrier production.
 
 We distinguish physical time $t$, physical frequency $a$, and auxiliary
 time $s\ge0$. A spectral derivative varies $a$ while the feedback mark
@@ -129,9 +160,9 @@ H(t,a)=\int_0^\infty e^{tu^2}\Phi(u)\cos(au)\dd u
 The second formula already represents the full first integral. An
 inversion-related interior integral is not to be added again.
 The transform companion derives the related classical theta--Mellin
-formula in this normalization \cite{ThetaCompanion}; its potential and
-cylinder fields are background representations, while the density
-specified in Section~\ref{sec:conservative} is the field evolved here.
+formula in this normalization \cite{ThetaCompanion}. Its integration by
+parts supplies the primitive used below. The density specified in
+Section~\ref{sec:conservative} remains the field evolved here.
 
 \begin{lemma}[Tails and parameter differentiation]\label{lem:tails}
 The canonical source and the finite spatial and parameter derivatives
@@ -158,6 +189,64 @@ give a uniform bound by a constant times $e^{-\pi r^2/2}$.
 Since $r=e^{2u}$, this also proves the asserted exponential domination in
 $u$. It justifies the differentiations and outer boundary limits below.
 \end{proof}
+
+
+\subsection{The undifferentiated theta primitive}\label{sec:primitive}
+
+Write $A_\theta(r)=(\Theta(r)-1)/2$; the subscript distinguishes the
+book's theta sum $A(r)$ from a marked physical frequency. The identity
+\[
+ \Phi(u)=\tfrac12r^{5/2}\Delta_3A_\theta(r),\qquad r=e^{2u},
+\]
+explains the role of dimension three: its radial Laplacian matches the
+two source coefficients. Moving that Laplacian onto an observation
+kernel is the spatial form of the classical theta--Mellin calculation
+\cite{Riemann1859,DLMFThetaMellin}. The useful half-line primitive is
+\begin{equation}\label{eq:thetaprimitive}
+ \psi_\theta(u)=e^uA_\theta(e^{2u}),\qquad
+ \psi_\theta''-\psi_\theta=8\Phi,\qquad u\ge0.
+\end{equation}
+Unlike the smooth full-space potential $1+r^{-1}-\Theta(r)$, this
+primitive retains double-exponential decay after multiplication by
+$e^{tu^2}$ at any fixed Newman time. It therefore avoids extending a
+strip-convergent potential integral beyond its defining domain.
+
+\begin{lemma}[Primitive transfer with endpoint terms]
+\label{lem:primitivetransfer}
+Let $f\in C^2([0,\infty))$ and suppose
+$|f^{(k)}(u)|\le C e^{cu^2+cu}$ for $k=0,1,2$, with finite $C,c>0$.
+Then
+\begin{equation}\label{eq:primitivetransfer}
+ \int_0^\infty\Phi f\dd u
+ =\frac{f(0)}{16}+\frac{A_\theta(1)f'(0)}8
+   +\frac18\int_0^\infty\psi_\theta(f''-f)\dd u.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Differentiating with $\partial_u=2r\partial_r$ proves
+\eqref{eq:thetaprimitive}. Theta reflection
+$\Theta(r)=r^{-1}\Theta(1/r)$ gives
+$A_\theta'(1)+A_\theta(1)/2=-1/4$. Hence
+$\psi_\theta(0)=A_\theta(1)$ and $\psi_\theta'(0)=-1/2$.
+Two integrations by parts have boundary
+$[\psi_\theta'f-\psi_\theta f']_0^\infty$.
+Lemma~\ref{lem:tails} removes its upper endpoint; the lower endpoint
+gives the two displayed terms.
+\end{proof}
+
+For $f=e^{tu^2}\cos(au)$ this gives the complete scalar identity
+\begin{equation}\label{eq:primitivedeformed}
+ \begin{split}
+ H(t,a)=\frac1{16}+\frac18\int_0^\infty
+ \psi_\theta(u)e^{tu^2}\big\{&
+ (2t-1-a^2+4t^2u^2)\cos(au)\\
+ &-4tau\sin(au)\big\}\dd u .
+ \end{split}
+\end{equation}
+This positive-time formula is already recorded in \cite{ScalarIBPNote};
+at $t=0$ it is the companion's entire theta representation.
+The constant and mixed sine term are part of the identity. The next
+use of integration by parts is to retain a spatial test as well.
 
 \subsection{A density for the complete observation}\label{sec:conservative}
 
@@ -1561,9 +1650,10 @@ Where Theorem~\ref{thm:uniformfeedback} supplies $K_\infty$,
  \le(\mathcal F_{\mathrm R}(0)+E_0)
           \exp[(\kappa_0+2\kappa_1K_\infty/3)s].
 \end{equation}
-This is finite on each finite horizon. It is not a uniform bound
-for the residual or higher jets. Those source budgets were not
-needed in the proof of uniform feedback.
+This growing envelope remains valid on every finite horizon.
+At $(1/4,2)$ it is strengthened below by a uniform bound for the entire
+weighted energy and each fixed jet. The residual budgets are downstream
+of the physical margin and were not needed to prove uniform feedback.
 
 The exact Gaussian-polynomial control lies in $\mathscr P$ at its
 event $(1/4,2\sqrt6)$ and remains admitted by this weighted theorem.
@@ -1605,6 +1695,696 @@ but does not remove the inner-region maximum in
 Theorem~\ref{thm:weightedclosure}, or independently control $B$.
 
 
+
+
+\subsection{Uniform weighted energy at the paid theta mark}
+
+The direct method also closes the full energy, once the positive
+physical mass margin has supplied bounded feedback
+\cite{UniformResidualNote}. The following conclusion is confined to
+$(T,A)=(1/4,2)$; the preceding weighted theorem retains its general
+parameter rectangle and requires no such margin.
+
+\begin{theorem}[Uniform residual energy and fixed-order jets]
+\label{thm:uniformresidual}
+At $(T,A)=(1/4,2)$, let $K=K_\infty$ or $K_\theta$ be supplied by
+Theorem~\ref{thm:uniformfeedback} and
+Proposition~\ref{prop:thetamargin}. With $M_j$ and $e_\pm$ as in
+Section~\ref{sec:thetapayment}, define
+\begin{align}
+ c_N&=\frac35(6\pi^2)^{2/3},&
+ \mathcal D(K)&=\max\{e_+,(2K/c_N)^{3/2}\},&
+ \mathfrak q&=\frac{\mathcal D(K)}{73^2e_-},\nonumber\\
+ \mathfrak y&=\left[\frac{\sqrt K}{4}+3B_0+\frac34+\sqrt5
+                         +2\sqrt{\mathfrak q}\right]^2,&
+ \mathcal F_*&=E_0(K+\mathfrak y+\mathfrak q).
+ \label{eq:uniformresidualconstant}
+\end{align}
+Here $J_j$ is the actual $j$th running-frequency derivative at $a=A$
+along this fixed common path. For every auxiliary time $s\ge0$,
+\begin{equation}\label{eq:fixedjetuniform}
+ \|J_j(s)\|_2^2\le M_j^2\mathcal D(K)\quad
+ \text{for each fixed integer }j\ge0,\qquad
+ \mathcal F_{\mathrm R}(s)\le\mathcal F_*.
+\end{equation}
+Set $C_*=\kappa_0+(2K/3)\kappa_1$. Then, for $t\ge0$ and $\ell>0$,
+\begin{align}
+ \int_t^{t+\ell}(\mathscr D_{\mathrm R}
+                    +\alpha\mathscr H_{\rm rad})\dd s
+ &\le\mathcal F_*+C_*(\mathcal F_*+E_0)\ell,
+ \label{eq:uniformresidualwindows}\\
+ \mathcal F_{\mathrm R}(S)+\int_0^S(\mathscr D_{\mathrm R}
+                    +\alpha\mathscr H_{\rm rad})\dd s
+ &\le\mathcal F_{\mathrm R}(0)+C_*(\mathcal F_*+E_0)S.
+ \label{eq:uniformresidualcumulative}
+\end{align}
+\end{theorem}
+\begin{proof}
+Fix the actual common feedback path. Positivity and conservation of its
+scalar propagator, together with Gaussian preparation, give
+$\|J_j(s)\|_1\le M_j$, including for signed jets. For a scalar $f$
+with $\|f\|_1\le m$, the Fourier deficit used earlier gives
+\[
+ k^2\|f\|_2^2-\|\nabla f\|_2^2
+ \le\frac{m^2k^5}{15\pi^2},\qquad
+ \|\nabla f\|_2^2\ge c_N\|f\|_2^{10/3}m^{-4/3}.
+\]
+The optimizer is $k^3=6\pi^2\|f\|_2^2/m^2$; zero data are trivial.
+Thus $Q_j=\|J_j\|_2^2$ satisfies
+\[
+ Q_j'\le-2c_NM_j^{-4/3}Q_j^{5/3}+4KQ_j,
+ \qquad Q_j(0)\le e_+M_j^2.
+\]
+Scalar comparison proves the fixed-$j$ bound. Since
+$M_2/M_0<1/72$, one has $M_2/M<1/73$ and hence
+$Q_2/E_0\le\mathfrak q$ using $E_0\ge e_-M^2$.
+
+The needed weighted coefficients incur no new acquisition:
+\begin{equation}\label{eq:uniformresidualcoefficients}
+ C_b:=\|\omega b\|_\infty\le\tfrac14,\qquad
+ C_c:=\|\omega c_T\|_\infty\le3B_0+\tfrac34.
+\end{equation}
+For $C_b$, use $\log r\le r$ on $r\ge1$; on $[1/2,1]$ use
+$\log2<3/4$ and $r/(1+r^2)^2\le9/(16\sqrt3)<1/3$.
+For $C_c$, write the full multiplication coefficient as
+$\gamma=\eta r\log r\,d'-\lambda r c_T'$. Then
+\[
+ c_T'=\frac{\eta\log r\,d'}{\lambda}
+                  -\frac{\gamma}{\lambda r},\qquad c_T(1)=0.
+\]
+Integration toward $r\in[1/2,1]$ bounds $\omega|c_T|$ by
+$4B_0\log2+(27/25)\log2<3B_0+3/4$.
+Here $d(1/2)-d(1)=27/25$ and the logarithmic series gives
+$\log2<25/36$. On $r\ge1$, the two contributions are at most
+$5B_0/8$ and
+\[
+ \frac14\int_1^\infty\log t\,[-d'(t)]\dd t
+       =\frac{3\log2-1}{8}<\frac34.
+\]
+Below $1/2$, $c_T=0$. All cutoff variation remains in $\gamma$ and $B_0$.
+
+The defining residual, with
+$\mathcal T=(2V,V)+(0,2J_2)$, now yields
+\begin{equation}\label{eq:uniformresidualidentity}
+ \sqrt Y\le\tfrac14\sqrt G+
+       (3B_0+\tfrac34+\sqrt5)\sqrt{E_0}+2\sqrt{Q_2}.
+\end{equation}
+Since $G\le KE_0$, this gives $Y\le E_0\mathfrak y$ and
+$\mathcal F_{\mathrm R}\le\mathcal F_*$. The true preparation defect
+and the whole interior ball remain; no singular sphere quotient is split.
+Insert this bound into \eqref{eq:weightedclosure} and integrate.
+Dropping only $\mathcal F_{\mathrm R}(t+\ell)\ge0$ gives
+\eqref{eq:uniformresidualwindows}; integration from zero gives
+\eqref{eq:uniformresidualcumulative}.
+\end{proof}
+
+A smaller admissible $\mathfrak q$ is
+$M_2^2\mathcal D(K)/E_0$ when these same moment budgets are retained.
+Combining the two complete energy allowances gives
+\begin{equation}\label{eq:residualminimumallowance}
+ \mathcal F_{\mathrm R}(s)\le
+ \min\{(\mathcal F_{\mathrm R}(0)+E_0)e^{\Xi(s)}-E_0,\mathcal F_*\}.
+\end{equation}
+Because $\alpha\ge a_*$ and $\mathcal F_*\ge\mathcal F_{\mathrm R}(0)$,
+the new constant is strictly smaller than the older exponential
+allowance for
+\begin{equation}\label{eq:residualuniformcrossing}
+ s>s_c:=\frac{\log[(\mathcal F_*+E_0)/
+                         (\mathcal F_{\mathrm R}(0)+E_0)]}
+                    {\kappa_0+\kappa_1a_*}\ge0.
+\end{equation}
+This compares sufficient allowances, not actual energy growth or optimal
+constants. The same direct method pays the entire uniform consumer.
+The estimate is weighted and fixed-order: it gives neither a global
+unweighted residual bound nor uniformity in $j$ or physical parameters.
+Sliding-window dissipation is not pointwise or finite total dissipation.
+At an admitted double event the positive mass premise supplying $K$
+fails; the earlier control admission does not import this theorem there.
+No larger physical region, bounded total $B$, convergence or
+primitive-specific signed benefit follows.
+
+\section{The theta primitive in evolving pairings}
+\label{sec:primitiveduality}
+
+The primitive transfer can be used without changing the evolved field.
+Fix a feedback mark $p=(T,A)$ and its common propagator $P_{s,0}$.
+For a running frequency $a$, write
+\[
+ F_j^{\rm raw}(X)=\mathbf1_{r\ge1}
+  \frac{e^{Tu^2}\Phi(u)}{8\pi r^3}u^j\cos^{(j)}(au),\qquad
+ J_j(s)=P_{s,0}(K_1*F_j^{\rm raw}).
+\]
+Thus $J_0=U$ and $J_1=V$ at $a=A$. The propagator and tests below
+are held fixed when taking the running frequency derivatives.
+
+\begin{proposition}[Primitive duality along the common path]
+\label{prop:primitiveduality}
+Let $s$ lie inside the regular lifespan and let $\eta$ be a smooth
+radial test for which the following duality pairing is admissible. Put
+\begin{equation}\label{eq:primitiveadjointtest}
+ \chi_s=K_1*(P_{s,0}^*\eta),\qquad
+ f_{j,s}(u)=e^{Tu^2}u^j\cos^{(j)}(au)\chi_s(e^{2u}).
+\end{equation}
+If $f_{j,s}$ satisfies Lemma~\ref{lem:primitivetransfer}, then
+\begin{equation}\label{eq:primitiveevolvedpairing}
+ \langle J_j(s),\eta\rangle
+ =\mathcal B_j[\chi_s]
+ +\frac18\int_0^\infty\psi_\theta
+           (\partial_u^2-1)f_{j,s}\dd u,
+\end{equation}
+where
+\begin{equation}\label{eq:primitivespheretrace}
+ \mathcal B_0[\chi]=\frac{\chi(1)}{16}
+                  +\frac{A_\theta(1)}4\chi_r(1),
+ \qquad \mathcal B_j[\chi]=0\quad(j\ge1).
+\end{equation}
+\end{proposition}
+\begin{proof}
+Duality and symmetry of the preparatory heat kernel give
+$\langle J_j(s),\eta\rangle=\langle F_j^{\rm raw},\chi_s\rangle$.
+The Euclidean Jacobian in \eqref{eq:densityjacobian} identifies this
+with $\int_0^\infty\Phi f_{j,s}\dd u$.
+For $j=0$, $f_{0,s}(0)=\chi_s(1)$ and
+$f_{0,s}'(0)=2\chi_{s,r}(1)$. For every $j\ge1$ both values vanish:
+in particular $u\cos'(au)=-u\sin(au)$ vanishes to second order.
+Lemma~\ref{lem:primitivetransfer} proves the claim.
+\end{proof}
+
+The spatial adjoint of $L_s$ is $\Delta-\alpha v\cdot\nabla$.
+All preparation and evolution therefore enter the test $\chi_s$.
+The trace at $r=1$ is an initial-support contribution, not a boundary
+condition on the evolving field. The whole interior ball is included
+in the duality pairing. This proposition neither evolves the theta
+primitive by $L_s$ nor removes the residual $\mathcal R$.
+Its growth hypothesis is a condition on the actual propagated test;
+it is not a uniform estimate on an arbitrary family of tests.
+
+\subsection{A specific signed production term}
+
+In \eqref{eq:weightedsignedproduction}, isolate
+\[
+ I_1(s)=2\langle Z_{\mathrm R},\omega\mathscr C_1W\rangle,
+ \qquad
+ \mathscr C_1=\beta\cdot\nabla+\gamma,
+\]
+Its contribution to the energy derivative is $\alpha(s)I_1(s)$.
+The full cutoff coefficients from
+\eqref{eq:sourcefullcommutator} are
+$\beta=b\cdot\nabla v-v\cdot\nabla b$ and
+$\gamma=b\cdot\nabla d-v\cdot\nabla c$.
+For the actual smooth fields, whole-space integration by parts gives
+\begin{equation}\label{eq:primitiveproductiontest}
+ I_1(s)=\langle W(s),\eta_s\rangle,\qquad
+ \eta_s=2\mathscr C_1^*(\omega Z_{\mathrm R}),\qquad
+ \mathscr C_1^*h=-\operatorname{div}(\beta h)+\gamma h.
+\end{equation}
+Proposition~\ref{prop:primitiveduality} applies componentwise with
+$j=0,1$ once its test costs are paid below. The tests depend on the
+state; they are frozen for each pairing, not differentiated as
+additional running spectral data.
+
+Put $h_{\rm cut}=\eta\log r$, $\beta=\sigma X$ and
+$\sigma=r(h_{\rm cut}\lambda'-\lambda h_{\rm cut}')$. The full radial adjoint is
+\begin{equation}\label{eq:primitivefulladjoint}
+ \eta_{s,j}=2\omega\left[-\sigma r\partial_rZ_{\mathrm R,j}
+ +\left(\gamma-3\sigma-r\sigma'
+       +\frac{4\sigma r^2}{1+r^2}\right)Z_{\mathrm R,j}\right].
+\end{equation}
+In particular, $\sigma'$ retains the second cutoff derivative.
+Reflection gives $\sigma(1)=-3/2$, $\sigma'(1)=0$ and
+$\gamma(1)=-9/2$, so the terminal trace is
+$\eta_{s,j}(1)=\tfrac34\partial_rZ_{\mathrm R,j}(1)
+-\tfrac32Z_{\mathrm R,j}(1)$. This is distinct from the two transported
+initial-support traces in \eqref{eq:primitivespheretrace}.
+
+\begin{proposition}[Paid derivatives and traces of the actual test]
+\label{prop:primitivepaidtest}
+At the paid theta mark of Theorem~\ref{thm:uniformresidual}, set
+\begin{align*}
+ \bar\alpha&=2K/3,&
+ E_*&=\max\{e_+,(3\bar\alpha/c_N)^{3/2}\},\\
+ \rho_*&=\frac{5\bar\alpha+
+              \sqrt{25\bar\alpha^2+60\bar\alpha}}2,&
+ G_*&=E_*\max\{3/4,\rho_*\},\qquad
+ D_*=2(B_1\sqrt{G_*}+B_0\sqrt{E_*}).
+\end{align*}
+For $Y_j=\|Z_{\mathrm R,j}\|_2^2$ and
+$\chi_{s,j}=K_1*(P_{s,0}^*\eta_{s,j})$,
+\begin{equation}\label{eq:primitivepaidtest}
+ \max_{0\le k\le2}\|\partial_r^k\chi_{s,j}\|_\infty
+ \le D_*\sqrt{Y_j(s)}\qquad(j=0,1).
+\end{equation}
+Both sphere traces and the primitive integral are therefore paid in the
+existing residual budget, uniformly in auxiliary time.
+\end{proposition}
+\begin{proof}
+The distributional adjoint obeys, for $f\in H^1$,
+\[
+ |\langle\eta_{s,j},f\rangle|
+ \le2\sqrt{Y_j}(B_1\|\nabla f\|_2+B_0\|f\|_2).
+\]
+For a unit direction $e$, transfer $D_{x,e}^k$ to the known seed
+$K_1(x-\cdot)$ before forward propagation. This does not commute
+spatial derivatives through $P$ or differentiate its feedback path.
+The seed L1 norms for $k=0,1,2$ are at most one; their squared L2 and
+gradient norms, divided by $e_+$, are respectively
+$(1,1/4,3/16)$ and $(3/4,5/16,21/64)$.
+L1 contraction and the Fourier inequality in
+Theorem~\ref{thm:uniformresidual} give propagated energy $E\le E_*$.
+The scalar gradient identity and $\|\Delta f\|_2^2\ge G^2/E$ give
+\[
+ G'\le-2G^2/E_*+10\bar\alpha G+30\bar\alpha E_*.
+\]
+Its positive normalized root is $\rho_*$; the initial gradients are
+at most $3E_*/4$. Hence $G\le G_*$, proving
+\eqref{eq:primitivepaidtest} by duality. Radial differentiation is
+covered by taking $x=re$.
+The complete theta tail then pays the growth of the composed tests
+and both terms in \eqref{eq:primitivespheretrace}.
+\end{proof}
+
+On a finite regular path this admissibility does not require a physical
+mass floor. Write $E_k=\|D_e^kK_1\|_2^2$ and
+$G_k=\|\nabla D_e^kK_1\|_2^2$. With $B=B(s)$, the same seeds have
+\[
+ E(s)\le e^{6B}E_k,\qquad
+ G(s)\le e^{10B}\{G_k+\tfrac{15}{2}(1-e^{-4B})E_k\}.
+\]
+The uniform version above spends the physical information in $K$.
+For an explicit absolute production payment, put
+$c_j(u)=e^{Tu^2}u^j\cos^{(j)}(Au)$, $r=e^{2u}$ and
+\begin{align*}
+ q_j&=(c_j''-c_j,\,4r(c_j'+c_j),\,4r^2c_j),\\
+ \mathcal L_j&=\mathbf1_{j=0}\sqrt2
+       \sqrt{(1/16)^2+(A_\theta(1)/4)^2}
+       +\frac{\sqrt3}{8}\int_0^\infty\psi_\theta|q_j|_2\dd u.
+\end{align*}
+Both $\mathcal L_j$ are finite. The chain rule, retaining its mixed derivative,
+gives the full product
+\begin{equation}\label{eq:primitiveproductcost}
+ (\partial_u^2-1)[c_j\chi(r)]
+ =(c_j''-c_j)\chi+4r(c_j'+c_j)\chi_r+4r^2c_j\chi_{rr}.
+\end{equation}
+Cauchy--Schwarz now proves the complete allowance
+\begin{equation}\label{eq:primitiveabsoluteallowance}
+ |I_1|\le D_*\sqrt{\mathcal L_0^2+\mathcal L_1^2}\sqrt Y.
+\end{equation}
+Its contribution $\alpha I_1$ is at most
+$\varepsilon Y+\bar\alpha^2D_*^2(\mathcal L_0^2+\mathcal L_1^2)/(4\varepsilon)$.
+This does not remove any other term from the full production. No strict
+ranking against the direct allowance
+$2\sqrt{E_0Y}(B_1\sqrt K+B_0)$ is asserted.
+
+\subsection{The joint expression reconstructs the same source}
+
+Define the spherical Gaussian seed
+$k_r=(4\pi)^{-1}\int_{S^2}K_1(\cdot-r\theta)\dd\theta$.
+At the evaluation frequency $a=A$, the complete joint identity is
+\begin{equation}\label{eq:primitivejointreconstruction}
+ \begin{split}
+ K_1*F_j^{\rm raw}={}&\mathbf1_{j=0}
+ \left\{\frac{k_1}{16}
+ +\frac{A_\theta(1)}4\left.\partial_rk_r\right|_{r=1}\right\}\\
+ &+\frac18\int_0^\infty\psi_\theta
+ \left\{(c_j''-c_j)k_r+4r(c_j'+c_j)\partial_rk_r
+                   +4r^2c_j\partial_r^2k_r\right\}\dd u,
+ \end{split}
+ \qquad j=0,1.
+\end{equation}
+The equality holds in $L^1\cap H^1$. Indeed the polar Jacobian gives
+$K_1*F_j^{\rm raw}=\int\Phi c_jk_{e^{2u}}\dd u$.
+Spherical averages of translated Gaussian derivatives uniformly bound
+$k_r,\partial_rk_r,\partial_r^2k_r$ in that Banach space; the last H1
+cost contains only known third Gaussian derivatives. The complete theta
+tail justifies both integrations by parts and the Bochner integral.
+On finite paths $P_{s,0}$ is continuous on $L^1\cap H^1$, while
+$\|\omega\mathscr C_1f\|_2\le B_1\|\nabla f\|_2+B_0\|f\|_2$.
+Propagation, weighted commutation and pairing with $2Z_{\mathrm R,j}$
+therefore recover exactly the corresponding component of $I_1$.
+
+The direct method receives this same prepared source and already pays
+Theorem~\ref{thm:uniformresidual}. Unit preparation has closed the
+previous derivative and trace obligations; no additional signed benefit
+from primitive transfer has been proved \cite{PrimitiveTestNote}.
+Any future advantage must use actual source--residual--path correlation
+or lower a complete allowance against the equally informed direct method.
+
+Positivity of a primitive alone cannot settle that question.
+For a positive source $q$ with the necessary exponential moments,
+\[
+ \psi_q(u)=8\int_u^\infty\sinh(v-u)q(v)\dd v
+\]
+is positive and satisfies $\psi_q''-\psi_q=8q$.
+Rescaling the colliding source in Section~\ref{sec:control} so that
+$\int_0^\infty q(v)\cosh v\dd v=1/16$ gives
+$\psi_q'(0)=-1/2$, with the double zero preserved.
+It shares the transfer identity and completion constant, but not the
+canonical theta sum. The fixed-theta polynomial-kernel comparison in
+Proposition~\ref{prop:kernelfreedom} instead lacks the literal cosine
+equation. These comparisons require a quantitative use of the
+complete source and its actual observation \cite{PrimitivePairingNote}.
+
+
+\section{Synchronization along a moving carrier}\label{sec:commoncarrier}
+
+All conclusions in this section are at $(T,A)=(1/4,2)$ and use the
+original common path, unit preparation and actual frequency jets.
+The positive physical vector-mass margin of
+Proposition~\ref{prop:thetamargin} has already supplied
+$0<a_*\le\alpha\le\bar\alpha:=2K/3$ and $B(s)\ge a_*s$.
+The carrier $h(s)$ is the evolving positive field of
+Section~\ref{sec:carrier}, not a stationary profile. No feedback is
+recomputed from a centered field \cite{CarrierSynchronizationNote}.
+
+\subsection{Complete synchronization costs}
+
+For the constant masses $m_j=\int J_j$, put
+\begin{equation}\label{eq:commoncarriererrors}
+ \mathfrak a_j=m_j/M,\qquad e_j=J_j-\mathfrak a_jh,
+ \qquad j=0,1,2.
+\end{equation}
+Each error solves the same scalar equation and has exactly zero complete
+spatial mass. Only the positive carrier mass $M$ is in a denominator;
+a signed jet mass may vanish. No physical derivative of the coefficients
+or the path is taken. To avoid the earlier moment notation $L_j(T)$,
+the decay constants below are denoted $\Lambda_j,\Gamma_j$.
+
+\begin{theorem}[Common-carrier synchronization]\label{thm:commoncarrier}
+Let $\nu=21/4$, $\mathcal D(K)$ be as in
+\eqref{eq:uniformresidualconstant}, and $(b_0,b_1,b_2)=(1,1/2,1)$.
+All the following constants are paid by the existing source and
+preparation budgets:
+\begin{align}
+ \ell_j&=2M_j,&
+ (\mathsf P_j^{\,e})^2&=\ell_j(b_j+M_j/M)R_0,\nonumber\\
+ r_{\rm u}&=\frac{5\bar\alpha+
+           \sqrt{25\bar\alpha^2+2\nu\bar\alpha}}2,&
+ \overline G_j&=\ell_j^2\mathcal D(K)\max\{3/4,r_{\rm u}\},
+ \label{eq:commoncarrierinitial}\\
+ \Lambda_j&=(7/5)^{5/7}(10\pi^2)^{-2/7}
+               \overline G_j^{5/7}(\mathsf P_j^{\,e})^{4/7},&
+ r_{\rm d}&=\frac{21\bar\alpha+
+                \sqrt{441\bar\alpha^2+168\bar\alpha}}8,\nonumber\\
+ \Gamma_j&=\max\{3e_+\ell_j^2/4,\Lambda_jr_{\rm d}\}.
+ \label{eq:commoncarrierconstants}
+\end{align}
+Then, for $s\ge0$ and exactly $j=0,1,2$,
+\begin{equation}\label{eq:commoncarrierdecay}
+ \|e_j(s)\|_2^2\le\Lambda_je^{-B(s)/2},\qquad
+ \|\nabla e_j(s)\|_2^2\le\Gamma_je^{-B(s)/2}.
+\end{equation}
+Thus the squared $H^1$ error has allowance
+$(\Lambda_j+\Gamma_j)e^{-B/2}$, while its norm decays as $e^{-B/4}$.
+Both estimates include the initial time.
+\end{theorem}
+\begin{proof}
+The raw bounds $|F_j^{\rm raw}|\le b_jh^{\rm raw}$ follow from
+$1,u,u^2\le(1+u^2)(1,1/2,1)$ componentwise. Since $|m_j|\le M_j$,
+the raw error has L1 norm at most $\ell_j$, and preparation gives
+$|e_j(0)|\le(b_j+M_j/M)h_0$. Hence
+\[
+ \left(\int|X||e_j(0,X)|\dd X\right)^2
+ \le\ell_j(b_j+M_j/M)R_0=(\mathsf P_j^{\,e})^2.
+\]
+The $R_0$ in \eqref{eq:carriermoment} retains the full $6M$ Gaussian
+cost. Gaussian Young gives $E_j(0)\le e_+\ell_j^2$ and
+$G_j(0)\le3e_+\ell_j^2/4$, where
+$E_j=\|e_j\|_2^2$, $G_j=\|\nabla e_j\|_2^2$ and
+$N_j=\|\Delta e_j\|_2^2$. The optional upper substitution
+$M_1\le\sqrt{M_0M_2}$ adds no source acquisition and does not change $m_j$.
+
+L1 contraction and the scalar Nash proof of
+Theorem~\ref{thm:uniformresidual} give $E_j\le\ell_j^2\mathcal D(K)$.
+The spatial radial square applies with instantaneous energy:
+\begin{equation}\label{eq:centeredscalargradient}
+ G_j'+2N_j+\alpha\mathscr H_{\rm rad}(e_j)
+              =\alpha(10G_j+\nu E_j).
+\end{equation}
+It requires neither $E_j'=0$ nor an error-generated feedback law.
+Using $G_j^2\le N_jE_j$ gives the gradient barrier
+$-2r^2+10\bar\alpha r+\nu\bar\alpha$, whose positive root is
+$r_{\rm u}$. The initial bound proves $G_j\le\overline G_j$.
+
+The inherited synchronous argument gives trajectory contraction
+$e^{-\kappa B}$, $\kappa=7/8$: the smallest eigenvalue of $Dv$ is
+$\min_{q\ge0}\{1+(1-q)/(1+q)^2\}=7/8$.
+Subtract the backward Fourier test's value at the spatial origin before
+pairing with the zero-mass initializer. Its Lipschitz constant is at
+most $|\xi|e^{-\kappa B}$, so
+\[
+ |\widehat e_j(s,\xi)|\le|\xi|\mathsf P_j^{\,e}e^{-\kappa B}.
+\]
+The complete Fourier deficit, in the preceding normalization, is
+\begin{equation}\label{eq:centeredfourierdeficit}
+ G_j\ge R^2E_j-
+       \frac{(\mathsf P_j^{\,e})^2e^{-2\kappa B}R^7}{35\pi^2}.
+\end{equation}
+Indeed its radial integral is
+$(2\pi^2)^{-1}(R^7/5-R^7/7)=R^7/(35\pi^2)$.
+The optimizer has
+$R^5=10\pi^2E_j/[(\mathsf P_j^{\,e})^2e^{-2\kappa B}]$.
+Inversion with $G_j\le\overline G_j$ gives the first bound in
+\eqref{eq:commoncarrierdecay}, since $4\kappa/7=1/2$.
+This uses no radial second-variation estimate or omitted curvature term.
+A zero error is trivial; no division by its actual energy is needed.
+
+For the gradient set $z_j=e^{B/2}G_j/\Lambda_j$. Retained diffusion and
+the preceding energy bound give
+\[
+ z_j'\le-2z_j^2+(21/2)\alpha z_j+\nu\alpha
+       \le-2z_j^2+(21/2)\bar\alpha z_j+\nu\bar\alpha.
+\]
+The extra $\alpha/2$ comes from differentiating $e^{B/2}$.
+The positive root is $r_{\rm d}$; $\Gamma_j$ pays the initial value.
+Scalar comparison proves the second bound from time zero.
+\end{proof}
+
+The complete weighted tail payments are
+\begin{equation}\label{eq:centeredexponentialtails}
+ \int_t^\infty\alpha e^{-B/2}\dd s=2e^{-B(t)/2},\qquad
+ \int_t^\infty\alpha e^{-B/4}\dd s=4e^{-B(t)/4}.
+\end{equation}
+Integrating \eqref{eq:centeredscalargradient} also retains the full
+scalar diffusion and radial remainder:
+\begin{align*}
+ \int_0^\infty[2N_j+\alpha\mathscr H_{\rm rad}(e_j)]\dd s
+ &\le G_j(0)+20\Gamma_j+2\nu\Lambda_j,\\
+ \int_t^\infty N_j\dd s
+ &\le[(21/2)\Gamma_j+\nu\Lambda_j]e^{-B(t)/2}.
+\end{align*}
+The same scalar barriers bound $\|h\|_2^2$ by $M^2\mathcal D(K)$ and
+$\|\nabla h\|_2^2$ by $M^2\mathcal D(K)\max\{3/4,r_{\rm u}\}$.
+Neither carrier norm is asserted constant or convergent.
+
+\subsection{The genuine centered residual and its dissipation}
+
+Write $e=(e_0,e_1)$, $\mathfrak a=(\mathfrak a_0,\mathfrak a_1)$ and
+$\tau=(2\mathfrak a_1,\mathfrak a_1+2\mathfrak a_2)$. The actual
+residual splits exactly as
+\begin{equation}\label{eq:commoncarrierresidual}
+ \begin{aligned}
+ Z_{\mathrm R}&=Z_c+Z_e,\qquad
+ Z_c=\omega\{\mathfrak a\mathcal A_Th-\tau h\},\\
+ Z_e&=\omega\{\mathcal A_Te-(2e_1,e_1+2e_2)\}.
+ \end{aligned}
+\end{equation}
+Thus $Z_c$ is generally nonzero. Both unweighted residuals satisfy
+$\partial_s\mathcal R_f=L_s\mathcal R_f+
+[\mathcal A_T,L_s]f$, for $f=\mathfrak ah$ or $e$.
+The full $\mathscr C_0+\alpha\mathscr C_1$ and all cutoff derivatives
+remain \cite{CenteredProductionNote}.
+
+Preparation retains its true raw mismatch. With
+$e^{\rm raw}=(F_0^{\rm raw},F_1^{\rm raw})-\mathfrak ah^{\rm raw}$,
+\begin{align}
+ \mathcal R_{c,0}&=\mathfrak a[\mathcal A_T,K_1*]h^{\rm raw}
+    +K_1*(\mathfrak a\mathcal A_Th^{\rm raw}-\tau h^{\rm raw}),
+ \nonumber\\
+ \mathcal R_{e,0}&=[\mathcal A_T,K_1*]e^{\rm raw}
+    +K_1*(-\mathfrak a\mathcal A_Th^{\rm raw}+\tau h^{\rm raw}).
+ \label{eq:centeredpreparationmismatch}
+\end{align}
+On the exterior, $\mathcal A_Th^{\rm raw}=2\rho_Tu^2$; distributionally
+the jump delta is killed by $r\log r=0$ at $r=1$.
+Summing these formulas recovers the original prepared theta residual.
+At the sphere,
+\begin{equation}\label{eq:centeredsphere}
+ Z_c(s,1)=-\tau h(s,1)/4,\qquad
+ Z_e(s,1)=-(2e_1,e_1+2e_2)(s,1)/4.
+\end{equation}
+This is the combined cancellation, not an imposed boundary condition.
+All norms include the entire evolving inner ball.
+
+The primitive endpoints change under this same centering. For
+$g_j=u^j\cos^{(j)}(2u)-\mathfrak a_j(1+u^2)$,
+$g_j(0)=\delta_{j0}-\mathfrak a_j$ and $g_j'(0)=0$, including $j=2$.
+Applying the existing prepared-test transfer to $e^{Tu^2}g_j\chi(e^{2u})$
+therefore gives the endpoint contribution
+\begin{equation}\label{eq:centeredprimitiveboundary}
+ (\delta_{j0}-\mathfrak a_j)
+       \left\{\frac{\chi(1)}{16}
+                    +\frac{A_\theta(1)}4\chi_r(1)\right\},
+ \qquad j=0,1,2.
+\end{equation}
+Centered orders one and two generally retain both terms. Zero complete
+spatial mass does not delete either trace. The complete primitive formula
+still reconstructs the same prepared errors available to the direct method.
+
+Set $C_c=3B_0+3/4$ and
+\begin{align}
+ C_Z&=\tfrac14\sqrt{\Gamma_0+\Gamma_1}
+       +C_c\sqrt{\Lambda_0+\Lambda_1}
+       +\sqrt5\sqrt{\Lambda_1}+2\sqrt{\Lambda_2},\nonumber\\
+ C_F&=B_1\sqrt{\Gamma_0+\Gamma_1}
+                   +B_0\sqrt{\Lambda_0+\Lambda_1}.
+ \label{eq:centeredresidualcosts}
+\end{align}
+The defining residual and the paid coefficients of
+\eqref{eq:uniformresidualcoefficients} imply
+\begin{equation}\label{eq:centeredresidualdecay}
+ \|Z_e\|_2\le C_Ze^{-B/4},\qquad
+ \|\omega\mathscr C_1e\|_2\le C_Fe^{-B/4}.
+\end{equation}
+These payments include the nonzero raw mismatch and require no derivative
+of $Z_e$ or third spectral jet.
+
+\begin{proposition}[Complete finite centered dissipation]
+\label{prop:centereddissipation}
+Let $E_e=\|e\|_2^2$, $G_e=\|\nabla e\|_2^2$,
+$Y_e=\|Z_e\|_2^2$, $Q_e=\|e_2\|_2^2$, and
+\begin{align*}
+ \mathcal F_e&=G_e+Y_e+Q_e,&
+ \mathscr D_e&=\|\Delta e\|_2^2
+             +2\|\nabla Z_e\|_2^2+2\|\nabla e_2\|_2^2,\\
+ C_E&=\Lambda_0+\Lambda_1,&
+ C_{\rm en}&=\Gamma_0+\Gamma_1+C_Z^2+\Lambda_2.
+\end{align*}
+With the unchanged $\kappa_0,\kappa_1$ in
+\eqref{eq:weightedconstants}, one has
+\begin{equation}\label{eq:centeredfullproduction}
+ \mathcal F_e'+\mathscr D_e+\alpha\mathscr H_{\rm rad}(e)
+ \le(\kappa_0+\kappa_1\alpha)(\mathcal F_e+E_e).
+\end{equation}
+Consequently its complete dissipation has the finite tail
+\begin{equation}\label{eq:centereddissipationtail}
+ \begin{split}
+ &\int_t^\infty(\mathscr D_e+\alpha\mathscr H_{\rm rad}(e))\dd s\\
+ &\qquad\le\left[C_{\rm en}
+       +2(C_{\rm en}+C_E)(\kappa_0/a_*+\kappa_1)\right]e^{-B(t)/2}.
+ \end{split}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Each centered component and its relation vector solve the same scalar
+equation. Their genuine residual therefore obeys the full commutator
+equation above. The weighted identities and radial square reproduce
+\eqref{eq:centeredfullproduction} with instantaneous $E_e(s)$.
+The exterior completion uses the algebraic residual definition and
+$2\le k\le6$, not a zero raw-mismatch premise. Its vector is now
+$(2e_1,e_1+2e_2)$; the full cutoff and inner-region costs stay.
+Absorbing $\mathscr C_0$ consumes one $\|\Delta e\|_2^2$, leaving
+exactly the displayed $\mathscr D_e$ and radial remainder.
+
+The preceding bounds give $E_e\le C_Ee^{-B/2}$ and
+$\mathcal F_e\le C_{\rm en}e^{-B/2}$. Integrate
+\eqref{eq:centeredfullproduction} directly from $t$ to $S$, dropping
+only $-\mathcal F_e(S)\le0$, and use
+\eqref{eq:centeredexponentialtails} and
+$\int_t^\infty e^{-B(s)/2}\dd s\le2e^{-B(t)/2}/a_*$.
+This proves \eqref{eq:centereddissipationtail}.
+The functional $\mathcal F_e$ contains no $E_e$ term. No conservation
+of $E_e$, no old constant-energy integrating factor, and no feedback
+computed from the errors is used.
+\end{proof}
+
+\subsection{A finite correction in one actual production term}
+
+Keep $W_c=\mathfrak ah$ and define
+\[
+ I_c=2\langle Z_c,\omega\mathscr C_1W_c\rangle,
+ \quad \delta I=I_1-I_c,\quad
+ \mathcal Z_*:=\sqrt{E_0\mathfrak y},\quad
+ \mathcal C_*:=\sqrt{E_0}(B_1\sqrt K+B_0).
+\]
+Here $\mathfrak y$ is the R11 constant in
+\eqref{eq:uniformresidualconstant}; $\mathcal C_*$ bounds
+$\|\omega\mathscr C_1W\|_2$, not the full energy.
+
+\begin{proposition}[Finite accumulated selected-term correction]
+\label{prop:finiteproductioncorrection}
+With $A_I=2(C_Z\mathcal C_*+\mathcal Z_*C_F)$ and $B_I=2C_ZC_F$,
+\begin{align}
+ |\delta I(s)|&\le A_Ie^{-B(s)/4}+B_Ie^{-B(s)/2},
+ \label{eq:centeredproductionerror}\\
+ \int_t^\infty\alpha|I_1-I_c|\dd s
+ &\le4A_Ie^{-B(t)/4}+2B_Ie^{-B(t)/2}.
+ \label{eq:centeredproductiontail}
+\end{align}
+In particular the half-line payment is at most $4A_I+2B_I$.
+\end{proposition}
+\begin{proof}
+The exact expansion is
+\begin{equation}\label{eq:centeredproductionidentity}
+ \delta I=2\langle Z_e,\omega\mathscr C_1W\rangle
+       +2\langle Z_{\mathrm R},\omega\mathscr C_1e\rangle
+       -2\langle Z_e,\omega\mathscr C_1e\rangle.
+\end{equation}
+The minus sign removes the duplicate error--error product.
+Cauchy--Schwarz, \eqref{eq:centeredresidualdecay} and the R11 actual-field
+budgets give \eqref{eq:centeredproductionerror}.
+Substitution $\dd B=\alpha\dd s$ proves
+\eqref{eq:centeredproductiontail} with the exact factors 4 and 2.
+No inverse $a_*$ is needed in this weighted payment.
+\end{proof}
+
+Only $I_1=I_c+\delta I$ is split in the full actual production.
+After the same actual $\mathscr C_0$ absorption as in
+Theorem~\ref{thm:weightedclosure}, an alternative paid inequality is
+\begin{equation}\label{eq:actualcarrierproduction}
+ \begin{split}
+ \mathcal F_{\mathrm R}'+\mathscr D_{\mathrm R}
+       +\alpha\mathscr H_{\rm rad}(W)
+ \le{}&A_1G+\kappa_0Y+A_0E_0\\
+ &+\alpha\{10G+\tfrac{21}{4}E_0
+                  +\tfrac{265}{24}Y+6Q_2+I_c\}
+       +\alpha\delta I.
+ \end{split}
+\end{equation}
+All other terms are actual-field quantities: full $\mathscr C_0$ has
+consumed just one $N$, and the remaining diffusion, second jet, weighted
+potential, cutoff terms and entire inner ball are kept. No H2 error
+estimate silently replaces the $\mathscr C_0$ production.
+The sharper completed-$I_1$ inequality \eqref{eq:weightedclosure} is
+separately valid; adding another full $I_c$ payment to that already
+completed term would count it twice.
+
+This finite correction improves the constant-envelope, order-$B(S)$
+allowance for the specified error. The equally informed direct method
+proves it, without a primitive-specific sign or optimized comparison
+against every possible direct allowance. The surviving term is
+\begin{equation}\label{eq:survivingcarrierproduction}
+ I_c=2|\mathfrak a|^2
+       \langle\omega\mathcal A_Th,\omega\mathscr C_1h\rangle
+       -2(\mathfrak a\cdot\tau)
+       \langle\omega h,\omega\mathscr C_1h\rangle.
+\end{equation}
+It retains the moving carrier, complete source and actual feedback path.
+Neither its sign nor a finite $\int\alpha|I_c|$ is proved.
+Finite centered dissipation is not finite original-field dissipation;
+a finite correction in $I_1$ is not a full-production error theorem or
+a smaller complete actual-energy allowance.
+
+Controls with the admitted moments and globally bounded common path
+share the generic mixing argument. At an actual double event the
+positive physical mass premise supplying $K$ fails. If $m_0=m_1=0$,
+then $(e_0,e_1)=W$, so hypothetically supplying that global path would
+force its conserved positive energy to zero. This reads the known
+zero-mass obstruction, rather than a new collision exclusion.
+Weighted-square sources can pass the low-mark payment and collide
+elsewhere; variable observation kernels fail the upstream literal-cosine
+payment. No stationary profile, alpha limit, mass-only reduction,
+margin-free regularity or larger physical domain follows.
+
 \section{Outstanding tasks}\label{sec:remaining}
 
 The conserved pair now has a clear analytical dichotomy.
@@ -1614,6 +2394,16 @@ The latter conclusion is achieved by direct estimates and does
 not require the source residual. A source-based continuation must
 therefore specify an advantage beyond this comparison.
 
+The primitive test costs are paid, and
+Section~\ref{sec:commoncarrier} now also proves relative $H^1$ decay
+toward the moving carrier, complete finite centered dissipation and an
+integrable selected-term correction. The remaining carrier expression
+\eqref{eq:survivingcarrierproduction} still needs a useful sign or
+complete-cost estimate. A proposed refinement must state its benefit
+before estimating another term and compare against the equally informed
+direct method, which already proves the present decay and correction.
+Primitive positivity and exact transfer alone do not supply that benefit.
+
 The central open task is to obtain useful control from the unchanged
 complete theta source at physical marks where a nonzero first jet
 has not already been established. An estimate that assumes a positive
@@ -1622,14 +2412,16 @@ state its domain, the quantity it bounds, the source information it
 consumes, and why an equally informed direct method does not already
 give the same result.
 
-A separate analytical task is uniform control of the weighted residual
-and actual higher jets. Equation~\eqref{eq:residualfinitehorizon}
-allows growth with auxiliary time, even though $G$ and $\alpha$
-are uniformly bounded. Since $B(s)\ge a_*s$, bounded cumulative
-compression is unavailable in this positive-margin regime.
-A further argument must use dissipation or a more precise signed
-correlation rather than substitute a finite total $B$.
-The existing finite closure does not by itself provide such an argument.
+Theorem~\ref{thm:uniformresidual} gives uniform weighted residual and
+every fixed-order jet control at $(1/4,2)$; the new synchronization theorem
+adds decay for exactly the three specified centered jets. Uniformity in
+order or physical parameters, a stationary carrier limit, an alpha limit,
+finite total dissipation of the original fields and a better complete
+actual-energy allowance remain unresolved. The finite centered
+and selected-term tails do not settle those questions. Since
+$B(s)\ge a_*s$, bounded cumulative compression is unavailable in this
+positive-margin regime. Future signed arguments must retain the carrier
+cost rather than assume a finite total $B$.
 
 The exact comparisons specify the required premises. The
 Gaussian-polynomial control shares the generic evolution and weighted
@@ -1913,13 +2705,15 @@ inherited bounded result is not a new outcome of the conservative flow.
 Drafted for Edward Baker with substantial LLM assistance.
 Edward Baker specified whole-integral conservation as the organizing
 principle and proposed magnifying collisions without a prescribed
-spatial direction. The underlying constructions and successive
+spatial direction. He also identified integration by parts and the
+relation to the undifferentiated theta function as central motivations
+for the three-dimensional realization. The underlying constructions and successive
 analytical refinements were developed on 27--29 October 2026 using
 OpenAI GPT-6-astra at recorded effort \emph{max} and GPT-6.1-sol at
 recorded effort \emph{ultra}. The research notes and reviews cited
 below preserve the detailed contribution and assessment history.
 
-This analytical revision was prepared on 29 October 2026 with
+The earlier analytical revision was prepared on 29 October 2026 with
 GPT-6-astra, actual recorded effort \emph{max}, in Investigation05
 chat0031, at the author's request. It incorporates the uniform-feedback
 argument of Note67 after its GPT-6.1-sol/\emph{ultra} assessment in
@@ -1927,14 +2721,35 @@ Review36, and preserves that review's notation clarification:
 $E_0$ is the energy of the field, not of its time derivative.
 That assessment is internal, uses shared inherited premises, and is
 not independent specialist review. Earlier internal assessments
-retain their own stated scopes.
+retain their own stated scopes. The author's subsequent request brought
+the primitive transfer and common-path duality into this manuscript,
+following Note73. Those additions have same-assistant analytical checks.
+The R11 test payments and uniform full-energy theorem were subsequently
+proved in Notes75--76 by GPT-6-astra, actual effort \emph{ultra},
+chat0033, and accepted without mathematical correction in Review40 by
+GPT-6.1-sol, actual effort \emph{ultra}, chat0034. The earlier author-requested
+E05 R4 integration used the latter configuration and chat. Three
+read-only same-model contributing checks support its editorial review;
+inherited premises remain shared. The primitive-specific signed
+advantage is still open, and these internal assessments are not
+independent specialist review.
+
+The common-carrier decay and finite centered-production costs were proved
+in Notes82--83 by GPT-6-astra, actual effort \emph{ultra}, chat0033,
+and accepted without mathematical correction in Review43 by
+GPT-6.1-sol, actual effort \emph{ultra}, chat0034. The present
+E05 R5 integration was requested by the author in that same Sol chat
+and configuration. Three read-only same-model contributing checks
+support the editorial assessment; prior contributor overlap and shared
+inherited premises remain. The editor's compiler checks the saved source;
+a separate PDF or fresh visual-layout pass is not claimed for this revision.
 
 The source proofs are analytical. Existing arithmetic checks of local
 variance and deadline constants remain supporting records; no new
 numerical evolution or interval certificate is asserted here.
-The revision record lists the reorganized and superseded statements,
-source and output hashes, compiler diagnostics, and visual checks.
-Compilation and file identity checks do not validate the mathematics.
+The revision record lists the saved-source identities, compiler
+diagnostics and the stated layout-check limitation. Compilation and
+file identity checks do not validate the mathematics.
 
 
 \begin{thebibliography}{99}
@@ -1944,6 +2759,49 @@ E. Baker research archive, drafted with LLM assistance,
 \path{book/main.tex}, Sections~1--2. Background companion; its scalar
 theta--Mellin identity is classical (Riemann, 1859; DLMF~25.5.13--14).
 Note35 records the normalization and attribution check.
+
+\bibitem{Riemann1859}
+B. Riemann, \emph{Ueber die Anzahl der Primzahlen unter einer gegebenen
+Gr\"osse}, Monatsberichte der Berliner Akademie, November 1859.
+D. R. Wilkins's English translation, preliminary version December 1998,
+printed p.~3, theta integral and differentiated-source formulas.
+\href{https://www.maths.tcd.ie/pub/HistMath/People/Riemann/Zeta/EZeta.pdf}
+{Primary-hosted translation}; normalization in Investigation05, Note35.
+
+\bibitem{DLMFThetaMellin}
+NIST Digital Library of Mathematical Functions,
+\href{https://dlmf.nist.gov/25.5.E13}{equation 25.5.13} and
+\href{https://dlmf.nist.gov/25.5.E14}{equation 25.5.14},
+classical theta integral. Rechecked 29 October 2026.
+
+\bibitem{ScalarIBPNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Flat quaternion Dirac and dyadic lattice observation},
+Investigation05, Note12, 27 October 2026, equations (14)--(16).
+The scalar positive-time integration-by-parts formula is reused here.
+
+\bibitem{PrimitivePairingNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Integration by parts from the theta primitive to feedback pairings},
+Investigation05, Note73, 29 October 2026.
+GPT-6-astra, actual effort max, chat0031; same-assistant analytical
+checks, no improved estimate or independent specialist review.
+
+\bibitem{PrimitiveTestNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Admissible primitive production tests with all derivative and trace
+costs}, Investigation05, Note75, 29 October 2026.
+GPT-6-astra, actual effort ultra, chat0033; accepted in Review40 by
+GPT-6.1-sol/ultra with shared inherited premises, not specialist review.
+
+\bibitem{UniformResidualNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Uniform residual energy and every fixed common-path jet},
+Investigation05, Note76, 29 October 2026.
+GPT-6-astra, actual effort ultra, chat0033; ten-check internal E08 R11
+assessment in Review40, GPT-6.1-sol/ultra, chat0034. This manuscript
+integrates the accepted result under E05 R4; no new physical domain
+or primitive-specific gain is claimed.
 
 \bibitem{RadialNotes}
 E. Baker research archive, prepared with LLM assistance,
@@ -2058,6 +2916,21 @@ GPT-6-astra, effort max; different-model internal assessment by
 GPT-6.1-sol, effort ultra, in Review36. The assessment accepted the
 fixed result without mathematical correction; its notation clarification
 is incorporated here.
+
+\bibitem{CarrierSynchronizationNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Common-carrier synchronization with complete H1 decay costs},
+Investigation05, Note82, 29 October 2026. GPT-6-astra, actual effort ultra,
+chat0033; accepted without mathematical correction in Review43,
+GPT-6.1-sol/ultra, chat0034. Shared-premise internal assessment.
+
+\bibitem{CenteredProductionNote}
+E. Baker research archive, prepared with LLM assistance,
+\emph{Finite centered production correction and complete centered
+dissipation}, Investigation05, Note83, 29 October 2026.
+GPT-6-astra/ultra, chat0033; fixed E08 R12 acceptance in Review43,
+GPT-6.1-sol/ultra, chat0034. The carrier term's sign and the complete
+actual-field improvement remain unproved; no specialist independence.
 
 \bibitem{DirectDeadlineNote}
 E. Baker research archive, prepared with LLM assistance,
