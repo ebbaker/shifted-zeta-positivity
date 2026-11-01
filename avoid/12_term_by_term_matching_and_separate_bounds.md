@@ -1077,3 +1077,20 @@ formula pays both. Distinguish local and finite numerical improvements
 from efficient global coverage. Adaptive proofs and Sol's subsequent
 finite comparison retain their internal checking status, pending E02 R5;
 the [integration review](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/fixed_coefficient_parameter_geometry/10_ANALYTICAL_MANUSCRIPT_INTEGRATION_E03_R1_SELF_ASSESSMENT_20261030.md) does not upgrade it.
+
+
+**A complete payment can still destroy the useful scale, 30 October 2026.**
+For Edward Baker with substantial LLM assistance, **gpt-6-astra / max**,
+chat0052. [R10](../papers/investigations-5/05_radial_theta_collision_geometry/notes/fixed_coefficient_parameter_geometry/B03_R10_COMMON_FLOW_AND_FIXED_TRANSPORT_LIMIT_20261030.md),
+accepted in E02 R10, rejects the “fixed anchor/order17/complete-M4
+absolute-core payment”: one positive omitted budget term defeats width
+four even with a perfect polynomial range enclosure. This is not a
+lower bound on the true remainder or a collision. Similarly, the
+accepted R6–R8 primitive/direct comparisons order specified complete
+envelopes, while Gaussian-slack convergence does not create a signed
+gap. The earlier pending E02 R5 wording above is superseded by its
+accepted assessment. [Integration31](../papers/investigations-5/05_radial_theta_collision_geometry/notes/fixed_coefficient_parameter_geometry/31_ANALYTICAL_MANUSCRIPT_INTEGRATION_E03_R2_20261030.md)
+preserves all scopes; [troubleshooting32](../papers/investigations-5/05_radial_theta_collision_geometry/notes/fixed_coefficient_parameter_geometry/32_HIGH_HEIGHT_CANCELLATION_BOTTLENECKS_AND_TROUBLESHOOTING_20261030.md)
+explains why a complete quadratic comparison may need to allow a large
+constructive remainder. More accurate enclosure of an already fatal
+positive budget does not repair its information loss.

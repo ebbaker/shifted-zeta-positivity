@@ -3,7 +3,7 @@
 24 October 2026, America/New_York. Prepared for **Edward Baker** with
 substantial LLM assistance, **gpt-6-astra (Codex), recorded effort max**.
 
-This collection studies canonical heat-flow approximations, their RH applications, collision bounds, conditional dynamics across three Newman-threshold and endpoint-multiplicity regimes, radial theta collision geometry, and auxiliary flows for collision analysis.
+This collection studies canonical heat-flow approximations, their RH applications, collision bounds, conditional dynamics across three Newman-threshold and endpoint-multiplicity regimes, radial theta collision geometry, auxiliary flows for collision analysis, and positive theta primitives for indirect sign arguments.
 
 | Investigation | Purpose | Status |
 | --- | --- | --- |
@@ -13,6 +13,7 @@ This collection studies canonical heat-flow approximations, their RH application
 | [04 — Three regime heat flow dynamics](04_three_regime_heat_flow_dynamics/README.md) | Compare the conditional solutions for a positive threshold, a zero threshold with multiple zeros, and simple RH across time, height and resolution | [Overview](04_three_regime_heat_flow_dynamics/research-overview/01_THREE_REGIME_DYNAMICS_RESEARCH_OVERVIEW_20261026.md) and [progress](04_three_regime_heat_flow_dynamics/research-progress/01_THREE_REGIME_DYNAMICS_RESEARCH_PROGRESS_20261026.md); setup and selected Dobner source inspection complete, quantitative comparisons open |
 | [05 — Radial theta collision geometry](05_radial_theta_collision_geometry/README.md) | Develop the three-dimensional theta/Kelvin source and reconsider collision mechanisms through boundary, oscillation and global-index arguments | [Initial analysis](05_radial_theta_collision_geometry/notes/01_RADIAL_THETA_GEOMETRY_AND_COLLISION_MECHANISMS_20261027.md), [overview](05_radial_theta_collision_geometry/research-overview/01_RADIAL_THETA_COLLISION_RESEARCH_OVERVIEW_20261027.md) and [progress](05_radial_theta_collision_geometry/research-progress/01_RADIAL_THETA_COLLISION_RESEARCH_PROGRESS_20261027.md); exact forced-boundary diagnostics and control, canonical exclusion open |
 | [06 — Auxiliary flows for collision analysis](06_auxiliary_collision_flows/README.md) | Explore modified Newman and auxiliary source evolutions for clearer collision responses and useful estimates | [Initial overview](06_auxiliary_collision_flows/research-overview/01_AUXILIARY_COLLISION_FLOWS_RESEARCH_OVERVIEW_20261028.md); background for brainstorming, research plan deferred |
+| [07 — Positive theta primitives](07_positive_theta_primitives/README.md) | Study the classical Riemann primitive through convexity, modular boundary behavior, and integrated-kernel inequalities | [Opening brainstorm](07_positive_theta_primitives/brainstorm/01_CLASSICAL_THETA_PRIMITIVES_SIGN_THEOREMS_AND_LESSONS_20261031.md) and [annotated bibliography](07_positive_theta_primitives/references/01_ANNOTATED_BIBLIOGRAPHY_20261031.md); literature foundation and lessons established, no new global sign or zero theorem |
 
 Each investigation keeps its own notes, numerics, reviews and chat
 histories. The [result summaries](../../result-summaries/README.md),
@@ -39,3 +40,5 @@ auxiliary and modified Newman flows. Its overview preserves the existing
 background; the research plan is deferred until after further brainstorming.
 Prepared with substantial LLM assistance, **gpt-6-astra (Codex), recorded
 effort max**. The founding chat retains its Investigation05 registration.
+
+31 October 2026 — Investigation07 opened at Edward Baker’s request for a primitive-centered continuation of the classical Riemann representation and its sign applications. Opening brainstorm includes lessons from Investigation05. Prepared with substantial LLM assistance, **gpt-6-astra / xhigh**; the founding chat retains its unique Investigation05 chat0053 registration.

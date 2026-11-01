@@ -1,5 +1,7 @@
 # Radial theta source references
 
+[18 — Hardy uncertainty and fixed Gaussian scope](18_HARDY_UNCERTAINTY_AND_FIXED_GAUSSIAN_SCOPE_20261030.md) records the checked strict theorem for B03 R11 and its external PDF receipt. Selected passages only; no collision conclusion. Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra / max**, chat0052, 30 October 2026.
+
 New selected reference: [16 — fixed-drift Gibbs and feedback scope](16_FIXED_DRIFT_GIBBS_AND_FEEDBACK_SCOPE_20261029.md),
 Jordan–Kinderlehrer–Otto, published 1998; university manuscript dated
 4 February 1999, selected Section 2 passages checked for R13.
@@ -78,3 +80,10 @@ external theorem or PDF is imported.
 - [17 — Classical Stein-kernel preparation identity](17_STEIN_KERNEL_PREPARATION_IDENTITY_SCOPE_20261029.md): Saumard v3, Section 2 equations (5)–(6), selected passages checked for Note98; the actual source bound and attraction are derived in-note. External PDF archived; Astra/ultra chat0035, 29 October 2026.
 
 - [17 — Fixed-flow correlation formula checks](17_FIXED_FLOW_CORRELATION_REFERENCE_CHECK_20261030.md): additional selected DLMF 1.8.14 and 20.7.32 inspection for FCG-B01; extends the existing source identity. The inherited parity–Poisson product supplies no sign theorem. Online reference only, 30 October 2026, actual gpt-6-astra / xhigh, chat0043.
+
+- [19 — Strip contraction and auxiliary flow scope](19_STRIP_CONTRACTION_AND_AUXILIARY_FLOW_SCOPE_20261031.md): Branden--Chasse v2, de Bruijn imaginary-shift theorem, and its distinction from conservative and source-only transport; selected passages checked and PDF archived outside Git. 31 October 2026, gpt-6-astra / xhigh, chat0053.
+
+
+- [20 — Hadamard factorization and source transport](20_HADAMARD_FACTORIZATION_AND_TRANSPORT_SCOPE_20261031.md): Siu's Fall2024 Math213a notes, printed page4 theorem checked for the endpoint/growth obstruction. Public PDF read online; direct archive retrieval returned HTTP403, so no local copy is claimed. 31 October2026, gpt-6-astra / xhigh, chat0053.
+
+- [21 — Positive theta primitive literature](21_POSITIVE_THETA_PRIMITIVE_LITERATURE_SOURCES_20261031.md): classical theta/Hardy use, convex-transform positivity, integrated-kernel Turán inequalities, and adjacent probability and basis methods; selected primary passages and external PDF receipts, 31 October2026, gpt-6-astra / xhigh, chat0053. Recent preprints retain their unreviewed status.

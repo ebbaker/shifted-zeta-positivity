@@ -186,3 +186,15 @@ zero first-jet ratio, even with each prescribed finite cosine prefix.
 Keep that kernel quantifier with every negative conclusion; it does not
 exclude estimates using literal cosine or quantitative remainder control.
 Different-model internal assessment retains shared inherited premises.
+
+
+31 October2026 — **A moved source endpoint defeats one proposed evolution.**
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra / xhigh**,
+chat0053. [The source-transport proof](../papers/investigations-5/05_radial_theta_collision_geometry/notes/CHAT0053_SOURCE_TRANSPORT_UNBOUNDED_STRIP_OBSTRUCTION_20261031.md)
+states: “The conclusion is restricted to(3)–(5) and the explicitly recentered variant(20).”
+Its unbounded-strip obstruction uses the raw exterior source, fixed pure radial
+divergence field, and fixed or explicitly recentered cosine observation. Changing
+the generator to preserve source reflection is outside the theorem. Status:
+**proved in-note; same-assistant analytical self-check**, no independent or specialist
+review. Do not turn this exact-family obstruction into a prohibition on all source
+transport or an assertion about the original theta zeros.

@@ -60,3 +60,7 @@ theta-sum normalization. [Note75](../notes/75_PRIMITIVE_TEST_COSTS_AND_SIGNED_CO
 primitive attribution from Note73; its new work is the actual propagated
 test cost, not a new scalar theta–Mellin formula. Selected passages only,
 no full-source or novelty audit and no new PDF.
+
+## Primitive-centered literature continuation
+
+31 October2026, prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / xhigh, chat0053. The [literature review](../reviews/CHAT0053_POSITIVE_THETA_PRIMITIVE_LITERATURE_REVIEW_20261031.md) matches the classical completed primitive with the theta expression in Hardy’s identity, checked in Dixit–Kumar–Maji–Zaharescu (2017), Introduction(1.3)–(1.4). [Reference21](21_POSITIVE_THETA_PRIMITIVE_LITERATURE_SOURCES_20261031.md) holds that article’s sole local annotation and PDF receipt. The match concerns the classical scalar formula, not the investigation’s three-dimensional construction.

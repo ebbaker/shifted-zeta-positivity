@@ -694,3 +694,44 @@ self-checking, separate assessment pending**; no actual zero crossing,
 global coverage or runtime saving is inferred. The equally informed
 direct strip remains at least as strong. Manuscript inclusion does not
 upgrade review status or supply specialist/formal independence.
+
+
+**Analytical consolidation through R11, 30 October 2026.** For Edward Baker
+with substantial LLM assistance, **gpt-6-astra / max**, chat0052.
+[E03 R2](../papers/investigations-5/05_radial_theta_collision_geometry/notes/fixed_coefficient_parameter_geometry/31_ANALYTICAL_MANUSCRIPT_INTEGRATION_E03_R2_20261030.md) integrates the
+accepted primitive-cost, Taylor-subtracted and Gaussian-slack results,
+finite signed transport and common-flow consequence. E02 R5–R10 are
+complete within their fixed scopes; this supersedes the pending R5
+language above. The full-polynomial payment has a sharp stretched-
+exponential degree law, while convergence alone supplies no positive
+limiting signed gap. [R9](../papers/investigations-5/05_radial_theta_collision_geometry/notes/fixed_coefficient_parameter_geometry/B03_R9_SIGNED_SOURCE_TRANSPORT_20261030.md)
+certifies exactly one analytic simple-zero curve on
+[31/128,33/128]×[64,66], with a matched direct derivative floor.
+[R10](../papers/investigations-5/05_radial_theta_collision_geometry/notes/fixed_coefficient_parameter_geometry/B03_R10_COMMON_FLOW_AND_FIXED_TRANSPORT_LIMIT_20261030.md)
+pays common-c=1 energy >1e−35 for all auxiliary time on its finite tube;
+the same fixed order-17 absolute-core transport fails at width four.
+The [assessment](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/fixed_coefficient_parameter_geometry/E02_R10_COMMON_FLOW_AND_TRANSPORT_ASSESSMENT_20261030.md)
+states: “all five frozen obligations accepted without mathematical correction.”
+
+[R11](../papers/investigations-5/05_radial_theta_collision_geometry/notes/fixed_coefficient_parameter_geometry/B03_R11_FIXED_GAUSSIAN_SOURCE_RELATIVE_OBSTRUCTION_20261030.md)
+has **proof-author checking only; E02 R11 ready and unstarted**. It uses
+complete all-rate source bounds and the classical strict Hardy theorem
+to reject uniform relative first-jet error for fixed finite Gaussian
+models on every complete height tail in its declared positive-time strip.
+It does not reject adaptive/non-Gaussian models or the R8 Gaussian
+error weight. Internal assessments share inherited premises; none is
+specialist/formal review. Integration31 states: “Global coverage and
+physical target transfer remain unresolved.”
+
+
+31 October2026 — **Source-only radial transport obstruction.** Prepared for Edward Baker
+with substantial LLM assistance, **gpt-6-astra / xhigh**, chat0053.
+[Proof](../papers/investigations-5/05_radial_theta_collision_geometry/notes/CHAT0053_SOURCE_TRANSPORT_UNBOUNDED_STRIP_OBSTRUCTION_20261031.md):
+“every nonzero finite positive or negative auxiliary time gives zeros outside every
+bounded horizontal strip,” for the raw exterior theta source, the fixed pure divergence
+field, and a fixed logarithmic cosine observation. A moved endpoint gives a sine
+asymptotic and only linearly many real zeros; order-one infinite-type growth forces
+infinitely many nonreal zeros outside every fixed strip. Endpoint recentering also
+fails by its first odd derivative. **Proved in-note; same-assistant analytical self-check,
+no independent or specialist review** ([assessment](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/CHAT0053_SOURCE_TRANSPORT_OBSTRUCTION_SELF_ASSESSMENT_20261031.md)).
+Other source flows and the physical theta noncollision problem are outside this result.

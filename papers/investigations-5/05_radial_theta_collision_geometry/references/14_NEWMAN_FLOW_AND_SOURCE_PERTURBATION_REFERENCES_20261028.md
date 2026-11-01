@@ -56,3 +56,7 @@ Public PDF retrieved 28 October 2026 and stored outside Git:
 
 The reading-copy hashes identify files; they do not validate the articles
 or the new calculation.
+
+## Additional strip contraction check on 31 October 2026
+
+For Edward Baker, substantial LLM assistance, gpt-6-astra / xhigh, chat0053. Selected Section 2.3 Theorem 7 and its hypotheses (10)--(11) were checked in v2: Hermitian symmetry and decay bounded by A exp(-|u|^(2+alpha)), alpha>0; multiplying by exp(lambda u^2/2) contracts squared strip width by lambda. Thus the exp(tu^2) convention gives max(Delta^2-2t,0). This is background comparison for [the zero-time auxiliary-flow note](../notes/CHAT0053_ZERO_TIME_AUXILIARY_EVOLUTION_AND_REAL_ZEROS_20261031.md), not a theorem for its pure radial transport. Existing PDF and earlier provenance remain unchanged.
