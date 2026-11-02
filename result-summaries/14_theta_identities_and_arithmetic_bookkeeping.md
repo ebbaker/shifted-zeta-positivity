@@ -13,6 +13,19 @@ corrects the earlier blanket assertion that every identity here is shared
 by a collision control. Identifying the source still leaves its signed
 oscillatory estimate to be proved.
 
+- **Canonical derivative-ratio signs and signed averaging (5/07 Jensen,
+  1 November 2026).** [Return11](../papers/investigations-5/07_positive_theta_primitives/jensen/notes/11_J_E02_R1_GLOBAL_SIGN_CERTIFICATE_RETURN_20261101.md)
+  proves \(R'>0,K>0\) on \(u>0\) at physical heat time zero, using an Arb-certified
+  compact cover and an analytical infinite tail. The accepted transfer
+  gives \(A_{k+\ell}\ge A_k\ge48c_0^3/Z_0>0\) for all finite
+  \(k,\ell\ge0\) at order three,
+  allowing the negative origin C. [J-E03 Review01](../papers/investigations-5/07_positive_theta_primitives/jensen/reviews/01_J_E03_GLOBAL_SIGN_AND_SIGNED_AVERAGING_ASSESSMENT_20261101.md)
+  accepts the fixed claim without correction: **proved in-note, compact
+  Arb-certified; same-assistant/same-model internal assessment**, no
+  independent specialist review. The gain is normalized index comparison;
+  order-three positivity was already known. No new coefficient range,
+  order induction, novelty or RH claim. Prepared for Edward Baker with
+  substantial LLM assistance, **gpt-6.1-sol / ultra**.
 - **Covariant theta-source formula (21–22).**
   \(\Phi=\frac{y^{1/4}}{16\pi^2}(y^2\mathcal D^4\vartheta-3\pi^2\vartheta)(0,iy)\).
   The Hermite-weighted covariant jets' inversion law reproduces source
@@ -107,8 +120,9 @@ oscillatory estimate to be proved.
 Written analytic proofs, with the sources' internal LLM reviews and scoped
 exact or interval checks. Positive-primitive and \(E_8\) results have
 analytic review; they do not rely on numerical sign samples. Polynomial
-and rational-surrogate replays check the stated finite algebra, not an
-unbounded theta inequality.
+and rational-surrogate replays check their stated finite algebra. The
+Jensen source-sign result separately joins an Arb compact proof to an
+analytical infinite tail; its internal assessment retains fixed-order scope.
 
 ## Caveats
 

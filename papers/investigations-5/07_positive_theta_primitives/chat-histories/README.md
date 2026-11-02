@@ -8,3 +8,7 @@ The founding discussion is already uniquely registered as **Investigation05 chat
 - [Existing registry](../../05_radial_theta_collision_geometry/chat-histories/index.json)
 
 It includes the primitive literature review and the request to open Investigation07. Preserve that unique registration, history number, and provenance; creating this investigation does not duplicate or relocate the transcript. Refresh it at its existing home. New chats primarily affiliated with Investigation07 should register here under the [chat-history workflow](../../../../tools/CHAT_HISTORY.md).
+
+## Investigation07 continuation
+
+1 November 2026, gpt-6-astra / xhigh, for Edward Baker with substantial LLM assistance. [Chat0001 — Review positive theta techniques](0001_2026-11-01T13-06-12Z_review-positive-theta-techniques.json), thread `01a19737-b0d5-7523-b433-96901427c282`, is registered here. It reviews literature, the Investigation05 inheritance, RH formulations and the organization of the Jensen and spectral Laguerre programs. It remains a cross-route chat at this investigation root; the founding chat0053 above keeps its original home. Current capture metadata are in [the registry](index.json).
