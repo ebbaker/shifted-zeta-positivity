@@ -115,7 +115,7 @@ physical layer or time/covariance consumer.
 
 **1 November 2026 — exact endpoint cancellation belongs to the complete source.**
 Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol / ultra**.
-[Jensen J-E03 Review01](../papers/investigations-5/07_positive_theta_primitives/jensen/reviews/01_J_E03_GLOBAL_SIGN_AND_SIGNED_AVERAGING_ASSESSMENT_20261101.md) states:
+[Jensen J-E03 Review01](../papers/investigations-5/07_positive_theta_primitives/01_jensen/reviews/01_J_E03_GLOBAL_SIGN_AND_SIGNED_AVERAGING_ASSESSMENT_20261101.md) states:
 “Full-source evenness, not the 24-term approximation, licenses the origin
 cancellations.” The accepted certificate encloses the complete source's
 coefficients before imposing exact parity and the proved u/u^5 factors.

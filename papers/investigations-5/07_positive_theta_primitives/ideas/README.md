@@ -2,23 +2,23 @@
 
 1 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance. Actual recorded model **gpt-6-astra (Codex)**, reasoning effort **xhigh**. Organization task J-E04.
 
-Five note folders separate the directions developed in the [higher-order and radial-flow assessment](../jensen/notes/14_HIGHER_ORDER_SIGNED_AVERAGING_AND_RADIAL_FLOW_FEASIBILITY_20261101.md). They are organized for separate discussions and parallel development. The [Jensen progress register](../jensen/research-progress/01_JENSEN_RESEARCH_PROGRESS_20261101.md) remains the sole source of live task status; this index describes the questions and their connections.
+Five assessed directions develop the questions from the [higher-order and radial-flow assessment](../01_jensen/notes/14_HIGHER_ORDER_SIGNED_AVERAGING_AND_RADIAL_FLOW_FEASIBILITY_20261101.md). They are organized for separate discussions and parallel development. The [Jensen progress register](../01_jensen/research-progress/01_JENSEN_RESEARCH_PROGRESS_20261101.md) remains the sole source of live task status; this index describes the questions and their connections.
 
-The folders are under **`jensen/notes/`**, where the originating assessment and coefficient work live. The investigation-level `notes/` folder retains shared tools for Jensen and spectral Laguerre. Existing Notes01–14, certificates, reviews, and chat identities remain at their original paths.
+Mellin curvature and integrated signed averaging now have numbered folders directly under **`01_jensen/`**. The remaining three directions stay under `01_jensen/notes/`. Shared Jensen notes and reviews remain at route level, and the investigation-level `notes/` folder retains tools for both proof routes. The organization record below maps relocated evidence; existing chat identities are preserved.
 
-**Next session:** use [Continuation15](../jensen/notes/15_CONTINUATION_PARALLEL_BRANCH_EVALUATION_20261101.md) to evaluate all five branches in parallel, then save a comparative review and give Edward Baker a high-level chat summary. The packet defines worker ownership, evidence requirements and deliverables; evaluation has not started. Prepared 1 November 2026, **gpt-6-astra / xhigh**.
+**Evaluation return, 1 November 2026:** all five bounded assessments have been completed in overlapping subagent waves and checked in [Review02](../01_jensen/reviews/02_PARALLEL_BRANCH_EVALUATION_REVIEW_20261101.md). Actual coordinator/workers: **gpt-6-astra / ultra**, inherited-source internal review. The unchanged h4 pointwise monotonicity mechanism fails; order induction retains a named signed-curvature estimate; the three deformation directions supply exact tools and scoped limitations. No new canonical positivity range is claimed. The [issued Note15 packet](../01_jensen/notes/15_CONTINUATION_PARALLEL_BRANCH_EVALUATION_20261101.md) is preserved. Recommended next decision: **J-B10, B — Astra**, in the sole live register.
 
 ## The five directions
 
-| Direction and note folder | Question | First conceptual task |
+| Direction and note folder | Question | Historical task and current disposition |
 | --- | --- | --- |
-| [01 Higher order signed averaging](../jensen/notes/01_higher_order_signed_averaging/README.md) | Can coordinatewise monotonicity of the higher-order signed observable transfer the positive k=0 anchor to every k? | **J-B05:** select a sufficient condition for the full r=4 observable, retaining separated-node and endpoint obligations. |
-| [02 Determinant order induction](../jensen/notes/02_determinant_order_induction/README.md) | Can strict log-concavity across neighboring coefficient indices propagate determinant positivity to the next order? | **J-B06:** select an estimate for the complete normalized order-raising balance, beginning with r=3 and k>=1. |
-| [03 Conservative flows and negative mass](../jensen/notes/03_conservative_negative_mass_flows/README.md) | Can a flow preserve a determinant integral while forcing its total negative mass to zero? | **J-B04, retained:** select a theta-specific conservative flux and decay estimate for the r=4,k=1 mechanism pilot. |
-| [04 Paired source and test deformations](../jensen/notes/04_paired_source_test_deformations/README.md) | Can a paired deformation preserve the required moments or determinant and make a concrete signed estimate easier? | **J-B07:** choose one deformation and consumer, retaining all forcing, boundary and inverse-comparison terms. |
-| [05 Source flows and Jensen hyperbolicity](../jensen/notes/05_source_flows_and_jensen_hyperbolicity/README.md) | Can a source-changing path induce a proved hyperbolicity-preserving polynomial evolution leading to theta? | **J-B08:** choose a reflection-compatible candidate and identify its exact moment/root-preservation obligation. |
+| [Historical branch 01 — integrated signed averaging](../01_jensen/02_signed_averaging/README.md) | Can a complete signed covariance comparison transfer the positive k=0 anchor to k=1 while allowing the known negative-derivative region? | **J-B05 complete:** full pointwise monotonicity fails. Integrated follow-up remains an alternative requiring a named theta input and a distinct task if selected. |
+| [Historical branch 02 — order induction through Mellin curvature](../01_jensen/01_mellin_curvature/README.md) | Can strict log-concavity across neighboring coefficient indices propagate determinant positivity to the next order? | **J-B06 complete:** exact order budget and open Gaussian comparison. **J-B10** is the recommended, unstarted signed-curvature continuation. |
+| [03 Conservative flows and negative mass](../01_jensen/notes/03_conservative_negative_mass_flows/README.md) | Can a flow preserve a determinant integral while forcing its total negative mass to zero? | **J-B04 complete:** exponential mixing benchmark; independent actual-orbit sign estimate deferred. |
+| [04 Paired source and test deformations](../01_jensen/notes/04_paired_source_test_deformations/README.md) | Can a paired deformation preserve the required moments or determinant and make a concrete signed estimate easier? | **J-B07 complete:** exact moment pairing; the selected absolute-residual estimator has no gain. New signed estimates remain conditional follow-ups. |
+| [05 Source flows and Jensen hyperbolicity](../01_jensen/notes/05_source_flows_and_jensen_hyperbolicity/README.md) | Can a source-changing path induce a proved hyperbolicity-preserving polynomial evolution leading to theta? | **J-B08 complete:** fixed-pair limit and generic backward counterexample; canonical return estimate deferred. |
 
-These are **B — conceptual tasks, recommended for Astra**, because the missing estimates or generators are not fixed. Sol is the default recommendation for subsequent E tasks once a method, finite scope and acceptance test are specified. The author selects the actual model and effort. Folder numbering groups ideas; it does not impose an execution order. This organization creates no agents, chats, schedules or running research tasks.
+These are **B — conceptual tasks, recommended for Astra**, because the missing estimates or generators are not fixed. Sol is the default recommendation for subsequent E tasks once a method, finite scope and acceptance test are specified. The author selects the actual model and effort. The historical branch numbers in this comparison retain their original identities. Current folder numbers put Mellin curvature at 01 and signed averaging at 02; task IDs are unchanged. This organization creates no agents, chats, schedules or running research tasks.
 
 ## How the branches can proceed in parallel
 
@@ -30,11 +30,11 @@ Direction 04 develops an alternative representation with a specified consumer. I
 
 Direction 05 changes the coefficient sequence and therefore needs a root-preservation or return theorem. It cannot use conservation of the original determinant as its transfer argument. The recorded failure of one radial transport remains restricted to that family.
 
-The spectral Laguerre route remains separately organized in [spectral_laguerre/](../spectral_laguerre/README.md). This index does not change its tasks. A tool’s use in a second route requires an explicit mathematical transfer.
+The spectral Laguerre route remains separately organized in [02_spectral_laguerre/](../02_spectral_laguerre/README.md). This index does not change its tasks. A tool’s use in a second route requires an explicit mathematical transfer.
 
 ## Common baseline and research standards
 
-The [accepted order-three review](../jensen/reviews/01_J_E03_GLOBAL_SIGN_AND_SIGNED_AVERAGING_ASSESSMENT_20261101.md) establishes the global canonical source signs and normalized index comparison within internal same-model assessment. Note14 gives conditional extensions and scoped flow comparisons with same-assistant checking. None of the new folders establishes a higher-order theta sign.
+The [accepted order-three review](../01_jensen/reviews/01_J_E03_GLOBAL_SIGN_AND_SIGNED_AVERAGING_ASSESSMENT_20261101.md) establishes the global canonical source signs and normalized index comparison within internal same-model assessment. Note14 gives conditional extensions and scoped flow comparisons with same-assistant checking. None of the new folders establishes a higher-order theta sign.
 
 Keep \(D_{r,k}=\det[c_{k+j-i}]\), \(c_n=b_n/(2n)!\), and \(\gamma_n=n!c_n\) distinct from raw moment Hankel matrices and Jensen degree/shift. The easy identity \(D_{r,0}=c_0^r\) is not all-degree Jensen hyperbolicity at shift zero. Any all-order argument must cover the omitted small-index regime, preserve all needed endpoint terms, and justify the selected-minor-to-full-criterion passage, including strictness.
 
@@ -44,6 +44,19 @@ Use the repository [result index](../../../../result-summaries/README.md), espec
 
 ## Filing and shared ownership
 
-Each linked folder contains a starting brief with its question, equations, first bounded task, completion rule, limitations and reading list. Save later analytical notes in that folder, and use matching branch names under `jensen/numerics/` and `jensen/reviews/` as those artifacts are first produced. Use the common [reference catalog](../references/README.md).
+The promoted [01 Mellin curvature](../01_jensen/01_mellin_curvature/README.md) and [02 Signed averaging](../01_jensen/02_signed_averaging/README.md) directions each have their own notes, numerics, reviews and research-navigation folders. The original branch02 assessment belongs to Mellin curvature; original branch01 and its finite support belong to signed averaging. The remaining three directions retain their existing note folders and matching support conventions.
 
-Future branch conversations should register their own histories with their actual identities, ordinarily under `jensen/chat-histories/`; this organizing chat retains its unique existing registration. Keep the live register as the single task ledger. Parallel workers should own separate branch files and coordinate changes to shared indexes and the register. No existing evidence needs to be moved or duplicated to begin a branch.
+Use the common [reference catalog](../references/README.md) and the sole Jensen progress register. Future chats devoted to one promoted direction use its chat-histories folder; existing registered chats remain in the parent Jensen archive with unchanged identities. The [organization record](../01_jensen/notes/17_NUMBERED_RESEARCH_FOLDERS_20261101.md) explains the moves. Organization only, J-E07; 1 November 2026, actual **gpt-6-astra / xhigh**, for Edward Baker with substantial LLM assistance.
+
+## Completed initial returns
+
+- [Branch 1 return](../01_jensen/02_signed_averaging/notes/01_INITIAL_BRANCH_EVALUATION_20261101.md).
+- [Branch 2 return](../01_jensen/01_mellin_curvature/notes/01_INITIAL_BRANCH_EVALUATION_20261101.md).
+- [Branch 3 return](../01_jensen/notes/03_conservative_negative_mass_flows/01_INITIAL_BRANCH_EVALUATION_20261101.md).
+- [Branch 4 return](../01_jensen/notes/04_paired_source_test_deformations/01_INITIAL_BRANCH_EVALUATION_20261101.md).
+- [Branch 5 return](../01_jensen/notes/05_source_flows_and_jensen_hyperbolicity/01_INITIAL_BRANCH_EVALUATION_20261101.md).
+The comparison and stopping scopes are in Review02; these completed evaluations do not establish their broader positivity targets.
+
+## Next-session continuation
+
+[Note16](../01_jensen/notes/16_CONTINUATION_BRAINSTORM_AFTER_PARALLEL_REVIEW_20261101.md) carries the five findings into the next brainstorm: J-B10 is the suggested starting point, the Gaussian comparison remains unproved, and at most one concrete alternative should be compared before choosing a bounded assessment. Preparation only, J-E06; 1 November 2026, actual **gpt-6-astra / ultra**, with substantial LLM assistance for Edward Baker.

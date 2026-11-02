@@ -4,15 +4,15 @@ Opened 31 October 2026; organization revised 1 November 2026, America/New_York. 
 
 Investigation07 studies how exact theta identities, positive primitives and signed integral formulas can help prove real-zero properties of the Riemann transform. It develops two proof routes: the **Jensen formulation** and the **spectral Laguerre criterion**. Questions arising in these routes guide the shared development of tools at the top level of this investigation.
 
-**Status:** [Jensen J-E03 Review01](jensen/reviews/01_J_E03_GLOBAL_SIGN_AND_SIGNED_AVERAGING_ASSESSMENT_20261101.md) accepts the canonical source pair R'>0,K>0 and normalized signed-averaging index comparison at determinant order three, following the full compact certificate and audited tail. This is same-assistant/same-model internal assessment, not independent specialist review. The original J-B01–J-E03 sequence is complete; [Continuation13](jensen/notes/13_CONTINUATION_AFTER_J_E03_ACCEPTED_ASSESSMENT_20261101.md) records its boundary. Shared and spectral programs retain their own scopes and registers. The prior negative origin C is preserved. No new coefficient range, increasing-order proof, RH or simplicity result is established. Assessment: 1 November 2026, gpt-6.1-sol / ultra.
+**Status:** [Jensen J-E03 Review01](01_jensen/reviews/01_J_E03_GLOBAL_SIGN_AND_SIGNED_AVERAGING_ASSESSMENT_20261101.md) accepts the canonical source pair R'>0,K>0 and normalized signed-averaging index comparison at determinant order three, following the full compact certificate and audited tail. This is same-assistant/same-model internal assessment, not independent specialist review. The original J-B01–J-E03 sequence is complete; [Continuation13](01_jensen/notes/13_CONTINUATION_AFTER_J_E03_ACCEPTED_ASSESSMENT_20261101.md) records its boundary. Shared and spectral programs retain their own scopes and registers. The prior negative origin C is preserved. No new coefficient range, increasing-order proof, RH or simplicity result is established. Assessment: 1 November 2026, gpt-6.1-sol / ultra.
 
 ## Programs and shared work
 
 | Location | Purpose |
 | --- | --- |
-| [ideas/](ideas/README.md) | Five parallel Jensen research directions, with links to their note folders |
-| [jensen/](jensen/README.md) | Jensen hyperbolicity, with coefficient total positivity as a complementary formulation and determinant tool |
-| [spectral_laguerre/](spectral_laguerre/README.md) | Generalized spectral Laguerre inequalities and positive definiteness of associated theta correlations |
+| [ideas/](ideas/README.md) | Five assessed Jensen directions, including the two promoted research folders |
+| [01_jensen/](01_jensen/README.md) | Jensen hyperbolicity, with coefficient total positivity as a complementary formulation and determinant tool |
+| [02_spectral_laguerre/](02_spectral_laguerre/README.md) | Generalized spectral Laguerre inequalities and positive definiteness of associated theta correlations |
 | [research-overview/](research-overview/README.md) | Overall research plan and shared-tool contracts, linking both route overviews |
 | [research-progress/](research-progress/README.md) | Sole live register for shared PT tasks; route statuses remain in their own registers |
 | [notes/](notes/README.md) | Shared mathematical tools, normalization, literature synthesis and comparisons that serve both routes |
@@ -23,7 +23,7 @@ Investigation07 studies how exact theta identities, positive primitives and sign
 
 Here **top level** means `07_positive_theta_primitives/`, within the larger research checkout. Common research belongs in its existing `notes/`, `numerics/` and, when assessments are written, `reviews/`. The repository-wide infrastructure under `tools/` retains its separate role.
 
-Each proof route will use its own `notes/`, `numerics/` and `reviews/` as work is produced. Create those directories with their first substantive artifacts. Route-specific work stays with its consumer; a reusable method has one canonical home in the shared area, with links from both routes. Existing notes remain at their current paths because they supply the common foundation.
+Jensen now contains [01 Mellin curvature](01_jensen/01_mellin_curvature/README.md) and [02 Signed averaging](01_jensen/02_signed_averaging/README.md), with their own research folders. Each proof route uses its own `notes/`, `numerics/` and `reviews/` as work is produced. Create those directories with their first substantive artifacts. Route-specific work stays with its consumer; a reusable method has one canonical home in the shared area, with links from both routes. Existing notes remain at their current paths because they supply the common foundation.
 
 ## Common mathematical normalization
 
@@ -77,8 +77,8 @@ Recent preprint results retain their recorded inspection status. Neither a bibli
 | Program | Research overview | Live progress |
 | --- | --- | --- |
 | Overall and shared tools | [Overview01](research-overview/01_POSITIVE_THETA_PRIMITIVES_RESEARCH_OVERVIEW_20261101.md) | [Progress01](research-progress/01_POSITIVE_THETA_PRIMITIVES_RESEARCH_PROGRESS_20261101.md) |
-| Jensen | [Overview01](jensen/research-overview/01_JENSEN_RESEARCH_OVERVIEW_20261101.md) | [Progress01](jensen/research-progress/01_JENSEN_RESEARCH_PROGRESS_20261101.md) |
-| Spectral Laguerre | [Overview01](spectral_laguerre/research-overview/01_SPECTRAL_LAGUERRE_RESEARCH_OVERVIEW_20261101.md) | [Progress01](spectral_laguerre/research-progress/01_SPECTRAL_LAGUERRE_RESEARCH_PROGRESS_20261101.md) |
+| Jensen | [Overview01](01_jensen/research-overview/01_JENSEN_RESEARCH_OVERVIEW_20261101.md) | [Progress01](01_jensen/research-progress/01_JENSEN_RESEARCH_PROGRESS_20261101.md) |
+| Spectral Laguerre | [Overview01](02_spectral_laguerre/research-overview/01_SPECTRAL_LAGUERRE_RESEARCH_OVERVIEW_20261101.md) | [Progress01](02_spectral_laguerre/research-progress/01_SPECTRAL_LAGUERRE_RESEARCH_PROGRESS_20261101.md) |
 
 The overviews now provide initial background and research contracts. Detailed notes will develop and assess the mechanisms; the overviews will be revised as evidence arrives. Each progress file owns only its task family: PT for shared work, J for Jensen, SL for spectral Laguerre. The first route discussions identify concrete representations and missing estimates that can guide shared tool development.
 

@@ -14,18 +14,31 @@ by a collision control. Identifying the source still leaves its signed
 oscillatory estimate to be proved.
 
 - **Canonical derivative-ratio signs and signed averaging (5/07 Jensen,
-  1 November 2026).** [Return11](../papers/investigations-5/07_positive_theta_primitives/jensen/notes/11_J_E02_R1_GLOBAL_SIGN_CERTIFICATE_RETURN_20261101.md)
+  1 November 2026).** [Return11](../papers/investigations-5/07_positive_theta_primitives/01_jensen/notes/11_J_E02_R1_GLOBAL_SIGN_CERTIFICATE_RETURN_20261101.md)
   proves \(R'>0,K>0\) on \(u>0\) at physical heat time zero, using an Arb-certified
   compact cover and an analytical infinite tail. The accepted transfer
   gives \(A_{k+\ell}\ge A_k\ge48c_0^3/Z_0>0\) for all finite
   \(k,\ell\ge0\) at order three,
-  allowing the negative origin C. [J-E03 Review01](../papers/investigations-5/07_positive_theta_primitives/jensen/reviews/01_J_E03_GLOBAL_SIGN_AND_SIGNED_AVERAGING_ASSESSMENT_20261101.md)
+  allowing the negative origin C. [J-E03 Review01](../papers/investigations-5/07_positive_theta_primitives/01_jensen/reviews/01_J_E03_GLOBAL_SIGN_AND_SIGNED_AVERAGING_ASSESSMENT_20261101.md)
   accepts the fixed claim without correction: **proved in-note, compact
   Arb-certified; same-assistant/same-model internal assessment**, no
   independent specialist review. The gain is normalized index comparison;
   order-three positivity was already known. No new coefficient range,
   order induction, novelty or RH claim. Prepared for Edward Baker with
   substantial LLM assistance, **gpt-6.1-sol / ultra**.
+- **Scoped Jensen branch assessment (5/07, 1 November 2026).**
+  [Branch01](../papers/investigations-5/07_positive_theta_primitives/01_jensen/02_signed_averaging/notes/01_INITIAL_BRANCH_EVALUATION_20261101.md)
+  proves a negative fourth-coordinate derivative of canonical h4 for three
+  origin-side nodes and a distant fourth node: “This is not a negative
+  determinant, a failure of averaged index monotonicity, or an obstruction
+  to every signed-averaging argument.”
+  [Review02](../papers/investigations-5/07_positive_theta_primitives/01_jensen/reviews/02_PARALLEL_BRANCH_EVALUATION_REVIEW_20261101.md)
+  checks this **proved-in-note scoped obstruction**, plus the theta-quantile
+  mixing benchmark, Darboux absolute-bound domination and generic backward
+  failure for one odd-tanh source flow. The order-induction Gaussian bound
+  remains unproved. **Same-model internal assessment with shared inputs**;
+  no new canonical coefficient range or specialist review. Prepared for
+  Edward Baker with substantial LLM assistance, **gpt-6-astra / ultra**.
 - **Covariant theta-source formula (21–22).**
   \(\Phi=\frac{y^{1/4}}{16\pi^2}(y^2\mathcal D^4\vartheta-3\pi^2\vartheta)(0,iy)\).
   The Hermite-weighted covariant jets' inversion law reproduces source

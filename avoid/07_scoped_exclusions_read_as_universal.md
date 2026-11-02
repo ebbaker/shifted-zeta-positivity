@@ -198,3 +198,14 @@ the generator to preserve source reflection is outside the theorem. Status:
 **proved in-note; same-assistant analytical self-check**, no independent or specialist
 review. Do not turn this exact-family obstruction into a prohibition on all source
 transport or an assertion about the original theta zeros.
+
+**1 November 2026 — a failed pointwise Jensen mechanism is not a failed signed average.**
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra / ultra**.
+The canonical [branch01 return](../papers/investigations-5/07_positive_theta_primitives/01_jensen/02_signed_averaging/notes/01_INITIAL_BRANCH_EVALUATION_20261101.md)
+proves a separated-node negative derivative of h4, while explicitly stating:
+“It does not prove that Cov_(4,k)(h4,(product u_j)^(2ell)) is negative or that A4,k is nonmonotone.”
+[Review02](../papers/investigations-5/07_positive_theta_primitives/01_jensen/reviews/02_PARALLEL_BRANCH_EVALUATION_REVIEW_20261101.md)
+retains that boundary and similarly limits the Darboux absolute-box and generic
+backward-tanh obstructions to their tested classes. Stop the false sufficient
+mechanism, not the coefficient target or every signed deformation. Internal
+same-model/source-sharing checks do not supply specialist independence.

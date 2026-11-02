@@ -3,7 +3,7 @@
 1 November 2026, America/New_York. Prepared for **Edward Baker** with
 substantial LLM assistance, **gpt-6-astra (Codex), actual effort max**.
 
-Companion to Jensen [Note05](../jensen/notes/05_J_B01_SIGNED_AVERAGING_DECISION_20261101.md).
+Companion to Jensen [Note05](../01_jensen/notes/05_J_B01_SIGNED_AVERAGING_DECISION_20261101.md).
 The first two classical sources support general mathematical tools. A third entry records a background lead. Neither
 establishes the proposed canonical-theta hypotheses. Reading copies are
 outside Git; see the [receipts](PDF_RECEIPTS_SIGNED_AVERAGING_20261101.json).

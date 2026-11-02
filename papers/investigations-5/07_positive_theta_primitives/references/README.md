@@ -25,11 +25,11 @@ The original files remain under `/Users/Shared/szp-archive/radial-theta-collisio
 
 ## Shared catalog for the two proof routes
 
-1 November 2026, for Edward Baker with substantial LLM assistance, gpt-6-astra / xhigh. This is the canonical bibliography for the [Jensen program](../jensen/README.md), the [spectral Laguerre program](../spectral_laguerre/README.md), and shared tool development. Record each article once and link its relevant uses and checked passages. The program split does not change earlier reading or verification status.
+1 November 2026, for Edward Baker with substantial LLM assistance, gpt-6-astra / xhigh. This is the canonical bibliography for the [Jensen program](../01_jensen/README.md), the [spectral Laguerre program](../02_spectral_laguerre/README.md), and shared tool development. Record each article once and link its relevant uses and checked passages. The program split does not change earlier reading or verification status.
 
 ## J-B01 source checks, 1 November 2026
 
-The [coefficient-representation decision](../jensen/notes/01_J_B01_COEFFICIENT_REPRESENTATION_DECISION_20261101.md#8-primary-source-inspection-in-this-round)
+The [coefficient-representation decision](../01_jensen/notes/01_J_B01_COEFFICIENT_REPRESENTATION_DECISION_20261101.md#8-primary-source-inspection-in-this-round)
 records the rechecked primary passages for its formulas and classical
 baseline. The six existing catalog entries retain their versions and PDF
 provenance, with appended inspection records (gpt-6-astra / max, prepared
@@ -46,3 +46,7 @@ were checked with their finite-lattice and simplex-normalization limits;
 reading copies. The conditional application is in Jensen Note05; no
 canonical source sign is established by these imports. Prepared for
 Edward Baker with substantial LLM assistance, gpt-6-astra / max.
+
+## Parallel Jensen evaluation, 1 November 2026
+
+The existing NISTDLMF catalog entry now records selected primary-passage checks by branch05 and the coordinator, actual **gpt-6-astra / ultra**, for [the odd-tanh flow return](../01_jensen/notes/05_source_flows_and_jensen_hyperbolicity/01_INITIAL_BRANCH_EVALUATION_20261101.md) and [Review02](../01_jensen/reviews/02_PARALLEL_BRANCH_EVALUATION_REVIEW_20261101.md). DLMF 18.5.12, Table 18.3.1 and 18.2(vi) justify the finite-pair Laguerre limit's simple negative zeros, not backward preservation. No new article, source count, BibTeX entry or PDF is needed. Prepared for Edward Baker with substantial LLM assistance; earlier inspection provenance is preserved.

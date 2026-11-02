@@ -2,7 +2,7 @@
 
 1 November 2026. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / xhigh.
 
-This folder is the common mathematical foundation for the [Jensen](../jensen/README.md) and [spectral Laguerre](../spectral_laguerre/README.md) programs. Shared tool development stays here; future route-specific derivations belong in the respective route’s `notes/`. Existing notes retain their paths and historical conclusions. The [investigation README](../README.md) records the current two-route organization and how route questions guide common tools.
+This folder is the common mathematical foundation for the [Jensen](../01_jensen/README.md) and [spectral Laguerre](../02_spectral_laguerre/README.md) programs. Shared tool development stays here; future route-specific derivations belong in the respective route’s `notes/`. Existing notes retain their paths and historical conclusions. The [investigation README](../README.md) records the current two-route organization and how route questions guide common tools.
 
 - [Literature techniques and the radial theta inheritance](01_LITERATURE_TECHNIQUES_AND_RADIAL_INHERITANCE_20261101.md): classical sign mechanisms, nine additional literature records, recent preprint scopes, and reusable techniques from Investigation05. Brainstorming synthesis before a research overview; no new theorem or adopted numerical task.
 
@@ -14,4 +14,4 @@ This folder is the common mathematical foundation for the [Jensen](../jensen/REA
 
 ## Parallel Jensen ideas
 
-The [investigation ideas index](../ideas/README.md) summarizes five branch folders under [jensen/notes](../jensen/notes/README.md). Those route-specific investigations retain their Jensen home; this folder continues to hold shared foundations. Organization: 1 November 2026, **gpt-6-astra / xhigh**.
+The [investigation ideas index](../ideas/README.md) summarizes five branch folders under [jensen/notes](../01_jensen/notes/README.md). Those route-specific investigations retain their Jensen home; this folder continues to hold shared foundations. Organization: 1 November 2026, **gpt-6-astra / xhigh**.

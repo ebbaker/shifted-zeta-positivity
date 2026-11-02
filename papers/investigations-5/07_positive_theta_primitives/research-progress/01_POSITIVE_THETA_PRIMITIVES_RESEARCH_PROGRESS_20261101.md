@@ -87,7 +87,7 @@ can activate PT-B01. No research is scheduled by this register.
 [catalog]: ../references/sources.json
 [base-overview]: ../research-overview/01_POSITIVE_THETA_PRIMITIVES_RESEARCH_OVERVIEW_20261101.md
 [base-progress]: ../research-progress/01_POSITIVE_THETA_PRIMITIVES_RESEARCH_PROGRESS_20261101.md
-[j-overview]: ../jensen/research-overview/01_JENSEN_RESEARCH_OVERVIEW_20261101.md
-[j-progress]: ../jensen/research-progress/01_JENSEN_RESEARCH_PROGRESS_20261101.md
-[sl-overview]: ../spectral_laguerre/research-overview/01_SPECTRAL_LAGUERRE_RESEARCH_OVERVIEW_20261101.md
-[sl-progress]: ../spectral_laguerre/research-progress/01_SPECTRAL_LAGUERRE_RESEARCH_PROGRESS_20261101.md
+[j-overview]: ../01_jensen/research-overview/01_JENSEN_RESEARCH_OVERVIEW_20261101.md
+[j-progress]: ../01_jensen/research-progress/01_JENSEN_RESEARCH_PROGRESS_20261101.md
+[sl-overview]: ../02_spectral_laguerre/research-overview/01_SPECTRAL_LAGUERRE_RESEARCH_OVERVIEW_20261101.md
+[sl-progress]: ../02_spectral_laguerre/research-progress/01_SPECTRAL_LAGUERRE_RESEARCH_PROGRESS_20261101.md
