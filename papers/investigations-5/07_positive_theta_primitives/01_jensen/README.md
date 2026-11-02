@@ -69,3 +69,15 @@ Read the [result index](../../../../result-summaries/README.md), especially [the
 1 November 2026; prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra / ultra** throughout. [Comparative Review02](reviews/02_PARALLEL_BRANCH_EVALUATION_REVIEW_20261101.md) checks all five saved assessments. It records an actual canonical obstruction to unchanged h4 coordinatewise monotonicity, a still-open signed order-induction bound, and scoped flow/deformation comparisons. The accepted order-three baseline and negative origin curvature remain unchanged; no new canonical coefficient range is claimed. **Next recommended: [B] J-B10 — Astra**, the complete signed Mellin-curvature comparison in the [live register](research-progress/01_JENSEN_RESEARCH_PROGRESS_20261101.md).
 
 The [next-session continuation](notes/16_CONTINUATION_BRAINSTORM_AFTER_PARALLEL_REVIEW_20261101.md) prepares brainstorming about J-B10, with room to compare one concrete alternative before selecting a bounded estimate. Preparation: J-E06, documentation only, 1 November 2026, actual **gpt-6-astra / ultra**; no new mathematical assessment.
+
+## Separate parallel continuations: historical preparation
+
+1 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, actual **gpt-6-astra / xhigh**. Preparation task **J-E08**, documentation only.
+
+The author will run both promoted directions independently: [J-B10 Mellin curvature](01_mellin_curvature/notes/02_CONTINUATION_MELLIN_CURVATURE_20261101.md) and [J-B11 Integrated signed averaging](02_signed_averaging/notes/02_CONTINUATION_SIGNED_AVERAGING_20261101.md). Each has a research overview and issued plan linked from its continuation note. Both are ready for B/Astra conceptual work and remain unstarted; no E campaign is issued. The [sole register](research-progress/01_JENSEN_RESEARCH_PROGRESS_20261101.md) owns status. The two plans specify disjoint outputs and a common lock for narrow shared updates.
+
+## Mellin physical assessments completed
+
+1 November 2026, for Edward Baker with substantial LLM assistance; coordinator gpt-6-astra / ultra, separate reviews gpt-6.1-sol / ultra.
+
+The [six-direction assessment](01_mellin_curvature/reviews/01_PARALLEL_PHYSICAL_DIRECTIONS_ASSESSMENT_20261101.md) and [Synthesis06](01_mellin_curvature/notes/06_PARALLEL_PHYSICAL_DIRECTIONS_SYNTHESIS_20261101.md) record accepted exact physical formulations and scoped failures, with no new Gaussian comparison domain. The [canonical register](research-progress/01_JENSEN_RESEARCH_PROGRESS_20261101.md) records J-B10 packet completion and the still-open quantitative objective. J-B11 remains independent; earlier launch descriptions above are historical.

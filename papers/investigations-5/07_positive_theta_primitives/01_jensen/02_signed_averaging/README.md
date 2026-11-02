@@ -6,6 +6,12 @@ This direction asks whether the complete signed determinant average can be compa
 
 **Current position:** the earlier order-four pointwise monotonicity mechanism is disproved for the canonical theta observable. The [initial assessment](notes/01_INITIAL_BRANCH_EVALUATION_20261101.md) establishes that scoped obstruction; it does not refute an averaged comparison or determinant positivity. A new theta-specific signed estimate is needed. [Review02](../reviews/02_PARALLEL_BRANCH_EVALUATION_REVIEW_20261101.md) retains this as the alternative to [signed Mellin-curvature order induction](../01_mellin_curvature/README.md).
 
+## Parallel session documents
+
+1 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, actual **gpt-6-astra / xhigh**. Preparation task **J-E08**, documentation only.
+
+The author has selected this direction for its own parallel session. Start with the [continuation note](notes/02_CONTINUATION_SIGNED_AVERAGING_20261101.md), then the [research overview](research-overview/01_SIGNED_AVERAGING_RESEARCH_OVERVIEW_20261101.md) and [research plan r1](research-plan/01_SIGNED_AVERAGING_RESEARCH_PLAN_20261101.md). **J-B11 is ready for conceptual work and unstarted.** The sibling task is independent; the plans define separate file ownership and serialized shared-register updates. These packets supersede the earlier choice-between-directions instruction for this launch, while preserving all mathematical cautions.
+
 ## Problem and inherited representation
 
 Keep the complete canonical theta source at physical time zero and set
@@ -50,7 +56,7 @@ This is a fixed-order, first-index mechanism pilot within known order-four posit
 
 ## Next bounded question
 
-**Alternative B task, recommended Astra:** first name a concrete signed theta identity that controls the complete covariance beyond the failed pointwise assumptions. If this direction is selected, register a distinct task in the [sole Jensen register](../research-progress/01_JENSEN_RESEARCH_PROGRESS_20261101.md); completed J-B05 must not be reopened or relabeled. No new research task is activated by this folder setup.
+**J-B11 — B, recommended Astra:** first name a concrete signed theta identity that controls the complete covariance beyond the failed pointwise assumptions. The author has selected a separate parallel session; J-B11 is now registered as ready and unstarted in the [sole Jensen register](../research-progress/01_JENSEN_RESEARCH_PROGRESS_20261101.md). Completed J-B05 retains its original identity. The new plan defines the bounded assessment; document preparation does not execute it.
 
 Return one worked bound or scoped failure for \(r=4,k=0\to1\), explaining the origin, separated and coincident nodes, full tails, and positive-anchor accounting. Stop if the proposed estimate assumes the same covariance sign it must prove, reinstates unchanged-\(h_4\) pointwise monotonicity, or deletes its negative region. Numerical acquisition requires a separate fixed E contract.
 
@@ -67,10 +73,11 @@ Consult the [result index](../../../../../result-summaries/README.md), especiall
 
 | Folder | Use |
 | --- | --- |
-| [notes](notes/README.md) | Preserved initial brief, completed J-B05 obstruction, and future numbered derivations. The next research note is 02. |
+| [notes](notes/README.md) | Preserved initial brief, completed J-B05 obstruction, and future numbered derivations. Continuation02 is the session entry point; the next research return is 03. |
 | [numerics](numerics/README.md) | The existing finite tail checker and exact record; future small support under fixed contracts. |
 | [reviews](reviews/README.md) | Direction-specific assessments; the comparative reviews remain at Jensen level. |
 | [research-overview](research-overview/README.md) | Navigation to this problem statement and the common Jensen overview. |
+| [research-plan](research-plan/README.md) | Issued bounded research plan; live status stays in the Jensen register. |
 | [research-progress](research-progress/README.md) | Pointer to the sole live Jensen task register. |
 | [references](references/README.md) | Pointer to the investigation's common bibliography and source catalog. |
 | [chat-histories](chat-histories/README.md) | Future chats devoted to this direction, using their actual identities. |

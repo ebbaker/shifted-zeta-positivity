@@ -12,7 +12,7 @@ Mellin curvature and integrated signed averaging now have numbered folders direc
 
 | Direction and note folder | Question | Historical task and current disposition |
 | --- | --- | --- |
-| [Historical branch 01 — integrated signed averaging](../01_jensen/02_signed_averaging/README.md) | Can a complete signed covariance comparison transfer the positive k=0 anchor to k=1 while allowing the known negative-derivative region? | **J-B05 complete:** full pointwise monotonicity fails. Integrated follow-up remains an alternative requiring a named theta input and a distinct task if selected. |
+| [Historical branch 01 — integrated signed averaging](../01_jensen/02_signed_averaging/README.md) | Can a complete signed covariance comparison transfer the positive k=0 anchor to k=1 while allowing the known negative-derivative region? | **J-B05 complete:** full pointwise monotonicity fails. **J-B11** is now ready and unstarted for an author-selected parallel session; selecting a named signed theta input is its first conceptual step. |
 | [Historical branch 02 — order induction through Mellin curvature](../01_jensen/01_mellin_curvature/README.md) | Can strict log-concavity across neighboring coefficient indices propagate determinant positivity to the next order? | **J-B06 complete:** exact order budget and open Gaussian comparison. **J-B10** is the recommended, unstarted signed-curvature continuation. |
 | [03 Conservative flows and negative mass](../01_jensen/notes/03_conservative_negative_mass_flows/README.md) | Can a flow preserve a determinant integral while forcing its total negative mass to zero? | **J-B04 complete:** exponential mixing benchmark; independent actual-orbit sign estimate deferred. |
 | [04 Paired source and test deformations](../01_jensen/notes/04_paired_source_test_deformations/README.md) | Can a paired deformation preserve the required moments or determinant and make a concrete signed estimate easier? | **J-B07 complete:** exact moment pairing; the selected absolute-residual estimator has no gain. New signed estimates remain conditional follow-ups. |
@@ -60,3 +60,9 @@ The comparison and stopping scopes are in Review02; these completed evaluations 
 ## Next-session continuation
 
 [Note16](../01_jensen/notes/16_CONTINUATION_BRAINSTORM_AFTER_PARALLEL_REVIEW_20261101.md) carries the five findings into the next brainstorm: J-B10 is the suggested starting point, the Gaussian comparison remains unproved, and at most one concrete alternative should be compared before choosing a bounded assessment. Preparation only, J-E06; 1 November 2026, actual **gpt-6-astra / ultra**, with substantial LLM assistance for Edward Baker.
+
+## Separate author-run sessions
+
+1 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, actual **gpt-6-astra / xhigh**. Preparation task **J-E08**, documentation only.
+
+The author has selected both promoted directions for parallel continuation. [Mellin curvature J-B10](../01_jensen/01_mellin_curvature/notes/02_CONTINUATION_MELLIN_CURVATURE_20261101.md) and [integrated signed averaging J-B11](../01_jensen/02_signed_averaging/notes/02_CONTINUATION_SIGNED_AVERAGING_20261101.md) have separate overview/plan/continuation packets and independent outputs. The older choose-one recommendation remains part of the assessment history; it does not limit these two author-run sessions. No mathematical estimate is promoted by this scheduling choice.

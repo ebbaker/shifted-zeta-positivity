@@ -50,3 +50,11 @@ Edward Baker with substantial LLM assistance, gpt-6-astra / max.
 ## Parallel Jensen evaluation, 1 November 2026
 
 The existing NISTDLMF catalog entry now records selected primary-passage checks by branch05 and the coordinator, actual **gpt-6-astra / ultra**, for [the odd-tanh flow return](../01_jensen/notes/05_source_flows_and_jensen_hyperbolicity/01_INITIAL_BRANCH_EVALUATION_20261101.md) and [Review02](../01_jensen/reviews/02_PARALLEL_BRANCH_EVALUATION_REVIEW_20261101.md). DLMF 18.5.12, Table 18.3.1 and 18.2(vi) justify the finite-pair Laguerre limit's simple negative zeros, not backward preservation. No new article, source count, BibTeX entry or PDF is needed. Prepared for Edward Baker with substantial LLM assistance; earlier inspection provenance is preserved.
+
+## Physical interpretations, 1 November 2026
+
+[Four selected primary-source records](06_PHYSICAL_INTERPRETATION_SOURCES_20261101.md) cover fermionic Wick/Schur algebra, biorthogonal ensembles and Witten’s cohomological mechanism. [Mellin Note04](../01_jensen/01_mellin_curvature/notes/04_FERMIONIC_CORRELATORS_AND_PHYSICAL_INTERPRETATIONS_20261101.md) derives exact representations without claiming a new sign estimate or topological theory. [External PDF receipts](PDF_RECEIPTS_PHYSICS_20261101.json) preserve the four reading copies; no third-party PDF is in Git. Prepared for Edward Baker with substantial LLM assistance, actual gpt-6-astra / xhigh.
+
+## Six physical assessments, 1 November 2026
+
+[Selected source checks](07_PARALLEL_PHYSICAL_ASSESSMENT_SOURCES_20261101.md) record Gaussian-ensemble conventions for MC03, stellar/Bargmann conventions for MC05, and limited Witten1982 background inspection for MC06, each with its application limits. The [reading-copy receipts](PDF_RECEIPTS_PARALLEL_PHYSICS_20261101.json) record one newly archived public PDF and the failed Witten retrieval. Prepared for Edward Baker with substantial LLM assistance, actual gpt-6-astra / ultra.

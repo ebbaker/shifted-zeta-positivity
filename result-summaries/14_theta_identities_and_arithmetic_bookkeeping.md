@@ -13,6 +13,21 @@ corrects the earlier blanket assertion that every identity here is shared
 by a collision control. Identifying the source still leaves its signed
 oscillatory estimate to be proved.
 
+- **Six physical Mellin assessments (5/07, 1 November 2026).**
+  [Coordinator assessment](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/reviews/01_PARALLEL_PHYSICAL_DIRECTIONS_ASSESSMENT_20261101.md)
+  accepts exact thermal/fermionic/oscillator/SUSY constructions, a full-source
+  fixed-box Gaussian limit, and scoped closure obstructions, under **separate
+  cross-model internal review** (Astra/ultra authors, Sol/ultra checks).
+  The [synthesis](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/notes/06_PARALLEL_PHYSICAL_DIRECTIONS_SYNTHESIS_20261101.md)
+  states: “No branch proves a new interval of the pointwise Gaussian bound”.
+  The normalizable theta oscillator's Husimi-zero axis condition and the
+  bounded fermionic transfer's all-sector entrywise positivity are exact RH
+  reformulations, not acquired estimates or novelty claims. MC03 resolves
+  the saddle prefactor and gives conditional signed localization budgets;
+  their full-integral payments remain open. MC06's protected-class failure
+  retains the review's closed-domain/trace clarification. Prepared for
+  Edward Baker with substantial LLM assistance, coordinator gpt-6-astra / ultra;
+  no specialist independence, new coefficient range or RH proof.
 - **Canonical derivative-ratio signs and signed averaging (5/07 Jensen,
   1 November 2026).** [Return11](../papers/investigations-5/07_positive_theta_primitives/01_jensen/notes/11_J_E02_R1_GLOBAL_SIGN_CERTIFICATE_RETURN_20261101.md)
   proves \(R'>0,K>0\) on \(u>0\) at physical heat time zero, using an Arb-certified

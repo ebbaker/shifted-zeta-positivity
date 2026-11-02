@@ -107,3 +107,16 @@ that survives the Newman deformation and fails for the controls (Review 16
   interval. The positive control is transported as well; nonlinear and
   coupled-field constructions remain outside this conclusion. Prepared for
   Edward Baker with LLM assistance, **gpt-6-astra / xhigh**, chat0015.
+
+
+**1 November 2026 — protect the actual observable, not a zero that replaces it.**
+For Edward Baker with substantial LLM assistance, gpt-6-astra / ultra.
+[MC06 Return01](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/06_topological_field_theory/notes/01_PROTECTED_OBSERVABLE_FEASIBILITY_RETURN_20261101.md)
+states: “The required insertion is not \(Q\)-closed”. The specified circle
+SUSY index cancels excited pairs; its unprotected fugacity response reconstructs
+theta, while the fixed protected class reconstructs zero.
+[Separate Sol/ultra review](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/06_topological_field_theory/reviews/01_MC06_E01_SEPARATE_REVIEW_20261101.md)
+accepts the scoped obstruction with domain/trace clarification. Preserve useful
+physical formulations when requested, but keep their missing response estimate
+visible. This excludes neither different cohomological constructions nor the
+usefulness of the exact unprotected model.

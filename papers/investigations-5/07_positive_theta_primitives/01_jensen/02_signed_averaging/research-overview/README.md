@@ -1,5 +1,5 @@
-# Integrated signed averaging research overview
+# Research overview navigation
 
-1 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance. Actual recorded model **gpt-6-astra (Codex)**, reasoning effort **xhigh**. Organization task **J-E07**.
+1 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, actual **gpt-6-astra / xhigh**. Preparation task **J-E08**, documentation only.
 
-The [direction README](../README.md) is the initial problem statement, background and bounded-question overview. The [Jensen overview](../../research-overview/01_JENSEN_RESEARCH_OVERVIEW_20261101.md) supplies the common formulation and baseline. New detailed overview material belongs here if needed; do not duplicate the [live register](../../research-progress/01_JENSEN_RESEARCH_PROGRESS_20261101.md).
+[Overview01](01_SIGNED_AVERAGING_RESEARCH_OVERVIEW_20261101.md) states this direction's problem, accepted baseline, exact objects, missing estimate and limits. The [research plan](../research-plan/01_SIGNED_AVERAGING_RESEARCH_PLAN_20261101.md) fixes the bounded J-B11 assessment, and the [continuation note](../notes/02_CONTINUATION_SIGNED_AVERAGING_20261101.md) provides the session reading order and launch prompt. Live status remains in the [Jensen register](../../research-progress/01_JENSEN_RESEARCH_PROGRESS_20261101.md).
