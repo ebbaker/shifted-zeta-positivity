@@ -9,3 +9,8 @@ The earlier [plan r1](../research-plan/01_MELLIN_CURVATURE_RESEARCH_PLAN_2026110
 1 November 2026, for Edward Baker with substantial LLM assistance; coordinator gpt-6-astra / ultra, separate reviews gpt-6.1-sol / ultra.
 
 [Current synthesis and continuation](../notes/06_PARALLEL_PHYSICAL_DIRECTIONS_SYNTHESIS_20261101.md), after six separately checked physical assessments. The local overviews remain the original bounded contracts.
+
+2 November 2026: [Open quantum dynamics overview](../08_open_quantum_dynamics/research-overview/01_OPEN_QUANTUM_DYNAMICS_RESEARCH_OVERVIEW_20261102.md) adds the author-requested continuous-time and Lindblad questions. Read its [local progress register](../08_open_quantum_dynamics/research-progress/01_OPEN_QUANTUM_DYNAMICS_RESEARCH_PROGRESS_20261102.md) for the bounded next task. Preparation gpt-6-astra / xhigh, for Edward Baker with substantial LLM assistance.
+
+
+2 November 2026 — [Background manuscript](../manuscript/main.tex) and [build guide](../manuscript/BUILD.md): self-contained mathematical exposition and eight-branch context, including the later MC07/MC08 records. [Integration10](../notes/10_BACKGROUND_MANUSCRIPT_INTEGRATION_20261102.md) and [Review02](../reviews/02_BACKGROUND_MANUSCRIPT_SELF_CHECK_20261102.md) preserve source/review limits. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / max; no new comparison estimate or task-status change.

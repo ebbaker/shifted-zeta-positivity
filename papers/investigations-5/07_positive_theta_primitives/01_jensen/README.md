@@ -81,3 +81,7 @@ The author will run both promoted directions independently: [J-B10 Mellin curvat
 1 November 2026, for Edward Baker with substantial LLM assistance; coordinator gpt-6-astra / ultra, separate reviews gpt-6.1-sol / ultra.
 
 The [six-direction assessment](01_mellin_curvature/reviews/01_PARALLEL_PHYSICAL_DIRECTIONS_ASSESSMENT_20261101.md) and [Synthesis06](01_mellin_curvature/notes/06_PARALLEL_PHYSICAL_DIRECTIONS_SYNTHESIS_20261101.md) record accepted exact physical formulations and scoped failures, with no new Gaussian comparison domain. The [canonical register](research-progress/01_JENSEN_RESEARCH_PROGRESS_20261101.md) records J-B10 packet completion and the still-open quantitative objective. J-B11 remains independent; earlier launch descriptions above are historical.
+
+### Additional Donaldson Witten assessment
+
+1 November 2026, prepared for Edward Baker with substantial LLM assistance; Astra / ultra assessment and Sol / ultra separate checking. The new [four-dimensional direction](01_mellin_curvature/07_donaldson_witten_theory/README.md) recovers the complete theta source from a CP2 flux response, rejects one protected-invariant match by degree selection, and identifies K3 with the Gaussian comparator. No new Mellin bound. Read the [overall brainstorm addendum](01_mellin_curvature/notes/08_DONALDSON_WITTEN_ASSESSMENT_AND_BRAINSTORM_ADDENDUM_20261101.md) with Continuation07.

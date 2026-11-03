@@ -113,3 +113,6 @@ preserving their bounded hypotheses. New combined work has one HCB
 register in Investigation03; original RT/HDA IDs and dated requests remain
 in their existing homes. Closing a scoped consumer does not close its
 shrinking-resolution or global-cost extension.
+
+
+**2 November 2026 — distinguish issued overviews from later results.** For Edward Baker with substantial LLM assistance, **gpt-6-astra / max**. [Mellin background self-check](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/reviews/02_BACKGROUND_MANUSCRIPT_SELF_CHECK_20261102.md) records: “The live MC08 register supersedes the original planning overview for current status.” The manuscript incorporates the completed local realization while retaining the separate, narrower intermediate-cone stop and its pending review. Frozen planning documents remain historical; integration must consult the live register without upgrading the underlying evidence.

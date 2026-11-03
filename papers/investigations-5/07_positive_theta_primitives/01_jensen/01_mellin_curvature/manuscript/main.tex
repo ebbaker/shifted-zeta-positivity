@@ -1,0 +1,1080 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,tabularx,array,longtable}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\hypersetup{pdftitle={Signed Mellin Curvature and Theta Coefficient Positivity},pdfauthor={Drafted for Edward Baker}}
+\setlist{itemsep=3pt,topsep=5pt}
+\setlength{\emergencystretch}{2em}
+\setlength{\parskip}{3pt}
+\usepackage{tocloft}
+\setlength{\cftbeforesecskip}{2pt}
+\setcounter{tocdepth}{1}
+\numberwithin{equation}{section}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}[proposition]{Lemma}
+\newtheorem{hypothesis}[proposition]{Research hypothesis}
+\theoremstyle{remark}
+\newtheorem{remark}[proposition]{Remark}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\diag}{diag}
+\newcommand{\E}{\mathbb E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\dd}{\,d}
+\newcommand{\evid}[1]{\textsf{[#1]}}
+\newcommand{\ket}[1]{\lvert #1\rangle}
+\newcommand{\bra}[1]{\langle #1\rvert}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\title{Signed Mellin Curvature and\newline Theta Coefficient Positivity\\[5pt]
+\large Mathematical Background and Physical Research Directions}
+\author{Drafted for Edward Baker}
+\date{2 November 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+The Mellin-curvature program seeks a quantitative way to raise the order
+of positivity of the Taylor-coefficient determinants associated with the
+Riemann xi function. Its starting point is an exact integral in which a
+positive theta carrier is multiplied by a sign-changing observable.
+At determinant order three, an internally assessed signed-averaging
+argument proves positivity for every nonnegative real Mellin tilt. The
+remaining question is an upper bound on the logarithmic curvature of the
+complete signed integral. We derive the factorial comparison that turns
+such a bound into an order-four inequality, explain the Gaussian
+normalization, and separate this sufficient conjecture from the exact
+next-order sign condition and the all-order Riemann-hypothesis criterion.
+We then describe eight complementary investigations: thermal traces,
+fermionic amplitudes, connected response, biorthogonal ensembles,
+Schur and Toda identities, supersymmetric protection, four-dimensional
+gauge-theory anomalies, and open quantum dynamics. Exact physical
+realizations, local asymptotics, and scoped obstructions are distinguished
+from the still-missing signed estimate. The purpose is to provide shared
+mathematical background and a common specification of what a successful
+subinvestigation must establish.
+\end{abstract}
+
+\noindent\textbf{Status.} Expository research draft, incorporating the records
+available on 2 November 2026. No new domain of the Gaussian Mellin
+comparison is established here. Internal LLM assessments cited below are
+not independent specialist review. Source identifiers such as \evid{M1}
+are resolved in Appendix~\ref{sec:sources}.
+
+\tableofcontents
+\clearpage
+
+\section{The question and its place in the Jensen program}
+\label{sec:question}
+
+The program begins with a simple tension. The canonical theta source is
+positive, and its even moments are positive. Yet the coefficient
+determinants relevant to real zeros contain alternating sums. Their
+natural integral representation has a genuinely negative region. The
+aim is to exploit the structure of that signed integral rather than
+replace it by a positive object with a different meaning.
+
+Two indices must be kept distinct. Increasing the coefficient index
+changes which part of the source is emphasized by a moment weight.
+Increasing the determinant order introduces more source points and
+higher derivatives. An estimate that handles the first operation need
+not handle the second. Mellin curvature is proposed as the extra
+quantitative information that could connect them.
+
+\subsection{The complete source and its normalization}
+
+For $\beta>0$, define
+\begin{equation}
+ \vartheta(\beta)=\sum_{m\in\mathbb Z}e^{-\pi\beta m^2},
+ \qquad p(u)=\tfrac12e^u\bigl(\vartheta(e^{4u})-1\bigr).
+ \label{eq:primitive}
+\end{equation}
+The source used throughout is
+\begin{align}
+ \Phi(u)&=\tfrac18\bigl(p''(u)-p(u)\bigr) \notag\\
+ &=\sum_{m\ge1}\bigl(2\pi^2m^4e^{9u}-3\pi m^2e^{5u}\bigr)
+                 e^{-\pi m^2e^{4u}}. \label{eq:source}
+\end{align}
+Every summand is positive for $u\ge0$. The complete function is even,
+by theta inversion, and its fixed derivatives decay double
+exponentially as $u\to+\infty$. Evenness is a property of the complete
+source; it must not be attributed to a finite truncation of this series.
+
+Set
+\begin{equation}
+ b_n=\int_0^\infty u^{2n}\Phi(u)\dd u,\qquad
+ c_n=\frac{b_n}{(2n)!},\qquad \gamma_n=n!c_n,
+ \qquad F(w)=\sum_{n\ge0}c_nw^n. \label{eq:coeff}
+\end{equation}
+These are respectively raw moments, ordinary coefficients, and
+exponential coefficients. They are not interchangeable. With
+$\xi(z)=\tfrac12z(z-1)\pi^{-z/2}\Gamma(z/2)\zeta(z)$, the convention is
+\begin{equation}
+ F(z^2)=\int_0^\infty\Phi(u)\cosh(zu)\dd u
+       =\tfrac18\xi\bigl((1+z)/2\bigr). \label{eq:xi}
+\end{equation}
+The factor $1/8$ and the rescaling of $z$ matter when comparing sources.
+The integral defines an entire function: on compact $z$ sets its growth
+factor is dominated by the source decay. The classical theta Mellin
+representation underlies \eqref{eq:xi}; the repository's normalization is
+retained in \evid{J1,M3,G1}.
+
+\subsection{The full destination and the finite-order pilot}
+
+The Jensen polynomials and consecutive Toeplitz determinants are
+\begin{equation}
+ J^{d,n}(X)=\sum_{j=0}^d\binom dj\gamma_{n+j}X^j,
+ \qquad D_{r,k}=\det[c_{k+j-i}]_{i,j=0}^{r-1}, \label{eq:targets}
+\end{equation}
+where $c_j=0$ for negative integers and $D_{0,k}=1$.
+Hyperbolicity means that every zero of a polynomial is real.
+The complete classical destination is
+\begin{equation}
+ \mathrm{RH} \Longleftrightarrow\ F\text{ has only negative real zeros}
+ \Longleftrightarrow\ (c_n)\in\mathrm{PF}_{\infty}
+ \Longleftrightarrow\ J^{d,n}\text{ is hyperbolic for every }d,n.
+ \label{eq:rh}
+\end{equation}
+Here $\mathrm{PF}_{\infty}$ means that every finite minor of the
+infinite Toeplitz matrix $[c_{j-i}]_{i,j\ge0}$ is nonnegative.
+The classical entire-function/P\'olya-frequency bridge is stated in
+Katkova's introduction \cite{Katkova0505174v1}; the Jensen formulation
+and its quantifiers are recalled in \cite{GriffinOnoRolenZagier2019Jensen}.
+Rescaling $c_n$ to $A B^n c_n$, with fixed $A,B>0$, does not alter
+these criteria.
+
+Strict positivity of the consecutive minors $D_{r,k}$ for all $r,k$ is
+a sufficient route to the full minor condition. The strict-minor lemma
+quoted by Katkova requires a positive summable sequence and strict
+positivity at each order up to the intended order. Here $c_n>0$ and
+$\sum c_n=F(1)<\infty$. A bare nonnegative consecutive-minor statement
+must not silently replace that strict hypothesis.
+
+For Jensen polynomials, fixed degree with sufficiently large shift is
+already covered by the eventual hyperbolicity theorem of
+Griffin--Ono--Rolen--Zagier. Its threshold may depend on the degree.
+It does not cover unbounded degree at a fixed small shift. In fact
+\begin{equation}
+ \frac{d^n}{dX^n}J^{d+n,0}(X)=\frac{(d+n)!}{d!}J^{d,n}(X),
+\end{equation}
+so all degrees at shift zero would suffice. The determinant anchor
+$D_{r,0}=c_0^r$ is a different statement; it does not solve this
+all-degree problem.
+
+Known finite-order positivity already includes order four; for example,
+Katkova records a $\mathrm{PF}_{44}$ result for the rescaled xi
+coefficient function \cite[Theorem 1]{Katkova0505174v1}. The present
+$r=3\to4$ task is therefore a \emph{method pilot}. Its value would be a
+new quantitative mechanism and a credible route to arbitrary order,
+not a newly discovered low-order sign range.
+
+\section{From coefficient determinants to a signed average}
+\label{sec:integral}
+
+\subsection{An exact integral, including the small-index endpoints}
+
+Let
+\[
+ \Omega_r=\{0<u_1<\cdots<u_r\},\qquad
+ V(\mathbf y)=\prod_{a<b}(y_b-y_a),\qquad
+ \Delta_r(\mathbf u)=\det[\Phi^{(2i)}(u_j)]_{i=0,\ldots,r-1;\ j=1,\ldots,r}.
+\]
+Define the factorial normalization separately from the generating
+function $F$:
+\begin{equation}
+ F_{r,k}=\prod_{j=0}^{r-1}(2k+2j)!,\qquad
+ M_{r,k}=F_{r,k}D_{r,k}. \label{eq:factorial}
+\end{equation}
+Then the basic representation is
+\begin{equation}
+ M_{r,k}=\int_{\Omega_r}\Bigl(\prod_j u_j^{2k}\Bigr)
+                    V(\mathbf u^2)\Delta_r(\mathbf u)\dd\mathbf u.
+ \label{eq:integral}
+\end{equation}
+
+To see where every factor comes from, integration by parts gives
+\begin{equation}
+ \int_0^\infty\frac{u^{2m}}{(2m)!}\Phi^{(2i)}(u)\dd u=c_{m-i}.
+ \label{eq:ibp}
+\end{equation}
+For $m\ge i$, transfer $2i$ derivatives to the polynomial. For $m<i$,
+transfer $2m$ derivatives first; the remaining integral is
+$-\Phi^{(2i-2m-1)}(0)=0$. Thus the zero convention for negative
+coefficient indices follows from \emph{all} odd source derivatives
+vanishing at zero. The upper endpoints vanish by decay.
+The determinant-composition identity applied to \eqref{eq:ibp}
+produces a factor $1/r!$ on the full orthant. Both determinants change
+sign under a node permutation, so their product is symmetric. Restricting
+to $\Omega_r$ cancels that factor. The monomial determinant supplies
+$V(\mathbf u^2)$ and the column factorials supply $F_{r,k}$.
+This proves \eqref{eq:integral} with no extra chamber constant.
+
+At $k=0$ the coefficient matrix is upper triangular:
+\begin{equation}
+ D_{r,0}=c_0^r. \label{eq:anchor}
+\end{equation}
+The first substantive neighboring-index problem is consequently $k=1$.
+Large-$k$ localization does not remove the need to handle it.
+
+\subsection{What is positive and what remains signed}
+
+The accepted order-three analysis \evid{J2} establishes
+$R'(u)>0$ for $u>0$, where $R=\Phi''/\Phi$.
+Writing $x=R(u)$, put
+\begin{equation}
+ g_i(x)=\left.\frac{\Phi^{(2i)}}{\Phi}\right|_{u=R^{-1}(x)},
+ \qquad
+ h_r(\mathbf u)=\frac{\det[g_i(R(u_j))]_{i,j}}{V(R(\mathbf u))}.
+ \label{eq:hr}
+\end{equation}
+The quotient has removable coincident-node limits. Since $g_0=1$ and
+$g_1=x$, one has $h_2=1$, while $h_3$ is the second divided difference
+of $g_2$. Define
+\begin{align}
+ w_{r,s}(\mathbf u)&=\Bigl(\prod_j u_j^{2s}\Phi(u_j)\Bigr)
+                     V(\mathbf u^2)V(R(\mathbf u)),\notag\\
+ Z_r(s)&=\int_{\Omega_r}w_{r,s},\qquad
+ d\mu_{r,s}=Z_r(s)^{-1}w_{r,s}\dd\mathbf u,\notag\\
+ A_r(s)&=\E_{r,s}h_r,\qquad
+ M_r(s)=Z_r(s)A_r(s)=\int_{\Omega_r}h_rw_{r,s}. \label{eq:carrier}
+\end{align}
+The carrier is positive. The insertion $h_r$ need not be.
+At integer $s=k$, this is precisely \eqref{eq:integral}.
+For noninteger $s$ it is an interpolation of integrals; it is not a
+Toeplitz determinant with noninteger coefficient indices.
+
+For order three, the additional global derivative sign assessed in
+\evid{J2} implies $g_2'''(x)>0$ in the interior. The simplex formula
+for divided differences writes $h_3$ as the integral of $g_2''$ over a
+triangle of area $1/2$. Increasing $g_2''$ therefore makes $h_3$
+increasing in each node. This is compatible with the established
+negative values of $g_2''$ near the origin and the resulting negative
+region of $h_3$. The proof needs monotonicity, not pointwise positivity.
+
+The carrier's Vandermonde factors satisfy the multiplicative lattice
+inequality on the ordered chamber. Finite-grid positive association,
+followed by an integrable exhaustion, then gives, for $s,\ell\ge0$,
+\begin{equation}
+ A_3(s+\ell)-A_3(s)
+ =\frac{\Cov_{3,s}(h_3,q^\ell)}{\E_{3,s}q^\ell}\ge0,
+ \qquad q=\prod_{j=1}^3u_j^2. \label{eq:association}
+\end{equation}
+The integer version has an internal certificate/assessment record;
+the real-tilt extension is justified in \evid{M1} by the same
+association and exhaustion argument. In particular,
+\begin{equation}
+ A_3(s)\ge A_3(0)=\frac{48c_0^3}{Z_3(0)}>0,
+ \qquad M_3(s)>0\quad(s\ge0). \label{eq:realpositive}
+\end{equation}
+This separately justifies the logarithm used below. Integer determinant
+positivity alone would not justify it between the integers.
+
+All fixed-order integrals with finitely many logarithmic insertions are
+absolutely convergent. Near zero, use the undivided expression
+$h_rw_{r,s}=(\prod u_j^{2s})V(\mathbf u^2)\Delta_r$ and bounded source
+derivatives; $u^{2s}|\log u|^m$ is locally integrable for $s\ge0$.
+At infinity, double-exponential decay dominates all fixed derivative,
+moment, and logarithmic factors. These observations also explain why
+coincident-node quotients introduce no missing boundary term.
+
+\section{The complete Mellin curvature}
+\label{sec:curvature}
+
+From now on, unless an order is displayed, set $r=3$ and abbreviate
+$M=M_3$, $Z=Z_3$, $A=A_3$, $h=h_3$. The real variable $s$ is a
+\emph{Mellin tilt}. It is not the zeta argument, thermal inverse
+temperature, or a physical evolution time. Put
+\begin{equation}
+ T=\log q=2\sum_{j=1}^3\log u_j,\qquad m_s=\E_sT.
+\end{equation}
+The weight $q^s=e^{sT}$ makes $s$ a source coupled to the logarithmic
+size of the three-node configuration.
+
+\begin{proposition}[Signed connected response]
+For the complete integral above,
+\begin{equation}
+ \mathcal C_3(s):=(\log M)''(s)
+ =\Var_s(T)
+ +\frac{\Cov_s\bigl(h,(T-m_s)^2\bigr)}{A(s)}
+ -\left(\frac{\Cov_s(h,T)}{A(s)}\right)^2,
+ \qquad s\ge0. \label{eq:curvature}
+\end{equation}
+At the endpoint, derivatives may equivalently be interpreted as
+right derivatives.
+\end{proposition}
+\begin{proof}
+Differentiation under the integral gives
+$M'=\int Thw_s$ and $M''=\int T^2hw_s$.
+Thus $(\log M)''=\E_s(hT^2)/A-(\E_s(hT)/A)^2$.
+Subtract $m_s$ from $T$ in this expression, expand, and use
+$\E_s[h(T-m_s)]=\Cov_s(h,T)$. The preceding integrability bounds
+justify the differentiations locally uniformly in $s$.
+\end{proof}
+
+The first term in \eqref{eq:curvature} is an ordinary variance under a
+positive measure. The other two terms record the insertion's response.
+The complete expression is not generally a variance under a positive
+probability law: $h\,d\mu_s/A$ is signed. In particular, no generic
+nonnegativity of $\mathcal C_3$ is asserted.
+
+Association controls $\Cov_s(h,T)$, since both functions are increasing.
+It does not control $\Cov_s(h,(T-m_s)^2)$: a centered square is not
+increasing over the entire range of $T$. Bounding the carrier variance
+alone leaves this contribution unestimated. The helpful negative square
+in \eqref{eq:curvature} is also part of the same expression. Separating
+all signed contributions by absolute values can lose exactly the
+cancellation needed for the desired upper bound.
+
+An alternative form makes the issue especially transparent. If
+$f_s=h w_s$, then
+\begin{equation}
+ M(s)^2\mathcal C_3(s)
+ =\frac12\int_{\Omega_3^2}
+ f_s(\mathbf u)f_s(\mathbf v)
+ \bigl(T(\mathbf u)-T(\mathbf v)\bigr)^2\dd\mathbf u\dd\mathbf v.
+ \label{eq:twocopycurv}
+\end{equation}
+Pairs drawn from opposite signs of the insertion contribute negatively.
+This is an exact two-copy identity, not a positivity argument.
+
+\section{The order-raising budget and the Gaussian hypothesis}
+\label{sec:budget}
+
+\subsection{The exact budget}
+
+Desnanot--Jacobi applied to a Toeplitz block gives
+\begin{equation}
+ D_{r+1,k}D_{r-1,k}=D_{r,k}^2-D_{r,k-1}D_{r,k+1}.
+ \label{eq:dj}
+\end{equation}
+For $k\ge1$, suppose that the displayed order-$r$ determinants and
+$D_{r-1,k}$ are positive, and define
+\begin{equation}
+ Q_{r,k}=\frac{M_{r,k-1}M_{r,k+1}}{M_{r,k}^2},\qquad
+ B_{r,k}=\frac{F_{r,k-1}F_{r,k+1}}{F_{r,k}^2}.
+\end{equation}
+The normalization telescopes:
+\begin{align}
+ B_{r,k}
+ &=\prod_{j=0}^{r-1}
+ \frac{(2k+2j+2)(2k+2j+1)}{(2k+2j)(2k+2j-1)}\notag\\
+ &=\frac{(2k+2r)(2k+2r-1)}{2k(2k-1)}. \label{eq:B}
+\end{align}
+Consequently
+\begin{equation}
+ D_{r+1,k}=\frac{D_{r,k}^2}{D_{r-1,k}}
+                  \left(1-\frac{Q_{r,k}}{B_{r,k}}\right),
+ \qquad D_{r+1,k}>0\ \Longleftrightarrow\ Q_{r,k}<B_{r,k}.
+ \label{eq:exactsign}
+\end{equation}
+The last inequality is exactly the next determinant's sign condition.
+It is a reformulation, not an estimate acquired by the program.
+For fixed $r$, $B_{r,k}=1+2r/k+O_r(k^{-2})$: the permitted excess
+over one shrinks at large coefficient index.
+
+\subsection{A stronger comparison with a quantitative payoff}
+
+The selected sufficient comparison is
+\begin{equation}
+ Q_{r,k}\le G_{r,k}:=\frac{2k+2r-1}{2k-1}. \label{eq:G}
+\end{equation}
+It leaves $B_{r,k}/G_{r,k}=(k+r)/k$. Hence, whenever the lower-order
+positivity assumptions hold,
+\begin{equation}
+ D_{r+1,k}\ge\frac{r}{k+r}\frac{D_{r,k}^2}{D_{r-1,k}}>0.
+ \label{eq:payoff}
+\end{equation}
+At the pilot order $r=3$, $D_{2,k}>0$ follows independently from
+$h_2=1$, and the neighboring $D_{3,k}$ are positive by
+\eqref{eq:realpositive}. No order-four sign is needed to derive this
+conditional implication.
+
+\begin{hypothesis}[Pointwise Gaussian curvature envelope]\label{hyp:gaussian}
+For the unchanged canonical theta source at physical heat time zero,
+\begin{equation}
+ \mathcal C_3(s)\le\kappa_3(s),\qquad
+ \kappa_r(s):=\sum_{j=0}^{r-1}\sum_{\nu=0}^\infty
+                    (s+j+\tfrac12+\nu)^{-2},\qquad s\ge0.
+ \label{eq:hypothesis}
+\end{equation}
+\end{hypothesis}
+This hypothesis remains unproved. Its role is a specific, falsifiable
+sufficient estimate; neither its statement nor an exact physical
+representation supplies evidence for its validity.
+
+\begin{proposition}[The pilot implication]
+Hypothesis~\ref{hyp:gaussian} implies, for every integer $k\ge1$,
+\begin{equation}
+ Q_{3,k}\le\frac{2k+5}{2k-1},\qquad
+ D_{4,k}\ge\frac{3}{k+3}\frac{D_{3,k}^2}{D_{2,k}}>0.
+ \label{eq:pilot}
+\end{equation}
+\end{proposition}
+\begin{proof}
+For a twice differentiable function $L$,
+\[
+ L(k-1)+L(k+1)-2L(k)
+ =\int_{k-1}^{k+1}(1-|s-k|)L''(s)\dd s.
+\]
+Apply this to $L=\log M$. For $b=k+j+1/2+\nu>1$, the corresponding
+summand of the integral of $\kappa_r$ is
+$\log\bigl(b^2/(b^2-1)\bigr)$. The product over $\nu$ telescopes,
+and then the product over $j$ telescopes, giving
+\begin{equation}
+ \int_{k-1}^{k+1}(1-|s-k|)\kappa_r(s)\dd s
+ =\sum_{j=0}^{r-1}\log\frac{k+j+1/2}{k+j-1/2}
+ =\log G_{r,k}. \label{eq:triangle}
+\end{equation}
+The series is positive and convergent, justifying integration termwise.
+Exponentiation proves the first assertion; \eqref{eq:payoff} proves the
+second.
+\end{proof}
+
+The logical hierarchy is important:
+\[
+ \text{pointwise curvature envelope}
+ \ \Longrightarrow\ \text{integrated Gaussian comparison}
+ \ \Longrightarrow\ \text{next-order positivity}.
+\]
+A failure of the first condition would not refute the second, and a
+failure of the second would not refute order-four positivity. At $k=1$
+the required integration interval is exactly $[0,2]$; neither negative
+Mellin tilts nor negative-index moments enter.
+
+\subsection{Why the comparator is Gaussian}
+
+For the comparison source $\Phi_G(u)=e^{-au^2}$, $a>0$,
+\[
+ c_n^G=c_0^G\frac{t^n}{n!},\qquad
+ c_0^G=\frac{\sqrt\pi}{2\sqrt a},\qquad t=\frac1{4a}.
+\]
+Factoring the reciprocal-factorial matrix into falling factorials gives
+\begin{equation}
+ D^G_{r,k}=(c_0^G)^r t^{rk}
+                  \prod_{j=0}^{r-1}\frac{j!}{(k+j)!}. \label{eq:gaussD}
+\end{equation}
+The derivative ratios are monic polynomials of degree $i$ in $R$,
+so $h_r^G=1$. Equivalently, changing variables to $u_j^2$ in the
+positive Vandermonde-squared integral yields
+\begin{equation}
+ M_r^G(s)=C_{r,a}\,a^{-rs}
+                 \prod_{j=0}^{r-1}\Gamma(s+j+\tfrac12),
+ \qquad C_{r,a}>0. \label{eq:gaussM}
+\end{equation}
+Thus $(\log M_r^G)''=\kappa_r$ and $Q^G_{r,k}=G_{r,k}$.
+This is an exact normalization check. Theta has a different tail and a
+signed insertion; Gaussian equality does not prove its upper bound.
+
+\subsection{Why association alone cannot supply the budget}
+
+The exact relaxation in \evid{M1} uses two values $q=1,128$, base
+weights $128,1$, and increasing observable values $h=1,2$. It has
+\[
+ Z(s)=128+128^s,\qquad M(s)=128+2\cdot128^s,\qquad A(s)=M(s)/Z(s).
+\]
+Association holds, $A$ is positive and increasing, and $Z$ is a positive
+moment function. Nevertheless,
+\begin{equation}
+ \frac{M(0)M(2)}{M(1)^2}=\frac{16705}{576}>28=B_{3,1}>7=G_{3,1}.
+\end{equation}
+These assumptions do not even ensure the weaker factorial budget.
+The example is a relaxation of available information: it is not the
+canonical source, not a derivative-determinant construction, and not
+a Toeplitz counterexample. It identifies the need for additional
+theta-specific structure.
+
+\section{Eight physical investigations of the same observable}
+\label{sec:physical}
+
+The branches offer different ways to expose structure in the same
+source and signed integral. A positive state space, probability law,
+or channel is useful only if its controlled quantity can be connected
+to the original determinant or to \eqref{eq:curvature}.
+Table~\ref{tab:branches} gives the conceptual division of work. The
+numbering agrees with the investigation folders.
+
+\begin{table}[htbp]
+\centering\small
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{\textwidth}{@{}p{.07\textwidth}>{\raggedright\arraybackslash}p{.28\textwidth}X@{}}
+\toprule
+Branch & Viewpoint & Quantity or structure to be understood\\
+\midrule
+01 & Circle thermal trace & Complete source and its spectral derivatives.\\
+02 & Fermionic correlators & Signed overlaps and all finite occupation amplitudes.\\
+03 & Connected Mellin response & Complete logarithmic curvature and saddle localization.\\
+04 & Biorthogonal ensembles & Positive carrier with its signed insertion retained.\\
+05 & Schur and Toda structure & Coefficient identities, evolution, and oscillator geometry.\\
+06 & Topological field theory & Whether the required insertion is protected.\\
+07 & Donaldson--Witten / Vafa--Witten & A specific four-dimensional source dictionary and boundary response.\\
+08 & Open quantum dynamics & Conditional evolution realizing the same signed amplitudes.\\
+\bottomrule
+\end{tabularx}
+\caption{The shared target is a signed comparison; the branches organize different mathematical interfaces to it.}
+\label{tab:branches}
+\end{table}
+
+\subsection{01: a circle thermal trace supplies the exact source}
+
+A particle on a circle of circumference $2\pi$, with Hamiltonian
+$L=-\pi\,d^2/dx^2$, has energies $\pi m^2$. Its thermal trace is
+$\Tr e^{-\beta L}=\vartheta(\beta)$. Combining this with
+\eqref{eq:primitive} gives
+\begin{equation}
+ \Phi(u)=\beta^{1/4}\Tr\left[
+   \bigl(\beta^2L^2-\tfrac32\beta L\bigr)e^{-\beta L}\right],
+ \qquad \beta=e^{4u}. \label{eq:thermal}
+\end{equation}
+For $u\ge0$, the spectral filter is positive on every nonzero mode;
+the zero mode is annihilated. This reconstructs the complete source,
+including both terms of \eqref{eq:source}, without an arithmetic
+truncation.
+
+The thermal description suggests energy cumulants and source identities.
+Its limitation is equally precise: differentiating the source and
+forming $\Delta_r$ does not turn the derivative orbitals into identical
+vectors. The accepted branch assessment retains a signed cumulant
+residual. Positivity of the thermal trace alone does not control the
+Mellin response \evid{P1}.
+
+\subsection{02: fermions express determinants as amplitudes}
+
+On $L^2((0,\infty),du)$ take the real orbitals
+\begin{equation}
+ f_i(u)=\frac{\Phi^{(2i)}(u)}{\sqrt{\Phi(u)}},\qquad
+ g_{k,j}(u)=\frac{u^{2(k+j)}\sqrt{\Phi(u)}}{(2(k+j))!}.
+\end{equation}
+Their pairing is $\ip{f_i}{g_{k,j}}=c_{k+j-i}$ by \eqref{eq:ibp}.
+The canonical anticommutation relations therefore give
+\begin{equation}
+ D_{r,k}=\bra{0}a(f_{r-1})\cdots a(f_0)
+                  a^\dagger(g_{k,0})\cdots a^\dagger(g_{k,r-1})\ket{0}.
+ \label{eq:fermion}
+\end{equation}
+Equivalently this is the inner product of two Slater wedges.
+The annihilator order fixes the determinant sign. The elementary
+fermion identities and Schur-function connections are discussed in
+\cite{AlexandrovZabrodin2013}; the theta orbitals are the local
+construction \evid{M3,P2}.
+
+The two wedges differ, so the amplitude is not a squared norm. A
+positive Hilbert-space metric yields a Cauchy--Schwarz magnitude bound,
+not its sign. With $b_j=u^{2j}\sqrt\Phi$, let $\ket{F_r}=f_0\wedge\cdots\wedge f_{r-1}$
+and $\ket{B_r}=b_0\wedge\cdots\wedge b_{r-1}$. The same construction gives
+$M_r(s)=\bra{F_r}e^{s\widehat T}\ket{B_r}$, where
+$\widehat T=2\sum\log u_j$ acts by multiplication. The logarithmic
+derivatives are connected \emph{cross} matrix elements, not ordinary
+positive-state variances.
+
+There is also one bounded lattice model encoding every finite minor.
+On $\ell^2(\N_0)$ let $S\ket0=0$ and $S\ket j=\ket{j-1}$. For $v>0$,
+\begin{equation}
+ K_v=\frac{F(vS)}{F(v)},\qquad \|K_v\|\le1,
+ \quad
+ \bra I\Gamma(K_v)\ket J=
+ \frac{v^{\sum J-\sum I}}{F(v)^r}\det[c_{j_b-i_a}].
+ \label{eq:transfer}
+\end{equation}
+Here $I,J$ are increasing occupation lists of the same length $r$,
+and $\Gamma(K_v)$ is the direct sum of its exterior powers, with
+vacuum amplitude $+1$. The norm bound follows from $c_n\ge0$ and
+$\|S\|=1$. Nonnegativity of all these ordered amplitudes is exactly
+the coefficient condition in \eqref{eq:rh}, not a weaker replacement.
+
+On $\operatorname{span}\{\ket0,\ket1\}$ the transfer has a nonzero
+Jordan off-diagonal $vc_1/F(v)$ and repeated diagonal $c_0/F(v)$.
+It cannot be made self-adjoint by a positive definite inner product on
+that invariant block. This rules out that particular Hermitian
+interpretation of $K_v$; it does not rule out total positivity or a
+larger Hermitian environment \evid{P2}.
+
+\subsection{03: the curvature is a connected response}
+
+The Mellin branch treats $s$ as a source for $T$ and asks directly for
+the connected response \eqref{eq:curvature}. It is the analytical
+consumer of the other descriptions. Its completed local saddle
+calculation resolves cancellations in the derivative determinant and
+identifies a three-particle Gaussian limit. Section~\ref{sec:saddle}
+states the resulting full-integral obligation. A local model by itself
+does not establish a curvature bound on any complete tail \evid{P3}.
+
+\subsection{04: a positive ensemble with a signed insertion}
+
+The carrier in \eqref{eq:carrier} is a biorthogonal ensemble. In the
+full orthant set
+\[
+ a_i(u)=u^{2i+s}\sqrt{\Phi(u)},\qquad
+ b_i(u)=R(u)^i u^s\sqrt{\Phi(u)},\qquad 0\le i<r.
+\]
+The product of the two orbital determinants is $w_{r,s}$, and its
+normalized full-orthant density is $w_{r,s}/(r!Z_r(s))$.
+If $H_{ij}=\int a_i b_j$, then $\det H=Z_r(s)>0$.
+The correlation kernel is
+\[
+ \mathsf K(x,y)=\sum_{i,j}a_i(x)(H^{-1})_{ji}b_j(y).
+\]
+Its determinantal particle correlations describe a positive ensemble
+\cite{Borodin1998,DesrosiersForrester2006}. The target remains
+$M_r=Z_r\E h_r$: it has an insertion that the ensemble's positivity
+does not sign.
+
+Source integration by parts suggests Ward identities, meaning exact
+relations among responses induced by a change of integration variables.
+The worked dilation identity in \evid{P4} retains derivatives of the
+insertion and leaves a mixed response unbounded. The selected finite
+polynomial closure fails in its stated class. This is useful information
+about that closure, not an exclusion of every ensemble estimate.
+
+\subsection{05: Schur algebra, Toda identities, and a bosonic state}
+
+Define formal times by
+\begin{equation}
+ \frac{F(w)}{c_0}=\exp\left(\sum_{m\ge1}t_mw^m\right).
+\end{equation}
+This is a formal logarithm near zero, not a global zero-free logarithm.
+Jacobi--Trudi gives
+\begin{equation}
+ D_{r,k}=c_0^r s_{(k^r)}(\mathbf t), \label{eq:schur}
+\end{equation}
+where $(k^r)$ is a rectangle with $r$ rows and $s_\lambda$ is the
+Schur function at this specialization. Desnanot--Jacobi is the
+associated bilinear determinant relation. Schur positivity at an
+arbitrary formal specialization is not automatic; representation
+dimensions cannot be substituted for \eqref{eq:schur}.
+
+Source heat, $\Phi_\tau=e^{\tau u^2}\Phi$, has exact coefficient flow
+\begin{equation}
+ \partial_\tau c_n(\tau)=(2n+2)(2n+1)c_{n+1}(\tau).
+ \label{eq:sourceheat}
+\end{equation}
+The branch's finite-prefix nonclosure result says that the tested
+rectangular-ratio flow cannot be determined from just a fixed finite
+coefficient prefix over its stated larger class of sources. It does
+not exclude an identity using the full theta source \evid{P5}.
+
+A second construction is the normalizable one-oscillator state
+\begin{equation}
+ \ket{\psi_\theta}=\mathcal N^{-1}
+       \sum_{n\ge0}\sqrt{(2n)!}\,c_n\ket{2n},\qquad
+ \mathcal N^2=\int_0^\infty\!\int_0^\infty
+                 \Phi(u)\Phi(v)\cosh(uv)\dd u\dd v<\infty.
+\end{equation}
+Its Bargmann function is $F(z^2)/\mathcal N$; hence the zero-location
+question in \eqref{eq:rh} becomes confinement of its stellar zeros to
+the imaginary axis. The associated Husimi probability is nonnegative
+for every state; its zero confinement is the substantive condition.
+The stellar terminology follows \cite{ChabaudMarkhamGrosshans2020}.
+For the unnormalized state
+$\chi_\tau=\sum_{n\ge0}\sqrt{(2n)!}c_n(\tau)\ket{2n}$,
+\eqref{eq:sourceheat} gives $\partial_\tau\chi_\tau=a^2\chi_\tau$,
+where $a$ is the bosonic annihilation operator. This equality holds on
+the actual analytic-vector orbit for each finite real $\tau$. It is not unitary squeezing:
+the adjoint creation term is absent. The proposed attenuated
+implementation remains a separate physical question \evid{M2,P5}.
+
+\subsection{06: protection must apply to the actual insertion}
+
+Supersymmetric or topological language is valuable when a symmetry
+protects the observable being studied. In circle de Rham quantum
+mechanics, take $H=\pi\Delta$, $Q=\sqrt\pi\,d$, and form degree $N$.
+The excited degree-fugacity supertrace is
+\begin{equation}
+ \Tr\bigl((-1)^N y^N P_{\rm exc}e^{-\beta H}\bigr)
+        =(1-y)(\vartheta(\beta)-1).
+\end{equation}
+At $y=1$ the protected excited supertrace vanishes. Recovering theta
+requires its response, with insertion $\mathcal O=-NP_{\rm exc}$.
+It obeys $[Q,\mathcal O]=Q$, so that insertion is not protected.
+The same operation that would erase the unprotected response would
+erase the source needed for the coefficient problem \evid{P6}.
+This is a concrete supersymmetric model and a scoped failure of a
+protection argument; it is not a Donaldson-invariant identification.
+
+\subsection{07: four-dimensional theories and a completed anomaly}
+
+The Donaldson--Witten investigation first tested a specified
+$\mathcal N=2$ dictionary on $\mathbb{CP}^2$. Selection rules and
+coefficient relations obstruct the tested protected-correlator match,
+including the extension by identity plus a finite odd polynomial of
+point insertions. This statement fixes the manifold, bundle, insertion
+family, and rescaling dictionary. It is not a no-go theorem for
+Donaldson theory \evid{G1}.
+
+A different construction uses the completed $\mathcal N=4$,
+$SO(3)$ Vafa--Witten partition function in the $w_2=0$ sector.
+The anomaly formula of Dabholkar--Putrov--Witten
+\cite[eq.~(2)]{DabholkarPutrovWitten2020} is
+\begin{equation}
+ \partial_{\bar\tau}Z_0
+ =\frac{3}{16\pi i\,y^{3/2}\eta(\tau)^3}
+                 \sum_{m\in\mathbb Z}\bar q^{m^2},
+ \qquad y=\operatorname{Im}\tau,\quad q=e^{2\pi i\tau}.
+\end{equation}
+Take the antiholomorphic derivative before restricting to
+$\tau=i\beta/2$. The normalized response
+\begin{equation}
+ \mathcal A(\beta)=\frac{16\pi i}{3}(\beta/2)^{3/2}
+ \eta(i\beta/2)^3
+ \left.\partial_{\bar\tau}Z_0\right|_{\tau=i\beta/2}
+ =\vartheta(\beta) \label{eq:anomaly}
+\end{equation}
+recovers the complete integer-square sum. Physical normalization and
+orientation qualifications remain those recorded in \evid{G1}; the
+explicit mathematical completion fixes the convention here.
+
+Its completed coupling Mellin period is
+\begin{equation}
+ \mathcal X_{\rm VW}(z)=\frac12+\frac{z(z-1)}4
+ \int_1^\infty[\mathcal A(\beta)-1]
+       [\beta^{z/2}+\beta^{(1-z)/2}]\frac{d\beta}{\beta}
+ =\xi(z). \label{eq:period}
+\end{equation}
+The equality follows by splitting the theta Mellin integral at one
+and using theta inversion. It is a nonlocal transform over coupling,
+not an equality with a local protected correlator. The zero-mode
+subtraction and additive $1/2$ preserve the values at $z=0,1$.
+The anomaly derivative removes holomorphic contributions, so their
+counting interpretation does not by itself transmit an inequality to
+the extracted response.
+
+The subsequent bounded Ward analysis expresses the same signed
+determinant through differentiated boundary fluxes and leaves
+\begin{equation}
+ MM''-(M')^2-\kappa_3M^2
+\end{equation}
+uncontrolled. It gains no comparison interval. That particular route
+is parked; other identities or dictionaries remain outside the
+assessment \evid{G2}.
+
+\subsection{08: conditional open-system dynamics}
+
+The transfer $K_v$ in \eqref{eq:transfer} can be studied as a
+conditional no-jump evolution. Where it is invertible, its generator is
+\begin{align}
+ G(v)&=K_v'K_v^{-1}
+      =SF'(vS)F(vS)^{-1}-\frac{F'(v)}{F(v)}I,\notag\\
+ R(v)&=-\bigl(G(v)+G(v)^\dagger\bigr),\qquad
+ H(v)=\tfrac i2\bigl(G(v)-G(v)^\dagger\bigr).
+ \label{eq:nj}
+\end{align}
+If $R(v)\ge0$, then $G=-iH-R/2$ admits a loss realization.
+On fermionic sectors, a quadratic Hamiltonian $d\Gamma(H)$ and linear
+loss operators with summed quadratic rate $d\Gamma(R)$ give the
+no-count propagator $\bigwedge^r K_v$. Averaging all jump records
+produces density-matrix evolution; it is a different object from the
+selected conditional amplitude. This distinction is standard in the
+quantum-trajectory description \cite{CastinDalibardMolmer08054002v1}.
+
+The latest completed MC08 construction proves admissibility on
+$0\le v\le1/25$, a finite-mode count instrument with an explicit
+collision-limit error, a coherent readout retaining the amplitude's
+sign, and a compatible vacuum-Fock extension. Its separate assessment
+is same-model internal LLM review with shared premises \evid{O1}.
+The microscopic limit is taken at fixed mode cutoff with fresh
+environment modes. It is not an exact finite-resource laboratory
+implementation, a bounded full-Fock generator theorem, or a new
+determinant inequality.
+
+An additional actual-theta argument in \evid{O2} rules out preservation
+of the fixed nonnegative ordered occupation cone on \emph{every
+intermediate activity interval}, already in the three-particle sector.
+Its status is proof-author checking, with separate verification pending
+in the inspected record. It does not produce a negative theta endpoint
+minor or close the open-system program. Moreover,
+\begin{equation}
+ A_{3,k}(v)=\bra{0,1,2}\Gamma(K_v)\ket{k,k+1,k+2}
+          =\frac{v^{3k}}{F(v)^3}D_{3,k}
+\end{equation}
+implies the exact cancellation
+\begin{equation}
+ \frac{A_{3,k-1}(v)A_{3,k+1}(v)}{A_{3,k}(v)^2}
+ =\frac{D_{3,k-1}D_{3,k+1}}{D_{3,k}^2}. \label{eq:activity}
+\end{equation}
+Changing activity alone does not change this ratio. A useful dynamics
+argument must add a source-dependent inequality, not infer it from
+complete positivity or conditional normalization.
+
+\section{The most explicit remaining analytical task: localization}
+\label{sec:saddle}
+
+The connected-response calculation \evid{P3} offers a concrete
+large-$s$ route. It also shows the distinction between a plausible
+local model and a global estimate. Let
+\begin{equation}
+ s=2\pi a e^{4a},\qquad t=\pi e^{4a},\qquad
+ \sigma^2=\frac{a^2}{2s(1+4a)},\qquad u_j=a+\sigma x_j,
+ \label{eq:scales}
+\end{equation}
+with $a>0$. The exponent $E_s(u)=2s\log u-\pi e^{4u}$ has its
+stationary point at $a$, with $-E_s''(a)=\sigma^{-2}$.
+
+For the complete signed density $f_s$ in \eqref{eq:twocopycurv}, set
+\begin{align}
+ K(s)&=(2e^at^2)^3e^{3E_s(a)}(256at^2)^3\sigma^9,\notag\\
+ \rho_s(\mathbf x)&=K(s)^{-1}\sigma^3
+             f_s(a+\sigma x_1,a+\sigma x_2,a+\sigma x_3),\notag\\
+ \mathcal D_s&=\{-a/\sigma<x_1<x_2<x_3\}. \label{eq:rhos}
+\end{align}
+On every fixed ordered box, the accepted local limit is
+\begin{equation}
+ \rho_s(\mathbf x)\longrightarrow
+ \rho_G(\mathbf x)=e^{-\frac12\sum x_j^2}V(\mathbf x)^2.
+ \label{eq:local}
+\end{equation}
+The factor $\sigma^9$ includes three powers from volume and six from
+the two Vandermondes. It matters: replacing every moment entry by its
+leading scalar asymptotic can leave a rank-one matrix and erase the
+leading determinant. The divided-difference calculation resolves this
+cancellation before estimating the integral.
+
+Let $G_0=2(2\pi)^{3/2}$ be the ordered Gaussian integral, and define
+\begin{equation}
+ Y_s=\frac a\sigma\sum_j\log(1+\sigma x_j/a),\qquad
+ I_p(s)=G_0^{-1}\int_{\mathcal D_s}Y_s^p\rho_s\dd\mathbf x,
+ \quad p=0,1,2.
+\end{equation}
+These are complete \emph{signed} integrals, with $I_0=M/(G_0K)>0$.
+Centering $T$ algebraically at each fixed $s$ gives the exact identity
+\begin{equation}
+ \mathcal C_3(s)=\frac{2}{s(1+4a)}
+       \left(\frac{I_2}{I_0}-\left(\frac{I_1}{I_0}\right)^2\right).
+ \label{eq:susceptibility}
+\end{equation}
+This does not differentiate an uncontrolled asymptotic remainder.
+
+\begin{lemma}[A sufficient tail payment]
+If, for every $s\ge S\ge4\pi e^8$, one proves
+\begin{equation}
+ I_0(s)\ge\tfrac12,\qquad I_2(s)\le6, \label{eq:payments}
+\end{equation}
+then $\mathcal C_3(s)\le\kappa_3(s)$ on that tail.
+\end{lemma}
+\begin{proof}
+The nonnegative square in \eqref{eq:susceptibility} gives
+$\mathcal C_3\le24/[s(1+4a)]$. The threshold implies $a\ge2$ and
+$s\ge20$, while
+$\kappa_3(s)\ge\sum_{j=0}^2(s+j+1/2)^{-1}\ge3/(s+5/2)$.
+Finally $24/(9s)\le3/(s+5/2)$ for $s\ge20$.
+\end{proof}
+
+The lemma proves an implication, not its theta hypotheses. In the
+fixed box $\mathcal B_{12}=\{-12\le x_1\le x_2\le x_3\le12\}$,
+write $I_p=A_p+B_p$, where $B_p$ is the full complementary integral.
+One sufficient set of bounds is
+\begin{equation}
+ A_0\ge\tfrac34,\qquad A_2\le4,\qquad
+ B_0\ge-\tfrac14,\qquad B_2\le2. \label{eq:fourpayments}
+\end{equation}
+The first two follow eventually from the fixed-box limit, without an
+effective threshold in the existing result. The last two remain
+unproved. They include configurations with just one or two nodes far
+from the saddle, the negative origin-side region, and all spatial
+tails. A bound on the source along a common ray does not cover these
+relative integrals.
+
+The Gaussian source of \eqref{eq:gaussM} and the Gaussian node density
+of \eqref{eq:local} are different comparisons. The former gives an
+exact all-$s$ curvature; the latter is a local asymptotic of theta.
+Neither implies full-domain convergence in the other setting.
+Even a proof of \eqref{eq:payments} on an explicit tail would leave
+$[0,S]$, especially $[0,2]$, to be controlled.
+
+\section{What the subinvestigations must preserve and establish}
+\label{sec:obligations}
+
+\subsection{Parameters and observables}
+
+\begin{table}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\textwidth}{@{}p{.16\textwidth}X@{}}
+\toprule
+Parameter & Meaning and required distinction\\
+\midrule
+$r,k$ & Determinant size and coefficient index; arbitrary-order induction requires both quantifiers.\\
+$d,n$ & Jensen degree and shift; they are not $r,k$.\\
+$s$ & Real Mellin tilt of the complete determinant integral.\\
+$u,\beta$ & Source coordinate and inverse temperature, related by $\beta=e^{4u}$.\\
+$\tau$ & Source-heat parameter in \eqref{eq:sourceheat}; in Section 5.7 only, the conventional complex gauge coupling.\\
+$v$ & Transfer activity in \eqref{eq:transfer}; not a Mellin or source-heat parameter.\\
+\bottomrule
+\end{tabularx}
+\caption{Parameter changes need an explicit bridge to the target observable.}
+\end{table}
+
+Each new estimate should identify its exact source, normalization,
+domain, and lower-order positivity assumptions. In particular, replacing
+an amplitude by its squared modulus, replacing $h$ by $|h|$, or
+retaining only a positive carrier changes the target. Such quantities
+may still be useful, but they need a proved comparison back to the
+original signed expression.
+
+There are two legitimate kinds of progress. A mathematical advance
+proves a new bound on a stated domain, resolves a limiting or boundary
+obligation, or excludes a precisely defined mechanism. A physical
+advance gives a useful exact model, instrument, or observable dictionary.
+The latter need not yet improve positivity, but its value should be
+stated in those terms. The eight branches have achieved several
+results of the second kind and several scoped obstructions; the
+global Gaussian comparison remains open.
+
+\subsection{Controls test premises, not labels}
+
+The repository control inventory and methodological index
+\evid{C1,C2} impose a claim-specific screen. Applied to the present
+program, it has the following content.
+\begin{itemize}
+\item The Gaussian source checks normalization and the equality case.
+It has $h_r=1$ and is not the canonical theta source.
+\item The two-point relaxation retains association and increasing
+averages but fails the canonical derivative-determinant realization.
+It disproves an association-only deduction, not the theta hypothesis.
+\item Euler-factor controls preserve positivity and evenness but change
+arithmetic reconstruction. Their curvature comparison is untested here;
+a positive-time collision alone does not refute this time-zero pilot.
+\item Weighted-square and finite-prime perturbations alter the canonical
+weights. In the relevant finite-endpoint constructions they also fail
+full reflection, so finitely many matched endpoints cannot justify
+\eqref{eq:ibp} at every order.
+\item Reflected super-Gaussian and smooth positive-primitive controls
+can preserve substantial shape information while failing literal theta
+reconstruction. Generic determinant and response identities may survive;
+no uncomputed sign is assigned to their quantitative comparison.
+\item The polynomial $F_*(w)=1+w+2w^2$ has positive coefficients and
+a contraction transfer, but $c_1^2-c_0c_2=-1$. MC08's checked local
+completion retains this negative two-fermion amplitude. Generic channel
+positivity therefore cannot supply ordered amplitude positivity.
+\end{itemize}
+Merely naming the complete theta source excludes these modified sources
+at the level of identity. It is not yet a proof that a proposed
+inequality uses enough of that identity to distinguish them.
+
+\subsection{The order-four pilot is not yet an induction theorem}
+
+A successful pilot would prove \eqref{eq:pilot} for all $k\ge1$,
+with the anchor handled separately. To iterate, the program needs a
+corresponding estimate for every arbitrary finite $r$. Constants may
+depend on $r$; a finite list of orders is insufficient. If the continuous
+route is used, one additionally needs $M_r(s)>0$ for all required real
+tilts, not just integer $s$.
+
+The accepted order-three monotonicity cannot simply be reused at order
+four. The next insertion introduces $g_3=\Phi^{(6)}/\Phi$, and a
+canonical separated-node obstruction to unchanged $h_4$ coordinatewise
+monotonicity is recorded in the sibling signed-averaging assessment
+\evid{J3}. That obstruction does not prove a negative integrated
+average. A discrete proof of \eqref{eq:G} could avoid the extra
+real-interpolation premise, and an integrated comparison could survive
+a failure of the pointwise envelope.
+
+The immediate analytical task is therefore well defined: obtain one
+complete-source bound on the signed response, with every compact,
+endpoint, mixed-node, and tail contribution accounted for. The source
+identities and physical descriptions explain where such information
+might come from. The missing estimate is the step that would turn those
+representations into an order-raising argument.
+
+\appendix
+\section{Repository source guide and evidence status}
+\label{sec:sources}
+
+This manuscript synthesizes the investigation README, its research
+overview, and the records below. Paths in the first list are relative to
+\path{papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/}.
+The accompanying integration note contains exact paths and input hashes.
+The individual research-progress registers remain authoritative for task
+status after this dated draft.
+
+\begin{description}[style=nextline,leftmargin=2.5em]
+\item[\evid{J1}] Jensen Note14, \emph{Higher order signed averaging and radial
+flow feasibility}, 1 November 2026, in \path{../notes/}. It supplies the
+all-order integral, endpoint conventions, strict-minor bridge, and
+scope of possible continuations. Same-assistant analytical checking.
+\item[\evid{J2}] Jensen Review01, \emph{Global sign certificate and
+signed-averaging assessment}, in \path{../reviews/}. Accepts the complete
+source signs and order-three normalized index comparison. Same-assistant
+and same-model internal checking with inherited premises; no specialist review.
+\item[\evid{J3}] Jensen Review02, \emph{Parallel branch evaluation review},
+in \path{../reviews/}, together with the sibling signed-averaging
+initial return. Records the scoped canonical $h_4$ monotonicity obstruction.
+\item[\evid{M1}] \path{notes/01_INITIAL_BRANCH_EVALUATION_20261101.md}.
+Exact factorial budget, real-tilt extension, Gaussian comparison,
+two-point relaxation, and endpoint/tail requirements. Internally checked
+in the parent comparative assessment.
+\item[\evid{M2}] \path{notes/06_PARALLEL_PHYSICAL_DIRECTIONS_SYNTHESIS_20261101.md}
+and \path{reviews/01_PARALLEL_PHYSICAL_DIRECTIONS_ASSESSMENT_20261101.md}.
+Six completed physical assessments and their separately checked scopes.
+Conceptual authors: gpt-6-astra/ultra; separate reviewers:
+gpt-6.1-sol/ultra. These are internal LLM reviews, not specialist validation.
+\item[\evid{M3}] \path{notes/04_FERMIONIC_CORRELATORS_AND_PHYSICAL_INTERPRETATIONS_20261101.md}.
+The elementary orbital, ensemble, and Schur dictionaries. Same-assistant
+checking; later branch results take precedence over its early status wording.
+\end{description}
+
+The branch identifiers below refer to their local Note01 and separate
+Review01, unless a later record is specified. Each branch folder contains
+the full bibliography routes, derivations, limits, and progress register.
+\begin{description}[style=nextline,leftmargin=2.5em]
+\item[\evid{P1}] \path{01_circle_thermal_trace/}: complete spectral filter and
+the residual in its proposed source comparison.
+\item[\evid{P2}] \path{02_fermionic_correlators/}: bounded all-sector transfer,
+normalizations, and the fixed-positive-metric Jordan obstruction.
+\item[\evid{P3}] \path{03_connected_mellin_response/}: complete signed saddle,
+$\sigma^9$ normalization, exact susceptibility, and unpaid global budgets.
+\item[\evid{P4}] \path{04_biorthogonal_ensembles/}: inserted Ward identity
+and the selected finite-polynomial-closure obstruction.
+\item[\evid{P5}] \path{05_schur_toda_structure/}: source-heat evolution,
+finite-prefix nonclosure, and the normalizable oscillator state.
+\item[\evid{P6}] \path{06_topological_field_theory/}: specified supersymmetric
+circle theory and its unprotected source response.
+\item[\evid{G1}] \path{07_donaldson_witten_theory/}, Notes01--02 and
+Reviews01--02: scoped $\mathcal N=2$ coefficient obstructions and the
+completed $\mathcal N=4$ anomaly dictionary. Separate cross-model
+internal LLM checking, with physical-normalization qualifications.
+\item[\evid{G2}] The same folder, Note03, \emph{Boundary Ward feasibility
+return}: unchanged signed residual and no new comparison domain.
+Proof-author checking only.
+\item[\evid{O1}] \path{08_open_quantum_dynamics/}, Notes01--03 and Review02,
+\emph{Open quantum dynamics assessment}: accepted local interval,
+instrument, readout, and convergence at stated scope. Separate same-model
+internal LLM assessment with shared inputs.
+\item[\evid{O2}] The same folder, Note04, \emph{Signed comparison decision},
+and Review03: scoped every-intermediate-interval cone obstruction and
+activity cancellation. Proof-author checking only; separate E04
+verification pending in the inspected register. Note05 preserves the
+subsequent broader discussion without a new proved estimate.
+\end{description}
+
+Two repository-wide guides govern interpretation:
+\begin{description}[style=nextline,leftmargin=2.5em]
+\item[\evid{C1}] \path{result-summaries/README.md}, especially cluster 12,
+\emph{Collision controls and screening}, and cluster 14,
+\emph{Theta identities and arithmetic bookkeeping}. These route to the
+actual proofs and certificates; their summaries do not certify results.
+\item[\evid{C2}] \path{avoid/README.md}, especially patterns 01
+(target reformulation), 02 (control premises), 07 (scoped exclusions),
+12 (joint signed estimates), 13 (a factor is not the target), and 19
+(status files that lag the findings).
+\end{description}
+
+\section*{Acknowledgements and preparation}
+This manuscript was drafted for Edward Baker with substantial assistance
+from OpenAI's Codex, using the recorded model \texttt{gpt-6-astra} at
+reasoning effort \texttt{max}. The assistance included source synthesis,
+exposition, algebraic consistency checks, and typesetting. The underlying
+research has the distinct model and review provenance recorded in its
+source files. The present manuscript received proof-author consistency
+and layout checking, not independent mathematical or specialist review.
+No historical novelty claim is made for the classical identities or the
+physical formulations assembled here.
+
+\bibliographystyle{plainurl}
+\bibliography{manuscript_references}
+\end{document}

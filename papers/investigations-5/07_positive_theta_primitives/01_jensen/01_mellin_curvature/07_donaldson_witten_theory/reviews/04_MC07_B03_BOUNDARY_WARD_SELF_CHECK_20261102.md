@@ -1,0 +1,20 @@
+# MC07-B03 boundary Ward return: same-assistant self-check
+
+2 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, actual **gpt-6-astra / xhigh**. The author of the [return](../notes/03_BOUNDARY_WARD_FEASIBILITY_RETURN_20261102.md) performed this check in the same turn. It is not a separate model assessment, specialist review or MC07-E03 execution.
+
+**Disposition: the saved return supports a scoped stop without a new bound.** Its conclusion is an information-sufficiency assessment of two selected identities and one worked route. It neither disproves the Mellin comparison nor excludes other gauge-theoretic methods.
+
+The analytical check covered:
+
+- **Boundary factors.** Multiplying N, C and U gives unity times the full theta sum: the two minus signs, i² and phase exp(pi i) give a positive product; the remaining constants are 16/(sqrt(8)*4*sqrt(2))=1. The powers of y and eta cancel. The mathematical completion fixes the physical orientation and measure convention inherited from Return02.
+- **Derivative operator.** Substituting beta=exp(4x) gives partial_x=4D. Conjugation by beta^(1/4) shifts D to D+1/4. The operator in (3) differentiates KU as a whole and reaches order six at i=2. No prefactor derivative is discarded.
+- **Flux polynomial recurrence.** For any integer k>=0, applying L twice to t^k gives t^(k+2)-(2k+3/2)t^(k+1)+(k+1/4)^2 t^k. Applying this to 2t²-3t gives the displayed P1; direct rational substitution gives P1(4)=-291/4 and P0(4)=20. P2 is fixed by the same recurrence. This is hand-checked algebra, not a scan or numerical certificate.
+- **Determinant and integration.** The row factors give 16^(0+1+2)=16³, and the column factors give the product of beta_j^(1/4). Multilinearity includes all independent positive flux triples and does not justify a determinant square. Polynomial-Gaussian domination, smoothness at x=0 and double-exponential upper tails justify the stated sums, integrations and two tilt derivatives for sigma>=0.
+- **Residual identity.** Expanding one-half of (T(x)-T(y))² gives I0 I2-I1². The Gaussian budget contributes -kappa I0². Dividing by M² gives the same complete curvature as Return02, with the negative covariance square retained. Real-tilt positivity of M is an inherited result at the source's existing review scope, not proved anew here.
+- **Physical import.** DPW Sections 4.3–4.4, PDF (4.21),(4.32),(4.37)–(4.38), were checked in the version-pinned primary HTML, corresponding to (66),(77),(82)–(83). They supply the graded trace and evaluated boundary response. No theorem about the sign of the new Mellin residual is present in the inspected identities. No extension to an arbitrary inserted local Ward identity is claimed.
+
+The control table separates the exact-source premise from derivative identities shared by weighted square sums. It claims no new estimate that could be tested on colliding sources. The first comparison interval [0,2] and the unbounded tail remain unproved by this work. The new sign example is only a failure of termwise positivity for a derivative contribution.
+
+The decisive stopping statement in the return is: “MC07-B03 completes with a surviving uncontrolled term, not a new bound.” Repeating its residual formula is not an additional research step. Reopening requires a concrete additional estimate or identity controlling the full signed expression; no numerical E contract or further conceptual task is issued here.
+
+This follows the [result index](../../../../../../../result-summaries/README.md) and [avoid index](../../../../../../../avoid/README.md), especially [target reformulation](../../../../../../../avoid/01_restating_the_target.md), [same-model independence](../../../../../../../avoid/05_same_model_reviews_and_shared_premises.md), [scoped exclusions](../../../../../../../avoid/07_scoped_exclusions_read_as_universal.md), and [normalizations](../../../../../../../avoid/08_normalization_and_constant_slips.md). Artifact integrity and local-link checks are recorded separately in the completion record; they do not certify the mathematics.

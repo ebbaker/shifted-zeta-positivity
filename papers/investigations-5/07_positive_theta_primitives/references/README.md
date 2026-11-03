@@ -58,3 +58,34 @@ The existing NISTDLMF catalog entry now records selected primary-passage checks 
 ## Six physical assessments, 1 November 2026
 
 [Selected source checks](07_PARALLEL_PHYSICAL_ASSESSMENT_SOURCES_20261101.md) record Gaussian-ensemble conventions for MC03, stellar/Bargmann conventions for MC05, and limited Witten1982 background inspection for MC06, each with its application limits. The [reading-copy receipts](PDF_RECEIPTS_PARALLEL_PHYSICS_20261101.json) record one newly archived public PDF and the failed Witten retrieval. Prepared for Edward Baker with substantial LLM assistance, actual gpt-6-astra / ultra.
+
+[Donaldson Witten assessment sources](08_DONALDSON_WITTEN_ASSESSMENT_SOURCES_20261101.md): MC07 primary-passage checks, [retrieval receipts](PDF_RECEIPTS_DONALDSON_WITTEN_20261101.json), K3 structure and the CP2 u-plane candidate. 1 November 2026; for Edward Baker with substantial LLM assistance, gpt-6-astra / ultra.
+
+[Vafa Witten continuation sources](09_VAFA_WITTEN_CONTINUATION_SOURCES_20261101.md), [PDF receipts](PDF_RECEIPTS_VAFA_WITTEN_CONTINUATION_20261101.json): MC07-B02 primary-passage checks for the related N4 completion/anomaly candidate. 1 November 2026, for Edward Baker with substantial LLM assistance, gpt-6-astra / ultra.
+
+## Vafa–Witten RH literature review, 2 November 2026
+
+[Source checks](10_VAFA_WITTEN_RH_LITERATURE_SOURCES_20261102.md) add Zagier1975, Manschot2018 and JohnstonMales2022 and extend four existing records. [The review](../01_jensen/01_mellin_curvature/07_donaldson_witten_theory/reviews/03_VAFA_WITTEN_RH_LITERATURE_REVIEW_20261102.md) distinguishes established identities from an explicit synthesis whose priority is unestablished. [PDF receipts](PDF_RECEIPTS_VAFA_WITTEN_RH_LITERATURE_20261102.json) record three external reading copies. For Edward Baker with substantial LLM assistance, gpt-6-astra / xhigh. No new Mellin bound.
+
+## Fermionic continuous evolution discussion, 2 November 2026
+
+[Selected primary-source checks](11_FERMIONIC_EVOLUTION_SOURCES_20261102.md) add Fomin–Zelevinsky on positive planar paths, Chin on one-dimensional Gaussian fermion propagator signs, and Robinson on unitary dilations. [The discussion note](../01_jensen/01_mellin_curvature/brainstorm/notes/01_CONTINUOUS_V_EVOLUTION_AND_HERMITIAN_SCOPE_20261102.md) derives the v generator and distinguishes fixed-metric obstructions from enlarged-system realizations. [PDF receipts](PDF_RECEIPTS_FERMIONIC_EVOLUTION_20261102.json) retain external reading-copy provenance. Prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / xhigh; no theta sign estimate or new branch milestone.
+
+## Open quantum dynamics planning, 2 November 2026
+
+[Source record 12](12_OPEN_QUANTUM_DYNAMICS_SOURCES_20261102.md) adds Lindblad foundation metadata, Castin–Dalibard–Mølmer quantum trajectories, Prosen quadratic fermions, and Rivas–Huelga–Plenio CP-divisibility conventions. [The MC08 overview](../01_jensen/01_mellin_curvature/08_open_quantum_dynamics/research-overview/01_OPEN_QUANTUM_DYNAMICS_RESEARCH_OVERVIEW_20261102.md) keeps conditional amplitudes, reduced density matrices and signed consumers distinct. [Reading-copy receipts](PDF_RECEIPTS_OPEN_QUANTUM_DYNAMICS_20261102.json) record successful and unsuccessful retrievals. For Edward Baker with substantial LLM assistance, gpt-6-astra / xhigh; planning only.
+
+## MC08 architecture rechecks, 2 November 2026
+
+[Branch inspection record](../01_jensen/01_mellin_curvature/08_open_quantum_dynamics/references/01_MC08_B01_SOURCE_RECHECKS_20261102.md) records further selected passages of the existing trajectory, quadratic-fermion and CP-divisibility sources. Three catalog entries gain follow-up provenance; no article, BibTeX entry or PDF is added. For Edward Baker with substantial LLM assistance, actual **gpt-6-astra / max**. Source record 12 remains the unchanged E01 input.
+
+## MC08 signed-comparison decision, 2 November 2026
+
+[Selected cone-source check](../01_jensen/01_mellin_curvature/08_open_quantum_dynamics/references/02_MC08_B02_CONE_SOURCE_20261102.md) adds Margaliot–Sontag v2 to the canonical catalog and BibTeX, with an external PDF receipt. This attributes the differential-system obstruction used by B02; it supplies no theta endpoint-sign conclusion. For Edward Baker with substantial LLM assistance, actual **gpt-6-astra / xhigh**.
+
+## MC08 relation discussion, 2 November 2026
+
+[Primer05](../01_jensen/01_mellin_curvature/08_open_quantum_dynamics/notes/05_MATHEMATICAL_RELATION_BRAINSTORM_20261102.md#6-discussion-recommendation-evidence-and-model-changes) records selected-passage rechecks of the existing Katkova, Castin–Dalibard–Mølmer and DLMF entries. The catalog preserves their original versions and PDF provenance; no new article or PDF. For Edward Baker with substantial LLM assistance, actual **gpt-6-astra / xhigh**. Discussion only, no new signed estimate.
+
+
+[13 — Mellin background source reinspection](13_MELLIN_BACKGROUND_SOURCE_RECHECK_20261102.md), 2 November 2026, gpt-6-astra / max, for Edward Baker with substantial LLM assistance: selected existing Griffin–Ono–Rolen–Zagier, Katkova and Dabholkar–Putrov–Witten passages rechecked for the background manuscript. Existing canonical entries and PDF provenance are retained.

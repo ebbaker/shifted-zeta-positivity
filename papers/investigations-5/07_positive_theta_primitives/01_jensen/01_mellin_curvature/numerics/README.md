@@ -13,3 +13,7 @@ J-E10 preparation, 1 November 2026, for Edward Baker with substantial LLM assist
 1 November 2026, for Edward Baker with substantial LLM assistance; coordinator gpt-6-astra / ultra, separate reviews gpt-6.1-sol / ultra.
 
 [Frozen launch record](PARALLEL_PHYSICAL_LAUNCH_RECORD_20261101.json) and [completion/check record](PARALLEL_PHYSICAL_COMPLETION_RECORD_20261101.json). Input/output hashes, actual settings and scoped verification; no numerical campaign.
+
+[Overall brainstorm continuation check](J_E11_OVERALL_BRAINSTORM_CONTINUATION_RECORD_20261101.json) records J-E11 documentation preparation, protected-input and link checks. No numerical research. 1 November 2026; prepared for Edward Baker with substantial LLM assistance, gpt-6-astra / ultra.
+
+[MC07 completion record](../07_donaldson_witten_theory/numerics/MC07_COMPLETION_RECORD_20261101.json) records the additional Donaldson–Witten assessment and separate review. No numerical campaign. 1 November 2026; Astra / ultra coordinator, Sol / ultra reviewer, for Edward Baker with substantial LLM assistance.

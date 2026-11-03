@@ -7,6 +7,17 @@ LLM assistance: **gpt-6-astra (Codex)**, reasoning effort **ultra**.
 
 ## Summary
 
+- **Vafa–Witten boundary Ward check (5/07, 2 November 2026).**
+  [MC07-B03 Return03](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/07_donaldson_witten_theory/notes/03_BOUNDARY_WARD_FEASIBILITY_RETURN_20261102.md)
+  records a **scoped stop without a new bound**: “MC07-B03 completes with a
+  surviving uncontrolled term, not a new bound.” The selected boundary identity,
+  including normalization derivatives, reproduces a signed flux determinant
+  and its full two-copy Mellin residual. No comparison interval is gained;
+  this is not an exclusion of other gauge-theoretic methods.
+  [Self-check04](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/07_donaldson_witten_theory/reviews/04_MC07_B03_BOUNDARY_WARD_SELF_CHECK_20261102.md)
+  is by the same assistant, **gpt-6-astra / xhigh**, for Edward Baker with
+  substantial LLM assistance; no separate or specialist review.
+
 These are exact source identities, auxiliary positivity theorems and scoped
 obstructions. Some normalized arithmetic laws identify theta itself; this
 corrects the earlier blanket assertion that every identity here is shared
@@ -777,3 +788,15 @@ infinitely many nonreal zeros outside every fixed strip. Endpoint recentering al
 fails by its first odd derivative. **Proved in-note; same-assistant analytical self-check,
 no independent or specialist review** ([assessment](../papers/investigations-5/05_radial_theta_collision_geometry/reviews/CHAT0053_SOURCE_TRANSPORT_OBSTRUCTION_SELF_ASSESSMENT_20261031.md)).
 Other source flows and the physical theta noncollision problem are outside this result.
+
+
+**1 November 2026 — Four-dimensional Donaldson assessment.** Prepared for Edward Baker with substantial LLM assistance; gpt-6-astra / ultra, separate gpt-6.1-sol / ultra checking. [MC07 return](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/07_donaldson_witten_theory/notes/01_DONALDSON_WITTEN_FEASIBILITY_RETURN_20261101.md) recovers the complete source from a normalized CP2 SU(2) flux response before modular integration. It states: “the proposed protected-invariant match fails already for the rank-one coefficient sequence.” The selected p=0 inserted correlator has a forced missing z-squared coefficient; the normalized theta coefficient is positive. K3’s projected Donaldson series realizes the Gaussian comparator. [Separate review](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/07_donaldson_witten_theory/reviews/01_MC07_E01_SEPARATE_REVIEW_20261101.md) accepts these scopes with minor notation/control-hypothesis clarifications. No protected-invariant RH formula, new Mellin domain or universal TQFT exclusion.
+
+
+**2 November 2026 — Vafa–Witten continuation.** For Edward Baker with substantial LLM assistance; Astra / ultra author, separate Sol / ultra checking. [MC07 Return02](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/07_donaldson_witten_theory/notes/02_POINT_INSERTIONS_AND_VAFA_WITTEN_ANOMALY_RETURN_20261101.md), accepted at stated scope, without correction in [Review02](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/07_donaldson_witten_theory/reviews/02_MC07_E02_SEPARATE_REVIEW_20261101.md), proves the coefficient obstruction for identity plus any finite odd point-polynomial in the selected N=2 CP2 dictionary. In a distinct N=4 theory, the normalized completed SO(3), w2=0 CP2 anomaly equals Theta; its completed Mellin period equals xi. The return states: “No new Mellin comparison estimate is obtained.” Exact derived reformulation, not a protected local-correlator identity, constructive-QFT theorem or novelty claim. Physical normalization caveats remain explicit; no specialist review.
+
+
+**2 November 2026 — MC08-B02 scoped intermediate-cone stop.** Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra / xhigh**. [Decision04](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/08_open_quantum_dynamics/notes/04_SIGNED_COMPARISON_DECISION_20261102.md) is **proved in-note with proof-author checking only** ([Self-check03](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/08_open_quantum_dynamics/reviews/03_MC08_B02_STOP_SELF_CHECK_20261102.md)); separate E04 verification is ready, unstarted. It states: “The unchanged theta evolution cannot preserve the nonnegative ordered occupation cone on every intermediate activity interval, already in the three-particle sector.” Opposite CAR signs force a Gaussian generating function in that class; complete theta tails exclude it. An explicit remainder pays the existential finite intermediate witness. The original neighboring ratio is exactly activity-independent after both success factors are restored. No negative theta endpoint minor, new ratio bound, Mellin range or general open-system exclusion follows. The established E01/E02 realization is retained. [Continuation05](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/08_open_quantum_dynamics/research-progress/handoffs/05_MC08_B02_DECISION_AND_MODEL_CONTINUATION_20261102.md) freezes analytical verification only.
+
+
+**2 November 2026 — Mellin background manuscript integration.** For Edward Baker with substantial LLM assistance, **gpt-6-astra / max**. The [background manuscript](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/manuscript/main.tex) consolidates the signed-average baseline, exact order-raising budget, six physical assessments and later MC07/MC08 findings. [Production self-check](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/reviews/02_BACKGROUND_MANUSCRIPT_SELF_CHECK_20261102.md): “Exposition does not change any result's evidence status.” The Gaussian comparison remains unproved; the local open-system realization and narrower proof-author-checked intermediate-cone obstruction remain distinct. This is a source-navigation milestone, not a new mathematical result.

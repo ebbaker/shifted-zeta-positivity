@@ -1,5 +1,18 @@
 # Order induction through signed Mellin curvature
 
+## Background manuscript
+
+2 November 2026, for Edward Baker with substantial LLM assistance; **gpt-6-astra / max**.
+The [background manuscript](manuscript/main.tex) gives a self-contained account of the
+source, Jensen/PF destination, signed averaging, Mellin curvature, Gaussian order-raising
+comparison and all eight physical branches. It incorporates the later MC07 Ward return
+and completed MC08 realization/scoped stop at their actual review status. The Gaussian
+comparison remains unproved. [Build and reading-copy instructions](manuscript/BUILD.md),
+[integration record](notes/10_BACKGROUND_MANUSCRIPT_INTEGRATION_20261102.md),
+[self-check](reviews/02_BACKGROUND_MANUSCRIPT_SELF_CHECK_20261102.md), and
+[draft history](DRAFT_HISTORY.md) preserve the evidence and version trail.
+
+
 1 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance. Actual recorded model **gpt-6-astra (Codex)**, reasoning effort **xhigh**. Folder setup: **J-E07**, organization only.
 
 This direction asks whether a quantitative comparison between neighboring coefficient indices can carry positivity from determinant order three to order four, and eventually support induction in the order. The proposed tool is the curvature of the logarithm of a complete signed Mellin integral. It retains the positive and negative contributions of the theta observable together.
@@ -10,7 +23,9 @@ This direction asks whether a quantitative comparison between neighboring coeffi
 
 1 November 2026, for Edward Baker with substantial LLM assistance; coordinator gpt-6-astra / ultra, separate reviews gpt-6.1-sol / ultra.
 
-[Coordinator assessment](reviews/01_PARALLEL_PHYSICAL_DIRECTIONS_ASSESSMENT_20261101.md) checks all six frozen returns; [Synthesis06](notes/06_PARALLEL_PHYSICAL_DIRECTIONS_SYNTHESIS_20261101.md) is the current continuation. The exact fermionic and oscillator RH formulations, unprotected supersymmetric response, local Gaussian limit and scoped failures are accepted internally. No new domain of the Mellin comparison is proved. Primary next task is MC03-B02; MC05-B02 is the deferred physical fallback. Both are unstarted. Local registers remain canonical.
+[Coordinator assessment](reviews/01_PARALLEL_PHYSICAL_DIRECTIONS_ASSESSMENT_20261101.md) checks all six frozen returns; [Synthesis06](notes/06_PARALLEL_PHYSICAL_DIRECTIONS_SYNTHESIS_20261101.md) records the results and technical candidates. The exact fermionic and oscillator RH formulations, unprotected supersymmetric response, local Gaussian limit and scoped failures are accepted internally. No new domain of the Mellin comparison is proved. **Overall planning entry point:** the author-requested [overall brainstorm in Continuation07](notes/07_CONTINUATION_OVERALL_PHYSICS_BRAINSTORM_20261101.md), explaining the three connected pairs and comparing the analytical and physical goals before selecting technical work. MC03-B02 and MC05-B02 remain unstarted candidates; local registers remain canonical. Continuation preparation: J-E11, 1 November 2026, gpt-6-astra / ultra, for Edward Baker with substantial LLM assistance.
+
+**Additional four-dimensional work:** [07 Donaldson–Witten / Vafa–Witten](07_donaldson_witten_theory/README.md) now includes the separately checked author-requested continuation. The N=2 failure extends to a specified point-insertion family; a related N=4 completed anomaly gives exact theta recovery and an RH Mellin-period reformulation. Read [Addendum09](notes/09_VAFA_WITTEN_CONTINUATION_AND_BRAINSTORM_ADDENDUM_20261102.md) after Continuation07/Addendum08. [MC07-B03](07_donaldson_witten_theory/notes/03_BOUNDARY_WARD_FEASIBILITY_RETURN_20261102.md) completed its bounded Ward check with a surviving signed residual and no new bound; this specific route is parked. Same-assistant checking, gpt-6-astra / xhigh. Overall J-B10 planning remains available. No new Mellin comparison domain.
 
 ## Issued parallel packet: historical preparation
 
@@ -32,6 +47,8 @@ The Jensen register owns aggregate J-B10. The six local registers own `MC01-` th
 | [04 Biorthogonal ensembles](04_biorthogonal_ensembles/README.md) | Positive carrier as a particle ensemble, with the signed determinant observable inserted. | Exact statistical-mechanics representation. Carrier positivity and determinantal particle correlations do not sign the insertion. |
 | [05 Schur and Toda structure](05_schur_toda_structure/README.md) | Rectangular Schur specialization, fermionic currents and bilinear determinant relations. | Algebraic counterpart to the ensemble description; additional theta constraints remain to be found. |
 | [06 Topological field theory](06_topological_field_theory/README.md) | Possible cohomological symmetry, protected observables or geometric realization. | Exploratory. Witten/Donaldson theory is a model for the question; no Donaldson-invariant identification is established. |
+| [07 Donaldson Witten theory](07_donaldson_witten_theory/README.md) | N=2 CP2/K3 dictionary and N=4 completed Vafa–Witten anomaly. | Checked point-insertion family obstruction and exact anomaly Mellin-period RH reformulation; no new Mellin bound. |
+| [08 Open quantum dynamics](08_open_quantum_dynamics/README.md) | Continuous theta transfer, conditioned fermionic evolution, Lindblad generators and Hermitian environments. | New author-requested MC08 planning; [local register](08_open_quantum_dynamics/research-progress/01_OPEN_QUANTUM_DYNAMICS_RESEARCH_PROGRESS_20261102.md) owns readiness and results. |
 
 The circle and fermionic folders separate **source spectrum** from **many-body observable**. The ensemble and Schur/Toda folders separate **integration and correlations** from **coefficient algebra**. The Mellin-response folder states what a successful input must estimate. The topological folder records the additional geometric construction that would be needed for a protected-invariant interpretation.
 
@@ -44,7 +61,7 @@ These are candidate approaches, not six established estimates. Apply the [result
 
 1 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, actual **gpt-6-astra / xhigh**. Preparation task **J-E08**, documentation only.
 
-**J-B10 has completed the six-direction assessment packet; the joint Mellin estimate remains open.** Start with [Synthesis06](notes/06_PARALLEL_PHYSICAL_DIRECTIONS_SYNTHESIS_20261101.md) and the [current overview](research-overview/01_MELLIN_CURVATURE_RESEARCH_OVERVIEW_20261101.md). The [original continuation](notes/02_CONTINUATION_MELLIN_CURVATURE_20261101.md) and [research plan r1](research-plan/01_MELLIN_CURVATURE_RESEARCH_PLAN_20261101.md) remain historical evidence. The sibling task is independent; file ownership and serialized shared-register updates remain in force.
+**J-B10 has completed the six-direction assessment packet; the joint Mellin estimate remains open.** Start the requested overall planning session with [Continuation07](notes/07_CONTINUATION_OVERALL_PHYSICS_BRAINSTORM_20261101.md) and the [current overview](research-overview/01_MELLIN_CURVATURE_RESEARCH_OVERVIEW_20261101.md). The [original continuation](notes/02_CONTINUATION_MELLIN_CURVATURE_20261101.md) and [research plan r1](research-plan/01_MELLIN_CURVATURE_RESEARCH_PLAN_20261101.md) remain historical evidence. The sibling task is independent; file ownership and serialized shared-register updates remain in force.
 
 ## Problem and normalization
 
@@ -111,7 +128,7 @@ Use the [result index](../../../../../result-summaries/README.md), especially [t
 
 | Folder | Use |
 | --- | --- |
-| [notes](notes/README.md) | Preserved initial brief, completed J-B06 assessment, and future numbered derivations. Synthesis06 is the current continuation; Continuation05 and Notes03–04 preserve the issued packet and exploratory background. The six local Return01 files and separate reviews are linked from the coordinator assessment. |
+| [notes](notes/README.md) | Preserved initial brief, completed J-B06 assessment, and future numbered derivations. Synthesis06 records the six-branch results; Addendum09 is the current physical continuation; Continuation05 and Notes03–04 preserve the issued packet and exploratory background. The six local Return01 files and separate reviews are linked from the coordinator assessment. |
 | [numerics](numerics/README.md) | Code and small records after a fixed execution contract exists. |
 | [reviews](reviews/README.md) | Assessments of work specific to this direction; existing shared reviews stay at Jensen level. |
 | [research-overview](research-overview/README.md) | Navigation to this problem statement and the shared Jensen overview. |
@@ -125,3 +142,7 @@ Historical branch02 is now housed here; task IDs J-B06 and J-B10 retain their id
 [Explanatory brainstorm, 1 November 2026](notes/03_IDEAS_AND_POSSIBLE_ROUTES_20261101.md) records the first route discussion, preliminary h3<1 deduction and exact one-dimensional moment representation. The Gaussian curvature comparison remains unproved.
 
 [Physical interpretations, Note04](notes/04_FERMIONIC_CORRELATORS_AND_PHYSICAL_INTERPRETATIONS_20261101.md) follows the author’s field-theory question; exact representations are distinguished from an unproved physical sign mechanism.
+
+## Open quantum dynamics continuation
+
+2 November 2026, for Edward Baker with substantial LLM assistance; actual gpt-6-astra / xhigh. [MC08 overview](08_open_quantum_dynamics/research-overview/01_OPEN_QUANTUM_DYNAMICS_RESEARCH_OVERVIEW_20261102.md) and [sole progress register](08_open_quantum_dynamics/research-progress/01_OPEN_QUANTUM_DYNAMICS_RESEARCH_PROGRESS_20261102.md) organize the author-requested continuous-time, Lindblad and Hermitian-environment investigation. MC02 supplies the reviewed amplitude representation; MC08 owns its open-system dynamics. This is a planning addition, with no new signed estimate or automatic branch execution. The current brainstorm chat and notes retain their existing homes.

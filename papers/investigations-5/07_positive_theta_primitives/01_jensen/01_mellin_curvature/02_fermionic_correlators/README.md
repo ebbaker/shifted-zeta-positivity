@@ -60,3 +60,7 @@ The [primary-source record](../../../references/06_PHYSICAL_INTERPRETATION_SOURC
 [MC02-B01 Return01](notes/01_THETA_ORBITAL_COMPARISON_RETURN_20261101.md) gives an exact bounded lattice-fermion transfer formulation with all-minor RH quantifiers and an actual two-site obstruction to a self-adjoint transfer interpretation. It proves no new Mellin estimate. **gpt-6-astra / ultra**; separate review pending in the sole local register.
 
 **Checked assessment, 1 November 2026:** [separate review](reviews/01_MC02_E01_SEPARATE_REVIEW_20261101.md) accepted at its stated scope; the [local register](research-progress/01_FERMIONIC_CORRELATORS_RESEARCH_PROGRESS_20261101.md) owns current status. Six-direction [synthesis](../notes/06_PARALLEL_PHYSICAL_DIRECTIONS_SYNTHESIS_20261101.md). No Gaussian Mellin bound is acquired.
+
+## Open quantum dynamics follow-up
+
+2 November 2026, for Edward Baker with substantial LLM assistance; actual gpt-6-astra / xhigh. [08 Open quantum dynamics](../08_open_quantum_dynamics/README.md) owns the new continuous-v, Lindblad, quantum-trajectory and Hermitian-environment questions. It uses this folder’s reviewed transfer and fixed-metric obstruction as inputs. MC02 task identities and frozen returns remain unchanged; new readiness and results live only in the MC08 register.
