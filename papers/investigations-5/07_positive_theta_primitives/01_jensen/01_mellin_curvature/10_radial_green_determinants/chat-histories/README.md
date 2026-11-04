@@ -34,3 +34,46 @@ local registry owns current capture metadata. No other registration was
 moved or duplicated. Completed public text is refreshed with the official
 tool; the bounded exact-turn follow-up captures the final reply after it
 is recorded. Native completion-hook activation is not assumed.
+
+4 November 2026 E04/E03 addition, actual **gpt-6.1-sol / ultra**:
+[chat0003](0003_2026-11-04T16-58-10Z_assess-rgd-e04-derivation.json),
+thread `01a1a77f-2607-7832-9902-29399c58b442`, assesses Note01 and completes
+the authorized two-case diagnostic after acceptance. Both cases are
+favorable floating results; no certificate is claimed. The model-change
+handoff preserves this chat identity if the session continues. The
+registry owns current counts, times, models and hashes; no other archive
+was relocated or renumbered. Official refresh and bounded exact-turn
+capture are used while native-hook activation remains unverified.
+
+E02 continuation in the same chat0003, 4 November 2026, **Sol/ultra**:
+the author's follow-up authorized freezing and executing Packet04. Both
+rigorous lower allowances are now certified; E04 r2 is the next manual
+assessment. The number, filename, creation identity and earlier public
+messages remain unchanged. No additional registration was created.
+
+E04 r2 continuation in the same chat0003, 4 November 2026, **Sol/ultra**:
+all eight certificate checks accepted without correction. The author also
+requested a parallel Astra task suggestion; a bounded B03 preparation
+brief is saved, without launching that work or changing the chat identity.
+Full order extension remains gated. Official refresh preserves all earlier
+public messages and the same unique archive registration.
+
+4 November 2026, chat0002 continuation, actual **gpt-6-astra / max**:
+the author-requested B03 preparatory phase is recorded in Note05 and
+Scope07/Packet08. The same chat0002 identity is refreshed, not imported
+again. Sol's chat0003 and its accepted E04 r2 record remain distinct.
+
+E02 r2 continuation in the same chat0003, 4 November 2026, **Sol/ultra**:
+Packet08 was verified from the existing accepted dyadics, closing the
+fixed (4,1) >3e-31 consequence with no new integration. This executing
+chat retains its unique registration; the originating Astra preparation
+remains chat0002. Model-change guidance at that return was Packet09. No chat
+identity, filename or earlier message prefix was copied or replaced.
+
+4 November 2026, chat0002 planning continuation, **gpt-6-astra / max**:
+the author requested that the plan prioritize the overall induction
+mechanism and index-dependent error control, with numerics only for
+hypothesis tests. Plan r2 and [Packet10](../research-progress/handoffs/10_RGD_B03_R2_INDUCTION_INDEX_ERROR_AND_MODEL_CONTINUATION_20261104.md)
+now guide continuation. Sol had completed its parallel work before the
+shared-file revision. This same registered chat records the change;
+all conversation identities and earlier public messages are preserved.

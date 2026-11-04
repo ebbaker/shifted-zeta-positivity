@@ -34,3 +34,40 @@ and its execution handoff, not a full literature audit.
   fixed E03 diagnostic. The executing session must record its installed
   version. This documentation supplies no interval certification and no
   numerical calculation was run in B01.
+
+## E02 rigorous acquisition API inspection
+
+4 November 2026. Prepared for Edward Baker with substantial LLM assistance;
+actual **gpt-6.1-sol (Codex), effort ultra**, chat0003.
+
+- [python-flint acb.integral](https://python-flint.readthedocs.io/en/latest/acb.html#flint.acb.integral),
+  documentation labeled 0.9.0, and the installed method docstring: inspected
+  the callback analytic flag, exact endpoint usage, tolerance goals and
+  work-limit options. E02's integrand is entire, as proved in Note03.
+- [python-flint arb](https://python-flint.readthedocs.io/en/latest/arb.html):
+  inspected interval semantics, outward upper/lower/abs_upper endpoints,
+  and exact midpoint/radius man_exp serialization. Decimal displays are
+  reading aids, not certificate decision values.
+- [FLINT author-hosted integration documentation](https://fredrikj.net/fdoc/html/acb_calc/integrate.html),
+  labeled 3.7.0-dev, generated October 2026: inspected the rigorous
+  enclosure contract, Gauss–Legendre/bisection route and distinction
+  between tolerance goals and returned enclosures. The canonical link
+  https://flintlib.org/doc/acb_calc/integrate.html was unavailable through
+  the web reader. The executed library is FLINT **3.6.0**, via python-flint
+  **0.9.0**; no claim of a 3.7 executable or full library audit is made.
+
+These are software-documentation inspections, not new research articles;
+no third-party PDF was downloaded or added. Note03 and the E02 certificate
+record the actual arithmetic versions, code/input hashes and trust limits.
+
+## E04 r2 actual-version control-flow inspection
+
+4 November 2026, **gpt-6.1-sol (Codex), effort ultra**, for Edward Baker
+with substantial LLM assistance, chat0003. Rechecked the python-flint
+0.9.0 integration/Arb documentation above and selected
+[FLINT v3.6.0 integration source](https://raw.githubusercontent.com/flintlib/flint/v3.6.0/src/acb_calc/integrate.c).
+The tagged source shows the direct enclosure, bounded Gauss–Legendre
+attempt, and addition of remaining enclosures when stopping. This adds
+an actual-version check alongside the prior 3.7.0-dev documentation;
+it is not a complete library or numerical-algorithm proof audit. No new
+paper/PDF, library installation or integration replay was introduced.

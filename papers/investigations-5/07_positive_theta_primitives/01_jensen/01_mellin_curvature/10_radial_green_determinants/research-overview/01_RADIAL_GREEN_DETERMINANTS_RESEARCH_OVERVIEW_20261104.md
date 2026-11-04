@@ -6,15 +6,16 @@ reasoning effort xhigh**. Originating chat
 01a1a455-6c1d-7aa2-9723-43ab36704924, setup turn
 01a1a741-0198-7d80-99a4-e15eaa63f818.
 
-**Status: exact foundation with an author-requested research plan r1.** The mathematical foundation is the
-exact radial Green and determinant derivation in
-[brainstorm Note06, Sections 1–6][n06], with same-assistant analytical
-and exact rational algebra checks. This overview organizes that foundation
-without claiming an additional sign estimate or a separate review.
-The initial setup deferred planning. The author requested the research-plan
-section and corresponding progress register on 4 November 2026; that
-addition below changes organization and proposed work, not mathematical
-status.
+**Current plan: [revision r2](#research-plan--revision-r2-4-november-2026),
+focused on the induction mechanism and error control as the index grows.**
+The inherited mathematical foundation is the exact radial Green and
+determinant derivation in [brainstorm Note06, Sections 1–6][n06], with
+same-assistant analytical and exact rational algebra checks. Subsequent
+finite comparison results and their review levels are recorded in the
+[sole progress register][progress]. The author-requested r2 revision
+changes research priorities, not the status of a mathematical claim.
+The original r1 plan and all frozen requests remain below or at their
+existing paths as historical evidence.
 
 ## Purpose and scope
 
@@ -342,7 +343,186 @@ The generic Green calculation does not separate these families.
 The source-specific information in the full canonical \(A\) remains
 available; no new bound using it is asserted in this overview.
 
+## Research plan — revision r2, 4 November 2026
+
+Prepared for **Edward Baker** with substantial LLM assistance; actual
+**gpt-6-astra (Codex), effort max**, chat0002, turn
+`01a1a7b4-0874-7401-9d01-11bf9930cad0`. **RGD-E01 r2: planning revision.**
+The author requested an emphasis on the induction mechanism, control of
+error with increasing index, and the structure of the overall argument.
+This revision changes priorities and future task contracts; it proves no
+new mathematical result. The [r1 plan](#research-plan--revision-r1-4-november-2026)
+and all issued packets remain historical records of their original scope.
+
+**Default next task: [B] RGD-B03 r2 — Astra: investigate the induction
+mechanism and its index-dependent error control.** This conceptual work
+is ready now. It does not wait for more low-order cases or another pilot
+assessment. The former workflow gate on investigating full B03 is
+superseded by the author's direction; an induction theorem remains open.
+The [sole register][progress] owns current evidence and readiness, and
+[Packet10][inductionhandoff] gives the current continuation/model guidance.
+
+### Overall argument to investigate
+
+The intended chain is: canonical theta structure supplies quantitative
+data; those data propagate an induction hypothesis from order r to r+1;
+the propagated margin dominates the complete error for every required k;
+the resulting determinant signs reach the parent conclusion through its
+explicitly justified implications. Establishing this chain is the main
+research objective. A sequence of additional finite certificates does
+not establish any of its missing general links.
+
+Retain the complete time-zero source, ordinary coefficients, negative-index
+zeros, exact b=1/16, and all Green boundary terms. The existing identity
+\[
+Q_{r,k}=D_{r,k}^2-D_{r,k-1}D_{r,k+1}
+=D_{r+1,k}D_{r-1,k},\qquad r\ge2,\quad k\ge1,
+\]
+specifies the consumer. Lower-order positivity alone does not sign Q.
+The research must identify the additional quantitative property that
+propagates; assuming Q>0 or D_(r+1)>0 as that property is circular.
+
+| Link in the argument | Required analytical output | Current gap |
+| --- | --- | --- |
+| Starting hypothesis | State an explicit H_r: lower-order signs plus the quantitative margin, source and error information actually needed at the next step; give its domain and a valid initialization | Existing pilots do not initialize an all-index quantitative invariant |
+| Order step | Derive H_(r+1) from H_r and independently justified canonical input, retaining enough quantitative information to apply the step again | Desnanot–Jacobi is an identity, not this propagation theorem |
+| Increasing index | Prove complete-error control against the determinant margin over the entire k-domain, with dependence on r displayed | The current entry-relative majorant is nonuniform in the moment index |
+| Closure of domains | Cover small k, k near r, and unbounded k with compatible estimates and no unproved gaps as r increases | Neither a fixed-k proof nor a fixed-r tail alone covers the full induction |
+| Final implication | Identify exactly which all-order determinant statement is obtained and check the parent's hypotheses for the passage to all required Toeplitz minors/Jensen conclusions | No all-order conclusion is supplied by this plan |
+
+For a comparison route, the operational objective is to derive an
+independently justified reference lower margin M_(r,k)>0 and a complete
+error allowance E_(r,k) with
+\[
+Q_{r,k}\ge M_{r,k}-E_{r,k}>0.
+\]
+This is a **proof obligation**, not a proposed new theorem or evidence for
+RH. If q* is used as the margin, its reference determinant signs and size
+must be proved without assuming the desired canonical next-order sign.
+The induction must also propagate the quantitative information needed at
+the following step; dividing by a positive D_(r-1),k alone does not do so.
+
+### RGD-B03 — induction and index growth r2
+
+**Primary attempt:** investigate whether a normalized determinant margin
+and the complete signed remainder admit a closed order-propagation law
+using the canonical primitive. Begin with the combined Q polynomial and
+the general comparison estimates in [Note05][prepnote], rather than a new
+list of cases. The first-mode comparison is an available candidate, not
+an assumption that it can support induction. Keep its exact joint
+cancellations before taking error bounds; track every nonlinear remainder.
+
+The attempt must resolve, or expose a precise obstruction to, these
+coupled questions:
+
+1. **What propagates?** Specify H_r and a proposed implication H_r =>
+   H_(r+1), including the quantitative output for reuse. Separate source
+   identities, established inputs and unproved estimates. If a stronger
+   invariant is necessary, identify how it could be initialized and
+   propagated rather than hiding the conclusion in its definition.
+2. **What pays the growing error?** Compare the complete signed error
+   with a justified margin as k increases, and track how that comparison
+   changes with r. Small coefficient errors are insufficient when
+   determinant cancellation amplifies them. Bound the relevant condition
+   factors or replace that auxiliary bound by a justified joint estimate.
+   Reference positivity and margin decay are part of this question.
+3. **Which quantifiers close?** Aim for every integer k>=1 at each
+   induction step. If a split at K(r) is used, give an analytical rule for
+   K(r), all constants and the joining argument. The portion k<K(r)
+   requires a mechanism valid as r grows, not an ever-growing table of
+   separately certified cases. A large-k asymptotic with uncontrolled
+   r-dependence is not enough. Include fixed small k as r grows and the
+   transition k near r; the three order-r boundary ranks are
+   max(r-k+1,0), max(r-k,0), max(r-k-1,0).
+4. **What closes the induction?** State the starting order and justified
+   initialization, the recurrence/inequality for the quantitative data,
+   and why it remains sufficient at every finite step. Explicit positive
+   slack may depend on r,k and tend to zero; a globally fixed slack is
+   not required unless the proposed proof needs it. Any real-parameter
+   extension is a separate obligation, not supplied by integer identities.
+
+Note05 proves that the fixed compact reference and its current tail vector
+cannot maintain a uniformly small entry-relative error at all moment
+indices. This is a central input to the mechanism investigation. It
+excludes that particular shortcut; it does not exclude the exact joint
+payment or all first-mode comparisons. Any change of reference, scaling,
+cutoff or tail estimate must explain analytically how it affects both the
+margin and the complete error. An index-dependent cutoff must pay every
+source/spatial remainder and any new boundary term it introduces.
+
+**Bound and completion:** one principal induction attempt, with at most
+one alternative if a named obstruction forces a choice. Return one note
+containing the overall implication chain, explicit H_r and propagation
+claim, complete r/k dependence, and a worked analytical attempt at its
+decisive estimate. Acceptable outcomes are a proved induction lemma, a
+partial derivation with the exact unresolved estimate and its domain, or
+a scoped obstruction to the attempted mechanism. Merely renaming the
+target, listing hoped-for lemmas, or adding low-order positive examples
+does not complete B03. Freeze a routine E02 proof task as soon as its
+route is fixed; issue a numerical E03 task only under the rule below.
+A material redesign beyond the bounded attempt returns to B02.
+
+### Numerical checks test hypotheses only
+
+All future numerical research, including numerical work inside E02 or
+E04, must serve a stated hypothesis about the induction mechanism or
+index-dependent error control. No further order/index certificate campaign
+is the default or a prerequisite. Existing exact data may be reused only
+for a discriminating question; their availability is not a reason to
+extend the list of low-order cases.
+
+Before implementation, a packet must name the hypothesis and its role in
+the overall proof, its predicted inequality or behavior, the finite cases
+chosen to distinguish outcomes, the arithmetic/error standard and work
+cap, and the analytical decision after a favorable, adverse or inconclusive
+result. For example, test whether a proposed remainder bound or condition
+factor scaling fails at a boundary transition; do not merely retest a
+determinant sign already covered by the known finite-order baseline.
+
+A favorable finite test supports further analysis of that hypothesis;
+it does not prove its unbounded range. A rigorously verified violation
+refutes the stated inequality on its domain; an inconclusive enclosure
+does not. Stop at the fixed test. Additional cases require a revised
+question, not automatic precision or range escalation. Exact symbolic
+identity checks remain verification of algebra, not positivity evidence.
+No numerical hypothesis test is issued by this planning revision.
+
+### Current task routing under r2
+
+The stable task IDs are retained. These rules supersede r1's future
+routing while preserving every completed result and frozen request.
+
+| Task | Type and recommended model | Readiness and purpose |
+| --- | --- | --- |
+| RGD-E01 r2 | E — Sol; documentation (actual revision Astra/max) | This author-requested plan/register revision only |
+| **RGD-B03 r2** | **B — Astra; induction invariant, margin propagation and index-error control are unresolved** | **Default next; ready for the bounded conceptual attempt above** |
+| RGD-E02, next revision | E — Sol; prescribed analytical derivation | Conditional on a B03/B02 packet specifying a general lemma, route, domain and closure test; no new packet issued here |
+| RGD-E03, next revision | E — Sol; bounded hypothesis testing | Conditional on the numerical rule above; no test or scan issued |
+| RGD-E04 r3 | E — Sol; assess the already completed finite application | Existing [Packet09][priorassessment] remains available as optional evidence maintenance; it is not the default or a gate on B03 |
+| RGD-B02 | B — Astra; repair a specific failed mechanism | Conditional on a named obstruction from the induction attempt or assessment; one bounded repair decision |
+| RGD-B01 and earlier E returns | Completed evidence | Preserve their results, limits and actual review relationships |
+
+Use [result summaries][results], especially [theta structure][thetaresults]
+and [collision controls][controls], with [avoid][avoid], particularly
+[target reformulations][a01], [joint estimates][a12], [numerics before a
+question][a10], [known-baseline tests][a11] and [scoped exclusions][a07].
+For each candidate, identify the quantitative premise actually obtained
+from canonical theta. Weighted-square controls change unit weights;
+Euler-factor controls change the source; reflected/smooth primitive
+controls lack its literal square expansion. Those differences do not
+establish failure of an untested margin inequality. Retain the time-zero
+scope: a positive-time collision alone is not a counterexample to it.
+
+**Next: [B] RGD-B03 r2 — Astra**, return the proposed induction mechanism,
+its index-error analysis, and the precise proof step that succeeds or
+fails. Model changes and execution follow the [root workflow][workflow];
+no model switch, dispatch or new numerical run is authorized by routing.
+
 ## Research plan — revision r1, 4 November 2026
+
+**Historical plan r1.** Its issued questions and results are preserved.
+[Revision r2](#research-plan--revision-r2-4-november-2026) supersedes its
+future priorities and numerical policy; use the live register for status.
 
 Prepared for **Edward Baker** with substantial LLM assistance; actual
 planning model **gpt-6-astra (Codex), effort xhigh**, chat
@@ -653,3 +833,8 @@ mathematical investigation from the earlier thermal interpretation.
 [a06]: ../../../../../../../avoid/06_status_stronger_than_the_evidence.md
 [a10]: ../../../../../../../avoid/10_numerics_ahead_of_the_question.md
 [a11]: ../../../../../../../avoid/11_certifying_the_known_and_tests_that_cannot_fail.md
+
+[prepnote]: ../notes/05_RGD_B03_PREPARATORY_ORDER_DEPENDENCE_20261104.md
+[inductionhandoff]: ../research-progress/handoffs/10_RGD_B03_R2_INDUCTION_INDEX_ERROR_AND_MODEL_CONTINUATION_20261104.md
+[priorassessment]: ../research-progress/handoffs/09_RGD_E04_R3_NEXT_ORDER_ASSESSMENT_AND_MODEL_CHANGE_20261104.md
+[a07]: ../../../../../../../avoid/07_scoped_exclusions_read_as_universal.md
