@@ -150,3 +150,18 @@ Historical branch02 is now housed here; task IDs J-B06 and J-B10 retain their id
 ## Separate source-overlap kernel investigation
 
 3 November 2026, for Edward Baker with substantial LLM assistance; actual **gpt-6.1-sol / ultra**. The author-requested [source overlap kernels folder](09_source_overlap_kernels/README.md) holds a [draft research overview](09_source_overlap_kernels/research-overview/01_SOURCE_OVERLAP_KERNELS_RESEARCH_OVERVIEW_20261103.md) of the source-state pairing, compact Cauchy kernel and exterior-product formula. It is separate from [open quantum dynamics](08_open_quantum_dynamics/README.md), where Hamiltonian and energy-interpretation work continues. The new overview contains no research-plan section, and no local plan or progress file has been created. Existing notes, task identities and the originating chat archive remain in place.
+
+## Radial Green determinant investigation
+
+4 November 2026, for Edward Baker with substantial LLM assistance; actual
+**gpt-6-astra / xhigh**. The author-requested
+[radial Green determinants folder](10_radial_green_determinants/README.md)
+holds an [initial research overview](10_radial_green_determinants/research-overview/01_RADIAL_GREEN_DETERMINANTS_RESEARCH_OVERVIEW_20261104.md)
+of the canonical primitive, symmetric determinant probes and complete
+boundary expansion derived in
+[brainstorm Note06](brainstorm/notes/06_RADIAL_GREEN_DETERMINANT_DERIVATION_20261104.md),
+Sections 1–6. This direction develops those equations without requiring
+the later thermodynamic interpretation. Physical interpretations remain
+open. The setup adds no research-plan section, task allocation or local
+research-progress file. The existing derivation, computations and
+originating chat0004 retain their present locations and evidence status.
