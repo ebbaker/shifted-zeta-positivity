@@ -1,0 +1,37 @@
+# MC08-E06 return and model-change continuation to B04
+
+3 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance; actual **gpt-6.1-sol (Codex), reasoning effort ultra**, chat `01a19fdd-4e1e-7061-9ec4-141ca78368ce`, turn `01a19fde-8bbc-7272-9992-861e1ce88b68`, unique brainstorm history **0002**.
+
+| Next task | Type | Recommended model | Readiness / dependency | Expected output |
+| --- | --- | --- | --- | --- |
+| **MC08-B04, default** | B — brainstorm | Astra: observation, energy and domain choices remain conceptual | Ready to consume E06 acceptance | One usable model/observation/energy specification, or a precise reason the two candidates do not yet meet it; bounded E07 request only if the route is fixed |
+| MC08-E07 | E — execution | Sol: execute the future fixed route | Reserved, no packet issued | Proof or precise scoped obstruction under B04's explicit domains, topology, cases and limits |
+| MC08-E04, separate option | E — execution | Sol: existing fixed analytical checks | Ready/unstarted under Handoff05; not performed by E06 | Accept/correct/gap for B02's scoped cone obstruction and response identity |
+
+## E06 result to carry forward
+
+[Handoff07 r1](07_MC08_E06_QUADRATIC_CLOCK_FULL_MODEL_R1_20261103.md) is complete, accepted at finite scope without correcting the five frozen inputs. [Assessment01](../../brainstorm/reviews/01_MC08_E06_QUADRATIC_CLOCK_ASSESSMENT_20261103.md) contains the recomputed input hashes, six dispositions and E02/E03 inheritance table. [Derivation05](../../brainstorm/notes/05_MC08_E06_QUADRATIC_CLOCK_DERIVATIONS_20261103.md) contains all proofs and N=0,1 exact hand algebra. This is different-model internal checking of Astra's Note03 with shared premises, not specialist independence.
+
+For every fixed finite N>=0, m=N+1, a>0 and 0<=t<=1/sqrt(25a), retain complete F and C=K_(at²,N). The block U=[[C,−E],[D,C†]] is a smooth unitary path from identity on m system plus m bath modes. Its normal-ordered Fock lift has exact vacuum block Gamma(C), and h_tot=iU'U† is continuous bounded on the mapped compact interval. The proof factors D=t sqrt(Q_D), E=t sqrt(Q_E), with Q_D(0)=Q_E(0)=aR_N(0)>0. Total number/parity are conserved. Reduced H_t(0)=0 coexists with nonzero startup exchange h_tot(0).
+
+The finite gap shrinks with N; no uniform infinite-generator estimate was proved. Nonlinear square roots do not become compatible cutoff restrictions. This alone does not disprove compatibility of reduced endpoint channels. The original reparameterized E02 instrument retains its proved Fock extension; the fixed-bath model does not automatically inherit it.
+
+Final bath-vacuum selection preserves signed amplitudes, both signal success p_J and flag success q_0=(1+p_J)/2, and phase +1. Partial trace sums all bath outcomes. The intermediate fixed-bath block C2 C1†+E2 E1 differs from C2 C1^(-1); quadratic startup does not reproduce the whole original monitored record. The original bounded-H product-vacuum startup exclusion retains its f'(0)>0 scope. f'(0)=0 alone is insufficient; at² is the particular successfully proved clock. Later repeated vacuum reset still meets the linear-versus-quadratic loss obstruction.
+
+General physical endpoint-channel equality is **unexecuted**, with its exact future comparison equation in Derivation05 (18). B04 must specify the even physical algebra versus any arbitrary odd extension and the transported tensor convention. The N=1 odd-coherence calculation distinguishes system-first partial trace from E02's bare odd-jump extension; it does not settle the even endpoint-channel question.
+
+## B04 contract to execute next
+
+Use the existing B04 r0 in the [sole live register](../01_OPEN_QUANTUM_DYNAMICS_RESEARCH_PROGRESS_20261102.md), under “Systematic quadratic-clock/full-model plan.” Compare only the existing fresh-vacuum stream and this accepted finite fixed bath in the first pass. Keep canonical coefficients, normalization and signed determinant observation fixed. State whether the essential observation is final signed vacuum amplitude, full physical endpoint channel, or the continuous record. Define clock, system/bath split, initial state, total Hamiltonian, trace/measurement and controlled reference. Separate source energy pi n², reduced H_t and driven total h_tot; specify which energy observable/response would be meaningful.
+
+Choose whether a finite-N pilot suffices. If an infinite-space assertion is essential, name one topology/domain and estimate or obstruction route before issuing E07; do not copy the finite gap proof or use E02 compatibility as a joint-bath theorem. If endpoint-channel equality is essential, make the operator algebra and (18) part of the selected bounded task. E07 needs explicit hypotheses, cases, work limit, evidence standard and stop condition. No general reservoir survey or automatic infinite proof is authorized by this handoff.
+
+The full B04 work limit remains one comparison pass and at most one clarified specification. A fundamentally different source-energy representation becomes an explicit B03 conceptual revision. No new signed estimate is implied by this model choice: the Gaussian and negative polynomial both pass generic completion/regularity, with their known signs retained. The polynomial fails canonical theta reconstruction.
+
+## For a model or chat change
+
+Read the [result index](../../../../../../../../result-summaries/README.md), especially [theta/bookkeeping](../../../../../../../../result-summaries/14_theta_identities_and_arithmetic_bookkeeping.md) and [controls](../../../../../../../../result-summaries/12_collision_controls_and_screening.md), and [avoid index](../../../../../../../../avoid/README.md), especially [re-realizations](../../../../../../../../avoid/03_lifts_and_re_realizations_in_new_coordinates.md), [scoped exclusions](../../../../../../../../avoid/07_scoped_exclusions_read_as_universal.md), and [joint signed estimates](../../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md). Then read Assessment01 and its inheritance table before selecting downstream claims. E03's old acceptance does not independently validate the new fixed-bath Hamiltonian; E06 supplies the present internal check. B02 remains proof-author checked with E04 pending.
+
+If continuing this chat with another model, preserve history **0002** and its original identity; refresh it with tools/refresh_chat_history.py, using the standing exact-turn follow-up. A genuinely new chat gets its own appropriate registration under brainstorm/chat-histories; do not reuse source chat 0001 or branch chat 0003. Record actual model/effort from metadata, not this recommendation. Preserve all frozen input files and Handoff07. No manuscript revision, commit, model switch, new user-owned chat or research automation was made by E06.
+
+> Continue [B] MC08-B04 after E06, using Handoff08 and the sole MC08 register. Read Assessment01 and Derivation05. Select the observation algebra, clock, full system/bath model, energy meaning and finite/infinite requirement, comparing only the existing stream and accepted finite fixed bath first. Preserve complete F, signed amplitude and both success factors. Keep the odd-extension/grading distinction and every-intermediate-record obstruction explicit. Issue bounded E07 for Sol only after its proof route, topology/domains, cases and stop rule are fixed; otherwise return the precise conceptual gap. Do not execute E04 or an open-ended infinite-space/numerical campaign.

@@ -1,0 +1,1183 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{booktabs,tabularx,array,longtable,enumitem}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tocloft}
+\hypersetup{pdftitle={Fermionic Theta Transfers, Open Quantum Dynamics, and Energy Response},pdfauthor={Drafted for Edward Baker}}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{2em}
+\setlength{\cftbeforesecskip}{2pt}
+\setcounter{tocdepth}{1}
+\setlist{itemsep=3pt,topsep=5pt}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\supp}{supp}
+\newcommand{\E}{\mathbb E}
+\newcommand{\N}{\mathbb N}
+\newcommand{\dd}{\,d}
+\newcommand{\ket}[1]{\lvert #1\rangle}
+\newcommand{\bra}[1]{\langle #1\rvert}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\loss}{\mathsf R}
+\newcommand{\srcR}{\mathscr R}
+\newcommand{\srcS}{\mathscr S}
+\newcommand{\ev}[1]{\textsf{[#1]}}
+\newcommand{\Fock}{\mathcal F_-}
+\title{Fermionic Theta Transfers, Open Quantum Dynamics,\\and Energy Response\\[6pt]
+\large A Continuation of the Signed Mellin-Curvature Program}
+\author{Drafted for Edward Baker}
+\date{2 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We continue the background manuscript on signed Mellin curvature and theta
+coefficient positivity. The coefficient determinants are encoded as signed
+fermionic amplitudes of a normalized backward-shift transfer. We summarize
+the complete-source estimates proving that its activity generator is
+dissipative on $0\le v\le1/25$, construct the associated particle-loss
+count instrument, and state the fixed-mode Hermitian collision error and
+the compatible vacuum-Fock extension. A coherent reference recovers the
+amplitude, including its sign, with explicit success normalizations.
+These realization results do not provide the required determinant
+comparison. A worked obstruction shows why preservation of the fixed
+ordered cone on every intermediate interval would force a Gaussian
+generating function, while the target ratio is exactly independent of
+activity. We then connect the derivative orbitals to the natural theta
+energies $E_m=\pi m^2$: each orbital samples a filtered thermal response,
+rather than representing one energy eigenstate. The remaining analytical
+obligation is a source-dependent bound on the joint signed response. No
+new range of the Gaussian Mellin comparison or of coefficient positivity
+is established by this synthesis.
+\end{abstract}
+
+\noindent\textbf{Reading contract and status.}
+This paper assumes the setup and signed-averaging baseline of
+\emph{Signed Mellin Curvature and Theta Coefficient Positivity:
+Mathematical Background and Physical Research Directions} (\ev{BG}).
+It develops the fermionic, open-system and energy interfaces in detail,
+rather than repeating the background's survey of all eight branches.
+The local realization has a separate same-model internal LLM assessment;
+the thermal and original fermionic dictionaries have cross-model internal
+assessments. The intermediate-cone obstruction has proof-author checking
+only, with its separate check still pending. None is independent
+specialist validation. Appendix~\ref{sec:evidence} identifies the source
+records and their precise status.
+
+\clearpage
+\tableofcontents
+\clearpage
+
+\section{The unchanged mathematical target}
+\label{sec:setup}
+We retain the background's complete source at physical heat time zero:
+\begin{align}
+ p(u)&=e^u\sum_{m\ge1}e^{-\pi m^2e^{4u}},\qquad
+ \Phi(u)=\frac{p''(u)-p(u)}8,\notag\\
+ c_n&=\frac1{(2n)!}\int_0^\infty u^{2n}\Phi(u)\dd u,
+ \qquad F(w)=\sum_{n\ge0}c_nw^n. \label{eq:source}
+\end{align}
+Here $c_n=0$ for negative integers. The source is positive on the
+half-line, even after full theta reconstruction, and has
+ double-exponential decay. In particular $c_n>0$ for $n\ge0$, $F$ is
+entire, and the background normalization is
+$F(z^2)=\xi((1+z)/2)/8$. Write
+\begin{equation}
+ D_{r,k}=\det[c_{k+j-i}]_{i,j=0}^{r-1},\qquad
+ M_3(k)=(2k)!(2k+2)!(2k+4)!D_{3,k}. \label{eq:det}
+\end{equation}
+The background supplies $D_{3,k}>0$ for every integer $k\ge0$, and
+positivity of its signed real-Mellin interpolation $M_3(s)$ for $s\ge0$.
+These are inherited premises, not consequences of a positive quantum
+channel.
+
+The approach separates three questions: can the coefficient transfer be
+realized by physical evolution, can its signed amplitude be recovered by
+an observation, and does the source impose a useful inequality on that
+amplitude? A quantum channel acts on density matrices and must be
+completely positive and trace preserving (CPTP). A count instrument also
+records detected losses. Conditioning on no count retains a linear
+amplitude operator that can be non-Hermitian; its entries can have either
+sign. The construction below answers the realization and readout
+questions while leaving the source-dependent comparison open.
+
+The finite-order quantitative consumer is
+\begin{equation}
+ \eta_k:=\frac{D_{3,k-1}D_{3,k+1}}{D_{3,k}^2}
+ \ \le\ \frac{k}{k+3},\qquad k\ge1. \label{eq:target}
+\end{equation}
+Desnanot--Jacobi then gives
+\begin{equation}
+ D_{4,k}D_{2,k}=D_{3,k}^2(1-\eta_k),\qquad
+ D_{4,k}\ge\frac{3}{k+3}\frac{D_{3,k}^2}{D_{2,k}}>0.
+ \label{eq:payoff}
+\end{equation}
+The background explains that low-order positivity is already known;
+this is a method pilot seeking a quantitative mechanism that might
+extend to higher orders. Nonnegativity of \emph{all} finite Toeplitz
+minors is the inherited RH-equivalent destination, not a result proved
+by the present physical realization.
+
+A sufficient route to \eqref{eq:target} is the background conjecture
+\begin{equation}
+ (\log M_3)''(s)\le\kappa_3(s),\qquad
+ \kappa_3(s)=\sum_{j=0}^2\sum_{\nu=0}^\infty
+ (s+j+\tfrac12+\nu)^{-2},\qquad s\ge0. \label{eq:curvtarget}
+\end{equation}
+Triangular integration over $[k-1,k+1]$ and the factorials in
+\eqref{eq:det} give \eqref{eq:target}. The pointwise bound is stronger
+than the required integrated comparison; neither is obtained below.
+In particular, the first neighboring-index problem uses $[0,2]$.
+
+\begin{table}[htbp]
+\centering\small
+\renewcommand{\arraystretch}{1.16}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{.18\textwidth}X@{}}
+\toprule
+Symbol & Meaning and distinction\\
+\midrule
+$u$, $\beta=e^{4u}$ & Source coordinate and inverse temperature.\\
+$s$ & Real Mellin tilt; the source couples to $2\sum_j\log u_j$.\\
+$v$ & Transfer activity; also the chosen clock for the constructed loss dynamics.\\
+$i,j$ & Derivative/moment labels, or coefficient sites in the discrete model.\\
+$m$, $E_m$ & Theta spectral mode and its energy $\pi m^2$.\\
+$r$, $N$ & Particle number and largest retained coefficient-site index.\\
+$\srcR$, $\srcS$ & Scalar ratios $\Phi''/\Phi$ and $\Phi^{(4)}/\Phi$; $\loss$ below is the loss operator.\\
+$\lambda_n$ & Coefficients of $\log(F/c_0)$, denoted $b_n$ in the MC08 notes; they are not the background's raw moments $b_n$.\\
+\bottomrule
+\end{tabularx}
+\caption{The parameters and indices are not identified by the physical interpretation.}
+\label{tab:notation}
+\end{table}
+
+\section{From theta coefficients to fermionic amplitudes}
+\label{sec:fermions}
+
+\subsection{Continuum orbitals and the role of their labels}
+On $L^2((0,\infty),du)$ define
+\begin{equation}
+ f_i=\frac{\Phi^{(2i)}}{\sqrt\Phi},\qquad
+ g_j=\frac{u^{2j}\sqrt\Phi}{(2j)!},\qquad i,j\ge0.
+ \label{eq:orbitals}
+\end{equation}
+The complete-source derivative bounds, together with its positive first
+summand, make these fixed-order orbitals square integrable. Integration by parts, including the vanishing of
+all odd source derivatives at zero, gives
+\begin{equation}
+ \ip{f_i}{g_j}=c_{j-i}. \label{eq:overlap}
+\end{equation}
+For $j<i$, transferring the polynomial derivatives first leaves an odd
+source derivative at the origin, hence zero. This retains the small-index
+boundary convention rather than extending a factorial formula beyond
+its domain.
+
+Let $a(f)$ and $a^\dagger(f)$ satisfy the canonical anticommutation
+relations (CAR), and fix increasing creation order. The determinant is
+\begin{equation}
+ D_{r,k}=\bra{\Omega}a(f_{r-1})\cdots a(f_0)
+ a^\dagger(g_k)\cdots a^\dagger(g_{k+r-1})\ket{\Omega}.
+ \label{eq:car}
+\end{equation}
+Equivalently it is the overlap of two different exterior products.
+It is not a squared norm. Positivity of the Hilbert-space inner product
+controls its magnitude by Cauchy--Schwarz, but does not give its sign.
+The CAR identity is standard; the complete theta orbitals and endpoint
+payments are the local construction \ev{F1,F2}.
+
+No Hamiltonian was assigned to the labels $i,j$ in
+\eqref{eq:orbitals}. They record which derivative and moment occur.
+The families are not orthonormal energy bases. Assigning distinct
+eigenvalues to nonorthogonal orbitals would not define a self-adjoint
+Hamiltonian. Section~\ref{sec:energy} gives their actual energy-response
+interpretation.
+
+\subsection{One discrete transfer for every finite minor}
+Let $\mathfrak h=\ell^2(\N_0)$, $S\ket0=0$, and
+$S\ket j=\ket{j-1}$ for $j\ge1$. For $v\ge0$ set
+\begin{equation}
+ K_v=\frac{F(vS)}{F(v)},\qquad K_0=I. \label{eq:Kv}
+\end{equation}
+Since $\|S\|=1$ and $c_n\ge0$,
+$\|F(vS)\|\le F(v)$; thus $K_v$ is a contraction for every $v\ge0$.
+For increasing finite occupation lists $I=(i_1,\ldots,i_r)$ and
+$J=(j_1,\ldots,j_r)$, exterior-power expansion yields
+\begin{equation}
+ A_v(I,J):=\bra I\Gamma(K_v)\ket J
+ =\frac{v^{\sum_bj_b-\sum_ai_a}}{F(v)^r}
+       \det[c_{j_b-i_a}],\qquad v>0. \label{eq:minoramp}
+\end{equation}
+Here $\Gamma(K)=\bigoplus_{r\ge0}\wedge^rK$ on vacuum Fock space,
+with vacuum block $+1$. Formula \eqref{eq:minoramp} has a positive
+prefactor. The cases $v=0$ are read directly from $K_0=I$, without
+ambiguous powers of zero. The continuum and discrete constructions
+encode the same pairings; this is not an asserted unitary change of
+basis between their orbital families.
+
+Already on $\operatorname{span}\{\ket0,\ket1\}$,
+\begin{equation}
+ K_v=\frac1{F(v)}
+ \begin{pmatrix}c_0&vc_1\\0&c_0\end{pmatrix},\qquad v>0. \label{eq:jordan}
+\end{equation}
+The nonzero Jordan block cannot be self-adjoint in any positive definite
+inner product: similarity by the square root of such a metric would
+make it Hermitian and therefore diagonalizable. A global positive metric
+making $K_v$ self-adjoint would restrict to one on this invariant block.
+This excludes that interpretation of $K_v$; it does not exclude a
+Hermitian system--environment realization. Endpoint contractivity alone
+also does not prove that the activity evolution is dissipative at every
+intermediate time.
+
+\section{An explicit interval for the exact activity generator}
+\label{sec:local}
+
+\subsection{Bounds from the complete source and an analytic logarithm}
+The explicit interval comes from elementary bounds that retain the
+entire theta sum and integration tail (\ev{O1,O3}). Put
+\begin{equation}
+ J_0=\int_0^\infty p(u)\dd u,\quad
+ J_2=\int_0^\infty u^2p(u)\dd u,\quad
+ C=\int_0^\infty p(u)\cosh(2u)\dd u.
+\end{equation}
+Full theta inversion gives $p'(0)=-1/2$, and integration by parts gives
+\begin{equation}
+ c_0=\frac1{16}-\frac{J_0}8,\qquad
+ c_1=\frac{2J_0-J_2}{16},\qquad
+ F(4)=\frac1{16}+\frac{3C}8. \label{eq:momconstants}
+\end{equation}
+The estimates used are
+\begin{equation}
+ \frac1{1600}<J_0<\frac1{209},\qquad
+ J_2<\frac2{25289},\qquad C<\frac{11}{2223}. \label{eq:Jbounds}
+\end{equation}
+For the upper bounds, $e^{4u}\ge1+4u$ gives
+$p(u)\le\sum_{m\ge1}e^{-\pi m^2}e^{-(4\pi m^2-1)u}$.
+Use $4\pi m^2-1>11$ and
+$\sum_{m\ge1}e^{-\pi m^2}<\sum_{m\ge1}20^{-m^2}\le1/19$.
+The elementary Laplace integrals are $1/a$, $2/a^3$, and
+$a/(a^2-4)$. For the lower bound, retain $m=1$ on $[0,1/16]$,
+where $\pi e^{4u}<9/2$ and $e^{9/2}<100$.
+The rational exponential bounds and all fractions were checked in the
+existing E01 support record; no numerical integration was used.
+
+It follows that
+\begin{equation}
+ \frac{207}{3344}<c_0<\frac1{16},\quad
+ \lambda_1:=\frac{c_1}{c_0}>\frac1{1000},\quad
+ q_4:=\frac{F(4)-c_0}{c_0}<\frac{320}{8073}<\frac1{25}.
+ \label{eq:cauchyinput}
+\end{equation}
+Positive coefficients imply $|F(w)/c_0-1|\le q_4$ on $|w|\le4$.
+The analytic logarithm with value zero at the origin therefore satisfies
+\begin{equation}
+ B(w):=\log(F(w)/c_0)=\sum_{n\ge1}\lambda_nw^n,
+ \quad |B(w)|<\frac1{24},\quad
+ |\lambda_n|\le\frac1{24\,4^n}. \label{eq:logbound}
+\end{equation}
+There is a genuine analytic neighborhood of this closed disk. The
+estimate is not a global zero-free assertion about $F$.
+
+\subsection{The loss operator and its gapless lower bound}
+Norm-convergent power series give, for $0\le v\le1/25$,
+\begin{align}
+ G(v)&=K'_vK_v^{-1}
+ =SF'(vS)F(vS)^{-1}-\gamma(v)I,\notag\\
+ &=\sum_{n\ge1}\alpha_n(v)(S^n-I),\qquad
+ \alpha_n(v)=n\lambda_nv^{n-1},\quad \gamma=F'/F. \label{eq:G}
+\end{align}
+In particular $G(0)=\lambda_1(S-I)$. Define
+\begin{equation}
+ \loss(v)=-(G+G^\dagger),\qquad
+ H(v)=\frac i2(G-G^\dagger),\qquad G=-iH-\loss/2. \label{eq:HR}
+\end{equation}
+
+\begin{theorem}[Local admissibility, \ev{O1,O3}]
+On the infinite one-particle space,
+\begin{equation}
+ \loss(v)\ge\frac1{8000}(2I-S-S^\dagger)\ge0,
+ \qquad 0\le v\le\frac1{25}. \label{eq:lossbound}
+\end{equation}
+Writing $A_*=[96(99/100)^2]^{-1}$, one also has
+\begin{equation}
+ \|G\|,\|H\|\le2A_*,\quad \|\loss\|\le4A_*,\quad
+ \|K_v^{-1}\|<13/12. \label{eq:normbounds}
+\end{equation}
+The operators $G,H,\loss$ and $\sqrt\loss$ are norm-continuous. Every
+intermediate $V(b,a)=K_bK_a^{-1}$, $0\le a\le b\le1/25$, is a contraction.
+\end{theorem}
+\begin{proof}[Proof of the decisive bound]
+The Toeplitz quadratic form of $\loss$ has continuous symbol
+\[
+ r_v(\theta)=2\sum_{n\ge1}\alpha_n(v)(1-\cos n\theta).
+\]
+For a finite sequence $x$, integrate this symbol against
+$|\sum_jx_je^{ij\theta}|^2/(2\pi)$; norm convergence extends the identity
+to $\ell^2$. The bound
+$1-\cos n\theta\le n^2(1-\cos\theta)$ yields
+\[
+ \loss(v)\ge\left(\lambda_1-\sum_{n\ge2}n^3|\lambda_n|v^{n-1}\right)
+ (2I-S-S^\dagger).
+\]
+With $x=v/4\le1/100$, the coefficient tail is at most
+\[
+ \frac1{96}\left(\frac{1+4x+x^2}{(1-x)^4}-1\right)
+ \le\frac{2650133}{3073907232}<\frac7{8000}.
+\]
+Combine this with $\lambda_1>8/8000$. The same majorant controls the
+zero-angle quotient; no angle sampling or positive spectral gap is
+needed. Summing the coefficient norms gives \eqref{eq:normbounds};
+the inverse follows from the Neumann series and
+$(1+q_4)/(1-q_4)<13/12$. Polynomial approximation to $\sqrt{x}$ on a
+common bounded spectral interval proves square-root continuity.
+Finally
+$\partial_b\|V(b,a)f\|^2=-\ip{V(b,a)f}{\loss(b)V(b,a)f}\le0$.
+\end{proof}
+
+The spectral infimum of $\loss$ is nevertheless zero: $r_v(0)=0$,
+and normalized Hardy kernels concentrate its quadratic form near that
+angle. The bound is relative to a gapless shift Laplacian. The chosen
+interval is sufficient, not asserted optimal, and it does not cover
+$v=1$.
+
+There is already a bounded one-particle CPTP completion with jump
+$\sqrt\loss$ acting \emph{within} $\mathfrak h$:
+\[
+ \dot\rho=G\rho+\rho G^\dagger+\sqrt\loss\,\rho\sqrt\loss.
+\]
+Its convergent time-ordered jump series proves complete positivity,
+and $G+G^\dagger+\loss=0$ proves trace preservation. This is different
+from the particle-loss construction below.
+
+\subsection{What local admissibility does not imply}
+The Cauchy argument also gives some sufficiently small admissible
+interval for any real analytic positive-coefficient source with
+$c_0,c_1>0$ and a convergent coefficient sum on a disk. The explicit
+interval above is paid for theta, but the qualitative local property
+is not an arithmetic discriminator.
+
+A decisive control is $F_*(w)=1+w+2w^2$. For $x=\cos\theta$ its symbol is
+\begin{equation}
+ r_{*,v}(\theta)=
+ \frac{2(1-x)(1-2v^2)(1+7v+2v^2+8vx)}
+ {(1+v+2v^2)|1+ve^{i\theta}+2v^2e^{2i\theta}|^2}\ge0,
+ \quad 0\le v<1/\sqrt2. \label{eq:controlsymbol}
+\end{equation}
+Yet its two-particle endpoint amplitude is
+\begin{equation}
+ \bra{0,1}\Gamma(K_{*,v})\ket{1,2}
+ =-\frac{v^2}{(1+v+2v^2)^2}<0. \label{eq:negativecontrol}
+\end{equation}
+Thus dissipativity does not sign the fermionic amplitudes.
+
+There is also a scoped large-activity obstruction: a zero $w_0$ of $F$
+inside $|w|<v$ gives an eigenvector of $S$ with eigenvalue $w_0/v$, hence
+a kernel of $F(vS)$. At $|w_0|=v$, truncated unit-modulus eigenvectors
+give approximate null vectors, so a bounded inverse still fails.
+This limits the particular bounded-invertible generator formula; it
+is not an exclusion of unbounded evolutions or enlarged systems.
+
+\section{The fermionic loss instrument}
+\label{sec:instrument}
+
+\subsection{Finite modes and exact no-count evolution}
+For $\mathfrak h_N=\operatorname{span}\{\ket0,\ldots,\ket N\}$ use the
+restrictions $K_{v,N}$ and $G_N$, and the compressions $\loss_N,H_N$.
+The scalar $F(v)$ remains complete even when $S_N$ is nilpotent. Put
+\begin{equation}
+ B_N=\sqrt{\loss_N},\quad L_{\mu,N}=\sum_j(B_N)_{\mu j}a_j,
+ \quad H_{F,N}=d\Gamma(H_N),\quad \mathsf D_N=d\Gamma(G_N).
+ \label{eq:lossrow}
+\end{equation}
+Normal ordering sets vacuum energy zero. The CAR give
+\begin{align}
+ \sum_\mu L_{\mu,N}^\dagger L_{\mu,N}&=d\Gamma(\loss_N),\notag\\
+ \mathcal J_N\rho&=\sum_\mu L_{\mu,N}\rho L_{\mu,N}^\dagger
+ =\sum_{j,k}(\loss_N)_{kj}a_j\rho a_k^\dagger,\notag\\
+ \mathcal L_N\rho&=\mathsf D_N\rho+\rho\mathsf D_N^\dagger+
+ \mathcal J_N\rho. \label{eq:lindblad}
+\end{align}
+The transposed coefficient $R_{kj}$ in the jump map is intentional.
+The dissipator convention is $L\rho L^\dagger-\{L^\dagger L,\rho\}/2$,
+as in the quantum-jump formulation of
+Castin--Dalibard--M\o lmer \cite{CastinDalibardMolmer08054002v1}.
+The finite-mode identities here are proved directly; no infinite-domain
+result is imported from the trajectory literature.
+
+Exterior differentiation proves the no-count operator
+\begin{equation}
+ M_{0,N}(b,a)=\Gamma(V_N(b,a)),\qquad
+ \mathcal V_N(b,a)\rho=M_{0,N}(b,a)\rho M_{0,N}(b,a)^\dagger.
+ \label{eq:nocount}
+\end{equation}
+For ordered count times $a<t_1<\cdots<t_q<b$, the instrument density is
+\begin{equation}
+ \mathcal I_{N;q}(\mathbf t;b,a)=
+ \mathcal V_N(b,t_q)\mathcal J_N(t_q)\cdots
+ \mathcal V_N(t_2,t_1)\mathcal J_N(t_1)\mathcal V_N(t_1,a).
+ \label{eq:instrument}
+\end{equation}
+For $q=1$ the intervening factors have their evident meaning; $q=0$
+is \eqref{eq:nocount}. Detector-channel labels are summed incoherently,
+while count times are retained. Integrating these CP densities over
+measurable record sets gives the count instrument. The series stops
+at $q=r$ for inputs supported on at most $r$ particles. Its sum is
+trace preserving by \eqref{eq:lindblad}, and splitting trajectories
+at intermediate times proves composition. Thus the finite-mode
+channel is CPTP and CP-divisible, generally time dependent.
+These statements apply to arbitrary trace-class operators, including
+coherences, rather than populations alone (\ev{O2,O3}).
+
+\subsection{Hermitian collision realization and its topology}
+At each fixed $N$, let $m=N+1$ and use $m$ fresh vacuum environment
+modes in every time bin of length $h$. In environment-first order,
+with environment parity $\Pi_E$, define
+\begin{align}
+ W_N&=\sum_\mu\left(b_\mu^\dagger\Pi_E\otimes L_{\mu,N}
+             +\Pi_Eb_\mu\otimes L_{\mu,N}^\dagger\right),\notag\\
+ U_{N,h}(v)&=\exp[-i(hI_E\otimes H_{F,N}(v)+\sqrt h\,W_N(v))].
+ \label{eq:collision}
+\end{align}
+This exchange is Hermitian and conserves total number and parity.
+Writing $C_\sigma=\bra\sigma U_{N,h}\ket{\Omega_E}$ gives, uniformly
+on the local interval at fixed $N$,
+\begin{equation}
+ C_0=I+h\mathsf D_N+O_N(h^{3/2}),\quad
+ C_\mu=-i\sqrt h L_{\mu,N}+O_N(h^{3/2}),\quad
+ C_\sigma=O_N(h)\quad(|\sigma|\ge2). \label{eq:blocks}
+\end{equation}
+The signs follow from
+$W_N(\Omega_E\otimes f)=\sum_\mu\ket\mu\otimes L_{\mu,N}f$ and
+$\bra{\Omega_E}W_N^2\ket{\Omega_E}=d\Gamma(\loss_N)$.
+Measuring each bin's total occupation produces the finite collision
+count instrument.
+
+\begin{theorem}[Fixed-mode collision limit, \ev{O2,O3}]
+For a partition $\pi$ of $[a,b]$ with mesh $\delta\le1$, compare
+collision counts with the exact Lindblad instrument integrated over
+the \emph{same bins}. With $T_0=b-a$,
+\begin{equation}
+ \sup_{\|\rho\|_1\le1}\sum_{\mathbf n}
+ \|\mathcal I^\pi_{{\rm coll},\mathbf n}\rho-
+   \mathcal I^\pi_{{\rm Lind},\mathbf n}\rho\|_1
+ \le T_0[(C_c+C_L)\sqrt\delta+\omega_N(\delta)]\longrightarrow0.
+ \label{eq:recorderror}
+\end{equation}
+Here $C_c,C_L$ are explicit finite constants at fixed $N$, given in
+Appendix~\ref{sec:constants}, and
+\[
+ \omega_N(\delta)=\sup_{|t-t'|\le\delta}
+ \{2\|\mathsf D_N(t)-\mathsf D_N(t')\|
+       +\|\mathcal J_N(t)-\mathcal J_N(t')\|_{1\to1}\}\to0.
+\]
+The ordered product of vacuum blocks also obeys the phase-sensitive bound
+\begin{equation}
+ \left\|\prod_l C_{0,l}-\Gamma(V_N(b,a))\right\|
+ \le T_0[(E+d^2e^d/2)\sqrt\delta+\omega_D(\delta)]\to0,
+ \label{eq:phaseerror}
+\end{equation}
+where $d$ bounds $\|\mathsf D_N\|$ and $\omega_D$ is its continuity modulus.
+\end{theorem}
+\begin{proof}[Reason for the error and the choice of record topology]
+Taylor expansion of the unitary gives a local collision-instrument
+error $C_ch^{3/2}$ against its first-order CP blocks. The frozen
+Lindblad count instrument differs from those blocks by $C_Lh^2$.
+A count register and Duhamel's formula bound time freezing by
+$h\omega_N(\delta)$. Telescope the actual trace-preserving record
+maps, whose induced trace norms are one, to obtain
+\eqref{eq:recorderror}. The auxiliary first-order blocks are not used
+as telescoping propagators. Telescoping the actual contraction
+vacuum blocks separately gives \eqref{eq:phaseerror}; convergence of
+a channel alone would not fix a Kraus phase.
+\end{proof}
+
+Assigning grid counts to bin representatives then gives weak
+convergence of event-time tests. For a bounded continuous test on the
+closed ordered simplex, the further error is its modulus of continuity
+at $\delta$; on the open simplex, first exhaust away from boundaries
+and collisions. There is no total-variation convergence claim between
+atomic grid timestamps and a continuous timestamp law.
+
+The duration-$h$ Hamiltonian is
+$I_E\otimes H_{F,N}+h^{-1/2}W_N$. Fresh bins and singular short-time
+coupling are resources of the limit; the constants may grow with $N$.
+This is not an exact finite-bin device or a simultaneous infinite-mode
+microscopic limit.
+
+\subsection{A scoped obstruction to a regular fixed reservoir}
+A locally bounded total Hamiltonian with an initially independent
+fixed vacuum has $U(v,0)=I+O(v)$. Leakage from that vacuum subspace
+therefore has probability $O(v^2)$. The prescribed no-count transfer,
+for a normalized system vector, has
+\begin{equation}
+ \|K_{v,N}\psi\|^2
+ =1-v\ip\psi{\loss_N(0)\psi}+O(v^2). \label{eq:shorttime}
+\end{equation}
+For example, $\psi=\ket0$ has coefficient $2\lambda_1>0$.
+The nonzero linear loss contradicts that regular fixed-vacuum model.
+This excludes precisely the initial-product, locally bounded,
+fixed-vacuum realization class (\ev{A1,O3}); it does not exclude
+endpoint dilations, singular couplings, initially correlated reservoirs,
+or every non-Markovian model. The collision stream above lies outside
+that class.
+
+\section{Reading the signed amplitude}
+\label{sec:readout}
+A transition probability loses the sign of \eqref{eq:minoramp}.
+Instead use a neutral flag and equal-particle-number branches,
+\begin{equation}
+ \Psi_{\rm in}=\frac{\ket0\ket I+\ket1\ket J}{\sqrt2},
+ \qquad |I|=|J|=r. \label{eq:flaginput}
+\end{equation}
+Control both $H_{F,N}$ and every $L_{\mu,N}$ by the flag projector
+onto $\ket1$. The reference arm is unchanged. The no-count block is
+$P_0^{\rm flag}\otimes I+P_1^{\rm flag}\otimes\Gamma(K_{v,N})$.
+Let $A=A_v(I,J)$ and
+\begin{equation}
+ p_J=\|\Gamma(K_{v,N})\ket J\|^2
+     =\det[(K_{v,N}^\dagger K_{v,N})_{J,J}],\qquad
+ q_0=\frac{1+p_J}{2}. \label{eq:success}
+\end{equation}
+The unnormalized flag density after no count is
+\begin{equation}
+ \frac12\begin{pmatrix}1&A^*\\A&p_J\end{pmatrix}. \label{eq:flagmatrix}
+\end{equation}
+Consequently
+\begin{align}
+ P(0,\pm_X)&=\frac{1+p_J\pm2\operatorname{Re}A}{4},&
+ \operatorname{Re}A&=q_0\E[X\mid0],\notag\\
+ P(0,\pm_Y)&=\frac{1+p_J\pm2\operatorname{Im}A}{4},&
+ \operatorname{Im}A&=q_0\E[Y\mid0], \label{eq:readout}
+\end{align}
+where $Y=\bigl(\begin{smallmatrix}0&-i\\i&0\end{smallmatrix}\bigr)$.
+For the real theta convention the $X$ difference is the signed target.
+Signal conditioning uses $p_J$, while flag conditioning uses $q_0$;
+they are not interchangeable. The inverse bound gives
+\begin{equation}
+ p_J\ge(12/13)^{2r}. \label{eq:survival}
+\end{equation}
+There is no positive signal-success floor uniform in $r$, and no
+efficient-estimation conclusion. At $r=0$, $A=p_J=q_0=1$; at $v=0$,
+$A=\delta_{I,J}$ and $p_J=q_0=1$.
+
+Both arms have the same number and parity, including odd $r$.
+A calibrated preparation compensates any known wedge-order sign.
+No count leaves the same environment vacuum on the two arms;
+\eqref{eq:phaseerror} preserves the coherent phase in the collision
+limit. These controlled couplings and ideal counting are extra resources,
+not properties available from an arbitrary channel black box.
+Unrestricted dense mode couplings are allowed; no spatial-locality
+or hardware implementation theorem is claimed.
+
+For the polynomial control \eqref{eq:negativecontrol}, the very same
+experiment returns
+\begin{equation}
+ A_{\rm pol}=-v^2/F_*(v)^2,\qquad
+ p_*=(1+v^2+v^4)/F_*(v)^4,\qquad
+ P(0,+_X)-P(0,-_X)=A_{\rm pol}<0. \label{eq:controlreadout}
+\end{equation}
+The physical construction therefore faithfully retains a negative
+amplitude instead of converting it to a positive norm.
+
+\section{Exact cutoff compatibility and vacuum Fock space}
+\label{sec:extension}
+For $M\ge N$, $G_M$ preserves $\mathfrak h_N$ and restricts to $G_N$.
+For an operator supported on $\Fock(\mathfrak h_N)$, a jump term
+$a_j\rho a_k^\dagger$ vanishes if either index exceeds $N$; the retained
+block of $\loss_M$ is $\loss_N$. Hence the no-count maps, the count
+instrument with channel labels discarded, and the full channel
+restrict \emph{exactly} across cutoffs, by their bounded equations.
+Neither $\sqrt{\loss_N}=P_N\sqrt\loss P_N$ nor compatibility of the
+individual labeled jumps or finite collision unitaries is asserted.
+The Hamiltonian alone need not preserve a cutoff; the no-count
+cancellation in $G$ does.
+
+For a particle cap $Q_r$ onto at most $r$ particles, let
+$\mathfrak T_r=Q_r\mathfrak TQ_r$ and define the annihilation row
+\begin{equation}
+ \mathfrak a f=\sum_{j\ge0}e_j\otimes a_jf,
+ \qquad \|\mathfrak a f\|^2=\ip f{\mathcal N f}\le r\|f\|^2.
+\end{equation}
+Then
+\begin{equation}
+ \mathcal J_{\loss}\rho=\Tr_{\mathfrak h}
+ [ (\sqrt\loss\otimes I)\mathfrak a\rho\mathfrak a^\dagger
+   (\sqrt\loss\otimes I)] \label{eq:infinitejump}
+\end{equation}
+is CP, lowers the cap, and has dual
+$\mathfrak a^\dagger(\loss\otimes X)\mathfrak a$. Therefore
+\begin{equation}
+ \|\mathcal J_{\loss}-\mathcal J_{\loss'}\|_{1\to1}
+ \le r\|\loss-\loss'\|,
+ \qquad \|\mathcal L(v)\|_{\mathfrak T_r\to\mathfrak T_r}
+ \le2r\|G\|+r\|\loss\|\le8rA_*. \label{eq:capbound}
+\end{equation}
+This supplies a norm-continuous bounded generator on each cap, without
+requiring a spectral gap or a uniform square-root Lipschitz estimate.
+
+\begin{theorem}[Compatible vacuum-Fock extension, \ev{O2,O3}]
+The finite-mode count instruments extend uniquely to a strongly
+continuous two-parameter CPTP evolution on the trace class of
+$\Fock(\ell^2(\N_0))$, with the full no-count contraction
+$\Gamma(V(b,a))$. If $\Pi_N$ projects onto $\Fock(\mathfrak h_N)$,
+then for every trace-class $\rho$,
+\begin{equation}
+ \|\mathcal T(b,a)\rho-
+ \mathcal T_N(b,a)(\Pi_N\rho\Pi_N)\|_1
+ \le\|\rho-\Pi_N\rho\Pi_N\|_1\longrightarrow0, \label{eq:cutoff}
+\end{equation}
+uniformly over the allowed endpoints. The same estimate holds in
+record-valued trace norm, and with particle-cap compressions.
+\end{theorem}
+\begin{proof}[Construction]
+The projections $\Pi_N$ increase strongly to identity, and two-sided
+compression converges in trace norm. Exact compatibility and
+contractivity extend the finite-mode maps from their dense union.
+Complete positivity passes at each finite amplification; trace
+preservation, composition and statewise time continuity pass by density.
+For instruments the target is the direct sum of trace-class-valued
+$L^1$ spaces on ordered time simplexes, including the zero-count atom;
+the same contraction argument applies. Applying contraction to
+$\rho-\Pi_N\rho\Pi_N$ proves \eqref{eq:cutoff}.
+\end{proof}
+
+The dense invariant union $\bigcup_r\mathfrak T_r$ is a common
+differentiability domain, as follows from the bounded ODE on each cap.
+No maximal-domain or graph-core statement is made. Generator bounds
+grow with $r$; the full-Fock derivative and inverse of $\Gamma(V)$
+need not be bounded. The cutoff estimates are statewise, with no rate
+without an input-tail bound and no all-state operator-norm convergence.
+Physical density matrices respect fermion parity; the mathematical
+extension to odd operators does not authorize parity-forbidden
+preparations. The microscopic limit was taken at fixed $N$ in
+Section~\ref{sec:instrument}; this separate trace-class extension
+neither interchanges those limits nor proves an infinite-density
+reservoir realization.
+
+\section{Why the tested local sign mechanism stops}
+\label{sec:cone}
+\noindent\textbf{Evidence status.} The following obstruction is the
+written B02 argument \ev{S1}, with proof-author checking \ev{S2}.
+Its separate E04 verification remains pending. Reproducing it here does
+not upgrade that status or close the broader MC08 investigation.
+
+Let $C_{r,N}$ be the nonnegative real span of the increasing occupation
+basis in $\wedge^r\mathfrak h_N$. A proposed path argument would require
+\begin{equation}
+ \wedge^rV_N(b,a)C_{r,N}\subseteq C_{r,N}
+ \quad\hbox{for every intermediate }a\le b. \label{eq:conecondition}
+\end{equation}
+The infinitesimal generator must then have nonnegative off-diagonal
+entries. This is the elementary differential-system obstruction behind
+classical total-positivity results; see the compound-matrix discussion
+and Theorems 6--7 in Margaliot--Sontag
+\cite{MargaliotSontag180209590v2}. The argument below is finite-state
+CAR algebra and does not import an infinite-dimensional theorem.
+
+\begin{proposition}[Fixed-cone obstruction]
+Within the analytic Toeplitz family \eqref{eq:G}, with $\lambda_1>0$,
+condition \eqref{eq:conecondition} for $r=3$ and all cutoffs forces
+$F(w)=c_0e^{\lambda_1w}$. The unchanged theta source fails this condition.
+\end{proposition}
+\begin{proof}
+For $n\ge2$, $N\ge n+2$, set $\mathsf D_3=d\Gamma_3(G)$. Exactly one
+hop contributes to each of
+\begin{align}
+ \bra{0,n+1,n+2}\mathsf D_3(v)\ket{n,n+1,n+2}&=+\alpha_n(v),\notag\\
+ \bra{0,1,n+2}\mathsf D_3(v)\ket{1,n,n+2}&=-\alpha_n(v).
+ \label{eq:oppositesigns}
+\end{align}
+The second hop crosses one occupied site. Since
+$\wedge^3V_N(a+h,a)=I+h\mathsf D_3(a)+o(h)$, nonnegative off-diagonal
+entries force $\alpha_n(a)=0$ for all $n\ge2$ at positive $a$.
+Thus $\lambda_n=0$ for $n\ge2$, and analyticity gives the exponential.
+Conversely that exponential has only adjacent allowed hops, all with
+positive CAR sign, and preserves every finite ordered cone.
+
+To rule out this exponential for theta, the full source obeys
+\begin{equation}
+ 0<\Phi(u)<3000\exp(9u-\tfrac32e^{4u}),\qquad u\ge0.
+ \label{eq:supergauss}
+\end{equation}
+Indeed split $\pi m^2e^{4u}\ge(\pi/2)e^{4u}+(\pi/2)m^2$, discard
+only the negative subterm for an upper bound, and use
+$\sum_{m\ge1}m^4e^{-(\pi/2)m^2}<\sum m^4 2^{-m}=150$ and $\pi^2<10$.
+For every $A>0$ there is therefore a finite $C_A$ with
+$\Phi(u)\le C_Ae^{-Au^2}$. Consequently, for $w\ge0$,
+\begin{equation}
+ F(w)\le\frac{C_A\sqrt\pi}{2\sqrt A}e^{w/(4A)},
+ \qquad \lim_{w\to\infty}\frac{\log F(w)}w=0. \label{eq:nongrowth}
+\end{equation}
+The lower limit follows from $F(w)\ge c_0>0$; the upper limit follows
+by taking arbitrary $A$. This contradicts the positive limiting slope
+$\lambda_1>1/1000$ of $c_0e^{\lambda_1w}$.
+\end{proof}
+
+The failure has a finite intermediate witness. Let
+$n_* =\min\{n\ge2:\lambda_n\ne0\}$, whose finiteness follows from the
+preceding argument; no numerical value is asserted. Put
+\begin{equation}
+ B_*=[96(99/100)^3]^{-1},\qquad
+ \mathcal M_3=3B_*+36A_*^2.
+\end{equation}
+The coefficient bounds imply $\|G'\|\le B_*$ and, on the three-particle
+sector,
+\[
+ \|\wedge^3V(a+h,a)-I-h\mathsf D_3(a)\|
+ \le\tfrac12\mathcal M_3h^2.
+\]
+For any $0<a<1/25$, choose the negative entry in
+\eqref{eq:oppositesigns} and
+\begin{equation}
+ 0<h\le\min\{(1/25-a)/2,\ |\alpha_{n_*}(a)|/\mathcal M_3\}.
+ \label{eq:witness}
+\end{equation}
+Its intermediate amplitude is at most
+$-h|\alpha_{n_*}(a)|/2<0$, already for $N\ge n_*+2$.
+The constants do not depend on that cutoff.
+
+The quantifiers matter: a fixed ordered cone, the unchanged generator,
+all occupation inputs and every intermediate interval were required.
+The argument does not disprove endpoint positivity from $a=0$.
+For example $F_+(w)=1+w$ has nonnegative endpoint minors, while
+\begin{equation}
+ [K_bK_a^{-1}]_{0,2}
+ =-a(b-a)\frac{1+a}{1+b}<0\qquad(0<a<b<1). \label{eq:bidiagonal}
+\end{equation}
+At $v=0$ the longer-hop coefficients vanish even for theta. Different
+auxiliary flows, endpoint factorizations and cancellation among signed
+paths remain outside the obstruction.
+
+\section{Activity response cancels from the target ratio}
+\label{sec:activity}
+For $J_k=(k,k+1,k+2)$ and $I=(0,1,2)$,
+\begin{equation}
+ A_k(v)=\frac{v^{3k}}{F(v)^3}D_{3,k},\qquad
+ \frac{A_{k-1}A_{k+1}}{A_k^2}=\eta_k,
+ \quad k\ge1,\quad 0<v\le1/25. \label{eq:invariant}
+\end{equation}
+The denominators are positive by the inherited order-three result.
+The physical ratio is exactly independent of activity, not just
+approximately stationary.
+
+To see how conditioning enters, set
+$\psi_k=\wedge^3K_v\ket{J_k}$, $p_k=\|\psi_k\|^2$ and
+$\ell_k=\ip{\psi_k}{d\Gamma_3(\loss)\psi_k}\ge0$. Then
+$p_k'=-\ell_k$, $q_k=(1+p_k)/2$, and the signed readout is
+$A_k=q_kx_k$ with $x_k=\E[X\mid0,J_k]$. For $v>0$,
+\begin{align}
+ \partial_v\log A_k&=3k/v-3\gamma(v),\notag\\
+ \partial_v\log q_k&=-\ell_k/(1+p_k),\notag\\
+ \partial_v\log x_k&=3k/v-3\gamma(v)+\ell_k/(1+p_k).
+ \label{eq:responsecancel}
+\end{align}
+Restoring the success factor cancels the loss term exactly, and the
+neighboring second difference cancels the remaining activity terms:
+\begin{equation}
+ \partial_v\log\left(
+ \frac{q_{k-1}q_{k+1}}{q_k^2}\frac{x_{k-1}x_{k+1}}{x_k^2}
+ \right)=\partial_v\log\eta_k=0. \label{eq:ratioresponse}
+\end{equation}
+The initial state $K_0=I$ does not give a useful ratio anchor:
+$A_k(0)=0$ for $k\ge1$, and its limiting ratio is precisely the unknown
+coefficient ratio. Increasing the admissible activity interval cannot
+change it. A useful information or response inequality would therefore
+have to couple the three \emph{signed endpoint values} after complete
+reconstruction. These identities do not exclude every such inequality;
+they identify why separate survival or activity-response bounds have
+not supplied one (\ev{S1,S2}).
+
+\section{The natural theta energies and what the orbitals measure}
+\label{sec:energy}
+
+\subsection{Circle energies, the primitive and its positive filter}
+The periodic circle Hamiltonian $L=-\pi\partial_x^2$ has eigenvectors
+$e^{imx}/\sqrt{2\pi}$ and eigenvalues $\pi m^2$, $m\in\mathbb Z$.
+Thus the \href{https://dlmf.nist.gov/20.2.E3}{defining theta series} \cite[20.2.3]{NISTDLMFPositiveThetaPrimitives}
+gives
+\begin{equation}
+ Q(\beta)=\sum_{m\ge1}e^{-\beta E_m}
+ =\tfrac12(\Tr e^{-\beta L}-1),\qquad E_m=\pi m^2,
+ \qquad p(u)=e^uQ(e^{4u}). \label{eq:energies}
+\end{equation}
+The subtraction removes the zero mode and $1/2$ removes the twofold
+$\pm m$ degeneracy. Equivalently $Q$ is the trace on the positive-momentum
+subspace. These energy units match the canonical exponent; no measured
+energy scale is being inferred.
+
+Since $\beta'=4\beta$,
+$p''=e^u(Q+24\beta Q'+16\beta^2Q'')$, and hence
+\begin{align}
+ \Phi(u)&=e^u\sum_{m\ge1}P_0(\beta E_m)e^{-\beta E_m}
+ =\frac{e^u}{2}\Tr[P_0(\beta L)e^{-\beta L}],\notag\\
+ P_0(x)&=x(2x-3). \label{eq:filter}
+\end{align}
+On $u\ge0$, every nonzero $x=\beta E_m$ satisfies $x\ge\pi>3/2$.
+The filter is positive and the zero mode contributes zero. The
+polynomial times heat damping is trace class. The normalized
+positive-mode distribution is
+\begin{equation}
+ \rho_u(m)=\frac{P_0(\beta E_m)e^{-\beta E_m}}
+                 {\sum_{n\ge1}P_0(\beta E_n)e^{-\beta E_n}}.
+ \label{eq:thermalstate}
+\end{equation}
+It is a filtered thermal state, with a temperature-dependent insertion,
+not the original Gibbs state. Filter positivity is asserted here only
+for $\beta\ge1$. For the ordinary positive-mode Gibbs expectation,
+\begin{equation}
+ \frac{\Phi(u)}{p(u)}=2\beta^2\langle E^2\rangle_\beta
+                          -3\beta\langle E\rangle_\beta. \label{eq:energymean}
+\end{equation}
+Full theta inversion also gives $p(-u)=p(u)+\sinh u$; applying
+$\partial_u^2-1$ recovers the complete source's evenness. These
+identities retain every spectral mode (\ev{T1,T2}).
+
+\subsection{Response order is not energy level}
+Define the exact polynomials
+\begin{equation}
+ P_{n+1}(x)=4xP_n'(x)+(1-4x)P_n(x). \label{eq:recurrence}
+\end{equation}
+Termwise differentiation of \eqref{eq:filter} yields
+\begin{equation}
+ \frac{\Phi^{(n)}(u)}{\Phi(u)}
+ =\E_{\rho_u}\frac{P_n(X)}{P_0(X)},\qquad X=\beta E_m.
+ \label{eq:responseenergy}
+\end{equation}
+Thus the original derivative orbital is exactly
+\begin{equation}
+ f_i(u)=\sqrt{\Phi(u)}\,
+       \E_{\rho_u}\frac{P_{2i}(X)}{P_0(X)}. \label{eq:orbitalenergy}
+\end{equation}
+The label $i$ selects an energy-response observable; $m$ selects the
+energy eigenmode being averaged. Every $f_i$ contains the complete
+spectrum. Likewise $c_j$ integrates all levels over $u$ with its
+moment weight, and is not a single Boltzmann factor for $E_j$.
+
+At order three the required polynomials are
+\begin{align}
+ P_2(x)&=32x^4-224x^3+330x^2-75x,\notag\\
+ P_4(x)&=512x^6-8448x^5+41408x^4-68096x^3
+                  +30930x^2-1875x. \label{eq:polys}
+\end{align}
+Put $r_2=P_2/P_0$, $r_4=P_4/P_0$. Multilinearity gives
+\begin{equation}
+ \det\begin{bmatrix}1&1&1\\\srcR(u_1)&\srcR(u_2)&\srcR(u_3)\\
+ \srcS(u_1)&\srcS(u_2)&\srcS(u_3)\end{bmatrix}
+ =\E_{\rho_{u_1}\otimes\rho_{u_2}\otimes\rho_{u_3}}
+ \det\begin{bmatrix}1&1&1\\r_2(X_1)&r_2(X_2)&r_2(X_3)\\
+ r_4(X_1)&r_4(X_2)&r_4(X_3)\end{bmatrix}. \label{eq:threecopy}
+\end{equation}
+This is a faithful spectral representation of the derivative determinant,
+not a positivity theorem. Ordering $u_1<u_2<u_3$ does not order
+$X_j=\pi e^{4u_j}m_j^2$ for every independently sampled occupation tuple.
+
+\subsection{A genuine energy-mode Fock Hamiltonian}
+On the positive-mode space one may define independent fermions
+$\mathfrak b_m$ with
+\begin{equation}
+ \mathbb H_\theta=\sum_{m\ge1}E_m\mathfrak b_m^\dagger\mathfrak b_m,
+ \qquad E_J=\sum_{m\in J}E_m. \label{eq:energyfock}
+\end{equation}
+It is the nonnegative occupation-energy operator on its natural domain.
+For $\beta>0$ its grand partition function is
+\begin{equation}
+ \Xi(\beta,z)=\prod_{m\ge1}(1+ze^{-\beta E_m}),\qquad
+ [z]\Xi(\beta,z)=Q(\beta). \label{eq:grand}
+\end{equation}
+The product follows by summing zero or one occupation of each mode;
+$\sum_m e^{-\beta E_m}<\infty$ gives convergence locally uniformly in
+$z$. The primitive uses the \emph{one-particle coefficient} of this
+product, not the entire grand partition function. One-particle heat
+traces themselves do not distinguish particle statistics.
+
+The energy creators $\mathfrak b_m^\dagger$ are not identified with
+coefficient-site creators $a_i^\dagger$. Moreover, the MC08 Hamiltonian
+$H(v)=i(G-G^\dagger)/2$ is engineered from the transfer and generally
+mixes sites; it is not the diagonal $L$. Attaching the energies
+$\pi i^2$ to coefficient sites without a proved relation would change
+the model. The exact link already available is the observable identity
+\eqref{eq:orbitalenergy} (\ev{D2}); an operator correspondence with
+additional sign consequences remains to be found.
+
+\section{The signed thermal response that remains uncontrolled}
+\label{sec:residual}
+Write $\ell_j=\partial_u^j\log\Phi$. The temperature dependence of the
+filter is essential. For one summand let
+\begin{equation}
+ a(u,m)=u+\log P_0(x)-x,\quad x=\beta E_m,\quad
+ q(x)=\partial_u a=9-4x+\frac{12}{2x-3},
+\end{equation}
+and set $b=4xq'$, $c=4xb'$, $d=4xc'$. In particular
+$b=-16x-96x/(2x-3)^2<0$ for $x\ge\pi$.
+For an energy observable $f(X)$,
+\begin{equation}
+ \partial_u\E_{\rho_u}f=\E_{\rho_u}(4Xf')+
+                  \Cov_{\rho_u}(f,q). \label{eq:thermderivative}
+\end{equation}
+Repeated differentiation gives the complete identities
+\begin{align}
+ \ell_1&=\E q,&
+ \ell_2&=\E b+\Var(q),\notag\\
+ \ell_3&=\E c+3\Cov(q,b)+\kappa_3(q),\notag\\
+ \ell_4&=\E d+4\Cov(q,c)+3\Var(b)
+                 +6\kappa(q,q,b)+\kappa_4(q). \label{eq:cumulants}
+\end{align}
+Here $\kappa_3(q)$ is the third centered moment,
+$\kappa(q,q,b)=\E[(q-\E q)^2(b-\E b)]$, and
+$\kappa_4(q)=\E[(q-\E q)^4]-3\Var(q)^2$.
+These are thermal cumulants, distinct from the comparator
+$\kappa_3(s)$ in \eqref{eq:curvtarget}. The positive variance in
+$\ell_2$ opposes the negative individual-mode term, and higher mixed
+cumulants have no sign supplied by positivity of the state.
+
+For the explicit single-energy comparison
+$\phi_*(u)=e^uP_0(\pi e^{4u})e^{-\pi e^{4u}}$, the energy distribution
+is a point mass, so its thermal fluctuations vanish. Nevertheless, at
+$x=4$ the exact response-polynomial calculation gives
+\begin{equation}
+ r_2'(4)=\frac{952}{25}>0,\qquad
+ \frac12\frac{d^2r_4}{dr_2^2}(4)
+ =-\frac{157375}{99127}<0. \label{eq:thermalwitness}
+\end{equation}
+The second number is the confluent three-node determinant quotient.
+Thus a positive filtered state, zero thermal variance and individual-mode
+log-concavity do not imply pointwise positivity of the derivative
+observable. This comparison lacks the complete theta spectrum and
+reflection; it is not a counterexample to the canonical integrated
+comparison. The actual theta insertion already has a negative origin
+region by the background analysis (\ev{T1,T2,BG}).
+
+The residual can be displayed exactly. Let
+\begin{equation}
+ U=\srcS-\srcR^2
+ =\ell_4+4\ell_1\ell_3+2\ell_2^2+4\ell_1^2\ell_2
+ =\srcR''+2\ell_1\srcR'. \label{eq:U}
+\end{equation}
+The background supplies $\srcR'>0$ on the interior, so regard $U$ as a
+function of $y=\srcR(u)$. If $\chi(\mathbf u)=U[y_1,y_2,y_3]$ is its
+second divided difference, then
+\begin{equation}
+ h_3=1+\chi. \label{eq:chi}
+\end{equation}
+For the Gaussian source $e^{-au^2}$, $U=-8a\srcR-8a^2$ is affine,
+so $\chi=0$ and $h_3=1$. This is a comparator normalization, not a
+bound for theta.
+
+For clarity, the positive carrier recalled from the background is
+\begin{equation}
+ w_s(\mathbf u)=\Bigl(\prod_{j=1}^3u_j^{2s}\Phi(u_j)\Bigr)
+               V(\mathbf u^2)V(\srcR(\mathbf u)),\quad
+ d\mu_s=Z(s)^{-1}w_s\dd\mathbf u,\quad \mathbf u\in\Omega_3.
+ \label{eq:carrier}
+\end{equation}
+Here $\Omega_3=\{0<u_1<u_2<u_3\}$, $V$ is the Vandermonde, and
+$M_3=Z\mathcal A$ with $\mathcal A=1+\E_s\chi>0$.
+Let $T=2\sum_j\log u_j$ and $m_s=\E_sT$. The complete curvature is
+\begin{equation}
+ (\log M_3)''=
+ \Var_sT+\frac{\Cov_s(\chi,(T-m_s)^2)}{\mathcal A}
+ -\left(\frac{\Cov_s(\chi,T)}{\mathcal A}\right)^2. \label{eq:completecurv}
+\end{equation}
+Thus the missing comparison \eqref{eq:curvtarget} is exactly
+\begin{equation}
+ \mathcal A^2[\kappa_3(s)-\Var_sT]
+ -\mathcal A\Cov_s(\chi,(T-m_s)^2)
+ +\Cov_s(\chi,T)^2\ge0. \label{eq:unpaid}
+\end{equation}
+Equation \eqref{eq:unpaid} is a restatement of the target, not an acquired
+estimate. It combines energy responses at each source point, a divided
+difference across three points, and integration against the Mellin
+carrier. A variance bound at one temperature does not control all three
+operations.
+
+For each fixed derivative order $n$, the complete series has an envelope
+$|\Phi^{(n)}(u)|\le C_ne^{(4n+9)u}e^{-\pi e^{4u}}$ on $u\ge0$.
+This justifies the fixed-order thermal differentiations and log-inserted
+integrals. At node collisions use the smooth undivided product
+$h_3w_s=(\prod u_j^{2s})V(\mathbf u^2)\det[\Phi^{(2i)}(u_j)]$;
+near zero, $u^{2s}|\log u|^p$ is locally integrable for $s\ge0$.
+These are absolute-integrability payments, not determinant-relative
+estimates or a large-$s$ comparison theorem.
+
+\section{What is established and what the next relation must add}
+\label{sec:next}
+The outcome is a faithful physical formulation of the original signed
+problem. The loss model realizes its amplitudes, preserves their
+normalization and phase, and has stated finite/infinite limits.
+The energy description identifies what the derivative labels measure.
+Neither representation supplies the missing signed comparison.
+
+The exact Gaussian benchmark is
+\begin{equation}
+ D^G_{3,k}=\frac{2c_0^3t^{3k}}{k!(k+1)!(k+2)!},\qquad
+ \frac{D^G_{3,k-1}D^G_{3,k+1}}{(D^G_{3,k})^2}=\frac{k}{k+3}.
+\end{equation}
+Thus log-concavity of $D_{3,k}/D^G_{3,k}$ is an equivalent rewriting
+of \eqref{eq:target}. Likewise
+\begin{equation}
+ W_k(v)=\frac{k}{k+3}A_k(v)^2-A_{k-1}(v)A_{k+1}(v)\ge0
+ \label{eq:jointtarget}
+\end{equation}
+is a useful joint expression, but merely naming $W_k$ does not prove it.
+
+Three possibilities discussed in \ev{D1,D2} remain conceptual:
+\begin{enumerate}
+\item A source-derived pairing or exchange identity controlling
+\eqref{eq:jointtarget}, with signed contributions combined before any
+bound is applied.
+\item An integrated relation among the complete energy responses
+\eqref{eq:responseenergy} that bounds \eqref{eq:completecurv}, or only
+its necessary triangular averages. The square spectrum and full theta
+reflection are available information beyond generic thermal positivity.
+\item An auxiliary Gaussian-to-theta deformation of the \emph{source},
+with positivity along the path and a paid derivative comparison. This
+would be a new flow, not variation of the activity $v$.
+\end{enumerate}
+No mechanism from this list is selected or proved by the manuscript.
+The energy-response relation is the author's current discussion focus.
+A proposed estimate should identify the signed quantity it controls,
+its source-specific premise, its actual domain and its treatment of
+boundaries and tails. Existing MC03 localization, MC04 Ward-response
+nonclosure and MC05 higher-coefficient nonclosure, summarized in the
+background, must remain part of that assessment.
+
+\begin{table}[htbp]
+\centering\small
+\renewcommand{\arraystretch}{1.17}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{.24\textwidth}X@{}}
+\toprule
+Control or scope & What it actually establishes\\
+\midrule
+Gaussian generating function & Passes local cone preservation and saturates the benchmark; it is not the canonical theta source.\\
+$1+w+2w^2$ & Passes dissipativity and the same readout, but has a negative endpoint minor. It fails canonical source reconstruction.\\
+$1+w$ & Positive endpoint minors coexist with a negative intermediate transfer entry.\\
+One-energy thermal source & Positive filtered state and zero fluctuations coexist with a negative derivative observable; full spectrum and reflection fail.\\
+Weighted-square / Euler changes & Change canonical weights or reconstruction and can lose reflection/endpoints. Their uncomputed signs and local admissibility are not assigned here.\\
+Reflected / shape controls & Can retain selected symmetry or decay while lacking the complete arithmetic expansion. Such shape information alone is not a signed comparison.\\
+\bottomrule
+\end{tabularx}
+\caption{The controls distinguish the premises of a realization from the missing signed estimate.}
+\end{table}
+
+The stop concerns one every-intermediate-interval fixed-cone mechanism,
+not the whole subinvestigation. Activity cancellation leaves an unpaid
+joint endpoint relation; it does not exclude every quantum-information
+method. The next session can begin from the exact spectral dictionary
+and ask for that additional relation, without rebuilding the loss model
+or replacing the original observable by a positive probability.
+
+\appendix
+\section{Explicit fixed-mode collision constants}
+\label{sec:constants}
+This appendix retains the quantitative content of \ev{O2}, equations
+(8)--(16), without claiming constants uniform in the cutoff. For
+$m=N+1$, $A=A_*$, choose
+\[
+ d=H_0=2mA,\quad j=4mA,\quad \ell=2\sqrt A,\quad
+ w=4m\sqrt A,\quad c=w+H_0,
+\]
+bounding respectively the no-count generator, Fock Hamiltonian,
+jump map, each loss operator, and exchange. Set
+\begin{align}
+ E&=wH_0+\tfrac12H_0^2+e^cc^3/6,\qquad q=2^m-m-1,\notag\\
+ C_c&=E(2+d)+mE(2\ell+E)+q(w^2/2+E)^2,\notag\\
+ C_L&=(2+d)d^2e^d/2+2dj+j^2e^j/2. \label{eq:explicitconstants}
+\end{align}
+Expansion of $e^{-i(\sqrt hW+hH)}$ through degree two has remainder
+at most $Eh^{3/2}$ for $0<h\le1$. The $q$ multiple-occupation blocks
+contribute only order $h^2$ in the instrument norm. The three terms in
+$C_L$ bound the frozen vacuum error, one-count integral error and the
+sum of higher-count terms. For the time-dependent modulus,
+\[
+ \omega_N(\delta)\le m[2\omega_G(\delta)+\omega_{\loss}(\delta)]
+ \longrightarrow0
+\]
+by \eqref{eq:capbound}. These constants prove
+\eqref{eq:recorderror} and \eqref{eq:phaseerror} on arbitrary
+trace-class inputs, including flag coherences. They are conservative
+analytical bounds, not performance estimates for a laboratory device.
+
+\section{Evidence map and continuation boundary}
+\label{sec:evidence}
+The source root for the following identifiers is
+\path{papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/}.
+Paths are repository-relative to that root. The build record freezes
+file hashes; hashes identify versions and do not validate proofs.
+
+\begin{description}[style=nextline,leftmargin=0pt,labelwidth=0pt,labelsep=0pt]
+\item[\ev{BG} Background manuscript.]
+\path{manuscript/main.tex}, \emph{Signed Mellin Curvature and Theta
+Coefficient Positivity}, 2 November 2026; source normalization,
+real-tilt positivity baseline, factorial budget and eight-branch context.
+Its production self-check is exposition checking, not a new theorem review.
+\item[\ev{F1,F2} Fermionic representation and review.]
+\path{02_fermionic_correlators/notes/01_THETA_ORBITAL_COMPARISON_RETURN_20261101.md}
+and \path{02_fermionic_correlators/reviews/01_MC02_E01_SEPARATE_REVIEW_20261101.md}.
+The transfer, continuum overlap and fixed-positive-metric obstruction
+have separate cross-model internal LLM review with shared premises.
+\item[\ev{O1} Local admissibility.]
+\path{08_open_quantum_dynamics/notes/01_NO_JUMP_ADMISSIBILITY_AUDIT_20261102.md},
+with the exact rational support record in that branch's numerics folder.
+The full-source proof is analytical, not a numerical theta cutoff.
+\item[\ev{A1} Architecture decision.]
+\path{08_open_quantum_dynamics/notes/02_OPEN_SYSTEM_ARCHITECTURE_DECISION_20261102.md}.
+This fixes the fresh-vacuum loss/count resources and states the scoped
+regular-reservoir obstruction; its construction is completed in O2.
+\item[\ev{O2,O3} Realization and separate assessment.]
+\path{08_open_quantum_dynamics/notes/03_FERMIONIC_LINDBLAD_REALIZATION_20261102.md}
+and \path{08_open_quantum_dynamics/reviews/02_OPEN_QUANTUM_DYNAMICS_ASSESSMENT_20261102.md}.
+O3 accepts O1 and O2 at their stated scope without correction, in a
+separate same-model internal review. It does not supply a signed estimate.
+\item[\ev{S1,S2} Scoped sign-mechanism stop and self-check.]
+\path{08_open_quantum_dynamics/notes/04_SIGNED_COMPARISON_DECISION_20261102.md}
+and \path{08_open_quantum_dynamics/reviews/03_MC08_B02_STOP_SELF_CHECK_20261102.md}.
+These have proof-author checking only. The sole live progress register
+narrows earlier parking language to the tested mechanism; the broader
+folder remains open. E04 is Ready and unstarted at this manuscript freeze.
+\item[\ev{T1,T2} Thermal identities and review.]
+\path{01_circle_thermal_trace/notes/01_THERMAL_SOURCE_IDENTITY_RETURN_20261101.md}
+and \path{01_circle_thermal_trace/reviews/01_MC01_E01_SEPARATE_REVIEW_20261101.md}.
+The response polynomials, mixed cumulants, single-energy witness and
+residual are accepted without correction in a separate cross-model
+internal review. The full Mellin comparison remains unpaid.
+\item[\ev{D1,D2} Current discussion.]
+\path{08_open_quantum_dynamics/notes/05_MATHEMATICAL_RELATION_BRAINSTORM_20261102.md}
+and \path{08_open_quantum_dynamics/notes/06_THETA_ENERGY_LEVELS_AND_FERMIONIC_LABELS_20261102.md}.
+These organize candidate relations and distinguish the labels and
+Hamiltonians; they are not new signed bounds.
+\end{description}
+
+The source/bibliography checks for this manuscript are selected-passage
+checks, not a literature novelty audit. The accompanying production
+self-check concerns transcription, scope, references and rendering; it
+does not execute E04 or constitute a separate mathematical assessment.
+The sole live register and the next-session note remain under
+\path{08_open_quantum_dynamics/research-progress/}. The default next task
+is \textbf{MC08-B03, conceptual discussion of a source-dependent
+energy-response relation}; the separate E04 proof check remains an
+explicit alternative. No numerical campaign is authorized by the
+manuscript itself.
+
+\section*{Acknowledgment and preparation record}
+This manuscript was drafted for Edward Baker with substantial assistance
+from OpenAI's \texttt{gpt-6-astra} model, recorded reasoning effort
+\texttt{xhigh}, on 2 November 2026. It synthesizes research notes prepared
+with the model configurations recorded in those notes. The present
+preparation is an expository integration and author-side consistency
+check; it does not replace independent mathematical review. No new
+manuscript snapshot directory or scientific computation campaign was
+created.
+
+\bibliographystyle{plainurl}
+\bibliography{manuscript_references}
+\end{document}

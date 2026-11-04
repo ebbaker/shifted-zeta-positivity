@@ -1,168 +1,127 @@
-# Research overview for open quantum dynamics of the theta transfer
+# Research overview: theta source states, Hamiltonians and realizations
 
-2 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance. Actual preparation model **gpt-6-astra (Codex)**, reasoning effort **xhigh**, verified from this chat's turn metadata. **MC08-E00** is planning/documentation only; the research tasks below have not been executed.
+3 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance; actual recorded **gpt-6-astra / xhigh**, chat `01a19f55-b2e6-75f0-a465-ad11ad5d5488`, turn `01a19fd4-54b3-7162-8b66-7971f8b92164`; same brainstorm history **0001**.
 
-## Purpose and placement
+**Author-requested revision of the 2 November E00 overview.** The original E00 design has already produced E01–E03 and the continuation manuscript. This overview now specifies the upstream clock, Hamiltonian and environment questions authorized on 3 November; it does not treat the original tasks as unexecuted. Original request revisions, returns, reviews and their historical input hashes remain unchanged. The [sole MC08 progress register](../research-progress/01_OPEN_QUANTUM_DYNAMICS_RESEARCH_PROGRESS_20261102.md) owns readiness and current task disposition.
 
-This direction asks whether the exact theta fermionic transfer can be realized as a conditioned part of open quantum dynamics, and whether the structure of that realization yields useful information about its signed occupation amplitudes. It owns continuous parameter evolution, Lindblad and quantum-trajectory realizations, Hermitian environments, divisibility, and preservation of the original observable.
+**Scope separation, 3 November 2026:** the author has created a separate [source-overlap kernel investigation](../../09_source_overlap_kernels/README.md), initially with a draft overview only. The present folder continues the Hamiltonian, clock, environment and energy interpretation. The earlier source-kernel discussion notes retain their original paths as provenance. This navigation update is by gpt-6.1-sol / ultra and selects no new model.
 
-The folder is a sibling of [02 Fermionic correlators](../../02_fermionic_correlators/README.md). MC02 owns the established Slater/transfer representation and its reviewed obstruction; MC08 uses that baseline to study dynamics. [03 Connected Mellin response](../../03_connected_mellin_response/README.md) owns the continuous signed-response language, and [05 Schur and Toda structure](../../05_schur_toda_structure/README.md) owns the coefficient algebra. New dynamics must return to the same coefficients and amplitudes.
+**Author-requested source-first continuation, 3 November 2026:** [Handoff10](../research-progress/handoffs/10_NATURAL_HAMILTONIAN_BRAINSTORM_CONTINUATION_20261103.md) now prepares natural-Hamiltonian brainstorming from f_i,g_j and the source's statistical-mechanics generating function. The old v clock and two engineered baths are not compulsory starting assumptions. The transfer/clock/full-model formulas below retain their earlier evidence as one construction; they do not select the natural source Hamiltonian. Actual continuation preparation gpt-6.1-sol / ultra.
 
-The [local progress file](../research-progress/01_OPEN_QUANTUM_DYNAMICS_RESEARCH_PROGRESS_20261102.md) is the sole live register for MC08. It contains the task contracts, dependencies and next prompt. Research readiness is recorded there, not duplicated here.
+## Research purpose and fixed mathematical observation
 
-| Default next task | Type | Recommended model and reason | Deliverable |
-| --- | --- | --- | --- |
-| MC08-E01, exact no-jump admissibility audit | E | Sol: generator, positivity condition and analytical test are specified | A justified positive-v interval and exact construction conditions, or a scoped failed condition; explicit infinite-mode limits |
-| Later design decision MC08-B01 | B | Astra: choose a common realization and its physical restrictions | One selected architecture and a frozen construction contract |
+Investigate a natural Hamiltonian for the original theta-derived source states, or an energy-space operator with a faithful preparation/observable correspondence to those states. The current author preference starts with the primitive as an energy generating function and permits a circle or another geometry. Handoff10 supplies unselected source-spectrum, source-coordinate and joint-state starting points; a physical time, geometry or operator has not been chosen. The earlier clock/full-environment investigation below records one realization of the coefficient transfer. The [new discussion](../brainstorm/notes/03_CLOCK_FREEDOM_AND_EXPLICIT_ENVIRONMENT_20261102.md) supplied the finite quadratic-clock candidate with same-assistant checking. The later [E06 assessment](../brainstorm/reviews/01_MC08_E06_QUADRATIC_CLOCK_ASSESSMENT_20261103.md) accepts its stated finite claims with shared-premise different-model internal checking; [Derivation05](../brainstorm/notes/05_MC08_E06_QUADRATIC_CLOCK_DERIVATIONS_20261103.md) supplies the details. General physical endpoint-channel equality and infinite-generator claims remain unexecuted. This navigation update is by gpt-6.1-sol / ultra, 3 November 2026; readiness belongs only to the sole register.
 
-Recommendations do not change the author's selected model or effort and do not authorize dispatching agents or starting another chat.
-
-## The physical distinction that fixes the problem
-
-Tracing an environment out of unitary system-environment evolution produces a reduced density matrix. With a fixed initially uncorrelated environment, the resulting system map is completely positive and trace preserving (CPTP). It is generally non-unitary while preserving Hermiticity of the density matrix. A Lindblad equation is an additional dynamical structure: arbitrary reduced evolutions need not form a semigroup or admit completely positive intermediate propagators.
-
-A non-Hermitian effective Hamiltonian naturally governs a **conditioned trajectory**, such as evolution with no detected environmental jump. Averaging all trajectories, including jumps, restores the density-matrix master equation. The exact amplitude K_v is therefore first proposed as a no-jump operator, not as the whole trace-preserving channel. The distinction follows the inspected Castin–Dalibard–Mølmer equations (1)–(8) and Section 2 in the [source record](../../../../references/12_OPEN_QUANTUM_DYNAMICS_SOURCES_20261102.md).
-
-Fix the measurement instrument, ordered occupation basis and phase convention. Different Kraus decompositions or unravelings can describe the same channel while changing the selected conditional amplitude. Complete positivity alone cannot determine that amplitude's sign.
-
-## Fixed mathematical baseline and desired output
-
-Use the complete canonical theta source at source heat time zero:
+Retain the complete time-zero source and its coefficients:
 \[
-c_n=\frac{1}{(2n)!}\int_0^\infty u^{2n}\Phi(u)\,du,\qquad
-F(w)=\sum_{n\ge0}c_nw^n,\qquad c_n=0\quad(n<0).
+c_n=\frac1{(2n)!}\int_0^\infty u^{2n}\Phi(u)\,du,\quad
+F(w)=\sum_{n\ge0}c_nw^n,\quad K_v=F(vS)/F(v),\quad K_0=I.
 \]
-On ell^2(N_0), S|0>=0 and S|j>=|j-1>. For v>0,
-\[
-K_v=F(vS)/F(v),\qquad \|K_v\|\le1,\qquad K_0=I.
-\]
-For increasing finite lists I,J of length r,
+Here S is the backward shift on coefficient sites in ell2(N0), and c_n=0 for negative indices. For increasing occupations I,J of length r,
 \[
 A_v(I,J)=\langle I|\Gamma(K_v)|J\rangle
-=\frac{v^{\sum J-\sum I}}{F(v)^r}\det[c_{j_b-i_a}]. \tag{1}
+=\frac{v^{\sum J-\sum I}}{F(v)^r}\det[c_{j_b-i_a}].
 \]
-All-sector nonnegativity at one fixed positive v is the existing RH-equivalent formulation. This is stated once as the classification, not a new criterion or evidence for RH.
+This signed amplitude, including phase, occupation order and the full scalar F(v), remains the mathematical observation. At v=0 use K_0=I. All-minor nonnegativity is the inherited RH-equivalent destination, not a result of an enlarged positive Hilbert space. The unchanged quantitative pilot is eta_k=D_(3,k-1)D_(3,k+1)/D_(3,k)^2<=k/(k+3), k>=1, or its sufficient complete Mellin-curvature comparison. Reparameterizing v cannot change eta_k.
 
-A concrete quantitative consumer is the fixed-order comparison
-\[
-\frac{A_{3,k-1}(v)A_{3,k+1}(v)}{A_{3,k}(v)^2}
-\le\frac{k}{k+3},\qquad
-A_{3,k}(v)=\langle0,1,2|\Gamma(K_v)|k,k+1,k+2\rangle,\quad k\ge1. \tag{2}
-\]
-State denominator positivity and the exact covered k range. This sufficient comparison is stronger than the bare next-determinant sign condition; changing it requires a named new target. A local positive-v realization is enough to represent all the coefficient signs, but no finite mode/particle cutoff replaces the full quantifiers in (1). Success at order four is a quantitative pilot within known finite-order positivity.
+The exact continuously monitored loss record is a feature of the existing architecture, not automatically a required observation in every replacement model. Partial trace, final environment-vacuum selection and continuous no-count conditioning must be specified separately. A probability |A|^2 cannot replace A. The existing coherent reference, p_J and q_0=(1+p_J)/2 remain the readout baseline; a changed measurement must recover the signed amplitude with its own justified normalization.
 
-The parameter v is a jump-length activity. It is not source heat time, inverse temperature or the real Mellin tilt s. Any claim about the complete Mellin curvature requires an explicit bridge to the original M_3(s), with normalization, negative insertion and tails retained. A response in v alone is not that bridge.
+## Work sequence and model routing
 
-## Existing evidence and unresolved claims
-
-- The [MC02 return](../../02_fermionic_correlators/notes/01_THETA_ORBITAL_COMPARISON_RETURN_20261101.md) and [separate internal review](../../02_fermionic_correlators/reviews/01_MC02_E01_SEPARATE_REVIEW_20261101.md) accept the bounded transfer and the fixed-positive-metric Jordan obstruction at their stated scope. They prove no new Mellin comparison.
-- The [basic explanation](../../brainstorm/03_FERMIONIC_TRANSFER_FROM_BASICS_20261102.md) fixes all finite-sector and positive-v quantifiers.
-- The [continuous-v discussion](../../brainstorm/notes/01_CONTINUOUS_V_EVOLUTION_AND_HERMITIAN_SCOPE_20261102.md) derives the parameter generator, local logarithmic interpolation, large-v limitations and a generic unitary dilation. It has same-assistant checks only and remains an input to audit, not a separately reviewed Lindblad result.
-- A fixed-time unitary dilation is generic for contractions. Separate endpoint dilations do not supply one common environment, continuous dynamics, locality or a sign theorem.
-
-Read the [result index](../../../../../../../result-summaries/README.md), especially [theta physical assessments](../../../../../../../result-summaries/14_theta_identities_and_arithmetic_bookkeeping.md), and the [avoid index](../../../../../../../avoid/README.md), especially [reformulations](../../../../../../../avoid/01_restating_the_target.md), [re-realizations](../../../../../../../avoid/03_lifts_and_re_realizations_in_new_coordinates.md), [joint signed estimates](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md) and [scoped exclusions](../../../../../../../avoid/07_scoped_exclusions_read_as_universal.md).
-
-## First analytical test for a no-jump realization
-
-Where F(vS) has a bounded inverse,
-\[
-G(v)=K'_vK_v^{-1}
-=SF'(vS)F(vS)^{-1}-\frac{F'(v)}{F(v)}I. \tag{3}
-\]
-This inverse exists near zero; on every finite invariant mode truncation it exists for each finite v. Finite truncations do not establish invertibility on the infinite space at arbitrary v.
-
-Use hbar=1 and the convention
-\[
-\dot\rho=-i[H,\rho]
-+\sum_\mu\left(L_\mu\rho L_\mu^\dagger
--\tfrac12\{L_\mu^\dagger L_\mu,\rho\}\right).
-\]
-The unnormalized no-jump state has generator
-\[
-G_{\rm nj}=-iH-\tfrac12R,\qquad R=\sum_\mu L_\mu^\dagger L_\mu\ge0.
-\]
-Thus the exact condition for a bounded instantaneous realization of G is
-\[
-R(v)=-[G(v)+G(v)^\dagger]\ge0,\qquad
-H(v)=\frac{i}{2}[G(v)-G(v)^\dagger]. \tag{4}
-\]
-For bounded norm-continuous G on a finite interval, (4) permits a one-particle completion with L=sqrt(R). The research task must justify the interval and regularity; it must not assume them from ||K_v||<=1. That endpoint bound concerns evolution from zero, whereas (4) concerns every infinitesimal intermediate step. In a finite-dimensional regular setting, the corresponding full Lindblad propagators are CPTP and divisible. A time-independent semigroup is a separate stronger specification.
-
-At zero, with alpha=c_1/c_0>0, direct algebra gives
-\[
-G(0)=\alpha(S-I),\quad
-R(0)=\alpha(2I-S-S^\dagger)\ge0,\quad
-H(0)=\frac{i\alpha}{2}(S-S^\dagger).
-\]
-There is no strictly positive spectral gap for R(0) on the half-infinite space. A bare continuity argument does not establish (4) for positive v.
-
-One fixed analytical route for MC08-E01 is to audit the shift-symbol reduction. If
-\[
-\log(F(w)/c_0)=\sum_{n\ge1}b_nw^n,
-\]
-then, inside its analytic disk,
-\[
-G(v)=\sum_{n\ge1}n b_n v^{n-1}(S^n-I).
-\]
-The candidate sufficient bound
-\[
-\sum_{n\ge2}n^3|b_n|\,v^{n-1}\le b_1 \tag{5}
-\]
-uses |1-cos(n theta)|<=n^2(1-cos theta) to control the Hermitian part uniformly in the boundary angle. MC08-E01 must verify the Toeplitz-form argument and give an explicit positive interval using a zero-free disk and coefficient/tail bounds. Equation (5) is a proposed audit route, not a recorded theta certificate. The zero-angle limit must be treated analytically rather than sampled.
-
-## A common fermionic model and its Hermitian environment
-
-If (4) is established, test a quadratic Hamiltonian and linear loss operators on finite mode sets:
-\[
-H_{\mathcal F}(v)=d\Gamma(H(v)),\qquad
-L_\mu(v)=\sum_j B_{\mu j}(v)a_j,\qquad B^\dagger B=R.
-\]
-The intended identity is
-\[
-\sum_\mu L_\mu^\dagger L_\mu=d\Gamma(R),\qquad
-G_{{\rm nj},\mathcal F}=d\Gamma(G),\qquad
-U_{{\rm nj},r}(v,0)=\bigwedge^rK_v. \tag{6}
-\]
-Verify conventions, sector normalization and initial conditions. Loss trajectories can change particle number; the conditioned no-jump operator preserves each sector and keeps the original vacuum convention. Quadratic open-fermion methods such as Prosen's third quantization are relevant here, with his factor-two jump convention explicitly converted.
-
-A microscopic Hermitian reservoir or repeated-interaction construction must reproduce the chosen instrument and record its approximations. Specify environment preparation, coupling range, measurement, time dependence, success probability and system-size dependence. A Markov reservoir limit is not automatically an exact finite-dimensional closed Hamiltonian realization. Infinite-mode and arbitrary-finite-particle limits need domain and convergence estimates; a finite covariance calculation is not enough.
-
-The existing Jordan block forbids a fixed metric that makes the original transfer Hermitian. It does not forbid a Hermitian coherent component H plus jump terms, or a larger Hermitian system. Those are the intended objects here.
-
-## Observable preservation and quantum-information tools
-
-The measured quantity must retain the real signed matrix element in (1), including its positive scalar prefactor. A transition probability gives |A|^2 and loses the required sign. Specify a coherent reference and interference readout, keeping any fermion-parity superselection constraint. Conditional normalization must be tracked through the no-jump success probability.
-
-For each proposed tool, record the exact object it constrains and the additional bridge to (1) or (2):
-
-| Tool | Potential role | Obligation before claiming a theta consequence |
+| Task | Type / recommended model and reason | Dependency and deliverable |
 | --- | --- | --- |
-| Kraus maps and unitary dilation | Realize each endpoint and fix an instrument | Preserve phase/basis information and provide a common family if needed |
-| Lindblad trajectories and CP divisibility | Identify valid local-in-time noise and conditional propagation | Prove (4), regularity and the specified parameter domain |
-| Quadratic fermionic evolution and third quantization | Organize one dynamics across sectors | Verify (6), conventions and mode/particle limits |
-| Trace-distance, fidelity or entropy monotonicity | Bound distinguishability or response | Derive an explicit inequality for the original signed amplitude or ratio; positivity of states is insufficient |
-| Noncrossing path or real-cone preservation | Possible mechanism for ordered amplitude signs | Obtain the required locality/order property from unchanged theta data; generic complete positivity does not imply it |
+| MC08-B03 | B — Astra: natural Hamiltonian and state/energy correspondence remain conceptual | Current source-first discussion prepared in [Handoff10](../research-progress/handoffs/10_NATURAL_HAMILTONIAN_BRAINSTORM_CONTINUATION_20261103.md); no candidate selected |
+| MC08-E06 | E — Sol: specified clock/dilation verification | Completed finite-scope assessment linked above; retained as earlier realization evidence |
+| MC08-B04 | B — Astra: the earlier two-bath observation/model choice | Preserved optional r0; it does not restrict the source-first B03 discussion |
+| MC08-E07 | E — Sol: execute the route once B04 fixes it | Reserved follow-through only; not an issued research contract until its observable, topology, estimates and stop test are frozen |
+| MC08-E04 | E — Sol: existing scoped B02 check | Separate historical verification option under Handoff05; not a prerequisite for E06 |
 
-MC08-B02 compares at most two specific mechanisms and selects one for a worked return. No broad machinery survey, uncontrolled hierarchy or numerical scan replaces that choice.
+MC08-B03 remains the parent source-dependent energy-response investigation, now explicitly revised to source-first natural-Hamiltonian brainstorming. The earlier clock/full-model sequence remains available evidence rather than a prerequisite selecting the new operator; no signed mechanism is complete. These labels recommend manual routing; they neither change the author's model nor launch another chat or agent.
 
-## Controls and classification of possible gains
+## 1. Clock freedom: scaling versus quadratic startup
 
-| Control or comparison | What it tests and the failed premise |
-| --- | --- |
-| F_*(w)=1+w+2w^2 | Positive contraction and endpoint Kraus completion coexist with a two-fermion amplitude -v^2/F_*(v)^2<0. It fails unchanged theta reconstruction. This rules out an inference from generic channel positivity. Test any proposed stronger generator premise explicitly. |
-| Gaussian F(w)=c_0 exp(a w), a>0 | Exact directed semigroup and known positive minors provide a normalization comparison. It retains the same Jordan obstruction. This is not evidence for the canonical theta estimate. |
-| Euler-factor, reflected and smooth positive-primitive sources | Generic coefficient dynamics and endpoint dilations survive where generating sums converge; unchanged theta coefficients fail. No uncomputed intermediate-rate or minor sign is assigned. A positive-time collision does not alone determine a time-zero minor. |
-| Weighted-square and finite-prime modifications | Canonical weights fail; full evenness or orbital endpoint conditions may also fail. Discrete constructions remain available under their own convergence assumptions. |
-| Arbitrary CPTP completions and different unravelings | Detect loss of the selected instrument, basis or signed readout. Positivity of a Choi matrix is not total nonnegativity of K. |
+For a nondecreasing C1 clock v=f(t), f(0)=0 and f(t)<=1/25,
+\[
+\widetilde G(t)=f'(t)G(f(t)),\quad
+\widetilde H(t)=f'(t)H(f(t)),\quad
+\widetilde R(t)=f'(t)R(f(t)),\quad
+\widetilde L_\mu(t)=\sqrt{f'(t)}L_\mu(f(t)).
+\]
+The same scaling holds for the lifted Fock Hamiltonian and full Lindblad generator; event-time densities acquire their Jacobians. A constant rescaling f(t)=a t changes energies and rates, while preserving the path, corresponding amplitudes, and relative coherent/loss strengths.
 
-Use the [standing control inventory](../../../../../../../result-summaries/12_collision_controls_and_screening.md) and [control discipline](../../../../../../../avoid/02_shape_only_arguments_and_the_controls.md). Naming a missing exact-source identity does not prove that a derived bound discriminates a control.
+The selected nonlinear case for assessment is **f(t)=a t^2, a>0**, on 0<=t<=1/sqrt(25a). It gives
+\[
+\|K_{at^2}\psi\|^2=1-at^2\langle\psi,R(0)\psi\rangle+O(t^4).
+\]
+This removes the startup contradiction with quadratic leakage from a regular total Hamiltonian and an initial product vacuum. It is not a regular clock diffeomorphism at t=0. The earlier obstruction continues to apply to clocks with f'(0)>0 in its original class. At later times with f'>0, repeatedly projecting a fixed bath to vacuum still creates a new product-state quadratic leakage law; hence the entire continuous no-count instrument is not recovered merely by quadratic startup.
 
-A valid local Lindblad realization is a physical-realization result. A source-dependent bound, new covered parameter range, explicit convergence guarantee or scoped obstruction is a separately stated analytical result. The unknown theta minor signs are not improved by a generic realization alone. Record each gain in its actual class.
+E06 checked these statements on the fixed interval; its finite-scope assessment is linked above. It does not optimize clocks, enlarge the activity range or use a coordinate change as a signed estimate.
 
-## Work products and stopping conditions
+## 2. Three Hamiltonians with different roles
 
-Save derivations in notes, computations and small records in numerics, and reviews in reviews; use the actual date and next unused number. Every return records actual model/effort, input versions, source normalization, exact domain, controls, limits and one next B/E recommendation. The [common bibliography](../../../../references/README.md) remains canonical.
+| Operator | Hilbert space and role | Required distinction |
+| --- | --- | --- |
+| L_+=diag(pi m^2), m>=1, and dGamma(L_+) | Positive circle modes and their energy-mode Fock space | Supplies the theta heat trace and filtered source; no identification with coefficient-site creators |
+| tilde H_N(t)=2at H_N(at^2), and dGamma(tilde H_N) | Coefficient-site system space and its Fock lift | Coherent part of the prescribed reduced no-count generator; zero at startup |
+| h_tot,N(t)=i U_N'(t)U_N(t)^dagger, and dGamma(h_tot,N) | Full system plus environment one-particle space and its Fock lift | Generates the proposed exact joint unitary; its startup exchange need not vanish |
 
-Stop the selected attempt when it has a worked conclusion or a precise unpaid obligation. Failure of (4) closes only the specified exact no-jump parameterization on the stated domain. Alternatives such as memory, another time parameter or explicit positive scalar attenuation require a B decision and a changed contract; attenuation must be recovered in the original observable and is generic by itself. Large-v noninvertibility and unbounded-generator issues cannot be bypassed by finite cutoffs.
+The total Hamiltonian is not obtained just by multiplying the old reduced H by 2at. It includes interactions with explicit environment degrees of freedom. A decomposition into system energy, reservoir energy and interaction, choice of frame, drive/work terms and observable to call energy must be stated by B04. The candidate is driven/time dependent; autonomous energy conservation, a thermal reservoir, and a pi m^2 spectral interpretation are not assumed. Scalar or frame changes must be tracked through the calibrated signed observation.
 
-The planning packet creates no new manuscript snapshot, starts no computation or delegated research, and does not change frozen MC02 results. This chat retains its unique [brainstorm history registration](../../brainstorm/chat-histories/index.json); future new branch chats register here when launched. Use [GPT research workflow](../../../../../../../GPT_RESEARCH_MODEL_WORKFLOW.md) and [chat-history workflow](../../../../../../../tools/CHAT_HISTORY.md).
+## 3. Explicit candidate full space and unitary
+
+At cutoff N let m=N+1, h_S,N=C^m and h_E,N=C^m. The one-particle space is a **direct sum** h_S,N plus h_E,N; the many-body space is F_-(h_S,N plus h_E,N), of dimension 2^(2m). An ordered Fock factorization gives the system/environment tensor product with fermion parity conventions fixed. The environment starts in vacuum.
+
+Set C_N(t)=K_(at^2,N), retaining the complete scalar F, and
+\[
+D_N=(I-C_N^\dagger C_N)^{1/2},\quad
+E_N=(I-C_N C_N^\dagger)^{1/2},\quad
+U_N=\begin{pmatrix}C_N&-E_N\\D_N&C_N^\dagger\end{pmatrix}.
+\]
+The standard defect identity verifies unitarity and U_N(0)=I. The proposed exact vacuum block is
+\[
+\langle\Omega_E|\Gamma(U_N(t))|\Omega_E\rangle=\Gamma(C_N(t)).
+\]
+The full unconditioned channel is explicitly the partial trace of Gamma(U_N)(rho tensor vacuum)Gamma(U_N)^dagger. Equality of this channel with the old MC08 endpoint channel, on a stated observable algebra, is not inferred just from equality of vacuum blocks. Matching the continuous record is a still stronger condition.
+
+The finite-N regularity calculation uses R_N(0)>0:
+\[
+D_N(t)=\sqrt a\,t\sqrt{R_N(0)}+O(t^3),\quad
+E_N(t)=\sqrt a\,t\sqrt{R_N(0)}+O(t^3),
+\]
+\[
+h_{\rm tot,N}(0)=i\sqrt a
+\begin{pmatrix}0&-\sqrt{R_N(0)}\\\sqrt{R_N(0)}&0\end{pmatrix}.
+\]
+Strictly positive defects at positive t follow by integrating K_v^dagger R_N(v)K_v. E06 audits smoothness and boundedness on the mapped compact interval for each fixed N. These are Note03 deductions awaiting separate checking, not already accepted by E03.
+
+For a fixed bath, the system block between t1 and t2 is C_2 C_1^dagger+E_2 E_1, generally not C_2 C_1^(-1). The scalar cosine example in Note03 gives an exact distinction. Final emptiness allows prior departures and returns; the existing fresh-bin no-count record does not.
+
+## 4. Existing stream and inheritance boundary
+
+The reviewed E02 architecture has m new vacuum fermion modes per bin. Its exact bin unitary is exp[-i(h H_F,N+sqrt(h) W_N)] with explicit Hermitian exchange W_N. A finite sequence is a full known model. The target reduced channel, count instrument and phase-calibrated no-count operator are recovered in its fixed-N h->0 limit. This consumes unbounded temporal bath resources and h^(-1/2) couplings. E02 does not construct a single regular finite reservoir or prove convergence of total unitaries to a common infinite-bath Hamiltonian.
+
+E01/E02 remain accepted at their stated scope by E03; B02's fixed-cone result remains proof-author checked with separate E04 pending. A revised clock reparameterizes the old reduced instrument, but a new full bath does not inherit its measurement history by default. In particular no source dependence, cutoff theorem, phase convention, locality assertion or energy law may be imported solely because both constructions contain K_v.
+
+## 5. Infinite Hilbert space is a separate analytical gate
+
+The natural endpoint candidate is h_S=ell2(N0), h_E another copy, and F_-(h_S plus h_E). The bounded contraction K_v supplies defect operators and a unitary block completion at each endpoint. This alone does not supply a regular total generator or its full-Fock domain.
+
+The following must be addressed by B04's chosen route before E07 is issued:
+
+- Whether finite U_N approximate that infinite U in the needed topology. Defect square roots generally do not restrict exactly across cutoffs, even though the backward-shift K_N do.
+- Which differentiability and domain statements are needed for h_tot and dGamma(h_tot), and which particle caps or finite-energy assumptions make them meaningful.
+- How the gapless infinite R and the shrinking finite Dirichlet gap affect square-root derivatives. A finite-N positive-gap proof does not pass uniformly by notation.
+- What convergence of partial traces, conditioned amplitudes and the signed observation is required, separately from a full joint-unitary or generator limit.
+- Whether fixed-N suffices for a genuinely bounded pilot and, if so, how that scope is kept distinct from all finite minors and the infinite-space claim.
+
+The original E02 trace-class system extension concerns its selected stream instrument. It is not automatically the extension theorem for this fixed-bath completion.
+
+## 6. Controls, completion and documentation
+
+This phase is a representation/design assessment, not a new positivity criterion. The Gaussian and F_*=1+w+2w^2 controls both admit the generic completion. The polynomial's known negative minor survives; it fails the unchanged theta source premise rather than unitarity or clock regularization. Weighted-square/Euler modifications fail the canonical spectral weights/reconstruction, and reflected shape controls need not supply the complete square-spectrum source. No uncomputed inequality is assigned to them. Any later energy-response premise must specify what additional theta information it uses and its signed consumer.
+
+E06 returns an explicit claim-by-claim acceptance, correction or scoped gap after one analytical pass and at most one local correction. B04 compares only the existing stream and the fixed-bath completion at this stage, chooses the observation and energy specification, and freezes one finite/infinite-space route for E07 or records why no route is ready. A new source-energy model requiring a different representation is a named conceptual return, not a silent alteration of this contract.
+
+Save new discussion notes and assessments under brainstorm/notes and brainstorm/reviews, computations only under numerics if later authorized by a concrete consumer, and this chat's public history under brainstorm/chat-histories. Preserve frozen earlier returns and manuscript sources. No manuscript snapshot, broad numerical scan or simulation is part of this plan.
+
+Read with [the result index](../../../../../../../result-summaries/README.md), especially [theta identities and bookkeeping](../../../../../../../result-summaries/14_theta_identities_and_arithmetic_bookkeeping.md) and [collision controls](../../../../../../../result-summaries/12_collision_controls_and_screening.md), and [the avoid index](../../../../../../../avoid/README.md), particularly [re-realizations](../../../../../../../avoid/03_lifts_and_re_realizations_in_new_coordinates.md), [scoped exclusions](../../../../../../../avoid/07_scoped_exclusions_read_as_universal.md) and [joint signed estimates](../../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md).

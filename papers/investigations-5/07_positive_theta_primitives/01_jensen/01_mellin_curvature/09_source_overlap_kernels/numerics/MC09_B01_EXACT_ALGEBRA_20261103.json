@@ -1,0 +1,68 @@
+{
+  "task": "MC09-B01",
+  "request_revision": "plan r1",
+  "prepared_for": "Edward Baker",
+  "llm_assistance": true,
+  "actual_model": "gpt-6-astra",
+  "actual_reasoning_effort": "max",
+  "thread_id": "01a1a43c-e3ab-7f73-9373-d130d40c1068",
+  "turn_id": "01a1a447-c6e4-7d40-9b2c-8b5eb421cd46",
+  "recorded_at_utc": "2026-11-04T02:11:32.943348+00:00",
+  "arithmetic": "exact sparse multivariate integer polynomials; Python standard library",
+  "scope": "Three 3x3 formal minors and the two-copy polynomial factorization only",
+  "not_tested": [
+    "theta coefficients",
+    "Gram eigenvalues",
+    "contour quadrature",
+    "analytic existence and endpoint proofs",
+    "any original theta ratio"
+  ],
+  "script_sha256": "b22311c3aa2ebcd9ed6e3d3363294d68e9f2379ba832423bdf53110dae353b4d",
+  "note_sha256": "a222f826bf524c16c880393777033ca12b62035a42e22dc49898d0cdb9a1465f",
+  "checks": [
+    {
+      "identity": "consecutive_minor_0",
+      "result": [
+        {
+          "coefficient": 1,
+          "monomial": "a0*lam^2"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "identity": "consecutive_minor_1",
+      "result": [
+        {
+          "coefficient": 1,
+          "monomial": "a3*lam^2"
+        },
+        {
+          "coefficient": -1,
+          "monomial": "a1*beta*lam^2"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "identity": "consecutive_minor_2",
+      "result": [
+        {
+          "coefficient": -1,
+          "monomial": "a4*beta*lam^2"
+        },
+        {
+          "coefficient": 1,
+          "monomial": "a3*chi*lam^2"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "identity": "two_copy_squared_difference",
+      "passed": true
+    }
+  ],
+  "status": "passed",
+  "evidence_limit": "Proof-author algebra support; not separate mathematical review or a theta certificate"
+}
