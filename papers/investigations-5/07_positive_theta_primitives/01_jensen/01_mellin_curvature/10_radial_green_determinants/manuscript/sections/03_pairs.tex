@@ -1,0 +1,287 @@
+% Prepared for Edward Baker, 4 November 2026.
+% Substantial LLM assistance: gpt-6-astra, actual effort ultra.
+% Optional manuscript section, based on frozen RGD Note14.
+% Accepted within scope by separate internal RGD-E04 r7 assessment; no specialist review.
+
+\section{Endpoint-preserving pair comparison and a diagonal obstruction}
+\label{sec:pair-comparison}
+
+For a generating function $F(z)=\sum_{j\ge0}f_jz^j$, with $f_0=1$,
+write
+\[
+ \Delta_{r,k}(F)=\det[f_{k+j-i}]_{0\le i,j<r},\qquad f_j=0\quad(j<0).
+\]
+The original normalization is $D_{r,k}=c_0^r\Delta_{r,k}(E)$.
+The comparison below preserves $E(0)$ and $E(1)$ and has the correct
+entire-function growth. The subsequent obstruction concerns only the
+listed algebraic data; it is not a negative determinant for the theta
+source.
+
+\begin{proposition}[Endpoint-preserving pair comparison]
+\label{prop:endpoint-pair}
+Suppose
+\[
+ E(z)=\prod_i(1+a_i z)\prod_\ell
+       (1+2s_\ell\cos\theta_\ell\,z+s_\ell^2z^2),
+\]
+where $a_i,s_\ell>0$, $0<\theta_\ell<\pi/2$, the complete alphabet is
+infinite, $\sum_i a_i+\sum_\ell s_\ell<\infty$, and
+$\sum_\ell\tan^2\theta_\ell<\infty$.
+Set
+\[
+ y_\ell=\sqrt{1+2s_\ell\cos\theta_\ell+s_\ell^2}-1,
+ \quad d_\ell=s_\ell^2-y_\ell^2,
+ \quad
+ R(z)=\prod_i(1+a_i z)\prod_\ell(1+y_\ell z)^2.
+\]
+Assume also $y_\ell\le2$. Then $R(0)=E(0)=1$, $R(1)=E(1)$, and,
+with
+\[
+ V=\prod_\ell\frac{s_\ell^2}{y_\ell^2}<\infty,
+\]
+one has
+\[
+ 1\le\frac{E(t)}{R(t)}\le V\quad(t\ge1),
+ \qquad \lim_{t\to\infty}\frac{E(t)}{R(t)}=V.
+\]
+If $E-R=\sum_j\varepsilon_jz^j$, then
+\begin{equation}
+ \sum_{j\ge0}|\varepsilon_j|t^j\le(V-1)R(t)
+ \qquad(t\ge0).
+ \label{eq:pair-coeff-payment}
+\end{equation}
+Writing $(b_j)$ for the positive alphabet of $R$, every rectangular
+reference determinant satisfies
+\begin{equation}
+ \Delta_{r,k}(R)\ge(b_1\cdots b_k)^r>0.
+ \label{eq:pair-reference-margin}
+\end{equation}
+Let $\Theta=\sup_\ell\theta_\ell$, with $\Theta=0$ if there are no
+nonreal pairs. If $(r+1)\Theta<\pi$, put
+\[
+ \kappa_r=\frac{\sin((r+1)\Theta)}{(r+1)\Theta},
+ \qquad \kappa_r=1\text{ when }\Theta=0.
+\]
+Then
+\begin{equation}
+ \kappa_r^{rk}\le
+ \frac{\Delta_{r,k}(E)}{\Delta_{r,k}(R)}
+ \le\sec(\Theta)^{rk}.
+ \label{eq:pair-sector-margin}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+For one pair, abbreviate its quadratic factor by $F$ and $(1+yz)^2$
+by $G$. Direct algebra gives
+\[
+ s\cos\theta\le y<s,\qquad
+ F-G=d\,z(z-1),\qquad 0<d/y^2\le\tan^2\theta.
+\]
+Thus the factors agree at zero and one. All products converge locally
+uniformly. For $t\ge1$, $F(t)/G(t)$ increases from one to $s^2/y^2$.
+Moreover
+\[
+ 0\le2\log(s/y)\le-2\log\cos\theta\le\tan^2\theta.
+\]
+The summability assumption proves the finite quotient bound and its
+limit by dominated convergence of the logarithms.
+
+For finite products, expand the exact difference using
+$F=G+d\,z(z-1)$. After taking coefficient absolute values, replace each
+selected $z(z-1)$ by $z(z+1)$. At $t\ge0$ this gives the upper bound
+\[
+ R(t)\left\{\prod_\ell
+ \left(1+\frac{d_\ell t(t+1)}{(1+y_\ell t)^2}\right)-1\right\}.
+\]
+Since $y\le2$ implies $y^2t(t+1)\le(1+yt)^2$, this is at most
+$(V-1)R(t)$. Coefficient convergence and the same finite bound justify
+passage to the infinite product.
+
+The Toeplitz matrix of a finite positive-alphabet product is a product
+of upper bidiagonal matrices $I+b_jS$. Their minors are nonnegative.
+For the rectangle with row indices $0,\ldots,r-1$ and column indices
+$k,\ldots,k+r-1$, Cauchy--Binet includes the positive term obtained by
+shifting the whole block once in each of the first $k$ factors. Its
+value is $(b_1\cdots b_k)^r$. Taking the infinite-product limit proves
+\eqref{eq:pair-reference-margin}, including all negative-index zeros.
+
+For completeness, rectangular Jacobi--Trudi identifies
+$\Delta_{r,k}(E)$ with $s_{(r^k)}$ evaluated on its complete alphabet.
+Classical Schur branching~\cite{EtingofRepresentationTheory20110110} into the real singleton and conjugate-pair
+alphabets has nonnegative integer multiplicities. For a two-variable
+partition $\nu=(u,v)$, $u\ge v\ge0$, the exact ratio is
+\[
+ \frac{s_\nu(se^{i\theta},se^{-i\theta})}{s_\nu(y,y)}
+ =\left(\frac{s}{y}\right)^{u+v}
+   \frac{\sin((u-v+1)\theta)}{(u-v+1)\sin\theta}.
+\]
+Each component appearing in the branching has $u\le r$: every
+individual variable in $s_{(r^k)}$ has degree at most $r$, and the
+nonnegative character multiplicities cannot cancel a highest-weight
+monomial. Thus $u-v+1\le r+1$. Under the angular hypothesis, sinc
+monotonicity, $\sin\theta\le\theta$, and $s/y\le\sec\Theta$ bound
+each nonempty pair ratio below by $\kappa_r$ and above by
+$\sec(\Theta)^{u+v}$. For the upper bound one also uses
+$|\sin(j\theta)|\le j\sin\theta$, which follows from the finite
+geometric sum. There are at most $rk$ nonempty pair components, and
+their total degree is at most $rk$. Dividing the branching expansion
+by its positive reference value expresses the full ratio as a
+nonnegative weighted average of these products. This proves
+\eqref{eq:pair-sector-margin}; local convergence gives the infinite
+version.
+\end{proof}
+
+For the normalized theta function, the genus-zero product~\cite{Katkova0505174v1} is indexed
+by upper-half-plane zeros $\rho=\sigma+i\gamma$ with multiplicity,
+using $x=\alpha^{-1}$ and $\alpha=-(2\rho-1)^2$. The usual strip and
+zero-counting inputs~\cite{Odlyzko1987AuthorCopy}, together with the inherited fact $\gamma>14$,
+give $\Re x>0$, $|x|<1/784$, and
+\[
+ |\arg\alpha|=2\arctan\frac{|2\sigma-1|}{2\gamma},
+ \qquad\sum\tan^2(\arg\alpha)<\infty.
+\]
+They verify the proposition's assumptions without RH or simplicity.
+Both generating functions have nonnegative coefficients, so the
+bounded positive-axis quotient also matches their maximum-modulus
+growth up to a bounded factor. The reference nevertheless uses the
+complete, implicit zero data; it is not an acquired numerical model.
+No positive cosh-transform source or positive Green primitive for this
+reference is asserted. The bounded-order estimate is classical sector
+positivity, not a new theta positivity range. Requiring all pair Schur
+blocks to be nonnegative at every degree would force every angle to
+vanish and would restate RH for this product.
+
+\begin{theorem}[Small complete scalar defects can have negative diagonal minors]
+\label{thm:diagonal-pair-control}
+Fix $B\in(1,2)$. For every integer $q\ge26$ there exist real entire
+functions $E_q$ and $R_q$, with positive Taylor coefficients, such that:
+\begin{enumerate}
+ \item $E_q(0)=R_q(0)=1$ and $E_q(1)=R_q(1)=B$;
+ \item both functions have genus zero, order $1/2$, and radial zero
+ count asymptotic to $\sqrt T\log T/(8\pi)$;
+ \item $R_q$ is an infinite product of positive linear factors, and
+ $\Delta_{r,k}(R_q)>0$ for every $r,k\ge1$;
+ \item writing $E_q-R_q=\sum_j\varepsilon_{q,j}z^j$, one has
+ \begin{equation}
+ \sup_{t\ge0}
+ \frac{\sum_{j\ge0}|\varepsilon_{q,j}|t^j}{R_q(t)}
+ \le\tan^2\!\left(\frac{9\pi}{4q+8}\right)=O(q^{-2}),
+ \qquad \Delta_{q,q}(E_q)<0.
+ \label{eq:diagonal-control-conclusion}
+ \end{equation}
+\end{enumerate}
+The choices can additionally place every transformed zero in the
+usual critical-strip geometry for all sufficiently large $q$.
+\end{theorem}
+
+\begin{proof}
+Put $m=q-1$, $\theta=9\pi/(4q+8)$, and choose the unique $s>0$ solving
+\begin{equation}
+ (1+4s)^m(1+2s\cos\theta+s^2)=B.
+ \label{eq:diagonal-endpoint}
+\end{equation}
+The left side increases strictly from one to infinity. Initially use
+the finite alphabet
+\[
+ X=\{se^{i\theta},se^{-i\theta},\underbrace{4s,\ldots,4s}_{m}\},
+ \qquad N=q+1,
+ \qquad P=\prod_{x\in X}x>0.
+\]
+Finite elementary coefficient reversal, followed by transposition
+and the one-column duality, gives
+\begin{equation}
+ \det[e_{q+j-i}(X)]_{i,j<q}=P^q h_q(X^{-1}).
+ \label{eq:diagonal-reversal}
+\end{equation}
+Reversal is valid with all out-of-range coefficients zero; repeated
+entries introduce no division. After removing the positive factor
+$s^{-q}$, it suffices to sign
+\[
+ H_q=h_q(e^{i\theta},e^{-i\theta},1/4,\ldots,1/4).
+\]
+Let $Y$ have probability generating function
+$((3/4)/(1-w/4))^m$. Its mean and variance are
+$\mu=m/3$ and $W=4m/9$. Since the complete coefficients of the unit
+pair equal $\sin((j+1)\theta)/\sin\theta$, coefficient extraction gives
+\[
+ H_q=\frac{(4/3)^m}{\sin\theta}
+ \mathbb E\!\left[\sin((q+1-Y)\theta)\mathbf1_{\{Y\le q\}}\right].
+\]
+Now $(q+1-\mu)\theta=3\pi/2$. The inequality
+$\cos x\ge1-x^2/2$ and Chebyshev's inequality imply
+\begin{align*}
+ \mathbb E[\sin((q+1-Y)\theta)\mathbf1_{\{Y\le q\}}]
+ &\le-1+\frac{\theta^2W}{2}+\Pr(Y>q)\\
+ &\le-1+\frac{\theta^2W}{2}+\frac{W}{(q-\mu)^2}
+ <-1+\frac{13}{q}\le-\frac12.
+\end{align*}
+Indeed the two positive terms are less than $11.25/q$ and $1/q$,
+respectively, using $\pi^2<10$. This makes
+\eqref{eq:diagonal-reversal} strictly negative.
+
+To complete the product, let
+\[
+ Q_J(z)=\prod_{j>J}(1+u_jz),\qquad
+ u_j=\left(\frac{\log j}{4\pi j}\right)^2,\qquad J\ge3.
+\]
+Summability gives $Q_J\to1$ locally uniformly. For each fixed $q$,
+choose $J$ sufficiently large that $Q_J(1)<B$, and solve
+\eqref{eq:diagonal-endpoint} with $B/Q_J(1)$ in place of $B$, obtaining
+$s_J\to s$. Set
+\[
+ E_q(z)=(1+4s_Jz)^m
+ (1+2s_J\cos\theta\,z+s_J^2z^2)Q_J(z).
+\]
+This retains both endpoints. Its finite coefficient block converges
+to the previously constructed block, so its $(q,q)$ determinant
+remains strictly negative for all sufficiently large $J$.
+This chooses an existent tail cutoff; no effective or certified
+numerical cutoff is required for the assertion.
+
+The tail zeros have moduli $(4\pi j/\log j)^2$. Inverting this sequence
+gives the count $\sqrt T\log T/(8\pi)$. The convergence exponent is
+$1/2$; also $u_j=O(j^{-2+\epsilon})$ for every $\epsilon>0$, so a
+split-product bound gives order at most $1/(2-\epsilon)$. The count
+gives the reverse order inequality. Thus the order is exactly $1/2$,
+and summability gives genus zero. Finite factors change neither the
+order nor the count asymptotic.
+
+Replace the one conjugate pair by $(1+yz)^2$, with
+$y=\sqrt{1+2s_J\cos\theta+s_J^2}-1$, and call the result $R_q$.
+Its infinite positive alphabet gives all the strict reference margins.
+The pair agrees at zero and one, and $y<\sqrt B-1<1$.
+The exact difference is $d\,z(z-1)T(z)$, where
+$d=s_J^2-y^2$ and $T=(1+4s_Jz)^mQ_J$ has positive coefficients.
+Consequently
+\[
+ \frac{\sum_j|\varepsilon_{q,j}|t^j}{R_q(t)}
+ \le\frac{dt(t+1)}{(1+yt)^2}
+ \le\frac d{y^2}\le\tan^2\theta\qquad(t\ge0),
+\]
+which proves \eqref{eq:diagonal-control-conclusion}.
+
+Finally $s\sim\log B/(4q)$. Choose $J(q)$ later, if necessary, so
+that $s_J/s\to1$ while retaining the strict determinant sign. Then
+\[
+ \frac{\sin(\theta/2)}{\sqrt{s_J}}\to0,
+ \qquad \frac{\cos(\theta/2)}{2\sqrt{s_J}}\to\infty.
+\]
+The reciprocal pair $\alpha=s_J^{-1}e^{\pm i\theta}$ can therefore
+be written as $-(2\rho-1)^2$ with $0<\Re\rho<1$ for all sufficiently
+large $q$. Positive real factors map to the critical line. This last
+assertion concerns zero geometry only.
+\end{proof}
+
+The theorem concerns a family depending on $q$, not one entire function
+proved to have infinitely many negative diagonal minors. Scaling both
+functions by $c_0=b/B$ supplies the desired values $C(0)=c_0$ and
+$C(1)=b$. No nonnegative smooth cosh-transform source, positive Green
+primitive, full theta square-source identity, or ordinary Dirichlet
+arithmetic is established for the controls. Thus the theorem excludes
+a dimension-uniform positivity transfer using only the displayed data.
+It does not exclude sharper dimension-dependent conditions, complete
+signed compensation, or additional canonical source information.
+The separate RGD-E04 r7 assessment accepted all twelve stated
+obligations without mathematical correction. This is different-model
+internal LLM assessment with shared premises, not specialist review.

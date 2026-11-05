@@ -77,3 +77,93 @@ hypothesis tests. Plan r2 and [Packet10](../research-progress/handoffs/10_RGD_B0
 now guide continuation. Sol had completed its parallel work before the
 shared-file revision. This same registered chat records the change;
 all conversation identities and earlier public messages are preserved.
+
+4 November 2026, new **chat0004**, actual **gpt-6-astra / ultra**:
+[Extend RGD-B03 r2 induction](0004_2026-11-04T18-10-10Z_extend-rgd-b03-r2-induction.json),
+thread 01a1a7c1-13a2-7371-8010-b0ace507476e. Records the B03 r2 return,
+the bounded B02 full-source repair and model-change guidance. This is a
+new unique registration; chats0001–0003 and the originating parent chat
+retain their existing identities. The official recorder owns transcript
+and index updates. Current settings/counts/hashes are in index.json.
+Bounded exact-turn final capture is used; native-hook trust is not assumed.
+
+
+4 November 2026, new **chat0005**, actual **gpt-6.1-sol / ultra**:
+[Continue RGD-E04 r4 research](0005_2026-11-04T18-42-57Z_continue-rgd-e04-r4-research.json),
+thread `01a1a7df-1697-7663-954d-5efbb4f07ac5`. Records the eleven-obligation
+E04 r4 assessment, proof-domain notes and B02 r2 continuation/model-change
+guidance. This unique registration preserves all other chat identities.
+The official recorder owns archive/index updates; the registry supplies
+current counts, times, settings and hashes. A model change in this chat
+keeps chat0005. Bounded exact-turn final capture remains in use until
+native-hook activation is verified.
+
+
+4 November 2026 B02 r2 continuation in the same **chat0004**, actual
+**gpt-6-astra / ultra**: the author's Packet13 follow-up produced Note10's
+reciprocal-pole comparison, fixed-index initialization, scoped large-index
+stops and Packets14–15. Preserve this chat's original number, filename,
+creation identity and message prefix across model changes. The official
+recorder owns updates; no new registration or relocation was performed.
+Current capture metadata remains in index.json.
+
+4 November 2026, new **chat0006**, actual **gpt-6.1-sol / ultra**:
+[Assess RGD-E04 r5](0006_2026-11-04T19-10-51Z_assess-rgd-e04-r5.json),
+thread 01a1a7f8-9f05-7120-8691-d40d5b3b3333. Records the twelve-obligation
+bounded analytical assessment, Note11, Review08 and Packet16 continuation/
+model-change guidance. This is a distinct assessment chat; chats0004/0005
+retain their identities. A model change here keeps chat0006 and its
+original filename and creation identity. The official recorder alone
+updates archive/index; current counts, times, settings and hashes belong
+to index.json. Bounded exact-turn final capture remains the workflow
+until native-hook activation is verified. No public transcript was
+hand-edited, copied or relocated.
+
+
+4 November 2026, new **chat0007**, actual **gpt-6-astra / ultra**:
+[Continue RGD-B02 r3](0007_2026-11-04T19-46-38Z_continue-rgd-b02-r3.json),
+thread `01a1a819-6502-7722-93b6-a63794209eda`. Records the author-activated
+B02 r3 Gaussian-reference attempt, one quadratic adjustment, Note12,
+Review09, Packet17 and Handoff18. This is a new conversation, distinct
+from Handoff16's chat0006; no earlier registration was moved or duplicated.
+A model change here retains chat0007, original creation identity and
+filename. The official recorder alone updates transcript/index; consult
+index.json for current counts, times, model settings and hashes. Bounded
+exact-turn final capture remains in use until native-hook activation is
+verified. The archive records public provenance, not mathematical validity.
+
+4 November 2026 E04 r6 continuation in the same **chat0006**, actual
+**gpt-6.1-sol / ultra**: the author activated Handoff18/Packet17 here.
+Review10 accepts all ten obligations within scope; Note13 records
+derivations and Handoff19 provides continuation/model-change guidance.
+This is not a new registration. The original chat0006 number, filename,
+creation identity and earlier public prefix are preserved; originating
+chat0007 remains separate. The official recorder owns archive/index
+updates, using bounded exact-turn final capture while native-hook
+activation is unverified. No transcript or registry was hand-edited.
+
+
+4 November 2026 r4 continuation in the same **chat0007**, actual
+**gpt-6-astra / ultra**, turn `01a1a884-aace-7902-ad64-f6ed9468a14e`.
+The author activated Handoff19 after E04 r6 acceptance in separate
+chat0006. This conversation records Note14, Review11, Packet20 and
+Handoff21. The original number, title, archive filename, creation identity
+and earlier public message prefix are preserved; no new registration or
+relocation. The previous bounded final capture was verified successful.
+Official refresh and bounded exact-turn capture continue; registry metadata
+owns current counts/hashes. A model change here keeps chat0007.
+
+
+4 November 2026 E04 r7 continuation in the same **chat0006**, actual
+**gpt-6.1-sol / ultra**: the author activated Handoff21/Packet20 here.
+[Review12](../reviews/12_RGD_E04_R7_PAIR_REFERENCE_ASSESSMENT_20261104.md)
+accepts all twelve obligations within scope; [Note15](../notes/15_RGD_E04_R7_PAIR_REFERENCE_PROOF_AND_SCOPE_CHECKS_20261104.md)
+records derivations/source qualifications and [Handoff22](../research-progress/handoffs/22_RGD_E04_R7_RETURN_AND_MODEL_CONTINUATION_20261104.md)
+gives continuation and model-change guidance. Parallel manuscript
+consolidation retains its separate chat0007 owner. The original chat0006
+number, filename, creation identity and earlier public prefix are
+preserved; no new registration, relocation or renaming. The official
+recorder alone updates archive/index, using bounded exact-turn final
+capture while native-hook activation remains unverified.
+
+4 November 2026, actual **gpt-6-astra / ultra**: the existing [chat0007](0007_2026-11-04T19-46-38Z_continue-rgd-b02-r3.json) also owns the author-requested E01 r3 manuscript consolidation. Its original title, creation identity, number and filename remain unchanged. [Synthesis](../notes/RGD_E01_R3_MANUSCRIPT_SYNTHESIS_20261104.md); [model-change guide](../research-progress/handoffs/RGD_E04_R8_MANUSCRIPT_ASSESSMENT_AND_MODEL_CONTINUATION_20261104.md). Sol's r7 assessment remains in distinct chat0006. Current capture metadata is owned by index.json, not copied here.

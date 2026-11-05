@@ -13,28 +13,230 @@ RGD tasks are new local work, not renamed or completed parent tasks.
 
 ## Current state
 
-**Current priority: [B] RGD-B03 r2 — Astra, ready for investigation.**
-The author redirected the program toward the overall induction argument
-and complete-error control as the coefficient index increases. [Plan r2][plan]
-and [Packet10][packet10] supersede the earlier default sequence of further
-finite-case execution/assessment before B03. The conceptual task is now
-ready; no induction theorem or uniform index bound is claimed. This turn
-revises documentation only; the new mechanism attempt has not been run.
+**RGD-E01 r3 complete — first consolidated manuscript milestone.**
 
-The next analytical return must state a noncircular quantitative H_r,
-attempt its propagation to H_(r+1), and compare margin decay with complete
-error growth over small k, k near r and unbounded k. Any split at K(r)
-must expose its order dependence and an analytical argument for the
-portion below the split. The fixed entry-relative envelope's nonuniformity
-is an input to this investigation, not a reason to postpone it.
+4 November 2026, actual **gpt-6-astra / ultra**, continuing chat0007.
+Type **E — execution**, recommended Sol; the author's current model
+selection was retained. The [24-page draft](../manuscript/radial_green_determinants.tex)
+consolidates the exact Green/comparison identities, three finite Q
+certificates, reciprocal and Gaussian limitations, complete pair reference
+and negative diagonal algebraic controls. [The synthesis](../notes/RGD_E01_R3_MANUSCRIPT_SYNTHESIS_20261104.md)
+gives the result summary and [integration check](../reviews/RGD_E01_R3_MANUSCRIPT_INTEGRATION_CHECK_20261104.md) the
+bounded author/same-model repairs. No new canonical positivity range,
+numerical work, zero prefix or all-index induction.
 
-**Numerical policy:** future numerical work only tests a predeclared
-hypothesis about that mechanism or its error control, with finite cases,
-predictions, complete error accounting, a cap and a decision for every
-outcome. No new numerical task is issued. E02 r2 remains completed;
-E04 r3 remains an available, optional assessment of existing evidence and
-is not a prerequisite for B03. Previous returns and their review levels
-are preserved below. Planning revision: Astra/max, 4 November 2026.
+**E04 r7 is complete and integrated:** all twelve obligations accepted
+within scope without mathematical correction by Sol/ultra in chat0006;
+see [Review12][review12], [Note15][note15] and [Handoff22][packet22].
+The manuscript carries both source-display qualifications and the exact
+algebraic-control limitations. Review remains internal with shared premises,
+not specialist independence.
+
+The PDF built without unresolved references or overfull boxes and was
+visually checked. Canonical TeX, claim map, input/build records and
+[DRAFT_HISTORY](../DRAFT_HISTORY.md) are saved; the generated PDF is in
+root ignored output. All prior frozen inputs remain unchanged.
+No commit, tag, submission, snapshot folder or investigation closure.
+
+**Next proposed: [E] RGD-E04 r8 — Sol**, assembled-manuscript assessment
+under the [bounded handoff](handoffs/RGD_E04_R8_MANUSCRIPT_ASSESSMENT_AND_MODEL_CONTINUATION_20261104.md); eight checks, one pass
+and at most one local correction. Ready for author activation, unexecuted.
+B02 r5 remains proposed/unactivated and no numerical campaign is issued.
+Earlier startup/return readiness below is historical; this entry owns
+the manuscript completion, while the appended r7 return retains its owner.
+
+
+**Historical startup contract: RGD-E01 r3 manuscript consolidation.**
+
+The following scope was recorded before authoring, when E04 r7 was still
+unexecuted. The completed return above supersedes its readiness wording.
+
+4 November 2026, actual **gpt-6-astra / ultra**, continuing chat0007.
+Type **E — execution**, recommended **Sol**: consolidate the fixed existing
+results and assessments into one canonical LaTeX manuscript, with a local
+PDF, claim-to-source map, same-model integration check and model-change
+handoff. The author requested consolidation in this current chat if the
+results were promising. The editorial decision is a methods/scoped-obstruction
+paper, not an RH proof or new canonical positivity range. Actual session
+selection is retained; the execution recommendation is unchanged.
+
+Scope: Notes01–14 and existing reviews/certificates, with no new numerical
+acquisition, zero-prefix enlargement or B02 r5. Include full proofs of the
+selected central results; distinguish imported classical results, internal
+assessment, finite certificates, conditional estimates and unassessed r4
+material. Completion: build and visually inspect one reading PDF, check
+source/claim links and preserve all frozen inputs. One integration pass and
+local editorial/normalization repairs only; any substantive new proof premise
+returns to a B decision. E04 r7 remains ready and unexecuted, not replaced
+by manuscript preparation. The coordinator alone edits shared files.
+
+
+**RGD-B02 r4 complete as a scoped conceptual return.**
+
+4 November 2026, actual **gpt-6-astra / ultra**, continuing chat0007.
+[Note14][note14] constructs an endpoint-matched positive pair-product
+reference with nonzero rectangular margins at every size and a bounded
+positive-axis growth quotient. It retains the complete canonical product
+and proves a full scalar coefficient payment plus a classical bounded-order
+Schur margin. This cures the Gaussian growth mismatch but gives no new
+canonical growing-r positivity range. The reference is algebraic; a positive
+reference source/primitive and acquisition of full zero parameters are
+not asserted.
+
+The exact diagonal control is the stopping evidence: for arbitrarily
+large q, algebraic complete products retain c0,b, positive coefficients,
+canonical leading radial count, eventual strip geometry and a complete
+scalar allowance O(q^-2), yet have negative (q,q) determinants. They are
+a family depending on q, without an asserted positive smooth source,
+positive primitive, theta arithmetic or actual finite zero-prefix match.
+This stops transfer from those scalar data alone, not canonical positivity
+or sharper dimension-dependent/correlated estimates. [Review11][review11]
+records author/same-model checks. One primary attempt, no localized
+adjustment, no numerical work or enlarged zero prefix.
+
+**Next: [E] RGD-E04 r7 — Sol**, ready/unexecuted under
+[Packet20][packet20], twelve fixed analytical checks with one pass and
+at most one localized correction. [Handoff21][packet21] gives continuation
+and model-change guidance, retaining chat0007. No B02 r5 or numerical
+campaign is activated. E04 r3 remains optional; E02 r3 inactive.
+The following returns retain their historical scopes.
+
+**RGD-E04 r6 complete — all ten obligations accepted within scope,
+without mathematical correction.**
+
+4 November 2026, actual **gpt-6.1-sol / ultra**, continuing chat0006,
+thread 01a1a7f8-9f05-7120-8691-d40d5b3b3333.
+[Review10][review10] records the assessment and [Note13][note13]
+the supporting derivations. All nine frozen input sizes and hashes
+match. One analytical pass, no correction pass or numerical work.
+Three read-only same-model contributors checked separate proof/source
+obligations; the coordinator is sole writer. This is different-model
+internal LLM assessment with shared premises, not specialist independence.
+
+The Gaussian exact-residual uniform-slack stop and quadratic
+universal-reference positivity obstruction are accepted with their
+stated domains. Shrinking slack and restricted proportional subdomains
+remain unexcluded; no canonical determinant negativity is asserted.
+Park this Gaussian/quadratic-reference attempt.
+
+**Historical E04 r6 proposal: [B] RGD-B02 r4 — Astra**, then unissued
+and unactivated, for a suitable reference or signed residual.
+[Handoff19][packet19] retains that decision boundary; the later author
+activation and r4 return are above. No numerical campaign was issued.
+
+**RGD-B02 r3 complete as a scoped conceptual return.**
+
+4 November 2026, actual **gpt-6-astra / ultra**, chat0007, thread
+01a1a819-6502-7722-93b6-a63794209eda. [Note12][note12] supplies one
+boundary-matched Gaussian reference with a positive explicit determinant
+at every dimension and the complete correlated source residual. On
+1<=r<=M k for each fixed M, its absolute target/reference determinant ratio
+and the rth root of that absolute ratio tend to zero. Thus the exact preconditioned
+residual cannot satisfy any uniform norm bound delta<1. This stops
+uniform relative slack for this reference, not theta positivity or every
+shrinking-slack comparison. The one real quadratic-logarithm adjustment
+loses universal nonnegative reference minors, with edge-family witnesses;
+no exclusion of every proportional subdomain follows.
+
+[Review09][review09] records original author/same-model checks, including a
+strict-positive cosh control. [Review10][review10] now accepts the separate
+E04 r6 assessment within scope. No new numerics, zero-prefix data,
+positivity range or all-index induction. One primary analytical attempt
+and one localized adjustment are exhausted. Park this reference family.
+
+[Packet17][packet17] retains the frozen ten-obligation request and
+[Handoff18][packet18] its original continuation guidance; the completed
+assessment and current model-change guide are [Review10][review10] and
+[Handoff19][packet19]. Originating chat0007 and executing chat0006 retain
+their separate unique registrations. That assessment activated neither
+B02 r4 nor a numerical campaign. Earlier E04 r3 remains optional; E02 r3 inactive.
+The following returns are historical.
+
+**RGD-E04 r5 complete — all twelve obligations accepted in scope,
+without mathematical correction.**
+
+4 November 2026, actual **gpt-6.1-sol / ultra**, chat0006, thread
+01a1a7f8-9f05-7120-8691-d40d5b3b3333. [Review08][review08] records
+the assessment; [Note11][note11] supplies proof, constant and control
+checks. One analytical pass was completed; no correction pass or
+numerical work was needed. All six frozen repository inputs and four
+existing external PDF copies match their receipts. This is different-model
+internal LLM assessment with shared premises and three read-only same-model
+contributors, not independent specialist review.
+
+**Historical E04 r5 proposal at issue: [B] RGD-B02 r3 — Astra**, a new growing-dimension
+reference and correlated-residual decision, as described in
+[Packet16][packet16]. The assessment prerequisite was complete; r3 was then
+unissued and unactivated. Its later author activation and return are
+above. That assessment parked the accepted finite-pole/triangle-payment
+route for growing indices and issued no numerical campaign.
+
+**B02 r2 completed as a scoped return, 4 November 2026 — Astra/ultra,
+chat0004.** [Note10][note10] establishes exact full-source reciprocal
+rectangle duality and an explicitly initialized fixed-index order
+invariant. The coarse k=1 consequence is D_{r,1}>e^(−40)/(2·28800^r)
+for r≥1500, using named published finite-zero inputs, with no new
+numerical certificate or positivity coverage. The mechanism has direct
+reported prior art, explicitly attributed and not imported as checked
+certificate evidence.
+
+The growing-index stopping point is precise: every fixed N-pole reference
+has zero determinant for r≥N,k>N, including negative-index boundaries.
+The selected growing-k triangle/Harnack payment also fails in proportional
+regimes by its explicit conditioning lower bound. This is not determinant
+negativity or an exclusion of every residue method. [Review07][review07]
+records the original author/same-model checks; [Review08][review08]
+now accepts the separate E04 r5 assessment within scope.
+[Packet14][packet14] retains its original handoff and [Packet15][packet15]
+its frozen request; [Packet16][packet16] gave continuation/model
+guidance at that return. B02 r3 was then proposed, not issued; it required
+a genuinely different
+growing-dimension margin and correlated residual. E02 r3 remains inactive;
+E04 r3 optional.
+
+The following E04 r4 and earlier return records retain their scopes.
+
+**E04 r4 completed, 4 November 2026 — Sol/ultra, chat0005.**
+[Review06][review06] accepts all eleven Packet12 obligations within their
+stated scopes, without mathematical correction. [Note09][note09] records
+the supporting domain/constant checks. Notes07–08 and all seven bound
+input versions remain unchanged. The propagation estimate requires its
+common regularity domain (in particular k≥n, k>1); the literature-majorant
+evaluation outside the cubic wedge is only a formal allowance diagnostic.
+The canonical H1/H2 and variance constants, reference conditioning and
+complementary region remain open. No new positivity range or numerical
+work results. This is different-model internal LLM assessment with shared
+premises and same-model contributors, not independent specialist review.
+
+[Packet13][packet13] supplied the B02 r2 request; [Packet14][packet14] records its return and [Packet16][packet16] supplied that assessment's continuation guidance.
+E02 r3 remains inactive; E04 r3 remains optional and nonblocking. The
+following B03/B02 return summary is retained with its original scopes.
+[Note07][note07] completes the bounded B03 r2 attempt: the exact old
+compact-reference Taylor payment eventually fails at every fixed order;
+the actual coefficient tail has an explicit decaying bound; and a fixed
+finite-mode boundary-preserving reference cannot provide all-order
+positivity. These are scoped statements, not negative theta determinants.
+
+Under the author's broader request, **B02 r1** selected a complete-source
+repair. [Note08][note08] proves a conditional contour-margin theorem
+with explicit order dependence and complete exterior payment. Its
+canonical scalar hypotheses remain open. The existing stronger reported
+tail baseline was rechecked, with its proof/certificates still unaudited;
+therefore the optional weaker scalar derivation is not the default.
+
+[Review05][review05] records the original proof-author and read-only same-model checks.
+[Packet12][packet12] issued the now-completed E04 r4 assessment and describes
+the inactive optional E02 r3 route. [Packet11][packet11] gives continuation
+and model-change guidance. Following Review06, B02 r2 investigated a complete-source comparison for
+the complementary region; its finished return and precise limitations
+are recorded above.
+
+**Numerical policy:** no new numerical task, integration, moment
+acquisition, sign scan or certificate was performed or issued. All
+earlier finite results and frozen requests remain intact. E04 r3 remains
+optional evidence maintenance. Original B03/B02 research: **Astra/ultra**,
+chat0004; E04 r4 assessment: **Sol/ultra**, chat0005, 4 November 2026. No all-index induction or new positivity range
+is claimed.
 
 ### Retained evidence
 
@@ -97,11 +299,10 @@ acquisition/library premises. [Packet09][packet09] retains its frozen
 E04 r3 assessment contract, now optional and nonblocking under plan r2.
 No specialist independence or all-order conclusion is claimed.
 
-**Next: [B] RGD-B03 r2 — Astra**, under [Packet10][packet10]: investigate
-the induction mechanism and index-dependent error control. B02 is
-conditional on a specific obstruction requiring redesign. Earlier
-requests, sources and records remain unchanged; no new computation is
-part of this planning revision.
+**Current next: [E] RGD-E04 r7 — Sol**, assess the fixed r4 return
+under [Packet20][packet20]. E04 r6 and B02 r4 have met their completion
+tests; the all-index objective remains open. [Handoff21][packet21]
+is the current continuation/model-change guide.
 
 Model recommendations follow [GPT_RESEARCH_MODEL_WORKFLOW.md][workflow].
 Edward Baker chooses the actual model, effort and chat. A B task can
@@ -117,12 +318,12 @@ Those requirements are part of this register's task entries.
 | ID and specification | Type | Recommended model and reason | Current status | Dependencies and expected output |
 | --- | --- | --- | --- | --- |
 | RGD-E01 — plan and register | E | **Sol**: documentation and consistency checking | **r1/r2 completed — documentation only, 4 Nov 2026** | r2 implements the author's induction/index-error focus. Actual revision Astra/max; no new mathematical claim or numerical task. |
-| [RGD-B03][b03] — induction and index growth | B | **Astra**: the quantitative invariant, margin propagation and error control are unresolved | **r2 ready — default next; mechanism attempt unstarted** | [Packet10][packet10]: one worked overall induction attempt with explicit r/k dependence and a proved step, exact open estimate or scoped obstruction. Earlier preparation and E02 r2 retained; further low-order checks are not prerequisites. |
+| [RGD-B03][b03] — induction and index growth | B | **Astra**: invariant selection and complete-error propagation | **r2 completed — scoped return, 4 Nov 2026** | [Note07][note07]: exact old-payment failure, true tail bound, fixed finite-mode reference obstruction and propagation diagnostic. All-index induction remains open. |
 | [RGD-B01][b01] — select joint comparison | B | **Astra**: selecting a theta-specific input that controls signed cancellation | **Completed — bounded return, 4 Nov 2026** | [Note01][note01]: first-mode comparison and complete joint residual, accepted by E04 Review01. A candidate input to B03, not an established induction mechanism. |
-| [RGD-E02][e02] — derive a specified comparison/lemma | E | **Sol**: execute a fixed analytical route and error accounting | **r1 accepted; r2 completed; further revision conditional and unissued** | [Note06][note06] and [record][recordr2] retain the fixed (4,1) result. New work requires a B03/B02 general-lemma contract; any numerical component follows the hypothesis-only rule. |
+| [RGD-E02][e02] — specified analytical derivation | E | **Sol**: fixed estimates and error accounting | **r1 accepted; r2 completed; r3 route specified but inactive** | [Packet12][packet12] describes optional canonical scalar acquisition for Note08. Activate only for a distinct method-comparison benefit; it is not the default tail campaign. |
 | [RGD-E03][e03] — bounded hypothesis test | E | **Sol**: fixed implementation to discriminate a stated mechanism hypothesis | **r1 completed; further tests conditional and unissued** | Earlier [Note02][note02]/[record][record03] remain floating evidence. New tests need a prediction, finite cases, error standard, cap and decision; no certificate campaign. |
-| [RGD-E04][e04] — assess and integrate | E | **Sol**: check one stated argument against its contract | **r1/r2 accepted; r3 available, optional, unstarted** | [Packet09][packet09] remains frozen. Its finite-application assessment is nonblocking for B03; no new acquisition. Future assessments address the specific mechanism/lemma returned. |
-| [RGD-B02][b02] — repair or stop mechanism | B | **Astra**: a named mathematical premise or strategy must change | **Conditional; inactive** | A specific obstruction from B03 or another return; one bounded repair decision or scoped stop, preserving prior evidence. |
+| [RGD-E04][e04] — assess and integrate | E | **Sol**: fixed proof and scope assessment | **r1/r2/r4/r5/r6 accepted; r3 optional; r7 ready/unexecuted** | [Packet20][packet20] freezes twelve checks of Note14, scalar versus determinant payment, diagonal control and source qualifications. One pass plus at most one local correction; no numerics. |
+| [RGD-B02][b02] — repair or stop mechanism | B | **Astra**: a growing-dimension margin and correlated residual require a conceptual choice | **r1/r2/r3/r4 completed as scoped returns; r5 unissued** | [Note14][note14]: endpoint/growth-matched pair reference and bounded-order payment; an explicit diagonal algebraic control defeats transfer from scalar smallness alone. Author/same-model checks in Review11; no new canonical range. |
 
 B01 was started and completed under the author's research request in
 chat0002, **gpt-6-astra / max**, thread
@@ -159,6 +360,20 @@ priority revision is recorded at the end; current readiness is above.
 | 4 Nov 2026 | RGD-E04 / r3 request | [Packet09][packet09] freezes eight assessment checks of the new existing-data return and Note05 lemma; ready for Sol, unstarted; full B03 stays gated. |
 | 4 Nov 2026 | RGD-E01 / planning r2 | Author requested emphasis on the overall induction mechanism and error control as k grows, with numerics only for hypothesis tests. Updated plan, register and navigation after Sol finished; all completed evidence and frozen requests preserved. Actual Astra/max, chat0002; documentation only. |
 | 4 Nov 2026 | RGD-B03 / r2 priority and contract | [Plan r2][plan] and [Packet10][packet10] make the bounded induction/index-error investigation ready and the default next task. Earlier workflow gating is superseded; no induction theorem is claimed. E04 r3 becomes optional and nonblocking; no new E02/E03 test is issued. |
+| 4 Nov 2026 | RGD-B03 / r2 return | [Note07][note07], Astra/ultra, chat0004: exact old-payment obstruction, true coefficient-tail estimate, fixed finite-mode reference obstruction, nonlinear propagation diagnostic. Analytical only; [Review05][review05] records author/same-model checks. |
+| 4 Nov 2026 | RGD-B02 / r1 scope and return | Separately classified before execution under the author's broader request. [Note08][note08] proves a conditional complete-source contour margin with explicit joint-order budget. Scalar canonical inputs and complementary region remain open. |
+| 4 Nov 2026 | Baseline-dependent routing | Rechecked the parent catalog and selected primary passages of the reported stronger tail result; no full proof/certificate audit. The weaker scalar route remains optional, not a claimed new positivity range. |
+| 4 Nov 2026 | RGD-E04 / r4 request | [Packet12][packet12] freezes assessment of Notes07–08 and their source/scope dependencies; ready, default, recommended Sol. No numerical work. |
+| 4 Nov 2026 | RGD-E02 / r3 optional route and B02 / r2 continuation | [Packet12][packet12] specifies but does not activate scalar acquisition. [Packet11][packet11] recommends B02 r2/Astra after assessment for fixed small k and bounded k/r. |
+| 4 Nov 2026 | RGD-E04 / r4 return | [Review06][review06], actual Sol/ultra, chat0005: all eleven obligations accepted in scope, no correction. [Note09][note09] makes propagation-domain and outside-wedge-majorant qualifications explicit. Seven input hashes/sizes match; no numerical work or range expansion. [Packet13][packet13] makes B02 r2/Astra ready for one bounded complementary-region attempt. |
+| 4 Nov 2026 | RGD-B02 / r2 return | [Note10][note10], Astra/ultra, chat0004: initialized fixed-k reciprocal-pole comparison and two precise growing-index stops; original [Review07][review07] author/same-model checks. No new coverage or numerics. |
+| 4 Nov 2026 | RGD-E04 / r5 frozen request received | [Packet15][packet15] freezes twelve obligations on Note10, sources, constants and scoped stops; [Packet14][packet14] routes the assessment to Sol. One analytical pass plus at most one local correction; no numerical work. |
+| 4 Nov 2026 | RGD-E04 / r5 return | [Review08][review08], actual Sol/ultra, chat0006: all twelve obligations accepted in scope without correction. [Note11][note11] records proof/constants/controls; six input versions and four external PDF copies match receipts. No numerics or positivity-range extension. [Packet16][packet16] proposes B02 r3/Astra, unissued. |
+| 4 Nov 2026 | RGD-B02 / r3 activation and return | Author activated Handoff16 in new chat0007, Astra/ultra. [Note12][note12] proves the complete-source Gaussian ratio/norm stop and one quadratic reference obstruction; [Review09][review09] records author/same-model checks. No numerics or positivity extension. |
+| 4 Nov 2026 | RGD-E04 / r6 request and continuation | [Packet17][packet17] freezes ten analytical assessment obligations, ready/unexecuted, recommended Sol. [Handoff18][packet18] preserves chat0007 and explains model changes; no B02 r4 activation. |
+| 4 Nov 2026 | RGD-E04 / r6 activation and return | The author activated Packet17 in existing chat0006, actual Sol/ultra. [Review10][review10] accepts all ten obligations within scope without correction; [Note13][note13] records derivations. Nine frozen input versions match. No numerics or range extension; [Handoff19][packet19] proposes B02 r4/Astra, unissued. |
+| 4 Nov 2026 | RGD-B02 / r4 activation and return | Author activated Handoff19 in existing chat0007, Astra/ultra. [Note14][note14] gives an endpoint/growth-matched full-product reference, scalar and bounded-order payments, and a negative diagonal algebraic control with O(q^-2) scalar error. [Review11][review11]: author/same-model checks. No numerics, new range or localized adjustment. |
+| 4 Nov 2026 | RGD-E04 / r7 request and continuation | [Packet20][packet20] freezes twelve analytical obligations, ready/unexecuted, recommended Sol. [Handoff21][packet21] preserves chat0007 and defines the next decision; no B02 r5 activation. |
 
 All issued requests are frozen; append dated returns without rewriting
 their original questions or adverse evidence.
@@ -190,17 +405,13 @@ guide](../chat-histories/README.md) preserves unique chat registrations.
 
 ## Continuation prompt
 
-> Read plan r2, the sole register, Packet10 and the existing source/notes.
-> Investigate **[B] RGD-B03 r2 — Astra**: state the overall implication
-> chain and a noncircular quantitative H_r, attempt H_r => H_(r+1), and
-> control complete error against a justified determinant margin as k
-> increases, with r-dependence explicit. Cover small indices, the moving
-> boundary transition and unbounded indices analytically. Return a worked
-> step, exact unresolved estimate or scoped obstruction. Further low-order
-> certificates are not prerequisites. Numerical checks may only test a
-> predeclared discriminating hypothesis under a separate bounded E packet.
-> Preserve all completed evidence, actual review levels and unique chat
-> histories; freeze routine analytical follow-through for Sol when ready.
+> Read Handoff21, Note14 and the live register. Execute **[E] RGD-E04 r7
+> — Sol** under Packet20: assess product/multiplicity conventions,
+> endpoint pair map, growth and complete coefficient payment, Schur
+> margin, exact diagonal control, infinite-tail completion and scope.
+> One analytical pass plus at most one localized correction; no numerics
+> or new mechanism. Save assessment, progress, history and model guidance.
+
 
 4 November 2026 preparatory revision: prepared for Edward Baker with
 substantial LLM assistance, **gpt-6-astra / max**, chat0002, turn
@@ -287,3 +498,281 @@ The former B03 gate and E04 r3 default remain historical, not current
 routing. No commit, manuscript milestone or mathematical execution.
 
 [packet10]: handoffs/10_RGD_B03_R2_INDUCTION_INDEX_ERROR_AND_MODEL_CONTINUATION_20261104.md
+
+
+4 November 2026 B03 r2 start: prepared for Edward Baker with substantial LLM assistance, actual **gpt-6-astra / ultra**, chat0004, thread `01a1a7c1-13a2-7371-8010-b0ace507476e`, turn `01a1a7c1-f46e-7771-80f4-f28b810aa0bc`. The author requests sustained mechanism research, progress, notes, history and model-change guidance. The principal attempt is the fixed complete comparison and quantitative order propagation; the permitted alternative is tied to any proved obstruction. Three read-only same-model analytical contributors examine propagation, reference validity and large-index source errors. This coordinator is the sole artifact/history writer. No numerical test is issued. Earlier requests and evidence are unchanged.
+
+
+4 November 2026 bounded extension within the author's broader request: **RGD-B02 r1, B — Astra, in progress**. B03 has identified a fixed-reference complete-payment obstruction and a finite-mode reference-sign obstruction. Select one repair using the complete canonical generating function and a correlated determinant contour integral, without deleting any source mode or boundary term. Deliverable: one explicit order-dependent local-margin/exterior-error comparison and the exact scalar canonical estimates needed to apply it; no all-index claim or numerical work. Work limit: one Gaussian contour comparison, with all mixed exterior boxes paid. Stop and freeze E02/Sol once the scalar proof route is specified; if it cannot be specified, return the precise unresolved B obligation. This extension adds no second live ledger and does not rewrite Packet10's bounded B03 request. Actual gpt-6-astra / ultra, chat0004; coordinator owns all writes.
+
+
+4 November 2026 B03/B02 return: prepared for Edward Baker with substantial
+LLM assistance, actual **gpt-6-astra / ultra**, chat0004. The coordinator
+reread this register before integration and remains the sole writer.
+The scope entries above are historical start records; current dispositions
+are in the task table. No old notes, certificates, frozen packets,
+parent/sibling/global registers, manuscripts or generated AGENTS files
+were changed. No commit or manuscript milestone was made.
+
+[note07]: ../notes/07_RGD_B03_R2_EXACT_PAYMENT_OBSTRUCTION_AND_TRUE_TAIL_20261104.md
+[note08]: ../notes/08_RGD_B02_R1_COMPLETE_SOURCE_CONTOUR_MARGIN_20261104.md
+[review05]: ../reviews/05_RGD_B03_B02_AUTHOR_AND_SAME_MODEL_CHECKS_20261104.md
+[packet11]: handoffs/11_RGD_B03_B02_RETURN_AND_MODEL_CONTINUATION_20261104.md
+[packet12]: handoffs/12_RGD_E04_R4_AND_E02_R3_COMPLETE_SOURCE_CONTOUR_20261104.md
+
+
+4 November 2026 E04 r4 start: prepared for Edward Baker with substantial
+LLM assistance, actual **gpt-6.1-sol / ultra**, chat0005, thread
+`01a1a7df-1697-7663-954d-5efbb4f07ac5`, turn
+`01a1a7df-18e5-7953-8267-d9cdc11cba27`. The author assigned the frozen
+Packet12 assessment. Work is one analytical pass plus at most one localized
+correction pass; no numerical acquisition or range expansion. Three
+read-only same-model contributors check disjoint proof/source obligations;
+the coordinator owns all files and the unique chat history. This is an
+internal different-model assessment of Astra work, with shared premises,
+not independent specialist review.
+
+
+4 November 2026 E04 r4 return: prepared for Edward Baker with substantial
+LLM assistance, actual **gpt-6.1-sol / ultra**, chat0005. The coordinator
+reread the live register before integration and remains its sole writer.
+All eleven obligations accepted in scope; no correction pass, new
+numerics, commit, manuscript milestone or investigation closure. The
+reviewed notes, frozen packets, source references, parent/sibling/global
+registers and generated AGENTS files are unchanged. Current routing above
+supersedes the historical ready/start statements without rewriting issued
+requests. Chat capture uses the official recorder and bounded exact-turn
+follow-up; hook trust is not assumed.
+
+[review06]: ../reviews/06_RGD_E04_R4_COMPLETE_SOURCE_ASSESSMENT_20261104.md
+[note09]: ../notes/09_RGD_E04_R4_PROOF_DOMAIN_AND_CONSTANT_CHECKS_20261104.md
+[packet13]: handoffs/13_RGD_E04_R4_RETURN_AND_B02_R2_MODEL_CONTINUATION_20261104.md
+
+4 November 2026 B02 r2 start, actual **gpt-6-astra / ultra**, chat0004,
+turn 01a1a7e5-86e8-79c1-8d9c-d8c5e9059f4a. Under Packet13, select one
+full-source reciprocal-pole comparison: use exact rectangular duality
+to retain the complete contour phase, establish its finite-pole reference
+margin and complete residual, and test order propagation versus growing
+index. Finite zero-prefix data must be explicit, not a global real-zero
+assumption. The scope includes exact negative-index boundary accounting.
+Three read-only same-model contributors examine derivation, scope and
+prior literature; this coordinator owns all writes and history updates.
+No numerical acquisition or new hypothesis test is issued.
+
+
+4 November 2026 B02 r2 return, actual **gpt-6-astra / ultra**, chat0004.
+The coordinator reread this sole live register before integration. One
+complete-source reciprocal-pole comparison has been completed, with
+fixed-index initialization and precise growing-index reference/payment
+stops. Three read-only same-model contributors checked derivation, scope
+and sources; they wrote no files. No numerical work, commit, manuscript
+milestone, investigation closure or parent/sibling/global update occurred.
+Earlier evidence and frozen requests are unchanged. Current routing above
+supersedes earlier ready/start statements without rewriting those requests.
+The existing chat0004 registration is refreshed through the official tool.
+
+[note10]: ../notes/10_RGD_B02_R2_RECIPROCAL_POLE_INDUCTION_AND_SCOPED_STOP_20261104.md
+[review07]: ../reviews/07_RGD_B02_R2_AUTHOR_AND_SAME_MODEL_CHECKS_20261104.md
+[packet14]: handoffs/14_RGD_B02_R2_RETURN_AND_MODEL_CONTINUATION_20261104.md
+[packet15]: handoffs/15_RGD_E04_R5_RECIPROCAL_COMPARISON_ASSESSMENT_20261104.md
+
+4 November 2026 E04 r5 start and return: prepared for Edward Baker
+with substantial LLM assistance, actual **gpt-6.1-sol / ultra**, chat0006,
+thread 01a1a7f8-9f05-7120-8691-d40d5b3b3333, turn
+01a1a7f9-4113-7df0-bbf7-fd8a5ee71964.
+The author assigned Packet15's bounded analytical assessment. Its
+scope/start was recorded here before integration; all twelve obligations
+are now accepted within their stated domains, without a correction pass.
+The coordinator reread the live register and is sole writer. Three
+read-only same-model contributors checked separate mathematical/source
+obligations. No old note, review, certificate, frozen packet, parent/sibling
+register, source file or generated AGENTS file was changed. No new
+numerics, commit, manuscript milestone or investigation closure.
+Current routing supersedes earlier ready/start language. Chat0006 uses
+the official recorder and bounded exact-turn final capture; native-hook
+activation is not assumed.
+
+[review08]: ../reviews/08_RGD_E04_R5_RECIPROCAL_COMPARISON_ASSESSMENT_20261104.md
+[note11]: ../notes/11_RGD_E04_R5_RECIPROCAL_PROOF_AND_SCOPE_CHECKS_20261104.md
+[packet16]: handoffs/16_RGD_E04_R5_RETURN_AND_MODEL_CONTINUATION_20261104.md
+
+
+4 November 2026 B02 r3 mechanism selection, actual **gpt-6-astra / ultra**,
+chat0007: primary reference is the boundary-matched Gaussian source with
+C_G(z)=c0 exp(t z), t=log((1/16)/c0)>0. Its factorial Toeplitz margin
+is nonzero in every dimension. Keep the entire signed source residual
+and both endpoint cancellations before matrix comparison. Work tests
+uniform relative slack on 1<=r<=M k, including growing rectangles and
+all negative-index boundaries. The single localized adjustment is a
+real quadratic logarithm preserving C(0) and C(1), testing whether its
+universal positive-reference premise survives. No zero-prefix extension,
+threshold optimization, numerical test or second mechanism is activated.
+
+
+## Historical B02 r3 activation record
+
+**RGD-B02 r3 active — B, recommended Astra**, explicitly activated by
+Edward Baker in chat0007 on 4 November 2026; actual **gpt-6-astra / ultra**,
+thread `01a1a819-6502-7722-93b6-a63794209eda`, turn
+`01a1a819-66ed-7cb0-93ef-3bfed859076a`.
+Readiness: E04 r5 accepted; [Packet16][packet16] supplies the bounded scope.
+Conceptual difficulty: select a nonvanishing growing-dimension reference
+and a complete residual estimate retaining correlations, addressing both
+Note10 stops. Deliverable: a paid growing-index step with named canonical
+inputs, or a proved failure of a precisely specified mechanism/premise.
+Evidence: self-contained analytical derivation and control screen; no
+positivity conclusion from finite prefixes or numerical agreement.
+Limit: one primary analytical attempt and at most one localized adjustment.
+If a fixed proof/test contract emerges, classify its follow-through E/Sol
+before execution; no numerical campaign is activated. The coordinator is
+sole artifact/history writer; read-only same-model contributors may check
+separate obligations. This activation supersedes proposal-only language
+in the historical E04 r5 return below, without changing that return.
+
+
+
+4 November 2026 B02 r3 return, actual **gpt-6-astra / ultra**, chat0007.
+The coordinator reread this register before integration and is its sole
+writer. Three read-only same-model contributors checked algebra, scope
+and standard sources; final-note author checks tightened one valid bound
+and clarified a quantifier. No numerical work, commit, manuscript
+milestone, investigation closure or parent/sibling/global index change.
+Earlier research notes, reviews and frozen handoffs are unchanged;
+current navigation supersedes historical proposal language. New references
+have public links and an outside-Git PDF receipt. Chat0007 uses the official
+recorder and bounded exact-turn final capture; native-hook activation is
+not assumed.
+
+[note12]: ../notes/12_RGD_B02_R3_GAUSSIAN_REFERENCE_GROWTH_STOP_20261104.md
+[review09]: ../reviews/09_RGD_B02_R3_AUTHOR_AND_SAME_MODEL_CHECKS_20261104.md
+[packet17]: handoffs/17_RGD_E04_R6_GAUSSIAN_REFERENCE_ASSESSMENT_20261104.md
+[packet18]: handoffs/18_RGD_B02_R3_RETURN_AND_MODEL_CONTINUATION_20261104.md
+
+4 November 2026 E04 r6 activation and return: prepared for Edward
+Baker with substantial LLM assistance; actual **gpt-6.1-sol / ultra**,
+continuing chat0006, thread 01a1a7f8-9f05-7120-8691-d40d5b3b3333,
+turn 01a1a825-c9d5-7bf0-8acb-e025d4bd394c. The fixed scope and start
+were recorded here before integration. All ten Packet17 obligations
+are accepted within their stated scopes; no correction pass needed.
+The coordinator reread this live register before integration and is sole
+writer. Three read-only same-model contributors checked proof/source
+obligations without writing files. Frozen notes, old assessments,
+reference records, numerical records and requests are unchanged.
+No new mechanism, numerics, commit, manuscript milestone, investigation
+closure or parent/sibling/global-register edit. Current routing supersedes
+earlier ready/start statements. The existing chat0006 archive is refreshed
+through the official recorder, with bounded exact-turn final capture;
+native completion-hook activation is unverified.
+
+[review10]: ../reviews/10_RGD_E04_R6_GAUSSIAN_REFERENCE_ASSESSMENT_20261104.md
+[note13]: ../notes/13_RGD_E04_R6_GAUSSIAN_PROOF_AND_SCOPE_CHECKS_20261104.md
+[packet19]: handoffs/19_RGD_E04_R6_RETURN_AND_MODEL_CONTINUATION_20261104.md
+
+
+4 November 2026 B02 r4 primary mechanism selected, **gpt-6-astra / ultra**,
+continuing chat0007: use the full genus-zero canonical product, replacing
+each nonreal conjugate reciprocal-zero pair by two equal positive entries
+chosen to preserve its value at z=1. Keep every real factor, multiplicity,
+source normalization and negative coefficient index. Assess its independently
+positive rectangular margins, growth matching, complete signed pair residual
+and angular transfer as r,k grow. This is an algebraic spectral reference;
+no nonnegative source/primitive realization is assumed. Full actual zero
+positions are implicit data, not newly verified input. Read-only contributors
+check algebra, source imports and controls; no numerical test, enlarged
+zero prefix or localized adjustment is activated.
+
+
+## Historical B02 r4 activation record
+
+**RGD-B02 r4 active — B, recommended Astra**, explicitly activated by
+Edward Baker in continuing chat0007 on 4 November 2026; actual
+**gpt-6-astra / ultra**, turn `01a1a884-aace-7902-ad64-f6ed9468a14e`.
+Readiness: E04 r6 accepted; [Handoff19][packet19] sets the bounded scope.
+Conceptual difficulty: a reference must have appropriate canonical
+coefficient growth and an independent growing-dimension margin, or a
+signed residual must supply a new estimate beyond determinant identities.
+Deliverable: one paid analytical step or a precise failed premise with
+its class named. Limit: one primary analytical attempt and at most one
+localized adjustment. Complete source, c0/b normalization, negative-index
+zeros and collision/positive controls are mandatory. Any fixed follow-through
+is classified E/Sol before execution; no numerical test is activated.
+Coordinator is sole artifact/history writer; contributors are read-only.
+This activation supersedes the historical proposal-only wording below.
+
+
+
+4 November 2026 B02 r4 return, actual **gpt-6-astra / ultra**, continuing
+chat0007. The coordinator reread the sole register and remains its only
+writer. Three read-only same-model contributors checked algebra, controls
+and sources; a geometric-sum step and tail-count derivation were made
+explicit before freezing, without a formula or scope correction. No
+numerical work, commit, manuscript milestone, investigation closure or
+parent/sibling/global update. Earlier frozen notes, reviews, handoffs,
+bibliography and reference receipts remain unchanged. New sources use a
+separate citation supplement and an outside-Git reading-copy receipt.
+Chat0007 retains its original identity; the prior final capture was verified
+and the official recorder/bounded exact-turn workflow continues.
+
+[note14]: ../notes/14_RGD_B02_R4_ENDPOINT_PAIR_REFERENCE_AND_DIAGONAL_CONTROL_20261104.md
+[review11]: ../reviews/11_RGD_B02_R4_AUTHOR_AND_SAME_MODEL_CHECKS_20261104.md
+[packet20]: handoffs/20_RGD_E04_R7_PAIR_REFERENCE_ASSESSMENT_20261104.md
+[packet21]: handoffs/21_RGD_B02_R4_RETURN_AND_MODEL_CONTINUATION_20261104.md
+
+
+4 November 2026 E04 r7 activation: the author activated [Packet20][packet20]
+in existing chat0006, actual **gpt-6.1-sol / ultra**, thread
+01a1a7f8-9f05-7120-8691-d40d5b3b3333, turn
+01a1a895-e88d-7a33-b036-f040597108bd. Type **E**, recommended Sol:
+assess twelve fixed obligations in one analytical pass and at most one
+localized correction; no numerics or new mechanism. All eleven frozen
+input sizes and hashes match. Three read-only same-model contributors
+check proof, diagonal controls and source qualifications; this coordinator
+owns the assessment files/history. Parallel E01 r3 manuscript consolidation
+retains its separate ownership/status. Completion requires a scoped
+assessment, supporting notes, progress return and continuation guidance.
+
+
+## E04 r7 assessment return — 4 November 2026
+
+**RGD-E04 r7 complete: all twelve obligations accepted within scope,
+without mathematical correction.** Prepared for Edward Baker with
+substantial LLM assistance; actual **gpt-6.1-sol / ultra**, continuing
+chat0006, thread 01a1a7f8-9f05-7120-8691-d40d5b3b3333, turn
+01a1a895-e88d-7a33-b036-f040597108bd.
+[Review12][review12] records the disposition; [Note15][note15] supplies
+supporting derivations and source-display qualifications. All eleven
+frozen inputs retain their sizes and hashes. One analytical pass,
+no correction pass or numerical work. Three read-only same-model
+contributors checked separate proof/source/control obligations.
+This is different-model internal LLM assessment with shared premises,
+not independent specialist review.
+
+The growth-matched pair reference, scalar envelope, classical bounded-order
+margin and q-dependent negative diagonal control are accepted with their
+stated classes. Scalar smallness alone does not justify dimension-uniform
+positivity transfer. Positive smooth source/primitive, theta arithmetic,
+actual-prefix matching and one fixed function with infinitely many negative
+diagonal minors are not established for the controls. Sharper dimension-
+dependent or canonical signed estimates remain open. No new theta range.
+
+[Handoff22][packet22] gives continuation/model-change guidance. The default
+is the already active **E01 r3 manuscript consolidation/integration**,
+E/Sol recommendation with its author's actual Astra/ultra selection
+retained. The manuscript owner has observed this accepted return and is
+integrating it. This assessment writer edits no manuscript, source map,
+build record, PDF or draft history, and makes no completion claim for E01 r3.
+A later **B02 r5 — B/Astra** remains proposed, unissued and unactivated.
+The current r7 completion here supersedes earlier ready/unexecuted
+assessment wording; parallel manuscript status stays with its owner.
+
+Frozen notes/reviews/requests/source records and numerical evidence are
+unchanged. No new mechanism, cutoff evaluation, sign scan, certificate,
+commit, manuscript milestone or investigation closure is made in this
+assessment lane. Shared navigation integration remains with the active
+manuscript owner. Chat0006 retains its existing archive and is refreshed
+through the official recorder with bounded exact-turn final capture;
+native-hook activation remains unverified.
+
+[review12]: ../reviews/12_RGD_E04_R7_PAIR_REFERENCE_ASSESSMENT_20261104.md
+[note15]: ../notes/15_RGD_E04_R7_PAIR_REFERENCE_PROOF_AND_SCOPE_CHECKS_20261104.md
+[packet22]: handoffs/22_RGD_E04_R7_RETURN_AND_MODEL_CONTINUATION_20261104.md

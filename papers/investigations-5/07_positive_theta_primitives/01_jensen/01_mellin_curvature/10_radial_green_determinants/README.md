@@ -4,6 +4,19 @@
 substantial LLM assistance; actual recorded **gpt-6-astra (Codex),
 reasoning effort xhigh**.
 
+
+**Current milestone — 4 November 2026:** a [24-page consolidated manuscript](manuscript/radial_green_determinants.tex)
+is ready for author reading, with [build instructions](manuscript/README.md),
+[claim map](manuscript/CLAIM_MAP.md), [synthesis](notes/RGD_E01_R3_MANUSCRIPT_SYNTHESIS_20261104.md) and
+[DRAFT_HISTORY](DRAFT_HISTORY.md). Prepared for Edward Baker with substantial
+LLM assistance, actual **gpt-6-astra / ultra**, chat0007. E04 r7's completed
+Sol assessment is incorporated. This is a methods/scoped-obstruction
+milestone, with no new canonical positivity range or all-index induction.
+The [continuation and model-change guide](research-progress/handoffs/RGD_E04_R8_MANUSCRIPT_ASSESSMENT_AND_MODEL_CONTINUATION_20261104.md)
+proposes E04 r8/Sol for manuscript review; B02 r5 and numerics remain inactive.
+Historical development follows; the sole progress register owns current status.
+
+
 This investigation develops the radial Green representation of the
 canonical theta coefficient determinants. Its mathematical starting point
 is the transfer of derivatives from the theta source to explicit
@@ -73,15 +86,81 @@ run used zero integrand evaluations. The
 retain shared acquisition/library trust; this is not specialist-independent
 review or a new positivity range. Actual execution Sol/ultra, chat0003.
 
-**Next: [B] RGD-B03 r2 — Astra**, investigate a quantitative induction
-hypothesis, its propagation in order, and complete error control over the
-index range. The [current continuation/model-change guide](research-progress/handoffs/10_RGD_B03_R2_INDUCTION_INDEX_ERROR_AND_MODEL_CONTINUATION_20261104.md)
-replaces the former default of another finite-application assessment.
-E04 r3 remains available as optional evidence maintenance. An all-order
-theorem is open; further low-order checks are not prerequisites for
-investigating it. Earlier requests, results and accepted inputs are intact.
-Plan/navigation revision: 4 November 2026, **gpt-6-astra / max**, chat0002,
-prepared for Edward Baker with substantial LLM assistance.
+**B03 r2 and B02 r1 return, 4 November 2026 — Astra/ultra, chat0004:**
+[Note07](notes/07_RGD_B03_R2_EXACT_PAYMENT_OBSTRUCTION_AND_TRUE_TAIL_20261104.md)
+proves eventual failure of the exact old payment, a decaying true
+coefficient tail, and the fixed finite-mode global-reference obstruction.
+[Note08](notes/08_RGD_B02_R1_COMPLETE_SOURCE_CONTOUR_MARGIN_20261104.md)
+gives a conditional complete-source contour margin with explicit order
+dependence. Its scalar theta inputs remain open; the stronger reported
+baseline makes its weaker tail-only execution optional. No new positivity
+range or all-index induction is claimed.
+[Author/same-model checks](reviews/05_RGD_B03_B02_AUTHOR_AND_SAME_MODEL_CHECKS_20261104.md)
+record the original review level; the subsequent E04 r4 assessment is below.
+
+**E04 r4 completed, 4 November 2026 — Sol/ultra, chat0005:**
+[Review06](reviews/06_RGD_E04_R4_COMPLETE_SOURCE_ASSESSMENT_20261104.md)
+accepts all eleven Packet12 checks within their stated scopes, without
+mathematical correction. [Note09](notes/09_RGD_E04_R4_PROOF_DOMAIN_AND_CONSTANT_CHECKS_20261104.md)
+records the propagation-domain and outside-wedge-majorant qualifications.
+Canonical scalar inputs and the complementary region remain open; this
+different-model internal assessment adds no positivity range or specialist
+independence. Reviewed notes and frozen requests are unchanged.
+
+**B02 r2 completed, 4 November 2026 — Astra/ultra, chat0004:**
+[Note10](notes/10_RGD_B02_R2_RECIPROCAL_POLE_INDUCTION_AND_SCOPED_STOP_20261104.md)
+gives exact reciprocal duality, an explicitly initialized fixed-index
+order invariant, and precise growing-index stops for the fixed finite-pole
+reference and selected triangle/Harnack payment. The mechanism has direct
+prior art; no new positivity coverage or all-index induction is claimed.
+[Review07](reviews/07_RGD_B02_R2_AUTHOR_AND_SAME_MODEL_CHECKS_20261104.md)
+records author/same-model checks. The new
+[source catalog and PDF receipts](references/02_RECIPROCAL_COMPARISON_AND_FINITE_ZERO_SOURCES_20261104.md)
+are linked here while the earlier hash-bound reference README is preserved.
+
+**E04 r5 completed, 4 November 2026 — Sol/ultra, chat0006:**
+[Review08](reviews/08_RGD_E04_R5_RECIPROCAL_COMPARISON_ASSESSMENT_20261104.md)
+accepts all twelve frozen obligations within scope without mathematical
+correction. [Note11](notes/11_RGD_E04_R5_RECIPROCAL_PROOF_AND_SCOPE_CHECKS_20261104.md)
+records proof, constants and control checks. The fixed-index initialization
+and two specified growing-index stops stand; no new numerical work,
+positivity range or specialist independence results.
+
+**B02 r3 completed, 4 November 2026 — Astra/ultra, chat0007:**
+[Note12](notes/12_RGD_B02_R3_GAUSSIAN_REFERENCE_GROWTH_STOP_20261104.md) gives a boundary-matched Gaussian reference with
+positive margins at every size, then proves failure of uniform relative
+slack for its exact complete residual as k grows with 1<=r<=M k. The
+single quadratic adjustment loses universal reference positivity, with
+edge witnesses only. [Author/same-model checks](reviews/09_RGD_B02_R3_AUTHOR_AND_SAME_MODEL_CHECKS_20261104.md) retain
+these scopes; no theta determinant negativity or new positivity range.
+[Reference additions](references/03_GAUSSIAN_REFERENCE_AND_SCHUR_BACKGROUND_20261104.md) include the strict-positive
+cosh control and optional standard background.
+
+**E04 r6 completed, 4 November 2026 — Sol/ultra, continuing chat0006:**
+[Review10](reviews/10_RGD_E04_R6_GAUSSIAN_REFERENCE_ASSESSMENT_20261104.md)
+accepts all ten obligations within scope without mathematical correction.
+[Note13](notes/13_RGD_E04_R6_GAUSSIAN_PROOF_AND_SCOPE_CHECKS_20261104.md)
+records the derivations. The exact Gaussian uniform-slack stop and
+quadratic edge-minor obstruction stand; shrinking slack and restricted
+proportional subdomains remain unexcluded. No new numerics or theta
+positivity range; this remains internal assessment with shared premises.
+
+**B02 r4 completed, 4 November 2026 — Astra/ultra, continuing chat0007:**
+[Note14](notes/14_RGD_B02_R4_ENDPOINT_PAIR_REFERENCE_AND_DIAGONAL_CONTROL_20261104.md) supplies an endpoint/growth-matched positive
+pair-product reference and complete scalar/bounded-order payments. An
+explicit algebraic family has scalar error O(q^-2) and negative (q,q)
+determinants despite matched endpoints and leading radial count. This
+stops transfer from those scalar data alone, not theta positivity;
+positive source/primitive realization for the controls is not asserted.
+[Author/same-model checks](reviews/11_RGD_B02_R4_AUTHOR_AND_SAME_MODEL_CHECKS_20261104.md) and
+[source qualifications](references/04_PAIR_PRODUCT_SECTOR_AND_CONTROL_SOURCES_20261104.md) retain those limits.
+No numerical work, enlarged zero prefix or new canonical positivity range.
+
+**Next: [E] RGD-E04 r7 — Sol**, ready/unexecuted under
+[Packet20](research-progress/handoffs/20_RGD_E04_R7_PAIR_REFERENCE_ASSESSMENT_20261104.md).
+[Handoff21](research-progress/handoffs/21_RGD_B02_R4_RETURN_AND_MODEL_CONTINUATION_20261104.md) preserves chat0007 and
+gives continuation/model-change guidance. E04 r3 remains optional;
+E02 r3 inactive. No B02 r5 or numerical campaign is activated.
 
 ## Mathematical starting point
 

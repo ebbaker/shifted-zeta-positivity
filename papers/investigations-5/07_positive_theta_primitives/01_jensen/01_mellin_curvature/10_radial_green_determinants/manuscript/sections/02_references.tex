@@ -1,0 +1,653 @@
+% Consolidated for Edward Baker, 4 November 2026.
+% Drafting assistant: gpt-6-astra, effort ultra.
+% Source: RGD Notes 10--13; Reviews 08 and 10; source ledgers 02--03.
+% This is an input fragment, not a standalone manuscript.
+% Requires amsmath, amssymb, amsthm, and environments proposition, lemma,
+% theorem, corollary, remark.  Labels use the prefix rgd:.
+% Bibliography keys used: GarciaGarciaTierz2020Accepted,
+% KenanFifteenShifts2026, Odlyzko1987AuthorCopy,
+% NISTDLMFPositiveThetaPrimitives.
+% The enclosing manuscript should identify Edward Baker as author (or say
+% drafted for him) and acknowledge substantial LLM assistance.  The internal
+% E04 assessments are not independent human specialist reviews.
+
+\section{Rectangular duality and a finite reciprocal reference}
+\label{rgd:sec-reciprocal}
+
+We retain the complete theta source and its normalization,
+\begin{align}
+ C(z)&=\int_0^\infty\Phi(u)\cosh(u\sqrt z)\,du
+      =\frac18\xi\!\left(\frac{1+\sqrt z}{2}\right),
+                                                               \label{rgd:C}\\
+ C(z)&=\sum_{m\ge0}c_mz^m,\qquad C(1)=b=\frac1{16},
+       \qquad c_m=0\quad(m<0),\nonumber\\
+ \Phi(u)&=\sum_{n\ge1}
+ (2\pi^2n^4e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2e^{4u}}.
+                                                               \label{rgd:source}
+\end{align}
+The square root in \eqref{rgd:C} creates no branch ambiguity, since
+both expressions are even in it.  In particular, $c_m>0$ for $m\ge0$.
+Put
+\[
+ \begin{gathered}
+ D_{r,k}=\det[c_{k+j-i}]_{0\le i,j<r},\qquad
+ E(z)=\frac{C(z)}{c_0}=\sum_{m\ge0}e_mz^m,\\
+ H(z)=\frac1{E(-z)}=\sum_{m\ge0}h_mz^m,
+ \end{gathered}
+\]
+where both coefficient sequences are extended by zero at negative indices.
+The series for $H$ is initially its Taylor series at zero.
+
+\begin{proposition}[Exact rectangular duality]
+\label{rgd:duality}
+For every $r,k\ge1$,
+\begin{equation}
+ D_{r,k}=c_0^r\det[h_{r+j-i}]_{0\le i,j<k}.
+ \label{rgd:dual-equation}
+\end{equation}
+For $k=0$ the left side is $c_0^r$ and the dual determinant is the
+empty determinant $1$.  No restriction relating $r$ and $k$ is needed.
+\end{proposition}
+\begin{proof}
+Let $T=[e_{j-i}]_{0\le i,j<r+k}$.  It is upper triangular with diagonal
+$1$.  The formal identity $E(z)H(-z)=1$ gives
+\[
+ (T^{-1})_{ij}=(-1)^{j-i}h_{j-i}.
+\]
+Take the minor with rows $I=\{0,\ldots,r-1\}$ and columns
+$J=\{k,\ldots,k+r-1\}$.  Jacobi's complementary-minor identity expresses
+it as $(-1)^{\sum I+\sum J}$ times the inverse minor with rows $J^c$ and
+columns $I^c$, since $\det T=1$.  The first sign is $(-1)^{rk}$.
+Here $J^c=\{0,\ldots,k-1\}$ and $I^c=\{r,\ldots,r+k-1\}$;
+factoring the signs $(-1)^{r+j-i}$ from this inverse minor gives a
+second factor $(-1)^{rk}$.  They cancel.  Multiplication by $c_0^r$
+proves the result.  All entries at negative indices remain zero.
+\end{proof}
+
+This is the rectangular form of the standard elementary/complete
+Jacobi--Trudi duality; see, for example,
+\cite[\S2.1]{GarciaGarciaTierz2020Accepted}.  We give the finite-matrix
+proof to specify the signs and the boundary convention.  The reciprocal
+pole comparison below has also been reported in prior work
+\cite{KenanFifteenShifts2026}; it is presented here as a method audit,
+with no claim of a new fixed-index mechanism or positivity range.\footnote{
+The source record attributes the web note to kenan.works, without inferring
+a personal byline.  Its primary indexed text reports all-rank coverage
+for the first fifteen shifts and the same reciprocal-margin mechanism.
+Direct retrieval returned HTTP 502; its supporting notebooks and reported
+coverage were not audited.  That report is prior-art attribution, not a
+premise of the proofs given here.}
+
+Fix an integer $k\ge1$.  The \emph{finite pole premise} used in this
+section is that $C(-z)$ has exactly $k$ zeros in $|z|\le S$, all simple
+and positive, with
+\begin{equation}
+ 0<\alpha_1<\cdots<\alpha_k<\rho<S,
+ \qquad\text{and no zero on }|z|=S.
+ \label{rgd:packet}
+\end{equation}
+This is a premise about a finite disk.  We do not assume its validity
+for arbitrary $k$ or radius.  Define
+\begin{equation}
+ A_\ell=\frac{c_0}{\alpha_\ell C'(-\alpha_\ell)},\qquad
+ H(z)=\sum_{\ell=1}^k\frac{A_\ell}{1-z/\alpha_\ell}+G(z).
+ \label{rgd:partial-fractions}
+\end{equation}
+The complete remainder $G$ is analytic in a neighborhood of $|z|\le S$.
+Since $C(0)>0$ and its real zeros in this interval are simple,
+successive crossings show
+\begin{equation}
+ \operatorname{sgn}A_\ell=(-1)^{\ell-1}.
+ \label{rgd:residue-sign}
+\end{equation}
+The actual residue of $H$ at $\alpha_\ell$ is $-A_\ell\alpha_\ell$.
+
+\begin{proposition}[Positive finite-pole margin and complete residual]
+\label{rgd:pole-margin}
+Assume \eqref{rgd:packet}.  Let $r\ge\max\{1,k-1\}$ and put
+\[
+ B_{ij}=\sum_{\ell=1}^k A_\ell\alpha_\ell^{-(r+j-i)},
+ \quad 0\le i,j<k,\qquad
+ \Delta(\alpha)=\prod_{i<j}(\alpha_j-\alpha_i).
+\]
+Then
+\begin{equation}
+ d^*_{r,k}:=\det B
+ =\Delta(\alpha)^2\prod_{\ell=1}^k
+       |A_\ell|\alpha_\ell^{-r-k+1}>0.
+ \label{rgd:pole-determinant}
+\end{equation}
+Choose any $M\ge\max_{|z|=\rho}|G(z)|$, and set
+\begin{gather}
+ \beta_\ell=\frac{\alpha_\ell}{\rho},\qquad
+ a_{\min}=\min_\ell|A_\ell|,\qquad
+ u_\ell=\frac{\prod_{j\ne\ell}(1+\beta_j)}
+                  {\prod_{j\ne\ell}|\beta_\ell-\beta_j|},
+ \quad u_*=\max_\ell u_\ell,                              \label{rgd:pole-constants}\\
+ \delta_r=\frac{k^2Mu_*^2}{a_{\min}}\beta_k^r.
+ \label{rgd:pole-delta}
+\end{gather}
+If $\delta_r<1$, then
+\begin{equation}
+ D_{r,k}\ge c_0^r d^*_{r,k}(1-\delta_r)^k>0.
+ \label{rgd:pole-floor}
+\end{equation}
+In particular, $\delta_r\le\tfrac12$ gives the explicit floor
+$2^{-k}c_0^r d^*_{r,k}$.
+\end{proposition}
+\begin{proof}
+The index restriction makes every $r+j-i$ nonnegative.  Factor $B$ into
+the Vandermonde matrices $[\alpha_\ell^i]_{i,\ell}$ and
+$[\alpha_\ell^{-j}]_{\ell,j}$, separated by
+$\operatorname{diag}(A_\ell\alpha_\ell^{-r})$.
+The inverse-node Vandermonde has determinant
+\[
+ (-1)^{k(k-1)/2}\Delta(\alpha)
+       \prod_{\ell=1}^k\alpha_\ell^{-(k-1)}.
+\]
+Its sign cancels the product of the signs in
+\eqref{rgd:residue-sign}, proving \eqref{rgd:pole-determinant}.
+
+Write $G(z)=\sum_{m\ge0}g_mz^m$ and
+$R_{ij}=g_{r+j-i}$.  Cauchy's coefficient estimate gives
+$|g_m|\le M\rho^{-m}$.  Scale each matrix entry $(i,j)$ by
+$\rho^{r+j-i}$, and denote the resulting matrices by
+$\widetilde B$ and $\widetilde R$.  Each determinant acquires the
+positive multiplier $\rho^{rk}$, and
+$\|\widetilde R\|_\infty\le kM$.  Moreover,
+\[
+ \widetilde B
+ =U\operatorname{diag}(A_\ell\beta_\ell^{-r})V,
+ \qquad U_{i\ell}=\beta_\ell^i,\quad V_{\ell j}=\beta_\ell^{-j}.
+\]
+The rows of $U^{-1}$ contain the coefficients of the Lagrange
+polynomials at the positive nodes $\beta_\ell$.  Their absolute row
+sums are exactly $u_\ell$, so $\|U^{-1}\|_\infty=u_*$.
+If $J$ reverses the columns, then
+\[
+ V=\operatorname{diag}(\beta_\ell^{-(k-1)})U^{\mathsf T}J,
+ \qquad
+ \|V^{-1}\|_\infty
+ \le\sum_\ell\beta_\ell^{k-1}u_\ell\le ku_*.
+\]
+Consequently, for the complete preconditioned remainder,
+\[
+ \|\widetilde B^{-1}\widetilde R\|_\infty
+ \le ku_*\frac{\beta_k^r}{a_{\min}}u_*kM=\delta_r.
+\]
+When $\delta_r<1$, the real matrices
+$I+s\widetilde B^{-1}\widetilde R$ are nonsingular for $0\le s\le1$,
+so their determinants remain positive.  Each eigenvalue of
+$I+\widetilde B^{-1}\widetilde R$ has modulus at least $1-\delta_r$.
+It follows that its determinant is at least $(1-\delta_r)^k$.
+Use \eqref{rgd:dual-equation} and the positive determinant scaling to
+obtain \eqref{rgd:pole-floor}.  No Hermitianity is assumed.
+\end{proof}
+
+For $M>0$, an explicit starting index is
+\begin{equation}
+ r_0=\max\left\{1,k-1,
+ \left\lceil\frac{\log(2k^2Mu_*^2/a_{\min})}
+                        {\log(\rho/\alpha_k)}\right\rceil\right\}.
+ \label{rgd:pole-start}
+\end{equation}
+For $M=0$, take $r_0=\max\{1,k-1\}$.  The chosen majorant satisfies
+$\delta_{r+1}=\beta_k\delta_r$, and
+\[
+ \frac{c_0^{r+1}d^*_{r+1,k}}{c_0^rd^*_{r,k}}
+   =\frac{c_0}{\prod_{\ell=1}^k\alpha_\ell}.
+\]
+The first equality concerns the majorant, not an asserted equality for
+the actual error norm.  The result is a conditional fixed-$k$ estimate;
+it does not supply the finite pole premise as $k$ grows.
+
+\subsection{Why a fixed number of poles cannot supply a growing reference}
+
+\begin{proposition}[Fixed-pole obstruction, including negative indices]
+\label{rgd:finite-poles}
+Let
+\[
+ H_N(z)=\sum_{\ell=1}^N\frac{A_\ell}{1-z/\alpha_\ell}
+       =\frac{P_{N-1}(z)}{Q_N(z)},\qquad
+ Q_N(z)=1+q_1z+\cdots+q_Nz^N,
+\]
+where $\deg P_{N-1}\le N-1$.  Let $h_m^{[N]}$ be its Taylor
+coefficients for $m\ge0$, extended by zero for $m<0$.  Then
+\begin{equation}
+ \det[h_{r+j-i}^{[N]}]_{0\le i,j<k}=0
+       \qquad(r\ge N,\ k>N).
+ \label{rgd:fixed-pole-zero}
+\end{equation}
+This includes $k>r+1$.
+\end{proposition}
+\begin{proof}
+The identity $Q_NH_N=P_{N-1}$ gives
+\[
+ h_m^{[N]}+q_1h_{m-1}^{[N]}+\cdots+q_Nh_{m-N}^{[N]}=0
+       \qquad(m\ge N).
+\]
+In row $i$ of the last column, $m=r+k-1-i\ge r\ge N$.
+The preceding $N$ columns exist because $k>N$.  Thus the last column
+plus the stated linear combination of those columns is identically
+zero, with the zero negative-index convention unchanged.
+\end{proof}
+
+When $r\ge k-1$ one may also factor the whole matrix through an
+$N$-dimensional exponential space and conclude rank at most $N$.
+That rank argument must not be used for $k>r+1$: the exponential
+formula does not extend to the artificially zero negative coefficients.
+The recurrence proof establishes \eqref{rgd:fixed-pole-zero} there.
+The proposition concerns the reference; residual terms can still make
+the complete determinant nonzero.
+
+\subsection{A distinct limitation of the triangle--Harnack allowance}
+\label{rgd:harnack-section}
+
+There is also an explicit, but deliberately lossy, way to pay $M$ in
+Proposition~\ref{rgd:pole-margin}.  Under \eqref{rgd:packet}, put
+\[
+ F_0(z)=\frac{C(-z)}{c_0\prod_{\ell=1}^k(1-z/\alpha_\ell)},
+ \quad
+ L=\frac{C(S)}{c_0\prod_{\ell=1}^k(S/\alpha_\ell-1)},
+ \quad U_0\ge\log L.
+\]
+The function $F_0$ is zero-free on the closed disk, $F_0(0)=1$, and
+$|F_0|\le L$ on its boundary.  Thus $L\ge1$.  The analytic logarithm
+with $\log F_0(0)=0$, followed by Harnack's inequality for
+$U_0-\operatorname{Re}\log F_0$, gives
+\begin{equation}
+ -\frac{2U_0v}{S-v}\le\operatorname{Re}\log F_0(z)
+       \le\frac{2U_0v}{S+v}\qquad(|z|=v<S).
+ \label{rgd:harnack-log}
+\end{equation}
+Let
+\begin{gather*}
+ p_\ell=\prod_{j\ne\ell}|1-\alpha_\ell/\alpha_j|,
+ \quad a^-=\min_\ell A_\ell^-,\\
+ A_\ell^-=\frac{e^{-2U_0\alpha_\ell/(S+\alpha_\ell)}}{p_\ell},
+ \quad
+ A_\ell^+=\frac{e^{2U_0\alpha_\ell/(S-\alpha_\ell)}}{p_\ell},
+ \\
+ \widehat M=\frac{e^{2U_0\rho/(S-\rho)}}
+                      {\prod_\ell(\rho/\alpha_\ell-1)}
+       +\sum_\ell\frac{A_\ell^+}{\rho/\alpha_\ell-1},
+ \qquad
+ \widehat\delta_r=\frac{k^2\widehat M u_*^2}{a^-}\beta_k^r.
+\end{gather*}
+Indeed, the residue formula and \eqref{rgd:harnack-log} give
+$A_\ell^-\le|A_\ell|\le A_\ell^+$; the triangle inequality on
+$G=H-\sum A_\ell/(1-z/\alpha_\ell)$ gives $\max_{|z|=\rho}|G(z)|\le\widehat M$, so one may choose
+$M=\widehat M$.
+
+\begin{proposition}[Lower bound on this particular allowance]
+\label{rgd:harnack-stop}
+The specified allowance satisfies
+\begin{equation}
+ \widehat\delta_r\ge
+       4^{k-1}\frac{\beta_k^{r+1}}{1-\beta_k}.
+ \label{rgd:harnack-lower}
+\end{equation}
+Consequently it diverges along any sequence of valid packets with
+$k\to\infty$, $r\ge k-1$, $k/r$ bounded below by a positive constant,
+and $\beta_k\to1$.
+\end{proposition}
+\begin{proof}
+Interpolate the monic polynomial $(x-\tfrac12)^{k-1}$ at the
+$\beta_\ell\in(0,1)$.  Comparing leading coefficients and using
+$|\beta_\ell-\tfrac12|\le\tfrac12$ gives
+\[
+ 1\le2^{1-k}\sum_\ell
+       \frac1{\prod_{j\ne\ell}|\beta_\ell-\beta_j|}
+    \le2^{1-k}ku_*.
+\]
+Also, the last residue term in $\widehat M$ implies
+$\widehat M/a^-\ge1/(\rho/\alpha_k-1)=\beta_k/(1-\beta_k)$.
+These inequalities prove \eqref{rgd:harnack-lower}.
+For the final assertion, divide its logarithm by $k$.
+The contribution $(r+1)\log\beta_k/k$ tends to zero, while
+$(k-1)\log4/k$ tends to $\log4$ and
+$-\log(1-\beta_k)/k\ge0$.
+\end{proof}
+
+For the canonical function, the ordinary zero-counting asymptotic
+forces the last condition along any unbounded sequence of valid
+packets.  To state this precisely, enumerate the moduli $R_j$ of the
+zeros of $C(-z)$ with multiplicity.  A nontrivial zero
+$\sigma+i\gamma$ of $\xi$, with $\gamma>0$, maps to
+$\alpha=-(2\sigma-1+2i\gamma)^2$, so
+$|\alpha|=4\gamma^2+(2\sigma-1)^2$.  The standard zero count
+\cite[\S2]{Odlyzko1987AuthorCopy} and $0<\sigma<1$ give
+\[
+ n(R):=\#\{j:R_j\le R\}\sim\frac{\sqrt R\log R}{8\pi}.
+\]
+If $R_{j+1}/R_j$ failed to tend to one, two fixed relative interior
+radii in a recurring gap would have equal counts but asymptotically
+different values under this formula.  Thus $R_{j+1}/R_j\to1$.
+A valid packet has $R_k=\alpha_k<\rho<S<R_{k+1}$, whence
+$\beta_k\to1$.  The existence of arbitrarily large valid packets is
+not assumed; it would in particular impose global reality and
+simplicity on the zeros.
+
+This is a failure of the defined allowance, not a lower bound for the
+actual remainder.  For example,
+$E(z)=\prod_{\ell=1}^k(1+z/\alpha_\ell)$ has exact reciprocal partial
+fractions and $G=0$, whereas $\widehat M$ above is positive and can be
+large.  Neither Proposition~\ref{rgd:finite-poles} nor
+Proposition~\ref{rgd:harnack-stop} excludes every finite-pole argument
+or signs a growing-index canonical determinant.
+
+\section{A positive Gaussian reference and its growth obstruction}
+\label{rgd:sec-gaussian}
+
+We now consider a reference with a nonzero determinant at every
+$r,k$.  Unlike the fixed-pole reference, it needs no finite-zero input.
+The primitive for the complete source is
+\[
+ \begin{gathered}
+ p(u)=\sum_{n\ge1}e^{u-\pi n^2e^{4u}},\qquad
+ p''-p=8\Phi,\quad p'(0)=-\tfrac12,\\
+ c_0=b-\frac{d_0}{8},\qquad d_0=\int_0^\infty p(u)\,du.
+ \end{gathered}
+\]
+These are the canonical Green normalization identities; the derivative
+at zero follows from the theta functional equation.  The following
+bounds are elementary consequences of the complete sums.
+
+\begin{lemma}[Complete-source envelope]
+\label{rgd:envelope}
+For $u\ge0$,
+\begin{equation}
+ 0<\Phi(u)\le4\pi^2e^{9u-\pi e^{4u}},\qquad
+ \frac1{32}<c_0<\frac1{16}.
+ \label{rgd:envelope-equation}
+\end{equation}
+Writing $a_R=(9+\sqrt R)/4$, for every $R>0$ one has
+\begin{equation}
+ E(R)<\mathcal F(R):=32\pi^{2-a_R}\Gamma(a_R),
+ \qquad \log\mathcal F(R)=O(\sqrt R\log R)\quad(R\ge2)
+ \label{rgd:entire-growth}
+\end{equation}
+as an upper growth estimate.
+\end{lemma}
+\begin{proof}
+Write $v=\pi e^{4u}$, and let $\Phi_n$ be the $n$th summand of
+\eqref{rgd:source}.  Every summand is positive, and for $n\ge2$,
+\[
+ \frac{\Phi_n}{\Phi_1}
+ =\frac{n^2(2n^2v-3)}{2v-3}e^{-(n^2-1)v}
+ \le2n^4e^{-(n^2-1)v}.
+\]
+The elementary bounds $n^4\le16^{n-1}$ and
+$n^2-4\ge5(n-2)$ show
+\[
+ \sum_{n\ge2}\frac{\Phi_n}{\Phi_1}
+ \le\frac{32e^{-3v}}{1-16e^{-5v}}\le64e^{-3v}<1
+       \qquad(v\ge\pi).
+\]
+Since $\Phi_1\le2\pi^2e^{9u-\pi e^{4u}}$, this proves the envelope.
+Also $e^{4u}\ge1+4u$ gives
+\[
+ 0<d_0\le\sum_{n\ge1}\frac{e^{-\pi n^2}}{4\pi n^2-1}
+ \le\frac{e^{-\pi}}{(4\pi-1)(1-e^{-3\pi})}<\frac14.
+\]
+The Green normalization gives the asserted bounds on $c_0$.
+For real $R>0$, bound the hyperbolic cosine by $e^{u\sqrt R}$ and
+substitute $v=\pi e^{4u}$ in the source integral to obtain
+\[
+ E(R)\le\frac{\pi^{2-a_R}}{c_0}
+       \int_\pi^\infty v^{a_R-1}e^{-v}\,dv
+       <32\pi^{2-a_R}\Gamma(a_R).
+\]
+For completeness, if $N=\lceil a_R\rceil$, then
+$v^{a_R-1}\le1+v^N$ for all $v>0$, and hence
+$\Gamma(a_R)\le1+N!$.  The estimate $\log N!\le N\log N$ proves
+the upper growth assertion without an asymptotic gamma formula.
+\end{proof}
+
+Define
+\begin{equation}
+ t=\log(b/c_0)>0,\qquad C_G(z)=c_0e^{tz},\qquad
+ \Phi_G(u)=\frac{c_0}{\sqrt{\pi t}}e^{-u^2/(4t)}.
+ \label{rgd:gaussian}
+\end{equation}
+The elementary Gaussian integral gives the cosh transform $C_G$,
+so $C_G(0)=c_0$ and $C_G(1)=b$.  The boundary-compatible primitive
+\[
+ p_G(u)=8\int_u^\infty\sinh(v-u)\Phi_G(v)\,dv
+\]
+satisfies $p_G''-p_G=8\Phi_G$ and $p_G'(0)=-8b=-1/2$.
+Tonelli's theorem gives
+$\int_0^\infty p_G=8\int_0^\infty(\cosh v-1)\Phi_G(v)\,dv
+=8(b-c_0)=d_0$.  Thus this comparison retains $C(0)$, $C(1)$, the derivative
+$p'(0)$, and the primitive integral.  No equality of $p_G(0)$
+and $p(0)$ is asserted.
+The complete signed difference
+\[
+ \Delta E(z)=\frac{C(z)-C_G(z)}{c_0},\qquad
+ \Delta E(0)=\Delta E(1)=0
+\]
+has coefficients
+\begin{equation}
+ \varepsilon_m=e_m-\frac{t^m}{m!}
+ =\frac1{c_0(2m)!}\int_0^\infty
+       (\Phi-\Phi_G)(u)u^{2m}\,du\quad(m\ge0).
+ \label{rgd:complete-difference}
+\end{equation}
+They are set to zero for $m<0$.  All source modes and tails remain in
+this difference; no bound on its two summands separately is used below.
+
+\begin{proposition}[Gaussian reference margin at every size]
+\label{rgd:gaussian-margin}
+Let $g_m=t^m/m!$ for $m\ge0$ and $g_m=0$ for $m<0$, and define
+$r$-square real matrices
+\[
+ A=[e_{k+j-i}]_{0\le i,j<r},\qquad
+ B=[g_{k+j-i}]_{0\le i,j<r},\qquad K=B^{-1}(A-B).
+\]
+For every $r,k\ge1$,
+\begin{equation}
+ \begin{gathered}
+ m_{r,k}:=\det B
+   =t^{rk}\prod_{j=0}^{r-1}\frac{j!}{(k+j)!}
+   \ge\left(\frac{t}{r+k}\right)^{rk}>0,\\
+ \frac{D_{r,k}}{c_0^rm_{r,k}}=\det(I+K).
+ \end{gathered}
+ \label{rgd:gaussian-margin-equation}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Factor $t^{k+j}/(k+j)!$ from column $j$ and $t^{-i}$ from row $i$.
+The remaining entry is the falling factorial $(k+j)_i$, a monic
+polynomial of degree $i$ evaluated at $k+j$.  Its evaluation determinant
+is the Vandermonde at $k,k+1,\ldots,k+r-1$, namely
+$\prod_{j=0}^{r-1}j!$.  If $i>k+j$, the falling factorial contains a
+zero and exactly reproduces the negative-index convention.  The total
+power of $t$ is $rk$.  Each quotient $(k+j)!/j!$ consists of $k$
+factors at most $r+k$, giving the lower bound.  The final equality
+is the exact determinant identity, using $D_{r,k}=c_0^r\det A$.
+\end{proof}
+
+The explicit determinant is standard algebra (equivalently a
+rectangular Schur specialization); no new determinant identity is
+asserted.  It removes the fixed-pole determinant-vanishing obstruction of
+Proposition~\ref{rgd:finite-poles}.  Its scale nevertheless prevents a
+uniform positive relative slack for the actual complete residual.
+
+\begin{theorem}[Growth obstruction to uniform Gaussian slack]
+\label{rgd:gaussian-stop}
+For every $r,k\ge1$ and $R>0$,
+\begin{align}
+ \left|\frac{D_{r,k}}{c_0^rm_{r,k}}\right|
+ &\le r^{r/2}E(R)^r\left(\frac{r+k}{tR}\right)^{rk}
+ \le\overline U_{r,k}(R),                              \label{rgd:ratio-bound}\\
+ \overline U_{r,k}(R)
+ &:=r^{r/2}\mathcal F(R)^r
+                         \left(\frac{r+k}{tR}\right)^{rk}.
+ \nonumber
+\end{align}
+Fix $M>0$ and set $R_k=k^2/(\log k)^2$ for $k\ge3$.  Then, uniformly
+for $1\le r\le Mk$ as $k\to\infty$,
+\begin{equation}
+ \frac1r\log\overline U_{r,k}(R_k)
+ \le-k\log k+2k\log\log k+C_Mk,
+ \qquad \overline U_{r,k}(R_k)^{1/r}\longrightarrow0.
+ \label{rgd:ratio-decay}
+\end{equation}
+For every induced matrix norm of the exact residual $K$,
+\begin{equation}
+ \|K\|\ge1-\overline U_{r,k}(R_k)^{1/r}.
+ \label{rgd:norm-stop}
+\end{equation}
+Thus no bound $\|K\|\le\delta_*<1$ can hold uniformly on this domain.
+\end{theorem}
+\begin{proof}
+Positivity of the coefficients gives $e_mR^m\le E(R)$ for $m\ge0$.
+Multiply entry $(i,j)$ of $A$ by $R^{k+j-i}$.  This is an invertible
+row and column scaling, with determinant multiplier $R^{rk}$.  All
+scaled entries have modulus at most $E(R)$; negative-index entries
+remain zero.  Hadamard's inequality gives
+\[
+ |\det A|\le r^{r/2}E(R)^rR^{-rk}.
+\]
+Divide by the lower bound for $m_{r,k}$ in
+\eqref{rgd:gaussian-margin-equation} and use
+Lemma~\ref{rgd:envelope} to get \eqref{rgd:ratio-bound}.
+At $R_k$, the upper growth bound gives
+$\log\mathcal F(R_k)\le Ck$ for all sufficiently large $k$.
+Since $r+k\le(M+1)k$,
+\[
+ \begin{aligned}
+ \frac1r\log\overline U_{r,k}(R_k)
+ &=\frac12\log r+\log\mathcal F(R_k)\\
+ &\quad+k\bigl(\log(r+k)-\log t-\log R_k\bigr)\\
+ &\le-k\log k+2k\log\log k+C_Mk.
+ \end{aligned}
+\]
+All constants are independent of $r$ in the stated domain.  This
+proves \eqref{rgd:ratio-decay}, and also uniform convergence of
+$\overline U_{r,k}(R_k)$ itself to zero because $r\ge1$.
+If $\|K\|<1$, every eigenvalue of $I+K$ has modulus at least
+$1-\|K\|$.  The determinant identity consequently gives
+\[
+ (1-\|K\|)^r\le|\det(I+K)|
+      \le\overline U_{r,k}(R_k),
+\]
+which proves \eqref{rgd:norm-stop}.  If $\|K\|\ge1$, that inequality
+is immediate.
+\end{proof}
+
+The theorem includes fixed $r$, $r=k$, and any fixed proportional
+ratio with $k/r\ge1/M$.  It does not cover fixed $k$ with $r\to\infty$.
+It is a lower bound $\|K\|\ge1-o(1)$, not a claim that $\|K\|$ tends
+to one.  If $A,B$ undergo common invertible scalings $A\mapsto LAR$
+and $B\mapsto LBR$, then $K\mapsto R^{-1}KR$.  Norm values may change,
+but the determinant-based obstruction remains valid for every induced
+norm of the transformed residual.
+
+There is a corresponding exact scalar obstruction:
+\begin{equation}
+ \frac{\det A-m_{r,k}}{m_{r,k}}\longrightarrow-1,
+ \qquad
+ \frac{|\det A-m_{r,k}|}{m_{r,k}}\longrightarrow1
+ \label{rgd:scalar-stop}
+\end{equation}
+uniformly on the same domain.  It excludes a fixed positive relative
+slack, not every tolerance approaching one.  Once $|\det A|<m_{r,k}$,
+the bare inequality $|\det A-m_{r,k}|<m_{r,k}$ is equivalent to
+$\det A>0$.  A proof using such a shrinking tolerance must therefore
+supply an independently established signed estimate; merely imposing
+the inequality restates the target.
+
+The scale mismatch can also be made explicit.  If a positive moving
+slope $t_{r,k}$ in the exponential family permitted a fixed norm bound
+$\delta<1$, the same argument would require
+\begin{equation}
+ t_{r,k}\le
+ \frac{r+k}{R_k(1-\delta)^{1/k}}
+       r^{1/(2k)}E(R_k)^{1/k}
+ =O_{M,\delta}\!\left(\frac{\log^2 k}{k}\right).
+ \label{rgd:moving-slope}
+\end{equation}
+This is a necessary condition only.  Matching both endpoint values
+fixes $t=\log(b/c_0)>0$, so it cannot meet this vanishing scale in the
+same single-exponential family.
+
+\subsection{The endpoint-preserving quadratic adjustment}
+
+\begin{proposition}[Failure of universal positivity for a nonzero correction]
+\label{rgd:quadratic}
+For $q\in\mathbb R$, put
+\[
+ E_2(z)=\exp\bigl((t+q/2)z-qz^2/2\bigr),\qquad C_2=c_0E_2.
+\]
+Then $C_2(0)=c_0$ and $C_2(1)=b$.  For every $q\ne0$, some
+rectangular coefficient determinant of $C_2$ is negative.
+\end{proposition}
+\begin{proof}
+If $q>0$, then $E_2(x)\to0$ as $x\to+\infty$.  An entire series
+with constant coefficient one and all coefficients nonnegative is
+at least one on that axis.  Thus some coefficient $e_j^{[2]}$ is
+negative, giving $D_{1,j}^{[2]}=c_0e_j^{[2]}<0$.
+If $q<0$, the dual series
+\[
+ H_2(z)=\frac1{E_2(-z)}
+       =\exp\bigl((t+q/2)z+qz^2/2\bigr)
+\]
+tends to zero on the positive axis, so some $h_j^{[2]}<0$.
+Proposition~\ref{rgd:duality}, which is purely algebraic, gives
+$D_{j,1}^{[2]}=c_0^jh_j^{[2]}<0$.
+\end{proof}
+
+Matching the first coefficient as well would select $q=2(e_1-t)$;
+no sign or nonzero assertion about that canonical number is needed.
+For $q=0$, Theorem~\ref{rgd:gaussian-stop} applies.  The nonzero
+quadratic result concerns positivity at \emph{all} indices and uses
+edge-family witnesses; it does not exclude every restricted
+proportional-index subdomain or other reference families.
+
+\subsection{A positive control and the extent of the conclusions}
+
+The Gaussian obstruction is compatible with strict positivity of every
+target rectangle.  Indeed, for $\ell>0$ take
+\[
+ C_*(z)=\frac{\cosh(\ell\sqrt z)}{16\cosh\ell},\qquad
+ E_*(z)=\cosh(\ell\sqrt z).
+\]
+The classical product \cite[Eq.~4.36.2]{NISTDLMFPositiveThetaPrimitives}
+gives $E_*(z)=\prod_{j\ge1}(1+x_jz)$, where
+$x_j=4\ell^2/((2j-1)^2\pi^2)>0$ and $\sum_jx_j<\infty$.
+For a finite product, its upper Toeplitz matrix in dimension $r+k$ is
+the product of upper bidiagonal matrices $I+x_jS$, with $S$ the upper
+shift.  Each factor has nonnegative minors.  In the Cauchy--Binet
+expansion for rows $0,\ldots,r-1$ and columns $k,\ldots,k+r-1$,
+move the full consecutive block by one at each of the first $k$
+factors and leave it fixed thereafter.  This supplies the positive
+term $(x_1\cdots x_k)^r$.  Local convergence of the product preserves
+that lower bound in every fixed rectangle.  Thus all these target
+determinants are strictly positive, while the same proof of
+Theorem~\ref{rgd:gaussian-stop}, using
+$\log E_*(R)\le\ell\sqrt R$, gives the Gaussian fixed-slack obstruction.
+This is an atomic source control, not the canonical smooth theta source
+or a certified positive-time collision.
+
+The conclusions here are deliberately separate.  A fixed finite pole
+reference eventually has a zero determinant; the specified
+triangle--Harnack allowance can diverge despite a zero actual error;
+and the endpoint-matched Gaussian reference has a positive margin at
+every size but cannot support uniform positive relative slack on the
+stated growing-index domain.  None of these facts makes a canonical
+determinant negative, supplies a new theta positivity range, or proves
+an all-index induction.  Continuation would require an appropriately
+scaled reference with a paid complete residual, or an independently
+controlled signed comparison.  No such estimate is asserted here.
+
+\paragraph{Assessment provenance.}
+The reciprocal results were accepted within their recorded scope in
+internal assessment RGD-E04 r5, and the Gaussian and quadratic results
+were accepted within their recorded scope in RGD-E04 r6, without a
+mathematical correction.  Those assessments used a different LLM model
+with shared source, algebra, and envelope premises; they were not
+independent human specialist reviews.  The present consolidation adds
+no numerical evidence, certificate replay, new positivity coverage, or
+priority claim.  The direct algebraic proofs above are the mathematical
+support for the statements, not the assessment labels.

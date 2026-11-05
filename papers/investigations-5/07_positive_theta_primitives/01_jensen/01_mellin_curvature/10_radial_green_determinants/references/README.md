@@ -71,3 +71,26 @@ attempt, and addition of remaining enclosures when stopping. This adds
 an actual-version check alongside the prior 3.7.0-dev documentation;
 it is not a complete library or numerical-algorithm proof audit. No new
 paper/PDF, library installation or integration replay was introduced.
+
+## B03/B02 mechanism and baseline reinspection
+
+4 November 2026, for Edward Baker with substantial LLM assistance;
+actual **gpt-6-astra / ultra**, chat0004. Rechecked the existing versioned
+Katkova primary text: Theorem 2 and Proposition 1 (fixed-order eventual
+positivity), Lemma 1 equation (12) (contour determinant), Theorem C and
+Lemma 3 (the entire PF and strict-minor bridges). Selected passages only;
+no complete asymptotic proof audit. Notes07–08 give their exact uses.
+
+Rechecked the existing
+[Michałowski catalog entry](../../../../references/04_RH_FORMULATION_SOURCES_20261101.md#Michalowski260716795v1)
+and [version 1 primary text](https://arxiv.org/html/2607.16795v1),
+Theorem 1.1 and selected Sections 3–6. Note08 Section 7 records the
+baseline consequence and scoped majorant deduction. Earlier PDF provenance
+is unchanged; the proof and certificates remain unaudited here.
+
+[Additional background](01_ADDITIONAL_BACKGROUND_20261104.md) records
+Rietsch's newly discovered version 3, with
+[local BibTeX](additional_sources.bib) and an
+[outside-Git PDF receipt](REFERENCE_RECEIPT_20261104.json).
+It is not a premise of the new results. Existing Fomin–Zelevinsky
+catalog/provenance is linked there rather than duplicated.

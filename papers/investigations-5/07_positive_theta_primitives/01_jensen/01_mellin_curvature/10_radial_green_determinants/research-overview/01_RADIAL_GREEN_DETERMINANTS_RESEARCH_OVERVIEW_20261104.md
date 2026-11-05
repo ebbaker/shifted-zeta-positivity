@@ -17,6 +17,91 @@ changes research priorities, not the status of a mathematical claim.
 The original r1 plan and all frozen requests remain below or at their
 existing paths as historical evidence.
 
+
+## First consolidated manuscript milestone, 4 November 2026
+
+**RGD-E01 r3 complete: E — execution; recommended Sol, actual Astra/ultra
+in continuing chat0007.** The [canonical draft](../manuscript/radial_green_determinants.tex)
+is a 24-page methods paper on complete boundary-preserving comparisons,
+three finite Q certificates and scoped growing-dimension limitations.
+Sol's completed E04 r7 acceptance is integrated. No new canonical positivity
+range or all-index result is claimed; internal LLM assessment is not
+specialist review. [Synthesis](../notes/RGD_E01_R3_MANUSCRIPT_SYNTHESIS_20261104.md),
+[claim map](../manuscript/CLAIM_MAP.md) and [milestone history](../DRAFT_HISTORY.md)
+provide the concise entry point.
+
+**Next proposed: [E] RGD-E04 r8 — Sol**, the bounded manuscript assessment
+in the [continuation/model-change packet](../research-progress/handoffs/RGD_E04_R8_MANUSCRIPT_ASSESSMENT_AND_MODEL_CONTINUATION_20261104.md).
+Ready for author activation, unexecuted. No B02 r5 or numerics are activated.
+The sole live register owns status; earlier return/readiness prose below
+retains its historical context. Consult the [result index](../../../../../../../result-summaries/README.md)
+and [avoid index](../../../../../../../avoid/README.md), particularly
+[cluster12](../../../../../../../result-summaries/12_collision_controls_and_screening.md)
+and [scoped exclusions](../../../../../../../avoid/07_scoped_exclusions_read_as_universal.md).
+
+## Current return after plan r2
+
+4 November 2026, prepared for Edward Baker with substantial LLM assistance,
+actual **gpt-6-astra / ultra**, chat0004. The issued r2 plan below is
+retained as its request; its former readiness language is historical.
+[Note07](../notes/07_RGD_B03_R2_EXACT_PAYMENT_OBSTRUCTION_AND_TRUE_TAIL_20261104.md)
+completes B03 with scoped fixed-reference obstructions and a true-tail
+bound. [Note08](../notes/08_RGD_B02_R1_COMPLETE_SOURCE_CONTOUR_MARGIN_20261104.md)
+completes the separately classified B02 r1 full-source repair decision
+with a conditional joint-order contour margin. The stronger reported
+baseline was rechecked; no new positivity coverage is claimed.
+
+E04 r4 subsequently accepted the scoped earlier return. **B02 r2 is now
+complete**: [Note10](../notes/10_RGD_B02_R2_RECIPROCAL_POLE_INDUCTION_AND_SCOPED_STOP_20261104.md)
+supplies an initialized fixed-index reciprocal-pole order invariant and
+precise growing-index reference/payment stops. The mechanism has direct
+prior art, and no new positivity coverage is claimed.
+
+4 November 2026 assessment/navigation update, prepared for Edward Baker
+with substantial LLM assistance; actual **gpt-6.1-sol / ultra**, chat0006:
+[Review08](../reviews/08_RGD_E04_R5_RECIPROCAL_COMPARISON_ASSESSMENT_20261104.md)
+accepts all twelve E04 r5 obligations within scope, without correction.
+[Note11](../notes/11_RGD_E04_R5_RECIPROCAL_PROOF_AND_SCOPE_CHECKS_20261104.md)
+records the checks. This is different-model internal assessment with
+shared premises, not independent specialist review. The selected
+finite-pole/triangle-payment route is parked for growing indices.
+The [live register][progress] records the later author-activated
+**B02 r3 return**, 4 November 2026, actual **gpt-6-astra / ultra**,
+chat0007. [Note12](../notes/12_RGD_B02_R3_GAUSSIAN_REFERENCE_GROWTH_STOP_20261104.md) gives a boundary-matched Gaussian
+reference with nonzero margins at every size and a correlation-independent
+growth-scale stop for uniform relative slack on 1<=r<=M k. One quadratic
+logarithm correction fails universal reference positivity, with edge
+witnesses only. No theta determinant sign, new range or all-index induction
+is obtained. [Review09](../reviews/09_RGD_B02_R3_AUTHOR_AND_SAME_MODEL_CHECKS_20261104.md) records author/same-model checks.
+
+4 November 2026 E04 r6 assessment/navigation update, prepared for Edward
+Baker with substantial LLM assistance; actual **gpt-6.1-sol / ultra**,
+continuing chat0006. [Review10](../reviews/10_RGD_E04_R6_GAUSSIAN_REFERENCE_ASSESSMENT_20261104.md)
+accepts all ten obligations within scope without correction;
+[Note13](../notes/13_RGD_E04_R6_GAUSSIAN_PROOF_AND_SCOPE_CHECKS_20261104.md)
+records the derivations. Park the Gaussian/quadratic-reference attempt.
+The norm obstruction excludes fixed uniform slack, and the quadratic
+witnesses exclude universal reference positivity; their other domains
+remain as stated in Note12. No theta determinant negativity or new range.
+This is different-model internal assessment with shared premises.
+
+4 November 2026 B02 r4 return/navigation update, prepared for Edward
+Baker with substantial LLM assistance; actual **gpt-6-astra / ultra**,
+continuing chat0007. [Note14](../notes/14_RGD_B02_R4_ENDPOINT_PAIR_REFERENCE_AND_DIAGONAL_CONTROL_20261104.md) supplies an endpoint/growth-matched
+positive pair reference, complete scalar coefficient payment and a classical
+bounded-order Schur margin. A complete algebraic diagonal control with
+O(q^-2) scalar error shows those data alone do not transfer positivity
+uniformly as both indices grow. No canonical source counterexample,
+positive source realization for the controls or new theta range is claimed.
+[Review11](../reviews/11_RGD_B02_R4_AUTHOR_AND_SAME_MODEL_CHECKS_20261104.md) records author/same-model checks.
+
+**Next: [E] RGD-E04 r7 — Sol**, ready/unexecuted under
+[Packet20](../research-progress/handoffs/20_RGD_E04_R7_PAIR_REFERENCE_ASSESSMENT_20261104.md).
+[Handoff21](../research-progress/handoffs/21_RGD_B02_R4_RETURN_AND_MODEL_CONTINUATION_20261104.md) gives model-change
+continuity and the next decision boundary. E04 r3 remains optional;
+E02 r3 inactive; no numerical campaign or B02 r5 activation. The historical
+mathematical plan/request language below remains unchanged.
+
 ## Purpose and scope
 
 The subject is the canonical theta coefficient determinant

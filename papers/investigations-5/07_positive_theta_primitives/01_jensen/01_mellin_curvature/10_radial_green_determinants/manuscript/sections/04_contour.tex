@@ -1,0 +1,81 @@
+\section{A conditional complete-contour margin}\label{sec:contour}
+This appendix consolidates the conditional result of RGD Note08, whose
+normalization and scope were checked in E04 r4. The canonical scalar
+hypotheses below remain unproved here. No new positivity domain follows.
+
+For $x>0$, let $\mu=xC'(x)/C(x)$ and
+$v=\mathrm d\mu/\mathrm d\log x$. They are the mean and variance of
+$c_jx^j/C(x)$. Positivity and the infinite coefficient support imply
+$v>0$, $\mu(0+)=0$ and $\mu(x)\to\infty$; thus there is a unique
+$x=x(k)$ with $\mu(x)=k$ for each integer $k\ge1$. Set
+$\phi(\theta)=e^{-ik\theta}C(xe^{i\theta})/C(x)$.
+Coefficient extraction and determinant integration give
+\begin{equation}\label{eq:contour-int}
+ D_{n,k}=\frac{C(x)^nx^{-nk}}{n!(2\pi)^n}
+ \int_{[-\pi,\pi]^n}\prod_{i=1}^n\phi(\theta_i)
+ \prod_{i<j}4\sin^2\frac{\theta_i-\theta_j}{2}\dd\boldsymbol\theta.
+\end{equation}
+This standard identity also appears in Katkova's Lemma~1
+\cite{Katkova0505174v1}; the integral is real but not pointwise positive.
+
+\begin{proposition}[Conditional joint-order allowance]\label{prop:contour}
+Fix $0<c\le1$, $B>0$ and $0<\delta_0\le1$. At the saddle assume
+\begin{align}
+ \log\phi(\theta)&=-v\theta^2/2+R(\theta),&
+ |R(\theta)|&\le Bv|\theta|^3\quad(|\theta|\le\delta_0),\label{eq:contour-H1}\\
+ |\phi(\theta)|&\le e^{-cv\theta^2/2}&&(|\theta|\le\pi),\label{eq:contour-H2}
+\end{align}
+where the local logarithm is continuous and zero at the origin.
+Put $A=8+2\log(2/c)$ and
+\[
+ G(n)=\max\left\{\frac{An^2}{c\delta_0^2},\,
+ \frac{4An^4}{3c},\,16B^2(A/c)^3n^8\right\}.
+\]
+If $v\ge G(n)$, then
+\begin{equation}\label{eq:contour-margin}
+ D_{n,k}>\frac{C(x)^nx^{-nk}}{4n!(2\pi)^n}Z_n(v)>0,
+ \qquad Z_n(v)=(2\pi)^{n/2}v^{-n^2/2}\prod_{j=1}^n j!.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The Gaussian Vandermonde integral over $\R^n$ equals $Z_n(v)$.
+Determinant integration and monic Hermite norms
+$\sqrt{2\pi}\,j!v^{-j-1/2}$ prove this normalization, including the
+$n!$ factor. Choose $\delta^2=An^2/(cv)$ and
+$\tau=nBv\delta^3$. The assumptions give
+$\delta\le\delta_0$, $\tau\le1/4$ and
+$n(n-1)\delta^2/3\le1/4$. On $|\theta_i|\le\delta$, the real part
+of the complete phase product is at least
+$e^{-\tau}\cos\tau\,e^{-v\sum\theta_i^2/2}$.
+The circular Vandermonde is at least the ordinary squared Vandermonde
+times $S=(\sin\delta/\delta)^{n(n-1)}\ge e^{-1/4}$.
+Here $\sin y/y\ge e^{-y^2/3}$ for $|y|\le1$, and all coincident
+limits are continuous.
+
+The Gaussian mass outside this cube is at most $TZ_n(v)$, where
+$T=2^{n^2/2}e^{-v\delta^2/4}$. This follows by splitting the
+Gaussian exponent in half on $\sum\theta_i^2\ge\delta^2$.
+Using \eqref{eq:contour-H2}, the absolute contribution of the
+\emph{entire} complementary contour region is at most $UZ_n(v)$, with
+$U=(2/c)^{n^2/2}e^{-cv\delta^2/4}$, by the same argument at
+variance parameter $cv/2$. This includes every mixed region; no
+separate combinatorial exterior payment is omitted.
+Our choice of $A$ gives $U=e^{-2n^2}$ and $T\le e^{-2n^2}$.
+The real integral in \eqref{eq:contour-int}, divided by $Z_n(v)$, is
+therefore at least
+\[
+ e^{-\tau}\cos\tau\,S(1-T)-U
+ \ge e^{-1/2}\cos(1/4)(1-e^{-2})-e^{-2}
+ >\frac{61}{224}>\frac14.
+\]
+This proves the claim.
+\end{proof}
+
+If canonical analysis were to establish the hypotheses for all $x\ge x_0$
+with $\mu(x)/4\le v(x)\le\mu(x)$, then
+$k\ge\lceil\max\{k_0,4G(n)\}\rceil$, for an integer
+$k_0\ge\mu(x_0)$, would give an explicit sufficient domain.
+Its $n^8$ scale is the cost of this allowance, not an optimal law.
+The statement neither joins the complementary region nor constitutes
+an induction at fixed $k$. The source literature already reports
+stronger tail coverage; see the qualifications in the introduction.

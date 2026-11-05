@@ -1,0 +1,367 @@
+% Prepared for Edward Baker, 4 November 2026.
+% Consolidated with substantial LLM assistance: gpt-6-astra, effort ultra.
+% Manuscript fragment; requires amsmath, amssymb, amsthm and the proposition environment.
+% Local evidence paths are collected by the main manuscript in sec:provenance.
+\section{Green transfer, complete boundary terms, and finite comparisons}
+\label{sec:green-comparison}
+
+The following calculation retains the undifferentiated theta primitive and
+its inner boundary.  It produces a quantitative finite comparison, but
+positivity of the primitive alone does not sign the resulting determinants.
+The comparison and its limitations consolidate RGD Notes~01, 05 and~07;
+their exact paths and evidence relationships are recorded in
+Appendix~\ref{sec:provenance}.  Throughout this section the physical heat
+time is zero, and all negative coefficient or moment indices mean zero.
+
+\subsection{Normalization and the complete boundary expansion}
+Put
+\begin{align}
+ p_n(u)&=\exp(u-\pi n^2e^{4u}), & p(u)&=\sum_{n\ge1}p_n(u),\\
+ \Phi(u)&=\sum_{n\ge1}\bigl(2\pi^2n^4e^{9u}-3\pi n^2e^{5u}\bigr)
+                    e^{-\pi n^2e^{4u}}, &
+ m_j(u)&=\frac{u^{2j}}{(2j)!}\quad(j\ge0),\\
+ c_j&=\int_0^\infty\Phi(u)m_j(u)\,du, &
+ d_j&=\int_0^\infty p(u)m_j(u)\,du.
+\end{align}
+We use ordinary coefficients, so
+\begin{equation}
+ C(z)=\sum_{j\ge0}c_jz^j
+ =\int_0^\infty\Phi(u)\cosh(u\sqrt z)\,du
+ =\frac18\xi\!\left(\frac{1+\sqrt z}{2}\right),
+ \qquad C(1)=b:=\frac1{16}.
+ \label{eq:green-C}
+\end{equation}
+The even power series makes the square-root notation single-valued.
+Define
+\begin{equation}
+ D_{r,k}=\det[c_{k+j-i}]_{0\le i,j<r},\qquad
+ D_{0,k}=1,\qquad r\ge1,\ k\ge0.
+ \label{eq:green-D}
+\end{equation}
+
+For clarity, the radial origin of the transfer can be checked directly.
+With \(R=e^{2u}\) and
+\(A(R)=\sum_{n\ge1}e^{-\pi n^2R^2}\), one has
+\(p(u)=R^{1/2}A(R)\) and
+\begin{equation}
+ \Phi(u)=\frac12R^{5/2}\left(\partial_R^2+\frac2R\partial_R\right)A(R),
+ \qquad p''-p=8\Phi.
+\end{equation}
+Theta reflection gives
+\(1+2A(R)=R^{-1}[1+2A(1/R)]\).  Differentiating at \(R=1\)
+yields \(A'(1)=-A(1)/2-1/4\), hence \(p'(0)=-1/2\).
+The complete source tail makes every fixed polynomial derivative transfer
+below absolutely convergent and removes the outer boundary.
+
+\begin{proposition}[Green transfer with the inner boundary]
+For every polynomial \(f\),
+\begin{equation}
+ \int_0^\infty\Phi f
+ =b f(0)+\frac{p(0)}8f'(0)
+   +\frac18\int_0^\infty p(f''-f).
+ \label{eq:green-transfer}
+\end{equation}
+In particular,
+\begin{equation}
+ c_j=b\delta_{j0}+\frac18(d_{j-1}-d_j),\qquad
+ c_0=b-d_0/8.
+ \label{eq:green-coefficients}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Integrate \((p''-p)f/8\) twice by parts.  The inner contribution is
+\([-p'(0)f(0)+p(0)f'(0)]/8\).  Now use
+\(m_j''=m_{j-1}\), \(m_j'(0)=0\), and \(m_j(0)=\delta_{j0}\).
+\end{proof}
+The tangent inequality used below also gives
+\begin{equation}
+ 0<d_0\le\frac{e^{-\pi}}{(4\pi-1)(1-e^{-3\pi})}<\frac14,
+ \qquad \frac1{32}<c_0<b.
+\end{equation}
+Indeed \(n^2\ge1+3(n-1)\) controls the complete sum; the last coarse
+bound follows already from \(\pi>3\), \(e^3>8\) and \(e^9>2\).
+
+The determinant version includes every lower-dimensional boundary term.
+Let
+\begin{equation}
+ \mathcal T_{r,k}(\boldsymbol u)
+ =\frac1{r!}\sum_{\sigma\in S_r}
+   \det[m_{k+j-i}(u_{\sigma(i)})]_{0\le i,j<r},
+\end{equation}
+and, for \(0\le q\le r\), put
+\begin{equation}
+ W_{r,k}^{(q)}(u_0,\ldots,u_{q-1})
+ =\left[\left(\prod_{i=0}^{q-1}(\partial_{u_i}^2-1)\right)
+       \mathcal T_{r,k}(\boldsymbol u)\right]_{u_q=\cdots=u_{r-1}=0}.
+\end{equation}
+An empty integral denotes evaluation of its scalar integrand.
+\begin{proposition}[Complete Green determinant identity]
+For every \(r\ge1\) and \(k\ge0\),
+\begin{equation}
+ D_{r,k}=\sum_{q=0}^r\binom rq b^{r-q}8^{-q}
+ \int_{[0,\infty)^q}\prod_{i=0}^{q-1}p(u_i)\,
+                    W_{r,k}^{(q)}(\boldsymbol u)\,d\boldsymbol u.
+ \label{eq:green-boundary-determinant}
+\end{equation}
+Moreover, \(W_{r,k}^{(q)}\equiv0\) if \(q<\min(k,r)\).
+Thus only the full-volume term remains when \(k\ge r\), while
+\(D_{r,0}=c_0^r\).
+\end{proposition}
+\begin{proof}
+Expanding the row determinant and integrating against
+\(\prod_i\Phi(u_i)\) gives \(D_{r,k}\); symmetrizing does not change the
+integral.  Apply \eqref{eq:green-transfer} in each coordinate.
+Coordinatewise evenness removes every first-derivative trace, and symmetry
+makes the \(\binom rq\) terms with \(q\) volume coordinates equal.
+An endpoint row has entries \(\delta_{k+j-i,0}\).  At most
+\(\max(r-k,0)\) such rows can be nonzero, proving the asserted vanishing.
+The triangular coefficient matrix at \(k=0\) proves the final identity.
+\end{proof}
+There is no further factorial in \eqref{eq:green-boundary-determinant}:
+\(\mathcal T\) was defined by an average.  The probes and primitive
+moment differences can have either sign.  In particular, neither
+\(p>0\) nor the pure-volume representation is a positivity theorem.
+
+\subsection{Preserving the boundary before approximating the source}
+Let
+\begin{equation}
+ x_j=\frac18\int_0^\infty p_1m_j,\qquad
+ y_j=\frac18\int_0^\infty\sum_{n\ge2}p_nm_j,\qquad
+ \widehat c_j=b\delta_{j0}+x_{j-1}-x_j.
+\end{equation}
+Set \(a=16\pi-1\).  The tangent bound \(e^{4u}\ge1+4u\) and
+\(n^2\ge4+5(n-2)\) for \(n\ge2\) give
+\begin{equation}
+ 0<y_j\le E_j:=
+ \frac{e^{-4\pi}}{8(1-e^{-5\pi})a^{2j+1}}.
+ \label{eq:green-mode-tail}
+\end{equation}
+Indeed, the exponential tangent bounds the \(n\)-th summand by
+\(e^{-\pi n^2}e^{-(4\pi n^2-1)u}\), and the normalized moment
+integral equals \((4\pi n^2-1)^{-2j-1}\); summing its geometric
+majorant proves \eqref{eq:green-mode-tail}.
+
+This reference has a precise positive-measure description, but no
+all-order Toeplitz positivity is assumed for it.  Write
+\(\beta_n=(4\pi n^2-1)e^{-\pi n^2}/8\) and
+\(\tau=b-\beta_1=\sum_{n\ge2}\beta_n>0\).
+Individual-mode Green transfer shows that \((\widehat c_j)\) is the moment
+sequence of \(\Phi_1(u)\,du+\tau\delta_0\).  If
+\(c_0^{(1)}=\int\Phi_1\), then
+\begin{equation}
+ \widehat c_0-c_0=y_0,\qquad c_0-c_0^{(1)}=\tau-y_0>0,
+\end{equation}
+and consequently
+\begin{equation}
+ \frac{|c_0-c_0^{(1)}|}{|c_0-\widehat c_0|}
+ \ge a^2(1-e^{-5\pi})-1>2200.
+ \label{eq:green-boundary-gain}
+\end{equation}
+Here \(\tau\ge\beta_2=ae^{-4\pi}/8\) and
+\eqref{eq:green-mode-tail} suffice; \(\pi>3\) and \(e^{15}>1000\)
+give the final strict inequality.  This is a gain for the stated
+\(c_0\) approximation only, not a determinant-error or runtime gain.
+
+For a finite acquisition cutoff \(U\ge0\), put
+\begin{equation}
+ a_j^{[U]}=\frac1{8(2j)!}\int_0^Uu^{2j}p_1(u)\,du,
+ \qquad a_U=4\pi e^{4U}-1.
+\end{equation}
+The complete omitted first-mode exterior obeys
+\begin{equation}
+ 0\le x_j-a_j^{[U]}\le B_j(U):=
+ \frac{e^{U-\pi e^{4U}}}{8(2j)!}
+ \sum_{h=0}^{2j}\binom{2j}{h}
+                \frac{U^{2j-h}h!}{a_U^{h+1}}.
+ \label{eq:green-spatial-tail}
+\end{equation}
+To see this, write \(u=U+v\), bound
+\(p_1(U+v)\le e^{U-\pi e^{4U}}e^{-a_Uv}\), expand
+\((U+v)^{2j}\), and integrate.  This does not pay quadrature uncertainty
+on \([0,U]\), which must be enclosed separately.  Nor is a Green
+identity applied on the truncated interval.
+
+\subsection{The combined determinant payment}
+Fix \(U=2\), write \(a_j=a_j^{[2]}\), and set
+\begin{equation}
+ T_j=E_j+B_j(2),\qquad
+ \mathcal C_j(z)=b\delta_{j0}+a_{j-1}-a_j+z_{j-1}-z_j
+ \quad(j\ge0).
+\end{equation}
+There is an actual vector \(z\) with \(0\le z_j\le T_j\) such that
+\(c_j=\mathcal C_j(z)\).  Put \(c_j^*=\mathcal C_j(0)\), and define
+\begin{align}
+ Q_{r,k}&=D_{r,k}^2-D_{r,k-1}D_{r,k+1}
+          =D_{r+1,k}D_{r-1,k},\\
+ P_{r,k}(z)&=D_{r,k}(\mathcal C(z))^2
+       -D_{r,k-1}(\mathcal C(z))D_{r,k+1}(\mathcal C(z)).
+ \label{eq:green-joint-Q}
+\end{align}
+The product identity is Desnanot--Jacobi, with all boundary zeros retained.
+After collecting the joint polynomial, write
+\begin{equation}
+ P_{r,k}(z)=q^*_{r,k}+\sum_{\alpha\ne0}p_\alpha z^\alpha,
+ \qquad \mathcal R_{r,k}=\sum_{\alpha\ne0}|p_\alpha|T^\alpha,
+ \qquad L_{r,k}=q^*_{r,k}-\mathcal R_{r,k}.
+ \label{eq:green-Taylor-payment}
+\end{equation}
+Only moments through \(k+r\) and degrees through \(2r\) can occur.
+The exact finite expansion immediately proves
+\begin{equation}
+ |Q_{r,k}-q^*_{r,k}|\le\mathcal R_{r,k},\qquad Q_{r,k}\ge L_{r,k}.
+ \label{eq:green-absolute-payment}
+\end{equation}
+The neighboring products must be subtracted and collected before absolute
+values are taken.  The remaining payment still discards correlations
+between the actual residual moments; it is sufficient, not necessary.
+
+A useful bound on this same payment avoids listing every translated term.
+Let \(H_{n,k}(c^*)\) be the collected determinant polynomial with its
+coefficients replaced by their absolute values, evaluated at positive
+reference coefficients.  If each nonzero used coefficient satisfies
+\(\|\mathcal C_j-c_j^*\|_T\le\epsilon c_j^*\), where
+\(\|\sum h_\alpha z^\alpha\|_T=\sum|h_\alpha|T^\alpha\), then
+\begin{equation}
+ B_{n,k}:=\|D_{n,k}(\mathcal C)-D_{n,k}(c^*)\|_T
+ \le[(1+\epsilon)^n-1]H_{n,k}(c^*).
+ \label{eq:green-det-norm}
+\end{equation}
+This follows by expanding each homogeneous degree-\(n\) monomial and
+retaining every nonconstant binomial term.  Negative-index entries vanish
+identically.  Coefficient convolution proves submultiplicativity of
+\(\|\cdot\|_T\).  Thus, with \(d_\pm=D_{r\pm1,k}(c^*)\),
+\begin{equation}
+ \mathcal R_{r,k}\le
+ |d_+|B_{r-1,k}+|d_-|B_{r+1,k}+B_{r+1,k}B_{r-1,k}.
+ \label{eq:green-product-payment}
+\end{equation}
+The last term is the full product remainder.  If \(d_\pm>0\), dividing
+by \(q^*_{r,k}=d_+d_-\) gives the relative allowance
+\(e_++e_-+e_+e_-\), where \(e_\pm=B_{r\pm1,k}/d_\pm\).
+Reference margins and conditioning therefore remain separate inputs.
+
+\subsection{Recorded finite certificates}
+\begin{proposition}[Finite quantitative comparison]
+For the complete canonical source with the conventions above, the
+recorded enclosures and exact arithmetic verification establish
+\begin{equation}
+ Q_{3,1}>7\cdot10^{-23},\qquad
+ Q_{3,4}>10^{-74},\qquad
+ Q_{4,1}>3\cdot10^{-31}.
+ \label{eq:green-certified-Q}
+\end{equation}
+For the last case the unchanged compact-reference payment moreover obeys
+\begin{equation}
+ \frac{\mathcal R_{4,1}}{q^*_{4,1}}<\frac1{15},\qquad
+ L_{4,1}>\frac7{3000}(c_1^*)^8
+          >\frac7{3000^9}>3\cdot10^{-31}.
+ \label{eq:green-next-order-margin}
+\end{equation}
+\end{proposition}
+\begin{proof}[Analytical closure and certificate inputs]
+For \((r,k)=(3,1),(3,4)\), the accepted record encloses the eight
+compact moments \(a_0,\ldots,a_7\), all mode tails and all spatial tails,
+then evaluates \eqref{eq:green-Taylor-payment} outward through degree six.
+The serialized dyadic lower allowances exceed the first two rational
+floors in \eqref{eq:green-certified-Q}; the saved-data verifier also
+recomputes their rational propagation.  These are the finite numerical
+inputs, rather than an assumption on the desired determinant sign
+(RGD Note~03, the saved E02~r1 record and Review~03;
+Appendix~\ref{sec:provenance}).
+
+For the last inequality, exact verification from the same acquisition
+supplies \(c_0^*,\ldots,c_5^*>0\), \(c_1^*>1/3000\), the entry-relative
+budget \(\epsilon=1/40000\), and the rational boxes
+\begin{equation}
+ t_2\in[.465,.466],\quad t_3\in[.135,.137],\quad
+ t_4\in[.028,.029],\quad t_5\in[.004,.005],\qquad
+ t_j=\frac{(c_0^*)^{j-1}c_j^*}{(c_1^*)^j}.
+ \label{eq:green-rational-box}
+\end{equation}
+All terminating decimals here denote exact rationals.  First-row
+expansion at \(k=1\) gives
+\begin{equation}
+ D_{n,1}=\sum_{j=1}^n(-1)^{j-1}c_0^{j-1}c_jD_{n-j,1}.
+\end{equation}
+Writing \(D_{n,1}(c^*)=(c_1^*)^nf_n\), it follows that
+\begin{align}
+ f_3&=1-2t_2+t_3,\\
+ f_5&=1-4t_2+3t_2^2+(3-2t_2)t_3-2t_4+t_5.
+\end{align}
+Endpoint monotonicity on \eqref{eq:green-rational-box} gives
+\(1/5<f_3<1/4\), \(1/80<f_5<1/40\).  The corresponding collected
+absolute polynomials satisfy \(S_3<21/10\), \(S_5<21/5\).
+Equation \eqref{eq:green-det-norm}, including all higher binomial terms,
+therefore gives
+\(B_{3,1}/(c_1^*)^3<21/100000\) and
+\(B_{5,1}/(c_1^*)^5<63/100000\).  Substitution in
+\eqref{eq:green-product-payment} yields
+\begin{equation}
+ \frac{\mathcal R_{4,1}}{(c_1^*)^8}
+ <\frac1{40}\frac{21}{100000}
+  +\frac14\frac{63}{100000}
+  +\frac{21\cdot63}{10^{10}}
+ =\frac{1628823}{10^{10}}<\frac1{6000},
+\end{equation}
+whereas \(q^*_{4,1}>(c_1^*)^8/400\).  Subtraction proves
+\eqref{eq:green-next-order-margin}.  The second exact record verifies
+these input-box memberships, the polynomial identities and every rational
+inequality; it acquires no additional integral
+(RGD Notes~05--06, the saved E02~r2 record and Review~04;
+Appendix~\ref{sec:provenance}).
+\end{proof}
+
+The first acquisition used python-flint~0.9.0 and FLINT~3.6.0 at
+384-bit precision, retaining forty segment enclosures for eight moments.
+The exact saved-data verifiers trust those identified integral and
+constant enclosures; they do not independently reproduce the integration
+or formally verify FLINT.  The analytical comparison received
+cross-model internal LLM assessment.  Assessment of the first acquisition
+was by its originating assistant/model with fresh same-model contributions;
+the next-order argument received cross-model checking, while its new
+implementation retained author checks.  None is independent specialist
+review (RGD Reviews~01, 03 and~04; Appendix~\ref{sec:provenance}).
+
+The certified quantities are the products \(Q_{r,k}\) defined in
+\eqref{eq:green-joint-Q}.  No numerical normalization by a lower-order
+determinant or relative induction parameter was acquired.  We assert no
+new positivity range, and these finite bounds do not supply an all-order
+or all-index conclusion.
+
+\subsection{Why the successful finite payment cannot be iterated unchanged}
+For the specified compact reference and independent moment bounds,
+there is an exact obstruction stronger than poor conditioning of an
+auxiliary estimate.  Let
+\(K_0=e^{-4\pi}/[8(1-e^{-5\pi})]\), so \(E_j=K_0/a^{2j+1}\).
+In the already collected joint polynomial,
+\begin{equation}
+ [z_{k-1}^{2r}]P_{r,k}=1,\qquad
+ \mathcal R_{r,k}\ge E_{k-1}^{2r}.
+\end{equation}
+Indeed, its homogeneous dependence on \(z_{k-1}=v\) gives coefficient
+changes \(\mathcal C_{k-1}=-v\), \(\mathcal C_k=v\); each relevant
+index-\(k\) matrix is lower bidiagonal, with determinant \(v^n\).
+For \(j\ge2\), the compact support gives
+\(0<c_j^*\le a_0 2^{2j-2}/(2j-2)!\).  If \(k\ge r+2\),
+log-convexity of the factorial along each permutation consequently gives
+\begin{equation}
+ |q^*_{r,k}|\le(r+1)!(r-1)!
+       \left(\frac{a_0 2^{2k-2}}{(2k-2)!}\right)^{2r}.
+\end{equation}
+The ratio of \(E_{k-1}\) to the parenthesized quantity is
+\begin{equation}
+ A_k=\frac{K_0}{aa_0}\frac{(2k-2)!}{(2a)^{2k-2}},\qquad
+ \frac{A_{k+1}}{A_k}=\frac{(2k)(2k-1)}{(2a)^2}\longrightarrow\infty.
+\end{equation}
+Thus, for every fixed \(r\ge2\),
+\begin{equation}
+ L_{r,k}<0\qquad\text{for all sufficiently large }k.
+ \label{eq:green-exact-payment-stop}
+\end{equation}
+This excludes this exact compact-reference Taylor payment, not the actual
+canonical determinant or a correlated source residual.  In particular,
+removing the spatial cutoff changes the error problem: Note~07 proves
+\(0<(c_j-c_j^{[1]})/c_j^{[1]}\le128e^{-j/(16\log j)}\) for
+\(j\ge e^{16}\).  Its reference signs and conditioning still require
+separate control (RGD Note~07; Appendix~\ref{sec:provenance}).  The finite certificates above
+therefore furnish no all-index induction contract.

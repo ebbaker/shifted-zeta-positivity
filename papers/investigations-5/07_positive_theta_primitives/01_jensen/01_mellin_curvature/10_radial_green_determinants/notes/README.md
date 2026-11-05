@@ -36,9 +36,67 @@ Current planning/navigation revision: **gpt-6-astra / max**, chat0002.
   No new integration or all-order conclusion. Its earlier E04 r3 default
   is superseded by the induction-focused plan r2; the return is unchanged.
 
+4 November 2026 E04 r4 navigation update: prepared for Edward Baker
+with substantial LLM assistance, actual **gpt-6.1-sol / ultra**, chat0005.
+
+- [Note07 — B03 r2 exact-payment obstruction and true tail](07_RGD_B03_R2_EXACT_PAYMENT_OBSTRUCTION_AND_TRUE_TAIL_20261104.md):
+  scoped fixed-reference obstructions, explicit positive-order coefficient
+  tail and conditional propagation diagnostic; accepted in E04 r4.
+- [Note08 — B02 r1 complete-source contour margin](08_RGD_B02_R1_COMPLETE_SOURCE_CONTOUR_MARGIN_20261104.md):
+  accepted conditional Gaussian/exterior theorem; canonical scalar inputs
+  and the complementary region remain unproved.
+- [Note09 — E04 r4 proof-domain and constant checks](09_RGD_E04_R4_PROOF_DOMAIN_AND_CONSTANT_CHECKS_20261104.md):
+  derivations supporting [Review06](../reviews/06_RGD_E04_R4_COMPLETE_SOURCE_ASSESSMENT_20261104.md),
+  including the propagation-domain and formal-majorant qualifications.
+
+4 November 2026 B02 r2 addition, prepared for Edward Baker with substantial
+LLM assistance; actual **gpt-6-astra / ultra**, chat0004.
+
+- [Note10 — reciprocal-pole induction and scoped stop](10_RGD_B02_R2_RECIPROCAL_POLE_INDUCTION_AND_SCOPED_STOP_20261104.md):
+  exact duality, initialized fixed-k order invariant, exact fixed-N reference
+  vanishing and growing-k failure of the selected payment. Direct prior
+  mechanism attributed; original author/same-model checks now followed by
+  E04 r5 acceptance within scope in Review08.
+
+4 November 2026 E04 r5 update, prepared for Edward Baker with substantial
+LLM assistance; actual **gpt-6.1-sol / ultra**, chat0006.
+
+- [Note11 — E04 r5 reciprocal proof and scope checks](11_RGD_E04_R5_RECIPROCAL_PROOF_AND_SCOPE_CHECKS_20261104.md):
+  supporting duality/norm derivations, every canonical constant, boundary
+  recurrence, conditioning stop and normalized control. [Review08](../reviews/08_RGD_E04_R5_RECIPROCAL_COMPARISON_ASSESSMENT_20261104.md)
+  accepts all twelve obligations without correction; no numerical work.
+
+4 November 2026 B02 r3 addition, prepared for Edward Baker with substantial
+LLM assistance; actual **gpt-6-astra / ultra**, chat0007.
+
+- [Note12 — Gaussian reference and growth-scale stop](12_RGD_B02_R3_GAUSSIAN_REFERENCE_GROWTH_STOP_20261104.md):
+  positive explicit reference margin in every dimension; exact complete
+  residual cannot retain uniform relative slack on 1<=r<=M k. The one
+  quadratic correction fails universal reference positivity. Scoped
+  analytical return, original author/same-model checks now followed by
+  E04 r6 acceptance within scope in Review10; no new theta range.
+
+4 November 2026 E04 r6 update, prepared for Edward Baker with substantial
+LLM assistance; actual **gpt-6.1-sol / ultra**, continuing chat0006.
+
+- [Note13 — E04 r6 Gaussian proof and scope checks](13_RGD_E04_R6_GAUSSIAN_PROOF_AND_SCOPE_CHECKS_20261104.md):
+  normalization, exact margin, uniform ratio/norm stop, necessary adaptive
+  scale, quadratic edge witnesses and positive control.
+  [Review10](../reviews/10_RGD_E04_R6_GAUSSIAN_REFERENCE_ASSESSMENT_20261104.md)
+  accepts all ten obligations without correction; no numerical work.
+
+4 November 2026 B02 r4 addition, prepared for Edward Baker with substantial
+LLM assistance; actual **gpt-6-astra / ultra**, continuing chat0007.
+
+- [Note14 — endpoint pair reference and diagonal control](14_RGD_B02_R4_ENDPOINT_PAIR_REFERENCE_AND_DIAGONAL_CONTROL_20261104.md):
+  bounded growth quotient, all-size positive reference margin, complete
+  scalar payment and classical bounded-order Schur margin; explicit
+  negative diagonal algebraic controls with O(q^-2) scalar error. No new
+  canonical range, positive-source counterexample or numerical work.
+
 The [sole progress register](../research-progress/01_RADIAL_GREEN_DETERMINANTS_RESEARCH_PROGRESS_20261104.md)
-owns readiness. [Packet10 and model-change guidance](../research-progress/handoffs/10_RGD_B03_R2_INDUCTION_INDEX_ERROR_AND_MODEL_CONTINUATION_20261104.md)
-make **[B] RGD-B03 r2 — Astra** the next task: investigate the induction
-mechanism and error control with increasing index. Packet09's finite
-assessment remains optional and nonblocking. No new numerical test or
-uniform order/index claim is issued by the planning revision.
+owns status. [Handoff21](../research-progress/handoffs/21_RGD_B02_R4_RETURN_AND_MODEL_CONTINUATION_20261104.md) routes
+**[E] RGD-E04 r7 — Sol**, ready/unexecuted. E04 r3 is optional; E02 r3
+inactive. No B02 r5 or numerical campaign is activated.
+
+First manuscript milestone: [E01 r3 synthesis](RGD_E01_R3_MANUSCRIPT_SYNTHESIS_20261104.md), actual **gpt-6-astra / ultra**, 4 November 2026. Results, limits and accepted r7 integration; no new numerical evidence. [Canonical manuscript](../manuscript/README.md).

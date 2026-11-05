@@ -7,6 +7,37 @@ LLM assistance: **gpt-6-astra (Codex)**, reasoning effort **ultra**.
 
 ## Summary
 
+- **Energy-filtered theta overlap comparison (5/07, 4 November 2026).**
+  [MC11 Note03](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/11_energy_filtered_theta_overlaps/notes/03_MC11_E03_R1_FIRST_EXCITED_ACQUISITION_AND_RETURN_20261104.md)
+  gives validated first-excited moments and exact common-path bounds:
+  every excited level raises the unnormalized three-orbital overlap,
+  the fractional increase is about \(1.340206\times10^{-5}\), and
+  \(n=2\) supplies more than 99.99997573% of the gain; the full higher
+  group is paid. [E04 Review02](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/11_energy_filtered_theta_overlaps/reviews/02_MC11_E04_R1_THREE_ORBITAL_RETURN_ASSESSMENT_20261104.md)
+  records “accepted within the frozen source, path, domain and unnormalized
+  observable”. **Validated acquisition and exact-rational comparison, accepted within
+  scope by same-assistant/same-model internal assessment**, shared
+  Arb/source premises, no specialist independence. No growing-order,
+  neighboring-shift or new positivity-range conclusion. Prepared for
+  Edward Baker with substantial LLM assistance, **gpt-6.1-sol / ultra**.
+
+
+- **Radial Green comparison manuscript (5/07, 4 November 2026).**
+  The [first consolidated draft](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/10_radial_green_determinants/manuscript/radial_green_determinants.tex)
+  joins exact boundary-preserving identities, three certified finite
+  Q-product floors, reciprocal/Gaussian scoped stops, a growth-matched pair
+  reference and q-dependent algebraic controls with negative diagonal minors
+  despite an O(q^-2) complete scalar defect. The [synthesis](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/10_radial_green_determinants/notes/RGD_E01_R3_MANUSCRIPT_SYNTHESIS_20261104.md)
+  states: “This draft records a comparison-methods milestone; it does not add a
+  canonical positivity range.” Pair/control results are **proved in-note,
+  accepted within scope by E04 r7**; [Review12](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/10_radial_green_determinants/reviews/12_RGD_E04_R7_PAIR_REFERENCE_ASSESSMENT_20261104.md)
+  is different-model internal LLM assessment with shared premises, not
+  specialist review. Controls lack an asserted positive smooth source/primitive
+  or theta arithmetic; sharper dimension-dependent estimates remain open.
+  The contour theorem remains conditional. Prepared for Edward Baker with
+  substantial LLM assistance, consolidation **gpt-6-astra / ultra**.
+
+
 - **Vafa–Witten boundary Ward check (5/07, 2 November 2026).**
   [MC07-B03 Return03](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/07_donaldson_witten_theory/notes/03_BOUNDARY_WARD_FEASIBILITY_RETURN_20261102.md)
   records a **scoped stop without a new bound**: “MC07-B03 completes with a

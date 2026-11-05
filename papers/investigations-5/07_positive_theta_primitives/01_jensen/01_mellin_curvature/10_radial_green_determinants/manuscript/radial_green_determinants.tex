@@ -1,0 +1,209 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,microtype}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\N}{\mathbb N}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\e}{\mathrm e}
+\newcommand{\sinc}{\operatorname{sinc}}
+\newcommand{\diag}{\operatorname{diag}}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Rea}{Re}
+\allowdisplaybreaks[2]
+\setlength{\emergencystretch}{2em}
+\title{Boundary-preserving comparisons for theta Toeplitz determinants\\
+\large Finite certificates, positive references, and growing-dimension limitations}
+\author{Edward Baker\thanks{Working draft prepared for Edward Baker with substantial assistance from OpenAI language models. The consolidation was prepared with gpt-6-astra, recorded reasoning effort ultra; contributing analytical and certificate work used the models and efforts recorded in the supporting notes. The mathematical claims remain subject to author verification and specialist review.}}
+\date{4 November 2026\quad---\quad First consolidated working draft}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study comparison methods for consecutive Toeplitz determinants of the
+even Taylor coefficients of the Riemann xi-function. A radial Green identity
+retains the normalized endpoint term while replacing the differentiated
+theta source by its positive primitive. This gives a joint determinant
+residual and three finite, certified lower allowances. We then compare
+three reference constructions. Reciprocal finite-pole references give
+positive fixed-index margins but have an exact determinant-vanishing obstruction for a fixed pole count.
+An endpoint-matched Gaussian has positive minors in every dimension, yet
+its determinant scale is asymptotically incompatible with the theta
+coefficients, excluding uniform relative slack in a proportional regime.
+Replacing each nonreal conjugate pair in the complete canonical product
+by an endpoint-matched positive pair removes that growth mismatch and
+gives an explicit bounded-order sector margin. However, a family of
+algebraic products has the same endpoints and leading radial zero count,
+a uniform weighted coefficient defect of order $q^{-2}$, and a negative
+$(q,q)$ determinant. These results identify what the specified comparisons
+can and cannot transfer. They establish neither a new canonical positivity
+range nor the all-order positivity required by the Riemann hypothesis.
+\end{abstract}
+
+\noindent\textbf{Draft status.}
+This is a consolidation of existing research, not a new numerical campaign.
+The finite comparison, reciprocal comparison and Gaussian obstruction have
+the internal assessment statuses recorded in Appendix~\ref{sec:provenance}.
+The endpoint-pair construction and diagonal control in
+Section~\ref{sec:pair-comparison} were also accepted in the completed
+E04 r7 assessment: all twelve obligations passed within scope, without
+mathematical correction.
+No part has independent specialist human review. No priority claim is made
+for the classical determinant, residue or sector mechanisms.
+
+\clearpage
+\tableofcontents
+\clearpage
+
+\section{Introduction}
+Let
+\begin{equation}\label{eq:intro-C}
+ C(z)=\int_0^\infty\Phi(u)\cosh(u\sqrt z)\dd u
+     =\frac18\xi\!\left(\frac{1+\sqrt z}{2}\right)
+     =\sum_{j\ge0}c_jz^j,
+ \qquad
+ D_{r,k}=\det[c_{k+j-i}]_{0\le i,j<r},
+\end{equation}
+where $c_j=0$ for $j<0$, $D_{0,k}=1$, and
+$\xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$.
+The apparent square root is harmless by $\xi(s)=\xi(1-s)$.
+The source and its positive primitive are
+\begin{align}
+ \Phi(u)&=\sum_{n\ge1}
+ (2\pi^2n^4e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2e^{4u}},\\
+ p(u)&=e^u\sum_{n\ge1}e^{-\pi n^2e^{4u}},\qquad u\ge0.
+\end{align}
+Every summand of $\Phi$ is positive on this half-line. We use
+$b=C(1)=1/16$, $c_0=C(0)$, and $E=C/c_0$ throughout.
+The total-positivity formulation of the xi zero problem is classical;
+Katkova~\cite{Katkova0505174v1} discusses both that formulation and
+fixed-order eventual positivity. Restating an all-order sign condition
+does not supply a sign estimate.
+
+The question here is narrower: which explicit positive references retain
+enough information to pay a complete determinant residual? Endpoints,
+source truncations, matrix dimension and coefficient index matter
+simultaneously. We retain them in each statement rather than infer a
+global induction from finite successful comparisons.
+
+\subsection{What the paper establishes}
+The Green representation produces an exact boundary contribution and a
+comparison in the undifferentiated primitive. The useful finite output is
+a lower bound for a complete condensation product, not merely closeness
+of isolated moments. The saved certificates give
+\[
+ Q_{3,1}>7\cdot10^{-23},\qquad
+ Q_{3,4}>10^{-74},\qquad
+ Q_{4,1}>3\cdot10^{-31},\qquad
+ Q_{r,k}=D_{r+1,k}D_{r-1,k}.
+\]
+They demonstrate a reproducible error payment at those cases. They do
+not enlarge the known positivity domain.
+
+The structural results explain why that finite success does not yet
+extend to growing order. Fixed compact Taylor payments and fixed finite
+pole references meet exact obstructions. A Gaussian reference avoids
+finite rank, but its explicit factorial margin is too large compared
+with the complete theta determinant: the normalized target tends to zero.
+Finally, a complete pair reference matches both endpoints and growth up
+to a bounded factor. Its scalar coefficient residual can nevertheless be
+arbitrarily small while a growing diagonal determinant is negative in an
+explicit algebraic control family. The last statement concerns that
+larger class, not the theta source.
+
+\subsection{Relation to existing results and evidence}
+Elementary/complete Schur duality, Toeplitz minors and their partition
+conventions are standard~\cite{GarciaGarciaTierz2020Accepted}.
+The bounded-order angular argument is a form of Schoenberg sector
+positivity, as stated in Katkova and in Khare's author
+notes~\cite{Schoenberg1955Descartes,Katkova0505174v1,KhareMath341Retrieved20261104}.
+We give its specific pair multiplier and margin rather than claim a new
+positivity principle. A reported fixed-shift xi result also uses the
+reciprocal-pole mechanism~\cite{KenanFifteenShifts2026}; its supporting
+notebooks have not been audited here. Published finite-zero information
+is an imported input, not a certificate rerun by this work
+\cite{PlattTrudgian200409765v1}.
+
+The conditional contour estimate in Appendix~\ref{sec:contour} is retained
+to delimit a possible large-index region. Its scalar hypotheses have
+not been acquired for the canonical source in this investigation. The
+literature catalog already reports a stronger cubic wedge
+\cite{Michalowski260716795v1}; that report is not imported as a checked
+certificate. Consequently the conservative eighth-power allowance is
+not presented as improved coverage or as the preferred next task.
+
+\input{sections/01_green}
+\input{sections/02_references}
+\input{sections/03_pairs}
+
+\section{What remains unresolved}\label{sec:outlook}
+The results support a comparison-methods paper, with a useful distinction
+between an exact representation, a paid finite margin, and an estimate
+that remains effective in growing dimension. They do not yet support an
+all-order theta positivity theorem. The finite cases are already in known
+positive territory; the conditional contour route leaves its scalar
+constants and complementary region open; the fixed-index residue route
+does not close the growing-index problem.
+
+The pair construction supplies a particularly precise remaining question.
+A determinant-sensitive estimate must use more than endpoints, leading
+growth, positive coefficients and the scalar residual allowance retained
+by the diagonal controls. Possibilities not excluded here include a
+stronger dimension-dependent rate with explicit constants, signed
+compensation between Schur branches, or a quantitative consequence of
+the complete theta arithmetic source. No such estimate is supplied or
+activated by this draft. Requiring every pair contribution to be
+nonnegative at every degree would assume the zero reality one is trying
+to prove.
+
+The control distinctions are substantive. The positive cosh example
+passes all rectangular signs while exhibiting the Gaussian scale
+mismatch. A Gaussian-mixture example can retain an arbitrarily long finite
+real-simple prefix of its base cosh function while adding nonreal zeros;
+it is not asserted to match an actual theta zero prefix. The diagonal controls
+retain the listed algebraic data but are not proved to have a nonnegative
+smooth cosh-transform source, a positive Green primitive, or the canonical
+theta square expansion. Other repository collision controls fail different
+exact-source premises. A positive-time collision is not a counterexample
+to every time-zero inequality. None of these examples proves a negative
+canonical theta determinant.
+
+The separate assessment of the pair construction is complete. Before
+further mechanism design, this consolidated manuscript should be checked
+as a whole. A later mathematical continuation should state which
+information absent from the controls it will use and the quantitative
+margin that information is expected to pay. Enlarging finite tables
+without such a question would not close the gap identified here.
+
+\appendix
+\input{sections/04_contour}
+\input{sections/05_provenance}
+
+\clearpage
+\section*{Acknowledgments}
+This manuscript was drafted for Edward Baker with substantial LLM
+assistance in derivation, checking, exposition and document preparation.
+The consolidation used gpt-6-astra at recorded effort ultra. Prior notes
+and assessments identify their actual configurations, including
+gpt-6.1-sol. Multiple model passes share source material and assumptions;
+they do not constitute independent specialist verification. This is a working
+manuscript for author review.
+
+\bibliographystyle{plain}
+\begingroup
+\small
+\bibliography{references}
+\endgroup
+\end{document}

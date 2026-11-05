@@ -217,3 +217,16 @@ same-model/source-sharing checks do not supply specialist independence.
 **2 November 2026 — MC08 manuscript preserves the scope distinction.** For Edward Baker with substantial LLM assistance, **gpt-6-astra / xhigh**. The [continuation manuscript](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/08_open_quantum_dynamics/manuscript/main.tex), Sections 7–11, states: “The stop concerns one every-intermediate-interval fixed-cone mechanism, not the whole subinvestigation.” It separately retains the positive realization, pending E04 check, endpoint/intermediate distinction, and the unsigned thermal-state versus signed-observable distinction. [Production self-check05](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/08_open_quantum_dynamics/reviews/05_MC08_CONTINUATION_MANUSCRIPT_SELF_CHECK_20261102.md) is editorial checking, not new acceptance of the obstruction.
 
 **3 November 2026 — MC08 startup exclusion depends on the clock and record.** For Edward Baker with substantial LLM assistance, **gpt-6.1-sol / ultra**. [E06 Derivation05](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/08_open_quantum_dynamics/brainstorm/notes/05_MC08_E06_QUADRATIC_CLOCK_DERIVATIONS_20261103.md) states: “Merely imposing f'(0)=0 is insufficient”. The old bounded-H product-vacuum contradiction applies when f'(0)>0; the specified quadratic clock instead admits a regular finite joint model. Later vacuum resets still mismatch the old linear intermediate loss. [Assessment01](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/08_open_quantum_dynamics/brainstorm/reviews/01_MC08_E06_QUADRATIC_CLOCK_ASSESSMENT_20261103.md) retains these scopes, the shrinking finite gap and the distinction between physical even channels and odd extensions. Do not infer general reservoir impossibility, continuous-record equality or an infinite generator from an endpoint completion.
+
+
+**Keep the diagonal control's algebraic class, 4 November 2026.**
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra / ultra**.
+The [RGD manuscript synthesis](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/10_radial_green_determinants/notes/RGD_E01_R3_MANUSCRIPT_SYNTHESIS_20261104.md) states:
+“A negative diagonal minor in the algebraic control family is not a
+negative theta determinant.” The O(q^-2) scalar-defect construction varies
+with q and has no asserted positive smooth source/primitive or canonical
+arithmetic. It stops transfer from its retained scalar data, not sharper
+dimension-dependent or source-sensitive estimates. [E04 r7](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/10_radial_green_determinants/reviews/12_RGD_E04_R7_PAIR_REFERENCE_ASSESSMENT_20261104.md)
+accepts that scope under internal different-model review. The manuscript
+also states fixed-pole determinant vanishing, not a rank bound across
+artificially zero negative indices; [integration check](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/10_radial_green_determinants/reviews/RGD_E01_R3_MANUSCRIPT_INTEGRATION_CHECK_20261104.md).
