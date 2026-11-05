@@ -1,0 +1,1247 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,tabularx,array,longtable}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\hypersetup{pdftitle={Angular Dirac Models and Energy-Filtered Theta Overlaps},
+ pdfauthor={Drafted for Edward Baker}}
+\setlength{\emergencystretch}{2em}
+\setlength{\parskip}{3pt}
+\setlist{itemsep=3pt,topsep=5pt}
+\setcounter{tocdepth}{1}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Dom}{Dom}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\cof}{cof}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\E}{\mathbb E}
+\newcommand{\dd}{\,d}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\evid}[1]{\textsf{[#1]}}
+\newcommand{\hc}{\mathcal H_C}
+\newcommand{\hs}{\mathfrak h}
+\newcommand{\dc}{\mathcal D_C}
+\newcommand{\Acal}{\mathcal A}
+\newcommand{\Rcal}{\mathcal R}
+\newcommand{\Bcal}{\mathcal B}
+\title{Angular Dirac Models and\\Energy-Filtered Theta Overlaps\\[5pt]
+\large Green Response, Source Pairings, and Limits of Signed Transfer}
+\author{Drafted for Edward Baker}
+\date{5 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We consolidate the analytical findings of the energy-filtered theta
+overlap investigation. On a complete product cylinder with sphere radius
+one half, the radial diagonal of a squared Dirac Green kernel supplies
+the inverse angular multiplicity required to recover the complete
+integer-square theta trace. The construction retains all radial
+momenta and all angular modes. For a bounded nonnegative scalar radial
+potential, we prove explicit channel response bounds and strict
+rigidity of exact source recovery at a fixed probe. For the free model,
+complete spectral majorants justify every finite source derivative and
+moment, establish Hilbert-space membership, and give exterior-product
+pairings with the exact filtered endpoint corrections. We then analyze
+two possible routes from scalar source control to signed determinant
+control. The excited-to-retained moment ratio is strictly decreasing;
+an inherited validated anchor gives a uniform bound at every positive
+moment index. Nevertheless, corner-cofactor domination still lacks a
+quantitative signed margin, and a fixed uniform relative-error allowance
+eventually cannot certify growing-order determinant positivity. The
+sharper nonuniform payment remains unresolved. These are representation,
+response, and comparison results; they provide no new all-order
+determinant sign theorem or Mellin-curvature comparison.
+\end{abstract}
+
+\noindent\textbf{Status.} Working analytical draft based on the current
+angular/radial overview and its completed returns through 5 November
+2026. The free operator identities have an internal LLM assessment.
+The potential and source proofs have proof-author and same-model checks;
+the signed-transfer analysis has proof-author checks only.
+Their separate AR-E04 assessment is pending. This consolidation does not
+upgrade those statuses. Source identifiers are resolved in
+Appendix~\ref{sec:provenance}; no independent specialist review is claimed.
+
+\clearpage
+\tableofcontents
+\bigskip
+
+\section{The source and the question inherited from Mellin curvature}
+\label{sec:setup}
+
+The parent manuscript, \emph{Signed Mellin Curvature and Theta Coefficient
+Positivity} \evid{MC}, supplies the mathematical background: the canonical
+theta source, its coefficient determinants, their signed-average
+representation, and the quantitative curvature comparison sought for
+raising determinant order. The present manuscript develops one
+subinvestigation of that program. Its central question is whether
+angular Dirac modes and a radial Green response explain the source
+normalization and furnish a useful signed estimate.
+
+There are three distinct conclusions to seek. An identity for every
+angular mode establishes spectral completeness. A specified Hilbert
+space, self-adjoint domain and observation establish a consistent
+operator model. A determinant estimate requires, in addition, a signed
+margin with explicit order and shift dependence. The first two do not
+imply the third.
+
+\subsection{Normalization and indices}
+
+Fix
+\begin{equation}
+ \alpha_1(s)=1,\qquad \alpha_n(s)=s\ (n\ge2),\qquad
+ Q_s(t)=\sum_{n\ge1}\alpha_n(s)e^{-tn^2},\quad 0\le s\le1,\ t>0.
+ \label{eq:filter}
+\end{equation}
+The source coordinate is \(u\ge0\). Put
+\begin{equation}
+ x=\pi e^{4u},\qquad
+ p_s(u)=e^uQ_s(x),\qquad
+ \Phi_s(u)=\tfrac18(\partial_u^2-1)p_s(u).
+ \label{eq:source-map}
+\end{equation}
+For \(E\ge\pi\), write
+\begin{equation}
+ \phi_E(u)=e^u(2X^2-3X)e^{-X},\quad X=Ee^{4u},\qquad
+ a_j(E)=\int_0^\infty\frac{u^{2j}}{(2j)!}\phi_E(u)\dd u.
+ \label{eq:single-source}
+\end{equation}
+Then the retained and excited source moments are
+\begin{equation}
+ b_j=a_j(\pi),\qquad h_j=\sum_{n\ge2}a_j(\pi n^2),\qquad
+ c_j(s)=b_j+s h_j=\int_0^\infty\frac{u^{2j}\Phi_s(u)}{(2j)!}\dd u.
+ \label{eq:moments}
+\end{equation}
+Every \(j\ge0\) here denotes the raw half-line source integral, including
+\(j=0\). In particular \(b_0\) has no added endpoint compensation.
+Our \(c_j(1)\) agrees with the parent manuscript's ordinary coefficient;
+our \(b_j\) denotes a retained-shell coefficient, not the parent's
+unfactorialized full-source moment.
+
+The complete source is \(\Phi_1\). The inherited normalization is
+\begin{equation}
+ F(z^2):=\sum_{j\ge0}c_j(1)z^{2j}
+ =\int_0^\infty\Phi_1(u)\cosh(zu)\dd u
+ =\tfrac18\xi\bigl((1+z)/2\bigr),
+ \label{eq:xi}
+\end{equation}
+with \(\xi(w)=\tfrac12w(w-1)\pi^{-w/2}\Gamma(w/2)\zeta(w)\).
+The parent manuscript \evid{MC}, Sections 1--4, explains the
+classical coefficient-positivity destination and the unproved
+Mellin-curvature comparison. We use that background without introducing
+another equivalent criterion.
+
+Our blocks are
+\begin{equation}
+ M_{q,k}(s)=[c_{k+j-i}(s)]_{i,j=0}^{q-1},\qquad
+ D_{q,k}(s)=\det M_{q,k}(s),\qquad q\ge1,\ k\ge q-1.
+ \label{eq:blocks}
+\end{equation}
+The three shifts \(k=q-1,q,q+1\) all lie in this range. They contain no
+negative coefficient indices. For filtered pairings at lower shifts,
+actual endpoint entries replace a zero-negative-index convention;
+Section~\ref{sec:pairing} gives the formula.
+
+The exact Desnanot--Jacobi relation, also used in \evid{MC}, is
+\begin{equation}
+ D_{q,k}(s)^2-D_{q,k-1}(s)D_{q,k+1}(s)
+ =D_{q+1,k}(s)D_{q-1,k}(s),\qquad k\ge q,
+ \label{eq:dj}
+\end{equation}
+where \(D_{0,k}=1\). All blocks in this displayed range use
+nonnegative indices. The identity explains the relevance of neighboring
+shifts, but it gives a sign only after the needed signed quantities have
+been controlled.
+
+\subsection{What is retained from the earlier finite-order work}
+
+The original energy-filter calculation found opposite response
+directions at orders two and three: every excited level lowers
+\(D_{2,2}\) and raises \(D_{3,3}\) throughout the common filter path.
+Those conclusions have scoped internal assessments \evid{E1,E4},
+using shared validated numerical premises. They motivate a cofactor
+analysis; they do not establish an alternating law in \(q\).
+We do not reproduce their moment tables or numerical acquisition.
+The only quantitative finite-index input used below is the explicitly
+identified \(j=1\) scalar allowance in
+Corollary~\ref{cor:anchor}.
+
+\section{The complete-cylinder Green representation}
+\label{sec:cylinder}
+
+\subsection{Angular spectrum, measure and self-adjoint domains}
+
+Let \(K=L^2(S^2,\Sigma;\dd\Omega)\), where \(\Sigma\) is the complex
+rank-two spinor bundle on the unit round sphere. Fix the self-adjoint
+geometric Dirac operator \(D\), with domain \(H^1(S^2;\Sigma)\),
+and Hermitian chirality \(\Gamma\), so
+\(\Gamma^2=I\) and \(\Gamma D=-D\Gamma\).
+The spectrum of \(D\) is \(\pm n\), \(n\ge1\), with multiplicity
+\(2n\) for each sign. This is the two-dimensional specialization of
+Camporesi--Higuchi \cite[Section 3.1, equation (3.54)]{CH}, with
+their anti-Hermitian slash operator multiplied by \(-i\) and their
+nonnegative index shifted by one.
+
+Let \(P_n\) be the projection onto \(D^2=n^2\). Thus
+\(\dim P_nK=4n\). Define
+\begin{equation}
+ W=(4|D|)^{-1}=\sum_{n\ge1}\frac{P_n}{4n},\qquad
+ B_s=P_1+s(I-P_1).
+ \label{eq:weight}
+\end{equation}
+Although \(0<W\le I/4\), its trace is infinite. It is a bounded
+positive angular operator, not a density matrix.
+
+Use the complete product cylinder
+\begin{equation}
+ C=\R_v\times S^2,\qquad g_C=\dd v^2+\tfrac14g_{S^2},\qquad
+ \hc=L^2(\R,\dd v;K).
+ \label{eq:cylinder}
+\end{equation}
+The metric volume is \(\dd v\,\dd\Omega/4\); the physical field
+corresponding to \(\psi\in\hc\) is \(2\psi\).
+This constant unitary normalization changes no spectral multiplicity.
+The angular radius stays \(1/2\).
+
+\begin{proposition}[Complete-cylinder realization]\label{prop:domain}
+On smooth compactly supported radial functions with finite angular
+spectral support, put
+\(\dc=-i\Gamma\partial_v+2D\). Its self-adjoint closure and its square
+\(L_0=\dc^2\) have domains
+\begin{align}
+ \Dom\dc&=\left\{\psi\in\hc:
+ \sum_{n\ge1}\int_\R(k^2+4n^2)\|P_n\widehat\psi(k)\|_K^2\dd k<\infty
+ \right\}, \label{eq:dirac-domain}\\
+ \Dom L_0&=\left\{\psi\in\hc:
+ \sum_{n\ge1}\int_\R(k^2+4n^2)^2\|P_n\widehat\psi(k)\|_K^2\dd k<\infty
+ \right\}. \label{eq:square-domain}
+\end{align}
+Here the radial Fourier transform is unitary. On its domain,
+\(L_0=-\partial_v^2+4D^2\ge4I\).
+\end{proposition}
+\begin{proof}
+On \(P_nK\), Fourier transformation gives the Hermitian matrix
+\[
+ M_n(k)=k\Gamma+2D|_{P_nK},\qquad M_n(k)^2=(k^2+4n^2)I.
+\]
+The self-adjoint multiplication/direct-sum operator has exactly
+\eqref{eq:dirac-domain}. Its square has \eqref{eq:square-domain}.
+Angular truncation followed by smooth radial approximation shows
+that the initial domain is a core. Anticommutation cancels the mixed
+terms. No boundary extension is needed on the complete line.
+\end{proof}
+
+\subsection{The radial diagonal accounts for every radial momentum}
+
+\begin{theorem}[Exact filtered response]\label{thm:free}
+The inverse of \(L_0\) has the norm-continuous
+angular-operator-valued radial kernel
+\begin{equation}
+ K_0(v,w)=\frac{e^{-2|D||v-w|}}{4|D|},\qquad K_0(v,v)=W.
+ \label{eq:kernel}
+\end{equation}
+For every \(t>0\), \(0\le s\le1\), and \(v\in\R\),
+\begin{equation}
+ \Tr_K[B_s e^{-tD^2}K_0(v,v)]=Q_s(t).
+ \label{eq:free-trace}
+\end{equation}
+The complete series and each fixed \(t\)-derivative converge uniformly
+on \(t\ge\varepsilon>0\), uniformly in \(s\).
+\end{theorem}
+\begin{proof}
+In the \(n\)th channel the scalar inverse of
+\(-\partial_v^2+4n^2\) has kernel
+\[
+ G_{n,0}(v,w)=\frac{e^{-2n|v-w|}}{4n}.
+\]
+Its derivative has right-minus-left jump \(-1\), producing a
+positive delta under \(-\partial_v^2\), and it decays at both ends.
+The spectral sum for \(K_0\) converges in operator norm: the discarded
+\(n>N\) part is at most \(1/[4(N+1)]\), also on the diagonal.
+Moreover \(\|K_0(v,w)\|\le e^{-2|v-w|}/4\). Its convolution operator
+is bounded and has Fourier multiplier \((k^2+4D^2)^{-1}\), identifying
+it with \(L_0^{-1}\). The norm-continuous diagonal is \(W\).
+After angular damping, each block trace is
+\(4n\,\alpha_n(s)e^{-tn^2}/(4n)\). Summation proves
+\eqref{eq:free-trace}; convergence and differentiation follow from
+\(\sum n^{2m}e^{-\varepsilon n^2}<\infty\) at every fixed \(m\).
+\end{proof}
+
+The inverse multiplicity is supplied by a full radial integral:
+\begin{equation}
+ G_{n,0}(0,0)
+ =\int_\R\frac{\dd k}{2\pi(k^2+4n^2)}
+ =\int_0^\infty\frac{e^{-4\tau n^2}}{\sqrt{4\pi\tau}}\dd\tau
+ =\frac1{4n}.
+ \label{eq:proper-time}
+\end{equation}
+Thus no radial ground-state projection or finite radial cutoff is
+implicit. The projector \(P_1\) selects the lowest angular shell;
+it is not a normalizable full-cylinder ground state.
+
+The observation is an angular trace of a radial kernel diagonal.
+It is not unrestricted \(L^2\) point evaluation. Nor is it an
+unregularized spinor kernel at coincident angular points.
+Integrating its positive constant diagonal density over all
+\(v\in\R\) gives an infinite full-space trace. The heat operator
+\(e^{-\tau L_0}\) also has infinite full-space trace.
+Finally, \(\dc^{-1}=\dc L_0^{-1}\) has an additional differentiated
+matrix numerator, so \eqref{eq:kernel} is the squared operator's
+Green kernel, not the first-order inverse.
+
+\subsection{The fixed observation and the external source map}
+
+The selected contract \evid{C0} has \(V=0\), no wall, and fixed interior probe \(v=0\).
+Its observable is \eqref{eq:free-trace}; its source is obtained by the
+external rule \eqref{eq:source-map}. Four roles stay distinct:
+\[
+ \begin{aligned}
+ v&:\ \hbox{radial position},&
+ \tau&:\ \hbox{heat/evolution time for }L_0,\\
+ t&:\ \hbox{angular damping},&
+ u&:\ \hbox{source coordinate}.
+ \end{aligned}
+\]
+Neither \(v=u\) nor \(\tau=t\) is imposed in the response. In
+particular \(t=\pi e^{4u}\), the factor \(e^u\), and the differential
+observation \((\partial_u^2-1)/8\) are specified externally.
+They are not a derived position-dependent temperature law.
+The source notation \(r=e^{2u}\) does not change the cylinder radius.
+
+The free spectral gap makes the inverse bounded, so this observable
+requires no confining potential. The theorem also gives no finite
+three-dimensional partition function. Half-line and Euclidean
+comparisons explain why these model choices matter; their precise
+limitations are recorded in Appendix~\ref{sec:alternatives}.
+
+\section{Bounded nonnegative potentials: defect and rigidity}
+\label{sec:potential}
+
+This section consolidates \evid{V}. Its comparison class is
+\(V\in L^\infty(\R;\R)\), \(V\ge0\) almost everywhere, independent
+of \(n,s,t,u\). Put \(M=\|V\|_\infty\), and add \(V\) to the
+\emph{second-order} operator:
+\begin{equation}
+ L_V=L_0+VI,\quad \Dom L_V=\Dom L_0,\qquad
+ H_{n,V}=-\partial_v^2+4n^2+V,\quad \Dom H_{n,V}=H^2(\R).
+ \label{eq:potential-domain}
+\end{equation}
+This is not an assertion about \((\dc+V)^2\).
+Keep the same probe and readout, with no compensating angular multiplier.
+
+\begin{theorem}[Channel bounds and exact-recovery rigidity]\label{thm:rigidity}
+Each \(H_{n,V}^{-1}\) has a continuous, symmetric, strictly positive
+kernel \(G_{n,V}\). Define
+\(\beta_n(V)=4nG_{n,V}(0,0)\) and \(d_n=1-\beta_n(V)\).
+For every \(n\ge1\),
+\begin{equation}
+ \frac{2n}{\sqrt{4n^2+M}}\le\beta_n(V)\le1,\qquad
+ 0\le d_n\le1-\left(1+\frac{M}{4n^2}\right)^{-1/2}
+ \le\frac{M}{8n^2}. \label{eq:deficit}
+\end{equation}
+If \(V\ne0\) as an \(L^\infty\) equivalence class, then \(d_n>0\)
+for every \(n\). The response is
+\begin{align}
+ R_{V,s}(t)&=\Tr_K[B_s e^{-tD^2}K_V(0,0)]
+       =\sum_{n\ge1}\alpha_n(s)\beta_n(V)e^{-tn^2},\notag\\
+ \Delta_{V,s}(t)&=Q_s(t)-R_{V,s}(t)
+       =\sum_{n\ge1}\alpha_n(s)d_n e^{-tn^2}. \label{eq:defect}
+\end{align}
+For even one pair \(t>0,\ 0\le s\le1\), equality
+\(R_{V,s}(t)=Q_s(t)\) holds if and only if \(V=0\) almost everywhere.
+\end{theorem}
+
+\begin{proof}
+Bounded real multiplication preserves the self-adjoint domains and
+the lower bounds \(L_V\ge4I\), \(H_{n,V}\ge4n^2I\); this is the
+relative-bound-zero case of bounded perturbation theory
+\cite[Theorem 6.4]{Teschl}. Kernel positivity requires a further
+argument.
+
+Fix \(n\), set \(a=2n\), \(\lambda=\sqrt{a^2+M}\), and \(U=M-V\).
+For \(g_\lambda(z)=e^{-\lambda|z|}/(2\lambda)\) let
+\(S=(-\partial_v^2+\lambda^2)^{-1}\).
+Then
+\begin{equation}
+ \|SU\|\le\rho:=\frac{M}{a^2+M}<1,\qquad
+ H_{n,V}^{-1}=\sum_{j=0}^\infty(SU)^jS. \label{eq:positive-series}
+\end{equation}
+The \(j\)th kernel is an integral of \(j+1\) positive
+\(g_\lambda\) factors with \(j\) nonnegative \(U\) factors.
+It satisfies
+\begin{equation}
+ 0\le K_j(v,w)\le M^j g_\lambda^{*(j+1)}(v-w),\qquad
+ \sup_{v,w}K_j(v,w)\le\frac{\rho^j}{2\lambda}.
+ \label{eq:kernel-series-bound}
+\end{equation}
+Translations of the outer exponential kernels are continuous in
+\(L^1\), and the remaining integrations are bounded by
+\eqref{eq:kernel-series-bound}. Hence every \(K_j\) is jointly
+continuous even for measurable \(V\). Uniform convergence gives a
+continuous sum; path reversal gives symmetry. The convolution
+majorant has Fourier transform
+\[
+ \sum_{j\ge0}\frac{M^j}{(k^2+\lambda^2)^{j+1}}
+ =\frac1{k^2+a^2}.
+\]
+It converges in \(L^1\) and uniformly, so its sum is \(g_a\) at
+every point. Therefore
+\begin{equation}
+ 0<g_\lambda(v-w)\le G_{n,V}(v,w)\le g_a(v-w).
+ \label{eq:kernel-sandwich}
+\end{equation}
+The integral series agrees with the operator series on test
+functions by domination, and then on \(L^2\). This identifies a
+continuous representative of the inverse kernel.
+
+The resolvent identity becomes
+\begin{equation}
+ g_a(v-w)-G_{n,V}(v,w)
+ =\int_\R g_a(v-y)V(y)G_{n,V}(y,w)\dd y. \label{eq:resolvent-kernel}
+\end{equation}
+The integral is dominated by \(M(g_a*g_a)(v-w)\) and is continuous
+in its endpoints. Thus the operator identity, initially an identity
+of distribution kernels, holds everywhere, including at \(v=w=0\).
+If \(V\) is nonzero as an equivalence class, its positive set has positive
+measure; the integrand there is strictly positive. Consequently
+the diagonal loss is strict for every \(n\).
+The diagonal sandwich gives the first two bounds of
+\eqref{eq:deficit}. The final one follows from
+\[
+ 1-(1+z)^{-1/2}
+ =\tfrac12\int_0^z(1+y)^{-3/2}\dd y\le z/2.
+\]
+For constant \(V=M\) the lower \(\beta_n\) bound is attained.
+
+Angular separation gives
+\(K_V(v,w)=\sum_nG_{n,V}(v,w)P_n\).
+Its discarded operator norm is at most \(1/[4(N+1)]\), and it
+is bounded by \(e^{-2|v-w|}/4\). Hence it is a norm-continuous
+kernel representing \(L_V^{-1}\). Angular damping is trace class
+at its diagonal and yields \eqref{eq:defect}.
+When \(V\ne0\), the retained shell has \(d_1>0\), so
+\(\Delta_{V,s}(t)\ge d_1e^{-t}>0\), even at \(s=0\).
+The converse follows from Theorem~\ref{thm:free}.
+\end{proof}
+
+Here and below, \emph{nonzero potential} always means nonzero modulo
+null sets. The theorem is restricted to bounded nonnegative scalar
+potentials, the complete line and the unchanged observation.
+It says nothing about signed or unbounded potentials, singular
+walls, altered geometries, or compensating readouts.
+
+\subsection{Complete sums and explicit tails}
+
+For each fixed integer \(m\ge0\),
+\begin{equation}
+ 0\le(-1)^m\partial_t^m\Delta_{V,s}(t)
+ \le\frac M8\sum_{n\ge1}\alpha_n(s)n^{2m-2}e^{-tn^2}.
+ \label{eq:defect-derivative}
+\end{equation}
+This includes \(m=0\), since \(n\ge1\). To make the tail explicit,
+for real \(p\), \(\varepsilon>0\), and integer \(L\ge1\), set
+\begin{align}
+ C_{p,\varepsilon}&=
+ \begin{cases}1,&p\le0,\\ (p/(e\varepsilon))^{p/2},&p>0,\end{cases}\notag\\
+ T_p(L,\varepsilon)&=
+ C_{p,\varepsilon}\frac{e^{-\varepsilon L^2/2}}
+ {1-e^{-\varepsilon(2L+1)/2}}. \label{eq:gaussian-tail}
+\end{align}
+Then
+\begin{equation}
+ \sum_{n\ge L}n^pe^{-tn^2}\le T_p(L,\varepsilon),\qquad
+ t\ge\varepsilon.
+ \label{eq:tail-bound}
+\end{equation}
+For \(p>0\), maximize \(y^pe^{-\varepsilon y^2/2}\);
+for \(p\le0\), use \(n^p\le1\).
+The remaining Gaussian sum is bounded geometrically by
+\((L+j)^2\ge L^2+(2L+1)j\).
+Thus the discarded \(n>N\) part in
+\eqref{eq:defect-derivative} is at most
+\((M/8)T_{2m-2}(N+1,\varepsilon)\).
+For \(R_{V,s}\) and \(Q_s\), use \(T_{2m}\) without \(M/8\).
+Differentiation in \(s\) omits \(n=1\); higher \(s\)-derivatives vanish.
+These estimates justify all stated complete-sum exchanges uniformly
+in \(s\) and \(t\ge\varepsilon\), at each fixed \(m\).
+
+The source recurrence in the next section also applies after
+multiplying the \(n\)th summand by \(\beta_n(V)\) or \(d_n\).
+Their bounds \(0\le\beta_n,d_n\le1\) give the same finite-derivative
+majorants; \eqref{eq:deficit} gives the additional \(n^{-2}\)
+defect improvement. These comparison sources are not renamed
+canonical theta. Determinants below continue to use \(V=0\).
+
+\section{Every finite source derivative and moment}
+\label{sec:source}
+
+The source and membership argument is \evid{S}. It is stated for
+arbitrary finite indices, with constants allowed to depend on those
+indices.
+
+\begin{theorem}[Complete source estimates]\label{thm:source}
+Define the polynomial operation
+\(\mathcal T F=(1-4x)F+4xF'\), and recurrences
+\begin{equation}
+ P_0=1,\quad P_{m+1}=\mathcal T P_m,\qquad
+ H_0=2x^2-3x,\quad H_{m+1}=\mathcal T H_m.
+ \label{eq:recurrences}
+\end{equation}
+Then \(\deg P_m=m\), \(\deg H_m=m+2\), and
+\(H_m=(P_{m+2}-P_m)/8\). For every finite \(m\ge0\),
+\begin{align}
+ p_s^{(m)}(u)&=e^u\sum_{n\ge1}\alpha_n(s)e^{-n^2x}P_m(n^2x),\notag\\
+ \Phi_s^{(m)}(u)&=e^u\sum_{n\ge1}\alpha_n(s)e^{-n^2x}H_m(n^2x).
+ \label{eq:source-derivatives}
+\end{align}
+Every polynomially weighted integral of a fixed derivative is
+absolutely convergent, and the corresponding complete spectral
+series may be integrated term by term, uniformly in \(s\in[0,1]\).
+\end{theorem}
+\begin{proof}
+The chain rule gives
+\[
+ \partial_u[e^ue^{-n^2x}F(n^2x)]
+ =e^ue^{-n^2x}(\mathcal T F)(n^2x).
+\]
+It also gives the degrees, with leading coefficients
+\((-4)^m\) and \(2(-4)^m\), respectively. The identity for \(H_m\)
+follows at \(m=0\) and commutes with \(\mathcal T\).
+
+For a polynomial \(F\) of degree \(d\), let \(A_F\) be the sum of
+its absolute coefficients, and put
+\[
+ C_d(N)=\sum_{n>N}n^{2d}e^{-\pi(n^2-1)},\qquad C_d=C_d(0).
+\]
+These sums are finite, and
+\(C_d(N)\le e^\pi T_{2d}(N+1,\pi)\to0\).
+Since \(x\ge\pi>1\),
+\begin{equation}
+ \left|e^u\sum_{n>N}\alpha_n(s)e^{-n^2x}F(n^2x)\right|
+ \le A_F C_d(N)e^{u-x}x^d. \label{eq:source-majorant}
+\end{equation}
+The same bound holds for the sum of absolute values of the summands.
+It is bounded on \(u\ge0\), and applies to each fixed differentiated
+polynomial. It justifies the chain-rule series and all right endpoint
+values at \(u=0\).
+
+For each nonnegative integer \(r\) and real \(d\),
+\begin{equation}
+ I_{r,d}:=\int_0^\infty u^r e^{u-x}x^d\dd u
+ =\frac{\pi^{-1/4}}{4^{r+1}}\int_\pi^\infty
+ [\log(x/\pi)]^r x^{d-3/4}e^{-x}\dd x<\infty.
+ \label{eq:integrable-majorant}
+\end{equation}
+This follows from \(u=\frac14\log(x/\pi)\) and
+\(\dd u=\dd x/(4x)\). Integrating the absolute tail in
+\eqref{eq:source-majorant} gives
+\(A_F C_d(N)I_{r,d}\to0\).
+This proves every asserted exchange. It also proves that a polynomial
+times any fixed derivative tends to zero at infinity.
+\end{proof}
+
+Set \(\kappa=2-3/\pi>0\) and \(B_m=A_{H_m}C_{m+2}\).
+The retained shell and the majorant give
+\begin{equation}
+ \Phi_s(u)\ge\kappa e^{u-x}x^2>0,\qquad
+ |\Phi_s^{(m)}(u)|\le B_m e^{u-x}x^{m+2}.
+ \label{eq:lower-upper}
+\end{equation}
+The lower bound is a positive function, not a constant lower bound
+on an unbounded half-line.
+
+\begin{corollary}[Auxiliary Hilbert membership]\label{cor:membership}
+In \(\hs=L^2((0,\infty),\dd u)\), with conjugate-linear first slot,
+the real functions
+\begin{equation}
+ f_i=\frac{\Phi_s^{(2i)}}{\sqrt{\Phi_s}},\qquad
+ g_\ell=\frac{u^{2\ell}\sqrt{\Phi_s}}{(2\ell)!}
+ \label{eq:auxiliary-functions}
+\end{equation}
+belong to \(\hs\) for every finite \(i,\ell\ge0\).
+All \(c_j(s)\) in \eqref{eq:moments} are finite and positive.
+\end{corollary}
+\begin{proof}
+Using the same source exponent in the upper and lower bounds,
+\[
+ |f_i|^2\le\frac{B_{2i}^2}{\kappa}e^{u-x}x^{4i+2},\qquad
+ |g_\ell|^2\le\frac{B_0}{((2\ell)!)^2}
+                  u^{4\ell}e^{u-x}x^2.
+\]
+Equation~\eqref{eq:integrable-majorant} integrates both estimates.
+It also bounds \(c_j(s)\) by \(B_0I_{2j,2}/(2j)!\);
+positivity follows from \eqref{eq:lower-upper}.
+\end{proof}
+
+For reference, a single formula for every moment, with all measure
+factors retained, is
+\begin{align}
+ c_j(s)=\frac1{4^{2j+1}(2j)!}
+ \sum_{n\ge1}\alpha_n(s)(\pi n^2)^{-1/4}
+ \int_{\pi n^2}^\infty
+ &[\log(y/(\pi n^2))]^{2j}\notag\\[-2pt]
+ &{}\times y^{-3/4}(2y^2-3y)e^{-y}\dd y.
+ \label{eq:moment-formula}
+\end{align}
+It follows by \(y=\pi n^2e^{4u}\) and Tonelli.
+The bounds establish each finite-index assertion; they do not
+supply constants uniform as \(i,\ell,j\), or determinant order grow.
+
+\section{Endpoint-preserving pairings and exterior powers}
+\label{sec:pairing}
+
+\begin{theorem}[Exact endpoint dictionary]\label{thm:pairing}
+For all \(i,\ell\ge0\) and \(0\le s\le1\),
+\begin{equation}
+ \ip{f_i}{g_\ell}_{\hs}=
+ \begin{cases}
+ c_{\ell-i}(s),&\ell\ge i,\\
+ -\Phi_s^{(2(i-\ell)-1)}(0),&\ell<i.
+ \end{cases} \label{eq:endpoints}
+\end{equation}
+With the coordinate normalization
+\begin{equation}
+ (h_1\wedge\cdots\wedge h_q)(u_1,\ldots,u_q)
+ =\frac1{\sqrt{q!}}\det[h_i(u_j)]_{i,j=1}^q,
+ \label{eq:wedge-normalization}
+\end{equation}
+one has, for all \(q\ge1,\ k\ge q-1\),
+\begin{equation}
+ \left\langle\bigwedge_{i=0}^{q-1}f_i,\
+                   \bigwedge_{j=0}^{q-1}g_{k+j}\right\rangle
+ =D_{q,k}(s).
+ \label{eq:wedge-pairing}
+\end{equation}
+\end{theorem}
+\begin{proof}
+The integrand in the scalar pairing is
+\(\Phi_s^{(2i)}(u)u^{2\ell}/(2\ell)!\).
+If \(\ell\ge i\), integrate by parts \(2i\) times, initially on
+\([0,R]\). Every origin term differentiates the monomial fewer than
+\(2\ell\) times and vanishes. All terms at \(R\) vanish as
+\(R\to\infty\) by Theorem~\ref{thm:source}. The resulting integral
+is \(c_{\ell-i}(s)\). If \(\ell<i\), first transfer \(2\ell\)
+derivatives. The remaining integral is
+\(\int_0^\infty\Phi_s^{(2(i-\ell))}\dd u
+=-\Phi_s^{(2(i-\ell)-1)}(0)\).
+This includes \(\ell=0\).
+
+For any \(h_i,k_j\in\hs\), expanding the two determinants in
+\eqref{eq:wedge-normalization} yields
+\[
+ \ip{\bigwedge_i h_i}{\bigwedge_j k_j}
+ =\det[\ip{h_i}{k_j}].
+\]
+Each product is absolutely integrable by one-variable
+Cauchy--Schwarz and finite-sum Fubini. The paired permutation sums
+supply \(q!\), canceled by the normalization. No orthonormality is
+assumed. For \(k\ge q-1\), every \(k+j\ge i\), so the first
+branch of \eqref{eq:endpoints} applies to every matrix entry.
+\end{proof}
+
+At \(s=1\), Jacobi inversion gives
+\(p_1(u)-p_1(-u)=-\sinh u\). Applying
+\(\partial_u^2-1\) shows that \(\Phi_1\) is even.
+Since \(\Phi_s=s\Phi_1+(1-s)\phi_\pi\),
+\begin{equation}
+ \Phi_s^{(2r+1)}(0)=(1-s)e^{-\pi}H_{2r+1}(\pi),\qquad r\ge0.
+ \label{eq:odd-endpoint}
+\end{equation}
+No evenness is assumed at a general filter setting.
+
+For \(0\le k<q-1\), the exterior pairing remains valid with entries
+\begin{equation}
+ \widetilde M_{ij}(s)=
+ \begin{cases}
+ c_{k+j-i}(s),&k+j\ge i,\\
+ -\Phi_s^{(2(i-k-j)-1)}(0),&k+j<i.
+ \end{cases}
+ \label{eq:lower-block}
+\end{equation}
+Only at \(s=1\) do these lower entries reduce to the canonical
+zero-negative-index convention. This is why the filtered
+all-order statement retains its shift range.
+
+\subsection{Spinor encoding and its domain limitation}
+
+Choose a fixed smooth unit eigenspinor \(\chi\in K\) with
+\(D\chi=\chi\), and set
+\begin{equation}
+ (Jf)(v,\omega)=\mathbf1_{\{v>0\}}f(v)\chi(\omega).
+ \label{eq:embedding}
+\end{equation}
+Then \(\ip{Jf}{Jg}_{\hc}=\ip{f}{g}_{\hs}\).
+The angular state is a section, not a parallel constant spinor.
+In metric-volume normalization the corresponding field is \(2Jf\).
+The trace in \eqref{eq:free-trace} still retains every angular
+state; this encoding does not replace it by a rank-one expectation.
+
+The exterior maps \(\bigwedge^qJ\) preserve all the pairings, as does
+their direct sum on the fermionic Hilbert space
+\[
+ \mathcal F_-(\hs)=\bigoplus_{q=0}^\infty\bigwedge^q\hs,
+ \qquad \bigwedge^0\hs=\C.
+\]
+Zero extension is a Hilbert-space construction. A function with
+nonzero trace at zero generally acquires a jump and need not belong
+to \(\Dom\dc\) or \(\Dom L_0\). No wall, finite-energy preparation,
+Hamiltonian eigenstate, or second-quantized Hamiltonian is thereby
+chosen. In particular \eqref{eq:wedge-pairing} is a cross-pairing of
+two vector families, not their Gram squared norm.
+
+\section{Quantitative scalar control and the missing signed margins}
+\label{sec:transfer}
+
+We now consolidate the two routes examined in \evid{B}.
+All sums over excited energies are complete, and all filter
+dependence is along the common path \(c_j(s)=b_j+s h_j\).
+The results below distinguish an unsigned quantitative estimate
+from a determinant sign estimate.
+
+\subsection{Endpoint concentration and collected cofactors}
+
+For \(q\ge2,\ k\ge q-1\), put \(m=k-q+1\ge0\), and collect cofactors
+with the same coefficient index:
+\begin{equation}
+ A_\ell(q,k;s)=
+ \sum_{\substack{0\le i,j<q\\j-i+q-1=\ell}}\cof_{ij}M_{q,k}(s),
+ \qquad 0\le\ell\le2q-2.
+ \label{eq:cofactor-collection}
+\end{equation}
+Only the bottom-left cofactor contributes to \(A_0\), giving
+\begin{equation}
+ A_0=(-1)^{q-1}D_{q-1,k+1}(s),\qquad
+ \partial_sD_{q,k}(s)=\sum_{\ell=0}^{2q-2}A_\ell h_{m+\ell}.
+ \label{eq:cofactor-response}
+\end{equation}
+The levelwise response replaces \(h_{m+\ell}\) by
+\(a_{m+\ell}(E)\). These are polynomial identities; invertibility
+of \(M_{q,k}\) is unnecessary.
+
+\begin{lemma}[Complete high-energy remainder]\label{lem:cofactor}
+For \(E\ge4\pi\) define
+\(\lambda(E)=4E-9-12/(2E-3)>40\).
+Then, for every \(m,\ell\ge0\),
+\begin{equation}
+ \frac{a_{m+\ell}(E)}{a_m(E)}
+ \le\lambda(E)^{-2\ell},\qquad
+ \frac{h_{m+\ell}}{h_m}\le40^{-2\ell}.
+ \label{eq:slope-ratios}
+\end{equation}
+Consequently
+\begin{equation}
+ \left|\frac{\partial_sD_{q,k}}{h_m}-A_0\right|
+ \le\Bcal_{q,k}(s):=\sum_{\ell=1}^{2q-2}|A_\ell(q,k;s)|40^{-2\ell}.
+ \label{eq:cofactor-payment}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Direct differentiation gives
+\[
+ -(\log\phi_E)'(u)=4X-9-\frac{12}{2X-3},\qquad X=Ee^{4u}.
+\]
+This expression increases in \(X\). Its value at \(25/2<4\pi\)
+is \(445/11>40\), proving the slope bound.
+For \(J_r(E)=\int_0^\infty u^r\phi_E(u)/r!\dd u\) and \(r\ge1\),
+integration of \(-\phi_E'\ge\lambda(E)\phi_E\) gives
+\(\lambda(E)J_r\le J_{r-1}\); the endpoints vanish.
+Iterating \(2\ell\) times proves the first inequality, and positive
+summation proves the second. Substitution into
+\eqref{eq:cofactor-response} proves \eqref{eq:cofactor-payment}.
+\end{proof}
+
+The sufficient signed margin would be
+\begin{equation}
+ \inf_{0\le s\le1}
+ \{D_{q-1,k+1}(s)-\Bcal_{q,k}(s)\}>0.
+ \label{eq:unpaid-cofactor}
+\end{equation}
+If proved, it would give response sign \((-1)^{q-1}\).
+No positive quantitative lower bound for
+\eqref{eq:unpaid-cofactor} has been established here as \(q\) grows.
+The finite-order assessment \evid{E4} uses its actual first-excited
+moments and a separate higher-energy allowance; it does not assert
+that this coarser sufficient margin is positive even at \(q=3\).
+
+A response sign alone also does not prove positivity transfer.
+One needs a positive reference \(D_{q,k}(0)\) and, for a decreasing
+response, a complete loss below it. The available upper payment is
+\begin{equation}
+ |D_{q,k}(1)-D_{q,k}(0)|
+ \le h_m\int_0^1\bigl(|A_0(s)|+\Bcal_{q,k}(s)\bigr)\dd s.
+ \label{eq:cofactor-loss}
+\end{equation}
+The missing comparison is quantitative. Its absence stops this
+implementation; it is not a proof that
+\eqref{eq:unpaid-cofactor} is false for theta.
+
+\subsection{The complete excited-to-retained ratio decreases}
+
+\begin{proposition}[Monotone moment ratios]\label{prop:ratio}
+For the source moments \eqref{eq:moments}, the sequence
+\(\rho_j=h_j/b_j\), \(j\ge0\), is positive and strictly decreasing.
+Moreover \(\rho_0<1/200\).
+\end{proposition}
+\begin{proof}
+For \(x=\pi e^{4u}\) and \(n\ge2\), the density ratio is
+\begin{equation}
+ r_n(x)=\frac{\phi_{\pi n^2}(u)}{\phi_\pi(u)}
+ =n^2\frac{2n^2x-3}{2x-3}e^{-(n^2-1)x}.
+ \label{eq:density-ratio}
+\end{equation}
+It satisfies
+\begin{equation}
+ \frac{\dd}{\dd x}\log r_n(x)
+ =-(n^2-1)\left(1+\frac6{(2n^2x-3)(2x-3)}\right)<0.
+ \label{eq:ratio-slope}
+\end{equation}
+Since \(x\ge\pi>3\),
+\(r_n(x)<2n^4e^{-3(n^2-1)}<2n^4/20^{n^2-1}\).
+The last step uses \(e^3>20\), already implied by the exponential
+series through degree eight. For \(t_n=n^4/20^{n^2-1}\),
+\[
+ \frac{t_{n+1}}{t_n}\le\frac{(3/2)^4}{20^5}<\frac1{1000}.
+\]
+Thus the full ratio \(r(u)=\sum_{n\ge2}r_n(\pi e^{4u})\) is bounded,
+strictly decreasing, and
+\begin{equation}
+ 0<r(u)<\frac{2(16/20^3)}{1-1/1000}
+ =\frac4{999}<\frac1{200}. \label{eq:coarse-ratio}
+\end{equation}
+Strict decrease follows termwise by comparison at two arguments;
+no exchange of infinite differentiation is needed.
+
+Let
+\[
+ \dd\mu_j(u)=\frac{u^{2j}\phi_\pi(u)}{(2j)!b_j}\dd u.
+\]
+This is a probability measure, and Tonelli gives
+\(\rho_j=\E_{\mu_j}r\). The next measure is its \(u^2\)-tilt, so
+\begin{equation}
+ \rho_{j+1}-\rho_j
+ =\frac{\Cov_{\mu_j}(u^2,r(u))}{\E_{\mu_j}u^2}<0.
+ \label{eq:ratio-covariance}
+\end{equation}
+Twice the covariance is the integral of
+\((u^2-v^2)(r(u)-r(v))\) against \(\mu_j\otimes\mu_j\).
+This integrand is strictly negative off the diagonal, and the
+measure has a positive density on \(u>0\).
+Boundedness of \(r\) and the finite moments justify the integral.
+Equation~\eqref{eq:coarse-ratio} also bounds \(\rho_0\).
+\end{proof}
+
+\begin{corollary}[Extension of the inherited validated anchor]
+\label{cor:anchor}
+The existing assessed \(j=1\) allowance \evid{E1} is
+\begin{equation}
+ h_1\le\epsilon c_1^*,\qquad
+ b_1\ge(1-\epsilon)c_1^*,\qquad c_1^*>0,\qquad
+ \epsilon=\frac1{40000}.
+ \label{eq:anchor}
+\end{equation}
+Using that input,
+\begin{equation}
+ 0<\rho_j\le\frac1{39999}\quad(j\ge1),\qquad
+ 0<\rho_0<\frac1{200}.
+ \label{eq:uniform-ratio}
+\end{equation}
+\end{corollary}
+\begin{proof}
+Divide the two inequalities in \eqref{eq:anchor} and apply
+Proposition~\ref{prop:ratio}.
+\end{proof}
+
+Here \(c_1^*\) is the earlier compact-reference coefficient, used only
+to express the accepted allowance. Its validated integration and
+tail premises are inherited, not reacquired in this manuscript.
+The conclusion for all \(j\) is analytical once that anchor is supplied.
+No compact-reference zero coefficient is substituted for \(b_0\).
+
+\subsection{Complete polynomial payment and the limit of a uniform allowance}
+
+Collect identical monomials in the determinant polynomial before
+taking absolute values:
+\begin{equation}
+ P_{q,k}(z)=\det[z_{k+j-i}]_{i,j=0}^{q-1}
+ =\sum_\alpha\gamma_\alpha z^\alpha,\qquad
+ \Acal_{q,k}(b)=\sum_\alpha|\gamma_\alpha|b^\alpha>0.
+ \label{eq:polynomial-norm}
+\end{equation}
+This is the collected-polynomial method already used in the radial
+Green investigation \evid{RGD}. Every monomial has degree \(q\).
+The monomial \(z_k^q\) has coefficient one: only the identity
+permutation can choose index \(k\) in every row.
+In particular \(|D_{q,k}(0)|\le\Acal_{q,k}(b)\).
+
+\begin{proposition}[Full perturbation payment]\label{prop:payment}
+For every \(q\ge1,\ k\ge q-1,\ 0\le s\le1\),
+\begin{align}
+ D_{q,k}(s)-D_{q,k}(0)
+ &=\sum_\alpha\gamma_\alpha b^\alpha
+ \left[\prod_j(1+s\rho_j)^{\alpha_j}-1\right], \label{eq:signed-difference}\\
+ |D_{q,k}(s)-D_{q,k}(0)|
+ &\le\Rcal_{q,k}(s):=
+ \sum_\alpha|\gamma_\alpha|b^\alpha
+ \left[\prod_j(1+s\rho_j)^{\alpha_j}-1\right]. \label{eq:full-payment}
+\end{align}
+The inherited bound \eqref{eq:uniform-ratio} implies
+\begin{align}
+ \Rcal_{q,k}(s)&\le U_q(s)\Acal_{q,k}(b),&
+ U_q(s)&=\left(1+\frac{s}{39999}\right)^q-1,\quad k\ge q,
+ \label{eq:uniform-payment}\\
+ \Rcal_{q,q-1}(s)&\le U_q^-(s)\Acal_{q,q-1}(b),&
+ U_q^-(s)&=\left(1+\frac{s}{200}\right)
+ \left(1+\frac{s}{39999}\right)^{q-1}-1.
+ \label{eq:lower-payment}
+\end{align}
+\end{proposition}
+\begin{proof}
+Substitute \(c_j(s)=b_j(1+s\rho_j)\) into
+\eqref{eq:polynomial-norm}, then subtract its value at \(s=0\).
+Every bracket is nonnegative, so the triangle inequality gives
+\eqref{eq:full-payment}, including every mixed power of \(s\).
+All \(h_j\) already contain the entire excited spectrum.
+
+For \(k\ge q\), all indices are positive, and the degree is \(q\);
+this proves \eqref{eq:uniform-payment}.
+For \(k=q-1\), only the bottom-left matrix entry has index zero.
+Every monomial has exponent at most one in \(b_0\).
+A monomial containing it is bounded by the product in
+\eqref{eq:lower-payment}. One omitting it is bounded by the same
+product because \(1+s/39999\le1+s/200\).
+\end{proof}
+
+If \(D_{q,k}(0)>0\), define its normalized reference margin
+\begin{equation}
+ \mu_{q,k}=\frac{D_{q,k}(0)}{\Acal_{q,k}(b)}\in(0,1].
+ \label{eq:reference-margin}
+\end{equation}
+The uniform sufficient certificate is
+\(\mu_{q,k}>U_q(1)\), or
+\(\mu_{q,q-1}>U_q^-(1)\) at the lower shift.
+No general positive reference sign or lower bound for
+\eqref{eq:reference-margin} has been established by the present
+operator, membership or ratio results.
+
+\begin{proposition}[Scope of the uniform-certificate failure]
+\label{prop:ceiling}
+The sufficient condition \(\mu_{q,k}>U_q(1)\) is impossible
+for \(q\ge39999,\ k\ge q\). The displayed lower-shift condition
+is impossible for \(q\ge40000\).
+These conclusions concern the stated uniform upper allowances,
+not the actual determinant difference.
+\end{proposition}
+\begin{proof}
+For \(N=39999>1\), the binomial theorem gives
+\((1+1/N)^N>1+N/N=2\). Hence \(U_q(1)>1\) for \(q\ge N\).
+For \(q\ge N+1\), the product defining \(U_q^-(1)\) also exceeds
+two. Both contradict the necessary bound \(\mu\le1\).
+\end{proof}
+
+These are sufficient failure thresholds for the displayed
+certificate, not the first failing orders, lower bounds on an
+actual error, or examples of negative canonical determinants.
+Collecting the original polynomial has already removed identical
+monomial cancellations. Additional cancellations after translating
+to the perturbation variables are not claimed to be exhausted.
+
+A smaller fixed uniform envelope does not remove the growing-order
+limitation. The least uniform bound on the ratios in the diagonal
+block is the positive number \(\rho_1\), and in the upper neighbor
+it is \(\rho_2\); every fixed positive envelope produces a factor
+\((1+\epsilon)^q-1\) eventually exceeding one. The lower neighbor
+similarly retains positive-index ratios together with its single
+zero-index entry.
+
+The sharper expression \eqref{eq:full-payment}, retaining each
+nonuniform ratio, is \emph{not} proved too large.
+The sibling radial Green analysis already proves far-index decay
+\(\rho_j\le128e^{-j/(16\log j)}\) for integer \(j\ge e^{16}\)
+\evid{RGD}; it applies to the same positive-index source moments.
+It supplies no reference determinant margin here. Its separately
+endpoint-compensated coefficient at zero, and its finite-mode
+P\'olya-frequency obstruction, cannot be imported as statements
+about the raw \(b_0\) or the restricted blocks \eqref{eq:blocks}.
+The nonuniform payment remains unresolved for lack of reference
+signs, conditioning, and a proof of their comparison with the
+complete correlated perturbation.
+
+\section{What the analytical results permit next}
+\label{sec:outlook}
+
+The cylinder construction explains the inverse angular
+multiplicity by an exact radial Green response. The potential
+theorem identifies a precise rigidity class for that observation.
+The source estimates make the auxiliary moment and derivative
+families legitimate Hilbert vectors at every finite index, and
+the endpoint dictionary specifies their exterior pairings.
+These are useful analytical conclusions with complete mode sums
+and stated domains.
+
+The signed-transfer study supplies a further scalar fact:
+complete excited-to-retained moment ratios strictly decrease.
+Its two proposed consumers remain limited in different ways.
+Corner domination lacks the quantitative margin
+\eqref{eq:unpaid-cofactor}. The fixed uniform polynomial allowance
+has the ceiling in Proposition~\ref{prop:ceiling}; the sharper
+nonuniform comparison still lacks a reference margin.
+Neither result disproves positivity of a canonical block.
+
+The distinction is also visible in the repository's collision
+controls. Positive weighted-square sources retain the scalar Green
+construction, the single-level slope, and the ratio-ordering
+argument whenever the corresponding sums converge.
+They do not carry the canonical unit coefficients or the validated
+anchor automatically; some could still satisfy a small scalar bound.
+Euler-factor modifications retain positive-source Hilbert
+constructions but change the arithmetic trace. Reflected
+super-Gaussian controls retain reflection and positive Hilbert
+metrics but not the integer-square expansion. Smooth positive-source
+and positive-primitive controls retain their applicable shape and
+endpoint properties but not the canonical arithmetic source.
+No control is asserted to violate the generic Green, covariance
+or determinant identities above, or an uncomputed signed margin.
+The source-specific quantitative estimate, not its representation
+alone, would have to distinguish the target.
+
+The current stop therefore concerns two specified implementations.
+No executable signed-estimate proof contract was issued.
+A useful reopening would identify either a quantitative bound on
+the collected signed cofactors, including the neighboring shifts,
+or a source-sensitive positive reference with a complete
+dimension-dependent perturbation comparison. Another positive
+realization, an additional low-order determinant value, or a
+smaller fixed scalar allowance alone would not supply that missing
+information.
+
+The immediate continuation is assessment of the potential, source
+and signed-transfer proofs at their present scope. The parent
+Mellin-curvature comparison remains a separate unresolved objective.
+This manuscript establishes no new domain of that comparison,
+no arbitrary-order determinant positivity, and no new RH consequence.
+
+\appendix
+\section{Boundary and Euclidean comparisons}
+\label{sec:alternatives}
+
+These comparisons explain the selected geometry without expanding
+it into another model survey. Their assessed scope is \evid{AR1}.
+
+\subsection{Second-order half-line boundaries}
+
+For the scalar channel on \(v>0\), Dirichlet domain
+\(H^2\cap H_0^1\) and Neumann domain
+\(\{f\in H^2:f'(0)=0\}\) give
+\begin{equation}
+ G_n^{D/N}(v,w)=
+ \frac{e^{-2n|v-w|}\mp e^{-2n(v+w)}}{4n}.
+ \label{eq:wall}
+\end{equation}
+Reflection enforces the respective boundary condition and
+preserves the derivative jump. Consequently the filtered angular
+responses are
+\begin{equation}
+ Q_s(t)\mp\sum_{n\ge1}\alpha_n(s)e^{-tn^2-4nv}.
+ \label{eq:wall-response}
+\end{equation}
+The image term is positive at every finite \(v\ge0\); at the
+boundary the two responses are \(0\) and \(2Q_s(t)\).
+Source evenness does not erase this term.
+These are second-order boundary problems, not automatically squares
+of an independently chosen self-adjoint first-order boundary
+condition. The source integration interval \(u\ge0\) imposes
+neither wall on the complete physical cylinder.
+
+\subsection{Euclidean reduction and the frozen angular weight}
+
+For \(r=e^{2u}\), Euclidean polar geometry satisfies
+\(g_E=4e^{4u}(\dd u^2+g_{S^2}/4)\).
+It is conformal to the cylinder, not its unchanged metric.
+With a compatible tangential spinor identification, multiplication
+\(U\psi=r\psi\) changes measure \(r^2\dd r\,\dd\Omega\) to
+\(\dd r\,\dd\Omega\), and gives, on smooth fields away from \(r=0\),
+\begin{equation}
+ U\mathcal D_EU^{-1}=-i\Gamma\partial_r+\frac Dr,\qquad
+ (U\mathcal D_EU^{-1})^2
+ =-\partial_r^2+\frac{D^2+i\Gamma D}{r^2}.
+ \label{eq:euclidean}
+\end{equation}
+The mixed derivative cancels by anticommutation; differentiating
+\(1/r\) leaves \(i\Gamma D/r^2\).
+On \(P_nK\), the Hermitian operator \(i\Gamma D\) has eigenvalues
+\(\pm n\) of multiplicity \(2n\) each. The reduced scalar
+expressions therefore have centrifugal coefficients \(n(n\pm1)\).
+This is a differential-expression result on \(r>0\); it does not
+supply an origin or exterior Green theorem.
+
+Holding the dimensionless unit-sphere weight \(W\) fixed gives
+\begin{equation}
+ \Tr_K[B_s W e^{-\pi(D/r)^2}]=Q_s(\pi/r^2).
+ \label{eq:frozen-sphere}
+\end{equation}
+Using \((4|D/r|)^{-1}=rW\) instead multiplies this response by \(r\).
+The readouts are distinct. Neither formula includes a Euclidean
+radial trace.
+
+For \(A_1(r)=Q_1(\pi r^2)\), Jacobi inversion
+\cite[equation 20.7.32]{DLMF} gives, for \(r>0\),
+\begin{equation}
+ A_1(r)=r^{-1}A_1(1/r)+\tfrac12(r^{-1}-1).
+ \label{eq:jacobi}
+\end{equation}
+The correction is harmonic under
+\(\Delta_3=\partial_r^2+2r^{-1}\partial_r\) away from the origin.
+Indeed
+\[
+ \tfrac18(\partial_u^2-1)[e^uA_1(e^{2u})]
+ =\tfrac12r^{5/2}\Delta_3 A_1(r).
+\]
+At the origin \(1/r\) has a distributional source, which is not
+discarded by the local statement. For the filtered source
+\(A_s=sA_1+(1-s)e^{-\pi r^2}\), the exact inversion defect is
+\begin{align}
+ A_s(r)-r^{-1}A_s(1/r)-\tfrac12(r^{-1}-1)
+ =(1-s)\bigl[e^{-\pi r^2}-r^{-1}e^{-\pi/r^2}
+                  -\tfrac12(r^{-1}-1)\bigr].
+ \label{eq:filtered-inversion}
+\end{align}
+The bracket tends to \(1/2\) as \(r\to\infty\), so the canonical
+inversion law does not hold identically for \(s\ne1\).
+The Euclidean angular comparison was deferred for these observation
+and filter reasons, not ruled out as a geometry.
+
+\section{Source guide and evidence status}
+\label{sec:provenance}
+
+The organizing source is
+\path{research-overview/02_ANGULAR_RADIAL_THETA_MODEL_RESEARCH_OVERVIEW_20261105.md}
+in the MC11 folder. The live disposition is in Register02 in
+\path{research-progress/}. Historical ``next task'' language in
+the overview is read with that register. The manuscript consolidates
+the completed returns; it does not execute the pending AR-E04
+assessment or activate the reserved E05 signed-estimate task.
+
+The following identifiers refer to repository sources, with paths
+relative to the MC11 investigation root unless stated otherwise.
+The integration note and input manifest record exact source versions.
+
+\begin{description}[style=nextline,leftmargin=1.4cm]
+\item[\evid{MC}] \emph{Signed Mellin Curvature and Theta Coefficient
+Positivity}, drafted for Edward Baker, 2 November 2026.
+Parent source: \path{../manuscript/main.tex}.
+Sections 1--4 supply normalization, signed averages and the
+unresolved curvature budget. Its background claims are not newly
+assessed here.
+
+\item[\evid{AR1}] Note05,
+\path{notes/05_MC11_AR_E01_R1_ALL_INDEX_OPERATOR_AND_GREEN_DERIVATIONS_20261105.md},
+and Review03 in \path{reviews/}.
+Free-cylinder, boundary and Euclidean-expression findings:
+accepted within qualified scope by an internal different-model
+LLM assessment, with shared spectral premises. Its R1 clarification
+keeps the dimensionless weight fixed under angular radius scaling.
+
+\item[\evid{C0}] Note06,
+\path{notes/06_MC11_BR01_R1_FROZEN_CYLINDER_MODEL_AND_ANALYTIC_CONTRACT_20261105.md}.
+Model selection: free complete cylinder, no wall, fixed probe,
+external source map; Euclidean angular readout deferred.
+Contract checking is not a signed-estimate assessment.
+
+\item[\evid{V}] Note07,
+\path{notes/07_MC11_AR_E02_R1_BOUNDED_POTENTIAL_DEFECT_AND_RIGIDITY_20261105.md}.
+Potential response theorem: proved in-note with proof-author and
+same-model supporting checks; separate AR-E04 assessment pending.
+
+\item[\evid{S}] Note08,
+\path{notes/08_MC11_AR_E03_R1_SOURCE_MEMBERSHIP_AND_ENDPOINT_PAIRINGS_20261105.md}.
+Finite-index source, membership and endpoint theorems: proved
+in-note without correction, with proof-author and same-model
+supporting checks; separate assessment pending.
+
+\item[\evid{B}] Note09,
+\path{notes/09_MC11_B01_R1_SIGNED_TRANSFER_ROUTES_AND_SCOPED_STOP_20261105.md}.
+Monotone ratio, complete payments and two-route scoped stop:
+proof-author checks only; separate assessment pending.
+No signed E05 contract was issued.
+
+\item[\evid{E1}] Note01,
+\path{notes/01_MC11_E01_R1_PROOF_AND_RATIONAL_REPLAY_20261104.md},
+Section 2, and Review01 in \path{reviews/}.
+The inherited \(j=1\) allowance uses validated compact moments
+and complete energy/spatial bounds, reconstructed by exact-rational
+replay. That review shares the numerical premises; this manuscript
+does not reacquire them.
+
+\item[\evid{E4}] Review02,
+\path{reviews/02_MC11_E04_R1_THREE_ORBITAL_RETURN_ASSESSMENT_20261104.md}.
+The earlier three-orbital response is accepted within its frozen
+source, common path and unnormalized observable, by same-assistant,
+same-model internal assessment with shared numerical premises.
+Only its motivating sign direction is used here.
+
+\item[\evid{RGD}] The sibling radial Green manuscript,
+\path{../10_radial_green_determinants/manuscript/radial_green_determinants.tex},
+especially its collected-polynomial determinant payment; and
+\path{../10_radial_green_determinants/notes/07_RGD_B03_R2_EXACT_PAYMENT_OBSTRUCTION_AND_TRUE_TAIL_20261104.md},
+Section 3, for the far-index ratio bound.
+Endpoint-compensated zero coefficients and algebraic control
+families retain their own scopes.
+\end{description}
+
+The preparation record for this manuscript is
+\path{notes/10_MC11_M01_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261105.md}.
+Its production self-check checks synthesis, references and layout;
+it is not a separate mathematical acceptance of \evid{V,S,B}.
+
+\section*{Acknowledgements and preparation}
+This draft was prepared for Edward Baker with substantial assistance
+from OpenAI language models. The consolidation used
+\texttt{gpt-6-astra} in Codex, recorded reasoning effort
+\texttt{max}, on 5 November 2026.
+Underlying notes record their own models and efforts, including
+\texttt{gpt-6.1-sol/ultra} for the operator, potential and source
+derivations. All cited project assessments are internal LLM work
+with the stated shared premises. No independent specialist human
+review, priority claim, or new numerical acquisition is asserted.
+
+\begin{thebibliography}{9}
+\bibitem{CH}
+R.~Camporesi and A.~Higuchi.
+\emph{On the eigenfunctions of the Dirac operator on spheres and real
+hyperbolic spaces}.
+Journal of Geometry and Physics \textbf{20} (1996), 1--18.
+\href{https://doi.org/10.1016/0393-0440(95)00042-9}
+{doi:10.1016/0393-0440(95)00042-9}.
+Inspected preprint version:
+\href{https://arxiv.org/abs/gr-qc/9505009v1}{arXiv:gr-qc/9505009v1},
+9 May 1995.
+
+\bibitem{DLMF}
+NIST Digital Library of Mathematical Functions.
+\emph{Theta Functions}, Section 20.7(viii), equation 20.7.32.
+\url{https://dlmf.nist.gov/20.7.E32}.
+Real positive-radius specialization; consulted 5 November 2026.
+
+\bibitem{Teschl}
+G.~Teschl.
+\emph{Mathematical Methods in Quantum Mechanics:
+With Applications to Schr\"odinger Operators}.
+Second edition, Graduate Studies in Mathematics 157,
+American Mathematical Society, 2014.
+Theorem 6.4, printed p.~159.
+\url{https://radon.mat.univie.ac.at/~gerald/ftp/book-schroe/schroe2.pdf}.
+\end{thebibliography}
+\end{document}

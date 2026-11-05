@@ -120,3 +120,10 @@ accepts the scoped obstruction with domain/trace clarification. Preserve useful
 physical formulations when requested, but keep their missing response estimate
 visible. This excludes neither different cohomological constructions nor the
 usefulness of the exact unprotected model.
+
+
+**5 November 2026 — MC11 keeps a Green representation separate from signed transfer.**
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra / max**.
+[Integration Note10](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/11_energy_filtered_theta_overlaps/notes/10_MC11_M01_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261105.md) states: “A positive Green response does not turn the source cross-pairing into a squared norm.”
+The [analytical manuscript](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/11_energy_filtered_theta_overlaps/manuscript/main.tex) proves the explicit response and pairing formulas while retaining the unpaid cofactor/reference margins and the scoped uniform-allowance ceiling.
+[Its production self-check](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/11_energy_filtered_theta_overlaps/reviews/04_MC11_M01_ANALYTICAL_MANUSCRIPT_PRODUCTION_SELF_CHECK_20261105.md) is editorial checking, not the pending AR-E04 assessment; no determinant sign range is gained by the representation.

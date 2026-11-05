@@ -7,6 +7,14 @@ LLM assistance: **gpt-6-astra (Codex)**, reasoning effort **ultra**.
 
 ## Summary
 
+- **MC11 analytical manuscript milestone (5/07, 5 November 2026).**
+  [The working draft](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/11_energy_filtered_theta_overlaps/manuscript/main.tex) consolidates the complete-cylinder Green representation and the current model/source/transfer returns.
+  [Integration Note10](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/11_energy_filtered_theta_overlaps/notes/10_MC11_M01_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261105.md) states: “This manuscript is an expository milestone, not a new determinant sign result.”
+  Free operator identities remain **accepted within scope** by [AR-E01 Review03](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/11_energy_filtered_theta_overlaps/reviews/03_MC11_AR_E01_R1_ANGULAR_RADIAL_IDENTITY_ASSESSMENT_20261105.md);
+  the potential/source proofs retain **proved-in-note** status and B01 retains **proof-author checking only**, with AR-E04 pending.
+  [Production self-check04](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/11_energy_filtered_theta_overlaps/reviews/04_MC11_M01_ANALYTICAL_MANUSCRIPT_PRODUCTION_SELF_CHECK_20261105.md) checks synthesis and layout, not mathematical acceptance.
+  No new all-order sign, curvature domain or universal exclusion. Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra / max**.
+
 - **Energy-filtered theta overlap comparison (5/07, 4 November 2026).**
   [MC11 Note03](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/11_energy_filtered_theta_overlaps/notes/03_MC11_E03_R1_FIRST_EXCITED_ACQUISITION_AND_RETURN_20261104.md)
   gives validated first-excited moments and exact common-path bounds:
