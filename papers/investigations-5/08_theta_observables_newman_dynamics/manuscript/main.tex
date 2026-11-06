@@ -1,0 +1,96 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{booktabs,tabularx,array,longtable}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+\usepackage{bookmark}
+\usepackage{enumitem}
+\setlist{nosep}
+\setcounter{tocdepth}{1}
+\renewcommand{\arraystretch}{1.12}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Dom}{Dom}
+\DeclareMathOperator{\HS}{HS}
+\DeclareMathOperator{\Scal}{Scal}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\K}{\mathcal K}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\Sch}{\mathcal S}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\ee}{\mathrm e}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\inner}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\Lsc}{L_{\mathrm{sc}}}
+\newcommand{\Dc}{\mathcal D_C}
+\newcommand{\Bcal}{\mathcal B}
+\newcommand{\Obs}{\mathcal O}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\title{Theta observables on the spherical cylinder\\[3pt]
+\large Analytical background for direct Newman realization\\
+and auxiliary Hamiltonian dynamics}
+\author{Drafted for Edward Baker}
+\date{6 November 2026\\\small Working manuscript; analytical synthesis}
+\hypersetup{pdftitle={Theta observables on the spherical cylinder},pdfauthor={Drafted for Edward Baker},pdfsubject={Analytical background for two Newman dynamics investigations}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We collect the analytical foundation shared by two investigations of theta
+observables and de Bruijn--Newman dynamics on the complete spherical cylinder.
+The squared geometric Dirac operator supplies a continuous radial spectrum
+and an angular Green weight that cancels the sphere's spinor multiplicities.
+An explicitly prescribed angular-damping scan then recovers the canonical
+theta source. We give its complete-source bounds, the Newman Fourier
+dictionary, the scalar generating-field comparison, and the domains needed
+for normalized source states. Two existing conditional constructions are
+presented with proofs: a complete count instrument whose no-count branch
+realizes decreasing Newman time through a transported quadrature, and a
+left-acting proper-time response whose observation is the Newman transform
+times an explicit nonvanishing factor. The first restores absolute
+normalization through joint success probabilities; the second preserves
+zeros and multiplicities and has unbounded inverse amplification at large
+real frequency. The statements retain the full angular and radial spectra
+and apply at every fixed finite derivative order, with order-dependent
+bounds. The source preparations and specified measurement laws are supplied
+model data. These representations establish no new signed estimate or
+collision exclusion.
+\end{abstract}
+\tableofcontents
+\clearpage
+
+\input{sections/01_foundations}
+\input{sections/02_newman}
+\input{sections/03_direct}
+\input{sections/04_auxiliary}
+\input{sections/05_scope}
+
+\section*{Acknowledgements and draft provenance}
+This manuscript was drafted for Edward Baker with substantial assistance
+from OpenAI's \texttt{gpt-6-astra} through Codex, with recorded reasoning
+effort \texttt{max}. The principal proof notes and their internal assessments
+were prepared with \texttt{gpt-6.1-sol}, effort \texttt{ultra}; the construction
+choices were recorded in Astra-assisted research discussions. LLM assistance
+included source comparison, mathematical exposition, local consistency
+checks and document production. The assessments cited here are internal
+LLM assessments, often by the proof author in the same chat, with shared
+premises. They are not independent specialist review or formal verification.
+This synthesis does not change the evidence status of its sources.
+
+\begingroup
+\small
+\bibliographystyle{plainurl}
+\bibliography{theta_background_sources}
+\endgroup
+\end{document}

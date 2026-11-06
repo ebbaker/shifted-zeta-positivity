@@ -1,0 +1,157 @@
+\section{Zeros, conjugated dynamics, and the scope of recovery}
+\label{sec:consequences}
+
+\subsection{Exact zero preservation}
+
+For fixed $\tau\ge0$, define
+\begin{equation}
+ m_\tau(z)=q(\tau)\ee^{-\tau z^2}.
+ \label{eq:multiplier}
+\end{equation}
+It is entire and nowhere zero. Hence if, for some fixed $\lambda$,
+$H_\lambda(z)=(z-z_0)^r h(z)$ with $h(z_0)\ne0$, then
+\begin{equation*}
+ \Obs_{\lambda,\tau}(z)=(z-z_0)^r m_\tau(z)h(z)
+\end{equation*}
+has exactly the same multiplicity $r$ at $z_0$. Since $H_\lambda(0)>0$,
+the identically zero case does not occur. Thus zeros, multiplicities,
+and their collision loci as $\lambda$ varies are preserved exactly.
+This conclusion follows from invertible multiplication; it supplies
+no new inequality constraining where those collisions can occur.
+
+\subsection{The conjugated Newman equation}
+
+Introduce the differential operator
+\begin{equation}
+ \mathscr D_\tau=\partial_z+2\tau z.
+ \label{eq:covariant-derivative}
+\end{equation}
+For any differentiable $h$,
+\begin{equation}
+ \mathscr D_\tau(m_\tau h)=m_\tau h'.
+ \label{eq:conjugation}
+\end{equation}
+Iterating this identity and using \eqref{eq:newman-heat} gives
+\begin{equation}
+ \boxed{\partial_\lambda\Obs_{\lambda,\tau}
+       =-\mathscr D_\tau^2\Obs_{\lambda,\tau}}
+ \label{eq:conjugated-heat}
+\end{equation}
+or, in ordinary derivatives,
+\begin{equation}
+ \partial_\lambda\Obs
+ =-\partial_z^2\Obs-4\tau z\partial_z\Obs
+                 -(2\tau+4\tau^2z^2)\Obs.
+ \label{eq:conjugated-heat-expanded}
+\end{equation}
+The term $2\tau\Obs$ comes from differentiating the coefficient
+$2\tau z$ inside $\mathscr D_\tau^2$ and must be retained.
+For every finite $a$,
+$\partial_\lambda^a\Obs=(-1)^a\mathscr D_\tau^{2a}\Obs$;
+these are finite differential identities justified by the preceding
+regularity, not claims about infinite series of operators.
+
+The proper-time equation is instead
+\begin{equation}
+ \partial_\tau\Obs_{\lambda,\tau}(z)
+ =\left(\frac{q'(\tau)}{q(\tau)}-z^2\right)
+                         \Obs_{\lambda,\tau}(z).
+ \label{eq:proper-time-response}
+\end{equation}
+Equations~\eqref{eq:conjugated-heat} and
+\eqref{eq:proper-time-response} show directly why Newman deformation
+and auxiliary proper-time evolution are different operations.
+
+\subsection{Inversion and the first derivative pair}
+
+The exact inverse is
+\begin{equation}
+ H_\lambda(z)=q(\tau)^{-1}\ee^{\tau z^2}
+                         \Obs_{\lambda,\tau}(z).
+ \label{eq:inverse}
+\end{equation}
+For real $k$ and $\tau>0$, its absolute multiplier is
+$q(\tau)^{-1}\ee^{\tau k^2}$, which tends to infinity as
+$|k|\to\infty$. Hence the construction does not give an inverse
+bounded uniformly over all real frequencies. On a fixed window
+$|k|\le K$, $0\le\tau\le T$, the scalar inverse is bounded by
+$q(T)^{-1}\ee^{TK^2}$ because $q$ is positive and decreasing.
+This is a finite-window attenuation calculation, not a source-specific
+collision estimate.
+
+The pair of an amplitude and its first derivative is the natural next
+diagnostic. Fix $s>0$ to specify the relative units of derivative error
+and value error, and define, at a real frequency,
+\begin{equation}
+ X=\begin{pmatrix}H_\lambda(k)\\sH_\lambda'(k)\end{pmatrix},
+ \qquad
+ Y=\begin{pmatrix}\Obs_{\lambda,\tau}(k)\\
+                         s\partial_k\Obs_{\lambda,\tau}(k)\end{pmatrix}.
+\end{equation}
+Differentiating \eqref{eq:response} once gives the exact algebraic map
+\begin{equation}
+ Y=mP_aX,\qquad m=q(\tau)\ee^{-\tau k^2},\qquad
+ a=2s\tau k,\qquad
+ P_a=\begin{pmatrix}1&0\\-a&1\end{pmatrix}.
+ \label{eq:first-jet}
+\end{equation}
+Equivalently,
+\begin{equation}
+ P_a^{-1}Y=
+ \begin{pmatrix}\Obs\\s(\partial_k+2\tau k)\Obs\end{pmatrix}
+ =mX.
+ \label{eq:covariant-pair}
+\end{equation}
+This diagonal form does not remove measurement error by itself. Under
+the same change of coordinates an additive error set $E$ becomes
+$P_a^{-1}E$. Similarly, source uncertainty $E$ propagated through the
+exact map $\mathsf A=mP_a$ and then inverted returns
+$\mathsf A^{-1}(\mathsf A E)=E$.
+Changing the error model after changing coordinates would compare
+different information. These elementary observations motivate the
+pending sharp conditioning task in Section~\ref{sec:outstanding}; no
+sharp first-jet recovery theorem is claimed here.
+
+\subsection{What the representation establishes}
+
+The construction proves a complete analytic realization of an exact
+response under specified preparation and observation laws. It retains
+the geometric spectrum, every physical angular shell, the full radial
+integral, the passive reference, and the absolute gain. Its validity
+does not rest on numerical truncation. It does not derive the source
+scan or imprint from free cylinder dynamics, nor does it derive the
+linear phase-sensitive detector from an intrinsic measurement model.
+
+The positivity of $L$, $R$, and $\Phi$ also has distinct meanings.
+The Hamiltonian is bounded below, the bank is a positive normalized
+angular operator, and the source is positive. A real-frequency
+observation nevertheless integrates the source against an oscillatory
+cosine. Its zeros describe cancellation in this amplitude, not a zero
+eigenvalue of the positive Hamiltonian. Hilbert-space positivity alone
+therefore does not exclude a multiple zero of $H_\lambda$.
+
+The existing control families make this distinction concrete
+\cite{CollisionControls}. Their role is to test the premises of a
+proposed estimate, rather than to replace the canonical source:
+\begin{itemize}
+\item For applicable Euler-factor controls, smooth positive-source
+Fourier and heat operations persist, while the unchanged canonical
+theta arithmetic fails. A generic representation of this kind rejects
+none of their recorded collisions.
+\item Weighted-square and finite-prime constructions can retain
+positive half-line formulas while losing complete unit coefficients
+and the canonical reflection identity. Matching finitely many endpoint
+conditions does not establish the global smooth domains used here.
+\item Applicable reflected super-Gaussian or smooth positive primitive
+controls retain smoothness, positivity, reflection, and exponential
+moments without the exact theta expansion. Where the analytic
+hypotheses hold, the same nonvanishing multiplier preserves their
+collisions as well.
+\item Atomic or finite-profile controls can have Fourier observations
+and moments without satisfying the smooth field-domain hypotheses.
+No smooth-field realization for them follows from the present proof.
+\end{itemize}
+Consequently, naming the canonical source identifies the input but
+does not yet quantitatively separate it from colliding controls.
+Any future collision estimate must identify the additional arithmetic
+or analytic property that makes such a separation possible.

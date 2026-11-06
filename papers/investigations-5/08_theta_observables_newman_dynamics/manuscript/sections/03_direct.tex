@@ -1,0 +1,171 @@
+\section{Direct realization by conditional quadrature dynamics}\label{sec:direct}
+
+This section consolidates the direct branch's complete count construction
+\cite{TNDDirect,TNDDirectReview}. Fix $\omega=\varepsilon/\hbar>0$ and
+$\gamma>0$, set $T=1/\gamma$, and retain the free unitary
+\begin{equation}\label{eq:UtQt}
+ U(t)=\ee^{-\ii\omega tL_0},\qquad
+ Q_t=U(t)XU(t)^*=X-2\omega tP.
+\end{equation}
+The last equality is initially on the invariant
+$\Sch(\R)\otimes\K_{\rm fin}$ core. The closed powers are defined by
+\begin{equation}\label{eq:Qdomains}
+ \Dom Q_t^q=U(t)\Dom X^q,\qquad
+ \mathcal D_t=\Dom L_0\cap\Dom Q_t^2
+ =U(t)(\Dom L_0\cap\Dom X^2).
+\end{equation}
+This avoids assigning an unjustified maximal domain to the formal sum
+$X-2\omega tP$. The sign in \eqref{eq:UtQt} follows by conjugating
+$\ii\partial_k$ with $\ee^{-\ii\omega t(k^2+4n^2)}$.
+
+Supply the initial state
+$\rho_*=|f_{1/2}\rangle\langle f_{1/2}|\otimes R$, the monitored
+quadrature access, and the initial scale $H_{1/2}(0)$. For
+$0\le s\le t\le T$, put $a=\gamma(t-s)$ and define
+\begin{equation}\label{eq:Kraus}
+ B_j(a)=\ee^{-aX^2/2}\frac{(\sqrt aX)^j}{\sqrt{j!}},\qquad
+ K_j(t,s)=U(t)B_j(a)U(s)^*,\quad j=0,1,2,\ldots.
+\end{equation}
+At $a=0$ take $B_0(0)=I$ and $B_j(0)=0$ for $j>0$.
+The odd-count amplitude retains the sign of $X^j$.
+
+\begin{theorem}[Complete ideal instrument and calibrated Newman observation]
+\label{thm:direct}
+The operators \eqref{eq:Kraus} define a countably complete instrument
+on trace-class states, with a trace-preserving completely positive
+all-count channel. Its interval composition aggregates counts exactly.
+The no-count propagator sends $\mathcal D_s$ into $\mathcal D_t$ and
+satisfies there the strong equation
+\begin{equation}\label{eq:stronglaw}
+ \partial_tK_0(t,s)\psi=
+ \left(-\ii\omega L_0-\frac\gamma2Q_t^2\right)K_0(t,s)\psi.
+\end{equation}
+For the specified preparation let
+$\lambda(t)=1/2-\gamma t$ and
+$\widetilde\rho_t=K_0(t,0)\rho_*K_0(t,0)^*$. Then
+\begin{equation}\label{eq:conditional}
+ \widetilde\rho_t=p_tU(t)\rho^I_{\lambda(t)}U(t)^*,\qquad
+ p_t=\frac{Z_{\lambda(t)}}{Z_{1/2}}
+     =\frac{H_{\lambda(t)}(0)}{H_{1/2}(0)}\in(0,1].
+\end{equation}
+For every real $k$, the effects
+$E_\pm(t,k)=[I\pm\cos(kQ_t)]/2$ give joint probabilities
+\begin{equation}\label{eq:qpm}
+ q_\pm(t,k)=\Tr(\widetilde\rho_tE_\pm(t,k))
+ =\frac12\left[p_t\pm\frac{H_{\lambda(t)}(k)}{H_{1/2}(0)}\right].
+\end{equation}
+They satisfy $q_++q_-=p_t$, and their difference gives
+\eqref{eq:directintro} with the remaining probability $1-p_t$ assigned
+to failed conditioning.
+\end{theorem}
+
+\begin{proof}
+For $a>0$ the scalar squared amplitude is
+$\ee^{-y}y^j/j!$, $y=av^2$. Hence
+\[
+ \norm{B_0(a)}=1,\qquad
+ \norm{B_j(a)}^2=\frac{j^j\ee^{-j}}{j!}\le1\quad(j\ge1).
+\]
+The positive exponential series gives
+\begin{equation}\label{eq:countcomplete}
+ \sum_{j=0}^NK_j(t,s)^*K_j(t,s)
+ =U(s)\left[\ee^{-aX^2}\sum_{j=0}^N\frac{(aX^2)^j}{j!}\right]U(s)^*
+ \xrightarrow{\rm strong}I.
+\end{equation}
+For an explicit tail payment, if $0\le y\le R_0$ and
+$N+2\ge2R_0$, the remaining exponential series is at most
+$2R_0^{N+1}/(N+1)!$; the complement is bounded by the vector's spectral
+mass outside that interval. For positive trace-class $\rho$,
+\eqref{eq:countcomplete} implies that the omitted input trace tends
+to zero. Positive output tails have trace norm equal to their trace,
+so $\sum_jK_j\rho K_j^*$ converges in trace norm and preserves trace.
+The map $\psi\mapsto(K_j\psi)_{j\ge0}$ is an isometry; taking its
+count-diagonal partial trace proves complete positivity and countable
+additivity. This supplies the complete instrument without importing a
+general theorem for an unbounded Lindblad generator.
+
+For $r\le s\le t$, write $a=\gamma(t-s)$, $b=\gamma(s-r)$ and
+$c=a+b>0$. With $J=j+\ell$,
+\begin{equation}\label{eq:countcompose}
+ K_j(t,s)K_\ell(s,r)
+ =\sqrt{\binom Jj}\left(\frac ac\right)^{j/2}
+                    \left(\frac bc\right)^{\ell/2}K_J(t,r).
+\end{equation}
+The squared coefficients sum to one for each $J$ by the binomial
+theorem. Positive trace-norm convergence justifies regrouping the
+sequential outcome operations. Zero-duration factors use their stated
+identity/zero convention. In particular $K_0$ is a cocycle.
+
+For the strong law, let $\chi=U(s)^*\psi\in\Dom L_0\cap\Dom X^2$
+and $m_a(v)=\ee^{-av^2/2}$. Its first two derivatives obey
+\[
+ \norm{m_a'}_\infty\le\sqrt{a/\ee},\qquad
+ \norm{m_a''}_\infty\le(1+2/\ee)a.
+\]
+The weak product rule gives
+\begin{equation}\label{eq:graphproduct}
+ L_0(m_a\chi)=m_aL_0\chi-2m_a'\partial_v\chi-m_a''\chi,
+ \qquad X^2m_a\chi=m_aX^2\chi.
+\end{equation}
+Since $\Dom L_0=\Dom P^2\cap\Dom A$, these formulas prove domain
+preservation and graph continuity, including $a\downarrow0$.
+The multiplier difference quotient is dominated on $\Dom X^2$ by
+$|X^2\chi|/2$, so
+$\partial_a(m_a\chi)=-X^2m_a\chi/2$ strongly.
+Combining this with the free-unitary derivative on $\Dom L_0$ proves
+\eqref{eq:stronglaw} and the stated propagation of domains. For fixed
+$s<T$ the derivative is right-sided at $t=s$ and left-sided at $t=T$.
+The singleton $s=t=T$ prescribes the identity and has no nontrivial
+fixed-$s$ derivative in the admitted interval.
+
+The source identity
+\[
+ \ee^{-\gamma tX^2/2}f_{1/2}
+ =\sqrt{Z_{\lambda(t)}/Z_{1/2}}\,f_{\lambda(t)}
+\]
+proves \eqref{eq:conditional}. Lemma~\ref{lem:state} pays all domains
+for the ensemble vectors and their summed quadratic moments.
+The compact-interval lower bound for $Z$ makes $p_t>0$, including at
+$T$; the contraction makes $p_t\le1$.
+
+Real spectral calculus makes $E_\pm$ bounded positive effects summing
+to $I$. Bounded-factor trace cyclicity and $\Tr R=1$ give
+\[
+ \Tr\!\left[\frac{\widetilde\rho_t}{p_t}\cos(kQ_t)\right]
+ =\int_\R\frac{F_{\lambda(t)}(v)}{Z_{\lambda(t)}}\cos(kv)\dd v
+ =\frac{H_{\lambda(t)}(k)}{H_{\lambda(t)}(0)}.
+\]
+Multiplying by $p_t$ proves \eqref{eq:qpm}.
+The initial-state effects $K_0^*E_\pm K_0$ together with
+$I-K_0^*K_0$ sum to $I$, proving the joint-probability interpretation.
+\end{proof}
+
+Differentiation of the normalized family gives the additional exact laws
+\begin{equation}\label{eq:directtangents}
+ \dot p_t=-\gamma p_t\langle X^2\rangle_{\lambda(t)},\qquad
+ \partial_tf_{\lambda(t)}
+ =-\frac\gamma2(X^2-\langle X^2\rangle_{\lambda(t)})f_{\lambda(t)}.
+\end{equation}
+Both the factor $1/2$ and the normalization subtraction are required.
+The effective no-count expression is
+$H_{\rm kin}-\ii\hbar\gamma Q_t^2/2$, with coupling notation
+$\sqrt\gamma Q_t$. The convention agrees with the standard no-count
+formula \cite[Section 1, (4)--(11)]{CastinDalibardMolmer2008v1}; the
+infinite-dimensional proof here is the explicit multiplier and graph
+argument above. The outcome normalization follows the usual operation
+formalism \cite[Section III, (17)--(19)]{JacobsSteck2006v1}.
+
+The theta profile at later time is the distribution of $Q_t$, or
+interaction-frame position. It need not be the laboratory $X$ density
+after kinetic dispersion. The all-count channel is also different from
+its conditioned no-count branch. At $k=0$, $q_+=p_t$ and $q_-=0$;
+at $t=1/(2\gamma)$ the observation is exactly $H_0(k)=\xi((1+\ii k)/2)/8$.
+For nonreal $z$, \eqref{eq:fullH} still defines an entire continuation,
+but $\cos(zQ_t)$ is not asserted to be a bounded measurement.
+
+The theorem establishes the consistency and exact observation of a
+supplied ideal instrument. It does not derive the initial theta loader,
+the spatial imprint, access to $Q_t$, microscopic apparatus, or a useful
+signed bound. Its full count completeness and finite graph moments do
+not constrain whether the two signed quantities in
+\eqref{eq:collisionobs} vanish together.

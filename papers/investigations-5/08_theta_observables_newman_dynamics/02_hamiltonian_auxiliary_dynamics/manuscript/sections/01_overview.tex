@@ -1,0 +1,91 @@
+\section{The construction and its analytical content}
+\label{sec:overview}
+
+The central object is the even entire function
+\begin{equation}
+ H_\lambda(z)=\int_0^\infty
+ \ee^{\lambda v^2}\Phi(v)\cos(zv)\dd v,
+ \qquad
+ \Phi(v)=\sum_{m\ge1}
+ \bigl(2\pi^2m^4\ee^{9v}-3\pi m^2\ee^{5v}\bigr)
+ \ee^{-\pi m^2\ee^{4v}},\quad v\ge0.
+ \label{eq:intro-H}
+\end{equation}
+The source has a smooth even extension to the full line. Its rapid decay
+makes every real deformation parameter $\lambda$ admissible. With the
+normalization in \eqref{eq:intro-H},
+$H_0(z)=\xi((1+\ii z)/2)/8$ and
+$\partial_\lambda H_\lambda=-\partial_z^2H_\lambda$
+\cite{RodgersTao2020}. We will derive both identities from the source.
+
+The auxiliary construction has three layers. First, the complete cylinder
+Hamiltonian supplies a Green weight and a heat semigroup. Second, a
+specified scan of the angular damping produces $\Phi$, which is placed
+as a spatial amplitude. Third, an explicitly calibrated linear readout
+observes the evolved amplitude. Keeping these layers distinct isolates
+what the geometry proves from what the preparation and detector supply.
+
+The resulting theorem is simple to state. Write
+\begin{equation}
+ Q_1(\beta)=\sum_{n\ge1}\ee^{-\beta n^2},\qquad
+ q(\tau)=\frac{Q_1(\pi+4\tau)}{Q_1(\pi)}.
+ \label{eq:intro-q}
+\end{equation}
+The normalized angular bank, the prepared field, and the readout are
+defined precisely in Sections~\ref{sec:preparation} and~\ref{sec:readout}.
+
+\begin{theorem}[Complete response, overview]
+\label{thm:overview}
+For the specified source preparation and matched linear readout, the
+left-acting heat evolution on the complete cylinder gives
+\begin{equation}
+ \boxed{\Obs_{\lambda,\tau}(z)
+       =q(\tau)\ee^{-\tau z^2}H_\lambda(z).}
+ \label{eq:response-overview}
+\end{equation}
+This holds for every real $\lambda$, every $\tau\ge0$, and every $z\in\C$.
+For any fixed finite $M,T,Z,b\ge0$, all fixed finite mixed derivatives
+in $\lambda,\tau,z$ are continuous on
+\begin{equation}
+ |\lambda|\le M,\quad 0\le\tau\le T,\quad
+ |\Re z|\le Z,\quad |\Im z|\le b,
+ \label{eq:windows}
+\end{equation}
+and can be passed through the complete source, heat, Fourier, and trace
+operations. Proper-time derivatives at zero are right derivatives.
+Every bound depends on the specified finite derivative orders and window.
+\end{theorem}
+
+We first realize the complete self-adjoint operators, then derive
+summable angular tails and integrable radial majorants, and finally
+evaluate the response. This order also explains why fixed-frequency
+observation, although not bounded on a generic radial $L^2$ space, is
+well-defined on the prepared and evolved family.
+
+There are several distinct parameters:
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}lY@{}}
+\toprule
+Parameter & Meaning \\
+\midrule
+$v$ & Dimensionless physical cylinder coordinate. \\
+$u$ & External scan coordinate, later imprinted as $u=v$. \\
+$\beta$ & Angular damping parameter; the source scan uses $\beta=\pi\ee^{4u}$. \\
+$\lambda$ & Newman parameter in the prepared source $\ee^{\lambda v^2}\Phi(v)$. \\
+$\tau$ & Nonnegative dimensionless heat or Euclidean proper time. \\
+$k$, $z$ & Real radial momentum and its complex continuation. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+In particular, increasing $\tau$ is not increasing $\lambda$. Ordinary
+unitary laboratory evolution is a third evolution, discussed below.
+
+The parent manuscript provides the common background for the direct and
+auxiliary branches \cite{TNDBackground}. The present manuscript develops
+the auxiliary branch on its own. Its principal mathematical input is the
+complete-spectrum response note \cite{TNDAux}, accepted within its
+conditional scope by the branch assessment \cite{TNDAuxReview}, together
+with the shared geometry and source analysis
+\cite{TNDParent,TNDSharedReview}. The first-jet conditioning program
+\cite{TNDAuxConditioning} remains pending; it is separated from the
+established results in Section~\ref{sec:outstanding}.

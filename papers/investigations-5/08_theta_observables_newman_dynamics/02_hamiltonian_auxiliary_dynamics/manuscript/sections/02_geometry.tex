@@ -1,0 +1,162 @@
+\section{Cylinder geometry, complete spectrum, and the Green weight}
+\label{sec:geometry}
+
+\subsection{The geometric square}
+
+Let $\K=L^2(S^2,\Sigma;\dd\Omega)$ be the unit-sphere spinor space.
+Use the self-adjoint convention $D=-\ii\not{\nabla}$ and let
+$\Gamma$ be parallel chirality. Then
+\begin{equation}
+ \Gamma^*=\Gamma,\qquad \Gamma^2=I,\qquad
+ \Gamma D=-D\Gamma,
+ \qquad D\chi_{n,a}^{\pm}=\pm n\chi_{n,a}^{\pm},
+ \quad 1\le a\le2n,\quad n\ge1.
+ \label{eq:sphere-spectrum}
+\end{equation}
+We take $\chi^-_{n,a}=\Gamma\chi^+_{n,a}$ and write $A=D^2$.
+The projection $P_n$ onto the complete $A=n^2$ shell has rank $4n$.
+These eigenvalues and multiplicities are the $S^2$ specialization of the
+spinor spectrum in \cite[eqs.~(3.40), (3.54)]{CamporesiHiguchi1996}.
+
+Consider the complete cylinder
+\begin{equation}
+ C=\R\times S^2_{1/2},\qquad
+ g_C=\dd v^2+\tfrac14g_{S^2},\qquad
+ \dd\mathrm{vol}_C=\tfrac14\dd v\dd\Omega.
+\end{equation}
+In the product-measure representation its geometric Dirac operator is
+\begin{equation}
+ \Dc=-\ii\Gamma\partial_v+2D,
+ \qquad L_0=\Dc^2=-\partial_v^2+4A.
+ \label{eq:cylinder-square}
+\end{equation}
+The cross terms cancel by the anticommutation in
+\eqref{eq:sphere-spectrum}. Multiplication by $2$ is the unitary map from
+product-measure spinors to metric-volume spinors. It does not change the
+differential expression.
+
+The cylinder scalar curvature is $8$. The Lichnerowicz identity therefore
+also reads $\Dc^2=\nabla^*\nabla+2$. This is the same operator as
+\eqref{eq:cylinder-square}: the curvature contribution is already inside
+the Dirac square, and adding a further $2$ would change the model.
+The slash and curvature conventions agree with
+\cite[eqs.~(5.35)--(5.36)]{CamporesiHiguchi1996} after multiplication by
+$-\ii$ to make the Dirac operator self-adjoint.
+
+For a length scale $\ell_0>0$ and mass $m_{\mathrm{phys}}>0$, the supplied
+energy convention is
+\begin{equation}
+ H_{\mathrm{kin}}=\varepsilon L_0,
+ \qquad \varepsilon=\frac{\hbar^2}{2m_{\mathrm{phys}}\ell_0^2},
+ \qquad \tau=\frac{\varepsilon t_E}{\hbar}.
+ \label{eq:physical-scale}
+\end{equation}
+Thus $\ee^{-\tau L_0}$ is Euclidean evolution. Real laboratory time would
+instead give $\ee^{-\ii\varepsilon t_{\mathrm{lab}}L_0/\hbar}$.
+
+\subsection{Self-adjoint realization without a radial cutoff}
+
+Use the unitary full-line Fourier convention
+\begin{equation}
+ \widehat f(k)=(2\pi)^{-1/2}\int_\R\ee^{-\ii kv}f(v)\dd v.
+ \label{eq:fourier}
+\end{equation}
+In each pair $(\chi^+_{n,a},\chi^-_{n,a})$ the first-order multiplier is
+\begin{equation}
+ M_n(k)=\begin{pmatrix}2n&k\\k&-2n\end{pmatrix},\qquad
+ E_n(k)=\sqrt{k^2+4n^2},\qquad
+ \Pi_\pm(n,k)=\tfrac12\left(I\pm\frac{M_n(k)}{E_n(k)}\right).
+ \label{eq:signed-block}
+\end{equation}
+Since $M_n(k)^2=\omega_n(k)I$ with $\omega_n(k)=k^2+4n^2$,
+the maximal domains on $L^2(\R;\K)$ are
+\begin{align}
+ \Dom\Dc=\Dom L_0^{1/2}
+ &=\left\{f:\sum_n\int_\R\omega_n(k)
+           \norm{P_n\widehat f(k)}^2\dd k<\infty\right\},
+ \label{eq:dirac-domain}\\
+ \Dom L_0^p
+ &=\left\{f:\sum_n\int_\R\omega_n(k)^{2p}
+           \norm{P_n\widehat f(k)}^2\dd k<\infty\right\},
+ \qquad p\ge0.
+ \label{eq:square-domain}
+\end{align}
+
+\begin{proposition}[Complete realization]
+\label{prop:complete-realization}
+The multipliers above define self-adjoint operators. Finite complete-shell
+sums with radial coefficients in $C_c^\infty(\R)$ are cores for $\Dc$
+and every fixed finite integer power of $L_0$. Their spectra are
+\begin{equation}
+ \sigma(\Dc)=(-\infty,-2]\cup[2,\infty),\qquad
+ \sigma(L_0)=[4,\infty),
+ \label{eq:spectra}
+\end{equation}
+and are purely absolutely continuous in the radial spectral variable.
+\end{proposition}
+
+\begin{proof}
+Hermitian matrix multiplication is symmetric on its maximal domain.
+Testing a vector in the adjoint domain against compactly supported
+spectral functions in finitely many channels forces its image under
+$M_n(k)$ to be square-integrable. This gives exactly
+\eqref{eq:dirac-domain}; the scalar argument gives
+\eqref{eq:square-domain}. Hence the maximal operators equal their
+adjoints.
+
+Projection onto $\sum_{n\le N}P_n$ converges in each displayed graph norm
+by dominated convergence and commutes with the signed blocks. On this
+finite angular space the first-order graph norm is equivalent to the
+radial $H^1$ norm, and the graph norm of $L_0^p$ to $H^{2p}$ for integer
+$p$. Smooth cutoffs and mollification give the stated cores. No radial
+boundary condition is introduced.
+
+The eigenvalues of \eqref{eq:signed-block} are $\pm E_n(k)$, each of
+physical multiplicity $2n$; the square has multiplicity $4n$. Their
+essential ranges give \eqref{eq:spectra}. On each open half-line in $k$,
+the dispersions are smooth and strictly monotone with nonzero derivative.
+Pushing an integrable spectral density through them gives an absolutely
+continuous measure. The exceptional threshold preimages are singletons
+and have measure zero. Countable sums preserve absolute continuity.
+\end{proof}
+
+In particular, a fixed radial plane wave, cosine, or threshold value is
+not an $L^2$ eigenstate. Restricting to even radial functions reduces the
+square, but not the first-order operator: its radial derivative changes
+parity. Complete shells are the natural cutoffs when both signs of the
+Dirac operator are retained.
+
+\subsection{The Green diagonal and multiplicity cancellation}
+
+On shell $n$, the inverse of $-\partial_v^2+4n^2$ has kernel
+\begin{equation}
+ g_n(v,w)=\frac{\ee^{-2n|v-w|}}{4n}.
+ \label{eq:green-kernel}
+\end{equation}
+Indeed, away from $v=w$ it solves the homogeneous equation, while its
+first derivative has jump $-1$, producing the required unit delta
+under $-\partial_v^2$. Equivalently,
+\begin{equation}
+ g_n(v,v)=\int_\R\frac{\dd k}{2\pi(k^2+4n^2)}=\frac1{4n}.
+ \label{eq:green-diagonal}
+\end{equation}
+This is the complete radial integral. Evaluation of the resolvent at
+$k=0$ would give $1/(4n^2)$ and would not yield this weight.
+
+The angular operator supplied by the diagonal is
+\begin{equation}
+ W=(4\sqrt A)^{-1}=\sum_{n\ge1}\frac1{4n}P_n.
+ \label{eq:green-weight}
+\end{equation}
+It is bounded and positive but not trace class. For every $\beta>0$,
+however,
+\begin{equation}
+ \Tr_\K(W\ee^{-\beta A})
+ =\sum_{n\ge1}(4n)\frac1{4n}\ee^{-\beta n^2}
+ =Q_1(\beta).
+ \label{eq:theta-trace}
+\end{equation}
+This exact cancellation is the link between the cylinder geometry and
+the unit coefficients of the theta series. It retains all shells and
+both radial directions. It is not the trace of the full cylinder heat
+operator, which has infinite radial volume.

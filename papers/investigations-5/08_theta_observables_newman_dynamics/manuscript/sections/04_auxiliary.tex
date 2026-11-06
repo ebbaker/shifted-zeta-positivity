@@ -1,0 +1,215 @@
+\section{Auxiliary Hamiltonian proper-time response}\label{sec:aux}
+
+The auxiliary branch uses the natural heat operation $\ee^{-\tau L_0}$
+after a different preparation \cite{TNDAux,TNDAuxReview}.
+Let $\K_{\rm ref}$ be a passive copy of $\K$ with a fixed unitary
+identification $J:\K_{\rm ref}\to\K$, and put
+\begin{equation}\label{eq:HSsetup}
+ \mathscr H=L^2(\R;\HS(\K_{\rm ref},\K)),\qquad
+ B=R^{1/2}J,\quad BB^*=R,\quad\norm B_{\HS}=1.
+\end{equation}
+The physical operator acts on the left only. Denote this amplification
+by $L_{\rm left}$. Its maximal domains are
+\begin{equation}\label{eq:leftdomain}
+ \Dom L_{\rm left}^p=\left\{S\in\mathscr H:
+ \sum_n\int_\R(k^2+4n^2)^{2p}
+ \norm{P_n\widehat S(k)}_{\HS}^2\dd k<\infty\right\}.
+\end{equation}
+The first-order/form domain uses the weight $k^2+4n^2$.
+Complete physical shells and finitely many reference columns, followed
+by radial cutoff and smoothing, form a core. The passive reference
+adds multiplicity, but no right-energy weight or new physical angular
+degeneracy. The complete physical spectrum is still
+Proposition~\ref{prop:spectrum}'s spectrum in every reference column.
+
+Supply the linear amplitude field, its spatial imprint and its calibrated
+phase-sensitive observation:
+\begin{align}
+ S_{\lambda,0}(v)&=F_\lambda(v)B,&
+ S_{\lambda,\tau}&=\ee^{-\tau L_{\rm left}}S_{\lambda,0},\label{eq:Sprep}\\
+ \Obs_{\lambda,\tau}(z)
+ &=\sqrt{\pi/2}\,\Tr_{\K_{\rm ref}}(B^*\widehat S_{\lambda,\tau}(z)).
+ \label{eq:Oreadout}
+\end{align}
+The radial amplitude is $F_\lambda$ itself, with its absolute size;
+it is not $f_\lambda$ or a density matrix. Trace one in \eqref{eq:R}
+normalizes only the angular bank.
+
+\begin{theorem}[Complete supplied-amplitude response]\label{thm:aux}
+For every finite real $\tau\ge0$, real $\lambda$, and complex $z$,
+the prepared Fourier integral and pairing in \eqref{eq:Oreadout} exist
+and give
+\begin{equation}\label{eq:auxresponse}
+ \Obs_{\lambda,\tau}(z)=q(\tau)\ee^{-\tau z^2}H_\lambda(z),\qquad
+ q(\tau)=\frac{Q(\pi+4\tau)}{Q(\pi)}>0.
+\end{equation}
+Every finite mixed $\lambda,\tau,z$ derivative of the observed identity
+and every finite $\lambda,\tau,v$ derivative of the underlying field
+has a complete majorant on finite compact parameter sets.
+The prepared fields belong to every finite left graph domain, and
+time derivatives at $\tau=0$ are continuous right derivatives.
+Constants may depend on the orders and compact parameter ranges.
+\end{theorem}
+
+\begin{proof}
+First pay the domains and integrals. Let
+$g_{a,\lambda}(v)=v^{2a}F_\lambda(v)$.
+From \eqref{eq:R},
+$\norm{A^bB}_{\HS}^2=\mu_{2b}$ and
+$\norm{P_nB}_{\HS}^2=\ee^{-\pi n^2}/Q(\pi)$.
+Plancherel and the finite binomial expansion give the exact formula
+\begin{equation}\label{eq:HSgraph}
+ \norm{L_{\rm left}^p(g_{a,\lambda}^{(h)}B)}_{\mathscr H}^2
+ =\sum_{j=0}^{2p}\binom{2p}{j}4^{2p-j}\mu_{2p-j}
+       \norm{g_{a,\lambda}^{(h+j)}}_2^2.
+\end{equation}
+Every term is finite by \eqref{eq:Schwartzbound}, uniformly on compact
+$\lambda$ intervals. This pays all left graph powers and mixed prepared
+derivatives. The energy semigroup has norm $\ee^{-4\tau}$;
+extra finite graph powers justify strong time differentiation including
+right limits at zero. No arbitrary-data smoothing uniform at zero is used.
+
+For the stronger weighted integrals needed for complex frequency,
+use the Gaussian kernel
+\[
+ K_\tau(y)=(4\pi\tau)^{-1/2}\ee^{-y^2/(4\tau)},\qquad \tau>0,
+\]
+and take $K_0*g=g$. Commuting radial and angular multipliers give
+\begin{equation}\label{eq:heatfactor}
+ S_{\lambda,\tau}(v)=(K_\tau*F_\lambda)(v)\ee^{-4\tau A}B.
+\end{equation}
+For $w_{r,b}(v)=(1+|v|)^r\ee^{b|v|}$, submultiplicativity and Tonelli
+give, for $0\le\tau\le T$,
+\begin{equation}\label{eq:weightedheat}
+ \norm{w_{r,b}(K_\tau*g)}_1
+ \le\Gamma_{r,b}(T)\norm{w_{r,b}g}_1,
+ \quad
+ \Gamma_{r,b}(T)=\mathbb E[(1+\sqrt{2T}|N|)^r\ee^{b\sqrt{2T}|N|}]<\infty,
+\end{equation}
+where $N$ is a standard Gaussian. For a fully finite-order expression,
+Gaussian tilting gives, with
+$m_j=\mathbb E|N|^j=2^{j/2}\Gamma((j+1)/2)/\sqrt\pi$,
+\begin{equation}\label{eq:gaussianbound}
+ \Gamma_{r,b}(T)\le2\ee^{b^2T}
+ \sum_{j=0}^r\binom rj\sum_{\ell=0}^j\binom j\ell
+ (2bT)^{j-\ell}(2T)^{\ell/2}m_\ell.
+\end{equation}
+This follows by bounding $\ee^{b|y|}$ by $\ee^{by}+\ee^{-by}$ and
+using the shifted Gaussian of mean $\pm2bT$. At $T=0$ the actual
+$\Gamma$ equals one; the displayed upper bound may be nonsharp.
+
+Move derivatives onto the exact smooth source:
+\begin{equation}\label{eq:heatderivatives}
+ \partial_\lambda^a\partial_\tau^c\partial_v^hS_{\lambda,\tau}
+ =\sum_{j=0}^c\binom cj(-4)^{c-j}
+ (K_\tau*g_{a,\lambda}^{(h+2j)})
+ A^{c-j}\ee^{-4\tau A}B.
+\end{equation}
+With
+$\mathcal N_{a,h;r,b}(M)=\sup_{|\lambda|\le M}
+\norm{w_{r,b}g_{a,\lambda}^{(h)}}_1<\infty$, a complete majorant is
+\begin{equation}\label{eq:heatmajorant}
+ \norm{w_{r,b}\partial_\lambda^a\partial_\tau^c\partial_v^hS}_{L^1(\HS)}
+ \le\Gamma_{r,b}(T)\sum_{j=0}^c\binom cj4^{c-j}
+ \sqrt{\mu_{2(c-j)}}\,\mathcal N_{a,h+2j;r,b}(M).
+\end{equation}
+The $\mathcal N$ are bounded explicitly by expanding the polynomial
+in \eqref{eq:Schwartzbound} and using \eqref{eq:J}.
+Translations are continuous in these weighted $L^1$ spaces, by density
+of compactly supported continuous functions and submultiplicativity.
+Gaussian averaging in \eqref{eq:weightedheat} therefore proves
+$K_\tau*g\to g$ in the weighted norm as $\tau\downarrow0$.
+The parameterized source has compact image in each such space, so the
+convergence is uniform on compact $\lambda$ intervals.
+Likewise $A^b\ee^{-4\tau A}B\to A^bB$ in Hilbert--Schmidt norm by
+Gaussian angular summability. Integrating the positive-time heat
+derivative down to zero and iterating proves that the continuous limits
+of \eqref{eq:heatderivatives} are the actual right derivatives.
+
+The pairing is bounded in the angular Hilbert--Schmidt variable:
+\begin{equation}\label{eq:HSpair}
+ \norm{B^*Y}_1\le\norm B_{\HS}\norm Y_{\HS}=\norm Y_{\HS}.
+\end{equation}
+The weighted integrals just proved define
+$\widehat S(z)=(2\pi)^{-1/2}\int\ee^{-\ii zv}S(v)\dd v$
+as an entire Hilbert--Schmidt-valued function. Difference quotients are
+dominated using one additional moment and a slightly wider compact
+strip. This is pointwise evaluation on the prepared family, not a
+bounded evaluation functional on arbitrary radial $L^2$.
+
+For real $k$, full Fourier calculus now gives
+\[
+ P_n\widehat S_{\lambda,\tau}(k)
+ =\ee^{-\tau k^2}\ee^{-4\tau n^2}\widehat F_\lambda(k)P_nB.
+\]
+The trace-class pairing and the complete angular sum yield
+\begin{align*}
+ \Tr_{\K_{\rm ref}}(B^*\widehat S_{\lambda,\tau}(k))
+ &=\ee^{-\tau k^2}\widehat F_\lambda(k)\Tr_\K(\ee^{-4\tau A}R)\\
+ &=\ee^{-\tau k^2}\widehat F_\lambda(k)
+   \frac{\sum_{n\ge1}\ee^{-(\pi+4\tau)n^2}}{Q(\pi)}.
+\end{align*}
+The factor $\sqrt{\pi/2}$ in the readout cancels
+$\widehat F_\lambda=\sqrt{2/\pi}H_\lambda$.
+Both sides are entire in $z$, so the real identity extends to
+\eqref{eq:auxresponse}. Finally every finite mixed derivative is an
+actual integral,
+\begin{equation}\label{eq:Omixed}
+ \partial_\lambda^a\partial_\tau^c\partial_z^d\Obs
+ =\frac12\Tr_{\K_{\rm ref}}\!\left[
+ B^*\int_\R(-\ii v)^d\ee^{-\ii zv}
+ \partial_\lambda^a\partial_\tau^c S(v)\dd v\right],
+\end{equation}
+bounded by half of \eqref{eq:heatmajorant} with $r=d$, $h=0$ and
+$b\ge|\operatorname{Im}z|$. This proves the asserted finite-order scope.
+\end{proof}
+
+The limits above are independent: the source-sum tails use
+\eqref{eq:Ctail}; the physical angular and matched-reference tails use
+the Gaussian $\mu_b$ tails; radial Fourier tails follow by applying
+$(1-\partial_v^2)^N$ to polynomial insertions of the exact Schwartz
+source. Reflected source prefixes are not used as smooth graph-core
+approximations. Positive heat time preserves the required exponential
+moments by \eqref{eq:weightedheat}; preservation of the original
+double-exponential pointwise tail is not claimed.
+
+\subsection{Exact consequences and limitations}
+The positive series gives $q(\tau)>0$ at every finite $\tau\ge0$.
+Thus the entire multiplier in \eqref{eq:auxresponse} never vanishes.
+All zeros and their multiplicities agree with those of $H_\lambda$,
+including any collisions as $\lambda$ varies. At zero proper time
+$\Obs_{\lambda,0}=H_\lambda$.
+
+At fixed $\tau$, the observed Newman equation is the conjugated equation
+\begin{equation}\label{eq:modifiedPDE}
+ \begin{aligned}
+ \partial_\lambda\Obs
+ &=-(\partial_z+2\tau z)^2\Obs\\
+ &=-\Obs_{zz}-4\tau z\Obs_z-(2\tau+4\tau^2z^2)\Obs.
+ \end{aligned}
+\end{equation}
+For higher finite orders one takes repeated composition, including the
+product rule. The separate proper-time equation is
+$\partial_\tau\Obs=(q'/q-z^2)\Obs$; it does not identify $\tau$ with
+$\lambda$. If Euclidean time carries units, the convention is
+$\tau=\varepsilon t_E/\hbar$, distinct from laboratory unitary time.
+
+Recovery on the real line has exact amplification
+\begin{equation}\label{eq:inverse}
+ H_\lambda(k)=q(\tau)^{-1}\ee^{\tau k^2}\Obs_{\lambda,\tau}(k),
+ \qquad |q(\tau)^{-1}\ee^{\tau k^2}|
+ =\frac{Q(\pi)}{Q(\pi+4\tau)}\ee^{\tau k^2}.
+\end{equation}
+It is unbounded in $k$ for every fixed $\tau>0$. This is a limitation
+of this particular inverse response, not a general impossibility result
+for auxiliary dynamics or source-sensitive estimates. The construction
+supplies no uniform high-frequency recovery advantage.
+
+Only one angular heat factor appears: $4\tau$, not $8\tau$. The
+passive bank is not a second evolving density factor. With metric-volume
+spinors the isometry multiplies both $B$ and $S$ by $2$ and the adjoint
+uses $\dd\Omega/4$, leaving $B^*S$ unchanged. Known amplitude gains
+and their relative phase are part of the assumed readout law; an
+unknown gain would give only proportional recovery. No intrinsic source
+generation or hardware realization is implied by the Hilbert--Schmidt
+pairing.

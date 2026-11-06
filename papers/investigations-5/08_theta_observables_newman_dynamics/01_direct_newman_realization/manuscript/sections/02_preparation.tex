@@ -1,0 +1,195 @@
+\section{Geometric data and admissible preparation}\label{sec:preparation}
+
+\subsection{Complete cylinder and maximal domains}
+Let $\K=L^2(S^2,\Sigma;\dd\Omega)$ and
+$\HH=L^2(\R,\dd v;\K)$. Let $D$ be the self-adjoint unit-sphere Dirac
+operator, $\Gamma$ its chirality, and $A=D^2$. The classical angular spectrum
+is $D=\pm n$, $n\ge1$, with multiplicity $2n$ per sign
+\cite[(3.40), (3.54)]{CamporesiHiguchi1996}. Write $P_n$ for the rank-$4n$
+projection of $A$ at $n^2$. With $P=-\ii\partial_v$ and $X=v$, put
+\begin{equation}\label{eq:operators}
+ \Dc=\Gamma P+2D,\qquad L_0=\Dc^2=P^2+4A,\qquad
+ H_{\rm kin}=\varepsilon L_0,\quad
+ \varepsilon=\frac{\hbar^2}{2m_{\rm phys}\ell_0^2},\quad
+ \omega=\varepsilon/\hbar>0.
+\end{equation}
+The product connection and $\Gamma D=-D\Gamma$ remove mixed terms. On
+$\dd v^2+g_{S^2}/4$, the scalar curvature is $8$; the Dirac square is
+$(\nabla^{\mathcal C})^*\nabla^{\mathcal C}+2$. Thus the fixed curvature
+contribution $2\varepsilon$ is already in \eqref{eq:operators}
+\cite{TNDBackground,TNDParent}. No potential, wall or radial confinement
+is inserted. Metric volume is $\dd v\dd\Omega/4$; multiplication by $2$
+identifies product-measure spinors with that convention.
+
+Use $\widehat\psi(k)=(2\pi)^{-1/2}\int\ee^{-\ii kv}\psi(v)\dd v$.
+Choosing $\chi^-_{n,a}=\Gamma\chi^+_{n,a}$ makes each Fourier block
+\begin{equation}\label{eq:blocks}
+ M_n(k)=\begin{pmatrix}2n&k\\k&-2n\end{pmatrix},\quad
+ M_n(k)^2=(k^2+4n^2)I,\quad
+ \Pi_\pm(n,k)=\frac12\left(I\pm\frac{M_n(k)}{\sqrt{k^2+4n^2}}\right).
+\end{equation}
+There are $2n$ copies of each sign, all $n\ge1$, and all real $k$.
+The square has multiplicity $4n$. The maximal domains are
+\begin{align}
+ \Dom L_0^p&=\left\{\psi\in\HH:
+  \sum_n\int_\R(k^2+4n^2)^{2p}\norm{P_n\widehat\psi(k)}^2\dd k<\infty\right\},
+ \label{eq:graphdomain}\\
+ \Dom\Dc&=\left\{\psi\in\HH:
+  \sum_n\int_\R(k^2+4n^2)\norm{P_n\widehat\psi(k)}^2\dd k<\infty\right\},
+ \label{eq:Diracdomain}\\
+ \Dom X^q&=\{\psi:|v|^q\psi\in L^2\},\qquad
+ \Dom P^q=\{\psi:|k|^q\widehat\psi\in L^2\}.
+ \label{eq:XPdomain}
+\end{align}
+Real Hermitian multiplication on these maximal domains gives the
+self-adjoint realizations. Complete-shell cutoffs converge in graph norm;
+for finitely many shells the graph norm is a finite sum of Sobolev norms,
+so radial cutoff and mollification give a smooth core. In particular
+$\Dom L_0=\Dom P^2\cap\Dom A$, because the nonnegative commuting
+multipliers dominate their constituents and are bounded by their sum.
+The radial spectrum is continuous. Generalized Fourier modes are not
+normalizable states, and evenness reduces the square rather than $\Dc$.
+
+\subsection{The source supplied by the background dictionary}
+The full-line inverse of $-\partial_v^2+4n^2$ has kernel
+$\ee^{-2n|v-w|}/(4n)$: its derivative has jump $-1$.
+Its diagonal angular operator is $W=(4\sqrt A)^{-1}$, and
+\begin{equation}\label{eq:Q}
+ Q(\beta):=\Tr_\K(W\ee^{-\beta A})
+ =\sum_{n\ge1}4n\frac{\ee^{-\beta n^2}}{4n}
+ =\sum_{n\ge1}\ee^{-\beta n^2},\qquad\beta>0.
+\end{equation}
+All fixed $\beta$ derivatives converge locally uniformly. The prescribed
+scan $\beta(v)=\pi\ee^{4v}$ and $b(v)=\ee^vQ(\beta(v))$ satisfy
+\begin{equation}\label{eq:sourceconstruction}
+ \Phi(v)=\frac18(b''(v)-b(v)).
+\end{equation}
+Differentiating the complete series yields \eqref{eq:Phi}. The Green diagonal
+is position independent; the scan and imprint are supplied, not consequences
+of translating a probe in the free geometry.
+
+Let $\Theta(R)=1+2Q(\pi R^2)$. Jacobi inversion
+$\Theta(R)=R^{-1}\Theta(1/R)$ follows from the principal-root specialization
+of \cite[20.7.32]{DLMFThetaModular}. With $R=\ee^{2v}$ it gives
+$b(v)-b(-v)=-\sinh v$. Applying $(\partial_v^2-1)/8$ proves smooth evenness
+of the complete source. For $v\ge0$ every term of \eqref{eq:Phi} is positive,
+since $\pi n^2\ee^{4v}>3/2$. Therefore $\Phi>0$ on the full line.
+The zero mode in $\Theta$ is essential; finite reflected prefixes cannot
+replace this smooth reflection argument.
+
+\begin{lemma}[Complete source estimates]\label{lem:source}
+Set $r=|v|$, $x=\pi\ee^{4r}$ and $\kappa=2-3/\pi>0$. For each fixed
+$j\ge0$ there is a finite $B_j$ such that
+\begin{equation}\label{eq:sourcebounds}
+ \kappa\ee^r x^2\ee^{-x}\le\Phi(v),\qquad
+ |\Phi^{(j)}(v)|\le B_j\ee^r x^{j+2}\ee^{-x}.
+\end{equation}
+All polynomial and compact-parameter exponential weights used in this
+paper are integrable against these bounds, with complete source tails.
+\end{lemma}
+\begin{proof}
+On $v\ge0$ define
+\[
+ \mathsf P_0(x)=2x^2-3x,\qquad
+ \mathsf P_{j+1}(x)=(1-4x)\mathsf P_j(x)+4x\mathsf P_j'(x).
+\]
+Differentiation gives
+$\Phi^{(j)}(v)=\ee^v\sum_{n\ge1}\ee^{-n^2x}\mathsf P_j(n^2x)$,
+with $\deg\mathsf P_j=j+2$. If $a_j$ is its absolute coefficient sum, put
+$C_d(N)=\sum_{n>N}n^{2d}\ee^{-\pi(n^2-1)}$. Then
+\begin{equation}\label{eq:sourcetail}
+ \ee^v\sum_{n>N}\ee^{-n^2x}|\mathsf P_j(n^2x)|
+ \le a_jC_{j+2}(N)\ee^v x^{j+2}\ee^{-x},\qquad C_d(N)\longrightarrow0.
+\end{equation}
+This follows from $x\ge\pi>1$ and Gaussian summability. Taking $N=0$
+gives $B_j=a_jC_{j+2}(0)$. The first source term gives the lower bound;
+complete reflection transfers both bounds to $v<0$.
+For finite $M,B\ge0$ and fixed $a,d\ge0$, substitution
+$x=\pi\ee^{4|v|}$ shows that
+\begin{equation}\label{eq:J}
+ J_{a,d}(M,B)=\int_\R |v|^a\ee^{Mv^2+(B+1)|v|}x^d\ee^{-x}\dd v<\infty.
+\end{equation}
+The transformed integrand is a fixed power of $x$, powers of $\log(x/\pi)$,
+and $\exp[M\log^2(x/\pi)/16-x]$. The term $-x$ dominates all the positive
+terms. The same bound with $C_{j+2}(N)$ pays each integrated source tail.
+\end{proof}
+
+It follows, by dominated integration on complex parameter compacts, that
+$H_\lambda(z)$ is jointly entire and
+\begin{equation}\label{eq:Hmixed}
+ \partial_\lambda^a\partial_z^bH_\lambda(z)
+ =\frac12\int_\R v^{2a}(\ii v)^b\ee^{\lambda v^2}\Phi(v)\ee^{\ii zv}\dd v.
+\end{equation}
+This proves the Newman equation and all its fixed finite derivatives.
+Complex $z$ is an analytic continuation, not a bounded measurement label.
+
+\subsection{The normalized square-root state}
+Put $F_\lambda(v)=\ee^{\lambda v^2}\Phi(v)$ and
+\begin{equation}\label{eq:f}
+ Z_\lambda=\int_\R F_\lambda(v)\dd v=2H_\lambda(0),\qquad
+ f_\lambda=Z_\lambda^{-1/2}\ee^{\lambda v^2/2}\sqrt\Phi.
+\end{equation}
+On $|\lambda|\le M$, $0<Z_{-M}\le Z_\lambda\le Z_M<\infty$.
+For instance an explicit lower bound is the integral of the lower estimate
+in \eqref{eq:sourcebounds} over $0\le v\le1$, multiplied by
+$2\ee^{-Mv^2}$. Define
+\begin{equation}\label{eq:R}
+ R=\frac{W\ee^{-\pi A}}{Q(\pi)}
+   =\sum_{n\ge1}\frac{\ee^{-\pi n^2}}{4nQ(\pi)}P_n,\qquad
+ \alpha_b:=\Tr(A^bR)=\frac{\sum_{n\ge1}n^{2b}\ee^{-\pi n^2}}{Q(\pi)}.
+\end{equation}
+Here $R$ is an angular density operator, $\Tr R=1$, and every fixed
+$\alpha_b$ is finite. It is not a Gibbs state of the infinite cylinder.
+
+\begin{proposition}[Admissibility of the complete preparation]\label{prop:state}
+Each fixed Schwartz seminorm of $f_\lambda$ and each fixed mixed
+parameter/spatial derivative is bounded on compact real $\lambda$ intervals.
+For $\rho^I_\lambda=|f_\lambda\rangle\langle f_\lambda|\otimes R$ and every
+fixed integer $p\ge0$, the quadratic-form sandwich is positive trace class,
+with the exact payment
+\begin{equation}\label{eq:fullmoment}
+ \Tr(L_0^p\rho^I_\lambda L_0^p)
+ =\sum_{j=0}^{2p}\binom{2p}{j}4^{2p-j}\alpha_{2p-j}
+                                  \norm{P^jf_\lambda}_2^2<\infty.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The matching exponents in \eqref{eq:sourcebounds} give
+$|\Phi^{(\ell)}/\Phi|\le(B_\ell/\kappa)x^\ell$.
+Set $a_\ell=\Phi^{(\ell)}/\Phi$ and $h=\sqrt\Phi$.
+The identities $a_\ell'=a_{\ell+1}-a_\ell a_1$ yield the finite recurrence
+\begin{equation}\label{eq:sqrtrecurrence}
+ S_0=1,\qquad
+ S_{j+1}=\tfrac12a_1S_j+
+ \sum_{\ell=1}^j\frac{\partial S_j}{\partial a_\ell}
+                          (a_{\ell+1}-a_\ell a_1),\qquad h^{(j)}=hS_j.
+\end{equation}
+Every monomial of $S_j$ has weighted degree $j$ if $a_\ell$ has weight
+$\ell$. Hence
+$|h^{(j)}|\le c_j\ee^{r/2}x^{j+1}\ee^{-x/2}$ for finite $c_j$.
+The weakened exponent $-x/2$ still dominates every fixed polynomial,
+Gaussian and logarithmic loss. Finite Leibniz differentiation therefore
+bounds all spatial derivatives of $\ee^{\lambda v^2/2}h$ in Schwartz
+seminorms. Parameter derivatives introduce only powers of $v^2/2$.
+The integrals $Z_\lambda^{(a)}=\int v^{2a}F_\lambda\dd v$ and the positive
+lower bound for $Z_\lambda$ control derivatives of $Z_\lambda^{-1/2}$.
+Smooth positivity and complete reflection handle $v=0$.
+
+For \eqref{eq:fullmoment}, expand $(k^2+4n^2)^{2p}$ in the full spectral
+integral. Tonelli, Plancherel and \eqref{eq:R} give exactly the displayed
+finite sum. This is the convergent positive sum of weighted ensemble
+rank-one vectors; it does not assert that every vector in the density's
+closed support belongs to $\Dom L_0^p$.
+\end{proof}
+
+All physical angular tails are the corresponding Gaussian series. For
+fixed $j,N\ge0$ and $K>0$ the radial tail obeys
+\begin{equation}\label{eq:radialtail}
+ \int_{|k|>K}|k|^{2j}|\widehat f_\lambda(k)|^2\dd k
+ \le K^{-2N}\norm{P^{j+N}f_\lambda}_2^2.
+\end{equation}
+Thus approximation pays the full spectra. Constants depend on the orders;
+no order-uniform estimate follows. A positive Schwartz function does not in
+general have a Schwartz square root: the ratio argument above is essential.
+These are the preparation results of \cite[Section 3]{TNDDirect}, now in the
+notation used for the count and collision calculus.

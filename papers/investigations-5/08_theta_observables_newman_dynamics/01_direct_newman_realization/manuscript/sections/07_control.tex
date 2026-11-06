@@ -1,0 +1,100 @@
+\section{An exact colliding control and the scope of the mechanism}\label{sec:control}
+
+The instrument is source independent. Its application to a source uses
+positivity, compact-parameter square-root regularity and complete moment
+bounds. Consequently the generic identities must be tested on a source
+that meets those requirements and nevertheless collides. The following
+recorded reflected control \cite[Section 4, (9)--(12)]{ReflectedControl}
+provides such a test with an exact event inside the physical slab.
+
+\begin{theorem}[A smooth admissible source with a double event]\label{thm:control}
+Let
+\begin{align}
+ g(v)&=\ee^{-v^4}+\tfrac12\ee^{-(v-4)^4}
+                     +\tfrac12\ee^{-(v+4)^4},\label{eq:gcontrol}\\
+ \Phi_*(v)&=c\ee^{-v^2/4}g(v),\qquad
+ c=\left(16\int_0^\infty\cosh(v)\ee^{-v^2/4}g(v)\dd v\right)^{-1}>0.
+ \label{eq:controlsource}
+\end{align}
+This source admits the same complete angular preparation and count
+instrument with its own source normalization. It has all the fixed
+square-root and moment domains used above. Its transform has a nondegenerate
+double zero at $\lambda_*=1/4$, $k_*=\pi/4$, corresponding to laboratory
+time $t_*=1/(4\gamma)$.
+\end{theorem}
+\begin{proof}
+The source is strictly positive, even and smooth. Each derivative of a
+summand of $g$ is that summand times a polynomial. Positivity of the mixture
+therefore bounds $|g^{(\ell)}/g|$ by a fixed polynomial in $|v|$.
+The finite ratio recurrence \eqref{eq:sqrtrecurrence} bounds every derivative
+of $\sqrt g$ by a polynomial times $\sqrt g$. For $|v|\ge8$,
+$|v-b|\ge|v|/2$ for $b=0,\pm4$, so
+\begin{equation}\label{eq:controltail}
+ g(v)\le2\ee^{-v^4/16}.
+\end{equation}
+Thus $\ee^{(\lambda-1/4)v^2/2}\sqrt g$ and its fixed mixed derivatives
+have uniformly bounded Schwartz seminorms on each compact real $\lambda$
+interval. All polynomial and exponential moments of the source are finite.
+The normalization has a positive compact-interval lower bound.
+With the same $R$, \eqref{eq:fullmoment} pays the full radial and angular
+domains. The instrument proofs are unchanged.
+
+At $\lambda=1/4$, ordinary full-line Fourier translation, followed by
+evenness, gives
+\begin{equation}\label{eq:controlfactor}
+ H^*_{1/4}(k)=cF(k)(1+\cos4k),\qquad
+ F(k)=\int_0^\infty\ee^{-v^4}\cos(kv)\dd v.
+\end{equation}
+Let $M_r=\int_0^\infty v^r\ee^{-v^4}\dd v$.
+Integration of $(v\ee^{-v^4})'$ gives $M_4=M_0/4$.
+Cauchy--Schwarz implies $M_2^2\le M_0M_4$, hence $M_2\le M_0/2$.
+The global inequality $\cos y\ge1-y^2/2$ now gives
+\begin{equation}\label{eq:Fpositive}
+ F(k)\ge M_0(1-k^2/4)>0\qquad(|k|<2).
+\end{equation}
+At $k_*=\pi/4$ the factor $1+\cos4k$ and its first derivative vanish,
+while its second derivative is $16$. Therefore
+\begin{equation}\label{eq:controlcollision}
+ H^*_{1/4}(k_*)=(H^*_{1/4})'(k_*)=0,\qquad
+ (H^*_{1/4})''(k_*)=16cF(\pi/4)>0.
+\end{equation}
+Finally $1/2-\gamma t_*=1/4$ gives the stated interior physical time.
+Every step is analytical, including the positivity of the curvature.
+\end{proof}
+
+The control has a smooth state, positive success mass, all count outputs,
+the covariance law, the finite-sector transfer laws and the complete signed
+sum in \eqref{eq:conserved}. It satisfies the local collision description
+precisely. It fails the canonical integer-square arithmetic expansion and
+the canonical theta tail formula; its own super-Gaussian bounds pay the
+generic preparation requirements. Hence the theorem excludes an argument
+based solely on those generic dynamical properties on a domain containing
+this witness. It does not exclude source-sensitive analysis of the unchanged
+theta source.
+
+\subsection{What the other controls test}
+The wider repository control collection \cite{CollisionControls} separates
+premises rather than providing one universal counterexample class:
+\begin{center}\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}Y@{}}
+\toprule
+Control family & Relevant distinction \\\midrule
+Euler-factor sources & Fail the unchanged canonical arithmetic source; applicable positive smooth preparation and Fourier/filtering identities can survive. \\
+Weighted-square and finite-prime changes & Complete unit weights or full canonical reflection fail. Finite endpoint matches do not give the smooth full-line source domains. \\
+Reflected smooth and positive-primitive sources & Exact theta arithmetic is absent. Positivity, reflection and the applicable generic transport laws need not prevent collisions. \\
+Atomic or nonsmooth finite profiles & Fourier moments can exist while the present smooth square-root and graph-domain requirements fail or need a different construction. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+Only Theorem~\ref{thm:control}'s preparation and event are checked afresh
+here; this table does not claim a new domain audit of every family. A finite
+collision-control estimate should be tested where the relevant witness lies,
+not only in a different collision-free region.
+
+The analytical gain obtained so far is a complete representation and a
+precise collision dictionary. Equations~\eqref{eq:covariance},
+\eqref{eq:dj}, \eqref{eq:generate} and \eqref{eq:sectorcurvature} are also
+available by differentiating the same source integral. Their reorganization
+has not yet supplied an additional signed margin. A new mechanism must
+identify a consequence of the canonical source that survives its deformation
+and distinguishes the relevant controls quantitatively or structurally.

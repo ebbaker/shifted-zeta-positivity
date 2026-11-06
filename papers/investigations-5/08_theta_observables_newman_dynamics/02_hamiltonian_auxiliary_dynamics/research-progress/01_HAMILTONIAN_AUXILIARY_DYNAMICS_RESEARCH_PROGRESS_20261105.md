@@ -8,20 +8,21 @@
 
 | Next task | Type/model and reason | Readiness | Expected output |
 | --- | --- | --- | --- |
-| **TND-A-E02** | **E — Sol**; fixed realization/domain/readout audit | E01 return available; awaits shared TND-E03 disposition and author selection | Claim-by-claim scoped assessment and retained qualifications |
+| **TND-A-E03 r1** | **E — Sol**; exact first-jet map, error class and Gram-matrix proof route fixed | [Request issued][e03-request], [inputs frozen][e03-inputs]; ready for author selection, **unactivated** | Sharp finite-window first-jet inverse-error factor and matched direct/source-uncertainty comparison, or an exact failed clause |
 
-The [plan r1][plan] retains task limits; [Decision01][b01-return] selects the supplied-apparatus purpose. Use the [frozen request][e01-request] and [exact input record][e01-inputs]. The [E01 return][e01-return] now proves the conditional response factor in-note at proof-author scope. Assessment remains pending. The frozen request below is historical contract text, not a live task status.
+[B02 Decision02][b02-decision] completes the one-target decision at conceptual/contract scope. It selects a conditioning diagnostic, with no new positive collision margin or physical noise law. Its sharp bounds await E03 proof and E04 assessment. The accepted conditional E01/E02 representation and supplied-apparatus qualifications remain unchanged. The [B02 return][b02-record] binds the decision, request and current local navigation; dated earlier task paragraphs remain historical.
 
 ## Current register
 
 | ID | Type/model and reason | Current status | Dependency/specification |
 | --- | --- | --- | --- |
 | TND-A-B01 | B — Astra; select physical construction | **Complete r1 at conditional construction/contract scope**, 6 November; actual gpt-6-astra/max | [Decision01][b01-return]; one conceptual pass and one local clarification |
-| TND-A-E01 | E — Sol; execute frozen direct-integral method | **Complete r1 at proof-author conditional representation scope**, 6 November; gpt-6.1-sol/ultra | [Request][e01-request], [inputs][e01-inputs]; supplied apparatus retained |
-| TND-A-E02 | E — Sol; fixed proof/readout audit | **Pending shared prerequisite; unactivated** | [E01 return][e01-return] available; shared TND-E03 disposition still required; [plan E02][plan] |
-| TND-A-B02 | B — Astra; choose consequential target | **Pending** | E02 disposition; [plan B02][plan] |
-| TND-A-E03 | E — Sol; fixed estimate/identity | **Reserved; no request issued** | B02 contract; [plan E03][plan] |
+| TND-A-E01 | E — Sol; execute frozen direct-integral method | **Complete r1; accepted within conditional scope by E02**, 6 November; internal same-model assessment | [Request][e01-request], [inputs][e01-inputs]; supplied apparatus retained |
+| TND-A-E02 | E — Sol; fixed proof/readout audit | **Complete**, 6 November; gpt-6.1-sol/ultra; [Review01][e02-review] | All six E01 obligations accepted within supplied-apparatus scope; shared TND-E03 r2 reused once |
+| TND-A-B02 | B — Astra; choose consequential target | **Complete at conceptual/contract scope**, 6 November; gpt-6-astra/max, auxiliary chat0003 | [Decision02][b02-decision]; first-jet conditioning diagnostic, sharp bounds unproved |
+| TND-A-E03 | E — Sol; fixed first-jet norm/error proof | **r1 issued; unactivated** | [Frozen request][e03-request], [inputs][e03-inputs]; five obligations, one proof/correction pass |
 | TND-A-E04 | E — Sol; assess and integrate | **Pending** | E03 return; [plan E04][plan] |
+| TND-A-E05 | E — Sol recommended; fixed analytical manuscript synthesis | **Complete at analytical synthesis and local production scope**, 6 November; actual gpt-6-astra/max, auxiliary chat0003 | [Manuscript](../manuscript/main.tex), [Review02](../reviews/02_TND_A_E05_MANUSCRIPT_PRODUCTION_REVIEW_20261106.md), [Return08](handoffs/08_TND_A_E05_MANUSCRIPT_RETURN_RECORD_20261106.json); E03 remains unactivated |
 
 ## Opening intake — 5 November 2026
 
@@ -98,3 +99,87 @@ The [return record][e01-return] binds artifacts; [source-use receipt02][e01-sour
 [e01-return]: handoffs/04_TND_A_E01_R1_RETURN_RECORD_20261106.json
 [e01-continuation]: handoffs/04_TND_A_E01_R1_RETURN_AND_MODEL_CONTINUATION_20261106.md
 [e01-sources]: ../references/02_TND_A_E01_R1_SOURCE_USE_20261106.md
+
+## TND-A-E02 activation — 6 November 2026
+
+Edward Baker explicitly selected the branch realization assessment in existing auxiliary chat0002; actual recorded **gpt-6.1-sol / ultra**, verified in turn metadata. The [activation/input record](handoffs/05_TND_A_E02_ACTIVATION_INPUTS_20261106.json) freezes the plan r1 E02 specification and verifies the unchanged branch E01/request/math outputs and completed shared TND-E03 r2 review/records. Documentary navigation drift is separated from mathematical premises. One assessment plus one bounded correction check, root sole writer with two read-only same-model supports. Root also authored the earlier proof and shared review in this chat; this provenance remains explicit. The shared parent audit is reused, not repeated. B02 and all successors remain unactivated; no numerics or external/sibling/shared status changes.
+
+## TND-A-E02 return — 6 November 2026
+
+Prepared for Edward Baker with substantial LLM assistance, actual **gpt-6.1-sol / ultra**, existing auxiliary chat0002. **Complete: all six frozen E01 r1 obligations accepted within the conditional supplied-apparatus scope, with no required mathematical correction.** [Review01][e02-review] disposes the amplified realization/core/spectrum, all finite prepared left-energy domains, independent complete limits and Gaussian evolved weights, actual continuous right derivatives at zero, local absolute HS pairing/calibration, entire response and every finite mixed derivative, and its exact consequence/limit statements.
+
+The response remains `exp(-tau*z^2) Q1(pi+4*tau)/Q1(pi) H_lambda(z)`. It preserves zeros/multiplicities, including collisions; the observed equation is `d_lambda O = -(d_z+2*tau*z)^2 O`. Inverse amplification on the real line is unbounded for tau>0. Canonical source scan/imprint, passive bank, known gains and phase-sensitive detector law remain supplied. No intrinsic preparation, hardware/Born detector theorem, collision restriction or estimating/recovery gain follows.
+
+The [activation][e02-activation] verifies immutable E01 inputs/outputs and actual completed shared TND-E03 r2 records, separating seven documentary/live/reference-index changes. Shared parent premises were reused once; branch-specific amplification, preparation, weighted-evolution and readout uses were checked locally. One assessment and one bounded correction check were used. Root authored E01/shared E03/this assessment in the same chat/model; two read-only same-model supports share that provenance. This is internal assessment with shared premises, not specialist/formal independence.
+
+The [return record][e02-record] binds output identities and the six-obligation disposition; [source-use receipt03][e02-sources] records local use without a new literature import. Original issued r1, Decision01, branch proof/return and shared mathematical sources remain unchanged. No MC11, sibling or shared status changes, numerics, new mechanism, manuscript/snapshot, investigation closure or successor activation occurred. Chat history remains uniquely registered as auxiliary chat0002 and is managed by the repository capture tool.
+
+**Next: [B] TND-A-B02 — Astra.** Select one consequential target and compare at most two analytical approaches against direct analysis with the same information, or record a representation-only stop / exact missing estimate. B02 has one decision pass under [plan r1][plan]; issue E03/Sol only if a bounded contract is fixed. New physical mechanisms or stronger intrinsic/laboratory objectives require B01 revision. [Continuation/model-change guidance][e02-continuation] provides the routing table, retained scope, reading order and pasteable prompt. B02 is ready but unactivated; E03 remains reserved with no request.
+
+[e02-review]: ../reviews/01_TND_A_E02_REALIZATION_ASSESSMENT_20261106.md
+[e02-activation]: handoffs/05_TND_A_E02_ACTIVATION_INPUTS_20261106.json
+[e02-record]: handoffs/05_TND_A_E02_RETURN_RECORD_20261106.json
+[e02-continuation]: handoffs/05_TND_A_E02_RETURN_AND_MODEL_CONTINUATION_20261106.md
+[e02-sources]: ../references/03_TND_A_E02_SOURCE_USE_20261106.md
+
+## TND-A-B02 activation — 6 November 2026
+
+Edward Baker explicitly selected B02 in existing auxiliary chat0003, thread `01a1af80-4c0e-76c3-b030-c92591d2edba`; actual recorded **gpt-6-astra / max**, verified in turn metadata. The [activation/input record](handoffs/06_TND_A_B02_ACTIVATION_INPUTS_20261106.json) freezes plan r1 B02, verifies unchanged mathematical premises and all E02 return artifacts, and separates the four documentary changes since E02 intake. One target: recovery conditioning of the value-and-first-derivative pair on a finite real spectral window, compared with direct access using the same source information. At most two analytical approaches and one decision pass; root sole writer, no supporting agents. Deterministic data-error assumptions are diagnostic hypotheses, not a new detector or physical noise law. E03/E04 remain unactivated; no numerics or external/sibling/shared status changes.
+
+## TND-A-B02 return — 6 November 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra / max**, existing auxiliary chat0003. **Complete at conceptual/contract scope:** [Decision02][b02-decision] selects sharp finite-window recovery conditioning of `(H,s H')`, with fixed derivative units and the same canonical source information. One target, two analytical approaches and one decision pass; root sole writer, no supporting agents.
+
+The accepted Gaussian response gives a triangular first-jet map. The selected E03 target is its exact inverse Euclidean norm, including both complete angular attenuation and derivative mixing, plus the accuracy threshold for matching direct recovery. Covariant derivative processing must carry its transformed error ellipsoid. A fixed output-error-ball comparison is distinct from matched source uncertainty, whose exact image and inverse return the original set. No positive canonical first-jet margin, detector/noise law, practical gain or new collision restriction is obtained. The displayed sharp bounds remain pending execution and assessment.
+
+[E03 r1][e03-request] freezes the theorem, `|lambda|<=M`, `|k|<=K`, `0<=tau<=T` for fixed finite bounds and fixed `s>0`, first spectral derivative, unrestricted additive pair-error class, complete source/spectra, proof method, five completion obligations and finite work limit. It is issued for Sol and **unactivated**; E04 awaits its return. The [manifest][e03-inputs] records immutable evidence separately from live navigation. [Source-use receipt04][b02-sources] reuses accepted local inputs without a new article or primary-source theorem. [Return06][b02-record] records original-input rechecks and output identities.
+
+E02 acceptance remains conditional supplied-apparatus, internally assessed with shared premises. No prior mathematical source/request was rewritten. No numerics, physical redesign, manuscript/snapshot, investigation closure, external/sibling/shared status change or successor activation occurred. This chat retains its unique auxiliary chat0003 archive and bounded exact-turn capture.
+
+**Next: [E] TND-A-E03 r1 — Sol.** Prove the stated diagnostic or return the exact failed clause; the request contains the continuation prompt. A change of analytical target/error class returns to B02; a changed physical construction returns to B01.
+
+[b02-decision]: ../brainstorm/notes/02_TND_A_B02_FIRST_JET_CONDITIONING_DECISION_20261106.md
+[b02-record]: handoffs/06_TND_A_B02_RETURN_RECORD_20261106.json
+[b02-sources]: ../references/04_TND_A_B02_SOURCE_USE_20261106.md
+[e03-request]: handoffs/07_TND_A_E03_R1_FROZEN_REQUEST_20261106.md
+[e03-inputs]: handoffs/07_TND_A_E03_R1_INPUT_VERSIONS_20261106.json
+
+## TND-A-E05 manuscript activation — 6 November 2026
+
+Edward Baker requested a branch manuscript using the parent manuscript as background, with systematic analytical derivations and outstanding tasks at the end. This is **E — manuscript synthesis**, Sol recommended for fixed production; actual author-selected session **gpt-6-astra/max**, auxiliary chat0003. The [input record](handoffs/08_TND_A_E05_MANUSCRIPT_INPUT_VERSIONS_20261106.json) freezes the current mathematical sources, parent manuscript and pending E03 boundary. One evolving LaTeX manuscript and a visually checked PDF in ignored root output/pdf/; no snapshot. Root is sole writer. Existing E03/E04 and all external/sibling/shared tasks retain their statuses. No new numerical campaign or physical mechanism is selected.
+
+## TND-A-E05 manuscript return — 6 November 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra/max**,
+existing auxiliary chat0003. **Complete at analytical synthesis and local
+production scope.** The [17-page manuscript](../manuscript/main.tex) uses
+the parent manuscript as background and derives the complete spectrum,
+Green/theta source, absolute Newman normalization, amplified preparation,
+exact graph norms, weighted heat evolution and actual zero-time
+derivatives, calibrated response, finite mixed derivatives, zero
+preservation, conjugated dynamics and inverse attenuation. It ends with
+outstanding tasks. No numerical experiment is a premise or was executed.
+
+The author reiterated the large-file protocol. All editable sources,
+build instructions and small records are in the branch; the PDF and
+every build product are only in root ignored output/pdf/. There is one
+evolving manuscript and no new snapshot, commit or tag.
+[Production Review02](../reviews/02_TND_A_E05_MANUSCRIPT_PRODUCTION_REVIEW_20261106.md)
+records local mathematical checks, a clean LaTeX/BibTeX build, all-page
+visual inspection and final reinspection of the three changed pages.
+[Source-use05](../references/05_TND_A_E05_MANUSCRIPT_SOURCE_USE_20261106.md)
+records the exact inherited inputs and limited fresh primary-passage checks.
+[Note03](../notes/03_TND_A_E05_ANALYTICAL_MANUSCRIPT_SYNTHESIS_20261106.md)
+and [Return08](handoffs/08_TND_A_E05_MANUSCRIPT_RETURN_RECORD_20261106.json)
+record integration and identities. Root was the sole writer.
+
+All mathematical premises, the parent manuscript and the pending E03
+request/manifest matched the activation record at closeout. E01/E02
+retain conditional supplied-apparatus acceptance and internal shared
+premises; this editorial check is not independent specialist assessment.
+Sharp first-jet recovery constants remain unfinished. No parent, sibling,
+external task or original mathematical source was changed.
+
+**Next scientific task remains [E] TND-A-E03 r1 — Sol**, at the existing
+[frozen request][e03-request]. It remains issued and unactivated; E04 is
+pending. The manuscript request does not activate either successor.

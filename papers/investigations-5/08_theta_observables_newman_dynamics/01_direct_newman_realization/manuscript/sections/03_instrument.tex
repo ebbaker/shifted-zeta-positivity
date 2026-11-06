@@ -1,0 +1,138 @@
+\section{A complete count instrument along the free motion}\label{sec:instrument}
+
+\subsection{The transported quadrature}
+Fix $\gamma>0$, set $T=\gamma^{-1}$, and keep
+\begin{equation}\label{eq:Ut}
+ U(t)=\ee^{-\ii\omega tL_0},\qquad Q_t=U(t)XU(t)^*.
+\end{equation}
+The space $\mathscr C=\Sch(\R)\otimes\K_{\rm fin}$, with finite sums
+understood, is an invariant core for the required constituent powers.
+Conjugating $\ii\partial_k$ by the Fourier multiplier
+$\ee^{-\ii\omega t(k^2+4n^2)}$ gives
+\begin{equation}\label{eq:Qt}
+ Q_t=X-2\omega tP\quad\hbox{on }\mathscr C,\qquad
+ \Dom Q_t^q=U(t)\Dom X^q.
+\end{equation}
+Unitary conjugation specifies the closed realization; no equality with
+$\Dom X\cap\Dom P$ is required. Define the strong-law domain
+\begin{equation}\label{eq:Dt}
+ \mathcal D_t=\Dom L_0\cap\Dom Q_t^2
+             =U(t)(\Dom L_0\cap\Dom X^2).
+\end{equation}
+Both the controller and readout follow $Q_t$. A fixed laboratory-position
+attenuation would interact differently with the kinetic dispersion, since
+$P^2$ and $X^2$ do not commute.
+
+\subsection{Bounded outcomes, completeness and composition}
+For $0\le s\le t\le T$ and $a=\gamma(t-s)$ define
+\begin{equation}\label{eq:K}
+ B_j(a)=\ee^{-aX^2/2}\frac{(\sqrt aX)^j}{\sqrt{j!}},\qquad
+ K_j(t,s)=U(t)B_j(a)U(s)^*,\qquad j=0,1,2,\ldots.
+\end{equation}
+At $a=0$ put $B_0(0)=I$ and $B_j(0)=0$ for $j>0$. The signed factor
+$X^j$ is retained, including for odd counts. The count label is an apparatus
+outcome, not an additional angular multiplicity.
+
+\begin{theorem}[Complete ideal instrument]\label{thm:instrument}
+Each $K_j(t,s)$ is bounded. For a positive trace-class state $\rho$, the
+operations
+\[
+ \mathcal I_{t,s}(J)(\rho)=\sum_{j\in J}K_j(t,s)\rho K_j(t,s)^*,
+ \qquad J\subseteq\mathbb Z_{\ge0},
+\]
+converge in trace norm and form a countably additive completely positive
+instrument. The all-count channel preserves trace. Sequential intervals
+aggregate counts exactly, and the all-count channels compose.
+\end{theorem}
+\begin{proof}
+For $a>0$, the scalar squared multiplier is $\ee^{-y}y^j/j!$, $y=av^2$.
+Its maximum gives
+\begin{equation}\label{eq:Knorm}
+ \norm{B_0(a)}=1,\qquad
+ \norm{B_j(a)}^2=\frac{j^j\ee^{-j}}{j!}\le1\quad(j\ge1).
+\end{equation}
+Bounded pointwise convergence proves the strong zero-duration limits.
+Operator-norm continuity at zero is neither used nor generally true.
+Let $c_N(y)=\ee^{-y}\sum_{j=0}^Ny^j/j!$. The positive exponential series
+satisfies $0\le c_N\uparrow1$. For $0\le y\le R_0$ and $N+2\ge2R_0$,
+its tail is bounded by $2R_0^{N+1}/(N+1)!$, by a geometric bound on the
+successive ratios. On the complementary spectral interval it is at most
+one. Consequently
+\begin{equation}\label{eq:completeness}
+ \sum_{j=0}^NK_j(t,s)^*K_j(t,s)
+ =U(s)c_N(aX^2)U(s)^*\xrightarrow{\rm strong}I.
+\end{equation}
+Spectral decomposition of a positive trace-class $\rho$ and domination by
+its summable eigenvalues show that the omitted input trace tends to zero.
+Output tails are positive, so their trace norms equal their traces.
+This proves trace-norm convergence and trace preservation. The map
+$V\psi=(K_j\psi)_{j\ge0}$ is an isometry by \eqref{eq:completeness};
+projection onto a subset of count coordinates followed by the count-space
+partial trace proves complete positivity and countable additivity, including
+finite matrix amplifications.
+
+For $r\le s\le t$, set $a=\gamma(t-s)$, $b=\gamma(s-r)$ and $c=a+b>0$.
+Direct multiplication gives, with $J=j+\ell$,
+\begin{equation}\label{eq:composition}
+ K_j(t,s)K_\ell(s,r)
+ =\sqrt{\binom Jj}\left(\frac ac\right)^{j/2}
+                     \left(\frac bc\right)^{\ell/2}K_J(t,r).
+\end{equation}
+The \emph{squared} coefficients sum to one for each $J$. Summing the
+corresponding operations, rather than the amplitudes, therefore recovers
+the aggregate-count operation. Positive trace-norm convergence justifies
+regrouping. At zero durations the stated identity/zero convention applies.
+Summing over $J$ gives composition of the all-count channels.
+\end{proof}
+
+The instrument is defined by bounded operations on all states. This proof
+supplies the required infinite-count result directly; it does not invoke an
+unbounded-generator master-equation theorem or a microscopic dilation.
+
+\subsection{The no-count strong law}
+\begin{theorem}[No-count propagation]\label{thm:strong}
+The no-count operators satisfy $K_0(t,s)K_0(s,r)=K_0(t,r)$, send
+$\mathcal D_s$ into $\mathcal D_t$, and obey
+\begin{equation}\label{eq:strong}
+ \partial_tK_0(t,s)\psi=
+ \left[-\ii\omega L_0-\frac\gamma2Q_t^2\right]K_0(t,s)\psi,
+ \qquad\psi\in\mathcal D_s.
+\end{equation}
+For fixed $s<T$, derivatives are right-sided at $t=s$ and left-sided at
+$t=T$. The singleton $s=t=T$ has no nontrivial fixed-$s$ derivative
+inside the prescribed time interval.
+\end{theorem}
+\begin{proof}
+The cocycle follows from \eqref{eq:composition} at count zero. Put
+$\chi=U(s)^*\psi\in\Dom L_0\cap\Dom X^2$ and
+$m_a(v)=\ee^{-av^2/2}$. Its first two derivatives have the bounds
+\[
+ \norm{m_a'}_\infty\le\sqrt{a/\ee},\qquad
+ \norm{m_a''}_\infty\le(1+2/\ee)a.
+\]
+The weak Sobolev product rule gives
+\begin{equation}\label{eq:product}
+ L_0(m_a\chi)=m_aL_0\chi-2m_a'\partial_v\chi-m_a''\chi,
+ \qquad X^2m_a\chi=m_aX^2\chi.
+\end{equation}
+Since $\chi\in\Dom P^2\cap\Dom A$, all terms belong to $\HH$.
+The angular operator commutes with $m_a$. These formulas prove preservation
+of both constituent domains and graph continuity, including at $a=0$.
+No mixed $XP$ assumption is inserted.
+For admissible $a,a+h\ge0$, the mean-value bound
+$|(m_{a+h}-m_a)/h|\le v^2/2$ gives
+$\partial_a(m_a\chi)=-X^2m_a\chi/2$ strongly on $\Dom X^2$.
+The free-unitary derivative holds on $\Dom L_0$ by full spectral calculus.
+Combining their difference quotients and using graph continuity proves
+\eqref{eq:strong}, together with the conjugated-domain assertion.
+The same argument with one-sided quotients handles the endpoints.
+\end{proof}
+
+The effective expression is
+$H_{\rm kin}-\ii\hbar\gamma Q_t^2/2$, with coupling notation
+$\sqrt\gamma Q_t$. Its sign and half factor agree with the standard
+no-count convention \cite[Section 1, (4)--(11)]{CastinDalibardMolmer2008v1}.
+It is not asserted to be self-adjoint, and the theorem makes no claim about
+a larger maximal domain for that formal effective generator. The domain
+and convergence statements are exactly what the subsequent preparation
+and observation require \cite[Section 4]{TNDDirect}.

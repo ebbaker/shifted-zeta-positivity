@@ -1,0 +1,172 @@
+\section{Heat evolution with complete derivative control}
+\label{sec:heat}
+
+\subsection{Semigroup and prepared strong solutions}
+
+Functional calculus for the realization in Section~\ref{sec:preparation}
+gives
+\begin{equation}
+ P_n\widehat{\ee^{-\tau L}S}(k)
+ =\ee^{-\tau(k^2+4n^2)}P_n\widehat S(k),\qquad
+ \norm{\ee^{-\tau L}}=\ee^{-4\tau},\quad \tau\ge0.
+ \label{eq:semigroup}
+\end{equation}
+Dominated convergence proves strong continuity at zero. For $r\ge0$ and
+$\tau>0$,
+\begin{equation}
+ \norm{L^r\ee^{-\tau L}}
+ =\sup_{x\ge4}x^r\ee^{-\tau x}<\infty.
+ \label{eq:smoothing}
+\end{equation}
+This gives positive-time left-energy smoothing. It supplies neither
+uniform arbitrary-data smoothing at zero nor reference-side regularity.
+The semigroup is not compact: even one angular channel contains a
+nonzero multiplication operator on a nonatomic radial spectral space.
+In particular it is not trace class.
+
+For data in $\Dom L$, the semigroup is the unique strong solution of
+$\partial_\tau S=-LS$. Indeed, a difference $U$ of two strong solutions
+with zero initial data satisfies
+\begin{equation*}
+ \frac\dd{\dd\tau}\norm{U(\tau)}^2
+ =-2\braket{U(\tau)}{LU(\tau)}
+ \le-8\norm{U(\tau)}^2,
+\end{equation*}
+so its norm remains zero. Define the prepared evolution by
+\begin{equation}
+ S_{\lambda,\tau}=\ee^{-\tau L}(F_\lambda B).
+ \label{eq:evolved-field}
+\end{equation}
+Proposition~\ref{prop:graph-identity} gives, at every finite order,
+\begin{align}
+ \partial_\lambda^a\partial_v^h\partial_\tau^cS_{\lambda,\tau}
+ &=(-1)^c\ee^{-\tau L}L^c(f_{a,\lambda}^{(h)}B),
+ \label{eq:graph-evolution}\\
+ \norm{L^p\partial_\lambda^a\partial_v^h\partial_\tau^cS_{\lambda,\tau}}
+ &\le\ee^{-4\tau}\norm{L^{p+c}(f_{a,\lambda}^{(h)}B)}.
+ \label{eq:graph-evolution-bound}
+\end{align}
+Strong continuity in the graph spaces, with one extra finite power for
+each differentiation, gives the actual right derivatives at zero.
+Compactness of the parameterized initial family makes convergence
+uniform on $|\lambda|\le M$.
+
+\subsection{Weighted spatial estimates}
+
+Graph control alone does not justify an entire pointwise Fourier
+readout. We therefore propagate exponential spatial moments explicitly.
+Let
+\begin{equation}
+ K_\tau(y)=(4\pi\tau)^{-1/2}\ee^{-y^2/(4\tau)},\qquad \tau>0,
+ \qquad K_0*f=f.
+ \label{eq:heat-kernel}
+\end{equation}
+The commuting radial and angular multipliers give
+\begin{equation}
+ S_{\lambda,\tau}(v)
+ =(K_\tau*F_\lambda)(v)\,\ee^{-4\tau A}B.
+ \label{eq:heat-factorization}
+\end{equation}
+This is initially an equality in $\HH$. The following estimates also
+place both sides in all weighted spaces needed for observation.
+
+The weight $w_{r,b}(v)=(1+|v|)^r\ee^{b|v|}$ is submultiplicative:
+$w_{r,b}(x+y)\le w_{r,b}(x)w_{r,b}(y)$. For a standard real Gaussian
+$X$, set
+\begin{equation}
+ \gamma_{r,b}(T)=
+ \mathbb E\bigl[(1+\sqrt{2T}|X|)^r\ee^{b\sqrt{2T}|X|}\bigr],
+ \qquad \gamma_{r,b}(0)=1.
+ \label{eq:gamma}
+\end{equation}
+Then $\norm{w_{r,b}K_\tau}_1\le\gamma_{r,b}(T)<\infty$ for
+$0<\tau\le T$. For an explicit bound, write
+$m_\ell=\mathbb E|X|^\ell
+=2^{\ell/2}\Gamma((\ell+1)/2)/\sqrt\pi$. Exponential tilting of
+the Gaussian gives
+\begin{equation}
+ \gamma_{r,b}(T)\le2\ee^{b^2T}
+ \sum_{j=0}^r\binom rj\sum_{\ell=0}^j\binom j\ell
+ (2bT)^{j-\ell}(2T)^{\ell/2}m_\ell.
+ \label{eq:gamma-bound}
+\end{equation}
+To see this, expand $(1+|Y|)^r$ for $Y=\sqrt{2T}X$, bound
+$\ee^{b|Y|}$ by $\ee^{bY}+\ee^{-bY}$, and complete the square.
+The tilted means are $\pm2bT$, so the triangle and binomial inequalities
+give \eqref{eq:gamma-bound}. The convention $0^0=1$ covers the endpoints;
+the bound need not be sharp there.
+
+Tonelli's theorem and submultiplicativity now imply
+\begin{equation}
+ \norm{w_{r,b}(K_\tau*f)}_1
+ \le\gamma_{r,b}(T)\norm{w_{r,b}f}_1,
+ \qquad 0\le\tau\le T.
+ \label{eq:weighted-convolution}
+\end{equation}
+This estimate propagates every fixed polynomial and exponential
+moment. No claim that positive-time convolution preserves the source's
+original double-exponential spatial decay is needed.
+
+Move derivatives of the heat kernel onto the smooth, integrable prepared
+data. For any finite $a,c,h\ge0$, this yields
+\begin{equation}
+ \partial_\lambda^a\partial_\tau^c\partial_v^hS_{\lambda,\tau}
+ =\sum_{j=0}^c\binom cj(-4)^{c-j}
+ (K_\tau*f_{a,\lambda}^{(h+2j)})\,
+ A^{c-j}\ee^{-4\tau A}B.
+ \label{eq:heat-derivatives}
+\end{equation}
+Consequently, on the parameter window \eqref{eq:windows},
+\begin{align}
+ &\norm{w_{r,b}\partial_\lambda^a\partial_\tau^c
+                  \partial_v^hS_{\lambda,\tau}}_{L^1(\HS)}
+ \le\mathcal M_{a,c,h;r,b}(M,T),
+ \label{eq:heat-majorant}\\
+ &\mathcal M_{a,c,h;r,b}(M,T)
+ :=\gamma_{r,b}(T)\sum_{j=0}^c\binom cj4^{c-j}
+       \sqrt{\mu_{2(c-j)}}\,
+       \mathcal N_{a,h+2j;r,b}(M)<\infty.
+ \label{eq:M-definition}
+\end{align}
+An additional left power $L^p$ has the same absolute estimate with $c$
+replaced by $c+p$. An angular tail replaces the appropriate $\mu$
+moment by the vanishing tail in \eqref{eq:bank-tail}. These estimates
+justify complete angular and reference limits as well as the radial
+integrals.
+
+\subsection{Why the limits at zero are actual derivatives}
+
+For $\tau>0$, integration by parts and the Gaussian kernel justify
+\eqref{eq:heat-derivatives}. A bound alone would not establish that
+its limit at zero differentiates the original field. The missing step
+is continuity in the weighted Banach spaces.
+
+Translation is continuous in $L^1(w_{r,b}\dd v)$. Indeed, approximate
+by compactly supported continuous functions; for the remainder, the
+translation norm is at most $w_{r,b}(y)$ times its original norm.
+Writing $K_\tau*f-f$ as the Gaussian average of translation differences
+therefore gives convergence to zero. A dominating random variable is
+\begin{equation*}
+ \bigl(1+w_{r,b}(\sqrt{2T}X)\bigr)\norm{w_{r,b}f}_1,
+\end{equation*}
+which is integrable by \eqref{eq:gamma}. This convergence is uniform on
+compact sets of $f$ in the weighted space. Section~\ref{sec:source}
+established precisely that compactness for
+$\{f_{a,\lambda}^{(h)}:|\lambda|\le M\}$.
+
+On the angular side,
+$A^s\ee^{-4\tau A}B\to A^sB$ in Hilbert--Schmidt norm by
+\eqref{eq:bank-moments} and dominated convergence. Hence every
+expression on the right side of \eqref{eq:heat-derivatives} has a
+continuous weighted limit at zero. Integrating the positive-time
+identity
+\begin{equation*}
+ \partial_\tau(K_\tau*f)=K_\tau*f''
+\end{equation*}
+from a positive lower endpoint and then taking that endpoint to zero
+shows that its limiting value is the actual right derivative. Iteration
+on the controlled derivatives gives every finite order. The same
+argument, using the next parameter insertion or spatial derivative,
+proves all stated mixed interchanges. Thus
+\eqref{eq:heat-majorant} controls continuous integral identities,
+including the boundary $\tau=0$.

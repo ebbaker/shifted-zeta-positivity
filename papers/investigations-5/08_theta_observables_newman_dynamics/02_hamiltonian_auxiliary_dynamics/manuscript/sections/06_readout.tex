@@ -1,0 +1,171 @@
+\section{The calibrated response and its derivatives}
+\label{sec:readout}
+
+\subsection{A well-defined phase-sensitive observation}
+
+For $X\in\HS(\Href,\K)$, the product $B^*X$ is trace class and
+\begin{equation}
+ \norm{B^*X}_1\le\norm B_{\HS}\norm X_{\HS}=\norm X_{\HS},
+ \qquad |\Tr_{\Href}(B^*X)|\le\norm X_{\HS}.
+ \label{eq:trace-pairing}
+\end{equation}
+For example, expanding in orthonormal bases and applying Cauchy--Schwarz
+to the two Hilbert--Schmidt coefficient arrays gives the trace bound;
+the trace-norm statement is the corresponding product inequality.
+This is the Hilbert--Schmidt pairing, conjugate-linear in the fixed
+first slot. It is independent of the choice of reference basis. The
+matched unitary $J$ fixes the relative preparation and readout phase.
+
+The weighted estimates give a Bochner integral
+\begin{equation}
+ \widehat S_{\lambda,\tau}(z)
+  =(2\pi)^{-1/2}\int_\R\ee^{-\ii zv}S_{\lambda,\tau}(v)\dd v,
+ \qquad z\in\C,
+ \label{eq:field-fourier}
+\end{equation}
+and make it entire. For real $k$ this is a continuous representative
+of the $L^2$ Fourier transform. Fixed-$k$ evaluation is not a bounded
+functional on arbitrary radial $L^2$ data; the weighted regularity of
+the prepared family is what makes \eqref{eq:field-fourier} available.
+
+The dimensionless calibrated observation is defined by
+\begin{equation}
+ \Obs_{\lambda,\tau}(z)
+ =\sqrt{\frac\pi2}\,
+   \Tr_{\Href}\bigl(B^*\widehat S_{\lambda,\tau}(z)\bigr).
+ \label{eq:readout}
+\end{equation}
+The normalization is absolute. In the supplied physical calibration,
+let $S^{\mathrm{phys}}=gS$ with a known $g>0$, and let the raw
+phase-sensitive detector output be
+\begin{equation}
+ y(k)=\eta\Tr_{\Href}(B^*\widehat S^{\mathrm{phys}}(k)),
+ \qquad \eta\in\C\setminus\{0\}
+ \quad\hbox{known, including its phase}.
+ \label{eq:raw-readout}
+\end{equation}
+Then $\sqrt{\pi/2}\,y/(\eta g)$ is exactly \eqref{eq:readout}.
+This law is an explicit model assumption. It is a linear amplitude
+observation and is not derived here from a Born probability or a
+laboratory detector construction.
+
+There is no residual metric factor. Under the product-to-metric unitary
+$U=2$, the prepared field and reference become $US$ and $UB$.
+The two factors of $2$ in their pairing cancel the angular metric
+measure $1/4$, so the pairing in \eqref{eq:readout} is unchanged.
+Nor does the adjoint $B^*$ introduce right-hand heat evolution.
+
+\subsection{Evaluation on the complete spectrum}
+
+\begin{theorem}[Exact response]
+\label{thm:response}
+For the preparation \eqref{eq:prepared-field}, left evolution
+\eqref{eq:evolved-field}, and calibrated readout \eqref{eq:readout},
+\begin{equation}
+ \Obs_{\lambda,\tau}(z)
+  =q(\tau)\ee^{-\tau z^2}H_\lambda(z),
+ \qquad q(\tau)=\frac{Q_1(\pi+4\tau)}{Q_1(\pi)}>0.
+ \label{eq:response}
+\end{equation}
+This identity has all the finite-order regularity and uniform compact
+window bounds stated in Theorem~\ref{thm:overview}.
+\end{theorem}
+
+\begin{proof}
+For real $k$, the complete multiplier gives
+\begin{equation}
+ P_n\widehat S_{\lambda,\tau}(k)
+ =\ee^{-\tau k^2}\ee^{-4\tau n^2}
+     \widehat F_\lambda(k)P_nB.
+ \label{eq:channel-response}
+\end{equation}
+The trace is absolutely convergent by \eqref{eq:trace-pairing} and the
+bank moments. It can therefore be evaluated either shell by shell or
+by cyclicity of the trace-class products:
+\begin{align}
+ \Tr_{\Href}(B^*\ee^{-4\tau A}B)
+ &=\Tr_\K(\ee^{-4\tau A}R)
+ \nonumber\\
+ &=\frac1Q\sum_{n\ge1}\ee^{-(\pi+4\tau)n^2}
+  =q(\tau).
+ \label{eq:trace-q}
+\end{align}
+There is one left heat factor, which is why the shift is $4\tau$.
+Combining \eqref{eq:channel-response} with
+\eqref{eq:H-fourier} and \eqref{eq:readout} cancels
+$\sqrt{\pi/2}\sqrt{2/\pi}=1$ and proves \eqref{eq:response} on
+the real axis. Both sides are entire in $z$, so the identity theorem
+extends it to $\C$. The positivity of $q$ follows termwise from its
+complete series. The derivative claims follow from the bounds below.
+\end{proof}
+
+At $\tau=0$, $q(0)=1$ and $\Obs_{\lambda,0}=H_\lambda$.
+In particular $\Obs_{0,0}=\xi((1+\ii z)/2)/8$. This checks the
+source, Fourier, bank, volume, and detector normalizations together.
+The source sum and the physical-shell sum enter different parts of
+the calculation; no diagonal identification between them is made.
+
+\subsection{Integral and scalar forms of every finite derivative}
+
+Combining the two normalization factors directly in
+\eqref{eq:readout} gives the useful integral formula
+\begin{equation}
+ \partial_\lambda^a\partial_\tau^c\partial_z^d\Obs_{\lambda,\tau}(z)
+ =\frac12\Tr_{\Href}\left[
+ B^*\int_\R(-\ii v)^d\ee^{-\ii zv}
+       \partial_\lambda^a\partial_\tau^cS_{\lambda,\tau}(v)\dd v
+ \right].
+ \label{eq:readout-derivative}
+\end{equation}
+For $|\Im z|\le b$, its absolute value is at most
+\begin{equation}
+ \frac12\mathcal M_{a,c,0;d,b}(M,T),
+ \label{eq:readout-majorant}
+\end{equation}
+because $|v|^d\ee^{b|v|}\le w_{d,b}(v)$. The continuity results of
+Section~\ref{sec:heat} justify every interchange and the actual
+right-time derivatives at zero. This also proves the entire extension
+used in the theorem without relying on a formal complex Fourier
+evaluation on generic $L^2$ vectors.
+
+There is a complementary scalar recursion for calculating these
+derivatives. The angular series gives
+\begin{equation}
+ q^{(s)}(\tau)=\frac{(-4)^s}{Q}
+       \sum_{n\ge1}n^{2s}\ee^{-(\pi+4\tau)n^2},
+ \qquad |q^{(s)}(\tau)|\le4^s\mu_s.
+ \label{eq:q-derivatives}
+\end{equation}
+Define polynomials in $(\tau,z)$ by
+\begin{equation}
+ U_{0,r}(\tau,z)=(-z^2)^r,\qquad
+ U_{j+1,r}=\partial_zU_{j,r}-2\tau zU_{j,r}.
+ \label{eq:U-recursion}
+\end{equation}
+Then
+$\partial_z^j\partial_\tau^r\ee^{-\tau z^2}
+=\ee^{-\tau z^2}U_{j,r}(\tau,z)$.
+Writing $h_a=\partial_\lambda^aH_\lambda$, finite Leibniz expansion
+of \eqref{eq:response} yields
+\begin{equation}
+ \partial_\lambda^a\partial_\tau^c\partial_z^d\Obs
+ =\ee^{-\tau z^2}\sum_{s=0}^c\sum_{j=0}^d
+   \binom cs\binom dj q^{(s)}(\tau)
+   U_{j,c-s}(\tau,z)\partial_z^{d-j}h_a(z).
+ \label{eq:scalar-mixed}
+\end{equation}
+Let $U^\#_{j,r}(T,\rho)$ be the polynomial obtained by replacing all
+coefficients of $U_{j,r}$ by their absolute values and then evaluating
+at $T,\rho$. On \eqref{eq:windows}, set $\rho=\sqrt{Z^2+b^2}$.
+Since $|\ee^{-\tau z^2}|\le\ee^{Tb^2}$, a second explicit bound is
+\begin{equation}
+ |\partial_\lambda^a\partial_\tau^c\partial_z^d\Obs|
+ \le\frac{B_0\ee^{Tb^2}}2
+ \sum_{s=0}^c\sum_{j=0}^d\binom cs\binom dj
+ 4^s\mu_s U^\#_{j,c-s}(T,\rho)J_{2a+d-j,2}(M,b).
+ \label{eq:scalar-mixed-bound}
+\end{equation}
+Every sum here is finite. Neither this formula nor
+\eqref{eq:readout-majorant} asserts a bound uniform in derivative order,
+an infinite derivative expansion, or evolution at negative or complex
+proper time.

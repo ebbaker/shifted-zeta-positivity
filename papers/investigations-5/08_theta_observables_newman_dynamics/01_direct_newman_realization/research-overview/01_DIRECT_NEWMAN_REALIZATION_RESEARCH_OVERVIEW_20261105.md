@@ -1,5 +1,43 @@
 # Direct radial-spectral Newman realization: research overview
 
+**Current scope revision, 6 November 2026.** Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**, direct-branch chat0003. The author requested an initial investigation of collisions within this dynamics before choosing a follow-up estimate, and broader collision-control goals if that investigation was promising. [Collision Note04](../notes/04_TND_D_B02_COLLISION_DYNAMICS_RECONNAISSANCE_20261106.md) supports that expansion at **proof-author/diagnostic scope**. The [sole register][progress] owns current status; [plan r2][plan] now governs future B02/E03 framing. The original plan and pre-reconnaissance continuation retain their historical scope.
+
+[E02 Review01](../reviews/01_TND_D_E02_CONDITIONAL_REALIZATION_ASSESSMENT_20261106.md) continues to accept the fixed E01 conditional realization without required mathematical correction. Its same-assistant/same-chat internal-assessment qualifications remain. The source/loader, placement, ensemble, initial calibration and ideal access remain supplied. Note04 is subsequent exploratory work; E02 has not assessed its new identities.
+
+**Analytical synthesis, 6 November 2026 — gpt-6-astra/max.** The [direct manuscript](../manuscript/README.md) now develops the complete preparation, instrument and absolute observation, followed by the count-sector calculus, local collision analysis, exact colliding control and outstanding tasks. It uses the parent manuscript as background. The [integration check](../reviews/02_TND_D_E05_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261106.md) preserves the realization’s internal acceptance and the later diagnostics’ proof-author status; manuscript completion supplies no new collision restriction or selected B02 target.
+
+## Current research goals: collision mechanisms and quantitative consequences
+
+The branch now asks both **what happens at a collision in the assessed dynamics** and **whether the canonical source supplies a mechanism that constrains such events**. Useful bounds and conditioning estimates remain a complementary goal; choosing a particular quantity is not a prerequisite for the initial mechanism exploration.
+
+- Understand the conditional state, success probability, signed readout, local zero motion and complete count-output structure at a collision, including higher-multiplicity and endpoint limitations.
+- Investigate source-specific relations, invariants or transport restrictions within the unchanged realization that could control the simultaneous signed balances defining an event. A qualitative mechanism is eligible before a numerical bound is fixed; it must eventually identify an independently justified premise and a concrete consequence.
+- Compare any mechanism, identity or estimate with direct analysis using the same source information. Screen its actual premises on domains containing the recorded control witnesses. Distinguish an explanatory diagnostic, an intermediate gain and a target-equivalent reformulation.
+
+### Initial findings and rationale
+
+Note04 derives a precise local picture. At an interior double event, the state and positive success mass remain smooth while the signed cosine contrast and its first observation-parameter derivative vanish. Physical time runs toward decreasing Newman lambda, so the local real-zero pair coalesces and leaves the real axis. The singularity is in tracking zeros of a smooth observation, not in the state or fixed energy spectrum.
+
+The existing instrument also supplies analytical signed traces D_j of each count output. With D_0=H_lambda(k)/H_(1/2)(0), they obey
+\[
+D_j=\frac{(-\gamma t)^j}{j!}\partial_k^{2j}D_0,\qquad
+\partial_tD_0=-D_1/t\quad(t>0),\qquad
+\sum_{j\ge0}D_j=C(0,k).
+\]
+Thus a double collision is an equal no-count outcome balance with unequal loss rates, and the first-count signed trace encodes its curvature. Source-sector covariance gives a complementary description of the same moments. Higher multiplicities require higher count/derivative information. These identities motivate examining signed transfer and balance constraints before deciding on an estimate.
+
+The explicit reflected super-Gaussian control in Note04 has a collision at lambda=1/4, k=pi/4 (physical t=1/(4gamma)) while satisfying these generic identities and its own complete smooth-state domain bounds. **No collision-preventing mechanism or estimating advantage has yet been established.** Canonical arithmetic restrictions, rather than generic state positivity or count completeness, remain the prospective source of a separating result. The [local-collision summary](../../../../../result-summaries/13_local_heat_flow_geometry_and_rh_equivalent_criteria.md), [control register][controls], [result index][results] and [patterns index][avoid] retain their evidence and classification limits.
+
+D_j for j>0 is an analytical trace of an already defined output; physically reading every post-count sector is not an added apparatus assumption. Any required change of source, controller, clock, observation or physical access returns to B01. Complete spectra/domains/tails, the literal cosine and absolute normalization stay fixed.
+
+### Next decision and finite scope
+
+B02's **initial collision reconnaissance is complete; mechanism/target selection remains open**. The later author-selected conceptual pass may compare at most two structural approaches and select at most one consequential follow-up, or record a precise missing input/scoped stop. No particular follow-up is chosen here. E03 remains reserved until its target and method are frozen; no numerical plan is activated. [Plan r2][plan] supplies the full phases and stopping rules.
+
+## Historical opening overview — 5 November 2026
+
+The opening text below preserves the original construction question and its then-current dependencies. Its unexecuted/pending statements are historical; the current scope and evidence are stated above.
+
 5 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort ultra**, verified in turn metadata. Investigation08 chat0003.
 
 
@@ -96,6 +134,6 @@ Naming the canonical input is not a quantitative collision restriction. Any futu
 [a03]: ../../../../../avoid/03_lifts_and_re_realizations_in_new_coordinates.md
 [a07]: ../../../../../avoid/07_scoped_exclusions_read_as_universal.md
 [book-review]: ../../../05_radial_theta_collision_geometry/reviews/21_BOOK_REWRITE_ASSESSMENT_20261028.md
-[plan]: ../research-plan/01_DIRECT_NEWMAN_REALIZATION_RESEARCH_PLAN_20261105.md
+[plan]: ../research-plan/02_DIRECT_NEWMAN_REALIZATION_RESEARCH_PLAN_R2_20261106.md
 [progress]: ../research-progress/01_DIRECT_NEWMAN_REALIZATION_RESEARCH_PROGRESS_20261105.md
 [sibling]: ../../02_hamiltonian_auxiliary_dynamics/README.md

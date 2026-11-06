@@ -1,0 +1,175 @@
+\section{Collisions in a regular conditional dynamics}\label{sec:collisions}
+
+A real collision is a multiple zero of the signed readout, not a meeting
+of eigenvalues of the fixed kinetic Hamiltonian. The state itself is
+independent of which real observation parameter $k$ is queried.
+Since $C(t,0)=1$, an event has $k_*\ne0$; evenness lets us discuss
+$k_*>0$. The results of this section are conditional local descriptions,
+not assertions that the canonical family has a collision.
+
+\subsection{The probability and moment signature of a double event}
+\begin{proposition}[Regular state, degenerate observation]\label{prop:event}
+Suppose $0<t_*<T$ and
+\begin{equation}\label{eq:double}
+ C(t_*,k_*)=C_k(t_*,k_*)=0,\qquad A_*:=C_{kk}(t_*,k_*)\ne0.
+\end{equation}
+Then the success mass, state and count probabilities remain smooth, with
+\begin{align}
+ q_{0,+}=q_{0,-}&=p_*/2>0,&
+ \partial_kq_{0,+}=\partial_kq_{0,-}&=0,\label{eq:eventprob}\\
+ \partial_t(q_{0,+}-q_{0,-})&=\gamma p_*A_*\ne0,&
+ d_1(t_*,k_*)&=-\gamma t_*p_*A_*\ne0.
+ \label{eq:eventrate}
+\end{align}
+The event is equivalently described by the signed moments
+\begin{equation}\label{eq:momenttriple}
+ \E_*\cos(k_*X)=0,\qquad
+ \E_*X\sin(k_*X)=0,\qquad
+ \E_*X^2\cos(k_*X)=-A_*\ne0.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Differentiate \eqref{eq:cosine} in $k$ using the finite moments.
+This gives \eqref{eq:momenttriple}. At the event,
+$(d_0)_{kk}=p_*A_*$ because $p_t$ is independent of $k$.
+Equations~\eqref{eq:q}, \eqref{eq:heat} and \eqref{eq:dj} prove
+\eqref{eq:eventprob}--\eqref{eq:eventrate}. Smoothness and the positive
+floor for $p_t$ follow from Proposition~\ref{prop:state} and
+\eqref{eq:selection}--\eqref{eq:speed}. The fixed-$j$ integrals give
+smooth count probabilities. No division by the vanishing contrast is
+needed for any state or probability formula.
+\end{proof}
+
+Both joint no-count outcome probabilities decrease by \eqref{eq:loss}.
+At the event their values are equal, while their rates of decrease differ.
+The one-count signed trace is exactly that difference multiplied by $-t_*$.
+This is the dynamical content of the double-event curvature. It does not
+make the event forbidden: the signed second moment has no sign constraint
+from state positivity alone. Nor is $\mu_2$ a kinetic energy; its monotonicity
+in \eqref{eq:tangent} is a property of the quadrature's second moment.
+
+\subsection{Local zero geometry and the singularity of zero tracking}
+\begin{theorem}[Local double-collision law]\label{thm:fold}
+Under \eqref{eq:double}, let $a_*=(d_0)_{kk}(t_*,k_*)=p_*A_*$. Then
+\begin{equation}\label{eq:fold}
+ d_0(t_*+h,k_*+x)
+ =\frac{a_*}{2}(x^2+2\gamma h)+O(|x|^3+|hx|+h^2).
+\end{equation}
+For $h<0$ sufficiently small there are two nearby real zeros,
+\begin{equation}\label{eq:realroots}
+ k_\pm(t)=k_*\pm\sqrt{-2\gamma h}+O(|h|).
+\end{equation}
+For $h>0$ the corresponding nearby analytic zeros form a conjugate pair,
+\begin{equation}\label{eq:complexroots}
+ z_\pm(t)=k_*\pm\ii\sqrt{2\gamma h}+O(|h|).
+\end{equation}
+All constants are local to the event. The complex roots refer only to
+entire continuation of the source observation.
+\end{theorem}
+\begin{proof}
+At the event $d_0=(d_0)_k=0$ and $(d_0)_t=\gamma a_*$ by
+\eqref{eq:heat}. Finite multivariate Taylor expansion gives \eqref{eq:fold};
+the required derivatives are paid by \eqref{eq:Hmixed}.
+For $h=-s^2$ and $x=sy$, divide by $s^2$ and extend at $s=0$.
+The limiting equation is $a_*(y^2/2-\gamma)=0$, with two simple real
+roots. The analytic implicit-function theorem supplies real analytic
+branches $y_\pm(s)=\pm\sqrt{2\gamma}+O(s)$, proving
+\eqref{eq:realroots}. For $h=s^2$, the limiting roots are
+$\pm\ii\sqrt{2\gamma}$, giving \eqref{eq:complexroots}.
+A small fixed complex circle enclosing only the double zero at $h=0$
+retains two zeros counted with multiplicity for small $h$, by uniform
+analytic perturbation and the argument principle. The constructed roots
+are therefore the full local pair. Reality of the source makes the
+nonreal pair conjugate.
+\end{proof}
+
+Larger Newman parameter lies on the real-pair side because
+$\lambda(t)-\lambda(t_*)=-\gamma h$. Reversing physical time reverses
+the local picture. On a simple real zero curve $r(t)$,
+\begin{equation}\label{eq:velocity}
+ \dot r(t)=-\gamma\frac{(d_0)_{kk}}{(d_0)_k}
+          =\frac{d_1}{t(d_0)_k}\quad(t>0).
+\end{equation}
+This follows by differentiating $d_0(t,r(t))=0$. Its divergence near the
+double event belongs to locating the zero, while the state derivatives
+remain finite. The squared gap has leading behavior
+$(k_+-k_-)^2=-8\gamma h+o(|h|)$. Changing $\gamma$ rescales the clock;
+it does not change an event's Newman parameter. The angular energies and
+$\omega$ cancel from the co-moving observation, so they supply no additional
+repulsion term in this local law.
+
+For the original ternary observation $Y=+1,-1,0$ (the two successful
+outcomes and failure),
+\begin{equation}\label{eq:variance}
+ \E Y=d_0,\qquad\Var Y=p_t-d_0^2.
+\end{equation}
+At the event this is $p_*>0$. A vanishing signed mean therefore has no
+automatically vanishing single-trial noise. This exact variance calculation
+is not a numerical experiment or a claim of optimal sample complexity.
+
+\subsection{Balance of the positive and negative cosine sectors}
+For fixed real $k\ne0$, let
+$c_\pm(v)=\max(\pm\cos(kv),0)$ and define
+\begin{equation}\label{eq:sectors}
+ M_\pm=\E_t c_\pm(X)>0,\qquad
+ B_\pm=\frac{\E_t[X^2c_\pm(X)]}{M_\pm},\qquad C=M_+-M_-.
+\end{equation}
+These are source-sector decompositions, distinct from the physical effects
+$(I\pm\cos(kQ_t))/2$. Their boundaries are fixed when differentiating in
+$t$, and finite moments justify the calculation despite the positive-part
+corners. Equation~\eqref{eq:covariance} gives
+\begin{equation}\label{eq:sectorratio}
+ \partial_t\log(M_+/M_-)=-\gamma(B_+-B_-).
+\end{equation}
+At $C=0$, write $M_+=M_-=M$. Directly from the source integral,
+\begin{equation}\label{eq:sectorcurvature}
+ C_{kk}=-M(B_+-B_-),\qquad C_t=-\gamma M(B_+-B_-).
+\end{equation}
+Thus equal cosine masses, the stationary sine balance in
+\eqref{eq:momenttriple}, and unequal sector second moments describe the
+same double event. Quadratic attenuation changes the balance by suppressing
+different radial locations at different rates. This interpretation and the
+count-sector identity use the same signed source moments.
+
+Cauchy--Schwarz gives the generic speed estimate
+\begin{equation}\label{eq:covbound}
+ |C_t|\le\gamma\sqrt{(\mu_4-\mu_2^2)
+                   (\E_t\cos^2(kX)-C^2)}.
+\end{equation}
+It controls neither the sign nor the simultaneous vanishing of $C,C_k$.
+It is available by direct source analysis and supplies no additional
+collision margin merely through its dynamical interpretation.
+
+\subsection{Higher multiplicities and temporal endpoints}
+\begin{proposition}[Finite-order event polynomial]\label{prop:multiple}
+If $d_0(t_*,\cdot)$ has exact finite order $m\ge2$ at $k_*$ and
+$b_m=\partial_k^m d_0(t_*,k_*)\ne0$, then, uniformly for $(h,x)$ in a
+fixed compact set,
+\begin{equation}\label{eq:multiple}
+ d_0(t_*+\delta^2h,k_*+\delta x)
+ =\frac{b_m\delta^m}{m!}
+ \sum_{r=0}^{\lfloor m/2\rfloor}
+ \frac{m!\gamma^rh^rx^{m-2r}}{r!(m-2r)!}+o(\delta^m).
+\end{equation}
+For an interior event with $t_*>0$, if $m=2r$ then $d_j=0$ for $j<r$
+and $d_r\ne0$. If $m=2r+1\ge3$, then $d_j=0$ for $j\le r$ and
+$\partial_kd_r\ne0$.
+\end{proposition}
+\begin{proof}
+Repeated differentiation of \eqref{eq:heat} gives
+$\partial_t^a\partial_k^b d_0=\gamma^a\partial_k^{2a+b}d_0$.
+In a finite multivariate Taylor expansion, every term of parabolic
+weight $2a+b<m$ vanishes. Terms of weight $m$ give exactly
+\eqref{eq:multiple}; a sufficiently high finite total-order remainder is
+$o(\delta^m)$. The count assertions follow from \eqref{eq:dj} and the
+nonzero factor $(-\gamma t_*)^j/j!$.
+\end{proof}
+
+The constants depend on $m$ and on the local event. A first-count diagnostic
+therefore does not cover arbitrary multiplicities, and genericity is no
+proof that the canonical family has only double events. At $t=0$ or $t=T$
+only the physical side inside the slab is licensed. The entire source can
+describe a two-sided germ without extending the apparatus beyond that slab.
+The local laws are the familiar finite heat-flow geometry expressed in this
+realization \cite{LocalCollisionGeometry,TNDDirectCollision}; no new
+universal zero-collision law is claimed.

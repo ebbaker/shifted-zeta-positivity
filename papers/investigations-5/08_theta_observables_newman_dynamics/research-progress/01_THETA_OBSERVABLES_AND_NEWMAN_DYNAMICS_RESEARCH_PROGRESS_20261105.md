@@ -14,7 +14,7 @@
 | Direct radial-spectral Newman realization | [Direct plan](../01_direct_newman_realization/research-plan/01_DIRECT_NEWMAN_REALIZATION_RESEARCH_PLAN_20261105.md) | [TND-D register](../01_direct_newman_realization/research-progress/01_DIRECT_NEWMAN_REALIZATION_RESEARCH_PROGRESS_20261105.md) |
 | Hamiltonian auxiliary dynamics | [Auxiliary plan](../02_hamiltonian_auxiliary_dynamics/research-plan/01_HAMILTONIAN_AUXILIARY_DYNAMICS_RESEARCH_PLAN_20261105.md) | [TND-A register](../02_hamiltonian_auxiliary_dynamics/research-progress/01_HAMILTONIAN_AUXILIARY_DYNAMICS_RESEARCH_PROGRESS_20261105.md) |
 
-Author-selected branch development does not activate either branch's research. The branch registers own their next-task entries. **Shared TND-E03 r2 is complete at internal assessment scope.** [Review01][e03-review] accepts parent E01 within its stated comparison/source-transport scope; no required mathematical correction. The shared prerequisite is available to both branch E02 assessments, whose activation and live status remain with their separate owners. For this auxiliary continuation, the next recommendation is **[E] TND-A-E02 — Sol**; no successor is activated.
+Author-selected branch development does not activate either branch's research. The branch registers own their next-task entries. **Shared TND-E03 r2 is complete at internal assessment scope.** [Review01][e03-review] accepts parent E01 within its stated comparison/source-transport scope; no required mathematical correction. The shared prerequisite is available to both branch E02 assessments, whose activation and live status remain with their separate owners. The requested shared TND-E06 manuscript is now complete at synthesis scope. Branch continuations are owned only by the linked branch registers; the earlier E02 recommendations below are dated history. No successor is activated here.
 
 ## Current shared register
 
@@ -28,6 +28,7 @@ Author-selected branch development does not activate either branch's research. T
 | TND-B02 — original consequence selection slot | B — Astra | **Historical unactivated placeholder** | TND-D-B02 and TND-A-B02 |
 | TND-E04 — original selected consequence slot | E — Sol | **Historical unissued placeholder** | TND-D-E03 and TND-A-E03 |
 | TND-E05 — original consequence assessment/integration slot | E — Sol | **Historical unactivated placeholder** | TND-D-E04 and TND-A-E04 |
+| TND-E06 — shared analytical background manuscript | E — Sol recommended; fixed synthesis and production | **Complete at synthesis/production scope**, 6 November; actual gpt-6-astra/max; [Review02](../reviews/02_SHARED_ANALYTICAL_BACKGROUND_MANUSCRIPT_REVIEW_20261106.md) | Shared and both branch E01/E02 results; later progress kept at its evidence level; activation/return below |
 
 ## Dated task crosswalk — author-directed split, 5 November 2026
 
@@ -156,3 +157,20 @@ This disposition supplies the shared E01 prerequisite for both branch E02 assess
 [e03-record]: handoffs/03_TND_E03_R2_RETURN_RECORD_20261106.json
 [e03-continuation]: handoffs/03_TND_E03_R2_RETURN_AND_MODEL_CONTINUATION_20261106.md
 [e03-sources]: ../references/01_TND_E03_R2_SOURCE_USE_20261106.md
+
+
+## TND-E06 activation — 6 November 2026
+
+Edward Baker requests a shared draft manuscript after reading the parent overview/progress and reviewing both branches. **E — execution**: integrate existing analytical results with their proofs, assumptions, domains, normalizations and assessment levels. Default recommendation is Sol for this fixed synthesis; the author-requested work proceeds in the current selected **gpt-6-astra/max** session (parent chat0004), without changing models or delegating. [Input identities](handoffs/04_TND_E06_MANUSCRIPT_INPUT_VERSIONS_20261106.json) freeze the read versions.
+
+Deliverables: one evolving LaTeX manuscript under manuscript/, an ignored reading PDF under repository-root output/pdf/, and a dated integration/progress assessment under reviews/. Completion requires the shared geometry/source/transport background, accurate treatment of the direct and auxiliary realization results, source attribution, analytical/editorial checks, and a successful visually checked build. Work limit: this synthesis and one editorial correction cycle, plus necessary build/layout repairs. No new analytical mechanism, numerical campaign, external-status upgrade or branch B02/successor activation. Branch registers remain their sole live owners.
+
+## TND-E06 return — 6 November 2026
+
+Prepared for Edward Baker with substantial LLM assistance, actual **gpt-6-astra/max**, parent chat0004. **Complete at the author-requested analytical synthesis and production scope.** The [one evolving manuscript](../manuscript/main.tex) develops the shared geometric Hamiltonian, full spectral/source bounds, Newman/scalar dictionary and the two conditional realizations, with proofs and exact normalizations. [Integration/progress Review02](../reviews/02_SHARED_ANALYTICAL_BACKGROUND_MANUSCRIPT_REVIEW_20261106.md) records the branch review, mathematical checks and visually inspected 19-page build; [build identities](../manuscript/BUILD_RECORD.json) bind the source and ignored PDF.
+
+The [input record](handoffs/04_TND_E06_MANUSCRIPT_INPUT_VERSIONS_20261106.json) preserves the original intake and a separate late refresh at 06:53:17 UTC. Both branch E01/E02 construction results are used at their accepted internal scopes. Later direct B02 collision/count diagnostics remain proof-author material; the auxiliary B02 conditioning decision is complete at conceptual scope, with E03 sharp bounds pending at the cutoff. Section 8 describes these continuations without executing them or extending their assessments. The principal proof/assessment inputs are unchanged.
+
+One synthesis and local mathematical/editorial correction pass, with necessary build/layout repairs, were completed by the current agent without delegation. No numerical campaign, new signed bound, independent source-proof assessment, branch task activation or external status upgrade occurred. Source preparations and measurement laws remain supplied premises. The manuscript credits Edward Baker and acknowledges LLM assistance. DRAFT_HISTORY indexes the milestone; no snapshot folder, tracked PDF, Git commit or tag was created.
+
+**Continuation:** the author-requested shared background is complete. Direct conceptual work and auxiliary execution remain with their own live registers (TND-D-B02/Astra and TND-A-E03/Sol at the recorded cutoff). This return does not activate either.

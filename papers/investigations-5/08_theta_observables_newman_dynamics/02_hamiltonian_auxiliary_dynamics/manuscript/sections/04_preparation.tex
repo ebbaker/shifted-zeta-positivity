@@ -1,0 +1,110 @@
+\section{A complete operator-valued preparation}
+\label{sec:preparation}
+
+\subsection{The passive bank and left amplification}
+
+Let $\Href$ be a passive copy of $\K$, and fix a matched unitary
+$J:\Href\to\K$. With $Q=Q_1(\pi)$, define
+\begin{equation}
+ R=\frac{W\ee^{-\pi A}}Q=\sum_{n\ge1}r_nP_n,
+ \qquad r_n=\frac{\ee^{-\pi n^2}}{4nQ},
+ \qquad B=R^{1/2}J.
+ \label{eq:bank}
+\end{equation}
+The same multiplicity cancellation as in \eqref{eq:theta-trace} gives
+\begin{equation}
+ \Tr R=1,\qquad BB^*=R,\qquad B^*B=J^*RJ,
+ \qquad \norm B_{\HS}=1.
+ \label{eq:bank-normalization}
+\end{equation}
+Every $r_n$ is positive, although they tend to zero, so $R$ is faithful
+without a uniform positive lower bound. This is an angular normalization
+only. It does not normalize the scalar amplitude $F_\lambda$.
+
+For each finite $s\ge0$, put
+\begin{equation}
+ \mu_s=\frac1Q\sum_{n\ge1}n^{2s}\ee^{-\pi n^2}.
+ \label{eq:mu}
+\end{equation}
+Then
+\begin{align}
+ \Tr(A^sR)&=\mu_s,\qquad
+ \norm{A^sB}_{\HS}^2=\mu_{2s},
+ \label{eq:bank-moments}\\
+ \norm{A^s(I-P_{\le N})B}_{\HS}^2
+ &=\frac1Q\sum_{n>N}n^{4s}\ee^{-\pi n^2}\longrightarrow0.
+ \label{eq:bank-tail}
+\end{align}
+All these sums converge by Gaussian decay. The fixed reference is an
+apparatus label, with no assigned right-hand energy.
+
+The field space is
+\begin{equation}
+ \HH=L^2\bigl(\R;\HS(\Href,\K)\bigr)
+ \simeq L^2(\R;\K)\otimes\overline{\Href}.
+ \label{eq:amplified-space}
+\end{equation}
+Let $\Dc^{\mathrm L}$ and $L=L_0^{\mathrm L}$ act on the physical side,
+amplified by the identity on the reference. The signed blocks
+\eqref{eq:signed-block}, spectra \eqref{eq:spectra}, and domain formulas
+\eqref{eq:dirac-domain}--\eqref{eq:square-domain} remain valid with
+$\norm{P_n\widehat f}^2$ replaced by
+$\norm{P_n\widehat S}_{\HS}^2$. Testing the multiplier adjoint in
+finitely many reference columns proves self-adjointness exactly as before.
+Complete physical shells, finite reference columns, and radial
+$C_c^\infty$ functions form a common core. Reference projections converge
+in graph norm because the squared column norms are summable. No extra
+factor $4n$ or right-energy weight is introduced by the amplification.
+
+\subsection{Exact preparation and graph norms}
+
+The supplied initial amplitude is
+\begin{equation}
+ S_{\lambda,0}(v)=F_\lambda(v)B.
+ \label{eq:prepared-field}
+\end{equation}
+It is a linear amplitude, rather than $\sqrt{F_\lambda}$ or a normalized
+radial density. Its exact normalization is needed for
+\eqref{eq:xi-normalization}. The spatial placement and the matched bank
+in \eqref{eq:prepared-field} are model data.
+
+\begin{proposition}[Prepared graph identities]
+\label{prop:graph-identity}
+For every finite integer $a,h,p\ge0$,
+\begin{equation}
+ \boxed{\norm{L^p(f_{a,\lambda}^{(h)}B)}_{\HH}^2
+ =\sum_{j=0}^{2p}\binom{2p}{j}4^{2p-j}\mu_{2p-j}
+                 \norm{f_{a,\lambda}^{(h+j)}}_2^2.}
+ \label{eq:graph-identity}
+\end{equation}
+The expression is finite and uniform on compact real $\lambda$
+intervals. The prepared family is differentiable to every finite order
+in each of these graph norms.
+\end{proposition}
+
+\begin{proof}
+By \eqref{eq:bank},
+$\norm{P_nB}_{\HS}^2=\ee^{-\pi n^2}/Q$. The spectral domain norm is
+therefore
+\begin{equation*}
+ \frac1Q\sum_n\ee^{-\pi n^2}\int_\R
+ (k^2+4n^2)^{2p}k^{2h}|\widehat f_{a,\lambda}(k)|^2\dd k.
+\end{equation*}
+Expand the nonnegative polynomial by the finite binomial formula.
+The angular sum in its $j$th term is $4^{2p-j}\mu_{2p-j}$, and
+Plancherel turns the radial integral into
+$\norm{f_{a,\lambda}^{(h+j)}}_2^2$. The bounds in
+\eqref{eq:f-majorant} prove finiteness and continuity, including one
+further parameter derivative whenever differentiation is required.
+\end{proof}
+
+This identity separates the two kinds of regularity: angular Gaussian
+moments and radial source derivatives. It also provides the precise
+prepared-data estimates at zero heat time, where generic smoothing
+bounds would diverge. In conjunction with
+\eqref{eq:bank-tail} and \eqref{eq:fourier-tail}, it controls both
+physical angular and radial spectral tails. In a reference basis
+matched by $J$, exhausting complete shells gives the same Gaussian
+reference tails; in any fixed basis, convergence follows from the
+summable column norms. The source index, physical shell, reference
+column, and continuous momentum remain separate variables.

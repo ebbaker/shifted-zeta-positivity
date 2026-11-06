@@ -1,0 +1,314 @@
+\section{Purpose and principal statements}\label{sec:intro}
+
+The common question is how a geometric Hamiltonian, a positive theta
+source, and a signed Fourier observation fit together. The source and its
+transform are
+\begin{align}
+ \Phi(u)&=\sum_{m\ge1}
+ (2\pi^2m^4\ee^{9u}-3\pi m^2\ee^{5u})\ee^{-\pi m^2\ee^{4u}},\label{eq:source}\\
+ H_\lambda(z)&=\int_0^\infty\ee^{\lambda u^2}\Phi(u)\cos(zu)\dd u.
+ \label{eq:Hintro}
+\end{align}
+We use the normalization
+$H_0(z)=\xi((1+\ii z)/2)/8$, where
+$\xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$.
+These are the conventions of Rodgers--Tao
+\cite[Introduction, (1)--(4)]{RodgersTao2020}.
+The canonical $\Phi$ is smooth, strictly positive and even. Its rapid
+decay permits every finite real $\lambda$, and
+$\partial_\lambda H_\lambda=-\partial_z^2H_\lambda$.
+
+The shared geometric model is
+\begin{equation}\label{eq:modelintro}
+ C=\R_v\times S^2_{1/2},\qquad
+ \Dc=-\ii\Gamma\partial_v+2D,\qquad
+ L_0=\Dc^2=-\partial_v^2+4D^2.
+\end{equation}
+Here $D$ is the unit-sphere Dirac operator and $\Gamma$ its chirality.
+The radial kinetic action multiplies Fourier amplitudes by $k^2$;
+Newman source multiplication by $u^2$ differentiates them by
+$-\partial_k^2$. This distinction motivates the two constructions.
+Neither identifies free kinetic time with Newman time.
+
+For the direct construction, Theorem~\ref{thm:direct} gives
+\begin{equation}\label{eq:directintro}
+ H_{1/2-\gamma t}(k)=H_{1/2}(0)\,[q_+(t,k)-q_-(t,k)],
+ \quad 0\le t\le\gamma^{-1},\quad k\in\R.
+\end{equation}
+The $q_\pm$ are joint probabilities for no count followed by one of two
+bounded cosine effects. The preparation and access to the transported
+quadrature are specified inputs. For the auxiliary construction,
+Theorem~\ref{thm:aux} gives
+\begin{equation}\label{eq:auxintro}
+ \Obs_{\lambda,\tau}(z)
+ =\ee^{-\tau z^2}\frac{Q(\pi+4\tau)}{Q(\pi)}H_\lambda(z),
+ \qquad Q(\beta)=\sum_{n\ge1}\ee^{-\beta n^2},\quad\tau\ge0.
+\end{equation}
+Its source is a linear amplitude and its observation is a stipulated
+phase-sensitive pairing. These are different observed objects; the
+normalizations cannot be interchanged.
+
+The shared comparison and both branch constructions have written proofs
+and internal acceptance within their stated scopes
+\cite{TNDParent,TNDSharedReview,TNDDirect,TNDDirectReview,TNDAux,TNDAuxReview}.
+This paper is a background synthesis of those results. It does not select
+the next estimating problem for either branch. Section~\ref{sec:scope}
+records the precise outstanding questions and the status as of 6 November
+2026. No numerical evidence is used in the proofs below.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabularx}{\textwidth}{@{}lY@{}}\toprule
+Symbol & Meaning \\\midrule
+$u$; $v$, $X$ & Source coordinate; physical radial position and its multiplication operator. \\
+$\beta$; $s$ & Angular damping; optional excited-shell filter strength. \\
+$\lambda$ & Newman source-reweighting parameter. \\
+$t$; $\tau$ & Laboratory time in the direct model; nonnegative heat/proper time in the auxiliary model. \\
+$k$; $z$ & Real radial Fourier label; complex continuation of the observation parameter. \\
+$m$; $n$; $\ell$ & Source-sum index; physical spinor shell; scalar harmonic degree. \\
+$Z_\lambda$ & Full-line source mass $\int_\R\ee^{\lambda u^2}\Phi(u)\dd u=2H_\lambda(0)$. \\
+\bottomrule\end{tabularx}
+\caption{Conventions used throughout. The spatial imprint $u=v$ is supplied
+in both branch constructions.}
+\end{table}
+
+\section{Geometry, spectra and Hamiltonian}\label{sec:geometry}
+
+Let $\K=L^2(S^2,\Sigma;\dd\Omega)$ and
+$\HH=L^2(\R,\dd v;\K)$. We use a nonpositive scalar Laplacian and
+a self-adjoint Dirac operator. The sphere spectrum is
+$\{\pm n:n\ge1\}$ with multiplicity $2n$ at each sign
+\cite[(3.40), (3.54)]{CamporesiHiguchi1996}.
+Set $A=D^2$ and let $P_n$ be its rank-$4n$ projection.
+The chirality satisfies $\Gamma^2=I$, $\Gamma^*=\Gamma$ and
+$\Gamma D=-D\Gamma$.
+
+\begin{proposition}[Geometric square and full spectral resolution]
+\label{prop:spectrum}
+On the complete product cylinder with metric
+$\dd v^2+\tfrac14g_{S^2}$,
+\begin{equation}\label{eq:curvature}
+ L_0=-\partial_v^2+4A=(\nabla^C)^*\nabla^C+2.
+\end{equation}
+Under the unitary Fourier transform
+\begin{equation}\label{eq:fourier}
+ \widehat\psi(k)=(2\pi)^{-1/2}\int_\R\ee^{-\ii kv}\psi(v)\dd v,
+\end{equation}
+the complete signed Dirac channels are
+\begin{equation}\label{eq:blocks}
+ M_n(k)=\begin{pmatrix}2n&k\\k&-2n\end{pmatrix},\quad
+ E_n(k)=\sqrt{k^2+4n^2},\quad
+ \Pi_\pm(n,k)=\frac12\left(I\pm\frac{M_n(k)}{E_n(k)}\right).
+\end{equation}
+There are $2n$ copies of each signed channel at fixed $k$, and $4n$
+states for the square. The maximal domains are
+\begin{align}
+ \Dom\Dc&=\left\{\psi\in\HH:
+ \sum_n\int_\R(k^2+4n^2)\norm{P_n\widehat\psi(k)}^2\dd k<\infty\right\},
+ \label{eq:Ddomain}\\
+ \Dom L_0^p&=\left\{\psi\in\HH:
+ \sum_n\int_\R(k^2+4n^2)^{2p}\norm{P_n\widehat\psi(k)}^2\dd k<\infty\right\},
+ \label{eq:Ldomain}
+\end{align}
+for every fixed integer $p\ge0$.
+\end{proposition}
+\begin{proof}
+In a unit-sphere orthonormal frame $e_a$, the cylinder frame is
+$\partial_v,2e_a$. The product connection has no mixed radial terms, so
+its connection Laplacian is
+$-\partial_v^2+4\nabla_{S^2}^*\nabla_{S^2}$.
+The cross term in $\Dc^2$ vanishes by anticommutation.
+The curvature formula for the self-adjoint convention is
+$D^2=\nabla_{S^2}^*\nabla_{S^2}+\tfrac12$; equivalently the cylinder
+has scalar curvature $8$ and contributes $8/4=2$
+\cite[(5.35)--(5.36)]{CamporesiHiguchi1996}.
+Choose $D\chi^+_{n,a}=n\chi^+_{n,a}$ and
+$\chi^-_{n,a}=\Gamma\chi^+_{n,a}$, $1\le a\le2n$.
+Fourier transformation gives \eqref{eq:blocks}, whose square is
+$(k^2+4n^2)I$. Real Hermitian multiplication on the maximal weighted
+domain is self-adjoint, giving \eqref{eq:Ddomain}--\eqref{eq:Ldomain}.
+Complete-shell cutoffs converge in graph norm. For finitely many shells
+the graph norms are finite sums of radial Sobolev norms; smooth cutoff
+and approximation then give the core
+$C_c^\infty(\R)\otimes\K_{\rm fin}$.
+\end{proof}
+
+These are continuous radial spectra:
+\[
+ \sigma(\Dc)=(-\infty,-2]\cup[2,\infty),\qquad
+ \sigma(L_0)=[4,\infty).
+\]
+Each channel dispersion is monotone on either open half-line of $k$.
+The thresholds have preimages of measure zero; the spectral measures
+are absolutely continuous, including their integrable threshold
+singularities. Plane and cosine modes are generalized modes, not
+normalizable radial states.
+
+The metric volume is $\dd v\dd\Omega/4$. Multiplication of product-measure
+spinors by $2$ is its unitary identification with our Hilbert convention.
+With physical length unit $\ell_0>0$ and mass $m_{\rm phys}>0$, the
+declared kinetic Hamiltonian is
+\[
+ H_{\rm kin}=\varepsilon L_0,\qquad
+ \varepsilon=\frac{\hbar^2}{2m_{\rm phys}\ell_0^2}.
+\]
+The curvature contribution $2\varepsilon$ is already in this expression.
+Its unitary evolution is $\ee^{-\ii\varepsilon tL_0/\hbar}$.
+The distinct heat evolution has norm
+$\norm{\ee^{-\tau L_0}}=\ee^{-4\tau}$ and is smoothing in left energy
+for $\tau>0$. Its integral is $L_0^{-1}$ with norm $1/4$.
+There is no normalized full-cylinder Gibbs state: the positive diagonal
+heat-trace density is constant over an infinite radial line.
+
+For comparison, the scalar operator on the same metric is
+\begin{equation}\label{eq:scalaroperator}
+ \Lsc=1-\Delta_C=1-\partial_v^2-4\Delta_{S^2}.
+\end{equation}
+Its degree-$\ell$ channel has multiplier $k^2+(2\ell+1)^2$ and
+multiplicity $2\ell+1$, including $\ell=0$. Its maximal power domains
+use the corresponding weight $[k^2+(2\ell+1)^2]^{2p}$.
+Thus the scalar and spinor channel decompositions are different even
+though their metrics agree.
+
+On the even sector the half-line cosine transform is
+$\mathcal C h(k)=\sqrt{2/\pi}\int_0^\infty h(v)\cos(kv)\dd v$.
+The even extension $h\mapsto h(|v|)/\sqrt2$ is unitary. In particular
+an even full-line $f$ satisfies
+$\mathcal C(\sqrt2 f|_{(0,\infty)})=\sqrt2\widehat f$ for $k>0$.
+Evenness reduces $L_0$ and $\Lsc$, but does not reduce $\Dc$ because
+the first derivative changes parity. No wall or doubled boundary Green
+kernel is introduced by using this transform.
+
+\section{From the Green response to the theta source}\label{sec:theta}
+
+\subsection{Multiplicity cancellation and angular energy}
+The decaying full-line Green kernel in shell $n$ is
+\begin{equation}\label{eq:green}
+ g_n(v,w)=\frac{\ee^{-2n|v-w|}}{4n},\qquad
+ g_n(v,v)=\int_\R\frac{\dd k}{2\pi(k^2+4n^2)}=\frac1{4n}.
+\end{equation}
+Its derivative has jump $-1$, fixing the inverse of
+$-\partial_v^2+4n^2$. Consequently the angular diagonal is the bounded
+operator $W=(4\sqrt A)^{-1}$; it is not trace class. Damping makes it
+trace class and cancels the complete multiplicity:
+\begin{equation}\label{eq:Q}
+ \Tr_\K(W\ee^{-\beta A})
+ =\sum_{n\ge1}4n\frac{\ee^{-\beta n^2}}{4n}=Q(\beta),\qquad\beta>0.
+\end{equation}
+Every fixed $\beta$ derivative converges uniformly for $\beta\ge\beta_0>0$.
+This is an angular trace of a full radial Green diagonal. It is independent
+of the probe location and includes all radial momenta.
+
+For the optional filter $B_s=P_1+s(I-P_1)$, $0\le s\le1$, set
+\[
+ Q_s(\beta)=\Tr(B_sW\ee^{-\beta A}),\qquad
+ \rho_{s,\beta}=Q_s(\beta)^{-1}B_sW\ee^{-\beta A}.
+\]
+These are positive angular density operators with finite energy moments,
+and direct spectral summation gives
+\begin{equation}\label{eq:energymoments}
+ (-1)^rQ_s^{(r)}(\beta)=Q_s(\beta)\Tr(\rho_{s,\beta}A^r),\qquad r\ge0.
+\end{equation}
+The identities concern an angular state; they do not require a full-space
+thermal state or a detector construction. The energy-observable dictionary
+below is also recorded in \cite{MC11Observables}; its trace algebra is
+given here without importing a pending physical-preparation claim.
+
+\subsection{The prescribed scan and complete reflection}
+Supply the scan and differential readout
+\begin{equation}\label{eq:scan}
+ \beta(u)=\pi\ee^{4u},\qquad p(u)=\ee^uQ(\beta(u)),\qquad
+ \Phi(u)=\tfrac18(p''(u)-p(u)).
+\end{equation}
+Differentiating the complete series gives \eqref{eq:source}. More
+generally the filtered readout is
+\begin{align}
+ \Phi_s(u)&=\ee^u Q_s(\beta)
+ \Tr\!\left[\rho_{s,\beta}(2\beta^2A^2-3\beta A)\right],\label{eq:sourceenergy}\\
+ \Phi_s'(u)&=\ee^u Q_s(\beta)
+ \Tr\!\left[\rho_{s,\beta}(-8\beta^3A^3+30\beta^2A^2-15\beta A)\right].
+ \label{eq:sourceenergyprime}
+\end{align}
+Indeed $p''-p=\ee^u(16\beta^2Q''+24\beta Q')$; one more derivative
+gives the cubic polynomial. The quadratic energy observable is positive
+for $u\ge0$, since $\beta n^2\ge\pi>3/2$. Positivity is not asserted
+for all $\beta>0$.
+
+For the complete unit-weight source, put
+$\Theta(R)=1+2Q(\pi R^2)$. Jacobi inversion gives
+$\Theta(R)=R^{-1}\Theta(1/R)$, $R>0$
+\cite[20.7.32, at zero argument]{DLMFThetaModular}.
+With $R=\ee^{2u}$ this is
+\begin{equation}\label{eq:reflectionp}
+ p(u)-p(-u)=-\sinh u.
+\end{equation}
+The complete series is smooth on each real compact interval. Applying
+$(\partial_u^2-1)/8$ to \eqref{eq:reflectionp} proves smooth evenness
+of $\Phi$. For $u\ge0$ every term in \eqref{eq:source} is strictly
+positive, hence $\Phi>0$ on $\R$. The added $1$ in $\Theta$ is the
+missing zero mode and is essential to this reflection calculation.
+An arbitrary shell filter does not retain this identity.
+
+The Hamiltonian produces \eqref{eq:Q}; it does not produce the
+position-dependent scan \eqref{eq:scan}. In particular translating the
+Green probe cannot imprint the source profile, because
+\eqref{eq:green}'s diagonal is independent of $v$.
+
+\subsection{Bounds for the complete source at every finite order}
+\begin{lemma}[Derivative and tail bounds]\label{lem:tails}
+Set $x=\pi\ee^{4u}$ for $u\ge0$, and define polynomials
+\begin{equation}\label{eq:recurrence}
+ \mathsf P_0(x)=2x^2-3x,\qquad
+ \mathsf P_{j+1}(x)=(1-4x)\mathsf P_j(x)+4x\mathsf P_j'(x).
+\end{equation}
+Then $\deg \mathsf P_j=j+2$ and
+$\Phi^{(j)}(u)=\ee^u\sum_{m\ge1}\ee^{-m^2x}\mathsf P_j(m^2x)$.
+If $a_j$ is the absolute coefficient sum of $\mathsf P_j$, then
+\begin{align}
+ C_d(N)&=\sum_{m>N}m^{2d}\ee^{-\pi(m^2-1)}\longrightarrow0,\label{eq:Ctail}\\
+ \ee^u\sum_{m>N}\ee^{-m^2x}|\mathsf P_j(m^2x)|
+ &\le a_j C_{j+2}(N)\ee^u x^{j+2}\ee^{-x}.
+ \label{eq:tailbound}
+\end{align}
+Writing $r=|u|$, $x=\pi\ee^{4r}$, $b_j=a_jC_{j+2}(0)$ and
+$\kappa=2-3/\pi>0$, the complete smooth source obeys
+\begin{equation}\label{eq:twosidedbounds}
+ \kappa\ee^r x^2\ee^{-x}\le\Phi(u),\qquad
+ |\Phi^{(j)}(u)|\le b_j\ee^r x^{j+2}\ee^{-x}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Differentiate one summand using $x'=4x$ to obtain
+\eqref{eq:recurrence}. Because $x\ge\pi>1$,
+$|\mathsf P_j(m^2x)|\le a_jm^{2(j+2)}x^{j+2}$, and
+$\ee^{-m^2x}\le\ee^{-x}\ee^{-\pi(m^2-1)}$.
+Gaussian summability proves \eqref{eq:Ctail}--\eqref{eq:tailbound}.
+The first source term gives the lower bound, since
+$2x^2-3x\ge\kappa x^2$.
+Complete reflection transfers the bounds to the other half-line.
+\end{proof}
+
+For any fixed nonnegative integers $a,d$ and finite $M,b\ge0$,
+\begin{equation}\label{eq:J}
+ J_{a,d}(M,b)=\int_\R |u|^a
+ \ee^{Mu^2+(b+1)|u|}x^d\ee^{-x}\dd u<\infty,
+ \qquad x=\pi\ee^{4|u|}.
+\end{equation}
+Indeed the substitution $x=\pi\ee^{4|u|}$ gives
+\[
+ \frac{2}{4^{a+1}}\int_\pi^\infty
+ [\log(x/\pi)]^a(x/\pi)^{(b+1)/4}x^{d-1}
+ \exp\!\left(\frac M{16}\log^2(x/\pi)-x\right)\dd x.
+\]
+The negative linear term in $x$ dominates the logarithmic square and
+every indicated power. This also proves convergence of the complete
+integral tails. Multiplying \eqref{eq:tailbound} by these weights gives
+vanishing integrated angular tails at each fixed order.
+
+All constants may depend on the chosen derivative order. These estimates
+do not give uniform bounds as the order tends to infinity. Also, a
+reflected finite prefix of the source need not be smooth at zero. We use
+such prefixes only for value or moment tail estimates; smoothness and
+vanishing odd derivatives of the exact source come from complete reflection.
+These are the bounds underlying the shared comparison
+\cite[Section 6]{TNDParent}.

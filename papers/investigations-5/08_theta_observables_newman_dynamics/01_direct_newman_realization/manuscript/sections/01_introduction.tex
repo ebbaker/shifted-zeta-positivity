@@ -1,0 +1,84 @@
+\section{The direct realization and its analytical purpose}\label{sec:intro}
+
+The direct problem is to realize the Newman deformation through a specified
+preparation, evolution and signed observation, and then to understand what
+that realization says about zero collisions. The shared manuscript
+\cite{TNDBackground} supplies the geometric and spectral background. Here we
+retain only the background needed for this branch and derive its preparation,
+complete instrument, calibrated observation and collision diagnostics in one
+continuous development.
+
+The canonical family is
+\begin{align}
+ \Phi(v)&=\sum_{n\ge1}(2\pi^2n^4\ee^{9v}-3\pi n^2\ee^{5v})
+                       \ee^{-\pi n^2\ee^{4v}},\label{eq:Phi}\\
+ H_\lambda(z)&=\int_0^\infty\ee^{\lambda v^2}\Phi(v)\cos(zv)\dd v.
+ \label{eq:H}
+\end{align}
+The complete source is smooth, positive and even; its reflected interpretation
+and all limits are justified below. We keep the classical normalization
+\begin{equation}\label{eq:xi}
+ H_0(z)=\frac18\xi\!\left(\frac{1+\ii z}{2}\right),\qquad
+ \xi(s)=\frac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s),
+\end{equation}
+as in \cite[Introduction, (1)--(4)]{RodgersTao2020}. No theorem about the
+zeros of $H_0$ is used. Direct differentiation gives
+$\partial_\lambda H_\lambda=-\partial_z^2H_\lambda$.
+
+The model keeps the free kinetic Hamiltonian on
+$\mathcal C=\R\times S^2_{1/2}$. It adds one prescribed count instrument
+that monitors the freely transported position quadrature. Its no-count
+branch attenuates the positive square-root source by
+$\ee^{-\gamma tX^2/2}$ in the interaction frame. The resulting density has
+parameter $\lambda(t)=1/2-\gamma t$ on $0\le t\le1/\gamma$.
+Physical time therefore runs toward decreasing Newman parameter.
+
+The principal identities organize the paper. If $p_t$ is the no-count
+probability, $C(t,k)$ the conditional cosine expectation and $q_\pm$ the joint
+success/outcome probabilities, then
+\begin{equation}\label{eq:mainintro}
+ H_{\lambda(t)}(k)=H_{1/2}(0)\,p_t C(t,k)
+                 =H_{1/2}(0)[q_+(t,k)-q_-(t,k)].
+\end{equation}
+The full instrument has outputs $\sigma_j(t)$, one for each count $j$.
+Their signed traces $d_j(t,k)=\Tr[\sigma_j(t)\cos(kQ_t)]$ satisfy
+\begin{equation}\label{eq:countintro}
+ d_j=\frac{(-\gamma t)^j}{j!}\partial_k^{2j}d_0,\qquad
+ \partial_td_0=-d_1/t\quad(t>0),\qquad
+ \sum_{j\ge0}d_j=C(0,k).
+\end{equation}
+Thus the complete count record organizes weighted source moments, while the
+Newman evolution appears in its selected no-count sector.
+
+At a hypothetical nondegenerate double event,
+$d_0=\partial_kd_0=0$ and $a_*=\partial_k^2d_0\ne0$. The local law is
+\begin{equation}\label{eq:foldintro}
+ d_0(t_*+h,k_*+x)=\frac{a_*}{2}(x^2+2\gamma h)
+                      +O(|x|^3+|hx|+h^2).
+\end{equation}
+The positive state and success mass remain regular. Equal no-count outcome
+probabilities have unequal rates of decrease, encoded by
+$d_1(t_*,k_*)=-\gamma t_*a_*$. This provides a dynamical description of a
+collision, without asserting that the canonical family has one.
+
+\subsection{Assumptions, evidence and organization}
+The source loading, its identification with physical position, the complete
+angular preparation, the initial scale $H_{1/2}(0)$ and access to the
+specified no-count cosine measurement are supplied model data. The proofs
+establish the consistency and exact observation of that model. They do not
+derive a microscopic apparatus or an intrinsic theta loader.
+
+The complete realization \cite{TNDDirect} has an internal assessment
+accepting its conditional scope \cite{TNDDirectReview}; the shared background
+has its own internal assessment \cite{TNDSharedReview}. The later count and
+collision analysis \cite{TNDDirectCollision} retains proof-author diagnostic
+status. The exposition below makes its derivations explicit but is not an
+independent reassessment. No numerical evidence is needed for any proof.
+
+Section~\ref{sec:preparation} establishes the domains and admissible prepared
+state. Sections~\ref{sec:instrument}--\ref{sec:observation} construct the
+instrument and prove the absolute readout. Section~\ref{sec:count} derives
+the complete count calculus. Sections~\ref{sec:collisions}--\ref{sec:control}
+analyze local collisions and an exact colliding control. The final section
+states the outstanding tasks. The distinction between a representation and
+a collision-preventing mechanism remains visible throughout.

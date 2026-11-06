@@ -1,0 +1,18 @@
+# TND-A-E02: source use and shared-premise crosswalk
+
+6 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6.1-sol (Codex), actual recorded effort ultra**, existing auxiliary chat0002. Consumer: [E02 Review01](../reviews/01_TND_A_E02_REALIZATION_ASSESSMENT_20261106.md).
+
+This assessment introduces no new article, primary-source theorem, source version or bibliography. It reuses the completed shared TND-E03 r2 disposition and checks the additional branch claims directly. No fresh primary-paper reading, PDF identity check, download, novelty claim or complete literature audit is claimed here.
+
+| Actual input/use | Evidence home and retained scope |
+| --- | --- |
+| Physical cylinder, spectra, Green calibration, source/reflection and finite-order source bounds | [Shared E03 Review01](../../reviews/01_TND_E03_R2_GEOMETRY_SOURCE_AND_TRANSPORT_ASSESSMENT_20261106.md), its exact activation/return and [source-use receipt](../../references/01_TND_E03_R2_SOURCE_USE_20261106.md) supply the parent disposition. E02 reuses that audit once, with its internal same-model/shared-premise qualifications. |
+| Branch field/source/readout contract | Frozen [E01 request r1](../research-progress/handoffs/02_TND_A_E01_R1_FROZEN_REQUEST_20261106.md), [Decision01](../brainstorm/notes/01_TND_A_B01_R1_SUPPLIED_PROPER_TIME_RESPONSE_DECISION_20261106.md) and original E01 manifest/activation/return. Complete canonical preparation, imprint, passive bank and known phase-sensitive gains remain supplied; no physical detector theorem is imported. |
+| Additional mathematical claims checked directly | [E01 Response Note01](../notes/01_TND_A_E01_R1_COMPLETE_SPECTRUM_RESPONSE_20261106.md), equations (3)–(37): HS amplification, left domains/core, bank/graph formulas, independent full tails, Gaussian weighted evolution and zero time, local pairing/calibration, entire response/derivatives and exact consequences. Review01 sections 3–6 record the checks. |
+| Existing primary annotations and bibliography | [B01 use receipt01](01_TND_A_B01_SOURCE_USE_20261106.md), [E01 use receipt02](02_TND_A_E01_R1_SOURCE_USE_20261106.md) and shared receipt retain the earlier selected Camporesi–Higuchi v1, DLMF 20.7.32 and Rodgers–Tao v5 checks. Their canonical MC11/Investigation05 homes and BibTeX keys are unchanged; no duplicate catalog is created. |
+| Scalar comparator / ordinary heat | Shared E03's generator clarification is preserved as background. Branch E01 uses its own left free L0 heat and does not substitute scalar heat or a raw G transform. No repeated book assessment is needed. |
+| Controls and external statuses | Existing Decision01 section5 and Note01 section9 screen is retained. Canonical arithmetic/reflection or smooth-domain failures are named without new witness calculations. No MC11 observable/signed-estimate, sibling realization or shared status is altered. |
+
+[Activation/input record](../research-progress/handoffs/05_TND_A_E02_ACTIVATION_INPUTS_20261106.json) verifies all immutable frozen E01 mathematical inputs, original branch outputs and actual completed shared assessment records. Seven documentary/live/reference-index changes after E01 issuance are recorded separately. Original issued r1, Decision01 and E01/shared mathematical sources remain unchanged.
+
+Root authored the proof and shared assessment in this chat/model; this E02 review and its two read-only same-model supports are internal assessment with that provenance, not specialist/formal independence. Existing external PDF provenance stays in canonical records. No third-party PDF or generated manuscript enters Git.

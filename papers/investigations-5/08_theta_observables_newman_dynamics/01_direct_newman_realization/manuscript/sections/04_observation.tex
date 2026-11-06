@@ -1,0 +1,97 @@
+\section{Conditioning and absolute Newman observation}\label{sec:observation}
+
+Load the source once, at parameter $1/2$:
+\begin{equation}\label{eq:initial}
+ \rho_*=|f_{1/2}\rangle\langle f_{1/2}|\otimes R,\qquad
+ \lambda(t)=\tfrac12-\gamma t,\qquad 0\le t\le T.
+\end{equation}
+The source-position map $u=v=x_{\rm phys}/\ell_0$ and this loader remain
+supplied. The prepared vectors lie in every needed finite constituent
+domain by Proposition~\ref{prop:state}.
+
+\begin{theorem}[Exact conditional family and calibrated readout]\label{thm:readout}
+Let $\widetilde\rho_t=K_0(t,0)\rho_*K_0(t,0)^*$ and
+$p_t=\Tr\widetilde\rho_t$. Then
+\begin{equation}\label{eq:conditional}
+ \widetilde\rho_t=p_tU(t)\rho^I_{\lambda(t)}U(t)^*,\qquad
+ p_t=\frac{Z_{\lambda(t)}}{Z_{1/2}}\in(0,1],\qquad
+ \rho_t:=\frac{\widetilde\rho_t}{p_t}=U(t)\rho^I_{\lambda(t)}U(t)^*.
+\end{equation}
+For real $k$ the bounded effects
+$E_\pm(t,k)=[I\pm\cos(kQ_t)]/2$ give
+\begin{equation}\label{eq:q}
+ q_\pm(t,k)=\Tr(\widetilde\rho_tE_\pm(t,k))
+ =\frac12\left[p_t\pm\frac{H_{\lambda(t)}(k)}{H_{1/2}(0)}\right].
+\end{equation}
+Together with $q_{\rm fail}=1-p_t$, these are a normalized probability
+law, and \eqref{eq:mainintro} holds on the closed time interval.
+\end{theorem}
+\begin{proof}
+In the interaction frame,
+\[
+ \ee^{-\gamma tX^2/2}f_{1/2}
+ =\sqrt{Z_{\lambda(t)}/Z_{1/2}}\,f_{\lambda(t)}.
+\]
+This proves \eqref{eq:conditional}. Positivity and compact-slab normalization
+give $p_t\ge Z_{-1/2}/Z_{1/2}>0$; the attenuation is a contraction, so
+$p_t\le1$. Real spectral calculus gives $0\le E_\pm\le I$ and
+$E_++E_-=I$. Bounded-factor trace cyclicity and the complete angular
+trace $\Tr R=1$ yield
+\begin{equation}\label{eq:cosine}
+ C(t,k):=\Tr(\rho_t\cos(kQ_t))
+ =\int_\R\frac{F_{\lambda(t)}(v)}{Z_{\lambda(t)}}\cos(kv)\dd v
+ =\frac{H_{\lambda(t)}(k)}{H_{\lambda(t)}(0)}.
+\end{equation}
+Multiplying by $p_t$ proves \eqref{eq:q}. On the initial state, the three
+effects are $K_0^*E_+K_0$, $K_0^*E_-K_0$ and $I-K_0^*K_0$; they sum to
+$I$ and are positive. Thus the quantities are actual joint probabilities
+of the stipulated instrument and no-count readout, with the standard
+operation normalization \cite[Section III, (17)--(19)]{JacobsSteck2006v1}.
+\end{proof}
+
+The success frequency is essential to absolute calibration. Selected
+successful samples give $H_\lambda(k)/H_\lambda(0)$; multiplying by $p_t$
+and the single initial scale gives $H_\lambda(k)$. At $k=0$,
+$q_+=p_t$ and $q_-=0$. At $t=1/(2\gamma)$ the readout is precisely
+\eqref{eq:xi}. These checks retain the full-line factor $Z_\lambda=2H_\lambda(0)$.
+The observed density is the distribution of $Q_t$, not generally the
+laboratory position $X$ after free dispersion.
+
+\subsection{Regular state motion and signed evolution}
+Write $w_t=|f_{\lambda(t)}|^2$ and $\mu_r(t)=\int v^r w_t(v)\dd v$.
+Differentiation of the paid source integrals gives
+\begin{align}
+ \partial_tw_t&=-\gamma(v^2-\mu_2)w_t,
+ &\dot p_t&=-\gamma\mu_2p_t,\label{eq:selection}\\
+ \partial_tf_{\lambda(t)}&=-\frac\gamma2(X^2-\mu_2)f_{\lambda(t)},
+ &\dot\mu_2&=-\gamma(\mu_4-\mu_2^2).\label{eq:tangent}
+\end{align}
+The first equation in \eqref{eq:tangent} includes both the square-root
+half factor and the normalization subtraction. In particular
+\begin{equation}\label{eq:speed}
+ \norm{\partial_tf_{\lambda(t)}}_2^2
+ =\frac{\gamma^2}{4}(\mu_4-\mu_2^2)<\infty.
+\end{equation}
+All fixed moments are bounded on the slab. The complete prepared density
+operator is smooth to every fixed finite order in trace norm: differentiate
+the rank-one ensemble and use the corresponding radial norms and summable
+angular graph moments. This does not assert norm differentiability of
+$U(t)$ on arbitrary states.
+
+For a fixed polynomially bounded test function used here, the same
+calculation gives
+\begin{equation}\label{eq:covariance}
+ \frac{d}{dt}\E_t a(X)=-\gamma\Cov_t(a(X),X^2).
+\end{equation}
+Consequently, with $d_0(t,k)=p_tC(t,k)$,
+\begin{equation}\label{eq:heat}
+ C_t=\gamma(C_{kk}+\mu_2C),\qquad
+ (d_0)_t=\gamma(d_0)_{kk},\qquad
+ d_0=\frac{H_{\lambda(t)}(k)}{H_{1/2}(0)}.
+\end{equation}
+The normalization term is absent only in the absolute contrast $d_0$.
+The physical-time heat sign is positive because $\lambda(t)$ decreases.
+The Fourier amplitude of $f_\lambda$, its momentum probability, and the
+Fourier transform of $|f_\lambda|^2$ are different objects; only the last
+produces this density-cosine observation. Entire continuation of
+\eqref{eq:Hmixed} supplies no bounded nonreal-$k$ measurement.

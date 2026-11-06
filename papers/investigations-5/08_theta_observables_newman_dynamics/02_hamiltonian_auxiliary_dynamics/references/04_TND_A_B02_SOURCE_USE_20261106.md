@@ -1,0 +1,18 @@
+# TND-A-B02: source-use receipt
+
+6 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**, auxiliary chat0003. Consumers: [B02 Decision02](../brainstorm/notes/02_TND_A_B02_FIRST_JET_CONDITIONING_DECISION_20261106.md) and [E03 request r1](../research-progress/handoffs/07_TND_A_E03_R1_FROZEN_REQUEST_20261106.md).
+
+This decision imports no new article or external theorem. It uses the accepted complete response and finite derivatives, followed by elementary two-by-two linear algebra and conditional error-set comparison. No new primary-paper reading, PDF download, archive verification, novelty claim or full literature review is asserted. Canonical bibliography entries and earlier primary-passage inspection records remain at their existing homes.
+
+| Local input actually used | Passage/use and retained evidence |
+| --- | --- |
+| [E01 Response Note01](../notes/01_TND_A_E01_R1_COMPLETE_SPECTRUM_RESPONSE_20261106.md) | (1), (7)–(9), (26)–(34), (35)–(37): complete response and q series, calibration, first spectral derivative, zero-time scope and scalar inverse amplification. Consumed under E02's acceptance; no new domain or higher-order claim. |
+| [E02 Review01](../reviews/01_TND_A_E02_REALIZATION_ASSESSMENT_20261106.md) and [use receipt03](03_TND_A_E02_SOURCE_USE_20261106.md) | Sections 1–7 and inherited shared E03 use: conditional supplied apparatus, complete spectra and finite-order operations, same-model/shared-premise evidence. Reused once, not re-audited. |
+| [B01 Decision01](../brainstorm/notes/01_TND_A_B01_R1_SUPPLIED_PROPER_TIME_RESPONSE_DECISION_20261106.md), frozen E01 request and [plan r1](../research-plan/01_HAMILTONIAN_AUXILIARY_DYNAMICS_RESEARCH_PLAN_20261105.md) | Unchanged source/field/readout/time contract; B02 allows one conditioning target with a matched direct comparison. An error ball for approximating the existing readout is not a new physical detector law. |
+| [Earlier S03 first-jet comparison](../../../../investigations-3/11_arithmetic_collision_rigidity/symmetries/03_normalized_jet_rotation/notes/05_CALIBRATED_FIRST_JET_AND_MATCHED_DIRECT_COMPARISON_20261019.md) | Opening outcome and fixed-domain/information-class sections: precedent for matching source information and retaining correlations. No certificate, numerical constant, box or scope of obstruction is imported. |
+| [Investigation06 lessons](../../../06_auxiliary_collision_flows/notes/06_APPROACH_SUMMARY_AND_GOALS_FOR_NEXT_BRAINSTORM_20261029.md) | Opening comparisons and target-design sections: diagnosis, transfer and canonical restriction are different jobs; existing negative statements retain their tested classes. |
+| Root result/pattern indexes and existing four-family screen | Target classification, source-sensitive versus generic algebra, exact failed canonical/domain premises and scoped exclusions. No new witness computation or control realization. |
+
+[Activation06](../research-progress/handoffs/06_TND_A_B02_ACTIVATION_INPUTS_20261106.json) verifies original mathematical inputs and all E02 return artifacts, with four documentary changes relative to E02 intake. The [E03 manifest](../research-progress/handoffs/07_TND_A_E03_R1_INPUT_VERSIONS_20261106.json) also freezes the contextual S03 passage source used in this decision. These identity checks are provenance, not proof validation.
+
+Decision02's new sharp amplification targets await E03 proof and E04 assessment. The preceding response theorem retains its internal same-model assessment; this conceptual comparison does not provide specialist independence or upgrade the earlier evidence.

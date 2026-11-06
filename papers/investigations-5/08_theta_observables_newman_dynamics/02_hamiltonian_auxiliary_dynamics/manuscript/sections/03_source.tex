@@ -1,0 +1,234 @@
+\section{From the angular trace to the canonical source}
+\label{sec:source}
+
+\subsection{The scan, differential processing, and reflection}
+
+The trace \eqref{eq:theta-trace} becomes a spatial profile only after an
+external prescription. Set
+\begin{equation}
+ \beta(u)=\pi\ee^{4u},\qquad
+ p(u)=\ee^uQ_1(\pi\ee^{4u}),\qquad
+ \Phi(u)=\tfrac18(\partial_u^2-1)p(u).
+ \label{eq:scan}
+\end{equation}
+For fixed $u$, differentiation of the Gaussian series is absolute and
+locally uniform. With $x=\pi\ee^{4u}$ it gives
+\begin{equation}
+ \Phi(u)=\ee^u\sum_{m\ge1}
+ \bigl(2(m^2x)^2-3m^2x\bigr)\ee^{-m^2x}.
+ \label{eq:phi-series}
+\end{equation}
+The source summation index is written $m$ because the scalar source,
+once prepared, is independent of the physical channel index $n$ of
+the evolving field. Equating the scan coordinate $u$ to the physical
+coordinate $v$ is also part of the preparation. The translation-invariant
+Green kernel alone does not prescribe either operation.
+
+The complete theta identity is what makes this source smooth and even.
+For $R>0$, let
+\begin{equation}
+ \Theta(R)=\sum_{j\in\mathbb Z}\ee^{-\pi j^2R^2}
+          =1+2Q_1(\pi R^2).
+\end{equation}
+The modular identity
+$\Theta(R)=R^{-1}\Theta(R^{-1})$ is the zero-argument specialization
+of \cite[20.7.32]{DLMFThetaModular}. Taking $R=\ee^{2u}$ yields
+\begin{equation}
+ p(u)-p(-u)=-\sinh u.
+ \label{eq:reflection-p}
+\end{equation}
+The operator $\partial_u^2-1$ annihilates the right side, so
+\begin{equation}
+ \Phi(u)=\Phi(-u).
+ \label{eq:phi-even}
+\end{equation}
+The series defining $p$ is smooth on every compact interval of the full
+line; thus this is a smooth reflection, including the origin. Both the
+zero-mode correction in $\Theta$ and the complete unit coefficients are
+essential to this argument.
+
+Every summand of \eqref{eq:phi-series} is positive when $u\ge0$, since
+$m^2x\ge\pi>3/2$. Therefore $\Phi>0$ on the whole line. The first term
+also gives, with $x=\pi\ee^{4|v|}$,
+\begin{equation}
+ \Phi(v)\ge\left(2-\frac3\pi\right)
+ \ee^{|v|}x^2\ee^{-x}>0.
+ \label{eq:phi-lower}
+\end{equation}
+This positivity concerns the source. It will not determine the sign of
+its oscillatory Fourier observation.
+
+\subsection{A hierarchy of complete-source bounds}
+
+We next establish a single collection of majorants that will control the
+preparation, evolution, and readout. Define polynomials
+\begin{equation}
+ P_0(x)=2x^2-3x,\qquad
+ P_{j+1}(x)=(1-4x)P_j(x)+4xP_j'(x).
+ \label{eq:source-poly}
+\end{equation}
+Then $\deg P_j=j+2$, and differentiating on $u\ge0$ gives
+\begin{equation}
+ \Phi^{(j)}(u)=\ee^u\sum_{m\ge1}
+                 P_j(m^2x)\ee^{-m^2x}.
+ \label{eq:phi-derivatives}
+\end{equation}
+Let $a_j$ be the sum of the absolute coefficients of $P_j$, and put
+\begin{equation}
+ C_d(N)=\sum_{m>N}m^{2d}\ee^{-\pi(m^2-1)},\qquad
+ B_j=a_jC_{j+2}(0).
+ \label{eq:source-constants}
+\end{equation}
+Every $C_d(N)$ is finite and tends to zero with $N$. Since $x\ge\pi>1$,
+\begin{equation}
+ \ee^u\sum_{m>N}|P_j(m^2x)|\ee^{-m^2x}
+ \le a_j C_{j+2}(N)\ee^u x^{j+2}\ee^{-x}.
+ \label{eq:source-tail}
+\end{equation}
+Indeed, $|P_j(m^2x)|\le a_jm^{2(j+2)}x^{j+2}$ and
+$\ee^{-(m^2-1)x}\le\ee^{-\pi(m^2-1)}$. Thus the estimate controls
+the sum of absolute values, not merely cancellation in a signed tail.
+Reflection gives the global bound
+\begin{equation}
+ |\Phi^{(j)}(v)|\le B_j\ee^{|v|}x^{j+2}\ee^{-x},
+ \qquad x=\pi\ee^{4|v|}.
+ \label{eq:phi-global}
+\end{equation}
+
+For nonnegative integers $r,d$ and finite $M,b\ge0$, define
+\begin{equation}
+ J_{r,d}(M,b)=\int_\R |v|^r
+ \ee^{Mv^2+(b+1)|v|}x^d\ee^{-x}\dd v.
+ \label{eq:J-definition}
+\end{equation}
+These integrals are finite. More explicitly, the substitution
+$x=\pi\ee^{4|v|}$ gives
+\begin{equation}
+ J_{r,d}(M,b)=\frac{2}{4^{r+1}}\int_\pi^\infty
+ [\log(x/\pi)]^r(x/\pi)^{(b+1)/4}x^{d-1}
+ \exp\!\left(\frac{M}{16}\log^2(x/\pi)-x\right)\dd x.
+ \label{eq:J-integral}
+\end{equation}
+The term $-x$ dominates the logarithmic square and all polynomial factors.
+The remaining integral beyond a radial cutoff consequently tends to
+zero. This provides a complete radial tail bound at every fixed order.
+
+Write
+\begin{equation}
+ F_\lambda(v)=\ee^{\lambda v^2}\Phi(v),\qquad
+ f_{a,\lambda}(v)=v^{2a}F_\lambda(v)=\partial_\lambda^aF_\lambda(v).
+ \label{eq:deformed-source}
+\end{equation}
+Define $R_0(\lambda,v)=1$ and
+$R_{j+1}=\partial_vR_j+2\lambda vR_j$, so that
+$\partial_v^j\ee^{\lambda v^2}=\ee^{\lambda v^2}R_j(\lambda,v)$.
+For each fixed $a,h$ and $M$, finite Leibniz expansion gives
+\begin{equation}
+ |f_{a,\lambda}^{(h)}(v)|
+ \le C_{a,h,M}(1+|v|)^{2a+h}
+ \ee^{Mv^2+|v|}x^{h+2}\ee^{-x},\qquad |\lambda|\le M.
+ \label{eq:f-majorant}
+\end{equation}
+For specificity, let $r_j(M)$ be the sum of the absolute coefficients
+of $R_j$ after replacing every power $\lambda^t$ by $M^t$. One permissible
+constant is
+\begin{equation}
+ C_{a,h,M}=\sum_{\substack{i+j+\ell=h\\i\le2a}}
+ \frac{h!}{i!j!\ell!}\frac{(2a)!}{(2a-i)!}\,r_j(M)B_\ell.
+ \label{eq:f-constant}
+\end{equation}
+Here $|R_j(\lambda,v)|\le r_j(M)(1+|v|)^j$, and
+$x^{\ell+2}\le x^{h+2}$; these inequalities prove
+\eqref{eq:f-majorant} directly.
+
+It is useful to collect the weighted $L^1$ bounds as
+\begin{align}
+ w_{r,b}(v)&=(1+|v|)^r\ee^{b|v|},\\
+ \mathcal N_{a,h;r,b}(M)
+ &=\sup_{|\lambda|\le M}\norm{w_{r,b}f_{a,\lambda}^{(h)}}_1
+ \nonumber\\
+ &\le C_{a,h,M}\sum_{\ell=0}^{2a+h+r}
+       \binom{2a+h+r}{\ell}J_{\ell,h+2}(M,b)<\infty.
+ \label{eq:N-bound}
+\end{align}
+Squaring \eqref{eq:f-majorant} proves all finite $L^2$ derivative
+bounds. Multiplying it by any polynomial and taking a supremum proves
+every fixed Schwartz seminorm. The same majorants, with one further
+factor $v^2$, prove continuity and differentiation in $\lambda$ in
+each of these spaces. In particular, the image of a compact $\lambda$
+interval is compact in every one of the specified norms.
+
+Two distinctions about completeness will be used later. First, a
+reflected finite source prefix $\Phi_N$ obeys the value-and-moment bound
+\begin{equation}
+ \norm{w_{r,b}v^{2a}\ee^{\lambda v^2}(\Phi-\Phi_N)}_1
+ \le a_0C_2(N)\sum_{\ell=0}^r\binom r\ell
+                      J_{2a+\ell,2}(M,b)\longrightarrow0.
+ \label{eq:prefix-value-tail}
+\end{equation}
+Such a prefix generally has derivative jumps at the reflection point.
+It is not a global smooth graph-core approximation; the operator cores
+of Proposition~\ref{prop:complete-realization} supply those approximations.
+Second, integration by parts yields, for any finite $d,l\ge0$,
+\begin{equation}
+ |\partial_k^d\widehat f_{a,\lambda}(k)|
+ \le\frac{(1+k^2)^{-l}}{\sqrt{2\pi}}
+ \norm{(1-\partial_v^2)^l[(-\ii v)^df_{a,\lambda}]}_1.
+ \label{eq:fourier-tail}
+\end{equation}
+The right side is uniformly finite by \eqref{eq:N-bound}. Choosing $l$
+sufficiently large controls every fixed polynomially weighted radial
+Fourier tail in $L^1$ or $L^2$.
+
+\subsection{The Newman transform and its absolute normalization}
+
+Evenness converts the cosine transform into
+\begin{equation}
+ H_\lambda(z)=\frac12\int_\R F_\lambda(v)\ee^{-\ii zv}\dd v,
+ \qquad \widehat F_\lambda(k)=\sqrt{\frac2\pi}\,H_\lambda(k).
+ \label{eq:H-fourier}
+\end{equation}
+On $|\lambda|\le M$, $|\Im z|\le b$, the source estimates justify
+every fixed finite mixed derivative:
+\begin{equation}
+ \partial_\lambda^a\partial_z^d H_\lambda(z)
+ =\frac12\int_\R v^{2a}(-\ii v)^dF_\lambda(v)
+                   \ee^{-\ii zv}\dd v,
+ \qquad
+ |\partial_\lambda^a\partial_z^d H_\lambda(z)|
+ \le\frac{B_0}{2}J_{2a+d,2}(M,b).
+ \label{eq:H-derivatives}
+\end{equation}
+The same domination on compact complex $\lambda$ sets shows joint
+entire dependence on $(\lambda,z)$. In particular,
+\begin{equation}
+ \partial_\lambda H_\lambda=-\partial_z^2H_\lambda.
+ \label{eq:newman-heat}
+\end{equation}
+The minus sign comes from $(-\ii v)^2=-v^2$. The parameter $\lambda$
+reweights the source; it is not the cylinder heat parameter.
+
+For completeness, the factor $1/8$ in the zeta normalization can be
+derived directly, rather than left as an adjustable gain. By evenness we
+may use $\ee^{\ii zv}$ in \eqref{eq:H-fourier}. Put
+$s=(1+\ii z)/2$ and $t=\ee^{4v}$. For $\Re s>1$, absolute summability
+allows termwise integration over the full line and gives
+\begin{align}
+ H_0(z)
+ &=\frac18\sum_{m\ge1}\int_0^\infty
+ t^{s/2-1}\bigl[2(\pi m^2t)^2-3\pi m^2t\bigr]
+                         \ee^{-\pi m^2t}\dd t
+ \nonumber\\
+ &=\frac{2\Gamma(s/2+2)-3\Gamma(s/2+1)}8
+                         \pi^{-s/2}\zeta(s)
+ \nonumber\\
+ &=\frac{s(s-1)}{16}\Gamma(s/2)\pi^{-s/2}\zeta(s)
+  =\frac18\xi(s).
+ \label{eq:xi-normalization}
+\end{align}
+Absolute integrals of the individual terms are bounded by a constant
+times $m^{-\Re s}$ in this half-plane. The already established entire
+integral supplies the continuation of the identity to all $z$.
+This agrees with \cite[Introduction, eqs.~(1)--(4)]{RodgersTao2020}.
+For real $\lambda$, $H_\lambda(0)>0$ by source positivity, so none of
+these entire functions is identically zero.

@@ -1,0 +1,225 @@
+\section{Analytical comparison and research boundary}\label{sec:scope}
+
+\subsection{What the two constructions establish}
+Both branches now have complete analytical realizations within their
+chosen supplied-data models, together with internal assessments accepting
+those scopes without required mathematical correction
+\cite{TNDDirectReview,TNDAuxReview}. The common geometry and
+source-transport comparison has its separate shared assessment
+\cite{TNDSharedReview}. The table describes the mathematical status at
+6 November 2026; it does not replace either branch's live research register.
+
+\begin{table}[ht]
+\small\centering
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.19\textwidth}YY@{}}\toprule
+Feature & Direct Newman realization & Auxiliary Hamiltonian dynamics \\\midrule
+Prepared object & Normalized square root $f_{1/2}$ with complete angular density $R$. & Linear amplitude $F_\lambda B$ in a passive reference bank. \\
+Evolution & Free unitary and the specified count instrument; condition on no count. & Free left heat $\ee^{-\tau L_{\rm left}}$ after each supplied preparation. \\
+Newman parameter & The declared decreasing clock $\lambda(t)=1/2-\gamma t$ on $[-1/2,1/2]$. & An independent source parameter on any fixed finite compact interval. \\
+Signed readout & Density cosine in $Q_t$, calibrated by joint success frequencies. & Phase-sensitive linear Fourier pairing with known absolute gain. \\
+Exact result & $H_\lambda=H_{1/2}(0)(q_+-q_-)$. & $\Obs=q(\tau)\ee^{-\tau z^2}H_\lambda$. \\
+Remaining input & Source loader, imprint, angular preparation, initial scale, quadrature access. & Source/imprint, matched passive bank, calibrated phase-sensitive law. \\
+Current mathematical limit & No signed estimate follows from conditioning or positivity. & Zeros and collisions are preserved; inverse amplification grows as $\ee^{\tau k^2}$. \\
+\bottomrule\end{tabularx}
+\caption{Accepted conditional representations and their different burdens.}
+\end{table}
+
+The analytical progress is substantive at the level of domains and
+representation: the square-root preparation has controlled derivatives,
+all counts are retained, the strong law uses a stated initial and final
+domain, and the auxiliary response has paid exponential moments and
+actual zero-time derivatives. It also makes the remaining issue precise.
+A positive source, positive angular state or positive operation does not
+control a signed cosine cancellation. A new assertion about the original
+zeros requires additional information about the actual source and
+observation, beyond either exact representation.
+
+A later source refresh during manuscript production found two branch
+continuations. The direct branch completed initial collision reconnaissance
+at proof-author/diagnostic scope; mechanism selection remains open. The
+auxiliary branch completed a conceptual choice and issued an unactivated
+execution request for first-derivative recovery conditioning. These later
+items do not inherit the earlier realization assessments automatically.
+
+\subsection{Direct continuation: count sectors and collision anatomy}
+The subsequent direct note \cite{TNDDirectCollision} records the following
+identities of the already specified instrument. They retain that note's
+proof-author status. Put
+\[
+ w_t=F_{\lambda(t)}/Z_{\lambda(t)},\quad
+ C(t,k)=\int_\R w_t(v)\cos(kv)\dd v,\quad
+ d_0(t,k)=p_tC(t,k)=H_{\lambda(t)}(k)/H_{1/2}(0).
+\]
+Differentiating the complete source integrals gives
+\begin{equation}\label{eq:diagnosticPDE}
+ \partial_tw_t=-\gamma(v^2-\mu_2(t))w_t,\quad
+ C_t=\gamma(C_{kk}+\mu_2C),\quad
+ (d_0)_t=\gamma(d_0)_{kk},\qquad
+ \mu_2(t)=\int_\R v^2w_t(v)\dd v.
+\end{equation}
+The physical-time sign is positive because $\lambda(t)$ decreases.
+The normalized state and success mass remain regular even if the
+signed readout has a multiple zero.
+
+For each count output $\sigma_j(t)=K_j(t,0)\rho_*K_j(t,0)^*$ define
+$d_j(t,k)=\Tr[\sigma_j(t)\cos(kQ_t)]$. Direct substitution of
+\eqref{eq:Kraus} gives
+\begin{equation}\label{eq:countjets}
+ d_j=\frac{(-\gamma t)^j}{j!}\partial_k^{2j}d_0,\qquad
+ |d_j|\le\Tr\sigma_j,\qquad
+ \sum_{j\ge0}\eta^jd_j(t,k)
+ =\frac{H_{\lambda(t)+\eta\gamma t}(k)}{H_{1/2}(0)},\quad0\le\eta\le1.
+\end{equation}
+Absolute convergence follows from $\sum_j\Tr\sigma_j=1$; inside the
+source integral it is the positive exponential series. Thus
+$\sum_jd_j(t,k)=C(0,k)$, and for $t>0$,
+\begin{equation}\label{eq:counttransfer}
+ \partial_td_j=\frac jt d_j-\frac{j+1}{t}d_{j+1},\qquad
+ \partial_td_0=-d_1/t.
+\end{equation}
+These are analytical traces of existing outputs. The no-count readout
+contract does not by itself grant experimental access to the same
+observation after every nonzero count. Also, conservation of this
+count-averaged cosine trace does not make the entire unconditioned
+state stationary.
+
+At a hypothetical interior nondegenerate double event, set
+$a_*=(d_0)_{kk}(t_*,k_*)\ne0$. Taylor expansion using
+\eqref{eq:diagnosticPDE} yields
+\begin{equation}\label{eq:localdouble}
+ d_0(t_*+h,k_*+x)
+ =\frac{a_*}{2}(x^2+2\gamma h)
+   +O(|x|^3+|hx|+h^2).
+\end{equation}
+The constants are local to the event. The real roots on the $h<0$ side
+have leading displacement $\pm\sqrt{-2\gamma h}$; on the $h>0$ side
+the corresponding complex displacements are
+$\pm\ii\sqrt{2\gamma h}$. This follows by parabolic rescaling and
+the analytic implicit-function theorem at the two simple scaled roots.
+At the event $q_+=q_-=p_{t_*}/2>0$, while
+$d_1(t_*,k_*)=-\gamma t_*a_*\ne0$. The singular behavior is in zero
+tracking, not in the positive state or success mass. This conditional
+local description neither asserts a theta collision nor covers higher
+multiplicities by a generic-double assumption.
+
+The same direct note checks a reflected super-Gaussian collision
+control inside the physical slab, at $\lambda=1/4$, $k=\pi/4$, using
+its own smooth-square-root tail bounds. It satisfies these generic
+balance laws while failing the canonical theta arithmetic expansion.
+Accordingly the count-sector identities organize the same source
+moments but supply no separating signed bound. The next direct
+conceptual step remains the search for a source-specific mechanism;
+no follow-up estimate is fixed by this manuscript.
+
+\subsection{Auxiliary continuation: the value-and-derivative recovery map}
+The auxiliary decision \cite{TNDAuxConditioning} fixes a finite-window
+conditioning diagnostic. To display its background algebra, take a
+fixed derivative scale $\sigma>0$ and define
+\[
+ \mathbf h=\binom{H_\lambda(k)}{\sigma H'_\lambda(k)},\qquad
+ \mathbf o=\binom{\Obs_{\lambda,\tau}(k)}{\sigma\partial_k\Obs_{\lambda,\tau}(k)},
+ \qquad m_\tau(k)=q(\tau)\ee^{-\tau k^2}.
+\]
+One differentiation of the already accepted response gives
+\begin{equation}\label{eq:jetmap}
+ \mathbf o=m_\tau(k)
+ \begin{pmatrix}1&0\\-2\sigma\tau k&1\end{pmatrix}\mathbf h.
+\end{equation}
+Thus recovery must account for derivative mixing as well as angular and
+Gaussian attenuation. The issued execution request asks for the sharp
+Euclidean inverse norm on a fixed finite real window and a comparison
+with direct recovery under a declared additive pair-error hypothesis.
+Those sharp bounds remain proof targets at this source capture; they
+are not asserted here as completed research.
+
+Covariant derivative processing removes the signal's triangular factor,
+ but transforms an isotropic raw error ball into an ellipsoid. For an
+uncertainty set transported by the exact invertible map, applying its
+inverse returns the original set. This algebra supplies no gain in
+information by itself. The selected diagnostic introduces neither a
+physical noise law nor a positive canonical value-and-derivative margin.
+It does not change the supplied apparatus or prove a collision restriction.
+
+\subsection{Controls and the scope of the conclusions}
+The repository's collision-control collection \cite{CollisionControls}
+provides a premise screen for any later sign claim. The generic Fourier,
+Green, count-filter and heat identities can hold for other sources that
+admit collisions. Their applicability must be checked against the
+particular source regularity and preparation interval; the table does
+not assert that every control meets every domain assumption.
+
+\begin{center}\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.25\textwidth}Y@{}}\toprule
+Control class & Premise absent from the canonical application; surviving structure \\\midrule
+Euler-factor perturbations & The unchanged complete theta arithmetic source is absent. Applicable smooth positive even sources still admit generic Fourier/Green constructions and conditional filtering. \\
+Weighted-square and finite-prime perturbations & Complete unit coefficients and full canonical reflection fail. Positive half-line sums and finitely matched endpoints do not establish a smooth full-line square root. \\
+Reflected super-Gaussian and smooth positive-primitive controls & The exact theta arithmetic expansion fails. Where the required tails and domains hold, smoothness, positivity, reflection and the representation identities survive. \\
+Atomic or nonsmooth finite-profile controls & Fourier observations and finite moments may exist while the smooth source and graph-domain hypotheses fail or require a separate construction. \\
+\bottomrule\end{tabularx}
+\end{center}
+
+This screen is analytical reuse of the recorded controls, not a new
+control computation. No control is required to violate a generic
+representation theorem. For the auxiliary construction, whenever a
+control meets the hypotheses the same nonvanishing multiplier preserves
+its collisions. For the direct construction, a positive success
+probability and two valid outcome effects can still have equal signed
+probabilities. The exact theta expansion identifies the canonical input;
+identifying it is not yet a quantitative separation from a colliding source.
+
+The negative conclusions in this paper are correspondingly limited.
+The unbounded positive-Newman multiplier concerns its action on
+unrestricted $L^2$. The inverse amplification concerns the fixed free
+proper-time response. The absence of a full-cylinder Gibbs state concerns
+the retained infinite radial volume. None rules out all enlarged models,
+alternative preparations or auxiliary estimates.
+
+\subsection{Quantifiers needed by subsequent analysis}
+Three distinctions should accompany every use of the background.
+First, all physical angular shells and the full continuous radial
+spectrum are retained; cutoffs appear only in justified limiting proofs.
+Second, every fixed derivative or moment order is controlled, but its
+constant can grow with that order. No order-uniform estimate or infinite
+operator expansion is obtained by listing those finite-order statements.
+Third, the complex source observation is entire, while the raw scalar
+$G$ integral has its initial strip and real bounded measurements have
+their real-frequency domain.
+
+The common unresolved mathematical need is a useful signed relation or
+estimate with a stated parameter range and a demonstrated advantage over
+direct analysis of \eqref{eq:fullH}. Such an estimate is not supplied by
+the positive energy moments, the normalized-state tangent, the complete
+instrument, or the auxiliary nonvanishing factor alone. The present
+manuscript supplies the formulas, domains and exact normalization needed
+to formulate and assess that next step.
+
+\appendix
+\section{Source and evidence map}\label{sec:evidence}
+
+The following map identifies the proof sources used in this synthesis.
+Their full paths, exact input hashes and current review links are recorded
+in the manuscript companion README and the TND-E06 input record. Earlier
+dated planning paragraphs in the overviews are historical; current
+branch dispositions are taken from the latest progress rows and
+completed reviews.
+
+\begin{center}\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.24\textwidth}Y@{}}\toprule
+Manuscript material & Principal source and evidence carried forward \\\midrule
+Geometry and spectra & Parent Note02, Sections 1--3; shared Review01 accepts the stated comparison. Classical angular spectrum and curvature conventions use Camporesi--Higuchi. \\
+Green trace, source and tails & Parent Note02, Sections 4 and 6, using MC11's accepted operator/source notes; full theta inversion uses DLMF 20.7.32. \\
+Energy dictionary & MC11 observable Note13, Sections 2--4; only its trace/differentiation identities are rederived here. No pending detector or preparation claim is promoted. \\
+Scalar field and transport & Parent Note02, Sections 5--7, and the radial companion. Shared Review01 clarifies the two scalar heat generators; the companion's inherited same-assistant evidence remains explicit. \\
+Direct construction & Direct Note02, Sections 2--6, and direct Review01. Acceptance is within the supplied ideal-operation scope, from the proof author's same-chat internal assessment. \\
+Auxiliary construction & Auxiliary Note01, Sections 2--8, and auxiliary Review01. Acceptance is within the supplied-apparatus scope, from internal same-model assessment in the proof-author chat. \\
+Control interpretation & Recorded collision-control cluster and the premise screens in both branch reviews. No new control witness or exclusion is asserted. \\
+\bottomrule\end{tabularx}
+\end{center}
+
+The source-sum index, physical angular index, reference column, radial
+Fourier label and count outcome have different roles. They are never
+identified to bypass an infinite sum. Likewise the source energy trace,
+the source amplitude, the normalized density and the final signed
+observation have different normalizations. The local consistency check
+for this manuscript follows those distinctions and is editorial
+mathematical checking, not a new independent assessment of the research.

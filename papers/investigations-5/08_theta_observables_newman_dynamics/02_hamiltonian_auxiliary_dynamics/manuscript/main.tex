@@ -1,0 +1,100 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{booktabs,tabularx,array}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+\usepackage{bookmark,enumitem}
+\setlist{nosep}
+\setcounter{tocdepth}{1}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\arraystretch}{1.15}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Dom}{Dom}
+\DeclareMathOperator{\HS}{HS}
+\DeclareMathOperator{\Scal}{Scal}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\K}{\mathcal K}
+\newcommand{\Href}{\mathcal K_{\mathrm{ref}}}
+\newcommand{\HH}{\mathscr H}
+\newcommand{\Dc}{\mathcal D_C}
+\newcommand{\Obs}{\mathcal O}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\ee}{\mathrm e}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\braket}[2]{\left\langle#1,#2\right\rangle}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\title{Hamiltonian heat evolution of theta amplitudes\\[4pt]
+\large Complete spectral realization and calibrated Newman response}
+\author{Drafted for Edward Baker}
+\date{6 November 2026\\\small Working manuscript}
+\hypersetup{pdftitle={Hamiltonian heat evolution of theta amplitudes},pdfauthor={Drafted for Edward Baker},pdfsubject={Analytical results for Hamiltonian auxiliary dynamics}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We develop an auxiliary Hamiltonian representation of the canonical
+de Bruijn--Newman transform. The squared geometric Dirac operator on
+$\R\times S^2_{1/2}$ has the complete dispersion $k^2+4n^2$; its radial
+Green diagonal supplies an angular weight that cancels the spinor
+multiplicities. A prescribed damping scan and differential processing
+produce the canonical theta source. We use this source to prepare an
+operator-valued amplitude, evolve it by the left-acting heat semigroup,
+and pair it with a matched passive reference. The absolutely calibrated
+response is
+$\Obs_{\lambda,\tau}(z)=
+ [Q_1(\pi+4\tau)/Q_1(\pi)]\ee^{-\tau z^2}H_\lambda(z)$.
+We derive the self-adjoint realizations, exact prepared graph norms,
+complete source and spectral tails, weighted heat estimates, and every
+fixed finite mixed derivative, including actual right derivatives at
+zero proper time. The nonvanishing multiplier preserves zeros and their
+multiplicities and conjugates the Newman equation, while its inverse
+amplifies high real frequencies without bound. These are analytical
+statements about a supplied preparation and phase-sensitive readout;
+they do not establish intrinsic preparation, a laboratory implementation,
+or a collision exclusion. The final section identifies the pending
+conditioning analysis and the source-specific estimates needed for
+further progress.
+\end{abstract}
+\tableofcontents
+\clearpage
+
+\input{sections/01_overview}
+\input{sections/02_geometry}
+\input{sections/03_source}
+\input{sections/04_preparation}
+\input{sections/05_heat}
+\input{sections/06_readout}
+\input{sections/07_consequences}
+\input{sections/08_outstanding}
+
+\section*{Acknowledgements and provenance}
+This manuscript was drafted for Edward Baker with substantial assistance
+from OpenAI's \texttt{gpt-6-astra} through Codex, with recorded reasoning
+effort \texttt{max}. LLM assistance included mathematical exposition,
+comparison with the proof notes and primary sources, local algebraic and
+analytic checks, and document production. The principal proof notes and
+their internal assessments were prepared with \texttt{gpt-6.1-sol}, effort
+\texttt{ultra}. Those assessments have shared premises and include work
+in the proof-author chat; they are not independent specialist review or
+formal verification. The present synthesis preserves that evidence status.
+No numerical experiment is used as a premise of any result.
+
+\begingroup
+\small
+\bibliographystyle{plainurl}
+\bibliography{hamiltonian_auxiliary_sources}
+\endgroup
+\end{document}

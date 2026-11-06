@@ -17,3 +17,7 @@ For Edward Baker with substantial LLM assistance, **gpt-6-astra / max**, auxilia
 ## TND-E03 r2 shared assessment use — 6 November 2026
 
 Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol/ultra**, existing auxiliary chat0002. [Use receipt01](01_TND_E03_R2_SOURCE_USE_20261106.md) records freshly inspected Camporesi–Higuchi v1, DLMF theta and Rodgers–Tao v5 passages and exact local evidence for [Shared Review01](../reviews/01_TND_E03_R2_GEOMETRY_SOURCE_AND_TRANSPORT_ASSESSMENT_20261106.md). The existing canonical records/BibTeX keys remain the source homes. No new PDF or duplicate bibliography was added. Inspection is passage-level; assessment is same-model with shared premises, not a branch realization, physical preparation or specialist review.
+
+## TND-E06 background manuscript use — 6 November 2026
+
+Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra/max**, parent chat0004. [Use receipt02](02_TND_E06_BACKGROUND_SOURCE_USE_20261106.md) records the selected primary passages checked for the shared manuscript. [Internal source entries](internal_sources.bib) cite the project proof notes, assessments and later branch decisions; external entries remain in their canonical MC11 and direct-branch catalogs and are combined only during the build. [Integration Review02](../reviews/02_SHARED_ANALYTICAL_BACKGROUND_MANUSCRIPT_REVIEW_20261106.md) preserves the distinct mathematical, planning and assessment scopes. No third-party PDF was added.

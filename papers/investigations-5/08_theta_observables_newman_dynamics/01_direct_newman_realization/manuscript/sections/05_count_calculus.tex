@@ -1,0 +1,120 @@
+\section{Signed moments in the complete count record}\label{sec:count}
+
+The realization has more structure than its selected no-count output.
+For each $j\ge0$, define
+\begin{equation}\label{eq:countdef}
+ \sigma_j(t)=K_j(t,0)\rho_*K_j(t,0)^*,\qquad
+ P_j(t)=\Tr\sigma_j(t),\qquad
+ d_j(t,k)=\Tr[\sigma_j(t)\cos(kQ_t)].
+\end{equation}
+Thus $P_0=p_t$ and $d_0$ is the absolute contrast in \eqref{eq:heat}.
+For nonzero counts these are well-defined analytical traces of the existing
+output operators. The frozen physical contract supplies the selected
+no-count readout; mathematical definition of $d_j$ does not add a guarantee
+of access to the same measurement after every nonzero count.
+
+\begin{theorem}[Count-sector moment and generating identities]\label{thm:counts}
+For fixed $j\ge0$, $0\le t\le T$ and real $k$,
+\begin{align}
+ P_j(t)&=p_t\frac{(\gamma t)^j}{j!}\mu_{2j}(t),\label{eq:Pj}\\
+ d_j(t,k)&=\frac{(\gamma t)^j}{j!Z_{1/2}}
+      \int_\R v^{2j}F_{\lambda(t)}(v)\cos(kv)\dd v
+       =\frac{(-\gamma t)^j}{j!}\partial_k^{2j}d_0(t,k),\label{eq:dj}\\
+ |d_j(t,k)|&\le P_j(t),\qquad\sum_{j\ge0}P_j(t)=1.\label{eq:countabs}
+\end{align}
+At $t=0$ the stated count-zero convention applies. For $0\le\eta\le1$,
+\begin{equation}\label{eq:generate}
+ \sum_{j\ge0}\eta^jd_j(t,k)
+ =\frac{H_{\lambda(t)+\eta\gamma t}(k)}{H_{1/2}(0)}.
+\end{equation}
+The series converges absolutely. In particular,
+\begin{equation}\label{eq:conserved}
+ \sum_{j\ge0}d_j(t,k)=C(0,k).
+\end{equation}
+\end{theorem}
+\begin{proof}
+In the interaction frame the radial output vector is
+$\ee^{-\gamma tv^2/2}(\sqrt{\gamma t}\,v)^jf_{1/2}(v)/\sqrt{j!}$.
+The signed odd-count amplitude is kept; its two occurrences in the diagonal
+trace give $v^{2j}$. The complete angular trace is exactly one. This proves
+the first integral formulas, including \eqref{eq:Pj}. Taking $2j$ derivatives
+in $k$ is justified by \eqref{eq:Hmixed} and produces $(-1)^jv^{2j}$,
+proving \eqref{eq:dj}. Positivity of $\sigma_j$ and the contraction norm of
+the real cosine give \eqref{eq:countabs}; count completeness gives the sum.
+
+Inside the source integral, the absolute sum of the terms weighted by
+$\eta^j$ is dominated by the positive sum with the cosine replaced by one.
+It is at most the initial probability mass for $0\le\eta\le1$.
+The exponential series therefore gives
+\[
+ \frac1{Z_{1/2}}\int_\R F_{\lambda(t)}(v)
+        \ee^{\eta\gamma tv^2}\cos(kv)\dd v
+ =\frac{2H_{\lambda(t)+\eta\gamma t}(k)}{Z_{1/2}},
+\]
+which is \eqref{eq:generate}. At $\eta=1$ the parameter returns to $1/2$,
+proving \eqref{eq:conserved}. No derivative-order summation is inferred
+from fixed-order estimates: this series is justified by its own absolute
+probability bound.
+\end{proof}
+
+Equation~\eqref{eq:Pj} is also a mixture of Poisson count laws against the
+initial density, with scalar intensity $\gamma tv^2$. For $t>0$, every
+$P_j>0$ and its normalized signed trace is
+\begin{equation}\label{eq:conditionalj}
+ \frac{d_j}{P_j}=\frac{(-1)^j\partial_k^{2j}C}{\mu_{2j}}.
+\end{equation}
+The count record therefore organizes the same complete weighted moments
+that direct source differentiation supplies.
+
+\begin{proposition}[Finite-sector transfer laws]\label{prop:transfer}
+For fixed $j$ and $t>0$,
+\begin{equation}\label{eq:transfer}
+ \partial_td_j=\frac jt d_j-\frac{j+1}{t}d_{j+1},\qquad
+ \partial_tP_j=\frac jt P_j-\frac{j+1}{t}P_{j+1}.
+\end{equation}
+Let $q_{j,\pm}=(P_j\pm d_j)/2$. These nonnegative analytical effect
+probabilities obey the same equations, and in particular
+\begin{equation}\label{eq:loss}
+ \partial_tq_{0,\pm}=-q_{1,\pm}/t\le0,\qquad
+ \partial_td_0=-d_1/t.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Differentiate the integral in \eqref{eq:dj}. The prefactor contributes
+$jd_j/t$; differentiating $F_{\lambda(t)}$ contributes $-\gamma v^2$,
+whose integral is $(j+1)d_{j+1}/t$ with the stated sign. The same calculation
+without the cosine proves the formula for $P_j$. Finite moments justify
+each fixed derivative. Taking sum and difference gives the equations for
+$q_{j,\pm}$. No infinite-series derivative is used.
+\end{proof}
+
+The quotients in \eqref{eq:transfer} have the required limits at zero from
+the source formulas; they should not be evaluated as $0/0$. For example,
+$d_1(t,k)/t\to\gamma\E_0[X^2\cos(kX)]$. Every statement concerns the
+fixed slab and fixed positive $\gamma$, without an infinite-time or uniform
+small-$\gamma$ conclusion.
+
+\subsection{What is conserved when all counts are retained}
+The conservation in \eqref{eq:conserved} concerns the co-moving cosine
+observation. It does not make the full state stationary. The distinction
+can be seen directly from the same Kraus amplitudes. In the interaction
+frame, the all-count output of the prescribed initial state has the radial
+operator-valued kernel
+\begin{equation}\label{eq:dephase}
+ f_{1/2}(v)f_{1/2}(w)\,\ee^{-\gamma t(v-w)^2/2}R.
+\end{equation}
+Indeed summing the kernel multipliers gives
+\[
+ \ee^{-\gamma t(v^2+w^2)/2}
+       \sum_{j\ge0}\frac{(\gamma tvw)^j}{j!}
+ =\ee^{-\gamma t(v-w)^2/2}.
+\]
+The absolute series is bounded by
+$\exp[-\gamma t(|v|-|w|)^2/2]\le1$, so the kernels converge in
+Hilbert--Schmidt norm by domination by $|f_{1/2}(v)f_{1/2}(w)|$.
+Theorem~\ref{thm:instrument} already gives trace-norm convergence to the
+same operator. The diagonal density is unchanged, while off-diagonal
+coherence is attenuated. This kernel identity is an algebraic consequence
+of the fixed instrument, not an additional physical evolution assumption.
+It also explains why replacing signed odd-count amplitudes by their
+absolute values would change the complete operation.

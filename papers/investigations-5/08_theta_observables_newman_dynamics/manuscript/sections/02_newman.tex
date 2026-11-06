@@ -1,0 +1,245 @@
+\section{Newman evolution and the scalar generating field}\label{sec:newman}
+
+\subsection{Entire source transform and Fourier transport}
+Put $F_\lambda(u)=\ee^{\lambda u^2}\Phi(u)$. Evenness gives
+\begin{equation}\label{eq:fullH}
+ H_\lambda(z)=\frac12\int_\R F_\lambda(u)\ee^{\ii zu}\dd u,
+ \qquad \widehat F_\lambda(k)=\sqrt{2/\pi}\,H_\lambda(k).
+\end{equation}
+For every fixed $a,b\ge0$, differentiation under this integral yields
+\begin{equation}\label{eq:mixedH}
+ \partial_\lambda^a\partial_z^bH_\lambda(z)
+ =\frac12\int_\R u^{2a}(\ii u)^bF_\lambda(u)\ee^{\ii zu}\dd u.
+\end{equation}
+For $|\lambda|\le M$ and $|\operatorname{Im}z|\le B$, its absolute
+value is at most $b_0J_{2a+b,2}(M,B)/2$. The same domination on complex
+$\lambda$ compacts proves joint entire dependence. In particular,
+\begin{equation}\label{eq:newmanPDE}
+ \partial_\lambda^aH_\lambda=(-\partial_z^2)^aH_\lambda.
+\end{equation}
+This is an identity of the complete family, with no spectral truncation.
+
+Finite Leibniz differentiation and Lemma~\ref{lem:tails} also imply
+\begin{equation}\label{eq:Schwartzbound}
+ |\partial_u^h(u^{2a}F_\lambda)(u)|
+ \le C_{a,h,M}(1+|u|)^{2a+h}
+ \ee^{Mu^2+|u|}x^{h+2}\ee^{-x}.
+\end{equation}
+For example one can generate derivatives of the Gaussian by
+$R_0=1$, $R_{j+1}=\partial_uR_j+2\lambda uR_j$, so that
+$\partial_u^j\ee^{\lambda u^2}=\ee^{\lambda u^2}R_j$;
+the finite absolute coefficient sums determine $C_{a,h,M}$.
+Thus $F_\lambda$, all polynomial insertions, and their finite parameter
+derivatives are Schwartz, uniformly in each fixed seminorm on compact
+real $\lambda$ intervals.
+
+On this class the two operations are
+\begin{equation}\label{eq:kineticvsnewman}
+ \widehat{(-\partial_u^2)^af}(k)=k^{2a}\widehat f(k),\qquad
+ \widehat{u^{2a}f}(k)=(-\partial_k^2)^a\widehat f(k).
+\end{equation}
+After an explicit spatial imprint $u=v$, a spinor encoding $f(v)\chi_n$
+therefore evolves under free heat by the multiplier
+$\ee^{-\tau(k^2+4n^2)}$. It does not evolve by
+$-\partial_k^2$. The source law $\partial_\lambda F_\lambda=u^2F_\lambda$
+is consequently different from the free heat or kinetic unitary law.
+
+\subsection{The scalar bridge and its strip of convergence}
+The radial theta geometry provides a second, scalar description
+\cite{RadialCompanion,TNDParent}. Let $R=\ee^{2u}$ and define
+\begin{equation}\label{eq:VG}
+ V(R)=1+R^{-1}-\Theta(R),\qquad
+ G_0(u)=\tfrac12\ee^u V(\ee^{2u}).
+\end{equation}
+For $u\ge0$, $G_0(u)=\ee^{-u}/2-p(u)$, and inversion makes $G_0$
+smooth and even. In particular the apparent cusps in the corresponding
+$|u|$ formula cancel. The potential $V$ is a scalar generating potential,
+not an interaction added to $L_0$.
+
+For Euclidean radius $R$, radial coordinate $u$ and angle $\omega$,
+\begin{equation}\label{eq:measureconjugation}
+ \begin{gathered}
+ y=R\omega,\quad \dd y=R^2\dd R\dd\Omega,
+ \quad \dd\mu=\frac{\dd u\dd\Omega}{4\pi}
+              =\frac{\dd y}{8\pi R^3},\quad g_E=4R^2g_C,\\
+ \Delta_y[R^{-1/2}f(u,\omega)]
+ =-\tfrac14R^{-5/2}\Lsc f.
+ \end{gathered}
+\end{equation}
+This is a differential conjugation with the displayed measure factors;
+it is not a unitary equivalence between those Euclidean and cylinder
+$L^2$ spaces. Inversion also gives
+$V(R)=1-2R^{-1}Q(\pi/R^2)$, which extends smoothly through the Euclidean
+origin. Distributionally the central singularities of $1/R$ and
+$\Theta$ cancel in $V$; they cannot be dropped separately.
+
+Only the angular-constant scalar channel is used by $G_\lambda$.
+Write $L=1-\partial_u^2$. Its decaying inverse has kernel
+$\ee^{-|u-w|}/2$, so
+\begin{equation}\label{eq:Glambda}
+ LG_\lambda=8F_\lambda,\qquad
+ G_\lambda=8L^{-1}F_\lambda
+ =4\int_\R\ee^{-|u-w|}F_\lambda(w)\dd w.
+\end{equation}
+This is the unique solution decaying at both ends; a homogeneous
+combination of $\ee^u,\ee^{-u}$ cannot decay at both ends unless it is zero.
+It is positive, even, smooth and Schwartz. Splitting the integral at $w=u$
+gives the more precise asymptotic
+\begin{equation}\label{eq:Gtail}
+ G_\lambda(u)\sim c_\lambda\ee^{-|u|},\qquad
+ c_\lambda=4\int_\R\ee^wF_\lambda(w)\dd w=8H_\lambda(\ii)>0.
+\end{equation}
+
+Integration by parts in \eqref{eq:Glambda} is valid initially only in
+$|\operatorname{Im}z|<1$ and yields
+\begin{equation}\label{eq:Gobs}
+ 16H_\lambda(z)=(1+z^2)\int_\R G_\lambda(u)\ee^{\ii zu}\dd u.
+\end{equation}
+To justify all boundary terms, convolution gives for every fixed
+source/spatial derivative and $0\le a<1$ the weighted supremum estimate
+\[
+ \norm{\ee^{a|u|}\partial_\lambda^p\partial_u^qG_\lambda}_\infty
+ \le\frac{8}{1-a}
+ \norm{\ee^{a|u|}\partial_u^q(u^{2p}F_\lambda)}_\infty.
+\]
+On a compact substrip choose $|\operatorname{Im}z|<a<1$.
+The remaining exponential decay pays the integrals and endpoint limits.
+By \eqref{eq:Gtail}, the raw integral in \eqref{eq:Gobs} is not absolutely
+convergent on the strip boundary. At $z=\pm\ii$ it is invalid to multiply
+that divergent integral by zero. The entire continuation is instead
+defined by \eqref{eq:fullH}. At $\lambda=0$, $c_0=1/2$ and
+$H_0(\pm\ii)=1/16$, which check both normalizations.
+
+\subsection{The transported generator and heat comparison}
+On the invariant Schwartz class define
+\begin{equation}\label{eq:transport}
+ \Bcal=L^{-1}X^2L,\qquad
+ \Bcal f=u^2f+L^{-1}(4uf'+2f).
+\end{equation}
+The second identity follows from
+$L(u^2f)=u^2Lf-4uf'-2f$. Finite powers telescope on this class:
+\begin{align}
+ \partial_\lambda^pG_\lambda
+ &=\Bcal^pG_\lambda=L^{-1}X^{2p}LG_\lambda,\label{eq:Bpower}\\
+ \widehat{\Bcal^pf}(k)
+ &=\frac{(-\partial_k^2)^p[(1+k^2)\widehat f(k)]}{1+k^2}.
+\end{align}
+The readout \eqref{eq:Gobs} then gives
+$(-\partial_z^2)^pH_\lambda$. Its derivatives act on the factor
+$1+z^2$ as well as on the integral. Replacing $\Bcal$ by $u^2$ acting
+directly on $G$ would omit the product-rule terms. Indeed
+$\ee^{\delta u^2}G_\lambda$ is not integrable for $\delta>0$,
+whereas $\ee^{\delta u^2}F_\lambda$ is.
+
+Let $\mathcal T$ denote the normalized observation in \eqref{eq:Gobs}.
+The distinction between the two scalar heat generators is
+\begin{equation}\label{eq:heatcompare}
+ \begin{aligned}
+ \mathcal T(\ee^{\tau\Delta_C}G_\lambda)(z)
+   &=\ee^{-\tau z^2}H_\lambda(z),\\
+ \mathcal T(\ee^{-\tau\Lsc}G_\lambda)(z)
+   &=\ee^{-\tau(1+z^2)}H_\lambda(z).
+ \end{aligned}
+\end{equation}
+These hold first in the paid strip and then by continuation of the
+response; the second carries the extra $\ee^{-\tau}$
+\cite[Section 5]{TNDSharedReview}. They do not describe the spinor
+auxiliary response, which has its own angular factor in
+\eqref{eq:auxintro}.
+
+Finally, multiplication by $\ee^{\delta X^2}$ is unbounded on
+unrestricted $L^2(\R)$ for $\delta>0$: normalized functions supported
+in $[R,R+1]$ have image norm at least $\ee^{\delta R^2}$.
+The canonical family is nevertheless defined for all finite real
+$\lambda$ by Lemma~\ref{lem:tails}. This excludes a bounded realization
+by that particular unrestricted multiplier, not state-specific
+preparation, conditioning, or an enlarged model.
+
+\section{Normalized sources and signed observations}\label{sec:normalized}
+
+For real $\lambda$, use the full-line normalization
+\begin{equation}\label{eq:fstate}
+ Z_\lambda=\int_\R F_\lambda(v)\dd v=2H_\lambda(0),\qquad
+ f_\lambda(v)=Z_\lambda^{-1/2}\ee^{\lambda v^2/2}\sqrt{\Phi(v)}.
+\end{equation}
+The use of $v$ supplies the spatial imprint. On $|\lambda|\le M$,
+$0<Z_{-M}\le Z_\lambda\le Z_M<\infty$.
+
+\begin{lemma}[Square-root regularity and complete angular preparation]
+\label{lem:state}
+Every fixed Schwartz seminorm of $f_\lambda$ and every fixed mixed
+parameter/spatial derivative is bounded on a compact real $\lambda$
+interval. Define the complete angular state
+\begin{equation}\label{eq:R}
+ R=\frac{W\ee^{-\pi A}}{Q(\pi)}
+  =\sum_{n\ge1}\frac{\ee^{-\pi n^2}}{4nQ(\pi)}P_n,
+ \quad \Tr R=1,
+ \quad \mu_b:=\Tr(A^bR)=\frac{\sum_n n^{2b}\ee^{-\pi n^2}}{Q(\pi)}<\infty.
+\end{equation}
+For $\rho^I_\lambda=|f_\lambda\rangle\langle f_\lambda|\otimes R$,
+the quadratic-form sandwich $L_0^p\rho^I_\lambda L_0^p$ is positive
+trace class for each fixed $p\ge0$.
+\end{lemma}
+\begin{proof}
+Schwartz regularity of a positive function alone does not prove it for
+its square root. Here the matching lower and upper bounds in
+\eqref{eq:twosidedbounds} give
+$|\Phi^{(j)}/\Phi|\le(b_j/\kappa)x^j$.
+Put $a_j=\Phi^{(j)}/\Phi$, so
+$a_j'=a_{j+1}-a_ja_1$. If $h=\sqrt\Phi$, induction gives
+$h^{(j)}=hS_j$, where
+\begin{equation}\label{eq:sqrtRec}
+ S_0=1,\qquad
+ S_{j+1}=\tfrac12a_1S_j+
+ \sum_{\ell=1}^j\frac{\partial S_j}{\partial a_\ell}
+ (a_{\ell+1}-a_\ell a_1).
+\end{equation}
+Every monomial has weighted degree $j$ when $a_\ell$ has weight $\ell$.
+Consequently, for finite $c_j$,
+\[
+ |h^{(j)}(v)|\le c_j\ee^{|v|/2}x^{j+1}\ee^{-x/2}.
+\]
+Multiplication by $\ee^{\lambda v^2/2}$ and finite Leibniz expansion
+preserve all fixed Schwartz bounds. Derivatives of $Z_\lambda^{-1/2}$
+are bounded using its positive lower bound and the paid integrals
+$Z_\lambda^{(a)}=\int v^{2a}F_\lambda\dd v$. Smooth evenness and strict
+positivity handle the origin.
+
+For the complete angular state, Tonelli and the finite binomial theorem
+give the exact trace payment
+\begin{equation}\label{eq:tracemoments}
+ \Tr(L_0^p\rho^I_\lambda L_0^p)
+ =\sum_{j=0}^{2p}\binom{2p}{j}4^{2p-j}\mu_{2p-j}
+ \norm{P^jf_\lambda}_2^2<\infty,\qquad P=-\ii\partial_v.
+\end{equation}
+The interpretation is the convergent positive sum of the weighted
+ensemble rank-one vectors. It does not put every vector in the density's
+closed support into $\Dom L_0^p$.
+\end{proof}
+
+All angular tails in \eqref{eq:tracemoments} are Gaussian series tails.
+The radial tails, for any fixed nonnegative $j,N$ and $K>0$, satisfy
+\[
+ \int_{|k|>K}|k|^{2j}|\widehat f_\lambda(k)|^2\dd k
+ \le K^{-2N}\norm{P^{j+N}f_\lambda}_2^2.
+\]
+Thus the full spectral moments, rather than only finite-mode states,
+are controlled \cite[Section 3]{TNDDirect}.
+
+The normalized Newman tangent and signed observations are
+\begin{align}
+ \partial_\lambda f_\lambda
+  &=\tfrac12(X^2-\langle X^2\rangle_\lambda)f_\lambda,\label{eq:tangent}\\
+ \frac{H_\lambda(k)}{H_\lambda(0)}
+  &=\langle\cos(kX)\rangle_\lambda,\qquad
+ \frac{H'_\lambda(k)}{H_\lambda(0)}
+  =-\langle X\sin(kX)\rangle_\lambda.\label{eq:collisionobs}
+\end{align}
+Expectations use the probability density $|f_\lambda|^2=F_\lambda/Z_\lambda$.
+The second observable is unbounded, but its expectation is paid by the
+finite moments. A real multiple zero is simultaneous vanishing of the
+two signed expressions in \eqref{eq:collisionobs}; a nondegenerate double
+zero also has $H''_\lambda(k)\ne0$.
+This is cancellation in observations, not coincidence of angular energy
+levels. The Fourier transform of the density, the Fourier amplitude of
+$f_\lambda$, and its momentum probability density are different objects.
