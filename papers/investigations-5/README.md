@@ -3,7 +3,7 @@
 24 October 2026, America/New_York. Prepared for **Edward Baker** with
 substantial LLM assistance, **gpt-6-astra (Codex), recorded effort max**.
 
-This collection studies canonical heat-flow approximations, their RH applications, collision bounds, conditional dynamics across three Newman-threshold and endpoint-multiplicity regimes, radial theta collision geometry, auxiliary flows for collision analysis, and positive theta primitives for indirect sign arguments.
+This collection studies canonical heat-flow approximations, their RH applications, collision bounds, conditional dynamics across three Newman-threshold and endpoint-multiplicity regimes, radial theta collision geometry, auxiliary flows for collision analysis, positive theta primitives for indirect sign arguments, and physical theta observables connected to Newman dynamics.
 
 | Investigation | Purpose | Status |
 | --- | --- | --- |
@@ -14,6 +14,7 @@ This collection studies canonical heat-flow approximations, their RH application
 | [05 — Radial theta collision geometry](05_radial_theta_collision_geometry/README.md) | Develop the three-dimensional theta/Kelvin source and reconsider collision mechanisms through boundary, oscillation and global-index arguments | [Initial analysis](05_radial_theta_collision_geometry/notes/01_RADIAL_THETA_GEOMETRY_AND_COLLISION_MECHANISMS_20261027.md), [overview](05_radial_theta_collision_geometry/research-overview/01_RADIAL_THETA_COLLISION_RESEARCH_OVERVIEW_20261027.md) and [progress](05_radial_theta_collision_geometry/research-progress/01_RADIAL_THETA_COLLISION_RESEARCH_PROGRESS_20261027.md); exact forced-boundary diagnostics and control, canonical exclusion open |
 | [06 — Auxiliary flows for collision analysis](06_auxiliary_collision_flows/README.md) | Explore modified Newman and auxiliary source evolutions for clearer collision responses and useful estimates | [Initial overview](06_auxiliary_collision_flows/research-overview/01_AUXILIARY_COLLISION_FLOWS_RESEARCH_OVERVIEW_20261028.md); background for brainstorming, research plan deferred |
 | [07 — Positive theta primitives](07_positive_theta_primitives/README.md) | Develop the Jensen and spectral Laguerre proof routes, with shared theta tools guided by their questions | [Jensen program](07_positive_theta_primitives/01_jensen/README.md), [spectral Laguerre program](07_positive_theta_primitives/02_spectral_laguerre/README.md), and [shared foundation](07_positive_theta_primitives/notes/README.md); program organization and literature foundation, no new global sign or zero theorem |
+| [08 — Theta observables and Newman dynamics](08_theta_observables_newman_dynamics/README.md) | Combine radial theta geometry and angular energy observables to develop physical preparation, evolution and signed Newman observations | [Draft overview](08_theta_observables_newman_dynamics/research-overview/01_THETA_OBSERVABLES_AND_NEWMAN_DYNAMICS_DRAFT_OVERVIEW_20261105.md) and [brainstorm continuation](08_theta_observables_newman_dynamics/notes/01_BRAINSTORM_CONTINUATION_20261105.md); research plan and progress register deferred by the author |
 
 Each investigation keeps its own notes, numerics, reviews and chat
 histories. The [result summaries](../../result-summaries/README.md),
@@ -42,3 +43,5 @@ Prepared with substantial LLM assistance, **gpt-6-astra (Codex), recorded
 effort max**. The founding chat retains its Investigation05 registration.
 
 31 October 2026 — Investigation07 opened at Edward Baker’s request for a primitive-centered continuation of the classical Riemann representation and its sign applications. Opening brainstorm includes lessons from Investigation05. Prepared with substantial LLM assistance, **gpt-6-astra / xhigh**; the founding chat retains its unique Investigation05 chat0053 registration.
+
+5 November 2026 — Investigation08 opened directly under investigations-5 at Edward Baker’s request, joining Investigation05 and MC11 within Investigation07, with related work linked in the draft overview. Further brainstorming precedes the research plan and progress register. Prepared with substantial LLM assistance, **gpt-6-astra / max**. The founding chat retains its unique MC11 history0006 registration.

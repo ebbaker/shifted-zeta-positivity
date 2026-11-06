@@ -49,7 +49,9 @@ overlap investigation. On a complete product cylinder with sphere radius
 one half, the radial diagonal of a squared Dirac Green kernel supplies
 the inverse angular multiplicity required to recover the complete
 integer-square theta trace. The construction retains all radial
-momenta and all angular modes. For a bounded nonnegative scalar radial
+momenta and all angular modes. An explicit conditional angular state
+and its energy observables reconstruct the theta source and its
+derivatives. For a bounded nonnegative scalar radial
 potential, we prove explicit channel response bounds and strict
 rigidity of exact source recovery at a fixed probe. For the free model,
 complete spectral majorants justify every finite source derivative and
@@ -61,19 +63,24 @@ an inherited validated anchor gives a uniform bound at every positive
 moment index. Nevertheless, corner-cofactor domination still lacks a
 quantitative signed margin, and a fixed uniform relative-error allowance
 eventually cannot certify growing-order determinant positivity. The
-sharper nonuniform payment remains unresolved. These are representation,
-response, and comparison results; they provide no new all-order
-determinant sign theorem or Mellin-curvature comparison.
+sharper nonuniform payment remains unresolved. We also connect the
+energy-response scan to the de Bruijn--Newman transform and its signed
+collision observations, distinguishing a proposed radial preparation
+from the existing cylinder dynamics. These results provide no new
+all-order determinant sign or Mellin-curvature comparison.
 \end{abstract}
 
-\noindent\textbf{Status.} Working analytical draft based on the current
-angular/radial overview and its completed returns through 5 November
-2026. The free operator identities have an internal LLM assessment.
-The potential and source proofs have proof-author and same-model checks;
-the signed-transfer analysis has proof-author checks only.
-Their separate AR-E04 assessment is pending. This consolidation does not
-upgrade those statuses. Source identifiers are resolved in
-Appendix~\ref{sec:provenance}; no independent specialist review is claimed.
+\noindent\textbf{Status.} Working analytical draft incorporating the completed
+AR-E04 r1 assessment through 5 November 2026 \evid{AR4}.
+The potential and source theorems are accepted within scope without
+correction; the ratio/payment analysis and scoped stop are accepted
+with the endpoint correction AR-E04 R1 stated below.
+The assessments are internal LLM work: same-model for the potential/source
+proofs, different-model for the transfer note, with shared premises.
+The added observable and Newman dictionary \evid{O} has proof-author
+checks only; its separate assessment remains pending. No independent
+specialist review or new determinant sign is claimed. Source identifiers
+are resolved in Appendix~\ref{sec:provenance}.
 
 \clearpage
 \tableofcontents
@@ -96,7 +103,10 @@ angular mode establishes spectral completeness. A specified Hilbert
 space, self-adjoint domain and observation establish a consistent
 operator model. A determinant estimate requires, in addition, a signed
 margin with explicit order and shift dependence. The first two do not
-imply the third.
+imply the third. Section~\ref{sec:observables} makes the physical
+readout explicit through a state, filter and energy measurements;
+Section~\ref{sec:newman} identifies the associated Newman observations
+and the additional preparation/evolution question.
 
 \subsection{Normalization and indices}
 
@@ -326,6 +336,150 @@ requires no confining potential. The theorem also gives no finite
 three-dimensional partition function. Half-line and Euclidean
 comparisons explain why these model choices matter; their precise
 limitations are recorded in Appendix~\ref{sec:alternatives}.
+
+\section{Angular observables and reconstruction of the theta source}
+\label{sec:observables}
+
+The Green formula identifies a response. To give it an operational
+interpretation, one must also specify the state, measured operator and
+normalization. This section supplies that dictionary from \evid{O}.
+The derivations have proof-author checking; their separate observable
+assessment remains pending. The ideal angular protocol below is an
+additional interpretation of the fixed response, with no change to
+the cylinder operator or the source map.
+
+\subsection{A normalized angular state and an energy filter}
+
+Write \(\mathsf A=D^2\) for the dimensionless angular energy and use
+\(\beta>0\) for the angular damping called \(t\) in
+Section~\ref{sec:cylinder}. The angular contribution to \(L_0\) is
+\(4\mathsf A\), so \(e^{-\beta\mathsf A}\) corresponds to inverse
+temperature \(\beta/4\) for that contribution in these units.
+The spectral response and its normalized state are
+\begin{equation}
+ R_s(\beta)=B_sWe^{-\beta\mathsf A},\qquad
+ \Tr_K R_s(\beta)=Q_s(\beta),\qquad
+ \rho_{s,\beta}=\frac{R_s(\beta)}{Q_s(\beta)}.
+ \label{eq:angular-state}
+\end{equation}
+Each factor commutes with the others. Positivity and the convergent
+theta series show that \(R_s\) is positive trace class and
+\(Q_s>0\), including \(s=0\). Thus \(\rho_{s,\beta}\) is a density
+operator on \(K\). In nome notation the complete theta constant is
+\(\vartheta_3(0,e^{-\beta})=1+2Q_1(\beta)\); the zero angular mode
+absent from the Dirac spectrum is not silently inserted into the trace.
+
+Here is a concrete ideal measurement protocol. Start with the angular
+Gibbs state \(\sigma_\beta=e^{-\beta\mathsf A}/Z_{\rm ang}(\beta)\),
+where \(Z_{\rm ang}=\Tr_K e^{-\beta\mathsf A}\), and use the effect
+\(F_s=B_s\mathsf A^{-1/2}=4B_sW\). Its eigenvalues are one on the
+lowest shell and \(s/n\) on each higher shell. Consequently
+\(0\le F_s\le I\), and the two measurement operators
+\(\sqrt{F_s}\), \(\sqrt{I-F_s}\) define a normalized instrument.
+For the first outcome,
+\begin{equation}
+ p_{\rm acc}=\Tr_K(F_s\sigma_\beta)
+       =\frac{4Q_s(\beta)}{Z_{\rm ang}(\beta)},\qquad
+ \frac{\sqrt{F_s}\sigma_\beta\sqrt{F_s}}{p_{\rm acc}}
+       =\rho_{s,\beta}.
+ \label{eq:accepted-angular-state}
+\end{equation}
+These identities follow by commutation and \(F_s=4B_sW\).
+They specify a valid ideal energy-selective measurement, not a
+microscopic implementation of the detector. Measuring the acceptance
+probability recovers the absolute response only with the stated
+\(Z_{\rm ang}\) calibration. The normalized state alone loses that scale.
+The Gibbs convention is the usual one \cite[Sections 1.3.1--1.3.2]{Tong}.
+
+This construction uses the compact angular system. It does not take a
+partial trace of a normalized complete-cylinder thermal state; such a
+state is unavailable at finite temperature because the full radial
+heat trace is infinite. The radial Green observation and the conditional
+angular protocol give the same scalar response by separate exact formulas.
+
+\subsection{Energy moments measure the source and its derivatives}
+
+At every fixed finite integer \(r\ge0\), Gaussian convergence of
+the complete spectral sum gives
+\begin{equation}
+ (-1)^r\frac{d^r}{d\beta^r}Q_s(\beta)
+ =Q_s(\beta)\langle\mathsf A^r\rangle_{s,\beta},\qquad
+ \langle T\rangle_{s,\beta}:=\Tr_K(\rho_{s,\beta}T).
+ \label{eq:energy-moments}
+\end{equation}
+Energy powers are self-adjoint spectral observables with finite moments
+in this state. In particular, differentiation of their normalized
+expectation gives
+\(\partial_\beta\langle\mathsf A\rangle_{s,\beta}
+=-\operatorname{Var}_{s,\beta}(\mathsf A)\) at fixed \(s\).
+
+For the source half-line put \(\beta=\pi e^{4u}\), so here \(\beta\)
+equals the source scale \(x\) in \eqref{eq:source-map}. The relevant
+energy observable is
+\begin{equation}
+ \mathcal O_\beta=2\beta^2\mathsf A^2-3\beta\mathsf A,\qquad
+ \boxed{\Phi_s(u)=e^uQ_s(\beta)
+                 \langle\mathcal O_\beta\rangle_{s,\beta}.}
+ \label{eq:source-observable}
+\end{equation}
+For verification, write \(Q=Q_s\). The chain rule gives
+\[
+ \partial_u(e^uQ(\beta))=e^u(Q+4\beta Q'),\qquad
+ \partial_u^2(e^uQ(\beta))
+ =e^u(Q+24\beta Q'+16\beta^2Q'').
+\]
+Subtracting \(e^uQ\), dividing by eight and using
+\eqref{eq:energy-moments} proves \eqref{eq:source-observable}.
+For \(u\ge0\), each eigenvalue
+\(\beta n^2(2\beta n^2-3)\) of \(\mathcal O_\beta\) is positive,
+since \(\beta\ge\pi\). This positivity statement is restricted to
+the source range; it is not asserted for every \(\beta>0\).
+
+The source therefore has a precise measurement interpretation: its
+value is recovered from the first two angular-energy moments and the
+calibrated response. Its first derivative requires the third moment:
+\begin{equation}
+ \Phi_s'(u)=e^uQ_s(\beta)
+ \left\langle-8\beta^3\mathsf A^3
+                +30\beta^2\mathsf A^2-15\beta\mathsf A\right\rangle_{s,\beta}.
+ \label{eq:source-slope-observable}
+\end{equation}
+One can check this by applying
+\(\mathcal T F=(1-4y)F+4yF'\) to \(F(y)=2y^2-3y\), which
+gives \(-8y^3+30y^2-15y\). The full-source logarithmic slope is
+therefore
+\begin{equation}
+ -\frac{\Phi_1'(u)}{\Phi_1(u)}
+ =\frac{8\beta^3\langle\mathsf A^3\rangle_{1,\beta}
+          -30\beta^2\langle\mathsf A^2\rangle_{1,\beta}
+          +15\beta\langle\mathsf A\rangle_{1,\beta}}
+        {2\beta^2\langle\mathsf A^2\rangle_{1,\beta}
+          -3\beta\langle\mathsf A\rangle_{1,\beta}}.
+ \label{eq:source-score-observable}
+\end{equation}
+The denominator is positive. Higher finite source derivatives similarly
+use higher energy powers, with convergence supplied by the complete
+source estimates in Section~\ref{sec:source}.
+
+\subsection{From a parameter scan to signed overlaps}
+
+The coefficient measurements are obtained by varying \(\beta\),
+not by treating inverse temperature as particle position:
+\begin{equation}
+ c_j(s)=\int_0^\infty\frac{u^{2j}}{(2j)!}
+ e^uQ_s(\pi e^{4u})
+ \langle\mathcal O_{\pi e^{4u}}\rangle_{s,\pi e^{4u}}\dd u.
+ \label{eq:coefficient-scan}
+\end{equation}
+The formula includes the raw zero-index moment. It introduces no
+endpoint compensation or altered negative-index convention.
+A block determinant is a signed nonlinear functional of this scan.
+The exterior pairing in Section~\ref{sec:pairing} represents that
+functional exactly, but a measurement interpretation of its amplitude
+requires preparing both vector families and retaining a phase reference.
+A squared modulus would discard the determinant sign. Positive energy
+variance or positive measurement probabilities alone supply no lower
+bound for that signed quantity.
 
 \section{Bounded nonnegative potentials: defect and rigidity}
 \label{sec:potential}
@@ -870,6 +1024,21 @@ tail premises are inherited, not reacquired in this manuscript.
 The conclusion for all \(j\) is analytical once that anchor is supplied.
 No compact-reference zero coefficient is substituted for \(b_0\).
 
+\begin{remark}[Closed filter interval: AR-E04 endpoint correction R1]
+\label{rem:ar4-endpoint}
+The coefficient bounds following from \eqref{eq:uniform-ratio} are
+\begin{equation}
+ 1\le\frac{c_j(s)}{b_j}\le1+\frac{s}{39999}\quad(j\ge1),\qquad
+ 1\le\frac{c_0(s)}{b_0}\le1+\frac{s}{200},\quad 0\le s\le1.
+ \label{eq:closed-filter-ratios}
+\end{equation}
+The zero-index upper inequality is strict for \(s>0\); at \(s=0\)
+both sides equal one. This corrects the strict closed-interval upper
+bound in Note09, equation (18), as recorded by AR-E04 \evid{AR4}.
+No ratio constant, determinant payment or certificate threshold changes.
+This endpoint correction is distinct from AR-E01's readout clarification.
+\end{remark}
+
 \subsection{Complete polynomial payment and the limit of a uniform allowance}
 
 Collect identical monomials in the determinant polynomial before
@@ -922,7 +1091,15 @@ Every monomial has exponent at most one in \(b_0\).
 A monomial containing it is bounded by the product in
 \eqref{eq:lower-payment}. One omitting it is bounded by the same
 product because \(1+s/39999\le1+s/200\).
+The closed-interval bounds in \eqref{eq:closed-filter-ratios} include
+\(s=0\), where both the difference and its payment vanish.
 \end{proof}
+
+The payment \(\Rcal\) retains the actual index ratios and every mixed
+product, but takes absolute values across distinct collected monomials.
+It is a nonuniform absolute monomial payment, not a fully signed
+residual estimate. Collection preserves cancellation within identical
+monomials; it does not retain all cancellation between different ones.
 
 If \(D_{q,k}(0)>0\), define its normalized reference margin
 \begin{equation}
@@ -977,7 +1154,167 @@ P\'olya-frequency obstruction, cannot be imported as statements
 about the raw \(b_0\) or the restricted blocks \eqref{eq:blocks}.
 The nonuniform payment remains unresolved for lack of reference
 signs, conditioning, and a proof of their comparison with the
-complete correlated perturbation.
+complete nonuniform absolute payment \eqref{eq:full-payment}.
+
+\section{The de Bruijn--Newman observable and its dynamical scope}
+\label{sec:newman}
+
+The observable dictionary reconnects the cylinder response with the
+earlier Newman-state analysis \evid{N}. Here fix the complete source
+\(s=1\), write \(\Phi=\Phi_1\), and use \(\lambda\) for Newman
+time and \(a\) for a real Fourier parameter. Neither is the angular
+damping \(\beta\), physical evolution time \(\tau\), or filter \(s\).
+The source scale \(x=\pi e^{4u}\) keeps its earlier meaning.
+
+\subsection{The canonical transform is a signed energy-response scan}
+
+In the Rodgers--Tao normalization \cite[Introduction, (1)--(4)]{RT},
+\begin{equation}
+ H_\lambda(z)=\int_0^\infty e^{\lambda u^2}\Phi(u)\cos(zu)\dd u,
+ \qquad H_0(z)=\tfrac18\xi\bigl((1+iz)/2\bigr).
+ \label{eq:newman-transform}
+\end{equation}
+The source is even on the full line by the complete theta identity;
+that property is not imposed on a general filtered source. Substituting
+\eqref{eq:source-observable} gives the exact physical-response crosswalk
+\begin{equation}
+ H_\lambda(a)=\int_0^\infty e^{\lambda u^2+u}Q_1(\pi e^{4u})
+ \langle\mathcal O_{\pi e^{4u}}\rangle_{1,\pi e^{4u}}
+ \cos(au)\dd u.
+ \label{eq:newman-energy-scan}
+\end{equation}
+The oscillatory factor retains the sign of the measurement scan.
+The function \(H\) is a transform of the response; its zeros are not
+the known angular energy levels \(n^2\).
+
+For comparison with the coefficient problem, use a new symbol
+\begin{equation}
+ m_j(\lambda)=\int_0^\infty\frac{u^{2j}}{(2j)!}
+             e^{\lambda u^2}\Phi(u)\dd u,
+ \qquad m_j(0)=c_j(1).
+ \label{eq:newman-moments}
+\end{equation}
+Then
+\begin{equation}
+ \begin{aligned}
+ H_\lambda(z)&=\sum_{j\ge0}(-1)^jm_j(\lambda)z^{2j},\\
+ \partial_\lambda m_j&=(2j+2)(2j+1)m_{j+1},\qquad
+ \partial_\lambda H_\lambda=-\partial_z^2H_\lambda.
+ \end{aligned}
+ \label{eq:newman-coefficient-flow}
+\end{equation}
+The complete source majorant in Section~\ref{sec:source} decays as
+an exponential of \(-\pi e^{4u}\), up to fixed powers. It dominates
+every fixed Gaussian, exponential and polynomial insertion. Thus
+the integrals, cosine series and finite parameter derivatives above
+are justified uniformly on compact real \(\lambda\) and complex \(z\)
+sets. Twice differentiating cosine verifies the heat sign directly.
+The coefficient evolution is distinct from the affine shell-filter
+path \(c_j(s)=b_j+sh_j\).
+
+\subsection{A prepared radial state and the collision observations}
+
+Let \(Z_\lambda=H_\lambda(0)>0\). The earlier Newman work \evid{N}
+already uses the normalized full-line density and its square root
+\begin{equation}
+ \mu_\lambda(v)=\frac{e^{\lambda v^2}\Phi(v)}{2Z_\lambda},
+ \qquad \psi_\lambda(v)=\sqrt{\mu_\lambda(v)}.
+ \label{eq:newman-state}
+\end{equation}
+The factor two accounts for both halves of the even source. One may
+encode this profile on the cylinder as
+\(\Psi_\lambda(v,\omega)=\psi_\lambda(v)\chi(\omega)\), where
+\(D\chi=\chi\) and \(\|\chi\|_K=1\). This is an explicit additional
+state choice. It does not identify the original thermal control
+coordinate with radial position, or show that the Green experiment
+prepares the profile and its coherence.
+
+The state is admissible in \(\Dom L_0\). Indeed, the upper derivative
+bounds and positive ground-term lower bound of
+Section~\ref{sec:source} give, on \(v\ge0\) with
+\(\beta=\pi e^{4v}\),
+\(\Phi'/\Phi=O(\beta)\) and \(\Phi''/\Phi=O(\beta^2)\).
+Differentiating \(\psi_\lambda\) twice bounds the derivatives by a
+polynomial in \(v,\beta\) times
+\(e^{\lambda v^2/2}\sqrt{\Phi(v)}\). Its square is integrable.
+Evenness and strict positivity give smooth matching at zero and the
+same decay at the other tail. Thus \(\psi_\lambda\in H^2(\R)\);
+the fixed angular shell then gives \(\Psi_\lambda\in\Dom L_0\).
+This full-line preparation differs from the half-line zero-extension
+embedding used for the general source vectors.
+
+Write \(\widehat v\) for radial position. In this state the normalized
+real transform is both a bounded observable expectation and a
+momentum-kick amplitude:
+\begin{equation}
+ C_\lambda(a):=\frac{H_\lambda(a)}{Z_\lambda}
+ =\langle\cos(a\widehat v)\rangle_\lambda
+ =\langle\Psi_\lambda,e^{ia\widehat v}\Psi_\lambda\rangle.
+ \label{eq:newman-amplitude}
+\end{equation}
+Parity makes the sine expectation vanish. The unitary
+\(e^{ia\widehat v}\) is generated by position, rather than by
+the free-cylinder Hamiltonian. Its phase-sensitive amplitude, not
+only its squared modulus, records the signed transform.
+The collision observations are
+\begin{equation}
+ \frac{H_\lambda(a)}{Z_\lambda}=\langle\cos(a\widehat v)\rangle_\lambda,
+ \qquad
+ \frac{\partial_aH_\lambda(a)}{Z_\lambda}
+       =-\langle\widehat v\sin(a\widehat v)\rangle_\lambda.
+ \label{eq:collision-observables}
+\end{equation}
+A multiple real zero means simultaneous vanishing of these two
+signed expectations. The next jet is
+\(H_{\lambda,aa}/Z_\lambda
+=-\langle\widehat v^2\cos(a\widehat v)\rangle_\lambda\).
+Every required position moment is finite. The measured functions
+of position commute; Hilbert-space positivity does not preclude
+their simultaneous cancellation.
+
+\subsection{Newman reweighting is an additional evolution requirement}
+
+Differentiating \eqref{eq:newman-state} and retaining the normalization
+gives the equations already present in \evid{N}:
+\begin{equation}
+ \begin{aligned}
+ \partial_\lambda\mu_\lambda
+   &=(v^2-\langle\widehat v^2\rangle_\lambda)\mu_\lambda,\\
+ \partial_\lambda\psi_\lambda
+   &=\tfrac12(v^2-\langle\widehat v^2\rangle_\lambda)\psi_\lambda,\\
+ \partial_\lambda C_\lambda
+   &=-\partial_a^2C_\lambda
+     -\langle\widehat v^2\rangle_\lambda C_\lambda.
+ \end{aligned}
+ \label{eq:normalized-newman-flow}
+\end{equation}
+The radial part of \(L_0\) differentiates in \(v\); these equations
+multiply by \(v^2\) and then normalize. A cylinder preparation and
+generator that implement this family have not been derived.
+For a positive increment \(\delta\lambda\), multiplication by
+\(e^{\delta\lambda\widehat v^2/2}\) is unbounded on \(L^2(\R)\),
+so no nonzero constant multiple is a bounded success operator for
+a measurement on the entire Hilbert space. A negative increment
+does give a bounded conditioning operator. Neither observation
+excludes a different state-specific preparation or an enlarged model.
+
+The logarithmic source slope in \eqref{eq:source-score-observable}
+connects the angular moments to the earlier Newman score
+\(-\Phi'/\Phi-2\lambda v\). The prior score identities leave
+mixed oscillatory insertions uncontrolled, and its tested
+Gaussian-score residual changes sign \evid{N}. Expressing these
+quantities through energy moments does not supply their missing
+signed bounds.
+
+The generic normalized-state and observation construction also applies
+to the positive colliding controls on their stated convergence domains.
+Their modified square weights or absent canonical arithmetic distinguish
+them from theta, but neither positive state preparation nor the
+Fourier-amplitude dictionary alone excludes their events. A separate
+investigation can ask whether the specific cylinder response supplies
+a preparation mechanism or an additional source-sensitive relation
+between \eqref{eq:collision-observables}. The corresponding starting
+note is \evid{NB}; it activates no such research program.
 
 \section{What the analytical results permit next}
 \label{sec:outlook}
@@ -989,7 +1326,12 @@ The source estimates make the auxiliary moment and derivative
 families legitimate Hilbert vectors at every finite index, and
 the endpoint dictionary specifies their exterior pairings.
 These are useful analytical conclusions with complete mode sums
-and stated domains.
+and stated domains. The explicit angular state and energy moments
+further identify which measurements reconstruct the source. Their
+Newman transform is a signed parameter scan; a radial state encoding
+requires an additional preparation and its own evolution mechanism.
+The separate brainstorm \evid{NB} collects the existing Newman results
+and two bounded options for a future investigation.
 
 The signed-transfer study supplies a further scalar fact:
 complete excited-to-retained moment ratios strictly decrease.
@@ -1027,11 +1369,14 @@ realization, an additional low-order determinant value, or a
 smaller fixed scalar allowance alone would not supply that missing
 information.
 
-The immediate continuation is assessment of the potential, source
-and signed-transfer proofs at their present scope. The parent
-Mellin-curvature comparison remains a separate unresolved objective.
-This manuscript establishes no new domain of that comparison,
-no arbitrary-order determinant positivity, and no new RH consequence.
+The AR-E04 assessment is complete and its accepted scopes and endpoint
+correction are incorporated here \evid{AR4}. No execution task is ready
+for a signed E05 theorem. Reopening B01 requires a specified quantitative
+signed-margin or source-sensitive reference/conditioning route under the
+conditions above; this manuscript update supplies no new mechanism.
+The parent Mellin-curvature comparison remains a separate unresolved
+objective. No new domain of that comparison, arbitrary-order determinant
+positivity or RH consequence is established.
 
 \appendix
 \section{Boundary and Euclidean comparisons}
@@ -1131,8 +1476,11 @@ The organizing source is
 in the MC11 folder. The live disposition is in Register02 in
 \path{research-progress/}. Historical ``next task'' language in
 the overview is read with that register. The manuscript consolidates
-the completed returns; it does not execute the pending AR-E04
-assessment or activate the reserved E05 signed-estimate task.
+the completed returns and incorporates the AR-E04 r1 assessment
+\evid{AR4}. The later author-requested observable integration adds
+\evid{O} at its existing proof-author status and routes the proposed
+separate Newman work through \evid{NB}. It does not complete the pending
+OBS-E01 assessment or activate the reserved E05 signed-estimate task.
 
 The following identifiers refer to repository sources, with paths
 relative to the MC11 investigation root unless stated otherwise.
@@ -1162,20 +1510,62 @@ Contract checking is not a signed-estimate assessment.
 
 \item[\evid{V}] Note07,
 \path{notes/07_MC11_AR_E02_R1_BOUNDED_POTENTIAL_DEFECT_AND_RIGIDITY_20261105.md}.
-Potential response theorem: proved in-note with proof-author and
-same-model supporting checks; separate AR-E04 assessment pending.
+Potential response theorem: proved in-note and accepted within its
+bounded nonnegative-potential, fixed-readout scope without correction
+by the separate-chat internal same-model AR-E04 assessment \evid{AR4}.
+The accepted operator and source premises remain shared.
 
 \item[\evid{S}] Note08,
 \path{notes/08_MC11_AR_E03_R1_SOURCE_MEMBERSHIP_AND_ENDPOINT_PAIRINGS_20261105.md}.
-Finite-index source, membership and endpoint theorems: proved
-in-note without correction, with proof-author and same-model
-supporting checks; separate assessment pending.
+Finite-index source, membership and endpoint theorems: proved in-note
+and accepted without correction by the separate-chat internal same-model
+AR-E04 assessment \evid{AR4}, with shared accepted premises.
+Index-dependent constants, filtered endpoints and Hilbert-only scope remain.
 
 \item[\evid{B}] Note09,
 \path{notes/09_MC11_B01_R1_SIGNED_TRANSFER_ROUTES_AND_SCOPED_STOP_20261105.md}.
 Monotone ratio, complete payments and two-route scoped stop:
-proof-author checks only; separate assessment pending.
-No signed E05 contract was issued.
+accepted within scope by the different-model internal AR-E04 assessment
+\evid{AR4}, with the endpoint correction in
+Remark~\ref{rem:ar4-endpoint}. Shared finite-anchor/source premises,
+unresolved signed margins and the absence of an E05 contract remain.
+
+\item[\evid{AR4}] Review05,
+\path{reviews/05_MC11_AR_E04_R1_MODEL_SOURCE_AND_SCOPED_TRANSFER_ASSESSMENT_20261105.md},
+and supporting Note11,
+\path{notes/11_MC11_AR_E04_R1_PROOF_CHECKS_AND_ENDPOINT_CORRECTION_20261105.md}.
+AR-E04 r1 is complete with one local correction: the zero-index
+coefficient upper bound is non-strict at \(s=0\), strict for \(s>0\).
+All scalar constants, complete determinant payments and stated certificate
+ceilings survive. Its same-model supporting checks share the accepted
+spectrum, source and finite-anchor premises; no specialist independence
+is claimed.
+
+\item[\evid{O}] Note13,
+\path{notes/13_MC11_BR02_R1_PHYSICAL_OBSERVABLES_AND_NEWMAN_CONNECTION_20261105.md}.
+Angular state/effect, energy-moment source dictionary, Newman crosswalk
+and proposed radial-state domain: direct derivations with proof-author
+checks only. OBS-E01 is a separate pending assessment. The author's
+manuscript request authorizes exposition before that assessment without
+changing the evidence level.
+
+\item[\evid{N}] The 10 October 2026 moving-state and score-jet notes in
+\path{papers/quasi-rh/quasi-rh-exponent-descent/newman_collisions/03_susy_dirac_hodge/notes/}
+relative to the repository root:
+\path{1_MOVING_THETA_GROUND_STATE_WARD_RESIDUAL_AND_GAP_LIMIT_20261010.md}
+and
+\path{2_CONDITIONAL_SCORE_JETS_AND_CERTIFIED_SIGN_CHANGE_20261010.md}.
+These already contain the normalized theta state, its Newman tangent,
+Ward residuals, scoped gap limitation and the stated certified score
+sign change. Their checks are internal LLM work; this manuscript does
+not re-audit the numerical certificate or extend its range.
+
+\item[\evid{NB}] The separate starting note,
+\path{brainstorm/notes/08_THETA_OBSERVABLES_AND_NEWMAN_INVESTIGATION_STARTING_POINT_20261105.md}.
+It links the prior Newman/radial work, specifies the collision
+observations, and proposes physical-realization or signed-correlation
+opening questions for an author-selected separate investigation.
+No new subfolder or research program is activated.
 
 \item[\evid{E1}] Note01,
 \path{notes/01_MC11_E01_R1_PROOF_AND_RATIONAL_REPLAY_20261104.md},
@@ -1201,16 +1591,26 @@ Endpoint-compensated zero coefficients and algebraic control
 families retain their own scopes.
 \end{description}
 
-The preparation record for this manuscript is
+The historical r1 preparation record is
 \path{notes/10_MC11_M01_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261105.md}.
-Its production self-check checks synthesis, references and layout;
-it is not a separate mathematical acceptance of \evid{V,S,B}.
+The r2 assessment-propagation crosswalk remains
+\path{notes/12_MC11_M01_R2_ASSESSMENT_PROPAGATION_AND_BUILD_20261105.md}.
+The current observable integration is recorded in
+\path{notes/14_MC11_M01_R3_OBSERVABLE_INTEGRATION_AND_NEWMAN_BRAINSTORM_20261105.md},
+with production Review07 in \path{reviews/}.
+Production checks verify transcription, references and layout;
+the mathematical dispositions of \evid{V,S,B} come from \evid{AR4},
+while the added \evid{O} retains its separate pending assessment.
 
 \section*{Acknowledgements and preparation}
 This draft was prepared for Edward Baker with substantial assistance
 from OpenAI language models. The consolidation used
 \texttt{gpt-6-astra} in Codex, recorded reasoning effort
-\texttt{max}, on 5 November 2026.
+\texttt{max}, on 5 November 2026. The completed AR-E04 assessment and
+the M01 r2 assessment-propagation/rebuild used \texttt{gpt-6.1-sol},
+recorded effort \texttt{ultra}, on the same date. The later M01 r3
+observable integration and separate Newman brainstorm used
+\texttt{gpt-6-astra}, recorded effort \texttt{max}, also on that date.
 Underlying notes record their own models and efforts, including
 \texttt{gpt-6.1-sol/ultra} for the operator, potential and source
 derivations. All cited project assessments are internal LLM work
@@ -1243,5 +1643,20 @@ Second edition, Graduate Studies in Mathematics 157,
 American Mathematical Society, 2014.
 Theorem 6.4, printed p.~159.
 \url{https://radon.mat.univie.ac.at/~gerald/ftp/book-schroe/schroe2.pdf}.
+\bibitem{RT}
+B.~Rodgers and T.~Tao.
+\emph{The De Bruijn--Newman constant is non-negative}.
+Forum of Mathematics, Pi \textbf{8} (2020), e6.
+\href{https://doi.org/10.1017/fmp.2020.6}{doi:10.1017/fmp.2020.6}.
+Corrected preprint \href{https://arxiv.org/abs/1801.05914v5}
+{arXiv:1801.05914v5}, 3 July 2021.
+Introduction (1)--(4), source normalization and heat sign.
+
+\bibitem{Tong}
+D.~Tong.
+\emph{Statistical Physics}, online lecture notes,
+Sections 1.3.1--1.3.2, canonical ensemble and energy fluctuations.
+\url{https://www.damtp.cam.ac.uk/user/tong/statphys/statmechhtml/S1.html}.
+Consulted 5 November 2026.
 \end{thebibliography}
 \end{document}

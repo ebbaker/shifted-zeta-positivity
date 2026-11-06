@@ -122,3 +122,6 @@ coefficients before imposing exact parity and the proved u/u^5 factors.
 A ball containing zero would not justify deleting a coefficient. This
 is a preventive lesson from a successful internal assessment, not a
 retraction; the finite truncation itself is never declared even.
+
+
+**5 November 2026 — strictness must survive a closed filter interval.** Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol / ultra**. [MC11 AR-E04 Note11](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/11_energy_filtered_theta_overlaps/notes/11_MC11_AR_E04_R1_PROOF_CHECKS_AND_ENDPOINT_CORRECTION_20261105.md) records: “Note09 (18) is false at s=0 in its strict zero-index upper bound”. Since c_0(s)/b_0=1+sρ_0, strict ρ_0<1/200 gives a non-strict coefficient bound on [0,1] and strictness only for s>0. The sole local correction preserves all downstream non-strict payments and thresholds; issued input bytes remain unchanged.

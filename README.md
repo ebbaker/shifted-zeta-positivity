@@ -41,6 +41,8 @@ chooses actual models and effort. The [canonical manual workflow](GPT_RESEARCH_M
 replaces the older blanket analysis/numerics split and prevents the current
 model from retaining follow-through merely because it has the context.
 
+**Investigation setup (6 November 2026):** use [INVESTIGATION_SETUP_WORKFLOW.md](INVESTIGATION_SETUP_WORKFLOW.md) for numbered research branches or a single investigation at a specified location, including standard folders, overviews/plans/progress, reference practice and a continuation note with pasteable prompts.
+
 ## Background
 
 The program grew out of a series of papers, some posted as preprints and some

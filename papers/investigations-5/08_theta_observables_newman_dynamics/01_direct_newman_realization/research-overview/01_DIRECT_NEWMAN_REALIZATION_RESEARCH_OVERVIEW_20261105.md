@@ -1,0 +1,101 @@
+# Direct radial-spectral Newman realization: research overview
+
+5 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort ultra**, verified in turn metadata. Investigation08 chat0003.
+
+
+**Opening overview, revision 1.** This branch asks whether the complete Dirac-cylinder model can support a specified physical preparation and evolution whose signed radial observation is the canonical Newman family. The author requested separate development of the direct and auxiliary avenues after the parent B01 comparison. This establishes a research program, not a selected controller or a realization theorem.
+
+## Question and fixed starting point
+
+Retain the complete cylinder and geometric operators
+\[
+C=\mathbb R_v\times S^2_{1/2},\quad
+\mathcal D_C=-i\Gamma\partial_v+2D,\quad
+L_0=\mathcal D_C^2=-\partial_v^2+4D^2,\quad
+H_{\rm kin}=\varepsilon L_0,\quad \varepsilon=\hbar^2/(2m\ell_0^2).
+\]
+The inherited interpretation is a positive kinetic Hamiltonian with fixed curvature term \(2\varepsilon\). No wall, confinement or interaction is inserted. Every angular shell \(n\ge1\), both Dirac signs and the continuous radial spectrum remain part of the model. At each real \(k\), signed energies are \(\pm\sqrt{k^2+4n^2}\), multiplicity \(2n\) per sign; the square has multiplicity \(4n\). Plain radial evenness reduces the square, not the first-order Dirac operator.
+
+For the canonical source,
+\[
+F_\lambda(u)=e^{\lambda u^2}\Phi(u),\qquad
+H_\lambda(z)=\int_0^\infty F_\lambda(u)\cos(zu)\,du,\qquad
+\partial_\lambda H_\lambda=-\partial_z^2H_\lambda.
+\]
+Keep \(H_0(z)=\xi((1+iz)/2)/8\). [E01][e01] supplies complete source tails and each-finite-order bounds on compact real \(\lambda\) intervals, plus the full Fourier/cosine normalization. Complex \(z\) is analytic continuation, not a real self-adjoint spectral label.
+
+## What is unresolved
+
+The angularly damped full-line Green response is
+\[
+Q_1(\beta)=\operatorname{Tr}_K(e^{-\beta A}(4\sqrt A)^{-1})
+=\sum_{n\ge1}e^{-\beta n^2},\qquad A=D^2.
+\]
+It is independent of probe position. The source scan
+\[
+\beta=\pi e^{4u},\quad p(u)=e^uQ_1(\pi e^{4u}),\quad
+\Phi=(p''-p)/8
+\]
+and complete theta reflection already recover the source as response data. They do not derive its spatial preparation or identify \(u=v\) physically.
+
+The direct spectral identity is exact: multiplication by \(v^2\) becomes \(-\partial_k^2\). Free kinetic evolution instead multiplies Fourier amplitudes by a function of \(k^2+4n^2\). The first conceptual task must explain the preparation and clock, or isolate the missing construction. Simply conjugating the known scalar generator \(L^{-1}u^2L\) into spinor notation does not explain it.
+
+**Precise outstanding construction:** specify a preparation/evolution/readout triple on the complete cylinder, with a declared admissible source class and physical clock, that produces literal \(H_{\lambda(t)}\) with its absolute calibration. State which part produces the canonical spatial profile and which part implements its \(v^2\) reweighting. An intrinsic explanation and an externally controlled realization are distinct possible outcomes; neither is presumed by opening this branch.
+
+## Choose the evolved object explicitly
+
+| Object | Correct observation and burden |
+| --- | --- |
+| Linear source amplitude \(F_\lambda\), encoded in spinor fields | Its signed Fourier amplitude can recover \(H_\lambda\); angular encoding, position imprint and phase-sensitive readout are supplied unless derived. |
+| Normalized state with position density \(F_\lambda/(2H_\lambda(0))\) | A cosine expectation recovers \(H_\lambda/H_\lambda(0)\), with absolute normalization restored separately. This is the transform of the density, not the momentum amplitude of its square root. State preparation and domain assertions require their own proof. |
+
+These are choices of field/readout within the direct avenue, not two executed models. The state tangent would contain both the factor \(1/2\) and normalization subtraction; changing between these objects during execution changes the contract. Positive \(\lambda\)-increments are unbounded multipliers on unrestricted \(L^2\). Canonical double-exponential decay permits the prescribed source family for every finite real \(\lambda\); that fact is not a bounded physical operation on all states.
+
+## Intended progress and limits
+
+A coherent physical construction is a legitimate first outcome. It must keep source coordinate, radial position, angular damping, laboratory time, proper time and Newman parameter distinct until an explicit law relates them. The initial decision allows at most one declared extension and one complete-spectrum follow-through; it does not authorize a controller survey or fitted potential.
+
+An eventual analytical consequence is a separate decision after assessment. It must state what becomes easier than the original Fourier/Newman representation and why. The [auxiliary sibling][sibling] keeps the natural Hamiltonian-flow question available without requiring this route to adopt its proper-time interpretation.
+
+For every claimed operator power use the appropriate maximal weighted spectral domain. For instance \(\operatorname{Dom}L_0^p\) requires
+\[
+\sum_{n\ge1}\int_{\mathbb R}(k^2+4n^2)^{2p}
+\|P_n\widehat\psi(k)\|^2\,dk<\infty.
+\]
+General finite-order identities require controlled order-dependent constants; uniform growth in order, an infinite expansion and an all-height estimate remain separate obligations. Source transforms are entire; inherited raw scalar \(G\)-field integrals initially have only \(|\operatorname{Im}z|<1\).
+
+## Research navigation
+
+The [research plan][plan] owns bounded task specifications. The [branch progress file][progress] is the sole live register for TND-D tasks. Start with TND-D-B01 on Astra when selected by the author. Shared E01 material and its assessment remain at the parent; no source files are moved or copied into this branch.
+
+## Inherited evidence and controls
+
+[E01 Note02][e01] is consumed at proof-author comparison scope; its new claims await the shared TND-E03 assessment. MC11's operator/source inputs retain their existing internal acceptance and shared-premise qualifications. Investigation05's companion retains its [same-assistant checking status][book-review]. MC11-OBS-E01 and MC11-E05 remain external tasks with unchanged statuses. No pending Note13-only preparation or measurement statement is silently imported; an eventual use requires its assessment or an explicitly assigned local proof/check.
+
+The [result index][results], [theta cluster][theta], [control register][controls] and [patterns index][avoid] govern this branch. Classify a representation, diagnostic, intermediate estimate and target-equivalent reformulation separately under [avoid/01][a01]. [Coordinate re-realization][a03] supplies no sign gain by itself. Retain every negative conclusion's stated class under [avoid/07][a07].
+
+The control screen is analytical at planning scope, without new computations:
+
+| Control | Shared premises and exact limitation |
+| --- | --- |
+| Euler-factor sources | Smooth positive even source and applicable Green/Fourier constructions survive; the unchanged canonical arithmetic source fails. Their recorded positive-threshold witnesses remain controls. |
+| Weighted-square and finite-prime perturbations | Applicable positive half-line/square-source formulas survive; complete unit coefficients and full canonical reflection fail. Matching finitely many endpoints does not give global smooth reflection. |
+| Reflected super-Gaussian and smooth/positive-primitive controls | Their applicable source regularity, positivity, reflection and Fourier transport survive; the exact canonical arithmetic expansion fails. Generic representation premises do not reject their collisions. |
+| Atomic and finite-profile controls | Fourier observations and finite moments can survive; the smooth source and operator-domain assumptions used here need not. Do not infer a smooth-state realization without a separate construction. |
+
+Naming the canonical input is not a quantitative collision restriction. Any future excluding estimate must reject relevant controls on a domain containing their witnesses, as [avoid/02][a02] requires. Keep the literal cosine observation; a finite cosine prefix or a changed kernel is a different hypothesis.
+
+
+[e01]: ../../notes/02_TND_E01_R1_GEOMETRIC_HAMILTONIAN_AND_COMPLETE_SPECTRAL_COMPARISON_20261105.md
+[results]: ../../../../../result-summaries/README.md
+[theta]: ../../../../../result-summaries/14_theta_identities_and_arithmetic_bookkeeping.md
+[controls]: ../../../../../result-summaries/12_collision_controls_and_screening.md
+[avoid]: ../../../../../avoid/README.md
+[a01]: ../../../../../avoid/01_restating_the_target.md
+[a02]: ../../../../../avoid/02_shape_only_arguments_and_the_controls.md
+[a03]: ../../../../../avoid/03_lifts_and_re_realizations_in_new_coordinates.md
+[a07]: ../../../../../avoid/07_scoped_exclusions_read_as_universal.md
+[book-review]: ../../../05_radial_theta_collision_geometry/reviews/21_BOOK_REWRITE_ASSESSMENT_20261028.md
+[plan]: ../research-plan/01_DIRECT_NEWMAN_REALIZATION_RESEARCH_PLAN_20261105.md
+[progress]: ../research-progress/01_DIRECT_NEWMAN_REALIZATION_RESEARCH_PROGRESS_20261105.md
+[sibling]: ../../02_hamiltonian_auxiliary_dynamics/README.md
