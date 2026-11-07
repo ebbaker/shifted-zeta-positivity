@@ -103,3 +103,15 @@ selected primary text was read through the archived author reprint.
 This is a bounded source study, not a full-paper or repository-wide audit.
 Consumers: manuscript Sections11–12 and Note13; exact hypotheses and
 inspection limitations are retained.
+
+## B03 r2 localized statistics and trajectories — 6 November 2026
+
+For Edward Baker with substantial LLM assistance, actual gpt-6-astra/max.
+[Source-use08](08_TND_O_B03_LOCALIZED_STATISTICS_SOURCE_USE_20261106.md)
+records selected Maples–Rodgers local-statistics passages, Rodgers'
+microscopic-tail hypotheses and Polymath's complex dynamics/strip/barrier
+results. [New canonical bibliography](localized_statistics_sources.bib)
+and [reading-copy receipts](LOCALIZED_STATISTICS_PDF_RECEIPTS_20261106.json)
+support [brainstorm Note04](../brainstorm/notes/04_TND_O_B03_HEIGHT_LOCALIZED_SPIKES_AND_NONREAL_TRAJECTORIES_20261106.md).
+Polymath's existing Investigation02 article record is reused. No arbitrary
+localized asymptotic or pointwise exclusion is imported.

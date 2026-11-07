@@ -9,7 +9,26 @@ not a reassessment or relocation of the count construction. The
 tasks. This overview is setup and inherited background, not a new proof.
 
 
-## E04/B03 analytical extension — 6 November 2026
+## B03 height-localization and trajectory continuation — 6 November 2026
+
+The author explicitly requests further brainstorming, superseding the
+previous default assessment routing. Actual gpt-6-astra/max, chat0004,
+for Edward Baker with substantial LLM assistance.
+[Brainstorm Note04](../brainstorm/notes/04_TND_O_B03_HEIGHT_LOCALIZED_SPIKES_AND_NONREAL_TRAJECTORIES_20261106.md)
+returns the exact height-localized coincidence signal, conditional
+nonreal-pair transport, weighted transverse balance and analytic
+signal/background comparison. Selected literature supplies averaged local
+results and an existing spatial-barrier comparator, not the missing
+single-spike contradiction.
+
+Continue **B03/Astra** using
+[brainstorm Continuation05](../brainstorm/notes/05_TND_O_B03_LOCALIZED_STATISTICS_CONTINUATION_AND_MODEL_CHANGE_20261106.md):
+at most two targets and one clarification, then one fixed contract or exact
+missing premise. E05 remains proposed/unactivated. The manuscript is
+unchanged; the sole progress register owns status. Earlier dated routing
+below is historical.
+
+## Historical E04/B03 analytical extension — 6 November 2026
 
 For Edward Baker with substantial LLM assistance, actual **gpt-6-astra / max**,
 chat0004. The author-directed sequence integrated prior results first, then

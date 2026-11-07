@@ -42,3 +42,14 @@ reconnaissance returned, with no upper-bound contradiction.
 [Continuation14](../../notes/14_TND_O_E04_B03_CONTINUATION_AND_MODEL_CHANGE_20261106.md)
 routes [proposed E05/Sol request13](13_TND_O_E05_EXTENSION_ASSESSMENT_PROPOSED_REQUEST_20261106.md),
 ready but unactivated. Freeze actual inputs only when that task starts.
+
+## B03 r2 height localization and trajectories — 6 November 2026
+
+[Scope14](14_TND_O_B03_R2_LOCALIZED_STATISTICS_20261106_SCOPE.md),
+[inputs14](14_TND_O_B03_R2_LOCALIZED_STATISTICS_20261106_INPUTS.json) and
+[return14](14_TND_O_B03_R2_LOCALIZED_STATISTICS_20261106_RETURN.json) record
+the author-directed further brainstorm, actual gpt-6-astra/max.
+[Brainstorm04](../../brainstorm/notes/04_TND_O_B03_HEIGHT_LOCALIZED_SPIKES_AND_NONREAL_TRAJECTORIES_20261106.md)
+and [continuation05](../../brainstorm/notes/05_TND_O_B03_LOCALIZED_STATISTICS_CONTINUATION_AND_MODEL_CHANGE_20261106.md)
+are the current research and model handoff. No manuscript revision or
+E05 activation; next B03/Astra target discussion remains open.

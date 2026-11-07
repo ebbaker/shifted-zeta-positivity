@@ -8,7 +8,35 @@ The [direct register](../../01_direct_newman_realization/research-progress/01_DI
 [auxiliary register](../../02_hamiltonian_auxiliary_dynamics/research-progress/01_HAMILTONIAN_AUXILIARY_DYNAMICS_RESEARCH_PROGRESS_20261105.md) owns TND-A. Neither owns a second copy of
 these live rows.
 
-## Current disposition — B03 r2 height-localized trajectory brainstorm
+## Current disposition — B03 r2 returned; further brainstorming requested
+
+6 November 2026, for Edward Baker with substantial LLM assistance, actual
+**gpt-6-astra / max**, chat0004. **The height-localization/trajectory
+brainstorm has returned at proof-author scope.**
+[Brainstorm Note04](../brainstorm/notes/04_TND_O_B03_HEIGHT_LOCALIZED_SPIKES_AND_NONREAL_TRAJECTORIES_20261106.md)
+derives the exact local coincidence atom, conditional pair transport and
+real-neighbor amplification, localized transverse balance, and analytic
+pair/background and amplitude-width comparisons. It checks the selected
+local-statistics literature's averaged and RH-conditional quantifiers.
+No canonical contradiction or independently paid local arithmetic estimate
+is claimed. [Source-use08](../references/08_TND_O_B03_LOCALIZED_STATISTICS_SOURCE_USE_20261106.md)
+and [scope/input/return14](handoffs/14_TND_O_B03_R2_LOCALIZED_STATISTICS_20261106_RETURN.json)
+bind the pass.
+
+**Next: [B] TND-O-B03 — Astra**, further author-requested brainstorming
+under [Continuation05](../brainstorm/notes/05_TND_O_B03_LOCALIZED_STATISTICS_CONTINUATION_AND_MODEL_CHANGE_20261106.md).
+Compare at most the positive coincidence and transverse-sensitive analytic
+signals; pay trajectory, background and pointwise-or-averaged upper bound
+before selecting a contract. No automatic successor execution. E05 remains
+proposed/unactivated; its previous default routing is superseded by the
+author's explicit brainstorming request.
+
+The32-page manuscript, its build record, prior Notes13–14 and earlier
+bound packets remain unchanged. One focused pass and local consistency
+check, no numerical campaign, separate assessment, Git commit, new
+snapshot, delegation or sibling-status change. Chat0004 keeps its identity.
+
+## Historical B03 r2 activation — 6 November 2026
 
 6 November 2026, for Edward Baker with substantial LLM assistance, actual
 **gpt-6-astra / max**, chat0004. The author requests height-varying local
@@ -176,7 +204,7 @@ The next-session [continuation and prompt](../notes/01_OPERATOR_ITE_CONTINUATION
 | TND-O-B02 — collision-control mechanism | B — Astra; quantitative source target remains conceptual | **Coefficient reconnaissance returned; quantitative question open** | Note11/return11 now integrated by E04; no global control route or coefficient-bound execution selected |
 | TND-O-E03 — initial analytical manuscript | E — fixed synthesis; actual Astra/max | **Complete r1 — manuscript production** | Manuscript/Review02/return09; 21-page PDF, complete derivations, outstanding tasks; evidence statuses unchanged |
 | TND-O-E04 — analytical manuscript extension | E — default Sol, actual Astra/max in selected mixed task | **Complete — production scope** | Current32-page manuscript; Notes08/11 integrated first, then B03 findings; check03/build record/return12; no evidence upgrade |
-| TND-O-B03 — nonreal-zero statistics | B — Astra; statistical observable and useful contradiction input were conceptual | **Bounded reconnaissance returned; source-sensitive estimate open** | Note13/receipt07/return12; imported theorem scopes, finite Gram/sensitivity/transverse identities; no contradiction to Lambda>0 |
+| TND-O-B03 — nonreal-zero statistics | B — Astra; localized observable and useful arithmetic estimate remain conceptual | **r2 localized/trajectory brainstorm returned; estimate target open** | Brainstorm04/05, receipt08, return14; exact spike and conditional transport/background calculations; further B03 brainstorming requested |
 | TND-O-E05 — extension assessment | E — Sol; fixed claim-level audit | **Proposed, ready for selection; unactivated** | Request13, one assessment and one local correction check; actual input freeze due at activation |
 
 Ready means ready for an author-selected start, not proved or running.
@@ -217,7 +245,7 @@ Use the [reference index](../references/README.md), [result index](../../../../.
 [model workflow](../../../../../GPT_RESEARCH_MODEL_WORKFLOW.md). New branch-only chats register here using
 [the history guide](../chat-histories/README.md); existing chats retain their identity.
 
-**Recommended next: [E] TND-O-E05 — Sol**, assess the fixed extension using proposed Request13 and Continuation14. Further canonical coefficient (B02) or exceptional-cluster (B03) target selection is B/Astra. No successor is activated; the global control route remains open.
+**Recommended next: [B] TND-O-B03 — Astra**, follow brainstorm Continuation05 and compare the two localized-signal targets with explicit trajectory and arithmetic payments. E05/Sol assessment remains proposed, unactivated; no global route or execution contract is selected.
 
 ## B01 r1 activation — 6 November 2026
 

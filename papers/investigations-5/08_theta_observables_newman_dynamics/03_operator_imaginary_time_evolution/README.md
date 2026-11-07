@@ -10,6 +10,14 @@ count construction stays in [branch01](../01_direct_newman_realization/README.md
 free-Hamiltonian auxiliary response stays in
 [branch02](../02_hamiltonian_auxiliary_dynamics/README.md).
 
+**Current continuation: height-localized statistics and nonreal trajectories.**
+[Brainstorm Note04](brainstorm/notes/04_TND_O_B03_HEIGHT_LOCALIZED_SPIKES_AND_NONREAL_TRAJECTORIES_20261106.md)
+answers the author's follow-up with exact spike calculations, conditional
+trajectory bounds and explicit background/error costs.
+[Brainstorm Continuation05](brainstorm/notes/05_TND_O_B03_LOCALIZED_STATISTICS_CONTINUATION_AND_MODEL_CHANGE_20261106.md)
+routes further **B03/Astra** discussion. This pass leaves the manuscript
+unchanged and supersedes the earlier default E05 next-step recommendation.
+
 **The analytical manuscript revision is complete at production scope.**
 The [32-page evolving manuscript](manuscript/README.md) now includes the
 coefficient/primitive results, moving-lobe balances, Rodgers–Tao comparison
@@ -39,15 +47,16 @@ intrinsic preparation remains a separate question.
 | [Plan](research-plan/01_OPERATOR_ITE_RESEARCH_PLAN_20261106.md) | Bounded tasks and assessment proposal |
 | [Sole progress register](research-progress/01_OPERATOR_ITE_RESEARCH_PROGRESS_20261106.md) | Live TND-O statuses and dated history |
 | [Research return13](notes/13_TND_O_B03_COMPLEX_ZERO_STATISTICS_AND_MANUSCRIPT_RETURN_20261106.md) | Current analytical/statistical findings |
-| [Continuation/model change14](notes/14_TND_O_E04_B03_CONTINUATION_AND_MODEL_CHANGE_20261106.md) | Proposed E05/Sol assessment, then author-selected B/Astra target |
+| [Current brainstorm continuation05](brainstorm/notes/05_TND_O_B03_LOCALIZED_STATISTICS_CONTINUATION_AND_MODEL_CHANGE_20261106.md) | Further B03/Astra localized-statistics and trajectory discussion |
+| [Previous manuscript handoff14](notes/14_TND_O_E04_B03_CONTINUATION_AND_MODEL_CHANGE_20261106.md) | Historical E04/B03 milestone; E05 assessment remains available |
 | [Coefficient study11](notes/11_TND_O_B02_CRITICAL_COEFFICIENTS_THETA_AND_RODGERS_TAO_20261106.md) | Historical source of the integrated coefficient results |
 | [References](references/README.md) | Canonical bibliography, inspected passages and archive receipts |
 | [Chat history](chat-histories/README.md) | Unique conversation registrations and authorized refresh workflow |
 | [Draft history](DRAFT_HISTORY.md) | Concise milestones without snapshot directories |
 
-Recommended next: **[E] TND-O-E05 — Sol**, the bounded assessment proposed in
-Continuation14; unactivated. Further coefficient or exceptional-cluster
-target selection is **B — Astra**. No global control route is selected.
+Recommended next: **[B] TND-O-B03 — Astra**, the further brainstorming in
+brainstorm Continuation05. E05/Sol assessment remains proposed and
+unactivated. No global control route or execution contract is selected.
 
 Use the [model workflow](../../../../GPT_RESEARCH_MODEL_WORKFLOW.md),
 [reference workflow](../../../../REFERENCE_WORKFLOW.md),
