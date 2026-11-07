@@ -1,0 +1,350 @@
+\section{Canonical count phases and complete-tail errors}\label{sec:highcount}
+
+The two results in this section use the actual canonical source tail to
+quantify the analytical count record. Their proof notes
+\cite{TNDHighCount,TNDCountTail} were accepted within scope by separate
+same-model internal LLM assessments
+\cite{TNDHighCountReview,TNDCountTailReview}. This supplies no specialist
+independence or new physical access after nonzero counts. We give the
+complete scalar proofs rather than infer a growing-order conclusion from
+fixed-order domain estimates.
+
+\subsection{Complete high-count concentration}
+For $r\ge0$, $x=\pi\ee^{4r}$, every term of the full source sum is positive.
+In addition to Lemma~\ref{lem:source}, the explicit comparison is
+\begin{equation}\label{eq:hccompare}
+ \begin{gathered}
+ c_-\ee^{9r-\pi\ee^{4r}}\le\Phi(r)\le c_+\ee^{9r-\pi\ee^{4r}},\\
+ c_-=\pi^2(2-3/\pi),\qquad
+ c_+=2\pi^2\sum_{n\ge1}n^4\ee^{-\pi(n^2-1)}<\infty.
+ \end{gathered}
+\end{equation}
+The first term gives only the positive lower bound. The upper bound pays
+all $n\ge1$ using $\ee^{-(n^2-1)x}\le\ee^{-\pi(n^2-1)}$; no finite
+prefix replaces the source.
+
+Define, for $j\ge1$,
+\begin{equation}\label{eq:hccenter}
+ \begin{gathered}
+ j=2\pi a_j\ee^{4a_j},\qquad M_j=j/a_j,\qquad s_j=M_j^{-1/2},\\
+ \nu_{j,\lambda}(\dd r)=
+ \frac{r^{2j}\ee^{\lambda r^2}\Phi(r)\dd r}
+ {\int_0^\infty r^{2j}\ee^{\lambda r^2}\Phi(r)\dd r}.
+ \end{gathered}
+\end{equation}
+The center is unique and positive. The complete count integral
+\eqref{eq:dj}, including its original signed amplitudes and exact angular
+trace one, gives for $t>0$
+\begin{equation}\label{eq:hcratio}
+ \frac{d_j(t,k)}{P_j(t)}=\E_{\nu_{j,\lambda(t)}}\cos(kr).
+\end{equation}
+The full-line factors of two and the positive count prefactor cancel;
+the absolute calibration of $d_j$ remains unchanged.
+
+\begin{theorem}[Uniform concentration and count phases]\label{thm:highcount}
+There are finite constants $C_1,C_2$ and an integer $J$ such that, for
+$j\ge J$,
+\begin{equation}\label{eq:hcmoments}
+ \begin{aligned}
+ \sup_{|\lambda|\le1/2}\E_{\nu_{j,\lambda}}|r-a_j|
+ &\le C_1\sqrt{a_j/j},\\
+ \sup_{|\lambda|\le1/2}\E_{\nu_{j,\lambda}}(r-a_j)^2
+ &\le C_2a_j/j.
+ \end{aligned}
+\end{equation}
+For every finite $K$, real $|k|\le K$ and $0<t\le T$,
+\begin{equation}\label{eq:hcphase}
+ \left|\frac{d_j(t,k)}{P_j(t)}-\cos(ka_j)\right|
+ \le KC_1\sqrt{a_j/j}\longrightarrow0.
+\end{equation}
+For each fixed real $k\ne0$ and every $0<t\le T$,
+\begin{equation}\label{eq:hcsigns}
+ \limsup_{j\to\infty}\frac{d_j(t,k)}{P_j(t)}=1,\qquad
+ \liminf_{j\to\infty}\frac{d_j(t,k)}{P_j(t)}=-1.
+\end{equation}
+Both signs therefore occur infinitely often in the literal $d_j(t,k)$.
+The two realizing subsequences can be chosen independently of $t$.
+\end{theorem}
+\begin{proof}
+Abbreviate $a=a_j$, $M=j/a$, $s=M^{-1/2}$ and put
+$q_j(r)=2j\log r-\pi\ee^{4r}$,
+$f_{j,\lambda}(r)=q_j(r)+\lambda r^2+9r$. For $h=r-a>-a$, the center
+identity gives exactly
+\begin{equation}\label{eq:hcexponent}
+ q_j(a+h)-q_j(a)
+ =2j[\log(1+h/a)-h/a]-\frac M2[\ee^{4h}-1-4h].
+\end{equation}
+The logarithmic bracket is nonpositive. With $c_0=4\ee^{-4}$, Taylor's
+integral remainder and $\ee^{-4u}-1+4u\ge3u$ for $u\ge1$ imply
+\begin{equation}\label{eq:hcthreeparts}
+ q_j(a+h)-q_j(a)\le
+ \begin{cases}
+ -4Mh^2,&h\ge0,\\
+ -c_0Mh^2,&-1\le h\le0,\\
+ -3M|h|/2,&-a<h\le-1.
+ \end{cases}
+\end{equation}
+The origin is included by its limiting zero density for $j\ge1$.
+Since $M=2\pi\ee^{4a}$ and $a\to\infty$, choose $J$ so that
+$a\ge1$ and $M\ge(a+9)^2/c_0$ for every $j\ge J$.
+This implies $M\ge16,2/c_0,2a,a^2$ and $s\le1/4$.
+For $h\ge-1$, uniformly for $|\lambda|\le1/2$, the perturbation is at
+most $(a+9)|h|+h^2/2$. The inequalities
+\[
+ (a+9)|h|\le\frac{c_0M}{4}h^2+\frac{(a+9)^2}{c_0M},\qquad
+ \frac{h^2}{2}\le\frac{c_0M}{4}h^2
+\]
+give, with $c_1=c_0/2$,
+\begin{equation}\label{eq:hcglobalupper}
+ f_{j,\lambda}(a+h)-f_{j,\lambda}(a)\le1-c_1Mh^2
+ \quad(h\ge-1).
+\end{equation}
+On the entire growing far-left interval $h=-u$, $1\le u<a$, the
+perturbation is at most $au$, so $M\ge2a$ yields
+\begin{equation}\label{eq:hcleft}
+ f_{j,\lambda}(a-u)-f_{j,\lambda}(a)\le-Mu.
+\end{equation}
+Thus both the complete left tail and the unbounded right tail are paid.
+
+For a positive normalizer, restrict to $0\le h\le s$.
+Here $\log(1+y)-y\ge-y^2/2$ for $y\ge0$ and
+$\ee^{4h}-1-4h\le8\ee h^2$. The two losses in
+\eqref{eq:hcexponent} are at most $1$ and $4\ee$, and the perturbation
+loss is at most $ah+h^2/2\le3/2$. With $D_0=3+4\ee$, the normalizing
+integral is therefore at least
+\begin{equation}\label{eq:hcnormalizer}
+ c_-\ee^{f_{j,\lambda}(a)}\ee^{-D_0}M^{-1/2}.
+\end{equation}
+For $p=1,2$, put $A_p=\int_\R|z|^p\ee^{-c_1z^2}\dd z<\infty$.
+Splitting the whole centered-moment numerator at $h=-1$ gives
+\begin{align*}
+ &\int_0^\infty |r-a|^p r^{2j}\ee^{\lambda r^2}\Phi(r)\dd r\\
+ &\quad\le c_+\ee^{f_{j,\lambda}(a)}
+ \left[\ee A_pM^{-(p+1)/2}+\int_1^a u^p\ee^{-Mu}\dd u\right]\\
+ &\quad\le c_+\ee^{f_{j,\lambda}(a)}
+ [\ee A_p+p!]M^{-(p+1)/2}.
+\end{align*}
+The last left-tail bound extends to $[0,\infty)$ and uses the exact
+integral $p!M^{-(p+1)}$. Dividing by \eqref{eq:hcnormalizer} proves
+\eqref{eq:hcmoments}, for example with
+$C_p=(c_+/c_-)\ee^{D_0}(\ee A_p+p!)$. These constants are independent
+of $j,\lambda,t,k,\gamma$ in the stated ranges. This is a separate
+growing-$j$ proof using only the zero-order comparison
+\eqref{eq:hccompare}.
+
+The real cosine is Lipschitz with constant $|k|$ in $r$, proving
+\eqref{eq:hcphase}. The inverse center function is increasing and
+unbounded, with
+\[
+ \frac{da}{dj}=\frac{a}{j(1+4a)}<\frac1{4j},\qquad
+ 0<a_{j+1}-a_j<\frac14\log(1+1/j)\le\frac1{4j}\to0.
+\]
+For fixed $k\ne0$, choose first-crossing indices of the levels
+$2\pi m/|k|$ and $(2m+1)\pi/|k|$. Their overshoots tend to zero,
+so the corresponding cosines tend to $1$ and $-1$; the indices are
+eventually distinct. Uniformity in $\lambda$ in \eqref{eq:hcphase}
+gives the two subsequence limits simultaneously for all physical $t>0$.
+The bound $|d_j/P_j|\le1$ proves the exact limsup and liminf.
+Finally $P_j(t)>0$ for $t>0$ transfers the strict signs to $d_j$.
+\end{proof}
+
+For each finite $j$, the differentiated source integrals give the exact
+signed even-derivative translation
+\begin{equation}\label{eq:hcderivatives}
+ \begin{aligned}
+ \frac{(-1)^j\partial_k^{2j}H_\lambda(k)}
+ {\partial_\lambda^jH_\lambda(0)}
+ &=\E_{\nu_{j,\lambda}}\cos(kr)\\
+ &=\cos(ka_j)+O_K(\sqrt{a_j/j}).
+ \end{aligned}
+\end{equation}
+The denominator is positive. At each fixed $\lambda$ in the slab and
+real $k\ne0$ the ratio has the same limsup and liminf. No derivative-order
+series, zero theorem or multiplicity claim is inferred.
+For every fixed count the radial output is a scalar multiple of
+$v^jf_{\lambda(t)}$, hence is Schwartz; \eqref{eq:fullmoment} and
+\eqref{eq:radialtail} pay all fixed full-spectrum domains. Their constants
+are not uniform in growing $j$.
+
+The center in \eqref{eq:hccenter} was already used in the order-three
+Mellin response calculation \cite[Section 2, (3)]{MC03ScalarSaddle}, with
+Gaussian scale $\sigma^2=a^2/[2j(1+4a)]$. Its proved limit is on fixed
+ordered boxes of a signed three-particle determinant. The present positive
+scalar proof on the complete radial domain does not pay its signed
+full-chamber allowances or the higher-order obligations discussed in
+\cite{MC03HigherOrder}. No new saddle or novelty claim is made.
+
+\subsection{An explicit complete count-tail envelope}
+Write $\alpha=\gamma t\in[0,1]$, $\lambda=1/2-\alpha$ and
+$h_*=H_{1/2}(0)$. Define positive scalar envelopes
+\begin{equation}\label{eq:tailB}
+ \begin{gathered}
+ I_m(\lambda)=\int_0^\infty r^m\ee^{\lambda r^2}\Phi(r)\dd r,\\
+ B_j^{(q)}=\frac{\alpha^j}{j!h_*}I_{2j+q}(\lambda),\qquad q=0,2.
+ \end{gathered}
+\end{equation}
+Thus $B_j^{(0)}=P_j$; $B_j^{(2)}$ is a moment envelope, not an additional
+physical readout. The original zero-count convention applies at $\alpha=0$.
+
+First justify complete summation and first differentiation independently.
+With the half-line initial probability and full Poisson kernel
+\[
+ \dd\mu_*(r)=h_*^{-1}\ee^{r^2/2}\Phi(r)\dd r,\qquad
+ p_j(y)=\ee^{-y}y^j/j!,
+\]
+where $p_0(0)=1$, $p_{j>0}(0)=0$, the exact count integrals are
+\begin{equation}\label{eq:tailPoisson}
+ d_j=\int p_j(\alpha r^2)\cos(kr)\dd\mu_*,\qquad
+ B_j^{(q)}=\int r^qp_j(\alpha r^2)\dd\mu_*.
+\end{equation}
+The complete source bound gives finite initial moments of orders $0,1,2$.
+The positive exponential series and Tonelli give
+$\sum_jB_j^{(0)}=1$ and $\sum_jB_j^{(2)}=\int r^2\dd\mu_*$.
+For $N\ge0$, let
+\[
+ \tau_N(y)=1-\ee^{-y}\sum_{j=0}^Ny^j/j!\in[0,1].
+\]
+Its finite-expression derivative is
+$\tau_N'(y)=\ee^{-y}y^N/N!\ge0$. Hence, for $q=0,1,2$,
+\begin{equation}\label{eq:tailuniformdomination}
+ \sup_{0\le\alpha\le1}\int r^q\tau_N(\alpha r^2)\dd\mu_*
+ \le\int r^q\tau_N(r^2)\dd\mu_*\longrightarrow0.
+\end{equation}
+Dominated convergence pays the entire radial domain. Each first real-$k$
+derivative has the integrable envelope $rp_j$, and its omitted sum has
+envelope $r\tau_N$. Thus the value and first-derivative series converge
+uniformly for all real $k$ and the closed alpha slab, and
+\begin{equation}\label{eq:tailcomplete}
+ \sum_{j\ge0}d_j=\frac{H_{1/2}(k)}{h_*},\qquad
+ \partial_k\sum_{j\ge0}d_j=\sum_{j\ge0}\partial_kd_j
+ =\frac{H_{1/2}'(k)}{h_*}.
+\end{equation}
+These passages use their own full-source domination, not a formal
+differentiation of a previously established count identity.
+
+\begin{theorem}[Absolute omitted-count errors]\label{thm:counttail}
+Let $C_2,J$ be as in Theorem~\ref{thm:highcount} and put
+$D=(1+\sqrt{C_2})^2$. Choose a finite integer $N_0\ge1$ satisfying
+\begin{equation}\label{eq:tailthreshold}
+ N_0+1\ge J,\qquad a_{N_0+1}\ge1,\qquad
+ D\frac{a_{N_0+1}^2}{N_0+1}\le\frac12.
+\end{equation}
+For $N\ge N_0$ define
+\begin{equation}\label{eq:tailQ}
+ \begin{gathered}
+ Q_N(t)=\alpha D\frac{a_{N+1}^2}{N+1}\le\frac{\alpha}{2}<1,\\
+ Q_N(t)\le\frac{\alpha D\log^2(N+1)}{16(N+1)}.
+ \end{gathered}
+\end{equation}
+Then, simultaneously for $q=0,2$ and every $j>N$,
+\begin{equation}\label{eq:tailratio}
+ B_{j+1}^{(q)}\le Q_NB_j^{(q)}.
+\end{equation}
+For $R_N(t,k)=\sum_{j>N}d_j(t,k)$, every real $k$ and $0\le t\le T$,
+\begin{equation}\label{eq:tailerrors}
+ |R_N|\le\frac{B_{N+1}^{(0)}}{1-Q_N},\qquad
+ |\partial_kR_N|\le
+ \frac{\sqrt{B_{N+1}^{(0)}B_{N+1}^{(2)}}}{1-Q_N}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Minkowski and \eqref{eq:hcmoments} yield
+\[
+ \E_{\nu_{j,\lambda}}r^2
+ \le\left(a_j+\sqrt{C_2a_j/j}\right)^2\le Da_j^2
+ \quad(j\ge J,\ a_j\ge1).
+\]
+For $\alpha>0$, the exact adjacent ratios are
+\begin{equation}\label{eq:tailadjacent}
+ \begin{aligned}
+ \frac{B_{j+1}^{(0)}}{B_j^{(0)}}
+ &=\frac\alpha{j+1}\E_{\nu_{j,\lambda}}r^2,\\
+ \frac{B_{j+1}^{(2)}}{B_j^{(2)}}
+ &=\frac\alpha{j+1}\E_{\nu_{j+1,\lambda}}r^2.
+ \end{aligned}
+\end{equation}
+The index $j+1$ in the second ratio is necessary. The exact relation
+$a_j^2/j=a_j\ee^{-4a_j}/(2\pi)$ is decreasing for $a_j\ge1$ and tends
+to zero. This proves existence of \eqref{eq:tailthreshold} and bounds
+both ratios by $Q_N$ for all $j>N$. Since
+$4a_m=\log m-\log(2\pi a_m)\le\log m$ for $a_m\ge1$, it also proves
+the logarithmic bound in \eqref{eq:tailQ}, namely
+$Q_N=O(\alpha\log^2N/N)$. At $\alpha=0$ both positive-index masses
+vanish; \eqref{eq:tailratio} holds without using an undefined ratio.
+
+Geometric summation from the correct first seed $N+1$ gives
+\[
+ T_N^{(q)}:=\sum_{j>N}B_j^{(q)}
+ \le B_{N+1}^{(q)}/(1-Q_N),\qquad q=0,2.
+\]
+Independently justified by \eqref{eq:tailuniformdomination},
+\[
+ R_N=\int\tau_N(\alpha r^2)\cos(kr)\dd\mu_*,\qquad
+ \partial_kR_N=-\int r\tau_N(\alpha r^2)\sin(kr)\dd\mu_*.
+\]
+The first integral is bounded by $T_N^{(0)}$. Cauchy--Schwarz on the
+complete positive tail measure $\tau_N(\alpha r^2)\dd\mu_*$ bounds the
+second by $\sqrt{T_N^{(0)}T_N^{(2)}}$. These are precisely
+\eqref{eq:tailerrors}; every omitted count is paid, and the retained
+signed terms are unchanged.
+\end{proof}
+
+Since $h_*d_0=H_\lambda$, the finite analytical reconstruction from the
+conserved initial count sum is
+\begin{align}
+ \widehat H_{\lambda,N}(k)&=H_{1/2}(k)-h_*\sum_{j=1}^Nd_j(t,k),
+ \label{eq:tailreconstruction}\\
+ \widehat H_{\lambda,N}'(k)&=H_{1/2}'(k)-h_*\sum_{j=1}^N\partial_kd_j(t,k).
+ \notag
+\end{align}
+Its exact errors are $-h_*R_N$ and $-h_*\partial_kR_N$, respectively.
+Thus the bounds in \eqref{eq:tailerrors}, multiplied by $h_*$, give
+absolute errors for $H_\lambda$ and its first real-$k$ derivative. They
+are uniform over all real $k$, not relative errors at zeros or collisions.
+
+\subsection{Endpoints, score balance and the direct baseline}
+At $t=0$, positive-count masses vanish, the quotient in
+\eqref{eq:hcratio} is undefined, and the reconstruction is exact with
+$Q_N=0$ and zero seeds. The normalized source expression has a limit
+there, but is not a positive-count physical event. The endpoint $t=T$,
+$\lambda=-1/2$, is included in both theorems. At $k=0$ the normalized
+trace is exactly one; sign subsequences are only for fixed $k\ne0$ and
+have no uniform finite starting index near zero. The phase estimate is
+uniform on each compact real $k$ set; the tail estimates are uniform
+absolute bounds for all real $k$. Neither gives an all-height relative
+margin, bounded complex measurement, infinite-time result or uniform
+$\gamma\downarrow0$ conclusion.
+
+The one assessed source-score identity provides a useful comparison
+\cite{TNDSourceCountDecision,TNDHighCountReview}. For $s(v)=\Phi'(v)/\Phi(v)$,
+complete smooth reflection and the full first-derivative tails justify
+integration of $(w_t(v)\sin(kv))'$ on the full line, with both boundary
+terms zero. Since $w_t'=(2\lambda(t)v+s(v))w_t$ and
+$C_k=-\E_t[X\sin(kX)]$, this gives
+\begin{equation}\label{eq:scorebalance}
+ kC(t,k)=2\lambda(t)C_k(t,k)-\E_t[s(X)\sin(kX)].
+\end{equation}
+At $C=C_k=0$ the correlation also vanishes: it is not a third independent
+signed constraint. Subtracting a linear term from $s$ only changes the
+$C_k$ coefficient; a further source-sensitive comparison remains unpaid.
+
+The positive concentration proof applies to any source with the two-sided
+comparison \eqref{eq:hccompare}; it does not characterize exact theta
+arithmetic. The reflected control of Section~\ref{sec:control} fails its
+canonical double-exponential upper bound, while retaining the generic
+complete count and first-derivative reconstruction identities with its own
+normalization. Its collision is compatible with all those identities.
+No claim is made that the control lacks its own high-order oscillation.
+
+Direct differentiation of the same scalar source gives
+\eqref{eq:hcderivatives}; direct expansion of $\ee^{\alpha r^2}$ against
+$\ee^{\lambda r^2}\Phi(r)$ gives exactly the same omitted kernel and
+bounds as \eqref{eq:tailerrors}. There is no estimating or computational
+gain over that baseline. The phase theorem excludes only eventual one-sign
+literal count sectors at fixed nonzero real $k$; it leaves correlated
+cancellations, phase-dependent patterns and finite-sector mechanisms open.
+The tail theorem pays absolute remainders without giving a new tail sign
+or collision restriction. Complete source/radial tails, every angular shell
+and sign, the supplied loader and absolute calibration are unchanged.
+Analytical finite-count reconstruction does not assume experimental access
+to the specified cosine after nonzero counts.

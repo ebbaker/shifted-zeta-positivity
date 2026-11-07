@@ -1,5 +1,21 @@
 # Research overview and plan for theta observables and Newman dynamics
 
+**Operator/imaginary-time scope clarification and branch setup — 6 November
+2026.** Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra/max**, direct chat0005. The author means Hamiltonian evolution
+in the imaginary-time/heat-type sense and requested a distinct branch
+because the count approach already has a substantial research history.
+[Branch 03](../03_operator_imaginary_time_evolution/README.md) owns the new operator question through
+[its overview](../03_operator_imaginary_time_evolution/research-overview/01_OPERATOR_ITE_RESEARCH_OVERVIEW_20261106.md), [bounded plan](../03_operator_imaginary_time_evolution/research-plan/01_OPERATOR_ITE_RESEARCH_PLAN_20261106.md) and [sole TND-O register](../03_operator_imaginary_time_evolution/research-progress/01_OPERATOR_ITE_RESEARCH_PROGRESS_20261106.md).
+The [continuation](../03_operator_imaginary_time_evolution/notes/01_OPERATOR_ITE_CONTINUATION_AND_PROMPT_20261106.md) preserves the exact baseline X² / −∂²_k /
+L⁻¹X²L and leaves operator/space/target selection unactivated.
+
+Shared TND-E01/E03 identities stay at the parent. Branch 01 retains TND-D
+count work and branch 02 retains TND-A auxiliary work; no issued request
+or evidence is moved or superseded. See the [dated crosswalk](../03_operator_imaginary_time_evolution/research-progress/01_OPERATOR_ITE_RESEARCH_PROGRESS_20261106.md).
+The earlier two-branch plans below remain historical specifications,
+not an instruction to impose measurement or real-time unitarity on TND-O.
+
 5 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**.
 
 **Shared analytical background — 6 November 2026, gpt-6-astra/max:** [The TND-E06 manuscript](../manuscript/README.md) supplies the common analytical foundation requested for both branches. [Review02](../reviews/02_SHARED_ANALYTICAL_BACKGROUND_MANUSCRIPT_REVIEW_20261106.md) distinguishes accepted E01/E02 construction results from the later direct diagnostic work and the auxiliary conditioning target, using a recorded 01:53 America/New_York status cutoff. This synthesis changes no branch evidence level or live status. The original plan/specifications below remain historical; consult each branch register for continuation.
@@ -8,7 +24,7 @@
 
 **Research overview revision 5; original analytical plan r1 retained historically, with author-directed branch plans r1 and shared E03 r2.** The author has selected MC11's full angular–radial Dirac-square model on the spherical cylinder as the starting point for adapting the framework of `05_radial_theta_collision_geometry`. Understanding its Hamiltonian as naturally as possible is a leading priority. Direct representation of Newman flow through radial spectral modes and a natural auxiliary flow remain open avenues. The author now requests a research plan emphasizing analytical work that can extend to infinite order or index. [Planning decisions][planning-decisions] record the transition from the [model clarification][clarification]. Prepared on 5 November 2026 for Edward Baker with substantial LLM assistance, gpt-6-astra/max, Investigation08 chat0001.
 
-**Current organization:** the author requested both numbered research branches, each with an overview, plan and progress file. [Direct Newman realization](../01_direct_newman_realization/README.md) owns TND-D tasks; [Hamiltonian auxiliary dynamics](../02_hamiltonian_auxiliary_dynamics/README.md) owns TND-A tasks. The [shared register][progress] owns shared TND tasks and the dated crosswalk. B01 completed comparison/branch planning; physical construction choices remain in the two branch B01 tasks. See [Decision04](../brainstorm/notes/04_TND_B01_TWO_AVENUE_DECISION_AND_BRANCH_PLANS_20261105.md).
+**Original two-branch organization, 5 November 2026:** the author requested both numbered research branches, each with an overview, plan and progress file. [Direct Newman realization](../01_direct_newman_realization/README.md) owns TND-D tasks; [Hamiltonian auxiliary dynamics](../02_hamiltonian_auxiliary_dynamics/README.md) owns TND-A tasks. The [shared register][progress] owns shared TND tasks and the dated crosswalk. B01 completed comparison/branch planning; physical construction choices remain in the two branch B01 tasks. See [Decision04](../brainstorm/notes/04_TND_B01_TWO_AVENUE_DECISION_AND_BRANCH_PLANS_20261105.md).
 
 Planning update: 5 November 2026, prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra/ultra**, chat0003. E01 remains complete at proof-author comparison scope. No E02 request was issued or executed, and no numerical work or external status update is part of this change.
 
@@ -254,7 +270,7 @@ Carry out that analytical construction for the complete angular and radial spect
 
 At activation, freeze the selected request revision and exact consumed source versions; a small record belongs in `research-progress/handoffs/` when needed. Preserve issued requests and append returns rather than overwriting failed evidence. Each return records actual model/effort, identities or estimates proved, the precise index/parameter scope, unresolved premises, status and next B/E task. The author controls task activation and model choice; this plan does not create chats or agents.
 
-Analytical derivations go in `notes/`, conceptual decisions in `brainstorm/notes/`, assessments in `reviews/`, and code/small numerical records in `numerics/` only when authorized by a bounded request. Follow the [reference workflow][reference-workflow], reusing the existing catalogs and keeping reading PDFs outside Git. The existing source notes and MC11/Investigation05 registers remain in place. Keep one evolving overview and sole progress file per shared/branch task family, with concise milestones in DRAFT_HISTORY and no manuscript snapshots. The parent owns TND, the direct branch TND-D, and the auxiliary branch TND-A.
+Analytical derivations go in `notes/`, conceptual decisions in `brainstorm/notes/`, assessments in `reviews/`, and code/small numerical records in `numerics/` only when authorized by a bounded request. Follow the [reference workflow][reference-workflow], reusing the existing catalogs and keeping reading PDFs outside Git. The existing source notes and MC11/Investigation05 registers remain in place. Keep one evolving overview and sole progress file per shared/branch task family, with concise milestones in DRAFT_HISTORY and no manuscript snapshots. The parent owns TND, the direct branch TND-D, the auxiliary branch TND-A, and the operator/imaginary-time branch TND-O.
 
 **Historical continuation at revision 5 issuance:** consult the two branch registers for TND-D-B01 and TND-A-B01. Shared **TND-E03 r2 — Sol** was ready and unactivated. The issued E01 request above is preserved, with exact activation text in its [input record][e01-inputs]. No branch execution request is issued by this overview.
 

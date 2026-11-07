@@ -1,0 +1,169 @@
+\section{The complete source and its analytic heat orbit}\label{sec:source}
+
+\subsection{Canonical reflection and normalization}
+For real \(u\), put \(\rho(u)=\pi\ee^{4u}\) initially and define
+\begin{equation}\label{eq:Phi}
+ \Phi(u)=\ee^u\sum_{n=1}^\infty
+ \bigl(2(n^2\rho(u))^2-3n^2\rho(u)\bigr)\ee^{-n^2\rho(u)}.
+\end{equation}
+The series and all its derivatives converge locally uniformly for real
+\(u\). Its useful full-line symmetry belongs to the complete sum.
+To see this explicitly, write
+\[
+ \vartheta(y)=\sum_{n\in\mathbb Z}\ee^{-\pi n^2y},\qquad
+ A(u)=\frac{\ee^u}{2}\bigl(\vartheta(\ee^{4u})-1\bigr).
+\]
+Jacobi's transformation \(\vartheta(y)=y^{-1/2}\vartheta(1/y)\)
+\cite{DLMFThetaModular} gives
+\[
+ A(-u)-A(u)=\sinh u,\qquad (\partial_u^2-1)A(u)=8\Phi(u).
+\]
+Applying \(\partial_u^2-1\) to the first identity proves
+\(\Phi(-u)=\Phi(u)\). In particular the source is smooth and even, and
+every odd derivative vanishes at zero. For \(u\geq0\), each summand in
+\eqref{eq:Phi} is positive because \(n^2\rho(u)\geq\pi>3/2\).
+Hence \(\Phi\) is strictly positive on the entire real line.
+
+Set
+\begin{equation}\label{eq:F-H}
+ F_\lambda(u)=\ee^{\lambda u^2}\Phi(u),\qquad
+ H_\lambda(z)=\frac12\int_\R F_\lambda(u)\ee^{\ii zu}\dd u.
+\end{equation}
+Evenness reduces this to \eqref{eq:intro-H}. The absolute relation to
+\(\xi\) in \eqref{eq:intro-H} is the supplied canonical normalization,
+not a normalization by \(H_\lambda(0)\). It follows that
+\(H_\lambda(0)>0\) for every real \(\lambda\).
+
+\subsection{Complete bounds and tails}
+We give explicit majorants, so that subsequent differentiations concern
+the complete source rather than a finite arithmetic surrogate.
+Let
+\begin{equation}\label{eq:P-rec}
+ P_0(r)=2r^2-3r,\qquad
+ P_{j+1}(r)=(1-4r)P_j(r)+4rP_j'(r).
+\end{equation}
+Differentiating one term of \eqref{eq:Phi} gives
+\(\partial_u^j(\ee^u P_0(n^2\rho)\ee^{-n^2\rho})
+=\ee^u P_j(n^2\rho)\ee^{-n^2\rho}\), with \(\deg P_j=j+2\).
+For a polynomial \(P\), denote its absolute coefficient sum by \(a(P)\).
+Define
+\begin{equation}\label{eq:C-B}
+ C_d(N)=\sum_{n>N}n^{2d}\ee^{-\pi(n^2-1)},\qquad
+ B_j=a(P_j)C_{j+2}(0).
+\end{equation}
+Every \(C_d(N)\) is finite and tends to zero as \(N\to\infty\).
+
+\begin{lemma}[Full-line derivative majorant]\label{lem:source-bound}
+For \(\rho=\pi\ee^{4|u|}\) and every fixed \(j\geq0\),
+\begin{equation}\label{eq:Phi-bound}
+ |\Phi^{(j)}(u)|\leq B_j\ee^{|u|}\rho^{j+2}\ee^{-\rho}.
+\end{equation}
+On \(u\geq0\), the differentiated tail with \(n>N\) satisfies the
+same bound with \(B_j\) replaced by \(a(P_j)C_{j+2}(N)\).
+\end{lemma}
+\begin{proof}
+Since \(\rho\geq\pi>1\),
+\[
+ |P_j(n^2\rho)|\leq a(P_j)n^{2j+4}\rho^{j+2},\qquad
+ \ee^{-n^2\rho}\leq\ee^{-\rho}\ee^{-\pi(n^2-1)}.
+\]
+Summation proves the half-line assertion, including local uniform
+convergence of the differentiated series. Complete smooth reflection
+extends the estimate to \(u<0\). A reflected finite prefix need not
+have the matching odd derivatives at zero and is not used as a smooth
+full-line approximation in this argument.
+\end{proof}
+
+For integers \(r,d\geq0\) and \(L,\beta\geq0\), put
+\begin{equation}\label{eq:J}
+ J_{r,d}(L,\beta)=\int_\R |u|^r
+ \ee^{Lu^2+(\beta+1)|u|}\rho^d\ee^{-\rho}\dd u.
+\end{equation}
+The substitution \(s=\pi\ee^{4|u|}\) yields
+\begin{equation}\label{eq:J-transformed}
+ J_{r,d}(L,\beta)=\frac{2}{4^{r+1}}
+ \int_\pi^\infty\!\left[\log\frac{s}{\pi}\right]^r
+ \left(\frac{s}{\pi}\right)^{(\beta+1)/4}s^{d-1}
+ \exp\!\left(\frac{L}{16}\log^2\frac{s}{\pi}-s\right)\dd s<\infty.
+\end{equation}
+The term \(-s\) dominates every displayed factor. Restricting the
+integral to \(s\geq\pi\ee^{4U}\) proves that its radial tail tends to
+zero as \(U\to\infty\).
+For real \(|\lambda|\leq L\), Lemma~\ref{lem:source-bound} gives
+\begin{align}
+ \int_\R |u|^r\ee^{\beta|u|}|F_\lambda(u)|\dd u
+ &\leq B_0J_{r,2}(L,\beta),\label{eq:L1}\\
+ \int_\R |u|^{2r}\ee^{2\beta|u|}|F_\lambda(u)|^2\dd u
+ &\leq B_0^2J_{2r,4}(2L,2\beta+1).\label{eq:L2}
+\end{align}
+The second inequality squares the source bound and uses
+\(\ee^{-2\rho}\leq\ee^{-\rho}\); its linear exponential parameter
+is consequently \(2\beta+1\).
+
+\begin{proposition}[Regularity of the complete orbit]\label{prop:source-regular}
+The real sources \(F_\lambda\) are Schwartz functions, uniformly in
+each fixed seminorm on compact real \(\lambda\)-intervals. The transform
+\(H_\lambda(z)\) is jointly entire in \((\lambda,z)\in\C^2\).
+Every fixed parameter, time and position derivative is obtained by
+differentiating \eqref{eq:F-H}, with locally uniform domination.
+\end{proposition}
+\begin{proof}
+Writing \(\partial_u^j\ee^{\lambda u^2}=R_j(\lambda,u)\ee^{\lambda u^2}\)
+gives \(R_0=1\) and
+\(R_{j+1}=\partial_uR_j+2\lambda uR_j\). These are finite polynomials.
+Leibniz' rule and \eqref{eq:Phi-bound} bound each derivative of
+\(u^rF_\lambda\) by a constant times
+\[
+ (1+|u|)^{r+j}\ee^{Lu^2+|u|}\rho^{j+2}\ee^{-\rho}.
+\]
+This proves all fixed Schwartz seminorms and the boundary limits used
+in integration by parts. On a compact subset of \(\C^2\), the absolute
+integrand and each fixed derivative are bounded by a polynomial times
+\(\ee^{Lu^2+\beta|u|}\Phi(u)\). Equation~\eqref{eq:L1} proves that this
+majorant is integrable. Dominated holomorphic differentiation proves joint entire
+dependence. The same argument using \eqref{eq:L2} proves strong
+finite-order differentiability of the prepared source in \(L^2\).
+\end{proof}
+
+For example, with \(|\lambda_0|\leq M\), \(0\leq\tau\leq T\),
+\(L=M+T\) and \(|\operatorname{Im}z|\leq\beta\),
+\begin{align}
+ \partial_{\lambda_0}^{a}\partial_\tau^{b}\partial_z^q
+ H_{\lambda_0-\tau}(z)
+ &=\frac{(-1)^b\ii^q}{2}\int_\R
+ u^{2a+2b+q}F_{\lambda_0-\tau}(u)\ee^{\ii zu}\dd u,\label{eq:mixed}\\
+ \left|\partial_{\lambda_0}^{a}\partial_\tau^{b}\partial_z^q
+ H_{\lambda_0-\tau}(z)\right|
+ &\leq\frac{B_0}{2}J_{2a+2b+q,2}(L,\beta).\label{eq:mixed-bound}
+\end{align}
+This proves \eqref{eq:clock}, including right derivatives at \(\tau=0\).
+An undifferentiated reflected arithmetic tail in this formula has the
+same bound with \(B_0\) replaced by \(a(P_0)C_2(N)\).
+Together with \eqref{eq:J-transformed}, this controls both the complete
+arithmetic sum and the complete radial line. Every derivative order is
+fixed; no estimate uniform in the order is asserted.
+
+\subsection{A related source transform and its strip}
+The distinction between an entire transform and an absolutely convergent
+integral representation is useful. Define, for real \(\lambda\),
+\[
+ G_\lambda=8(1-\partial_u^2)^{-1}F_\lambda
+ =4\int_\R\ee^{-|u-v|}F_\lambda(v)\dd v.
+\]
+Splitting this integral at \(v=u\), and using the complete source tails,
+shows that
+\begin{equation}\label{eq:G-tail}
+ G_\lambda(u)\sim 8H_\lambda(\ii)\ee^{-|u|}
+ \quad (|u|\to\infty),\qquad H_\lambda(\ii)>0.
+\end{equation}
+For instance the coefficient on the positive side is
+\(4\int_\R\ee^vF_\lambda(v)\dd v=8H_\lambda(\ii)\).
+Its raw absolute transform therefore has exactly the strip
+\(|\operatorname{Im}z|<1\). Integration by parts within that strip gives
+\begin{equation}\label{eq:G-transform}
+ 16H_\lambda(z)=(1+z^2)\int_\R G_\lambda(u)\ee^{\ii zu}\dd u.
+\end{equation}
+Entire continuation is supplied by \eqref{eq:F-H}; it does not extend
+the absolute-convergence strip of the raw \(G\) integral. The exponential
+\(L^1\) moments above are sufficient hypotheses for this absolute-integral
+construction, not a universal necessity theorem for analytic continuation.

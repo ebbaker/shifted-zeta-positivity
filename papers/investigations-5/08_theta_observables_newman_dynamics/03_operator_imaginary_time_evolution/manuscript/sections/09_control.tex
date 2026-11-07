@@ -1,0 +1,105 @@
+\section{An explicit colliding source within the analytic class}
+\label{sec:control}
+
+The preceding local laws use heat evolution and strong source decay.
+To identify what those premises can establish on their own, we give
+an exact positive source satisfying them and having a collision.
+This is a control for generic analytic or operator arguments, not a
+replacement for the theta source.
+
+For \(c_0>0\), define
+\begin{equation}\label{eq:control-source}
+ \Phi_{\mathrm c}(u)=c_0\ee^{-u^2/4}
+ \left(\ee^{-u^4}+\frac12\ee^{-(u-4)^4}
+                    +\frac12\ee^{-(u+4)^4}\right).
+\end{equation}
+It is real, even and strictly positive. If \(|u|\geq8\), then
+\(|u\pm4|\geq|u|/2\), so the bracket is at most
+\(2\ee^{-u^4/16}\). Every derivative is a finite sum of polynomial
+factors times the same shifted exponentials and Gaussian.
+Consequently \(F_{\lambda,\mathrm c}=\ee^{\lambda u^2}\Phi_{\mathrm c}\)
+is Schwartz, has every fixed exponentially weighted absolute moment,
+and lies in every fixed multiplier power domain, locally uniformly
+in \(\lambda\). Its transform is jointly entire in \((\lambda,z)\).
+The complete cylinder, first-shell preparation and readout of
+Section~\ref{sec:operator} therefore apply unchanged.
+
+\begin{proposition}[Exact collision]\label{prop:control}
+At \(\lambda_*=1/4\), the cosine transform of
+\eqref{eq:control-source} is
+\begin{equation}\label{eq:control-transform}
+ H_{\lambda_*,\mathrm c}(x)=c_0 Q(x)(1+\cos4x),\qquad
+ Q(x)=\int_0^\infty\ee^{-u^4}\cos(xu)\dd u.
+\end{equation}
+It has a double zero at \(x_*=\pi/4\), with
+\begin{align}
+ a&=16c_0Q(x_*)>0,\label{eq:control-a}\\
+ b&=48c_0Q'(x_*),\qquad
+ c=96c_0Q''(x_*)-256c_0Q(x_*).\label{eq:control-bc}
+\end{align}
+For example, preparation at \(\lambda_0=1/2\) places this event
+at the interior imaginary time \(\tau_*=1/4\).
+\end{proposition}
+\begin{proof}
+At \(\lambda_*=1/4\), the Gaussian in \eqref{eq:control-source}
+cancels. Translation by \(\pm4\) in the full Fourier integral
+multiplies the transform of \(\ee^{-u^4}\) by
+\(\ee^{\pm4\ii x}\). Evenness and the half-line normalization give
+\eqref{eq:control-transform}.
+
+We verify \(Q(x_*)>0\) without quadrature. Let
+\(M_j=\int_0^\infty u^j\ee^{-u^4}\dd u\).
+Integration of \((u\ee^{-u^4})'\) gives \(M_4=M_0/4\), and
+Cauchy--Schwarz gives \(M_2\leq(M_0M_4)^{1/2}=M_0/2\).
+The inequality \(\cos t\geq1-t^2/2\) implies
+\[
+ Q(x)\geq M_0-\frac{x^2}{2}M_2
+       \geq M_0\left(1-\frac{x^2}{4}\right)>0
+       \quad (|x|<2).
+\]
+Since \(x_*=\pi/4<2\), the factor \(Q\) is nonzero there.
+The factor \(1+\cos4x\) has a double zero, second derivative \(16\),
+third derivative \(0\) and fourth derivative \(-256\) there.
+The product rule yields \eqref{eq:control-a}--\eqref{eq:control-bc}.
+\end{proof}
+
+The normalized coefficients also have an exact sign in this control:
+\begin{equation}\label{eq:control-gamma}
+ \beta=3Q'/Q,\qquad
+ \gamma=6Q''/Q-9(Q'/Q)^2-16<-16
+ \quad\text{at }x_*.
+\end{equation}
+To prove the strict inequality, the moment notation above gives
+\(M_2\ge1/(3e)\) by integration over \([0,1]\), and
+\(M_0\le1+1/e\), since \(u^4\ge u\) for \(u\ge1\).
+Thus \(M_2/M_0\ge1/[3(e+1)]>1/12\). Applying
+\(\cos t\ge1-t^2/2\) to \(-Q''\) yields
+\[
+ Q''(\pi/4)\le-M_2+\frac{\pi^2}{128}M_0<0,
+\]
+because \(\pi^2<10\) and \(10/128<1/12\).
+Equation~\eqref{eq:control-bc} now proves \eqref{eq:control-gamma}.
+This argument assumes no all-real-zero property of the control.
+In particular, a negative critical-curvature coefficient alone
+cannot exclude a collision.
+
+The field and full operator energy are regular at this exact event,
+while its roots and disappearing sign region obey all the laws above.
+Thus positivity, evenness, super-Gaussian tails, entire continuation,
+membership in all fixed power domains, and a nonnegative generator
+do not jointly exclude collisions.
+
+The premise this control fails is the \emph{exact canonical theta
+arithmetic expansion} \eqref{eq:Phi}. Any canonical exclusion
+must use further information from that source, beyond the analytic
+properties shared by \eqref{eq:control-source}. This is a scoped
+statement about the displayed premises. It does not rule out
+source-specific estimates or every possible physical construction.
+
+Other repository controls are documented in the operator assessment
+\cite{OperatorAssessment}: atomic sources are not \(L^2\) source
+states for this encoder, while broad positive-mixture and positive
+coefficient examples require their own domain and continuation
+checks. We do not claim a fresh family-wide audit of those examples.
+For the control above, both the analytic bounds and the collision
+are proved explicitly here.

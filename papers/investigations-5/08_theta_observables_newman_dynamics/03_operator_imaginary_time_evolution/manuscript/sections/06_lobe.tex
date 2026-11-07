@@ -1,0 +1,142 @@
+\section{Mass and energy of the disappearing sign region}\label{sec:lobe}
+
+The local geometry determines quantitative scales without evaluating
+the theta function. Let \(\epsilon=\tau_*-\tau>0\) and
+\(I_\tau=(r_-(\tau),r_+(\tau))\), on the real-pair side of the
+collision. The amplitude has the sign opposite to \(a\) in this interval.
+
+\begin{theorem}[Shrinking-lobe asymptotics]\label{thm:lobe}
+As \(\epsilon\downarrow0\),
+\begin{align}
+ \int_{I_\tau}|h|\,\dd x
+ &\sim\frac{4\sqrt2}{3}|a|\epsilon^{3/2},\label{eq:lobe-L1}\\
+ M_{\mathrm{loc}}(\tau):=\int_{I_\tau}h^2\dd x
+ &\sim\frac{16\sqrt2}{15}a^2\epsilon^{5/2},\label{eq:lobe-M}\\
+ T_{\mathrm{loc}}(\tau):=\int_{I_\tau}h_x^2\dd x
+ &\sim\frac{4\sqrt2}{3}a^2\epsilon^{3/2}.\label{eq:lobe-T}
+\end{align}
+Consequently
+\begin{equation}\label{eq:lobe-Rayleigh}
+ \frac{T_{\mathrm{loc}}}{M_{\mathrm{loc}}}
+ \sim\frac{5}{4\epsilon}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Use \(x=x_*+\sqrt{2\epsilon}\,t\). By
+\eqref{eq:heat-four-jet}, uniformly for \(t\) in a fixed bounded interval,
+\[
+ \frac{h(\tau_*-\epsilon,x_*+\sqrt{2\epsilon}\,t)}{\epsilon}
+ =a(t^2-1)+O(\epsilon^{1/2}),
+\]
+and
+\[
+ \frac{h_x(\tau_*-\epsilon,x_*+\sqrt{2\epsilon}\,t)}
+      {\sqrt{2\epsilon}}
+ =at+O(\epsilon^{1/2}).
+\]
+The scaled endpoints tend to \(-1\) and \(1\), by
+Theorem~\ref{thm:splitting}. The expansions give uniform bounds on
+a common interval containing them, so dominated convergence applies
+also to the varying integration intervals. The three limiting
+integrals are
+\[
+ \int_{-1}^1(1-t^2)\dd t=\frac43,\qquad
+ \int_{-1}^1(1-t^2)^2\dd t=\frac{16}{15},\qquad
+ \int_{-1}^1t^2\dd t=\frac23.
+\]
+Restoring the factors \(\sqrt{2\epsilon}\), \(\epsilon\) and
+\(\sqrt{2\epsilon}\) proves \eqref{eq:lobe-L1}--\eqref{eq:lobe-T}.
+Their quotient gives \eqref{eq:lobe-Rayleigh}.
+\end{proof}
+
+The angular-integrated field mass and radial kinetic form in this
+interval are \((2/\pi)M_{\mathrm{loc}}\) and
+\((2/\pi)T_{\mathrm{loc}}\). Their ratio is unchanged. Both contributions
+vanish at the collision. The divergence in \eqref{eq:lobe-Rayleigh}
+is produced by normalizing a region whose mass vanishes faster than
+its kinetic form; it is compatible with all the global regularity and
+dissipation laws in Proposition~\ref{prop:global-energy}.
+
+This quotient is a local Dirichlet quadratic form. The restriction of
+\(h\) to \(I_\tau\), extended by zero, belongs to \(H^1(\R)\), since its
+boundary values vanish. Its derivative generally jumps at the simple
+endpoints, so the extension need not belong to \(H^2(\R)=\Dom B\).
+Thus \eqref{eq:lobe-Rayleigh} is not being promoted to an operator
+expectation of an arbitrarily cut-off state in the full domain.
+Nor is a physical conditioning operation introduced by the
+normalization.
+
+At the event itself, \eqref{eq:heat-four-jet} gives
+\begin{equation}\label{eq:local-density-scales}
+ h(\tau_*,x_*+y)^2=\frac{a^2}{4}y^4+O(y^5),\qquad
+ h(\tau_*+s,x_*)^2=a^2s^2+O(s^3).
+\end{equation}
+The local intensity therefore develops a quartic spatial zero and
+refills quadratically in time, consistently with
+\eqref{eq:density-event}. In the real amplitude, two sign transitions
+disappear when the intervening pocket closes.
+
+It is useful to compare three different notions of size near the same
+event. The full norm and field energy are finite; the local lobe mass
+and energy vanish; and the normalized local quotient diverges. Singular
+zero-configuration quantities provide another example:
+\[
+ -\log\delta\sim-\tfrac12\log(8\epsilon),\qquad
+ \delta^{-2}\sim(8\epsilon)^{-1}.
+\]
+These are functions of the zero coordinates, not the field expectation
+\(\inner{\Psi}{K\Psi}\). The formal global zero Hamiltonians and
+energies in \cite{RodgersTao2020} require their own truncation and
+convergence analysis. Their singularity cannot be identified with a
+failure of the smooth cylinder evolution.
+
+
+\subsection{Exact balances on a moving sign region}
+The asymptotic constants fit exact identities valid before the
+collision. Write \(L_{\mathrm{loc}}=\int_{I_\tau}|h|\dd x\).
+\begin{proposition}[Moving-boundary dissipation]\label{prop:lobe-balance}
+As long as the endpoints are simple zeros bounding one sign region,
+\begin{align}
+ L_{\mathrm{loc}}'&=-|h_x(\tau,r_-)|-|h_x(\tau,r_+)|,
+ \label{eq:lobe-L-balance}\\
+ M_{\mathrm{loc}}'&=-2T_{\mathrm{loc}},
+ \qquad \frac{T_{\mathrm{loc}}}{M_{\mathrm{loc}}}
+       =-\tfrac12(\log M_{\mathrm{loc}})',
+ \label{eq:lobe-M-balance}\\
+ T_{\mathrm{loc}}'&=[h_xh_{xx}]_{r_-}^{r_+}
+             -2\int_{I_\tau}h_{xx}^2\dd x.
+ \label{eq:lobe-T-balance}
+\end{align}
+\end{proposition}
+\begin{proof}
+The boundary values of \(|h|\) and \(h^2\) vanish. If \(\sigma\)
+is the sign of \(h\) in the region, differentiating its area gives
+\(\sigma\int h_{xx}=\sigma[h_x]_{r_-}^{r_+}\), equal to
+the negative sum in \eqref{eq:lobe-L-balance}.
+Integration by parts gives
+\(M_{\mathrm{loc}}'=2\int hh_{xx}=-2\int h_x^2\).
+For the kinetic form, retain the endpoint velocities:
+\[
+ T_{\mathrm{loc}}'=h_x(r_+)^2r_+'-h_x(r_-)^2r_-'
+                       +2\int_{I_\tau}h_xh_{xxx}\dd x.
+\]
+Using \(r_\pm'=-h_{xx}/h_x\) and integrating the last term
+by parts leaves exactly \eqref{eq:lobe-T-balance}.
+\end{proof}
+
+The boundary term in \eqref{eq:lobe-T-balance} is essential: the
+whole-line kinetic dissipation law does not apply unchanged to a
+moving region. Equations \eqref{eq:lobe-M-balance} and
+\eqref{eq:lobe-M} are consistent with the coefficient \(5/4\)
+in \eqref{eq:lobe-Rayleigh}; that coefficient was proved from the
+two integrals, without differentiating an uncontrolled asymptotic
+remainder. In terms of the actual gap,
+\begin{equation}\label{eq:lobe-gap-scales}
+ L_{\mathrm{loc}}\sim\frac{|a|\delta^3}{12},\quad
+ M_{\mathrm{loc}}\sim\frac{a^2\delta^5}{120},\quad
+ T_{\mathrm{loc}}\sim\frac{a^2\delta^3}{12},\quad
+ \delta^2\frac{T_{\mathrm{loc}}}{M_{\mathrm{loc}}}\longrightarrow10.
+\end{equation}
+These follow from \(\delta^2\sim8\epsilon\). Here
+\(\epsilon=\tau_*-\tau=\lambda-\lambda_*\) is remaining time
+to the event, not an error term or a source perturbation.

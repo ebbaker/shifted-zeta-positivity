@@ -1,0 +1,83 @@
+\section{Regular field evolution and energy}\label{sec:energy}
+
+The prepared amplitude in \eqref{eq:realization} has two convenient
+representations: the positive scalar momentum envelope \(F_\lambda(p)\)
+and the real scalar position envelope \(\sqrt{2/\pi}\,h(\tau,x)\),
+each multiplying the fixed angular spinor \(\chi\).
+Positivity in the first representation does not imply positivity in the
+second. This distinction is already enough to make nodal events
+compatible with a nonnegative generator.
+
+\subsection{Global mass and kinetic energy}
+Define
+\[
+ N(\tau)=\norm{\Psi_\tau}^2,\qquad
+ T(\tau)=\inner{\Psi_\tau}{K\Psi_\tau}.
+\]
+The fixed finite-order bounds of Section~\ref{sec:source} justify every
+differentiation and integration by parts in this section.
+
+\begin{proposition}[Global dissipation]\label{prop:global-energy}
+The complete prepared orbit satisfies
+\begin{align}
+ N&=\int_\R |F_{\lambda_0-\tau}(p)|^2\dd p
+   =\frac2\pi\int_\R h^2\dd x>0,\label{eq:N}\\
+ T&=\int_\R p^2|F_{\lambda_0-\tau}(p)|^2\dd p
+   =\frac2\pi\int_\R h_x^2\dd x,\label{eq:T}\\
+ N'&=-2T,\qquad T'=-2\norm{K\Psi_\tau}^2.\label{eq:dissipation}
+\end{align}
+For the normalized field \(\phi=\Psi/\sqrt N\) and mean relative
+energy \(E=\inner\phi{K\phi}\),
+\begin{equation}\label{eq:normalized}
+ \phi'=-(K-E)\phi,\qquad
+ E'=-2\Var_\phi(K),\qquad
+ \norm{\phi'}^2=\Var_\phi(K),
+\end{equation}
+where \(\Var_\phi(K)=\inner\phi{K^2\phi}-E^2\).
+All these quantities are finite and smooth on compact time intervals.
+\end{proposition}
+\begin{proof}
+Plancherel and the first-shell multiplier give \eqref{eq:N}--\eqref{eq:T}.
+Differentiating \(\Psi'=-K\Psi\), and using self-adjointness, proves
+\eqref{eq:dissipation}. The source is nonzero, so \(N>0\).
+The quotient rule gives
+\(\phi'=-K\phi-(N'/2N)\phi=-(K-E)\phi\).
+Differentiating \(E=T/N\) gives
+\[
+ E'=-2\frac{\norm{K\Psi}^2}{N}+2\frac{T^2}{N^2}
+    =-2\Var_\phi(K).
+\]
+Taking the squared norm of the first identity proves the last one.
+All products are legitimate because the prepared field lies in every
+fixed power domain. The source bounds also give their local uniformity.
+\end{proof}
+
+The probability measure used in these spectral expectations is
+\begin{equation}\label{eq:spectral-measure}
+ \dd\nu_\tau(p)=\frac{|F_{\lambda_0-\tau}(p)|^2}{N(\tau)}\dd p.
+\end{equation}
+Its mean \(p^2\) is \(E\). It differs from the linear source measure
+\(F_\lambda(p)\dd p/\int F_\lambda\), which will describe the cosine
+balances. In particular the Gaussian exponent in \(\nu_\tau\) is twice
+the exponent in that linear measure. Confusing the two loses a factor
+of two in the evolution and changes the quantity being estimated.
+
+\subsection{Local intensity balance}
+Since \(h\) is real for real \((\tau,x)\),
+\begin{equation}\label{eq:local-density}
+ \partial_\tau(h^2)=\partial_x^2(h^2)-2h_x^2.
+\end{equation}
+Indeed, \(2hh_\tau=2hh_{xx}=(h^2)_{xx}-2h_x^2\).
+The corresponding angular-integrated field intensity is
+\((2/\pi)h^2\). Thus local intensity redistributes and dissipates under
+imaginary time; its integral is not a conserved unitary probability.
+
+At a double node \(h=h_x=0\), \(h_{xx}=a\ne0\), both
+\(\partial_\tau(h^2)\) and \(\partial_x^2(h^2)\) vanish, while
+\begin{equation}\label{eq:density-event}
+ \partial_\tau^2(h^2)=2a^2.
+\end{equation}
+The field itself has nonzero time derivative \(h_\tau=a\).
+This is the first indication that a smooth field can pass through a
+degenerate zero without producing an intensity or global-energy spike.
+The spatial and local-integral scales are derived below.

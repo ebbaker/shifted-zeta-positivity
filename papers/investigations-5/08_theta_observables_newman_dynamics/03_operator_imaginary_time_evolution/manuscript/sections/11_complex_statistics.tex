@@ -1,0 +1,336 @@
+\section{Pair statistics when zeros are nonreal}\label{sec:complex-statistics}
+
+The real-zero assumption in the original statistical comparison can
+be removed in several different ways. It is essential to distinguish
+the resulting observables: they retain different information, and
+only some have an established unconditional asymptotic formula.
+
+\subsection{Coordinates and the original comparison}
+Write a nontrivial zeta zero as \(\rho=\sigma+\ii t\), where
+\(0<\sigma<1\). To avoid confusing these coordinates with the
+collision coefficients \(\beta,\gamma\), we use \(\sigma,t\)
+throughout this section. Its corresponding zero of \(H_0\) is
+\begin{equation}\label{eq:zeta-H-zero-map}
+ z=2t+\ii(1-2\sigma).
+\end{equation}
+Thus a zero off the critical line is a \emph{nonreal} zero of
+\(H_0\), not generally a purely imaginary one. A pure imaginary
+zero of \(H_\lambda\), for real \(\lambda\), is impossible:
+\(H_\lambda(\ii y)=\int_0^\infty F_\lambda(u)\cosh(yu)\dd u>0\).
+
+Put \(L_T=(\log T)/(2\pi)\), \(B_T=TL_T\), and sum over all
+zeros with \(0<t\le T\), counting multiplicity. The ordinate-only
+Montgomery sum makes sense without RH:
+\begin{equation}\label{eq:F-vertical}
+ F_{\rm v}(\alpha,T)=\frac1{B_T}\sum_{\rho,\rho'}
+ T^{\ii\alpha(t-t')}\frac4{4+(t-t')^2}.
+\end{equation}
+Its definition records vertical separation, but discards \(\sigma\).
+Montgomery's original restricted-frequency asymptotic assumes RH
+\cite[Theorem, equations (1)--(2)]{Montgomery1973}.
+The full sine-kernel pair-correlation conjecture is stronger than
+that theorem and is not a premise of the Rodgers--Tao proof.
+Under \(\Lambda<0\), their dynamics forces almost all gaps at
+\(\lambda=0\) to be asymptotic to their mean; their final
+contradiction uses a positive proportion of smaller gaps
+\cite[Section~9, equation (93)]{RodgersTao2020}. The proof there
+uses the gap theorem of Conrey, Ghosh, Goldston, Gonek and
+Heath-Brown, rather than assuming the full statistical conjecture.
+
+\subsection{An unconditional complex-difference statistic}
+Baluyot, Goldston, Suriajaya and Turnage-Butterbaugh instead retain
+the complete difference of zeros. Define
+\begin{equation}\label{eq:F-complex}
+ F_{\rm c}(\alpha,T)=\frac1{B_T}\sum_{\rho,\rho'}
+ T^{\alpha(\rho-\rho')}W(\rho-\rho'),\qquad
+ W(u)=\frac4{4-u^2}.
+\end{equation}
+There is no pole in this sum since \(|\Re(\rho-\rho')|<1\).
+Under RH, \(F_{\rm c}=F_{\rm v}\). Without RH they are different:
+\(T^{\alpha(\rho-\rho')}\) includes the real factor
+\(T^{\alpha(\sigma-\sigma')}\), and the kernel may be complex.
+
+\begin{theorem}[Unconditional Montgomery theorem, imported]
+\label{thm:BGST}
+For the zeta zeros, \(F_{\rm c}\) is real, even in \(\alpha\),
+and nonnegative. As \(T\to\infty\), uniformly for
+\(0\le\alpha\le1\),
+\begin{equation}\label{eq:BGST}
+ F_{\rm c}(\alpha,T)
+ =T^{-2\alpha}(\log T+O(1))+\alpha
+                        +O((\log T)^{-1/2}).
+\end{equation}
+No RH assumption is required.
+\end{theorem}
+This is \cite[Theorem~1, (1.2)--(1.4)]{BGST2024}, in the
+pinned arXiv version~1. Its arithmetic asymptotic is an imported
+result. The following direct calculation explains why positivity
+survives the presence of nonreal zeros.
+
+\begin{proposition}[A positive integral for the finite sum]
+\label{prop:complex-Gram}
+For any finite multiset \(\mathcal Z\) in \(0<\Re\rho<1\)
+invariant under \(\rho\mapsto1-\overline\rho\), and \(x>0\),
+\begin{equation}\label{eq:complex-Gram}
+ \sum_{\rho,\rho'\in\mathcal Z}x^{\rho-\rho'}W(\rho-\rho')
+ =\int_\R\ee^{-2|v|}
+ \left|\sum_{\rho\in\mathcal Z}
+       \ee^{(\rho-1/2)(\log x+v)}\right|^2\dd v\ge0.
+\end{equation}
+\end{proposition}
+\begin{proof}
+For \(|\Re u|<2\), direct integration on the two half-lines gives
+\(W(u)=\int_\R\ee^{-2|v|}\ee^{uv}\dd v\).
+Relabel \(\rho'\) by \(1-\overline\rho'\). The summand becomes
+\(x^{\rho+\overline\rho'-1}W(\rho+\overline\rho'-1)\).
+Insert the integral and expand the absolute square. Finite
+summation is legitimate; the largest real exponent in the
+integrand has absolute value less than one, so the integral
+converges. Swapping the two indices in the original expression
+also proves invariance under \(x\mapsto1/x\).
+\end{proof}
+
+The published proof has an equivalent positive integral with
+Cauchy kernels \cite[Lemma~3, (2.6)]{BGST2024}.
+Thus the obstacle is not simply loss of positivity of the
+statistic. Its summands, however, are not nonnegative pair
+counts, and this positivity does not imply that each zero is
+on the critical line. Analytic test functions at complex zero
+coordinates also occur in the earlier higher-correlation theorem
+of Rudnick and Sarnak \cite[Theorem~1.1]{RudnickSarnak1996};
+its restricted Fourier support and entire smoothing must be
+retained. It is not a theorem for arbitrary planar pair tests.
+
+\subsection{What ordinate statistics can detect}
+The functional equation pairs \(\sigma+\ii t\) with
+\(1-\sigma+\ii t\). Consequently, even a statistic that discards
+\(\sigma\) can detect the coincidence of their ordinates.
+For each distinct ordinate \(t\), let \(m_t\) be the total
+multiplicity of zeros on that horizontal line, and set
+\begin{equation}\label{eq:horizontal-excess}
+ N(T)=\sum_t m_t,\qquad D(T)=\sum_t m_t(m_t-1).
+\end{equation}
+The pair sum including all equal-ordinate terms is \(N(T)+D(T)\).
+This is the horizontal-multiplicity observable studied by
+Goldston, Lee, Schettler and Suriajaya
+\cite[Sections~7--8]{GLSS2026}.
+
+\begin{proposition}[Coincidence bounds]\label{prop:horizontal}
+Let \(N_{\rm off}(T)\) count zeros off the critical line, with
+multiplicity, and let \(N_{\rm sc}(T)\) count simple critical-line
+zeros. Then
+\begin{equation}\label{eq:horizontal-bounds}
+ N_{\rm off}(T)\le D(T),\qquad
+ N_{\rm sc}(T)\ge N(T)-D(T).
+\end{equation}
+In particular \(D(T)=o(N(T))\) implies that a proportion tending
+to one of the zeros is simple and on the critical line.
+\end{proposition}
+\begin{proof}
+Every off-line zero has a distinct reflected partner at the
+same ordinate, so lies on a line with \(m_t\ge2\). Such a line
+contributes \(m_t(m_t-1)\ge m_t\) to \(D(T)\). A line with
+\(m_t=1\) contains one simple zero, which the reflection forces
+onto the critical line. The number of copies on lines with
+\(m_t\ge2\) is at most \(D(T)\), proving both bounds.
+\end{proof}
+
+For precision, the ordinate conjecture used in \cite{GLSS2026}
+asserts
+\begin{equation}\label{eq:ordinate-PCC}
+ \frac1{B_T}\sum_{\substack{0<t,t'\le T\\0<(t'-t)L_T\le r}}1
+ \longrightarrow\int_0^r
+       \left(1-\left(\frac{\sin\pi u}{\pi u}\right)^2\right)\dd u,
+\end{equation}
+uniformly for \(r\) in compact subintervals of \((0,\infty)\),
+with all zeros counted with multiplicity and equal ordinates
+excluded from this particular sum. Their Theorem~1 proves the
+density-one conclusion from this conjecture without assuming RH. This remains conditional
+on that conjecture; it does not follow from
+Theorem~\ref{thm:BGST}. Even the resulting density-one conclusion
+allows a finite or zero-density exceptional set, so is weaker
+than RH. The elementary implication \eqref{eq:horizontal-bounds}
+is useful precisely because it exposes this quantifier.
+
+\subsection{Finite exceptions are invisible to the leading asymptotic}
+The limitation can be proved directly for both sums, rather than
+inferred only from the language of density.
+
+\begin{proposition}[Stability under finitely many zero changes]
+\label{prop:finite-defects}
+Let two locally finite multisets in \(0<\sigma<1\), \(t>0\),
+differ by finitely many fixed zeros with multiplicity. Suppose
+their ordinate counts in \([u,u+1]\) are \(O(\log(2+u))\).
+Define \(F_{\rm v},F_{\rm c}\) by \eqref{eq:F-vertical} and
+\eqref{eq:F-complex}, with the common normalizer \(B_T\).
+If all changed zeros have \(\eta\le\sigma\le1-\eta\) for
+some \(\eta>0\), then, uniformly for \(0\le\alpha\le1\),
+\begin{equation}\label{eq:finite-defect-errors}
+ |\Delta F_{\rm v}|=O((T\log T)^{-1}),\qquad
+ |\Delta F_{\rm c}|=O(T^{-\eta}/\log T).
+\end{equation}
+\end{proposition}
+\begin{proof}
+After cancellation, each remaining ordered-pair term contains
+at least one fixed changed zero \(\rho_0=\sigma_0+\ii t_0\).
+The count hypothesis gives
+\[
+ \sum_\rho\frac1{1+(t-t_0)^2}<\infty:
+\]
+on distant unit intervals the sum is bounded by a constant times
+\(\sum_{n\ge1}\log(2+n)/(1+n^2)\), and there are finitely
+many nearby zeros. The vertical phase has modulus one, so
+the unnormalized change in \(F_{\rm v}\) is bounded.
+For the complex kernel, writing \(d=\sigma-\sigma_0\),
+\[
+ |4-(d+\ii(t-t_0))^2|
+ \ge4-d^2+(t-t_0)^2\ge3+(t-t_0)^2.
+\]
+Moreover \(|d|\le1-\eta\), whence each exponential factor
+has modulus at most \(T^{\alpha(1-\eta)}\).
+The finitely many changes therefore alter the unnormalized
+complex sum by \(O(T^{1-\eta})\) on the stated frequency
+interval. Division by \(B_T\) proves the result.
+\end{proof}
+
+The zeta count hypothesis is unconditional
+\cite[Lemma~2]{BGST2024}. Symmetric finite changes can be used
+if one wishes to preserve the reflection in
+Proposition~\ref{prop:complex-Gram}. This proposition concerns
+the sensitivity of the observables; it constructs no alternative
+zeta function. It shows that their leading limiting formulas,
+alone, cannot exclude a finite exceptional set. Frequencies
+beyond the proved range, more precise remainders, or localized
+observables require their own arithmetic estimates.
+
+\subsection{Statistics that retain the transverse coordinates}
+A direct geometric generalization is to keep the transverse
+coordinate as a mark. For the zeros with \(T<t_j\le2T\), set
+\(a_j=L_Tt_j\), \(b_j=L_T(\sigma_j-1/2)\), and let
+\(n_T\) be their number. The finite positive pair measure
+\begin{equation}\label{eq:marked-pair}
+ \mathcal R_T=\frac1{n_T}\sum_{j\ne k}
+             \delta_{(a_j-a_k,b_j,b_k)}
+\end{equation}
+retains both marks, including whether a pair is symmetric across
+the critical line. On RH, testing it against \(f(s,b,b')\)
+reduces to the usual ordinate-pair test \(f(s,0,0)\).
+Its full finite structure factor is also nonnegative:
+\begin{equation}\label{eq:marked-structure}
+ \mathcal S_T(k,l)=\frac1{n_T}
+ \left|\sum_j\ee^{2\pi\ii(ka_j+lb_j)}\right|^2\ge0.
+\end{equation}
+This is a two-dimensional Fourier statistic of the zero counting
+measure. It is different from the analytic complex-difference
+sum \eqref{eq:F-complex}, and no sine-kernel limit for arbitrary
+marked tests is asserted. The theorem above does not supply one.
+
+For a finite window of \(H_\lambda\) zeros, one can likewise
+use \(\Re z\) and \(\Im z\) as longitudinal and transverse
+coordinates. At \(\lambda=0\), \eqref{eq:zeta-H-zero-map}
+fixes both scale factors. For positive time, the appropriate
+asymptotic real spacing is described next. These finite
+definitions need no assumption that all zeros are real.
+
+\subsection{Why the positive-threshold argument is different}
+There is a particularly strong constraint on any attempt to
+reverse the Rodgers--Tao contradiction.
+
+\begin{theorem}[Positive-time tail, imported]\label{thm:KKL}
+For every fixed \(\lambda>0\), all but finitely many zeros
+of the canonical \(H_\lambda\) are real and simple. Enumerating
+the sufficiently large positive real zeros by \(x_n(\lambda)\),
+\begin{equation}\label{eq:positive-clock}
+ \frac{(x_{n+1}(\lambda)-x_n(\lambda))\log x_n(\lambda)}{4\pi}
+ \longrightarrow1.
+\end{equation}
+\end{theorem}
+These are Ki--Kim--Lee's Theorems~1.3 and~1.4
+\cite{KiKimLee2009}. Their normalization is
+\(\Xi_\mu(t)=8H_{4\mu}(2t)\); thus \(\mu=\lambda/4\)
+and the gap constant in our coordinate is \(4\pi\).
+The theorem is for fixed positive time. It gives no uniform
+tail threshold as \(\lambda\downarrow0\).
+
+If \(\Lambda>0\), choose \(0<\lambda<\Lambda\).
+By definition \(H_\lambda\) has a nonreal zero, but
+Theorem~\ref{thm:KKL} confines all its nonreal zeros to a
+finite exceptional set. The asymptotic real gaps still satisfy
+\eqref{eq:positive-clock}. Thus regular spacing at a positive
+time is compatible with either side of the putative threshold;
+it is not a contradiction. For a sufficiently high window,
+the marked measure \eqref{eq:marked-pair}, adapted to this
+fixed slice, contains no transverse marks even if exceptional
+nonreal zeros remain below it. Passing from fixed positive
+time to \(\lambda=0\) requires a uniform estimate in a joint
+time-height limit; compact convergence of the entire functions
+alone does not supply it.
+
+There is also a dynamical distinction. For a finite isolated
+cluster of simple zeros, factor \(H_\lambda=P_\lambda U_\lambda\)
+and set \(g=\partial_z\log U_\lambda\). Implicit
+differentiation of the backward heat equation gives
+\begin{equation}\label{eq:complex-root-motion}
+ z_j'=2\sum_{k\ne j}\frac1{z_j-z_k}+2g(z_j),
+ \qquad {}'=\partial_\lambda.
+\end{equation}
+This is local and needs no infinite principal-value sum.
+Writing \(z_j=x_j+\ii y_j\), its two real components are
+\begin{align}
+ x_j'&=2\sum_{k\ne j}\frac{x_j-x_k}{|z_j-z_k|^2}
+                                      +2\Re g(z_j),\notag\\
+ y_j'&=-2\sum_{k\ne j}\frac{y_j-y_k}{|z_j-z_k|^2}
+                                      +2\Im g(z_j).
+ \label{eq:planar-root-motion}
+\end{align}
+The transverse interaction has the opposite sign. In particular
+the real inverse-square interaction is not a positive energy
+after merely allowing complex gaps:
+\(( (x+\ii y)-(x-\ii y))^{-2}=-1/(4y^2)\).
+Replacing it by an absolute square defines another quantity
+and requires a new evolution argument.
+
+\begin{proposition}[Finite-cluster transverse balance]
+\label{prop:transverse-balance}
+On a simple-root interval for the cluster in
+\eqref{eq:complex-root-motion},
+\begin{equation}\label{eq:transverse-balance}
+ \frac{d}{d\lambda}\sum_j y_j^2
+ =-4\sum_{j<k}\frac{(y_j-y_k)^2}{|z_j-z_k|^2}
+                      +4\sum_j y_j\Im g(z_j).
+\end{equation}
+For a conjugate pair \(x\pm\ii y\), \(y>0\),
+\begin{equation}\label{eq:conjugate-pair-height}
+ (y^2)'=-2+4y\Im g(x+\ii y).
+\end{equation}
+\end{proposition}
+\begin{proof}
+Multiply the second line of \eqref{eq:planar-root-motion} by
+\(2y_j\) and sum. The two ordered terms for \(j,k\) combine
+to \((y_j-y_k)^2/|z_j-z_k|^2\). For a conjugate pair,
+\(2/(z-\overline z)=-\ii/y\), giving
+\(y'=-1/y+2\Im g(z)\) and the last equation.
+\end{proof}
+
+For a real polynomial heat flow containing all its roots,
+\(g=0\), so the transverse second moment decreases.
+For an isolated pair approaching a real collision,
+\(\Im g(x+\ii y)=y g_x(x)+O(y^3)\); the same exterior
+curvature \(\kappa\) from \eqref{eq:coefficient-dictionary}
+controls the correction to \((y^2)'=-2\).
+This gives a local bridge between the coefficient study and
+transverse statistics. It describes how an existing nonreal
+pair becomes real as Newman time increases, and supplies no
+restriction preventing the reverse event in imaginary time.
+
+An argument against \(\Lambda>0\) therefore needs more than
+an unconditional definition of pair correlation, or positivity
+of its quadratic form. One possible missing input is a
+source-specific estimate sensitive to even a single exceptional
+cluster, including the exterior term in
+\eqref{eq:transverse-balance}. Another would be a proved
+amplification of such a defect into a statistic contradicting
+an established arithmetic theorem. Neither implication follows
+from the results cited here. This is a precise limitation of
+the proposed statistical shortcut, not an exclusion of every
+possible statistical approach to the upper bound.

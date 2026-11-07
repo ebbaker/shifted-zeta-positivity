@@ -230,3 +230,16 @@ dimension-dependent or source-sensitive estimates. [E04 r7](../papers/investigat
 accepts that scope under internal different-model review. The manuscript
 also states fixed-pole determinant vanishing, not a rank bound across
 artificially zero negative indices; [integration check](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/10_radial_green_determinants/reviews/RGD_E01_R3_MANUSCRIPT_INTEGRATION_CHECK_20261104.md).
+
+
+**Finite-exception sensitivity is a statement about specified observables,
+6 November2026.** For Edward Baker with substantial LLM assistance,
+**gpt-6-astra / max**. [Note13](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/notes/13_TND_O_B03_COMPLEX_ZERO_STATISTICS_AND_MANUSCRIPT_RETURN_20261106.md)
+proves finite-change stability for two normalized correlation sums on
+0<=alpha<=1 and states: “This is not a statement about all statistics,
+all frequencies, or sharper remainder estimates.” Fixed-positive-time
+real tails likewise supply no uniform time0 limit. Do not turn these
+limitations into a universal exclusion of statistical upper-bound
+strategies or a theorem constructing alternative zeta zeros.
+[Same-author check03](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/reviews/03_TND_O_E04_B03_ANALYTICAL_AND_PRODUCTION_CHECK_20261106.md)
+retains the scope; an exceptional-cluster estimate remains open.

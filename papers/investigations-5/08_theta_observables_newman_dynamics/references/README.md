@@ -21,3 +21,14 @@ Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol/ultra**
 ## TND-E06 background manuscript use — 6 November 2026
 
 Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra/max**, parent chat0004. [Use receipt02](02_TND_E06_BACKGROUND_SOURCE_USE_20261106.md) records the selected primary passages checked for the shared manuscript. [Internal source entries](internal_sources.bib) cite the project proof notes, assessments and later branch decisions; external entries remain in their canonical MC11 and direct-branch catalogs and are combined only during the build. [Integration Review02](../reviews/02_SHARED_ANALYTICAL_BACKGROUND_MANUSCRIPT_REVIEW_20261106.md) preserves the distinct mathematical, planning and assessment scopes. No third-party PDF was added.
+
+## Operator/ITE branch setup use — 6 November 2026
+
+Prepared for Edward Baker with substantial LLM assistance,
+**gpt-6-astra/max**, direct chat0005. [Branch 03's use index](../03_operator_imaginary_time_evolution/references/README.md)
+reuses the existing Camporesi–Higuchi, DLMF and Rodgers–Tao records,
+shared E01/E03 source/transport work and canonical BibTeX homes.
+This is a bounded backfill of inherited pointers and local source uses;
+no primary article was freshly inspected, no new theorem imported and no
+PDF or duplicate bibliography added. [Setup input identities](../03_operator_imaginary_time_evolution/research-progress/handoffs/01_TND_O_SETUP_INPUTS_20261106.json)
+record the local versions used for organization.

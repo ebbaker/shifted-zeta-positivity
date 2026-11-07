@@ -1,0 +1,220 @@
+\section{The complete cylinder realization}\label{sec:operator}
+
+\subsection{Hilbert space, maximal domain and spectrum}
+Let \(\Sigma\) be the spinor bundle on the unit sphere and set
+\[
+ \KK=L^2(S^2,\Sigma;\dd\Omega),\qquad
+ \HH_C=L^2(\R_v;\KK),\qquad
+ g_C=\dd v^2+\tfrac14g_{S^2}.
+\]
+We use product measure \(\dd v\dd\Omega\). Metric-volume fields have
+measure \(\dd v\dd\Omega/4\); multiplication by two is the unitary
+conversion, and the readout must then be composed with its inverse.
+
+The unit-sphere Dirac operator \(D\) has eigenvalues \(\pm n\),
+\(n\geq1\), with multiplicity \(2n\) for each sign
+\cite{CamporesiHiguchi1996}. Put \(A=D^2\) and let \(P_n\) be its
+complete shell projection, of rank \(4n\). The cylinder square and its
+relative-energy shift are
+\begin{equation}\label{eq:K}
+ L_0=-\partial_v^2+4A,\qquad
+ K=L_0-4I=-\partial_v^2+4(A-I).
+\end{equation}
+Use the unitary Fourier convention
+\(\widehat f(p)=(2\pi)^{-1/2}\int\ee^{-\ii pv}f(v)\dd v\).
+The complete Fourier/shell decomposition identifies \(K\) with the
+real multipliers
+\[
+ m_n(p)=p^2+4(n^2-1),\qquad
+ \HH_C\simeq\bigoplus_{n\geq1}L^2(\R_p;\Ran P_n).
+\]
+
+\begin{theorem}[Maximal realization]\label{thm:operator}
+The operator
+\begin{equation}\label{eq:domain}
+ \Dom K=\left\{\Psi\in\HH_C:
+ \sum_{n\geq1}\int_\R m_n(p)^2\norm{P_n\widehat\Psi(p)}_\KK^2\dd p<\infty\right\},
+ \quad \widehat{K\Psi}_n=m_n\widehat\Psi_n,
+\end{equation}
+is nonnegative and self-adjoint. Its domain equals \(\Dom L_0\), with
+equivalent graph norms. A common core is
+\begin{equation}\label{eq:core}
+ \mathcal C=\bigcup_{N\geq1}C_c^\infty
+ \left(\R;\bigoplus_{n=1}^N\Ran P_n\right).
+\end{equation}
+The spectrum of \(K\) is purely absolutely continuous and equals
+\([0,\infty)\); zero is not an eigenvalue.
+\end{theorem}
+\begin{proof}
+Finite shells with bounded momentum support give a dense domain.
+Reality of the multipliers proves symmetry and positivity. If
+\(\eta\in\Dom K^*\) has adjoint image \(\zeta\), test against arbitrary
+\(L^2\) fields supported in finitely many shells and a bounded momentum
+interval. There the multipliers are bounded, so the adjoint identity
+forces \(\zeta_n=m_n\eta_n\) almost everywhere. Exhausting the shells
+and intervals shows precisely the integrability in \eqref{eq:domain}.
+The converse follows by Cauchy--Schwarz. Hence \(K^*=K\).
+
+The multiplier of \(L_0\) is \(m_n+4\), and
+\(m_n^2\leq(m_n+4)^2\leq2m_n^2+32\). This proves domain equality
+and graph-norm equivalence. Truncating to complete shells converges in
+the graph norm. On finitely many shells the graph norm is equivalent
+to the radial \(H^2\) norm. Multiplication by a smooth cutoff
+\(\eta(v/R)\), followed by mollification, approximates each component
+in \(H^2\) by a compactly supported smooth function. Indeed the cutoff
+derivative terms have factors \(R^{-1}\) and \(R^{-2}\), and all
+remaining tails vanish in \(L^2\). This proves \eqref{eq:core}.
+
+Outside \([0,\infty)\), the reciprocal multipliers give a bounded
+resolvent. The first shell provides approximate spectral vectors near
+every value \(p^2\geq0\), so the spectrum is the stated interval.
+Each fixed-energy level has measure zero in every shell, ruling out
+eigenvalues. On each open momentum half-line, the change of variable
+\(p\mapsto p^2+4(n^2-1)\) gives an absolutely continuous spectral
+measure. The thresholds have no atoms; the countable orthogonal sum
+remains absolutely continuous.
+\end{proof}
+
+Both Dirac signs are retained. In a signed cylinder block, the first-order
+operator has matrix \(\bigl(\begin{smallmatrix}2n&p\\p&-2n\end{smallmatrix}\bigr)\),
+with eigenvalues \(\pm\sqrt{p^2+4n^2}\), each of angular multiplicity
+\(2n\). Thus \(L_0\) has spectrum \([4,\infty)\), and subtracting its
+threshold does not select a sign or create a normalizable ground state.
+
+\subsection{Heat evolution and its domain}
+Define \(S(\tau)\), \(\tau\geq0\), by multiplication with
+\(\ee^{-\tau m_n(p)}\) in every shell.
+
+\begin{proposition}\label{prop:semigroup}
+The family \(S(\tau)\) is a strongly continuous contraction semigroup
+with norm one and generator \(-K\) on exactly \(\Dom K\). For every
+integer \(j\geq1\),
+\begin{equation}\label{eq:smoothing}
+ \norm{K^jS(\tau)}\leq\left(\frac{j}{\ee\tau}\right)^j\quad(\tau>0).
+\end{equation}
+No bounded reverse-time semigroup exists on \(\HH_C\).
+\end{proposition}
+\begin{proof}
+The semigroup law and contraction bound are multiplier identities.
+The norm is one because the first-shell momentum can approach zero.
+Dominated convergence proves strong continuity. On \(\Dom K\),
+\(|(\ee^{-hm}-1)/h|\leq m\) for \(h>0\), so the strong right
+derivative is \(-K\). Conversely, boundedness of the squared norm of
+the difference quotients and Fatou's lemma force the domain integral
+in \eqref{eq:domain}. The supremum of \(m^j\ee^{-\tau m}\) is
+\((j/(\ee\tau))^j\). Finally \(\ee^{\delta p^2}\) is unbounded
+already in the first shell for every \(\delta>0\).
+\end{proof}
+
+The domain of \(K^j\) is given by the same decomposition with weight
+\(m_n^{2j}\), together with underlying \(L^2\) membership.
+The core argument extends using \(H^{2j}\). For the complete source,
+every prepared power has the explicit bound:
+\begin{equation}\label{eq:prepared-power}
+ \norm{K^jE_\chi F_\lambda}^2
+ =\int_\R |u|^{4j}|F_\lambda(u)|^2\dd u
+ \leq B_0^2J_{4j,4}(2L,1).
+\end{equation}
+Here the encoder is defined next; the identity uses its first-shell
+support. These source-specific bounds do not supply a bounded inverse
+flow on arbitrary ambient fields.
+
+\subsection{Preparation and absolute observation}
+Fix a unit \(\chi\in\Ran P_1\), allowing both Dirac signs, and set
+\begin{equation}\label{eq:encoder}
+ \widehat{E_\chi f}(p)=f(p)\chi,\qquad
+ J_\chi\Psi(x)=\inner{\chi}{\Psi(x)}_\KK,\qquad
+ R_\chi=\sqrt{\pi/2}\,J_\chi.
+\end{equation}
+The source variable is calibrated to momentum \(p=u\); the observed
+variable is position \(x=v\). Pairings are conjugate-linear in their
+first argument, so the readout is linear in the field.
+
+\begin{theorem}[Exact calibrated realization]\label{thm:realization}
+The encoder is isometric and \(R_\chi:\HH_C\to L^2(\R_x)\) is bounded
+with norm \(\sqrt{\pi/2}\). If \(M\) denotes multiplication by \(u^2\)
+and \(B=-\partial_x^2\) on \(H^2(\R)\), then
+\begin{align}
+ KE_\chi f&=E_\chi Mf,\quad
+ E_\chi f\in\Dom K\ \Longleftrightarrow\ u^2f\in L^2,
+ \label{eq:intertwine-domain}\\
+ R_\chi K\Psi&=BR_\chi\Psi\quad(\Psi\in\Dom K),\label{eq:readout-domain}\\
+ S(\tau)E_\chi&=E_\chi\ee^{-\tau M},\qquad
+ R_\chi S(\tau)=\ee^{-\tau B}R_\chi.\label{eq:intertwine-heat}
+\end{align}
+In particular
+\begin{equation}\label{eq:realization}
+ R_\chi S(\tau)E_\chi F_{\lambda_0}=H_{\lambda_0-\tau},\qquad
+ \Psi_\tau:=S(\tau)E_\chi F_{\lambda_0}
+ =\sqrt{2/\pi}\,h(\tau,\cdot)\chi.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Plancherel and \(\norm\chi=1\) prove isometry. Angular Cauchy--Schwarz
+gives \(\norm{J_\chi}\leq1\), with equality on fields \(f(x)\chi\).
+The first-shell multiplier is \(p^2\), proving
+\eqref{eq:intertwine-domain}. For \(\Psi\in\Dom K\),
+\[
+ \int p^4|\inner\chi{\widehat\Psi(p)}|^2\dd p
+ \leq\sum_n\int m_n(p)^2\norm{P_n\widehat\Psi(p)}^2\dd p.
+\]
+Thus \(R_\chi\Psi\in H^2\), and pairing the multiplier with
+\(\chi\) proves \eqref{eq:readout-domain}. The bounded semigroup
+identities follow directly without cancelling unbounded operators.
+For \(f\in L^1\cap L^2\), Fourier inversion gives
+\[
+ R_\chi E_\chi f(x)=\frac{\sqrt{\pi/2}}{\sqrt{2\pi}}
+ \int_\R f(u)\ee^{\ii xu}\dd u
+ =\frac12\int_\R f(u)\ee^{\ii xu}\dd u.
+\]
+Apply this to the complete even source. The smooth representative and
+all fixed derivatives in \eqref{eq:realization} follow from
+Proposition~\ref{prop:source-regular} and \eqref{eq:prepared-power}.
+\end{proof}
+
+The rank-one angular preparation is a reducing channel of the full
+operator, not an alteration of its ambient spectrum. The map \(R_\chi\)
+is bounded into \(L^2\); point evaluation on an arbitrary field is not
+claimed bounded. The supplied source moments select the pointwise
+representative used in the collision analysis.
+
+\subsection{The energy origin and the exact scalar baseline}
+The absolute calibration makes the energy shift visible:
+\[
+ R_\chi\ee^{-\tau L_0}E_\chi F_{\lambda_0}
+ =\ee^{-4\tau}H_{\lambda_0-\tau}.
+\]
+It cannot be removed within the following fixed bounded-readout class.
+
+\begin{proposition}[Scoped unshifted obstruction]\label{prop:unshifted}
+No fixed \(\Psi_0\in\HH_C\) and fixed bounded linear
+\(R:\HH_C\to L^2(\R)\) satisfy
+\(R\ee^{-\tau L_0}\Psi_0=H_{\lambda_0-\tau}\) for every \(\tau\geq0\).
+\end{proposition}
+\begin{proof}
+The left-hand norm is at most \(\norm R\norm{\Psi_0}\ee^{-4\tau}\).
+On the other hand Plancherel and \(u=y/\sqrt\tau\) give
+\[
+ \tau^{1/2}\norm{H_{\lambda_0-\tau}}_2^2
+ =\frac\pi2\int_\R\ee^{-2y^2}
+ |F_{\lambda_0}(y/\sqrt\tau)|^2\dd y
+ \longrightarrow\Phi(0)^2(\pi/2)^{3/2}.
+\]
+Boundedness and continuity of the source justify dominated convergence.
+Hence the target norm is asymptotic to
+\(\Phi(0)(\pi/2)^{3/4}\tau^{-1/4}\), with positive coefficient,
+contradicting exponential decay.
+\end{proof}
+The proposition concerns the entire half-line and the stated bounded
+linear class. It does not exclude finite-interval realizations,
+unbounded observations or time-dependent calibration.
+
+Finally, for arbitrary \(f,g\in L^2(\R)\),
+\begin{equation}\label{eq:exact-error}
+ \norm{R_\chi S(\tau)E_\chi(f-g)}_2
+ =\sqrt{\pi/2}\,\norm{\ee^{-\tau u^2}(f-g)}_2.
+\end{equation}
+This is exactly the direct scalar Fourier error identity. The operator
+realization supplies a well-defined field interpretation and domain
+theory, while this comparison establishes no estimation gain from the
+representation alone.

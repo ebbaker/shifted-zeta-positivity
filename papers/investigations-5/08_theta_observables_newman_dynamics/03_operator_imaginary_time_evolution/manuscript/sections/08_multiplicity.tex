@@ -1,0 +1,115 @@
+\section{Higher multiplicity and singular observation coordinates}
+\label{sec:multiplicity}
+
+\subsection{The finite heat-polynomial normal form}
+Suppose a real event has exact spatial order \(m\geq2\):
+\[
+ \partial_x^jh(\tau_*,x_*)=0\quad(0\leq j<m),\qquad
+ a_m=\partial_x^mh(\tau_*,x_*)\ne0.
+\]
+For fixed \(m\), define
+\begin{equation}\label{eq:heat-poly}
+ p_m(S,Y)=
+ \sum_{j=0}^{\lfloor m/2\rfloor}
+ \frac{m!}{j!(m-2j)!}S^jY^{m-2j}.
+\end{equation}
+
+\begin{theorem}[Finite-multiplicity heat geometry]\label{thm:higher}
+Uniformly for \((S,Y)\) in compact sets,
+\begin{equation}\label{eq:higher-rescale}
+ h(\tau_*+\epsilon^2S,x_*+\epsilon Y)
+ =\frac{a_m}{m!}\epsilon^m p_m(S,Y)+O(\epsilon^{m+1}).
+\end{equation}
+In a sufficiently small fixed complex neighborhood of \(x_*\), the
+cluster consists of \(m\) simple real zeros immediately before the event.
+Immediately after it, there are no real zeros if \(m\) is even, and
+exactly one simple real zero if \(m\) is odd. The remaining zeros form
+nonreal conjugate pairs; the total complex multiplicity stays \(m\).
+\end{theorem}
+\begin{proof}
+The coefficient of \(s^jy^k\) in the local Taylor series is
+\(\partial_x^{2j+k}h/(j!k!)\), by the heat equation. All terms of
+parabolic weight \(2j+k<m\) vanish, and the weight-\(m\) terms give
+\eqref{eq:heat-poly}. A finite Taylor remainder, as in
+Section~\ref{sec:double}, proves \eqref{eq:higher-rescale}.
+
+For completeness, the real-root property of \(q_m(Y)=p_m(-1,Y)\)
+can be proved directly. The displayed coefficients give
+\[
+ q_0=1,\quad q_1=Y,\quad
+ q_{m+1}=Yq_m-2m q_{m-1}.
+\]
+These monic polynomials have simple real interlacing zeros by induction.
+At successive zeros of \(q_m\), the values of \(q_{m+1}=-2m q_{m-1}\)
+alternate in sign, giving \(m-1\) intervening roots. At the largest
+zero of \(q_m\), \(q_{m-1}>0\) and \(q_{m+1}<0\), whereas
+\(q_{m+1}(Y)>0\) for large positive \(Y\), giving a further root.
+At the smallest zero, the sign of \(q_{m-1}\) is \((-1)^{m-1}\);
+the sign of \(q_{m+1}\) there is \((-1)^m\), opposite its sign at
+large negative \(Y\). This supplies the last root. The degree is
+\(m+1\), so all are simple and the interlacing is strict.
+The induction begins with \(q_1=Y\) and \(q_2=Y^2-2\).
+Parity shows that precisely the odd polynomials have a zero at zero.
+
+Set \(s=-\epsilon^2\) before the event. Dividing the field by
+\(\epsilon^m\) gives an analytic family in \((\epsilon,Y)\), including
+\(\epsilon=0\), with limiting simple roots those of \(q_m\).
+The implicit-function theorem continues every root as a real simple
+root for small real positive \(\epsilon\).
+After the event, \(s=\epsilon^2\), and
+\[
+ p_m(1,\ii Y)=\ii^m p_m(-1,Y).
+\]
+The nonzero limiting roots are therefore purely imaginary and stay
+nonreal under a sufficiently small perturbation. If \(m\) is odd,
+the limiting root at zero is simple and its unique continued branch
+is real by conjugation symmetry. For even \(m\) there is no such root.
+Finally, choose a fixed disk containing only the order-\(m\) zero at
+the event. Its nonzero boundary and analytic convergence preserve the
+total zero count \(m\). The branches just constructed exhaust it.
+\end{proof}
+
+This recovers the local forward-parabolic multiplicity pattern in
+\cite{Angenent1991,HeatMultiplicity}. It asserts neither that all
+canonical events have multiplicity two nor that one can choose the neighborhoods
+or remainder constants uniformly in \(m\) or in height.
+
+\subsection{What the generator detects at a node}
+The complete operator intertwining gives, for each fixed \(j\),
+\begin{equation}\label{eq:generator-jets}
+ R_\chi K^j\Psi_\tau=(-1)^j\partial_x^{2j}h(\tau,\cdot).
+\end{equation}
+If \(m=2r\), the first nonzero pointwise value in this even-derivative
+sequence is at \(j=r\). If \(m=2r+1\), the values for \(j\leq r\)
+vanish, but the first spatial derivative of the \(j=r\) readout is
+nonzero. These are justified pointwise statements for the prepared
+smooth orbit. They do not assert bounded point evaluation on the
+ambient \(L^2\) space. In particular, \(K\) and its powers are finite
+on the source state even when lower-order readouts vanish.
+
+\subsection{Logarithmic derivatives and their poles}
+On an open region where \(h\ne0\), put \(w=h_x/h\).
+Since \(h_\tau=h_{xx}\),
+\[
+ \partial_\tau\log h=\frac{h_{xx}}h=w_x+w^2,
+\]
+locally using any analytic logarithm. Differentiating in \(x\) gives
+\begin{equation}\label{eq:burgers}
+ w_\tau=w_{xx}+2ww_x.
+\end{equation}
+At a collision the local factorization gives
+\[
+ w(\tau_*,x_*+y)=\frac2y+\frac{b}{3a}+O(y),\qquad
+ \frac{h_{xx}}h(\tau_*,x_*+y)=\frac2{y^2}+O(y^{-1}).
+\]
+These poles are created by division by the vanishing amplitude.
+They are compatible with the regular field, regular generator
+derivatives and regular energy identities already proved. Thus a
+singularity in a logarithmic or root coordinate must be distinguished
+from a singularity of the state.
+
+All two-sided local statements concern the analytic source family
+near an interior event. At the endpoint \(\tau=0\), a physical
+semigroup orbit provides only the forward side. The entire source
+formula still supplies a mathematical local extension, but it does
+not make reverse evolution bounded on arbitrary ambient states.

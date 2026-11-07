@@ -1,0 +1,149 @@
+\section{Coefficients from the complete theta source}\label{sec:coefficients}
+
+The preceding identities isolate what must be estimated. We now
+express the coefficients using the actual source and its primitive,
+retaining all signed terms and endpoint contributions.
+
+\subsection{Signed source moments}
+At \(\lambda_* =\lambda_0-\tau_*\), define
+\begin{equation}\label{eq:coefficient-moments}
+ C_j=\int_0^\infty u^j F_{\lambda_*}(u)\cos(x_*u)\dd u,
+ \qquad
+ S_j=\int_0^\infty u^j F_{\lambda_*}(u)\sin(x_*u)\dd u.
+\end{equation}
+The complete bounds of Section~\ref{sec:source} justify
+differentiation under each integral. At a collision they give
+\begin{align}
+ C_0&=S_1=0,\qquad a=-C_2,\quad b=S_3,\quad c=C_4,
+ \label{eq:moment-jets}\\
+ \beta&=-\frac{S_3}{C_2},\qquad
+ \gamma=-\frac{C_2C_4+S_3^2}{C_2^2}.
+ \label{eq:moment-ratios}
+\end{align}
+These formulas hold for the complete arithmetic source. Positivity
+of \(F_{\lambda_*}\) does not make the signed cosine moments a
+positive moment matrix. Separate absolute bounds on \(C_2,S_3,C_4\)
+do not bound their ratios without a lower bound on \(|C_2|\).
+A coupled estimate or an independently controlled exterior factor
+would provide additional information; the formulas alone do not.
+
+\subsection{The half-line primitive and its endpoint}
+Use the restriction to \(u\ge0\) of the function \(A\) in
+Section~\ref{sec:source}, now denoted by
+\begin{equation}\label{eq:p-primitive}
+ p(u)=\ee^u\sum_{n\ge1}\ee^{-\pi n^2\ee^{4u}},\qquad
+ p''-p=8\Phi,\qquad p'(0)=-\tfrac12.
+\end{equation}
+The differential identity follows by termwise differentiation;
+differentiating \(A(-u)-A(u)=\sinh u\) at zero proves the endpoint.
+The same double-exponential majorants as before, with the corresponding
+lower-degree polynomials, justify all integrations below. Set
+\begin{equation}\label{eq:J-primitive}
+ J_\lambda(x)=\int_0^\infty p(u)\ee^{\lambda u^2}\cos(xu)\dd u.
+\end{equation}
+Here \(J_\lambda\) is distinct from the absolute majorants
+\(J_{r,d}\) in \eqref{eq:J}.
+
+\begin{proposition}[Exact primitive transfer]\label{prop:primitive-transfer}
+For every finite real \(\lambda,x\),
+\begin{equation}\label{eq:primitive-transfer}
+ 8H_\lambda(x)=\tfrac12+(2\lambda-1-x^2)J_\lambda(x)
+       +4\lambda xJ_\lambda'(x)-4\lambda^2J_\lambda''(x).
+\end{equation}
+For \(n\ge2\), with primes denoting spatial derivatives,
+\begin{align}
+ 8H_\lambda^{(n)}={}&-4\lambda^2J_\lambda^{(n+2)}
+ +4\lambda xJ_\lambda^{(n+1)}
+ +(2\lambda-1-x^2+4\lambda n)J_\lambda^{(n)}\notag\\
+ &-2nxJ_\lambda^{(n-1)}-n(n-1)J_\lambda^{(n-2)}.
+ \label{eq:primitive-jets}
+\end{align}
+In particular \(a,b,c\) require primitive derivatives only through
+orders four, five and six respectively.
+\end{proposition}
+\begin{proof}
+For the smooth decaying tests used here, two integrations by parts give
+\begin{equation}\label{eq:primitive-IBP}
+ 8\int_0^\infty\Phi f\dd u
+ =\tfrac12 f(0)+p(0)f'(0)
+       +\int_0^\infty p(f''-f)\dd u.
+\end{equation}
+Indeed the endpoint term is
+\([p'f-pf']_0^\infty=-p'(0)f(0)+p(0)f'(0)\).
+For \(f(u)=\ee^{\lambda u^2}\cos(xu)\), \(f(0)=1\), \(f'(0)=0\),
+and
+\[
+ f''-f=\ee^{\lambda u^2}
+ \bigl((2\lambda-1-x^2+4\lambda^2u^2)\cos(xu)
+                   -4\lambda xu\sin(xu)\bigr).
+\]
+Replacing the last two integrals by \(-J_\lambda''\) and
+\(-J_\lambda'\) proves \eqref{eq:primitive-transfer}.
+Leibniz' rule for the quadratic and linear coefficients proves
+\eqref{eq:primitive-jets}. All differentiations and vanishing
+boundary terms are uniform on compact parameter sets by the paid
+primitive tails.
+\end{proof}
+
+At \(\lambda=0\) this reduces to
+\(8H_0=\tfrac12-(1+x^2)J_0\). A hypothetical collision on that
+slice would consequently satisfy
+\[
+ J_0(x_*)=\frac{1}{2(1+x_*^2)},\qquad
+ J_0'(x_*)=-\frac{x_*}{(1+x_*^2)^2}.
+\]
+The higher derivatives still contain the coefficient information.
+The constant \(1/2\) in \eqref{eq:primitive-transfer} cannot be
+dropped. Nor does positivity of \(p\) assert positivity of its
+oscillatory transform or of the displayed signed combinations.
+
+This half-line primitive is different from the smooth full-line
+Green field \(G_\lambda\) in \eqref{eq:G-transform}.
+In general \(G_\lambda\ne\ee^{\lambda u^2}G_0\); the latter is
+not even integrable when \(\lambda>0\), by \eqref{eq:G-tail}.
+The primitive identity is an exact alternative source representation,
+with no estimating advantage claimed merely from the transfer.
+
+\subsection{Recovering the exterior coefficients on a contour}
+The local factor also has an interface that avoids division by the
+vanishing value \(h(\tau_*,x_*)\). Let \(\Gamma\) be a positively
+oriented simple contour bounding a disk that contains exactly the
+two-root cluster, with multiplicity, and no boundary zero. Factor
+\(H=P U\) there, with \(P\) the monic quadratic and \(U\) nonzero.
+For \(z\) inside the contour define
+\begin{equation}\label{eq:contour-A}
+ \mathcal A_H(z)=\frac{1}{2\pi\ii}\oint_\Gamma
+       \frac{H'(\zeta)/H(\zeta)}{\zeta-z}\dd\zeta.
+\end{equation}
+Then
+\begin{equation}\label{eq:contour-exterior}
+ \mathcal A_H(z)=\frac{U'(z)}{U(z)},\qquad
+ \ell=\mathcal A_H(x_*),\quad \kappa=\mathcal A_H'(x_*).
+\end{equation}
+To prove this, subtract \(P'/P\) from \(H'/H\) and apply
+Cauchy's formula to \(U'/U\). For \(z\) off the roots, each
+term \(1/(\zeta-r)\) in \(P'/P\) contributes two opposite
+residues to \eqref{eq:contour-A}, at \(r\) and \(z\).
+Its integral is zero. Analytic continuation gives the formula at
+the roots as well. Differentiating under the contour integral
+gives the denominator \((\zeta-z)^2\) for \(\kappa\).
+This is the existing local exterior-force interface, reused here
+for the critical coefficients \cite{RTLocalTransfer}.
+
+For clarity, its error payment can be stated explicitly. Suppose
+on \(\Gamma\), \(|H|\ge m>0\),
+\(|\widehat H-H|\le e_0<m\), \(|\widehat H'-H'|\le e_1\),
+and \(|H'|\le M_1\). Then
+\[
+ \left|\frac{\widehat H'}{\widehat H}-\frac{H'}H\right|
+ \le \frac{e_1}{m-e_0}+\frac{M_1e_0}{m(m-e_0)}=:D.
+\]
+If the length of \(\Gamma\) is \(L_\Gamma\) and its distance
+from \(z\) is at least \(d>0\), the errors in \(\mathcal A_H(z)\)
+and \(\mathcal A_H'(z)\) are at most
+\(L_\Gamma D/(2\pi d)\) and \(L_\Gamma D/(2\pi d^2)\).
+These follow directly by integrating the ratio error. The method
+needs a boundary margin, a paid cluster count and complete source
+errors; it does not need an internal pair-gap lower bound.
+Its advantage, if any, is a quantitative comparison on a stated
+region, not a consequence of introducing the contour.

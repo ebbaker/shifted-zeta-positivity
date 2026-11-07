@@ -1,20 +1,31 @@
 # Research progress for theta observables and Newman dynamics
 
+**Third-branch setup — 6 November 2026, gpt-6-astra/max, direct chat0005.**
+At Edward Baker's request, [operator and imaginary-time evolution](../03_operator_imaginary_time_evolution/README.md)
+is a separate branch. Its [sole register](../03_operator_imaginary_time_evolution/research-progress/01_OPERATOR_ITE_RESEARCH_PROGRESS_20261106.md) owns TND-O statuses;
+the parent links that owner without duplicating its task rows.
+The [dated ownership crosswalk](../03_operator_imaginary_time_evolution/research-progress/01_OPERATOR_ITE_RESEARCH_PROGRESS_20261106.md) preserves completed shared
+identities, all TND-D/TND-A tasks and requests, historical parent slots
+and the setup chat's existing registration. No shared or sibling task
+status changes. [Continuation](../03_operator_imaginary_time_evolution/notes/01_OPERATOR_ITE_CONTINUATION_AND_PROMPT_20261106.md) and [setup verification](../03_operator_imaginary_time_evolution/research-progress/handoffs/01_TND_O_SETUP_RETURN_20261106.json)
+record the completed organization; research remains unactivated there.
+
 5 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**, verified in current turn metadata. Investigation08 chat0001, thread `01a1ae2a-64b9-7882-8942-9c56f3d136e6`.
 
 **B01 branching update, 5 November 2026:** actual **gpt-6-astra/ultra**, chat0003. B01 completed the two-avenue comparison and author-requested branch setup. No physical construction or execution request was selected. The two branch B01 tasks are ready for author selection, unactivated.
 
-**This is the sole current register for shared TND tasks.** At the author's explicit request, live branch status is now owned separately by the [direct register](../01_direct_newman_realization/research-progress/01_DIRECT_NEWMAN_REALIZATION_RESEARCH_PROGRESS_20261105.md) for TND-D and the [auxiliary register](../02_hamiltonian_auxiliary_dynamics/research-progress/01_HAMILTONIAN_AUXILIARY_DYNAMICS_RESEARCH_PROGRESS_20261105.md) for TND-A. This supersedes the earlier all-Investigation08 ownership statement. The branch files do not duplicate shared statuses. The [overview revision 5][overview] and [Decision04](../brainstorm/notes/04_TND_B01_TWO_AVENUE_DECISION_AND_BRANCH_PLANS_20261105.md) describe the organization.
+**This is the sole current register for shared TND tasks.** At the author's explicit request, live branch status is now owned separately by the [direct register](../01_direct_newman_realization/research-progress/01_DIRECT_NEWMAN_REALIZATION_RESEARCH_PROGRESS_20261105.md) for TND-D and the [auxiliary register](../02_hamiltonian_auxiliary_dynamics/research-progress/01_HAMILTONIAN_AUXILIARY_DYNAMICS_RESEARCH_PROGRESS_20261105.md) for TND-A, and by the [operator/ITE register](../03_operator_imaginary_time_evolution/research-progress/01_OPERATOR_ITE_RESEARCH_PROGRESS_20261106.md) for TND-O. This supersedes the earlier all-Investigation08 ownership statement. The branch files do not duplicate shared statuses. The [overview revision 5][overview] and [Decision04](../brainstorm/notes/04_TND_B01_TWO_AVENUE_DECISION_AND_BRANCH_PLANS_20261105.md) describe the organization.
 
 ## Current continuation and ownership
 
 | Program | Task specifications | Sole live status owner |
 | --- | --- | --- |
 | Shared model and E01 assessment | [Overview plan][plan], including TND-E03 r2 below | This file |
-| Direct radial-spectral Newman realization | [Direct plan](../01_direct_newman_realization/research-plan/01_DIRECT_NEWMAN_REALIZATION_RESEARCH_PLAN_20261105.md) | [TND-D register](../01_direct_newman_realization/research-progress/01_DIRECT_NEWMAN_REALIZATION_RESEARCH_PROGRESS_20261105.md) |
+| Direct radial-spectral Newman realization | [Direct plan r2](../01_direct_newman_realization/research-plan/02_DIRECT_NEWMAN_REALIZATION_RESEARCH_PLAN_R2_20261106.md) | [TND-D register](../01_direct_newman_realization/research-progress/01_DIRECT_NEWMAN_REALIZATION_RESEARCH_PROGRESS_20261105.md) |
 | Hamiltonian auxiliary dynamics | [Auxiliary plan](../02_hamiltonian_auxiliary_dynamics/research-plan/01_HAMILTONIAN_AUXILIARY_DYNAMICS_RESEARCH_PLAN_20261105.md) | [TND-A register](../02_hamiltonian_auxiliary_dynamics/research-progress/01_HAMILTONIAN_AUXILIARY_DYNAMICS_RESEARCH_PROGRESS_20261105.md) |
+| Operator and imaginary-time evolution | [Operator/ITE plan](../03_operator_imaginary_time_evolution/research-plan/01_OPERATOR_ITE_RESEARCH_PLAN_20261106.md) | [TND-O register](../03_operator_imaginary_time_evolution/research-progress/01_OPERATOR_ITE_RESEARCH_PROGRESS_20261106.md) |
 
-Author-selected branch development does not activate either branch's research. The branch registers own their next-task entries. **Shared TND-E03 r2 is complete at internal assessment scope.** [Review01][e03-review] accepts parent E01 within its stated comparison/source-transport scope; no required mathematical correction. The shared prerequisite is available to both branch E02 assessments, whose activation and live status remain with their separate owners. The requested shared TND-E06 manuscript is now complete at synthesis scope. Branch continuations are owned only by the linked branch registers; the earlier E02 recommendations below are dated history. No successor is activated here.
+Branch setup does not activate research; the author selects subsequent work. The branch registers own their next-task entries. **Shared TND-E03 r2 is complete at internal assessment scope.** [Review01][e03-review] accepts parent E01 within its stated comparison/source-transport scope; no required mathematical correction. The shared prerequisite is available to both branch E02 assessments, whose activation and live status remain with their separate owners. The requested shared TND-E06 manuscript is now complete at synthesis scope. Branch continuations are owned only by the linked branch registers; the earlier E02 recommendations below are dated history. No successor is activated here.
 
 ## Current shared register
 

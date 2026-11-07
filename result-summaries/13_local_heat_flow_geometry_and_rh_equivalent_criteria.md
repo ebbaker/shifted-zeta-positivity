@@ -1043,3 +1043,18 @@ also loses to separate drift on this wide-gap pilot.
 [Assessment02](../papers/investigations-5/02_heat_flow_rh_applications/rodgers_tao/reviews/02_CANONICAL_TWO_ROOT_ACQUISITION_ASSESSMENT_20261026.md).
 Reusable finite force calibration; known-covered region, no new Newman
 bound, endpoint exclusion, global numbering or dyadic RT assembly.
+
+
+**Nonreal statistics and finite exceptions, 6 November2026 (5/08, branch03).**
+For Edward Baker with substantial LLM assistance, **gpt-6-astra / max**.
+[Note13](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/notes/13_TND_O_B03_COMPLEX_ZERO_STATISTICS_AND_MANUSCRIPT_RETURN_20261106.md)
+is **analytical manuscript extension complete; B03 literature and
+finite-identity reconnaissance returned**. It states: “The two specified
+leading correlation asymptotics are insensitive to finitely many fixed
+zero changes on 0<=alpha<=1.” The manuscript proves that sensitivity
+bound and a finite-cluster transverse balance, while importing the
+unconditional complex-difference Montgomery theorem and fixed-positive-time
+tail theorem with their hypotheses. No contradiction to Lambda>0 follows;
+a canonical exception-sensitive estimate and joint time-height control
+remain missing. [Check03](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/reviews/03_TND_O_E04_B03_ANALYTICAL_AND_PRODUCTION_CHECK_20261106.md)
+is same-author analytical/production checking, not independent assessment.

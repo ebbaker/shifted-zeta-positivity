@@ -1,0 +1,138 @@
+\section{Interference balances and source response}\label{sec:interference}
+
+The local normal form describes what a collision does. The integral
+representation describes what must balance for it to occur. We derive
+two complementary descriptions, using momentum damping and spatial
+heat averaging. Neither description, by itself, forbids the event.
+
+\subsection{Positive momentum source, signed cosine observation}
+At the collision, differentiation of \eqref{eq:F-H} gives
+\begin{align}
+ \int_0^\infty F_{\lambda_*}(u)\cos(x_*u)\dd u&=0,\label{eq:cos-balance}\\
+ \int_0^\infty uF_{\lambda_*}(u)\sin(x_*u)\dd u&=0,\label{eq:sin-balance}\\
+ \int_0^\infty u^2F_{\lambda_*}(u)\cos(x_*u)\dd u&=-a\ne0,
+ \label{eq:curvature-balance}
+\end{align}
+where \(\lambda_*=\lambda_0-\tau_*\).
+Thus a strictly positive source can produce a double node through two
+signed observation balances. The second moment in
+\eqref{eq:curvature-balance} measures the transverse crossing.
+
+Fix the observation point \(x_*\), and put
+\[
+ c_\pm(u)=\max\{\pm\cos(x_*u),0\},\quad
+ A_\pm(\tau)=\int_0^\infty F_{\lambda_0-\tau}(u)c_\pm(u)\dd u,
+\]
+\[
+ B_\pm(\tau)=
+ \frac{\int_0^\infty u^2F_{\lambda_0-\tau}(u)c_\pm(u)\dd u}
+      {A_\pm(\tau)}.
+\]
+Since \(x_*\ne0\), both cosine signs occupy open intervals and
+\(A_\pm>0\). Dominated differentiation in time yields
+\begin{equation}\label{eq:sector-damping}
+ A_\pm'=-A_\pm B_\pm,\qquad
+ \frac{\dd}{\dd\tau}\log\frac{A_+}{A_-}=-(B_+-B_-).
+\end{equation}
+At the event \(A_+=A_-=:A\), and
+\begin{equation}\label{eq:sector-curvature}
+ a=-A(B_+-B_-).
+\end{equation}
+If \(a>0\), the negative cosine sector has the larger mean \(u^2\)
+and therefore damps faster. The observed amplitude rises through zero.
+If \(a<0\), the positive sector damps faster and the crossing is downward.
+Equation~\eqref{eq:sin-balance} is the additional stationarity constraint;
+the sector-mass equality alone is only a zero condition.
+
+These means use the \emph{linear} source, not the squared-amplitude
+measure \eqref{eq:spectral-measure}. The corners of \(c_\pm\) cause no
+difficulty for the time derivatives above: the observation point is
+fixed and the source moments dominate the integrands. No spatial
+differentiation through moving sector boundaries is being used.
+
+\subsection{A spatial heat-average balance}
+Choose \(0<\Delta\leq\tau_*\), and define
+\[
+ k_\Delta(y)=(4\pi\Delta)^{-1/2}\ee^{-y^2/(4\Delta)},\qquad
+ f(y)=h(\tau_*-\Delta,y).
+\]
+The heat multiplier gives \(h(\tau_*,x)=k_\Delta*f(x)\).
+This identity first holds in \(L^2\); the integral and all its displayed
+derivatives are continuous by Cauchy--Schwarz against Gaussian
+derivatives, so it also holds pointwise. Define a signed measure
+\[
+ \dd\mu(y)=k_\Delta(x_*-y)f(y)\dd y.
+\]
+Its absolute moments of every fixed order are finite. Differentiating
+the Gaussian proves
+\begin{equation}\label{eq:gaussian-moments}
+ \int\dd\mu=0,\qquad
+ \int(y-x_*)\dd\mu=0,\qquad
+ \int(y-x_*)^2\dd\mu=4\Delta^2a.
+\end{equation}
+Indeed, \(\partial_x k_\Delta(x-y)=(y-x)k_\Delta/(2\Delta)\);
+the second derivative is
+\(\bigl((y-x)^2/(4\Delta^2)-1/(2\Delta)\bigr)k_\Delta\).
+The zeroth moment vanishes, removing the last term.
+
+Let \(\mu=\mu_+-\mu_-\) be the positive and negative parts.
+Since \(a\ne0\), neither is zero. The first two identities imply
+\[
+ \mu_+(\R)=\mu_-(\R)=:M>0,\qquad
+ \frac1M\int y\dd\mu_+=\frac1M\int y\dd\mu_-=:m.
+\]
+Writing \(\sigma_\pm^2=M^{-1}\int(y-m)^2\dd\mu_\pm\), the last
+identity becomes
+\begin{equation}\label{eq:variance-balance}
+ a=\frac{M}{4\Delta^2}(\sigma_+^2-\sigma_-^2).
+\end{equation}
+Thus the earlier positive and negative amplitudes, after Gaussian
+weighting about the future event, have equal masses and centroids.
+Their variance difference supplies the nonzero crossing curvature.
+This is an exact conditional description of a collision, valid at
+any such earlier time; it is not an estimate that excludes one.
+
+\subsection{Smooth displacement under source perturbation}
+The divergent velocity of an individual zero does not imply singular
+dependence of the \emph{joint event} on source parameters.
+Let \(q(u)\) be a real, even, bounded smooth function whose derivatives
+have polynomial growth, and perturb the supplied source to
+\[
+ F_{\lambda,\eta}(u)=\ee^{\lambda u^2+\eta q(u)}\Phi(u).
+\]
+The moment bounds and Schwartz properties persist on compact
+parameter sets. The resulting field \(h_\eta\) is analytic in
+\((\tau,x,\eta)\), with
+\[
+ r(\tau,x):=\left.\partial_\eta h_\eta(\tau,x)\right|_{\eta=0}
+ =\int_0^\infty F_{\lambda_0-\tau}(u)q(u)\cos(xu)\dd u.
+\]
+
+\begin{proposition}[Event response]\label{prop:response}
+A collision of \(h_0\) continues uniquely as an analytic local
+event \((\tau_*(\eta),x_*(\eta))\). At \(\eta=0\),
+\begin{equation}\label{eq:event-response}
+ \tau_*'=-\frac{r}{a},\qquad
+ x_*'=\frac{br}{a^2}-\frac{r_x}{a},
+\end{equation}
+where the right-hand side is evaluated at the unperturbed event.
+\end{proposition}
+\begin{proof}
+Apply the analytic implicit-function theorem to
+\((h_\eta,\partial_xh_\eta)=0\). Its Jacobian in \((\tau,x)\) is
+\[
+ \begin{pmatrix}h_\tau&h_x\\h_{x\tau}&h_{xx}\end{pmatrix}_{*}
+ =\begin{pmatrix}a&0\\b&a\end{pmatrix},
+\]
+with determinant \(a^2\ne0\). Differentiation of the two event equations
+gives \(a\tau_*'+r=0\) and \(b\tau_*'+ax_*'+r_x=0\), proving
+\eqref{eq:event-response}.
+\end{proof}
+
+This is the source-response calculation of
+\cite{SourceResponse} in the present time convention.
+It is local at a nondegenerate event, not uniform as \(a\to0\).
+A general tilt changes the canonical theta arithmetic. The proposition
+therefore explains event stability and sensitivity without furnishing
+a permitted deformation of the canonical source or proving that its
+event exists.
