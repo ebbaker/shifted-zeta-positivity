@@ -1,0 +1,202 @@
+\section{Convex transport and uniform transverse density}
+\label{sec:density-transport}
+
+Broad windows yield a different quantitative gain: convex transverse
+tests have a one-sided transport cost independent of their derivatives.
+Combining this with the canonical time-zero density estimate propagates
+an exponential off-axis bound throughout the declared Newman interval.
+These are derived corollaries of the exact imported bounds; no novelty
+or improved eventual-realness threshold is asserted.
+
+\subsection{A derivative-independent convex estimate}
+Fix \(0\le\chi\le1\) in \(C_c^2([-1,1])\), with \(\chi=1\) on
+\([-1/2,1/2]\). For \(T\ge8\), write
+\[
+ L=\log T,\quad a_T(x)=\chi((x-3T/2)/T),\quad
+ Q_{T,g}(\lambda)=\sum_j a_T(x_j)g(y_j).
+\]
+The support is \([T/2,5T/2]\) and the plateau is \([T,2T]\).
+Let \(g\in C^2([-1,1])\) be even and convex, with \(g(0)=0\),
+and put \(G=\norm g_\infty\).
+\begin{theorem}[Convex broad-window transport]\label{thm:convex-transport}
+For \(0\le\alpha\le\beta\le1/2\),
+\begin{equation}\label{eq:convex-transport}
+ Q_{T,g}(\beta)\le Q_{T,g}(\alpha)+D_\chi G(\beta-\alpha)L^3,
+ \qquad D_\chi=A^2(36\norm{\chi''}_\infty+1200\norm{\chi'}_\infty).
+\end{equation}
+The constant is independent of \(g'\) and \(g''\).
+\end{theorem}
+\begin{proof}
+Use the cluster \(\mathcal C_T=\{j:T/4\le x_j\le11T/4\}\).
+Its population and active population are at most \(6ATL\), by
+\eqref{eq:coarse-canonical}. For an active point, exterior horizontal
+separation is at least \(T/4\ge2\). The safe-line decomposition
+\eqref{eq:safe-line-exterior} applies with this cluster. Shell summation
+gives
+\[
+ \sum_{k\notin\mathcal C_T}\abs{x-x_k}^{-2}\le128AL/T,
+ \qquad \sum_{k\in\mathcal C_T}\abs{x+4\ii-z_k}^{-1}\le12AL^2.
+\]
+Consequently \(\abs{E_T(z)}\le2AL+12AL^2+640AL/T\le100AL^2\).
+The complete exterior difference beyond distance \(M\ge2\) is bounded
+by \(10A[2L+\log(M+1)+1]/(M-1)\). The real field retains opposite
+pairing; only the difference series is estimated absolutely.
+
+For \(f=a_Tg\), mixed Hessian cancellation gives
+\[
+ K_f(z_j,z_k)=\int_0^1
+  \frac{a_T(x_t)g''(y_t)e^2-a_T''(x_t)g(y_t)d^2}{d^2+e^2}\dd t.
+\]
+In Newman time the local interaction term is \(-2\sum K_f\).
+Since \(a_Tg''\ge0\), discard its favorable contribution. The remaining
+curvature cost is at most \(36A^2\norm{\chi''}_\infty G L^2\).
+
+The exterior vertical term is also favorable. Its imaginary series is
+absolute, so conjugate exterior ordinates \(v,-v\) may be paired:
+\[
+ \frac{y-v}{d^2+(y-v)^2}+\frac{y+v}{d^2+(y+v)^2}
+ =\frac{2y(d^2+y^2-v^2)}{[d^2+(y-v)^2][d^2+(y+v)^2]}.
+\]
+Because \(d^2\ge4\) and \(\abs v\le1\), this has the sign of \(y\).
+Thus \(a_Tg'(y)\Im E_T\le0\), including the real exterior roots.
+The remaining horizontal term costs at most
+\(2T^{-1}\norm{\chi'}_\infty G(6ATL)(100AL^2)\).
+Together these bounds prove \eqref{eq:convex-transport} on every
+simple relevant interval.
+
+For each fixed \(T,g\), adapt the compact-support finite-event argument
+of Theorem~\ref{thm:transverse-lipschitz}. An auxiliary two-sided
+bound can depend on \(\norm{g'}_\infty,\norm{g''}_\infty\), and proves
+absolute continuity of this fixed test. Summing the one-sided estimate
+across the finite event set removes those dependencies from its final
+constant. No substitution \(R=T\) into the microscopic theorem is made.
+The paired and absolute-difference tails justify the integrated full
+sum at every fixed test.
+\end{proof}
+
+\subsection{A full-family exponential density bound}
+The precise time-zero input is \cite[Theorem 2.4 and Section 4 (18)]{MaplesRodgers2015}:
+for each fixed \(c\in(0,1)\), its constant \(D_c\ge1\) is uniform
+as \(\sigma\downarrow1/2\). Converting coordinates
+\(x=2t\), \(y=-2(\beta-1/2)\) and reflecting across the critical line
+once gives, with \(a=c/2\), \(C_0=8D_c\),
+\begin{equation}\label{eq:initial-density-tail}
+ \#\{j:T/2\le x_j(0)\le5T/2,\ \abs{y_j(0)}>v\}
+ \le C_0TL\ee^{-avL},\qquad 0<v<1.
+\end{equation}
+This uses no RH premise and no general assertion for arbitrary positive
+atomic tests; the monotone layer-cake calculation below is sufficient.
+
+\begin{theorem}[Uniform-time transverse density]\label{thm:uniform-density}
+For each fixed \(0<b<1/2\), there is a constant \(B_b\) such that
+\begin{equation}\label{eq:uniform-density}
+ N_\lambda(T,v):=\#\{j:T\le x_j(\lambda)\le2T,
+                          \ \abs{y_j(\lambda)}>v\}
+ \le B_bT\log T\,\ee^{-bv\log T}
+\end{equation}
+for all \(T\ge8\), \(0\le\lambda\le1/2\) and \(0<v<1\),
+with multiplicities. In particular,
+\begin{equation}\label{eq:dyadic-transverse-mass}
+ \sum_{T\le x_j(\lambda)\le2T}y_j(\lambda)^2
+ \le\frac{2B_b}{b^2}\frac{T}{\log T}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Choose fixed \(c\in(2b,1)\) and \(a=c/2\), and use
+\(g_T(y)=\cosh(bLy)-1\), with \(\norm{g_T}_\infty\le T^b\).
+Direct layer cake in \eqref{eq:initial-density-tail} gives
+\[
+ Q_{T,g_T}(0)\le C_0TL\int_0^1 bL\sinh(bLv)\ee^{-avL}\dd v
+ \le C_0TL\frac{b^2}{a^2-b^2}.
+\]
+The transport allowance is absorbed because
+\(T^{b-1}L^2\le4/[\ee^2(1-b)^2]\). Therefore
+\[
+ Q_{T,g_T}(\lambda)\le K_bTL,\qquad
+ K_b=C_0\frac{b^2}{a^2-b^2}+
+                   \frac{2D_\chi}{\ee^2(1-b)^2}.
+\]
+If \(bvL\ge1\), then
+\(\cosh(bvL)-1\ge\kappa\ee^{bvL}\), where
+\(\kappa=(1-\ee^{-1})^2/2\). The plateau yields
+\eqref{eq:uniform-density} with coefficient \(K_b/\kappa\).
+If \(bvL<1\), the count \(6ATL\) yields coefficient \(6\ee A\).
+Take \(B_b=\max(K_b/\kappa,6\ee A)\).
+Finally \(2\int_0^1vN_\lambda(T,v)\dd v\) proves
+\eqref{eq:dyadic-transverse-mass}. The constants need not stay bounded
+as \(b\uparrow1/2\).
+\end{proof}
+The theorem is uniform even along \(\lambda(T)\downarrow0\).
+It supplements the fixed-positive-time tail theorem with a mean-density
+estimate, without improving that theorem's realness or simplicity margin.
+
+\subsection{Every local moment order and its exact limitation}
+Retain \(Q_{X,R}\) from \eqref{eq:transverse-measure}, now with
+\(X\in[T,2T]\), \(0<R\le1\), and put \(I_\chi=\int\chi\).
+\begin{corollary}[Simultaneous all-order center averages]\label{cor:all-order-moments}
+There are constants \(C_b^{\rm mom}\ge1\), \(A_b^{\rm mom}\),
+independent of \(p,\lambda,T,R\), such that every integer \(p\ge1\)
+satisfies
+\begin{equation}\label{eq:all-order-moments}
+ \frac1T\int_T^{2T}Q_{X,R}(\lambda)^p\dd X
+ \le C_b^{\rm mom}R(A_b^{\rm mom})^p
+                         \frac{(2p)!}{(\log T)^p}.
+\end{equation}
+This holds simultaneously for \(T\ge8\), \(0\le\lambda\le1/2\)
+and \(0<R\le1\), hence along arbitrary joint sequences of these
+parameters and integer orders.
+\end{corollary}
+\begin{proof}
+For \(T\ge16\), cover \([T-R,2T+R]\) by the three dyadic bands at
+\(T/2,T,2T\). After expressing the bounds in terms of \(L\), the costs
+are at most \(2^{b-1},1,3\). For \(8\le T<16\), the cluster count
+pays the band with coefficient \(6A16^b\). Thus its tail is bounded
+by \(\widetilde B_bTL\ee^{-bvL}\), where
+\(\widetilde B_b=5B_b+6A16^b\). The local window has at most
+\(JL\) roots, \(J=4A\). Weighted H\"older and the center-width
+bound \(RI_\chi\) give
+\begin{align*}
+ \frac1T\int Q_{X,R}^p\dd X
+ &\le\frac{RI_\chi}{T}(JL)^{p-1}
+                   \sum_{x_j\in[T-R,2T+R]}\abs{y_j}^{2p}\\
+ &\le\frac{\widetilde B_b I_\chi}{J}R
+             (J/b^2)^p\frac{(2p)!}{L^p}.
+\end{align*}
+Here layer cake uses the exact integral
+\(2p\int_0^\infty v^{2p-1}\ee^{-bLv}\dd v=(2p)!/(bL)^{2p}\).
+Take \(A_b^{\rm mom}=J/b^2\) and
+\(C_b^{\rm mom}=\max(1,\widetilde B_bI_\chi/J)\).
+No fixed-order implicit constant is imported.
+\end{proof}
+
+This complete moment family still does not exclude a single pair.
+Suppose a selected pair \(x_0\pm\ii d\) has its whole center profile
+inside \([T,2T]\). Its exact selected contribution is
+\[
+ S_p=\frac RT(2d^2)^p\int\chi^p.
+\]
+Let \(U_p\) be the displayed upper allowance in
+\eqref{eq:all-order-moments}, and abbreviate its constants by \(C,A\).
+Since \(\int\chi^p\le I_\chi\), the exponential series with
+\(B=\sqrt{2d^2L/A}\) yields
+\begin{equation}\label{eq:allowance-obstruction}
+ \frac{U_p}{S_p}\ge\frac{CT}{I_\chi}\frac{(2p)!}{B^{2p}}
+ \ge\frac{CT}{I_\chi}\ee^{-\sqrt{2L/A}}\longrightarrow\infty,
+\end{equation}
+uniformly over every integer order and \(0<d<1\). This lower-bounds
+a chosen upper allowance, not the actual moment or exceptional
+probability. Optimizing this allowance over growing orders does not pay
+the exact center-average cost \(R/T\). Other sharper or conditioned
+arithmetic bounds remain possible.
+
+\paragraph{Related work and scope.}
+A recent preprint of Caceres \cite{Caceres2026Collision} uses weighted
+transverse powers, compact cutoff and collision assembly, and advertises
+a lower bound with denominator \(\log\gamma\log\log\gamma\).
+The selected passages overlap in method with this development. Its
+local-count numerical premise and theorem have not been validated or
+imported here; no priority or novelty claim is made. The present proofs
+use the exact Polymath and Maples--Rodgers inputs stated above.
+Exponential averaged rarity is compatible with isolated defects, and
+\eqref{eq:threshold-lower} decreases with height. A stronger canonical
+one-defect estimate remains the substantive dependency for exclusion.

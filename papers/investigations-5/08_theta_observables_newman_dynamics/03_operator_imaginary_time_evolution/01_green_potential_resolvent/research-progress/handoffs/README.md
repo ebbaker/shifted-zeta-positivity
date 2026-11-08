@@ -1,0 +1,5 @@
+# TND-OG handoffs
+
+7 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Explicit worker dispatch selected **gpt-6.1-sol / ultra**; this is the supplied actual selection, not independent backend verification. Root model/effort unavailable.
+
+No branch research packet is issued at setup. Parent [request18](../../../brainstorm/notes/18_TND_O_E22_BIFURCATION_SETUP_REQUEST_20261107.md), [inputs40](../../../research-progress/handoffs/40_TND_O_E22_BIFURCATION_INPUTS_20261107.json) and [dispatch40](../../../research-progress/handoffs/40_TND_O_E22_DISPATCH_20261107.json) govern documentation only. The [sole register](../01_TND_OG_GREEN_RESOLVENT_RESEARCH_PROGRESS_20261107.md) owns task statuses; [continuation01](../../continuation-notes/01_TND_OG_GREEN_RESOLVENT_CONTINUATION_20261107.md) supplies the future B01 prompt. Later issued packets preserve exact source versions/hashes, equations, domain, outputs, method and stop test, with one assigned writer. Do not manufacture E01 inputs while B01's scientific choice remains open.

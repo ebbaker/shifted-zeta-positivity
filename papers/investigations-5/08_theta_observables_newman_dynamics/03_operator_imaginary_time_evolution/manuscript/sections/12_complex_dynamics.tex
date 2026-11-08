@@ -1,0 +1,250 @@
+\section{Complex-zero motion and transport from a collision}
+\label{sec:complex-dynamics}
+
+The local coefficients become useful for statistics only after one knows
+where a nonreal pair reaches the zeta slice. We therefore separate the
+exact motion laws from the estimates needed to continue them. Throughout
+this section, a finite cluster is isolated by a zero-free boundary;
+simple-root equations are used only on intervals of simple labeling.
+
+\subsection{Finite-cluster dynamics}
+Factor \(H_\lambda=P_\lambda U_\lambda\), with
+\(P_\lambda(z)=\prod_j(z-z_j(\lambda))\) the monic cluster polynomial
+and \(U_\lambda\) nonvanishing in its neighborhood. Put
+\(g=\partial_z\log U_\lambda\). At a simple root, differentiating
+\(H_\lambda(z_j(\lambda))=0\) and using
+\(\partial_\lambda H=-H_{zz}\) gives
+\begin{equation}\label{eq:complex-root-motion}
+ z_j'=2\sum_{k\ne j}\frac1{z_j-z_k}+2g(z_j),
+ \qquad {}'=\partial_\lambda.
+\end{equation}
+Indeed \(H_{zz}/H_z=P_{zz}/P_z+2U_z/U\) at the root, and
+\(P_{zz}(z_j)/P_z(z_j)=2\sum_{k\ne j}(z_j-z_k)^{-1}\).
+Thus no infinite zero sum is needed for this identity. Writing
+\(z_j=x_j+\ii y_j\) yields
+\begin{align}
+ x_j'&=2\sum_{k\ne j}\frac{x_j-x_k}{|z_j-z_k|^2}
+                              +2\Re g(z_j),\notag\\
+ y_j'&=-2\sum_{k\ne j}\frac{y_j-y_k}{|z_j-z_k|^2}
+                              +2\Im g(z_j).
+ \label{eq:planar-root-motion}
+\end{align}
+The transverse interaction has the opposite sign. In particular,
+the real inverse-square interaction cannot remain a positive energy
+after complexifying the gaps: for a conjugate pair it is
+\((2\ii y)^{-2}=-1/(4y^2)\). An absolute-square replacement defines
+a different quantity and needs its own evolution argument.
+
+\begin{proposition}[Transverse balance]\label{prop:transverse-balance}
+On a simple-root interval for the isolated cluster,
+\begin{equation}\label{eq:transverse-balance}
+ \frac{d}{d\lambda}\sum_j y_j^2
+ =-4\sum_{j<k}\frac{(y_j-y_k)^2}{|z_j-z_k|^2}
+                      +4\sum_j y_j\Im g(z_j).
+\end{equation}
+For a conjugate pair \(x\pm\ii y\), \(y>0\),
+\begin{equation}\label{eq:conjugate-pair-height}
+ (y^2)'=-2+4y\Im g(x+\ii y).
+\end{equation}
+\end{proposition}
+\begin{proof}
+Multiply the second line of \eqref{eq:planar-root-motion} by \(2y_j\)
+and combine the two ordered terms for each pair. Their numerator is
+\(y_j(y_j-y_k)+y_k(y_k-y_j)=(y_j-y_k)^2\).
+For two conjugate roots the mutual term in \eqref{eq:complex-root-motion}
+is \(-\ii/y\); hence \(y'=-1/y+2\Im g\).
+\end{proof}
+For a real polynomial heat flow containing all its roots, \(g=0\),
+so this transverse second moment decreases in Newman time. For a local
+cluster, the exterior term has no prescribed sign.
+
+\subsection{An exact pair equation and conditional tube bounds}
+Let \(\lambda_*>0\) be a collision time and set
+\(s=\lambda_*-\lambda\). Increasing \(s\) is forward heat time;
+the zeta slice is reached at \(s=\lambda_*\). Suppose an isolating
+neighborhood persists on \(0\le s\le S\) and contains exactly the
+pair born at the collision. In that neighborhood write
+\begin{equation}\label{eq:tube-factor}
+ H_{\lambda_*-s}(z)=[(z-x(s))^2+y(s)^2]U(s,z),\qquad
+ g(s,z)=U_z/U,
+\end{equation}
+with \(U\) real on the real segment and nonzero. The roots are assumed
+simple with \(y(s)>0\) for \(s>0\). From
+\eqref{eq:complex-root-motion},
+\begin{equation}\label{eq:pair-s-motion}
+ x_s=-2\Re g(s,x+\ii y),\qquad
+ (y^2)_s=2-4y\Im g(s,x+\ii y).
+\end{equation}
+The singular mutual force cancels from the midpoint equation.
+
+Assume the full vertical segment from \(x\) to \(x+\ii y\) lies in
+the nonvanishing region of \(U\). Since \(g(s,x)\) is real,
+\begin{equation}\label{eq:tube-k}
+ k(s):=\frac{\Im g(s,x+\ii y)}{y}
+       =\int_0^1\Re g_z(s,x+\ii r y)\dd r.
+\end{equation}
+Putting \(u=y^2\), the transverse equation becomes the scalar linear
+equation \(u_s+4k(s)u=2\), with \(u(0)=0\). Its exact solution is
+\begin{equation}\label{eq:tube-integrating-factor}
+ u(s)=2\int_0^s\exp\!\left(-4\int_r^s k(q)\dd q\right)\dd r.
+\end{equation}
+This identity expresses the entire environmental correction in one
+integrated coefficient.
+
+\begin{theorem}[Conditional pair transport]\label{thm:tube}
+Under the preceding isolation and segment hypotheses, suppose
+\(|g_z|\le K\) on those segments and
+\(|\Re g(s,x+\ii y)|\le V\) along the pair, for all \(0\le s\le S\).
+Then
+\begin{equation}\label{eq:tube-bounds}
+ \frac{1-\ee^{-4Ks}}{2K}\le y(s)^2
+ \le\frac{\ee^{4Ks}-1}{2K},\qquad
+ |x(s)-x_*|\le2Vs.
+\end{equation}
+When \(K=0\), both transverse expressions mean \(2s\).
+If the tube reaches \(S=\lambda_*\), the final pair has transverse
+size at least
+\begin{equation}\label{eq:final-tube-data}
+ d_*:=\left(\frac{1-\ee^{-4K\lambda_*}}{2K}\right)^{1/2},
+ \qquad \left|\theta-\frac{x_*}{2}\right|\le V\lambda_*,
+\end{equation}
+where \(\theta=x(\lambda_*)/2\) is its zeta ordinate.
+\end{theorem}
+\begin{proof}
+Equation~\eqref{eq:tube-k} gives \(|k|\le K\). Bound the exponential
+in \eqref{eq:tube-integrating-factor} between
+\(\ee^{-4K(s-r)}\) and \(\ee^{4K(s-r)}\) and integrate.
+Integrating the midpoint equation proves the remaining inequalities.
+The relation between \(\theta\) and the midpoint follows from
+\eqref{eq:zeta-H-zero-map} below.
+\end{proof}
+
+At the event \(g=\ell\) and \(g_z=\kappa\), using
+\eqref{eq:ell-kappa}. Analyticity of the symmetric pair coordinates
+and \eqref{eq:tube-k} give \(k(s)=\kappa+O(s)\), whence
+\begin{equation}\label{eq:postcollision-jet}
+ x(s)=x_*-2\ell s+O(s^2),\qquad
+ y(s)^2=2s-4\kappa s^2+O(s^3).
+\end{equation}
+For the second formula, substitute \(u=2s+cs^2+O(s^3)\) into
+\(u_s=2-4ku\), obtaining \(c=-4\kappa\).
+The midpoint velocity \(-2\ell\) differs from the critical-point
+velocity \(-\beta=-3\ell\). Interchanging them would give an
+incorrect final-height prediction.
+
+The theorem is a transport estimate on an already controlled tube,
+not a proof that a local event neighborhood reaches time zero.
+Its use requires a zero count of two, a nonzero boundary margin,
+complete-source errors and uniform bounds for \(g,g_z\) along the
+whole proposed path. The contour interface in
+Section~\ref{sec:coefficients} supplies a way to estimate these
+quantities. Keeping the resulting enclosures strictly inside the
+controlled region is the additional continuation requirement.
+
+\subsection{Strip width and a conditional environmental amplification}
+For the canonical family, the full paired zero-dynamics formula is
+also available in the complex regime
+\cite[Proposition~3.1]{Polymath2019}; pairing opposite zeros fixes
+the convergence convention. De Bruijn's strip theorem, in
+\cite[Theorem~3.2]{Polymath2019}, gives, for the supremal imaginary
+width \(Y(\lambda)\) and \(\lambda_2>\lambda_1\),
+\begin{equation}\label{eq:strip-contraction}
+ Y(\lambda_2)^2\le
+ \max\{Y(\lambda_1)^2-2(\lambda_2-\lambda_1),0\}.
+\end{equation}
+The supremum version follows by decreasing an admissible strip bound.
+A collision at \(\lambda_*>0\) implies
+\(\Lambda\ge\lambda_*\), since nonreal roots occur immediately below
+it. The same theorem gives \(\Lambda\le Y(0)^2/2\), hence
+\begin{equation}\label{eq:global-defect}
+ Y(0)\ge\sqrt{2\lambda_*}.
+\end{equation}
+This familiar consequence identifies some transverse defect. It neither
+locates that defect nor follows the same pair to time zero; a supremum
+need not be attained.
+
+\begin{proposition}[Persistent real neighbors]\label{prop:neighbor-growth}
+Suppose a simple upper root \(x(s)+\ii y(s)\), born at a real collision,
+remains of maximal imaginary part among all zeros for \(0<s\le S\).
+Assume that throughout this interval at least \(m\ge1\) real zeros,
+counted with multiplicity, remain within horizontal distance \(R>0\)
+of \(x(s)\). Then, with \(u=y^2\),
+\begin{equation}\label{eq:neighbor-ode}
+ u_s\ge2+\frac{4mu}{R^2+u}.
+\end{equation}
+While \(u\le R^2\),
+\begin{equation}\label{eq:neighbor-exp}
+ u(s)\ge\frac{R^2}{m}\bigl(\ee^{2ms/R^2}-1\bigr).
+\end{equation}
+If the hypotheses persist long enough, \(u\) reaches \(R^2\) no
+later than \(s_R=R^2\log(1+m)/(2m)\); thereafter \(u_s\ge2+2m\).
+\end{proposition}
+\begin{proof}
+Reverse the Newman-time full dynamics. Maximality makes each transverse
+force \(2(y-y_k)/|z-z_k|^2\) nonnegative. Its conjugate partner
+contributes \(1/y\) to \(y_s\), and each indicated real zero contributes
+at least \(2y/(R^2+u)\). Multiplication by \(2y\) gives
+\eqref{eq:neighbor-ode}. The imaginary-part series is absolutely
+convergent: zeros lie in a strip and their distant contributions are
+bounded by a constant times \(|z_k|^{-2}\). Thus retaining these
+nonnegative terms is legitimate. For \(u\le R^2\),
+\(u_s\ge2+(2m/R^2)u\); an integrating factor proves
+\eqref{eq:neighbor-exp}. Monotonicity and
+\eqref{eq:neighbor-ode} prove the hitting-time and subsequent bounds.
+\end{proof}
+
+If \(0<R\le1\) and these hypotheses persist to \(S=\lambda_*\),
+the canonical open time-zero strip \(y^2<1\) necessarily implies
+\begin{equation}\label{eq:neighbor-strip-budget}
+ \lambda_*<\frac{R^2\log(1+m)}{2m}
+                   +\frac{1-R^2}{2+2m}.
+\end{equation}
+Indeed the right-hand side is an upper bound on the time needed to
+reach \(u=1\); equality would already violate the open strip.
+This is a conditional comparison, not a numerical Newman bound.
+Maximality may switch between roots, a complex collision may interrupt
+simple labeling, and the nearby real population must persist.
+Maximality starting at \(y=0\) also requires all other zeros to be
+real at that event. None of these conditions follows from the local
+normal form. Existing spatial barriers provide a rigorous alternative
+\cite[Proposition~3.3]{Polymath2019}, but their initial, far-field and
+intermediate-wall hypotheses must all be retained.
+
+\subsection{The cost of a moving spatial window}
+Localization introduces further terms even before any arithmetic
+estimate is attempted. Let \(a_j(s)\) be differentiable real weights
+on a fixed isolated finite cluster of simple roots, and use
+\(s=\lambda_*-\lambda\).
+\begin{proposition}[Weighted transverse balance]\label{prop:weighted-balance}
+With the exterior factor of that cluster,
+\begin{align}
+ \frac d{ds}\sum_j a_jy_j^2
+ ={}&4\sum_{j<k}
+ \frac{(a_jy_j-a_ky_k)(y_j-y_k)}{|z_j-z_k|^2}
+ -4\sum_j a_jy_j\Im g(z_j)
+ +\sum_j (a_j)_s y_j^2.
+ \label{eq:weighted-balance}
+\end{align}
+\end{proposition}
+\begin{proof}
+Reverse the sign of \eqref{eq:planar-root-motion}, multiply its
+imaginary component by \(2a_jy_j\), and pair the \(j,k\) terms.
+Differentiating the weights gives the last sum.
+\end{proof}
+For \(a_j=w((x_j-X(s))/R(s))\), with \(R(s)>0\),
+\begin{equation}\label{eq:window-velocity}
+ (a_j)_s=w'\!\left(\frac{x_j-X}{R}\right)
+ \left(\frac{(x_j)_s-X_s}{R}-\frac{(x_j-X)R_s}{R^2}\right).
+\end{equation}
+Even nonnegative weights do not make the internal term nonnegative:
+\begin{align*}
+ (a_jy_j-a_ky_k)(y_j-y_k)
+ =\frac{a_j+a_k}{2}(y_j-y_k)^2
+       +\frac{a_j-a_k}{2}(y_j^2-y_k^2).
+\end{align*}
+The unequal-weight correction, window derivative and exterior force
+each require an estimate. Following one pair with the center keeps its
+own plateau weight fixed, but removes none of these costs for neighbors.
+A path visiting many heights at different times also need not produce
+a broad cluster on the final slice. Transport and final spatial
+amplification are separate assertions.

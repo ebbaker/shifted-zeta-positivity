@@ -115,3 +115,25 @@ and [reading-copy receipts](LOCALIZED_STATISTICS_PDF_RECEIPTS_20261106.json)
 support [brainstorm Note04](../brainstorm/notes/04_TND_O_B03_HEIGHT_LOCALIZED_SPIKES_AND_NONREAL_TRAJECTORIES_20261106.md).
 Polymath's existing Investigation02 article record is reused. No arbitrary
 localized asymptotic or pointwise exclusion is imported.
+
+## E06 manuscript integration — 6 November 2026
+
+[Source-use09](09_TND_O_E06_LOCALIZED_MANUSCRIPT_SOURCE_USE_20261106.md) records selected fresh primary-passage checks and
+the canonical 20-entry bibliography composition for Sections12–14. Exact
+current Codex model/effort metadata unavailable; no new literature survey.
+
+## Smooth localization and broader-metric source use — 6 November 2026
+
+Lead tool-selected Astra/ultra and proof/assessment workers Sol/ultra; dispatch provenance is not backend verification. [Receipt10](10_TND_O_B03_R4_BENCHMARK_SOURCE_CHECK_20261106.md) pins the Polymath benchmark, selected-simple dynamics, Hermite splitting and uniform count/safe-line passages. [Receipt11](11_TND_O_ALL_ORDER_DENSITY_SOURCE_USE_20261107.md) identifies the Maples–Rodgers density input uniform at moving transverse thresholds; every-order moments use direct layer cake. [Receipt12](12_TND_O_RECENT_COLLISION_PREPRINT_TRIAGE_20261107.md) records selected overlap with the recent Caceres preprint, whose theorem and numerical premise are unvalidated and unused. The canonical preprint entry is in localized_statistics_sources.bib. Notes17–22 and Reviews06–07 record actual proof/assessment uses. No new third-party PDF was placed in Git, and no novelty claim follows.
+
+[Receipt13](13_TND_O_LOCALIZED_LAGUERRE_SOURCE_TRIAGE_20261107.md) distinguishes the classical Laguerre/Wronskian antecedents inspected at abstract level from the newly derived formulas in Note24; no criterion is imported. [Receipt14](14_TND_O_GREEN_PRIME_BASELINE_SOURCE_USE_20261107.md) records exact current DLMF Euler-product, xi, pole and gamma passages for Decision15’s time-zero prime-baseline reduction. The latter keeps the +G pole correction and complete uniform prime tail; it does not supply the critical-line upper comparison.
+
+## B04 r5 signed acquisition — 7 November 2026
+
+[Receipt15](15_TND_O_SIGNED_ACQUISITION_SOURCE_USE_20261107.md) records the selected primary twisted-second-moment theorem and its fixed-polynomial scope. [Bibliography](signed_acquisition_sources.bib) is separate from the already-built E18 manuscript bibliography. The HTML passage was checked; no PDF reading copy was obtained.
+
+[Receipt16](16_TND_O_GAMMA_PRODUCT_SOURCE_USE_20261107.md) adds the checked reciprocal-gamma product used for E20’s explicit compact conversion. Receipt15 now records the later, separately frozen uniform-length BCR consumer; earlier source versions remain in their frozen returns.
+
+## Green/correlation setup source backfill — 7 November 2026
+
+[Source-use17](17_TND_O_GREEN_CORRELATION_SETUP_SOURCE_USE_20261107.md) records the bounded primary-passage checks, exact internal source roles and failed reading-copy retries. The two new branches reuse this canonical home, [complex-statistics bibliography](complex_statistics_sources.bib) and [configuration bibliography](correlation_hierarchy_sources.bib). Earlier source-ensemble records stay in the positive-theta investigation and are linked through [locator20](../brainstorm/notes/20_TND_O_PRIOR_HIERARCHY_LOCATOR_20261107.md). This is not a repository-wide reference audit.

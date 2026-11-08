@@ -1,0 +1,389 @@
+\section{Gaussian-localized derivative Laguerre defects}
+\label{sec:gaussian-laguerre}
+
+We now return to the field rather than a zero statistic. The following
+derivative-indexed first Laguerre defects have a complete source formula,
+an all-order acquisition theorem and an event-resolving signal
+\cite{GaussianLaguerreProof,LocalizedMetricsAssessment}. They are distinct
+from the Gaussian Gram statistic of Section~\ref{sec:localized} and the
+one-point measure of Section~\ref{sec:smooth-transverse}. The terminology
+does not import an entire-function characterization or a novelty claim;
+the classical Laguerre connection is discussed in the existing source
+record \cite{Csordas2014PositiveKernels}. The identities below are derived
+directly with the normalization \eqref{eq:F-H}.
+
+\subsection{The complete quadratic formula and the kinetic threshold}
+Here \(v>0\) always denotes \emph{variance}. For integers \(n\ge0\), set
+\begin{equation}\label{eq:gaussian-defect}
+ \begin{gathered}
+ w_v(y)=\frac{\ee^{-y^2/(2v)}}{\sqrt{2\pi v}},\qquad
+ f_n=\partial_x^nH_\lambda,\qquad L_f=(f')^2-ff'',\\
+ A_n(\lambda,X,v)=\int_\R w_v(x-X)L_{f_n}(x)\dd x.
+ \end{gathered}
+\end{equation}
+All integrations and differentiations at fixed finite order are justified
+by Section~\ref{sec:source}. For real \(s\), write
+\begin{equation}\label{eq:laguerre-source-moments}
+ M_j(s)=\int_\R |p|^j\ee^{sp^2}\Phi(p)\dd p.
+\end{equation}
+These complete moments are finite. In the notation \eqref{eq:C-B}--\eqref{eq:J},
+for \(L\ge0\), \(\beta>0\) and every integer \(j\ge0\),
+\begin{equation}\label{eq:gaussian-moment-order}
+ M_j(L)\le j!\beta^{-j}B_0J_{0,2}(L,\beta),\qquad B_0=5C_2(0).
+\end{equation}
+Indeed \((\beta|p|)^j\le j!\ee^{\beta|p|}\). Thus the complete
+radial majorant also exposes the growth in derivative order.
+
+\begin{proposition}[Exact full-source quadratic form]\label{prop:gaussian-source}
+For real \(\lambda,X\), \(v>0\) and every \(n\ge0\),
+\begin{equation}\label{eq:gaussian-full-source}
+ A_n=\frac18\int_{\R^2}(-pq)^n(p-q)^2F_\lambda(p)F_\lambda(q)
+       \ee^{\ii X(p+q)-v(p+q)^2/2}\dd p\dd q.
+\end{equation}
+The phase can equivalently be replaced by \(\cos(X(p+q))\).
+In particular the positive-half-line formula is
+\begin{align}\label{eq:gaussian-half-source}
+ A_0=\frac14\int_0^\infty\!\int_0^\infty F_\lambda(p)F_\lambda(q)
+ \bigl[&(p-q)^2\ee^{-v(p+q)^2/2}\cos(X(p+q))\nonumber\\
+       +&(p+q)^2\ee^{-v(p-q)^2/2}\cos(X(p-q))\bigr]\dd p\dd q.
+\end{align}
+For \(A_n\), multiply the first bracket term by \((-1)^n(pq)^n\)
+and the second by \((pq)^n\).
+\end{proposition}
+\begin{proof}
+From \(f_n=(\ii^n/2)\int p^nF_\lambda(p)\ee^{\ii xp}\dd p\),
+symmetrizing the second product in \((f_n')^2-f_nf_n''\) gives
+the multiplier \((-1)^n(pq)^n(p^2+q^2-2pq)/8\).
+Gaussian integration gives
+\(\int w_v(x-X)\ee^{\ii x(p+q)}\dd x
+=\ee^{\ii X(p+q)-v(p+q)^2/2}\).
+All products are absolutely integrable. Simultaneous reflection of
+\(p,q\) removes the imaginary part, and the four quadrants give
+\eqref{eq:gaussian-half-source} with the displayed signs.
+\end{proof}
+
+Substitution of the unchanged complete theta source means replacing
+\(F_\lambda(p)F_\lambda(q)\), on this positive quadrant, by
+\begin{equation}\label{eq:gaussian-theta-product}
+ \ee^{\lambda(p^2+q^2)+p+q}
+ \sum_{a,b\ge1}P_0(a^2\rho(p))P_0(b^2\rho(q))
+                    \ee^{-a^2\rho(p)-b^2\rho(q)}.
+\end{equation}
+The domain and theta summands are positive; the quadratic formula is
+signed. The joint tails below pay both infinite indices and both radial
+lines, rather than replacing this source by a finite arithmetic model.
+
+For comparison with field energy, put
+\[
+ \begin{aligned}
+ Z&=\int_\R w_v(x-X)H_\lambda(x)^2\dd x,\\
+ E_w&=\int_\R|(H_\lambda\sqrt{w_v(\cdot-X)})'|^2\dd x.
+ \end{aligned}
+\]
+Integration by parts gives the exact identities
+\begin{equation}\label{eq:gaussian-kinetic}
+ A_0=2E_w-\frac{Z}{2v}
+       =\partial_\lambda Z+\tfrac12\partial_{XX}Z
+       \qquad\text{(at fixed \(v\)).}
+\end{equation}
+For details, first
+\(A_0=2\int w_vH_x^2-\tfrac12\int w_v''H^2\).
+Expanding \(E_w\) and using
+\(w_v''/w_v=(x-X)^2/v^2-1/v\) proves the first equality.
+The second follows from
+\(Z_\lambda=-2\int w_vHH_{xx}\) and
+\(Z_{XX}/2=\int w_v(H_x^2+HH_{xx})\).
+Consequently \(E_w\ge0\) does not supply the stronger signed threshold
+\(E_w\ge Z/(4v)\). The global energy identities already proved remain
+regular through the same event.
+
+\subsection{The hierarchy and its complete order series}
+\begin{proposition}[Heat and variance identities]\label{prop:gaussian-hierarchy}
+For every index in \eqref{eq:gaussian-defect},
+\begin{equation}\label{eq:gaussian-hierarchy}
+ \partial_\lambda A_n=-\partial_{XX}A_n+2A_{n+1},\qquad
+ \partial_v A_n=\tfrac12\partial_{XX}A_n.
+\end{equation}
+Hence a differentiable positive-variance schedule satisfies
+\begin{equation}\label{eq:gaussian-schedule}
+ \frac{\dd}{\dd\lambda}A_n(\lambda,X,v(\lambda))
+   =(v'/2-1)\partial_{XX}A_n+2A_{n+1}.
+\end{equation}
+For every \(\epsilon>0\), uniformly in all real \(X\), \(v>0\),
+\(\lambda\le L\) and all integers \(n\ge0\),
+\begin{equation}\label{eq:gaussian-factorial}
+ |A_n|\le n!\epsilon^{-n}\mathcal C_\epsilon(L),\qquad
+ \mathcal C_\epsilon(L)=\tfrac14M_0(L+\epsilon/2)M_2(L+\epsilon/2).
+\end{equation}
+The same bound holds pointwise for \(|L_{f_n}(x)|\).
+\end{proposition}
+\begin{proof}
+For \(f=f_n\), the heat equation gives
+\((L_f)_\lambda=(f'')^2+ff''''-2f'f'''\), whereas
+\((L_f)''=(f'')^2-ff''''\). Thus
+\((L_f)_\lambda=-(L_f)''+2L_{f'}\).
+Convolution proves the first identity, and the Gaussian heat equation
+proves the second. For the bound use
+\[
+ |pq|^n\le n!\epsilon^{-n}\ee^{\epsilon|pq|}
+        \le n!\epsilon^{-n}\ee^{\epsilon(p^2+q^2)/2}.
+\]
+For the even positive source
+\(V(p)=\ee^{(L+\epsilon/2)p^2}\Phi(p)\),
+\(\int(p-q)^2V(p)V(q)\dd p\dd q=2M_0M_2\), because
+\(\int pV(p)\dd p=0\). Taking the phase modulus in
+\eqref{eq:gaussian-full-source} proves the constant \(1/4\),
+also before Gaussian averaging.
+\end{proof}
+
+The spatial cancellation characteristic is
+\(\lambda=\lambda_0+h\), \(v=v_0+2h>0\). Its exact solution is
+\begin{equation}\label{eq:gaussian-characteristic}
+ A_n(\lambda_0+h,X,v_0+2h)
+   =\sum_{k=0}^\infty\frac{2^kh^k}{k!}A_{n+k}(\lambda_0,X,v_0).
+\end{equation}
+Indeed the new spectral kernel divided by the old one is
+\(\ee^{-2hpq}\). Expand this exponential; absolute domination follows
+from \(\ee^{2|h||pq|}\le\ee^{|h|(p^2+q^2)}\).
+This proves convergence for both signs of \(h\) in the positive-variance
+domain, without iterating a merely finite-order differential identity.
+To quantify it, fix \(|h|\le D_h\), \(\lambda_0\le L\),
+\(\epsilon>2D_h\), and \(r=2D_h/\epsilon<q_*<1\). For \(K\ge0\),
+\begin{align}\label{eq:gaussian-order-tail}
+ \left|A_n(\lambda_0+h,X,v_0+2h)
+       -\sum_{k=0}^K\frac{2^kh^k}{k!}A_{n+k}(\lambda_0,X,v_0)\right|
+ \le n!\epsilon^{-n}\mathcal C_\epsilon(L)
+       \frac{(r/q_*)^{K+1}}{(1-q_*)^{n+1}}.
+\end{align}
+This follows from
+\((n+k)!/(n!k!)=\binom{n+k}{k}\), the generating function
+\(\sum_{k\ge0}\binom{n+k}{k}q_*^k=(1-q_*)^{-n-1}\), and
+\(r^k\le(r/q_*)^{K+1}q_*^k\) for \(k>K\).
+The factors depending on \(n\) remain costs in a joint large-order limit.
+No uniform positive lower bound on either endpoint variance was used.
+
+\subsection{Joint theta-index, radial and order errors}
+The truncation indices satisfy \(N,K\in\mathbb Z_{\ge0}\), and \(U\ge0\).
+Use only as an integral approximation the positive reflected cutoff
+\begin{equation}\label{eq:gaussian-source-cutoff}
+ \Phi_{N,U}(p)=\boldsymbol1_{|p|\le U}\ee^{|p|}
+ \sum_{1\le a\le N}P_0(a^2\rho(|p|))\ee^{-a^2\rho(|p|)},
+ \qquad0\le\Phi_{N,U}\le\Phi.
+\end{equation}
+No smooth endpoint extension or operator-domain claim is made about it;
+its transform and all finite \(x,\lambda\) derivatives exist. Let
+\(A_j^{N,U}\) mean \eqref{eq:gaussian-full-source} with this source.
+For \(j=0,2\), \(S\ge0\), set
+\[
+ \delta_j(S;N,U)=\int_\R|p|^j\ee^{Sp^2}(\Phi-\Phi_{N,U})(p)\dd p,
+ \qquad J^{>U}_{j,2}(S,0)=\int_{|p|>U}|p|^j
+     \ee^{Sp^2+|p|}\rho(|p|)^2\ee^{-\rho(|p|)}\dd p.
+\]
+The complete source bounds give
+\begin{equation}\label{eq:gaussian-source-tail}
+ \delta_j\le5C_2(N)J_{j,2}(S,0)+B_0J^{>U}_{j,2}(S,0),\qquad
+ C_2(N)\le\frac{(N+1)^4\ee^{-\pi((N+1)^2-1)}}
+                    {1-16\ee^{-\pi(2N+3)}}\quad(N\ge0).
+\end{equation}
+The index bound is the geometric ratio estimate for consecutive terms;
+the denominator is positive. Both errors tend independently to zero.
+Writing \(R_U=\pi\ee^{4U}\), the radial payment is explicitly
+\begin{equation}\label{eq:gaussian-radial-tail}
+ J^{>U}_{j,2}(S,0)=\frac{2}{4^{j+1}}\int_{R_U}^\infty
+ \left(\log\frac{s}{\pi}\right)^j
+ \left(\frac{s}{\pi}\right)^{1/4}s
+ \ee^{S\log^2(s/\pi)/16-s}\dd s.
+\end{equation}
+For example, when \(R_U\ge\max\{\pi,4S^2/(\ee^4\pi)\}\),
+\begin{equation}\label{eq:gaussian-gamma-tail}
+ J^{>U}_{j,2}(S,0)\le
+ \frac{2c_j}{4^{j+1}\sqrt\pi}\,2^{5/2}\Gamma(5/2,R_U/2),
+ \qquad c_0=1,\quad c_2=(8/\ee)^2.
+\end{equation}
+Here \(\Gamma(5/2,z)=\int_z^\infty u^{3/2}\ee^{-u}\dd u\).
+To verify the bound, use \(\log x\le(4/\ee)x^{1/4}\) and
+\((\log x)^j\le c_jx^{1/4}\) for \(x\ge1\), \(j=0,2\).
+The threshold makes \(S\log^2(s/\pi)/16\le s/2\).
+
+Take \(S=L+\epsilon/2\) and put
+\begin{equation}\label{eq:gaussian-T-tail}
+ \mathcal T_\epsilon(L;N,U)=\tfrac14
+  \{M_2(S)\delta_0(S;N,U)+M_0(S)\delta_2(S;N,U)\}.
+\end{equation}
+Then \(|A_n-A_n^{N,U}|\le n!\epsilon^{-n}\mathcal T_\epsilon\).
+For a proof, the absorbed product difference is nonnegative and even in
+each coordinate. Its integral against \((p-q)^2\) equals
+\(2\{M_0M_2-M_0^{N,U}M_2^{N,U}\}\), bounded by twice the bracket
+in \eqref{eq:gaussian-T-tail}. No cross term is discarded.
+Combining this with \eqref{eq:gaussian-order-tail} proves the joint bound
+\begin{align}\label{eq:gaussian-joint-tail}
+ &\left|A_n(\lambda_0+h,X,v_0+2h)
+   -\sum_{k=0}^K\frac{2^kh^k}{k!}A_{n+k}^{N,U}(\lambda_0,X,v_0)\right|
+ \nonumber\\
+ &\quad\le n!\epsilon^{-n}\left\{
+ \mathcal C_\epsilon(L)\frac{(r/q_*)^{K+1}}{(1-q_*)^{n+1}}
+ +\frac{\mathcal T_\epsilon(L;N,U)}{(1-r)^{n+1}}\right\}.
+\end{align}
+The coefficient errors were summed to infinity using the same binomial
+identity. Thus every real center, complete index, radial line and order
+series is controlled simultaneously. Growing \(n\) requires paying the
+displayed factorial and geometric costs by choices of \(K,N,U\);
+fixed-order convergence is not a uniform large-order sign theorem.
+
+\subsection{Every finite real multiplicity has a resolving level}
+Suppose that at a real event
+\begin{equation}\label{eq:gaussian-event}
+ \partial_x^jH_{\lambda_*}(x_*)=0\ (0\le j<m),\qquad
+ a_m=\partial_x^mH_{\lambda_*}(x_*)\ne0,\qquad m\ge2.
+\end{equation}
+Fix \(T>0\) such that \([\lambda_*-T,\lambda_*]\) is contained in a
+compact real Newman-time interval with upper bound \(L\ge0\).
+For \(0\le t\le T\), define
+\[
+ g(t,y)=\partial_x^{m-2}H_{\lambda_*-t}(x_*+y),\qquad
+ C=\tfrac12M_{m+1}(L),\qquad D=\tfrac12M_{m+2}(L).
+\]
+Thus \(g_t=g_{yy}\), \(g(0,0)=g_y(0,0)=0\), \(g_{yy}(0,0)=a_m\),
+and the global real-line bounds are \(|g_{yyy}|\le C\),
+\(|g_{yyyy}|\le D\). Equation~\eqref{eq:gaussian-moment-order}
+makes the dependence on every finite \(m\) explicit, for example
+\(C\le(m+1)!\beta^{-m-1}B_0J_{0,2}(L,\beta)/2\).
+
+\begin{theorem}[Paid finite-multiplicity signal]\label{thm:gaussian-resolution}
+For \(0<t\le T\), \(0<\kappa<2\), \(b=|a_m|\) and
+\(\mu_1=\sqrt{2\kappa/\pi}\),
+\begin{equation}\label{eq:gaussian-resolution}
+ A_{m-2}(\lambda_*-t,x_*,\kappa t)
+       =a_m^2t(\kappa/2-1)+\mathcal E_m(t),
+       \qquad |\mathcal E_m(t)|\le E_\kappa(t;b,C,D),
+\end{equation}
+where the full error is
+\begin{align}\label{eq:gaussian-resolution-error}
+ E_\kappa(t;b,C,D)={}&bC\mu_1(4+10\kappa/3)t^{3/2}\nonumber\\
+ &+\{bD(3+\kappa)/2+C^2(1+2\kappa+5\kappa^2/4)\}t^2\nonumber\\
+ &+CD\mu_1(\kappa/3+3/2)t^{5/2}+D^2t^3/2.
+\end{align}
+In particular, with \(\delta_\kappa=1-\kappa/2\),
+\begin{equation}\label{eq:gaussian-resolution-margin}
+ E_\kappa\le\tfrac12\delta_\kappa b^2t
+ \quad\Longrightarrow\quad A_{m-2}\le-\tfrac12\delta_\kappa b^2t<0.
+\end{equation}
+This holds at every fixed finite event for sufficiently small \(t>0\).
+\end{theorem}
+\begin{proof}
+Taylor expansion in space and integration of the heat equation give,
+on the \emph{whole} real line,
+\begin{align*}
+ g&=a_m(y^2/2+t)+R_0,&
+ |R_0|&\le C(|y|^3/6+t|y|)+Dt^2/2,\\
+ g_y&=a_my+R_1,& |R_1|&\le C(y^2/2+t),\\
+ g_{yy}&=a_m+R_2,& |R_2|&\le C|y|+Dt.
+\end{align*}
+For example, \(|g_{yy}(s,y)-a_m|\le C|y|+Ds\), whose time
+integral supplies the first row's time error. The second row uses
+\(g_y(t,y)-g_y(0,y)=\int_0^tg_{yyy}(s,y)\dd s\).
+The leading defect is \(a_m^2(y^2/2-t)\). With \(y=\sqrt t\,z\),
+the absolute remaining terms in \((g_y)^2-gg_{yy}\) are bounded by
+\begin{align*}
+ &bCt^{3/2}(4|z|+5|z|^3/3)+bDt^2(3/2+z^2/2)\\
+ &\quad+C^2t^2(1+2z^2+5z^4/12)
+       +CDt^{5/2}(3|z|/2+|z|^3/6)+D^2t^3/2.
+\end{align*}
+Integrate under \(z\sim N(0,\kappa)\), using
+\(Ez^2=\kappa\), \(Ez^4=3\kappa^2\),
+\(E|z|=\mu_1\), \(E|z|^3=2\kappa\mu_1\).
+This gives every coefficient in \eqref{eq:gaussian-resolution-error}.
+The global source bounds pay the Gaussian exterior directly, without
+an omitted background or root labeling. Since the error is
+\(O(t^{3/2})\) at the fixed event, the last assertion follows.
+\end{proof}
+
+The proof applies to any real heat field with the stated global
+derivative bounds and finite Gaussian defect, with its own constants;
+entire continuation alone is not substituted for integrability.
+For the exact heat polynomial
+\(H_{\lambda_*-t}(x_*+y)=a_m\ee^{t\partial_y^2}y^m/m!\),
+the derivative level is exactly \(a_m(y^2/2+t)\), so the error vanishes
+for every \(m\ge2\). For canonical fields, the proof above pays the
+complete background. A local-Cauchy version with a separately paid
+Gaussian exterior is recorded in \cite{GaussianLaguerreProof}; it is
+unneeded for this stronger full-line proof.
+
+After division by \(b^2t\), the error costs are explicitly
+\((C/b)\sqrt t\), \(\{D/b+(C/b)^2\}t\),
+\((CD/b^2)t^{3/2}\), and \((D/b)^2t^2\), with the displayed
+coefficients. Uniform upper source moments give neither a positive
+lower bound on \(b\) nor a uniform event radius. No bound on finite
+multiplicity was assumed. At fixed positive variance the defect itself
+is smooth at the event; shrinking variance and amplitude normalization
+are separate costs.
+
+\subsection{Controls, variance conflict and the missing signed estimate}
+For the quadratic control \(Q(x)=x^2+d^2\),
+\[
+ L_Q=2(x^2-d^2),\qquad A_0(Q;X,v)=2(X^2+v-d^2).
+\]
+Its imaginary pair is detected at \(X=0\) precisely when \(v<d^2\).
+The antiheat family \(Q_\lambda=x^2-2(\lambda-\lambda_*)\)
+has \(d^2=2t\), \(a_2=2\), and realizes
+\eqref{eq:gaussian-resolution} with zero error. For the cubic control
+\(C_c(x)=x(x^2+c)\), \(c>0\),
+\begin{align*}
+ L_{C_c}&=3x^4+c^2>0,& A_0(C_c;0,v)&=9v^2+c^2>0,\\
+ L_{C_c'}&=18x^2-6c,& A_1(C_c;X,v)&=18(X^2+v)-6c.
+\end{align*}
+The first level misses the imaginary pair even without smoothing;
+the next level detects it at zero for \(v<c/3\).
+The exact family \(C_\lambda=x^3-6(\lambda-\lambda_*)x\) has
+\(c=6t\), \(a_3=6\), and \(A_1=36t(\kappa/2-1)\).
+These polynomial diagnostics fail the literal complete theta-source
+premise and are not proposed canonical fields.
+
+Resolution uses \(v=\kappa(\lambda_*-\lambda)\), hence \(v'=-\kappa\)
+and \(\dd A_n/\dd\lambda=-(1+\kappa/2)\partial_{XX}A_n+2A_{n+1}\).
+Spatial cancellation instead requires \(v'=2\). A characteristic
+ending at the event has \(v=v_*-2t\): for \(v_*>0\) it is outside
+\(0<v<2t\) near the event, and for \(v_*=0\) its variance is negative.
+Starting at \(t_0>0\), \(v_0=\kappa t_0\), the forward cancellation
+characteristic obeys
+\begin{equation}\label{eq:gaussian-cone-exit}
+ t=t_0-h,\quad v=\kappa t_0+2h,\qquad
+ v<2t\ \Longleftrightarrow\ h<(2-\kappa)t_0/4.
+\end{equation}
+Its exact cone-exit advance is therefore \((2-\kappa)t_0/4\).
+Backward continuation has positive variance only for
+\(s<\kappa t_0/2\), where \(\lambda=\lambda_0-s\).
+The local remainder may further shrink the resolving region.
+For \(h\ge0\), the order series conditionally preserves nonnegativity
+if \emph{every} required initial \(A_{n+k}\) is nonnegative; those signs
+are not supplied by its absolute bound, and resolution is not retained.
+
+The actual unpaid comparison is a lower bound for the signed complete
+quadratic form \eqref{eq:gaussian-full-source}. For a relevant event,
+one sufficient independently acquired estimate would be
+\begin{equation}\label{eq:gaussian-missing-comparison}
+ A_{m-2}(\lambda_*-t,x_*,\kappa t)\ge-c|a_m|^2t,
+ \quad0\le c<\delta_\kappa,\quad
+ E_\kappa(t)<(\delta_\kappa-c)|a_m|^2t.
+\end{equation}
+It would contradict \eqref{eq:gaussian-resolution}. Neither this
+comparison nor unconditional nonnegativity is proved here.
+The absolute allowance divided by the desired margin costs
+\((m-2)!\epsilon^{-(m-2)}\mathcal C_\epsilon(L)/(|a_m|^2t)\),
+which need not be small. This limits that allowance, not the actual
+defect or every sharper theta-sensitive estimate.
+
+The collision control of Section~\ref{sec:control} shares regular heat
+and energy identities and complete finite moments, yet fails the exact
+canonical theta arithmetic. The Euler-factor, weighted-square,
+reflected smooth-shape and positive-primitive control classes likewise
+share the generic identities when their own complete moment and tail
+hypotheses hold; they fail the unchanged canonical coefficient sequence,
+integer-square expansion or full reflected endpoint data as applicable.
+Variable-kernel controls additionally fail the literal cosine observation
+or full heat equation where those were changed. No canonical numerical
+constants are assigned to these other classes. Naming their failed
+arithmetic premises does not establish
+\eqref{eq:gaussian-missing-comparison}. The scoped conclusion excludes an
+automatic generic-energy or characteristic argument and leaves
+source-sensitive comparisons open.

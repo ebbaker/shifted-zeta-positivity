@@ -1,14 +1,57 @@
-# Operator and ITE research progress
+# Historical operator and ITE research progress
+
+> **Superseded as the live register, 6 November 2026.** At the author's
+> explicit request, [02_SMOOTH_LOCALIZATION_RESEARCH_PROGRESS_20261106.md](02_SMOOTH_LOCALIZATION_RESEARCH_PROGRESS_20261106.md) is now the sole current register
+> for all TND-O tasks. It contains the task crosswalk and current statuses.
+> The dated entries and all routing/status language below are historical;
+> they retain their original evidence, requests and identities. Migration
+> prepared by OpenAI Codex; exact current model and effort unavailable.
 
 6 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**. Configuration verified in the setup turn metadata.
 
-**This is the sole current register for TND-O tasks.** The
+**This was the sole register before the dated migration above.** The
 [parent register](../../research-progress/01_THETA_OBSERVABLES_AND_NEWMAN_DYNAMICS_RESEARCH_PROGRESS_20261105.md) owns shared TND tasks and branch navigation.
 The [direct register](../../01_direct_newman_realization/research-progress/01_DIRECT_NEWMAN_REALIZATION_RESEARCH_PROGRESS_20261105.md) owns TND-D; the
 [auxiliary register](../../02_hamiltonian_auxiliary_dynamics/research-progress/01_HAMILTONIAN_AUXILIARY_DYNAMICS_RESEARCH_PROGRESS_20261105.md) owns TND-A. Neither owns a second copy of
 these live rows.
 
-## Current disposition — B03 r2 returned; further brainstorming requested
+## Historical disposition at migration — B03 r3 smooth-window discussion returned
+
+6 November 2026, America/New_York. Author-requested **B — conceptual
+research**, continuing TND-O-B03. Recommended model: Astra, because the
+kernel, observable and useful arithmetic bound are not yet fixed. Actual
+assistant: OpenAI Codex; exact model identifier and effort unavailable.
+
+Scope: one analytical comparison of Gaussian and Poisson-kernel smoothing
+within the existing localized-observable program, its natural height/time
+scales, and the precise missing premise for a collision-time bound.
+Return: [Brainstorm06](../brainstorm/notes/06_TND_O_B03_SMOOTH_WINDOWS_AND_HEIGHT_DEPENDENT_COLLISION_TIMES_20261106.md) records exact Gaussian comparisons, the conditional squared-width time bound, and the existing Polymath 1/log-height benchmark. The canonical transverse and integrated-force bounds remain missing. No numerical campaign,
+independent assessment, manuscript change or successor execution.
+The E06 40-page working revision and its original-checkout patch remain
+unchanged; this discussion does not activate E05.
+
+## Historical E06 localized manuscript integration complete
+
+6 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance from **OpenAI Codex**. The exact model identifier and reasoning effort were not exposed in the available session metadata; neither is inferred from earlier sessions.
+
+**E06 is complete at analytical manuscript-production scope in the working
+revision.** The author requested integration of brainstorm Notes04–05.
+The [40-page manuscript](../manuscript/README.md) now develops complex
+transport, bulk limitations and localized signals in that order, with full
+proofs and final outstanding tasks. [Note15](../notes/15_TND_O_E06_LOCALIZED_MANUSCRIPT_SYNTHESIS_20261106.md),
+[check04](../reviews/04_TND_O_E06_LOCALIZED_MANUSCRIPT_CHECK_20261106.md) and [return15](handoffs/15_TND_O_E06_LOCALIZED_MANUSCRIPT_RETURN_20261106.json)
+bind the revision. No arithmetic upper bound, canonical complete tube or
+independent assessment is claimed. E01/E02/Q1/Q2 and sibling statuses are
+unchanged. B02/B03 quantitative targets remain open; E05 stays proposed and
+unactivated. No successor research or numerical work is activated.
+
+The original checkout is read-only for this session; a separate writable
+working checkout and exact patch hold the revision. Current-thread history
+capture is unavailable because its actual local source transcript is not
+exposed; existing histories are unchanged. No new manuscript snapshot or
+Git commit was made.
+
+## Historical disposition — B03 r2 returned; further brainstorming requested
 
 6 November 2026, for Edward Baker with substantial LLM assistance, actual
 **gpt-6-astra / max**, chat0004. **The height-localization/trajectory
@@ -194,7 +237,7 @@ configuration: gpt-6-astra/max, existing direct chat0005, thread
 [setup verification](handoffs/01_TND_O_SETUP_RETURN_20261106.json), [overview](../research-overview/01_OPERATOR_ITE_RESEARCH_OVERVIEW_20261106.md) and [plan](../research-plan/01_OPERATOR_ITE_RESEARCH_PLAN_20261106.md).
 The next-session [continuation and prompt](../notes/01_OPERATOR_ITE_CONTINUATION_AND_PROMPT_20261106.md) is the canonical handoff.
 
-## Current register
+## Historical task register at migration
 
 | Task | Type/model and reason | Status | Deliverable and dependency |
 | --- | --- | --- | --- |
@@ -204,8 +247,9 @@ The next-session [continuation and prompt](../notes/01_OPERATOR_ITE_CONTINUATION
 | TND-O-B02 — collision-control mechanism | B — Astra; quantitative source target remains conceptual | **Coefficient reconnaissance returned; quantitative question open** | Note11/return11 now integrated by E04; no global control route or coefficient-bound execution selected |
 | TND-O-E03 — initial analytical manuscript | E — fixed synthesis; actual Astra/max | **Complete r1 — manuscript production** | Manuscript/Review02/return09; 21-page PDF, complete derivations, outstanding tasks; evidence statuses unchanged |
 | TND-O-E04 — analytical manuscript extension | E — default Sol, actual Astra/max in selected mixed task | **Complete — production scope** | Current32-page manuscript; Notes08/11 integrated first, then B03 findings; check03/build record/return12; no evidence upgrade |
-| TND-O-B03 — nonreal-zero statistics | B — Astra; localized observable and useful arithmetic estimate remain conceptual | **r2 localized/trajectory brainstorm returned; estimate target open** | Brainstorm04/05, receipt08, return14; exact spike and conditional transport/background calculations; further B03 brainstorming requested |
+| TND-O-B03 — nonreal-zero statistics | B — Astra; localized observable and useful arithmetic estimate remain conceptual | **r3 smooth-window brainstorm returned; canonical estimate target open** | Brainstorm06 and return16; Gaussian minorant, heat-convolution scale and conditional time transfer; known 1/log-height benchmark; no canonical improvement |
 | TND-O-E05 — extension assessment | E — Sol; fixed claim-level audit | **Proposed, ready for selection; unactivated** | Request13, one assessment and one local correction check; actual input freeze due at activation |
+| TND-O-E06 — localized manuscript integration | E — manuscript production | **Complete in working revision; source-checkout application pending** | Note15, check04, return15; 40-page analytical build; original checkout read-only |
 
 Ready means ready for an author-selected start, not proved or running.
 Setup and the listed recommendations create no automatic successor work.

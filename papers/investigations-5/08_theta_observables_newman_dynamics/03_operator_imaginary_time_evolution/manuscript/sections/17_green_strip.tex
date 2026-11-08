@@ -1,0 +1,307 @@
+\section{A positive Green-strip potential and its prime baseline}
+\label{sec:green-strip}
+
+A second metric measures nonreal zeros directly and is invariant under
+scalar normalization. Throughout this section \(0\le\lambda\le1/2\),
+so every canonical zero satisfies \(|\Im z|\le1\), including at time
+zero. We retain all multiplicities and the complete opposite-paired
+product and counts used above. The complete Green identity and its
+arithmetic reduction have distinct internal assessments
+\cite{GreenStripProof,LocalizedMetricsAssessment,MetricComparison,PrimeBaselineAssessment}.
+
+\subsection{The exact strip identity and finite-factor proof}
+Put
+\begin{equation}\label{eq:green-kernels}
+ a=\pi/8,\qquad K(t)=\frac1{16\cosh(at)},\qquad
+ G(d,y)=\operatorname{atanh}\frac{\sin(ay)}{\cosh(ad)}.
+\end{equation}
+Each boundary kernel has mass \(\int_\R K=1/2\). Define
+\begin{align}\label{eq:green-J}
+ J_\lambda(X)={}&\int_\R K(x-X)
+       \{\log|H_\lambda(x)|+\log|H_\lambda(x+8\ii)|\}\dd x
+       -\log|H_\lambda(X+4\ii)|.
+\end{align}
+\begin{theorem}[Complete positive strip potential]\label{thm:green-identity}
+Both boundary integrals in \eqref{eq:green-J} are absolutely integrable,
+including at real multiple zeros, and for every real \(X\),
+\begin{equation}\label{eq:green-identity}
+ J_\lambda(X)=\sum_{j:y_j(\lambda)>0}
+                  G(X-x_j(\lambda),y_j(\lambda)).
+\end{equation}
+This complete upper-zero sum converges absolutely. Every summand is
+positive. Real boundary zeros give no atom, and there is no additional
+outer or harmonic term. Multiplication of \(H_\lambda\) by any nonzero
+complex scalar leaves \(J_\lambda\) unchanged.
+\end{theorem}
+
+We first prove the finite-factor identity and then pay its complete
+limit. On \(0<\Im z<B\), with \(-\Delta G_B=2\pi\delta\), the strip
+Green function is
+\begin{equation}\label{eq:green-general}
+ G_B(z,\zeta)=\frac12\log
+ \frac{\cosh(\pi(\Re z-\Re\zeta)/B)-\cos(\pi(\Im z+\Im\zeta)/B)}
+      {\cosh(\pi(\Re z-\Re\zeta)/B)-\cos(\pi(\Im z-\Im\zeta)/B)}.
+\end{equation}
+The map \(z\mapsto\ee^{\pi z/B}\) to the upper half-plane gives
+this reflected-distance ratio, its zero boundary values and singularity
+\(-\log|z-\zeta|\). Boundary normal derivatives divided by \(2\pi\)
+give the Poisson kernels. At \(B=8\), observation \(X+4\ii\), both
+are \(K(x-X)\), and the Green value is \eqref{eq:green-kernels}.
+
+For an interior zero the harmonic correction is
+\(\log|z-\zeta|+G_B(z,\zeta)\); its singularities cancel and its
+boundary values are those of the factor logarithm. Its Poisson
+representation follows by truncation with vertical sides: their harmonic
+measures decay exponentially, while the factor logarithm grows only
+logarithmically. Thus the boundary average minus the interior logarithm
+is \(+G_B\). Exterior zeros give zero. A boundary zero is treated by its
+locally integrable logarithm or an exterior limit and gives no half-weight
+atom, also at finite multiple order.
+
+The inherited exact even product is
+\begin{equation}\label{eq:green-product}
+ H_\lambda(z)=H_\lambda(0)
+      \prod_{\zeta\in\mathcal R_\lambda}(1-z^2/\zeta^2),
+\end{equation}
+where \(\mathcal R_\lambda\) has one representative of each opposite
+pair, with multiplicity. No surviving exponential factor is omitted.
+For each finite complete opposite-paired product, apply the factor
+identity to \(z-\zeta\), \(z+\zeta\) and its constants. The constants
+cancel since the boundary masses add to one. This proves the finite
+version of \eqref{eq:green-identity}.
+
+\subsection{Full-product logarithmic integrability and boundary tails}
+Use a common full-count constant \(C\) such that
+\begin{equation}\label{eq:green-full-count}
+ N_\lambda(r)\le Cr\log(r+2),\qquad r\ge1.
+\end{equation}
+The complete source and positivity at the origin give finite constants
+\[
+ m_0=\inf_\lambda H_\lambda(0)>0,\qquad
+ D_0\ge\sup_{\lambda,|z|\le1}|H_\lambda'(z)|,\quad D_0>0.
+\]
+Set
+\begin{equation}\label{eq:green-log-constants}
+ r_*=\min\{1,m_0/(2D_0)\},\quad C_0=\sup_\lambda|\log H_\lambda(0)|,
+ \quad C_*=C_0+20C(1+|\log r_*|).
+\end{equation}
+The segment integral of \(H'\) gives \(|H_\lambda(z)|\ge m_0/2\)
+on \(|z|\le r_*\), so every zero lies outside this fixed disk.
+
+For every real \(q\), \(0\le b\le8\), and \(Q=|q|+12\),
+\begin{equation}\label{eq:green-unit-log}
+ \int_q^{q+1}|\log|H_\lambda(x+\ii b)||\dd x
+                  \le C_*Q\log^2(3Q).
+\end{equation}
+To prove the stronger assertion needed for the product limit, bound the
+sum of absolute factor logarithms. On the interval \(|x+\ii b|\le Q\).
+For \(|\zeta|\le2Q\), split a factor logarithm into two distance logs
+and \(-2\log|\zeta|\). Each positive distance log is at most
+\(\log(3Q)\), while
+\[
+ \int_q^{q+1}\log^-|x+\ii b-\zeta|\dd x\le2,
+\]
+because distance is at least \(|x-\Re\zeta|\), and
+\(\int_{-1}^1-\log|t|\dd t=2\). This includes repeated boundary
+zeros. Each near representative therefore costs at most
+\(4\log(3Q)+4+2|\log r_*|\). There are at most
+\(CQ\log(2Q+2)\) such representatives, using half the full
+origin-centered count at radius \(2Q\).
+For far representatives,
+\[
+ \left|\log\left|1-\frac{z^2}{\zeta^2}\right|\right|
+         \le\frac43\frac{Q^2}{|\zeta|^2}.
+\]
+Partial summation of \eqref{eq:green-full-count}, again halved for
+representatives, bounds their total by
+\[
+ \frac23CQ\{\log(2Q+2)+1\}.
+\]
+These costs imply
+\eqref{eq:green-unit-log} with \eqref{eq:green-log-constants}.
+They also prove absolute local \(L^1\) convergence of the factor
+logarithms; the polynomial unit-interval bound is summable against
+the exponential Poisson weight. At \(X+4\ii\), the product converges
+away from every zero by the common zero strip. Passing from the finite
+product identity to the complete one is now justified. This proves
+Theorem~\ref{thm:green-identity} with no unaccounted outer term.
+Scalar invariance follows because the added \(\log|c|\) has total
+boundary mass one and is subtracted once at the observation point.
+
+There is an explicit uniform two-boundary tail. For \(R\ge0\), set
+\(n=\lfloor R\rfloor\), \(q_0=\ee^{-a}\), \(S=|X|+13+n\). Then
+\begin{align}\label{eq:green-boundary-tail}
+ &\int_{|x-X|>R}K(x-X)
+   \{|\log|H_\lambda(x)||+|\log|H_\lambda(x+8\ii)||\}\dd x
+ \nonumber\\
+ &\quad\le\frac{C_*}{2}\ee^{-an}S\log^2(3S)
+                        \frac{1+4q_0+q_0^2}{(1-q_0)^4}.
+\end{align}
+For shell \(k\le|x-X|<k+1\), use two unit intervals,
+\(K\le\ee^{-ak}/8\), and both boundaries. The remaining sum uses
+\((S+j)\log^2(3(S+j))\le S\log^2(3S)(1+j)^3\) and
+\(\sum_{j\ge0}q_0^j(1+j)^3=(1+4q_0+q_0^2)/(1-q_0)^4\).
+The displayed height factor must be retained in joint growing-height
+and truncation limits.
+
+\subsection{The complete zero tail and a one-defect margin}
+For \(0<y\le1\),
+\begin{equation}\label{eq:green-point-tail}
+ 0<G(d,y)\le K_Gy\ee^{-a|d|},\qquad K_G=2a/\cos^2a.
+\end{equation}
+Indeed \(\operatorname{atanh}u\le u/(1-u^2)\),
+\(\sin(ay)\le ay\), and \(\operatorname{sech}(ad)\le2\ee^{-a|d|}\).
+Let \(A\) be the full unit-count constant in
+\eqref{eq:coarse-canonical}, and put \(Q_X=3+|X|\). For the same
+\(n,q_0\) as above, omitted upper zeros obey
+\begin{align}\label{eq:green-zero-tail}
+ \sum_{\substack{y_j>0\\|x_j-X|>R}}G(X-x_j,y_j)
+ \le2AK_G\ee^{-an}\left\{
+ \frac{\log Q_X+\log(n+1)}{1-q_0}
+ +\frac{q_0}{(n+1)(1-q_0)^2}\right\}.
+\end{align}
+Cover both sides by unit shells, use
+\(\log(Q_X+k)\le\log Q_X+\log(k+1)\), followed by
+\(\log(n+j+1)\le\log(n+1)+j/(n+1)\).
+This proves complete convergence and
+\(0\le J_\lambda(X)\ll_A\log(3+|X|)\), uniformly in time.
+The boundary tail \eqref{eq:green-boundary-tail} and the zero tail
+\eqref{eq:green-zero-tail} pay different truncations.
+
+If an upper zero has \(y_j\ge d>0\), \(|x_j-X|\le r\), it forces
+\begin{equation}\label{eq:green-defect-margin}
+ J_\lambda(X)\ge\frac{\sin(a)d}{\cosh(ar)}.
+\end{equation}
+This uses \(\operatorname{atanh}u\ge u\) and concavity
+\(\sin(ay)\ge y\sin a\) on \([0,1]\).
+An independently obtained strict upper bound below this margin would
+exclude that declared defect class. The acquired coarse bound does not.
+An all-real slice gives \(J=0\); any upper zero gives \(J>0\) at every
+center. Universal vanishing on the zeta slice is consequently an
+RH-type reformulation, stated here without treating checks as evidence
+for it.
+
+The complete source supplies
+\[
+ S_8=\int_\R\ee^{u^2/2+8|u|}\Phi(u)\dd u<\infty,\qquad
+ |H_\lambda(x+\ii b)|\le S_8/2\quad(0\le b\le8).
+\]
+Integrating the safe-line logarithmic derivative gives
+\begin{equation}\label{eq:green-safe-lower}
+ \log|H_\lambda(X+4\ii)|\ge\log H_\lambda(4\ii)
+                              -A|X|\log(2+|X|).
+\end{equation}
+Neither these separate estimates nor the better count bound yields a
+signed boundary/interior comparison below \eqref{eq:green-defect-margin}.
+In particular an absolute finite-source error for \(H\) cannot be put
+inside its logarithm near real zeros without a relative margin.
+
+Uniform tails on compact center ranges and continuity of finite root
+multisets prove continuity of \(J\) through collisions. They do not
+give the \(y^2\) statistic's Lipschitz law. At a real double event, the
+upper height on the nonreal side is proportional to square-root reverse
+time; \(G(d,y)\) is linear in \(y\) at zero, so its contribution has
+the same square-root leading scale. No monotonicity follows. A local
+factor \((z-r)^2\) gives zero potential, while
+\((z-r)^2+d^2\) gives exactly one upper contribution \(G(X-r,d)\).
+These are factor checks, not canonical-control constructions.
+
+\subsection{An exact time-zero critical-line and prime decomposition}
+The arithmetic reduction in this subsection is specific to \(\lambda=0\)
+\cite{MetricComparison,PrimeBaselineAssessment}. Set
+\begin{align}\label{eq:green-prime-definitions}
+ \mathcal L(X)&=\int_\R K(x-X)
+                   \log|\zeta(\tfrac12-\ii x/2)|\dd x,\nonumber\\
+ P(X)&=\sum_{n\ge2}\frac{\Lambda_{\rm vM}(n)}{\log n}
+          \frac{n^{-5/2}}{1+n^{-4}}\cos\bigl((X/2)\log n\bigr).
+\end{align}
+Here \(\Lambda_{\rm vM}\) is von Mangoldt, distinct from the Newman
+threshold. The logarithmic average is absolutely integrable and the
+prime-power series converges absolutely and uniformly for all real \(X\).
+\begin{proposition}[Prime baseline with the pole paid]\label{prop:green-prime}
+With the canonical normalization,
+\begin{equation}\label{eq:green-prime-identity}
+ J_0(X)=\mathcal L(X)-P(X)+G(X,1),\qquad
+ G(X,1)=\operatorname{atanh}\frac{\sin(\pi/8)}{\cosh(\pi X/8)}.
+\end{equation}
+For integer \(N\ge2\), if \(P_N\) truncates at \(n\le N\),
+\begin{equation}\label{eq:green-prime-tail}
+ |P(X)-P_N(X)|\le\tfrac23N^{-3/2}\qquad\text{for every real \(X\)}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Xi reflection permits \(s=1/2-\ii z/2\) in \(H_0(z)=\xi(s)/8\).
+Heights \(0,4,8\) become real parts \(1/2,5/2,9/2\). Use
+\[
+ \xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s).
+\]
+The selected classical identities and gamma growth are recorded in
+\cite{DLMFGreenPrime}. The factors \(s\), \(\pi^{-s/2}\),
+\(\Gamma(s/2)\), and constants have harmonic logarithmic moduli on
+a neighborhood of the closed strip. The zero of \(s\) is at \(z=-\ii\),
+outside; gamma is zero-free and pole-free here. Stirling growth on
+\(1/4\le\Re(s/2)\le9/4\) is at most linear plus logarithmic for
+the log modulus. The exponential Poisson kernels pay this growth and
+the vertical-side limit, so these factors have zero
+boundary-minus-interior functional. The factor \(s-1\), however, has
+a zero at \(z=\ii\) and contributes \emph{\(+G(X,1)\)}. It pays the
+zeta pole at \(s=1\); \(\log|\zeta|\) must not be treated as harmonic
+across it. Subtracting the paid elementary and gamma logarithms from
+\eqref{eq:green-unit-log} proves absolute weighted integrability of
+the critical-line logarithm, including real multiple zeros.
+
+On each safe line the absolutely convergent Euler logarithm is
+\[
+ \log|\zeta(\sigma-\ii x/2)|
+   =\sum_{n\ge2}\frac{\Lambda_{\rm vM}(n)}{\log n}
+                     n^{-\sigma}\cos\bigl((x/2)\log n\bigr),\quad\sigma>1.
+\]
+For completeness the substitution \(u=\ee^{2ax}\) and the Euler beta
+integral give
+\[
+ \widehat K(\omega)=\frac1{16a}\int_0^\infty
+       \frac{u^{-1/2-\ii\omega/(2a)}}{1+u}\dd u
+   =\frac\pi{16a}\operatorname{sech}\frac{\pi\omega}{2a}
+   =\tfrac12\operatorname{sech}(4\omega).
+\]
+At \(\omega=(\log n)/2\) this is \((n^2+n^{-2})^{-1}\).
+Consequently the safe-boundary minus interior coefficient is exactly
+\begin{equation}\label{eq:green-safe-coefficient}
+ \frac{n^{-9/2}}{n^2+n^{-2}}-n^{-5/2}
+                         =-\frac{n^{-5/2}}{1+n^{-4}}.
+\end{equation}
+Evenness of \(K\) retains the displayed cosine with no extra phase or
+factor of two. Absolute convergence justifies each interchange and gives
+\eqref{eq:green-prime-identity}. Finally
+\(\Lambda_{\rm vM}(p^k)/\log(p^k)=1/k\), and the coefficient is zero
+elsewhere, so it lies in \([0,1]\). For integer \(N\ge2\),
+\[
+ |P-P_N|\le\sum_{n>N}n^{-5/2}
+       \le\int_N^\infty u^{-5/2}\dd u=\tfrac23N^{-3/2}.
+\]
+This proves the uniform tail. A real cutoff uses its integer part.
+\end{proof}
+
+Positivity gives the unconditional \emph{lower} comparison
+\begin{equation}\label{eq:green-prime-lower}
+ \mathcal L(X)\ge P(X)-G(X,1).
+\end{equation}
+To exclude the class in \eqref{eq:green-defect-margin} instead requires
+the unproved strict \emph{upper} comparison
+\begin{equation}\label{eq:green-missing-comparison}
+ \mathcal L(X)<P(X)-G(X,1)+\frac{\sin(a)d}{\cosh(ar)}.
+\end{equation}
+The prime baseline has a fully paid index tail; the critical-line
+logarithmic mean remains the difficult term. The prime tail and the
+boundary tail pay separate errors and must fit within the same declared
+defect margin, with the height factor retained. No Euler product is
+assigned to \(\lambda\ne0\), and no derivative-order or inexpensive
+acquisition claim follows from \eqref{eq:green-prime-tail}.
+
+This interface avoids the Gaussian event-amplitude normalization, while
+its square-root collision scale remains different from the transverse
+\(y^2\) moment. The two missing signed estimates
+\eqref{eq:gaussian-missing-comparison} and
+\eqref{eq:green-missing-comparison} state the actual remaining
+dependencies. Their absence is not a universal exclusion of localized
+metrics or source-sensitive arithmetic estimates.

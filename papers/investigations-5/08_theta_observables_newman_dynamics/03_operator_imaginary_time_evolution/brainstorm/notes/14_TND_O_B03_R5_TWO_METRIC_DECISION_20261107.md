@@ -1,0 +1,25 @@
+# B03 r5: two localized metrics with theta and collision access
+
+6 November 2026 America/New_York (7 November UTC). Prepared for Edward Baker with substantial Codex assistance. Lead tool-selected gpt-6-astra/ultra; proposed proof executor gpt-6.1-sol/ultra. These are dispatch configurations, not backend verification.
+
+The author now permits any localized metric natural on both the complete-theta and collision-dynamics sides. This supersedes the task-wide stopping interpretation of Decision13; its transverse allowance limitation remains valid. Compare exactly two candidates in this revision. The old Gaussian Gram statistic remains an alternative and has not been disproved.
+
+## Candidate A: a Green–Jensen nonreal-zero potential
+
+For a point w above the canonical strip, the upper-half-plane Green contribution of an upper zero z is log|(w−conjugate(z))/(w−z)|. It is positive and vanishes as the zero reaches the real boundary; the strip/unit counts make its distant horizontal terms summable. A finite-domain Green–Jensen formula expresses the sum as a harmonic-measure average of log|H| on the boundary minus log|H(w)|, with the boundary and normalization specified. This is naturally a nonreal-zero statistic, unlike an unconditioned harmonic resolvent trace.
+
+Its unresolved acquisition cost is the signed log-modulus comparison: separate absolute source bounds give large terms and no demonstrated one-defect margin. A global half-plane formula additionally requires its growth/outer-factor correction and real-axis logarithmic integrability; those are not being silently assumed. Its near-boundary linear dependence on |Im z| is also not the previously proved C² collision-stable transverse test. The current package has no stronger canonical comparison for this potential. Retain it as a candidate, without advertising a proved global formula or no-go theorem.
+
+## Candidate B, selected: Gaussian-localized derivative Laguerre defects
+
+For a real heat field H, let L_f=(f')²−ff'', f_n=partial_x^n H, and let A_n(lambda,X,v) be the average of L_(f_n) under the normalized Gaussian of variance v>0 centered at X. This is a signed local statistic with a direct quadratic complete-theta formula, no division by H, and exact heat identity partial_lambda A_n=−partial_XX A_n+2A_(n+1). Along v'=2 the spatial term cancels, so the remaining infinite order hierarchy must be paid rather than truncated. The initial source formula on the full real spectral line is (1/8) integral integral (−uv)^n(u−v)² F_lambda(u)F_lambda(v) exp(iX(u+v)−v_G(u+v)²/2) du dv, where v_G is Gaussian variance and u,v are spectral coordinates.
+
+The fixed-weight n=0 defect is also a local kinetic-energy threshold: A_0=2 integral |(H sqrt(w))'|²−(integral wH²)/(2v_G). Ordinary positive energy is insufficient. The quadratic polynomial with imaginary pair has A_0=2(v_G−d²), while the cubic x(x²+c) has positive first defect 3x⁴+c² although it has an imaginary pair. Its derivative defect is negative after sufficiently narrow smoothing. Therefore the contract retains every derivative index and cannot claim that n=0 detects all collisions.
+
+The tractable analytic target is not unconditional canonical positivity. It is a complete-source/all-order bridge plus a precise collision-resolution comparison. At an m-fold real collision, derivative level m−2 has a quadratic heat normal form. A Gaussian with variance kappa times the reverse distance to collision should give a negative leading signal for fixed 0<kappa<2, but this resolving variance shrinks in Newman time and does not follow v'=2. The E proof must quantify that conflict, including background and Gaussian tails, rather than suppress it.
+
+## Frozen proof route and genuine outcome
+
+E15 is to derive the complete formulas, an all-n factorial bound and a convergent hierarchy with an explicit joint order/remainder bound, then prove the finite-multiplicity local negative signal or return its exact failed clause. A useful source bound is |A_n|<=n!epsilon^(−n) M_0(L+epsilon/2)M_2(L+epsilon/2)/4, with M_j(s)=integral_R |u|^j exp(su²)Phi(u)du. This is uniform in all real centers and all positive variances, not an unevaluated fixed-n constant. The hierarchy remainder must expose its n dependence and source-index/radial tails. The collision signal must expose its local-jet normalization and radius dependence; no uniform all-event radius is presumed.
+
+This selects a tractable B candidate because both source acquisition and collision behavior can be computed exactly, not because a sign theorem has been acquired. A successful return ends at either a sharper canonical consumer actually paid by those bounds, or the explicit missing signed theta estimate/amplitude margin. No numerics or claim of novelty; the classical Laguerre ancestry is recorded in receipt13. [Result index](../../../../../../result-summaries/README.md), [controls12](../../../../../../result-summaries/12_collision_controls_and_screening.md), [pattern index](../../../../../../avoid/README.md) and [scope rule](../../../../../../avoid/07_scoped_exclusions_read_as_universal.md) retain their classifications.

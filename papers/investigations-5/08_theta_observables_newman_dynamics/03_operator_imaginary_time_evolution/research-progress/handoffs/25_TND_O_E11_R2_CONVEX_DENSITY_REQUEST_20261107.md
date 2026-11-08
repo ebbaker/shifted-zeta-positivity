@@ -1,0 +1,13 @@
+# E11 r2: convex transport and full-family exponential density
+
+6 November 2026 America/New_York (7 November UTC). For Edward Baker with OpenAI Codex assistance. Lead tool-selected gpt-6-astra/ultra; executor same gpt-6.1-sol/ultra, not backend verification.
+
+Type E. Pre-dispatch replacement of unexecuted request25 r1, which remains preserved. Read Decision12 and Decision11 and verify inputs25r2. Fixed method/target are equations(C),(D) in Decision12: general even-convex broad-window transport with derivative-independent constant, its cosh consumer giving a uniform full-family exponential off-axis density bound for every fixed b in(0,1/2), and the stated second/all-order local-moment corollaries. No novelty or realness claim.
+
+Use exact canonical normalization and full multiplicity-counted zeros, allT>=8,0<=lambda<=1/2. Complete real exterior field uses opposite pairing; imaginary vertical field is absolutely convergent and permits conjugate pairing. Preserve the horizontal separation in Decision11. Do not bound the favorable vertical or local g'' terms in absolute value. The constant in(C) may depend on the fixed spatial chi and imported count/resolvent constants, but not g derivatives. Collision assembly is now paid by completed Note19/return23; read and verify them, and explain the adaptation to each broad fixedT,g without inserting R=T into the microscopic E10 theorem.
+
+Pay direct time-zero layer cake with fixed c and b<c/2, exact b²/(a²−b²) integral, polynomial flux absorption, large/small bvlogT cases, and bounded dyadic cover for the local all-p corollary. Track all constants' dependence; all p and joint lambda(T),R(T),v(T) must be permitted in the stated ranges. Use Note20's explicit factorial argument, not fixed-order literature constants. The older one-pair failure remains a limitation, not a target to defeat by relabeling.
+
+One theorem/consumer package with one local correction. If a clause fails, return the narrower proved result and exact failed clause; no new mechanism. No numerics or broad literature search. Root separately triages a recent weighted-moment preprint for attribution; do not import it as a premise. Freshly check source passages needed, or identify exact earlier checked source records.
+
+Own only notes/21_TND_O_E11_BROAD_WINDOW_TRANSVERSE_DENSITY_20261107.md and handoffs/25_TND_O_E11_R2_CONVEX_DENSITY_RETURN_20261107.json. No shared edits. Record exact versions/configuration and substantive disposition. No transcript exists. Report proof progress, then finalize for E13 assessment. This assignment is the sole new proof worker; the E12 worker has finished.

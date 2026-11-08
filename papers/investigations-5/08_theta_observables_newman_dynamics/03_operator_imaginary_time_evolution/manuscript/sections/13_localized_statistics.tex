@@ -1,0 +1,316 @@
+\section{Localized statistics and the signal of one pair}
+\label{sec:localized}
+
+Bulk dilution suggests localizing in height, but localization changes
+the arithmetic estimate required. We develop two finite observables:
+a nonnegative coincidence count, and an analytic quadratic form with
+transverse amplification. Their lower signals are exact. The upper
+estimates needed for a contradiction remain separate, unproved inputs.
+
+\subsection{Height windows, resolution and normalization}
+Fix \(T>1\), a center \(v\in[T,2T]\), and \(0<h<T/2\). Let
+\(L=(\log T)/(2\pi)\) and choose \(w\in C_c^\infty(\R)\) with
+\(0\le w\le1\), support in \([-1,1]\), and \(w=1\) on
+\([-1/2,1/2]\). For all nontrivial zeta zeros
+\(\rho_j=\sigma_j+\ii t_j\), counted with multiplicity, put
+\begin{equation}\label{eq:local-window}
+ w_j(v)=w\!\left(\frac{t_j-v}{h}\right),\qquad
+ q=hL,\qquad C_w(b)=\int_\R w(r)w(r-b)\dd r,\qquad M=qC_w(0).
+\end{equation}
+Every sum below is finite because of the window. The quantity \(M\)
+is a declared density normalization, not the zero count of every window.
+The width \(h\) and the resolution of differences within a window
+are distinct choices.
+
+A final pair \(x_f\pm\ii d\) of \(H_0\), with \(d>0\),
+corresponds to the two zeta zeros
+\begin{equation}\label{eq:localized-pair}
+ \rho_\pm=\frac12\pm\frac d2+\ii\theta,\qquad
+ \theta=x_f/2,\qquad 0<d<1.
+\end{equation}
+They have exactly the same ordinate. Theorem~\ref{thm:tube}, if its
+hypotheses hold to time zero, bounds both \(d\) and \(\theta\).
+The common weight is \(w_0(v)=w((\theta-v)/h)\); it equals one on
+the center interval \(J_\theta=[\theta-h/2,\theta+h/2]\).
+
+\subsection{A positive coincidence signal}
+Let \(\varphi\) be an even, nonnegative Schwartz function with
+\(\varphi(0)=1\). For resolution \(\varepsilon>0\), define the
+unnormalized ordered-pair statistic
+\begin{equation}\label{eq:local-S}
+ S_{v,h,\varepsilon}
+ =\sum_{j\ne k}w_j(v)w_k(v)
+       \varphi\!\left(\frac{L(t_j-t_k)}{\varepsilon}\right).
+\end{equation}
+The condition \(j\ne k\) removes a copy's self-pair, but retains
+distinct copies at the same ordinate, including multiplicity.
+
+\begin{proposition}[The local coincidence atom]\label{prop:local-atom}
+If \(m_t\) is the total multiplicity at ordinate \(t\), then
+\begin{equation}\label{eq:local-D}
+ D_{v,h}:=\lim_{\varepsilon\downarrow0}S_{v,h,\varepsilon}
+ =\sum_t w\!\left(\frac{t-v}{h}\right)^2m_t(m_t-1),
+ \qquad S_{v,h,\varepsilon}\ge D_{v,h}.
+\end{equation}
+The two selected copies in \eqref{eq:localized-pair} contribute exactly
+\(2w_0(v)^2\) to the coincidence part, and therefore
+\(S_{v,h,\varepsilon}\ge2\) on \(J_\theta\).
+\end{proposition}
+\begin{proof}
+In the finite sum, each term with \(t_j\ne t_k\) tends to zero,
+whereas each equal-ordinate term has test value one. There are
+\(m_t(m_t-1)\) ordered distinct pairs at ordinate \(t\).
+All remaining summands are nonnegative, proving the inequality.
+The selected pair contributes its two orders; any additional copies
+at the same ordinate can only increase the statistic.
+\end{proof}
+
+Dividing by \(M\) gives a pair contribution \(2w_0^2/M\).
+It remains of order one for \(hL\asymp1\), whereas it is diluted
+when \(hL\to\infty\). Localization therefore evades the specific
+bulk sensitivity limitation of Proposition~\ref{prop:finite-defects}.
+It does not automatically evade averaging over centers. The exact
+center integral of this contribution is
+\begin{equation}\label{eq:atom-center-moment}
+ \int_\R(2w_0(v)^2)^p\dd v
+      =2^p h\int_\R w(r)^{2p}\dd r\qquad(p>0).
+\end{equation}
+If the profile is contained in \([T,2T]\), its normalized center
+average thus has size \(h/T\), for every fixed \(p\).
+
+The atom records multiplicity as well as off-line pairs. If
+\(D_{v,h}=0\) for a covering family of windows, every ordinate
+contains at most one simple zero; reflection then puts that zero on
+the critical line. Conversely, simple critical-line zeros give
+\(D_{v,h}=0\). This all-window assertion is RH together with
+simplicity, and is not an independently established estimate.
+Moreover, the coincidence signal does not grow with \(d\).
+
+\subsection{The exact reference-process comparison}
+To make the scale of a possible arithmetic estimate explicit, let
+\(R_2(r)=1-(\sin\pi r/(\pi r))^2\), the unit-density sine-process
+pair density, and put
+\begin{equation}\label{eq:I-epsilon}
+ I_\varepsilon=\int_\R\varphi(r/\varepsilon)R_2(r)\dd r
+ =C_\varphi\varepsilon^3+O_\varphi(\varepsilon^5),\qquad
+ C_\varphi=\frac{\pi^2}{3}\int_\R r^2\varphi(r)\dd r>0.
+\end{equation}
+Indeed \(R_2(r)=\pi^2r^2/3+O(r^4)\), with a global remainder
+bound after enlarging the constant; the change of variable
+\(r=\varepsilon u\) and the fourth Schwartz moment prove the expansion.
+
+\begin{proposition}[Finite-window sine comparison]\label{prop:sine-window}
+For the sine process, the expected value of \eqref{eq:local-S}, with
+window width \(q\) in unit-density coordinates, is
+\begin{equation}\label{eq:sine-window}
+ \mathcal M_{q,\varepsilon}
+ =q\int_\R C_w(r/q)\varphi(r/\varepsilon)R_2(r)\dd r
+ \le M I_\varepsilon.
+\end{equation}
+More precisely, for \(q>0\) and \(0<\varepsilon\le1\),
+\begin{equation}\label{eq:sine-window-error}
+ 0\le M I_\varepsilon-\mathcal M_{q,\varepsilon}
+       \ll_{w,\varphi}\varepsilon^5/q.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The expectation is the double integral of
+\(w(a/q)w(b/q)\varphi((a-b)/\varepsilon)R_2(a-b)\).
+Set \(r=a-b\) and integrate in \(a\) to obtain
+\eqref{eq:sine-window}. Cauchy--Schwarz gives
+\(C_w(b)\le C_w(0)\). Translation invariance and the fundamental
+theorem of calculus give the sharper identity and bound
+\[
+ C_w(0)-C_w(b)=\tfrac12\|w-w(\cdot-b)\|_2^2
+                       \le\tfrac12 b^2\|w'\|_2^2.
+\]
+Insert this bound in the integral and use \(0\le R_2(r)\ll r^2\).
+The remaining fourth moment scales as \(\varepsilon^5\), proving
+\eqref{eq:sine-window-error}.
+\end{proof}
+
+This proposition computes a reference-process main term; it asserts
+no local zeta asymptotic. If one could independently prove
+\begin{equation}\label{eq:coincidence-target}
+ S_{v,h,\varepsilon}\le M I_\varepsilon+E(T,h,\varepsilon)
+\end{equation}
+uniformly at the relevant centers, a pair on the plateau would be
+excluded only when the entire right-hand side is less than two.
+For large \(M\), the main term suggests
+\(\varepsilon\lesssim M^{-1/3}\), with a sufficiently small constant,
+but an \emph{absolute} remainder below the residual one-pair margin
+is still needed. A normalized \(o(1)\) error yields only \(o(M)\)
+before normalization and is insufficient in general.
+Also \(\widehat{\varphi(\cdot/\varepsilon)}(\xi)
+=\varepsilon\widehat\varphi(\varepsilon\xi)\): narrowing the
+test expands its Fourier scale by \(\varepsilon^{-1}\).
+Theorem~\ref{thm:BGST} supplies neither this extended frequency range
+nor the required moving-window estimate; its complex-difference
+observable also differs from \(S\). Such an unmarked bound may
+also exclude very close real pairs, a stronger demand than detecting
+only nonreal zeros.
+
+\subsection{An analytic signal with transverse growth}
+For frequency \(a\ge0\), retain the kernel \(W\) of
+\eqref{eq:F-complex} and define
+\begin{equation}\label{eq:localized-E}
+ E_{v,h}(a)=\sum_{j,k}w_j(v)w_k(v)
+       \ee^{a(\rho_j-\rho_k)}W(\rho_j-\rho_k).
+\end{equation}
+This includes self terms. It is real and nonnegative, although its
+individual summands need not be.
+
+\begin{proposition}[Weighted Gram identity and background cost]
+\label{prop:weighted-Gram}
+For the finite reflected zero multiset in a height window,
+\begin{equation}\label{eq:weighted-Gram}
+ E_{v,h}(a)=\int_\R\ee^{-2|r|}
+ \left|\sum_jw_j(v)\ee^{(\rho_j-1/2)(a+r)}\right|^2\dd r.
+\end{equation}
+Separate the two selected copies \eqref{eq:localized-pair} from the
+remaining sum in this Hilbert norm. Their squared norm is
+\begin{equation}\label{eq:pair-P}
+ P_v=2w_0(v)^2[1+W(d)\cosh(ad)].
+\end{equation}
+If \(B_v\) is the squared norm of the remaining sum, then
+\begin{equation}\label{eq:background-lower}
+ E_{v,h}(a)\ge(\sqrt{P_v}-\sqrt{B_v})_+^2,
+ \qquad
+ P_v\le\bigl(\sqrt{E_{v,h}(a)}+\sqrt{B_v}\bigr)^2.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The weights depend only on ordinate and are therefore equal on
+\(\rho\mapsto1-\overline\rho\) partners. Relabel the second index
+as in Proposition~\ref{prop:complex-Gram} and use
+\(W(u)=\int_\R\ee^{-2|r|+ur}\dd r\). This proves
+\eqref{eq:weighted-Gram}; all sums are finite and
+\(|\Re u|<1\) ensures convergence. For the pair there are two
+self terms, each \(w_0^2\), and two cross terms
+\(w_0^2 W(d)\ee^{\pm ad}\), giving \eqref{eq:pair-P}.
+Finally apply the triangle and reverse triangle inequalities to the
+pair and background vectors in \(L^2(\ee^{-2|r|}\dd r)\).
+\end{proof}
+
+Thus positivity of \(E\) does not imply \(E\ge P_v\).
+If independent bounds give \(E\le\mathcal U\) and
+\(B_v\le\mathcal V\), the necessary comparison is
+\(P_v\le(\sqrt{\mathcal U}+\sqrt{\mathcal V})^2\).
+Both bounds are required. When all background zeros are on the critical
+line, the triangle inequality gives
+\(\sqrt{B_v}\le\sum_{\rm background}w_j\), because each exponential
+has unit norm. This is an illustration under an additional hypothesis,
+not an assumption in the proposed unconditional strategy.
+
+For \(a=\alpha\log T\) and fixed \(d>0\), the pair norm on its
+plateau grows like \(T^{\alpha d}\). If \(d=O(1/\log T)\) and
+\(\alpha\) is bounded, this amplification stays bounded. A simpler
+nonnegative transverse observable is
+\begin{equation}\label{eq:local-transverse}
+ A_{v,h}=\sum_jw_j(v)^2 L^2(\sigma_j-\tfrac12)^2.
+\end{equation}
+The pair contributes \(L^2d^2w_0^2/2\). Near a collision,
+\eqref{eq:postcollision-jet} therefore identifies the dimensionless
+time scale \(sL^2\). Vanishing of \(A\) in every covering window
+is exactly RH; the definition provides no independent upper bound.
+
+\subsection{Combining transport, amplitude and center width}
+The preceding results can be assembled without hiding their missing
+arithmetic premise. Let the controlled tube reach time zero and choose
+\([T,2T]\) to contain its possible final ordinate. Let
+\(J\subset J_\theta\cap[T,2T]\) be an interval of length \(\ell_J>0\).
+On it, \(w_0=1\), and monotonicity of \(W(d)\) and \(\cosh(ad)\)
+for \(0\le d<1\) gives
+\begin{equation}\label{eq:P-star}
+ P_v\ge P_*:=2[1+W(d_*)\cosh(ad_*)],
+\end{equation}
+provided the tube lower bound \(d_*\) is less than one. If
+\(d_*\ge1\), the tube hypotheses already contradict the canonical
+open strip.
+
+\begin{corollary}[Conditional localized comparisons]
+\label{cor:localized-contract}
+Under these transport and plateau hypotheses:
+\begin{enumerate}[label=(\roman*)]
+\item A bound \eqref{eq:coincidence-target} at any center in \(J\)
+with right-hand side below two contradicts the pair.
+\item If \(B_v\le\mathcal V\) on \(J\), put
+\(A_*=(\sqrt{P_*}-\sqrt{\mathcal V})_+^2\).
+Then \(E_{v,h}(a)\ge A_*\) there. A pointwise upper bound
+\(E_{v,h}(a)\le\mathcal U<A_*\) at a center in \(J\) is impossible.
+\item For any \(p>0\), the same background bound implies
+\begin{equation}\label{eq:moment-lower}
+ \frac1T\int_T^{2T} E_{v,h}(a)^p\dd v
+                  \ge\frac{\ell_J}{T}A_*^p.
+\end{equation}
+An independent moment upper bound strictly below this allowance
+also contradicts the pair. Similarly,
+\(T^{-1}\int_T^{2T}S_{v,h,\varepsilon}^p\dd v
+\ge(\ell_J/T)2^p\).
+\end{enumerate}
+\end{corollary}
+\begin{proof}
+Apply Propositions~\ref{prop:local-atom} and~\ref{prop:weighted-Gram}
+on the plateau, and integrate the resulting nonnegative lower bounds
+over \(J\).
+\end{proof}
+This corollary is a conditional assembly of proved finite identities,
+not an established arithmetic bound. If \(\ell_J\asymp h\) and a
+signal comparable to \(T^{\alpha d}\) survives the background, the
+moment lower scale is \((h/T)T^{p\alpha d}\). Transverse growth can
+therefore overcome center dilution in principle. The background estimate
+and an unconditional moment theorem at the same window and frequency
+are the substantive missing inputs. A fixed-height exception does not
+by itself supply a sequence of exceptions tending to infinite height;
+an asymptotic argument must also address its finite-height range.
+
+\subsection{What the available local estimates pay}
+The relevant published statements have different quantifiers.
+Maples--Rodgers' unconditional mesoscopic central limit theorem uses
+a uniformly random center in \([T,2T]\), compact bounded-variation
+tests with diverging variance, and \(n(T)\to\infty\) with
+\(n(T)=o(\log T)\) \cite[Theorem~1.2]{MaplesRodgers2015}.
+It is not a uniform microscopic estimate. Their local zero-density
+moment bound, writing \(N(\sigma,t)\) for the number of zeros with
+real part greater than \(\sigma\) and ordinate in \((0,t)\), is
+\begin{equation}\label{eq:MR-local}
+ \frac1T\int_0^T
+ |N(\sigma,v+H/\log T)-N(\sigma,v)|^k\dd v
+ \ll_{c,k} H^k T^{-c(\sigma-1/2)}.
+\end{equation}
+Here \(k\ge1\) is fixed, \(1\le H\le T^{1/4}\),
+\(0<c<1/2\), and we use \(1/2<\sigma<1\)
+\cite[Proposition~2.5]{MaplesRodgers2015}.
+One zero with real part greater than \(\sigma\), sufficiently far
+from the center-range endpoints, contributes at least
+\(H/(T\log T)\) to the left-hand side for every fixed \(k\).
+For fixed \(H,\sigma\), this is smaller than the permitted upper
+scale: their ratio is
+\(O(H^{1-k}T^{-1+c(\sigma-1/2)}/\log T)\to0\).
+Thus the stated estimate allows one narrow spike. Varying \(k\)
+with \(T\) would require its presently untracked constants.
+
+Rodgers' sharp microscopic clump-frequency bound has decay
+\(\exp(-cA\log A)\), averages over centers, and assumes RH
+\cite[Theorem~1.1 and Corollary~1.2]{Rodgers2017Tails}.
+It cannot be used as an unconditional exclusion here. These selected
+source comparisons leave the inequalities in
+Corollary~\ref{cor:localized-contract} unpaid; they do not assert
+that no other localized theorem could help.
+
+\subsection{Controls and the precise scope of the reduction}
+The polynomial heat solution
+\(H_\lambda(z)=(z-x_*)^2+2(\lambda_*-\lambda)\)
+has \(g=0\), fixed midpoint and \(y^2=2s\). It attains the
+\(K=0\) transport bounds and exhibits both local pair signals.
+It is a local dynamical control, not a theta source; its two moving
+roots do not create a broad final cluster. The smooth positive source
+in Section~\ref{sec:control} also collides while satisfying the generic
+analytic and operator hypotheses, but fails the literal theta arithmetic.
+The repository's Euler-factor controls alter that arithmetic;
+weighted-square controls lack complete reflection; fully reflected
+smooth and positive-primitive controls lack the canonical square
+coefficients. None is asserted to satisfy the unproved arithmetic
+upper bounds proposed here. The missing discriminator must use
+independent canonical information, with the same source and error
+budget available to the direct scalar analysis.

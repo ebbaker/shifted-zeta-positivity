@@ -1,71 +1,25 @@
-# Imaginary-Time Realization and Collision Geometry of the Newman Family
+# Evolving operator/Newman manuscript
 
-6 November 2026. Drafted for **Edward Baker** with substantial LLM assistance,
-actual **gpt-6-astra / max**, branch chat0004. TND-O-E04/B03 analytical
-revision of the single evolving manuscript; initial E03 milestone remains
-in the draft history. No snapshot folder is created.
+7 November 2026 America/New_York. Drafted for Edward Baker with substantial Codex assistance. E18 editor and E19 content assessor are explicitly selected gpt-6.1-sol/ultra; current root coordinator model/effort is unavailable. Earlier research selected Astra/ultra for direction and Sol/ultra for proof and assessment. These are dispatch records, not independently verified backend identities.
 
-The [editable source](main.tex) and
-[32-page reading PDF](../../../../../output/pdf/08_theta_observables_newman_dynamics/operator_imaginary_time_evolution/operator_newman_collision_geometry.pdf)
-develop the supplied theta source, operator realization, local event,
-source-dependent coefficients and nonreal-zero statistics in one sequence.
-The PDF lives only in ignored root output/pdf.
+The current E18 manuscript is **58 pages**. [Source](main.tex), [reading PDF](../../../../../output/pdf/08_theta_observables_newman_dynamics/operator_imaginary_time_evolution/operator_newman_collision_geometry_E18_20261107.pdf) and [build record](BUILD_RECORD.json) identify the maintained version. No manuscript snapshot folder was created.
 
 | Sections | Development |
 | --- | --- |
-| 1–4 | Normalization, complete theta bounds, entire heat orbit, raw Green strip, full cylinder operator/readout and regular global energy |
-| 5 | Collision geometry, preserved equations(5.4)–(5.5), critical-curve/exterior coefficient dictionary and conditional real-zero benchmark |
-| 6–7 | Complete signed theta moments, half-line primitive and endpoint, contour/error interface, exact moving-lobe balances and scales |
-| 8–10 | Interference, source response, finite higher multiplicity, exact smooth collision control and analytical negative-curvature sign |
-| 11 | Rodgers–Tao exterior interactions and renormalization, with the collision pole retained |
-| 12 | Unconditional complex-difference statistics, conditional ordinate PCC, finite-exception stability, marked statistics, fixed-positive-time tails and transverse motion |
-| 13–14 | Evidence boundaries and outstanding analytical tasks |
+| 1–4 | Complete theta source, cylinder operator, calibrated readout and field energy |
+| 5–11 | Collision geometry, source coefficients, multiplicity, control and real-zero comparison |
+| 12–14 | Conditional complex transport, bulk/finite-exception statistics, Gaussian Gram and coincidence signals |
+| 15–16 | Complete transverse calculus and collision-stable modulus; convex transport, full-family density, every-order moments and allowance limitations |
+| 17 | Gaussian derivative Laguerre hierarchy, complete source/order tails, finite-multiplicity signal and resolving-variance costs |
+| 18 | Complete positive Green-strip potential, logarithmic and zero tails, one-defect margin and time-zero prime baseline |
+| 19–20 | Evidence scope and the remaining signed canonical comparisons |
 
-The author-preferred term is **collision**; “double zero” denotes multiplicity.
-All theorem arguments are analytical or explicitly attributed imports.
-Inherited rational-algebra checks are ancillary; the schematic is a
-quadratic heat model, not theta data. No canonical collision exclusion or
-contradiction to Lambda>0 is proved.
+The one-point transverse measure, Gaussian Gram statistic, Gaussian derivative defect and Green potential are distinct objects. Earlier sections 1–16 and all 207 non-scope labels retain their numbering. Neither new metric has acquired the needed signed exclusion estimate.
 
-## Build and verify
+Run `bash build.sh` here. The canonical bibliography composer selects 29 records; requirements remain Python 3.9+, pdfLaTeX, latexmk, BibTeX, Latin Modern, microtype, TikZ, hyperref and plainurl. The PDF belongs in ignored root output/pdf. The final build has no warnings, unresolved references or bad boxes. Root rendered all 58 pages and inspected all 8 contact sheets, with detailed inspection of pages 1 and 43–56; no layout defect was observed. This production validation is separate from mathematical assessment.
 
-Run from this directory:
+[Integration Note26](../notes/26_TND_O_E18_METRIC_MANUSCRIPT_INTEGRATION_20261107.md) and [E19 assessment11](../reviews/11_TND_O_E19_METRIC_INTEGRATION_ASSESSMENT_20261107.md) record the fixed integration. E09/E13 assessed the transverse claims, E16 the Gaussian/Green packages, and E17 the prime reduction with integer cutoff N>=2. All retain shared premises and their actual scopes; earlier coefficient/statistic evidence is unchanged. There is no specialist independence, novelty validation, isolated-defect exclusion or improved eventual-realness threshold.
 
-~~~sh
-bash build.sh
-~~~
+[Continuation27](../notes/27_TND_O_NEXT_BRAINSTORM_SIGNED_CANONICAL_ESTIMATES_20261107.md) historically prepared B04 r5; E22 now routes to the [Green continuation](../01_green_potential_resolvent/continuation-notes/01_TND_OG_GREEN_RESOLVENT_CONTINUATION_20261107.md) and [localized-correlation continuation](../02_localized_zero_correlations/continuation-notes/01_TND_OC_LOCALIZED_CORRELATIONS_CONTINUATION_20261107.md); the [sole register02](../research-progress/02_SMOOTH_LOCALIZATION_RESEARCH_PROGRESS_20261106.md) owns live status. [Integration Note23](../notes/23_TND_O_E14_SMOOTH_LOCALIZATION_INTEGRATION_20261107.md) and [production check08](../reviews/08_TND_O_E14_MANUSCRIPT_PRODUCTION_CHECK_20261107.md) remain the historical 46-page E14 milestone.
 
-Requirements: Python3.9+, pdfLaTeX, latexmk, BibTeX, Latin Modern,
-microtype, TikZ, hyperref and plainurl.
-[prepare_bibliography.py](prepare_bibliography.py) selects17 cited records
-from their canonical repository homes into a build-only bibliography in
-ignored output/pdf. Newly used complex-statistics articles have their
-canonical branch records in
-[complex_statistics_sources.bib](../references/complex_statistics_sources.bib);
-earlier shared records are reused. No third-party PDFs enter Git.
-
-The [build record](BUILD_RECORD.json) identifies final sources, canonical
-bibliographies, PDF and all rendered pages. The final build has no warnings,
-unresolved references or overfull/underfull boxes. All32 final page images
-were inspected, using identity checks for unchanged pages after the final
-reference-layout refinement. Text extraction has no replacement characters.
-
-## Evidence and continuation
-
-[Production check03](../reviews/03_TND_O_E04_B03_ANALYTICAL_AND_PRODUCTION_CHECK_20261106.md)
-is a same-author analytical/production check, not independent mathematical
-assessment. E01/E02/Q1/Q2 retain their supplied-preparation scope.
-New finite identities and sensitivity estimates have proof-author checks;
-arithmetic and positive-time tail theorems are imported with their stated
-hypotheses. See [source-use07](../references/07_TND_O_B03_COMPLEX_ZERO_STATISTICS_SOURCE_USE_20261106.md),
-[research return13](../notes/13_TND_O_B03_COMPLEX_ZERO_STATISTICS_AND_MANUSCRIPT_RETURN_20261106.md)
-and [continuation/model-change14](../notes/14_TND_O_E04_B03_CONTINUATION_AND_MODEL_CHANGE_20261106.md).
-
-Section14 identifies the missing canonical coefficient/exception-sensitive
-estimate, joint time-height control, event coverage and separate assessment.
-Recommended next is proposed **E05/Sol** assessment; no successor is activated.
-The [sole progress register](../research-progress/01_OPERATOR_ITE_RESEARCH_PROGRESS_20261106.md)
-owns status. Use [result summaries](../../../../../result-summaries/README.md),
-[local geometry13](../../../../../result-summaries/13_local_heat_flow_geometry_and_rh_equivalent_criteria.md),
-[patterns](../../../../../avoid/README.md) and
-[scoped exclusions](../../../../../avoid/07_scoped_exclusions_read_as_universal.md).
+At E18 preparation time the original checkout remained unchanged and a verified source patch accompanied the working revision. The [7 November handoff integration](../notes/TND_O_COMPLETE_HANDOFF_INTEGRATION_20261107.md) installed these sources in `/Users/ebbaker/Documents/shifted-zeta-positivity`. The supplied E18 PDF is stored under the versioned reading-copy link above; the different preexisting PDF remains at its original path. BUILD_RECORD.json and issued returns retain their original build/source hashes and checkout provenance; no manuscript rebuild, commit or push was performed during integration.

@@ -1,0 +1,5 @@
+# Green/resolvent conceptual decisions
+
+7 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Explicit worker dispatch selected **gpt-6.1-sol / ultra**; this is the supplied actual selection, not independent backend verification. Root model/effort unavailable.
+
+Reserved for consequential TND-OG mechanism/consumer decisions. The shared setup discussion remains canonical at parent [synthesis19](../../../brainstorm/notes/19_TND_O_GREEN_CORRELATION_BIFURCATION_SYNTHESIS_20261107.md); this pointer is not a new research note. The next [B01 plan](../../research-plan/01_TND_OG_GREEN_RESOLVENT_RESEARCH_PLAN_20261107.md) permits at most two mechanisms and one focused clarification, with an independent quantitative gain or a precise scoped stop. [Continuation01](../../continuation-notes/01_TND_OG_GREEN_RESOLVENT_CONTINUATION_20261107.md) supplies the standalone prompt; [the sole register](../../research-progress/01_TND_OG_GREEN_RESOLVENT_RESEARCH_PROGRESS_20261107.md) owns status.

@@ -1,0 +1,11 @@
+# E11 r1: canonical broad-window transverse-mass transport
+
+6 November 2026 America/New_York (7 November UTC). For Edward Baker with OpenAI Codex assistance. Lead gpt-6-astra/ultra; executor same tool-selected gpt-6.1-sol/ultra configuration, not backend verification.
+
+Type E. Read/verify inputs25, fixed B05 Decision11 and needed E08/E09/E10r1/E10r2 sources. The task is exactly theorem(B) and its delta-tail corollary in Decision11: Q_T(lambda)<=Q_T(0)+Cχlambda log³T and sum_{T<=x<=2T}y²<=C T/logT, uniformly allT>=8,0<=lambda<=1/2. Full zeros/multiplicities, no RH or simplicity/global trajectory assumption. One theorem and one local correction pass.
+
+Use precisely the compact broad window/support/cluster and kernel/sign/field proof fixed in Decision11. Freshly check primary-source coarse count/safe-line and density premises as needed; reused verified sources may be explicitly identified. Complete opposite pairing for real field and absolute imaginary convergence for conjugate grouping must both be paid. The far field costs O(log²T), not silently O(logT); horizontal flux O(log³T) is sufficient. Do not plug R=T into E10's R<=1 theorem. Adapt E08's general compact-weight argument and the finite-event assembly. E12 is concurrently finalizing that qualitative lemma; record its actual output as an additional input if used, or prove the short local Hermite/compactness statement yourself. Acceptance across collisions is gated on this payment, not provisional assertion.
+
+Time-zero layer cake must cover support[T/2,5T/2] with exact H/zeta coordinate factors and fixed density exponent. Show log^4T/T uniformly bounded on T>=8 to absorb the flux. No attempt to exclude a single pair or improve Polymath's realness threshold. No numerical run, literature novelty claim, or broad alternate consumer.
+
+Own only notes/21_TND_O_E11_BROAD_WINDOW_TRANSVERSE_DENSITY_20261107.md and handoffs/25_TND_O_E11_BROAD_WINDOW_RETURN_20261107.json. Do not edit shared files or earlier proofs. Record exact input/output hashes, post-dispatch inputs if any, tool-selected configuration and scoped result. No transcript exists. Report proof closure/failed clause, then finish the bounded package for E13 assessment.

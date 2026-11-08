@@ -39,41 +39,55 @@
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \title{Imaginary-Time Realization and Collision Geometry\\of the Newman Family}
 \author{Drafted for Edward Baker}
-\date{6 November 2026\\\small Analytical revision: coefficients and zero statistics}
+\date{7 November 2026 (America/New\_York)\\\small Analytical revision: localized metrics and the signed arithmetic comparison}
 \hypersetup{pdftitle={Imaginary-Time Realization and Collision Geometry of the Newman Family},pdfauthor={Drafted for Edward Baker},pdfsubject={Complete operator realization, local heat collisions, energy and interference}}
 \begin{document}
 \maketitle
 \begin{abstract}
-We develop an imaginary-time realization of the canonical Newman family
-on the complete spherical cylinder and a systematic account of a
-hypothetical real zero collision. The normalized theta source is supplied,
-while its complete arithmetic expansion justifies analytic continuation,
-all fixed source moments and the operator domains used in the argument.
-A nonnegative shifted cylinder generator, an isometric Fourier preparation
-and a fixed bounded amplitude readout recover the absolute Newman orbit.
-We prove the maximal-domain and common-core statements, explain the energy
-shift, and identify the exact scalar comparison. We then derive the local
-heat geometry of collisions and higher-order events. A collision with a double zero has
-singular individual zero velocities but regular critical-value and
-squared-gap coordinates. Its disappearing sign region has mass of order
-\(\epsilon^{5/2}\) and kinetic form of order \(\epsilon^{3/2}\), so its
-normalized local energy diverges while the full state and energy remain
-regular. Momentum damping and spatial heat averaging give complementary
-interference balances, and small source changes move the event smoothly.
-Normalized critical coefficients connect the local geometry to the
-exterior zero factor, exact theta moments and an endpoint-correct
-primitive identity. An explicit admissible colliding source demonstrates
-why the conditional negative-curvature sign cannot exclude a collision.
-We then examine pair statistics without an all-real-zero hypothesis.
-An unconditional complex-difference correlation theorem is available,
-but leading bulk statistics are stable under finitely many zero changes.
-The established real, regularly spaced tail at each fixed positive
-Newman time explains why a reverse Rodgers--Tao contradiction needs
-additional control of sparse exceptions. A finite-cluster transverse
-balance identifies the exterior term that such control must address. The analytical derivations are the main evidence; finite
-algebra checks are ancillary. No canonical collision, collision exclusion
-or advantage over equally informed scalar source analysis is established.
-The final section sets out the remaining analytical tasks.
+We develop the imaginary-time realization of the canonical Newman family,
+its local collision geometry, and the passage from a hypothetical
+collision to a height-localized statistic. Complete theta-source bounds
+justify the full cylinder operator, its calibrated amplitude readout,
+and every fixed derivative used below. The operator representation has
+exactly the same source error as direct scalar heat evolution.
+At a double collision, individual zero velocities are singular while the
+critical value and squared gap are analytic. The disappearing sign
+region has mass of order \(\epsilon^{5/2}\) and kinetic form of order
+\(\epsilon^{3/2}\); its normalized local energy diverges although the
+full state remains regular. Exact theta-moment, primitive and contour
+identities identify the exterior coefficients governing the event.
+We then derive conditional transport bounds for a nonreal pair, a
+persistent-neighbor amplification estimate, and the additional terms
+created by a moving spatial window. Two finite statistics detect a pair
+on the zeta slice: a positive coincidence count contributes exactly two
+on a plateau, while an analytic Gram statistic has a pair norm
+\(2[1+W(d)\cosh(ad)]\). The latter requires an explicit background
+norm bound before its growth yields a lower signal. We combine transport,
+amplitude and plateau width into precise pointwise and moment comparisons.
+A smooth one-point transverse measure then supplies exact paired
+calculus, a gap-independent canonical modulus, and a Lipschitz assembly
+through every collision in a fixed compact window. The exact slope jump
+is determined by multiplicity and the test Laplacian. Broad even-convex
+tests have a one-sided flux cost independent of their derivatives; a cosh
+test propagates canonical time-zero density to
+\(N_\lambda(T,v)\ll_b T\log T\,T^{-bv}\), for every fixed \(b<1/2\),
+uniformly on \(0\le\lambda\le1/2\). Local center moments of every
+integer order follow with explicit factorial growth. An initial off-line
+pair also gives a lower threshold bound of order \(d^2/\log^2 X\).
+The acquired moment allowances still exceed a single pair's exact signal
+at every order. We further derive the complete Gaussian-localized
+derivative Laguerre hierarchy with joint order, theta-index and radial
+errors. Every finite real multiplicity has a paid negative signal at
+derivative level \(m-2\), but its shrinking resolving variance conflicts
+with the growing spatial-cancellation characteristic. A positive,
+scalar-invariant Green-strip potential has complete boundary and zero
+tails and an absolute one-defect margin. At time zero it equals a
+critical-line logarithmic mean minus an absolutely convergent prime
+baseline, with the zeta-pole correction paid explicitly. The acquired
+comparison is a lower bound; the exclusion upper bound remains unproved.
+These analytical results do not exclude isolated defects or improve an
+eventual-realness threshold. Their internal assessments retain
+shared-premise limitations; no novelty claim is made.
 \end{abstract}
 \clearpage
 \tableofcontents
@@ -89,20 +103,44 @@ The final section sets out the remaining analytical tasks.
 \input{sections/08_multiplicity}
 \input{sections/09_control}
 \input{sections/10_rodgers_tao}
+\input{sections/12_complex_dynamics}
 \input{sections/11_complex_statistics}
+\input{sections/13_localized_statistics}
+\input{sections/14_smooth_transverse}
+\input{sections/15_density_transport}
+\input{sections/16_gaussian_laguerre}
+\input{sections/17_green_strip}
 \input{sections/10_support_scope}
 \input{sections/11_outstanding}
 \section*{Acknowledgements and evidence provenance}
 This manuscript was drafted for Edward Baker with substantial assistance
 from OpenAI models through Codex. The operator proof and its internal
 assessment used \texttt{gpt-6.1-sol}, recorded effort \texttt{ultra}.
-The collision reconnaissance and the present analytical synthesis used
-\texttt{gpt-6-astra}, recorded effort \texttt{max}. Assistance included
+The collision reconnaissance and preceding analytical synthesis used
+\texttt{gpt-6-astra}, recorded effort \texttt{max}. The earlier E06
+localized-statistics integration was performed in Codex; its exact model
+identifier and effort were not exposed in the available session metadata
+and are not inferred from earlier sessions. Assistance included
 derivation, source comparison, exposition, algebra checking and document
 production. The operator foundation has an internal same-assistant,
-same-model assessment with shared premises. The collision and finite-statistic calculations
-retain proof-author checking; the present production review is not a
-separate mathematical assessment. These records are neither specialist
+same-model assessment with shared premises. The earlier collision and finite-statistic calculations
+retain proof-author checking. The smooth-localization extension used
+tool-selected \texttt{gpt-6-astra}/\texttt{ultra} for research direction
+and integration, and \texttt{gpt-6.1-sol}/\texttt{ultra} for proof and
+distinct internal assessment. These dispatch records do not independently
+verify backend identity. E09 and E13 accepted their frozen claim packages
+within scope; they did not reassess every inherited section. Production
+validation does not strengthen that mathematical evidence. The Gaussian
+hierarchy used explicitly selected \texttt{gpt-6.1-sol}/\texttt{ultra};
+the Green and metric-comparison synthesis used tool-selected
+\texttt{gpt-6-astra}/\texttt{ultra}, with root read-only checking whose
+configuration is not inferred. E16 accepted the frozen Gaussian/Green
+proofs without mathematical correction within scope; E17 accepted the
+time-zero prime reduction with its integer-index clarification. Both used
+distinct internal \texttt{gpt-6.1-sol}/\texttt{ultra} assessment and retain
+shared premises. E18 manuscript integration used explicitly selected
+\texttt{gpt-6.1-sol}/\texttt{ultra}; editorial integration does not enlarge
+those assessment scopes. These records are neither specialist
 refereeing nor formal verification. The supplied source, preparation,
 calibration and observation remain explicit assumptions.
 \begingroup\footnotesize

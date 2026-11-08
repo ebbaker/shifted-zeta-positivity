@@ -1,0 +1,23 @@
+# TND-OG Green/resolvent progress register
+
+7 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Explicit worker dispatch selected **gpt-6.1-sol / ultra**; this is the supplied actual selection, not independent backend verification. Root model/effort unavailable.
+
+**This file is the sole current live status register for the TND-OG task family.** Re-read it before changes and preserve other chats' updates. Parent [Register02](../../research-progress/02_SMOOTH_LOCALIZATION_RESEARCH_PROGRESS_20261106.md) owns TND-O/shared tasks and links here; it must not duplicate these live statuses. The sibling owns TND-OC. The [plan](../research-plan/01_TND_OG_GREEN_RESOLVENT_RESEARCH_PLAN_20261107.md) defines task scope and limits; [Continuation01](../continuation-notes/01_TND_OG_GREEN_RESOLVENT_CONTINUATION_20261107.md) is a handoff snapshot, not another register.
+
+| Task | Type / recommendation and reason | Current status | Exact dependency / expected output |
+| --- | --- | --- | --- |
+| TND-OG-B01 | B; Astra/ultra — choose consequential estimating mechanism and Green consumer | **Ready UNACTIVATED** | Overview, shared E22 sources, assessed E20/E21 results and control screen. At most two mechanisms plus one clarification; one selected quantitative route/contract or precise scoped stop. |
+| TND-OG-E01 | E; Sol6.1/ultra — execute one frozen proof route | **Reserved UNACTIVATED** | B01 decision and a concrete source-bound request/inputs. One estimate or declared-class obstruction with all errors, pole/denominator costs, joint limits and consumer conversion. |
+| TND-OG-E02 | E; Sol6.1/ultra — fixed claim/consumer assessment | **Reserved UNACTIVATED** | Actual E01 proof/return and assessment contract. Claim-level assessment plus at most one correction check. |
+
+## Setup disposition and inherited boundaries
+
+7 November 2026: standard branch structure, substantive [overview](../research-overview/01_TND_OG_GREEN_RESOLVENT_RESEARCH_OVERVIEW_20261107.md), bounded plan, reference ownership and standalone continuation prepared under parent **TND-O-E22**, a fixed documentation task. No TND-OG research has executed. No artificial proof/numerics/review/chat entry has been created. Preparation discussion is canonical at parent [synthesis19](../../brainstorm/notes/19_TND_O_GREEN_CORRELATION_BIFURCATION_SYNTHESIS_20261107.md).
+
+Completed TND-O Green/prime results, E20 r1/r2 and E21 retain their identities and evidence scopes; see [Review12](../../reviews/12_TND_O_E21_SIGNED_ACQUISITION_ASSESSMENT_20261107.md) and [returns36](../../research-progress/handoffs/36_TND_O_E20_PAID_QUADRATIC_COMPARISON_RETURN_20261107.json), [37](../../research-progress/handoffs/37_TND_O_E20_R2_UNIFORM_EULER_LENGTH_RETURN_20261107.json), [38](../../research-progress/handoffs/38_TND_O_E21_SIGNED_ACQUISITION_ASSESSMENT_RETURN_20261107.json). The unissued parent B04 r6 placeholder is routed by the parent crosswalk to the new conceptual branches; this is no completed theorem or reassignment of an issued proof packet. Gaussian alternatives remain at the parent. The resolvent identities are standard/local algebra, not favorable canonical signed smallness. The exact missing Green upper comparison remains unacquired.
+
+All upcoming research remains **UNACTIVATED**. The author's prior delegation/ready-successor authorization persists for a later requested continuation after concrete contracts are frozen; no renewed boundary approvals are needed merely to execute already authorized ready work. A new conceptual direction must still be recorded before dependent execution. Default next branch task is **TND-OG-B01**, with the author retaining actual model/effort and continuation order.
+
+## Ownership and provenance
+
+The current shared chat retains its single [parent history home](../../chat-histories/README.md); child setup creates no registration. Future branch-only chats follow [the local guide](../chat-histories/README.md) and the repository recorder workflow. Root is sole writer of parent/shared files and canonical source-use records. Inputs and selection are [request40](../../brainstorm/notes/18_TND_O_E22_BIFURCATION_SETUP_REQUEST_20261107.md), [inputs40](../../research-progress/handoffs/40_TND_O_E22_BIFURCATION_INPUTS_20261107.json), [dispatch40](../../research-progress/handoffs/40_TND_O_E22_DISPATCH_20261107.json); no child executable packet is issued. [References](../references/README.md), [results](../../../../../../result-summaries/README.md), [patterns](../../../../../../avoid/README.md) and [controls12](../../../../../../result-summaries/12_collision_controls_and_screening.md) govern later use.

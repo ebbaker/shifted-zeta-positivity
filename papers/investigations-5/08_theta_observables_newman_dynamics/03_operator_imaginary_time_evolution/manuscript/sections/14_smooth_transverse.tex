@@ -1,0 +1,227 @@
+\section{Smooth transverse moments and collision-stable dynamics}
+\label{sec:smooth-transverse}
+
+The next observable changes the statistical object. For a nonnegative
+\(a\in C_c^2(\R)\), define the weighted one-point transverse measure
+and its second moment by
+\begin{equation}\label{eq:transverse-measure}
+ \mu_{\lambda,a}=\sum_j a(x_j(\lambda))\delta_{y_j(\lambda)},
+ \qquad Q_a(\lambda)=\int y^2\dd\mu_{\lambda,a}
+                  =\sum_j a(x_j(\lambda))y_j(\lambda)^2.
+\end{equation}
+Here \(z_j=x_j+\ii y_j\) runs over the complete canonical zero multiset.
+This is not the Gaussian Gram or pair-correlation statistic of
+Section~\ref{sec:localized}; pair interactions enter its time derivative.
+A conjugate pair at a point where \(a=1\) contributes exactly \(2y_j^2\),
+without background cancellation. The earlier Gram route remains an open
+alternative with its stated background and arithmetic-comparison costs.
+The results below come from the complete-source calculus and its
+assembled internal assessment \cite{SmoothLocalizationProof,SmoothLocalizationAssessment}.
+Throughout this section \(0\le\lambda\le1/2\), so the canonical strip
+bound is \(\abs{y_j}\le1\) \cite[Theorem 3.2]{Polymath2019}.
+
+\subsection{The exact pair kernel and the complete sum}
+Use reverse time \(s=\lambda_*-\lambda\), and put \(f(x,y)=a(x)y^2\).
+For distinct roots set \(d=x_j-x_k\), \(e=y_j-y_k\), \(D=d^2+e^2\),
+and let \(z_t=z_k+t(z_j-z_k)\). The selected-simple-root dynamics
+of \cite[Proposition 3.1]{Polymath2019}, with all other multiplicities
+retained, gives
+\begin{align}
+ \frac{\dd Q_a}{\dd s}&=2\sum_{j<k}'K_f(z_j,z_k),
+       \label{eq:full-transverse-kernel}\\
+ K_f(z_j,z_k)
+ &=\frac{(f_y(z_j)-f_y(z_k))e-(f_x(z_j)-f_x(z_k))d}{D}\nonumber\\
+ &=\int_0^1\frac{2a(x_t)e^2-a''(x_t)y_t^2d^2}{D}\dd t.
+       \label{eq:transverse-chord}
+\end{align}
+Indeed differentiation of the endpoint gradients along the chord
+produces two mixed terms \(f_{xy}de\) with opposite signs. In a strip
+\(\abs y\le Y\),
+\begin{equation}\label{eq:gap-free-kernel}
+ \abs{K_f}\le\max\{2\norm a_\infty,Y^2\norm{a''}_\infty\}.
+\end{equation}
+There is no small-gap denominator in this estimate; a direction-independent
+value at a coincident pair is neither asserted nor needed.
+
+The prime in \eqref{eq:full-transverse-kernel} is material. Start with
+radial cutoffs of the complete opposite-paired Hadamard product and
+symmetrize the interaction rows, retaining both members of every far
+opposite pair. The complete source bound and Jensen's formula give
+\(N_\lambda(r)\le C_*r\log(r+2)\) uniformly on the time interval.
+For \(\abs z\le Z\) and \(U\ge2Z+2\), the omitted velocity is at most
+\begin{equation}\label{eq:paired-velocity-tail}
+ \frac{16C_*Z}{3}\frac{\log(U+2)+1}{U}.
+\end{equation}
+To see its origin, group
+\((z-\zeta)^{-1}+(z+\zeta)^{-1}=2z/(z^2-\zeta^2)\),
+then sum the resulting inverse-square majorant by partial summation.
+Multiplying \eqref{eq:paired-velocity-tail} by
+\(N_\lambda(Z)(Y^2\norm{a'}_\infty+2Y\norm a_\infty)\)
+pays the interaction remainder. It is uniform in time at fixed support.
+Separately bounding the two chord terms at large separation would lose
+this cancellation and can introduce a divergent harmonic sum. Pairs of
+inactive endpoints have zero kernel as a whole, even when their chord
+passes through the support. These conventions justify the full-index
+identity on the simple relevant intervals.
+
+A positive transverse production term does not imply monotonicity of a
+localized moment. An exact even heat control is
+\[
+ P(s,z)=z^4+(12s-15/2)z^2+289/16-15s+12s^2,
+ \qquad P_s=P_{zz}.
+\]
+Its roots at zero are \(\pm2\pm\ii/2\) and remain simple in the strict
+strip for \(\abs s\le1/100\). Set
+\(b(t)=(1-t)^3(1+t)^{12}\) on \((-1,1)\), zero outside, and
+\(a(x)=b(x-2)+b(-x-2)\). This is a nonnegative \(C_c^2\) weight.
+Direct substitution gives
+\[
+ Q_a'(0)=-297/34+288/34=-9/34.
+\]
+The two terms are horizontal flux and transverse production. This is a
+scoped counterexample to generic localized monotonicity, not a canonical
+theta orbit.
+
+\subsection{A uniform canonical modulus}
+Polymath's unit count and the safe-line estimate in the proof of
+Theorem 1.5(iv), Section 9 equation (105), supply a common absolute
+\(A\ge1\) such that
+\begin{equation}\label{eq:coarse-canonical}
+ \abs{H_\lambda'/H_\lambda(u+4\ii)}\le A\log(2+\abs u),\qquad
+ \#\{j:u\le x_j\le u+1\}\le A\log(2+\abs u).
+\end{equation}
+These estimates have no eventual-realness height restriction. The
+positive-time constant extends to zero by local uniform convergence of
+\(H_\lambda,H_\lambda'\) on the zero-free safe line. Zero counts pass
+through enclosing zero-free-boundary rectangles by Rouch\'e's theorem;
+a fixed enlargement of \(A\) handles closed endpoints. No convergence
+uniformly along an unbounded line is presumed.
+
+Fix \(0\le\chi\le1\), \(\chi\in C_c^2([-1,1])\), and write
+\[
+ a(x)=\chi((x-X)/R),\quad Q_{X,R}=Q_a,\quad
+ \norm\chi_{(2)}=\norm\chi_\infty+\norm{\chi'}_\infty+
+                   \norm{\chi''}_\infty.
+\]
+\begin{theorem}[Canonical modulus through collisions]\label{thm:transverse-lipschitz}
+For every \(X\ge10\), \(0<R\le1\) and \(\alpha,\beta\in[0,1/2]\),
+with every zero counted with multiplicity,
+\begin{equation}\label{eq:transverse-lipschitz}
+ \abs{Q_{X,R}(\beta)-Q_{X,R}(\alpha)}
+ \le344A^2\norm\chi_{(2)}R^{-2}\log^2(2+X)\abs{\beta-\alpha}.
+\end{equation}
+The complete interaction formula holds almost everywhere and after
+integration. Its first distributional derivative has no collision atom.
+\end{theorem}
+\begin{proof}
+Put \(L_X=\log(2+X)\), and use the bookkeeping cluster
+\(\mathcal C_X=\{k:\abs{x_k-X}\le3\}\). Unit covers give population
+\(n\le12AL_X\) and active population \(m\le2AL_X\).
+For active \(z=x+\ii y\) put \(w=x+4\ii\). The exterior field is
+\begin{equation}\label{eq:safe-line-exterior}
+ E_X(z)=\frac{H_\lambda'}{H_\lambda}(w)
+       -\sum_{k\in\mathcal C_X}\frac1{w-z_k}
+       +\sum_{k\notin\mathcal C_X}
+          \left(\frac1{z-z_k}-\frac1{w-z_k}\right).
+\end{equation}
+The last series is absolute. Its terms are bounded by
+\(5/\abs{x-x_k}^2\), and unit shells give
+\(\sum_{k\notin\mathcal C_X}\abs{x-x_k}^{-2}\le5AL_X\).
+The safe-line and finite removal costs are \(2AL_X\) and \(4AL_X\),
+so \(\abs{E_X}\le31AL_X\). Truncating the difference series at
+horizontal distance \(M\ge2\) leaves at most
+\[
+ \frac{10A}{M-1}\{L_X+\log(M+1)+1\}.
+\]
+The paired full field and this absolute remainder justify the grouping;
+no absolute harmonic exterior sum is used.
+
+On a simple relevant interval, split the chain rule into finite
+interactions and this exterior field. If \(A_i=\norm{a^{(i)}}_\infty\),
+then at most \(mn\) local pairs contribute, and
+\(\abs{\nabla f}\le A_1+2A_0\). Thus
+\[
+ \abs{Q_a'}\le A^2L_X^2
+ \{48\max(2A_0,A_2)+124(A_1+2A_0)\}
+ \le A^2L_X^2(344A_0+124A_1+48A_2).
+\]
+This implies the stated derivative bound at every such time.
+
+For the assembly, root-multiset continuity in zero-free-boundary
+rectangles makes \(Q_a\) continuous, including support crossings.
+Repeated-root points in a fixed padded space/time box form a compact
+set. At a point of multiplicity \(m\), Polymath's local Hermite
+splitting exhausts the cluster with distinct simple roots at every
+sufficiently close nonzero time. Every repeated point is therefore
+isolated in space and time, so the compact set is finite. Event radii
+and Hermite errors need not be uniform. Summing the same derivative
+bound on the complementary intervals costs their total duration, not
+the number of collisions, and proves \eqref{eq:transverse-lipschitz}.
+The essentially uniform remainder \eqref{eq:paired-velocity-tail}
+permits cutoff/integration interchange. The first distributional derivative of a Lipschitz function is
+represented by an essentially bounded function, completing the claim.
+\end{proof}
+
+The microscopic order in \eqref{eq:transverse-lipschitz} is sharp for
+an instantaneous coarse-premise class. Take
+\(\chi(t)=(1-t^2)^3_+\), \(t_j=7/10+j/[10(m+1)]\), and the even
+polynomial with roots \(\pm(X+Rt_j)\pm\ii/2\), where
+\(m\ge2\), \(X\ge10\), \(R\le1/10\). On the occupied interval
+\(\chi''\ge3\). At its heat snapshot, the same-height, opposite-height
+and mirrored contributions respectively give
+\[
+ Q_s\le-\frac{3m(m-1)}{2R^2}+4m^2+
+             \frac{6m^2}{RX}+\frac{2m^2}{X^2}
+       \le-\frac{3249m^2}{5000R^2}.
+\]
+For \(m=\lfloor\log(2+X)\rfloor\), the magnitude is at least
+\(\log^2(2+X)/(8R^2)\). Strip, upper counts and safe-line bounds have
+common constants at these snapshots. A local heat orbit exists, but its
+interval may depend on the parameters; this does not prove sharpness
+under canonical hypotheses on the entire fixed time interval.
+
+\subsection{The exact kink and a threshold consumer}
+The preceding continuity does not assert differentiability at a
+collision. For a multiplicity-\(m\) cluster at \(z_0\), write
+\(\tau=\lambda-\lambda_0\). Its leading splitting is
+\(z_j=z_0+\sqrt{2\tau}\,h_j+O(\abs\tau)\), where \(h_j\)
+are the real probabilists' Hermite roots and
+\(\sum h_j^2=m(m-1)\). The contour sum of displacements is analytic:
+\(\sum(z_j-z_0)=c\tau+O(\tau^2)\). For any fixed real \(C^2\) test
+\(f\), set \(B_f=f_x\Re c+f_y\Im c\), with derivatives at \(z_0\).
+Taylor expansion of the cluster moment \(q=\sum f(z_j)\) gives
+\begin{equation}\label{eq:collision-kink}
+ q'_+=B_f+m(m-1)f_{xx},\qquad
+ q'_-=B_f-m(m-1)f_{yy},\qquad
+ q'_+-q'_-=m(m-1)\Delta f.
+\end{equation}
+The analytic displacement sum supplies the common linear term; one
+must not differentiate the individual unknown \(O(\abs\tau)\)
+remainders. Analytic branches in \(\sqrt\tau\) also justify the
+adjacent derivative limits. For \(f=a(x)y^2\) at a real collision,
+these slopes are \(-2m(m-1)a(x_0)\) and zero. Simultaneous clusters
+add their jumps; endpoints use only the inward slope.
+
+\begin{corollary}[An off-line zero forces a lower threshold]\label{cor:threshold-lower}
+If \(H_0\) has a pair \(X\pm\ii d\), \(X\ge10\), \(0<d<1\),
+and \(\chi(0)=1\), then
+\begin{equation}\label{eq:threshold-lower}
+ \Lambda\ge
+ \frac{2d^2}{344A^2\norm\chi_{(2)}\log^2(2+X)}.
+\end{equation}
+\end{corollary}
+\begin{proof}
+The strip theorem gives \(\Lambda\le1/2\). A nonreal zero at zero
+persists for a small positive time, so the hypothesis gives
+\(\Lambda>0\). The threshold slice is all real: a nonreal zero there
+would persist above it, contradicting the all-real property for
+\(\lambda>\Lambda\). Hence \(Q_{X,1}(\Lambda)=0\), whereas
+\(Q_{X,1}(0)\ge2d^2\). Apply Theorem~\ref{thm:transverse-lipschitz}.
+\end{proof}
+This uses the whole fixed-window moment, with no surviving pair label,
+maximum-root assumption or isolating tube. For a zeta zero
+\(\beta+\ii\gamma\), \(X=2\gamma\), \(d=2\abs{\beta-1/2}\),
+so the numerator is \(8\abs{\beta-1/2}^2\). The absolute constant
+\(A\) has not been numerically evaluated. This is a conditional lower
+bound for \(\Lambda\), not an upper collision-time envelope or an RH
+exclusion.

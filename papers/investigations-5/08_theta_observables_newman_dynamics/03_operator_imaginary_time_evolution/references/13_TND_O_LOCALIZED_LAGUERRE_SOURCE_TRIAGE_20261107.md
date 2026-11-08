@@ -1,0 +1,11 @@
+# Localized Laguerre source triage
+
+6 November 2026 America/New_York (7 November UTC). Prepared for Edward Baker with Codex assistance; lead tool-selected gpt-6-astra/ultra, not independently verified backend identity.
+
+A bounded primary-source search for the author-expanded localized-metric comparison identified the classical antecedent: G. Csordas, A. Ruttan and R. S. Varga, *The Laguerre inequalities with applications to a problem associated with the Riemann hypothesis*, Numerical Algorithms 1 (1991), 305–329, https://doi.org/10.1007/BF02142328 . The publisher/search-rendered abstract explicitly describes using L_1(H_lambda)=(H'_lambda)^2−H_lambda H''_lambda to obtain Newman lower bounds. The complete paper was not inspected; no theorem or numerical value is imported.
+
+The existing canonical record `Csordas2014PositiveKernels` in Investigation07 references/sources.bib pins arXiv:1309.0055v2, *Fourier transforms of positive definite kernels and the Riemann xi-Function*. The primary arXiv abstract/search result identifies the connection to generalized Laguerre inequalities. Direct pinned HTML/PDF access failed in this pass; this is not represented as a fresh theorem-level read. Existing local source-use records remain historical. Generalized Laguerre inequalities are distinct from the derivative-indexed first defects used in the new proposed calculation.
+
+Search also located the publisher abstract of Dimitrov–Xu, *Wronskians of Fourier and Laplace transforms*, Trans. AMS 372 (2019), 4107–4125, https://doi.org/10.1090/tran/7809 . It describes the Fourier/Wronskian correlation connection. Only that abstract was inspected; no characterization theorem is imported. Unneeded search hits and inaccessible PDF attempts are not proof premises.
+
+The B03 r5/E15 calculation is to derive its own normalized Gaussian formulas, heat hierarchy, source/order tails and collision-resolution test from the already checked complete source and local heat equation. No novelty is claimed for Laguerre expressions, Gaussian smoothing, the Fourier quadratic representation, or the classical detection idea. No third-party file was acquired or added to Git, and no new canonical bibliography record is needed unless a later manuscript actually cites one of these additional articles.

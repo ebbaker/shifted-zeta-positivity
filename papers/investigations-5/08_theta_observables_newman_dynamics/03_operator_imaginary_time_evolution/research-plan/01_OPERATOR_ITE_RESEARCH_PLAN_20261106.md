@@ -1,5 +1,19 @@
 # Operator and ITE research plan
 
+> **Historical planning document.** The author-requested
+> [smooth-localization overview and adaptive plan](../research-overview/02_SMOOTH_LOCALIZATION_RESEARCH_OVERVIEW_AND_PLAN_20261106.md)
+> supersedes current planning/routing in this file.
+> [Register02](../research-progress/02_SMOOTH_LOCALIZATION_RESEARCH_PROGRESS_20261106.md) is the sole live register.
+> Dated evidence and prior task identities below are preserved.
+> 6 November 2026; OpenAI Codex; exact current model/effort unavailable.
+
+> Current manuscript update, 6 November 2026: [E06 integration](../notes/15_TND_O_E06_LOCALIZED_MANUSCRIPT_SYNTHESIS_20261106.md)
+> incorporates brainstorm Notes04–05 into the 40-page manuscript. This is
+> analytical production with proof-author checks, no selected successor
+> research or arithmetic upper bound. The sole progress register owns
+> status; exact current Codex model/effort metadata were unavailable.
+
+
 6 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**. Configuration verified in the setup turn metadata.
 
 This is the initial plan for the operator/imaginary-time branch. The
