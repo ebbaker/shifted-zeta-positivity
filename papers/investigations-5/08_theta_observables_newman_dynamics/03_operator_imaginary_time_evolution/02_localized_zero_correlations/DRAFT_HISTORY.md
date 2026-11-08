@@ -1,5 +1,39 @@
 # Localized zero correlations: milestones
 
+- **8 November 2026 — B05/E06 full-marginal manuscript milestone:** rewrote the current draft to 34 pages around generalized Gaussian-smoothed factorial marginals; added weighted normalization, smoothing/bias, center covariance and a two-sided uniform canonical full-pair error retaining real zeros. Earlier scalar proofs are supporting appendices. New claims: preliminary, proof-author checking only; E07 pending, E03/E04 unchanged. [Note09](notes/09_TND_OC_FULL_GAUSSIAN_MARGINALS_AND_CANONICAL_TRANSFER_20261108.md), [author check06](reviews/06_TND_OC_E06_GAUSSIAN_MANUSCRIPT_AUTHOR_CHECK_20261108.md), [Continuation11](continuation-notes/11_TND_OC_AFTER_GAUSSIAN_MANUSCRIPT_AND_MODEL_CHANGE_20261108.md). No canonical profile acquired; exact bookkeeping supports the proofs. Current PDF/build replaced in place; historical E05 return preserved, no snapshot. For Edward Baker with substantial OpenAI Codex assistance; actual model/effort unavailable.
+
+- **8 November 2026 — TND-OC E05 analytical manuscript:**
+  [current draft](manuscript/README.md), with a 26-page reading PDF in
+  ignored output/pdf. Systematic proofs connect finite zero algebra,
+  complete source/logarithm approximation and marked-pair transfer;
+  scoped obstructions, the corrected arithmetic projection and outstanding
+  tasks are included. [Integration check05](reviews/05_TND_OC_E05_MANUSCRIPT_INTEGRATION_CHECK_20261108.md)
+  retains all source assessment levels; E03/E04 remain pending and the
+  favorable canonical value is still open. No snapshot, numerical campaign
+  or investigation closure. For Edward Baker with substantial OpenAI Codex
+  assistance; actual model/effort unavailable, chat0003.
+
+- **8 November 2026 — TND-OC B04:** [Notes05-06](notes/README.md)
+  complete the two-route comparison and prove the deterministic
+  marked-pair transfer with matched coefficient
+  (2800n_X+3621/2)/(pi h^2), author self-check only. The corrected
+  BGST cumulative formula survives. No favorable canonical pair bound,
+  local law or new exclusion is acquired. E04 is a ready fixed
+  assessment; E03 remains separate and pending. [Continuation08](continuation-notes/08_TND_OC_AFTER_B04_AND_MODEL_CHANGE_20261108.md)
+  supplies the manual model-change handoff. Research milestone only:
+  no manuscript snapshot or investigation closure. Prepared for Edward
+  Baker with substantial OpenAI Codex assistance; actual recorded
+  model/effort unavailable, authenticated chat0003.
+
+- **8 November 2026 — bounded BGST source check:**
+  [Audit](reviews/BGST_IMPORT_SOURCE_CHECK_20261108.md) confirms the parent
+  cumulative `eq:BGST` unchanged from the first line of v3 (3.5), and
+  distinguishes the dyadic and erroneous multiplicative error forms.
+  Canonical source annotations reconcile the earlier warning; no manuscript
+  source/build, B04 work, E03 input or progress status changed by this audit.
+  Prepared for Edward Baker with substantial OpenAI Codex assistance;
+  actual backend model/effort unavailable, chat0004.
+
 - **8 November 2026 — direction and literature update:**
   [Note07](brainstorm/notes/07_TND_OC_LOCALIZED_PAIR_MARGINAL_LITERATURE_AND_DIRECTION_20261108.md),
   overview and sole register retain the full localized two-zero marginal

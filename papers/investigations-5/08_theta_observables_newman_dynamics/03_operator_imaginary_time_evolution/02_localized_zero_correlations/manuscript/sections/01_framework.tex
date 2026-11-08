@@ -1,0 +1,148 @@
+\section{The source, the zeros, and the analytical objective}\label{sec:framework}
+
+The primary object is a function of two or more observed zero locations.
+It is obtained by marginalizing a full labelled zero configuration, with
+spatial localization and Gaussian smoothing made explicit. This retains
+ordinary real-zero spacings as well as information on possible nonreal
+zeros. A scalar transverse detector is one projection of this object;
+it is not the object itself.
+
+The development has three levels. Section~\ref{sec:gaussian} constructs
+full factorial densities and proves their exact consistency relations.
+Section~\ref{sec:centers} introduces separation coordinates, unfolding,
+and a declared law for the observation center. Sections~\ref{sec:logarithms}--\ref{sec:full-pair}
+then connect these functions to the complete canonical source, culminating
+in the uniform pair approximation of Theorem~\ref{thm:full-pair}.
+The identity for the center covariance in Proposition~\ref{prop:covariance}
+identifies a further source-specific analytical question. An approximation
+bound makes the correlation function accessible to prescribed accuracy;
+an estimate of its shape or covariance requires additional analysis.
+
+The new marginal, smoothing and two-sided transfer derivations have
+proof-author checking only. They use the local logarithm and one-point
+approximation accepted in the project's internal E02 assessment.
+Earlier scalar results retain their individual assessment levels and
+appear in the appendices. Appendix~\ref{app:status} records these
+boundaries. The manuscript asserts neither a determinantal law for
+canonical zeros nor a new nonreal-zero exclusion.
+
+\subsection{Canonical normalization and heat equation}
+
+Let
+\begin{equation}\label{eq:source}
+ r_u=\pi\ee^{4u},\qquad
+ \Phi(u)=\ee^u\sum_{\ell\ge1}
+       (2\ell^4r_u^2-3\ell^2r_u)\ee^{-\ell^2r_u},
+ \qquad
+ H_\lambda(z)=\int_0^\infty \ee^{\lambda u^2}\Phi(u)\cos(zu)\dd u .
+\end{equation}
+The arithmetic coefficients and the complete half-line integral are part
+of the definition. For $u\ge0$, $r_u\ge\pi$, so each displayed summand
+is positive. More useful for analysis is the bound
+\begin{equation}\label{eq:source-basic-majorant}
+ |\Phi(u)|\le
+ 5\ee^u r_u^2\ee^{-r_u}
+ \sum_{\ell\ge1}\ell^4\ee^{-\pi(\ell^2-1)}.
+\end{equation}
+Indeed $3\ell^2r_u\le3\ell^4r_u^2$ and
+$\ee^{-(\ell^2-1)r_u}\le\ee^{-\pi(\ell^2-1)}$.
+The super-exponential factor $\ee^{-\pi\ee^{4u}}$ dominates every
+factor arising from compact sets of $\lambda,z$ and finitely many
+derivatives. Differentiation under the integral is therefore justified:
+\begin{equation}\label{eq:heat}
+ \partial_\lambda H_\lambda=-\partial_z^2H_\lambda .
+\end{equation}
+For real $\lambda$, $H_\lambda$ is real entire and even. Thus its zeros
+are invariant under conjugation and negation, including multiplicities.
+Our quantitative approximation theorems below concern $\lambda=0$.
+Equation~\eqref{eq:heat} alone does not extend their constants to other
+times.
+
+For completeness the normalization can be recovered directly from
+the classical theta Mellin identity. Write
+$\psi(t)=\sum_{\ell\ge1}\ee^{-\pi\ell^2t}$ and
+$\theta(t)=1+2\psi(t)$. Poisson summation for the Gaussian gives
+$\theta(t)=t^{-1/2}\theta(1/t)$. Splitting the Mellin integral at one,
+and then continuing analytically, gives
+\begin{equation}\label{eq:xi-theta}
+ \xi(s)=\frac12+\frac{s(s-1)}2
+ \int_1^\infty \psi(t)
+   \bigl(t^{s/2-1}+t^{(1-s)/2-1}\bigr)\dd t ,
+ \qquad
+ \xi(s)=\frac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s).
+\end{equation}
+To see the constants, initially $\Re s>1$ the full Mellin integral of
+$\psi$ is $\pi^{-s/2}\Gamma(s/2)\zeta(s)$. On $(0,1)$ substitute the
+theta reflection identity. Its elementary terms integrate to
+$1/(s-1)-1/s=1/[s(s-1)]$; the remaining integral is the reflected
+half of \eqref{eq:xi-theta}. This proves the formula and its entire
+continuation.
+
+Set $s=(1+\ii z)/2$. Under $t=\ee^{4u}$, the cosine in
+\eqref{eq:source} splits into the powers corresponding to $s$ and $1-s$,
+and
+\[
+ H_0(z)=\frac18\sum_{\sigma\in\{s,1-s\}}
+   \int_1^\infty
+   \left(2t^{\sigma/2+1}\psi''(t)
+                +3t^{\sigma/2}\psi'(t)\right)\dd t .
+\]
+Twice integrating by parts gives, for either $\sigma$,
+\[
+ -2\psi'(1)-(1-\sigma)\psi(1)
+ +\frac{\sigma(\sigma-1)}2
+       \int_1^\infty t^{\sigma/2-1}\psi(t)\dd t .
+\]
+Differentiating theta reflection at one yields
+$\psi'(1)=-(1+2\psi(1))/8$. The sum of the endpoint terms is
+$1/2$, so comparison with \eqref{eq:xi-theta} proves
+\begin{equation}\label{eq:xi-normalization}
+ H_0(z)=\frac18\xi\!\left(\frac{1+\ii z}{2}\right)
+       =\frac18\xi\!\left(\frac{1-\ii z}{2}\right).
+\end{equation}
+The second equality is $\xi(s)=\xi(1-s)$. A nontrivial zeta zero
+$\rho=\beta+\ii\gamma$ is represented by
+\begin{equation}\label{eq:coordinates}
+ z=x+\ii y=2\gamma+\ii(1-2\beta).
+\end{equation}
+The classical zero-free half-planes for $\zeta$, obtained from its Euler
+product and functional equation, put these zeros in $|y|\le1$; nothing
+below requires strictness at the strip boundary. Reflection across the
+critical line is conjugation in the $z$ coordinate.
+
+\subsection{Counting measures and factorial marginals}
+
+For a nonzero holomorphic function $V$, its local zero measure is
+\begin{equation}\label{eq:zero-measure}
+ \nu_V=\sum_{V(a)=0}m_a\delta_a
+       =\frac1{2\pi}\Delta\log|V|
+\end{equation}
+in distributions. To verify the formula locally, factor
+$V(z)=(z-a)^{m_a}G(z)$ with $G$ nonvanishing. Then
+$\log|G|$ is harmonic, and integration over a punctured disk, followed
+by the divergence theorem, gives
+$\Delta\log|z-a|=2\pi\delta_a$. A locally finite sum proves
+\eqref{eq:zero-measure}.
+
+On any compact observation region, give each multiplicity copy its own
+label, say $z_1,\ldots,z_N$. The ordered factorial pair measure is
+\begin{equation}\label{eq:factorial}
+ \alpha^{(2)}
+ =\sum_{j\ne k}\delta_{(z_j,z_k)}
+ =\nu\otimes\nu-\diag_*\nu .
+\end{equation}
+At a zero of multiplicity $m$, the mass at $(z,z)$ is $m(m-1)$.
+Subtracting the entire geometric diagonal would incorrectly erase
+different labels at the same location.
+
+For $\varphi\in C_c^{1,1}$ the weak formula reads
+\begin{equation}\label{eq:weak-onepoint}
+ \nu_V(\varphi)=\frac1{2\pi}
+       \int\log|V|\,\Delta\varphi\dd A .
+\end{equation}
+Here and below weak derivatives are used almost everywhere.
+Mollification inside a compact support buffer proves this extension
+of the smooth formula: the tests converge uniformly, the Laplacians
+remain uniformly bounded and converge almost everywhere, and
+$\log|V|\in L^1_{\mathrm{loc}}$. These facts also show that every
+holomorphic zero-free multiplier contributes zero to the pairing.

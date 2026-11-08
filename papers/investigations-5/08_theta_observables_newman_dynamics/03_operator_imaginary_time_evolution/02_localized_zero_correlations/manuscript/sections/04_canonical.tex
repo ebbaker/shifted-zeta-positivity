@@ -1,0 +1,166 @@
+\section{Complete-source approximation at time zero}\label{sec:canonical}
+
+We now supply all hypotheses of Theorem~\ref{thm:log} for the canonical
+field at a declared height. The off-axis center supplies a safe anchor;
+the observation tests still reach the real axis.
+
+\subsection{A zero-free normalization and a safe anchor}
+
+For $X\ge10$ set
+\begin{equation}\label{eq:canonical-F}
+ \begin{gathered}
+ c=X+4\ii,\qquad s(z)=\frac12-\frac{\ii z}2,\\
+ F(z)=\frac{s(z)-1}{s(z)}\zeta(s(z))
+     =D(z)H_0(z),\qquad
+ D(z)=\frac{16\pi^{s(z)/2}}{s(z)^2\Gamma(s(z)/2)} .
+ \end{gathered}
+\end{equation}
+Throughout $\overline D(c,R)$,
+\begin{equation}\label{eq:s-range}
+ \frac14\le\Re s\le\frac{19}4,\qquad
+ |\Re z|\le X+\frac92 .
+\end{equation}
+The multiplier $D$ is holomorphic and zero-free on a neighborhood
+of this disk. The zeta pole at $s=1$ is cancelled in $F$, while
+$s=0$ and the zeros of $1/\Gamma(s/2)$ are outside.
+
+For $\sigma=\Re s>0$, partial summation, initially at $\sigma>1$,
+and then analytic continuation give
+\begin{equation}\label{eq:fractional-part}
+ \frac{s-1}{s}\zeta(s)
+ =1-(s-1)\int_1^\infty\{v\}v^{-s-1}\dd v .
+\end{equation}
+Indeed $\zeta(s)=s\int_1^\infty\lfloor v\rfloor v^{-s-1}\dd v$,
+and $\lfloor v\rfloor=v-\{v\}$. The last integral in
+\eqref{eq:fractional-part} converges absolutely for $\sigma>0$.
+On the disk, $|s-1|\le X/2+6$, so
+\begin{equation}\label{eq:canonical-upper}
+ |F|\le1+\frac{|s-1|}{\sigma}\le2X+25=M_X-1,
+ \qquad M_X=2X+26 .
+\end{equation}
+At $c$, $\Re s=5/2$. The absolutely convergent Euler product
+\cite{DLMFEulerProductOC} and $|(s-1)/s|\ge3/5$ imply
+\begin{equation}\label{eq:c0}
+ |F(c)|\ge c_0,\qquad
+ c_0=\frac35\,\frac{\zeta(5)}{\zeta(5/2)}>0 .
+\end{equation}
+In fact
+$|\zeta(s)|\ge\prod_p(1+p^{-5/2})^{-1}
+=\zeta(5)/\zeta(5/2)$, and the rational factor follows by comparing
+$(3/2)^2+(\Im s)^2$ with $(5/2)^2+(\Im s)^2$.
+This anchor uses an Euler product only in its absolute convergence
+half-plane.
+
+If $\widehat F$ is holomorphic near the disk and
+\begin{equation}\label{eq:delta-requirement}
+ \norm{F-\widehat F}_{L^\infty(D(c,R))}\le\delta
+ \le\min(1,c_0/2),
+\end{equation}
+then $f=F/M_X$ and $g=\widehat F/M_X$ satisfy the preceding theorem
+with the common constants
+\begin{equation}\label{eq:canonical-constants}
+ \begin{gathered}
+ m_X=\frac{c_0}{2M_X},\quad A_X=\log\frac{2M_X}{c_0},\quad
+ n_X=\max\!\left(1,\left\lceil\frac{A_X}{\log(27/26)}\right\rceil\right),\\
+ \alpha_X=\frac2{n_X+2},\qquad C_X=C(A_X,n_X).
+ \end{gathered}
+\end{equation}
+Consequently
+\begin{equation}\label{eq:EX}
+ \int_{D(c,r)}|\log|F|-\log|\widehat F||\dd A
+ \le E_X,\qquad E_X=C_X(\delta/M_X)^{\alpha_X}.
+\end{equation}
+The factors $M_X$ cancel in the logarithm difference.
+Here $n_X=O(\log X)$, $C_X=O((\log X)^2)$ and
+$\alpha_X\asymp1/\log X$. For example
+$A_X/n_X\le\log(27/26)$ makes the exponential in $C_X$
+uniformly bounded. No height-independent positive exponent is claimed.
+
+\subsection{Both source tails and the enlarged-disk multiplier}
+
+For integers $J\ge1$ and $U>0$, let $\Phi_J$ be the sum in
+\eqref{eq:source} restricted to $\ell\le J$, and define the exact
+finite-source field
+\begin{equation}\label{eq:finite-source}
+ \widehat H_{J,U}(z)=\int_0^U\Phi_J(u)\cos(zu)\dd u,\qquad
+ \widehat F=D\widehat H_{J,U}.
+\end{equation}
+These are exact finite sums and compact integrals; no quadrature or
+rounding has been substituted. The real cosine source ensures
+conjugation symmetry of $\widehat H_{J,U}$.
+
+Put $b_* =17/2$ and
+\begin{align}
+ C_2(J)&=\sum_{\ell>J}\ell^4\ee^{-\pi(\ell^2-1)},
+ & B_0&=5C_2(0),\label{eq:source-tail-defs}\\
+ I_{b_*}&=\int_0^\infty
+       \ee^{(b_*+1)u}r_u^2\ee^{-r_u}\dd u,
+ &I_{b_*}^{>U}&=\int_U^\infty
+       \ee^{(b_*+1)u}r_u^2\ee^{-r_u}\dd u .\notag
+\end{align}
+On the enlarged disk, $|\Im z|\le b_*$ and
+$|\cos(zu)|\le\ee^{b_*u}$.
+Splitting the omitted arithmetic terms on $[0,U]$ from the
+\emph{complete} radial tail on $(U,\infty)$, and applying
+\eqref{eq:source-basic-majorant}, proves
+\begin{equation}\label{eq:delta-H}
+ \sup_{|\Im z|\le b_*}|H_0(z)-\widehat H_{J,U}(z)|
+ \le\delta_H(J,U):=5C_2(J)I_{b_*}+B_0I_{b_*}^{>U}.
+\end{equation}
+The integral is a half-line cosine integral, so there is no extra
+factor of two.
+
+Both tails have explicit majorants. For $\ell\ge J+1$, consecutive
+terms in $C_2(J)$ have ratio at most
+$16\ee^{-\pi(2J+3)}<1$. Therefore
+\begin{equation}\label{eq:arithmetic-tail}
+ C_2(J)\le
+ \frac{(J+1)^4\ee^{-\pi((J+1)^2-1)}}
+      {1-16\ee^{-\pi(2J+3)}}\qquad(J\ge0).
+\end{equation}
+The substitution $v=\pi\ee^{4u}$, with $\dd u=\dd v/(4v)$,
+gives
+\begin{equation}\label{eq:radial-tail}
+ I_{b_*}^{>U}=\frac{\pi^{-19/8}}4
+       \Gamma(35/8,\pi\ee^{4U}),\qquad
+ I_{b_*}=\frac{\pi^{-19/8}}4\Gamma(35/8,\pi),
+\end{equation}
+where $\Gamma(a,t)=\int_t^\infty v^{a-1}\ee^{-v}\dd v$.
+
+An explicit bound for $D$ on the whole enlarged disk is
+\begin{equation}\label{eq:multiplier-bound}
+ |D(z)|\le\mathcal B_X,\qquad
+ \mathcal B_X=
+ 32\pi^{19/8}
+ \exp\!\left(\frac{19}8+
+       \frac{\pi^2(361+4V_X^2)}{768}\right),
+ \qquad V_X=X+\frac92 .
+\end{equation}
+To verify it, the reciprocal-gamma product
+\cite{DLMFReciprocalGammaOC} gives
+\[
+ \frac1{\Gamma(w)}
+   =w\ee^{\gamma_{\!E}w}\prod_{k\ge1}(1+w/k)\ee^{-w/k},
+ \qquad
+ |\Gamma(w)^{-1}|
+ \le |w|\exp\!\left(\gamma_{\!E}\Re w+
+                      \frac{\pi^2|w|^2}{12}\right).
+\]
+Here $\log|1+q|\le\Re q+|q|^2/2$ follows from
+$\log(1+t)\le t$ applied to $|1+q|^2$, and
+$\sum k^{-2}=\pi^2/6$. Apply the estimate to $w=s/2$,
+use $\gamma_{\!E}\le1$, $|s|\ge1/4$ and
+$|s|^2\le361/16+V_X^2/4$. The prefactor in $D$ is then
+$8/|s|\le32$, proving \eqref{eq:multiplier-bound}.
+This bound is expensive in $X$; it is used for completeness, not
+as a practical-cost assertion.
+
+The input error for \eqref{eq:delta-requirement} is consequently
+\begin{equation}\label{eq:complete-delta}
+ \delta=\mathcal B_X
+       \left[5C_2(J)I_{b_*}+B_0I_{b_*}^{>U}\right].
+\end{equation}
+Both independent tails tend to zero. Thus any positive field-error
+target is attained by some finite $J,U$ at every declared $X$.
+No endpoint-reflection identity for the truncated source is assumed.
+

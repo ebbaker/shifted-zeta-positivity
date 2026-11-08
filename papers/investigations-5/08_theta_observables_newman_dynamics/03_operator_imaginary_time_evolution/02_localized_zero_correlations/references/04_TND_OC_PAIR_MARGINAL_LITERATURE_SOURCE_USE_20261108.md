@@ -1,10 +1,37 @@
 # Localized pair marginals: literature source-use register
 
+**B04 reuse, 8 November 2026, authenticated chat0003:** prepared for
+Edward Baker with substantial OpenAI Codex assistance; actual recorded
+model/effort unavailable. BGST v3 (3.2)-(3.5) and Tao-Vu v3
+Theorems2.1/3.1 were reread from the version-pinned primary pages and
+existing external PDFs; both hashes match the receipts below.
+BGST PDF p.8 was visually checked. [Note05](../notes/05_TND_OC_B04_ARITHMETIC_RECONCILIATION_AND_ROUTE_COMPARISON_20261108.md)
+uses the corrected cumulative formula and the separately stated dyadic
+error, integrates its frequency-zero term and subtracts the true
+self count. The concurrent source check below is preserved and linked.
+[Note06](../notes/06_TND_OC_B04_DETERMINISTIC_MARKED_PAIR_TRANSFER_20261108.md)
+proves its deterministic tensor extension directly; Tao-Vu's theorem is
+not asserted for H. Its polynomial, joint-comparison, non-clustering
+and real-case comparator-repulsion hypotheses are retained.
+No new paper, PDF download, full proof audit or novelty claim is added.
+
 8 November 2026, America/New_York. Prepared for **Edward Baker** with
 substantial OpenAI Codex assistance. Actual current backend model and
 effort are unavailable in authenticated chat0002. This record is created
 on discovery and updated as primary passages are checked. It is a bounded
 literature review, not a full proof audit or novelty claim.
+
+**BGST follow-up, 8 November 2026:** the separate
+[source/import check](../reviews/BGST_IMPORT_SOURCE_CHECK_20261108.md)
+resolves the provisional warning in this record. The parent cumulative
+equation survives unchanged by v3 (3.5), first line; the dyadic (3.2)
+retains the weaker error printed below. Pinned older v1 (1.4) already has
+the additive normalized form, unlike the multiplicative formula identified
+as erroneous on v3 p.7. Corrected-proof provenance and bounded downstream
+dependencies were checked; no B04/E03 assessment or manuscript revision
+is implied. Prepared for Edward Baker with OpenAI Codex assistance;
+actual backend model/effort unavailable in chat0004. Earlier passage
+records and reading-copy receipts are preserved.
 
 Existing Montgomery, Rodgers–Tao, BGST2024, GLSS, Rudnick–Sarnak and Borodin
 records remain at the [parent reference home](../../references/README.md),

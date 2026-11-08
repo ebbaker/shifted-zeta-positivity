@@ -1,5 +1,58 @@
 # Localized-correlation research plan
 
+**Current direction, 8 November 2026:** the full localized Gaussian
+factorial correlation program is primary. B05 chose compact physical
+localization plus Gaussian observation smoothing, with a declared center
+mixture and unfolding. E06's preliminary analytical development and
+34-page manuscript rewrite are complete at proof-author-check level.
+[Note09](../notes/09_TND_OC_FULL_GAUSSIAN_MARGINALS_AND_CANONICAL_TRANSFER_20261108.md)
+records the exact hierarchy and new full-pair source error; no canonical
+correlation profile has been acquired. For Edward Baker with substantial
+OpenAI Codex assistance; actual model/effort unavailable, chat0003.
+
+**Next: [E] TND-OC-E07**, GPT-6.1 Sol/ultra recommended where supported,
+under [request12](../research-progress/handoffs/12_TND_OC_E07_ASSESSMENT_REQUEST_20261108.md)
+and frozen inputs12. One claim-level pass and one bounded correction.
+Assess weighted normalization, multiplicity, the two-sided partition,
+source/derivative constants, and covariance scope. No new mechanism or
+canonical numerical campaign is part of the assessment.
+
+**Then: [B] TND-OC-B06**, Astra recommended, author-selected effort.
+Choose a center law and scale regime; compare at most two independent
+source routes to a joint covariance estimate, with one clarification.
+Return a fixed execution contract or exact missing input. The covariance
+identity alone is a representation, not an estimate. An RH exclusion is
+not required as the first useful consumer. Higher-order canonical bounds,
+noncompact Gaussian windows/centers and Newman-time evolution remain
+separate extensions with additional costs.
+
+[Continuation11](../continuation-notes/11_TND_OC_AFTER_GAUSSIAN_MANUSCRIPT_AND_MODEL_CHANGE_20261108.md)
+gives the manual continuation/model-change prompt. E03/E04 remain fixed
+alternative assessments of supporting scalar work. Historical planning
+entries below retain their dates and do not override this routing.
+
+**E05 manuscript integration, 8 November 2026:** completed on the author's
+request in the current chat. The [analytical draft](../manuscript/README.md)
+contains full derivations, the original assessment levels and outstanding
+tasks; its production self-check does not replace E03/E04.
+[Continuation09](../continuation-notes/09_TND_OC_AFTER_ANALYTICAL_MANUSCRIPT_AND_MODEL_CHANGE_20261108.md)
+preserves E04 as the next fixed assessment. No canonical-value task or
+numerical campaign is activated. Prepared for Edward Baker with substantial
+OpenAI Codex assistance; actual model/effort unavailable, chat0003.
+
+**B04 completion update, 8 November 2026:** the two-route comparison is
+complete in [Notes05-06](../notes/README.md). A deterministic marked-pair
+precision estimate is proved in-note, with author checking only; the
+independent favorable canonical value remains unpaid. Default next is
+**[E] TND-OC-E04 / GPT-6.1 Sol, ultra where supported**, a fixed
+claim-level assessment under [request09](../research-progress/handoffs/09_TND_OC_E04_ASSESSMENT_REQUEST_20261108.md).
+Its finite limit is one pass and one bounded correction, with a return
+to B if source, observable, time regime or signed comparison must change.
+E03 stays separately pending. This supersedes the prospective B04
+routing below; no signed-smallness execution or numerical campaign is
+activated. Prepared for Edward Baker with substantial OpenAI Codex
+assistance; actual recorded model/effort unavailable, chat0003.
+
 **8 November direction update:** the author-requested pair-marginal
 literature review is complete. [Continuation07](../continuation-notes/07_TND_OC_PAIR_MARGINAL_DIRECTION_AND_LITERATURE_20261108.md)
 specifies prospective B04: compare corrected arithmetic complex-difference

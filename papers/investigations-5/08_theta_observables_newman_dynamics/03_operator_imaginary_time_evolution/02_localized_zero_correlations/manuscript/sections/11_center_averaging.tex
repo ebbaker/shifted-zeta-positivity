@@ -1,0 +1,164 @@
+\section{Separation, unfolding, and the center-averaged law}\label{sec:centers}
+
+The pair function in \eqref{eq:full-correlation} has four real arguments.
+Each reduction of that information should be stated as an explicit
+coordinate change or marginalization. This is especially relevant when
+comparing a complex-zero statistic with a real-line spacing law.
+
+\subsection{Center and separation coordinates}
+
+For $u,v\in\C$ set
+\begin{equation}\label{eq:center-separation}
+ c=\frac{\Re u+\Re v}{2},\quad s=\Re u-\Re v,
+ \quad a=\Im u,\quad b=\Im v,
+ \qquad
+ \mathcal C_{2,\epsilon}^W(c,s,a,b)
+    =R_{2,\epsilon}^W(c+s/2+\ii a,c-s/2+\ii b).
+\end{equation}
+The absolute Jacobian is one. Thus integrating $c$ gives a separation
+density with two transverse marks; subsequently integrating $a,b$
+gives a horizontal separation density. Neither is the full function.
+Dividing any of these by $Z_2>0$ gives its ordered-pair probability
+density. The ratio $R_2(u,v)/(r(u)r(v))$, where the denominator is
+positive, is a different normalization and does not generally have
+total mass one.
+
+A second useful projection integrates the full complex center:
+\begin{proposition}[Gaussian separation marginal]\label{prop:separation}
+For $s\in\C$,
+\begin{equation}\label{eq:separation-gaussian}
+ \mathcal D_{2,\epsilon}^W(s)
+ :=\int_\C R_{2,\epsilon}^W(c+s/2,c-s/2)\dd A(c)
+ =\sum_{j\ne k}w_jw_k
+                  G_{\sqrt2\epsilon}(s-(z_j-z_k)).
+\end{equation}
+Its total mass is $Z_2$.
+\end{proposition}
+\begin{proof}
+For a fixed pair, substitute the two Gaussian factors in the integral.
+Completing the square in $c$ gives the density of the difference of
+two independent Gaussians, whose covariance is $2\epsilon^2 I$.
+Its normalization is $(4\pi\epsilon^2)^{-1}$. Summing and then
+integrating in $s$ proves both claims. The map
+$(c,s)\mapsto(c+s/2,c-s/2)$ has absolute Jacobian one in $\R^4$.
+\end{proof}
+Unlike \eqref{eq:center-separation}, this projection integrates out the
+common transverse coordinate. It cannot recover two independent marks.
+
+If all zeros under observation are real, write
+$g_\epsilon(t)=(2\pi\epsilon^2)^{-1/2}\ee^{-t^2/(2\epsilon^2)}$.
+The exact factorization is
+\begin{equation}\label{eq:real-zero-correlation}
+ R_{2,\epsilon}^W(u,v)
+ =g_\epsilon(\Im u)g_\epsilon(\Im v)
+   \sum_{j\ne k}w_jw_k
+        g_\epsilon(\Re u-x_j)g_\epsilon(\Re v-x_k).
+\end{equation}
+The transverse spread here is known observation noise; the horizontal
+factor retains the full real-zero spacing information. A transversely
+vanishing scalar detector would discard this nonzero pair function.
+
+\subsection{A declared center law and an unfolding map}
+
+Let $X$ range over a compact interval $I\subset[10,\infty)$ with a
+specified probability measure $\pi$. Examples are normalized Lebesgue
+measure on $I$ and a Gaussian density truncated to $I$ and renormalized.
+For each $X$, declare the window $W_X$, smoothing width $\epsilon_X>0$,
+and positive horizontal and transverse scales $\ell_X,b_X$. Define
+\begin{equation}\label{eq:unfolding}
+ T_X(\zeta)=X+\ell_X\Re\zeta+\ii b_X\Im\zeta,
+ \quad J_X=\ell_X b_X,\qquad
+ \widetilde R_{k,X}(\boldsymbol\zeta)
+   =J_X^kR_{k,\epsilon_X}^{W_X}(T_X\zeta_1,\ldots,T_X\zeta_k).
+\end{equation}
+The Jacobian preserves total factorial mass. It is legitimate to choose
+$\ell_X$ as a nominal mean-spacing scale, but that choice does not
+prove that the actual local mean density is constant. We smooth first
+in physical coordinates, then unfold; the two resulting Gaussian widths
+are $\epsilon_X/\ell_X$ and $\epsilon_X/b_X$. Fixed isotropic smoothing
+after unfolding is a different convention, implemented by an anisotropic
+physical Gaussian.
+
+Average the conditional observation laws over $X$. Their correlation
+functions, including all orders, are
+\begin{equation}\label{eq:center-average}
+ \overline R_k(\boldsymbol\zeta)
+       =\int_I\widetilde R_{k,X}(\boldsymbol\zeta)\dd\pi(X).
+\end{equation}
+This is a fully specified statistical ensemble derived from the
+canonical configuration and an external center law. For simplicity,
+all parameter choices below are measurable and bounded on $I$, with
+positive lower bounds on the scales and smoothing width. A Gaussian
+law on the whole real line would require an additional center-tail
+bound; truncation is part of the definition here.
+
+\begin{proposition}[The connected center-averaged pair]\label{prop:covariance}
+Let $\widetilde r_X(\zeta)=J_Xr_{\epsilon_X}^{W_X}(T_X\zeta)$ and
+$\widetilde d_X(\zeta,\eta)=J_X^2d_{\epsilon_X}^{W_X}(T_X\zeta,T_X\eta)$.
+Then, with $\overline r=\int_I\widetilde r_X\dd\pi$,
+\begin{equation}\label{eq:center-covariance}
+ \overline R_2(\zeta,\eta)-\overline r(\zeta)\overline r(\eta)
+ =\operatorname{Cov}_{\pi}\bigl(\widetilde r_X(\zeta),
+                              \widetilde r_X(\eta)\bigr)
+       -\int_I\widetilde d_X(\zeta,\eta)\dd\pi(X).
+\end{equation}
+Here covariance is the bilinear real covariance of the displayed
+real-valued densities.
+\end{proposition}
+\begin{proof}
+Multiply \eqref{eq:pair-rd} by $J_X^2$, substitute $T_X\zeta,T_X\eta$,
+and average. Subtract the product of the two averaged first intensities.
+The remaining product term is exactly the covariance in
+\eqref{eq:center-covariance}.
+\end{proof}
+
+At a fixed center the connected function for the auxiliary independent
+observations is just $-d$. The full pair function still contains the
+configuration's spatial geometry. Averaging over centers adds the
+covariance of that geometry. Thus a canonical estimate of the
+center covariance is a concrete further analytical target; it is not
+provided by independence of the observation noise. A source expression
+for this covariance is obtained in Section~\ref{sec:full-pair}.
+
+\subsection{An ensemble benchmark derived by marginalization}
+
+To distinguish a model joint law from the canonical construction,
+consider the circular density
+\begin{equation}\label{eq:cue-joint}
+ p_N^{\rm circ}(\boldsymbol\theta)
+   =\frac1{N!(2\pi)^N}
+      \prod_{j<k}|\ee^{\ii\theta_j}-\ee^{\ii\theta_k}|^2,
+ \qquad 0\le\theta_j<2\pi.
+\end{equation}
+This is a familiar determinant-product example
+\cite[Section 4]{Borodin2009DPP}; its relevant calculation is short.
+Put $\phi_m(\theta)=\ee^{\ii m\theta}/\sqrt{2\pi}$ for $0\le m<N$.
+The Vandermonde identity writes \eqref{eq:cue-joint} as
+$|\det[\phi_m(\theta_j)]|^2/N!$. On expanding both determinants,
+orthonormality kills all unequal permutations after full integration,
+so the density has mass one. If only $N-k$ coordinates are integrated,
+orthogonality instead retains the $k\times k$ minors; expanding their
+determinants gives
+$\rho_k=\det[K_N(\theta_a,\theta_b)]_{a,b\le k}$, where
+\[
+ K_N(\theta,\phi)=\frac1{2\pi}\sum_{m=0}^{N-1}
+                                      \ee^{\ii m(\theta-\phi)}.
+\]
+In particular $\rho_2=(N/(2\pi))^2-|K_N|^2$.
+Unfolding by $x=N\theta/(2\pi)$ and summing the geometric series yields
+\begin{equation}\label{eq:cue-sine}
+ \rho_{2,N}^{\rm unf}(s)
+    =1-\left(\frac{\sin\pi s}{N\sin(\pi s/N)}\right)^2
+       \longrightarrow 1-\left(\frac{\sin\pi s}{\pi s}\right)^2
+\end{equation}
+for fixed $s$, with removable values interpreted by continuity.
+If each coordinate of the limiting real-line pair density is smoothed
+by $g_\epsilon$, its separation profile becomes
+\begin{equation}\label{eq:smoothed-sine-reference}
+ 1-g_{\sqrt2\epsilon}*\left(\frac{\sin\pi s}{\pi s}\right)^2.
+\end{equation}
+This follows from the same difference-variance calculation as
+Proposition~\ref{prop:separation}. These equations provide a reference
+for what a model marginal calculation can produce. Neither the
+Vandermonde law nor its sine profile has been derived for the localized
+canonical zero configuration in this manuscript.

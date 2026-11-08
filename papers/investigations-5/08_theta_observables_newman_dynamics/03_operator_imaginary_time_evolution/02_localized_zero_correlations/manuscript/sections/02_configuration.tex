@@ -1,0 +1,162 @@
+\section{Reflection and finite configuration algebra}\label{sec:configuration}
+
+Let a finite labelled configuration be invariant under conjugation.
+Suppose $|y_j|\le1$, and choose
+$w_j=w((x_j-X)/h)$ with $0\le w\le1$ and compact support, $h>0$.
+Only labels in that support matter. Define the horizontal moment
+measures and their first useful masses by
+\begin{equation}\label{eq:qmoments}
+ q_\ell=\sum_jw_jy_j^\ell\delta_{x_j},\qquad
+ N_w=q_0(\R),\qquad Q_w=q_2(\R).
+\end{equation}
+Conjugation cancels each odd moment at each horizontal coordinate,
+not merely after integration:
+$q_{2r+1}=0$. This elementary observation determines exactly how much
+information a quadratic transverse difference can retain.
+
+\begin{proposition}[Quadratic pair reduction]\label{prop:quadratic}
+Let $\chi$ be bounded, even and nonnegative. Then
+\begin{align}
+ S_2(\chi)&=\sum_{j\ne k}
+    w_jw_k\chi(x_j-x_k)(y_j-y_k)^2 \notag\\
+ &=2\int(\chi*q_0)(x)\dd q_2(x)
+ \le 2\norm{\chi}_\infty N_wQ_w .\label{eq:quadratic-reduction}
+\end{align}
+In particular $S_2(1)=2N_wQ_w$.
+\end{proposition}
+\begin{proof}
+The terms with $j=k$ vanish and can be restored. Expanding the square
+gives the two terms $q_2\otimes q_0$ and $q_0\otimes q_2$,
+minus $2q_1\otimes q_1$, all tested against $\chi(x-x')$.
+The last term is zero. Evenness of $\chi$ makes the other two equal.
+Their positivity gives the upper bound.
+\end{proof}
+
+If $\chi(0)=1$ and there are $m$ copies at each of $x_*\pm\ii d$,
+their two ordered cross populations contribute
+$8m^2w((x_*-X)/h)^2d^2$ to $S_2$.
+They contribute $2mw((x_*-X)/h)d^2$ to $Q_w$.
+Thus the test detects a transverse pair, but its exact reduction
+prevents interpreting it as independently acquired two-point
+information.
+
+The same mechanism extends to all even difference powers. For $k\ge1$,
+\begin{equation}\label{eq:higher-moments}
+ S_{2k}(\chi)=
+ \sum_{r=0}^k \binom{2k}{2r}
+       \iint\chi(x-x')\dd q_{2k-2r}(x)\dd q_{2r}(x').
+\end{equation}
+This follows by binomial expansion; all odd factors vanish.
+Since $|y_j-y_k|\le2$,
+$S_{2k}(\chi)\le2^{2k-2}S_2(\chi)$.
+These are identities and bounds for this particular family of tests;
+they do not reconstruct the full marked pair measure.
+
+\subsection{A configuration generating function with an order bound}
+
+Put $a_j=w_jy_j^2\in[0,1]$ and
+\begin{equation}\label{eq:configuration-product}
+ Z(\eta)=\prod_{j=1}^N(1+\eta a_j)
+        =\sum_{k=0}^N e_k\eta^k,\qquad
+ p_r=\sum_j a_j^r,\qquad p_1=Q_w.
+\end{equation}
+The $e_k$ are elementary symmetric polynomials of the $a_j$.
+Differentiating the finite product gives, first near $\eta=0$,
+\[
+ \frac{Z'(\eta)}{Z(\eta)}
+ =\sum_j\frac{a_j}{1+\eta a_j}
+ =\sum_{r\ge1}(-1)^{r-1}p_r\eta^{r-1}.
+\]
+Comparing coefficients proves Newton's recurrence
+\begin{equation}\label{eq:newton}
+ e_0=1,\qquad
+ ke_k=\sum_{r=1}^k(-1)^{r-1}p_re_{k-r}.
+\end{equation}
+It is exact finite algebra; no closure assumption enters.
+
+\begin{proposition}[Product comparison and growing-order truncation]\label{prop:product}
+For $\eta\ge0$,
+\begin{equation}\label{eq:product-bounds}
+ \log(1+\eta)Q_w\le\log Z(\eta)\le\eta Q_w .
+\end{equation}
+For every integer $K\ge0$,
+\begin{equation}\label{eq:order-tail}
+ 0\le Z(\eta)-\sum_{k=0}^Ke_k\eta^k
+ \le \ee^{\eta Q_w}
+       \frac{(\eta Q_w)^{K+1}}{(K+1)!},
+\end{equation}
+where $e_k=0$ for $k>N$. If $Q_w\le B$ and $0<\varepsilon<1$,
+the right side is at most $\varepsilon$ whenever $k=K+1$ satisfies
+\begin{equation}\label{eq:order-choice}
+ k\ge\max\left\{1,\ 2\ee\eta B,\
+           \frac{\eta B+\log(1/\varepsilon)}{\log2}\right\}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+On $a\in[0,1]$, concavity of $\log(1+\eta a)$ puts its graph
+above the chord $a\log(1+\eta)$ and below its tangent $\eta a$.
+Summing proves \eqref{eq:product-bounds}.
+Expansion of $(\sum a_j)^k$ contains every product with distinct labels
+$k!$ times and additional nonnegative terms, so $e_k\le Q_w^k/k!$.
+For $t\ge0$,
+$\sum_{j=k}^\infty t^j/j!\le t^k\ee^t/k!$, since
+$(k+\ell)!\ge k!\ell!$. This proves \eqref{eq:order-tail}.
+Finally $k!\ge(k/\ee)^k$ makes its right side at most
+$\ee^{\eta B}2^{-k}$ under the first two size conditions, and the
+last condition gives $\varepsilon$.
+\end{proof}
+
+For complex $\eta$, use the logarithm branch equal to zero at $\eta=0$.
+If $q=|\eta|\max_j a_j<1$, the same finite product gives
+\begin{equation}\label{eq:complex-log-tail}
+ \left|\log Z(\eta)-
+       \sum_{r=1}^K\frac{(-1)^{r-1}}r\,p_r\eta^r\right|
+ \le
+ \frac{|\eta|^{K+1}p_{K+1}}{(K+1)(1-q)} .
+\end{equation}
+For each factor, expand $\log(1+\eta a_j)$, use
+$1/r\le1/(K+1)$ in the tail, and sum the geometric series.
+Thus increasing the factorial order is permitted only with a
+simultaneous radius or tail payment, not from fixed-order identities
+alone.
+
+A local count can supply $B$. For example, if the population in
+every relevant interval of length at most one is bounded by
+$A_{\mathrm{count}}\log(3+|X|+h)$, and
+$\supp w\subset[-1,1]$, covering $[X-h,X+h]$ gives
+\[
+ Q_w\le N_w\le
+ A_{\mathrm{count}}(\lceil2h\rceil+1)\log(3+|X|+h).
+\]
+This is a conditional count corollary, with its constant retained.
+The canonical disk estimate in Section~\ref{sec:canonical} supplies a
+different explicit population bound in its stated regime.
+
+\subsection{Defect signals and the cost of averaging}
+
+On a plateau where $w=1$, a simple pair $x_*\pm\ii d$ contributes
+\begin{equation}\label{eq:scalar-signals}
+ Q_w\ge2d^2,\qquad
+ \log Z(\eta)\ge2\log(1+\eta d^2).
+\end{equation}
+All other terms are nonnegative. Both observables are zero for every
+all-real configuration, including real multiple zeros. They test
+nonreality, not simplicity.
+
+If the center $X$ is averaged uniformly on an interval of length $L$
+which contains the full translate of the window around $x_*$, the
+pair's respective contributions become
+\begin{align}
+ &\frac{2d^2h}{L}\int_\R w(t)\dd t,\qquad
+ \frac{2h}{L}\int_\R\log(1+\eta d^2w(t))\dd t,\label{eq:average-scalar}\\
+ &\frac{8d^2h}{L}\int_\R w(t)^2\dd t
+       \quad\text{for its mutual contribution to }S_2
+       \text{ when }\chi(0)=1 .\notag
+\end{align}
+These follow by the substitution $t=(x_*-X)/h$.
+Averaged and every-center statements therefore have different
+single-pair margins. With complete height and transverse-scale
+coverage, vanishing of these nonnegative tests is simply a
+reformulation of the assertion that all canonical zeros are real,
+equivalently RH. That reformulation supplies no new estimate and is
+not supported by sampling checks.

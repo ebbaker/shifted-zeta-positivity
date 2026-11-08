@@ -1,0 +1,200 @@
+\section{Arithmetic pair information and its localization limits}\label{sec:arithmetic}
+
+The full smoothed pair function retains a common center, a separation,
+and two transverse marks. We now compare that information with one known
+arithmetic projection. The comparison explains which variables an existing
+theorem integrates out, and therefore which new estimates the present
+program needs. It also supports the marked scalar specialization in
+Appendix~\ref{sec:pairs}. The conclusions concern the stated imports;
+they are not a limitation theorem for all arithmetic correlation methods.
+
+\subsection{The corrected cumulative and dyadic imports}
+
+Write $L=\log T$, $B_T=TL/(2\pi)$, and use $r_0>0$ for the
+exponential base in the arithmetic formula. For an ordinate interval
+$I$ define
+\begin{equation}\label{eq:arithmetic-F}
+ \mathcal F_I(r_0)=
+ \sum_{\gamma_j,\gamma_k\in I}
+       r_0^{\rho_j-\rho_k}W(\rho_j-\rho_k),
+ \qquad W(u)=\frac4{4-u^2}.
+\end{equation}
+All zeta zeros and all multiplicity copies are included, along
+with their self labels. The corrected source is
+Baluyot--Goldston--Suriajaya--Turnage-Butterbaugh
+\cite[Section 3]{BGST2026PairI}, version 3.
+The first line of its cumulative formula (3.5) gives, uniformly
+for $1\le r_0\le T$,
+\begin{equation}\label{eq:bgst-cumulative-raw}
+ \mathcal F_{(0,T]}(r_0)
+ =\frac{T}{2\pi r_0^2}\{L^2+O(L)\}
+       +\frac{T}{2\pi}\log r_0+O(T\sqrt L).
+\end{equation}
+Consequently, for $0\le\alpha\le1$,
+\begin{equation}\label{eq:bgst-cumulative}
+ \frac{\mathcal F_{(0,T]}(T^\alpha)}{B_T}
+ =T^{-2\alpha}\{L+O(1)\}+\alpha+O(L^{-1/2}).
+\end{equation}
+The corresponding dyadic theorem, its equation (3.2), is
+\begin{equation}\label{eq:bgst-dyadic}
+ \frac{\mathcal F_{(T,2T]}(T^\alpha)}{B_T}
+ =T^{-2\alpha}L+\alpha
+       +O(T^{-2\alpha}\sqrt L+L^{-1/2}).
+\end{equation}
+The stronger first error in \eqref{eq:bgst-cumulative} must not
+be transferred to the different population in
+\eqref{eq:bgst-dyadic}. These are imported arithmetic estimates,
+not reproved prime mean-square theorems in this draft. Their
+uniform big-$O$ constants and onsets are not numerically
+instantiated here.
+
+For clarity, positivity of the full sum has an elementary finite
+explanation. If $u_j=\rho_j-1/2$, the zero multiset in $I$ is
+invariant under $u\mapsto-\overline u$. The identity
+$W(u)=\int_\R\ee^{-2|t|}\ee^{tu}\dd t$ for $|\Re u|<2$
+therefore gives
+\begin{equation}\label{eq:arithmetic-gram}
+ \mathcal F_I(r_0)=
+ \int_\R\ee^{-2|t|}
+       \left|\sum_{\gamma_j\in I}
+                   \ee^{(\log r_0+t)u_j}\right|^2\dd t\ge0.
+\end{equation}
+Interchange is valid for the finite population and
+$|\Re(\rho_j-\rho_k)|\le1$.
+Swapping labels shows
+$\mathcal F_I(r_0^{-1})=\mathcal F_I(r_0)$.
+Neither observation makes every complex summand nonnegative.
+
+\subsection{A triangular-frequency projection and its actual value}
+
+Let $q_{\rm freq}(\alpha)=(1-|\alpha|)_+$ and define its entire
+transform
+\begin{equation}\label{eq:fejer-transform}
+ K_T(u)=\int_{-1}^1(1-|\alpha|)\ee^{\alpha Lu}\dd\alpha
+       =\left(\frac{\sinh(Lu/2)}{Lu/2}\right)^2,\qquad K_T(0)=1.
+\end{equation}
+One can verify the formula by integrating twice, or by observing
+that the triangular function is the convolution of two unit
+interval indicators and multiplying their exponential transforms.
+The ordered factorial statistic for the dyadic population
+$\mathcal Z(T)=\{\rho:T<\gamma\le2T\}$ is
+\begin{equation}\label{eq:A_T}
+ A_T=\frac1{B_T}\sum_{\substack{\rho_j,\rho_k\in\mathcal Z(T)\\j\ne k}}
+       W(\rho_j-\rho_k)K_T(\rho_j-\rho_k).
+\end{equation}
+Writing $n_T=|\mathcal Z(T)|$, the removed self mass is exactly
+$n_T/B_T$. Distinct labels at a multiple zero remain.
+
+\begin{proposition}[Value of the imported projection]\label{prop:bulk-value}
+The dyadic import \eqref{eq:bgst-dyadic} and the classical
+unconditional count $n_T=B_T+O(T)$ imply
+\begin{equation}\label{eq:bulk-value}
+ A_T=\frac13+O(L^{-1/2}).
+\end{equation}
+If the error in \eqref{eq:bgst-dyadic} is bounded by
+$C_{\rm BG}(T^{-2\alpha}\sqrt L+L^{-1/2})$ and
+$|n_T/B_T-1|\le C_N/L$ in a common range, then
+\begin{equation}\label{eq:bulk-error}
+ \left|A_T-\frac13\right|
+ \le\frac{2C_{\rm BG}}{\sqrt L}+\frac{C_N+1/2}{L}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Integrate \eqref{eq:bgst-dyadic} against the triangular weight,
+use evenness, and subtract the self mass. The two leading integrals
+are
+\[
+ 2L\int_0^1(1-\alpha)\ee^{-2L\alpha}\dd\alpha
+       =1-\frac{1-T^{-2}}{2L},\qquad
+ 2\int_0^1(1-\alpha)\alpha\dd\alpha=\frac13.
+\]
+The integrated first error is at most
+$2C_{\rm BG}\sqrt L\int_0^1\ee^{-2L\alpha}\dd\alpha
+\le C_{\rm BG}/\sqrt L$.
+The second contributes $C_{\rm BG}/\sqrt L$.
+The zero count and the remaining $1/(2L)$ term give
+\eqref{eq:bulk-error}. In particular the frequency-zero spike
+has been retained.
+\end{proof}
+
+This is an actual arithmetic value for the declared projection.
+It is not the value of the marked test in Appendix~\ref{sec:pairs}.
+In the $H$ coordinate, the population lies in $2T<x\le4T$,
+a window of half-width $T$ centered at $3T$.
+Moreover
+\[
+ L(\rho_j-\rho_k)=
+ \frac L2\bigl(-(y_j-y_k)+\ii(x_j-x_k)\bigr),
+\]
+so the microscopic difference scale is $4\pi/L$ in the $x$
+coordinate. The projection retains a complex difference but
+neither arbitrary common-center localization nor the two
+separate transverse marks.
+
+A simple $H$-pair at $x_*\pm\ii d$, $0<d<1$, has zeta
+real-part difference $d$. Its two ordered mutual terms in
+\eqref{eq:A_T} contribute
+\begin{equation}\label{eq:arithmetic-defect}
+ \frac2{B_T}\frac4{4-d^2}
+       \left(\frac{\sinh(dL/2)}{dL/2}\right)^2 .
+\end{equation}
+For $d=c/L$ with fixed $c>0$, this is $O((TL)^{-1})$,
+while the available error allowance in \eqref{eq:bulk-error}
+is of order $L^{-1/2}$ and the main value is $1/3$.
+At $d=0$ two different coincident real labels contribute $2/B_T$.
+Other complex summands need not be nonnegative, so
+\eqref{eq:arithmetic-defect} is neither a lower bound on $A_T$
+nor the total change produced by inserting a pair: cross
+interactions remain.
+Thus this known projection supplies neither the desired
+short-window marked value nor a useful absolute single-defect
+comparison with the stated error.
+
+\subsection{What the real-root and replacement-method benchmarks supply}
+
+The classical Montgomery pair-correlation framework
+\cite{Montgomery1973} motivates distinguishing bulk difference
+information from a fully marked local marginal. An elementary
+real-root identity illustrates the distinction. For a polynomial
+with real roots $a_1,\ldots,a_n$, counted with multiplicity, put
+\[
+ p_P(x)=\sum_{j=1}^n\frac{y}{\pi((x-a_j)^2+y^2)},\qquad y>0 .
+\]
+The Cauchy densities satisfy $P_y*P_y=P_{2y}$; this follows,
+for example, from their Fourier transform $\ee^{-y|\xi|}$.
+Therefore
+\begin{equation}\label{eq:real-poisson}
+ 2\pi y\norm{p_P}_{L^2(\R)}^2-n
+ =\sum_{j\ne k}\frac{4y^2}{(a_j-a_k)^2+4y^2}.
+\end{equation}
+Indeed the integral of the $j,k$ product is
+$P_{2y}(a_j-a_k)$, and each self term becomes one after
+multiplication by $2\pi y$.
+At $y=h/2$ the separation kernel is exactly $c_h$.
+This real-population benchmark, used in the earlier heat-flow
+collision investigation, does not establish that an
+approximation to the canonical field has only real roots.
+Discarding its possible complex zeros would remove the very
+information under investigation.
+
+Likewise the local replacement principle of Tao and Vu
+\cite[Theorems 2.1 and 3.1]{TaoVu2014LocalZeros}
+is useful as an architecture, not an imported theorem about
+$H_0$. Its hypotheses include nondegeneracy, non-clustering,
+and joint smooth-test comparison of logarithmic values, in a
+degree-at-most-$n$ polynomial setting; the real version also
+requires reference-field repulsion bounds.
+A compact-source entire transform is not a polynomial, and
+its local Jensen count is not its polynomial degree.
+Theorem~\ref{thm:pair-transfer} avoids that probabilistic
+comparison problem for deterministic accuracy on one disk,
+but supplies no comparison in law or favorable reference value.
+
+The earlier Rodgers--Tao-related local heat-flow work, as
+discussed in the predecessor comparison \cite{OCArithmetic},
+supplies a further methodological lesson: real simple populations,
+exterior forces, and same-root correlation errors must retain
+their exact hypotheses and combined accounting. None of those
+real-population hypotheses is produced here for a field with
+possibly nonreal zeros. A positive-time evolution or closed
+correlation hierarchy would require a separate argument.

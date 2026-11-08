@@ -1,5 +1,9 @@
 # Green/resolvent assessments
 
+**8 November 2026, E05:** [Review06](06_TND_OG_E05_CLAIM_LEVEL_ASSESSMENT_20261108.md) accepts all eight fixed claims with one additive evidence/control clarification. Internal shared-premise LLM assessment; root also E03 author. Original proof bytes and evidence distinctions preserved. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort are not recorded in accessible capture metadata.
+
+**8 November 2026, E03:** [Check05](05_TND_OG_E03_ASSEMBLY_PROOF_AUTHOR_CHECK_20261108.md) checks the complete written assembly and records one bounded inherited-obstruction scope clarification. Internal proof-author check with shared premises, not a separate claim-level assessment. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort are not recorded in accessible capture metadata.
+
 **8 November 2026, B03:** [Check04](04_TND_OG_B03_HIERARCHY_TRANSFER_SELF_CHECK_20261108.md) checks gamma normalization, imported remainder constants, order growth, cutoff measurability and the local scope of the hierarchy transfer. Same-assistant checking, not independent assessment. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort not recorded.
 
 **8 November 2026, manuscript integration:** [Check03](03_TND_OG_E04_MANUSCRIPT_INTEGRATION_CHECK_20261108.md) checks the first analytical draft's claim scope, source attributions, compilation and visual layout. Same-assistant production check only; source evidence levels are unchanged. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort not recorded.

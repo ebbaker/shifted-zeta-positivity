@@ -1,5 +1,66 @@
 # Localized correlations and full zero configurations
 
+**Full marginal development, 8 November 2026:** the primary objects are
+alpha_k^W=sum_distinct product W(z_j) delta_(z_j) and their coordinatewise
+Gaussian convolutions R_k,e^W. They retain real-zero spacings, nonreal
+marks, multiplicity and common-center dependence. The 34-page
+[current manuscript](../manuscript/README.md) now develops these objects
+systematically; its guide locates every definition. Gaussian observation
+smoothing, Gaussian window weighting and a Gaussian ensemble law are
+separate choices. The physical window selected here is compact.
+
+[Note09](../notes/09_TND_OC_FULL_GAUSSIAN_MARGINALS_AND_CANONICAL_TRANSFER_20261108.md)
+derives the joint-to-marginal normalization, weighted random-count law,
+self correction R_2=r*r-d with W² in d, generating functional, Gaussian
+flow/bias, separation projections and center covariance. A new two-sided
+partition retains real labels while extending the accepted E02 input to
+sup|R_2(H0)-R_2(Hhat)| <= E_X(4n_X A_e U_h,e+V_h,e)/pi.
+This is uniform full-function approximation, with conservative
+O_(h,X)(E_X e^-6) small-width cost. It is not a canonical profile estimate.
+
+A declared compact center probability law and unfolding give the connected
+function Cov_pi(tilde-r_X,tilde-r_X)-E_pi tilde-d_X. Each first intensity
+has an explicit compact source-log integral. New source-specific control
+of their joint center dependence is the next analytical question; the
+identity itself does not supply it. The existing scalar results are
+supporting appendices and keep their original evidence levels.
+
+New derivations: **preliminary, proof-author checking only**, with
+[author check06](../reviews/06_TND_OC_E06_GAUSSIAN_MANUSCRIPT_AUTHOR_CHECK_20261108.md).
+B05/E06 are complete; E07 is the next fixed assessment, followed by B06
+covariance planning. E02 remains accepted internally, E03/E04 pending.
+[Continuation11](../continuation-notes/11_TND_OC_AFTER_GAUSSIAN_MANUSCRIPT_AND_MODEL_CHANGE_20261108.md)
+sets the current routing; older default-next statements below are historical.
+Prepared for Edward Baker with substantial OpenAI Codex assistance; actual
+recorded model/effort unavailable, chat0003.
+
+Read the [result index](../../../../../../result-summaries/README.md),
+[cluster11](../../../../../../result-summaries/11_newman_heat_flow_reductions_and_certificates.md),
+[controls12](../../../../../../result-summaries/12_collision_controls_and_screening.md),
+[avoid index](../../../../../../avoid/README.md),
+[classification01](../../../../../../avoid/01_restating_the_target.md),
+[status06](../../../../../../avoid/06_status_stronger_than_the_evidence.md), and
+[scope07](../../../../../../avoid/07_scoped_exclusions_read_as_universal.md).
+The controls satisfy the generic marginal identities; their failed
+canonical premises are listed in Note09/manuscript §8. No control screen
+or source-accuracy check estimates the canonical profile.
+
+**B04 update, 8 November 2026:** [Note05](../notes/05_TND_OC_B04_ARITHMETIC_RECONCILIATION_AND_ROUTE_COMPARISON_20261108.md)
+completes the requested two-route comparison. Corrected BGST preserves
+the cumulative import and yields the stated dyadic analytic projection,
+not a short-window marked law. [Note06](../notes/06_TND_OC_B04_DETERMINISTIC_MARKED_PAIR_TRANSFER_20261108.md)
+fixes a nonnegative marked Poisson separation test at lambda=0 and
+extends accepted E02 to deterministic pair acquisition. For b=h its
+error coefficient is (2800n_X+3621/2)/(pi h^2), multiplying the E02
+L1 logarithm error; a conjugate pair contributes 2(d/b)^4.
+New proof status is **proved in-note; author self-check only**.
+The independent favorable canonical value remains open, as does the
+full marginal objective. See [Continuation08](../continuation-notes/08_TND_OC_AFTER_B04_AND_MODEL_CHANGE_20261108.md)
+and the sole register. Prepared for Edward Baker with substantial
+OpenAI Codex assistance; actual recorded model/effort unavailable,
+chat0003. The setup and earlier direction descriptions below retain
+their historical scope.
+
 7 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Root authoring model/effort unavailable; hierarchy discovery was tool-selected **gpt-6.1-sol/ultra**, shared Green check **gpt-6-astra/ultra**. Dispatch settings are not independent backend verification.
 
 
@@ -116,9 +177,11 @@ heat-evolved random polynomials supply comparison examples, not a law
 for H. [Source-use04](../references/04_TND_OC_PAIR_MARGINAL_LITERATURE_SOURCE_USE_20261108.md)
 records versions, hypotheses and exact inspected passages.
 
-**Source correction:** BGST arXiv:2501.14545v3 §3 corrects the earlier
-uniform error. Reconcile the parent manuscript's imported (eq:BGST)
-before using it in candidate A; no automatic status upgrade or global
+**Source reconciliation:** BGST arXiv:2501.14545v3 §3 corrects the
+earlier proof/error formulation. Its cumulative (3.5), first line,
+recovers the parent (eq:BGST) unchanged; retain the separately stated
+dyadic (3.2) error. [Source check](../reviews/BGST_IMPORT_SOURCE_CHECK_20261108.md)
+and Note05 document the reconciliation. No global reassessment or
 retraction is implied.
 
 The next milestone is one specified test with independently controlled

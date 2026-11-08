@@ -1,5 +1,9 @@
 # Green/resolvent research notes
 
+**8 November 2026, E05:** [Note07](07_TND_OG_E05_ASSESSMENT_CALCULATIONS_20261108.md) records assessment calculations, explicit finite quadrature witnesses and the additive evidence/control clarification. Read with frozen Note06; its theorem is unchanged. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort are not recorded in accessible capture metadata.
+
+**8 November 2026:** [Note06](06_TND_OG_E03_COMPLETE_SIGNED_LOG_ACQUISITION_20261108.md) completes E03's finite-source, exact-log-tail and prime-baseline acquisition theorem. Proved in-note with proof-author checking only; favorable value unpaid. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort are not recorded in accessible capture metadata.
+
 **8 November 2026, B03:** [Note05](05_TND_OG_B03_HDA_HIERARCHY_LOG_TRANSFER_20261108.md) distinguishes the earlier heat-density hierarchies and derives their direct local RS-to-logarithm transfer. Growing completion order K=O(log log X) pays an O((log X)^−2) unit-interval log error. Same-assistant checking only; complete Green assembly and favorable smallness remain open. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort not recorded.
 
 **8 November 2026:** [Note04](04_TND_OG_B02_ONE_SIDED_BOUNDARY_LOG_ACQUISITION_20261108.md) contains the proved local line-sublevel/envelope estimate and the selected, unexecuted E03 assembly. Proof-author checking only; exact model/effort unavailable. [Continuation05](../continuation-notes/05_TND_OG_B02_RESULTS_AND_MODEL_CHANGE_20261108.md) supersedes the earlier next-task pointers below.

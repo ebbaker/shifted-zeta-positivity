@@ -1,0 +1,242 @@
+\section{Canonical approximation of the full pair function}\label{sec:full-pair}
+
+The preceding source estimates were obtained on an off-axis disk with
+a safe anchor. A full pair function must also retain real zeros and
+zeros on both sides of the axis. Folding a transversely vanishing test
+does not accomplish this. We instead use two reflected disks and a
+smooth partition that counts every real label with total weight one.
+This section contains the new preliminary quantitative result
+\cite{OCGaussian}; its evidence status is stated in Appendix~\ref{app:status}.
+
+\subsection{A two-sided window with an explicit support buffer}
+
+Define the $C^2$ cutoff
+\begin{equation}\label{eq:full-cutoff}
+ P(t)=\begin{cases}
+ 1,&t\le0,\\
+ 1-10t^3+15t^4-6t^5,&0<t<1,\\
+ 0,&t\ge1.
+ \end{cases}
+\end{equation}
+Its first derivative is $-30t^2(1-t)^2$ on $(0,1)$, so
+$|P'|\le15/8$; differentiation once more gives $|P''|\le6$.
+For $X\ge10$ and $0<h\le1$ put
+\begin{equation}\label{eq:full-window}
+ \begin{gathered}
+ w_{X,h}(x)=P(2|x-X|/h-1),\qquad \kappa_0(y)=P(|y|-1),\\
+ W_X(x+\ii y)=w_{X,h}(x)\kappa_0(y),\qquad
+ \theta_+(y)=P(1/2-16y),\quad\theta_-(y)=1-\theta_+(y).
+ \end{gathered}
+\end{equation}
+The absolute values cause no singular derivatives because each cutoff
+is constant near their nonsmooth points. The window equals one for
+$|x-X|\le h/2$, $|y|\le1$, and vanishes outside
+$|x-X|\le h$, $|y|\le2$. For true time-zero zeros the transverse
+cutoff is one; for approximating zeros the collar $1<|y|<2$ keeps
+its stated weights.
+
+Let $c_\pm=X\pm4\ii$ and retain $R=9/2$, $\rho_*=13/3$, $r=25/6$
+from \eqref{eq:radii}. The support of $\theta_+W_X$ has
+$y\ge-1/32$ and hence
+\begin{equation}\label{eq:two-disk-buffer}
+ |z-c_+|^2\le1+(4+1/32)^2
+        =\frac{17665}{1024}<\frac{625}{36}=r^2.
+\end{equation}
+The reflected statement holds for $\theta_-W_X$. Both supports have a
+strict buffer inside their disks. At $y=0$, $\theta_+=\theta_-=1/2$.
+Thus the partition retains real zeros exactly, without an axis indicator
+or a boundary distribution.
+
+Use $F_+=F=D H_0$ and $\widehat F_+=D\widehat H_{J,U}$ from
+Section~\ref{sec:canonical}. Define
+$F_-(z)=\overline{F_+(\bar z)}$ and
+$\widehat F_-(z)=\overline{\widehat F_+(\bar z)}$.
+Conjugation symmetry of both entire fields makes these products of the
+same fields with reflected, locally zero-free multipliers. Reflection
+transports the source error, anchor and log estimate to the lower disk:
+\begin{equation}\label{eq:both-log-errors}
+ \int_{D(c_\sigma,r)}
+       |\log|F_\sigma|-\log|\widehat F_\sigma||\dd A\le E_X,
+ \qquad \sigma\in\{+,-\}.
+\end{equation}
+Each field has at most $n_X$ zero labels in each $\rho_*$ disk, by
+the same Jensen bound. Thus at most $M_X^{\rm pop}:=2n_X$ labels
+of either field can have nonzero $W_X$ weight. This population bound
+is distinct from the normalization constant $M_X=2X+26$.
+
+\begin{lemma}[Two-sided weak transfer]\label{lem:two-sided}
+For any compact $C^2$ test $\psi$ supported in the window rectangle,
+\begin{equation}\label{eq:two-sided-transfer}
+ \left|(\nu_{H_0}-\nu_{\widehat H_{J,U}})(\psi)\right|
+ \le\frac{E_X}{2\pi}
+       \sum_{\sigma=\pm}\|\Delta(\theta_\sigma\psi)\|_\infty.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Write $\psi=\theta_+\psi+\theta_-\psi$. Each summand is supported
+strictly within its inner disk. Apply \eqref{eq:weak-onepoint} there
+to the difference of zero measures, remove each zero-free multiplier,
+and use \eqref{eq:both-log-errors}. This argument treats all labels,
+including coincident labels and labels on the axis, without simplicity
+or zero separation assumptions.
+\end{proof}
+
+\subsection{Uniform Gaussian derivative costs}
+
+All suprema in the following estimates are over the whole relevant
+Euclidean space. Direct radial differentiation of \eqref{eq:gaussian}
+gives
+\begin{equation}\label{eq:gaussian-costs}
+ \|G_\epsilon\|_\infty=A_\epsilon=\frac1{2\pi\epsilon^2},\quad
+ \|\nabla G_\epsilon\|_\infty=B_\epsilon
+       =\frac{A_\epsilon}{\sqrt{\ee}\epsilon},\quad
+ \|\Delta G_\epsilon\|_\infty=C_\epsilon
+       =\frac{2A_\epsilon}{\epsilon^2}.
+\end{equation}
+For the gradient, maximize $t\ee^{-t^2/2}$ at $t=1$; for the
+Laplacian use $|t^2-2|\ee^{-t^2/2}\le2$ for $t\ge0$.
+
+The derivative bounds for the window and partition are
+$|w'|\le15/(4h)$, $|w''|\le24/h^2$,
+$|\theta_\sigma'|\le30$, $|\theta_\sigma''|\le1536$.
+The derivatives of $\theta_\sigma$ are supported in $|y|<1/32$,
+where $\kappa_0=1$; the derivatives of $\kappa_0$ are supported in
+$1<|y|<2$, where $\theta_\sigma$ is constant. This disjointness
+removes their cross terms. With
+$a_\sigma=\theta_\sigma W_X$ and
+$b_\sigma=\theta_\sigma W_X^2$, we obtain
+\begin{equation}\label{eq:window-costs}
+ \begin{aligned}
+ |a_\sigma|,|b_\sigma|&\le1,\\
+ \|\nabla a_\sigma\|_\infty&\le L_h=15/(4h)+30,&
+ \|\Delta a_\sigma\|_\infty&\le D_h=24/h^2+1536,\\
+ \|\nabla b_\sigma\|_\infty&\le L_h^{(2)}=15/(2h)+30,&
+ \|\Delta b_\sigma\|_\infty&\le D_h^{(2)}=609/(8h^2)+1536.
+ \end{aligned}
+\end{equation}
+For example $|(w^2)''|\le2|w''|+2|w'|^2\le609/(8h^2)$.
+Likewise $|(\kappa_0^2)''|\le609/32<1536$, so the vertical
+bound is dominated by the partition transition. Bounding the Euclidean
+gradient by the sum of its coordinate bounds proves the stated $L$'s.
+
+For brevity write $A=A_\epsilon$, $B=B_\epsilon$, $C=C_\epsilon$,
+and define
+\begin{equation}\label{eq:UV-costs}
+ \begin{split}
+ U_{h,\epsilon}&=D_hA+2L_hB+C,\\
+ V_{h,\epsilon}&=D_h^{(2)}A^2+4L_h^{(2)}AB+2AC+2B^2.
+ \end{split}
+\end{equation}
+The product rule gives, uniformly in $u,v\in\C$,
+\begin{align}
+ \|\Delta_z[a_\sigma(z)G_\epsilon(u-z)]\|_\infty
+       &\le U_{h,\epsilon},\label{eq:single-test-cost}\\
+ \|\Delta_z[b_\sigma(z)G_\epsilon(u-z)G_\epsilon(v-z)]\|_\infty
+       &\le V_{h,\epsilon}.\label{eq:self-test-cost}
+\end{align}
+For the second line, the Gaussian product has sup norm at most $A^2$,
+gradient norm at most $2AB$, and Laplacian norm at most $2AC+2B^2$.
+
+\subsection{The full pair approximation theorem}
+
+Use the same $W_X$ and $\epsilon$ for the true field and its exact
+finite-source approximant, and let $R_{2,\epsilon}^{W_X}(V)$ denote
+\eqref{eq:full-correlation} formed from the zeros of $V$.
+
+\begin{theorem}[Uniform full-pair source approximation]\label{thm:full-pair}
+Let $X\ge10$, $0<h\le1$, $\epsilon>0$, and suppose the complete
+source error \eqref{eq:complete-delta} obeys
+$\delta\le\min(1,c_0/2)$. With the explicit constants of
+\eqref{eq:canonical-constants}, \eqref{eq:EX}, and
+\eqref{eq:UV-costs},
+\begin{equation}\label{eq:full-pair-error}
+ \sup_{u,v\in\C}
+ \left|R_{2,\epsilon}^{W_X}(H_0)(u,v)
+          -R_{2,\epsilon}^{W_X}(\widehat H_{J,U})(u,v)\right|
+ \le\frac{E_X}{\pi}
+       \left(4n_XA_\epsilon U_{h,\epsilon}+V_{h,\epsilon}\right).
+\end{equation}
+The estimate includes every real or nonreal zero label in the window,
+with its multiplicity and its actual cutoff weight.
+\end{theorem}
+\begin{proof}
+Applying Lemma~\ref{lem:two-sided} to
+$W_X(z)G_\epsilon(u-z)$ gives
+\[
+ \sup_u|r(u)-\widehat r(u)|\le E_XU_{h,\epsilon}/\pi.
+\]
+The population bound gives $0\le r,\widehat r\le2n_XA_\epsilon$.
+Thus
+\[
+ |r(u)r(v)-\widehat r(u)\widehat r(v)|
+ \le\frac{E_X}{\pi}\,4n_XA_\epsilon U_{h,\epsilon},
+\]
+by adding and subtracting $\widehat r(u)r(v)$. Applying the same
+lemma to $W_X(z)^2G_\epsilon(u-z)G_\epsilon(v-z)$ bounds
+$|d(u,v)-\widehat d(u,v)|$ by $E_XV_{h,\epsilon}/\pi$.
+Subtract the self terms using Proposition~\ref{prop:weighted-pair}.
+All estimates are uniform in the observation points; their Gaussian
+tails do not alter the compact support of the tests in $z$.
+\end{proof}
+
+For fixed $h,X$ and $0<\epsilon\le1$, the right side is
+$O_{h,X}(E_X\epsilon^{-6})$. This follows from
+$A=O(\epsilon^{-2})$, $B=O(\epsilon^{-3})$,
+$C=O(\epsilon^{-4})$, so $AU$ and $V$ are both
+$O_h(\epsilon^{-6})$. The estimate is conservative; no optimal
+width exponent is claimed. Nor does a uniform density bound imply
+an $L^1$ bound on the whole noncompact observation space without
+additional tail estimates.
+
+Set $K_{X,h,\epsilon}=(4n_XA_\epsilon U_{h,\epsilon}
++V_{h,\epsilon})/\pi$. For any density tolerance $e>0$, choose
+\begin{equation}\label{eq:full-precision}
+ \delta_* =\min\left\{1,\frac{c_0}{2},
+ M_X\left(\frac{e}{2K_{X,h,\epsilon}C_X}\right)^{1/\alpha_X}\right\}.
+\end{equation}
+Choose the arithmetic and radial tails in \eqref{eq:delta-H} each
+at most $\delta_*/(2\mathcal B_X)$. Their explicit decay gives finite
+$J,U$, and \eqref{eq:full-pair-error} is then at most $e/2$.
+The remaining $e/2$ is available to a future certified evaluator.
+No evaluation of the canonical pair function, or efficient runtime,
+is asserted by this existence argument.
+
+\subsection{Center averaging and the remaining source covariance}
+
+The uniformity in observation points makes the theorem compatible
+with \eqref{eq:unfolding}. If each center has an error bound
+$\mathcal E_X$ from \eqref{eq:full-pair-error}, then
+\begin{equation}\label{eq:averaged-transfer}
+ \sup_{\zeta,\eta}
+   |\overline R_2(\zeta,\eta)-\widehat{\overline R}_2(\zeta,\eta)|
+       \le\int_I J_X^2\mathcal E_X\dd\pi(X).
+\end{equation}
+This follows by the triangle inequality. On a compact interval with
+the declared parameter bounds, finite source cutoffs can be chosen
+uniformly: the positive anchor is common, $M_X,\mathcal B_X,n_X,C_X$
+are bounded, and $\alpha_X$ has a positive lower bound. This is a
+compact-center assertion, not an all-height uniform estimate.
+
+There is also an exact source expression for the first intensity.
+Define the compact kernels
+\[
+ K_{X,\sigma,\zeta}(z)=
+  \Delta_z\{\theta_\sigma(\Im z)W_X(z)
+                   G_{\epsilon_X}(T_X\zeta-z)\}.
+\]
+The partition and zero-measure identity give
+\begin{equation}\label{eq:source-intensity}
+ \widetilde r_X(\zeta)
+   =\frac{J_X}{2\pi}\sum_{\sigma=\pm}
+       \int_{D(c_\sigma,r)}\log|F_{X,\sigma}(z)|
+                                  K_{X,\sigma,\zeta}(z)\dd A(z).
+\end{equation}
+The analogous single-log expression for $\widetilde d_X$ uses
+$J_X^2\Delta_z(\theta_\sigma W_X^2G_{\epsilon_X}(T_X\zeta-z)
+G_{\epsilon_X}(T_X\eta-z))/(2\pi)$.
+Inserting these formulas into \eqref{eq:center-covariance} identifies
+a centered product of localized log integrals. Its kernels, center
+law and diagonal subtraction are explicit. The individual log bounds
+control approximation error; they do not establish cancellation or a
+limiting shape for this center covariance. That source-specific joint
+estimate is the principal next analytical question.

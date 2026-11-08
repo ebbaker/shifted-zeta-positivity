@@ -1,0 +1,85 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,tabularx,array,enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+\usepackage{bookmark}
+\hypersetup{pdftitle={Localized zero correlations for the Newman theta transform},pdfauthor={Drafted for Edward Baker with OpenAI Codex assistance}}
+\setlength{\emergencystretch}{2em}
+\setcounter{tocdepth}{1}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\ee}{\mathrm e}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\title{Localized zero correlations for the Newman theta transform\\[4pt]
+\large Gaussian-smoothed factorial marginals and their canonical approximation}
+\author{Drafted for Edward Baker\\\small With substantial OpenAI Codex LLM assistance}
+\date{8 November 2026\\\small Working analytical draft; internal assessment levels stated in Appendix~\ref{app:status}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study generalized pair and higher correlation functions of the zeros
+of the Newman theta transform by marginalizing a full labelled
+configuration, applying a smooth spatial window, and convolving each
+observed coordinate with a Gaussian. The resulting factorial densities
+retain real zeros, transverse locations, multiplicities, and pair
+separations. We derive their normalization, weighted diagonal corrections,
+generating functional, smoothing equation, and projection formulas.
+An explicit center law then separates local observation from statistical
+averaging: the connected pair function is a center covariance minus a
+known self-label term. At time zero, a two-sided partition of the zero
+window extends an established logarithm approximation across the real
+axis. This gives an explicit uniform bound for the entire smoothed pair
+function under complete theta-source truncation, with conservative
+small-width cost of order $E_X\epsilon^{-6}$. The construction supplies
+a quantitative foundation for a correlation program; it does not yet
+determine a canonical correlation profile or a universal limiting law.
+Earlier scalar detectors and their comparison obstructions are retained
+as supporting appendices. Analytical derivations are primary; numerical
+bookkeeping supports only the checks stated at the end.
+\end{abstract}
+\begingroup
+\small
+\makeatletter
+\renewcommand{\l@section}{\@dottedtocline{1}{0em}{1.6em}}
+\makeatother
+\tableofcontents
+\endgroup
+\clearpage
+\input{sections/01_framework}
+\input{sections/10_gaussian_marginals}
+\input{sections/11_center_averaging}
+\input{sections/03_logarithms}
+\input{sections/04_canonical}
+\input{sections/12_full_pair_transfer}
+\input{sections/07_arithmetic}
+\input{sections/08_outstanding}
+\appendix
+\input{sections/02_configuration}
+\input{sections/13_scalar_acquisition}
+\input{sections/05_marked_pairs}
+\input{sections/06_comparisons}
+\input{sections/09_provenance}
+\bibliographystyle{plainurl}
+\bibliography{localized_zero_correlations_sources}
+\end{document}

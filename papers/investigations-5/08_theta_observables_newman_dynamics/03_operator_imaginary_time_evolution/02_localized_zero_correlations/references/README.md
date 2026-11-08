@@ -1,5 +1,25 @@
 # Correlation references and source ownership
 
+**8 November 2026:** [Gaussian marginal source use05](05_TND_OC_GAUSSIAN_MARGINAL_SOURCE_USE_20261108.md) reuses Borodin v1 §§2 and 4 for standard correlation definitions and the circular determinant-product benchmark. No determinantal canonical-zero law is imported. For Edward Baker with substantial OpenAI Codex assistance; actual model/effort unavailable.
+
+**Marginal-scope clarification, 8 November 2026:** [Note08](../notes/08_TND_OC_RESTORING_GENERALIZED_MARGINAL_OBJECTIVE_20261108.md)
+records a reread of Borodin v1, Section 2, (2.1), PDF page 2, for the
+factorial correlation convention. Its finite Gaussian marginal formula
+is derived directly, retaining labelled multiplicities; no determinantal
+or Gaussian-ensemble law is imported for canonical zeros. Reuse the
+parent Borodin2009DPP entry; no new bibliography or PDF copy.
+For Edward Baker with OpenAI Codex assistance; actual model/effort
+unavailable, chat0003.
+
+**Manuscript integration, 8 November 2026:** the
+[internal-source bibliography](manuscript_internal_sources.bib) identifies
+this branch's notes and reviews without promoting them. The manuscript
+build selects shared external entries from their canonical bibliographies,
+including pinned BGST v3; it does not duplicate or rewrite those records.
+The source/status crosswalk is in [the manuscript guide](../manuscript/README.md).
+Prepared for Edward Baker with substantial OpenAI Codex assistance;
+actual model/effort unavailable, chat0003.
+
 7 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Root authoring model/effort unavailable; hierarchy discovery was tool-selected **gpt-6.1-sol/ultra**, shared Green check **gpt-6-astra/ultra**. Dispatch settings are not independent backend verification.
 
 

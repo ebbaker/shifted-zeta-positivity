@@ -1,0 +1,90 @@
+\section{Scalar acquisition as a supporting specialization}\label{app:scalar}
+
+Choose $0<h\le1$, a nonnegative $C^2$ cutoff $w$, supported in
+$[-1,1]$ and equal to one on $[-1/2,1/2]$, with $w\le1$.
+Choose $0\le\kappa\le1$, equal to one on $[0,1]$ and zero on
+$[2,\infty)$, with bounded first and second derivatives. Define
+\begin{equation}\label{eq:scalar-tests}
+ a(x,y)=w((x-X)/h)y_+^2\kappa(y),\qquad
+ \varphi_Q=2a,\qquad
+ \varphi_\eta=2\log(1+\eta a)\quad(\eta\ge0).
+\end{equation}
+These compact $C^{1,1}$ tests are supported in
+$|x-X|\le1$, $0\le y\le2$. The support lies strictly within
+$D(c,r)$ since $\sqrt{17}<25/6$. At $y=0$ the value and the first
+normal derivative vanish, so their weak Laplacians contain no
+boundary delta.
+
+The canonical strip, conjugation, and \eqref{eq:zero-measure} imply
+\begin{equation}\label{eq:scalar-fold}
+ Q_{X,h}=\nu_F(\varphi_Q),\qquad
+ \log Z_{X,h}(\eta)=\nu_F(\varphi_\eta).
+\end{equation}
+The factor two accounts for lower conjugate copies. Real labels
+contribute zero. The harmonic logarithm of $D$ disappears.
+Define the comparison values
+$\widehat Q=\nu_{\widehat F}(\varphi_Q)$ and
+$\widehat L_\eta=\nu_{\widehat F}(\varphi_\eta)$.
+The approximating zeros in $1<y<2$ keep their actual cutoff weights:
+there is no strip theorem for the approximant.
+
+\begin{theorem}[Complete one-point acquisition]\label{thm:scalar}
+For $X\ge10$, $0<h\le1$, and the tests \eqref{eq:scalar-tests},
+choose $J,U$ so that \eqref{eq:complete-delta} is at most
+$\min(1,c_0/2)$. Then
+\begin{equation}\label{eq:scalar-transfer}
+ |Q_{X,h}-\widehat Q|\le K_QE_X,\qquad
+ |\log Z_{X,h}(\eta)-\widehat L_\eta|\le K_\eta E_X,
+ \qquad
+ K_\varphi=\frac{\norm{\Delta\varphi}_\infty}{2\pi}.
+\end{equation}
+All multiplicities are included. The constants are explicitly
+given by \eqref{eq:radii}, \eqref{eq:canonical-constants} and
+\eqref{eq:complete-delta}.
+\end{theorem}
+\begin{proof}
+The anchor and disk bounds establish Theorem~\ref{thm:log};
+apply Corollary~\ref{cor:weak-transfer} and \eqref{eq:scalar-fold}.
+\end{proof}
+
+For $v(y)=y_+^2\kappa(y)$ the derivative costs are directly available:
+\begin{align}
+ \Delta a&=h^{-2}w''v+wv'',&
+ |\nabla a|^2&=h^{-2}|w'|^2v^2+w^2|v'|^2,\label{eq:scalar-derivatives}\\
+ \Delta\varphi_\eta&=
+ 2\left(\frac{\eta\Delta a}{1+\eta a}
+              -\frac{\eta^2|\nabla a|^2}{(1+\eta a)^2}\right).
+ \notag
+\end{align}
+In particular $K_Q\le(h^{-2}\norm{w''}_\infty\norm v_\infty+
+\norm w_\infty\norm{v''}_\infty)/\pi$.
+The denominators in \eqref{eq:scalar-derivatives} are at least one;
+growing $\eta$ still incurs its displayed derivative cost.
+The Jensen count also gives the coarse canonical bound
+$N_w\le2n_X$, hence $Q_w\le2n_X$, because every upper label in
+the window lies in $D(c,\rho_*)$, every lower nonreal label has an
+upper partner, and real labels need be counted only once.
+
+For a nonzero test, any desired statistic accuracy $e>0$ is achieved
+by setting
+\begin{equation}\label{eq:precision-choice}
+ \delta_*=\min\left\{1,\frac{c_0}2,\
+    M_X\left(\frac{e}{2K_\varphi C_X}\right)^{1/\alpha_X}\right\}
+\end{equation}
+and choosing finite cutoffs satisfying
+\begin{equation}\label{eq:tail-allocation}
+ 5C_2(J)I_{b_*}\le\frac{\delta_*}{2\mathcal B_X},
+ \qquad B_0I_{b_*}^{>U}\le\frac{\delta_*}{2\mathcal B_X}.
+\end{equation}
+Then $K_\varphi E_X\le e/2$. This proves finite precision exists,
+without claiming a uniform computation time. If an evaluator returns
+$\widehat q$ with $|\widehat q-\widehat Q|\le E_{\rm eval}$,
+the actual exclusion condition for a plateau pair of height at least
+$d$ is
+\begin{equation}\label{eq:scalar-consumer}
+ \widehat q+E_{\rm eval}+K_QE_X<2d^2 .
+\end{equation}
+There is an analogous condition with margin
+$2\log(1+\eta d^2)$. Quadrature and rounding belong in
+$E_{\rm eval}$. No favorable $\widehat q$ is obtained from the
+approximation theorem itself.

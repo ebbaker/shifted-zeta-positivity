@@ -1,0 +1,148 @@
+\section{From holomorphic accuracy to logarithmic accuracy}\label{sec:logarithms}
+
+Uniform approximation of a holomorphic function does not give a
+pointwise logarithm comparison near its zeros. The appropriate local
+statement uses an integral norm, a nonvanishing anchor, and a larger
+disk. Multiplicity is then paid through a zero-count exponent.
+The following constants are deliberately explicit rather than
+optimized.
+
+Fix once and for all
+\begin{equation}\label{eq:radii}
+ R=\frac92,\qquad \rho_*=\frac{13}3,\qquad r=\frac{25}6,
+ \qquad B=R+r=\frac{26}3,\qquad
+ \frac{\rho_*+r}{\rho_*-r}=51 .
+\end{equation}
+Write $D_t=D(0,t)$ in this section.
+
+\begin{theorem}[Local logarithm comparison]\label{thm:log}
+Suppose $f,g$ are holomorphic on a neighborhood of $\overline D_R$ and
+\[
+ |f|,|g|\le1,\qquad |f(0)|,|g(0)|\ge m,\qquad
+ 0<m\le1,\qquad \norm{f-g}_{L^\infty(D_R)}\le\varepsilon\le1 .
+\]
+Set
+\begin{equation}\label{eq:local-constants}
+ \begin{gathered}
+ A=\log(1/m),\qquad
+ n=\max\!\left(1,\left\lceil\frac{A}{\log(27/26)}\right\rceil\right),
+ \quad \alpha=\frac2{n+2},\\
+ C(A,n)=\pi r^2+\pi B^2n^2\ee^{102A/n}2^{2/n}.
+ \end{gathered}
+\end{equation}
+Then, with locally integrable logarithms at zeros,
+\begin{equation}\label{eq:log-transfer}
+ \int_{D_r}\left|\log|f|-\log|g|\right|\dd A
+ \le C(A,n)\varepsilon^\alpha .
+\end{equation}
+Each function has at most $n$ zeros in $D_{\rho_*}$, counted with
+multiplicity. The same statements hold after translating the disks.
+\end{theorem}
+
+\begin{proof}
+We give the zero count, sublevel estimate and comparison separately.
+The classical inputs are Jensen's formula, the maximum principle and
+the disk Harnack inequality; see
+\cite{Tao2020LocalZeros,Tao2016Harnack}.
+
+\emph{Zero count and factor removal.}
+If $a_1,\ldots,a_k$ are the zeros of $f$ in $D_{\rho_*}$, repeated
+according to multiplicity, Jensen's formula and $|f|\le1$ give
+\[
+ k\log(R/\rho_*)\le
+ \sum_{|a|<R}\log(R/|a|)
+ \le-\log|f(0)|\le A .
+\]
+The formula follows at a boundary zero by an interior-radius limit.
+Thus $k\le n$, and no $a_\ell$ is zero. Remove these factors by
+\[
+ b_\ell(z)=\frac{R(z-a_\ell)}{R^2-\overline{a_\ell}z},\qquad
+ h(z)=\frac{f(z)}{\prod_{\ell=1}^k b_\ell(z)}.
+\]
+The apparent poles are removable. Each $b_\ell$ has modulus one on
+$|z|=R$, so $|h|\le1$ by the maximum principle.
+Moreover $h$ is zero-free in $D_{\rho_*}$ and
+$|h(0)|\ge|f(0)|\ge m$. Harnack applied to the nonnegative harmonic
+function $-\log|h|$ yields
+$-\log|h(z)|\le51A$ on $D_r$. Zeros on the circle of radius
+$\rho_*$ cause no problem: apply Harnack on smaller circles and
+let their radii increase to $\rho_*$.
+For $|z|\le r$,
+\begin{equation}\label{eq:blaschke-lower}
+ |b_\ell(z)|\ge\frac{|z-a_\ell|}{B},\qquad
+ |f(z)|\ge\ee^{-51A}\prod_{\ell=1}^k\frac{|z-a_\ell|}{B}.
+\end{equation}
+The first inequality follows from
+$|R^2-\overline{a_\ell}z|\le R(R+r)$; each distance ratio is
+at most one.
+
+\emph{Sublevel areas.}
+If $q=\ee^{51A}t<1$ and $k>0$, a point with $|f(z)|<t$ must lie
+in one of the $k$ disks of radius $Bq^{1/k}$ around the $a_\ell$.
+Their union has area at most
+$k\pi B^2q^{2/k}\le n\pi B^2q^{2/n}$.
+For $k=0$ the sublevel set is empty. If $q\ge1$, the same upper
+bound exceeds the area of $D_r$. Hence for every $t>0$,
+\begin{equation}\label{eq:sublevel}
+ \bigl|\{z\in D_r:|f(z)|<t\}\bigr|
+ \le L(A,n)t^{2/n},\qquad
+ L(A,n)=n\pi B^2\ee^{102A/n}.
+\end{equation}
+Layer cake, applied to $\log(t/|f|)_+$, now gives
+\begin{equation}\label{eq:layer-cake}
+ \int_{\{|f|<t\}\cap D_r}\log\frac{t}{|f|}\dd A
+ \le\int_0^\infty L(A,n)(t\ee^{-v})^{2/n}\dd v
+ =\frac{\pi B^2n^2}{2}\ee^{102A/n}t^{2/n}.
+\end{equation}
+The same estimates hold for $g$.
+
+\emph{Comparison.}
+For $\varepsilon>0$ choose
+$\tau=\varepsilon^{n/(n+2)}$, so $\varepsilon\le\tau$.
+Where both moduli are at least $\tau$, the real logarithm is
+$1/\tau$-Lipschitz, and the integral of the log difference is at
+most $\pi r^2\varepsilon/\tau$.
+On the complement the smaller modulus is less than $\tau$ and the
+larger is less than $2\tau$. There
+\[
+ |\log|f|-\log|g||
+ \le\log(2\tau/|f|)+\log(2\tau/|g|).
+\]
+Extend each nonnegative term to its full sublevel set and apply
+\eqref{eq:layer-cake} twice. The resulting bound is
+\[
+ \pi r^2\frac{\varepsilon}{\tau}
+ +\pi B^2n^2\ee^{102A/n}(2\tau)^{2/n}
+ =C(A,n)\varepsilon^{2/(n+2)}.
+\]
+When $\varepsilon=0$ the assertion is immediate.
+\end{proof}
+
+\begin{corollary}[Compact zero-statistic transfer]\label{cor:weak-transfer}
+Under the hypotheses of Theorem~\ref{thm:log}, for any
+$\varphi\in C_c^{1,1}(D_r)$,
+\begin{equation}\label{eq:weak-transfer}
+ |\nu_f(\varphi)-\nu_g(\varphi)|
+ \le \frac{\norm{\Delta\varphi}_\infty}{2\pi}
+              C(A,n)\varepsilon^{2/(n+2)} .
+\end{equation}
+No simplicity, matching of roots, or lower bound for the modulus
+throughout the observation region is required.
+\end{corollary}
+\begin{proof}
+Subtract \eqref{eq:weak-onepoint} for $f$ and $g$ and apply
+\eqref{eq:log-transfer}.
+\end{proof}
+
+We will also use an elementary bound on the individual logarithms:
+\begin{equation}\label{eq:log-mass}
+ \norm{\log|f|}_{L^1(D_r)},\
+ \norm{\log|g|}_{L^1(D_r)}
+ \le \pi r^2A .
+\end{equation}
+Both logarithms are nonpositive, while Jensen's formula says that each
+circular mean is at least its value at the center, hence at least
+$-A$. Integrating those means in the radius proves
+\eqref{eq:log-mass}. This estimate concerns the size of the logarithms;
+\eqref{eq:log-transfer} concerns their difference and is the useful
+small quantity.

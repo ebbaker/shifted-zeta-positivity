@@ -1,5 +1,11 @@
 # Green/resolvent conceptual decisions
 
+**8 November 2026, B04 initial planning:** [Planning08](08_TND_OG_B04_INITIAL_PLANNING_20261108.md) records the requested pre-research overview, two candidate routes, analytical-first recommendation and proposed feasibility/outcome checks. Author discussion precedes substantive research; this is not a B04 result. Prepared for Edward Baker with OpenAI Codex assistance; current runtime identifies gpt-6-astra, reasoning effort not exposed.
+
+**8 November 2026:** [Session07](07_TND_OG_E05_ASSESSMENT_SESSION_20261108.md) records the authorized assessment, additive clarification and boundary before a future signed-value decision. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort are not recorded in accessible capture metadata.
+
+**8 November 2026:** [Session06](06_TND_OG_E03_ASSEMBLY_SESSION_20261108.md) records E03 completion, bounded scope clarification and the remaining favorable-value decision. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort are not recorded in accessible capture metadata.
+
 **8 November 2026, continuation preparation:** At the author's request, [Continuation07](../../continuation-notes/07_TND_OG_E03_CONTINUATION_AFTER_HIERARCHY_AUDIT_20261108.md) packages the next E03 task, exact acceptance inequality, hierarchy context, read order and pasteable prompt. This is a documentation handoff; E03 remains unactivated. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort not recorded.
 
 **8 November 2026, hierarchy relationship:** [Session05](05_TND_OG_B03_HIERARCHY_RELATIONSHIP_AND_USE_20261108.md) records the author's HDA question, the overview coverage gap, the useful direct boundary-logarithm transfer and the separate fluctuation-closure limitation. No E03 activation or numerical campaign. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort not recorded.

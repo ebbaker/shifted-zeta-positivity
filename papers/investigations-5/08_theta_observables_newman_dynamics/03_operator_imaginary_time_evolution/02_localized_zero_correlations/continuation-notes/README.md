@@ -1,9 +1,25 @@
 # continuation-notes
 
-Current handoff: [07 — pair-marginal direction and literature](07_TND_OC_PAIR_MARGINAL_DIRECTION_AND_LITERATURE_20261108.md).
-Next conceptual task: [B] TND-OC-B04 / GPT-6 Astra at the author's selected effort.
-Literature groundwork is complete; technical comparison has not started.
-The separate fixed B02 assessment, [E] TND-OC-E03, remains pending.
+**Current continuation, 8 November 2026:** [Continuation11](11_TND_OC_AFTER_GAUSSIAN_MANUSCRIPT_AND_MODEL_CHANGE_20261108.md) follows the full-marginal manuscript rewrite. B05/E06 complete at author-check level; E07 fixed assessment next, then B06 source covariance. It supersedes Continuation10's ready-B05 routing; E03/E04 remain pending. For Edward Baker with substantial OpenAI Codex assistance; actual model/effort unavailable. Older routing below is historical.
+
+Current handoff: [10 — generalized marginal realignment and model change](10_TND_OC_GENERALIZED_MARGINAL_REALIGNMENT_AND_MODEL_CHANGE_20261108.md).
+Default next research: **[B] TND-OC-B05 / Astra, author-selected effort**,
+to specify the full pair/higher correlation object and its Gaussian
+smoothing, then select a useful source-based analytical question.
+This reflects the author's scope clarification; no model change occurred.
+E04 and E03 remain pending alternative fixed assessments of supporting work.
+
+[09 — after analytical manuscript](09_TND_OC_AFTER_ANALYTICAL_MANUSCRIPT_AND_MODEL_CHANGE_20261108.md)
+and [08 — after B04](08_TND_OC_AFTER_B04_AND_MODEL_CHANGE_20261108.md)
+retain their historical E04-first routing, superseded in priority only.
+E05 is complete as integration of the narrower results; all source
+assessment levels remain unchanged.
+B04 is complete at the in-note acquisition/scoped-failure boundary;
+no favorable canonical value was acquired. E03 remains the separate
+pending fixed B02 assessment. [07 — pair-marginal direction and literature](07_TND_OC_PAIR_MARGINAL_DIRECTION_AND_LITERATURE_20261108.md)
+is the historical B04 activation handoff. Prepared for Edward Baker
+with OpenAI Codex assistance; actual recorded model/effort unavailable,
+8 November 2026, chat0003.
 [06 — after B03](06_TND_OC_AFTER_B03_AND_MODEL_CHANGE_20261108.md) preserves
 the earlier E03-first default, superseded in routing only.
 B03 completed its two-route comparison at scoped failure; reopening needs
@@ -20,7 +36,7 @@ The sole status owner is research-progress/01_TND_OC_RESEARCH_PROGRESS_20261107.
 
 - [Continuation04 — after B02 and model change](04_TND_OC_AFTER_B02_AND_MODEL_CHANGE_20261107.md): historical E03-first routing and the still-pending assessment instructions; preserve the real-zero-centered, harmonic-baseline and full-disk-absolute hypotheses.
 - [Continuation03 — after E02 and model change](03_TND_OC_AFTER_E02_AND_MODEL_CHANGE_20261107.md): historical B02-first routing. Earlier handoffs remain dated snapshots.
-## Latest direction — 8 November 2026
+## Historical direction before B04 — 8 November 2026
 
 [Continuation07](07_TND_OC_PAIR_MARGINAL_DIRECTION_AND_LITERATURE_20261108.md)
 records the author-requested marked-pair direction, literature and RT/HCB

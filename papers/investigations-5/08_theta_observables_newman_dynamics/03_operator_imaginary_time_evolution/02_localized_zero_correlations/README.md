@@ -2,20 +2,45 @@
 
 7 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Root authoring model/effort unavailable; hierarchy discovery was tool-selected **gpt-6.1-sol/ultra**, shared Green check **gpt-6-astra/ultra**. Dispatch settings are not independent backend verification.
 
-Branch02 of the [operator investigation](../README.md), alongside [Green fields](../01_green_potential_resolvent/README.md). This branch asks whether a height-localized, transversely marked pair statistic or full configuration functional can detect one nonreal zero pair and admit an independently accessible canonical estimate.
+Branch02 of the [operator investigation](../README.md), alongside [Green fields](../01_green_potential_resolvent/README.md). This branch studies localized pair and higher correlation measures for possibly nonreal zeros, their marginals and smoothing, and analytical control from the canonical source. Detecting a nonreal pair is one possible application of that broader program.
+
+**Current manuscript milestone, 8 November 2026:** the 34-page draft now
+centers the full Gaussian-smoothed factorial hierarchy, with explicit
+joint-to-marginal definitions, center averaging and a new uniform canonical
+pair-function approximation that retains real zeros. The new analysis is
+preliminary, proof-author checking only; a canonical correlation profile
+remains open. [Note09](notes/09_TND_OC_FULL_GAUSSIAN_MARGINALS_AND_CANONICAL_TRANSFER_20261108.md)
+records the development. B05/E06 are complete; E07 is the next fixed
+assessment, followed by a B06 source-covariance question. E03/E04 remain
+separate pending supporting audits. Prepared for Edward Baker with
+substantial OpenAI Codex assistance; actual model/effort unavailable.
 
 | Entry | Purpose |
 | --- | --- |
+| [Analytical manuscript](manuscript/README.md) | Current 34-page full-marginal draft; definitions locator, preliminary analytical proofs, explicit source errors, evidence status and outstanding tasks |
 | [Overview](research-overview/01_TND_OC_RESEARCH_OVERVIEW_20261107.md) | Mathematical definitions, inherited evidence and unresolved sign |
 | [Plan](research-plan/01_TND_OC_RESEARCH_PLAN_20261107.md) | Two bounded conceptual candidates and reserved execution |
 | [Sole TND-OC register](research-progress/01_TND_OC_RESEARCH_PROGRESS_20261107.md) | Only live task-status owner for this branch |
-| [Current continuation](continuation-notes/07_TND_OC_PAIR_MARGINAL_DIRECTION_AND_LITERATURE_20261108.md) | Marked pair-marginal direction, literature and RT/HCB predecessors; B04 comparison ready, E03 pending |
+| [Current continuation](continuation-notes/11_TND_OC_AFTER_GAUSSIAN_MANUSCRIPT_AND_MODEL_CHANGE_20261108.md) | Fixed E07 assessment, subsequent B06 covariance direction, pending E03/E04 alternatives and manual model-change prompt |
+| [B04 route comparison](notes/05_TND_OC_B04_ARITHMETIC_RECONCILIATION_AND_ROUTE_COMPARISON_20261108.md) | Reconciled BGST import, two access routes and exact missing canonical input |
+| [B04 pair transfer](notes/06_TND_OC_B04_DETERMINISTIC_MARKED_PAIR_TRANSFER_20261108.md) | Explicit deterministic marked-pair acquisition; author checking only, no favorable value |
 | [B03 comparison](brainstorm/notes/04_TND_OC_B03_REAL_ZERO_AWARE_COMPARISON_20261108.md) | Two real-axis-aware routes, precise missing canonical inputs and parked completion attempts |
 | [Algebraic reduction](notes/01_TND_OC_REFLECTION_AND_CONFIGURATION_REDUCTION_20261107.md) | Quadratic pair reduction, product recurrence and order tails |
 | [Time-zero comparison](notes/02_TND_OC_LOCAL_LOG_TRANSFER_20261107.md) | Explicit complete-source/logarithm/zero-statistic error bound |
 | [Shared discussion](../brainstorm/notes/19_TND_O_GREEN_CORRELATION_BIFURCATION_SYNTHESIS_20261107.md) | Author priorities and parent task crosswalk |
 | [Earlier hierarchy locator](../brainstorm/notes/20_TND_O_PRIOR_HIERARCHY_LOCATOR_20261107.md) | Author-identified heat-density hierarchy, evidence and possible transfers |
 | [References](references/README.md) | Canonical sources and actual inspected passages |
+
+**Historical E05 manuscript milestone, 8 November 2026:** the author-requested analytical
+draft is complete, with full proofs and supporting bookkeeping kept
+separate. [Integration check05](reviews/05_TND_OC_E05_MANUSCRIPT_INTEGRATION_CHECK_20261108.md)
+preserves E02's accepted status and the author-check-only status of
+B02/B03/B04. E03 and E04 remain pending; no favorable canonical value
+or new exclusion was acquired. Its E04-first routing in Continuation09
+is superseded by the later scope clarification in Continuation10.
+Prepared for Edward Baker with substantial OpenAI Codex
+assistance; actual recorded model/effort unavailable, chat0003.
+Earlier entries below are historical.
 
 **Opening research, 7 November 2026:** prepared for Edward Baker with
 substantial LLM assistance, **gpt-6-astra / max**, chat0001. B01 selected

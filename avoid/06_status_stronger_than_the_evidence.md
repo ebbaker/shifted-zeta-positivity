@@ -20,6 +20,25 @@ values labelled \(\Lambda_{c,p}\).
 
 ## Evidence
 
+- **Localized-correlation manuscript (8 November 2026):**
+  [integration check05](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/reviews/05_TND_OC_E05_MANUSCRIPT_INTEGRATION_CHECK_20261108.md)
+  states: “Manuscript integration does not strengthen the evidence status
+  of its sources.” A coherent proof sequence and a checked PDF retain
+  E02's accepted level and B02/B03/B04's author-check-only level;
+  pending E03/E04 do not disappear. Approximation accuracy also remains
+  distinct from the unacquired favorable canonical value. For Edward
+  Baker with substantial OpenAI Codex assistance; actual model/effort
+  unavailable. This is a preventive application of the existing pattern.
+
+- **Full-marginal realignment (8 November 2026):**
+  [author check06](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/reviews/06_TND_OC_E06_GAUSSIAN_MANUSCRIPT_AUTHOR_CHECK_20261108.md)
+  states: “A scalar projection does not determine the full pair function.”
+  The prior scalar-first emphasis is superseded by a full Gaussian marginal
+  development. The new uniform pair approximation retains real roots, but
+  leaves its canonical profile unestimated and has author checking only.
+  Preserve both the intended object and the evidence level. For Edward
+  Baker with substantial OpenAI Codex assistance; actual model/effort unavailable.
+
 - [Repository review of 9 September](../papers/weil-positivity/shifted-zeta/first-slab-positivity/verification/repository-review-20260909/REPOSITORY_REVIEW_AND_CHANGE_HANDOFF_20260909.md): "“No error survives” overstated what internal reviews establish"; the fix reached the status files, and the `.tex` still says it.
 - [RH-detector STATUS](../papers/misc/rh-detector/STATUS.md): "Certificates are rigorous modulo floating point — high-precision arithmetic (mpmath, 25–30 digits), not interval arithmetic."
 - [Finite-response assessment](../papers/weil-positivity/susy-positivity/manuscripts/finite-response-weil-positivity/reviews/assessment_claude_current_draft_20260914.md): "Four are correct and I withdraw the corresponding claims", with §7 titled "The obstruction claim: I overstated it, and withdraw it"; "publishable on its own merits" and a spectral mechanism "off by about 140×" were withdrawn and the arXiv submission deferred.

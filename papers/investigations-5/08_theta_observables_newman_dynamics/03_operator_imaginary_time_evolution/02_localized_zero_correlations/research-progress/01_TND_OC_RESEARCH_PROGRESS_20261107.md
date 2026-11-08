@@ -3,11 +3,70 @@
 7 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Root authoring model/effort unavailable; hierarchy discovery was tool-selected **gpt-6.1-sol/ultra**, shared Green check **gpt-6-astra/ultra**. Dispatch settings are not independent backend verification.
 
 
-**This is the sole live TND-OC register. Next conceptual direction: [B] TND-OC-B04 — localized two-zero marginals**, under [Continuation07](../continuation-notes/07_TND_OC_PAIR_MARGINAL_DIRECTION_AND_LITERATURE_20261108.md). The author-requested literature groundwork is complete; the technical comparison is ready but not started. E03 remains the separate pending B02 audit. This supersedes Continuation06’s E03-first routing only. B03 completed its bounded comparison with scoped failure; its two routes are parked pending an independent canonical input. E03 remains ready and pending; B02 remains author-checked only. No signed-smallness execution task is ready. The prepared E02 package was installed on 7 November 2026; see the [installation receipt](handoffs/05_TND_OC_E02_INSTALLATION_20261107.json). Earlier write-denial statements below describe the assessment session before installation. The [parent register](../../research-progress/02_SMOOTH_LOCALIZATION_RESEARCH_PROGRESS_20261106.md) owns shared TND-O evidence and setup only; it does not duplicate these rows. [Plan](../research-plan/01_TND_OC_RESEARCH_PLAN_20261107.md) specifies tasks; [overview](../research-overview/01_TND_OC_RESEARCH_OVERVIEW_20261107.md) specifies objects.
+**This is the sole live TND-OC register. Author scope clarification,
+8 November 2026: the primary objective is generalized localized pair
+and higher correlation functions obtained by marginalization, with
+Gaussian smoothing as a possible ingredient.** The scalar detector and
+approximation work is supporting analysis. It does not complete that
+objective. [Note08](../notes/08_TND_OC_RESTORING_GENERALIZED_MARGINAL_OBJECTIVE_20261108.md)
+records the drift and an elementary smoothed-marginal construction.
+
+**B05 selection and E06 development are complete, 8 November 2026.**
+The current [34-page manuscript](../manuscript/README.md) centers the full
+Gaussian factorial hierarchy, center averaging/covariance, and a new
+uniform two-sided canonical pair approximation retaining real zeros.
+[Note09](../notes/09_TND_OC_FULL_GAUSSIAN_MARGINALS_AND_CANONICAL_TRANSFER_20261108.md)
+records the preliminary derivations; [author check06](../reviews/06_TND_OC_E06_GAUSSIAN_MANUSCRIPT_AUTHOR_CHECK_20261108.md)
+is proof-author checking only. No canonical profile has been acquired.
+
+**Default next: [E] TND-OC-E07, fixed assessment**, under
+[request12](handoffs/12_TND_OC_E07_ASSESSMENT_REQUEST_20261108.md) and
+[inputs12](handoffs/12_TND_OC_E07_INPUTS_20261108.json).
+Recommended GPT-6.1 Sol, ultra where supported; author choice retained.
+After assessment, B06 selects a source-specific center-covariance question.
+[Continuation11](../continuation-notes/11_TND_OC_AFTER_GAUSSIAN_MANUSCRIPT_AND_MODEL_CHANGE_20261108.md)
+provides the next-session/model-change prompt. E03/E04 remain pending on
+unchanged inputs. Actual recorded model/effort are unavailable; no switch
+or delegation occurred. The earlier E05 record and later scope-clarification
+events remain historical; the current PDF/build record replace the E05 copy.
+
+**E05 manuscript integration is
+complete, 8 November 2026.** The author-requested
+historical 26-page analytical manuscript systematically
+derives the finite algebra, accepted E02 approximation, provisional
+B02/B03 and B04 results, and corrected BGST projection. Outstanding tasks
+end its main text; numerics remain supporting bookkeeping. The
+[integration check05](../reviews/05_TND_OC_E05_MANUSCRIPT_INTEGRATION_CHECK_20261108.md)
+does not replace E03/E04. Current chat0003 was the sole writer;
+actual recorded model/effort are unavailable. No source status promotion.
+
+**Pending alternative: [E] TND-OC-E04 —
+assess B04's fixed marked-pair transfer**, under the historical
+[Continuation09](../continuation-notes/09_TND_OC_AFTER_ANALYTICAL_MANUSCRIPT_AND_MODEL_CHANGE_20261108.md).
+B04 completed its two-route comparison: a deterministic acquisition
+estimate is proved in-note with author checking only; the favorable
+canonical pair value remains unpaid. E03 remains the separate pending
+B02 audit. B03's two scalar completion attempts retain their scoped
+parking decision. E02 stays accepted; B02 is author-checked only.
+No signed-smallness execution task or numerical campaign is ready.
+
+The E02 package was installed on 7 November; see the
+[installation receipt](handoffs/05_TND_OC_E02_INSTALLATION_20261107.json).
+Earlier write-denial statements below are historical.
+The [parent register](../../research-progress/02_SMOOTH_LOCALIZATION_RESEARCH_PROGRESS_20261106.md)
+owns shared evidence only. [Plan](../research-plan/01_TND_OC_RESEARCH_PLAN_20261107.md)
+specifies tasks; [overview](../research-overview/01_TND_OC_RESEARCH_OVERVIEW_20261107.md)
+specifies objects.
 
 | ID | Type / recommended model | Current status | Dependency and consuming output |
 | --- | --- | --- | --- |
-| TND-OC-B04 | B / Astra, author-selected effort | Active: bounded technical comparison, 8 November 2026 | [Note07](../brainstorm/notes/07_TND_OC_LOCALIZED_PAIR_MARGINAL_LITERATURE_AND_DIRECTION_20261108.md): compare corrected arithmetic complex-difference tests and weak marked-pair/log-field acquisition, with the existing RT and HCB Poisson interfaces as baselines. At most two candidates and one clarification. BGST reconciliation precedes consumption. Current user requests technical notes in notes/. No canonical estimate or numerical campaign acquired. |
+| TND-OC-B05 | B / Astra recommended; actual settings unavailable | Complete; object and fixed E06 contract selected | Compact physical window plus Gaussian observation smoothing; declared center mixture/unfolding. Note09. |
+| TND-OC-E06 | E / Sol6.1 ultra recommended; actual settings unavailable | Complete; preliminary analytical derivations and manuscript, proof-author checking only | Full hierarchy, center covariance identity and uniform full-pair approximation. Author check06, return11. |
+| TND-OC-E07 | E / Sol6.1 ultra where supported | Ready and pending; not started | Fixed new-claim assessment under request12/inputs12; one bounded correction. Default next. |
+| TND-OC-B06 | B / Astra, author-selected effort | Prospective after E07, or explicit author choice | Select one declared center-covariance regime and compare at most two source-specific routes. No canonical estimate acquired. |
+| TND-OC-E05 | E / Sol6.1 ultra where supported; actual settings unavailable | Complete; manuscript assembled and production-checked | [Manuscript](../manuscript/README.md), [Note07](../notes/07_TND_OC_ANALYTICAL_MANUSCRIPT_ASSEMBLY_20261108.md), [check05](../reviews/05_TND_OC_E05_MANUSCRIPT_INTEGRATION_CHECK_20261108.md), [return10](handoffs/10_TND_OC_E05_MANUSCRIPT_RETURN_20261108.json). Systematic analytical proofs and outstanding tasks; source assessment levels unchanged. All 17 E03 and 21 E04 frozen inputs preserved. |
+| TND-OC-B04 | B / Astra, author-selected effort | Complete at bounded comparison scope; new transfer proved in-note, author checking only | [Note05](../notes/05_TND_OC_B04_ARITHMETIC_RECONCILIATION_AND_ROUTE_COMPARISON_20261108.md) reconciles BGST and compares two routes; [Note06](../notes/06_TND_OC_B04_DETERMINISTIC_MARKED_PAIR_TRANSFER_20261108.md) gives the explicit deterministic pair error. Scoped failure to obtain a favorable canonical value from current inputs. No local law or new exclusion. |
+| TND-OC-E04 | E / Sol6.1 ultra, where supported | Ready and pending; not started | Fixed B04 assessment under [request09](handoffs/09_TND_OC_E04_ASSESSMENT_REQUEST_20261108.md) and [inputs09](handoffs/09_TND_OC_E04_INPUTS_20261108.json). One claim-level pass and bounded correction. Separate from E03; no new sign research or numerics. |
 | TND-OC-B01 | B / Astra ultra | Complete at bounded selection scope | [Decision02](../brainstorm/notes/02_TND_OC_B01_SELECTION_20261107.md): pair reduction; select direct time-zero logarithm acquisition for the configuration response. No signed estimate. Actual session: gpt-6-astra / max. |
 | TND-OC-E01 | E / Sol6.1 ultra | Complete; accepted after one bounded support correction in E02 | [Note01](../notes/01_TND_OC_REFLECTION_AND_CONFIGURATION_REDUCTION_20261107.md), [Note02](../notes/02_TND_OC_LOCAL_LOG_TRANSFER_20261107.md), [return01](handoffs/01_TND_OC_E01_RETURN_20261107.json). Explicit approximation theorem; no small signed value. Actual executor: gpt-6-astra / max in the current session. |
 | TND-OC-E02 | E / Sol6.1 ultra | Complete; accept after one bounded correction; installed and hash-verified | [Request02](handoffs/02_TND_OC_E02_REQUEST_20261107.md) and [inputs02](handoffs/02_TND_OC_E02_INPUTS_20261107.json). [Review02](../reviews/02_TND_OC_E02_CLAIM_LEVEL_ASSESSMENT_20261107.md), [return02](handoffs/02_TND_OC_E02_RETURN_20261107.json), [Note03](../notes/03_TND_OC_E02_VERIFIED_CONSUMER_20261107.md). Internal LLM assessment; exact backend settings unavailable. |
@@ -16,6 +75,78 @@
 | TND-OC-B03 | B / Astra, author-selected effort | Complete at scoped-failure boundary; two routes parked on current inputs | [Brainstorm Note04](../brainstorm/notes/04_TND_OC_B03_REAL_ZERO_AWARE_COMPARISON_20261108.md): log regularization retains an unpaid joint small-value estimate; real-divisor removal retains an unpaid remaining-divisor estimate. A matched finite contour/real count is identified as independent information, not acquired data. New calculations have author checking only; B02 is not promoted. No signed-smallness E packet or numerical campaign. Requested Astra; actual backend/effort unavailable. |
 
 ## Setup event and historical crosswalk
+
+**E06 disposition, 8 November 2026:** prepared for Edward Baker with substantial
+OpenAI Codex assistance; actual model/effort unavailable, chat0003. The author
+requested preliminary analysis and a manuscript rewrite around the full
+marginal program. B05 selected compact localization plus observation
+smoothing and a declared center mixture. E06 derived the factorial hierarchy,
+weighted self correction, Gaussian calculus, covariance identity and a new
+uniform pair-function source estimate using two reflected E02 disks.
+Real zeros remain in the primary function. The scalar proofs are supporting
+appendices. New claims have proof-author checking only; a canonical profile
+and quantitative higher-order source theorem remain open. Exact bookkeeping
+and PDF production checks are supporting records. E07 is issued but not
+started. E03/E04 frozen inputs remain intact; E05 is a historical milestone.
+No model switch, delegation, snapshot folder, canonical sampling, commit or
+push. Continuation11 specifies the assessment and subsequent B06 direction.
+
+
+**Author realignment, 8 November 2026:** for Edward Baker with substantial
+OpenAI Codex assistance; actual recorded model/effort unavailable, chat0003.
+The author identifies a mismatch between the intended generalized
+Gaussian-smoothed pair/higher-marginal program and the scalar-detector
+line emphasized by the manuscript. Earlier goal-alignment Notes05--06
+already retained the broader objective. The present clarification makes
+it primary again and reserves B05 as the next conceptual task. Note08's
+finite Gaussian marginal formula is an illustrative representation,
+not a canonical correlation estimate or a Gaussian-ensemble hypothesis.
+The completed narrow results, E05 production record, frozen E03/E04
+packets and their statuses remain unchanged. No new model, delegate,
+computation, manuscript rewrite or proof assessment was undertaken.
+
+**E05 disposition, 8 November 2026:** for Edward Baker with substantial
+OpenAI Codex assistance; actual model/effort unavailable, chat0003.
+The user requested manuscript integration in the current chat. A single
+current manuscript directory now holds the editable analytical draft;
+the 26-page reading PDF and intermediates are in ignored output/pdf.
+Full derivations, an evidence appendix and explicit outstanding tasks
+preserve the boundary between approximation accuracy and a favorable
+canonical value. The small exact-rational replay is supporting evidence.
+Compilation, source correspondence, all-page visual inspection and
+frozen-input checks completed; these are same-assistant production and
+integration checks, not the pending E03/E04 assessments. A concise
+cluster11 entry and status06 lesson document this manuscript milestone.
+No snapshot, investigation closure, model change, numerical campaign,
+commit or push. Continuation09 gives the manual model-change prompt.
+The last-turn chat capture is arranged against the real completed final.
+
+**B04 disposition, 8 November 2026:** prepared for Edward Baker with
+substantial OpenAI Codex assistance; actual model/effort unavailable,
+authenticated chat0003. Exactly two candidates and one deterministic
+joint-accuracy clarification were completed. The corrected BGST
+cumulative formula survives; its dyadic Fejer projection has the
+known 1/3+O(1/sqrt(log T)) value, with no short-window marked conclusion.
+The concurrent chat0004 source/import check is preserved and linked,
+not treated as an assessment of the new B04 theorem.
+
+Note06 fixes the nonnegative marked Poisson test at lambda=0 and gives
+E_pair=C_X(delta/M_X)^{2/(n_X+2)}
+times (2800n_X+3621/2)/(pi h^2) when b=h. The same-disk E02 log estimate
+and Jensen count suffice for deterministic pair acquisition. Conjugate
+folding is 4 tensor minus 2 self terms; a simple pair contributes
+2(d/b)^4. Every favorable canonical value remains unpaid. Status:
+**proved in-note; proof-author self-check only**, with exact-rational
+bookkeeping and no canonical zero sampling. [Review04](../reviews/04_TND_OC_B04_AUTHOR_SELF_CHECK_20261108.md)
+records a corrected optional averaging constant 643/462.
+
+The fixed E04 assessment packet is ready; E03 and all its frozen inputs
+remain unchanged. No manuscript snapshot, root-summary promotion,
+investigation closure, model switch, delegation, commit or push.
+Notes are in notes/ per the latest user instruction; the next task and
+manual model-change prompt are in Continuation08. Current chat0003
+capture uses the shared-lock recorder and a bounded exact-turn worker;
+its unsent final is not claimed captured.
 
 **B04 activation, 8 November 2026:** prepared for Edward Baker with
 substantial OpenAI Codex assistance; actual backend model/effort unavailable

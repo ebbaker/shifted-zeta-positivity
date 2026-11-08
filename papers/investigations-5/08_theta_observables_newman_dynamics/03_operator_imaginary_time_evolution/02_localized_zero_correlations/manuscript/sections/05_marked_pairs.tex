@@ -1,0 +1,313 @@
+\section{A separation-dependent marked pair statistic}\label{sec:pairs}
+
+The reduction in Proposition~\ref{prop:quadratic} motivates retaining
+both transverse marks separately. The following test is nonnegative,
+vanishes on real configurations, and includes a nonconstant separation
+kernel. Its approximation follows from the same one-variable logarithm
+estimate, without introducing a probability law.
+
+\subsection{A fixed test and its exact response}
+
+Define the piecewise polynomial cutoffs
+\begin{equation}\label{eq:p-cutoff}
+ p(t)=
+ \begin{cases}
+ 1,&t\le0,\\
+ 1-10t^3+15t^4-6t^5,&0<t<1,\\
+ 0,&t\ge1,
+ \end{cases}
+ \qquad w(t)=p(2|t|-1),\qquad v(t)=t_+^2p(t-1).
+\end{equation}
+Thus $w=1$ on $[-1/2,1/2]$, $w=0$ off $[-1,1]$,
+and $v(t)=t^2$ for $0\le t\le1$, with $v=0$ off $[0,2]$.
+The function $v$ is $C^{1,1}$; smoothness of higher order at zero
+is neither asserted nor needed.
+
+For $X\ge10$ and $0<h,b\le1$, let
+\begin{align}
+ a(z)&=w((x-X)/h)v(y/b),&
+ q(z)&=w((x-X)/h)v(|y|/b),\label{eq:pair-marks}\\
+ c_h(u)&=\frac{h^2}{u^2+h^2},&
+ K(z,z')&=a(z)a(z')c_h(x-x').\notag
+\end{align}
+For any conjugation-symmetric holomorphic field defined on a
+neighborhood of the support of $q$, set
+\begin{equation}\label{eq:marked-statistic}
+ S_{X,h,b}(H)=\sum_{j\ne k}q(z_j)q(z_k)c_h(x_j-x_k).
+\end{equation}
+All multiplicity copies are separate labels. The center is fixed;
+there is no implicit averaging over $X$.
+
+\begin{proposition}[Marked-pair signal]\label{prop:pair-signal}
+Every term in \eqref{eq:marked-statistic} is nonnegative.
+A simple conjugate pair $x_*\pm\ii d$ with
+$|x_*-X|\le h/2$ and $0<d\le b$ forces
+\begin{equation}\label{eq:marked-signal}
+ S_{X,h,b}(H)\ge2(d/b)^4 .
+\end{equation}
+For $m$ copies at each conjugate location, their population contributes
+$(4m^2-2m)(d/b)^4$. Every all-real configuration gives zero,
+regardless of multiplicity.
+\end{proposition}
+\begin{proof}
+On the plateau each of the $2m$ labels has weight $(d/b)^2$.
+Every difference of their horizontal coordinates is zero, so
+$c_h=1$. There are $2m(2m-1)$ ordered distinct-label pairs.
+Other summands cannot reduce their contribution. Real labels
+have $q=0$.
+\end{proof}
+
+A useful declared scale is
+\begin{equation}\label{eq:matched-scale}
+ h=b=h_X:=\min(1,4\pi/\log X).
+\end{equation}
+This uses the leading mean-spacing scale in the $x=2\gamma$
+coordinate; it is a definition, not an exact spacing assertion.
+The band $b/2\le d\le b$ has signal at least $1/8$.
+A single such band does not cover arbitrarily small transverse
+displacements or all displacements up to the canonical strip edge.
+
+\subsection{Conjugate folding and the self-index correction}
+
+The support of $a$ is contained in $D(c,r)$ with the same buffer as
+in Appendix~\ref{app:scalar}. For a nonzero holomorphic $V$ on
+the disk, write $\mu_V=\nu_V$ there and define
+\[
+ T_V(K)=\iint K\dd\mu_V\dd\mu_V,\qquad
+ D_V(a^2)=\int a^2\dd\mu_V .
+\]
+If $V$ has the same zeros on this disk as a conjugation-symmetric
+full field, then
+\begin{equation}\label{eq:folded-pair}
+ S(V)=4T_V(K)-2D_V(a^2).
+\end{equation}
+Each upper nonreal label represents itself and its lower conjugate,
+so the full tensor square has factor four. Removing the self label
+of each of these two copies has factor two. At an upper point of
+multiplicity $m$, the tensor has mass $m^2$ and the one-point
+correction removes $m$, rather than $m^2$. In particular the two
+conjugate partners are different full-plane labels even when their
+upper representatives coincide.
+
+Applying \eqref{eq:weak-onepoint} separately in the two independent
+variables gives
+\begin{align}
+ T_V(K)&=\frac1{4\pi^2}
+  \iint\log|V(z)|\log|V(z')|\,
+       \Delta_z\Delta_{z'}K(z,z')\dd A\dd A',\label{eq:pair-log}\\
+ D_V(a^2)&=\frac1{2\pi}
+       \int\log|V|\,\Delta(a^2)\dd A .\notag
+\end{align}
+For this particular $K$ the mixed weak derivative is bounded:
+each factor $a$ is differentiated at most twice. Product logarithms
+are integrable by Fubini, including near the geometric diagonal,
+because they belong to different variables. Mollification in the
+support buffer proves the formula for the stated cutoffs.
+Adding a harmonic term to either logarithm changes neither integral;
+integrate first in its corresponding variable. Thus scalar
+normalizations and zero-free multipliers are immaterial.
+
+\subsection{Tensor transfer with only second derivatives}
+
+\begin{theorem}[Deterministic pair transfer]\label{thm:pair-transfer}
+Let $f,g$ satisfy the normalized disk and anchor hypotheses of
+Theorem~\ref{thm:log}, with the disk translated to $c$, and suppose
+\[
+ \int_{D(c,r)}|\log|f|-\log|g||\dd A\le E .
+\]
+Let $K$ be a real symmetric $C_c^{1,1}$ test on $D(c,r)^2$.
+Its sections and diagonal trace have bounded weak Laplacians.
+Choose bounds
+\[
+ D_2\ge\max\{\norm{\Delta_zK}_\infty,
+                  \norm{\Delta_{z'}K}_\infty\},\qquad
+ D_{\rm diag}\ge\norm{\Delta[K(z,z)]}_\infty .
+\]
+For the folded functional
+$\mathcal S_V(K)=4T_V(K)-2\int K(z,z)\dd\mu_V(z)$,
+\begin{equation}\label{eq:pair-transfer}
+ |\mathcal S_f(K)-\mathcal S_g(K)|
+ \le\frac{E}{\pi}\bigl(4nD_2+D_{\rm diag}\bigr),
+\end{equation}
+where $n$ is \eqref{eq:local-constants}. For the test
+\eqref{eq:pair-marks} and conjugation-symmetric full fields,
+this is the difference of their statistics
+\eqref{eq:marked-statistic}.
+\end{theorem}
+\begin{proof}
+Each relevant population is at most $n$ by the Jensen part of
+Theorem~\ref{thm:log}. For fixed $z'$ in the relevant projection
+of the support, the weak one-variable identity gives
+\[
+ |(\mu_f-\mu_g)(K(\,\cdot\,,z'))|
+ \le\frac{ED_2}{2\pi}.
+\]
+The exact telescoping identity
+\[
+ \mu_f\otimes\mu_f-\mu_g\otimes\mu_g
+ =(\mu_f-\mu_g)\otimes\mu_f+
+                         \mu_g\otimes(\mu_f-\mu_g)
+\]
+allows us to integrate this bound against positive zero measures.
+The two masses cost at most $2n$, giving
+$|T_f-T_g|\le nED_2/\pi$.
+The diagonal trace is a one-variable test, so its error is at most
+$ED_{\rm diag}/(2\pi)$. Multiplication by four and two proves
+\eqref{eq:pair-transfer}.
+\end{proof}
+
+The population bound replaces a fourth-derivative cost. Indeed if
+$D_4\ge\norm{\Delta_z\Delta_{z'}K}_\infty$ and
+$M=\pi r^2A$, \eqref{eq:log-mass} and
+\[
+ L_f(z)L_f(z')-L_g(z)L_g(z')
+ =(L_f-L_g)(z)L_f(z')+L_g(z)(L_f-L_g)(z')
+\]
+give the valid alternative
+\begin{equation}\label{eq:pair-fourth}
+ |\mathcal S_f-\mathcal S_g|
+ \le E\left(\frac{2MD_4}{\pi^2}
+                      +\frac{D_{\rm diag}}{\pi}\right).
+\end{equation}
+Theorem~\ref{thm:pair-transfer} instead uses only second derivatives.
+This compares two explicit allowances, not optimal approximation
+rates. Strong deterministic accuracy on the same disk suffices
+for this transfer; an independently favorable pair value remains
+a different question.
+
+\subsection{Explicit constants and the canonical theorem}
+
+Differentiating \eqref{eq:p-cutoff},
+$p'=-30t^2(1-t)^2$ and
+$p''=-60t(1-t)(1-2t)$ on $(0,1)$.
+Their maxima satisfy
+$\norm{p'}_\infty\le15/8$ and
+$\norm{p''}_\infty\le10/\sqrt3<6$.
+Consequently
+\[
+ \norm w_\infty\le1,\quad \norm{w'}_\infty\le15/4,\quad
+ \norm{w''}_\infty\le24,\qquad
+ \norm v_\infty\le4,\quad \norm{v'}_\infty\le23/2,\quad
+ \norm{v''}_\infty\le41.
+\]
+For example on $1<t<2$,
+$v'=2tp+t^2p'$ and
+$v''=2p+4tp'+t^2p''$, which give the last two bounds.
+Thus
+\begin{equation}\label{eq:a-bounds}
+ |a|\le A_0=4,\quad |a_x|\le A_x=15/h,\quad
+ |a_y|\le A_y=23/(2b),\quad
+ |\Delta a|\le D_a=96h^{-2}+41b^{-2}.
+\end{equation}
+The partial fraction formula
+$c_h(u)=\frac{h}{2\ii}[(u-\ii h)^{-1}-(u+\ii h)^{-1}]$
+implies $|c_h^{(j)}(u)|\le j!h^{-j}$ on the real axis.
+Since
+\[
+ \Delta_zK=(\Delta a)a'c_h+2a_xa'c_h'+aa'c_h'',
+ \qquad K(z,z)=a(z)^2,
+\]
+where $a'=a(z')$ in this display only, admissible constants are
+\begin{align}
+ D_2&=A_0D_a+2A_xA_0/h+2A_0^2/h^2
+       =536h^{-2}+164b^{-2},\label{eq:D2}\\
+ D_{\rm diag}
+   &=2A_0D_a+2A_x^2+2A_y^2
+       =1218h^{-2}+\frac{1185}{2}b^{-2}.\label{eq:Ddiag}
+\end{align}
+For \eqref{eq:pair-fourth}, expansion of the mixed Laplacian permits
+the choice
+\[
+ D_4= D_a^2+\frac{4A_xD_a}{h}
+ +\frac{4A_0D_a+8A_x^2}{h^2}
+ +\frac{24A_xA_0}{h^3}+\frac{24A_0^2}{h^4}
+ =D_a^2+76D_a/h^2+3624/h^4.
+\]
+No fourth derivative of $v$ has been used.
+
+\begin{theorem}[Complete canonical marked-pair acquisition]\label{thm:canonical-pair}
+Let $X\ge10$, $0<h,b\le1$, and define the test by
+\eqref{eq:p-cutoff}--\eqref{eq:marked-statistic}.
+Choose finite $J,U$ so that the complete error
+\eqref{eq:complete-delta} satisfies \eqref{eq:delta-requirement}.
+Then
+\begin{align}
+ |S_{X,h,b}(H_0)-S_{X,h,b}(\widehat H_{J,U})|
+ &\le E_{\rm pair},\label{eq:canonical-pair}\\
+ E_{\rm pair}
+ &=\frac{C_X(\delta/M_X)^{\alpha_X}}{\pi}
+ \left[
+ 4n_X(536h^{-2}+164b^{-2})
+ +1218h^{-2}+\frac{1185}{2}b^{-2}
+ \right].\notag
+\end{align}
+In particular, when $b=h$,
+\begin{equation}\label{eq:matched-error}
+ \boxed{\displaystyle
+ E_{\rm pair}=\frac{2800n_X+3621/2}{\pi h^2}\,
+                  C_X(\delta/M_X)^{2/(n_X+2)} .}
+\end{equation}
+The constants and both omitted source tails are explicitly
+specified in Section~\ref{sec:canonical}.
+\end{theorem}
+\begin{proof}
+Normalize $F$ and $\widehat F$ as in \eqref{eq:canonical-constants}.
+Equation~\eqref{eq:EX} gives $E=E_X$, and their zero populations are
+at most $n_X$. Apply Theorem~\ref{thm:pair-transfer} with
+\eqref{eq:D2}--\eqref{eq:Ddiag}. Both original cosine fields are
+conjugation-symmetric; $D$ is zero-free on the disk. Thus the
+folded functionals equal the stated full-plane statistics.
+The approximant's zeros in $b<|y|<2b$ retain their actual weights.
+For $b=h$, $4n_X(536+164)=2800n_X$ and
+$1218+1185/2=3621/2$.
+\end{proof}
+
+At the scale \eqref{eq:matched-scale}, the prefactor multiplying
+$(\delta/M_X)^{\alpha_X}$ is $O((\log X)^5)$.
+The direct log-product allowance \eqref{eq:pair-fourth} instead
+has prefactor $O((\log X)^7)$. These are upper-bound costs, not
+actual error asymptotics or runtime estimates; both retain the
+deteriorating exponent and the enlarged-disk source cost.
+
+Write $K_{\rm pair}=(4n_XD_2+D_{\rm diag})/\pi$.
+For any $e>0$, use \eqref{eq:precision-choice} with
+$K_\varphi$ replaced by $K_{\rm pair}$ and then
+\eqref{eq:tail-allocation}; this gives $E_{\rm pair}\le e/2$.
+If a later calculation obtains $\widehat q$ with
+$|\widehat q-S(\widehat H_{J,U})|\le E_{\rm eval}$, the precise
+condition excluding a plateau pair with $d_0\le d\le b$ is
+\begin{equation}\label{eq:pair-consumer}
+ \widehat q+E_{\rm eval}+E_{\rm pair}<2(d_0/b)^4 .
+\end{equation}
+At present the favorable value on the left has not been acquired.
+
+\subsection{Two scale checks}
+
+A center average over an interval of length $L$ containing the
+whole pair-window translate dilutes its mutual contribution to
+\[
+ 2(d/b)^4\frac{h}{L}\int_\R w(t)^2\dd t
+ =2(d/b)^4\frac{h}{L}\,\frac{643}{462}.
+\]
+The constant is elementary:
+$\int_\R w^2=1+\int_0^1p(t)^2\dd t=1+181/462$.
+Thus the fixed-center $1/8$ band margin cannot be carried
+unchanged into an averaged theorem.
+
+The scale dependence of the transfer also cannot be discarded.
+For $0<d\le1$ consider the local polynomial controls
+\begin{equation}\label{eq:pair-control}
+ f_\pm(z)=\frac{(z-X)^2\pm d^2}{74}.
+\end{equation}
+On $\overline D(c,R)$, $|z-X|\le17/2$, so
+$\norm{f_\pm}_\infty<1$,
+$|f_\pm(c)|\ge15/74$ and
+$\norm{f_+-f_-}_\infty=d^2/37$.
+Yet $f_+$ has the conjugate pair $X\pm\ii d$ and $f_-$ has
+only real roots. Taking $h=b=2d\le1$ gives
+$S(f_+)=1/8$ and $S(f_-)=0$ while the field difference tends
+to zero. A modulus of continuity independent of the shrinking
+test scale is therefore impossible for this generic class.
+The controls are local polynomials, not canonical theta fields;
+they neither refute Theorem~\ref{thm:canonical-pair} nor decide
+a source-specific favorable estimate.

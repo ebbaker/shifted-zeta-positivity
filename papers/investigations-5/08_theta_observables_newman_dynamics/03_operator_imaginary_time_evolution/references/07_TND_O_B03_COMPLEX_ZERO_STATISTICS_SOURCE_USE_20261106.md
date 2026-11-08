@@ -1,5 +1,18 @@
 # Complex-zero statistics: primary-source register
 
+**Source check completed 8 November 2026:** the
+[bounded BGST audit](../02_localized_zero_correlations/reviews/BGST_IMPORT_SOURCE_CHECK_20261108.md)
+resolves the warning below for the parent manuscript. Its cumulative
+`eq:BGST` is exactly v3 (3.5), **first line**, divided by
+T log(T)/(2 pi), and survives unchanged. The weaker dyadic theorem (3.2)
+and the erroneous multiplicative formula reproduced on v3 p.7 are
+different statements. Pinned 2306.04799v1 (1.4) already prints the
+manuscript's additive form; the 2024 journal text was not compared.
+Cite the corrected proof on any new use. This supersedes the request to
+reconcile this particular equation, not the historical reading provenance
+or unrelated assessments. Prepared for Edward Baker with substantial
+OpenAI Codex assistance; actual backend model/effort unavailable, chat0004.
+
 **Source correction found 8 November 2026:** the later BGST paper
 [arXiv:2501.14545v3, §3](https://arxiv.org/html/2501.14545v3#S3)
 corrects the uniform error term of the earlier unconditional Montgomery

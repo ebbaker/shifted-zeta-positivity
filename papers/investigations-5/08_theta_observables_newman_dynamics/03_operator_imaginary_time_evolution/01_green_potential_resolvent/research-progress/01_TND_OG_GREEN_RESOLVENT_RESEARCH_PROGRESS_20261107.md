@@ -2,17 +2,144 @@
 
 7 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Explicit worker dispatch selected **gpt-6.1-sol / ultra**; this is the supplied actual selection, not independent backend verification. Root model/effort unavailable.
 
-**This file is the sole current live status register for the TND-OG task family.** Re-read it before changes and preserve other chats' updates. Parent [Register02](../../research-progress/02_SMOOTH_LOCALIZATION_RESEARCH_PROGRESS_20261106.md) owns TND-O/shared tasks and links here; it must not duplicate these live statuses. The sibling owns TND-OC. The [plan](../research-plan/01_TND_OG_GREEN_RESOLVENT_RESEARCH_PLAN_20261107.md) defines task scope and limits; [Continuation07](../continuation-notes/07_TND_OG_E03_CONTINUATION_AFTER_HIERARCHY_AUDIT_20261108.md) is the current E03 handoff after the manuscript and hierarchy audit. [Continuation06](../continuation-notes/06_TND_OG_E04_MANUSCRIPT_AND_OUTSTANDING_TASKS_20261108.md) records the manuscript milestone; [Continuation05](../continuation-notes/05_TND_OG_B02_RESULTS_AND_MODEL_CHANGE_20261108.md) retains the original E03 prompt. None is another register. Preparing Continuation07 does not activate E03 or alter Request09. Research update below: **gpt-6-astra / max**, actual session metadata, 7 November 2026.
+**This file is the sole current live status register for the TND-OG task family.** Re-read it before changes and preserve other chats' updates. Parent [Register02](../../research-progress/02_SMOOTH_LOCALIZATION_RESEARCH_PROGRESS_20261106.md) owns TND-O/shared tasks and links here; it must not duplicate these live statuses. The sibling owns TND-OC. The [plan](../research-plan/01_TND_OG_GREEN_RESOLVENT_RESEARCH_PLAN_20261107.md) defines task scope and limits; [Continuation09](../continuation-notes/09_TND_OG_E05_RESULTS_AND_MODEL_CHANGE_20261108.md) is the current handoff after E05; Continuation08 is the E05 activation source, and Continuation07 the earlier E03 entry point. [Continuation06](../continuation-notes/06_TND_OG_E04_MANUSCRIPT_AND_OUTSTANDING_TASKS_20261108.md) records the manuscript milestone; [Continuation05](../continuation-notes/05_TND_OG_B02_RESULTS_AND_MODEL_CHANGE_20261108.md) retains the original E03 prompt. None is another register. Preparing Continuation07 does not activate E03 or alter Request09. Research update below: **gpt-6-astra / max**, actual session metadata, 7 November 2026.
 
 | Task | Type / recommendation and reason | Current status | Exact dependency / expected output |
 | --- | --- | --- | --- |
 | TND-OG-B01 | B; Astra/ultra — choose consequential estimating mechanism and Green consumer | **COMPLETE — bounded conceptual cycle** | Actual gpt-6-astra / max. [Decision01](../brainstorm/notes/01_TND_OG_B01_RESOLVENT_CONDITIONING_DECISION_20261107.md), [Note01](../notes/01_TND_OG_B01_UNIFORM_SOURCE_CONDITIONING_20261107.md), [return01](handoffs/01_TND_OG_B01_RETURN_20261107.json). Scoped √η conditioning obstruction derived; no favorable canonical upper bound. |
 | TND-OG-E01 | E; Sol6.1/ultra — execute one frozen analytical route | **COMPLETE r1 — proved in-note; E02 accepted with additive correction** | [Note02](../notes/02_TND_OG_E01_SHORT_MOLLIFIER_RESIDUAL_FLOOR_20261107.md), [return02](handoffs/02_TND_OG_E01_RETURN_20261107.json). Stronger liminf floor [1/(2θ)−11/12]/ζ(5/2)^4; uniform over the frozen bounded-complex class, θ<1/2, one polynomial on the padded interval. Primary/input, multiplier-zero, normalization and complete acquisition payments supplied; read with [Note03](../notes/03_TND_OG_E02_REAL_MIXED_TERM_AND_ACQUISITION_CLARIFICATIONS_20261107.md). No canonical Green upper gain. |
 | TND-OG-E02 | E; Sol6.1/ultra — fixed claim/consumer assessment | **COMPLETE r1 — accepted with one bounded additive correction** | [Review01](../reviews/01_TND_OG_E02_CLAIM_LEVEL_ASSESSMENT_20261107.md), [Note03](../notes/03_TND_OG_E02_REAL_MIXED_TERM_AND_ACQUISITION_CLARIFICATIONS_20261107.md), [return05](handoffs/05_TND_OG_E02_RETURN_20261107.json), [validation06](handoffs/06_TND_OG_E02_VALIDATION_20261107.json). Both scoped theorems/constants retained. Printed-source mixed-term description corrected by direct real calculation; integer cutoff and observation norm clarified. Shared-premise internal assessment only. |
-| TND-OG-B02 | B; Astra — select a signed-estimate route after the completed mechanisms | **COMPLETE r1 — local acquisition lemma proved in-note; route selected** | [Note04](../notes/04_TND_OG_B02_ONE_SIDED_BOUNDARY_LOG_ACQUISITION_20261108.md), [self-check02](../reviews/02_TND_OG_B02_BOUNDARY_LOG_SELF_CHECK_20261108.md), [return08](handoffs/08_TND_OG_B02_RETURN_20261108.json). One-dimensional log-envelope error tends to zero through real multiple zeros. No favorable canonical value; full assembly remains E03. |
-| TND-OG-E03 | E; Sol6.1 — execute the fixed full signed-log acquisition assembly | **READY r1 — UNACTIVATED** | [Request09](handoffs/09_TND_OG_E03_SIGNED_LOG_ACQUISITION_REQUEST_20261108.md), [inputs09](handoffs/09_TND_OG_E03_INPUTS_20261108.json). Prove the source/tail/prime upper certificate and explicit error; one bounded correction cycle. B02 r2 only if a consequential fixed premise fails. |
-| TND-OG-E04 | E; Sol6.1 — integrate the existing analytical results into an evolving manuscript | **COMPLETE r1 — analytical manuscript and production check** | [Manuscript](../manuscript/README.md), [check03](../reviews/03_TND_OG_E04_MANUSCRIPT_INTEGRATION_CHECK_20261108.md), [session04](../brainstorm/notes/04_TND_OG_E04_MANUSCRIPT_DEVELOPMENT_20261108.md), [build record](../numerics/01_TND_OG_E04_MANUSCRIPT_BUILD_20261108.json). Source/Green/prime derivations, both scoped obstructions with E02 correction, complete quadratic ledger and B02 local theorem; 23-page reading PDF and outstanding tasks. Source evidence levels unchanged; E03 remains unactivated. Actual model/effort not recorded. |
-| TND-OG-B03 | B; Astra — assess whether earlier heat-density hierarchies transfer usefully to the current Green/log consumer | **COMPLETE r1 — relationship audit and local analytical consequence** | [Note05](../notes/05_TND_OG_B03_HDA_HIERARCHY_LOG_TRANSFER_20261108.md), [session05](../brainstorm/notes/05_TND_OG_B03_HIERARCHY_RELATIONSHIP_AND_USE_20261108.md), [check04](../reviews/04_TND_OG_B03_HIERARCHY_TRANSFER_SELF_CHECK_20261108.md), [return10](handoffs/10_TND_OG_B03_HIERARCHY_RELATIONSHIP_RETURN_20261108.json). Exact gamma cancellation and growing real RS completion compose with B02 to give local O((log X)^−2) logarithmic error. Same-assistant checking only; no full assembly, favorable value or numerical campaign. Overview §7 updated; E03 unchanged and unactivated. Actual model/effort not recorded. |
+| TND-OG-B02 | B; Astra — select a signed-estimate route after the completed mechanisms | **COMPLETE r1 — local acquisition lemma proved in-note; route selected** | [Note04](../notes/04_TND_OG_B02_ONE_SIDED_BOUNDARY_LOG_ACQUISITION_20261108.md), [self-check02](../reviews/02_TND_OG_B02_BOUNDARY_LOG_SELF_CHECK_20261108.md), [return08](handoffs/08_TND_OG_B02_RETURN_20261108.json). One-dimensional log-envelope error tends to zero through real multiple zeros. No favorable canonical value; full assembly is separately completed/assessed under E03/E05. |
+| TND-OG-E03 | E; Sol6.1 — execute the fixed full signed-log acquisition assembly | **COMPLETE r1 — E05 internally assessed with additive clarification** | [Note06](../notes/06_TND_OG_E03_COMPLETE_SIGNED_LOG_ACQUISITION_20261108.md), [check05](../reviews/05_TND_OG_E03_ASSEMBLY_PROOF_AUTHOR_CHECK_20261108.md), [return11](handoffs/11_TND_OG_E03_SIGNED_LOG_ACQUISITION_RETURN_20261108.json). Exact 0<=U−J<=E+2T+2beta and finite literal-source choices. Original E03 clarification preserved; read with E05 [Note07](../notes/07_TND_OG_E05_ASSESSMENT_CALCULATIONS_20261108.md). Theorem/constants unchanged. Favorable value unpaid; no B02 r2 trigger. |
+| TND-OG-E04 | E; Sol6.1 — integrate the existing analytical results into an evolving manuscript | **COMPLETE r1 — analytical manuscript and production check** | [Manuscript](../manuscript/README.md), [check03](../reviews/03_TND_OG_E04_MANUSCRIPT_INTEGRATION_CHECK_20261108.md), [session04](../brainstorm/notes/04_TND_OG_E04_MANUSCRIPT_DEVELOPMENT_20261108.md), [build record](../numerics/01_TND_OG_E04_MANUSCRIPT_BUILD_20261108.json). Source/Green/prime derivations, both scoped obstructions with E02 correction, complete quadratic ledger and B02 local theorem; 23-page reading PDF and outstanding tasks. Source evidence levels unchanged; E03 was unactivated at E04 completion. Actual model/effort not recorded. |
+| TND-OG-B03 | B; Astra — assess whether earlier heat-density hierarchies transfer usefully to the current Green/log consumer | **COMPLETE r1 — relationship audit and local analytical consequence** | [Note05](../notes/05_TND_OG_B03_HDA_HIERARCHY_LOG_TRANSFER_20261108.md), [session05](../brainstorm/notes/05_TND_OG_B03_HIERARCHY_RELATIONSHIP_AND_USE_20261108.md), [check04](../reviews/04_TND_OG_B03_HIERARCHY_TRANSFER_SELF_CHECK_20261108.md), [return10](handoffs/10_TND_OG_B03_HIERARCHY_RELATIONSHIP_RETURN_20261108.json). Exact gamma cancellation and growing real RS completion compose with B02 to give local O((log X)^−2) logarithmic error. Same-assistant checking only; no full assembly, favorable value or numerical campaign. Overview §7 updated; E03 was unchanged/unactivated at B03 completion. Actual model/effort not recorded. |
+| TND-OG-E05 | E; Sol6.1 — fixed eight-claim assessment | **COMPLETE r1 — accepted with one additive evidence/control clarification** | [Review06](../reviews/06_TND_OG_E05_CLAIM_LEVEL_ASSESSMENT_20261108.md), [Note07](../notes/07_TND_OG_E05_ASSESSMENT_CALCULATIONS_20261108.md), [return14](handoffs/14_TND_OG_E05_ASSESSMENT_RETURN_20261108.json). All eight claims accepted; E03 theorem/constants unchanged. E02 evidence limited to OG Note01/02; OC keeps its original self-check level. No B02 r2 trigger or favorable value. Internal shared-premise assessment only. |
+| TND-OG-B04 | B; Astra — select consequential canonical signed-value information | **PLANNING DISCUSSION — substantive comparison not started** | Author requests an overview and participation before research. [Planning08](../brainstorm/notes/08_TND_OG_B04_INITIAL_PLANNING_20261108.md) proposes analytical priority, a finite-evaluation alternative and feasibility/outcome checks within Continuation09's two-route/one-clarification limit. Await the initial discussion; no E request issued. |
+
+## B04 initial planning — 8 November 2026
+
+The author requests continuation with B04, preceded by an overview and
+discussion of potential changes so he can participate in planning.
+[Planning08](../brainstorm/notes/08_TND_OG_B04_INITIAL_PLANNING_20261108.md)
+records the assistant's proposed analytical-first priority and bounded
+evaluation alternative. This is the requested planning stage; the
+substantive comparison and any new execution packet have not begun.
+Type B, recommended Astra for the unresolved canonical estimate/test
+selection. Keep at most two routes and one focused clarification.
+Completion remains a quantitative gain, scoped obstruction or exact
+unpaid premise with a decision note and continuation. If a concrete
+E contract results, recommend Sol6.1 before execution.
+
+Preflight: E05 47/47 and supplemental controls 5/5 match; E03 33/34
+retains only its documented chat-guide mismatch. Source, Green consumer
+and frozen records are preserved. The current runtime identifies
+gpt-6-astra; reasoning effort is not exposed, and capture metadata
+contains no model configurations. No setting is inferred from a
+recommendation. Current conversation: registered chat0004, actual title
+“Continue TND-OG-B04,” thread 01a1bbe3-581f-72c2-abd7-752993ab95aa.
+Prepared for Edward Baker with substantial OpenAI Codex assistance.
+
+## E05 r1 disposition — 8 November 2026
+
+All eight fixed claims are accepted with **one additive evidence/control
+clarification**, in [Review06](../reviews/06_TND_OG_E05_CLAIM_LEVEL_ASSESSMENT_20261108.md)
+and [Note07](../notes/07_TND_OG_E05_ASSESSMENT_CALCULATIONS_20261108.md).
+The acquisition theorem 0<=U−J<=E+2T+2beta, its literal source, constants
+and finite parameter choices are unchanged. An explicit collar/Cauchy
+calculation verifies the existing finite-quadrature bound claim.
+
+The clarification limits E02's accepted-with-additive-correction evidence
+to OG Note01/02; OC Note04 remains proved in-note with proof-author
+self-check only. The review also explicitly screens the older q/q_(T,a),
+smooth-density and two-channel cases named by avoid02. Original Note06
+and all frozen input bytes are preserved. No mathematical proof repair
+or consequential failed premise; B02 r2 is not triggered.
+
+Evidence: internal LLM assessment, root also E03's author, with three
+fresh-context inherited-configuration analytical assessors. This is not
+independent specialist review or a new primary mean-value proof audit.
+Actual model/effort are unavailable in accessible capture metadata.
+All 47 E05 inputs match; original E03 check remains 33/34 with only
+the known shared chat-guide mismatch. Additional control passage
+identities are separately bound in supplemental13. [Return14](handoffs/14_TND_OG_E05_ASSESSMENT_RETURN_20261108.json)
+and [validation15](handoffs/15_TND_OG_E05_VALIDATION_20261108.json)
+bind the actual records.
+
+The favorable canonical signed value below m(d,r) remains unpaid.
+No numerical research, manuscript integration, provider substitution,
+parent/sibling edit or shared-summary promotion. E05 stops at assessment.
+Default next proposal: **[B] TND-OG-B04 — Astra**, with bounded scope
+and model-change prompt in [Continuation09](../continuation-notes/09_TND_OG_E05_RESULTS_AND_MODEL_CHANGE_20261108.md);
+unissued and unactivated. The author chooses model, effort and timing.
+
+The current conversation remains registered chat0003; its actual public
+replies were refreshed. Exact-turn final capture is arranged as the last
+tool action and must be verified on continuation. New documents are
+canonical repository files, in line with the author's link preference.
+
+## E05 r1 activation — 8 November 2026
+
+The author explicitly resumes E05 using Continuation08 after the link-location
+clarification. The earlier interrupted attempt performed no substantive
+assessment and issued no input freeze. The present activation freezes
+[Request13](handoffs/13_TND_OG_E05_ASSESSMENT_REQUEST_20261108.md) and
+[inputs13](handoffs/13_TND_OG_E05_INPUTS_20261108.json) before analytical review.
+Type E, recommended Sol6.1; route and eight acceptance claims fixed.
+One bounded additive correction cycle; exact consequential failure
+triggers B02 r2. No new mechanism, numerics, manuscript integration,
+parent/sibling or shared-summary edits.
+
+All mathematical E03 inputs and recorded substantive output identities
+match. The original 33/34 check retains only the known chat-guide mismatch;
+E05 freezes its actual current bytes without rewriting the old manifest.
+Current chat remains branch chat0003; the recorder successfully refreshed
+the preceding real public replies. Actual model/effort are unavailable
+in accessible recorded metadata. Canonical documents are repository files.
+
+## E03 r1 disposition — 8 November 2026
+
+[Note06](../notes/06_TND_OG_E03_COMPLETE_SIGNED_LOG_ACQUISITION_20261108.md)
+completes Request09 (E1)–(E9): local logarithmic acquisition, complete
+exact-log tail, actual compact weights, literal reflected theta-source
+arithmetic/radial errors, compact gamma multiplier and integer prime tail.
+The exact gap is the sum of terms in [0,E], [0,2T], [0,2beta].
+Finite ordered choices attain every prescribed positive tolerance per X;
+the optional common-M argument gives common accuracy on fixed compact
+center intervals. Future directed evaluation must pay all stated errors.
+
+Evidence: proved in-note from inherited inputs, with proof-author checking
+and three inherited-configuration analytical helpers. No independent
+specialist review or separate claim-level assessment. One bounded
+scope-clarification cycle makes the inherited OC floor explicitly
+real-zero-centered and Q-specific, with the eta factor for log Z, and
+labels the polynomial floor an averaged liminf. No E03 estimate or
+constant changed; B02 r2 is not triggered.
+
+The literal source and time-zero consumer are unchanged. No favorable
+canonical value, numerical certificate, cost theorem, RH result or new
+mechanism is claimed. No parent/sibling research, manuscript or shared
+summary edits. The 33/34 input check has only the known chat-guide
+difference, unchanged since Continuation07. Actual model/effort are not
+recorded in accessible capture metadata. [Return11](handoffs/11_TND_OG_E03_SIGNED_LOG_ACQUISITION_RETURN_20261108.json)
+and [validation12](handoffs/12_TND_OG_E03_INPUT_AND_DELIVERY_VALIDATION_20261108.json)
+record the exact versions and output identities.
+
+Default next proposal: **[E] TND-OG-E05 — Sol6.1**, the eight-claim bounded
+assessment in [Continuation08](../continuation-notes/08_TND_OG_E03_RESULTS_AND_MODEL_CHANGE_20261108.md).
+It is unissued and unactivated. A consequential failed premise alone
+triggers B02 r2; favorable-value research requires a later author-selected
+B decision. Stop at the completed theorem.
+
+Chat0003 “Continue TND-OG-E03 research,” thread
+01a1bbc7-a62b-71f3-839a-7df76cc1452a, is successfully registered through
+the locked recorder. Completed public text is refreshed, and exact-turn
+final capture is arranged last; verify the worker on continuation.
+
+## E03 r1 activation — 8 November 2026
+
+The author's present request activates [Request09 r1](handoffs/09_TND_OG_E03_SIGNED_LOG_ACQUISITION_REQUEST_20261108.md), as scoped by Continuation07. Type **E**, recommended Sol6.1: field, literal Fourier/theta source, constants and acceptance inequality are fixed. Deliver one analytical acquisition proof, proof-author check, source-use record, exact return, session notes and continuation. One bounded correction cycle; a failed line estimate, required arithmetic smallness hypothesis or source/observable change triggers B02 r2. No numerics or manuscript integration.
+
+Preflight verified 33/34 frozen file entries. The only mismatch is the already recorded tools/CHAT_HISTORY.md version: 20,937 bytes, SHA-256 62e4c8323ce51c9d2a74b690594f99f609ae201141ec85fa86b9ed3e3a623e83. Mathematical inputs match. Preserve frozen bytes. Current thread 01a1bbc7-a62b-71f3-839a-7df76cc1452a, actual app title “Continue TND-OG-E03 research,” is registered as branch chat0003 through the locked recorder. Actual model/effort are unavailable in recorded capture metadata; three inherited-configuration analytical helpers are internal shared-premise assistance.
 
 ## B03 r1 disposition — 8 November 2026
 

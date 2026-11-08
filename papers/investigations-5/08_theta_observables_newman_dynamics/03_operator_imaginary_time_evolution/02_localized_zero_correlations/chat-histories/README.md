@@ -1,5 +1,18 @@
 # Correlation conversation affiliation
 
+**B04, 8 November 2026:** thread
+01a1bbc2-ac28-71c1-8bf0-aefeb0b06ce8 is registered as
+[chat0003](0003_2026-11-08T15-24-19Z_please-read-papers-investigations-5-08-theta-observables-newman-dynamics-03-oper.json)
+from its authenticated paginated source, with actual native title and
+creation time preserved. Actual model/effort are not exposed in its
+recorded configurations. Use the shared-lock refresh tool; the
+tool-managed index owns current counts, times, sizes and hashes.
+The observed turn is 01a1bbc3-5942-7de1-b60a-c486d1f7980c.
+Its bounded final capture must wait for the real final and completion;
+verify it on the next turn. No native hook activation is claimed.
+Prepared for Edward Baker with substantial OpenAI Codex assistance.
+The separate source-check chat0004 and its registration are preserved.
+
 7 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Root authoring model/effort unavailable; hierarchy discovery was tool-selected **gpt-6.1-sol/ultra**, shared Green check **gpt-6-astra/ultra**. Dispatch settings are not independent backend verification.
 
 New branch-only conversations register here using the repository recorder and their actual source transcript, title and identity. The present cross-branch setup conversation stays in the [parent history](../../chat-histories/README.md). Do not duplicate or relocate an existing registration merely because this folder was created.

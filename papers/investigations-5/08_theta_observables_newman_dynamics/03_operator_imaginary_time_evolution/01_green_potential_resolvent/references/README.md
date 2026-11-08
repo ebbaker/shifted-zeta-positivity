@@ -1,5 +1,9 @@
 # Green/resolvent reference ownership and use
 
+**8 November 2026, E05:** [Source-use08](08_TND_OG_E05_ASSESSMENT_SOURCE_USE_20261108.md) records fresh classical passage checks, inherited-source assessment limits and additional older-control source identities. No duplicate bibliography or evidence promotion. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort are not recorded in accessible capture metadata.
+
+**8 November 2026, E03:** [Source-use07](07_TND_OG_E03_SIGNED_LOG_ASSEMBLY_SOURCE_USE_20261108.md) records fresh Jensen, Harnack and reciprocal-gamma passage checks and the actual source/prime/obstruction dependencies. Canonical reference ownership is preserved. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort are not recorded in accessible capture metadata.
+
 **8 November 2026, B03:** [Source-use06](06_TND_OG_B03_HDA_HIERARCHY_SOURCE_USE_20261108.md) records the HDA source/review chain and a fresh primary passage check of the already imported all-order RS remainder. HDA retains canonical reference ownership; no duplicate bibliography or PDF. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort not recorded.
 
 **8 November 2026, manuscript integration:** [Source-use05](05_TND_OG_E04_MANUSCRIPT_SOURCE_USE_20261108.md) records the actual primary passage checks and source-status limits for the analytical draft. [manuscript_sources.bib](manuscript_sources.bib) adds only branch-specific internal records; the build selects existing external keys from their canonical homes. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort not recorded. [Continuation06](../continuation-notes/06_TND_OG_E04_MANUSCRIPT_AND_OUTSTANDING_TASKS_20261108.md) is the current manuscript handoff.

@@ -7,6 +7,23 @@ LLM assistance: **gpt-6-astra (Codex)**, reasoning effort **ultra**.
 
 ## Summary
 
+- **Localized zero correlations, full-marginal manuscript (8 November 2026).**
+  The [current draft](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/manuscript/README.md)
+  now develops the full Gaussian factorial hierarchy, weighted normalization,
+  center covariance, and a two-sided uniform pair-function source error
+  E_X(4n_X A_e U_h,e+V_h,e)/pi retaining real zeros. New derivations are
+  **preliminary; proof-author checking only**, E07 pending.
+  [Author check06](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/reviews/06_TND_OC_E06_GAUSSIAN_MANUSCRIPT_AUTHOR_CHECK_20261108.md):
+  “Uniform approximation of that function does not determine its canonical
+  profile.” The earlier scalar-first manuscript emphasis is superseded;
+  its E05 production record and analytical results remain. E02 is accepted
+  internally; B02/B03/B04 remain **proved in-note; author checking only**,
+  E03/E04 pending. The marked scalar coefficient
+  (2800n_X+3621/2)/(pi h²) and scoped harmonic obstruction are supporting
+  appendices. No canonical correlation profile or new exclusion follows.
+  For Edward Baker with substantial OpenAI Codex assistance; actual
+  model/effort unavailable.
+
 - **Reductions (from imported Polymath theorems).** \(\Lambda>0\) forces a
   real double zero at time \(\Lambda\); RH \(\iff\) \((H_t,H_t')\) has no
   joint real zero for any \(t>0\); for \(\varepsilon\le t\le\tfrac12\) and
