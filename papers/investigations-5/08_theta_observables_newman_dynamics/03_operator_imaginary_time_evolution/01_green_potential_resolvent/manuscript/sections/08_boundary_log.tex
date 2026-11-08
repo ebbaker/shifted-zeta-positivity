@@ -1,0 +1,188 @@
+\section{One-sided boundary-logarithm approximation through zeros}\label{sec:boundary-log}
+
+The quadratic floor concerns a sufficient positive surrogate. We now
+retain the measured logarithm itself. The local theorem below controls
+how much an absolute field error can raise its integral, even at
+multiple real zeros. Its starting data are a nonzero anchor away
+from the real interval and an upper bound on a larger disk.
+
+\subsection{A one-dimensional sublevel theorem}
+
+Fix the nested radii and constants
+\begin{equation}\label{eq:disk-constants}
+ R_0=\frac92,\quad \rho_0=\frac{13}3,\quad r_0=\frac{25}6,\quad
+ B=R_0+r_0=\frac{26}3,\quad
+ \kappa=\log\frac{27}{26},\quad
+ \frac{\rho_0+r_0}{\rho_0-r_0}=51 .
+\end{equation}
+
+\begin{theorem}[Line sublevels and a logarithmic upper envelope]\label{thm:local-log}
+Let \(f\) be holomorphic on a neighborhood of the closed disk
+\(\overline{D(0,R_0)}\), with \(|f|\le1\) there and
+\(|f(0)|\ge m>0\). Put
+\begin{equation}\label{eq:n-C}
+ A=\log(1/m),\qquad
+ n=\max\{2,\lceil A/\kappa\rceil\},\qquad
+ C_f=2Bn\ee^{51A/n}.
+\end{equation}
+Let \(\Gamma\) be a horizontal segment of length at most one inside
+\(\overline{D(0,r_0)}\). Then, for every \(t>0\),
+\begin{equation}\label{eq:sublevel}
+ |\{z\in\Gamma:|f(z)|<t\}|\le C_ft^{1/n}.
+\end{equation}
+If \(g\) is measurable on \(\Gamma\) and
+\(|f-g|\le\varepsilon\), with \(\varepsilon>0\), then
+\begin{equation}\label{eq:local-envelope}
+ 0\le\int_\Gamma
+       [\log(|g|+\varepsilon)-\log|f|]\dd\ell
+ \le\frac{C_fn^2}{n-1}(2\varepsilon)^{1/n}.
+\end{equation}
+No lower bound for \(|f|\) on \(\Gamma\), simplicity or separation
+of its zeros, or nonvanishing or holomorphy of \(g\), is assumed.
+\end{theorem}
+
+\begin{proof}
+Jensen's formula \cite{Tao2020LocalZeros} bounds the number \(k\)
+of zeros inside the open \(\rho_0\)-disk, including multiplicity,
+by \(k\kappa\le A\). Remove exactly these zeros with disk Blaschke
+factors:
+\[
+ b_j(z)=\frac{R_0(z-a_j)}{R_0^2-\overline{a_j}z},\qquad
+ h(z)=f(z)\Big/\prod_{j=1}^k b_j(z).
+\]
+Fill the removable singularities. Since every factor has boundary
+modulus one, the maximum principle gives \(|h|\le1\) on the outer
+disk. It is zero-free on the open \(\rho_0\)-disk and
+\(|h(0)|\ge m\). Harnack's inequality for the nonnegative harmonic
+function \(-\log|h|\) gives
+\(|h(z)|\ge\ee^{-51A}\) when \(|z|\le r_0\)
+\cite{Tao2016Harnack}. If \(h\) has a zero on the \(\rho_0\)-circle,
+apply Harnack on smaller disks and pass to the limit.
+The elementary denominator bound for each Blaschke factor gives
+\begin{equation}\label{eq:factor-lower}
+ |f(z)|\ge\ee^{-51A}
+       \prod_{j=1}^k\frac{|z-a_j|}{B}\qquad(|z|\le r_0).
+\end{equation}
+Every distance ratio is less than one.
+
+Let \(q=\ee^{51A}t\). If \(q<1\) and \(k=0\), the sublevel set
+is empty. Otherwise, when \(|f(z)|<t\), at least one distance
+is below \(Bq^{1/k}\). The set is covered by \(k\) disks of this
+radius. A disk of radius \(b\) meets a line in length at most \(2b\),
+so the total length is at most
+\[
+ 2Bkq^{1/k}\le2Bnq^{1/n}=C_ft^{1/n}.
+\]
+For \(q\ge1\), this bound exceeds the segment length and is
+automatic. This proves \eqref{eq:sublevel} in one dimension.
+An area estimate would not suffice for this trace argument.
+
+The triangle inequality gives, off the finitely many segment zeros,
+\[
+ 0\le\log(|g|+\varepsilon)-\log|f|
+ \le\log(1+2\varepsilon/|f|).
+\]
+Write \(h_*=2\varepsilon\). Tonelli and the layer-cake identity give
+\[
+ \int_\Gamma\log(1+h_*/|f|)\dd\ell
+ =\int_0^\infty
+ \frac{h_*}{t(t+h_*)}|\{|f|<t\}\cap\Gamma|\dd t.
+\]
+On \(0<t<h_*\), bound the kernel by \(1/t\); on \(t>h_*\),
+bound it by \(h_*/t^2\). Equation~\eqref{eq:sublevel} then gives
+the two bounds \(C_fn h_*^{1/n}\) and
+\(C_fn h_*^{1/n}/(n-1)\). Their sum is
+\eqref{eq:local-envelope}. The same sublevel integral proves local
+integrability of \(\log^-|f|\). The choice \(n\ge2\) makes the
+second integral finite and avoids the endpoint logarithm at \(n=1\).
+\end{proof}
+
+An immediate consequence, for \(M\ge1\), is
+\begin{equation}\label{eq:absolute-log-local}
+ \int_\Gamma|\log|Mf||\dd\ell\le\log M+C_fn.
+\end{equation}
+Indeed \(|\log|Mf||\le\log M+\log^-|f|\), and integrating
+\eqref{eq:sublevel} over \(0<t<1\) with measure \(\dd t/t\)
+bounds the latter integral by \(C_fn\).
+
+\subsection{The canonical anchor and explicit height dependence}
+
+For \(v\in\R\), center these disks at \(c_v=v+4\ii\), and take
+the segment \(I_v=[v-1/2,v+1/2]\). Its maximum distance from
+the center is \(\sqrt{65}/2<r_0\).
+Throughout the outer disk, \(1/4\le\Re s\le19/4\).
+The pole-cancelled fractional-part identity
+\eqref{eq:fractional} gives
+\[
+ |F(z)|\le2|v|+25.
+\]
+In detail \(|s-1|\le |v|/2+6\), while the integral in that
+identity is bounded by \(1/\Re s\le4\). At the center,
+the absolutely convergent Euler product gives
+\begin{equation}\label{eq:canonical-anchor}
+ |F(c_v)|\ge c_0:=\frac35\frac{\zeta(5)}{\zeta(5/2)}>0.
+\end{equation}
+This safe-line estimate is unconditional and supplies no lower
+modulus on the real segment.
+
+Define
+\begin{equation}\label{eq:local-canonical-constants}
+ M_v=2|v|+26,\quad A_v=\log(M_v/c_0),\quad
+ n_v=\max\{2,\lceil A_v/\kappa\rceil\},\quad
+ C_v=2Bn_v\ee^{51A_v/n_v}.
+\end{equation}
+Apply Theorem~\ref{thm:local-log} to \(F/M_v\).
+
+\begin{corollary}[Canonical local acquisition]\label{cor:canonical-log}
+If \(\sup_{I_v}|F-\widehat F|\le\delta\), with \(\delta>0\), then
+\begin{equation}\label{eq:canonical-envelope}
+ 0\le\int_{I_v}
+ [\log(|\widehat F|+\delta)-\log|F|]\dd x
+ \le\mathcal E_v(\delta)
+ :=\frac{C_vn_v^2}{n_v-1}
+       \left(\frac{2\delta}{M_v}\right)^{1/n_v}.
+\end{equation}
+Also
+\begin{equation}\label{eq:canonical-absolute-log}
+ \int_{I_v}|\log|F(x)||\dd x\le\log M_v+C_vn_v.
+\end{equation}
+\end{corollary}
+\begin{proof}
+Use \(f=F/M_v\), \(g=\widehat F/M_v\),
+\(\varepsilon=\delta/M_v\). Logarithmic constants cancel
+exactly in the difference. Equation~\eqref{eq:absolute-log-local}
+gives the second assertion.
+\end{proof}
+
+Because \(A_v/n_v\le\kappa\), the prefactor in
+\eqref{eq:canonical-envelope} is \(O(\log^2(2+|v|))\),
+whereas \(n_v\) is of order \(\log(2+|v|)\). To make the local
+error at most \(h>0\), it suffices to take
+\begin{equation}\label{eq:precision}
+ \delta\le\frac{M_v}{2}
+ \left(\frac{h(n_v-1)}{C_vn_v^2}\right)^{n_v}.
+\end{equation}
+This is finite precision for each fixed interval, not a uniform
+positive Hölder exponent or a useful complexity theorem.
+
+The local double-zero model illustrates the relevant scale without
+any numerical approximation:
+\begin{equation}\label{eq:double-log}
+ \int_\R[\log(x^2+\delta)-\log x^2]\dd x=2\pi\sqrt\delta.
+\end{equation}
+Substitute \(x=\sqrt\delta\,u\) and integrate
+\(\log(1+u^{-2})\) by parts on the positive half-line; its integral
+is \(2\int_0^\infty(1+u^2)^{-1}\dd u=\pi\).
+Thus a real zero produces no fixed error floor, although a Lipschitz
+error bound fails even in this simple model. This is an algebraic
+scale calculation, not a canonical collision control, and the
+conservative exponent in \eqref{eq:canonical-envelope} is not
+claimed sharp.
+
+The approximant in this theorem may have zeros, and its logarithmic
+integral is retained. This is the precise distinction from a
+zero-free harmonic-baseline replacement. Likewise no small
+quadratic-residual hypothesis from Section~\ref{sec:quadratic}
+is used. The theorem measures signed information already present
+in the exact field; it does not establish its favorable value.
+

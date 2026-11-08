@@ -7,6 +7,15 @@
 
 ## 1. Fixed zero object and localization
 
+**Author clarification, 8 November 2026:** the objective remains a localized
+correlation/marginal framework for possibly nonreal zeros, generalizing the
+real-zero spacing perspective of Montgomery and Rodgers–Tao. The particular
+quadratic reduction and later log-comparison route do not exhaust it.
+[Alignment Note05](../brainstorm/notes/05_TND_OC_AUTHOR_GOAL_ALIGNMENT_20261108.md)
+records this distinction; no new theorem or execution is asserted.
+Prepared for Edward Baker with OpenAI Codex assistance; actual current
+model/effort unavailable.
+
 Use the canonical Newman family \(H_\lambda\) and its full zero multiset \(z_j=x_j+iy_j\), with multiplicity copies indexed separately. For \(0\le\lambda\le1/2\), inherited zeros lie in \(|y_j|\le1\). At time zero \(z=2\gamma+i(1-2\beta)\). Newman time satisfies \(\partial_\lambda H=-H_{zz}\); forward heat time reverses its sign. The variable \(x\) here is twice zeta height.
 
 For a nonnegative compactly supported smooth window \(w\), let
@@ -79,6 +88,48 @@ Height-only Vandermonde factors cannot distinguish identical ordinates of a nonr
 
 Using (C1), a compact smooth pair test can be expressed distributionally through the tensor product of zero measures, with the self-pair correction explicit. Integration by parts transfers derivatives to the test in each variable. This supplies source access in principle; products of log fields and their conditioning may cost more than the one-point Green integral. Establishing a favorable estimate is exactly the open task. Source positivity is not an answer.
 
+## 3.1. Current direction: localized two-zero marginals
+
+**8 November 2026, author-requested direction and literature update.**
+Prepared for Edward Baker with OpenAI Codex assistance; actual current
+model/effort unavailable. Develop (C4)–(C5) as a full marked pair measure,
+then select a useful marginal or test. For a finite local configuration,
+symmetrize its N labeled zero atoms into P_N. Its first-two-coordinate
+push-forward satisfies N(N-1)(pi_12)_*P_N=sum_(j!=k)delta_(z_j,z_k).
+This construction is valid without a random-matrix hypothesis; see
+[Note06](../brainstorm/notes/06_TND_OC_PAIR_MARGINAL_AND_RODGERS_TAO_SPACING_20261108.md).
+
+Retain common height, separation and both transverse coordinates before
+projection. Real-axis mass, conjugation relations and repeated geometric
+locations require measures rather than an assumed smooth planar density.
+An optional center-averaging law must be specified, with its dilution
+cost. Recover the all-real pair statistic as a benchmark without imposing
+simplicity; a pair correlation is different from a consecutive-gap law.
+
+[The literature review, Note07](../brainstorm/notes/07_TND_OC_LOCALIZED_PAIR_MARGINAL_LITERATURE_AND_DIRECTION_20261108.md)
+selects two canonical access candidates for B04: localized arithmetic
+complex-difference tests, and direct weak pair statistics from correlated
+log fields. The closest tools are BGST's unconditional arithmetic
+framework, Tao–Vu's local replacement principle and the existing
+whole-cluster Poisson transfer. Gaussian/Pfaffian correlations and
+heat-evolved random polynomials supply comparison examples, not a law
+for H. [Source-use04](../references/04_TND_OC_PAIR_MARGINAL_LITERATURE_SOURCE_USE_20261108.md)
+records versions, hypotheses and exact inspected passages.
+
+**Source correction:** BGST arXiv:2501.14545v3 §3 corrects the earlier
+uniform error. Reconcile the parent manuscript's imported (eq:BGST)
+before using it in candidate A; no automatic status upgrade or global
+retraction is implied.
+
+The next milestone is one specified test with independently controlled
+canonical data and a complete error/regime, or a scoped failure. Defining
+a marginal is a representation. A future dynamical estimate must pay
+outside-window interactions, time and localization boundaries, and any
+unclosed higher-correlation terms. Do not replace the pair object by
+B01's quadratic projection or B03's scalar logs without a new recorded
+choice. E02 is accepted, B02 author-checked only, and E03 remains pending.
+The sole register owns B04 readiness and the independent audit queue.
+
 ## 4. Candidate B: full configuration functional
 
 For compactly supported f,
@@ -101,6 +152,19 @@ Here define \(f_{s,X}(z)=0\) for \(\Im z\le0\); the displayed formula applies on
 Do not import determinant positivity from a surrogate ensemble while leaving the source-to-zero identification unproved. If an auxiliary positive process is used, a quantitative transfer theorem with its complete error must be the deliverable.
 
 ## 5. Earlier hierarchies and what can transfer
+
+**Additional predecessors identified by the author, 8 November:**
+[02_heat_flow_rh_applications](../../../../02_heat_flow_rh_applications/summary/CURRENT_SUMMARY.md)
+supplies corrected Rodgers–Tao boundary/exterior-force accounting and a
+fixed two-root comparison; [03_heat_flow_collision_bounds](../../../../03_heat_flow_collision_bounds/summary/CURRENT_SUMMARY.md)
+supplies a Poisson L2 statistic that is exactly an ordered pair sum and a
+conditional whole-cluster transfer. The latter assumes real true roots,
+although its approximant may have complex roots. Extending that premise
+is a concrete question; its RH-conditional simplicity threshold is not
+the present nonreal-defect criterion. HCB's later physical-jet correlations
+concern arithmetic summands, with scoped stops that do not close this
+pair-marginal direction. Note07 links the inspected notes and reviews;
+original registers and same-model internal evidence levels are retained.
 
 **Author clarification:** [01_heat_density_asymptotics](../../brainstorm/notes/20_TND_O_PRIOR_HIERARCHY_LOCATOR_20261107.md#4-author-identified-hierarchy-heat-density-asymptotics) is the intended predecessor. Read its ansatz Notes15–16 and current recurrence overview first. The exponential operator generating family and triangular recurrence organize field corrections; later recurrence Notes05/20 supply controlled growing-order field/jet estimates in their stated negative-Newman-time regimes. The zero-functional hierarchy instead organizes factorial zero statistics. A transfer needs a matching domain and paid source/denominator/contour errors. Other located constructions below are optional comparisons.
 

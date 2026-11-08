@@ -56,3 +56,14 @@ The repository capture tool registered **chat0004, Review TND-O-B02 event anatom
 ## Partial recovery records, 7 November 2026
 
 Prepared for Edward Baker with OpenAI Codex assistance, actual gpt-6.1-sol/ultra. At the author's explicit request, the available incomplete records for threads `01a1b3e3-155c-7210-84b2-2bbe86a0d0d7`, `01a1b41e-9aa4-7623-b95d-1974476b30ca`, and `01a1b83a-dc11-72cc-a251-d4ae48ffb0e5` are included in [partial-recoveries/](partial-recoveries/README.md). This placement supersedes the exports' earlier placement guidance. All six supplied recovery/excerpt files retain their original bytes, missing-response labels and historical quotes. They are unregistered partial records with no canonical archive number. Existing registered histories and their identities are preserved; no partial record is added to this index. The earlier [E06 notes recovery](../notes/CHAT_HISTORY_RECOVERY_20261107_01a1b3e3.md) remains available for existing links. See the [integration note](../notes/TND_O_EARLIER_EXPORTS_INTEGRATION_20261107.md) for provenance and checks.
+
+## Capture troubleshooting, 8 November 2026
+
+Prepared for Edward Baker with OpenAI Codex assistance; current exact model
+and effort unavailable. The [live diagnosis](../notes/CHAT_CAPTURE_DIAGNOSIS_20261108.md)
+confirms file writing and the integrity of all seven registered parent/child
+histories, but full capture of environment thread
+`01a1b9a8-12ef-746b-be9e-e8b2320840d1` is unavailable. Its
+[completed public excerpt](UNREGISTERED_PARTIAL_CHAT_CAPTURE_TROUBLESHOOT_20261108.md)
+is explicitly partial and unregistered. It has no canonical archive number
+and is not added to this registry.

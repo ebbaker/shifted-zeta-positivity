@@ -1,5 +1,7 @@
 # Green/resolvent continuation and pasteable prompt
 
+**Historical setup snapshot.** After authorized B01 research, the [7 November results/model-change continuation02](02_TND_OG_B01_RESULTS_AND_MODEL_CHANGE_20261107.md) supersedes this file's next-task prompt. Preserve the setup provenance below; consult the sole register for current status.
+
 **7 November 2026 integration — gpt-6.1-sol/ultra:** checkout navigation updated after the [verified handoff integration](../../notes/TND_O_COMPLETE_HANDOFF_INTEGRATION_20261107.md); research remains unactivated. Original preparation and source identities below are historical.
 
 7 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Explicit worker dispatch selected **gpt-6.1-sol / ultra**; this is the supplied actual selection, not independent backend verification. Root model/effort unavailable.

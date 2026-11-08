@@ -1,8 +1,22 @@
 # Green/resolvent reference ownership and use
 
+**8 November 2026, B03:** [Source-use06](06_TND_OG_B03_HDA_HIERARCHY_SOURCE_USE_20261108.md) records the HDA source/review chain and a fresh primary passage check of the already imported all-order RS remainder. HDA retains canonical reference ownership; no duplicate bibliography or PDF. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort not recorded.
+
+**8 November 2026, manuscript integration:** [Source-use05](05_TND_OG_E04_MANUSCRIPT_SOURCE_USE_20261108.md) records the actual primary passage checks and source-status limits for the analytical draft. [manuscript_sources.bib](manuscript_sources.bib) adds only branch-specific internal records; the build selects existing external keys from their canonical homes. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort not recorded. [Continuation06](../continuation-notes/06_TND_OG_E04_MANUSCRIPT_AND_OUTSTANDING_TASKS_20261108.md) is the current manuscript handoff.
+
+**8 November 2026:** [Source-use04](04_TND_OG_B02_SIGNED_LOG_SOURCE_USE_20261108.md) records freshly reopened Jensen/Blaschke and Harnack passages and the actual parent/sibling inputs for B02. Existing sibling bibliography keys are reused. Exact model/effort unavailable. Current routing is [Continuation05](../continuation-notes/05_TND_OG_B02_RESULTS_AND_MODEL_CHANGE_20261108.md); earlier statuses below are historical.
+
+**E02 assessment update, 7 November 2026:** [Review01](../reviews/01_TND_OG_E02_CLAIM_LEVEL_ASSESSMENT_20261107.md) accepts both scoped results with one bounded additive correction in [Note03](../notes/03_TND_OG_E02_REAL_MIXED_TERM_AND_ACQUISITION_CLARIFICATIONS_20261107.md). The direct real mixed-term verification corrects the account of the printed primary source; the residual-floor constant is unchanged. [Continuation04](../continuation-notes/04_TND_OG_E02_RESULTS_AND_MODEL_CHANGE_20261107.md) supplies model-change guidance. No favorable canonical signed Green upper margin is acquired; there is no ready E successor. Proposed B02 is unissued and unactivated. Internal shared-premise assessment only; author-selected Sol6.1/ultra, explicit assessor dispatch gpt-6.1-sol/ultra, root backend/effort unavailable. Earlier dated readiness and delivery statements below are historical.
+
+**E01 source-use supplement, 7 November 2026:** [Source-use02](02_TND_OG_E01_SOURCE_USE_20261107.md) records hash-verified local PDF checking of v3 Proposition B and §7 (13)–(16), Lemmas 9–14, and its uniform bounded-coefficient use. The citation remains owned by source-use01 and the existing BibTeX entry. Note02 proves the separate normalized transfer; it is no longer merely an E01 target. No full primary proof audit or E02 assessment is claimed. Exact actual model/effort unavailable. Export overlay awaits import.
+
+**Research addition, 7 November 2026 — actual gpt-6-astra / max:** [Source-use01](01_TND_OG_B01_SOURCE_USE_20261107.md) adds the branch-specific Radziwiłł v3 record, exact inspected passages and externally archived PDF hash. Its unique entry is in [green_resolvent_sources.bib](green_resolvent_sources.bib); inherited shared bibliographies below are unchanged. B01's conditioning proof uses inherited Green/source inputs. The short-mollifier transfer is still an E01 target, not an imported theorem. The setup inspection scope below is historical.
+
 7 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Explicit worker dispatch selected **gpt-6.1-sol / ultra**; this is the supplied actual selection, not independent backend verification. Root model/effort unavailable.
 
 **Setup inspection scope: inherited internal passages and their existing source-use records only.** No external article was newly opened, imported, downloaded, fully read or assessed by this branch-document worker. The resolvent/Wirtinger/Burgers formulas in the overview are standard local algebra recorded as a candidate interface; they carry no novelty or favorable-estimate claim. Future new primary imports require passage-level checks under [REFERENCE_WORKFLOW](../../../../../../REFERENCE_WORKFLOW.md) and [unchecked-import rule16](../../../../../../avoid/16_unchecked_imports_and_novelty_claims.md).
+
+[Source-use03](03_TND_OG_E02_SOURCE_USE_AND_PRINTED_FORMULA_CLARIFICATION_20261107.md) records E02’s fresh passage checks and correction to the printed-formula attribution. Existing citation ownership and frozen records are preserved.
 
 ## Canonical homes
 

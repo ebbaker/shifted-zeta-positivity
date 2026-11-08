@@ -1,5 +1,10 @@
 # Localized zero correlations: continuation
 
+**Historical setup snapshot.** Opening research now has a separate
+[current continuation02](02_TND_OC_AFTER_OPENING_RESEARCH_20261107.md).
+Use that note and the live register for the next task; the original
+unactivated labels below describe setup only.
+
 **7 November 2026 integration — gpt-6.1-sol/ultra:** checkout navigation updated after the [verified handoff integration](../../notes/TND_O_COMPLETE_HANDOFF_INTEGRATION_20261107.md); research remains unactivated. Original preparation and source identities below are historical.
 
 7 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Root authoring model/effort unavailable; locator selected GPT-6.1 Sol/ultra; shared conceptual check selected GPT-6 Astra/ultra. Settings are dispatch records. **Handoff snapshot only; consult the live register before execution.**

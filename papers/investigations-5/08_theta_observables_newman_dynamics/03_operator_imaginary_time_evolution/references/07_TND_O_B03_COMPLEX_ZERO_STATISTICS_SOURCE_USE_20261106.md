@@ -1,5 +1,17 @@
 # Complex-zero statistics: primary-source register
 
+**Source correction found 8 November 2026:** the later BGST paper
+[arXiv:2501.14545v3, §3](https://arxiv.org/html/2501.14545v3#S3)
+corrects the uniform error term of the earlier unconditional Montgomery
+theorem and explains the cumulative/dyadic versions. The older v1 reading
+below is preserved as historical provenance. Reconcile the imported
+parent manuscript (eq:BGST) before reusing that uniform bound; no full
+dependency audit is claimed. The authors state their original applications
+survive. [TND-OC source-use04](../02_localized_zero_correlations/references/04_TND_OC_PAIR_MARGINAL_LITERATURE_SOURCE_USE_20261108.md)
+owns the new article record and checked-passage receipt. Prepared for
+Edward Baker with OpenAI Codex assistance; actual current model/effort
+unavailable. This warning does not alter historical assessments.
+
 6 November 2026. Prepared for Edward Baker with substantial LLM assistance,
 actual gpt-6-astra / max. TND-O-B03, chat0004. Entries are recorded on
 discovery; the final source-use update specifies the passages actually

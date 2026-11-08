@@ -1,0 +1,147 @@
+\section{Complete source acquisition for the quadratic comparison}\label{sec:acquisition}
+
+The preceding floor concerns the exact field. To state honestly what
+a finite implementation of its sufficient comparison would require,
+we retain the complete acquisition estimate from
+\cite{OGMollifier,OGCorrection}. This is an analytical error bound;
+no numerical certificate has been run.
+
+\subsection{Arithmetic and radial source errors}
+
+Let \(\Phi_{N_{\rm src}}\) be the first \(N_{\rm src}\) summands of
+\eqref{eq:source} on \(u\ge0\), reflected evenly, and put
+\[
+ \widehat H(z)=\frac12\int_{-V}^{V}
+          \Phi_{N_{\rm src}}(u)\ee^{\ii zu}\dd u.
+\]
+With \(B_0=5C_2(0)\), define
+\[
+ \mathcal Q=\int_\R\ee^{9|u|}\rho(u)^2\ee^{-\rho(u)}\dd u,\qquad
+ \mathcal Q^{>V}=\int_{|u|>V}\ee^{9|u|}
+                      \rho(u)^2\ee^{-\rho(u)}\dd u.
+\]
+Both integrals are finite by Section~\ref{sec:source}. Splitting the
+difference into the arithmetic tail and the exact radial tail gives
+\begin{equation}\label{eq:delta-H}
+ \sup_{|\Im z|\le8}|H_0(z)-\widehat H(z)|
+ \le\delta_H:=\frac12\{5C_2(N_{\rm src})\mathcal Q+
+                          B_0\mathcal Q^{>V}\}.
+\end{equation}
+The terms tend to zero separately. Only the undifferentiated source
+is used, so no smooth matching of the finite prefix at zero is assumed.
+
+For \(|x-X|\le R\), \(0\le\Im z\le8\), the reciprocal-gamma
+product \cite{DLMFReciprocalGammaOC} gives the compact multiplier bound
+\begin{equation}\label{eq:multiplier}
+ |D(z)A(s(z))|\le\mathcal B_A(X,R)
+ :=16\pi^{9/4}C_A
+ \exp\left\{\frac94+\frac{\pi^2[81+(|X|+R)^2]}{192}\right\}.
+\end{equation}
+To verify it, write \(w=s/2\) in
+\[
+ \Gamma(w)^{-1}=w\ee^{\gamma w}
+        \prod_{n\ge1}(1+w/n)\ee^{-w/n}.
+\]
+The inequality
+\(\log|1+w/n|\le\Re w/n+|w|^2/(2n^2)\) yields
+\[
+ |\Gamma(w)^{-1}|
+ \le|w|\exp\{\gamma\Re w+\pi^2|w|^2/12\}.
+\]
+Now \(1/2\le\Re s\le9/2\), \(|s|\ge1/2\),
+\(|s|^2\le[81+(|X|+R)^2]/4\), and \(\gamma<1\).
+Insert these bounds into \eqref{eq:F} and use \(|A|\le C_A\).
+With \(\widehat F_A=DA\widehat H\), the compact field error is at
+most \(\mathcal B_A\delta_H\).
+This bound is not used on the remote infinite boundary.
+
+\subsection{Both exact boundary tails}
+
+Let \(\mu_{X,R}\) be the restriction of \(\mu_X\) to \(|x-X|\le R\).
+Equation~\eqref{eq:fractional} gives
+\[
+ |F_A(x)|\le C_A(2+|x|),\qquad
+ |F_A(x+8\ii)|\le\zeta(9/2)^2.
+\]
+Writing \(B_X=2+|X|\), one obtains
+\begin{align}\label{eq:quadratic-tail}
+ \norm{F_A/c_A-1}_{L^2(\mu_X-\mu_{X,R})}^2
+ &\le\tau_A(X,R),\nonumber\\
+ \tau_A(X,R)
+ &=\frac{\ee^{-aR}}{2a}\left\{
+ \frac{C_A^2}{c_*^2}
+ \left[(B_X+R)^2+\frac{2(B_X+R)}a+\frac2{a^2}\right]
+ +\frac{\zeta(9/2)^4}{c_*^2}+2\right\}.
+\end{align}
+Indeed \(|v-1|^2\le2|v|^2+2\), and
+\(K(u)\le\ee^{-a|u|}/8\).
+Integrate the lower-boundary quadratic polynomial on both spatial
+tails and then the upper-boundary constant on both tails.
+The upper square requires the fourth power of \(\zeta(9/2)\).
+All tails here belong to the exact field.
+
+\subsection{Center acquisition and denominator propagation}
+
+For an integer \(M_c\ge2\), the safe Euler logarithm has error
+\[
+ \left|\log\zeta(s_c)-\sum_{p^k\le M_c}\frac{p^{-ks_c}}k\right|
+ \le\beta_{M_c}=\frac23M_c^{-3/2}.
+\]
+Keep the finite polynomial \(A(s_c)\) exactly and set
+\[
+ \widetilde c=q(s_c)A(s_c)
+       \exp\left(\sum_{p^k\le M_c}\frac{p^{-ks_c}}k\right),\qquad
+ |c_A-\widetilde c|\le
+ \eta:=U_*(\ee^{\beta_{M_c}}-1).
+\]
+The modulus of the finite-log exponential is at most \(\zeta(5/2)\).
+Future arithmetic evaluation error is added to \(\eta\).
+No logarithm of \(A\) is used.
+
+Let
+\[
+ \ell_c=|\widetilde c|-\eta>0,\qquad
+ \mu_R=\mu_{X,R}(\partial{\rm strip})
+       =\frac2\pi\arctan(\sinh(aR)),\qquad
+ A_R=\norm{\widehat F_A/\widetilde c-1}_{L^2(\mu_{X,R})}.
+\]
+Then
+\begin{equation}\label{eq:full-quadratic-acquisition}
+ \epsilon_A(X)\le A_R+
+ \frac{\eta}{\ell_c}(A_R+\sqrt{\mu_R})
+ +\frac{\mathcal B_A\delta_H}{c_*}+\sqrt{\tau_A(X,R)}.
+\end{equation}
+For the proof, first split the complete \(L^2\) norm into compact
+and remote pieces using the triangle inequality. On the compact
+piece, add and subtract \(\widehat F_A/c_A\) and
+\(\widehat F_A/\widetilde c\). The field error is at most
+\(\mathcal B_A\delta_H/c_*\), since the restricted mass is at most one.
+The denominator error is
+\[
+ \frac{|c_A-\widetilde c|}{|c_A|}
+     \norm{\widehat F_A/\widetilde c}
+ \le\frac{\eta}{\ell_c}(A_R+\sqrt{\mu_R}),
+\]
+which proves \eqref{eq:full-quadratic-acquisition}.
+
+For each fixed \(X,A\) and a positive acquisition budget \(h\),
+first choose \(R\) to make \(\sqrt{\tau_A}<h/3\).
+For this \(R\), choose \(N_{\rm src},V\) so that
+\(\mathcal B_A\delta_H/c_*<h/3\).
+Finally choose the integer center cutoff and arithmetic precision so that
+\(\eta<c_*/4\) and
+\(2\eta\norm{\widehat F_A}_{L^2(\mu_{X,R})}/c_*^2<h/3\).
+The exact denominator difference is then bounded by
+\[
+ \frac{\eta\norm{\widehat F_A}}{|c_A||\widetilde c|}
+ \le\frac{4\eta\norm{\widehat F_A}}{3c_*^2}<h/3.
+\]
+This sharper expression, rather than requiring the conservative
+surrogate in \eqref{eq:full-quadratic-acquisition} to meet the same
+allocation, proves the ordered finite-acquisition assertion.
+If the norm vanishes, the denominator error vanishes.
+Every tuple can be treated this way, including a prescribed sequence
+of growing heights or shrinking defect distances. This supplies no
+common cutoff, affordable complexity bound, small residual value,
+or evaluated exclusion.
+

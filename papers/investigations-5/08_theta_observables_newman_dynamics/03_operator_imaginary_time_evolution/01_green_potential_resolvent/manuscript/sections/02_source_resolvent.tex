@@ -1,0 +1,188 @@
+\section{The complete theta source and logarithmic resolvent}\label{sec:source}
+
+\subsection{Reflection, the endpoint and the canonical normalization}
+
+Let
+\[
+ \vartheta(t)=\sum_{n\in\mathbb Z}\ee^{-\pi n^2t},\qquad
+ p(u)=\frac{\ee^u}{2}\{\vartheta(\ee^{4u})-1\}
+     =\ee^u\sum_{n\ge1}\ee^{-\pi n^2\ee^{4u}}.
+\]
+Jacobi's transformation
+\(\vartheta(t)=t^{-1/2}\vartheta(1/t)\)
+\cite{DLMFThetaModular} gives
+\begin{equation}\label{eq:primitive-reflection}
+ p(-u)-p(u)=\sinh u,\qquad p'(0)=-\frac12.
+\end{equation}
+Define
+\begin{equation}\label{eq:source}
+ \Phi(u)=\frac{p''(u)-p(u)}8
+ =\ee^u\sum_{n\ge1}(2r_n(u)^2-3r_n(u))\ee^{-r_n(u)},
+ \qquad r_n(u)=\pi n^2\ee^{4u}.
+\end{equation}
+Applying \(\partial_u^2-1\) to \eqref{eq:primitive-reflection}
+proves that \(\Phi\) is even. The complete series is smooth, and
+each summand is positive when \(u\ge0\), since \(r_n\ge\pi>3/2\).
+Thus \(\Phi>0\) on \(\R\). Reflection is a property of the complete
+sum; an evenly reflected finite prefix need not have matching odd
+derivatives at zero.
+
+With \(W_\lambda(u)=\ee^{\lambda u^2}\Phi(u)\), put
+\begin{equation}\label{eq:H}
+ H_\lambda(z)=\frac12\int_\R W_\lambda(u)\ee^{\ii zu}\dd u
+            =\int_0^\infty W_\lambda(u)\cos(zu)\dd u.
+\end{equation}
+There is no division by \(H_\lambda(0)\).
+For \(J^{\rm prim}(z)=\int_0^\infty p(u)\cos(zu)\dd u\),
+two integrations by parts, using the endpoint in
+\eqref{eq:primitive-reflection}, give
+\begin{equation}\label{eq:primitive-H}
+ 8H_0(z)=\frac12-(1+z^2)J^{\rm prim}(z).
+\end{equation}
+For completeness, splitting the theta Mellin integral at \(t=1\)
+and using Jacobi reflection gives
+\[
+ \xi(s)=\frac12+\frac{s(s-1)}2
+ \int_1^\infty \frac{\vartheta(t)-1}{2}
+       \{t^{s/2-1}+t^{(1-s)/2-1}\}\dd t.
+\]
+The integral is entire in \(s\). Substituting \(t=\ee^{4u}\)
+and then \(s=(1-\ii z)/2\) turns the integral into
+\(8J^{\rm prim}(z)\), while \(4s(s-1)=-(1+z^2)\).
+Equation~\eqref{eq:primitive-H} therefore proves
+\begin{equation}\label{eq:xi}
+ H_0(z)=\frac18\xi(s(z)),\quad
+ s(z)=\frac12-\frac{\ii z}2,\quad
+ \xi(s)=\frac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s).
+\end{equation}
+The reflected argument gives the same field
+\cite{DLMFGreenPrime}. The constant \(1/2\) in
+\eqref{eq:primitive-H} is indispensable.
+
+\subsection{Complete domination, heat evolution and the product}
+
+Set \(\rho(u)=\pi\ee^{4|u|}\), and recursively define
+\[
+ P_0(r)=2r^2-3r,\qquad
+ P_{j+1}(r)=(1-4r)P_j(r)+4rP_j'(r).
+\]
+Write \(a(P)\) for the sum of the absolute coefficients of a polynomial,
+and put
+\[
+ C_d(N)=\sum_{n>N}n^{2d}\ee^{-\pi(n^2-1)},\qquad
+ B_j=a(P_j)C_{j+2}(0).
+\]
+Each \(C_d(N)\) is finite and tends to zero with \(N\).
+
+\begin{lemma}[Complete source bound]\label{lem:source}
+For each fixed integer \(j\ge0\),
+\[
+ |\Phi^{(j)}(u)|\le B_j\ee^{|u|}\rho(u)^{j+2}\ee^{-\rho(u)}.
+\]
+On \(u\ge0\), the differentiated arithmetic tail satisfies the same
+bound with \(B_j\) replaced by \(a(P_j)C_{j+2}(N)\).
+\end{lemma}
+\begin{proof}
+Differentiating a summand gives
+\(\ee^uP_j(n^2\rho)\ee^{-n^2\rho}\).
+Since \(\deg P_j=j+2\) and \(\rho\ge\pi>1\),
+\[
+ |P_j(n^2\rho)|\le a(P_j)n^{2j+4}\rho^{j+2},\qquad
+ \ee^{-n^2\rho}\le\ee^{-\rho}\ee^{-\pi(n^2-1)}.
+\]
+Summation proves the half-line estimate and differentiated local
+convergence. Complete smooth reflection gives the full-line estimate.
+\end{proof}
+
+For fixed \(L,b\ge0\) and integers \(k,d\ge0\), the integral
+\[
+ \int_\R |u|^k\ee^{Lu^2+(b+1)|u|}
+             \rho(u)^d\ee^{-\rho(u)}\dd u
+\]
+is finite: substitution \(t=\pi\ee^{4|u|}\) leaves a product of
+powers of \(t,\log(t/\pi)\), and
+\(\exp\{(L/16)\log^2(t/\pi)-t\}\).
+Consequently \(H\) is jointly entire in \((\lambda,z)\), and all
+fixed derivatives on compact parameter sets pass under the integral.
+In particular,
+\begin{equation}\label{eq:heat}
+ \partial_\lambda H_\lambda=-\partial_z^2H_\lambda.
+\end{equation}
+The opposite clock \(h(\tau,z)=H_{\lambda_0-\tau}(z)\) satisfies
+\(h_\tau=h_{zz}\). No uniform assertion in a growing derivative
+order follows from these fixed-order bounds.
+
+We retain the canonical strip input
+\begin{equation}\label{eq:zero-strip}
+ |\Im z_j(\lambda)|\le1\qquad(0\le\lambda\le1/2)
+\end{equation}
+from the parent development \cite{OGParent,GreenStripProof}.
+This is strip control, not an all-real-zero assumption.
+The source bound also gives, uniformly in this compact time range,
+\(\log\max_{|z|\le r}|H_\lambda(z)|=O(r\log(r+2))\).
+One can obtain this bound directly by splitting the source integral
+at a constant multiple of \(\log(r+2)\); beyond that point the
+double exponential dominates \(r|u|+u^2/2+O(|u|)\).
+Positivity gives a common lower bound for \(H_\lambda(0)\).
+Jensen's formula on a disk of radius \(2r\) therefore gives a
+full origin-centered count
+\begin{equation}\label{eq:count}
+ N_\lambda(r)\le Cr\log(r+2),\qquad r\ge1.
+\end{equation}
+The even Hadamard product is consequently
+\begin{equation}\label{eq:product}
+ H_\lambda(z)=H_\lambda(0)
+ \prod_{\zeta\in\mathcal R_\lambda}(1-z^2/\zeta^2).
+\end{equation}
+Here \(\mathcal R_\lambda\) contains one representative of each
+opposite pair, with multiplicity. The paired product converges
+locally uniformly because \(\sum|\zeta|^{-2}<\infty\). The order
+bound permits at most a linear exponential factor; evenness removes
+its linear term, and evaluation at zero fixes the constant.
+Thus no unspecified exponential factor remains.
+
+\subsection{The logarithmic field and its denominator}
+
+Let \(\nu_\lambda=\sum_j\delta_{z_j(\lambda)}\), with multiplicities,
+and use \(\partial_z=(\partial_x-\ii\partial_y)/2\).
+Local factorization \(H=(z-z_j)^m h\), with \(h\ne0\), proves
+\begin{equation}\label{eq:distributions}
+ \Delta\log|H_\lambda|=2\pi\nu_\lambda,\qquad
+ R_\lambda=\frac{H_\lambda'}{H_\lambda}
+           =2\partial_z\log|H_\lambda|,\qquad
+ \partial_{\bar z}R_\lambda=\pi\nu_\lambda .
+\end{equation}
+These are distributional identities; \(\log|z|\) and \(1/z\) are
+locally integrable, with the stated delta masses obtained by integrating
+around a small circle. A multiplicity-\(m\) zero gives residue \(m\).
+Differentiating \eqref{eq:product} away from its zeros gives
+\[
+ R_\lambda(z)=\sum_{\zeta\in\mathcal R_\lambda}
+                    \frac{2z}{z^2-\zeta^2}.
+\]
+Pairing is part of the convergence prescription.
+
+On zero-free space-time patches, logarithmic differentiation of
+\eqref{eq:heat} yields
+\begin{equation}\label{eq:burgers}
+ \partial_\lambda R=-R_{zz}-2RR_z.
+\end{equation}
+This local equation is not assigned an additional unproved global
+meaning at its poles. Likewise, solving only the first or last
+distributional equation in \eqref{eq:distributions} leaves a harmonic
+or holomorphic summand. The complete field and its product fix it.
+
+Source approximation alone does not control division. If
+\(|H-\widehat H|\le\varepsilon\),
+\(|H'-\widehat H'|\le\varepsilon_1\), and
+\(b=|\widehat H|-\varepsilon>0\), then
+\begin{equation}\label{eq:ratio-error}
+ \left|R-\frac{\widehat H'}{\widehat H}\right|
+ \le\frac{\varepsilon_1}{b}
+       +\frac{|\widehat H'|\varepsilon}{b|\widehat H|}.
+\end{equation}
+This follows by adding and subtracting
+\(\widehat H'/H\). The positive denominator margin is a separate
+requirement. It fails on a real interval containing a zero, which
+motivates the integrated logarithmic method developed later.
+

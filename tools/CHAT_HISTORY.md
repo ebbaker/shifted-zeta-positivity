@@ -46,6 +46,101 @@ in multiple folders needs an explicit destination. The default session
 location is `$CODEX_HOME/sessions`, or `~/.codex/sessions` when unset.
 The exact recorded session id must match the requested id.
 
+## Desktop history compatibility
+
+7 November 2026. Repair prepared for Edward Baker with substantial OpenAI
+Codex assistance. Author-selected Sol6.1/ultra; analytical/code helpers
+explicitly dispatched as gpt-6.1-sol/ultra. Exact root backend/effort are
+not independently exposed.
+
+The installed desktop build 26.1103.41825 and bundled CLI
+0.167.0-alpha.3.2 support **legacy** and **paginated** local histories.
+Newer hooks can legitimately supply `transcript_path: null`. A missing
+JSONL file therefore does not establish a permission problem or cloud
+placement. See the [compatibility diagnosis](CHAT_HISTORY_COMPATIBILITY_20261107.md).
+
+The refreshed recorder retains its strict legacy adapter and supports the
+verified paginated SQLite schema through a read-only source adapter.
+Default selection honors the exact thread's declared paginated mode even
+when a retained legacy JSONL file still exists; otherwise a migrated chat
+could appear unchanged while new messages accumulate in the database.
+Source discovery and delayed final capture must distinguish:
+
+- a source not yet present, which may be retried within the finite wait;
+- conflicting or malformed sources, which must fail immediately;
+- a valid local paginated source without a legacy transcript path;
+- a conversation absent from accessible local stores, which cannot be
+  reconstructed by changing hook trust or inventing a transcript.
+
+Use `--diagnose` for a read-only source/registration diagnostic. It does
+not register a chat, export message bodies, infer missing metadata or
+validate a mathematical claim. An explicit `--rollout` retains its exact
+identity and integrity requirements.
+
+Deferred capture may start before the source file is created; its worker
+must still observe the real final item and completion of the exact turn.
+A bounded timeout is a failed capture. Paginated reads retain recorded
+message IDs, source times, public phases and turn status; reasoning and
+tools remain excluded. No adapter may silently treat a partial live
+database snapshot as the complete source.
+
+Per-turn model provenance is not inferred from a thread's current model.
+When a source adapter lacks older configuration context, preserve the
+existing recorded configurations and first-capture provenance; do not
+replace them with guessed settings. Existing public-message prefix,
+timestamps, archive hashes, size checks and transaction protections remain
+mandatory.
+
+## Current-session preflight after a desktop update
+
+8 November 2026, America/New_York. Prepared for Edward Baker with OpenAI
+Codex assistance; exact backend model and effort are not exposed in this
+session.
+
+The [8 November live diagnosis](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/notes/CHAT_CAPTURE_DIAGNOSIS_20261108.md)
+verified repository writes, all seven registered TND-O/OG/OC archives,
+and successful unchanged refreshes of both branch opening chats. The
+64 recorder and 24 paginated-adapter tests passed. **The current Work
+conversation still had no accessible exact source, and app history tools
+failed. Those successes do not mean current-session capture is restored.**
+
+Before reporting capture as working, check the actual conversation:
+
+```sh
+python3 tools/refresh_chat_history.py --thread-id "$CODEX_THREAD_ID" --diagnose
+```
+
+Read the JSON fields, not just the exit code: `--diagnose` can exit zero
+while reporting `source.status: unavailable`. Likewise,
+`skipped_unregistered` from an ordinary refresh is not a capture. The
+hook intentionally opts into existing registrations only and its empty
+success response is not evidence that an archive was written.
+
+Require an available exact source, registration using its actual title,
+and a successful public-text refresh. Then verify that the same archive
+contains a real completed final after a bounded exact-turn worker or an
+observed trusted hook. If the native title, source or current turn id is
+unavailable, report the limitation and preserve completed public text in
+an explicitly unregistered partial record. Do not invent the missing id
+or arm a worker against a guessed turn.
+
+Repository writing and conversation storage are separate capabilities.
+An app restart or update is a troubleshooting step, not a verified repair.
+A local source that passes this preflight is the verified recorder path;
+a new Work conversation must pass the same check. The author's requirement
+is to remain in **ChatGPT Work**. Test a new **local-only Work** chat using
+the installed run-location option **On your computer** (or clear **Run this
+chat in the cloud** where that checkbox is shown), keeping the selected
+model and effort. This has not yet been verified for the author's next chat.
+Hook trust changes cannot supply an absent source.
+
+The [official hook support rules](https://learn.chatgpt.com/docs/hooks#hooks-with-cloud-orchestration)
+distinguish local-only Work from cloud-coordinated Work with local tools:
+local command hooks are unsupported in the latter. The installed build
+also contains a cloud-default announcement. See the linked diagnosis's
+cloud-default investigation for evidence and uncertainty; the exact current
+chat's run location and the release/rollout that selected it are unverified.
+
 ## Move an existing chat to another investigation
 
 Procedure added 14 October 2026. Prepared for Edward Baker with substantial
@@ -223,16 +318,29 @@ start to catch a response missed by a stopped or interrupted worker.
 ## Native completion hooks
 
 The repository [hook definitions](../.codex/hooks.json) call the same tool
-for submitted prompts and completed replies. The current local ChatGPT
-project mirror has a matching bridge to this repository tool. Existing
-computer-use notifications are preserved.
+for submitted prompts and completed replies. Inspection on 7 November
+2026 found the previously configured local ChatGPT project mirror bridge
+and trust entries still present, and the installed CLI still reported
+hooks enabled. These are configuration observations, **not proof that a
+particular Work turn invoked a hook or persisted a locally readable
+source**. The mirror bridge described in the original 13 October note
+was historical setup evidence. Existing computer-use notifications are
+preserved.
 
-The installed CLI reports lifecycle hooks enabled. New hook definitions
-still require the user's one-time platform review and trust. Open `/hooks`
+New or changed hook definitions still require the user's one-time
+platform review and trust. Open `/hooks`
 in the Codex CLI for this workspace to review them, then resume or reopen
 the conversation if needed to reload configuration. Do not use a hook-trust
 bypass or add a managed-hook exception. Until native activation is verified,
 use the direct standing workflow above.
+
+The compatibility repair changes the recorder and its tests; it does not
+edit hook definitions, trust hashes, application files, databases or the
+notification integration. The repository hook command still depends on a
+Git working directory; the configured mirror uses an absolute tool path.
+Changing that command is a separate definition change requiring the
+normal trust workflow. Do not claim that altering it can recover a source
+absent from both local history stores.
 
 The completion hook runs in the background so the turn can finish while
 its transcript is being saved. Progress messages are included at the next

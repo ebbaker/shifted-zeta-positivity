@@ -1,0 +1,192 @@
+\section{The complete strip Green potential}\label{sec:green}
+
+\subsection{The finite-factor identity}
+
+Fix
+\begin{equation}\label{eq:kernels}
+ a=\frac\pi8,\qquad K(t)=\frac1{16\cosh(at)},\qquad
+ G(t,y)=\atanh\frac{\sin(ay)}{\cosh(at)}.
+\end{equation}
+Each copy of \(K\) has mass \(1/2\). Let \(\mu_X\) be the probability
+measure on the two lines \(y=0,8\) that has density \(K(x-X)\) on
+each. For an admissible function \(f\), write
+\[
+ \calJ[f](X)=\int\log|f|\dd\mu_X-\log|f(X+4\ii)|,
+ \qquad J_\lambda(X)=\calJ[H_\lambda](X).
+\]
+
+The Green function of \(0<\Im z<B\), normalized by
+\(-\Delta G_B=2\pi\delta\), is
+\begin{equation}\label{eq:strip-green}
+ G_B(z,\zeta)=\frac12\log
+ \frac{\cosh(\pi(\Re z-\Re\zeta)/B)-\cos(\pi(\Im z+\Im\zeta)/B)}
+      {\cosh(\pi(\Re z-\Re\zeta)/B)-\cos(\pi(\Im z-\Im\zeta)/B)}.
+\end{equation}
+Indeed \(z\mapsto\ee^{\pi z/B}\) maps the strip to the upper
+half-plane; the logarithm of the reflected-distance ratio gives
+\eqref{eq:strip-green}. Its singularity is \(-\log|z-\zeta|\).
+At \(B=8\), observation \(X+4\ii\), its value is
+\(G(X-\Re\zeta,\Im\zeta)\). Boundary normal derivatives divided
+by \(2\pi\) give exactly the two densities \(K\).
+
+For an interior zero \(\zeta\), the singularities of
+\(\log|z-\zeta|+G_B(z,\zeta)\) cancel. This harmonic function has the
+linear factor's boundary logarithm. Truncating the strip vertically
+proves its Poisson representation: the side harmonic measures decay
+exponentially while these logarithms grow only logarithmically.
+It follows that \(\calJ[z-\zeta]\) is the positive Green value.
+An exterior zero gives zero. A boundary zero is handled by its
+locally integrable logarithm, or by a limit from the exterior; it
+gives no half-weight atom. Finite multiplicities cause no change.
+
+Apply this identity to every complete opposite pair in a finite
+truncation of \eqref{eq:product}. Scalar logarithms cancel because
+the boundary masses add to one. The only remaining issue is passage
+to the complete product.
+
+\subsection{Absolute logarithmic convergence}
+
+Choose
+\[
+ m_0=\inf_\lambda H_\lambda(0)>0,\qquad
+ M_1\ge\sup_{\lambda,|z|\le1}|H_\lambda'(z)|,\quad M_1>0,
+\]
+and set
+\[
+ r_*=\min(1,m_0/(2M_1)),\quad
+ C_0=\sup_\lambda|\log H_\lambda(0)|,\quad
+ C_*=C_0+20C(1+|\log r_*|).
+\]
+The segment integral of \(H'\) shows that no zero lies in
+\(|z|\le r_*\). All constants are uniform for \(0\le\lambda\le1/2\).
+
+\begin{lemma}[Unit-interval logarithmic bound]\label{lem:unit-log}
+For \(v\in\R\), \(0\le b\le8\), and \(Q=|v|+12\),
+\begin{equation}\label{eq:unit-log}
+ \int_v^{v+1}|\log|H_\lambda(x+\ii b)||\dd x
+ \le C_*Q\log^2(3Q).
+\end{equation}
+Moreover the series of paired factor logarithms is absolutely
+convergent in local \(L^1\).
+\end{lemma}
+\begin{proof}
+On the interval, \(|z|\le Q\). For a representative \(|\zeta|\le2Q\),
+split the logarithm into those of \(z-\zeta\), \(z+\zeta\), and
+\(-2\log|\zeta|\). Each positive distance logarithm is at most
+\(\log(3Q)\). Its negative part has integral at most two, since
+\(|x+\ii b-\zeta|\ge|x-\Re\zeta|\) and
+\(\int_{-1}^1-\log|t|\dd t=2\).
+The factor therefore costs at most
+\(4\log(3Q)+4+2|\log r_*|\).
+There are at most \(CQ\log(2Q+2)\) such representatives, by
+\eqref{eq:count} and opposite pairing.
+
+For \(|\zeta|>2Q\),
+\[
+ \left|\log\left|1-\frac{z^2}{\zeta^2}\right|\right|
+ \le\frac43\frac{Q^2}{|\zeta|^2}.
+\]
+Partial summation with half the full count bounds their sum by
+\[
+ \frac23CQ\{\log(2Q+2)+1\}.
+\]
+These bounds, together with \(C_0\), give \eqref{eq:unit-log}.
+They bound the sum of absolute factor logarithms, which proves the
+stronger local \(L^1\) assertion.
+\end{proof}
+
+\begin{theorem}[Complete positive potential]\label{thm:green}
+For every real \(X\) and \(0\le\lambda\le1/2\), both boundary
+logarithms are absolutely integrable against \(K(x-X)\), and
+\begin{equation}\label{eq:green-identity}
+ J_\lambda(X)=
+ \int_\R K(x-X)\{\log|H_\lambda(x)|+\log|H_\lambda(x+8\ii)|\}\dd x
+ -\log|H_\lambda(X+4\ii)|
+ =\sum_{j:y_j>0}G(X-x_j,y_j).
+\end{equation}
+The upper-zero sum is absolutely convergent, with all multiplicities.
+There is no omitted harmonic term. The potential is nonnegative and
+unchanged by multiplication of the field by a nonzero scalar.
+\end{theorem}
+\begin{proof}
+The polynomial-logarithmic bound \eqref{eq:unit-log} is summable
+against the exponentially decaying Poisson weights. Thus the finite
+paired-product identity passes to the boundary integrals in \(L^1\).
+At \(X+4\ii\), the product converges away from every zero by
+\eqref{eq:zero-strip}. This proves the complete identity. Its finite
+Green sums are nonnegative and increase to the displayed finite
+value, hence converge absolutely. The product has already fixed all
+harmonic data. Scalar invariance follows directly from the total
+boundary mass one.
+\end{proof}
+
+\subsection{Two different tails and the exclusion margin}
+
+For \(R\ge0\), let \(n=\lfloor R\rfloor\), \(q_0=\ee^{-a}\), and
+\(S=|X|+13+n\). The explicit two-boundary estimate is
+\begin{align}\label{eq:boundary-tail}
+ &\int_{|x-X|>R}K(x-X)
+  \{|\log|H_\lambda(x)||+|\log|H_\lambda(x+8\ii)||\}\dd x
+ \nonumber\\
+ &\hspace{1cm}\le
+ \frac{C_*}{2}\ee^{-an}S\log^2(3S)
+ \frac{1+4q_0+q_0^2}{(1-q_0)^4}.
+\end{align}
+To derive it, cover both sides by unit shells and use
+\(K(t)\le\ee^{-a|t|}/8\) and Lemma~\ref{lem:unit-log} on both
+boundaries. The remaining sum is bounded by
+\(S\log^2(3S)\sum_{j\ge0}q_0^j(1+j)^3\).
+The generating function of this cubic moment is the rational factor
+in \eqref{eq:boundary-tail}.
+
+For the sharper zero tail we use the additional canonical unit-count
+input from the parent analysis \cite{SmoothLocalizationProof}:
+after a fixed enlargement of \(A\),
+\[
+ \#\{j:u\le x_j(\lambda)\le u+1\}\le A\log(2+|u|)
+\]
+uniformly for \(0\le\lambda\le1/2\).
+This inherited input includes the endpoint \(\lambda=0\); it is
+separate from the global Jensen count proved above. Since
+\begin{equation}\label{eq:G-decay}
+ 0<G(t,y)\le K_Gy\ee^{-a|t|},\qquad
+ K_G=\frac{2a}{\cos^2a},\quad 0<y\le1,
+\end{equation}
+unit shells give
+\begin{equation}\label{eq:zero-tail}
+ \sum_{\substack{y_j>0\\|x_j-X|>R}}G(X-x_j,y_j)
+ \le2AK_G\ee^{-an}
+ \left\{\frac{\log(3+|X|)+\log(n+1)}{1-q_0}
+       +\frac{q_0}{(n+1)(1-q_0)^2}\right\}.
+\end{equation}
+Here \(\atanh u\le u/(1-u^2)\), \(\sin(ay)\le ay\), and
+\(\operatorname{sech}(at)\le2\ee^{-a|t|}\) prove
+\eqref{eq:G-decay}. For the shell sum use
+\(\log(3+|X|+k)\le\log(3+|X|)+\log(k+1)\) and
+\(\log(n+j+1)\le\log(n+1)+j/(n+1)\).
+The boundary and zero tails pay different truncations. In particular
+\(J_\lambda(X)\ll_A\log(3+|X|)\), but that coarse bound is insufficient
+for the following consumer.
+
+\begin{corollary}[A single nonreal-zero margin]\label{cor:margin}
+If \(d\le y_j\le1\) and \(|x_j-X|\le r\), then
+\begin{equation}\label{eq:margin}
+ J_\lambda(X)\ge m(d,r):=\frac{\sin(a)d}{\cosh(ar)}.
+\end{equation}
+An independently acquired strict upper bound below \(m(d,r)\)
+excludes this specified zero class.
+\end{corollary}
+\begin{proof}
+Use positivity of every term, \(\atanh u\ge u\), and the concavity
+bound \(\sin(ay)\ge y\sin a\) for \(0\le y\le1\).
+\end{proof}
+
+An all-real slice has \(J=0\); any upper zero makes \(J>0\) at every
+center. Accordingly universal time-zero vanishing is an RH-equivalent
+reformulation, not an additional estimate. Uniform tails on compact
+center intervals and continuity of finite root multisets show that
+\(J\) is continuous through collisions. A pair approaching a double
+real zero contributes a quantity linear in its upper height; when
+that height has square-root time scale, so does the Green signal.
+Continuity alone does not imply Lipschitz continuity or monotonicity.
+

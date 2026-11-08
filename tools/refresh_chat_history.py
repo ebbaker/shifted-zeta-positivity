@@ -8,6 +8,7 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 import fcntl
 import hashlib
+import importlib.util
 import io
 import json
 import math
@@ -34,9 +35,18 @@ _FAULT_POINT = None  # Synthetic transaction fault injection; never set by the C
 class HistoryError(RuntimeError):
     """A failed integrity or source check; do not replace a registered capture."""
 
+    def __init__(self, message, *, code="validation_failed", details=None):
+        super().__init__(message)
+        self.code = code
+        # Callers supply only fixed diagnostic labels and counts, never source text.
+        self.details = {} if details is None else details
+
 
 class SourcePending(HistoryError):
     """The source has not yet flushed a complete requested snapshot."""
+
+    def __init__(self, message, *, code="source_pending", details=None):
+        super().__init__(message, code=code, details=details)
 
 
 @dataclass
@@ -159,14 +169,82 @@ def find_registered(repo, thread_id, preferred=None):
 def resolve_rollout(thread_id, supplied=None):
     if supplied is not None:
         path = Path(supplied).expanduser()
-        if not path.is_file() or path.is_symlink():
-            raise HistoryError("The supplied rollout is not a regular session file")
+        if path.is_symlink():
+            raise HistoryError("The supplied rollout is a symbolic link", code="source_invalid")
+        if not path.exists():
+            raise SourcePending("The expected supplied rollout file is not yet available; waiting for its real source", code="source_unavailable", details={"source_selection": "supplied_rollout", "candidate_count": 0})
+        if not path.is_file():
+            raise HistoryError("The supplied rollout is not a regular session file", code="source_invalid")
         return path.resolve()
     sessions = Path(os.environ.get("CODEX_HOME", str(Path.home() / ".codex"))) / "sessions"
     candidates = [p for p in sessions.rglob("*.jsonl") if (p.stem == thread_id or p.name.endswith("-" + thread_id + ".jsonl")) and p.is_file() and not p.is_symlink()]
-    if len(candidates) != 1:
-        raise HistoryError("Expected one exact-id Codex session file; supply --rollout if discovery is absent or ambiguous")
+    if not candidates:
+        raise SourcePending("No exact-id local Codex rollout is available in the configured sessions directory; waiting for its real source, or supply an authoritative --rollout stored elsewhere", code="source_unavailable", details={"source_selection": "exact_id_discovery", "candidate_count": 0})
+    if len(candidates) > 1:
+        raise HistoryError("Multiple exact-id Codex session files are available; supply --rollout to resolve the ambiguity", code="source_ambiguous", details={"source_selection": "exact_id_discovery", "candidate_count": len(candidates)})
     return candidates[0].resolve()
+
+
+def paginated_adapter():
+    """Load only the reviewed sibling adapter, never a module from the source store."""
+    path = Path(__file__).resolve().with_name("paginated_chat_source.py")
+    if path.is_symlink() or (path.exists() and not path.is_file()):
+        raise HistoryError("The paginated history adapter is not a regular reviewed module", code="unsupported_source_format")
+    if not path.exists():
+        raise SourcePending("The reviewed paginated adapter is not installed, so automatic source selection cannot yet be verified; supply an authoritative --rollout or wait for the adapter", code="source_unavailable", details={"source_selection": "automatic_history_mode"})
+    name = "_chat_history_paginated_source"
+    adapter = sys.modules.get(name)
+    if adapter is None:
+        spec = importlib.util.spec_from_file_location(name, path)
+        if spec is None or spec.loader is None:
+            raise HistoryError("Cannot load the reviewed paginated history adapter", code="unsupported_source_format")
+        adapter = importlib.util.module_from_spec(spec)
+        sys.modules[name] = adapter
+        try:
+            spec.loader.exec_module(adapter)
+        except Exception:
+            sys.modules.pop(name, None)
+            raise
+    return adapter
+
+
+def call_paginated_adapter(method, thread_id):
+    adapter = paginated_adapter()
+    codex_home = Path(os.environ.get("CODEX_HOME", str(Path.home() / ".codex"))).expanduser()
+    try:
+        return getattr(adapter, method)(codex_home, thread_id)
+    except adapter.SourceUnavailable as exc:
+        raise SourcePending(str(exc), code="source_unavailable", details={"source_selection": "paginated_history", "source_error": exc.code}) from exc
+    except adapter.SourceError as exc:
+        raise HistoryError(str(exc), code=exc.code, details={"source_selection": "paginated_history"}) from exc
+
+
+def paginated_source_mode(thread_id):
+    mode = call_paginated_adapter("probe_paginated_mode", thread_id)
+    if mode not in {"paginated", "legacy", "absent"}:
+        raise HistoryError("The source adapter returned an unsupported history mode", code="unsupported_source_format")
+    return mode
+
+
+def load_paginated_source(thread_id):
+    return call_paginated_adapter("load_paginated_rows", thread_id)
+
+
+def read_available_source(rollout, thread_id, title, recorder):
+    # The recorded history mode is authoritative. A retained JSONL can be stale
+    # after migration; never use it to hide an unavailable marked-paginated store.
+    if rollout is None and paginated_source_mode(thread_id) == "paginated":
+        rows, info = load_paginated_source(thread_id)
+        if not isinstance(info, dict) or info.get("thread_id") != thread_id or not isinstance(info.get("source_kind"), str):
+            raise HistoryError("The paginated adapter returned inconsistent source identity", code="source_identity_mismatch")
+        # Canonical adapter rows still pass the same strict public-source reader.
+        # The temporary normalized source remains outside the repository.
+        with tempfile.TemporaryDirectory(prefix="paginated-public-chat-") as temp:
+            normalized = Path(temp) / "public.jsonl"
+            normalized.write_text("".join(json.dumps(row, ensure_ascii=False) + "\n" for row in rows), encoding="utf-8")
+            return read_public_source(normalized, thread_id, title, recorder), info["source_kind"]
+    source = resolve_rollout(thread_id, rollout)
+    return read_public_source(source, thread_id, title, recorder), "Codex local session completed public messages"
 
 
 def read_public_source(path, thread_id, title, recorder):
@@ -189,7 +267,7 @@ def read_public_source(path, thread_id, title, recorder):
                 kind = row.get("type")
                 if kind == "session_meta":
                     if payload.get("id") != thread_id:
-                        raise HistoryError("The rollout's exact session id does not match the requested chat")
+                        raise HistoryError("The rollout's exact session id does not match the requested chat", code="source_identity_mismatch")
                     stamp = payload.get("timestamp") or row.get("timestamp")
                     if not isinstance(stamp, str):
                         raise HistoryError("The session has no recorded original creation timestamp")
@@ -237,7 +315,7 @@ def read_public_source(path, thread_id, title, recorder):
                     if phase in PRIVATE_PHASES:
                         continue
                     if phase not in PUBLIC_PHASES:
-                        raise HistoryError("An assistant message has an unknown public phase; refusing to export it")
+                        raise HistoryError("An assistant message has an unknown public phase; refusing to export it", code="unsupported_source_format")
                 ident = item.get("id")
                 if not isinstance(ident, str) or not ident or ident == "root" or not isinstance(turn, str):
                     raise HistoryError("A public message lacks a valid message or turn id")
@@ -247,7 +325,7 @@ def read_public_source(path, thread_id, title, recorder):
                 parts = []
                 for part in content:
                     if not isinstance(part, dict) or str(part.get("type", "")).lower() != "text" or not isinstance(part.get("text"), str):
-                        raise HistoryError("Non-text public content requires an attachment-preserving exporter")
+                        raise HistoryError("Non-text public content requires an attachment-preserving exporter", code="unsupported_public_content")
                     parts.append({"type": "text", "text": part["text"]})
                 safe_item = {"type": item["type"], "id": ident, "content": parts}
                 if "phase" in item:
@@ -278,10 +356,12 @@ def read_public_source(path, thread_id, title, recorder):
                 safe_rows.append(safe_row)
                 if item["type"] == "AgentMessage" and item.get("phase") == "final_answer":
                     finals.add(turn)
+    except FileNotFoundError as exc:
+        raise SourcePending("The expected rollout disappeared before it could be read; waiting for its real source", code="source_unavailable", details={"source_selection": "resolved_rollout", "candidate_count": 0}) from exc
     except OSError as exc:
         raise HistoryError("Cannot read the requested session file") from exc
     if not session_seen:
-        raise HistoryError("The session has no exact session_meta identity")
+        raise HistoryError("The session has no exact session_meta identity", code="source_identity_missing")
     if not seen:
         raise SourcePending("No completed public messages have been flushed yet")
     # Only whitelisted public text and safe provenance enter this temporary adapter input.
@@ -347,26 +427,78 @@ def public_signature(message):
     return json.dumps(message, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
 
 
+def equivalent_turn_time(earlier, later):
+    if earlier == later:
+        return True
+    if not isinstance(earlier, str) or not isinstance(later, str):
+        # Raw numeric turn times have no declared unit; do not guess one.
+        return False
+
+    def exact_iso(value):
+        match = re.fullmatch(r"(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})(?:\.(\d+))?(Z|[+-]\d{2}:\d{2})", value)
+        if match is None:
+            return None
+        try:
+            base = datetime.fromisoformat(match[1] + ("+00:00" if match[3] == "Z" else match[3]))
+            delta = base - datetime(1970, 1, 1, tzinfo=timezone.utc)
+        except ValueError:
+            return None
+        # Compare fractional digits exactly, including precision beyond Python's
+        # datetime microseconds; only trailing zeroes are representation changes.
+        fraction = (match[2] or "").rstrip("0")
+        return delta.days * 86400 + delta.seconds, fraction
+
+    old, new = exact_iso(earlier), exact_iso(later)
+    return old is not None and new is not None and old == new
+
+
+def merge_turn_provenance(prior, current):
+    if not isinstance(prior, dict) or not isinstance(current, dict) or any(not isinstance(value, dict) for value in [*prior.values(), *current.values()]):
+        raise HistoryError("Malformed archived or current turn provenance", code="integrity_check_failed")
+    merged = {turn: dict(fields) for turn, fields in prior.items()}
+    for turn, fields in current.items():
+        if turn not in merged:
+            merged[turn] = dict(fields)
+            continue
+        recorded = merged[turn]
+        for field, value in fields.items():
+            previous = recorded.get(field)
+            if previous is None:
+                recorded[field] = value
+            elif value is None:
+                continue
+            elif field in {"started_at", "completed_at"}:
+                if not equivalent_turn_time(previous, value):
+                    raise HistoryError("The source conflicts with a previously recorded turn timestamp", code="integrity_check_failed")
+            elif field == "status" and previous != value:
+                if previous == "in_progress" and value == "completed":
+                    recorded[field] = value
+                else:
+                    raise HistoryError("The source conflicts with a previously recorded turn status", code="integrity_check_failed")
+            # Other existing provenance fields retain their recorded values.
+    return merged
+
+
 def read_registered(folder, entry):
     path = folder / entry["file"]
     if path.is_symlink() or not path.is_file() or path.stat().st_size >= MAX_BYTES:
-        raise HistoryError("The registered capture is not a small regular file")
+        raise HistoryError("The registered capture is not a small regular file", code="integrity_check_failed")
     data = path.read_bytes()
     if sha(data) != entry["sha256"] or ("bytes" in entry and entry["bytes"] != len(data)):
-        raise HistoryError("Existing capture changed outside its hash registry")
+        raise HistoryError("Existing capture changed outside its hash registry", code="integrity_check_failed")
     try:
         values = json.loads(data)
     except ValueError as exc:
-        raise HistoryError("Malformed registered capture JSON") from exc
+        raise HistoryError("Malformed registered capture JSON", code="integrity_check_failed") from exc
     if not isinstance(values, list) or len(values) != 1 or not isinstance(values[0], dict):
-        raise HistoryError("Expected one registered conversation")
+        raise HistoryError("Expected one registered conversation", code="integrity_check_failed")
     conversation = values[0]
     if conversation.get("conversation_id") != entry["conversation_id"] or conversation.get("id") != entry["conversation_id"]:
-        raise HistoryError("Registered capture id does not match its index")
+        raise HistoryError("Registered capture id does not match its index", code="integrity_check_failed")
     ordered_messages(conversation)
     canonical = json.dumps({k: v for k, v in conversation.items() if k != "archive_metadata"}, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")
     if sha(canonical) != entry.get("conversation_content_sha256"):
-        raise HistoryError("The registered canonical conversation-content hash does not match")
+        raise HistoryError("The registered canonical conversation-content hash does not match", code="integrity_check_failed")
     return data, conversation
 
 
@@ -551,7 +683,6 @@ def refresh_once(repo, thread_id, rollout=None, history_dir=None, title=None, af
         if registered is not None and registered != folder:
             raise HistoryError("The conversation is already registered in another history folder")
     recorder = load_recorder(repo)
-    source = resolve_rollout(thread_id, rollout)
     # Lock all reads, prefix checks and both writes in this one registry.
     with registry_lock(folder, lock_wait_seconds):
         recovery = recover_transaction(folder)
@@ -567,7 +698,7 @@ def refresh_once(repo, thread_id, rollout=None, history_dir=None, title=None, af
             if history_dir is None or not isinstance(title, str) or not title.strip():
                 raise HistoryError("A new capture requires explicit --history-dir and --title")
             capture_title = title
-        snapshot = read_public_source(source, thread_id, capture_title, recorder)
+        snapshot, source_kind = read_available_source(rollout, thread_id, capture_title, recorder)
         if after_turn:
             if after_turn in snapshot.interrupted_turns:
                 return {"status": "skipped_interrupted_turn", "thread_id": thread_id, "turn_id": after_turn}
@@ -575,14 +706,16 @@ def refresh_once(repo, thread_id, rollout=None, history_dir=None, title=None, af
                 raise SourcePending("Waiting for the exact turn's real public final answer and task_complete record")
         conversation = snapshot.conversation
         new_messages = ordered_messages(conversation)
+        prior_meta = previous.get("archive_metadata", {}) if previous else {}
+        merged_turns = merge_turn_provenance(prior_meta.get("turns", {}), conversation["archive_metadata"].get("turns", {}))
         if user_turn and not any(message["author"]["role"] == "user" and message.get("metadata", {}).get("source_turn_id") == user_turn for message in new_messages):
             raise SourcePending("Waiting for the exact prompt turn's real completed user message")
         if previous:
             old_messages = ordered_messages(previous)
             if len(new_messages) < len(old_messages) or any(public_signature(a) != public_signature(b) for a, b in zip(old_messages, new_messages)):
-                raise HistoryError("The refreshed public messages do not preserve the exact archived prefix")
+                raise HistoryError("The refreshed public messages do not preserve the exact archived prefix", code="integrity_check_failed")
             if conversation["create_time"] != previous["create_time"]:
-                raise HistoryError("The session creation timestamp disagrees with the registered capture")
+                raise HistoryError("The session creation timestamp disagrees with the registered capture", code="integrity_check_failed")
             conversation["create_time"] = previous["create_time"]
             if len(new_messages) == len(old_messages):
                 return {"status": "unchanged", "thread_id": thread_id, "number": entry["number"], "file": entry["file"], "messages": len(new_messages), "recovery": recovery}
@@ -593,7 +726,14 @@ def refresh_once(repo, thread_id, rollout=None, history_dir=None, title=None, af
                 raise HistoryError("Completed public message times are not monotone")
         captured = datetime.now(timezone.utc).timestamp()
         archive_meta = conversation["archive_metadata"]
-        prior_meta = previous.get("archive_metadata", {}) if previous else {}
+        archive_meta["source_kind"] = prior_meta.get("source_kind", source_kind)
+        archive_meta["latest_source_kind"] = source_kind
+        configurations = list(prior_meta.get("model_configurations", []))
+        for configuration in archive_meta.get("model_configurations", []):
+            if configuration not in configurations:
+                configurations.append(configuration)
+        archive_meta["model_configurations"] = configurations
+        archive_meta["turns"] = merged_turns
         archive_meta["first_captured_at_utc"] = prior_meta.get("first_captured_at_utc", prior_meta.get("captured_at_utc", recorder.iso(captured)))
         archive_meta["first_captured_at_local"] = prior_meta.get("first_captured_at_local", prior_meta.get("captured_at_local", datetime.fromtimestamp(captured, recorder.LOCAL).isoformat(timespec="milliseconds")))
         with tempfile.TemporaryDirectory(prefix="render-public-chat-") as temp:
@@ -627,9 +767,40 @@ def refresh_once(repo, thread_id, rollout=None, history_dir=None, title=None, af
             if not entry and (folder / filename).exists():
                 raise HistoryError("Refusing to overwrite an unregistered chat filename")
             if entry and current_hash(folder / filename) != entry["sha256"]:
-                raise HistoryError("The registered capture changed during refresh")
+                raise HistoryError("The registered capture changed during refresh", code="integrity_check_failed")
             _install_transaction(folder, filename, chat_bytes, index_bytes)
         return {"status": "refreshed" if previous else "registered", "thread_id": thread_id, "number": rendered_entry["number"], "file": filename, "messages": rendered_entry["message_count"], "recovery": recovery}
+
+
+def diagnose_source(repo, thread_id, rollout=None, history_dir=None):
+    """Report source and registration state without capturing, locking or writing."""
+    repo = Path(repo).expanduser().resolve()
+    preferred = safe_directory(repo, history_dir) if history_dir is not None else None
+    registered = find_registered(repo, thread_id, preferred=preferred)
+    registration = {"status": "registered" if registered else "unregistered"}
+    if registered is not None:
+        registration["history_dir"] = str(registered.relative_to(repo))
+    try:
+        if rollout is None and paginated_source_mode(thread_id) == "paginated":
+            _, info = load_paginated_source(thread_id)
+            source = {"status": "available", "source_selection": "paginated_history",
+                      "source_kind": info["source_kind"], "identity_validated": False}
+        else:
+            resolve_rollout(thread_id, rollout)
+            source = {"status": "available", "candidate_count": 1,
+                      "source_selection": "supplied_rollout" if rollout is not None else "exact_id_discovery",
+                      "identity_validated": False}
+    except HistoryError as exc:
+        source = {"status": "unavailable" if exc.code == "source_unavailable" else "rejected",
+                  "error_code": exc.code, "error": str(exc), "details": exc.details}
+    return {"status": "diagnostic", "thread_id": thread_id, "read_only": True,
+            "capture_performed": False, "registration": registration, "source": source,
+            "source_contract": {
+                "format": "Explicit JSONL override, otherwise the recorded history mode: canonical paginated SQLite when marked, exact-id JSONL discovery otherwise",
+                "public_text": "event_msg/item_completed UserMessage or AgentMessage with exact thread, turn and message IDs; text only; assistant commentary or final_answer",
+                "final_capture": "Real final_answer and task_complete for the exact requested turn",
+                "validation": "Available is source discovery only; public prefix and capture integrity checks still apply. An unavailable marked-paginated source never falls back to a retained JSONL",
+                "unsupported_stores": "Remote-only histories and unverified schemas require a separately verified exporter; no metadata or public text is synthesized"}}
 
 
 def parser():
@@ -643,6 +814,7 @@ def parser():
     p.add_argument("--after-turn", help="Require the real public final answer and completion record of this exact turn")
     p.add_argument("--wait-seconds", type=float, default=60)
     p.add_argument("--defer", action="store_true", help="Launch a single bounded, detached exact-turn refresh worker")
+    p.add_argument("--diagnose", action="store_true", help="Report registration, rollout availability and the supported source contract without capturing")
     p.add_argument("--result-file", type=Path, help=argparse.SUPPRESS)
     return p
 
@@ -652,9 +824,9 @@ def run_bounded(args):
     while True:
         try:
             return refresh_once(args.repo, args.thread_id, args.rollout, args.history_dir, args.title, args.after_turn, lock_wait_seconds=min(5, max(0, deadline - time.monotonic())), user_turn=getattr(args, "user_turn", None))
-        except SourcePending:
+        except SourcePending as exc:
             if time.monotonic() >= deadline:
-                raise SourcePending("The bounded refresh ended before the requested real source records were fully flushed")
+                raise SourcePending("The bounded refresh ended before the requested real source records were fully available: " + str(exc), code=exc.code, details={**exc.details, "wait_seconds": args.wait_seconds}) from exc
             time.sleep(min(0.25, max(0, deadline - time.monotonic())))
 
 
@@ -699,13 +871,27 @@ def main(argv=None):
             # last_assistant_message is deliberately never used or synthesized.
         if not args.thread_id:
             raise HistoryError("--thread-id is required outside hook mode")
-        if args.defer:
+        if not isinstance(args.thread_id, str) or not re.fullmatch(r"[A-Za-z0-9_-]{1,128}", args.thread_id):
+            raise HistoryError("A valid exact conversation id is required")
+        if args.diagnose:
+            if hook or args.defer or args.title or args.after_turn or args.result_file:
+                raise HistoryError("--diagnose cannot be combined with hook, deferred capture, title or turn gates")
+            result = diagnose_source(args.repo, args.thread_id, args.rollout, args.history_dir)
+        elif args.defer:
             if hook or not args.after_turn:
                 raise HistoryError("--defer requires an exact --after-turn outside hook mode")
-            source = resolve_rollout(args.thread_id, args.rollout)
+            # Fail on known mode/JSONL selection errors now. Paginated rows and
+            # exact completion are validated by the worker, after launch.
+            try:
+                if args.rollout is not None or paginated_source_mode(args.thread_id) != "paginated":
+                    resolve_rollout(args.thread_id, args.rollout)
+            except SourcePending:
+                pass
             directory = Path(tempfile.mkdtemp(prefix="chat-history-refresh-result-"))
             result_file = directory / "result.json"
-            command = [sys.executable, str(Path(__file__).resolve()), "--repo", str(args.repo.resolve()), "--thread-id", args.thread_id, "--rollout", str(source), "--after-turn", args.after_turn, "--wait-seconds", str(args.wait_seconds), "--result-file", str(result_file)]
+            command = [sys.executable, str(Path(__file__).resolve()), "--repo", str(args.repo.resolve()), "--thread-id", args.thread_id, "--after-turn", args.after_turn, "--wait-seconds", str(args.wait_seconds), "--result-file", str(result_file)]
+            if args.rollout is not None:
+                command.extend(["--rollout", str(args.rollout.expanduser().absolute())])
             for flag, value in (("--history-dir", args.history_dir), ("--title", args.title)):
                 if value is not None:
                     command.extend([flag, value])
@@ -721,14 +907,16 @@ def main(argv=None):
         return 0
     except Exception as exc:
         detail = str(exc) if isinstance(exc, (HistoryError, OSError, ValueError, TypeError)) else "Unexpected refresh failure (" + type(exc).__name__ + ")"
-        result = {"status": "failed", "error": detail}
+        code = exc.code if isinstance(exc, HistoryError) else "io_error" if isinstance(exc, OSError) else "validation_failed"
+        result = {"status": "failed", "error": detail, "error_code": code,
+                  "details": exc.details if isinstance(exc, HistoryError) else {}}
         if args.result_file and not args.result_file.is_symlink():
             try:
                 args.result_file.write_bytes(json_bytes(result))
             except OSError:
                 pass
         if hook:
-            print(json.dumps({"systemMessage": "Chat-history refresh warning: " + detail}))
+            print(json.dumps({"systemMessage": "Chat-history refresh warning [" + code + "]: " + detail}))
             return 0
         print(json.dumps(result), file=sys.stderr)
         return 1

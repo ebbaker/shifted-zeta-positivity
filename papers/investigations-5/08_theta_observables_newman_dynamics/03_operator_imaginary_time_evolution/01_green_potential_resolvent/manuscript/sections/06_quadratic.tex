@@ -1,0 +1,327 @@
+\section{Quadratic comparison and the short-mollifier floor}\label{sec:quadratic}
+
+\subsection{The exact mean and the multiplier's zeros}
+
+Fix \(0<\theta<1/2\), put \(S=T/2\), and consider
+\begin{equation}\label{eq:A-class}
+ A(s)=\sum_{n\le N}a_nn^{-s},\qquad
+ N\le S^\theta,\quad a_1=1,\quad a_n\in\C,\quad |a_n|\le1.
+\end{equation}
+For each \(T\), one polynomial is used on the whole boundary and for
+all centers. Set
+\[
+ F_A(z)=F(z)A(s(z)),\quad c_A(X)=F_A(X+4\ii),\quad
+ \epsilon_A(X)^2=\int\left|\frac{F_A}{c_A(X)}-1\right|^2\dd\mu_X .
+\]
+The denominator is the actual center value, not a surrogate constant.
+
+For \(\Re s>0\), the fractional-part formula gives
+\begin{equation}\label{eq:fractional}
+ q(s)\zeta(s)=1-(s-1)\int_1^\infty\{v\}v^{-s-1}\dd v.
+\end{equation}
+It follows by integrating the step-counting formula for zeta initially
+on \(\Re s>1\); the displayed integral then continues the pole-cancelled
+field to \(\Re s>0\). At \(s=1\) its value is one. If
+\(C_A=\sum_{n\le N}|a_n|n^{-1/2}\le2\sqrt N\), then on the closed
+strip \(0\le\Im z\le8\),
+\(|F_A(x+\ii y)|\le C_A(8+|x|)\).
+Poisson representation of its real and imaginary parts therefore gives
+\begin{equation}\label{eq:mean}
+ \int F_A\dd\mu_X=c_A(X).
+\end{equation}
+Polynomial growth is killed by the exponentially small vertical-side
+harmonic measures.
+
+At \(s_c=5/2-\ii X/2\),
+\[
+ 2-\zeta(5/2)\le|A(s_c)|\le\zeta(5/2),\qquad
+ \frac{\zeta(5)}{\zeta(5/2)}\le|\zeta(s_c)|\le\zeta(5/2),\qquad
+ \frac35\le|q(s_c)|\le1.
+\]
+The Euler lower bound uses
+\(\prod_p(1+p^{-5/2})^{-1}=\zeta(5)/\zeta(5/2)\).
+Since \(\zeta(5/2)\le5/3\), the constants
+\begin{equation}\label{eq:center-bounds}
+ c_*=\frac35\frac{\zeta(5)}{\zeta(5/2)}(2-\zeta(5/2))>0,\qquad
+ U_*=\zeta(5/2)^2
+\end{equation}
+satisfy \(c_*\le|c_A(X)|\le U_*\).
+Expanding the square using \eqref{eq:mean} yields
+\begin{equation}\label{eq:variance}
+ V_A(X):=\int|F_A|^2\dd\mu_X-|c_A(X)|^2
+ =|c_A(X)|^2\epsilon_A(X)^2\ge0,\qquad
+ \epsilon_A(X)^2\ge V_A(X)/U_*^2.
+\end{equation}
+
+\begin{proposition}[Quadratic upper comparison]\label{prop:quadratic}
+With the class \eqref{eq:A-class}, all multiplier boundary logarithms
+are absolutely integrable and
+\begin{equation}\label{eq:quadratic}
+ 0\le J_0(X)\le\calJ[F_A](X)
+ =J_0(X)+\calJ[A\circ s](X)
+ \le\frac12\log(1+\epsilon_A(X)^2).
+\end{equation}
+Zeros of \(A\), including boundary zeros, are retained.
+\end{proposition}
+\begin{proof}
+For \(0<\delta\le1\), the bounded subharmonic function
+\[
+ u_\delta(z)=\frac12\log(|A(s(z))|^2+\delta^2)
+\]
+has upper bound \(M=\log(C_A+1)\).
+Subharmonic Poisson majorization implies
+\[
+ 0\le\int(M-u_\delta)\dd\mu_X
+ \le M-u_\delta(X+4\ii)\le M-\log|A(s_c)|.
+\]
+Monotone convergence as \(\delta\downarrow0\) proves integrability
+of the negative logarithm; its positive part is bounded. It also gives
+\(\calJ[A\circ s]\ge0\). In the exact factorization
+\(F_A=DH_0(A\circ s)\), the multiplier \(D\) has zero Green
+functional by Section~\ref{sec:prime}. Add the logarithms and use
+concavity of \(\log\):
+\[
+ \calJ[F_A]=\frac12\int\log|F_A/c_A|^2\dd\mu_X
+ \le\frac12\log\int|F_A/c_A|^2\dd\mu_X
+ =\frac12\log(1+\epsilon_A^2).
+\]
+No zero of \(A\) was divided away, and the zeta pole was already
+cancelled in \(F_A\).
+\end{proof}
+
+\subsection{The imported mean-value input and an elementary first moment}
+
+We use the unconditional lower-bound part of
+Radziwi{\l}{\l}'s Proposition B, attributed there to Soundararajan
+\cite{Radziwill2012MollifyingV3}. For fixed \(\theta<1/2\),
+normalization \(a_1=1\), and the stated common coefficient-growth
+bounds, it gives
+\begin{equation}\label{eq:primary-moment}
+ \frac1S\int_S^{2S}
+ |1-\zeta(1/2+\ii t)A(1/2+\ii t)|^2\dd t
+ \ge\frac1\theta-o_\theta(1).
+\end{equation}
+This is an imported mean-value theorem, not proved here. We use the
+pinned version 3 and its complex-coefficient statement, not its
+RH-conditional results.
+
+For \eqref{eq:A-class}, the lower remainder is uniform in \(A\).
+Pad shorter polynomials with zeros to \(\lfloor S^\theta\rfloor\).
+All coefficient-growth constants are at most one. If a uniform lower
+remainder failed, offending arrays along a sequence of heights,
+extended by \(A=1\) at the other heights, would form an admissible
+family contradicting \eqref{eq:primary-moment}. This does not assert
+an additive uniform asymptotic for arbitrarily large quadratic forms.
+
+To convert the error moment to a square mean, an additional first
+moment is essential. Put \(B(s)=\zeta(s)A(s)\).
+Shift its rectangle from \(\Re s=1/2\) to \(\Re s=2\) between
+imaginary heights \(S\) and \(2S\). The zeta pole is outside.
+For the integer \(M=\lceil2S\rceil\), the exact truncation
+\[
+ \zeta(s)=\sum_{n\le M}n^{-s}+\frac{M^{1-s}}{s-1}
+         -s\int_M^\infty\{v\}v^{-s-1}\dd v
+\]
+gives \(|\zeta(s)|=O(\sqrt S)\) on both horizontal edges,
+uniformly for \(1/2\le\Re s\le2\). Since \(|A(s)|\le2\sqrt N\),
+the two edges cost \(O(\sqrt{SN})\).
+On \(\Re s=2\), absolute convergence gives
+\[
+ B(s)=\sum_{n\ge1}b_nn^{-s},\qquad
+ b_n=\sum_{\substack{d\mid n\\d\le N}}a_d,\quad b_1=1,\quad
+ |b_n|\le\tau(n).
+\]
+The nonconstant mean has absolute size at most
+\(2S^{-1}\sum_{n\ge2}\tau(n)n^{-2}/\log n=O(S^{-1})\).
+Consequently
+\begin{equation}\label{eq:first-moment}
+ \frac1S\int_S^{2S}B(1/2+\ii t)\dd t
+ =1+O_\theta(S^{(\theta-1)/2}).
+\end{equation}
+Expanding \(|1-B|^2\) in \eqref{eq:primary-moment} now gives
+\begin{equation}\label{eq:square-mean}
+ \frac1S\int_S^{2S}|B(1/2+\ii t)|^2\dd t
+ \ge1+\frac1\theta-o_\theta(1),
+\end{equation}
+uniformly in the declared coefficient class.
+
+\subsection{Safe-line subtraction and the padded convolution}
+
+For any interval \([u,u+S]\), absolute convergence gives
+\begin{equation}\label{eq:safe-mean}
+ \frac1S\int_u^{u+S}|B(5/2+\ii t)|^2\dd t
+ =\sum_{n\ge1}|b_n|^2n^{-5}+O(S^{-1}),
+\end{equation}
+uniformly in \(u,A\).
+Indeed the absolute off-diagonal error is at most
+\[
+ \frac4S\sum_{m<n}
+ \frac{\tau(m)\tau(n)}{(mn)^{5/2}\log(n/m)}
+ \le\frac{16}S\sum_{m\ge1}\frac{H_m}{m^3}<\infty,
+ \quad H_m=\sum_{j=1}^m\frac1j.
+\]
+Here \(\log(n/m)\ge(n-m)/n\), \(\tau(n)\le2\sqrt n\), and
+\(\sum_{k\ge1}1/[k(m+k)]=H_m/m\).
+The diagonal is bounded by
+\begin{equation}\label{eq:diagonal}
+ \sum_{n\ge1}\tau(n)^2n^{-5}
+ \le1+4\sum_{n\ge2}n^{-4}
+ \le1+4\left(\frac1{16}+\int_2^\infty v^{-4}\dd v\right)
+ =\frac{17}{12}.
+\end{equation}
+
+Let
+\begin{equation}\label{eq:padded}
+ L_T=a^{-1}\log T,\qquad I_T=[T-L_T,2T+L_T].
+\end{equation}
+Since \(|q(5/2+\ii t)|\le1\), substitution \(X=2t\), with
+coefficient conjugation for the negative imaginary direction, gives
+\[
+ \frac1T\int_T^{2T}|c_A(X)|^2\dd X\le17/12+O(T^{-1}).
+\]
+The two extra intervals have total length \(2L_T\), and
+\(|c_A|^2\le U_*^2\). Normalizing by the actual length therefore yields
+\begin{equation}\label{eq:padded-center}
+ \frac1{|I_T|}\int_{I_T}|c_A(X)|^2\dd X\le17/12+o(1).
+\end{equation}
+
+\begin{theorem}[Uniform quadratic-residual floor]\label{thm:floor}
+For every fixed \(0<\theta<1/2\), the class \eqref{eq:A-class}
+and interval \eqref{eq:padded} satisfy
+\begin{equation}\label{eq:floor}
+ \liminf_{T\to\infty}\inf_A
+ \frac1{|I_T|}\int_{I_T}\epsilon_A(X)^2\dd X
+ \ge\frac{1/(2\theta)-11/12}{\zeta(5/2)^4}
+ >\frac1{12\zeta(5/2)^4}.
+\end{equation}
+In particular, for all sufficiently large \(T\), uniformly in \(A\),
+the average exceeds \(1/[24\zeta(5/2)^4]\).
+No numerical onset is asserted.
+\end{theorem}
+\begin{proof}
+Integrate the complete nonnegative boundary square in
+\eqref{eq:variance} over \(I_T\), using Tonelli.
+Retain only the lower boundary and \(x\in[T,2T]\).
+For every such \(x\), the interval
+\([x-L_T,x+L_T]\) lies in \(I_T\), and hence
+\[
+ \int_{I_T}K(x-X)\dd X\ge k_{L_T},\qquad
+ k_L=\int_{-L}^LK(u)\dd u=\frac1\pi\arctan(\sinh(aL))
+ \ge\frac12-\frac{\ee^{-aL}}{4a}.
+\]
+Thus \(k_{L_T}\ge1/2-O(T^{-1})\).
+On the lower boundary \(|q|=1\).
+The conjugate-coefficient polynomial
+\(\widetilde A(s)=\sum\overline{a_n}n^{-s}\) is still admissible.
+Applying \eqref{eq:square-mean} to it and substituting \(x=2t\)
+gives
+\[
+ \int_T^{2T}|F_A(x)|^2\dd x
+ =2\int_S^{2S}|\zeta(1/2+\ii t)\widetilde A(1/2+\ii t)|^2\dd t
+ \ge T(1+1/\theta-o_\theta(1)).
+\]
+Subtract \eqref{eq:padded-center}. Since \(T/|I_T|\to1\),
+\[
+ \frac1{|I_T|}\int_{I_T}V_A(X)\dd X
+ \ge\frac12(1+1/\theta)-\frac{17}{12}-o_\theta(1)
+ =\frac1{2\theta}-\frac{11}{12}-o_\theta(1).
+\]
+All lower errors are common to the coefficient class. Divide by
+\(U_*^2=\zeta(5/2)^4\) using \eqref{eq:variance}, then take the
+infimum and liminf. The strict assumption \(\theta<1/2\) gives
+the final claims.
+\end{proof}
+
+\subsection{The real mixed term and its corrected verification}
+
+For clarity we include the elementary verification used in the branch's
+assessment \cite{OGCorrection,OGAssessment}. It corrects an intermediate
+source attribution and does not replace the imported mean-value
+theorem. With \(N=\lfloor S^\theta\rfloor\), define
+\[
+ w_\ell=\frac{\varphi(\ell)}{\ell^2},\quad
+ y_\ell=\sum_{d\le N/\ell}\frac{a_{d\ell}}d,\quad
+ G_N=\sum_{\ell\le N}\frac{\mu(\ell)^2}{\varphi(\ell)},\quad
+ z_\ell=\frac{\mu(\ell)\ell}{G_N\varphi(\ell)},
+\]
+\[
+ e_\ell=y_\ell-z_\ell,\qquad
+ E_N=\sum_{\ell\le N}w_\ell|e_\ell|^2.
+\]
+Möbius inversion and \(a_1=1\) imply
+\begin{equation}\label{eq:orthogonality}
+ \sum_{\ell\le N}\frac{\mu(\ell)e_\ell}{\ell}=0.
+\end{equation}
+The relevant \emph{real} mixed form is
+\[
+ \mathcal C_N=
+ 2\Re\sum_{p^k\ell\le N}\frac{\log p}{p^k}w_\ell
+       \{z_\ell\overline{e_{p^k\ell}}+z_{p^k\ell}e_\ell\}.
+\]
+Call the two directed sums \(U_N,V_N\).
+Reindexing the first and using
+\(\sum_{p^k\mid m}\mu(m/p^k)\log p=-\mu(m)\log m\) gives
+\[
+ U_N=-\frac1{G_N}\sum_{m\le N}
+             \frac{\mu(m)\log m}{m}\overline{e_m}.
+\]
+In the second, \(\mu(p^k\ell)\ne0\) requires \(k=1\), \(p\nmid\ell\).
+Thus the exact expression is
+\[
+ V_N=-\frac1{G_N}\sum_{\ell\le N}\frac{\mu(\ell)e_\ell}{\ell}
+         P_\ell(N/\ell),\qquad
+ P_\ell(x)=\sum_{\substack{p\le x\\p\nmid\ell}}\frac{\log p}{p-1}.
+\]
+The classical prime-sum estimate used in the primary argument gives
+\[
+ P_\ell(N/\ell)=\log(N/\ell)+r_\ell,\qquad
+ |r_\ell|\ll\log\log(3N).
+\]
+Its uniformity follows by splitting excluded prime divisors at
+\(Y=\log(3N)\): the small ones cost \(O(\log Y)\), and the large
+ones cost at most \(2\log N/Y\).
+The unrestricted sum is \(\log x+O(1)\); replacing
+\(1/(p-1)\) by \(1/p\) costs a convergent series.
+
+After \eqref{eq:orthogonality}, the logarithmic main terms of \(U_N\)
+and \(V_N\) cancel \emph{only after taking real parts}. Therefore
+\[
+ \mathcal C_N=-\frac2{G_N}\Re
+ \sum_{\ell\le N}\frac{\mu(\ell)r_\ell e_\ell}{\ell}.
+\]
+Cauchy--Schwarz and the classical \(G_N\sim\log N\) give
+\begin{equation}\label{eq:real-mixed}
+ |\mathcal C_N|
+ \le\frac2{G_N}
+ \left(\sum_{\ell\le N}\frac{\mu(\ell)^2r_\ell^2}{\varphi(\ell)}\right)^{1/2}
+ \sqrt{E_N}
+ \ll\frac{\log\log(3N)}{\sqrt{\log N}}\sqrt{E_N}.
+\end{equation}
+For a fixed \(\nu>0\), if the last coefficient is \(b_N\), then
+\[
+ b_N\sqrt{E_N}
+ \le\nu\log S\,E_N+\frac{b_N^2}{4\nu\log S}.
+\]
+The scalar remainder tends to zero uniformly in the coefficients.
+The two elementary prime-sum asymptotics are classical inputs already
+used in the source argument. Equation~\eqref{eq:real-mixed} is the
+direct real calculation recorded by this project; it is not quoted
+as the literal printed formula of Lemma 13 in version 3, which displays
+\(E_N\) rather than its square root. Nor does it bound the modulus
+of the unprojected complex mixed sum.
+
+\subsection{What the floor excludes}
+
+By Corollary~\ref{cor:margin} and Proposition~\ref{prop:quadratic},
+a fully acquired inequality
+\(\epsilon_A(X)^2<\exp(2m(d,r))-1\) would exclude the specified
+nonreal zero. The positive average floor prevents these sufficient
+residual certificates from tending uniformly to zero throughout
+\(I_T\) using one polynomial in \eqref{eq:A-class}.
+It gives no lower bound for \(J_0\), because the upper comparison
+\eqref{eq:quadratic} cannot be reversed. It supplies neither failure
+at every center nor a positive density of failing centers.
+Longer polynomials, \(\theta\ge1/2\), adaptive center choices,
+unpadded averages and signed logarithmic estimates are outside
+the theorem.
+

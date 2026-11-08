@@ -152,6 +152,20 @@ class RefreshTests(unittest.TestCase):
     def data_pair(self):
         return self.history_path().read_bytes(), (self.history / 'index.json').read_bytes()
 
+    def deferred_result(self, launch, timeout=6):
+        path = Path(launch['result_file'])
+        deadline = time.monotonic() + timeout
+        while time.monotonic() < deadline:
+            try:
+                result = json.loads(path.read_bytes())
+            except (FileNotFoundError, ValueError):
+                time.sleep(.05)
+                continue
+            path.unlink()
+            path.parent.rmdir()
+            return result
+        self.fail('The bounded deferred worker did not record its result')
+
     def assert_registry_integrity(self):
         entry = self.entry()
         data = self.history_path().read_bytes()
@@ -315,7 +329,104 @@ class RefreshTests(unittest.TestCase):
         for prefix in ['rollout-one-','rollout-two-']:
             (sessions/(prefix+THREAD+'.jsonl')).write_bytes(encoded_rows(self.rows))
         with mock.patch.object(REFRESH.os,'environ',{}),mock.patch.object(REFRESH.Path,'home',return_value=fake_home):
-            with self.assertRaises(REFRESH.HistoryError):REFRESH.resolve_rollout(THREAD)
+            with self.assertRaises(REFRESH.HistoryError) as caught:
+                REFRESH.resolve_rollout(THREAD)
+            self.assertNotIsInstance(caught.exception, REFRESH.SourcePending)
+            self.assertEqual(caught.exception.code, 'source_ambiguous')
+            self.assertEqual(caught.exception.details['candidate_count'], 2)
+
+    def test_missing_supplied_rollout_is_retryable_with_precise_code(self):
+        self.rollout.unlink()
+        before = self.data_pair()
+        with self.assertRaises(REFRESH.SourcePending) as caught:
+            self.refresh()
+        self.assertEqual(caught.exception.code, 'source_unavailable')
+        self.assertEqual(caught.exception.details['source_selection'], 'supplied_rollout')
+        self.assertEqual(self.data_pair(), before)
+
+    def test_existing_nonregular_and_broken_symlink_sources_are_fatal(self):
+        directory = self.root / 'not-a-session'
+        directory.mkdir()
+        link = self.root / 'broken-session.jsonl'
+        link.symlink_to(self.root / 'absent-target.jsonl')
+        before = self.data_pair()
+        for supplied in (directory, link):
+            with self.subTest(kind=supplied.name):
+                with self.assertRaises(REFRESH.HistoryError) as caught:
+                    self.refresh(rollout=supplied)
+                self.assertNotIsInstance(caught.exception, REFRESH.SourcePending)
+                self.assertEqual(caught.exception.code, 'source_invalid')
+        self.assertEqual(self.data_pair(), before)
+
+    def test_bounded_cli_waits_for_delayed_supplied_source(self):
+        self.rollout.unlink()
+        before = self.data_pair()
+        cmd = [sys.executable, str(SCRIPT), '--repo', str(self.repo), '--thread-id', THREAD,
+               '--rollout', str(self.rollout), '--wait-seconds', '4']
+        child = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        try:
+            time.sleep(.15)
+            self.assertIsNone(child.poll())
+            self.assertEqual(self.data_pair(), before)
+            self.append(text='Actual delayed source progress.')
+            stdout, stderr = child.communicate(timeout=8)
+            self.assertEqual(child.returncode, 0, (stdout, stderr))
+            self.assertEqual(json.loads(stdout)['status'], 'refreshed')
+        finally:
+            if child.poll() is None:
+                child.kill(); child.wait()
+        self.assertEqual(self.texts()[-1], 'Actual delayed source progress.')
+        self.assert_registry_integrity()
+
+    def test_missing_source_timeout_is_coded_and_preserves_capture(self):
+        self.rollout.unlink()
+        before = self.data_pair()
+        cmd = [sys.executable, str(SCRIPT), '--repo', str(self.repo), '--thread-id', THREAD,
+               '--rollout', str(self.rollout), '--wait-seconds', '.1']
+        out = subprocess.run(cmd, capture_output=True, text=True, timeout=8)
+        self.assertEqual(out.returncode, 1)
+        result = json.loads(out.stderr)
+        self.assertEqual(result['status'], 'failed')
+        self.assertEqual(result['error_code'], 'source_unavailable')
+        self.assertEqual(result['details']['source_selection'], 'supplied_rollout')
+        self.assertEqual(result['details']['wait_seconds'], .1)
+        self.assertIn('expected supplied rollout', result['error'])
+        self.assertEqual(self.data_pair(), before)
+
+    def test_bounded_discovery_ambiguity_does_not_retry(self):
+        codex_home = self.root / 'ambiguous-source-home'
+        sessions = codex_home / 'sessions'
+        sessions.mkdir(parents=True)
+        for label in ('one', 'two'):
+            (sessions / ('rollout-' + label + '-' + THREAD + '.jsonl')).write_bytes(encoded_rows(self.rows))
+        args = REFRESH.parser().parse_args(['--repo', str(self.repo), '--thread-id', THREAD,
+                                          '--wait-seconds', '4'])
+        before = self.data_pair()
+        with mock.patch.dict(REFRESH.os.environ, {'CODEX_HOME': str(codex_home)}), \
+             mock.patch.object(REFRESH.time, 'sleep', side_effect=AssertionError('Ambiguity must not retry')):
+            with self.assertRaises(REFRESH.HistoryError) as caught:
+                REFRESH.run_bounded(args)
+        self.assertNotIsInstance(caught.exception, REFRESH.SourcePending)
+        self.assertEqual(caught.exception.code, 'source_ambiguous')
+        self.assertEqual(self.data_pair(), before)
+
+    def test_diagnose_missing_source_is_read_only(self):
+        self.rollout.unlink()
+        before = self.data_pair()
+        lock = self.history / REFRESH.LOCK_NAME
+        self.assertFalse(lock.exists())
+        cmd = [sys.executable, str(SCRIPT), '--repo', str(self.repo), '--thread-id', THREAD,
+               '--rollout', str(self.rollout), '--diagnose']
+        out = subprocess.run(cmd, capture_output=True, text=True, timeout=8)
+        self.assertEqual(out.returncode, 0, (out.stdout, out.stderr))
+        result = json.loads(out.stdout)
+        self.assertTrue(result['read_only'])
+        self.assertFalse(result['capture_performed'])
+        self.assertEqual(result['registration']['status'], 'registered')
+        self.assertEqual(result['source']['error_code'], 'source_unavailable')
+        self.assertIn('task_complete', result['source_contract']['final_capture'])
+        self.assertEqual(self.data_pair(), before)
+        self.assertFalse(lock.exists())
 
     def test_incomplete_trailing_json_is_not_archived(self):
         self.append()
@@ -435,6 +546,223 @@ class RefreshTests(unittest.TestCase):
         self.assertEqual(self.texts()[-1], 'Actually sent deferred synthetic final.')
         self.assert_registry_integrity()
 
+    def test_deferred_cli_launches_before_supplied_source_exists(self):
+        self.rollout.unlink()
+        before = self.data_pair()
+        cmd = [sys.executable, str(SCRIPT), '--repo', str(self.repo), '--thread-id', THREAD,
+               '--rollout', str(self.rollout), '--after-turn', 'turn-2', '--wait-seconds', '4', '--defer']
+        out = subprocess.run(cmd, capture_output=True, text=True, timeout=8)
+        self.assertEqual(out.returncode, 0, (out.stdout, out.stderr))
+        launch = json.loads(out.stdout)
+        self.assertEqual(launch['status'], 'deferred')
+        time.sleep(.15)
+        self.assertEqual(self.data_pair(), before)
+        self.rows.append(public_message('late-source-final', 'Real final after a delayed source.',
+                                        12, phase='final_answer', turn='turn-2'))
+        self.rows.append(completed_turn('turn-2', 13))
+        self.write_source()
+        result = self.deferred_result(launch)
+        self.assertEqual(result['status'], 'refreshed')
+        self.assertEqual(self.texts()[-1], 'Real final after a delayed source.')
+        self.assert_registry_integrity()
+
+    def test_deferred_discovery_finds_source_created_after_launch(self):
+        codex_home = self.root / 'late-discovery-home'
+        sessions = codex_home / 'sessions'
+        sessions.mkdir(parents=True)
+        env = dict(os.environ, CODEX_HOME=str(codex_home))
+        before = self.data_pair()
+        cmd = [sys.executable, str(SCRIPT), '--repo', str(self.repo), '--thread-id', THREAD,
+               '--after-turn', 'turn-2', '--wait-seconds', '4', '--defer']
+        out = subprocess.run(cmd, capture_output=True, text=True, timeout=8, env=env)
+        self.assertEqual(out.returncode, 0, (out.stdout, out.stderr))
+        launch = json.loads(out.stdout)
+        self.assertEqual(launch['status'], 'deferred')
+        time.sleep(.15)
+        self.assertEqual(self.data_pair(), before)
+        self.rows.append(public_message('discovered-final', 'Real final in a newly discovered source.',
+                                        12, phase='final_answer', turn='turn-2'))
+        self.rows.append(completed_turn('turn-2', 13))
+        (sessions / ('rollout-later-' + THREAD + '.jsonl')).write_bytes(encoded_rows(self.rows))
+        result = self.deferred_result(launch)
+        self.assertEqual(result['status'], 'refreshed', result)
+        self.assertEqual(self.texts()[-1], 'Real final in a newly discovered source.')
+        self.assert_registry_integrity()
+
+    def test_deferred_missing_source_records_timeout_without_replacement(self):
+        self.rollout.unlink()
+        before = self.data_pair()
+        cmd = [sys.executable, str(SCRIPT), '--repo', str(self.repo), '--thread-id', THREAD,
+               '--rollout', str(self.rollout), '--after-turn', 'turn-2', '--wait-seconds', '.1', '--defer']
+        out = subprocess.run(cmd, capture_output=True, text=True, timeout=8)
+        self.assertEqual(out.returncode, 0, (out.stdout, out.stderr))
+        result = self.deferred_result(json.loads(out.stdout))
+        self.assertEqual(result['status'], 'failed')
+        self.assertEqual(result['error_code'], 'source_unavailable')
+        self.assertEqual(self.data_pair(), before)
+
+    def test_deferred_late_source_identity_mismatch_is_fatal(self):
+        self.rollout.unlink()
+        before = self.data_pair()
+        cmd = [sys.executable, str(SCRIPT), '--repo', str(self.repo), '--thread-id', THREAD,
+               '--rollout', str(self.rollout), '--after-turn', 'turn-2', '--wait-seconds', '4', '--defer']
+        out = subprocess.run(cmd, capture_output=True, text=True, timeout=8)
+        self.assertEqual(out.returncode, 0, (out.stdout, out.stderr))
+        self.rows[0]['payload']['id'] = OTHER
+        self.rows.append(public_message('wrong-source-final', 'Must never replace the registered chat.',
+                                        12, phase='final_answer', turn='turn-2'))
+        self.rows.append(completed_turn('turn-2', 13))
+        self.write_source()
+        result = self.deferred_result(json.loads(out.stdout))
+        self.assertEqual(result['status'], 'failed')
+        self.assertEqual(result['error_code'], 'source_identity_mismatch')
+        self.assertEqual(self.data_pair(), before)
+
+    def test_paginated_fallback_preserves_public_prefix_and_source_provenance(self):
+        previous = self.conversation()
+        old_messages = REFRESH.ordered_messages(previous)
+        prior_meta = copy.deepcopy(previous['archive_metadata'])
+        rows = [copy.deepcopy(row) for row in self.rows if row['type'] != 'turn_context']
+        rows.append(public_message('paginated-final', 'Canonical paginated public final.',
+                                   12, phase='final_answer', turn='turn-2'))
+        rows.append(completed_turn('turn-2', 13))
+        kind = 'Local Codex paginated SQLite history; canonical public-text adapter'
+        info = {'thread_id': THREAD, 'source_kind': kind}
+        with mock.patch.object(REFRESH, 'paginated_source_mode', return_value='paginated'), \
+             mock.patch.object(REFRESH, 'resolve_rollout', side_effect=REFRESH.SourcePending(
+                'Synthetic exact-id JSONL absence', code='source_unavailable')), \
+             mock.patch.object(REFRESH, 'load_paginated_source', return_value=(rows, info)) as adapter:
+            result = self.refresh(rollout=None, after_turn='turn-2')
+        self.assertEqual(result['status'], 'refreshed')
+        adapter.assert_called_once_with(THREAD)
+        current = self.conversation()
+        current_messages = REFRESH.ordered_messages(current)
+        self.assertEqual([REFRESH.public_signature(message) for message in current_messages[:-1]],
+                         [REFRESH.public_signature(message) for message in old_messages])
+        metadata = current['archive_metadata']
+        self.assertEqual(metadata['source_kind'], prior_meta['source_kind'])
+        self.assertEqual(metadata['latest_source_kind'], kind)
+        self.assertEqual(metadata['model_configurations'], prior_meta['model_configurations'])
+        self.assertEqual(self.entry()['model_configurations'], prior_meta['model_configurations'])
+        self.assert_registry_integrity()
+
+    def test_paginated_normalization_cannot_bypass_exact_source_identity(self):
+        rows = copy.deepcopy(self.rows)
+        rows[0]['payload']['id'] = OTHER
+        before = self.data_pair()
+        info = {'thread_id': THREAD, 'source_kind': 'Synthetic canonical paginated adapter'}
+        with mock.patch.object(REFRESH, 'paginated_source_mode', return_value='paginated'), \
+             mock.patch.object(REFRESH, 'resolve_rollout', side_effect=REFRESH.SourcePending(
+                'Synthetic exact-id JSONL absence', code='source_unavailable')), \
+             mock.patch.object(REFRESH, 'load_paginated_source', return_value=(rows, info)):
+            with self.assertRaises(REFRESH.HistoryError) as caught:
+                self.refresh(rollout=None)
+        self.assertEqual(caught.exception.code, 'source_identity_mismatch')
+        self.assertEqual(self.data_pair(), before)
+
+    def test_marked_paginated_source_supersedes_retained_exact_jsonl(self):
+        codex_home = self.root / 'retained-jsonl-home'
+        sessions = codex_home / 'sessions'
+        sessions.mkdir(parents=True)
+        retained = sessions / ('rollout-old-' + THREAD + '.jsonl')
+        retained.write_bytes(encoded_rows(self.rows))
+        rows = copy.deepcopy(self.rows)
+        rows.append(public_message('new-canonical-final', 'New final absent from retained JSONL.',
+                                   12, phase='final_answer', turn='turn-2'))
+        rows.append(completed_turn('turn-2', 13))
+        info = {'thread_id': THREAD, 'source_kind': 'Synthetic canonical paginated adapter'}
+        with mock.patch.dict(REFRESH.os.environ, {'CODEX_HOME': str(codex_home)}), \
+             mock.patch.object(REFRESH, 'paginated_source_mode', return_value='paginated'), \
+             mock.patch.object(REFRESH, 'load_paginated_source', return_value=(rows, info)), \
+             mock.patch.object(REFRESH, 'resolve_rollout', wraps=REFRESH.resolve_rollout) as legacy:
+            result = self.refresh(rollout=None, after_turn='turn-2')
+        self.assertEqual(result['status'], 'refreshed')
+        legacy.assert_not_called()
+        self.assertEqual(self.texts()[-1], 'New final absent from retained JSONL.')
+        self.assertEqual(retained.read_bytes(), encoded_rows(initial_source()))
+        self.assert_registry_integrity()
+
+    def test_unavailable_marked_paginated_source_never_uses_retained_jsonl(self):
+        before = self.data_pair()
+        with mock.patch.object(REFRESH, 'paginated_source_mode', return_value='paginated'), \
+             mock.patch.object(REFRESH, 'load_paginated_source', side_effect=REFRESH.SourcePending(
+                 'Synthetic marked paginated store is not flushed', code='source_unavailable')), \
+             mock.patch.object(REFRESH, 'resolve_rollout', wraps=REFRESH.resolve_rollout) as legacy:
+            with self.assertRaises(REFRESH.SourcePending) as caught:
+                self.refresh(rollout=None)
+        self.assertEqual(caught.exception.code, 'source_unavailable')
+        legacy.assert_not_called()
+        self.assertEqual(self.data_pair(), before)
+
+    def test_explicit_rollout_remains_a_forced_legacy_override(self):
+        before = self.data_pair()
+        with mock.patch.object(REFRESH, 'paginated_source_mode', side_effect=AssertionError(
+                'An explicit rollout must not probe another store')), \
+             mock.patch.object(REFRESH, 'load_paginated_source', side_effect=AssertionError(
+                 'An explicit rollout must not select another store')):
+            result = self.refresh()
+        self.assertEqual(result['status'], 'unchanged')
+        self.assertEqual(self.data_pair(), before)
+
+    def test_diagnose_honors_marked_paginated_unavailability(self):
+        before = self.data_pair()
+        with mock.patch.object(REFRESH, 'paginated_source_mode', return_value='paginated'), \
+             mock.patch.object(REFRESH, 'load_paginated_source', side_effect=REFRESH.SourcePending(
+                 'Synthetic marked paginated store is unavailable', code='source_unavailable')), \
+             mock.patch.object(REFRESH, 'resolve_rollout', side_effect=AssertionError(
+                 'Diagnostics must not report a stale retained rollout')):
+            result = REFRESH.diagnose_source(self.repo, THREAD)
+        self.assertEqual(result['source']['status'], 'unavailable')
+        self.assertEqual(result['source']['error_code'], 'source_unavailable')
+        self.assertEqual(self.data_pair(), before)
+
+    def test_store_switch_preserves_and_completes_recorded_turn_provenance(self):
+        self.rows[2]['payload']['started_at'] = timestamp(2)
+        self.rows[5]['payload']['completed_at'] = timestamp(5)
+        self.rows.extend([
+            source_row('event_msg', {'type': 'task_started', 'thread_id': THREAD,
+                                    'turn_id': 'empty-old', 'started_at': timestamp(6)}, 6),
+            source_row('event_msg', {'type': 'task_complete', 'thread_id': THREAD,
+                                    'turn_id': 'empty-old', 'completed_at': timestamp(7)}, 7),
+            source_row('event_msg', {'type': 'task_started', 'thread_id': THREAD,
+                                    'turn_id': 'progress-old'}, 8),
+        ])
+        self.write_source(); self.register()
+        previous_turns = copy.deepcopy(self.conversation()['archive_metadata']['turns'])
+        rows = [copy.deepcopy(row) for row in self.rows
+                if row['payload'].get('turn_id') not in {'empty-old', 'progress-old'}]
+        rows[2]['payload']['started_at'] = '2026-10-13T01:00:02.000000000Z'
+        rows.extend([
+            source_row('event_msg', {'type': 'task_started', 'thread_id': THREAD,
+                                    'turn_id': 'progress-old', 'started_at': timestamp(8)}, 8),
+            public_message('turn-provenance-final', 'Real appended final.',
+                           12, phase='final_answer', turn='turn-2'),
+            completed_turn('turn-2', 13),
+            source_row('event_msg', {'type': 'task_complete', 'thread_id': THREAD,
+                                    'turn_id': 'progress-old', 'completed_at': timestamp(14)}, 14),
+        ])
+        info = {'thread_id': THREAD, 'source_kind': 'Synthetic canonical paginated adapter'}
+        with mock.patch.object(REFRESH, 'paginated_source_mode', return_value='paginated'), \
+             mock.patch.object(REFRESH, 'load_paginated_source', return_value=(rows, info)):
+            self.refresh(rollout=None, after_turn='turn-2')
+        turns = self.conversation()['archive_metadata']['turns']
+        self.assertEqual(turns['turn-1'], previous_turns['turn-1'])
+        self.assertEqual(turns['empty-old'], previous_turns['empty-old'])
+        self.assertEqual(turns['progress-old'], {'status': 'completed', 'started_at': timestamp(8),
+                                               'completed_at': timestamp(14)})
+        self.assert_registry_integrity()
+
+    def test_conflicting_turn_time_is_rejected_without_submicrosecond_rounding(self):
+        self.rows[2]['payload']['started_at'] = timestamp(2)
+        self.write_source(); self.register()
+        before = self.data_pair()
+        self.rows[2]['payload']['started_at'] = '2026-10-13T01:00:02.000000001Z'
+        self.write_source()
+        with self.assertRaises(REFRESH.HistoryError) as caught:
+            self.refresh()
+        self.assertEqual(caught.exception.code, 'integrity_check_failed')
+        self.assertEqual(self.data_pair(), before)
+
     def prepare_crash_journal(self, state='mixed'):
         filename = self.entry()['file']
         old_chat, old_index = self.data_pair()
@@ -505,6 +833,50 @@ class RefreshTests(unittest.TestCase):
         self.assertIn('systemMessage',json.loads(out.stdout))
         self.assertEqual(self.data_pair(),before)
         self.assertNotIn('DRAFT_FINAL_NOT_IN_SOURCE',self.history_path().read_text())
+
+    def test_stop_hook_with_null_transcript_uses_canonical_paginated_fallback(self):
+        rows = copy.deepcopy(self.rows)
+        rows.append(public_message('nullable-hook-final', 'Real canonical final for nullable hook.',
+                                   12, phase='final_answer', turn='turn-2'))
+        rows.append(completed_turn('turn-2', 13))
+        info = {'thread_id': THREAD, 'source_kind': 'Synthetic canonical paginated adapter'}
+        hook = {'hook_event_name': 'Stop', 'session_id': THREAD, 'transcript_path': None,
+                'turn_id': 'turn-2', 'last_assistant_message': 'UNTRUSTED_HOOK_FINAL'}
+        stdout = io.StringIO()
+        with mock.patch.object(REFRESH.sys, 'stdin', io.StringIO(json.dumps(hook))), \
+             contextlib.redirect_stdout(stdout), \
+             mock.patch.object(REFRESH, 'paginated_source_mode', return_value='paginated'), \
+             mock.patch.object(REFRESH, 'resolve_rollout', side_effect=REFRESH.SourcePending(
+                 'Synthetic exact-id JSONL absence', code='source_unavailable')), \
+             mock.patch.object(REFRESH, 'load_paginated_source', return_value=(rows, info)) as adapter:
+            status = REFRESH.main(['--repo', str(self.repo), '--hook', '--wait-seconds', '0'])
+        self.assertEqual(status, 0)
+        self.assertEqual(json.loads(stdout.getvalue()), {})
+        adapter.assert_called_once_with(THREAD)
+        self.assertEqual(self.texts()[-1], 'Real canonical final for nullable hook.')
+        self.assertNotIn('UNTRUSTED_HOOK_FINAL', self.history_path().read_text())
+        self.assert_registry_integrity()
+
+    def test_null_transcript_hook_fallback_still_requires_real_final(self):
+        rows = copy.deepcopy(self.rows)
+        rows.append(public_message('nullable-hook-commentary', 'Only completed commentary.',
+                                   12, turn='turn-2'))
+        rows.append(completed_turn('turn-2', 13))
+        info = {'thread_id': THREAD, 'source_kind': 'Synthetic canonical paginated adapter'}
+        hook = {'hook_event_name': 'Stop', 'session_id': THREAD, 'transcript_path': None,
+                'turn_id': 'turn-2', 'last_assistant_message': 'UNTRUSTED_HOOK_FINAL'}
+        before = self.data_pair()
+        stdout = io.StringIO()
+        with mock.patch.object(REFRESH.sys, 'stdin', io.StringIO(json.dumps(hook))), \
+             contextlib.redirect_stdout(stdout), \
+             mock.patch.object(REFRESH, 'paginated_source_mode', return_value='paginated'), \
+             mock.patch.object(REFRESH, 'resolve_rollout', side_effect=REFRESH.SourcePending(
+                 'Synthetic exact-id JSONL absence', code='source_unavailable')), \
+             mock.patch.object(REFRESH, 'load_paginated_source', return_value=(rows, info)):
+            status = REFRESH.main(['--repo', str(self.repo), '--hook', '--wait-seconds', '0'])
+        self.assertEqual(status, 0)
+        self.assertIn('source_pending', json.loads(stdout.getvalue())['systemMessage'])
+        self.assertEqual(self.data_pair(), before)
 
     def test_prompt_hook_waits_for_real_user_flush_without_synthesizing_prompt(self):
         before=self.data_pair()

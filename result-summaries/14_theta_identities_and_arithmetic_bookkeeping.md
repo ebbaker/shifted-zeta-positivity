@@ -7,6 +7,21 @@ LLM assistance: **gpt-6-astra (Codex)**, reasoning effort **ultra**.
 
 ## Summary
 
+- **Green/resolvent analytical manuscript milestone (5/08/03/01, 8 November 2026).**
+  The [23-page working draft](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/01_green_potential_resolvent/manuscript/README.md)
+  integrates the complete Green/prime representations, scoped square-root
+  conditioning and short-mollifier residual floors, corrected real mixed
+  term, quadratic acquisition ledger and local boundary-log theorem.
+  [Integration check03](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/01_green_potential_resolvent/reviews/03_TND_OG_E04_MANUSCRIPT_INTEGRATION_CHECK_20261108.md)
+  states: “Manuscript integration does not strengthen the evidence status
+  of its sources.” B01/E01 retain E02's **accepted with one bounded additive
+  correction** status; B02 remains **proved in-note**, with proof-author
+  checking. “The complete signed-log assembly remains a target.” No
+  favorable canonical value, numerical research or zero exclusion is
+  added. Prepared for Edward Baker with substantial OpenAI Codex LLM
+  assistance; actual model/effort not recorded. E04 is an exposition and
+  production milestone, not a new theorem assessment.
+
 - **MC11 analytical manuscript milestone (5/07, 5 November 2026).**
   [The working draft](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/11_energy_filtered_theta_overlaps/manuscript/main.tex) consolidates the complete-cylinder Green representation and the current model/source/transfer returns.
   [Integration Note10](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/11_energy_filtered_theta_overlaps/notes/10_MC11_M01_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261105.md) states: “This manuscript is an expository milestone, not a new determinant sign result.”

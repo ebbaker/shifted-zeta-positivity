@@ -1,8 +1,18 @@
 # Green potential and logarithmic resolvent: research overview
 
+**B03 relationship update, 8 November 2026:** §7 connects the earlier heat-density hierarchy to B02, including a local growing-order Riemann–Siegel/logarithm consequence. [Note05](../notes/05_TND_OG_B03_HDA_HIERARCHY_LOG_TRANSFER_20261108.md) supplies the derivation; same-assistant checking only. This neither executes E03 nor supplies favorable canonical smallness. The sole register remains authoritative; dated statements below retain their original scope.
+
+**B02 supplement, 8 November 2026:** [Note04](../notes/04_TND_OG_B02_ONE_SIDED_BOUNDARY_LOG_ACQUISITION_20261108.md) proves the local one-dimensional logarithmic-envelope error through real multiple zeros, with proof-author checking only. It selects the fixed [E03 source/tail/prime assembly](../research-progress/handoffs/09_TND_OG_E03_SIGNED_LOG_ACQUISITION_REQUEST_20261108.md), ready and unactivated. Its complete Green bound remains a target; no favorable canonical value is acquired. The [sole register](../research-progress/01_TND_OG_GREEN_RESOLVENT_RESEARCH_PROGRESS_20261107.md) owns live status and [Continuation05](../continuation-notes/05_TND_OG_B02_RESULTS_AND_MODEL_CHANGE_20261108.md) owns current handoff guidance. Exact model/effort unavailable. Historical task identities and prior results below are retained.
+
+**E02 assessment update, 7 November 2026:** [Review01](../reviews/01_TND_OG_E02_CLAIM_LEVEL_ASSESSMENT_20261107.md) accepts both scoped results with one bounded additive correction in [Note03](../notes/03_TND_OG_E02_REAL_MIXED_TERM_AND_ACQUISITION_CLARIFICATIONS_20261107.md). The direct real mixed-term verification corrects the account of the printed primary source; the residual-floor constant is unchanged. [Continuation04](../continuation-notes/04_TND_OG_E02_RESULTS_AND_MODEL_CHANGE_20261107.md) supplies model-change guidance. No favorable canonical signed Green upper margin is acquired; there is no ready E successor. Proposed B02 is unissued and unactivated. Internal shared-premise assessment only; author-selected Sol6.1/ultra, explicit assessor dispatch gpt-6.1-sol/ultra, root backend/effort unavailable. Earlier dated readiness and delivery statements below are historical.
+
+**E01 execution update, 7 November 2026:** The formerly unproved E01 target is now proved in [Note02](../notes/02_TND_OG_E01_SHORT_MOLLIFIER_RESIDUAL_FLOOR_20261107.md), with actual [return02](../research-progress/handoffs/02_TND_OG_E01_RETURN_20261107.json). [Continuation03](../continuation-notes/03_TND_OG_E01_RESULTS_AND_MODEL_CHANGE_20261107.md) routes next to the fixed E02 assessment, ready but unactivated. The sole register owns live status. Internal checking only; exact actual model/effort unavailable. Earlier setup/B01 readiness statements below are historical. The missing favorable signed canonical Green upper margin remains missing. This overlay update was installed on 7 November 2026; see the [installation receipt](../research-progress/handoffs/04_TND_OG_E01_INSTALLATION_20261107.json).
+
 7 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Explicit worker dispatch selected **gpt-6.1-sol / ultra**; this is the supplied actual selection, not independent backend verification. Root model/effort unavailable.
 
 **Evidence level: documentation/setup and inherited internally assessed results.** This overview fixes a dictionary and a bounded next question. The [shared synthesis](../../brainstorm/notes/19_TND_O_GREEN_CORRELATION_BIFURCATION_SYNTHESIS_20261107.md), [setup request](../../brainstorm/notes/18_TND_O_E22_BIFURCATION_SETUP_REQUEST_20261107.md), [inputs40](../../research-progress/handoffs/40_TND_O_E22_BIFURCATION_INPUTS_20261107.json) and [dispatch40](../../research-progress/handoffs/40_TND_O_E22_DISPATCH_20261107.json) own the bifurcation provenance. The [sole register](../research-progress/01_TND_OG_GREEN_RESOLVENT_RESEARCH_PROGRESS_20261107.md) owns all TND-OG live statuses. No mathematical gain follows from opening this branch.
+
+**Research supplement, 7 November 2026 — actual gpt-6-astra / max.** The inherited dictionary below is unchanged. [Note01 §§1–5](../notes/01_TND_OG_B01_UNIFORM_SOURCE_CONDITIONING_20261107.md) now derives a fixed-prime positive-source family with common complete bounds: O(η) source/resolvent changes give Θ(√η) Green changes uniformly in center. This is a scoped conditioning obstruction, with same-assistant checking only; the family is not the unchanged theta source. [Decision01](../brainstorm/notes/01_TND_OG_B01_RESOLVENT_CONDITIONING_DECISION_20261107.md) selects the optional arithmetic mechanism for the frozen [E01 proof test](../research-progress/handoffs/02_TND_OG_E01_SHORT_MOLLIFIER_REQUEST_20261107.md), using fixed θ<1/2 and a padded interval. Its proposed normalized-residual floor remains unproved. No favorable signed canonical estimate has been acquired; [Continuation02](../continuation-notes/02_TND_OG_B01_RESULTS_AND_MODEL_CHANGE_20261107.md) replaces the setup next-task prompt.
 
 ## 1. The exact chain and its clocks
 
@@ -202,3 +212,102 @@ Apply the [result index](../../../../../../result-summaries/README.md), [collisi
 | Atomic/polynomial/variable-kernel examples, when used | Only their separately stated local algebra, moments or diagnostics | Do not silently assign a smooth canonical source, full profile, cosine/Newman observation or canonical count constants. |
 
 Failing an exact identity does not imply failing every inequality derived from it. Generic \(\partial_{\bar z}R=\pi\nu\), Burgers and Jensen steps hold for their admissible controls and do not discriminate theta. A genuine defect prevents an admissible control from satisfying the relevant strict exclusion threshold, but a finite box away from its event need not reject it. A useful milestone is a quantitative bound or scoped obstruction; an RH-equivalent vanishing criterion and a new coordinate representation are not such a gain. Reference ownership and inspection limits are recorded [here](../references/README.md).
+
+## 7. Earlier heat-density hierarchies and the logarithmic estimate
+
+**B03 relationship audit, 8 November 2026.** Prepared for Edward Baker
+with OpenAI Codex LLM assistance; actual model and effort not recorded.
+The parent [locator20, §4](../../brainstorm/notes/20_TND_O_PRIOR_HIERARCHY_LOCATOR_20261107.md)
+already identifies the author's earlier heat-density hierarchy, and the
+[sibling overview, §5](../../02_localized_zero_correlations/research-overview/01_TND_OC_RESEARCH_OVERVIEW_20261107.md)
+carries that relationship. The Green overview previously linked locator20
+only for the regulated Wirtinger field. This section supplies the direct
+connection; [Note05](../notes/05_TND_OG_B03_HDA_HIERARCHY_LOG_TRANSFER_20261108.md)
+gives its derivation and source/review chain.
+
+### The same field, several distinct orders
+
+[HDA's current Book overview](../../../../01_heat_density_asymptotics/research-overview/02_BOOK_UNIFIED_HEAT_FLOW_RESEARCH_OVERVIEW_20261026.md)
+and [Summary67](../../../../01_heat_density_asymptotics/notes/67_CHAT0025_RESEARCH_SUMMARY_AND_HANDOFF_20261026.md)
+use the same canonical H, with forward heat time T=−λ. Source moments
+satisfy ∂T μj=−μj+2 and ∂z μj=i μj+1; consequently R=i μ1/μ0 on
+zero-free patches. That identity retains the denominator problem.
+
+The gamma fluctuation hierarchy organizes corrections while keeping the
+full arithmetic population and both conjugate arms. Its fluctuation order,
+the Riemann–Siegel completion order, the arithmetic index and factorial
+zero-statistic order are different quantities. Neither a source recurrence
+nor a formal correction exponential closes the zero-correlation hierarchy.
+
+The strong HDA recurrence estimate exp(−L²/4), with growing order, is
+proved on its stated negative Newman-time domains; even the moving-endpoint
+version stops at T=1/L. Later HDA work also gives time-zero data and signed
+crossover and positive-time approximations at their stated weaker scales.
+Thus “the strong recurrence theorem does not reach zero” is correct;
+“the HDA work has no time-zero approximation” is not.
+
+### A useful direct transfer at time zero
+
+B02's logarithmic theorem needs only a measurable approximation to F on
+the real boundary. It can therefore use HDA's real initial data directly,
+without a through-zero heat theorem or division by an approximate H.
+
+Let F=D H0, and let M be HDA's exact gamma carrier. On the real line,
+abs(D M)=1. This exact normalization converts the gamma-relative
+Riemann–Siegel remainder into an absolute F-error δ. On a unit interval
+I_X, the inherited B02 estimate gives
+
+\[
+ 0\le\int_{I_X}\{\log(|\widehat F|+\delta)-\log|F|\}
+ \le P_X(2\delta/M_X)^{1/n_X},
+ \qquad n_X=\frac{\log X}{\kappa}+O(1),\quad
+ P_X=\Theta((\log X)^2),\quad \kappa=\log(27/26).
+\]
+
+Fixed algebraic δ does not make this particular upper bound vanish at
+unbounded height. HDA's retained all-order **real completion** supplies
+a stronger allowance. Note05 (10)–(14) composes its imported remainder
+with B02: the sufficient choice
+
+\[
+ K=2\left\lceil(4/\kappa)\log\log X\right\rceil
+\]
+
+gives local logarithmic error O((log X)^−2) as X→∞. All arithmetic modes
+up to the natural cutoff are retained, including changes of that cutoff.
+The approximant need not be nonzero or holomorphic. This is a new local
+composition of existing inputs, with same-assistant checking only;
+[check04](../reviews/04_TND_OG_B03_HIERARCHY_TRANSFER_SELF_CHECK_20261108.md)
+and [source-use06](../references/06_TND_OG_B03_HDA_HIERARCHY_SOURCE_USE_20261108.md)
+record its scope.
+
+The order choice is conservative. It does not make the arithmetic
+population smaller than O(sqrt X), prove convergence at fixed X as
+K→infinity, instantiate an evaluation algorithm or supply a useful
+numerical onset. Most importantly, an accurate signed logarithm is
+not yet a favorable signed Green value.
+
+### Fluctuation dynamics and the next use
+
+HDA's earlier filtered evolution also separates the averaged logarithm
+from directional gradient variances. Their difference enters with no
+automatic sign; the recorded cosh example excludes the specified
+density-variance-only closure. Any dynamical reuse must retain that
+fluctuation term, harmonic/boundary information and regulator/commutator
+payments. No canonical signed closure is supplied.
+
+The concrete connection is therefore **completed field approximation
+into local boundary-logarithm acquisition**. A future comparison can
+test its full cost against the literal Fourier-source route. The frozen
+E03 assembly remains ready and unactivated; an RS-based replacement
+would require its own declared source and error contract. Complete
+weighted assembly, omitted logarithmic and prime tails, finite
+evaluation, core coverage and actual smallness remain outstanding.
+
+The result and pattern indexes and collision screen in §6 continue to
+apply; [heat-flow cluster11](../../../../../../result-summaries/11_newman_heat_flow_reductions_and_certificates.md)
+is the relevant earlier cluster. Note05 §7 states the exact canonical
+premise absent from each control. Generic heat or logarithmic identities
+can hold for those controls and do not eliminate their positive defect
+signal. The [brainstorm record](../brainstorm/notes/05_TND_OG_B03_HIERARCHY_RELATIONSHIP_AND_USE_20261108.md)
+records the bounded choice and remaining obligations.

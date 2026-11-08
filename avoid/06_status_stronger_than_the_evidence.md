@@ -49,6 +49,20 @@ a legacy-key guide in 19; headlines that still outrun their reviews.
 
 ## Instead
 
+**Manuscript integration is not proof promotion (8 November 2026).**
+The [Green/resolvent integration check03](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/01_green_potential_resolvent/reviews/03_TND_OG_E04_MANUSCRIPT_INTEGRATION_CHECK_20261108.md)
+states: “Manuscript integration does not strengthen the evidence status
+of its sources.” Its complete quadratic acquisition theorem and local
+logarithmic acquisition theorem have different scopes from the still
+unexecuted complete signed-log assembly; all three are distinct from a
+favorable canonical value. Preserve the source assessment levels and
+label the unexecuted assembly as a target even when the surrounding
+derivations have been polished into one manuscript. Compilation and
+visual checks establish production quality, not new mathematical
+acceptance. Prepared for Edward Baker with substantial OpenAI Codex LLM
+assistance; actual model/effort not recorded; same-assistant production
+check only.
+
 Use the status vocabulary of [`result-summaries/README.md`](../result-summaries/README.md) and the source's own words; state the hypothesis that does the work in the headline; run the originality search before "new" (house rule 2 of [`CONTRIBUTING.md`](../CONTRIBUTING.md); item C2 of the [first-slab protocol](../papers/weil-positivity/shifted-zeta/first-slab-positivity/verification/PROTOCOL_C1_C2.md)); when a claim is withdrawn, write the withdrawal into the file that made it, not only into a review ([`REDACTION_CHECKLIST.md`](../early-chat-logs/initial-project-files/rh3/REDACTION_CHECKLIST.md) item 9: corrections get a pointer, never a silent fix).
 
 22 October 2026 — actual finite-fiber estimating gains, prepared for

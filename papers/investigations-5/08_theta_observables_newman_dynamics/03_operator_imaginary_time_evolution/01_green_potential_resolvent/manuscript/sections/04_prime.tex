@@ -1,0 +1,101 @@
+\section{The exact arithmetic baseline at time zero}\label{sec:prime}
+
+The Green identity is geometric. On the zeta slice, the safe boundary
+and center can be removed exactly in favor of a convergent prime sum.
+This step preserves the signed boundary information.
+
+\begin{proposition}[Prime decomposition]\label{prop:prime}
+Let
+\[
+ \mathcal L(X)=\int_\R K(x-X)\log|\zeta(1/2-\ii x/2)|\dd x,
+\]
+and
+\begin{equation}\label{eq:P}
+ P(X)=\sum_{n\ge2}\frac{\Lambda_{\rm vM}(n)}{\log n}
+       \frac{n^{-5/2}}{1+n^{-4}}
+       \cos\left(\frac X2\log n\right).
+\end{equation}
+Then the logarithmic integral is absolutely convergent, the prime-power
+series converges absolutely and uniformly on \(\R\), and
+\begin{equation}\label{eq:prime}
+ J_0(X)=\mathcal L(X)-P(X)+G(X,1).
+\end{equation}
+For an integer \(Q\ge2\), its truncation satisfies
+\begin{equation}\label{eq:prime-tail}
+ |P(X)-P_Q(X)|\le\beta_Q:=\frac23Q^{-3/2}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Under \(s(z)=1/2-\ii z/2\), the heights \(0,4,8\) correspond to
+real parts \(1/2,5/2,9/2\). In the xi factorization
+\eqref{eq:xi}, the logarithmic moduli of \(s\), \(\pi^{-s/2}\),
+\(\Gamma(s/2)\), and the constant are harmonic on a neighborhood
+of the closed strip. The zero of \(s\) is at \(-\ii\), outside
+the strip. Gamma has neither zeros nor poles there, and Stirling
+growth makes its logarithmic modulus at most linear plus logarithmic
+in horizontal height \cite{DLMFGreenPrime}. Exponential Poisson
+decay therefore removes vertical-side terms and these harmonic
+contributions have zero \(\calJ\).
+
+The factor \(s-1\) has its zero at \(z=\ii\) and contributes
+\emph{plus} \(G(X,1)\). This accounts for the pole of zeta; the
+zeta logarithm is not treated as harmonic across \(s=1\).
+Subtracting the elementary and gamma logarithms from
+Lemma~\ref{lem:unit-log} also proves weighted absolute integrability
+of the critical-line logarithm.
+
+For \(\sigma>1\), the Euler product gives
+\[
+ \log|\zeta(\sigma-\ii x/2)|
+ =\sum_{n\ge2}\frac{\Lambda_{\rm vM}(n)}{\log n}
+       n^{-\sigma}\cos((x/2)\log n).
+\]
+The substitution \(u=\ee^{2at}\) and the beta integral yield
+\[
+ \widehat K(\omega)
+ =\frac1{16a}\int_0^\infty
+       \frac{u^{-1/2-\ii\omega/(2a)}}{1+u}\dd u
+ =\frac12\operatorname{sech}(4\omega).
+\]
+At \(\omega=(\log n)/2\), this is \((n^2+n^{-2})^{-1}\).
+The safe-boundary minus center coefficient is consequently
+\[
+ \frac{n^{-9/2}}{n^2+n^{-2}}-n^{-5/2}
+ =-\frac{n^{-5/2}}{1+n^{-4}}.
+\]
+Absolute convergence justifies the interchanges and proves
+\eqref{eq:prime}. Finally
+\(\Lambda_{\rm vM}(p^k)/\log(p^k)=1/k\), and the coefficient
+vanishes off prime powers. Thus
+\[
+ |P-P_Q|\le\sum_{n>Q}n^{-5/2}
+          \le\int_Q^\infty t^{-5/2}\dd t=\frac23Q^{-3/2}.
+\]
+The integer cutoff is part of this integral-test bound.
+\end{proof}
+
+A useful pole-cancelled field is
+\begin{equation}\label{eq:F}
+ q(s)=\frac{s-1}{s},\qquad
+ F(z)=q(s(z))\zeta(s(z))=D(z)H_0(z),\qquad
+ D(z)=\frac{16\pi^{s(z)/2}}{s(z)^2\Gamma(s(z)/2)}.
+\end{equation}
+The multiplier \(D\) is holomorphic and zero-free on a neighborhood
+of the closed strip, with harmonic logarithm of admissible growth.
+Therefore \(\calJ[F]=J_0\). On the real boundary \(|q|=1\), so
+\begin{equation}\label{eq:F-prime}
+ J_0(X)=\int_\R K(x-X)\log|F(x)|\dd x-P(X)+G(X,1).
+\end{equation}
+The plus pole correction occurs once in this \emph{single-boundary}
+prime representation. It is not added again to the already
+pole-cancelled \emph{two-boundary} functional \(\calJ[F]\).
+
+Positivity proves the lower comparison
+\(\mathcal L(X)\ge P(X)-G(X,1)\).
+The exclusion problem instead asks for an upper comparison
+\[
+ \mathcal L(X)<P(X)-G(X,1)+m(d,r).
+\]
+No such favorable bound is supplied by Proposition~\ref{prop:prime}.
+No Euler product is assigned to nonzero Newman time.
+
