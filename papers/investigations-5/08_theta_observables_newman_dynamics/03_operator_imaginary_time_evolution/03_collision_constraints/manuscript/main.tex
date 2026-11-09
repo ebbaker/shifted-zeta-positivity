@@ -1,0 +1,105 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[letterpaper,margin=1.08in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array}
+\usepackage[hidelinks]{hyperref}
+\allowdisplaybreaks[2]
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\e}{\mathrm{e}}
+
+\title{Regular Deflation and Finite-Pair Survival\\in the Newman Heat Flow}
+\author{Edward Baker\thanks{Research and drafting assisted substantially by
+OpenAI Codex. The mathematical assessments to date are internal.}}
+\date{Working draft \quad 9 November 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+In forward heat time, the squared gap of two simple real zeros satisfies
+\(q'=-8-4qB\), where \(B\) averages the logarithmic curvature of the
+field after removal of the pair. We use a second divided difference at
+the actual root nodes to estimate this curvature from a finite model.
+Derivative errors transfer with constants \(1/2,1/6,1/12\) and without
+inverse powers of the gap. Explicit real-axis theta tails and parameter
+allowances make the error budget complete. A uniform factor floor and
+three strict inequalities then confine the roots and preserve their
+simplicity through a closed time interval. We give a test for when
+unsigned confinement already pays the gap inequality, identify a cost
+of a uniform ratio bound, and show that an upper Lehmer sum controls
+the opposite force direction from the one survival requires. Exact heat
+polynomials test these distinctions. Two canonical case studies delimit
+the present evidence and leave a matched quantitative comparison open.
+\end{abstract}
+
+\input{sections/01_geometry}
+\input{sections/02_deflation}
+\input{sections/03_theta_source}
+\input{sections/04_survival}
+\input{sections/05_diagnostics}
+\input{sections/06_evidence}
+\input{sections/07_outstanding}
+
+\clearpage
+\begingroup\raggedright
+\begin{thebibliography}{9}
+\bibitem{deBoor}
+C.~de Boor, \emph{Divided differences}, Surveys in Approximation
+Theory \textbf{1} (2005), 46--69.
+\href{https://arxiv.org/abs/math/0502036v1}{arXiv:math/0502036v1}.
+
+\bibitem{RodgersTao}
+B.~Rodgers and T.~Tao, \emph{The de Bruijn--Newman constant is
+non-negative}, Forum of Mathematics, Pi \textbf{8} (2020), e6.
+\href{https://arxiv.org/abs/1801.05914v5}{arXiv:1801.05914v5}.
+
+\bibitem{COSV}
+G.~Csordas, A.~M.~Odlyzko, W.~Smith and R.~S.~Varga,
+\emph{A new Lehmer pair of zeros and a new lower bound for the
+de Bruijn--Newman constant \(\Lambda\)}, Electronic Transactions on
+Numerical Analysis \textbf{1} (1993), 104--111.
+\href{https://etna.ricam.oeaw.ac.at/vol.1.1993/pp104-111.dir/pp104-111.pdf}
+{Corrected edition, 29 June 1994}.
+
+\bibitem{Stopple}
+J.~Stopple, \emph{Lehmer pairs revisited}, Experimental Mathematics
+\textbf{26} (2017), 45--53.
+\href{https://arxiv.org/abs/1508.05870v2}{arXiv:1508.05870v2}.
+
+\bibitem{OARecord}
+E.~Baker, \emph{Collision constraints and alternatives}, project research
+notes and analytical assessments, 8--9 November 2026.
+Investigation 5/08, operator imaginary time, \path{03_collision_constraints}.
+
+\bibitem{RTTransfer}
+E.~Baker, \emph{Corrected propagation and a contour requirement for
+exterior force}, Rodgers--Tao application Note 02, internal project
+record, 26 October 2026.
+
+\bibitem{RTPilot}
+E.~Baker, \emph{Canonical two-root margins and a paid exterior-force
+budget}, Rodgers--Tao application Note 03, internal project record,
+26 October 2026.
+
+\bibitem{HDCWall}
+E.~Baker, \emph{Complete theta wall and coefficient certificate},
+height-dependent heat contours Note 13, internal project record,
+23 October 2026.
+
+\bibitem{ControlInventory}
+Shifted zeta positivity project, \emph{Collision controls and the
+screening they impose}, internal evidence index and source crosswalk.
+Repository path \path{result-summaries/12_collision_controls_and_screening.md}.
+\end{thebibliography}
+\endgroup
+\end{document}

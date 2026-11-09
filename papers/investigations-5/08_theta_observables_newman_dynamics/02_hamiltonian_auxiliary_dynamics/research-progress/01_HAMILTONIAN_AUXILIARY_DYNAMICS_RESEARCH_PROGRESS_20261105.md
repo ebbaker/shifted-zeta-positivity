@@ -1,15 +1,16 @@
-**Historical document — superseded for current priorities and routing on
-8 November 2026 by [02 / current research-progress](02_TND_A_COLLISION_PRIORITIES_RESEARCH_PROGRESS_20261108.md).**
-Prepared for Edward Baker with OpenAI Codex assistance; actual current
-model/effort unavailable. Earlier task statuses and recommendations below
-are dated history. Progress02 is now the sole live TND-A register.
-Original mathematical sources and issued requests remain in place.
+**Destination correction — 8 November 2026.** The author intended the
+priority renewal for localized zero correlations. Auxiliary E06 routing is
+withdrawn; this original document governs again, with **E03 r1 / Sol** as
+the next task and **progress01** as sole live register. Mathematical
+results and issued packets are preserved. [Correction and continuation](../notes/06_TND_A_MISDIRECTED_PRIORITY_WITHDRAWAL_20261108.md).
+For Edward Baker with OpenAI Codex assistance; actual current model/effort
+unavailable, OC chat0006.
 
 # Hamiltonian auxiliary dynamics: research progress
 
 5 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort ultra**, verified in turn metadata. Investigation08 chat0003.
 
-**Historical ownership statement at issuance: this was the sole current register for TND-A tasks.** Created at the author's explicit request for branch progress files. The [parent register][shared-progress] owns shared TND tasks and a crosswalk, not a second copy of these live statuses. No previous branch progress file exists.
+**This is the sole current register for TND-A tasks.** Created at the author's explicit request for branch progress files. The [parent register][shared-progress] owns shared TND tasks and a crosswalk, not a second copy of these live statuses. No previous branch progress file exists.
 
 ## Next task
 
@@ -191,6 +192,13 @@ external task or original mathematical source was changed.
 [frozen request][e03-request]. It remains issued and unactivated; E04 is
 pending. The manuscript request does not activate either successor.
 
+
+## Preserved filing history — withdrawn by the destination correction
+
+The following E06 activation belongs to the mistaken auxiliary renewal.
+It has no current priority authority; the author corrected its destination
+to OC on 8 November 2026. E06 r1/r2 returns remain historical evidence.
+
 ## TND-A-E06 activation — 8 November 2026
 
 The author requests a new auxiliary research overview, corresponding plan
@@ -212,3 +220,27 @@ at the author's request while the parallel brainstorm proceeds.
 Chat refresh still fails with unsupported_public_content; the prior
 verified OC archive remains intact. Do not move or duplicate this existing
 chat registration or bypass the exporter's preservation check.
+
+
+## Corrected destination and restored ownership — 8 November 2026
+
+For Edward Baker with OpenAI Codex assistance, actual model/effort
+unavailable, OC chat0006, under TND-OC-E11. The earlier renewal and Green
+advisory integration belonged to OC. This progress01 is restored as the
+sole live TND-A register; progress02 is withdrawn historical evidence.
+E03 r1 is again the default issued, unactivated task; E04 remains pending.
+E06 is completed misdirected documentation, with its priority effect
+withdrawn. Its B03 default, E07/E08 reservations and B01 r2 gate are not
+current tasks to execute. Existing completed mathematical statuses above
+are unchanged.
+
+Auxiliary chat0004 separately activated B03, then its turn was interrupted
+before producing a research result; read-only inspection found it idle.
+That activation and authentic archive are preserved. B03 is withdrawn
+from the corrected routing, not labelled a failed theorem or completed
+research. No message, chat cancellation or archive edit was performed.
+See [correction Note06](../notes/06_TND_A_MISDIRECTED_PRIORITY_WITHDRAWAL_20261108.md).
+
+The existing frozen E03 mathematical request/manifest remain unchanged;
+reconcile recorded root-policy/navigation version differences before
+execution. No new auxiliary task is activated by this restoration.

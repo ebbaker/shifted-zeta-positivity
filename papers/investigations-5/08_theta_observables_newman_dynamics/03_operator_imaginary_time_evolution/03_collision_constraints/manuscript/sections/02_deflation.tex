@@ -1,0 +1,148 @@
+\section{Regular deflation and transfer of force errors}
+\label{sec:deflation}
+
+Fix \(0<\Delta\le\lambda_s\le 1/2\), a center \(X\), and radii \(R,D>0\)
+with \(X>R+D\). Use the parameter box
+\begin{equation}
+\label{eq:box}
+\mathcal K=\{(\tau,c,d,v):0\le\tau\le\Delta,\ |c-X|\le R,\
+                  0\le d\le D,\ -1\le v\le1\},
+\end{equation}
+with \(a=c-d,\ b=c+d,\ x=c+dv\). Write
+\(I=[X-R-D,X+R+D]\) for the containing real interval. The box includes
+virtual node pairs, including the coincident nodes at \(d=0\).
+
+\begin{lemma}[Deflation at shared nodes]
+\label{lem:deflation}
+For \(f\in C^4(I)\) define
+\begin{equation}
+\label{eq:simplex}
+\mathcal D_{a,b} f(x)=
+\int_0^1\!\int_0^{1-s} f''((1-s-t)a+tb+sx)\,\dd t\,\dd s .
+\end{equation}
+This is the continuous second divided difference. For distinct
+\(a,b,x\) it equals
+\[
+\frac{f(x)-L_{a,b}f(x)}{(x-a)(x-b)},
+\]
+where \(L_{a,b}f\) is the affine interpolant at \(a,b\). When \(a=b\),
+the affine term is \(f(a)+(x-a)f'(a)\). Values at repeated evaluation
+nodes are given by the continuous integral. For \(j=0,1,2\), the
+operator \(\partial_x^j\mathcal D_{a,b}\) has the bound
+\[
+\big|\partial_x^j\mathcal D_{a,b} f(x)\big|
+\le \frac{\|f^{(j+2)}\|_{L^\infty(I)}}{(j+1)(j+2)} .
+\]
+\end{lemma}
+
+\begin{proof}
+Integrate first in \(t\) for \(a\ne b\) and then in \(s\) to obtain
+\[
+\mathcal D_{a,b} f(x)=
+\frac{1}{b-a}\left(\frac{f(x)-f(b)}{x-b}
+                  -\frac{f(x)-f(a)}{x-a}\right).
+\]
+Putting the terms over a common denominator yields the interpolation
+formula. Continuity of the integral and the limiting affine
+interpolant give the repeated-node claims. Differentiating at fixed
+\(a,b\) inserts \(s^j\) and \(f^{(j+2)}\); its weight has total
+mass \(\int_0^1 s^j(1-s)\,\dd s=1/((j+1)(j+2))\).
+This is the second-order case of the Genocchi--Hermite formula
+\cite[\S9, (52)]{deBoor}.
+\end{proof}
+
+Choose one sign \(\sigma\in\{-1,1\}\) and a real model \(P(\tau,x)\) of class \(C^4\) in \(x\).
+For \(j=0,1,2\) put
+\[
+U_j=\partial_x^j\mathcal D_{a,b}(\sigma h)(x),\qquad
+V_j=\partial_x^j\mathcal D_{a,b}(\sigma P)(x).
+\]
+The evaluation derivatives precede substitution of \(x=c+dv\).
+At actual roots \(U_0=\sigma U\), \(U_j=\sigma\partial_x^jU\);
+at a coincident double root the same statement holds with quadratic
+division. In contrast the model uses the affine subtraction even
+at actual root nodes, so its zeros need not coincide with the pair.
+At \(a=b=x\) the three values for the true field are
+\(\sigma h_{xx}/2,\ \sigma h_{xxx}/6,\ \sigma h_{xxxx}/12\),
+recovering \eqref{eq:event-curvature} at a double zero.
+
+If \(|\partial_x^k(h-P)|\le\epsilon_k\) on \([0,\Delta]\times I\) for
+\(k=2,3,4\), Lemma~\ref{lem:deflation} gives on \(\mathcal K\)
+\begin{equation}
+\label{eq:deflation-error}
+|U_j-V_j|\le e_j,\qquad
+ e_j=\frac{\epsilon_{j+2}}{(j+1)(j+2)}\quad (j=0,1,2).
+\end{equation}
+The transfer uses derivative errors. For example the real-axis
+residual \(\epsilon\cos(\omega(x-x_0))\) has sup norm at most
+\(\epsilon\) but a divided difference of magnitude
+\(\epsilon\omega^2/2\) at \(a=b=x=x_0\).
+
+\begin{proposition}[Conditioned signed force transfer]
+\label{prop:force}
+Assume on the full box that
+\begin{equation}
+\label{eq:model-floor}
+V_0\ge m>e_0,\qquad |V_1|\le M_1,\qquad |V_2|\le M_2.
+\end{equation}
+Set
+\begin{equation}
+\label{eq:force-constants}
+\begin{aligned}
+A&=\frac{M_1+e_1}{m-e_0},&
+K&=\frac{M_2+e_2}{m-e_0}+A^2,\\
+\alpha&=\frac{e_1+M_1e_0/m}{m-e_0},&
+\kappa&=\frac{e_2+M_2e_0/m}{m-e_0}
+     +\alpha\left(A+\frac{M_1}{m}\right).
+\end{aligned}
+\end{equation}
+At actual root pairs, \(|g|\le A\), \(|g_z|\le K\), and
+\[
+\left|g_z-\left(\frac{V_2}{V_0}-\left(\frac{V_1}{V_0}\right)^2\right)\right|
+\le\kappa .
+\]
+In particular, if
+\begin{equation}
+\label{eq:signed-model}
+ b_P\ \ge\
+ \sup_{\tau,c,d}\frac12\int_{-1}^1
+ \left(\frac{V_2}{V_0}-\left(\frac{V_1}{V_0}\right)^2\right)\dd v ,
+\end{equation}
+then \(B\le b_P+\kappa\).
+\end{proposition}
+
+\begin{proof}
+Equation~\eqref{eq:deflation-error} gives \(U_0\ge m-e_0>0\).
+The quotients \(U_1/U_0\) and \(U_2/U_0-(U_1/U_0)^2\) give
+\(g\) and \(g_z\). Their direct bounds are \(A\) and \(K\).
+For \(i=1,2\),
+\[
+\frac{U_i}{U_0}-\frac{V_i}{V_0}
+=\frac{U_i-V_i}{U_0}-\frac{V_i(U_0-V_0)}{U_0V_0},
+\]
+whose absolute bound is \((e_i+M_i e_0/m)/(m-e_0)\).
+Multiply the bound for \(i=1\) by \(A+M_1/m\) to compare the
+squares and add the bound for \(i=2\). The probability weight
+\(\dd v/2\) in \eqref{eq:gap-law} transfers the same error to
+the signed integral.
+\end{proof}
+
+The negative square in \eqref{eq:signed-model} is retained before
+adding errors. A common nonzero real scaling of \(h,P\) multiplies
+\(m,M_i,e_i\) by the absolute scale and leaves the force constants
+invariant, provided \(\sigma\) is reversed for negative scaling.
+The formulas contain no explicit inverse gap. Their conditioning
+depends on the paid factor floor \(m-e_0\).
+
+A useful necessary condition on the box follows at \(d=0\), where
+\(V_0=\sigma P_{xx}(\tau,c)/2\) and \(U_0=\sigma h_{xx}(\tau,c)/2\).
+Thus
+\begin{equation}
+\label{eq:curvature-screen}
+\sigma P_{xx}(\tau,c)\ge2m,\qquad
+\sigma h_{xx}(\tau,c)\ge2(m-e_0)>0
+\end{equation}
+on the center slab \([0,\Delta]\times[X-R,X+R]\). A curvature zero
+there rules out this uniform floor on the proposed box. Conversely,
+the slice check leaves the separated virtual nodes and the signed
+force bound to be verified.

@@ -1,0 +1,230 @@
+\section{When signed force changes the survival test}
+\label{sec:diagnostics}
+
+\subsection{An unsigned comparison}
+
+The signed estimate enters the survival criterion through the
+integral \(E_\beta(\Delta)\). On the same box, the bound
+\(\lvert g_x\rvert\le K\) already gives \(B\le K\). If a signed bound
+\(\beta_{\mathrm s}\) is available, one can use
+\(\beta=\min\{K,\beta_{\mathrm s}\}\).
+For \(\Delta>0\), \(E_\beta(\Delta)=\int_0^\Delta e^{4\beta t}\,dt\)
+is strictly increasing in \(\beta\). Thus a signed bound can improve
+the gap test on a fixed box only when \(\beta_{\mathrm s}<K\). The
+following implication identifies boxes where the unsigned comparison
+already ensures a positive gap margin.
+
+\begin{proposition}[Redundancy of the signed gap test]
+\label{thm:redundancy}
+Suppose the starting data and uniform deflated-factor bounds of the
+survival theorem hold. Assume the two strict confinement inequalities in
+\eqref{eq:survival-margins}. If
+\begin{equation}
+ Q_-Q_+>32D^2\Delta,
+ \label{eq:redundancy-screen}
+\end{equation}
+the gap condition in \eqref{eq:survival-margins} holds with \(\beta=K\).
+\end{proposition}
+
+\begin{proof}
+Since \(K\ge0\), upper-gap confinement gives
+\[
+ E_K(\Delta)\le\Delta e^{4K\Delta}
+       <\frac{4D^2\Delta}{Q_+}.
+\]
+Hence \(Q_--8E_K(\Delta)>Q_- - 32D^2\Delta/Q_+>0\).
+The integral bound includes \(K=0\).
+\end{proof}
+
+The converse fails in the class of real polynomial heat solutions.
+For
+\[
+ h(\tau,z)=(z-X)^2+2(\tau-T),\qquad T=\tfrac14,
+\]
+the exact deflated factor is \(1\), so \(A=K=B=0\),
+\(c=X\) and \(q(\tau)=8(T-\tau)\) on the real-pair side.
+Choose \(Q_-=Q_+=2\), \(D=1\), \(\Delta=3/16\),
+\(R_0=0\), and \(X>R+1\) with \(R>0\). The two confinement
+inequalities hold, and \(Q_--8E_0(\Delta)=1/2>0\), although
+\(Q_-Q_+=4<6=32D^2\Delta\).
+At the exact collision horizon \(\Delta=T\), the sharp initial
+bound instead gives \(Q_--8E_0(T)=0\). For any \(D^2>2T\)
+ensuring strict initial upper-gap confinement,
+\(Q_-Q_+=64T^2<32D^2T\), so the redundancy condition
+also fails at that horizon. For this implementation a failed screen
+therefore leaves the direct unsigned gap test to be evaluated.
+The scale \(q(0)/8\) in the quadratic is a reference scale for a
+tight box with \(4D^2\) comparable to \(q(0)\).
+
+\subsection{Conditioning of separate uniform constants}
+
+Even with a small source error, the numerator and denominator
+entering \(A\) in \eqref{eq:force-constants} may be constrained at
+different endpoints. At an actual simple pair let \(\delta=b-a>0\)
+and write \(h=(z-a)(z-b)U(z)\), where \(U\) here is the unscaled
+deflated factor. Differentiation gives
+\begin{equation}
+ U(a)=-\frac{h_x(a)}{\delta},\qquad
+ U(b)=\frac{h_x(b)}{\delta},\qquad
+ U_x(a)=\frac{2U(a)-h_{xx}(a)}{2\delta}.
+ \label{eq:conditioning-jets}
+\end{equation}
+The same box bounds both endpoints, so \(M_1+e_1\ge\lvert U_x(a)\rvert\)
+and \(0<m-e_0\le\lvert U(b)\rvert\), with the common sign chosen
+as in the transfer lemma. It follows that
+\begin{equation}
+ A\ge \frac{\lvert U_x(a)\rvert}{\lvert U(b)\rvert},
+ \qquad K\ge A^2.
+ \label{eq:uniform-cost}
+\end{equation}
+Strict numerical inequalities in opposite directions for the two
+endpoint quantities can therefore force a lower bound on the
+\emph{allowances} \(A\) and \(K\), independent of the truncation
+order. Their quotient in \eqref{eq:uniform-cost} is invariant under
+common scalar normalization. It measures the cost of using separate
+uniform constants. A pointwise relative estimate can preserve the
+correlation between the numerator and its own denominator.
+
+For comparison, the actual root jets give the identity
+\[
+ c'=-\frac12\left(\frac{h_{xx}(a)}{h_x(a)}
+                 +\frac{h_{xx}(b)}{h_x(b)}\right)
+\]
+on a simple-root slab. Bounds for these quotients require paid slope
+floors, and can produce a smaller midpoint allowance than \(2A\) on
+a slab where those floors are available. An exterior energy budget can
+also be compared in the same normalization. In Newman time,
+\(q_\lambda=8+4qB\) by \eqref{eq:gap-law}. For the ordered two-root
+energy \(\mathcal E=2/q\) this yields
+\begin{equation}
+ \mathcal E_\lambda=-4\mathcal E^2+B_{\mathrm{RT}},
+ \qquad B_{\mathrm{RT}}=-\frac{8B}{q}.
+ \label{eq:rt-conversion}
+\end{equation}
+Equations \eqref{eq:conditioning-jets}--\eqref{eq:rt-conversion}
+allow the comparison to use the same root pair, interval, and force
+normalization.
+
+\subsection{The direction of the Lehmer sum}
+
+For this comparison, assume at a fixed slice that the exterior
+product gives
+\[
+ g_x(x)=-\sum_{\rho\ne a,b}(x-\rho)^{-2}
+\]
+on the closed segment of the actual simple pair. In a finite product
+this follows by logarithmic differentiation. For a genus-one product
+the linear exponential factors contribute zero to \(g_x\), and the
+squared reciprocal tail ensures absolute and uniform convergence on
+the segment. Indeed, for sufficiently distant zeros
+\(\inf_{x\in[a,b]}|x-\rho|\ge|\rho|/2\), and the finitely many nearer
+exterior zeros are separated from the segment. The sign argument
+requires every exterior zero to be real and outside \([a,b]\).
+These extra hypotheses concern this comparison alone.
+
+Set \(\delta=b-a\), \(q=\delta^2\), and
+\[
+ G=\sum_{\rho\ne a,b}
+      \bigl((a-\rho)^{-2}+(b-\rho)^{-2}\bigr),
+ \qquad
+ S=\sum_{\rho\ne a,b}\frac{1}{(a-\rho)^2(b-\rho)^2}.
+\]
+The mean of \(-(x-\rho)^{-2}\) over \([a,b]\) is
+\(-1/((a-\rho)(b-\rho))\). Put \(u=a-\rho\) and \(v=b-\rho\).
+Then
+\[
+ u^{-2}+v^{-2}-2(uv)^{-1}
+     =\frac{(v-u)^2}{u^2v^2}.
+\]
+Summing gives
+\begin{equation}
+ G+2B=qS\ge0,\qquad -G/2\le B\le0.
+ \label{eq:lehmer-identity}
+\end{equation}
+The upper bound is strict at slices with at least one real exterior
+zero, since each product \(uv\) is positive. It supplies no
+quantitative negative margin by itself.
+
+The information direction is fixed by \eqref{eq:gap-law}.
+An upper bound \(G\le G_*\) gives \(B\ge-G_*/2\) and hence
+\(q'\le-8+2G_*q\). A survival lower bound uses \(B\le\beta\)
+to obtain \(q'\ge-8-4\beta q\). A value of \(G\) at one slice
+also leaves its behavior over the rest of the slab open. To
+improve the upper bound \(B\le0\) within the real-product class,
+one would need additional information, for instance a lower
+bound for a positive contribution to \(-B\) from known exterior
+zeros. Real-axis source estimates can also give an upper force
+bound without the real-product hypothesis.
+
+With complex conjugate exterior zeros the identity can persist
+whenever the product formula and convergence still hold. Conjugation
+makes the combined contribution real, with no fixed sign. For a conjugate pair
+\(\rho,\bar\rho\), write \(P=(a-\rho)(b-\rho)\). Its contributions
+to \(S\) and \(B\) are \(2\operatorname{Re}(P^{-2})\) and
+\(-2\operatorname{Re}(P^{-1})\), respectively. For example, the
+real-polynomial snapshot with \(a=1,b=3\) and
+\(U(z)=(z-1)^2+1\) has \(P=-1-2i\) at \(\rho=1+i\).
+It gives \(S=-6/25\) and \(B=2/5\), exhibiting failure of
+both signs in \eqref{eq:lehmer-identity} in the complex-exterior
+class.
+
+\subsection{A quartic collision with negative force}
+
+Consider the forward heat evolution
+\begin{equation}
+ h(\tau,z)=z^4+(12\tau-5)z^2+12\tau^2-10\tau+4 .
+ \label{eq:lehmer-quartic}
+\end{equation}
+Both \(h_\tau\) and \(h_{zz}\) equal \(12z^2+24\tau-10\).
+At zero time the roots are \(-2,-1,1,2\). With \(a=1,b=2\),
+the distances to the two exterior zeros are \((2,3)\) and \((3,4)\).
+Consequently
+\[
+ q=1,\qquad G=\frac14+\frac29+\frac1{16}=\frac{77}{144},
+ \qquad B=-\frac16-\frac1{12}=-\frac14,\qquad S=\frac5{144}.
+\]
+Thus \(qG<4/5\), the algebraic Lehmer diagnostic, and
+\(G+2B=qS>0\). The positive pair nonetheless collides. To see this,
+the quadratic in \(w=z^2\) has discriminant
+\[
+ \mathcal D(\tau)=96\tau^2-80\tau+9,\qquad
+ T=\frac{10-\sqrt{46}}{24}
+\]
+with \(T\) its first zero. For \(0\le\tau<T\) the two \(w\)-roots
+are real and distinct. Their sum is \(5-12\tau>0\) and their
+product is \(12(\tau-5/12)^2+23/12>0\), so both are positive.
+At \(T\) the polynomial is \((z^2-r^2)^2\), where
+\(r^2=\sqrt{46}/4\). In particular \(h_{zz}(T,r)=2\sqrt{46}>0\).
+The event is a nondegenerate local double at \(r\), with a separate
+reflected double at \(-r\). The discriminant is negative just
+after \(T\).
+
+Throughout \(0\le\tau<T\), the negative pair contributes
+\[
+ B=-\frac{1}{2a(a+b)}-\frac{1}{2b(a+b)}=-\frac{1}{2ab}<0 .
+\]
+The law with zero exterior force and \(q(0)=1\) would close at
+\(1/8\). Here \(q'>-8\) before the event and \(1/8<T<1/4\).
+Thus the favorable force delays this collision while the gap
+still closes. The backward-heat field
+\(F_\lambda(z)=h(1/4-\lambda,z)\) has its collision at
+\(\lambda_*=(\sqrt{46}-4)/24>0\). This control concerns
+polynomial heat solutions. Its collision rules out simultaneously
+meeting the strict survival hypotheses on a box containing the
+pair up to the event.
+
+\subsection{Normalization of the historical data}
+
+For the heat integral in Stopple's notation \cite{Stopple}, the source
+is \(2\Phi(u/2)\), where \(\Phi\) is the kernel used here. With
+\(\widehat H_t\) denoting Stopple's deformation, the substitution
+\(u=2w\) gives
+\[
+ \widehat H_t(\gamma)
+   =\int_0^\infty e^{tu^2}2\Phi(u/2)\cos(\gamma u)\,du
+   =4 H_{4t}(2\gamma).
+\]
+Since \(\Xi=2\widehat H_0\), this also yields
+\(H_0(x)=\Xi(x/2)/8\). Thus \(x=2\gamma\) and \(\lambda=4t\).
+The endpoint sum in ordinate units is \(G_\gamma=4G_x\),
+while \(q_\gamma=q_x/4\), so the diagnostic \(qG\) is invariant.

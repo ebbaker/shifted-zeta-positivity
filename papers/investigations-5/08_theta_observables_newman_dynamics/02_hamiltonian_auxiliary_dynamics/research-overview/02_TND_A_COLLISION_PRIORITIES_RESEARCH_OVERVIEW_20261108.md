@@ -1,3 +1,12 @@
+**WITHDRAWN AS CURRENT ROUTING — corrected destination, 8 November 2026.**
+The author meant localized zero correlations, not this auxiliary branch.
+This E06 document is retained as historical filing/evidence only. Its
+priority choices and successor prompts are not current instructions.
+Auxiliary progress01 and its E03 r1 default are restored.
+[Correction, preserved history and current continuation](../notes/06_TND_A_MISDIRECTED_PRIORITY_WITHDRAWAL_20261108.md).
+Prepared for Edward Baker with OpenAI Codex assistance; actual correction
+model/effort unavailable, OC chat0006.
+
 # Hamiltonian auxiliary dynamics and collision constraints
 
 8 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Actual recorded model and effort are unavailable in the current chat. This is the author-requested TND-A-E06 priority and documentation renewal; it adds no mathematical result.
@@ -29,8 +38,11 @@ avenue in [localized zero correlations](../../03_operator_imaginary_time_evoluti
 This auxiliary branch does not depend on its success, and it does not
 require that project to produce an immediate collision theorem. The
 [recent program-fit diagnosis](../../03_operator_imaginary_time_evolution/02_localized_zero_correlations/notes/14_TND_OC_B08_ARITHMETIC_MARGINAL_COLLISION_FRICTION_20261108.md)
-motivates this distinction. Revision of the operator program is deferred
-until the author incorporates the parallel direct-branch brainstorm.
+motivates this distinction. The subsequently supplied
+[Green advisory](../../03_operator_imaginary_time_evolution/01_green_potential_resolvent/brainstorm/notes/10_TND_OG_COLLISION_DYNAMICS_AND_PARALLEL_PROBES_20261108.md) now sharpens the time, conditioning and
+visibility requirements below. It is filed in OG after a corrected
+earlier direct-branch filing. Its source status remains proof-author
+checked. The operator-wide overview revision is a separate deferred task.
 
 ## 2. What has actually been established
 
@@ -79,8 +91,16 @@ The equations for the two parameters also differ:
 \partial_\tau\mathcal O=(q'/q-z^2)\mathcal O.
 \tag{2}
 \]
-Newman time lambda, auxiliary Euclidean time tau and unitary laboratory
-time are distinct. No clock identification is part of the result.
+There are two heat clocks with different roles. Reserve \(\tau\) for
+the auxiliary evolution above, and write the collision clock as
+\[
+t=\lambda_{\rm ref}-\lambda,\qquad
+h(t,z)=H_{\lambda_{\rm ref}-t}(z),\qquad h_t=h_{zz}.
+\]
+The Green advisory calls this collision clock tau; it is renamed here
+to avoid identifying it with auxiliary proper time. Increasing t
+decreases Newman lambda. Auxiliary tau at fixed lambda preserves every
+zero in (1). Unitary laboratory time is a further distinct parameter.
 
 The calibrated source placement, its complete arithmetic scan, passive
 reference bank, absolute gains and phase-sensitive readout are supplied
@@ -148,7 +168,12 @@ The bound must hold throughout the region; values at isolated probes do
 not establish the infimum. This is a finite-region verification consumer,
 not a new estimate or an RH claim. Saying merely that the exact pair is
 nonzero restates the finite target. The substantive work is to acquire
-and compare the two sides with complete errors.
+and compare the two sides with complete errors. At lambda=0 a real
+multiple zero is compatible with RH; excluding it also addresses
+simplicity. A positive-threshold conclusion requires a separate
+implication from that hypothesis to the selected event class.
+A finite isolated-double result does not cover higher multiplicities,
+endpoints or all heights.
 
 An alternative consumer may bound a collision-conditioned jet, the
 influence of exterior zeros, or a time-integrated approach to a pair.
@@ -177,6 +202,69 @@ A practical advantage requires a new justified acquisition/error model
 or lower complete cost at the same accuracy. The scalar inverse
 amplification \(e^{\tau k^2}/q(\tau)\) is already known to be unbounded
 as real |k| grows for fixed positive tau.
+
+### What collision dynamics requires from a proposed estimate
+
+The [Green advisory, §§2–5](../../03_operator_imaginary_time_evolution/01_green_potential_resolvent/brainstorm/notes/10_TND_OG_COLLISION_DYNAMICS_AND_PARALLEL_PROBES_20261108.md), checked locally in
+[Note05](../notes/05_TND_A_GREEN_ADVISORY_INTEGRATION_20261108.md),
+supplies conditional consumers rather than new canonical bounds.
+
+**Time must match.** The current OG arithmetic acquisition and OC B06/E08
+statistical specification concern lambda=0. The auxiliary representation's
+validity on compact lambda ranges does not supply arithmetic margins
+throughout those ranges. A positive-time collision argument needs a
+same-time probe, a quantitative transport to time zero, or another proved
+detectable consequence there. A local square-root zero germ has
+event-dependent remainder and drift; it does not supply that transport.
+
+**A force bound must act over an approach interval.** Write
+\(q_{\rm gap}=(r_+-r_-)^2\), distinct from the attenuation q(tau).
+For an isolated real pair the inherited law is
+\(q_{\rm gap}'=-8-4q_{\rm gap}B\), with B the averaged second logarithmic
+derivative of its nonvanishing deflated factor. A signed bound \(B\le b\)
+through an interval of length Delta can exclude a first pair collision if
+\[
+q_{\rm gap}(0)>8E_b(\Delta),\qquad
+E_b(\Delta)=
+\begin{cases}
+(e^{4b\Delta}-1)/(4b),&b\ne0,\\
+\Delta,&b=0.
+\end{cases}
+\tag{7}
+\]
+Initial-gap information and persistence of isolation/boundedness are
+essential. B finite at an event is compatible with the terminal slope
+−8. A single local bound is not a contradiction.
+
+**The needed statistical order depends on the consumer.** A selected
+pair's signed exterior field contains a third zero. In the advisory's
+finite simple-cloud calculation its pair-weighted expectation contracts
+alpha3, not just alpha2. Conditioning also divides by the appropriate
+pair/event mass; adjacency and isolation involve the rest of the cloud.
+Specify that higher information, a direct uniform bound, or a justified
+closure, and pay its normalization. No canonical infinite-product or
+closed two-point equation follows from the finite identity.
+
+**A statistical contradiction needs visibility.** At a common time
+where the positive Green representation is justified, suppose the
+scenario forces an upper zero of depth at least d within distance r
+of every center in \(A\subset I\). A fully paid upper bound U for the
+averaged Green square would contradict it only if
+\[
+U<\frac{|A|}{|I|}
+ \left[\frac{d\sin(\pi/8)}{\cosh(\pi r/8)}\right]^2.
+\tag{8}
+\]
+The event must supply A and its measure; space-time averaging pays a
+space-time visibility fraction. Computing the square needs its one-point
+self term and full pair contraction. A connected covariance alone does
+not suffice. Pay smoothing bias, real-zero background, tails, unfolding
+and all intensity errors. A sufficiently accurate contraction can serve
+this scalar consumer without reconstructing the full pair profile.
+OC may pursue that broader profile independently.
+
+These are input specifications within the two B03 routes, not additional
+candidate mechanisms. No bound in (7) or (8) is acquired by this update.
 
 ## 5. The next conceptual choice
 
@@ -214,8 +302,9 @@ The [Green branch](../../03_operator_imaginary_time_evolution/01_green_potential
 and [collision-constraint alternatives](../../03_operator_imaginary_time_evolution/03_collision_constraints/README.md)
 are useful comparators. They keep their own tasks. This branch's distinctive
 question is what the Hamiltonian auxiliary construction contributes.
-The forthcoming operator brainstorm is neither presumed complete nor a
-blocking prerequisite for this documentation.
+The now-available Green advisory is consumed at its stated scope.
+Its references to OA, OG, OC and direct tasks do not transfer ownership
+to this branch. The broader operator rewrite remains deferred.
 
 ## 6. Evidence and the control screen
 
@@ -252,5 +341,6 @@ bounds the next work. The
 owns TND-A status. The [previous overview](01_HAMILTONIAN_AUXILIARY_DYNAMICS_RESEARCH_OVERVIEW_20261105.md)
 and the existing manuscript preserve the full physical background;
 [reference-use06](../references/06_TND_A_E06_PRIORITY_RENEWAL_SOURCE_USE_20261108.md)
-maps the inputs used here. No manuscript expansion or source-status
+maps the inputs used here, including the dated advisory integration.
+No manuscript expansion or source-status
 promotion accompanies this priority change.

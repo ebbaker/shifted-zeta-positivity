@@ -1,9 +1,10 @@
-**Historical document — superseded for current priorities and routing on
-8 November 2026 by [02 / current research-overview](02_TND_A_COLLISION_PRIORITIES_RESEARCH_OVERVIEW_20261108.md).**
-Prepared for Edward Baker with OpenAI Codex assistance; actual current
-model/effort unavailable. Earlier task statuses and recommendations below
-are dated history. Progress02 is now the sole live TND-A register.
-Original mathematical sources and issued requests remain in place.
+**Destination correction — 8 November 2026.** The author intended the
+priority renewal for localized zero correlations. Auxiliary E06 routing is
+withdrawn; this original document governs again, with **E03 r1 / Sol** as
+the next task and **progress01** as sole live register. Mathematical
+results and issued packets are preserved. [Correction and continuation](../notes/06_TND_A_MISDIRECTED_PRIORITY_WITHDRAWAL_20261108.md).
+For Edward Baker with OpenAI Codex assistance; actual current model/effort
+unavailable, OC chat0006.
 
 # Hamiltonian auxiliary dynamics: research overview
 

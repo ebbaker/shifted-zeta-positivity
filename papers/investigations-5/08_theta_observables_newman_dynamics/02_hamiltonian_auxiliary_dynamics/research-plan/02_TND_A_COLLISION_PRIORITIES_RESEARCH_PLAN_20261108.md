@@ -1,3 +1,12 @@
+**WITHDRAWN AS CURRENT ROUTING — corrected destination, 8 November 2026.**
+The author meant localized zero correlations, not this auxiliary branch.
+This E06 document is retained as historical filing/evidence only. Its
+priority choices and successor prompts are not current instructions.
+Auxiliary progress01 and its E03 r1 default are restored.
+[Correction, preserved history and current continuation](../notes/06_TND_A_MISDIRECTED_PRIORITY_WITHDRAWAL_20261108.md).
+Prepared for Edward Baker with OpenAI Codex assistance; actual correction
+model/effort unavailable, OC chat0006.
+
 # Plan for collision-relevant Hamiltonian auxiliary research
 
 8 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Actual recorded model and effort are unavailable in the current chat. This is the author-requested TND-A-E06 priority and documentation renewal; it adds no mathematical result.
@@ -15,7 +24,7 @@ No scientific successor is activated by this documentation.
 
 | Task | Type / recommended model and reason | Readiness | Output and completion |
 | --- | --- | --- | --- |
-| TND-A-E06 | E / Sol suitable for the fixed documentation renewal; actual settings unavailable | Complete documentation renewal | New overview/plan/register, preserved evidence, ownership crosswalk and continuation |
+| TND-A-E06 | E / Sol suitable for the fixed documentation renewal; actual settings unavailable | r1 renewal complete; r2 advisory integration complete | Updated overview/plan/register, preserved evidence, conditional-interface checks and continuation |
 | **TND-A-B03 — default** | **B / Astra**, author-selected effort; target, added information and transfer remain conceptual | Ready, unactivated after E06; no E03 prerequisite | One collision-relevant design brief and bounded route decision, a tractable E07 contract, or a scoped unresolved/failed route |
 | TND-A-E07 | E / Sol, ultra where supported; fixed proof or bounded computation once specified | Reserved; B03 must freeze all inputs and method | The stated intermediate estimate/transfer or quantitative comparison, or exact failed clause |
 | TND-A-E08 | E / Sol, ultra where supported; fixed claim-level assessment | Reserved; depends on E07 result and frozen review scope | Accept, correct or reject specified claims without promoting a representation into a collision bound |
@@ -32,8 +41,11 @@ mechanism or execute B03.
 
 **Input:** the current overview; accepted E01 proof and E02 review;
 B02 Decision02 and the unchanged E03 request; the OC program-fit diagnosis;
-the inherited auxiliary-flow lesson note; and the root controls/patterns.
-The new overview links all of them at point of use.
+the inherited auxiliary-flow lesson note; the
+[Green advisory](../../03_operator_imaginary_time_evolution/01_green_potential_resolvent/brainstorm/notes/10_TND_OG_COLLISION_DYNAMICS_AND_PARALLEL_PROBES_20261108.md), §§2–5, with
+[auxiliary integration Note05](../notes/05_TND_A_GREEN_ADVISORY_INTEGRATION_20261108.md);
+and the root controls/patterns. The new overview links all inputs at point
+of use. The advisory is a proof-author checked conditional interface.
 
 **First decide the useful statement.** Specify the original canonical
 quantity, derivative units, real/complex observation domain, Newman-time
@@ -42,6 +54,32 @@ collision restriction or a substantive intermediate estimate. A complete
 RH-equivalent assertion may be recorded once as motivation, not treated
 as a tested milestone. A known final theorem is not an entry requirement
 for this conceptual task.
+
+**Required consumer specification before route comparison:**
+
+- Separate auxiliary proper time tau from the collision clock
+  \(t=\lambda_{\rm ref}-\lambda\). State both the event time and the
+  time of the arithmetic input. A time-zero estimate needs a paid
+  transport before it is used near another Newman time.
+- For a gap-lifetime target, supply an initial-gap lower bound, interval
+  length, signed exterior bound and persistent isolation; compare
+  \(q_{\rm gap}(0)\) with \(8E_b(\Delta)\). B bounded at an event alone
+  is insufficient.
+- For selected-pair statistics, state whether the required information
+  is a third-point contraction, a uniform exterior estimate or a
+  justified closure. Account for pair-selection/adjacency/isolation
+  and any small conditioning denominator.
+- For a statistical contradiction, derive a visibility set and its
+  measure at the same time as the probe. Compare the fully paid upper
+  bound with its visibility-weighted defect floor. Retain the self
+  term, full pair measure and smoothing/tail costs.
+- Distinguish a time-zero simplicity restriction, a finite
+  isolated-double event restriction and a positive-threshold conclusion.
+  State any implication connecting them rather than presuming it.
+
+A scalar contracted estimate can suffice for the chosen consumer; full
+marginal reconstruction is not imposed as a prerequisite. These
+requirements sharpen the existing two-route budget and select no route.
 
 **Compare at most two routes:** additional canonical information within
 the accepted response model, and at most one explicitly motivated
@@ -119,9 +157,10 @@ and preserve conditional/internal-review qualifications. Follow
 [branch source index](../references/README.md). No new external theorem
 is imported in this renewal.
 
-The operator and direct branches remain unchanged by this task. Their
-parallel brainstorm and future overview revision are author-controlled;
-do not activate or duplicate their work. Marginal and Green results are
+The operator and direct branches remain unchanged by this task. The
+supplied advisory is now correctly filed in OG; its input is incorporated
+without revising those programs. The broader operator overview revision
+remains author-controlled; do not activate or duplicate external work. Marginal and Green results are
 shared inputs through links, not reassigned TND-A tasks.
 
 The [continuation](../notes/04_TND_A_NEW_PRIORITIES_AND_MODEL_CONTINUATION_20261108.md)

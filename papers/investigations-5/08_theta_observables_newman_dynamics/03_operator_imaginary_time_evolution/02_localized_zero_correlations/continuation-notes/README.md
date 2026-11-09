@@ -1,3 +1,48 @@
+**Current — after E13 r1, 9 November 2026.**
+[Continuation24](24_TND_OC_AFTER_E13_AND_MODEL_CHANGE_20261109.md) routes the source-call stop and certified
+cell census to **[B] TND-OC-B10 r3 / GPT-6 Astra**, recommended and
+unactivated. Prepared for Edward Baker with OpenAI Codex assistance,
+OC chat0010, recorded thread settings GPT-6.1 Sol / ultra.
+
+**Historical — after B10 r2.** [Continuation23](23_TND_OC_AFTER_B10_R2_CLUSTER_MOMENTS_AND_MODEL_CHANGE_20261109.md)
+routes the fixed contour-count/centroid proof check and bounded pilot to
+**[E] TND-OC-E13 r1 / GPT-6.1 Sol**. Ready, unactivated; return a certified
+projected value or exact failed gate. The theorem is conditional,
+proof-author checked, and no canonical data were acquired.
+9 November 2026. Prepared for Edward Baker with substantial OpenAI Codex assistance, OC chat0009. Recorded current thread settings gpt-6-astra/max; per-turn backend configuration unavailable. Earlier dated routing below is historical.
+
+**Historical — after B10 r1.** [Continuation22](22_TND_OC_AFTER_B10_GAUSSIAN_COMPARISON_AND_MODEL_CHANGE_20261109.md)
+records the unpaid joint estimate and conditional B10 r2 / Astra gate.
+E09 / Sol remains an optional compact-window benchmark; no new E packet.
+9 November 2026. Prepared for Edward Baker with substantial OpenAI Codex assistance, OC chat0009. Recorded current thread settings gpt-6-astra/max; per-turn backend configuration unavailable. Continuation21 and earlier routing below are historical.
+
+**Current — 9 November 2026.** [Continuation21](21_TND_OC_GAUSSIAN_HEIGHT_WINDOW_AND_MODEL_CHANGE_20261109.md) routes
+the Gaussian height window to **B10 r1 / GPT-6 Astra**, ready and
+unactivated. Continuation20 preserves the earlier E12 routing.
+For Edward Baker with OpenAI Codex assistance, runtime GPT-6.1 Sol,
+reasoning effort unavailable.
+
+**Current — 8 November 2026.** [Continuation20](20_TND_OC_AFTER_E12_FULL_PAIR_ASSESSMENT_AND_MODEL_CHANGE_20261108.md) follows E12
+acceptance and routes the optional E09 benchmark and separate
+supporting assessments. Continuation19 is the historical E12 handoff.
+For Edward Baker with OpenAI Codex assistance, runtime GPT-6.1 Sol,
+effort unavailable.
+
+**Current — 8 November 2026.** [Continuation19](19_TND_OC_AFTER_E10_FULL_PAIR_PROOF_AND_MODEL_CHANGE_20261108.md) follows the
+completed E10 proof and gives the fixed E12 r1 assessment and model
+guidance. Continuation18 is the historical E10 activation handoff.
+For Edward Baker with OpenAI Codex, runtime GPT-6.1 Sol, effort unavailable.
+
+**Historical — 8 November 2026, after B09.** For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[Continuation18](18_TND_OC_AFTER_B09_FULL_PAIR_EVOLUTION_AND_MODEL_CHANGE_20261108.md)
+selects **[E] TND-OC-E10 r1 / Sol**: prove the fixed full marked
+first/pair/connected evolution bounds, or return an exact failed clause.
+E12 is reserved for assessment after the proof return. It supersedes
+[Continuation17](17_TND_OC_CORRECTED_PRIORITIES_AND_MODEL_CHANGE_20261108.md)
+in current OC routing; that correction remains a preserved input.
+[Progress02](../research-progress/02_TND_OC_MARGINAL_PRIORITIES_RESEARCH_PROGRESS_20261108.md)
+is the sole live register. Earlier routing below is historical.
+
 **8 November 2026 — B08 complete.** For Edward Baker with substantial OpenAI Codex assistance; actual model/effort unavailable.
 
 - **Current:** [Continuation16](16_TND_OC_AFTER_B08_BIFURCATION_AND_MODEL_CHANGE_20261108.md), author-directed marginal/collision split; OA-B01 default across branches, OC-B09 independent option, E09 optional benchmark. Earlier routing is historical.
@@ -46,7 +91,7 @@ is the historical B03 activation handoff, superseded in default routing only.
 
 [02 — after opening research](02_TND_OC_AFTER_OPENING_RESEARCH_20261107.md) is the historical pre-E02 handoff; [01 — setup](01_TND_OC_LOCALIZED_CORRELATIONS_CONTINUATION_20261107.md) is the earlier setup snapshot. Issued history is preserved.
 
-The sole status owner is research-progress/01_TND_OC_RESEARCH_PROGRESS_20261107.md.
+The sole status owner is research-progress/02_TND_OC_MARGINAL_PRIORITIES_RESEARCH_PROGRESS_20261108.md.
 
 - [Continuation04 — after B02 and model change](04_TND_OC_AFTER_B02_AND_MODEL_CHANGE_20261107.md): historical E03-first routing and the still-pending assessment instructions; preserve the real-zero-centered, harmonic-baseline and full-disk-absolute hypotheses.
 - [Continuation03 — after E02 and model change](03_TND_OC_AFTER_E02_AND_MODEL_CHANGE_20261107.md): historical B02-first routing. Earlier handoffs remain dated snapshots.
@@ -57,4 +102,3 @@ records the author-requested marked-pair direction, literature and RT/HCB
 predecessors. B04 technical comparison is next; E03 remains a separate
 pending audit, and the older BGST uniform error needs reconciliation
 before reuse. Earlier continuations retain their historical evidence.
-

@@ -1,10 +1,19 @@
-# Sole TND-A register for the revised priorities
+**WITHDRAWN AS CURRENT ROUTING — corrected destination, 8 November 2026.**
+The author meant localized zero correlations, not this auxiliary branch.
+This E06 document is retained as historical filing/evidence only. Its
+priority choices and successor prompts are not current instructions.
+Auxiliary progress01 and its E03 r1 default are restored.
+[Correction, preserved history and current continuation](../notes/06_TND_A_MISDIRECTED_PRIORITY_WITHDRAWAL_20261108.md).
+Prepared for Edward Baker with OpenAI Codex assistance; actual correction
+model/effort unavailable, OC chat0006.
+
+# Historical TND-A register from the misdirected renewal
 
 8 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Actual recorded model and effort are unavailable in the current chat. This is the author-requested TND-A-E06 priority and documentation renewal; it adds no mathematical result.
 
-**This is the sole current register for all TND-A tasks.** It replaces
-[progress01](01_HAMILTONIAN_AUXILIARY_DYNAMICS_RESEARCH_PROGRESS_20261105.md)
-as live owner; that file remains the historical event log. No task ID,
+**Historical ownership claim, now withdrawn.** This document previously
+replaced [progress01](01_HAMILTONIAN_AUXILIARY_DYNAMICS_RESEARCH_PROGRESS_20261105.md);
+the destination correction restores progress01 as sole live owner. No task ID,
 proof, issued request or failed evidence is deleted or renumbered.
 The parent owns shared TND tasks only.
 
@@ -12,8 +21,8 @@ The parent owns shared TND tasks only.
 
 | ID | Type / model recommendation | Status | Specification and output |
 | --- | --- | --- | --- |
-| TND-A-E06 | E / Sol suitable; actual model/effort unavailable | Complete: author-requested documentation renewal | Overview02, plan02, this register, source crosswalk and continuation; one document pass and one consistency pass |
-| **TND-A-B03** | **B / Astra**, author-selected effort | Ready, unactivated; default scientific successor | Plan02: one collision target, at most two routes and one clarification; added arithmetic information/transfer or scoped failure |
+| TND-A-E06 | E / Sol suitable; actual model/effort unavailable | r1 complete; r2 complete: Green advisory integrated | Fixed editorial integration and conditional-interface checks; no new canonical estimate or B03 activation |
+| **TND-A-B03** | **B / Astra**, author-selected effort | Activation recorded in auxiliary chat0004; turn interrupted before research output; withdrawn from corrected routing | Plan02: one collision target, at most two routes and one clarification; event/data time, gap/conditioning and visibility requirements now explicit |
 | TND-A-E07 | E / Sol, ultra where supported | Reserved; no request issued | Depends on B03 fixing the full mathematical contract and, for a changed construction, B01 r2 |
 | TND-A-E08 | E / Sol, ultra where supported | Reserved; no request issued | Fixed assessment after E07 |
 | TND-A-E03 r1 | E / Sol | Issued, unactivated; optional support | Frozen first-jet recovery request and 63-input manifest; no acquired positive canonical margin |
@@ -95,3 +104,62 @@ and [validation](../numerics/01_TND_A_E06_PRIORITY_RENEWAL_VALIDATION_20261108.j
 Chat refresh remains rejected for unsupported structured content;
 the prior verified OC history is preserved. Exact-turn final capture
 will be attempted without bypassing that limitation.
+
+## E06 r2 activation — 8 November 2026
+
+The author asks to review OG Brainstorm Note10 and incorporate relevant
+changes. Type E: fixed advisory integration into the current auxiliary
+overview, plan, progress and continuation; Sol suitable, actual current
+model/effort unavailable. One comparison/edit pass and one consistency
+pass. Root is the sole writer. B03 remains unactivated.
+
+The advisory is read-only input with proof-author checking only. Check
+its conditional gap, third-point and visibility interfaces before use;
+preserve its source status and distinguish its forward heat clock from
+the auxiliary proper time. Record the event-time/data-time restriction
+and the finite-versus-global quantifiers. No new canonical estimate,
+operator-wide rewrite, numerical run or external task-status change.
+Earlier E06 r1 returns, frozen E03 request/manifest and mathematical
+sources remain historical evidence. Chat capture retains the existing
+OC home and its currently unresolved exporter limitation.
+
+## E06 r2 disposition — 8 November 2026
+
+Integrated the supplied, correctly filed OG advisory into overview02,
+plan02 and the canonical continuation. Note05 and Review04 record the
+local conditional checks: distinct collision/auxiliary clocks, same-time
+arithmetic or quantitative transport, initial-gap and signed exterior
+bound with a time/isolation budget, selected-pair third-point information
+and normalization, and visibility-weighted Green-square comparison.
+Fixed finite label count or the necessary integrability/count moments
+are retained for the finite-cloud identity.
+
+These are explicit consumer specifications inside the existing two B03
+routes. A contracted statistic may suffice; full marginal reconstruction
+is not a prerequisite. A lambda=0 multiple-zero exclusion also concerns
+simplicity; a positive-threshold consequence needs its separate event
+implication. No new mechanism, canonical bound or scientific task is
+activated. Source status remains proof-author checked, with local
+shared-premise interface checking only.
+
+The advisory and relocation record remain read-only. OG-E06, OA-B01,
+OC-B09 and direct tasks keep their own owners. The operator-wide rewrite
+is still deferred; only auxiliary current documents and new review/
+integration records changed. E06 r1 inputs/return/validation, frozen
+E03 packets, prior mathematical sources and manuscript are preserved.
+
+[Input record10](handoffs/10_TND_A_E06_R2_ADVISORY_INPUTS_20261108.json),
+[return10](handoffs/10_TND_A_E06_R2_ADVISORY_RETURN_20261108.json) and
+[validation02](../numerics/02_TND_A_E06_R2_ADVISORY_VALIDATION_20261108.json)
+record exact versions and checks. The current turn is
+01a1bdc9-5e7d-7121-861a-be6f8574125c in existing OC chat0006.
+Actual model/effort unavailable. Chat refresh still fails on unsupported
+structured content; the prior verified archive remains intact.
+
+## Destination correction — 8 November 2026
+
+E06 r1/r2 are retained as completed but misdirected documentation. Their
+priority effect is withdrawn by the author’s correction. B03’s separate
+activation was interrupted with no result and remains historical; E07/E08
+and the proposed B01 r2 gate are withdrawn reservations. The sole live
+owner is progress01, with E03 r1 next. See Note06 above.

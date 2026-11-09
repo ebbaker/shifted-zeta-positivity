@@ -107,3 +107,16 @@ to actual nonempty target support, or an alternate integral proof to RH
 evidence. [Separate same-model review](../papers/investigations-4/08_real_thom_degree_integrals/reviews/02_ACTIVE_BULK_COMPARISON_INTERNAL_REVIEW_20261022.md)
 replaces a polynomial control's global lower-bound argument with face-only
 boundary payments, preserving the intended premise distinction.
+
+## Finite-pair signed force can be redundant, 9 November 2026
+
+Prepared for Edward Baker with substantial OpenAI Codex assistance.
+Actual model and reasoning effort unavailable. The [OA B02 design note](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/03_collision_constraints/notes/06_TND_OA_B02_CANONICAL_PILOT_AND_REDUNDANT_GAP_GATE_20261109.md)
+states: “The signed arithmetic average cannot change pass/fail of the
+survival conclusion on this candidate once its other premises have
+passed.” The selected slab already has inherited survival coverage.
+Conditionally on the floor and confinement, the unsigned \(K\) bound
+pays the gap test. The [first OA draft](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/03_collision_constraints/manuscript/README.md)
+records this scoped reason to stop before computation and retains
+the quadratic check that the sufficient redundancy screen has no
+converse.

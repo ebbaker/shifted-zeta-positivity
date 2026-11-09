@@ -1,3 +1,62 @@
+## E13 r1 replay
+
+9 November 2026. Prepared for Edward Baker with OpenAI Codex assistance,
+OC chat0010, recorded GPT-6.1 Sol / ultra. Use the
+[execution record](18_TND_OC_E13_R1_EXECUTION_20261109.json) and
+[assessment](../reviews/17_TND_OC_E13_R1_PROOF_AND_IMPLEMENTATION_CHECK_20261109.md).
+The actual runtime was Python 3.12.14, python-flint 0.9.0, FLINT 3.6.0,
+one FLINT thread. Run from this investigation's root with that isolated
+runtime active.
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 python numerics/e13_contours.py --self-test
+e13_replay_dir=$(mktemp -d /tmp/tnd-oc-e13-replay.XXXXXX)
+PYTHONDONTWRITEBYTECODE=1 python numerics/e13_gaussian_pilot.py \
+  "$e13_replay_dir/evidence" "$e13_replay_dir/execution.json"
+```
+
+The first command runs synthetic polynomial controls only. The second
+replays the frozen inputs and the canonical evaluation under an
+external 1800-second limit. It writes a new record outside the
+repository. The replay is a separate verification run, with its own
+record. Read `result.status` to distinguish a certificate from a
+structured failed-gate return. The original E13 r1 evidence comes
+from one canonical run.
+
+The original large contour log is outside the repository at the
+location in the small record. Its ordered JSONL records carry the exact
+dyadic edges, subdivision and fragment links, winding enclosures,
+moment segment allowances, centroid enclosures and exact dyadic
+centroids. Decimal ball displays aid inspection. Replay uses the exact
+geometry and recomputes the outward balls. The stored and canonical
+content hashes identify the original log. Differences across environments
+or timing limits are assessed by replaying the arithmetic gates.
+[Source-use15](../references/15_TND_OC_E13_FLINT_SOURCE_USE_20261109.md)
+records the version-pinned library chain.
+
+**B10 r2 records.** [Exact constants16](16_TND_OC_B10_R2_EXACT_CONSTANTS_20261109.json)
+and [its replay](check_b10_r2_cluster_constants.py) verify rational error
+comparisons; [validation17](17_TND_OC_B10_R2_DOCUMENT_VALIDATION_20261109.json)
+checks documents and preservation. These records cover the design-stage constants and preservation checks.
+9 November 2026. Prepared for Edward Baker with substantial OpenAI Codex assistance, OC chat0009. Recorded current thread settings gpt-6-astra/max; per-turn backend configuration unavailable. Earlier dated routing below is historical.
+
+**B10 r1 document record.** [Validation15](15_TND_OC_B10_R1_DOCUMENT_VALIDATION_20261109.json)
+records source hashes and navigation/status checks. It contains no
+canonical numerical evaluation or interval certificate. 9 November 2026. Prepared for Edward Baker with substantial OpenAI Codex assistance, OC chat0009. Recorded current thread settings gpt-6-astra/max; per-turn backend configuration unavailable.
+
+**Current — 8 November 2026, B09.** For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[Validation14](14_TND_OC_B09_HANDOFF_VALIDATION_20261108.json) records
+source preservation, local links, file sizes and handoff consistency.
+These are documentation checks; no mathematical numerical experiment,
+canonical profile acquisition or collision-certificate replay occurred.
+Earlier routing below is historical.
+
+**Current correction — 8 November 2026, TND-OC-E11.** For Edward Baker
+with OpenAI Codex assistance; actual model/effort unavailable, OC chat0006.
+[E11 validation13](13_TND_OC_E11_DESTINATION_CORRECTION_VALIDATION_20261108.json): File/link/ownership checks only; no canonical numerical experiment.
+[Progress02](../research-progress/02_TND_OC_MARGINAL_PRIORITIES_RESEARCH_PROGRESS_20261108.md)
+is the sole live register; earlier dated routing below is historical.
+
 **8 November 2026 — B08 complete.** For Edward Baker with substantial OpenAI Codex assistance; actual model/effort unavailable.
 
 - [B08 validation12](12_TND_OC_B08_SESSION_VALIDATION_20261108.json): protected-input, link, size and setup checks only; no canonical computation.
@@ -32,7 +91,7 @@ actual recorded model/effort unavailable, chat0003.
 
 Separately authorized finite diagnostics and small code/records; no runs are active. Large derived files remain external.
 
-The sole status owner is this branch's research-progress/01_TND_OC_RESEARCH_PROGRESS_20261107.md. Follow the parent setup and reference workflows.
+The sole status owner is this branch's research-progress/02_TND_OC_MARGINAL_PRIORITIES_RESEARCH_PROGRESS_20261108.md. Follow the parent setup and reference workflows.
 
 
 **B02, 7 November 2026:** [exact check script](check_b02_exact_constants.py)

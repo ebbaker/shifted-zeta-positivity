@@ -1,0 +1,138 @@
+\section{A closed-interval survival theorem}
+\label{sec:survival}
+
+The estimates above apply before choosing a trajectory inside the
+box. This allows confinement and survival to be proved together.
+Write
+\[
+E_\beta(t)=\int_0^t e^{4\beta s}\,\dd s
+=\begin{cases}
+(e^{4\beta t}-1)/(4\beta),&\beta\ne0,\\
+t,&\beta=0.
+\end{cases}
+\]
+For every real \(\beta\), \(E_\beta\) increases with \(t\).
+
+\begin{theorem}[Conditional finite-pair survival]
+\label{thm:survival}
+Let \(h\) be real symmetric, analytic in space and sufficiently
+smooth in time for the heat equation and implicit continuation on
+a neighborhood of the box. Suppose \(h_\tau=h_{zz}\) and that
+\eqref{eq:deflation-error} and \eqref{eq:model-floor} hold on
+\(\mathcal K\). At \(\tau=0\) let \(h\) have two specified distinct
+simple real roots satisfying
+\[
+|c(0)-X|\le R_0<R,\qquad
+0<Q_-\le q(0)\le Q_+<4D^2.
+\]
+Let \(\beta\) be an upper bound for \(B\) at each actual pair in the
+box, for instance \(K\) or \(b_P+\kappa\) from Proposition~\ref{prop:force}.
+If
+\begin{equation}
+\label{eq:survival-margins}
+R_0+2A\Delta<R,\qquad
+Q_+e^{4K\Delta}<4D^2,\qquad
+\eta=Q_- -8E_\beta(\Delta)>0 ,
+\end{equation}
+then the pair is real, distinct and simple throughout
+\([0,\Delta]\) and stays inside the spatial bounds of the box.
+Its gap satisfies \(q(t)\ge e^{-4\beta t}(Q_- -8E_\beta(t))\).
+\end{theorem}
+
+\begin{proof}
+Follow the initial roots by the implicit function theorem while
+they are distinct and simple with \(|c-X|<R\), \(0<d<D\).
+Real symmetry and uniqueness give real branches. The uniform
+floor holds for the nodes on this initial interval of continuation,
+so there is no third zero on the segment and \eqref{eq:gap-law}
+applies. It gives \(|c'|\le2A\) and \(q'\le4Kq\), whence
+\[
+|c(t)-X|\le R_0+2At,\qquad q(t)\le Q_+e^{4Kt}.
+\]
+The lower inequality \(q'\ge -8-4\beta q\) gives
+\(q(t)\ge e^{-4\beta t}(Q_- -8E_\beta(t))\) by an integrating
+factor. In particular \(q(t)\ge e^{-4\max(\beta,0)\Delta}\eta>0\)
+on the continuation interval. At either endpoint the slope obeys
+\[
+|h_z|\ge\sqrt q\,(m-e_0).
+\]
+
+If \(S\le\Delta\) is the first candidate stopping time, the bounds
+on \(c'\) and \(q'\) give limits of \(c,q\) as \(t\uparrow S\).
+Their associated root positions \(c\pm\sqrt q/2\) converge to
+distinct zeros by continuity. Both slopes stay nonzero in the
+limit and the spatial inequalities hold strictly. The implicit
+function theorem extends the branches if \(S<\Delta\) and
+establishes simplicity at \(S=\Delta\).
+\end{proof}
+
+An additional zero cannot merge with either endpoint during this
+argument, since a merger would destroy its simple zero. This finite
+real-pair conclusion requires no separate complex zero count.
+The full virtual-node floor is a substantial input, and can fail
+even when a real pair is regular. A failed sufficient inequality
+leaves the fate of the actual pair undecided.
+
+\subsection{Three elementary endpoint checks}
+
+For \(h=(z-X)^2+2(\tau-T)\), exact modeling gives \(A=K=\beta=0\).
+With \(Q_-=q(0)=8T\) and feasible spatial data the gap inequality
+is exactly \(\Delta<T\), and is sharp by equality at \(T\).
+
+For \(h=z^2+\alpha z^3+2\tau+6\alpha\tau z\) the deflated factor is
+\(1+\alpha(a+b+x)\). It has \(g_z=-\alpha^2/U^2\). On a
+positive-factor box the average in \eqref{eq:gap-law} is
+\[
+B=-\frac{\alpha^2}{(1+3\alpha c)^2-\alpha^2d^2}.
+\]
+At \((0,0)\) the polynomial has a nondegenerate double with
+\(B_*=-\alpha^2\). The local splitting from Section~\ref{sec:geometry}
+gives real branches before the event. A strictly negative \(B_*\)
+for \(\alpha\ne0\) is compatible with collision.
+
+For \(h=z^4+12\tau z^2+12\tau^2\) the origin is a quadruple
+event with \(h_{zz}=0\). The repeated-node factor vanishes,
+so the strict floor excludes this class. All three examples solve
+the forward heat equation by direct differentiation. The local
+events can be shifted in space and time. Their role
+is to check the conditional real-pair argument.
+
+\subsection{Comparison with contour acquisition}
+
+A fixed separating contour also avoids internal-gap losses
+\cite{RTTransfer}. To see the difference in required data, let
+\(\Gamma\) be a simple positively oriented contour of length \(\ell\),
+with the real segment at distance at least \(r>0\). Suppose it
+encloses exactly the actual pair counted with multiplicity, with
+the model \(F\) holomorphic across the closed interior and
+\[
+ |F|\ge m_\Gamma>\delta_0,\quad |h-F|\le\delta_0,\quad
+ |F_z|\le M_\Gamma,\quad |h_z-F_z|\le\delta_1
+ \qquad\text{on }\Gamma.
+\]
+Rouch\'e's theorem supplies the model count. The contour formula for
+the true deflated logarithmic derivative is
+\[
+g(z)=\frac{1}{2\pi i}\int_\Gamma
+        \frac{h_z(\zeta)/h(\zeta)}{\zeta-z}\,\dd\zeta .
+\]
+Indeed, the residues of the enclosed zeros subtract the logarithmic
+derivative of their divisor from \(h_z/h\). The model formula
+deflates by its own divisor, in contrast to the shared-node affine
+subtraction in Section~\ref{sec:deflation}. The two logarithmic
+derivatives on the contour differ by at most
+\[
+ Q_\Gamma=\frac{\delta_1+M_\Gamma\delta_0/m_\Gamma}
+                   {m_\Gamma-\delta_0}.
+\]
+Differentiating the contour formulas gives
+\(|g_z-(g_F)_z|\le \ell Q_\Gamma/(2\pi r^2)\) on the real segment.
+Alternatively, the logarithm \(\log(h/F)\) is single-valued on a
+collar of the contour and bounded there on \(\Gamma\) by
+\(\nu=-\log(1-\delta_0/m_\Gamma)\). Integration by parts around
+\(\Gamma\) moves the derivative to the Cauchy kernel. A subsequent
+evaluation derivative gives
+\(|g_z-(g_F)_z|\le \ell\nu/(\pi r^3)\).
+The contour approach trades the uniform real-box factor floor for
+complex boundary and buffer data and a paid cluster count.
+Small root slopes alone settle neither method's relative cost.

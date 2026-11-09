@@ -1087,3 +1087,21 @@ background control and global coverage remain open.
 
 
 **Paid quadratic comparison and finite-Euler obstructions, 7 November 2026.** Prepared for Edward Baker with substantial Codex assistance; lead selected Astra/ultra, proof and separate assessment Sol6.1/ultra. [Note28](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/notes/28_TND_O_E20_PAID_QUADRATIC_GREEN_COMPARISON_20261107.md) proves J0≤½log(1+ε²), with complete compact-source/tail/denominator costs. [Note29](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/notes/29_TND_O_E20_R2_UNIFORM_EULER_LENGTH_OBSTRUCTION_20261107.md) proves averaged ε² grows at least as sqrt(log T), uniformly for interval-fixed Euler products of primorial length≤(T/2)^θ, fixed θ<17/33. It states: “This is a lower bound on epsilon², **not on J_0**, and it is compatible with an all-real zero set.” [Decision17 §6](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/brainstorm/notes/17_TND_O_B04_R5_SIGNED_ACQUISITION_DECISION_20261107.md) gives a separate partial-safe-line instability across controls that change canonical data. [Review12](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/reviews/12_TND_O_E21_SIGNED_ACQUISITION_ASSESSMENT_20261107.md) accepts those exact scopes internally. No canonical signed smallness, exclusion, arbitrary-preconditioner obstruction or novelty claim follows.
+
+**Full marked Gaussian pair time modulus, 8 November 2026 (5/08, OC).**
+[Proof17](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/notes/17_TND_OC_E10_R1_FULL_MARKED_PAIR_EVOLUTION_PROOF_20261108.md) is **proved in-note**: “There is no minimum root gap in (1).” The fixed finite-height and positive-blur result bounds first, factorial-pair and connected changes through multiple events for Newman time in \([0,1/2]\), with explicit integrated exterior errors. An independently supplied initial approximation gains an additive time allowance. [E12 Review14](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/reviews/14_TND_OC_E12_R1_FULL_MARKED_PAIR_CLAIM_ASSESSMENT_20261108.md) **accepts unchanged** at stated scope, in the same chat and model with shared parent premises. For Edward Baker with OpenAI Codex assistance, runtime GPT-6.1 Sol, effort unavailable.
+
+**Regular deflation and finite-pair survival, 9 November 2026 (5/08, OA).**
+Prepared for Edward Baker with substantial OpenAI Codex assistance.
+Actual model and reasoning effort unavailable. [Note02](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/03_collision_constraints/notes/02_TND_OA_B01_REGULAR_DEFLATION_AND_FORCE_TRANSFER_20261109.md)
+is **proved in-note** and internally accepted under its stated premises
+in [E01](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/03_collision_constraints/reviews/03_TND_OA_E01_R1_REGULAR_DEFLATION_ASSESSMENT_20261109.md).
+It proves shared-node derivative-error transfer, complete real-axis
+theta tails and strict finite-pair survival from a uniform factor floor
+and confinement. The [E02 assessment](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/03_collision_constraints/reviews/06_TND_OA_E02_R1_LEHMER_SCREEN_ASSESSMENT_20261109.md)
+records: “If \(G\le G_*\), then \(B\ge-G_*/2\).” This bounds the
+force in the opposite direction from survival, using \(G+2B=qS\)
+under the real-product premise. The [draft](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/03_collision_constraints/manuscript/README.md)
+integrates these results and the scoped B02 uniform-ratio and redundancy
+diagnostics. The canonical floor, signed margin and matched gain
+remain open.

@@ -1,3 +1,12 @@
+**WITHDRAWN AS CURRENT ROUTING — corrected destination, 8 November 2026.**
+The author meant localized zero correlations, not this auxiliary branch.
+This E06 document is retained as historical filing/evidence only. Its
+priority choices and successor prompts are not current instructions.
+Auxiliary progress01 and its E03 r1 default are restored.
+[Correction, preserved history and current continuation](../notes/06_TND_A_MISDIRECTED_PRIORITY_WITHDRAWAL_20261108.md).
+Prepared for Edward Baker with OpenAI Codex assistance; actual correction
+model/effort unavailable, OC chat0006.
+
 # Priority and status consistency check
 
 8 November 2026, America/New_York. Prepared for Edward Baker with substantial

@@ -1,0 +1,182 @@
+\section{Complete theta source and finite evaluation}\label{sec:theta}
+
+The de Bruijn--Newman field in physical height \(z\) is
+\begin{equation}\label{eq:theta-source}
+\begin{aligned}
+H_\lambda(z)&=\int_0^\infty e^{\lambda u^2}\Phi(u)\cos(zu)\,du,\\
+\Phi(u)&=\sum_{n=1}^\infty\Phi_n(u),\\
+\Phi_n(u)&=\bigl(2\pi^2 n^4 e^{9u}-3\pi n^2 e^{5u}\bigr)
+                     e^{-\pi n^2 e^{4u}}\qquad (u\ge 0).
+\end{aligned}
+\end{equation}
+In this normalization \(H_0(z)=\xi(1/2+iz/2)/8\), with \(\xi\)
+the completed Riemann xi function \cite[eqs.~(1)--(4)]{RodgersTao}.
+The decay bound below makes \(H_\lambda\) entire in \(z\) and
+justifies differentiation in \(\lambda\) on compact parameter sets.
+Differentiating the heat weight and the cosine gives
+\(\partial_\lambda H_\lambda=-\partial_{zz}H_\lambda\), hence
+\(h_\tau=h_{zz}\) for \(h(\tau,z)=H_{\lambda_s-\tau}(z)\).
+
+\subsection{Errors from the two omitted regions}
+
+Take \(L=\lambda_s\), \(0\le \tau\le\Delta\le L\le 1/2\), an
+integer \(N\ge 1\), and \(W\ge 1\). Use the finite model
+\begin{equation}\label{eq:finite-theta-model}
+P(\tau,x)=\sum_{n=1}^N \int_0^W
+          e^{(L-\tau)u^2}\Phi_n(u)\cos(xu)\,du .
+\end{equation}
+Since
+\(\Phi_n(u)=\pi n^2 e^{5u}(2\pi n^2 e^{4u}-3)e^{-\pi n^2 e^{4u}}>0\),
+we can bound the absolute derivative error using the positive
+source. For \(u\ge 0\) and \(n\ge M\ge 1\),
+\[
+\frac{(n+1)^4 e^{-\pi(n+1)^2 e^{4u}}}
+     {n^4 e^{-\pi n^2 e^{4u}}}
+\le r_M,\qquad
+r_M=(1+1/M)^4 e^{-\pi(2M+1)}<1 .
+\]
+Indeed \(r_M\le r_1=16e^{-3\pi}\). In particular, summing from
+\(M=1\) yields
+\begin{equation}\label{eq:theta-density-majorant}
+0<\Phi(u)\le C_\Phi e^{9u-\pi e^{4u}},
+\qquad C_\Phi=\frac{2\pi^2}{1-16e^{-3\pi}} .
+\end{equation}
+The majorant dominates the source integrals with any fixed powers of
+\(u\) and with \(e^{\operatorname{Re}(\lambda)u^2+|\operatorname{Im}z|u}\)
+uniformly on compact sets. This gives absolute convergence and the
+differentiability used in \eqref{eq:theta-source}.
+
+For \(0\le k\le 6\), the \(k\)-th cosine derivative is bounded by
+\(u^k\) for real \(x\). On \(0\le u\le W\) only the indices
+\(n\ge M=N+1\) are omitted. Their positive source sum is at most
+\[
+\frac{2\pi^2M^4}{1-r_M}e^{9u-\pi M^2 e^{4u}}
+\le \frac{2\pi^2M^4}{1-r_M}e^{-\pi M^2}.
+\]
+The last exponent \(9u-\pi M^2e^{4u}\) decreases from \(u=0\).
+Integrating \(u^k\) and bounding the heat weight by \(e^{LW^2}\)
+gives the omitted-index bound
+\begin{equation}\label{eq:theta-index-tail}
+A_k(N,W,L)=
+\frac{2\pi^2M^4}{1-r_M}
+e^{LW^2-\pi M^2}\frac{W^{k+1}}{k+1}.
+\end{equation}
+
+On \(u>W\) every index is omitted. Apply
+\eqref{eq:theta-density-majorant} and put
+\(\psi_k(u)=k\log u+Lu^2+9u-\pi e^{4u}\). Then
+\[
+\psi_k''(u)=-k/u^2+2L-16\pi e^{4u}<0,\qquad
+-\psi_k'(W)=d_k(W,L):=4\pi e^{4W}-2LW-9-k/W>0 .
+\]
+For the last inequality, \(d_k(W,L)\ge 4\pi e^{4W}-W-15\),
+which is positive at \(W=1\) and increasing thereafter.
+The tangent inequality
+\(\psi_k(u)\le\psi_k(W)-d_k(W,L)(u-W)\) bounds the entire
+omitted integration region by
+\begin{equation}\label{eq:theta-integration-tail}
+T_k(W,L)=
+\frac{C_\Phi W^k e^{LW^2+9W-\pi e^{4W}}}{d_k(W,L)} .
+\end{equation}
+The two regions are disjoint up to endpoints and exhaust the
+error. Consequently
+\begin{equation}\label{eq:theta-tail}
+\bigl|\partial_x^k(h-P)(\tau,x)\bigr|\le
+\epsilon_k:=A_k(N,W,L)+T_k(W,L)
+\quad(0\le\tau\le\Delta,\ x\in\mathbb R,\ 0\le k\le 6).
+\end{equation}
+These real-axis allowances give the divided-difference errors
+\(e_j=\epsilon_{j+2}/((j+1)(j+2))\) for \(0\le j\le 2\).
+A complex argument would require a bound for the extra
+\(e^{|\operatorname{Im}z|u}\) factor. Any numerical evaluation of
+\eqref{eq:finite-theta-model} must also enclose quadrature and
+rounding errors.
+
+\subsection{Variation on parameter cells}
+
+For \(0\le k\le 6\), an absolute moment allowance for both the
+complete source and the finite model is
+\begin{equation}\label{eq:theta-moment}
+\int_0^\infty u^k e^{Lu^2}\Phi(u)\,du
+\le \overline M_k(L):=\frac{C_\Phi e^{L-\pi}}{k+1}+T_k(1,L).
+\end{equation}
+On \([0,1]\) use \(e^{Lu^2}\le e^L\) and the decreasing
+factor \(e^{9u-\pi e^{4u}}\le e^{-\pi}\) in
+\eqref{eq:theta-density-majorant}. On \([1,\infty)\) use
+\eqref{eq:theta-integration-tail} with \(W=1\). The model retains a
+submeasure of the complete positive source, so the same allowance
+bounds its derivatives.
+
+In the simplex representation for \(U_j\) and \(V_j\), the argument
+is \(\xi=c+d\beta\), where
+\[
+\beta=-(1-s-t)+t+sv=-1+s+2t+sv,\qquad |\beta|\le 1 .
+\]
+The last inequality follows because \(\beta\) is a convex combination
+of \(-1,1,v\). For \(Y_j=U_j\) or \(V_j\) and \(j=0,1,2\), the
+variation on the box \eqref{eq:box} satisfies
+\begin{equation}\label{eq:theta-cell}
+\begin{aligned}
+|\partial_c Y_j|,\ |\partial_d Y_j|
+    &\le \frac{\overline M_{j+3}(L)}{(j+1)(j+2)},\\
+|\partial_v Y_j|
+    &\le \frac{D\,\overline M_{j+3}(L)}{(j+2)(j+3)},\\
+|\partial_\tau Y_j|
+    &\le \frac{\overline M_{j+4}(L)}{(j+1)(j+2)} .
+\end{aligned}
+\end{equation}
+The \(c,d\) derivatives cost one spatial derivative and multiply
+the integrand by \(1,\beta\), respectively. The \(v\) derivative
+adds the factor \(ds\) to the simplex weight \(s^j\), replacing its
+mass by at most \(D/((j+2)(j+3))\). At fixed \(c,d,v\) the
+\(\tau\) derivative inserts \(-u^2\) into the transform, equivalent
+to two spatial derivatives. Thus a cell allowance is the sum of
+these derivative bounds times the corresponding coordinate radii.
+The moment and cell bounds control variation and truncation. A
+certified positive factor floor and an upper bound for the signed
+curvature average require enclosures of the model on the full box.
+
+\subsection{What the alternative primitive gives}
+
+At a putative double event define \(C_j,S_j\) to be the cosine and
+sine moments of \(u^j e^{\lambda_*u^2}\Phi(u)\) at \(x_*\).
+Differentiating \eqref{eq:theta-source} gives
+\(C_0=S_1=0\) and
+\((h_{xx},h_{xxx},h_{xxxx})=(-C_2,S_3,C_4)\). The even moments
+retain the oscillatory cosine. Absolute moment bounds therefore
+leave the event's denominator and its signed curvature unpaid.
+
+The inherited half-line primitive provides a second exact source
+interface \cite{OARecord}. Put
+\[
+ p(u)=e^u\sum_{n\ge1}e^{-\pi n^2e^{4u}},\qquad
+ J_\lambda(x)=\int_0^\infty p(u)e^{\lambda u^2}\cos(xu)\,\dd u.
+\]
+For \(y=\pi n^2e^{4u}\) each term \(e^u e^{-y}\) satisfies
+\((\partial_u^2-1)e^u e^{-y}=(16y^2-24y)e^u e^{-y}\).
+Hence \(p''-p=8\Phi\). Theta reflection gives \(p'(0)=-1/2\):
+if \(\theta(w)=\sum_{n\in\mathbb Z}e^{-\pi n^2w}\), then
+\(e^u\theta(e^{4u})\) is even by Poisson summation, and
+\(2p(u)=e^u\theta(e^{4u})-e^u\). Two integrations by parts
+give \(8\int_0^\infty\Phi f=f(0)/2+p(0)f'(0)+\int_0^\infty p(f''-f)\)
+for the cosine test and its derivatives. The boundary terms at
+infinity vanish by the same decay. Substituting
+\(f=e^{\lambda u^2}\cos(xu)\) yields
+\begin{equation}
+8H_\lambda=\tfrac12+(2\lambda-1-x^2)J_\lambda+
+                  4\lambda xJ_\lambda'-4\lambda^2J_\lambda''.
+\label{eq:primitive}
+\end{equation}
+Differentiating \(n=2,3,4\) times in \(x\) gives
+\[
+\begin{aligned}
+8H_\lambda^{(n)}
+={}&-4\lambda^2J_\lambda^{(n+2)}
+    +4\lambda xJ_\lambda^{(n+1)}
+    +(2\lambda-1-x^2+4\lambda n)J_\lambda^{(n)}\\
+ &-2nxJ_\lambda^{(n-1)}-n(n-1)J_\lambda^{(n-2)} .
+\end{aligned}
+\]
+Thus the primitive supplies the event jet through derivatives of
+order six. Its positivity alone supplies neither a lower
+denominator margin nor an interval estimate for \(B\).

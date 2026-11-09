@@ -1,9 +1,16 @@
-# Sole TND-OC research-progress register
+**Historical register — superseded for live status on 8 November 2026.**
+[Progress02](02_TND_OC_MARGINAL_PRIORITIES_RESEARCH_PROGRESS_20261108.md)
+is the sole current TND-OC register after the author-corrected destination
+renewal. All dated activations, dispositions and evidence below are
+preserved as history. For Edward Baker with OpenAI Codex assistance,
+actual correction model/effort unavailable, OC chat0006.
+
+# Historical TND-OC research-progress event log
 
 7 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Root authoring model/effort unavailable; hierarchy discovery was tool-selected **gpt-6.1-sol/ultra**, shared Green check **gpt-6-astra/ultra**. Dispatch settings are not independent backend verification.
 
 
-**This is the sole live TND-OC register. Author scope clarification,
+**Historical ownership statement at issuance. Author scope clarification,
 8 November 2026: the primary objective is generalized localized pair
 and higher correlation functions obtained by marginalization, with
 Gaussian smoothing as a possible ingredient.** The scalar detector and
@@ -655,3 +662,21 @@ turn worker must be armed only after final housekeeping; unsent final text
 is not archived in advance. No native completion hook is asserted.
 
 **8 November capture exception:** current-turn refresh failed with unsupported_public_content (structured assistant content needs a preserving exporter). Prior verified OC chat0006 is intact; current capture is incomplete. This does not affect saved research/setup files. Final exact-turn follow-up must not be reported as successful before verification.
+
+
+## E11 activation — corrected destination, 8 November 2026
+
+The author clarifies that the requested priority rewrite and subsequent Green
+advisory integration belonged to OC, not the auxiliary Hamiltonian branch.
+**TND-OC-E11, type E; Sol suitable** for fixed editorial/ownership correction;
+actual current model and effort unavailable, OC chat0006. One integration
+pass and one consistency/preservation pass. Root is the sole writer.
+
+Create OC overview02, plan02 and sole progress02 around B08’s independent
+marginal objective; retain B09 ready, E10 reserved, E09 optional and E03/E04
+pending. Incorporate the already read OG advisory’s time, conditioning,
+higher-point and visibility obligations. Withdraw misdirected auxiliary
+E06 routing and restore its earlier E03 default, preserving the interrupted
+auxiliary B03 activation and all evidence. No scientific task, parent
+overview rewrite, model change or numerical campaign is activated.
+Input record20 freezes the correction scope before substantive edits.

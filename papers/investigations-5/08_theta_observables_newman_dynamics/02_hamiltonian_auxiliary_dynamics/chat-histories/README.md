@@ -26,3 +26,24 @@ because structured assistant content needs a preserving exporter.
 The last verified archive remains intact; current-turn capture is
 incomplete. Follow the recorder's checks and exact-turn final workflow;
 do not hand-edit a registered transcript or bypass the failure.
+
+
+**8 November destination correction:** the E06 priority-renewal and
+advisory-integration entries above are historical misdirected work.
+[Correction Note06](../notes/06_TND_A_MISDIRECTED_PRIORITY_WITHDRAWAL_20261108.md)
+restores auxiliary progress01/E03 and points to the intended OC renewal.
+The current correction remains OC chat0006; auxiliary chat0004 and all
+registered history files retain their identity. For Edward Baker with
+OpenAI Codex assistance; actual correction model/effort unavailable.
+
+**Subsequent author redirection — 8 November 2026:** thread
+`01a1bddb-de9d-7221-8f78-7a510e8e4fb9`, titled “Continue TND-A-B03 research”,
+continued as OC-B09. Its unique registration and original number 4,
+filename, creation and first-capture provenance are preserved at its
+[corrected OC history home](../../03_operator_imaginary_time_evolution/02_localized_zero_correlations/chat-histories/0004_2026-11-09T01-11-06Z_continue-tnd-a-b03-research.json).
+The [locked migration receipt](../../03_operator_imaginary_time_evolution/02_localized_zero_correlations/research-progress/handoffs/21_TND_OC_B09_CHAT_RELOCATION_20261108.json)
+records byte preservation and unrelated-history checks. The prior
+statement that this separate chat remained here is historical; no other
+registration or auxiliary scientific status was changed by the move.
+For Edward Baker with OpenAI Codex assistance; actual B09 model/effort
+unavailable.

@@ -1,3 +1,48 @@
+**E13 r1 execution, 9 November 2026.** [Note21](21_TND_OC_E13_R1_GAUSSIAN_PROJECTION_EXECUTION_20261109.md)
+records the 388-label census, 91 certified centroids and the exact
+source-call gate. Prepared for Edward Baker with OpenAI Codex
+assistance, OC chat0010, recorded GPT-6.1 Sol / ultra.
+
+**Historical — B10 r2 complete at analytical design/conditional-contract scope.**
+[Note20](20_TND_OC_B10_R2_CONTOUR_CENTROIDS_AND_GAUSSIAN_ESTIMATE_20261109.md)
+uses complete contour counts and first moments to obtain quadratic
+cluster error for the unchanged Gaussian projection. Explicit theta tails
+and the fixed gates give conditional radius <1/200; proof-author checked.
+No canonical counts, centroids or value acquired. E13 / Sol is ready.
+9 November 2026. Prepared for Edward Baker with substantial OpenAI Codex assistance, OC chat0009. Recorded current thread settings gpt-6-astra/max; per-turn backend configuration unavailable. Earlier dated routing below is historical.
+
+**Historical — B10 r1 complete at scoped missing-input/decision scope.**
+[Note19](19_TND_OC_B10_R1_GAUSSIAN_CONTRACTION_AND_MISSING_ESTIMATE_20261109.md) derives the exact marked Gaussian projection, its
+tail/error ledger and a local absolute log-remainder lower bound.
+Proof-author checked; no canonical joint value or cost gain acquired.
+9 November 2026. Prepared for Edward Baker with substantial OpenAI Codex assistance, OC chat0009. Recorded current thread settings gpt-6-astra/max; per-turn backend configuration unavailable. Earlier routing below is historical.
+
+**9 November 2026 — Gaussian height localization.** [Note18](18_TND_OC_GAUSSIAN_HEIGHT_WINDOW_AND_THETA_SOURCE_20261109.md)
+gives exact center kernels, Gaussian tails and the complete log-source
+representation. Joint canonical estimation is the open B10 question.
+For Edward Baker with OpenAI Codex assistance, runtime GPT-6.1 Sol,
+reasoning effort unavailable.
+
+**8 November 2026 — E10 r1.** [Proof17](17_TND_OC_E10_R1_FULL_MARKED_PAIR_EVOLUTION_PROOF_20261108.md) proves the frozen
+first, full factorial pair and connected Lipschitz bounds, including
+multiple events and integrated exterior errors. Proof-author checked,
+[E12 Review14](../reviews/14_TND_OC_E12_R1_FULL_MARKED_PAIR_CLAIM_ASSESSMENT_20261108.md) accepted all six claims unchanged at internal scope. Prepared for Edward Baker with OpenAI Codex,
+runtime GPT-6.1 Sol, effort unavailable. The sole register supersedes
+the earlier routing below.
+
+**Historical — 8 November 2026, B09 complete at design scope.** For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[Note16](16_TND_OC_B09_FULL_PAIR_EVOLUTION_DESIGN_20261108.md) selects
+full marked Gaussian pair/connected evolution with explicit proof targets.
+The Laplace resummation-only candidate is parked; global bounds await E10.
+[Progress02](../research-progress/02_TND_OC_MARGINAL_PRIORITIES_RESEARCH_PROGRESS_20261108.md)
+owns current status; earlier routing below is historical.
+
+**Current correction — 8 November 2026, TND-OC-E11.** For Edward Baker
+with OpenAI Codex assistance; actual model/effort unavailable, OC chat0006.
+[Note15](15_TND_OC_PRIORITY_DESTINATION_AND_GREEN_INTERFACES_20261108.md): Corrected destination and qualified Green interfaces; no new canonical estimate.
+[Progress02](../research-progress/02_TND_OC_MARGINAL_PRIORITIES_RESEARCH_PROGRESS_20261108.md)
+is the sole live register; earlier dated routing below is historical.
+
 **8 November 2026 — B08 complete.** For Edward Baker with substantial OpenAI Codex assistance; actual model/effort unavailable.
 
 - [B08 program-fit diagnosis](../notes/14_TND_OC_B08_ARITHMETIC_MARGINAL_COLLISION_FRICTION_20261108.md): exact arithmetic/marginal map, collision-resolution diagnostic and author-directed split; proof-author checks only.
@@ -50,7 +95,7 @@ Executed derivations and research records.
 
 Status: proved in-note and accepted in the separate internal E02 assessment after one bounded support correction. No small signed statistic or zero exclusion is established. Actual E02 exact model/effort unavailable; the opening notes record Astra/max.
 
-The sole status owner is research-progress/01_TND_OC_RESEARCH_PROGRESS_20261107.md.
+The sole status owner is research-progress/02_TND_OC_MARGINAL_PRIORITIES_RESEARCH_PROGRESS_20261108.md.
 The historical staged E02 update was subsequently installed; see the
 register's installation receipt.
 

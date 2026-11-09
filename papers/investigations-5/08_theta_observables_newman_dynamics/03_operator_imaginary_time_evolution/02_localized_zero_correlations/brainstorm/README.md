@@ -1,3 +1,19 @@
+**B10 r2 decision.** [Decision11](notes/11_TND_OC_B10_R2_CONTOUR_CENTROID_DECISION_20261109.md)
+selects complete contour counts and cluster first moments. The fixed
+conditional Gaussian evaluator is now E13 / Sol; no canonical run or
+general correlation estimate occurred.
+9 November 2026. Prepared for Edward Baker with substantial OpenAI Codex assistance, OC chat0009. Recorded current thread settings gpt-6-astra/max; per-turn backend configuration unavailable. Earlier dated routing below is historical.
+
+**B10 r1 decision — historical.** [Decision10](notes/10_TND_OC_B10_R1_GAUSSIAN_DECISION_20261109.md)
+retains the precise projection and parks acquisition without a new joint
+source input; no execution packet issued. 9 November 2026. Prepared for Edward Baker with substantial OpenAI Codex assistance, OC chat0009. Recorded current thread settings gpt-6-astra/max; per-turn backend configuration unavailable.
+
+**Current — 8 November 2026, B09 complete.** For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[Decision09](notes/09_TND_OC_B09_FULL_PAIR_EVOLUTION_DECISION_20261108.md)
+parks the Laplace resummation-only candidate and selects the full
+Gaussian pair/connected time modulus. Two candidates, one clarification;
+E10 r1 is ready and unactivated. Earlier routing below is historical.
+
 **8 November 2026 — B08 complete.** For Edward Baker with substantial OpenAI Codex assistance; actual model/effort unavailable.
 
 - [B08 diagnosis and author decision](../notes/14_TND_OC_B08_ARITHMETIC_MARGINAL_COLLISION_FRICTION_20261108.md): retain marginals independently; create collision constraints as a separate priority. No duplicate decision note.
@@ -25,7 +41,7 @@ Earlier dated entries below are historical; the sole register owns live status.
 
 Consequential conceptual choices; see notes/01_TND_OC_AUTHOR_IDEAS_AND_SELECTION_BOUNDARY_20261107.md.
 
-The sole status owner is this branch's research-progress/01_TND_OC_RESEARCH_PROGRESS_20261107.md. Follow the parent setup and reference workflows.
+The sole status owner is this branch's research-progress/02_TND_OC_MARGINAL_PRIORITIES_RESEARCH_PROGRESS_20261108.md. Follow the parent setup and reference workflows.
 
 
 - [B02 decision03](notes/03_TND_OC_B02_SIGNED_COMPARISON_DECISION_20261107.md): two signed-comparison proposals, one real-zero-cost clarification, scoped failure with a fixed E03 assessment successor.

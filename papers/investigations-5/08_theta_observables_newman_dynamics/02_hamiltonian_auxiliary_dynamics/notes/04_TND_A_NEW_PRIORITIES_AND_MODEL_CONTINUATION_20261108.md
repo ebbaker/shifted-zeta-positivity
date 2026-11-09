@@ -1,3 +1,12 @@
+**WITHDRAWN AS CURRENT ROUTING — corrected destination, 8 November 2026.**
+The author meant localized zero correlations, not this auxiliary branch.
+This E06 document is retained as historical filing/evidence only. Its
+priority choices and successor prompts are not current instructions.
+Auxiliary progress01 and its E03 r1 default are restored.
+[Correction, preserved history and current continuation](06_TND_A_MISDIRECTED_PRIORITY_WITHDRAWAL_20261108.md).
+Prepared for Edward Baker with OpenAI Codex assistance; actual correction
+model/effort unavailable, OC chat0006.
+
 # Continue Hamiltonian auxiliary research under the new priorities
 
 8 November 2026, America/New_York. Prepared for **Edward Baker** with
@@ -58,6 +67,22 @@ and [volume20](../../../../../avoid/20_volume_without_a_gain.md), govern
 the continuation. No local diagnostic is a global exclusion, and no
 scoped failed auxiliary model is a universal impossibility result.
 
+## Advisory integration — E06 r2
+
+The supplied [OG collision/probe advisory](../../03_operator_imaginary_time_evolution/01_green_potential_resolvent/brainstorm/notes/10_TND_OG_COLLISION_DYNAMICS_AND_PARALLEL_PROBES_20261108.md) is now incorporated
+through [Note05](05_TND_A_GREEN_ADVISORY_INTEGRATION_20261108.md).
+B03 must state the event time versus the data time; distinguish collision
+heat t from auxiliary tau; provide initial gap, horizon and isolation for
+a force bound; specify third-point/conditioning information when needed;
+and pay statistical visibility and smoothing errors. A contracted
+statistic may suffice. A time-zero multiple-zero exclusion also addresses
+simplicity and must not be presented as merely RH.
+
+This is a refinement inside the same two-candidate budget. Source status
+is proof-author checking; no canonical estimate or new execution packet.
+The advisory's corrected home is OG, with separate recipient/owner tasks.
+No model/effort setting is inferred from its author's configuration.
+
 ## Reading and version ownership
 
 Start with overview02, plan02 and progress02, then:
@@ -82,10 +107,10 @@ its routing is superseded here and by plan02/progress02. Do not edit the issued 
 to have used the new priorities. Reconcile old live-document hashes
 according to that packet's version policy.
 
-The operator and direct programs are outside this update. The author
-will revisit the operator overview after a parallel direct-branch
-brainstorm. Do not presume its findings, send messages to that chat,
-or activate its tasks. The marginal/Green/collision-alternative programs
+The operator and direct programs are outside this update. The
+previously awaited advisory is available in its corrected OG location;
+this update consumes it without performing the operator-wide revision.
+Do not send messages to another chat or activate its tasks. The marginal/Green/collision-alternative programs
 keep their current owners; they are context, not dependencies.
 
 ## Pasteable B03 prompt
@@ -99,13 +124,20 @@ keep their current owners; they are context, not dependencies.
 > Read overview02, plan02, sole progress02, Note04 continuation,
 > E01 Note01/E02 Review01, B02 Decision02 and the preserved E03 r1 packet.
 > Use the source-use06 pointers to the OC diagnosis, primitive dictionary
-> and earlier auxiliary-flow lessons. Choose one concrete collision
+> and earlier auxiliary-flow lessons. Also read the linked OG
+> Brainstorm Note10 and auxiliary Note05 advisory integration.
+> Choose one concrete collision
 > constraint or useful intermediate estimate for the original canonical H,
 > with its domain, units and consequence. Compare at most additional
 > information within the accepted response model and one motivated
 > auxiliary extension, with one focused clarification. State the new
 > arithmetic/acquisition input, transfer back to H, matched direct
-> comparator and each relevant control's failed premise.
+> comparator and each relevant control's failed premise. Distinguish
+> collision clock t from auxiliary tau, event time from data time,
+> and finite-event/simplicity conclusions from threshold claims.
+> Pay initial-gap/time/isolation conditions, selected-pair higher-point
+> information and conditioning, and the full visibility/error budget
+> appropriate to the consumer. A contracted statistic may suffice.
 > Return a useful bounded result, a tractable frozen E07 request for Sol,
 > or the precise scoped gap/failure. Do not require the author to supply
 > the missing theorem, treat a nonvanishing multiplier as a collision

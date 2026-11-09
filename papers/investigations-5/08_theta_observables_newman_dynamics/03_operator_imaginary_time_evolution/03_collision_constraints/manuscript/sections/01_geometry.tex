@@ -1,0 +1,87 @@
+\section{Pair dynamics and the quantity to estimate}
+\label{sec:geometry}
+
+Write \(H_\lambda\) for the Newman deformation in the physical height
+normalization of Rodgers and Tao \cite{RodgersTao}. Its full theta source
+is specified in Section~\ref{sec:theta}. For a chosen starting slice
+\(\lambda_s\), put \(h(\tau,z)=H_{\lambda_s-\tau}(z)\), so \(h_\tau=h_{zz}\).
+The target is survival of two specified simple real zeros on
+\(0\le\tau\le\Delta\), corresponding to
+\([\lambda_s-\Delta,\lambda_s]\) in Newman time. The initial analysis
+uses only the local heat equation and real symmetry. The survival
+theorem will allow other nonreal zeros.
+
+On a time interval where two real roots \(a<b\) are simple and the
+deflated factor is nonzero on their segment, write
+\[
+h(\tau,z)=(z-a)(z-b)U(\tau,z),\qquad
+g=\frac{U_z}{U},\qquad
+\delta=b-a,\quad q=\delta^2,\quad c=\frac{a+b}{2}.
+\]
+Since a simple root \(r\) has velocity \(-h_{zz}(r)/h_z(r)\),
+evaluation of the two product derivatives gives
+\[
+a'=\frac{2}{\delta}-2g(a),\qquad
+b'=-\frac{2}{\delta}-2g(b).
+\]
+Consequently, with \(d=\delta/2\),
+\begin{equation}
+\label{eq:gap-law}
+c'=-g(a)-g(b),\qquad q'=-8-4qB,\qquad
+B=\frac{g(b)-g(a)}{\delta}
+  =\frac12\int_{-1}^1 g_z(\tau,c+dv)\,\dd v .
+\end{equation}
+The mutual term is exactly \(-8\) in the squared gap. The remaining
+term uses the full deflated factor, including any analytic contribution
+to it. These local identities require no infinite zero-motion sum.
+
+If \(C(t)=\int_0^t B(s)\,\dd s\), then integration gives
+\begin{equation}
+\label{eq:gap-integral}
+q(t)=e^{-4C(t)}\left(q(0)-8\int_0^t e^{4C(s)}\,\dd s\right).
+\end{equation}
+A certified lower bound for \(q(0)\) and an upper envelope for \(C(s)\)
+at all preceding times can keep the bracket positive, provided the pair
+stays in the region where the estimates hold. An endpoint estimate for
+\(C(\Delta)\) leaves the integral undetermined. We use a pointwise upper
+force bound below and prove the required confinement separately.
+
+\subsection{A nondegenerate event and its two descriptions}
+
+Suppose \(h\) is jointly analytic near a real double zero at
+\((\tau_*,x_*)\), with \(h_{zz}(\tau_*,x_*)\ne0\). In
+\(s=\tau-\tau_*\), \(w=z-x_*\), local preparation gives a nonvanishing
+factor times \(w^2+A_*(s)w+C_*(s)\), with \(A_*(0)=C_*(0)=0\).
+At the event the unit is \(h_{zz}/2\), so the heat equation gives
+\(C_*'(0)=2\). The discriminant is therefore \(-8s+O(s^2)\).
+The local pair is real and simple for \(s<0\) close to zero and
+conjugate for \(s>0\), with upper imaginary part
+\(\sqrt{2s}+O(s^{3/2})\). The squared gap extends as the discriminant
+through the double zero. Along the real side the factor \(U\) tends to
+the analytic quotient by \((z-x_*)^2\). Thus \(B\) has the limit
+\begin{equation}
+\label{eq:event-curvature}
+B_*=\frac{h_{zzzz}}{6h_{zz}}-\frac{h_{zzz}^2}{9h_{zz}^2}
+    =\frac{\gamma_*}{6}+\frac{\beta_*^2}{18},\qquad
+\beta_*=\frac{h_{zzz}}{h_{zz}},\quad
+\gamma_*=\frac{h_{zzzz}}{h_{zz}}-\beta_*^2 ,
+\end{equation}
+where all derivatives are at the event. Indeed the factor and its
+first two derivatives there are \(h_{zz}/2,h_{zzz}/6,h_{zzzz}/12\).
+
+The other description follows the critical point \(x_c(\tau)\) given by
+\(h_z(\tau,x_c)=0\) and the implicit function theorem. Its velocity and
+critical value \(v_c=h(\tau,x_c(\tau))\) satisfy
+\[
+x_c'=-h_{zzz}/h_{zz},\qquad v_c'=h_{zz}(\tau,x_c(\tau)).
+\]
+These equations explain the event-jet alternative. A curvature ratio
+at the terminal double root gives a local coefficient, while either
+a critical-value comparison or a gap comparison needs bounds over the
+preceding interval. For example, on a tracked minimum,
+\(v_c(0)+M_{xx}\Delta<0\) and \(h_{zz}(\tau,x_c)\le M_{xx}\) keep
+the minimum negative. Positive wall values and strictly signed spatial derivatives
+on each side (or strict convexity) can then certify two simple roots.
+Any comparison with that method must pay for those geometric data.
+The inherited collision and primitive derivations are recorded in the
+project sources \cite{OARecord}.

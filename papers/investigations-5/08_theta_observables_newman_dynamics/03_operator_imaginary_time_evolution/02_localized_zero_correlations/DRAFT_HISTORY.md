@@ -1,3 +1,45 @@
+- **9 November 2026 — TND-OC-B10 r2 conditional evaluator design.**
+  [Note20](notes/20_TND_OC_B10_R2_CONTOUR_CENTROIDS_AND_GAUSSIAN_ESTIMATE_20261109.md)
+  uses complete contour counts and first moments for quadratic cluster
+  error, with an explicit theta/Jensen tail. Frozen gates imply projected
+  radius <1/200; proof-author checked, exact constants replayed, no
+  canonical counts, centroids or value. [E13 request27](research-progress/handoffs/27_TND_OC_E13_R1_CONTOUR_CENTROID_EVALUATOR_REQUEST_20261109.md)
+  is ready for Sol; [Continuation23](continuation-notes/23_TND_OC_AFTER_B10_R2_CLUSTER_MOMENTS_AND_MODEL_CHANGE_20261109.md)
+  gives the bounded handoff. No manuscript milestone or closure.
+  For Edward Baker with OpenAI Codex assistance, OC chat0009; recorded
+  thread settings Astra/max, per-turn backend configuration unavailable.
+
+- **9 November 2026 — TND-OC-B10 r1 research decision.**
+  [Note19](notes/19_TND_OC_B10_R1_GAUSSIAN_CONTRACTION_AND_MISSING_ESTIMATE_20261109.md) compares two Gaussian routes, derives one exact
+  marked separation contraction and explicit error ledger, and proves a
+  scoped positive-weight log-remainder lower bound. Proof-author checked;
+  no canonical joint estimate, complexity gain or new E packet.
+  [Continuation22](continuation-notes/22_TND_OC_AFTER_B10_GAUSSIAN_COMPARISON_AND_MODEL_CHANGE_20261109.md) gates B10 r2 / Astra on
+  additional source input; E09 / Sol remains an optional compact-window
+  benchmark. No manuscript milestone or investigation closure.
+  For Edward Baker with OpenAI Codex assistance, OC chat0009; recorded
+  thread settings Astra/max, per-turn backend configuration unavailable.
+
+- **9 November 2026 — Gaussian height window research setup.**
+  [Note18](notes/18_TND_OC_GAUSSIAN_HEIGHT_WINDOW_AND_THETA_SOURCE_20261109.md) derives exact center kernels and controls the
+  noncompact zero and log-source tails. Joint theta estimation is
+  open. [Continuation21](continuation-notes/21_TND_OC_GAUSSIAN_HEIGHT_WINDOW_AND_MODEL_CHANGE_20261109.md) prepares B10 r1
+  for Astra. For Edward Baker with OpenAI Codex assistance,
+  runtime GPT-6.1 Sol, reasoning effort unavailable, OC chat0008.
+
+- **8 November 2026 — TND-OC-E12 r1 assessment milestone.**
+  [Review14](reviews/14_TND_OC_E12_R1_FULL_MARKED_PAIR_CLAIM_ASSESSMENT_20261108.md) accepts the six E10 claims unchanged after
+  one internal same-model pass. The source remains proved in-note.
+  [Continuation20](continuation-notes/20_TND_OC_AFTER_E12_FULL_PAIR_ASSESSMENT_AND_MODEL_CHANGE_20261108.md) routes the optional finite
+  benchmark. Prepared for Edward Baker with OpenAI Codex assistance,
+  runtime GPT-6.1 Sol, effort unavailable, OC chat0008.
+
+- **8 November 2026 — TND-OC-E10 r1 research milestone.** [Proof17](notes/17_TND_OC_E10_R1_FULL_MARKED_PAIR_EVOLUTION_PROOF_20261108.md)
+  proves the fixed full marked first, factorial pair and connected time
+  modulus through multiple events with the frozen constants. Proof-author
+  checked, separate E12 assessment next. For Edward Baker with substantial
+  OpenAI Codex assistance, runtime GPT-6.1 Sol, effort unavailable, OC chat0008.
+
 - **8 November 2026 — TND-OC-B07:** [Note13](notes/13_TND_OC_B07_COMPLETE_DIVISOR_AND_GAUSSIAN_EVALUATOR_20261108.md) selects complete-divisor certification and proves a conditional uniform Gaussian full/connected pair error <1/3000 at T=1000. Proof-author checking only; no canonical values acquired. Fixed E09 execution next under request18/Inputs18; [Continuation15](continuation-notes/15_TND_OC_AFTER_B07_AND_MODEL_CHANGE_20261108.md) gives model guidance. Manuscript/build and frozen E03/E04/E08 inputs unchanged; no manuscript milestone or investigation closure. For Edward Baker with substantial OpenAI Codex assistance, chat0006; actual model/effort unavailable.
 
 - **8 November 2026 — TND-OC-E08:** [Review09](reviews/09_TND_OC_E08_CLAIM_LEVEL_ASSESSMENT_20261108.md) accepts all eight B06 claims unchanged, one analytical pass and no correction. Internal LLM assessment with shared premises; [Note12](notes/12_TND_OC_E08_ASSESSMENT_CALCULATIONS_20261108.md) and return16 record calculations and preservation. No canonical moments/profile acquired; conditional B07 successor in [Continuation14](continuation-notes/14_TND_OC_AFTER_E08_AND_MODEL_CHANGE_20261108.md), E03/E04 pending. Manuscript/build and frozen packets unchanged; no manuscript milestone or investigation closure. For Edward Baker with substantial OpenAI Codex assistance, chat0007; actual model/effort unavailable.
@@ -91,3 +133,35 @@ E02 configuration: OpenAI Codex; exact backend model/effort unavailable. Origina
   branch under INVESTIGATION_SETUP_WORKFLOW. E09 stays optional and
   frozen. [Continuation16](continuation-notes/16_TND_OC_AFTER_B08_BIFURCATION_AND_MODEL_CHANGE_20261108.md) supplies routing.
   No canonical collision bound, manuscript milestone or investigation closure.
+
+- **8 November 2026 — E11 corrected priority destination.** For Edward
+  Baker with OpenAI Codex assistance, actual model/effort unavailable,
+  chat0006. Created OC overview02/plan02/sole progress02 and
+  [Continuation17](continuation-notes/17_TND_OC_CORRECTED_PRIORITIES_AND_MODEL_CHANGE_20261108.md);
+  retained independent high-risk marginals and integrated the Green
+  consumer requirements. Restored auxiliary progress01/E03, retaining
+  misdirected E06 and interrupted B03 history. [Note15](notes/15_TND_OC_PRIORITY_DESTINATION_AND_GREEN_INTERFACES_20261108.md).
+  Editorial correction only; no new estimate, scientific activation or
+  manuscript change.
+
+- **8 November 2026 — B09 full-pair evolution design.** For Edward Baker
+  with substantial OpenAI Codex assistance; actual model/effort unavailable.
+  [Note16](notes/16_TND_OC_B09_FULL_PAIR_EVOLUTION_DESIGN_20261108.md)
+  completes two candidates and one clarification: park the Laplace
+  resummation-only route and select a full marked Gaussian pair/connected
+  time modulus using assessed parent inputs. Global bounds remain
+  pending [E10 r1](research-progress/handoffs/23_TND_OC_E10_R1_FULL_PAIR_EVOLUTION_REQUEST_20261108.md);
+  design checking only. [Continuation18](continuation-notes/18_TND_OC_AFTER_B09_FULL_PAIR_EVOLUTION_AND_MODEL_CHANGE_20261108.md)
+  gives the Sol handoff. Authentic chat identity moved here under the
+  author's corrected destination. No canonical profile, numerical run,
+  manuscript milestone or investigation closure.
+
+- **9 November 2026 — E13 r1 certified census and source-call stop.**
+  Prepared for Edward Baker with OpenAI Codex assistance, OC chat0010,
+  recorded thread settings GPT-6.1 Sol / ultra. Six proof checks passed.
+  The complete contour tree certified 388 labels in 388 cells.
+  Quadrature certified 91 centroids before exhausting 2,000,000 source
+  calls. [Note21](notes/21_TND_OC_E13_R1_GAUSSIAN_PROJECTION_EXECUTION_20261109.md),
+  [assessment17](reviews/17_TND_OC_E13_R1_PROOF_AND_IMPLEMENTATION_CHECK_20261109.md) and
+  [Continuation24](continuation-notes/24_TND_OC_AFTER_E13_AND_MODEL_CHANGE_20261109.md) record the return and
+  the B10 r3 / Astra decision.

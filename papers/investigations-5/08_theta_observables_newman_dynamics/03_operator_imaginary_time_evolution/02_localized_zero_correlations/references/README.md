@@ -1,3 +1,35 @@
+**E13 r1 source use.** [Record15](15_TND_OC_E13_FLINT_SOURCE_USE_20261109.md)
+records the pinned FLINT 3.6.0 zeta series and Euler–Maclaurin
+remainder path, with [Johansson's preprint citation](e13_zeta_ball_sources.bib).
+
+**B10 r2 source use.** [Record14](14_TND_OC_B10_R2_CONTOUR_MOMENT_SOURCE_USE_20261109.md)
+records primary argument-principle, critical-strip and certified
+power-series documentation, with [the new bibliography entry](b10_cluster_moment_sources.bib).
+B07's contour access and the full canonical identity are reused.
+9 November 2026. Prepared for Edward Baker with substantial OpenAI Codex assistance, OC chat0009. Recorded current thread settings gpt-6-astra/max; per-turn backend configuration unavailable. Earlier dated routing below is historical.
+
+**B10 r1 source use.** [Record13](13_TND_OC_B10_R1_GAUSSIAN_SOURCE_SCOPE_20261109.md)
+records inherited inputs, the selected BGST theorem-interface recheck
+and official model-routing guidance. No new mathematical import or PDF.
+9 November 2026. Prepared for Edward Baker with substantial OpenAI Codex assistance, OC chat0009. Recorded current thread settings gpt-6-astra/max; per-turn backend configuration unavailable.
+
+**8 November 2026 — E10 r1.** [Source-use12](12_TND_OC_E10_FULL_PAIR_EVOLUTION_SOURCE_USE_20261108.md) records the exact
+parent and primary passages used for the fixed full-pair proof.
+For Edward Baker with OpenAI Codex assistance, runtime GPT-6.1 Sol,
+effort unavailable.
+
+**Current — 8 November 2026, B09.** For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[Source-use11](11_TND_OC_B09_EVOLUTION_SOURCE_USE_20261108.md) records
+parent paired-calculus reuse and bounded primary-passage checks.
+No literature survey, new bibliography or PDF copy. Earlier routing
+below is historical.
+
+**Current correction — 8 November 2026, TND-OC-E11.** For Edward Baker
+with OpenAI Codex assistance; actual model/effort unavailable, OC chat0006.
+[E11 source-use10](10_TND_OC_E11_CORRECTION_SOURCE_USE_20261108.md): Inspected local passages and inherited evidence; no new literature import.
+[Progress02](../research-progress/02_TND_OC_MARGINAL_PRIORITIES_RESEARCH_PROGRESS_20261108.md)
+is the sole live register; earlier dated routing below is historical.
+
 **8 November 2026 — B08 complete.** For Edward Baker with substantial OpenAI Codex assistance; actual model/effort unavailable.
 
 - [B08 source-use09](09_TND_OC_B08_INTERFACE_SOURCE_USE_20261108.md): inherited primitive/Green inputs and selected Rodgers–Tao v5 passages; no full-paper audit.

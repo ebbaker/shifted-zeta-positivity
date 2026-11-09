@@ -1,3 +1,12 @@
+**WITHDRAWN AS CURRENT ROUTING — corrected destination, 8 November 2026.**
+The author meant localized zero correlations, not this auxiliary branch.
+This E06 document is retained as historical filing/evidence only. Its
+priority choices and successor prompts are not current instructions.
+Auxiliary progress01 and its E03 r1 default are restored.
+[Correction, preserved history and current continuation](../notes/06_TND_A_MISDIRECTED_PRIORITY_WITHDRAWAL_20261108.md).
+Prepared for Edward Baker with OpenAI Codex assistance; actual correction
+model/effort unavailable, OC chat0006.
+
 # Source use for the auxiliary priority renewal
 
 8 November 2026, America/New_York. Prepared for Edward Baker with substantial
@@ -29,3 +38,22 @@ The [controls12](../../../../../result-summaries/12_collision_controls_and_scree
 screen is premise-level planning reuse. No collision certificates were
 rerun. The newly written overview's elementary finite-error implication
 is a consumer specification, not a claimed new quantitative theorem.
+
+## E06 r2 — supplied Green advisory
+
+8 November 2026. Prepared for Edward Baker with substantial OpenAI Codex
+assistance; current reviewing model/effort unavailable. Inspected
+[OG Brainstorm Note10](../../03_operator_imaginary_time_evolution/01_green_potential_resolvent/brainstorm/notes/10_TND_OG_COLLISION_DYNAMICS_AND_PARALLEL_PROBES_20261108.md), §§2–5, in its corrected home, and its
+relocation record19. The source records Astra/effort unavailable;
+this is not the configuration of the present chat.
+
+Consumer: overview02's clocks and collision requirements, plan02's
+consumer specification, and auxiliary Note05. The inherited gap law
+was checked against operator Note07 §4; Green resolution was checked
+against OG Note09 §2. Re-derived the integrating-factor comparison,
+finite exterior-triple contraction and visibility lower bound only on
+their stated conditional domains. Source status remains proof-author
+checked, with local shared-premise interface checking in Review04.
+No fresh external theorem, full-paper inspection, canonical value or
+numerical certificate was imported. Original E06 r1 annotation above
+is preserved as a dated record.

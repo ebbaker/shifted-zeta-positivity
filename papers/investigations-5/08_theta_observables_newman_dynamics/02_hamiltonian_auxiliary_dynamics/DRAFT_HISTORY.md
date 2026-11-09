@@ -11,3 +11,13 @@ Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra / max**
 | 2026-11-06 | TND-A-E05, gpt-6-astra/max | [Evolving manuscript](manuscript/main.tex); source/build identities in [BUILD_RECORD](manuscript/BUILD_RECORD.json) and [Return08](research-progress/handoffs/08_TND_A_E05_MANUSCRIPT_RETURN_RECORD_20261106.json) | First systematic auxiliary analytical manuscript: complete spectrum/source/domains/heat/readout and consequences; 17-page reading copy only in ignored root output/pdf/. Conditional evidence retained; E03/E04 pending. [Review02](reviews/02_TND_A_E05_MANUSCRIPT_PRODUCTION_REVIEW_20261106.md); [Note03](notes/03_TND_A_E05_ANALYTICAL_MANUSCRIPT_SYNTHESIS_20261106.md). |
 
 | 2026-11-08 | TND-A-E06; actual model/effort unavailable, existing OC chat0006 | [Overview02](research-overview/02_TND_A_COLLISION_PRIORITIES_RESEARCH_OVERVIEW_20261108.md), [plan02](research-plan/02_TND_A_COLLISION_PRIORITIES_RESEARCH_PLAN_20261108.md), [sole progress02](research-progress/02_TND_A_COLLISION_PRIORITIES_RESEARCH_PROGRESS_20261108.md) | Author-requested collision-priority renewal. Prior register becomes historical; all mathematical results and issued requests retained. B03 is ready/unactivated, E03 optional, E07/E08 reserved. [Continuation](notes/04_TND_A_NEW_PRIORITIES_AND_MODEL_CONTINUATION_20261108.md). Editorial milestone only; no manuscript snapshot or new bound. |
+
+| 2026-11-08 | TND-A-E06 r2; reviewing model/effort unavailable | [Integration Note05](notes/05_TND_A_GREEN_ADVISORY_INTEGRATION_20261108.md), updated overview02/plan02 and [interface check04](reviews/04_TND_A_E06_R2_ADVISORY_INTERFACE_CHECK_20261108.md) | Incorporates OG's corrected collision/probe advisory: distinct clocks, same-time arithmetic, initial-gap/isolation budget, third-point conditioning and visibility margin. Two-route B03 and external task ownership retained; no new canonical estimate or activation. |
+
+- **8 November 2026 — corrected destination (TND-OC-E11).** For Edward
+  Baker with OpenAI Codex assistance, actual model/effort unavailable.
+  The author meant localized zero correlations. Withdrew auxiliary E06
+  r1/r2 priority routing, restored original overview/plan/progress01 and
+  E03 default, and preserved the interrupted B03 activation and all
+  issued/mathematical/history records. [Note06](notes/06_TND_A_MISDIRECTED_PRIORITY_WITHDRAWAL_20261108.md).
+  No mathematical retraction, new result or manuscript change.

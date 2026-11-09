@@ -1,3 +1,38 @@
+**E13 r1 assessment, 9 November 2026.** [Assessment17](17_TND_OC_E13_R1_PROOF_AND_IMPLEMENTATION_CHECK_20261109.md)
+records the six passed pre-execution proof checks, synthetic controls
+and the source-free geometry and count audit after the work-limit stop.
+Internal LLM assessment with shared source premises, for Edward Baker,
+OC chat0010, recorded GPT-6.1 Sol / ultra.
+
+**Historical — B10 r2.** [Self-check16](16_TND_OC_B10_R2_CONTOUR_CENTROID_SELF_CHECK_20261109.md)
+checks the explicit source tail, centroid cancellation, same-center
+kernel, error constants and bounded acquisition contract. Same proof
+author only; E13's fixed proof check and canonical run remain unexecuted.
+9 November 2026. Prepared for Edward Baker with substantial OpenAI Codex assistance, OC chat0009. Recorded current thread settings gpt-6-astra/max; per-turn backend configuration unavailable. Earlier dated routing below is historical.
+
+**Historical — B10 r1.** [Self-check15](15_TND_OC_B10_R1_GAUSSIAN_COMPARISON_SELF_CHECK_20261109.md)
+checks the projection, tails, source-error implications and scoped
+small-value lower bound. Same-assistant proof-author checking only.
+9 November 2026. Prepared for Edward Baker with substantial OpenAI Codex assistance, OC chat0009. Recorded current thread settings gpt-6-astra/max; per-turn backend configuration unavailable. Earlier entries retain their evidence levels.
+
+**8 November 2026 — E12 r1.** [Review14](14_TND_OC_E12_R1_FULL_MARKED_PAIR_CLAIM_ASSESSMENT_20261108.md) accepts the six E10
+claims unchanged at their stated scope. Internal same-model review
+with shared premises, one assessment pass and zero corrections. For
+Edward Baker with OpenAI Codex assistance, runtime GPT-6.1 Sol,
+effort unavailable. Earlier task routing below is historical.
+
+**Current — 8 November 2026, B09 design check.** For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[Self-check13](13_TND_OC_B09_DESIGN_SELF_CHECK_20261108.md) checks the
+elementary design and frozen obligations. This is not an E10 proof or
+independent acceptance. E10 is ready; E12 assessment is reserved after
+its return. Earlier routing below is historical.
+
+**Current correction — 8 November 2026, TND-OC-E11.** For Edward Baker
+with OpenAI Codex assistance; actual model/effort unavailable, OC chat0006.
+[E11 check12](12_TND_OC_E11_DESTINATION_AND_PRIORITY_CHECK_20261108.md): Editorial/source-interface and preservation check; no independent mathematical review.
+[Progress02](../research-progress/02_TND_OC_MARGINAL_PRIORITIES_RESEARCH_PROGRESS_20261108.md)
+is the sole live register; earlier dated routing below is historical.
+
 **8 November 2026 — B08 complete.** For Edward Baker with substantial OpenAI Codex assistance; actual model/effort unavailable.
 
 - [B08 self-check11](11_TND_OC_B08_PROGRAM_FIT_SELF_CHECK_20261108.md): scoped analytical checks and routing; same-author only.
@@ -31,7 +66,7 @@ Earlier dated entries below are historical; the sole register owns live status.
 - [Author check01](01_TND_OC_OPENING_AUTHOR_SELF_CHECK_20261107.md): same assistant as the opening proofs, Astra/max; historical and not E02.
 - [E02 Review02](02_TND_OC_E02_CLAIM_LEVEL_ASSESSMENT_20261107.md): separate-session claim-level assessment; accept after one bounded hypothesis correction. Exact backend model/effort unavailable. Three read-only inherited-model scope checks; no specialist or verified cross-model validation.
 
-The sole status owner is research-progress/01_TND_OC_RESEARCH_PROGRESS_20261107.md.
+The sole status owner is research-progress/02_TND_OC_MARGINAL_PRIORITIES_RESEARCH_PROGRESS_20261108.md.
 
 - [Self-check03 — B02](03_TND_OC_B02_AUTHOR_SELF_CHECK_20261107.md): same-author analytical check of Note04; does not replace the pending E03 assessment.
 

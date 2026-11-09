@@ -1,6 +1,6 @@
 # Collision constraints: scientific overview
 
-8 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Actual recorded model and effort are unavailable, existing OC chat0006. Setup only; no new branch research or numerical execution is activated.
+9 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance, OA chat0002. Actual model identifier and reasoning effort are unavailable in the chat registry. The inherited geometry below remains the baseline; the first-cycle result and its limits are recorded at the end.
 
 ## Question and boundaries
 
@@ -88,7 +88,7 @@ product inequalities there retain their extra hypotheses.
 
 ## Candidates, comparator and unresolved choices
 
-B01 compares at most two candidates:
+The first B01 cycle compared the following two candidates:
 
 1. **Event-conditioned source or primitive jets.** Choose a ratio or
    signed combination whose bound has a specified effect on a critical
@@ -118,7 +118,67 @@ No theorem forbids using stronger marginals here if they later pay a
 specific consumer. No inherited asymptotic or density estimate is treated
 as a pointwise collision exclusion.
 
-Still undecided: event type, compact or asymptotic domain, normalization,
-the source-dependent inequality, the actual margin to improve, and the
-method for estimating it. These are B01 choices. Consequently no E01
-execution packet or numerical campaign is ready.
+The setup choices were resolved in part by the 9 November B01 cycle:
+nondegenerate local double events, a parameterized compact positive-Newman-time
+box, and the finite real-pair lifetime consumer. The selected acquisition
+uses classical divided differences of the complete source to remove the
+actual pair before evaluating its regular factor. [Note02](../notes/02_TND_OA_B01_REGULAR_DEFLATION_AND_FORCE_TRANSFER_20261109.md)
+derives complete source-tail errors, conditioned signed force transfer,
+and explicit midpoint/upper-gap confinement before the survival argument.
+It is **proved in-note** and accepted under its fixed premises by the
+separate-chat [E01 assessment](../reviews/03_TND_OA_E01_R1_REGULAR_DEFLATION_ASSESSMENT_20261109.md).
+
+The derivative transfer uses coupled information from the complete
+source. B02 selected one candidate box from the existing RT/HDC pair;
+the E01 model's full-box denominator, signed force and strict margins
+remain unacquired.
+
+The comparison now includes a regular direct divided-difference evaluator.
+Small root slopes alone do not show a contour advantage. Conversely,
+the uniform real parameter-box floor may fail where a contour method is
+usable. No method dominates on the information acquired so far.
+
+## B02 finite pilot decision
+
+On 9 November, [Note06](../notes/06_TND_OA_B02_CANONICAL_PILOT_AND_REDUNDANT_GAP_GATE_20261109.md)
+screened one canonical box for Newman times \([1/20000,1/10000]\).
+The strongest inherited complete-source comparison already proves
+survival of that population on a larger interval. The new elementary
+screen \(Q_-Q_+>32D^2\Delta\) also shows, conditionally on E01's floor
+and confinement data, that the unsigned bound \(B\le K\) suffices for
+its gap margin. On the selected box the signed average therefore would
+not change the survival verdict. Existing jets expose a conditioning
+loss for the particular uniform-ratio midpoint allowance.
+
+These implications are **proved in-note, with proof-author self-check
+only**. The resulting [decision](../brainstorm/notes/02_TND_OA_B02_PILOT_NO_RUN_DECISION_20261109.md)
+is not to run that pilot for the proposed consumer. It does not prove
+the candidate's center curvature or full factor floor fails, and it
+does not exclude other geometries or estimators. This is a finite design
+diagnostic under [known-region11](../../../../../../avoid/11_certifying_the_known_and_tests_that_cannot_fail.md)
+and [scope07](../../../../../../avoid/07_scoped_exclusions_read_as_universal.md).
+
+B03 subsequently screened one replacement candidate and used its one
+focused clarification, as recorded below.
+
+## B03 source-readiness and bound-direction return
+
+9 November: [Note08](../notes/08_TND_OA_B03_LEHMER_DIRECTION_AND_ACQUISITION_STOP_20261109.md)
+records the first Lehmer pair as a candidate for positive-time survival
+ending at zero. The inspected records do not provide its actual positive
+starting tuple or a quantitative gap in the direct comparison. Under the
+additional real-exterior product premise, the endpoint sum obeys
+\(G+2B=qS\ge0\). An upper \(G\) therefore gives a lower \(B\), whereas
+E01 survival uses an upper \(B\). An exact polynomial heat control passes
+the small-gap diagnostic and retains negative force but still collides.
+
+The algebra and control are **proved in-note** and accepted at their
+stated scope in the [E02 assessment](../reviews/06_TND_OA_E02_R1_LEHMER_SCREEN_ASSESSMENT_20261109.md). The diagnostic
+limits this use of the exterior sum under the real-product premise.
+The control-premise audit remains tied to
+[controls12](../../../../../../result-summaries/12_collision_controls_and_screening.md)
+and [scope07](../../../../../../avoid/07_scoped_exclusions_read_as_universal.md).
+
+[Decision03](../brainstorm/notes/03_TND_OA_B03_PARK_FINITE_PAIR_ACQUISITION_20261109.md)
+parks the present finite-pair acquisition cycle.
+[Continuation11](../notes/11_TND_OA_AFTER_E02_CONTINUATION_AND_MODEL_CHANGE_20261109.md) names the evidence needed to reopen it.

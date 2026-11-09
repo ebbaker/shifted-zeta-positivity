@@ -56,3 +56,18 @@ model/effort unavailable, existing OC chat0006.
 records the bounded local-source reuse for overview02/plan02/progress02.
 No new article, primary-paper check, PDF or bibliography copy. Original
 source receipts and mathematical evidence are preserved.
+
+**8 November 2026 — E06 r2:** the dated addition to
+[source-use06](06_TND_A_E06_PRIORITY_RENEWAL_SOURCE_USE_20261108.md)
+records the supplied OG advisory and its actual conditional-interface
+checks. Current reviewing model/effort unavailable; source provenance
+is kept separate. No new article or bibliography copy.
+
+
+**8 November destination correction:** the E06 priority-renewal and
+advisory-integration entries above are historical misdirected work.
+[Correction Note06](../notes/06_TND_A_MISDIRECTED_PRIORITY_WITHDRAWAL_20261108.md)
+restores auxiliary progress01/E03 and points to the intended OC renewal.
+The current correction remains OC chat0006; auxiliary chat0004 and all
+registered history files retain their identity. For Edward Baker with
+OpenAI Codex assistance; actual correction model/effort unavailable.

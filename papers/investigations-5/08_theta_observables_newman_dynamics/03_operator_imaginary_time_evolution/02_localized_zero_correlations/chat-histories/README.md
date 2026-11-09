@@ -1,3 +1,63 @@
+**9 November 2026 — E13 r1, OC chat0010.** The requested continuation
+opened a new chat. The recorder registered the actual title and
+paginated source under
+[chat0010](0010_2026-11-09T18-15-10Z_please-read-papers-investigations-5-08-theta-observables-newman-dynamics-03-oper.json).
+Thread `01a1c185-6fd7-73f0-89da-40a5de62ad7d`, E13 turn
+`01a1c185-7312-7d60-85a5-f44331a0e41e`. Prepared for Edward Baker
+with OpenAI Codex assistance, recorded thread settings GPT-6.1 Sol /
+ultra. Read live capture metadata from [index.json](index.json).
+The bounded exact-turn worker handles the completed reply after it
+is recorded. Verify the completed capture on continuation.
+
+**9 November 2026 — B10 r2 continues the same OC chat0009.**
+The actual title remains “Continue B10 r1 research”. The preceding r1
+final and completed turn were verified after the start-of-turn refresh.
+Historical r2 turn: 01a1c112-7105-7083-8a6f-22379af08a33. Use the bounded
+exact-turn worker for this real final, and verify its outcome next turn;
+native-hook activation remains unverified.
+9 November 2026. Prepared for Edward Baker with substantial OpenAI Codex assistance, OC chat0009. Recorded current thread settings gpt-6-astra/max; per-turn backend configuration unavailable. Earlier dated routing below is historical.
+
+**OC chat0009 — Continue B10 r1 research.**
+[Authentic archive](0009_2026-11-09T15-57-07Z_continue-b10-r1-research.json),
+thread 01a1c107-0ed3-7fd1-bb46-0b6df66bd6bb, is uniquely registered here.
+Capture uses the authenticated paginated source and the shared-lock
+refresh tool. Read current times, counts, sizes, hashes and captured
+configurations from [index.json](index.json). The real final response is
+captured by the bounded exact-turn worker, then verified on continuation.
+9 November 2026. Prepared for Edward Baker with substantial OpenAI Codex assistance, OC chat0009. Recorded current thread settings gpt-6-astra/max; per-turn backend configuration unavailable.
+
+**8 November 2026 — E12 r1.** The author continued the existing
+OC chat0008 for the E12 assessment. The archive and registry below
+retain the same thread identity. Runtime GPT-6.1 Sol, effort
+unavailable. Verify the bounded E12 final capture on continuation.
+Prepared for Edward Baker with OpenAI Codex assistance.
+
+**8 November 2026 — E10 r1.** [OC chat0008](0008_2026-11-09T01-55-10Z_please-read-papers-investigations-5-08-theta-observables-newman-dynamics-03-oper.json), thread
+`01a1be04-3a22-7c33-9f2c-363b9b9008a1`, is registered from its own
+local paginated source under the exact recorded title. Runtime
+GPT-6.1 Sol, effort unavailable. The [registry](index.json) owns archive
+configuration metadata, counts, times and digests. Verify the bounded
+exact-turn follow-up after the reply. Prepared for Edward Baker with
+OpenAI Codex assistance.
+
+**8 November 2026 — B09 conversation.** For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+The author redirected “Continue TND-A-B03 research”, thread
+`01a1bddb-de9d-7221-8f78-7a510e8e4fb9`, into OC. Its unique registration
+is now [0004_2026-11-09T01-11-06Z_continue-tnd-a-b03-research.json](0004_2026-11-09T01-11-06Z_continue-tnd-a-b03-research.json).
+[Relocation receipt21](../research-progress/handoffs/21_TND_OC_B09_CHAT_RELOCATION_20261108.json)
+records the locked transfer preserving title, number, filename, creation,
+first-capture provenance and public messages. The separate OC source-check
+history also has number 4; identify each by its full filename/thread ID.
+No duplicate thread registration or renumbering was introduced.
+
+Current counts, sizes, hashes and capture times belong to the tool-managed
+[index](index.json). This thread's authentic paginated refresh succeeds;
+its recorded model configurations are empty. The earlier chat0006 exporter
+failure below concerns another thread. Use the shared-lock recorder and
+bounded exact-turn final capture; no native completion hook is asserted.
+The dated E11 statement that this chat remained auxiliary was true before
+the author's redirection and is superseded by this relocation.
+
 **8 November 2026 — E08:** actual chat “Continue TND-OC-E08”, thread 01a1bd52-6850-7b02-a292-10c8c1d4b525, is registered as [chat0007](0007_2026-11-08T22-40-56Z_continue-tnd-oc-e08.json) from authenticated local paginated history. Current turn: 01a1bd52-7c36-7db2-81b9-0512fc129c38. Captured model configurations are empty. The tool-managed index owns current counts, times, sizes and hashes; pre-final success does not capture the unsent final. Arrange bounded exact-turn final capture as the last tool action and verify next turn. No native completion hook is asserted. For Edward Baker with substantial OpenAI Codex assistance.
 
 **8 November 2026 — B06:** authentic chat0006, “Continue B06 research”, is registered from the exact local paginated source using the shared-lock recorder. The tool-managed index owns counts, hashes and capture times; actual model/effort configurations are absent. Bounded exact-turn final capture must wait for the real final and completion; no native hook is asserted. For Edward Baker with OpenAI Codex assistance.
@@ -84,3 +144,14 @@ claimed. Chat0001 and all earlier partial records are preserved; the
 earlier unavailable B03 thread is not reidentified as this one.
 See [session receipt](../numerics/02_TND_OC_B03_SESSION_VALIDATION_20261108.json).
 Prepared for Edward Baker with substantial OpenAI Codex assistance.
+
+
+**8 November 2026, E11 destination correction:** the priority renewal and
+Green advisory integration are corrected into OC. This conversation stays
+uniquely chat0006; the separate interrupted auxiliary chat0004 stays in
+its registered home. No registered JSON or index is hand-edited. Current
+refresh still fails with unsupported_public_content, requiring a preserving
+exporter; the prior verified archive remains intact. Current capture is
+incomplete and bounded final capture must be verified, not assumed.
+For Edward Baker with OpenAI Codex assistance; actual model/effort
+unavailable. [Current continuation](../continuation-notes/17_TND_OC_CORRECTED_PRIORITIES_AND_MODEL_CHANGE_20261108.md).
