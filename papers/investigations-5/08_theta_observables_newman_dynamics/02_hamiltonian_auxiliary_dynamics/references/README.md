@@ -47,3 +47,12 @@ supplement identifies only the parent manuscript and pending E03 contract.
 No new third-party PDF, literature theorem or upgraded evidence is imported.
 The [production review](../reviews/02_TND_A_E05_MANUSCRIPT_PRODUCTION_REVIEW_20261106.md)
 separates local derivation checks from the inherited assessments.
+
+## Priority renewal — 8 November 2026
+
+For Edward Baker with substantial OpenAI Codex assistance; actual
+model/effort unavailable, existing OC chat0006.
+[Source-use06](06_TND_A_E06_PRIORITY_RENEWAL_SOURCE_USE_20261108.md)
+records the bounded local-source reuse for overview02/plan02/progress02.
+No new article, primary-paper check, PDF or bibliography copy. Original
+source receipts and mathematical evidence are preserved.

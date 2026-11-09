@@ -125,3 +125,15 @@ retraction; the finite truncation itself is never declared even.
 
 
 **5 November 2026 — strictness must survive a closed filter interval.** Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol / ultra**. [MC11 AR-E04 Note11](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/11_energy_filtered_theta_overlaps/notes/11_MC11_AR_E04_R1_PROOF_CHECKS_AND_ENDPOINT_CORRECTION_20261105.md) records: “Note09 (18) is false at s=0 in its strict zero-index upper bound”. Since c_0(s)/b_0=1+sρ_0, strict ρ_0<1/200 gives a non-strict coefficient bound on [0,1] and strictness only for s>0. The sole local correction preserves all downstream non-strict payments and thresholds; issued input bytes remain unchanged.
+
+**8 November 2026 — compact centers do not bound a measurable width below.**
+For Edward Baker with OpenAI Codex assistance; exact backend model/effort
+unavailable. [TND-OC E07 Note10](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/notes/10_TND_OC_E07_ASSESSMENT_CALCULATIONS_20261108.md) states:
+“A positive measurable h_X on a compact interval has no automatic positive minimum.”
+The common-cutoff argument at uniform density tolerance used h_X^-2
+derivative costs. One bounded correction adds h_X>=h_min>0; the fixed-center
+theorem is unchanged. [Review07](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/reviews/07_TND_OC_E07_CLAIM_LEVEL_ASSESSMENT_20261108.md) also records four
+CR-corrupted roman subscripts despite a successful prior PDF build.
+Check mathematical notation as well as build success. This is a repaired
+sufficiency-argument gap, not a lower bound on actual shrinking-window
+error or a universal approximation obstruction.

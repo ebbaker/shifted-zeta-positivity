@@ -1,3 +1,17 @@
+**8 November 2026 — B08 complete.** For Edward Baker with substantial OpenAI Codex assistance; actual model/effort unavailable.
+
+- [B08 program-fit diagnosis](../notes/14_TND_OC_B08_ARITHMETIC_MARGINAL_COLLISION_FRICTION_20261108.md): exact arithmetic/marginal map, collision-resolution diagnostic and author-directed split; proof-author checks only.
+
+Earlier dated entries below are historical; the sole register owns live status.
+
+**Current, 8 November 2026 — B07:** [Note13](13_TND_OC_B07_COMPLETE_DIVISOR_AND_GAUSSIAN_EVALUATOR_20261108.md) proves the complete-divisor transport and fixed Gaussian quadrature error <1/3000 for a bounded T=1000 evaluator. Conditional theorem, proof-author checking only; no canonical values acquired. E09 execution is ready and pending. For Edward Baker with substantial OpenAI Codex assistance, chat0006; actual model/effort unavailable. Earlier routing below is historical.
+
+**8 November 2026 — E08:** [Note12](12_TND_OC_E08_ASSESSMENT_CALCULATIONS_20261108.md) records all eight accepted calculations; no correction or canonical moment acquisition. Internal LLM assessment; conditional B07 next. Earlier routing below is historical. For Edward Baker with OpenAI Codex assistance, chat0007; actual model/effort unavailable.
+
+**Current, 8 November 2026:** [B06 Note11](11_TND_OC_B06_CENTER_LAW_AND_JOINT_SOURCE_DECISION_20261108.md) selects the center law, compares two routes, proves a scoped harmonic-reference screen and pays a finite mixed-source-moment approximation budget. Proof-author checking only; no canonical moments/profile acquired. E08 assessment next. For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable, chat0006. Earlier routing below is historical.
+
+**Current, 8 November 2026:** [E07 calculations](10_TND_OC_E07_ASSESSMENT_CALCULATIONS_20261108.md). E07 complete, accepted after one bounded correction at internal LLM level. B06 next; E03/E04 pending. For Edward Baker with OpenAI Codex assistance; exact backend model/effort unavailable. Earlier entries below are historical.
+
 # notes
 
 **8 November 2026, full marginal development:** [Note09](09_TND_OC_FULL_GAUSSIAN_MARGINALS_AND_CANONICAL_TRANSFER_20261108.md) records B05 selection and E06 preliminary hierarchy, center covariance and two-sided canonical full-pair approximation. Proof-author checking only, E07 pending. For Edward Baker with substantial OpenAI Codex assistance; actual model/effort unavailable.

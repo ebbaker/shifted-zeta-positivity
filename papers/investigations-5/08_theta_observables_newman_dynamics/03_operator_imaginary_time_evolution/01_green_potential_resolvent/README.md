@@ -1,5 +1,14 @@
 # Green potential and logarithmic resolvent
 
+**8 November 2026, cross-branch advisory:** [Note10](brainstorm/notes/10_TND_OG_COLLISION_DYNAMICS_AND_PARALLEL_PROBES_20261108.md)
+compares collision dynamics with OC/OG probes and provides advice to OA.
+Moved here at the author's request after a folder-name correction. The
+mathematics and evidence level are preserved; OG-E06 remains the next
+planned task. Prepared for Edward Baker with OpenAI Codex assistance,
+actual gpt-6-astra, effort unavailable.
+
+**8 November 2026, B04 completed:** [Decision09](brainstorm/notes/09_TND_OG_B04_VALUE_ROUTE_DECISION_20261108.md) records the Green-specific single-defect resolution calculation and a scoped failure of density-based averaging. [E06](research-progress/handoffs/18_TND_OG_E06_SINGLE_TUPLE_FEASIBILITY_REQUEST_20261108.md) is the ready, unexecuted single-tuple feasibility screen. [Continuation11](continuation-notes/11_TND_OG_B04_RESULTS_AND_MODEL_CHANGE_20261108.md) is the current handoff; the sole register owns live status. Prepared for Edward Baker with OpenAI Codex assistance; actual current runtime gpt-6-astra, effort not exposed.
+
 **E05 assessment, 8 November 2026:** [Review06](reviews/06_TND_OG_E05_CLAIM_LEVEL_ASSESSMENT_20261108.md) accepts all eight acquisition claims with one additive evidence/control clarification in [Note07](notes/07_TND_OG_E05_ASSESSMENT_CALCULATIONS_20261108.md). The E03 theorem/constants are unchanged; OC evidence remains at its own proof-author-check level. Internal shared-premise assessment only; favorable value unpaid. [Continuation09](continuation-notes/09_TND_OG_E05_RESULTS_AND_MODEL_CHANGE_20261108.md) proposes B04 for the canonical signed-value decision, unissued and unactivated. Earlier dated readiness/evidence entries are historical. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort are not recorded in accessible capture metadata.
 
 **E03 complete, 8 November 2026:** [Note06](notes/06_TND_OG_E03_COMPLETE_SIGNED_LOG_ACQUISITION_20261108.md) proves the full signed-log acquisition inequality and finite literal-source choices. [Check05](reviews/05_TND_OG_E03_ASSEMBLY_PROOF_AUTHOR_CHECK_20261108.md) is proof-author checking only, with one recorded inherited-scope clarification. Favorable canonical value remains unpaid. [Continuation08](continuation-notes/08_TND_OG_E03_RESULTS_AND_MODEL_CHANGE_20261108.md) recommends proposed E05 assessment, unissued and unactivated. Earlier dated readiness statements are historical. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort are not recorded in accessible capture metadata.

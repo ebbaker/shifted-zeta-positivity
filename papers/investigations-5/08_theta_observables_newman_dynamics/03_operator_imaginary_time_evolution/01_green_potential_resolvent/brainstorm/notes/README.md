@@ -1,5 +1,14 @@
 # Green/resolvent conceptual decisions
 
+**8 November 2026, cross-branch advisory:** [Note10](10_TND_OG_COLLISION_DYNAMICS_AND_PARALLEL_PROBES_20261108.md)
+records collision/probe interfaces and missing quantitative inputs. It
+was moved from the mistaken direct-folder destination at the author's
+request; OA remains the recipient of advice and OG-E06 remains next here.
+Prepared for Edward Baker with OpenAI Codex assistance, actual gpt-6-astra,
+effort unavailable. [Relocation record19](../../research-progress/handoffs/19_TND_OG_ADVISORY_RELOCATION_20261108.json).
+
+**8 November 2026, B04:** [Decision09](09_TND_OG_B04_VALUE_ROUTE_DECISION_20261108.md) closes the bounded analytical/evaluation comparison and selects E06, one fixed recipe-feasibility screen. The value problem remains open; numerical execution is unactivated. Prepared for Edward Baker with OpenAI Codex assistance; actual current runtime gpt-6-astra, effort not exposed.
+
 **8 November 2026, B04 initial planning:** [Planning08](08_TND_OG_B04_INITIAL_PLANNING_20261108.md) records the requested pre-research overview, two candidate routes, analytical-first recommendation and proposed feasibility/outcome checks. Author discussion precedes substantive research; this is not a B04 result. Prepared for Edward Baker with OpenAI Codex assistance; current runtime identifies gpt-6-astra, reasoning effort not exposed.
 
 **8 November 2026:** [Session07](07_TND_OG_E05_ASSESSMENT_SESSION_20261108.md) records the authorized assessment, additive clarification and boundary before a future signed-value decision. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort are not recorded in accessible capture metadata.

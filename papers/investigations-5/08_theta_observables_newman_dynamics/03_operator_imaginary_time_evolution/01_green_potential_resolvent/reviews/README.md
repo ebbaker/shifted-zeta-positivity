@@ -1,5 +1,7 @@
 # Green/resolvent assessments
 
+**8 November 2026, B04:** [Author check07](07_TND_OG_B04_VALUE_RESOLUTION_AUTHOR_CHECK_20261108.md) checks the Green mass, density conversion, remote tail, allowance/signal ratio and fixed successor scope. Same-author evidence only. Prepared for Edward Baker with OpenAI Codex assistance; actual current runtime gpt-6-astra, effort not exposed.
+
 **8 November 2026, E05:** [Review06](06_TND_OG_E05_CLAIM_LEVEL_ASSESSMENT_20261108.md) accepts all eight fixed claims with one additive evidence/control clarification. Internal shared-premise LLM assessment; root also E03 author. Original proof bytes and evidence distinctions preserved. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort are not recorded in accessible capture metadata.
 
 **8 November 2026, E03:** [Check05](05_TND_OG_E03_ASSEMBLY_PROOF_AUTHOR_CHECK_20261108.md) checks the complete written assembly and records one bounded inherited-obstruction scope clarification. Internal proof-author check with shared premises, not a separate claim-level assessment. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort are not recorded in accessible capture metadata.

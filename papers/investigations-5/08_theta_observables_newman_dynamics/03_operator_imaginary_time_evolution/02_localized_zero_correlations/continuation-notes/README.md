@@ -1,3 +1,17 @@
+**8 November 2026 — B08 complete.** For Edward Baker with substantial OpenAI Codex assistance; actual model/effort unavailable.
+
+- **Current:** [Continuation16](16_TND_OC_AFTER_B08_BIFURCATION_AND_MODEL_CHANGE_20261108.md), author-directed marginal/collision split; OA-B01 default across branches, OC-B09 independent option, E09 optional benchmark. Earlier routing is historical.
+
+Earlier dated entries below are historical; the sole register owns live status.
+
+**Current, 8 November 2026 — B07:** [Continuation15](15_TND_OC_AFTER_B07_AND_MODEL_CHANGE_20261108.md) routes the ready fixed E09 certified-divisor/Gaussian evaluator to Sol, with the full finite budget and failed-gate alternative. It supersedes Continuation14 routing. Conditional B08 requires new evidence; E03/E04 remain pending. For Edward Baker with substantial OpenAI Codex assistance, chat0006; actual model/effort unavailable. Earlier routing below is historical.
+
+**Current, 8 November 2026:** [Continuation14](14_TND_OC_AFTER_E08_AND_MODEL_CHANGE_20261108.md) records E08 acceptance unchanged, the conditional B07 joint-source mechanism requirement, supporting E03/E04 alternatives and a manual model-change prompt. It supersedes Continuation13 routing; all older notes remain historical. For Edward Baker with substantial OpenAI Codex assistance, chat0007; actual backend model/effort unavailable.
+
+**Current, 8 November 2026:** [Continuation13](13_TND_OC_AFTER_B06_AND_MODEL_CHANGE_20261108.md) follows completed B06. Default next is fixed E08 assessment; canonical B07 work needs a named new joint-input mechanism. Includes the exact missing input, pasteable prompt, capture instructions and manual model guidance. For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable, chat0006. Earlier routing below is historical.
+
+**Current, 8 November 2026:** [Current continuation](12_TND_OC_AFTER_E07_AND_MODEL_CHANGE_20261108.md). E07 complete, accepted after one bounded correction at internal LLM level. B06 next; E03/E04 pending. For Edward Baker with OpenAI Codex assistance; exact backend model/effort unavailable. Earlier entries below are historical.
+
 # continuation-notes
 
 **Current continuation, 8 November 2026:** [Continuation11](11_TND_OC_AFTER_GAUSSIAN_MANUSCRIPT_AND_MODEL_CHANGE_20261108.md) follows the full-marginal manuscript rewrite. B05/E06 complete at author-check level; E07 fixed assessment next, then B06 source covariance. It supersedes Continuation10's ready-B05 routing; E03/E04 remain pending. For Edward Baker with substantial OpenAI Codex assistance; actual model/effort unavailable. Older routing below is historical.

@@ -1,3 +1,10 @@
+**Historical document — superseded for current priorities and routing on
+8 November 2026 by [02 / current research-overview](02_TND_A_COLLISION_PRIORITIES_RESEARCH_OVERVIEW_20261108.md).**
+Prepared for Edward Baker with OpenAI Codex assistance; actual current
+model/effort unavailable. Earlier task statuses and recommendations below
+are dated history. Progress02 is now the sole live TND-A register.
+Original mathematical sources and issued requests remain in place.
+
 # Hamiltonian auxiliary dynamics: research overview
 
 5 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort ultra**, verified in turn metadata. Investigation08 chat0003.

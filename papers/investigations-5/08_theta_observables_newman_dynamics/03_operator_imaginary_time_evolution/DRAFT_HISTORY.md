@@ -32,3 +32,13 @@ research history belongs in linked notes/reviews; no snapshot folders.
 | 7 November 2026 | User-directed partial chat recovery placement | [Partial recovery index](chat-histories/partial-recoveries/README.md) | Includes both incomplete recoveries in chat-histories at the author's explicit request, superseding export placement guidance without creating registrations; gpt-6.1-sol/ultra | [Integration provenance](notes/TND_O_EARLIER_EXPORTS_INTEGRATION_20261107.md) |
 
 | 7 November 2026 | Complete-handoff partial chat recovery | [Green/correlation excerpts](chat-histories/partial-recoveries/01a1b83a-dc11-72cc-a251-d4ae48ffb0e5/PARTIAL_PUBLIC_TRANSCRIPT.md); [import provenance](chat-histories/partial-recoveries/01a1b83a-dc11-72cc-a251-d4ae48ffb0e5/IMPORT_README.md) | Adds the author-supplied 18-excerpt partial recovery without inventing missing replies or a canonical registration; three companions unavailable; gpt-6.1-sol/ultra | [Observed-byte receipt](chat-histories/partial-recoveries/01a1b83a-dc11-72cc-a251-d4ae48ffb0e5/IMPORT_RECORD_20261107.json) |
+
+- **8 November 2026 — author-directed collision/marginal bifurcation.**
+  Prepared for Edward Baker with substantial OpenAI Codex assistance;
+  actual model/effort unavailable, existing OC chat0006. Created
+  [03_collision_constraints](03_collision_constraints/README.md) with
+  the standard setup, inherited references, sole TND-OA register and
+  [continuation](03_collision_constraints/notes/01_TND_OA_SETUP_CONTINUATION_AND_MODEL_CHANGE_20261108.md).
+  OC retains generalized marginals independently; OG remains unchanged.
+  Parent navigation only; no parent/OG task status change, manuscript
+  expansion or new mathematical result.

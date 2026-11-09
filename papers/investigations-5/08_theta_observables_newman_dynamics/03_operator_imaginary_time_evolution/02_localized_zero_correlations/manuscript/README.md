@@ -1,3 +1,10 @@
+**8 November 2026 — E07 assessed reading copy:** [Review07](../reviews/07_TND_OC_E07_CLAIM_LEVEL_ASSESSMENT_20261108.md)
+records acceptance after one bounded correction, at internal LLM level.
+The fixed-center pair bound is unchanged. B06 is next under
+[Continuation12](../continuation-notes/12_TND_OC_AFTER_E07_AND_MODEL_CHANGE_20261108.md); E03/E04 remain pending.
+For Edward Baker with OpenAI Codex assistance; exact backend model/effort unavailable.
+Earlier rewrite descriptions below are historical.
+
 # Generalized localized zero correlations analytical draft
 
 8 November 2026, America/New_York. Drafted for **Edward Baker**, with
@@ -7,7 +14,7 @@ unavailable in chat0003; no model change or independent reviewer inferred.
 The current 34-page manuscript studies the full Gaussian-smoothed pair
 and higher factorial hierarchy, derived from a complete labelled zero
 configuration. It retains ordinary real-zero spacing information,
-transverse marks and multiplicities. Its new preliminary canonical result
+transverse marks and multiplicities. Its internally assessed canonical result
 uniformly approximates the entire smoothed pair function from the complete
 time-zero theta source. A canonical profile/covariance estimate remains open.
 The earlier scalar results are supporting appendices.
@@ -50,14 +57,16 @@ Read the [result index](../../../../../../result-summaries/README.md) and
 [status06](../../../../../../avoid/06_status_stronger_than_the_evidence.md).
 
 The E02 log/source inputs retain their accepted internal assessment level.
-The new marginal/covariance/two-sided pair derivations are preliminary,
-proof-author checking only; E07 is pending. B02/B03/B04 retain their own
+The new marginal/covariance/two-sided pair derivations are accepted
+internally in E07 after one bounded correction: explicit h floor for
+common-cutoff uniform density tolerance and four notation repairs.
+No specialist or verified cross-model review is asserted. B02/B03/B04 retain their own
 levels; E03/E04 remain pending. New research is recorded in
 [Note09](../notes/09_TND_OC_FULL_GAUSSIAN_MARGINALS_AND_CANONICAL_TRANSFER_20261108.md),
 with [author check06](../reviews/06_TND_OC_E06_GAUSSIAN_MANUSCRIPT_AUTHOR_CHECK_20261108.md).
 
 [BUILD_RECORD.json](BUILD_RECORD.json) records the current sources and PDF.
-[Continuation11](../continuation-notes/11_TND_OC_AFTER_GAUSSIAN_MANUSCRIPT_AND_MODEL_CHANGE_20261108.md)
-gives the fixed E07 assessment and subsequent B06 covariance direction,
+[Continuation12](../continuation-notes/12_TND_OC_AFTER_E07_AND_MODEL_CHANGE_20261108.md)
+gives the completed E07 disposition and next B06 covariance direction,
 with the requested model-change guidance. No numerical correlation fit,
 canonical zero sampling or new nonreal-zero exclusion is claimed.

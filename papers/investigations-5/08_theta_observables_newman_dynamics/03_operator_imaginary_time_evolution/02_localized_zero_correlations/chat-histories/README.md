@@ -1,3 +1,16 @@
+**8 November 2026 — E08:** actual chat “Continue TND-OC-E08”, thread 01a1bd52-6850-7b02-a292-10c8c1d4b525, is registered as [chat0007](0007_2026-11-08T22-40-56Z_continue-tnd-oc-e08.json) from authenticated local paginated history. Current turn: 01a1bd52-7c36-7db2-81b9-0512fc129c38. Captured model configurations are empty. The tool-managed index owns current counts, times, sizes and hashes; pre-final success does not capture the unsent final. Arrange bounded exact-turn final capture as the last tool action and verify next turn. No native completion hook is asserted. For Edward Baker with substantial OpenAI Codex assistance.
+
+**8 November 2026 — B06:** authentic chat0006, “Continue B06 research”, is registered from the exact local paginated source using the shared-lock recorder. The tool-managed index owns counts, hashes and capture times; actual model/effort configurations are absent. Bounded exact-turn final capture must wait for the real final and completion; no native hook is asserted. For Edward Baker with OpenAI Codex assistance.
+
+**E07, 8 November 2026:** 'Continue TND-OC-E07 research', thread
+01a1bd23-6c44-7311-aab3-e0dcc26b7cdb, is authentically registered as
+[chat0005](0005_2026-11-08T21-49-37Z_continue-tnd-oc-e07-research.json).
+Source: local paginated history; captured model configurations are empty.
+Observed turn: 01a1bd23-9534-7260-90ec-baaf1ea9ea94. The registry owns
+capture metadata; arrange bounded final capture as the final tool action
+and verify after real final/turn completion. No native hook activation
+is asserted. For Edward Baker with OpenAI Codex assistance.
+
 # Correlation conversation affiliation
 
 **B04, 8 November 2026:** thread

@@ -1,5 +1,19 @@
 # Operator generators and imaginary-time Newman evolution
 
+**Author-directed research split, 8 November 2026.** The
+[localized marginal branch](02_localized_zero_correlations/README.md)
+continues as an independent high-risk research direction. The new
+[collision-constraint branch](03_collision_constraints/README.md)
+starts from the collision consequence and compares alternatives that
+need not pass through marginals. The existing
+[Green branch](01_green_potential_resolvent/README.md) retains its own
+program and provides a direct comparator. Each branch's register alone
+owns its task status. [OC diagnosis and split](02_localized_zero_correlations/notes/14_TND_OC_B08_ARITHMETIC_MARGINAL_COLLISION_FRICTION_20261108.md)
+and the [new continuation](03_collision_constraints/notes/01_TND_OA_SETUP_CONTINUATION_AND_MODEL_CHANGE_20261108.md)
+explain the division. Prepared for Edward Baker with substantial OpenAI
+Codex assistance; actual model/effort unavailable, OC chat0006.
+The earlier two-branch setup descriptions below are historical.
+
 **Integrated 7 November 2026 in `/Users/ebbaker/Documents/shifted-zeta-positivity` — gpt-6.1-sol/ultra.** Both child programs remain ready/unactivated. The [integration receipt](notes/TND_O_COMPLETE_HANDOFF_INTEGRATION_20261107.md) records all file dispositions, final hashes, preserved evidence and reading-copy handling.
 
 7 November 2026, America/New_York. Prepared for **Edward Baker** with substantial

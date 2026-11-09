@@ -1,5 +1,9 @@
 # Green/resolvent research notes
 
+**8 November 2026, B04:** [Note09](09_TND_OG_B04_GREEN_MASS_RESOLUTION_AND_VALUE_DECISION_20261108.md) derives exact single-zero Green mass/window signals and the scoped failure of the inherited density-based average allowance. Proof-author check only; no favorable value. A fixed E06 feasibility screen is issued, unexecuted. Prepared for Edward Baker with OpenAI Codex assistance; actual current runtime gpt-6-astra, effort not exposed.
+
+**8 November 2026, renewed E03 request:** [Note08](08_TND_OG_E03_CONTINUATION_RECONCILIATION_20261108.md) reconciles historical Continuation07 with completed E03/E05 and existing B04 planning. Bounded recheck only; no new theorem or evidence promotion. Current identity differences are recorded separately. [Continuation10](../continuation-notes/10_TND_OG_E03_RECONCILIATION_AND_MODEL_CHANGE_20261108.md) supplies the current model-change entry point. Prepared for Edward Baker with OpenAI Codex assistance; exact backend/effort unavailable in capture metadata.
+
 **8 November 2026, E05:** [Note07](07_TND_OG_E05_ASSESSMENT_CALCULATIONS_20261108.md) records assessment calculations, explicit finite quadrature witnesses and the additive evidence/control clarification. Read with frozen Note06; its theorem is unchanged. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort are not recorded in accessible capture metadata.
 
 **8 November 2026:** [Note06](06_TND_OG_E03_COMPLETE_SIGNED_LOG_ACQUISITION_20261108.md) completes E03's finite-source, exact-log-tail and prime-baseline acquisition theorem. Proved in-note with proof-author checking only; favorable value unpaid. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort are not recorded in accessible capture metadata.

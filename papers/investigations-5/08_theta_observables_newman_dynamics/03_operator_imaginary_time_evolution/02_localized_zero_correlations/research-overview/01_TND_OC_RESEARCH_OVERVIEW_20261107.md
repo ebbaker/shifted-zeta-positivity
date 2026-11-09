@@ -1,3 +1,35 @@
+**Current, 8 November 2026 — B08 complete; author-directed bifurcation.**
+[Note14](../notes/14_TND_OC_B08_ARITHMETIC_MARGINAL_COLLISION_FRICTION_20261108.md) separates arithmetic representation, finite
+acquisition and a collision-useful estimate. The author retains full
+marginals here as an independent high-risk direction and creates the
+[collision-constraint branch](../../03_collision_constraints/README.md)
+for alternatives prioritizing collisions. OC B09 is ready, unactivated;
+E10 is reserved. E09 remains an optional frozen finite benchmark.
+[Continuation16](../continuation-notes/16_TND_OC_AFTER_B08_BIFURCATION_AND_MODEL_CHANGE_20261108.md) gives both routes and model
+guidance. Actual model/effort unavailable, chat0006; proof-author checking
+only. No canonical value or collision bound acquired. Earlier dated
+routing below is historical; the sole register owns current status.
+
+The precise primitive-to-marginal equations and the distinction between
+source probability, zero-label marginals and auxiliary ensembles are now
+collected in [Note14 §§2–3](../notes/14_TND_OC_B08_ARITHMETIC_MARGINAL_COLLISION_FRICTION_20261108.md). Its fixed-blur two-label
+calculation is a scoped diagnostic, not a canonical-source obstruction.
+The broad marginal objective remains primary here; the new OA branch
+does not depend on its success.
+
+The finite approximation classification and control screen are in Note13 sections 1 and 8. Read the [result index](../../../../../../result-summaries/README.md), [cluster11](../../../../../../result-summaries/11_newman_heat_flow_reductions_and_certificates.md), [controls12](../../../../../../result-summaries/12_collision_controls_and_screening.md), [avoid index](../../../../../../avoid/README.md), [classification01](../../../../../../avoid/01_restating_the_target.md) and [scope07](../../../../../../avoid/07_scoped_exclusions_read_as_universal.md).
+
+**Current, 8 November 2026 — E08 complete:** [Review09](../reviews/09_TND_OC_E08_CLAIM_LEVEL_ASSESSMENT_20261108.md) accepts
+all eight B06 claims unchanged at internal LLM assessment level, after one
+analytical pass and no correction. [Note12](../notes/12_TND_OC_E08_ASSESSMENT_CALCULATIONS_20261108.md) records the calculations.
+No canonical moments, full-pair value or profile are acquired. The conditional
+research successor is B07: a named new joint-source mechanism with explicit
+errors and finite budget; E03/E04 remain separate pending alternatives.
+[Continuation14](../continuation-notes/14_TND_OC_AFTER_E08_AND_MODEL_CHANGE_20261108.md) gives the exact reopening condition and manual
+model-change guidance. For Edward Baker with substantial OpenAI Codex
+assistance, chat0007; actual backend model/effort unavailable. Earlier
+routing below is historical; the sole register owns live status.
+
 # Localized correlations and full zero configurations
 
 **Full marginal development, 8 November 2026:** the primary objects are

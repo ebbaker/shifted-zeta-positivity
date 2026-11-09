@@ -1,5 +1,7 @@
 # Green/resolvent reference ownership and use
 
+**8 November 2026, B04:** [Source-use09](09_TND_OG_B04_VALUE_RESOLUTION_SOURCE_USE_20261108.md) records the focused density-premise and calibration-coverage checks, reusing canonical catalogs, bibliographies and external PDF copies. Actual current model gpt-6-astra; effort not exposed. Prepared for Edward Baker with OpenAI Codex assistance.
+
 **8 November 2026, E05:** [Source-use08](08_TND_OG_E05_ASSESSMENT_SOURCE_USE_20261108.md) records fresh classical passage checks, inherited-source assessment limits and additional older-control source identities. No duplicate bibliography or evidence promotion. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort are not recorded in accessible capture metadata.
 
 **8 November 2026, E03:** [Source-use07](07_TND_OG_E03_SIGNED_LOG_ASSEMBLY_SOURCE_USE_20261108.md) records fresh Jensen, Harnack and reciprocal-gamma passage checks and the actual source/prime/obstruction dependencies. Canonical reference ownership is preserved. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort are not recorded in accessible capture metadata.

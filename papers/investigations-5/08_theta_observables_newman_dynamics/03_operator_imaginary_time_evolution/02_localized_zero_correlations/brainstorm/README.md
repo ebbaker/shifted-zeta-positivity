@@ -1,3 +1,11 @@
+**8 November 2026 — B08 complete.** For Edward Baker with substantial OpenAI Codex assistance; actual model/effort unavailable.
+
+- [B08 diagnosis and author decision](../notes/14_TND_OC_B08_ARITHMETIC_MARGINAL_COLLISION_FRICTION_20261108.md): retain marginals independently; create collision constraints as a separate priority. No duplicate decision note.
+
+Earlier dated entries below are historical; the sole register owns live status.
+
+**8 November 2026 — B07:** [Decision08](notes/08_TND_OC_B07_COMPLETE_DIVISOR_DECISION_20261108.md) selects complete-divisor certification and Gaussian quadrature, with one completeness clarification and a fixed E09 pilot. Conditional theorem in Note13; proof-author checking only, no canonical values acquired. For Edward Baker with OpenAI Codex assistance, chat0006; actual model/effort unavailable. Earlier routing below is historical.
+
 # brainstorm
 
 - [Localized pair-marginal direction and literature07](notes/07_TND_OC_LOCALIZED_PAIR_MARGINAL_LITERATURE_AND_DIRECTION_20261108.md),

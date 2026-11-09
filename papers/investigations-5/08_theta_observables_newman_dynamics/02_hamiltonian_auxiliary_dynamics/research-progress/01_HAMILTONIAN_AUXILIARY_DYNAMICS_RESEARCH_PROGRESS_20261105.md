@@ -1,8 +1,15 @@
+**Historical document — superseded for current priorities and routing on
+8 November 2026 by [02 / current research-progress](02_TND_A_COLLISION_PRIORITIES_RESEARCH_PROGRESS_20261108.md).**
+Prepared for Edward Baker with OpenAI Codex assistance; actual current
+model/effort unavailable. Earlier task statuses and recommendations below
+are dated history. Progress02 is now the sole live TND-A register.
+Original mathematical sources and issued requests remain in place.
+
 # Hamiltonian auxiliary dynamics: research progress
 
 5 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort ultra**, verified in turn metadata. Investigation08 chat0003.
 
-**This is the sole current register for TND-A tasks.** Created at the author's explicit request for branch progress files. The [parent register][shared-progress] owns shared TND tasks and a crosswalk, not a second copy of these live statuses. No previous branch progress file exists.
+**Historical ownership statement at issuance: this was the sole current register for TND-A tasks.** Created at the author's explicit request for branch progress files. The [parent register][shared-progress] owns shared TND tasks and a crosswalk, not a second copy of these live statuses. No previous branch progress file exists.
 
 ## Next task
 
@@ -183,3 +190,25 @@ external task or original mathematical source was changed.
 **Next scientific task remains [E] TND-A-E03 r1 — Sol**, at the existing
 [frozen request][e03-request]. It remains issued and unactivated; E04 is
 pending. The manuscript request does not activate either successor.
+
+## TND-A-E06 activation — 8 November 2026
+
+The author requests a new auxiliary research overview, corresponding plan
+and progress file reflecting the collision-priority discussion, under
+GPT_RESEARCH_MODEL_WORKFLOW. Type E: fixed documentation/priority renewal;
+Sol recommended for this editorial task, actual recorded model/effort
+unavailable. Existing OC chat0006, thread
+01a1bd30-e805-7183-9318-427ca0a63cc9, current turn
+01a1bdb8-d1df-7303-a7c9-98960b98e0d3. Root is the sole writer.
+
+Scope: reconcile existing E01/E02 evidence and B02/E03 diagnostic with the
+new priority; write overview02, plan02 and progress02, designate exactly
+one live TND-A owner and preserve all issued requests. Provide a task
+crosswalk and continuation/model guidance. One document pass and one
+consistency pass; no new research, numerical run, model switch or
+delegation. Changes to the direct/operator research programs are deferred
+at the author's request while the parallel brainstorm proceeds.
+
+Chat refresh still fails with unsupported_public_content; the prior
+verified OC archive remains intact. Do not move or duplicate this existing
+chat registration or bypass the exporter's preservation check.

@@ -1,3 +1,15 @@
+**8 November 2026 — B08 complete.** For Edward Baker with substantial OpenAI Codex assistance; actual model/effort unavailable.
+
+- [B08 validation12](12_TND_OC_B08_SESSION_VALIDATION_20261108.json): protected-input, link, size and setup checks only; no canonical computation.
+
+Earlier dated entries below are historical; the sole register owns live status.
+
+**8 November 2026 — B07:** [validation11](11_TND_OC_B07_SESSION_VALIDATION_20261108.json) records file/input preservation, local links, sizes and authentic-history metadata. B07 performed no canonical numerical evaluation or evaluator implementation. E09 owns the fixed pilot and actual numerical evidence. For Edward Baker with substantial OpenAI Codex assistance, chat0006; actual model/effort unavailable. Earlier routing below is historical.
+
+**8 November 2026 — E08:** [validation10](10_TND_OC_E08_SESSION_VALIDATION_20261108.json) records input hashes, preservation, links and sizes. Analytical assessment only; no mathematical numerical experiment or canonical moment evaluation. For Edward Baker with OpenAI Codex assistance, chat0007; actual model/effort unavailable.
+
+**8 November 2026 — B06:** [validation09](09_TND_OC_B06_SESSION_VALIDATION_20261108.json) records frozen-source, file, link and authentic-history checks only. No mathematical numerical experiment, canonical moment evaluation or collision-certificate replay occurred. New estimates are analytical, with proof-author checking only. For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable, chat0006.
+
 # numerics
 
 **8 November 2026, E06 supporting checks:** [exact record07](07_TND_OC_E06_EXACT_BOOKKEEPING_20261108.json), [check script](check_e06_gaussian_bookkeeping.py), and [validation08](08_TND_OC_E06_MANUSCRIPT_VALIDATION_20261108.json) record weighted factorial normalization, self subtraction, support constants and manuscript production. No canonical-zero evaluation or analytic proof certificate. For Edward Baker with substantial OpenAI Codex assistance; actual model/effort unavailable.

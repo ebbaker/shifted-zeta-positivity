@@ -1,3 +1,11 @@
+- **8 November 2026 — TND-OC-B07:** [Note13](notes/13_TND_OC_B07_COMPLETE_DIVISOR_AND_GAUSSIAN_EVALUATOR_20261108.md) selects complete-divisor certification and proves a conditional uniform Gaussian full/connected pair error <1/3000 at T=1000. Proof-author checking only; no canonical values acquired. Fixed E09 execution next under request18/Inputs18; [Continuation15](continuation-notes/15_TND_OC_AFTER_B07_AND_MODEL_CHANGE_20261108.md) gives model guidance. Manuscript/build and frozen E03/E04/E08 inputs unchanged; no manuscript milestone or investigation closure. For Edward Baker with substantial OpenAI Codex assistance, chat0006; actual model/effort unavailable.
+
+- **8 November 2026 — TND-OC-E08:** [Review09](reviews/09_TND_OC_E08_CLAIM_LEVEL_ASSESSMENT_20261108.md) accepts all eight B06 claims unchanged, one analytical pass and no correction. Internal LLM assessment with shared premises; [Note12](notes/12_TND_OC_E08_ASSESSMENT_CALCULATIONS_20261108.md) and return16 record calculations and preservation. No canonical moments/profile acquired; conditional B07 successor in [Continuation14](continuation-notes/14_TND_OC_AFTER_E08_AND_MODEL_CHANGE_20261108.md), E03/E04 pending. Manuscript/build and frozen packets unchanged; no manuscript milestone or investigation closure. For Edward Baker with substantial OpenAI Codex assistance, chat0007; actual model/effort unavailable.
+
+- **8 November 2026 — TND-OC-B06:** [Note11](notes/11_TND_OC_B06_CENTER_LAW_AND_JOINT_SOURCE_DECISION_20261108.md) fixes the dyadic center regime, compares two routes and reduces the nonharmonic source covariance to finite same-center moments with explicit errors. Proved in-note, proof-author checking only; actual moments/profile unacquired. E08 assessment next; E03/E04 pending. Manuscript unchanged, no snapshot or investigation closure. For Edward Baker with OpenAI Codex assistance, chat0006; actual model/effort unavailable.
+
+- **8 November 2026 — TND-OC-E07:** [Review07](reviews/07_TND_OC_E07_CLAIM_LEVEL_ASSESSMENT_20261108.md) accepts the Gaussian marginal/covariance and two-sided pair claims after one bounded correction: explicit h floor for common uniform-density cutoffs and four notation repairs. Internal LLM assessment, exact backend model/effort unavailable, three inherited-model subchecks. No profile acquired; B06 next, E03/E04 pending. Current reading copy/status synchronized; original manifests and returns preserved, no snapshot. For Edward Baker with OpenAI Codex assistance, chat0005.
+
 # Localized zero correlations: milestones
 
 - **8 November 2026 — B05/E06 full-marginal manuscript milestone:** rewrote the current draft to 34 pages around generalized Gaussian-smoothed factorial marginals; added weighted normalization, smoothing/bias, center covariance and a two-sided uniform canonical full-pair error retaining real zeros. Earlier scalar proofs are supporting appendices. New claims: preliminary, proof-author checking only; E07 pending, E03/E04 unchanged. [Note09](notes/09_TND_OC_FULL_GAUSSIAN_MARGINALS_AND_CANONICAL_TRANSFER_20261108.md), [author check06](reviews/06_TND_OC_E06_GAUSSIAN_MANUSCRIPT_AUTHOR_CHECK_20261108.md), [Continuation11](continuation-notes/11_TND_OC_AFTER_GAUSSIAN_MANUSCRIPT_AND_MODEL_CHANGE_20261108.md). No canonical profile acquired; exact bookkeeping supports the proofs. Current PDF/build replaced in place; historical E05 return preserved, no snapshot. For Edward Baker with substantial OpenAI Codex assistance; actual model/effort unavailable.
@@ -73,3 +81,13 @@ E02 configuration: OpenAI Codex; exact backend model/effort unavailable. Origina
   refresh; final capture remains a bounded post-turn check. For Edward
   Baker with substantial OpenAI Codex assistance; actual model/effort
   unavailable. No manuscript snapshot, numerical campaign or B02 promotion.
+
+- **8 November 2026 — B08 program-fit review and author-directed bifurcation.**
+  For Edward Baker with substantial OpenAI Codex assistance; actual
+  model/effort unavailable, chat0006. [Note14](notes/14_TND_OC_B08_ARITHMETIC_MARGINAL_COLLISION_FRICTION_20261108.md) makes the
+  primitive-to-marginal and collision interfaces explicit, with scoped
+  elementary diagnostics and author checking only. Retained marginals as
+  independent high-risk research; created the OA collision-constraint
+  branch under INVESTIGATION_SETUP_WORKFLOW. E09 stays optional and
+  frozen. [Continuation16](continuation-notes/16_TND_OC_AFTER_B08_BIFURCATION_AND_MODEL_CHANGE_20261108.md) supplies routing.
+  No canonical collision bound, manuscript milestone or investigation closure.

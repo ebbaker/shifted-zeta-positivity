@@ -1,78 +1,54 @@
-# Localized zero correlations
+# Localized zero correlations and marginals
 
-7 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Root authoring model/effort unavailable; hierarchy discovery was tool-selected **gpt-6.1-sol/ultra**, shared Green check **gpt-6-astra/ultra**. Dispatch settings are not independent backend verification.
+8 November 2026, America/New_York. Prepared for Edward Baker with substantial OpenAI Codex assistance, chat0006; actual recorded model/effort unavailable.
 
-Branch02 of the [operator investigation](../README.md), alongside [Green fields](../01_green_potential_resolvent/README.md). This branch studies localized pair and higher correlation measures for possibly nonreal zeros, their marginals and smoothing, and analytical control from the canonical source. Detecting a nonreal pair is one possible application of that broader program.
+**Purpose after the author-directed bifurcation:** develop generalized
+localized pair and higher marginals for canonical zeros, including
+nonreal marks. This is retained as a high-risk research direction with
+potential value before an immediate collision application is proved.
 
-**Current manuscript milestone, 8 November 2026:** the 34-page draft now
-centers the full Gaussian-smoothed factorial hierarchy, with explicit
-joint-to-marginal definitions, center averaging and a new uniform canonical
-pair-function approximation that retains real zeros. The new analysis is
-preliminary, proof-author checking only; a canonical correlation profile
-remains open. [Note09](notes/09_TND_OC_FULL_GAUSSIAN_MARGINALS_AND_CANONICAL_TRANSFER_20261108.md)
-records the development. B05/E06 are complete; E07 is the next fixed
-assessment, followed by a B06 source-covariance question. E03/E04 remain
-separate pending supporting audits. Prepared for Edward Baker with
-substantial OpenAI Codex assistance; actual model/effort unavailable.
+The separate [collision-constraint branch](../03_collision_constraints/README.md)
+prioritizes arithmetic estimates with a stated collision consequence.
+The existing [Green branch](../01_green_potential_resolvent/README.md)
+retains its own program. All share the [operator foundation](../README.md)
+but have distinct task ownership.
+
+**B08 program-fit review is complete.** [Note14](notes/14_TND_OC_B08_ARITHMETIC_MARGINAL_COLLISION_FRICTION_20261108.md)
+traces theta and the primitive through log|H| to the zero marginals,
+identifies the missing joint arithmetic estimate, and explains the
+resolution mismatch between fixed smoothing and a near-collision
+interaction. These are a diagnosis and elementary scoped calculations,
+with proof-author checking only; no canonical profile or collision bound
+has been acquired.
 
 | Entry | Purpose |
 | --- | --- |
-| [Analytical manuscript](manuscript/README.md) | Current 34-page full-marginal draft; definitions locator, preliminary analytical proofs, explicit source errors, evidence status and outstanding tasks |
-| [Overview](research-overview/01_TND_OC_RESEARCH_OVERVIEW_20261107.md) | Mathematical definitions, inherited evidence and unresolved sign |
-| [Plan](research-plan/01_TND_OC_RESEARCH_PLAN_20261107.md) | Two bounded conceptual candidates and reserved execution |
-| [Sole TND-OC register](research-progress/01_TND_OC_RESEARCH_PROGRESS_20261107.md) | Only live task-status owner for this branch |
-| [Current continuation](continuation-notes/11_TND_OC_AFTER_GAUSSIAN_MANUSCRIPT_AND_MODEL_CHANGE_20261108.md) | Fixed E07 assessment, subsequent B06 covariance direction, pending E03/E04 alternatives and manual model-change prompt |
-| [B04 route comparison](notes/05_TND_OC_B04_ARITHMETIC_RECONCILIATION_AND_ROUTE_COMPARISON_20261108.md) | Reconciled BGST import, two access routes and exact missing canonical input |
-| [B04 pair transfer](notes/06_TND_OC_B04_DETERMINISTIC_MARKED_PAIR_TRANSFER_20261108.md) | Explicit deterministic marked-pair acquisition; author checking only, no favorable value |
-| [B03 comparison](brainstorm/notes/04_TND_OC_B03_REAL_ZERO_AWARE_COMPARISON_20261108.md) | Two real-axis-aware routes, precise missing canonical inputs and parked completion attempts |
-| [Algebraic reduction](notes/01_TND_OC_REFLECTION_AND_CONFIGURATION_REDUCTION_20261107.md) | Quadratic pair reduction, product recurrence and order tails |
-| [Time-zero comparison](notes/02_TND_OC_LOCAL_LOG_TRANSFER_20261107.md) | Explicit complete-source/logarithm/zero-statistic error bound |
-| [Shared discussion](../brainstorm/notes/19_TND_O_GREEN_CORRELATION_BIFURCATION_SYNTHESIS_20261107.md) | Author priorities and parent task crosswalk |
-| [Earlier hierarchy locator](../brainstorm/notes/20_TND_O_PRIOR_HIERARCHY_LOCATOR_20261107.md) | Author-identified heat-density hierarchy, evidence and possible transfers |
-| [References](references/README.md) | Canonical sources and actual inspected passages |
+| [Current continuation](continuation-notes/16_TND_OC_AFTER_B08_BIFURCATION_AND_MODEL_CHANGE_20261108.md) | Author-directed split, manual model guidance and standalone OC prompt |
+| [Overview](research-overview/01_TND_OC_RESEARCH_OVERVIEW_20261107.md) | Objects, arithmetic interface and inherited evidence |
+| [Plan](research-plan/01_TND_OC_RESEARCH_PLAN_20261107.md) | Bounded B09 analytic marginal cycle; E10 reserved |
+| [Sole OC register](research-progress/01_TND_OC_RESEARCH_PROGRESS_20261107.md) | Only live TND-OC task owner |
+| [Program-fit diagnosis](notes/14_TND_OC_B08_ARITHMETIC_MARGINAL_COLLISION_FRICTION_20261108.md) | Exact equations, Green comparison, local collision calculation and control screen |
+| [Analytical manuscript](manuscript/README.md) | Existing 34-page marginal development; unchanged by this review |
+| [Notes](notes/README.md) and [reviews](reviews/README.md) | Source proofs and their actual assessment levels |
+| [References](references/README.md) | Canonical ownership and inspected passages |
+| [Milestones](DRAFT_HISTORY.md) | Earlier directions and dispositions |
+| [Chat histories](chat-histories/README.md) | Authentic tool-managed conversation record |
 
-**Historical E05 manuscript milestone, 8 November 2026:** the author-requested analytical
-draft is complete, with full proofs and supporting bookkeeping kept
-separate. [Integration check05](reviews/05_TND_OC_E05_MANUSCRIPT_INTEGRATION_CHECK_20261108.md)
-preserves E02's accepted status and the author-check-only status of
-B02/B03/B04. E03 and E04 remain pending; no favorable canonical value
-or new exclusion was acquired. Its E04-first routing in Continuation09
-is superseded by the later scope clarification in Continuation10.
-Prepared for Edward Baker with substantial OpenAI Codex
-assistance; actual recorded model/effort unavailable, chat0003.
-Earlier entries below are historical.
+**OC's next analytical choice is [B] TND-OC-B09 — Astra recommended**,
+ready and unactivated. Compare a genuinely new joint-source estimate
+with a controlled marginal evolution relation. A useful independent
+correlation result can succeed without excluding a collision.
 
-**Opening research, 7 November 2026:** prepared for Edward Baker with
-substantial LLM assistance, **gpt-6-astra / max**, chat0001. B01 selected
-a direct time-zero logarithmic comparison; E01 has a written proof and
-[author self-check](reviews/01_TND_OC_OPENING_AUTHOR_SELF_CHECK_20261107.md).
-The opening round nominated a separate E02 assessment, now completed below. The comparison pays
-approximation error through multiple zeros, with an explicit
-height-dependent exponent; it does not prove the acquired statistic small.
-No numerical campaign, manuscript, canonical-zero random-matrix law,
-commit, or push was produced.
+The author's first priority across the split is **[B] TND-OA-B01** in
+the new collision branch. **E09 remains an optional finite benchmark**:
+its [frozen request](research-progress/handoffs/18_TND_OC_E09_EVALUATOR_REQUEST_20261108.md)
+uses complete zero certification followed by Gaussian quadrature.
+No implementation or canonical value has been acquired. E03/E04 remain
+separate pending supporting assessments.
 
-Green remains a separate branch; this session makes no changes to its
-or the parent's status registers. This session owns only this subtree. The historical setup
-conversation stays at the parent; the current branch-only chat is
-registered here. See the [history guide](chat-histories/README.md).
-The [initial continuation](continuation-notes/01_TND_OC_LOCALIZED_CORRELATIONS_CONTINUATION_20261107.md)
-is retained as a historical setup snapshot.
-
-
-**E02 assessment, 7 November 2026:** [Review02](reviews/02_TND_OC_E02_CLAIM_LEVEL_ASSESSMENT_20261107.md) accepts after one bounded support correction; [Note03](notes/03_TND_OC_E02_VERIFIED_CONSUMER_20261107.md) gives the exact usable consumer. No signed smallness estimate is acquired. Exact backend model/effort unavailable; internal LLM assessment only. Default next: **[B] TND-OC-B02 — Astra**. The 18-file package was installed and its hashes verified on 7 November 2026; see the [installation receipt](research-progress/handoffs/05_TND_OC_E02_INSTALLATION_20261107.json). Native chat capture failed; a clearly marked partial public exchange is retained without a fabricated registration.
-
-**B02 return, 7 November 2026:** [Note04](notes/04_TND_OC_B02_SIGNED_JENSEN_AND_HARMONIC_DISTANCE_20261107.md) proves a sharp local harmonic-distance obstruction and the real-zero-centered E02 allowance floor; separate quadratic bounds retain an unpaid Jensen-gap cancellation. Status: proved in-note, proof-author self-check only; no canonical signed smallness. **Default next: E03 / Sol**, the fixed assessment in [Continuation04](continuation-notes/04_TND_OC_AFTER_B02_AND_MODEL_CHANGE_20261107.md). The sole register owns live status.
-
-**B03 return, 8 November 2026:** [brainstorm Note04](brainstorm/notes/04_TND_OC_B03_REAL_ZERO_AWARE_COMPARISON_20261108.md)
-records scoped failure of the two selected completion attempts on the
-currently acquired inputs. Smoothing retains the missing joint small-value
-estimate; real-divisor subtraction retains the missing residual-divisor
-control. Matched total/real counts are a possible independent finite input,
-not acquired data or a new campaign. New calculations have author checking
-only; E02 remains accepted, B02 is not promoted, E03 remains pending.
-Prepared for Edward Baker with substantial OpenAI Codex assistance; actual
-model/effort unavailable. Chat0002's authentic capture is verified through
-its last refresh; final-turn capture remains to be checked after completion.
-
-**Direction and literature update, 8 November 2026:** [Note07](brainstorm/notes/07_TND_OC_LOCALIZED_PAIR_MARGINAL_LITERATURE_AND_DIRECTION_20261108.md) retains the full localized marked-pair goal and links the author-identified heat-flow applications/collision-bounds predecessors. B04 is ready for a bounded technical comparison; E03 remains pending. Source-use04 records the primary literature, nine external reading copies and a correction to the older BGST uniform error. Shared reference annotations were updated for that correction; parent and sibling progress registers were not changed. Prepared for Edward Baker with OpenAI Codex assistance; actual current model/effort unavailable.
+E07 accepted the full factorial/covariance and two-sided transfer work
+after one bounded correction; E08 accepted B06's eight fixed claims
+unchanged, both at internal LLM assessment level. B07's evaluator error
+is conditional and author-checked. This review changes research routing,
+not those evidence levels. Earlier source notes and issued packets remain
+in place; no new manuscript snapshot is created.

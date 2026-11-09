@@ -1,3 +1,61 @@
+**Current, 8 November 2026 — B08 complete; author-directed bifurcation.**
+[Note14](../notes/14_TND_OC_B08_ARITHMETIC_MARGINAL_COLLISION_FRICTION_20261108.md) separates arithmetic representation, finite
+acquisition and a collision-useful estimate. The author retains full
+marginals here as an independent high-risk direction and creates the
+[collision-constraint branch](../../03_collision_constraints/README.md)
+for alternatives prioritizing collisions. OC B09 is ready, unactivated;
+E10 is reserved. E09 remains an optional frozen finite benchmark.
+[Continuation16](../continuation-notes/16_TND_OC_AFTER_B08_BIFURCATION_AND_MODEL_CHANGE_20261108.md) gives both routes and model
+guidance. Actual model/effort unavailable, chat0006; proof-author checking
+only. No canonical value or collision bound acquired. Earlier dated
+routing below is historical; the sole register owns current status.
+
+## TND-OC-B09: independent analytical marginal development
+
+Type B; Astra recommended at the author's selected effort because the
+analytic target and genuinely new source input remain undecided.
+Ready, unactivated. Prerequisites are Note08's author objective, Note11
+and E08 Review09, and Note14's diagnosis. B07/E09 supply an optional
+benchmark, not a prerequisite.
+
+Limit: at most two candidates and one focused clarification. Compare
+(1) a genuinely new same-center joint-source/logarithmic estimate for
+the full marked pair, and (2) a controlled marginal evolution relation,
+with the exact hierarchy and any closure/exterior assumptions exposed.
+First state the intended intermediate theorem, parameter domain and
+nontrivial quantitative or structural consequence. Retain imaginary
+marks, labelled multiplicity, the W² self term and both source tails.
+Use Note11 as the strongest existing transfer; rederiving it is not a gain.
+
+Completion: a new arithmetic correlation bound or useful evolution
+result, a tractable fixed E10 contract naming additional input, or
+a precise scoped failure of these two candidates. An immediate
+collision exclusion is not required. A new definition, Gaussian
+convolution or assumed ensemble law does not complete the task.
+A third mechanism, new source, unexplained closure or new numerical
+campaign requires a further classified B decision before dependent work.
+
+TND-OC-E10 is E / Sol, ultra where supported, reserved until B09 fixes
+source, observation, domain, proof/computation method, error and finite
+work limits. No E10 request is issued at setup. E09 remains independently
+available under unchanged request18/Inputs18 if explicitly selected
+as a descriptive/calibration benchmark. E03/E04 remain pending.
+
+E09 is ready under [request18](../research-progress/handoffs/18_TND_OC_E09_EVALUATOR_REQUEST_20261108.md) and [Inputs18](../research-progress/handoffs/18_TND_OC_E09_INPUTS_20261108.json): six proof obligations, one fixed certified pilot and one bounded repair. A changed mathematical premise or regime returns to conditional B08 before further execution. Numerical implementation has not started.
+
+**Current, 8 November 2026 — E08 complete:** [Review09](../reviews/09_TND_OC_E08_CLAIM_LEVEL_ASSESSMENT_20261108.md) accepts
+all eight B06 claims unchanged at internal LLM assessment level, after one
+analytical pass and no correction. [Note12](../notes/12_TND_OC_E08_ASSESSMENT_CALCULATIONS_20261108.md) records the calculations.
+No canonical moments, full-pair value or profile are acquired. The conditional
+research successor is B07: a named new joint-source mechanism with explicit
+errors and finite budget; E03/E04 remain separate pending alternatives.
+[Continuation14](../continuation-notes/14_TND_OC_AFTER_E08_AND_MODEL_CHANGE_20261108.md) gives the exact reopening condition and manual
+model-change guidance. For Edward Baker with substantial OpenAI Codex
+assistance, chat0007; actual backend model/effort unavailable. Earlier
+routing below is historical; the sole register owns live status.
+
+**Current routing, 8 November 2026:** B06 is complete at bounded selection and missing-input scope in [Note11](../notes/11_TND_OC_B06_CENTER_LAW_AND_JOINT_SOURCE_DECISION_20261108.md). Next is [E] TND-OC-E08, Sol6.1/ultra where supported, under fixed request15/inputs15: one claim-level assessment and one bounded correction. [B] TND-OC-B07, Astra at author-selected effort, is conditional on a concrete new joint-source mechanism meeting Note11 section 6; no canonical numerical campaign or profile-evaluation contract is issued. E03/E04 remain separate pending alternatives. [Continuation13](../continuation-notes/13_TND_OC_AFTER_B06_AND_MODEL_CHANGE_20261108.md) and the sole register own current routing. For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable, chat0006. Earlier planning below is historical.
+
 # Localized-correlation research plan
 
 **Current direction, 8 November 2026:** the full localized Gaussian

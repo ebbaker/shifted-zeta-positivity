@@ -1,3 +1,15 @@
+**8 November 2026 — B08 complete.** For Edward Baker with substantial OpenAI Codex assistance; actual model/effort unavailable.
+
+- [B08 source-use09](09_TND_OC_B08_INTERFACE_SOURCE_USE_20261108.md): inherited primitive/Green inputs and selected Rodgers–Tao v5 passages; no full-paper audit.
+
+Earlier dated entries below are historical; the sole register owns live status.
+
+**8 November 2026 — B07:** [source-use08](08_TND_OC_B07_CERTIFIED_EVALUATOR_SOURCE_USE_20261108.md) and [bibliography](b07_certified_evaluator_sources.bib) record DLMF quadrature/zero geometry, official ball APIs and selected pinned FLINT source. Passage inspection, no canonical values or library-wide correctness audit. For Edward Baker with substantial OpenAI Codex assistance, chat0006; actual model/effort unavailable. Earlier routing below is historical.
+
+**8 November 2026 — E08:** [source-scope recheck07](07_TND_OC_E08_SOURCE_SCOPE_RECHECK_20261108.md) reopens only existing BGST v3 and Fazzari–Gerspach–Minelli v1 passages. No literature expansion or new theorem import; frozen B06 annotations preserved. For Edward Baker with OpenAI Codex assistance, chat0007; actual model/effort unavailable.
+
+**8 November 2026 — B06:** [source-use06](06_TND_OC_B06_JOINT_SOURCE_SCOPE_20261108.md) records the reopened BGST scope and three joint-log/statistics references, with selected-passage versus abstract-only limits. [New bibliography](b06_joint_source_sources.bib) and [failed-download receipt](B06_REFERENCE_RETRIEVAL_20261108.json) preserve provenance. No new literature theorem is imported as the needed mixed-source moment input. For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable, chat0006.
+
 # Correlation references and source ownership
 
 **8 November 2026:** [Gaussian marginal source use05](05_TND_OC_GAUSSIAN_MARGINAL_SOURCE_USE_20261108.md) reuses Borodin v1 §§2 and 4 for standard correlation definitions and the circular determinant-product benchmark. No determinantal canonical-zero law is imported. For Edward Baker with substantial OpenAI Codex assistance; actual model/effort unavailable.

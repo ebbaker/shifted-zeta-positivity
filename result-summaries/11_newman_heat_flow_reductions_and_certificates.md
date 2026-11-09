@@ -741,3 +741,20 @@ is separate-agent same-model internal assessment. No new source values or
 numerical replay occurred; the m=16 witness retains its scope. HCB-02
 remains Partial. [Note08](../papers/investigations-5/03_heat_flow_collision_bounds/notes/08_CHAT0001_RESULTS_AND_HANDOFF_20261026.md)
 is the complete chat handoff; no new RH/simplicity/Newman result.
+
+### Full Gaussian factorial correlations and pair transfer — 8 November 2026
+
+For Edward Baker with substantial OpenAI Codex assistance; exact backend
+model/effort unavailable. [TND-OC E07 Review07](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/reviews/07_TND_OC_E07_CLAIM_LEVEL_ASSESSMENT_20261108.md) records
+“accepted after one bounded correction pass”, at internal LLM level,
+with three inherited-model subchecks and root synthesis, without
+specialist or verified cross-model validation.
+[Note10](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/notes/10_TND_OC_E07_ASSESSMENT_CALCULATIONS_20261108.md) checks full factorial marginals, W^2 self
+subtraction, center covariance and uniform pair source error
+E_X(4n_X A U+V)/pi, at lambda=0 with fixed positive smoothing.
+Common-cutoff uniform density tolerance explicitly requires h_X>=h_min>0;
+four notation defects are repaired. Real labels, multiplicities and both
+complete tails remain paid. No covariance profile, high-height uniformity,
+quantitative higher-order transfer or zero exclusion acquired.
+Reusable as a compact-window pair accuracy interface, not a value
+estimate. E03/E04 remain pending; the full correlation program stays open.

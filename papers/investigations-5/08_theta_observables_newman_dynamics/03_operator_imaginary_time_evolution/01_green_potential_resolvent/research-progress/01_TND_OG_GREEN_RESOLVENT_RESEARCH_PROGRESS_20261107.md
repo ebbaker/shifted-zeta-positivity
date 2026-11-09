@@ -2,7 +2,7 @@
 
 7 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Explicit worker dispatch selected **gpt-6.1-sol / ultra**; this is the supplied actual selection, not independent backend verification. Root model/effort unavailable.
 
-**This file is the sole current live status register for the TND-OG task family.** Re-read it before changes and preserve other chats' updates. Parent [Register02](../../research-progress/02_SMOOTH_LOCALIZATION_RESEARCH_PROGRESS_20261106.md) owns TND-O/shared tasks and links here; it must not duplicate these live statuses. The sibling owns TND-OC. The [plan](../research-plan/01_TND_OG_GREEN_RESOLVENT_RESEARCH_PLAN_20261107.md) defines task scope and limits; [Continuation09](../continuation-notes/09_TND_OG_E05_RESULTS_AND_MODEL_CHANGE_20261108.md) is the current handoff after E05; Continuation08 is the E05 activation source, and Continuation07 the earlier E03 entry point. [Continuation06](../continuation-notes/06_TND_OG_E04_MANUSCRIPT_AND_OUTSTANDING_TASKS_20261108.md) records the manuscript milestone; [Continuation05](../continuation-notes/05_TND_OG_B02_RESULTS_AND_MODEL_CHANGE_20261108.md) retains the original E03 prompt. None is another register. Preparing Continuation07 does not activate E03 or alter Request09. Research update below: **gpt-6-astra / max**, actual session metadata, 7 November 2026.
+**This file is the sole current live status register for the TND-OG task family.** Re-read it before changes and preserve other chats' updates. Parent [Register02](../../research-progress/02_SMOOTH_LOCALIZATION_RESEARCH_PROGRESS_20261106.md) owns TND-O/shared tasks and links here; it must not duplicate these live statuses. The sibling owns TND-OC. The [plan](../research-plan/01_TND_OG_GREEN_RESOLVENT_RESEARCH_PLAN_20261107.md) defines task scope and limits; [Continuation11](../continuation-notes/11_TND_OG_B04_RESULTS_AND_MODEL_CHANGE_20261108.md) is the current B04 result/model-change handoff; [Continuation10](../continuation-notes/10_TND_OG_E03_RECONCILIATION_AND_MODEL_CHANGE_20261108.md) records the preceding reconciliation; [Continuation09](../continuation-notes/09_TND_OG_E05_RESULTS_AND_MODEL_CHANGE_20261108.md) supplies the post-E05 bounded B04 specification; Continuation08 is the E05 activation source, and Continuation07 the earlier E03 entry point. [Continuation06](../continuation-notes/06_TND_OG_E04_MANUSCRIPT_AND_OUTSTANDING_TASKS_20261108.md) records the manuscript milestone; [Continuation05](../continuation-notes/05_TND_OG_B02_RESULTS_AND_MODEL_CHANGE_20261108.md) retains the original E03 prompt. None is another register. Preparing Continuation07 does not activate E03 or alter Request09. Research update below: **gpt-6-astra / max**, actual session metadata, 7 November 2026.
 
 | Task | Type / recommendation and reason | Current status | Exact dependency / expected output |
 | --- | --- | --- | --- |
@@ -14,7 +14,117 @@
 | TND-OG-E04 | E; Sol6.1 — integrate the existing analytical results into an evolving manuscript | **COMPLETE r1 — analytical manuscript and production check** | [Manuscript](../manuscript/README.md), [check03](../reviews/03_TND_OG_E04_MANUSCRIPT_INTEGRATION_CHECK_20261108.md), [session04](../brainstorm/notes/04_TND_OG_E04_MANUSCRIPT_DEVELOPMENT_20261108.md), [build record](../numerics/01_TND_OG_E04_MANUSCRIPT_BUILD_20261108.json). Source/Green/prime derivations, both scoped obstructions with E02 correction, complete quadratic ledger and B02 local theorem; 23-page reading PDF and outstanding tasks. Source evidence levels unchanged; E03 was unactivated at E04 completion. Actual model/effort not recorded. |
 | TND-OG-B03 | B; Astra — assess whether earlier heat-density hierarchies transfer usefully to the current Green/log consumer | **COMPLETE r1 — relationship audit and local analytical consequence** | [Note05](../notes/05_TND_OG_B03_HDA_HIERARCHY_LOG_TRANSFER_20261108.md), [session05](../brainstorm/notes/05_TND_OG_B03_HIERARCHY_RELATIONSHIP_AND_USE_20261108.md), [check04](../reviews/04_TND_OG_B03_HIERARCHY_TRANSFER_SELF_CHECK_20261108.md), [return10](handoffs/10_TND_OG_B03_HIERARCHY_RELATIONSHIP_RETURN_20261108.json). Exact gamma cancellation and growing real RS completion compose with B02 to give local O((log X)^−2) logarithmic error. Same-assistant checking only; no full assembly, favorable value or numerical campaign. Overview §7 updated; E03 was unchanged/unactivated at B03 completion. Actual model/effort not recorded. |
 | TND-OG-E05 | E; Sol6.1 — fixed eight-claim assessment | **COMPLETE r1 — accepted with one additive evidence/control clarification** | [Review06](../reviews/06_TND_OG_E05_CLAIM_LEVEL_ASSESSMENT_20261108.md), [Note07](../notes/07_TND_OG_E05_ASSESSMENT_CALCULATIONS_20261108.md), [return14](handoffs/14_TND_OG_E05_ASSESSMENT_RETURN_20261108.json). All eight claims accepted; E03 theorem/constants unchanged. E02 evidence limited to OG Note01/02; OC keeps its original self-check level. No B02 r2 trigger or favorable value. Internal shared-premise assessment only. |
-| TND-OG-B04 | B; Astra — select consequential canonical signed-value information | **PLANNING DISCUSSION — substantive comparison not started** | Author requests an overview and participation before research. [Planning08](../brainstorm/notes/08_TND_OG_B04_INITIAL_PLANNING_20261108.md) proposes analytical priority, a finite-evaluation alternative and feasibility/outcome checks within Continuation09's two-route/one-clarification limit. Await the initial discussion; no E request issued. |
+| TND-OG-B04 | B; Astra — select consequential canonical signed-value information | **COMPLETE r1 — scoped density-allowance comparison and fixed feasibility question** | [Note09](../notes/09_TND_OG_B04_GREEN_MASS_RESOLUTION_AND_VALUE_DECISION_20261108.md), [Decision09](../brainstorm/notes/09_TND_OG_B04_VALUE_ROUTE_DECISION_20261108.md), [author check07](../reviews/07_TND_OG_B04_VALUE_RESOLUTION_AUTHOR_CHECK_20261108.md), [return17](handoffs/17_TND_OG_B04_VALUE_ROUTE_RETURN_20261108.json). Single-zero total Green mass pi*d; the chosen density-based average allowance exceeds the centered one-zero signal by at least 2D_c*T/d. No favorable value; E06 selected. |
+| TND-OG-E06 | E; Sol6.1 — execute a fixed scalar feasibility screen | **READY r1 — issued, unactivated** | [Request18](handoffs/18_TND_OG_E06_SINGLE_TUPLE_FEASIBILITY_REQUEST_20261108.md), [Inputs18](handoffs/18_TND_OG_E06_INPUTS_20261108.json). One tuple X=30,d=1/2,r=1; directed allowance calculation and prescribed midpoint count versus 10^6. No value evaluation. Fixed precision/search/time limits and outcome-dependent stopping. |
+| TND-OG-B05 | B; Astra — select a consequential estimate or integration change | **CONDITIONAL ONLY — unactivated** | Triggered only by E06 identifying a necessary method change. Resolve the exact failed local-log/integration clause with a bounded contract; no source/provider change by default. |
+
+## Cross-branch advisory and filing correction — 8 November 2026
+
+The author-requested [Note10](../brainstorm/notes/10_TND_OG_COLLISION_DYNAMICS_AND_PARALLEL_PROBES_20261108.md) compares OC marginals,
+OG Green results and OA collision consumers. The original destination
+was a mistaken direct-branch folder name; the author requested the move
+here. This is completed **E — documentation maintenance** of an existing
+B advisory, not execution of OG-E06 or activation of OA-B01. The source
+comparison and mathematical sections retain proof-author scope.
+
+Prepared for Edward Baker with OpenAI Codex assistance, actual
+gpt-6-astra, effort unavailable, existing OG chat0005.
+[Relocation record19](handoffs/19_TND_OG_ADVISORY_RELOCATION_20261108.json)
+preserves old/new identities, the original delivery snapshot and link
+checks. The separate branches keep their own task ownership.
+**Next in OG: [E] TND-OG-E06 — Sol**, the existing frozen feasibility
+screen; its ready/unactivated status and packet are unchanged.
+
+## B04 r1 disposition — 8 November 2026
+
+B04 compared the analytical density/averaging route and one finite
+calibration question, with the exact Green mass/window calculation as
+its single focused clarification. Note09 derives total mass pi*y per
+upper zero, the exact minimum finite-window signal, and the complete
+canonical average allowance from the inherited density bound and remote
+tail. Its ratio to a centrally placed single-zero signal is at least
+2D_c*T/d for T>=4. This fails the tested allowance comparison; it is no
+lower bound on actual J and no universal obstruction to signed methods.
+
+Decision09 selects E06's one-tuple uniform-midpoint feasibility screen,
+now frozen but unexecuted. It measures the specified certificate recipe's
+panel demand and node-error resolution, with a cap of 10^6 panels, four
+scalar-precision tiers through 1024 bits, finite source/tail searches
+and a five-minute script work limit. The X=30 calibration box is within
+established verification; no new coverage, canonical value or actual
+runtime is claimed. Source/provider and E03/E05 proofs remain unchanged.
+A cap failure stops that recipe; passing clears only the panel screen.
+
+Evidence: proved in-note from inherited inputs; proof-author check only,
+actual current runtime gpt-6-astra, reasoning effort not exposed. No
+subagents or numerical research in this turn. Source-use09 records the
+focused primary passage checks and reuse of existing reading copies.
+Return17 and validation03 record actual source/output identities and
+historical manifest differences. No manuscript or shared-summary edit.
+
+Default next: **[E] TND-OG-E06 — Sol6.1**, with the fixed request and
+[Continuation11](../continuation-notes/11_TND_OG_B04_RESULTS_AND_MODEL_CHANGE_20261108.md).
+Stop here at B04's bounded decision; E06 is not executed by this return.
+Chat0005 continues under the original registration; prior final capture
+was verified, and current exact-turn capture is arranged last.
+
+## B04 r1 activation — 8 November 2026
+
+The author's new request explicitly continues B04 and asks for a high-level
+results discussion. The initial-discussion pause is therefore superseded
+for this turn; use the previously recommended analytical-first ordering,
+without attributing a separate priority choice to the author. Type B,
+recommended Astra: the consequential value estimate/test remains unchosen.
+Actual current runtime model is **gpt-6-astra**; reasoning effort is not
+exposed. No model configuration is inferred from older capture metadata.
+
+Finite contract: compare (1) a direct signed-value route informed by the
+inherited canonical density/averaging estimates, including its exact
+single-defect resolution requirement, and (2) one bounded calibration
+feasibility question using the unchanged E03 literal-source recipe.
+Allow one focused clarification of the leading analytical consumer.
+Complete with a quantitative gain, scoped obstruction or exact remaining
+premise; save the decision, research note, scope check, source-use record,
+return and continuation. Freeze at most one E packet only when its tuple,
+error payments, work limit and decision consequences are explicit.
+No numerical research, manuscript integration or source replacement in B04.
+Stop at that bounded decision; failure of an averaging allowance does not
+assert failure of all canonical signed estimates.
+
+Current chat remains registered chat0005. Start refresh includes the prior
+real final reply. Frozen input differences remain separately recorded;
+recheck current versions before the return. No subagents are dispatched
+for this B04 turn. Parent/sibling and earlier proof records are preserved.
+
+## E03 continuation reconciliation — 8 November 2026
+
+The renewed request names historical Continuation07. **E03 r1 and E05
+remain complete**; this bounded E check does not reactivate either task
+or extend their recorded clarification cycles. [Note08](../notes/08_TND_OG_E03_CONTINUATION_RECONCILIATION_20261108.md)
+records no material discrepancy in the existing theorem and finite
+choices. [Return16](handoffs/16_TND_OG_E03_CONTINUATION_RECONCILIATION_RETURN_20261108.json)
+and [validation02](../numerics/02_TND_OG_E03_CONTINUATION_IDENTITY_CHECK_20261108.json)
+record this session; [Continuation10](../continuation-notes/10_TND_OG_E03_RECONCILIATION_AND_MODEL_CHANGE_20261108.md)
+updates the model-change entry point while preserving Continuation09's
+B04 bounds and Planning08's pending author discussion. B04's row and
+planning state above are unchanged. No new theorem, assessment cycle,
+manuscript milestone or numerical research is claimed.
+
+Current identity results: E03 33/34 with the historical chat-guide
+difference; E05 46/47 with an additional shared-cluster11 difference;
+supplemental controls 5/5. The exact frozen cluster11 is hash verified
+at Git e8c15e1a; current differences are only two inserted OC sections.
+Existing substantive proof/assessment records match their recorded
+identities. Earlier 47/47 statements are historical observations, not
+this session's check. Frozen records and shared/sibling edits are preserved.
+
+Prepared for Edward Baker with OpenAI Codex LLM assistance. Exact backend
+identifier and effort are unavailable in accessible capture metadata;
+two inherited-configuration read-only helpers supplied internal checks.
+Actual thread 01a1bd90-20ab-74b3-bb69-1b4806eb8877 is registered as chat0005
+from its canonical paginated source; actual title is preserved verbatim
+in the registry. Arrange bounded final capture last and verify completion
+on continuation. Favorable canonical value remains unpaid.
 
 ## B04 initial planning — 8 November 2026
 

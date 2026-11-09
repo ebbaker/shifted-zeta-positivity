@@ -4,6 +4,13 @@ Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra / max**
 
 Later research and integration milestones below: primary **gpt-6-astra / ultra**, proof and separate internal review **gpt-6.1-sol / ultra**, direct chat0004.
 
+**8 November 2026, filing correction:** the author-requested advisory
+was initially placed here using the mistaken folder name, then moved to
+[OG brainstorm Note10](../03_operator_imaginary_time_evolution/01_green_potential_resolvent/brainstorm/notes/10_TND_OG_COLLISION_DYNAMICS_AND_PARALLEL_PROBES_20261108.md). This is historical filing
+provenance, not a direct-branch research or manuscript milestone.
+Prepared for Edward Baker with OpenAI Codex assistance, actual gpt-6-astra,
+effort unavailable; [relocation record19](../03_operator_imaginary_time_evolution/01_green_potential_resolvent/research-progress/handoffs/19_TND_OG_ADVISORY_RELOCATION_20261108.json).
+
 | Date | Investigation | Version locator | Why this version matters | Review and research sources |
 | --- | --- | --- | --- | --- |
 | 2026-11-06 | Investigation08 / direct Newman realization, TND-D-E05 | Working-tree [manuscript](manuscript/main.tex), with its exact initial source/PDF identities preserved in `previous_build_record` of [E08 inputs](research-progress/handoffs/13_TND_D_E08_INPUTS_20261106.json); no snapshot folder or new commit | First coherent analytical paper: complete conditional instrument and calibrated observation, count-sector calculus, local collision anatomy, exact colliding control, and outstanding mechanisms/estimates; 18-page reading copy | [Integration check](reviews/02_TND_D_E05_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261106.md), [E01 proof](notes/02_TND_D_E01_R1_CONDITIONAL_QUADRATURE_REALIZATION_20261106.md), [collision note](notes/04_TND_D_B02_COLLISION_DYNAMICS_RECONNAISSANCE_20261106.md) |

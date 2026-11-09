@@ -1,5 +1,20 @@
 # Green/resolvent conversation history
 
+**Cross-branch advisory, 8 November 2026:** existing chat0005 continues
+under actual turn `01a1bdb4-9787-7892-acbe-a7d8f60ef8d7`.
+The requested [Green/resolvent brainstorm note](../brainstorm/notes/10_TND_OG_COLLISION_DYNAMICS_AND_PARALLEL_PROBES_20261108.md)
+is now filed in OG after the author corrected the destination, and is
+linked from OA; this conversation keeps its single registration here. The preceding B04 final's deferred capture was verified
+successful, and the ordinary start-of-turn refresh succeeded. Read current
+counts, times, hashes and model configurations from index.json. Prepared
+for Edward Baker with OpenAI Codex assistance, actual current runtime
+gpt-6-astra, effort unavailable. Refresh completed public text and arrange
+the bounded capture for this exact final last; verify completion next turn.
+
+**B04 continuation, 8 November 2026:** registered chat0005 continues with actual turn `01a1bd97-7670-7ed3-a642-88c831ed92a0`. The preceding real final reply was successfully captured by its deferred worker and refreshed at turn start. The current runtime identifies gpt-6-astra; historical capture model fields remain as recorded. [B04 decision](../brainstorm/notes/09_TND_OG_B04_VALUE_ROUTE_DECISION_20261108.md). Refresh completed public text and arrange bounded exact-turn final capture last; verify its completion on continuation. Prepared for Edward Baker with OpenAI Codex assistance; actual current runtime gpt-6-astra, effort not exposed.
+
+**Renewed E03 request, 8 November 2026:** chat **0005**, thread `01a1bd90-20ab-74b3-bb69-1b4806eb8877`, is registered through the locked recorder from its canonical local paginated source. [Public archive](0005_2026-11-08T23-48-21Z_please-read-papers-investigations-5-08-theta-observables-newman-dynamics-03-oper.json); [registry](index.json). The long actual app title, beginning “Please read /papers/investigations-5/08_theta_observables_newman_dynamics/”, is stored verbatim, not renamed or inferred. Actual turn `01a1bd90-949a-78f3-bf27-e58cffe76664`. Completed public text is refreshed; arrange bounded exact-turn final capture last and verify it on continuation. No native hook activation is asserted. See [Note08](../notes/08_TND_OG_E03_CONTINUATION_RECONCILIATION_20261108.md). Prepared for Edward Baker with OpenAI Codex assistance; exact backend/effort unavailable in capture metadata. Read changing counts, sizes, times, configurations and hashes from the registry.
+
 **B04 planning, 8 November 2026:** chat **0004**, actual title **Continue TND-OG-B04**, thread `01a1bbe3-581f-72c2-abd7-752993ab95aa`, is registered through the locked recorder from its local paginated source. [Public archive](0004_2026-11-08T16-00-01Z_continue-tnd-og-b04.json); [registry](index.json); [planning notes](../brainstorm/notes/08_TND_OG_B04_INITIAL_PLANNING_20261108.md). Actual planning turn: `01a1bbe3-8a98-7242-a558-8d229d59c2db`. Completed public text is refreshed; bounded exact-turn final capture must be verified on continuation. The archive supplies no model configurations; the current runtime identifies gpt-6-astra, with reasoning effort not exposed. Read current counts, times and hashes from the registry. Prepared for Edward Baker with OpenAI Codex assistance.
 
 **E05 continuation, 8 November 2026:** the same chat0003 continues; no new registration or history number. The locked recorder successfully refreshed the preceding E03 final and link-location clarification before assessment. Current E05 turn is 01a1bbd4-7412-7200-92c6-5714cbe79999. Exact-turn final capture is arranged last, with completion verified on continuation. Canonical E05 documents are saved in the repository; earlier E03 chat-output copies were convenience copies. Read current times/counts/hashes from index.json. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort are not recorded in accessible capture metadata.

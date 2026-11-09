@@ -1,5 +1,11 @@
 # Direct radial-spectral Newman realization
 
+**Filing correction — 8 November 2026.** At the author's request, the
+misfiled [cross-branch advisory](../03_operator_imaginary_time_evolution/01_green_potential_resolvent/brainstorm/notes/10_TND_OG_COLLISION_DYNAMICS_AND_PARALLEL_PROBES_20261108.md) now belongs to OG.
+Its mathematical content is preserved; direct task statuses are unchanged.
+Prepared for Edward Baker with OpenAI Codex assistance, actual gpt-6-astra,
+effort unavailable.
+
 **Separate operator/ITE branch — 6 November 2026, gpt-6-astra/max,
 direct chat0005.** The author's clarified imaginary-time operator question
 now has its own [branch 03](../03_operator_imaginary_time_evolution/README.md) and [continuation prompt](../03_operator_imaginary_time_evolution/notes/01_OPERATOR_ITE_CONTINUATION_AND_PROMPT_20261106.md).

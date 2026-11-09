@@ -1,3 +1,17 @@
+**8 November 2026 — B08 complete.** For Edward Baker with substantial OpenAI Codex assistance; actual model/effort unavailable.
+
+- [B08 return19](19_TND_OC_B08_RETURN_AND_VALIDATION_20261108.json): program-fit diagnosis and branch setup; frozen earlier packets retained.
+
+Earlier dated entries below are historical; the sole register owns live status.
+
+**Current, 8 November 2026 — B07:** [return17](17_TND_OC_B07_RETURN_AND_VALIDATION_20261108.json) records the conditional evaluator contract and preservation. [E09 request18](18_TND_OC_E09_EVALUATOR_REQUEST_20261108.md) and [Inputs18](18_TND_OC_E09_INPUTS_20261108.json) freeze one proof check and bounded certified T=1000 pilot, or exact failed gate. Ready, not dispatched. For Edward Baker with substantial OpenAI Codex assistance, chat0006; actual model/effort unavailable. Earlier routing below is historical.
+
+**8 November 2026 — E08 complete:** [return16](16_TND_OC_E08_RETURN_AND_VALIDATION_20261108.json) records acceptance unchanged, all eight claims, no correction and preserved frozen inputs. Request15/inputs15 and historical returns remain immutable. Conditional B07 successor; E03/E04 pending. Earlier routing below is historical. For Edward Baker with OpenAI Codex assistance, chat0007; actual model/effort unavailable.
+
+**Current, 8 November 2026:** [B06 return14](14_TND_OC_B06_RETURN_AND_VALIDATION_20261108.json) records the bounded comparison, missing input and preservation. [E08 request15](15_TND_OC_E08_ASSESSMENT_REQUEST_20261108.md) and [inputs15](15_TND_OC_E08_INPUTS_20261108.json) freeze a separate assessment; no reviewer dispatched. For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable, chat0006. Earlier routing below is historical.
+
+**8 November 2026:** [E07 return13](13_TND_OC_E07_RETURN_AND_VALIDATION_20261108.json) records claim dispositions, the single bounded correction, original/corrected hashes and preserved E03/E04 packets. Request12/inputs12 remain immutable. E07 complete; B06 next. For Edward Baker with OpenAI Codex assistance; exact backend model/effort unavailable.
+
 # handoffs
 
 **8 November 2026:** [E06 return11](11_TND_OC_E06_GAUSSIAN_MANUSCRIPT_RETURN_20261108.json) records the full-marginal manuscript milestone. [E07 request12](12_TND_OC_E07_ASSESSMENT_REQUEST_20261108.md) and [inputs12](12_TND_OC_E07_INPUTS_20261108.json) freeze the new preliminary derivations for assessment; no assessor dispatched. Older E03/E04 packets are unchanged. For Edward Baker with substantial OpenAI Codex assistance; actual model/effort unavailable.

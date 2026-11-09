@@ -19,16 +19,55 @@ uniform two-sided canonical pair approximation retaining real zeros.
 records the preliminary derivations; [author check06](../reviews/06_TND_OC_E06_GAUSSIAN_MANUSCRIPT_AUTHOR_CHECK_20261108.md)
 is proof-author checking only. No canonical profile has been acquired.
 
-**Default next: [E] TND-OC-E07, fixed assessment**, under
-[request12](handoffs/12_TND_OC_E07_ASSESSMENT_REQUEST_20261108.md) and
-[inputs12](handoffs/12_TND_OC_E07_INPUTS_20261108.json).
-Recommended GPT-6.1 Sol, ultra where supported; author choice retained.
-After assessment, B06 selects a source-specific center-covariance question.
-[Continuation11](../continuation-notes/11_TND_OC_AFTER_GAUSSIAN_MANUSCRIPT_AND_MODEL_CHANGE_20261108.md)
-provides the next-session/model-change prompt. E03/E04 remain pending on
-unchanged inputs. Actual recorded model/effort are unavailable; no switch
-or delegation occurred. The earlier E05 record and later scope-clarification
-events remain historical; the current PDF/build record replace the E05 copy.
+**E07 complete, 8 November 2026: accepted after one bounded correction
+at internal LLM assessment level.** [Review07](../reviews/07_TND_OC_E07_CLAIM_LEVEL_ASSESSMENT_20261108.md) accepts
+the full hierarchy, W^2 self subtraction, covariance and fixed-center
+two-sided pair theorem. Common-cutoff uniform density tolerance now
+explicitly requires h_X>=h_min>0; four roman subscripts were repaired in
+the same pass. Fixed-center constants are unchanged.
+[Note10](../notes/10_TND_OC_E07_ASSESSMENT_CALCULATIONS_20261108.md) and [return13](handoffs/13_TND_OC_E07_RETURN_AND_VALIDATION_20261108.json) give calculations
+and hash reconciliation. Note09/Review06, original request12/inputs12,
+E03/E04 packets and E05/E06 historical returns remain preserved.
+
+**B06 complete, 8 November 2026, at bounded selection and missing-input
+scope.** [Note11](../notes/11_TND_OC_B06_CENTER_LAW_AND_JOINT_SOURCE_DECISION_20261108.md)
+selects uniform centers on [T,2T], h=1, ell=b=min(1,4pi/log T), and
+epsilon=ell/4. Two routes and one harmonic-reference clarification give
+explicit frequency, edge, polynomial-log and mixed-moment error budgets.
+Status: proved in-note; author check08 is historical, and the fixed
+claims are now accepted unchanged in the separate-session internal
+[E08 Review09](../reviews/09_TND_OC_E08_CLAIM_LEVEL_ASSESSMENT_20261108.md).
+No canonical joint moment array or covariance profile is acquired.
+
+**E08 complete, 8 November 2026: accepted unchanged, all eight claims,
+at internal LLM assessment level.** [Review09](../reviews/09_TND_OC_E08_CLAIM_LEVEL_ASSESSMENT_20261108.md),
+[Note12](../notes/12_TND_OC_E08_ASSESSMENT_CALCULATIONS_20261108.md) and
+[return16](handoffs/16_TND_OC_E08_RETURN_AND_VALIDATION_20261108.json) record
+one analytical pass, no correction and preserved inputs15. Three read-only
+helpers at inherited configuration assisted root; actual backend model and
+effort are unavailable in authenticated chat0007. Shared premises remain;
+no specialist or verified different-model review is asserted.
+
+**B07 complete, 8 November 2026, at conditional evaluator-contract scope.**
+[Note13](../notes/13_TND_OC_B07_COMPLETE_DIVISOR_AND_GAUSSIAN_EVALUATOR_20261108.md)
+selects complete finite divisor certification followed by same-center
+Gaussian pair quadrature. The explicit common error is
+5249/2^24<1/3000 at T=1000, N<=512, rho<=2^(-38), P<=4096 and q=20.
+Status: proved in-note, [author check10](../reviews/10_TND_OC_B07_AUTHOR_SELF_CHECK_20261108.md)
+only. No canonical count, pair value or profile has been acquired.
+
+**B08 complete, 8 November 2026: program-fit diagnosis and author-directed
+bifurcation.** [Note14](../notes/14_TND_OC_B08_ARITHMETIC_MARGINAL_COLLISION_FRICTION_20261108.md) and
+[author check11](../reviews/11_TND_OC_B08_PROGRAM_FIT_SELF_CHECK_20261108.md)
+make the arithmetic/marginal/collision interfaces explicit; no canonical
+estimate or exclusion is acquired. Marginals remain an independent
+high-risk direction here. The new [OA branch](../../03_collision_constraints/README.md)
+prioritizes collision constraints and owns its own tasks.
+**Next within OC: B09, ready and unactivated; E10 reserved.**
+The author's first priority across branches is OA-B01. E09 remains an
+optional frozen benchmark under request18/Inputs18, unactivated.
+[Continuation16](../continuation-notes/16_TND_OC_AFTER_B08_BIFURCATION_AND_MODEL_CHANGE_20261108.md) supersedes Continuation15's
+E09-default routing only. E03/E04 remain pending.
 
 **E05 manuscript integration is
 complete, 8 November 2026.** The author-requested
@@ -62,8 +101,14 @@ specifies objects.
 | --- | --- | --- | --- |
 | TND-OC-B05 | B / Astra recommended; actual settings unavailable | Complete; object and fixed E06 contract selected | Compact physical window plus Gaussian observation smoothing; declared center mixture/unfolding. Note09. |
 | TND-OC-E06 | E / Sol6.1 ultra recommended; actual settings unavailable | Complete; preliminary analytical derivations and manuscript, proof-author checking only | Full hierarchy, center covariance identity and uniform full-pair approximation. Author check06, return11. |
-| TND-OC-E07 | E / Sol6.1 ultra where supported | Ready and pending; not started | Fixed new-claim assessment under request12/inputs12; one bounded correction. Default next. |
-| TND-OC-B06 | B / Astra, author-selected effort | Prospective after E07, or explicit author choice | Select one declared center-covariance regime and compare at most two source-specific routes. No canonical estimate acquired. |
+| TND-OC-E07 | E / Sol6.1 ultra where supported | Complete; accepted after one bounded correction, internal LLM assessment | Review07, Note10 and return13; explicit width floor for common cutoffs. This row corrects the stale pre-assessment table entry. |
+| TND-OC-B06 | B / Astra, author-selected effort; actual settings unavailable | Complete at bounded selection and missing-input scope; fixed claims accepted in E08 | Note11, historical author check08 and E08 Review09: full marked transform versus nonharmonic source moments; explicit errors, no canonical covariance value. |
+| TND-OC-E08 | E / Sol6.1 ultra where supported; actual settings unavailable | Complete: accepted unchanged, all eight claims; internal LLM assessment | Review09, Note12 and return16. One pass, no correction; all 28 inputs15 preserved. No canonical moment array or profile acquired. |
+| TND-OC-B07 | B / Astra, author-selected effort; actual settings unavailable | Complete at conditional evaluator-contract scope, chat0006 | Note13/Decision08/author check10; complete divisor plus Gaussian quadrature gives <1/3000 uniform analytical error under fixed caps. No canonical count or pair value acquired. |
+| TND-OC-E09 | E / Sol6.1 ultra where supported | Optional finite benchmark, ready and unactivated | Frozen request18/Inputs18 unchanged; finite evaluator or failed gate. Not a default collision-facing successor. |
+| TND-OC-B08 | B / Astra recommended; actual settings unavailable | Complete: diagnosis and author-directed bifurcation | Note14, author check11, Continuation16 and new OA setup. Elementary scoped diagnostics; no canonical collision bound. |
+| TND-OC-B09 | B / Astra, author-selected effort | Ready, unactivated | Plan: independent analytic marginal result via at most two candidates and one clarification; no immediate collision exclusion required. |
+| TND-OC-E10 | E / Sol6.1 ultra where supported | Reserved; no request issued | Depends on B09 fixing source, observable, domain, method, additional input and finite limits. |
 | TND-OC-E05 | E / Sol6.1 ultra where supported; actual settings unavailable | Complete; manuscript assembled and production-checked | [Manuscript](../manuscript/README.md), [Note07](../notes/07_TND_OC_ANALYTICAL_MANUSCRIPT_ASSEMBLY_20261108.md), [check05](../reviews/05_TND_OC_E05_MANUSCRIPT_INTEGRATION_CHECK_20261108.md), [return10](handoffs/10_TND_OC_E05_MANUSCRIPT_RETURN_20261108.json). Systematic analytical proofs and outstanding tasks; source assessment levels unchanged. All 17 E03 and 21 E04 frozen inputs preserved. |
 | TND-OC-B04 | B / Astra, author-selected effort | Complete at bounded comparison scope; new transfer proved in-note, author checking only | [Note05](../notes/05_TND_OC_B04_ARITHMETIC_RECONCILIATION_AND_ROUTE_COMPARISON_20261108.md) reconciles BGST and compares two routes; [Note06](../notes/06_TND_OC_B04_DETERMINISTIC_MARKED_PAIR_TRANSFER_20261108.md) gives the explicit deterministic pair error. Scoped failure to obtain a favorable canonical value from current inputs. No local law or new exclusion. |
 | TND-OC-E04 | E / Sol6.1 ultra, where supported | Ready and pending; not started | Fixed B04 assessment under [request09](handoffs/09_TND_OC_E04_ASSESSMENT_REQUEST_20261108.md) and [inputs09](handoffs/09_TND_OC_E04_INPUTS_20261108.json). One claim-level pass and bounded correction. Separate from E03; no new sign research or numerics. |
@@ -75,6 +120,130 @@ specifies objects.
 | TND-OC-B03 | B / Astra, author-selected effort | Complete at scoped-failure boundary; two routes parked on current inputs | [Brainstorm Note04](../brainstorm/notes/04_TND_OC_B03_REAL_ZERO_AWARE_COMPARISON_20261108.md): log regularization retains an unpaid joint small-value estimate; real-divisor removal retains an unpaid remaining-divisor estimate. A matched finite contour/real count is identified as independent information, not acquired data. New calculations have author checking only; B02 is not promoted. No signed-smallness E packet or numerical campaign. Requested Astra; actual backend/effort unavailable. |
 
 ## Setup event and historical crosswalk
+
+**B08 disposition and author-directed split, 8 November 2026:** the author
+retains generalized marginals as a high-risk option while prioritizing
+collision constraints in a new investigation. Note14 supplies the
+explicit primitive/logarithm/marginal map, Green second-moment connection,
+scoped fixed-blur calculation and premise-level control screen. Same-author
+check11 only; no canonical value or universal obstruction. B08 is complete.
+
+Following INVESTIGATION_SETUP_WORKFLOW, 03_collision_constraints now
+owns TND-OA, with an overview, bounded B01 plan, sole register, inherited
+reference ownership and standalone continuation. Setup is OA-E00;
+OA-B01 is ready but unactivated and OA-E01 reserved. OC B09 independently
+pursues analytic marginal information; OC E10 is reserved. Issued E09
+remains unchanged and optional; E03/E04 remain pending. Completed source
+results and task IDs stay with their existing owners. No OG or parent
+register is edited. Parent navigation and DRAFT_HISTORY link the setup.
+
+Current chat0006 keeps its unique OC home; new branch history points here
+for setup and contains no duplicate registry. Actual model/effort remain
+unavailable. No new chat, agent dispatch, model change, canonical
+computation or manuscript expansion. Return19 and validation12 record
+preservation; Continuation16 is the current handoff.
+
+
+**B08 activation, 8 November 2026:** the author reports that the arithmetic,
+marginal and collision connections remain unclear and explicitly requests
+an investigation of whether the approach conflicts with the intended goal,
+should change substantially, or should be abandoned. This author instruction
+activates the conceptual review before E09; its earlier E09-dependent
+condition is superseded for this cycle. Type B, Astra recommended at the
+author-selected effort; actual model/effort unavailable, chat0006. Root
+alone writes in OC; the parallel Green branch is read-only context.
+
+Bounded scope: trace the exact theta/primitive dictionary; distinguish
+representation, acquisition and a collision-useful estimate; compare the
+source/Green route and a genuinely dynamical pair route once each, with
+one focused local-collision/resolution calculation. Return an evidence-based
+retain/change/stop recommendation, explicit missing inequalities and
+continuation guidance. No canonical numerical evaluator, new scan, model
+change, agent dispatch or sibling-register edit. E09 remains a frozen
+optional benchmark pending this program-fit decision, not the active default.
+All prior mathematical evidence is preserved; no new global impossibility
+claim is licensed by the review.
+
+**B07 disposition, 8 November 2026:** for Edward Baker with substantial
+OpenAI Codex assistance, existing authenticated chat0006; actual model and
+effort unavailable. One named mechanism and one completeness clarification
+produced Note13's conditional uniform estimate and the frozen E09 request.
+The complete complex contour count is independent of candidate real-zero
+proposals; count equality is required before their use. All labels, W²,
+the exact center interval and Gaussian observations remain. Exact-zeta
+balls include all algorithmic remainders; both theta truncation tails
+remain mandatory if that older route is used. No finite-source moment
+array, canonical count or pair value was acquired. E09 is recommended
+for Sol before implementation. Author check10 is not separate assessment.
+Return17 and validation11 record preservation. The manuscript/build,
+root summaries/patterns and frozen E03/E04/E08 files are unchanged.
+No model switch, delegation, canonical numerical run, manuscript milestone
+or investigation closure. Authentic capture retains the existing chat
+identity; final capture waits for the real current-turn completion.
+
+**B07 activation, 8 November 2026:** prepared for Edward Baker with
+substantial OpenAI Codex assistance, existing authenticated chat0006,
+thread 01a1bd30-e805-7183-9318-427ca0a63cc9, current turn
+01a1bd72-8594-7271-8188-32ff732dfcd7. Actual model/effort remain absent
+from the source. Root is the sole writer; no model change or delegation.
+The previous B06 final and completed turn are verified in the refreshed
+archive. The registry owns current capture counts, times and hashes.
+
+The named new mechanism is a certified complete zero inventory on a
+finite canonical region, followed by same-center Gaussian pair evaluation.
+Exact integer counts and enclosed positions would supply information beyond
+individual source accuracy. B07 fixes T=1000 within Note11's existing
+regime and will pay root-location and center-integration errors uniformly
+on Q x Q. Preliminary caps are N<=512 labels, at most 4096 overlapping
+ordered pairs and a fixed 20-node quadrature per polynomial piece.
+These are design limits, not acquired measurements. Scope is one mechanism
+and one bounded implementation clarification; no canonical evaluation or
+numerical implementation starts before a resulting E contract is specified.
+E08 is accepted unchanged; E03/E04 remain separately pending.
+
+**E08 disposition, 8 November 2026:** for Edward Baker with substantial
+OpenAI Codex assistance, authenticated chat0007; actual model/effort
+unavailable. One claim-level pass accepted all eight fixed claims unchanged.
+No correction or redesign was required. The explicit tail exponent,
+Fourier normalization, separate edge comparisons, full-disk harmonic scope,
+W^2 self sign, connected/full-pair distinctions, both source tails and all
+tolerance shares pass. Review09 and Note12 hold the evidence; return16
+records original input identity and validation. E03's 17 and E04's 21
+frozen inputs also match; their assessments remain pending. The manuscript,
+its build record, root summaries/patterns and historical packets are unchanged.
+No canonical evaluation, numerical campaign, new mechanism, manuscript
+milestone or investigation closure. B07 remains conditional as above.
+Authentic public-text capture is registered in this branch; final capture
+will wait for the actual completed final of the exact current turn.
+
+**E08 activation, 8 November 2026:** prepared for Edward Baker with
+substantial OpenAI Codex assistance, authenticated chat0007, actual title
+“Continue TND-OC-E08”, thread 01a1bd52-6850-7b02-a292-10c8c1d4b525,
+turn 01a1bd52-7c36-7db2-81b9-0512fc129c38. Actual recorded model/effort
+will be taken only from the capture registry; none is inferred from the
+recommendation. Type E: request15 fixes the eight claims, proof route and
+one-pass/one-bounded-correction limit. All 28 inputs15 hashes and sizes
+match before assessment. Root is sole writer; three read-only analytical
+helpers check claims 1–4, 5–6 and 7–8 at inherited configuration. This is
+internal LLM checking with shared premises. No canonical evaluation,
+new mechanism, manuscript rewrite or E03/E04 activation. Public-text
+capture registered successfully; exact-turn final capture remains pending.
+
+**B06 activation, 8 November 2026:** prepared for Edward Baker with
+substantial OpenAI Codex assistance; the authenticated source records no
+model or effort configuration. Thread 01a1bd30-e805-7183-9318-427ca0a63cc9,
+actual title "Continue B06 research", registered chat0006. Root is the
+sole writer; no model switch or delegation. This is B work because the
+center law, scales and useful joint source input still need selection.
+The finite limit is two routes and one focused mathematical clarification.
+No numerical campaign is activated. All 31 E07 current-source entries
+match return13. E02/E07 keep their assessed scope; E03/E04 stay pending.
+New research goes in notes/, assessment in reviews/, small execution
+records in numerics/, and continuation/model guidance in continuation-notes/.
+Completion requires an executable contract with paid singularity, center
+boundary and complete-source costs, or an explicit missing-input stop.
+Authentic public-text capture is registered; final capture remains pending
+the real final and completion of turn 01a1bd30-eab3-7030-887b-7dfc219d604f.
 
 **E06 disposition, 8 November 2026:** prepared for Edward Baker with substantial
 OpenAI Codex assistance; actual model/effort unavailable, chat0003. The author
@@ -434,3 +603,55 @@ zeros. A useful canonical estimate remains to be supplied; marginalization
 itself is valid. This clarification opens no new task or numerical campaign.
 E02 remains accepted, B02 author checking only, E03 pending; the broader
 nonreal localized-correlation objective remains open as in Note05.
+
+## E07 disposition and capture — 8 November 2026
+
+For Edward Baker with substantial OpenAI Codex assistance, chat0005.
+All 31 input files matched before the claim-level pass. Claims 1-7 and
+fixed-center claim8 pass; the common uniform-density cutoff clause needs
+the explicit width floor. One bounded correction adds it and repairs
+four notation entries. E02 remains accepted; B02/B03/B04 evidence is
+unchanged, E03/E04 pending. No canonical covariance value, profile,
+quantitative higher-order result or zero exclusion is acquired.
+One exact bookkeeping replay supports transcription only. Current reading
+copy and navigation are synchronized. The issued manifests and historical
+returns remain intact; return13 reconciles corrected source hashes.
+
+This exact thread passed source discovery, registration with its actual
+title and public-text readback. The shared-lock recorder owns chat0005.
+Refresh and request bounded exact-turn final capture as the last tool
+action; verify after completion. No native hook or model setting is
+invented. Next: bounded B06, as specified in Continuation12.
+
+
+## B06 disposition and continuation — 8 November 2026
+
+Prepared for Edward Baker with substantial OpenAI Codex assistance,
+authenticated chat0006; actual backend model/effort unavailable.
+Exactly two routes and one focused harmonic-reference clarification
+were completed. Note11 fixes the center law and physical/unfolded scales,
+pays frequency and center-edge errors, and reduces the nonharmonic log
+covariance to a finite same-center mixed-source-moment array with explicit
+singularity, source and moment-evaluation errors. Harmonic replacements
+on the full inner disks contribute zero under the compact Laplacian;
+this is a scoped mechanism screen, not a universal arithmetic obstruction.
+The generic polynomial degree allowance may be enormous and is not a
+complexity lower bound. No canonical moment array or profile is acquired.
+
+Status: proved in-note; proof-author checking only (Review08). The fixed
+E08 assessment is ready under request15/inputs15; B07 is conditional on a
+named new joint-input mechanism. E03/E04 and all their frozen files remain
+unchanged. E02/E07 retain their assessed scope. E07's stale pending table
+row was corrected from the already completed Review07/return13 evidence.
+The manuscript and its current build record are unchanged; this is no
+manuscript milestone or investigation closure. No numerical campaign,
+subagent, model switch, commit or push. Sources and reference limits are
+in source-use06. Return14 and numerics validation09 record preservation,
+links and file identities, not mathematical certification.
+
+Chat0006 uses the authentic local paginated source and shared-lock recorder.
+Current counts/hashes/times belong to the tool-managed index. The exact
+turn worker must be armed only after final housekeeping; unsent final text
+is not archived in advance. No native completion hook is asserted.
+
+**8 November capture exception:** current-turn refresh failed with unsupported_public_content (structured assistant content needs a preserving exporter). Prior verified OC chat0006 is intact; current capture is incomplete. This does not affect saved research/setup files. Final exact-turn follow-up must not be reported as successful before verification.

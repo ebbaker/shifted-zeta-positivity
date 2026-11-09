@@ -8,6 +8,17 @@
 
 ## Current disposition and stopping boundary
 
+**8 November 2026 — historical filing correction.** The author corrected
+the destination of the cross-branch advisory from this branch to OG.
+The single canonical [OG Note10](../../03_operator_imaginary_time_evolution/01_green_potential_resolvent/brainstorm/notes/10_TND_OG_COLLISION_DYNAMICS_AND_PARALLEL_PROBES_20261108.md) now lives there,
+and the [OG register](../../03_operator_imaginary_time_evolution/01_green_potential_resolvent/research-progress/01_TND_OG_GREEN_RESOLVENT_RESEARCH_PROGRESS_20261107.md)
+owns its record. The original [delivery record14](handoffs/14_TND_D_CROSS_BRANCH_ADVISORY_RECORD_20261108.json)
+is preserved as an immutable initial-filing snapshot;
+[relocation record19](../../03_operator_imaginary_time_evolution/01_green_potential_resolvent/research-progress/handoffs/19_TND_OG_ADVISORY_RELOCATION_20261108.json) records the correction.
+This was advisory input, not activation of D-B03. Prepared for Edward
+Baker with OpenAI Codex assistance, actual gpt-6-astra, effort unavailable.
+Existing OG chat0005 retains its registration.
+
 **6 November 2026, direct chat0004 — primary Astra/ultra; Sol 6.1/ultra execution and separate review.** B02 phase 2 is complete. [Decision02](../brainstorm/notes/02_TND_D_B02_SOURCE_SCORE_AND_COUNT_PHASE_DECISION_20261106.md) selects the high-count diagnostic after comparing two approaches. [E03 Note06](../notes/06_TND_D_E03_HIGH_COUNT_LOCALIZATION_20261106.md) is proved in-note and [accepted within scope by E04 Review03](../reviews/03_TND_D_E04_HIGH_COUNT_ASSESSMENT_20261106.md), without mathematical correction. Complete-source concentration implies both signs infinitely often in literal count sectors at each fixed nonzero real k. This excludes eventual one-sign sectors; it supplies no collision exclusion or advantage over direct source analysis. The source-score identity adds no independent condition at C=C_k=0. Other Note04 diagnostics retain proof-author status.
 
 That justified follow-through is now complete: [E06 Note07](../notes/07_TND_D_E06_COMPLETE_COUNT_TAIL_20261106.md), accepted without correction by [E07 Review04](../reviews/04_TND_D_E07_COMPLETE_COUNT_TAIL_ASSESSMENT_20261106.md), pays the complete omitted count mass and first-readout-derivative error by an explicit eventual geometric envelope. The bound is absolute, uniform on the closed physical slab/all real k, and identical to the direct scalar baseline. No practical numerical cutoff or collision margin is claimed. No further analytical task was activated by that research pass: the source-specific collision question still lacks an independent joint signed premise, and these results do not justify another count-sign expansion. All original realizations, issued requests and evidence levels are preserved. Earlier dated continuation paragraphs describe their historical states.
