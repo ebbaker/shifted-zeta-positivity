@@ -1,0 +1,216 @@
+\section{Newman-time regularity through collisions}\label{sec:newman-time}
+
+Gaussian observation time and Newman time play different roles.
+The former smooths a fixed divisor; the latter moves the divisor by
+$\partial_\lambda H=-H_{zz}$. We retain the compact physical window
+and fixed observation regime \eqref{eq:fixed-regime} throughout
+$0\le\lambda\le1/2$. The result in this section is the full marked-pair
+time modulus of \cite{OCTime,OCTimeReview}; it supplies conditional
+transport of initial data, without assuming a positive minimum root gap.
+
+\subsection{Complete-force inputs and cancellation of the pair singularity}
+
+We use the canonical strip $|y_j|\le1$ and the following coarse input:
+there is a finite absolute $A\ge1$ such that, throughout this interval,
+\begin{equation}\label{eq:time-input}
+ \left|\frac{H_\lambda'}{H_\lambda}(u+4\ii)\right|
+      \le A\log(2+|u|),\qquad
+ \#\{j:u\le x_j\le u+1\}\le A\log(2+|u|).
+\end{equation}
+The input is obtained from the Polymath asymptotic estimates and the
+endpoint argument recorded in \cite{PolymathHeat2019,ParentModulus}.
+At time zero the safe-line bound follows by locally uniform convergence
+at each fixed $u$; the constant is uniform in $u$ before the limit.
+For counts, enclose a unit interval by a slightly enlarged zero-free
+rectangle, use the argument principle for small positive times, and
+absorb the fixed enlargement into $A$. Reflection covers negative
+heights and compactness covers the bounded-height remainder. No
+numerical value of $A$ is asserted here.
+
+For $X\ge10$ let $L_X=\log(2+X)$,
+$\mathcal C_X=\{j:|x_j-X|\le3\}$, and let $m_X$ count labels in
+$|x_j-X|\le1$. The input gives
+\[
+ n_X:=|\mathcal C_X|\le12AL_X,\qquad m_X\le2AL_X.
+\]
+Write $F_\lambda=H_\lambda'/H_\lambda$ and $w=x+4\ii$.
+The complete exterior force at an active point $z=x+\ii y$ is
+\begin{equation}\label{eq:exterior-force}
+ E_X(z)=F_\lambda(w)-\sum_{k\in\mathcal C_X}\frac1{w-z_k}
+  +\sum_{k\notin\mathcal C_X}
+       \left(\frac1{z-z_k}-\frac1{w-z_k}\right).
+\end{equation}
+This retains the opposite-paired canonical logarithmic derivative.
+The last series is absolutely convergent: its summands are at most
+$5/|x-x_k|^2$, while the counts grow logarithmically. Unit shells
+starting at distance two bound this series by $25AL_X$; the first
+two terms cost at most $2AL_X$ and $n_X/3\le4AL_X$. Thus
+\begin{equation}\label{eq:exterior-bound}
+ |E_X(z)|\le31AL_X\qquad(|x-X|\le1,\ |y|\le1).
+\end{equation}
+For example the shell bound uses
+$10A\sum_{h\ge2}[L_X+\log(h+2)]h^{-2}$;
+$\sum_{h\ge2}h^{-2}\le1$ and the decreasing-function integral bound
+\[
+ \sum_{h\ge2}\frac{\log(h+2)}{h^2}
+ \le\int_1^\infty\frac{\log(t+2)}{t^2}\dd t
+ =\tfrac32\log3<3<\tfrac32L_X
+\]
+give the displayed constant. These estimates are only upper
+allowances, not signed exterior information.
+
+Let $f$ be a real $C^2$ test supported in $|x-X|\le1$, and put
+$F_1=\sup_{|y|\le1}|\nabla f|$,
+$F_2=\sup_{|y|\le1}\|D^2f\|_{\rm op}$. At a simple active zero,
+implicit differentiation gives
+\[
+ \dot z_j=2\sum_{k\in\mathcal C_X,\,k\ne j}\frac1{z_j-z_k}
+                  +2E_X(z_j).
+\]
+For $d=x_j-x_k$, $e=y_j-y_k$, the two ordered force terms combine
+into $-2K_f(z_j,z_k)$, where
+\begin{align}
+ K_f(z_j,z_k)
+  &=\frac{e(f_y(z_j)-f_y(z_k))-d(f_x(z_j)-f_x(z_k))}{d^2+e^2}\nonumber\\
+  &=\int_0^1\frac{e^2 f_{yy}-d^2 f_{xx}}{d^2+e^2}
+                     (z_k+t(z_j-z_k))\dd t.\label{eq:chord-cancellation}
+\end{align}
+The mixed derivatives cancel, and the chord stays in the strip.
+Hence $|K_f|\le F_2$ even as the separation tends to zero.
+Only pairs with at least one active label contribute, at most
+$m_Xn_X$ unordered pairs. The exterior costs $2m_XF_1\,31AL_X$.
+We have proved, at simple times,
+\begin{equation}\label{eq:compact-time-test}
+ \left|\partial_\lambda\sum_j f(z_j)\right|
+       \le A^2L_X^2(48F_2+124F_1).
+\end{equation}
+This is the useful cancellation: bounding the two velocities separately
+would introduce a reciprocal root separation that the paired test does
+not require.
+
+\subsection{The full pair and connected moduli}
+
+Set $f_{X,u}(z)=JW_X(z)G_\epsilon(X+\ell u-z)$ and define
+$r_{\lambda,X},d_{\lambda,X},R_{2,\lambda,X}$ as before.
+On the canonical strip the transverse cutoff is identically one,
+including its first two derivatives at the boundary. The horizontal
+window has derivative bounds $15/4$ and $24$. The Gaussian has
+gradient bound $A_\epsilon/(\epsilon\sqrt{\ee})$ and Hessian operator
+bound $A_\epsilon/\epsilon^2$. Define
+\begin{align}
+ a_0&=\frac{J}{2\pi\epsilon^2}=\frac8\pi,&
+ a_1&=a_0\left(\frac{15}4+\frac1{\epsilon\sqrt{\ee}}\right),\nonumber\\
+ a_2&=a_0\left(24+\frac{15}{2\epsilon\sqrt{\ee}}+\frac1{\epsilon^2}\right),&
+ L&=\log(2+2T),\quad R_*=2ALa_0,\nonumber\\
+ L_1&=A^2L^2(48a_2+124a_1),&
+ L_d&=A^2L^2[96(a_0a_2+a_1^2)+248a_0a_1],\nonumber\\
+ L_2&=2R_*L_1+L_d,&L_C&=4R_*L_1+L_d.
+                                                        \label{eq:time-constants}
+\end{align}
+
+\begin{theorem}[Full marked-pair time modulus]\label{thm:time-modulus}
+For $\lambda,\mu\in[0,1/2]$, uniformly in $X\in[T,2T]$,
+\[
+ \begin{aligned}
+ \|r_{\lambda,X}-r_{\mu,X}\|_\infty&\le L_1|\lambda-\mu|,\\
+ \|d_{\lambda,X}-d_{\mu,X}\|_\infty&\le L_d|\lambda-\mu|,\\
+ \|R_{2,\lambda,X}-R_{2,\mu,X}\|_\infty&\le L_2|\lambda-\mu|.
+ \end{aligned}
+\]
+The same first and pair bounds hold after center averaging, and
+$\|C_\lambda-C_\mu\|_\infty\le L_C|\lambda-\mu|$.
+The norms are on $Q$ or $Q^2$, and the estimates include multiple-zero times.
+\end{theorem}
+\begin{proof}
+The product rule gives $|f_{X,u}|\le a_0$,
+$|\nabla f_{X,u}|\le a_1$, $\|D^2f_{X,u}\|\le a_2$.
+The self test $f_{X,u}f_{X,v}$ has gradient at most $2a_0a_1$ and
+Hessian at most $2a_0a_2+2a_1^2$. Formula
+\eqref{eq:compact-time-test} proves $L_1,L_d$ at simple times.
+Also $r_{\lambda,X}\le R_*$. The raw product costs $2R_*L_1$;
+subtracting the self term gives $L_2$. The connected statistic subtracts
+a second product, now of averaged means, giving $L_C$.
+
+It remains to justify integration through events. The complete family
+is analytic in $(\lambda,z)$ and is not identically zero on a slice,
+since $H_\lambda(0)>0$. In the padded compact rectangle
+$[T-2,2T+2]+\ii[-2,2]$, local zero-free boundaries and Rouch\'e's theorem
+give continuous finite multisets of roots, with multiplicity preserved.
+The weighted first, self and pair sums are therefore jointly continuous.
+
+At a zero of multiplicity $q$ at $(\lambda_0,z_0)$, put
+$t=\lambda-\lambda_0$, $\zeta=z-z_0$. The heat equation makes the
+lowest parabolic-degree Taylor polynomial a nonzero multiple of
+\[
+ \ee^{-t\partial_\zeta^2}\zeta^q
+  =(2t)^{q/2}\operatorname{He}_q(\zeta/\sqrt{2t}).
+\]
+The polynomial identity follows by expanding the finite differential
+series, or the Hermite generating function \cite{DLMFHermiteOC}.
+The $q$ Hermite zeros are real and distinct: the Rodrigues expression
+$\operatorname{He}_q(x)=(-1)^q\ee^{x^2/2}(\dd/\dd x)^q\ee^{-x^2/2}$
+and integration by parts give orthogonality to every polynomial of
+degree below $q$ for the positive Gaussian weight. If there were fewer
+than $q$ real sign changes, their linear factors would form such a
+polynomial whose product with $\operatorname{He}_q$ has constant sign,
+contradicting orthogonality. Rescaling and applying Rouch\'e
+near each one shows that all nearby roots are simple for sufficiently
+small nonzero $t$; their displacements are
+$\sqrt{2t}\,h_j+O(|t|)$. Thus multiple events are isolated in this
+compact space-time set and there are finitely many. Integrate the
+uniform simple-time estimates on the intervening intervals and use
+continuity at their endpoints. The interval lengths sum to
+$|\lambda-\mu|$, so no event-count factor appears. Averaging over
+the unchanged center law preserves the estimates.
+\end{proof}
+
+\subsection{Exterior truncation and conditional transport}
+
+Truncate only the absolutely convergent difference series in
+\eqref{eq:exterior-force}, retaining terms with $|x-x_k|<M$, for
+integer $M\ge2$. Unit counts and a decreasing-function integral give
+\begin{equation}\label{eq:exterior-tail}
+ e_M(X)=\frac{10A}{M-1}[L_X+\log(M+1)+1].
+\end{equation}
+Indeed the shell majorant is
+$10A[L_X+\log(h+2)]/h^2$; its integral from $M-1$ to infinity
+is bounded by \eqref{eq:exterior-tail}, using
+$\log(1+s)\le s$ after rescaling. The induced scalar derivative
+error is at most $2m_XF_1e_M(X)$.
+Let $m_*=2AL$, and replace $L_X$ by $L$ in $e_M$ to define $e_M^*$.
+The full-pair and connected derivative errors are at most, respectively,
+\begin{align}
+ B_{2,M}&=(4R_*m_*a_1+4m_*a_0a_1)e_M^*,\nonumber\\
+ B_{C,M}&=(8R_*m_*a_1+4m_*a_0a_1)e_M^*.
+                                                        \label{eq:pair-exterior-error}
+\end{align}
+The first coefficient pays two first-intensity derivative errors;
+the second pays the self-product derivative. Connected subtraction
+doubles the first coefficient. Uniform convergence allows time
+integration, giving errors $B_{2,M}|\lambda-\mu|$ and
+$B_{C,M}|\lambda-\mu|$. Root locations and undifferentiated intensities
+remain those of the exact divisor; this is not an error theorem for
+an independently truncated root dynamics.
+
+If a function $F_0$ approximates $\overline R_{2,\mu}$ within $e_0$,
+then
+\begin{equation}\label{eq:initial-transport}
+ \|\overline R_{2,\lambda}-F_0\|_\infty
+       \le e_0+L_2|\lambda-\mu|.
+\end{equation}
+The connected version uses $L_C$. For large $T$, the displayed allowances
+are $L_1,L_d=O_A((\log T)^4)$ and $L_2,L_C=O_A((\log T)^5)$.
+They supply no initial profile and no favorable sign.
+
+Lipschitz continuity is compatible with a kink at collision. For
+$p_\lambda(z)=z^2-2\lambda$ and constant local window, the ordered
+two-label density at observations $u=v=0$ is exactly
+\[
+ 2(2\pi\epsilon^2)^{-2}\ee^{-2|\lambda|/\epsilon^2}.
+\]
+Its right-minus-left slope is
+$-8(2\pi\epsilon^2)^{-2}/\epsilon^2$. At $\lambda=0$ both labels
+remain and the factorial coefficient is $2$, not zero. This local
+heat control proves neither a canonical collision nor differentiability
+through one; it shows why the theorem claims a modulus rather than a
+globally smooth closed equation.

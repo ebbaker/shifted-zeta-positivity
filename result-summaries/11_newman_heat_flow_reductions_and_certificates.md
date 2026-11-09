@@ -7,22 +7,24 @@ LLM assistance: **gpt-6-astra (Codex)**, reasoning effort **ultra**.
 
 ## Summary
 
-- **Localized zero correlations, full-marginal manuscript (8 November 2026).**
-  The [current draft](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/manuscript/README.md)
-  now develops the full Gaussian factorial hierarchy, weighted normalization,
-  center covariance, and a two-sided uniform pair-function source error
-  E_X(4n_X A_e U_h,e+V_h,e)/pi retaining real zeros. New derivations are
-  **preliminary; proof-author checking only**, E07 pending.
-  [Author check06](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/reviews/06_TND_OC_E06_GAUSSIAN_MANUSCRIPT_AUTHOR_CHECK_20261108.md):
-  “Uniform approximation of that function does not determine its canonical
-  profile.” The earlier scalar-first manuscript emphasis is superseded;
-  its E05 production record and analytical results remain. E02 is accepted
-  internally; B02/B03/B04 remain **proved in-note; author checking only**,
-  E03/E04 pending. The marked scalar coefficient
-  (2800n_X+3621/2)/(pi h²) and scoped harmonic obstruction are supporting
-  appendices. No canonical correlation profile or new exclusion follows.
-  For Edward Baker with substantial OpenAI Codex assistance; actual
-  model/effort unavailable.
+- **Localized zero correlations, analytical manuscript milestone (9 November 2026).**
+  The [current draft](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/manuscript/README.md) now integrates the
+  full factorial hierarchy and two-sided source transfer with the same-center
+  moment interface, compact-window Newman-time regularity through collisions,
+  Gaussian-window projection, centroid cancellation and direct cell ranges.
+  E07/E08/E12 retain their stated internal acceptances; Gaussian/acquisition
+  Notes18–20/22 and E14 remain **proved in-note, proof-author checked**.
+  [Note23](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/notes/23_TND_OC_E14_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261109.md):
+  “A unified exposition is not a uniform theorem across observation regimes.”
+  For separated singleton cells, ideal radius is bounded by
+  N(10u+4v)sqrt(pi)/(sT); the inherited finite census gives the conditional
+  <0.0041 allowance, with endpoint arithmetic and the scalar still pending.
+  [Author check19](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/reviews/19_TND_OC_E14_MANUSCRIPT_AUTHOR_CHECK_20261109.md)
+  does not acquire a canonical profile or collision exclusion. The **8 November
+  E06 presentation is superseded**; its [author check06](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/reviews/06_TND_OC_E06_GAUSSIAN_MANUSCRIPT_AUTHOR_CHECK_20261108.md),
+  later E07 acceptance and older scalar results remain historical sources.
+  E03/E04 remain pending. For Edward Baker with substantial Codex assistance;
+  recorded thread **gpt-6-astra/max**, per-turn backend unavailable.
 
 - **Reductions (from imported Polymath theorems).** \(\Lambda>0\) forces a
   real double zero at time \(\Lambda\); RH \(\iff\) \((H_t,H_t')\) has no

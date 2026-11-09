@@ -1,0 +1,164 @@
+\section{Gaussian height windows and an explicit marked projection}\label{sec:gaussian-window}
+
+We now change the physical window, while retaining the observation
+Gaussian and the uniform center law. This change makes center integration
+explicit and is useful for finite acquisition. Its tails must be paid;
+the compact-window time constants of Section~\ref{sec:newman-time}
+do not automatically apply to it. The analytical construction is from
+\cite{OCGaussianWindow,OCProjection}.
+
+\subsection{An exact center integral with controlled tails}
+
+For $h>0$ use
+\begin{equation}\label{eq:gaussian-height-window}
+ W_X^{\rm G}(x+\ii y)=\ee^{-(x-X)^2/(2h^2)}\kappa_0(y),
+ \qquad X\sim\operatorname{Unif}[T,2T].
+\end{equation}
+Here $h$ is a standard deviation, not the support radius of the earlier
+compact window. For $m=(x+x')/2$ and $d=x-x'$,
+\begin{equation}\label{eq:height-center-integral}
+ \begin{gathered}
+ \mathbb E_X\ee^{-(x-X)^2/(2h^2)}\ee^{-(x'-X)^2/(2h^2)}
+   =I_{T,h}(m)\ee^{-d^2/(4h^2)},\\
+ I_{T,h}(m)=\frac{h\sqrt\pi}{2T}
+ \left[\operatorname{erf}\frac{2T-m}{h}
+                    -\operatorname{erf}\frac{T-m}{h}\right].
+ \end{gathered}
+\end{equation}
+The identity follows from
+$(x-X)^2+(x'-X)^2=2(m-X)^2+d^2/2$ and a one-dimensional Gaussian integral.
+Both finite center edges remain in $I_{T,h}$.
+
+The full pair density has a similar exact center integration before
+any projection. Put
+$\sigma^2=h^2\epsilon^2/(h^2+\epsilon^2)$,
+$\alpha=h^2/(h^2+\epsilon^2)$ and
+$a_u(z)=x-\alpha\ell\Re u$. Completing the square gives
+\[
+ JW_X^{\rm G}(z)G_\epsilon(X+\ell u-z)
+  =p_u(z)\ee^{-(X-a_u(z))^2/(2\sigma^2)},
+\]
+where
+\[
+ p_u(z)=\frac{J\kappa_0(y)}{2\pi\epsilon^2}
+  \exp\left[-\frac{(y-\ell\Im u)^2}{2\epsilon^2}
+             -\frac{\ell^2(\Re u)^2}{2(h^2+\epsilon^2)}\right].
+\]
+For each ordered distinct-label pair, multiply $p_u(z)p_v(w)$ by
+the right side of \eqref{eq:height-center-integral} with $h=\sigma$,
+$m=(a_u(z)+a_v(w))/2$, and $d=a_u(z)-a_v(w)$.
+This simplifies integration over a supplied divisor; it does not
+estimate the unknown divisor or its joint source field.
+
+From \eqref{eq:time-input}, the total height weight is bounded by
+$B_0(X)$, and the weight at $|x_j-X|\ge R$ by $B_R(X)$, where
+\begin{equation}\label{eq:gaussian-weight-tail}
+ B_R(X)=2A\sum_{n=R}^\infty
+       [\log(2+X)+\log(n+2)]\ee^{-n^2/(2h^2)},\qquad R\in\mathbb Z_{\ge0}.
+\end{equation}
+Indeed each shell is covered by two unit intervals and their logarithms
+are at most $\log(2+X)+\log(n+2)$. These bounds are uniform in
+$\lambda\in[0,1/2]$. With $a_0=J/(2\pi\epsilon^2)$, keeping only
+the fixed slab $[T-R,2T+R]$ loses at most
+\begin{equation}\label{eq:gaussian-pair-tail}
+ 2a_0^2B_0(2T)B_R(2T)\quad\hbox{in the full pair},\qquad
+ 4a_0^2B_0(2T)B_R(2T)\quad\hbox{in the connected pair}.
+\end{equation}
+Every omitted pair has at least one omitted weight; connected subtraction
+pays the product of means a second time.
+
+\subsection{What linear Gaussian smoothing does to the source}
+
+For the normalized real Gaussian $\gamma_h$ of variance $h^2$,
+absolute integration of the complete cosine representation gives
+\begin{equation}\label{eq:source-heat-shift}
+ \int_\R\gamma_h(X-x)H_\lambda(x+\ii y)\dd x
+       =H_{\lambda-h^2/2}(X+\ii y).
+\end{equation}
+Each frequency is multiplied by $\ee^{-h^2u^2/2}$.
+This is a linear identity. It does not pass through the logarithm.
+For $p_\lambda(z)=z^2-2\lambda$ at $\lambda=h^2/2$, the convolved
+polynomial is $z^2$, whereas the original zeros are $\pm h$.
+At the origin the Gaussian mean of $\log|x^2-h^2|$ is finite and
+the log modulus of the convolved polynomial is $-\infty$.
+
+The log-source formulas themselves remain valid for the noncompact
+height window. To justify this, let
+\[
+ M_0=\max\left\{1,\int_0^\infty\ee^{u^2/2+11u}\Phi(u)\dd u\right\}.
+\]
+Then $|H_\lambda|\le M_0$ on every disk $D(q+4\ii,7)$, and
+integration of \eqref{eq:time-input} along the safe line gives
+$\log|H_\lambda(q+4\ii)|\ge\log H_0(4\ii)-A|q|\log(2+|q|)$.
+Subharmonic circular means, integrated in radius, therefore imply
+\begin{equation}\label{eq:noncompact-log-tail}
+ \int_{[q,q+1]\times[-2,2]}|\log|H_\lambda||\dd^2z
+ \le49\pi[2\log M_0-\log H_0(4\ii)+A|q|\log(2+|q|)].
+\end{equation}
+The rectangle fits inside the disk. The pointwise bound
+$|\log|H||\le2\log M_0-\log|H|$ and the mean lower bound prove
+the inequality, including the negative log near zeros.
+
+The Laplacians of $f_{X,u}=JW_X^{\rm G}G_\epsilon(X+\ell u-\cdot)$
+and $f_{X,u}f_{X,v}$ have Gaussian horizontal decay times a polynomial
+of degree at most two; their transverse support stays in $[-2,2]$.
+Multiply them first by a horizontal cutoff with uniformly bounded first
+two derivatives. Formula \eqref{eq:noncompact-log-tail} makes the
+cutoff error summable and vanishing, while
+\eqref{eq:gaussian-weight-tail} handles the zero side. Passing to the
+limit proves the absolutely convergent formulas
+\begin{equation}\label{eq:gaussian-log-contraction}
+ r_X(u)=\frac1{2\pi}\int\log|H_\lambda|\Delta f_{X,u},\qquad
+ d_X(u,v)=\frac1{2\pi}\int\log|H_\lambda|\Delta(f_{X,u}f_{X,v}).
+\end{equation}
+Uniform absolute bounds justify products and the center average.
+Their joint input is still $\mathbb E_X[L_X(\xi)L_X(\omega)]$,
+with $L_X(\xi)=\log|H_\lambda(X+\xi)|$, or its covariance.
+A whole-line comparison also needs the approximating field's log tail.
+Neither \eqref{eq:source-heat-shift} nor the tail bounds acquire a
+sharp estimate of this joint field.
+
+\subsection{Integrate one marked observation test exactly}
+
+Return to $\lambda=0$, keep $\epsilon/\ell=1/4$, and use the Gaussian
+height window. The following bounded test preserves two separate
+imaginary marks:
+\[
+ \Psi(u,v)=\exp\left[-\frac{(\Re u-\Re v)^2}2
+                     -\frac{(\Im u-1/2)^2}2
+                     -\frac{(\Im v+1/2)^2}2\right].
+\]
+Define the projection over the \emph{entire} observation plane by
+\begin{equation}\label{eq:marked-projection}
+ P_T=\mathbb E_X\int_{\C^2}\Psi(u,v)R_{2,X}(u,v)\dd^2u\dd^2v.
+\end{equation}
+The Jacobian $J=\ell^2$ makes each unweighted observation Gaussian
+have mass one. A real difference has variance $2(1/4)^2=1/8$ and
+each transverse observation has variance $1/16$. Using
+\[
+ \mathbb E\ee^{-(a+Z)^2/2}
+   =(1+v)^{-1/2}\ee^{-a^2/[2(1+v)]},\qquad Z\sim N(0,v),
+\]
+which follows by completing the square, the three convolution factors
+multiply to $c_G=32\sqrt2/51$. Thus
+\begin{equation}\label{eq:projection-kernel-general}
+ P_T=\sum_{j\ne k}K_{T,h,\ell}(z_j,z_k),\qquad
+ K_{T,h,\ell}(z,w)=c_G I_{T,h}(m)
+   \ee^{-[1/(4h^2)+4/(9\ell^2)]d^2}b_+(y)b_-(y'),
+\end{equation}
+where $b_\pm(y)=\exp[-\frac8{17}(y/\ell\mp1/2)^2]$.
+Here $\kappa_0=1$ on the canonical strip. Tonelli's theorem applies
+to the nonnegative sums and integrals, with finiteness supplied by
+\eqref{eq:gaussian-weight-tail}.
+
+For the finite acquisition below set $h=\ell=1$, $\epsilon=1/4$,
+and write $I_T=I_{T,1}$, $K=K_{T,1,1}$. Then
+\begin{equation}\label{eq:projection-kernel}
+ K(z,w)=c_G I_T(m)\ee^{-25d^2/36}b_+(y)b_-(y'),\qquad
+ D(z):=K(z,z)=c_G I_T(x)\ee^{-4/17}\ee^{-16y^2/17}.
+\end{equation}
+The ordering matters:
+$K(z,w)/K(w,z)=\exp[\frac{16}{17}(y-y')]$.
+The midpoint dependence and the two marks therefore cannot be replaced
+by a function of the complex difference alone. This is a specified
+scalar consumer of the full hierarchy, not a reconstruction of it.

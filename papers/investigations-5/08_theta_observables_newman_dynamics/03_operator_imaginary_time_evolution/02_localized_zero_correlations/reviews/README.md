@@ -1,3 +1,7 @@
+**B10 r3 — same-assistant proof-author check.** [Review18](18_TND_OC_B10_R3_CELL_RANGE_SELF_CHECK_20261109.md) checks cell-product inclusion, both mark orders, factorial self terms, the Gaussian width bound and separate arithmetic gate. E13 source certification is inherited explicitly; canonical endpoint execution remains pending.
+
+9 November 2026. Prepared for Edward Baker with substantial OpenAI Codex assistance, OC chat0011; recorded thread gpt-6-astra/max, per-turn backend configuration unavailable.
+
 **E13 r1 assessment, 9 November 2026.** [Assessment17](17_TND_OC_E13_R1_PROOF_AND_IMPLEMENTATION_CHECK_20261109.md)
 records the six passed pre-execution proof checks, synthetic controls
 and the source-free geometry and count audit after the work-limit stop.
@@ -71,3 +75,5 @@ The sole status owner is research-progress/02_TND_OC_MARGINAL_PRIORITIES_RESEARC
 - [Self-check03 — B02](03_TND_OC_B02_AUTHOR_SELF_CHECK_20261107.md): same-author analytical check of Note04; does not replace the pending E03 assessment.
 
 - [BGST source/import check, 8 November 2026](BGST_IMPORT_SOURCE_CHECK_20261108.md): the parent's cumulative formula is confirmed by v3 (3.5), first line. Distinguishes the dyadic bound and erroneous multiplicative remainder, with a bounded dependency check. Separate from B04 and E03; internal LLM source assessment, actual backend model/effort unavailable. Prepared for Edward Baker with OpenAI Codex assistance.
+
+- [19 — E14 manuscript author check](19_TND_OC_E14_MANUSCRIPT_AUTHOR_CHECK_20261109.md): source crosswalk, seven analytical interfaces, production QA and preserved evidence levels; separate E15 pending.

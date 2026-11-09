@@ -1,3 +1,13 @@
+**B10 r3 exact geometry and bookkeeping.** [Record19](19_TND_OC_B10_R3_EXACT_GEOMETRY_20261109.json) and [checker](check_b10_r3_cell_geometry.py) verify the imported cell geometry, trace identity, accepted count tree, six malformed-input rejections and rational radius cap. Zero new source/kernel calls; no fresh winding or projected-value certificate. From this investigation root, supply the exact trace location recorded in execution18:
+
+```sh
+python3 numerics/check_b10_r3_cell_geometry.py --trace /private/tmp/tnd-oc-e13-r1-01a1c185/contours.jsonl
+```
+
+A relocated trace is accepted only with identical stored/canonical hashes. A missing trace fails closed. [Document validation20](20_TND_OC_B10_R3_DOCUMENT_VALIDATION_20261109.json) records preservation, links and size checks. The future E13 r2 evaluator has its own frozen Request29; it has not run here.
+
+9 November 2026. Prepared for Edward Baker with substantial OpenAI Codex assistance, OC chat0011; recorded thread gpt-6-astra/max, per-turn backend configuration unavailable.
+
 ## E13 r1 replay
 
 9 November 2026. Prepared for Edward Baker with OpenAI Codex assistance,
@@ -106,3 +116,6 @@ backend model/effort unavailable.
 records authentic capture, frozen-input preservation, local-link checks
 and exact rational bookkeeping only. It is an administrative/exact-algebra
 record, not a canonical numerical experiment or analytic proof certificate.
+
+- [21 — E14 exact bookkeeping](21_TND_OC_E14_EXACT_BOOKKEEPING_20261109.json): inherited cell geometry, exact allowances and input preservation; zero new canonical or projection calls.
+- [22 — E14 document validation](22_TND_OC_E14_DOCUMENT_VALIDATION_20261109.json): final source/link/build and frozen-input checks; production evidence only.

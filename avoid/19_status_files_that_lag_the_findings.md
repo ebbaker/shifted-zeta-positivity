@@ -119,3 +119,17 @@ shrinking-resolution or global-cost extension.
 
 
 **5 November 2026 — MC11 propagates the actual assessment into its evolving draft.** Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol/ultra**. [M01 r2 Note12](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/11_energy_filtered_theta_overlaps/notes/12_MC11_M01_R2_ASSESSMENT_PROPAGATION_AND_BUILD_20261105.md) states: “This production update adds no new mathematical result.” Front status, Appendix B, the closed-interval endpoint correction, current build record and navigation now agree with AR-E04, while issued proof/assessment and r1 production records remain historical. [Production Review06](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/11_energy_filtered_theta_overlaps/reviews/06_MC11_M01_R2_ASSESSMENT_PROPAGATION_PRODUCTION_CHECK_20261105.md) verifies the rebuilt 18-page artifact; propagation is complete without promoting unresolved signed margins.
+
+
+**9 November 2026 — integrate later results without merging their hypotheses.**
+For Edward Baker with substantial Codex assistance, recorded thread
+**gpt-6-astra/max**, per-turn backend unavailable. The OC manuscript had
+stopped before its completed joint-source and Newman-time work. The
+[E14 synthesis](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/notes/23_TND_OC_E14_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261109.md)
+states: “A unified exposition is not a uniform theorem across observation regimes.”
+The updated draft includes compact-window time regularity and Gaussian-window
+acquisition, while preserving the unproved Gaussian time extension and pending
+scalar arithmetic gate. [Author check19](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/reviews/19_TND_OC_E14_MANUSCRIPT_AUTHOR_CHECK_20261109.md)
+is integration checking, not independent acceptance. Keep live navigation,
+source statuses and the distinct hypotheses synchronized; do not let a polished
+manuscript silently turn one regime's theorem into another's.

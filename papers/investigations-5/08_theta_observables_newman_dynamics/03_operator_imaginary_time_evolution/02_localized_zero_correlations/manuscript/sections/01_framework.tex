@@ -7,24 +7,46 @@ ordinary real-zero spacings as well as information on possible nonreal
 zeros. A scalar transverse detector is one projection of this object;
 it is not the object itself.
 
-The development has three levels. Section~\ref{sec:gaussian} constructs
-full factorial densities and proves their exact consistency relations.
-Section~\ref{sec:centers} introduces separation coordinates, unfolding,
-and a declared law for the observation center. Sections~\ref{sec:logarithms}--\ref{sec:full-pair}
-then connect these functions to the complete canonical source, culminating
-in the uniform pair approximation of Theorem~\ref{thm:full-pair}.
-The identity for the center covariance in Proposition~\ref{prop:covariance}
-identifies a further source-specific analytical question. An approximation
-bound makes the correlation function accessible to prescribed accuracy;
-an estimate of its shape or covariance requires additional analysis.
+The development proceeds from the observable to its acquisition and
+transport. Sections~\ref{sec:gaussian}--\ref{sec:centers} construct the
+factorial hierarchy, unfolding and center average. The logarithm lemma
+and complete-source estimates in Sections~\ref{sec:logarithms}--\ref{sec:full-pair}
+make the full pair quantitatively approximable. Section~\ref{sec:joint-source}
+then isolates the additional same-center source information needed to
+estimate its profile. Section~\ref{sec:newman-time} proves regularity
+under Newman evolution, including collisions. Finally,
+Sections~\ref{sec:gaussian-window}--\ref{sec:acquisition} derive an explicit
+Gaussian-window projection and two finite acquisition error theorems.
 
-The new marginal, smoothing and two-sided transfer derivations have
-proof-author checking only. They use the local logarithm and one-point
-approximation accepted in the project's internal E02 assessment.
-Earlier scalar results retain their individual assessment levels and
-appear in the appendices. Appendix~\ref{app:status} records these
-boundaries. The manuscript asserts neither a determinantal law for
-canonical zeros nor a new nonreal-zero exclusion.
+Two distinctions organize the argument. First, accuracy of a source
+replacement does not determine a correlation profile. Second, Gaussian
+observation smoothing is different from a Gaussian physical window and
+from Newman-time evolution. The regimes used below are:
+\begin{center}\small
+\begin{tabularx}{\textwidth}{@{}lYY@{}}
+\toprule
+Result & Physical window & Parameters held fixed\\
+\midrule
+Source and mixed-moment bounds & Compact, two-sided & Time zero; finite
+center interval and positive observation width\\
+Newman-time modulus & Compact, $h=1$ & Center law and observation scales
+through $0\le\lambda\le1/2$\\
+Explicit projection and acquisition & Gaussian height weight & Time zero;
+$h=\ell=1$, $\epsilon=1/4$ in the finite error bounds\\
+\bottomrule
+\end{tabularx}
+\end{center}
+The Gaussian height tail estimates also hold throughout the stated
+Newman interval; extending its \emph{time derivative} estimates is a
+separate task.
+
+The full-pair source theorem, joint-source interface and time modulus
+have their respective internal assessment records. The Gaussian-window
+and acquisition results are proved in-note with proof-author checking;
+this integration does not widen their status. Appendix~\ref{app:status}
+records the source crosswalk and the supporting finite census. There is
+no asserted determinantal law for canonical zeros or new nonreal-zero
+exclusion.
 
 \subsection{Canonical normalization and heat equation}
 
@@ -54,9 +76,9 @@ derivatives. Differentiation under the integral is therefore justified:
 \end{equation}
 For real $\lambda$, $H_\lambda$ is real entire and even. Thus its zeros
 are invariant under conjugation and negation, including multiplicities.
-Our quantitative approximation theorems below concern $\lambda=0$.
-Equation~\eqref{eq:heat} alone does not extend their constants to other
-times.
+The source-approximation theorems below concern $\lambda=0$.
+Section~\ref{sec:newman-time} supplies the separate moving-divisor
+argument needed for the stated time modulus.
 
 For completeness the normalization can be recovered directly from
 the classical theta Mellin identity. Write

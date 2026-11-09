@@ -120,45 +120,7 @@ center covariance is a concrete further analytical target; it is not
 provided by independence of the observation noise. A source expression
 for this covariance is obtained in Section~\ref{sec:full-pair}.
 
-\subsection{An ensemble benchmark derived by marginalization}
-
-To distinguish a model joint law from the canonical construction,
-consider the circular density
-\begin{equation}\label{eq:cue-joint}
- p_N^{\rm circ}(\boldsymbol\theta)
-   =\frac1{N!(2\pi)^N}
-      \prod_{j<k}|\ee^{\ii\theta_j}-\ee^{\ii\theta_k}|^2,
- \qquad 0\le\theta_j<2\pi.
-\end{equation}
-This is a familiar determinant-product example
-\cite[Section 4]{Borodin2009DPP}; its relevant calculation is short.
-Put $\phi_m(\theta)=\ee^{\ii m\theta}/\sqrt{2\pi}$ for $0\le m<N$.
-The Vandermonde identity writes \eqref{eq:cue-joint} as
-$|\det[\phi_m(\theta_j)]|^2/N!$. On expanding both determinants,
-orthonormality kills all unequal permutations after full integration,
-so the density has mass one. If only $N-k$ coordinates are integrated,
-orthogonality instead retains the $k\times k$ minors; expanding their
-determinants gives
-$\rho_k=\det[K_N(\theta_a,\theta_b)]_{a,b\le k}$, where
-\[
- K_N(\theta,\phi)=\frac1{2\pi}\sum_{m=0}^{N-1}
-                                      \ee^{\ii m(\theta-\phi)}.
-\]
-In particular $\rho_2=(N/(2\pi))^2-|K_N|^2$.
-Unfolding by $x=N\theta/(2\pi)$ and summing the geometric series yields
-\begin{equation}\label{eq:cue-sine}
- \rho_{2,N}^{\rm unf}(s)
-    =1-\left(\frac{\sin\pi s}{N\sin(\pi s/N)}\right)^2
-       \longrightarrow 1-\left(\frac{\sin\pi s}{\pi s}\right)^2
-\end{equation}
-for fixed $s$, with removable values interpreted by continuity.
-If each coordinate of the limiting real-line pair density is smoothed
-by $g_\epsilon$, its separation profile becomes
-\begin{equation}\label{eq:smoothed-sine-reference}
- 1-g_{\sqrt2\epsilon}*\left(\frac{\sin\pi s}{\pi s}\right)^2.
-\end{equation}
-This follows from the same difference-variance calculation as
-Proposition~\ref{prop:separation}. These equations provide a reference
-for what a model marginal calculation can produce. Neither the
-Vandermonde law nor its sine profile has been derived for the localized
-canonical zero configuration in this manuscript.
+The CUE calculation in Appendix~\ref{app:ensemble} provides an explicit
+comparison law derived from a supplied ensemble. No such ensemble law
+is assumed for the canonical divisor. Its center covariance requires
+the additional information isolated in Section~\ref{sec:joint-source}.

@@ -1,3 +1,7 @@
+**B10 r3 source use.** [Record16](16_TND_OC_B10_R3_CELL_RANGE_SOURCE_USE_20261109.md) records inherited census/kernel/tail evidence, selected official FLINT enclosure/erf semantics and model-routing guidance. [Documentation bibliography](b10_cell_range_sources.bib). No new research-article import or PDF.
+
+9 November 2026. Prepared for Edward Baker with substantial OpenAI Codex assistance, OC chat0011; recorded thread gpt-6-astra/max, per-turn backend configuration unavailable.
+
 **E13 r1 source use.** [Record15](15_TND_OC_E13_FLINT_SOURCE_USE_20261109.md)
 records the pinned FLINT 3.6.0 zeta series and Euler–Maclaurin
 remainder path, with [Johansson's preprint citation](e13_zeta_ball_sources.bib).
@@ -130,3 +134,5 @@ records and bibliographies are reused. Online passage inspection succeeded;
 no new local PDF or hash and no independent audit of the original
 Conrey–Ghosh–Goldston–Gonek–Heath-Brown proof are claimed. For Edward Baker
 with OpenAI Codex assistance; actual current model/effort unavailable.
+
+- [17 — E14 manuscript source use](17_TND_OC_E14_MANUSCRIPT_SOURCE_USE_20261109.md) and [bibliography](manuscript_e14_sources.bib): integrated local source owners, selected Polymath and Hermite primary rechecks, and model guidance provenance.

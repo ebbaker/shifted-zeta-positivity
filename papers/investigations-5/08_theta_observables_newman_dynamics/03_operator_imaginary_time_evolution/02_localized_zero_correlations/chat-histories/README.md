@@ -1,3 +1,7 @@
+**B10 r3 — OC chat0011.** The exact thread `01a1c1ca-703a-7ee0-8df2-872c1e6f8558` is uniquely registered from its authentic paginated source under its actual submitted-request title. [Archive](0011_2026-11-09T19-30-32Z_please-read-papers-investigations-5-08-theta-observables-newman-dynamics-03-oper.json). The [registry](index.json) owns current capture metadata. Arrange the bounded final capture for turn `01a1c1ca-72ee-77b1-b6b0-6ee5a1ad3e62` and verify on continuation; native-hook activation is unverified.
+
+9 November 2026. Prepared for Edward Baker with substantial OpenAI Codex assistance, OC chat0011; recorded thread gpt-6-astra/max, per-turn backend configuration unavailable.
+
 **9 November 2026 — E13 r1, OC chat0010.** The requested continuation
 opened a new chat. The recorder registered the actual title and
 paginated source under
@@ -155,3 +159,6 @@ exporter; the prior verified archive remains intact. Current capture is
 incomplete and bounded final capture must be verified, not assumed.
 For Edward Baker with OpenAI Codex assistance; actual model/effort
 unavailable. [Current continuation](../continuation-notes/17_TND_OC_CORRECTED_PRIORITIES_AND_MODEL_CHANGE_20261108.md).
+
+
+**E14 continuation in chat0011, 9 November 2026:** the author requested the analytical manuscript rewrite after B10 r3. The authentic archive remains uniquely registered; source metadata and hashes are maintained by the shared-lock recorder. Actual E14 turn: 01a1c1d9-f9b3-7621-9efb-e0d2255880df. Final capture uses the bounded exact-turn follow-up; no native hook activation is claimed.

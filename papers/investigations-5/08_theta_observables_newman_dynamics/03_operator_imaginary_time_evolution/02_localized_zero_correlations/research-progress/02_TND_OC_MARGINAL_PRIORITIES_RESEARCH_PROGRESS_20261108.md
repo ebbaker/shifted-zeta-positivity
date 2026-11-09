@@ -19,7 +19,10 @@ owns current specifications; the parent owns shared tasks only.
 | **TND-OC-B10 r1** | **B / GPT-6 Astra**, conceptual source comparison; recorded thread settings Astra/max, per-turn backend unavailable | **Complete at scoped missing-input/decision scope**, 9 November 2026 | [Note19](../notes/19_TND_OC_B10_R1_GAUSSIAN_CONTRACTION_AND_MISSING_ESTIMATE_20261109.md) / Decision10: two candidates, one clarification; exact marked projection and error ledger, no acquired joint theta estimate; no new E packet. |
 | **TND-OC-B10 r2** | **B / GPT-6 Astra**; recorded thread settings Astra/max, per-turn backend unavailable | **Complete at analytical design/conditional-contract scope**, 9 November 2026 | [Note20](../notes/20_TND_OC_B10_R2_CONTOUR_CENTROIDS_AND_GAUSSIAN_ESTIMATE_20261109.md) / Decision11: complete-source contour counts and cluster first moments; conditional radius <1/200 for Note19's unchanged projection; proof-author checked, no canonical data acquired. |
 | **TND-OC-E13 r1** | **E / GPT-6.1 Sol**; fixed proof checks and numerical method | **Complete at named failed-gate scope, 9 November 2026** | [Return27](handoffs/27_TND_OC_E13_R1_RETURN_20261109.json): complete 388-label census, 91 centroids, 2M source-call cap reached in quadrature. [Request27](handoffs/27_TND_OC_E13_R1_CONTOUR_CENTROID_EVALUATOR_REQUEST_20261109.md) / Inputs27: six proof checks, one bounded certified contour-centroid pilot or exact failed gate; 30-minute canonical runtime cap, one bounded repair. |
-| **TND-OC-B10 r3** | **B / GPT-6 Astra**; choose the next evaluation method after the measured call-cap failure | **Recommended next, unactivated** | [Continuation24](../continuation-notes/24_TND_OC_AFTER_E13_AND_MODEL_CHANGE_20261109.md): decide whether interval contraction over the certified cells pays the same projection radius. |
+| **TND-OC-B10 r3** | **B / GPT-6 Astra**; recorded thread settings Astra/max, per-turn backend unavailable | **Complete at analytical design/conditional-contract scope, 9 November 2026** | [Note22](../notes/22_TND_OC_B10_R3_CELL_RANGES_AND_GAUSSIAN_WIDTH_20261109.md) proves geometric radius <1261/409600 using the exact census geometry; endpoint arithmetic ≤1/1000 and the retained tail give <0.0041<1/200. Proof-author checked; scalar pending. |
+| **TND-OC-E13 r2 — supporting successor** | **E / GPT-6.1 Sol**; fixed endpoint ranges, proof checks and finite gates | **Ready, unactivated** | [Request29](handoffs/29_TND_OC_E13_R2_CELL_RANGE_EVALUATOR_REQUEST_20261109.md) / Inputs29: import E13 census; R1–R6, 75,078 unordered pairs, zero new source calls, ≤1.4M exp/erf calls, 128/256/512 bits, cumulative 600-second evaluator cap; return certified radius <1/200 or exact failed gate. |
+| **TND-OC-E14 r1** | **E / executed in current Astra/max thread**, per-turn backend unavailable; user-authorized analytical manuscript synthesis | **Complete at analytical integration / proof-author-check scope, 9 November 2026** | 48-page manuscript; Note23 / Review19 / return30. Joint-source, Newman-time and Gaussian acquisition derivations integrated; numerical evidence in Appendix G. No E13 r2 evaluation. |
+| **TND-OC-E15 r1 — recommended analytical successor** | **E / GPT-6.1 Sol**, fixed claim-level audit; effort author-selected | **Ready, unactivated** | [Request32](handoffs/32_TND_OC_E15_R1_MANUSCRIPT_ASSESSMENT_REQUEST_20261109.md) / Inputs32: seven claim groups, one analytical pass, at most one bounded correction, no canonical or projection evaluations. |
 | TND-OC-E09 | E / Sol, ultra where supported; fixed finite evaluator | Optional benchmark, ready and unactivated | Unchanged request18/Inputs18; finite certified pilot or failed gate; no global collision implication |
 | TND-OC-E03 | E / Sol, ultra where supported; fixed B02 assessment | Ready, pending, unstarted | Unchanged request07/inputs07; separate bounded claim audit |
 | TND-OC-E04 | E / Sol, ultra where supported; fixed B04 assessment | Ready, pending, unstarted | Unchanged request09/inputs09; separate bounded claim audit |
@@ -396,3 +399,78 @@ compact-window benchmark.
 OC chat0010 is registered from the authenticated paginated source.
 Read current archive metadata from [the registry](../chat-histories/index.json).
 The bounded exact-turn capture targets this turn's real final.
+
+## B10 r3 activation — 9 November 2026
+
+Edward Baker activated Continuation24 in thread
+`01a1c1ca-703a-7ee0-8df2-872c1e6f8558`, actual current turn
+`01a1c1ca-72ee-77b1-b6b0-6ee5a1ad3e62`. Prepared for Edward Baker with
+substantial OpenAI Codex assistance. Recorded thread settings are
+`gpt-6-astra` / `max`; per-turn backend configuration is unavailable.
+Type B, Astra recommended for the evaluation-method choice. Root is the
+sole writer, with no delegation or model change.
+
+Finite scope: inspect the E13 census and its certificate dependencies;
+one analytical comparison of direct cell enclosures against the fixed
+radius-1/200 target, with one focused refinement if needed. Preserve
+Note19's marks, edges, factorial labels and complete tail. Return a
+proved error contract and bounded Sol packet, or name the unpaid width
+or evidence gate. No canonical numerical kernel run, new source calls,
+manuscript edit or sibling-status change. Evidence inspection, exact
+bookkeeping and documentation do not activate a successor execution task.
+
+## B10 r3 disposition — 9 November 2026
+
+Prepared for Edward Baker with substantial OpenAI Codex assistance,
+OC chat0011, recorded thread settings gpt-6-astra/max; per-turn backend
+configuration unavailable. One mechanism and one focused Gaussian-decay
+clarification, same-assistant proof checking, no delegation.
+
+[Note22](../notes/22_TND_OC_B10_R3_CELL_RANGES_AND_GAUSSIAN_WIDTH_20261109.md)
+selects direct monotone endpoint ranges over the complete E13 cells.
+The exact widths u=5/32768, v=15/131072 and adjacent real separation
+5085/8192>1/2 allow a geometric radius below 1261/409600. Summing
+Gaussian decay over index-separated pairs pays this bound without
+centroids. The independently measurable endpoint-arithmetic allowance
+1/1000 and unchanged complete tail 2^-32 give final radius <0.0041.
+Both mark orders, both center edges and factorial self bookkeeping remain.
+
+The bound is **proved in-note, proof-author checked** by
+[Review18](../reviews/18_TND_OC_B10_R3_CELL_RANGE_SELF_CHECK_20261109.md).
+[Exact record19](../numerics/19_TND_OC_B10_R3_EXACT_GEOMETRY_20261109.json)
+matches the external trace's two hashes, all returned cells and the
+accepted count tree; six malformed-census inputs are rejected. This is
+source-free geometry/constant checking, not fresh outward winding
+certification. It imports E13's certificate and assessment. No canonical
+kernel value or measured runtime saving was acquired. No general
+gap theorem, full joint profile or positive-time collision constraint.
+
+**B10 r3 complete at analytical design/conditional-contract scope.**
+**Next: [E] TND-OC-E13 r2 — GPT-6.1 Sol**, using frozen
+[Request29](handoffs/29_TND_OC_E13_R2_CELL_RANGE_EVALUATOR_REQUEST_20261109.md)
+and [Inputs29](handoffs/29_TND_OC_E13_R2_INPUTS_20261109.json), ready and
+unactivated. R2 imports the census at its existing scope and makes zero
+new source calls; missing/mismatched evidence fails closed. B10 r4 is
+conditional on a named failed gate requiring a new decision, not an
+automatic larger budget. E09 stays optional; E03/E04 stay pending.
+E13 r1's failure and all original packets/evidence remain unchanged.
+
+[Return28](handoffs/28_TND_OC_B10_R3_RETURN_20261109.json), document
+validation20 and [Continuation25](../continuation-notes/25_TND_OC_AFTER_B10_R3_AND_MODEL_CHANGE_20261109.md)
+record the handoff. No manuscript milestone, investigation closure,
+root-summary promotion or sibling-status change. The authentic chat
+registered as OC chat0011; current capture metadata belongs to the
+registry. Refresh completed public text and arrange final capture for
+actual turn 01a1c1ca-72ee-77b1-b6b0-6ee5a1ad3e62, then verify on
+continuation. Native-hook activation remains unverified.
+
+## E14 r1 — completed analytical manuscript integration
+
+The author explicitly requested incorporation of the new results, a systematic analytical development, and outstanding tasks. E14 r1 is a single-writer manuscript synthesis in OC chat0011. [Input record30](handoffs/30_TND_OC_E14_R1_MANUSCRIPT_INPUTS_20261109.json) freezes the prior manuscript and source notes. Source proofs, issued evaluator packets and census artifacts remain historical inputs. New derivations and the integration receive proof-author checking only; prior assessment dispositions are not widened.
+
+
+E14 integrates the later results into a coherent source-to-observable-to-transport-to-acquisition development. [Note23](../notes/23_TND_OC_E14_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261109.md) derives the general separated-cell radius bound and records the regime distinctions. [Review19](../reviews/19_TND_OC_E14_MANUSCRIPT_AUTHOR_CHECK_20261109.md) is proof-author checking only; prior E07/E08/E12 dispositions are preserved. [Return30](handoffs/30_TND_OC_E14_R1_MANUSCRIPT_RETURN_20261109.json) and the build record identify the 48-page PDF, exact bookkeeping and production checks. Root cluster11/status19 were amended for this manuscript milestone, without promoting evidence or closing the investigation.
+
+**Next analytical task: E15 r1 / Sol**, ready and unactivated. E13 r2 / Sol remains supporting, with its unchanged request and mathematical/execution inputs. The two changed routing items among Inputs29's 41 files are this live register and plan02; [routing refresh31](handoffs/31_TND_OC_E13_R2_ROUTING_REFRESH_20261109.json) explicitly reconciles that authorized update and preserves the other 39 hashes. It does not waive future version checks. No sibling statuses, source proofs, old evaluator requests/returns, census or trace were changed.
+
+[Continuation26](../continuation-notes/26_TND_OC_AFTER_E14_MANUSCRIPT_AND_MODEL_CHANGE_20261109.md) supersedes Continuation25 as the current route after the author's manuscript request. OC chat0011 remains unique. Refresh public text and arrange exact-turn capture for 01a1c1d9-f9b3-7621-9efb-e0d2255880df; metadata belongs to the registry and native-hook activation remains unverified.

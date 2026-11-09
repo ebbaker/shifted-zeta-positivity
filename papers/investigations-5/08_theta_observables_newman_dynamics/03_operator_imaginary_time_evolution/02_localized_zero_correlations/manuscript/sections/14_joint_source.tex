@@ -1,0 +1,227 @@
+\section{The joint information needed for a canonical profile}\label{sec:joint-source}
+
+Source approximation and statistical evaluation answer different questions.
+The preceding theorem controls the error in replacing the entire source.
+We now specify the remaining joint input and give a finite accuracy
+interface for it. The derivation follows the internally assessed
+fixed-center construction in \cite{OCJoint,OCJointReview}.
+
+\subsection{Fix the law before estimating it}
+
+For each fixed finite $T\ge10$, use the compact window
+\eqref{eq:full-window} with $h=1$, and set
+\begin{equation}\label{eq:fixed-regime}
+ \begin{gathered}
+ X\sim T^{-1}\mathbf1_{[T,2T]}\dd X,\qquad
+ \ell=\min(1,4\pi/\log T),\qquad Q=[-1,1]+\ii[-1,1],\\
+ \tau=\tfrac14,\qquad\epsilon=\tau\ell,\qquad J=\ell^2.
+ \end{gathered}
+\end{equation}
+Write $r_X,d_X,R_{2,X}$ for the unfolded first intensity, self term
+and factorial pair density. Thus $R_{2,X}=r_X\otimes r_X-d_X$ and
+$C_T=\mathbb E R_{2,X}-(\mathbb E r_X)\otimes(\mathbb E r_X)$.
+All scales are positive and fixed at each $T$; this convention alone
+asserts no limiting density as $T\to\infty$.
+
+Use common source normalization $\mathsf M=4T+26$ and put
+\[
+ a_* =\log(2\mathsf M/c_0),\quad
+ n=\max\{1,\lceil a_*/\log(27/26)\rceil\},\quad
+ m=2n,\quad A_\epsilon=(2\pi\epsilon^2)^{-1}.
+\]
+Here $c_0$ is the anchor of Section~\ref{sec:canonical}.
+The two Jensen disks bound the number of active labels by $m$ for
+both the exact and an admissible approximating field. Consequently
+\begin{equation}\label{eq:joint-population}
+ 0\le r_X\le R:=JmA_\epsilon,\qquad
+ 0\le d_X\le D:=J^2mA_\epsilon^2.
+\end{equation}
+These size bounds do not evaluate the covariance.
+
+There is a useful exact frequency description. For
+$a_j(X)=((x_j-X)/\ell,y_j/\ell)$ define
+\[
+ A_X(k)=\sum_jW_X(z_j)\ee^{-\ii k\cdot a_j(X)},\qquad
+ B_X(k)=\sum_jW_X(z_j)^2\ee^{-\ii k\cdot a_j(X)}.
+\]
+With Fourier convention $\widehat f(k)=\int\ee^{-\ii k\cdot u}f(u)\dd^2u$,
+Gaussian transformation gives
+\begin{equation}\label{eq:joint-fourier}
+ \widehat C_T(k,q)=\ee^{-\tau^2(|k|^2+|q|^2)/2}
+ \bigl[\mathbb E A_X(k)A_X(q)-\mathbb E A_X(k)\mathbb E A_X(q)
+                          -\mathbb E B_X(k+q)\bigr].
+\end{equation}
+The covariance is bilinear, without complex conjugation. Its absolute
+value is at most $m^2$ by centered Cauchy--Schwarz. Restricting both
+frequency vectors to disks of radius $K$ therefore gives inverse-transform
+error at most
+\begin{equation}\label{eq:joint-frequency-tail}
+ \frac{m^2+m}{4\pi^2\tau^4}(2\ee^{-s}-\ee^{-2s}),
+ \qquad s=\tau^2K^2/2.
+\end{equation}
+Indeed the mass of a two-dimensional Gaussian outside such a disk is
+$\ee^{-s}$ times its total mass $2\pi/\tau^2$; the complement of the
+product of two disks has relative mass $2\ee^{-s}-\ee^{-2s}$.
+
+The mixed product retains the factor
+\[
+ \frac1T\int_T^{2T}W_X(z_j)W_X(z_k)
+             \ee^{\ii(k_x+q_x)X/\ell}\dd X
+\]
+and the separate marks $k_y y_j+q_y y_k$. A complex-difference projection
+does not specify this general four-real-frequency transform. Translating
+two labels together preserves their mutual difference, but can change
+the center overlap at an endpoint of $[T,2T]$. This is an information
+test on finite configurations, not another canonical zero set. The
+arithmetic projection actually available is retained in
+Appendix~\ref{sec:arithmetic}.
+
+The center edges also have a quantitative cost. Replacing the center
+law by its normalized restriction to $[T+1,2T-1]$ changes $C_T$ by at
+most $2(3R^2+D)/T$: the deleted probability is $2/T$, the raw product
+costs $R^2$ times this probability, the product of means costs $2R^2$,
+and the self mean costs $D$. Deleting labels outside $[T,2T]$ gives
+the same bound, as a separate comparison, since those labels can
+contribute only on the edge strips. Keeping the original law incurs
+neither cost.
+
+\subsection{Regularize the logarithm, keeping the nonharmonic part}
+
+Translate the reflected disks to $D_\sigma=D(\sigma4\ii,r)$,
+$r=25/6$, $\sigma\in\{+,-\}$, and let
+$f_{X,\sigma}(\xi)=F_\sigma(X+\xi)/\mathsf M$. Set
+\begin{align}
+ \mathcal K_{\sigma,u}(\xi)
+  &=\frac{J}{2\pi}\Delta_\xi
+       [\theta_\sigma W_0G_\epsilon(\ell u-\xi)],\label{eq:joint-kernel}\\
+ \mathcal D_{\sigma,u,v}(\xi)
+  &=\frac{J^2}{2\pi}\Delta_\xi
+       [\theta_\sigma W_0^2G_\epsilon(\ell u-\xi)
+                                     G_\epsilon(\ell v-\xi)].\nonumber
+\end{align}
+They have compact support strictly inside their disks, are independent
+of $X$, and contract $\log|f_{X,\sigma}|$ to $r_X$ and $d_X$.
+
+\begin{proposition}[Scope of harmonic replacement]\label{prop:harmonic-joint}
+If a reference field is harmonic on a neighborhood of each closed
+disk $D_\sigma$, every contraction of that field with the corresponding
+kernel in \eqref{eq:joint-kernel} vanishes. This holds pathwise for a
+random harmonic reference, including all covariance cross terms.
+\end{proposition}
+\begin{proof}
+Twice integrating by parts moves the compact test's Laplacian onto
+the reference field. Its Laplacian is zero. Thus subtracting the
+reference leaves the entire contracted statistic in the residual.
+\end{proof}
+This proposition concerns harmonic replacements on these full planar
+supports. It does not exclude contour access, nonharmonic approximations
+or estimates retaining the residual. In particular the real part of
+a finite holomorphic prime polynomial has zero contraction; its leading
+law cannot by itself determine this planar zero statistic.
+
+For an integer $M\ge1$ define
+\[
+ P_M(t)=-\frac12\sum_{a=1}^M\frac{(1-t)^a}{a},\qquad
+ Y_{X,\sigma}=1-|f_{X,\sigma}|^2\in[0,1],\qquad
+ L_{X,\sigma}^{(M)}=P_M(|f_{X,\sigma}|^2).
+\]
+The sublevel estimate \eqref{eq:sublevel}, after squaring its threshold,
+has the form
+$|\{|f|^2<u\}|\le\Lambda u^{1/n}$, where
+\[
+ \Lambda=n\pi(26/3)^2\ee^{102a_*/n},\qquad \beta=n\Lambda/2.
+\]
+It extends to $u\ge1$ since $\Lambda$ exceeds the disk area.
+Layer cake yields
+$\int\ee^{-a|f|^2}\le\Lambda\Gamma(1+1/n)a^{-1/n}$.
+The gamma factor is at most one by concavity of $x^{1/n}$ under
+the unit exponential probability measure. Since $(1-t)^a\le\ee^{-at}$,
+the nonnegative logarithm-series remainder satisfies
+\begin{equation}\label{eq:polynomial-log-error}
+ \int_{D_\sigma}|L_{X,\sigma}^{(M)}-\log|f_{X,\sigma}||\dd^2\xi
+ \le\frac\Lambda2\sum_{a>M}a^{-1-1/n}
+ \le\beta M^{-1/n}.
+\end{equation}
+Zeros cause no pointwise product estimate here; their contribution is
+handled by integrability and the sublevel bound. The approximation is
+nonharmonic: direct differentiation gives
+$\Delta P_M(|f|^2)=2M|f'|^2(1-|f|^2)^{M-1}\ge0$.
+
+Abbreviate $U=U_{1,\epsilon}$, $V=V_{1,\epsilon}$ from
+\eqref{eq:UV-costs}. Contracting the two disk errors gives
+\[
+ \|r_X-r_X^{(M)}\|_\infty\le d_M:=\frac{JU\beta}{\pi}M^{-1/n},
+ \qquad
+ \|d_X-d_X^{(M)}\|_\infty\le e_M:=\frac{J^2V\beta}{\pi}M^{-1/n}.
+\]
+Each product of first intensities costs $2Rd_M+d_M^2$. Hence
+\begin{equation}\label{eq:joint-bias}
+ \|C_T-C_T^{(M)}\|_\infty\le4Rd_M+2d_M^2+e_M,
+ \qquad
+ \|\overline R_2-\overline R_2^{(M)}\|_\infty
+       \le2Rd_M+d_M^2+e_M.
+\end{equation}
+
+\subsection{A finite mixed-moment accuracy theorem}
+
+Define the actual same-center moments
+\[
+ \mu_a^\sigma(\xi)=\mathbb E Y_{X,\sigma}(\xi)^a,\qquad
+ \mu_{ab}^{\sigma\upsilon}(\xi,\omega)
+   =\mathbb E Y_{X,\sigma}(\xi)^aY_{X,\upsilon}(\omega)^b.
+\]
+Finite expansion gives the exact surrogate
+\begin{align}
+ C_T^{(M)}(u,v)
+  ={}&\frac14\sum_{a,b=1}^M\frac1{ab}\sum_{\sigma,\upsilon}
+     \iint\mathcal K_{\sigma,u}(\xi)\mathcal K_{\upsilon,v}(\omega)
+       [\mu_{ab}^{\sigma\upsilon}-\mu_a^\sigma\mu_b^\upsilon]
+                                      \dd^2\xi\dd^2\omega\nonumber\\
+   &+\frac12\sum_{a=1}^M\frac1a\sum_\sigma
+        \int\mathcal D_{\sigma,u,v}(\xi)\mu_a^\sigma(\xi)\dd^2\xi.
+                                                        \label{eq:joint-moments}
+\end{align}
+The plus sign on the last line comes from subtracting the negative
+polynomial logarithm in the self term; the kernel is signed. The
+direct full-pair formula replaces the bracket by $\mu_{ab}^{\sigma\upsilon}$.
+
+\begin{theorem}[Finite joint-source interface]\label{thm:joint-interface}
+Put $H_M=\sum_{a=1}^M a^{-1}$, $\kappa=Jr^2U$ and $\nu=J^2r^2V$.
+Suppose all first moments and mixed moments in
+\eqref{eq:joint-moments} are supplied with uniform errors
+$\delta_1,\delta_2$, and clip estimated first moments to $[0,1]$.
+The additional connected-profile error is at most
+\begin{equation}\label{eq:moment-error}
+ \frac{\kappa^2H_M^2}{4}(\delta_2+2\delta_1)
+                 +\frac{\nu H_M}{2}\delta_1.
+\end{equation}
+For the direct full pair the first parenthesis can be replaced by
+$\delta_2$. For a complete-source approximation with common logarithm
+error $E$, the connected source error is at most
+\begin{equation}\label{eq:joint-source-error}
+ \frac{J^2E}{\pi}(8nA_\epsilon U+V).
+\end{equation}
+Adding \eqref{eq:joint-source-error}, the first bound in
+\eqref{eq:joint-bias}, and \eqref{eq:moment-error} gives a valid
+total connected-profile error.
+\end{theorem}
+\begin{proof}
+The sums of the two kernels' $L^1$ norms are bounded by $\kappa$ and
+$\nu$: each disk has area $\pi r^2$ and the factors in
+\eqref{eq:joint-kernel} are $J/(2\pi)$ and $J^2/(2\pi)$.
+Products of clipped means change by at most $2\delta_1$.
+Absolute integration of the finite sums proves \eqref{eq:moment-error}.
+For \eqref{eq:joint-source-error}, the unfolded first-intensity error
+is $JEU/\pi$ and both intensities are bounded by $2nJA_\epsilon$.
+The raw product and the product of means each cost
+$4nJ^2A_\epsilon EU/\pi$; the self term costs $J^2EV/\pi$.
+\end{proof}
+
+At fixed $T$, the complete arithmetic and radial tails can make $E$
+arbitrarily small, and then $M$ can make \eqref{eq:joint-bias}
+arbitrarily small. The remaining input is the same-center moment array,
+or a stronger estimate for its contracted combination, at the tolerance
+in \eqref{eq:moment-error}. Separate one-point bounds do not supply it.
+Neither a practical complexity bound nor positivity of the finite-$M$
+surrogate is asserted. This theorem specifies what an acquisition must
+pay; it does not report an acquired canonical profile.

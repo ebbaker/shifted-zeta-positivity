@@ -1,3 +1,7 @@
+**B10 r3 — analytical design/conditional contract complete.** [Note22](22_TND_OC_B10_R3_CELL_RANGES_AND_GAUSSIAN_WIDTH_20261109.md) pays direct cell-range geometric radius <0.003079. Endpoint-arithmetic allowance 0.001 plus the complete tail gives <0.0041<1/200. Proof-author checked; scalar pending E13 r2 / Sol.
+
+9 November 2026. Prepared for Edward Baker with substantial OpenAI Codex assistance, OC chat0011; recorded thread gpt-6-astra/max, per-turn backend configuration unavailable.
+
 **E13 r1 execution, 9 November 2026.** [Note21](21_TND_OC_E13_R1_GAUSSIAN_PROJECTION_EXECUTION_20261109.md)
 records the 388-label census, 91 certified centroids and the exact
 source-call gate. Prepared for Edward Baker with OpenAI Codex
@@ -100,3 +104,5 @@ The historical staged E02 update was subsequently installed; see the
 register's installation receipt.
 
 - [Note04 — B02 signed Jensen and harmonic distance](04_TND_OC_B02_SIGNED_JENSEN_AND_HARMONIC_DISTANCE_20261107.md): exact gap bookkeeping, sharp local L1 constant and a scoped allowance floor. Proved in-note; author self-check only, E03 pending.
+
+- [23 — E14 analytical manuscript integration](23_TND_OC_E14_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261109.md): systematic development, general separated-cell width theorem, regime/evidence boundaries and outstanding tasks; proof-author checked.

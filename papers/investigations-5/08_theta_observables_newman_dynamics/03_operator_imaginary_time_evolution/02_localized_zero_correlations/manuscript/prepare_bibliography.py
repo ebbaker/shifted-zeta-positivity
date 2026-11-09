@@ -18,6 +18,7 @@ SOURCES = {
     HERE.parent.parent / 'references/complex_statistics_sources.bib': {'Montgomery1973'},
     HERE.parent.parent / 'references/correlation_hierarchy_sources.bib': {'Borodin2009DPP'},
     HERE.parent / 'references/manuscript_internal_sources.bib': None,
+    HERE.parent / 'references/manuscript_e14_sources.bib': None,
 }
 
 def main():

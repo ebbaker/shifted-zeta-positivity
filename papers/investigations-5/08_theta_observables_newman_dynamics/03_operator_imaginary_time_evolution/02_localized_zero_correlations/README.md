@@ -23,12 +23,12 @@ has been acquired.
 
 | Entry | Purpose |
 | --- | --- |
-| [Current continuation](continuation-notes/24_TND_OC_AFTER_E13_AND_MODEL_CHANGE_20261109.md) | E13 census and source-call gate, with B10 r3 / Astra guidance |
+| [Current continuation](continuation-notes/26_TND_OC_AFTER_E14_MANUSCRIPT_AND_MODEL_CHANGE_20261109.md) | Analytical manuscript milestone; E15 / Sol audit and supporting E13 r2 handoff |
 | [Overview](research-overview/02_TND_OC_MARGINAL_PRIORITIES_RESEARCH_OVERVIEW_20261108.md) | Objects, arithmetic interface and inherited evidence |
-| [Plan](research-plan/02_TND_OC_MARGINAL_PRIORITIES_RESEARCH_PLAN_20261108.md) | Frozen E13 contract and separate optional packets |
+| [Plan](research-plan/02_TND_OC_MARGINAL_PRIORITIES_RESEARCH_PLAN_20261108.md) | E15 analytical audit, supporting E13 r2 contract and separate optional packets |
 | [Sole OC register](research-progress/02_TND_OC_MARGINAL_PRIORITIES_RESEARCH_PROGRESS_20261108.md) | Only live TND-OC task owner |
 | [Program-fit diagnosis](notes/14_TND_OC_B08_ARITHMETIC_MARGINAL_COLLISION_FRICTION_20261108.md) | Exact equations, Green comparison, local collision calculation and control screen |
-| [Analytical manuscript](manuscript/README.md) | Existing 34-page marginal development; unchanged by this review |
+| [Analytical manuscript](manuscript/README.md) | Current 48-page analytical development; E14 integration and actual evidence scopes |
 | [Notes](notes/README.md) and [reviews](reviews/README.md) | Source proofs and their actual assessment levels |
 | [References](references/README.md) | Canonical ownership and inspected passages |
 | [Milestones](DRAFT_HISTORY.md) | Earlier directions and dispositions |
@@ -51,12 +51,17 @@ advantage was acquired in r1. **B10 r2 is now complete at analytical
 design/conditional-contract scope.** [Note20](notes/20_TND_OC_B10_R2_CONTOUR_CENTROIDS_AND_GAUSSIAN_ESTIMATE_20261109.md)
 uses complete contour counts and first moments for quadratic cluster
 error, with an explicit theta/Jensen tail. Frozen gates give conditional
-projected radius <1/200; no canonical counts, centroids or value acquired.
+projected radius <1/200; no canonical counts, centroids or value acquired in r2.
 [E13 r1](notes/21_TND_OC_E13_R1_GAUSSIAN_PROJECTION_EXECUTION_20261109.md) checked the frozen proof and certified a
 complete count of 388 labels in 388 cells and the first 91 centroids.
 Its source-call cap stopped the run before the projection sum.
-**Next: [B] TND-OC-B10 r3 / GPT-6 Astra** to decide how to use the
-certified census for the same projection. [Continuation24](continuation-notes/24_TND_OC_AFTER_E13_AND_MODEL_CHANGE_20261109.md).
+**B10 r3 is complete at analytical design/conditional-contract scope.**
+[Note22](notes/22_TND_OC_B10_R3_CELL_RANGES_AND_GAUSSIAN_WIDTH_20261109.md)
+uses the actual cell widths and separation to prove a direct-range
+geometric radius <0.003079. With endpoint-arithmetic allowance 0.001
+and the complete tail, the radius is <0.0041<1/200. Proof-author checked;
+the canonical projected value is still pending.
+**E14 r1 is complete at analytical manuscript-integration scope.** The 48-page draft now includes the joint-source and Newman-time developments and both Gaussian acquisition error theorems, with finite computation confined to supporting Appendix G. [Note23](notes/23_TND_OC_E14_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261109.md) / [Review19](reviews/19_TND_OC_E14_MANUSCRIPT_AUTHOR_CHECK_20261109.md) preserve proof-author-check scope. **Next analytical task: [E] TND-OC-E15 r1 / GPT-6.1 Sol**, a fixed claim audit. E13 r2 / Sol remains the supporting endpoint evaluator; both are ready, unactivated. [Continuation26](continuation-notes/26_TND_OC_AFTER_E14_MANUSCRIPT_AND_MODEL_CHANGE_20261109.md). This update is for Edward Baker with substantial OpenAI Codex assistance, OC chat0011, recorded thread gpt-6-astra/max; per-turn backend unavailable, 9 November 2026.
 
 The author's first priority across the split is **collision constraints in OA**;
 its own live register governs current work. **E09 remains an optional finite benchmark**:

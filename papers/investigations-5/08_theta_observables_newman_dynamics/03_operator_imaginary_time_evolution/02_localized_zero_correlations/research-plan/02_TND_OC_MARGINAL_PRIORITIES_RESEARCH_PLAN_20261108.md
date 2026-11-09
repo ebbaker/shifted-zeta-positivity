@@ -9,6 +9,14 @@ plan01 and all issued requests remain historical, unchanged inputs.
 Apply [GPT_RESEARCH_MODEL_WORKFLOW](../../../../../../GPT_RESEARCH_MODEL_WORKFLOW.md);
 the author chooses actual model, effort and chat.
 
+## Current manuscript milestone and next analytical execution — 9 November 2026
+
+For Edward Baker with OpenAI Codex assistance, OC chat0011; recorded thread gpt-6-astra/max, per-turn backend unavailable. **E14 r1 completed** the user-authorized analytical rewrite and integration. Its 48-page manuscript includes joint-source, full marked-pair time, Gaussian-window and finite acquisition results, with computation as supporting evidence. [Note23](../notes/23_TND_OC_E14_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261109.md) / Review19 retain proof-author-check scope and prior assessments.
+
+**E15 r1: Type E / GPT-6.1 Sol recommended, effort author-selected.** [Request32](../research-progress/handoffs/32_TND_OC_E15_R1_MANUSCRIPT_ASSESSMENT_REQUEST_20261109.md) fixes seven analytical claim groups, one pass and at most one bounded local correction; no new source or projection evaluation. It is ready and unactivated. A new mechanism or changed observable is outside this audit.
+
+**E13 r2 remains the supporting finite evaluator**, ready and unactivated under Request29 and routing refresh31. Its mathematics, target, failure history and caps are unchanged. The actual canonical same-center profile, useful initial-data transport, Gaussian-window derivative extension, higher orders and regularization limits remain research tasks; the manuscript's Section 11 gives their missing inputs. No new B task or sibling work is activated here.
+
 ## B10 — can a Gaussian height window pay for a theta pair estimate?
 
 9 November 2026 update prepared for Edward Baker with OpenAI Codex assistance. Runtime GPT-6.1 Sol, reasoning effort unavailable.
@@ -138,7 +146,38 @@ not an expanded E13 run. No such revision is activated.
 gives the historical execution handoff. E13 certified the complete
 census and stopped during centroid acquisition at the source-call cap.
 [Continuation24](../continuation-notes/24_TND_OC_AFTER_E13_AND_MODEL_CHANGE_20261109.md) routes the next
-method decision to **B10 r3 / GPT-6 Astra**. The sole register owns status.
+method decision to **B10 r3 / GPT-6 Astra**. This is the historical r1
+handoff; the following r3/r2 entry supersedes its current routing.
+
+## B10 r3 return and E13 r2 — current issued contract
+
+9 November 2026. Prepared for Edward Baker with substantial OpenAI Codex
+assistance, OC chat0011; recorded thread gpt-6-astra/max, per-turn backend
+configuration unavailable. B10 r3 completed at analytical
+design/conditional-contract scope. [Note22](../notes/22_TND_OC_B10_R3_CELL_RANGES_AND_GAUSSIAN_WIDTH_20261109.md)
+proves a geometric radius <1261/409600 from the exact census widths and
+horizontal separation, with same-assistant [check18](../reviews/18_TND_OC_B10_R3_CELL_RANGE_SELF_CHECK_20261109.md).
+The scalar is pending, with unchanged marks, edges, factorial labels and
+complete omitted tail. [Exact record19](../numerics/19_TND_OC_B10_R3_EXACT_GEOMETRY_20261109.json)
+validates imported geometry and count structure, not new source balls.
+
+**E13 r2: Type E / GPT-6.1 Sol, ready and unactivated.**
+[Request29](../research-progress/handoffs/29_TND_OC_E13_R2_CELL_RANGE_EVALUATOR_REQUEST_20261109.md)
+and [Inputs29](../research-progress/handoffs/29_TND_OC_E13_R2_INPUTS_20261109.json)
+freeze point-endpoint evaluation of direct cell ranges. The imported
+E13 census, matching trace and R1–R6 checks are prerequisites. All 75,078
+unordered pairs remain. Endpoint-ball radii must sum to ≤1/1000 and
+the exact final radius, including 2^-32 tail, must be <1/200.
+Precision 128/256/512; zero new source/centroid calls; ≤1.4M exp/erf
+calls and a cumulative 600-second evaluator cap, one worker, one repair
+within those same limits. Source acquisition is inherited explicitly.
+
+Completion is a certified projected value or the exact failed gate with
+actual evidence/work. A changed input, method, cap or mathematical premise
+requires conditional **B10 r4 / Astra**. No successor is activated.
+[Continuation25](../continuation-notes/25_TND_OC_AFTER_B10_R3_AND_MODEL_CHANGE_20261109.md)
+gives the manual model handoff; Progress02 owns live status. Separate
+optional E09 and pending E03/E04 retain their original scopes.
 
 ## B09 — select a new analytical marginal result
 

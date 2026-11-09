@@ -2,6 +2,12 @@
 
 8 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Actual recorded model and effort are unavailable. TND-OC-E11 corrected the destination in OC chat0006; B09 subsequently completed its design pass in redirected thread 01a1bddb-de9d-7221-8f78-7a510e8e4fb9. E10 subsequently returned its in-note proof (runtime GPT-6.1 Sol, effort unavailable).
 
+## Current analytical manuscript milestone — 9 November 2026
+
+E14 r1 integrates the established chain into the [48-page manuscript](../manuscript/README.md): full factorial laws, complete-source transfer, same-center moment accuracy, compact-window Newman-time regularity, Gaussian physical-window tails and exact projection, then centroid and separated-cell acquisition errors. [Note23](../notes/23_TND_OC_E14_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261109.md) and [Review19](../reviews/19_TND_OC_E14_MANUSCRIPT_AUTHOR_CHECK_20261109.md) record proof-author integration checking; E07/E08/E12 keep their existing internal scopes. Numerics are supporting Appendix G, with the scalar and endpoint gate still pending.
+
+Read the [result index](../../../../../../result-summaries/README.md), [avoid index](../../../../../../avoid/README.md), [cluster11](../../../../../../result-summaries/11_newman_heat_flow_reductions_and_certificates.md), [controls12](../../../../../../result-summaries/12_collision_controls_and_screening.md), [scope07](../../../../../../avoid/07_scoped_exclusions_read_as_universal.md) and [status19](../../../../../../avoid/19_status_files_that_lag_the_findings.md). This is quantitative analytical synthesis, not an RH criterion or a newly acquired profile. Suggested analytical successor: E15 r1 / GPT-6.1 Sol; supporting E13 r2 remains separate. [Continuation26](../continuation-notes/26_TND_OC_AFTER_E14_MANUSCRIPT_AND_MODEL_CHANGE_20261109.md). Prepared for Edward Baker with substantial Codex assistance; recorded thread gpt-6-astra/max, per-turn backend unavailable.
+
 ## Purpose and corrected destination
 
 The author intended this renewal for **02_localized_zero_correlations**.
@@ -308,3 +314,11 @@ Generic marginal identities and heat laws admit the controls. A proposed
 estimate must identify the actual used premise or quantitative allowance
 that separates each relevant witness; merely naming the theta source
 does not establish that separation. No new exclusion is proposed here.
+
+## B10 r3 — direct cell ranges, 9 November 2026
+
+9 November 2026. Prepared for Edward Baker with substantial OpenAI Codex assistance, OC chat0011; recorded thread gpt-6-astra/max, per-turn backend configuration unavailable.
+
+[Note22](../notes/22_TND_OC_B10_R3_CELL_RANGES_AND_GAUSSIAN_WIDTH_20261109.md) completes the method choice after E13 r1. The actual cell widths and horizontal separation, combined with Gaussian gap decay, pay geometric radius <0.003079. The fixed arithmetic allowance and complete tail give conditional radius <0.0041<1/200. Proof-author checked, with source-free exact geometry and count-tree validation; no canonical scalar has been evaluated. [Continuation25](../continuation-notes/25_TND_OC_AFTER_B10_R3_AND_MODEL_CHANGE_20261109.md) supersedes the preceding B10 r3 routing with **[E] E13 r2 / GPT-6.1 Sol**, ready and unactivated.
+
+The [result index](../../../../../../result-summaries/README.md), particularly [local geometry13](../../../../../../result-summaries/13_local_heat_flow_geometry_and_rh_equivalent_criteria.md), and [avoid index](../../../../../../avoid/README.md), particularly [finite-certificate purpose11](../../../../../../avoid/11_certifying_the_known_and_tests_that_cannot_fail.md), retain the finite scope. This is neither a general spacing theorem nor a full joint marginal estimate. Source certification remains an explicit E13 dependency. The sole progress register owns current status; no manuscript milestone or sibling change.

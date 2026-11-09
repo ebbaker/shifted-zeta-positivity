@@ -1,3 +1,7 @@
+**B10 r3 returned; E13 r2 ready and unactivated.** [Return28](28_TND_OC_B10_R3_RETURN_20261109.json) records the geometric-width theorem and exact census inspection. [Request29](29_TND_OC_E13_R2_CELL_RANGE_EVALUATOR_REQUEST_20261109.md) / [Inputs29](29_TND_OC_E13_R2_INPUTS_20261109.json) freeze the bounded direct endpoint evaluation for GPT-6.1 Sol. Earlier E13 r1 evidence and its source-call failure remain unchanged.
+
+9 November 2026. Prepared for Edward Baker with substantial OpenAI Codex assistance, OC chat0011; recorded thread gpt-6-astra/max, per-turn backend configuration unavailable.
+
 **E13 r1 returned, 9 November 2026.** [Return27](27_TND_OC_E13_R1_RETURN_20261109.json)
 records the certified census and partial centroid evidence at the
 source-call stop. The issued Request27 and Inputs27 identify the
@@ -85,3 +89,7 @@ Shared setup inputs/returns remain at the parent. The sole status owner is resea
 
 - [B02 return06](06_TND_OC_B02_RETURN_20261107.json): exact outcomes, scope and output identities.
 - [E03 request07](07_TND_OC_E03_ASSESSMENT_REQUEST_20261107.md) and [inputs07](07_TND_OC_E03_INPUTS_20261107.json): frozen separate assessment of the B02 proofs, not an exclusion/evaluation campaign.
+
+- **30 / E14 r1**: [input versions](30_TND_OC_E14_R1_MANUSCRIPT_INPUTS_20261109.json), [return](30_TND_OC_E14_R1_MANUSCRIPT_RETURN_20261109.json); analytical manuscript integration with proof-author checking.
+- **31 / E13 r2 routing refresh**: [explicit amendment](31_TND_OC_E13_R2_ROUTING_REFRESH_20261109.json) to Inputs29 for the live register only; all mathematics, evidence and execution inputs preserved.
+- **32 / E15 r1**: [request](32_TND_OC_E15_R1_MANUSCRIPT_ASSESSMENT_REQUEST_20261109.md), [inputs](32_TND_OC_E15_R1_INPUTS_20261109.json); recommended Sol analytical audit, ready and unactivated.

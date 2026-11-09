@@ -1,0 +1,237 @@
+\section{Finite acquisition: centroid cancellation and cell ranges}\label{sec:acquisition}
+
+The preceding projection admits two rigorous finite acquisition methods.
+The first uses counts and first moments, and is insensitive to internal
+root gaps. The second uses only counts and certified cell geometry, and
+can exploit Gaussian decay when cells are separated. Their inputs differ;
+neither method is uniformly superior. We derive both error bounds before
+giving the finite census as supporting evidence in
+Appendix~\ref{app:status}. The source arguments are
+\cite{OCCentroids,OCCellRanges}.
+
+\subsection{A complete theta tail with explicit constants}
+
+We first pay for every zero outside the retained rectangle, without
+requiring a numerical value of the coarse constant $A$.
+The source majorant \eqref{eq:source-basic-majorant} gives
+$\Phi(u)<10\ee^u r_u^2\ee^{-r_u}$: consecutive terms in
+$\sum_{l\ge1}l^4\ee^{-\pi(l^2-1)}$ have ratio at most
+$16\ee^{-3\pi}<1/2$.
+Since $u^2\le r_u/12$, substitution $v=r_u$ gives
+\begin{equation}\label{eq:explicit-source-majorant}
+ \mathcal M:=\int_0^\infty\ee^{u^2}\Phi(u)\dd u
+ \le\frac{10}{4\pi^{1/4}}\int_\pi^\infty v^{5/4}\ee^{-11v/12}\dd v
+ <5(12/11)^3<7.
+\end{equation}
+The inequality $u^2\le r_u/12$ follows from $\ee^{2u}\ge2u$ and
+$\pi>3$; for the last estimate use $v^{5/4}\le v^2$ and extend the
+integral to zero. On $0\le u\le1/10$, $3<r_u<8$, and the first
+positive source term is at least $9\ee^{-8}$. Thus
+$H_0(0)>1/7290$ and $\log(\mathcal M/H_0(0))<20$.
+
+For $|z|\le2r$, $|\cos(zu)|\le\ee^{2ru}\le\ee^{r^2+u^2}$.
+Jensen's formula on the disk of radius $2r$ now gives
+\begin{equation}\label{eq:global-count-jensen}
+ N_{\rm disk}(r)\log2\le r^2+20,
+ \qquad N_{\rm disk}(r)\le2r^2+40.
+\end{equation}
+Boundary zeros follow by a larger-radius limit. Each real unit slab
+starting at $q$ lies, on the canonical strip, in a disk of radius
+$|q|+2$; it therefore contains at most $16(|q|+2)^2$ labels.
+
+For $T=1000$ retain
+$\mathcal R=(988,2012)+\ii(-3/2,3/2)$.
+An omitted label has $|x_j-X|\ge12$ at every center.
+Two unit slabs per shell bound its total Gaussian height weight by
+\begin{equation}\label{eq:explicit-weight-tail}
+ b=32\sum_{n=12}^\infty(2003+n)^2\ee^{-n^2/2}<2^{-44}.
+\end{equation}
+To verify the strict bound, write $n=12+j$ and dominate the summand by
+$2015^2(1+j)^2\,2^{-72}2^{-12j}$. For $q=2^{-12}$,
+$\sum_{j\ge0}(1+j)^2q^j=(1+q)/(1-q)^3<2$ and $2015<2^{11}$.
+If the complete retained count is $N\le1024$, then
+\begin{equation}\label{eq:explicit-projection-tail}
+ 0\le P_{1000}-P_{1000}^{\mathcal R}
+       \le2c_G(N+b)b<2^{-32}.
+\end{equation}
+This includes negative heights and both infinite horizontal tails.
+The count cap is a stated input; the Gaussian decay does not certify
+the retained census by itself.
+
+\subsection{Counts and first moments give a second-order error}
+
+On $\mathcal R$, $Z(z)=\zeta(1/2-\ii z/2)$ has the same divisor as
+$H_0$ and has no pole or trivial zero. Its completion factors are
+holomorphic and nonzero there. On a zero-free cell boundary,
+the argument principle and its first-moment version give
+\begin{equation}\label{eq:contour-centroid}
+ n_C=\frac1{2\pi\ii}\oint_{\partial C}\frac{Z'}Z\dd z,
+ \qquad q_C=\frac1{2\pi\ii}\oint_{\partial C}(z-a_C)\frac{Z'}Z\dd z,
+ \qquad c_C=a_C+q_C/n_C.
+\end{equation}
+Residues show that $n_C$ counts labels and $c_C$ is their exact
+unweighted complex centroid. A zero-free completion multiplier
+contributes zero to both contour integrals. These are classical
+contour identities; the useful issue is the uncertainty they remove
+from the specified pair projection.
+
+\begin{lemma}[Kernel derivative bounds]\label{lem:kernel-derivatives}
+For the smooth real extension of \eqref{eq:projection-kernel} to
+$\C^2$, with real two-coordinate derivatives,
+\[
+ \|\nabla_zK\|,\|\nabla_wK\|\le9/T,\quad
+ \|D_z^2K\|_{\rm op},\|D_w^2K\|_{\rm op}\le18/T,
+ \quad\|\nabla D\|\le4/T,\quad\|D^2D\|_{\rm op}\le10/T.
+\]
+\end{lemma}
+\begin{proof}
+Before center integration the kernel is
+\[
+ \frac{c_G}{T}\int_T^{2T}w(x-X)w(x'-X)g(x-x')b_+(y)b_-(y')\dd X,
+ \quad w(s)=\ee^{-s^2/2},\quad g(d)=\ee^{-4d^2/9}.
+\]
+These four Gaussian factors and their first two derivatives have
+absolute value at most one. In $z$ derivatives, keep $w(x'-X)$
+and integrate it over the whole line, with mass $\sqrt{2\pi}<3$.
+Gradient components are bounded by $6/T,3/T$, and Hessian entries
+in $xx,xy,yy$ by $12/T,6/T,3/T$. The Euclidean gradient and
+maximum absolute row sum give $9/T,18/T$. The other variable is identical.
+For $D$, use $|I_T|,|I_T'|\le2/T$, $|I_T''|\le8/T$,
+and derivative bounds $1,2$ for $\ee^{-16y^2/17}$.
+The Hessian entries are bounded by $8/T,2/T,4/T$, proving the claim.
+\end{proof}
+
+\begin{theorem}[Centroid acquisition error]\label{thm:centroid}
+Partition the retained divisor into convex cells with counts $n_C$,
+centroids $c_C$ and total count $N$. Set
+$S_2=\sum_C\sum_{z_j\in C}|z_j-c_C|^2$ and
+\[
+ P_{\rm bar}=\sum_{C,E}n_Cn_EK(c_C,c_E)-\sum_Cn_CD(c_C).
+\]
+Then
+\begin{equation}\label{eq:centroid-error}
+ |P_T^{\mathcal R}-P_{\rm bar}|\le\frac{18N+5}{T}S_2.
+\end{equation}
+In particular cells of diameter at most $r$ give
+$S_2\le Nr^2$. If $|\widehat c_C-c_C|\le\sigma$, replacing
+centroids by these approximations costs at most
+$(18N^2+4N)\sigma/T$.
+\end{theorem}
+\begin{proof}
+For a real $C^2$ test $F$, Taylor expansion in a cell gives
+\[
+ \left|\sum_{z_j\in C}F(z_j)-n_CF(c_C)\right|
+ \le\tfrac12\sup_C\|D^2F\|_{\rm op}
+                         \sum_{z_j\in C}|z_j-c_C|^2,
+\]
+since $\sum_{z_j\in C}(z_j-c_C)=0$ cancels both real components
+of the linear term. Apply this successively to both arguments of the
+raw all-label sum; each application costs $9NS_2/T$. The self term
+costs $5S_2/T$. Convexity puts the centroid inside its cell, so
+$S_2\le Nr^2$. Gradient bounds applied to both arguments and then
+the diagonal prove the rounding allowance.
+\end{proof}
+No simple-root or gap hypothesis enters this theorem. In a collapsed
+cell the factorial coefficient is $n_C(n_C-1)$, and the cost of
+collapsing distinct roots is already paid by \eqref{eq:centroid-error}.
+The weights stay inside $K$; replacing these unweighted centroids
+by an unexplained weighted average would lose the cancellation.
+
+\subsection{Direct ranges exploit separation and Gaussian decay}
+
+Suppose instead that each of $N$ rectangular cells contains exactly one
+label, and that they are sorted horizontally with adjacent interval
+distance at least $s>0$. Let $u$ and $v$ bound their horizontal and
+vertical widths. For $C<E$ form the exact intervals
+\[
+ M_{CE}=[(x_C^-+x_E^-)/2,(x_C^++x_E^+)/2]=[m_-,m_+],
+ \qquad D_{CE}=[x_E^--x_C^+,x_E^+-x_C^-]=[d_-,d_+].
+\]
+Here $d_->0$. Define ideal, exact-real endpoints
+\begin{align}
+ A_-&=\frac{\sqrt\pi}{2T}
+   [\operatorname{erf}(2T-m_+)-\operatorname{erf}(T-m_-)],\nonumber\\
+ A_+&=\frac{\sqrt\pi}{2T}
+   [\operatorname{erf}(2T-m_-)-\operatorname{erf}(T-m_+)],\nonumber\\
+ I_-&=\max(0,A_-),\quad I_+=\min(2/T,A_+),\qquad
+ G_-=\ee^{-25d_+^2/36},\quad G_+=\ee^{-25d_-^2/36}.
+                                                        \label{eq:cell-endpoints}
+\end{align}
+Monotonicity of $\operatorname{erf}$ gives the enclosure of $I_T$;
+clipping uses $0\le I_T\le\sqrt\pi/T<2/T$.
+For each mark let $s_{C,\pm}^-,s_{C,\pm}^+$ be the minimum and maximum
+of $(y\mp1/2)^2$ on the cell's vertical interval, and put
+\[
+ B_{C,\pm}^-=\ee^{-8s_{C,\pm}^+/17},\qquad
+ B_{C,\pm}^+=\ee^{-8s_{C,\pm}^-/17},\qquad
+ H_{CE}^\pm=B_{C,+}^\pm B_{E,-}^\pm+B_{E,+}^\pm B_{C,-}^\pm.
+\]
+The last expression sums both ordered mark products. Set
+\begin{equation}\label{eq:ideal-cell-sum}
+ L_*=c_G\sum_{C<E}I_-G_-H_{CE}^-,\qquad
+ U_*=c_G\sum_{C<E}I_+G_+H_{CE}^+.
+\end{equation}
+All factors are nonnegative, so $P_T^{\mathcal R}\in[L_*,U_*]$.
+
+\begin{theorem}[Gaussian range-width bound]\label{thm:cell-ranges}
+Under these singleton-cell and separation hypotheses, the ideal radius obeys
+\begin{equation}\label{eq:range-width}
+ \frac{U_*-L_*}{2}
+   \le\frac{N(10u+4v)}{T}\sum_{k=1}^{N-1}\ee^{-(ks)^2/4}
+   <\frac{N(10u+4v)\sqrt\pi}{sT}
+\end{equation}
+when $N\ge2$ and $u+v>0$. For $N\le1$ the retained factorial sum is zero.
+\end{theorem}
+\begin{proof}
+At index separation $k$, every admissible horizontal gap is at least
+$ks$. Put $q_k=\ee^{-(ks)^2/4}$. Endpoint differentiation gives
+$\operatorname{wid}I\le2u/T$ and $\sup I\le2/T$.
+For $g(d)=\ee^{-25d^2/36}$,
+\[
+ g(d)\le\ee^{-d^2/4},\qquad |g'(d)|\le2\ee^{-d^2/4}.
+\]
+Indeed write $a=25/36$, use
+$|g'|=2\sqrt a(\sqrt a|d|\ee^{-ad^2/2})\ee^{-ad^2/2}$,
+$\sup_{t\ge0}t\ee^{-t^2/2}=\ee^{-1/2}$ and $a/2>1/4$.
+Since the gap interval has width at most $2u$,
+$\sup G\le q_k$ and $\operatorname{wid}G\le4u q_k$.
+Each mark is at most one and has derivative at most
+$\sqrt{16/(17\ee)}<1$, so its interval width is at most $v$.
+Telescoping the product of nonnegative intervals shows that the width
+of one ordered contribution is at most
+\[
+ \frac{2u}{T}q_k+\frac2T\,4u q_k+\frac2Tq_k(2v)
+       =\frac{10u+4v}{T}q_k.
+\]
+There are $2(N-k)$ ordered pairs of this index separation. Summing
+and dividing by two proves the first bound. The decreasing Gaussian
+has sum strictly below its integral from zero to infinity,
+$\sqrt\pi/s$, proving the second.
+\end{proof}
+The arbitrary-$s$ form makes explicit the geometric input to the
+specialized estimate in \cite{OCCellRanges}. It is a sufficient error
+bound for separated singleton cells, not a uniform canonical gap theorem.
+For general counts, cross-cell coefficients become $n_Cn_E$;
+same-cell coefficients $n_C(n_C-1)$ require an enclosure of $K$ on
+$C\times C$, not only the diagonal $D$. Such cells do not inherit
+\eqref{eq:range-width} without a new width analysis.
+
+\begin{corollary}[Separate arithmetic and geometric allowances]\label{cor:range-arithmetic}
+Suppose enclosing balls for the exact endpoints $L_*,U_*$ have radii
+$r_L,r_U$, and let $a$ be the lower endpoint of the first ball and $b$
+the upper endpoint of the second. If the omitted tail is at most $t$,
+then $[a-t,b+t]$ encloses the complete projection and has radius at most
+\begin{equation}\label{eq:range-total}
+ \frac{U_*-L_*}{2}+r_L+r_U+t.
+\end{equation}
+\end{corollary}
+\begin{proof}
+A ball containing an exact endpoint can place its outward edge as much
+as twice its radius away from that endpoint. Thus
+$b-a\le U_*-L_*+2r_U+2r_L$. The symmetric tail enlargement adds $t$
+to the radius. The nonnegative tail would also allow the sharper
+asymmetric enlargement $[a,b+t]$; we retain the conservative formula.
+\end{proof}
+Endpoint arithmetic, the certified census, and the analytic tail are
+three distinct premises. A width theorem does not evaluate either
+endpoint. The supporting example below retains this distinction.
