@@ -1,5 +1,32 @@
 # Green/resolvent reference ownership and use
 
+**10 November 2026, E07 recheck:** [Review11](../reviews/11_TND_OG_E07_ANALYTICAL_ASSESSMENT_20261110.md)
+reopened de Boor's versioned §9 (52), printed pp. 63–64, through the
+existing OA reference and derived the simplex constants in
+[Note13](../notes/13_TND_OG_E07_ANALYTICAL_ASSESSMENT_CALCULATIONS_20261110.md).
+Selected passage only. Prepared for Edward Baker with OpenAI Codex
+LLM assistance, recorded gpt-6.1-sol / ultra.
+
+**10 November 2026, B05:** [Source-use10](10_TND_OG_B05_DEFLATION_AND_COST_SOURCE_USE_20261110.md)
+records a fresh check of de Boor §9 (52), existing OA citation ownership,
+the failed local PDF retrieval, and the inherited OG/OC source scope.
+The new error constants are derived in Note12, not attributed as a
+canonical value theorem. Prepared for Edward Baker with OpenAI Codex
+LLM assistance; actual model/effort unavailable.
+
+**10 November 2026, B06 source use:** the three current manuscripts were
+read OG → OC → OA, followed by their later local notes and assessments.
+[Review08](../reviews/08_TND_OG_B06_CROSS_BRANCH_CONTINUATION_REVIEW_20261110.md)
+maps that coverage; [record04](../numerics/04_TND_OG_B06_REVIEW_AND_EXACT_TRANSFER_RECORD_20261110.json)
+binds the manuscript/source identities. The finite Green deduction uses
+OC Note22/geometry19's inherited census and its manuscript §17's explicit
+global count; it does not newly audit the original winding arithmetic or
+primary analytic references. Existing primary-reference evidence remains
+at its recorded level. Official [model guidance](https://learn.chatgpt.com/docs/models)
+was checked on 10 November for the continuation recommendation only;
+it supplies no mathematics. No new third-party PDF copy. Prepared for
+Edward Baker with OpenAI Codex assistance; actual backend/effort unavailable.
+
 **8 November 2026, B04:** [Source-use09](09_TND_OG_B04_VALUE_RESOLUTION_SOURCE_USE_20261108.md) records the focused density-premise and calibration-coverage checks, reusing canonical catalogs, bibliographies and external PDF copies. Actual current model gpt-6-astra; effort not exposed. Prepared for Edward Baker with OpenAI Codex assistance.
 
 **8 November 2026, E05:** [Source-use08](08_TND_OG_E05_ASSESSMENT_SOURCE_USE_20261108.md) records fresh classical passage checks, inherited-source assessment limits and additional older-control source identities. No duplicate bibliography or evidence promotion. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort are not recorded in accessible capture metadata.

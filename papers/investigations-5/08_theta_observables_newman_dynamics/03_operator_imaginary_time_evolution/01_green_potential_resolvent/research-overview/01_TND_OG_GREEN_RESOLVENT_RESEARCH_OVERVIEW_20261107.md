@@ -1,5 +1,73 @@
 # Green potential and logarithmic resolvent: research overview
 
+**Current checkpoint, 10 November 2026 — E07 r1 complete.**
+[Review11](../reviews/11_TND_OG_E07_ANALYTICAL_ASSESSMENT_20261110.md)
+accepts Note12's eight conditional and scoped claims without correction.
+Certified cluster data, regular-factor floors and fully charged
+cost remain unpaid. [Continuation15](../continuation-notes/15_TND_OG_E07_RESULTS_AND_MODEL_CHANGE_20261110.md)
+gives the condition for reopening B05 r2 with GPT-6 Astra.
+See the [result index](../../../../../../result-summaries/README.md),
+[heat/Green cluster11](../../../../../../result-summaries/11_newman_heat_flow_reductions_and_certificates.md),
+[controls12](../../../../../../result-summaries/12_collision_controls_and_screening.md)
+and [avoid index](../../../../../../avoid/README.md), especially
+[scoped exclusions07](../../../../../../avoid/07_scoped_exclusions_read_as_universal.md).
+Prepared for Edward Baker with OpenAI Codex LLM assistance,
+recorded gpt-6.1-sol / ultra.
+
+**Earlier checkpoint, 10 November 2026 — B05 r1 complete.**
+[Note12](../notes/12_TND_OG_B05_DEFLATED_LOG_AND_CELL_RANGE_DECISION_20261110.md)
+derives conditional deflated-log product-integration bounds and proves
+same-information direct dominance over independent rectangular Green
+maxima. A sufficient unmeasured scalar box gives <=793024 panels and
+quadrature error <1/500 at R=66; actual root/factor acquisition and
+total cost remain unpaid. Proof-author checking only, no field run or
+new exclusion coverage. **Next: [E] TND-OG-E07 — GPT-6.1 Sol**, a fixed
+eight-claim analytical assessment, ready and unactivated.
+[Continuation14](../continuation-notes/14_TND_OG_B05_RESULTS_AND_MODEL_CHANGE_20261110.md)
+records the B05 handoff. Read the [result index](../../../../../../result-summaries/README.md),
+[heat/Green cluster11](../../../../../../result-summaries/11_newman_heat_flow_reductions_and_certificates.md),
+[controls12](../../../../../../result-summaries/12_collision_controls_and_screening.md)
+and [avoid index](../../../../../../avoid/README.md), especially
+[classification01](../../../../../../avoid/01_restating_the_target.md),
+[premise screen02](../../../../../../avoid/02_shape_only_arguments_and_the_controls.md)
+and [scope07](../../../../../../avoid/07_scoped_exclusions_read_as_universal.md).
+Prepared for Edward Baker with OpenAI Codex LLM assistance;
+actual model/effort unavailable in current capture metadata.
+
+**Earlier checkpoint, 10 November 2026 — E06 r1 complete.** The
+specified uniform-midpoint sufficient allowance exceeds the one-million
+panel cap at the fixed calibration tuple. Source and tail searches pass.
+The scalar check acquires no signed Green value. [Note11](../notes/11_TND_OG_E06_SINGLE_TUPLE_FEASIBILITY_20261110.md)
+gives the directed comparison. [Continuation13](../continuation-notes/13_TND_OG_E06_RESULTS_AND_MODEL_CHANGE_20261110.md)
+proposes the bounded B05 decision with GPT-6 Astra, unissued and
+unactivated. See the [result index](../../../../../../result-summaries/README.md),
+[heat/Green cluster11](../../../../../../result-summaries/11_newman_heat_flow_reductions_and_certificates.md)
+and [patterns index](../../../../../../avoid/README.md), especially
+[known-region calibration](../../../../../../avoid/11_certifying_the_known_and_tests_that_cannot_fail.md).
+Prepared for Edward Baker with OpenAI Codex LLM assistance.
+Actual backend/effort unavailable.
+
+**Earlier checkpoint, 10 November 2026 — B06 sibling review:**
+E03's complete acquisition theorem and E05's internal acceptance remain
+complete; B04's density-allowance comparison is also complete.
+**Next: [E] TND-OG-E06 — GPT-6.1 Sol**, ready and unactivated, with its
+unchanged [Request18](../research-progress/handoffs/18_TND_OG_E06_SINGLE_TUPLE_FEASIBILITY_REQUEST_20261108.md).
+The newer OC census gives the finite consequence
+\(J^{\rm G}_0(1500)<291/65536+2^{-157}<1/200\), conditional on its inherited
+winding certification. This reuses stronger zero-location information;
+it adds no exclusion coverage or general source-acquired signed estimate.
+OA's regular deflation is useful methodology, but its all-time factor
+lower bound and upper force envelope remain additional obligations.
+See §8, [Note10](../notes/10_TND_OG_B06_SIBLING_RESULTS_AND_GREEN_CENSUS_TRANSFER_20261110.md),
+[Review08](../reviews/08_TND_OG_B06_CROSS_BRANCH_CONTINUATION_REVIEW_20261110.md)
+and the historical [Continuation12](../continuation-notes/12_TND_OG_AFTER_SIBLING_REVIEW_AND_MODEL_CHANGE_20261110.md).
+The [sole register](../research-progress/01_TND_OG_GREEN_RESOLVENT_RESEARCH_PROGRESS_20261107.md)
+owns live status. The dated overlays below preserve historical states;
+their earlier next-task and “no favorable value” statements are not the
+current task routing or a denial of this finite consequence. Prepared for
+Edward Baker with OpenAI Codex LLM assistance; actual backend/effort
+unavailable in accessible current-chat capture metadata.
+
 **E05 assessment update, 8 November 2026:** [Review06](../reviews/06_TND_OG_E05_CLAIM_LEVEL_ASSESSMENT_20261108.md) accepts the complete E03 acquisition theorem with one additive evidence/control clarification in [Note07](../notes/07_TND_OG_E05_ASSESSMENT_CALCULATIONS_20261108.md). All mathematical estimates/constants are retained. E02 acceptance applies to OG Note01/02; OC Note04 retains its own proof-author-check evidence. Older avoid02 controls are screened explicitly. Assessment is internal with shared premises, not specialist review. The canonical favorable value remains unpaid. [Continuation09](../continuation-notes/09_TND_OG_E05_RESULTS_AND_MODEL_CHANGE_20261108.md) proposes B04, unissued and unactivated; the sole register owns live status. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort are not recorded in accessible capture metadata.
 
 **E03 acquisition update, 8 November 2026:** [Note06](../notes/06_TND_OG_E03_COMPLETE_SIGNED_LOG_ACQUISITION_20261108.md) now completes the literal Fourier/theta finite-source assembly: 0<=U−J<=E+2T+2beta, with explicit finite choices and future directed evaluation allowances. Evidence is proved in-note with [proof-author check05](../reviews/05_TND_OG_E03_ASSEMBLY_PROOF_AUTHOR_CHECK_20261108.md) only. The favorable signed value remains unpaid, and §7's RS connection remains context. Earlier dated E03 readiness/assembly-pending statements describe the pre-E03 state. See the [sole register](../research-progress/01_TND_OG_GREEN_RESOLVENT_RESEARCH_PROGRESS_20261107.md) and [Continuation08](../continuation-notes/08_TND_OG_E03_RESULTS_AND_MODEL_CHANGE_20261108.md). No shared-summary promotion is made under Request09. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort are not recorded in accessible capture metadata.
@@ -315,3 +383,64 @@ premise absent from each control. Generic heat or logarithmic identities
 can hold for those controls and do not eliminate their positive defect
 signal. The [brainstorm record](../brainstorm/notes/05_TND_OG_B03_HIERARCHY_RELATIONSHIP_AND_USE_20261108.md)
 records the bounded choice and remaining obligations.
+
+## 8. What the newer correlation and collision results add
+
+The 10 November review read the OG, OC and OA manuscripts in that order
+and then checked their later notes and assessments. Two dated coverage
+gaps matter: OG's E04 draft predates completed E03/E05 assembly/assessment,
+and OC's E14 draft predates the E13 r2 certified finite Gaussian scalar.
+The live registers and later source records govern these statuses.
+
+The strongest immediate reuse is OC's **complete 388-zero census** in
+\((988,2012)+i(-3/2,3/2)\), with every imaginary interval retained as
+\([-3/32768,3/131072]\). [Note10 §4](../notes/10_TND_OG_B06_SIBLING_RESULTS_AND_GREEN_CENSUS_TRANSFER_20261110.md)
+combines its upper-depth/count information with OC's explicit global
+count bound and a newly derived exponential Green tail. The result is
+\[
+ 0\le J^{\rm G}_0(1500)<291/65536+2^{-157}<1/200.
+\]
+Evidence: proved in-note, proof-author checked, conditional on the
+earlier assessed outward-winding census. The current check does not
+reproduce that census. This is a finite quantitative consequence,
+not an RH-equivalent criterion, new exclusion coverage or a signed-log
+evaluation. The census already supplies stronger local information.
+The general useful signed estimate and its height/depth-dependent
+acquisition cost remain open.
+
+OC's lesson for a possible changed acquisition method is concrete:
+integrate the requested observation kernel first, then ask whether
+existing counts/cell ranges suffice before paying for further moments.
+Its separated-cell Gaussian width theorem has explicit geometry premises.
+The resulting pair scalar neither determines the Green sum nor bounds
+the force on a selected colliding pair. Its compact-window \(C^2\)
+time-regularity theorem does not directly apply to the Green upper-depth
+cusp at the real axis.
+
+OA supplies regular divided-difference deflation and explicit derivative
+error transfer without inverse-gap loss. A future zero-aware logarithmic
+method could use that idea after paying for derivative errors and factor
+conditioning. Its conditional survival theorem still needs an upper
+force bound throughout a time interval; the assessed Lehmer input gives
+the opposite direction under a real-exterior premise. A real double has
+zero upper Green mass, so smallness of this statistic alone does not
+certify simplicity or survival. The finite-pair pilot remains parked.
+
+These conclusions retain the [result index](../../../../../../result-summaries/README.md)
+and [avoid index](../../../../../../avoid/README.md), specifically
+[cluster11](../../../../../../result-summaries/11_newman_heat_flow_reductions_and_certificates.md),
+[collision geometry13](../../../../../../result-summaries/13_local_heat_flow_geometry_and_rh_equivalent_criteria.md),
+[controls12](../../../../../../result-summaries/12_collision_controls_and_screening.md),
+[classification01](../../../../../../avoid/01_restating_the_target.md),
+[premise screen02](../../../../../../avoid/02_shape_only_arguments_and_the_controls.md)
+and [scoped exclusions07](../../../../../../avoid/07_scoped_exclusions_read_as_universal.md).
+Note10 §6 names the missing premises for each control family. A valid
+finite bound need not reject a control on a collision-free box.
+
+**Continuation:** retain E06's one-tuple prescribed-midpoint feasibility
+screen; the new census does not answer that different cost question.
+Only if E06 identifies a necessary method change should conditional
+B05 compare zero-aware logarithmic integration/deflation and direct
+Green cell ranges, with acquisition costs against matched direct
+zero exclusion. This review leaves E06 unexecuted and does not activate
+either sibling branch or revise any manuscript.

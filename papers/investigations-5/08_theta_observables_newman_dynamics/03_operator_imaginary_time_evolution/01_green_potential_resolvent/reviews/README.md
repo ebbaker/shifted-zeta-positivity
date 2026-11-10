@@ -1,5 +1,30 @@
 # Green/resolvent assessments
 
+**10 November 2026, E07:** [Review11](11_TND_OG_E07_ANALYTICAL_ASSESSMENT_20261110.md)
+accepts all eight claims within their stated hypotheses. Internal LLM
+assessment with inherited premises. Model independence is unverified.
+Prepared for Edward Baker with OpenAI Codex LLM assistance,
+recorded gpt-6.1-sol / ultra.
+
+**10 November 2026, B05:** [Check10](10_TND_OG_B05_PROOF_AUTHOR_CHECK_20261110.md)
+checks the new conditional bounds, panel rounding, symmetric-radius
+ledger, cusp/tail constants, direct-comparison scope and collision
+controls. Same-assistant proof-author checking only. E07 is ready for
+a separate bounded assessment, unactivated. Prepared for Edward Baker
+with OpenAI Codex LLM assistance; actual model/effort unavailable.
+
+**10 November 2026, E06:** [author check09](09_TND_OG_E06_FEASIBILITY_AUTHOR_CHECK_20261110.md)
+checks the directed scalar comparison, width/radius convention, source
+factors, midpoint and node bounds, and the reporting correction.
+Internal proof/code-author evidence. Prepared for Edward Baker with
+OpenAI Codex LLM assistance. Actual backend and effort unavailable.
+
+**10 November 2026, B06:** [Review08](08_TND_OG_B06_CROSS_BRANCH_CONTINUATION_REVIEW_20261110.md)
+records manuscript coverage, dated status gaps, sibling-transfer premises
+and the finite census-to-Green proof check. Internal proof-author review;
+no fresh winding replay or independent specialist assessment. Prepared for
+Edward Baker with OpenAI Codex assistance; actual backend/effort unavailable.
+
 **8 November 2026, B04:** [Author check07](07_TND_OG_B04_VALUE_RESOLUTION_AUTHOR_CHECK_20261108.md) checks the Green mass, density conversion, remote tail, allowance/signal ratio and fixed successor scope. Same-author evidence only. Prepared for Edward Baker with OpenAI Codex assistance; actual current runtime gpt-6-astra, effort not exposed.
 
 **8 November 2026, E05:** [Review06](06_TND_OG_E05_CLAIM_LEVEL_ASSESSMENT_20261108.md) accepts all eight fixed claims with one additive evidence/control clarification. Internal shared-premise LLM assessment; root also E03 author. Original proof bytes and evidence distinctions preserved. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort are not recorded in accessible capture metadata.

@@ -1,5 +1,32 @@
 # Green/resolvent research notes
 
+**10 November 2026, E07:** [Note13](13_TND_OG_E07_ANALYTICAL_ASSESSMENT_CALCULATIONS_20261110.md)
+records the derivations, repeated-knot, occupied-cell and shifted-slab
+tests, and full acquisition ledger. The conditional proof required no
+correction. Prepared for Edward Baker with OpenAI Codex LLM assistance,
+recorded gpt-6.1-sol / ultra.
+
+**10 November 2026, B05:** [Note12](12_TND_OG_B05_DEFLATED_LOG_AND_CELL_RANGE_DECISION_20261110.md)
+records the two-method decision, complex regular deflation, integrated
+root-log errors, second-order signed product integration, complete
+Green cell/tail ranges and same-information direct dominance. Conditional
+proofs, proof-author checked only; canonical conditioning/cost unacquired.
+Prepared for Edward Baker with OpenAI Codex LLM assistance; actual
+model/effort unavailable. Next is E07 analytical assessment, unactivated.
+
+**10 November 2026, E06:** [Note11](11_TND_OG_E06_SINGLE_TUPLE_FEASIBILITY_20261110.md)
+records the directed one-tuple allowance failure and its scope. Both
+source searches and the tail budget succeed. The F5–F6 integration
+allowance exceeds the cap. Prepared for Edward Baker with OpenAI
+Codex LLM assistance. Actual backend and effort unavailable.
+
+**10 November 2026, B06:** [Note10](10_TND_OG_B06_SIBLING_RESULTS_AND_GREEN_CENSUS_TRANSFER_20261110.md)
+reviews newer OC/OA uses and derives a finite Green bound from the
+inherited complete OC census and a new exponential tail. Proved in-note,
+proof-author checked, conditional on the earlier winding certification;
+no new coverage or general signed-log estimate. Prepared for Edward Baker
+with OpenAI Codex assistance; actual backend/effort unavailable.
+
 **8 November 2026, B04:** [Note09](09_TND_OG_B04_GREEN_MASS_RESOLUTION_AND_VALUE_DECISION_20261108.md) derives exact single-zero Green mass/window signals and the scoped failure of the inherited density-based average allowance. Proof-author check only; no favorable value. A fixed E06 feasibility screen is issued, unexecuted. Prepared for Edward Baker with OpenAI Codex assistance; actual current runtime gpt-6-astra, effort not exposed.
 
 **8 November 2026, renewed E03 request:** [Note08](08_TND_OG_E03_CONTINUATION_RECONCILIATION_20261108.md) reconciles historical Continuation07 with completed E03/E05 and existing B04 planning. Bounded recheck only; no new theorem or evidence promotion. Current identity differences are recorded separately. [Continuation10](../continuation-notes/10_TND_OG_E03_RECONCILIATION_AND_MODEL_CHANGE_20261108.md) supplies the current model-change entry point. Prepared for Edward Baker with OpenAI Codex assistance; exact backend/effort unavailable in capture metadata.

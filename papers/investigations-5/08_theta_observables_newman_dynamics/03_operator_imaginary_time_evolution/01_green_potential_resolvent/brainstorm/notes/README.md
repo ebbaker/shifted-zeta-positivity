@@ -1,5 +1,11 @@
 # Green/resolvent conceptual decisions
 
+**10 November 2026, B06:** [Decision11](11_TND_OG_B06_SIBLING_REUSE_DECISION_20261110.md)
+retains E06 after comparing sibling acquisition and collision uses.
+The focused finite census consequence and its limitations are in
+research Note10; B05 remains conditional. Prepared for Edward Baker with
+OpenAI Codex assistance; actual backend/effort unavailable.
+
 **8 November 2026, cross-branch advisory:** [Note10](10_TND_OG_COLLISION_DYNAMICS_AND_PARALLEL_PROBES_20261108.md)
 records collision/probe interfaces and missing quantitative inputs. It
 was moved from the mistaken direct-folder destination at the author's

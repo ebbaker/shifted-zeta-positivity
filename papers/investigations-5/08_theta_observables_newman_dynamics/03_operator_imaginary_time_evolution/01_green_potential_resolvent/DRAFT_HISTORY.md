@@ -1,5 +1,15 @@
 # Green/resolvent milestones
 
+**10 November 2026 — TND-OG-B06 review milestone, no manuscript revision:**
+[Note10](notes/10_TND_OG_B06_SIBLING_RESULTS_AND_GREEN_CENSUS_TRANSFER_20261110.md)
+and [Review08](reviews/08_TND_OG_B06_CROSS_BRANCH_CONTINUATION_REVIEW_20261110.md)
+compare the three branches; inherited OC census implies a finite Green
+bound below 1/200 at X=1500, with no new coverage. E06 remains the next
+unactivated task; [Continuation12](continuation-notes/12_TND_OG_AFTER_SIBLING_REVIEW_AND_MODEL_CHANGE_20261110.md)
+recommends GPT-6.1 Sol. Prepared for Edward Baker with OpenAI Codex
+assistance; actual backend/effort unavailable. No new snapshot, manuscript
+milestone, investigation closeout or shared-summary promotion.
+
 7 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Explicit worker dispatch selected **gpt-6.1-sol / ultra**; this is the supplied actual selection, not independent backend verification. Root model/effort unavailable.
 
 | Date | Investigation / artifact | Why it matters | Evidence |
@@ -27,3 +37,30 @@ Baker with OpenAI Codex assistance, actual gpt-6-astra, effort unavailable.
 Detailed research belongs in linked notes/reviews. Future notable versions point to Git commits/tags, without new snapshot folders.
 
 **Installation, 7 November 2026:** the 16-file E01 package is installed and hash-verified; see the [receipt](research-progress/handoffs/04_TND_OG_E01_INSTALLATION_20261107.json). Earlier staged-delivery statements are historical. Prepared for Edward Baker with OpenAI Codex assistance; exact backend model/effort unavailable. No new research milestone or manuscript snapshot is introduced.
+
+**10 November 2026, B05 r1:** [Note12](notes/12_TND_OG_B05_DEFLATED_LOG_AND_CELL_RANGE_DECISION_20261110.md)
+records conditional deflated-log product bounds and scoped direct
+dominance for independent Green cell ranges. Canonical conditioning/cost
+remain unpaid; proof-author check only, no field run or manuscript
+milestone. [Return22](research-progress/handoffs/22_TND_OG_B05_METHOD_COMPARISON_RETURN_20261110.json)
+and [Continuation14](continuation-notes/14_TND_OG_B05_RESULTS_AND_MODEL_CHANGE_20261110.md)
+select E07 analytical assessment, GPT-6.1 Sol, unactivated. Prepared for
+Edward Baker with OpenAI Codex LLM assistance; actual model/effort
+unavailable in chat0008 capture metadata.
+
+**10 November 2026, E06 r1:** the fixed one-tuple uniform-midpoint
+allowance is interval-certified to exceed the cap at 128 bits.
+[Note11](notes/11_TND_OG_E06_SINGLE_TUPLE_FEASIBILITY_20261110.md),
+[return21](research-progress/handoffs/21_TND_OG_E06_FEASIBILITY_RETURN_20261110.json)
+and [Continuation13](continuation-notes/13_TND_OG_E06_RESULTS_AND_MODEL_CHANGE_20261110.md).
+Research checkpoint only. Prepared for Edward Baker with OpenAI Codex
+LLM assistance. Actual backend/effort unavailable.
+
+**10 November 2026, E07 r1:** [Review11](reviews/11_TND_OG_E07_ANALYTICAL_ASSESSMENT_20261110.md)
+accepts all eight conditional and scoped B05 claims without correction.
+The signed value and literal-source conditioning/cost data remain unpaid.
+[Return24](research-progress/handoffs/24_TND_OG_E07_ANALYTICAL_ASSESSMENT_RETURN_20261110.json)
+and [Continuation15](continuation-notes/15_TND_OG_E07_RESULTS_AND_MODEL_CHANGE_20261110.md)
+record the analytical checkpoint and conditional B05 r2 re-entry.
+Prepared for Edward Baker with OpenAI Codex LLM assistance,
+recorded gpt-6.1-sol / ultra.

@@ -1,5 +1,37 @@
 # TND-OG handoffs
 
+**10 November 2026, E07 complete:** [Return24](24_TND_OG_E07_ANALYTICAL_ASSESSMENT_RETURN_20261110.json)
+records acceptance of all eight claims, identity checks and the
+unacquired root/factor cost input. The issued Request23 and Inputs23
+remain the historical packet. [Continuation15](../../continuation-notes/15_TND_OG_E07_RESULTS_AND_MODEL_CHANGE_20261110.md)
+routes any author-selected B05 r2 proposal. Prepared for Edward Baker
+with OpenAI Codex LLM assistance, recorded gpt-6.1-sol / ultra.
+
+**10 November 2026, B05 complete:** [Return22](22_TND_OG_B05_METHOD_COMPARISON_RETURN_20261110.json)
+records conditional product-integration bounds and the independent-cell
+direct comparison. [Request23](23_TND_OG_E07_ANALYTICAL_ASSESSMENT_REQUEST_20261110.md)
+and [Inputs23](23_TND_OG_E07_INPUTS_20261110.json) freeze the sole new
+successor: E07 analytical assessment, GPT-6.1 Sol, ready but unactivated.
+[Continuation14](../../continuation-notes/14_TND_OG_B05_RESULTS_AND_MODEL_CHANGE_20261110.md)
+owns the current model-change guidance; earlier routing is historical.
+Prepared for Edward Baker with OpenAI Codex LLM assistance; actual
+model/effort unavailable.
+
+**10 November 2026, E06 r1 complete:** [Return21](21_TND_OG_E06_FEASIBILITY_RETURN_20261110.json)
+records the directed F5–F6 allowance failure, input identities and the
+bounded reporting correction. [Request18](18_TND_OG_E06_SINGLE_TUPLE_FEASIBILITY_REQUEST_20261108.md)
+and [Inputs18](18_TND_OG_E06_INPUTS_20261108.json) preserve the issued
+contract. [Continuation13](../../continuation-notes/13_TND_OG_E06_RESULTS_AND_MODEL_CHANGE_20261110.md)
+proposes B05, unissued and unactivated. Prepared for Edward Baker with
+OpenAI Codex LLM assistance. Actual backend and effort unavailable.
+
+**10 November 2026, B06:** [Return20](20_TND_OG_B06_SIBLING_REVIEW_RETURN_20261110.json)
+records the completed sibling review and finite census-to-Green
+consequence. E06 Request18/Inputs18 are unchanged and unactivated.
+[Continuation12](../../continuation-notes/12_TND_OG_AFTER_SIBLING_REVIEW_AND_MODEL_CHANGE_20261110.md)
+is current. Prepared for Edward Baker with OpenAI Codex assistance;
+actual backend/effort unavailable.
+
 **8 November 2026, B04:** [Return17](17_TND_OG_B04_VALUE_ROUTE_RETURN_20261108.json) records the bounded decision. [E06 Request18](18_TND_OG_E06_SINGLE_TUPLE_FEASIBILITY_REQUEST_20261108.md) and [Inputs18](18_TND_OG_E06_INPUTS_20261108.json) freeze one calibration feasibility screen, ready and unactivated. [Continuation11](../../continuation-notes/11_TND_OG_B04_RESULTS_AND_MODEL_CHANGE_20261108.md) supplies the next-model prompt. Prepared for Edward Baker with OpenAI Codex assistance; actual current runtime gpt-6-astra, effort not exposed.
 
 **8 November 2026, renewed E03 request:** [Return16](16_TND_OG_E03_CONTINUATION_RECONCILIATION_RETURN_20261108.json) records bounded reconciliation with the already completed E03/E05, retaining [Note06](../../notes/06_TND_OG_E03_COMPLETE_SIGNED_LOG_ACQUISITION_20261108.md) with [E05 Note07](../../notes/07_TND_OG_E05_ASSESSMENT_CALCULATIONS_20261108.md) and Review06. [Continuation10](../../continuation-notes/10_TND_OG_E03_RECONCILIATION_AND_MODEL_CHANGE_20261108.md) preserves B04's current planning discussion. Earlier readiness statements below are historical. Prepared for Edward Baker with OpenAI Codex assistance; actual backend/effort unavailable in capture metadata.

@@ -1,5 +1,55 @@
 # Green/resolvent conversation history
 
+**E07 continuation of chat0007, 10 November 2026:** thread
+01a1c3f6-cbba-71f2-80bf-6b2d0421ddbd, exact turn
+01a1c5df-b523-78a2-998a-1c2d0ebfd175. The E06 final is in the
+[registered archive](0007_2026-11-10T05-38-13Z_please-read-papers-investigations-5-08-theta-observables-newman-dynamics-03-oper.json).
+The E07 refresh failed the recorder's creation-time integrity check.
+Both current exact sources report 05:38:13.634 UTC, versus the
+verified archive's original 05:38:13.564 UTC on 10 November.
+The prior registration and archive are preserved. The
+[partial public record](UNREGISTERED_PARTIAL_TND_OG_E07_PUBLIC_TEXT_20261110.md)
+covers completed E07 text observed before the final. It is outside
+the registry. A bounded exact-turn refresh remains subject to the
+same integrity gate. Exact E07 turn context records gpt-6.1-sol /
+ultra. Prepared for Edward Baker with OpenAI Codex LLM assistance.
+
+**B05 research, 10 November 2026:** chat **0008**, actual title
+**Continue TND-OG-B05**, thread
+`01a1c3fe-fd7c-7551-a45a-6fdae006da66`, is registered through the locked
+recorder from its exact paginated source. [Public archive](0008_2026-11-10T05-47-10Z_continue-tnd-og-b05.json).
+Actual turn: `01a1c3fe-ffc9-7942-aa98-4ea61a0cc9a5`.
+Read current counts, times, model configurations and hashes from the
+[registry](index.json). Completed public text is refreshed; the final
+exact-turn capture is arranged last and must be verified after completion.
+No active native completion hook is claimed. Prepared for Edward Baker
+with OpenAI Codex LLM assistance; actual model/effort unavailable in
+the accessible capture metadata.
+
+**E06 execution, 10 November 2026:** chat **0007**, thread
+01a1c3f6-cbba-71f2-80bf-6b2d0421ddbd, turn
+01a1c3f6-ce61-7840-8684-69ce3c8635eb, is registered from its exact
+paginated source through the locked recorder. Its actual app title
+is retained verbatim in the [public archive](0007_2026-11-10T05-38-13Z_please-read-papers-investigations-5-08-theta-observables-newman-dynamics-03-oper.json).
+Read current counts, timestamps, hashes and configurations from the
+[registry](index.json). The final capture uses the bounded exact-turn
+workflow, with completion to be verified on continuation. Prepared for
+Edward Baker with OpenAI Codex LLM assistance. Actual model and effort
+are unavailable in the accessible capture metadata.
+
+**Sibling review, 10 November 2026:** chat **0006**, actual title
+**Review Green resolvent research**, thread
+01a1c3e6-9988-7380-84c8-57437f91ff13, is registered through the locked
+recorder from its canonical paginated source.
+[Public archive](0006_2026-11-10T05-20-32Z_review-green-resolvent-research.json);
+[registry](index.json). Actual review turn:
+01a1c3e9-20ab-7f22-9071-a54d81783a95. Completed public text is refreshed
+and bounded exact-turn final capture arranged last; verify its completion
+on continuation. No active native hook is claimed. Read changing counts,
+times, hashes and model configurations from the registry. Prepared for
+Edward Baker with OpenAI Codex assistance; actual backend/effort
+unavailable in the accessible current-chat capture metadata.
+
 **Cross-branch advisory, 8 November 2026:** existing chat0005 continues
 under actual turn `01a1bdb4-9787-7892-acbe-a7d8f60ef8d7`.
 The requested [Green/resolvent brainstorm note](../brainstorm/notes/10_TND_OG_COLLISION_DYNAMICS_AND_PARALLEL_PROBES_20261108.md)

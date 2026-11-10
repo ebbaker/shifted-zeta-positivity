@@ -291,7 +291,9 @@ a colliding control; that is consistent with all results above.
 | RH-conditional normalized endpoint controls | Ordinary Dirichlet-series arithmetic fails; do not incorrectly claim that their functional equation/completion fails. Real double zeros alone give no upper Green mass |
 | Variable observation kernels | The full physical cosine readout/Newman equation fails; a finite cosine prefix is not that equation |
 | Three-profile positive-measure relaxation | Integer divisor constraints and full physical source realizability are missing. Fractional slack measures are not a canonical zero configuration |
-| Older \(q,q_{T,a}\), smooth-density and two-channel controls | The exact theta source/arithmetic or the physical coupled-channel specification is not supplied. Their generic positivity/heat identities alone furnish no new Green sign; retain the scopes in cluster11 and avoid02 |
+| Older collision kernels \(q,q_{T,a}\) | Their sources/transforms are not the literal theta/xi source. They cannot inherit its Euler anchor, prime baseline or source-error identity; their own generic acquisition is not a theta smallness estimate |
+| SUSY smooth-density control | Replacing the discrete prime measure by \(e^r\,dr\) changes the arithmetic object despite retained archimedean data. The canonical prime baseline cannot be assigned to it |
+| SUSY two-channel exclusion | This is a scoped exclusion for the specified norm-factorization architecture and support lengths, not a universal field counterexample. OG's signed logarithmic integral is outside that class |
 
 For (1), the decisive extra input is the **complete certified thin
 zero-location census**, not a property common to arbitrary positive
@@ -304,6 +306,8 @@ valid finite bound on a different collision-free box. At an exactly real
 collision Green mass vanishes: (1) is not a test of simplicity or survival.
 These qualifications prevent the failed exact-source premise from being
 mistaken for evidence that every derived inequality distinguishes theta.
+The last three rows retain the source/class distinctions already checked
+in [OG Note07 §5][og7] and routed by [positive-construction cluster04][positive].
 
 ## 7. Bounded continuation
 
@@ -338,6 +342,7 @@ one focused proof and the continuation decision.
 [next]: ../continuation-notes/12_TND_OG_AFTER_SIBLING_REVIEW_AND_MODEL_CHANGE_20261110.md
 [og5]: 05_TND_OG_B03_HDA_HIERARCHY_LOG_TRANSFER_20261108.md
 [og6]: 06_TND_OG_E03_COMPLETE_SIGNED_LOG_ACQUISITION_20261108.md
+[og7]: 07_TND_OG_E05_ASSESSMENT_CALCULATIONS_20261108.md
 [og9]: 09_TND_OG_B04_GREEN_MASS_RESOLUTION_AND_VALUE_DECISION_20261108.md
 [ogreview6]: ../reviews/06_TND_OG_E05_CLAIM_LEVEL_ASSESSMENT_20261108.md
 [oc25]: ../../02_localized_zero_correlations/notes/25_TND_OC_E13_R2_CERTIFIED_GAUSSIAN_PROJECTION_20261109.md
@@ -352,3 +357,4 @@ one focused proof and the continuation decision.
 [oa4]: ../../03_collision_constraints/manuscript/sections/04_survival.tex
 [oar6]: ../../03_collision_constraints/reviews/06_TND_OA_E02_R1_LEHMER_SCREEN_ASSESSMENT_20261109.md
 [oanext]: ../../03_collision_constraints/notes/11_TND_OA_AFTER_E02_CONTINUATION_AND_MODEL_CHANGE_20261109.md
+[positive]: ../../../../../../result-summaries/04_positive_constructions_and_scoped_obstructions.md
