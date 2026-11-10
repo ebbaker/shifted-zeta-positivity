@@ -1,5 +1,28 @@
 # TND-OG Green/resolvent progress register
 
+## Cross-branch continuation review — 10 November 2026
+
+**TND-OG-B06 — IN PROGRESS; B, recommended Astra.** The consequential
+choice is which sibling input changes OG's continuation priority. Compare
+at most two uses: acquiring the signed Green value, and deriving a
+collision/survival constraint from it. One focused transfer calculation
+is allowed; stop at an evidence-scoped decision and bounded next task.
+This is the author-requested cross-branch research assessment. Prepared
+for Edward Baker with OpenAI Codex LLM assistance. The current registered
+chat0006 supplies no recorded model/effort configuration; no setting is
+inferred. Read OG first, then OC and OA, comparing their current manuscripts
+and later source notes against OG's unpaid canonical signed-value estimate.
+Save research in notes, the assessment in reviews, and model-change guidance
+in continuation-notes. The repository result and pattern indexes were read.
+This review does not activate the frozen E06 computation, change its inputs,
+or assign work in either sibling branch. E03/E05 remain complete; the OG
+manuscript's earlier assembly-pending text is a dated coverage gap.
+
+The exact current thread is 01a1c3e6-9988-7380-84c8-57437f91ff13,
+“Review Green resolvent research,” registered by the locked recorder in this
+investigation's chat-histories. Final exact-turn capture will be arranged
+after the research records are verified.
+
 7 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Explicit worker dispatch selected **gpt-6.1-sol / ultra**; this is the supplied actual selection, not independent backend verification. Root model/effort unavailable.
 
 **This file is the sole current live status register for the TND-OG task family.** Re-read it before changes and preserve other chats' updates. Parent [Register02](../../research-progress/02_SMOOTH_LOCALIZATION_RESEARCH_PROGRESS_20261106.md) owns TND-O/shared tasks and links here; it must not duplicate these live statuses. The sibling owns TND-OC. The [plan](../research-plan/01_TND_OG_GREEN_RESOLVENT_RESEARCH_PLAN_20261107.md) defines task scope and limits; [Continuation11](../continuation-notes/11_TND_OG_B04_RESULTS_AND_MODEL_CHANGE_20261108.md) is the current B04 result/model-change handoff; [Continuation10](../continuation-notes/10_TND_OG_E03_RECONCILIATION_AND_MODEL_CHANGE_20261108.md) records the preceding reconciliation; [Continuation09](../continuation-notes/09_TND_OG_E05_RESULTS_AND_MODEL_CHANGE_20261108.md) supplies the post-E05 bounded B04 specification; Continuation08 is the E05 activation source, and Continuation07 the earlier E03 entry point. [Continuation06](../continuation-notes/06_TND_OG_E04_MANUSCRIPT_AND_OUTSTANDING_TASKS_20261108.md) records the manuscript milestone; [Continuation05](../continuation-notes/05_TND_OG_B02_RESULTS_AND_MODEL_CHANGE_20261108.md) retains the original E03 prompt. None is another register. Preparing Continuation07 does not activate E03 or alter Request09. Research update below: **gpt-6-astra / max**, actual session metadata, 7 November 2026.

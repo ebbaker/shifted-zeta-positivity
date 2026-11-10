@@ -1,5 +1,17 @@
 # Direct Newman realization: manuscript history
 
+**10 November 2026, B03 simultaneous-modular comparison:**
+[Note11](notes/11_TND_D_B03_SIMULTANEOUS_MODULAR_COMPARISON_20261110.md)
+proves the combined inversion formula and a scoped ordering of independent
+absolute-tail envelopes; a fixed dual prefix also loses full-domain
+integrability on the resolving class. [Local Review08](reviews/08_TND_D_B03_MODULAR_LOCAL_CHECK_20261110.md)
+is proof-author checking. The pass stops without a signed gain or E09
+contract; [Continuation08](brainstorm/notes/08_TND_D_B03_MODULAR_DECISION_AND_MODEL_CONTINUATION_20261110.md)
+records the remaining gap and conditional Astra continuation. Research-note
+disposition only, with manuscript/build unchanged and no investigation
+closure or result-summary promotion. Prepared for Edward Baker with OpenAI
+Codex assistance, chat0008; actual model/effort unavailable.
+
 **10 November 2026, E11 primitive manuscript integration:** the author-
 requested synthesis adds Section 9, Theorem 9.2, to the single evolving
 [29-page manuscript](manuscript/README.md). It derives the exact Gaussian

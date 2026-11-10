@@ -1,34 +1,35 @@
 # Direct radial-spectral Newman realization
 
-**Current disposition — 10 November 2026.** Prepared for **Edward Baker**
-with substantial OpenAI Codex assistance, direct chat0007; actual model
-and effort are unavailable in accessible capture metadata.
+**Current disposition — 10 November 2026, B03 modular return.** Prepared
+for **Edward Baker** with OpenAI Codex assistance, direct chat0008; actual
+model/effort unavailable in registered metadata.
 
-The [29-page manuscript](manuscript/README.md) now incorporates the
-complete two-source primitive and lattice formula in Section 9,
-Theorem 9.2. The boundary curvature term and all source tails remain
-explicit. [E11 Review07](reviews/07_TND_D_E11_PRIMITIVE_MANUSCRIPT_INTEGRATION_20261109.md)
-is a same-assistant production/consistency check; the primitive formulas
-retain proof-author status and the signed estimate remains open.
+The one-candidate joint primitive/modular pass is complete with a scoped
+stop. [Note11](notes/11_TND_D_B03_SIMULTANEOUS_MODULAR_COMPARISON_20261110.md)
+retains the full inverted lattice formula and proves that the specified
+independent absolute-tail envelopes are dominated by the original-lattice
+comparison. Fixed dual prefixes also fail full-domain absolute
+integrability on the resolving class. The joint signed estimate remains
+open; this does not exclude other modular or correlated methods.
+[Review08](reviews/08_TND_D_B03_MODULAR_LOCAL_CHECK_20261110.md) is by the
+proof author. E09/E10 remain unissued.
 
-**Next: [B] TND-D-B03 — GPT-6 Astra**, one joint primitive/lattice
-comparison, as specified in [Continuation07](brainstorm/notes/07_TND_D_PRIMITIVE_LATTICE_NEXT_SESSION_20261109.md).
-That author-requested next-session scope uses the new primitive input;
-the earlier r3 stop remains confined to its tested sign-discarding method.
-E09/E10 are unissued until a fixed useful contract meets [plan r3][r3-current].
-The conditional realization and assessed high-count/complete-tail results
-retain their prior evidence and limitations.
+[Continuation08](brainstorm/notes/08_TND_D_B03_MODULAR_DECISION_AND_MODEL_CONTINUATION_20261110.md)
+is the current handoff. If a new independent signed input or revised
+finite scope is selected, recommend **[B] TND-D-B03 — GPT-6 Astra**.
+No automatic successor is ready. The [29-page manuscript](manuscript/README.md),
+E11 production status, conditional realization and assessed count/tail
+results are unchanged.
 
 | Document | Current role |
 | --- | --- |
-| [Research overview][overview] | Scientific objective, established results and remaining signed estimate |
-| [Plan r3][r3-current] | Preserved decision/execution gates; new primitive continuation specified in Note07 |
-| [Historical plan r2][plan] | Earlier collision-reconnaissance specification |
+| [Research overview][overview] | Scientific objective, established evidence and remaining signed estimate |
+| [Plan r3][r3-current] | Preserved execution gates; consumed primitive pass was specified by Continuation07 |
 | [Sole progress register][progress] | Live status, task identities and dated returns |
-| [Continuation07](brainstorm/notes/07_TND_D_PRIMITIVE_LATTICE_NEXT_SESSION_20261109.md) | Next-session scope, exact starting formula, controls, work limit and model handoff |
-| [Primitive Brainstorm06](brainstorm/notes/06_TND_D_TWO_SOURCE_PRIMITIVE_IBP_AND_LATTICE_20261109.md) | Two-source primitive derivation and lattice/boundary analysis |
-| [B03 Decision04](brainstorm/notes/04_TND_D_B03_R3_SIGNED_PREMISE_DECISION_20261109.md) | Earlier bounded r3 decision and precisely scoped stop |
-| [Cross-branch Brainstorm03][brainstorm-current] | Count/acquisition interfaces and comparison background |
+| [Note11](notes/11_TND_D_B03_SIMULTANEOUS_MODULAR_COMPARISON_20261110.md) | Exact dual formula, scoped tail comparison, full errors and control screen |
+| [Decision/Continuation08](brainstorm/notes/08_TND_D_B03_MODULAR_DECISION_AND_MODEL_CONTINUATION_20261110.md) | Scoped stop, remaining gap and model-change guidance |
+| [Primitive Brainstorm06](brainstorm/notes/06_TND_D_TWO_SOURCE_PRIMITIVE_IBP_AND_LATTICE_20261109.md) | Original two-source primitive/lattice/boundary derivation |
+| [Historical Continuation07](brainstorm/notes/07_TND_D_PRIMITIVE_LATTICE_NEXT_SESSION_20261109.md) | Frozen specification of the completed one-candidate pass |
 
 ## Historical navigation and provenance through 8 November 2026
 

@@ -1,6 +1,119 @@
 # Direct radial-spectral Newman realization: research progress
 
-## Current disposition — E11 complete, 10 November 2026
+## Current disposition — B03 modular pass complete, 10 November 2026
+
+**[B] TND-D-B03's authorized one-candidate primitive/modular pass is
+complete with a scoped stop; E09/E10 remain unissued.**
+[Note11](../notes/11_TND_D_B03_SIMULTANEOUS_MODULAR_COMPARISON_20261110.md)
+proves the full simultaneous-inversion formula, retaining all axis
+subtractions, derivatives and the curvature face. For common cutoffs on
+the original r>=1 domain, its specified independent absolute tail
+payments are at least the original-lattice payments. Fixed dual prefixes
+also lose full-domain absolute integrability at positive resolving time.
+This limits those methods, not joint signed modular estimates or all
+lattice methods. The needed signed bulk/face cancellation remains open.
+
+One analytical pass and one local check completed the selected scope.
+[Review08](../reviews/08_TND_D_B03_MODULAR_LOCAL_CHECK_20261110.md) is
+proof-author checking; [record03](../numerics/03_TND_D_B03_MODULAR_CHECK_20261110.json)
+separates exact rational checks from three-radius floating diagnostics.
+No A0 scan, certificate, new physical access or manuscript expansion.
+[Input20](handoffs/20_TND_D_B03_MODULAR_INPUTS_20261110.json) binds the
+updated 10 November intake, including alignment19; [Return21](handoffs/21_TND_D_B03_MODULAR_RETURN_20261110.json)
+records outputs and preserved inputs.
+
+[Decision/Continuation08](../brainstorm/notes/08_TND_D_B03_MODULAR_DECISION_AND_MODEL_CONTINUATION_20261110.md)
+is the current handoff. Default: retain this scoped stop. If a genuinely
+new signed input or explicitly revised finite scope is selected, recommend
+**[B] TND-D-B03 — GPT-6 Astra** for the unresolved conceptual choice.
+No executable successor is ready; E09/E10 route to GPT-6.1 Sol only after
+their existing gates are satisfied. The investigation remains open.
+
+Prepared for **Edward Baker** with OpenAI Codex LLM assistance, direct
+chat0008, thread `01a1c3dc-12e9-7023-a3e1-bc27d98d94d0`. Actual model and
+effort are unavailable in registered metadata. E11's manuscript and all
+prior assessments retain their recorded evidence levels.
+
+## Current register
+
+| ID | Type/model and reason | Current status | Dependency/specification |
+| --- | --- | --- | --- |
+| TND-D-B01 | B — Astra; construction selection | Complete at conceptual/contract scope | Original Decision01 and request retained |
+| TND-D-E01 | E — Sol; fixed realization | Complete; accepted within conditional ideal-operation scope by E02 | Original E01 r1 and E02 Review01 unchanged |
+| TND-D-E02 | E — Sol; realization audit | Complete, accepted without mathematical correction | Same-assistant/same-chat internal assessment |
+| TND-D-B02 | B — Astra/ultra; mechanism/target choice | **Complete at bounded decision scope** | [Decision02](../brainstorm/notes/02_TND_D_B02_SOURCE_SCORE_AND_COUNT_PHASE_DECISION_20261106.md), [return](handoffs/07_TND_D_B02_PHASE2_RETURN_20261106.json) |
+| TND-D-E03 | E — Sol 6.1/ultra; fixed high-count theorem | **Complete r1; accepted within scope by E04** | [Note06](../notes/06_TND_D_E03_HIGH_COUNT_LOCALIZATION_20261106.md), [return](handoffs/08_TND_D_E03_R1_RETURN_20261106.json) |
+| TND-D-E04 | E — fresh Sol 6.1/ultra; fixed review/integration | **Complete; no mathematical correction** | [Review03](../reviews/03_TND_D_E04_HIGH_COUNT_ASSESSMENT_20261106.md), [return](handoffs/09_TND_D_E04_R1_RETURN_20261106.json); separate same-model internal review |
+| TND-D-E05 | E — Sol recommended; manuscript synthesis | Complete at production scope, Astra/max | Initial 18-page manuscript; original identity preserved in E08 inputs, later integration recorded separately as E08 |
+| TND-D-E06 | E — Sol 6.1/ultra; fixed count-tail payment | **Complete r1; accepted by E07 without correction** | [Note07](../notes/07_TND_D_E06_COMPLETE_COUNT_TAIL_20261106.md), [return](handoffs/10_TND_D_E06_R1_RETURN_20261106.json) |
+| TND-D-E07 | E — separate Sol 6.1/ultra; tail assessment | **Complete; no corrections** | [Review04](../reviews/04_TND_D_E07_COMPLETE_COUNT_TAIL_ASSESSMENT_20261106.md), [return](handoffs/11_TND_D_E07_R1_RETURN_20261106.json) |
+| TND-D-E08 | E — Sol 6.1/ultra TeX; Astra/ultra integration/production | **Complete at production scope; 24-page build checked** | [Request](handoffs/13_TND_D_E08_MANUSCRIPT_AND_CONTINUATION_REQUEST_20261106.md), [return](handoffs/13_TND_D_E08_RETURN_20261106.json) |
+| TND-D-B03 | B — GPT-6 Astra recommended; independent signed mechanism choice | **One-candidate modular pass complete with scoped stop; no E09 contract** | [Note11](../notes/11_TND_D_B03_SIMULTANEOUS_MODULAR_COMPARISON_20261110.md), [Continuation08](../brainstorm/notes/08_TND_D_B03_MODULAR_DECISION_AND_MODEL_CONTINUATION_20261110.md), [Return21](handoffs/21_TND_D_B03_MODULAR_RETURN_20261110.json); earlier r3/primitive results preserved |
+| TND-D-E09 | E — GPT-6.1 Sol/ultra recommended; fixed proof or calculation | **Unissued placeholder** | B03 must freeze the independent premise, useful consequence, complete errors, controls and matched comparison |
+| TND-D-E10 | E — separate GPT-6.1 Sol/ultra assessment recommended | **Unissued placeholder** | Depends on an issued E09 contract and return; one assessment/local correction |
+| TND-D-E11 | E — GPT-6.1 Sol recommended; fixed manuscript/continuation production | **Complete r1 at production scope; 29-page build/render checked** | [Review07](../reviews/07_TND_D_E11_PRIMITIVE_MANUSCRIPT_INTEGRATION_20261109.md), [Continuation07](../brainstorm/notes/07_TND_D_PRIMITIVE_LATTICE_NEXT_SESSION_20261109.md), [Input17](handoffs/17_TND_D_E11_INPUTS_20261109.json), [Return18](handoffs/18_TND_D_E11_RETURN_20261110.json); proof-author evidence unchanged |
+
+## Completed B03 pass specification — 10 November 2026
+
+**One joint primitive/lattice comparison**, as fixed in
+[Continuation07](../brainstorm/notes/07_TND_D_PRIMITIVE_LATTICE_NEXT_SESSION_20261109.md).
+This is the consumed specification, not an authorization to repeat it.
+The return and conditional continuation above own the current disposition.
+
+| Item | Consumed specification |
+| --- | --- |
+| Question | Can one theta-product/modular reorganization control the full A0 bulk integral and boundary curvature jointly, with a useful signed consequence? |
+| Starting input | Brainstorm06 equations (7), (7a), (8)–(13); manuscript Section 9, Theorem 9.2; Note09's complete Gaussian error |
+| Fixed data | Canonical Phi and cosine/Newman law; F_lambda=e^(lambda u²)Phi; fixed h_*=H_(1/2)(0); all theta modes and source tails |
+| Initial estimating class | Hypothetical double events lambda* in [1/8,3/8], k* in [1/2,100], 0<epsilon<=1/16, evaluated at (lambda,X,v)=(lambda*-epsilon,k*,epsilon); no curvature floor or event-free certificate |
+| Work limit | One candidate, one conceptual/analytical pass and one local clarification/check; at most one E09 successor |
+| Required payment | Full transferred test, unit-sphere boundary, axis subtractions, transformed domain, complete lattice/derivative tails and curvature-dependent resolving error |
+| Comparison and controls | Same-information scalar baseline may use the identical primitive formula; screen actual premises and inequalities on the relevant control witness domains |
+| Useful return | One independently justified arithmetic lemma/proof strategy and declared signed consequence, or the precise remaining gap |
+| E09 gate | Freeze premise, quantity, domain, method, complete errors, controls, useful comparison, evidence standard and finite limit under plan r3 section 6 |
+| Stop or revision | Record an identity-only outcome at that scope; a different mechanism or larger target requires a visible scope revision |
+| Model routing | B03: GPT-6 Astra (existing plan recommends Astra/ultra); a subsequently fixed E09/E10: GPT-6.1 Sol; these are recommendations, not recorded actual settings |
+
+Green acquisition is not a second active candidate in this pass. It
+remains conditional on a separately stated useful correlated comparison.
+The earlier r3 two-approach pass and this one-candidate pass are complete.
+Neither allowance is reset. E11 is complete at production scope; E09/E10
+remain unissued. A different mechanism requires a visible scope revision.
+
+**Earlier 10 November documentation alignment (chat0007):** at the author's request, the
+current overview now centers the joint primitive formula, and this
+register places live status and the next-pass specification before dated
+history. [Alignment19](handoffs/19_TND_D_OVERVIEW_PROGRESS_ALIGNMENT_20261110.json)
+records the change. E11 Return18 remains an immutable snapshot of its
+original completed artifacts; subsequent edits to these two live files
+are recorded here rather than rewriting that return. Same chat0007,
+prepared for Edward Baker with OpenAI Codex assistance; actual model/effort
+unavailable.
+
+## Historical dispositions and authorizations
+
+The dated material below preserves earlier task states and authorizations.
+Words such as “current”, “ready”, “active” and “unexecuted” describe the
+state at that historical entry. The current disposition, live table and
+completed-pass specification above govern when an older entry differs.
+
+## Historical B03 modular activation, 10 November 2026
+
+At Edward Baker's request, **[B] TND-D-B03 is active** under
+Continuation07's one-candidate scope and the 10 November overview/progress
+alignment. The selected candidate is simultaneous Poisson inversion of
+the complete primitive product, with its continuum/axis subtractions,
+transferred test and unit-sphere face retained. One analytical pass and one
+local check; no second mechanism or manuscript expansion. E09/E10 remain
+unissued until the full r3 gate is met. [Input20](handoffs/20_TND_D_B03_MODULAR_INPUTS_20261110.json)
+binds the actual updated intake and finite check plan.
+
+Prepared for **Edward Baker** with OpenAI Codex LLM assistance, direct
+chat0008, thread `01a1c3dc-12e9-7023-a3e1-bc27d98d94d0`. Actual model and
+effort are unavailable in the registered source metadata; Astra is the
+inherited recommendation, not inferred session provenance.
+
+## Historical E11 disposition — complete, 10 November 2026
 
 **[E] TND-D-E11 complete at manuscript/continuation production scope.**
 The [29-page manuscript](../manuscript/README.md) now includes Section 9,
@@ -24,68 +137,6 @@ and the new build record identify the final artifacts. Prepared for Edward
 Baker with OpenAI Codex assistance, chat0007, session begun 9 November;
 actual model/effort unavailable. No new signed-estimate search, numerical
 campaign, manuscript snapshot or Git commit occurred.
-
-## Current register
-
-| ID | Type/model and reason | Current status | Dependency/specification |
-| --- | --- | --- | --- |
-| TND-D-B01 | B — Astra; construction selection | Complete at conceptual/contract scope | Original Decision01 and request retained |
-| TND-D-E01 | E — Sol; fixed realization | Complete; accepted within conditional ideal-operation scope by E02 | Original E01 r1 and E02 Review01 unchanged |
-| TND-D-E02 | E — Sol; realization audit | Complete, accepted without mathematical correction | Same-assistant/same-chat internal assessment |
-| TND-D-B02 | B — Astra/ultra; mechanism/target choice | **Complete at bounded decision scope** | [Decision02](../brainstorm/notes/02_TND_D_B02_SOURCE_SCORE_AND_COUNT_PHASE_DECISION_20261106.md), [return](handoffs/07_TND_D_B02_PHASE2_RETURN_20261106.json) |
-| TND-D-E03 | E — Sol 6.1/ultra; fixed high-count theorem | **Complete r1; accepted within scope by E04** | [Note06](../notes/06_TND_D_E03_HIGH_COUNT_LOCALIZATION_20261106.md), [return](handoffs/08_TND_D_E03_R1_RETURN_20261106.json) |
-| TND-D-E04 | E — fresh Sol 6.1/ultra; fixed review/integration | **Complete; no mathematical correction** | [Review03](../reviews/03_TND_D_E04_HIGH_COUNT_ASSESSMENT_20261106.md), [return](handoffs/09_TND_D_E04_R1_RETURN_20261106.json); separate same-model internal review |
-| TND-D-E05 | E — Sol recommended; manuscript synthesis | Complete at production scope, Astra/max | Initial 18-page manuscript; original identity preserved in E08 inputs, later integration recorded separately as E08 |
-| TND-D-E06 | E — Sol 6.1/ultra; fixed count-tail payment | **Complete r1; accepted by E07 without correction** | [Note07](../notes/07_TND_D_E06_COMPLETE_COUNT_TAIL_20261106.md), [return](handoffs/10_TND_D_E06_R1_RETURN_20261106.json) |
-| TND-D-E07 | E — separate Sol 6.1/ultra; tail assessment | **Complete; no corrections** | [Review04](../reviews/04_TND_D_E07_COMPLETE_COUNT_TAIL_ASSESSMENT_20261106.md), [return](handoffs/11_TND_D_E07_R1_RETURN_20261106.json) |
-| TND-D-E08 | E — Sol 6.1/ultra TeX; Astra/ultra integration/production | **Complete at production scope; 24-page build checked** | [Request](handoffs/13_TND_D_E08_MANUSCRIPT_AND_CONTINUATION_REQUEST_20261106.md), [return](handoffs/13_TND_D_E08_RETURN_20261106.json) |
-| TND-D-B03 | B — Astra/ultra recommended; joint primitive/lattice signed estimate | **r3 and representation addendum complete; next bounded joint estimate pass ready, unactivated** | [Continuation07](../brainstorm/notes/07_TND_D_PRIMITIVE_LATTICE_NEXT_SESSION_20261109.md) specifies the next session; [Brainstorm06](../brainstorm/notes/06_TND_D_TWO_SOURCE_PRIMITIVE_IBP_AND_LATTICE_20261109.md), original Decision04 and return16 preserved; E09 unissued |
-| TND-D-E09 | E — GPT-6.1 Sol/ultra recommended; fixed proof or calculation | **Unissued placeholder** | B03 must freeze the independent premise, useful consequence, complete errors, controls and matched comparison |
-| TND-D-E10 | E — separate GPT-6.1 Sol/ultra assessment recommended | **Unissued placeholder** | Depends on an issued E09 contract and return; one assessment/local correction |
-| TND-D-E11 | E — GPT-6.1 Sol recommended; fixed manuscript/continuation production | **Complete r1 at production scope; 29-page build/render checked** | [Review07](../reviews/07_TND_D_E11_PRIMITIVE_MANUSCRIPT_INTEGRATION_20261109.md), [Continuation07](../brainstorm/notes/07_TND_D_PRIMITIVE_LATTICE_NEXT_SESSION_20261109.md), [Input17](handoffs/17_TND_D_E11_INPUTS_20261109.json), [Return18](handoffs/18_TND_D_E11_RETURN_20261110.json); proof-author evidence unchanged |
-
-## Next B03 pass specification — ready, unactivated
-
-**One joint primitive/lattice comparison**, as fixed in
-[Continuation07](../brainstorm/notes/07_TND_D_PRIMITIVE_LATTICE_NEXT_SESSION_20261109.md).
-This table summarizes that handoff without issuing a second contract.
-
-| Item | Current specification |
-| --- | --- |
-| Question | Can one theta-product/modular reorganization control the full A0 bulk integral and boundary curvature jointly, with a useful signed consequence? |
-| Starting input | Brainstorm06 equations (7), (7a), (8)–(13); manuscript Section 9, Theorem 9.2; Note09's complete Gaussian error |
-| Fixed data | Canonical Phi and cosine/Newman law; F_lambda=e^(lambda u²)Phi; fixed h_*=H_(1/2)(0); all theta modes and source tails |
-| Initial estimating class | Hypothetical double events lambda* in [1/8,3/8], k* in [1/2,100], 0<epsilon<=1/16, evaluated at (lambda,X,v)=(lambda*-epsilon,k*,epsilon); no curvature floor or event-free certificate |
-| Work limit | One candidate, one conceptual/analytical pass and one local clarification/check; at most one E09 successor |
-| Required payment | Full transferred test, unit-sphere boundary, axis subtractions, transformed domain, complete lattice/derivative tails and curvature-dependent resolving error |
-| Comparison and controls | Same-information scalar baseline may use the identical primitive formula; screen actual premises and inequalities on the relevant control witness domains |
-| Useful return | One independently justified arithmetic lemma/proof strategy and declared signed consequence, or the precise remaining gap |
-| E09 gate | Freeze premise, quantity, domain, method, complete errors, controls, useful comparison, evidence standard and finite limit under plan r3 section 6 |
-| Stop or revision | Record an identity-only outcome at that scope; a different mechanism or larger target requires a visible scope revision |
-| Model routing | B03: GPT-6 Astra (existing plan recommends Astra/ultra); a subsequently fixed E09/E10: GPT-6.1 Sol; these are recommendations, not recorded actual settings |
-
-Green acquisition is not a second active candidate in this pass. It
-remains conditional on a separately stated useful correlated comparison.
-The earlier r3 two-approach pass is complete and is not reset. E11 is
-complete at production scope; E09/E10 remain unissued. No new research
-work is activated by this documentation refresh.
-
-**10 November documentation alignment:** at the author's request, the
-current overview now centers the joint primitive formula, and this
-register places live status and the next-pass specification before dated
-history. [Alignment19](handoffs/19_TND_D_OVERVIEW_PROGRESS_ALIGNMENT_20261110.json)
-records the change. E11 Return18 remains an immutable snapshot of its
-original completed artifacts; subsequent edits to these two live files
-are recorded here rather than rewriting that return. Same chat0007,
-prepared for Edward Baker with OpenAI Codex assistance; actual model/effort
-unavailable.
-
-## Historical dispositions and authorizations
-
-The dated material below preserves earlier task states and authorizations.
-Words such as “current”, “ready”, “active” and “unexecuted” describe the
-state at that historical entry. The current disposition, live table and
-next-pass specification above govern when an older entry differs.
 
 ## B03 primitive comparison return, 9 November 2026
 

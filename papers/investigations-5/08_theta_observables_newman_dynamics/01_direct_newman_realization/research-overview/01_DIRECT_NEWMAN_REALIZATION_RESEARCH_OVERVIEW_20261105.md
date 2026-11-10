@@ -1,25 +1,35 @@
 # Direct radial-spectral Newman realization: research overview
 
-10 November 2026, America/New_York. Prepared for **Edward Baker** with
-substantial OpenAI Codex LLM assistance, direct chat0007, thread
-`01a1c389-3fe9-7930-8223-c935cc1920e1`. Actual model and reasoning effort
-are unavailable in accessible capture metadata.
+10 November 2026, America/New_York. Current update prepared for **Edward
+Baker** with substantial OpenAI Codex LLM assistance, direct chat0008,
+thread `01a1c3dc-12e9-7023-a3e1-bc27d98d94d0`. Actual model and reasoning
+effort are unavailable in registered metadata. The earlier chat0007
+alignment is preserved in [alignment19][alignment-current].
 
-**Current focus: obtain a source-specific signed estimate from the joint
-primitive lattice and boundary formula for A0.** The three-dimensional
-integration by parts is now carried out on both source factors. Its exact
-rank-two lattice representation is developed in [Brainstorm06][primitive-current]
-and Section 9, Theorem 9.2, of the [29-page manuscript](../manuscript/README.md).
-The representation and convergence are proved with proof-author checking;
-the favorable signed estimate remains open.
+**Current disposition: the bounded simultaneous-modular B03 pass is
+complete with a scoped stop; the joint signed estimate remains open.**
+[Note11][modular-current] preserves the exact two-source formula under
+Poisson inversion, including axis subtractions and the curvature face.
+For the same cutoffs, its specified independent absolute-tail envelopes
+are no smaller than the original-lattice envelopes. Fixed dual prefixes
+also lose full-domain absolute integrability on the resolving class.
+These results concern the stated truncation/absolute-payment methods;
+no exclusion of joint signed modular estimates follows.
 
-[Continuation07][primitive-next] specifies the next bounded B03 pass,
-recommended for GPT-6 Astra. E11 manuscript/continuation production is
-complete, with [same-assistant production checking][production-current].
-E09/E10 remain unissued. [Plan r3][plan-r3] retains the fixed-execution
-gates; Continuation07 supplies the author-requested new primitive scope.
-The exhausted earlier r3 pass is preserved as history, not restarted.
-The [sole progress register][progress] owns live task status.
+[Decision/Continuation08][modular-next] is the current model-change
+handoff. No E09 contract is ready. A new independent signed input or an
+explicitly revised finite scope is needed before another B03 pass;
+GPT-6 Astra remains the conceptual recommendation. E09/E10 remain
+unissued. [Plan r3][plan-r3] retains their execution gates, and the
+[sole progress register][progress] owns live status. [Review08][modular-review]
+is proof-author local checking, not a separate assessment.
+
+The original primitive representation and convergence remain proved
+with proof-author checking in [Brainstorm06][primitive-current] and
+Section 9, Theorem 9.2, of the [29-page manuscript](../manuscript/README.md).
+E11 is complete at production scope with its existing
+[same-assistant production check][production-current]. This pass does
+not change the manuscript, realization, observation or normalization.
 
 ## Established work and its evidence
 
@@ -30,6 +40,7 @@ The [sole progress register][progress] owns live task status.
 | Complete count remainder | [Note07][tail-current], accepted by [E07][tail-review-current], bounds H and its first real derivative on the closed physical slab and all real k | Absolute error, identical scalar baseline; no relative collision margin or practical computed cutoff |
 | Gaussian collision diagnostic and interface | [Note09][gaussian-current] pays the local double-event signal and count/first-jet interface; proof-author checking | The tested estimate discarding positive contributions fails; this does not exclude all signed methods |
 | Two-source primitive and lattice formula | [Brainstorm06][primitive-current] and manuscript Theorem 9.2 retain all transferred derivatives, boundary curvature and complete tails; proof-author checking | No joint signed estimate or comparison gain has been established |
+| Simultaneous modular comparison | [Note11][modular-current] proves the full transformed formula, matched tail-envelope ordering and fixed-prefix integrability limitation; proof-author local checking | Scoped to the specified independent absolute-tail method; no signed margin, all-algorithm bound or measured runtime gain |
 | Manuscript integration | E11 gives a clean, rendered 29-page manuscript and the next-session handoff | Production checking does not upgrade mathematical evidence |
 
 The scientific goal remains to determine whether the complete canonical
@@ -49,7 +60,8 @@ For the unnormalized source \(F_\lambda(u)=e^{\lambda u^2}\Phi(u)\), let
 where w_v is the normalized Gaussian of variance v>0. With
 \(\alpha=\gamma t=1/2-\lambda>0\) and fixed \(h_*=H_{1/2}(0)\),
 \[
- A_0=h_*^2\int w_v[(d_0')^2+\alpha^{-1}d_0d_1],dk.
+ A_0=h_*^2\int_{\mathbb R}w_v(k-X)
+ [(d_0')^2+\alpha^{-1}d_0d_1]\,dk.
 \]
 This is the same neighboring-count diagnostic as before. Products of
 analytical traces do not specify extra same-trial measurement access.
@@ -89,8 +101,9 @@ The opportunity is to use a theta-product or modular identity on the
 **combined bulk and boundary expression**, before taking separate absolute
 bounds. This is a specified candidate for analysis, not a proved favorable
 sign. The boundary has size independent of the small resolving variance
-near a hypothetical double event: if a=H''(lambda*,k*) != 0, it tends to
--a/16 while A0 tends to zero. The next estimate must retain that cancellation.
+near a hypothetical double event: if \(a=H_{\lambda_*}''(k_*)\ne0\), it tends
+to \(-a/16\) while \(A_0\) tends to zero. The next estimate must retain that
+cancellation.
 
 The initial comparison remains the declared double-event class
 \[
@@ -113,31 +126,28 @@ Compare with direct scalar analysis using the same information, including
 the same primitive identity. Positive primitives, full endpoint
 normalization and smaller absolute errors alone do not supply the missing
 signed premise. The earlier negative-region result only limits the tested
-sign-discarding method; it does not stop this lattice continuation.
+sign-discarding method; it does not exclude other joint lattice methods.
 
-## Next pass and completion boundary
+## Completed pass and continuation gate
 
 | Task | Type and recommended model | Current disposition |
 | --- | --- | --- |
-| TND-D-B03 joint primitive/lattice comparison | B — GPT-6 Astra; one consequential choice of arithmetic reorganization | Ready for the author's next session, unactivated; specification in [Continuation07][primitive-next] |
+| TND-D-B03 joint primitive/lattice comparison | B — GPT-6 Astra; independent signed mechanism choice | Bounded modular pass complete with scoped stop; conditional continuation in [Continuation08][modular-next] |
 | TND-D-E09 | E — GPT-6.1 Sol; fixed proof/calculation | Unissued until B03 supplies the full contract required by plan r3 section 6 |
 | TND-D-E10 | E — separate GPT-6.1 Sol assessment | Unissued; depends on an issued E09 contract and return |
 | TND-D-E11 | E — manuscript and continuation production | Complete; no signed-estimate execution or evidence upgrade |
 
-The next B03 scope is **one joint theta-product/modular reorganization,
-one conceptual/analytical pass, one local clarification or check, and at
-most one E09 successor contract**. This is Continuation07's new scope;
-the earlier two-approach r3 allocation was already used. Preserve the
-full test, axis subtractions, sphere term, transformed integration domain
-and convergence before regrouping sums or integrals. Select a domain and
-useful consequence before numerical evaluation. A changed mechanism needs
-a visible scope revision. A return may identify a precise remaining gap;
-an exact reformulation alone is not a signed gain.
+Continuation07's **one joint theta-product/modular reorganization,
+one analytical pass and one local check** have now been used. The return
+is a quantitative comparison of specified absolute payments and a precise
+remaining signed-cancellation gap; no E09 successor was issued. A new
+mechanism or larger target requires a visible scope revision. More dual
+cutoffs or another exact rewriting alone do not supply that input.
 
 The Green acquisition comparison remains an optional fallback requiring a
 new useful correlated enclosure or matched cost comparison. It is not a
-second active approach in this one-candidate pass. OA deflation, OC joint
-source interfaces and the auxiliary realization retain their separately
+second approach activated by the completed one-candidate pass. OA deflation,
+OC joint source interfaces and the auxiliary realization retain their separately
 recorded scopes; [Brainstorm03][brainstorm-current] routes to those inputs.
 No sibling task is activated by the direct continuation.
 
@@ -147,7 +157,8 @@ Read the [result index][results] and [avoid index][avoid], particularly
 [theta arithmetic14][theta], [controls12][controls], [local geometry13][geometry-current],
 [target classification01][a01], [premise screening02][a02],
 [scoped exclusions07][a07], [joint estimates12][joint-estimates-current]
-and [utility20][utility-current]. Brainstorm06 section 5 screens the
+and [utility20][utility-current]. Note11 section 5 updates the screen;
+Brainstorm06 section 5 records the original premises. These screens concern the
 actual primitive/arithmetic/test premises. Reflected and positive-primitive
 controls can retain the normalized Green transfer; weighted-square and
 finite-prime controls can retain selected arithmetic; variable-kernel
@@ -156,16 +167,17 @@ the specific premise or quantitative bound each relevant witness fails.
 Failure of the literal theta identity is not by itself proof of failure
 of a future inequality.
 
-The mathematical sources, issued plan, manuscript/build and frozen
-handoff records keep their established versions and evidence. This
-10 November overview/progress alignment is documentation maintenance,
-recorded in [alignment19][alignment-current], with no new research pass.
+The inherited mathematical sources, issued plan, manuscript/build and
+frozen handoffs keep their established versions and evidence. The earlier
+10 November alignment19 was documentation maintenance. The subsequent
+B03 pass is recorded separately in [Return21][modular-return]. No
+investigation closure or manuscript milestone is asserted.
 
 ## Historical dispositions on 9 November 2026
 
 The following announcements preserve what was current at their dates.
 Their continuation links and prospective instructions are historical;
-the current overview above, sole register and Continuation07 govern the
+the current overview above, sole register and Continuation08 govern the
 next session.
 
 **Primitive addendum — later 9 November 2026.** At Edward Baker's request,
@@ -366,3 +378,8 @@ Naming the canonical input is not a quantitative collision restriction. Any futu
 [joint-estimates-current]: ../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md
 [utility-current]: ../../../../../avoid/20_volume_without_a_gain.md
 [alignment-current]: ../research-progress/handoffs/19_TND_D_OVERVIEW_PROGRESS_ALIGNMENT_20261110.json
+
+[modular-current]: ../notes/11_TND_D_B03_SIMULTANEOUS_MODULAR_COMPARISON_20261110.md
+[modular-next]: ../brainstorm/notes/08_TND_D_B03_MODULAR_DECISION_AND_MODEL_CONTINUATION_20261110.md
+[modular-review]: ../reviews/08_TND_D_B03_MODULAR_LOCAL_CHECK_20261110.md
+[modular-return]: ../research-progress/handoffs/21_TND_D_B03_MODULAR_RETURN_20261110.json

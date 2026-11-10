@@ -86,3 +86,15 @@ two-source transfer, Note09's Gaussian interface and the inherited DLMF
 modular identity. The new manuscript section proves its exact identities
 and pays boundaries/tails; [Review07](../reviews/07_TND_D_E11_PRIMITIVE_MANUSCRIPT_INTEGRATION_20261109.md)
 is same-assistant production checking, without a new signed estimate.
+
+
+## B03 simultaneous-inversion use — 10 November 2026
+
+Prepared for Edward Baker with OpenAI Codex LLM assistance, direct chat0008;
+actual model/effort unavailable. [Note11](../notes/11_TND_D_B03_SIMULTANEOUS_MODULAR_COMPARISON_20261110.md)
+reuses the canonical DLMF reference above. Fresh primary HTML passage
+check on 10 November: [20.7.32 and the principal-root convention](https://dlmf.nist.gov/20.7#E32),
+specialized at z=0, tau=ir², r>0. No finite-prefix modular identity is
+imported. The product transformation, tail ordering and relative-cutoff
+comparison are derived in Note11. This is a selected passage check, not
+full-source review; no new article or PDF copy is added.
