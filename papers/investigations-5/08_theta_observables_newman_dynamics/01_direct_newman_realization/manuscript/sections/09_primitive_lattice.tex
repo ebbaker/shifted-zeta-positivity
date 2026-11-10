@@ -1,0 +1,254 @@
+\section{A Gaussian collision test through two theta primitives}
+\label{sec:primitive}
+
+The complete source permits an exact transfer of a quadratic collision
+observation to undifferentiated theta primitives. We incorporate the
+two-source calculation of \cite{TNDPrimitiveLattice}, using the radial
+identity and boundary accounting of \cite{RadialThetaPrimitive,RadialThetaIBP}.
+The integer-index polynomial factors disappear from the primitive product;
+derivatives act on an explicit test, and a boundary curvature term remains.
+These identities retain proof-author checking. Their signed estimating
+consequence is still open.
+
+\subsection{The Gaussian observation and its source kernel}
+For real $\lambda,x$ and $v>0$, put
+\begin{align}
+ w_v(s)&=(2\pi v)^{-1/2}\ee^{-s^2/(2v)},\qquad
+ F_\lambda(u)=\ee^{\lambda u^2}\Phi(u),\label{eq:primitiveweight}\\
+ A_0(\lambda,x,v)&=\int_\R w_v(k-x)
+       [H_\lambda'(k)^2-H_\lambda(k)H_\lambda''(k)]\dd k.
+ \label{eq:A0definition}
+\end{align}
+Here $x$ is a scalar observation center, distinct from the position operator
+$X$, and primes on $H$ denote readout derivatives. The identities hold at
+every finite real $\lambda$; this does not extend the physical apparatus
+beyond its specified time slab. On that slab, with $\alpha=\gamma t>0$
+and $h_*=H_{1/2}(0)$, \eqref{eq:dj} gives
+\begin{equation}\label{eq:A0count}
+ A_0=h_*^2\int_\R w_v(k-x)
+       [(\partial_kd_0)^2+\alpha^{-1}d_0d_1]\dd k.
+\end{equation}
+This is a product of analytical traces, not a joint probability for two
+different count outcomes in one trial.
+
+\begin{proposition}[Complete source pairing]\label{prop:A0source}
+Define $g_{x,v}(s)=\ee^{-vs^2/2}\cos(xs)$ and
+\begin{align}
+ K_{x,v}(p,q)&=\frac14[(p-q)^2g_{x,v}(p+q)
+                         +(p+q)^2g_{x,v}(p-q)],\label{eq:A0K}\\
+ T_{\lambda,x,v}(p,q)&=\ee^{\lambda(p^2+q^2)}K_{x,v}(p,q).
+ \label{eq:A0T}
+\end{align}
+Then
+\begin{align}
+ A_0&=\frac18\iint_{\R^2}(p-q)^2F_\lambda(p)F_\lambda(q)
+       g_{x,v}(p+q)\dd p\dd q,\label{eq:A0fullsource}\\
+ A_0&=\int_0^\infty\!\int_0^\infty
+       \Phi(p)\Phi(q)T_{\lambda,x,v}(p,q)\dd p\dd q.
+ \label{eq:A0folded}
+\end{align}
+The test $T$ is symmetric in $p,q$ and even in each variable separately.
+\end{proposition}
+\begin{proof}
+Evenness gives $H_\lambda(k)=\tfrac12\int_\R F_\lambda(u)\ee^{\ii ku}\dd u$.
+In the double integral for $H'^2-HH''$, symmetrizing $-pq+q^2$ gives
+$(p-q)^2/2$. The two field factors $1/2$ produce the coefficient $1/8$.
+Gaussian integration uses the exact identity
+$\int_\R w_v(k-x)\ee^{\ii ks}\dd k=\ee^{\ii xs-vs^2/2}$.
+Taking real parts proves \eqref{eq:A0fullsource}; reflection of the four
+quadrants proves \eqref{eq:A0folded}. Complete source moments justify all
+interchanges. No fluctuating variable has been replaced by its mean.
+\end{proof}
+
+\subsection{The radial primitive and its unit-sphere trace}
+For $u\ge0$, set
+\begin{equation}\label{eq:radialprimitive}
+ r=\ee^{2u},\qquad A(r)=\sum_{n\ge1}\ee^{-\pi n^2r^2},\qquad
+ \psi(u)=\ee^u A(\ee^{2u}),\qquad D=\partial_u^2-1.
+\end{equation}
+The radial Laplacian in three dimensions satisfies
+\begin{equation}\label{eq:radialsource}
+ \Delta_3=\partial_r^2+2r^{-1}\partial_r,\qquad
+ \Phi(u)=\tfrac12r^{5/2}\Delta_3A(r),\qquad D\psi=8\Phi.
+\end{equation}
+Indeed $\Delta_3\ee^{-cr^2}=(4c^2r^2-6c)\ee^{-cr^2}$ and the
+change $r=\ee^{2u}$ gives $D\psi=4r^{5/2}\Delta_3A$.
+Spatial dimension three does not change the rank-one arithmetic index.
+
+Write $\Theta(r)=1+2A(r)$. The modular identity
+$\Theta(r)=r^{-1}\Theta(1/r)$, the zero-argument specialization of
+\cite[20.7.32]{DLMFThetaModular}, implies
+\begin{equation}\label{eq:primitiveendpoint}
+ A'(1)=-\tfrac12A(1)-\tfrac14,\qquad
+ \psi(0)=A(1),\qquad \psi'(0)=-\tfrac12.
+\end{equation}
+For a twice differentiable test $f$ whose derivatives are dominated by
+the complete theta tail, integration by parts gives
+\begin{equation}\label{eq:primitiveGreen}
+ \int_0^\infty\Phi f\dd u
+ =\frac{f(0)}{16}+\frac{A(1)f'(0)}8
+   +\frac18\int_0^\infty\psi(f''-f)\dd u.
+\end{equation}
+The boundary is $[\psi'f-\psi f']_0^\infty$. Equivalently, with
+$h(r)=r^{-1/2}f(\log r/2)$, the right side is
+\begin{equation}\label{eq:primitiveRadialGreen}
+ \frac14\int_1^\infty A(r)\Delta_3h(r)r^2\dd r
+ +\frac14\{-A'(1)h(1)+A(1)h'(1)\}.
+\end{equation}
+Thus the endpoint is the unit-sphere contribution of the three-dimensional
+Green identity. The positive-time factor remains in the test, leaving the
+rapidly decreasing primitive unchanged.
+
+\subsection{Transferring both source factors}
+\begin{theorem}[Two primitives and the complete boundary]\label{thm:twoPrimitive}
+Let $D_p=\partial_p^2-1$, $D_q=\partial_q^2-1$, and let $T$ be
+\eqref{eq:A0T}. Set
+\begin{equation}\label{eq:primitiveface}
+ f(u)=T(0,u)=\tfrac12u^2\ee^{(\lambda-v/2)u^2}\cos(xu).
+\end{equation}
+All integrals below converge absolutely, and
+\begin{align}
+ A_0={}&\frac1{64}\left[
+  \iint_{[0,\infty)^2}\psi(p)\psi(q)D_pD_qT(p,q)\dd p\dd q
+  +\int_0^\infty\psi(u)(f''-f)(u)\dd u\right],
+  \label{eq:twoPrimitiveFace}\\
+ ={}&\frac1{64}\iint_{[0,\infty)^2}
+       \psi(p)\psi(q)D_pD_qT(p,q)\dd p\dd q
+       -\frac1{16}H_{\lambda-v/2}''(x).
+  \label{eq:twoPrimitiveCurvature}
+\end{align}
+\end{theorem}
+\begin{proof}
+Apply \eqref{eq:primitiveGreen} in each variable of \eqref{eq:A0folded}.
+Separate evenness of $T$, preserved by the other variable's $D$ operator,
+makes every first-derivative endpoint trace zero. The remaining terms are
+\begin{align*}
+ 64A_0={}&\iint\psi(p)\psi(q)D_pD_qT(p,q)\dd p\dd q\\
+ &+\tfrac12\int\psi(q)D_qT(0,q)\dd q
+  +\tfrac12\int\psi(p)D_pT(p,0)\dd p+\tfrac14T(0,0).
+\end{align*}
+The corner vanishes because $T(0,0)=0$, and symmetry combines the two
+faces into the last integral in \eqref{eq:twoPrimitiveFace}. Since
+$f(0)=f'(0)=0$, another use of \eqref{eq:primitiveGreen} gives
+\[
+ \int\psi(f''-f)\dd u=8\int\Phi f\dd u
+ =4\int_0^\infty u^2\ee^{(\lambda-v/2)u^2}\Phi(u)\cos(xu)\dd u
+ =-4H_{\lambda-v/2}''(x),
+\]
+proving \eqref{eq:twoPrimitiveCurvature}.
+
+For convergence, $n^2-1\ge3(n-1)$ gives, for $r\ge1$ and $u\ge0$,
+\begin{equation}\label{eq:primitiveDecay}
+ A(r)\le\frac{\ee^{-\pi r^2}}{1-\ee^{-3\pi r^2}},\qquad
+ \psi(u)\le\frac{\ee^{u-\pi\ee^{4u}}}{1-\ee^{-3\pi}}.
+\end{equation}
+Derivatives of $\psi$ have the same double-exponential decay with fixed
+additional factors. On compact real parameter sets with $v\ge0$, all
+derivatives of $T$ used here are bounded by
+$C(1+p+q)^6\ee^{L(p^2+q^2)}$, where $L=\max(0,\sup\lambda)$.
+Equation~\eqref{eq:primitiveDecay} pays every derivative transfer,
+vanishing far-end boundary and interchange, and permits $v\downarrow0$.
+\end{proof}
+
+For $a=p+q$, $b=p-q$, put $h(s)=s^2\ee^{\lambda s^2/2}$ and
+$j(s)=\ee^{(\lambda-v)s^2/2}\cos(xs)$. The transferred test is explicit:
+\begin{align}
+ T&=\tfrac14\{h(b)j(a)+h(a)j(b)\},\label{eq:primitiveSeparatedTest}\\
+ D_pD_q&=\partial_a^4+\partial_b^4-2\partial_a^2\partial_b^2
+          -2\partial_a^2-2\partial_b^2+1.
+ \label{eq:primitiveTransferredOperator}
+\end{align}
+The quadrant becomes $a\ge|b|$, with $\dd p\dd q=\dd a\dd b/2$;
+the separated test does not give a product integration domain.
+
+\subsection{The exponential lattice and complete truncation payment}
+The primitive product is exactly
+\begin{equation}\label{eq:primitiveLattice}
+ \psi(p)\psi(q)=\ee^{p+q}\sum_{m,n\ge1}
+      \exp\{-\pi(m^2\ee^{4p}+n^2\ee^{4q})\}.
+\end{equation}
+All square-index polynomial prefactors have moved into
+\eqref{eq:primitiveTransferredOperator}. In radial coordinates,
+\begin{equation}\label{eq:primitiveThetaProduct}
+ A(r)A(s)=\sum_{m,n\ge1}\ee^{-\pi(m^2r^2+n^2s^2)}
+ =\tfrac14\{\Theta(r)\Theta(s)-\Theta(r)-\Theta(s)+1\}.
+\end{equation}
+This is the positive-quadrant part of a rectangular rank-two Gaussian
+lattice. The two spatial operators can be placed on $\R^3\times\R^3$
+without replacing the arithmetic by a rank-six lattice.
+
+Set $\widehat T(r,s)=T(\log r/2,\log s/2)$,
+$\widehat f(r)=f(\log r/2)$ and $\mathscr D_r=(2r\partial_r)^2-1$.
+The radial version of \eqref{eq:twoPrimitiveFace} is
+\begin{align}
+ A_0={}&\frac1{256}\int_1^\infty\!\int_1^\infty
+ \frac{A(r)A(s)}{\sqrt{rs}}\mathscr D_r\mathscr D_s\widehat T(r,s)
+       \dd r\dd s\notag\\
+ &+\frac1{128}\int_1^\infty\frac{A(r)}{\sqrt r}
+                  \mathscr D_r\widehat f(r)\dd r.
+ \label{eq:primitiveRadialPair}
+\end{align}
+Absolute convergence permits summation under this integral. For integers $N\ge0$,
+\begin{equation}\label{eq:primitiveTail}
+ R_N(r):=\sum_{n>N}\ee^{-\pi n^2r^2}
+ \le\frac{\ee^{-\pi(N+1)^2r^2}}
+           {1-\ee^{-\pi(2N+3)r^2}}\qquad(r\ge1).
+\end{equation}
+Compare successive square gaps with $2N+3$ to prove this bound. With
+$A_N=A-R_N$, the omitted product is at most
+$R_N(r)A(s)+A(r)R_N(s)$. Its absolute integral against the bulk test in
+\eqref{eq:primitiveRadialPair}, divided by 256, plus the face integral
+with $R_N$, divided by 128, pays the complete truncation. This approximates
+the transferred canonical formula with its exact endpoint coefficient.
+A finite $A_N$ does not itself inherit the modular endpoint identity.
+No numerical cutoff or margin is selected.
+
+The transformation
+$\Theta(r)\Theta(s)=(rs)^{-1}\Theta(1/r)\Theta(1/s)$ is available.
+The four terms in braces in \eqref{eq:primitiveThetaProduct} must remain
+combined: their separate large-radius integrals against the growing test
+need not converge. The time weight and the logarithmic cosine also remain.
+
+\subsection{Normalization, cancellation and the open estimate}
+Take $\lambda=x=0$ and $v\downarrow0$, and write
+$J_j=\int_0^\infty u^j\psi(u)\dd u$. The transfer gives
+\begin{equation}\label{eq:primitiveNormalization}
+ A_0=\frac{J_0J_2-2J_0^2+J_0-J_2/2}{64}
+ =\frac{1/2-J_0}{8}\,\frac{2J_0-J_2}{8}.
+\end{equation}
+The last factors are $\int\Phi$ and $\int u^2\Phi$ from
+\eqref{eq:primitiveGreen}, as required by $H'(0)^2-H(0)H''(0)$.
+Omitting the face term fails this check.
+
+The boundary is not generally small. If
+$H_{\lambda_*}(k_*)=H_{\lambda_*}'(k_*)=0$ and
+$a=H_{\lambda_*}''(k_*)\ne0$, then along
+$(\lambda,x,v)=(\lambda_*-\varepsilon,k_*,\varepsilon)$ it tends to
+$-a/16$, while $A_0$ tends to zero. On the initial event box in
+\cite{TNDB03Gaussian}, the complete-source diagnostic gives
+$A_0=-a^2\varepsilon/2+O(\varepsilon^{3/2})$, with an explicit
+curvature-dependent error there; no uniform curvature floor is assumed.
+Bulk and boundary must be controlled jointly to preserve this scale.
+
+Positive primitives alone do not separate theta from the collision
+controls. For any suitable positive half-line source $q$,
+\[
+ \psi_q(u)=8\int_u^\infty\sinh(s-u)q(s)\dd s>0,
+ \qquad \psi_q''-\psi_q=8q;
+\]
+a positive rescaling can arrange $\psi_q'(0)=-1/2$ without removing a
+double zero \cite{RadialThetaIBP}. Reflected and positive-primitive
+controls therefore test the generic transfer but lack the complete
+unit-coefficient primitive in \eqref{eq:primitiveThetaProduct}.
+Weighted-square and finite-prime controls can retain selected arithmetic
+while failing complete coefficients or full reflection. Euler-factor
+controls change the literal arithmetic and conductor. Fixed-amplitude,
+variable-kernel controls instead fail the cosine/Newman test
+\eqref{eq:A0T}. These are failed exact premises, not proof that a future
+quantitative inequality fails for each control.
+
+The established simplification removes square-index polynomial weights
+while retaining every derivative and boundary contribution. A
+source-specific signed estimate of their sum remains open. Direct scalar
+analysis may use the same identity; the representation alone establishes
+no comparison advantage or collision restriction.

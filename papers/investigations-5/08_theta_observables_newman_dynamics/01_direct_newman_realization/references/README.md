@@ -75,3 +75,14 @@ Prepared for Edward Baker with LLM assistance, primary **Astra/ultra**, proof an
 ## E08 manuscript and continuation use — 6 November 2026
 
 Primary **Astra/ultra**, TeX synthesis and separate local check **Sol 6.1/ultra**, direct chat0004. [Source-use receipt03](03_TND_D_E08_MANUSCRIPT_SOURCE_USE_20261106.md) records incorporation of the unchanged assessed Notes06/07, Reviews03/04, single score identity and prior MC03 attribution. No new external article, theorem or PDF is added; original canonical source records remain unchanged. The [24-page manuscript](../manuscript/README.md) and [Continuation08](../notes/08_TND_D_RESULTS_AND_B03_BRAINSTORM_CONTINUATION_20261106.md) preserve all evidence limits. The separate E08 transcription/production check is not a new specialist assessment.
+
+
+## E11 primitive manuscript use — 10 November 2026
+
+Prepared for Edward Baker with OpenAI Codex assistance, direct chat0007;
+actual model/effort unavailable. [Source-use04](04_TND_D_E11_PRIMITIVE_SOURCE_USE_20261109.md)
+records the original radial primitive/Green machinery, Brainstorm06's
+two-source transfer, Note09's Gaussian interface and the inherited DLMF
+modular identity. The new manuscript section proves its exact identities
+and pays boundaries/tails; [Review07](../reviews/07_TND_D_E11_PRIMITIVE_MANUSCRIPT_INTEGRATION_20261109.md)
+is same-assistant production checking, without a new signed estimate.

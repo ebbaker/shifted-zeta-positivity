@@ -106,3 +106,6 @@ register's installation receipt.
 - [Note04 — B02 signed Jensen and harmonic distance](04_TND_OC_B02_SIGNED_JENSEN_AND_HARMONIC_DISTANCE_20261107.md): exact gap bookkeeping, sharp local L1 constant and a scoped allowance floor. Proved in-note; author self-check only, E03 pending.
 
 - [23 — E14 analytical manuscript integration](23_TND_OC_E14_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261109.md): systematic development, general separated-cell width theorem, regime/evidence boundaries and outstanding tasks; proof-author checked.
+- [24 — E15 assessment calculations](24_TND_OC_E15_R1_ASSESSMENT_CALCULATIONS_20261109.md) records the local corrections and the conditional radius arithmetic.
+
+- [25 — E13 r2 certified Gaussian projection](25_TND_OC_E13_R2_CERTIFIED_GAUSSIAN_PROJECTION_20261109.md) records the interval, inherited scope and error payments.

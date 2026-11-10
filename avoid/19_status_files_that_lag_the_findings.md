@@ -133,3 +133,11 @@ scalar arithmetic gate. [Author check19](../papers/investigations-5/08_theta_obs
 is integration checking, not independent acceptance. Keep live navigation,
 source statuses and the distinct hypotheses synchronized; do not let a polished
 manuscript silently turn one regime's theorem into another's.
+
+**9 November 2026 — E15 assessment status synchronization.** For Edward
+Baker with OpenAI Codex assistance, recorded thread GPT-6.1 Sol / ultra.
+[Assessment20](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/reviews/20_TND_OC_E15_R1_MANUSCRIPT_CLAIM_ASSESSMENT_20261109.md) records “Seven integrated groups accepted after one
+local correction pass.” The corrected manuscript and live register
+state the internal assessment scope together. The E14 proof-author
+checkpoint remains historical, and the endpoint arithmetic stays a
+separate pending task.

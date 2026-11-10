@@ -169,3 +169,18 @@ E02 configuration: OpenAI Codex; exact backend model/effort unavailable. Origina
 - **9 November 2026 — B10 r3 direct cell-range design.** Prepared for Edward Baker with substantial OpenAI Codex assistance, OC chat0011, recorded thread gpt-6-astra/max; per-turn backend unavailable. [Note22](notes/22_TND_OC_B10_R3_CELL_RANGES_AND_GAUSSIAN_WIDTH_20261109.md) proves geometric radius <1261/409600 for the imported 388-cell census. With arithmetic allowance 1/1000 and the complete tail, final radius is <0.0041. Same-assistant proof-author check; scalar pending. [Continuation25](continuation-notes/25_TND_OC_AFTER_B10_R3_AND_MODEL_CHANGE_20261109.md) issues bounded E13 r2 / Sol. No new source/kernel evaluation, manuscript milestone or investigation closure.
 
 - **9 November 2026 — E14 r1 analytical manuscript milestone.** User-authorized rewrite integrates B06/E08 joint-source accuracy, E10/E12 full marked-pair time regularity and Gaussian Notes18–22 into a 48-page analytical development. General separated-cell radius <N(10u+4v)sqrt(pi)/(sT); centroid theorem remains gap-free. Comparisons and finite census are appendices; scalar/profile and endpoint arithmetic remain pending. [Note23](notes/23_TND_OC_E14_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261109.md), [Review19](reviews/19_TND_OC_E14_MANUSCRIPT_AUTHOR_CHECK_20261109.md), return30 and Continuation26. For Edward Baker with substantial Codex assistance, recorded thread Astra/max, per-turn backend unavailable. Proof-author integration check only; prior acceptances retained. E15 / Sol recommended for bounded analytical assessment; E13 r2 remains supporting, unactivated.
+
+- **9 November 2026 — E15 r1 internal manuscript assessment.** Seven
+  integrated claim groups accepted after one local correction pass.
+  The local heat example specifies physical normalization. The
+  compact/Gaussian and source evidence scopes are retained.
+  [Assessment20](reviews/20_TND_OC_E15_R1_MANUSCRIPT_CLAIM_ASSESSMENT_20261109.md), [Note24](notes/24_TND_OC_E15_R1_ASSESSMENT_CALCULATIONS_20261109.md) and
+  [Continuation27](continuation-notes/27_TND_OC_AFTER_E15_ASSESSMENT_AND_MODEL_CHANGE_20261109.md). For Edward Baker with
+  OpenAI Codex assistance, OC chat0010, recorded Sol / ultra.
+
+- **9 November 2026 — E13 r2 finite Gaussian projection certificate.**
+  One 128-bit pass evaluated the 75,078 cell pairs under the inherited
+  winding scope. The final radius was about 0.000020585. [Note25](notes/25_TND_OC_E13_R2_CERTIFIED_GAUSSIAN_PROJECTION_20261109.md),
+  [assessment21](reviews/21_TND_OC_E13_R2_CELL_RANGE_EXECUTION_ASSESSMENT_20261109.md) and [Continuation28](continuation-notes/28_TND_OC_AFTER_E13_R2_CERTIFICATE_AND_MODEL_CHANGE_20261109.md).
+  For Edward Baker with OpenAI Codex assistance, OC chat0010, recorded
+  GPT-6.1 Sol / ultra.

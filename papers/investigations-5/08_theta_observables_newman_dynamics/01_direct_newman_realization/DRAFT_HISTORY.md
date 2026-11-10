@@ -1,8 +1,55 @@
 # Direct Newman realization: manuscript history
 
+**10 November 2026, E11 primitive manuscript integration:** the author-
+requested synthesis adds Section 9, Theorem 9.2, to the single evolving
+[29-page manuscript](manuscript/README.md). It derives the exact Gaussian
+source pairing, two-primitive transfer, retained boundary curvature,
+rank-two lattice and complete tails. [Review07](reviews/07_TND_D_E11_PRIMITIVE_MANUSCRIPT_INTEGRATION_20261109.md)
+records same-assistant consistency and rendering checks; the primitive
+results retain proof-author status and no signed estimate is claimed.
+[Continuation07](brainstorm/notes/07_TND_D_PRIMITIVE_LATTICE_NEXT_SESSION_20261109.md)
+sets one next B03 joint lattice comparison for GPT-6 Astra. E09/E10 remain
+unissued. [Input17](research-progress/handoffs/17_TND_D_E11_INPUTS_20261109.json)
+preserves the previous E08 build record. Prepared for Edward Baker with
+OpenAI Codex assistance, chat0007, session begun 9 November; actual
+model/effort unavailable. No snapshot folder or Git commit.
+
+**9 November 2026, author-requested primitive brainstorm:**
+[Brainstorm06](brainstorm/notes/06_TND_D_TWO_SOURCE_PRIMITIVE_IBP_AND_LATTICE_20261109.md)
+derives the exact two-source primitive transfer, rank-two lattice product
+and retained boundary curvature term, with complete convergence and a
+same-assistant rational normalization check. Research-note milestone only;
+the signed estimate remains open and manuscript/build are unchanged.
+Prepared for Edward Baker with OpenAI Codex assistance, direct chat0007;
+actual model/effort unavailable. Continuation guidance is in Brainstorm06 section 6.
+
+**9 November 2026, B03 r3 decision return:** [Decision04](brainstorm/notes/04_TND_D_B03_R3_SIGNED_PREMISE_DECISION_20261109.md)
+completes the bounded pass with a scoped stop and no E09/E10 contract.
+[Note09](notes/09_TND_D_B03_GAUSSIAN_INTERFACE_AND_SIGNED_KERNEL_SCREEN_20261109.md)
+checks the Gaussian interface and gives an explicit negative-part loss
+for the tested sign-discarding estimate; [Review06](reviews/06_TND_D_B03_LOCAL_CHECK_AND_SCOPE_ASSESSMENT_20261109.md)
+is same-assistant checking only. [Continuation10](notes/10_TND_D_AFTER_B03_CONTINUATION_AND_MODEL_CHANGE_20261109.md)
+is current. Research-note disposition only: no manuscript changes/build,
+investigation closure or result-summary promotion. Prepared for Edward
+Baker with OpenAI Codex assistance, direct chat0007; actual model/effort
+unavailable in accessible capture metadata.
+
 Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra / max**, 6 November 2026. Keep one evolving manuscript; future milestones may point to Git commits or tags. Detailed research history remains in linked notes and reviews.
 
 Later research and integration milestones below: primary **gpt-6-astra / ultra**, proof and separate internal review **gpt-6.1-sol / ultra**, direct chat0004.
+
+**9 November 2026, planning/navigation revision:** the author adopted
+[plan r3](research-plan/03_DIRECT_NEWMAN_REALIZATION_RESEARCH_PLAN_R3_20261109.md)
+following [brainstorm Note03](brainstorm/notes/03_TND_D_CROSS_BRANCH_RESEARCH_BRAINSTORM_20261109.md).
+The existing overview, sole register, README and continuation were
+synchronized; r2 is retained as historical. B03's remaining independent-premise
+decision is ready and E09/E10 remain unissued. Documentation milestone
+only; the manuscript/build and research evidence levels are unchanged.
+All links and reference labels in the twelve revised/new documents were
+checked, and r2's original body and the retained historical sections were
+verified preserved. No mathematical re-assessment is claimed by these checks.
+Prepared for Edward Baker with OpenAI Codex assistance, direct chat0006;
+actual backend model and effort unavailable in accessible metadata.
 
 **8 November 2026, filing correction:** the author-requested advisory
 was initially placed here using the mistaken folder name, then moved to

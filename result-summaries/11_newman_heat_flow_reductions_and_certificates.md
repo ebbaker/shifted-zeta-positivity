@@ -7,6 +7,17 @@ LLM assistance: **gpt-6-astra (Codex)**, reasoning effort **ultra**.
 
 ## Summary
 
+- **E13 r2 finite Gaussian projection certificate (9 November 2026).**
+  [Note25](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/notes/25_TND_OC_E13_R2_CERTIFIED_GAUSSIAN_PROJECTION_20261109.md) records “complete with a certified finite projection.”
+  Outward decimal endpoints are `[0.07282037202996673, 0.07286154195666860]`.
+  The exact radius is about 0.000020585. The complete 388-cell census
+  retains the inherited outward-winding scope, with both trace hashes
+  and count structure checked before the endpoint pass.
+  [Execution assessment21](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/reviews/21_TND_OC_E13_R2_CELL_RANGE_EXECUTION_ASSESSMENT_20261109.md) records the proof and
+  control gates. This pays the pending finite scalar from E15. The full
+  marked profile and Gaussian-window time estimate remain open.
+  For Edward Baker with Codex assistance, recorded GPT-6.1 Sol / ultra.
+
 - **Localized zero correlations, analytical manuscript milestone (9 November 2026).**
   The [current draft](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/manuscript/README.md) now integrates the
   full factorial hierarchy and two-sided source transfer with the same-center
@@ -25,6 +36,16 @@ LLM assistance: **gpt-6-astra (Codex)**, reasoning effort **ultra**.
   later E07 acceptance and older scalar results remain historical sources.
   E03/E04 remain pending. For Edward Baker with substantial Codex assistance;
   recorded thread **gpt-6-astra/max**, per-turn backend unavailable.
+
+- **E15 integrated manuscript assessment (9 November 2026).**
+  [Assessment20](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/reviews/20_TND_OC_E15_R1_MANUSCRIPT_CLAIM_ASSESSMENT_20261109.md) records “Seven integrated groups accepted after
+  one local correction pass.” It supersedes the E14 proof-author-only
+  status for the integrated manuscript claims. The earlier source
+  notes retain their recorded assessment scopes. The local heat
+  example now specifies physical-coordinate normalization. The
+  endpoint arithmetic and canonical scalar remain pending.
+  For Edward Baker with OpenAI Codex assistance, recorded thread
+  GPT-6.1 Sol / ultra, per-turn backend unavailable.
 
 - **Reductions (from imported Polymath theorems).** \(\Lambda>0\) forces a
   real double zero at time \(\Lambda\); RH \(\iff\) \((H_t,H_t')\) has no

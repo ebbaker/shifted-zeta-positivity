@@ -93,3 +93,6 @@ Shared setup inputs/returns remain at the parent. The sole status owner is resea
 - **30 / E14 r1**: [input versions](30_TND_OC_E14_R1_MANUSCRIPT_INPUTS_20261109.json), [return](30_TND_OC_E14_R1_MANUSCRIPT_RETURN_20261109.json); analytical manuscript integration with proof-author checking.
 - **31 / E13 r2 routing refresh**: [explicit amendment](31_TND_OC_E13_R2_ROUTING_REFRESH_20261109.json) to Inputs29 for the live register only; all mathematics, evidence and execution inputs preserved.
 - **32 / E15 r1**: [request](32_TND_OC_E15_R1_MANUSCRIPT_ASSESSMENT_REQUEST_20261109.md), [inputs](32_TND_OC_E15_R1_INPUTS_20261109.json); recommended Sol analytical audit, ready and unactivated.
+- [32 / E15 r1 return](32_TND_OC_E15_R1_RETURN_20261109.json) records the seven dispositions and local corrections. [33 / E13 r2 routing refresh](33_TND_OC_E13_R2_ROUTING_REFRESH_AFTER_E15_20261109.json) identifies the authorized navigation versions for the next preflight.
+
+- [34 / E13 r2 return](34_TND_OC_E13_R2_RETURN_20261109.json) binds the certificate, work ledger and exact Progress02 version for replay.

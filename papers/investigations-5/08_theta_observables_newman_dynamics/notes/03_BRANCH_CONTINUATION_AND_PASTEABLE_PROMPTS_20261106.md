@@ -1,5 +1,16 @@
 # Continuation after the two-branch setup
 
+Direct handoff link refreshed after B03, 9 November 2026, for Edward Baker
+with OpenAI Codex assistance, direct chat0007; actual model/effort unavailable.
+
+**Direct continuation pointer — 9 November 2026.** For new TND-D work use
+[plan r3](../01_direct_newman_realization/research-plan/03_DIRECT_NEWMAN_REALIZATION_RESEARCH_PLAN_R3_20261109.md)
+and the [current direct continuation](../01_direct_newman_realization/notes/10_TND_D_AFTER_B03_CONTINUATION_AND_MODEL_CHANGE_20261109.md).
+The original direct B01 prompt below is historical. Auxiliary/shared
+statuses remain with their linked owners. Navigation prepared for Edward
+Baker with OpenAI Codex assistance, direct chat0006; actual backend model
+and effort unavailable.
+
 6 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort ultra**. Investigation08 chat0003.
 
 **Dated handoff snapshot; the linked registers own live status.** The author requested both numbered branches, each with its own overview, plan and progress file. The parent B01 comparison is complete at planning scope. Neither physical construction is selected, and neither branch has an executable E01 request. This note provides the next prompts; it does not activate them.

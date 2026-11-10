@@ -20,9 +20,9 @@ owns current specifications; the parent owns shared tasks only.
 | **TND-OC-B10 r2** | **B / GPT-6 Astra**; recorded thread settings Astra/max, per-turn backend unavailable | **Complete at analytical design/conditional-contract scope**, 9 November 2026 | [Note20](../notes/20_TND_OC_B10_R2_CONTOUR_CENTROIDS_AND_GAUSSIAN_ESTIMATE_20261109.md) / Decision11: complete-source contour counts and cluster first moments; conditional radius <1/200 for Note19's unchanged projection; proof-author checked, no canonical data acquired. |
 | **TND-OC-E13 r1** | **E / GPT-6.1 Sol**; fixed proof checks and numerical method | **Complete at named failed-gate scope, 9 November 2026** | [Return27](handoffs/27_TND_OC_E13_R1_RETURN_20261109.json): complete 388-label census, 91 centroids, 2M source-call cap reached in quadrature. [Request27](handoffs/27_TND_OC_E13_R1_CONTOUR_CENTROID_EVALUATOR_REQUEST_20261109.md) / Inputs27: six proof checks, one bounded certified contour-centroid pilot or exact failed gate; 30-minute canonical runtime cap, one bounded repair. |
 | **TND-OC-B10 r3** | **B / GPT-6 Astra**; recorded thread settings Astra/max, per-turn backend unavailable | **Complete at analytical design/conditional-contract scope, 9 November 2026** | [Note22](../notes/22_TND_OC_B10_R3_CELL_RANGES_AND_GAUSSIAN_WIDTH_20261109.md) proves geometric radius <1261/409600 using the exact census geometry; endpoint arithmetic ≤1/1000 and the retained tail give <0.0041<1/200. Proof-author checked; scalar pending. |
-| **TND-OC-E13 r2 — supporting successor** | **E / GPT-6.1 Sol**; fixed endpoint ranges, proof checks and finite gates | **Ready, unactivated** | [Request29](handoffs/29_TND_OC_E13_R2_CELL_RANGE_EVALUATOR_REQUEST_20261109.md) / Inputs29: import E13 census; R1–R6, 75,078 unordered pairs, zero new source calls, ≤1.4M exp/erf calls, 128/256/512 bits, cumulative 600-second evaluator cap; return certified radius <1/200 or exact failed gate. |
+| **TND-OC-E13 r2** | **E / recorded GPT-6.1 Sol / ultra** | **Complete with certified finite projection, 9 November 2026** | [Return34](handoffs/34_TND_OC_E13_R2_RETURN_20261109.json) and [execution23](../numerics/23_TND_OC_E13_R2_EXECUTION_20261109.json): 128-bit pass, exact radius about 0.000020585. Inherited 388-cell winding scope. |
 | **TND-OC-E14 r1** | **E / executed in current Astra/max thread**, per-turn backend unavailable; user-authorized analytical manuscript synthesis | **Complete at analytical integration / proof-author-check scope, 9 November 2026** | 48-page manuscript; Note23 / Review19 / return30. Joint-source, Newman-time and Gaussian acquisition derivations integrated; numerical evidence in Appendix G. No E13 r2 evaluation. |
-| **TND-OC-E15 r1 — recommended analytical successor** | **E / GPT-6.1 Sol**, fixed claim-level audit; effort author-selected | **Ready, unactivated** | [Request32](handoffs/32_TND_OC_E15_R1_MANUSCRIPT_ASSESSMENT_REQUEST_20261109.md) / Inputs32: seven claim groups, one analytical pass, at most one bounded correction, no canonical or projection evaluations. |
+| **TND-OC-E15 r1** | **E / recorded GPT-6.1 Sol / ultra** | **Complete, seven groups accepted after one local correction pass** | [Assessment20](../reviews/20_TND_OC_E15_R1_MANUSCRIPT_CLAIM_ASSESSMENT_20261109.md), [Note24](../notes/24_TND_OC_E15_R1_ASSESSMENT_CALCULATIONS_20261109.md), [return32](handoffs/32_TND_OC_E15_R1_RETURN_20261109.json). Internal assessment of the integrated manuscript. |
 | TND-OC-E09 | E / Sol, ultra where supported; fixed finite evaluator | Optional benchmark, ready and unactivated | Unchanged request18/Inputs18; finite certified pilot or failed gate; no global collision implication |
 | TND-OC-E03 | E / Sol, ultra where supported; fixed B02 assessment | Ready, pending, unstarted | Unchanged request07/inputs07; separate bounded claim audit |
 | TND-OC-E04 | E / Sol, ultra where supported; fixed B04 assessment | Ready, pending, unstarted | Unchanged request09/inputs09; separate bounded claim audit |
@@ -474,3 +474,66 @@ E14 integrates the later results into a coherent source-to-observable-to-transpo
 **Next analytical task: E15 r1 / Sol**, ready and unactivated. E13 r2 / Sol remains supporting, with its unchanged request and mathematical/execution inputs. The two changed routing items among Inputs29's 41 files are this live register and plan02; [routing refresh31](handoffs/31_TND_OC_E13_R2_ROUTING_REFRESH_20261109.json) explicitly reconciles that authorized update and preserves the other 39 hashes. It does not waive future version checks. No sibling statuses, source proofs, old evaluator requests/returns, census or trace were changed.
 
 [Continuation26](../continuation-notes/26_TND_OC_AFTER_E14_MANUSCRIPT_AND_MODEL_CHANGE_20261109.md) supersedes Continuation25 as the current route after the author's manuscript request. OC chat0011 remains unique. Refresh public text and arrange exact-turn capture for 01a1c1d9-f9b3-7621-9efb-e0d2255880df; metadata belongs to the registry and native-hook activation remains unverified.
+
+
+## E15 r1 activation — 9 November 2026
+
+Edward Baker activated Request32 in OC chat0010, thread
+`01a1c185-6fd7-73f0-89da-40a5de62ad7d`, turn
+`01a1c21f-d5a5-7982-9e62-f869a3e90482`. Recorded thread settings
+are GPT-6.1 Sol / ultra. Per-turn backend settings are unavailable.
+All 59 listed inputs and the separately hashed request matched before
+the activation edit. One integrated analytical pass began
+with three read-only helper checks and a single writer.
+
+
+## E15 r1 disposition — 9 November 2026
+
+[Assessment20](../reviews/20_TND_OC_E15_R1_MANUSCRIPT_CLAIM_ASSESSMENT_20261109.md) accepts all seven groups at internal
+LLM assessment scope after one local correction pass. [Note24](../notes/24_TND_OC_E15_R1_ASSESSMENT_CALCULATIONS_20261109.md)
+records the physical-coordinate normalization of the heat example
+and the explicit hypotheses of the error ledger, cutoff and centroid
+formulas. The corrected manuscript and build record preserve the
+compact/Gaussian distinction and the dated source-note assessment
+scopes. The finite scalar and full joint estimate remain outstanding.
+[Return32](handoffs/32_TND_OC_E15_R1_RETURN_20261109.json) identifies the frozen inputs and the
+bounded corrections. This turn performed exact bookkeeping only.
+
+**Next: [E] TND-OC-E13 r2 — GPT-6.1 Sol**, ready and unactivated.
+Use [Request29](handoffs/29_TND_OC_E13_R2_CELL_RANGE_EVALUATOR_REQUEST_20261109.md),
+Inputs29 and [routing refresh33](handoffs/33_TND_OC_E13_R2_ROUTING_REFRESH_AFTER_E15_20261109.json). It pays the
+endpoint arithmetic under the original caps or names a failed gate.
+[Continuation27](../continuation-notes/27_TND_OC_AFTER_E15_ASSESSMENT_AND_MODEL_CHANGE_20261109.md) records the manual
+model handoff and the conditional Astra route. E15 used OC chat0010
+and the authenticated paginated source. The registry owns capture
+metadata.
+
+
+## E13 r2 activation — 9 November 2026
+
+Edward Baker activated Request29 in OC chat0010, turn
+`01a1c232-98c6-7d43-a137-1c4307dabf52`. Recorded thread settings
+are GPT-6.1 Sol / ultra. Per-turn backend settings are unavailable.
+All 41 frozen versions matched before this activation edit. The
+timed worker verifies an exact routing-only binding for this
+register update and rechecks the evidence and controls before
+evaluating the fixed endpoints.
+
+## E13 r2 disposition — 9 November 2026
+
+[Note25](../notes/25_TND_OC_E13_R2_CERTIFIED_GAUSSIAN_PROJECTION_20261109.md), [assessment21](../reviews/21_TND_OC_E13_R2_CELL_RANGE_EXECUTION_ASSESSMENT_20261109.md) and
+[execution23](../numerics/23_TND_OC_E13_R2_EXECUTION_20261109.json) record a certified `P_1000`
+interval with outward decimals `[0.07282037202996673, 0.07286154195666860]`.
+The exact radius is about 0.000020585. R1–R6 and all 28 controls passed.
+The run matched the required trace and inherited complete count tree,
+visited every one of the 75,078 unordered pairs at 128 bits, and
+reloaded the exact interval. One supervised worker took 7.77 seconds
+with 452,204 total exp/erf calls, zero source or centroid calls and
+zero repairs. [Return34](handoffs/34_TND_OC_E13_R2_RETURN_20261109.json) binds the evidence and
+the replay-only Progress02 routing version.
+
+**Next fixed assessment: [E] TND-OC-E04 — GPT-6.1 Sol.**
+[Continuation28](../continuation-notes/28_TND_OC_AFTER_E13_R2_CERTIFICATE_AND_MODEL_CHANGE_20261109.md) records the manual
+handoff. It also gives the Astra routing for a separately selected
+joint-source question. E04 is pending under its own issued packet.
+OC chat0010 owns this research conversation and its registry metadata.

@@ -1094,3 +1094,14 @@ preserves all scopes; [troubleshooting32](../papers/investigations-5/05_radial_t
 explains why a complete quadratic comparison may need to allow a large
 constructive remainder. More accurate enclosure of an already fatal
 positive budget does not repair its information loss.
+
+
+**Primitive boundaries can carry the leading cancellation, 10 November 2026.**
+For Edward Baker with OpenAI Codex assistance, chat0007; actual model/effort
+unavailable. The exact two-source transfer in [TND-D Brainstorm06](../papers/investigations-5/08_theta_observables_newman_dynamics/01_direct_newman_realization/brainstorm/notes/06_TND_D_TWO_SOURCE_PRIMITIVE_IBP_AND_LATTICE_20261109.md)
+has a boundary curvature term. [Same-assistant production Review07](../papers/investigations-5/08_theta_observables_newman_dynamics/01_direct_newman_realization/reviews/07_TND_D_E11_PRIMITIVE_MANUSCRIPT_INTEGRATION_20261109.md)
+states: “At a hypothetical double event, the boundary tends to -a/16
+while A0 tends to zero.” Retain bulk and boundary jointly before taking
+absolute bounds; removing polynomial lattice weights does not remove
+this cancellation. The identity retains proof-author status. This is
+not a negative theta result or an exclusion of lattice methods.

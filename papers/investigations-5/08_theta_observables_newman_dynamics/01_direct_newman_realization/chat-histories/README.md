@@ -4,6 +4,14 @@
 
 The [index](index.json) owns current capture times, counts, sizes and hashes. Use the repository [capture workflow](../../../../../tools/CHAT_HISTORY.md); do not hand-edit registered transcripts or indexes.
 
+9 November 2026: B03 r3 runs in [chat0007](0007_2026-11-10T03-38-34Z_please-read-papers-investigations-5-08-theta-observables-newman-dynamics-01-dire.json),
+thread `01a1c389-3fe9-7930-8223-c935cc1920e1`, first registered here using
+its actual native title and canonical paginated source. The filename's
+creation date is UTC; the research date is 9 November in America/New_York.
+Prepared for Edward Baker with OpenAI Codex assistance; actual model and
+effort are unavailable in accessible capture metadata. The registry owns
+the full title and live provenance; native hook activation is unverified.
+
 | Number | Chat | Identity and affiliation |
 | --- | --- | --- |
 | 0001 | [Decide TND-D-B01 realization](0001_2026-11-06T05-05-21Z_decide-tnd-d-b01-realization.json) | Thread `01a1af3f-44ac-70a3-a6ee-303e2065d468`, direct branch B01. First registered here; retain this unique home and number. |

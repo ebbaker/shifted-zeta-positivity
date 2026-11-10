@@ -1,5 +1,11 @@
 # Direct Newman realization: plan r2, collision mechanisms and analytical consequences
 
+**Historical plan r2 — superseded for future work on 9 November 2026 by
+[plan r3](03_DIRECT_NEWMAN_REALIZATION_RESEARCH_PLAN_R3_20261109.md).**
+The original text below is preserved; its then-current task instructions
+are historical. Navigation annotation prepared for Edward Baker with
+OpenAI Codex assistance; actual backend model and effort unavailable.
+
 **6 November 2026 follow-through addendum — Astra/ultra, direct chat0004:** B02/E03/E04 and justified E06/E07 are complete at the scopes in the sole register. Their issued requests and historical r2 descriptions remain intact below. The author requests a new-session brainstorm, specified as **B03** in [Continuation08](../notes/08_TND_D_RESULTS_AND_B03_BRAINSTORM_CONTINUATION_20261106.md): one comparison of at most two approaches (source-specific joint constraints; correlated signed-remainder comparison), one local clarification, at most one selected fixed target or precise scoped stop. **Astra/ultra recommended; ready for the new session, unactivated here.** E09/E10 are unissued execution/assessment placeholders until a concrete B03 contract. Preserve Note05's standing authorization for bounded Sol support and ready follow-through. E08 is complete at author-requested manuscript/continuation production scope, with a verified 24-page build; it adds no new research result.
 
 

@@ -1,5 +1,41 @@
 # Direct radial-spectral Newman realization
 
+**Current disposition — 10 November 2026.** Prepared for **Edward Baker**
+with substantial OpenAI Codex assistance, direct chat0007; actual model
+and effort are unavailable in accessible capture metadata.
+
+The [29-page manuscript](manuscript/README.md) now incorporates the
+complete two-source primitive and lattice formula in Section 9,
+Theorem 9.2. The boundary curvature term and all source tails remain
+explicit. [E11 Review07](reviews/07_TND_D_E11_PRIMITIVE_MANUSCRIPT_INTEGRATION_20261109.md)
+is a same-assistant production/consistency check; the primitive formulas
+retain proof-author status and the signed estimate remains open.
+
+**Next: [B] TND-D-B03 — GPT-6 Astra**, one joint primitive/lattice
+comparison, as specified in [Continuation07](brainstorm/notes/07_TND_D_PRIMITIVE_LATTICE_NEXT_SESSION_20261109.md).
+That author-requested next-session scope uses the new primitive input;
+the earlier r3 stop remains confined to its tested sign-discarding method.
+E09/E10 are unissued until a fixed useful contract meets [plan r3][r3-current].
+The conditional realization and assessed high-count/complete-tail results
+retain their prior evidence and limitations.
+
+| Document | Current role |
+| --- | --- |
+| [Research overview][overview] | Scientific objective, established results and remaining signed estimate |
+| [Plan r3][r3-current] | Preserved decision/execution gates; new primitive continuation specified in Note07 |
+| [Historical plan r2][plan] | Earlier collision-reconnaissance specification |
+| [Sole progress register][progress] | Live status, task identities and dated returns |
+| [Continuation07](brainstorm/notes/07_TND_D_PRIMITIVE_LATTICE_NEXT_SESSION_20261109.md) | Next-session scope, exact starting formula, controls, work limit and model handoff |
+| [Primitive Brainstorm06](brainstorm/notes/06_TND_D_TWO_SOURCE_PRIMITIVE_IBP_AND_LATTICE_20261109.md) | Two-source primitive derivation and lattice/boundary analysis |
+| [B03 Decision04](brainstorm/notes/04_TND_D_B03_R3_SIGNED_PREMISE_DECISION_20261109.md) | Earlier bounded r3 decision and precisely scoped stop |
+| [Cross-branch Brainstorm03][brainstorm-current] | Count/acquisition interfaces and comparison background |
+
+## Historical navigation and provenance through 8 November 2026
+
+The dated announcements below describe their original snapshots. Their
+next-task and plan references are historical where superseded by r3 and
+the current navigation above. Issued requests and evidence are preserved.
+
 **Filing correction — 8 November 2026.** At the author's request, the
 misfiled [cross-branch advisory](../03_operator_imaginary_time_evolution/01_green_potential_resolvent/brainstorm/notes/10_TND_OG_COLLISION_DYNAMICS_AND_PARALLEL_PROBES_20261108.md) now belongs to OG.
 Its mathematical content is preserved; direct task statuses are unchanged.
@@ -50,12 +86,16 @@ Create the remaining notes/, reviews/ and any authorized numerics/ folders with 
 [progress]: research-progress/01_DIRECT_NEWMAN_REALIZATION_RESEARCH_PROGRESS_20261105.md
 [overview]: research-overview/01_DIRECT_NEWMAN_REALIZATION_RESEARCH_OVERVIEW_20261105.md
 
-## E02 assessment and new-session continuation — 6 November 2026
+### E02 assessment and new-session continuation — 6 November 2026
 
 Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol/ultra**, direct chat0002. [E02 Review01](reviews/01_TND_D_E02_CONDITIONAL_REALIZATION_ASSESSMENT_20261106.md) accepts the conditional E01 realization within scope without required mathematical correction. This is same-assistant/same-chat internal assessment with shared premises, not specialist independence. [Exact inputs](research-progress/handoffs/04_TND_D_E02_INPUT_VERSIONS_20261106.json) and [return](research-progress/handoffs/04_TND_D_E02_RETURN_RECORD_20261106.json) preserve versions; issued E01 artifacts remain immutable. The [new-session continuation](notes/03_TND_D_B02_NEW_SESSION_CONTINUATION_20261106.md) was the default handoff before the author-directed collision reconnaissance: **[B] TND-D-B02 — Astra**. Its then-unactivated status is historical; use plan r2 and the sole register now. Supplied preparation/access and the absence of a collision estimate or demonstrated estimating gain remain explicit. Earlier E01/E03 continuation sections below are historical snapshots.
 
-## E01 r1 execution return — 6 November 2026
+### E01 r1 execution return — 6 November 2026
 
 Prepared for Edward Baker with substantial LLM assistance, **gpt-6.1-sol/ultra**, direct-branch chat0002. [Analytical Note02](notes/02_TND_D_E01_R1_CONDITIONAL_QUADRATURE_REALIZATION_20261106.md) supplies the complete-spectrum conditional realization at proof-author scope, with L1–L3 and E1–E15 accounted for. The source/preparation/apparatus remain supplied; no collision restriction or estimating gain follows. [Exact input versions](research-progress/handoffs/02_TND_D_E01_R1_INPUT_VERSIONS_20261106.json), [return record](research-progress/handoffs/02_TND_D_E01_R1_RETURN_RECORD_20261106.json) and [current continuation/model-change handoff](research-progress/handoffs/02_TND_D_E01_R1_RETURN_AND_MODEL_CONTINUATION_20261106.md) identify the result and next dependency. The earlier pre-execution continuation is historical. Consult the sole register for live status: shared TND-E03 precedes branch E02; neither is activated here.
 
 Shared prerequisite received, 6 November 2026, **gpt-6.1-sol/ultra**: the [canonical shared E03 r2 review](../reviews/01_TND_E03_R2_GEOMETRY_SOURCE_AND_TRANSPORT_ASSESSMENT_20261106.md) is complete. The [direct receipt/model-change continuation](research-progress/handoffs/03_TND_E03_R2_DIRECT_RECEIPT_AND_MODEL_CONTINUATION_20261106.md) records the concurrent work and current next prompt. Direct E02 is ready for author selection, unactivated; direct E01's new realization claims remain proof-author pending E02.
+
+[r3-current]: research-plan/03_DIRECT_NEWMAN_REALIZATION_RESEARCH_PLAN_R3_20261109.md
+[brainstorm-current]: brainstorm/notes/03_TND_D_CROSS_BRANCH_RESEARCH_BRAINSTORM_20261109.md
+[continuation-current]: notes/10_TND_D_AFTER_B03_CONTINUATION_AND_MODEL_CHANGE_20261109.md

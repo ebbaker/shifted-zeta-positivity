@@ -1,5 +1,16 @@
 # Research progress for theta observables and Newman dynamics
 
+Direct handoff link refreshed after B03, 9 November 2026, for Edward Baker
+with OpenAI Codex assistance, direct chat0007; actual model/effort unavailable.
+
+**Direct planning pointer — 9 November 2026.** The author-adopted
+[direct plan r3](../01_direct_newman_realization/research-plan/03_DIRECT_NEWMAN_REALIZATION_RESEARCH_PLAN_R3_20261109.md)
+and [updated continuation](../01_direct_newman_realization/notes/10_TND_D_AFTER_B03_CONTINUATION_AND_MODEL_CHANGE_20261109.md)
+replace r2 for future direct work. The TND-D register below remains the
+sole owner of its statuses; this parent pointer does not duplicate them.
+Prepared for Edward Baker with OpenAI Codex assistance, direct chat0006;
+actual backend model and effort unavailable.
+
 **Third-branch setup — 6 November 2026, gpt-6-astra/max, direct chat0005.**
 At Edward Baker's request, [operator and imaginary-time evolution](../03_operator_imaginary_time_evolution/README.md)
 is a separate branch. Its [sole register](../03_operator_imaginary_time_evolution/research-progress/01_OPERATOR_ITE_RESEARCH_PROGRESS_20261106.md) owns TND-O statuses;
@@ -21,7 +32,7 @@ record the completed organization; research remains unactivated there.
 | Program | Task specifications | Sole live status owner |
 | --- | --- | --- |
 | Shared model and E01 assessment | [Overview plan][plan], including TND-E03 r2 below | This file |
-| Direct radial-spectral Newman realization | [Direct plan r2](../01_direct_newman_realization/research-plan/02_DIRECT_NEWMAN_REALIZATION_RESEARCH_PLAN_R2_20261106.md) | [TND-D register](../01_direct_newman_realization/research-progress/01_DIRECT_NEWMAN_REALIZATION_RESEARCH_PROGRESS_20261105.md) |
+| Direct radial-spectral Newman realization | [Direct plan r3](../01_direct_newman_realization/research-plan/03_DIRECT_NEWMAN_REALIZATION_RESEARCH_PLAN_R3_20261109.md) | [TND-D register](../01_direct_newman_realization/research-progress/01_DIRECT_NEWMAN_REALIZATION_RESEARCH_PROGRESS_20261105.md) |
 | Hamiltonian auxiliary dynamics | [Auxiliary plan](../02_hamiltonian_auxiliary_dynamics/research-plan/01_HAMILTONIAN_AUXILIARY_DYNAMICS_RESEARCH_PLAN_20261105.md) | [TND-A register](../02_hamiltonian_auxiliary_dynamics/research-progress/01_HAMILTONIAN_AUXILIARY_DYNAMICS_RESEARCH_PROGRESS_20261105.md) |
 | Operator and imaginary-time evolution | [Operator/ITE plan](../03_operator_imaginary_time_evolution/research-plan/01_OPERATOR_ITE_RESEARCH_PLAN_20261106.md) | [TND-O register](../03_operator_imaginary_time_evolution/research-progress/01_OPERATOR_ITE_RESEARCH_PROGRESS_20261106.md) |
 

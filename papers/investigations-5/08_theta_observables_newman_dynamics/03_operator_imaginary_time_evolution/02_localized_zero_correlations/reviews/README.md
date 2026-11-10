@@ -77,3 +77,6 @@ The sole status owner is research-progress/02_TND_OC_MARGINAL_PRIORITIES_RESEARC
 - [BGST source/import check, 8 November 2026](BGST_IMPORT_SOURCE_CHECK_20261108.md): the parent's cumulative formula is confirmed by v3 (3.5), first line. Distinguishes the dyadic bound and erroneous multiplicative remainder, with a bounded dependency check. Separate from B04 and E03; internal LLM source assessment, actual backend model/effort unavailable. Prepared for Edward Baker with OpenAI Codex assistance.
 
 - [19 — E14 manuscript author check](19_TND_OC_E14_MANUSCRIPT_AUTHOR_CHECK_20261109.md): source crosswalk, seven analytical interfaces, production QA and preserved evidence levels; separate E15 pending.
+- [20 — E15 integrated claim assessment](20_TND_OC_E15_R1_MANUSCRIPT_CLAIM_ASSESSMENT_20261109.md) records seven acceptances after one local correction pass, with shared source premises.
+
+- [21 — E13 r2 execution assessment](21_TND_OC_E13_R2_CELL_RANGE_EXECUTION_ASSESSMENT_20261109.md) records R1–R6, the 28 controls and exact reload verification.

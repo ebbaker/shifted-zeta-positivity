@@ -1,5 +1,18 @@
 # Theta observables and Newman dynamics
 
+Direct manuscript/handoff links refreshed 10 November 2026, for Edward Baker
+with OpenAI Codex assistance, direct chat0007; actual model/effort unavailable.
+
+**Direct-branch navigation — 10 November 2026.** Edward Baker adopted
+[direct plan r3](01_direct_newman_realization/research-plan/03_DIRECT_NEWMAN_REALIZATION_RESEARCH_PLAN_R3_20261109.md);
+use the [primitive/lattice continuation](01_direct_newman_realization/brainstorm/notes/07_TND_D_PRIMITIVE_LATTICE_NEXT_SESSION_20261109.md)
+and its sole register for future work. The [direct manuscript](01_direct_newman_realization/manuscript/README.md)
+now includes the exact two-source primitive transfer in Section 9; its
+joint signed estimate remains open. Earlier direct prompts are historical.
+Navigation prepared for Edward Baker with OpenAI Codex assistance, direct
+chat0007; actual backend model and effort unavailable. Shared and sibling
+research statuses remain owned by their existing registers.
+
 **Operator/ITE branch added — 6 November 2026, gpt-6-astra/max.**
 Edward Baker clarified Hamiltonian evolution as imaginary time and requested
 a separate home for that operator approach. [Branch 03](03_operator_imaginary_time_evolution/README.md) now owns
@@ -20,7 +33,7 @@ Adapt MC11's angular–radial Dirac-square model on the spherical cylinder to In
 
 | Branch | Overview | Research plan | Sole branch register |
 | --- | --- | --- | --- |
-| [01 Direct Newman realization](01_direct_newman_realization/README.md) | [Overview](01_direct_newman_realization/research-overview/01_DIRECT_NEWMAN_REALIZATION_RESEARCH_OVERVIEW_20261105.md) | [Current plan r2](01_direct_newman_realization/research-plan/02_DIRECT_NEWMAN_REALIZATION_RESEARCH_PLAN_R2_20261106.md) | [TND-D progress](01_direct_newman_realization/research-progress/01_DIRECT_NEWMAN_REALIZATION_RESEARCH_PROGRESS_20261105.md) |
+| [01 Direct Newman realization](01_direct_newman_realization/README.md) | [Overview](01_direct_newman_realization/research-overview/01_DIRECT_NEWMAN_REALIZATION_RESEARCH_OVERVIEW_20261105.md) | [Current plan r3](01_direct_newman_realization/research-plan/03_DIRECT_NEWMAN_REALIZATION_RESEARCH_PLAN_R3_20261109.md) | [TND-D progress](01_direct_newman_realization/research-progress/01_DIRECT_NEWMAN_REALIZATION_RESEARCH_PROGRESS_20261105.md) |
 | [02 Hamiltonian auxiliary dynamics](02_hamiltonian_auxiliary_dynamics/README.md) | [Overview](02_hamiltonian_auxiliary_dynamics/research-overview/01_HAMILTONIAN_AUXILIARY_DYNAMICS_RESEARCH_OVERVIEW_20261105.md) | [Plan r1](02_hamiltonian_auxiliary_dynamics/research-plan/01_HAMILTONIAN_AUXILIARY_DYNAMICS_RESEARCH_PLAN_20261105.md) | [TND-A progress](02_hamiltonian_auxiliary_dynamics/research-progress/01_HAMILTONIAN_AUXILIARY_DYNAMICS_RESEARCH_PROGRESS_20261105.md) |
 | [03 Operator and imaginary-time evolution](03_operator_imaginary_time_evolution/README.md) | [Overview](03_operator_imaginary_time_evolution/research-overview/01_OPERATOR_ITE_RESEARCH_OVERVIEW_20261106.md) | [Plan r1](03_operator_imaginary_time_evolution/research-plan/01_OPERATOR_ITE_RESEARCH_PLAN_20261106.md) | [TND-O progress](03_operator_imaginary_time_evolution/research-progress/01_OPERATOR_ITE_RESEARCH_PROGRESS_20261106.md) |
 

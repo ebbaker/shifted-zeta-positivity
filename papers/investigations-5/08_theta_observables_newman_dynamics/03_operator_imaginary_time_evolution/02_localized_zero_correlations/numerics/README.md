@@ -1,3 +1,27 @@
+## E13 r2 replay
+
+9 November 2026. Prepared for Edward Baker with OpenAI Codex assistance,
+OC chat0010, recorded GPT-6.1 Sol / ultra. [Execution23](23_TND_OC_E13_R2_EXECUTION_20261109.json)
+stores the exact interval, trace identity, controls and all work counts.
+Use Python 3.12.14, python-flint 0.9.0 and FLINT 3.6.0 as in the run.
+From this investigation's root, with that isolated runtime active:
+
+```sh
+e13_r2_replay_dir=$(mktemp -d /tmp/tnd-oc-e13-r2-replay.XXXXXX)
+PYTHONDONTWRITEBYTECODE=1 python numerics/e13_r2_cell_ranges.py \
+  "$e13_r2_replay_dir/run" "$e13_r2_replay_dir/execution.json" \
+  --progress-override research-progress/handoffs/34_TND_OC_E13_R2_RETURN_20261109.json
+```
+
+This is a separate replay under the same external 600-second cap. The
+return identifies the exact authorized post-disposition Progress02
+version. Further navigation drift requires explicit reconciliation.
+The default external trace location is in the execution record. If it
+moves, supply its verified location via `--trace` with the same stored
+and canonical hashes. The evidence checker imports the prior outward
+windings and reconstructs the count tree. The small record's
+`result.status` gives the outcome.
+
 **B10 r3 exact geometry and bookkeeping.** [Record19](19_TND_OC_B10_R3_EXACT_GEOMETRY_20261109.json) and [checker](check_b10_r3_cell_geometry.py) verify the imported cell geometry, trace identity, accepted count tree, six malformed-input rejections and rational radius cap. Zero new source/kernel calls; no fresh winding or projected-value certificate. From this investigation root, supply the exact trace location recorded in execution18:
 
 ```sh

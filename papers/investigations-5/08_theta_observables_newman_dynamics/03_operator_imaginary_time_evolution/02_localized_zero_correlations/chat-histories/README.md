@@ -162,3 +162,15 @@ unavailable. [Current continuation](../continuation-notes/17_TND_OC_CORRECTED_PR
 
 
 **E14 continuation in chat0011, 9 November 2026:** the author requested the analytical manuscript rewrite after B10 r3. The authentic archive remains uniquely registered; source metadata and hashes are maintained by the shared-lock recorder. Actual E14 turn: 01a1c1d9-f9b3-7621-9efb-e0d2255880df. Final capture uses the bounded exact-turn follow-up; no native hook activation is claimed.
+
+**E15 r1 in OC chat0010, 9 November 2026.** The author returned to
+the registered Sol / ultra chat for the integrated manuscript audit.
+Turn `01a1c21f-d5a5-7982-9e62-f869a3e90482`. The ordinary refresh
+verified the earlier completed E13 r1 reply. Use the registry for
+capture metadata and the bounded exact-turn follow-up for E15.
+
+**E13 r2 in OC chat0010, 9 November 2026.** The registered Sol / ultra
+chat continued with the bounded endpoint evaluation. Turn
+`01a1c232-98c6-7d43-a137-1c4307dabf52`. The ordinary refresh
+verified the preceding E15 reply. The registry owns capture metadata
+and the bounded worker targets the completed E13 r2 final.

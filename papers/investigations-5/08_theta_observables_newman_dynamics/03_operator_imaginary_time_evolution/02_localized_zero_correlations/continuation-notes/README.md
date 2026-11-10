@@ -1,3 +1,7 @@
+**Current — after E13 r2.** [Continuation28](28_TND_OC_AFTER_E13_R2_CERTIFICATE_AND_MODEL_CHANGE_20261109.md) records the certified finite projection and recommends **E04 / GPT-6.1 Sol** for the next fixed assessment.
+
+**Historical — after E15 r1.** [Continuation27](27_TND_OC_AFTER_E15_ASSESSMENT_AND_MODEL_CHANGE_20261109.md) routes the fixed endpoint evaluation to **E13 r2 / GPT-6.1 Sol**.
+
 **Current — after E13 r1, 9 November 2026.**
 [Continuation24](24_TND_OC_AFTER_E13_AND_MODEL_CHANGE_20261109.md) routes the source-call stop and certified
 cell census to **[B] TND-OC-B10 r3 / GPT-6 Astra**, recommended and
