@@ -26,6 +26,12 @@ LLM assistance: **gpt-6-astra (Codex)**, reasoning effort **ultra**.
   supersedes E04's pending-assembly manuscript status, not its source proofs.
   No new signed estimate or specialist review. For Edward Baker with
   OpenAI Codex assistance; current chat0010 has no recorded model/effort.
+  The new [Investigation09 background](../papers/investigations-5/09_green_potentials_newman_flow/manuscript/README.md)
+  integrates the Green and parent foundations with RS/Newman evolution.
+  [Its source map](../papers/investigations-5/09_green_potentials_newman_flow/notes/01_GNP_SOURCE_MAP_AND_INTEGRATION_20261110.md)
+  states: “Integration changes the exposition and entry point, not the
+  evidence level of an inherited theorem.” Same-assistant synthesis check;
+  no new numerical campaign, signed value or zero exclusion.
 
 - **E13 r2 finite Gaussian projection certificate (9 November 2026).**
   [Note25](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/notes/25_TND_OC_E13_R2_CERTIFIED_GAUSSIAN_PROJECTION_20261109.md) records “complete with a certified finite projection.”
@@ -801,3 +807,136 @@ complete tails remain paid. No covariance profile, high-height uniformity,
 quantitative higher-order transfer or zero exclusion acquired.
 Reusable as a compact-window pair accuracy interface, not a value
 estimate. E03/E04 remain pending; the full correlation program stays open.
+
+### GNP-RS transition-band normalization and bounded handoff — 11 November 2026
+
+For Edward Baker with OpenAI Codex assistance; actual model/effort
+unavailable in child chat0001 metadata. [B01 Note01](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/01_GNP_RS_B01_TRANSITION_SCALE_GREEN_BASELINE_20261111.md)
+proves in-note that its explicit zero-free HDA comparison factor has
+zero strip Green functional. It applies the inherited last-block
+absolute-mass obstruction to one separate-magnitude logarithmic allowance,
+which grows as at least \((4-c)L_X/32+O(1)\) for
+\(\lambda=c/L_X,\ c\in[1/2,1]\), all sufficiently large \(X\).
+The [self-check](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/02_GNP_RS_B01_DECISION_SELF_CHECK_20261111.md)
+is same-assistant only. The note states: “The proposed baseline
+estimate is not reported as proved.” Its uniform outer prime-baseline
+request is ready for E01; the signed critical-boundary value remains
+open. No zero exclusion, time-zero extension or new numerical evidence.
+This proposed-status snapshot is superseded by the E01 return below.
+
+### GNP-RS uniform outer prime baseline — 11 November 2026
+
+For Edward Baker with OpenAI Codex assistance; actual model/effort
+unavailable in child chat0001 metadata. [E01 Note03](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/03_GNP_RS_E01_UNIFORM_OUTER_BASELINE_PROOF_20261111.md)
+is **proved in-note from the named inherited inputs**, with
+[same-assistant internal checking](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/03_GNP_RS_E01_UNIFORM_OUTER_BASELINE_SELF_CHECK_20261111.md).
+For every sufficiently large \(X\), \(\lambda=c/L_X\), \(c\in[1/2,1]\),
+it gives \(\lvert J_\lambda-I_\lambda+P_{c,\lambda}\rvert\le C_*/L_X\).
+The complete outer field, safe-line floor, shifted prime phase and
+remote logarithmic tails are paid; constants/onset are finite but
+unevaluated. The note states: “No such favorable upper value is proved
+here.” The critical-boundary integral remains exact and unsigned in the
+required upper direction. Reusable as a uniform nonzero-time acquisition
+interface, not a zero exclusion, time-zero extension or numerical certificate.
+
+### GNP-RS B02: two scoped signed-estimate tests — 11 November 2026
+
+For Edward Baker with Codex assistance; actual model/effort unavailable.
+[Note05](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/05_GNP_RS_B02_JENSEN_AND_SHIFTED_ZETA_COMPARISON_20261111.md)
+is **proved in-note from named inherited inputs; same-assistant checking
+only** for its Jensen interface, nonnegative-cross-payment obstruction
+and shifted-zeta divisor identity. “The nonnegative-cross-payment Jensen
+recipe cannot satisfy (B3) at every sufficiently large center.”
+This bounds the allowance, not the actual Green value. The exact identity
+\(I-P=\Delta+\mathcal Z-G_p\) leaves its coupled signed estimate unpaid.
+“B02 does not report (B12) as proved”: the stronger coherent-moment
+obstruction was a proposed E03 target at that stage, subsequently proved below.
+[Author check](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/04_GNP_RS_B02_DECISION_SELF_CHECK_20261111.md).
+No favorable signed value, zero exclusion or numerical research.
+
+### GNP-RS E03: exact quadratic-Jensen obstruction — 11 November 2026
+
+For Edward Baker with Codex assistance; actual model/effort unavailable
+in chat0002. [Note07](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/07_GNP_RS_E03_COHERENT_JENSEN_OBSTRUCTION_20261111.md) is **proved in-note from named inherited
+inputs**, with [same-assistant checking](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/05_GNP_RS_E03_COHERENT_JENSEN_SELF_CHECK_20261111.md).
+The exact localized squared moment at \(c=1\) has dyadic mean
+tending to \(\zeta(3/2)\). Both arms and the time within each original
+integral are retained. The source states: “This is an obstruction to
+the exact localized quadratic-Jensen upper allowance for the frozen
+every-center margin.” It applies at arbitrarily high centers and also
+to moment majorants in the same recipe. The signed logarithmic value
+remains open.
+
+### GNP-RS B03/E04: phase-only obstruction and logarithmic transfer — 11 November 2026
+
+For Edward Baker with Codex assistance; explicitly dispatched Astra/ultra
+(B03), Sol6.1/ultra (E04 and separate internal review); root settings unavailable.
+[Note10](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/10_GNP_RS_B03_SIGNED_LOG_ACQUISITION_20261111.md) is **proved in-note from the inherited E03 moment law**:
+even subtracting the ideal cosine correction from the exact quadratic
+expression leaves arbitrarily high c=1 centers at least 1/1000 above m_*.
+Its full prime-block exponential mean is bounded by exp(27/125). The source
+cautions: “No claim is made that (7) is an actual upper bound for \(J\).”
+[Note11](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/11_GNP_RS_E04_REGULARIZED_LOG_TRANSFER_20261111.md) is **proved in-note from the named inherited inputs**:
+complete-field regularized-log transfer costs O(X^(-1/4)) without a real-field
+floor; each fixed prefix/regulator has O(1/L_X) phase discrepancy with its
+complete residual retained. “The signed Green margin remains open.”
+[Review07](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/07_GNP_RS_B03_E04_INDEPENDENT_REVIEW_20261111.md) accepts these scopes, different-model for B03
+and separate same-model for E04, sharing the inherited HDA/E03 inputs.
+Reusable for this corrected-expression obstruction and one-sided transfer,
+not a zero exclusion or an every-center estimate from a mean.
+
+### GNP-RS B04/E05: density gain and exceptional residuals — 11 November 2026
+
+For Edward Baker with Codex assistance: dispatched Astra/ultra (B04),
+Sol6.1/ultra (E05 and contributing internal assessor); root settings unavailable.
+[Note14](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/14_GNP_RS_E05_FINITE_EULER_RESIDUAL_20261111.md) is **proved in-note from named inherited inputs**.
+The finite Euler reference has exact matching prime-log integral. At c=1,
+its relative residual has dyadic mean
+\(\zeta(3/2)\prod_{p\le P}(1-p^{-3/2})-1\), tending to zero as fixed P
+increases after the height limit. Consequently centers with
+\(J_{1/L_X}(X)\ge m_*\) have zero dyadic Lebesgue density, without a rate.
+This is neither a zero-counting nor a fixed-time/all-c conclusion.
+Nevertheless each fixed reference has arbitrarily large residuals at
+arbitrarily high centers. The specified separate relative-L2/Jensen
+allowance fails even with an adaptive regulator; growing prime sets and
+signed residual coupling are outside the obstruction. The source states:
+“The signed Green value at those centers remains open.”
+[Review08](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/08_GNP_RS_B04_INTERNAL_REVIEW_20261111.md) accepts these scopes, while disclosing its
+twisted-moment proof contribution and shared HDA/E01/E03 inputs.
+No specialist review, every-center bound or numerical campaign is claimed.
+
+### GNP-RS B05/E06: adaptive phase and signed tangent limit — 11 November 2026
+
+For Edward Baker with Codex assistance: dispatched Astra/ultra (B05),
+Sol6.1/ultra (E06 and contributing internal assessor); root settings unavailable.
+[Note17](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/17_GNP_RS_E06_ADAPTIVE_PHASE_AND_TANGENT_20261111.md) is **proved in-note from named inherited inputs**.
+For P=floor(L_X²), its joint reference/carrier phase cost is <=18/L_X
+throughout c in [1/2,1], uniformly for every positive center-selected
+regulator. Prime/exterior costs and the normalized complete field error
+are paid; the latter is X^(-1/4+o(1)). The exact adaptive arithmetic
+residual still lacks a useful every-center estimate. [Note16](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/16_GNP_RS_B05_ADAPTIVE_AND_SIGNED_DECISION_20261111.md)
+states: “The adaptive reference is now admissible; its every-center residual
+is not estimated.” Separately, the specified fixed-P logarithmic tangent
+allowance is unbounded at arbitrarily high c=1 centers, despite retaining
+the exact signed cross term and allowing a center-dependent regulator.
+[Review09](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/09_GNP_RS_B05_INTERNAL_REVIEW_20261111.md) accepts these scopes and discloses its
+tangent proof contribution and inherited inputs. No actual Green-value
+lower bound, adaptive-P tangent obstruction or specialist review is claimed.
+
+### GNP-RS E07: integrated proofs and actual Green power means — 11 November 2026
+
+For Edward Baker with Codex assistance; actual editor model/effort
+unavailable in chat0004. [Note19](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/19_GNP_RS_MANUSCRIPT_AND_AVERAGED_GREEN_VALUES_20261111.md)
+is **proved in-note from named inherited inputs; same-assistant self-check
+only**. E05's argument gives vanishing dyadic density at every fixed
+positive Green threshold on c=1. The coherent moment and quadratic upper
+allowance give an eventual dyadic mean of exp(4J) at most 39. Layer-cake
+integration then proves every finite power mean of J tends to zero and
+mean exp(αJ) tends to one for 0<α<4. No rate, exponent-four convergence,
+all-c extension or fixed-time zero count is claimed. The source states:
+“The power-mean convergence does not supply an every-center estimate.”
+[Review10](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/10_GNP_RS_MANUSCRIPT_AND_MEAN_SELF_CHECK_20261111.md)
+checks the derivation and its scope. The live parent manuscript now
+integrates E01–E06 and these direct consequences; the adaptive residual
+and exceptional-center stop remain unchanged. No specialist review or
+numerical research was added.

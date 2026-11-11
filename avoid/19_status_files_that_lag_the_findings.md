@@ -1,5 +1,15 @@
 # Status files, READMEs and manuscripts that lag the findings of audits
 
+**10 November 2026 — a new entry point preserves old evidence ownership.**
+Prepared for Edward Baker with OpenAI Codex assistance; actual model/effort
+unavailable. The [Investigation09 source map](../papers/investigations-5/09_green_potentials_newman_flow/notes/01_GNP_SOURCE_MAP_AND_INTEGRATION_20261110.md)
+states: “Integration changes the exposition and entry point, not the
+evidence level of an inherited theorem.” Its setup gives the unissued
+Green continuation and RS child distinct live owners, while keeping
+issued packets, prior proofs, OC/OA and the unique chat archive in place.
+A fresh manuscript must not silently retire evidence or activate an old
+placeholder twice.
+
 **10 November 2026 — Green acquisition and value separated.** For Edward
 Baker with OpenAI Codex assistance; chat0010 records no model/effort.
 The manuscript still described E03 assembly as pending after E03/E05
@@ -151,3 +161,13 @@ local correction pass.” The corrected manuscript and live register
 state the internal assessment scope together. The E14 proof-author
 checkpoint remains historical, and the endpoint arithmetic stays a
 separate pending task.
+
+**11 November 2026 — integrate completed RS work before naming the next task.**
+Prepared for Edward Baker with Codex assistance; actual editor model/effort
+unavailable in chat0004. [E07 self-check](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/10_GNP_RS_MANUSCRIPT_AND_MEAN_SELF_CHECK_20261111.md)
+records: “The final task list likewise asked for a consumer already
+selected by B01.” The live draft now derives E01–E06 and starts its
+outstanding work at the unpaid exceptional-center value. Historical
+notes/builds remain intact, and the new averaged corollary is explicitly
+separated from that open pointwise problem. Updating the exposition must
+preserve both the completed estimates and the remaining stop condition.

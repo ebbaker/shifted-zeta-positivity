@@ -1105,3 +1105,87 @@ while A0 tends to zero.” Retain bulk and boundary jointly before taking
 absolute bounds; removing polynomial lattice weights does not remove
 this cancellation. The identity retains proof-author status. This is
 not a negative theta result or an exclusion of lattice methods.
+
+**A growing positive envelope is not the field, 11 November 2026.**
+For Edward Baker with OpenAI Codex assistance; actual model/effort
+unavailable, GNP-RS chat0001. [B01 Note01 §5](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/01_GNP_RS_B01_TRANSITION_SCALE_GREEN_BASELINE_20261111.md)
+specializes the inherited last-block mass to a divergent Green
+logarithmic allowance on its specified \(\lambda\log(X/(4\pi))\) band.
+It states: “The lower bound is on the chosen positive envelope, not on
+\(H\) or \(J\).” The [same-assistant check](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/02_GNP_RS_B01_DECISION_SELF_CHECK_20261111.md)
+retains that scope. This defeats the specified separate-mode magnitude
+payment against a fixed defect margin, not phase-retaining estimates or
+all Riemann–Siegel methods.
+
+**Outer absolute convergence does not pay the critical logarithm,
+11 November 2026.** For Edward Baker with Codex assistance; actual
+model/effort unavailable, GNP-RS chat0001. [E01 Note03](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/03_GNP_RS_E01_UNIFORM_OUTER_BASELINE_PROOF_20261111.md)
+proves a uniform outer prime-baseline error using summable heat-weight
+removal. It states: “This inequality sums through the actual growing
+cutoff.” Its safe-line exponent pays that sum; the critical-boundary
+exponent does not. The [same-assistant check](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/03_GNP_RS_E01_UNIFORM_OUTER_BASELINE_SELF_CHECK_20261111.md)
+retains the exact critical logarithm and leaves its favorable upper
+value open. Extending this particular absolute-convergence step to that
+boundary would discard the unresolved cancellation.
+
+**A diagonal floor belongs to its payment class, 11 November 2026.**
+For Edward Baker with Codex assistance; actual model/effort unavailable.
+[GNP-RS B02 Note05](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/05_GNP_RS_B02_JENSEN_AND_SHIFTED_ZETA_COMPARISON_20261111.md)
+proves a fixed-margin failure when a quadratic-moment bound retains the
+diagonal and adds nonnegative cross/error costs. It states: “This
+condition is **not asserted for the exact \(M\)**.” The exact coherent
+moment needed a separate mean-law proof, subsequently supplied by E03. The allowance's lower
+bound is not a lower bound on the Green value. The
+[same-assistant check](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/04_GNP_RS_B02_DECISION_SELF_CHECK_20261111.md)
+preserves that distinction and leaves direct logarithmic methods open.
+
+**Exact quadratic averaging can still lose the signed logarithm,
+11 November 2026.** For Edward Baker with Codex assistance; actual
+model/effort unavailable in chat0002. [E03 Note07](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/07_GNP_RS_E03_COHERENT_JENSEN_OBSTRUCTION_20261111.md) pays all
+pair terms and proves the exact \(c=1\) mean law. It states: “The actual
+critical-boundary log and Green value remain open at the failing centers.”
+The contradiction defeats the fixed quadratic-Jensen allowance even
+without separate cross-term payments. Retain the scope of the
+[check](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/05_GNP_RS_E03_COHERENT_JENSEN_SELF_CHECK_20261111.md): direct log acquisition and a proved Jensen-gap
+subtraction remain available for investigation.
+
+
+**Recovering the cosine loss does not pay the envelope, 11 November 2026.**
+For Edward Baker with Codex assistance; dispatched Astra/ultra (B03),
+Sol6.1/ultra (E04 and assessment), root configuration unavailable.
+[GNP-RS Note10](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/10_GNP_RS_B03_SIGNED_LOG_ACQUISITION_20261111.md) proves a 1/1000 obstruction for the exact
+quadratic expression after the ideal cosine correction. It states: “The
+second term is a distinct, amplitude-dependent gap.” This narrows E03's
+remaining Jensen-gap option: the constant phase correction alone is
+insufficient. [E04](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/11_GNP_RS_E04_REGULARIZED_LOG_TRANSFER_20261111.md) pays regularized transfer but retains
+the full envelope/phase value or fixed-prefix residual. A dyadic residual
+mean is not an exceptional-center bound. [Review07](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/07_GNP_RS_B03_E04_INDEPENDENT_REVIEW_20261111.md)
+retains internal shared-input scope; neither the actual Green value nor
+all phase-sensitive methods are excluded.
+
+
+**A vanishing mean can coexist with unbounded local residuals, 11 November 2026.**
+For Edward Baker with Codex assistance: dispatched Astra/ultra and Sol6.1/ultra;
+root settings unavailable. [GNP-RS E05](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/14_GNP_RS_E05_FINITE_EULER_RESIDUAL_20261111.md) proves a fixed-prime
+relative-residual mean tending to zero as more primes are included, but
+unbounded residuals at arbitrarily high centers for every fixed reference.
+It cautions: “The obstruction still has fixed-reference scope.” A density
+gain does not pay the exceptional centers. The tested separate L2/Jensen
+payment fails even with an adaptive regulator; adaptive prime cutoffs and
+signed residual/phase couplings remain outside the theorem.
+[Review08](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/08_GNP_RS_B04_INTERNAL_REVIEW_20261111.md) retains internal, proof-contributing and
+shared-input scope; no negative claim about the actual Green value follows.
+
+
+**Retaining a cross term does not repair every nonlinear relaxation, 11 November 2026.**
+For Edward Baker with Codex assistance; dispatched Astra/ultra and
+Sol6.1/ultra, root settings unavailable. [GNP-RS Note16](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/16_GNP_RS_B05_ADAPTIVE_AND_SIGNED_DECISION_20261111.md)
+tests the logarithmic tangent with h=|S_ref/E_P|²+delta², retaining its
+exact signed cross term. It states: “It is still a tangent upper envelope,
+not the full nonlinear logarithm.” [E06](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/17_GNP_RS_E06_ADAPTIVE_PHASE_AND_TANGENT_20261111.md) proves that
+this fixed-P allowance remains unbounded even with a varying regulator.
+The same pass pays adaptive reference phase overhead but does not bound
+the adaptive arithmetic residual. Keep both scopes: varying-P tangents
+and genuinely nonlinear signed estimates are outside this obstruction.
+[Review09](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/09_GNP_RS_B05_INTERNAL_REVIEW_20261111.md) is internal with proof contributions
+and shared sources. Stop this tested relaxation, not all signed methods.

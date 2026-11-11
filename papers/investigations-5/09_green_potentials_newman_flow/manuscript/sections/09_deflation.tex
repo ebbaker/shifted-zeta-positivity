@@ -1,0 +1,227 @@
+\section{Deflated logarithms, contour floors and signed integration}
+\label{sec:deflation}
+
+The generic logarithmic envelope uses no real-boundary modulus floor.
+When a certified local divisor is available, one can instead integrate
+its singular logarithms explicitly and approximate the remaining regular
+factor. The following construction is inherited from the assessed
+deflation note and its later conditional contour design
+\cite{OGDeflation,OGDeflationAssessment,OGContourDesign}.
+
+\subsection{Stable factor acquisition by divided differences}
+On a real patch \(I_v\), suppose the relevant actual roots of \(H_0\)
+are the multiset \(z_1,\ldots,z_n\), and define the removable quotient
+\[
+ U_v(z)=H_0(z)\Big/\prod_{j=1}^n(z-z_j).
+\]
+Repeated roots are repeated in the list. Deflate \(H_0\), whose entire
+domain is available, before multiplying by \(D\); the meromorphic
+extension of \(F\) has a pole at \(-\ii\).
+
+For a holomorphic \(f\), its divided difference has the simplex formula
+\begin{equation}\label{eq:divided-simplex}
+ f[z_1,\ldots,z_n,x]
+ =\int_{\Delta_n}f^{(n)}\left(t_xx+\sum_{j=1}^nt_jz_j\right)\dd t,
+ \qquad \operatorname{vol}(\Delta_n)=1/n!.
+\end{equation}
+It follows by iterating the fundamental theorem of calculus; continuity
+in the knots supplies repeated-node values. When the knots are the
+actual roots, with their multiplicities, the interpolation polynomial
+vanishes and \eqref{eq:divided-simplex} equals \(U_v(x)\).
+
+Suppose certified matching gives approximate knots \(w_j\) with
+\(|z_j-w_j|\le\rho_j\), and let \(\widehat H\) approximate \(H_0\)
+on the full convex domain of the knots and patch. Define
+\(\widehat U_v(x)=\widehat H[w_1,\ldots,w_n,x]\).
+If \(\epsilon_k\) bounds the error in derivative \(k\) of \(H_0\), and
+\(\widehat M_k\) bounds \(|\widehat H^{(k)}|\), then
+\begin{equation}\label{eq:deflated-errors}
+ \|U_v^{(j)}-\widehat U_v^{(j)}\|_{I_v}
+ \le e_j:=\frac{j!\epsilon_{n+j}}{(n+j)!}
+       +\frac{j!\widehat M_{n+j+1}}{(n+j+1)!}\sum_{l=1}^n\rho_l,
+ \quad j=0,1,2.
+\end{equation}
+Differentiate the simplex integral: the factor is \(t_x^j\).
+Moving a knot adds \(t_l\rho_l\) and one derivative. The simplex
+moments are \(j!/(n+j)!\) and \(j!/(n+j+1)!\), respectively.
+This proves the estimate without division by a root separation.
+Approximate knots require derivatives through order \(n+3\).
+The function \(\widehat U_v\) is a divided difference, not
+\(\widehat H/\prod(z-w_j)\); the latter would leave spurious poles.
+
+If \(|\widehat U_v|\ge\mu_v>e_0\) on the real patch, integration of
+the derivative of the real logarithm along a segment of moduli gives
+\begin{equation}\label{eq:factor-log-error}
+ |\log|U_v|-\log|\widehat U_v||\le b_v:=\frac{e_0}{\mu_v-e_0}.
+\end{equation}
+With \(W_v=\int_{I_v}K(x-X)\dd x\), the factor error is
+\(E_{\rm fac}=\sum_vW_vb_v\), and \(\sum_vW_v\le1/2\).
+The floor is an additional premise, not an automatic consequence of
+divided differences.
+
+\subsection{Paying root uncertainty through real zeros}
+For an interval of length \(L\), two complex points within distance
+\(\rho\) satisfy the root-log estimate from the deflation source
+\cite[Section 3]{OGDeflation}
+\begin{equation}\label{eq:root-log-error}
+ \int_I|\log|x-z|-\log|x-w||\dd x
+ \le A(L,\rho):=4\rho\left[1+\log\left(1+\frac{L}{2\rho}\right)\right],
+ \quad A(L,0)=0.
+\end{equation}
+For a direct proof, the triangle inequality gives
+\[
+ |\log|x-z|-\log|x-w||
+ \le\log\left(1+\frac{\rho}{\min(|x-z|,|x-w|)}\right)
+ \le\sum_{a\in\{\Re z,\Re w\}}\log(1+\rho/|x-a|).
+\]
+For each center the integral is largest when the interval is centered
+there, because the integrand is even and decreases with distance. Its
+value is
+\[
+ 2\int_0^{L/2}\log(1+\rho/t)\dd t
+ =L\log(1+2\rho/L)+2\rho\log(1+L/(2\rho))
+ \le2\rho[1+\log(1+L/(2\rho))].
+\]
+Adding the two centers proves \eqref{eq:root-log-error}, including real
+roots by integrable limiting values. No simple-zero slope is used.
+Since \(K\le1/16\), one may charge
+\[
+ E_{\rm roots}=\frac1{16}\sum_{v,j}A(|I_v|,\rho_{vj}).
+\]
+Repeated uses of a root in different patches are charged again.
+This is stability in root location. Source perturbations can move
+roots by a square root, so it is not a Lipschitz theorem in source error.
+
+\subsection{Product integration with exact singular primitives}
+Set \(q_v(x)=\log|D(x)|+\log|\widehat U_v(x)|\) and assume
+\(|q_v|\le H_v\), \(|q_v''|\le B_v\). On panels of maximum width
+\(\Delta\), linearly interpolate both \(K\) and \(q_v\), denoting
+the interpolants by \(K_h,q_h\). Use
+\begin{equation}\label{eq:product-integration}
+ Q_h=\sum_v\int_{I_v}K_h(x)
+       \left(q_h(x)+\sum_j\log|x-w_{vj}|\right)\dd x.
+\end{equation}
+The regular part is polynomial integration. For a root with real part
+\(a_j\) and \(b_j=|\Im w_j|\), put \(t=x-a_j\). The two singular
+primitives needed for the linear kernel are
+\begin{align}
+ A_0(t,b)&=\tfrac t2\log(t^2+b^2)-t+b\arctan(t/b),\nonumber\\
+ A_1(t,b)&=\tfrac14[(t^2+b^2)\log(t^2+b^2)-(t^2+b^2)].
+ \label{eq:root-primitives}
+\end{align}
+Their derivatives are \(\log\sqrt{t^2+b^2}\) and
+\(t\log\sqrt{t^2+b^2}\). Continuous limits at \(b=0\) include roots
+at panel endpoints; there is no exclusion of multiple real roots.
+
+An explicit common bound for the unweighted absolute integrals of the
+regular part and singular logarithms is
+\[
+ \mathcal S:=\sum_v\left[|I_v|H_v+
+       \sum_j\{|I_v|\log^+D_{vj}+2\}\right],\qquad
+ D_{vj}=\max_{x\in I_v}|x-w_{vj}|.
+\]
+The positive logarithm uses its maximum; the integral of the negative
+logarithm is at most \(\int_{-1}^1-\log|t|\dd t=2\).
+Linear interpolation has uniform error at most \(\Delta^2/8\) times
+the second-derivative bound, and \(\|K''\|_\infty\le a^2/16\).
+Split the regular integrand as
+\(Kq_v-K_hq_h=K(q_v-q_h)+(K-K_h)q_h\).
+Linear interpolation preserves the bound \(|q_h|\le H_v\), so the same
+\(\mathcal S\) also bounds the integral of the interpolated regular
+part plus the singular logarithms. Consequently
+\begin{equation}\label{eq:product-error-safe}
+ E_{\rm quad}\le\frac{\Delta^2}{8}
+       \left(\sum_v W_v B_v+\frac{a^2}{16}\mathcal S\right)
+ \le\Delta^2\left(\frac{B_*}{16}+\frac{a^2\mathcal S}{128}\right),
+ \qquad B_*=\max_v B_v.
+\end{equation}
+Only the first term uses exact Poisson weights \(W_v\). Numerical
+node errors, when later multiplied by the interpolated kernel, instead
+use its explicitly computable weights \(\int K_h\). This distinction
+avoids an unproved assumption that interpolation preserves Poisson mass.
+For fixed paid constants the panel-width cost is of order
+\(E_{\rm quad}^{-1/2}\); the source, count and factor costs remain.
+
+\subsection{Contour acquisition of the factor floor}
+Suppose a closed disk of radius \(A\), centered at real \(c\), contains
+exactly \(n\) roots with multiplicity, all at distance at most \(s<A\)
+from \(c\), and
+\(0<m\le|H_0|\le M\) on its boundary. Deflating all these roots gives
+a holomorphic, zero-free function \(U\) on the closed disk. The maximum
+principle applied to \(U\) and \(1/U\) proves
+\begin{equation}\label{eq:contour-factor-floor}
+ \mu_0:=\frac{m}{(A+s)^n}\le|U(z)|\le
+ V_0:=\frac{M}{(A-s)^n}.
+\end{equation}
+Thus a paid boundary margin and complete root count can replace a
+direct search for a small real-axis denominator. They cannot be omitted.
+For a polynomial source model \(p\), Rouch\'e's theorem on the outer
+boundary, together with disjoint inner cluster counts summing to the
+outer count, supplies the required completeness. A list of located
+roots without this count does not rule out missed roots in the annulus.
+
+If \eqref{eq:deflated-errors} holds on the entire disk and
+\(e_0<\mu_0\), the divided-difference model \(\widetilde U\) is zero-free
+there and lies between \(\mu=\mu_0-e_0\) and \(V=V_0+e_0\).
+For a real subinterval \(|x-c|\le\ell<A\), harmonicity of
+\(\log|\widetilde U|\) gives
+\begin{equation}\label{eq:factor-curvature}
+ |(\log|\widetilde U|)''(x)|
+ \le\frac{2\log(V/\mu)}{(A-\ell)^2}.
+\end{equation}
+For example, on a circle of radius \(r<A-\ell\), subtract the midpoint
+of its allowed logarithmic range. The second Fourier coefficient of
+this bounded harmonic function gives a bound
+\(4\log(V/\mu)/(\pi r^2)\le2\log(V/\mu)/r^2\); let \(r\uparrow A-\ell\).
+On the real axis, direct differentiation of \eqref{eq:F} gives
+\[
+ (\log|D|)''=\Re\{-1/(2s^2)+\psi'(s/2)/16\},\qquad
+ |(\log|D|)''|\le13/4.
+\]
+Indeed \(|s|\ge1/2\) and the trigamma series at \(\Re(s/2)=1/4\)
+is bounded by \(16+\int_0^\infty(t+1/4)^{-2}\dd t=20\).
+Together these bounds supply the \(B_v\) needed in
+\eqref{eq:product-error-safe}.
+
+All derivatives used above can be acquired from the original source.
+For a degree-\(L\) Taylor polynomial about \(c\), if coefficient
+errors are \(\delta_j\), finite-source derivative bound is
+\(M_{L+1,A}^{\rm fin}\), and the complete omitted-source derivative
+allowance is \(E_{{\rm src},k}\), then
+\begin{equation}\label{eq:taylor-source-error}
+ \epsilon_k\le E_{{\rm src},k}
+ +\sum_{j=k}^L(j)_k\delta_jA^{j-k}
+ +M_{L+1,A}^{\rm fin}\frac{A^{L+1-k}}{(L+1-k)!}.
+\end{equation}
+The moment integral of \(|u|^k\ee^{A|u|}\) against the arithmetic and
+radial tails proves the first term. Taylor's integral remainder proves
+the last. Increasing arithmetic precision does not remove either of
+these analytic remainders.
+
+\subsection{The signed error and an identical-information comparison}
+Let a numerical enclosure of \(Q_h-P_Q+G(X,1)\) have center \(S_c\)
+and radius \(e_{\rm num}\). Combining the preceding estimates yields
+\begin{equation}\label{eq:deflation-ledger}
+ |J_0(X)-S_c|\le\mathcal R
+ :=\mathcal T+\beta_Q+E_{\rm fac}+E_{\rm roots}+E_{\rm quad}+e_{\rm num}.
+\end{equation}
+Consequently \(J_{\rm up}=S_c+\mathcal R\) satisfies
+\(0\le J_{\rm up}-J_0\le2\mathcal R\). Small acquisition error is
+separate from the strict value test \(J_{\rm up}<m(d,r)\).
+
+There is also a useful scoped comparison with direct zero information.
+Suppose a complete collection of rectangular cells
+\(C_i=[l_i,u_i]\times[b_i,c_i]\) carries integer counts \(n_i\).
+For each cell in the upper strip, the independent Green maximum is
+\[
+ U_i=G(\operatorname{dist}(X,[l_i,u_i]),\max(c_i,0)).
+\]
+If an occupied cell intersects the target
+\([X-r,X+r]+\ii[d,1]\), monotonicity of \(G\) gives
+\(U_i\ge G(r,d)\ge m(d,r)\). Therefore a strict pass of
+\(\sum_i n_iU_i+T_G<m(d,r)\), with \(T_G\ge0\) a complete tail,
+already implies that every occupied cell is disjoint from the target.
+The same data thus directly exclude zeros there. This proves dominance
+only for independent rectangular maxima with identical complete cell
+information. It is neither a cost theorem nor an obstruction to coupled
+signed estimates, different information, or reuse of an acquired observable.

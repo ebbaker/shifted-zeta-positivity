@@ -1,0 +1,223 @@
+\section{Riemann--Siegel structure and Newman-time evolution}
+\label{sec:RS}
+
+The preceding acquisition theorems accept complete approximants with
+paid errors. Riemann--Siegel theory supplies such approximants by
+preserving oscillatory arithmetic terms and their remainder. It is
+useful to separate three questions: where the classical saddles lie,
+how the complete expression evolves in Newman time, and how its error
+passes through an integrated logarithm. The first two identities alone
+do not answer the signed upper-value question.
+
+\subsection{The critical strip comes before the critical line}
+For the standard oriented line \(\mathcal C\) from northeast to
+southwest crossing the real interval \((0,1)\), with the usual
+continuous branch of \(\log w\), Riemann's auxiliary function is
+\begin{equation}\label{eq:RS-auxiliary}
+ \mathscr R(s)=\int_{\mathcal C}
+ \frac{w^{-s}\ee^{\pi\ii w^2}}{\ee^{\pi\ii w}-\ee^{-\pi\ii w}}\dd w.
+\end{equation}
+Its reflected identity is
+\begin{equation}\label{eq:RS-reflection}
+ \zeta(s)=\mathscr R(s)+\chi(s)\overline{\mathscr R(1-\bar s)},
+ \qquad
+ \chi(s)=\pi^{s-1/2}\frac{\Gamma((1-s)/2)}{\Gamma(s/2)}.
+\end{equation}
+These are the classical entire auxiliary integral and reflected zeta
+formula; at exceptional factors they are understood by continuation
+\cite[Section 3, Definition 4 and Theorem 5]{Arias2024AuxiliaryBasic}.
+Contour displacement across integer poles produces finite Dirichlet
+sums plus a remaining saddle contour. The corresponding two-sum
+approximate functional equation is valid off the line as well. A
+balanced cutoff near \(\sqrt{t/(2\pi)}\) does not require
+\(\Re s=1/2\) \cite[Sections 2 and 8]{Arias2024AuxiliaryExpansions}.
+
+On \(s=1/2+\ii t\), the two terms are related by conjugacy and
+\(|\chi(s)|=1\). Choose the continuous gamma phase \(\theta(t)\) so
+that \(\chi(1/2+\ii t)=\ee^{-2\ii\theta(t)}\). Multiplying by
+\(\ee^{\ii\theta(t)}\) makes the full expression real, and its balanced
+finite sums combine into
+\begin{equation}\label{eq:RS-cosine}
+ Z(t)=2\sum_{n\le\lfloor\sqrt{t/(2\pi)}\rfloor}
+ n^{-1/2}\cos(\theta(t)-t\log n)+\mathcal E_{\rm RS}(t).
+\end{equation}
+The correction \(\mathcal E_{\rm RS}\) is retained. This is a
+large-height expansion specialized by symmetry, not an expansion
+assuming all zeros lie on the line. Its reality follows from the
+functional equation whether or not RH holds. Away from the line the
+two complete contributions must be kept separately.
+
+\subsection{Off-line zeros do not force degenerate classical saddles}
+To specify what is meant by a saddle, place the denominator of
+\eqref{eq:RS-auxiliary} in the amplitude and choose the phases
+\[
+ \varphi_+(w;s)=\pi\ii w^2-s\log w,\qquad
+ \varphi_-(w;s)=-\pi\ii w^2+(s-1)\log w.
+\]
+The second is the reflected phase in \eqref{eq:RS-reflection}.
+For \(s=\sigma+\ii t\), \(t>0\), their near-positive saddle branches obey
+\begin{equation}\label{eq:RS-saddles}
+ w_+^2=\frac{t}{2\pi}-\frac{\ii\sigma}{2\pi},\qquad
+ w_-^2=\frac{t}{2\pi}+\frac{\ii(1-\sigma)}{2\pi},\qquad
+ \varphi_+''(w_+)=4\pi\ii,\quad \varphi_-''(w_-)=-4\pi\ii.
+\end{equation}
+These formulas follow by differentiating the displayed phases, then
+substituting their stationary equations into the second derivatives.
+For bounded \(\sigma\), with \(a_t=\sqrt{t/(2\pi)}\), Taylor expansion
+of the square root gives
+\[
+ w_+=a_t-\frac{\ii\sigma}{4\pi a_t}+O(t^{-3/2}),\qquad
+ w_-=a_t+\frac{\ii(1-\sigma)}{4\pi a_t}+O(t^{-3/2}).
+\]
+On the line they are conjugates. Changing \(\sigma\) moves them
+smoothly, and the chosen phase Hessians remain nonzero throughout the
+high critical strip. The saddle definition is tied to this phase/amplitude
+split; it is not an invariant zero detector for an arbitrary integrand
+factorization.
+
+If a hypothetical off-line zero \(s_0\) exists, the exact conclusion is
+\(\mathscr R(s_0)=-\chi(s_0)\overline{\mathscr R(1-\bar s_0)}\).
+After contour displacement this is cancellation of the finite sums,
+gamma factors and contour remainders together. It imposes no extra
+stationary equation on \(w_\pm\). Saddles can be individually
+nondegenerate while their complete contributions cancel. No zero-free
+claim can be deduced by inspecting only the leading saddle or by
+discarding a remainder near a small value of the total expression.
+
+\subsection{Exact evolution of a complete Riemann--Siegel formula}
+Riemann--Siegel is not restricted to \(\lambda=0\). That is the slice
+where the classical zeta formula and the prime baseline apply directly.
+For \(\lambda>0\), the complete source proves the exact identity
+\begin{equation}\label{eq:imaginary-Gaussian}
+ H_\lambda(z)=\frac1{\sqrt\pi}\int_\R
+       \ee^{-v^2}H_0(z-2\ii\sqrt\lambda\,v)\dd v.
+\end{equation}
+For \(T>0\), forward heat similarly gives
+\begin{equation}\label{eq:real-Gaussian}
+ H_{-T}(z)=\frac1{\sqrt\pi}\int_\R
+       \ee^{-v^2}H_0(z+2\sqrt T\,v)\dd v.
+\end{equation}
+To prove both, substitute \eqref{eq:H}, interchange integrals, and use
+\(\pi^{-1/2}\int\ee^{-v^2+2av}\dd v=\ee^{a^2}\).
+For the imaginary shifts Tonelli's absolute majorant is
+\(\int\Phi(u)\ee^{\lambda u^2+|\Im z||u|}\dd u<\infty\).
+For real shifts, use the same bound with \(\lambda=0\); the oscillatory
+Gaussian integral supplies \(\ee^{-Tu^2}\). Thus these are actual
+identities, not formal application of an unbounded reverse heat
+operator to arbitrary data.
+
+Write \(M(s)=s(s-1)\pi^{-s/2}\Gamma(s/2)/16\), so that
+\(H_0(z)=M(s(z))\zeta(s(z))\). Under the shift in
+\eqref{eq:imaginary-Gaussian}, \(s(z)\) becomes \(s(z)-\sqrt\lambda v\).
+Consequently a complete finite Riemann--Siegel decomposition can be
+evolved by Gaussian integration of its arithmetic terms and its
+remainder, provided their individual integrability or a justified
+combined continuation is retained. Polymath explicitly carries this
+out in the heat-evolved decomposition
+\cite[Section 4, equations (35)--(41)]{polymath2019heat}.
+
+The arithmetic weight is visible even before treating the gamma factor:
+\begin{equation}\label{eq:heat-Dirichlet-weight}
+ \frac1{\sqrt\pi}\int_\R\ee^{-v^2}
+       n^{-s+\sqrt\lambda v}\dd v
+ =n^{-s}\ee^{\lambda(\log n)^2/4}.
+\end{equation}
+This is why heat-evolved Riemann--Siegel formulas contain
+\(b_n^\lambda=\ee^{\lambda(\log n)^2/4}\). For the actual completed
+field the moving \(M(s-\sqrt\lambda v)\), reflected contribution,
+cutoff and errors remain. The displayed scalar identity does not
+justify multiplying the old cosine formula termwise by \(b_n^\lambda\)
+and leaving everything else unchanged. In particular the corresponding
+infinite weighted Dirichlet series is not asserted to converge for
+positive \(\lambda\).
+
+The published explicit approximation is stated in a definite region:
+\(0<\lambda\le1/2\), \(0\le\Im z\le1\), \(\Re z\ge200\), with
+gamma corrections, shifted arguments, finite cutoff and error bounds
+\cite[Theorem 1.3]{polymath2019heat}. Its exact decomposition has a wider
+scope than that asymptotic theorem. A Gaussian average samples points
+outside a bounded strip, so a strip-only error estimate cannot be
+integrated over the whole Gaussian line without a separate tail payment.
+Neither these identities nor the heat equation assign the time-zero
+Euler product to \(H_\lambda\) for \(\lambda\ne0\).
+
+\subsection{From heat-density asymptotics to a logarithmic error}
+The heat-density investigation uses the same complete source with
+forward time \(T=-\lambda\). Its positive-time estimates and its
+time-zero Riemann--Siegel estimates have different regimes. For example,
+a remainder proved on \(1/\log X\le T\le2\) cannot be specialized to
+\(T=0\); the separate time-zero formula must be used. The positive
+Newman-time formulas and crossover bounds likewise retain their stated
+parameter bands. The source-use and transfer note records these domain
+distinctions \cite{GNPHDATransfer}.
+
+At zero Newman time a useful quantitative bridge is available. For
+real \(x>0\), put \(s_\pm=1/2\pm\ii x/2\),
+\(a_x=\sqrt{x/(4\pi)}\), \(N_x=\lfloor a_x\rfloor\), and
+\(\vartheta_x=1-2(a_x-N_x)\). Let
+\[
+ U_x=\exp\{-\ii[(x/4)\log(x/(4\pi))-x/4-\pi/8]\}.
+\]
+With the coefficient convention \(C_k\) of the cited expansion, take
+\begin{equation}\label{eq:RS-approximant}
+ f_K(x)=2\Re\left\{M(s_+)\left[
+ \sum_{n\le N_x}n^{-s_+}+(-1)^{N_x-1}U_xa_x^{-1/2}
+             \sum_{k=0}^KC_k(\vartheta_x,1/2)a_x^{-k}\right]\right\}.
+\end{equation}
+The imported explicit remainder, for every \(x>0\) and integer \(K\ge1\), is
+\begin{equation}\label{eq:RS-remainder}
+ |H_0(x)-f_K(x)|\le\frac{2^{7/4}}7|M(s_+)|
+       \Gamma((K+1)/2)1.1^{K+1}a_x^{-K-3/2}.
+\end{equation}
+This is the normalization recorded and checked in the inherited
+transfer, using Polymath's Proposition 6.2
+\cite{GNPHDATransfer,polymath2019heat}; the coefficients are those of
+that exact version, not a new recurrence asserted here.
+
+The gamma scale cancels in the logarithmic consumer. Indeed
+\(D(x)M(s_-)=q(s_-)\), \(|q(s_-)|=1\) and
+\(|M(s_+)|=|M(s_-)|\). Thus on the unit interval \(I_v\), with
+\(a_- =\sqrt{(v-1/2)/(4\pi)}\), \(D f_K\) approximates \(F\) with
+the explicit uniform error
+\begin{equation}\label{eq:RS-normalized-error}
+ \delta_{v,K}=\frac{2^{7/4}}7
+       \Gamma((K+1)/2)1.1^{K+1}a_-^{-K-3/2}.
+\end{equation}
+The approximant need not be zero-free or holomorphic in a whole disk
+for Corollary~\ref{cor:canonical-log}; holomorphy is required of the
+exact field. Changes of the integer cutoff do not authorize omitting
+the compensating remainder.
+
+The distinction between fixed and increasing expansion order is
+quantitative. In \eqref{eq:local-canonical-constants},
+\(n_v\sim\log v/\kappa\) and the prefactor of the envelope is
+\(O(\log^2v)\). For \(K=2p\), use
+\(\Gamma(p+1/2)\le\sqrt\pi\,p^p\) to obtain
+\[
+ \log(2\delta_{v,2p}/M_v)
+ \le-(p+7/4)\log v+O(p\log p).
+\]
+Choosing \(p=\lceil(4/\kappa)\log\log v\rceil\) therefore gives
+\begin{equation}\label{eq:RS-log-transfer}
+ \mathcal E_v(\delta_{v,2p})
+ =O(\log^2v\,\ee^{-\kappa p+o(1)})=O((\log v)^{-2})
+ \qquad(v\to\infty).
+\end{equation}
+This proves that an increasing-order, complete Riemann--Siegel error
+can pass through the deteriorating local logarithmic exponent. A
+fixed algebraic source-error rate does not make this particular
+sufficient envelope vanish. At fixed height the remainder hierarchy
+is asymptotic: the ratio of the bounds at orders \(2p+2\) and \(2p\)
+is \((p+1/2)1.1^2/a_-^2\). Sending \(p\to\infty\) at fixed \(v\)
+is therefore not a convergence claim. The finite initial-height range
+requires its own acquisition, and the arithmetic sum still contains
+order \(\sqrt v\) modes.
+
+Equation~\eqref{eq:RS-log-transfer} controls an error allowance. The
+remaining time-zero arithmetic task is to bound the signed logarithm of the
+retained expression against \(P(X)-G(X,1)\) plus the chosen defect margin, including exceptional
+centers. A saddle description, or a remainder tending to zero, does
+not supply that comparison. This is the precise boundary between the
+background established here and the transition-scale development below.
+The time-zero gamma normalization and its pole correction must be
+distinguished from the harmonic carrier used there.

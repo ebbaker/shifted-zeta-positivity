@@ -1,5 +1,23 @@
 # TND-OG Green/resolvent progress register
 
+## Continuation ownership crosswalk — 10 November 2026
+
+The author's fresh continuation is [Investigation09](../../../../09_green_potentials_newman_flow/README.md).
+The **unissued proposed B07 r2** below is **SUPERSEDED FOR ROUTING** by
+**GNP-B01**, proposed and unactivated in the
+[new sole GNP register](../../../../09_green_potentials_newman_flow/research-progress/01_GNP_RESEARCH_PROGRESS_20261110.md).
+B07 r1 remains complete at its original discussion/editorial scope.
+All completed IDs, issued requests, returns and evidence remain here.
+The RS/Newman-time child owns GNP-RS tasks separately; OC/OA are unchanged.
+[Crosswalk](../../../../09_green_potentials_newman_flow/notes/01_GNP_SOURCE_MAP_AND_INTEGRATION_20261110.md) and
+[continuation prompts](../../../../09_green_potentials_newman_flow/notes/02_GNP_CONTINUATION_AND_PROMPTS_20261110.md)
+are current for new work. This register retains TND-OG ownership/history,
+not a second live copy of GNP tasks.
+
+Prepared for Edward Baker with OpenAI Codex assistance; actual model/effort
+unavailable in chat0010. The following B07 r2 proposal is its historical
+pre-branching record, not a currently executable request.
+
 ## B07 post-E08 discussion — 10 November 2026
 
 **COMPLETE at discussion/editorial scope; B — recommended GPT-6 Astra.**

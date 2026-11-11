@@ -15,6 +15,8 @@ This collection studies canonical heat-flow approximations, their RH application
 | [06 — Auxiliary flows for collision analysis](06_auxiliary_collision_flows/README.md) | Explore modified Newman and auxiliary source evolutions for clearer collision responses and useful estimates | [Initial overview](06_auxiliary_collision_flows/research-overview/01_AUXILIARY_COLLISION_FLOWS_RESEARCH_OVERVIEW_20261028.md); background for brainstorming, research plan deferred |
 | [07 — Positive theta primitives](07_positive_theta_primitives/README.md) | Develop the Jensen and spectral Laguerre proof routes, with shared theta tools guided by their questions | [Jensen program](07_positive_theta_primitives/01_jensen/README.md), [spectral Laguerre program](07_positive_theta_primitives/02_spectral_laguerre/README.md), and [shared foundation](07_positive_theta_primitives/notes/README.md); program organization and literature foundation, no new global sign or zero theorem |
 | [08 — Theta observables and Newman dynamics](08_theta_observables_newman_dynamics/README.md) | Combine radial theta geometry and angular energy observables to develop physical preparation, evolution and signed Newman observations | [Draft overview](08_theta_observables_newman_dynamics/research-overview/01_THETA_OBSERVABLES_AND_NEWMAN_DYNAMICS_DRAFT_OVERVIEW_20261105.md) and [brainstorm continuation](08_theta_observables_newman_dynamics/notes/01_BRAINSTORM_CONTINUATION_20261105.md); research plan and progress register deferred by the author |
+| [09 — Green potentials and Newman flow](09_green_potentials_newman_flow/README.md) | Analytical continuation of the Green branch, with one Riemann–Siegel/Newman-evolution child | Opening analytical manuscript and bounded setup complete at synthesis scope; signed value and new mechanism remain open |
+| [10 — Riemann–Siegel at the Newman critical time](10_riemann_siegel_critical_time/README.md) | Use the complete symmetric RS formula and all-real configuration at an assumed positive threshold to constrain its necessary multiple real zero | [Overview](10_riemann_siegel_critical_time/research-overview/01_RSCT_RESEARCH_OVERVIEW_20261111.md), [plan](10_riemann_siegel_critical_time/research-plan/01_RSCT_RESEARCH_PLAN_20261111.md) and [continuation](10_riemann_siegel_critical_time/notes/01_RSCT_CONTINUATION_AND_PROMPT_20261111.md) prepared; research unactivated, no new exclusion estimate |
 
 Each investigation keeps its own notes, numerics, reviews and chat
 histories. The [result summaries](../../result-summaries/README.md),
@@ -45,3 +47,13 @@ effort max**. The founding chat retains its Investigation05 registration.
 31 October 2026 — Investigation07 opened at Edward Baker’s request for a primitive-centered continuation of the classical Riemann representation and its sign applications. Opening brainstorm includes lessons from Investigation05. Prepared with substantial LLM assistance, **gpt-6-astra / xhigh**; the founding chat retains its unique Investigation05 chat0053 registration.
 
 5 November 2026 — Investigation08 opened directly under investigations-5 at Edward Baker’s request, joining Investigation05 and MC11 within Investigation07, with related work linked in the draft overview. Further brainstorming precedes the research plan and progress register. Prepared with substantial LLM assistance, **gpt-6-astra / max**. The founding chat retains its unique MC11 history0006 registration.
+
+10 November 2026 — Investigation09 opened directly under investigations-5 at Edward Baker’s request. The analytical manuscript integrates OG and its parent foundations; one RS child is prepared. Existing sources, OC/OA ownership and the founding chat home remain in place. OpenAI Codex assistance; actual model/effort unavailable. [Continuation prompts](09_green_potentials_newman_flow/notes/02_GNP_CONTINUATION_AND_PROMPTS_20261110.md).
+
+11 November 2026 — Investigation10 opened at Edward Baker's request for a
+separate critical-time symmetric Riemann–Siegel argument. Its consumer is
+independent of 09's Green bounds; canonical representations and existing
+02–04/08/09 evidence are linked in place. Standard setup and continuation
+prepared with Codex assistance; actual model/effort unavailable. Research
+unactivated and existing task statuses unchanged. The setup chat retains
+its unique GNP-RS registration. [Source/ownership crosswalk](10_riemann_siegel_critical_time/notes/02_RSCT_SETUP_AND_SOURCE_CROSSWALK_20261111.md).

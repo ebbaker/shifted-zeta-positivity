@@ -1,0 +1,147 @@
+\section{Complete finite-source acquisition of the signed logarithm}
+\label{sec:signed-acquisition}
+
+The local theorem can be assembled into a complete one-sided Green
+estimate. We give the full construction, rather than regard a uniformly
+accurate approximation as an evaluated exclusion
+\cite{OGAssemblyProof,OGAssemblyAssessment}.
+
+\subsection{The literal source and its two independent tails}
+For an integer \(N\ge1\), reflect the first \(N\) positive-half-line
+terms evenly and set
+\[
+ \Phi_N^{\rm ref}(u)=\ee^{|u|}\sum_{n=1}^N
+ [2(n^2\rho(u))^2-3n^2\rho(u)]\ee^{-n^2\rho(u)},\qquad
+ \widehat H(z)=\frac12\int_{-V}^V\Phi_N^{\rm ref}(u)\ee^{\ii zu}\dd u.
+\]
+Let \(\widehat F=D\widehat H\), with \(D\) as in \eqref{eq:F}, and put
+\[
+ \mathcal Q=\int_\R\ee^{9|u|}\rho(u)^2\ee^{-\rho(u)}\dd u,
+ \qquad \mathcal Q^{>V}=\int_{|u|>V}\ee^{9|u|}\rho(u)^2\ee^{-\rho(u)}\dd u.
+\]
+The arithmetic tail inside the radial cutoff and the complete source
+outside it give, with \(B_0=5C_2(0)\),
+\begin{equation}\label{eq:delta-H}
+ \sup_{|\Im z|\le8}|H_0(z)-\widehat H(z)|
+ \le\delta_H=\tfrac12[5C_2(N)\mathcal Q+B_0\mathcal Q^{>V}].
+\end{equation}
+This follows immediately from Lemma~\ref{lem:source} and
+\(|\ee^{\ii zu}|\le\ee^{8|u|}\). The reflected finite source need not
+be smooth at zero; this undifferentiated integral argument does not
+require it to be. The finite integral is entire in \(z\).
+
+These errors have terminating explicit majorants. Successive term
+ratios decrease, so
+\[
+ C_2(N)\le
+ \frac{(N+1)^4\ee^{-\pi((N+1)^2-1)}}
+ {1-((N+2)/(N+1))^4\ee^{-\pi(2N+3)}}.
+\]
+With \(T_V=\pi\ee^{4V}\), substitution in the radial integral gives
+\begin{equation}\label{eq:radial-majorant}
+ \mathcal Q^{>V}=\frac1{2\pi^{9/4}}\int_{T_V}^\infty t^{13/4}\ee^{-t}\dd t
+ \le\frac{\ee^{-T_V}}{2\pi^{9/4}}
+       (T_V^4+4T_V^3+12T_V^2+24T_V+24).
+\end{equation}
+The same bound at \(T_V=\pi\) bounds \(\mathcal Q\). Both errors tend
+to zero separately.
+
+The normalization multiplier must also be paid. On
+\(|\Re z-X|\le R\), \(0\le\Im z\le8\), one sufficient bound is
+\begin{equation}\label{eq:multiplier}
+ |D(z)|\le\mathcal B(X,R)
+ =16\pi^{9/4}\exp\left\{\frac94+
+                 \frac{\pi^2[81+(|X|+R)^2]}{192}\right\}.
+\end{equation}
+To derive it, use the reciprocal-gamma product
+\cite[5.8.2]{DLMFReciprocalGammaOC}. For \(w=s/2\),
+\[
+ |\Gamma(w)^{-1}|
+ \le|w|\exp\{\gamma\Re w+\pi^2|w|^2/12\},
+\]
+because \(\log|1+w/n|\le\Re(w/n)+|w|^2/(2n^2)\).
+Now \(1/2\le\Re s\le9/2\), \(|s|\ge1/2\),
+\(|s|^2\le[81+(|X|+R)^2]/4\), and \(\gamma<1\).
+Substitution into \eqref{eq:F} proves \eqref{eq:multiplier}.
+Thus the compact error in \(F\) is at most \(\mathcal B\delta_H\).
+This deliberately coarse compact bound is never integrated along an
+infinite remote boundary.
+
+\subsection{The exact boundary tail}
+Use \(B,\kappa,c_0\) from Section~\ref{sec:boundary-log}, and set
+\[
+ L_0=\log(26/c_0),\quad N_0=2+L_0/\kappa,\quad
+ C_{\log}=\log26+2B\ee^{51\kappa}N_0^2,\quad q=\ee^{-a}.
+\]
+Equation~\eqref{eq:canonical-absolute-log} is bounded by
+\(C_{\log}[1+\log(1+|v|)]^2\) on the unit interval \(I_v\).
+For an integer \(R\ge1\), covering the two remote half-lines with
+unit intervals consequently gives
+\begin{equation}\label{eq:assembled-log-tail}
+ \int_{|x-X|>R}K(x-X)|\log|F(x)||\dd x
+ \le\mathcal T(X,R):=\frac{C_{\log}}4\ee^{-aR}
+ [1+\log(|X|+R+2)]^2\frac{1+q}{(1-q)^3}.
+\end{equation}
+Indeed the two interval weights at offset \(k\ge R\) are each at
+most \(\ee^{-ak}/8\). Bound the remaining logarithmic factor by its
+value at \(R\) times \((1+k-R)^2\), and sum
+\(\sum_{j\ge0}q^j(1+j)^2=(1+q)/(1-q)^3\).
+This is a tail of the exact logarithm, not a tail of its approximant.
+
+\subsection{A one-sided assembly with all constants retained}
+Assume \(\sup_{|x-X|\le R}|F-\widehat F|\le\delta\),
+where \(0<\delta\le1\). Write
+\begin{align}
+ \mathcal I&=\int_{X-R}^{X+R}K(x-X)
+                    \log(|\widehat F(x)|+\delta)\dd x,\nonumber\\
+ \mathcal E_{X,R}(\delta)&=\sum_{k=0}^{R-1}
+ \frac{\mathcal E_{X+k+1/2}(\delta)+\mathcal E_{X-k-1/2}(\delta)}
+ {16\cosh(ak)},\label{eq:compact-log-envelope}\\
+ U_{R,Q,\delta}(X)&=\mathcal I+\mathcal T(X,R)-P_Q(X)+\beta_Q+G(X,1).
+ \label{eq:signed-upper}
+\end{align}
+Here \(Q\ge2\) is an integer and \(\mathcal E_v\) is exactly
+\eqref{eq:canonical-envelope}.
+
+\begin{theorem}[Complete one-sided acquisition]\label{thm:signed-acquisition}
+Under these assumptions,
+\begin{equation}\label{eq:signed-acquisition-error}
+ 0\le U_{R,Q,\delta}(X)-J_0(X)
+ \le\mathcal E_{X,R}(\delta)+2\mathcal T(X,R)+2\beta_Q.
+\end{equation}
+For each fixed \(X\) and every positive error allowance, finite
+\(R,Q,N,V\) and a positive \(\delta\) can make this bound smaller
+than the allowance. No conclusion about the size of \(J_0(X)\) follows
+from this acquisition assertion alone.
+\end{theorem}
+\begin{proof}
+The integrand difference from \(\log|F|\) is nonnegative almost
+everywhere. On each unit interval apply Corollary~\ref{cor:canonical-log}
+and multiply by the maximum kernel weight, obtaining
+\eqref{eq:compact-log-envelope}. Let \(L_{\rm comp},L_{\rm tail}\)
+be the exact compact and remote logarithmic integrals. Subtracting
+\eqref{eq:F-prime} from \eqref{eq:signed-upper} gives
+\[
+ U-J_0=(\mathcal I-L_{\rm comp})+
+        (\mathcal T-L_{\rm tail})+(P-P_Q+\beta_Q).
+\]
+The three terms lie respectively in
+\([0,\mathcal E]\), \([0,2\mathcal T]\) and \([0,2\beta_Q]\).
+This proves the inequality, including both factors of two.
+Given an allowance \(h>0\), choose \(R\) so that \(\mathcal T<h/6\),
+then \(Q\) so that \(\beta_Q<h/6\). The finite sum \(\mathcal E\)
+tends to zero with \(\delta\), so choose it with \(\mathcal E<h/3\).
+Finally choose \(N,V\) using \eqref{eq:delta-H}--\eqref{eq:multiplier}
+to realize that compact error. This order avoids using a multiplier
+bound on an unchosen or unbounded domain.
+\end{proof}
+
+For fixed \(\delta>0\), the compact approximate integrand is continuous
+and has a finite modulus of continuity. Validated subdivision can
+therefore evaluate its integral to any specified positive tolerance.
+If a directed evaluation satisfies \(U\le\overline U\le U+\eta_{\rm eval}\),
+the complete upper error adds \(\eta_{\rm eval}\). An interval's width,
+rather than an unqualified midpoint radius, pays this one-sided step.
+Finite termination at each prescribed tuple is not a common all-height
+complexity estimate. The next section gives a different integration
+method that exploits certified local root information.

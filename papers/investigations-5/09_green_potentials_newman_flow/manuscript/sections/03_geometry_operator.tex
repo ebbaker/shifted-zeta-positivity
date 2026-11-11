@@ -1,0 +1,210 @@
+\section{Geometric origins and the calibrated heat realization}
+\label{sec:geometry}
+
+The preceding source can be described by geometric traces, scalar
+potentials and a prepared operator orbit. These descriptions explain the
+origin of the investigation. We derive the identities needed for the
+Green thread while retaining their preparation and observation assumptions
+\cite{GNPBackground,OperatorProof,OperatorAssessment}.
+
+\subsection{The cylinder and the multiplicity-cancelling trace}
+Let \(D\) be the Dirac operator on the unit two-sphere. Its eigenvalues
+are \(\pm n\), each of multiplicity \(2n\), \(n\ge1\)
+\cite{CamporesiHiguchi1996}. On the cylinder
+\(\R_v\times S^2_{1/2}\), with the radial Clifford matrix anticommuting
+with the angular operator, the geometric square is
+\begin{equation}\label{eq:cylinder-square}
+ L_0=-\partial_v^2+4A,\qquad A=D^2.
+\end{equation}
+The scalar curvature is \(8\), so the Lichnerowicz curvature term is
+\(2\); it is already contained in this geometric square. The
+\(A=n^2\) shell has total rank \(4n\). Its radial Green kernel is
+\[
+ g_n(v,w)=\frac{\ee^{-2n|v-w|}}{4n}.
+\]
+Indeed it solves \((-\partial_v^2+4n^2)g_n=\delta_w\): the derivative
+jump at \(w\) is \(-1\). Thus the coincident kernel induces the angular
+weight \(W=(4\sqrt A)^{-1}\), and
+\begin{equation}\label{eq:geometric-trace}
+ Q(\beta)=\Tr(W\ee^{-\beta A})=\sum_{n\ge1}\ee^{-\beta n^2}.
+\end{equation}
+All traces at \(\beta>0\) converge absolutely. The factor \(4n\) from
+the shell cancels the diagonal Green factor \(1/(4n)\).
+
+Supply the scan \(\beta(u)=\pi\ee^{4u}\). Then
+\(p(u)=\ee^u Q(\beta(u))\), and differentiating twice gives
+\begin{equation}\label{eq:trace-source}
+ \Phi(u)=\ee^u Q(\beta)
+ \Tr\bigl[\rho_\beta(2\beta^2A^2-3\beta A)\bigr],\qquad
+ \rho_\beta=\frac{W\ee^{-\beta A}}{Q(\beta)}.
+\end{equation}
+The differentiation is justified by Gaussian angular summability on
+compact \(u\) sets. This proves the positive-half-line source formula
+and, together with theta reflection, the full source. The scan is a
+specified relation between variables: translation of the radial Green
+probe does not generate it, since \(g_n(v,v)\) is constant in \(v\).
+
+\subsection{A scalar potential and its transported source}
+Write \(\Theta(R)=1+2Q(\pi R^2)\). Jacobi reflection says
+\(\Theta(R)=R^{-1}\Theta(1/R)\). The scalar potential
+\(V(R)=1+R^{-1}-\Theta(R)\) gives the even function
+\begin{equation}\label{eq:scalar-G0}
+ \mathscr G_0(u)=\tfrac12\ee^u V(\ee^{2u})
+ =\tfrac12\ee^{-u}-p(u)\quad(u\ge0).
+\end{equation}
+Let \(L=1-\partial_u^2\). The reflection endpoint \(p'(0)=-1/2\)
+makes the derivative of \eqref{eq:scalar-G0} zero at the origin, so its
+even extension has no distributional delta there. Hence
+\(L\mathscr G_0=8\Phi\). More generally define
+\begin{equation}\label{eq:scalar-G-lambda}
+ \mathscr G_\lambda=8L^{-1}W_\lambda
+ =4\int_\R \ee^{-|u-w|}W_\lambda(w)\dd w.
+\end{equation}
+The positive convolution and the complete source bounds justify every
+fixed derivative and yield
+\(\mathscr G_\lambda(u)\sim c_\lambda\ee^{-|u|}\), where
+\(c_\lambda=8H_\lambda(\ii)>0\) and \(c_0=1/2\).
+For example, as \(u\to+\infty\), the part \(w\le u\) equals
+\(4\ee^{-u}\int_{-\infty}^u\ee^w W_\lambda(w)\dd w\); the complementary
+tail is negligible by double-exponential decay. Evenness proves the
+other end.
+
+Fourier transformation of \(L\mathscr G_\lambda=8W_\lambda\) gives
+\begin{equation}\label{eq:scalar-fourier}
+ 16H_\lambda(z)=(1+z^2)\int_\R\mathscr G_\lambda(u)\ee^{\ii zu}\dd u,
+ \qquad |\Im z|<1.
+\end{equation}
+The raw integral is only asserted in this strip. At \(z=\pm\ii\) one
+must use the entire source definition of \(H_\lambda\), rather than
+multiply a vanishing polynomial by a divergent integral.
+
+If \(X\) denotes multiplication by \(u\), source transport induces
+\begin{equation}\label{eq:scalar-transport}
+ \partial_\lambda\mathscr G_\lambda=\mathcal B\mathscr G_\lambda,
+ \quad \mathcal B=L^{-1}X^2L,
+ \quad \mathcal Bf=u^2f+L^{-1}(4uf'+2f).
+\end{equation}
+The commutator identity follows by expanding \(L(u^2f)\).
+On Schwartz functions \(\mathcal B^j=L^{-1}X^{2j}L\); the displayed
+prepared family supplies its own domains through \eqref{eq:scalar-G-lambda}.
+Multiplying \(\mathscr G_0\) by \(\ee^{\lambda u^2}\) is a different
+operation and is not integrable for \(\lambda>0\). This distinction is
+essential when interpreting a geometric potential as a Newman source.
+
+\subsection{A fixed operator with the correct heat clock}
+The calibrated operator is
+\begin{equation}\label{eq:calibrated-K}
+ K=L_0-4I=-\partial_v^2+4(A-I).
+\end{equation}
+Under the unitary radial Fourier transform its shell multiplier is
+\(m_n(p)=p^2+4(n^2-1)\), with maximal domain
+\[
+ \Dom K=\left\{\psi:\sum_n\int_\R m_n(p)^2
+             \|\widehat\psi_n(p)\|^2\dd p<\infty\right\}.
+\]
+Real nonnegative multiplication proves self-adjointness and positivity;
+the spectrum is purely absolutely continuous and equals \([0,\infty)\).
+The value zero is not an eigenvalue. The semigroup \(S_\tau=\ee^{-\tau K}\)
+has norm one, and for \(j\ge1,\tau>0\),
+\(\|K^jS_\tau\|\le(j/(\ee\tau))^j\), by maximizing
+\(r^j\ee^{-\tau r}\) over \(r\ge0\).
+
+Fix a unit vector \(\chi\) in the first angular shell. Define
+\(\widehat{E_\chi f}(p)=f(p)\chi\) and
+\(R_\chi\psi(x)=\sqrt{\pi/2}\langle\chi,\psi(x)\rangle\).
+The first is an isometry and the second is bounded between the relevant
+\(L^2\) spaces. On their natural domains,
+\begin{equation}\label{eq:operator-intertwine}
+ KE_\chi=E_\chi X^2,\qquad R_\chi K=-\partial_x^2R_\chi.
+\end{equation}
+The complete prepared amplitude \(W_{\lambda_0}\) therefore satisfies
+\begin{equation}\label{eq:operator-response}
+ R_\chi S_\tau E_\chi W_{\lambda_0}=H_{\lambda_0-\tau}=h(\tau,\cdot).
+\end{equation}
+To verify the constant, inverse Fourier transformation gives
+\(\sqrt{\pi/2}/\sqrt{2\pi}=1/2\), exactly the coefficient in
+\eqref{eq:H}. Evenness removes the Fourier-sign convention. The source
+bounds place the prepared orbit in every fixed graph domain. Its complex
+frequency continuation and pointwise derivatives follow from weighted
+source integrals, not bounded point evaluation on arbitrary \(L^2\).
+
+Using \(L_0\) instead would produce \(\ee^{-4\tau}h\). The calibration
+is material. In fact a fixed bounded linear observation of
+\(\ee^{-\tau L_0}\psi\), with fixed \(\psi\), decays exponentially in
+\(L^2\), whereas
+\[
+ \|H_{\lambda_0-\tau}\|_2
+ \sim\Phi(0)(\pi/2)^{3/4}\tau^{-1/4}.
+\]
+This follows from Plancherel and scaling
+\(\int\ee^{-2\tau u^2}|W_{\lambda_0}(u)|^2\dd u\).
+It excludes this particular uncalibrated bounded-observation realization
+for all \(\tau\), not all alternative preparations or observations.
+Likewise reverse heat is unbounded on ambient states, while the
+canonical source itself is entire in \(\lambda\).
+
+The representation preserves its source-accuracy burden exactly:
+\begin{equation}\label{eq:operator-error}
+ \|R_\chi S_\tau E_\chi(f-g)\|_2
+ =\sqrt{\pi/2}\,\|\ee^{-\tau u^2}(f-g)\|_2.
+\end{equation}
+No arithmetic cancellation estimate is supplied merely by changing
+coordinates to this operator realization.
+
+\subsection{Energy remains regular at a collision}
+For the prepared orbit put
+\(N=\int|W_{\lambda_0-\tau}|^2=(2/\pi)\int h^2\) and
+\(T=\int u^2|W_{\lambda_0-\tau}|^2=(2/\pi)\int h_x^2\).
+Differentiation and Plancherel give
+\begin{equation}\label{eq:energy-laws}
+ N'=-2T,\qquad T'=-2\|K S_\tau E_\chi W_{\lambda_0}\|_2^2,
+ \qquad (T/N)'=-2\operatorname{Var}_{|W|^2/N}(u^2).
+\end{equation}
+The linear source probability \(W/\int W\) and the spectral probability
+\(|W|^2/N\) are distinct; the latter produces the factor two above.
+Locally, \((h^2)_\tau=(h^2)_{xx}-2h_x^2\). At a double zero with
+\(h=h_x=0\), \(h_{xx}=a\ne0\), one has
+\((h^2)_\tau=0\) and \((h^2)_{\tau\tau}=2a^2\).
+The regular energy laws are compatible with a change in the real zero
+configuration and impose no collision barrier.
+
+\subsection{The other parent realizations and their scope}
+For completeness, the shared parent also supplied two exact observation
+models \cite{TNDDirect,TNDAux}. They are not new inputs to a Green sign
+estimate. In the direct model prepare
+\(f_\lambda=\sqrt{W_\lambda/Z_\lambda}\), \(Z_\lambda=2H_\lambda(0)\),
+and supply the measured quadrature. With
+\(U(t)=\ee^{-\ii\omega tL_0}\), \(Q_t=U(t)XU(t)^*\), the operations
+\[
+ K_j(t,s)=U(t)\ee^{-\gamma(t-s)X^2/2}
+       \frac{(\sqrt{\gamma(t-s)}X)^j}{\sqrt{j!}}U(s)^*
+\]
+are complete since the positive sum \(\sum_jK_j^*K_j\) is the identity
+by the scalar exponential series. The no-count amplitude multiplies
+\(f_{1/2}\) by \(\ee^{-\gamma t u^2/2}\), giving
+\(\lambda=1/2-\gamma t\), \(0\le t\le1/\gamma\). The effects
+\((I\pm\cos(kQ_t))/2\) then obey
+\[
+ q_++q_-=H_\lambda(0)/H_{1/2}(0),\qquad
+ H_\lambda(k)=H_{1/2}(0)(q_+-q_-).
+\]
+These are joint probabilities including failed conditioning; arbitrary
+complex \(k\) is not claimed to define a bounded effect.
+
+In the auxiliary model the supplied amplitude is instead
+\(W_\lambda(v)B\), where \(BB^*=W\ee^{-\pi A}/Q(\pi)\) and
+\(\|B\|_{\rm HS}=1\). Apply \(\ee^{-\tau L_0}\) on the physical side
+and pair the Fourier amplitude with \(B\). Commuting radial and angular
+heat factors and summing the complete angular trace gives
+\begin{equation}\label{eq:auxiliary-response}
+ \mathcal O_{\lambda,\tau}(z)
+ =\ee^{-\tau z^2}\frac{Q(\pi+4\tau)}{Q(\pi)}H_\lambda(z).
+\end{equation}
+The multiplier never vanishes, so this response preserves zeros and
+multiplicities. Recovery on real \(z=k\) amplifies errors by
+\(\ee^{\tau k^2}Q(\pi)/Q(\pi+4\tau)\), unbounded in \(k\) for
+\(\tau>0\). Proper time in this model is not Newman time.
+The graph-domain and weighted-integral proofs for both models remain
+in the parent sources; their loaders, quadrature access and calibrated
+detector laws are supplied assumptions. Their exact observation formulas
+do not generate a missing source-specific inequality.

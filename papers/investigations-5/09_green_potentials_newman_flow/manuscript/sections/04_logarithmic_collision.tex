@@ -1,0 +1,487 @@
+\section{Logarithmic fields and collision coordinates}\label{sec:log-collision}
+
+\subsection{The logarithmic field and its denominator}
+
+Let \(\nu_\lambda=\sum_j\delta_{z_j(\lambda)}\), with multiplicities,
+and use \(\partial_z=(\partial_x-\ii\partial_y)/2\).
+Local factorization \(H=(z-z_j)^m h\), with \(h\ne0\), proves
+\begin{equation}\label{eq:distributions}
+ \Delta\log|H_\lambda|=2\pi\nu_\lambda,\qquad
+ R_\lambda=\frac{H_\lambda'}{H_\lambda}
+           =2\partial_z\log|H_\lambda|,\qquad
+ \partial_{\bar z}R_\lambda=\pi\nu_\lambda .
+\end{equation}
+These are distributional identities; \(\log|z|\) and \(1/z\) are
+locally integrable, with the stated delta masses obtained by integrating
+around a small circle. A multiplicity-\(m\) zero gives residue \(m\).
+Differentiating \eqref{eq:product} away from its zeros gives
+\[
+ R_\lambda(z)=\sum_{\zeta\in\mathcal R_\lambda}
+                    \frac{2z}{z^2-\zeta^2}.
+\]
+Pairing is part of the convergence prescription.
+
+On zero-free space-time patches, logarithmic differentiation of
+\eqref{eq:heat} yields
+\begin{equation}\label{eq:burgers}
+ \partial_\lambda R=-R_{zz}-2RR_z.
+\end{equation}
+This local equation is not assigned an additional unproved global
+meaning at its poles. Likewise, solving only the first or last
+distributional equation in \eqref{eq:distributions} leaves a harmonic
+or holomorphic summand. The complete field and its product fix it.
+
+Source approximation alone does not control division. If
+\(|H-\widehat H|\le\varepsilon\),
+\(|H'-\widehat H'|\le\varepsilon_1\), and
+\(b=|\widehat H|-\varepsilon>0\), then
+\begin{equation}\label{eq:ratio-error}
+ \left|R-\frac{\widehat H'}{\widehat H}\right|
+ \le\frac{\varepsilon_1}{b}
+       +\frac{|\widehat H'|\varepsilon}{b|\widehat H|}.
+\end{equation}
+This follows by adding and subtracting
+\(\widehat H'/H\). The positive denominator margin is a separate
+requirement. It fails on a real interval containing a zero, which
+motivates the integrated logarithmic method developed later.
+
+
+\subsection{Local collision geometry}\label{sec:double}
+The following local derivation is inherited from the operator parent\cite{OperatorCollision,GNPOperator}.
+
+\paragraph{Event assumptions and a finite heat expansion}
+Fix an interior point \((\tau_*,x_*)\) such that
+\begin{equation}\label{eq:double}
+ h=h_x=0,\qquad a=h_{xx}\ne0,
+ \qquad b=h_{xxx},\quad c=h_{xxxx},
+\end{equation}
+with derivatives evaluated at that point unless stated otherwise.
+This is a hypothetical event of the canonical family; its existence is
+not assumed elsewhere. Since \(h(\tau,0)>0\), its position is nonzero.
+Evenness gives a reflected event at \(-x_*\); the analysis is local
+near either one.
+
+Set \(s=\tau-\tau_*\), \(y=x-x_*\).
+The heat equation replaces each time derivative by two spatial
+derivatives. Taylor expansion therefore gives
+\begin{equation}\label{eq:heat-four-jet}
+ h(\tau_*+s,x_*+y)
+ =\frac a2(y^2+2s)+\frac b6(y^3+6sy)
+  +\frac c{24}(y^4+12sy^2+12s^2)+\mathcal R(s,y).
+\end{equation}
+For fixed compact sets in \((S,Y)\),
+\(\mathcal R(\epsilon^2S,\epsilon Y)=O(\epsilon^5)\).
+This notation assigns weight two to \(s\) and weight one to \(y\).
+To justify it, take a sufficiently high finite Taylor expansion in
+\((s,y)\). Terms of weight below two vanish by \eqref{eq:double};
+the terms of weights two, three and four are exactly those displayed.
+Every omitted monomial has weight at least five, and the ordinary
+Taylor remainder has the same bound after rescaling. The source bounds
+justify the needed finite derivatives. The constants depend on the event
+and the chosen compact set.
+
+\paragraph{The regular critical curve}
+\begin{proposition}[Critical-value crossing]\label{prop:critical}
+There is a unique analytic local curve \(x_c(\tau)\) with
+\(x_c(\tau_*)=x_*\) and \(h_x(\tau,x_c(\tau))=0\).
+For \(v(\tau)=h(\tau,x_c(\tau))\),
+\begin{equation}\label{eq:critical-exact}
+ x_c'=-\frac{h_{xxx}}{h_{xx}},\qquad v'=h_{xx}
+ \quad\hbox{along the curve}.
+\end{equation}
+Its expansions are
+\begin{align}
+ x_c(\tau_*+s)&=x_*-\frac ba s+O(s^2),\label{eq:critical-place}\\
+ v(\tau_*+s)&=as+\frac12\left(c-\frac{b^2}{a}\right)s^2+O(s^3).
+ \label{eq:critical-value}
+\end{align}
+\end{proposition}
+\begin{proof}
+Apply the analytic implicit-function theorem to \(h_x\), whose spatial
+derivative at the event is \(a\ne0\). Differentiating \(h_x=0\) along
+the curve gives \(h_{xxx}+h_{xx}x_c'=0\). Differentiating \(v\) gives
+\(v'=h_\tau+h_xx_c'=h_{xx}\). A second differentiation at the event
+yields \(v''=h_{xxxx}+h_{xxx}x_c'=c-b^2/a\), proving the expansions.
+\end{proof}
+
+Thus the extremum value crosses zero transversely, with finite velocity
+\(a\). If \(a>0\), it is a local minimum which rises through zero; if
+\(a<0\), it is a local maximum which falls through zero. This description
+remains regular at the event.
+
+\paragraph{The two-root cluster}
+\begin{theorem}[Square-root splitting and drift]\label{thm:splitting}
+In a sufficiently small fixed complex disk about \(x_*\), the field
+has exactly two zeros counted with multiplicity for all sufficiently
+small real \(|s|\). They satisfy
+\begin{equation}\label{eq:roots}
+ z_\pm(\tau_*+s)=x_*-\frac{2b}{3a}s+
+ \begin{cases}
+  \displaystyle\pm\sqrt{-2s}+O(|s|^{3/2}),&s<0,\\[2pt]
+  \displaystyle\pm\ii\sqrt{2s}+O(s^{3/2}),&s>0.
+ \end{cases}
+\end{equation}
+They are real and simple for \(s<0\), and a nonreal conjugate pair for
+\(s>0\). Their midpoint is analytic in \(s\).
+\end{theorem}
+\begin{proof}
+At \(s=0\) the zero has exact order two. Choose a disk containing no
+other zero and having a nonzero boundary. Uniform analytic convergence
+on that boundary preserves the zero count for small complex \(s\).
+Put \(s=-t^2/2\), \(y=tY\). The quotient
+\[
+ t^{-2}h(\tau_*-t^2/2,x_*+tY)
+\]
+extends holomorphically to \(t=0\), with value
+\(a(Y^2-1)/2\). The analytic implicit-function theorem at its simple
+roots \(Y=\pm1\) supplies two analytic branches. Substitution in
+\eqref{eq:heat-four-jet} gives
+\begin{equation}\label{eq:t-roots}
+ y_\pm(t)=\pm t+\frac{b}{3a}t^2+O(t^3).
+\end{equation}
+For real \(t\), the branches are real by conjugation and uniqueness.
+For \(s>0\), take \(t=\ii\sqrt{2s}\); the leading imaginary parts are
+nonzero and the roots are conjugate. Replacing \(t\) by \(-t\)
+interchanges the two roots, so their sum and product are even analytic
+functions of \(t\), hence analytic in \(s\). This also proves the
+midpoint assertion and \eqref{eq:roots}.
+\end{proof}
+
+In increasing imaginary time, the real roots approach, meet and leave
+the real axis. The direction is reversed in Newman \(\lambda\).
+The total local complex multiplicity stays two. This is the standard
+local forward-parabolic pattern \cite{Angenent1991}; a global zero count
+on the whole line is not inferred from the local statement.
+
+
+
+\paragraph{A regular squared gap and the surrounding factor}
+The symmetric functions constructed above define a monic quadratic
+factor. Local analytic factorization gives
+\begin{equation}\label{eq:local-factor}
+ h(\tau,x)=(x-z_-(\tau))(x-z_+(\tau))U(\tau,x),
+\end{equation}
+where \(U\) is analytic and nonzero near the event. One may obtain the
+quadratic's coefficients from the contour integrals of
+\(x^k h_x/h\) around the fixed disk, which are analytic in \(\tau\);
+division removes precisely the two enclosed roots. The quotient is a
+holomorphic unit, including at \(s=0\). This is the same local
+factorization used in the earlier heat-multiplicity analysis
+\cite{HeatMultiplicity}. No product over all zeros is required.
+
+For \(s<0\), write \(r_\pm=z_\pm\), \(\delta=r_+-r_->0\), and
+\(q=\delta^2\). Let \(g=U_x/U\).
+
+\begin{proposition}[Pair motion and squared gap]\label{prop:gap}
+On the real-pair side,
+\begin{align}
+ r_\pm'&=-\frac{2}{r_\pm-r_\mp}-2g(\tau,r_\pm),\label{eq:pair-motion}\\
+ \delta'&=-\frac4\delta-2\bigl(g(\tau,r_+)-g(\tau,r_-)\bigr),\label{eq:delta}\\
+ q'&=-8-4q\int_0^1g_x(\tau,r_-+t\delta)\dd t.\label{eq:q-exact}
+\end{align}
+The squared gap extends analytically through the event and
+\begin{equation}\label{eq:q-expansion}
+ q(\tau_*+s)=-8s+16B_*s^2+O(s^3),\qquad
+ B_*=\frac{c}{6a}-\frac{b^2}{9a^2}.
+\end{equation}
+The midpoint has velocity \(-2b/(3a)\) at the event.
+\end{proposition}
+\begin{proof}
+At a simple zero \(r\), implicit differentiation gives
+\(r'=-h_{xx}/h_x\). Differentiating \eqref{eq:local-factor} twice
+at \(r_\pm\) yields
+\[
+ \frac{h_{xx}}{h_x}(\tau,r_\pm)
+ =\frac{2}{r_\pm-r_\mp}+2g(\tau,r_\pm).
+\]
+Subtracting proves \eqref{eq:delta}; multiplying by \(2\delta\) and
+using the fundamental theorem of calculus gives \eqref{eq:q-exact}.
+Analyticity of the symmetric functions makes \(q\) analytic.
+At \(s=0\),
+\[
+ U(\tau_*,x_*+y)=\frac a2+\frac b6y+\frac c{24}y^2+O(y^3),
+\]
+so \(g_*=b/(3a)\) and \(g_{x,*}=B_*\).
+The integral in \eqref{eq:q-exact} tends to \(B_*\); its symmetric
+expansion is \(B_*+O(s)\), since the midpoint is \(O(s)\) from \(x_*\)
+and \(\delta^2=O(s)\). Thus \(q'(0)=-8\) and \(q''(0)=32B_*\),
+proving \eqref{eq:q-expansion}. Adding the two root equations cancels
+their singular terms and gives the midpoint velocity \(-2g_*\).
+\end{proof}
+
+The critical point and root midpoint generally have different velocities:
+\(-b/a\) and \(-2b/(3a)\). Individual zero velocities diverge as
+\(|s|^{-1/2}\), whereas both collective coordinates remain regular.
+The term \(-8\) in \eqref{eq:q-exact} is the universal terminal closing
+rate of a separated collision. The regular factor affects drift
+and subsequent terms; this is not a uniform estimate on its size.
+
+Rodgers and Tao's zero dynamics and gap law have the corresponding
+decomposition with the opposite Newman-time sign
+\cite[Section~4, Theorem~4.16 and Lemma~4.18(i)]{RodgersTao2020}.
+Their printed theorem uses principal-value sums on the paper's
+contradiction interval \(\Lambda<t\leq0\). We do not extend that theorem
+to a different interval or to arbitrary nonreal zero configurations.
+The local derivation above requires only the analytic factor \(U\).
+
+
+\paragraph{Amplitude, drift and relative curvature}
+The coefficients in \eqref{eq:critical-place}--\eqref{eq:critical-value}
+separate naturally into the amplitude \(a\) and two quantities unchanged
+by a nonzero constant rescaling of the field:
+\begin{equation}\label{eq:beta-gamma}
+ \beta=\frac ba,\qquad \gamma=\frac ca-\frac{b^2}{a^2}.
+\end{equation}
+At the event, \(x_c'=-\beta\), \(v'=a\), and \(v''=a\gamma\).
+At the reflected event, \(a,\gamma\) are unchanged and \(\beta\)
+changes sign. The critical curve is the curve of stationary points
+\(h_x=0\), not a curve of zeros of \(h\).
+
+\begin{proposition}[Curvature transport and an event coordinate]
+\label{prop:curvature-transport}
+Along a regular critical curve, set
+\(A(\tau)=h_{xx}(\tau,x_c(\tau))\ne0\) and \(r_c=-v/A\).
+Then
+\begin{align}
+ A'&=h_{xxxx}-\frac{h_{xxx}^2}{h_{xx}},\qquad
+ \frac{d}{d\tau}\log|A|
+ =\frac{h_{xxxx}}{h_{xx}}-\frac{h_{xxx}^2}{h_{xx}^2},
+ \label{eq:A-transport}\\
+ r_c'&=-1-r_c\frac{A'}{A}.\label{eq:rc-transport}
+\end{align}
+In particular \(r_c(\tau_*+s)=-s+\tfrac12\gamma s^2+O(s^3)\)
+and \(r_c\sim q/8\sim\tau_*-\tau\) on the real-pair side.
+\end{proposition}
+\begin{proof}
+Differentiate \(A\) along the curve and use
+\(x_c'=-h_{xxx}/h_{xx}\) and \(h_\tau=h_{xx}\).
+The quotient rule and \(v'=A\) give \eqref{eq:rc-transport}.
+Finally \(v=as+a\gamma s^2/2+O(s^3)\) and
+\(A=a+a\gamma s+O(s^2)\), proving the expansion and, with
+\eqref{eq:q-expansion}, the comparison.
+\end{proof}
+
+Thus \(\gamma\) is the relative rate of change of the extremum's
+curvature. The regular event coordinates describe the same crossing;
+they do not impose independent restrictions on it.
+
+At the collision slice use the local factor \(U\) in
+\eqref{eq:local-factor}, and write
+\begin{equation}\label{eq:ell-kappa}
+ \ell=\frac{U_x}{U}(\tau_*,x_*),\qquad
+ \kappa=\partial_x\!\left(\frac{U_x}{U}\right)(\tau_*,x_*).
+\end{equation}
+The derivatives of \(h=(x-x_*)^2U\) give
+\(U_*=a/2\), \(U_{x,*}=b/6\), \(U_{xx,*}=c/12\). Therefore
+\begin{equation}\label{eq:coefficient-dictionary}
+ \boxed{\ \beta=3\ell,\qquad c/a=6(\kappa+\ell^2),\qquad
+ \gamma=6\kappa-3\ell^2,\qquad B_*=\kappa.\ }
+\end{equation}
+The same exterior curvature controls the second-order gap correction
+and, together with the drift, the second-order critical value.
+
+\paragraph{A conditional real-zero benchmark}
+\begin{proposition}[Exterior inverse-square curvature]
+\label{prop:LP-coefficients}
+Suppose additionally that the collision slice belongs to the real
+Laguerre--P\'olya class. If its product has Gaussian factor
+\(\ee^{-\alpha z^2}\), \(\alpha\ge0\), and \(\{\rho_j\}\)
+are its remaining zeros, with multiplicities, after the two at \(x_*\)
+are removed, then
+\begin{equation}\label{eq:LP-kappa}
+ \kappa=-2\alpha-\sum_j\frac{1}{(x_*-\rho_j)^2}.
+\end{equation}
+For an even slice with \(x_*\ne0\),
+\begin{equation}\label{eq:LP-gamma}
+ \kappa\le-\frac{1}{2x_*^2},\qquad
+ \gamma\le-\frac{3}{x_*^2}-\frac{\beta^2}{3}<0.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The defining canonical product is
+\(Cz^m\ee^{-\alpha z^2+d z}
+\prod_j(1-z/\rho_j)\ee^{z/\rho_j}\), with real parameters and zeros,
+and \(\sum_{\rho_j\ne0}|\rho_j|^{-2}<\infty\)
+\cite[Definition~1.1]{Csordas2014PositiveKernels}.
+After removing the pair at \(x_*\), take the second logarithmic
+derivative. The linear exponential and regularizing linear terms
+disappear, giving \eqref{eq:LP-kappa}. The sum converges absolutely
+locally off the remaining zeros; only finitely many are nearby and
+the distant terms are bounded by a constant times \(|\rho_j|^{-2}\).
+Evenness supplies a double zero at \(-x_*\), whose contribution is
+\(-2/(2x_*)^2\). All other terms are nonpositive. Equation
+\eqref{eq:coefficient-dictionary} proves \eqref{eq:LP-gamma}.
+\end{proof}
+
+This is a conditional benchmark for an all-real slice, not an
+unconditional theta estimate. The weaker assertion \(\gamma\le0\)
+also follows from the derivative Laguerre inequality \(b^2-ac\ge0\).
+For \(a>0\), \eqref{eq:LP-gamma} says that a rising minimum
+decelerates; its transverse crossing remains possible. The polynomial
+\((x^2-r^2)^2\) has \(\beta=3/r\), \(\gamma=-6/r^2\) at \(r\)
+and attains the displayed reflected-pair bound. This is a check of
+the sharp constant, not a canonical-source example.
+
+The sign changes when exterior zeros need not be real. An exterior
+conjugate pair \(d\pm\ii\eta\) contributes
+\begin{equation}\label{eq:complex-exterior-curvature}
+ -\frac{2((x_*-d)^2-\eta^2)}{((x_*-d)^2+\eta^2)^2}
+\end{equation}
+to the logarithmic curvature, which may have either sign. A collision
+at an all-real boundary and a later collision among a nonreal
+background therefore require different estimates. The local theory
+neither assumes nor proves that the global Newman threshold is
+attained at one finite collision.
+
+Finally, a bounded exterior correction by itself cannot oppose the
+terminal closing rate. If the integral in \eqref{eq:q-exact} has
+absolute value at most \(C>0\), then
+\(q'\le-8+4Cq\le-4\) whenever \(0<q\le1/C\).
+If this bound and cluster isolation persist, the pair closes in
+at most \(q(\tau_0)/4\) further imaginary time. Preventing entry
+into that regime requires information in addition to boundedness
+of the regular factor.
+
+\subsection{Finite multiplicity}
+\label{sec:multiplicity}
+
+
+Suppose a real event has exact spatial order \(m\geq2\):
+\[
+ \partial_x^jh(\tau_*,x_*)=0\quad(0\leq j<m),\qquad
+ a_m=\partial_x^mh(\tau_*,x_*)\ne0.
+\]
+For fixed \(m\), define
+\begin{equation}\label{eq:heat-poly}
+ p_m(S,Y)=
+ \sum_{j=0}^{\lfloor m/2\rfloor}
+ \frac{m!}{j!(m-2j)!}S^jY^{m-2j}.
+\end{equation}
+
+\begin{theorem}[Finite-multiplicity heat geometry]\label{thm:higher}
+Uniformly for \((S,Y)\) in compact sets,
+\begin{equation}\label{eq:higher-rescale}
+ h(\tau_*+\epsilon^2S,x_*+\epsilon Y)
+ =\frac{a_m}{m!}\epsilon^m p_m(S,Y)+O(\epsilon^{m+1}).
+\end{equation}
+In a sufficiently small fixed complex neighborhood of \(x_*\), the
+cluster consists of \(m\) simple real zeros immediately before the event.
+Immediately after it, there are no real zeros if \(m\) is even, and
+exactly one simple real zero if \(m\) is odd. The remaining zeros form
+nonreal conjugate pairs; the total complex multiplicity stays \(m\).
+\end{theorem}
+\begin{proof}
+The coefficient of \(s^jy^k\) in the local Taylor series is
+\(\partial_x^{2j+k}h/(j!k!)\), by the heat equation. All terms of
+parabolic weight \(2j+k<m\) vanish, and the weight-\(m\) terms give
+\eqref{eq:heat-poly}. A finite Taylor remainder, as in
+Section~\ref{sec:double}, proves \eqref{eq:higher-rescale}.
+
+For completeness, the real-root property of \(q_m(Y)=p_m(-1,Y)\)
+can be proved directly. The displayed coefficients give
+\[
+ q_0=1,\quad q_1=Y,\quad
+ q_{m+1}=Yq_m-2m q_{m-1}.
+\]
+These monic polynomials have simple real interlacing zeros by induction.
+At successive zeros of \(q_m\), the values of \(q_{m+1}=-2m q_{m-1}\)
+alternate in sign, giving \(m-1\) intervening roots. At the largest
+zero of \(q_m\), \(q_{m-1}>0\) and \(q_{m+1}<0\), whereas
+\(q_{m+1}(Y)>0\) for large positive \(Y\), giving a further root.
+At the smallest zero, the sign of \(q_{m-1}\) is \((-1)^{m-1}\);
+the sign of \(q_{m+1}\) there is \((-1)^m\), opposite its sign at
+large negative \(Y\). This supplies the last root. The degree is
+\(m+1\), so all are simple and the interlacing is strict.
+The induction begins with \(q_1=Y\) and \(q_2=Y^2-2\).
+Parity shows that precisely the odd polynomials have a zero at zero.
+
+Set \(s=-\epsilon^2\) before the event. Dividing the field by
+\(\epsilon^m\) gives an analytic family in \((\epsilon,Y)\), including
+\(\epsilon=0\), with limiting simple roots those of \(q_m\).
+The implicit-function theorem continues every root as a real simple
+root for small real positive \(\epsilon\).
+After the event, \(s=\epsilon^2\), and
+\[
+ p_m(1,\ii Y)=\ii^m p_m(-1,Y).
+\]
+The nonzero limiting roots are therefore purely imaginary and stay
+nonreal under a sufficiently small perturbation. If \(m\) is odd,
+the limiting root at zero is simple and its unique continued branch
+is real by conjugation symmetry. For even \(m\) there is no such root.
+Finally, choose a fixed disk containing only the order-\(m\) zero at
+the event. Its nonzero boundary and analytic convergence preserve the
+total zero count \(m\). The branches just constructed exhaust it.
+\end{proof}
+
+This recovers the local forward-parabolic multiplicity pattern in
+\cite{Angenent1991,HeatMultiplicity}. It asserts neither that all
+canonical events have multiplicity two nor that one can choose the neighborhoods
+or remainder constants uniformly in \(m\) or in height.
+
+\subsection{What the collision coefficients require from the source}
+At a double event define the complete signed moments
+\[
+ C_j=\int_0^\infty u^jW_{\lambda_*}(u)\cos(x_*u)\dd u,
+ \qquad S_j=\int_0^\infty u^jW_{\lambda_*}(u)\sin(x_*u)\dd u.
+\]
+Direct differentiation of \eqref{eq:H} gives
+\begin{equation}\label{eq:collision-source-moments}
+ C_0=S_1=0,\quad a=-C_2,\quad b=S_3,\quad c=C_4,
+ \qquad \gamma=-\frac{C_2C_4+S_3^2}{C_2^2}.
+\end{equation}
+The moments are signed despite \(W_{\lambda_*}>0\). Separate absolute
+bounds do not control these ratios without a lower bound on \(|C_2|\).
+This is the concrete meaning of a source-specific collision input:
+one needs coupled signed information or a paid regular-factor bound,
+not positivity of the underlying source alone.
+
+An exact alternative keeps the primitive endpoint. Put
+\(\mathfrak P_\lambda(x)=\int_0^\infty p(u)\ee^{\lambda u^2}\cos(xu)\dd u\).
+For every real \(\lambda,x\), integration by parts twice gives
+\begin{equation}\label{eq:all-time-primitive}
+ 8H_\lambda=\tfrac12+(2\lambda-1-x^2)\mathfrak P_\lambda
+       +4\lambda x\mathfrak P_\lambda'-4\lambda^2\mathfrak P_\lambda''.
+\end{equation}
+Indeed \(8\int\Phi f=\tfrac12 f(0)+p(0)f'(0)+\int p(f''-f)\),
+and for \(f=\ee^{\lambda u^2}\cos(xu)\) the endpoint derivative is zero.
+The coefficients of \(f''-f\) are
+\((2\lambda-1-x^2+4\lambda^2u^2)\cos(xu)-4\lambda xu\sin(xu)\),
+times \(\ee^{\lambda u^2}\). This proves the identity. Differentiating
+it finitely many times gives all event jets, with no omitted boundary
+constant. It remains a representation of the same oscillatory source.
+
+The energy scales make the distinction between field regularity and
+singular observation particularly explicit. If
+\(\epsilon=\tau_*-\tau\downarrow0\) and \(I_\tau=(r_-,r_+)\), then
+\begin{equation}\label{eq:local-lobe-scales}
+ \int_{I_\tau}|h|\sim\frac{4\sqrt2}{3}|a|\epsilon^{3/2},\qquad
+ \int_{I_\tau}h^2\sim\frac{16\sqrt2}{15}a^2\epsilon^{5/2},\qquad
+ \int_{I_\tau}h_x^2\sim\frac{4\sqrt2}{3}a^2\epsilon^{3/2}.
+\end{equation}
+For the proof use \(x=x_*+\sqrt{2\epsilon}\,t\) in
+\eqref{eq:heat-four-jet}; the limiting profiles are
+\(h/\epsilon=a(t^2-1)\) and \(h_x/\sqrt{2\epsilon}=at\), with endpoints
+\(t=\pm1\). The integrals of \(1-t^2,(1-t^2)^2,t^2\) are
+\(4/3,16/15,2/3\). Uniform remainders on a common compact interval
+justify dominated convergence. Thus the local kinetic-to-mass ratio is
+\(5/(4\epsilon)\), even though both quantities vanish.
+Differentiation on the moving interval gives the exact balances
+\[
+ \left(\int_{I_\tau}h^2\right)'=-2\int_{I_\tau}h_x^2,\qquad
+ \left(\int_{I_\tau}h_x^2\right)'
+ =[h_xh_{xx}]_{r_-}^{r_+}-2\int_{I_\tau}h_{xx}^2.
+\]
+Boundary velocities \(r_\pm'=-h_{xx}/h_x\) produce the latter boundary
+term. A local normalized quotient is not the global operator energy.
+
+Finally, for a source perturbation \(h_\eta=h+\eta g+O(\eta^2)\)
+at a double event, the Jacobian of \((h,h_x)\) with respect to
+\((\tau,x)\) is \(\left(\begin{smallmatrix}a&0\\b&a\end{smallmatrix}\right)\).
+It is invertible, so the event continues locally and
+\[
+ \tau_*'(0)=-g/a,\qquad x_*'(0)=bg/a^2-g_x/a.
+\]
+This is the inherited joint-event response law \cite{SourceResponse}.
+It identifies another denominator that must be paid; it supplies no
+uniform stability at arbitrarily flat events.
+

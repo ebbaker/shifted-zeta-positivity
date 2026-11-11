@@ -1,0 +1,269 @@
+\section{Coherent moments and the limits of quadratic acquisition}
+\label{sec:coherent-moments}
+
+The logarithmic transfer preserves cancellations. Replacing its
+integral by a quadratic moment loses information in two stages: the
+oscillating reflected phase and the variation of the arithmetic arm.
+We first compute the exact coherent moment, then quantify both losses.
+The statements in this section are the E03 and B03 results
+\cite{GNPRSMoment,GNPRSPhaseObstruction}.
+
+\subsection{The exact local moment law}
+Set \(M(X,c)=\int_{W_X}|V_{c/L_X}(x)|^2\,d\omega_X\).
+\begin{theorem}[Coherent moment at \(c=1\)]\label{thm:coherent-moment}
+For the complete field, with time fixed in each defining integral,
+\begin{equation}\label{eq:coherent-moment}
+ \lim_{T\to\infty}\frac1T\int_T^{2T}M(X,1)\dd X=\zeta(3/2).
+\end{equation}
+\end{theorem}
+\begin{proof}
+Introduce only for the height average
+\(v(u)=V_{1/L_u}(u)\). Its auxiliary arm weights and phases are
+\[
+ w_n(u)=n^{-3/4}\ee^{(\log n)^2/(4L_u)}\le n^{-5/8},\quad
+ \nu(u)=u/2+\pi/(8L_u),\quad
+ \phi(u)=u(L_u-1)/2+\pi/8+7\pi/4.
+\]
+Extend weights by zero above \(N_u\). Each arm is \(O(u^{3/16})\).
+By \eqref{eq:real-provider-error}, replacing \(|v|^2\) by the
+square of the two arms costs \(O(u^{-1/16}+u^{-1/2})\).
+The diagonal of the two arm squares is \(2\sum_{n\le N_u}w_n(u)^2\).
+For every fixed \(n\), its summand tends uniformly on \([T,2T]\)
+to \(2n^{-3/2}\); the dominating series \(2\sum n^{-5/4}\)
+is summable. Thus this diagonal tends uniformly to \(2\zeta(3/2)\).
+
+For every pair, integrate on its actual activation interval
+\[
+ I_{mn}=[T,2T]\cap[4\pi\max(m,n)^2,\infty).
+\]
+There \(w_mw_n\) decreases, and its supremum plus total variation
+is at most \(2(mn)^{-5/8}\). A phase with monotone derivative of
+fixed sign and modulus at least \(\alpha\) has every partial
+integral bounded by \(3/\alpha\): integration by parts pays two
+endpoints and the variation of the reciprocal derivative. Applying
+this bound through the amplitude primitive pays the stated variation.
+
+For same-arm pairs \(m\ne n\), eventually \(\nu'\ge1/4\) and
+\(\nu''>0\). The cost is
+\(O((mn)^{-5/8}/|\log(n/m)|)\). For \(m\le n/2\) use
+\(|\log(n/m)|\ge\log2\); for \(n/2<m<n\) use
+\(\log(n/m)\ge(n-m)/n\). Summing through \(N_{2T}\ll\sqrt T\)
+gives an averaged error \(O(T^{-5/8}(1+\log T))\).
+
+The cross-arm phases are \(\phi(u)-\nu(u)\log(mn)\), including
+\(m=n\). On their activation intervals,
+\[
+ \frac1{8T}\le(\phi-\nu\log(mn))''\le\frac1{2T}
+\]
+eventually. The part where the first derivative has modulus at most
+\(T^{-1/2}\) has length at most \(16\sqrt T\). Its complement
+has at most two pieces, each costing \(3\sqrt T\). This gives
+\(22\sqrt T\) for every partial integral, including a stationary
+point at a cutoff endpoint. The complete averaged cross-arm cost is
+\[
+ O\left(T^{-1/2}\left(\sum_{n\le N_{2T}}n^{-5/8}\right)^2\right)
+       =O(T^{-1/8}).
+\]
+We have proved \(T^{-1}\int_T^{2T}|v(u)|^2\dd u\to2\zeta(3/2)\).
+
+It remains to restore the original clock and convolution. For
+\(x\in W_X\), \(|1/L_X-1/L_x|\le4R_X/(XL_X^2)\).
+At intermediate times \(1/2\le\lambda L_x\le2\), the common
+weight bound is \(n^{-9/16}\); hence
+\(S_\lambda=O(x^{7/32})\) and
+\(\partial_\lambda S_\lambda=O(L_x^2x^{7/32})\).
+The squared-arm comparison costs \(O(R_XX^{-9/16})\); paying the
+full correction at both endpoint times adds \(O(X^{-1/32})\).
+Thus it changes the local moment by a uniformly vanishing quantity.
+No time-dependent field has been substituted without this payment.
+
+Fubini now gives an auxiliary weight
+\[
+ W_T(x)=\int_T^{2T}K(x-X)\mathbf1_{|x-X|\le R_X}\dd X.
+\]
+It lies in \([0,1/2]\), and on
+\([T+R_{2T},2T-R_{2T}]\) it is at least \(q_T\).
+The remaining edge intervals have total length at most \(4R_{2T}\).
+Since \(|v|^2=O(T^{3/8})\) there, replacing \(W_T\) by
+\(\tfrac12\mathbf1_{[T,2T]}\) costs
+\(O(T^{-29/8}+T^{-5/8}\log T)\) in the average.
+The kernel mass \(1/2\) proves \eqref{eq:coherent-moment}.
+\end{proof}
+
+\subsection{An upper allowance that cannot succeed at every center}
+Jensen's inequality applied with probability measure
+\(d\omega_X/q_X\), together with the exact exterior, gives
+\begin{equation}\label{eq:quadratic-allowance}
+ J_\lambda(X)\le\mathcal B_J(X,c):=
+ \frac{q_X}{2}\log\frac{M(X,c)}{q_X}
+      -P_{c,\lambda}(X)+T_X+\frac{C_{\rm out}}{L_X}.
+\end{equation}
+Here \(M>0\), since an entire nonzero field cannot vanish on an
+interval. The following failure concerns this upper allowance.
+
+\begin{corollary}[Exact quadratic-Jensen obstruction]\label{cor:Jensen-stop}
+There are arbitrarily large \(X\) such that
+\(\mathcal B_J(X,1)\ge m_*\). The same centers fail if the exact
+moment is replaced by any valid upper bound for it.
+\end{corollary}
+\begin{proof}
+The elementary bounds needed are
+\[
+ m_*<\frac9{50},\qquad |P_{1,\lambda}|<\frac{23}{100},\qquad
+ \zeta(3/2)>\frac{13}{5},\qquad \ee^{41/25}<\frac{26}{5}.
+\]
+For the first, use \(\sin(\pi/8)<77/200\) and
+\(\cosh(\pi/8)>137/128\). For the second, the prime powers through
+16 are \(2,3,4,5,7,8,9,11,13,16\); respective rational upper
+budgets for their coefficients are
+\(.14,.049,.012,.012,.005,.0014,.0013,.0014,.001,.00013\).
+They sum to \(.22323\), and the remaining integer tail is at most
+\(1/224<.0045\). These rational budgets follow by raising the
+elementary fourth-root comparisons to the fourth power, as detailed
+in \cite{GNPRSMoment}. Convexity of \(u^{-3/2}\) gives
+\(\zeta(3/2)\ge1+1/(2\sqrt2)+13/(6\sqrt3)>177/68>13/5\).
+Finally \(\ee^a\le1+a+a^2/[2(1-a/3)]\), \(0\le a<3\), follows
+from \(k!\ge2\cdot3^{k-2}\); apply it at \(a=41/100\) and
+raise to the fourth power.
+
+If the allowance were below \(m_*\) eventually, dropping its
+nonnegative errors would give
+\[
+ M(X,1)<q_X\exp\{(41/50)/q_X\}\longrightarrow
+                  \tfrac12\ee^{41/25}<13/5.
+\]
+This eventual bound contradicts Theorem~\ref{thm:coherent-moment}.
+Monotonicity of the logarithm proves the assertion for larger moments.
+\end{proof}
+
+\subsection{Why the ideal cosine correction is still insufficient}
+For an independent uniform phase \(\vartheta\) and \(A\ne0\),
+\[
+ \mathbb E_\vartheta\log|2A\cos\vartheta|=\log|A|,
+ \qquad \mathbb E_\vartheta|2A\cos\vartheta|^2=2|A|^2.
+\]
+The logarithmic identity follows from the sine/cosine doubling
+formula with its integrable zero logarithms. If \(A\) also varies
+under \(d\omega_X/q_X\), the product-average Jensen gap is
+\begin{equation}\label{eq:phase-amplitude-gap}
+ \frac{q_X}{2}\log2+
+ q_X\left(\frac12\log\mathbb E_X|A|^2-\mathbb E_X\log|A|\right).
+\end{equation}
+The second term is nonnegative. This identity assumes an independent
+phase average, not the actual spatial phase. Even granting its first
+term for free does not repair the quadratic method.
+
+\begin{theorem}[Phase-only correction obstruction]\label{thm:phase-stop}
+Define the diagnostic
+\(\mathcal B_{\rm ph}=\mathcal B_J-(q_X/2)\log2\).
+There are arbitrarily large \(X\) with
+\begin{equation}\label{eq:phase-stop}
+ \mathcal B_{\rm ph}(X,1)\ge m_*+1/1000.
+\end{equation}
+No assertion that \(\mathcal B_{\rm ph}\) bounds \(J\) is needed
+or made. The failure persists for any upper replacement of \(M\).
+\end{theorem}
+\begin{proof}
+At \(c=1\), write \(P_0(X)=P_{1,0}(X)=\sum_p F_p((X/2)\log p)\),
+where
+\[
+ F_p(\theta)=\sum_{k\ge1}
+    \frac{p^{-11k/4}\cos(k\theta)}{k(1+p^{-4k})},\qquad
+ b_p=\sum_{k\ge1}\frac{p^{-11k/4}}{k(1+p^{-4k})}.
+\]
+Each block has mean zero and lies in \([-b_p,b_p]\).
+For a finite set of primes the height average of \(\exp(4\sum F_p)\)
+equals the product circle average. Indeed the absolutely convergent
+Fourier expansion has nonzero frequency
+\(\tfrac12\sum j_p\log p\) for every nonconstant mode, by unique
+factorization, and such a mode has vanishing dyadic mean.
+The bound \(\sum b_p<\infty\) permits removal of the prime tail
+uniformly. Convexity's chord bound and \(\cosh u\le\ee^{u^2/2}\)
+therefore give
+\begin{equation}\label{eq:prime-exponential-mean}
+ \mathfrak E:=\lim_{T\to\infty}\frac1T\int_T^{2T}\ee^{4P_0(X)}\dd X
+ \le\exp\left(8\sum_p b_p^2\right)<\ee^{27/125}.
+\end{equation}
+For completeness the last constant uses
+\[
+ b_2<77/500,\quad b_3<51/1000,\quad
+ \sum_{p\ge5}b_p^2<\frac{2432}{7021125},\quad
+ \sum_p b_p^2<\frac{27}{1000}.
+\]
+The first coefficients at 2 and 3 are below \(.14,.049\).
+Writing \(r=p^{-11/4}\), the higher powers cost at most
+\(r^2/[2(1-r)]\), with \(r_2<3/20,r_3<1/20\).
+For \(p\ge5\), \(b_p<(80/79)p^{-11/4}\); sum its square over
+integers using
+\(\sum_{n\ge5}n^{-11/2}<1/6250+1/5625\).
+This proves the displayed rational bounds.
+
+Suppose \eqref{eq:phase-stop} fails eventually. Rearranging gives
+\[
+ M(X,1)<2q_X\exp\{2(m_*+1/1000+P_{1,1/L_X}(X))/q_X\}.
+\]
+The differentiated absolutely convergent prime series shows
+\(P_{1,1/L_X}-P_0=O(1/L_X)\). Thus the right side is
+\(\ee^{4(m_*+1/1000)}\ee^{4P_0(X)}+o(1)\), uniformly in \(X\).
+Taking means and using \eqref{eq:prime-exponential-mean} forces
+\[
+ \zeta(3/2)<\ee^{47/50}
+       \le\frac{26609}{10300}<\frac{13}{5},
+\]
+contrary to the preceding lower bound. The exponential bound uses
+the same factorial inequality at \(47/50\).
+\end{proof}
+
+These obstructions locate information lost by the specified quadratic
+expressions. They do not lower-bound the true logarithm or the Green
+potential at the failing centers. In particular, no collision exclusion
+or obstruction to all signed nonlinear estimates follows.
+
+\subsection{Exact regularized phase and the fixed-prefix limit}
+For any complex \(A\), put
+\[
+ B_\delta(A)=\frac{\delta+\sqrt{\delta^2+4|A|^2}}2,
+ \qquad r_\delta(A)=\frac{\overline A^{,2}}{B_\delta(A)^2}.
+\]
+Since \(B_\delta-|A|^2/B_\delta=\delta\), direct expansion gives
+\begin{equation}\label{eq:regularized-phase-factor}
+ \tfrac12\log(|A+\ee^{\ii\phi}\overline A|^2+\delta^2)
+ =\log B_\delta(A)+\Re\log(1+\ee^{\ii\phi}r_\delta(A)).
+\end{equation}
+Here \(|r_\delta|<1\), including \(A=0\), so the second logarithm
+has its convergent power series. Its independent phase mean is zero.
+
+For a fixed prefix \(A_{\lambda,M}\) and fixed \(\delta>0\),
+\(|r_\delta|\le\rho<1\) and \(|\partial_x r_\delta|=O_{M,\delta}(1)\),
+while \(\phi_\lambda'\ge L_X/4\) and
+\(\phi_\lambda''=O(X^{-1})\). Integration by parts in the \(k\)-th
+harmonic, including both endpoints, bounds its integral by
+\[
+ \frac{\rho^k(2\|K\|_\infty+\|K'\|_1)
+       +k\rho^{k-1}q_X\|r_\delta'\|_\infty}{k\min\phi_\lambda'}
+ +\frac{q_X\rho^k\|\phi_\lambda''\|_\infty}
+       {k(\min\phi_\lambda')^2}.
+\]
+Summing with the logarithmic coefficient \(1/k\) gives
+\(O_{M,\delta}(1/L_X)\). If
+\(E_M=\int_{W_X}|V_\lambda-S_{\lambda,M}|^2\,d\omega_X\),
+Lemma~\ref{lem:upper-log-transfer} consequently yields
+\begin{align}\label{eq:prefix-transfer}
+ J_\lambda(X)\le{}&\int_{W_X}\log B_\delta(A_{\lambda,M})\,d\omega_X
+       -P_{c,\lambda}(X)
+       +\frac{q_X}{2}\log\left(1+\frac{E_M}{q_X\delta^2}\right)
+       \nonumber\\
+ &+T_X+\frac{C_{\rm out}+C_{M,\delta}}{L_X}.
+\end{align}
+Restricting the moment proof to modes \(n>M\) gives exactly
+\(T^{-1}\int_T^{2T}E_M(X,1)\dd X\to\sum_{n>M}n^{-3/2}\).
+The tail is positive for each fixed prefix. This limits a vanishing
+residual claim but does not decide the fixed defect margin for a
+chosen prefix and regulator.
+
+The fixed-prefix phase constants cannot be used for the full growing
+cutoff. Already the relative phase at \(m=n=N_x\) has derivative
+\((L_x-2\log N_x)/2+\pi\lambda/(8x)=O(x^{-1/2})\).
+A large carrier derivative alone does not bound this derivative away
+from zero. The next section chooses a different reference for which
+the complete phase can be controlled.

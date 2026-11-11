@@ -1,0 +1,283 @@
+\section{The transition-scale Green reduction}\label{sec:transition}
+
+We now keep the complete physical field and choose a quantitative
+consumer. This section integrates the child's B01, E01 and E04 results
+\cite{GNPRSOuter,GNPRSLogTransfer}; their inherited field input is stated
+explicitly below. All constants are finite, but their numerical values
+and the first admissible height have not been evaluated.
+
+\subsection{One clock, one carrier, one defect margin}
+For a large positive center \(X\), set
+\begin{equation}\label{eq:transition-band}
+ L=L_X=\log(X/(4\pi)),\quad \lambda=c/L,\quad
+ \tfrac12\le c\le1,\quad R_X=\frac{32}{\pi}\log X,
+ \quad W_X=[X-R_X,X+R_X].
+\end{equation}
+The time \(\lambda\) and parameter \(c\) are fixed throughout every
+spatial integral at this center. Write \(d\omega_X=K(x-X)\dd x\) on
+\(W_X\) and \(q_X=\omega_X(W_X)\). This one-boundary measure is distinct
+from the two-boundary probability measure in Section~\ref{sec:green}:
+\begin{equation}\label{eq:window-mass}
+ 0<q_X\le\tfrac12,\qquad
+ 0\le\tfrac12-q_X\le\frac2\pi X^{-4}.
+\end{equation}
+Indeed \(K(t)\le\ee^{-\pi|t|/8}/8\), and integration of its two
+exterior tails proves the estimate.
+
+Use the upper-half-plane branches in
+\begin{align}\label{eq:transition-carrier}
+ L(z)&=\Log(z/(4\pi)),\nonumber\\
+ \mathcal A(\lambda,z)&=\frac{\pi^{1/4}}{16}z^{7/4}
+ \exp\left\{-\frac{\pi z}{8}
+       +\frac{\lambda}{16}\left(L(z)^2-\frac{\pi^2}{4}\right)\right\},\nonumber\\
+ \Theta(\lambda,z)&=\frac z4(L(z)-1)
+                  +\frac{\pi\lambda L(z)}{16}+\frac{7\pi}{8},\qquad
+ C_\pm=\tfrac12\mathcal A\ee^{\pm\ii\Theta},\qquad
+ V_\lambda=H_\lambda/C_-.
+\end{align}
+These are explicit nonvanishing carriers on the open strip; they are
+not definitions through the unknown zeros. The fixed consumer is
+\begin{equation}\label{eq:transition-margin}
+ m_*:=m(1/2,1)=\frac{\sin(\pi/8)}{2\cosh(\pi/8)}.
+\end{equation}
+By Corollary~\ref{cor:margin}, \(J_\lambda(X)<m_*\) excludes a zero
+with \(1/2\le\Im z\le1\), \(|\Re z-X|\le1\), at this time.
+This fixed-depth consumer is not asserted equivalent to RH.
+
+\begin{lemma}[Harmonic normalization]\label{lem:carrier-harmonic}
+The carrier has \(\calJ[C_-]=0\). Its real-boundary logarithm and that
+of \(V_\lambda\) are absolutely integrable against \(K\), including
+the origin and the negative half-line. Consequently, with
+\(I_\lambda(X)=\int_\R K(x-X)\log|V_\lambda(x+\ii0)|\dd x\),
+\begin{equation}\label{eq:normalized-green-exact}
+ J_\lambda(X)-I_\lambda(X)
+ =\int_\R K(x-X)\log|V_\lambda(x+8\ii)|\dd x
+       -\log|V_\lambda(X+4\ii)|.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The displayed analytic logarithm of \(C_-\) is harmonic in the strip.
+At the boundary origin it is \(O(1+|\log|z||^2)\), with gradient
+\(O((1+|\log|z||)/|z|)\). Remove an upper semicircle of radius
+\(\epsilon\). The Green kernel vanishes linearly there, its normal
+derivative is bounded, and the extra Green-formula terms are
+\(O(\epsilon(1+\log^2\epsilon))\). On the far vertical sides the
+logarithm grows at most linearly plus logarithmically squared, while
+harmonic measure decays exponentially. Both contributions vanish.
+The boundary modulus, using argument \(\pi\) at negative \(x\), is
+\[
+ |C_-(\lambda,x+\ii0)|=\frac{\pi^{1/4}}{32}|x|^{7/4}
+ \exp\left\{-\frac{\pi|x|}{8}
+   +\frac{\lambda}{16}\left(\log^2\frac{|x|}{4\pi}-\frac{\pi^2}{4}\right)\right\}.
+\]
+Its logarithm has a uniform unit-interval bound of the form in
+Lemma~\ref{lem:unit-log}, on both boundaries. Subtracting it from the
+complete field's logarithm proves the integrability assertion. Subtract
+its zero Green functional from Theorem~\ref{thm:green} to obtain
+\eqref{eq:normalized-green-exact}.
+\end{proof}
+
+\subsection{The complete field input and the outer baseline}
+We use the fixed-buffer heat-density approximation recorded in
+\cite{GNPRSHDA,GNPRSOuter}. It is an inherited internally assessed
+input, not re-proved from saddle asymptotics here. On the fixed charts
+recentered at each large real \(x\), \(0\le y\le8\), put
+\[
+ N_x=\left\lfloor\sqrt{x/(4\pi)}\right\rfloor,\qquad
+ \nu_\lambda(z)=z/2+\pi\lambda/8,\qquad
+ w_n(\lambda,z)=n^{-1/2}
+   \exp\{\lambda[(\log n)^2-L(z)\log n]/4\}.
+\]
+The complete approximant is
+\begin{equation}\label{eq:transition-provider}
+ F_{N_x}(\lambda,z)=\mathcal A(\lambda,z)
+       \sum_{n\le N_x}w_n(\lambda,z)
+       \cos(\Theta(\lambda,z)-\nu_\lambda(z)\log n)
+       +\ee^{-\pi^2\lambda/64}\mathcal R_{N_x}(z),
+\end{equation}
+where the retained correction is
+\begin{align*}
+ \mathcal R_N&=(-1)^N\mathcal G(z)a(z)^{-1/2}\mathcal C(a(z)-N),
+ &a(z)&=\sqrt{z/(4\pi)},\\
+ \mathcal G(z)&=[M(s_+)M(s_-)]^{1/2},
+ &\mathcal C(p)&=\frac{\cos(2\pi(p^2-p)-\pi/8)}{\cos(2\pi p)}.
+\end{align*}
+Here \(M,s_\pm\) are as in Section~\ref{sec:RS}, with compatible
+branches. The apparent singularities of \(\mathcal C\) are removable.
+The input supplies fixed constants \(h_9,g_9,f_9\) such that, for
+\(0\le\lambda L_x\le8\) after its fixed chart onsets,
+\begin{align}\label{eq:transition-provider-bounds}
+ |H_\lambda-F_{N_x}|&\le h_9x^{-3/4}(|C_+|+|C_-|),\nonumber\\
+ |\mathcal G(z)|&\le g_9|\mathcal A(0,z)|/2,
+ &|a(z)^{-1/2}\mathcal C(a(z)-N_x)|&\le f_9x^{-1/4}.
+\end{align}
+The correction bound is uniform in the fractional cutoff. The
+fixed-buffer input includes its full Gaussian exterior. The charts
+are recentered, never enlarged to radius \(R_X\).
+
+\begin{theorem}[Uniform outer prime baseline]\label{thm:outer-baseline}
+There are constants \(C_{\rm out},X_*<\infty\), independent of
+\(X,c\) in \eqref{eq:transition-band}, such that
+\begin{equation}\label{eq:outer-baseline}
+ |J_\lambda(X)-I_\lambda(X)+P_{c,\lambda}(X)|
+       \le C_{\rm out}/L_X\qquad(X\ge X_*),
+\end{equation}
+where, writing \(\Lambda_{\rm vM}\) for the von Mangoldt function,
+\begin{equation}\label{eq:transition-prime}
+ P_{c,\lambda}(X)=\sum_{n\ge2}\frac{\Lambda_{\rm vM}(n)}{\log n}
+ \frac{n^{-5/2-c/4}}{1+n^{-4}}
+ \cos\bigl((X/2+\pi\lambda/8)\log n\bigr).
+\end{equation}
+The omitted integers beyond \(Q\ge2\) cost at most
+\(Q^{-3/2-c/4}/(3/2+c/4)\le(2/3)Q^{-3/2}\).
+\end{theorem}
+\begin{proof}
+On \(|x-X|\le R_X\), \(y=4,8\), the eventual gates
+\(R_X+8\le X/2\), \(L_X\ge16\) give
+\(|L(x+\ii y)-L_X|\le2(R_X+8)/X\) and \(\lambda L_x<2\).
+Dividing \eqref{eq:transition-provider} by \(C_-\), the dominant arm is
+\[
+ D_N(z)=\sum_{n\le N_x}n^{-s_\lambda(z)}
+                         \ee^{\lambda(\log n)^2/4},\qquad
+ s_\lambda(z)=\frac{1-\ii z}{2}+\frac{\lambda L(z)}4
+                               -\frac{\ii\pi\lambda}{8}.
+\]
+The reflected carrier satisfies \(|\ee^{2\ii\Theta}|\ll x^{-y/2}\).
+Since \(|w_n|\le n^{-1/2}\), summing the entire reflected population
+costs \(O(x^{(1-y)/4})\). The normalized correction costs
+\(O(x^{-(y+1)/4})\), and the remaining normalized error costs
+\(O(x^{-3/4})\), by \eqref{eq:transition-provider-bounds}.
+
+Let \(D_j=\sum_{n\ge2}n^{-5/2}(\log n)^j\), \(j=0,1,2\).
+On these outer lines, \(\log n\le\Re L(z)/2\), so
+\(|n^{-s_\lambda(z)}\ee^{\lambda(\log n)^2/4}|\le n^{-5/2}\).
+Using \(\ee^u-1\le u\ee^u\) pays removal of the heat weight by
+\(\lambda D_2/4\). The ordinary Dirichlet-series tail costs
+\((2/3)N_x^{-3/2}=O(x^{-3/4})\). Replacing \(s_\lambda(z)\) by
+\[
+ s_y^0(x)=\frac{1+y}{2}+\frac c4
+                   -\ii\left(\frac x2+\frac{\pi\lambda}{8}\right)
+\]
+costs at most \(D_1\lambda(R_X+8)/(2X)\). These uses of the
+ordinary zeta series are all in \(\Re s\ge5/2\)
+\cite{DLMFZetaOuter2026}. Thus a fixed \(C_F\) gives
+\begin{equation}\label{eq:outer-field-comparison}
+ |V_\lambda(x+\ii y)-\zeta(s_y^0(x))|\le C_F/L_X,
+ \qquad y=4,8,\quad |x-X|\le R_X.
+\end{equation}
+No such absolutely convergent comparison has been used at \(y=0\).
+
+The independent floor
+\(|\zeta(s)|\ge1-D_0>1/2\) follows from
+\(D_0\le7/(12\sqrt2)<1/2\). Once \(L_X>4C_F\), the logarithmic
+error in \eqref{eq:outer-field-comparison} is at most \(4C_F/L_X\).
+The unit-log bound in Lemma~\ref{lem:carrier-harmonic}, summed in
+unit shells outside \(W_X\), gives on either boundary
+\begin{equation}\label{eq:transition-log-tail}
+ \int_{\R\setminus W_X}K(x-X)|\log|V_\lambda(x+\ii y)||\dd x
+ \le T_X:=D_VX^{-3}\log^2X,\qquad y=0,8.
+\end{equation}
+This is an estimate for the exact logarithm. The comparison zeta log
+has a separate exterior bound \(D_ZX^{-4}\), since its absolute
+prime-power series is bounded by \(D_0\).
+
+Finally \(\widehat K(\omega)=1/[2\cosh(4\omega)]\), so at
+\(\omega=(\log n)/2\) it equals \(1/(n^2+n^{-2})\).
+The upper-boundary term less the center term has coefficient
+\[
+ \frac{n^{-9/2-c/4}}{n^2+n^{-2}}-n^{-5/2-c/4}
+       =-\frac{n^{-5/2-c/4}}{1+n^{-4}}.
+\]
+Absolute convergence permits termwise integration. Equation
+\eqref{eq:normalized-green-exact} now has error at most
+\(6C_F/L_X+T_X+D_ZX^{-4}\), proving the assertion after enlarging
+the onset and taking \(C_{\rm out}=6C_F+D_V+D_Z\).
+The prime tail follows from the integral test.
+\end{proof}
+
+The constants \(C_{\rm out}\) and \(D_V\) denote the child's
+\(C_*\) and \(D_V\); this avoids collision with the earlier
+unit-log constant. The onset includes the inherited fixed-buffer
+onsets, \(X\ge26\), \(R_X+8\le X/2\),
+\(L_XX^{-3/4}\le1\), \(L_X>4C_F\), and
+\(L_XX^{-3}\log^2X\le1\). Each gate is eventual after the constants
+are fixed. The result holds at every sufficiently large center, but
+estimates the outer reduction error, not the sign of \(I-P\).
+There is no extra time-zero pole correction in
+\eqref{eq:outer-baseline}: the carrier here is harmonic and nonvanishing.
+
+\subsection{Logarithmic transfer without a real-line floor}
+On the real window define the two retained arms by
+\begin{equation}\label{eq:real-two-arms}
+ A_\lambda(x)=\sum_{n\le N_x}w_n(\lambda,x)
+                  \ee^{\ii\nu_\lambda(x)\log n},\qquad
+ S_\lambda=A_\lambda+\ee^{\ii\phi_\lambda}\overline{A_\lambda},
+ \quad\phi_\lambda=2\Theta(\lambda,x).
+\end{equation}
+The exact field is \(V_\lambda=S_\lambda+e_\lambda\), with
+\begin{equation}\label{eq:real-provider-error}
+ \sup_{W_X}|e_\lambda|\le C X^{-1/4},\qquad
+ C=2^{3/4}(2h_9)+2^{1/4}g_9f_9.
+\end{equation}
+Indeed the two carriers have equal modulus, the full correction costs
+\(g_9f_9x^{-1/4}\), and the provider remainder costs
+\(2h_9x^{-3/4}\). Thus the correction is paid in \(e_\lambda\),
+not discarded when it is absent from \(S_\lambda\).
+
+\begin{lemma}[One-sided logarithmic transfer]\label{lem:upper-log-transfer}
+For \(v,s\in\C\) and \(\delta>0\),
+\begin{equation}\label{eq:upper-log-transfer}
+ \log|v|\le\tfrac12\log(|s|^2+\delta^2)
+       +\tfrac12\log(1+|v-s|^2/\delta^2).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Use \(|v|\le|s|+|v-s|\) and Cauchy--Schwarz on
+\((|s|,\delta)\) and \((1,|v-s|/\delta)\), then take logarithms.
+At \(v=0\) the inequality is understood with \(\log0=-\infty\).
+\end{proof}
+Combining this lemma with \eqref{eq:real-provider-error}, the exact
+tail and Theorem~\ref{thm:outer-baseline}, and choosing
+\(\delta=X^{-1/8}\), gives
+\begin{align}\label{eq:full-regularized-transfer}
+ J_\lambda(X)\le{}&\int_{W_X}\tfrac12
+           \log(|S_\lambda|^2+X^{-1/4})\,d\omega_X-P_{c,\lambda}(X)
+            +T_X+\frac{C_{\rm out}}{L_X}\nonumber\\
+ &+\frac{q_X}{2}\log(1+C^2X^{-1/4}).
+\end{align}
+The field-transfer cost is \(O(X^{-1/4})\). Neither the exact field
+nor the reflected approximant is assumed bounded away from zero.
+
+\subsection{A shifted-zeta comparison retains its unknown divisor}
+For comparison with a single ordinary zeta function, let
+\(\eta=\pi\lambda/4\) and
+\(Z_{c,\lambda}(z)=\zeta((1-\ii z)/2+c/4-\ii\pi\lambda/8)\).
+The exact time-zero normalization gives
+\[
+ M((1-\ii z)/2+c/4-\ii\pi\lambda/8)Z_{c,\lambda}(z)
+       =H_0(z+\eta+\ii c/2).
+\]
+In the strip the zeta factor has a simple pole
+\(p=-\eta+\ii(1-c/2)\); its gamma completion has precisely the
+cancelling simple zero there. If \(x_j(0)+\ii y_j(0)\) are the
+time-zero zeros, with multiplicity, set
+\[
+ \mathcal Z_{c,\lambda}(X)=\sum_{y_j(0)>c/2}
+       G(X+\eta-x_j(0),y_j(0)-c/2),\qquad
+ \Delta=I_\lambda-\int_\R K(x-X)\log|Z_{c,\lambda}(x)|\dd x.
+\]
+The complete-product proof of Theorem~\ref{thm:green} applies to this
+fixed affine translate: local distance logarithms remain integrable,
+the count bound is unchanged, and the boundary tails remain summable.
+The pole enters with negative sign. On the two outer lines the zeta
+combination is exactly \(-P_{c,\lambda}\); therefore
+\begin{equation}\label{eq:shifted-zeta-divisor}
+ I_\lambda-P_{c,\lambda}
+    =\Delta+\mathcal Z_{c,\lambda}-G(X+\eta,1-c/2).
+\end{equation}
+This is B02's meromorphic identity \cite{GNPRSComparisons}. The
+difference \(\Delta\) is a difference of integrable logarithms, not
+an assumed holomorphic logarithm of a zero-free quotient. A useful
+upper bound still requires a coupled estimate for
+\(\Delta+\mathcal Z_{c,\lambda}\). The identity alone supplies none;
+the isolated pole term decays exponentially with \(X\).

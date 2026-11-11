@@ -1,5 +1,12 @@
 # Green/resolvent milestones
 
+**10 November 2026 — shallow analytical continuation established.**
+For Edward Baker with OpenAI Codex assistance; actual model/effort
+unavailable. [Investigation09](../../../09_green_potentials_newman_flow/README.md) now holds the integrated
+background manuscript and one RS child. [Source/status crosswalk](../../../09_green_potentials_newman_flow/notes/01_GNP_SOURCE_MAP_AND_INTEGRATION_20261110.md)
+preserves this evidence, issued packets and chat0010; unissued B07 r2
+routes to unactivated GNP-B01. The older manuscript stays unchanged.
+
 **10 November 2026 — B07 discussion and manuscript reconciliation.**
 For Edward Baker with OpenAI Codex assistance; actual model/effort absent
 from chat0010's registry. [Session12](brainstorm/notes/12_TND_OG_POST_E08_STATE_AND_PATHS_20261110.md)

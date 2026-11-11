@@ -1,5 +1,16 @@
 # Green potential and logarithmic resolvent
 
+**10 November 2026 — new shallow continuation:** the author has opened
+[Investigation09](../../../09_green_potentials_newman_flow/README.md) directly in investigations-5, with an
+opening analytical manuscript and one Riemann–Siegel child.
+[The source/task crosswalk](../../../09_green_potentials_newman_flow/notes/01_GNP_SOURCE_MAP_AND_INTEGRATION_20261110.md)
+preserves all completed and issued TND-OG evidence. Unissued proposed B07 r2
+is superseded for routing by GNP-B01, unactivated. This folder remains the
+canonical evidence and chat0010 home; OC/OA remain separate.
+[Current continuation prompts](../../../09_green_potentials_newman_flow/notes/02_GNP_CONTINUATION_AND_PROMPTS_20261110.md).
+Prepared for Edward Baker with OpenAI Codex assistance; actual model/effort
+unavailable. Earlier dated recommendations below are historical.
+
 **10 November 2026, post-E08 discussion and manuscript reconciliation:**
 [Session12](brainstorm/notes/12_TND_OG_POST_E08_STATE_AND_PATHS_20261110.md)
 ranks a consequential signed estimate, conditional sibling reconsideration

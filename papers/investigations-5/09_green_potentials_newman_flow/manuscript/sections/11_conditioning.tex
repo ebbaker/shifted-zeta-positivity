@@ -1,0 +1,149 @@
+\section{A square-root obstruction to uniform resolvent stability}\label{sec:conditioning}
+
+The difficulty in \eqref{eq:ratio-error} is not removed merely by
+imposing common source and zero-count bounds. The following family
+makes the loss quantitative while fixing the translation scale.
+
+Let \(H=H_0\), \(\alpha=(\log2)/2\), and
+\[
+ S_\alpha(u)=\frac{\Phi(u+\alpha)+\Phi(u-\alpha)}2,\qquad
+ \Psi_\eta(u)=\frac{(1+\eta)\Phi(u)+(1-\eta)S_\alpha(u)}2,
+\]
+where \(0\le\eta\le\eta_0:=\tanh^2(\alpha/4)\).
+The transforms are
+\begin{equation}\label{eq:control}
+ f_\eta(z)=\frac12\int_\R\Psi_\eta(u)\ee^{\ii zu}\dd u
+ =H(z)M_\eta(z),\qquad
+ M_\eta(z)=\cos^2(\alpha z/2)+\eta\sin^2(\alpha z/2).
+\end{equation}
+Every source is strictly positive, smooth and even, and
+\(f_\eta(0)=H(0)\). The parameter \(\eta\) varies the source; it is
+not Newman time. Each source has its own genuine heat orbit, but
+\eqref{eq:control} is the time-zero factorization.
+
+\begin{theorem}[Uniform square-root conditioning]\label{thm:conditioning}
+The family \(\Psi_\eta\) has common bounds in every fixed exponentially
+weighted source seminorm and common full zero-count constants. Its
+relative source distance from \(\Psi_0\) is at most \(\eta\), and
+each fixed safe-line logarithmic-resolvent jet changes by \(O(\eta)\),
+uniformly along that line. Nevertheless,
+\begin{equation}\label{eq:delta-scale}
+ c\sqrt\eta\le\calJ[f_\eta](X)-\calJ[f_0](X)
+                  \le C_\alpha\sqrt\eta
+\end{equation}
+for every \(X\in\R\), with constants independent of \(\eta,X\).
+Thus no nondecreasing modulus \(o(\sqrt t)\), in particular no
+uniform Lipschitz modulus, controls the Green difference from these
+observations on a class containing this family.
+\end{theorem}
+
+\begin{proof}
+The exact source difference is
+\[
+ \Psi_\eta-\Psi_0=\frac\eta2(\Phi-S_\alpha),\qquad
+ |\Psi_\eta-\Psi_0|\le\eta\Psi_0.
+\]
+For fixed \(L,b\ge0\) and integers \(j,k\ge0\), its differentiated
+weighted \(L^1\) norm is bounded by
+\[
+ \frac\eta2\int_\R |u|^j\ee^{Lu^2+b|u|}
+            (|\Phi^{(k)}|+|S_\alpha^{(k)}|)\dd u.
+\]
+This integral is finite by Lemma~\ref{lem:source} and fixed translation.
+The bound is independent of horizontal observation height.
+
+Write
+\[
+ \ell=\frac{2\pi}{\alpha},\qquad
+ x_k=\frac{(2k+1)\pi}{\alpha},\qquad
+ d(\eta)=\frac2\alpha\atanh\sqrt\eta\le\frac12.
+\]
+At \(\eta=0\), the multiplier has double real zeros \(x_k\).
+At \(\eta>0\), they are the simple zeros \(x_k\pm\ii d(\eta)\).
+Any coincidence with an \(H\)-zero adds multiplicities. The fixed
+lattice spacing gives a common unit-count bound and hence a common
+full count after adding the canonical zeros.
+
+The finite-factor argument of Section~\ref{sec:green}, applied
+periodically to \(M_\eta\), gives
+\begin{equation}\label{eq:lattice}
+ \Delta_\eta(X):=\calJ[f_\eta](X)-\calJ[f_0](X)
+       =\sum_{k\in\mathbb Z}G(X-x_k,d(\eta)),\qquad
+ \calJ[f_0]=\calJ[H].
+\end{equation}
+One can justify the periodic limit directly on the cylinder: after
+subtracting the Green singularities, the remaining function is
+harmonic, has the correct boundary values and is bounded. Uniqueness
+fixes its harmonic part. Alternatively \eqref{eq:G-decay} gives
+absolute convergence of the periodized kernels. The real doubles of
+\(M_0\) have zero interior contribution.
+
+The nearest lattice point is at distance at most \(\ell/2\).
+Using \eqref{eq:margin} for that point and
+\eqref{eq:G-decay} for the complete lattice gives
+\begin{equation}\label{eq:lattice-bounds}
+ \frac{\sin a}{\cosh(a\ell/2)}\,d
+ \le\Delta_\eta(X)
+ \le K_G\coth(a\ell/2)\,d .
+\end{equation}
+The upper bound uses
+\(\sup_X\sum_k\ee^{-a|X-x_k|}=\coth(a\ell/2)\).
+Finally
+\[
+ \frac2\alpha\sqrt\eta\le d(\eta)
+ \le\frac{2}{\alpha(1-\eta_0)}\sqrt\eta,
+\]
+which proves the two-sided Green scale.
+
+It remains to verify the resolvent observations. With
+\(R_\eta=f_\eta'/f_\eta\), \(R_*=f_0'/f_0\), and
+\(B_\eta=(1+\eta)/(1-\eta)=\cosh(\alpha d)\), exact subtraction yields
+\begin{equation}\label{eq:resolvent-difference}
+ R_\eta-R_*=
+ \frac{\alpha(B_\eta-1)\sin(\alpha z)}
+ {(B_\eta+\cos(\alpha z))(1+\cos(\alpha z))}.
+\end{equation}
+The canonical resolvent cancels, but the multiplier's zeros remain
+fully represented in \eqref{eq:lattice}. For \(y>1/2\) and
+\(1\le B\le\cosh(\alpha/2)\),
+\[
+ |B+\cos(\alpha(x+\ii y))|\ge\cosh(\alpha y)-B,\qquad
+ |\sin(\alpha(x+\ii y))|\le\cosh(\alpha y).
+\]
+For the first inequality, set \(t=\cos(\alpha x)\); the squared
+modulus is \(t^2+2B\cosh(\alpha y)t+B^2+\sinh^2(\alpha y)\),
+minimized at \(t=-1\).
+
+Fix \(b>1\) and \(0<\varrho<b-1\), and define
+\[
+ C_{b,\varrho}=
+ \frac{2\alpha\cosh(\alpha(b+\varrho))}
+ {(1-\eta_0)
+ [\cosh(\alpha(b-\varrho))-\cosh(\alpha/2)]
+ [\cosh(\alpha(b-\varrho))-1]}.
+\]
+On every radius-\(\varrho\) disk centered at \(x+\ii b\),
+\eqref{eq:resolvent-difference} is bounded by \(C_{b,\varrho}\eta\).
+The actual resolvents are defined there by the zero strip.
+Cauchy's estimate gives
+\begin{equation}\label{eq:jet-change}
+ \sup_x|\partial_z^j(R_\eta-R_*)(x+\ii b)|
+ \le j!\varrho^{-j}C_{b,\varrho}\eta.
+\end{equation}
+Any fixed sum, maximum, or ordinary finite-dimensional norm of the
+relative source distance and finitely many such jet seminorms is
+therefore at most \(C_D\eta\), with weights independent of \(\eta\).
+A nondecreasing \(\omega(t)=o(\sqrt t)\) would imply
+\(c\sqrt\eta\le\omega(C_D\eta)=o(\sqrt\eta)\), a contradiction.
+\end{proof}
+
+The baseline \(\Psi_0\) is itself a translated-source mixture, not
+theta. The theorem concerns continuity on that enlarged information
+class. It is not a discontinuity statement, a universal upper
+Hölder theorem, or an obstruction restricted to the literal theta
+source. It leaves open \(d^2\)-scale source resolution, contours
+approaching the event with their denominator costs paid, and genuinely
+arithmetic signed estimates. The explicit factorial in
+\eqref{eq:jet-change} also prevents interpreting fixed-order
+control as a free growing-order theorem.
+

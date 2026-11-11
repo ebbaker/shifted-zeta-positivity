@@ -1,0 +1,435 @@
+\section{Euler references, density and exceptional centers}
+\label{sec:euler-reference}
+
+A finite Euler reference has two advantages over a fixed arithmetic
+prefix: its logarithm calibrates exactly to a prime subseries, and
+its modulus never vanishes. The reflected reference does have real
+zeros; these will be retained inside integrable logarithms. The
+development combines E05's fixed-reference moment analysis and E06's
+joint-phase estimate \cite{GNPRSEuler,GNPRSAdaptive}.
+
+\subsection{Exact calibration and a regulator-uniform phase lemma}
+For \(P\ge2\), fixed across the spatial integral, define
+\begin{equation}\label{eq:euler-reference}
+ E_P(x)=\prod_{p\le P}(1-p^{-\sigma_c}
+                   \ee^{\ii\nu_\lambda(x)\log p})^{-1},\qquad
+ \sigma_c=\tfrac12+c/4,\qquad
+ S_P^{\rm ref}=E_P+\ee^{\ii\phi_\lambda}\overline E_P.
+\end{equation}
+Use the canonical logarithm
+\(\ell_P=\sum_{p\le P}\sum_{k\ge1}
+ p^{-k\sigma_c}\ee^{\ii k\nu_\lambda\log p}/k\).
+The finite product and its inverse are bounded on the entire real
+line for fixed \(P\). Absolute convergence and the Fourier transform
+of \(K\) give
+\begin{equation}\label{eq:euler-calibration}
+ \int_\R K(x-X)\log|E_P(x)|\dd x
+ =P_{c,\lambda}^{(\le P)}(X)
+ :=\sum_{p\le P}\sum_{k\ge1}
+ \frac{p^{-k(5/2+c/4)}\cos(k\nu_\lambda(X)\log p)}{k(1+p^{-4k})}.
+\end{equation}
+All powers of the retained primes are included. The omitted prime
+subseries costs at most \((2/3)P^{-3/2}\), since every omitted
+prime power exceeds \(P\).
+
+Put \(\kappa_E=1-2^{-5/8}>0\). Differentiating the absolutely
+convergent logarithm, using \(\nu_\lambda'=1/2\), yields
+\begin{align}\label{eq:euler-phase-derivatives}
+ 2|\Im\ell_P'|&\le D_1(P):=\frac8{3\kappa_E}P^{3/8}\log P,\nonumber\\
+ 2|\Im\ell_P''|&\le D_2(P):=\frac4{3\kappa_E^2}P^{3/8}(\log P)^2.
+\end{align}
+For example the first sum is bounded by
+\(\sum_{p\le P}p^{-5/8}\log p/(1-p^{-5/8})\); the second has
+coefficient \(1/2\) and denominator squared. In both, use
+\(\sum_{n\le P}n^{-5/8}\le(8/3)P^{3/8}\).
+
+\begin{lemma}[The complete reference phase]\label{lem:joint-phase}
+Let \(\psi=\phi_\lambda-2\Im\ell_P\), so that
+\(a:=S_P^{\rm ref}/E_P=1+\ee^{\ii\psi}\). Assume the eventual
+window gates and \(D_1(P)\le L_X/8\), \(R_X/X\le L_X/8\).
+Then \(\psi'\ge L_X/4\) on \(W_X\), and, writing
+\(D=\|\psi''\|_{\infty,W_X}\),
+\begin{align}\label{eq:joint-phase}
+ D&\le D_2(P)+X^{-1}+\pi\lambda/(2X^2),\nonumber\\
+ \left|\int_{W_X}\tfrac12\log(|a|^2+\delta^2)\,d\omega_X
+                   -q_X\log b_\delta\right|
+ &\le\frac2{L_X}+\frac{16D}{L_X^2},
+ \qquad b_\delta=\frac{\delta+\sqrt{\delta^2+4}}2.
+\end{align}
+The bound holds uniformly for every \(\delta>0\) fixed within
+the integral, and also at \(\delta=0\), with \(\log b_0=0\).
+\end{lemma}
+\begin{proof}
+At fixed time \(\phi_\lambda'=L_x/2+\pi\lambda/(8x)\) and
+\(\phi_\lambda''=1/(2x)-\pi\lambda/(8x^2)\). The derivative
+bounds and \(L_x\ge L_X-2R_X/X\) prove the assertions about \(\psi\).
+The unit-arm instance of \eqref{eq:regularized-phase-factor} is
+\[
+ \tfrac12\log(|a|^2+\delta^2)=\log b_\delta+
+  \Re\sum_{k\ge1}\frac{(-1)^{k+1}\rho^k}{k}\ee^{\ii k\psi},
+ \qquad \rho=b_\delta^{-2}<1.
+\]
+Its coefficient modulus is constant in \(x\). Integration by parts
+in the entire phase, with \(m=\min\psi'\), gives
+\[
+ \left|\int_{W_X}\ee^{\ii k\psi}\,d\omega_X\right|
+ \le\frac{2\|K\|_\infty+\|K'\|_1}{km}
+          +\frac{q_XD}{km^2}.
+\]
+Here \(\|K\|_\infty=1/16\), \(\|K'\|_1=1/8\) and
+\(q_X\le1/2\). Summing with \(\rho^k/k\) and
+\(\sum\rho^k/k^2\le2\) proves \eqref{eq:joint-phase}.
+For \(0<\delta\le1\), the regularized log decreases to
+\(\log|a|\) and is bounded above by \(\tfrac12\log5\).
+Monotone convergence applied to this constant minus the log, and
+the uniform two-sided integral bound, give a finite limit with the
+same estimate. Thus the real reference zeros are included.
+\end{proof}
+
+Define the exact relative residual
+\begin{equation}\label{eq:exact-relative-residual}
+ R_P(X,c)=\int_{W_X}\frac{|V_\lambda-S_P^{\rm ref}|^2}{|E_P|^2}
+                   \,d\omega_X.
+\end{equation}
+Only the unreflected nonvanishing product is divided out. Also
+\(|\ell_P|\le(8/(3\kappa_E))P^{3/8}\), so its omitted exterior
+costs at most
+\(B_P^{\rm ext}X^{-4}\), where
+\(B_P^{\rm ext}=16P^{3/8}/(3\pi\kappa_E)\).
+Applying Lemma~\ref{lem:upper-log-transfer} to \(V/E_P,a\), then
+Jensen only to the residual payment, proves the complete bound
+\begin{align}\label{eq:euler-master}
+ J_\lambda(X)\le{}&P_{c,\lambda}^{(\le P)}-P_{c,\lambda}
+       +q_X\log b_\delta
+       +\frac{q_X}{2}\log\left(1+\frac{R_P(X,c)}{q_X\delta^2}\right)
+       \nonumber\\
+ &+T_X+\frac{C_{\rm out}+2}{L_X}
+       +\frac{16D}{L_X^2}+B_P^{\rm ext}X^{-4}.
+\end{align}
+No field floor and no omitted true logarithmic exterior enter this
+inequality. For fixed \(P\), its phase error is \(O_P(1/L_X)\)
+uniformly over regulators, strengthening the older fixed-regulator
+form of E05 by E06's phase lemma.
+
+\subsection{The fixed-reference residual mean and density gain}
+\begin{theorem}[Fixed-prime residual law]\label{thm:residual-mean}
+For each fixed finite \(P\),
+\begin{equation}\label{eq:residual-mean}
+ \lim_{T\to\infty}\frac1T\int_T^{2T}R_P(X,1)\dd X
+ =\mu_P:=\zeta(3/2)\prod_{p\le P}(1-p^{-3/2})-1,
+ \qquad \mu_P\longrightarrow0\quad(P\to\infty).
+\end{equation}
+The height limit is taken before the prime-cutoff limit.
+\end{theorem}
+\begin{proof}
+At the auxiliary time \(1/L_u\), let \(D_P=\prod_{p\le P}p\) and
+\[
+ Q(u)=E_P(u)^{-1}=\sum_{d\mid D_P}\mu(d)d^{-3/4}
+                  \ee^{\ii\nu(u)\log d},\qquad B(u)=A(u)Q(u)-1,
+\]
+where \(\mu(d)\) is the M\"obius function. The coefficient at 1
+vanishes. For \(k>1\), the coefficient of
+\(\ee^{\ii\nu(u)\log k}\) is
+\[
+ b_k(u)=\sum_{\substack{d\mid D_P,\ d\mid k\\ k/d\le N_u}}
+                     \mu(d)d^{-3/4}w_{k/d}(u).
+\]
+Its supremum plus total variation on \([T,2T]\) is
+\(O_P(k^{-5/8})\), including each cutoff activation. For fixed
+\(k>1\) it tends uniformly to \(k^{-3/4}\mathbf1_{(k,D_P)=1}\).
+The diagonal thus tends to
+\(\sum_{k>1,(k,D_P)=1}k^{-3/2}=\mu_P\), by the summable square
+majorant \(O_P(k^{-5/4})\). The same-arm argument in
+Theorem~\ref{thm:coherent-moment}, now through \(D_PN_{2T}\),
+pays all off-diagonal terms by \(O_P(T^{-5/8}(1+\log T))\).
+
+The reflected relative square equals
+\[
+ 2|B|^2+2\Re\{\ee^{-\ii\phi}B^2\overline Q/Q\}.
+\]
+The finite-prime function \(\overline Q/Q=\overline Q E_P\) has
+an absolutely uniformly convergent expansion in rational frequencies
+\(\ee^{\ii\nu\log r}\). Truncate it with uniform error
+\(\epsilon\). For each of the finitely retained \(r\), the phase
+\(-\phi+\nu\log(klr)\) has second derivative of fixed sign and
+magnitude \(\asymp1/T\), since \(k,l\ll_P\sqrt T\).
+The previous second-derivative argument costs \(O_{P,r}(T^{-1/8})\)
+after summation. The removed frequencies cost at most
+\(2\epsilon\) times the bounded mean of \(|B|^2\).
+Take \(T\to\infty\), then \(\epsilon\downarrow0\); the cross
+mean is zero.
+
+Dividing the complete field error by \(E_P\) costs
+\(O_P(u^{-1/4})\), hence \(O_P(u^{-1/16})\) in the square.
+The auxiliary mean is therefore \(2\mu_P\).
+The fixed-clock comparison has the same
+\(O_P(R_XX^{-9/16}+X^{-1/32})\) bound as before, because the fixed
+product and its inverse have bounded modulus and time derivative;
+the reflected phase derivative is already included in the arm bound.
+The same Fubini edges and kernel mass \(1/2\) prove
+\eqref{eq:residual-mean}. Finally \(\mu_P\to0\) by domination in
+the displayed coprime sum.
+\end{proof}
+
+\begin{corollary}[Density of centers with a large Green value]
+\label{cor:green-density}
+For every fixed \(h>0\),
+\begin{equation}\label{eq:green-density}
+ \lim_{T\to\infty}\frac1T
+   |\{X\in[T,2T]:J_{1/L_X}(X)\ge h\}|=0.
+\end{equation}
+In particular this holds at the original defect margin \(h=m_*\).
+There is no rate or assertion about a fixed time, all \(c\), or
+the density of zeros.
+\end{corollary}
+\begin{proof}
+Choose a fixed \(\delta>0\) so \(q_X\log b_\delta\le h/5\),
+and then arbitrarily large fixed \(P\) so the prime tail is at most
+\(h/5\). Set \(r=\delta^2h/5\). If \(R_P\le r\), its
+logarithmic payment is at most \(r/(2\delta^2)=h/10\).
+The remaining errors in \eqref{eq:euler-master} are eventually at
+most \(h/5\) for each fixed \(P\). Hence the bad set is contained
+in \(\{R_P>r\}\). Markov's inequality and
+Theorem~\ref{thm:residual-mean} bound its upper dyadic density by
+\(\mu_P/r\). Let fixed \(P\) tend to infinity after the height
+limit. This proves the statement for arbitrary \(h\), explicitly
+extracting the arbitrary-threshold consequence of E05's proof at
+\(m_*\).
+\end{proof}
+
+\subsection{An averaged consequence for the actual Green value}
+The density conclusion can be strengthened in mean by the coherent
+moment bound. The following consequence is derived in this synthesis
+\cite{GNPRSMeanConsequences}; it adds no exceptional-center arithmetic
+estimate to E05.
+
+\begin{theorem}[Power means and subcritical exponential means]
+\label{thm:green-power-means}
+Write \(J(X)=J_{1/L_X}(X)\). For all sufficiently large \(T\),
+\begin{equation}\label{eq:green-exponential-bound}
+ \frac1T\int_T^{2T}\ee^{4J(X)}\dd X\le39.
+\end{equation}
+For every fixed \(p>0\) and every fixed \(0<\alpha<4\),
+\begin{equation}\label{eq:green-power-means}
+ \frac1T\int_T^{2T}J(X)^p\dd X\longrightarrow0,
+ \qquad
+ \frac1T\int_T^{2T}\ee^{\alpha J(X)}\dd X\longrightarrow1.
+\end{equation}
+The constant 39 is an explicit convenient bound; its finite onset is
+unevaluated. Neither convergence rate nor convergence at \(\alpha=4\)
+is asserted.
+\end{theorem}
+\begin{proof}
+Eventually \(q_X\ge1/4\) and
+\(T_X+C_{\rm out}/L_X\le1/100\). Using
+\(|P_{1,1/L_X}|<23/100\) in \eqref{eq:quadratic-allowance} gives
+\[
+ \ee^{4J(X)}\le\ee^{24/25}
+       \left(\frac{M(X,1)}{q_X}\right)^{2q_X}
+       \le\ee\,(1+4M(X,1)).
+\]
+The last inequality uses \(t^r\le1+t\) for \(t\ge0\),
+\(0<r\le1\). Also
+\(\zeta(3/2)\le1+2^{-3/2}+\int_2^\infty u^{-3/2}\dd u<3\).
+Theorem~\ref{thm:coherent-moment} thus makes the averaged right side
+at most \(13\ee<39\) eventually.
+
+Let \(d_T(t)=T^{-1}|\{X\in[T,2T]:J(X)>t\}|\).
+Positivity of the Green representation and Markov's inequality give
+\(d_T(t)\le\min(1,39\ee^{-4t})\). For each fixed \(t>0\),
+Corollary~\ref{cor:green-density} gives \(d_T(t)\to0\).
+Tonelli's theorem yields
+\[
+ \frac1T\int_T^{2T}J^p\dd X
+     =p\int_0^\infty t^{p-1}d_T(t)\dd t,
+ \qquad
+ \frac1T\int_T^{2T}(\ee^{\alpha J}-1)\dd X
+     =\alpha\int_0^\infty\ee^{\alpha t}d_T(t)\dd t.
+\]
+The displayed tail bound is an integrable majorant in the first
+identity for every \(p>0\), and in the second for \(\alpha<4\).
+Dominated convergence proves \eqref{eq:green-power-means}.
+\end{proof}
+
+In particular the actual Green potential tends to zero in every
+finite \(L^p\) mean on dyadic intervals along this moving-time slice.
+Narrow exceptional sets can survive every such mean statement.
+There is no assertion of pointwise convergence or a supremum bound.
+For an abstract limit check on a unit probability interval, take
+\(Y_n=(\log n)\mathbf1_{[0,1/n]}/4\). Then every power mean
+tends to zero and every exponential mean of exponent less than four
+tends to one, but \(\mathbb E\ee^{4Y_n}=2-1/n\) and
+\(\|Y_n\|_\infty\to\infty\). This is a measure-theoretic
+example, not a theta field or a zero construction; it identifies the
+logical limit of the mean statements alone.
+
+\subsection{Exceptional centers for every fixed reference}
+The mean law is compatible with unbounded exceptional residuals.
+The reason is arithmetic coherence, which can be detected by fixed
+rational-frequency tests without any quantitative equidistribution
+rate.
+
+\begin{lemma}[Twisted complete moments]\label{lem:twisted-moments}
+For fixed coprime positive integers \(a,b\), let \(s=\log(a/b)\).
+Then
+\begin{equation}\label{eq:twisted-moment}
+ \lim_{T\to\infty}\frac1T\int_T^{2T}\ee^{\ii Xs/2}M(X,1)\dd X
+     =2\zeta(3/2)(ab)^{-3/4}\widehat K(s/2).
+\end{equation}
+\end{lemma}
+\begin{proof}
+In the auxiliary same-arm square the phase is
+\(\nu(u)\log(n/m)+us/2\). Resonance requires \(an=bm\),
+so \(n=bj,m=aj\), and its coefficient sum tends to
+\((ab)^{-3/4}\zeta(3/2)\) for each of the two arm squares.
+For nonresonant pairs
+\(|\log(an/(bm))|\gg_{a,b}T^{-1/2}\).
+The \(O(1/(T\log T))\) derivative perturbation preserves that
+lower bound; the monotone first-derivative estimate costs
+\(O_{a,b}(\sqrt T)\) per partial integral. The summed normalized
+error is \(O_{a,b}(T^{-1/8})\). The linear twist leaves the
+cross-arm second derivative unchanged. The correction and fixed-clock
+payments are unchanged in absolute value. In the Fubini step the
+twist contributes \(\ee^{-\ii ts/2}\) to the kernel at \(t=x-X\),
+giving \(\widehat K(s/2)\) in place of its mass. The same edges
+and tails finish the proof.
+\end{proof}
+
+\begin{theorem}[Fixed-reference exceptional residuals]
+\label{thm:fixed-residual-unbounded}
+The exact moment \(M(X,1)\) is unbounded at arbitrarily high centers.
+For every fixed \(P\), so is \(R_P(X,1)\).
+\end{theorem}
+\begin{proof}
+Choose a second fixed prime cutoff \(U\), independent of \(P\).
+On its finite torus, with probability Haar measure \(dz\), put
+\[
+ E_U(z)=\prod_{p\le U}(1-p^{-3/4}z_p)^{-1},\quad
+ C_U=\zeta(3/2)\prod_{p\le U}(1-p^{-3/2}),\quad
+ \tau_p(t)=\ee^{\ii t\log p/2},
+\]
+\[
+ F_U(z)=2C_U\int_\R K(t)|E_U(z\tau(t))|^2\dd t.
+\]
+This is continuous. For a character corresponding to
+\(a/b=\prod p^{\ell_p}\), expansion of the finite-prime product
+shows that \(\int z^\ell F_U(z)\dd z\) is the right side of
+\eqref{eq:twisted-moment}. Along \(z_p(X)=\ee^{\ii X\log p/2}\),
+every nonconstant character has zero limiting height mean, by unique
+factorization. Thus each fixed trigonometric polynomial has the
+corresponding weighted height mean against \(M\).
+
+Use the nonnegative product Fej\'er polynomials
+\[
+ W_N(z)=\prod_{p\le U}\frac1N\left|\sum_{j=0}^{N-1}z_p^j\right|^2.
+\]
+Their Haar mean is one and they concentrate at \(z=1\): outside
+\(|\arg z_p|<\eta\), the relevant factor is at most
+\(1/[N\sin^2(\eta/2)]\). A finite union bound and continuity give
+\(\int W_NF_U\dd z\to F_U(1)\).
+If \(M\le H\) eventually, take the height limit first for fixed
+\(U,N\) in the nonnegative inequality \(W_NM\le HW_N\), then
+let \(N\to\infty\). This would imply \(F_U(1)\le H\) for every
+fixed \(U\).
+
+But for \(|t|\le1/\log U\) the prime cosines are at least \(7/8\),
+and
+\[
+ |E_U(\tau(t))|^2\ge
+        \exp\left(\frac34\sum_{p\le U}p^{-3/4}\right).
+\]
+The harmonic sum through \(\lfloor U\rfloor\) is at most
+\(\prod_{p\le U}(1-1/p)^{-1}\); taking logarithms and paying the
+summable higher powers gives
+\(\sum_{p\le U}1/p\ge\log\log U-O(1)\).
+Since \(p^{1/4}\ge4\) above a fixed cutoff,
+\(\sum_{p\le U}p^{-3/4}\ge4\log\log U-O(1)\).
+As \(C_U\ge1\) and \(K(t)\ge K(1)\) on this short interval,
+\(F_U(1)\gg(\log U)^2\), a contradiction.
+
+Finally \(B_P:=\sup_x|E_P(x)|<\infty\) for fixed \(P\). The
+weighted triangle inequality gives
+\begin{equation}\label{eq:residual-unbounded-transfer}
+ R_P(X,1)\ge B_P^{-2}
+        \bigl(\sqrt{M(X,1)}-2B_P\sqrt{q_X}\bigr)_+^2,
+\end{equation}
+which proves the residual assertion.
+\end{proof}
+
+This also obstructs the specified separate residual/Jensen payment
+even with a regulator chosen at each center. Before any phase estimate,
+the regularized reference log is at least \(q_X\log\delta\); hence
+its sum with the residual payment is at least
+\[
+ \frac{q_X}{2}\log(\delta^2+R_P/q_X)
+      \ge\frac{q_X}{2}\log(R_P/q_X)
+\]
+when \(R_P>0\). Restoring the bounded fixed-reference prime
+difference cannot prevent divergence at those centers. This is a
+statement about that allowance, not about the actual Green value.
+
+\subsection{A growing reference with paid comparison costs}
+Now choose \(P=P(X)=\lfloor L_X^2\rfloor\), retaining this one
+value throughout each window. Equations~\eqref{eq:euler-phase-derivatives}
+give \(D_1(P),D_2(P)=O(L_X^{3/4}(\log L_X)^2)=o(L_X)\).
+Thus the phase gates hold and \(D\le L_X\) eventually, uniformly
+in \(c\). The joint phase costs at most \(18/L_X\), for every
+positive regulator. More generally the same conclusion holds for
+\(2\le P\le L_X^\gamma\), with any fixed \(0<\gamma<8/3\).
+At the selected cutoff the prime tail is \(O(L_X^{-3})\) and the
+reference-log exterior is \(O(L_X^{3/4}X^{-4})\).
+
+The full correction and provider error remain small after normalization:
+\begin{equation}\label{eq:adaptive-provider-error}
+ \sup_{W_X}\left|\frac{V_\lambda-S_\lambda}{E_P}\right|
+ \le CX^{-1/4}\exp\{(8/3)L_X^{3/4}\}=X^{-1/4+o(1)}.
+\end{equation}
+Indeed \(|E_P|^{-1}\le\prod_{p\le P}(1+p^{-\sigma_c})
+\le\exp((8/3)P^{3/8})\). The complete adaptive inequality is
+\begin{align}\label{eq:adaptive-allowance}
+ J_\lambda(X)\le{}&P_{c,\lambda}^{(\le P)}-P_{c,\lambda}
+ +q_X\log b_\delta
+ +\frac{q_X}{2}\log\left(1+\frac{R_{P(X)}(X,c)}{q_X\delta^2}\right)
+ \nonumber\\
+ &+T_X+\frac{C_{\rm out}+18}{L_X}
+       +\frac{16}{3\pi\kappa_E}P^{3/8}X^{-4}.
+\end{align}
+Here \(q_X\log b_\delta\le\delta/4\). All comparison costs can
+vanish with a suitable regulator; the exact arithmetic residual in
+\eqref{eq:exact-relative-residual} is still unpaid. In particular
+\eqref{eq:adaptive-provider-error} estimates \(V-S_\lambda\),
+not \(V-S_P^{\rm ref}\). Neither the fixed-\(P\) mean law nor
+the fixed-\(P\) unboundedness theorem permits substituting this
+growing cutoff into its quantifiers.
+
+\subsection{The specified signed tangent still fails for fixed \(P\)}
+Retaining a signed cross term is not by itself enough. Fix finite
+\(P\), take \(c=1\), and set
+\[
+ w=V/E_P,\quad a=S_P^{\rm ref}/E_P,\quad h=|a|^2+\delta^2,
+ \qquad G_\delta=\tfrac12\log h-\tfrac12+\frac{|w|^2}{2h}.
+\]
+The inequality \(\log t\le t-1\) gives \(\log|w|\le G_\delta\),
+with the exact cross term retained in
+\(|w|^2=|a|^2+2\Re(\bar a(w-a))+|w-a|^2\).
+Let \(H=4+\delta^2\) and \(Z=\int_{W_X}|w|^2\,d\omega_X\).
+Since \(|a|\le2\), \(h\le H\) and \(h/H\ge|a|^2/4\).
+Integrating, and then using \(t-1\ge\log t\) at \(t=Z/(q_XH)\),
+gives the regulator-independent lower bound
+\begin{align}\label{eq:tangent-obstruction}
+ \int_{W_X}G_\delta\,d\omega_X
+ &\ge\frac{q_X}{2}\log H-\frac{q_X}{2}+\frac Z{2H}
+         +\int_{W_X}\log|a|\,d\omega_X-q_X\log2\nonumber\\
+ &\ge\frac{q_X}{2}\log(Z/q_X)
+         +\int_{W_X}\log|a|\,d\omega_X-q_X\log2.
+\end{align}
+The reference logarithm is \(O_P(1/L_X)\) by
+Lemma~\ref{lem:joint-phase}, including its zeros. For fixed \(P\),
+\(Z\ge M(X,1)/B_P^2\). Theorem~\ref{thm:fixed-residual-unbounded}
+therefore makes the integrated tangent unbounded at arbitrarily high
+centers, independently of \(\delta\). Restoring the bounded reference
+prime difference and the nonnegative tail allowances preserves this
+failure. The result concerns this fixed-reference tangent, with a
+regulator constant on each window. It does not cover a growing
+reference, spatially varying tangent heights, or all nonlinear signed
+estimates, and gives no lower bound for \(J\).

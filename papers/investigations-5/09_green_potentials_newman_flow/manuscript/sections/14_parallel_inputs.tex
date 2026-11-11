@@ -1,0 +1,234 @@
+\section{Parallel inputs and the scale of a single defect}
+\label{sec:parallel}
+
+The operator parent developed several other observables before the Green
+branch separated. Their transferable content explains both useful
+comparisons and the remaining gap. Localized correlations (OC) and
+collision constraints (OA) retain separate manuscripts, registers and
+research questions \cite{GNPCorrelations,GNPCollisions}. We do not treat
+progress in one observable as an estimate of another.
+
+\subsection{Smooth transverse moments and the Green scale}
+For a nonnegative compactly supported \(C^2\) function \(a\), set
+\(Q_a=\sum_j a(x_j)y_j^2\), counting every root and multiplicity.
+A conjugate pair at \(X\pm\ii d\), where \(a(X)=1\), contributes
+\(2d^2\). In reverse Newman time, at simple relevant roots the paired
+zero dynamics gives
+\begin{equation}\label{eq:smooth-kernel}
+ \frac{\dd Q_a}{\dd\tau}=2\sum_{j<k}'K_f(z_j,z_k),\qquad
+ K_f=\int_0^1\frac{2a(x_t)e^2-a''(x_t)y_t^2d_x^2}
+                         {d_x^2+e^2}\dd t,
+\end{equation}
+where \(f=a(x)y^2\), \(d_x=x_j-x_k\), \(e=y_j-y_k\) and
+\(z_t=z_k+t(z_j-z_k)\). To derive it, differentiate \(f\) along the
+root velocities and pair the two interaction rows. The mixed Hessian
+terms cancel. In \(|y|\le1\),
+\(|K_f|\le\max(2\|a\|_\infty,\|a''\|_\infty)\): no internal gap
+appears in this bound. The prime requires complete opposite-pair
+summation. The count \eqref{eq:count} makes its far velocity tail
+\(O(Z\log U/U)\) on \(|z|\le Z\) after cutoff \(U\ge2Z+2\).
+This follows by combining \((z-\zeta)^{-1}+(z+\zeta)^{-1}
+=2z/(z^2-\zeta^2)\) before partial summation.
+
+The parent proves, from the canonical unit counts and safe-line
+resolvent estimates, that a common \(A\ge1\) gives
+\begin{equation}\label{eq:smooth-modulus}
+ |Q_{X,R}(\lambda_2)-Q_{X,R}(\lambda_1)|
+ \le344A^2\|\chi\|_{(2)}R^{-2}\log^2(2+X)|\lambda_2-\lambda_1|,
+\end{equation}
+for \(X\ge10\), \(0<R\le1\), \(0\le\lambda_i\le1/2\), where
+\(a(x)=\chi((x-X)/R)\), \(0\le\chi\le1\),
+\(\chi\in C_c^2([-1,1])\), and
+\(\|\chi\|_{(2)}=\sum_{j=0}^2\|\chi^{(j)}\|_\infty\)
+\cite{SmoothLocalizationProof,SmoothLocalizationAssessment}.
+The proof groups the finitely many roots near the support and compares
+the exterior with \(H'/H(x+4\ii)\). The exterior difference has an
+absolute inverse-square tail; the unpaired harmonic sum is not bounded
+absolutely. Local heat-polynomial splitting isolates the finitely many
+multiple events in a fixed compact space-time box. Integrating the same
+derivative bound between them and using multiset continuity proves
+\eqref{eq:smooth-modulus} through collisions. This argument allows a
+derivative jump, but no atom in the first distributional derivative.
+
+In particular an off-axis pair at \(\lambda=0\) yields the conditional
+threshold lower bound
+\(\Lambda\ge2d^2/[344A^2\|\chi\|_{(2)}\log^2(2+X)]\), with
+\(R=1\) and \(\chi(0)=1\). At the threshold every zero is real,
+since a nonreal root would persist above it. Apply the modulus between
+zero and \(\Lambda\). This lower bound is not a contradiction and is
+not an upper bound on the lifetime of every possible defect.
+
+The Green observable has a different local scale. Differentiating its
+explicit kernel and substituting \(t=\sinh(au)\) gives, for \(0\le y\le1\),
+\[
+ \int_\R\partial_yG(u,y)\dd u
+ =\int_\R\frac{\cos(ay)}{t^2+\cos^2(ay)}\dd t=\pi.
+\]
+Since \(G(u,0)=0\),
+\begin{equation}\label{eq:Green-mass-depth}
+ \int_\R G(u,y)\dd u=\pi y.
+\end{equation}
+Thus a defect of depth \(d\) has a signal of order \(d/T\) in a
+normalized center average over length \(T\). At a newly born double
+pair the positive ordinate is of order \(\sqrt\tau\), so the Green
+signal has that scale, while the smooth moment has scale \(\tau\).
+Collision-stable Lipschitz bounds for the latter do not transfer to
+the former.
+
+\subsection{What uniform density and all-order averages do provide}
+The parent also obtains, for each fixed \(0<b<1/2\),
+\begin{equation}\label{eq:inherited-density}
+ N_\lambda(T,v):=\#\{j:T\le x_j\le2T,\ |y_j|>v\}
+ \le B_bT\log T\,\ee^{-bv\log T},
+\end{equation}
+uniformly for \(T\ge8\), \(0\le\lambda\le1/2\), \(0<v<1\)
+\cite{SmoothLocalizationProof,SmoothLocalizationAssessment}.
+Its imported time-zero input is the density estimate of
+Maples--Rodgers, with its constant uniform as the strip boundary
+approaches the critical line \cite[Theorem 2.4 and Section 4 (18)]{MaplesRodgers2015}.
+Its transport step uses a broad window \(a_T\) and an even convex
+\(g\) with \(g(0)=0\). In Newman time the favorable \(a_Tg''\)
+term of the chord kernel can be discarded, and conjugate exterior
+roots have a favorable vertical sign at horizontal separation at least
+two. The remaining cost is
+\(D_\chi\|g\|_\infty(\lambda_2-\lambda_1)\log^3T\), independent
+of \(g'\) and \(g''\). Take \(g(y)=\cosh(b\log T\,y)-1\), apply
+the time-zero tail by layer cake, and absorb
+\(T^{b-1}\log^2T\). Markov's inequality gives
+\eqref{eq:inherited-density}; small \(v\log T\) is paid by the unit count.
+
+Layer cake now gives the explicit consequence
+\[
+ \sum_{T\le x_j\le2T}|y_j|^{2p}
+ \le B_bT\log T\frac{(2p)!}{(b\log T)^{2p}},\qquad p\ge1.
+\]
+For local windows the root population is at most \(J\log T\), with
+a fixed canonical \(J\). Weighted H\"older, followed by integration
+over centers (each root occupies center measure at most \(R\int\chi\)),
+therefore yields
+\begin{equation}\label{eq:moment-all-orders}
+ \frac1T\int_T^{2T}Q_{X,R}^p\dd X
+ \le C_bR A_b^p\frac{(2p)!}{(\log T)^p}.
+\end{equation}
+A fixed enlargement of the dyadic band pays support endpoints. The
+constants can be chosen independent of \(p,\lambda,T,R\) in the
+declared ranges. This is a useful simultaneous all-order statement;
+the factorial cost must remain when choosing a growing order.
+
+None of these bounds removes the exceptional-center problem. For
+example \(p=1\) bounds a normalized smooth average at order
+\(1/\log T\), whereas one pair contributes only order \(d^2/T\).
+Similarly, applying \eqref{eq:inherited-density} to the first absolute
+transverse moment gives a Green average allowance of constant order,
+too large to resolve \eqref{eq:Green-mass-depth}'s single-defect scale.
+The inherited resolution assessment makes this comparison for its
+specific density-based allowance \cite{OGResolution}. It is a scoped
+failure of that allowance, not a lower bound for the actual Green value
+or an impossibility theorem for all statistics.
+
+\subsection{A field-based comparison: Gaussian Laguerre defects}
+Another parent observable is
+\[
+ A_n(\lambda,X,v)=\int_\R w_v(x-X)[(f_n')^2-f_nf_n'']\dd x,
+ \quad f_n=\partial_x^nH_\lambda,\quad
+ w_v(t)=\frac{\ee^{-t^2/(2v)}}{\sqrt{2\pi v}},\quad v>0.
+\]
+The complete source gives the exact signed form
+\begin{equation}\label{eq:Gaussian-source}
+ A_n=\frac18\int_{\R^2}(-pq)^n(p-q)^2W_\lambda(p)W_\lambda(q)
+             \ee^{\ii X(p+q)-v(p+q)^2/2}\dd p\dd q.
+\end{equation}
+Symmetrize \((f_n')^2-f_nf_n''\) under \(p\leftrightarrow q\) to get
+\((p-q)^2/8\); Gaussian Fourier integration gives the last factor.
+Complete source moments justify Fubini. Positivity of the theta factors
+does not remove the signed phase or the factor \((-pq)^n\).
+
+Direct differentiation gives
+\begin{equation}\label{eq:Gaussian-hierarchy}
+ \partial_\lambda A_n=-\partial_{XX}A_n+2A_{n+1},\qquad
+ \partial_v A_n=\tfrac12\partial_{XX}A_n.
+\end{equation}
+If \(M_j(L)=\int|u|^j\ee^{Lu^2}\Phi(u)\dd u\), then
+\(|pq|^n\le n!\epsilon^{-n}\ee^{\epsilon(p^2+q^2)/2}\) proves
+\( |A_n|\le n!\epsilon^{-n}M_0(L+\epsilon/2)M_2(L+\epsilon/2)/4\)
+for \(\lambda\le L\). Consequently the characteristic
+\(v=v_0+2h>0\) has the convergent expansion
+\[
+ A_n(\lambda_0+h,X,v_0+2h)
+ =\sum_{k\ge0}\frac{2^kh^k}{k!}A_{n+k}(\lambda_0,X,v_0).
+\]
+It can also be proved directly by expanding \(\ee^{-2hpq}\) in
+\eqref{eq:Gaussian-source}, with complete moment domination. The parent
+records explicit joint order, arithmetic and radial remainders and the
+assessment of those fixed statements \cite{GaussianLaguerreProof,LocalizedMetricsAssessment}.
+
+At a real event of finite multiplicity \(m\), let
+\(a_m=H_{\lambda_*}^{(m)}(x_*)\ne0\). Differentiating the local heat
+polynomial \(m-2\) times leaves
+\(g(t,y)=a_m(y^2/2+t)+\text{remainder}\), for
+\(g=\partial_x^{m-2}H_{\lambda_*-t}(x_*+y)\).
+Uniform real-line bounds on \(g_{yyy},g_{yyyy}\), supplied by the
+complete moments, bound the remainder by
+\(C(|y|^3/6+t|y|)+Dt^2/2\); the first two spatial derivative errors
+are bounded by \(C(y^2/2+t)\) and \(C|y|+Dt\).
+Substitution in \((g_y)^2-gg_{yy}\) and Gaussian integration with
+variance \(v=\kappa t\) therefore prove
+\begin{equation}\label{eq:Gaussian-event}
+ A_{m-2}(\lambda_*-t,x_*,\kappa t)
+ =a_m^2t(\kappa/2-1)+O_{a_m,C,D,\kappa}(t^{3/2}),\quad0<\kappa<2.
+\end{equation}
+The explicit remainder in the cited parent theorem pays the full
+Gaussian exterior. At each fixed event the expression is negative
+for sufficiently small \(t\). A uniform sign-prevention theorem would
+still need a source-specific estimate at every relevant order and
+shrinking variance, with event amplitude paid. The hierarchy is a
+diagnostic, not such a theorem.
+
+For \(n=0\), putting \(Z=\int w_vH_\lambda^2\) and
+\(E_w=\int|(H_\lambda\sqrt{w_v})'|^2\) also gives
+\(A_0=2E_w-Z/(2v)\), by integration by parts. Thus \(E_w\ge0\)
+is weaker than the signed threshold \(E_w\ge Z/(4v)\). This is the
+same distinction between regular positive energy and a signed
+zero-sensitive observable encountered in Section~\ref{sec:geometry}.
+
+\subsection{The concrete collision input maintained by OA}
+The real-pair gap law \eqref{eq:q-exact} has a finite-interval consumer
+in OA \cite[Section 4]{GNPCollisions}. On a predeclared box of times,
+centers and virtual real node pairs, acquire the deflated factor by
+divided differences with a uniform model floor and derivative errors.
+These must imply \(|g|\le A\), \(|g_x|\le K\), and an upper bound
+\(\beta\) for the averaged exterior curvature in \eqref{eq:q-exact}.
+The floor is required throughout that box, before selecting the unknown
+trajectory. Values only at the initial roots do not supply it.
+
+Here \(c=(r_++r_-)/2\) is the pair center and \(D\) bounds its half-gap.
+Suppose initially \(|c(0)-X|\le R_0<R\) and
+\(0<Q_-\le q(0)\le Q_+<4D^2\). If
+\begin{equation}\label{eq:pair-survival}
+ R_0+2A\Delta<R,\qquad Q_+\ee^{4K\Delta}<4D^2,\qquad
+ Q_--8\int_0^\Delta\ee^{4\beta t}\dd t>0,
+\end{equation}
+the specified pair stays real, distinct and simple for
+\(0\le t\le\Delta\). Indeed \(|c'|\le2A\), \(q'\le4Kq\), and
+\(q'\ge-8-4\beta q\) give confinement and the positive lower bound
+\[
+ q(t)\ge\ee^{-4\beta t}
+       \left(Q_--8\int_0^t\ee^{4\beta s}\dd s\right).
+\]
+At a proposed stopping time the root slopes remain at least
+\(\sqrt q\) times the factor floor, so the implicit function theorem
+continues the pair. This proves the closed-interval assertion, including
+the endpoint. A failed sufficient inequality leaves the actual pair
+undecided. For the quadratic heat model the gap condition is sharp;
+bounded exterior curvature by itself cannot prevent the terminal
+\(-8\) closing rate.
+
+The alternative contour interface extracts \(g=U'/U\) as
+\((2\pi\ii)^{-1}\int_\Gamma(H'/H)(\zeta)/(\zeta-z)\dd\zeta\): the
+cluster divisor's two residues cancel. Ratio errors on the boundary
+then pay errors in \(g\) and \(g_x\) by the contour length and buffer
+distance. This requires a complete cluster count and boundary margin,
+but no lower internal gap. The same analytical tools therefore serve
+Green acquisition and collision-force acquisition with different
+consumers. A time-zero Green value alone does not provide the
+space-time floor required in \eqref{eq:pair-survival}.
