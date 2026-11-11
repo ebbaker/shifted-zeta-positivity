@@ -1,5 +1,29 @@
 # Green/resolvent numerics
 
+**10 November 2026:** [Build10](10_TND_OG_POST_E08_MANUSCRIPT_BUILD_20261110.json)
+records the 26-page post-E08 manuscript build, source/artifact identities
+and production checks. It is an editorial record, not a numerical
+research result. Prepared for Edward Baker with OpenAI Codex assistance;
+actual model/effort unavailable in chat0010.
+
+**10 November 2026, E08:** [Record09](09_TND_OG_E08_DIRECTED_PILOT_20261110.jsonl)
+contains four exact-endpoint pilot records and the Stage A controls.
+Run [e08_literal_source_pilot.py](e08_literal_source_pilot.py) with
+Python and python-flint to replay. Use the stage-a-only flag for the
+synthetic tests alone. The recorded runtime used python-flint 0.9.0
+and FLINT 3.6.0. Redirect stdout to an external file for a replay.
+[Return27](../research-progress/handoffs/27_TND_OG_E08_LITERAL_SOURCE_PILOT_RETURN_20261110.json)
+binds the record and code hashes. Runtime and output ball widths may
+vary. Prepared for Edward Baker with OpenAI Codex LLM assistance,
+recorded gpt-6.1-sol / ultra.
+
+**10 November 2026, B05 r2:** [Record08](08_TND_OG_B05_R2_EXACT_DESIGN_RECORD_20261110.json)
+and [replay](check_b05_r2_design.py) check the conditional 67584-panel
+arithmetic, root/error allowances and elementary polynomial identities.
+They reuse E06's directed tail endpoints, make no theta evaluations and
+do not execute E08. Prepared for Edward Baker with OpenAI Codex assistance;
+actual model/effort unavailable. Run the script with Python's standard library.
+
 **10 November 2026, E07:** [Record07](07_TND_OG_E07_EXACT_ASSESSMENT_RECORD_20261110.json)
 records rational proof arithmetic for the simplex constants, conditional
 panel box and cusp bounds. The E06 directed radius is read from its

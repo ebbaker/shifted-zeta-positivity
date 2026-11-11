@@ -71,3 +71,17 @@ The new result is a local analytical composition of existing inputs.
 It does not certify a global Green assembly, numerical implementation,
 computational cost, favorable signed value or zero exclusion. Checks are
 by the same assistant that developed the composition.
+
+## Follow-up passage check — 10 November 2026
+
+Prepared for Edward Baker with OpenAI Codex LLM assistance, OG chat0010;
+actual model/effort unavailable in its registry. For the
+[session explanation](../brainstorm/notes/12_TND_OG_POST_E08_STATE_AND_PATHS_20261110.md#clarification-riemannsiegel-at-nonzero-newman-time),
+the same pinned Polymath v2 HTML was reopened at §4 (35)–(41),
+Theorem 1.3, region (5), and definitions (14)–(19). The check establishes
+the printed domains and conventions of the Gaussian evolution and
+positive-time Riemann–Siegel approximation, including the evolved finite
+sum weights. It does not import a positive-time estimate at negative
+time or extend a nonuniform error rate through zero. This adds to the
+earlier selected-passage record without changing its historical scope
+or canonical reference/PDF ownership; no full proof audit or new PDF.

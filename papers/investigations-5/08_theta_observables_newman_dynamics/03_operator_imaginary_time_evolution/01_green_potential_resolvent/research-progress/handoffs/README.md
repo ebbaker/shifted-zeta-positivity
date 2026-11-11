@@ -1,5 +1,19 @@
 # TND-OG handoffs
 
+**10 November 2026, E08 r1 complete:** [Return27](27_TND_OG_E08_LITERAL_SOURCE_PILOT_RETURN_20261110.json)
+records four directed passes, per-case costs and the frozen packet
+checks. [Continuation17](../../continuation-notes/17_TND_OG_E08_RESULTS_AND_MODEL_CHANGE_20261110.md)
+records the stop and conditional continuation. Prepared for Edward
+Baker with OpenAI Codex LLM assistance, recorded gpt-6.1-sol / ultra.
+
+**10 November 2026, B05 r2 complete:** [Return25](25_TND_OG_B05_R2_ACQUISITION_DESIGN_RETURN_20261110.json)
+records the conditional design. [Request26](26_TND_OG_E08_LITERAL_SOURCE_ACQUISITION_PILOT_REQUEST_20261110.md)
+and [Inputs26](26_TND_OG_E08_INPUTS_20261110.json) fix the E08 interface
+check and three-patch/direct-contour pilot, recommended GPT-6.1 Sol,
+ready and unactivated. [Continuation16](../../continuation-notes/16_TND_OG_B05_R2_RESULTS_AND_MODEL_CHANGE_20261110.md)
+is the current handoff. Prepared for Edward Baker with OpenAI Codex
+assistance; actual model/effort unavailable in chat0009.
+
 **10 November 2026, E07 complete:** [Return24](24_TND_OG_E07_ANALYTICAL_ASSESSMENT_RETURN_20261110.json)
 records acceptance of all eight claims, identity checks and the
 unacquired root/factor cost input. The issued Request23 and Inputs23

@@ -26,7 +26,11 @@ sources = [
      ["Tao2020LocalZeros", "Tao2016Harnack", "DLMFReciprocalGammaOC"]),
     (paper.parent / "references/manuscript_sources.bib",
      ["OGParent", "OGConditioning", "OGMollifier", "OGCorrection",
-      "OGAssessment", "OGBoundaryLog", "OGAssembly", "OGControls"]),
+      "OGAssessment", "OGBoundaryLog", "OGAssembly", "OGControls",
+      "OGAssemblyProof", "OGAssemblyAssessment", "OGResolution",
+      "OGSiblingReuse", "OGMidpoint", "OGDeflation",
+      "OGDeflationAssessment", "OGContourDesign", "OGPilot",
+      "OGPilotAssessment"]),
 ]
 selected = {}
 for path, wanted in sources:

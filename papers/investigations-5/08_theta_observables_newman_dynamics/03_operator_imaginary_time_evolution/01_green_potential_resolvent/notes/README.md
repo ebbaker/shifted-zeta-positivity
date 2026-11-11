@@ -1,5 +1,17 @@
 # Green/resolvent research notes
 
+**10 November 2026, E08:** [Note15](15_TND_OG_E08_LITERAL_SOURCE_ACQUISITION_RESULTS_20261110.md)
+records the four local passes, directed margins and measured costs.
+Prepared for Edward Baker with OpenAI Codex LLM assistance,
+recorded gpt-6.1-sol / ultra.
+
+**10 November 2026, B05 r2:** [Note14](14_TND_OG_B05_R2_CONTOUR_CONDITIONING_AND_COST_20261110.md)
+gives contour-acquired factor floors, logarithmic curvature, literal-source
+polynomial errors, a conditional 67584-panel design and full cost ledger.
+Canonical gates untested; proof-author checked only. Next is the bounded
+E08 pilot, GPT-6.1 Sol, ready and unactivated. Prepared for Edward Baker
+with OpenAI Codex assistance; actual model/effort unavailable in chat0009.
+
 **10 November 2026, E07:** [Note13](13_TND_OG_E07_ANALYTICAL_ASSESSMENT_CALCULATIONS_20261110.md)
 records the derivations, repeated-knot, occupied-cell and shifted-slab
 tests, and full acquisition ledger. The conditional proof required no

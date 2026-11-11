@@ -52,73 +52,166 @@ premise.
 
 This draft was prepared for Edward Baker with substantial OpenAI Codex
 LLM assistance in derivation, exposition, source checking and production.
-The current session's recorded history supplies no model or
-reasoning-effort configuration; none is inferred. The source/resolvent
-conditioning and short-mollifier transfer retain their internal
-assessment with the additive correction
-\cite{OGCorrection,OGAssessment}. The local boundary-log theorem
-retains proof-author checking \cite{OGBoundaryLog}.
+The source/resolvent conditioning and short-mollifier transfer retain
+their internal assessment with the additive correction
+\cite{OGCorrection,OGAssessment}. The local boundary-log theorem and
+complete assembly retain E05's internal acceptance with one additive
+evidence/control clarification
+\cite{OGBoundaryLog,OGAssemblyProof,OGAssemblyAssessment}.
 The parent Green representation and prime reduction retain their
 existing scoped internal assessments
 \cite{LocalizedMetricsAssessment,PrimeBaselineAssessment}.
 The external moment theorem is an explicit imported input.
 There has been no independent specialist human review or formal
-verification. Manuscript integration does not strengthen these
-evidence levels.
+verification. Manuscript integration does not strengthen these levels.
 
-No numerical experiment is needed for any proof in this draft.
-Future computations can support feasibility, error-budget evaluation
-or a declared finite certificate, but cannot supply evidence for an
-all-height RH-equivalent statement merely by checking finite cases.
+The analytical proofs do not rely on the later pilot. Its interval
+certificates have the finite scope stated below, not an all-height
+implication. Neither the original manuscript chat nor chat0010 for
+the 10 November editorial update records an actual model/effort.
+E07 and E08 record gpt-6.1-sol/ultra in their own exact-turn sources;
+those settings are not assigned to this editor.
 
-\subsection{Outstanding analytical tasks}
+\subsection{Completed signed-log acquisition}
 
-\paragraph{1. Complete the direct logarithmic assembly.}
-The existing frozen execution task \cite{OGAssembly} asks for a
-finite-source upper approximation to \(J_0(X)\).
-For integer \(R\ge1\), \(Q\ge2\), and
-\(\sup_{|x-X|\le R}|F-\widehat F|\le\delta\), its proposed form is
+The frozen execution task \cite{OGAssembly} is complete.
+Note06 proves the following assembly, accepted by E05 at the
+stated internal scope \cite{OGAssemblyProof,OGAssemblyAssessment}.
+For integers \(R\ge1\), \(Q\ge2\), and \(0<\delta\le1\), assume
+\(\sup_{|x-X|\le R}|F-\widehat F|\le\delta\), and define
 \begin{align}\label{eq:proposed-U}
  U_{R,Q,\delta}(X)
  ={}&\int_{X-R}^{X+R}K(x-X)\log(|\widehat F(x)|+\delta)\dd x
  \nonumber\\
  &+\mathcal T(X,R)-P_Q(X)+\beta_Q+G(X,1).
 \end{align}
-Here \(\widehat F=D\widehat H\) uses the unchanged source,
-and \(\mathcal T\) must bound the absolute omitted logarithmic tail
-of the exact \(F\). The finite compact error sum proposed from
-\eqref{eq:canonical-envelope} is
+Here \(\widehat F=D\widehat H\) approximates the unchanged source,
+and \(\mathcal T\) bounds the absolute omitted logarithmic tail
+of the exact \(F\). The finite compact error sum is
 \[
  \mathcal E_{X,R}(\delta)=
  \sum_{k=0}^{R-1}
  \frac{\mathcal E_{X+k+1/2}(\delta)+
        \mathcal E_{X-k-1/2}(\delta)}{16\cosh(ak)}.
 \]
-The outstanding complete statement is
+The completed acquisition inequality is
 \begin{equation}\label{eq:proposed-assembly}
  0\le U_{R,Q,\delta}(X)-J_0(X)
  \le\mathcal E_{X,R}(\delta)+2\mathcal T(X,R)+2\beta_Q.
 \end{equation}
-Equations~\eqref{eq:proposed-U}--\eqref{eq:proposed-assembly}
-are a specified \emph{target}, not a theorem proved by this manuscript.
-The assembly must derive the full explicit log tail, verify the
-compact multiplier/source payment, and justify the ordered finite
-choices of \(R,Q,\delta,N_{\rm src},V\).
+For an explicit tail, retain \(B,\kappa,c_0\) from
+Section~\ref{sec:boundary-log} and put
+\[
+ L_0=\log(26/c_0),\quad N_0=2+L_0/\kappa,\quad
+ C_{\log}=\log26+2B\ee^{51\kappa}N_0^2,\quad q=\ee^{-a}.
+\]
+Then one may take
+\begin{equation}\label{eq:assembled-log-tail}
+ \mathcal T(X,R)=\frac{C_{\log}}4\ee^{-aR}
+ [1+\log(|X|+R+2)]^2\frac{1+q}{(1-q)^3}.
+\end{equation}
+Indeed \eqref{eq:canonical-absolute-log} is at most
+\(C_{\log}[1+\log(1+|v|)]^2\) on \(I_v\).
+The two omitted half-lines, covered by unit intervals, have weights
+at most \(\ee^{-ak}/8\); summing
+\(\sum_{j\ge0}q^j(1+j)^2=(1+q)/(1-q)^3\) proves
+\eqref{eq:assembled-log-tail}. The compact nonnegative log error
+is bounded interval by interval by
+\eqref{eq:canonical-envelope}. If \(L_{\rm comp},L_{\rm tail}\)
+denote the exact compact and tail log integrals and \(\mathcal I\)
+the compact approximant integral in \eqref{eq:proposed-U}, subtraction gives
+\[
+ U-J_0=(\mathcal I-L_{\rm comp})+
+       (\mathcal T-L_{\rm tail})+(P-P_Q+\beta_Q).
+\]
+Each summand is nonnegative and bounded respectively by
+\(\mathcal E,2\mathcal T,2\beta_Q\), proving
+\eqref{eq:proposed-assembly}. First choose \(R,Q\), then \(\delta\),
+then the finite literal-source cutoffs with the compact multiplier
+payment in Section~\ref{sec:acquisition}. This attains any positive
+error at each fixed tuple; the full cutoff formulas and evaluation
+existence proof are in Note06 \cite{OGAssemblyProof}.
 Both factors of two are intentional: replacing a signed tail by an
-upper allowance can cost twice its absolute bound, and the same is
-true for prime truncation. The actual signed compact integral must
-be retained.
+upper allowance can cost twice its absolute bound, as can prime
+truncation. The signed compact integral is retained.
 
-\paragraph{2. Assess the assembled claim and its local input.}
-A claim-level assessment should recheck the line-sublevel theorem,
-its canonical application, all source and logarithmic tails,
-the single plus pole correction, and evaluation-error propagation.
-The local result currently has proof-author checking; the complete
-assembly has not yet been executed. Changing the model alone would
-not supply specialist independence.
+\subsection{Deflation, conditioning and the finite pilot}
 
-\paragraph{3. Acquire a favorable canonical value.}
-Even after \eqref{eq:proposed-assembly}, one needs a directed evaluated
+The E06 feasibility screen tested one sufficient uniform-midpoint
+recipe at \(X=30,d=1/2,r=1\), with a cap of \(10^6\) panels.
+Its selected \(\delta=2^{-4533}\) and conservative derivative
+allowance demanded a count whose base-two logarithm exceeds 5252.
+This interval-certified failure concerns that recipe, not the actual
+integration error or every algorithm \cite{OGMidpoint}.
+
+The later B05 method separates certified root logarithms from a
+zero-free regular factor, and integrates the singular terms with
+their explicit primitives \cite{OGDeflation,OGDeflationAssessment}.
+For a disk of radius \(A\), suppose all \(n\) roots, with multiplicity,
+are certified inside radius \(s<A\), and the boundary obeys
+\(0<m\le|H_0|\le M\). Writing
+\[
+ V(z)=H_0(z)\Big/\prod_{j=1}^n(z-z_j),
+\]
+the maximum principle for \(V\) and \(1/V\) gives
+\begin{equation}\label{eq:deflated-floor}
+ \frac{m}{(A+s)^n}\le |V(z)|\le\frac{M}{(A-s)^n}.
+\end{equation}
+Divided differences at certified approximate roots acquire this factor
+without division by root separations. Root-location errors, derivative
+errors and the relative factor error are still paid. This is a
+conditional acquisition method, not a sign theorem.
+
+The B05 r2 design fixes \(X=30,R=66,Q=32\), 264 patches on
+\([-36,96]\), degree-64 literal-source polynomials and 256
+product-integration panels per patch \cite{OGContourDesign}.
+If every stated contour, count, factor and logarithmic-range gate
+passes, and the finite numerical error is paid, its signed central
+approximation \(S_c\) has
+\begin{align}\label{eq:deflated-ledger}
+ \mathcal R&=\mathcal T+\beta_Q+E_{\rm fac}+E_{\rm roots}
+                     +E_{\rm quad}+e_{\rm num},\nonumber\\
+ J_{\rm up}&=S_c+\mathcal R,\qquad
+ 0\le J_{\rm up}-J_0(30)\le2\mathcal R<17/1000.
+\end{align}
+The panel count is 67584. The number \(17/1000\) bounds
+\emph{acquisition error}; it is not an upper value for \(J_0(30)\).
+The r2 design retains proof-author checking, while E07 internally
+accepted the preceding r1 deflation and scoped cell comparison.
+
+E08 tested a direct contour and three patches using the same literal
+theta source \cite{OGPilot,OGPilotAssessment}. All four cases passed
+at 128 bits. The direct certificate has winding zero and a nonvanishing
+boundary on \(D=[29,31]+\ii[1/2,1]\), excluding zeros on its closure.
+Patch counts were \(1,0,1\); both occupied clusters had radius
+\(2^{-24}\). Conjugation and count one certify their roots as real
+and simple. The measured total across these four cases was about
+5.53 seconds, dominated by source-coefficient acquisition.
+The direct case took about 0.59 seconds; its contour took about
+0.00022 seconds after acquisition. The different centers and source
+refinements preclude reading these figures as a matched full-method
+speed comparison.
+
+This is calibration inside established coverage. The other 261
+patches, complete signed product integration and its arithmetic
+remain unexecuted. Three patch timings do not measure full-cover
+cost. A later Green value here would be an observable calibration;
+the direct certificate already excludes \(D\).
+
+A separate existing reuse result is
+\begin{equation}\label{eq:census-reuse}
+ 0\le J_0(1500)<291/65536+2^{-157}<1/200,
+\end{equation}
+proved in Note10 conditional on OC's complete thin zero-location
+census at its inherited winding-certification scope
+\cite{OGSiblingReuse}. That input already gives stronger local
+zero-location information; \eqref{eq:census-reuse} neither adds
+exclusion coverage nor evaluates the signed boundary logarithm.
+
+\subsection{Outstanding research decisions}
+
+\paragraph{1. Acquire a consequential signed upper value.}
+Beyond \eqref{eq:proposed-assembly}, one needs a directed evaluated
 upper value satisfying
 \[
  U\le\overline U\le U+\eta_{\rm eval},\qquad
@@ -129,22 +222,41 @@ the same strict upper comparison directly.
 An approximation error tending to zero does not force this value
 inequality. The missing information is a quantitative bound on the
 signed critical-line logarithmic average relative to its exact prime
-baseline, including the exceptional centers relevant to a proposed
-zero.
+baseline, including the exceptional centers relevant to a proposed zero.
 
-\paragraph{4. Resolve uniformity and practical precision.}
-The present local exponent decreases with height; the compact
+\paragraph{2. Resolve uniformity and practical precision.}
+The local exponent decreases with height; the compact
 source multiplier in \eqref{eq:multiplier} is deliberately coarse.
-One must separate finite acquisition for each prescribed tuple
-from common estimates as \(|X|\to\infty\) or \(d\downarrow0\).
+Finite acquisition for each prescribed tuple does not provide common
+estimates as \(|X|\to\infty\) or \(d\downarrow0\).
 Sharpening constants may improve a practical diagnostic but does not
-establish canonical smallness. Any new resolvent or contour route
-must pay its denominators, residues, harmonic data and tails.
+establish canonical smallness. Any resolvent or contour route must
+pay its denominators, residues, harmonic data and tails.
 
-\paragraph{5. Use numerical evidence only for a declared finite question.}
-After the analytical assembly and a finite error budget are fixed,
-a bounded diagnostic may measure cost and certified accuracy against
-a comparable direct method. It should have specified cases and a
-stopping rule. No pilot, all-height extrapolation, favorable canonical
-margin or new numerical claim is included in the present draft.
+\paragraph{3. Choose a use before extending calibration.}
+A full \(J_0(30)\) run needs a named use for the signed observable
+and a complete acquisition/evaluation budget, credited against the
+existing direct certificate. A new exclusion target must specify
+height, depth and completeness and compare with direct methods on
+the same information. The B05 theorem for independent rectangular
+Green-cell maxima shows that a strict pass already implies direct
+exclusion from the identical complete cell data
+\cite{OGDeflation,OGDeflationAssessment}; it does not exclude coupled
+signed estimates, warm reuse or other information classes.
+
+For analytical comparison, Note09 gives
+\(\int_{\R}G(u,y)\dd u=\pi y\): a single defect of depth \(d\)
+has signal of order \(d/T\) in a normalized average over length \(T\).
+Its particular inherited density-based allowance fails to resolve
+that signal \cite{OGResolution}. Better acquisition alone cannot
+repair that allowance. Local canonical cancellation or another
+quantitative estimate is still required.
+
+Sibling correlation and collision methods remain distinct consumers.
+A finite smooth pair statistic is not a bound on this signed
+logarithmic observable. The collision branch's deflated force law
+requires a factor floor and an upper force envelope throughout a
+time interval; a time-zero Green value does not provide them
+\cite{OGSiblingReuse}. Neither the pilot nor manuscript reconciliation
+selects a further numerical campaign.
 

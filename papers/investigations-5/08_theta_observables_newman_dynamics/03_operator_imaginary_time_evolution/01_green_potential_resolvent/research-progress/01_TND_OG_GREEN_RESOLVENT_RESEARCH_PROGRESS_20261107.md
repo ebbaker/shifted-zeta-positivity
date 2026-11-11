@@ -1,6 +1,103 @@
 # TND-OG Green/resolvent progress register
 
-## E07 r1 assessment complete — 10 November 2026
+## B07 post-E08 discussion — 10 November 2026
+
+**COMPLETE at discussion/editorial scope; B — recommended GPT-6 Astra.**
+[Session12](../brainstorm/notes/12_TND_OG_POST_E08_STATE_AND_PATHS_20261110.md)
+ranks consequential signed estimation first, conditional OA reconsideration
+second and full J(30) calibration third. It names the missing arithmetic
+main-term estimate and records one proposed follow-through:
+**B07 r2 — B / GPT-6 Astra**, test value content in the existing time-zero
+HDA/Riemann–Siegel boundary approximant. Proposed only, unactivated;
+no execution packet or numerical campaign is issued.
+The [26-page manuscript](../manuscript/README.md) is reconciled through E08,
+with [editorial Review14](../reviews/14_TND_OG_POST_E08_MANUSCRIPT_RECONCILIATION_CHECK_20261110.md).
+No inherited evidence is promoted and no new signed estimate is claimed.
+
+Prepared for Edward Baker with OpenAI Codex LLM assistance. Current
+chat0010 records no model/effort configuration; neither is inferred.
+Exact chat: `01a1c751-8acc-7f53-ac17-6811adbb2951`, registered in this
+branch. Earlier dated next-task entries below are historical.
+
+## E08 r1 pilot complete — 10 November 2026
+
+**Stage A accepted without mathematical correction. Stage B: four
+interval-certified pilot passes.** The same-source direct contour
+certifies zero winding and nonvanishing boundary on
+\(D=[29,31]+i[1/2,1]\). Patches 128, 132 and 263 pass at \(A=1/2\)
+with counts \(1,0,1\) and all floor, log-range and evaluation gates
+paid. The two occupied disks use \(2^{-24}\) radii. All cases stop
+at 128 bits. See [Note15](../notes/15_TND_OG_E08_LITERAL_SOURCE_ACQUISITION_RESULTS_20261110.md),
+[Review13](../reviews/13_TND_OG_E08_INTERFACE_AND_CERTIFICATE_CHECK_20261110.md),
+[Record09](../numerics/09_TND_OG_E08_DIRECTED_PILOT_20261110.jsonl)
+and [Return27](handoffs/27_TND_OG_E08_LITERAL_SOURCE_PILOT_RETURN_20261110.json).
+Cold and warm work is recorded separately. This is calibration inside
+known coverage, with no full signed value or full-cover cost estimate.
+
+**Stop at the pilot.** No E08 failure triggers B05 r3. If the author
+chooses a separately priced full-cover observable run, recommend
+**GPT-6.1 Sol** for fixed execution. Reserve **GPT-6 Astra** for a
+specific design issue requiring a new method. [Continuation17](../continuation-notes/17_TND_OG_E08_RESULTS_AND_MODEL_CHANGE_20261110.md)
+gives the prerequisites. Prepared for Edward Baker with OpenAI Codex
+LLM assistance. Exact-turn local record: gpt-6.1-sol / ultra.
+
+## B05 r2 complete — 10 November 2026
+
+**COMPLETE — conditional contour-floor and literal-source acquisition
+design; canonical gates untested.** [Note14](../notes/14_TND_OG_B05_R2_CONTOUR_CONDITIONING_AND_COST_20261110.md)
+derives the reciprocal-factor floor m/(A+s)^n, logarithmic-range
+curvature, degree-64 source-polynomial error payments and explicit cost
+terms. The sufficient 264-patch design uses 67584 panels; a complete
+pass would give J_up-J<17/1000. Neither the gates nor a signed value
+were evaluated. [Review12](../reviews/12_TND_OG_B05_R2_PROOF_AUTHOR_CHECK_20261110.md)
+is same-assistant proof-author checking only; [Record08](../numerics/08_TND_OG_B05_R2_EXACT_DESIGN_RECORD_20261110.json)
+is exact design arithmetic, not a theta certificate.
+
+**Next at B05 r2 close: [E] TND-OG-E08 — GPT-6.1 Sol**, at the author's selected effort,
+ready and unactivated. [Request26](handoffs/26_TND_OG_E08_LITERAL_SOURCE_ACQUISITION_PILOT_REQUEST_20261110.md)
+and [Inputs26](handoffs/26_TND_OG_E08_INPUTS_20261110.json) fix an interface
+check, three patch acquisitions and a same-source direct contour on D.
+No full-cover integration is issued. A direct pass already excludes
+this known-region D; subsequent Green work would be calibration/reuse.
+An unresolved structural or measured conditioning failure can return
+to conditional B05 r3. [Return25](handoffs/25_TND_OG_B05_R2_ACQUISITION_DESIGN_RETURN_20261110.json)
+and [Continuation16](../continuation-notes/16_TND_OG_B05_R2_RESULTS_AND_MODEL_CHANGE_20261110.md)
+record the result and model-change guidance.
+
+Prepared for Edward Baker with OpenAI Codex LLM assistance. Current
+chat0009 has no recorded model/effort configuration. No field run,
+independent review, new exclusion coverage, manuscript milestone or
+investigation closure occurred. Earlier dated next-task entries below
+are historical checkpoints; this file remains the sole live register.
+
+## Historical B05 r2 activation — 10 November 2026
+
+**ACTIVE; B — recommend GPT-6 Astra**, at the author's selected effort.
+The author explicitly requests continuation of B05 r2. This authorizes
+developing a concrete acquisition proposal here; it does not mean the
+author supplied or selected a particular numerical design. Prepared for
+Edward Baker with OpenAI Codex LLM assistance; current chat0009's source
+records no model/effort configuration, so neither is inferred.
+
+**Finite contract before research:** develop one literal-source local
+disk/contour acquisition design for the unchanged time-zero deflated-log
+consumer at X=30, R=66 and D=[29,31] x [1/2,1]. Specify actual cluster
+counts and radii, a certified regular-factor floor, derivative and finite
+arithmetic payments, and complete symbolic acquisition cost against direct
+exclusion with identical shared inputs. Examine a quantitative analytic
+floor from zero-free boundaries, not an assumed minimum. Complete with
+one bounded successor contract or a precisely scoped unpaid inequality.
+No field execution, provider substitution, broader target, manuscript
+integration or successor activation in this B task.
+
+Read [result summaries](../../../../../../result-summaries/README.md),
+[controls12](../../../../../../result-summaries/12_collision_controls_and_screening.md),
+and [avoid](../../../../../../avoid/README.md), especially patterns 01,
+02, 07 and 11. Chat “Continue TND-OG-B05 r2”, exact thread
+`01a1c62e-7c90-7eb1-8260-879c249f4c2b`, is registered as chat0009.
+Use its exact-turn deferred final capture; no active native hook is claimed.
+
+## Historical E07 r1 checkpoint — 10 November 2026
 
 **Accepted, all eight claims, without mathematical correction.**
 [Review11](../reviews/11_TND_OG_E07_ANALYTICAL_ASSESSMENT_20261110.md)
@@ -139,7 +236,7 @@ after the research records are verified; check its completion next turn.
 
 7 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex assistance. Explicit worker dispatch selected **gpt-6.1-sol / ultra**; this is the supplied actual selection, not independent backend verification. Root model/effort unavailable.
 
-**This file is the sole current live status register for the TND-OG task family.** Re-read it before changes and preserve other chats' updates. Parent [Register02](../../research-progress/02_SMOOTH_LOCALIZATION_RESEARCH_PROGRESS_20261106.md) owns TND-O/shared tasks and links here; it must not duplicate these live statuses. The sibling owns TND-OC. The [plan](../research-plan/01_TND_OG_GREEN_RESOLVENT_RESEARCH_PLAN_20261107.md) defines task scope and limits; [Continuation12](../continuation-notes/12_TND_OG_AFTER_SIBLING_REVIEW_AND_MODEL_CHANGE_20261110.md) retains the sibling-review handoff; [Continuation13](../continuation-notes/13_TND_OG_E06_RESULTS_AND_MODEL_CHANGE_20261110.md) retains the E06 handoff; [Continuation14](../continuation-notes/14_TND_OG_B05_RESULTS_AND_MODEL_CHANGE_20261110.md) retains the B05 handoff; [Continuation15](../continuation-notes/15_TND_OG_E07_RESULTS_AND_MODEL_CHANGE_20261110.md) supplies the current model-change guidance; [Continuation11](../continuation-notes/11_TND_OG_B04_RESULTS_AND_MODEL_CHANGE_20261108.md) retains the B04 result and original E06 routing; [Continuation10](../continuation-notes/10_TND_OG_E03_RECONCILIATION_AND_MODEL_CHANGE_20261108.md) records the preceding reconciliation; [Continuation09](../continuation-notes/09_TND_OG_E05_RESULTS_AND_MODEL_CHANGE_20261108.md) supplies the post-E05 bounded B04 specification; Continuation08 is the E05 activation source, and Continuation07 the earlier E03 entry point. [Continuation06](../continuation-notes/06_TND_OG_E04_MANUSCRIPT_AND_OUTSTANDING_TASKS_20261108.md) records the manuscript milestone; [Continuation05](../continuation-notes/05_TND_OG_B02_RESULTS_AND_MODEL_CHANGE_20261108.md) retains the original E03 prompt. None is another register. Preparing Continuation07 does not activate E03 or alter Request09. Research update below: **gpt-6-astra / max**, actual session metadata, 7 November 2026.
+**This file is the sole current live status register for the TND-OG task family.** Re-read it before changes and preserve other chats' updates. Parent [Register02](../../research-progress/02_SMOOTH_LOCALIZATION_RESEARCH_PROGRESS_20261106.md) owns TND-O/shared tasks and links here; it must not duplicate these live statuses. The sibling owns TND-OC. The [plan](../research-plan/01_TND_OG_GREEN_RESOLVENT_RESEARCH_PLAN_20261107.md) defines task scope and limits; [Continuation12](../continuation-notes/12_TND_OG_AFTER_SIBLING_REVIEW_AND_MODEL_CHANGE_20261110.md) retains the sibling-review handoff; [Continuation13](../continuation-notes/13_TND_OG_E06_RESULTS_AND_MODEL_CHANGE_20261110.md) retains the E06 handoff; [Continuation14](../continuation-notes/14_TND_OG_B05_RESULTS_AND_MODEL_CHANGE_20261110.md) retains the B05 handoff; [Continuation15](../continuation-notes/15_TND_OG_E07_RESULTS_AND_MODEL_CHANGE_20261110.md) retains the E07 handoff; [Continuation16](../continuation-notes/16_TND_OG_B05_R2_RESULTS_AND_MODEL_CHANGE_20261110.md) supplies the current model-change guidance; [Continuation11](../continuation-notes/11_TND_OG_B04_RESULTS_AND_MODEL_CHANGE_20261108.md) retains the B04 result and original E06 routing; [Continuation10](../continuation-notes/10_TND_OG_E03_RECONCILIATION_AND_MODEL_CHANGE_20261108.md) records the preceding reconciliation; [Continuation09](../continuation-notes/09_TND_OG_E05_RESULTS_AND_MODEL_CHANGE_20261108.md) supplies the post-E05 bounded B04 specification; Continuation08 is the E05 activation source, and Continuation07 the earlier E03 entry point. [Continuation06](../continuation-notes/06_TND_OG_E04_MANUSCRIPT_AND_OUTSTANDING_TASKS_20261108.md) records the manuscript milestone; [Continuation05](../continuation-notes/05_TND_OG_B02_RESULTS_AND_MODEL_CHANGE_20261108.md) retains the original E03 prompt. None is another register. Preparing Continuation07 does not activate E03 or alter Request09. Research update below: **gpt-6-astra / max**, actual session metadata, 7 November 2026.
 
 | Task | Type / recommendation and reason | Current status | Exact dependency / expected output |
 | --- | --- | --- | --- |
@@ -153,8 +250,9 @@ after the research records are verified; check its completion next turn.
 | TND-OG-E05 | E; Sol6.1 — fixed eight-claim assessment | **COMPLETE r1 — accepted with one additive evidence/control clarification** | [Review06](../reviews/06_TND_OG_E05_CLAIM_LEVEL_ASSESSMENT_20261108.md), [Note07](../notes/07_TND_OG_E05_ASSESSMENT_CALCULATIONS_20261108.md), [return14](handoffs/14_TND_OG_E05_ASSESSMENT_RETURN_20261108.json). All eight claims accepted; E03 theorem/constants unchanged. E02 evidence limited to OG Note01/02; OC keeps its original self-check level. No B02 r2 trigger or favorable value. Internal shared-premise assessment only. |
 | TND-OG-B04 | B; Astra — select consequential canonical signed-value information | **COMPLETE r1 — scoped density-allowance comparison and fixed feasibility question** | [Note09](../notes/09_TND_OG_B04_GREEN_MASS_RESOLUTION_AND_VALUE_DECISION_20261108.md), [Decision09](../brainstorm/notes/09_TND_OG_B04_VALUE_ROUTE_DECISION_20261108.md), [author check07](../reviews/07_TND_OG_B04_VALUE_RESOLUTION_AUTHOR_CHECK_20261108.md), [return17](handoffs/17_TND_OG_B04_VALUE_ROUTE_RETURN_20261108.json). Single-zero total Green mass pi*d; the chosen density-based average allowance exceeds the centered one-zero signal by at least 2D_c*T/d. No favorable value; E06 selected. |
 | TND-OG-E06 | E; Sol6.1 — execute a fixed scalar feasibility screen | **COMPLETE r1 — recipe exceeds cap** | [Request18](handoffs/18_TND_OG_E06_SINGLE_TUPLE_FEASIBILITY_REQUEST_20261108.md), [return21](handoffs/21_TND_OG_E06_FEASIBILITY_RETURN_20261110.json). F1–F4 pass at 128 bits. F5–F6 log2 count argument exceeds 5252.8622 versus cap log2 below 20. Kernel term alone also exceeds the cap at the selected cutoffs. |
-| TND-OG-B05 | B; Astra — acquisition design if reopened | **COMPLETE r1; r2 conditional and unactivated** | [Note12](../notes/12_TND_OG_B05_DEFLATED_LOG_AND_CELL_RANGE_DECISION_20261110.md), [Return22](handoffs/22_TND_OG_B05_METHOD_COMPARISON_RETURN_20261110.json). Conditional product error and scoped cell/direct dominance accepted by E07. Reopen r2 only with a concrete author-selected literal-source conditioning and matched-cost proposal. |
+| TND-OG-B05 | B; Astra — design literal-source root/factor acquisition and matched cost | **COMPLETE r1 and r2; r3 conditional** | [Note14](../notes/14_TND_OG_B05_R2_CONTOUR_CONDITIONING_AND_COST_20261110.md), [Return25](handoffs/25_TND_OG_B05_R2_ACQUISITION_DESIGN_RETURN_20261110.json). Explicit conditional floor, curvature and source-cost design. E08 passes, so r3 remains conditional and unactivated. Reopen only for a named structural defect or later failed gate needing a changed method. |
 | TND-OG-E07 | E; GPT-6.1 Sol — assess the specified conditional proof and comparison | **COMPLETE r1 — accepted, all eight claims** | [Review11](../reviews/11_TND_OG_E07_ANALYTICAL_ASSESSMENT_20261110.md), [Return24](handoffs/24_TND_OG_E07_ANALYTICAL_ASSESSMENT_RETURN_20261110.json). Internal assessment with inherited premises and no mathematical correction. Canonical root/factor/cost data unpaid. |
+| TND-OG-E08 | E; GPT-6.1 Sol — execute the fixed analytical and acquisition pilot | **COMPLETE r1 — four certified pilot passes** | [Return27](handoffs/27_TND_OG_E08_LITERAL_SOURCE_PILOT_RETURN_20261110.json), [Note15](../notes/15_TND_OG_E08_LITERAL_SOURCE_ACQUISITION_RESULTS_20261110.md). Direct winding zero on D; three patches pass at A=1/2 with counts 1,0,1. All at 128 bits. Full cover and Green value unacquired. |
 | TND-OG-B06 | B; Astra — compare sibling acquisition and collision inputs | **COMPLETE — bounded review and finite consequence** | [Note10](../notes/10_TND_OG_B06_SIBLING_RESULTS_AND_GREEN_CENSUS_TRANSFER_20261110.md), [Review08](../reviews/08_TND_OG_B06_CROSS_BRANCH_CONTINUATION_REVIEW_20261110.md), [return20](handoffs/20_TND_OG_B06_SIBLING_REVIEW_RETURN_20261110.json). Inherited OC census gives a finite Green bound below 1/200 at X=1500, with no new coverage. OA force/conditioning inputs remain unpaid. E06 was unchanged at B06 close; [Continuation12](../continuation-notes/12_TND_OG_AFTER_SIBLING_REVIEW_AND_MODEL_CHANGE_20261110.md) records the earlier handoff. |
 
 ## Cross-branch advisory and filing correction — 8 November 2026

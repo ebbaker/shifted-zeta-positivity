@@ -1,5 +1,15 @@
 # Status files, READMEs and manuscripts that lag the findings of audits
 
+**10 November 2026 — Green acquisition and value separated.** For Edward
+Baker with OpenAI Codex assistance; chat0010 records no model/effort.
+The manuscript still described E03 assembly as pending after E03/E05
+completion. [Editorial Review14](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/01_green_potential_resolvent/reviews/14_TND_OG_POST_E08_MANUSCRIPT_RECONCILIATION_CHECK_20261110.md)
+states: “The approximation theorem is complete; the consequential
+signed-value estimate remains open.” The updated draft also distinguishes
+E08's four local passes from full-cover integration and acquisition error
+from the value of J. Keep the original build/history records, reconcile
+current status, and preserve each source's actual assessment level.
+
 15 October 2026. Claude Fable 5.1 (`claude-fable-5-1`), Claude Cowork.
 
 ## The pattern

@@ -1,6 +1,40 @@
 # Green potential and logarithmic resolvent: research overview
 
-**Current checkpoint, 10 November 2026 — E07 r1 complete.**
+**Current checkpoint, 10 November 2026 — E08 r1 complete.**
+[Note15](../notes/15_TND_OG_E08_LITERAL_SOURCE_ACQUISITION_RESULTS_20261110.md)
+records four interval-certified passes, including the known-region
+direct contour and three local patch certificates. Acquisition of
+the signed value and the remaining 261 patches was outside the
+pilot. [Continuation17](../continuation-notes/17_TND_OG_E08_RESULTS_AND_MODEL_CHANGE_20261110.md)
+sets the re-entry conditions. See the
+[result index](../../../../../../result-summaries/README.md),
+[heat/Green cluster11](../../../../../../result-summaries/11_newman_heat_flow_reductions_and_certificates.md)
+and [avoid index](../../../../../../avoid/README.md), especially
+[matched known-region cost11](../../../../../../avoid/11_certifying_the_known_and_tests_that_cannot_fail.md).
+Prepared for Edward Baker with OpenAI Codex LLM assistance,
+recorded gpt-6.1-sol / ultra.
+
+**Current checkpoint, 10 November 2026 — B05 r2 design complete.**
+[Note14](../notes/14_TND_OG_B05_R2_CONTOUR_CONDITIONING_AND_COST_20261110.md)
+derives acquired-contour factor floors and logarithmic curvature, with
+an explicit literal-source polynomial and full cost ledger. A complete
+pass of its still-unmeasured gates would permit 67584 panels and
+J_up-J<17/1000. This is acquisition accuracy, not a small value of J.
+The fixed next task is [E08's three-patch/direct-contour pilot](../research-progress/handoffs/26_TND_OG_E08_LITERAL_SOURCE_ACQUISITION_PILOT_REQUEST_20261110.md),
+recommended GPT-6.1 Sol, ready and unactivated. See
+[Continuation16](../continuation-notes/16_TND_OG_B05_R2_RESULTS_AND_MODEL_CHANGE_20261110.md)
+and the [sole register](../research-progress/01_TND_OG_GREEN_RESOLVENT_RESEARCH_PROGRESS_20261107.md).
+Prepared for Edward Baker with OpenAI Codex LLM assistance; actual
+model/effort unavailable. No field evaluation, signed-value gain or
+new coverage. Read the [result index](../../../../../../result-summaries/README.md),
+[cluster11](../../../../../../result-summaries/11_newman_heat_flow_reductions_and_certificates.md),
+[controls12](../../../../../../result-summaries/12_collision_controls_and_screening.md)
+and [avoid index](../../../../../../avoid/README.md), especially
+[classification01](../../../../../../avoid/01_restating_the_target.md),
+[premise screen02](../../../../../../avoid/02_shape_only_arguments_and_the_controls.md)
+and [matched cost11](../../../../../../avoid/11_certifying_the_known_and_tests_that_cannot_fail.md).
+
+**Earlier checkpoint, 10 November 2026 — E07 r1 complete.**
 [Review11](../reviews/11_TND_OG_E07_ANALYTICAL_ASSESSMENT_20261110.md)
 accepts Note12's eight conditional and scoped claims without correction.
 Certified cluster data, regular-factor floors and fully charged

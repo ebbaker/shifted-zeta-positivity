@@ -7,6 +7,26 @@ LLM assistance: **gpt-6-astra (Codex)**, reasoning effort **ultra**.
 
 ## Summary
 
+- **Green/resolvent reconciliation through E08 (10 November 2026).**
+  [The updated manuscript](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/01_green_potential_resolvent/manuscript/README.md)
+  incorporates [E03 Note06](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/01_green_potential_resolvent/notes/06_TND_OG_E03_COMPLETE_SIGNED_LOG_ACQUISITION_20261108.md):
+  “proved in-note from the named inherited inputs”.
+  Its finite signed-log upper approximation satisfies
+  0<=U-J<=E+2T+2beta; [E05 Review06](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/01_green_potential_resolvent/reviews/06_TND_OG_E05_CLAIM_LEVEL_ASSESSMENT_20261108.md)
+  accepts the eight claims with one additive evidence/control clarification.
+  B05 r1 deflation and its independent-cell comparison retain E07 internal
+  acceptance; B05 r2's full-cover error <17/1000 remains conditional and
+  proof-author checked. [E08 Note15](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/01_green_potential_resolvent/notes/15_TND_OG_E08_LITERAL_SOURCE_ACQUISITION_RESULTS_20261110.md):
+  “All four fixed cases are interval-certified pilot passes.”
+  Direct winding excludes the known-region D=[29,31]+i[1/2,1];
+  three patch counts are 1,0,1 at 128 bits. The other 261 patches and
+  signed J(30) remain open. The separate inherited census gives J(1500)<1/200
+  with stronger local location information, not new coverage.
+  [Editorial Review14](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/01_green_potential_resolvent/reviews/14_TND_OG_POST_E08_MANUSCRIPT_RECONCILIATION_CHECK_20261110.md)
+  supersedes E04's pending-assembly manuscript status, not its source proofs.
+  No new signed estimate or specialist review. For Edward Baker with
+  OpenAI Codex assistance; current chat0010 has no recorded model/effort.
+
 - **E13 r2 finite Gaussian projection certificate (9 November 2026).**
   [Note25](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/02_localized_zero_correlations/notes/25_TND_OC_E13_R2_CERTIFIED_GAUSSIAN_PROJECTION_20261109.md) records “complete with a certified finite projection.”
   Outward decimal endpoints are `[0.07282037202996673, 0.07286154195666860]`.

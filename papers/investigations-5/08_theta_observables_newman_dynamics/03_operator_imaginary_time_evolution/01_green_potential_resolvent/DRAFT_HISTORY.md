@@ -1,5 +1,25 @@
 # Green/resolvent milestones
 
+**10 November 2026 — B07 discussion and manuscript reconciliation.**
+For Edward Baker with OpenAI Codex assistance; actual model/effort absent
+from chat0010's registry. [Session12](brainstorm/notes/12_TND_OG_POST_E08_STATE_AND_PATHS_20261110.md)
+records priorities and one proposed analytical follow-through.
+[The manuscript](manuscript/README.md) now includes completed E03/E05,
+conditional deflation, E08 and census reuse; 26 pages, unchanged inherited
+evidence and no new research computation. [Review14](reviews/14_TND_OG_POST_E08_MANUSCRIPT_RECONCILIATION_CHECK_20261110.md)
+and [Build10](numerics/10_TND_OG_POST_E08_MANUSCRIPT_BUILD_20261110.json)
+record editorial verification. No snapshot folder or sibling activation.
+
+**10 November 2026 — B05 r2 research checkpoint, no manuscript revision:**
+[Note14](notes/14_TND_OG_B05_R2_CONTOUR_CONDITIONING_AND_COST_20261110.md)
+and [Review12](reviews/12_TND_OG_B05_R2_PROOF_AUTHOR_CHECK_20261110.md)
+record conditional contour floors, logarithmic curvature, a 67584-panel
+design and complete acquisition-cost obligations. No canonical gate or
+field value was evaluated. [Continuation16](continuation-notes/16_TND_OG_B05_R2_RESULTS_AND_MODEL_CHANGE_20261110.md)
+selects the fixed E08 pilot, GPT-6.1 Sol, ready and unactivated. Prepared
+for Edward Baker with OpenAI Codex assistance; actual model/effort
+unavailable. No manuscript milestone, closure or shared-summary promotion.
+
 **10 November 2026 — TND-OG-B06 review milestone, no manuscript revision:**
 [Note10](notes/10_TND_OG_B06_SIBLING_RESULTS_AND_GREEN_CENSUS_TRANSFER_20261110.md)
 and [Review08](reviews/08_TND_OG_B06_CROSS_BRANCH_CONTINUATION_REVIEW_20261110.md)
@@ -64,3 +84,12 @@ and [Continuation15](continuation-notes/15_TND_OG_E07_RESULTS_AND_MODEL_CHANGE_2
 record the analytical checkpoint and conditional B05 r2 re-entry.
 Prepared for Edward Baker with OpenAI Codex LLM assistance,
 recorded gpt-6.1-sol / ultra.
+
+**10 November 2026, E08 r1:** [Note15](notes/15_TND_OG_E08_LITERAL_SOURCE_ACQUISITION_RESULTS_20261110.md)
+records four interval-certified pilot passes at 128 bits, including
+direct winding zero on the known target. The three patch certificates
+leave full signed acquisition open.
+[Return27](research-progress/handoffs/27_TND_OG_E08_LITERAL_SOURCE_PILOT_RETURN_20261110.json)
+and [Continuation17](continuation-notes/17_TND_OG_E08_RESULTS_AND_MODEL_CHANGE_20261110.md)
+record the measured checkpoint and re-entry conditions. Prepared for
+Edward Baker with OpenAI Codex LLM assistance, recorded gpt-6.1-sol / ultra.

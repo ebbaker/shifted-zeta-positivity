@@ -1,5 +1,13 @@
 # Green/resolvent conceptual decisions
 
+**10 November 2026, B07 post-E08 discussion:**
+[Session12](12_TND_OG_POST_E08_STATE_AND_PATHS_20261110.md) gives the
+current equation-linked state, ranked paths, costs, collision controls
+and one proposed bounded analytical follow-through. It records the
+manuscript reconciliation; no new signed estimate or computation is
+claimed. Prepared for Edward Baker with OpenAI Codex assistance;
+actual model/effort unavailable in chat0010's registry.
+
 **10 November 2026, B06:** [Decision11](11_TND_OG_B06_SIBLING_REUSE_DECISION_20261110.md)
 retains E06 after comparing sibling acquisition and collision uses.
 The focused finite census consequence and its limitations are in

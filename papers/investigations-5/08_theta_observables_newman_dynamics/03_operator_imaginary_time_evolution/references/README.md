@@ -1,5 +1,14 @@
 # References and source use: operator and ITE branch
 
+**10 November 2026, off-line Riemann–Siegel discussion:**
+[Source-use18](18_TND_O_RIEMANN_SIEGEL_SADDLES_SOURCE_USE_20261110.md)
+owns three newly located versioned references, their selected-passage
+inspection, [reusable bibliography](riemann_siegel_sources.bib) and
+external PDF receipts. Consumer: OG chat0010's session note. This is
+an explanation of the general-strip formula, smooth saddle motion and
+full cancellation, with no new zero-exclusion claim. Prepared for
+Edward Baker with OpenAI Codex LLM assistance; actual model/effort unavailable.
+
 6 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**. Configuration verified in the setup turn metadata.
 
 This branch-local use index follows [REFERENCE_WORKFLOW](../../../../../REFERENCE_WORKFLOW.md).

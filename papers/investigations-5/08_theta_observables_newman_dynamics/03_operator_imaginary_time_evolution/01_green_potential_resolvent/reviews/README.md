@@ -1,5 +1,22 @@
 # Green/resolvent assessments
 
+**10 November 2026:** [Review14](14_TND_OG_POST_E08_MANUSCRIPT_RECONCILIATION_CHECK_20261110.md)
+checks the post-E08 manuscript reconciliation and production. Same-assistant
+editorial check; no independent mathematical reassessment. Prepared for
+Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+
+**10 November 2026, E08:** [Review13](13_TND_OG_E08_INTERFACE_AND_CERTIFICATE_CHECK_20261110.md)
+records the Stage A formula and rejection checks and the Stage B
+certificate audit. Internal assessment with inherited premises.
+Prepared for Edward Baker with OpenAI Codex LLM assistance,
+recorded gpt-6.1-sol / ultra.
+
+**10 November 2026, B05 r2:** [Review12](12_TND_OG_B05_R2_PROOF_AUTHOR_CHECK_20261110.md)
+checks Note14's conditional floor, curvature, source/Taylor errors,
+repeated knots, complete error budget and direct comparator. Same-assistant
+proof-author check only; no field run or independent review. Prepared for
+Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+
 **10 November 2026, E07:** [Review11](11_TND_OG_E07_ANALYTICAL_ASSESSMENT_20261110.md)
 accepts all eight claims within their stated hypotheses. Internal LLM
 assessment with inherited premises. Model independence is unverified.

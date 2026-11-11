@@ -1,5 +1,37 @@
 # Green/resolvent conversation history
 
+**10 November 2026:** chat0010, “Summarize research and brainstorm paths”,
+thread `01a1c751-8acc-7f53-ac17-6811adbb2951`, is registered here from
+its exact local paginated source. Completed public text is refreshed by
+the locked recorder; exact-turn final capture is arranged at reply time.
+Read current counts, times, provenance and hashes from index.json.
+No active native hook or completed unsent-final capture is claimed.
+
+**E08 continuation of chat0007, 10 November 2026:** thread
+01a1c3f6-cbba-71f2-80bf-6b2d0421ddbd, exact turn
+01a1c6ee-9fe3-7763-adcf-ddfb22d05e1e. The ordinary refresh and the
+preceding E07 deferred retry both reported a creation-time integrity
+failure. The exact current source still reports 05:38:13.634 UTC
+rather than the archive's original 05:38:13.564 UTC. The prior
+registration and archive are preserved. The
+[partial public record](UNREGISTERED_PARTIAL_TND_OG_E08_PUBLIC_TEXT_20261110.md)
+captures completed E08 text before the final outside the registry.
+The bounded final retry remains subject to the integrity gate.
+Exact E08 turn context records gpt-6.1-sol / ultra. Prepared for
+Edward Baker with OpenAI Codex LLM assistance.
+
+**B05 r2, 10 November 2026:** “Continue TND-OG-B05 r2”, thread
+`01a1c62e-7c90-7eb1-8260-879c249f4c2b`, is registered as
+[chat0009](0009_2026-11-10T15-58-18Z_continue-tnd-og-b05-r2.json)
+by the locked recorder from its exact local paginated source. Consult
+[index.json](index.json) for current timestamps, count, hashes and model
+configuration; none is copied here as a permanent current value.
+The exact current turn is `01a1c62f-5c70-72e2-b407-38a2b6621527`.
+The final capture uses a bounded exact-turn follow-up, not a claimed
+native hook. This registration does not repair or overwrite chat0007's
+separate historical integrity failure below. Prepared for Edward Baker
+with OpenAI Codex assistance; actual model/effort unavailable.
+
 **E07 continuation of chat0007, 10 November 2026:** thread
 01a1c3f6-cbba-71f2-80bf-6b2d0421ddbd, exact turn
 01a1c5df-b523-78a2-998a-1c2d0ebfd175. The E06 final is in the

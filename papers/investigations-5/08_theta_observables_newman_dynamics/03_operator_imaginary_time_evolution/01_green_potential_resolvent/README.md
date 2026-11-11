@@ -1,5 +1,38 @@
 # Green potential and logarithmic resolvent
 
+**10 November 2026, post-E08 discussion and manuscript reconciliation:**
+[Session12](brainstorm/notes/12_TND_OG_POST_E08_STATE_AND_PATHS_20261110.md)
+ranks a consequential signed estimate, conditional sibling reconsideration
+and full J(30) calibration. The [26-page manuscript](manuscript/README.md)
+now reflects completed E03/E05 and E06–E08; inherited evidence levels
+are unchanged. B07 r1 is complete at discussion/editorial scope; proposed
+B07 r2 tests arithmetic main-term value content, with no numerical
+campaign activated. Prepared for Edward Baker with OpenAI Codex assistance;
+chat0010 records no actual model/effort. Earlier dated checkpoints below
+retain their historical meaning.
+
+**10 November 2026, E08 r1 complete:** the four fixed cases pass at
+128 bits. The direct comparator certifies winding zero on the known
+target and all three patches pass their local conditioning gates.
+[Note15](notes/15_TND_OG_E08_LITERAL_SOURCE_ACQUISITION_RESULTS_20261110.md)
+and [Continuation17](continuation-notes/17_TND_OG_E08_RESULTS_AND_MODEL_CHANGE_20261110.md)
+record the results and conditions for later work. No full signed
+integration is issued. Prepared for Edward Baker with OpenAI Codex
+LLM assistance, recorded gpt-6.1-sol / ultra.
+
+**Current checkpoint, 10 November 2026 — B05 r2 complete:**
+[Note14](notes/14_TND_OG_B05_R2_CONTOUR_CONDITIONING_AND_COST_20261110.md)
+specifies literal-source polynomial acquisition, certified contour floors,
+logarithmic curvature and a matched direct comparator. Its conditional
+264-patch design has 67584 panels and upper-endpoint error <17/1000;
+canonical gates, value and total cost are unmeasured. Proof-author check
+only; no field run. **Next at B05 r2 close: [E] TND-OG-E08 — GPT-6.1 Sol**, the bounded
+[acquisition pilot](research-progress/handoffs/26_TND_OG_E08_LITERAL_SOURCE_ACQUISITION_PILOT_REQUEST_20261110.md),
+ready and unactivated. [Continuation16](continuation-notes/16_TND_OG_B05_R2_RESULTS_AND_MODEL_CHANGE_20261110.md)
+is the current model-change handoff. Prepared for Edward Baker with
+OpenAI Codex assistance; actual model/effort unavailable in chat0009.
+Earlier next-task entries below are historical.
+
 **10 November 2026, E07 r1 complete:** [Review11](reviews/11_TND_OG_E07_ANALYTICAL_ASSESSMENT_20261110.md)
 accepts all eight conditional and scoped B05 claims without correction.
 [Continuation15](continuation-notes/15_TND_OG_E07_RESULTS_AND_MODEL_CHANGE_20261110.md)
@@ -70,7 +103,7 @@ actual gpt-6-astra, effort unavailable.
 | [Overview](research-overview/01_TND_OG_GREEN_RESOLVENT_RESEARCH_OVERVIEW_20261107.md) | Theta/primitive/source normalization, exact Green margin, new resolvent suggestion and inherited limits |
 | [Bounded B/E plan](research-plan/01_TND_OG_GREEN_RESOLVENT_RESEARCH_PLAN_20261107.md) | At most two mechanisms; fixed proof and assessment remain dependent |
 | [Sole TND-OG register](research-progress/01_TND_OG_GREEN_RESOLVENT_RESEARCH_PROGRESS_20261107.md) | Authoritative live status for this branch's task family |
-| [Current continuation and pasteable prompt](continuation-notes/15_TND_OG_E07_RESULTS_AND_MODEL_CHANGE_20261110.md) / [E07 return](research-progress/handoffs/24_TND_OG_E07_ANALYTICAL_ASSESSMENT_RETURN_20261110.json) | E07 complete. B05 r2 conditional and unactivated |
+| [Current continuation and pasteable prompt](continuation-notes/17_TND_OG_E08_RESULTS_AND_MODEL_CHANGE_20261110.md) / [E08 return](research-progress/handoffs/27_TND_OG_E08_LITERAL_SOURCE_PILOT_RETURN_20261110.json) | E08 complete. No successor issued |
 | [Analytical manuscript](manuscript/README.md) | Editable LaTeX, reading PDF, build instructions and outstanding tasks |
 | [References](references/README.md) | Parent canonical ownership, existing bibliographies and actual inspection scope |
 | [Shared discussion synthesis](../brainstorm/notes/19_TND_O_GREEN_CORRELATION_BIFURCATION_SYNTHESIS_20261107.md) | Parent-owned bifurcation record and inherited-task crosswalk |

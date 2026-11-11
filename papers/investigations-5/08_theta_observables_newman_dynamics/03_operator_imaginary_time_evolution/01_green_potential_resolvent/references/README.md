@@ -1,5 +1,39 @@
 # Green/resolvent reference ownership and use
 
+**10 November 2026, nonzero-time clarification:**
+[Source-use06](06_TND_OG_B03_HDA_HIERARCHY_SOURCE_USE_20261108.md#follow-up-passage-check--10-november-2026)
+now records a fresh check of the existing Polymath v2 §4 (35)–(41),
+Theorem 1.3 and its explicit positive-time domain. The
+[session note](../brainstorm/notes/12_TND_OG_POST_E08_STATE_AND_PATHS_20261110.md)
+distinguishes the available evolved Riemann–Siegel method from the
+specific time-zero Euler-product baseline used in the Green argument.
+
+**10 November 2026, off-line saddle follow-up:**
+[Parent Source-use18](../../references/18_TND_O_RIEMANN_SIEGEL_SADDLES_SOURCE_USE_20261110.md)
+records the general Riemann–Siegel integral, its two phase saddles,
+the critical-line conjugacy and the exact cancellation identity used
+in [Session Note12](../brainstorm/notes/12_TND_OG_POST_E08_STATE_AND_PATHS_20261110.md).
+The parent owns the three new article records, reusable bibliography
+and external reading-copy receipts. No new manuscript or theorem status.
+
+**10 November 2026, B07 explanatory follow-up:**
+[Session Note12](../brainstorm/notes/12_TND_OG_POST_E08_STATE_AND_PATHS_20261110.md#follow-up-explanation-the-arithmetic-bridge-and-the-collision-input)
+records fresh inspection of [DLMF §25.9](https://dlmf.nist.gov/25.9),
+(25.9.1)–(25.9.3), and the introduction, §4 normalization and §6.2
+Proposition 6.2 of the already imported
+[Polymath arXiv:1904.12438v2](https://arxiv.org/html/1904.12438v2).
+This is a pedagogical statement/convention check. The existing
+[Source-use06](06_TND_OG_B03_HDA_HIERARCHY_SOURCE_USE_20261108.md)
+and HDA catalogs retain canonical ownership; no duplicate article,
+PDF, bibliography or new theorem assessment. Prepared for Edward Baker
+with OpenAI Codex LLM assistance; actual model/effort unavailable.
+
+**10 November 2026, B05 r2:** [Source-use11](11_TND_OG_B05_R2_CONTOUR_AND_POLYNOMIAL_SOURCE_USE_20261110.md)
+records fresh DLMF Rouché/maximum-principle/Taylor and trigamma passage
+checks, preserving existing canonical ownership. The new constants are
+derived in Note14, with no literature-priority claim. Prepared for Edward
+Baker with OpenAI Codex assistance; actual model/effort unavailable.
+
 **10 November 2026, E07 recheck:** [Review11](../reviews/11_TND_OG_E07_ANALYTICAL_ASSESSMENT_20261110.md)
 reopened de Boor's versioned §9 (52), printed pp. 63–64, through the
 existing OA reference and derived the simplex constants in
