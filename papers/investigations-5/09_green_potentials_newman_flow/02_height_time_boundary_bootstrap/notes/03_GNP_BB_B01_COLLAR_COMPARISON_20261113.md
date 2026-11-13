@@ -160,7 +160,7 @@ The parent's correction and field payments give the following
 feasibility ledger. Constants depend only on fixed chart/provider
 data, not on U, X, or a fractional cutoff.
 
-| Contribution to |V−Z| | Payment to be assembled in E01 |
+| Contribution to the modulus of V−Z | Payment to be assembled in E01 |
 | --- | --- |
 | Dominant-arm heat weight | S_2/(4L_X) |
 | Ordinary series tail | 8N_x^(−1/8), hence O(x^(−1/16)) |

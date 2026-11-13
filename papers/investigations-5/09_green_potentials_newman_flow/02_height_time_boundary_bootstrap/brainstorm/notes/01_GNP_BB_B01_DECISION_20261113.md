@@ -22,7 +22,7 @@ rectangle; it does not give the deformed field an Euler product.
 
 | Mechanism | Fixed consumer and disposition |
 | --- | --- |
-| Normalized field | Acquire |H/(C_−ζ(s_λ))−1|≤1/16. Then m=1/2, M=2, h=1/8>η=1/16. Select for execution. |
+| Normalized field | Acquire sup norm of H/(C_−ζ(s_λ))−1 at most 1/16. Then m=1/2, M=2, h=1/8>η=1/16. Select for execution. |
 | Complete rectangle Green comparison | The same data give J≤log(17/15)<log(19/16)≤g_K, including all sides. It supplies no additional arithmetic gain from those data. Retain as a conditional cross-check. |
 
 The field estimate itself implies zero-freeness directly. Do not market
@@ -35,7 +35,8 @@ for this consumer. No failure of the true canonical Green quantity is
 asserted. The coarse absolute-payment threshold y>3/4 limits this
 selected allowance, not all variable-boundary methods.
 
-The [assessment](../../reviews/01_GNP_BB_B01_SAME_ASSISTANT_ASSESSMENT_20261113.md)+checks the decision, not E01's unexecuted theorem. The [source-use record](../../references/01_GNP_BB_B01_SOURCE_USE_20261113.md)
+The [assessment](../../reviews/01_GNP_BB_B01_SAME_ASSISTANT_ASSESSMENT_20261113.md)
+checks the decision, not E01's unexecuted theorem. The [source-use record](../../references/01_GNP_BB_B01_SOURCE_USE_20261113.md)
 and [input record](../../numerics/01_GNP_BB_B01_INPUTS_20261113.json)
 pin the dependencies. The complete collision-control screen is Note03 §5.
 

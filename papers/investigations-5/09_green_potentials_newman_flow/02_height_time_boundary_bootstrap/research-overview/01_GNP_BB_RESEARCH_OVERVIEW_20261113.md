@@ -3,16 +3,56 @@
 13 November 2026, America/New_York. Prepared for **Edward Baker** with
 substantial OpenAI Codex LLM assistance. Actual model and reasoning effort
 are unavailable in the setup chat's recorded configurations.
-**Evidence level: setup and inherited-source synthesis; research unactivated.**
+**Evidence level: inherited-source synthesis and B01 conceptual selection;
+the canonical E01 estimate remains unproved.**
+
+## Primary program: analytical control over unbounded height
+
+Seek formulas or analytically justified selection rules for the contour
+and observation points across the continuum of heights \(T=|X|/2\),
+with no finite upper height cutoff. Seek canonical estimates that can
+support repeated contraction toward the real axis. Numerical diagnostics
+and finite certificates serve this analytical program.
+
+Contour families and observation protocols remain open to exploration:
+graphs, conformal constructions, uniformly controlled local covers and
+other justified strategies may be compared. Study each choice separately
+and then its coupling. The initial rectangle and gain 1/16 are benchmarks,
+not permanent restrictions on the program. [Note05][program] records the
+author's 13 November analytical and exploratory scope revision, including
+an explicit infinite-height parameterization and its unpaid obligations.
+
+## B01 baseline — 13 November 2026
+
+[Note03](../notes/03_GNP_BB_B01_COLLAR_COMPARISON_20261113.md) fixes
+λ_X=1/L_X and 7/8<y<9/8, selects complete-field comparison with
+ζ(s_λ(z)) in Re s>1, and preserves heat suppression in the entire
+reflected population. Its error threshold 1/16 would give h=1/8,
+buffer 1/16 and a width gain 1/16. The same data pay a complete
+rectangle Green comparison; that geometry adds no arithmetic gain.
+This is a feasible proof contract with conditional consumers, not an
+acquired canonical error bound. [E01 r1](../research-progress/handoffs/GNP-BB-E01-r1.md)
+remains a fixed analytical benchmark task, recommended GPT-6.1 Sol.
+GNP-BB-B02 is now the suggested next conceptual task for the broader
+analytical program; the register controls activation. This priority
+change does not widen the frozen E01 request.
+
+**Author-requested planning addition, 13 November:** GNP-BB-B02 separates
+contour design from observation-point placement, then investigates their
+joint use across unbounded height and successive inward steps. The later
+analytical-program revision supersedes its initial finite rectangle
+comparison limits; the fixed E01 r1 remains available as a baseline.
 
 ## Question and intended gain
 
 Can quantitative information on a proved zero-free region produce a
 strictly larger zero-free region for the canonical Newman field, with
 the contour and observation offset varying with both height and time?
-The immediate objective is one uniform, explicitly paid inward step.
-Only after such a step is obtained should one study whether iteration
-continues toward the critical line or stalls.
+The immediate proof objective is one uniform, explicitly paid inward
+step. Its design must already examine whether estimates can persist
+through iteration toward the critical line, or identify the precise
+barrier and possible changes of strategy. A one-step gain and a
+line-reaching iteration are distinct milestones.
 
 The [founding discussion][founding] separates a moving observation from
 a moving domain, gives an elementary local extension, and identifies the
@@ -27,7 +67,7 @@ Read the [result index][results] and [avoid index][avoid], particularly
 [target classification][a01], [control premises][a02],
 [coordinate realizations][a03] and [scoped exclusions][a07].
 Obtaining all-real zeros at time zero is a target-equivalent reformulation.
-A milestone must instead state a proved numerical or asymptotic gain,
+A milestone must instead state a proved quantitative or asymptotic gain,
 its domain and its remaining errors.
 
 ## Fixed field and coordinates
@@ -53,13 +93,15 @@ its derivatives and harmonic boundary terms must be retained.
 
 | Symbol | Meaning |
 | --- | --- |
-| \(X\), or \(x\) for a varying boundary coordinate | Longitudinal Newman coordinate; zeta height is \(T=|X|/2\) |
+| \(X\), or \(x\) for a varying boundary coordinate | Longitudinal Newman coordinate; zeta height is \(T=\lvert X\rvert/2\) |
 | \(y\) | Transverse coordinate of a point or zero |
 | \(\lambda\) | Newman heat time |
 | \(n\) | Bootstrap iteration; distinct from physical time and the source index \(k\) |
 | \(a_n(\lambda,X)\) | Half-width of the region in which zeros are still allowed |
 | \(b_n(\lambda,X)\) | Observation offset in \(X+ib_n(\lambda,X)\) |
 | \(\eta_n=b_n-a_n>0\) | A chosen observation buffer, when using the upper zero-free exterior |
+| \(D\), \(\Gamma=\partial D\) | Analysis domain and its integration contour |
+| \(p=X+ib\in D\) | Interior observation point; separate from the contour and the allowed-zero boundary |
 | \(B\) | Thickness of a fixed horizontal analysis strip |
 
 At time zero, \(z=X+ib\) corresponds to \(s=(1+b)/2-iX/2\).
@@ -83,13 +125,13 @@ uniform de Bruijn theorem. Its source and scope are recorded below.
 
 ## Parameter domains and quantifiers
 
-The first comparison should fix a height interval
-\(I=[U,U+\ell]\), \(U>4\pi\), \(0<\ell\le U\), and either a heat interval
-\([\lambda_-,\lambda_+]\subset[0,1/2]\) or one explicitly prescribed
-height-dependent heat curve. The conceptual task chooses which; a
-statement on a curve must not be described as a theorem on a time slab.
-The eventual height objective is every sufficiently large \(U\), with a
-separate finite-height obligation, not a collection of favorable samples.
+The program covers arbitrary real heights, with no finite upper cutoff.
+A proof may split into a uniform theorem for every \(X\ge X_0\), its
+symmetry counterpart and a separately covered compact region. Height
+blocks or local rectangles are analytical devices whose estimates must
+be uniform over the stated continuum; favorable samples do not suffice.
+Specify a common heat time, a declared time interval or a heat curve.
+A theorem on a curve is not a theorem on a time slab or at time zero.
 
 Each claimed step must specify whether its enclosure is global in \(x\)
 or restricted to \(I\). A bounded contour retains side boundaries; a
@@ -98,12 +140,23 @@ propagation additionally needs initial containment, side entry and
 multiple-contact control. An asymptotic onset may depend on fixed
 parameters, but its dependence on iteration number must be stated.
 
+For repeated contraction at each fixed height, every required step must
+remain applicable there. An onset \(X_n\) escaping to infinity may prevent
+this. Track this issue from the first design pass, alongside boundary
+separation and losses as the allowed width approaches zero.
+
 The published evolved-RS domain \(0<\lambda\le1/2,\ 0\le y\le1,\ X\ge200\)
 is the domain of Polymath's Theorem 1.3, not an automatic theorem at
 offset \(4\) or at time zero. Wider-strip estimates are separate inherited
 HDA inputs. See the [source-use index][refs] and [lower-offset discussion][lower].
 
 ## Boundary prediction and domain dependence
+
+The integration contour Γ=∂D, interior observation p=X+ib, and
+allowed-zero boundary y=a are distinct choices. The kernel couples
+the first two; it does not force either to coincide with the zero
+boundary. [Note04](../notes/04_GNP_BB_CONTOUR_AND_OBSERVATION_CLARIFICATION_20261113.md)
+spells out their positions and the auxiliary disks in the current request.
 
 For \(u_\lambda=\log|H_\lambda|\), a fixed strip \(0<y<B\), and \(0<b<B\),
 
@@ -146,7 +199,74 @@ equals zero; extension across its boundary requires further quantitative
 information. A boundary zero has zero Green weight, so a target being
 excluded must be kept inside the domain with the appropriate buffer.
 
-## Two candidates for the first improvement
+## An infinite-height contour and observation parameterization
+
+For a proved positive enclosure \(a_n(\lambda,x)\), one exploratory
+family, at fixed \(\lambda\), is
+\[
+ \begin{aligned}
+ \Gamma_n^\lambda
+ &=\{x+i(1-\theta_n-r_n^-)a_n:x\in\mathbb R\}
+   \ \cup\ \{x+i(1+r_n^+)a_n:x\in\mathbb R\},\\
+ p_n^\lambda(X)&=X+i(1+\epsilon_n(\lambda,X))a_n(\lambda,X).
+ \end{aligned}
+\]
+All contour coefficients are evaluated at \((\lambda,x)\), with
+\(0<\theta_n<1\), \(0<r_n^-<1-\theta_n\) and
+\(0<\epsilon_n<r_n^+\). The region between the graphs contains the
+observation and target \((1-\theta_n)a_n\le y\le a_n\) strictly inside.
+Conjugation supplies the lower-half-plane counterpart. Coefficients can
+vary analytically with height; [Note05][program] gives an illustrative
+logarithmic profile and allows other explicit or implicit selection rules.
+These expressions describe geometry, not a proved contraction.
+
+An integral over this unbounded contour needs a proved exhaustion limit
+and all end and growth contributions. A uniformly controlled family of
+local contours covering every height is another admissible strategy.
+Use one fixed heat time within each contour calculation; a schedule
+\(\lambda(X)\) selects a family of such calculations, not a spatially
+varying heat parameter inside one analytic field.
+
+## Separate contour and observation investigation
+
+**GNP-BB-B02 — B, recommended GPT-6 Astra.** Explore which contour and
+observation protocols can support analytical estimates over unbounded
+height and potentially remain effective toward the line. Read Notes03–05;
+the [sole register][progress] records the separate workstreams. The
+earlier cap on alternative rectangles and offsets is superseded.
+
+| Workstream | Explore | Comparison requirement |
+| --- | --- | --- |
+| Contour | Height-dependent graphs, conformal constructions, local covers or another justified family | Hold the observation rule, field, clock and target fixed within each comparison; account for harmonic measure, derivative domains, every boundary and infinite-height contribution |
+| Observation point | Explicit height laws, analytical error balancing, or selection from previously proved bounds | Hold the contour family and target fixed; control buffers, floors, weights and coverage at every height, including any multiple-observation rule |
+| Joint strategy and iteration | Compatible combinations and changes of strategy as the band narrows | Recompute the full budget, derive a supported gain and examine its recurrence, onset growth and limiting domain |
+
+Seek formulas or well-posed analytical protocols, rather than a list of
+chosen numerical positions. Compare field gain \(h-\eta\), with
+\(h=m/(2M)\) and full segment coverage, or the complete Green margin
+\(g_K-(\widehat J+E)\) for the same target. Include independent carrier
+nonvanishing and every canonical representation, logarithmic, boundary
+and remainder cost. A geometric improvement alone is not a proved gain.
+
+For a possible iteration \(a_{n+1}\le(1-\theta_n)a_n\), investigate
+whether the proved steps stay valid and force the product of contraction
+factors to zero at each fixed height. Divergence of \(\sum_n\theta_n\)
+is one sufficient test, not an assumed premise. The current coarse
+absolute allowance stops at \(y>3/4\); overcoming that specific
+estimating barrier is part of strategy exploration.
+
+**Decision boundary.** One analytical design pass ends with a supported
+route and a fixed next proof contract, or a precise bottleneck plus
+well-scoped alternatives. There is no preset quota of contour shapes or
+observation protocols. Stop at that decision boundary and separate later
+execution; do not turn exploration into an unlimited numerical search.
+Apply the control screen to changed premises. E01 r1 and its inputs stay
+frozen; a different execution contract must be explicitly revisioned.
+
+## Inherited analytical consumers
+
+These are the two consumers compared in B01. They are available starting
+points for B02, whose strategy exploration is not restricted to them.
 
 **Normalized-field extension.** For \(F_\lambda=H_\lambda/C_\lambda\)
 with nonvanishing analytic \(C_\lambda\), prove
@@ -180,10 +300,10 @@ and domain-approximation errors that occur. Curving the contour may alter
 both the signal and the costs. Compare the complete allowance on a common
 domain; a larger Green kernel by itself is not an arithmetic gain.
 
-A complete-boundary Rouché comparison is an optional check on the same
-chosen domain, requiring a certified zero count for the approximant and
-a strict full-boundary modulus margin. It is not a third independent
-search program in the first task.
+A complete-boundary Rouché comparison requires a proved zero count for
+the approximant and a strict full-boundary modulus margin. B01 treated
+it as a same-data check on its chosen domain. B02 may explore its use
+or another analytical strategy with its complete hypotheses and costs.
 
 For either route, retain both RS arms, integer cutoff, correction and
 remainder. At lower offsets, absolute convergence of an infinite ordinary
@@ -256,17 +376,22 @@ reflection and complete arithmetic agreement. The polynomial diagnostic
 has no theta source. Generic Green or local-extension identities may hold
 for these fields and do not themselves distinguish theta.
 
-The first decision is which canonical input could yield a paid
-improvement on a declared domain. Later questions are whether the gained
-widths accumulate, whether height onsets remain usable through iteration,
-how finite heights and boundary contacts are covered, and whether time
-propagation improves the global threshold bound. Merely taking
+B01 selected the canonical input for the baseline; E01 must still prove
+its estimate. B02 explores analytical contour and observation rules over
+unbounded height. Its design must address whether gains can accumulate,
+whether height onsets remain usable through iteration, how compact
+heights and boundary contacts are covered, and which time domain the
+result actually reaches. Merely taking
 \(a_n\to0\) as a desired conclusion is not a mechanism. A limit
 \(a(X)\to0\) only at infinite height does not exclude finite-height
 nonreal zeros.
 
-The [plan][plan] bounds the initial comparison to two mechanisms and one
-domain family. The [GNP-BB register][progress] is the sole task-status
+Numerical work may support constants, diagnostics and compact-region
+certificates attached to an analytical tail theorem. It cannot replace
+an all-height estimate or establish an iteration limit from samples.
+
+The [plan][plan] preserves B01's completed scope and defines the revised
+B02 analytical exploration above. The [GNP-BB register][progress] is the sole task-status
 owner; [continuation][continuation] is a dated handoff snapshot.
 
 [results]: ../../../../../result-summaries/README.md
@@ -293,3 +418,4 @@ owner; [continuation][continuation] is a dated handoff snapshot.
 [plan]: ../research-plan/01_GNP_BB_RESEARCH_PLAN_20261113.md
 [progress]: ../research-progress/01_GNP_BB_RESEARCH_PROGRESS_20261113.md
 [continuation]: ../notes/01_GNP_BB_CONTINUATION_AND_PROMPT_20261113.md
+[program]: ../notes/05_GNP_BB_ANALYTICAL_PROGRAM_AND_SELECTION_PROTOCOLS_20261113.md

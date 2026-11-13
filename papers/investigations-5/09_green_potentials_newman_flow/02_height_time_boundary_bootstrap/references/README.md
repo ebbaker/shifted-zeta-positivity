@@ -12,6 +12,12 @@ not duplicate article records or PDF copies. Follow
 
 ## Inherited sources used at setup
 
+**B01 research use, 13 November 2026:** the [selected-passage record](01_GNP_BB_B01_SOURCE_USE_20261113.md)
+adds the actual HDA/provider inspection, B10 applicability check and
+primary DLMF/Polymath passages for the new [research note](../notes/03_GNP_BB_B01_COLLAR_COMPARISON_20261113.md).
+Canonical bibliography/PDF ownership below is retained. This is not a
+new full-paper or independent provider audit.
+
 | Source and canonical home | Exact use and scope |
 | --- | --- |
 | D. H. J. Polymath, *Effective approximation of heat flow evolution of the Riemann ξ function, and a new upper bound for the de Bruijn–Newman constant*, arXiv:1904.12438v2, 4 August 2019. [Primary HTML](https://arxiv.org/html/1904.12438v2), [HDA article record](../../../01_heat_density_asymptotics/references/README.md), [canonical BibTeX](../../../01_heat_density_asymptotics/references/references.bib) | The overview inherits Theorem 3.2's global strip contraction in \(\partial_\lambda H=-H_{zz}\) normalization; Proposition 3.1's simple/multiple-zero dynamics; Theorem 1.2/Proposition 3.3 as a particular barrier precedent; Theorem 1.3's stated near-axis approximation domain. No arbitrary graph contraction or new arithmetic margin is imported. |

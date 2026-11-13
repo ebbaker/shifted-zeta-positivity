@@ -21,9 +21,9 @@ and [registry](../../01_riemann_siegel_evolution/chat-histories/index.json)
 remain there. Creating this child does not relocate or duplicate that
 registration. No chat is registered in this folder by setup.
 
-The current source reports a creation timestamp differing by 37 ms from
+The setup chat's source reports a creation timestamp differing by 37 ms from
 the verified registered record. Normal refresh fails its identity guard;
-the archive and registry remain intact. This turn's public text is kept
+the archive and registry remain intact. That setup turn's public text was kept
 in an explicitly unregistered supplement at the existing home, using the
 strict public reader, prefix checks and shared lock. The bounded follow-up
 must observe the real final and exact turn completion. This does not
@@ -33,3 +33,19 @@ Keep raw session exports outside the repository. Use one recorder at a
 time, preserve first-capture provenance, and surface failed capture.
 The [setup crosswalk](../notes/02_GNP_BB_SETUP_AND_SOURCE_CROSSWALK_20261113.md)
 records the current affiliation and limitation.
+
+## Branch research chat0001 — 13 November 2026
+
+“Begin GNP boundary bootstrap”, thread
+`01a1d570-d742-77e2-94e1-780baac55672`, was registered here using its
+exact local paginated public-text source. Ordinary entry capture
+succeeded. Its [registry](index.json) owns the current counts, times,
+hashes and actual recorded model configurations; the configurations
+were empty at B01's return. The separate setup-chat conflict above
+does not describe this new chat.
+
+The registered archive is
+[chat0001](0001_2026-11-13T15-05-04Z_begin-gnp-boundary-bootstrap.json).
+The final public response must be captured only after actual recording
+and exact-turn completion; a bounded deferred refresh is used until a
+trusted native hook is verified. No native activation is claimed here.
