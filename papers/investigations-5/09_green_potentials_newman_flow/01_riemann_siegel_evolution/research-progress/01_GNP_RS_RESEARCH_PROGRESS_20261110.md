@@ -1,5 +1,96 @@
 # Riemann–Siegel evolution: sole progress register
 
+**Boundary-bootstrap child setup, 13 November 2026.** The adaptive enclosure/offset proposal in brainstorm Note13 now routes to sibling [02](../../02_height_time_boundary_bootstrap/README.md), whose [register](../../02_height_time_boundary_bootstrap/research-progress/01_GNP_BB_RESEARCH_PROGRESS_20261113.md) alone owns GNP-BB tasks. Earlier discussions below retain their dated source status; their unissued suggestions for this particular direction use the new [continuation](../../02_height_time_boundary_bootstrap/notes/01_GNP_BB_CONTINUATION_AND_PROMPT_20261113.md). No existing GNP-RS task state or packet changes. For Edward Baker with Codex assistance; actual model/effort unavailable.
+
+**Height and time dependent bootstrap discussion, 13 November 2026.**
+[Brainstorm Note13](../brainstorm/notes/13_GNP_RS_HEIGHT_AND_TIME_DEPENDENT_STRIP_BOOTSTRAP_20261113.md)
+records the author's variable-boundary proposal, the weighted prediction
+and curved-domain distinction, complete-boundary error gates, and the
+normal velocity \(y'-a_\lambda-a_Xx'\). An elementary inward extension
+of length \(m/(2M)\) retains half a proved field floor \(m\), given a
+derivative bound \(M\) on the full segment; improvement must exceed
+the initial contour buffer. No uniform iteration rate is acquired.
+The global heat contraction leaves
+\(\lambda+A^2/2\) unchanged; no further canonical gain is obtained.
+[Numerics21](../numerics/21_GNP_RS_VARIABLE_STRIP_DIAGNOSTIC_20261113.json)
+checks an exact even polynomial whose lower zero initially moves outward
+while its outermost zeros move inward. This refutes only pointwise use
+of the global strip law with an arbitrary variable width. Same-assistant
+discussion/diagnostic scope; no new execution task or manuscript change.
+Continuation guidance is in Note13 and updated brainstorm Note11.
+For Edward Baker with substantial Codex assistance; actual model/effort
+unavailable, same chat0007. Registered capture remains blocked by the
+creation-time discrepancy; the verified archive is preserved.
+
+**Lower transverse offset discussion, 13 November 2026.** The author suggests changing the observation geometry and studying the resulting arithmetic/logarithmic difficulties. [Brainstorm Note12](../brainstorm/notes/12_GNP_RS_LOWER_TRANSVERSE_OFFSET_AND_LOG_OBSERVATION_20261113.md) calculates general-offset Green kernels and margins, a depth-scaled signal gain, and the signed regularization correction. It distinguishes nonvanishing from a quantitative normalized-field floor and confirms that a complete evolved Riemann–Siegel formula exists near the real axis. Terminology now distinguishes zeta height T=|X|/2 from transverse offset b. Same-assistant geometry/feasibility scope; no lower-offset B10 theorem or new execution task. E08 remains the latest integrated theorem. For Edward Baker with substantial Codex assistance; actual model/effort unavailable, same chat0007.
+
+**Persistence discussion, 13 November 2026.** The [brainstorm note](../brainstorm/notes/10_GNP_RS_PERSISTENCE_SCALE_AND_ZERO_MOTION_20261113.md) takes the completed E08 integration as its starting point. The existing uniform regulator transfer gives the elementary cubic budget `(J-C/L_U)_+³ <= (27/128)R`, hence interval budget `O_rho(ell/L_U)`. Fixed-time kernel persistence has bounded width; an explicit even polynomial heat control shows that temporal survival can coexist with an isolated peak along the moving observation curve. These are same-assistant analytical deductions and a scoped control, not a new arithmetic estimate or every-center theorem. [Continuation guidance](../brainstorm/notes/11_GNP_RS_PERSISTENCE_CONTINUATION_20261113.md) compares arithmetic amplification with genuinely local residual estimates. Discussion only; no new execution task or manuscript change. Prepared for Edward Baker with substantial Codex assistance; actual model/effort unavailable in chat0007. Registered capture is blocked by a source creation-time discrepancy; the verified archive remains intact.
+
+**Current return, 12 November 2026.** GNP-RS-E08 integrates the audited
+B10 result into the [live manuscript](../../manuscript/sections/10d_short_window_means.tex).
+The averaged theorem at `c=1` applies for `U^(17/81+rho) ≤ ell ≤ U`
+with fixed `0 < rho ≤ 47/162`. At the block cutoff `P_U = floor(L_U²)`, the
+residual-mean error is `O_rho(L_U^(-3/2))`, the Green mean is
+`O_rho(L_U^(-1/3))`, and each fixed-positive-threshold exceptional
+proportion is `O_(h,rho)(L_U^(-1))`. The [build record](../../numerics/03_GNP_RS_B10_INTEGRATION_BUILD_RECORD_20261112.json)
+documents the rebuilt PDF and verification. The [B10 assessment](../reviews/16_GNP_RS_B10_PREINTEGRATION_ASSESSMENT_20261112.md)
+retains the named inputs and internal-review scope. Every-center control
+remains open. Prepared for Edward Baker with substantial OpenAI Codex assistance. Actual model and effort are unavailable in chat0008.
+
+**Previous B09 return (current-range routing superseded by B10), 12 November 2026:** GNP-RS-B09 is COMPLETE at
+proved-in-note scoped-diagnostic, primary-source applicability-screen and
+contributing internal-check scope. [Note27](../notes/27_GNP_RS_B09_JOINT_POISSON_SCOPE_TEST_20261112.md) proves that absolute payment of the specified dual
+stationary population costs U^(3/8)/ell, hence U^(5/36) at B08's endpoint.
+The canonical phase has lattice-gradient resonances; the directly tested
+Bourgain–Watt joint theorem fails its shift-range gates. These are scoped
+method/premise failures, not actual-tail lower bounds or a universal barrier.
+[Review14](../reviews/14_GNP_RS_B09_INTERNAL_ASSESSMENT_20261112.md) records the contributing check. No new localization
+or every-center bound was obtained. At the B09 return, B08's 17/72 range
+and exact boundary repair remained current. [Note28](../notes/28_GNP_RS_B09_RETURN_AND_MODEL_CHANGE_20261112.md) recommends GPT-6 Astra for a future requested signed estimate
+or concrete theorem adaptation, with range and consumer tests. B10 and E08 followed this historical return. For Edward Baker with substantial Codex
+assistance; actual model/effort unavailable in registered chat0006.
+
+**Previous B08 return, 12 November 2026:** GNP-RS-B08 is COMPLETE at
+classical-and-inherited-input analytical-proof and contributing separate-agent
+internal-check scope. [Note25](../notes/25_GNP_RS_B08_EXPONENT_PAIR_LOCALIZATION_20261112.md) improves the useful
+interval range to U^(17/72+rho)≤ell≤U, fixed 0<rho≤19/72, retaining
+residual-mean error O(L_U^(-3/2)), Green mean O(L_U^(-1/3)) and fixed-threshold
+proportion O(L_U^(-1)). A verified classical exponent-pair application pays
+the complete shifted tail; B07's exact boundary repair remains in place.
+[Review13](../reviews/13_GNP_RS_B08_INTERNAL_ASSESSMENT_20261112.md) records the contributing check.
+Every-center control remains open. [Note26](../notes/26_GNP_RS_B08_RETURN_AND_MODEL_CHANGE_20261112.md) recommends
+GPT-6 Astra for a bounded joint-shift estimate; B09 is proposed guidance,
+not execution, and no E08 is issued. For Edward Baker with substantial
+Codex assistance; actual model/effort unavailable in chat0006. Earlier
+B06/B07 statements remain valid; their current-loss descriptions are historical.
+
+**Previous B07 return, 12 November 2026:** GNP-RS-B07 is COMPLETE at
+inherited-input analytical-proof and contributing separate-agent internal-check
+scope. [Note23](../notes/23_GNP_RS_B07_LOCALIZED_TAIL_AND_EXACT_BOUNDARY_20261112.md) improves the useful interval range to
+U^(1/4+rho)≤ell≤U, fixed 0<rho≤1/4, retaining residual-mean error
+O(L_U^(-3/2)), Green mean O(L_U^(-1/3)) and fixed-threshold proportion
+O(L_U^(-1)). The exact convolution weight removes the separate boundary
+penalty; smooth shifted-pair cancellation reduces the complete-tail loss.
+[Review12](../reviews/12_GNP_RS_B07_INTERNAL_ASSESSMENT_20261112.md) records the contributing check.
+The every-center estimate remains open. [Note24](../notes/24_GNP_RS_B07_RETURN_AND_MODEL_CHANGE_20261112.md)
+recommends GPT-6 Astra for one bounded improvement to the remaining
+shifted correlation sum; B08 is guidance, not execution, and no E08 is issued.
+For Edward Baker with substantial Codex assistance; actual model/effort
+unavailable in chat0006's recorded configurations. B06 remains valid at its
+original scope; its localization-loss description below is historical.
+
+**Previous B06 return, 12 November 2026:** GNP-RS-B06 is COMPLETE at
+inherited-input analytical-proof and contributing separate-agent internal-check
+scope. The [proof](../notes/21_GNP_RS_B06_GROWING_CUTOFF_MEAN_20261112.md) gives residual-mean error
+O(L_U^(-3/2)) at P_U=floor(L_U²), uniformly for every sufficiently large
+real U on U^(3/8+rho)≤ell≤U, fixed 0<rho≤5/8. The resulting Green mean is
+O(L_U^(-1/3)); exceptional centers remain unresolved. [Review11](../reviews/11_GNP_RS_B06_INTERNAL_ASSESSMENT_20261112.md)
+records the shared-input check. The [return and model-change guidance](../notes/22_GNP_RS_B06_RETURN_AND_MODEL_CHANGE_20261112.md)
+recommends GPT-6 Astra for the next bounded complete-arm/tail localization
+question. No E08 is issued or executed. Prepared for Edward Baker with
+substantial Codex assistance; actual model/effort unavailable in chat0006's
+recorded configuration.
+
 **Separate critical-time investigation, 11 November 2026:** at the author's
 request, future work on the assumed positive-threshold symmetric RS
 argument now belongs to [Investigation10](../../../10_riemann_siegel_critical_time/README.md). Its
@@ -36,7 +127,13 @@ completion or a new arithmetic bound. Existing task statuses below remain.
 | GNP-RS-E05 | E / GPT-6.1 Sol, ultra: finite Euler reference and exceptional residual; depends on B04 | COMPLETE at inherited-input proof and separate internal-assessment scope, 11 November 2026 | [Note14](../notes/14_GNP_RS_E05_FINITE_EULER_RESIDUAL_20261111.md), [Review08](../reviews/08_GNP_RS_B04_INTERNAL_REVIEW_20261111.md), [record10](../numerics/10_GNP_RS_B04_E05_INPUTS_AND_CHECKS_20261111.json). All four frozen groups proved; the assessor also contributed the twisted-moment route. No uniform height rate, growing-prime estimate or zero exclusion. |
 | GNP-RS-B05 | B / GPT-6 Astra, ultra: adaptive reference and signed nonlinear test | COMPLETE at bounded-decision and acquisition/scoped-obstruction scope, 11 November 2026 | [Note16](../notes/16_GNP_RS_B05_ADAPTIVE_AND_SIGNED_DECISION_20261111.md): full-band adaptive reference overhead paid; specified fixed-P signed tangent fails. Every-center arithmetic value remains open; no new mechanism or task issued. |
 | GNP-RS-E06 | E / GPT-6.1 Sol, ultra: joint adaptive phase and signed tangent; depends on B05 | COMPLETE at inherited-input proof and contributing internal-assessment scope, 11 November 2026 | [Note17](../notes/17_GNP_RS_E06_ADAPTIVE_PHASE_AND_TANGENT_20261111.md), [Review09](../reviews/09_GNP_RS_B05_INTERNAL_REVIEW_20261111.md), [record12](../numerics/12_GNP_RS_B05_E06_INPUTS_AND_CHECKS_20261111.json). For P=floor(L_X²), phase cost <=18/L_X uniformly in c and positive regulator; other comparison costs paid. Fixed-P tangent allowance unbounded. Exact adaptive residual unpaid. |
-| GNP-RS-E07 | E / authorized analytical integration and direct corollaries; actual model/effort unavailable | COMPLETE at synthesis, inherited-input proof and same-assistant-check scope, 11 November 2026 | [Note19](../notes/19_GNP_RS_MANUSCRIPT_AND_AVERAGED_GREEN_VALUES_20261111.md), [Review10](../reviews/10_GNP_RS_MANUSCRIPT_AND_MEAN_SELF_CHECK_20261111.md) and the [current build record](../../numerics/02_GNP_RS_INTEGRATION_BUILD_RECORD_20261111.json). Live manuscript incorporates E01–E06. At c=1, all finite Green power means tend to zero and exponential means below four tend to one; fourth exponential mean eventually ≤39. No rate or every-center bound. |
+| GNP-RS-E07 | E / authorized analytical integration and direct corollaries; actual model/effort unavailable | COMPLETE at synthesis, inherited-input proof and same-assistant-check scope, 11 November 2026 | [Note19](../notes/19_GNP_RS_MANUSCRIPT_AND_AVERAGED_GREEN_VALUES_20261111.md), [Review10](../reviews/10_GNP_RS_MANUSCRIPT_AND_MEAN_SELF_CHECK_20261111.md) and the [11 November build record](../../numerics/02_GNP_RS_INTEGRATION_BUILD_RECORD_20261111.json). Live manuscript incorporates E01–E06. At c=1, all finite Green power means tend to zero and exponential means below four tend to one; fourth exponential mean eventually ≤39. No rate or every-center bound. |
+| GNP-RS-B06 | B / authorized analytical development; actual model/effort unavailable | COMPLETE at inherited-input analytical-proof and contributing internal-check scope, 12 November 2026 | [Proof](../notes/21_GNP_RS_B06_GROWING_CUTOFF_MEAN_20261112.md), [decision](../brainstorm/notes/06_GNP_RS_B06_DECISION_20261112.md), [Review11](../reviews/11_GNP_RS_B06_INTERNAL_ASSESSMENT_20261112.md), [return](../notes/22_GNP_RS_B06_RETURN_AND_MODEL_CHANGE_20261112.md). Uniform growing-P ledger; O(L_U^(-3/2)) residual-mean error at P_U=floor(L_U²), useful for ell≥U^(3/8+rho). Green mean O(L_U^(-1/3)), fixed-threshold proportion O(L_U^(-1)). No every-center bound, numerical onset, full-c/time/depth extension or E08. |
+| GNP-RS-B07 | B / authorized localized complete-arm/tail improvement; actual configuration unavailable | COMPLETE at inherited-input analytical-proof and contributing internal-check scope, 12 November 2026 | [Proof](../notes/23_GNP_RS_B07_LOCALIZED_TAIL_AND_EXACT_BOUNDARY_20261112.md), [Review12](../reviews/12_GNP_RS_B07_INTERNAL_ASSESSMENT_20261112.md), [return](../notes/24_GNP_RS_B07_RETURN_AND_MODEL_CHANGE_20261112.md). Exact boundary weight and paid smooth complete-tail estimate improve useful intervals to ell≥U^(1/4+rho), preserving the B06 logarithmic rates. No every-center bound, evaluated onset, full-c/time/depth extension or E08. |
+| GNP-RS-B08 | B / authorized shifted-sum improvement; actual configuration unavailable | COMPLETE at classical-and-inherited-input analytical-proof and contributing internal-check scope, 12 November 2026 | [Proof](../notes/25_GNP_RS_B08_EXPONENT_PAIR_LOCALIZATION_20261112.md), [Review13](../reviews/13_GNP_RS_B08_INTERNAL_ASSESSMENT_20261112.md), [return](../notes/26_GNP_RS_B08_RETURN_AND_MODEL_CHANGE_20261112.md). Verified pair (2/7,4/7), paid remainder/large shifts and retuned cutoffs yield ell≥U^(17/72+rho), retaining logarithmic rates. Fixed-pair majorant floor1/8 is scoped; no every-center bound, evaluated onset, full-c/time/depth extension or E08. |
+| GNP-RS-B09 | B / authorized joint-shift test; actual configuration unavailable | COMPLETE at proved-in-note scoped-diagnostic, primary-source applicability-screen and contributing internal-check scope, 12 November 2026 | [Note27](../notes/27_GNP_RS_B09_JOINT_POISSON_SCOPE_TEST_20261112.md), [Review14](../reviews/14_GNP_RS_B09_INTERNAL_ASSESSMENT_20261112.md), [return](../notes/28_GNP_RS_B09_RETURN_AND_MODEL_CHANGE_20261112.md). Absolute dual-principal payment costs U^(3/8)/ell; blanket nonresonance and direct printed joint-theorem import fail their premises. No actual-tail lower bound or new localization; B08 remains current, every-center control open. No E08. |
+| GNP-RS-B10 | B / authorized signed joint estimate; actual configuration unavailable | COMPLETE at proof-from-published-and-inherited-inputs and same-assistant-check scope, 12 November 2026 | [Note29](../notes/29_GNP_RS_B10_SIGNED_MELLIN_MEAN_ESTIMATE_20261112.md), [Review15](../reviews/15_GNP_RS_B10_SAME_ASSISTANT_ASSESSMENT_20261112.md), [return](../notes/30_GNP_RS_B10_RETURN_AND_MODEL_CHANGE_20261112.md). Exact-cutoff Mellin projection bounds the signed real correlation; actual low weights and M,Y=U^(1/10) give ell≥U^(17/81+rho), with all residual payments and prior logarithmic rates. No every-center bound or numerical onset. The subsequent [pre-integration audit](../reviews/16_GNP_RS_B10_PREINTEGRATION_ASSESSMENT_20261112.md) is complete. |
+| GNP-RS-E08 | E / author-requested manuscript integration after the B10 audit | COMPLETE at integration and build-verification scope, 12 November 2026 | [Live section](../../manuscript/sections/10d_short_window_means.tex), [integration check](../reviews/17_GNP_RS_B10_MANUSCRIPT_VERIFICATION_20261112.md) and [build record](../../numerics/03_GNP_RS_B10_INTEGRATION_BUILD_RECORD_20261112.json). The (17/81) averaged range and power remainder are integrated with their named inputs. The Green corollary uses the block-constant cutoff `P_U = floor(L_U²)`. Every-center control remains open. |
 
 Saddle locations, their smooth motion and their nondegenerate phase
 curvatures are background identities. A universal off-line
@@ -45,7 +142,85 @@ No numerical campaign, candidate zero search, physical source change,
 time-clock change or derivative-only sign criterion is authorized by
 this setup. The parent GNP-E01 owns manuscript/setup production only.
 
-Setup is complete. The [parent opening manuscript](../../manuscript/README.md) supplies the background; the [canonical continuation note](../../notes/02_GNP_CONTINUATION_AND_PROMPTS_20261110.md) contains this child’s standalone prompt. The author's 11 November clarification makes arbitrary height the objective and specific heights stepping stones. Uniform height, uniform approach to time zero and uniform shrinking-depth control are separate requirements. B01, E01, B02 and E03 are complete at their stated scopes; B03 and its authorized E04 follow-on are complete at the scopes below. B04 and its E05 follow-through are now complete at the stated scopes; B05/E06 are now complete. No next task is issued; the tested value-acquisition routes await a new arithmetic input.
+Setup is complete. The [parent opening manuscript](../../manuscript/README.md) supplies the background; the [canonical continuation router](../../notes/02_GNP_CONTINUATION_AND_PROMPTS_20261110.md) points to the current [B10 return](../notes/30_GNP_RS_B10_RETURN_AND_MODEL_CHANGE_20261112.md). The author's height requirement makes arbitrary height the objective and specific heights stepping stones. Uniform height, uniform approach to time zero and uniform shrinking-depth control are separate requirements. B01 through B05 and E01 through E07 retain the completion scopes recorded in the table. The 11 November stop is historical for routing: on 12 November the author selected B06, whose bounded analytical execution is now complete at the scope above. The earlier tested value-acquisition obstructions remain valid within their original classes.
+
+## B06 analytical completion — 12 November 2026
+
+[Note21](../notes/21_GNP_RS_B06_GROWING_CUTOFF_MEAN_20261112.md) proves the requested quantitative growing-cutoff
+mean, including a full U,ell,P ledger. The uniform diagonal estimate is
+pointwise in its coefficient parameter, with no exponential P-loss; the
+physical field conclusion requires averaging. Weighted Euler/reciprocal
+truncation is paid in mean square. One low-head refinement pays the omitted
+complete arm and makes the retained reflected phases nonstationary. The
+complete correction, physical-clock comparison, cutoff activations and
+convolution edges remain in the bound.
+
+For fixed 0<rho≤5/8, all real U beyond the finite analytical gates, and
+U^(3/8+rho)≤ell≤U, the selected-cutoff residual mean differs from mu_P by
+O_rho(L_U^(-3/2)). The Green mean is O_rho(L_U^(-1/3)), with fixed-threshold
+exceptional proportion O_(h,rho)(L_U^(-1)). The first remaining localization
+loss is U^(3/8)(1+log U)/ell in the complete-arm tail and convolution edges.
+It is a majorant limitation, not a lower bound on the actual correlations.
+
+[Review11](../reviews/11_GNP_RS_B06_INTERNAL_ASSESSMENT_20261112.md) accepts the final proof at inherited-input
+scope and discloses the assessor's essential low-head contribution.
+The [return](../notes/22_GNP_RS_B06_RETURN_AND_MODEL_CHANGE_20261112.md) recommends GPT-6 Astra for a bounded new
+localization estimate, provisionally B07; this is guidance, not a frozen
+execution request. No E08, manuscript change, numerical campaign,
+every-center exclusion, or RSCT event exclusion is issued. Finite heights,
+full c band, varying block cutoffs, shrinking depth and time zero remain.
+
+The [result index](../../../../../result-summaries/README.md),
+[cluster11](../../../../../result-summaries/11_newman_heat_flow_reductions_and_certificates.md),
+[controls12](../../../../../result-summaries/12_collision_controls_and_screening.md)
+and [avoid index](../../../../../avoid/README.md) are cited and screened in
+the proof/return. Chat0006 is registered here from its exact local source;
+current counts, capture times, model configurations and hashes belong to
+its registry. For Edward Baker with Codex assistance; actual model/effort
+unavailable. The small [execution record](../numerics/13_GNP_RS_B06_INPUTS_AND_CHECKS_20261112.json)
+is a provenance/document record, not a numerical certificate.
+
+## Historical B06 selection and continuation preparation — 12 November 2026
+
+The author agreed with the first strategy in [brainstorm Note04](../brainstorm/notes/04_GNP_RS_STATE_OPEN_PROBLEMS_AND_PATHS_20261112.md)
+and requested the overview/progress update and a continuation, emphasizing
+analytical arguments that may extend to all heights. The selected first
+target, still unproved, is
+\[
+ \left|\frac1U\int_U^{2U}R_{P_U}(X,1)\,dX-\mu_{P_U}\right|
+ \le\varepsilon(U,U,P_U)\to0,\qquad P_U=\lfloor L_U^2\rfloor,
+\]
+\[
+ \mu_P=\zeta(3/2)\prod_{p\le P}(1-p^{-3/2})-1,
+ \qquad L_U=\log(U/(4\pi)).
+\]
+The intended theorem must quantify every sufficiently large real U,
+with all parameter dependence and finite onset conditions explicit.
+Weighted truncation of the reciprocal/Euler expansions is the first
+analytical route to test. The error ledger retains the diagonal, every
+oscillatory cross term, full correction, cutoff jumps, physical-clock
+comparison and spatial/height edges.
+
+Carry the interval length in
+\(\ell^{-1}\int_U^{U+\ell}R_P(X,1)\,dX\), with P constant on the
+interval. Determine the proved useful length range and the first loss
+preventing further localization. A dyadic mean is a milestone only at
+its actual scope; the return must identify the remaining direct signed
+estimate or space-time persistence input needed for exceptional centers.
+Finite heights, the full c band, changing cutoffs, shrinking depth and
+time zero remain explicit coverage obligations.
+
+**Completed in this turn:** planning/documentation and the
+[standalone analytical continuation](../brainstorm/notes/05_GNP_RS_GROWING_CUTOFF_ANALYTICAL_CONTINUATION_20261112.md).
+**At that planning return, not yet executed:** the B06 mathematical proof attempt; superseded by the analytical completion above. No E08, numerical
+campaign, manuscript milestone or critical-time exclusion is issued.
+The [result index](../../../../../result-summaries/README.md),
+[heat-flow cluster11](../../../../../result-summaries/11_newman_heat_flow_reductions_and_certificates.md),
+[control catalog12](../../../../../result-summaries/12_collision_controls_and_screening.md)
+and [avoid index](../../../../../avoid/README.md) retain their interpretation;
+the continuation names each control's missing premise and classifies the
+target as a quantitative milestone under avoid01.
+For Edward Baker with Codex assistance; actual model/effort unavailable.
 
 ## Next-session authorization — 11 November 2026
 
@@ -320,3 +495,100 @@ is fixed. No numerical campaign, manuscript or external reference was added.
 The author requested the current manuscript be updated before further systematic development. Prepared for Edward Baker with substantial Codex assistance; child chat0004 records no actual model or effort. The [integration](../notes/19_GNP_RS_MANUSCRIPT_AND_AVERAGED_GREEN_VALUES_20261111.md) consolidates E01–E06 in the existing parent manuscript, preserves the full physical field and distinct quantifiers, and derives a further c=1 averaged consequence. The density proof extends to each fixed positive threshold; the coherent moment gives an eventual mean exp(4J) ≤39. Layer-cake integration gives all finite power-mean convergence and subcritical exponential-mean convergence, without a rate.
 
 The [check](../reviews/10_GNP_RS_MANUSCRIPT_AND_MEAN_SELF_CHECK_20261111.md) is by the same assistant. No new independent exceptional-center arithmetic input was found. The B05/E06 stop remains in force for the tested value-acquisition routes. No B06 or next execution request was issued, and the separate parent time-zero/OC/OA tasks are unchanged. Historical packets and evidence files were not edited. Current manuscript navigation and the shared result/avoidance pointers now reflect this milestone.
+
+## B07 localized-tail return — 12 November 2026
+
+The author's Note22 continuation is complete in Note23 at the evidence scope
+stated above. The exact Fubini weight has bounded variation and mass
+1−O(U^-4); all finite-head/reflected terms are integrated against it, so
+no growing boundary penalty remains. A nonnegative smooth majorant pays
+the complete tail, weight/small-phase freezing and all cutoff jumps.
+Discrete third-derivative cancellation in the arithmetic index gives
+U^(7/24)ell^(-7/6)+U^(5/24)ell^(-5/6), yielding ell≥U^(1/4+rho).
+Primary-source use and retained external PDFs have a reference manifest;
+record14 contains exact exponent and document checks, not numerical proof.
+
+The new majorant is order one at ell=U^(1/4). This limits the displayed
+absolute shift-summation argument only. The total allowed Green mass still
+grows, and no every-center/persistence estimate has been obtained. Note24
+proposes a bounded B08 test of the exact shifted sum before absolute
+summation, recommended GPT-6 Astra; it is not executed. No manuscript
+change, source/clock substitution, numerical campaign or E08. For Edward
+Baker with Codex assistance; actual configuration unavailable, same chat0006.
+
+## B08 shifted-sum return — 12 November 2026
+
+The author-authorized Note24 continuation is complete in Note25 at its
+stated evidence scope. Pair (2/7,4/7) is applied through a checked uniform
+semimonomial phase class, including partial intervals and the N/T remainder.
+Large shifts outside that class are paid by the fixed Fourier weight.
+The complete-tail leading cost is U^(17/56)ell^(-9/7), and M,Y=U^(1/9)
+retain the gain in the full weighted residual ledger. Useful intervals
+therefore start at U^(17/72+rho), preserving the logarithmic rates.
+Review13 is contributing internal checking with shared inherited inputs.
+
+At the new endpoint the displayed leading majorant is order one. The
+largest-block threshold formula for the conventional fixed-pair/absolute-shift
+recipe is at least1/8; this is not an actual-correlation lower bound or
+universal obstruction. Every-center, persistence and broader coverage remain
+open. Note26 proposes one bounded joint m,h estimate as B09, recommended
+GPT-6 Astra, not executed. No E08, manuscript integration, numerical campaign
+or source/clock change. For Edward Baker with Codex assistance; actual
+model/effort unavailable; same registered chat0006.
+
+## B09 joint-shift return — 12 November 2026
+
+The author's continuation from Note26 is complete at the scoped-test
+status stated in Note27. The exact reciprocal stationary map preserves
+log-ratio phase and dominant scale. An explicitly defined positive
+principal-amplitude allowance is asymptotic in order to U^(3/8)/ell,
+hence U^(5/36) at the B08 endpoint. This is not a lower bound on the
+actual sum, and no unpaid Poisson remainder is used as an estimate.
+Canonical gradient-lattice resonances refute blanket nonresonance; a
+separate quadratic screens determinant-only arguments. The printed
+Bourgain–Watt Theorem2 fails necessary shift gates by powers5/66 and7/72.
+Its omitted-case remark remains a possible future source lead, not an input.
+Review14 is contributing internal checking with shared inherited sources.
+
+The current theorem remains B08: ell≥U^(17/72+rho), exact boundaries and
+all logarithmic rates retained. Every-center control and broader coverage
+remain open. Note28 gives a future requested signed-estimate/theorem-adaptation
+choice and explicit delta<1/72 consumer test, recommended GPT-6 Astra.
+Stop this tested route; no B10, E08, manuscript integration, numerical
+campaign or source/clock change is activated. Record16 stores exact
+fractions, identities and document checks. For Edward Baker with Codex
+assistance; actual model/effort unavailable; same registered chat0006.
+
+## B10 pre-integration audit — 12 November 2026
+
+- Registered child chat0008 from the exact local paginated source.
+- Rederived the cutoff, contour, kernel and pole estimates, the cumulative
+  mean-square transfer, and the low/high/full arm norm estimates.
+  Traced the weighted residual ledger, physical clock and Green transfer.
+- [Note31](../notes/31_GNP_RS_B10_PREINTEGRATION_PROOF_AUDIT_20261112.md) and [Review16](../reviews/16_GNP_RS_B10_PREINTEGRATION_ASSESSMENT_20261112.md)
+  support the same 17/81 exponent and remainder from the named inputs.
+  Use the exact block cutoff in the Green corollary and the checked
+  Montgomery–Vaughan phase-class citation. The parent manuscript remains
+  at E07. [Note32](../notes/32_GNP_RS_B10_AUDIT_RETURN_AND_MODEL_CHANGE_20261112.md) recommends GPT-6.1 Sol for integration
+  and GPT-6 Astra for a later persistence question. Prepared for Edward
+  Baker with substantial Codex assistance and separate internal
+  contributions. Actual model and effort are unavailable.
+
+## B10 manuscript integration (E08) — 12 November 2026
+
+The [live section](../../manuscript/sections/10d_short_window_means.tex) integrates the audited
+[proof](../notes/31_GNP_RS_B10_PREINTEGRATION_PROOF_AUDIT_20261112.md) and [assessment](../reviews/16_GNP_RS_B10_PREINTEGRATION_ASSESSMENT_20261112.md) at the original (c=1)
+geometry and physical clock. The proof retains the exact convolution
+weight and the signed real quadratic estimate, with the cumulative
+zeta error, Mellin pole and frequency tails, low-mode estimates,
+finite-head costs and clock comparison. The Green transfer specifies
+the block cutoff `P_U = floor(L_U²)`. The residual theorem is uniform in the
+full stated range of block-constant (P), with the existing large-height
+onset unevaluated.
+
+The 68-page PDF was rebuilt and checked. See the
+[build record](../../numerics/03_GNP_RS_B10_INTEGRATION_BUILD_RECORD_20261112.json) and [integration check](../reviews/17_GNP_RS_B10_MANUSCRIPT_VERIFICATION_20261112.md)
+for source and production checks.
+The [integration return](../notes/33_GNP_RS_B10_MANUSCRIPT_INTEGRATION_20261112.md)
+recommends GPT-6 Astra for the moving-time persistence or
+maximum-to-average question. Prepared for Edward Baker with substantial OpenAI Codex assistance. Actual model and effort are unavailable in chat0008.

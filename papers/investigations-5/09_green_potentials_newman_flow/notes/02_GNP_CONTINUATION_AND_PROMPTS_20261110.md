@@ -1,5 +1,68 @@
 # Continuation and standalone prompts
 
+**Boundary-bootstrap child setup, 13 November 2026.** The new [02 — Boundary bootstrap child](../02_height_time_boundary_bootstrap/README.md) has its own canonical [continuation and standalone prompt](../02_height_time_boundary_bootstrap/notes/01_GNP_BB_CONTINUATION_AND_PROMPT_20261113.md) and [sole GNP-BB register](../02_height_time_boundary_bootstrap/research-progress/01_GNP_BB_RESEARCH_PROGRESS_20261113.md). Use those for the adaptive boundary/offset proposal. This note retains the parent and child 01 guidance and historical returns; it is not a second GNP-BB status owner. For Edward Baker with Codex assistance; actual model/effort unavailable.
+
+**Current return, 12 November 2026.** The [live manuscript](../manuscript/sections/10d_short_window_means.tex)
+includes the audited B10 averaged theorem at `c=1`, with
+`ell ≥ U^(17/81+rho)` and the explicit block cutoff in the Green transfer.
+The [integration return](../01_riemann_siegel_evolution/notes/33_GNP_RS_B10_MANUSCRIPT_INTEGRATION_20261112.md) records the verified build and
+suggests GPT-6 Astra for a future moving-time persistence question.
+Prepared for Edward Baker with substantial OpenAI Codex assistance. Actual model and effort are unavailable in chat0008.
+
+**Previous B09 return (current-range routing superseded by B10), 12 November 2026:** GNP-RS-B09 is COMPLETE at
+proved-in-note scoped-diagnostic, primary-source applicability-screen and
+contributing internal-check scope. [Note27](../01_riemann_siegel_evolution/notes/27_GNP_RS_B09_JOINT_POISSON_SCOPE_TEST_20261112.md) proves that absolute payment of the specified dual
+stationary population costs U^(3/8)/ell, hence U^(5/36) at B08's endpoint.
+The canonical phase has lattice-gradient resonances; the directly tested
+Bourgain–Watt joint theorem fails its shift-range gates. These are scoped
+method/premise failures, not actual-tail lower bounds or a universal barrier.
+[Review14](../01_riemann_siegel_evolution/reviews/14_GNP_RS_B09_INTERNAL_ASSESSMENT_20261112.md) records the contributing check. No new localization
+or every-center bound was obtained. At the B09 return, B08's 17/72 range
+and exact boundary repair remained current. [Note28](../01_riemann_siegel_evolution/notes/28_GNP_RS_B09_RETURN_AND_MODEL_CHANGE_20261112.md) recommends GPT-6 Astra for a future requested signed estimate
+or concrete theorem adaptation, with range and consumer tests. B10 and E08 followed this historical return. For Edward Baker with substantial Codex
+assistance; actual model/effort unavailable in registered chat0006.
+
+**Previous B08 return, 12 November 2026:** GNP-RS-B08 is COMPLETE at
+classical-and-inherited-input analytical-proof and contributing separate-agent
+internal-check scope. [Note25](../01_riemann_siegel_evolution/notes/25_GNP_RS_B08_EXPONENT_PAIR_LOCALIZATION_20261112.md) improves the useful
+interval range to U^(17/72+rho)≤ell≤U, fixed 0<rho≤19/72, retaining
+residual-mean error O(L_U^(-3/2)), Green mean O(L_U^(-1/3)) and fixed-threshold
+proportion O(L_U^(-1)). A verified classical exponent-pair application pays
+the complete shifted tail; B07's exact boundary repair remains in place.
+[Review13](../01_riemann_siegel_evolution/reviews/13_GNP_RS_B08_INTERNAL_ASSESSMENT_20261112.md) records the contributing check.
+Every-center control remains open. [Note26](../01_riemann_siegel_evolution/notes/26_GNP_RS_B08_RETURN_AND_MODEL_CHANGE_20261112.md) recommends
+GPT-6 Astra for a bounded joint-shift estimate; B09 is proposed guidance,
+not execution, and no E08 is issued. For Edward Baker with substantial
+Codex assistance; actual model/effort unavailable in chat0006. Earlier
+B06/B07 statements remain valid; their current-loss descriptions are historical.
+
+**Previous B07 return, 12 November 2026:** GNP-RS-B07 is COMPLETE at
+inherited-input analytical-proof and contributing separate-agent internal-check
+scope. [Note23](../01_riemann_siegel_evolution/notes/23_GNP_RS_B07_LOCALIZED_TAIL_AND_EXACT_BOUNDARY_20261112.md) improves the useful interval range to
+U^(1/4+rho)≤ell≤U, fixed 0<rho≤1/4, retaining residual-mean error
+O(L_U^(-3/2)), Green mean O(L_U^(-1/3)) and fixed-threshold proportion
+O(L_U^(-1)). The exact convolution weight removes the separate boundary
+penalty; smooth shifted-pair cancellation reduces the complete-tail loss.
+[Review12](../01_riemann_siegel_evolution/reviews/12_GNP_RS_B07_INTERNAL_ASSESSMENT_20261112.md) records the contributing check.
+The every-center estimate remains open. [Note24](../01_riemann_siegel_evolution/notes/24_GNP_RS_B07_RETURN_AND_MODEL_CHANGE_20261112.md)
+recommends GPT-6 Astra for one bounded improvement to the remaining
+shifted correlation sum; B08 is guidance, not execution, and no E08 is issued.
+For Edward Baker with substantial Codex assistance; actual model/effort
+unavailable in chat0006's recorded configurations. B06 remains valid at its
+original scope; its localization-loss description below is historical.
+
+**Previous B06 return, 12 November 2026:** GNP-RS-B06 is COMPLETE at
+inherited-input analytical-proof and contributing separate-agent internal-check
+scope. The [proof](../01_riemann_siegel_evolution/notes/21_GNP_RS_B06_GROWING_CUTOFF_MEAN_20261112.md) gives residual-mean error
+O(L_U^(-3/2)) at P_U=floor(L_U²), uniformly for every sufficiently large
+real U on U^(3/8+rho)≤ell≤U, fixed 0<rho≤5/8. The resulting Green mean is
+O(L_U^(-1/3)); exceptional centers remain unresolved. [Review11](../01_riemann_siegel_evolution/reviews/11_GNP_RS_B06_INTERNAL_ASSESSMENT_20261112.md)
+records the shared-input check. The [return and model-change guidance](../01_riemann_siegel_evolution/notes/22_GNP_RS_B06_RETURN_AND_MODEL_CHANGE_20261112.md)
+recommends GPT-6 Astra for the next bounded complete-arm/tail localization
+question. No E08 is issued or executed. Prepared for Edward Baker with
+substantial Codex assistance; actual model/effort unavailable in chat0006's
+recorded configuration.
+
 **Separate critical-time investigation, 11 November 2026:** at the author's
 request, future work on the assumed positive-threshold symmetric RS
 argument now belongs to [Investigation10](../../10_riemann_siegel_critical_time/README.md). Its
@@ -10,7 +73,7 @@ requests remain here unchanged. The Green-band continuation below retains
 its own scope. Prepared for Edward Baker with Codex assistance; actual
 model/effort unavailable. This is setup and routing, not a new result.
 
-**Latest author clarification, 11 November 2026:** for the RS child,
+**Historical author clarification, 11 November 2026:** for the RS child,
 the intended direction assumes Λ>0 and uses the complete symmetric
 Riemann–Siegel formula at λ=Λ. Read [child Note20](../01_riemann_siegel_evolution/notes/20_GNP_RS_GREEN_GEOMETRY_AND_CRITICAL_TIME_20261111.md)
 before the historical prompts below. It explains why J vanishes at that
@@ -26,11 +89,11 @@ Established 10 November 2026; child E07 manuscript/averaged-value return and pre
 
 **Handoff snapshot, 11 November 2026.** Investigation09 is the shallow background and Green continuation; its only research child is Riemann–Siegel evolution. The opening manuscript is complete at synthesis/production scope. Child E01 proves the uniform outer prime baseline from inherited inputs. Child B02 gives an exact shifted-zeta identity whose coupled signed estimate is unpaid. Child E03 proves the exact quadratic-moment law at \(c=1\) and failure of the localized quadratic-Jensen allowance at arbitrarily high centers. The signed canonical upper value remains open. Earlier checks retain their same-assistant scope. B03/E04 now have separate internal Sol6.1/ultra assessment, sharing inherited inputs; live registers own status and root task dispositions are unchanged.
 
-**Current child milestone:** B04/E05 prove zero dyadic density of bad centers
+**Established child milestones through 11 November:** B04/E05 prove zero dyadic density of bad centers
 on c=1 and unbounded residuals for every fixed finite Euler reference.
 The every-center objective remains open. The internal assessor contributed
 the twisted-moment route. B05/E06 now pay adaptive phase overhead and prove the fixed-P signed
-tangent obstruction. Current child guidance is [Note19](../01_riemann_siegel_evolution/notes/19_GNP_RS_MANUSCRIPT_AND_AVERAGED_GREEN_VALUES_20261111.md); Note18's exceptional-center stop is preserved. The live manuscript now includes E01–E06 and the derived finite-power/subcritical-exponential Green mean convergence at c=1. No next task is issued without a new arithmetic input.
+tangent obstruction. [Note19](../01_riemann_siegel_evolution/notes/19_GNP_RS_MANUSCRIPT_AND_AVERAGED_GREEN_VALUES_20261111.md) records E07; Note18's exceptional-center gap is preserved. The live manuscript includes E01–E06 and the derived finite-power/subcritical-exponential Green mean convergence at c=1. B06 subsequently acquired the quantitative growing-cutoff mean described above; the exceptional-center gap remains.
 
 | Destination/task | Type / recommendation and reason | Readiness/dependency | Output |
 | --- | --- | --- | --- |
@@ -42,7 +105,11 @@ tangent obstruction. Current child guidance is [Note19](../01_riemann_siegel_evo
 | Child GNP-RS-E03 | E / GPT-6.1 Sol: fixed coherent-moment proof and scoped Jensen consequence | Complete at analytical-proof and same-assistant-check scope, 11 November | Exact local moment limit and failure of the exact allowance at arbitrarily high centers |
 | Child GNP-RS-B03/E04 | B / Astra ultra; E / Sol6.1 ultra | Complete at obstruction/transfer and internal-review scope | [Current return](../01_riemann_siegel_evolution/notes/12_GNP_RS_B03_E04_RETURN_AND_MODEL_CHANGE_20261111.md) |
 | Child GNP-RS-B04/E05 | B / Astra ultra; E / Sol6.1 ultra | Complete at decision/proof and internal-assessment scope | [Density gain and fixed-reference failure](../01_riemann_siegel_evolution/notes/15_GNP_RS_B04_E05_RETURN_AND_MODEL_CHANGE_20261111.md) |
-| Child GNP-RS-B05/E06 | B / Astra ultra; E / Sol6.1 ultra | Complete at bounded decision/proof and contributing internal-review scope | [Adaptive phase gain and signed tangent limit](../01_riemann_siegel_evolution/notes/18_GNP_RS_B05_E06_RETURN_AND_MODEL_CHANGE_20261111.md); no next task issued |
+| Child GNP-RS-B05/E06 | B / Astra ultra; E / Sol6.1 ultra | Complete at bounded decision/proof and contributing internal-review scope | [Adaptive phase gain and signed tangent limit](../01_riemann_siegel_evolution/notes/18_GNP_RS_B05_E06_RETURN_AND_MODEL_CHANGE_20261111.md); no next task issued at that return |
+| Child GNP-RS-B06 | B / analytical development; actual configuration unavailable | Complete at inherited-input proof and contributing internal-check scope, 12 November | [Proof](../01_riemann_siegel_evolution/notes/21_GNP_RS_B06_GROWING_CUTOFF_MEAN_20261112.md) and [return](../01_riemann_siegel_evolution/notes/22_GNP_RS_B06_RETURN_AND_MODEL_CHANGE_20261112.md); growing-cutoff mean with ell≥U^(3/8+rho), no every-center bound or E08 |
+| Child GNP-RS-B07 | B / localized tail and exact boundary; actual configuration unavailable | Complete at inherited-input proof and contributing internal-check scope, 12 November | [Proof](../01_riemann_siegel_evolution/notes/23_GNP_RS_B07_LOCALIZED_TAIL_AND_EXACT_BOUNDARY_20261112.md) and [return](../01_riemann_siegel_evolution/notes/24_GNP_RS_B07_RETURN_AND_MODEL_CHANGE_20261112.md); ell≥U^(1/4+rho), no every-center bound or E08 |
+| Child GNP-RS-B08 | B / verified exponent-pair application; actual configuration unavailable | Complete at classical-and-inherited-input proof and contributing internal-check scope, 12 November | [Proof](../01_riemann_siegel_evolution/notes/25_GNP_RS_B08_EXPONENT_PAIR_LOCALIZATION_20261112.md) and [return](../01_riemann_siegel_evolution/notes/26_GNP_RS_B08_RETURN_AND_MODEL_CHANGE_20261112.md); ell≥U^(17/72+rho), every-center control open, no E08 |
+| Child GNP-RS-B09 | B / joint-shift test; actual configuration unavailable | Complete at scoped-diagnostic, source-screen and contributing internal-check scope, 12 November | [Note27](../01_riemann_siegel_evolution/notes/27_GNP_RS_B09_JOINT_POISSON_SCOPE_TEST_20261112.md) and [return](../01_riemann_siegel_evolution/notes/28_GNP_RS_B09_RETURN_AND_MODEL_CHANGE_20261112.md); stated joint-route failures, no new gain; B08 and every-center gap unchanged, no E08 |
 
 ## Entry points and ownership
 
@@ -99,15 +166,25 @@ Deliver one assessment in reviews/, supporting derivations in notes/ if needed, 
 Register a new root-only chat in this investigation's chat-histories/ using its actual id/title and the approved recorder. If already registered elsewhere, keep its unique home. Refresh before the final reply and arrange the bounded exact-turn follow-up. Update the sole GNP register and DRAFT_HISTORY with the actual disposition and refresh the canonical continuation note without activating later tasks.
 ~~~
 
-## Current child continuation: new arithmetic input required
+## Current child continuation after B10 manuscript integration
+
+[Note32](../01_riemann_siegel_evolution/notes/32_GNP_RS_B10_AUDIT_RETURN_AND_MODEL_CHANGE_20261112.md) supplied the
+pre-integration handoff. The [live section](../manuscript/sections/10d_short_window_means.tex) contains
+the `c=1` short-window averaged theorem and the explicit block cutoff
+in its Green consequences. See the [integration return](../01_riemann_siegel_evolution/notes/33_GNP_RS_B10_MANUSCRIPT_INTEGRATION_20261112.md)
+for build verification and the suggested GPT-6 Astra continuation
+on moving-time persistence. Child notes, assessments, register and
+chat history retain ownership. Prepared for Edward Baker with substantial OpenAI Codex assistance. Actual model and effort are unavailable in chat0008.
+
+## Historical B05 and E07 stop recorded 11 November
 
 B05 and E06 are complete at their stated scopes. [Note18](../01_riemann_siegel_evolution/notes/18_GNP_RS_B05_E06_RETURN_AND_MODEL_CHANGE_20261111.md)
 records the acquired uniform adaptive phase bound, fixed-P signed tangent
 obstruction and exact remaining arithmetic estimate. No B06 or further
-execution is issued. The tested value-acquisition routes are parked
+execution was issued at that return. Those tested value-acquisition routes were parked
 pending new arithmetic information; this is not a universal impossibility
 statement. Use GPT-6 Astra at ultra effort for further requested conceptual
 work and GPT-6.1 Sol at ultra effort once a new proof contract is fixed.
 Root task statuses and parent time-zero/OC/OA ownership remain unchanged.
 
-**E07 update:** use [Note19](../01_riemann_siegel_evolution/notes/19_GNP_RS_MANUSCRIPT_AND_AVERAGED_GREEN_VALUES_20261111.md) and [Review10](../01_riemann_siegel_evolution/reviews/10_GNP_RS_MANUSCRIPT_AND_MEAN_SELF_CHECK_20261111.md) for the current manuscript and direct mean consequences. Read the result/avoidance indexes linked above. The finite-power mean theorem supplies no pointwise limit, growing-P residual estimate or exceptional-center exclusion; no new execution is ready on that basis. Recommendations above are unchanged and do not identify this editor's unavailable model/effort.
+**E07 update:** use [Note19](../01_riemann_siegel_evolution/notes/19_GNP_RS_MANUSCRIPT_AND_AVERAGED_GREEN_VALUES_20261111.md) and [Review10](../01_riemann_siegel_evolution/reviews/10_GNP_RS_MANUSCRIPT_AND_MEAN_SELF_CHECK_20261111.md) for the 11 November manuscript integration and its direct mean consequences. Read the result/avoidance indexes linked above. The finite-power mean theorem supplies no pointwise limit, growing-P residual estimate or exceptional-center exclusion; no new execution is ready on that basis. Recommendations above are unchanged and do not identify this editor's unavailable model/effort.

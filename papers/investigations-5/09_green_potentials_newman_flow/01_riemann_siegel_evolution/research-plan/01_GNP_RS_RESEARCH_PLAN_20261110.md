@@ -1,5 +1,68 @@
 # Bounded Riemann–Siegel decision plan
 
+**Boundary-bootstrap child setup, 13 November 2026.** The variable-boundary part of the subsequent persistence discussion has a separate [GNP-BB plan](../../02_height_time_boundary_bootstrap/research-plan/01_GNP_BB_RESEARCH_PLAN_20261113.md) and [register](../../02_height_time_boundary_bootstrap/research-progress/01_GNP_BB_RESEARCH_PROGRESS_20261113.md). The GNP-RS contracts and evidence below remain here. This routing activates no research. For Edward Baker with Codex assistance; actual model/effort unavailable.
+
+**Current return, 12 November 2026.** The [live manuscript](../../manuscript/sections/10d_short_window_means.tex)
+includes the audited B10 averaged theorem at `c=1`, with
+`ell ≥ U^(17/81+rho)` and the explicit block cutoff in the Green transfer.
+The [integration return](../notes/33_GNP_RS_B10_MANUSCRIPT_INTEGRATION_20261112.md) records the verified build and
+suggests GPT-6 Astra for a future moving-time persistence question.
+Prepared for Edward Baker with substantial OpenAI Codex assistance. Actual model and effort are unavailable in chat0008.
+
+**Previous B09 return (current-range routing superseded by B10), 12 November 2026:** GNP-RS-B09 is COMPLETE at
+proved-in-note scoped-diagnostic, primary-source applicability-screen and
+contributing internal-check scope. [Note27](../notes/27_GNP_RS_B09_JOINT_POISSON_SCOPE_TEST_20261112.md) proves that absolute payment of the specified dual
+stationary population costs U^(3/8)/ell, hence U^(5/36) at B08's endpoint.
+The canonical phase has lattice-gradient resonances; the directly tested
+Bourgain–Watt joint theorem fails its shift-range gates. These are scoped
+method/premise failures, not actual-tail lower bounds or a universal barrier.
+[Review14](../reviews/14_GNP_RS_B09_INTERNAL_ASSESSMENT_20261112.md) records the contributing check. No new localization
+or every-center bound was obtained. At the B09 return, B08's 17/72 range
+and exact boundary repair remained current. [Note28](../notes/28_GNP_RS_B09_RETURN_AND_MODEL_CHANGE_20261112.md) recommends GPT-6 Astra for a future requested signed estimate
+or concrete theorem adaptation, with range and consumer tests. B10 and E08 followed this historical return. For Edward Baker with substantial Codex
+assistance; actual model/effort unavailable in registered chat0006.
+
+**Previous B08 return, 12 November 2026:** GNP-RS-B08 is COMPLETE at
+classical-and-inherited-input analytical-proof and contributing separate-agent
+internal-check scope. [Note25](../notes/25_GNP_RS_B08_EXPONENT_PAIR_LOCALIZATION_20261112.md) improves the useful
+interval range to U^(17/72+rho)≤ell≤U, fixed 0<rho≤19/72, retaining
+residual-mean error O(L_U^(-3/2)), Green mean O(L_U^(-1/3)) and fixed-threshold
+proportion O(L_U^(-1)). A verified classical exponent-pair application pays
+the complete shifted tail; B07's exact boundary repair remains in place.
+[Review13](../reviews/13_GNP_RS_B08_INTERNAL_ASSESSMENT_20261112.md) records the contributing check.
+Every-center control remains open. [Note26](../notes/26_GNP_RS_B08_RETURN_AND_MODEL_CHANGE_20261112.md) recommends
+GPT-6 Astra for a bounded joint-shift estimate; B09 is proposed guidance,
+not execution, and no E08 is issued. For Edward Baker with substantial
+Codex assistance; actual model/effort unavailable in chat0006. Earlier
+B06/B07 statements remain valid; their current-loss descriptions are historical.
+
+**Previous B07 return, 12 November 2026:** GNP-RS-B07 is COMPLETE at
+inherited-input analytical-proof and contributing separate-agent internal-check
+scope. [Note23](../notes/23_GNP_RS_B07_LOCALIZED_TAIL_AND_EXACT_BOUNDARY_20261112.md) improves the useful interval range to
+U^(1/4+rho)≤ell≤U, fixed 0<rho≤1/4, retaining residual-mean error
+O(L_U^(-3/2)), Green mean O(L_U^(-1/3)) and fixed-threshold proportion
+O(L_U^(-1)). The exact convolution weight removes the separate boundary
+penalty; smooth shifted-pair cancellation reduces the complete-tail loss.
+[Review12](../reviews/12_GNP_RS_B07_INTERNAL_ASSESSMENT_20261112.md) records the contributing check.
+The every-center estimate remains open. [Note24](../notes/24_GNP_RS_B07_RETURN_AND_MODEL_CHANGE_20261112.md)
+recommends GPT-6 Astra for one bounded improvement to the remaining
+shifted correlation sum; B08 is guidance, not execution, and no E08 is issued.
+For Edward Baker with substantial Codex assistance; actual model/effort
+unavailable in chat0006's recorded configurations. B06 remains valid at its
+original scope; its localization-loss description below is historical.
+
+**Previous B06 return, 12 November 2026:** GNP-RS-B06 is COMPLETE at
+inherited-input analytical-proof and contributing separate-agent internal-check
+scope. The [proof](../notes/21_GNP_RS_B06_GROWING_CUTOFF_MEAN_20261112.md) gives residual-mean error
+O(L_U^(-3/2)) at P_U=floor(L_U²), uniformly for every sufficiently large
+real U on U^(3/8+rho)≤ell≤U, fixed 0<rho≤5/8. The resulting Green mean is
+O(L_U^(-1/3)); exceptional centers remain unresolved. [Review11](../reviews/11_GNP_RS_B06_INTERNAL_ASSESSMENT_20261112.md)
+records the shared-input check. The [return and model-change guidance](../notes/22_GNP_RS_B06_RETURN_AND_MODEL_CHANGE_20261112.md)
+recommends GPT-6 Astra for the next bounded complete-arm/tail localization
+question. No E08 is issued or executed. Prepared for Edward Baker with
+substantial Codex assistance; actual model/effort unavailable in chat0006's
+recorded configuration. Earlier briefs below retain their historical scope.
+
 **Separate critical-time investigation, 11 November 2026:** at the author's
 request, future work on the assumed positive-threshold symmetric RS
 argument now belongs to [Investigation10](../../../10_riemann_siegel_critical_time/README.md). Its
@@ -193,6 +256,50 @@ adaptive joint-phase comparison and fixed-P signed tangent test. The
 [frozen E06 proof](../notes/17_GNP_RS_E06_ADAPTIVE_PHASE_AND_TANGENT_20261111.md) completes all four groups, with
 [contributing internal assessment](../reviews/09_GNP_RS_B05_INTERNAL_REVIEW_20261111.md). No acquired bound
 controls the adaptive arithmetic residual at every center. The bounded
-pass stops here; no B06 or further E is issued. The [current guidance](../notes/18_GNP_RS_B05_E06_RETURN_AND_MODEL_CHANGE_20261111.md)
+pass stopped there; no B06 or further E was issued at that return. The [historical guidance](../notes/18_GNP_RS_B05_E06_RETURN_AND_MODEL_CHANGE_20261111.md)
 preserves the exact missing input and recommends Astra ultra only for
 further requested conceptual work, Sol6.1 ultra after a new fixed contract.
+
+## Historical post-B07 bounded continuation
+
+The current standalone prompt is [Note24](../notes/24_GNP_RS_B07_RETURN_AND_MODEL_CHANGE_20261112.md).
+B07's exact boundary repair is complete. A proposed B08 / GPT-6 Astra pass
+should test one stronger estimate for Note23 (B07.31), paying the complete
+shifted sum, Fourier amplitude, cutoff changes and growing multipliers.
+An acceptable return is a proved quantitative localization gain or a scoped
+failed inequality. A shorter average alone is not an every-center estimate;
+state the remaining mass/persistence or pointwise obligation. This is
+proposed guidance, not a frozen execution task, numerical program or E08.
+
+## Historical post-B08 bounded continuation
+
+Use [Note26](../notes/26_GNP_RS_B08_RETURN_AND_MODEL_CHANGE_20261112.md)
+as the current standalone prompt. Proposed B09 / GPT-6 Astra should test
+one joint m,h estimate for Note25(B08.4), compared with(B08.11), preserving
+actual phases until any absolute loss is justified. The fixed-pair recipe's
+formal1/8 floor is not a universal obstruction. Return a quantitative gain
+or first scoped failure and state what remains toward pointwise or
+persistence-versus-mass control. This is guidance, not execution or E08.
+
+## Historical post-B09 scoped stop and acceptance test
+
+Use [Note28](../notes/28_GNP_RS_B09_RETURN_AND_MODEL_CHANGE_20261112.md)
+as current standalone guidance. B09 produced scoped failures, no new
+localized bound. Stop absolute dual-principal payment and direct use of
+the printed joint theorem outside its range. A future author-requested
+B10 / GPT-6 Astra should identify one actual signed estimate or concrete
+adaptation, possibly testing the source's explicitly omitted case.
+It must reach N≈sqrt(U), h≈N/ell and pass the delta<1/72 consumer test
+before a gain is claimed. All full-residual payments and the separate
+every-center obligation remain. This does not activate B10 or E08.
+
+
+## Continuation after B10 manuscript integration
+
+[Note31](../notes/31_GNP_RS_B10_PREINTEGRATION_PROOF_AUDIT_20261112.md) and [Review16](../reviews/16_GNP_RS_B10_PREINTEGRATION_ASSESSMENT_20261112.md) record the pre-integration
+proof audit. [Note32](../notes/32_GNP_RS_B10_AUDIT_RETURN_AND_MODEL_CHANGE_20261112.md) supplied the integration handoff.
+E08 now places the short-window averaged theorem in the
+[live manuscript](../../manuscript/sections/10d_short_window_means.tex).
+The [integration return](../notes/33_GNP_RS_B10_MANUSCRIPT_INTEGRATION_20261112.md) identifies moving-time persistence
+or a maximum-to-average bound as a possible GPT-6 Astra research pass.
+Prepared for Edward Baker with substantial OpenAI Codex assistance. Actual model and effort are unavailable in chat0008.

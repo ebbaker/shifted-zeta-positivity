@@ -940,3 +940,200 @@ checks the derivation and its scope. The live parent manuscript now
 integrates E01–E06 and these direct consequences; the adaptive residual
 and exceptional-center stop remain unchanged. No specialist review or
 numerical research was added.
+
+### RSCT B01 r2: signed-height cap and background constraint — 11 November 2026
+
+For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[Note04](../papers/investigations-5/10_riemann_siegel_critical_time/notes/04_RSCT_B01_R2_SIGNED_THREE_HEIGHT_ESTIMATE_20261111.md)
+is **proved in-note from named inherited approximation inputs; same-assistant checking only**.
+On T=c/log(a/(4π)), c∈[1/2,1], its complete three-height log difference
+has magnitude <13/72 after uninstantiated onset gates. An all-real
+multiplicity-m≥2 event then requires noncentral signed contribution
+<−1/36. The source states: “Equation (14) is a required negative background,
+not an excluded background.” Its finite-log kernel has zero integral and
+negative values; an actual positive-source threshold control in the same
+band passes the scalar cap. [Review02](../papers/investigations-5/10_riemann_siegel_critical_time/reviews/02_RSCT_B01_R2_SAME_ASSISTANT_CHECK_20261111.md)
+checks that scope. No zero-exclusion region, all-time coverage, finite
+onset or independent validation of the inherited HDA provider is claimed.
+
+### RSCT B01 r3: event-subtracted matrix test — 11 November 2026
+
+For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[Note05](../papers/investigations-5/10_riemann_siegel_critical_time/notes/05_RSCT_B01_R3_EVENT_SUBTRACTED_PICK_TEST_20261111.md)
+is **proved in-note from named inherited approximation inputs; same-assistant checking only**.
+Complete signed logarithmic-derivative acquisition at heights 4,6,8 gives
+the conditional all-real event cap m≤(6/13)log(a/(4π))+O(1), uniformly
+on T log(a/(4π))∈[1/2,1] at uninstantiated high onset. Its exact canonical
+matrix passes every fixed proposed multiplicity at sufficiently high centers.
+The source states: “This is a scoped failure of the fixed-height matrix
+exclusion test, not construction of a canonical collision or a realizing
+zero configuration.” [Review03](../papers/investigations-5/10_riemann_siegel_critical_time/reviews/03_RSCT_B01_R3_SAME_ASSISTANT_CHECK_20261111.md)
+checks the derivative payment, reflected event and coefficient. No new
+zero coverage, changing-resolution theorem or executable E01 contract.
+
+### RSCT B01 r4: microscopic event subtraction — 11 November 2026
+
+For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[Note06](../papers/investigations-5/10_riemann_siegel_critical_time/notes/06_RSCT_B01_R4_MICROSCOPIC_EVENT_EXPANSION_20261111.md)
+is **proved in-note from named inherited approximation inputs; same-assistant checking only**.
+On T=c/L, L=log(a/(4π)), c∈[1/2,1], it pays the complete two-arm field
+on z=a+w/L with O(a^(-3/4)) analytic error. Event subtraction preserves
+that error times |w|². The full fixed-k coefficient moment is asymptotic
+to 2 k! exp[(1/4−c/16)L]/L^k; the specified value allowance after two
+cancellations is 2β² exp[(1/4−c/16)L]/L² at w=iβ. The source states:
+“This is a lower bound on an upper allowance, not on the actual signed field or its error.”
+The denominator-free Poisson consumer has absolute o(1) error, but no
+favorable signed margin. This extends the already established collision/S04
+population and local-scaling bookkeeping, credited in §4; no general
+scaling discovery, zero exclusion or finite onset is claimed.
+[Review04](../papers/investigations-5/10_riemann_siegel_critical_time/reviews/04_RSCT_B01_R4_SAME_ASSISTANT_CHECK_20261111.md)
+checks coefficients, event/reflection and scope. E01 remains reserved.
+
+### RSCT B01 r5: signed correlation on event-constrained disks — 11 November 2026
+
+For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[Note07](../papers/investigations-5/10_riemann_siegel_critical_time/notes/07_RSCT_B01_R5_SIGNED_CORRELATION_DISK_TEST_20261111.md)
+is **proved in-note from named inherited approximation inputs; same-assistant checking only**.
+It retains the complete signed Poisson quadratic form, but disproves its
+proposed nonnegative lower bound on independent coefficient disks with the
+two local event equations. A correction-retaining feasible point satisfies
+both equations exactly and gives −t²C_β/L²+o(L^(-2)), C_β>0, uniformly on
+T L∈[1/2,1]. The source states: “The witness attenuates modes and does not
+have the actual unit-modulus arithmetic phases. It is not a canonical event.”
+This stops certificates using only that relaxed class, not exact-circle,
+common-phase or other canonical estimates. [Review05](../papers/investigations-5/10_riemann_siegel_critical_time/reviews/05_RSCT_B01_R5_SAME_ASSISTANT_CHECK_20261111.md)
+checks the feasible point, coefficient and scope. No canonical negative
+value, zero exclusion, finite onset or executable E01 method is claimed.
+
+### RSCT B01 r6: exact circles with independent phases — 11 November 2026
+
+For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[Note08](../papers/investigations-5/10_riemann_siegel_critical_time/notes/08_RSCT_B01_R6_EXACT_CIRCLE_TEST_20261111.md)
+is **proved in-note from named inherited approximation inputs; same-assistant checking only**.
+Consecutive triples retain every exact coefficient magnitude and both
+local event equations. All modes and the actual correction survive a
+small phase repair, with signed value ≤−κ_β/L², κ_β>0, uniformly on
+T L∈[1/2,1] at an uninstantiated high onset. The source states:
+“This is a negative value in the independent-circle class, not a canonical arithmetic value or a canonical event.”
+Its phases explicitly violate u4 u1=u2². This new proof addresses the
+exact-circle class left untested by r5; r5's original scope is unchanged.
+[Review06](../papers/investigations-5/10_riemann_siegel_critical_time/reviews/06_RSCT_B01_R6_SAME_ASSISTANT_CHECK_20261111.md)
+checks the full population, zero-frequency/cutoff cases, phase repair and
+arithmetic defect. No exclusion of multiplicatively constrained or actual
+phases, global all-real-conditioned methods, or other consumers is claimed.
+No zero coverage or executable E01 method.
+
+### RSCT B01 r7: multiplicative phases and fixed calibration — 11 November 2026
+
+For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[Note09](../papers/investigations-5/10_riemann_siegel_critical_time/notes/09_RSCT_B01_R7_MULTIPLICATIVE_PHASE_TEST_20261111.md)
+is **proved in-note from named classical and inherited approximation inputs; same-assistant checking only**.
+It extends the collision manuscript's credited isolated-prime multiplicative-twist
+method to the signed Poisson consumer, retaining every exact magnitude, actual
+leading phase, both event equations, all modes, complete correction and any
+fixed finite set of actual prime phases. It gives
+D≤−κ_β exp[(1/2−c/8)L]/L⁸ at an uninstantiated high onset for c∈[1/2,1].
+The source states: “This is a counterexample to the multiplicative-phase estimating class, not a canonical arithmetic value or physical collision.”
+A different fixed prime has phase distance two from the actual height.
+[Review07](../papers/investigations-5/10_riemann_siegel_critical_time/reviews/07_RSCT_B01_R7_SAME_ASSISTANT_CHECK_20261111.md)
+checks the complete complement, calibrated character grouping and collective
+phase repair. R6's untested-multiplicativity boundary is superseded by this
+separate extension, not a broader reading of R6. No uniform growing-calibration
+result, actual-height exclusion, zero coverage or executable E01 method is claimed.
+
+### RSCT B01 r8: a paid growing calibration — 11 November 2026
+
+For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[Note10](../papers/investigations-5/10_riemann_siegel_critical_time/notes/10_RSCT_B01_R8_GROWING_PRIME_CALIBRATION_20261111.md)
+is **proved in-note from named classical and inherited approximation inputs; same-assistant checking only**.
+The uniform budget C_Q L⁴/W→0 permits exact actual-prime calibration through
+Y=γ L²(log L)² for every fixed 0<γ<9/256, retaining the negative R7 signed
+margin, all magnitudes, both event equations and complete correction.
+The source states: “This is a counterexample in the stated growing-calibration class, not a canonical arithmetic value or a physical collision.”
+A moving prime beyond Y has phase defect two. The collision/R6/R7 mechanism
+is credited; only this specified growing-set gap is superseded by the new
+uniform proof. [Review08](../papers/investigations-5/10_riemann_siegel_critical_time/reviews/08_RSCT_B01_R8_SAME_ASSISTANT_CHECK_20261111.md)
+checks the constants and quantifiers. The coefficient is sufficient, with no
+sharpness claim; no universal growing-calibration obstruction, zero coverage or E01 method.
+
+### RSCT B01 r9: one mirror condition remains compatible — 11 November 2026
+
+For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[Note11](../papers/investigations-5/10_riemann_siegel_critical_time/notes/11_RSCT_B01_R9_MIRROR_JET_COMPATIBILITY_20261111.md)
+is **proved in-note from named classical and inherited approximation inputs; same-assistant checking only**.
+It pays the inherited fourth-jet mirror condition in the present normalization
+and jointly selects a complete R8-calibrated point with positive mirror-jet
+margin and negative signed Poisson value. The source states: “Passing this one necessary all-real condition does not establish a globally all-real field or a canonical collision.”
+[Review09](../papers/investigations-5/10_riemann_siegel_critical_time/reviews/09_RSCT_B01_R9_SAME_ASSISTANT_CHECK_20261111.md)
+checks the normalization, errors and simultaneous signs. The collision manuscript
+owns the condition and generic polynomial compatibility; R9 supplies this
+calibrated-model extension. Only the absence of this one condition in R8's
+construction is superseded; stronger all-real information, general finite-jet
+families and actual phases remain outside the result. No zero coverage or E01 method.
+
+### RSCT analytical synthesis through r9 — 12 November 2026
+
+For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+The [live manuscript](../papers/investigations-5/10_riemann_siegel_critical_time/manuscript/README.md) is an **analytical synthesis of RSCT R1–R9, with source evidence levels preserved; same-assistant checking only**. It reorganizes the existing proofs into complete acquisition, fixed-height limits, a shared three-circle lemma, uniform multiplicative calibration, and one joint mirror construction. The [scope section](../papers/investigations-5/10_riemann_siegel_critical_time/manuscript/sections/08_controls_and_provenance.tex) states: “They do not supply a canonical negative value or a physical collision.” No new canonical sign, coverage or independent provider audit is claimed. The [rewritten comparison](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/brainstorm/external/01_RSCT_MANUSCRIPT_COMPARISON_AND_PROPOSED_QUESTIONS_20261112.md) proposes a quantitative growing-cutoff Green residual mean; that transfer was unproved and unactivated at the comparison milestone; the later B06 entry below supersedes that status for the quantitative mean only. The PDF is built outside the repository.
+
+### GNP-RS B06: quantitative growing-cutoff mean — 12 November 2026
+
+For Edward Baker with Codex assistance; actual model/effort unavailable.
+[Note21](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/21_GNP_RS_B06_GROWING_CUTOFF_MEAN_20261112.md) is **proved in-note from named inherited inputs, with contributing separate-agent internal checking**. At c=1 and P_U=floor(L_U²), its residual-mean error is O(L_U^(-3/2)) uniformly on translated intervals U^(3/8+rho)≤ell≤U, fixed 0<rho≤5/8. The Green mean is O(L_U^(-1/3)); fixed positive thresholds have exceptional proportion O(L_U^(-1)). [Review11](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/11_GNP_RS_B06_INTERNAL_ASSESSMENT_20261112.md) discloses its proof contribution and shared inputs. The source states: “the mean theorem does not supply an every-center Green estimate.” The full-arm tail and convolution-edge majorants limit further localization; finite onset remains unevaluated. No specialist audit, time-zero or full-c extension.
+
+### GNP-RS B07: localized tail and exact boundary — 12 November 2026
+
+For Edward Baker with Codex assistance; actual model/effort unavailable.
+[Note23](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/23_GNP_RS_B07_LOCALIZED_TAIL_AND_EXACT_BOUNDARY_20261112.md) is **proved in-note from named inherited inputs, with contributing separate-agent internal checking**. Exact convolution weighting removes the separate boundary penalty; a smooth complete-tail mean with discrete third-derivative cancellation improves the interval range to U^(1/4+rho)≤ell≤U, fixed 0<rho≤1/4, retaining B06's c=1 logarithmic residual/Green/density rates. This supersedes B06's current localization-loss description, not its theorem. [Review12](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/12_GNP_RS_B07_INTERNAL_ASSESSMENT_20261112.md) discloses contributions and shared inputs. The source states: “No every-center estimate is proved.” The remaining quarter-scale majorant limits the displayed absolute shift summation only; finite onset and broader time/depth coverage remain unevaluated/open. No specialist audit or manuscript integration.
+
+### GNP-RS B08: verified exponent-pair localization — 12 November 2026
+
+For Edward Baker with Codex assistance; actual model/effort unavailable.
+[Note25](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/25_GNP_RS_B08_EXPONENT_PAIR_LOCALIZATION_20261112.md) is **proved in-note from named classical and inherited inputs, with contributing separate-agent internal checking**. A uniform phase-class verification for pair (2/7,4/7), paid large shifts/remainder and retuned cutoffs improve useful intervals to U^(17/72+rho)≤ell≤U, fixed 0<rho≤19/72, retaining B06/B07 logarithmic rates and exact boundaries. [Review13](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/13_GNP_RS_B08_INTERNAL_ASSESSMENT_20261112.md) discloses shared inputs and contributions. The source states: “No every-center estimate is proved.” Its general fixed-pair formula has a scoped largest-block majorant floor1/8; no actual-correlation lower bound follows. This supersedes B07's current quarter-power limitation only. No specialist audit, evaluated onset or manuscript integration.
+
+### GNP-RS B09: scoped joint-shift tests — 12 November 2026
+
+For Edward Baker with Codex assistance; actual model/effort unavailable.
+[Note27](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/27_GNP_RS_B09_JOINT_POISSON_SCOPE_TEST_20261112.md)
+is **proved in-note scoped diagnostic and primary-source applicability
+screen, with contributing separate-agent internal checking**. Its explicit
+absolute stationary allowance is ≍U^(3/8)/ell; canonical gradient resonances
+and necessary shift gates defeat the specified nonresonance/direct-import
+premises. The source states: “No improved joint-cancellation estimate or
+every-center theorem is proved.” At that return B08's17/72 result remained
+current; B10 below supersedes that localization status. These
+are not actual-tail lower bounds or a universal joint-method obstruction.
+[Review14](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/14_GNP_RS_B09_INTERNAL_ASSESSMENT_20261112.md)
+discloses contributing shared-input checking; no specialist review.
+
+### GNP-RS B10: signed quadratic estimate and shorter windows — 12 November 2026
+
+For Edward Baker with substantial Codex assistance; actual model/effort
+unavailable, chat0007. [Note29](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/29_GNP_RS_B10_SIGNED_MELLIN_MEAN_ESTIMATE_20261112.md)
+is **proved in-note from named published and inherited inputs;
+same-assistant checking**. Exact-cutoff Mellin projection transfers a
+published cumulative ζ mean-square bound to the signed real quadratic
+correlation, with kernel/pole tails paid. Sharper low-mode weights and
+retuned head cutoffs give ell≥U^(17/81+rho), retaining the logarithmic
+residual/Green rates. It states: “No every-center estimate is proved.”
+The [self-check](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/15_GNP_RS_B10_SAME_ASSISTANT_ASSESSMENT_20261112.md)
+does not supply independent acceptance, numerical onset or a complex-block
+modulus bound. B08 remains valid but its current-range status is superseded.
+
+**Pre-integration audit, 12 November 2026.** For Edward Baker with Codex
+assistance. Actual model and effort are unavailable, chat0008. The
+[separate internal assessment](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/16_GNP_RS_B10_PREINTEGRATION_ASSESSMENT_20261112.md)
+records that “All four requested proof groups pass from the named
+published and inherited inputs.” At this audit milestone the 17/81 result remained in-note.
+[Note31](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/31_GNP_RS_B10_PREINTEGRATION_PROOF_AUDIT_20261112.md)
+makes the block cutoff explicit in the Green transfer. The original
+same-assistant check above describes chat0007.
+
+**Manuscript integration, 12 November 2026.** Prepared for Edward Baker with substantial OpenAI Codex assistance. Actual model and effort are unavailable in chat0008.
+The [live manuscript section](../papers/investigations-5/09_green_potentials_newman_flow/manuscript/sections/10d_short_window_means.tex) incorporates the
+audited result from the named published and inherited inputs.
+The Green consequences use the block cutoff `P_U = floor(L_U²)`.
+The [build record](../papers/investigations-5/09_green_potentials_newman_flow/numerics/03_GNP_RS_B10_INTEGRATION_BUILD_RECORD_20261112.json) identifies the verified
+reading copy. The [continuation](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/32_GNP_RS_B10_AUDIT_RETURN_AND_MODEL_CHANGE_20261112.md#every-center-research)
+records the open scope: “A slightly smaller positive window exponent
+still permits growing total mass.”

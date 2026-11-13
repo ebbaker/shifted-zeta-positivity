@@ -1,5 +1,18 @@
 # Term-by-term matching, separate absolute bounds, separately positive sectors, dropped small terms
 
+**12 November 2026 — consume the real quadratic sum.** For Edward Baker
+with substantial Codex assistance; actual model/effort unavailable,
+chat0007. [GNP-RS B10 Note29](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/29_GNP_RS_B10_SIGNED_MELLIN_MEAN_ESTIMATE_20261112.md)
+states: “The signed quantity controlled is the real quadratic correlation
+consumed by the tail norm, including all shifts.” Exact-cutoff Mellin
+projection preserves that sum and pays its long-frequency kernel and
+pole before applying the complete residual ledger, improving the
+averaged window exponent to 17/81. Requiring a modulus estimate for each
+complex block would impose a stronger unpaid task. Conversely, the real
+estimate must not be reported as such a modulus bound or as pointwise
+Green control. [Same-assistant assessment](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/15_GNP_RS_B10_SAME_ASSISTANT_ASSESSMENT_20261112.md);
+published/inherited inputs, no independent specialist review.
+
 15 October 2026. Claude Fable 5.1 (`claude-fable-5-1`), Claude Cowork.
 
 Sonin working-draft evidence added 17 October 2026 for Edward Baker with
@@ -1189,3 +1202,41 @@ the adaptive arithmetic residual. Keep both scopes: varying-P tangents
 and genuinely nonlinear signed estimates are outside this obstruction.
 [Review09](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/09_GNP_RS_B05_INTERNAL_REVIEW_20261111.md) is internal with proof contributions
 and shared sources. Stop this tested relaxation, not all signed methods.
+
+**Two event cancellations need not control the absolute population, 11 November 2026.**
+For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[RSCT Note06 §§3–5](../papers/investigations-5/10_riemann_siegel_critical_time/notes/06_RSCT_B01_R4_MICROSCOPIC_EVENT_EXPANSION_20261111.md)
+pays the complete microscopic approximation, then subtracts the event's
+value and derivative before estimating. Its specified termwise allowance
+still grows like exp[(1/4−c/16)L]/L², extending earlier collision/S04
+absolute-population calculations. The source states: “The canonical φ_n are
+correlated and are not freely variable.” A diverging allowance is not a
+lower bound for the actual signed sum or its error; its freely phased
+maximizers need not satisfy the event equations. Stop that separate-bound
+method, preserve the correlations and name the missing signed estimate.
+[Review04](../papers/investigations-5/10_riemann_siegel_critical_time/reviews/04_RSCT_B01_R4_SAME_ASSISTANT_CHECK_20261111.md)
+is same-assistant only. Smaller approximation error alone supplies no sign.
+
+12 November 2026 — **GNP-RS growing-cutoff mean, a repaired product loss.**
+For Edward Baker with Codex assistance; actual model/effort unavailable.
+[Note21](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/21_GNP_RS_B06_GROWING_CUTOFF_MEAN_20261112.md), Section 4: “A uniform multiplier tail need not remain small after pointwise arm-envelope multiplication; the translated mean-square estimate pays that product.” The proof pays both discarded multipliers and the complete-arm tail in their consumed norm before estimating retained reflected terms. [Contributing internal assessment](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/11_GNP_RS_B06_INTERNAL_ASSESSMENT_20261112.md). This repair yields a quantitative mean, not an exceptional-center sign; the remaining tail/edge majorant retains its stated scope.
+
+12 November 2026 — **Exact averaging weights can remove an artificial boundary loss.**
+For Edward Baker with Codex assistance; actual model/effort unavailable.
+[GNP-RS Note23](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/23_GNP_RS_B07_LOCALIZED_TAIL_AND_EXACT_BOUNDARY_20261112.md), Section 2: “There is no comparison with a sharp height indicator and no pointwise edge-envelope cost.” Retaining the exact convolution weight removes B06's separate edge allowance; smooth shifted-pair cancellation also improves its tail range. The remaining quarter-scale majorant belongs to the stated absolute summation over shifts, not to the actual correlation or every possible method. [Contributing internal check](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/12_GNP_RS_B07_INTERNAL_ASSESSMENT_20261112.md); no every-center conclusion. The preceding B06 tail/edge limitation is historical and superseded only to this quantitative extent.
+
+12 November 2026 — **A stronger per-shift bound is a gain with a limited consumer.**
+For Edward Baker with Codex assistance; actual model/effort unavailable.
+[GNP-RS Note25](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/25_GNP_RS_B08_EXPONENT_PAIR_LOCALIZATION_20261112.md), Section4: “It still takes absolute values across shifts after applying a stronger, justified estimate to each inner arithmetic sum.” The verified classical pair improves localization from1/4 to17/72, superseding the preceding quarter-scale limitation. Section6's formal1/8 floor belongs only to the largest-block envelope/per-shift/absolute-sum majorant, not actual correlations or all methods. [Contributing internal check](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/13_GNP_RS_B08_INTERNAL_ASSESSMENT_20261112.md). Preserve the numerical gain and the still-unpaid every-center obligation together.
+
+12 November 2026 — **A reciprocal transform can preserve the correlation cost.**
+For Edward Baker with Codex assistance; actual model/effort unavailable.
+[GNP-RS Note27](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/27_GNP_RS_B09_JOINT_POISSON_SCOPE_TEST_20261112.md),
+Section3: “It is not the actual correlation, tail norm or a claimed
+lower bound for either.” Its specified absolute dual-principal allowance
+costs U^(3/8)/ell, although the exact logarithmic phase was retained through
+the transform. This stops that payment, not signed dual methods. Necessary
+range gates also defeat the directly tested joint theorem; its omitted
+case remains unperformed work. [Contributing internal check](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/14_GNP_RS_B09_INTERNAL_ASSESSMENT_20261112.md).
+Preserve B08's gain and the every-center gap; do not turn a method's large
+allowance or a theorem's inapplicability into an actual-sum obstruction.

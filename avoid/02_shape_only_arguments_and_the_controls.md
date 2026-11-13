@@ -109,3 +109,30 @@ Run the controls before writing the note: \(\Phi_{c,p}\) for all \(p\)
 **A proved regular wall can still carry no simplicity information, 23 October 2026.** For Edward Baker with substantial LLM assistance, **gpt-6-astra, ultra**. [HDC brainstorm Note 18](../papers/investigations-4/12_height_dependent_heat_contours/brainstorm/notes/18_RH_FIXED_OFFSET_GAUSSIAN_AND_CONTOUR_THEOREM_20261023.md) proves a complete fixed-offset Gaussian/contour estimate under RH, then constructs F(z/2)^2[1+cos((log2)z/4)]. Its positive source, same coarse count and logarithmic bounds coexist with zero simple zeros. The note states: “The canonical source identity is the failed premise; none of the coarse acquired bounds is the distinguishing premise.” Naming the absent exact theta identity does not make a derived estimate discriminate the control. Retain the useful outer wall; require an additional multiplicity-sensitive arithmetic bound before applying a simplicity consumer. This excludes deductions from the specified coarse information class, not all theta estimates. [Internal review](../papers/investigations-4/12_height_dependent_heat_contours/brainstorm/reviews/09_FIXED_OFFSET_GAUSSIAN_AND_CONTOUR_REVIEW_20261023.md).
 
 **Book promotion does not turn a regular wall into a small collision resource, 23 October 2026.** For Edward Baker with substantial LLM assistance, **gpt-6-astra (Codex), effort ultra**. The author-directed [book revision](../papers/investigations-4/12_height_dependent_heat_contours/brainstorm/notes/20_THEOREM_CENTERED_BOOK_REVISION_20261023.md) promotes the fixed-offset theorem with its all-multiple control. Its new [wall-resource corollary](../papers/investigations-4/12_height_dependent_heat_contours/manuscript/book.tex) removes upper/lower transition flux but keeps earlier interior nonreal mass and horizontal end influx: “The right-hand terms retain their full definitions; neither is estimated in size by the contour theorem.” Conserved H dz transport is distinct from zero velocity. The acquired wall is a useful input; a simplicity deduction still requires an additional canonical estimate that distinguishes the control and pays the complete resource. This is a limitation of the shared coarse information, not an exclusion of all theta-specific routes. [Same-model internal review](../papers/investigations-4/12_height_dependent_heat_contours/brainstorm/reviews/10_THEOREM_CENTERED_BOOK_REVIEW_20261023.md).
+
+**A signed arithmetic cap need not bound central multiplicity, 11 November 2026.**
+For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[RSCT Note04 §§4–6](../papers/investigations-5/10_riemann_siegel_critical_time/notes/04_RSCT_B01_R2_SIGNED_THREE_HEIGHT_ESTIMATE_20261111.md)
+states: “A bound on W below the isolated-event contribution does not by itself exclude a collision.”
+Cancelling linear carrier growth with a finite log-height combination leaves
+a zero-integral, sign-changing kernel. Its all-real noncentral population
+can cancel the event: a positive-source control with actual high threshold
+events passes the derived scalar cap. It fails canonical arithmetic and
+eventual threshold simplicity, but those failures do not make the cap itself
+a discriminator. Retain or independently bound the signed background.
+[Review02](../papers/investigations-5/10_riemann_siegel_critical_time/reviews/02_RSCT_B01_R2_SAME_ASSISTANT_CHECK_20261111.md)
+is same-assistant only; this does not exclude other signed estimates.
+
+**Finite matrix positivity can pass a proposed event without realizing it, 11 November 2026.**
+For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[RSCT Note05 §§4–6](../papers/investigations-5/10_riemann_siegel_critical_time/notes/05_RSCT_B01_R3_EVENT_SUBTRACTED_PICK_TEST_20261111.md)
+derives the complete signed arithmetic matrix at fixed heights 4,6,8,
+then shows its positive carrier bulk grows like log a while the signed
+prime correction stays bounded. Subtracting any fixed proposed event
+multiplicity still leaves a positive matrix at high centers in the stated
+shrinking-time band. “It only stops exclusion by (3) at these fixed heights.”
+Do not turn this necessary-test feasibility into an actual event, a
+simultaneously realizing background, or a no-go for changing sampling
+geometry. Bounded constant refinements at the same heights cannot remove
+the leading bulk. [Review03](../papers/investigations-5/10_riemann_siegel_critical_time/reviews/03_RSCT_B01_R3_SAME_ASSISTANT_CHECK_20261111.md)
+is same-assistant only; no canonical collision is constructed.

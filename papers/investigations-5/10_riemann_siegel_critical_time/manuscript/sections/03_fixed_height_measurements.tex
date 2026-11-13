@@ -1,0 +1,310 @@
+\section{Fixed-height measurements and the noncentral zeros}\label{sec:fixed}
+
+\subsection{A signed three-height arithmetic estimate}
+
+At the parameters \eqref{eq:band}, consider
+\begin{equation}\label{eq:threeheight}
+ W_T(a)=2\log|H_T(a+6\ii)|
+              -\log|H_T(a+4\ii)|-\log|H_T(a+8\ii)|.
+\end{equation}
+Normalize by \(V=H_T/C_-\), and write
+\(\nu=a/2+\pi T/8\).
+
+\begin{lemma}[Complete outer comparison]\label{lem:outer}
+For \(y=4,6,8\), the inherited field input implies, after a finite
+uniform onset,
+\begin{equation}\label{eq:outer}
+ \left|V(a+\ii y)-
+ \zeta\left(\frac{1+y}{2}+\frac c4-\ii\nu\right)\right|
+ \le\frac{C_F^*}{L}.
+\end{equation}
+The constant \(C_F^*\) is finite and independent of \(a,c\).
+\end{lemma}
+\begin{proof}
+Divide \eqref{eq:FN} by \(C_-\). The dominant exponential arm is a
+Dirichlet sum whose argument is
+\((1-\ii z)/2+T L(z)/4-\ii\pi T/8\), with the additional quadratic
+weight \(\exp(T(\log n)^2/4)\).
+The calculation in GNP-RS E01 \cite{gnpe01}, extended over the finite
+set \(\{4,6,8\}\), has the following complete ledger:
+\[
+\begin{array}{ll}
+\text{reflected population}&O(a^{(1-y)/4}),\\
+\text{retained correction}&O(a^{-(y+1)/4}),\\
+\text{complete normalized field error}&O(a^{-3/4}),\\
+\text{quadratic-weight removal}&\le T D_2/4,\\
+\text{ordinary Dirichlet tail}&\le(2/3)N^{-3/2},\\
+\text{argument replacement}&\le D_1T|L(a+\ii y)-L|/4,
+\end{array}
+\]
+where \(D_j=\sum_{n\ge2}n^{-5/2}(\log n)^j<\infty\).
+For the weight removal, \(T\log n/4\le c/8\), and the elementary
+bound \(|\ee^v-1|\le v\ee^v\) leaves a summable majorant.
+Every other term is \(O(1/L)\) or smaller, uniformly at the three
+heights. This yields \eqref{eq:outer}; the population is summed before
+its error is bounded.
+\end{proof}
+
+Since
+\[
+ |\zeta(s)-1|\le 2^{-5/2}+\int_2^\infty x^{-5/2}\dd x
+               =\frac7{12\sqrt2}<\frac12
+ \quad(\Rea s\ge5/2),
+\]
+the gate \(L>4C_F^*\) supplies \(|V|>1/4\). Integration of the
+logarithmic derivative along the straight segment from \(\zeta(s)\) to
+\(V\) gives
+\begin{equation}\label{eq:outerlog}
+ \bigl|\log|V|-\log|\zeta(s)|\bigr|\le4C_F^*/L.
+\end{equation}
+This is an off-axis floor at these observations only.
+
+Let \(g(z)=\log C_-(T,z)\), with the local analytic logarithm. Then
+\begin{align}
+ g'(z)&=\frac7{4z}-\frac\pi8+\frac{TL(z)}{8z}
+              -\frac{\ii L(z)}4-\frac{\ii\pi T}{16z},\label{eq:gprime}\\
+ g''(z)&=-\frac7{4z^2}+\frac{T(1-L(z))}{8z^2}
+              -\frac\ii{4z}+\frac{\ii\pi T}{16z^2}.
+\end{align}
+For \(u(y)=\log|C_-(T,a+\ii y)|\), \(u''=-\Rea g''\).
+For large \(a\), \(T|L(a+\ii y)|\le2\), and
+\(|\Rea(-\ii/(a+\ii y))|=y/(a^2+y^2)\). Consequently
+\[
+ |u''(y)|\le5/a^2\quad(4\le y\le8),\qquad
+ |D_C|\le20/a^2,\quad D_C=2u(6)-u(4)-u(8).
+\]
+
+\begin{proposition}[Three-height bound]\label{prop:W}
+Let \(q_n=\Lambda_{\vM}(n)/\log n\), where \(\Lambda_{\vM}\) is the
+von Mangoldt function. Then
+\begin{equation}\label{eq:Wseries}
+ W_T(a)=-\sum_{n\ge2}q_n n^{-5/2-c/4}(1-n^{-1})^2
+                    \cos(\nu\log n)+D_C+e,\qquad
+ |e|\le16C_F^*/L.
+\end{equation}
+In particular,
+\begin{equation}\label{eq:Wbound}
+ |W_T(a)|<\frac16+\frac{16C_F^*}{L}+\frac{20}{a^2}.
+\end{equation}
+Under the eventual gates
+\begin{equation}\label{eq:Wgates}
+ 16C_F^*/L+20/a^2\le1/72,\qquad a^2\ge288,
+\end{equation}
+one has \(|W_T(a)|<13/72\).
+\end{proposition}
+\begin{proof}
+The absolutely convergent Euler logarithm of ordinary zeta in
+\(\Rea s>1\) \cite{dlmfzeta} is
+\(\log\zeta(s)=\sum_{n\ge2}q_n n^{-s}\).
+Combine its three values before taking absolute values. Their
+coefficient is \(2n^{-1}-1-n^{-2}=-(1-n^{-1})^2\), with the same
+phase \(\nu\log n\) throughout. The four total units of logarithmic
+error in \eqref{eq:outerlog} give \eqref{eq:Wseries}.
+The function \(f(x)=x^{-5/2}(1-x^{-1})^2\) decreases for \(x\ge2\);
+since \(0\le q_n\le1\),
+\[
+ \sum_{n\ge2}q_n n^{-5/2-c/4}(1-n^{-1})^2
+ \le f(2)+\int_2^\infty f(x)\dd x
+ =\frac{389}{1680\sqrt2}<\frac16.
+\]
+This proves the claimed bound. A truncation at an integer \(M\ge2\)
+would have tail at most
+\(M^{-3/2-c/4}/(3/2+c/4)\); no truncation or sampled value is needed.
+\end{proof}
+
+\subsection{Why the scalar bound requires a negative background}
+
+At an all-real slice the same three-height combination of the product is
+\begin{equation}\label{eq:K}
+ W_T(a)=\sum_r K(a-r),\qquad
+ K(d)=\frac12\log\frac{(d^2+36)^2}{(d^2+16)(d^2+64)}.
+\end{equation}
+The sum converges absolutely because \(K(d)=-4d^{-2}+O(d^{-4})\).
+At an event of multiplicity \(m\ge2\),
+\begin{equation}
+ W_T(a)=m[K(0)+K(2a)]+\mathcal R_{\mathrm{bg}},\qquad
+ \mathcal R_{\mathrm{bg}}=\sum_{r\ne\pm a}K(a-r).
+ \label{eq:Wbackground}
+\end{equation}
+Now \(K(0)=\log(9/8)>1/9\). For \(d^2\ge64\), direct comparison of
+the numerator and denominator gives \(|K(d)|\le8/d^2\).
+Thus \eqref{eq:Wgates} implies
+\[
+ m[K(0)+K(2a)]>2(1/9-1/144)=15/72.
+\]
+Combining with Proposition~\ref{prop:W} gives the quantitative consequence
+\begin{equation}\label{eq:bgnegative}
+ \boxed{\mathcal R_{\mathrm{bg}}<-1/36.}
+\end{equation}
+It is a necessary signed background contribution under the event,
+not a contradiction: \(K\) changes sign.
+
+\begin{proposition}[Cancellation forces a sign-changing log kernel]
+\label{prop:kernel}
+Let \(b_j>0\) and \(\alpha_j\in\R\) be a finite collection, and put
+\[
+ K_\alpha(d)=\frac12\sum_j\alpha_j\log(d^2+b_j^2).
+\]
+If \(\sum_j\alpha_j=0\), this kernel is integrable and
+\(\int_\R K_\alpha(d)\dd d=\pi\sum_j\alpha_j b_j\).
+If also \(\sum_j\alpha_j b_j=0\) and \(K_\alpha(0)>0\), then
+\(K_\alpha\) is negative somewhere.
+\end{proposition}
+\begin{proof}
+The first cancellation removes the \(\log d^2\) term, leaving
+\(O(d^{-2})\). For positive \(b,b_0\), differentiating in \(b\) gives
+\[
+ \int_\R\log\frac{d^2+b^2}{d^2+b_0^2}\dd d=2\pi(b-b_0).
+\]
+Form the linear combination to obtain the integral. A continuous,
+nonnegative, integrable function that is positive at zero cannot have
+zero integral.
+\end{proof}
+
+For \eqref{eq:K},
+\[
+ K(d)>0\ (|d|<\sqrt{34}),\qquad
+ K(d)<0\ (|d|>\sqrt{34}),\qquad \int_\R K(d)\dd d=0.
+\]
+The proposition concerns finite fixed-height logarithmic combinations
+that cancel the linear carrier. It does not rule out a signed arithmetic
+estimate of the background, explicit deflation, or a different observable.
+The genuine positive-source threshold control in
+Section~\ref{sec:controls} satisfies the same scalar cap.
+
+\subsection{A correlated matrix test}
+
+Write \(h=-H_T'/H_T\), and let \(z_j=a+\ii b_j\), with
+\((b_1,b_2,b_3)=(4,6,8)\). On an all-real slice,
+\begin{equation}\label{eq:Pick}
+ M_{ij}=\frac{h(z_i)-\overline{h(z_j)}}{z_i-\bar z_j}
+       =\sum_r\frac1{(z_i-r)(\bar z_j-r)}.
+\end{equation}
+This is a Gram matrix. Set
+\[
+ u_j=\frac1{\ii b_j},\qquad v_j=\frac1{2a+\ii b_j},\qquad
+ E=uu^*+vv^*.
+\]
+An event of multiplicity \(m\) necessarily satisfies
+\begin{equation}\label{eq:Pickevent}
+ M-mE\succeq0.
+\end{equation}
+This retains correlations among all three observations.
+
+There is a direct link to the previous scalar background. Deflate the
+event in the logarithmic derivative:
+\[
+ h_{\mathrm{bg}}(z)=h(z)+\frac m{z-a}+\frac m{z+a},\qquad
+ p_{\mathrm{bg}}(y)=\Ima h_{\mathrm{bg}}(a+\ii y)\ge0.
+\]
+Integration of \(\partial_y\log|H_T(a+\ii y)|=\Ima h(a+\ii y)\)
+gives
+\[
+ \mathcal R_{\mathrm{bg}}
+   =\int_4^6 p_{\mathrm{bg}}(y)\dd y-\int_6^8p_{\mathrm{bg}}(y)\dd y.
+\]
+Positivity alone does not order these two integrals.
+
+To evaluate \(M\) arithmetically, use disks
+\(|z-z_j|\le1/2\) in the fixed provider rectangle. Set
+\[
+ Z(z)=\zeta\left(\frac{1-\ii z}{2}+\frac c4-\frac{\ii\pi T}{8}\right),
+ \qquad \Delta=V-Z.
+\]
+The complete outer ledger above, now on \(7/2\le\Ima z\le17/2\),
+has reflected cost \(O(a^{-5/8})\), correction \(O(a^{-9/8})\),
+field error \(O(a^{-3/4})\), summable weight-removal cost \(O(1/L)\),
+tail \(O(N^{-5/4})\), and argument cost \(O(1/(aL))\). Hence
+\begin{equation}\label{eq:deltaderivative}
+ \norm{\Delta}_{|z-z_j|\le1/2}\le C_\Delta/L,\qquad
+ |\Delta'(z_j)|\le2C_\Delta/L.
+\end{equation}
+The second bound is Cauchy's estimate for a holomorphic difference.
+Since \(\Rea s\ge9/4\),
+\[
+ |Z-1|\le \frac{13}{5\,2^{9/4}}<\frac34,\qquad
+ |Z'|\le\frac12\sum_{n\ge2}n^{-9/4}\log n=:B_Z.
+\]
+The gate \(C_\Delta/L\le1/8\) gives \(|V|>1/8\), and therefore
+\begin{equation}\label{eq:logdererror}
+ \left|\frac{V'}V-\frac{Z'}Z\right|
+ \le\frac{C_h}{L},\qquad C_h=(16+32B_Z)C_\Delta.
+\end{equation}
+All denominators are paid before the matrix is formed.
+
+Put \(\sigma_j=(1+b_j)/2+c/4\) and
+\(P_j=\sum_{n\ge2}\Lambda_{\vM}(n)n^{-\sigma_j}\ee^{\ii\nu\log n}\).
+Then
+\begin{align}
+ h(z_j)&=-g'(z_j)-\frac\ii2 P_j+O(1/L),\\
+ M_{ij}&=\frac{-g'(z_i)+\overline{g'(z_j)}}{\ii(b_i+b_j)}
+       -\frac{P_i+\overline{P_j}}{2(b_i+b_j)}
+       +O\!\left(\frac1{L(b_i+b_j)}\right).
+ \label{eq:signedM}
+\end{align}
+The bounded prime-power sums and \eqref{eq:gprime} imply
+\begin{equation}\label{eq:Mbulk}
+ M=\frac L2 C+O_{\op}(1),\qquad C_{ij}=\frac1{b_i+b_j}.
+\end{equation}
+This is a statement about the exact canonical samples at every large
+center in the band, whether or not it is an event. The leading matrix
+is positive definite because
+\[
+ \alpha^*C\alpha=\int_0^\infty
+             \left|\sum_j\alpha_j\ee^{-b_jt}\right|^2\dd t>0
+ \quad(\alpha\ne0).
+\]
+
+\begin{proposition}[The fixed-height matrix admits fixed multiplicities]
+\label{prop:matrixcap}
+For large \(a\), the largest formal nonnegative event weight allowed by
+\eqref{eq:Pickevent} is
+\begin{equation}\label{eq:matrixcap}
+ \mathfrak m(a,c)=
+ \frac1{\lambda_{\max}(M^{-1/2}EM^{-1/2})}
+ =\frac6{13}L+O(1).
+\end{equation}
+For every fixed integer \(m\ge1\), the exact matrix \(M-mE\) is positive
+definite at every sufficiently large center in the band.
+\end{proposition}
+\begin{proof}
+Let \(r_j=1/b_j\). For any distinct positive heights, the Cauchy matrix
+satisfies
+\begin{equation}\label{eq:Cauchyinverse}
+ r^tC^{-1}r=2\sum_j b_j^{-1}.
+\end{equation}
+To prove it, set \(x=C^{-1}r\) and \(f(z)=\sum_jx_j/(z+b_j)\).
+Since \(f(b_i)=1/b_i\),
+\[
+ 1-zf(z)=(-1)^q\prod_{j=1}^q\frac{z-b_j}{z+b_j}.
+\]
+Differentiate at zero. The left derivative is \(-f(0)\); the right
+derivative is \(-2\sum b_j^{-1}\), which proves the identity.
+
+Equation~\eqref{eq:Mbulk} gives
+\(M^{-1}=2C^{-1}/L+O_{\op}(L^{-2})\).
+The \(u\) term has its single nonzero eigenvalue
+\(u^*M^{-1}u=4\sum b_j^{-1}/L+O(L^{-2})\).
+The \(v\) term has norm \(O(a^{-2}/L)\). Since
+\(\sum_{j=1}^3b_j^{-1}=13/24\), inversion proves
+\eqref{eq:matrixcap}. Finally
+\[
+ \lambda_{\min}(M-mE)
+ \ge \tfrac L2\lambda_{\min}(C)-O(1)-m\norm{E}>0
+\]
+for fixed \(m\) and large \(L\).
+\end{proof}
+
+This does not construct a zero configuration realizing the formal event
+weight. It shows that this necessary matrix condition cannot reject a
+fixed multiplicity in the tested regime. Its scale has a simple
+interpretation:
+\[
+ \int_\R\frac{\dd r}{(a+\ii b_i-r)(a-\ii b_j-r)}
+       =\frac{2\pi}{b_i+b_j}.
+\]
+A continuous density \(L/(4\pi)\) produces exactly the bulk \(LC/2\).
+The fixed observations retain a growing background while the proposed
+event has fixed weight. Substituting \(b_j=\beta_j/L\) into
+\eqref{eq:Mbulk} is not justified by its fixed-geometry error estimate;
+the microscopic problem requires a new acquisition argument.

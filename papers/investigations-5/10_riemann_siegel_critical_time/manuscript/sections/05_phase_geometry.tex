@@ -1,0 +1,235 @@
+\section{Signed phase geometry: disks and exact circles}\label{sec:phases}
+
+\subsection{The full quadratic form}
+
+Suppress the subscript on \(K_a\), and write arbitrary real quadratures
+\[
+ x_n=d_n\cos\phi_n,\qquad y_n=d_n\sin\phi_n,\qquad
+ q(w)=\sum_{n\le N}[x_n\cos(\lambda_nw)-y_n\sin(\lambda_nw)]+K(w).
+\]
+The actual magnitudes obey \(x_n^2+y_n^2=d_n^2\); a disk relaxation
+replaces equality by \(\le\). The two event equations read
+\begin{equation}\label{eq:eventquadratures}
+ q(0)=\sum_nx_n+K(0)=0,\qquad
+ q'(0)=-\sum_n\lambda_n y_n+K'(0)=0.
+\end{equation}
+The corresponding approximate class allows errors \(O(a^{-3/4})\).
+Every exact solution belongs to that approximate class.
+
+At \(\ii\beta\), write \(S=q^\circ\) as \(S(\ii\beta)=X-\ii Y\), where
+\begin{align}
+ C_n&=\cosh(\beta\lambda_n)-1,&
+ B_n&=\sinh(\beta\lambda_n)-\beta\lambda_n,\\
+ R_n&=\lambda_n\sinh(\beta\lambda_n),&
+ V_n&=\lambda_n(\cosh(\beta\lambda_n)-1),\\
+ X&=C\cdot x+\Rea K^\circ(\ii\beta),&
+ Y&=B\cdot y-\Ima K^\circ(\ii\beta).
+\end{align}
+With primes on \(X,Y\) denoting \(\beta\)-derivatives,
+\begin{equation}\label{eq:XY}
+ \cD_a(S)=\mathfrak d_a(X^2+Y^2)-\beta(XX'+YY').
+\end{equation}
+Thus, apart from the explicitly retained correction terms, its matrices
+are
+\[
+ Q_x=\mathfrak d_a CC^t-\frac\beta2(CR^t+RC^t),\qquad
+ Q_y=\mathfrak d_a BB^t-\frac\beta2(BV^t+VB^t).
+\]
+These formulas keep all cross terms. They will allow counterexamples
+for the full form, independently of any numerical optimization method.
+Write \(\cD_2\) for the same functional with coefficient \(2\) in
+place of \(\mathfrak d_a\).
+
+\subsection{A two-mode disk construction}
+
+Let
+\[
+ r=\frac14,\qquad h=\frac{\log2}{2L},\qquad t=\frac{d_2}{2}.
+\]
+Choose
+\[
+ x_1=t-K(0),\quad x_2=-t,\quad
+ y_1=4K'(0),\quad y_2=0,
+\]
+and set every other quadrature to zero. Since
+\(2^{-7/4}\le t\le2^{-3/2}\) and \(K,K'=O(\chi)\), these points
+lie strictly inside their coefficient disks for large \(a\).
+Both equations \eqref{eq:eventquadratures} are exact. The resulting
+field is
+\begin{equation}\label{eq:diskfield}
+ q_*(w)=t\{\cos(rw)-\cos((r-h)w)\}+J(w),
+ \quad J=K-K(0)\cos(rw)-4K'(0)\sin(rw).
+\end{equation}
+Its correction \(J\) and fixed derivatives are \(O(\chi)\).
+
+Define the positive number
+\begin{equation}\label{eq:Cbeta}
+ C_\beta=\frac{(\beta\log2)^2}{4}\sinh^2(\beta/4)
+             \left[\frac\beta4\coth(\beta/4)-1\right]>0.
+\end{equation}
+Positivity follows from \(x\cosh x-\sinh x>0\) for \(x>0\).
+For \(U=\cosh(\beta r)-\cosh(\beta(r-h))\), expansion in \(h\) gives
+\[
+ U=\beta h\sinh(\beta r)+O_\beta(h^2),\qquad
+ U(\beta U'-2U)=C_\beta/L^2+O_\beta(L^{-3}).
+\]
+The uncorrected field is real at \(\ii\beta\), so
+\(\cD_2=-t^2U(\beta U'-2U)\). Expanding the entire correction and
+carrier contribution yields
+\begin{equation}\label{eq:disknegative}
+ \cD_a(q_*)=-\frac{t^2C_\beta}{L^2}
+   +O_\beta(L^{-3}+\chi/L+\chi^2+a^{-2}L^{-4})<0
+\end{equation}
+eventually. For example it is at most
+\(-2^{-9/2}C_\beta/L^2\) after a finite onset.
+This disproves nonnegativity on coefficient disks subject to the two
+event equations. Exact magnitudes and the common arithmetic phase law
+are absent from the witness.
+
+\subsection{An elementary three-circle lemma}
+
+The next construction restores every magnitude. The following lemma
+will also be the local building block for multiplicative phases.
+
+\begin{lemma}[A signed block on three circles]\label{lem:triple}
+Let \(b_1>b_2>b_3>0\), \(b_1<b_2+b_3\), and
+\(r_1>r_2>r_3\ge0\), with \(r_2>0\). Put \(\rho=r_3/r_2\).
+There is a unique \(v\in(0,b_3)\) such that
+\[
+ A_2=\sqrt{b_2^2-\rho^2v^2},\qquad
+ A_3=\sqrt{b_3^2-v^2},\qquad A_2+A_3=b_1.
+\]
+The quadratures
+\begin{equation}\label{eq:triple}
+ (x_1,y_1)=(b_1,0),\quad
+ (x_2,y_2)=(-A_2,\rho v),\quad
+ (x_3,y_3)=(-A_3,-v)
+\end{equation}
+have exact magnitudes, \(\sum x_i=\sum r_i y_i=0\).
+Their field \(p(w)=\sum_i(x_i\cos r_iw-y_i\sin r_iw)\) satisfies
+\(p(0)=p'(0)=0\) and \(\cD_2(p)<0\) for every \(\beta>0\).
+Any finite sum of these blocks has the same strict sign.
+\end{lemma}
+\begin{proof}
+The sum of the two square roots is continuous and strictly decreasing
+on \([0,b_3]\). Its initial value is \(b_2+b_3>b_1\); its final value
+is at most \(b_2<b_1\). This proves the unique interior solution.
+The circle identities and event equations follow directly.
+
+Writing \(p(\ii\beta)=X-\ii Y\) gives
+\begin{align}
+ X={}&A_2[\cosh(\beta r_1)-\cosh(\beta r_2)]
+      +A_3[\cosh(\beta r_1)-\cosh(\beta r_3)]>0,\\
+ Y={}&vr_3\left[\frac{\sinh(\beta r_2)}{r_2}
+                       -\frac{\sinh(\beta r_3)}{r_3}\right]\ge0.
+ \label{eq:tripleXY}
+\end{align}
+Use the continuous interpretation at \(r_3=0\). The power series for
+\(X\) has positive coefficients in even powers starting with
+\(\beta^2\). Consequently \(\beta X'-2X>0\), since the quartic
+coefficient is positive. The series for \(Y\) has nonnegative
+coefficients in odd powers starting with \(\beta^3\), so
+\(\beta Y'-2Y\ge0\).
+Equation~\eqref{eq:XY} becomes
+\[
+ \cD_2(p)=-X(\beta X'-2X)-Y(\beta Y'-2Y)<0.
+\]
+For sums of blocks the four quantities retain the same signs.
+Thus the cross terms between blocks also have the required sign.
+\end{proof}
+
+\subsection{All coefficients on their circles}
+
+Partition \(1,\ldots,N\) into consecutive triples, leaving at most two
+terminal terms. For a triple \(j,j+1,j+2\), set
+\(b_i=d_{j+i-1}\), \(r_i=\lambda_{j+i-1}\).
+The logarithmic slope from Lemma~\ref{lem:moments} gives
+\[
+ b_2+b_3\ge(2^{-3/4}+3^{-3/4})b_1>b_1.
+\]
+Lemma~\ref{lem:triple} applies, including a possible last frequency
+zero. Let \(p\) be the sum of all complete blocks.
+Frequency differences in a block are \(O(1/(jL))\).
+The event cancellations, applied to the cosine and sine differences
+in \eqref{eq:tripleXY} and their analytic versions, give
+\[
+ \norm{p_j^{(k)}}_{|w|\le R}\le C_R\frac{d_j}{jL}
+                 \le \frac{C_R}{Lj^{3/2}},\quad 0\le k\le2.
+\]
+The possible small \(r_3\) is harmless: use the analytic function
+\(\sin(rw)/r\) in the odd term. Summing the convergent \(j^{-3/2}\)
+bound yields
+\begin{equation}\label{eq:circlefieldbound}
+ \norm{p^{(k)}}_{|w|\le R}=O_R(L^{-1}),\qquad 0\le k\le2.
+\end{equation}
+
+The head block gives a quantitative negative margin. With
+\(\alpha=1-1/\sqrt3>0\), its \(A_2=1-A_3\ge1-d_3\ge\alpha\).
+The two first frequencies are \(r=1/4\) and \(r-h\).
+All signs in Lemma~\ref{lem:triple} align, so \eqref{eq:Cbeta} implies
+\begin{equation}\label{eq:circleleading}
+ \cD_2(p)\le-\alpha^2 C_\beta/L^2+O_\beta(L^{-3}).
+\end{equation}
+
+Give each leftover terminal term phase zero and denote their sum by
+\(b_{\rm tail}(w)\). Since, for \(\ell=0,1\),
+\[
+ d_{N-\ell}
+ =\exp[-(1/4+c/16)L+O(\ee^{-L/2})]=O(\chi),
+\]
+this tail and its fixed derivatives are \(O_R(\chi)\), and
+\(b_{\rm tail}'(0)=0\).
+It remains to restore the two event equations in the presence of the
+complete \(K\), without leaving a circle.
+
+Vary just the second and third phases of the head block. Their event
+map is
+\[
+ F(\theta_2,\theta_3)=
+ \bigl(1+d_2\cos\theta_2+d_3\cos\theta_3,\
+       \lambda_2d_2\sin\theta_2+\lambda_3d_3\sin\theta_3\bigr).
+\]
+At the block solution its Jacobian determinant is
+\[
+ v\left[\frac{\lambda_3^2}{\lambda_2}A_3+\lambda_2A_2\right]>0.
+\]
+As \(L\to\infty\), the two frequencies tend to \(1/4\), and
+\((1,d_2,d_3)\) tends uniformly to \((1,2^{-s},3^{-s})\) for
+\(s\in[5/8,3/4]\). These are a compact family of nondegenerate
+triangles, so the inverse Jacobian and the second derivatives of the
+map are uniformly bounded. The inverse-function theorem therefore
+solves
+\[
+ F=\bigl(-K(0)-b_{\rm tail}(0),\,K'(0)\bigr)
+\]
+with phase changes \(O(\chi)\). The complete repaired field
+\(q_*=p+E\) satisfies the event equations exactly and
+\(\norm{E^{(k)}}_R=O_R(\chi)\) for \(k\le2\).
+
+\begin{theorem}[Exact-circle obstruction]\label{thm:circles}
+For each fixed \(\beta>0\), every sufficiently large center in
+\eqref{eq:band} admits quadratures with
+\(x_n^2+y_n^2=d_n^2\) for every \(n\le N\), the actual correction \(K\),
+and \(q_*(0)=q_*'(0)=0\), such that
+\begin{equation}\label{eq:circlenegative}
+ \cD_a(q_*)\le-\kappa_\beta^{\rm circ}/L^2,\qquad
+ \kappa_\beta^{\rm circ}=\tfrac12(1-1/\sqrt3)^2C_\beta>0.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Expand \(\cD_a(p+E)\) using \eqref{eq:circlefieldbound}.
+The error beyond \eqref{eq:circleleading} is
+\[
+ O_\beta(\chi/L+\chi^2+a^{-2}L^{-4}).
+\]
+It is \(o(L^{-2})\), proving the result.
+\end{proof}
+
+This exact-circle point is still not multiplicative. The first member
+of each block has phase zero, so \(u_1=u_4=1\). The adjusted second
+phase remains uniformly in the interior of \((\pi/2,\pi)\). Therefore
+\[
+ |u_4u_1-u_2^2|=2|\sin\theta_2|\ge\delta_0>0.
+\]
+Nor is the actual leading carrier phase imposed in this construction.
+The next section restores both multiplicativity and that leading phase.

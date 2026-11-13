@@ -270,3 +270,67 @@ is same-assistant analytical/production checking, not independent assessment.
 
 
 **A failed quadratic certificate is not a failed Green potential, 7 November 2026.** For Edward Baker with substantial Codex assistance; lead Astra/ultra, proofs/assessment Sol6.1/ultra by tool selection. [Note29](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/notes/29_TND_O_E20_R2_UNIFORM_EULER_LENGTH_OBSTRUCTION_20261107.md) lower-bounds the actual quadratic residual average for a specified finite-Euler length class, not J0 or every center. Its exclusions do not cover arbitrary coefficients, adaptive centers or longer products. [Decision17](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/brainstorm/notes/17_TND_O_B04_R5_SIGNED_ACQUISITION_DECISION_20261107.md) states: “Exact analytic continuation remains unique; the example concerns stability from the stated incomplete data.” Changed conductor/residue and nonuniform source/count constants delimit its controls. [Review12](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/reviews/12_TND_O_E21_SIGNED_ACQUISITION_ASSESSMENT_20261107.md) accepts these scopes; neither result supplies the missing signed upper margin.
+
+**A negative relaxed phase value is not canonical arithmetic, 11 November 2026.**
+For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[RSCT Note07 §§3–4](../papers/investigations-5/10_riemann_siegel_critical_time/notes/07_RSCT_B01_R5_SIGNED_CORRELATION_DISK_TEST_20261111.md)
+constructs a negative signed quadratic value with exact local event equations
+and the retained correction. It states: “The d_n are retained as disk radii only.”
+The witness attenuates modes and fails exact coefficient magnitudes and the
+common logarithmic phase law. Its negative margin stops the independent-disk
+certificate class, not exact-circle or actual-phase estimates, and constructs
+no theta event. Retaining signed cross terms is insufficient if the phase
+constraints needed for their sign were discarded. [Review05](../papers/investigations-5/10_riemann_siegel_critical_time/reviews/05_RSCT_B01_R5_SAME_ASSISTANT_CHECK_20261111.md)
+is same-assistant only and preserves this distinction.
+
+**Exact magnitudes still do not identify canonical phases, 11 November 2026.**
+For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[RSCT Note08 §§4–5](../papers/investigations-5/10_riemann_siegel_critical_time/notes/08_RSCT_B01_R6_EXACT_CIRCLE_TEST_20261111.md)
+states: “Thus the common-phase premise fails explicitly, including a necessary elementary multiplicative identity, even though every exact amplitude is preserved.”
+Its [same-assistant Review06](../papers/investigations-5/10_riemann_siegel_critical_time/reviews/06_RSCT_B01_R6_SAME_ASSISTANT_CHECK_20261111.md)
+checks that distinction. The construction extends the failure to a smaller class than r5's disks;
+the earlier handoff's untested-circle boundary is superseded by this separate
+proof, not by broadening the old theorem. Its negative value stops the
+independent-circle/event-equation bound, not actual arithmetic, additional
+global zero constraints or every constrained correlation method. Name the
+failed multiplicative relation before interpreting exact-magnitude feasibility.
+
+**Multiplicative phases and fixed calibration still leave a height gap, 11 November 2026.**
+For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[RSCT Note09](../papers/investigations-5/10_riemann_siegel_critical_time/notes/09_RSCT_B01_R7_MULTIPLICATIVE_PHASE_TEST_20261111.md)
+states: “This is a counterexample to the multiplicative-phase estimating class, not a canonical arithmetic value or physical collision.”
+All multiplicative identities and any fixed finite actual-prime calibration
+survive, but another prime explicitly disagrees with the same physical height.
+The onset depends on that fixed set; do not replace the quantifier by a
+uniform growing-calibration claim or infer actual-height realization.
+The generic isolated-prime multiplicative-twist obstruction is credited prior
+work; the signed consumer, correction and calibration are the extension.
+[Review07](../papers/investigations-5/10_riemann_siegel_critical_time/reviews/07_RSCT_B01_R7_SAME_ASSISTANT_CHECK_20261111.md)
+is same-assistant only. Earlier scoped results retain their original statements.
+
+**Growing agreement is not uniform agreement across the full cutoff, 11 November 2026.**
+For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[RSCT Note10 §4](../papers/investigations-5/10_riemann_siegel_critical_time/notes/10_RSCT_B01_R8_GROWING_PRIME_CALIBRATION_20261111.md)
+states: “This pointwise statement in the prime index is not uniform control of the full population as both the height and cutoff tend to infinity.”
+Its negative point matches all primes through a specified growing cutoff,
+but a moving prime still disagrees with the same height. The paid range is
+sufficient for this construction; neither its boundary nor failure of its
+budget proves a favorable estimate outside it. The [same-assistant Review08](../papers/investigations-5/10_riemann_siegel_critical_time/reviews/08_RSCT_B01_R8_SAME_ASSISTANT_CHECK_20261111.md)
+checks the uniform constants and quantifiers. Preserve R7's fixed-set scope;
+R8 supplies a separate limited extension, not a universal impossibility theorem.
+
+**One necessary all-real inequality is not the full property, 11 November 2026.**
+For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[RSCT Note11](../papers/investigations-5/10_riemann_siegel_critical_time/notes/11_RSCT_B01_R9_MIRROR_JET_COMPATIBILITY_20261111.md)
+states: “It does not establish that every finite collection of jet constraints can be met.”
+A new joint selection satisfies the forced-mirror fourth-jet condition while
+retaining R8's negative signed value and growing calibration. This stops that
+one strengthened estimating class, not full all-real-conditioned or all higher-jet
+methods. Do not assign the added property to an arbitrary earlier witness:
+[Review09](../papers/investigations-5/10_riemann_siegel_critical_time/reviews/09_RSCT_B01_R9_SAME_ASSISTANT_CHECK_20261111.md)
+checks a fresh simultaneous seven-observation construction. The inherited mirror
+condition and prior generic threshold compatibility retain their ownership.
+
+**Preserve the class when consolidating results, 12 November 2026.**
+For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+The [RSCT synthesis scope table](../papers/investigations-5/10_riemann_siegel_critical_time/manuscript/sections/08_controls_and_provenance.tex) states: “The phase constructions are counterexamples to a proposed nonnegative lower bound over the displayed estimating classes.” Consolidation into one manuscript does not turn these into canonical collision exclusions. Its [Green comparison](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/brainstorm/external/01_RSCT_MANUSCRIPT_COMPARISON_AND_PROPOSED_QUESTIONS_20261112.md) keeps the growing-cutoff residual mean unproved; a local Poisson counterexample is not a theorem about the integrated Green observable. Original R1–R9 statuses remain in force.

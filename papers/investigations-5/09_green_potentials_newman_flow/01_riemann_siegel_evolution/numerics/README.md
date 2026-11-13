@@ -1,5 +1,19 @@
 # Numerics
 
+13 November 2026: [Lower-offset geometry checks](20_GNP_RS_LOWER_OFFSET_GEOMETRY_CHECKS_20261113.json)
+record illustrative floating evaluations of exact Green kernels, their
+boundary masses, and simple rational coefficient exponents for
+[brainstorm Note12](../brainstorm/notes/12_GNP_RS_LOWER_TRANSVERSE_OFFSET_AND_LOG_OBSERVATION_20261113.md).
+These are not interval certificates or observations of theta zeros.
+Prepared for Edward Baker with Codex assistance; actual model/effort unavailable.
+
+13 November 2026: [Persistence algebra checks](19_GNP_RS_PERSISTENCE_ALGEBRA_CHECKS_20261113.json)
+record exact rational constants and coefficient cancellation for the
+[brainstorm note](../brainstorm/notes/10_GNP_RS_PERSISTENCE_SCALE_AND_ZERO_MOTION_20261113.md).
+Prepared for Edward Baker with substantial Codex assistance; actual
+model/effort unavailable. This is a small same-assistant algebra record,
+not a numerical zero search or new canonical arithmetic estimate.
+
 - [GNP-RS-E02 document check, 11 November 2026](01_GNP_RS_E02_DOCUMENT_CHECK_20261111.json): local links, Markdown structure and file identities for the overview assessment; no mathematical numerical execution.
 - [GNP-RS-B01 input/handoff record, 11 November 2026](02_GNP_RS_B01_INPUTS_AND_HANDOFF_20261111.json): source and request identities, status and document checks; no numerical research execution. The E02 record remains a historical snapshot.
 - [GNP-RS-E01 input/check record, 11 November 2026](03_GNP_RS_E01_INPUTS_AND_CHECKS_20261111.json): activation drift check, exact source/request/return identities, analytical dispositions and document checks. No mathematical numerical execution; older records remain historical snapshots.
@@ -22,3 +36,15 @@ Authorized computations and small execution records; large outputs remain extern
 
 - [B05 entry verification](11_GNP_RS_B05_ENTRY_VERIFICATION_20261111.json): all 43 record10 identities matched before activation.
 - [B05/E06 execution record](12_GNP_RS_B05_E06_INPUTS_AND_CHECKS_20261111.json): frozen request, proof/source identities and analytical/document checks; no numerical campaign.
+
+- [B07 analytical execution record](14_GNP_RS_B07_INPUTS_AND_CHECKS_20261112.json): source/output identities, exact rational exponents and constants, document checks and chat-registry snapshot; no numerical field evidence or certified onset. Prepared for Edward Baker with Codex assistance, 12 November 2026; actual model/effort unavailable.
+
+- [B08 analytical execution record](15_GNP_RS_B08_INPUTS_AND_CHECKS_20261112.json): exact rational exponents/constants, source/output identities, document checks and registry snapshot; no numerical field evidence. For Edward Baker with Codex assistance, 12 November2026; actual model/effort unavailable.
+
+- [B09 analytical execution record](16_GNP_RS_B09_INPUTS_AND_CHECKS_20261112.json): exact algebra/fractions, preserved earlier output identities, source-prefix and document checks; no numerical field evidence. For Edward Baker with Codex assistance, 12 November 2026; actual model/effort unavailable.
+
+- [B10 exact-rational check script](17_gnp_rs_b10_rational_check.py) and [execution record](17_GNP_RS_B10_INPUTS_AND_CHECKS_20261112.json): exact exponents, source identity and local document checks; no sampled zeta values, collision computation or numerical onset.
+
+- [B10 pre-integration audit checks](18_GNP_RS_B10_AUDIT_CHECKS_20261112.json). Exact exponent replay, independent ledger arithmetic, and source and document checks.
+
+- [Variable-strip algebra diagnostic](21_GNP_RS_VARIABLE_STRIP_DIAGNOSTIC_20261113.json), 13 November 2026: exact eight-root even polynomial heat flow, verified heat equation and two independent expressions for the root velocities. A lower root initially moves outward while outer roots move inward; only pointwise use of the global strip law is screened. For Edward Baker with substantial Codex assistance; actual model/effort unavailable.

@@ -1,0 +1,499 @@
+\section{Short-window residual and Green means}
+\label{sec:b10-short-windows}
+
+We use the exact residual \eqref{eq:exact-relative-residual} at \(c=1\),
+with physical time \(1/L_X\) held fixed throughout \(W_X\). The prime
+cutoff \(P\) is constant on the outer interval \([U,U+\ell]\).
+The following theorem combines the growing-cutoff diagonal, the exact
+convolution weight and the short-window arm bounds
+\cite{GNPRSWeightedEulerLedger,GNPRSLocalizedArm,GNPRSGrowingExponentPair,GNPRSSignedMellin}.
+Write
+\[
+ \mathscr R(U,\ell;P)=\frac1\ell\int_U^{U+\ell}R_P(X,1)\dd X,
+ \qquad
+ \mu_P=\sum_{\substack{k>1\\(k,D_P)=1}}k^{-3/2}\le2P^{-1/2},
+ \qquad D_P=\prod_{p\le P}p .
+\]
+
+\begin{theorem}[Short-window mean of the growing-cutoff residual]
+\label{thm:b10-averaged}
+Put \(\beta=17/81\). For each fixed \(0<\rho\le47/162\) and all
+sufficiently large real \(U\), uniformly for integers
+\(2\le P\le\lfloor L_U^2\rfloor\) and
+\(U^{\beta+\rho}\le\ell\le U\),
+\begin{equation}\label{eq:b10-main}
+ \left|\mathscr R(U,\ell;P)-\mu_P\right|
+ \le C\left(\frac{\sqrt{\mu_P}}{L_U}+L_U^{-2}\right)
+     +O_\rho\!\left(U^{-\min(7/6480,\,9\rho/28)}\right).
+\end{equation}
+Here \(C\) depends only on the fixed inputs. The large-height onset
+is finite and unevaluated.
+\end{theorem}
+
+\subsection{Exact Mellin projection of the upper part of the arm}
+
+For the short-window proof put \(L=L_U\), \(\mathcal L=1+\log U\),
+and choose
+\[
+ B=N_U=\left\lfloor\sqrt{U/(4\pi)}\right\rfloor,\qquad
+ Z=\lfloor U^{1/3}\rfloor,\qquad Y=\lfloor U^{1/10}\rfloor,\qquad
+ M=U^{1/10}.
+\]
+Take a fixed nonnegative smooth \(\psi_0\) of integral one supported
+on \([-1/2,1/2]\) and put
+\(\chi=\mathbf1_{[-3/2,5/2]}*\psi_0\).
+Then \(\chi=1\) on \([-1,2]\), has support in \([-2,3]\) and
+has integral four. For \(0\le a<b\le B\) define
+\begin{align*}
+ w_x=w_x(U)&=x^{-3/4}\exp((\log x)^2/(4L)),\qquad
+ \tau(u)=u/2+\pi/(8L),\\
+ D_{a,b}(u)&=\sum_{a<n\le b}w_n\,\ee^{\ii\tau(u)\log n},\\
+ \mathcal Q_{a,b}&=\ell^{-1}\int_\R
+       \chi((u-U)/\ell)|D_{a,b}(u)|^2\dd u,\\
+ \mathcal S_{a,b}&=\sum_{a<m<n\le b}w_mw_n
+       \ee^{\ii\tau(U)\log(n/m)}
+       \widehat\chi\bigl((\ell/2)\log(n/m)\bigr),
+ \qquad
+ \widehat\chi(\xi)=\int_\R\chi(v)\ee^{\ii v\xi}\dd v.
+\end{align*}
+Expanding the square and pairing the two orderings gives
+\begin{equation}\label{eq:b10-signed}
+ \mathcal Q_{a,b}=4\sum_{a<n\le b}w_n^2+2\Re\mathcal S_{a,b}.
+\end{equation}
+
+We first show, for \(1\le\ell\le\sqrt U\), that
+\begin{equation}\label{eq:b10-high}
+ \mathcal Q_{Z,B}+|\Re\mathcal S_{Z,B}|
+ \ll\mathcal L^3\left(U^{-1/9}+\frac{U^{37/180}}{\ell}\right).
+\end{equation}
+Use the cumulative zeta mean-square error of Bourgain and Watt
+\cite[Theorem 4]{BourgainWattPerturbedCones2015v1}, published in
+\cite{BourgainWattPerturbedCones2018}. For \(T\ge1\) they give
+\[
+ \int_0^T|\zeta(1/2+\ii t)|^2\dd t
+ =T\bigl(\log(T/(2\pi))+2\gamma-1\bigr)
+      +O_\epsilon(T^{1515/4816+\epsilon}).
+\]
+Fix \(\theta=19/60\) and
+\(\epsilon=151/144480<\theta-1515/4816\).
+For a subinterval of \([1,R]\) subtract the two cumulative
+identities, integrating the derivative
+\(\log(t/(2\pi))+2\gamma\) of the main term.
+The two endpoint errors cost \(O(R^\theta)\). Reflect negative heights
+and use boundedness on \([-1,1]\). For every interval \(I\subset[-R,R]\)
+of length at most \(c_*\ell\), \(R\ge2\), \(\ell\ge1\), this gives
+\begin{equation}\label{eq:b10-local-zeta}
+ \int_I|\zeta(1/2+\ii t)|^2\dd t
+ \ll_{c_*} \ell\log(2+R)+R^\theta.
+\end{equation}
+In particular the cumulative error remains in the translated bound.
+
+Let \(q\) be a fixed smooth increasing cutoff with \(q=0\) on
+\((-\infty,0]\) and \(q=1\) on \([1/2,\infty)\), and set
+\[
+ a(x)=\sqrt x\,w_x,\qquad
+ b(x)=a(x)q(x-Z-1/4)q(B+3/4-x),\qquad
+ \widetilde b(z)=\int_0^\infty b(x)x^z\frac{\dd x}{x}.
+\]
+The transitions lie in \((Z+1/4,Z+3/4)\) and
+\((B+1/4,B+3/4)\). At every integer \(n\),
+\(b(n)=\sqrt n\,w_n\mathbf1_{Z<n\le B}\).
+Put \(A_*=U^{-1/18}\) and \(g(y)=b(\ee^y)\). On the support,
+\(\alpha=\log x/\log U\) ranges from \(1/3+O(U^{-1/3}/\log U)\)
+to \(1/2+O(1/\log U)\).
+Since \(\log a(U^\alpha)=-\alpha(1-\alpha)\log U/4+O(1)\),
+we have \(\sup a\ll A_*\). The logarithmic derivative of \(a(\ee^y)\)
+with respect to \(y\) is \(-1/4+y/(2L)\) and changes sign at most once.
+The interior total variation is \(O(A_*)\) and the interior
+second derivative has integral \(O(A_*\mathcal L)\).
+A transition at \(x\asymp N\), \(N=Z,B\), has \(y\)-width
+\(O(1/N)\) and first and second \(y\)-derivatives bounded by
+\(O(N)\) and \(O(N^2)\). The product rule gives
+\[
+ \|g\|_1\ll A_*\mathcal L,\qquad
+ \|g'\|_1\ll A_*,\qquad
+ \|g''\|_1\ll A_*B.
+\]
+For \(k(v)=\widetilde b(\ii v)/(2\pi)\) integration by parts yields
+\[
+ |k(v)|\ll A_*\min\{\mathcal L,|v|^{-1},B|v|^{-2}\}
+ \quad(v\ne0).
+\]
+Split the integrals at \(1/\mathcal L,B,U\), with \(B\le\sqrt U\).
+The resulting bounds are
+\begin{align*}
+ \int_\R |k(v)|\dd v&\ll A_*\mathcal L,\\
+ \int_\R |k(v)|\log(2+U+|v|)\dd v&\ll A_*\mathcal L^2,\\
+ \int_\R |k(v)|(U+|v|)^\theta\dd v&\ll A_*U^\theta\mathcal L.
+\end{align*}
+For the last two integrals, the \(|v|>U\) pieces cost
+\(O(A_*B(1+\log U)/U)\) and \(O(A_*B U^{\theta-1}/(1-\theta))\),
+respectively.
+
+With \(s=1/2-\ii\tau(u)\), Mellin inversion first on \(\Re z=1\)
+permits the absolutely convergent Dirichlet series for
+\(\zeta(s+z)\). Shift to \(\Re z=0\). For each fixed \(U,u\), smooth
+compact support gives arbitrary vertical decay of \(\widetilde b\) on
+the contour strip, and Euler summation gives polynomial growth of
+\(\zeta\) away from its pole. The crossed simple pole has residue
+\(\widetilde b(1-s)\). Thus the exact identity is
+\begin{equation}\label{eq:b10-mellin}
+ D_{Z,B}(u)=\sum_n b(n)n^{-s}
+   =\widetilde b(1-s)+\int_\R k(v)\zeta(s+\ii v)\dd v .
+\end{equation}
+The weight \(\ee^{y/2}a(\ee^y)\) increases on the support and is bounded
+by \(C A_*\sqrt B\). After multiplying by the cutoffs its variation is
+still \(O(A_*\sqrt B)\), so one integration by parts pays the residue
+by \(C A_*\sqrt B/|\tau(u)|\ll A_*U^{-3/4}\) on the \(\chi\)-window.
+
+Apply Cauchy--Schwarz to the last integral in \eqref{eq:b10-mellin}
+with measure \(|k(v)|\dd v\), then use Tonelli's theorem with
+\(\chi((u-U)/\ell)\dd u/\ell\). For each \(v\), the substitution
+\(t=v-\tau(u)\) has absolute Jacobian \(|\dd u/\dd t|=2\).
+It sends the support into an interval of length \(5\ell/2\)
+in \([-C(U+|v|),C(U+|v|)]\).
+Equation~\eqref{eq:b10-local-zeta} and the weighted kernel bounds give
+\[
+ \mathcal Q_{Z,B}
+ \ll A_*^2\left(U^{-3/2}+\mathcal L^3+
+                      \frac{U^\theta\mathcal L^2}{\ell}\right).
+\]
+The diagonal satisfies \(\sum_{Z<n\le B}w_n^2\ll A_*^2\mathcal L\).
+Since \(\theta-1/9=37/180\), \eqref{eq:b10-signed} proves
+\eqref{eq:b10-high}. Its signed estimate concerns the real quadratic
+sum over all pairs, including all lattice resonances.
+
+\subsection{Lower modes and the weighted arm norms}
+For the shorter windows \(\ell\le\sqrt U\), use the auxiliary arm
+\(A(u)\) at time \(1/L_u\) from \eqref{eq:real-two-arms}, with
+\(A_Y(u)\) its restriction to \(n\le Y\). Its weights satisfy
+\(w_n(u)\le n^{-5/8}\) for \(n\le N_u\). Define
+\begin{align*}
+ r_*&=\frac{32}{\pi}\log(2U),&
+ \mathcal I&=[U-r_*,U+\ell+r_*],\\
+ W(u)&=\int_U^{U+\ell}K(u-X)\mathbf1_{u\in W_X}\dd X,&
+ d\sigma(u)&=\frac{2W(u)}{\ell}\dd u .
+\end{align*}
+The B07 weight \cite{GNPRSLocalizedArm} has \(0\le W\le1/2\),
+support in \(\mathcal I\), and
+\begin{equation}\label{eq:b10-weight}
+  1-\frac4\pi U^{-4}\le m_\sigma:=\int d\sigma\le1,\qquad
+  \operatorname{TV}(W)\le1+\frac{\ell}{2U^4}.
+\end{equation}
+The mass bound integrates the kernel tail
+\(\int_{|v|>R_X}K(v)\dd v\le (2/\pi)X^{-4}\).
+The untruncated convolution has derivative
+\(K(u-U)-K(u-U-\ell)\) of \(L^1\) norm at most one.
+Each removed tail has total variation \(4K(R_X)\le X^{-4}/2\),
+including the two jumps. Integrating their variations proves the
+second bound. For \(r_*\le\ell\), \(\mathcal I\subset[U-\ell,U+2\ell]\),
+where the smooth weight \(\chi((u-U)/\ell)\) equals one. Thus it
+majorizes \(2W(u)\) in upper bounds for nonnegative norm squares.
+
+On the full smooth support \([U-2\ell,U+3\ell]\), freeze the
+weights and the small \(\pi/(8L_u)\) phase correction at \(U\).
+For common active indices their summed drift is
+\(O(\ell U^{-13/16})\), using \(O(U^{-1})\) bounds for the
+logarithmic weight derivative and for the derivative of the
+small phase after multiplication by \(\log n\). At the upper
+cutoff there are \(O(1+\ell/\sqrt U)\) changed indices of size
+\(\asymp\sqrt U\), each of weight \(O(U^{-5/16})\).
+With \(Y\le N_{U-2\sqrt U}\), this gives uniformly
+\[
+ |(A-A_Y)-D_{Y,B}|+|A_Y-D_{0,Y}|\ll U^{-5/16}.
+\]
+The cutoff jumps therefore cost \(O(U^{-5/8})\) in the norm-square
+comparison, which uses \(|f+g|^2\le2|f|^2+2|g|^2\).
+
+In the Fourier expansion of \(\mathcal Q_{Y,Z}\), partition the
+pairs \(Y<m<n\le Z\) into \(n\ge2m\) and \(m<n<2m\).
+For the latter write \(n=m+h\) and partition \(m\) into
+dyadic blocks \(N\le m<2N\). For fixed \(h\) the cutoff
+conditions restrict \(m\) to an interval in this block. Put
+\(t=(U/2+\pi/(8L))/(2\pi)\asymp U\). The conjugate exponential
+phase, in the convention \(\exp(2\pi\ii f)\), is
+\[
+ f(x)=-t\log(1+h/x)=-t\int_0^h(x+s)^{-1}\dd s .
+\]
+For \(\varphi(x)=-th/x\), every derivative order \(j\ge1\) satisfies
+\[
+ \frac{|f^{(j)}(x)-\varphi^{(j)}(x)|}{|\varphi^{(j)}(x)|}
+ \le \frac{(j+1)h}{2x}.
+\]
+This follows by averaging
+\(1-(1+s/x)^{-j-1}\le(j+1)s/x\). Take the derivative
+parameter \(2\) and scale \(th\) in the exponent-pair class
+of Montgomery and Vaughan \cite[Definitions 16.1--16.2 and
+Theorems 16.23, 16.25]{MontgomeryVaughanExponentialSums2026}.
+The operations \(B,A,A,B\) from \((0,1)\) give \((2/7,4/7)\).
+Fix the derivative order and tolerance for this pair, then
+choose a fixed \(\delta_0>0\) small enough that \(h\le\delta_0N\)
+ensures the required relative derivative bounds. The unweighted
+sum over each subinterval is
+\[
+ \ll (th/N^2)^{2/7}N^{4/7}+N^2/(th)
+ \ll (Uh)^{2/7}+N^2/(Uh).
+\]
+Both terms are used.
+
+The exact weight is decreasing in its index, with
+\(|w_x'(U)|\ll w_x(U)/x\). For
+\[
+ a_h(x)=w_x(U)w_{x+h}(U)
+          \widehat\chi\bigl((\ell/2)\log(1+h/x)\bigr)
+\]
+the supremum plus total variation on each allowed interval is
+\(\ll_D w_N(U)^2(1+\ell h/N)^{-D}\) for fixed \(D\).
+Indeed the weight derivatives cost \(O(w_N(U)^2/N)\),
+and one extra Fourier decay power pays the integral of the
+argument derivative \(O(\ell h/N^2)\).
+Abel summation and
+\(\sum_{h\ge1}h^{2/7}(1+\ell h/N)^{-D}\ll (N/\ell)^{9/7}\)
+for \(D\ge4\) give the leading cost per block
+\[
+ U^{2/7}N^{-3/14}\exp\bigl((\log N)^2/(2L)\bigr)\ell^{-9/7}.
+\]
+Writing \(\alpha=(\log N)/(\log U)\), the exponent of \(U\)
+in its coefficient is \(2/7-3\alpha/14+\alpha^2/2+O(1/\log U)\).
+The quadratic is convex. Its endpoint values on \([1/10,1/3]\)
+are \(377/1400\) and \(17/63\), with difference \(1/1800\).
+Floor and dyadic factors cost \(O(1)\) in the logarithm of the
+coefficient. The block count is \(O(\mathcal L)\).
+For the \(N^2/(Uh)\) term, the coarser \(N^{-5/4}\) amplitude
+and \(\sum_{h\ge1} h^{-1}(1+\ell h/N)^{-D}\ll\log(2+N/\ell)\)
+give \(O(U^{-1}Z^{3/4}\mathcal L)\) after dyadic summation.
+For \(h>\delta_0 N\) and for noncomparable pairs, the log ratio
+is bounded below by a fixed positive constant. The Fourier
+factor is \(O(\ell^{-4})\) and the squared absolute sum of the
+weights is \(O(U^{3/8})\). The diagonal is at most \(16Y^{-1/4}\).
+Altogether,
+\begin{equation}\label{eq:b10-low}
+ \mathcal Q_{Y,Z}\ll Y^{-1/4}+\mathcal L U^{17/63}\ell^{-9/7}
+                       +U^{3/8}\ell^{-4}+U^{-5/8}\mathcal L .
+\end{equation}
+
+The exact split \(D_{Y,B}=D_{Y,Z}+D_{Z,B}\) pays all cross
+terms through the square triangle bound with factor two.
+In the frozen head the diagonal is bounded, and the distinct
+log spacings are at least \(1/Y\). Second-power Fourier decay
+and \((\sum_{n\le Y}w_n(U))^2\ll Y^{3/4}\) give the
+off-diagonal cost \(O(Y^{11/4}/\ell^2)\), which decays on the
+short-window range in Theorem~\ref{thm:b10-averaged}.
+Together with \eqref{eq:b10-high}, \eqref{eq:b10-low}, and the
+freezing comparison this gives, for a sufficiently large fixed \(C\),
+\begin{align}
+ \mathcal E&=\mathcal L U^{17/63}\ell^{-9/7}
+      +\mathcal L^3(U^{-1/9}+U^{37/180}/\ell)
+      +U^{3/8}\ell^{-4}+U^{-5/8}\mathcal L,\nonumber\\
+ \int |A-A_Y|^2d\sigma&\le A_1:=C(Y^{-1/4}+\mathcal E),\nonumber\\
+ \int |A|^2d\sigma,\quad\int |A_Y|^2d\sigma
+   &\le A_0:=C(1+\mathcal E).
+ \label{eq:b10-norms}
+\end{align}
+
+\subsection{The residual estimate}
+At auxiliary time \(1/L_u\) write \(Q=E_P^{-1}\), \(D_P=\prod_{p\le P}p\),
+and for an arm \(a\) put
+\[
+ \mathcal Z(a)=aQ-1+\ee^{\ii\phi}(Q/\overline Q)\overline{aQ-1},
+ \qquad
+ \begin{aligned}
+ \phi(u)&=u(L_u-1)/2+\pi/8+7\pi/4,\\
+ \nu(u)&=u/2+\pi/(8L_u).
+ \end{aligned}
+\]
+The weighted residual estimate uses the B06 coefficient and clock
+bounds \cite{GNPRSWeightedEulerLedger} and B07's exact boundary
+calculation. First compare the physical square at time \(1/L_X\),
+fixed throughout \(W_X\), to \(|\mathcal Z(A)(u)|^2\).
+At fixed \(u\in W_X\) the two auxiliary arms have size \(O(U^{7/32})\)
+and time derivative \(O(L^2U^{7/32})\) on the segment from \(1/L_X\)
+to \(1/L_u\), by the weights and carrier phase in
+\eqref{eq:real-two-arms}. On this segment keep the Euler exponent
+\(3/4\). With
+\[
+ H=\prod_{p\le P}(1-p^{-3/4})^{-1},\qquad
+ T_1(P)=\sum_{p\le P}\frac{p^{-3/4}\log p}{1-p^{-3/4}},
+\]
+the reciprocal product has modulus at most \(H\) and time derivative
+\(O(HT_1(P))\). Its ratio with its conjugate has unit modulus and
+time derivative \(O(T_1(P))\). Since \(T_1(P)\ll P^{1/4}\log P\le L^2\)
+eventually, the relative square has time derivative
+\(O(H^2L^2 U^{7/16})\). The displacement
+\(O(r_* /(UL^2))\) costs \(O(H^2r_*U^{-9/16})\).
+The exact field error in \eqref{eq:real-provider-error}, after
+multiplication by \(Q\) and comparison of squares, adds
+\(O(H^2U^{-1/32})\). This calculation differentiates only the
+arithmetic approximation at fixed \(u\). Fubini now gives
+\begin{equation}\label{eq:b10-fubini}
+ \left|\mathscr R-\frac12\int|\mathcal Z(A)|^2\,d\sigma\right|
+ \le C_{\rm clk}H^2(U^{-1/32}+r_*U^{-9/16}).
+\end{equation}
+The factor \(1/2\) comes from the definition of \(d\sigma\).
+
+Let \(Q_M,E_M\) denote the expansions of \(Q,E_P\) truncated
+by integer index at \(M\). Their indices are squarefree divisors
+of \(D_P\) for \(Q_M\) and integers with all prime factors at most
+\(P\) for \(E_M\). Their absolute coefficient sums are at most
+\(H\), as for the complete expansions. Put \(B_M=A_YQ_M-1\) and
+\(m_M=\overline{Q_M}E_M\). With
+\[
+ T_M=M^{-1/8}\prod_{p\le P}(1-p^{-5/8})^{-1},
+\]
+both discarded tails have supremum at most \(T_M\). This follows
+from \(n^{-3/4}\le M^{-1/8}n^{-5/8}\) for \(n>M\).
+Also \(\|m_M-\overline Q/Q\|_\infty\le2HT_M\), and
+the coefficient absolute sum of \(m_M\) is at most \(H^2\).
+
+For \(L_0=L_{U-r_*}\), \(K_0=\lfloor M\rfloor Y\) set
+\begin{align*}
+ a_0&=C_2/(4L_0)+C_0Y^{-1/8}+C_0M^{-1/8},
+ &D_0&=2\sqrt{\mu_P}\,a_0+a_0^2,\\
+ s_0&=150000 K_0(1+\log K_0)/\ell,
+ &b_0&=(\sqrt{\mu_P}+a_0)^2+s_0,\\
+ c_0&=8000 H^4Y^{3/4}/(\ell L_0).
+\end{align*}
+The coefficient vector of \(B_M\) has distance at most \(a_0\)
+in \(\ell^2\) from \(k^{-3/4}\mathbf1_{k>1,(k,D_P)=1}\),
+by Möbius cancellation. More explicitly, the individual difference
+is bounded by \(k^{-5/8}d(k)\) times
+\((\log k)^2/(4L_0)+Y^{-1/8}+M^{-1/8}\), where \(d(k)\) counts
+divisors. The three terms bound the Gaussian weight correction,
+the head truncation and the reciprocal truncation, respectively.
+Here \(C_0^2=\sum_k d(k)^2 k^{-5/4}\) and
+\(C_2^2=\sum_k d(k)^2(\log k)^4k^{-5/4}\), which converge by
+\(d(k)^2\le d_4(k)\) and the absolute Dirichlet series for
+\(\zeta(s)^4\), \(s>1\). In particular \(C_0\le25\).
+The diagonal error at each \(u\) is at most \(D_0\).
+
+For same-arm phases \(\nu\log(k/l)\), \(k\ne l\), the partial
+integrals are at most \(12/|\log(k/l)|\) by monotonicity
+and \(1/4\le\nu'\le1/2\). The coefficients have supremum at most
+\(g_k=k^{-5/8}d(k)\) and variation at most \(2g_k\) by summing
+the decreasing weights over divisors, including any activation
+jumps. For the product of two coefficients multiplied by \(W\),
+the supremum plus variation is at most \(4g_kg_l\) by
+\eqref{eq:b10-weight}. Using
+\(|\log(k/l)|^{-1}\le K_0/|k-l|\), \(2g_kg_l\le g_k^2+g_l^2\)
+and the harmonic row sum gives the weighted off-diagonal cost
+\(s_0\), with the factor \(2/\ell\) from \(d\sigma\). Hence
+\[
+ \left|\int|B_M|^2d\sigma-\mu_P\right|
+ \le D_0+s_0+\mu_P(1-m_\sigma),\qquad
+ \int|B_M|^2d\sigma\le b_0.
+\]
+The reflected phases are \(-\phi+\nu\omega\) with
+\(\omega=\log(kle/d)\), \(k,l\le K_0\), \(e,d\le M\).
+Their absolute log frequencies are bounded by
+\(2\log Y+3\log M\le\tfrac12\log U\).
+On \(\mathcal I\), eventually this is at most \(7L_0/8\),
+and \(\nu''|\omega|\ll U^{-2}/L\le1/(12U)\) while
+\(\phi''=1/(2u)\ge1/(6U)\). The first derivative is thus
+monotone and at most \(-L_0/16\), giving partial integrals
+bounded by \(48/L_0\).
+The pre-convolution absolute coefficient envelope of \(B_M\)
+sums to at most \((8/3)HY^{3/8}\), since the coefficient at
+1 cancels. Combining the product variation estimate for these
+terms with the absolute coefficient sum \(H^2\) of \(m_M\)
+bounds \(\big|\int 2\Re(\ee^{-\ii\phi}B_M^2m_M)d\sigma\big|\)
+by \(c_0\).
+
+The exact square for \(A_Y\) is
+\(2|A_YQ-1|^2+2\Re(\ee^{-\ii\phi}(A_YQ-1)^2\overline Q/Q)\).
+To replace the complete arm by \(A_Y\), use
+\(\|\mathcal Z(A)-\mathcal Z(A_Y)\|_{L^2(d\sigma)}
+ \le2H\sqrt{A_1}\) and
+\(\|\mathcal Z(A)\|_{L^2(d\sigma)},\|\mathcal Z(A_Y)\|_{L^2(d\sigma)}
+ \le4H\sqrt{A_0}\). For the multiplier replacement use
+\(\|(A_YQ-1)-B_M\|_{L^2(d\sigma)}\le T_M\sqrt{A_0}\),
+the bound \(b_0\), and \(|\overline Q/Q|=1\).
+Combining the square differences, the diagonal and reflected
+bounds, and \eqref{eq:b10-fubini}, yields
+\begin{align}
+ |\mathscr R-\mu_P|\le{}&
+ D_0+s_0+\tfrac12c_0+8H^2\sqrt{A_0A_1}
+    +4T_M\sqrt{A_0b_0}+2T_M^2A_0+2HT_M b_0\nonumber\\
+ &+C_{\rm clk}H^2(U^{-1/32}+r_*U^{-9/16})
+    +\frac4\pi\mu_P U^{-4}.
+ \label{eq:b10-ledger}
+\end{align}
+
+To conclude Theorem~\ref{thm:b10-averaged}, take
+\(\beta=17/81\) and \(\ell\ge U^{\beta+\rho}\).
+In \eqref{eq:b10-norms} the low term has power \(-9\rho/7\),
+and the translated high term has power \(-7/1620-\rho\),
+before logarithms. The diagonal tail has power \(-1/40\),
+the remaining large-shift cost has power \(-301/648-4\rho\),
+and freezing and the phase remainder cost \(O(U^{-5/8}\mathcal L)\).
+The head's auxiliary off-diagonal has power \(-469/3240-2\rho\).
+In \eqref{eq:b10-ledger}, \(s_0\ll\mathcal L U^{-4/405-\rho}\)
+and \(c_0\ll H^4U^{-437/3240-\rho}/L_0\).
+The two coefficient tails in \(a_0\) and the power in \(T_M\)
+are \(O(U^{-1/80})\). In particular \(A_0,b_0=O(1)\) eventually.
+Integral comparison gives \(H\le\exp(CP^{1/4})\) and
+\(T_M\le U^{-1/80}\exp(CP^{3/8})\).
+The remaining polynomial errors, including the field, clock and
+mass terms, fit
+\[
+ |\mathscr R-\mu_P|
+ \le C(\sqrt{\mu_P}/L+L^{-2})
+ +C\exp\bigl(C(P^{1/4}+P^{3/8})\bigr)\mathcal L^{C'}
+       (U^{-7/3240}+U^{-9\rho/14}).
+\]
+The positive exponents here precede absorption of the product and
+logarithm factors. Uniformly for \(P\le L^2\), the logarithm of
+those factors is \(O(L^{3/4}+\log\mathcal L)=o(\log U)\). It
+can be bounded by \(\tfrac12\min(7/3240,9\rho/14)\log U\)
+after a finite onset. This proves the stated remainder. All
+preceding gates hold at finite heights for fixed \(\rho>0\):
+\(r_*\le\ell\), \(\mathcal I\subset[U/2,3U]\), \(L_0\ge16\),
+\(2\le Y<Z<B\), \(Y\le N_{U-2\sqrt U}\), and the field,
+frequency and product bounds above. The common onset is
+unevaluated. For \(\sqrt U\le\ell\le U\), the inherited B08
+translated residual theorem \cite[Eq.~(B08.1)]{GNPRSGrowingExponentPair}
+with its fixed margin \(19/72\) starts at \(\ell=\sqrt U\)
+and gives the same leading logarithmic terms with remainder
+\(O(U^{-1/144})\). It uses the same block-constant \(P\) and
+physical clock.
+
+\subsection{Green consequences at the block cutoff}
+\begin{corollary}\label{cor:b10-green}
+On the interval range of Theorem~\ref{thm:b10-averaged}, take
+\(P_U=\lfloor L_U^2\rfloor\), constant over \([U,U+\ell]\).
+Then
+\begin{align*}
+ \mathscr R(U,\ell;P_U)&=\mu_{P_U}+O_\rho(L_U^{-3/2})
+                                    =O_\rho(L_U^{-1}),\\
+ \frac1\ell\int_U^{U+\ell}J_{1/L_X}(X)\dd X
+   &=O_\rho(L_U^{-1/3}),\\
+ \frac{|\{X\in[U,U+\ell]:J_{1/L_X}(X)\ge h\}|}{\ell}
+   &=O_{h,\rho}(L_U^{-1})\qquad(h>0\ \text{fixed}).
+\end{align*}
+\end{corollary}
+\begin{proof}
+The first assertion uses \(\mu_P\le2P^{-1/2}\).
+For the Green transfer, \(L_X=L_U+O(1)\) and \(P_U\le L_X^2\)
+throughout the interval. The phase gates in
+Lemma~\ref{lem:joint-phase} thus hold uniformly by
+\eqref{eq:euler-phase-derivatives}. In \eqref{eq:euler-master},
+the omitted primes cost \(O(P_U^{-3/2})=O(L_U^{-3})\).
+The reference exterior costs \(O(L_U^{3/4}U^{-4})\) and the
+complete-field logarithmic exterior \(O(U^{-3}\log^2U)\).
+Since \(q_X\log b_\delta\le\delta/4\) and \(\log(1+x)\le x\),
+\[
+ 0\le J_{1/L_X}(X)\le
+     \delta/4+\frac{R_{P_U}(X,1)}{2\delta^2}+C/L_U .
+\]
+Taking \(\delta=L_U^{-1/3}\) and averaging proves the second
+assertion. For fixed \(h>0\) take a fixed \(\delta>0\) with
+\(\delta/4\le h/4\), and let \(U\) be large enough for
+\(C/L_U\le h/4\). Then \(J_{1/L_X}(X)\ge h\) implies
+\(R_{P_U}(X,1)\ge h\delta^2\), so Markov's inequality proves
+the last assertion.
+\end{proof}
+
+The bound on total Green mass is \(O_\rho(\ell L_U^{-1/3})\),
+which grows on the admissible windows. A localized defect may fit inside that
+budget. A bound at every center would require further control
+of \(J_\lambda(X)\) along the moving-time curve
+\(\lambda=1/L_X\).

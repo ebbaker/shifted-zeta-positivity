@@ -1,0 +1,214 @@
+\section{The question and the scope of the results}\label{sec:scope}
+
+The investigation asks whether the arithmetic of the complete
+Riemann--Siegel representation can rule out the multiple real zero that
+would occur at a positive de Bruijn--Newman threshold. There are two
+distinct mathematical obligations: obtain a complete, accurately
+normalized arithmetic expression, and prove a sign for that expression
+that contradicts the necessary geometry of the proposed event.
+The first obligation has been met in the local regime developed below.
+The second remains open.
+
+The organization follows this distinction. Sections~\ref{sec:geometry}
+and~\ref{sec:representation} identify the event and a denominator-free
+signed measurement. Section~\ref{sec:fixed} explains why the tested
+fixed-height measurements do not resolve a fixed multiplicity.
+Section~\ref{sec:micro} derives the microscopic approximation, its
+coefficient moments, and the error after imposing the two event equations.
+Sections~\ref{sec:phases}--\ref{sec:mirror} test progressively more
+restrictive phase information. The final construction keeps all
+coefficient magnitudes, complete unit-phase multiplicativity, actual
+phases at a growing set of small primes, the actual carrier and correction,
+both local event equations, and one necessary fourth-derivative condition.
+It still has the sign permitted by a collision.
+
+Throughout the asymptotic sections,
+\begin{equation}\label{eq:band}
+ L=\log\frac{a}{4\pi},\qquad T=\frac cL,\qquad
+ \frac12\le c\le1,\qquad a\longrightarrow\infty.
+\end{equation}
+Constants are uniform in this interval of \(c\), unless a different
+dependence is stated. A fixed disk radius, a fixed \(\beta>0\), or a fixed
+derivative order may enter the constant. No bound stated for a fixed
+parameter is used with that parameter growing without a separate proof.
+The eventual objective concerns every \(0<T\le1/2\), every \(a>0\), and
+every multiplicity \(m\ge2\). There is no premise locating a hypothetical
+threshold event in \eqref{eq:band}.
+
+The research classification follows the
+\repo{result-summaries/README.md}{repository result index}, especially
+\repo{result-summaries/11_newman_heat_flow_reductions_and_certificates.md}{cluster 11},
+and the \repo{avoid/README.md}{avoidance index}, particularly
+\repo{avoid/01_restating_the_target.md}{target restatement},
+\repo{avoid/02_shape_only_arguments_and_the_controls.md}{shared control premises},
+\repo{avoid/07_scoped_exclusions_read_as_universal.md}{scoped exclusions},
+and \repo{avoid/12_term_by_term_matching_and_separate_bounds.md}{separate bounds}.
+The endpoint reduction is stated once below. The measurable contributions
+are the explicit acquisition errors, moment asymptotics, matrix scale,
+and signed counterexamples on precisely defined enlarged classes.
+
+\section{The canonical flow and the finite event}\label{sec:geometry}
+
+\subsection{Normalization and the positive-threshold reduction}
+
+We use the normalization
+\begin{align}
+ \Phi(u)&=\sum_{n\ge1}
+ (2\pi^2n^4\ee^{9u}-3\pi n^2\ee^{5u})
+ \ee^{-\pi n^2\ee^{4u}},\label{eq:source}\\
+ H_t(z)&=\int_0^\infty \ee^{tu^2}\Phi(u)\cos(zu)\dd u,\qquad
+ H_0(z)=\frac18\xi\!\left(\frac{1+\ii z}{2}\right).
+ \label{eq:flow}
+\end{align}
+The rapid source decay permits differentiation on compact sets:
+\begin{equation}\label{eq:heat}
+ \partial_t H_t=-\partial_{zz}H_t.
+\end{equation}
+For real \(t\), \(H_t\) is even, real on the real axis, and entire of
+order one. Positivity of \(\Phi\) on \(u\ge0\) gives
+\(H_t(\ii y)>0\) for real \(y\). The finite de Bruijn--Newman threshold
+\(-\infty<\Lambda\le1/2\) satisfies
+\begin{equation}\label{eq:threshold}
+ \{\text{all zeros of }H_t\text{ are real}\} \quad\Longleftrightarrow\quad
+ t\ge\Lambda.
+\end{equation}
+These classical inputs use the normalization of \cite{polymath}.
+
+\begin{proposition}[Inherited finite-attainment reduction]\label{prop:finite}
+If \(\Lambda>0\), then at \(T=\Lambda\) there are a finite \(a>0\)
+and an integer \(m\ge2\) such that \(a\) and \(-a\) are zeros of
+\(H_T\), each of multiplicity \(m\).
+\end{proposition}
+\begin{proof}
+Take \(t_j\uparrow\Lambda\), with \(t_j\ge\Lambda/2>0\), and choose a
+nonreal zero \(z_j\) of \(H_{t_j}\). The positive-time zero-strip theorem
+places these zeros in \(|\Ima z|\le1\). The uniform high-zero theorem
+\cite[Theorem 1.5(i)]{polymath} makes every zero with
+\(|\Rea z|\ge\exp(C/t_j)\) real. Thus, after using the symmetries and
+passing to a subsequence, the \(z_j\) lie in one compact set and converge
+to a zero \(a\) of \(H_\Lambda\). All zeros at \(\Lambda\) are real, and
+\(H_\Lambda(0)>0\), so choose the symmetry with \(a>0\).
+
+If \(a\) were simple, the implicit-function theorem would give a unique
+nearby zero for real times near \(\Lambda\). Conjugation would make this
+branch real. This contradicts the approaching nonreal zeros. Evenness
+supplies the mirror zero with the same multiplicity. This is the
+finite-attainment argument already recorded in \cite{collision}.
+\end{proof}
+
+For clarity, the endpoint equivalence used by the program is
+\begin{equation}\label{eq:endpoint}
+ \mathrm{RH}\quad\Longleftrightarrow\quad
+ \text{there is no real }a\text{ with }H_t(a)=H_t'(a)=0
+ \text{ for any }t>0.
+\end{equation}
+The reverse implication follows from Proposition~\ref{prop:finite}.
+For the forward implication, all times \(t\ge0\) are all-real under RH.
+A multiple real zero at \(t>0\) would split nonreally immediately
+backwards. Indeed, applying the heat equation to the first nonzero
+Taylor term \(b(z-a)^m\) gives
+\[
+ \ee^{-\tau\partial_z^2}(z-a)^m
+ =(2\tau)^{m/2}
+ \operatorname{He}_m\!\left(\frac{z-a}{\sqrt{2\tau}}\right).
+\]
+The simple real zeros of the probabilists' Hermite polynomial give local
+branches \(a+\sqrt{2\tau}\,\lambda_j+O(|\tau|)\); for \(\tau<0\),
+some are nonreal. This argument, including arbitrary multiplicity, is
+inherited from \cite{collision,polymath}. Equation~\eqref{eq:endpoint}
+is a target-equivalent reformulation, not an additional estimate.
+
+\subsection{The reflected Poisson measurement}
+
+Fix an all-real slice \(H_T\) and write its even product as
+\[
+ H_T(z)=H_T(0)\prod_{r>0}\left(1-\frac{z^2}{r^2}\right),
+\]
+with positive zeros repeated by multiplicity. Pairing the logarithmic
+derivative, and then taking its imaginary part, gives an absolutely
+convergent sum
+\begin{equation}\label{eq:poisson}
+ Q(a,y):=-y\Ima\frac{H_T'(a+\ii y)}{H_T(a+\ii y)}
+ =\sum_r\frac{y^2}{(a-r)^2+y^2},\qquad y>0.
+\end{equation}
+Here and below an unqualified sum over \(r\) includes both signs and
+multiplicities. The order-one product and its differentiated form are
+the inputs used in \cite[Section 3]{polymath}.
+
+Suppose \(a\) has multiplicity \(m\ge2\). Define
+\begin{equation}\label{eq:ks}
+ k(a,y)=1+\frac{y^2}{4a^2+y^2},\qquad
+ S(a,y)=\sum_{r\notin\{a,-a\}}\frac1{(a-r)^2+y^2},
+\end{equation}
+removing all \(m\) copies of each event root. Then
+\begin{equation}\label{eq:eventmass}
+ Q(a,y)=m k(a,y)+y^2S(a,y).
+\end{equation}
+The mirror term is essential even when it is asymptotically small.
+
+\begin{proposition}[Denominator-free necessary sign]\label{prop:sign}
+Set, at \(z=a+\ii y\),
+\begin{equation}\label{eq:B}
+ \cB(a,y)=2k(a,y)|H_T(z)|^2+
+             y\Ima\!\left(H_T'(z)\overline{H_T(z)}\right).
+\end{equation}
+At an all-real canonical event of multiplicity \(m\ge2\),
+\begin{equation}\label{eq:Bnegative}
+ \cB(a,y)=\bigl((2-m)k(a,y)-y^2S(a,y)\bigr)|H_T(a+\ii y)|^2<0.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Multiply \eqref{eq:eventmass} by \(|H_T|^2\) and subtract it from
+\(2k|H_T|^2\). All-realness ensures \(H_T(a+\ii y)\ne0\).
+The canonical field has further zeros, so \(S>0\).
+\end{proof}
+
+At a fixed all-real canonical slice, existence of a \(y>0\) with
+\(\cB(a,y)>0\) is equivalent to \(a\) not being a multiple zero.
+If \(H_T(a)\ne0\), then \(Q(a,y)\to0\); if \(a\) is simple, then
+\(Q(a,y)\to1\). Since \(k\to1\), these cases give positivity for small
+\(y\). Multiple zeros are covered by \eqref{eq:Bnegative}.
+This observation identifies the strength of an unrestricted sign demand;
+the research task is to obtain a concrete arithmetic estimate on a
+declared domain.
+
+\subsection{What an accurate arithmetic value would have to pay}
+
+Let \(F=H_T(z)\), and suppose \(f,g\) approximate its complete value
+and physical derivative:
+\[
+ |F-f|\le\epsilon_0,\qquad |F'-g|\le\epsilon_1.
+\]
+Expanding each product yields
+\begin{equation}\label{eq:Berror}
+\begin{split}
+ |\cB-(2k|f|^2+y\Ima(g\bar f))|
+ \le{}&2k(2|f|\epsilon_0+\epsilon_0^2)\\
+ &+y\bigl(|g|\epsilon_0+|f|\epsilon_1+\epsilon_0\epsilon_1\bigr).
+\end{split}
+\end{equation}
+Thus a positive computed expression must exceed this entire error.
+No denominator floor is required. If a quotient is used instead,
+\(|f|>\epsilon_0\) is necessary for the bound
+\begin{equation}\label{eq:quotient}
+ \left|Q+y\Ima\frac gf\right|
+ \le y\,\frac{\epsilon_1+|g/f|\epsilon_0}{|f|-\epsilon_0}.
+\end{equation}
+
+The cancellation at a double zero explains the sensitivity of this test.
+Write \(H_T(a+w)=b_mw^m+O(w^{m+1})\), \(b_m\ne0\), and put
+\(S_0=\sum_{r\ne\pm a}(a-r)^{-2}>0\).
+Isolation of the event and convergence of the squared reciprocal tail
+give \(S(a,y)\to S_0\). Hence
+\begin{equation}\label{eq:small-y}
+ \cB(a,y)=
+ \begin{cases}
+ -|b_2|^2 S_0 y^6(1+o(1)),&m=2,\\
+ (2-m)|b_m|^2 y^{2m}(1+o(1)),&m>2.
+ \end{cases}
+\end{equation}
+For \(m=2\), the separate terms in \eqref{eq:B} have size \(y^4\).
+In the separate absolute envelope \eqref{eq:Berror},
+\(\epsilon_0=o(y^4)\) and \(\epsilon_1=o(y^3)\) suffice for an
+\(o(y^6)\) error. These are fixed-event sufficient conditions for that
+envelope; they are not lower bounds on actual approximation errors.

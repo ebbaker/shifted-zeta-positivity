@@ -1,0 +1,367 @@
+\section{Multiplicativity and a growing calibration budget}\label{sec:multiplicative}
+
+\subsection{The class and the quantitative theorem}
+
+Restore the actual leading phase
+\(u_1=\ee^{\ii\Theta(T,a)}\). Let
+\(\omega:\N\to\C\) be completely multiplicative, with
+\(|\omega(n)|=1\) and \(\omega(1)=1\). Define
+\begin{equation}\label{eq:qomega}
+ q_\omega(w)=\frac12\sum_{n\le N}d_n
+ \left[u_1\omega(n)\ee^{\ii\lambda_nw}
+        +\overline{u_1\omega(n)}\ee^{-\ii\lambda_nw}\right]+K(w).
+\end{equation}
+The actual phase choice is \(\omega_{\can}(n)=n^{-\ii\nu}\).
+For arbitrary \(\omega\), all identities
+\[
+ u_{mn}u_1=u_mu_n,\qquad u_n=u_1\omega(n),
+\]
+hold, including every retained product \(mn\le N\). The heat weights
+are kept exactly; they are not multiplicative:
+\begin{equation}\label{eq:weightnonmult}
+ \frac{d_{mn}}{d_md_n}
+       =\exp\left(\frac{c\log m\log n}{2L}\right).
+\end{equation}
+
+Let \(\cQ\) be any set of prescribed primes below \(N/2\), with arbitrary
+assigned unit phases. Its cost is
+\begin{equation}\label{eq:CQ}
+ C_{\cQ}=\prod_{p\in\cQ}(1-p^{-1/2})^{-1}.
+\end{equation}
+Set
+\[
+ b_L=\ee^{-(1/4+c/16)L},\qquad
+ M=\left\lfloor\frac{N}{40\log N}\right\rfloor,\qquad
+ W=M b_L.
+\]
+The letter \(W\) in this section is a positive population scale; it is
+distinct from the three-height quantity \(W_T(a)\).
+Eventually
+\begin{equation}\label{eq:Wpopulation}
+ \frac{\ee^{\delta L}}{80L}\le W\le\frac{\ee^{\delta L}}{10L},
+ \qquad \delta=\frac14-\frac c{16}.
+\end{equation}
+The useful dimensionless error budget is
+\begin{equation}\label{eq:calbudget}
+ \mathcal E_{\cQ}=\frac{C_{\cQ}L^4}{W}.
+\end{equation}
+
+Define fixed positive constants
+\begin{align}
+ a_0&=\sqrt{17/12}-1,\qquad
+ \ell_1=\tfrac12\log(5/3),\qquad \ell_2=\tfrac12\log(3/2),\\
+ h_2&=a_0(\ell_1^2-\ell_2^2),\qquad
+ h_4=a_0(\ell_1^4-\ell_2^4),\\
+ \Gamma_\beta&=\frac{\beta^6h_2h_4}{24},\qquad
+ \kappa_\beta=\frac{\Gamma_\beta}{12800}.
+ \label{eq:constants}
+\end{align}
+
+\begin{theorem}[Uniform multiplicative calibration obstruction]
+\label{thm:mult}
+Fix \(\beta>0\). Suppose the prescribed prime sets satisfy
+\(\mathcal E_{\cQ}\to0\) uniformly in \eqref{eq:band}. At every
+sufficiently large center there is a completely multiplicative
+\(\omega\) attaining all prescribed phases such that the full
+\eqref{eq:qomega}, with the actual \(u_1,d_n,K\), satisfies
+\begin{equation}\label{eq:multnegative}
+ q_\omega(0)=q_\omega'(0)=0,\qquad
+ \cD_a(q_\omega)\le
+ -\kappa_\beta\frac{\ee^{(1/2-c/8)L}}{L^8}.
+\end{equation}
+The conclusion holds for any prescribed phases, not only canonical
+ones. Its onset is finite and uninstantiated.
+\end{theorem}
+
+The proof combines three ingredients: isolated primes that can be
+adjusted independently without breaking multiplicativity; a bounded
+complete complement obtained by finite character orthogonality; and
+a uniform two-parameter correction of the event equations.
+The general isolated-prime first-jet mechanism predates RSCT
+\cite{collision}. The extension here is its negative signed margin,
+complete correction, explicit calibration budget, and simultaneous
+fourth-derivative compatibility in Section~\ref{sec:mirror}.
+
+\subsection{A reserved prime population}
+
+Use the intervals
+\[
+ I_1=[11/20,3/5],\quad I_2=[7/10,3/4],\quad
+ I_3=[17/20,9/10].
+\]
+The prime number theorem \cite{dlmfpnt} gives
+\[
+ \#\{p:p/N\in I_j\}=(1/20+o(1))N/\log N.
+\]
+Select \(M\) primes from each interval and arrange them in \(M\)
+triples \(p_{j,1}<p_{j,2}<p_{j,3}\). Write \(\cR\) for their union.
+Every reserved prime exceeds \(N/2\); among \(n\le N\), its only
+multiple is itself. Changing its phase therefore changes no
+complementary term. In particular \(\cR\cap\cQ=\varnothing\).
+
+For a reserved prime write \(v=L/2-\log p\). Direct substitution gives
+\begin{equation}\label{eq:primeweights}
+ d_p=b_L\ee^{v/2+cv^2/(4L)},\qquad \lambda_p=v/(2L).
+\end{equation}
+Thus \(d_p/b_L\) and \(L\lambda_p\) lie in fixed positive compact
+intervals, separated between the three groups. The floor in \(M\)
+and \(N\sim\ee^{L/2}\) give \eqref{eq:Wpopulation}. For instance,
+\(M\ge N/(80\log N)\), \(N\ge\ee^{L/2}/2\), and
+\(\log N\le L/2\) give its lower bound.
+Only primes in fixed relative intervals have been used; no
+short-interval theorem or effective numerical onset is invoked.
+
+\subsection{The complete complement and its dependence on calibration}
+
+Keep the prescribed phases on \(\cQ\). Assign independent uniform circle
+phases to every other nonreserved prime at most \(N\). Let \(B(w)\)
+be the complete sum in \eqref{eq:qomega} over \(n\notin\cR\), excluding
+only the separate correction \(K\). It includes \(n=1\), every
+unreserved prime, and every composite through \(N\).
+
+\begin{lemma}[Finite orthogonality with prescribed primes]\label{lem:complement}
+For any one of the observations
+\[
+ B^{(j)}(0)\quad(0\le j\le4),\qquad B(\ii\beta),\quad B'(\ii\beta),
+\]
+the mean square over the free prime phases is at most
+\(9\ee^{\beta/2}C_{\cQ}^2\).
+There is consequently one choice of the complementary phases for which
+the sum of all seven squared observations is at most
+\(63\ee^{\beta/2}C_{\cQ}^2\). If only orders zero and one at zero
+and \(\ii\beta\) are requested, the corresponding constant is
+\(36\ee^{\beta/2}C_{\cQ}^2\).
+\end{lemma}
+\begin{proof}
+The elementary weight bounds are
+\begin{equation}\label{eq:weightbounds}
+ d_n^2\le n^{-1-c/4}\le n^{-9/8},\qquad
+ \sum_{n\le N}d_n^2\le9,\qquad d_{rm}\le r^{-1/2}d_m
+ \quad(rm\le N).
+\end{equation}
+The last follows by integrating the logarithmic slope bound
+\(\dd\log d(x)/\dd\log x\le-1/2\).
+Every \(n\) has a unique factorization \(n=rm\), with \(r\)
+supported on \(\cQ\) and \(m\) free of primes in \(\cQ\).
+Group the terms in either arm by the character \(\omega(m)\) of the
+free prime variables. Distinct \(m\)'s give distinct characters.
+No reserved prime enters a complementary character because its only
+retained multiple was removed.
+
+For each observation the absolute value of a character coefficient is
+at most
+\[
+ \ee^{\beta/4}d_m
+       \sum_{r:\,\cQ\text{-supported}}r^{-1/2}
+ =\ee^{\beta/4}C_{\cQ}d_m;
+\]
+all fixed derivative factors obey \(\lambda_n^j\le1\).
+Integration of \(\ee^{\ii k\theta}\) annihilates unequal characters,
+giving the bound by \eqref{eq:weightbounds}. The deterministic
+\(m=1\) group is included. The reflected arm has the same estimate;
+\(|(A_++A_-)/2|^2\le(|A_+|^2+|A_-|^2)/2\) pays their cross term.
+Sum the expectations and select a point no larger than the mean.
+\end{proof}
+
+This is finite integration on an auxiliary phase space. It is neither
+a numerical experiment nor an average over actual heights. In
+particular, the selected complement has controlled values at the
+listed observations; we have not asserted a uniform disk bound for it.
+
+\subsection{Negative blocks of isolated primes}
+
+For each reserved triple apply Lemma~\ref{lem:triple} with
+\[
+ b_i=d_{p_{j,i}},\qquad r_i=\lambda_{p_{j,i}}.
+\]
+Its triangle condition holds with a uniform margin:
+\[
+ b_1/b_3\le(p_{j,3}/p_{j,1})^{3/4}\le(18/11)^{3/4}<2,
+ \qquad b_2>b_3.
+\]
+After division by \(b_L\) and multiplication of frequencies by \(L\),
+the block parameters form a compact nondegenerate family. Thus
+\(A_2,A_3,v,\rho v\asymp b_L\).
+Also
+\[
+ A_2\ge b_1-b_3\ge a_0b_L,\qquad
+ Lr_1\ge\ell_1,\quad Lr_2\le\ell_2
+\]
+for large \(N\). For the last upper bound,
+\(\ee^{L/2}/N\le21/20\) when \(N\ge20\).
+
+Let \(p\) be the sum of these blocks. The positive power-series
+coefficients in \eqref{eq:tripleXY} give
+\begin{equation}\label{eq:primeXG}
+ X\ge\frac{\beta^2h_2}{2}\frac W{L^2},\qquad
+ \beta X'-2X\ge\frac{\beta^4h_4}{12}\frac W{L^4}.
+\end{equation}
+The first bound uses the quadratic cosh term; the second uses the
+quartic term, whose factor under \(\beta\partial_\beta-2\) is two.
+All blocks have aligned signs. Hence
+\begin{equation}\label{eq:primeD}
+ \cD_2(p)\le-\Gamma_\beta W^2/L^6,\qquad
+ |p(\ii\beta)|+|p'(\ii\beta)|=O_\beta(W/L^2).
+\end{equation}
+At zero the same block algebra gives the derivatives needed later:
+\begin{equation}\label{eq:primejets}
+ p''(0)\le-h_2W/L^2,\qquad
+ p^{(4)}(0)\ge h_4W/L^4.
+\end{equation}
+Indeed \(p''(0)=-\sum r_i^2x_i\) and
+\(p^{(4)}(0)=\sum r_i^4x_i\); the \(A_2\) terms alone provide these
+two bounds, and the \(A_3\) terms have the same signs.
+
+\subsection{Uniform repair of the exact event}
+
+In each reserved triple shift the phase of its second member by the
+same \(t\), and its third by the same \(s\). The normalized event map is
+\[
+ F(t,s)=\left(W^{-1}\sum_{\cR}x_n(t,s),\
+                   LW^{-1}\sum_{\cR}\lambda_n y_n(t,s)\right).
+\]
+At the block configuration \(F(0,0)=0\), and
+\begin{equation}\label{eq:repairJacobian}
+ DF(0)=
+ \frac1W\begin{pmatrix}
+ -\sum y_2&-\sum y_3\\
+ L\sum r_2x_2&L\sum r_3x_3
+ \end{pmatrix}
+ =\begin{pmatrix}-A_J&B_J\\-C_J&-D_J\end{pmatrix},
+ \qquad A_J,B_J,C_J,D_J\asymp1.
+\end{equation}
+The signs come from \(x_2,x_3<0\) and \(y_2>0>y_3\).
+Thus \(\det DF=A_JD_J+B_JC_J\) is uniformly positive.
+The inverse and the second derivatives on a fixed small parameter disk
+are uniformly bounded.
+
+Use Lemma~\ref{lem:complement} to fix a complementary phase choice.
+Solve
+\begin{equation}\label{eq:repairtarget}
+ F(t,s)=\left(-\frac{B(0)+K(0)}W,\
+                    \frac{L(B'(0)+K'(0))}W\right).
+\end{equation}
+The target has norm \(O_\beta(C_{\cQ}L/W)\), which tends to zero under
+\eqref{eq:calbudget}. A quantitative inverse-function argument gives
+\begin{equation}\label{eq:repairsize}
+ |t|+|s|=O_\beta(C_{\cQ}L/W).
+\end{equation}
+Explicitly, apply the inverse of \eqref{eq:repairJacobian} to the
+target and to the quadratic Taylor remainder. Uniformly bounded
+second derivatives make this a contraction on a ball of radius a
+fixed multiple of the target norm, once that norm is small.
+
+Assign the final prime value \(\omega(p)=\ee^{\ii\theta_p}/u_1\)
+at each reserved prime, keep every complementary prime value, and
+extend completely multiplicatively. Isolation ensures that no
+complementary coefficient changes. If \(\Delta p\) is the reserved
+repair, the complete field
+\[
+ q_*=B+p+\Delta p+K
+\]
+satisfies \(q_*(0)=q_*'(0)=0\) exactly.
+
+The repair must be estimated after the event equations have been used.
+Since \(p=p^\circ\) and \(q_*=q_*^\circ\),
+\[
+ q_*=p+E,\qquad E=B^\circ+K^\circ+(\Delta p)^\circ.
+\]
+For a changed mode the subtracted value and derivative on a fixed disk
+are \(O_\beta(d_n(|t|+|s|)\lambda_n^2)\).
+Equations~\eqref{eq:primeweights} and~\eqref{eq:repairsize} therefore give
+\[
+ |(\Delta p)^\circ(\ii\beta)|
+       +|((\Delta p)^\circ)'(\ii\beta)|
+       =O_\beta(C_{\cQ}/L).
+\]
+The complete background observations from Lemma~\ref{lem:complement}
+and the correction bound give
+\begin{equation}\label{eq:Ebound}
+ |E(\ii\beta)|+|E'(\ii\beta)|=O_\beta(C_{\cQ}).
+\end{equation}
+Raw repair values could be \(O(C_{\cQ}L)\); event subtraction is what
+avoids that unnecessary loss.
+
+Expanding the full quadratic expression, including background and
+correction cross terms and \(\mathfrak d_a-2\), now yields
+\begin{equation}\label{eq:fullprimeerror}
+ \cD_a(q_*)\le-\Gamma_\beta\frac{W^2}{L^6}
+ +O_\beta\left(\frac{C_{\cQ}W}{L^2}+C_{\cQ}^2
+                         +a^{-2}\frac{W^2}{L^6}\right).
+\end{equation}
+The relative errors are respectively
+\(O_\beta(\mathcal E_{\cQ})\),
+\(O_\beta(\mathcal E_{\cQ}^2/L^2)\), and \(O_\beta(a^{-2})\).
+After they total at most \(\Gamma_\beta/2\), the lower bound in
+\eqref{eq:Wpopulation} proves
+\[
+ \cD_a(q_*)\le-\tfrac12\Gamma_\beta W^2/L^6
+ \le-\frac{\Gamma_\beta}{12800}
+                         \frac{\ee^{(1/2-c/8)L}}{L^8}.
+\]
+This completes the proof of Theorem~\ref{thm:mult}.
+The small physical approximation error from
+Proposition~\ref{prop:Derror} is not assigned to this artificial field;
+no twisted physical approximation theorem has been asserted.
+
+\subsection{Fixed and growing actual-prime calibration}
+
+For a fixed finite set \(\mathcal P_0\) and a fixed prime
+\(q_0\notin\mathcal P_0\), prescribe
+\[
+ \omega(p)=p^{-\ii\nu}\ (p\in\mathcal P_0),\qquad
+ \omega(q_0)=-q_0^{-\ii\nu}.
+\]
+Here \(C_{\cQ}\) is fixed and \(\mathcal E_{\cQ}\to0\).
+Theorem~\ref{thm:mult} recovers the fixed-calibration result, with the
+explicit same-height defect
+\begin{equation}\label{eq:phasedefect}
+ |u_{q_0}-u_{q_0}^{\can}|=2.
+\end{equation}
+
+The displayed budget also permits a growing set.
+\begin{corollary}[A sufficient growing calibration range]\label{cor:growing}
+Fix \(0<\gamma<9/256\), and put
+\begin{equation}\label{eq:Y}
+ Y=\gamma L^2(\log L)^2.
+\end{equation}
+For every sufficiently large center, all actual prime phases
+\(\omega(p)=p^{-\ii\nu}\) for \(p\le Y\) can be retained in
+Theorem~\ref{thm:mult}. In addition one can choose a prime
+\(q_0\in(Y,2Y]\) with the opposite actual phase, so
+\eqref{eq:phasedefect} holds.
+\end{corollary}
+\begin{proof}
+Partial summation and the prime number theorem give
+\[
+ \sum_{p\le Y}p^{-1/2}
+ =\frac{\pi(Y)}{\sqrt Y}
+       +\frac12\int_2^Y\frac{\pi(t)}{t^{3/2}}\dd t
+ \sim\frac{2\sqrt Y}{\log Y}.
+\]
+Expanding \(-\log(1-p^{-1/2})\), the terms of order at least two
+total \(O(\sum_{p\le Y}p^{-1})=O(\log Y)\), already small enough here.
+Thus
+\[
+ \log\prod_{p\le Y}(1-p^{-1/2})^{-1}
+ =\frac{2\sqrt Y}{\log Y}(1+o(1))
+ =(\sqrt\gamma+o(1))L.
+\]
+Since \(\delta\ge3/16\), \eqref{eq:Wpopulation} implies
+\[
+ \mathcal E_{\cQ}\le80L^5
+       \exp[-(3/16-\sqrt\gamma+o(1))L]\longrightarrow0.
+\]
+The prime number theorem supplies a \(q_0\in(Y,2Y]\); it is below
+\(N/2\) for large \(L\). Its additional cost
+\((1-q_0^{-1/2})^{-1}\) does not change the budget.
+\end{proof}
+
+For example \(\gamma=1/64\) calibrates
+\((1+o(1))L^2\log L/128\) primes. Complete multiplicativity then fixes
+every retained \(Y\)-smooth integer at its actual phase.
+The coefficient \(9/256\) is sufficient for this proof, not a claimed
+sharp boundary. The explicit defect above proves failure of the actual
+same-height phase law. Realizing a similar phase pattern at another
+height would change \(d_n,N,u_1,K\) and the time-height relation; no
+such realization has been proved.

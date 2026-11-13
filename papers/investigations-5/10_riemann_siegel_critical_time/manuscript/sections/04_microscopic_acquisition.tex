@@ -1,0 +1,256 @@
+\section{Microscopic acquisition with the complete population}\label{sec:micro}
+
+\subsection{Freezing one analytic chart}
+
+Use \eqref{eq:band} and the scaled coordinate
+\[
+ z=a+w/L,\qquad N=\lfloor\ee^{L/2}\rfloor.
+\]
+Time, cutoff, and all center data are held fixed in every \(w\) or
+\(z\) derivative. Define
+\begin{align}
+ d_n&=n^{-1/2}\exp\left\{\frac{c}{4L}
+                       [(\log n)^2-L\log n]\right\},\\
+ \lambda_n&=\frac14-\frac{\log n}{2L}\in[0,1/4],\qquad
+ \phi_n=\Theta(T,a)-\nu(a)\log n,\label{eq:frozendata}\\
+ P_a(w)&=\sum_{n\le N}d_n\cos(\phi_n+\lambda_nw),\\
+ K_a(w)&=\frac{\ee^{-\pi^2T/64}\mathcal R_N(a+w/L)}
+                         {A(T,a+w/L)},\qquad
+ q_a=P_a+K_a,\qquad f_a(w)=\frac{H_T(a+w/L)}{A(T,a+w/L)}.
+ \label{eq:fq}
+\end{align}
+The nonvanishing carrier \(A\) is a normalization, not a lower bound for
+the field. Both reflected arms are in the cosine, and \(K_a\) is retained
+as a whole analytic function.
+
+The positive coefficient moments supply both the freezing cost and the
+later error payments.
+\begin{lemma}[Fixed-order coefficient moments]\label{lem:moments}
+Let \(\delta=1/4-c/16\in[3/16,7/32]\). For every fixed integer \(k\ge0\),
+\begin{equation}\label{eq:moments}
+ M_k:=\sum_{n\le N}d_n\lambda_n^k
+ =\frac{2k!}{L^k}\ee^{\delta L}\bigl(1+O_k(L^{-1})\bigr).
+\end{equation}
+For \(k=0\), the convention is \(\lambda_n^0=1\), including a possible
+\(\lambda_N=0\).
+\end{lemma}
+\begin{proof}
+Extend the summand to \(1\le x\le\ee^{L/2}\). It is nonnegative and
+decreasing, because
+\[
+ \frac{\dd\log d(x)}{\dd\log x}
+ =-\frac12-\frac c4+\frac{c\log x}{2L}\in[-3/4,-1/2]
+\]
+and \(\lambda(x)\) decreases. Integral comparison, including the final
+fractional interval, has discrepancy \(O_k(1)\). The change of variables
+\(v=L/2-\log x\) gives the exact integral
+\[
+ \frac{\ee^{\delta L}}{(2L)^k}
+ \int_0^{L/2}v^k\exp\left(-\frac v2+\frac{cv^2}{4L}\right)\dd v.
+\]
+On this interval the exponential is at most \(\ee^{-3v/8}\), and its
+difference from \(\ee^{-v/2}\) is at most
+\(v^2\ee^{-3v/8}/(4L)\). The integral is therefore
+\[
+ \int_0^\infty v^k\ee^{-v/2}\dd v+O_k(L^{-1})
+ =2^{k+1}k!+O_k(L^{-1}).
+\]
+The exponential scale absorbs the \(O_k(1)\) discretization error,
+uniformly since \(\delta\ge3/16\).
+\end{proof}
+
+\begin{theorem}[Complete local approximation]\label{thm:local}
+For every fixed \(R>1\), and for sufficiently large \(a\), the inherited
+field input gives
+\begin{equation}\label{eq:localerror}
+ \sup_{|w|\le R}|\partial_w^j(f_a-q_a)|
+       \le C_Ra^{-3/4},\qquad 0\le j\le4.
+\end{equation}
+Moreover, with \(\chi=a^{-1/4}\ee^{-cL/16}\),
+\begin{equation}\label{eq:Ksmall}
+ \sup_{|w|\le R}|\partial_w^jK_a(w)|\le C_R\chi,
+                    \qquad 0\le j\le4.
+\end{equation}
+The constants and onsets are finite but not numerically instantiated.
+\end{theorem}
+\begin{proof}
+Work first on \(|w|\le2R\), increasing that fixed radius if necessary
+for a Cauchy margin. Eventually this lies inside the declared fixed
+provider target. Since
+\[
+ \Ima\Theta(T,a+w/L)=\Ima w/4+O_R((aL^2)^{-1}),
+\]
+the ratio \((|C_+|+|C_-|)/|A|\) is bounded by a constant depending on
+\(R\). Thus \eqref{eq:provider}, after division by \(A\), is
+\(O_R(a^{-3/4})\).
+
+Uniformly for \(n\le N\),
+\begin{align*}
+ L(a+w/L)-L&=O_R((aL)^{-1}),\\
+ w_n(T,a+w/L)/d_n&=1+O_R((aL)^{-1}),\\
+ \Theta(T,a+w/L)-\nu(a+w/L)\log n
+    &=\phi_n+\lambda_nw+O_R((aL^2)^{-1}).
+\end{align*}
+The last estimate follows from
+\(\Theta_z=L(z)/4+\pi T/(16z)\) and \(\Theta_{zz}=O(1/a)\).
+Because \(|\lambda_n w|\le R/2\) on the larger disk, summing the
+holomorphic freezing error costs at most
+\[
+ O_R\!\left(\frac{M_0}{aL}\right)
+ =O_R(a^{-25/32}/L)=O_R(a^{-3/4}).
+\]
+The heat correction in the phase and the quadratic weights have been
+frozen at their actual values, not discarded.
+
+Apply Cauchy's estimate to this holomorphic difference on the larger
+disk. In particular, if its supremum there is \(C_{2R}a^{-3/4}\),
+then at any point with a radius-\(R\) Cauchy circle available the
+order-\(j\) bound is \(j!R^{-j}C_{2R}a^{-3/4}\).
+This proves \eqref{eq:localerror} for the stated finite set of orders.
+
+Finally the correction input gives
+\(\mathcal R_N(z)/A(0,z)=O_R(a^{-1/4})\), and exactly
+\[
+ \ee^{-\pi^2T/64}\frac{A(0,z)}{A(T,z)}
+                 =\ee^{-T L(z)^2/16}.
+\]
+Its modulus on the disk is \(O_R(\ee^{-cL/16})\).
+Another Cauchy estimate proves \eqref{eq:Ksmall}. No moving floor or
+real-line big-\(O\) term has been differentiated.
+\end{proof}
+
+The inherited terminal population scale and earlier phase-retaining
+first-derivative approximation belong to \cite{collision,s04}.
+The RSCT applications are the fixed-\(k\) constants in
+\eqref{eq:moments}, the event-subtracted acquisition, the particular
+signed error below, and the fourth-derivative use in
+Section~\ref{sec:mirror}.
+
+\subsection{Subtract the necessary event equations first}
+
+For an analytic function \(g\), write
+\[
+ g^\circ(w)=g(w)-g(0)-wg'(0).
+\]
+At any actual event of multiplicity \(m\ge2\), the nonzero carrier gives
+\(f_a(0)=f_a'(0)=0\). Set \(S_a=q_a^\circ\). If \(e=f_a-q_a\),
+then \(f_a-S_a=e-e(0)-we'(0)\), so Taylor's integral remainder yields
+\begin{equation}\label{eq:eventerror}
+ |f_a(w)-S_a(w)|\le C_Ra^{-3/4}|w|^2,\qquad
+ |f_a'(w)-S_a'(w)|\le C_Ra^{-3/4}|w|.
+\end{equation}
+It also gives \(q_a(0),q_a'(0)=O(a^{-3/4})\).
+These are just two necessary equations, valid for every \(m\ge2\);
+the remaining \(m-2\) equations have not been imposed.
+Explicitly,
+\begin{equation}\label{eq:subtracted}
+\begin{split}
+ S_a(w)={}&\sum_{n\le N}d_n
+ \{\cos(\phi_n+\lambda_nw)-\cos\phi_n
+                       +\lambda_nw\sin\phi_n\}\\
+ &+K_a(w)-K_a(0)-wK_a'(0).
+\end{split}
+\end{equation}
+
+\begin{proposition}[Size of the separate absolute allowances]\label{prop:allowance}
+For fixed \(\beta>0\), define
+\[
+ U_\beta=\sum_{n\le N}d_n(\cosh(\beta\lambda_n)-1),\qquad
+ V_\beta=\sum_{n\le N}d_n\lambda_n\sinh(\beta\lambda_n).
+\]
+Then
+\begin{equation}\label{eq:UV}
+ U_\beta=\frac{2\beta^2}{L^2}\ee^{\delta L}(1+O_\beta(L^{-1})),
+ \qquad
+ V_\beta=\frac{4\beta}{L^2}\ee^{\delta L}(1+O_\beta(L^{-1})).
+\end{equation}
+These bound the value and derivative in \eqref{eq:subtracted},
+apart from the \(O_\beta(\chi)\) correction.
+\end{proposition}
+\begin{proof}
+At \(w=\ii\beta\), a subtracted cosine equals
+\[
+ \cos\phi\,(\cosh x-1)+\ii\sin\phi\,(x-\sinh x),
+ \qquad x=\beta\lambda_n.
+\]
+Because \(\cosh x-1\ge\sinh x-x\ge0\), its maximum modulus over a free
+real phase is \(\cosh x-1\). The derivative has maximal modulus
+\(\lambda_n\sinh x\). Taylor's formula, with
+\(0\le x\le\beta/4\), gives
+\[
+ U_\beta=\frac{\beta^2}{2}M_2+O_\beta(M_4),\qquad
+ V_\beta=\beta M_2+O_\beta(M_4).
+\]
+Insert Lemma~\ref{lem:moments}.
+\end{proof}
+
+The allowances diverge uniformly in \(c\). Event subtraction saves
+\(L^2\), but a separate absolute estimate still pays the terminal
+population. This is a lower bound on the size of a specified upper
+allowance. It is not a lower bound on \(|S_a|\), on its signed quadratic
+form, or on the actual error. In particular, the independent maximizing
+phases need not satisfy the event equations or the canonical phase law.
+
+\subsection{A small acquisition error for the signed expression}
+
+Fix \(y=\beta/L\), and define
+\begin{align}
+ k_a&=1+\frac{(\beta/L)^2}{4a^2+(\beta/L)^2},\\
+ \mathfrak d_a&=2k_a+\frac\beta L
+              \Ima\frac{A_z(T,a+\ii\beta/L)}{A(T,a+\ii\beta/L)},\\
+ \cD_a(g)&=\mathfrak d_a|g(\ii\beta)|^2
+                   +\beta\Ima(g'(\ii\beta)\overline{g(\ii\beta)}).
+ \label{eq:D}
+\end{align}
+The carrier logarithmic derivative is
+\begin{equation}\label{eq:bcarrier}
+ b(z):=\frac{A_z}{A}=\frac7{4z}-\frac\pi8+\frac{TL(z)}{8z},
+ \qquad \mathfrak d_a=2+O_\beta(a^{-2}L^{-2}).
+\end{equation}
+Since \(H_T'=A_zf_a+ALf_a'\), the normalization is exact:
+\begin{equation}\label{eq:physicalD}
+ \cD_a(f_a)=\frac{\cB(a,\beta/L)}{|A(T,a+\ii\beta/L)|^2}.
+\end{equation}
+At an all-real event,
+\begin{equation}\label{eq:physicalDnegative}
+ \cD_a(f_a)=
+ \left[(2-m)k_a-\frac{\beta^2}{L^2}
+  \sum_{r\ne\pm a}\frac1{(a-r)^2+\beta^2/L^2}\right]|f_a(\ii\beta)|^2<0.
+\end{equation}
+
+\begin{proposition}[Complete signed-error payment]\label{prop:Derror}
+Under an actual event, \(\cD_a(f_a)\) differs from
+\(\cD_a(S_a)\) by at most
+\begin{equation}\label{eq:eta}
+ \eta_a=O_\beta\left(
+       a^{-3/4}\ee^{\delta L}/L^2+a^{-3/2}\right)
+       =o(L^{-2}).
+\end{equation}
+\end{proposition}
+\begin{proof}
+If the value and derivative errors at \(\ii\beta\) are
+\(\epsilon_0,\epsilon_1\), expansion gives
+\begin{align*}
+ |\cD_a(f_a)-\cD_a(S_a)|
+ \le{}&|\mathfrak d_a|(2|S_a|\epsilon_0+\epsilon_0^2)\\
+ &+\beta(|S_a'|\epsilon_0+|S_a|\epsilon_1+\epsilon_0\epsilon_1).
+\end{align*}
+Use \eqref{eq:eventerror}, Proposition~\ref{prop:allowance}, and
+\eqref{eq:Ksmall}. Since \(\delta\le7/32\), the slowest power in the
+first term is \(a^{-17/32}/L^2\), proving the claim.
+\end{proof}
+
+This is absolute normalized accuracy. It gives neither a nonzero
+curvature nor a favorable sign for \(\cD_a(S_a)\). To exclude an event,
+one would need a lower bound exceeding \(\eta_a\) for the actual
+correlated expression.
+
+Two premises of the outer-line shortcut fail here. The formal
+shifted-zeta real part approaches \(1/2+c/4<1\), outside the absolutely
+convergent series and Euler product used in Section~\ref{sec:fixed};
+and
+\[
+ |C_+/C_-|(T,a+\ii\beta/L)\longrightarrow\ee^{-\beta/2}.
+\]
+The reflected arm remains present. These facts delimit that shortcut;
+they do not exclude other arithmetic comparisons.

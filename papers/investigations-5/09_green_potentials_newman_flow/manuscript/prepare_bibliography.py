@@ -16,6 +16,7 @@ op = tnd / "03_operator_imaginary_time_evolution"
 og = op / "01_green_potential_resolvent"
 sources = [
     paper.parent / "references/manuscript_sources.bib",
+    paper.parent / "01_riemann_siegel_evolution/references/riemann_siegel_execution_sources.bib",
     tnd / "references/internal_sources.bib",
     op / "references/manuscript_internal_sources.bib",
     op / "references/riemann_siegel_sources.bib",

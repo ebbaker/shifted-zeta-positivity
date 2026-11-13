@@ -1,5 +1,7 @@
 # Bounded research plan
 
+**Boundary-bootstrap child setup, 13 November 2026.** Variable-boundary improvement now has its own [GNP-BB plan](../02_height_time_boundary_bootstrap/research-plan/01_GNP_BB_RESEARCH_PLAN_20261113.md) and [sole register](../02_height_time_boundary_bootstrap/research-progress/01_GNP_BB_RESEARCH_PROGRESS_20261113.md). The parent keeps the tasks below; no parent task is activated or duplicated. See the [dated crosswalk](../02_height_time_boundary_bootstrap/notes/02_GNP_BB_SETUP_AND_SOURCE_CROSSWALK_20261113.md). For Edward Baker with Codex assistance; actual model/effort unavailable.
+
 10 November 2026, America/New_York. Prepared for Edward Baker with substantial OpenAI Codex LLM assistance. Actual model and effort are unavailable in the founding chat capture metadata; recommendations are recorded separately.
 
 The [sole GNP register](../research-progress/01_GNP_RESEARCH_PROGRESS_20261110.md) owns current status; this plan specifies scope. Follow [model workflow](../../../../GPT_RESEARCH_MODEL_WORKFLOW.md) and [reference workflow](../../../../REFERENCE_WORKFLOW.md). A recommendation is not a record of the model actually used.

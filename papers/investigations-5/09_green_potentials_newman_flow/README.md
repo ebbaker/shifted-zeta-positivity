@@ -1,5 +1,7 @@
 # Green potentials and Newman flow
 
+**Boundary-bootstrap child setup, 13 November 2026.** The author-requested [02 — Height and time dependent boundary bootstrap](02_height_time_boundary_bootstrap/README.md) now owns the adaptive enclosure and observation question. Start with its [overview](02_height_time_boundary_bootstrap/research-overview/01_GNP_BB_RESEARCH_OVERVIEW_20261113.md), [sole GNP-BB register](02_height_time_boundary_bootstrap/research-progress/01_GNP_BB_RESEARCH_PROGRESS_20261113.md) and [continuation prompt](02_height_time_boundary_bootstrap/notes/01_GNP_BB_CONTINUATION_AND_PROMPT_20261113.md). Setup only; existing GNP/GNP-RS/RSCT ownership and evidence remain in place. Prepared for Edward Baker with substantial Codex assistance; actual model/effort unavailable.
+
 **Separate critical-time investigation, 11 November 2026:** at the author's
 request, future work on the assumed positive-threshold symmetric RS
 argument now belongs to [Investigation10](../10_riemann_siegel_critical_time/README.md). Its
@@ -12,12 +14,12 @@ model/effort unavailable. This is setup and routing, not a new result.
 
 10 November 2026, America/New_York. Prepared for Edward Baker with substantial OpenAI Codex LLM assistance. Actual model and effort are unavailable in the founding chat capture metadata; recommendations are recorded separately.
 
-Investigation **09** is the shallow analytical continuation of the existing [Green-potential investigation](../08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/01_green_potential_resolvent/README.md). The opening manuscript integrates that work with its geometric and operator parents. The sole research child is [01 — Riemann–Siegel evolution](01_riemann_siegel_evolution/README.md). Existing source evidence and chat identities stay in place.
+Investigation **09** is the shallow analytical continuation of the existing [Green-potential investigation](../08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/01_green_potential_resolvent/README.md). The opening manuscript integrates that work with its geometric and operator parents. The research children are [01 — Riemann–Siegel evolution](01_riemann_siegel_evolution/README.md) and [02 — Height and time dependent boundary bootstrap](02_height_time_boundary_bootstrap/README.md). Existing source evidence and chat identities stay in place.
 
 Start with the updated 61-page [reading PDF](../../../output/pdf/09_green_potentials_newman_flow/green_potentials_newman_flow.pdf) or [manuscript guide](manuscript/README.md). The development runs from the complete theta source through heat and collision geometry, Green mass and the prime baseline, logarithmic acquisition and deflation, then the Riemann–Siegel connection. Outstanding analytical tasks are at the end.
 
 - [Overview](research-overview/01_GNP_RESEARCH_OVERVIEW_20261110.md), [bounded plan](research-plan/01_GNP_RESEARCH_PLAN_20261110.md), and [sole GNP register](research-progress/01_GNP_RESEARCH_PROGRESS_20261110.md).
-- [Continuation note and pasteable prompts for both locations](notes/02_GNP_CONTINUATION_AND_PROMPTS_20261110.md).
+- [Continuation prompts for the parent and Riemann–Siegel child](notes/02_GNP_CONTINUATION_AND_PROMPTS_20261110.md).
 - [Source/evidence map and task crosswalk](notes/01_GNP_SOURCE_MAP_AND_INTEGRATION_20261110.md), [reference ownership](references/README.md), and [opening decisions](brainstorm/notes/01_GNP_OPENING_SCOPE_AND_DECISIONS_20261110.md).
 - [Same-assistant production check](reviews/01_GNP_OPENING_MANUSCRIPT_SELF_CHECK_20261110.md) and [milestones](DRAFT_HISTORY.md).
 

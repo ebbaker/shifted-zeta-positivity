@@ -1,0 +1,155 @@
+\section{A forced-mirror fourth-derivative condition}\label{sec:mirror}
+
+\subsection{Deflation and the exact physical inequality}
+
+At an all-real event \(a>0\) of multiplicity \(m\ge2\), deflate two
+copies at \(a\):
+\[
+ G_a(z)=\frac{H_T(z)}{(z-a)^2}.
+\]
+The remaining zero multiset still contains at least two copies at
+\(-a\). For real \(z\) away from the zeros, logarithmic differentiation
+of its product gives
+\[
+ (G_a'(z))^2-G_a(z)G_a''(z)
+  =G_a(z)^2\sum_{\rho:\,G_a(\rho)=0}(z-\rho)^{-2}
+  \ge\frac{2G_a(z)^2}{(z+a)^2}.
+\]
+The inequality extends to \(z=a\) by continuity, including when \(G_a(a)=0\).
+Write \(H_j=H_T^{(j)}(a)\). Taylor expansion gives
+\[
+ G_a(a)=H_2/2,\qquad G_a'(a)=H_3/6,\qquad G_a''(a)=H_4/12.
+\]
+Multiplication by \(72\) proves the inherited mirror condition
+\begin{equation}\label{eq:physicaljet}
+ \boxed{2H_3^2-3H_2H_4\ge\frac9{a^2}H_2^2.}
+\end{equation}
+For \(m\ge4\), both sides vanish; for \(m=3\) the inequality remains
+valid with \(H_2=0\). No restriction to exact doubles was made.
+The deflation condition and its earlier model compatibility are owned
+by \cite{collision}; this section develops its RSCT normalization and
+joint calibrated use.
+
+\subsection{Cancellation of the carrier derivatives}
+
+Let \(f_j=\partial_w^jf_a(0)\), with \(f_0=f_1=0\), and evaluate
+\(b=A_z/A\) and \(b_z\) at \(z=a\), holding \(T\) fixed.
+Differentiating \(H_T=A f_a\) gives
+\begin{align}
+ H_2/A&=L^2f_2,\\
+ H_3/A&=L^3f_3+3bL^2f_2,\\
+ H_4/A&=L^4f_4+4bL^3f_3+6(b^2+b_z)L^2f_2.
+\end{align}
+Substitute in \eqref{eq:physicaljet}. The \(bf_2f_3\) and \(b^2f_2^2\)
+terms cancel exactly. After division by \(A(T,a)^2L^6>0\), the condition is
+\begin{equation}\label{eq:Jdef}
+ \cJ_a(f_a):=2f_3^2-3f_2f_4-\mu_a f_2^2\ge0,
+ \qquad \mu_a=\frac{18b_z(a)+9/a^2}{L^2}.
+\end{equation}
+From \eqref{eq:bcarrier},
+\[
+ b_z(a)=-\frac7{4a^2}+\frac{T(1-L)}{8a^2},
+\]
+and hence
+\begin{equation}\label{eq:mu}
+ \mu_a=\frac{-45/2-9c/4+9c/(4L)}{a^2L^2}<0\qquad(L\ge1).
+\end{equation}
+The normalization therefore retains a small positive contribution
+\(-\mu_a f_2^2\) in the mirror functional. A carrier derivative has
+not been discarded as negligible before the algebraic cancellation.
+
+\subsection{Payment for the fourth derivative}
+
+Theorem~\ref{thm:local} uses an analytic error on a larger disk, so
+there are explicit Cauchy payments
+\[
+ |f_j-q_j|\le\epsilon_j,\qquad
+ \epsilon_j=j!R^{-j}C_{2R}a^{-3/4},\qquad 2\le j\le4,
+\]
+where \(q_j=\partial_w^jq_a(0)\).
+All these jets are real. Expanding \eqref{eq:Jdef} gives
+\begin{equation}\label{eq:jeterror}
+\begin{split}
+ |\cJ_a(f_a)-\cJ_a(q_a)|\le\Delta_{\rm jet}:={}&
+ 4|q_3|\epsilon_3+2\epsilon_3^2
+ +3|q_2|\epsilon_4+3|q_4|\epsilon_2+3\epsilon_2\epsilon_4\\
+ &+|\mu_a|(2|q_2|\epsilon_2+\epsilon_2^2).
+\end{split}
+\end{equation}
+The moment estimate and the correction imply
+\(|q_j|\le M_j+O(\chi)\). Therefore
+\begin{equation}\label{eq:jeterrorsize}
+ \Delta_{\rm jet}
+ =O\left(a^{-3/4}\ee^{\delta L}/L^2+a^{-3/2}\right)=o(1).
+\end{equation}
+For the actual approximate field, the justified necessary statement is
+\begin{equation}\label{eq:approxjetcondition}
+ |q_a(0)|,\ |q_a'(0)|=O(a^{-3/4}),\qquad
+ \cJ_a(q_a)\ge-\Delta_{\rm jet}.
+\end{equation}
+Exact nonnegativity of the approximate functional is not silently
+substituted for this paid inequality.
+
+\subsection{One point satisfies both signed tests}
+
+\begin{theorem}[Joint mirror compatibility]\label{thm:joint}
+Under the hypotheses of Theorem~\ref{thm:mult}, the same
+multiplicative point can be chosen to satisfy
+\begin{align}
+ q_*(0)&=q_*'(0)=0,\qquad q_*''(0)<0,\qquad q_*^{(4)}(0)>0,\\
+ \cD_a(q_*)&\le-\kappa_\beta\frac{\ee^{(1/2-c/8)L}}{L^8},
+ \label{eq:jointD}\\
+ \cJ_a(q_*)&\ge c_J\frac{\ee^{(1/2-c/8)L}}{L^8}>0,\qquad
+ c_J=\frac{3h_2h_4}{25600}.
+ \label{eq:jointJ}
+\end{align}
+In particular, Corollary~\ref{cor:growing}, including the opposite phase
+at a prime \(q_0\in(Y,2Y]\), remains valid simultaneously.
+\end{theorem}
+\begin{proof}
+Make the seven-observation choice in Lemma~\ref{lem:complement}, rather
+than only the four-observation choice. The event repair and signed
+estimate in Section~\ref{sec:multiplicative} are unchanged, with
+constants still independent of \(\cQ\).
+
+For each \(j=2,3,4\), the reserved phase repair has derivative cost
+\[
+ |(\Delta p)^{(j)}(0)|
+ \le C W(|t|+|s|)L^{-j}
+ =O_\beta(C_{\cQ}L^{1-j}).
+\]
+The chosen complementary derivatives are \(O_\beta(C_{\cQ})\);
+the entire correction has derivatives \(O(\chi)\).
+The budget \(\mathcal E_{\cQ}\to0\) implies
+\(C_{\cQ}=o(W/L^4)\). Thus the errors are smaller than both leading
+quantities in \eqref{eq:primejets}, and eventually
+\begin{equation}\label{eq:finaljets}
+ q_*''(0)\le-\tfrac12h_2W/L^2,\qquad
+ q_*^{(4)}(0)\ge\tfrac12h_4W/L^4.
+\end{equation}
+All jets are real, and \(\mu_a<0\). In \eqref{eq:Jdef},
+the \(2q_3^2\) and \(-\mu_a q_2^2\) terms are nonnegative.
+The cross term therefore gives
+\[
+ \cJ_a(q_*)\ge-3q_*''(0)q_*^{(4)}(0)
+        \ge\tfrac34h_2h_4W^2/L^6.
+\]
+Use \eqref{eq:Wpopulation} to obtain \eqref{eq:jointJ}.
+Equation~\eqref{eq:jointD} holds for this very same point by the
+previous signed-error calculation.
+\end{proof}
+
+The model now has an exact local double zero at \(w=0\), since its
+second derivative is nonzero. It passes the exact mirror functional,
+which is stronger than merely passing the approximate necessary
+condition \eqref{eq:approxjetcondition}. Nevertheless this is not
+a physical collision: the model is not identified with a globally
+even canonical field, and no all-real global zero configuration is
+constructed. The opposite calibrated-prime defect explicitly forbids
+the actual same-height phase law.
+
+The conclusion is limited to the one mirror inequality tested here.
+It does not establish compatibility with every finite collection of
+Laguerre inequalities, every higher event jet, or global all-realness.
+Each stronger constraint would need its own derivation, approximation
+cost, and simultaneous construction or exclusion argument.

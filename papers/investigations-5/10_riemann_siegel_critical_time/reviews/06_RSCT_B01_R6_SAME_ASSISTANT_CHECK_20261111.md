@@ -1,0 +1,38 @@
+# RSCT-B01 r6: same-assistant check of the exact-circle construction
+
+11 November 2026, America/New_York. Prepared for **Edward Baker** with substantial OpenAI Codex LLM assistance, chat0003, “Continue R6 investigation.” Actual backend model and reasoning effort are unavailable in the recorded configuration.
+
+**Disposition: accept as proved in-note from named inherited approximation inputs, at same-assistant scope.** This is proof-author analytical checking, not independent specialist, different-model or different-agent review. No numerical, symbolic or interval mathematical experiment was run. The inherited complete provider is consumed at its recorded status, not independently audited.
+
+| Checked input | SHA-256 |
+| --- | --- |
+| [Note08](../notes/08_RSCT_B01_R6_EXACT_CIRCLE_TEST_20261111.md) | d759e7d8e63a51fb4fbb1c036bdce19ae993bba5402d7024253c452b15c0db90 |
+| [Decision06](../brainstorm/notes/06_RSCT_B01_R6_EXACT_CIRCLE_DECISION_20261111.md) | 42cadfd90f1df99f95beebc1a0e1c8cc160138440130cd609fa8277bf5fa59bd |
+| [Note06](../notes/06_RSCT_B01_R4_MICROSCOPIC_EVENT_EXPANSION_20261111.md) | 2cd51b003074df96315eaff3733d50131f5b97973ca237d18dfa7bd98b2b75e0 |
+| [Note07](../notes/07_RSCT_B01_R5_SIGNED_CORRELATION_DISK_TEST_20261111.md) | ef83261bb8e788bd2f128e009a72e95402987fa881320d6d77f2f45e368a4a66 |
+
+1. **Additional information and exact scope.** R6 adds every circle equality to the two event equations. It tests independently free phases, not the canonical phase curve or its true lifted correlation set. R5's attenuated point is not reused as if it satisfied the circles. The new proof constructs a point in \({\cal C}_0\), hence in the approximate-event class \({\cal C}_\epsilon\). No all-real hypothesis is asserted for that point.
+
+2. **Triple existence.** The log derivative of \(d(x)\) lies in \([-3/4,-1/2]\) throughout the whole cutoff range. Integrating its lower bound gives (8) in the correct direction. The exact comparisons \(2^{-3/4}>7/12\) and \(3^{-3/4}>5/12\) follow respectively from \(20736>19208\) and \(20736>16875\). The decreasing function in (9) starts above \(b_1\) and ends at most \(b_2<b_1\), with real square roots throughout. Its interior solution retains all three radii exactly.
+
+3. **Zero-frequency endpoint.** The second frequency of a complete triple is positive; its last can be zero only at the cutoff. Defining \(\rho=r_3/r_2\) is safe. When \(r_3=0\), \(y_{j+1}=0\), while \(y_{j+2}\) retains the circle magnitude but multiplies the identically zero sine. The event derivative is still zero. The continuous quotients \(\sin(rw)/r\) and \(\sinh(\beta r)/r\) make every later formula valid at this endpoint.
+
+4. **Event equations and imaginary signs.** The chosen coordinates give \(b_1-A_2-A_3=0\) and \(r_2\rho v-r_3v=0\). At \(i\beta\), the field is \(X_j-iY_j\), with the signs in (12). The even differences have positive coefficients starting at degree two; applying \(\beta\partial_\beta-2\) removes exactly the quadratic term and leaves positive higher terms. The odd divided-sine difference starts at degree three, so the same operator has positive coefficients. This proves (13) for every positive fixed \(\beta\).
+
+5. **Full cross terms.** Summing triples adds nonnegative \(X_j,Y_j\) and their nonnegative transformed derivatives. Thus \(-X(\beta X'-2X)-Y(\beta Y'-2Y)\) includes and controls cross-block products. This is not an argument that separate signs for unrelated components imply a sign for the canonical quadratic form. The mode phases here were explicitly chosen to align these quantities.
+
+6. **Whole-population bound.** The block expression has no leftover constant-frequency term because both event equations were used exactly. Derivatives in the real frequency variable of the entire functions and their first two \(w\)-derivatives are bounded on the compact product \(0\le r\le1/4,\ |w|\le R\), including \(r=0\). The block bound \(C_Rd_j/(jL)\), summed against \(j^{-3/2}\), proves (15) uniformly up to the growing cutoff. No fixed-\(n\) limit is interchanged with the population.
+
+7. **Quantitative negative margin.** The first block gives \(A_{2,h}\ge1-d_3\ge1-1/\sqrt3\). For \(U=\cosh(\beta/4)-\cosh(\beta(1/4-h))\), \(h=\log2/(2L)\), differentiation and Taylor expansion give \(G=\beta U'-2U=h\beta(x\cosh x-\sinh x)+O(h^2)\). Hence \(UG=C_\beta/L^2+O(L^{-3})\), with exactly the coefficient in Note07. Positivity is analytic; there is no sampled sign assertion. The larger blocks can only strengthen the negative upper bound before the small correction is added.
+
+8. **Cutoff leftovers.** Writing \(N=3J+r\), \(r=0,1,2\), leaves only the last \(r\) indices. Their \(\log n\) differs from \(L/2\) by \(O(e^{-L/2})\). Substitution into the complete quadratic heat weight gives \(O(\chi)\), uniformly in the fractional-cutoff location and \(c\). All these modes are included at phase zero; none is set to zero or attenuated.
+
+9. **Uniform two-phase repair and its signs.** The two-dimensional map \(F\) has the displayed positive determinant. Its limiting head triangles, with \(s\in[5/8,3/4]\), are uniformly nondegenerate by compactness and the strict triangle inequalities. This gives uniform inverse neighborhoods; continuity of the correction as the cutoff moves is not required, since each target in (18) is only required to have size \(O(\chi)\). The target's second coordinate is \(+K'(0)\), correctly cancelling \(q'(0)=-F_2+K'(0)\). The first coordinate cancels both \(b(0)\) and \(K(0)\). The adjustment changes phases only, leaves \(\theta_1=\theta_4=0\), and contributes \(O_R(\chi)\) to all required derivatives.
+
+10. **Carrier and retained correction.** The exact \(K(w)\) survives in \(E\), not just its first two jets. Using \(p,p'=O(L^{-1})\), expansion of the squared-value and derivative product gives \(O(\chi/L+\chi^2)\). The exact physical carrier differs from 2 by \(O(a^{-2}L^{-2})\), costing \(O(a^{-2}L^{-4})\) on \(p\). Since \(\chi L\to0\), the one-half margin in (20) follows at a finite uninstantiated onset. This statement is uniform in \(c\), for each fixed \(\beta>0\), not uniform as \(\beta\) varies or tends to zero.
+
+11. **Explicit arithmetic failure.** Actual \(u_n=e^{i\Theta}e^{-i\nu\log n}\) satisfy \(u_{mn}u_1=u_mu_n\). In the constructed point, \(u_1=u_4=1\), while the repaired \(\theta_2\) remains uniformly inside \((\pi/2,\pi)\). Thus \(|1-u_2^2|=2|\sin\theta_2|\) stays bounded below. The circles are preserved but multiplicativity already fails at \(1,2,4\). No inference about actual canonical values, source perturbations or physical heat evolution is justified.
+
+12. **Physical transfer, controls and stop.** Formula (6) retains arbitrary \(m\ge2\) and all copies of both reflected event roots. The physical acquisition allowance is smaller than the artificial negative margin but is not assigned to that artificial field. Catalog controls are screened by their failed premises, with actual threshold families distinguished from merely local events. No failure for estimates using more arithmetic, global zero information, higher jets or other consumers is proved. HCB/HDA/GNP-RS/S04/OA ownership and the all-time/all-height gap remain unchanged. The bounded r6 pass is complete; E01 has no tractable packet.
+
+The analytical check found no correction necessary. It specifically checked the possible zero frequency, all three cutoff residues, the uniform inverse step and the distinction between exact magnitude and common phase. Earlier proof, decision and review files remain unchanged. The [document-check record](../numerics/RSCT_B01_R6_DOCUMENT_CHECK_20261111.json) covers link, hash and size consistency only; these checks do not certify the mathematics.

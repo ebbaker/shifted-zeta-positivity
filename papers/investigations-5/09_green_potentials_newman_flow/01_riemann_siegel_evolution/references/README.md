@@ -142,3 +142,70 @@ entry was needed. See the [execution record](../numerics/05_GNP_RS_E03_INPUTS_AN
 ## Critical-time clarification — 11 November 2026
 
 Prepared for Edward Baker with Codex assistance; actual model/effort unavailable. [Note20](../notes/20_GNP_RS_GREEN_GEOMETRY_AND_CRITICAL_TIME_20261111.md) rechecks Polymath, arXiv:1904.12438v2 (4 August 2019), [Theorem 1.5(i)](https://arxiv.org/html/1904.12438v2#S1), Proposition 3.1 and [§4, (35)–(39)](https://arxiv.org/html/1904.12438v2#S4) in pinned primary HTML. The theorem's absolute positive-time height bound is used in a compactness proof of finite multiple-zero attainment conditional on Λ>0; (39) supplies the complete symmetric real-axis expression, including its remainder. This is a standard consequence and selected-passage inspection, not a new zero-exclusion estimate or full-paper review. The canonical HDA bibliography and existing reading-copy records remain in place; no new PDF copy was acquired.
+
+## B07 localized tail input — 12 November 2026
+
+The [source-use record](01_GNP_RS_B07_DISCRETE_DERIVATIVE_SOURCE_USE_20261112.md)
+checks Elkies's discrete second/third-derivative estimates and records selected
+Robert corroboration with an explicit extraction limitation. The
+[download manifest](01_GNP_RS_B07_REFERENCE_DOWNLOADS_20261112.json) identifies
+both public external reading copies. The child bibliography has the reusable
+entries. This supports Note23's shifted-pair estimate; no independent theta
+field theorem is imported. For Edward Baker with Codex assistance; actual
+model/effort unavailable.
+
+## B08 exponent-pair input — 12 November 2026
+
+For Edward Baker with substantial OpenAI Codex assistance; actual model and
+effort unavailable. The canonical [Robert record](01_GNP_RS_B07_DISCRETE_DERIVATIVE_SOURCE_USE_20261112.md#b08-later-use-of-robert--12-november-2026)
+now includes a dated later-use section for Sections 5.1–5.2, equation (20),
+and the A/B transformations, preserving its B07 history. The new
+[Bourgain–Watt v1 record](02_GNP_RS_B08_EXPONENT_PAIR_SOURCE_USE_20261112.md)
+checks the related shifted-logarithm estimate in (13.37) as corroboration.
+Both are selected-passage uses for [Note25](../notes/25_GNP_RS_B08_EXPONENT_PAIR_LOCALIZATION_20261112.md),
+not full-paper readings. The bibliography includes the pinned v1 entry;
+the [new download manifest](02_GNP_RS_B08_REFERENCE_DOWNLOADS_20261112.json)
+identifies its external PDF. Robert's existing copy and manifest are reused.
+
+## B09 joint-theorem range screen — 12 November 2026
+
+For Edward Baker with Codex assistance; actual model/effort unavailable.
+The dated B09 addendum in the [existing Bourgain–Watt record](02_GNP_RS_B08_EXPONENT_PAIR_SOURCE_USE_20261112.md)
+checks Theorem2(6.6),(6.11) and Remark(i), printed pp14–15. The direct
+import fails necessary shift gates at the current consumer. Its omitted
+case is a future source lead only. Original B08 bytes are preserved as
+a prefix and the archived v1 PDF is unchanged; no new copy or theorem import.
+
+- **B10, 12 November 2026:** the [Bourgain–Watt canonical source record](02_GNP_RS_B08_EXPONENT_PAIR_SOURCE_USE_20261112.md) now also records Theorem 4 and the earlier internal parameter restriction. This pass imports the cumulative mean-square theorem and proves its cutoff-arm transfer separately. For Edward Baker with Codex assistance; actual model/effort unavailable.
+
+- **B10 audit, 12 November 2026.** The [Montgomery–Vaughan source record](03_GNP_RS_B10_EXPONENT_PAIR_AUDIT_SOURCE_20261112.md)
+  gives an unambiguous reciprocal-phase citation for the same exponent pair.
+  The [Bourgain–Watt record](02_GNP_RS_B08_EXPONENT_PAIR_SOURCE_USE_20261112.md)
+  includes the journal metadata and the checked direction of the (7.3)
+  parameter comparison. For Edward Baker with Codex assistance. Actual
+  model and effort are unavailable.
+
+## Lower transverse offset discussion — 13 November 2026
+
+For Edward Baker with Codex assistance; actual model/effort unavailable.
+[Brainstorm Note12](../brainstorm/notes/12_GNP_RS_LOWER_TRANSVERSE_OFFSET_AND_LOG_OBSERVATION_20261113.md)
+rechecks Polymath, arXiv:1904.12438v2 (4 August 2019),
+[primary HTML](https://arxiv.org/html/1904.12438v2#S1): (5), (11),
+the caveat after (12), and Theorem 1.3 (13)–(24). This verifies the
+near-axis finite-sum representation and normalization, not uniform
+small-value control. Selected passages only; existing bibliography and
+HDA/HDC external reading-copy provenance are reused. No new PDF acquired.
+
+## Height and time dependent boundary discussion — 13 November 2026
+
+For Edward Baker with substantial OpenAI Codex assistance; actual model
+and effort unavailable. [Brainstorm Note13](../brainstorm/notes/13_GNP_RS_HEIGHT_AND_TIME_DEPENDENT_STRIP_BOOTSTRAP_20261113.md)
+rechecks the same Polymath arXiv:1904.12438v2
+[primary text](https://arxiv.org/html/1904.12438v2#S3):
+Theorem 3.2 (global uniform strip contraction, in the normalization
+\(\partial_t H=-H_{zz}\)); Theorem 1.2 and Proposition 3.3
+(initial, final and intermediate barrier hypotheses); and Proposition 3.1,
+especially (31)–(32) and the treatment of multiple zeros.
+These are selected-passage checks. No arbitrary height-dependent
+contraction theorem is imported. The same bibliography and external-copy
+provenance are reused; no additional PDF acquired.

@@ -1,5 +1,7 @@
 # Green potentials and Newman flow: sole progress register
 
+**Boundary-bootstrap child setup, 13 November 2026.** Child 02 owns GNP-BB tasks in [its sole register](../02_height_time_boundary_bootstrap/research-progress/01_GNP_BB_RESEARCH_PROGRESS_20261113.md); this parent file contains no live copies of those rows. The [crosswalk](../02_height_time_boundary_bootstrap/notes/02_GNP_BB_SETUP_AND_SOURCE_CROSSWALK_20261113.md) leaves all existing GNP and GNP-RS dispositions and issued requests unchanged. For Edward Baker with Codex assistance; actual model/effort unavailable.
+
 10 November 2026, America/New_York. Prepared for Edward Baker with OpenAI
 Codex LLM assistance. Actual model and effort are unavailable in the
 founding chat's capture metadata. Recommendations below are not actual

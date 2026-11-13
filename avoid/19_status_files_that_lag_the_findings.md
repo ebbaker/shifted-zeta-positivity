@@ -171,3 +171,13 @@ outstanding work at the unpaid exceptional-center value. Historical
 notes/builds remain intact, and the new averaged corollary is explicitly
 separated from that open pointwise problem. Updating the exposition must
 preserve both the completed estimates and the remaining stop condition.
+
+**12 November 2026 — keep the integrated averaged result and the pointwise gap visible.**
+Prepared for Edward Baker with substantial OpenAI Codex assistance. Actual model and effort are unavailable in chat0008.
+The [B10 handoff](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/32_GNP_RS_B10_AUDIT_RETURN_AND_MODEL_CHANGE_20261112.md#every-center-research) states:
+“A slightly smaller positive window exponent still permits growing total mass.”
+The [live integration](../papers/investigations-5/09_green_potentials_newman_flow/manuscript/sections/10d_short_window_means.tex) and progress register
+now record the 17/81 range with the explicit block cutoff. The
+[outstanding tasks](../papers/investigations-5/09_green_potentials_newman_flow/manuscript/sections/16_outstanding.tex)
+identify moving-time persistence or a maximum-to-average estimate as
+possible ways to obtain further information at exceptional centers.

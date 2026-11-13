@@ -19,3 +19,17 @@ Assessments with exact scope and actual configuration when available.
 - [B05/E06 internal assessment](09_GNP_RS_B05_INTERNAL_REVIEW_20261111.md): separate Sol6.1/ultra agent with tangent proof contributions and shared inherited inputs; no specialist review.
 
 - [E07 integration and averaged-value self-check](10_GNP_RS_MANUSCRIPT_AND_MEAN_SELF_CHECK_20261111.md): same-assistant claim, scope and production check; not independent specialist acceptance.
+
+- [B06 contributing internal assessment](11_GNP_RS_B06_INTERNAL_ASSESSMENT_20261112.md): accepts the quantitative growing-cutoff proof with the assessor’s low-head contribution and inherited-input limits disclosed.
+
+- [B07 internal assessment](12_GNP_RS_B07_INTERNAL_ASSESSMENT_20261112.md): contributing separate-agent check of smooth complete-tail cancellation, exact boundary weight and full weighted ledger; shared inherited inputs, no specialist independence.
+
+- [B08 internal assessment](13_GNP_RS_B08_INTERNAL_ASSESSMENT_20261112.md): contributing separate-agent check of classical source applicability, shifted tail, retuned ledger and scoped threshold formula; shared inputs, no specialist independence.
+
+- [B09 internal assessment](14_GNP_RS_B09_INTERNAL_ASSESSMENT_20261112.md): contributing shared-input check of exact dual allowance, canonical resonance and primary-source gates; no actual-tail lower bound or new theorem of cancellation.
+
+- [B10 same-assistant assessment](15_GNP_RS_B10_SAME_ASSISTANT_ASSESSMENT_20261112.md): Mellin cutoff, pole, long-frequency tail, cumulative source input, complete norms and residual exponents; no independent review.
+
+- [B10 pre-integration assessment](16_GNP_RS_B10_PREINTEGRATION_ASSESSMENT_20261112.md). Claim-level disposition from a separate internal audit with contributing agents and shared inputs.
+
+- [B10 manuscript verification](17_GNP_RS_B10_MANUSCRIPT_VERIFICATION_20261112.md). Claim-to-source and production checks for the integrated theorem.

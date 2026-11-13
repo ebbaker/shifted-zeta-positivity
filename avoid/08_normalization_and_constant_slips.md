@@ -137,3 +137,13 @@ CR-corrupted roman subscripts despite a successful prior PDF build.
 Check mathematical notation as well as build success. This is a repaired
 sufficiency-argument gap, not a lower bound on actual shrinking-window
 error or a universal approximation obstruction.
+
+**12 November 2026 — the block cutoff belongs in the Green transfer.**
+For Edward Baker with Codex assistance. Actual model and effort unavailable,
+chat0008. [B10 Note31](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/31_GNP_RS_B10_PREINTEGRATION_PROOF_AUDIT_20261112.md)
+records: “For general \(P\) the termwise argument can retain the separate
+omitted-prime allowance \(O(P^{-3/2})\).” Use the block choice
+\(P_U=\lfloor L_U^2\rfloor\) in the simplified Green transfer.
+The residual theorem ranges over all permitted block-constant cutoffs.
+The original corollary already specified the growing cutoff. The audit
+clarifies its transfer line before manuscript integration.

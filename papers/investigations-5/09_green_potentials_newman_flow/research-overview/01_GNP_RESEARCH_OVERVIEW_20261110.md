@@ -1,5 +1,7 @@
 # Research overview: the signed Green observable
 
+**Boundary-bootstrap child setup, 13 November 2026.** The separate [boundary-bootstrap overview](../02_height_time_boundary_bootstrap/research-overview/01_GNP_BB_RESEARCH_OVERVIEW_20261113.md) covers height/time-dependent zero enclosures, observation offsets and inward improvements. Shared source and Green foundations stay here; the new child owns its GNP-BB tasks through [its register](../02_height_time_boundary_bootstrap/research-progress/01_GNP_BB_RESEARCH_PROGRESS_20261113.md). This is setup/navigation, not a new theorem. For Edward Baker with Codex assistance; actual model/effort unavailable.
+
 **Current 11 November manuscript milestone:** [E07 integration and averaged consequences](../01_riemann_siegel_evolution/notes/19_GNP_RS_MANUSCRIPT_AND_AVERAGED_GREEN_VALUES_20261111.md) supersedes the opening-only manuscript routing. E01–E06 are now derived in the live parent §§11–13. At c=1, every finite Green power mean tends to zero; the exceptional-center estimate remains unpaid. This is inherited-input proof with same-assistant checking, not a new all-c or every-center bound. Actual editor model/effort unavailable. The earlier briefs below retain their historical scope.
 
 10 November 2026, America/New_York. Prepared for Edward Baker with substantial OpenAI Codex LLM assistance. Actual model and effort are unavailable in the founding chat capture metadata; recommendations are recorded separately.
