@@ -1,0 +1,140 @@
+\section{The question and the analytical structure}\label{sec:framework}
+
+The purpose of the boundary bootstrap is to improve a known enclosure
+of the zeros by observing the field just outside a proposed smaller
+enclosure. Two kinds of information can support such a step. A uniform
+relative approximation to a nonvanishing carrier gives direct zero
+exclusion. A smaller amount of boundary information can suffice through
+Green's formula, provided that the value at the observation point has an
+independent lower bound. The second route keeps cancellations that the
+first route may discard.
+
+This manuscript develops the results of the height and time dependent
+boundary investigation through its E11 review. Its starting analytic
+input is the corrected complex Riemann--Siegel estimate established in
+the repository's heat-density investigation. We state the input precisely
+in Section~\ref{sec:expansion}, retain its review status, and derive the
+positive-time extension needed here. The other imported inputs are the
+classical logarithmic-phase exponent-pair estimate and two published
+heat-flow zero theorems. The resulting deductions concern the complete
+canonical field, not a truncated theta model.
+
+\subsection{The field and the three time conventions}
+
+For real $t$ and complex $z$, set
+\begin{equation}\label{eq:canonical}
+ H_t(z)=\int_0^\infty \ee^{tu^2}\Phi(u)\cos(zu)\dd u,
+ \qquad
+ \Phi(u)=\ee^u\sum_{n\ge1}
+ (2\pi^2n^4\ee^{8u}-3\pi n^2\ee^{4u})\ee^{-\pi n^2\ee^{4u}}.
+\end{equation}
+The normalization, derived below, is
+\begin{equation}\label{eq:normalization}
+ H_0(z)=\frac18\xi\left(\frac{1-\ii z}{2}\right),\qquad
+ \partial_tH_t=-\partial_z^2H_t.
+\end{equation}
+Thus $|x|/2$ is the ordinary zeta ordinate when $z=x+\ii y$.
+Throughout, $\log$ is real on positive arguments and $\Log$ is the
+branch on the right half-plane continued from the positive axis.
+We use
+\[
+ L_X=\log\frac{X}{4\pi},\qquad t_X=L_X^{-1},\qquad
+ \tau_X=\frac X2+\frac{\pi}{8L_X}.
+\]
+Three different assertions must be distinguished. In a spatial contour
+at center $X$, the field is $H_{t_X}$ at one fixed time. In a center
+average, $X$ varies and the family follows the curve $t_X$. In a
+common-time exterior theorem, one fixed $t$ is used at every height.
+The function $z\mapsto H_{t_{\Re z}}(z)$ is not used as a holomorphic
+field in a contour identity.
+
+\subsection{Main conclusions and the unresolved premise}
+
+The strongest acquired enclosure is the following quantitative tail
+statement. The word ``acquired'' means proved from the named inputs in
+this manuscript and its source notes, with the internal reviews described
+in Section~\ref{sec:evidence}.
+
+\begin{theorem}[Exterior enclosure]\label{thm:main-width}
+There is a finite, unevaluated $t_*>0$ such that
+\[
+ 0<t\le t_*,\quad |x|\ge4\pi\ee^{1/t},\quad H_t(x+\ii y)=0
+ \quad\Longrightarrow\quad |y|<\frac{567}{1000}.
+\]
+There is also a finite onset $X_*$ such that
+$H_{t_X}(X+\ii y)=0$, $X\ge X_*$, implies the same strict width.
+\end{theorem}
+
+The proof in Section~\ref{sec:width} yields a relative error at most
+$1/64$ on its full comparison rectangles. The width improves the
+earlier $4/7$ by $31/7000$, at its own onset. It does not specify the
+true smallest onset, and it gives no exclusion in the omitted compact
+region.
+
+For the Green route, define
+\begin{equation}\label{eq:raw-tail-intro}
+ \begin{split}
+ T_X(v)&=\sum_{\lfloor\ee^{L_X/32}\rfloor<n\le
+                    \lfloor\ee^{L_X/2}\rfloor}
+ w_n(X)\ee^{\ii(\tau_X+v/2)\log n},\\
+ w_n(X)&=n^{-65/64}\exp\left(\frac{(\log n)^2}{4L_X}\right),\qquad
+ Q(X)=\int_\R P(v)|T_X(v)|^2\dd v,
+ \end{split}
+\end{equation}
+where the positive strip kernel $P$ is specified in
+Section~\ref{sec:moment} and has mass $2/5$.
+
+\begin{proposition}[Conditional deeper step]\label{prop:intro-green}
+If $Q(X)\le4/66^2$ for every sufficiently large real $X$, then every
+zero $X+\ii y$ of $H_{t_X}$ at sufficiently large $X$ satisfies
+$|y|<9/16$.
+\end{proposition}
+
+The proposition is a sufficient arithmetic reduction. Its premise
+remains unproved, and no converse is asserted. The unconditional
+moment estimates obtained below are
+\[
+ \|T_X-M_X\|_P\ll X^{-1/8192},\qquad
+ \frac1U\int_U^{2U}Q(X)\dd X\ll U^{-25/1024},
+\]
+where $M_X$ is the middle band $3/64<\log n/L_X\le5/16$.
+For every interval $I\subset[U,2U]$ of length $h\ge1$,
+\[
+ \frac1h\int_I Q(X)\dd X
+ \ll U^{-1/4096}+U^{-21/512}+\frac{U^{5/128}\log U}{h}.
+\]
+These estimates become small on specified growing windows. They do not
+bound the moment at every center. Section~\ref{sec:means} proves the
+stronger, but still averaged, statement for positive resonator weights
+of integer support $R\le U^\delta$, for each fixed $0<\delta<123/128$.
+
+At the shorter scale $h_U=U^{1/32}$, define the probability measure
+\[
+ \dd\nu_{h_U}(s)=h_U^{-1}(1-|s|/h_U)_+\dd s,
+ \qquad A_U(Y)=\int Q(Y+s)\dd\nu_{h_U}(s).
+\]
+An actual witness $A_U(Y)\ge5/66^2$ along an unbounded sequence
+would contradict the every-center sufficient budget. It has not been
+constructed or excluded. Section~\ref{sec:packets} proves instead that
+a specified sparse family of aligned logarithmic packets cannot change
+the complete moment by a fixed positive amount. Its explicit quartic
+example achieves actual phase alignment but has insufficient mass.
+
+\subsection{Scope and notation}
+
+All implicit constants are uniform in the real centers and in the
+fractional parts of the indicated cutoff values. They may depend on
+declared fixed strip widths, a fixed finite clock window, a specified
+exponent pair, or a fixed parameter written in the subscript.
+An onset is chosen after these constants are fixed. An assertion valid
+for each fixed width does not imply a uniform onset as that width shrinks.
+
+The classification used here is a quantitative positive-time enclosure,
+an explicitly conditional further step, and auxiliary estimates that
+exclude named estimating classes. None is counted as a proof of RH or
+as an iteration to the real axis. The repository result and avoidance
+indices~\cite{RepoResults,RepoAvoid} route respectively to the inherited
+claims and the relevant failure patterns. The specific control screen
+and the scope of every negative conclusion appear in
+Section~\ref{sec:evidence}; this follows the criteria in patterns
+01, 02, 07 and 12~\cite{RepoAvoidPatterns}.

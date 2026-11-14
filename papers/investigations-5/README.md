@@ -5,6 +5,14 @@ substantial LLM assistance, **gpt-6-astra (Codex), recorded effort max**.
 
 This collection studies canonical heat-flow approximations, their RH applications, collision bounds, conditional dynamics across three Newman-threshold and endpoint-multiplicity regimes, radial theta collision geometry, auxiliary flows for collision analysis, positive theta primitives for indirect sign arguments, and physical theta observables connected to Newman dynamics.
 
+Cross-investigation discussion is in the direct [brainstorm folder](brainstorm/README.md),
+including the [MPS/Newman-flow idea](brainstorm/01_MPS_NEWMAN_FLOW_20261113.md)
+of 13 November 2026. Its [chat history](chat-histories/README.md) is stored
+directly here at the author's request. This exploratory representation and
+compression work does not change the child investigations' task statuses.
+Prepared for Edward Baker with substantial OpenAI Codex assistance; actual
+model and effort are unavailable in this discussion's recorded configuration.
+
 | Investigation | Purpose | Status |
 | --- | --- | --- |
 | [01 — Heat-density asymptotics](01_heat_density_asymptotics/README.md) | Approximate average zero behavior using two time limits, spatial/time averaging, fluctuation corrections and boundary-matched evolution | [Program](01_heat_density_asymptotics/research-overview/01_AVERAGED_DENSITY_RESEARCH_PROGRAM_20261024.md) and [progress ledger](01_heat_density_asymptotics/research-progress/01_AVERAGED_DENSITY_RESEARCH_PROGRESS_20261024.md) established; quantitative closure and approximation remain open |

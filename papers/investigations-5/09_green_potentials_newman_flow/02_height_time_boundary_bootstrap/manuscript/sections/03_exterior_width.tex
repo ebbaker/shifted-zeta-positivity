@@ -1,0 +1,261 @@
+\section{Signed finite sums and the exterior enclosure}\label{sec:width}
+
+This section assembles the finite-pair argument of BB Note18~\cite{BB18}
+with the complete positive provider, retaining the restricted A-chain
+comparison to explain exactly what the broader pair choice improves.
+
+\subsection{The logarithmic-phase input and its weighted exponent}
+
+The classical exponent-pair estimate used here is the following
+specific form~\cite{MontgomeryVaughan}. For a fixed exponent pair
+$(k,l)$ and any interval $I\subset[M,2M]$,
+\begin{equation}\label{eq:exp-pair}
+ \left|\sum_{n\in I}n^{\pm\ii T}\right|
+ \ll T^kM^{l-k}+M/T\qquad(T\asymp x).
+\end{equation}
+The logarithmic model $T\log u/(2\pi)$ has derivative parameter one
+in the cited definition; its derivative errors are zero. Conjugation
+covers the opposite phase. A singleton costs at most one and is
+included in the first term for the pairs used here. Real half-open
+endpoints cause no change in the estimate. The secondary $M/T$ term
+will always be retained.
+
+Starting with $P=(1/6,2/3)=AB(0,1)$, the operations are
+\[
+ A(k,l)=\left(\frac{k}{2k+2},\frac{k+l+1}{2k+2}\right),\qquad
+ B(k,l)=(l-1/2,k+1/2).
+\]
+Words act from right to left. Only finitely many fixed pairs enter
+each field estimate, so no uniform constant for an infinite sequence
+of pairs is assumed.
+
+Put $Y_x=\ee^{L_x}=x/(4\pi)$ and $c=tL_x$.
+On a clipped dyadic block with left endpoint $M=Y_x^v$, Abel summation
+applies~\eqref{eq:exp-pair} to the positive weights in
+\eqref{eq:four-terms}. Indeed
+\[
+ u\frac{a_D'(u)}{a_D(u)}=-\sigma+\frac t2\log u,\qquad
+ u\frac{a_R'(u)}{a_R(u)}=\frac{y-1}{2}-\frac{t\ell_z}{4}
+                                      +\frac t2\log u
+\]
+are bounded on a fixed $c$-window. A bound $J$ for these expressions
+gives supremum plus total variation at most
+$2^J(1+J\log2)$ times the starting weight.
+Since $\ell_z\ge L_x$ at the recentered evaluation point, the dominant
+primary power of $Y_x$ is at most
+\begin{equation}\label{eq:dominant-power}
+ E_{k,l}(v;y,c)
+ =k+\left(l-k-\frac{1+y}{2}-\frac c4\right)v+\frac{cv^2}{4}.
+\end{equation}
+At $c=1$, introduce
+\begin{equation}\label{eq:envelope-function}
+ g_{k,l}(v)=\frac{k}{v}+l-k-1+\frac v4,
+ \qquad E_{k,l}(v;y,1)=v\left(g_{k,l}(v)-\frac{y-1/2}{2}\right).
+\end{equation}
+This reduces the signed-tail problem to a finite envelope comparison.
+Increasing $c$ improves the exponent, because
+$\partial_cE=-v(1-v)/4<0$ for $0<v<1$.
+
+\subsection{An exact threshold for the restricted A-chain}
+
+The simpler chain $A^jP$ has
+\[
+ k_j=(2^{j+3}-2)^{-1},\qquad l_j=1-(j+2)k_j,
+ \qquad g_j(v)=k_j/v-(j+3)k_j+v/4.
+\]
+The formulas follow by induction under $A$.
+The affine functions $k_j-(j+3)k_jv$ for adjacent indices $j-1,j$
+cross at
+\[
+ v_j=\frac{2^{j+2}}{(j+1)2^{j+2}+2},\qquad j\ge1.
+\]
+Their crossings decrease to zero, and the line of index $j$ has the
+smaller intercept. Repeated adjacent comparisons therefore place
+$g_j$ on the lower envelope over $[v_{j+1},v_j]$, with $g_0$ on
+$[v_1,1/2]$. Convexity on each piece reduces its maximum to endpoints.
+
+\begin{proposition}[Scoped A-chain threshold]\label{prop:A-threshold}
+For this chain,
+\[
+ \max_{0<v\le1/2}\min_{j\ge0}g_j(v)=\frac{351}{10304},
+ \qquad \gamma:=\frac12+2\frac{351}{10304}=\frac{2927}{5152}.
+\]
+Every fixed $y_0>\gamma$ up to $7/12$ is available from the associated
+finite head and six-pair comparison. The threshold is sharp only for
+the stated summable-power head and separate A-chain strict-power
+allowances.
+\end{proposition}
+
+\begin{proof}
+For $0<v\le1/8$, letting $j\to\infty$ gives an infimum at most
+$v/4\le1/32$. On $[1/8,1/2]$ use successively the indices
+$5,4,3,2,1,0$, with internal joins
+$64/385,32/161,16/65,8/25,4/9$.
+The consecutive endpoint values are
+\[
+ \frac1{32},\quad\frac{1663}{49280},\quad\frac{351}{10304},\quad
+ \frac{63}{2080},\quad\frac7{400},\quad-\frac1{72},\quad-\frac1{24}.
+\]
+Each is at most $351/10304$. At $v_*=32/161$, the crossing rule
+shows that $g_3(v_*)=g_4(v_*)=351/10304$ is the minimum over all $j$.
+This proves the equality.
+
+For $y_0>\gamma$, write $\rho=y_0-\gamma$ and take the absolute head
+through $\lfloor Y_x^{1/8}\rfloor$. The weighted head is summable
+with a fixed margin, while~\eqref{eq:dominant-power} on the six
+pieces is at most $-\rho/16$ at $c=1$. A sufficiently small clock
+drift preserves a strict negative power. The complete transfer is the
+one proved in the next subsection; its constants and onset may depend
+on $\rho$.
+
+For the converse about the allowance, let
+$\delta=(y_0-1/2)/2$ and let $a$ be the head cutoff exponent.
+A strictly summable power head requires $a<4\delta$, since its
+worst exponent is $1+\delta-a/4$. If $1/2<y_0\le\gamma$, then
+$4\delta\le4(351/10304)<v_*$, so $v_*$ lies beyond every such head.
+The best separate A-chain power there is
+$v_*(351/10304-\delta)\ge0$. Moving a block endpoint by
+$O(1/L_x)$ changes the envelope by only $O(1/L_x)$ near $v_*$,
+because the first derivatives of the displayed powers are uniformly
+bounded there. It cannot produce a fixed negative power. At
+$y_0\le1/2$ the head and the elementary Euler margin already fail.
+This proves the asserted restriction, not a lower bound on the
+actual field error. Other pairs and joint cancellation are outside
+the restricted class.
+\end{proof}
+
+\subsection{Five pairs and complete error accounting}
+
+Set $y_*=567/1000$ and $\kappa=1/200000$.
+Use either $1\le c\le C$ at one fixed time, with $C$ fixed, or the
+whole rectangle $|x-X|\le1$ at $t=t_X$, with $|c-1|\le10^{-5}$.
+In both cases $y_*\le y\le9/8$. The positive provider of
+Proposition~\ref{prop:positive-provider} applies at an appropriate
+fixed $D>C$. The exact frequencies satisfy $\tau_D,\tau_R\in[x/2,x]$
+eventually. Moreover
+\begin{equation}\label{eq:carrier-floor-33}
+ \sigma\ge\frac{413399}{400000}>1+\frac1{32},\qquad
+ |1/\zeta(s_t)|\le\zeta(\sigma)\le1+\frac1{\sigma-1}\le33.
+\end{equation}
+This follows from the ordinary Euler product in $\Re s>1$.
+It is independent of any information about the zeros of $H_t$.
+
+Take $K=\lfloor Y_x^{1/8}\rfloor$ and $N=\lfloor Y_x^{1/2}\rfloor$.
+For $n\le K$,
+\[
+ a_D(n)\le n^{-((1+y)/2+7c/32)}\le n^{-1-1/512}.
+\]
+Thus $\ee^q-1\le q\ee^q$ removes the heat weight on this finite head
+at cost $At$, where
+\begin{equation}\label{eq:A-constant}
+ A=\frac14\sum_{n\ge2}n^{-1-1/512}(\log n)^2<\infty.
+\end{equation}
+The ordinary zeta tail beyond $K$ costs at most
+$32K^{-1/32}\ll x^{-1/256}$. The heat-weighted series is never
+continued to infinity.
+
+For the remaining dominant population use Table~\ref{tab:pairs}.
+The exact endpoint values are displayed so the inequality is a finite
+rational argument, independent of a floating calculation.
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+Scale interval $v$ & Pair $(k,l)$ & $g$ at left & $g$ at right\\
+\midrule
+$[1/8,4/25]$ & $(1/254,247/254)$ & $1/32$ & $841/25400$\\
+$[4/25,89/500]$ & $(11/1642,1573/1642)$ & $5443/164200$ & $4883141/146138000$\\
+$[89/500,11/50]$ & $(1/102,385/408)$ & $303221/9078000$ & $1873/56100$\\
+$[11/50,9/20]$ & $(13/502,445/502)$ & $18371/552200$ & $5531/180720$\\
+$[9/20,1/2]$ & $(1/6,2/3)$ & $-37/2160$ & $-1/24$\\
+\bottomrule
+\end{tabular}
+\caption{Five fixed pairs. Their words on $P$ are, in order,
+$A^5$, $A^5BA^2$, $A^4BABA$, $A^3BA^2BA$, and the identity.}
+\label{tab:pairs}
+\end{table}
+
+All entries are at most $q=669/20000$, and $g''(v)=2k/v^3\ge0$.
+Since $(y_*-1/2)/2=q+1/20000$ and $v\ge1/8$, the primary power
+is at most $-1/160000$ at $c=1$.
+The clock drift costs at most $10^{-5}/16=1/1600000$, leaving
+$E_{k,l}\le-9/1600000<-\kappa$. For $c\ge1$ there is no loss.
+Within each real scale interval use left-open, right-closed dyads,
+clipping the last one at the right endpoint. Every integer of
+$K<n\le N$ occurs exactly once, and there are $O(1+L_x)$ blocks.
+The secondary term costs $O(x^{-1/2})$ on each block because
+$a_D(M)\le1$ and $M\ll\sqrt x$.
+
+For the complete reflected sum, including $n=1$, use $P=(1/6,2/3)$
+on the clipped dyads from one to $Y_x^{1/2}$. After the carrier
+ratio, its primary power is
+\[
+ E_R(v)=\frac16-\frac y2+\left(\frac y2-\frac c4\right)v
+                         +\frac{cv^2}{4},\qquad0\le v\le1/2.
+\]
+It is convex. Its two endpoints are at most $-701/6000$ and
+$-180397/4800000$ in the stated domain, hence below $-1/32$.
+Its secondary cost is
+$O(x^{-y/2}M^{17/16}/x)=O(x^{-1/2})$, since the reflected
+weight is at most $M^{1/16}$.
+The correction and the complete remainder have already been paid in
+\eqref{eq:ratio-correction}. Adding every contribution proves
+\begin{equation}\label{eq:complete-comparison}
+ \left|\frac{H_t(z)}{C_-(t,z)}-\zeta(s_t(z))\right|
+ \le At+B_D(1+L_x)x^{-\kappa}.
+\end{equation}
+The constant $B_D$ absorbs finitely many pair constants, variation
+factors, block counts and the faster-decaying error terms. It does
+not depend on the individual cutoff positions or on $t$ in the
+specified window.
+
+\subsection{Onsets, continuum coverage and the far-tail join}
+
+We use two published inputs in the normalization~\eqref{eq:canonical}:
+de Bruijn strip contraction as stated in Polymath Theorem~3.2, and
+Polymath Theorem~1.5(i)~\cite{Polymath}. From the initial xi strip,
+the former gives $|y|\le\sqrt{1-2t}$ for zeros at $0\le t\le1/2$.
+The latter supplies an absolute $C_P>0$ such that zeros with
+$0<t\le1/2$ and $x\ge\exp(C_P/t)$ are real. We do not set $C_P=1$.
+
+On the curve, $|c-1|\le1/((X-1)L_X)$ throughout $|x-X|\le1$.
+The normalized comparison is analytic on a neighborhood of the
+closed rectangle, by~\eqref{eq:carrier-floor-33}. Its error is bounded by
+\[
+ 33\{A/L_X+B(1+L_X)(X-1)^{-\kappa}\}.
+\]
+Beyond a finite onset this is at most $1/64$. Direct nonvanishing on
+the rectangle excludes the closed interval $[y_*,9/8]$ at its
+centerline. The initial contracted strip and conjugation give the
+curve assertion in Theorem~\ref{thm:main-width}. A rectangle is used
+at every real center; there is no discretization gap.
+
+For the common-time result, first choose
+$C\ge\max(8,C_P)+1$, $D=C+1$, and then all provider and comparison
+constants. Let $x_0$ dominate their height gates. Choose $L_*$ so that
+\begin{equation}\label{eq:onset}
+ \begin{gathered}
+ L_*\ge\max\{2,\kappa^{-1},4224A\},\qquad4\pi\ee^{L_*}\ge x_0,\\
+ 4224B_D(1+L_*)(4\pi\ee^{L_*})^{-\kappa}\le1,
+ \qquad t_*=L_*^{-1}.
+ \end{gathered}
+\end{equation}
+The last expression decreases eventually to zero, so this is possible.
+If $0<t\le t_*$ and $x\ge4\pi\ee^{1/t}$, then $L_x\ge1/t\ge L_*$.
+For $1\le tL_x\le C$, each of the two terms in
+\eqref{eq:complete-comparison}, multiplied by 33, is at most $1/128$.
+The same direct exclusion applies. For $tL_x\ge C$,
+\[
+ x\ge4\pi\ee^{C/t}>\ee^{C_P/t},
+\]
+so the published all-real theorem applies. Both ranges include their
+common endpoint. Evenness covers negative $x$. This completes the
+proof of Theorem~\ref{thm:main-width}.
+
+The small exponent $\kappa$ and the unevaluated constants make
+\eqref{eq:onset} an existence construction, not a practical onset
+estimate. The known $4/7$ and $7/12$ results follow at a sufficiently
+large common onset; their earlier proofs retain their own constants.
+The original one-step gain $1/16$ from the initial boundary is likewise
+implied eventually by the stronger fixed width. None of these
+implications supplies repeated contraction to zero width.

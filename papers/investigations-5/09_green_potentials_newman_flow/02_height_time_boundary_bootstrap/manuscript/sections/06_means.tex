@@ -1,0 +1,302 @@
+\section{Localization, center means and positive resonators}\label{sec:means}
+
+The next estimates, from BB Note23~\cite{BB23}, concern the exact $Q$
+of~\eqref{eq:raw-tail-intro}.
+They do not change its kernel, clock or coefficients. Write
+$\|f\|_P^2=\int P(v)|f(v)|^2\dd v$ and define
+\[
+ I_X^{\rm m}=\{n:\lfloor\ee^{3L_X/64}\rfloor<n\le
+                       \lfloor\ee^{5L_X/16}\rfloor\},\qquad
+ M_X(v)=\sum_{n\in I_X^{\rm m}}w_n(X)\ee^{\ii(\tau_X+v/2)\log n}.
+\]
+Put $Q_M(X)=\|M_X\|_P^2$.
+
+\subsection{Uniform removal of the two ends}
+
+\begin{theorem}[Middle-band localization]\label{thm:localization}
+Uniformly at every sufficiently large real center,
+\begin{equation}\label{eq:localization}
+ \|T_X-M_X\|_P\ll X^{-1/8192}.
+\end{equation}
+In particular $|\sqrt{Q(X)}-\sqrt{Q_M(X)}|$ has the same bound.
+\end{theorem}
+
+\begin{proof}
+For $K_X<n\le\lfloor\ee^{3L_X/64}\rfloor$,
+$w_n(X)\le n^{-1-1/256}$. The absolute sum is
+$O(K_X^{-1/256})=O(X^{-1/8192})$, uniformly in $v$.
+Its $P$-norm has the same order because $P$ has finite mass.
+
+Cover the high population by clipped dyads starting at
+$\ee^{5L_X/16}$ and ending at $\ee^{L_X/2}$, open on the left
+and closed on the right. For $|v|\le\log X$, the exact frequency
+$\tau_X+v/2$ belongs to $[X/3,2X/3]$ eventually.
+Use the fixed pair
+\[
+ AABABA(1/6,2/3)=(1/24,27/32).
+\]
+For reference, successive application of $A,B,A,B,A,A$ gives
+$(1/14,11/14)$, $(2/7,4/7)$, $(1/9,13/18)$,
+$(2/9,11/18)$, $(1/11,3/4)$, $(1/24,27/32)$.
+The continuous weight decreases, since
+$u\partial_u\log w_u=-65/64+\log u/(2L_X)<0$.
+Abel summation on a block $(D,E]$ costs exactly
+$w_E+\int_D^E|w_u'|\dd u=w_D$.
+Writing $s=\log D/L_X$, its primary exponent is
+\[
+ E_0(s)=\frac1{24}-\frac{41s}{192}+\frac{s^2}{4},\qquad
+ E_0(5/16)=-1/1536,\quad E_0(1/2)=-1/384.
+\]
+Convexity bounds all of $[5/16,1/2]$ by $-1/1536$.
+The secondary term is $O(w_DD/X)=O(X^{-1/2})$.
+The sum of the $O(1+L_X)$ blocks is therefore
+$O((1+L_X)(X^{-1/1536}+X^{-1/2}))$ on this central $v$-range.
+
+For every real $v$, the full absolute population is at most
+$\sum_{n\le N_X}n^{-57/64}\ll X^{7/128}$.
+On $|v|>\log X$, exponential decay of $P$ bounds the high population's
+squared norm by $O(X^{7/64-\pi/d_s})$.
+Taking square roots and adding the three norm payments proves
+\eqref{eq:localization}. In particular all Poisson exteriors and
+all cutoff crossings are included.
+\end{proof}
+
+\subsection{Exact membership intervals and oscillatory integration}
+
+For a unified proof, let $S_X$ denote the raw or middle sum, with
+cutoff exponents $(\sigma_0,\rho_0)$ equal respectively to
+$(1/32,1/2)$ or $(3/64,5/16)$. Set
+\[
+ K=\lfloor\ee^{\sigma_0L_U}\rfloor,\quad
+ N=\lfloor\ee^{\rho_0L_{2U}}\rfloor,\quad
+ \alpha=65/64-\rho_0/4\in(1/2,1).
+\]
+For an interval $I\subset[U,2U]$ of length $h$, an integer $n$
+belongs to $S_X$ precisely on
+\begin{equation}\label{eq:membership}
+ I_n=I\cap[4\pi n^{1/\rho_0},\,4\pi n^{1/\sigma_0}).
+\end{equation}
+Thus cutoff endpoints are integrated as endpoints of intervals, not
+differentiated. On membership, $w_n(X)\le n^{-\alpha}$ and
+\begin{equation}\label{eq:clock-derivatives}
+ \frac{w_n'(X)}{w_n(X)}=-\frac{(\log n)^2}{4XL_X^2},\quad
+ \tau_X'=\frac12-\frac{\pi}{8XL_X^2}\ge\frac14,\quad
+ \tau_X''=\frac{\pi}{8X^2}(L_X^{-2}+2L_X^{-3})>0.
+\end{equation}
+
+\begin{lemma}[Pair integration]\label{lem:pair-integration}
+For $\lambda\ne0$, on the interval $I_n\cap I_m$,
+\begin{equation}\label{eq:pair-integral}
+ \left|\int_{I_n\cap I_m}w_n(X)w_m(X)
+                   \ee^{\ii\lambda\tau_X}\dd X\right|
+ \le\frac{8(nm)^{-\alpha}}{|\lambda|}.
+\end{equation}
+For $\lambda=0$, the upper bound $h(nm)^{-\alpha}$ applies.
+\end{lemma}
+\begin{proof}
+Let $A=w_nw_m$. By~\eqref{eq:clock-derivatives},
+$g=A/\tau_X'$ is positive and nonincreasing. Integration by parts
+on a nonempty interval with endpoints $p,q$ gives total cost
+\[
+ \frac{g(p)+g(q)+\int_p^q|g'(X)|\dd X}{|\lambda|}
+ =\frac{2g(p)}{|\lambda|}\le\frac{8(nm)^{-\alpha}}{|\lambda|}.
+\]
+One-sided values handle membership endpoints. An empty or singleton
+interval has zero integral. The zero-frequency statement is immediate.
+\end{proof}
+
+\begin{lemma}[Logarithmic harmonic row]\label{lem:harmonic-row}
+For nonnegative $b_j$, $1\le j\le J$,
+\begin{equation}\label{eq:harmonic-row}
+ \sum_{j\ne k}\frac{b_jb_k}{|\log(j/k)|}
+ \le3(1+\log J)\sum_j j b_j^2.
+\end{equation}
+\end{lemma}
+\begin{proof}
+For a symmetric nonnegative matrix $C$ and weights $p_j>0$,
+the inequality $2|u_ju_k|\le|u_j|^2p_k/p_j+|u_k|^2p_j/p_k$ gives
+\[
+ \sum_{j,k}C_{jk}|u_j u_k|
+ \le\sum_j|u_j|^2\sum_kC_{jk}p_k/p_j.
+\]
+Take $u_j=\sqrt j\,b_j$, $p_j=j^{-1/2}$ and
+$C_{jk}=1/(\sqrt{jk}|\log(j/k)|)$ off the diagonal.
+The weighted row is $\sum_{k\ne j}1/(k|\log(j/k)|)$.
+For $k<j$, its summand is at most $1/k+1/(j-k)$;
+for $k>j$ it is at most $1/(k-j)$, by integrating $1/u$ between
+the two indices. The three harmonic sums give the stated bound.
+\end{proof}
+
+\subsection{Product frequencies and exact coincidences}
+
+Fix a real $R\ge1$ and coefficients with $\sum_{r\le R}|c_r|^2=1$.
+They may depend on $U$ but are fixed while $X$ is integrated. Define
+\[
+ B(X)=\left|\sum_{r\le R}c_r\ee^{\ii\tau_X\log r}\right|^2,
+ \qquad D_R=\frac1U\int_U^{2U}B(X)\dd X.
+\]
+Pair integration with amplitude one, followed by
+\eqref{eq:harmonic-row}, gives
+\begin{equation}\label{eq:resonator-denominator}
+ D_R=1+O(R\log(2R)/U).
+\end{equation}
+
+To estimate the weighted moment, group by the integer products
+$j=nr$ and put
+\[
+ b_j=\sum_{\substack{nr=j\\K<n\le N,\ r\le R}}n^{-\alpha}|c_r|,
+ \qquad J=N\lfloor R\rfloor.
+\]
+In the exact squared sum the $X$-phase is
+$\tau_X\log(nr/(ms))$; the remaining $v$-factor is
+$\ee^{\ii v\log(n/m)/2}$ and has modulus one.
+Lemma~\ref{lem:pair-integration} treats every nonzero product gap.
+For $nr=ms$, including coincidences with $n\ne m$, use the
+zero-frequency bound. Integration against the full Poisson kernel
+then gives
+\begin{equation}\label{eq:product-master}
+ \frac1h\int_I B(X)\|S_X\|_P^2\dd X
+ \ll\sum_jb_j^2+\frac{\log(2J)}h\sum_jj b_j^2.
+\end{equation}
+The two forms on the right require different cutoff information.
+
+Write $r=da$, $s=db$ with $d=\gcd(r,s)$, $\gcd(a,b)=1$.
+Then $nr=ms$ means $n=bq$, $m=aq$, and the exact restrictions imply
+\[
+ K/\min(a,b)<q\le N/\max(a,b).
+\]
+The matrix entry in the first form is bounded by
+\begin{align}
+ (ab)^{-\alpha}\sum_{q>K/\min(a,b)}q^{-2\alpha}
+ &\ll_\alpha K^{1-2\alpha}(ab)^{-\alpha}\min(a,b)^{2\alpha-1}
+ \nonumber\\
+ &\le C_\alpha K^{1-2\alpha}\frac{d}{\sqrt{rs}}.
+ \label{eq:lower-coincidence}
+\end{align}
+The power tail estimate also holds when its lower endpoint is below
+one, since $2\alpha>1$. For the weighted form $\sum j b_j^2$, use
+the upper restriction instead:
+\begin{equation}\label{eq:upper-coincidence}
+ d(ab)^{1-\alpha}\sum_{q\le N/\max(a,b)}q^{1-2\alpha}
+ \ll_\alpha dN^{2-2\alpha}.
+\end{equation}
+This uses $\alpha<1$; an upper endpoint below one gives an empty sum.
+
+The gcd matrix $G_{rs}=\gcd(r,s)/\sqrt{rs}$ has, with weights
+$p_r=r^{-1/2}$, the row estimate
+\[
+ \sum_{s\le R}G_{rs}\frac{p_s}{p_r}
+ =\sum_{s\le R}\frac{\gcd(r,s)}s
+ \le\sum_{d\mid r}\sum_{\substack{s\le R\\d\mid s}}\frac ds
+ \le d(r)(1+\log R).
+\]
+For each fixed $\varepsilon>0$, $d(r)\ll_\varepsilon r^\varepsilon$.
+One direct proof uses $e+1\le2^e\le p^{\varepsilon e}$ for all
+large primes; each of the finitely many remaining primes contributes
+a finite maximum of $(e+1)p^{-\varepsilon e}$.
+The weighted matrix inequality in Lemma~\ref{lem:harmonic-row},
+and $d\le R\,d/\sqrt{rs}$ in~\eqref{eq:upper-coincidence}, now give
+\begin{equation}\label{eq:coincidence-forms}
+ \begin{split}
+ \sum_jb_j^2&\ll_\varepsilon K^{1-2\alpha}R^\varepsilon(1+\log R),\\
+ \sum_jj b_j^2&\ll_\varepsilon
+          N^{2-2\alpha}R^{1+\varepsilon}(1+\log R).
+ \end{split}
+\end{equation}
+Thus both exact coincidences and nearby distinct products are paid.
+
+\subsection{Center means and their precise ranges}
+
+\begin{theorem}[Mean estimates]\label{thm:means}
+For $I\subset[U,2U]$, $1\le h=|I|\le U$,
+\begin{align}
+ \frac1h\int_I Q_M(X)\dd X
+ &\ll U^{-21/512}+\frac{U^{5/128}\log U}{h},\label{eq:middle-mean}\\
+ \frac1h\int_I Q(X)\dd X
+ &\ll U^{-1/4096}+U^{-21/512}
+                        +\frac{U^{5/128}\log U}{h}.\label{eq:raw-short-mean}
+\end{align}
+The direct raw dyadic estimate is stronger than localization followed
+by averaging:
+\begin{equation}\label{eq:raw-dyadic}
+ \frac1U\int_U^{2U}Q(X)\dd X\ll U^{-25/1024}.
+\end{equation}
+For each fixed $s_0>0$, the proportion of centers with $Q(X)>s_0$
+is $O_{s_0}(U^{-25/1024})$.
+\end{theorem}
+
+\begin{proof}
+For $R=1$, the two forms in~\eqref{eq:product-master} are bounded
+directly by $K^{1-2\alpha}$ and $N^{2-2\alpha}$.
+For the middle band, $\alpha=15/16$, $K\asymp U^{3/64}$ and
+$N\ll U^{5/16}$; their powers are $-21/512$ and $5/128$.
+This proves~\eqref{eq:middle-mean}.
+Use~\eqref{eq:localization} in the joint norm for
+$h^{-1}\dd X\,P(v)\dd v$ and then square, proving
+\eqref{eq:raw-short-mean} with the $U^{-1/4096}$ payment.
+For the raw sum directly, $\alpha=57/64$, $K\asymp U^{1/32}$ and
+$N\ll U^{1/2}$. At $h=U$ the two terms are
+$U^{-25/1024}$ and $U^{-57/64}\log U$; the latter is absorbed.
+The exceptional-set estimate follows by integrating $Q\ge s_0$
+over that set.
+\end{proof}
+
+The short-center mean tends to zero uniformly in interval position
+when $h/(U^{5/128}\log U)\to\infty$, for example when
+$h\ge U^{5/128+\eta}$ for fixed $0<\eta\le123/128$.
+This does not reach bounded windows or the scale $U^{1/32}$.
+No zero count is inferred from the exceptional set of this auxiliary
+moment.
+
+\subsection{A uniform restriction on whole-dyadic resonators}
+
+\begin{theorem}[Vanishing normalized resonator mean]\label{thm:resonator}
+For each fixed $0<\delta<123/128$, uniformly for $R\le U^\delta$
+and all coefficient vectors as above,
+\begin{equation}\label{eq:resonator-limit}
+ \frac{\int_U^{2U}B(X)Q(X)\dd X}
+      {\int_U^{2U}B(X)\dd X}=o(1).
+\end{equation}
+The denominator is positive and comparable to $U$ for all sufficiently
+large $U$ in this range.
+\end{theorem}
+
+\begin{proof}
+Apply~\eqref{eq:product-master} and~\eqref{eq:coincidence-forms}
+to the middle band at $h=U$. Then transfer the omitted modes using
+the nonnegative joint measure $U^{-1}B(X)\dd X\,P(v)\dd v$.
+Their norm is $O(U^{-1/8192}D_R^{1/2})$ by localization.
+The triangle inequality followed by squaring gives
+\begin{equation}\label{eq:resonator-full}
+ \begin{split}
+ \frac1U\int_U^{2U}BQ\dd X
+ &\ll U^{-1/4096}D_R\\
+ &\quad+C_\varepsilon\bigl[
+ U^{-21/512}R^\varepsilon(1+\log R)\\
+ &\hspace{42mm}+U^{-123/128}R^{1+\varepsilon}
+                   (1+\log R)\log(2UR)\bigr].
+ \end{split}
+\end{equation}
+This norm transfer retains all cross terms with the omitted modes.
+Set $m_\delta=\min(21/512,123/128-\delta)>0$ and
+$\varepsilon=m_\delta/(2\delta)$. Each bracketed power is then
+at most $U^{-m_\delta/2}$ before logarithms. By
+\eqref{eq:resonator-denominator}, $D_R=1+o(1)$ uniformly, so
+the normalized mean is
+$O_\delta(U^{-1/4096}+U^{-m_\delta/4})$ after absorbing logarithms.
+\end{proof}
+
+For comparison, applying the same argument directly to the raw sum
+gives
+\[
+ \frac1U\int_U^{2U}BQ\dd X
+ \ll_\varepsilon U^{-25/1024}R^\varepsilon(1+\log R)
+ +U^{-57/64}R^{1+\varepsilon}(1+\log R)\log(2UR),
+\]
+which gives the smaller sufficient open range $\delta<57/64$.
+Neither endpoint is asserted to be optimal.
+Theorem~\ref{thm:resonator} excludes a fixed positive lower bound
+for this normalized whole-dyadic average along an unbounded sequence.
+It leaves exceptional individual centers, shorter or adaptive windows,
+$X$-dependent coefficient vectors, other weights, and larger supports
+outside its scope.

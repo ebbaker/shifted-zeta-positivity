@@ -15,6 +15,19 @@ records the analytical and exploratory revision of 13 November. It
 supersedes B02's earlier finite rectangle/offset quota. B01's completed
 scope and the issued E01 r1 remain historical inputs and a fixed benchmark.
 
+**Next-session authorization, 13 November:** the author selected
+Astra/ultra and permits Sol 6.1/ultra investigations and execution through
+supported delegation. B02–B06 and E01–E11 have since completed, including distinct E11
+acceptance of B06. The author then requested the E12 analytical manuscript.
+Continue the specified justified successors without renewed permission at
+each boundary after recording their scientific contracts.
+Close and record each task before beginning its specified successor;
+retain the scientific scope and evidence checks. See the
+[continuation authorization](../notes/01_GNP_BB_CONTINUATION_AND_PROMPT_20261113.md#standing-authorization-to-continue-and-use-sol).
+These requested settings do not identify the lead model used here.
+The completed proof/review workers were explicitly selected as
+gpt-6.1-sol/ultra; lead recorded model and effort remain unavailable.
+
 ## Governing analytical objectives
 
 1. Derive explicit expressions or well-posed analytical rules for
@@ -43,9 +56,18 @@ numerical samples is not an analytical protocol.
 
 | Task | Type and recommended model | Role and dependency | Intended deliverable |
 | --- | --- | --- | --- |
-| GNP-BB-B02 | B — GPT-6 Astra: choose analytical contour/observation protocols and identify their prospects near the line | Suggested next design task; Notes03–05 and inherited sources; does not assume E01's unproved estimate | Explicit height-dependent rules, separate and joint comparisons, a quantified next proof contract or precise bottleneck, and an iteration feasibility assessment |
-| GNP-BB-E01 r1 | E — GPT-6.1 Sol: fixed canonical estimate and complete error accounting | Available analytical benchmark from B01; frozen request remains intact | One estimate and width gain 1/16, or a scoped failed allowance; does not by itself complete the broader program |
-| GNP-BB-B01 | B — historical Astra recommendation for the initial mechanism choice | Completed conceptual input; original specification retained below | Note03, decision and frozen E01 r1, with their original evidence limits |
+| GNP-BB-E11 | E — GPT-6.1 Sol / ultra | Completed fixed assessment after B06; [return](../research-progress/handoffs/GNP-BB-E11-r1-return.md) | Check the paid transfer, sparse-packet bounds, actual quartic resonance and full-background payment; no new mechanism |
+| GNP-BB-B06 | B — GPT-6 Astra / ultra | Completed at scoped failed-mechanism boundary; Note25, Decision06, Review10 and E11 Review11 | Fixed triangular witness remains open; actual isolated packet has vanishing mass and complete effect |
+| B05 and E09/E10 | B decision, E proof/review | Completed; Notes20–23 and Reviews08–09 | Uniform localization, actual moment means and scoped whole-dyadic resonator exclusion for delta<123/128; every-center budget open |
+| B04 and E07/E08 | B decision, E proof/review | Completed; Notes14–18 and Reviews06–07 | Five-pair width567/1000 on both domains; conditional9/16 Green consumer and exact global gaps preserved |
+| E01–E03 and E04 | E — GPT-6.1 Sol / ultra | Completed fixed estimates, exact envelope and additional-agent review | Notes06/09/10 and Review03; retain width/time/onset and allowance-class limits |
+| B02/B03 and E05/E06 | B design, E proof/review | Completed local-cover design and common-time tail | Notes07–08/11–12 and Reviews04–05; positive-window extension and width4/7 spatial tail, unevaluated t0 |
+| B01 | Historical B specification | Completed initial choice | Note03 and preserved E01 r1 |
+
+The [current continuation](../notes/27_GNP_BB_CONTINUATION_AFTER_E11_AND_MANUSCRIPT_20261113.md)
+contains E11 closure, the manuscript, and outstanding analytical tasks. No field scan, onset evaluation or compact-region certificate is
+activated. The original specifications below are retained as historical
+contracts; current states live only in the register.
 
 ## GNP-BB-B01 — original first-step specification, completed
 
@@ -111,13 +133,15 @@ before dependent work. An assumed log branch in the region being
 proved zero-free, an unpaid signed margin, or a missing collision/side
 argument is a named unresolved premise, not a permissible simplification.
 
-## GNP-BB-E01 — execute the frozen first-step estimate
+## GNP-BB-E01 — original fixed specification, now completed
 
 At setup this slot was reserved. B01's 13 November return now issues
 [E01 r1](../research-progress/handoffs/GNP-BB-E01-r1.md): the complete
 normalized-field comparison on one fixed rectangle along λ_X=1/L_X,
 with target error 1/16 and one inward width gain 1/16. The request is
-ready but unactivated. Its frozen details govern execution.
+completed in Note06 and accepted in Review03. Its frozen mathematical
+details governed execution; the later author authorization supplied
+permission separately. The following specification is preserved.
 
 The issued request freezes the exact input versions, canonical
 field, normalization, domain, initial enclosure, observation/contour,
@@ -144,7 +168,7 @@ uncontrolled log floor, unproved sign, or need for a different mechanism
 returns the decision to GNP-BB-B01 by a dated progress entry. A failed
 estimate does not authorize widening the task.
 
-## GNP-BB-B02 — separate contour and observation design
+## GNP-BB-B02 — original separate design specification, now completed
 
 **Revised at the author's request, 13 November 2026. B, recommended
 GPT-6 Astra:** the open choice is which analytical geometry and selection
@@ -179,6 +203,10 @@ be explored with its costs and reasons recorded. Do not silently change
 the physical field, target, time quantifiers or evidence standard.
 When a proof contract is tractable, assign its fixed execution to Sol;
 do not keep execution attached to an indefinitely expanding B task.
+Under the author's standing authorization, record the B return and
+begin that justified execution task in the same session. A scoped
+failure similarly permits a recorded conceptual revision within the
+program; it does not silently enlarge the failed E request.
 
 Save the analytical argument in notes/, the decision in brainstorm/notes/,
 and any assessment in reviews/. A selected contract needs explicit
@@ -221,6 +249,8 @@ Follow [REFERENCE_WORKFLOW](../../../../../REFERENCE_WORKFLOW.md)
 for every new import. Existing papers, proofs and chat histories stay
 in their canonical homes.
 
-The [continuation note](../notes/01_GNP_BB_CONTINUATION_AND_PROMPT_20261113.md)
-provides the B02 analytical-design prompt and the retained E01 r1
-benchmark prompt. Saved guidance does not execute either task.
+The [current continuation](../notes/27_GNP_BB_CONTINUATION_AFTER_E11_AND_MANUSCRIPT_20261113.md)
+records the completed E11 assessment and manuscript. Note01 preserves
+the earlier activation prompts and continuing authorization. Suitable
+Sol6.1/ultra delegation and justified successors remain authorized; any
+new conceptual question still needs a specified scientific contract. Recommendation alone does not launch work or change a model.

@@ -1,0 +1,256 @@
+\section{Short-window freezing and actual phase packets}\label{sec:packets}
+
+This section develops the result of BB Note25~\cite{BB25}, accepted
+without mathematical correction in the E11 review~\cite{BBReview11}.
+
+Fix exactly
+\begin{equation}\label{eq:short-window}
+ \begin{gathered}
+ h_U=U^{1/32},\qquad Y\in[U+h_U,2U-h_U],\\
+ \dd\nu_{h_U}(s)=h_U^{-1}(1-|s|/h_U)_+\dd s,\qquad
+ A_U(Y)=\int Q(Y+s)\dd\nu_{h_U}(s).
+ \end{gathered}
+\end{equation}
+The center measure has mass one. The fixed question is whether
+$A_U(Y)\ge5/66^2$ at admissible actual centers along an unbounded
+sequence of $U$. Positivity would then force a violation of the
+every-center $4/66^2$ budget somewhere in the window.
+The results of this section do not decide that question.
+
+\subsection{Freezing in the consumed Hilbert norm}
+
+All norms in this subsection use
+$\mathcal H_U=L^2(\dd\nu_{h_U}(s)P(v)\dd v)$.
+At the fixed center $Y$, write $I_Y=I_Y^{\rm m}$ and set
+\[
+ G_Y(s,v)=\sum_{n\in I_Y}w_n(Y)
+      \ee^{\ii(\tau_Y+(s+v)/2)\log n},\qquad
+ F_U(Y)=\|G_Y\|_{\mathcal H_U}^2.
+\]
+\begin{theorem}[Uniform square-root transfer]\label{thm:freezing}
+For every admissible $Y$, uniformly in the fractional parts of both
+real cutoff values,
+\begin{equation}\label{eq:freezing}
+ \|M_{Y+s}-G_Y\|_{\mathcal H_U}\ll U^{-771/16384},\qquad
+ |\sqrt{A_U(Y)}-\sqrt{F_U(Y)}|\ll U^{-1/8192}.
+\end{equation}
+The frozen form has the exact expansion
+\begin{equation}\label{eq:frozen-form}
+ F_U(Y)=\sum_{n,m\in I_Y}w_n(Y)w_m(Y)\ee^{\ii\tau_Y\log(n/m)}
+ \widehat P\left(\frac{\log(n/m)}2\right)
+ \sinc^2\left(\frac{h_U\log(n/m)}4\right),
+\end{equation}
+where $\sinc q=\sin q/q$ with value one at zero.
+\end{theorem}
+
+\begin{proof}
+For either cutoff exponent $p\in\{3/64,5/16\}$, the real function
+$\ee^{pL_X}$ has derivative $p\ee^{pL_X}/X$. Its excursion across
+the whole window is $O(U^{p-31/32})=o(1)$.
+Since the function is monotone, each floor can change by at most one
+integer. At a changed endpoint, $\log n=pL_Y+O(1)$ and
+$L_X-L_Y=O(h_U/U)$, so
+\[
+ w_n(X),w_n(Y)\ll U^{-65p/64+p^2/4}.
+\]
+The two endpoint powers are $-771/16384$ and $-75/256$.
+This also bounds terms that occur only in the frozen sum.
+
+For common indices,
+\[
+ \partial_X\log w_n(X)=O(U^{-1}),\qquad
+ \tau_{Y+s}-\tau_Y-s/2
+ =\frac\pi8(L_{Y+s}^{-1}-L_Y^{-1})
+ =O\left(\frac{h_U}{U\log^2U}\right).
+\]
+After multiplication by $\log n$, the phase error is
+$O(h_U/(U\log U))$. On the middle band,
+$w_n(Y)\le n^{-15/16}$ and $\sum_{I_Y}w_n(Y)\ll U^{5/256}$.
+The total common-term error is therefore
+$O((h_U/U)U^{5/256})=O(U^{-243/256})$, uniformly for all real $v$.
+Adding the two endpoint terms proves the first norm bound.
+Theorem~\ref{thm:localization}, integrated against the probability
+measure $\nu_{h_U}$, pays the raw-to-middle norm by $U^{-1/8192}$.
+The reverse triangle inequality proves the second bound.
+
+The normalized indicator of $[-h_U/2,h_U/2]$ has Fourier transform
+$\sinc(h_U\omega/2)$; its self-convolution has precisely the triangular
+density in~\eqref{eq:short-window}. In the finite squared sum,
+the $s$ and $v$ frequencies are both $\log(n/m)/2$.
+Their transforms give~\eqref{eq:frozen-form}. Every ordered pair is
+retained. The form is nonnegative because it is a squared joint norm,
+not because its signed cross terms have a fixed sign.
+\end{proof}
+
+The transfer is deliberately between square-root moments. It is not
+an additive $o(1)$ estimate for the moments themselves. The full norm
+bound proved next is $O(U^{1/256})$; multiplying it by the localization
+error would give $U^{31/8192}$, which grows. A fixed strict surplus
+in the square-root norm can be transferred; an equality-level bound
+requires its error payment.
+
+\subsection{Summable logarithmic cells and sparse deletion}
+
+Partition the middle indices into cells
+\[
+ \mathcal C_j=\{n\in I_Y:j\le h_U\log n<j+1\},\qquad
+ a_j=\sum_{n\in\mathcal C_j}w_n(Y).
+\]
+For $n,m$ in cells $j,k$, the absolute multiplier in
+\eqref{eq:frozen-form} is at most $C(1+|j-k|)^{-2}$.
+Indeed for $|j-k|\ge2$ one has
+$h_U|\log(n/m)|\ge|j-k|-1$ and
+$|\sinc q|\le\min(1,|q|^{-1})$; the bound
+$|\widehat P|\le2/5$ covers the remaining cases.
+Since these rows are summable,
+\begin{equation}\label{eq:cell-row}
+ F_U(Y)\le C\sum_ja_j^2.
+\end{equation}
+This follows by summing $2a_ja_k\le a_j^2+a_k^2$.
+It applies to any subset of indices and even to arbitrary fixed
+coefficient arguments, so it is an upper comparison only.
+
+Put $D_j=\ee^{j/h_U}$. The number of integers in a cell is at most
+$D_j(\ee^{1/h_U}-1)+1$. In every occupied cell,
+$D_j/h_U\gg U^{1/64}\to\infty$, because the lower middle scale is
+$U^{3/64}$. Thus the $+1$ is absorbed and the number is $O(D_j/h_U)$.
+Using $w_n\le n^{-15/16}$ gives
+\begin{equation}\label{eq:cell-mass}
+ a_j\ll D_j^{1/16}/h_U,\qquad
+ \max_ja_j^2\ll h_U^{-2}U^{5/128}=U^{-3/128}.
+\end{equation}
+If $j_*$ is the last occupied cell, the full geometric sum satisfies
+\[
+ \sum_{j\le j_*}\ee^{j/(8h_U)}
+ =\frac{\ee^{j_*/(8h_U)}}{1-\ee^{-1/(8h_U)}}
+ \ll h_U U^{5/128}.
+\]
+Consequently~\eqref{eq:cell-row} and~\eqref{eq:freezing} yield
+\begin{equation}\label{eq:all-cell-bound}
+ F_U(Y)\ll U^{1/128},\qquad A_U(Y)\ll U^{1/128}.
+\end{equation}
+The triangular window removes the logarithm from the earlier
+short-center allowance, but the new allowance still grows.
+
+\begin{theorem}[Sparse-packet effect on the complete moment]\label{thm:sparse}
+Let $S\subset I_Y$ meet at most $r\ge1$ cells.
+Its frozen standalone energy is $O(rU^{-3/128})$.
+Let $A_U^{\setminus S}(Y)$ denote the actual average after deleting
+these fixed indices from the complete raw sum at every center in the
+window. Then
+\begin{equation}\label{eq:sparse-full}
+ |A_U(Y)-A_U^{\setminus S}(Y)|
+ \ll\sqrt r\,U^{-1/128}+rU^{-3/128}.
+\end{equation}
+In particular its complete effect tends to zero for $r=o(U^{1/64})$.
+\end{theorem}
+
+\begin{proof}
+The standalone frozen bound follows from~\eqref{eq:cell-row} and
+\eqref{eq:cell-mass}. The whole fixed set $I_Y$ lies strictly inside
+the raw cutoffs throughout the window eventually, because
+$1/32<3/64<5/16<1/2$ and $L_{Y+s}/L_Y\to1$ uniformly.
+There is no moving membership for the selected packet
+\[
+ P_{S,X}(v)=\sum_{n\in S}w_n(X)\ee^{\ii(\tau_X+v/2)\log n}.
+\]
+The common-term freezing proof pays its error by $O(U^{-243/256})$.
+Its actual joint norm is therefore $O(\sqrt r\,U^{-3/256})$.
+For $V=T_{Y+s}$ and $W=P_{S,Y+s}$ in $\mathcal H_U$,
+\[
+ \|V\|^2-\|V-W\|^2=2\Re\ip VW-\|W\|^2.
+\]
+Using the complete bound $\|V\|\ll U^{1/256}$ from
+\eqref{eq:all-cell-bound} proves~\eqref{eq:sparse-full}.
+This includes the interaction with every low, middle and high index.
+\end{proof}
+
+The standalone energy vanishes in the different, larger sufficient
+range $r=o(U^{3/128})$. Conversely, a fixed positive standalone energy
+would require $r\gg U^{3/128}$ under this estimate.
+These statements must not be interchanged with the complete-perturbation
+range. None bounds the energy of the untouched remainder below the
+witness threshold.
+
+\subsection{Quartic integer alignment at actual heights}
+
+We now test one concrete lower mechanism without replacing the physical
+phases by freely chosen arguments. Let $D\to\infty$ through integers,
+and choose the unique sufficiently large real $Y_D$ satisfying
+\begin{equation}\label{eq:quartic-center}
+ \tau_{Y_D}=24\pi D^4.
+\end{equation}
+Existence and uniqueness on the large branch follow from continuity,
+$\tau_X'\ge1/4$ and $\tau_X\to\infty$.
+Then $Y_D\sim48\pi D^4$. Set $U=2Y_D/3$, so that the center is
+admissible, and keep $h_U=U^{1/32}\asymp D^{1/8}$.
+Take the fixed packet
+\[
+ J=\lfloor D^{1/5}/4\rfloor,\qquad S_D=\{D,D+1,\ldots,D+J\}.
+\]
+Uniformly across the window, $L_X=4\log D+\log12+o(1)$ and
+$\log(D+j)/L_X\to1/4$. Thus the packet belongs to both middle and
+raw populations throughout the window, with room to spare at both
+integer cutoffs.
+
+\begin{theorem}[An aligned packet with vanishing complete effect]\label{thm:quartic}
+For the actual centers~\eqref{eq:quartic-center},
+\begin{equation}\label{eq:quartic-energy}
+ \|P_{S_D,Y_D+s}\|_{\mathcal H_U}^2
+ \asymp D^{-241/160}\asymp U^{-241/640},
+\end{equation}
+and
+\begin{equation}\label{eq:quartic-full}
+ |A_U(Y_D)-A_U^{\setminus S_D}(Y_D)|\ll U^{-59/320}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Integrating the geometric-series remainder for $1/(1+x)$ gives
+\begin{equation}\label{eq:quartic-taylor}
+ \begin{split}
+ 24\pi D^4\log(1+j/D)
+ &=2\pi(12D^3j-6D^2j^2+4Dj^3-3j^4)+R_j,\\
+ 0\le R_j&\le\frac{24\pi}{5}\frac{j^5}{D}
+                  \le\frac{3\pi}{640}<\frac1{32}.
+ \end{split}
+\end{equation}
+The polynomial in parentheses is an integer.
+For $|X-Y_D|\le h_U$ and $|v|\le1$, the additional relative phase
+against the term $n=D$ is
+\[
+ (\tau_X-\tau_{Y_D}+v/2)\log(1+j/D)
+ =O((h_U+1)J/D)=O(D^{-27/40}).
+\]
+Eventually all packet terms therefore have relative arguments within
+$1/16$ modulo $2\pi$ on this entire portion of the joint domain.
+Their weights satisfy $w_{D+j}(X)\asymp D^{-61/64}$, since
+$(\log(D+j))^2/(4L_X)=\log D/16+O(1)$ uniformly.
+After rotation by the first term's phase, real projection gives a
+lower bound $\cos(1/16)\sum_{S_D}w_n(X)$ on $|v|\le1$.
+The triangle inequality gives the corresponding upper bound for all
+$v$. The restricted Poisson mass is positive and the center measure
+has mass one. Hence the energy has order
+\[
+ (D^{1/5}D^{-61/64})^2=D^{2/5-61/32}=D^{-241/160},
+\]
+proving~\eqref{eq:quartic-energy}.
+Finally apply the exact squared-norm difference used in
+Theorem~\ref{thm:sparse}, now with the sharper packet norm:
+\[
+ |A_U-A_U^{\setminus S_D}|
+ \ll U^{1/256}U^{-241/1280}+U^{-241/640}
+ \ll U^{-59/320}.
+\]
+The first factor is the norm of the complete raw sum, so the whole
+background interaction is included.
+\end{proof}
+
+The packet also meets at most two logarithmic cells eventually,
+because $h_U\log(1+J/D)=o(1)$.
+It succeeds at actual alignment and fails at fixed mass. This stops
+this isolated quartic-packet mechanism and the stated sparse deletion
+class. It neither disproves the short-center witness nor establishes
+the every-center upper bound. A selected positive squared norm is not
+a lower bound for the complete squared norm: the complementary vector
+can cancel it, and the complementary energy is still unknown.

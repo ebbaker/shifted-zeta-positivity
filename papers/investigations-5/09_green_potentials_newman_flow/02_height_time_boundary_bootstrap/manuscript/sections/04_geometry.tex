@@ -1,0 +1,196 @@
+\section{Geometry, observation and the complete Green defect}\label{sec:geometry}
+
+The preceding proof uses a uniform relative approximation, for which
+direct nonvanishing is the strongest immediate consumer. Green's formula
+becomes useful when only an integrated boundary estimate is available.
+We first separate the geometric facts from the arithmetic information
+that must support them. All statements in this section concern one
+fixed holomorphic field at one fixed time.
+
+\subsection{A complete signed identity and a quadratic bound}
+
+Let $D$ be a rectangle, $p\in D$, and let $F$ be analytic on a
+neighborhood of $\overline D$, with $F(p)\ne0$. Normalize the positive
+Green function by a logarithmic pole, so that the Green function of
+the unit disk with pole zero is $-\log|z|$. Denote harmonic measure
+at $p$ by $\omega_D^p$; it has total mass one.
+
+\begin{lemma}[Harmonic normalization]\label{lem:normalization-green}
+If $A$ is analytic and nonzero near $\overline D$, the Green defect
+of $H=AF$ equals that of $F$. If there are no boundary zeros, this
+defect is exactly
+\begin{equation}\label{eq:green-identity}
+ \int_{\partial D}\log|F|\dd\omega_D^p-\log|F(p)|
+ =\sum_{z_j\in D}m_jG_D(p,z_j).
+\end{equation}
+\end{lemma}
+\begin{proof}
+$\log|A|$ is harmonic, so its boundary average equals its value at
+$p$. Subtract from $\log|F|$ the finitely many interior logarithmic
+poles, with their multiplicities, and solve the remaining harmonic
+Dirichlet problem. The logarithmic-pole terms give precisely the
+Green functions in~\eqref{eq:green-identity}.
+\end{proof}
+
+\begin{lemma}[Quadratic boundary consumer]\label{lem:quadratic-green}
+Without excluding boundary zeros, one has
+\begin{equation}\label{eq:quadratic-green}
+ \sum_{z_j\in D}m_jG_D(p,z_j)
+ \le\frac12\log\left(1+
+ \frac{\displaystyle\int_{\partial D}|F-1|^2\dd\omega_D^p
+                         -|F(p)-1|^2}{|F(p)|^2}\right).
+\end{equation}
+Consequently, if $|F(p)|\ge m>0$ and a target $K\subset D$ has
+$\inf_KG_D(p,z)\ge g>0$, the condition
+\begin{equation}\label{eq:quadratic-margin}
+ \int_{\partial D}|F-1|^2\dd\omega_D^p<m^2(\ee^{2g}-1)
+\end{equation}
+excludes every zero in $K$.
+\end{lemma}
+\begin{proof}
+The mean-value property gives $\int F\dd\omega_D^p=F(p)$.
+On expanding squares, the linear terms cancel exactly, leaving
+\[
+ \int|F|^2\dd\omega_D^p
+ =|F(p)|^2+\int|F-1|^2\dd\omega_D^p-|F(p)-1|^2.
+\]
+Map the disk conformally onto the rectangle with its origin at $p$.
+On circles of radius less than one, Jensen's formula and concavity of
+the logarithm bound the zero sum by half the logarithm of the boundary
+mean of $|F|^2$, minus $\log|F(p)|$. As the radius increases to one,
+the zero sums increase to the Green sum, while continuity of $|F|^2$
+gives convergence of its boundary means. This proves
+\eqref{eq:quadratic-green}, including possible boundary zeros.
+A zero in $K$ would contribute at least $g$, contradicting the strict
+bound in~\eqref{eq:quadratic-margin}.
+\end{proof}
+
+The subtraction of $|F(p)-1|^2$ is exact, not an estimated negative
+term. The later application may discard it to obtain a simpler
+sufficient inequality. A quadratic boundary bound can be much smaller
+than a supremum bound. On the unit disk, for example,
+$F_m(z)=1+2((1+z)/2)^m$ has supremum error two and boundary quadratic
+error tending to zero by dominated convergence.
+
+\subsection{Explicit contour and observation costs}
+
+Write $k=a-\delta$, $b=a+\eta$, $d=b-k$, and take
+\[
+ D=\{|x-X|<W,\ \ell<y<u\},\qquad
+ p=X+\ii b,\quad K=\{X+\ii y:k\le y\le a\}.
+\]
+Let $e_-=k-\ell>0$ and $e_+=u-b>0$.
+Suppose for this paragraph that $|F-1|\le\varepsilon<1$ on
+$\overline D$. Every point between $X+\ii k$ and $p$ has a Cauchy
+disk of radius $r=\min(W,e_-,e_+)$. Thus
+$|F'|\le\varepsilon/r$ and $|F(p)|\ge1-\varepsilon$.
+The segment retains at least half that floor if
+\begin{equation}\label{eq:cauchy-cost}
+ d\le\frac{(1-\varepsilon)r}{2\varepsilon},
+ \quad\text{or equivalently}\quad
+ \varepsilon\le\frac{r}{2d+r}.
+\end{equation}
+At fixed vertical height $u-\ell>d$, equal vertical margins maximize
+the available radius. This is a geometric optimization under a common
+uniform error, not an acquisition of that error.
+
+For a disk of radius $R>d/2$ centered halfway between $p$ and the
+deepest target point, its Green function on the diameter gives the
+worst target value
+\begin{equation}\label{eq:disk-cost}
+ g_{\rm disk}=\log\frac{R^2+d^2/4}{Rd}.
+\end{equation}
+Indeed the signed diameter coordinates of the two endpoints are
+$d/2$ and $-d/2$, and the disk formula is
+$\log|(R^2-st)/(R(s-t))|$.
+It increases as the target moves upward toward the observation.
+If $R=d/2+r$ fits inside the rectangle, domain monotonicity gives
+$G_D\ge G_{\rm disk}$. The uniform-error logarithmic allowance is
+$\log((1+\varepsilon)/(1-\varepsilon))$, so strict exclusion follows if
+\begin{equation}\label{eq:disk-error-threshold}
+ \varepsilon<\left(\frac{r}{d+r}\right)^2.
+\end{equation}
+This identity follows by solving the comparison of the two logarithms.
+When a uniform error below one is already known on all of $D$, direct
+nonvanishing excludes $D$ without either extra condition. Formulas
+\eqref{eq:cauchy-cost}--\eqref{eq:disk-error-threshold} quantify the
+costs of the alternative consumers and of future weaker inputs.
+
+\subsection{The strip comparison and the cost of the ends}
+
+Set $d_s=u-\ell$, $\alpha=\pi(b-\ell)/d_s$,
+$\beta=\pi(y-\ell)/d_s$. Mapping the strip
+$S=\{\ell<\Im z<u\}$ to the upper half-plane gives
+\begin{equation}\label{eq:strip-green}
+ G_S(p,x+\ii y)=\frac12\log
+ \frac{\cosh(\pi(x-X)/d_s)-\cos(\alpha+\beta)}
+      {\cosh(\pi(x-X)/d_s)-\cos(\alpha-\beta)}.
+\end{equation}
+On its centerline the minimum over $K$ is at $y=k$, with value
+\[
+ \log\frac{\sin(\pi(b+k-2\ell)/(2d_s))}
+                {\sin(\pi(b-k)/(2d_s))}.
+\]
+For the rectangle with the same horizontal edges,
+\begin{equation}\label{eq:strip-rectangle}
+ 0\le G_S(p,z)-G_D(p,z)
+ \le\{cosh(\pi W/d_s)-1\}^{-1}.
+\end{equation}
+After cancelling the common pole, the difference is harmonic, vanishes
+on the horizontal edges and is bounded on the vertical edges by the
+right side, using $\log(1+q)\le q$. The maximum principle proves
+the comparison. Enlarging a domain thus improves its Green signal,
+but also changes the boundary data that must be paid.
+
+The positive harmonic barrier
+\[
+ \frac{\cosh(\kappa_s(x-X))\cos(\kappa_s(y-y_m))}
+ {\cosh(\kappa_s W)\cos(\kappa_s d_s/2)},
+ \qquad y_m=(u+\ell)/2,\quad0<\kappa_s<\pi/d_s,
+\]
+is at least one on the two vertical sides and nonnegative on the
+horizontal edges. Therefore their total harmonic measure at $p$ is
+at most $\operatorname{sech}(\kappa_s W)/\cos(\kappa_s d_s/2)$.
+The same barrier bounds the ends of a graph domain contained in this
+strip. A passage to an infinite graph contour additionally requires
+integrable boundary logarithms and a sequence of admissible end cuts.
+For example, polynomial bounds on the absolute logarithms are absorbed
+by this exponential end estimate. Geometry alone does not supply those
+canonical bounds.
+
+\subsection{Observation placement and a conditional scale rule}
+
+With $D$ and $K$ fixed and the observation above $K$ on the centerline,
+raising the observation decreases the worst Green signal. To see this,
+map the symmetric domain to the disk so that its centerline maps
+monotonically to a diameter. If $t(b)>t(y)$ are the real disk
+coordinates, the pseudohyperbolic distance
+$(t(b)-t(y))/(1-t(b)t(y))$ increases with $b$. Its negative logarithm
+is the Green function. The Cauchy radius also decreases, while the
+distance to the target increases. Under a common uniform error, the
+smallest independently admissible observation buffer is therefore best.
+With unequal boundary costs the choice can differ: the lower and upper
+strip masses are $(u-b)/d_s$ and $(b-\ell)/d_s$.
+
+A useful scale check is
+\[
+ k=3a/4,\quad b=9a/8,\quad\ell=a/2,\quad u=11a/8,
+ \quad W\ge7a/16.
+\]
+Then $d=3a/8$, $r=a/4$, $R=7a/16$.
+The Cauchy condition is $\varepsilon\le1/4$; the disk signal is
+$\log(29/21)$ and its strict error threshold is $\varepsilon<4/25$.
+The length and derivative costs cancel under rescaling. Conversely,
+if a vertical margin is $o(d)$, these particular thresholds degenerate.
+Even the exact Green signal is at most
+\[
+ \min\{\log(1+2e_-/d),\ \log(1+2e_+/d)\},
+\]
+by comparison with the two containing half-planes at the deepest point.
+
+A canonical estimate with the same margin on every one of these
+scaled collars would support $a_{n+1}=3a_n/4$. No such estimate is
+proved here. If its onset were $X_n\to\infty$, only finitely many
+steps would be justified at a fixed height. Both the carrier and the
+arithmetic error must therefore be controlled uniformly enough for an
+actual iteration.

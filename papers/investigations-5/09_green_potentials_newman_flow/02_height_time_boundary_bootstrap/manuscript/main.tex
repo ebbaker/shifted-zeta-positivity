@@ -1,0 +1,87 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,tabularx,array,longtable,enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+\usepackage{bookmark}
+\setlength{\emergencystretch}{2em}
+\setcounter{tocdepth}{2}
+\setlist{topsep=4pt,itemsep=3pt,parsep=0pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\N}{\mathbb N}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\ee}{\mathrm e}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\ip}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\sinc}{\operatorname{sinc}}
+\DeclareMathOperator{\Log}{Log}
+\DeclareMathOperator{\meas}{meas}
+\numberwithin{equation}{section}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\renewcommand{\arraystretch}{1.14}
+\title{Boundary Bootstrap in the Newman Flow\\
+\large Exterior Zero Enclosures, Local Green Moments,\\
+and the Limits of Sparse Phase Alignment}
+\author{Edward Baker\thanks{Drafted for Edward Baker with substantial OpenAI Codex LLM assistance.
+The analytical input and review provenance are stated in Section~\ref{sec:evidence}.
+This is a working research manuscript, not a claim of independent specialist validation.}}
+\date{13 November 2026}
+\hypersetup{pdftitle={Boundary Bootstrap in the Newman Flow},pdfauthor={Edward Baker},
+pdfsubject={Analytical synthesis through GNP-BB-E11}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We develop a boundary-bootstrap approach to the canonical Newman heat flow.
+A complete corrected finite-sum expansion, an independently nonzero zeta
+carrier, and five fixed classical exponent pairs give the following
+exterior enclosure: for some unevaluated $t_*>0$, every zero $x+\ii y$ of
+$H_t$ with $0<t\le t_*$ and $|x|\ge4\pi\ee^{1/t}$ satisfies
+$|y|<567/1000$. The proof first treats a finite window in
+$t\log(x/(4\pi))$, then joins a published all-real far-tail theorem.
+A separate Green-function argument reduces the deeper width $9/16$,
+on the curve $t=1/\log(X/(4\pi))$, to an explicit still-unproved
+Poisson moment bound at every center. We localize that moment to a
+middle band, prove quantitative center means, and show that a specified
+class of growing positive Dirichlet-polynomial resonators has vanishing
+normalized whole-dyadic mean. On the shorter triangular window of length
+scale $U^{1/32}$, we retain every pair in an exact frozen quadratic form.
+Sparse logarithmic packets have a vanishing effect on the complete
+moment; an explicit quartic alignment at actual heights has energy
+of order $U^{-241/640}$ and complete effect $O(U^{-59/320})$.
+These results delimit specific methods without deciding the outstanding
+every-center bound or its proposed short-window counterexample.
+All deductions state their analytic inputs; finite arithmetic checks
+serve only as supporting evidence. The final section identifies the
+remaining arithmetic, carrier, compact-height and time-propagation tasks.
+\end{abstract}
+\clearpage
+{\small\tableofcontents}
+\clearpage
+\input{sections/01_framework}
+\input{sections/02_complete_expansion}
+\input{sections/03_exterior_width}
+\input{sections/04_geometry}
+\input{sections/05_local_moment}
+\input{sections/06_means}
+\input{sections/07_short_packets}
+\input{sections/08_evidence}
+\input{sections/09_outstanding}
+\clearpage
+\begingroup\small\raggedright
+\input{references}
+\endgroup
+\end{document}

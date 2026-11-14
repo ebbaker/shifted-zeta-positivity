@@ -49,3 +49,29 @@ The registered archive is
 The final public response must be captured only after actual recording
 and exact-turn completion; a bounded deferred refresh is used until a
 trusted native hook is verified. No native activation is claimed here.
+
+## Branch research chat0002 — 13 November 2026
+
+“Continue GNP boundary bootstrap”, thread
+`01a1d6b9-b1b7-7910-a303-4b50e71d4f71`, is registered here using
+the actual title and exact local paginated public-text source.
+[Chat0002](0002_2026-11-13T21-04-16Z_continue-gnp-boundary-bootstrap.json)
+records the continuation; the registry owns current counts, hashes,
+capture times and recorded model configurations. At entry the model
+configuration list was empty. Sol helper settings are separately
+documented from explicit delegation calls, not inferred for the lead.
+The recorder excludes tool and helper traffic. Final capture uses a
+bounded exact-turn follow-up; native completion-hook activation is not
+asserted.
+
+## Branch research chat0003 — 13 November 2026
+
+“Summarize GNP research status”, thread
+`01a1d6f3-5a11-7741-acc9-15b358cb7980`, is registered here from its exact
+local paginated public-text source. The next user turn activated B06.
+[Chat0003](0003_2026-11-13T22-07-14Z_summarize-gnp-research-status.json)
+retains the actual title and original creation time. The registry owns
+live counts, hashes, capture times and recorded model configurations;
+the latter were empty during B06. The prior summary's final was present
+in the successful entry refresh. This turn uses a bounded exact-turn
+follow-up; no active native completion hook is asserted.

@@ -1,0 +1,173 @@
+\section{Reduction of the deeper step to a local Poisson moment}\label{sec:moment}
+
+We now derive the conditional reduction of BB Note15~\cite{BB15},
+with every part of the boundary included.
+
+\subsection{A collar with a fixed Green margin}
+
+Fix $X$ large and hold $t=t_X$ throughout this section. Set
+\[
+ \ell=17/32,\quad u=39/64,\quad b=37/64,\quad a=73/128,
+ \quad d_s=u-\ell=5/64,\quad W=\frac{3d_s}{\pi}\log X,
+\]
+\[
+ D_X=\{|\Re z-X|<W,\ \ell<\Im z<u\},\quad
+ p=X+\ii b,\quad K_X=\{X+\ii y:9/16\le y\le a\}.
+\]
+The already acquired centerline enclosure is below $a$.
+The disk centered at $X+\ii a$ of radius $5/128$ lies in $D_X$
+eventually. In units $1/128$, the observation and deepest target have
+coordinates $+1,-1$ in a disk of radius five. Formula
+\eqref{eq:disk-cost} and domain monotonicity give
+\begin{equation}\label{eq:green-signal}
+ \inf_{z\in K_X}G_{D_X}(p,z)\ge\log(13/5).
+\end{equation}
+
+Normalize by the same independently nonzero carrier,
+\[
+ F(z)=\frac{H_{t_X}(z)}{C_-(t_X,z)\zeta(s_{t_X}(z))}.
+\]
+At every point of the closed rectangle recenter the fixed provider
+chart at its real coordinate. The time remains $t_X$.
+Since $|t_XL_x-1|=O(W/(XL_X))$, an eventual gate gives
+\begin{equation}\label{eq:carrier-floor-66}
+ \Re s_{t_X}\ge65/64-1/40000>1+1/65,
+ \qquad |1/\zeta(s_{t_X})|\le66.
+\end{equation}
+The denominator is analytic and nonzero on a neighborhood of the
+rectangle. At the observation and on the top, the complete comparison
+of Section~\ref{sec:width} applies with the same small clock drift:
+\begin{equation}\label{eq:anchor}
+ |F(p)|\ge15/16,\qquad F=1+o(1)\quad\hbox{uniformly on the top}.
+\end{equation}
+Only the top and observation use that estimate; it is not assumed
+on the deeper bottom edge.
+
+The quadratic consumer excludes $K_X$ if its complete boundary
+payment is at most $9/2$, because
+\begin{equation}\label{eq:margin-81}
+ (15/16)^2\{(13/5)^2-1\}=81/16>9/2.
+\end{equation}
+Taking $\kappa_s=\pi/(2d_s)$ in the end barrier shows that both
+sides together have mass $O(X^{-3/2})$. The complete provider and
+positive finite population give $|H_{t_X}/C_-|\ll X^{1/4}$ there.
+After~\eqref{eq:carrier-floor-66}, the side quadratic cost is
+$O(X^{-1})$. The top costs $o(1)$ by~\eqref{eq:anchor}.
+It remains to pay the bottom at its actual harmonic measure.
+
+\subsection{The kernel and the complete bottom-edge reduction}
+
+The lower-edge Poisson kernel of the containing strip at $p$ is
+\begin{equation}\label{eq:poisson}
+ P(v)=\frac{\sin(3\pi/5)}
+ {2d_s\{\cosh(\pi v/d_s)-\cos(3\pi/5)\}},\qquad d_s=5/64.
+\end{equation}
+It is positive and even. With the Fourier convention
+$\widehat P(\omega)=\int P(v)\ee^{\ii\omega v}\dd v$, one has
+\begin{equation}\label{eq:poisson-transform}
+ \widehat P(\omega)=\frac{\sinh(|\omega|/32)}
+                         {\sinh(5|\omega|/64)},\qquad
+ \widehat P(0)=\int P(v)\dd v=2/5.
+\end{equation}
+To derive the transform, extend the lower-boundary datum
+$\ee^{\ii\omega v}$ harmonically into the strip with zero datum on
+the top. Separation of variables gives height factor
+$\sinh((u-b)|\omega|)/\sinh(d_s|\omega|)$.
+At zero frequency the extension is linear in height. Equivalently,
+the substitution $s=\tanh(\pi v/(2d_s))$ evaluates the integral
+of~\eqref{eq:poisson} directly. Also $P(v)\ll\ee^{-\pi|v|/d_s}$
+for $|v|\ge1$.
+
+For any nonnegative bottom datum on the rectangle, extend it by zero
+to the rest of the strip bottom. Its strip extension is nonnegative
+on both rectangle sides and dominates the rectangle extension by the
+maximum principle. Thus the rectangle's bottom harmonic measure is
+dominated by $P(v)\dd v$ on $|v|\le W$.
+
+We now justify the exact tail in~\eqref{eq:raw-tail-intro}.
+Split the dominant arm at $K=\lfloor\ee^{L_X/32}\rfloor$.
+On the finite head the weighted summability exponent exceeds
+$65/64-1/40000-1/128>1+1/256$, so heat removal costs $O(1/L_X)$.
+The ordinary zeta tail costs $O(X^{-1/2080})$ using
+\eqref{eq:carrier-floor-66}.
+At $y=17/32$, the reflected primary power with $(1/6,2/3)$
+has endpoints $-19/192$ and $-11/384$ at $c=1$.
+The clock drift can be made to cost less than $1/160000$;
+the complete reflected sum is consequently
+$O((1+L_X)X^{-1/48})$, including its inverse-frequency terms.
+The correction and full remainder in~\eqref{eq:ratio-correction}
+also tend to zero uniformly.
+
+At $x=X+v$, $|v|\le W$, the natural upper cutoff
+$\lfloor\sqrt{x/(4\pi)}\rfloor$ differs from the one at $X$
+by at most one eventually. The boundary term costs $O(X^{-57/128})$.
+For common terms the ratio to the frozen summand in $T_X(v)$ is
+\[
+ \exp\left(-\frac{t_X}{4}(L(X+v+\ii\ell)-L_X)\log n\right)
+ =1+O(W/X).
+\]
+The complete absolute population is $O(X^{1/4})$, so the summed
+freezing error is $o(1)$. We have proved, uniformly along the bottom,
+\begin{equation}\label{eq:bottom-tail}
+ F(X+v+\ii\ell)-1
+ =\frac{T_X(v)+o(1)}{\zeta(s_{t_X}(X+v+\ii\ell))}.
+\end{equation}
+All heat-weighted sums are finite, all cutoffs are actual integer
+cutoffs, and the entire correction and source remainder have been
+included.
+
+If $Q(X)\le4/66^2$, Poisson domination and the triangle inequality
+in $L^2(P(v)\dd v)$ give bottom cost at most
+\[
+ 66^2(\sqrt{Q(X)}+o(1))^2\le4+o(1).
+\]
+Adding the top and both sides gives at most $9/2$ eventually.
+Equations~\eqref{eq:green-signal}--\eqref{eq:margin-81} exclude $K_X$.
+The acquired centerline enclosure excludes the portion above $a$,
+and conjugation covers the lower half-plane. This proves
+Proposition~\ref{prop:intro-green}, conditional on its stated
+every-center premise.
+
+\subsection{Why signs and exact coefficients remain essential}
+
+Expanding the finite squared norm yields the exact signed form
+\begin{equation}\label{eq:Q-pairs}
+ Q(X)=\frac25\sum_{K<n\le N}w_n^2
+ +2\Re\sum_{K<m<n\le N}w_mw_n\ee^{\ii\tau_X\log(n/m)}
+              \widehat P\left(\tfrac12\log(n/m)\right).
+\end{equation}
+The diagonal is $O(K^{-25/32})=O(X^{-25/1024})$, since
+$w_n^2\le n^{-57/32}$. The issue is the signed off-diagonal sum.
+For $N/2<m<n\le N$, the weights are comparable to $X^{-57/128}$
+and the multiplier is bounded below by a positive constant.
+The termwise absolute allowance from those pairs alone is therefore
+of order at least $X^{7/64}$. This says nothing about a lower bound
+for the signed canonical value.
+
+The same issue appears in a coefficient-independent Gram estimate.
+On a dyad $(D,2D]$, the unphased matrix with entries
+$\widehat P(\log(n/m)/2)$ has all entries bounded below by a
+positive constant. Its all-ones Rayleigh quotient is $\gg D$.
+The center phase is a diagonal unitary conjugation, preserving its
+operator norm. Multiplying that norm by $\sum w_n^2$ therefore
+incurs a scale at least $D^2w_D^2$. If $D=\ee^{aL_X}$, its power
+is $a^2/2-a/32$, positive when $a>1/16$.
+This is a limitation of the coefficient-independent norm bound.
+
+There is also an exact Gaussian representation of each finite arm.
+For $s=65/64-\ii(\tau_X+v/2)$ and
+$D_{A,B}(s)=\sum_{A<n\le B}n^{-s}$,
+\begin{equation}\label{eq:weight-gaussian}
+ \sum_{A<n\le B}w_n(X)\ee^{\ii(\tau_X+v/2)\log n}
+ =\sqrt{L_X/\pi}\int_\R\ee^{-L_Xr^2}D_{A,B}(s-r)\dd r.
+\end{equation}
+This is the real Gaussian moment identity applied to a finite sum.
+On a dyad of scale $\ee^{aL_X}$, absolute integration has exponent
+$(r-1/64)a-r^2$. Its saddle $r=a/2$ gives $a^2/4-a/64$,
+again positive for $a>1/16$. Applying a separate exponent-pair bound
+under the integral returns the same weighted block exponent after
+square completion. An infinite ordinary series is available only
+where $\Re(s-r)>1$. Elsewhere a continuation argument must retain
+the exact finite-cutoff remainder; the identity itself supplies no
+new cancellation. These scoped comparisons explain why a signed
+estimate of the actual moment is still needed.

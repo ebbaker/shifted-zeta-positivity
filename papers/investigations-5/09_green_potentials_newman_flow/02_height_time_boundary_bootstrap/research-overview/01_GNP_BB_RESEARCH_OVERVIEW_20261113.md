@@ -3,8 +3,63 @@
 13 November 2026, America/New_York. Prepared for **Edward Baker** with
 substantial OpenAI Codex LLM assistance. Actual model and reasoning effort
 are unavailable in the setup chat's recorded configurations.
-**Evidence level: inherited-source synthesis and B01 conceptual selection;
-the canonical E01 estimate remains unproved.**
+**Current evidence: E01–E03, E05, E07, E09 and B06 proved in-note from named
+inputs; internal additional-agent acceptance in Reviews03,05,07,09 and11.** The inherited
+HDA input retains its internal assessment level. Lead actual model/effort
+are unavailable; proof/review workers were dispatched as gpt-6.1-sol/ultra.
+
+## Acquired bounds and current continuation
+
+[B06 Note25](../notes/25_GNP_BB_B06_SHORT_WINDOW_AND_ACTUAL_PACKET_20261113.md)
+adds paid short-window freezing and a scoped sparse-packet result, now
+accepted without mathematical correction in distinct-agent
+[Review11](../reviews/11_GNP_BB_E11_ADDITIONAL_AGENT_REVIEW_20261113.md).
+Its actual quartic phase alignment has energy of order U^(-241/640)
+and complete moment effect O(U^(-59/320)). The full short-center
+5/66² witness and the every-center4/66² budget remain open. The [analytical manuscript](../manuscript/README.md) integrates these
+results through E11, with its PDF outside the repository and outstanding
+tasks in the final main section. Its production assessment is self-checking.
+
+[E09 Note23](../notes/23_GNP_BB_E09_LOCALIZATION_AND_RESONATOR_MEANS_20261113.md),
+accepted in [Review09](../reviews/09_GNP_BB_E09_ADDITIONAL_AGENT_REVIEW_20261113.md),
+localizes the exact moment to exp(3L/64)<n<=exp(5L/16) with
+Poisson L2 error O(X^(-1/8192)). It proves a dyadic mean
+O(U^(-25/1024)), vanishing short-center means above U^(5/128+epsilon),
+and normalized whole-dyadic resonator means tending to zero uniformly
+for fixed delta<123/128. These are actual moment bounds and a scoped
+lower-witness restriction. They neither acquire the every-center
+4/66² budget nor produce an actual-height counterexample or new width.
+
+[E07 Note18](../notes/18_GNP_BB_E07_FIVE_PAIR_WIDTH_20261113.md) gives a
+finite, unevaluated t_*>0 such that every zero at 0<t<=t_* and
+|x|>=4pi exp(1/t) has |y|<567/1000. [Review07](../reviews/07_GNP_BB_E07_ADDITIONAL_AGENT_REVIEW_20261113.md)
+accepts the full five-pair transfer on both curve and common-time domains.
+It retains [E05 Note12](../notes/12_GNP_BB_E05_COMMON_TIME_TAIL_20261113.md)'s
+proved positive-window provider and published far-tail overlap. The gain
+from4/7 is31/7000 at the new onset; no global or time-zero result follows.
+
+B04's [Note15](../notes/15_GNP_BB_B04_SIGNED_GREEN_ACQUISITION_20261113.md)
+provides a conditional9/16 curve consumer with an independently paid
+anchor and complete other edges. The every-center local Poisson moment
+is still unproved. [Note16](../notes/16_GNP_BB_B04_GLOBAL_CONSUMER_AUDIT_20261113.md)
+records the separate initial and intermediate barrier obligations.
+
+[E03 Note10](../notes/10_GNP_BB_E03_ENVELOPE_ENDPOINT_AND_WIDTH_20261113.md)
+also acquires every fixed width y0>2927/5152, y0<=7/12, along
+t=1/log(X/(4pi)), with y0-dependent onsets. That exact threshold is an
+obstruction only for the specified head/A-chain strict-power allowance.
+B02's [Note08](../notes/08_GNP_BB_B02_GEOMETRY_AND_OBSERVATION_20261113.md)
+provides conditional geometry and selects uniform local rectangles.
+Neither their recurrence nor the tail result covers the missing interior
+region, time zero or a global contraction toward the line.
+
+[Note27](../notes/27_GNP_BB_CONTINUATION_AFTER_E11_AND_MANUSCRIPT_20261113.md)
+records E11 closure and manuscript continuation. The issued
+[E11 r1](../research-progress/handoffs/GNP-BB-E11-r1.md) remains unchanged. Read the
+[result index][results] and [avoid index][avoid], particularly
+[heat-flow cluster11][r11], [controls12][r12], [classification01][a01],
+[premise02][a02] and [scope07][a07]. Original specifications below retain
+their historical role; they do not supersede these acquired bounds.
 
 ## Primary program: analytical control over unbounded height
 
@@ -22,7 +77,7 @@ not permanent restrictions on the program. [Note05][program] records the
 author's 13 November analytical and exploratory scope revision, including
 an explicit infinite-height parameterization and its unpaid obligations.
 
-## B01 baseline — 13 November 2026
+## B01 baseline — historical design, 13 November 2026
 
 [Note03](../notes/03_GNP_BB_B01_COLLAR_COMPARISON_20261113.md) fixes
 λ_X=1/L_X and 7/8<y<9/8, selects complete-field comparison with
@@ -30,12 +85,11 @@ an explicit infinite-height parameterization and its unpaid obligations.
 reflected population. Its error threshold 1/16 would give h=1/8,
 buffer 1/16 and a width gain 1/16. The same data pay a complete
 rectangle Green comparison; that geometry adds no arithmetic gain.
-This is a feasible proof contract with conditional consumers, not an
-acquired canonical error bound. [E01 r1](../research-progress/handoffs/GNP-BB-E01-r1.md)
-remains a fixed analytical benchmark task, recommended GPT-6.1 Sol.
-GNP-BB-B02 is now the suggested next conceptual task for the broader
-analytical program; the register controls activation. This priority
-change does not widen the frozen E01 request.
+At B01 this was a feasible proof contract with conditional consumers.
+[E01 r1](../research-progress/handoffs/GNP-BB-E01-r1.md) was subsequently
+executed in Note06 without widening its frozen request. B02 then supplied
+the signed-tail and geometry design; the live register records the
+completed successors; the current next task is specified above.
 
 **Author-requested planning addition, 13 November:** GNP-BB-B02 separates
 contour design from observation-point placement, then investigates their
@@ -156,7 +210,7 @@ The integration contour Γ=∂D, interior observation p=X+ib, and
 allowed-zero boundary y=a are distinct choices. The kernel couples
 the first two; it does not force either to coincide with the zero
 boundary. [Note04](../notes/04_GNP_BB_CONTOUR_AND_OBSERVATION_CLARIFICATION_20261113.md)
-spells out their positions and the auxiliary disks in the current request.
+spells out their positions and auxiliary disks in the original E01 request.
 
 For \(u_\lambda=\log|H_\lambda|\), a fixed strip \(0<y<B\), and \(0<b<B\),
 
@@ -229,7 +283,8 @@ varying heat parameter inside one analytic field.
 
 ## Separate contour and observation investigation
 
-**GNP-BB-B02 — B, recommended GPT-6 Astra.** Explore which contour and
+**Historical B02 specification — subsequently completed.** The original
+recommendation was GPT-6 Astra. Explore which contour and
 observation protocols can support analytical estimates over unbounded
 height and potentially remain effective toward the line. Read Notes03–05;
 the [sole register][progress] records the separate workstreams. The
@@ -251,15 +306,18 @@ and remainder cost. A geometric improvement alone is not a proved gain.
 For a possible iteration \(a_{n+1}\le(1-\theta_n)a_n\), investigate
 whether the proved steps stay valid and force the product of contraction
 factors to zero at each fixed height. Divergence of \(\sum_n\theta_n\)
-is one sufficient test, not an assumed premise. The current coarse
-absolute allowance stops at \(y>3/4\); overcoming that specific
-estimating barrier is part of strategy exploration.
+is one sufficient test, not an assumed premise. The original coarse
+absolute allowance stopped at \(y>3/4\); E02/E03 subsequently
+surpassed that particular estimating barrier with signed finite tails.
 
 **Decision boundary.** One analytical design pass ends with a supported
 route and a fixed next proof contract, or a precise bottleneck plus
 well-scoped alternatives. There is no preset quota of contour shapes or
-observation protocols. Stop at that decision boundary and separate later
-execution; do not turn exploration into an unlimited numerical search.
+observation protocols. Record the decision at that boundary and specify
+the execution task separately. Under the author's 13 November
+[continuation authorization][continuation], proceed into justified
+successor work without a new permission question, using Astra/ultra and
+supported Sol 6.1/ultra delegation. Avoid unproductive numerical searches.
 Apply the control screen to changed premises. E01 r1 and its inputs stay
 frozen; a different execution contract must be explicitly revisioned.
 
@@ -376,9 +434,10 @@ reflection and complete arithmetic agreement. The polynomial diagnostic
 has no theta source. Generic Green or local-extension identities may hold
 for these fields and do not themselves distinguish theta.
 
-B01 selected the canonical input for the baseline; E01 must still prove
-its estimate. B02 explores analytical contour and observation rules over
-unbounded height. Its design must address whether gains can accumulate,
+B01 selected the baseline input; E01 subsequently proved its estimate.
+B02 supplied analytical contour and observation comparisons, and E05
+supplied a common-time spatial tail. The open continuation must address
+whether gains can accumulate,
 whether height onsets remain usable through iteration, how compact
 heights and boundary contacts are covered, and which time domain the
 result actually reaches. Merely taking
@@ -390,8 +449,8 @@ Numerical work may support constants, diagnostics and compact-region
 certificates attached to an analytical tail theorem. It cannot replace
 an all-height estimate or establish an iteration limit from samples.
 
-The [plan][plan] preserves B01's completed scope and defines the revised
-B02 analytical exploration above. The [GNP-BB register][progress] is the sole task-status
+The [plan][plan] preserves the original specifications and records the
+completed returns and E11 closure and manuscript continuation. The [GNP-BB register][progress] is the sole task-status
 owner; [continuation][continuation] is a dated handoff snapshot.
 
 [results]: ../../../../../result-summaries/README.md
@@ -417,5 +476,5 @@ owner; [continuation][continuation] is a dated handoff snapshot.
 [crosswalk]: ../notes/02_GNP_BB_SETUP_AND_SOURCE_CROSSWALK_20261113.md
 [plan]: ../research-plan/01_GNP_BB_RESEARCH_PLAN_20261113.md
 [progress]: ../research-progress/01_GNP_BB_RESEARCH_PROGRESS_20261113.md
-[continuation]: ../notes/01_GNP_BB_CONTINUATION_AND_PROMPT_20261113.md
+[continuation]: ../notes/19_GNP_BB_CONTINUATION_AFTER_FIVE_PAIR_TRANSFER_20261113.md
 [program]: ../notes/05_GNP_BB_ANALYTICAL_PROGRAM_AND_SELECTION_PROTOCOLS_20261113.md

@@ -7,6 +7,65 @@ LLM assistance: **gpt-6-astra (Codex)**, reasoning effort **ultra**.
 
 ## Summary
 
+- **Boundary-bootstrap B06 packet test (Investigation5/09/02,
+  13 November 2026).** [Note25](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/notes/25_GNP_BB_B06_SHORT_WINDOW_AND_ACTUAL_PACKET_20261113.md):
+  “proved in-note from E09's accepted localization and the direct
+  estimates below; same-assistant assessment, not independent review.”
+  [Review10](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/reviews/10_GNP_BB_B06_SAME_ASSISTANT_ASSESSMENT_20261113.md)
+  checks square-root freezing error O(U^(-1/8192)) and the fixed
+  triangular window H=U^(1/32). An actual quartic integer-phase packet
+  has energy of order U^(-241/640); its complete moment effect, with
+  background cross terms, is O(U^(-59/320)). More generally deletion
+  of r logarithmic cells of width1/H costs
+  O(sqrt(r) U^(-1/128)+r U^(-3/128)), vanishing for r=o(U^(1/64)).
+  This stops the tested sparse-packet mechanism, not the full5/66²
+  short-center witness. Every-center4/66² and conditional9/16 remain
+  open; width567/1000 is unchanged. The original same-assistant status
+  is superseded for review disposition by
+  [E11 Review11](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/reviews/11_GNP_BB_E11_ADDITIONAL_AGENT_REVIEW_20261113.md):
+  “Accept Note25, equations (1)–(11), from the named E09 localization input”
+  (the source contains linked identifiers). No mathematical correction.
+  [The analytical manuscript](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/manuscript/README.md)
+  integrates the acquired exterior, conditional Green consumer, means and
+  packet estimates; PDF external, numerics supporting only.
+  [Production Review12](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/reviews/12_GNP_BB_MANUSCRIPT_PRODUCTION_ASSESSMENT_20261113.md)
+  is self-assessment, not a new mathematical acceptance. For Edward Baker
+  with Codex assistance; root actual settings unavailable, E11 explicit
+  dispatch gpt-6.1-sol/ultra, shared-source internal review.
+
+- **Boundary-bootstrap local moment through E10 (Investigation5/09/02,
+  13 November 2026).** [E09 Note23](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/notes/23_GNP_BB_E09_LOCALIZATION_AND_RESONATOR_MEANS_20261113.md):
+  “Proved in-note under the stated classical logarithmic-phase
+  exponent-pair input.” [E10 Review09](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/reviews/09_GNP_BB_E09_ADDITIONAL_AGENT_REVIEW_20261113.md)
+  accepts uniform middle-band localization with Poisson norm error
+  O(X^(-1/8192)), raw dyadic moment mean O(U^(-25/1024)), and short-center
+  means on h>=U^(5/128+epsilon). Normalized whole-dyadic positive integer
+  Dirichlet-polynomial weighted means vanish uniformly for fixed
+  0<delta<123/128 and R<=U^delta, coefficients fixed within each window.
+  This limits that lower-witness class; every-center4/66² and an actual
+  violation remain open. Width567/1000 below is unchanged; conditional9/16
+  is not acquired. For Edward Baker with Codex assistance; B05 dispatch
+  Astra/ultra, comparisons/proof/review Sol6.1/ultra, root settings
+  unavailable. Internal distinct-agent review, shared sources and model;
+  no specialist independence or novelty claim.
+
+- **Boundary-bootstrap tail through E08 (Investigation5/09/02, 13 November 2026).**
+  [E07 Note18](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/notes/18_GNP_BB_E07_FIVE_PAIR_WIDTH_20261113.md):
+  “proved in-note from the named inherited inputs”.
+  [E08 Review07](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/reviews/07_GNP_BB_E07_ADDITIONAL_AGENT_REVIEW_20261113.md)
+  accepts width567/1000 on the curve and for every0<t<=t_* with
+  abs(x)>=4pi exp(1/t), t_* unevaluated. Five fixed A/B pairs improve
+  E05's width4/7 by31/7000 at the new onset, retaining its positive-window
+  provider and imported all-real far tail. E05 remains valid on its
+  original domain; E03's threshold2927/5152 retains its pure-A-chain scope.
+  [Note15](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/notes/15_GNP_BB_B04_SIGNED_GREEN_ACQUISITION_20261113.md)
+  gives a conditional9/16 curve consumer; its local signed moment is
+  unproved. No compact-height, time-zero, global-width or iteration result.
+  Internal same-model additional-agent proof review with shared inputs;
+  no specialist review or novelty claim. For Edward Baker with Codex
+  assistance; B04 dispatch Astra/ultra, proofs/review Sol6.1/ultra,
+  root settings unavailable.
+
 - **Green/resolvent reconciliation through E08 (10 November 2026).**
   [The updated manuscript](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/01_green_potential_resolvent/manuscript/README.md)
   incorporates [E03 Note06](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/01_green_potential_resolvent/notes/06_TND_OG_E03_COMPLETE_SIGNED_LOG_ACQUISITION_20261108.md):

@@ -1,5 +1,67 @@
 # Term-by-term matching, separate absolute bounds, separately positive sectors, dropped small terms
 
+**13 November 2026 — actual phase alignment still needs enough mass.**
+For Edward Baker with Codex assistance; actual root model/effort unavailable.
+[B06 Note25](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/notes/25_GNP_BB_B06_SHORT_WINDOW_AND_ACTUAL_PACKET_20261113.md)
+states: “This stops the tested packet-supported lower mechanism. It does not
+disprove the short-center witness.” Its quartic packet aligns at actual
+heights, but has energy of order U^(-241/640) and complete effect
+O(U^(-59/320)), including interaction with the rest. A selected positive
+norm is not a lower bound for the full norm. The sparse-cell extension
+retains its own r=o(U^(1/64)) full-perturbation scope. The transfer from
+the full tail is between square-root moments; multiplying its small
+error by a growing norm allowance does not supply an additive o(1)
+moment error. [Review10](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/reviews/10_GNP_BB_B06_SAME_ASSISTANT_ASSESSMENT_20261113.md)
+was same-assistant checking; its pending-review status is superseded by
+[E11 Review11](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/reviews/11_GNP_BB_E11_ADDITIONAL_AGENT_REVIEW_20261113.md)'s
+internal distinct-agent acceptance without correction, explicit Sol6.1/ultra
+dispatch and shared sources. The
+[manuscript production assessment](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/reviews/12_GNP_BB_MANUSCRIPT_PRODUCTION_ASSESSMENT_20261113.md)
+states: “Long mean decay and sparse-packet failure do not decide the
+every-center moment or the fixed short-center witness.” The manuscript
+preserves that distinction and both different cell thresholds. No full
+witness, every-center cap or new zero-width conclusion follows.
+
+**13 November 2026 — a vanishing resonator average does not exclude spikes.**
+For Edward Baker with Codex assistance; B05 dispatch Astra/ultra,
+proof/review Sol6.1/ultra, root settings unavailable.
+[E09 Note23](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/notes/23_GNP_BB_E09_LOCALIZATION_AND_RESONATOR_MEANS_20261113.md)
+states: “There is no implication for a zero count or the occurrence of
+zeros at the exceptional centers.” Its localized moment and positive
+whole-dyadic resonator means vanish for fixed0<delta<123/128, with the
+stated integer support and coefficients fixed within each window.
+That stops a constant lower witness from this class; it does not prove
+the every-center cap or exclude shorter/adaptive witnesses. The weighted
+product-frequency bound pays nearby products more sharply than a single
+maximum-frequency separation, while the discarded modes still require
+their full joint norm payment. [E10 Review09](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/reviews/09_GNP_BB_E09_ADDITIONAL_AGENT_REVIEW_20261113.md)
+accepts this scope internally. Neither a divergent absolute allowance
+nor a vanishing mean is an actual pointwise obstruction; see [scope07](07_scoped_exclusions_read_as_universal.md).
+
+**13 November 2026 — a sharper allowance is not a field obstruction.**
+For Edward Baker with substantial Codex assistance; proof/review dispatch
+Sol6.1/ultra, lead recorded settings unavailable.
+[E03 Note10](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/notes/10_GNP_BB_E03_ENVELOPE_ENDPOINT_AND_WIDTH_20261113.md)
+proves the exact threshold 2927/5152 for its absolute head and separately
+bounded A-chain tails. Its conclusion is about that allowance, not the
+actual theta error or other arithmetic estimates. Retaining phase first
+had already improved the former absolute-tail width limit. The later
+[E06 review](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/reviews/05_GNP_BB_E05_COMMON_TIME_REVIEW_20261113.md)
+states: “the interior height interval and time zero require separate
+estimates.” A same-time asymptotic tail does not supply either missing
+region. Internal additional-agent review; see [scope07](07_scoped_exclusions_read_as_universal.md).
+
+The subsequent [E07 proof](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/notes/18_GNP_BB_E07_FIVE_PAIR_WIDTH_20261113.md)
+and [E08 review](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/reviews/07_GNP_BB_E07_ADDITIONAL_AGENT_REVIEW_20261113.md)
+cross that A-chain threshold with five fixed A/B pairs, giving width567/1000.
+The [Green alternative](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/notes/15_GNP_BB_B04_SIGNED_GREEN_ACQUISITION_20261113.md)
+separately states: “This note does not acquire
+an every-center arithmetic estimate”;
+its divergent termwise absolute allowance must not be read as a lower
+bound for the signed local quadratic quantity. B04 decision dispatch
+Astra/ultra; proof and internal review Sol6.1/ultra.
+
+
 **12 November 2026 — consume the real quadratic sum.** For Edward Baker
 with substantial Codex assistance; actual model/effort unavailable,
 chat0007. [GNP-RS B10 Note29](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/notes/29_GNP_RS_B10_SIGNED_MELLIN_MEAN_ESTIMATE_20261112.md)

@@ -12,6 +12,33 @@ not duplicate article records or PDF copies. Follow
 
 ## Inherited sources used at setup
 
+**B06 use, 13 November 2026:** [source-use06](06_GNP_BB_B06_SOURCE_USE_20261113.md)
+records accepted E09 localization, the limited primary-text reinspection,
+and direct freezing/cell/Taylor/mixed-norm derivations. No new large-value
+theorem or fresh full exponent-pair audit is claimed.
+
+**Post-B06 assessment, 13 November 2026:** [source check07](07_GNP_BB_STRATEGIC_SOURCE_CHECK_20261113.md)
+rechecks Polymath's separate global-consumer hypotheses and the domain
+of the DLMF ordinary series/Euler product. No new theorem is imported.
+
+**B05 use, 13 November 2026:** [source-use05](05_GNP_BB_B05_SOURCE_USE_20261113.md)
+records the checked DLMF finite cutoff identity, inherited exact logarithmic
+phase theorem and limits of the sibling mean/resonator precedents. The new
+weighted harmonic and divisor estimates have direct proofs in Note22.
+
+**B04 use, 13 November 2026:** [source-use03](03_GNP_BB_B04_SOURCE_USE_20261113.md)
+records the broader classical pair comparison and exact global-consumer
+hypotheses. [Discovery04](04_PLANAT_RAYMOND_261106245_DISCOVERY_20261113.md)
+records an unimported preprint claim and failed PDF retrieval; it is not
+an accepted bound or full-paper audit.
+
+**Continuation use, 13 November 2026:** the
+[signed-tail record](02_GNP_BB_SIGNED_TAIL_SOURCE_USE_20261113.md)
+documents the new theta=1 logarithmic-phase application of the
+Montgomery–Vaughan exponent-pair theorem, source conditions and
+finite-pair constants, with renewed HDA/DLMF/Polymath checks.
+Bibliography and article ownership remain at the canonical homes below.
+
 **B01 research use, 13 November 2026:** the [selected-passage record](01_GNP_BB_B01_SOURCE_USE_20261113.md)
 adds the actual HDA/provider inspection, B10 applicability check and
 primary DLMF/Polymath passages for the new [research note](../notes/03_GNP_BB_B01_COLLAR_COMPARISON_20261113.md).

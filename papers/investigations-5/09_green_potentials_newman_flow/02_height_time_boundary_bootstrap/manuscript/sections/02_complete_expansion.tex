@@ -1,0 +1,284 @@
+\section{The complete field and its finite expansion}\label{sec:expansion}
+
+\subsection{Normalization from the theta primitive}
+
+Let $\vartheta(r)=\sum_{n\in\mathbb Z}\ee^{-\pi n^2r}$ and
+$p(u)=\ee^u(\vartheta(\ee^{4u})-1)/2$.
+Jacobi reflection~\cite{DLMF} gives $p(-u)-p(u)=\sinh u$, hence $p'(0)=-1/2$.
+Direct differentiation shows that $\Phi=(p''-p)/8$, with $\Phi$ as
+in~\eqref{eq:canonical}. Applying $\partial_u^2-1$ to the reflection
+identity proves that $\Phi$ is even. Its terms are positive on $u\ge0$
+because $\pi n^2\ee^{4u}\ge\pi>3/2$.
+
+The complete series and each fixed derivative are bounded by
+\[
+ C_j\ee^{|u|}\rho(u)^{j+2}\ee^{-\rho(u)},\qquad
+ \rho(u)=\pi\ee^{4|u|}.
+\]
+To verify this, differentiation replaces $2r^2-3r$ by a polynomial
+of degree $j+2$, and
+$\ee^{-n^2\rho}\le\ee^{-\rho}\ee^{-\pi(n^2-1)}$.
+The resulting sum of polynomial coefficients times
+$n^{2j+4}\ee^{-\pi(n^2-1)}$ converges. This domination justifies
+differentiation of~\eqref{eq:canonical} on compact parameter sets and
+proves the heat equation in~\eqref{eq:normalization}.
+
+If $J(z)=\int_0^\infty p(u)\cos(zu)\dd u$, two integrations by
+parts give $8H_0(z)=1/2-(1+z^2)J(z)$. Splitting the theta Mellin
+integral at one yields
+\[
+ \xi(s)=\frac12+\frac{s(s-1)}2\int_1^\infty
+ \frac{\vartheta(r)-1}{2}
+ \{r^{s/2-1}+r^{(1-s)/2-1}\}\dd r.
+\]
+Substitute $r=\ee^{4u}$ and $s=(1-\ii z)/2$. The integral is
+$8J(z)$, and $4s(s-1)=-(1+z^2)$, proving the normalization.
+The reflected argument gives the same field. In particular $H_t$ is
+even and is real on the real axis for real $t$.
+
+\subsection{The inherited zero-time estimate}
+
+The analysis below uses the following input, with its original status:
+``proved in-note from named classical inputs; same-model internal
+assessment only''~\cite{HDAComplex,HDAAssessment}. The initial complex
+estimate is not re-certified by its use here. It is stronger than
+quoting a real-axis Riemann--Siegel formula at a complex point.
+
+Put
+\[
+ M(w)=\frac{w(w-1)}{16}\pi^{-w/2}\Gamma(w/2),\quad
+ w_\pm=\frac{1\pm\ii z}{2},\quad
+ a(z)=\sqrt{\frac z{4\pi}},\quad
+ \mathcal G(z)=[M(w_+)M(w_-)]^{1/2},
+\]
+with $\mathcal G$ positive on the large real axis. Define
+\[
+ \mathcal C(p)=\frac{\cos(2\pi(p^2-p)-\pi/8)}{\cos(2\pi p)},\qquad
+ \mathcal R_N(z)=(-1)^N\mathcal G(z)a(z)^{-1/2}\mathcal C(a(z)-N).
+\]
+The apparent poles of $\mathcal C$ are removable: at each simple
+denominator zero the numerator also vanishes. On every fixed compact
+neighborhood of $[0,1]$, the function and its fixed derivatives are
+bounded.
+
+\begin{proposition}[Named initial input]\label{prop:initial-input}
+Fix $r,b>0$ and $N=\lfloor\sqrt{x/(4\pi)}\rfloor$.
+On $|\Re z-x|\le r$, $|\Im z|\le b$, at sufficiently large $x$,
+\begin{equation}\label{eq:initial-RS}
+ H_0(z)=\sum_{n\le N}\{M(w_+)n^{-w_+}+M(w_-)n^{-w_-}\}
+       +\mathcal R_N(z)+O_{r,b}(x^{-3/4}E_{\Gamma,0}(z)),
+\end{equation}
+where $E_{\Gamma,0}=|M(w_+)|+|M(w_-)|$.
+The cutoff is fixed on the chart, and the bound is uniform in its
+fractional position. Sectorial calibration gives the elementary arms
+below with relative error $O_{r,b}(x^{-1})$ and logarithmic slopes
+$L(z)/2\pm\ii\pi/4+O_{r,b}(x^{-1})$, where
+$L(z)=\Log(z/(4\pi))$.
+\end{proposition}
+
+For precision, the source of~\eqref{eq:initial-RS} is HDA CS3.
+Its proof retains the ordinary Dirichlet tail on the upper edge of
+a growing auxiliary rectangle, pays its vertical edges, and uses the
+exact recurrence
+\[
+ \mathcal C(p)+\mathcal C(p-1)
+ =2\cos(2\pi(p-1)^2-\pi/8)
+\]
+to pay cutoff crossings on the real edge. The source is uniform on
+every declared fixed enlargement; no fixed-chart constant is applied
+to an unannounced growing strip. HDA CS16--17 also supply, on a fixed
+base chart, constants $c_b\ge1$ and $P_b=b+12$ such that
+\begin{equation}\label{eq:source-ray}
+ \frac{|H_0(z-2\ii v)|}{\mathcal G(x)}
+ \ll x^{P_b}\exp\{ |v|L_x/2+c_b|v|+c_bv^2/x\}
+ \quad (|v|\le x^{1/3}).
+\end{equation}
+For all $v$, a logarithmic majorant of the same ratio is
+\[
+ P_b\log(x+|v|)+c_b(|v|+1)+\frac{|v|}{2}\log(x+|v|).
+\]
+These height-relative ray bounds, the calibration, and the initial
+estimate are the inherited interface. The constants precede the
+Gaussian windows chosen next.
+
+\subsection{A positive-time finite-window extension}
+
+Define the nonzero elementary factors
+\begin{equation}\label{eq:carriers}
+ \begin{split}
+ \mathcal A(t,z)&=\frac{\pi^{1/4}}{16}z^{7/4}
+ \exp\left(-\frac{\pi z}{8}+
+       \frac{t}{16}(L(z)^2-\pi^2/4)\right),\\
+ \Theta(t,z)&=\frac z4(L(z)-1)+\frac{\pi tL(z)}{16}+\frac{7\pi}{8},
+ \qquad C_\pm(t,z)=\tfrac12\mathcal A(t,z)\ee^{\pm\ii\Theta(t,z)}.
+ \end{split}
+\end{equation}
+The shifted zeta argument is
+\begin{equation}\label{eq:shifted-s}
+ s_t(z)=\frac{1-\ii z}{2}+\frac{tL(z)}4-\frac{\ii\pi t}{8}.
+\end{equation}
+
+\begin{proposition}[Complete value expansion]\label{prop:positive-provider}
+For each fixed $D>0$ there are finite constants and an onset such that,
+for $0\le t\le1/2$, $tL_x\le D$, and $|\Re z-x|\le1$,
+$|\Im z|\le9$, with $N=\lfloor\sqrt{x/(4\pi)}\rfloor$ fixed,
+\begin{equation}\label{eq:provider}
+ \begin{split}
+ H_t(z)&=\mathcal A(t,z)\sum_{n\le N}n^{-1/2}
+   \exp\left(\frac t4((\log n)^2-L(z)\log n)\right)
+   \cos\left(\Theta(t,z)-(z/2+\pi t/8)\log n\right)\\
+ &\quad+\ee^{-\pi^2t/64}\mathcal R_N(z)+\mathcal E_N(t,z),\\
+ |\mathcal E_N(t,z)|&\le h_Dx^{-3/4}(|C_+(t,z)|+|C_-(t,z)|).
+ \end{split}
+\end{equation}
+The error includes the complete source exterior and all finite modes.
+\end{proposition}
+
+\begin{proof}
+For $t>0$, absolute integration of the complete theta source and the
+Gaussian moment identity give
+\begin{equation}\label{eq:gaussian-heat}
+ H_t(z)=\int_\R H_0(z-2\ii v)\dd\gamma_t(v),\qquad
+ \dd\gamma_t(v)=(\pi t)^{-1/2}\ee^{-v^2/t}\dd v.
+\end{equation}
+For example, the Gaussian average of $\ee^{2|v|u}$ is at most
+$2\ee^{tu^2}$, which is integrable against the complete source.
+Fix the base strip $b=9$ and its constants in~\eqref{eq:source-ray},
+then put $\mu_*=D/4+1$ and choose
+\begin{equation}\label{eq:window-choice}
+ V\ge\max\{16,b+8,D,16c_b,2\mu_*,\sqrt{8D(P_b+2)}\}.
+\end{equation}
+Only after this choice invoke the initial estimate on the fixed
+enlargement $|\Re z-x|\le2$, $|\Im z|\le10+2V$.
+
+Write $E_o=|C_+|+|C_-|$ and $b_\pm=L(z)/2\pm\ii\pi/4$.
+The exact elementary identity
+$C_\pm(t,z)=C_\pm(0,z)\exp(tb_\pm^2/4)$, together with calibration,
+implies
+\begin{equation}\label{eq:envelope-comparison}
+ E_o(t,z)\asymp E_{\Gamma,0}(z)\ee^{tL_x^2/16},
+ \qquad E_o(t,z)\gg\mathcal G(x).
+\end{equation}
+All comparisons are on the reserve target and uniform in $tL_x\le D$.
+
+First pay the true source exterior. For $V<|v|\le x^{1/3}$,
+the exponent after inserting~\eqref{eq:source-ray} is
+\[
+ -v^2/t+|v|L_x/2+c_b|v|+c_bv^2/x\le-v^2/(4t)
+\]
+once $x\ge4c_b$. The three positive terms are bounded respectively
+by $(1/2,1/32,1/8)v^2/t$. Splitting the remaining Gaussian shows that
+the normalized integral is
+$O(x^{P_b}\ee^{-V^2/(8t)})=O_D(x^{-2})$.
+For $q=|v|\ge x^{1/3}$, $x+q\le2q^3$ eventually, and the full-ray
+logarithmic majorant is at most $q^2$ for all such $q$, after increasing
+the onset. Since $t\le1/2$, the Gaussian leaves a bound
+$O(\ee^{-x^{2/3}/(4t)})$. This is smaller than the required power.
+
+On $|v|\le V$, insert~\eqref{eq:initial-RS} at the fixed $N$.
+The local initial error integrates to $O(E_ox^{-3/4})$: calibration
+bounds its two gamma weights by
+$C_{b,V}|M(w_\pm)|\ee^{\pm vL_x/2}$, and both Gaussian moments equal
+$\ee^{tL_x^2/16}$.
+
+For an individual exact-gamma mode, put
+$m_{\pm,n}=M(w_\pm)n^{-w_\pm}$ and $\alpha=M'/M$. Taylor's theorem
+on the fixed enlargement gives
+\[
+ m_{\pm,n}(z-2\ii v)
+ =m_{\pm,n}(z)\ee^{\pm v(\alpha(w_\pm)-\log n)}
+      (1+O_{b,V}(v^2/x)).
+\]
+The quadratic error is independent of $n$, since the mode's
+$-w_\pm\log n$ is linear. Set $d_n=\alpha(w_\pm)-\log n$.
+Then $|\Im d_n|\ll_b1$ and
+$|\Re d_n|\le L_x/2+O_b(x^{-1})$ for $n\le N$.
+The tilted real Gaussian has center $\pm t\Re d_n/2$ of magnitude
+at most $\mu_*$ and second moment $O_D(1)$; its bounded complex loss
+is $\ee^{t(\Im d_n)^2/4}$. Thus the local error is at most
+$O_D(x^{-1}|m_{\pm,n}\ee^{td_n^2/4}|)$.
+Completing each linear term to the whole line costs additionally
+\[
+ O\left(|m_{\pm,n}\ee^{td_n^2/4}|
+           \ee^{-(V-\mu_*)^2/(2t)}\right).
+\]
+Calibration replaces the completed mode, to relative $O_D(x^{-1})$,
+by
+\[
+ C_\pm(0,z)n^{-1/2}\ee^{\mp\ii z\log n/2}
+          \exp\left(\frac t4(b_\pm-\log n)^2\right).
+\]
+The exponential change costs $O(t(1+L_x)/x)=O_D(x^{-1})$.
+
+All these errors can be summed. The heat weight after division by
+the corresponding $C_\pm(t,z)$ has modulus at most one, since
+$\log n\le L_x/2\le\Re L(z)$ at the chosen onset.
+For $y\ge0$, the dominant population is bounded by
+$\sum_{n\le N}n^{-(1+y)/2}\ll x^{1/4}$.
+The other population, with carrier ratio $O_b(x^{-y/2})$, is
+$O_b(x^{-y/2}N^{(1+y)/2})\ll_b x^{1/4}$.
+Conjugation treats $y<0$. Hence the absolute population is
+$O_D(E_ox^{1/4})$; all local Taylor and calibration errors cost
+$O_D(E_ox^{-3/4})$. Since $V-\mu_*\ge V/2$,
+\eqref{eq:window-choice} pays the entire artificial Gaussian exterior
+even after multiplication by $x^{1/4}$.
+
+Finally write $\mathcal R_N=(-1)^N\mathcal G f_N$.
+On the fixed enlargement,
+\[
+ \mathcal G'/\mathcal G=-\pi/8+O(x^{-1}),\qquad
+ f_N=O(x^{-1/4}),\qquad f_N'=O(x^{-3/4}),
+\]
+uniformly in the fractional cutoff. The removable quotient and
+$a'(z)=O(x^{-1/2})$ prove the last two bounds. Therefore
+\[
+ \mathcal R_N(z-2\ii v)=\ee^{\ii\pi v/4}\mathcal R_N(z)
+     +O(|\mathcal G(z)|x^{-3/4}|v|\ee^{C_{b,V}|v|})
+\]
+on $|v|\le V$. The error has bounded Gaussian average, while the
+completed linear phase has average $\ee^{-\pi^2t/64}$.
+Its artificial exterior is paid by the same window. We never divide
+by the correction, which can vanish. This proves~\eqref{eq:provider};
+at $t=0$, use~\eqref{eq:initial-RS} directly.
+\end{proof}
+
+Every gate in this proof is eventual after the constants are fixed:
+$x^{1/3}\ge V$, the initial enlarged-chart onsets, sectorial calibration,
+and inequalities such as $C_{b,V}V^2/x\le1/2$.
+The source notes~\cite{BB06,BB12} retain their full initial-chart ledger.
+The present extension concerns values at nonnegative time only.
+
+\subsection{The exact arithmetic decomposition}
+
+At an evaluation point $z=x+\ii y$, recenter the chart at its real
+coordinate $x$ and put $N=\lfloor\ee^{L_x/2}\rfloor$.
+Write $L(z)=\ell_z+\ii\beta_z$ and $s_t=\sigma-\ii\tau_D$. Expanding
+the cosine in~\eqref{eq:provider} gives
+\begin{equation}\label{eq:four-terms}
+ \frac{H_t}{C_-}=D_N+R_N+Q_N^{\rm corr}+E_N,
+\end{equation}
+where
+\begin{align*}
+ D_N&=\sum_{n\le N} a_D(n)n^{\ii\tau_D},&
+ a_D(u)&=u^{-\sigma}\ee^{t(\log u)^2/4},\\
+ R_N&=\ee^{2\ii\Theta}\sum_{n\le N}a_R(n)n^{-\ii\tau_R},&
+ a_R(u)&=u^{(y-1)/2}\ee^{t((\log u)^2-\ell_z\log u)/4},\\
+ \sigma&=(1+y)/2+t\ell_z/4,&
+ \tau_D&=x/2+\pi t/8-t\beta_z/4,\\
+ \tau_R&=x/2+\pi t/8+t\beta_z/4,&
+ Q_N^{\rm corr}&=\ee^{-\pi^2t/64}\mathcal R_N/C_-.
+\end{align*}
+Here $E_N=\mathcal E_N/C_-$. The small complex-logarithm corrections
+are retained in both exact frequencies. Since
+$\Theta_z=L(z)/4+\pi t/(16z)$, integration vertically from the real
+axis gives, for $y\ge0$,
+\begin{equation}\label{eq:ratio-correction}
+ |C_+/C_-|\le\ee^{-yL_x/2},\qquad
+ Q_N^{\rm corr}=O(x^{-(1+y)/4}),\qquad
+ E_N=O_D(x^{-3/4})(1+O(x^{-y/2})).
+\end{equation}
+For the correction use $\mathcal G\asymp\mathcal A(0,z)/2$,
+$a^{-1/2}\mathcal C(a-N)=O(x^{-1/4})$ and
+$|\mathcal A(0,z)/\mathcal A(t,z)|\le1$ at large $L_x$.
+No floor is differentiated. At a cutoff threshold, the estimates from
+the two charts both compare with the same entire field at the same time.
