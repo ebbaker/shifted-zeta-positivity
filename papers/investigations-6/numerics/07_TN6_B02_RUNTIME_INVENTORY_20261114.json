@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-14",
+  "timezone": "America/New_York",
+  "intended_author": "Edward Baker",
+  "assistance": "OpenAI Codex LLM",
+  "inventory_worker_dispatch": {
+    "model": "gpt-6.1-sol",
+    "effort": "ultra"
+  },
+  "independent_backend_verification": "unavailable",
+  "scope": "Read-only implementation/runtime inventory and minimal API probes; no theta numerical campaign or certificate",
+  "interpreter_observed": "/Users/ebbaker/.codex/.chatgpt-projects/g-p-6a90684bbcb881918a5a1f5740bfbc65/work/sonin-enclosure-20260929/venv/bin/python",
+  "versions": {
+    "Python": "3.12.14",
+    "python-flint": "0.9.0",
+    "FLINT": "3.6.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "mpmath": "1.4.1"
+  },
+  "default_python": "3.10; python-flint unavailable",
+  "capabilities": [
+    "acb.integral with tolerances and work ceilings",
+    "arb_mat det/solve/exp/charpoly",
+    "acb_mat exp/eig"
+  ],
+  "cautions": [
+    "arb.integral absent",
+    "Real-ball integer power at zero-centered inputs can yield NaN; use suitable multiplication or Acb integer power",
+    "arb_poly real_roots/roots exposed but not implemented in observed version",
+    "Matrix solve/eig approximate algorithm modes provide no interval guarantee",
+    "Integration accuracy must be judged by returned ball, not tolerance request"
+  ],
+  "closest_source": "papers/investigations-5/05_radial_theta_collision_geometry/numerics/fixed_coefficient_parameter_geometry/execute_fcg_e01_r1.py",
+  "source_scope": "Same complete theta source; prior saved jets through17 at lambda1/4 and selected positive moments at different weight. TN6 degree32 and base lambda1/2 need new guards and validation.",
+  "additional_references": [
+    "papers/investigations-3/11_arithmetic_collision_rigidity/numerics/certify_shifted_theta_jet.py",
+    "papers/investigations-3/07_source_measurement_audit/numerics/round-1/certify_evaluation.py"
+  ],
+  "unavailable": "No existing certified complete theta Jacobi coefficient/benchmark implementation located",
+  "reusability": "Interpreter path records this execution environment; reusable scripts must not require this personal path. Use an explicit Python invocation with the documented dependencies."
+}

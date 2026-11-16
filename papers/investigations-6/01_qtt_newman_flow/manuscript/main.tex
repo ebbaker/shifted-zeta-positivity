@@ -1,0 +1,510 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,microtype,booktabs}
+\usepackage[hidelinks]{hyperref}
+\allowdisplaybreaks[2]
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\e}{\mathrm e}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\R}{\mathbb R}
+\newcommand{\bits}{\{0,1\}^L}
+\newcommand{\boxD}{\mathcal D}
+
+\title{A quantics tensor train for the Newman heat flow\\
+       \large Rank and observation error on a fixed complex box}
+\author{Edward Baker}
+\date{14 November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We bound the tensor-train ranks needed to approximate a finite source
+state for the de Bruijn--Newman heat flow. The construction uses the
+complete theta source, a Chebyshev approximation at the initial time,
+and a Taylor polynomial for the heat multiplier. On
+\(0\le\lambda\le1/2\), \(40\le\operatorname{Re} z\le80\),
+\(\lvert\operatorname{Im} z\rvert\le8\), a 72-bit midpoint
+discretization has a polynomial replacement with bond dimensions at most
+\(641\). Its exact cosine contraction approximates the continuum
+field in an explicitly scaled absolute norm with error below \(2^{-36}\).
+The scalar integral of the same polynomial satisfies the same bound
+with the midpoint contribution removed. The construction uses exact
+coefficients and contractions.
+\end{abstract}
+
+\section{Introduction}
+
+In the source coordinate \(u\), heat evolution is multiplication by a
+Gaussian. Observation of the resulting field involves an oscillatory
+integral, in which a positive source can undergo substantial cancellation.
+A useful approximation statement must therefore control the scalar
+observation as well as the source representation. We use the reversed
+time \(\tau=1/2-\lambda\) and the scaled absolute error
+\[
+ \|E\|_{S,\boxD}=\sup_{(\lambda,z)\in\boxD}S(x)|E_\lambda(z)|,
+ \qquad
+ S(x)=\frac{\exp(\pi x/8)}{(1+x)^{7/4}},
+ \qquad x=\operatorname{Re}z,
+\]
+where \(\boxD\) is the box in the abstract. Stirling's formula
+\cite[Eq.~5.11.9]{dlmf} gives the scale \(x^{7/4}\exp(-\pi x/8)\)
+for the prefactor of \(\zeta\) in the time-zero real-axis formula
+derived below, motivating the reciprocal scale \(S(x)\). The error is
+defined at zeros and uses the same real scale at each time and offset.
+
+Binary indexing permits a sampled polynomial to be evaluated by a
+chain of small matrices. Lindsey's interpolation construction gives
+polynomial exactness for quantics tensor trains \cite[\S4.1]{lindsey}.
+Here we use a direct polynomial translation formula and derive explicit
+constants for the complete theta source. The tensor format represents
+the midpoint state, and comparison with the exact integral of the same
+polynomial isolates the cost in error of passing to that state.
+The proofs below require source analyticity on a specified ellipse,
+uniform bounds for the complete source and heat multiplier, and the
+literal cosine observation.
+
+\section{The complete source and analytic bounds}
+\label{sec:source}
+
+Write \(r_n(v)=\pi n^2\e^{4v}\). The source and its heat weight are
+\begin{equation}
+ \Phi(u)=\e^u\sum_{n\ge1}(2r_n(u)^2-3r_n(u))\e^{-r_n(u)},
+ \qquad W_\lambda(u)=\e^{\lambda u^2}\Phi(u).
+ \label{eq:source}
+\end{equation}
+For the reflection, let
+\(\vartheta(t)=\sum_{n\in\mathbb Z}\e^{-\pi n^2t}\) for \(t>0\) and
+\(p(u)=\e^u(\vartheta(\e^{4u})-1)/2\). The Jacobi transform
+\(\vartheta(t)=t^{-1/2}\vartheta(1/t)\) follows by setting the theta
+argument to zero and the lattice parameter to \(\ii t\) in
+\cite[Eqs.~20.2.3 and 20.7.32]{dlmf}. It gives
+\(p(-u)-p(u)=\sinh u\), so \(p'(0)=-1/2\). Differentiating twice,
+term by term on compact real intervals, gives \((p''-p)/8=\Phi\).
+The relation for \(p\) then implies evenness of the complete source.
+Since each summand in \eqref{eq:source} is positive on \(u\ge0\),
+\(\Phi\) is positive on the full line. The field is
+\begin{equation}
+ H_\lambda(z)=\frac12\int_{\R}W_\lambda(u)\e^{\ii zu}\,\dd u
+             =\int_0^\infty W_\lambda(u)\cos(zu)\,\dd u.
+ \label{eq:field}
+\end{equation}
+The weights in \eqref{eq:field} retain the total mass of the source.
+
+For the normalization at \(\lambda=0\), put \(s=(1-\ii z)/2\) and
+\(J(z)=\int_0^\infty p(u)\cos(zu)\,\dd u\).
+For \(\operatorname{Re}s>1\), termwise Mellin integration gives
+\[
+ \pi^{-s/2}\Gamma(s/2)\zeta(s)
+  =\int_0^\infty \frac{\vartheta(t)-1}{2}\,t^{s/2-1}\,\dd t.
+\]
+Splitting at \(1\) and using theta reflection below \(1\) gives the
+sum of \(1/[s(s-1)]\) and
+\[
+ \int_1^\infty \frac{\vartheta(t)-1}{2}
+       \bigl(t^{s/2-1}+t^{(1-s)/2-1}\bigr)\,\dd t=8J(z).
+\]
+The last identity uses \(t=\e^{4u}\). Multiplying by \(s(s-1)/2\)
+continues the completed function \(\xi(s)\) to all \(s\). Two integrations
+by parts, with \(p'(0)=-1/2\), give \(8H_0(z)=1/2-(1+z^2)J(z)=\xi(s)\).
+All integrals over the positive \(u\) tail in this calculation converge
+by the double exponential from \(r_n\).
+
+Let \(R\) be the complex rectangle with
+\[
+  -1/16\le\operatorname{Re}v\le33/16,\qquad
+  |\operatorname{Im}v|\le9/40 .
+\]
+We use this rectangle both for approximation on \([0,2]\) and for
+estimates on the second derivative in midpoint quadrature.
+
+\begin{lemma}[Complex source and integrand bounds]
+\label{lem:complex}
+The series for \(W_\lambda\) is holomorphic on a neighborhood of \(R\)
+and \(\sup_R |W_\lambda|\le 2^{15}\) for \(0\le\lambda\le1/2\). On
+\(\boxD\times[0,2]\),
+\[
+ \left|\frac{\dd^2}{\dd u^2}\bigl(W_\lambda(u)\cos(zu)\bigr)\right|
+ \le M_2,\qquad M_2=2^{57}.
+\]
+\end{lemma}
+\begin{proof}
+For \(v\in R\) set \(t=|r_n(v)|\). Then
+\(t/n^2\ge\pi\e^{-1/4}>2\) and
+\(\operatorname{Re}r_n(v)=t\cos(4\operatorname{Im}v)>t/2\).
+The second bound uses \(\cos a\ge1-a^2/2\) for \(|a|\le9/10\).
+Maximizing \(t^2\e^{-t/4}\) and \(t\e^{-t/4}\) on \(t\ge0\) gives
+\[
+ |(2r_n(v)^2-3r_n(v))\e^{-r_n(v)}|
+ \le (2t^2+3t)\e^{-t/2}
+ \le (128/\e^2+12/\e)\e^{-t/4}<38\e^{-n^2/2}.
+\]
+The strict margins in the bounds for \(t/n^2\) and
+\(\operatorname{Re}r_n/t\) persist on an enlarged rectangle,
+so the series converges normally there. Also
+\(\sum_{n\ge1}\e^{-n^2/2}\le 1/(\e^{1/2}-1)\le2\).
+On \(R\), the prefactor in \eqref{eq:source} has
+modulus at most \(\exp(33/16+(33/16)^2/2)<\e^5<2^8\).
+Here and below \(\e^2<8\) follows from \(\e<11/4\), obtained by
+bounding the exponential series tail from \(1/3!\) by a geometric series
+of ratio \(1/4\). Thus \(76\cdot2^8<2^{15}\) bounds the complete
+source on \(R\).
+
+For \(u\in[0,2]\) the circle \(|v-u|=1/16\) lies in \(R\), and
+\(|\operatorname{Im}(zv)|\le80/16+8(33/16)<22\).
+Using \(|\cos(zv)|\le \exp(|\operatorname{Im}(zv)|)<2^{33}\),
+Cauchy's derivative formula gives \(M_2=2!\,16^2\cdot2^{15+33}\).
+\end{proof}
+
+\begin{lemma}[Continuum tail and scale]
+\label{lem:tail}
+With \(S_*=\max_{x\in[40,80]}S(x)\) and
+\(T=\int_2^\infty \e^{8u}W_{1/2}(u)\,\dd u\), we have
+\[
+ T<2^{-192},\qquad S_*\le2^{48}.
+\]
+In particular the tail of \eqref{eq:field} beyond \(2\) is at most \(T\)
+in absolute value on \(\boxD\).
+\end{lemma}
+\begin{proof}
+Set \(r=\pi\e^{4u}\) for real \(u\ge0\). The inequalities
+\(\log n\le n-1\) and \(\pi(n^2-1)\ge6(n-1)\) give
+\(n^4\e^{-\pi(n^2-1)}\le \e^{-2(n-1)}\).
+Since \(r\ge\pi\), summing \eqref{eq:source} with
+\(2r_n^2-3r_n\le2n^4r^2\) then gives
+\[
+ W_{1/2}(u)\le4\e^{u^2/2+u}r^2\e^{-r}.
+\]
+For \(u\ge2\),
+\[
+ u^2/2+9u+2\log r
+ <u^2/2+17u+4
+ \le \tfrac32\e^{4u}<r/2.
+\]
+For the middle inequality,
+\(\tfrac32\e^{4u}\ge\tfrac32+6u+12u^2+16u^3\), whose cubic
+lower bound exceeds \(u^2/2+17u+4\) for \(u\ge2\).
+Thus the substitution \(s=r\), \(\dd u=\dd s/(4s)\), gives
+\[
+ T\le\int_{\pi\e^8}^{\infty}\e^{-s/2}\frac{\dd s}{s}
+ \le\frac{2}{\pi\e^8}\e^{-\pi\e^8/2}<2^{-192}.
+\]
+For the last step \(\pi\e^8/2>(3/2)2^8>192\).
+Because \(W_\lambda\le W_{1/2}\) and
+\(|\cos(zu)|\le\e^{8u}\) on \(\boxD\), this bound applies to the
+complex observation. Finally \(S_*\le\e^{10\pi}<\e^{32}<2^{48}\).
+\end{proof}
+
+The real-axis bound in the last proof, with the Gaussian factor removed,
+dominates \(\Phi\) by a constant times
+\(\e^{|u|}(\pi\e^{4|u|})^2\exp(-\pi\e^{4|u|})\).
+Even after multiplication by a fixed power of \(|u|\) and by
+\(\e^{A u^2+B|u|}\) for fixed \(A,B\ge0\), the result is integrable.
+This gives local uniform majorants for \eqref{eq:field} and its partial
+derivatives in \(\lambda,z\), so
+\(\partial_\lambda H_\lambda=-\partial_z^2 H_\lambda\).
+In time \(\tau=1/2-\lambda\), the observation obeys the forward heat
+equation and the source satisfies \(W_\lambda(u)=\e^{-\tau u^2}W_{1/2}(u)\).
+
+\section{A polynomial approximation to the heat orbit}
+\label{sec:polynomial}
+
+Let \(T_k\) be the Chebyshev polynomial determined by
+\(T_k(\cos\theta)=\cos(k\theta)\).
+Take \(\rho=5/4\) and \(G(w)=W_{1/2}(1+(w+w^{-1})/2)\).
+For \(|w|=\rho\), the image ellipse has horizontal extent
+\([-1/40,81/40]\) and imaginary semiaxis \(9/40\). The images
+of all circles \(\rho^{-1}\le |w|\le\rho\) lie inside this
+closed ellipse. By Lemma~\ref{lem:complex}, \(G\) has a Laurent series
+on an open annulus containing these circles. If \(b_k\) are its
+coefficients, symmetry \(G(w)=G(w^{-1})\) gives \(b_{-k}=b_k\);
+Cauchy's formula on \(|w|=\rho\) gives
+\(|b_k|\le M_\rho\rho^{-k}\) for \(k\ge0\), with \(M_\rho=2^{15}\).
+Hence on \([0,2]\) the series is
+\(b_0+2\sum_{k\ge1}b_kT_k(u-1)\). Define \(p_d\) by
+truncating that sum at \(k=d\). The coefficients refer to the
+complete source in \eqref{eq:source}, and the geometric tail gives
+\[
+ \|W_{1/2}-p_d\|_{\infty,[0,2]}\le
+ \epsilon_d=\frac{2M_\rho\rho^{-d}}{\rho-1}.
+\]
+
+For \(0\le\tau\le1/2\), let
+\[
+ q_m(\tau,u)=\sum_{j=0}^m\frac{(-\tau u^2)^j}{j!},
+ \qquad P_\tau(u)=p_d(u)q_m(\tau,u).
+\]
+Taylor's theorem for \(a\mapsto\e^{-a}\), whose derivatives have modulus
+at most one on \(0\le a\le2\), gives
+\(\|\e^{-\tau u^2}-q_m(\tau,u)\|_{\infty,[0,2]}\le E_m=2^{m+1}/(m+1)!\).
+Multiplying the two approximations and writing their error as
+\((W_{1/2}-p_d)\e^{-\tau u^2}+p_d(\e^{-\tau u^2}-q_m)\) yields
+\begin{equation}
+ \|W_\lambda-P_\tau\|_{\infty,[0,2]}\le
+ \delta=\epsilon_d+(M_0+\epsilon_d)E_m,\qquad M_0=2^{15}.
+ \label{eq:delta}
+\end{equation}
+Here \(M_0\) bounds \(W_{1/2}\) on \([0,2]\); the degree of \(P_\tau\)
+is at most \(D_p=d+2m\).
+
+\section{Binary states, the heat operator, and the readout}
+\label{sec:tensors}
+
+Take \(2^L\) cells on \([0,2]\) with width \(h=2/2^L\). Use bits
+\(\boldsymbol b=(b_1,\dots,b_L)\in\bits\), in order from coarse
+to fine. The midpoint is \(u_{\boldsymbol b}=a+\sum_{k=1}^L c_k b_k\),
+where \(a=h/2\) and \(c_k=h2^{L-k}\).
+The sampled state has amplitudes \(\sqrt h\,W_\lambda(u_{\boldsymbol b})\).
+Since \(h\,2^L=2\), replacing these amplitudes by
+\(\sqrt h\,P_\tau(u_{\boldsymbol b})\) gives a state error of at most
+\(\sqrt{2}\,\delta\) in Euclidean norm by \eqref{eq:delta}.
+A quantics tensor train (QTT) for any such array is a factorization
+whose \(\boldsymbol b\)-entry is a scalar product of matrices
+\(A_1(b_1)\cdots A_L(b_L)\). The first row and last column dimensions
+are one; the intermediate dimensions bound the ranks across the
+corresponding bit cuts.
+
+\subsection{Translation gives exact polynomial cores}
+
+Let \(v(u)=(1,u,\ldots,u^{D_p})^{\mathsf T}\).
+For \(0\le j,k\le D_p\), set \(B(t)_{jk}=\binom jk t^{j-k}\)
+if \(k\le j\) and \(0\) otherwise, with diagonal entries one.
+The binomial theorem gives \(B(t)v(u)=v(u+t)\). If
+\(\boldsymbol p_\tau\) is the row of monomial coefficients of \(P_\tau\),
+successive translations give
+\[
+ \sqrt h\,P_\tau(u_{\boldsymbol b})
+   =\sqrt h\,\boldsymbol p_\tau
+     B(c_Lb_L)\cdots B(c_1b_1)v(a).
+\]
+Transposing the scalar puts the cores \(B(c_kb_k)^{\mathsf T}\)
+in coarse-to-fine order. The initial row \(\sqrt h\,v(a)^{\mathsf T}\)
+and final column \(\boldsymbol p_\tau^{\mathsf T}\) can be folded into
+the first and last cores. Thus every internal bond has dimension
+at most \(D_p+1\), irrespective of \(L\).
+
+\subsection{Generator and finite-time multiplier}
+
+On the finite bit space let \(N_k\) be multiplication by \(b_k\) at
+site \(k\), \(X=aI+\sum_k c_kN_k\), and \(K=X^2\).
+The exact state evolves by \(\partial_\tau\psi=-K\psi\).
+The generator has a representation as a product of operator-valued
+cores of bond dimension at most three,
+\[
+ K=(1,2a,a^2)\prod_{k=1}^{L}
+      \begin{pmatrix}
+       I_k&2c_kN_k&c_k^2N_k\\
+       0&I_k&c_kN_k\\
+       0&0&I_k
+      \end{pmatrix}
+       \begin{pmatrix}0\\0\\1\end{pmatrix}.
+\]
+Here products of entries on different sites are tensor products and
+\(I_k\) denotes the local identity. On the bit basis the running row
+\((1,2s,s^2)\) updates to \((1,2(s+c_k b_k),(s+c_k b_k)^2)\).
+This proves the representation. Equivalently,
+\[
+ K=a^2I+\sum_k(2ac_k+c_k^2)N_k
+    +2\sum_{j<k}c_jc_kN_jN_k.
+\]
+The terms commute, so \(\e^{-\tau K}\) factors exactly into their
+exponentials. In the polynomial construction \(q_m(\tau,X)\) acts
+diagonally on the state sampled from \(p_d\), and
+\(\|\e^{-\tau K}-q_m(\tau,X)\|_{2\to2}\le E_m\) by the scalar
+heat bound.
+
+There is a different rank behavior for the exact heat multiplier
+when \(\tau>0\). At a cut after site \(k\), write the midpoint index as
+\(pM+q\), with \(M=2^{L-k}\), \(0\le p<2^k\), \(0\le q<M\), and
+write \(\alpha_p=a+hMp\). The array of multiplier values has entries
+\[
+ \e^{-\tau(\alpha_p+hq)^2}
+ =\e^{-\tau\alpha_p^2}\e^{-\tau h^2q^2}
+    \bigl(\e^{-2\tau h\alpha_p}\bigr)^q .
+\]
+Removing the nonzero row and column factors gives a Vandermonde
+matrix with distinct nodes. The first \(r=\min(2^k,M)\) rows and
+columns have nonzero determinant, so the array has rank \(r\) across
+the cut. This rank is for the exact multiplier in the stated bit
+ordering. The error bound for the sampled state instead uses the
+polynomial degree and the uniform Taylor remainder.
+
+\subsection{The cosine contraction}
+
+Each exponential \(\e^{\pm\ii z u_{\boldsymbol b}}\) is the product
+\(\e^{\pm\ii za}\prod_k\e^{\pm\ii z c_k b_k}\). For a train with cores
+\(A_k(b_k)\), the two contractions are
+\begin{equation}
+ \sqrt h\,\e^{\pm\ii za}
+     \prod_{k=1}^{L}\bigl(A_k(0)+\e^{\pm\ii z c_k}A_k(1)\bigr).
+ \label{eq:readout}
+\end{equation}
+For the polynomial state their half-sum is
+\begin{equation}
+ Q_{\lambda,L}(z)
+ =h\sum_{\boldsymbol b\in\bits}P_\tau(u_{\boldsymbol b})
+                               \cos(zu_{\boldsymbol b}).
+ \label{eq:Q}
+\end{equation}
+The first \(\sqrt h\) belongs to the state and the second to the
+observation. The half-sum implements the cosine on the positive
+half-line, where the full-line Fourier factor \(1/2\) is already
+accounted for by reflection. Formula \eqref{eq:readout} defines the
+contraction without forming the dense array.
+
+\section{Fixed-box rank and observation error}
+\label{sec:theorem}
+
+\begin{theorem}
+Take \(d=512\), \(m=64\), and \(L=72\) in the construction above.
+The polynomial midpoint state has QTT ranks at most \(641\) and
+\[
+ \|H-Q_{\cdot,L}\|_{S,\boxD}<2^{-36}.
+\]
+The scalar polynomial integral
+\(I_\lambda(z)=\int_0^2P_\tau(u)\cos(zu)\,\dd u\)
+satisfies the same bound with the midpoint contribution deleted.
+\end{theorem}
+\begin{proof}
+The rank bound is \(512+2\cdot64+1\) by the translation construction.
+Let \(f(u)=W_\lambda(u)\cos(zu)\). The integrated Taylor remainder
+on a cell centered at \(u_{\boldsymbol b}\) has absolute value
+at most \(M_2h^3/24\): the linear term integrates to zero, and the
+pointwise remainder is bounded by
+\(M_2|u-u_{\boldsymbol b}|^2/2\).
+Summing over \(2/h\) cells bounds the quadrature error for the
+complete integrand by \(2h^2M_2/24\). At the nodes,
+\eqref{eq:delta} and \(|\cos(zu_{\boldsymbol b})|\le\e^{16}\)
+bound the error from replacement by the polynomial by \(2\e^{16}\delta\).
+Adding the tail of Lemma~\ref{lem:tail} then gives
+\begin{equation}
+ \|H-Q_{\cdot,L}\|_{S,\boxD}
+ \le S_*\left(T+\frac{2h^2}{24}M_2+2\e^{16}\delta\right).
+ \label{eq:transfer}
+\end{equation}
+
+The inequalities \((4/5)^4<1/2\) and
+\(65!\ge2^{270}\) imply \(\epsilon_d<2^{-110}\),
+\(E_m\le2^{-205}\). For the factorial bound, replace each factor by
+the greatest power of two below or equal to it. The blocks
+\(2\)--\(3\), \(4\)--\(7\), \(8\)--\(15\), \(16\)--\(31\),
+\(32\)--\(63\), and \(64\)--\(65\) contribute exponents
+\(2,8,24,64,160,12\), respectively. Also
+\(2\e^{16}<2^{25}\), \(M_0+\epsilon_d<2^{16}\) and \(h=2^{-71}\).
+With \(S_*\le 2^{48}\), the contributions in \eqref{eq:transfer} obey
+\[
+ \begin{array}{lr}
+ \toprule
+ \text{Contribution after scaling} & \text{Upper bound}\\
+ \midrule
+ \text{Tail beyond }u=2 & 2^{-144}\\
+ \text{Midpoint quadrature for }f & 2^{-40}\\
+ \text{Chebyshev source approximation} & 2^{-37}\\
+ \text{Taylor heat approximation} & 2^{-116}\\
+ \bottomrule
+ \end{array}
+\]
+Their sum is below \(2^{-36}<10^{-8}\).
+
+For \(I_\lambda\), comparison under the integral uses
+\eqref{eq:delta} and the same bound on the cosine. Thus
+\(\|H-I\|_{S,\boxD}\le S_*(T+2\e^{16}\delta)\).
+This scalar baseline needs the same polynomial coefficients.
+For \(z\ne0\), each exponential integral can, for example, be
+defined by the finite identity
+\[
+ \int_0^2 P_\tau(u)\e^{\zeta u}\,\dd u
+  =\left[\e^{\zeta u}\sum_{j=0}^{D_p}
+                 \frac{(-1)^j P_\tau^{(j)}(u)}{\zeta^{j+1}}\right]_{u=0}^{2},
+ \qquad \zeta=\pm\ii z .
+\]
+Differentiation telescopes because \(P_\tau^{(D_p+1)}=0\);
+the half-sum of the two identities gives \(I_\lambda\).
+\end{proof}
+
+\section{Outstanding challenges}
+\label{sec:challenges}
+
+\paragraph{Coefficient acquisition and contraction.}
+A computed version requires enclosures for the complete-source
+coefficients, a stable choice of cores, and a bound for arithmetic
+error in the oscillatory contraction. The theorem specifies exact
+coefficients and exact arithmetic. Suppose initial node errors have
+modulus at most \(e_{\rm node}\) in the unweighted polynomial values,
+subsequent tensor compression has Euclidean error \(e_{\rm TT}\)
+relative to that already perturbed weighted state, and the final
+readout has additional scalar error at most \(e_{\rm out}\).
+Their extra contribution to the scaled observation error is
+bounded by
+\[
+ S_*\bigl(2\e^{16}e_{\rm node}
+           +\sqrt{2}\,\e^{16}e_{\rm TT}+e_{\rm out}\bigr).
+\]
+The first transfer sums \(h\) times the uniform node error against
+the cosine; the second uses Cauchy--Schwarz and
+\(\sum_{\boldsymbol b}h|\cos(zu_{\boldsymbol b})|^2\le2\e^{32}\).
+With \(\eta=10^{-8}/4\), sufficient budgets are respectively
+\(\eta/2^{73}\), \(\eta/2^{73}\), and \(\eta/2^{48}\), because the
+exact allowance is below \(\eta\).
+For a differentiable approximate state \(\psi_{\rm a}\) evolved in
+time by another method, the extra state error can be controlled
+using \(r=\partial_\tau\psi_{\rm a}+K\psi_{\rm a}\).
+Variation of constants gives the initial error propagated by
+\(\e^{-\tau K}\) plus
+\(\int_0^\tau\e^{-(\tau-s)K}r(s)\,\dd s\).
+The propagator is contractive since its eigenvalues are
+\(\e^{-\tau u_{\boldsymbol b}^2}\); hence the residual contribution
+is at most \(\int_0^\tau\|r(s)\|_2\,\dd s\).
+Demonstrating working precision and comparing total cost to the
+scalar baseline require paying for acquisition and arithmetic in
+both representations.
+
+\paragraph{Growing heights.}
+The constants in \eqref{eq:transfer} use a fixed upper height.
+The Cauchy circle bound on the cosine increases with
+\(|\operatorname{Re}z|\), and \(S(x)\) grows exponentially there.
+Extending the argument requires a family of cutoffs, degrees
+and bit depths with a quantitative error budget, including the
+complete tail on the required scale. Even for the fixed box the
+rank cap is a constructive upper bound. Determining smaller
+ranks at specified precision, and their growth with the height,
+remains a separate approximation problem.
+
+\paragraph{Signed observations.}
+The compact theorem controls the absolute error of the field.
+A sign inference at a real point would require a lower bound on
+the relevant scalar margin. Ratios and logarithms would additionally
+require control near their zeros or denominators. Rank alone
+cannot supply such a margin. For instance, the two-bit source with
+coordinate \(u=b_1+b_2-1\) and amplitudes
+\(\e^{\lambda-T_0},1,1,\e^{\lambda-T_0}\) gives the Fourier
+contraction \(F_\lambda(z)=2+2\e^{\lambda-T_0}\cos z\).
+It obeys \(\partial_\lambda F_\lambda=-\partial_z^2F_\lambda\).
+At \(T_0=1/4\) and \(z=17\pi\) the state is a product with all
+amplitudes one, while \(F_{T_0}=F_{T_0}'=0\) and \(F_{T_0}''=2\).
+This atomic example has a positive source and a rank-one collision
+at time and height coordinates inside \(\boxD\). The quantitative
+bounds here use a different premise, the complete analytic theta
+density in \eqref{eq:source}.
+
+\paragraph{Acknowledgment.}
+This draft was prepared with substantial OpenAI Codex LLM assistance.
+The recorded drafting dispatch was GPT-6.1 Sol at Ultra reasoning effort.
+Separate backend attestation is unavailable.
+
+\begin{thebibliography}{9}
+\bibitem{dlmf}
+NIST Digital Library of Mathematical Functions,
+\href{https://dlmf.nist.gov/5.11.E9}{Eq.~5.11.9},
+\href{https://dlmf.nist.gov/20.2.E3}{Eq.~20.2.3}, and
+\href{https://dlmf.nist.gov/20.7.E32}{Eq.~20.7.32}.
+
+\bibitem{lindsey}
+M.~Lindsey, \emph{Multiscale interpolative construction of quantized
+tensor trains}, \href{https://arxiv.org/html/2311.12554v3}
+{arXiv:2311.12554v3}, 2024.
+\end{thebibliography}
+\end{document}

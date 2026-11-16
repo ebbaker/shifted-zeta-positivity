@@ -5,6 +5,8 @@ OpenAI Codex LLM assistance. Actual backend model and reasoning effort are
 unavailable in this chat's recorded model configurations.
 
 References for the [MPS brainstorm](../01_MPS_NEWMAN_FLOW_20261113.md).
+Additional [exact-height and chain-mapping records](EXACT_HEIGHT_REFERENCES_20261113.md)
+support the later brainstorm in the same conversation.
 This is a targeted source check, not a literature-completeness or novelty claim.
 Reading copies belong outside the repository under the
 [reference policy](../../../../REFERENCE_WORKFLOW.md).

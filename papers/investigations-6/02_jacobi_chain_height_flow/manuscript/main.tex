@@ -1,0 +1,712 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage[hidelinks,pdfusetitle]{hyperref}
+
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\DeclareMathOperator{\arcosh}{arcosh}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\ee}{\mathrm e}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+
+\title{The Fixed Jacobi Chain for Newman Flow\\
+\large Spectral realization and finite-chain readout bounds}
+\author{Edward Baker}
+\date{14 November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The complete theta source at Newman time \(1/2\) defines a probability
+measure whose orthogonal polynomials realize multiplication as a
+self-adjoint Jacobi operator. Height and reversed Newman time act on
+one prepared state by the commuting multipliers \(\exp(\ii xJ_*)\)
+and \(\exp(-\tau J_*^2)\). The state admits an exact bond-two encoding
+on the one-excitation sector. Cutting the Jacobi matrix at \(N\) sites
+gives the \(N\)-node Gaussian quadrature for the same source. A Hermite
+remainder averaged over a real Gaussian bounds the normalized
+absolute scalar error by the monic norm times an explicit polynomial
+in \(\tau\) and \(x\). The complete-source score bounds the monic norm
+and yields a sufficient depth of order \(K\log(K+1)\), where
+\(K=X+\log(1/\epsilon)+1\) for heights \(|x|\le X\) and normalized
+absolute tolerance \(\epsilon\). We also derive an uncertainty bound
+for the finite matrix and illustrate it with an existing 16-site
+interval certificate.
+\end{abstract}
+
+\section{The complete theta source}\label{sec:source}
+
+The finite-chain approximation concerns a scalar observation of a
+fixed source. We first fix its physical normalization. Write
+\[
+ \vartheta(t)=\sum_{m\in\mathbb Z}\ee^{-\pi m^2t},\qquad
+ p(u)=\frac{\ee^u}{2}\bigl(\vartheta(\ee^{4u})-1\bigr),\qquad
+ r_m(u)=\pi m^2\ee^{4u}.
+\]
+The Jacobi transformation \(\vartheta(t)=t^{-1/2}\vartheta(1/t)\)
+for \(t>0\) \cite{theta} gives
+\[
+ p(-u)-p(u)=\sinh u,\qquad p'(0)=-\frac12.
+\]
+Define the amplitude and field by
+\begin{align}
+ \Phi(u)&=\frac{p''(u)-p(u)}8
+     =\ee^u\sum_{m\ge1}(2r_m(u)^2-3r_m(u))\ee^{-r_m(u)},
+       \label{eq:source}\\
+ W_\lambda(u)&=\ee^{\lambda u^2}\Phi(u),\qquad
+ H_\lambda(z)=\frac12\int_{\R}W_\lambda(u)\ee^{\ii zu}\dd u.
+       \label{eq:field}
+\end{align}
+The series is locally differentiable at every order. Applying
+\(\partial_u^2-1\) to the reflection relation proves that \(\Phi\)
+is even. Every summand is positive on \(u\ge0\), where \(r_m\ge\pi\);
+hence the complete \(\Phi\) is positive on \(\R\).
+
+\begin{lemma}[Domination]\label{lem:domination}
+Set \(\rho(u)=\pi\ee^{4|u|}\). For each integer \(j\ge0\) there is a
+finite constant \(C_j\) such that
+\[
+ |\Phi^{(j)}(u)|\le C_j \ee^{|u|}\rho(u)^{j+2}\ee^{-\rho(u)} .
+\]
+In particular, \(|\Phi^{(j)}(u)|\ee^{L u^2+b|u|}(1+|u|)^k\)
+is integrable and tends to zero at both ends for every fixed
+\(L,b,k\ge0\).
+\end{lemma}
+\begin{proof}
+On the positive half-line, the \(j\)-th differentiated summand is
+\(\ee^u Q_j(r_m)\ee^{-r_m}\), where \(Q_0(r)=2r^2-3r\) and
+\(Q_{j+1}=(1-4r)Q_j+4rQ_j'\). Its degree is \(j+2\).
+Since \(r_m=m^2\rho\) there, the absolute summand is bounded by
+\(\ee^u\rho^{j+2}\ee^{-\rho}\) times a constant depending on \(j\)
+times \(m^{2j+4}\ee^{-\pi(m^2-1)}\). This last sequence is summable.
+The series and its derivatives are also locally uniformly convergent
+on any compact interval of the full line, where \(r_m\ge c m^2\)
+for some \(c>0\). Evenness therefore extends the estimates with
+absolute values to the full line. After taking logarithms, all
+positive terms in the last claimed bound grow at most quadratically
+in \(|u|\), while \(\rho(u)\) grows exponentially. The resulting
+tail is bounded by a constant times \(\ee^{-\rho(u)/2}\).
+\end{proof}
+
+Evenness changes \eqref{eq:field} into a half-line cosine integral.
+To check the normalization, let
+\(I(z)=\int_0^\infty p(u)\cos(zu)\dd u\).
+The half-line series for \(p\) and \(p'\) have the same
+double-exponential domination used in Lemma~\ref{lem:domination}.
+Integration by parts twice gives
+\begin{equation}\label{eq:primitive}
+ 8H_0(z)=\frac12-(1+z^2)I(z).
+\end{equation}
+The constant arises from \(-p'(0)\). For \(\Re s>1\), integrating
+the series for \((\vartheta(t)-1)/2\) against \(t^{s/2-1}\) gives
+\(\pi^{-s/2}\Gamma(s/2)\zeta(s)\) by the gamma integral.
+Split at \(t=1\), apply the Jacobi transformation on \((0,1)\), and
+substitute \(t=1/v\) in the reflected term. The elementary terms
+integrate to \(1/(s-1)-1/s=1/[s(s-1)]\). Consequently
+\[
+ \xi(s)=\frac12+\frac{s(s-1)}2
+   \int_1^\infty\frac{\vartheta(t)-1}{2}
+     \left(t^{s/2-1}+t^{(1-s)/2-1}\right)\dd t,\qquad
+ \xi(s)=\frac{s(s-1)}2\pi^{-s/2}\Gamma(s/2)\zeta(s).
+\]
+The integral is entire in \(s\) by exponential decay at infinity.
+Under \(t=\ee^{4u}\) and \(s=(1-\ii z)/2\) it becomes \(8I(z)\).
+Using \(4s(s-1)=-(1+z^2)\) in \eqref{eq:primitive} proves
+\begin{equation}\label{eq:xi}
+ H_0(z)=\frac18\,\xi\!\left(\frac12-\frac{\ii z}{2}\right).
+\end{equation}
+Lemma~\ref{lem:domination} also allows differentiation under the
+integral on compact sets in \((\lambda,z)\in\C^2\).
+In particular \(\partial_\lambda H_\lambda=-\partial_z^2H_\lambda\).
+We work on \(0\le\lambda\le1/2\) and put \(\tau=1/2-\lambda\).
+
+\section{The fixed Jacobi operator and its orbit}\label{sec:operator}
+
+Set
+\[
+ W_*=W_{1/2},\qquad Z_*=\int_{\R}W_*(u)\dd u=2H_{1/2}(0),
+ \qquad \dd\mu_*(u)=Z_*^{-1}W_*(u)\dd u.
+\]
+Use the complex \(L^2(\mu_*)\) inner product linear in the second
+slot. Let \(X_{\rm mul}\) denote multiplication by \(u\) on
+\[
+ \mathcal D(X_{\rm mul})=\{f\in L^2(\mu_*):uf\in L^2(\mu_*)\}.
+\]
+This operator is self-adjoint. It is densely defined by bounded
+truncation, symmetric because \(u\) is real, and
+\(X_{\rm mul}\pm\ii\) are onto with bounded inverse multiplication by
+\(1/(u\pm\ii)\). Its spectral projections are multiplication by
+indicators of real Borel sets.
+
+\begin{lemma}[Polynomial basis and core]\label{lem:core}
+The real orthonormal polynomials \(p_n\) for \(\mu_*\), with positive
+leading coefficients and \(p_0=1\), form an orthonormal basis. Their
+finite span is a core for \(X_{\rm mul}\).
+\end{lemma}
+\begin{proof}
+All finite Gram matrices are positive definite by strict positivity
+of the density on \(\R\). To see the needed density, take either
+\(\nu=\mu_*\) or \(\nu=(1+u^2)\mu_*\). If \(g\in L^2(\nu)\) is
+orthogonal to all powers of \(u\), then
+\(F(z)=\int g(u)\ee^{\ii zu}\dd\nu(u)\) is entire by
+Cauchy--Schwarz and Lemma~\ref{lem:domination}, and all its Taylor
+coefficients at zero are zero. The measure \(g\dd\nu\) has an
+\(L^1(\R)\) density. Fourier uniqueness gives that this density
+vanishes. For this use, uniqueness follows by convolving with
+Gaussian densities. The Gaussian Fourier formula and Fubini give
+zero for every such convolution, and the Gaussians form an
+approximate identity in \(L^1\). Since \(\nu\) has positive density,
+\(g=0\). The second choice of \(\nu\) gives density in the graph
+norm \((\|f\|_2^2+\|X_{\rm mul}f\|_2^2)^{1/2}\), proving the core
+claim.
+\end{proof}
+
+Let \(P_n\) be the monic polynomials at the base slice, and write
+\(h_n^*=\int P_n^2\dd\mu_*\), so \(h_0^*=1\).
+Evenness gives \(P_n(-u)=(-1)^nP_n(u)\) by uniqueness.
+In the expansion of \(uP_n\) in the monic basis, the leading
+coefficient is one, the \(P_n\) coefficient vanishes by parity, and
+terms of degrees \(k\le n-2\) vanish since \(uP_k\) has degree at most
+\(n-1\). The coefficient of \(P_{n-1}\) is \(h_n^*/h_{n-1}^*\),
+by moving \(u\) onto \(P_{n-1}\) in the inner product. Thus
+\[
+ up_n=a_{n+1}p_{n+1}+a_np_{n-1},\qquad
+ a_n=\sqrt{h_n^*/h_{n-1}^*}>0\ (n\ge1),\qquad a_0=0.
+\]
+The \(n=0\) formula omits the second term. Under the unitary map
+\(\mathcal U:\ell^2(\mathbb N_0)\to L^2(\mu_*)\) with
+\(\mathcal U e_n=p_n\), define
+\[
+ J_*=\mathcal U^{-1}X_{\rm mul}\mathcal U,\qquad
+ \mathcal D(J_*)=\{v:\ u\mathcal Uv\in L^2(\mu_*)\}.
+\]
+On finite sequences \(J_*\) is tridiagonal, with zero diagonal and
+edge \(a_n\) between sites \(n-1\) and \(n\). The core proves that
+the closure of this finite-sequence action is the displayed
+self-adjoint operator. More generally the domain of \(J_*^m\) consists
+of \(v\) with \(u^m\mathcal Uv\in L^2(\mu_*)\). Orthogonal-polynomial
+chain mappings are familiar in reservoir theory \cite{chin}.
+Here the full-line density, which has unbounded support, determines
+the realization by Lemma~\ref{lem:core}.
+
+\begin{theorem}[Height and reversed time]\label{thm:orbit}
+For real \(x\) and \(0\le\tau\le1/2\), define
+\[
+ v(\tau,x)=\ee^{-\tau J_*^2}\ee^{\ii xJ_*}e_0 .
+\]
+Then \(H_{1/2-\tau}(x)=(Z_*/2)\ip{e_0}{v(\tau,x)}\).
+On the prepared state, \(\partial_xv=\ii J_*v\) and
+\(\partial_\tau v=-J_*^2v\). The corresponding readout extends to
+complex \(z\) by using the prepared vector for the multiplier
+\(\ee^{-\tau u^2+\ii zu}\).
+\end{theorem}
+\begin{proof}
+The transform of \(e_0\) is \(1\), so the spectral representation
+gives \(\mathcal Uv=\ee^{-\tau u^2+\ii xu}\), which proves the
+readout by \eqref{eq:field}. For every fixed \(m\), the same expression
+with \(z\in\C\) satisfies \(u^m\mathcal Uv\in L^2(\mu_*)\), with
+local domination from Lemma~\ref{lem:domination}. This also
+justifies the two strong derivatives, including at the time
+endpoints by continuation of the prepared vector. For real heights,
+the unitary group \(\ee^{\ii xJ_*}\) and the contraction semigroup
+\(\ee^{-\tau J_*^2}\) commute. For nonreal heights, a spectral
+multiplier with value \(g(u)\) has domain
+\(\{v:g\mathcal Uv\in L^2(\mu_*)\}\); in particular the bare
+\(\ee^{\ii zJ_*}\) is unbounded for \(\Im z\ne0\). The formula at
+such \(z\) uses the stated vector in its domain.
+\end{proof}
+
+In components the two generators give
+\begin{align}
+ \partial_x v_n
+    &=\ii(a_nv_{n-1}+a_{n+1}v_{n+1}),\notag\\
+ \partial_\tau v_n
+    &=-a_na_{n-1}v_{n-2}-(a_n^2+a_{n+1}^2)v_n
+       -a_{n+1}a_{n+2}v_{n+2},                       \label{eq:lattice}
+\end{align}
+with terms at negative indices omitted. The identities follow
+by testing against \(J_*e_n\) and \(J_*^2e_n\), which are finitely
+supported. The height generator has range one and the time
+generator has range two in the site index. A finite height
+increment uses the full unitary group. The chain is fixed at its
+base slice. Rebuilding the orthogonal basis for each \(W_\lambda\)
+instead gives a family of moving recurrence coefficients.
+
+\section{A single-excitation representation}\label{sec:mps}
+
+On sites \(0,1,\ldots\) take the infinite tensor product of
+\(\C^2\) with reference vector \(|0\rangle\). Concretely, complete the
+span of mutually orthogonal occupation configurations with
+finitely many \(1\)'s and unit norm. The one-excitation sector is
+the closed span of \(|1_n\rangle\), with occupation only at site
+\(n\). The map \(v\mapsto\sum_n v_n|1_n\rangle\) is an isometry.
+For the first \(N\) sites, a matrix product state of bond dimension
+two uses
+\[
+ A_n^0=I_2,\quad A_n^1=v_nE_{12},\quad
+ \ell=(1,0),\quad r=(0,1)^{\mathsf T},
+ \qquad E_{12}=\begin{pmatrix}0&1\\0&0\end{pmatrix}.
+\]
+For an occupation word, the amplitude is the corresponding core
+product between \(\ell\) and \(r\). The vacuum amplitude is zero,
+a single excitation at \(n\) has amplitude \(v_n\), and all words
+with at least two excitations vanish since \(E_{12}^2=0\).
+After filling the later sites with \(|0\rangle\), the finite
+states converge in norm to the full state, with squared error
+\(\sum_{n\ge N}|v_n|^2\). This encoding works for every
+\(\ell^2\) vector. It stores the amplitudes in infinitely many cores
+and its convergence is a statement about these state vectors.
+
+For fixed \(\tau\ge0\), \(v_n(\tau,x)\) is the Fourier transform of
+the \(L^1\) density \(p_n(u)\ee^{-\tau u^2}W_*(u)/Z_*\). It tends
+to zero as \(|x|\to\infty\): compactly supported step functions
+are dense in \(L^1\), and the integral of \(\ee^{\ii xu}\) over
+any fixed interval tends to zero. Yet
+\[
+ \|v(\tau,x)\|_2^2=\int_\R\ee^{-2\tau u^2}\dd\mu_*(u)>0
+\]
+is constant in real height. Every fixed prefix therefore loses
+all its mass as \(|x|\to\infty\). In this basis, a fixed finite
+prefix cannot approximate the state uniformly over the whole
+real height axis.
+
+\section{Finite principal chains and the scalar remainder}\label{sec:quad}
+
+Let \(\Pi_N\) project onto \(e_0,\ldots,e_{N-1}\) and take
+\(J_N=\Pi_NJ_*\Pi_N\) on that range. The finite dynamics uses
+\(J_N^2\). In terms of the standard rank-one projection onto the
+last site,
+\begin{equation}\label{eq:boundary}
+ \Pi_NJ_*^2\Pi_N\big|_{\operatorname{ran}\Pi_N}
+       =J_N^2+a_N^2\, e_{N-1}e_{N-1}^* .
+\end{equation}
+Indeed \((1-\Pi_N)J_*\Pi_N\) has only the map from \(e_{N-1}\)
+to \(a_Ne_N\). The finite observation is
+\begin{equation}\label{eq:finite}
+ H_N(\tau,x)=\frac{Z_*}{2}
+      \ip{e_0}{\ee^{-\tau J_N^2}\ee^{\ii xJ_N}e_0}.
+\end{equation}
+Projecting the exact evolved state would retain its \(e_0\)
+coordinate unchanged. Formula \eqref{eq:finite} instead evolves
+the original \(e_0\) by a new finite generator.
+
+\begin{proposition}[The literal Gaussian rule]\label{prop:gauss}
+Let \(Q_N\) be the spectral measure of \(J_N\) at \(e_0\).
+It is an even probability measure on the \(N\) simple zeros of
+\(P_N\), with positive weights. It agrees with \(\mu_*\) through
+degree \(2N-1\), and its first missed moment is
+\[
+ \int u^{2N}\dd\mu_*-\int u^{2N}\dd Q_N=h_N^*
+            =\prod_{j=1}^N a_j^2 .
+\]
+In particular \(H_N\) is exactly the \(N\)-node Gaussian
+quadrature of the complete-base integral.
+\end{proposition}
+\begin{proof}
+The tridiagonal determinant recursion is the monic recurrence
+for \(P_N\), including the initial polynomials \(1,u\). Any
+eigenvector of \(J_N\) is determined by its first component by
+forward recursion, and that component is nonzero for a nonzero
+eigenvector. The finite real symmetric matrix has simple
+eigenvalues, and its spectral weights are squares of the first
+components of normalized eigenvectors. The parity operator
+\(e_j\mapsto(-1)^je_j\) conjugates \(J_N\) to \(-J_N\) and
+fixes \(e_0\), giving evenness.
+
+For any integer \(k\ge0\), the two moments are
+\(\ip{e_0}{J_*^ke_0}\) and \(\ip{e_0}{J_N^ke_0}\),
+respectively. Each matrix element is a sum over length-\(k\)
+walks along the chain returning to site \(0\). A walk reaching
+site \(N\) takes at least \(2N\) steps to return. At length
+\(2N\) there is exactly one such walk, with weight
+\(\prod_{j=1}^Na_j^2=h_N^*\). This proves exactness and identifies
+the first defect. The finite spectral expression for
+\eqref{eq:finite} integrates \(\ee^{-\tau u^2+\ii xu}\) against
+\(Q_N\) with the factor \(Z_*/2\). These are the classical
+Gaussian nodes, weights and degree of exactness \cite{gauss}.
+\end{proof}
+
+\begin{theorem}[Gaussian-averaged Hermite remainder]\label{thm:hermite}
+For \(N\ge1\), \(x\in\R\), and \(0\le\tau\le1/2\),
+\begin{equation}\label{eq:hermite}
+ \frac{|H_{1/2-\tau}(x)-H_N(\tau,x)|}{Z_*/2}
+   \le h_N^* S_N(\tau,x),\qquad
+ S_N(\tau,x)=\sum_{k=0}^N\frac{\tau^k x^{2N-2k}}{k!(2N-2k)!}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+For \(s\in\R\) let \(L_s\) be the polynomial of degree at most
+\(2N-1\) that matches \(\cos(su)\) and its first derivative at
+the nodes. Such a polynomial is unique, because any difference
+is divisible by \(P_N^2\); the square linear interpolation
+system is therefore invertible. At a point \(u\) outside the
+nodes, subtract \(L_s\) and a multiple of \(P_N^2\) from the
+cosine so the difference also vanishes at \(u\). Counting the
+double zeros and applying repeated real Rolle on the finite
+interval containing \(u\) and the nodes identifies the multiple
+as the \(2N\)-th derivative of the cosine at a point divided by
+\((2N)!\). Thus for all \(u\in\R\),
+\[
+ |\cos(su)-L_s(u)|
+     \le \frac{|s|^{2N}}{(2N)!}P_N(u)^2.
+\]
+At nodes both sides are zero. Polynomial exactness and
+interpolation give a quadrature error for \(\cos(su)\) of
+absolute value at most \(h_N^*|s|^{2N}/(2N)!\).
+
+For a standard normal \(G\), set \(s=x+\sqrt{2\tau}G\).
+Then \(\mathbb E[\cos(su)]=\ee^{-\tau u^2}\cos(xu)\).
+Fubini applies by boundedness of the real cosine and finiteness
+of both measures. They are even, so the same cosine gives the
+exact and finite scalar readouts. The averaged error is bounded
+by \(h_N^*\mathbb E[s^{2N}]/(2N)!\). Expanding with odd
+Gaussian moments zero and
+\(\mathbb E[G^{2k}]=(2k)!/(2^kk!)\) gives the displayed
+sum. The Gaussian moments follow by integration by parts,
+starting from \(\mathbb E[1]=1\).
+\end{proof}
+
+The corner \((\tau,x)=(0,0)\) has zero scalar error. At \(x=0\)
+the allowance is \(h_N^*\tau^N/N!\) in base-mass units. At
+\(\tau=0\) it is \(h_N^*x^{2N}/(2N)!\). There is also a
+source-moment bound which uses only evenness and a Gaussian
+moment of the base measure. Put \(M_1=\int\ee^{u^2}\dd\mu_*\).
+The monic polynomial minimizes the squared norm among monic
+degree-\(N\) polynomials, so
+\[
+ h_N^*\le\int u^{2N}\dd\mu_*\le N!M_1 .
+\]
+On \(0\le\tau\le1/2,\ |x|\le X\), reindexing the sum by
+\(j=N-k\) gives
+\[
+ N!S_N(\tau,x)\le 2^{-N}\sum_{j=0}^N
+   \frac{(2NX^2)^j}{(2j)!}\le 2^{-N}\cosh(X\sqrt{2N}).
+\]
+This uses \(N!/(N-j)!\le N^j\) and proves convergence on each
+fixed real rectangle even without a coefficient envelope.
+For a normalized tolerance \(\epsilon>0\), let
+\(\ell=\log2\), \(b=\sqrt2 X\), and
+\(d=\max(0,\log(M_1/\epsilon))\). Using \(\cosh t\le\ee^t\)
+for \(t\ge0\), it suffices to take
+\[
+ N\ge\max\left(1,\left\lceil
+     \left(\frac{b+\sqrt{b^2+4\ell d}}{2\ell}\right)^2
+   \right\rceil\right).
+\]
+This is the nonnegative root test for
+\(\ell(\sqrt N)^2-b\sqrt N-d\ge0\).
+
+\section{Complete-source depth bound}\label{sec:depth}
+
+We derive the logarithmic monic-norm estimate used for the
+scalar remainder. For \(0\le\lambda\le1/2\), let \(P_n(u;\lambda)\)
+be monic orthogonal for \(W_\lambda(u)\dd u\), and put
+\[
+ h_n(\lambda)=\int_{\R}P_n(u;\lambda)^2W_\lambda(u)\dd u,
+ \qquad \beta_0=0,\qquad
+ \beta_n(\lambda)=h_n(\lambda)/h_{n-1}(\lambda)\quad(n\ge1).
+\]
+The recurrence at each \(\lambda\) follows by the same parity
+and orthogonality argument as at the base slice. Since multiplication
+of the measure by a positive constant preserves the monic
+polynomials, \(h_N^*=h_N(1/2)/h_0(1/2)\).
+
+\begin{lemma}[Logarithmic coefficient envelope]\label{lem:log}
+For every \(n\ge0\) and \(0\le\lambda\le1/2\),
+\[
+ \beta_n(\lambda)+\beta_{n+1}(\lambda)
+       \le B_n,\qquad B_n=\frac{\arcosh^2(2n+12)}{16}.
+\]
+Consequently, with \(L_N=\arcosh(2N+10)\),
+\begin{equation}\label{eq:log}
+ h_N^*\le\prod_{j=0}^{N-1}B_j\le (L_N/4)^{2N},\qquad N\ge1.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Write \(V_\lambda=-\log W_\lambda\), and on \(u\ge0\) use the
+positive summands \(s_m=\ee^u r_m(2r_m-3)\ee^{-r_m}\).
+Their logarithmic derivatives are
+\[
+ \frac{s_m'}{s_m}=9+\frac{12}{2r_m-3}-4r_m.
+\]
+The score \(\Phi'/\Phi\) is the positive weighted mean of these
+derivatives by local uniform convergence. Using \(r_m\ge\pi
+\ee^{4u}\), \(12/(2r_m-3)<4\), and \(2\lambda u\le u\) gives
+\(V_\lambda'(u)\ge4\pi\ee^{4u}-13-u\) on \(u\ge0\).
+Evenness now gives a useful all-line inequality,
+\begin{equation}\label{eq:score}
+ uV_\lambda'(u)\ge\cosh(4u)-11.
+\end{equation}
+Indeed, writing \(t=|u|\), for \(t\le1/2\) the lower bound
+\(-13t-t^2\ge-27/4\) suffices, since \(\cosh 2<4\).
+The series for \(\cosh 2\) after \(1+2\) starts with \(2/3\)
+and the successive ratios are at most \(2/15\), which proves
+that numerical inequality. For \(t\ge1/2\),
+\(4\pi-1/t>10\) and \(10\ee^{4t}\ge10+40t\ge13+t\).
+Thus \((4\pi t-1)\ee^{4t}\ge t(13+t)\), yielding
+\(uV_\lambda'(u)\ge\ee^{4t}\ge\cosh(4t)\).
+
+Fix \(n,\lambda\) and use the probability measure
+\(\dd\nu_n=P_n(u;\lambda)^2W_\lambda(u)\dd u/h_n(\lambda)\).
+Integrate \((uP_n^2 W_\lambda)'\) over the line. The bounds for
+\(\Phi,\Phi'\) in Lemma~\ref{lem:domination} justify all integrals
+and kill the boundary term. The polynomial \(uP_n'-nP_n\)
+has degree less than \(n\) (and vanishes for \(n=0\)), so
+orthogonality gives \(\mathbb E_{\nu_n}[uV_\lambda']=2n+1\).
+Squaring the monic recurrence and integrating gives
+\(\mathbb E_{\nu_n}[u^2]=\beta_n+\beta_{n+1}\), including
+\(n=0\) by omitting the backward edge. The series of
+\(v\mapsto\cosh(4\sqrt v)\) has nonnegative coefficients in
+integer powers of \(v\ge0\) and is convex. Jensen and
+\eqref{eq:score} give
+\[
+ \cosh(4\sqrt{\beta_n+\beta_{n+1}})
+      \le\mathbb E_{\nu_n}[\cosh(4u)]\le 2n+12 .
+\]
+Taking the nonnegative inverse proves the first bound. At
+\(\lambda=1/2\), use \(\beta_j\le B_{j-1}\) and telescope the
+ratios \(h_j/h_{j-1}\). Monotonicity of \(B_j\) gives
+\eqref{eq:log}.
+\end{proof}
+
+\begin{theorem}[Uniform real scalar depth]\label{thm:depth}
+For \(N\ge1\) and \(X\ge0\),
+\begin{equation}\label{eq:uniform}
+ \sup_{\substack{0\le\tau\le 1/2\\ |x|\le X}}
+ \frac{|H_{1/2-\tau}(x)-H_N(\tau,x)|}{H_{1/2}(0)}
+ \le \exp\left(-N\log4+\frac{XL_N}{2}+\frac{L_N^2}{8}\right).
+\end{equation}
+If \(0<\epsilon\le1\) and \(K=X+\log(1/\epsilon)+1\), the
+right side is at most \(\epsilon\) for
+\begin{equation}\label{eq:depth}
+ N=\left\lceil4K\log(16K)\right\rceil .
+\end{equation}
+\end{theorem}
+\begin{proof}
+The coefficient of \(r^{2N}\) in \(\ee^{\tau r^2}\cosh(xr)\)
+is \(S_N(\tau,x)\), and every coefficient is nonnegative.
+For \(r>0\),
+\[
+ S_N(\tau,x)\le r^{-2N}\ee^{\tau r^2+Xr}.
+\]
+Choose \(r=L_N/2\) and combine \eqref{eq:hermite} with
+\eqref{eq:log} to obtain \eqref{eq:uniform}. For
+\eqref{eq:depth} set \(A=\log(16K)\) and \(D=\log(1/\epsilon)\).
+Since \(K\ge1\), \(\log K\le K-1\) and \(\log16<3\) give
+\(A\le3K\). The ceiling satisfies \(4KA\le N<4KA+1\), so
+\[
+ 4N+20\le16KA+24\le48K^2+24\le256K^2,\qquad
+ L_N\le\log(4N+20)\le 2A .
+\]
+Using \(\log4>1\), the exponent in \eqref{eq:uniform}
+is at most
+\[
+ -4KA+XA+A^2/2\le-\tfrac32 KA\le-D,
+\]
+since \(X\le K,\ D\le K,\ A>1\). This proves the claimed
+tolerance for the stated integer \(N\), including \(X=0\)
+or \(\epsilon=1\).
+\end{proof}
+
+The depth is sufficient for the scalar error with exact
+coefficients and fixed mass normalization. Evaluation uses the
+\(N-1\) internal edges of \(J_N\) and \(Z_*\). A sharper allowance
+using the exact \(h_N^*\) can also require the omitted edge \(a_N\).
+Both ways of evaluating the matched \(N\)-node rule have the same
+output by Proposition~\ref{prop:gauss}.
+
+\section{Finite coefficient uncertainty}\label{sec:uncertainty}
+
+\begin{proposition}[Perturbation of the finite readout]\label{prop:perturb}
+Let \(\widehat J\) be a real symmetric zero-diagonal Jacobi
+matrix of size \(N\) sharing the tridiagonal pattern of \(J_N\).
+Let \(\widehat Z\) be the midpoint of a certified positive interval
+for \(Z_*\), and let \(\eta_Z\) be its radius divided by its lower
+endpoint. Define the ideal nominal physical scalar by
+\[
+ \widehat H(\tau,x)=\frac{\widehat Z}{2}
+   \ip{e_0}{\ee^{-\tau\widehat J^2}\cos(x\widehat J)e_0}.
+\]
+If \(\delta\ge\|J_N-\widehat J\|_2\), then on the real domain
+of Theorem~\ref{thm:hermite},
+\begin{equation}\label{eq:perturb}
+ \frac{|H_{1/2-\tau}(x)-\widehat H(\tau,x)|}{Z_*/2}
+ \le h_N^*S_N(\tau,x)
+       +\left(|x|+\sqrt{4\tau/\pi}\right)\delta+\eta_Z.
+\end{equation}
+When each nominal internal edge is the exact midpoint of an
+enclosure of the corresponding exact edge, one may take \(\delta\)
+to be the maximum sum of the radii of the two edges incident to
+a site, with absent edge radii set to zero.
+\end{proposition}
+\begin{proof}
+For real symmetric finite matrices \(A,B\), differentiate
+\(\ee^{\ii(s-v)A}\ee^{\ii vB}\) between \(v=0\) and \(v=s\).
+The resulting integral and unitarity give
+\(\|\ee^{\ii sA}-\ee^{\ii sB}\|_2\le |s|\|A-B\|_2\),
+also for \(s<0\) with reversed integration limits. Averaging
+the two complex exponentials yields the same bound for the
+difference of cosines. Apply the Gaussian average of
+Theorem~\ref{thm:hermite} through the finite spectral calculus.
+It replaces \(\cos(sA)\) by \(\ee^{-\tau A^2}\cos(xA)\).
+The bound \(\mathbb E|s|\le|x|+\sqrt{4\tau/\pi}\) follows
+from \(\mathbb E|G|=\sqrt{2/\pi}\). Parity makes the original
+readout real for both matrices, and the nominal scalar matrix
+element in \eqref{eq:perturb} has modulus at most \(1\).
+Splitting the scalar difference at the exact mass and the
+nominal matrix costs at most \(\eta_Z\) for the mass and the
+displayed perturbation for the coefficients. Combine this
+with \eqref{eq:hermite}. The symmetric difference matrix has
+operator norm bounded by its maximum absolute row sum,
+which only uses the two internal edges adjoining each row.
+\end{proof}
+
+\subsection{A 16-site interval example}\label{sec:example}
+
+An existing finite acquisition \cite{certificate} encloses the
+17 even raw moments of \(W_*\dd u\) through degree \(32\).
+The moment integrals restore both the omitted arithmetic modes
+and the spatial tails. In the real monomial Gram matrix, entries
+of opposite parity vanish. Eliminating each parity block by
+interval \(LDL^{\mathsf T}\) encloses the squared monic norms
+\(h_n(1/2)\), since the pivot is the squared norm of the monomial
+after projection off lower degrees of its parity. Positive
+pivots permit the successive square roots of their ratios,
+enclosing \(a_1,\ldots,a_{16}\). The ideal nominal 16-site
+matrix uses the first 15 midpoints; the last coupling belongs
+to the error norm. The ratio \(h_{16}(1/2)/h_0(1/2)\) directly
+pays the truncation with \eqref{eq:hermite}.
+
+On \(0\le\tau\le1/2,\ |x|\le8\), the matrix factor in
+\eqref{eq:perturb} is below \(9\). The certificate records the
+following upward bounds at 256 bits, in units of \(H_{1/2}(0)\).
+\begin{center}
+ \begin{tabular}{@{}lr@{}}
+ \toprule
+ Component & Upper bound\\
+ \midrule
+ Uniform truncation \(h_{16}^*S_{16}(1/2,8)\)
+       & \(1.515\times10^{-25}\)\\
+ Uniform coefficient uncertainty \(9\delta\)
+       & \(1.385\times10^{-46}\)\\
+ Uniform mass uncertainty \(\eta_Z\)
+       & \(3.472\times10^{-68}\)\\
+ Largest nominal rounding allowance at the nine samples
+       & \(1.740\times10^{-77}\)\\
+ \bottomrule
+ \end{tabular}
+\end{center}
+The exact enclosures before upward decimal display certify
+total normalized absolute error below \(1.515\times 10^{-25}\)
+for the ideal nominal scalar on the entire rectangle. The
+same bound includes rounding at the nine evaluated points
+\(\tau\in\{0,1/4,1/2\}\), \(x\in\{0,4,8\}\).
+The 128-bit acquisition had positive pivots and couplings but
+missed its coefficient-width allowance, with \(9\delta\) about
+\(1.791\times10^{-7}\) against its \(2\times10^{-9}\) cap.
+The successful 256-bit acquisition also encloses the infinity-norm
+condition numbers of its diagonally scaled even and odd Gram
+blocks by \(6.94\times10^7\) and \(2.02\times10^7\), respectively.
+These are diagnostics of this finite procedure and its data.
+
+\section{Outstanding challenges}\label{sec:challenges}
+
+\paragraph{State transport.}
+The scalar approximation leaves open a quantitative bound for
+the norm outside the first \(N\) polynomial-degree sites of the
+exact state. Section~\ref{sec:mps} proves escape from every fixed
+prefix while leaving open the rate and the dominant degrees.
+An estimate for the projected state would address a different
+norm from \eqref{eq:hermite}. At the operator level any real
+nonzero height increment \(d\) satisfies
+\(\|\ee^{\ii dJ_*}-I\|=2\), since the essential supremum of
+\(|\ee^{\ii du}-1|\) is attained as a supremum on the full
+support. The height group is nevertheless strongly continuous
+by dominated convergence in the multiplier representation.
+For the prepared orbit, \(|\ee^{\ii du}-1|\le|du|\) even gives
+\(\|v(\tau,x+d)-v(\tau,x)\|\le|d|\|J_*\ee^{-\tau J_*^2}e_0\|\),
+uniformly in \(x\).
+
+\paragraph{Growing height and conditioning.}
+The sufficient depth in \eqref{eq:depth} follows from an upper
+envelope. Sharper estimates in a joint limit of height and
+accuracy would require quantitative information beyond that
+used here. The interval example leaves open how Gram conditioning
+and required coefficient precision scale with \(N\), how best
+to enclose the coefficients from the complete source, and what
+work repeated evaluations require after acquisition. For the
+same measure and node count, direct Gaussian quadrature uses
+the identical scalar rule.
+
+\paragraph{Signed readout.}
+The error scale is the fixed positive mass \(H_{1/2}(0)\).
+A relative bound for a varying readout would also need a
+nonzero lower margin. At any zero in a covered rectangle an
+absolute allowance necessarily dominates the absolute approximate
+value. For example, \(2+2\ee^{\lambda-T}\cos x\), with
+\(0<T\le1/2\), comes from a positive even measure on
+\(\{-1,0,1\}\) at the base slice and satisfies the same heat
+equation. The full three-site rule is exact there, while the
+field has a double zero at Newman time \(\lambda=T\) and
+height \(x=\pi\). The example terminates
+at finite support and has no full-line score. Even continuous
+modifications built from positive weighted square summands can
+retain the score proof in Lemma~\ref{lem:log} and allow
+collisions \cite{controls}. Their locally absolutely continuous
+even extensions suffice for its integration by parts. A signed
+estimate for the complete theta field must supply further
+information sensitive to cancellations in the physical cosine
+readout.
+
+\section*{Acknowledgments}
+
+Draft prepared with substantial OpenAI Codex LLM assistance.
+The execution dispatch selected GPT-6.1 Sol with Ultra effort.
+The backend model and runtime effort were unavailable for
+independent verification. The internal assessment shares the
+draft's sources and constitutes an author-side check.
+
+\begin{thebibliography}{9}
+
+\bibitem{theta}
+NIST Digital Library of Mathematical Functions.
+\emph{Theta Functions}, \S20.7(viii), equation 20.7.32.
+\url{https://dlmf.nist.gov/20.7.E32}.
+
+\bibitem{chin}
+A.~W.~Chin, A.~Rivas, S.~F.~Huelga, and M.~B.~Plenio.
+Exact mapping between system-reservoir quantum models and
+semi-infinite discrete chains using orthogonal polynomials.
+\emph{J. Math. Phys.} \textbf{51}, 092109 (2010).
+\href{https://doi.org/10.1063/1.3490188}{doi:10.1063/1.3490188}.
+\href{https://arxiv.org/abs/1006.4507v2}{arXiv:1006.4507v2}.
+
+\bibitem{gauss}
+NIST Digital Library of Mathematical Functions.
+\emph{Numerical Methods}, \S3.5(v)--(vi).
+\url{https://dlmf.nist.gov/3.5}.
+
+\bibitem{certificate}
+E.~Baker, with OpenAI Codex assistance.
+\emph{Certified complete-source acquisition and readout}.
+Shifted Zeta Positivity, Investigation 6, 14 November 2026.
+Execution record and exact-rational companion certificate.
+
+\bibitem{controls}
+Shifted Zeta Positivity project.
+\emph{Collision controls and the screening they impose}.
+Result summary 12, with catalogued weighted-square examples and
+their source certificates.
+
+\end{thebibliography}
+\end{document}

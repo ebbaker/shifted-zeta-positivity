@@ -230,3 +230,36 @@ keeps the missing scalar stability/forcing-transfer argument as a B02
 choice. For Edward Baker with LLM assistance, gpt-6.1-sol / ultra, existing
 chat0034, 29 October 2026; internal different-model assessment with prior
 overlap/shared premises, not a universal obstruction.
+
+
+**Quantified tensor bounds still leave acquisition unpaid, 14 November 2026.** Prepared for Edward Baker with substantial OpenAI Codex LLM assistance; coordinator backend/effort unavailable, proof/assessment workers dispatched Sol 6.1/Ultra. [ITP Note02](../papers/investigations-6/04_exact_infinite_tensor_products/notes/02_ITP_E01_EXACT_CELL_PHASE_TRANSFER_20261113.md) proves its absolute allowance while stating: “There are \(2U/h=2^{32}\) formal masses at the tested tuple.” Their acquisition remains unresolved. The [shared chain proof](../papers/investigations-6/notes/03_TN6_E01_COEFFICIENT_TO_SCALAR_TRANSFER_20261113.md) says: “Actual state-prefix error and a speed advantage remain unestablished.” Preserve these quantitative results, but require an acquisition/error budget or a matched computational gain before expanding them into claims of an efficient method. The [bounded handoff](../papers/investigations-6/notes/05_RESEARCH_CONTINUATION_AND_MODEL_HANDOFF_20261114.md) applies that gate. This records a limitation learned, not a retraction of the analytical bounds.
+
+
+**Finite acquisition pays inputs, not a speed claim, 14 November 2026.**
+For Edward Baker with OpenAI Codex assistance; B02 dispatched Astra/Ultra,
+E02/E03 Sol 6.1/Ultra, coordinator backend/effort unavailable.
+[TN6 E02](../papers/investigations-6/notes/06_TN6_E02_CERTIFIED_COEFFICIENT_ACQUISITION_20261114.md)
+now certifies the N=16 complete-source inputs, superseding the unpaid-chain
+acquisition limitation above only for its fixed tuple. It states:
+“The matched direct baseline used less measured time for the nine points
+on this run.” [E03](../papers/investigations-6/reviews/02_TN6_E03_ACQUISITION_ASSESSMENT_20261114.md)
+accepts the finite certificate with internal-review limitations. Keep the
+failed precision attempt, source work, normalization, output radii and
+instrumentation costs in any comparison. Acquired inputs plus very small
+error do not establish a computational advantage; this one-run result
+also does not exclude a useful different workload. The
+[current handoff](../papers/investigations-6/notes/08_TN6_CONTINUATION_AND_MODEL_HANDOFF_20261114.md)
+requires a specified consumer before another benchmark.
+
+
+**Analytical integration retains the unpaid sign question, 14 November 2026.**
+For Edward Baker with OpenAI Codex assistance; manuscript/review workers
+Sol 6.1/Ultra, coordinator backend/effort unavailable. The
+[four-manuscript assessment](../papers/investigations-6/reviews/03_TN6_ANALYTICAL_MANUSCRIPT_CROSS_REVIEW_20261114.md)
+states: “Positive weighted-square controls can pass the score proof and still collide.”
+The author's requested systematic drafts consolidate quantified analytical
+results with proofs and explicit outstanding challenges. This editorial
+milestone does not strengthen them into signed estimates or an efficient
+algorithm. The [current handoff](../papers/investigations-6/notes/10_ANALYTICAL_MANUSCRIPTS_CONTINUATION_AND_MODEL_HANDOFF_20261114.md)
+requires a named analytical consumer before further expansion. The internal
+review uses shared sources and includes JCH contributor overlap.

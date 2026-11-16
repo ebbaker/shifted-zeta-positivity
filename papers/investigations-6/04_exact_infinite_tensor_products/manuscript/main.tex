@@ -1,0 +1,630 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Exact Dyadic Tensor Products for the Newman Source},
+            pdfauthor={Edward Baker}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\DeclareMathOperator{\sinc}{sinc}
+\newcommand{\R}{\mathbb R}
+\newcommand{\dd}{\mathop{}\!d}
+\newcommand{\ee}{\mathrm e}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+
+\title{Exact Dyadic Tensor Products for the Newman Source\\
+\large A uniform strip approximation by exact cell integration}
+\author{Edward Baker}
+\date{14 November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We represent the complete even theta source for the Newman field by
+dyadic refinement. Conditional cell masses give isometries between
+levels, and the corresponding square-root densities converge in a
+weighted Hilbert space. Integrating the unresolved Fourier phase on
+each cell introduces an exact sinc factor. A weighted derivative bound
+for the complete source gives an absolute field error below
+\(5\cdot10^{-7}\) with cutoff \(U=2\) and level \(L=30\), uniformly for
+all real heights, imaginary parts of magnitude at most \(8\), and
+\(0\le\lambda\le1/2\). At each fixed level the matching center-point
+lattice has a uniform real-axis error at least half the total source
+mass. The strip estimate is for exact cell masses and exact readout.
+\end{abstract}
+
+\section{Introduction}
+
+At dyadic spacing \(h\), replace the positive Newman source by its
+mean on each cell and retain the full Fourier phase inside the cell.
+The weighted \(L^1\) error of the source then controls the field
+even where \(|x|h\) is large. Binary scale indices are standard in
+finite quantics representations \cite[\S II.1, (1)]{Shinaoka}, and
+can encode polynomial-exact interpolation on finite grids
+\cite[\S 4.1, Proposition 13]{Lindsey}. Here exact cell masses define
+diagonal refinement factors and isometries between successive spaces
+of square-root amplitudes.
+
+\section{The complete theta source}\label{sec:source}
+
+For \(t>0\) set \(\vartheta(t)=\sum_{n\in\mathbb Z}\ee^{-\pi n^2t}\).
+Write
+\[
+ p(u)=\frac{\ee^u}{2}\bigl(\vartheta(\ee^{4u})-1\bigr),\qquad
+ r_n(u)=\pi n^2\ee^{4u},\qquad
+ \Phi(u)=\frac{p''(u)-p(u)}8.
+\]
+The series for \(p\) and every fixed derivative converge locally
+uniformly on \(\R\). On a compact interval the derivative summands
+are bounded by a polynomial in \(n\) times \(\ee^{-c n^2}\) with
+\(c>0\), by differentiating \(\ee^u\ee^{-r_n(u)}\) and using
+\(r_n'=4r_n\). Jacobi's transformation
+\(\vartheta(t)=t^{-1/2}\vartheta(1/t)\)
+\cite[20.2.3 and 20.7.32]{DLMFTheta} gives
+\begin{equation}\label{eq:reflection}
+ p(-u)-p(u)=\sinh u,\qquad p'(0)=-\tfrac12 .
+\end{equation}
+Indeed, \(p(-u)=\frac12(\ee^u\vartheta(\ee^{4u})-\ee^{-u})\);
+differentiating the difference at zero gives the endpoint derivative.
+Applying \(\partial_u^2-1\) to \eqref{eq:reflection} makes \(\Phi\)
+even. Differentiating the series for \(p\) also gives
+\begin{equation}\label{eq:theta-source}
+ \Phi(u)=\ee^u\sum_{n\ge1}\bigl(2r_n(u)^2-3r_n(u)\bigr)\ee^{-r_n(u)}.
+\end{equation}
+Every summand is positive for \(u\ge0\) because \(r_n(u)\ge\pi>3/2\).
+Evenness gives strict positivity on \(\R\). The reflection was derived
+for the complete theta sum and ensures smoothness at zero.
+
+Put
+\begin{equation}\label{eq:conventions}
+ W_\lambda(u)=\ee^{\lambda u^2}\Phi(u),\qquad
+ H_\lambda(z)=\frac12\int_{\R} W_\lambda(u)\ee^{\ii zu}\dd u,\qquad
+ \tau=\frac12-\lambda .
+\end{equation}
+We use \(0\le\lambda\le1/2\) unless specified otherwise, and write
+\(z=x+\ii y\). The unnormalized mass
+\(Z_\lambda=\int_{\R}W_\lambda\dd u=2H_\lambda(0)\) is strictly
+positive. By evenness the readout is also the half-line cosine integral.
+
+\begin{lemma}[Complete source and arithmetic tails]\label{lem:source}
+For \(d,N\) nonnegative integers define
+\[
+ C_d(N)=\sum_{n>N}n^{2d}\ee^{-\pi(n^2-1)}.
+\]
+Let \(\rho=\pi\ee^{4|u|}\), \(Q_0(r)=2r^2-3r\), and
+\(Q_{j+1}(r)=(1-4r)Q_j(r)+4rQ'_j(r)\).
+If \(a_j\) is the sum of the absolute values of the coefficients of
+\(Q_j\) and \(B_j=a_j C_{j+2}(0)\), then
+\begin{equation}\label{eq:complete-dom}
+ \abs{\Phi^{(j)}(u)}\le B_j\ee^{|u|}\rho^{j+2}\ee^{-\rho}.
+\end{equation}
+On \(u\ge0\) the same bound for the differentiated tail \(n>N\)
+holds with \(B_j\) replaced by \(a_j C_{j+2}(N)\).
+For every fixed \(b\ge0\) and every fixed nonnegative integer \(q\),
+\[
+ \sup_{0\le\lambda\le1/2}\int_{\R}
+   \ee^{b|u|}(1+|u|^q)\bigl(W_\lambda(u)+|W'_\lambda(u)|\bigr)\dd u
+   <\infty .
+\]
+\end{lemma}
+
+\begin{proof}
+The differentiated summand in \eqref{eq:theta-source} is
+\(\ee^u Q_j(n^2\rho)\ee^{-n^2\rho}\) on the positive half-line.
+The recurrence gives \(\deg Q_j\le j+2\), so
+\[
+ \abs{Q_j(n^2\rho)}\le a_j n^{2j+4}\rho^{j+2},\qquad
+ \ee^{-n^2\rho}\le\ee^{-\rho}\ee^{-\pi(n^2-1)}.
+\]
+These inequalities prove the tail and full half-line bounds.
+Evenness of \(\Phi\) gives \eqref{eq:complete-dom} everywhere.
+Each \(C_d(N)\) is finite and tends to zero as \(N\to\infty\),
+since successive terms eventually have ratio at most \(1/2\).
+For the integral assertion, use \eqref{eq:complete-dom} with
+\(j=0,1\) and
+\[
+ |W_\lambda'|\le \ee^{u^2/2}\bigl(|\Phi'|+|u|\Phi\bigr).
+\]
+On \(u\ge0\), substitution \(\rho=\pi\ee^{4u}\) gives
+\(u=\tfrac14\log(\rho/\pi)\), \(\dd u=\dd\rho/(4\rho)\).
+Apart from powers of \(\rho\) and \(\log(\rho/\pi)\), the integrand
+contains \(\exp(\tfrac1{32}\log^2(\rho/\pi)-\rho)\), which is
+bounded by \(\ee^{-\rho/2}\) for sufficiently large \(\rho\).
+Evenness of the absolute terms gives the other half-line.
+The argument also works with \(u^2/2\) replaced by \(D u^2\) for
+any finite \(D\ge0\).
+\end{proof}
+
+These estimates imply joint entireness of the integral in
+\((\lambda,z)\) and justify each fixed derivative under the integral
+on compact parameter sets. In particular
+\(\partial_\lambda H_\lambda=-\partial_z^2H_\lambda\), and in reverse
+time \(\partial_\tau W_{1/2-\tau}=-u^2W_{1/2-\tau}\).
+
+The normalization in \eqref{eq:conventions} can be seen directly.
+Set \(J(z)=\int_0^\infty p(u)\cos(zu)\dd u\). The positive
+half-line formula for \(p\) gives double-exponential decay of
+\(p\) and \(p'\), by the same estimates on the summands as in
+Lemma~\ref{lem:source}. Integrating \(p''\) twice by parts and
+using \eqref{eq:reflection} yields
+\begin{equation}\label{eq:endpoint}
+ 8H_0(z)=\tfrac12-(1+z^2)J(z).
+\end{equation}
+For \(\Re s>1\), termwise integration of the theta series gives
+\(\pi^{-s/2}\Gamma(s/2)\zeta(s)
+ =\int_0^\infty t^{s/2-1}(\vartheta(t)-1)/2\dd t\).
+Indeed, the series of integrals is absolutely convergent for
+\(\Re s>1\) by the gamma integral and \(\sum_{n\ge1}n^{-\Re s}<\infty\).
+Split this integral at \(1\) and write
+\[
+ \frac{\vartheta(t)-1}{2}
+   =t^{-1/2}\frac{\vartheta(1/t)-1}{2}+\frac{t^{-1/2}-1}{2}
+ \qquad (0<t<1).
+\]
+The reflected term, after \(t\mapsto 1/t\), adds the power
+\(t^{(1-s)/2-1}\) to the integral over \([1,\infty)\).
+The elementary term integrates to \(1/(s-1)-1/s\).
+Multiplying by \(s(s-1)/2\) thus gives
+\[
+ \xi(s)=\frac12+\frac{s(s-1)}2\int_1^\infty
+  \frac{\vartheta(t)-1}{2}\bigl(t^{s/2-1}+t^{(1-s)/2-1}\bigr)\dd t
+\]
+in the convention of \cite[25.4.4]{DLMFZeta}. The expression extends
+to all \(s\) by entireness of the integral. At \(s=(1-\ii z)/2\),
+the substitution \(t=\ee^{4u}\) gives \(8J(z)\) for that integral,
+and \(4s(s-1)=-(1+z^2)\). Comparing with \eqref{eq:endpoint} shows
+\begin{equation}\label{eq:xi}
+ H_0(z)=\tfrac18\,\xi(\tfrac12-\tfrac{\ii z}2).
+\end{equation}
+
+\section{Mass refinement and the square-root state}\label{sec:refinement}
+
+For an integer \(L\ge0\) set \(h=2^{-L}\) and
+\(I_{L,j}=[jh,(j+1)h)\), \(j\in\mathbb Z\), with center \(c_{L,j}\).
+Write \(P_h f\) for the average of \(f\) on each such cell.
+Let
+\[
+ m_{L,j}=\int_{I_{L,j}} W_\lambda(u)\dd u,\qquad
+ f_L=P_h W_\lambda .
+\]
+The \(\lambda\)-dependence of \(m_{L,j}\) and \(f_L\) is suppressed.
+The two children \(I_{L+1,2j}\), \(I_{L+1,2j+1}\) partition
+\(I_{L,j}\). Their masses sum to \(m_{L,j}\), and all cell masses
+are strictly positive.
+
+There is a natural space for the common limit. On \(L^2(\R,\dd u)\),
+let \(E_L\) consist of functions constant on every level-\(L\) cell.
+The isometry from a cell coefficient vector \(v\) onto \(E_L\) is
+\[
+ T_L v=\sum_{j\in\mathbb Z}v_j h^{-1/2}\mathbf 1_{I_{L,j}} .
+\]
+Group \(j\) in the form \(j=2^L a+r\), with \(a\in\mathbb Z\) and
+\(0\le r<2^L\). Writing \(r\) in \(L\) binary digits identifies the
+coefficient space with
+\(\mathcal H_L=\ell^2(\mathbb Z)\otimes(\mathbb C^2)^{\otimes L}\).
+The first coordinate labels the unit interval. Appending the
+reference bit \(\lvert+\rangle=(\lvert0\rangle+\lvert1\rangle)/\sqrt2\)
+means that each basis vector \(e_j^{(L)}\) maps to
+\((e_{2j}^{(L+1)}+e_{2j+1}^{(L+1)})/\sqrt2\).
+Under the maps \(T_L\), this embedding is the inclusion
+\(E_L\subset E_{L+1}\). The Hilbert-space completion of the nested
+spaces is \(L^2(\R,\dd u)\). For instance, cell averages of a
+continuous function of compact support approach it uniformly, stay
+in a fixed bounded interval as \(h\to0\), and hence converge in
+\(L^2\). Such functions are dense. Equivalently, the completion
+uses the binary tensor product formed with \(\lvert+\rangle\)
+as the reference vector at all unresolved bits.
+
+The conditional mass isometry is different from the embedding used
+to define this common space. At fixed \(\lambda\) it acts by
+\begin{equation}\label{eq:mass-isometry}
+ S_L e_j^{(L)}=\sum_{\epsilon=0}^1
+       \sqrt{\frac{m_{L+1,2j+\epsilon}}{m_{L,j}}}
+       e_{2j+\epsilon}^{(L+1)} .
+\end{equation}
+The two coefficients have squared sum one, and images of different
+parents have disjoint support, so \(S_L\) extends to an isometry.
+If \(v_{L,j}=\sqrt{m_{L,j}}\), then \(S_L v_L=v_{L+1}\) exactly.
+Each vector has squared norm \(Z_\lambda\), and
+\(T_L v_L=\sqrt{f_L}\). In the common \(L^2\) space the two
+embeddings produce different functions: \(S_L\) updates the
+density using the source masses, while appending
+\(\lvert+\rangle\) leaves the old step function in place.
+
+The corresponding diagonal products are explicit. On a fixed
+unit interval \([a,a+1)\) with integer \(a\), let
+\(R_k=f_k/f_{k-1}\) for \(k\ge1\). The ratio on a child is twice
+its mass fraction in the parent. Thus \eqref{eq:mass-isometry}
+can be applied by appending \(\lvert+\rangle\) and then
+multiplying by \(\sqrt{R_{L+1}}\). The gate \(R_k\) acts on the
+first \(k\) bits of the interval. The products telescope:
+\begin{equation}\label{eq:telescopes}
+  f_L=f_0\prod_{k=1}^L R_k,\qquad
+  \sqrt{f_L}=\sqrt{f_0}\prod_{k=1}^L\sqrt{R_k}.
+\end{equation}
+For this interval, let \(m>0\) be the minimum of \(W_\lambda\) on
+\([a,a+1]\times[0,1/2]\) and \(M<\infty\) the maximum of
+\(\abs{W'_\lambda}\) there. The child and parent averages differ
+by at most the parent oscillation, bounded by \(M2^{1-k}\).
+It follows that
+\[
+ \norm{R_k-1}_{L^\infty([a,a+1])}\le \frac{M}{m}2^{1-k},
+ \qquad
+ \norm{\sqrt{R_k}-1}_{L^\infty([a,a+1])}
+       \le \norm{R_k-1}_{L^\infty([a,a+1])}.
+\]
+Also \(\norm{f_L-W_\lambda}_{L^\infty([a,a+1])}\le M h\),
+interpreting \(L^\infty\) in the essential sense at endpoints.
+These estimates give local operator-norm convergence of the
+multiplication products in \eqref{eq:telescopes}, uniformly in
+\(\lambda\) on the specified time interval. The constants \(m,M\)
+are local to each interval.
+
+For the whole line define
+\[
+ \norm{g}_{1,b}=\int_{\R}\ee^{b|u|}|g(u)|\dd u,\qquad
+ \norm{g}_{2,b}^2=\int_{\R}\ee^{b|u|}|g(u)|^2\dd u\qquad (b\ge0).
+\]
+Weighted convergence of \(\sqrt{f_L}\) follows from the following
+estimate.
+
+\begin{lemma}[Weighted projection]\label{lem:projection}
+If \(f\) is locally absolutely continuous with
+\(\norm{f}_{1,b}+\norm{f'}_{1,b}<\infty\), then
+\begin{equation}\label{eq:projection}
+ \norm{f-P_h f}_{1,b}\le \frac{h\ee^{bh}}2\norm{f'}_{1,b},
+ \qquad
+ \norm{P_h f}_{1,b}\le \ee^{bh}\norm{f}_{1,b}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+On \(I=[a,a+h]\) with mean \(\bar f\), the triangle inequality
+and absolute continuity imply
+\[
+ \begin{split}
+ \int_I|f(v)-\bar f|\dd v
+ &\le h^{-1}\int_I\int_I |f(v)-f(w)|\dd w\dd v\\
+ &\le \frac{2}{h}\int_a^{a+h}(t-a)(a+h-t)|f'(t)|\dd t .
+ \end{split}
+\]
+The two factors in the kernel give the measure of the choices
+of one endpoint on each side of a fixed \(t\). The factor of two
+counts both orders. Since this kernel is at most \(h/2\), the
+unweighted estimate follows on \(I\). The ratio of maximum to
+minimum of \(\ee^{b|u|}\) on \(I\) is at most \(\ee^{bh}\).
+Multiplying the unweighted estimate by the maximum and comparing
+it to the minimum proves the first inequality after summing.
+For the second, use \(h|\bar f|\le\int_I|f|\) on each cell and
+the same comparison of weights.
+\end{proof}
+
+For \(q,r\ge0\), \(|\sqrt q-\sqrt r|^2\le |q-r|\).
+Lemma~\ref{lem:source} and Lemma~\ref{lem:projection} give
+\begin{equation}\label{eq:state-limit}
+ \norm{T_L v_L-\sqrt{W_\lambda}}_{2,b}^{\,2}
+ \le \norm{f_L-W_\lambda}_{1,b}
+ \le \frac{h\ee^{bh}}2\norm{W_\lambda'}_{1,b}.
+\end{equation}
+Thus the prepared state converges in every fixed weighted
+\(L^2\) space, uniformly in \(\lambda\). The result with \(b=0\)
+identifies the limit in the reference-bit tensor product, and
+the weighted norm further controls its tail. These are statements
+about the prepared states and densities on the complete line.
+The multiplication-product norm estimate above is interval by
+interval.
+
+\section{Phase on the binary coordinates}\label{sec:readout}
+
+On \([a,a+1)\) write \(u=a+\sum_{k\ge1}2^{-k}b_k\) with
+\(b_k\in\{0,1\}\) almost everywhere. With \(n_k\) denoting the
+projector onto bit \(1\) in coordinate \(k\), the multiplier
+\(\ee^{\ii zu}\) on this interval has the product
+\begin{equation}\label{eq:phase-product}
+ \ee^{\ii za}\prod_{k\ge1}\exp(\ii z 2^{-k}n_k).
+\end{equation}
+For \(|z|\le D\) the \(k\)-th bit factor differs from the identity
+in norm by at most \(D2^{-k}\ee^{D2^{-k}}\), using
+\(\ee^w-1=w\int_0^1\ee^{tw}\dd t\). Partial products act by
+the corresponding truncated exponential, whose coordinate differs
+from \(u\) by at most \(2^{-k}\) after retaining \(k\) bits.
+It follows directly that the products converge in local
+multiplication-operator norm, uniformly on compact \(z\)-sets
+for a fixed interval. For any \(k\), a real choice \(x=\pi2^k\)
+makes the \(k\)-th factor differ from the identity by \(2\).
+Uniform convergence to the identity fails over real \(x\).
+
+On \(I_{L,j}\) write \(u=jh+s\). Under normalized Lebesgue
+measure on the cell, the unresolved bits encode \(s\) in
+\([0,h)\) and have uniform binary-prefix probabilities: specifying
+\(r\) new bits restricts \(s\) to an interval of length \(h2^{-r}\).
+Their product phase therefore has conditional mean
+\begin{equation}\label{eq:sinc}
+ \frac1h\int_0^h \ee^{\ii zs}\dd s
+   =\ee^{\ii zh/2}\sinc(zh/2),\qquad
+ \sinc(w)=\begin{cases}\sin(w)/w,&w\ne0,\\1,&w=0.\end{cases}
+\end{equation}
+The limit under the mean is justified by the compact-\(z\) convergence
+in \eqref{eq:phase-product}. Equation \eqref{eq:sinc} is an exact
+identity for every \(z\).
+
+Define the readout
+\begin{equation}\label{eq:readout}
+ \begin{split}
+ A_L(\lambda,z)
+  &=\frac12\int_{\R} f_L(u)\ee^{\ii zu}\dd u\\
+  &=\frac12\sinc(zh/2)\sum_{j\in\mathbb Z}
+                   m_{L,j}(\lambda)\,\ee^{\ii zc_{L,j}}.
+ \end{split}
+\end{equation}
+This is also half the matrix element of the phase in the
+prepared state \(\sqrt{f_L}\). For complex \(z\) this state is
+in the domain of the phase multiplier, by the second inequality
+of \eqref{eq:projection} with \(b=2|\Im z|\).
+Each term of the integral over a single cell gives
+\eqref{eq:sinc} times its mass and left-endpoint phase.
+For \(|y|\le b\), summing is justified by
+\[
+ \sum_j m_{L,j}\,\abs{\ee^{\ii zc_{L,j}}}
+ \le \ee^{bh/2}\norm{W_{1/2}}_{1,b}.
+\]
+Indeed \(|c_{L,j}|\le |u|+h/2\) throughout the cell.
+The same estimate for the tails of the series proves uniform
+convergence on compact sets of \(z\), so \(A_L\) is entire.
+For an integer \(U\ge1\) let \(A_{L,U}\) use just the cells
+inside \([-U,U]\), with indices \(-U/h\le j<U/h\).
+The same integral and contraction descriptions hold with that
+restriction.
+
+\section{Uniform absolute strip error}\label{sec:strip}
+
+\begin{theorem}\label{thm:strip}
+Define
+\[
+ V_8=\sup_{0\le\lambda\le1/2}\norm{W_\lambda'}_{1,8},
+ \qquad
+ T_8(U)=\frac12\int_{|u|>U}\ee^{8|u|}W_{1/2}(u)\dd u .
+\]
+Then \(V_8<868\). For all \(0\le\lambda\le1/2\), \(x\in\R\),
+and \(|y|\le8\), one has
+\begin{align}
+ |H_\lambda(x+\ii y)-A_L(\lambda,x+\ii y)|
+     &\le \frac{h\ee^{8h}}4 V_8, \label{eq:full-bound}\\
+ |H_\lambda(x+\ii y)-A_{L,U}(\lambda,x+\ii y)|
+     &\le \frac{h\ee^{8h}}4 V_8+T_8(U). \label{eq:cut-bound}
+\end{align}
+For \(U=2\) and \(L=30\), the right side of
+\eqref{eq:cut-bound} is less than \(5\cdot10^{-7}\).
+\end{theorem}
+
+\begin{proof}
+For \eqref{eq:full-bound}, apply \eqref{eq:projection}
+to \(W_\lambda\) with \(b=8\), and then use the Fourier factor
+\(1/2\) and \(|\ee^{\ii zu}|\le \ee^{8|u|}\) in the difference
+of the two integrals. At the cutoff apply the same cell estimates
+on \([-U,U]\). The exterior of the true integral is bounded by
+\(T_8(U)\), since \(0<W_\lambda\le W_{1/2}\).
+The estimate uses the source variation but no bound involving
+the real part \(x\).
+
+For the explicit constants work first on \(u\ge0\).
+The recurrence in Lemma~\ref{lem:source} gives
+\[
+ Q_1(r)=-8r^3+30r^2-15r,\qquad
+ B_0=5C_2(0),\qquad B_1=53C_3(0).
+\]
+For \(a_n=n^6\ee^{-\pi(n^2-1)}\) and \(n\ge2\),
+\[
+ \frac{a_{n+1}}{a_n}
+ =\left(\frac{n+1}{n}\right)^6\ee^{-\pi(2n+1)}
+ \le (3/2)^6\ee^{-15}<\tfrac12,\qquad
+ a_2=64\ee^{-3\pi}<\tfrac18.
+\]
+Here \((3/2)^6<12\), \(\pi\ge3\), and \(\ee>2\).
+Thus \(C_2(0)\le C_3(0)\le 1+2a_2<2\).
+Consequently \(B_0<10\), \(B_1<106\). By
+\eqref{eq:complete-dom} and \(2\lambda\le1\),
+\begin{equation}\label{eq:derivative-source}
+ |W_\lambda'(u)|\le
+    \ee^{u^2/2+u}(B_1\rho^3+u B_0\rho^2)\ee^{-\rho}.
+\end{equation}
+The exponential series gives \(\rho\ge 3(1+4u+8u^2)\) and
+\(\rho\ge 3(1+4u)\). In particular,
+\[
+ \frac{\rho}{2}-\frac{u^2}{2}-9u
+ \ \ge\ \frac{23}{2}u^2-3u+\frac32
+ \ =\ \frac{23}{2}(u-3/23)^2+\frac{30}{23}>0,\qquad
+ u\le \frac{\rho}{4}.
+\]
+Multiplying \eqref{eq:derivative-source} by \(\ee^{8u}\)
+gives \((B_1+B_0/4)\rho^3\ee^{-\rho/2}\) as an upper bound.
+Evenness of \(|W_\lambda'|\) and the change of variable
+\(\dd u=\dd\rho/(4\rho)\) yield
+\[
+ V_8\le \frac{B_1+B_0/4}{2}
+             \int_\pi^\infty \rho^2\ee^{-\rho/2}\dd\rho
+     \le 8B_1+2B_0<868.
+\]
+In the second inequality the integral was extended to zero,
+where its value is \(16\), by the substitution \(\rho=2t\)
+and two integrations by parts.
+
+Write \(\rho_U=\pi\ee^{4U}\).
+The Fourier factor cancels the doubling from the two half-lines.
+Using the \(j=0\) source bound and the same exponential domination
+on \(u\ge U\) gives
+\begin{equation}\label{eq:tail}
+ T_8(U)\le \frac{B_0}{4}\int_{\rho_U}^\infty
+             \rho\,\ee^{-\rho/2}\dd\rho
+          =\frac{B_0}{2}(\rho_U+2)\ee^{-\rho_U/2}.
+\end{equation}
+For \(U=2\), the exponential series gives
+\(\rho_2\ge3(1+8+8^2/2)>64\). The function
+\((r+2)\ee^{-r/2}\) decreases for \(r>0\), so
+\(T_8(2)<5(64+2)\ee^{-32}<330/2^{32}\).
+For \(h=2^{-30}\), \(8h<1/2\) and
+\(\ee^{8h}\le(1-8h)^{-1}<2\), comparing the exponential series
+to the geometric series. Therefore the cell term in
+\eqref{eq:cut-bound} is less than \(1736/2^{32}\). Combining
+the bounds,
+\[
+ \frac{h\ee^{8h}}4 V_8+T_8(2)
+   <\frac{2066}{2^{32}}<\frac{1}{2\cdot10^6},
+\]
+where the last comparison is
+\(4{,}132{,}000{,}000<4{,}294{,}967{,}296\).
+\end{proof}
+
+\section{Aliasing of the fixed center-point lattice}\label{sec:alias}
+
+An alternative scalar rule with the same masses evaluates the
+phase only at the cell centers:
+\[
+ B_L(\lambda,x)=\frac12\sum_{j\in\mathbb Z}
+                 m_{L,j}(\lambda)\,\ee^{\ii x c_{L,j}}
+ \qquad (x\in\R).
+\]
+
+\begin{proposition}\label{prop:aliasing}
+For every fixed \(L\) and \(0\le\lambda\le1/2\),
+\[
+ \sup_{x\in\R}|H_\lambda(x)-B_L(\lambda,x)|\ \ge\ Z_\lambda/2 .
+\]
+\end{proposition}
+
+\begin{proof}
+At \(x_k=2\pi k/h\), \(k\) a positive integer,
+\(\ee^{\ii x_k c_{L,j}}=(-1)^k\) for every \(j\).
+Hence \(B_L(\lambda,x_k)=(-1)^k Z_\lambda/2\) by absolute
+summability. The complete source decays at infinity and its
+derivative is integrable by Lemma~\ref{lem:source}. Integration
+by parts gives, for \(x\ne0\),
+\[
+  |H_\lambda(x)|\le \norm{W_\lambda'}_{1,0}/(2|x|).
+\]
+Thus the absolute error at \(x_k\) tends to
+\(Z_\lambda/2\). Taking the supremum over all real \(x\) proves
+the bound.
+\end{proof}
+
+The proposition concerns the supremum over the full real axis
+for the fixed-level center-point rule with full-line masses.
+At the indicated frequencies \(\sinc(x_kh/2)=0\), which exactly
+cancels the lattice phase in \(A_L\). Directly integrating the
+same step density gives the identical field \eqref{eq:readout},
+including the same cutoff when applied. This is the scalar
+baseline for the exact-cell construction.
+
+\section{Time and arithmetic in the finite readout}\label{sec:time}
+
+The exact masses at each time are integrals of
+\(W_{1/2-\tau}=\ee^{-\tau u^2} W_{1/2}\). Differentiation at fixed
+cell and time gives
+\[
+ \partial_\tau m_{L,j}(1/2-\tau)
+    =-\int_{I_{L,j}}u^2 W_{1/2-\tau}(u)\dd u .
+\]
+After dividing by \(h\) this yields
+\(\partial_\tau P_h W_{1/2-\tau}=-P_h(u^2 W_{1/2-\tau})\).
+The latter is constant on each cell, whereas
+\(-u^2 P_h W_{1/2-\tau}\) varies inside every positive-mass cell.
+Thus the finite refinement follows the exact orbit by projection
+at each time. Its time derivative uses further source information
+within the cells.
+
+Theorem~\ref{thm:strip} assumes the complete masses and exact
+contraction. If the retained masses instead have errors
+\(\delta m_{L,j}(\lambda)\), the centered average representation
+\[
+ \sinc(zh/2)=h^{-1}\int_{-h/2}^{h/2}\ee^{\ii zv}\dd v
+\]
+bounds its modulus by \(\ee^{4h}\) on \(|y|\le8\).
+If \(e_{\rm readout}\) is an absolute bound for arithmetic in
+evaluating \eqref{eq:readout} at the supplied masses, the total
+computed-minus-ideal error is at most
+\begin{equation}\label{eq:computed}
+ \frac12\ee^{4h}\sum_{-U/h\le j<U/h}
+             \ee^{8|c_{L,j}|}|\delta m_{L,j}(\lambda)|
+       +e_{\rm readout}.
+\end{equation}
+Each mass error must include the contributions of any theta-series
+truncation, quadrature, and approximation of the refinement factors
+used to obtain that mass. For a computed error below \(10^{-6}\)
+at the theorem's tuple, it suffices to bound the weighted sum in
+\eqref{eq:computed} by \(10^{-6}/(2\ee^{4h})\) and bound
+\(e_{\rm readout}\) by \(10^{-6}/4\). The first bound is needed
+uniformly in \(\lambda\), and the second over the same time and
+strip domain as the theorem. These are requirements for an
+implementation. The exact source and contraction in the theorem
+carry only the paid projection and exterior errors.
+
+\section{Outstanding challenges}
+
+The cutoff at the given resolution specifies \(2U/h=2^{32}\)
+cell masses. Obtaining a compressed description of those complete
+masses, with a proved error in the weighted sum
+\eqref{eq:computed}, remains open. A useful cost result would
+also bound the ranks of the growing-prefix refinement factors
+and the cost of their contraction, and compare those costs with
+direct integration of the same piecewise-constant density.
+An arithmetic theorem for unbounded real \(x\) would need
+phase evaluation with a justified uniform error over that domain.
+
+For the full-line product the convergence established here is
+weighted state convergence. An operator-norm theorem for the
+full-line source factors would require new control of the
+relative child and parent averages far out in the theta tail.
+The local bounds based on a positive interval minimum leave
+that question open. For time stepping, a finite closed evolution
+would require information about the moments inside each cell or
+an estimate replacing that information with a controlled error.
+
+Finally, the strip estimate is absolute in the physical
+normalization \eqref{eq:conventions}. A relative estimate near
+zeros or a signed consequence for a logarithmic Green field
+would require additional lower or deflation estimates. Weighted
+regularity and the exact readout apply to smooth sources that
+admit collisions. The quantitative theta input used here is
+the complete source bound for its variation and tail.
+
+\paragraph{Acknowledgment.} This draft was prepared for Edward Baker with substantial
+OpenAI Codex LLM assistance. Recorded worker dispatch was GPT-6.1 Sol /
+Ultra. Independent backend metadata are unavailable.
+
+\begin{thebibliography}{9}
+
+\bibitem{DLMFTheta}
+W.~P. Reinhardt and P.~L. Walker,
+\emph{Theta functions}, NIST Digital Library of Mathematical Functions,
+Chapter 20, \href{https://dlmf.nist.gov/20.2#E3}{Eq.~20.2.3} and
+\href{https://dlmf.nist.gov/20.7#E32}{Eq.~20.7.32}.
+
+\bibitem{DLMFZeta}
+T.~M. Apostol, \emph{Zeta and related functions},
+NIST Digital Library of Mathematical Functions, Chapter 25,
+\href{https://dlmf.nist.gov/25.4#E4}{Eq.~25.4.4}.
+
+\bibitem{Lindsey}
+M.~Lindsey, \emph{Multiscale interpolative construction of quantized
+tensor trains}, \href{https://arxiv.org/abs/2311.12554v3}{arXiv:2311.12554v3},
+2024.
+
+\bibitem{Shinaoka}
+H.~Shinaoka, M.~Wallerberger, Y.~Murakami, K.~Nogaki, R.~Sakurai,
+P.~Werner, and A.~Kauch, \emph{Multiscale space-time ansatz for
+correlation functions of quantum systems based on quantics tensor
+trains}, \href{https://doi.org/10.1103/PhysRevX.13.021015}
+{Phys.\ Rev.\ X \textbf{13}, 021015 (2023)}.
+
+\end{thebibliography}
+
+\end{document}

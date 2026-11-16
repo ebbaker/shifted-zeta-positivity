@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "record_kind": "unregistered_native_public_excerpt",
+  "captured_at": "2026-11-16T04:52:51.761Z",
+  "provenance": {
+    "tool": "mcp__codex_app__read_thread",
+    "thread_id": "01a1daa9-a0cf-7811-b81b-166b83d6bc9e",
+    "source_title": "Review investigations-6 manuscripts",
+    "source_created_at_seconds": 1794669912,
+    "source_updated_at_seconds": 1794804771,
+    "host_id": "local",
+    "page": {
+      "order": "newest_first",
+      "limit": 5,
+      "nextCursor": null,
+      "hasMore": false
+    },
+    "max_output_chars_per_item": 20000,
+    "includes_tool_traffic": false,
+    "includes_private_reasoning": false
+  },
+  "scope": "Public user and assistant text returned by the native thread reader, through the capture time. This is not a canonical registry refresh; the active turn is incomplete and its final reply is not yet recorded. Native timestamps have second precision and do not replace the original registered creation time. The strict paginated exporter remains blocked on structured source content; its integrity checks have not been changed.",
+  "turns": [
+    {
+      "id": "01a1daa9-a2ff-7032-93dd-d00f90a93d37",
+      "status": "completed",
+      "started_at_seconds": 1794669912,
+      "completed_at_seconds": 1794670258,
+      "messages": [
+        {
+          "id": "01a1daa9-a668-73a3-b8f4-ee1b74e62554",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "Please review the manuscripts in papers/investigations-6. Please summarize the results at a high level so that we can brainstorm about paths forward. Write any notes from this session in the brainstorm folder within investigations-6, and record chat history in the chat-histories folder.\n"
+            }
+          ]
+        },
+        {
+          "id": "msg_049daf9254b32e95016af87d5ba51c87d1922ff77eb1d6da5e",
+          "role": "assistant",
+          "phase": "commentary",
+          "text": "I’ll review the investigation’s manuscripts and established-result summaries, then give you a high-level assessment of what holds, what remains open, and possible paths forward. I’ll save session notes in `investigations-6/brainstorm` and record this chat in its `chat-histories` folder.\n"
+        },
+        {
+          "id": "msg_049daf9254b32e95016af87d6ff0f887d19c5cdb6346dc7bf7",
+          "role": "assistant",
+          "phase": "commentary",
+          "text": "The four drafts develop ways to represent and approximate the same Newman flow. The key distinction for our discussion is whether a result improves representation, gives usable error bounds, or adds information about zeros; those are separate achievements. The chat recorder also rejected an unfamiliar message format, so I’m checking that before claiming the history is saved.\n"
+        },
+        {
+          "id": "msg_049daf9254b32e95016af87d8f3b9c87d19d8ffd8b7b31e475",
+          "role": "assistant",
+          "phase": "commentary",
+          "text": "The clearest quantitative result so far is the coefficient bound: the squared Jacobi couplings grow at most like \\((\\log n)^2\\). It feeds directly into a proved finite-chain error bound. The chain is also exactly Gaussian quadrature, so its tensor interpretation does not by itself establish a computational advantage.\n"
+        },
+        {
+          "id": "msg_049daf9254b32e95016af87dd2152487d1bd227466e3fc9576",
+          "role": "assistant",
+          "phase": "commentary",
+          "text": "The drafts support a useful distinction for brainstorming. Jacobi/Volterra provides the strongest current link from source structure to an error bound; QTT provides a fixed-box rank bound; and exact cell integration gives an error bound uniform over real height. None yet provides a new zero-exclusion estimate. Known colliding controls even satisfy the Volterra coefficient bound.\n\nChat registration now works after a narrowly scoped recorder compatibility fix; its checks passed. I’m saving the synthesis and a short list of analytical directions.\n"
+        },
+        {
+          "id": "msg_049daf9254b32e95016af87ea3eaac87d1ba33e00a683fb68a",
+          "role": "assistant",
+          "phase": "final_answer",
+          "text": "I reviewed all four manuscripts. **The strongest achievement is the connection from coefficient bounds to controlled finite-chain approximation.** Together, the papers establish useful representation and approximation results; they do not yet establish a new zero-exclusion estimate or computational advantage. I found no blocking discrepancy in the principal arguments, within this internal review.\n\n| Manuscript | Main result | What remains open |\n|---|---|---|\n| **QTT Newman flow** | A constructive tensor rank bound of **641**, with scaled absolute error below \\(2^{-36}\\) on the specified complex box, \\(40\\le\\Re z\\le80,\\ \\lvert\\Im z\\rvert\\le8\\). | Certified coefficient acquisition, stable arithmetic, and useful rank bounds as height increases. |\n| **Jacobi-chain height flow** | An exact infinite-chain representation, explicit finite-chain error bounds, and sufficient depth of order \\(K\\log K\\), where \\(K\\) combines height and requested accuracy. An existing **16-site certificate** demonstrates finite feasibility. | Quantitative propagation of the full state along the chain, sharper depth estimates, and coefficient conditioning at larger sizes. |\n| **Volterra coefficient dynamics** | Exact coefficient evolution and an all-degree bound showing that the squared couplings grow at most like **\\((\\log n)^2\\)**. This directly controls the Jacobi approximation error. | Sharp individual asymptotics, lower bounds, and information sensitive to the field’s cancellations. |\n| **Exact infinite tensor products** | Integrating the phase within each cell gives absolute error below **\\(5\\times10^{-7}\\)** uniformly over all real heights and \\(\\lvert\\Im z\\rvert\\le8\\). | The stated construction requires **\\(2^{32}\\) formal cell masses**; useful compression and acquisition remain unproved. |\n\nThese results use \\(0\\le\\lambda\\le1/2\\), but their error scales differ. In particular, uniform absolute accuracy over all heights does not give relative accuracy near zeros.\n\nTwo distinctions matter for brainstorming. First, the Jacobi bond-two encoding can represent any square-summable sequence: its small bond dimension does not limit how many amplitudes must be known. Its finite scalar readout is also exactly Gaussian quadrature, consistent with the classical [Jacobi-matrix correspondence](https://dlmf.nist.gov/3.5#vi). The useful quantitative contribution is the complete-source error analysis.\n\nSecond, **known weighted-square collision controls satisfy the same Volterra coefficient bound**. Consequently, that bound alone cannot exclude collisions. A signed estimate needs additional information that affects the actual oscillatory cancellation.\n\nI would prioritize three directions:\n\n1. **Sharpen coefficient information where it improves the scalar remainder.** Start by checking whether retaining the existing adjacent-coefficient constraints jointly improves the norm-product bound; the current estimate bounds the factors separately. Then consider effective asymptotics with uniform remainders. This has the clearest measurable outcome: a smaller required chain depth or precision.\n\n2. **Quantify how the prepared state moves along the Jacobi chain.** Every fixed prefix eventually loses its mass as height increases, but the rate is unknown. A useful tail bound would answer the original height-transport question and explain how many amplitudes are actually needed.\n\n3. **Combine QTT compression with exact cell-phase integration.** This could connect QTT’s compact representation with the dyadic paper’s treatment of oscillation. The target would be a proved compression/error bound that avoids billions of separate masses, compared with direct integration of the same approximate source.\n\n**My first choice is the coefficient-to-remainder direction**, with state propagation next if the main interest is understanding height dynamics.\n\nI saved the detailed [review and brainstorming notes](/Users/ebbaker/Documents/shifted-zeta-positivity/papers/investigations-6/brainstorm/notes/03_MANUSCRIPT_REVIEW_AND_PATHS_FORWARD_20261114.md). [Chat history](/Users/ebbaker/Documents/shifted-zeta-positivity/papers/investigations-6/chat-histories/0003_2026-11-14T15-25-12Z_review-investigations-6-manuscripts.json) is registered and refreshed, with capture of this final reply arranged."
+        }
+      ]
+    },
+    {
+      "id": "01a1ddc0-6f2a-7e81-bb96-50f5bdad3277",
+      "status": "completed",
+      "started_at_seconds": 1794721738,
+      "completed_at_seconds": 1794722039,
+      "messages": [
+        {
+          "id": "01a1ddc0-7050-7f93-8695-47cd3c9ff403",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "I was looking at the papers, but if you summarize the ideas in each one briefly it would be helpful. In particular I'd like a refresher on the setup of the problem, the ansatz being used, and a brief high level overview of what was tried, focusing on methods instead of results. You can cite eqref labels from the papers if it is helpful\n"
+            }
+          ]
+        },
+        {
+          "id": "msg_049daf9254b32e95016af947e21a8c87d193809443ef6bff04",
+          "role": "assistant",
+          "phase": "commentary",
+          "text": "I’ll give a brief methods-first refresher: the common setup, then what each paper represents, how it evolves, and how it recovers the Newman field. I’ll check the equation labels and save the refresher with our brainstorm notes.\n"
+        },
+        {
+          "id": "msg_049daf9254b32e95016af947fb102087d195ed5715823588b0",
+          "role": "assistant",
+          "phase": "commentary",
+          "text": "The main distinction is what the chain indexes: QTT uses binary digits of the source coordinate; Jacobi uses polynomial degree; Volterra evolves the Jacobi coefficients; and the infinite-product paper adds finer binary scales.\n\nThe history check also found that the previous final reply was not captured because the recorder rejected a new display-status field. The verified archive is intact; I’m recovering the missing reply before continuing capture.\n"
+        },
+        {
+          "id": "msg_049daf9254b32e95016af9488e980887d1ad12ec158207f712",
+          "role": "assistant",
+          "phase": "commentary",
+          "text": "The refresher is drafted. For chat history, the display-status fix passed, but refresh now stops because the source’s creation timestamp differs from the archived timestamp by 36 milliseconds. I’m preserving the original archive and saving the additional completed public text as a clearly marked supplement.\n"
+        },
+        {
+          "id": "msg_049daf9254b32e95016af948e5694087d18976f7b4e29de50f",
+          "role": "assistant",
+          "phase": "final_answer",
+          "text": "All four papers start from the same **source-space formulation**:\n\\[\nW_\\lambda(u)=e^{\\lambda u^2}\\Phi(u),\n\\qquad\nH_\\lambda(z)=\\frac12\\int_{\\mathbb R}W_\\lambda(u)e^{izu}\\,du.\n\\]\nHere \\(\\Phi\\) is the complete positive, even theta source; \\(u\\) is the source coordinate; \\(x=\\Re z\\) is height; and \\(\\lambda\\) is Newman time. The connection to zeta is \\(H_0(z)=\\xi((1-iz)/2)/8\\).\n\nReversing time by \\(\\tau=1/2-\\lambda\\) gives\n\\[\nW_{1/2-\\tau}(u)=e^{-\\tau u^2}W_{1/2}(u).\n\\]\nThus **time evolution multiplies by a Gaussian, while height observation inserts an oscillatory phase**. Each paper chooses a different representation for those operations.\n\n1. **QTT: encode the source coordinate in binary.**\n\n   Sample \\(u\\) on a dyadic grid, label each point by bits \\(b_1,\\ldots,b_L\\), and represent the weighted samples as a matrix product:\n   \\[\n   \\sqrt h\\,W_\\lambda(u_{\\boldsymbol b})\n   \\approx A_1(b_1)\\cdots A_L(b_L).\n   \\]\n   Each tensor site represents a **binary digit of \\(u\\)**.\n\n   The construction approximates the initial source with a Chebyshev polynomial and the Gaussian multiplier with a Taylor polynomial. Binomial translations turn their polynomial product into explicit tensor cores. Since \\(e^{izu_{\\boldsymbol b}}\\) also factors over bits, contracting the train gives the Fourier/cosine observation. The remaining analysis tracks approximation, quadrature and tail errors.\n\n   See [QTT §§3–4](/Users/ebbaker/Documents/shifted-zeta-positivity/papers/investigations-6/01_qtt_newman_flow/manuscript/main.tex:212), particularly `eq:delta` and `eq:readout`.\n\n2. **Jacobi chain: express the source through orthogonal polynomials.**\n\n   Normalize the initial source to a measure \\(\\mu_*\\), construct its orthogonal polynomials, and represent multiplication by \\(u\\) as a tridiagonal matrix \\(J_*\\). Each chain site represents a **polynomial degree**.\n\n   The exact state is\n   \\[\n   v(\\tau,x)=e^{-\\tau J_*^2}e^{ixJ_*}e_0,\n   \\]\n   and the field is its zeroth component multiplied by \\(Z_*/2\\). The tensor ansatz encodes this vector as the one-excitation state \\(\\sum_n v_n|1_n\\rangle\\), using bond-two matrix products.\n\n   The paper then truncates the chain, identifies its scalar readout with Gaussian quadrature, and uses Hermite interpolation plus Gaussian averaging to estimate the truncation error.\n\n   See [the fixed-chain construction](/Users/ebbaker/Documents/shifted-zeta-positivity/papers/investigations-6/02_jacobi_chain_height_flow/manuscript/main.tex:202): `thm:orbit`, `eq:lattice`, `eq:finite`, and `eq:hermite`.\n\n3. **Volterra: let the orthogonal-polynomial basis move with time.**\n\n   Rebuild the basis for each current weight \\(W_\\lambda\\). The representation is now the sequence of recurrence coefficients:\n   \\[\n   uP_n=P_{n+1}+\\beta_nP_{n-1}.\n   \\]\n   Differentiating orthogonality, using \\(\\partial_\\lambda W_\\lambda=u^2W_\\lambda\\), produces the nonlinear evolution\n   \\[\n   \\partial_\\lambda\\beta_n=\\beta_n(\\beta_{n+1}-\\beta_{n-1}).\n   \\]\n\n   To obtain quantitative information from theta, the paper estimates the logarithmic derivative of the weight, integrates by parts against squared orthogonal polynomials, and applies Jensen’s inequality. Those coefficient estimates feed the fixed-chain approximation.\n\n   See [the moving-basis derivation](/Users/ebbaker/Documents/shifted-zeta-positivity/papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/main.tex:158): `eq:volterra`, `eq:lax`, and especially `eq:twochains` for the fixed/moving comparison.\n\n4. **Infinite dyadic products: build the source by successive refinements.**\n\n   Divide the source line into nested cells, compute their masses \\(m_{L,j}\\), and prepare amplitudes \\(\\sqrt{m_{L,j}}\\). Each refinement splits a parent into children with amplitudes \\(\\sqrt{m_{\\rm child}/m_{\\rm parent}}\\). The tensor construction therefore follows **successively finer spatial scales** and approaches the square-root density.\n\n   The phase also factors over binary scales. Integrating the unresolved phase within each cell produces an exact sinc factor. Weighted density-error estimates then control the Fourier observation. This is the paper’s central method for handling oscillation at finite resolution.\n\n   See [mass refinement and phase observation](/Users/ebbaker/Documents/shifted-zeta-positivity/papers/investigations-6/04_exact_infinite_tensor_products/manuscript/main.tex:189): `eq:mass-isometry`, `eq:telescopes`, `eq:sinc`, and `eq:readout`.\n\nSaved in the [methods refresher](/Users/ebbaker/Documents/shifted-zeta-positivity/papers/investigations-6/brainstorm/notes/04_METHODS_REFRESHER_20261115.md). Chat additions are preserved in a marked supplement; canonical history refresh remains blocked by changed source metadata."
+        }
+      ]
+    },
+    {
+      "id": "01a1e1d0-357e-77a3-b22c-b08cd3e07648",
+      "status": "completed",
+      "started_at_seconds": 1794789881,
+      "completed_at_seconds": 1794790626,
+      "messages": [
+        {
+          "id": "01a1e1d0-35ae-7cb0-a3c8-b6381cc8291b",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "I've been working on understanding these different ideas, but I think it will be better to focus in on one at a time to do deeper dives. I want to strategize about which seem the most promising, and understand the different routes more deeply at a high level. Given the description from the last response, I am most drawn to 3 - Volterra, and second most to 4 - Infinite dyadic products. For Volterra, I like the recurrence idea, can you dive deeper into how the recurrence works, and what it is representing. I think the recurrence could potentially lead to proof tactics that could live inside the induction based on the recursive index. For 4, I like that it is an exact representation, but I also don't fully understand the construction, so if you can also explain this at a deeper level it would be helpful.\n"
+            }
+          ]
+        },
+        {
+          "id": "msg_049daf9254b32e95016afa51fe2b8487d1b217584f00cbe4b3",
+          "role": "assistant",
+          "phase": "commentary",
+          "text": "I’ll focus on what the Volterra coefficients encode and where induction in polynomial degree could enter. Then I’ll explain the dyadic construction through its cell-splitting rule, including how its exact infinite representation relates to finite approximations. I’ll save the discussion in the brainstorm notes.\n"
+        },
+        {
+          "id": "msg_049daf9254b32e95016afa530ac03887d18df5c0f3d4b872a9",
+          "role": "assistant",
+          "phase": "commentary",
+          "text": "The key distinction is that the polynomial recurrence advances in degree, while the Volterra equation evolves its coefficients in Newman time. An induction proof would need an additional relation that controls the next coefficient from information already available. The dyadic construction has a different kind of recursion: it repeatedly splits source mass between smaller intervals.\n"
+        },
+        {
+          "id": "msg_049daf9254b32e95016afa5372711087d183f72e5d82b93d2c",
+          "role": "assistant",
+          "phase": "commentary",
+          "text": "There is a useful model for the induction idea: for some simpler weights, integration by parts gives a second relation among neighboring recurrence coefficients. For the theta source, finding a usable relation of that kind remains open. I’ll use that example to show what an induction could draw on, then explain the dyadic product with a small conditional-mass example.\n"
+        },
+        {
+          "id": "msg_049daf9254b32e95016afa549335c087d1ac7f37a72b2ea458",
+          "role": "assistant",
+          "phase": "commentary",
+          "text": "The deeper explanation is saved in the brainstorm folder. I’ve left the manuscripts unchanged.\n\nThe main chat recorder is still blocked by source metadata it cannot safely preserve. I saved a separate public-text excerpt, including the two earlier final replies, without changing the registered archive.\n"
+        },
+        {
+          "id": "msg_049daf9254b32e95016afa54c0d00c87d1bbca4bc1a36acc0c",
+          "role": "assistant",
+          "phase": "final_answer",
+          "text": "I would focus on **Volterra first for the induction idea you have in mind**. It organizes the source into one sequence of coefficients, with relations between neighboring degrees. One useful clarification: **both routes give exact infinite representations**. Their difference is how they organize the information—polynomial degree for Volterra, spatial resolution for dyadic products.\n\nFor both, the starting point is\n\\[\nW_\\lambda(u)=e^{\\lambda u^2}\\Phi(u),\n\\qquad\nH_\\lambda(z)=\\frac12\\int_{\\mathbb R}W_\\lambda(u)e^{izu}\\,du.\n\\]\nWe are reorganizing the positive source \\(W_\\lambda\\), while retaining its oscillatory Fourier observation.\n\n**Volterra begins by organizing the source by polynomial degree.** At a fixed \\(\\lambda\\), construct \\(P_n(u)\\) by taking \\(u^n\\) and subtracting its weighted projection onto all lower-degree polynomials. These are monic orthogonal polynomials: leading coefficient one, with orthogonality measured using \\(W_\\lambda(u)\\,du\\).\n\nDefine\n\\[\nh_n=\\int P_n(u)^2W_\\lambda(u)\\,du,\n\\qquad\n\\beta_n=\\frac{h_n}{h_{n-1}}.\n\\]\nThe recurrence is\n\\[\n\\boxed{P_{n+1}(u)=uP_n(u)-\\beta_nP_{n-1}(u).}\n\\]\n\nWhy only these terms? Multiplication by \\(u\\) raises the degree by one. Orthogonality eliminates contributions from degrees below \\(n-1\\), and evenness of the source eliminates the degree-\\(n\\) contribution. This is `eq:recurrence` in the [Volterra manuscript](/Users/ebbaker/Documents/shifted-zeta-positivity/papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/main.tex:147).\n\nThe first few polynomials make the mechanism tangible:\n\\[\nP_0=1,\\qquad P_1=u,\\qquad\nP_2=u^2-\\beta_1,\\qquad\nP_3=u^3-(\\beta_1+\\beta_2)u.\n\\]\n\nThe coefficients contain information about the source. If \\(M_k\\) denotes its normalized \\(k\\)-th moment, then\n\\[\n\\beta_1=M_2,\\qquad\n\\beta_2=\\frac{M_4-M_2^2}{M_2}.\n\\]\nThus the first coefficient measures variance; the next introduces fourth-moment information after removing what lower degrees already capture.\n\nHere **\\(n\\) measures polynomial complexity**. It is neither height nor the index of a zeta zero.\n\nThere is also a chain interpretation. In the normalized polynomial basis, multiplication by \\(u\\) becomes a tridiagonal matrix \\(J(\\lambda)\\), with link strengths \\(\\sqrt{\\beta_n}\\). The original field is recovered exactly through\n\\[\nH_\\lambda(x)=\\frac{Z_\\lambda}{2}\n\\langle e_0,e^{ixJ(\\lambda)}e_0\\rangle,\n\\qquad Z_\\lambda=\\int W_\\lambda.\n\\]\nSo the coefficients encode a chain whose oscillatory return amplitude gives the Fourier field (`eq:twochains`). This explains what the recurrence is representing.\n\n**The Volterra equation describes a second operation: changing Newman time.** As \\(\\lambda\\) changes, the weight changes, so the orthogonal polynomials and their coefficients change too. Because\n\\(\\partial_\\lambda W_\\lambda=u^2W_\\lambda\\), differentiating their norms gives\n\\[\n\\partial_\\lambda\\log h_n=\\beta_n+\\beta_{n+1}.\n\\]\nSubtracting neighboring identities yields\n\\[\n\\boxed{\\partial_\\lambda\\beta_n\n=\\beta_n(\\beta_{n+1}-\\beta_{n-1}).}\n\\]\nThis is `eq:volterra`. Each coefficient interacts only with its two neighbors.\n\nThat locality is attractive for your idea, but the distinction between the two recursions matters:\n\n- The polynomial recurrence advances in **degree**, provided the coefficients are known.\n- The Volterra equation evolves those coefficients in **time**, provided the neighboring coefficients are available.\n\nRearranging the latter,\n\\[\n\\beta_{n+1}=\\beta_{n-1}+\\partial_\\lambda\\log\\beta_n,\n\\]\nshows the obstacle to a straightforward degree induction: knowing a bound on \\(\\beta_n\\) does not automatically control its time derivative.\n\n**A useful induction would therefore need a relation supplied by the particular source.** There is a classical mechanism illustrating what that could look like. Set \\(V_\\lambda=-\\log W_\\lambda\\). Integration by parts gives\n\\[\n\\int V_\\lambda'(u)P_n(u)P_{n-1}(u)W_\\lambda(u)\\,du\n=n h_{n-1}.\n\\]\nThis connects the source’s logarithmic derivative to the degree recurrence.\n\nFor a Gaussian source, \\(V'(u)=u/\\sigma^2\\), and substitution immediately gives \\(\\beta_n=n\\sigma^2\\). For certain polynomial potentials, the same method produces nonlinear relations involving only a few neighboring coefficients. The quartic example is discussed in [Van Assche, §3](https://arxiv.org/html/2202.11017v1).\n\nFor theta, \\(V_\\lambda'=-\\Phi'/\\Phi-2\\lambda u\\) involves the complete infinite sum. The manuscript has not turned it into a closed finite coefficient relation. Its current method instead uses an inequality for this logarithmic derivative, followed by integration by parts and Jensen’s inequality.\n\nI see a concrete way to frame the next investigation:\n\n1. Identify what source information an inductive hypothesis should retain—perhaps adjacent-coefficient bounds together with an auxiliary integral.\n2. Show that the next step controls every new quantity it introduces.\n3. Transfer the resulting improvement to a useful bound, such as\n   \\[\n   \\frac{h_N}{h_0}=\\prod_{n=1}^N\\beta_n,\n   \\]\n   which enters the scalar approximation remainder.\n\nThis gives induction a measurable purpose. The current coefficient bound also holds for known colliding weighted-square sources, so proving generic coefficient positivity or repeating that bound cannot settle the zero question.\n\n**The dyadic construction organizes the same source through repeated conditional splits.** Divide the line into cells of width \\(2^{-L}\\), assigning each its exact mass\n\\[\nm_{L,j}=\\int_{I_{L,j}}W_\\lambda(u)\\,du.\n\\]\nEach parent splits into two children. Their conditional mass fractions are\n\\[\np_\\epsilon(j)=\\frac{m_{L+1,2j+\\epsilon}}{m_{L,j}},\n\\qquad p_0(j)+p_1(j)=1.\n\\]\n\nThe state uses amplitudes \\(\\sqrt{m_{L,j}}\\), and refinement acts as\n\\[\n|j\\rangle\\longmapsto\n\\sqrt{p_0(j)}\\,|j0\\rangle+\n\\sqrt{p_1(j)}\\,|j1\\rangle.\n\\]\nMultiplying by the parent amplitude produces exactly the two child amplitudes. Square roots make squared amplitudes equal source masses, so refinement preserves the total norm. This is `eq:mass-isometry` in the [dyadic manuscript](/Users/ebbaker/Documents/shifted-zeta-positivity/papers/investigations-6/04_exact_infinite_tensor_products/manuscript/main.tex:229).\n\nFor a toy unit mass—not theta data—suppose the first split is \\(0.6/0.4\\):\n\n| Parent | Conditional split | Resulting child masses |\n|---|---|---|\n| Left, mass \\(0.6\\) | \\(0.7/0.3\\) | \\(0.42,\\ 0.18\\) |\n| Right, mass \\(0.4\\) | \\(0.2/0.8\\) | \\(0.08,\\ 0.32\\) |\n\nA final mass is the product of the conditional fractions along its path. Crucially, **the next split depends on the preceding bits**. This generally represents a correlated source, rather than independent binary choices.\n\nTo see the infinite product explicitly, let \\(f_L\\) be the density obtained by spreading each cell’s mass uniformly across that cell. Set \\(R_k=f_k/f_{k-1}\\). Then\n\\[\nf_L=f_0\\prod_{k=1}^L R_k,\n\\qquad\n\\sqrt{f_L}=\\sqrt{f_0}\\prod_{k=1}^L\\sqrt{R_k}.\n\\]\nOn a child, \\(R_k\\) is twice its conditional mass fraction. For a smooth positive source, sufficiently fine splits become nearly equal, so these correction factors approach one locally. The paper proves convergence to the actual source state \\(\\sqrt{W_\\lambda}\\) (`eq:telescopes`, `eq:state-limit`).\n\nThe observation also factors. Within a unit interval,\n\\[\nu=a+\\sum_{k\\ge1}2^{-k}b_k\n\\quad\\Longrightarrow\\quad\ne^{izu}=e^{iza}\\prod_{k\\ge1}e^{iz2^{-k}b_k}.\n\\]\nThus the phase acts separately on each bit, while the source state carries the correlations.\n\nAt finite resolution, integrating the phase over each uniformly filled cell gives\n\\[\nA_L(\\lambda,z)=\n\\frac12\\operatorname{sinc}(zh/2)\n\\sum_j m_{L,j}e^{izc_{L,j}},\n\\qquad h=2^{-L}.\n\\]\nThe sinc factor accounts exactly for phase variation inside that cell (`eq:sinc`, `eq:readout`).\n\n**The exactness is in the refinement identities and the infinite limit.** At finite resolution, \\(A_L\\) is generally an approximation to \\(H_\\lambda\\). Moreover, exact definitions of all conditional masses do not yet provide an efficient way to acquire or compress them.\n\nFor your purposes, Volterra offers the clearer next question: **what information from the complete theta source can be propagated through degree strongly enough to improve a useful coefficient bound?** Dyadic products offer a complementary question about controlling correlations and cancellation across spatial scales.\n\nI saved the fuller derivations and control discussion in the [brainstorm notes](/Users/ebbaker/Documents/shifted-zeta-positivity/papers/investigations-6/brainstorm/notes/05_VOLTERRA_INDUCTION_AND_DYADIC_REFINEMENT_20261115.md).\n\nThe [public chat excerpt](/Users/ebbaker/Documents/shifted-zeta-positivity/papers/investigations-6/chat-histories/unregistered_native_public_export_0003_20261115.json) preserves the preceding replies and current discussion before this final answer. Automatic capture remains blocked by source metadata; the registered archive is unchanged."
+        }
+      ]
+    },
+    {
+      "id": "01a1e2af-f061-7bf2-8f18-b4389d7b1c82",
+      "status": "inProgress",
+      "started_at_seconds": 1794804543,
+      "completed_at_seconds": null,
+      "messages": [
+        {
+          "id": "01a1e2af-f084-71a1-8e60-8bb260c0f989",
+          "role": "user",
+          "content": [
+            {
+              "type": "text",
+              "text": "I very much like the ideas in the Volterra program, and the dyadic program seems interesting too, but I need to understand it better. I will probably pursue the Volterra program first. Can you write a continuation note to continue brainstorming for both sub-investigations, and place the notes in the brainstorm folder within them. Keep the brainstorm open ended, I want to explore the ideas further within each program.\n\n"
+            }
+          ]
+        },
+        {
+          "id": "msg_049daf9254b32e95016afa8b435a7c87d19b95cf4fa3aa4fc3",
+          "role": "assistant",
+          "phase": "commentary",
+          "text": "I’ll write an open-ended continuation note in each branch’s brainstorm folder, carrying forward your preference to explore Volterra first and the questions you want to understand more deeply in both programs.\n"
+        },
+        {
+          "id": "msg_049daf9254b32e95016afa8b8232c087d1b15bd55b0a333fa2",
+          "role": "assistant",
+          "phase": "commentary",
+          "text": "I’m carrying forward two different starting points: Volterra’s recurrence and possible induction arguments, and the dyadic construction’s mass splits and exact limit. Each note will leave room to explore new questions without committing to a theorem target or computational plan.\n"
+        },
+        {
+          "id": "msg_049daf9254b32e95016afa8c1585b887d1b2029431e889f269",
+          "role": "assistant",
+          "phase": "commentary",
+          "text": "Both notes are written, with background, possible discussion threads and a starting prompt for a later conversation. They link to one another, and I’ve checked the file links and equation labels. The manuscripts are unchanged.\n"
+        }
+      ]
+    }
+  ],
+  "first_capture_at": "2026-11-16T00:50:28.522Z",
+  "first_capture_provenance": {
+    "tool": "mcp__codex_app__read_thread",
+    "thread_id": "01a1daa9-a0cf-7811-b81b-166b83d6bc9e",
+    "source_title": "Review investigations-6 manuscripts",
+    "source_created_at_seconds": 1794669912,
+    "source_updated_at_seconds": 1794790209,
+    "host_id": "local",
+    "page": {
+      "order": "newest_first",
+      "limit": 4,
+      "nextCursor": null,
+      "hasMore": false
+    },
+    "max_output_chars_per_item": 20000,
+    "includes_tool_traffic": false,
+    "includes_private_reasoning": false
+  },
+  "intended_author": "Edward Baker",
+  "llm_assistance": "OpenAI Codex",
+  "actual_model_and_effort": "Unavailable in registered configurations; not inferred",
+  "canonical_provenance": {
+    "file": "0003_2026-11-14T15-25-12Z_review-investigations-6-manuscripts.json",
+    "sha256": "53430f25561c4ba4fb9b96a36df76cc1dc73f6f9449d6fc364ad11bc8f44f8bc",
+    "creation_time_preserved": 1794669912.273,
+    "public_message_count": 5,
+    "public_prefix_matches": true,
+    "registry_unchanged": true
+  },
+  "public_message_count": 21,
+  "native_export_sha256": "71599b4ae65fc7fb8e6064304bc238723722ff8c04d90c851d0bbde7f5ececa0"
+}

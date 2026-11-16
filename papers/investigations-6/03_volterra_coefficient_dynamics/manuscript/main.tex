@@ -1,0 +1,512 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,microtype,booktabs}
+\usepackage[hidelinks]{hyperref}
+\allowdisplaybreaks[2]
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\e}{\mathrm e}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\R}{\mathbb R}
+\newcommand{\arcosh}{\operatorname{arcosh}}
+
+\title{Volterra dynamics and logarithmic coefficient bounds\\
+       for the Newman heat flow}
+\author{Edward Baker}
+\date{14 November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Orthogonalization for the complete theta source at each Newman time
+gives a moving sequence of Jacobi recurrence coefficients. We derive
+its Volterra equation and entrywise Lax identity. A bound on the
+logarithmic derivative of the complete weight, combined with monic
+polynomial integration by parts and Jensen's inequality, yields
+\(\beta_n+\beta_{n+1}\le\arcosh^2(2n+12)/16\) for all \(n\ge0\) and
+\(0\le\lambda\le1/2\). The resulting monic norm product gives an
+explicit factor in the Gaussian quadrature error for the fixed
+initial Jacobi chain. Positive weighted-square sources with
+nondegenerate collisions satisfy the same coefficient bound.
+\end{abstract}
+
+\section{Introduction}
+
+The de Bruijn--Newman field is the Fourier transform of a complete
+theta density tilted by \(\e^{\lambda u^2}\). Encoding multiplication by
+the source variable \(u\) in an orthogonal polynomial basis produces a
+tridiagonal Jacobi matrix. One can hold the basis fixed and put a heat
+factor in the readout, or rebuild the basis at each time and study the
+resulting coefficient evolution. The moving basis gives the classical
+Volterra lattice, the quadratic even-weight specialization of the
+Toda hierarchy \cite[\S2.3]{vanassche}. The lattice describes how the
+coefficients change in time. To bound them in degree, we use the
+confinement supplied by the complete theta density.
+
+The key estimate bounds a sum of adjacent squared off-diagonal
+coefficients by an explicit function growing as the square of a
+logarithm. It follows from a scalar identity for the probability measure
+whose density is the weight times the square of a monic polynomial,
+normalized by its squared norm. The estimate controls a norm factor in
+a real-height quadrature error bound. Its proof also applies to a class
+of positive weighted-square densities, including examples whose fields
+collide at positive heat times.
+
+\section{The complete source and its polynomial basis}
+
+For \(u\ge0\), put \(\rho(u)=\pi\e^{4u}\), \(r_m=m^2\rho(u)\), and
+\begin{equation}
+ s_m(u)=\e^u(2r_m^2-3r_m)\e^{-r_m},\qquad
+ \Phi(u)=\sum_{m\ge1}s_m(u),\qquad W_\lambda(u)=\e^{\lambda u^2}\Phi(u).
+ \label{eq:source}
+\end{equation}
+The complete source has a smooth even extension. Indeed, for
+\(\vartheta(t)=\sum_{m\in\mathbb Z}\e^{-\pi m^2t}\) let
+\(p(u)=\e^u(\vartheta(\e^{4u})-1)/2\).
+Jacobi's inversion formula \cite[Eqs.~20.2.3 and 20.7.32]{dlmf}
+gives \(p(-u)-p(u)=\sinh u\) and hence \(p'(0)=-1/2\).
+Termwise differentiation on compact real intervals gives
+\(\Phi=(p''-p)/8\), proving evenness. On \(u\ge0\) all
+summands are strictly positive since \(r_m\ge\pi>3\).
+In particular the physical field and the reversed clock are
+\begin{equation}
+ H_\lambda(z)=\frac12\int_\R W_\lambda(u)\e^{\ii zu}\,\dd u
+      =\int_0^\infty W_\lambda(u)\cos(zu)\,\dd u,\qquad
+ \tau=\frac12-\lambda .
+ \label{eq:field}
+\end{equation}
+The full-line mass \(Z_\lambda=\int_\R W_\lambda(u)\,\dd u\) is retained in
+the physical field.
+
+To check the time-zero scale, set \(I(z)=\int_0^\infty p(u)\cos(zu)\,\dd u\)
+and \(s=(1-\ii z)/2\). Two integrations by parts give
+\(8H_0(z)=1/2-(1+z^2)I(z)\), using the endpoint \(p'(0)=-1/2\).
+For \(\operatorname{Re}s>1\), termwise Mellin integration gives
+\(\pi^{-s/2}\Gamma(s/2)\zeta(s)\) as the integral of
+\((\vartheta(t)-1)t^{s/2-1}/2\) on \(t>0\). Splitting at \(1\)
+and applying theta inversion below \(1\) gives
+\[
+ \pi^{-s/2}\Gamma(s/2)\zeta(s)=\frac{1}{s(s-1)}
+  +\int_1^\infty\frac{\vartheta(t)-1}{2}
+       (t^{s/2-1}+t^{(1-s)/2-1})\,\dd t .
+\]
+The integral is \(8I(z)\) by \(t=\e^{4u}\) and is entire in \(s\).
+Multiplication by \(s(s-1)/2\) gives the continued completed function
+\(\xi(s)=1/2-(1+z^2)I(z)\), so \(H_0(z)=\xi((1-\ii z)/2)/8\).
+The positive-half-line integrals and the boundary terms at infinity
+are controlled by double-exponential decay.
+
+The real-variable bounds needed below follow directly from the sum.
+For \(j=0,1\) the \(j\)-th derivative of \(s_m\) is \(\e^u\)
+times a polynomial of degree \(2+j\) in \(r_m\) times \(\e^{-r_m}\).
+In fact the polynomials start with \(2r^2-3r\), and differentiation
+sends a polynomial \(Q\) to \((1-4r)Q+4rQ'\). For \(u\ge0\) the
+absolute value of each differentiated term is bounded by a constant
+times
+\[
+ \e^u\rho(u)^{2+j}\e^{-\rho(u)}
+     m^{4+2j}\e^{-\pi(m^2-1)}.
+\]
+The \(m\)-factor is summable. This gives local uniform convergence
+and differentiation, and the same majorant argument works on any
+compact real interval before reflection. Writing
+\(\rho(u)=\pi\e^{4|u|}\) on the full line, we obtain
+\begin{equation}
+ |\Phi^{(j)}(u)|\le C_j\,\e^{|u|}\rho(u)^{2+j}\e^{-\rho(u)}
+       \qquad (j=0,1)
+ \label{eq:tail}
+\end{equation}
+with constants \(C_j\) independent of \(u\). In particular for every
+fixed bound on \(|\lambda|\), any fixed polynomial times \(W_\lambda\)
+or its \(u\)-derivative tends to zero at both ends and is integrable,
+even after multiplication by \(\e^{b|u|}\) for fixed \(b\).
+The reason is that \(-\rho(u)\) dominates the logarithm of the other
+factors, which grows at most quadratically in \(|u|\).
+These bounds justify differentiating the moments in \(\lambda\) on
+compact sets. They also give
+\(\partial_\lambda H_\lambda=-\partial_z^2H_\lambda\).
+
+For real \(\lambda\), let \(P_n(u;\lambda)\) be the monic
+orthogonal polynomial of degree \(n\) for \(W_\lambda(u)\,\dd u\).
+All moment matrices are positive definite by strict positivity
+of the weight and integrability of polynomials squared. This
+gives existence and uniqueness at every finite degree. Set
+\[
+ h_n(\lambda)=\int_\R P_n(u;\lambda)^2W_\lambda(u)\,\dd u,\qquad
+ \beta_n(\lambda)=\frac{h_n(\lambda)}{h_{n-1}(\lambda)}\ (n\ge1),
+ \qquad \beta_0=0 .
+\]
+Evenness and uniqueness give \(P_n(-u;\lambda)=(-1)^nP_n(u;\lambda)\).
+Expanding \(uP_n\) in the monic basis gives
+\begin{equation}
+ uP_n=P_{n+1}+\beta_nP_{n-1}
+ \label{eq:recurrence}
+\end{equation}
+with the second term omitted at \(n=0\). In the expansion the coefficient
+of \(P_n\) vanishes by parity, and degrees \(j<n-1\) vanish because
+\(uP_j\) has degree less than \(n\). The coefficient of \(P_{n-1}\)
+is \(h_n/h_{n-1}\) by testing against \(P_{n-1}\) and moving
+multiplication to the other factor. With \(p_n=P_n/\sqrt{h_n}\),
+the Jacobi matrix \(J(\lambda)\) in the orthonormal basis has
+zero diagonal and edge between \(n-1\) and \(n\) equal to
+\(a_n=\sqrt{\beta_n}\); set \(a_0=0\).
+
+\section{The moving-basis evolution}
+
+The coefficients of each \(P_n\) solve a finite Gram linear system:
+write \(P_n=u^n+\sum_{j<n}c_j u^j\) and impose orthogonality to
+\(1,u,\ldots,u^{n-1}\). Moment differentiability and positivity of
+the Gram determinant give differentiability of all \(c_j\) for real
+\(\lambda\). In particular all derivatives used at the physical time
+endpoints are available by extending \(\lambda\) locally.
+
+For the monic derivative, differentiate
+\(\langle P_n,P_j\rangle_\lambda=0\) at \(j<n\), with
+\(\langle\cdot,\cdot\rangle_\lambda\) the real weighted inner product.
+The term containing \(\partial_\lambda P_j\) vanishes by degree. Thus
+\[
+ \langle\partial_\lambda P_n,P_j\rangle_\lambda
+    =-\langle P_n,u^2 P_j\rangle_\lambda.
+\]
+For \(j<n-2\) the second factor has degree less than \(n\).
+For \(j=n-1\) parity gives zero, and for \(j=n-2\) the second
+factor has degree \(n\) and leading coefficient one. This gives
+\begin{equation}
+ \partial_\lambda P_n=-\beta_n\beta_{n-1}P_{n-2}\quad(n\ge2),
+ \qquad \partial_\lambda P_0=\partial_\lambda P_1=0 .
+ \label{eq:monicvariation}
+\end{equation}
+When differentiating \(h_n\) the term with \(\partial_\lambda P_n\)
+also vanishes by degree. Squaring \eqref{eq:recurrence} in the
+weighted norm yields
+\begin{equation}
+ \partial_\lambda\log h_n
+  =\frac{\int u^2P_n^2W_\lambda\,\dd u}{h_n}
+  =\beta_n+\beta_{n+1}\qquad(n\ge0).
+ \label{eq:hflow}
+\end{equation}
+The term with \(P_{n-1}\) has squared norm \(\beta_n h_n\)
+for \(n\ge1\). Subtracting adjacent identities in \eqref{eq:hflow}
+and differentiating \(a_n=\sqrt{\beta_n}\) give
+\begin{equation}
+ \partial_\lambda\beta_n=\beta_n(\beta_{n+1}-\beta_{n-1}),\qquad
+ \partial_\lambda a_n=\frac{a_n}{2}(\beta_{n+1}-\beta_{n-1})
+ \qquad(n\ge1).
+ \label{eq:volterra}
+\end{equation}
+In the reversed time \(\tau\), both right sides change sign.
+
+The Lax relation follows directly from the same basis derivative.
+Write \(J^2=L+D+U\) with strictly lower part \(L\), diagonal \(D\)
+and strictly upper part \(U\). Then
+\(D_{nn}=\beta_n+\beta_{n+1}\) and
+\(L_{n,n-2}=a_n a_{n-1}\) for \(n\ge2\), with all other strictly
+lower entries zero. By \eqref{eq:monicvariation} and \eqref{eq:hflow},
+the polynomial column \(\boldsymbol p=(p_n)_{n\ge0}\) satisfies
+\[
+ \partial_\lambda\boldsymbol p=A\boldsymbol p,\qquad
+ A=-L-D/2=B-J^2/2,\qquad B=(U-L)/2 .
+\]
+Differentiate \(J\boldsymbol p=u\boldsymbol p\) row by row.
+Using \(u A\boldsymbol p=A J\boldsymbol p\) gives
+\((J'-[A,J])\boldsymbol p=0\).
+Independence of the polynomials in every finite row, and
+\([J^2,J]=0\), yield
+\begin{equation}
+ \partial_\lambda J=[B,J],\qquad [B,J]=BJ-JB .
+ \label{eq:lax}
+\end{equation}
+The matrix \(B\) is skew-symmetric. The two banded products in the
+commutator act on finite sequences and every entry uses finitely
+many coefficients. This domain suffices for \eqref{eq:lax}; a
+time-dependent bounded-operator or unitary evolution would require
+further domain and regularity analysis.
+
+For the scalar interpretation, write \(d\mu_\lambda=W_\lambda\,\dd u/Z_\lambda\).
+Polynomials are dense in \(L^2(\mu_\lambda)\). Indeed, a function
+\(g\) orthogonal to all polynomials has a finite measure
+\(\overline g\,\dd\mu_\lambda\) with entire Fourier transform:
+Cauchy--Schwarz and \eqref{eq:tail} allow arbitrary fixed exponential
+weights and derivatives. All derivatives at \(0\) vanish. The
+transform is therefore zero, and uniqueness of the Fourier transform
+of a finite measure implies \(g=0\) almost everywhere. For this last
+step, convolution with a Gaussian gives zero by Fourier inversion,
+and Gaussians approaching a point mass then recover the measure.
+Multiplication by \(u\), with domain
+\(\{f:uf\in L^2(\mu_\lambda)\}\), transports to a self-adjoint
+realization of \(J(\lambda)\) via the orthonormal basis
+\(\sqrt{Z_\lambda}p_n\). This basis maps \(1\) to \(e_0\).
+In particular, for real \(x\),
+\begin{equation}
+ \begin{aligned}
+ H_\lambda(x)&=\frac{Z_\lambda}{2}
+       \langle e_0,\e^{\ii xJ(\lambda)} e_0\rangle,\\
+ H_{1/2-\tau}(x)&=\frac{Z_*}{2}
+       \langle e_0,\e^{-\tau J_*^2}\e^{\ii xJ_*} e_0\rangle,
+       \qquad J_*=J(1/2),\quad Z_*=Z_{1/2}.
+ \end{aligned}
+ \label{eq:twochains}
+\end{equation}
+The first line uses the moving weight, while the second keeps the
+initial basis and uses the factor \(\e^{-\tau u^2}\).
+Both expressions are justified by multiplication in the respective
+weighted spaces.
+
+\section{Complete-source confinement and the coefficient envelope}
+
+Set \(V_\lambda=-\log W_\lambda\).
+On \(u\ge0\), the individual score is
+\[
+ (\log s_m)'=1+4+\frac{8r_m}{2r_m-3}-4r_m
+            =9+\frac{12}{2r_m-3}-4r_m .
+\]
+The derivative of the complete sum divided by that sum is the
+weighted mean of the summand scores, with positive weights
+\(s_m/\Phi\). The estimates in \eqref{eq:tail} justify this mean.
+Since \(r_m\ge\pi\e^{4u}>3\) and \(2\lambda u\le u\) on the
+physical time range, we have
+\begin{equation}
+ V_\lambda'(u)\ge 4\pi\e^{4u}-13-u \qquad(u\ge0).
+ \label{eq:score}
+\end{equation}
+The quantity \(uV_\lambda'(u)\) is even. With \(t=|u|\le1/2\),
+\eqref{eq:score} gives \(uV_\lambda'(u)\ge-13t-t^2\ge-27/4\).
+Also \(\cosh(2)<4\): its series begins \(1+2\), and the remaining
+terms start at \(2/3\) with ratios bounded by \(2/15\).
+Hence \(uV_\lambda'(u)\ge\cosh(4u)-11\) in this region.
+For \(t\ge1/2\), \(4\pi-1/t>10\) and
+\(10\e^{4t}\ge10+40t\ge13+t\). It follows that
+\((4\pi t-1)\e^{4t}\ge t(13+t)\), so
+\(uV_\lambda'(u)\ge\e^{4t}\ge\cosh(4t)\).
+Together these estimates give
+\begin{equation}
+ uV_\lambda'(u)\ge\cosh(4u)-11,\qquad
+ u\in\R,\quad 0\le\lambda\le1/2 .
+ \label{eq:confinement}
+\end{equation}
+
+\begin{lemma}[Confinement and monic norms]
+\label{lem:general}
+Let \(w\) be positive, even and locally absolutely continuous on
+\(\R\). Assume that for every integer \(k\ge0\),
+\[
+ (1+|u|)^k\bigl(w(u)+|w'(u)|+\cosh(\kappa u)w(u)\bigr)
+ \quad\text{is integrable},\qquad
+ (1+|u|)^k w(u)\longrightarrow 0
+ \quad(|u|\to\infty)
+\]
+for a fixed \(\kappa>0\). If \(V=-\log w\) obeys
+\(uV'(u)\ge\cosh(\kappa u)-C\) almost everywhere, its monic
+recurrence coefficients satisfy
+\[
+ \beta_n+\beta_{n+1}
+   \le\kappa^{-2}\arcosh^2(2n+1+C)\qquad(n\ge0)
+\]
+with the nonnegative real inverse. The assumptions imply \(2n+1+C\ge1\).
+\end{lemma}
+
+\begin{proof}
+The monic recurrence follows as in \eqref{eq:recurrence}.
+The measure \(d\nu_n=P_n^2 w\,\dd u/h_n\) is a probability.
+Integrating \((uP_n^2w)'\) over \(\R\) gives zero by the
+boundary hypothesis. Its \(w'\)-term equals
+\(-uV'P_n^2w\) and is integrable by assumption. The polynomial
+\(uP_n'-nP_n\) has degree less than \(n\), using a \(u\)-derivative
+here. Orthogonality gives the first equality below, and
+the squared recurrence norm gives the second:
+\[
+ \mathbb E_{\nu_n}[uV']=2n+1,\qquad
+ \mathbb E_{\nu_n}[u^2]=\beta_n+\beta_{n+1}.
+\]
+The function \(v\mapsto\cosh(\kappa\sqrt v)\) is convex on
+\(v\ge0\), as its power series consists of nonnegative multiples
+of integer powers \(v^j\). Jensen and the assumed pointwise
+lower bound yield
+\[
+ \cosh\bigl(\kappa\sqrt{\beta_n+\beta_{n+1}}\bigr)
+  \le\mathbb E_{\nu_n}[\cosh(\kappa u)]\le 2n+1+C .
+\]
+Inversion and squaring prove the claim.
+\end{proof}
+
+\begin{theorem}[Theta coefficient bound]
+\label{thm:theta}
+Define \(B_n=\arcosh^2(2n+12)/16\). For the complete theta weight
+and every \(0\le\lambda\le1/2\),
+\[
+ \beta_n(\lambda)+\beta_{n+1}(\lambda)\le B_n\qquad(n\ge0).
+\]
+In particular, for \(N\ge1\),
+\begin{equation}
+ \frac{h_N(1/2)}{h_0(1/2)}
+ \le\prod_{j=0}^{N-1}B_j
+ \le\left[\frac{\arcosh(2N+10)}{4}\right]^{2N}.
+ \label{eq:product}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+In Lemma~\ref{lem:general} take \(\kappa=4\) and \(C=11\) using
+\eqref{eq:confinement}. All tail hypotheses follow from
+\eqref{eq:tail}, including that for the factor \(\cosh(4u)\).
+Each integration by parts is at a fixed finite degree; the
+constant in \eqref{eq:confinement} is common to all degrees and times.
+For the product, \(\beta_j\le B_{j-1}\) by nonnegativity.
+Multiply for \(1\le j\le N\) at \(\lambda=1/2\) and telescope
+\(h_j/h_{j-1}\). The second inequality uses monotonicity of \(B_j\).
+\end{proof}
+
+Since \(0\le\partial_\lambda\log h_n\le B_n\) by \eqref{eq:hflow},
+for \(0\le\lambda_1\le\lambda_2\le1/2\) we also have
+\[
+ 0\le\log\frac{h_n(\lambda_2)}{h_n(\lambda_1)}
+     \le(\lambda_2-\lambda_1)B_n.
+\]
+This is control of the norms along the specified weight deformation.
+
+\section{A scalar consequence for the fixed chain}
+
+Let \(J_N\) be the leading \(N\times N\) block of \(J_*\) for
+\(N\ge1\), and set
+\[
+ H_N(\tau,x)=\frac{Z_*}{2}
+       \langle e_0,\e^{-\tau J_N^2}\e^{\ii xJ_N}e_0\rangle,
+ \qquad
+ S_N(\tau,x)=\sum_{k=0}^N
+       \frac{\tau^k x^{2N-2k}}{k!(2N-2k)!}.
+\]
+Here \(x\) is real and \(0\le\tau\le1/2\), with zeroth powers
+interpreted as one. The normalized monic squared norm for
+\(\mu_*=\mu_{1/2}\) is \(h_N(1/2)/h_0(1/2)\), since
+\(P_0=1\). This is the norm that enters the quadrature bound.
+
+\begin{corollary}
+\label{cor:scalar}
+For the stated real-height and time domain,
+\[
+ |H_{1/2-\tau}(x)-H_N(\tau,x)|
+ \le\frac{Z_*}{2}\frac{h_N(1/2)}{h_0(1/2)}S_N(\tau,x)
+ \le\frac{Z_*}{2}S_N(\tau,x)\prod_{j=0}^{N-1}B_j .
+\]
+\end{corollary}
+
+\begin{proof}
+The characteristic polynomials of the principal blocks obey
+\eqref{eq:recurrence}, by tridiagonal determinant expansion, so
+the eigenvalues of \(J_N\) are the zeros of \(P_N(\cdot;1/2)\).
+For \(N>1\) all internal edges are positive, so the site equations
+force an eigenvector with vanishing first entry to be zero.
+This implies simple eigenvalues and strictly positive scalar weights
+at \(e_0\); their sum is one. The same claims hold for \(N=1\),
+where \(J_1=0\). Conjugating by the diagonal alternating sign gives
+\(-J_N\) and fixes \(e_0\), so the scalar measure \(Q_N\) is even.
+For degrees \(0\le j\le2N-1\), its moments agree with \(\mu_*\):
+an expansion of the matrix moment as a sum over tridiagonal walks
+shows that reaching site \(N\) and returning to \(0\) takes at least
+\(2N\) steps.
+
+For real \(s\), Hermite interpolation of \(\cos(su)\) and its first
+derivative at the \(N\) nodes gives a unique polynomial \(I_s\)
+of degree at most \(2N-1\), since homogeneous interpolation
+forces divisibility by \(P_N^2\). Its pointwise error satisfies
+\[
+ |\cos(su)-I_s(u)|
+     \le P_N(u;1/2)^2\,\frac{|s|^{2N}}{(2N)!}.
+\]
+Indeed, away from the nodes subtract
+\(cP_N^2\) from the interpolation error, choosing \(c\) to produce
+one additional zero at \(u\). Repeated Rolle on the interval
+containing the nodes and \(u\) gives a zero of the \(2N\)-th
+derivative there, so \(|c|\le |s|^{2N}/(2N)!\).
+At a node the error is zero. Quadrature exactness for \(I_s\)
+and agreement with \(\cos(su)\) at the nodes reduce the integral
+error to the integral of this remainder against \(\mu_*\).
+
+Finally \(\e^{-\tau u^2}\cos(xu)=\mathbb E\cos((x+\sqrt{2\tau}G)u)\)
+for a standard normal \(G\). Boundedness of the cosine permits
+averaging under both probability measures. Gaussian integration
+by parts gives \(\mathbb E G^{2k}=(2k)!/(2^k k!)\), while the odd
+moments vanish. Hence \(\mathbb E|x+\sqrt{2\tau}G|^{2N}/(2N)!
+=S_N(\tau,x)\). Multiply by \(Z_*/2\) and use
+\eqref{eq:product}.
+\end{proof}
+
+\section{Applicability to colliding sources}
+
+For a finite sum \(\sum_{m=1}^M c_m s_m\) with positive \(c_m\),
+multiply by \(\e^{\lambda u^2}\) on \(u\ge0\) and take the even
+extension. Each constant \(c_m\) cancels in its summand score, so
+the positive mean again gives \eqref{eq:score}. The extended density
+is positive and locally absolutely continuous. Its tails satisfy
+the hypotheses of Lemma~\ref{lem:general}. One can integrate by
+parts on the two half-lines, since \(uP_n^2w\) vanishes at zero.
+Thus it has the same bound as Theorem~\ref{thm:theta}.
+
+The positive three-square and four-square sources \cite{three,four}
+have validated double events in their cosine transforms at
+\(\lambda=1/4\), \(44.1303<x<44.1304\), and at
+\(\lambda=1/100\), \(83.5323729<x<83.5323730\), respectively.
+Their Jacobi coefficients satisfy the envelope at those events.
+They retain the modewise confinement used here, while the canonical
+source also has equal coefficients and full modular reflection.
+
+\section{Outstanding challenges}
+
+\paragraph{Asymptotics in degree.}
+The all-degree constant controls a sum of two adjacent coefficients.
+Determining leading behavior of individual \(a_n\), with lower
+bounds and quantitative remainders uniform in heat time, would
+require sharper control than the confinement inequality used here.
+A solution would also determine how conservative the norm product is
+in quadrature for the actual theta data.
+
+\paragraph{Stability and growing height.}
+The entrywise flow controls derivatives at each finite index.
+Quantitative propagation of measured coefficient errors through
+growing cutoffs calls for a stability estimate that pays for the
+unobserved coefficients at the boundary of a finite prefix.
+The scalar quadrature bound applies for each \(N\) and real height.
+Determining sharp depth and certified coefficient precision requirements
+at growing heights involves the norm factors, the oscillatory readout
+and the scale of the requested error.
+
+\begin{samepage}
+\paragraph{Arithmetic input and sign.}
+The control examples show that the shared score inequality and
+positive recurrence coefficients permit a collision. A signed
+field estimate would need a source-distinguishing input and a
+quantitative transfer to the relevant scalar margin. For a
+logarithmic or ratio observation, the transfer would also have
+to account for small denominators and zeros.
+\par
+\end{samepage}
+
+\paragraph{Acknowledgment.}
+Substantial OpenAI Codex assistance was dispatched as GPT-6.1 Sol /
+Ultra. Separate backend attestation is unavailable.
+
+\begin{thebibliography}{9}
+\raggedright
+\bibitem{dlmf}
+NIST Digital Library of Mathematical Functions,
+\href{https://dlmf.nist.gov/20.2.E3}{Eq.~20.2.3} and
+\href{https://dlmf.nist.gov/20.7.E32}{Eq.~20.7.32}.
+
+\bibitem{vanassche}
+W.~Van Assche, \emph{Orthogonal polynomials, Toda lattices and Painlev\'e
+equations}, \href{https://arxiv.org/abs/2202.11017v1}{arXiv:2202.11017v1},
+2022.
+
+\bibitem{three}
+E.~Baker, \emph{Square-support constraints admit a collision even with the
+first source endpoint}, Investigation~22, research note, 15 October 2026.
+
+\bibitem{four}
+E.~Baker, \emph{Two odd source endpoints still permit a positive weighted-square
+collision}, Investigation~22, research note, 15 October 2026.
+\end{thebibliography}
+\end{document}

@@ -203,6 +203,51 @@ class PaginatedSourceTests(unittest.TestCase):
             self.source()
         self.assertEqual(raised.exception.code, "unsupported_public_content")
 
+    def test_observed_null_moderation_preserves_exact_public_rows(self):
+        before, metadata_before = self.source()
+        for ident in ("progress-1", "answer-1"):
+            self.change_json(ident, moderation=None)
+        after, metadata_after = self.source()
+        self.assertEqual(after, before)
+        self.assertEqual(metadata_after, metadata_before)
+
+    def test_populated_moderation_and_unknown_null_fields_still_fail(self):
+        for value in ({}, [], False, "visible?", {"reason": "visible?"}):
+            with self.subTest(value=value):
+                self.change_json("answer-1", moderation=value)
+                with self.assertRaises(ADAPTER.SourceError) as raised:
+                    self.source()
+                self.assertEqual(raised.exception.code, "unsupported_public_content")
+        self.change_json("answer-1", moderation=None, futurePublicField=None)
+        with self.assertRaises(ADAPTER.SourceError) as raised:
+            self.source()
+        self.assertEqual(raised.exception.code, "unsupported_public_content")
+
+    def test_observed_unmoderated_no_display_status_preserves_public_rows(self):
+        before, metadata_before = self.source()
+        for ident in ("progress-1", "answer-1"):
+            self.change_json(ident, moderation={"moderated": False, "display": None})
+        after, metadata_after = self.source()
+        self.assertEqual(after, before)
+        self.assertEqual(metadata_after, metadata_before)
+
+    def test_moderated_replacement_or_unrecognized_status_is_rejected(self):
+        for value in (
+            {"moderated": True, "display": None},
+            {"moderated": False, "display": "Visible replacement"},
+            {"moderated": False, "display": {}},
+            {"moderated": False, "display": None, "unknown": None},
+            {"moderated": False},
+            {"display": None},
+            {"moderated": 0, "display": None},
+            {"moderated": None, "display": None},
+        ):
+            with self.subTest(value=value):
+                self.change_json("answer-1", moderation=value)
+                with self.assertRaises(ADAPTER.SourceError) as raised:
+                    self.source()
+                self.assertEqual(raised.exception.code, "unsupported_public_content")
+
     def test_unknown_item_kind_fails_even_without_public_payload(self):
         self.add_item("future-item", "futurePublicMessage", 8, text="UNSUPPORTED")
         with self.assertRaises(ADAPTER.SourceError) as raised:
