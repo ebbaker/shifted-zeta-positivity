@@ -1,0 +1,313 @@
+\section{Successive degrees and the remaining zero geometry}
+\label{sec:zero-geometry}
+
+The factorization already relates consecutive approximants exactly:
+\begin{equation}
+ \begin{aligned}
+ \Delta_N(z)&:=G_{N+1}(z)-G_N(z)\\
+ &=L_N(z)\left(E_N(z)+
+       \frac{\beta_{N+1}z^2}{(2N+1)(2N+2)}E_{N+1}(z)\right).
+ \end{aligned}
+ \label{eq:degree-step}
+\end{equation}
+This follows by subtracting two copies of
+\eqref{eq:error-factorization}. It identifies a signed correction;
+the unknown error factors prevent treating it as a closed recurrence
+for finite data alone.
+
+On the common real sign range of Corollary~\ref{cor:brackets},
+\(\Delta_N(x)\) has strict sign \((-1)^N\), for \(x\ne0\).
+If \(r_1<r_2\) are two real zeros of \(G_N\) in that range,
+\(G_{N+1}(r_1)\) and \(G_{N+1}(r_2)\) have the same nonzero sign.
+Hence \(G_{N+1}\) cannot have exactly one simple zero and no other
+zeros between them: a single simple zero would reverse that sign.
+This explains why ordinary strict interlacing of consecutive Fourier
+readouts is not supplied by the classical interlacing of their nodes.
+It asserts neither that such endpoints exist nor a count of the
+canonical readout zeros.
+
+\subsection{What a phase comparison would need}
+
+The simplest example is \(f(x)=\sin x\), \(g(x)=\cos x\).
+The point \((g(x),f(x))\) travels around the unit circle, and
+\(g(x)+\ii f(x)=\e^{\ii x}\) has continuously chosen angle \(x\).
+Each passage through the horizontal axis is a zero of \(f\).
+A positive angle derivative says the motion keeps turning in one
+direction, so consecutive axis crossings give an ordered zero count.
+Bounds on that derivative can also control the spacing of the crossings.
+The angle of \(f\) alone jumps at its zeros; a companion supplies a
+nonvanishing pair through which a continuous angle can be followed.
+
+For real differentiable functions \(f,g\) that do not vanish
+simultaneously on an interval, a continuous phase satisfies
+\begin{equation}
+ \frac{\dd}{\dd x}\arg\bigl(g(x)+\ii f(x)\bigr)
+       =\frac{g(x)f'(x)-f(x)g'(x)}{f(x)^2+g(x)^2}.
+ \label{eq:companion-phase}
+\end{equation}
+This follows by taking the imaginary part of
+\((g'+\ii f')/(g+\ii f)\).
+The numerator is a Wronskian, with the sign convention displayed.
+For the polynomial pair, \eqref{eq:polynomial-wronskian} gives
+its sign as a sum of squares. For \(f=G_N\), \(g=G_{N+1}\),
+no corresponding positive identity has been established.
+The preceding same-sign observation also prevents assuming an
+ordinary strict interlacing law for this pair.
+
+Thus a phase approach needs a justified companion and a proved
+Wronskian sign or quantitative variation bound in the actual
+observation variable. Such a statement would be additional
+information about the readout, distinct from the small argument
+of its error factor \(E_N\). Equation~\eqref{eq:companion-phase}
+is background algebra, not a proposed theta inequality.
+
+This derivative concerns movement in the observation variable at a
+fixed degree. Following a particular zero as the degree increases is a
+different question, and can be studied directly by local convergence.
+
+\subsection{A local theorem explaining the role of slope}
+
+The following elementary lemma makes precise the perturbative formula
+used to motivate a possible source-specific estimate. A real entire
+function here means \(f(\bar z)=\overline{f(z)}\).
+
+\begin{lemma}[A simple-zero displacement bound]
+\label{lem:zero-motion}
+Let \(f,g\) be real entire functions and let \(r\in\R\) satisfy
+\(f(r)=0\). Fix \(\rho>0\) and \(M_2,D\ge0\).
+On the closed disk \(|z-r|\le\rho\), suppose
+\begin{equation}
+ |f'(r)|\ge s>0,\qquad |f''(z)|\le M_2,\qquad
+ |g(z)-f(z)|\le D,\qquad
+ D+\tfrac12M_2\rho^2<s\rho.
+ \label{eq:local-zero-hypotheses}
+\end{equation}
+Then \(g\) has exactly one zero in this disk's interior, counted with
+multiplicity. It is real and simple, and denoting it by \(r_g\),
+\begin{equation}
+ |r_g-r|\le\frac{D}{s-M_2\rho/2}.
+ \label{eq:zero-displacement}
+\end{equation}
+For \(f_t=f+t(g-f)\), \(0\le t\le1\), its unique zero \(r(t)\)
+in the disk is differentiable and
+\begin{equation}
+ r'(t)=-\frac{(g-f)(r(t))}{f_t'(r(t))},\qquad
+ r'(0)=-\frac{g(r)-f(r)}{f'(r)}.
+ \label{eq:zero-velocity}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Taylor's integral remainder on a straight segment gives
+\[
+ |f(z)-f'(r)(z-r)|\le\tfrac12M_2|z-r|^2.
+\]
+On the boundary, the sum of this remainder and \(t(g-f)\) has
+modulus strictly less than \(|f'(r)(z-r)|\). Rouch\'e's theorem
+therefore gives exactly one zero of every \(f_t\) inside. Conjugation
+symmetry makes it real, since a nonreal zero would bring a distinct
+conjugate; the multiplicity count makes it simple.
+At \(r_g\), Taylor's inequality also gives
+\[
+ D\ge|f(r_g)|\ge |r_g-r|\bigl(s-M_2|r_g-r|/2\bigr)
+ \ge |r_g-r|(s-M_2\rho/2),
+\]
+proving \eqref{eq:zero-displacement}. For differentiability, the
+unique simple zero can locally be written as the argument-principle
+integral
+\[
+ r(t)=\frac{1}{2\pi\ii}\int_{|z-r|=\rho}
+                  z\,\frac{f_t'(z)}{f_t(z)}\,\dd z.
+\]
+Nonvanishing on the contour persists in a complex neighborhood
+of each real \(t\). Differentiation under the integral makes \(r(t)\)
+holomorphic there. Differentiating \(f_t(r(t))=0\) proves
+\eqref{eq:zero-velocity}.
+\end{proof}
+
+For \(f=G_N\), \(g=G_{N+1}\), the correction in this lemma is
+\(\Delta_N\). A bound on it over a disk contained in \(|\Im z|\le Y\le1\)
+follows from \eqref{eq:error-factorization} and
+\eqref{eq:phase-bound}, for example
+\[
+ |\Delta_N(z)|\le
+ |L_N(z)|(1+\epsilon_N(|z|,Y))
+ +|L_{N+1}(z)|(1+\epsilon_{N+1}(|z|,Y)).
+\]
+Upper derivative bounds are also available from the finite sum:
+if \(|\Im z|\le Y\) and the nodes have modulus at most \(\ell_N\),
+then
+\begin{equation}
+ |G_N''(z)|\le\sum_j\omega_{j,N}x_{j,N}^2\e^{Y|x_{j,N}|}
+                  \le \ell_N^2\e^{Y\ell_N}.
+ \label{eq:finite-derivative-upper}
+\end{equation}
+The missing ingredient is a useful \emph{lower} slope or
+cluster-separation estimate, together with enough information to
+account for other zeros. Lemma~\ref{lem:zero-motion} is a conditional
+local statement for any real entire functions. Its hypotheses have
+not been proved for a growing canonical family of zero neighborhoods.
+It imposes simplicity only within the particular disk; the overall
+program allows multiple zeros and finite approximants with nonreal zeros.
+
+\subsection{Following a fixed zero as degree increases}
+\label{sec:fixed-zero}
+
+Local uniform convergence already makes the idea of an older,
+stabilized zero precise. The label is an isolating neighborhood of a
+limiting zero, rather than the rank of an eigenvalue of \(J_N\).
+The degree \(N\) is not the number of Fourier zeros: even \(G_2\)
+has infinitely many. Increasing \(N\) does not add just one new
+Fourier zero.
+
+\begin{proposition}[Stability of an isolated zero cluster]
+\label{prop:fixed-cluster}
+Let \(r\in\C\) be a zero of \(F\) of multiplicity \(m\).
+Choose \(\rho>0\) so that the closed disk \(D=\{|z-r|\le\rho\}\)
+contains no other zero of \(F\). For all sufficiently large \(N\),
+\(G_N\) has exactly \(m\) zeros in the interior of \(D\), counted
+with multiplicity, and all of them tend to \(r\).
+More explicitly, define the nonvanishing holomorphic factor
+\(A(z)=F(z)/(z-r)^m\), with its removable value at \(r\), and put
+\begin{equation}
+ c=\min_{z\in D}|A(z)|>0,\qquad
+ \eta_N=\sup_{z\in D}|F(z)-G_N(z)|.
+ \quad
+ G_N(w)=0,\ w\in D
+ \ \Longrightarrow\
+ |w-r|\le(\eta_N/c)^{1/m}.
+ \label{eq:cluster-localization}
+\end{equation}
+If \(r\) is real and simple, the unique zero \(r_N\) in this disk
+is real and simple for every sufficiently large \(N\).
+\end{proposition}
+
+\begin{proof}
+The minimum of \(|F|\) on the boundary is positive.
+Proposition~\ref{prop:compact} and Rouch\'e's theorem therefore give
+the count \(m\) for all sufficiently large \(N\).
+At a zero \(w\) of \(G_N\), factorization gives
+\[
+ c|w-r|^m\le|F(w)|=|F(w)-G_N(w)|\le\eta_N.
+\]
+Since \(\eta_N\to0\), this proves the localization and convergence.
+For a real center the disk is invariant under conjugation.
+When the total count is one, a nonreal root or a multiple root is
+impossible.
+\end{proof}
+
+In a fixed bounded region with zero-free boundary, choose disjoint
+small disks around its finitely many \(F\)-zeros. The compact
+remainder has a positive minimum of \(|F|\), so eventually \(G_N\)
+has no zeros there. Thus all zeros in that fixed region can be
+matched by clusters. Individual labels are unique for simple zeros;
+a multiple zero permits splitting and does not give a preferred
+label for each constituent.
+
+The complete error law gives more than qualitative stability at a
+fixed simple real zero.
+
+\begin{corollary}[Fixed-zero displacement and degree ratio]
+\label{cor:fixed-zero-drift}
+Let \(r\in\R\) be a fixed simple zero of \(F\), and let \(r_N\)
+be the uniquely matched zeros above. Then \(r\ne0\), and
+\begin{equation}
+ \begin{aligned}
+ r_N-r&=\frac{L_N(r)}{F'(r)}(1+o(1)),\\
+ |r_N-r|&\le
+ \frac{2|L_N(r)|}{|F'(r)|}
+       \bigl(1+\epsilon_N(|r|,0)\bigr)
+       \qquad\hbox{for all sufficiently large }N.
+ \end{aligned}
+ \label{eq:fixed-zero-displacement}
+\end{equation}
+Furthermore,
+\begin{equation}
+ \frac{r_{N+1}-r}{r_N-r}
+ =-\frac{\beta_{N+1}r^2}{(2N+1)(2N+2)}(1+o(1))
+ =O_r\!\left(\frac{\log^2(N+1)}{N^2}\right).
+ \label{eq:fixed-zero-ratio}
+\end{equation}
+The denominator on the left is nonzero for all sufficiently large
+\(N\). The displacements eventually alternate in sign, decrease
+in absolute value at every step, and their even and odd subsequences
+approach \(r\) monotonically from opposite sides.
+\end{corollary}
+
+\begin{proof}
+We have \(F(0)=1\), so \(r\ne0\). Uniform convergence on a slightly
+larger disk, and Cauchy's derivative formula, give \(G_N'\to F'\)
+uniformly near \(r\). The exact error law evaluated at \(r\) gives
+\(G_N(r)=-L_N(r)E_N(r)\). Consequently,
+\[
+ (r_N-r)\int_0^1G_N'\bigl(r+t(r_N-r)\bigr)\,\dd t
+       =L_N(r)E_N(r).
+\]
+The integral tends to the nonzero number \(F'(r)\), while
+Theorem~\ref{thm:phase} gives \(E_N(r)\to1\).
+This proves the asymptotic and, once the integral's modulus is at
+least \(|F'(r)|/2\), the displayed bound.
+All factors are real, \(L_N(r)\) has sign \((-1)^N\), and
+\(E_N(r)>0\) eventually. Taking consecutive ratios and using
+\eqref{eq:leading-ratio} gives \eqref{eq:fixed-zero-ratio}.
+The envelope bounds \(\beta_{N+1}=O(\log^2(N+1))\), so the
+ratio is eventually negative with absolute value less than one.
+The monotonicity assertions follow.
+\end{proof}
+
+The constants and starting degree depend on the chosen zero and
+its isolation. This is a fixed-zero asymptotic, not a threshold
+uniform over an increasing collection of zeros. To anchor a zero
+without first knowing one of \(F\), one can instead isolate a single
+zero of \(G_{N_0}\) in a conjugation-symmetric disk and prove
+\(|F-G_{N_0}|<|G_{N_0}|\) on its boundary. Rouch\'e then certifies
+one real simple zero of \(F\) there, to which the corollary applies.
+Lemma~\ref{lem:zero-motion} gives one sufficient slope/curvature
+test for this boundary comparison.
+
+Stabilization alone does not establish reality: an isolated nonreal
+zero of \(F\), if present, would also have a stable approximating
+cluster by Proposition~\ref{prop:fixed-cluster}. A multiple real
+zero can be approached by nonreal conjugate pairs. The established
+statement concerns every fixed region; control on expanding regions
+still requires the additional separation and count information.
+
+\input{sections/cluster_resolution}
+
+\subsection{From fixed regions to the global objective}
+
+The preceding cluster count requires no simplicity assumption.
+To show that its multiplicity is accounted for by real zeros,
+one still needs a real-zero count or confinement argument.
+Tracking selected simple zeros does not rule out untracked complex pairs.
+
+For completeness, the limiting objective can be stated precisely.
+Suppose that the chosen \(G_N\) converge locally uniformly to the
+nonzero entire \(F\), as Proposition~\ref{prop:compact} proves here.
+Consider the assertion that there are
+\(\mathcal R_N\to\infty\) and \(\delta_N\to0\) such that, for all
+sufficiently large \(N\),
+\begin{equation}
+ G_N(z)=0,\quad |z|<\mathcal R_N
+       \quad\Longrightarrow\quad |\Im z|\le\delta_N.
+ \label{eq:qualitative-confinement}
+\end{equation}
+This assertion is equivalent to \(F\) having only real zeros.
+One direction follows by choosing a small disk around a hypothetical
+nonreal zero of \(F\), with zero-free boundary and disjoint from the
+real axis. Uniform convergence and Rouch\'e then force zeros of
+\(G_N\) in that disk, contradicting
+\eqref{eq:qualitative-confinement}. Conversely, if \(F\) has only
+real zeros, it has a positive minimum modulus on each compact set
+\(\{|z|\le j,\ |\Im z|\ge1/j\}\). Uniform convergence makes \(G_N\)
+zero-free there for all \(N\) above a threshold depending on \(j\).
+A diagonal choice of increasing \(j=j(N)\) gives
+\(\mathcal R_N=j(N)\), \(\delta_N=1/j(N)\).
+
+For the unchanged time-zero theta field this is an RH-equivalent
+reformulation, by its normalization in Section~\ref{sec:source}.
+It is stated once as the objective, not as a new estimate. Prescribed
+rates or an independently established degree invariant would be
+additional mathematical content. A finite local estimate such as
+Lemma~\ref{lem:zero-motion} is instead judged by its constants, domain,
+and whether its hypotheses are actually available.

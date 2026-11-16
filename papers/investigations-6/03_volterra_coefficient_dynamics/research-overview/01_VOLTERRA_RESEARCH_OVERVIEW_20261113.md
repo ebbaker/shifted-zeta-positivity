@@ -2,10 +2,16 @@
 
 13 November 2026, America/New_York. Prepared for **Edward Baker** with
 substantial OpenAI Codex LLM assistance. Actual backend model and effort
-are unavailable in recorded configurations. **Broad scientific overview;
-research remains unactivated.** The subsequent branch-planning request is
-implemented in the [VCD plan](../research-plan/01_VOLTERRA_RESEARCH_PLAN_20261113.md)
-and [sole progress register](../research-progress/01_VOLTERRA_RESEARCH_PROGRESS_20261113.md).
+are unavailable in recorded configurations. **Historical broad scientific
+overview.** Its original setup was unactivated; the subsequent first round
+is recorded in the [historical progress file](../research-progress/01_VOLTERRA_RESEARCH_PROGRESS_20261113.md).
+For the 16 November tail-closure phase read the
+[new overview](02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_OVERVIEW_20261116.md),
+[current plan](../research-plan/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_PLAN_20261116.md)
+and [sole live register](../research-progress/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_PROGRESS_20261116.md).
+The discussion below preserves the original questions and source scope.
+Navigation update prepared for Edward Baker with OpenAI Codex assistance,
+recorded gpt-6-astra/max.
 
 ## Scientific question
 

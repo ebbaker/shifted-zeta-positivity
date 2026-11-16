@@ -1,0 +1,202 @@
+\subsection{Clusters, resolution, and physical heat time}
+\label{sec:cluster-resolution}
+
+An unresolved pair need not be assigned two persistent individual labels.
+It can instead be retained as a cluster with a certified total count.
+The resolution here concerns what the approximation error allows one to
+infer about \(F\), not an intrinsic inability to distinguish exact zeros
+of a known \(G_N\). The scale depends on local separation and boundary
+modulus as well as degree. In particular it is not a universal radius
+depending only on \(N\).
+
+There are two independent parameters. Increasing \(N\) improves the
+approximation at a fixed physical heat time \(\lambda\); varying
+\(\lambda\) changes the actual field. We now write \(G_{N,\lambda}\)
+and \(F_\lambda\) explicitly. From \eqref{eq:normalized-field},
+\begin{equation}
+ \partial_\lambda F_\lambda
+ =-\partial_z^2F_\lambda-m_2(\lambda)F_\lambda,
+ \qquad m_2(\lambda)=\int u^2\,\dd\mu_\lambda(u).
+ \label{eq:normalized-heat}
+\end{equation}
+The scalar normalization term does not move zeros. The unnormalized
+\(H_\lambda\) satisfies \(\partial_\lambda H_\lambda=-\partial_z^2H_\lambda\).
+Thus increasing \(\lambda\) is backward heat time; the reversed clock
+\(\tau=1/2-\lambda\) has the opposite orientation.
+The degree-dependent readouts are not assumed to obey that same exact
+heat equation: their nodes and weights change with \(\lambda\).
+The double-exponential tail permits differentiation on compact sets of
+complex \((\lambda,z)\), making \(H\) jointly entire. Since
+\(Z_\lambda>0\) on the real axis, the normalized field is jointly
+holomorphic near each compact real time interval and spatial disk.
+
+\begin{proposition}[Compact convergence uniform in heat time]
+\label{prop:uniform-heat-compact}
+For a compact real interval \(I=[\lambda_-,\lambda_+]\) and \(R<\infty\),
+\begin{equation}
+ \sup_{\lambda\in I,\,|z|\le R}|F_\lambda(z)-G_{N,\lambda}(z)|
+ \le \frac{Z_{\lambda_+}}{Z_{\lambda_-}}
+       \sum_{k=N}^\infty\frac{m_{2k}(\lambda_+)R^{2k}}{(2k)!}
+ \longrightarrow0.
+ \label{eq:uniform-heat-compact}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Positivity gives \(Z_\lambda\ge Z_{\lambda_-}\) and
+\(m_{2k}(\lambda)\le
+(Z_{\lambda_+}/Z_{\lambda_-})m_{2k}(\lambda_+)\).
+Apply \eqref{eq:compact-bound}; the dominating series converges by the
+complete-source tail bound. All finite Jacobi coefficients, and hence
+the readouts, depend continuously on real \(\lambda\), since their
+moment determinants are positive and their moments are analytic.
+\end{proof}
+
+Fix a circle \(\Gamma=\{|z-a|=\rho\}\), \(a\in\R\), whose boundary
+is zero-free for every \(\lambda\in I\). Suppose its interior contains
+exactly two zeros of \(F_\lambda\), counted with multiplicity.
+Such a circle and interval exist locally around any isolated double
+zero. Set
+\begin{equation}
+ \eta=\min_{\lambda\in I,\,z\in\Gamma}|F_\lambda(z)|>0,
+ \quad \varepsilon_N=\sup_{\lambda\in I,\,z\in\Gamma}
+          |G_{N,\lambda}(z)-F_\lambda(z)|,
+ \quad t_N=\varepsilon_N/\eta.
+ \label{eq:cluster-boundary-budget}
+\end{equation}
+For \(t_N<1\), Rouch\'e gives exactly two zeros of \(G_{N,\lambda}\)
+inside throughout \(I\), even when the pair cannot be separated.
+The boundary minimum is a genuine hypothesis, not supplied by an upper
+error bound alone. A finite-model alternative is given below.
+
+Use contour moments to describe the cluster without choosing root labels:
+\begin{equation}
+ p_k(\lambda)=\frac{1}{2\pi\ii}\int_\Gamma
+       (z-a)^k\frac{\partial_zF_\lambda(z)}{F_\lambda(z)}\,\dd z,
+ \qquad
+ c=a+\frac{p_1}{2},\qquad D=\frac{p_2}{2}-\frac{p_1^2}{4}.
+ \label{eq:cluster-coordinates}
+\end{equation}
+Define \(p_{k,N},c_N,D_N\) by replacing \(F_\lambda\) with
+\(G_{N,\lambda}\). The argument principle says \(p_0=2\), and the
+residue theorem says \(p_k=(z_1-a)^k+(z_2-a)^k\). Therefore
+\begin{equation}
+ c=\frac{z_1+z_2}{2},\qquad
+ D=\left(\frac{z_1-z_2}{2}\right)^2,\qquad
+ \{z_1,z_2\}=\{c+\sqrt D,c-\sqrt D\}.
+ \label{eq:pair-discriminant}
+\end{equation}
+The unordered pair is independent of the square-root branch. For real
+\(\lambda\), conjugation symmetry makes \(c,D\) real. Positive \(D\)
+means two distinct real zeros; negative \(D\) means a conjugate nonreal
+pair; \(D=0\) means one real double zero. These symmetric coordinates
+remain analytic in \(\lambda\) through the collision, as is immediate
+from their contour definitions and joint analyticity of the field.
+
+\begin{proposition}[Error bounds for an unresolved pair]
+\label{prop:pair-resolution}
+Under the preceding hypotheses and \(t_N<1\), put
+\(b_N=-\log(1-t_N)\). Uniformly on \(I\),
+\begin{equation}
+ |p_{k,N}-p_k|\le k\rho^k b_N\quad(k\ge1),\qquad
+ |c_N-c|\le\tfrac12\rho b_N,\qquad
+ |D_N-D|\le 2\rho^2 b_N=:d_N.
+ \label{eq:pair-resolution}
+\end{equation}
+In particular \(d_N\to0\). If \(D_N>d_N\), the limiting pair is
+real and distinct; if \(D_N<-d_N\), it is nonreal. The band
+\(|D_N|\le d_N\) is unresolved by this estimate and implies
+\(|z_1-z_2|\le2\sqrt{2d_N}\).
+\end{proposition}
+\begin{proof}
+On a neighborhood of \(\Gamma\), the ratio \(G_{N,\lambda}/F_\lambda\)
+has the single-valued logarithm given by the convergent series for
+\(\log(1+w)\), with \(w=(G_{N,\lambda}-F_\lambda)/F_\lambda\).
+Its modulus on the circle is at most \(b_N\). Integration by parts
+on the closed contour gives
+\[
+ p_{k,N}-p_k=-\frac{k}{2\pi\ii}\int_\Gamma
+          (z-a)^{k-1}\log(G_{N,\lambda}/F_\lambda)\,\dd z.
+\]
+The circle length \(2\pi\rho\) proves the first bound. Both pairs
+lie inside the circle, so \(|p_1|,|p_{1,N}|\le2\rho\).
+Substitution into \eqref{eq:cluster-coordinates} gives the other two
+bounds. The sign conclusions follow from reality of \(D,D_N\), and
+the unresolved band gives \(|D|\le2d_N\).
+\end{proof}
+
+The decreasing moment-tail allowance in \eqref{eq:uniform-heat-compact}
+may replace \(\varepsilon_N\), giving a decreasing resolution budget
+once that allowance is below \(\eta\).
+
+For a comparison using finite data, suppose instead that the readout
+has exactly two zeros inside throughout \(I\), and
+\(\gamma_N=\min_{I\times\Gamma}|G_{N,\lambda}|>\varepsilon_N\).
+Rouch\'e transfers that count to \(F_\lambda\). Interchanging the
+two functions in the logarithm proves the same bounds with
+\(b_N=-\log(1-\varepsilon_N/\gamma_N)\). This version requires
+the model boundary margin and count, but no prior knowledge of the
+limiting pair's individual positions.
+
+\begin{proposition}[Resolution near a fixed double collision]
+\label{prop:double-collision-resolution}
+Suppose \(F_{\lambda_*}\) has an isolated double zero at the real
+point \(a\). For the local cluster coordinates just defined,
+\begin{equation}
+ D(\lambda_*)=0,\qquad D'(\lambda_*)=2,\qquad
+ D(\lambda)=2(\lambda-\lambda_*)+O((\lambda-\lambda_*)^2).
+ \label{eq:double-collision-slope}
+\end{equation}
+On a sufficiently small fixed interval \(I\) about \(\lambda_*\),
+take \(D'\ge\kappa>0\). Every unresolved time satisfies
+\begin{equation}
+ |D_N(\lambda)|\le d_N
+ \quad\Longrightarrow\quad
+ |\lambda-\lambda_*|\le2d_N/\kappa.
+ \label{eq:collision-time-resolution}
+\end{equation}
+For all sufficiently large \(N\), there is a time \(\lambda_N\in I\)
+at which the finite readout has a double zero in the disk. Every such
+time obeys \(|\lambda_N-\lambda_*|\le d_N/\kappa\).
+Uniqueness of that finite-degree time is not asserted.
+\end{proposition}
+\begin{proof}
+At \(\lambda_*\), write \(w=z-a\) and
+\(F_{\lambda_*}(z)=w^2A(z)\), with \(A\) nonvanishing on the disk.
+Then \(p_1=p_2=0\). Differentiate the contour formula and integrate
+by parts. Equation~\eqref{eq:normalized-heat} gives
+\[
+ p_2'(\lambda_*)=-\frac{2}{2\pi\ii}\int_\Gamma
+       w\frac{\partial_\lambda F}{F}\,\dd z
+ =\frac{2}{2\pi\ii}\int_\Gamma w\frac{F_{zz}}{F}\,\dd z=4,
+\]
+because \(F_{zz}/F=2/w^2+4A'/(wA)+A''/A\). The normalization term
+integrates to zero. Hence \(D'=p_2'/2=2\) at the event.
+Analyticity proves the expansion and allows the choice of \(\kappa\).
+The mean value theorem gives
+\(|D(\lambda)|\ge\kappa|\lambda-\lambda_*|\), which proves
+\eqref{eq:collision-time-resolution} and the stronger bound when
+\(D_N=0\). Finally \(D\) has opposite signs at the two endpoints
+of \(I\). Uniform convergence makes \(D_N\) have those signs too,
+so continuity supplies a zero of \(D_N\).
+\end{proof}
+
+The elementary model \((z-a)^2-2(\lambda-\lambda_*)\) displays the
+same orientation: as \(\lambda\) increases, a conjugate pair meets
+and separates along the real axis. In reversed time the real pair
+collides and leaves the axis. Its root separation is of square-root
+size in elapsed time, while \(D\) is smooth. For a double zero the
+spatial resolution is therefore of square-root size in the error,
+whereas the time uncertainty is of linear size in the discriminant
+error. This is a local approximation theorem about a fixed isolated
+event. It neither asserts that a canonical collision exists nor
+excludes one, and it is shared by colliding control fields with the
+same local hypotheses. Higher multiplicities require more cluster
+coordinates; no uniform conclusion on expanding height/time domains
+is supplied here.
+
+For background on individual real-zero dynamics in physical heat time,
+Rodgers and Tao \cite[\S4, Theorem~11, Eq.~(56)]{rodgerstao} give a
+principal-value interaction law in their stated range
+\(\Lambda<\lambda\le0\). That simple-real-zero regime is distinct
+from passing through a double event. The contour argument above needs
+no individual label or division by the vanishing root separation.

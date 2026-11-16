@@ -48,3 +48,44 @@ Separate direct downloads to `/private/tmp/szp-vcd-induction-reading-20261116/`
 failed with DNS resolution errors on 16 November 2026. No local PDF,
 byte count or hash is claimed. Raw/third-party files were not added to
 the repository. Earlier Van Assche download status is unchanged.
+
+## Hierarchy closure follow-up, 16 November 2026
+
+Prepared for Edward Baker with OpenAI Codex assistance; current rollout
+records gpt-6-astra / max. These are checked primary-source passages for
+the analogy and its limits, not imported RH results or full-paper audits.
+
+- **Alexandre J. Chorin, Ole H. Hald, Raz Kupferman**, *Optimal
+  prediction and the Mori–Zwanzig representation of irreversible
+  processes*, PNAS 97 (2000), 2968–2973,
+  [doi:10.1073/pnas.97.7.2968](https://doi.org/10.1073/pnas.97.7.2968).
+  Checked [author-hosted published PDF](https://math.huji.ac.il/~razk/Publications/PDF/CHK00.pdf),
+  §2, equations (2.4)–(2.7), printed p.2969: projected evolution,
+  orthogonal dynamics, the Dyson identity and the exact memory/forcing
+  decomposition. Equation (2.7) precedes approximation. The chain's
+  deterministic block elimination is derived directly in Note03 §7;
+  this citation does not import statistical or operator-domain
+  assumptions into that calculation. The `www.ma.huji.ac.il` host timed
+  out; the `math.huji.ac.il` copy was inspected successfully.
+
+- **Ali Akbari, Mohammad Javad Hashemi, Risto M. Nieminen, Robert van
+  Leeuwen, Angel Rubio**, *Challenges in Truncating the Hierarchy of
+  Time-Dependent Reduced Density Matrices Equations: Open Problems*,
+  [arXiv:1204.4395v1](https://arxiv.org/abs/1204.4395v1), 19 April 2012;
+  related publication Physical Review B 85, 235121 (2012),
+  [doi:10.1103/PhysRevB.85.235121](https://doi.org/10.1103/PhysRevB.85.235121).
+  Checked v1 [§II.B, equations (7)–(10); §II.C, equations (26), (31);
+  §III.C and conclusion](https://arxiv.org/html/1204.4395v1): dependence
+  on the next reduced density matrix, cluster reconstruction, and the
+  distinction between inter-level compatibility and positivity. Its
+  fermionic few-site examples qualify those approximation schemes;
+  they do not prove a limitation for theta coefficient closure.
+
+Direct PDF retrieval for both articles to the same temporary external
+reading-copy directory failed with DNS errors. Web text/PDF inspection
+succeeded as specified above; no local byte size or hash is available,
+and no third-party PDF was placed in the repository.
+
+## Quantitative midpoint calibration, 16 November 2026, chat0003
+
+Prepared for Edward Baker with OpenAI Codex assistance; lead actual model/effort unavailable. Reused the canonical NIST DLMF entry above and inspected [§1.10(v), Maximum-Modulus Principle](https://dlmf.nist.gov/1.10#v), including its bounded-domain boundary version and Schwarz lemma (1.10.11), on 16 November 2026. The quotient used in E16 is holomorphic in the disk, with removable zeros and continuous boundary values; the maximum is bounded by the boundary supremum. Its finite disk factors and Fourier bound are derived in-note. This is a classical interpolation estimate, not new theta arithmetic or a zero-free theorem. Online passage only; no PDF or download is claimed.

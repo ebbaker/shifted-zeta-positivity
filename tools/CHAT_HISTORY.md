@@ -91,6 +91,17 @@ replace them with guessed settings. Existing public-message prefix,
 timestamps, archive hashes, size checks and transaction protections remain
 mandatory.
 
+**16 November 2026 compatibility addition:** the adapter now recognizes
+the verified status-only assistant form `moderated: true` with explicit
+`display: null`, as well as the previously supported false/null form.
+The [repair diagnosis](CHAT_HISTORY_STATUS_ONLY_MODERATION_20261116.md)
+records the installed protocol, full public-text crosscheck, tests and
+successful recovery of the affected conversation. Non-null display
+payloads and unknown structures remain unsupported; all archive guards
+remain required. This is precise format support, not permission to bypass
+an unsupported-content failure. Prepared for Edward Baker with OpenAI
+Codex assistance, recorded gpt-6-astra/max; code review dispatched Sol6.1/ultra.
+
 ## Current-session preflight after a desktop update
 
 8 November 2026, America/New_York. Prepared for Edward Baker with OpenAI
@@ -297,6 +308,14 @@ registry state for a future move; never replay old ids, paths, hashes,
 counters or temporary scripts as though they described the new operation.
 
 ## Capture the final reply after it is sent
+
+**16 November 2026 creation-metadata repair:** the recorder now keeps the
+original archive creation time separate from the verified current source
+creation time. An explicitly pinned within-second revision can be audited
+with `--reconcile-creation-time OLD_ISO NEW_ISO` only after the exact source,
+session metadata and complete archived prefix agree. Normal refreshes still
+reject unreviewed timestamp changes; no rounding tolerance or date-change
+exception was added. See the [cause, checks and repair receipt](CHAT_HISTORY_CREATION_METADATA_REPAIR_20261116.md).
 
 A normal save inside a turn cannot contain that turn's unsent final reply.
 For the direct standing workflow, make this the final tool action before

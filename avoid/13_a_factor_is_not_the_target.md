@@ -55,3 +55,19 @@ the form \(Q\) and the discrepancy \(D\) are different objects, [cross-program p
 
 
 **2 November 2026 — An exact anomaly reformulation still needs its inequality.** For Edward Baker with substantial LLM assistance; Astra / ultra, separate Sol / ultra checking. [MC07 Return02](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/07_donaldson_witten_theory/notes/02_POINT_INSERTIONS_AND_VAFA_WITTEN_ANOMALY_RETURN_20261101.md) goes beyond a bare flux factor by deriving the full xi Mellin period from a normalized completed N=4 anomaly. It states: “No new estimate from that counting data has been transmitted to (12).” The anomaly derivative annihilates the holomorphic class-number series; the exact RH dictionary has supplied no sign bound for h3. Keep this useful physical reformulation while requiring independent quantitative information for the Mellin comparison. [Review02](../papers/investigations-5/07_positive_theta_primitives/01_jensen/01_mellin_curvature/07_donaldson_witten_theory/reviews/02_MC07_E02_SEPARATE_REVIEW_20261101.md) checks this scope.
+
+**16 November 2026 — Polynomial phase and Fourier-readout phase have different variables.**
+For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[VCD integration25](../papers/investigations-6/03_volterra_coefficient_dynamics/notes/25_VCD_ANALYTICAL_READOUT_MANUSCRIPT_INTEGRATION_20261116.md)
+states: “The polynomial phase identity is not a phase identity for the Fourier
+readout.” The [manuscript §§5 and 10](../papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/main.tex)
+derives the positive polynomial Wronskian in the source variable and identifies
+the missing Fourier companion/slope estimate. Its Gaussian example refutes
+only a generic transfer from real Jacobi nodes to real readout zeros, not a
+theta-specific hypothesis. A small error phase likewise does not locate the
+physical field's zeros. [Assessment09](../papers/investigations-6/03_volterra_coefficient_dynamics/reviews/09_VCD_READOUT_MANUSCRIPT_ASSESSMENT_20261116.md)
+is same-assistant checking; source statuses and global open questions remain.
+
+**Fixed-zero follow-up, 16 November 2026.** [VCD note26](../papers/investigations-6/03_volterra_coefficient_dynamics/notes/26_VCD_FIXED_ZERO_STABILIZATION_AND_PHASE_20261116.md) states: “Stabilization alone does not establish reality.” Compact convergence also stabilizes nonreal limiting-zero clusters. Its sharper alternating-displacement result assumes a fixed real simple limiting zero and is not uniform over growing zero index. This prevents promoting a local matching theorem into global confinement. For Edward Baker with Codex assistance; actual model/effort unavailable, same-assistant check only.
+
+**Phase clarification and clusters, 16 November 2026.** [VCD note27](../papers/investigations-6/03_volterra_coefficient_dynamics/notes/27_VCD_CLUSTER_RESOLUTION_AND_HEAT_COLLISIONS_20261116.md) states: “The angle arg(q_(N−1)+i q_N) counts source-polynomial zeros, not zeros of F.” Manuscript §5.3 now leads with this distinction. Its new direct contour estimate describes fixed collision geometry also shared by controls; sharpening resolution is not collision exclusion. For Edward Baker with Codex assistance; actual model/effort unavailable, same-assistant check only.

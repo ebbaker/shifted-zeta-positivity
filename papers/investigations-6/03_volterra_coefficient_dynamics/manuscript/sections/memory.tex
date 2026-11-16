@@ -1,0 +1,97 @@
+\section{The omitted chain and its exact memory}
+\label{sec:memory}
+
+A finite readout changes the evolution, even though it retains the
+initial vector. To see where the discrepancy enters, let \(\Pi_N\)
+project onto the first \(N\) sites. Then
+\(\langle e_0,\Pi_N\e^{\ii xJ}\Pi_Ne_0\rangle=F(x)\), whereas
+\(G_N(x)\) uses \(\e^{\ii xJ_N}\). Exponentiation and compression
+do not commute: paths can leave the retained sites and return.
+
+\begin{proposition}[Boundary memory]
+\label{prop:memory}
+Cut the edge \(a_N\) and write the resulting operator as
+\(J_N\oplus D_N\), where \(D_N\) is the disconnected tail starting
+at site \(N\). For real \(x\), define
+\[
+ y(x)=\Pi_N\e^{\ii xJ}e_0,\qquad
+ k_N(x)=\langle e_N,\e^{\ii xD_N}e_N\rangle,\qquad b=e_{N-1}.
+\]
+Then \(|k_N(x)|\le1\), \(y(0)=e_0\), and
+\begin{equation}
+ y'(x)=\ii J_Ny(x)-\beta_Nb
+       \int_0^x k_N(x-t)y_{N-1}(t)\,\dd t.
+ \label{eq:memory}
+\end{equation}
+If \(p_N(x)=e_0^{\mathsf T}\e^{\ii xJ_N}b\) and
+\((f*g)(x)=\int_0^x f(x-t)g(t)\,\dd t\), the scalar difference is
+\begin{equation}
+ F(x)-G_N(x)=-\beta_N(p_N*k_N*y_{N-1})(x).
+ \label{eq:physical-error-convolution}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The removed edge is a bounded self-adjoint finite-rank operator.
+Subtracting it from the self-adjoint \(J\) preserves its domain
+and self-adjointness. Finite coordinate vectors belong to this domain,
+so the cut splits into the stated finite block and a self-adjoint tail.
+Write \(\e^{\ii xJ}e_0=(y(x),v(x))\) and
+\(C=a_N|b\rangle\langle e_N|\). The domain-valued orbit solves
+\[
+ y'=\ii J_Ny+\ii Cv,\qquad v'=\ii D_Nv+\ii C^*y,
+ \qquad v(0)=0.
+\]
+Variation of constants gives
+\(v(x)=\ii\int_0^x\e^{\ii(x-t)D_N}C^*y(t)\,\dd t\).
+Substitution proves \eqref{eq:memory}. The minus sign is \(\ii^2\)
+and the factor \(\beta_N=a_N^2\) pays for the two boundary crossings.
+Unitarity bounds the diagonal tail entry by one. Applying variation
+of constants to \eqref{eq:memory}, then selecting its zeroth component,
+proves \eqref{eq:physical-error-convolution}. For negative \(x\)
+the integrals retain their orientation.
+\end{proof}
+
+The exact kernel is not a finite closure: it still carries the omitted
+chain. Equation~\eqref{eq:physical-error-convolution} identifies the
+aggregate signed error whose phase will be estimated below. Bounding
+its three factors separately would discard their cancellation.
+
+\subsection{What an intermediate-mode truncation represents}
+
+The fixed-vector spectral representation also gives the midpoint
+amplitudes
+\begin{equation}
+ c_n(z)=\langle e_n,\e^{\ii zJ/2}e_0\rangle
+       =\int q_n(u)\e^{\ii zu/2}\,\dd\mu(u),\qquad
+ F(z)=\sum_{n=0}^{\infty}c_n(z)^2.
+ \label{eq:midpoint}
+\end{equation}
+To justify the second equality, the real orthonormal basis identifies
+the continuous bilinear pairing \(\sum v_nw_n\) with
+\(\int v(u)w(u)\,\dd\mu\). The vector corresponding to
+\(\e^{\ii zu/2}\) belongs to \(L^2(\mu)\), and
+\begin{equation}
+ \sum_n|c_n(z)|^2=F(\ii\Im z),\qquad
+ c_n(x)=\ii^n b_n(x),\quad b_n(x)\in\R,\qquad
+ F(x)=\sum_n(-1)^n b_n(x)^2.
+ \label{eq:midpoint-signs}
+\end{equation}
+Parity proves the middle formula, while the norm is the integral of
+\(\e^{-(\Im z)u}\). The vector orbit is holomorphic by exponential
+integrability. Its image on a compact set is norm compact; a finite
+norm-net argument then makes its projection tails uniformly small.
+Thus the square sum in \eqref{eq:midpoint} converges absolutely and
+locally uniformly. It is a bilinear sum, not a sum of probabilities.
+For real \(x\), the Hermitian sum \(\sum|c_n(x)|^2\) equals one.
+
+Even a retained exact amplitude contains the full chain:
+\(c_0(z)=F(z/2)\). If instead the finite evolution supplies the
+amplitudes, transpose symmetry gives
+\begin{equation}
+ \widetilde c(z)=\e^{\ii zJ_N/2}e_0,\qquad
+ \widetilde c(z)^{\mathsf T}\widetilde c(z)=G_N(z).
+ \label{eq:midpoint-baseline}
+\end{equation}
+Hence this finite midpoint construction has the same scalar error as
+the direct finite readout. It does not by itself improve that error.

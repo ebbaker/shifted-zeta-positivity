@@ -1,5 +1,15 @@
 # Investigations 6 history
 
+- **16 November 2026 — VCD induction setup:** Added branch 03's
+  [detailed overview](03_volterra_coefficient_dynamics/research-overview/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_OVERVIEW_20261116.md),
+  sustained-session plan, sole successor VCD register and
+  [activation prompt](03_volterra_coefficient_dynamics/notes/03_VCD_TAIL_CLOSURE_INDUCTION_CONTINUATION_20261116.md).
+  Updated navigation only for shared/sibling ownership; new research is
+  ready/unactivated. [Branch history](03_volterra_coefficient_dynamics/DRAFT_HISTORY.md)
+  records document assessment and preservation checks. Prepared for Edward
+  Baker with OpenAI Codex assistance, recorded setup gpt-6-astra/max;
+  future ultra research with Sol 6.1 subtasks is author-authorized.
+
 - **13 November 2026:** Created the tensor-network collection and
   [01 — QTT for the Newman flow](01_qtt_newman_flow/README.md) at Edward
   Baker's request, following the root setup workflow. Added the overview,

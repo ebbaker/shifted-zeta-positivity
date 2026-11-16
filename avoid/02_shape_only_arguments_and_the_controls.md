@@ -136,3 +136,19 @@ simultaneously realizing background, or a no-go for changing sampling
 geometry. Bounded constant refinements at the same heights cannot remove
 the leading bulk. [Review03](../papers/investigations-5/10_riemann_siegel_critical_time/reviews/03_RSCT_B01_R3_SAME_ASSISTANT_CHECK_20261111.md)
 is same-assistant only; no canonical collision is constructed.
+
+
+**Small canonical-score defects can retain nonreal zeros, 16 November 2026.**
+For Edward Baker with OpenAI Codex assistance; lead backend/effort unavailable,
+proof/assessment helpers explicitly Sol6.1/ultra.
+[VCD E07](../papers/investigations-6/03_volterra_coefficient_dynamics/notes/07_VCD_E07_FINITE_CANONICAL_SCORE_CONTROLS_20261116.md)
+constructs positive finite square-mode changes with exact selected canonical
+score/head measurements and arbitrarily small bounded score difference,
+yet nonreal Fourier zeros. It states: “There is no fixed zero location in
+this construction.” [E09](../papers/investigations-6/03_volterra_coefficient_dynamics/reviews/04_VCD_E09_TAIL_SCORE_ASSESSMENT_20261116.md)
+accepts that scope. Thus relative O(log n/n) score error is not a global
+zero discriminator. The distinct [smooth control](../papers/investigations-6/03_volterra_coefficient_dynamics/notes/10_VCD_E10_SMOOTH_NEXT_DEFECT_FREEDOM_20261116.md)
+changes the next defect while preserving tails/envelope; its zeros are open.
+Keep the two preservation lists separate. Require a new signed estimate
+before promoting either bounded score error or finite commutation to a
+zero-sensitive induction; growing-degree compact confinement remains open.

@@ -1,0 +1,185 @@
+\section{Directed error enclosures and conditional zero counts}
+\label{sec:directed}
+
+To evaluate \(G_N\), one needs \(\beta_1,\ldots,\beta_{N-1}\).
+The amplitude in \(L_N\) also uses \(\beta_N\), which is the first
+omitted link. Its sign is known even when its value has not been
+determined. Define
+\begin{equation}
+ \begin{aligned}
+ d_N(z)&=(-1)^Nz^{2N},\qquad
+ \alpha_N=\frac{\prod_{j=1}^{N}\beta_j}{(2N)!},\\
+ \overline\alpha_N&=
+ \frac{\prod_{j=1}^{N-1}\beta_j}{(2N)!}
+                      (B_{N-1}-\beta_{N-1}),
+ \qquad 0<\alpha_N\le\overline\alpha_N.
+ \end{aligned}
+ \label{eq:amplitude-budget}
+\end{equation}
+At \(N=1\), use \(\beta_0=0\) and the empty product one.
+For \(z\ne0\), dividing the exact error by its known direction gives
+\begin{equation}
+ \frac{F(z)}{d_N(z)}=w_N(z)+\alpha_NE_N(z),\qquad
+ w_N(z)=\frac{G_N(z)}{d_N(z)}.
+ \label{eq:normalized-error}
+\end{equation}
+A zero of \(F\) would require cancellation of the two terms on the
+right. We now describe a region of possible values of the second
+term, retaining its positive amplitude.
+
+Write \(D(c,r)=\{v\in\mathbb C:|v-c|\le r\}\). At a point
+in \(|\Im z|\le Y\le1\), put \(\varepsilon=\epsilon_N(|z|,Y)\).
+The allowed normalized error lies in
+\begin{equation}
+ \begin{split}
+ \mathcal U_N(z)&=\bigcup_{0\le a\le\overline\alpha_N}D(a,a\varepsilon)\\
+ &=\operatorname{conv}\bigl(\{0\}\cup
+ D(\overline\alpha_N,\overline\alpha_N\varepsilon)\bigr).
+ \end{split}
+ \label{eq:directed-set}
+\end{equation}
+The equality follows by writing each disk as a scaling, by
+\(a/\overline\alpha_N\), of the last disk. The union is compact
+and convex. Geometrically it is the hull of the origin and a disk
+centered on the positive real axis; it is not a disk centered at zero.
+Including amplitude zero will be essential for a contour homotopy,
+although the actual amplitude is strictly positive.
+
+\begin{proposition}[Pointwise consequences]
+\label{prop:directed-exclusion}
+At \(z\ne0\) in the stated strip, either of the following conditions
+implies \(F(z)\ne0\):
+\begin{align}
+ \operatorname{dist}(-w_N(z),[0,\overline\alpha_N])
+     &>\overline\alpha_N\epsilon_N(|z|,Y),
+       \label{eq:capsule-test}\\
+ \epsilon_N(|z|,Y)<1,\qquad \Re w_N(z)&\ge0.
+       \label{eq:halfplane-test}
+\end{align}
+When \(\epsilon_N<1\), a zero necessarily satisfies
+\begin{equation}
+ 0<|w_N(z)|\le\overline\alpha_N(1+\epsilon_N),\qquad
+ |\arg(-w_N(z))|\le\arcsin\epsilon_N.
+ \label{eq:necessary-sector}
+\end{equation}
+At \(z=0\), one uses \(F(0)=1\) directly.
+\end{proposition}
+
+\begin{proof}
+The set \(\mathcal U_N\) is contained in the closed
+\(\overline\alpha_N\varepsilon\)-neighborhood of the segment
+\([0,\overline\alpha_N]\). Hence \eqref{eq:capsule-test}
+prevents cancellation in \eqref{eq:normalized-error}.
+If \(\varepsilon<1\), then
+\(\Re(\alpha_NE_N)\ge\alpha_N(1-\varepsilon)>0\), proving
+\eqref{eq:halfplane-test}. A point in a disk \(D(a,a\varepsilon)\)
+with \(a>0\) has modulus at most \(a(1+\varepsilon)\), positive
+real part, and argument at most \(\arcsin\varepsilon\) in
+absolute value. The last assertion follows because the distance
+from \(a\) to the line at that argument is \(a|\sin\theta|\).
+Apply these facts to \(-w_N=\alpha_NE_N\).
+\end{proof}
+
+For an exact test of membership in the smaller set
+\eqref{eq:directed-set}, a complex value \(v\) belongs to it if and
+only if
+\begin{equation}
+ \min_{0\le a\le\overline\alpha_N}
+ \bigl\{|v|^2-2a\Re v+(1-\varepsilon^2)a^2\bigr\}\le0.
+ \label{eq:directed-membership}
+\end{equation}
+This is just \(|v-a|^2\le a^2\varepsilon^2\). When
+\(\varepsilon<1\), its minimizer is
+\(\Re v/(1-\varepsilon^2)\), restricted to the indicated segment.
+When \(\varepsilon\ge1\), an endpoint minimizes the affine or
+concave quadratic. Equality in this closed-set test gives no exclusion.
+
+\subsection{From a boundary comparison to a zero count}
+
+The argument principle counts zeros inside a positively oriented
+simple closed contour \(\Gamma\) by
+\((2\pi\ii)^{-1}\int_\Gamma f'/f\), provided \(f\) is holomorphic
+inside and on the contour and nonzero on its boundary. It counts
+multiplicities: a double zero contributes two. The count is unchanged
+during a continuous holomorphic deformation that never vanishes on
+the boundary \cite[\S9.8]{topping}.
+
+\begin{theorem}[Conditional transfer of a model zero count]
+\label{thm:contour}
+Let \(\Gamma\) be a positively oriented piecewise \(C^1\) simple
+closed contour in \(|\Im z|\le Y\le1\). Suppose
+\begin{equation}
+ \operatorname{dist}(-w_N(z),\mathcal U_N(z))>0
+       \qquad(z\in\Gamma,\ z\ne0).
+ \label{eq:contour-separation}
+\end{equation}
+Then \(F\) and \(G_N\) are nonzero on \(\Gamma\) and have the
+same number of interior zeros, with multiplicities.
+\end{theorem}
+
+\begin{proof}
+Set \(H_t=G_N+t(F-G_N)\), \(0\le t\le1\). For nonzero boundary
+points its normalized correction is \(t\alpha_NE_N\), which
+belongs to the closed set \(\mathcal U_N\). Condition
+\eqref{eq:contour-separation} therefore keeps every \(H_t\)
+nonzero there. If the contour passes through zero,
+\(H_t(0)=1\) for all \(t\). Continuity on the compact set
+\(\Gamma\times[0,1]\) gives a positive minimum modulus.
+The argument-principle integral is consequently continuous in \(t\)
+and integer-valued, hence constant. Its endpoints give the result.
+\end{proof}
+
+The separation concerns values in the complex value plane along a
+contour in the \(z\)-plane. One must still produce the contour and
+know the model count. For example, separation plus a zero model
+count excludes zeros of \(F\) inside. Pointwise
+\eqref{eq:halfplane-test} can hold even where \(G_N=0\); such a
+point cannot satisfy \eqref{eq:contour-separation}, since
+\(0\in\mathcal U_N\). Pointwise exclusion and count transfer
+have different hypotheses.
+
+\subsection{Using one more coefficient}
+
+If \(\beta_N\) is known, so is the exact amplitude in \(L_N\).
+The corrected model \(C_N=G_N+L_N\) then has the explicit bound
+\begin{equation}
+ |F(z)-C_N(z)|\le|L_N(z)|\epsilon_N(|z|,Y).
+ \label{eq:corrected-disk}
+\end{equation}
+A strict boundary inequality
+\(|C_N|>|L_N|\epsilon_N\) transfers its zero count to \(F\)
+by Rouch\'e's theorem \cite[Theorem~9.21]{topping}. But those same
+coefficients already specify \(G_{N+1}\), so a fair comparison is
+with the next physical head. The leading errors obey
+\begin{equation}
+ \frac{L_{N+1}(z)}{L_N(z)}
+   =-\frac{\beta_{N+1}z^2}{(2N+1)(2N+2)},
+ \label{eq:leading-ratio}
+\end{equation}
+with the right side extending the ratio at zero. Since
+\(\beta_{N+1}\le B_N-\beta_N\), for \(z\ne0\),
+\begin{equation}
+ \frac{|F-G_{N+1}|}{|L_N|}
+ \le\frac{(B_N-\beta_N)|z|^2}{(2N+1)(2N+2)}
+                 (1+\epsilon_{N+1}).
+ \label{eq:next-head-budget}
+\end{equation}
+On ranges where the phase bounds stay bounded, this error bound is
+\(O(|z|^2\log^2(N+1)/N^2)\); the displayed correction bound
+in \eqref{eq:corrected-disk}, after division by \(|L_N|\), is
+\(O(|z|^2\log^2(N+1)/N)\).
+
+There is also a comparison of the actual errors at fixed degree:
+\begin{equation}
+ \lim_{z\to0,\ z\ne0}
+ \frac{F(z)-G_N(z)-L_N(z)}{F(z)-G_{N+1}(z)}
+ =\frac{\beta_N+\beta_{N+1}+2\sum_{j=1}^{N-1}\beta_j}
+        {\beta_{N+1}}>1.
+ \label{eq:local-cost-comparison}
+\end{equation}
+Indeed \(E_N(z)=1-\sigma_N^2z^2/2+O(z^4)\); substitute
+\eqref{eq:error-moments} and \eqref{eq:leading-ratio}.
+Both errors have order exactly \(2N+2\), and their quotient
+extends holomorphically near zero. Thus the next head has smaller
+actual error on a sufficiently small punctured disk for each fixed
+\(N\). This proves no ordering of actual errors throughout the strip.

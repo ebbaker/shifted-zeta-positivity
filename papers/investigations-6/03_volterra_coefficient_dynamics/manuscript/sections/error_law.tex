@@ -1,0 +1,162 @@
+\section{An exact probability representation of the complete error}
+\label{sec:error-law}
+
+From now on fix \(\lambda=0\). The preceding quadrature statements
+remain valid at other fixed times, but the primary zero question is
+the time-zero one. Define the first omitted Taylor term
+\begin{equation}
+ L_N(z)=(-1)^N h_N^*\frac{z^{2N}}{(2N)!},\qquad
+ \dd\nu_N(u)=\frac{P_N(u)^2}{h_N^*}\,\dd\mu(u).
+ \label{eq:leading-error}
+\end{equation}
+The measure \(\nu_N\) is a probability; it weights the original
+source by the squared degree-\(N\) polynomial. The factorial and sign
+in \(L_N\) agree with the first missing return path in
+\eqref{eq:first-walk}. The following result explains the entire
+remainder after this first term.
+
+\begin{theorem}[Complete error law]
+\label{thm:error-law}
+Let \(U\) have law \(\nu_N\). Independently, choose a vector
+\[
+ S=(S_0,S_{1,1},S_{1,2},\ldots,S_{N,1},S_{N,2})
+\]
+uniformly on the simplex of nonnegative coordinates summing to one. Set
+\begin{equation}
+ X_N=S_0U+\sum_{j=1}^N(S_{j,1}+S_{j,2})x_{j,N},\qquad
+ E_N(z)=\mathbb E\e^{\ii zX_N}.
+ \label{eq:error-random-variable}
+\end{equation}
+Then \(X_N\) has a symmetric law, \(E_N\) is even and entire,
+\(E_N(0)=1\), and on all of \(\mathbb C\),
+\begin{equation}
+ \boxed{F(z)-G_N(z)=L_N(z)E_N(z).}
+ \label{eq:error-factorization}
+\end{equation}
+Thus \(F-G_N\) vanishes to order exactly \(2N\) at the origin.
+\end{theorem}
+
+The expectation in \eqref{eq:error-random-variable} represents the
+error, not a replacement physical source. Each Gauss node appears
+twice because the interpolation used in Gaussian quadrature matches
+both a value and a derivative. We give the normalization and the
+complex-height derivation explicitly; the underlying confluent
+interpolation and simplex formulas are classical
+\cite[\S1, Eq.~(16); \S7, Definition~37; \S9, Eq.~(52)]{deboor}.
+
+\begin{proof}
+Put \(d=2N\). On a simplex with \(d+1\) coordinates, integration
+of \(\prod_i s_i^{k_i}\), with \(k=\sum_i k_i\), gives
+\(\prod_i k_i!/(d+k)!\). To check this, fix one coordinate \(r\),
+rescale the remaining simplex by \(1-r\), and induct on dimension
+using \(\int_0^1r^a(1-r)^b\,\dd r=a!b!/(a+b+1)!\).
+In particular its coordinate volume is \(1/d!\), so uniform
+\emph{probability} has density \(d!\).
+For fixed knots \(t_0,\ldots,t_d\), define
+\(c_k(t)=\sum_{k_0+\cdots+k_d=k}\prod_i t_i^{k_i}\). The
+multinomial formula now gives
+\begin{equation}
+ \mathbb E\Big(\sum_iS_it_i\Big)^k
+   =\frac{k!d!}{(d+k)!}c_k(t),\qquad
+ \sum_{k\ge0}c_k(t)v^k=\prod_i(1-vt_i)^{-1}.
+ \label{eq:simplex-moments}
+\end{equation}
+
+Let \(I_z\) interpolate \(f_z(v)=\e^{\ii zv}\) and its first
+derivative at the \(N\) Gauss nodes, in degree at most \(d-1\).
+It exists uniquely because homogeneous data would force divisibility
+by \(P_N^2\), which has degree \(d\). Adjoin a real source point
+\(u\) to the doubled nodes, forming
+\(t=(u,x_{1,N},x_{1,N},\ldots,x_{N,N},x_{N,N})\). Interpolation
+on this list in degree at most \(d\), with derivative data at
+repeated knots, shows
+\[
+ f_z(u)-I_z(u)=P_N(u)^2D_tf_z,
+\]
+where \(D_tf_z\) is the leading coefficient of the augmented
+interpolant. This equality also holds when \(u\) is a node.
+
+For a monomial \(v^l\), its augmented interpolant is the remainder
+modulo \(\prod_i(v-t_i)\). The coefficient of \(v^d\) in that
+remainder is zero for \(l<d\), and \(c_{l-d}(t)\) for \(l\ge d\),
+by expansion of the quotient at infinity. Since \(D_t\) depends
+on finitely many values and derivatives, it can be applied to the
+exponential power series term by term. Formula~\eqref{eq:simplex-moments}
+then gives
+\begin{equation}
+ D_tf_z=\sum_{k\ge0}\frac{(\ii z)^{d+k}}{(d+k)!}c_k(t)
+       =\frac{(\ii z)^d}{d!}
+         \mathbb E_S\e^{\ii z\sum_i S_it_i}.
+ \label{eq:confluent-exponential}
+\end{equation}
+This argument works for complex \(z\); it does not use a
+real mean-value remainder for a complex exponential.
+
+Exactness for \(I_z\) and agreement with \(f_z\) at the nodes give
+\(F-G_N=\int(f_z-I_z)\,\dd\mu\). Integrating
+\eqref{eq:confluent-exponential} against \(P_N^2\dd\mu\) proves
+\eqref{eq:error-factorization}. All interchanges are justified on
+\(|z|\le R\) by \(\e^{R(|U|+\max_j|x_{j,N}|)}\), which is
+integrable at each fixed degree by \eqref{eq:tail}. This also proves
+entire dependence. Reflection of \(U\) and simultaneous permutation
+of the node pairs sends \(X_N\) to \(-X_N\) without changing its
+law. Finally \(E_N(0)=1\) and \(h_N^*>0\) give the stated order.
+\end{proof}
+
+\subsection{The size of the error variable}
+
+Put \(M=2N+1\), \(T_j=\operatorname{tr}J_N^j\), and
+\(m_j^{[N]}=\mathbb E_{\nu_N}U^j\). We use
+\((M)_k=M(M+1)\cdots(M+k-1)\), with \((M)_0=1\).
+
+\begin{proposition}[Second and fourth moments]
+\label{prop:error-moments}
+\begin{equation}
+ \begin{aligned}
+ \sigma_N^2:=\mathbb E X_N^2
+   &=\frac{2(m_2^{[N]}+T_2)}{(M)_2},\\
+ \mathbb E X_N^4
+   &=\frac{24m_4^{[N]}+24m_2^{[N]}T_2+12T_2^2+12T_4}{(M)_4},
+ \end{aligned}
+ \label{eq:error-moments}
+\end{equation}
+where
+\begin{equation}
+ \begin{aligned}
+ m_2^{[N]}&=\beta_N+\beta_{N+1},\qquad
+ T_2=2\sum_{j=1}^{N-1}\beta_j,\\
+ m_4^{[N]}&=\beta_N\beta_{N-1}+(\beta_N+\beta_{N+1})^2
+                 +\beta_{N+1}\beta_{N+2}.
+ \end{aligned}
+ \label{eq:source-error-moments}
+\end{equation}
+At \(N=1\) the term containing \(\beta_0=0\) is absent.
+\end{proposition}
+
+\begin{proof}
+For the doubled symmetric nodes,
+\[
+ \prod_j(1-vx_{j,N})^{-2}
+   =1+T_2v^2+\tfrac12(T_2^2+T_4)v^4+O(v^6),
+\]
+by expanding the formal logarithm. At fixed \(U=u\), multiply
+by \((1-vu)^{-1}\); the coefficients of degrees two and four
+are \(u^2+T_2\) and
+\(u^4+u^2T_2+(T_2^2+T_4)/2\). Average these finite polynomials
+and apply \eqref{eq:simplex-moments}. No reciprocal series with
+unbounded random \(U\) is integrated.
+The moments of \(U\) are the squared norms of \(uq_N\) and
+\(u^2q_N\). The recurrence gives the coefficients
+\(a_N,a_{N+1}\) for the former and
+\(a_Na_{N-1},\beta_N+\beta_{N+1},a_{N+1}a_{N+2}\) for the latter.
+Orthogonality gives \eqref{eq:source-error-moments}.
+\end{proof}
+
+For example, \(N=1\) has one node at zero and
+\(X_1=S_0U\), where \(S_0\) has density \(2(1-s)\) on
+\([0,1]\). Thus \(\mathbb E X_1^2=m_2^{[1]}/6\) and
+\(\mathbb E X_1^4=m_4^{[1]}/15\), checking the endpoint factors.
+The envelope already shows
+\(\sigma_N^2=O(\log^2(N+1)/N)\). To control complex phase,
+we must additionally control an exponential weight; variance alone
+does not provide that control.

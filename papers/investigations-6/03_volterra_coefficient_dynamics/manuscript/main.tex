@@ -1,62 +1,120 @@
 \documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
-\usepackage{amsmath,amssymb,amsthm,microtype,booktabs}
+\usepackage{amsmath,amssymb,amsthm,microtype,booktabs,array}
 \usepackage[hidelinks]{hyperref}
+\hypersetup{
+ pdftitle={Jacobi dynamics and signed quadrature error for the Newman heat flow},
+ pdfauthor={Edward Baker},
+ pdfsubject={Analytical draft, 16 November 2026}
+}
 \allowdisplaybreaks[2]
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\numberwithin{equation}{section}
+\setcounter{tocdepth}{1}
 \newcommand{\e}{\mathrm e}
 \newcommand{\ii}{\mathrm i}
 \newcommand{\dd}{\mathrm d}
 \newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
 \newcommand{\arcosh}{\operatorname{arcosh}}
 
-\title{Volterra dynamics and logarithmic coefficient bounds\\
+\title{Jacobi dynamics and signed quadrature error\\
        for the Newman heat flow}
 \author{Edward Baker}
-\date{14 November 2026}
+\date{16 November 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Orthogonalization for the complete theta source at each Newman time
-gives a moving sequence of Jacobi recurrence coefficients. We derive
-its Volterra equation and entrywise Lax identity. A bound on the
-logarithmic derivative of the complete weight, combined with monic
-polynomial integration by parts and Jensen's inequality, yields
-\(\beta_n+\beta_{n+1}\le\arcosh^2(2n+12)/16\) for all \(n\ge0\) and
-\(0\le\lambda\le1/2\). The resulting monic norm product gives an
-explicit factor in the Gaussian quadrature error for the fixed
-initial Jacobi chain. Positive weighted-square sources with
-nondegenerate collisions satisfy the same coefficient bound.
+The complete theta source defines a positive measure, an orthogonal
+polynomial basis, and a Jacobi chain whose first matrix-exponential
+entry is the normalized Newman field. We develop this correspondence
+and distinguish zeros of the source polynomials from zeros of the
+Fourier readout. The classical Volterra deformation and a complete-source
+confinement estimate give explicit logarithmic coefficient bounds.
+For an \(N\)-site readout we derive the entire error factorization
+\(F-G_N=(-1)^Nh_N^*z^{2N}E_N/(2N)!\), where \(E_N\) is the transform
+of a symmetric probability law. An explicit exponential-moment argument
+gives \(|E_N-1|=O(|z|^2\log^2(N+1)/N)\), uniformly in
+\(|\Im z|\le1\). The known error direction yields real parity brackets,
+pointwise exclusions and conditional contour-count comparisons.
+We compare the next physical head with a monomial correction at equal
+coefficient input. Local zero analysis gives alternating errors at fixed
+simple real zeros, and contour moments resolve two-zero clusters through
+a fixed double heat-flow event. The estimates also apply to
+weighted-square controls. Canonical zero confinement remains open.
 \end{abstract}
 
-\section{Introduction}
+\begingroup
+\small
+\tableofcontents
+\endgroup
 
-The de Bruijn--Newman field is the Fourier transform of a complete
-theta density tilted by \(\e^{\lambda u^2}\). Encoding multiplication by
-the source variable \(u\) in an orthogonal polynomial basis produces a
-tridiagonal Jacobi matrix. One can hold the basis fixed and put a heat
-factor in the readout, or rebuild the basis at each time and study the
-resulting coefficient evolution. The moving basis gives the classical
+\section{Introduction and a guide to the variables}
+\label{sec:introduction}
+
+The starting object is a Fourier transform: a positive density in a
+real variable \(u\) is integrated against \(\e^{\ii zu}\).
+For real \(z=x\), symmetry turns this into a cosine integral.
+Although the density is positive, the cosine changes sign, so its
+integral can vanish. Positivity of the density and the geometry of
+zeros of its transform are therefore different questions.
+
+Orthogonal polynomials encode the source measure through a sparse
+matrix. Multiplication by \(u\) becomes a Jacobi matrix \(J\); the
+Fourier transform becomes one entry of \(\e^{\ii zJ}\).
+Keeping the first \(N\) sites gives a finite, explicitly defined
+readout \(G_N\). The aim is to understand both its approximation
+error and what that error can tell us about zeros.
+
+\begin{center}
+\begin{tabular}{@{}p{0.16\textwidth}p{0.75\textwidth}@{}}
+\toprule
+Symbol & Meaning\\
+\midrule
+\(u\in\R\) & Source coordinate, integrated out in the Fourier transform.\\
+\(z=x+\ii y\) & Observation variable; \(x\) is real height and \(y\) measures distance from the real axis.\\
+\(\lambda\) & Newman heat parameter; the zero objective is at \(\lambda=0\).\\
+\(n,N\) & Polynomial degree and number of retained Jacobi sites, respectively.\\
+\(\Phi,W_\lambda\) & Complete theta density and its heat tilt.\\
+\(\mu_\lambda,F_\lambda\) & Probability-normalized source and its Fourier transform.\\
+\(P_n,\beta_n\) & Monic orthogonal polynomials and positive recurrence coefficients.\\
+\(J_N,G_N\) & Finite Jacobi matrix and its scalar Fourier readout at a fixed time.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Changing \(\lambda\) deforms the measure and its coefficients.
+Changing \(N\) retains one more polynomial mode at the same time.
+These are separate operations. The moving basis gives the classical
 Volterra lattice, the quadratic even-weight specialization of the
-Toda hierarchy \cite[\S2.3]{vanassche}. The lattice describes how the
-coefficients change in time. To bound them in degree, we use the
-confinement supplied by the complete theta density.
+Toda hierarchy \cite[\S2.3]{vanassche}. An induction in retained degree
+would require additional information beyond that time-evolution law.
 
-The key estimate bounds a sum of adjacent squared off-diagonal
-coefficients by an explicit function growing as the square of a
-logarithm. It follows from a scalar identity for the probability measure
-whose density is the weight times the square of a monic polynomial,
-normalized by its squared norm. The estimate controls a norm factor in
-a real-height quadrature error bound. Its proof also applies to a class
-of positive weighted-square densities, including examples whose fields
-collide at positive heat times.
+Sections~\ref{sec:source}--\ref{sec:confinement} build the source,
+basis, evolution and coefficient envelope.
+Section~\ref{sec:readouts} explains Gaussian quadrature and the two
+zero problems; Section~\ref{sec:memory} explains the omitted chain.
+Sections~\ref{sec:error-law}--\ref{sec:directed} derive the full error
+law, its phase bound and the resulting geometric tests.
+Sections~\ref{sec:zero-geometry}--\ref{sec:source-scope} identify the
+extra zero-geometry information still needed. The fixed-initial-basis
+heat estimate is retained in Appendix~\ref{sec:fixed-chain}.
+
+A useful distinction runs through the development. An identity
+specifies an object exactly; an upper estimate controls an error;
+a zero theorem also needs separation from cancellation or a complete
+zero count. The manuscript proves the displayed analytical statements
+within their hypotheses. It does not establish a canonical family of
+successful contours or a degree-propagated zero-confinement theorem.
 
 \section{The complete source and its polynomial basis}
+\label{sec:source}
 
 For \(u\ge0\), put \(\rho(u)=\pi\e^{4u}\), \(r_m=m^2\rho(u)\), and
 \begin{equation}
@@ -82,6 +140,19 @@ In particular the physical field and the reversed clock are
 The full-line mass \(Z_\lambda=\int_\R W_\lambda(u)\,\dd u\) is retained in
 the physical field.
 
+For the polynomial and probability arguments it is convenient to
+divide by this positive mass:
+\begin{equation}
+ \dd\mu_\lambda(u)=\frac{W_\lambda(u)}{Z_\lambda}\,\dd u,\qquad
+ F_\lambda(z)=\int_\R\e^{\ii zu}\,\dd\mu_\lambda(u)
+             =\frac{2H_\lambda(z)}{Z_\lambda},\qquad F_\lambda(0)=1.
+ \label{eq:normalized-field}
+\end{equation}
+Normalization changes no zeros. An expectation
+\(\mathbb E_\mu f(U)\) below means precisely \(\int f(u)\,\dd\mu(u)\).
+The complex variable is allowed because the source has faster than
+exponential decay, established next.
+
 To check the time-zero scale, set \(I(z)=\int_0^\infty p(u)\cos(zu)\,\dd u\)
 and \(s=(1-\ii z)/2\). Two integrations by parts give
 \(8H_0(z)=1/2-(1+z^2)I(z)\), using the endpoint \(p'(0)=-1/2\).
@@ -97,6 +168,10 @@ and applying theta inversion below \(1\) gives
 The integral is \(8I(z)\) by \(t=\e^{4u}\) and is entire in \(s\).
 Multiplication by \(s(s-1)/2\) gives the continued completed function
 \(\xi(s)=1/2-(1+z^2)I(z)\), so \(H_0(z)=\xi((1-\ii z)/2)/8\).
+For \(z=x+\ii y\), this change of variables has
+\(\Re s=(1+y)/2\) and \(\Im s=-x/2\). Thus the strip
+\(0\le\Re s\le1\) corresponds to \(|\Im z|\le1\), and the
+critical line corresponds to real \(z\).
 The positive-half-line integrals and the boundary terms at infinity
 are controlled by double-exponential decay.
 
@@ -155,7 +230,14 @@ the Jacobi matrix \(J(\lambda)\) in the orthonormal basis has
 zero diagonal and edge between \(n-1\) and \(n\) equal to
 \(a_n=\sqrt{\beta_n}\); set \(a_0=0\).
 
-\section{The moving-basis evolution}
+For example, the first monic polynomials are
+\(P_0=1\), \(P_1=u\), \(P_2=u^2-\beta_1\), with
+\(\beta_1=\int u^2\,\dd\mu_\lambda\).
+The coefficient \(a_n\) is an edge weight; \(\beta_n=a_n^2\)
+is its square. Neither is a Fourier zero.
+
+\section{The moving-basis evolution and spectral representation}
+\label{sec:evolution}
 
 The coefficients of each \(P_n\) solve a finite Gram linear system:
 write \(P_n=u^n+\sum_{j<n}c_j u^j\) and impose orthogonality to
@@ -256,9 +338,29 @@ initial basis and uses the factor \(\e^{-\tau u^2}\).
 Both expressions are justified by multiplication in the respective
 weighted spaces.
 
+For complex \(z\), the fixed input \(e_0\) remains in the domain
+of \(\e^{\ii zJ}\), because its spectral multiplier is
+\(\e^{\ii zu}\in L^2(\mu_\lambda)\).
+The same exponential-tail domination proves a holomorphic vector
+orbit. Consequently
+\begin{equation}
+ F_\lambda(z)=\langle e_0,\e^{\ii zJ(\lambda)}e_0\rangle
+                 \qquad(z\in\mathbb C).
+ \label{eq:full-readout}
+\end{equation}
+This is a fixed-vector statement. For nonreal \(z\) the exponential
+need not be a bounded operator on the whole Hilbert space.
+Our inner product is \(\langle v,w\rangle=v^*w\), linear in the
+second slot; this convention matters for the midpoint formula later.
+
 \section{Complete-source confinement and the coefficient envelope}
+\label{sec:confinement}
 
 Set \(V_\lambda=-\log W_\lambda\).
+Its derivative \(V_\lambda'=-W_\lambda'/W_\lambda\) is the negative
+logarithmic derivative, called the score in this paper. A lower
+bound on \(uV_\lambda'(u)\) quantifies how strongly the source
+suppresses its tails.
 On \(u\ge0\), the individual score is
 \[
  (\log s_m)'=1+4+\frac{8r_m}{2r_m-3}-4r_m
@@ -337,12 +439,13 @@ Inversion and squaring prove the claim.
 \label{thm:theta}
 Define \(B_n=\arcosh^2(2n+12)/16\). For the complete theta weight
 and every \(0\le\lambda\le1/2\),
-\[
+\begin{equation}
  \beta_n(\lambda)+\beta_{n+1}(\lambda)\le B_n\qquad(n\ge0).
-\]
+ \label{eq:coefficient-envelope}
+\end{equation}
 In particular, for \(N\ge1\),
 \begin{equation}
- \frac{h_N(1/2)}{h_0(1/2)}
+ \frac{h_N(\lambda)}{h_0(\lambda)}
  \le\prod_{j=0}^{N-1}B_j
  \le\left[\frac{\arcosh(2N+10)}{4}\right]^{2N}.
  \label{eq:product}
@@ -356,9 +459,20 @@ In Lemma~\ref{lem:general} take \(\kappa=4\) and \(C=11\) using
 Each integration by parts is at a fixed finite degree; the
 constant in \eqref{eq:confinement} is common to all degrees and times.
 For the product, \(\beta_j\le B_{j-1}\) by nonnegativity.
-Multiply for \(1\le j\le N\) at \(\lambda=1/2\) and telescope
-\(h_j/h_{j-1}\). The second inequality uses monotonicity of \(B_j\).
+Multiply for \(1\le j\le N\) at the chosen fixed \(\lambda\) and
+telescope \(h_j/h_{j-1}\). The second inequality uses monotonicity of \(B_j\).
 \end{proof}
+
+The proof also retains a stronger source-moment statement that
+will be needed for complex phase. With
+\(\dd\nu_n=P_n^2W_\lambda\,\dd u/h_n\),
+\begin{equation}
+ \mathbb E_{\nu_n}[uV_\lambda']=2n+1,\qquad
+ \mathbb E_{\nu_n}\cosh(4U)\le2n+12.
+ \label{eq:weighted-cosh}
+\end{equation}
+The coefficient bound is obtained from this exponential-moment
+control by Jensen; later we will use both pieces of information.
 
 Since \(0\le\partial_\lambda\log h_n\le B_n\) by \eqref{eq:hflow},
 for \(0\le\lambda_1\le\lambda_2\le1/2\) we also have
@@ -368,7 +482,26 @@ for \(0\le\lambda_1\le\lambda_2\le1/2\) we also have
 \]
 This is control of the norms along the specified weight deformation.
 
-\section{A scalar consequence for the fixed chain}
+\input{sections/readouts}
+\input{sections/memory}
+\input{sections/error_law}
+\input{sections/phase}
+\input{sections/directed_error}
+\input{sections/zero_geometry}
+\input{sections/source_scope}
+
+\paragraph{Acknowledgment and status.}
+Prepared for Edward Baker with substantial OpenAI Codex LLM assistance.
+The 14 November drafting work and the previously assessed analytical
+source notes record GPT-6.1 Sol / Ultra dispatches, without separate
+backend attestation. The actual model and reasoning effort of this
+16 November manuscript integration are unavailable in its recorded
+configuration. The integration has a same-assistant analytical and
+document check; no independent specialist review is claimed.
+
+\appendix
+\section{The fixed initial chain and its heat readout}
+\label{sec:fixed-chain}
 
 Let \(J_N\) be the leading \(N\times N\) block of \(J_*\) for
 \(N\ge1\), and set
@@ -376,7 +509,7 @@ Let \(J_N\) be the leading \(N\times N\) block of \(J_*\) for
  H_N(\tau,x)=\frac{Z_*}{2}
        \langle e_0,\e^{-\tau J_N^2}\e^{\ii xJ_N}e_0\rangle,
  \qquad
- S_N(\tau,x)=\sum_{k=0}^N
+ \mathcal S_N(\tau,x)=\sum_{k=0}^N
        \frac{\tau^k x^{2N-2k}}{k!(2N-2k)!}.
 \]
 Here \(x\) is real and \(0\le\tau\le1/2\), with zeroth powers
@@ -389,25 +522,15 @@ interpreted as one. The normalized monic squared norm for
 For the stated real-height and time domain,
 \[
  |H_{1/2-\tau}(x)-H_N(\tau,x)|
- \le\frac{Z_*}{2}\frac{h_N(1/2)}{h_0(1/2)}S_N(\tau,x)
- \le\frac{Z_*}{2}S_N(\tau,x)\prod_{j=0}^{N-1}B_j .
+ \le\frac{Z_*}{2}\frac{h_N(1/2)}{h_0(1/2)}\mathcal S_N(\tau,x)
+ \le\frac{Z_*}{2}\mathcal S_N(\tau,x)\prod_{j=0}^{N-1}B_j .
 \]
 \end{corollary}
 
 \begin{proof}
-The characteristic polynomials of the principal blocks obey
-\eqref{eq:recurrence}, by tridiagonal determinant expansion, so
-the eigenvalues of \(J_N\) are the zeros of \(P_N(\cdot;1/2)\).
-For \(N>1\) all internal edges are positive, so the site equations
-force an eigenvector with vanishing first entry to be zero.
-This implies simple eigenvalues and strictly positive scalar weights
-at \(e_0\); their sum is one. The same claims hold for \(N=1\),
-where \(J_1=0\). Conjugating by the diagonal alternating sign gives
-\(-J_N\) and fixes \(e_0\), so the scalar measure \(Q_N\) is even.
-For degrees \(0\le j\le2N-1\), its moments agree with \(\mu_*\):
-an expansion of the matrix moment as a sum over tridiagonal walks
-shows that reaching site \(N\) and returning to \(0\) takes at least
-\(2N\) steps.
+Apply Proposition~\ref{prop:gauss} to the probability measure
+\(\mu_*=\mu_{1/2}\). Its rule \(Q_N\) has the spectral nodes and
+weights of \(J_N\) and is exact through degree \(2N-1\).
 
 For real \(s\), Hermite interpolation of \(\cos(su)\) and its first
 derivative at the \(N\) nodes gives a unique polynomial \(I_s\)
@@ -431,63 +554,9 @@ for a standard normal \(G\). Boundedness of the cosine permits
 averaging under both probability measures. Gaussian integration
 by parts gives \(\mathbb E G^{2k}=(2k)!/(2^k k!)\), while the odd
 moments vanish. Hence \(\mathbb E|x+\sqrt{2\tau}G|^{2N}/(2N)!
-=S_N(\tau,x)\). Multiply by \(Z_*/2\) and use
+=\mathcal S_N(\tau,x)\). Multiply by \(Z_*/2\) and use
 \eqref{eq:product}.
 \end{proof}
-
-\section{Applicability to colliding sources}
-
-For a finite sum \(\sum_{m=1}^M c_m s_m\) with positive \(c_m\),
-multiply by \(\e^{\lambda u^2}\) on \(u\ge0\) and take the even
-extension. Each constant \(c_m\) cancels in its summand score, so
-the positive mean again gives \eqref{eq:score}. The extended density
-is positive and locally absolutely continuous. Its tails satisfy
-the hypotheses of Lemma~\ref{lem:general}. One can integrate by
-parts on the two half-lines, since \(uP_n^2w\) vanishes at zero.
-Thus it has the same bound as Theorem~\ref{thm:theta}.
-
-The positive three-square and four-square sources \cite{three,four}
-have validated double events in their cosine transforms at
-\(\lambda=1/4\), \(44.1303<x<44.1304\), and at
-\(\lambda=1/100\), \(83.5323729<x<83.5323730\), respectively.
-Their Jacobi coefficients satisfy the envelope at those events.
-They retain the modewise confinement used here, while the canonical
-source also has equal coefficients and full modular reflection.
-
-\section{Outstanding challenges}
-
-\paragraph{Asymptotics in degree.}
-The all-degree constant controls a sum of two adjacent coefficients.
-Determining leading behavior of individual \(a_n\), with lower
-bounds and quantitative remainders uniform in heat time, would
-require sharper control than the confinement inequality used here.
-A solution would also determine how conservative the norm product is
-in quadrature for the actual theta data.
-
-\paragraph{Stability and growing height.}
-The entrywise flow controls derivatives at each finite index.
-Quantitative propagation of measured coefficient errors through
-growing cutoffs calls for a stability estimate that pays for the
-unobserved coefficients at the boundary of a finite prefix.
-The scalar quadrature bound applies for each \(N\) and real height.
-Determining sharp depth and certified coefficient precision requirements
-at growing heights involves the norm factors, the oscillatory readout
-and the scale of the requested error.
-
-\begin{samepage}
-\paragraph{Arithmetic input and sign.}
-The control examples show that the shared score inequality and
-positive recurrence coefficients permit a collision. A signed
-field estimate would need a source-distinguishing input and a
-quantitative transfer to the relevant scalar margin. For a
-logarithmic or ratio observation, the transfer would also have
-to account for small denominators and zeros.
-\par
-\end{samepage}
-
-\paragraph{Acknowledgment.}
-Substantial OpenAI Codex assistance was dispatched as GPT-6.1 Sol /
-Ultra. Separate backend attestation is unavailable.
 
 \begin{thebibliography}{9}
 \raggedright
@@ -499,7 +568,29 @@ NIST Digital Library of Mathematical Functions,
 \bibitem{vanassche}
 W.~Van Assche, \emph{Orthogonal polynomials, Toda lattices and Painlev\'e
 equations}, \href{https://arxiv.org/abs/2202.11017v1}{arXiv:2202.11017v1},
-2022.
+2022; \S1.1 and \S2.3.
+
+\bibitem{deboor}
+C.~de Boor, \emph{Divided Differences}, Surveys in Approximation Theory
+\textbf{1} (2005), 46--69.
+\href{https://pages.cs.wisc.edu/~deboor/sat/papers/2/2.pdf}{Author/publisher PDF};
+\S1, Eq.~(16), \S7, Definition~37, and \S9, Eq.~(52).
+
+\bibitem{topping}
+P.~Topping, \emph{MA3B8 Complex Analysis}, University of Warwick,
+notes dated 29 July 2024, \S9.8--9.9.
+\href{https://warwick.ac.uk/fac/sci/maths/people/staff/peter_topping/teaching/ma3b8_cplxanal_24_07_29.pdf}{Author's course notes}.
+
+\bibitem{teschl}
+G.~Teschl, \emph{Jacobi Operators and Completely Integrable Nonlinear
+Lattices}, Mathematical Surveys and Monographs 72, AMS, 2000;
+corrected author edition, 24 August 2017, \S4.1.
+\href{https://www.mat.univie.ac.at/~gerald/ftp/book-jac/jacop.pdf}{Authorized online edition}.
+
+\bibitem{romanov}
+R.~Romanov, \emph{Canonical systems and de Branges spaces},
+\href{https://arxiv.org/abs/1408.6022v1}{arXiv:1408.6022v1},
+26 August 2014; \S3.2, Proposition~4.
 
 \bibitem{three}
 E.~Baker, \emph{Square-support constraints admit a collision even with the
@@ -508,5 +599,11 @@ first source endpoint}, Investigation~22, research note, 15 October 2026.
 \bibitem{four}
 E.~Baker, \emph{Two odd source endpoints still permit a positive weighted-square
 collision}, Investigation~22, research note, 15 October 2026.
+
+\bibitem{rodgerstao}
+B.~Rodgers and T.~Tao, \emph{The de Bruijn--Newman constant is non-negative},
+Forum of Mathematics, Pi \textbf{8} (2020), e6;
+\href{https://arxiv.org/abs/1801.05914v5}{arXiv:1801.05914v5},
+3 July 2021, \S4, Theorem~11 and Eq.~(56) in the PDF.
 \end{thebibliography}
 \end{document}

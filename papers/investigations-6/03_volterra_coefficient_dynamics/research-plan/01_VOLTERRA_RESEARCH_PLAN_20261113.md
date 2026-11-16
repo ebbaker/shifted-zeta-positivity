@@ -5,9 +5,16 @@ substantial OpenAI Codex LLM assistance. Actual backend model and reasoning
 effort are unavailable in the shared chat's recorded configurations.
 Recommended models below do not identify the model preparing this plan.
 
-**Continuation authorized; research not started by this update.** The
-[VCD progress file](../research-progress/01_VOLTERRA_RESEARCH_PROGRESS_20261113.md)
-is the sole current register for this branch. This plan follows the
+**Historical first-round plan; superseded as live plan on 16 November 2026.** Its tasks are
+complete at their recorded scopes in the
+[historical register](../research-progress/01_VOLTERRA_RESEARCH_PROGRESS_20261113.md).
+The [new plan](02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_PLAN_20261116.md) and
+[sole live register](../research-progress/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_PROGRESS_20261116.md)
+govern current tail-closure induction work. Readiness, stopping and
+activation language in the remaining body is the original 13 November
+planning record, not current status. Issued requests remain unchanged.
+This notice was prepared for Edward Baker with OpenAI Codex assistance,
+recorded configuration gpt-6-astra/max. The original plan follows the
 [setup workflow](../../../../INVESTIGATION_SETUP_WORKFLOW.md) and
 [B/E workflow](../../../../GPT_RESEARCH_MODEL_WORKFLOW.md). It implements
 the subsequent request for branch plans, superseding the earlier planning

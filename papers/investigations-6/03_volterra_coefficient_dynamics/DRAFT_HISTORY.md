@@ -1,10 +1,59 @@
 # Volterra coefficient dynamics history
 
+- **16 November 2026 — three collision-route overviews, chat0004:** created README/overview pairs for [gap transport](01_cluster_gap_transport/README.md), [degree contraction](02_degree_nonreality_contraction/README.md), and [multiscale bounds](03_multiscale_collision_bounds/README.md), reusing [discussion28](notes/28_VCD_COLLISION_CONTROL_ROUTE_DISCUSSION_20261116.md). Edward selects gap transport first; its [continuation](01_cluster_gap_transport/notes/01_VCD_GT_SETUP_CONTINUATION_20261116.md) prepares the next session's plan/register setup. Plans and progress files are deferred by request; parent B07/E25 retain ownership/status. Organizational milestone only, no new theorem, research execution or numerical campaign. For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+
+- **16 November 2026 — unresolved clusters and heat collisions, chat0004:** [note27](notes/27_VCD_CLUSTER_RESOLUTION_AND_HEAT_COLLISIONS_20261116.md) and manuscript §10.4 derive center/discriminant error bounds and fixed double-event resolution; §5.3 clarifies that polynomial phase does not count F zeros. [Assessment11](reviews/11_VCD_CLUSTER_RESOLUTION_ASSESSMENT_20261116.md), [build14](numerics/14_VCD_CLUSTER_RESOLUTION_MANUSCRIPT_BUILD_20261116.json); same-assistant checks, no numerical campaign or collision exclusion. Separately repaired the chat metadata mismatch and recovered the preceding reply ([receipt13](numerics/13_VCD_CHAT_CREATION_METADATA_REPAIR_20261116.json)). For Edward Baker with Codex assistance; actual model/effort unavailable.
+
+- **16 November 2026 — fixed-zero manuscript corollary, chat0004:** [note26](notes/26_VCD_FIXED_ZERO_STABILIZATION_AND_PHASE_20261116.md) and manuscript §10.3 derive isolated-cluster stability and the alternating displacement asymptotic for each fixed simple real zero. §10.1 explains phase through circle crossings. [Assessment10](reviews/10_VCD_FIXED_ZERO_COROLLARY_ASSESSMENT_20261116.md), [build12](numerics/12_VCD_FIXED_ZERO_MANUSCRIPT_BUILD_20261116.json); same-assistant checks, no numerical campaign, growing-height confinement remains open. B07 unactivated/E25 unissued. For Edward Baker with Codex assistance; actual model/effort unavailable.
+
+- **16 November 2026 — analytical readout manuscript, chat0004:** expanded the existing [draft](manuscript/README.md) through the complete signed error and phase estimates, directed contour comparison, polynomial phase background, local zero motion and all-degree source characterization. [Integration25](notes/25_VCD_ANALYTICAL_READOUT_MANUSCRIPT_INTEGRATION_20261116.md), [same-assistant assessment09](reviews/09_VCD_READOUT_MANUSCRIPT_ASSESSMENT_20261116.md) and [build11](numerics/11_VCD_READOUT_MANUSCRIPT_BUILD_20261116.json). Numerical witnesses remain supporting evidence; no numerical campaign or new canonical zero theorem. PDF in ignored root output, no snapshot folder. B07 unactivated/E25 unissued. Prepared for Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+
+- **16 November 2026 — B06 signed-error consumer, chat0003 third turn:** E21 represents the complete E15 quadrature error by its omitted-walk factor and an explicit probability law. E22 proves the uniform critical-strip phase budget O(|z|²log²(N+1)/N) and real parity brackets. E24 compares equal coefficient costs and selects a directed positive-amplitude enclosure. [Synthesis23](notes/23_VCD_B06_SIGNED_ERROR_CONSUMER_SYNTHESIS_20261116.md) and [E23](reviews/08_VCD_E23_SIGNED_ERROR_CONSUMER_ASSESSMENT_20261116.md) record acceptance within scope after two synthesis clarifications; no proof correction. Canonical contour separation/model counts remain open, with specific author-help input identified. No numerical campaign or manuscript change. For Edward Baker with Codex assistance; lead actual settings unavailable, helpers explicitly Sol6.1/ultra. Chat capture refreshed; B07 is next.
+
+- **16 November 2026 — B05 complete-source estimates, chat0003 second turn:** E17 proves a complete-source Fourier contour bound; E18 compares exterior anchors and the exact arithmetic remainder; E19 disproves the proposed uniform absolute/fixed-half-plane consumer on the actual source. [Synthesis19](notes/19_VCD_B05_CANONICAL_FOURIER_ESTIMATE_SYNTHESIS_20261116.md) also improves the absolute bound to O_y(exp(-pi x/8)x^((13-y)/4)). [E20](reviews/07_VCD_E20_CANONICAL_FOURIER_ASSESSMENT_20261116.md) accepts the three proofs and synthesis within scope without mathematical correction; internal shared-model review. Zero confinement remains open, B06 is next. No numerical campaign or manuscript revision. For Edward Baker with Codex assistance; lead actual settings unavailable, helpers explicitly Sol6.1/ultra. Progress/continuation and canonical chat capture updated.
+
+- **16 November 2026 — midpoint research round, chat0003:** B04's three connected passes completed E13, E12, E15 and E16: shared-memory midpoint foundations, smooth finite-data complex-response freedom, exact same-kernel full-height equivalence with signed error transport, and a conditional geometric calibration bound. [Synthesis15](notes/15_VCD_MIDPOINT_RESEARCH_SYNTHESIS_20261116.md) and [E14 assessment](reviews/06_VCD_E14_MIDPOINT_SESSION_ASSESSMENT_20261116.md) preserve the precise classes. Four proofs accepted within scope; synthesis wording clarified in one response. No zero-confinement theorem, numerical campaign or manuscript change. Prepared for Edward Baker with Codex assistance; lead actual model/effort unavailable, proof/assessment workers explicitly Sol6.1/ultra. Chat0003 registered/refreshed; B05 is the next conceptual task.
+
+- **16 November 2026 — midpoint planning and archive repair:** Extended
+  overview02, plan02 and the live register to include the author's midpoint
+  amplitude-sum truncation. B04/E12 retain ownership; E13 is ready/unissued
+  for the fixed foundations and two-error ledger. Completed E04–E11 proofs,
+  assessments and issued packets are preserved. Recovered chat0001's four
+  missing completed replies and remaining public text via narrowly verified
+  status-only metadata support; 93 recorder tests passed. [Repair diagnosis](../../../tools/CHAT_HISTORY_STATUS_ONLY_MODERATION_20261116.md)
+  and [receipt](numerics/06_VCD_ARCHIVE_AND_MIDPOINT_UPDATE_20261116.json).
+  Prepared for Edward Baker with OpenAI Codex assistance, recorded
+  gpt-6-astra/max; read-only planning/code reviews dispatched Sol6.1/ultra.
+  No new theta theorem, numerical campaign or research-task execution.
+
+- **16 November 2026 — connected tail/score research milestone:** B02→E04/E05→E06/E07→B03→E08/E10, with [E09](reviews/04_VCD_E09_TAIL_SCORE_ASSESSMENT_20261116.md)/[E11](reviews/05_VCD_E11_SMOOTH_DEFECT_ASSESSMENT_20261116.md) internal acceptance. [Synthesis09](notes/09_VCD_CONNECTED_RESEARCH_SYNTHESIS_20261116.md) records the exponential score remainder O(log n/n), full-score source characterization, finite canonical nonreal-zero controls, and smooth freedom of the next defect invisible to finite commutation. These are scoped estimates/obstructions, not a zero-strip theorem. No manuscript change or numerical campaign. For Edward Baker with OpenAI Codex assistance; lead backend/effort unavailable, helpers explicitly Sol6.1/ultra. Chat02 registered and refreshed; continuation updated to B04.
+
+- **16 November 2026 — tail-closure induction setup:** Added the
+  [detailed overview](research-overview/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_OVERVIEW_20261116.md),
+  [sustained-session plan](research-plan/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_PLAN_20261116.md),
+  [sole successor register](research-progress/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_PROGRESS_20261116.md)
+  and [activation prompt](notes/03_VCD_TAIL_CLOSURE_INDUCTION_CONTINUATION_20261116.md).
+  Preserved first-round evidence and requests; historical/live ownership
+  is explicit. [Document review](reviews/03_VCD_INDUCTION_SETUP_ASSESSMENT_20261116.md)
+  resolved the existential zero-strip classification and atomic-control
+  scope. Research ready/unactivated; no new theta theorem or numerical
+  run. Edward Baker with OpenAI Codex assistance; actual setup
+  configuration gpt-6-astra/max, future research requested at ultra with
+  authorized Sol 6.1 subtasks. [Setup receipt](numerics/03_VCD_INDUCTION_SETUP_RECORD_20261116.json).
+
 - **16 November 2026 — induction discussion:** Saved
   [truncation and zero-control notes](brainstorm/notes/03_VCD_INDUCTION_TRUNCATION_AND_ZERO_CONTROL_20261116.md)
   and checked source passages. Exploratory only; no theta zero induction,
   manuscript milestone or new execution campaign. Prepared for Edward Baker
   with OpenAI Codex assistance; rollout records gpt-6-astra / max.
+  The second exchange records exact tail-memory elimination and the
+  shrinking-strip limit argument. Edward directs attention to structural
+  hierarchy closure; the Jensen alternative is not pursued. No zero
+  invariant or numerical campaign is claimed. The later midpoint
+  clarification records the bra's adjoint sign and the bilinear
+  amplitude-square sum, distinguished from the conserved norm. At that
+  stage chat refresh failed on unsupported structured content while the
+  verified archive stayed intact; the later repair is recorded above.
 
 - **15 November 2026 — open brainstorming continuation:** Saved the
   [branch discussion note](brainstorm/notes/02_VCD_OPEN_BRAINSTORM_CONTINUATION_20261115.md)

@@ -1,5 +1,15 @@
 # Investigations 6 — Tensor networks and recursive Newman representations
 
+**16 November 2026 — Volterra tail-closure program prepared:** Branch 03
+now has a [detailed induction overview](03_volterra_coefficient_dynamics/research-overview/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_OVERVIEW_20261116.md),
+[new plan](03_volterra_coefficient_dynamics/research-plan/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_PLAN_20261116.md),
+[sole successor VCD register](03_volterra_coefficient_dynamics/research-progress/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_PROGRESS_20261116.md)
+and [continuation prompt](03_volterra_coefficient_dynamics/notes/03_VCD_TAIL_CLOSURE_INDUCTION_CONTINUATION_20261116.md).
+Its author-authorized multi-step sessions use bounded Sol 6.1 subtasks
+without a mandatory handoff after each task. Setup is not activation;
+other branches and parent TN6 statuses are unchanged. Prepared for Edward
+Baker with OpenAI Codex assistance, recorded gpt-6-astra/max.
+
 13 November 2026, America/New_York. Prepared for **Edward Baker** with
 substantial OpenAI Codex LLM assistance. Actual backend model and reasoning
 effort are unavailable in this conversation's recorded configurations.
@@ -28,7 +38,7 @@ their coefficient dynamics and convergent tensor products.
 | --- | --- | --- |
 | [01 — QTT for the Newman flow](01_qtt_newman_flow/README.md) | Can binary-coordinate tensor trains give useful rank, precision and observation-error bounds as height grows? | [QTT overview](01_qtt_newman_flow/research-overview/01_QTT_RESEARCH_OVERVIEW_20261113.md) |
 | [02 — Jacobi-chain height flow](02_jacobi_chain_height_flow/README.md) | Can an exact infinite chain generate a useful continuous family of wavefunctions and describe propagation toward higher heights? | [Jacobi-chain overview](02_jacobi_chain_height_flow/research-overview/01_JACOBI_CHAIN_RESEARCH_OVERVIEW_20261113.md) |
-| [03 — Volterra coefficient dynamics](03_volterra_coefficient_dynamics/README.md) | What does the complete theta source impose on the nonlinear lattice governing its orthogonal-polynomial coefficients? | [Volterra overview](03_volterra_coefficient_dynamics/research-overview/01_VOLTERRA_RESEARCH_OVERVIEW_20261113.md) |
+| [03 — Volterra coefficient dynamics](03_volterra_coefficient_dynamics/README.md) | Can source-constrained tail responses support degree induction with a Fourier-zero consequence? | [Current induction overview](03_volterra_coefficient_dynamics/research-overview/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_OVERVIEW_20261116.md) |
 | [04 — Exact infinite tensor products](04_exact_infinite_tensor_products/README.md) | Can factors approaching identity provide a manageable exact recursive network, including growing-height and full-source limits? | [Infinite-product overview](04_exact_infinite_tensor_products/research-overview/01_INFINITE_PRODUCTS_RESEARCH_OVERVIEW_20261113.md) |
 
 The exact single-excitation MPS and height-propagation questions belong to
@@ -62,7 +72,7 @@ frozen requests and actual dependency checks.
 | --- | --- | --- |
 | 01 — QTT | [QTT plan](01_qtt_newman_flow/research-plan/01_QTT_RESEARCH_PLAN_20261113.md) | [QTT progress](01_qtt_newman_flow/research-progress/01_QTT_RESEARCH_PROGRESS_20261113.md) |
 | 02 — Jacobi chain | [JCH plan](02_jacobi_chain_height_flow/research-plan/01_JACOBI_CHAIN_RESEARCH_PLAN_20261113.md) | [JCH progress](02_jacobi_chain_height_flow/research-progress/01_JACOBI_CHAIN_RESEARCH_PROGRESS_20261113.md) |
-| 03 — Volterra coefficients | [VCD plan](03_volterra_coefficient_dynamics/research-plan/01_VOLTERRA_RESEARCH_PLAN_20261113.md) | [VCD progress](03_volterra_coefficient_dynamics/research-progress/01_VOLTERRA_RESEARCH_PROGRESS_20261113.md) |
+| 03 — Volterra coefficients | [VCD plan](03_volterra_coefficient_dynamics/research-plan/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_PLAN_20261116.md) | [Sole VCD progress](03_volterra_coefficient_dynamics/research-progress/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_PROGRESS_20261116.md) |
 | 04 — Infinite products | [ITP plan](04_exact_infinite_tensor_products/research-plan/01_INFINITE_PRODUCTS_RESEARCH_PLAN_20261113.md) | [ITP progress](04_exact_infinite_tensor_products/research-progress/01_INFINITE_PRODUCTS_RESEARCH_PROGRESS_20261113.md) |
 
 - [Shared continuation note and branch prompts](notes/01_BRANCH_OVERVIEWS_AND_CONTINUATION_20261113.md).

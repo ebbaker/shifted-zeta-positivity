@@ -427,6 +427,59 @@ def public_signature(message):
     return json.dumps(message, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
 
 
+def reconcile_creation_metadata(thread_id, source_kind, earlier, current, pins, old_messages):
+    """Audit one explicitly pinned metadata revision, never a time tolerance.
+
+    Called only after the complete archived public prefix and turn provenance
+    have passed their normal checks. Original archive creation is unchanged.
+    The retained rollout is corroborating identity metadata, not a fallback
+    source for public messages.
+    """
+    def epoch(value):
+        if not isinstance(value, str):
+            raise ValueError("A timestamp must be an ISO string")
+        stamp = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        if stamp.tzinfo is None:
+            raise ValueError("An explicit timezone is required")
+        return stamp.timestamp()
+
+    try:
+        if len(pins) != 2 or epoch(pins[0]) != earlier or epoch(pins[1]) != current:
+            raise ValueError("The exact timestamp pins do not match")
+        if earlier == current or math.floor(earlier) != math.floor(current):
+            raise ValueError("Only a verified within-second metadata revision is supported")
+    except (TypeError, ValueError, OverflowError) as exc:
+        raise HistoryError("Creation reconciliation requires the exact old/new timezone-aware timestamps within the same second", code="integrity_check_failed") from exc
+    if source_kind != "Local Codex paginated SQLite history; canonical public-text adapter":
+        raise HistoryError("Creation reconciliation requires the canonical paginated source", code="integrity_check_failed")
+    path = resolve_rollout(thread_id)
+    with path.open("rb") as stream:
+        line = stream.readline(MAX_BYTES + 1)
+    try:
+        if len(line) > MAX_BYTES:
+            raise ValueError("Oversized metadata record")
+        row = json.loads(line)
+        payload = row["payload"]
+        if (row["type"] != "session_meta" or payload["id"] != thread_id
+                or payload.get("history_mode") != "paginated"
+                or epoch(payload["timestamp"]) != current):
+            raise ValueError("The independent session metadata does not match")
+    except (KeyError, TypeError, ValueError, OverflowError) as exc:
+        raise HistoryError("Creation reconciliation lacks matching exact-session rollout metadata", code="integrity_check_failed") from exc
+    if not old_messages or max(earlier, current) > min(m["create_time"] for m in old_messages):
+        raise HistoryError("Creation reconciliation conflicts with recorded public-message times", code="integrity_check_failed")
+    return {
+        "previous_source_create_time": earlier,
+        "source_create_time": current,
+        "source_kind": source_kind,
+        "corroboration": "Exact-id paginated session_meta timestamp agrees with current database; all archived public messages and turn provenance preserved",
+        "session_metadata_path": str(path),
+        "verified_prefix_messages": len(old_messages),
+        "verified_prefix_sha256": sha(json_bytes([public_signature(m) for m in old_messages])),
+        "recorded_at_utc": datetime.now(timezone.utc).isoformat(timespec="milliseconds"),
+    }
+
+
 def equivalent_turn_time(earlier, later):
     if earlier == later:
         return True
@@ -668,7 +721,7 @@ def _install_transaction(folder, filename, chat_bytes, index_bytes):
         raise HistoryError("Installation failed; the original registered capture and index were preserved") from exc
 
 
-def refresh_once(repo, thread_id, rollout=None, history_dir=None, title=None, after_turn=None, lock_wait_seconds=10, user_turn=None):
+def refresh_once(repo, thread_id, rollout=None, history_dir=None, title=None, after_turn=None, lock_wait_seconds=10, user_turn=None, reconcile_creation_time=None):
     repo = Path(repo).expanduser().resolve()
     if not isinstance(thread_id, str) or not re.fullmatch(r"[A-Za-z0-9_-]{1,128}", thread_id):
         raise HistoryError("A valid exact conversation id is required")
@@ -707,6 +760,10 @@ def refresh_once(repo, thread_id, rollout=None, history_dir=None, title=None, af
         conversation = snapshot.conversation
         new_messages = ordered_messages(conversation)
         prior_meta = previous.get("archive_metadata", {}) if previous else {}
+        source_create_time = conversation["create_time"]
+        reconciliation = None
+        if reconcile_creation_time is not None and (previous is None or rollout is not None):
+            raise HistoryError("Creation reconciliation needs an existing archive and automatic canonical source selection")
         merged_turns = merge_turn_provenance(prior_meta.get("turns", {}), conversation["archive_metadata"].get("turns", {}))
         if user_turn and not any(message["author"]["role"] == "user" and message.get("metadata", {}).get("source_turn_id") == user_turn for message in new_messages):
             raise SourcePending("Waiting for the exact prompt turn's real completed user message")
@@ -714,18 +771,27 @@ def refresh_once(repo, thread_id, rollout=None, history_dir=None, title=None, af
             old_messages = ordered_messages(previous)
             if len(new_messages) < len(old_messages) or any(public_signature(a) != public_signature(b) for a, b in zip(old_messages, new_messages)):
                 raise HistoryError("The refreshed public messages do not preserve the exact archived prefix", code="integrity_check_failed")
-            if conversation["create_time"] != previous["create_time"]:
+            expected_creation = prior_meta.get("source_create_time", previous["create_time"])
+            if reconcile_creation_time is not None:
+                reconciliation = reconcile_creation_metadata(thread_id, source_kind, expected_creation,
+                                                             source_create_time, reconcile_creation_time, old_messages)
+            elif source_create_time != expected_creation:
                 raise HistoryError("The session creation timestamp disagrees with the registered capture", code="integrity_check_failed")
             conversation["create_time"] = previous["create_time"]
-            if len(new_messages) == len(old_messages):
+            if len(new_messages) == len(old_messages) and reconciliation is None:
                 return {"status": "unchanged", "thread_id": thread_id, "number": entry["number"], "file": entry["file"], "messages": len(new_messages), "recovery": recovery}
-            if new_messages[len(old_messages)]["update_time"] < old_messages[-1]["update_time"]:
+            if len(new_messages) > len(old_messages) and new_messages[len(old_messages)]["update_time"] < old_messages[-1]["update_time"]:
                 raise HistoryError("A new public message is backdated before the archived prefix")
         for earlier, later in zip(new_messages, new_messages[1:]):
             if later["update_time"] < earlier["update_time"]:
                 raise HistoryError("Completed public message times are not monotone")
         captured = datetime.now(timezone.utc).timestamp()
         archive_meta = conversation["archive_metadata"]
+        archive_meta["source_create_time"] = source_create_time
+        if reconciliation is not None or "creation_time_reconciliations" in prior_meta:
+            archive_meta["creation_time_reconciliations"] = list(prior_meta.get("creation_time_reconciliations", []))
+            if reconciliation is not None:
+                archive_meta["creation_time_reconciliations"].append(reconciliation)
         archive_meta["source_kind"] = prior_meta.get("source_kind", source_kind)
         archive_meta["latest_source_kind"] = source_kind
         configurations = list(prior_meta.get("model_configurations", []))
@@ -810,6 +876,8 @@ def parser():
     p.add_argument("--rollout", type=Path)
     p.add_argument("--history-dir", help="Explicit repository-relative destination; needed with --title to opt in a new chat")
     p.add_argument("--title")
+    p.add_argument("--reconcile-creation-time", nargs=2, metavar=("OLD_ISO", "NEW_ISO"),
+                   help="Audit one exact paginated metadata timestamp revision; preserve original creation and all archive guards")
     p.add_argument("--hook", action="store_true", help="Read a Stop or UserPromptSubmit hook input from stdin; never block the conversation")
     p.add_argument("--after-turn", help="Require the real public final answer and completion record of this exact turn")
     p.add_argument("--wait-seconds", type=float, default=60)
@@ -823,7 +891,7 @@ def run_bounded(args):
     deadline = time.monotonic() + args.wait_seconds
     while True:
         try:
-            return refresh_once(args.repo, args.thread_id, args.rollout, args.history_dir, args.title, args.after_turn, lock_wait_seconds=min(5, max(0, deadline - time.monotonic())), user_turn=getattr(args, "user_turn", None))
+            return refresh_once(args.repo, args.thread_id, args.rollout, args.history_dir, args.title, args.after_turn, lock_wait_seconds=min(5, max(0, deadline - time.monotonic())), user_turn=getattr(args, "user_turn", None), reconcile_creation_time=getattr(args, "reconcile_creation_time", None))
         except SourcePending as exc:
             if time.monotonic() >= deadline:
                 raise SourcePending("The bounded refresh ended before the requested real source records were fully available: " + str(exc), code=exc.code, details={**exc.details, "wait_seconds": args.wait_seconds}) from exc
@@ -834,6 +902,8 @@ def main(argv=None):
     args = parser().parse_args(argv)
     hook = args.hook
     try:
+        if args.reconcile_creation_time is not None and (hook or args.defer or args.diagnose or args.rollout or args.after_turn):
+            raise HistoryError("Creation reconciliation is an explicit immediate repair, not a hook, deferred, diagnostic, override or turn-gated action")
         if not math.isfinite(args.wait_seconds) or not 0 <= args.wait_seconds <= 120:
             raise HistoryError("--wait-seconds must lie between 0 and 120")
         if hook:

@@ -199,3 +199,14 @@ all four families. The raw-margin witness format is reusable.
 - Scope of a finite certificate's control screen: [Review 20](../papers/investigations-2/active/22_theta_manifold_geometry/reviews/20_ADDITIONAL_PATHS_FORWARD_ASSESSMENT_CODEX_20261016.md), "The control screen must distinguish premises and estimates."
 
 20 October 2026 — Prepared for Edward Baker with substantial LLM assistance, **gpt-6-astra, actual effort ultra**. **Actual-theta three-profile relaxation (3/13).** The [BW-08 source note](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/threshold_routes/08_deflated_jet_hierarchy/notes/06_ACTUAL_PROFILE_OBSERVATIONS_AND_RELAXED_DUAL_FAILURE_20261020.md) proves the observation/weak-duality interface and interval-certifies actual b=20,40,80 profiles for T=.1±1e-6, a in [1001,1002]. Its exact-data positive-measure relaxation admits a nearby unit-count atom with positive fractional slack masses. “Consequently every global count majorant in the stated three-observation span has exact objective at least one.” The relaxed S2 is unbounded; this is neither an integer zero configuration nor a physical theta event. [Separate same-model review](../papers/investigations-3/13_contradiction_analysis/04_boundary_winding/reviews/03_FOURTH_ORDER_AND_ACTUAL_PROFILE_ROUND_REVIEW_20261020.md); no specialist review. Other sample schedules, integer-sensitive constraints and full-source estimates remain outside this scoped result.
+
+
+**Canonical-score refinement, 16 November 2026.** For Edward Baker with
+Codex assistance; lead configuration unavailable, proof/assessment helpers
+explicitly Sol6.1/ultra. [VCD E07](../papers/investigations-6/03_volterra_coefficient_dynamics/notes/07_VCD_E07_FINITE_CANONICAL_SCORE_CONTROLS_20261116.md)
+uses the finite-source theorem to preserve any fixed finite canonical score
+rows and coefficient head exactly, together with arbitrarily small bounded
+score difference and the common envelope. Source status **proved in-note**;
+[E09](../papers/investigations-6/03_volterra_coefficient_dynamics/reviews/04_VCD_E09_TAIL_SCORE_ASSESSMENT_20261116.md)
+accepts within scope. The source warns: “There is no fixed zero location in
+this construction.” It does not exclude growing-degree compact confinement.

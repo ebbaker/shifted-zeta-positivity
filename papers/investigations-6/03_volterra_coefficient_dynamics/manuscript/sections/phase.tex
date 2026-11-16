@@ -1,0 +1,177 @@
+\section{Concentration of the error factor and its phase}
+\label{sec:phase}
+
+For a nonzero complex number, its phase is its argument: the angle
+it makes with the positive real axis. The factor \(L_N(z)\) in
+\eqref{eq:error-factorization} has the known direction
+\((-1)^Nz^{2N}\) and a positive amplitude. If \(E_N(z)\) is close
+to one, the full error has nearly that direction. This information
+is stronger than an absolute error bound centered at zero.
+
+\subsection{An exponential moment after separating the source point}
+
+Condition on \(s=S_0\) in \eqref{eq:error-random-variable} and
+rescale the other coordinates by \(1-s\). The simplex Jacobian
+gives density \(2N(1-s)^{2N-1}\) for \(s\); its mean is
+\(1/(2N+1)\). The rescaled coordinates are independent of \(s\).
+Thus
+\begin{equation}
+ X_N=sU+(1-s)V_N,\qquad V_N=\sum_{j=1}^NW_jx_{j,N},
+ \label{eq:beta-split}
+\end{equation}
+where \(U,s,V_N\) are independent and the grouped weights \(W_j\)
+have Dirichlet parameters \((2,\ldots,2)\). Explicitly, for
+nonnegative integers \(k_j\), with \(k=\sum_jk_j\),
+\begin{equation}
+ \mathbb E\prod_jW_j^{k_j}=\frac{\prod_j(k_j+1)!}{(2N)_k}.
+ \label{eq:dirichlet-moments}
+\end{equation}
+This follows by expanding each power of the sum of its two simplex
+coordinates and using \eqref{eq:simplex-moments}.
+
+Let \(A_k\) be the coefficient of \(v^k\) in
+\(\prod_j(1-vx_{j,N})^{-2}\). Formula~\eqref{eq:dirichlet-moments}
+gives \(\mathbb E V_N^k/k!=A_k/(2N)_k\). Symmetry of the nodes
+makes all odd \(A_k\) zero and all even \(A_k\) nonnegative:
+the product pairs as \(\prod_{x_j>0}(1-v^2x_j^2)^{-2}\).
+If \(\ell\ge\max_j|x_{j,N}|\) and \(|t|\ell<2N\), then
+\begin{equation}
+ \mathbb E\e^{tV_N}
+ \le\prod_j(1-tx_{j,N}/(2N))^{-2}
+ \le\exp\left\{\frac{t^2T_2}
+ {(2N)^2(1-t^2\ell^2/(2N)^2)}\right\}.
+ \label{eq:node-exponential}
+\end{equation}
+The first inequality replaces \((2N)_k\) by \((2N)^k\) in
+a nonnegative even series. For the second, pair the nodes and use
+\(-\log(1-v)\le v/(1-v)\), \(0\le v<1\). Only bounded node
+variables occur in these reciprocal series.
+
+The source point \(U\) is unbounded. Its exponential moment is
+controlled directly by \eqref{eq:weighted-cosh}. Symmetry and
+concavity of the power \(t/4\) give, for \(0\le t\le4\),
+\[
+ \mathbb E\e^{tU}\le(\mathbb E\e^{4U})^{t/4}
+ =\bigl(\mathbb E\cosh(4U)\bigr)^{t/4}\le(2N+12)^{t/4}.
+\]
+Convexity in \eqref{eq:beta-split} gives
+\(\e^{tX_N}\le s\e^{tU}+(1-s)\e^{tV_N}\). Consequently,
+for \(0\le Y\le1\) and \(Y\ell<N\),
+\begin{equation}
+ \mathbb E\e^{2YX_N}\le
+ \frac{(2N+12)^{Y/2}}{2N+1}
+ +\frac{2N}{2N+1}
+ \exp\left\{\frac{Y^2T_2}{N^2(1-Y^2\ell^2/N^2)}\right\}.
+ \label{eq:full-exponential}
+\end{equation}
+The small mean \(\mathbb E s=1/(2N+1)\) is why the unbounded
+source contribution remains controlled as degree grows.
+
+\subsection{Explicit constants depending only on degree}
+
+For \(N\ge2\), define
+\begin{equation}
+ \ell_N=2\sqrt{B_{N-2}}=\tfrac12\arcosh(2N+8),\qquad
+ T_N^*=2(N-1)B_{N-2};\qquad \ell_1=T_1^*=0.
+ \label{eq:node-allowances}
+\end{equation}
+The largest absolute row sum of \(J_N\) is at most \(\ell_N\),
+so \(\max_j|x_{j,N}|\le\ell_N\), \(T_2\le T_N^*\), and
+\(T_4\le\ell_N^2T_N^*\). Also \(\ell_N<N\): for \(N\ge2\),
+\(\cosh(2N)\ge1+2N^2+2N^4/3>2N+8\); the case \(N=1\)
+is immediate. Hence every denominator below is strictly positive
+on \(0\le Y\le1\). Set
+\begin{equation}
+ \mathcal A_N(Y)=\frac{(2N+12)^{Y/2}}{2N+1}
+ +\frac{2N}{2N+1}
+ \exp\left\{\frac{Y^2T_N^*}{N^2(1-Y^2\ell_N^2/N^2)}\right\}.
+ \label{eq:A-budget}
+\end{equation}
+The envelope bounds \(m_2^{[N]}\le B_N\) and
+\(m_4^{[N]}\le3B_{N+1}^2\). Thus
+\begin{equation}
+ \begin{aligned}
+ \mathcal V_N&=\frac{2(B_N+T_N^*)}{(2N+1)_2},\\
+ \mathcal Q_N&=\frac{72B_{N+1}^2+24B_NT_N^*+12(T_N^*)^2
+                         +12\ell_N^2T_N^*}{(2N+1)_4}
+ \end{aligned}
+ \label{eq:moment-budgets}
+\end{equation}
+bound \(\mathbb E X_N^2\) and \(\mathbb E X_N^4\), respectively.
+All these are explicit elementary functions of the integer \(N\).
+They require no uncomputed recurrence coefficients. At \(N=1\),
+\(\mathcal A_1(Y)=14^{Y/2}/3+2/3\),
+\(\mathcal V_1=B_1/6\), and \(\mathcal Q_1=B_2^2/5\).
+
+\begin{theorem}[A quantitative error-phase bound]
+\label{thm:phase}
+For every \(N\ge1\), \(0\le Y\le1\), and \(|\Im z|\le Y\),
+\begin{equation}
+ |E_N(z)-1|\le\epsilon_N(|z|,Y),\qquad
+ \epsilon_N(r,Y)=\frac{r^2}{2}
+                    \sqrt{2\mathcal A_N(Y)\mathcal Q_N}.
+ \label{eq:phase-bound}
+\end{equation}
+There is a constant independent of \(Y\in[0,1]\) such that
+\(\epsilon_N(|z|,Y)=O(|z|^2\log^2(N+1)/N)\). In particular,
+if \(r_N\log(N+1)/\sqrt N\to0\), then \(E_N\to1\) uniformly
+on \(\{|z|\le r_N,\ |\Im z|\le1\}\).
+\end{theorem}
+
+\begin{proof}
+Taylor's integral remainder gives, for real \(v\),
+\[
+ |\e^{\ii zv}-1-\ii zv|\le\tfrac12|z|^2v^2\e^{Y|v|}.
+\]
+The linear term averages to zero by symmetry. Cauchy--Schwarz gives
+\[
+ |E_N(z)-1|\le\tfrac12|z|^2
+  (\mathbb E X_N^4)^{1/2}(\mathbb E\e^{2Y|X_N|})^{1/2}.
+\]
+Since \(\e^{2Y|v|}\le2\cosh(2Yv)\), symmetry and
+\eqref{eq:full-exponential} bound the last expectation by
+\(2\mathcal A_N(Y)\). This proves \eqref{eq:phase-bound}.
+
+The inequality \(\arcosh v\le\log(2v)\) gives
+\(B_{N+1}=O(\log^2(N+1))\), \(\ell_N=O(\log(N+1))\),
+and \(T_N^*=O(N\log^2(N+1))\). It follows that
+\(\mathcal Q_N=O(\log^4(N+1)/N^2)\). In \eqref{eq:A-budget}
+the first term is uniformly \(O(N^{-1/2})\); the exponent in
+the second is uniformly \(O(\log^2(N+1)/N)\). Hence
+\(\mathcal A_N(Y)\to1\) uniformly for \(0\le Y\le1\), and the
+claimed rate follows. The stated growing-region consequence is direct.
+\end{proof}
+
+\begin{corollary}[Real-axis signs and adjacent brackets]
+\label{cor:brackets}
+For real \(x\),
+\begin{equation}
+ 1-\frac{x^2\sigma_N^2}{2}\le E_N(x)\le1,\qquad
+ |L_N(x)|(1-x^2\mathcal V_N/2)
+ \le(-1)^N(F(x)-G_N(x))\le|L_N(x)|.
+ \label{eq:real-sign}
+\end{equation}
+Define the explicit sign radius
+\begin{equation}
+ R_N^{\rm sign}=\sqrt{\frac{(2N+1)(2N+2)}{B_N+T_N^*}}.
+ \label{eq:sign-radius}
+\end{equation}
+For \(0<|x|<\min(R_N^{\rm sign},R_{N+1}^{\rm sign})\), the
+even member of \(G_N,G_{N+1}\) lies strictly below \(F\), and the
+odd member strictly above it. All three equal one at zero.
+\end{corollary}
+
+\begin{proof}
+Symmetry gives \(E_N(x)=\mathbb E\cos(xX_N)\). Apply
+\(1-v^2/2\le\cos v\le1\), then
+\(\sigma_N^2\le\mathcal V_N\) and
+\eqref{eq:error-factorization}. The open radius is exactly
+\(\sqrt{2/\mathcal V_N}\).
+\end{proof}
+
+Where \(\epsilon_N<1\), the disk \(|E_N-1|\le\epsilon_N\)
+also gives \(\Re E_N>0\) and
+\(|\arg E_N|\le\arcsin\epsilon_N\), by the tangents from the
+origin to that disk. In particular \(F-G_N\) has no zero there
+except its order-\(2N\) zero at zero. This conclusion concerns
+zeros of the \emph{error}; it does not locate zeros of \(F\).

@@ -1,0 +1,13 @@
+# VCD-E24 r1 — same-input comparison and directed-error consumer
+
+16November2026, America/New_York. Prepared for Edward Baker with Codex assistance. TypeE, B06 decision13. Explicit gpt-6.1-sol/ultra dispatch; separate backend attestation and lead actual settings unavailable. One proof/correction pass, no numerical campaign.
+
+Execute decision13 fully. Independently check the coefficient requirements, exact ratio of L_(N+1)/L_N, strictly larger local actual-error ratio of the monomial-corrected model versus the next physical quadrature. Compare specified allowance orders on the E22 bounded-phase range; do not infer all-z actual dominance. Derive the directed union of disks with unknown positive amplitude bounded solely by the acquired prefix/adjacent envelope. Use distinct amplitude notation (not a_N link). Prove its capsule sufficient test, amplitude-free Re(G_N/d_N)>=0 test under epsilon<1, sector angle arcsin epsilon, exact-amplitude disk, and zero-count transfer on a contour separated from the CLOSED uncertainty set (including amplitude0). Pay z=0, equality/strictness, homotopy and contour assumptions; no assumed model zero count. Highlight the remaining genuinely unpaid canonical phase/geometry premise and the control families that share the error law/envelope.
+
+Work from the phase law as stated in decision12 as a conditional input until E21 and E22 final returns are available; pin their completed versions in a return addendum, leaving this request unchanged. No external theorem beyond the checked elementary complex-analysis contour result is needed; derive the convex geometry. Own only notes/22_VCD_E24_DIRECTED_ERROR_AND_PREFIX_COMPARISON_20261116.md and research-progress/handoffs/VCD-E24-r1-return.md. No shared files/chat edits. Report corrections promptly and record actual explicit dispatch separately from unverifiable backend settings.
+
+## Pinned inputs
+- `papers/investigations-6/03_volterra_coefficient_dynamics/brainstorm/notes/13_VCD_B06_PREFIX_COST_AND_DIRECTED_ERROR_DECISION_20261116.md` SHA-256 `6d8df1e0ba1cd29fcc8ce647f5268081d94b57327ed37777aa6bcc6b6f1748bf`
+- `papers/investigations-6/03_volterra_coefficient_dynamics/brainstorm/notes/12_VCD_B06_ERROR_PHASE_CONSUMER_DECISION_20261116.md` SHA-256 `e4474015904edb49e92e90f5297b5d1641a6971a6f47e84b799b98426a378669`
+- `papers/investigations-6/03_volterra_coefficient_dynamics/notes/01_VCD_E01_LOGARITHMIC_ENVELOPE_20261113.md` SHA-256 `4a20a5806715a0950cac79271cbe69d901188c489a2ea6889c4f75996af6577b`
+- `papers/investigations-6/03_volterra_coefficient_dynamics/notes/13_VCD_E15_SHARED_MEMORY_EQUIVALENCE_20261116.md` SHA-256 `a0cf6bb5b2a70b0440c3e44471b92ad3d4be8166aee5246bfa1a3b52016d114f`

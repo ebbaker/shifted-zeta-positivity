@@ -11,6 +11,14 @@ theta zero-preserving induction has been found or claimed. No execution
 campaign, manuscript milestone, independent assessment or change to the
 completed opening round is implied.
 
+**Author's subsequent direction, 16 November:** focus on the chain and a
+controlled omitted-tail closure, informed by hierarchy methods such as
+BBGKY. Section 5's Jensen alternative is retained as discussion history
+but is **not being pursued**. A shrinking strip for approximant zeros is
+allowed; exact reality at every finite stage is not required. The purpose
+is to identify a structural induction, not to enlarge numerical bounds.
+The second exchange and its exact memory equation are recorded in §7.
+
 Continue [Note 02](02_VCD_OPEN_BRAINSTORM_CONTINUATION_20261115.md) and the
 [shared induction discussion](../../../brainstorm/notes/05_VOLTERRA_INDUCTION_AND_DYADIC_REFINEMENT_20261115.md).
 Read the [result index](../../../../../result-summaries/README.md), especially
@@ -303,3 +311,255 @@ The new branch-only chat is registered in this investigation's
 [history folder](../../chat-histories/README.md). Its actual public final
 must be captured after it is recorded; no planned response belongs in
 the transcript.
+
+## 7. Tail closure, hierarchy consistency and shrinking zero strips
+
+Second exchange, 16 November 2026. Prepared for Edward Baker with OpenAI
+Codex assistance; recorded current turn configuration gpt-6-astra / max.
+These are explanatory identities, a standard conditional limiting
+argument, and questions for an induction. No new theta exclusion estimate
+or independently assessed theorem is claimed. Continue to apply
+[avoid 03](../../../../../avoid/03_lifts_and_re_realizations_in_new_coordinates.md)
+to the exact representation and
+[avoid 10](../../../../../avoid/10_numerics_ahead_of_the_question.md)
+to any later numerical suggestion.
+
+### Endpoint insertion versus truncating the dynamics
+
+In the polynomial basis, Edward's inserted identity gives
+\[
+ \sum_\mu\langle e_0,e_\mu\rangle
+       \langle e_\mu,e^{ixJ}e_0\rangle
+ =\langle e_0,e^{ixJ}e_0\rangle
+\]
+because the first factor is \(\delta_{0\mu}\). With
+\(\Pi_N=\sum_{\mu=0}^{N-1}|e_\mu\rangle\langle e_\mu|\),
+inserting \(\Pi_N\) at the endpoints leaves the scalar unchanged.
+The different operation is replacing the retained part of the exact
+propagator by \(e^{ixJ_N}\); in general
+\[
+ \Pi_N e^{ixJ}\Pi_N\big|_{\operatorname{ran}\Pi_N}
+ \ne e^{ixJ_N}.
+\]
+The difference consists of excursions through the omitted sites and
+back. This also explains why the constant-polynomial coefficient is
+\(F\) while all degrees still influence its computation. Edward
+acknowledged the collapsing-sum point during this exchange.
+
+An intermediate insertion is nontrivial:
+\[
+ F(x)=\sum_{\mu\ge0}
+  \langle e_0,e^{ixJ/2}e_\mu\rangle
+  \langle e_\mu,e^{ixJ/2}e_0\rangle.
+\]
+These are not modulus squares: both propagators have the same sign.
+For the real symmetric Jacobi chain the two entries are equal; odd/even
+parity gives alternating signed squares for real \(x\). Truncating
+this sum still requires control of the full-chain entries being used.
+
+**Author's midpoint clarification, 16 November 2026.** Edward confirms
+that splitting the evolution in half was the intended insertion and asks
+about bra/ket conventions. With the standard convention
+\(\langle v,w\rangle=v^*w\), put \(U(t)=e^{itJ}\) for real \(t\).
+The bra associated with \(U(t)e_0\) is \(e_0^*U(-t)\). Consequently
+\[
+ \langle U(t)e_0,U(t)e_0\rangle=1,
+ \qquad F(x)=\langle U(-x/2)e_0,U(x/2)e_0\rangle.
+\]
+Inserting the identity between these two states gives the nontrivial
+midpoint sum above. If \(c_n(t)=\langle e_n,U(t)e_0\rangle\), reality
+and symmetry of the Jacobi matrix give
+\[
+ F(x)=\sum_{n\ge0}c_n(x/2)^2,
+ \qquad \sum_{n\ge0}|c_n(x/2)|^2=1.
+\]
+The first series is absolutely convergent on the real axis by the second.
+Thus the intended pairing can also be written as the bilinear transpose
+\((U(x/2)e_0)^T(U(x/2)e_0)\), rather than the Hermitian norm.
+This is a convention clarification of the existing representation, not
+a new closure or induction estimate. The generic identities also hold
+for the regular real Jacobi controls in the §6–7 screen and supply no
+source-specific discriminator. Prepared for Edward Baker with OpenAI
+Codex assistance; this exchange records gpt-6-astra / max.
+
+### Exact elimination of the omitted tail
+
+Freeze \(\lambda\). Here \(x\) is the evolution variable; it is
+observation height, not Newman time. Put
+\(\psi(x)=e^{ixJ}e_0\). The amplitude hierarchy is
+\[
+ \psi_n'=i(a_n\psi_{n-1}+a_{n+1}\psi_{n+1}),\qquad
+ \psi_n(0)=\delta_{n0},\qquad F_\lambda(x)=\psi_0(x).
+\]
+Keep sites \(0,\ldots,N-1\), writing \(\psi=(y,v)\) and
+\[
+ J=\begin{pmatrix}A&B\\B^*&D\end{pmatrix},\quad
+ A=J_N,\quad D=J^{[N]},\quad
+ B=a_N|e_{N-1}\rangle\langle e_N|.
+\]
+The tail initially vanishes. Variation of constants gives
+\[
+ v(x)=i\int_0^x e^{i(x-s)D}B^*y(s)\,ds,
+ \qquad
+ y'=iAy-\int_0^x B e^{i(x-s)D}B^*y(s)\,ds. \tag{M}
+\]
+In scalar-boundary form, with
+\(k_N(t)=\langle e_N,e^{itJ^{[N]}}e_N\rangle\), this is
+\[
+ y'(x)=iJ_Ny(x)
+ -\beta_N e_{N-1}\int_0^x k_N(x-s)y_{N-1}(s)\,ds. \tag{MB}
+\]
+The minus sign is from the two factors of \(i\); the boundary coupling
+is \(a_N^2=\beta_N\). This is exact for real \(x\), with oriented
+integrals for negative \(x\). For the theta coefficients, removing
+one edge is a bounded finite-rank perturbation of the self-adjoint
+chain; its decoupled tail supplies the self-adjoint \(D\). The basis
+vectors lie in the required domains, so the unitary Duhamel argument
+justifies (M). No complex operator-norm continuation is asserted.
+
+Setting the whole memory term to zero gives the bare finite chain.
+Replacing \(k_N\) by a specified approximate response, with a controlled
+residual, is the proposed higher-mode approximation. The initial tail
+is zero, so this decomposition has no additional unknown-initial-tail
+forcing term. A zero theorem would additionally require holomorphic
+approximants and compact complex error control for the chosen closure.
+
+Each tail has the same one-site elimination identity:
+\[
+ k_n'(x)=-\beta_{n+1}\int_0^x k_{n+1}(x-s)k_n(s)\,ds,
+ \qquad k_n(0)=1. \tag{K}
+\]
+Thus \(k_n''(0)=-\beta_{n+1}\) and
+\(k_n^{(4)}(0)=\beta_{n+1}(\beta_{n+1}+\beta_{n+2})\), consistent
+with direct Jacobi walks. For real \(s>0\), its Laplace transform obeys
+\[
+ \widehat k_n(s)=\frac1{s+\beta_{n+1}\widehat k_{n+1}(s)}. \tag{L}
+\]
+The bound \(|k_n(x)|\le1\) makes these transforms legitimate. Equation
+(L) is equivalent to the earlier resolvent continued fraction with the
+appropriate change of variable. It is a response recursion, not a
+closed finite system: the next tail is still present. A self-consistent
+relation between successive responses would be an additional ansatz;
+neither short memory nor a small correlation parameter follows merely
+from large polynomial degree.
+
+### Relation to BBGKY and the source identity
+
+BBGKY is a useful closure analogy: the retained level depends on a
+higher level, and a replacement must remain consistent with the exact
+hierarchy. Here the index is polynomial degree, not particle correlation
+order. The exact eliminated-tail formulation is also a simple linear
+instance of projection with memory, familiar from Mori–Zwanzig. These
+analogies supply organizational ideas, not an imported theta estimate.
+The newly checked [primary-source passages](../../references/02_INDUCTION_SOURCE_PASSAGES_20261116.md)
+distinguish memory identities from approximate closures and record the
+need to preserve compatibility and other structural properties.
+
+The source identity becomes particularly transparent with
+\(q_n=\sqrt{Z_\lambda/h_n}\,P_n\):
+\[
+ \langle q_n,V_\lambda'q_{n-1}\rangle_{\mu_\lambda}
+   =\frac{n}{a_n},\qquad
+ a_n[V_\lambda'(J)]_{n,n-1}=n. \tag{S-J}
+\]
+Indeed the unnormalized integral is
+\(\sqrt{h_nh_{n-1}}\langle q_n,V' q_{n-1}\rangle\); divide its
+value \(n h_{n-1}\) by that factor. Interpret the matrix element
+by multiplication by \(V'\) in the source representation; the theta
+tails make the stated polynomial-vector integrals finite.
+
+For polynomial \(V'\), the matrix function is banded and (S-J) gives
+a finite coefficient relation. For the theta score it generally
+depends on the entire chain. In particular
+\(\Pi_N V'(J)\Pi_N\) cannot simply be replaced by \(V'(J_N)\).
+A potential self-consistent closure must account for the correction in
+this source identity as well as the correction to the propagator.
+This is a concrete compatibility question linking the source information
+and omitted-tail response; no finite theta closure is yet established.
+
+### Shrinking strips suffice, without finite-stage reality
+
+Let a specified closure produce entire \(G_N\) with
+\(G_N\to F_0\) locally uniformly on \(\mathbb C\), where
+\(F_0(0)=1\). Suppose \(R_N\to\infty\), \(\delta_N\to0\), and
+\[
+ G_N(z)=0,\quad |z|<R_N
+ \quad\Longrightarrow\quad |\Im z|\le\delta_N. \tag{T}
+\]
+Then every zero of \(F_0\) is real. If a nonreal zero existed, choose
+a sufficiently small disk about it with no boundary zero and positive
+distance \(\eta\) from the real axis. Rouché and compact convergence
+force a zero of \(G_N\) in that disk for all sufficiently large \(N\).
+Eventually the disk lies inside radius \(R_N\) and \(\delta_N<\eta\),
+contradicting (T). No pairing or labeling of zeros, simplicity assumption,
+or quantitative error-to-spacing relation is needed for this limiting
+argument. Such estimates may still be needed to *prove* (T) for the
+chosen closure. Even compact-dependent widths \(\delta_N(R)\to0\)
+for each fixed \(R\) suffice. When no rate is prescribed, diagonalization
+also gives a single shrinking strip across some growing window; these
+are qualitatively equivalent formulations. A preassigned window growth
+or strip-narrowing rate can impose a stronger requirement.
+
+This is a standard conditional transfer argument, not a proof of (T).
+**Classification correction, 16 November setup review:** once the stated
+local uniform convergence is established, existence of unspecified
+\(R_N\) and \(\delta_N\) in (T) is equivalent to RH. Under RH,
+\(F_0\) is bounded away from zero on each compact set
+\(\{|z|\le j,\ |\Im z|\ge1/j\}\); uniform convergence excludes
+zeros of \(G_N\) there eventually, and diagonalization supplies the
+sequences. This corrects the earlier assertion that necessity was not
+asserted for (T); that caveat applies to prescribed rates or other
+stronger premises, not unspecified existential confinement. The new
+research ingredient must be a source-sensitive invariant or estimate
+that establishes the target without assuming it. (T) is a candidate
+consequence, not necessarily the invariant to carry directly.
+
+### What would constitute an induction advance
+
+The proposed working object is a family of tail descriptions with a
+controlled residual, together with source constraints and a structural
+property from which a narrowing zero strip follows. Three distinct
+questions must be answered:
+
+1. Does the true theta tail belong to the described class, using source
+   information rather than a zero-location assumption?
+2. Does moving the boundary by one site preserve the class and its paid
+   residual information, using (K), (L), or an equivalent update?
+3. Does the preserved structure constrain zeros of the scalar Fourier
+   observation, strongly enough to yield (T)?
+
+The update is now explicit; the required class and the third implication
+are not identified. The continued fraction reconstructs an inward
+response from a deeper tail. A forward induction or a justified limiting
+boundary condition still has to be supplied; its direction cannot be
+silently reversed. Increasing numerical depth alone would answer none
+of these structural questions. Edward's preference is to understand
+them before choosing an induction hypothesis or numerical work.
+
+The [§6 control screen](#6-analytical-collision-control-screen) remains
+applicable, with these additional premise checks. Exact projection,
+memory and continued fractions hold for the regular Jacobi controls
+too (finite atomic chains terminate). The own-source integration-by-parts
+identity also holds for the regular positive-density controls; atoms
+lack that density/score premise. A control's own-score identity is not
+the identity with the unchanged canonical theta score. The controls
+lacking that source formula do not establish the canonical constraint,
+but no new calculation here proves failure of a particular adjacent
+canonical-score matrix element. Generic positive spectral measures and
+their resolvent half-plane signs control source spectral data, not
+Fourier zeros. The three- and four-square controls continue to pass the
+existing envelope; they lack complete equal coefficients and full
+reflection. All other family's failed premises and untested envelope
+comparisons are as listed in §6. No proposed theta-specific closure has
+yet been screened because none has been formulated. These statements
+exclude only an inference from the shared generic properties.
+
+**Capture status at this update:** the previous exact-turn worker and
+this turn's initial refresh both failed with `unsupported_public_content`
+(`Structured assistant content requires a preserving exporter`). The
+existing registry remains at its verified five-message capture of
+2026-11-16T05:24:10.646Z. It does not contain the preceding final reply.
+No source adapter, registered transcript, integrity check or hook trust
+was changed. This note preserves the mathematics, not a replacement
+conversation transcript; final capture will again be attempted through
+the prescribed bounded workflow.

@@ -73,3 +73,110 @@ the earlier proofs' status; manuscript integration adds no new numerical
 certificate or signed-field conclusion. The [current handoff](../papers/investigations-6/notes/10_ANALYTICAL_MANUSCRIPTS_CONTINUATION_AND_MODEL_HANDOFF_20261114.md)
 prioritizes an analytical improvement with a named consumer. All PDFs
 are external; editable TeX and small source/build records remain in-tree.
+
+
+## Tail-score closure tests — 16 November 2026
+
+For Edward Baker with OpenAI Codex assistance; lead backend/effort unavailable,
+proof/assessment workers explicitly Sol6.1/ultra. Source status:
+**proved in-note, internal analytical work**; E04 is **complete, checked in-note**.
+[E09](../papers/investigations-6/03_volterra_coefficient_dynamics/reviews/04_VCD_E09_TAIL_SCORE_ASSESSMENT_20261116.md)
+accepts notes04–08 “without mathematical correction within the stated scope”;
+[E11](../papers/investigations-6/03_volterra_coefficient_dynamics/reviews/05_VCD_E11_SMOOTH_DEFECT_ASSESSMENT_20261116.md)
+accepts note10. Same-model/shared-source internal assessment, not specialist review.
+
+The [session synthesis](../papers/investigations-6/03_volterra_coefficient_dynamics/notes/09_VCD_CONNECTED_RESEARCH_SYNTHESIS_20261116.md)
+routes the proofs: a fixed polynomial score leaves a residual
+\(n+O_p(\log^{d+1}n)\); the exact reference
+\(V_\lambda'=8\pi\sinh(4u)-2\lambda u+b\), bounded \(b\), gives relative
+adjacent score error \(O(\log n/n)\). All exact canonical adjacent
+identities identify theta under the stated exponential-integrability
+hypotheses. The next adjacent defect cancels from the finite commutator.
+
+Finite square-mode controls preserve any prescribed finite head/canonical
+score rows and arbitrarily small bounded score difference while having
+nonreal zeros; they lose higher smooth reflection. Separate smooth compact
+multiplier controls preserve the full endpoint jet, real tails and common
+envelope while changing the next defect; their zeros are open. Do not
+merge these conclusions or infer failure of growing-degree compact
+confinement. No signed Fourier margin, zero-strip theorem or numerical
+certificate is supplied. Actual unscaled moving tail responses are also
+unbounded across sites at fixed nonzero imaginary height.
+
+## Midpoint comparison and calibration — 16 November 2026
+
+For Edward Baker with Codex assistance; lead actual settings unavailable, proof/assessment dispatches Sol6.1/ultra. Source status **Complete, proved in-note**; [E14](../papers/investigations-6/03_volterra_coefficient_dynamics/reviews/06_VCD_E14_MIDPOINT_SESSION_ASSESSMENT_20261116.md) accepts within scope after synthesis wording clarification, with no proof correction. Separate internal shared-model review, not specialist independence.
+
+[Synthesis15](../papers/investigations-6/03_volterra_coefficient_dynamics/notes/15_VCD_MIDPOINT_RESEARCH_SYNTHESIS_20261116.md) routes four results. E13 expresses both midpoint terms with one boundary memory. E15 proves that any entire scalar kernel shared consistently by those terms gives exactly its direct full-height Volterra response, with signed kernel-error transport and first discrepancy order 2N+q. E12 preserves finite canonical b/score/head and midpoint jets while varying the omitted response locally in a smooth compact-multiplier class; its zero locations remain open. E16 gives an additional factor theta^(r+1), 0<theta<1, over the same moment-only disk bound after exact c_0 derivative calibration and a common relative source tolerance. It states: “A uniform positive lower radius does not follow.”
+
+The conditional calibration gain and finite freedom coexist. No model with those data/tolerances is constructed, no growing-height costs are paid, and no source-specific signed Fourier margin or zero induction is proved.
+
+## Complete-source Fourier estimates — 16 November 2026
+
+For Edward Baker with Codex assistance; lead actual settings unavailable,
+proof/assessment dispatches Sol6.1/ultra. Source status **proved in-note**
+(E17: **Complete, proved in-note**). [E20](../papers/investigations-6/03_volterra_coefficient_dynamics/reviews/07_VCD_E20_CANONICAL_FOURIER_ASSESSMENT_20261116.md)
+records “Accepted in the stated scope.” Separate internal shared-model,
+shared-source review; no mathematical correction or specialist independence.
+
+[Synthesis19](../papers/investigations-6/03_volterra_coefficient_dynamics/notes/19_VCD_B05_CANONICAL_FOURIER_ESTIMATE_SYNTHESIS_20261116.md)
+routes the complete-source contour allowance, exterior Fourier scales and
+exact arithmetic normalization. At time zero and fixed (0<y<1), it gives
+(|B(x+iy)|=O_y(e^{-pi x/8}x^{(13-y)/4})). E19 proves that every fixed real
+projection of (B/(4pi F(z+4i))) is unbounded both ways on every height tail;
+(|B|/[4pi(|F(z+4i)|-|F(z-4i)|)]) has infinite limsup. The source states:
+“The uniform-in-height reverse-triangle comparison fails for the exact
+canonical source itself.” This supersedes E18's pending comparison only
+for that global consumer. The pointwise sufficient test remains valid.
+
+The optimized contour-majorant asymptotic is not an actual-field lower bound.
+No zeros, density, effective heights or degree induction are obtained.
+Adaptive/correlated consumers and selected subregions remain outside the
+obstruction. Reusable for Fourier-scale source bounds and screening these
+specific uniform comparisons before attempting further error improvement.
+
+## Signed quadrature-error consumer — 16 November 2026
+
+For Edward Baker with Codex assistance; lead actual settings unavailable,
+proof/assessment dispatches Sol6.1/ultra. E21 is **Complete, proved in-note**;
+E22 is **Proved in-note for the defined error law**; E24 is **Proved in-note
+under the stated quadrature-error and phase inputs**. Completed return
+addenda pin those dependencies. [E23](../papers/investigations-6/03_volterra_coefficient_dynamics/reviews/08_VCD_E23_SIGNED_ERROR_CONSUMER_ASSESSMENT_20261116.md)
+accepts the proofs and clarified synthesis within scope, separate internal
+shared-model review with no proof correction.
+
+[Synthesis23](../papers/investigations-6/03_volterra_coefficient_dynamics/notes/23_VCD_B06_SIGNED_ERROR_CONSUMER_SYNTHESIS_20261116.md)
+gives (F-G_N=L_NE_N), where (L_N) is the first omitted-walk term and
+(E_N) a symmetric error characteristic function. Explicit source and
+simplex bounds yield (|E_N-1|=O(|z|^2log^2(N+1)/N)), uniformly on
+(|Im z|le1), with real even/odd quadrature brackets. A positive-amplitude
+directed enclosure uses only the available prefix and supplies pointwise
+exclusions and conditional contour counts. At equal coefficient cost,
+the next physical head has smaller actual error near zero than the plain
+monomial correction; no all-region actual ordering is proved.
+
+“The phase budget is proved; a canonical placement of the finite-model
+margin is not.” Weighted-square controls pass the phase estimate. The
+canonical contour separation, model zero count and degree induction remain
+open. Reusable for signed error acquisition and fair prefix-cost comparison,
+not an unconditional Fourier-zero theorem.
+
+## Readout manuscript integration — 16 November 2026
+
+For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+The [expanded VCD manuscript](../papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/README.md)
+integrates the relevant established memory, score, midpoint and signed-error
+results with self-contained background. It derives the polynomial
+Christoffel–Darboux phase identity and a conditional local zero-displacement
+lemma, while separating both from the unproved canonical Fourier geometry.
+[Assessment09](../papers/investigations-6/03_volterra_coefficient_dynamics/reviews/09_VCD_READOUT_MANUSCRIPT_ASSESSMENT_20261116.md)
+records “same-assistant analytical and document check completed within the
+stated scope.” This preserves earlier source statuses and is not independent
+review. [Integration25](../papers/investigations-6/03_volterra_coefficient_dynamics/notes/25_VCD_ANALYTICAL_READOUT_MANUSCRIPT_INTEGRATION_20261116.md)
+routes proofs, control premises and reading references. No new canonical zero
+theorem or numerical campaign; B07 remains unactivated. Reading PDF in the
+ignored root output folder, sources and small build record in the investigation.
+
+**Fixed-zero follow-up, 16 November 2026:** [note26](../papers/investigations-6/03_volterra_coefficient_dynamics/notes/26_VCD_FIXED_ZERO_STABILIZATION_AND_PHASE_20261116.md) states “analytical corollary derived and incorporated; same-assistant checking only.” Manuscript Proposition 10.2 gives isolated-cluster stability; Corollary 10.3 gives an alternating displacement asymptotic at each fixed simple real limiting zero, with degree ratio O_r(log²(N+1)/N²). This supplies no uniform threshold over increasing zero index and does not imply reality of all limiting zeros. [Assessment10](../papers/investigations-6/03_volterra_coefficient_dynamics/reviews/10_VCD_FIXED_ZERO_COROLLARY_ASSESSMENT_20261116.md); for Edward Baker with Codex assistance, actual model/effort unavailable.
+
+**Unresolved clusters, 16 November 2026:** [note27](../papers/investigations-6/03_volterra_coefficient_dynamics/notes/27_VCD_CLUSTER_RESOLUTION_AND_HEAT_COLLISIONS_20261116.md) records “local analytical consequences derived and incorporated; same-assistant checking only.” Manuscript Propositions 10.4–10.6 make compact convergence uniform on compact heat-time intervals, bound pair center/discriminant errors from a contour margin, and derive shrinking uncertainty near a stipulated fixed double event. This survives loss of individual simplicity but neither asserts nor excludes a theta collision. [Assessment11](../papers/investigations-6/03_volterra_coefficient_dynamics/reviews/11_VCD_CLUSTER_RESOLUTION_ASSESSMENT_20261116.md); for Edward Baker with Codex assistance, actual model/effort unavailable.

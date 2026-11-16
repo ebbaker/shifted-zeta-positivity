@@ -1,5 +1,15 @@
 # Continuation after the four analytical manuscripts
 
+**16 November 2026 — branch 03 update:** for the Volterra tail-closure
+induction program, use the new
+[branch continuation](../03_volterra_coefficient_dynamics/notes/03_VCD_TAIL_CLOSURE_INDUCTION_CONTINUATION_20261116.md)
+and its sole live register. Edward's sustained-session authorization
+allows multiple linked steps with bounded Sol 6.1 subtasks. Shared TN6
+and other branch recommendations remain governed by their own registers;
+no TN6 or sibling task is activated here.
+Prepared for Edward Baker with OpenAI Codex assistance, recorded setup
+configuration gpt-6-astra/max.
+
 14 November 2026, America/New_York. Prepared for **Edward Baker** with
 substantial OpenAI Codex LLM assistance. Manuscript and internal review
 workers were explicitly dispatched **gpt-6.1-sol / ultra** for ready

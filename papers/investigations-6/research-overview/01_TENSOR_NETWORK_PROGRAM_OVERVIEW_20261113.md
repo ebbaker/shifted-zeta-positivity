@@ -124,6 +124,15 @@ relations could inform branch 02 or a signed-readout argument. The moving
 basis \(J(\lambda)\) is not substituted into the fixed-basis evolution
 without its connection terms.
 
+**16 November continuation:** the
+[tail-closure induction overview](../03_volterra_coefficient_dynamics/research-overview/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_OVERVIEW_20261116.md)
+develops source-sensitive constraints on the omitted Jacobi tail and a
+possible degree induction. Its [plan](../03_volterra_coefficient_dynamics/research-plan/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_PLAN_20261116.md)
+implements Edward's sustained-session/Sol-subtask authorization. This is
+ready setup, not a new zero theorem or a transfer of sibling tasks.
+Prepared for Edward Baker with OpenAI Codex assistance, recorded
+configuration gpt-6-astra/max.
+
 ### 04 — Exact infinite tensor products
 
 [Branch 04](../04_exact_infinite_tensor_products/README.md) studies

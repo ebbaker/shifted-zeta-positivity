@@ -1,5 +1,14 @@
 # Volterra coefficient dynamics conceptual choices
 
+**16 November 2026:** the open induction discussion now has a
+[detailed program overview](../research-overview/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_OVERVIEW_20261116.md),
+[plan](../research-plan/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_PLAN_20261116.md)
+and [starting continuation](../notes/03_VCD_TAIL_CLOSURE_INDUCTION_CONTINUATION_20261116.md).
+The selected emphasis is source-constrained tail closure and structural
+degree induction; no closure invariant has yet been established. Setup
+prepared for Edward Baker with OpenAI Codex assistance, recorded
+gpt-6-astra/max; future research requested at ultra with Sol 6.1 subtasks.
+
 13 November 2026, America/New_York. Prepared for **Edward Baker** with
 OpenAI Codex LLM assistance. Actual backend model and effort are unavailable
 in recorded configurations.

@@ -1,0 +1,7 @@
+# Quadrature error phase: checked classical source
+
+16 November 2026, America/New_York. Prepared for Edward Baker with OpenAI Codex assistance. Lead actual model/effort unavailable; helper dispatches gpt-6.1-sol/ultra, separate backend attestation unavailable.
+
+**Carl de Boor, Divided Differences**, Surveys in Approximation Theory 1 (2005), 46–69; publisher index says published14January2005, PDF title page dated21December2004. [Publisher/author index](https://pages.cs.wisc.edu/~deboor/sat/papers/2/) and [PDF](https://pages.cs.wisc.edu/~deboor/sat/papers/2/2.pdf), inspected16November2026. Relevant passages: §1 equation(16), printedp.50, confluent interpolation remainder; §9 equation(52), printedpp.63–64, simplex integral for a divided difference, including continuity at repeated knots. Integration uses ordinary simplex volume1/n!, not a probability measure. E21 must normalize it explicitly for2N derivatives. Gaussian exactness is inherited from E04. New law/moment/concentration calculations are derived in the notes, not attributed to a new external theorem. Classical interpolation formulas and the probability reinterpretation have no novelty claim here.
+
+Online passage inspection succeeded. No local PDF reading copy or byte/hash provenance is asserted yet. Third-party PDFs are not stored in the repository. This is a passage check, not a full literature or novelty review; it does not provide theta zero control.

@@ -4,11 +4,16 @@
 substantial OpenAI Codex LLM assistance. Actual backend model and reasoning
 effort are unavailable in the shared chat's recorded configurations.
 
-**This file is the sole current task-status register for the VCD family.**
-The parent links here and does not duplicate its live rows. Re-read this
-file before later changes; preserve other chats' updates and assign one
-writer per artifact. The [plan](../research-plan/01_VOLTERRA_RESEARCH_PLAN_20261113.md)
-owns task specifications, limits, evidence standards and escalation rules.
+**Historical first-round register; superseded as live register on 16 November 2026.** The
+[successor register](02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_PROGRESS_20261116.md)
+is now the sole live VCD status owner and carries the dated task crosswalk.
+The completed rows, original event log and issued-request evidence below
+are retained as history. The [first-round plan](../research-plan/01_VOLTERRA_RESEARCH_PLAN_20261113.md)
+retains those tasks' original specifications; the
+[new plan](../research-plan/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_PLAN_20261116.md)
+governs future tail-closure work and the author's sustained-session policy.
+This status-ownership notice was prepared for Edward Baker with OpenAI
+Codex assistance, recorded configuration gpt-6-astra/max.
 
 | Task | Type and recommended model/reason | Current status | Dependencies and expected output |
 | --- | --- | --- | --- |

@@ -4,11 +4,17 @@
 OpenAI Codex LLM assistance. Actual backend model and effort are unavailable
 in recorded configurations.
 
-The [research plan](01_VOLTERRA_RESEARCH_PLAN_20261113.md) defines VCD-B01,
-VCD-E01 and VCD-E02, following the
-[model/task workflow](../../../../GPT_RESEARCH_MODEL_WORKFLOW.md).
-The [overview](../research-overview/01_VOLTERRA_RESEARCH_OVERVIEW_20261113.md)
-contains scientific context. The [sole register](../research-progress/01_VOLTERRA_RESEARCH_PROGRESS_20261113.md)
-owns status. This guide is navigation only; the earlier planning deferral
-was superseded by the author's subsequent branch-plan request. Research
-remains unactivated.
+**Updated 16 November 2026**, for Edward Baker with OpenAI Codex assistance,
+recorded configuration gpt-6-astra/max.
+
+The [current plan](02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_PLAN_20261116.md)
+defines the tail-closure induction phase, starting at VCD-B02 and VCD-E04.
+Its local authorization permits sustained multi-step lead sessions with
+bounded Sol 6.1 subtasks. The [overview](../research-overview/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_OVERVIEW_20261116.md)
+contains the science; the [sole live register](../research-progress/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_PROGRESS_20261116.md)
+owns status; the [continuation](../notes/03_VCD_TAIL_CLOSURE_INDUCTION_CONTINUATION_20261116.md)
+contains the starting prompt. New research is ready/unactivated at setup.
+
+The [first-round plan](01_VOLTERRA_RESEARCH_PLAN_20261113.md) is historical.
+Its completed results and issued requests remain intact. This guide
+owns no task rows and does not activate research.

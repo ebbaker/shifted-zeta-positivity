@@ -1302,3 +1302,30 @@ range gates also defeat the directly tested joint theorem; its omitted
 case remains unperformed work. [Contributing internal check](../papers/investigations-5/09_green_potentials_newman_flow/01_riemann_siegel_evolution/reviews/14_GNP_RS_B09_INTERNAL_ASSESSMENT_20261112.md).
 Preserve B08's gain and the every-center gap; do not turn a method's large
 allowance or a theorem's inapplicability into an actual-sum obstruction.
+
+**Test the consumer itself, not only its upper allowance, 16 November 2026.**
+For Edward Baker with Codex assistance; lead actual settings unavailable,
+proof/assessment dispatches Sol6.1/ultra. [VCD synthesis19 §3](../papers/investigations-6/03_volterra_coefficient_dynamics/notes/19_VCD_B05_CANONICAL_FOURIER_ESTIMATE_SYNTHESIS_20261116.md)
+states: “The uniform-in-height reverse-triangle comparison fails for the
+exact canonical source itself.” E19's direct arithmetic proof is separate
+from E17's oversized contour majorant. [E20](../papers/investigations-6/03_volterra_coefficient_dynamics/reviews/07_VCD_E20_CANONICAL_FOURIER_ASSESSMENT_20261116.md)
+accepts both within scope, internal shared-model review. Sharpening an upper
+allowance cannot repair this false global comparison. Retain both limits:
+the contour asymptotic is only for its displayed majorant; the actual-source
+obstruction concerns the stated absolute/fixed-half-plane consumers on fixed
+interior lines. Neither proves nonreal zeros or excludes adaptive correlations.
+
+**A paid error phase still needs a model margin, 16 November 2026.**
+For Edward Baker with Codex assistance; lead actual settings unavailable,
+helpers explicitly Sol6.1/ultra. [VCD synthesis23 §4](../papers/investigations-6/03_volterra_coefficient_dynamics/notes/23_VCD_B06_SIGNED_ERROR_CONSUMER_SYNTHESIS_20261116.md)
+states: “The phase budget is proved; a canonical placement of the finite-model
+margin is not.” The complete-error estimate and positive-amplitude enclosure
+retain correlation, but weighted-square controls share their premises.
+[E23](../papers/investigations-6/03_volterra_coefficient_dynamics/reviews/08_VCD_E23_SIGNED_ERROR_CONSUMER_ASSESSMENT_20261116.md)
+accepts the phase and consumer proofs within scope, internal shared-model
+review. A pointwise test at a model zero is not a boundary count transfer;
+the latter needs the closed error set containing zero. Compare correction
+cost fairly: the next physical head uses the same extra coefficient as the
+monomial correction and has smaller actual error near zero. Neither this
+local comparison nor an approximation-error zero exclusion controls all
+zeros of the physical field.

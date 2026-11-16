@@ -1,0 +1,187 @@
+\section{Finite Jacobi readouts and Gaussian quadrature}
+\label{sec:readouts}
+
+We now fix a time \(\lambda\), and suppress it in \(\mu,J,P_n\).
+The principal application below is \(\lambda=0\). Write
+\begin{equation}
+ h_n^*=\int P_n^2\,\dd\mu=\frac{h_n}{Z_\lambda},\qquad
+ q_n=\frac{P_n}{\sqrt{h_n^*}},\qquad
+ h_0^*=1,\qquad h_n^*=\prod_{j=1}^n\beta_j.
+ \label{eq:probabilitynorm}
+\end{equation}
+Thus \(q_0=1\). Let \(e_n\) denote the sequence with a one at site
+\(n\) and zeros elsewhere. In this basis, multiplication by \(u\)
+is the self-adjoint Jacobi operator of Section~\ref{sec:evolution}.
+Its first finite block and the associated scalar observation are
+\begin{equation}
+ J_N=\begin{pmatrix}
+ 0&a_1&&&\\a_1&0&a_2&&\\&a_2&0&\ddots&\\
+ &&\ddots&\ddots&a_{N-1}\\&&&a_{N-1}&0
+ \end{pmatrix},\qquad
+ G_N(z)=e_0^{\mathsf T}\e^{\ii zJ_N}e_0.
+ \label{eq:finite-readout}
+\end{equation}
+Here the displayed pattern means the \(N\)-site matrix on
+\(0,\ldots,N-1\), with \(J_1=(0)\). A matrix exponential is defined
+by its convergent power series. The two appearances of \(e_0\) select
+the entry describing departure from, and return to, the constant
+polynomial. We call this entry a \emph{readout}.
+
+\subsection{Nodes, weights and exact moments}
+
+\begin{proposition}[Finite spectral measure]
+\label{prop:gauss}
+The eigenvalues \(x_{1,N},\ldots,x_{N,N}\) of \(J_N\) are real,
+simple, and equal to the roots of \(P_N\). There are positive weights
+\(\omega_{j,N}\), summing to one, such that
+\begin{equation}
+ Q_N f=\sum_{j=1}^N\omega_{j,N}f(x_{j,N}),\qquad
+ G_N(z)=Q_N(\e^{\ii z\cdot}).
+ \label{eq:gauss-readout}
+\end{equation}
+The rule \(Q_N\) integrates every polynomial of degree at most
+\(2N-1\) exactly against \(\mu\). Moreover,
+\begin{equation}
+ \int u^{2N}\,\dd\mu-Q_N(u^{2N})=h_N^*,\qquad
+ F^{(2N)}(0)-G_N^{(2N)}(0)=(-1)^Nh_N^*.
+ \label{eq:first-walk}
+\end{equation}
+The node measure, and consequently \(G_N\), are even.
+\end{proposition}
+
+\begin{proof}
+Expansion of \(\det(uI-J_N)\) at the last row gives the monic
+recurrence \eqref{eq:recurrence}, with initial polynomials \(1,u\).
+It therefore equals \(P_N(u)\). Real symmetry gives an orthonormal
+eigenbasis. The row recurrence shows that an eigenvector whose first
+entry is zero must be zero; an eigenspace cannot have dimension two,
+since a linear combination would have first entry zero. Hence the
+eigenvalues are simple and the squared first entries of the normalized
+eigenvectors give strictly positive weights. Their sum is
+\(\|e_0\|^2=1\). The finite spectral decomposition proves
+\eqref{eq:gauss-readout}.
+
+The moment \(\int u^k\,\dd\mu=\langle e_0,J^ke_0\rangle\)
+is a sum of products of edges along length-\(k\) paths from site zero
+back to itself. The finite matrix retains exactly the paths inside
+the first \(N\) sites. A path reaching the first omitted site \(N\)
+and returning needs at least \(2N\) steps. At that length there is
+exactly one: \(0,1,\ldots,N,N-1,\ldots,0\). Its edge product is
+\(a_1^2\cdots a_N^2=h_N^*\). This proves exactness and
+\eqref{eq:first-walk}. Finally the diagonal matrix with entries
+\((-1)^n\) conjugates \(J_N\) to \(-J_N\) and fixes \(e_0\),
+proving symmetry of the weighted node measure.
+\end{proof}
+
+This is Gaussian quadrature: ``Gaussian'' refers to polynomial
+exactness of the integration rule, not to a Gaussian source density.
+The degree index \(N\) counts sites, not Taylor terms of \(G_N\);
+the latter is generally an exponential sum, not a polynomial in \(z\).
+
+\subsection{Complex convergence and the two zero problems}
+
+\begin{proposition}[Convergence on compact complex sets]
+\label{prop:compact}
+For fixed \(\lambda\), the functions \(G_N\) converge to \(F\)
+locally uniformly on \(\mathbb C\). More explicitly, with
+\(m_{2k}=\int u^{2k}\,\dd\mu\),
+\begin{equation}
+ \sup_{|z|\le R}|F(z)-G_N(z)|
+ \le\sum_{k=N}^{\infty}\frac{m_{2k}R^{2k}}{(2k)!}
+ \longrightarrow0\qquad(R<\infty).
+ \label{eq:compact-bound}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Every return path has a nonnegative edge product, and the finite
+matrix retains a subset of the full paths. Hence
+\(0\le Q_N(u^{2k})\le m_{2k}\) for every \(k\). Lower moments agree and odd
+moments vanish. The two exponential series therefore give
+\eqref{eq:compact-bound}; its majorant sums to
+\(\int\cosh(Ru)\,\dd\mu<\infty\), by \eqref{eq:tail}.
+\end{proof}
+
+There are two distinct zero questions:
+\begin{equation}
+ P_N(u)=\det(uI-J_N)=0
+ \quad\hbox{and}\quad
+ G_N(z)=\sum_j\omega_{j,N}\e^{\ii zx_{j,N}}=0.
+ \label{eq:two-zero-problems}
+\end{equation}
+The first determines source-coordinate nodes. The second describes
+cancellation in observation height. Classical Jacobi interlacing
+concerns the first problem \cite[\S4.1, Theorem~4.5]{teschl}.
+For the second, direct calculation at the first three degrees gives
+\begin{equation}
+ \begin{aligned}
+ G_1(z)&=1,\qquad G_2(z)=\cos(\sqrt{\beta_1}\,z),\\
+ G_3(z)&=\frac{\beta_2}{\beta_1+\beta_2}
+       +\frac{\beta_1}{\beta_1+\beta_2}
+          \cos\bigl(\sqrt{\beta_1+\beta_2}\,z\bigr).
+ \end{aligned}
+ \label{eq:small-heads}
+\end{equation}
+Indeed, \(J_3\) has nodes \(0,\pm\sqrt{\beta_1+\beta_2}\).
+Symmetry, total mass one and second moment \(\beta_1\) determine
+the weights in \eqref{eq:small-heads}.
+
+For the unit-variance Gaussian source, \(\beta_1=1,\beta_2=2\).
+Its exact transform is \(\e^{-z^2/2}\), but its three-site readout
+has zeros
+\begin{equation}
+ G_3(z)=\tfrac23+\tfrac13\cos(\sqrt3z),\qquad
+ z=\frac{(2k+1)\pi\pm\ii\arcosh 2}{\sqrt3},\quad k\in\mathbb Z.
+ \label{eq:gaussian-counterexample}
+\end{equation}
+This elementary example excludes a generic inference from real Gauss
+nodes to real Fourier-readout zeros. It does not test an additional
+theta-specific hypothesis: Gaussian coefficients do not satisfy the
+logarithmic envelope of Theorem~\ref{thm:theta}.
+
+\subsection{Why polynomial phase is monotone}
+
+The phase in this subsection counts zeros of the source polynomials,
+not zeros of \(F\). It is background for a possible comparison method,
+not a connecting theorem. In the Gaussian example above, the polynomials
+have their usual real zeros although \(F(z)=\e^{-z^2/2}\) has none.
+For a direct zero count of \(F\), the relevant phase is the change of
+\(\arg F\) around a zero-free contour in the \(z\)-plane; the argument
+principle counts the enclosed zeros. Section~\ref{sec:cluster-resolution}
+uses precisely that contour information to follow unresolved clusters.
+
+There is a concrete positive identity behind polynomial oscillation.
+Subtract the recurrences at two real source points \(u,v\), multiply
+by the opposite polynomial, and sum from degree zero to \(N-1\).
+The interior terms cancel, leaving the Christoffel--Darboux identity
+\begin{equation}
+ (u-v)\sum_{j=0}^{N-1}q_j(u)q_j(v)
+ =a_N\bigl(q_N(u)q_{N-1}(v)-q_{N-1}(u)q_N(v)\bigr).
+ \label{eq:christoffel-darboux}
+\end{equation}
+Letting \(v\to u\) gives
+\begin{equation}
+ a_N\bigl(q_N'(u)q_{N-1}(u)-q_N(u)q_{N-1}'(u)\bigr)
+       =\sum_{j=0}^{N-1}q_j(u)^2>0.
+ \label{eq:polynomial-wronskian}
+\end{equation}
+The strict inequality uses \(q_0=1\). Consecutive polynomials
+have no common zero, since the recurrence would propagate one
+back to \(q_0\). Therefore their pair has a continuous unwrapped
+phase on the real line. With the convention
+\(\theta_N(u)=\arg(q_{N-1}(u)+\ii q_N(u))\), its derivative is
+\begin{equation}
+ \theta_N'(u)=
+ \frac{\sum_{j=0}^{N-1}q_j(u)^2}
+ {a_N\bigl(q_{N-1}(u)^2+q_N(u)^2\bigr)}>0.
+ \label{eq:polynomial-phase}
+\end{equation}
+Here \emph{unwrapped} means choosing the angle continuously rather
+than reducing it to an interval of length \(2\pi\).
+Zeros of \(q_N\) occur at integer multiples of \(\pi\);
+zeros of \(q_{N-1}\) occur at the intervening half-integer multiples.
+This is an elementary phase explanation of their interlacing.
+It concerns differentiation in \(u\), and it holds for every
+positive Jacobi chain at nondegenerate degrees, including the
+control sources. It supplies no corresponding positive identity
+for differentiation of the Fourier readouts in \(z\).

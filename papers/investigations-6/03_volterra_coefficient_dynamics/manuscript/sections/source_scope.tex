@@ -1,0 +1,178 @@
+\section{What the complete source adds, and what remains open}
+\label{sec:source-scope}
+
+\subsection{The canonical score identity}
+
+The word \emph{canonical} means that the coefficients come from the
+unchanged complete theta density \eqref{eq:source}, with its equal
+square-mode coefficients and full reflection identity. It does not
+mean that every positive Jacobi matrix has the same Fourier geometry.
+The full source enters through more information than the lower
+score bound \eqref{eq:confinement}. At time zero put \(V=-\log\Phi\).
+For the probability-normalized polynomials,
+\begin{equation}
+ a_n\int_\R V'(u)q_n(u)q_{n-1}(u)\,\dd\mu(u)=n,\qquad n\ge1.
+ \label{eq:canonical-score}
+\end{equation}
+Indeed, integration of \((q_nq_{n-1}\Phi)'\) gives
+\[
+ \int V'q_nq_{n-1}\,\dd\mu
+  =\int q_n'q_{n-1}\,\dd\mu+\int q_nq_{n-1}'\,\dd\mu=n/a_n.
+\]
+The second term vanishes by degree. If \(\kappa_n\) is the leading
+coefficient of \(q_n\), the recurrence gives
+\(\kappa_{n-1}=a_n\kappa_n\), so the first term is \(n/a_n\).
+The tails justify the integration. In operator notation
+\eqref{eq:canonical-score} reads
+\(a_n[V'(J)]_{n,n-1}=n\), where the matrix element means the
+displayed multiplication integral. It is not obtained by substituting
+the finite matrix \(J_N\) into \(V'\); paths outside a finite block
+are retained in the full multiplication operator.
+
+The source is in fact characterized by all these identities under
+the stated integrability hypothesis. This identifies where source
+information lies, while keeping its distinction from a zero theorem.
+
+\begin{proposition}[All-degree canonical-score characterization]
+\label{prop:score-rigidity}
+Let \(\nu\) be an even probability measure of infinite support on
+\(\R\), and assume
+\[
+ \int_\R \e^{R|u|}(1+|V'(u)|)\,\dd\nu(u)<\infty
+                      \qquad\hbox{for every }R>0.
+\]
+Construct its own orthonormal polynomials \(q_n^\nu\) and positive
+Jacobi links \(a_n^\nu\). If
+\begin{equation}
+ a_n^\nu\int V'q_n^\nu q_{n-1}^\nu\,\dd\nu=n
+                              \qquad(n\ge1),
+ \label{eq:score-rigidity-hypothesis}
+\end{equation}
+then \(\nu=\mu\). Conversely, \(\mu\) satisfies these conditions.
+\end{proposition}
+
+\begin{proof}
+Define \(\mathcal D(p)=\int(V'p-p')\,\dd\nu\).
+For the measure's own polynomials, the same degree argument gives
+\(\int(q_n^\nu q_{n-1}^\nu)'\,\dd\nu=n/a_n^\nu\).
+Thus \(\mathcal D\) vanishes on each \(q_n^\nu q_{n-1}^\nu\).
+These odd polynomials have successive odd degrees \(2n-1\) and
+nonzero leading coefficients, so they form a triangular basis of
+the odd polynomial space. On even polynomials \(\mathcal D\)
+vanishes by parity, since \(V'\) is odd. Therefore
+\(\mathcal D(p)=0\) for every polynomial.
+
+Expand \(\e^{\ii tu}\) in its power series. The integrability
+hypothesis dominates the series, its derivative, and its product
+with \(V'\), giving
+\[
+ \int V'(u)\e^{\ii tu}\,\dd\nu(u)
+     =\ii t\int\e^{\ii tu}\,\dd\nu(u)\qquad(t\in\R).
+\]
+Fourier inversion for a smooth compactly supported test function,
+whose Fourier transform and its first polynomial multiple are
+integrable, now gives
+\(\int\varphi'\,\dd\nu=\int V'\varphi\,\dd\nu\).
+In distributions this is \(\nu'=-V'\nu\). Multiplication by
+the smooth function \(\e^V\) yields \((\e^V\nu)'=0\).
+A locally finite measure with zero distributional derivative is a
+constant multiple of Lebesgue measure: every compactly supported
+smooth test of integral zero is the derivative of another such test.
+Hence \(\dd\nu=c\e^{-V}\dd u=c\Phi\,\dd u\), and normalization
+forces \(c=1/Z\).
+
+For the converse, \eqref{eq:canonical-score} has already been proved.
+The first positive summand bounds \(\Phi\) below by a constant times
+\(\e^{|u|}\rho(u)^2\e^{-\rho(u)}\). Together with
+\eqref{eq:tail} this gives \(|V'(u)|\le C\rho(u)\), so the complete
+theta measure satisfies the required weighted exponential moments.
+\end{proof}
+
+The proposition uses all degrees. Its proof supplies neither a
+quantitatively conditioned finite update nor a lower Fourier modulus.
+The research question is whether this complete-source information
+can produce a useful estimate of the type required in
+Theorem~\ref{thm:contour} or Lemma~\ref{lem:zero-motion}.
+
+\subsection{Scope of the general estimates}
+
+The exact quadrature error law applies to any even probability
+measure of infinite support with all absolute exponential moments.
+The quantitative phase proof additionally uses the polynomial-weighted
+cosh bound and the adjacent coefficient envelope. These premises
+are not unique to theta.
+
+For example, take a finite positive weighted-square sum
+\(\sum_{m=1}^{M}c_ms_m(u)\) on \(u\ge0\) and its even extension.
+Every \(c_m>0\) cancels from the corresponding summand score.
+The same positive-mean argument proves \eqref{eq:score} and
+\eqref{eq:confinement}, and all tail estimates needed for
+Lemma~\ref{lem:general} hold. The even extension is locally absolutely
+continuous even if higher odd derivatives do not match at zero.
+In integration by parts for \(uP_n^2w\), the factor \(u\)
+eliminates the junction contribution. Thus the same cosh moment,
+coefficient envelope, complete error law and phase bound hold for
+these sources. The known weighted-square collision examples
+\cite{three,four} provide supporting witnesses to the limitation;
+no numerical quantity enters the proofs in this paper.
+
+For orientation, the existing control comparisons have the following
+distinct scopes. Euler-factor translates retain the generic exact
+law, but the tested \(c=1/2,p=23,\lambda=0\) example fails the
+adjacent envelope at index zero. Reflected super-Gaussian sources
+have the exponential moments for that law but fail the exponential
+score-confinement premise. Smooth shape and positive-primitive
+controls lack the exact canonical summand formula; their weaker
+confinement inequalities have not been tested here. Atoms allow the
+law only before their monic norms vanish and lack a positive
+full-line density; compact triangular extensions also lack that
+global positivity. RH-conditional endpoint constructions retain
+their hypothesis and do not supply unchanged theta arithmetic.
+Changing the observation while keeping the source fails the literal
+Fourier-readout premise, and relaxed profile measures do not identify
+the full physical source. These are premise comparisons, not
+universal exclusion theorems; the detailed catalog is cited in
+the accompanying integration record.
+
+A condition can hold near an isolated real zero of a control and
+fail near a nonreal zero elsewhere. In particular, a successful
+local disk comparison is not required to reject every control.
+A global conclusion must account for all intended regions. If a
+control has a nonreal zero inside a contour, the conjunction of
+successful boundary separation and zero model count there must fail.
+Failure of the canonical source formula alone is not proof that an
+unspecified derived inequality fails.
+
+\subsection{Reading routes and the open connecting lemma}
+
+The steps established here are: source confinement bounds the
+Jacobi coefficients; the coefficients determine Gaussian quadrature;
+confluent interpolation expresses its complete error as
+\(L_NE_N\); the source exponential moment makes \(E_N\) close to one;
+and the directed enclosure yields pointwise exclusions or conditional
+contour counts. The next missing estimate concerns the position of
+the actual canonical readout relative to that enclosure.
+
+For background, Van Assche \cite[\S1.1 and \S2.3]{vanassche}
+explains orthogonal-polynomial recurrences and their weight
+deformations; de Boor \cite[\S7 and \S9]{deboor} explains repeated-node
+interpolation; Topping \cite[\S9.8--9.9]{topping} treats the argument
+principle and Rouch\'e's theorem. Teschl
+\cite[\S4.1]{teschl} supplies the spectral oscillation theory whose
+variable must be distinguished from Fourier height in
+\eqref{eq:two-zero-problems}. Romanov
+\cite[\S3.2, Proposition~4]{romanov} exhibits a positive integral
+identity leading to Hermite--Biehler geometry for a canonical
+system. No faithful identification of our actual Fourier readouts
+with such a system has been established here.
+
+Two bounded questions remain useful. First, can the complete
+source give lower slope or cluster-separation estimates with
+enough degree dependence to apply a local zero-motion or count
+argument? Second, can the canonical score identities yield a
+relation for the readout and a justified companion function whose
+phase obeys a usable comparison law? Either question needs an
+actual quantitative conclusion and its own control comparison.
+Neither is answered by the present phase bound. No canonical
+contour family, model zero count, or degree-propagated zero
+confinement is established.

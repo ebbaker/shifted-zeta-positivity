@@ -130,11 +130,11 @@ Recommended models do not select the actual model or effort for Edward Baker.
 Branch-owned specifications and live registers are now available for
 [JCH](../02_jacobi_chain_height_flow/research-plan/01_JACOBI_CHAIN_RESEARCH_PLAN_20261113.md)
 ([progress](../02_jacobi_chain_height_flow/research-progress/01_JACOBI_CHAIN_RESEARCH_PROGRESS_20261113.md)),
-[VCD](../03_volterra_coefficient_dynamics/research-plan/01_VOLTERRA_RESEARCH_PLAN_20261113.md)
-([progress](../03_volterra_coefficient_dynamics/research-progress/01_VOLTERRA_RESEARCH_PROGRESS_20261113.md))
+[VCD current phase](../03_volterra_coefficient_dynamics/research-plan/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_PLAN_20261116.md)
+([sole progress](../03_volterra_coefficient_dynamics/research-progress/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_PROGRESS_20261116.md))
 and [ITP](../04_exact_infinite_tensor_products/research-plan/01_INFINITE_PRODUCTS_RESEARCH_PLAN_20261113.md)
 ([progress](../04_exact_infinite_tensor_products/research-progress/01_INFINITE_PRODUCTS_RESEARCH_PROGRESS_20261113.md)).
-Each branch reserves E01 for its selected derivation and E02 for assessment;
+The first-round plans reserved E01 for their selected derivation and E02 for assessment;
 read those local specifications rather than infer an execution packet here.
 
 The [canonical continuation note](../notes/01_BRANCH_OVERVIEWS_AND_CONTINUATION_20261113.md)

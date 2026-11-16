@@ -1,0 +1,9 @@
+# VCD-E05 r1 — Derive canonical score and residual ledger
+
+16 November 2026, America/New_York. Prepared for Edward Baker with OpenAI Codex assistance. Lead backend/effort unavailable; requested lead Astra/ultra. Helper dispatch requested explicitly as gpt-6.1-sol/ultra; record separately from any runtime attestation.
+
+Type E; parent VCD-B02. Exact inputs: [session manifest](../../numerics/04_VCD_INDUCTION_SESSION_INPUTS_20261116.json), pinned before dispatch. Read root instructions, result-summaries/README.md, avoid/README.md, relevant controls, and plan task specification. Preserve source W_lambda=exp(lambda*u^2)Phi, literal Fourier field H=1/2 integral W exp(izu), F=2H/Z, beta_n=a_n^2. Domain lambda in [0,1/2] unless explicitly fixed; no changed source/readout or zero assertion. Reuse checked references; verify any newly imported theorem in its primary source and return exact reference details to the lead.
+
+One fixed task and one correction pass; no numerical campaign. Standard algebra/domain repair is permitted. A new mechanism or uniform estimate returns to B02/B03. Only assigned note and return may be changed. Do not edit the live register, shared indexes or chat registry. Evidence is internal analytical work, not independent specialist review.
+
+Execute plan section 6. Derive a_n[V_lambda'(J)]_(n,n-1)=n on justified polynomial vectors, including the integrability of V' q_j. For arbitrary odd polynomial p and r=V'-p, derive n=a_n[p(J)]_(n,n-1)+a_n<q_n,r q_(n-1)> and the exact finite-boundary split C_N^V=(Pi_N p(J) Pi_N-p(J_N))+Pi_N r(J) Pi_N-r(J_N). Supply path locality/cross-cut terms, weighted Cauchy bound, and linear/cubic algebraic controls; identify unpaid theta integrals. Do not choose or fit a theta closure. Output notes/05_VCD_E05_SOURCE_SCORE_RESIDUAL_20261116.md and research-progress/handoffs/VCD-E05-r1-return.md. Completion: fixed decomposition, two illustrations and residual ledger, with all losses/sign issues explicit.

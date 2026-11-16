@@ -223,23 +223,43 @@ class PaginatedSourceTests(unittest.TestCase):
             self.source()
         self.assertEqual(raised.exception.code, "unsupported_public_content")
 
-    def test_observed_unmoderated_no_display_status_preserves_public_rows(self):
+    def test_observed_boolean_no_display_status_preserves_public_rows(self):
         before, metadata_before = self.source()
-        for ident in ("progress-1", "answer-1"):
-            self.change_json(ident, moderation={"moderated": False, "display": None})
-        after, metadata_after = self.source()
-        self.assertEqual(after, before)
-        self.assertEqual(metadata_after, metadata_before)
+        for status in (False, True):
+            with self.subTest(moderated=status):
+                for ident in ("progress-1", "answer-1"):
+                    self.change_json(ident, moderation={"moderated": status, "display": None})
+                after, metadata_after = self.source()
+                self.assertEqual(after, before)
+                self.assertEqual(metadata_after, metadata_before)
+
+    def test_status_only_final_keeps_completion_and_private_content_gates(self):
+        self.change_json("answer-1", moderation={"moderated": True, "display": None})
+        self.add_item("private-agent", "agentMessage", 4, text="PRIVATE_SENTINEL", phase="analysis")
+        self.change_json("private-agent", moderation={"moderated": True, "display": None})
+        rows, _ = self.source()
+        self.assertNotIn("PRIVATE_SENTINEL", json.dumps(rows))
+        self.assertEqual([r["payload"]["turn_id"] for r in rows
+                          if r.get("payload", {}).get("type") == "task_complete"], ["turn-1"])
+        with sqlite3.connect(self.history) as db:
+            db.execute("UPDATE thread_items SET completed_at_ms=NULL WHERE item_id='answer-1'")
+        with self.assertRaises(ADAPTER.SourceUnavailable):
+            self.source()
 
     def test_moderated_replacement_or_unrecognized_status_is_rejected(self):
         for value in (
-            {"moderated": True, "display": None},
+            {"moderated": True, "display": "Visible replacement"},
+            {"moderated": True, "display": {"type": "blocked"}},
+            {"moderated": True, "display": None, "unknown": None},
+            {"moderated": True},
             {"moderated": False, "display": "Visible replacement"},
             {"moderated": False, "display": {}},
             {"moderated": False, "display": None, "unknown": None},
             {"moderated": False},
             {"display": None},
             {"moderated": 0, "display": None},
+            {"moderated": 1, "display": None},
+            {"moderated": "true", "display": None},
             {"moderated": None, "display": None},
         ):
             with self.subTest(value=value):

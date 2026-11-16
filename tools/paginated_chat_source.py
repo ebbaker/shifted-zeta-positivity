@@ -192,20 +192,22 @@ def _public_item(item, item_type):
             return None
         if phase not in PUBLIC_PHASES:
             raise SourceError("Unknown assistant public phase", code="unsupported_source_format")
-        # Observed local sources supply moderation: null or an explicit
-        # unmoderated status with no display replacement. Accept only those
-        # exact neutral forms; changed/structured display needs an exporter.
+        # The installed 0.169 protocol also supplies moderated: true with
+        # display: null. The app's public history reader exposes the exact
+        # text for that status-only form (verified 2026-11-16). Accept either
+        # actual boolean only when there is explicitly no display payload;
+        # replacements/annotations still require a preserving exporter.
         allowed = {"type", "id", "text", "phase", "memoryCitation", "delivery", "questions", "moderation"}
         if set(item) - allowed or not isinstance(item.get("text"), str):
             raise SourceError("Unsupported assistant public structure", code="unsupported_public_content")
         moderation = item.get("moderation")
-        neutral_moderation = (
+        status_only_moderation = (
             isinstance(moderation, dict)
             and set(moderation) == {"moderated", "display"}
-            and moderation["moderated"] is False
+            and isinstance(moderation["moderated"], bool)
             and moderation["display"] is None
         )
-        if moderation is not None and not neutral_moderation:
+        if moderation is not None and not status_only_moderation:
             raise SourceError("Structured assistant content requires a preserving exporter",
                               code="unsupported_public_content")
         # Structured citations/delivery/questions need an explicit preserving

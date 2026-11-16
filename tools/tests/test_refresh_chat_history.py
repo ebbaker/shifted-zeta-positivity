@@ -230,6 +230,95 @@ class RefreshTests(unittest.TestCase):
         self.append()
         self.assert_refusal_preserves()
 
+    @contextlib.contextmanager
+    def paginated_creation_revision(self, delta=.039, append=True):
+        rows = copy.deepcopy(self.rows)
+        rows[0]['payload'].update(timestamp=timestamp(delta), history_mode='paginated')
+        if append:
+            rows.append(public_message('new-after-revision', 'Recovered public text.', 12,
+                                       phase='final_answer', turn='turn-2'))
+            rows.append(completed_turn('turn-2', 13))
+        self.rollout.write_bytes(encoded_rows(rows))
+        info = {'thread_id': THREAD, 'source_kind': 'Local Codex paginated SQLite history; canonical public-text adapter'}
+        with mock.patch.object(REFRESH, 'paginated_source_mode', return_value='paginated'), \
+             mock.patch.object(REFRESH, 'load_paginated_source', return_value=(rows, info)), \
+             mock.patch.object(REFRESH, 'resolve_rollout', return_value=self.rollout):
+            yield rows
+
+    def test_verified_creation_reconciliation_preserves_original_and_future_refresh(self):
+        original = copy.deepcopy(self.entry())
+        with self.paginated_creation_revision():
+            before = self.data_pair()
+            with self.assertRaises(REFRESH.HistoryError):
+                self.refresh(rollout=None)
+            self.assertEqual(before, self.data_pair())
+            self.refresh(rollout=None, reconcile_creation_time=[timestamp(0), timestamp(.039)])
+            meta = self.conversation()['archive_metadata']
+            self.assertEqual(self.conversation()['create_time'], START)
+            self.assertEqual(meta['source_create_time'], START + .039)
+            self.assertEqual(len(meta['creation_time_reconciliations']), 1)
+            self.assertEqual(meta['creation_time_reconciliations'][0]['verified_prefix_messages'], 2)
+            for field in ['number', 'file', 'conversation_id', 'created_at_utc', 'created_at_local']:
+                self.assertEqual(self.entry()[field], original[field])
+            self.assertEqual(meta['first_captured_at_utc'], original['captured_at_utc'])
+            self.assertEqual(self.texts()[-1], 'Recovered public text.')
+            after = self.data_pair()
+            self.assertEqual(self.refresh(rollout=None)['status'], 'unchanged')
+            self.assertEqual(after, self.data_pair())
+            self.assert_registry_integrity()
+
+    def test_metadata_only_creation_reconciliation_is_transactional(self):
+        with self.paginated_creation_revision(append=False):
+            self.refresh(rollout=None, reconcile_creation_time=[timestamp(0), timestamp(.039)])
+            self.assertEqual(self.entry()['message_count'], 2)
+            self.assertEqual(self.conversation()['create_time'], START)
+            self.assert_registry_integrity()
+
+    def test_creation_reconciliation_rejects_wrong_pins_and_large_changes(self):
+        for delta, pins in [(.039, [timestamp(0), timestamp(.038)]),
+                            (.039, [timestamp(.001), timestamp(.039)]),
+                            (3600, [timestamp(0), timestamp(3600)]),
+                            (.039, ['2026-10-13T01:00:00', timestamp(.039)])]:
+            with self.subTest(delta=delta, pins=pins), self.paginated_creation_revision(delta):
+                before = self.data_pair()
+                with self.assertRaises(REFRESH.HistoryError):
+                    self.refresh(rollout=None, reconcile_creation_time=pins)
+                self.assertEqual(before, self.data_pair())
+
+    def test_creation_reconciliation_requires_independent_matching_metadata(self):
+        for field, value in [('id', OTHER), ('timestamp', timestamp(.040)), ('history_mode', 'legacy')]:
+            with self.subTest(field=field), self.paginated_creation_revision() as rows:
+                changed = copy.deepcopy(rows)
+                changed[0]['payload'][field] = value
+                self.rollout.write_bytes(encoded_rows(changed))
+                before = self.data_pair()
+                with self.assertRaises(REFRESH.HistoryError):
+                    self.refresh(rollout=None, reconcile_creation_time=[timestamp(0), timestamp(.039)])
+                self.assertEqual(before, self.data_pair())
+
+    def test_creation_reconciliation_cannot_rewrite_public_prefix(self):
+        with self.paginated_creation_revision() as rows:
+            rows[4]['payload']['item']['content'][0]['text'] = 'Altered old answer.'
+            before = self.data_pair()
+            with self.assertRaises(REFRESH.HistoryError):
+                self.refresh(rollout=None, reconcile_creation_time=[timestamp(0), timestamp(.039)])
+            self.assertEqual(before, self.data_pair())
+
+    def test_reconciled_creation_does_not_accept_unreviewed_later_drift(self):
+        with self.paginated_creation_revision():
+            self.refresh(rollout=None, reconcile_creation_time=[timestamp(0), timestamp(.039)])
+        before = self.data_pair()
+        with self.paginated_creation_revision(.040):
+            with self.assertRaises(REFRESH.HistoryError):
+                self.refresh(rollout=None)
+        self.assertEqual(before, self.data_pair())
+
+    def test_creation_reconciliation_refuses_explicit_legacy_override(self):
+        before = self.data_pair()
+        with self.assertRaises(REFRESH.HistoryError):
+            self.refresh(reconcile_creation_time=[timestamp(0), timestamp(.039)])
+        self.assertEqual(before, self.data_pair())
+
     def test_appended_message_time_cannot_go_backwards(self):
         self.append(seconds=2)
         self.assert_refusal_preserves()
