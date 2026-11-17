@@ -3,9 +3,9 @@
 \usepackage{amsmath,amssymb,amsthm,microtype,booktabs,array}
 \usepackage[hidelinks]{hyperref}
 \hypersetup{
- pdftitle={Jacobi dynamics and signed quadrature error for the Newman heat flow},
+ pdftitle={Jacobi dynamics, signed error, and cluster transport for the Newman heat flow},
  pdfauthor={Edward Baker},
- pdfsubject={Analytical draft, 16 November 2026}
+ pdfsubject={Analytical draft, 17 November 2026}
 }
 \allowdisplaybreaks[2]
 
@@ -22,10 +22,10 @@
 \newcommand{\C}{\mathbb C}
 \newcommand{\arcosh}{\operatorname{arcosh}}
 
-\title{Jacobi dynamics and signed quadrature error\\
+\title{Jacobi dynamics, signed error, and cluster transport\\
        for the Newman heat flow}
 \author{Edward Baker}
-\date{16 November 2026}
+\date{17 November 2026}
 
 \begin{document}
 \maketitle
@@ -33,21 +33,44 @@
 \begin{abstract}
 The complete theta source defines a positive measure, an orthogonal
 polynomial basis, and a Jacobi chain whose first matrix-exponential
-entry is the normalized Newman field. We develop this correspondence
-and distinguish zeros of the source polynomials from zeros of the
-Fourier readout. The classical Volterra deformation and a complete-source
-confinement estimate give explicit logarithmic coefficient bounds.
-For an \(N\)-site readout we derive the entire error factorization
-\(F-G_N=(-1)^Nh_N^*z^{2N}E_N/(2N)!\), where \(E_N\) is the transform
-of a symmetric probability law. An explicit exponential-moment argument
-gives \(|E_N-1|=O(|z|^2\log^2(N+1)/N)\), uniformly in
-\(|\Im z|\le1\). The known error direction yields real parity brackets,
-pointwise exclusions and conditional contour-count comparisons.
-We compare the next physical head with a monomial correction at equal
-coefficient input. Local zero analysis gives alternating errors at fixed
-simple real zeros, and contour moments resolve two-zero clusters through
-a fixed double heat-flow event. The estimates also apply to
-weighted-square controls. Canonical zero confinement remains open.
+entry is the normalized Newman field. We develop this correspondence,
+the Volterra coefficient evolution, and explicit logarithmic coefficient
+bounds. The finite readout has an entire signed error factorization:
+its first omitted Taylor monomial multiplies the transform of a symmetric
+probability law. Exponential-moment bounds control this factor uniformly
+for physical time \(0\le t\le1/2\) and give directional zero enclosures.
+
+Contour moments then provide regular coordinates for a two-zero cluster,
+including at a double zero. Its discriminant obeys
+\(D'=2+4KD\), where \(K\) is the divided difference of the deflated
+logarithmic derivative. We derive the finite Jacobi heat defect and
+an exact joint signed transport identity. Conditional on a fixed isolated
+double event, explicit critical-scale profiles show why residual and
+drift errors must be retained together; the matched next-head comparison
+does not yield an exclusive transport advantage.
+
+For the complete source, the order-one product and unconditional strip
+turn exterior geometry into signed mass estimates. Sharp rectangular
+weights and real sign brackets provide finite lower-mass interfaces.
+A uniform counting law gives a positive far-tail main term, while an
+identical-count construction shows why projected counts alone cannot
+determine the near interaction. Canonical transverse density yields an
+averaged correction and exceptional isolated-pair counts. Retaining
+conjugate dissipation gives a fixed-collar time-occupation bound of
+order \(T/\log T\), with explicit boundary terms, on fixed time intervals.
+
+The full interaction satisfies
+\(M'=2M^2-12S_2-16DS_3\), including multiple roots. On an independently
+specified count-two tube, its Riccati comparison improves the normalized
+interior negative allowance from order \(\log T\) to order
+\(\sqrt{\log T}\) and improves the upper allowance for the integrated transport multiplier.
+Neither the occupation estimate nor its combination with the available
+visibility bound excludes one exceptional pair. The complementary
+Fourier analysis proves scoped failures of the natural Gram matrix,
+separate constant-mode bounds and even the optimal favorable-phase
+allowance for the continuous source. Full derivations precede a final
+account of the outstanding conditional, temporal and global challenges;
+local interval computations remain supporting evidence in an appendix.
 \end{abstract}
 
 \begingroup
@@ -79,12 +102,14 @@ Symbol & Meaning\\
 \midrule
 \(u\in\R\) & Source coordinate, integrated out in the Fourier transform.\\
 \(z=x+\ii y\) & Observation variable; \(x\) is real height and \(y\) measures distance from the real axis.\\
-\(\lambda\) & Newman heat parameter; the zero objective is at \(\lambda=0\).\\
+\(\lambda,t\) & Physical Newman heat time; \(t=\lambda\) in the cluster analysis, with zero objective at \(t=0\).\\
 \(n,N\) & Polynomial degree and number of retained Jacobi sites, respectively.\\
 \(\Phi,W_\lambda\) & Complete theta density and its heat tilt.\\
 \(\mu_\lambda,F_\lambda\) & Probability-normalized source and its Fourier transform.\\
 \(P_n,\beta_n\) & Monic orthogonal polynomials and positive recurrence coefficients.\\
 \(J_N,G_N\) & Finite Jacobi matrix and its scalar Fourier readout at a fixed time.\\
+\(c,D,K,M\) & Cluster center, quarter squared gap, regular exterior drift, and signed interaction \(M=-K\).\\
+\(T,L,\ell\) & Height band, \(L=\log T\), and frozen microscopic scale \(\ell=1/L\).\\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -102,16 +127,33 @@ Section~\ref{sec:readouts} explains Gaussian quadrature and the two
 zero problems; Section~\ref{sec:memory} explains the omitted chain.
 Sections~\ref{sec:error-law}--\ref{sec:directed} derive the full error
 law, its phase bound and the resulting geometric tests.
-Sections~\ref{sec:zero-geometry}--\ref{sec:source-scope} identify the
-extra zero-geometry information still needed. The fixed-initial-basis
-heat estimate is retained in Appendix~\ref{sec:fixed-chain}.
+Sections~\ref{sec:zero-geometry}--\ref{sec:source-scope} connect local
+zero resolution with the canonical source information.
+Sections~\ref{sec:gt-gap-transport}--\ref{sec:gt-critical-scale} develop
+regular cluster transport, the physical finite-model defect, and their
+joint critical-scale cancellation. Section~\ref{gt-source-curvature}
+derives sharp exterior weights and lower-count interfaces.
+Section~\ref{sec:gt-height} identifies the canonical far tail and the
+precise information lost by horizontal projection.
+Section~\ref{sec:gt-transverse} proceeds from convex heat transport to
+transverse density, spatial means, isolated-pair counts and time occupation.
+Section~\ref{sec:gt-interaction} derives the exact interaction dynamics
+and their conditional interior and integrated bounds.
+Section~\ref{gt-fourier-curvature} develops the complementary Fourier
+representations and the limits of literal positivity groupings.
+Section~\ref{sec:gt-challenges} explains what the resulting quantitative
+gains still leave unresolved. Appendix~\ref{sec:fixed-chain} retains the
+fixed-initial-basis heat estimate; Appendix~\ref{sec:gt-source-certification}
+derives complete-source certification bounds and records the local
+numerical evidence.
 
 A useful distinction runs through the development. An identity
 specifies an object exactly; an upper estimate controls an error;
 a zero theorem also needs separation from cancellation or a complete
 zero count. The manuscript proves the displayed analytical statements
-within their hypotheses. It does not establish a canonical family of
-successful contours or a degree-propagated zero-confinement theorem.
+within their hypotheses. One fixed canonical tube is supported by a recorded interval certificate.
+This does not establish a growing family of successful contours or a
+degree-propagated zero-confinement theorem.
 
 \section{The complete source and its polynomial basis}
 \label{sec:source}
@@ -489,15 +531,27 @@ This is control of the norms along the specified weight deformation.
 \input{sections/directed_error}
 \input{sections/zero_geometry}
 \input{sections/source_scope}
+\input{sections/gap_transport}
+\input{sections/critical_scale}
+\input{sections/source_curvature}
+\input{sections/exterior_height}
+\input{sections/transverse_interactions}
+\input{sections/interaction_dynamics}
+\input{sections/fourier_curvature}
+\input{sections/outstanding_challenges}
 
 \paragraph{Acknowledgment and status.}
 Prepared for Edward Baker with substantial OpenAI Codex LLM assistance.
-The 14 November drafting work and the previously assessed analytical
-source notes record GPT-6.1 Sol / Ultra dispatches, without separate
-backend attestation. The actual model and reasoning effort of this
-16 November manuscript integration are unavailable in its recorded
-configuration. The integration has a same-assistant analytical and
-document check; no independent specialist review is claimed.
+The underlying research records Astra/ultra conceptual and
+GPT-6.1 Sol/ultra proof and assessment dispatches. The 17 November
+integration used separately assigned GPT-6.1 Sol/ultra section and
+assessment collaborators. These are requested dispatch settings, without
+independent serving-backend attestation; the actual lead model and effort
+are unavailable in the recorded configuration. The integrated development
+has internal LLM assessment with shared inherited premises and document
+checks. No independent specialist or human review is claimed.
+Numerical statements retain the scope and internal-review status of their
+original certificates; the new height and time estimates are analytical.
 
 \appendix
 \section{The fixed initial chain and its heat readout}
@@ -558,12 +612,17 @@ moments vanish. Hence \(\mathbb E|x+\sqrt{2\tau}G|^{2N}/(2N)!
 \eqref{eq:product}.
 \end{proof}
 
-\begin{thebibliography}{9}
+\input{sections/source_certification}
+
+\begin{thebibliography}{99}
 \raggedright
 \bibitem{dlmf}
 NIST Digital Library of Mathematical Functions,
 \href{https://dlmf.nist.gov/20.2.E3}{Eq.~20.2.3} and
-\href{https://dlmf.nist.gov/20.7.E32}{Eq.~20.7.32}.
+\href{https://dlmf.nist.gov/20.7.E32}{Eq.~20.7.32};
+also \href{https://dlmf.nist.gov/5.9.E10_2}{Binet's formula 5.9.10\_2},
+\href{https://dlmf.nist.gov/25.2.E8}{Euler's representation 25.2.8},
+and \href{https://dlmf.nist.gov/1.15.E15}{Fej\'er's kernel 1.15.15}.
 
 \bibitem{vanassche}
 W.~Van Assche, \emph{Orthogonal polynomials, Toda lattices and Painlev\'e
@@ -605,5 +664,97 @@ B.~Rodgers and T.~Tao, \emph{The de Bruijn--Newman constant is non-negative},
 Forum of Mathematics, Pi \textbf{8} (2020), e6;
 \href{https://arxiv.org/abs/1801.05914v5}{arXiv:1801.05914v5},
 3 July 2021, \S4, Theorem~11 and Eq.~(56) in the PDF.
+\bibitem{polymath}
+D.~H.~J. Polymath, \emph{Effective approximation of heat flow evolution
+of the Riemann xi function, and a new upper bound for the de
+Bruijn--Newman constant},
+\href{https://arxiv.org/abs/1904.12438v2}{arXiv:1904.12438v2},
+4 August 2019; Theorem~1.5(iv), Proposition~3.1, Theorem~3.2,
+Proposition~9.1(ii), and the proof of the counting law in \S9.
+
+\bibitem{newman}
+C.~M. Newman, \emph{Fourier Transforms with Only Real Zeros},
+Proceedings of the American Mathematical Society \textbf{61}(2) (1976), 245--251;
+\href{https://sites.math.northwestern.edu/~auffing/papers/Newman.pdf}{primary text},
+Theorem~1, p.~246.
+
+\bibitem{csordas}
+G.~Csordas, \emph{Fourier transforms of positive definite kernels and
+the Riemann xi-Function},
+\href{https://arxiv.org/abs/1309.0055v2}{arXiv:1309.0055v2},
+21 February 2014; Theorems~2.4 and~3.7.
+
+\bibitem{gtcertificate}
+E.~Baker, \emph{A certified canonical signed gap estimate on the fixed
+Lehmer tube}, Cluster Gap Transport, Note~15 and its supporting
+interval certificate, 16 November 2026. Prepared with Codex LLM
+assistance; internally assessed within its stated local scope.
+
+\bibitem{gtjoint}
+E.~Baker, \emph{Joint conjugate-source estimate and its remaining lower
+mass}, Cluster Gap Transport, Note~21, 16 November 2026; \S6 records
+the individual collision-control premise screen. Prepared with Codex
+LLM assistance; internally assessed within its stated scope.
+
+\bibitem{gtgeometry}
+E.~Baker, \emph{Joint-strip geometry from the existing canonical
+source array}, Cluster Gap Transport, Note~22 and its supporting
+interval record, 16 November 2026. Prepared with Codex LLM assistance;
+internally assessed within its stated local scope.
+
+\bibitem{maplesrodgers}
+K.~Maples and B.~Rodgers, \emph{Bootstrapped zero density estimates and
+a central limit theorem for the zeros of the zeta function},
+\href{https://arxiv.org/abs/1404.3080v2}{arXiv:1404.3080v2},
+4 June 2016; Corollary~2.3, Theorem~2.4 and \S4, Eq.~(18).
+
+\bibitem{tnddensity}
+E.~Baker, \emph{Convex broad-window transport and full-family transverse
+density}, Theta Observables and Newman Dynamics, operator-evolution
+Note~21, 7 November 2026; complete-field inputs and collision assembly
+from Notes~18--19. Research notes prepared with Codex LLM assistance;
+internal assessment in Review~7, with shared premises.
+
+\bibitem{gtsharpmass}
+E.~Baker, \emph{Sharp exterior weights and finite-count barriers},
+Cluster Gap Transport, Note~27, 16 November 2026. Prepared with Codex
+LLM assistance; internally assessed for its rectangular information class.
+
+\bibitem{gtbrackets}
+E.~Baker, \emph{Real-bracket lower counts and moving-boundary payment},
+Cluster Gap Transport, Note~30, with the fixed supporting acquisition
+in Notes~31--32, 16 November 2026. Prepared with Codex LLM assistance;
+internal analytical assessment and one certificate replay, local scope.
+
+\bibitem{gtfar}
+E.~Baker, \emph{Uniform signed far exterior}, Cluster Gap Transport,
+Note~33, 17 November 2026; inherited complete count and shell estimates
+from operator-evolution Note~18. Prepared with Codex LLM assistance;
+internally assessed within the independently counted-pair scope.
+
+\bibitem{gtcounts}
+E.~Baker, \emph{Identical horizontal counts and opposite interaction
+signs}, Cluster Gap Transport, Note~34, 17 November 2026. Prepared with
+Codex LLM assistance; internally assessed for its fixed-slice analytic
+class, without a supplied canonical source or common heat-time family.
+
+\bibitem{gtphase}
+E.~Baker, \emph{Two literal Fourier-grouping screens} and
+\emph{Complete-source favorable-phase allowance}, Cluster Gap Transport,
+Notes~28 and~36, 16--17 November 2026. Prepared with Codex LLM assistance;
+internally assessed for the stated allowance classes.
+
+\bibitem{gttransverse}
+E.~Baker, \emph{Averaged transverse correction}, \emph{Isolated-pair
+exception count}, and \emph{Fixed-collar negative-pair time occupation},
+Cluster Gap Transport, Notes~37, 38 and~40, 17 November 2026.
+Prepared with Codex LLM assistance; internally assessed with the stated
+collar, source and time hypotheses.
+
+\bibitem{gtdynamics}
+E.~Baker, \emph{Exact interaction evolution and the Riccati bound},
+Cluster Gap Transport, Note~41, 17 November 2026. Prepared with Codex
+LLM assistance; internally assessed on an independently specified
+count-two tube. Aggregate-to-snapshot limitations retain their scope.
 \end{thebibliography}
 \end{document}

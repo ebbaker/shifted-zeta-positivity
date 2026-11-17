@@ -1,0 +1,574 @@
+\section{Source estimates for the exterior curvature}
+\label{gt-source-curvature}
+
+Use \(t=\lambda\) for physical heat time. Fix a real center \(a\) and a
+counted pair as in \eqref{eq:cluster-coordinates}--\eqref{eq:pair-discriminant}.
+On each slice, let \(F\) be the field, \(Q(z)=(z-c)^2-D\) its pair
+polynomial, \(A=F/Q\) the zero-free factor on the counted disk, and
+\(B=A'/A\). The drift \(K\) is the divided difference of \(B\) at the
+two roots, with \(B'(c)\) at a double. Multiplying the field by a
+nonzero scalar on a slice leaves these quantities unchanged. The
+physical drift enters \eqref{eq:gt-gap-law}, with the signed survival
+budget given by \eqref{eq:gt-backward-gap}.
+
+\subsection{Laurent coefficients of the complete field}
+
+\begin{proposition}[Positive Laurent modes of the deflated logarithm]
+\label{gt-laurent-modes}
+Suppose that \(|z-a|<R\) contains the pair, the boundary is zero-free
+with a collar, and the offsets \(u_i=z_i-a\) satisfy \(|u_i|\le r<R\).
+Let \(L(w)\) be any collar logarithm of \(F(a+w)/w^2\), with a
+constant centering allowed. Define
+\[
+ g_n=\frac{1}{2\pi\ii}\oint_{|w|=R}L(w)w^{-n-1}\,\dd w,\qquad
+ h_j(u_1,u_2)=\sum_{\ell=0}^j u_1^\ell u_2^{j-\ell}.
+\]
+Then
+\begin{equation}
+ K=\sum_{n\ge2} n g_n h_{n-2}(u_1,u_2).
+ \label{gt-laurent-k}
+\end{equation}
+The series converges absolutely. For a field real under conjugation,
+\(g_n\) for \(n\ge1\) and the symmetric \(h_j\) are real.
+\end{proposition}
+
+\begin{proof}
+The deflated factor is holomorphic and zero-free in a slightly larger
+disk. Thus \(g(w)=\log A(a+w)\) exists there. For \(|w|>r\), expanding
+both logarithms of \(1-u_i/w\) yields
+\[
+ L(w)=g(w)+C-\sum_{m\ge1}\frac{u_1^m+u_2^m}{m w^m}.
+\]
+Here \(C\) includes the branch difference and the centering. Its value
+cannot affect the positive Laurent coefficients, which are the Taylor
+coefficients of \(g\). Conjugation of the pair and field makes \(g'\)
+real under conjugation, giving the asserted reality. Multiplying the
+two convergent geometric series gives
+\[
+ \frac{1}{Q(a+w)}=\sum_{j\ge0} h_j(u_1,u_2)w^{-j-2}.
+\]
+In the contour formula \(K=(2\pi\ii)^{-1}\oint g'(w)/Q(a+w)\,\dd w\),
+the \(w^{-1}\) coefficient pairs \(g'\)'s term \(n g_n w^{n-1}\)
+with \(j=n-2\). Both series converge absolutely and uniformly on
+the circle. At a double \(h_j=(j+1)u_1^j\), so the same formula
+requires no division by a vanishing root separation.
+\end{proof}
+
+If \(|L|\le M_L\) on the circle, Cauchy's estimate gives
+\(|g_n|\le M_L/R^n\), and \(|h_j|\le (j+1)r^j\).
+The upper allowance obtained by retaining \(g_2\) exactly and
+paying the rest solely by these two bounds is
+\begin{equation}
+ K\le U_2=2g_2+
+ \frac{M_L}{R^2}\left(\frac{2}{(1-r/R)^3}-2\right).
+ \label{gt-laurent-allowance}
+\end{equation}
+The parenthesis follows by differentiating the geometric series
+twice, then removing the \(n=2\) term. With the fixed-tube choices
+\(r=3/4,\ R=21/20,\ M_L=1737/1000\), one has
+\(r/R=5/7\), \(M_L/R^2=386/245\), and the parenthesis is \(335/4\).
+Consequently
+\[
+ U_2\ge -\frac{772}{245}+\frac{12931}{98}
+       =\frac{63111}{490}>0 .
+\]
+Even exact knowledge of \(g_2\) cannot make this allowance certify
+\(K\le-59/100\) at a single time with those parameters. The bound
+is on the displayed allowance. To use the exact \(g_2\) for this
+target, one needs
+\(\sum_{n\ge3} n g_n h_{n-2}\le-59/100-2g_2\).
+That signed tail may be smaller than the allowance through cancellation.
+
+The unsigned local data can also coexist with either sign of the actual
+drift in the class of analytic heat fields. Put \(s=t-T\),
+\(p=1+4\kappa s\), \(b=\kappa/p\), and \(D=2sp\), and consider
+\[
+ F_\kappa(t,a+w)=P(w^2-D),\qquad P=p^{-5/2}\e^{bw^2}.
+\]
+On \(p>0\), the elementary derivatives are
+\[
+  P_t/P=-10b-4b^2w^2,\quad P_w/P=2bw,\quad
+  P_{ww}/P=2b+4b^2w^2,\qquad D'=2+8bD .
+\]
+It follows that \((\partial_t F_\kappa+\partial_w^2F_\kappa)/P
+=-8b(w^2-D)-D'+8bw^2+2=0\). The deflated logarithmic derivative
+is \(2bw\), so \(K=2\kappa/p\). On \(|s|\le1/20\) and
+\(0<|\kappa|\le1/20\), \(99/100\le p\le101/100\) and
+\(|D|\le101/1000\). Both roots lie inside \(7/10\).
+On \(7/10<|w|<11/10\) a common bound follows from the branch
+\[
+ L=-\tfrac52\log p+bw^2+\log(1-D/w^2).
+\]
+Indeed \(|\log p|\le1/99\), \(|bw^2|\le121/1980\), and
+\(|D/w^2|<1/4\), so the logarithm series bounds \(|L|\) by
+\(277/660<1/2\). The count, collar and unsigned bounds therefore
+allow both signs. For \(t_-=T-1/20\) and \(t_+=T+1/20\),
+\(\exp(4\int_t^{t_+}K)=[p(t_+)/p(t)]^2\). The exact signed margin
+is this weight at \(t_-\) times \(D(t_-)\), namely
+\(-p(t_+)^2/(10p(t_-))\). It is zero if the starting time is \(T\).
+For \(\kappa\ne0\) these examples have order two, from the quadratic
+exponential, and the shifted field need not be globally even in \(z\).
+
+\subsection{Strip, order and the exterior sum}
+
+For the canonical \(H_t\), reflection of \(\xi\) makes the time-zero
+formula in Section~\ref{sec:source} equivalent to
+\(H_0(z)=\xi((1+\ii z)/2)/8\). The classical strip
+\(0\le\Re s\le1\) gives \(|\Im z|\le1\) for its zeros in these
+variables \cite[\S25.10(i)]{dlmf}. De Bruijn's strip theorem for a
+real even integrable Fourier source of decay
+\(O(\e^{-|u|^\gamma})\), \(\gamma>2\), replaces the squared
+half-width \(y_0^2\) by \(\max(y_0^2-2t,0)\) after multiplication
+of the source by \(\e^{tu^2}\). The heat parameter here is the one
+in \eqref{eq:field}. The source envelope \eqref{eq:tail} pays the
+decay hypothesis. Thus on \(I=[0,1/10]\) every canonical zero
+\(\varrho\) satisfies
+\begin{equation}
+ |\Im\varrho|\le\sqrt{1-2t}\le1 .
+ \label{gt-canonical-strip}
+\end{equation}
+This is the unconditional global strip, with nonreal and repeated
+zeros allowed. See Newman's Theorem~1 and the same-normalization
+formulation in Polymath, \S1 and Theorem~3.2 \cite{newman,polymath}.
+
+The same source estimate pays the growth needed for the zero product.
+For \(|z|\le R\) on \(I\), the absolute integrand on \(u\ge0\) in
+\eqref{eq:field} is bounded, up to a constant, by
+\(\exp(9u+u^2/10+Ru-\pi\e^{4u})\). Absorb \(9u+u^2/10\) into a
+constant plus \((\pi/2)\e^{4u}\), retain the integrable factor
+\(\exp(-(\pi/4)\e^{4u})\), and maximize the remaining exponent.
+For \(R\ge0\),
+\[
+ \sup_{u\ge0}\bigl(Ru-(\pi/4)\e^{4u}\bigr)
+ \le \tfrac R4\log_+(R/\pi),
+\]
+where the right side is zero at \(R=0\). Hence
+\(\log\max_{|z|\le R}|H_t(z)|=O(R\log(2+R))\) as \(R\to\infty\),
+uniformly on \(I\). Positivity gives \(H_t(0)\ge H_0(0)>0\).
+Jensen's formula on radius \(2R\) yields a zero count
+\(O(R\log(2+R))\) inside radius \(R\), since every such zero
+contributes at least \(\log 2\). Summing inverse squares over
+dyadic annuli gives the uniform tail
+\(O(\log(2+R)/R)\), with no evaluated constant needed for convergence.
+
+\begin{proposition}[Exterior divisor formula]
+\label{gt-exterior-proposition}
+For a real entire field of order at most one on a counted pair disk,
+\begin{equation}
+ -K=\sum_{\varrho\ {\rm exterior}}
+       \frac{1}{(z_1-\varrho)(z_2-\varrho)}
+ \label{gt-exterior-k}
+\end{equation}
+with multiplicities. The sum converges absolutely and applies also at
+a double by setting \(z_1=z_2\).
+\end{proposition}
+\begin{proof}
+For order at most one, the bound \(\log M(R)=O(R^{1+\epsilon})\)
+for \(0<\epsilon<1\) similarly gives inverse-square summability,
+after removing any zero at the origin for Jensen's formula.
+Hadamard factorization uses factors
+\((1-z/\varrho)\e^{z/\varrho}\) for nonzero zeros and has a
+prefactor \(z^m\e^{\alpha+\beta z}\).
+In the canonical case the equivalent opposite-pair product is the
+one used in \cite[proof of Proposition~3.1(i)]{polymath}. Logarithmic
+differentiation gives the terms \(1/(z-\varrho)+1/\varrho\), a
+constant \(\beta\), and the origin term \(m/z\). Subtracting \(Q'/Q\)
+removes precisely the two counted occurrences. The remaining
+constants cancel in the divided difference. Each remaining simple-pole
+term contributes its negative reciprocal product, including \(m\)
+copies of the term for an exterior zero at the origin. The finite
+poles stay outside the counted disk, and the reciprocal-product tail
+is \(O(|\varrho|^{-2})\) on compact bounded pair coordinates.
+Termwise divided differences and the confluent derivative are also
+justified by taking the contour integral before passing to the limit.
+\end{proof}
+
+\subsection{Pairing conjugate exterior zeros}
+
+\begin{proposition}[Grouped exterior lower mass]
+\label{gt-grouped-exterior}
+On a slice satisfying Proposition~\ref{gt-exterior-proposition}, suppose
+an auxiliary disk \(|z-a|<R_0\) counts only the target pair and has
+zero-free boundary. Assume \(R_0>\delta\), \(|c-a|\le C,\ |D|\le d\)
+and that
+\(|\Im\varrho|\le\delta\) for the exterior zeros. If
+\[
+ X=\sqrt{R_0^2-\delta^2}-C>0,\qquad X^2>\delta^2+d ,
+\]
+then all exterior conjugate groups contribute positively to \(-K\).
+For each selected disjoint conjugation-invariant multiset of \(n_j\)
+exterior zeros with
+\(L_j\le|\Re\varrho-c|\le U_j\) and \(L_j^2>\delta^2+d\), its
+contribution is at least \(n_j m(L_j,U_j)\), where
+\begin{equation}
+ m(L,U)=\frac{L^2-\delta^2-d}
+                  {(U^2+\delta^2+d)^2+4U^2\delta^2}.
+ \label{gt-group-mass}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Write \(\varrho=c+x+\ii y\). The product in \eqref{gt-exterior-k}
+is \((x+\ii y)^2-D\). For a nonreal conjugate pair its reciprocal
+and the conjugate reciprocal sum to \(2q\), where
+\begin{equation}
+ q(x,y,D)=\frac{x^2-y^2-D}{(x^2-y^2-D)^2+4x^2y^2}.
+ \label{gt-conjugate-weight}
+\end{equation}
+A real root contributes \(q(x,0,D)\). Equal multiplicities at
+conjugate zeros are included. Every exterior root satisfies
+\(|\varrho-a|\ge R_0\), so
+\(|x|\ge\sqrt{R_0^2-\delta^2}-C=X\).
+The numerator in \eqref{gt-conjugate-weight} is positive.
+Within a selected multiset it is at least \(L_j^2-\delta^2-d\),
+and its denominator is at most
+\((U_j^2+\delta^2+d)^2+4U_j^2\delta^2\).
+Each occurrence contributes its share, and the absolutely convergent
+sum permits omission of all unselected conjugate groups in this
+lower bound for \(-K\).
+\end{proof}
+
+When \(F\) is even and the reflected pair is exterior, retain
+\(-z_1,-z_2\) as one multiset. Provided \(c^2-D>0\), its contribution
+is exactly
+\[
+ \frac{1}{(2z_1)(z_1+z_2)}+\frac{1}{(z_1+z_2)(2z_2)}
+   =\frac{1}{2z_1z_2}=\frac{1}{2(c^2-D)} .
+\]
+This includes both occurrences at a double. For a positive center
+\(a>C\) with \((a-C)^2>d\), the lower bound for this contribution
+is \(\kappa_0=[2((a+C)^2+d)]^{-1}\).
+Adding other disjoint selected multisets from
+Proposition~\ref{gt-grouped-exterior} gives
+\begin{equation}
+ K\le-\kappa_0-\sum_j n_j m(L_j,U_j).
+ \label{gt-mirror-allowance}
+\end{equation}
+A uniform bound requires the counts and ranges on every slice, with
+each occurrence assigned once. The lower mass supplies an upper
+bound on \(K\). In the all-real exterior class an upper endpoint
+inverse-square sum has the opposite direction. Indeed, for real
+separated \(z_1,z_2\) and every real exterior \(\varrho\) outside the
+segment, \(p=z_1-\varrho\) and \(q=z_2-\varrho\) give
+\(p^{-2}+q^{-2}-2/(pq)=(p-q)^2/(p^2q^2)\ge0\). Thus an upper
+bound \(G_*\) for the sum of \(p^{-2}+q^{-2}\) implies
+\(K\ge -G_*/2\).
+
+\begin{corollary}[Exterior mass required on an isolated tube]
+\label{gt-fixed-strip-tube}
+Assume the hypotheses of Proposition~\ref{gt-grouped-exterior} and
+the bound \eqref{gt-mirror-allowance} hold throughout a time interval
+\([u,v]\) of length \(s\). To reach \(K\le-\kappa\) by this estimate,
+the other selected groups must supply
+\(\sum_j n_jm(L_j,U_j)\ge\kappa-\kappa_0\) on each slice.
+If \(D(v)<2s-4\kappa_0s^2\), the signed cost allowance from the
+reflected-pair bound alone exceeds the incoming gap.
+\end{corollary}
+\begin{proof}
+The required additional mass follows directly from
+\eqref{gt-mirror-allowance}. For the constant drift bound
+\(K\le-\kappa_0\), the signed cost allowance in
+\eqref{eq:gt-backward-gap} satisfies
+\[
+ 2\int_u^v\e^{-4\kappa_0(v-t)}\,\dd t
+   \ge 2s-4\kappa_0s^2,
+\]
+by \(\e^{-x}\ge1-x\). Other exterior mass can reduce the actual cost.
+\end{proof}
+
+The auxiliary disk and target coordinate bounds require a separate
+full-slab enclosure. Appendix~\ref{sec:gt-source-certification}
+records a fixed canonical instance. The geometric premises and
+the signed magnitude requirement can be evaluated independently
+of the direct early endpoint.
+
+\subsection{Sharp rectangular weights and necessary counts}
+
+\begin{proposition}[Sharp rectangular lower weight]
+\label{gt-sharp-exterior}
+Let \(\delta,d\ge0\), \(0<L\le U\), and \(L^2>\delta^2+d\).
+On the rectangle \(L\le |x|\le U,\ |y|\le\delta,\ |D|\le d\),
+the exact minimum of \(q\) in \eqref{gt-conjugate-weight} is
+\begin{equation}
+ \mu(L,U;\delta,d)
+ =\min_{\substack{r\in\{L,U\}\\ e\in\{-d,d\}}}
+ \frac{r^2-\delta^2-e}{(r^2-\delta^2-e)^2+4r^2\delta^2}.
+ \label{gt-sharp-weight}
+\end{equation}
+In \eqref{gt-mirror-allowance} one may replace each \(m(L_j,U_j)\)
+by \(\mu(L_j,U_j;\delta,d)\).
+\end{proposition}
+
+\begin{proof}
+Write \(s=x^2,\ u=y^2,\ v=s-u-D>0\), so \(q=v/(v^2+4su)\).
+At fixed \(s,D\), its \(u\)-derivative has numerator
+\(v^2-4s(s-D)\) and positive denominator \((v^2+4su)^2\).
+The numerator is at most \(-(s-D)(3s+D)<0\), since
+\(v\le s-D\) and \(s>d\ge |D|\). The minimum uses \(u=\delta^2\).
+For fixed \(s,u\), the derivative with respect to \(v\) has numerator
+\(4su-v^2\). On a positive interval this can only change sign from
+positive to negative, so the minimum over \(D\) is at an endpoint.
+Finally, with \(u,D\) fixed, the \(s\)-derivative has numerator
+\(4u(u+D)-v^2\), which is strictly decreasing in \(s\).
+This leaves \(s=L^2,U^2\). Collapsed intervals simply repeat
+corners. The estimate \eqref{gt-group-mass} bounds \(q\) below on the
+same rectangle, so \(\mu\ge m\). Summing over the selected occurrences
+in Proposition~\ref{gt-grouped-exterior} gives the claim.
+\end{proof}
+
+\begin{corollary}[Necessary counts for the width-one allowances]
+\label{gt-rectangle-count}
+Under Corollary~\ref{gt-fixed-strip-tube}, take \(\delta=1,\ d=1/5\)
+and a reflected-pair lower allowance \(0<\kappa_0<3/10^9\).
+A lower bound of \(59/100\) for \(-K\) using \(\kappa_0\) and the weights
+\eqref{gt-group-mass} requires at least ten additional selected
+occurrences. Using the sharp rectangular weights \eqref{gt-sharp-weight}
+requires at least five additional selected occurrences.
+\end{corollary}
+
+\begin{proof}
+Put \(h=1+d=6/5\). At fixed \(L\), the denominator of
+\(m(L,U)\) increases with \(U\), so the largest possible weight has
+\(L=U=\sqrt{s}\), \(s>h\). With \(r=s-h\), the weight becomes
+\[
+ \frac{r}{r^2+4(h+1)r+4h(h+1)}.
+\]
+Its derivative has the sign of \(4h(h+1)-r^2\), giving the maximum
+\(M_{\rm sep}=1/[4(h+1+\sqrt{h(h+1)})]=5/(44+4\sqrt{66})\).
+For the sharp weight, the admissible values \(y=1,\ D=d\) give an
+upper cap by maximizing \(r/(r^2+4r+4h)\) over \(r>0\).
+The derivative has the sign of \(4h-r^2\). The maximum is
+\(M_{\rm rect}=1/[4(1+\sqrt h)]\), at \(s_*=h+2\sqrt h\).
+To see that this cap is attained within the rectangular information
+class, take \(L=U=\sqrt{s_*}\). At \(D=-d\) the numerator variable
+in \(q\) rises from \(v=2\sqrt h\) to \(v+2d\). The difference
+of the corresponding weights has the sign of
+\(4s_*-v(v+2d)=4\sqrt h(2-d)>0\).
+Equation~\eqref{gt-sharp-weight} therefore gives \(M_{\rm rect}\)
+for this rectangle.
+
+Since \((2031/250)^2<66\), \(M_{\rm sep}<625/9562\).
+The exact inequality
+\[
+ \frac{59}{100}-\frac{3}{10^9}-\frac{5625}{9562}
+ =\frac{8289985657}{4781000000000}>0
+\]
+and \(\kappa_0<3/10^9\) rule out the separated estimate with nine
+or fewer additional occurrences. Since \(4M_{\rm rect}<1/2\), the
+sharp rectangular estimate with four or fewer also falls short.
+\end{proof}
+
+These thresholds constrain the two displayed lower estimates with
+width one and \(d=1/5\). A uniform canonical estimate using that
+information must pass at \(t=0\), even when the strip narrows later.
+The cap \(5M_{\rm rect}>25/42>59/100\) allows each selected rectangle
+to use the same optimizing horizontal coordinate and leaves
+sufficiency for five canonical occurrences open. An actual selection
+must account for disjoint groups, conjugate occurrences, a shared
+\(D\), and full-time locations. Omitted groups can add positive mass
+and data specifying reality can improve the lower weight. An exact
+multiplicity count of one in a conjugation-invariant exterior region
+forces a real simple zero. If its horizontal distance is at most
+\(U\), it then supplies \(1/(U^2+d)\) under the same positive
+denominator condition.
+These rectangular and count estimates are developed in \cite{gtsharpmass}.
+
+\subsection{Real brackets and full-time boundary signs}
+
+\begin{proposition}[Lower mass from disjoint real brackets]
+\label{gt-real-brackets}
+Suppose the conditions of Proposition~\ref{gt-grouped-exterior} hold
+throughout a closed time cell \(J\) for a real entire field \(H_t\).
+Let \((b_j^-(t),b_j^+(t))\) be finitely many positive real intervals
+outside the auxiliary disk, pairwise disjoint on each slice, with
+continuous endpoints and strict opposite signs of \(H_t\) at their
+endpoints for all \(t\in J\). Suppose \(c(t)\in[c_-,c_+]\),
+\(D(t)\in[D_-,D_+]\), and put
+\[
+ l_j=\inf_J b_j^-,\qquad u_j=\sup_J b_j^+,\qquad
+ U_j=\max\{|l_j-c_+|,|u_j-c_-|\}.
+\]
+The intervals supply at least one distinct real zero occurrence each
+on every slice and
+\begin{equation}
+ -K(t)\ge\sum_j\frac{1}{U_j^2-D_-}\qquad(t\in J).
+ \label{gt-real-bracket-mass}
+\end{equation}
+For an even field with \(c_->0,\ c_-^2>D_+\), if the reflected target
+pair is exterior and disjoint from the positive brackets and their
+reflections, one may add its lower mass \(1/[2(c_+^2-D_-)]\).
+If the bracket reflections are also exterior, one may add
+\(\sum_j[(u_j+c_+)^2-D_-]^{-1}\).
+\end{proposition}
+
+\begin{proof}
+At each time the intermediate value theorem gives a real zero in
+each bracket. Select one occurrence per interval on that slice.
+Disjointness prevents duplicate selection. The remaining multiset
+is still conjugation-invariant, even if further copies of a selected
+real root remain. For a selected zero \(r_j\), the distance bound
+comes from the extremes of \([l_j,u_j]-[c_-,c_+]\). Exterior
+separation ensures \(0<(r_j-c)^2-D\le U_j^2-D_-\). Taking
+reciprocals and omitting the favorable remainder proves
+\eqref{gt-real-bracket-mass}. The reflected target pair contributes
+\(1/[2(c^2-D)]\). Evenness gives one distinct negative reflection of
+each selected real occurrence. For those exterior reflections the
+positive denominator is at most \((u_j+c_+)^2-D_-\), because
+\(r_j,c>0\). The disjointness assumptions allow each contribution
+to enter once.
+\end{proof}
+
+The count is a lower count and the sign test allows multiple zeros.
+Locations may be selected separately on each slice. In particular,
+brackets with overlapping unions of locations over \(J\) still give
+distinct occurrences if they are disjoint at the same time. An
+independent positive lower bound \(D_-\) strengthens the weights and
+already establishes reality of the target pair on that cell.
+
+The boundary signs can be established on entire cells using the
+physical heat equation. For an affine real boundary
+\(b(t)=b_*+v(t-t_*)\) and any fixed positive factor \(\gamma\), set
+\(f(t)=\gamma H_t(b(t))\). The operators \(\partial_t\) and
+\(\partial_z\) commute, so \(\partial_t H_t=-\partial_z^2H_t\) gives
+\begin{equation}
+ f^{(m)}(t)=\gamma\sum_{j=0}^m\binom mj(-1)^jv^{m-j}
+                     \partial_z^{m+j}H_t(b(t)).
+ \label{gt-moving-boundary-derivative}
+\end{equation}
+If \(|\gamma H_t|\le M_*\) on every disk of radius \(R_*\) centered
+at \(b(t)\), Cauchy's estimate bounds \(|f^{(m)}|\) by
+\[
+ C_m=M_*\sum_{j=0}^m\binom mj |v|^{m-j}
+                     \frac{(m+j)!}{R_*^{m+j}} .
+\]
+For example, if an estimate in the local gauge
+\(\exp(\pi b(t)/8)\) is available, the fixed gauge
+\(\gamma=\exp(\pi b_*/8)\) multiplies that disk bound by at most
+\(\exp(\pi |v|\max_{t\in J}|t-t_*|/8)\).
+
+On a cell \(J=[t_*-\tau,t_*+\tau]\), interpolate sample values
+with absolute error \(\varepsilon\) in this fixed gauge at the
+\(n+1\) nodes \(t_*+\tau\cos(\pi j/n)\), \(0\le j\le n\).
+The discrete cosine expansion of the interpolant of the sample
+errors has ordinary Chebyshev coefficients bounded by
+\(\varepsilon\) in degrees \(0,n\) and \(2\varepsilon\) in the
+intermediate degrees, by the weighted discrete orthogonality with
+half endpoint weights. Its uniform norm is at most \(2n\varepsilon\).
+The node product in the scaled variable \(x=(t-t_*)/\tau\) is
+\(2^{1-n}(x^2-1)U_{n-1}(x)\), with \(U_{n-1}\) the Chebyshev
+polynomial of the second kind. Its norm is at most \(2^{1-n}\),
+as is seen at \(x=\cos\theta\) from the product of
+\(\sin\theta\) and \(\sin(n\theta)\). The ordinary interpolation
+remainder for the true samples therefore bounds the error of the
+computed interpolant \(p(x)=\sum_{j=0}^n a_jT_j(x)\) by
+\[
+ E=2n\varepsilon+
+     \frac{C_{n+1}}{(n+1)!}\,2^{1-n}\tau^{n+1}.
+\]
+Here the polynomial coefficients represent exact interpolation of
+the approximate samples. Any extra coefficient approximation errors
+can be added in absolute value using \(|T_j|\le1\).
+The estimate \(|T'_j|\le j^2\), from
+\(T'_j=jU_{j-1}\), gives a sufficient sign test on each closed
+subcell of radius \(\eta\) in \(x\) with midpoint \(x_0\):
+\[
+ \sigma p(x_0)>E+\eta\sum_{j=1}^n j^2|a_j|,\qquad \sigma\in\{-1,1\}.
+\]
+This follows by the mean value theorem and proves \(\sigma f>0\)
+throughout the subcell. Affine ordering and exclusion inequalities
+hold throughout a cell if they hold at both endpoints.
+With independently enclosed target coordinates, these bounds yield
+a uniform exterior lower-mass test \cite{gtbrackets}. The fixed
+canonical application is recorded in
+Appendix~\ref{sec:gt-source-certification}.
+
+\subsection{An exact even quartic with negative drift and a collision}
+
+Take any \(a>10\) and \(0\le t\le 1/10\). Let \(s=t-1/20\) and
+\[
+ F(t,z)=\e^{-s\partial_z^2}(z^2-a^2)^2
+       =z^4-(2a^2+12s)z^2+a^4+4a^2s+12s^2.
+\]
+The terminating expansion satisfies \(\partial_tF=-\partial_z^2F\).
+The even polynomial has order zero, and at \(s=0\) it has double
+zeros at \(\pm a\), with \(F_{zz}(t,a)=8a^2\). The two squared
+roots are \(a^2+6s\pm S\) with \(S^2=8s(a^2+3s)\). For
+\(|s|\le1/20\) and \(a>10\),
+\[
+ |S|^2\le\tfrac25(a^2+\tfrac3{20})<\tfrac49 a^2,\qquad
+ |6s\pm S|<\tfrac7{10}a .
+\]
+Both squared roots have positive real part. Their square roots
+\(z_1,z_2\) in the right half-plane satisfy \(|z_i+a|\ge a\), so
+\(|z_i-a|=|6s\pm S|/|z_i+a|<7/10\). The remaining roots are
+their negatives. The disks of radii \(9/10\) and \(8/5\) about \(a\)
+therefore count the same two roots, and the strip holds since
+\(7/10<\sqrt{1-2t}\) throughout the slab.
+
+Writing \(w_i=z_i-a\) and averaging the identities
+\(2aw_i=6s\pm S-w_i^2\) gives
+\[
+ |c-a|\le \frac{79}{200a}<\frac7{100}.
+\]
+Also \(D=S^2/(z_1+z_2)^2\) and
+\(|z_1+z_2|\ge2a-7/5\ge9a/5\), hence
+\(|D|<100/729<1/5\). The sum \(z_1+z_2\) is positive real by
+conjugation, so \(D\) has the sign of \(s\) away from zero.
+The only exterior group is the reflected pair. Thus
+\(K=-1/(2(c^2-D))<0\) on the slab. With \(v=1/10\) and
+\(W(t)=\exp(4\int_t^v K)\), the exact gap equation yields
+\[
+ D(v)-2\int_0^v W(t)\,\dd t=W(0)D(0)<0 .
+\]
+The margin is zero if the cost starts at the double. This control
+shares the order, strip, geometry and favorable sign, and fails the
+strict incoming-cost condition. Its polynomial is unbounded on the
+real axis, whereas a Fourier transform of a finite nonnegative
+measure there is bounded by the source mass.
+
+\subsection{Scope of the strip input}
+
+The strip and the order hypotheses have separate roles. For instance,
+the endpoint-defective positive finite square-source changes and the
+bounded positive finite-prime orbit changes have order at most one
+by the same double-exponential bound, but their zeros escape every
+fixed horizontal strip. To see the distinction, let \(f_t\) denote
+their heat-weighted half-line source. Suppose \(f_t^{(2j-1)}(0)\ne0\)
+is the first nonzero odd endpoint derivative. This first term
+survives the even heat multiplier. Integrating the cosine transform by
+parts \(2j+2\) times yields
+\[
+ \int_0^\infty f_t(u)\cos(zu)\,\dd u
+ =\frac{(-1)^j f_t^{(2j-1)}(0)}{z^{2j}}
+    +O_Y(|z|^{-2j-2}) \qquad (|\Im z|\le Y).
+\]
+The differentiated half-line sources are integrable against
+\(\e^{Yu}\), so the last integration remainder has this order.
+Thus each fixed strip contains only finitely many zeros. On the
+positive imaginary axis the first nonzero mode dominates the positive
+tail of these sources. On
+\([(\log y)/4,(\log y)/4+1]\), its density is bounded below by
+\(\exp(-O_t(y))\), and \(\cosh(yu)\ge\e^{yu}/2\).
+This gives logarithmic growth at least
+\((y/4)\log y-O_t(y)\), ruling out exponential type. An entire
+function of order at most one with finitely many zeros is a polynomial
+times a linear exponential by Hadamard factorization. There must
+therefore be infinitely many zeros, even though each strip contains
+finitely many. This argument depends on the indicated endpoint
+defect and tail assumptions. A changed source meeting the strip,
+count and order hypotheses still obeys the grouped estimate.
+
+
+The individual premise screen is recorded in \cite[\S6]{gtjoint}.
+Euler-factor translates can share order one and the strip when their
+additional initial zeros lie within its width; the required enlarged
+disk and useful lower mass are then still untested. Reflected
+super-Gaussian controls fail order at most one. The damped smooth-shape
+and positive-primitive controls share the order bound but have no
+established common strip or local lower-mass payment here. Finite-profile
+threshold controls do not supply this earlier slab merely by being
+all-real at their threshold. The normalized endpoint-merger control
+retains its RH hypothesis; its remote added doubles do not identify
+this tube. Changed observations need not satisfy the physical heat
+equation, and fractional profile masses do not supply an integer
+multiplicity-counted divisor. Each conclusion concerns the named
+premise and control class, not arbitrary changes of the theta source.

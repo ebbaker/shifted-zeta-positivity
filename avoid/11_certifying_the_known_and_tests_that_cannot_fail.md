@@ -120,3 +120,7 @@ pays the gap test. The [first OA draft](../papers/investigations-5/08_theta_obse
 records this scoped reason to stop before computation and retains
 the quadratic check that the sufficient redundancy screen has no
 converse.
+
+## A signed local success still needs the direct comparator, 16 November 2026
+
+For Edward Baker with Codex assistance; lead recorded settings unavailable, proof/numerics/review helpers explicitly Sol6.1/ultra. The [GT canonical synthesis](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/16_VCD_GT_CANONICAL_SIGNED_GAP_SYNTHESIS_20261116.md) states: “Direct endpoint evaluation is cheaper and tighter on this input class.” Its complete-source certificate pays a signed gap budget where the absolute-value budget fails on one Lehmer-pair tube. The direct method receives the same certified collar/angular bounds; its 65-call endpoint row is not a standalone geometry-acquisition cost. The [internal assessment](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/08_VCD_GT_CANONICAL_GAP_CERTIFICATE_ASSESSMENT_20261116.md) accepted after that premise was clarified and verified the quadratic's failed passage test. The gain is this signed-versus-absolute comparison, not new zero coverage or an advantage over direct source evaluation. Another known-pair run needs a new quantitative question.

@@ -1,0 +1,400 @@
+\section{Fourier formulas for the deflated curvature}
+\label{gt-fourier-curvature}
+
+\subsection{The complete two-point quantity}
+
+On a counted pair disk, let \(F\) be the field on one slice,
+\(A=F/Q\), and \(B=A'/A\) as in
+Section~\ref{gt-source-curvature}. This notation also applies to
+a finite Fourier readout with its own counted disk. For an analytic
+function \(f\), put \(\mathcal L[f]=(f')^2-ff''\). Then
+\begin{equation}
+ -K_F=\int_0^1
+ \frac{\mathcal L[A]}{A^2}\bigl(z_2+s(z_1-z_2)\bigr)\,\dd s .
+ \label{gt-deflated-curvature}
+\end{equation}
+Indeed \(-B'=\mathcal L[A]/A^2\), and the complex segment between
+the pair lies inside the zero-free disk for \(A\). Integrating the
+derivative along the segment gives the divided difference, and
+the double case gives the value at \(c\). For a distinct real pair
+the integral is the real-segment average. When \(z_1,z_2=c\pm\ii b\)
+with \(b>0\), conjugation instead gives
+\begin{equation}
+ -K_F=-\frac{\Im B(c+\ii b)}{b}
+ =\frac1{2b}\int_{-b}^{b}
+  \Re\!\left(\frac{\mathcal L[A](c+\ii y)}{A(c+\ii y)^2}\right)\dd y .
+ \label{gt-vertical-curvature}
+\end{equation}
+The normalized expression on the real axis does not bound this
+vertical average without another estimate.
+
+The logarithmic derivative of \(A=F/Q\) gives
+\(-B'=\mathcal L[F]/F^2-\mathcal L[Q]/Q^2\) off the zeros.
+Multiplying through yields the quotient identity
+\begin{equation}
+ \mathcal L[A]=\frac{Q^2\mathcal L[F]-F^2\mathcal L[Q]}{Q^4},
+ \qquad \mathcal L[Q]=2((z-c)^2+D).
+ \label{gt-curvature-quotient}
+\end{equation}
+It extends across the pair by analyticity of \(A\).
+The subtraction is part of the complete quantity. Estimating
+its two terms separately can lose the cancellation needed at
+the pair.
+
+\subsection{A Fourier numerator at a stipulated real double}
+
+Suppose \(F(c)=F'(c)=0,\ F''(c)\ne0\), with \(c\in\R\).
+Here \(Q(z)=(z-c)^2\). Taylor expansion gives
+\(A(c)=F''(c)/2,\ A'(c)=F'''(c)/6,\ A''(c)=F''''(c)/12\).
+Substituting in \eqref{gt-deflated-curvature} yields
+\begin{equation}
+ -K_F=\frac{\mathcal P_F(c)}{18 F''(c)^2},\qquad
+ \mathcal P_F(z)=2(F'''(z))^2-3F''(z)F''''(z).
+ \label{gt-fourier-numerator}
+\end{equation}
+Thus a quantitative threshold \(-K_F\ge\kappa>0\) at a double
+requires \(\mathcal P_F(c)\ge18\kappa F''(c)^2\).
+A sign of the numerator alone gives only the sign of the curvature.
+
+The general Fourier representations of Laguerre expressions
+are classical \cite[Theorems~2.4 and~3.7]{csordas}. Here the
+coefficients and normalization can be obtained directly.
+For the finite readout \eqref{eq:gauss-readout}, suppress the
+index \(N\) on distinct nodes \(x_j\) and positive weights \(\omega_j\).
+Differentiating \(G_N(z)=\sum_j\omega_j\e^{\ii z x_j}\) termwise,
+the \(2(G_N''')^2\) part has coefficient \(-2x_j^3x_k^3\)
+and the \(-3G_N''G_N''''\) part has coefficient \(3x_j^2x_k^4\).
+Averaging the coefficient with the expression interchanging \(j,k\) gives
+\begin{equation}
+ \mathcal P_{G_N}(z)=\frac12\sum_{j,k}\omega_j\omega_k
+ x_j^2x_k^2(3x_j^2-4x_jx_k+3x_k^2)\e^{\ii z(x_j+x_k)} .
+ \label{gt-atomic-numerator}
+\end{equation}
+Since \(3u^2-4uv+3v^2=u^2+v^2+2(u-v)^2\), the coefficients in
+this sum are nonnegative. This gives nonnegative weights on the
+sum frequencies. The phases themselves control the value of the sum
+at a real observation.
+
+For an even node measure, group all matching sums and then opposite
+ones. For real \(x\),
+\[
+ \mathcal P_{G_N}(x)=C_0+2\sum_{\nu>0}C_\nu\cos(\nu x),\qquad
+ C_\nu\ge0,\qquad C_0=5\sum_j\omega_j^2 x_j^6 .
+\]
+In fact the zero sum occurs when \(x_k=-x_j\). The matching weight
+is \(\omega_k=\omega_j\), and its coefficient in
+\eqref{gt-atomic-numerator} is \(5x_j^6\).
+The sum over all \(j\) keeps the ordered-pair convention. The zero node,
+if present, contributes zero. The remaining modes can interfere, so
+this constant term does not control their total signed contribution.
+
+For the complete normalized field \(F=F_t\) in
+\eqref{eq:normalized-field}, the same differentiation and
+symmetrization gives
+\begin{equation}
+ \mathcal P_F(z)=\frac12\iint u^2v^2(3u^2-4uv+3v^2)
+                 \e^{\ii z(u+v)}\,\dd\mu_t(u)\,\dd\mu_t(v).
+ \label{gt-complete-fourier-numerator}
+\end{equation}
+The polynomial factors and the exponential on compact sets are
+integrable against the product by \eqref{eq:tail}. This justifies
+all derivatives and Fubini exchanges. The pushforward under
+\((u,v)\mapsto u+v\) of this positively weighted measure has no atom
+at zero for a density source: \(u+v=0\) has product-measure zero.
+In particular the discrete \(C_0\) is not a positive constant atom
+in \eqref{gt-complete-fourier-numerator}. The complete formula
+requires an oscillatory lower bound without that discrete input.
+
+\subsection{Separate Fourier allowances and their exact limits}
+
+The positive frequency weights suggest retaining favorable terms and
+bounding the others separately. Before using such an allowance in a gap
+argument, its size can be determined exactly. Write
+\(m_j=\int u^j\,\dd\mu_t(u)\) in this section; these are source moments,
+not the exterior reciprocal terms used in Section~\ref{sec:gt-interaction}.
+For an even finite source, \eqref{gt-atomic-numerator} gives
+\(\mathcal P_F(0)=3m_2m_4\). The allowance that retains the constant
+frequency and pays every other cosine by \(-1\) is therefore
+\begin{equation}
+ \mathcal P_F(x)\ge L_{\rm abs}
+ =2C_0-\mathcal P_F(0)
+ =10\sum_j\omega_j^2x_j^6-3m_2m_4 .
+ \label{gt-absolute-fourier-allowance}
+\end{equation}
+This is the value of the specified allowance, not the infimum of the
+trigonometric polynomial: the phases need not attain their separate
+minima simultaneously. If \(m_2m_4>0\), then \(m_6>0\), and
+\[
+ \omega_{\max}<\frac{3m_2m_4}{10m_6}
+ \quad\Longrightarrow\quad
+ L_{\rm abs}\le10\omega_{\max}m_6-3m_2m_4<0.
+\]
+Gaussian quadrature with at least four nodes matches the moments through
+degree six, so these moments may then be evaluated in the original source.
+No rate for \(\omega_{\max}\), or successful quadrature degree, follows
+from this finite failure test.
+
+For a nondegenerate even absolutely continuous source with a finite sixth
+moment, the zero-frequency atom in
+\eqref{gt-complete-fourier-numerator} vanishes. The same constant-mode
+strategy consequently has the strictly negative allowance
+\begin{equation}
+ L_{\rm abs}^{\rm cont}=-3m_2m_4<0.
+ \label{gt-continuous-absolute-allowance}
+\end{equation}
+This applies to the complete canonical source on every slice of the
+closed time slab. It does not exclude a jointly estimated signed
+remainder or a nontrivial neighborhood of the opposite-frequency line.
+The next theorem treats the larger class that retains every favorable
+phase while still paying the discarded phases separately \cite{gtphase}.
+
+\subsection{The optimal favorable-phase allowance for the complete source}
+
+Write \(f_t(u)=W_t(u)/Z_t\), \(a_j(u)=u^j f_t(u)\). Pushing forward the
+positive weight in \eqref{gt-complete-fourier-numerator} gives an even
+nonnegative density
+\begin{equation}
+ \varpi_t=3(a_4*a_2)-2(a_3*a_3),\qquad
+ \mathcal P_{F_t}(c)=\int_\R\varpi_t(s)\cos(cs)\,\dd s,
+ \qquad \mathcal W_t:=\int_\R\varpi_t=3m_2m_4.
+ \label{gt-fourier-product-density}
+\end{equation}
+Nonnegativity follows from the joint weight before the convolution is
+split; it is not inferred from the difference of two convolutions.
+The source estimates also give the uniform regularity needed for
+oscillatory averaging. The polynomial recurrence for the differentiated
+summands of \(\Phi\) in Section~\ref{sec:source} yields, for every fixed
+integer \(j\ge0\),
+\[
+ |\Phi^{(j)}(u)|\le C_j\exp\bigl((9+4j)|u|-\pi\e^{4|u|}\bigr).
+\]
+Indeed, the derivative polynomial has degree at most \(j+2\), and its
+remaining sum is dominated by
+\(\sum_{m\ge1}m^{2j+4}\e^{-\pi(m^2-1)}<\infty\).
+The reflection identity \(p(-u)-p(u)=\sinh u\), after application of
+\(\partial_u^2-1\), identifies the smooth even extension at zero.
+All polynomially weighted \(L^1\) and \(L^\infty\) norms of fixed
+spatial derivatives of \(a_j\) are therefore bounded uniformly for
+\(0\le t\le1/2\). Here \(Z_0\le Z_t\le Z_{1/2}\), with \(Z_0>0\).
+Convolution differentiation gives
+\begin{align*}
+ \|\varpi_t'\|_1
+ &\le3\|a_4'\|_1\|a_2\|_1+2\|a_3'\|_1\|a_3\|_1,\\
+ \|\varpi_t''\|_\infty
+ &\le3\|a_4''\|_\infty\|a_2\|_1
+       +2\|a_3''\|_\infty\|a_3\|_1.
+\end{align*}
+Both right sides are uniformly finite, and \(\varpi_t(s)\to0\) at either
+infinity. There is a positive uniform mass floor
+\begin{equation}
+ \mathcal W_t\ge w_*:=
+ \frac{3\bigl(\int u^2\Phi(u)\,\dd u\bigr)
+          \bigl(\int u^4\Phi(u)\,\dd u\bigr)}{Z_{1/2}^{2}}>0.
+ \label{gt-fourier-mass-floor}
+\end{equation}
+
+\begin{theorem}[Optimal favorable-phase allowance]
+\label{gt-favorable-phase-theorem}
+For \(c\ge1\), let \(E\) range over measurable subsets of
+\(\{s:\cos(cs)\ge0\}\), and define
+\[
+ L_E(t,c)=-\mathcal W_t+
+       \int_E(1+\cos(cs))\varpi_t(s)\,\dd s.
+\]
+Then \(L_E(t,c)\le\mathcal P_{F_t}(c)\), and uniformly on the closed
+physical-time slab,
+\begin{equation}
+ \sup_E L_E(t,c)
+ =\left(\frac1\pi-\frac12\right)\mathcal W_t+O(c^{-1}).
+ \label{gt-optimal-phase-limit}
+\end{equation}
+In particular this best allowance is strictly negative for all
+sufficiently large \(c\), with an onset independent of \(t\).
+\end{theorem}
+\begin{proof}
+The discarded cosine is bounded below by \(-1\), giving the first
+assertion. Since the retained addition is nonnegative on its permitted
+domain, the largest allowance takes the entire favorable set. Let the
+\(2\pi\)-periodic function \(g\) equal \(\cos\theta\) where that cosine
+is nonnegative, and \(-1\) elsewhere. Its mean is
+\(\eta=1/\pi-1/2<0\): the positive cosine has integral two over a
+period and the complementary domain has length \(\pi\).
+The primitive
+\(J(\theta)=\int_0^\theta(g(v)-\eta)\,\dd v\) is bounded and periodic.
+Integration by parts, using the decay and derivative bound above, gives
+\[
+ \sup_E L_E(t,c)-\eta\mathcal W_t
+ =-\frac1c\int_\R\varpi_t'(s)J(cs)\,\dd s.
+\]
+Its modulus is at most
+\(c^{-1}\|J\|_\infty\sup_t\|\varpi_t'\|_1\). Together with
+\eqref{gt-fourier-mass-floor}, this proves the uniform conclusion.
+\end{proof}
+
+The opposite-frequency band has a more precise expansion. For fixed
+\(0<\alpha\le\pi/2\), take \(E=[-\alpha/c,\alpha/c]\). Evenness gives
+\(\varpi_t'(0)=0\), while direct evaluation in
+\eqref{gt-fourier-product-density} gives
+\[
+ \varpi_t(0)=5\int_\R u^6 f_t(u)^2\,\dd u>0.
+\]
+With \(x=cs\), Taylor's theorem and the uniform second derivative yield
+\begin{equation}
+ L_E(t,c)=-\mathcal W_t+
+   \frac{2(\alpha+\sin\alpha)\varpi_t(0)}{c}+O_\alpha(c^{-3}).
+ \label{gt-antidiagonal-band}
+\end{equation}
+More explicitly the error is bounded by
+\(\frac{1}{2c^3}\sup_t\|\varpi_t''\|_\infty
+\int_{-\alpha}^{\alpha}x^2(1+\cos x)\,\dd x\).
+Thus a positive density on the opposite-frequency line does not create
+a positive atom there, and this shrinking band captures only order
+\(c^{-1}\) mass.
+
+The same limitation survives every nonnegative normalized average of
+these allowances supported on \(t\in[0,1/2]\), \(c\ge c_0\): its value
+is at most \(\eta w_*+C/c_0\), even for jointly measurable choices of
+\(E\) depending on the center. This statement concerns lower allowances,
+not the sign of \(\mathcal P_{F_t}\) itself. At a stipulated double,
+division by the positive denominator in \eqref{gt-fourier-numerator}
+cannot make a negative allowance certify positive curvature. A double
+cannot persist over an interval because \(D'=2\) at \(D=0\).
+Consequently averaging double-slice allowances is not a bound on the
+full two-point drift or its time-integrated transport cost. Joint use
+of the negative-phase information remains outside this exclusion.
+
+\subsection{A negative deflated numerator with positive atomic weights}
+
+Consider the exact even readout
+\[
+ G(z)=\frac{5+6\cos z+\cos 2z}{12}
+     =\frac{(1+\cos z)(2+\cos z)}6.
+\]
+The probability masses are \(5/12\) at zero, \(1/4\) at each
+of \(\pm1\), and \(1/24\) at each of \(\pm2\).
+Polynomials of degrees up to four have positive norm on these five
+distinct nodes. Gram--Schmidt and evenness therefore give its
+irreducible five-site, zero-diagonal Jacobi matrix.
+At \(c=\pi\) differentiation gives
+\[
+ G=G'=0,\quad G''=1/6,\quad G'''=0,\quad G''''=5/6 .
+\]
+This is an actual double with \(\mathcal P_G(c)=-5/12\) and
+\(-K_G=-5/6\) by \eqref{gt-fourier-numerator}. The slice embeds
+in an exact physical heat field by multiplying the mass at
+node \(x_j\) by \(\e^{(t-T)x_j^2}\) for a fixed reference time \(T\),
+without a time-dependent normalization. Its factor \(2+\cos z\)
+has zeros of imaginary height \(\arcosh(2)>1\), since \(\cosh(1)<2\).
+Thus the five-atom control falls outside the strip hypothesis
+of Corollary~\ref{gt-fixed-strip-tube}. It rules out the deflated
+sign implication from positive spectral weights, symmetry and
+a real double alone.
+
+\subsection{Positive difference kernels and positive Fourier blocks}
+
+Let \(S=\operatorname{diag}(1,-1,1,-1,\ldots)\) on the finite
+chain. Then \(SJ_NS=-J_N,\ Se_0=e_0\).
+Spectral projections for opposite nodes receive equal weights.
+Consequently
+\[
+ G_N(z)=\omega_0+2\sum_{u>0}\omega_u\cos(uz),\qquad
+ 1-G_N(x)=4\sum_{u>0}\omega_u\sin^2(ux/2)\ge0
+ \quad (x\in\R).
+\]
+Here \(\omega_0=0\) when the node zero is absent. At spectral parameter
+zero the characteristic polynomial satisfies
+\(P_n(0)=-\beta_{n-1}P_{n-2}(0)\) with \(P_0(0)=1,\ P_1(0)=0\).
+Since the links are positive, an even-dimensional chain has no zero
+node. These positive blocks give the bound \(G_N(x)\le1\).
+
+The difference kernel is also positive semidefinite. For real sample
+points \(y_r\) and complex coefficients \(\alpha_r\), its form is
+\[
+ \sum_{r,s}\overline{\alpha_r}\alpha_s G_N(y_r-y_s)
+    =\sum_j\omega_j\left|
+          \sum_r\alpha_r\e^{-\ii y_r x_j}\right|^2\ge0,
+\]
+where \(x_j\) are the spectral nodes. The positivity here arises from
+difference frequencies and the modulus square. The sum-frequency coefficients in
+\eqref{gt-atomic-numerator} do not supply this pointwise square or a
+positive semidefinite form for the sum-frequency expression.
+
+There is also a precise obstruction to factoring the most immediate
+coefficient matrix for the deflated numerator. Replacing the second
+spectral node in \eqref{gt-atomic-numerator} by its negative gives
+\[
+ \mathcal P_F(x)=v(x)^*\mathsf C v(x),\qquad
+ v_j(x)=\e^{-\ii x x_j},\qquad
+ \mathsf C_{jk}=\frac{\omega_j\omega_kx_j^2x_k^2}{2}
+                  (3x_j^2+4x_jx_k+3x_k^2).
+\]
+For distinct positive nodes \(p,q\), its principal determinant is
+\begin{equation}
+ \det\mathsf C_{\{p,q\}}
+ =-\frac34\omega_p^2\omega_q^2p^4q^4
+       (p-q)^2(3p^2+14pq+3q^2)<0.
+ \label{gt-natural-gram-obstruction}
+\end{equation}
+To verify the factorization, remove the positive factor
+\(\omega_p^2\omega_q^2p^4q^4/4\); the remaining difference is
+\(100p^2q^2-(3p^2+4pq+3q^2)^2\).
+Thus this unchanged matrix has no Gram factorization. The vectors
+\(v(x)\) trace a restricted curve, so matrix indefiniteness does not
+prove a negative value of the numerator on that curve. Coincident
+frequencies may also admit another coefficient matrix for the same
+function. Exact regrouping and correlated phase estimates are not
+excluded by \eqref{gt-natural-gram-obstruction}.
+
+A nonzero real finite exponential polynomial with zero constant
+coefficient cannot be nonnegative on the whole line. Indeed, if
+\(P\ge0\) then \(P^2\le\|P\|_\infty P\). The long symmetric interval
+mean of every nonzero frequency is zero, whereas the mean of
+\(P^2=|P|^2\) is \(\sum_\nu|c_\nu|^2>0\) after equal frequencies
+have been combined. This argument also applies to incommensurable
+frequencies. It excludes global positivity of a literal block
+without a constant frequency. It leaves open local signed estimates.
+
+Fej\'er's identity illustrates the additional relation among
+coefficients furnished by a Fourier square:
+\[
+ \frac1m\left|\sum_{r=0}^{m-1}\e^{\ii r\theta}\right|^2
+   =1+2\sum_{k=1}^{m-1}(1-k/m)\cos(k\theta)\ge0.
+\]
+Each difference \(k\) occurs \(m-|k|\) times in the product, giving
+the stated weights \cite[Eq.~1.15.15]{dlmf}. Arbitrary node
+frequencies do not supply this lattice or these weights.
+A square with general frequencies still requires its difference
+support and autocorrelation coefficients to match the target.
+Binning frequencies would change the expression and incur an error.
+
+\subsection{The undeflated expression and the remaining estimate}
+
+Differentiating \(G_N\) twice and symmetrizing yields another
+nonnegative-coefficient sum:
+\[
+ \mathcal L[G_N](z)=\tfrac12\sum_{j,k}\omega_j\omega_k
+           (x_j-x_k)^2\e^{\ii z(x_j+x_k)} .
+\]
+At a double this expression vanishes because \(G_N=G_N'=0\).
+Even strict pointwise positivity of this undeflated expression
+can coexist with nonreal zeros. Take the four-atom positive readout
+\(G(z)=(9\cos z+\cos 2z)/10\), with masses \(9/20\) at each
+of \(\pm1\) and \(1/20\) at each of \(\pm2\).
+For \(x\) real, \((10G')^2-(10G)(10G'')\) equals
+\[
+ 85+36\sin x\sin 2x+45\cos x\cos 2x
+  =85+(81/2)\cos x+(9/2)\cos 3x .
+\]
+Thus \(\mathcal L[G](x)\ge(85-81/2-9/2)/100=2/5\).
+Yet the equation \(2\cos^2 z+9\cos z-1=0\) includes
+\(\cos z=(-9-\sqrt{89})/4<-1\), which is attained at nonreal \(z\).
+
+These controls delimit the finite positive-weight and real-axis
+Laguerre tests. The Fourier task is to bound the complete joint
+numerator relative to \(F''(c)^2\) at a double or to bound the
+two-point expression across the slab. In a finite readout the
+counted geometry, full coordinate transfer and physical model
+defect must also be paid. The actual heat-gap law
+\eqref{eq:gt-gap-law} applies to the physical field, and an
+estimate on one double slice does not by itself pay the
+time-integrated budget \eqref{eq:gt-backward-gap}.

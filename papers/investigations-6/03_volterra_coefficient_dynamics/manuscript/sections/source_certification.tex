@@ -1,0 +1,459 @@
+\section{Analytical bounds for complete-source evaluation}
+\label{sec:gt-source-certification}
+
+The preceding results are analytical statements about the complete field.
+This appendix explains how a finite calculation can supply their local
+hypotheses without replacing the source. The interpolation and contour
+bounds are proved first. The recorded computation at the end is supporting
+evidence for one fixed tube, not a premise of the general theorems.
+
+\subsection{An exact xi convolution and a lattice error bound}
+
+For \(t\ge0\), the double-exponential source decay and the Gaussian integral
+give
+\begin{equation}
+ H_t(z)=\frac1{\sqrt\pi}\int_{\R}\e^{-r^2}
+                     H_0(z+2\ii\sqrt t\,r)\,\dd r .
+ \label{eq:gt-xi-convolution}
+\end{equation}
+Indeed, after inserting \eqref{eq:field}, the absolute integrand is bounded
+by a constant times
+\[
+ \Phi(u)\e^{|\Im z||u|}\e^{-(r+\sqrt t\,u)^2+tu^2}.
+\]
+Its integral is finite. Fubini and completing the square therefore
+multiply the Fourier source by \(\e^{tu^2}\), exactly as required.
+The time-zero formula already proved in Section~\ref{sec:source} may use
+either \(\xi((1-\ii z)/2)/8\) or \(\xi((1+\ii z)/2)/8\), since
+\(\xi(s)=\xi(1-s)\).
+
+For the local application set
+\[
+ a=\frac{140101}{10},\qquad g=\e^{\pi a/8},\qquad
+ \mathcal H_t=gH_t,\qquad 0\le t\le\frac1{10}.
+\]
+The constant gauge changes neither the pair coordinates nor the drift.
+It cancels the principal gamma decay at this height. Write
+\(f_{t,z}(r)=g\e^{-r^2}H_0(z+2\ii\sqrt t\,r)\).
+
+\begin{lemma}[Source majorants]
+\label{lem:gt-xi-majorants}
+Let \(\alpha=9999/10000\), \(\beta=131/100\), and \(C=10^{13}\).
+For \(|z-a|\le2\), \(r=\nu+\ii\eta\), \(|\eta|\le2\),
+\begin{equation}
+ |f_{t,z}(\nu+\ii\eta)|
+ \le C\e^{\eta^2-\alpha\nu^2+\beta|\nu|}.
+ \label{eq:gt-strip-majorant}
+\end{equation}
+On the larger spatial disk,
+\begin{equation}
+ |\mathcal H_t(a+w)|\le
+ M_5:=\frac{2\cdot10^{16}}{\sqrt\alpha}
+             \e^{\beta^2/(4\alpha)},\qquad |w|\le5 .
+ \label{eq:gt-radius-five}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Put \(q=\sqrt t\), \(s_0=(1+\ii(z+2\ii qr))/2\), and reflect \(s_0\)
+to \(s\) with \(\Re s\ge1/2\). For \(\omega=s/2=X+\ii Y\) and
+\(U=|\nu|\), the smaller disk and strip give
+\[
+ \frac14\le X\le\frac34+\frac4{25}U,\quad
+ \left||Y|-\frac a4\right|\le\frac12+q,\quad
+ 3501<|Y|<3504,
+\]
+and hence \(|\omega|\le3505+4U/25\),
+\(|s-1|\le|s|\le7010+8U/25\).
+The right-half-plane Binet formula \cite[Eq.~5.9.10\_2]{dlmf} has remainder
+\[
+ R(\omega)=\int_0^\infty \e^{-\omega v}
+       \left(\frac1{\e^v-1}-\frac1v+\frac12\right)\frac{\dd v}{v}.
+\]
+The parenthesis lies between zero and \(v/12\). To see both bounds,
+put \(b=v/2\) and expand \(b\cosh b-\sinh b\) and
+\((1+b^2/3)\sinh b-b\cosh b\): their coefficients at
+\(b^{2n+1}\) are respectively \(2n/(2n+1)!\) and
+\(2n(2n-2)/(3(2n+1)!)\), with the initial zero terms understood.
+Thus \(|R(\omega)|\le1/(12X)\). Taking real parts and using
+\(|Y|\arctan(X/|Y|)\le X\) yields
+\[
+ |\Gamma(\omega)|\e^{\pi|Y|/2}
+ \le\sqrt{2\pi}\,|\omega|^{X-1/2}\e^{1/(12X)}.
+\]
+Euler summation gives
+\(\zeta(s)=s/(s-1)-s\int_1^\infty\{v\}v^{-s-1}\,\dd v\);
+the present \(\Re s\ge1/2\), \(|\Im s|>7002\) imply
+\(|\zeta(s)|\le3|s|\). Use the completion
+\(\xi(s)=s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)/2\).
+Since \(g\e^{-\pi|Y|/2}<4\), \(\sqrt{2\pi}<3\) and
+\(\e^{1/3}<3/2\), the integrand is at most
+\[
+ \frac{4\cdot3\cdot(3/2)\cdot3}{16}
+ (7010+8U/25)^3(3505+4U/25)^{1/4+4U/25}\e^{\eta^2-U^2}.
+\]
+Its prefactor at zero is below \(10^{13}\).
+Expanding the logarithm with \(\log(1+x)\le x\), the extra linear
+coefficient is less than \(131/100\), and the extra quadratic
+coefficient is less than \(1/10000\).
+These comparisons follow from
+\(\log3505<409/50\), for which
+\(\sum_{j=0}^{24}(409/50)^j/j!>3505\).
+This proves \eqref{eq:gt-strip-majorant}.
+
+For \(|w|\le5\) and real \(r\), replace these bounds by
+\(X\le3/2+4|r|/25\), \(|\omega|\le3506+4|r|/25\),
+\(|s|\le7012+8|r|/25\), and
+\(g\e^{-\pi|Y|/2}<8\).
+The same calculation gives
+\(10^{16}\e^{-\alpha r^2+\beta|r|}\).
+Integration in \eqref{eq:gt-xi-convolution}, followed by completion
+of the square on each half-line, proves \eqref{eq:gt-radius-five}.
+\end{proof}
+
+
+\begin{corollary}[Majorants at moving boundary centers]
+\label{gt-boundary-majorants}
+For every \(b\in[13840,14180]\), put \(g_b=\e^{\pi b/8}\).
+The bounds \eqref{eq:gt-strip-majorant} and \eqref{eq:gt-radius-five}
+hold with \(a,g\) replaced by \(b,g_b\), with the same
+\(C,\alpha,\beta,M_5\).
+\end{corollary}
+\begin{proof}
+For the radius-two disk and \(|\Im r|\le2\), put \(V=|\Re r|\).
+The coordinates in the preceding proof now satisfy
+\[
+ \frac14\le X\le\frac34+\frac4{25}V,\quad
+ \left||Y|-\frac b4\right|\le\frac12+\sqrt t,\quad
+ 3459<|Y|<3547.
+\]
+Hence \(|\omega|\le3550+4V/25\) and
+\(|s-1|\le|s|\le7100+8V/25\). The Binet and Euler estimates
+still apply, and \(g_b\e^{-\pi|Y|/2}<4\).
+The constant prefactor is at most \(27(7100)^3<10^{13}\);
+indeed \(3550^{1/4}<8\). The extra log-linear coefficient is at most
+\[
+ \frac4{25}\frac{409}{50}
+ +\frac{(1/4)(4/25)}{3550}
+ +\frac{3(8/25)}{7100}<\frac{131}{100},
+\]
+and the quadratic coefficient is \((4/25)^2/3550<1/10000\).
+The exact inequality
+\(\sum_{j=0}^{24}(409/50)^j/j!>3552\) proves the logarithm bound
+used here and below. This proves the strip estimate.
+
+For the radius-five disk and real \(r\), use
+\(X\le3/2+4|r|/25\), \(3458<|Y|<3547\),
+\(|\omega|\le3552+4|r|/25\), \(|s|\le7104+8|r|/25\)
+and \(g_b\e^{-\pi|Y|/2}<8\).
+The prefactor is at most
+\((27/4)(7104)^3(3552)=8595785870475264<10^{16}\).
+The log-linear coefficient is bounded by
+\[
+ \frac4{25}\frac{409}{50}
+ +\frac{4/25}{3552}+\frac{3(8/25)}{7104}<\frac{131}{100},
+\]
+and the quadratic coefficient by \((4/25)^2/3552<1/10000\).
+Integration and completion of the square give the same \(M_5\).
+\end{proof}
+
+For an affine boundary \(b(t)=B+v(t-1/20)\) in this interval of
+centers, the fixed gauge \(g_B\) and local gauge obey
+\[
+ \frac{g_B}{g_{b(t)}}\le A_v:=\e^{\pi|v|/160}
+ \qquad(0\le t\le1/10).
+\]
+Consequently the full affine derivative formula \eqref{gt-moving-boundary-derivative}
+may use \(M_*=A_vM_5\) and \(R_*=5\).
+The lattice allowance below likewise holds at every such center with
+local gauge \(g_b\); multiplication by \(A_v\) pays a fixed gauge.
+The gauge remains constant when differentiating in time.
+
+\begin{proposition}[Finite lattice payment]
+\label{prop:gt-lattice-payment}
+For \(h>0\) with \(12/h\) integral, let
+\[
+ \mathcal H_t^{[h]}(z)=\frac h{\sqrt\pi}
+                    \sum_{|kh|\le12}f_{t,z}(kh).
+\]
+On \(|z-a|\le2\) throughout the stated time interval,
+\begin{equation}
+ |\mathcal H_t-\mathcal H_t^{[h]}|
+ \le
+ \frac{4C\e^{4+\beta^2/(4\alpha)}}
+      {\sqrt\alpha(\e^{4\pi/h}-1)}
+ +\frac{2C\e^{-144\alpha+12\beta}}
+      {\sqrt\pi(24\alpha-\beta)}=:E_h .
+ \label{eq:gt-lattice-error}
+\end{equation}
+Finite-sum arithmetic errors must be added separately.
+\end{proposition}
+\begin{proof}
+For \(\widehat f(\omega)=\int f(r)\e^{-\ii\omega r}\,\dd r\),
+shift the line to imaginary height \(-2\) when \(\omega>0\) and to
+\(2\) when \(\omega<0\). The vertical ends vanish by
+\eqref{eq:gt-strip-majorant}, and
+\[
+ |\widehat f(\omega)|\le
+ 2C\sqrt{\pi/\alpha}\,\e^{4+\beta^2/(4\alpha)}\e^{-2|\omega|}.
+\]
+The Fourier coefficients of the uniformly convergent periodization
+\(h\sum_{k\in\mathbb Z}f(x+kh)\) are
+\(\widehat f(2\pi n/h)\). They are absolutely summable; evaluating at
+zero and summing their geometric tails gives the first term of
+\eqref{eq:gt-lattice-error}. On \([12,\infty)\) the real majorant
+decreases, so the omitted lattice values, times \(h\), are bounded by
+twice its tail integral. The concave exponent lies below its tangent
+at \(12\), giving the second term.
+\end{proof}
+
+\subsection{One polynomial and two independently paid radii}
+
+The interpolation argument is useful in a general form. Suppose a true
+heat field \(\mathcal H\) obeys
+\(|\mathcal H_t(a+w)|\le M_S\) for \(|w|\le S\), \(t\in[u,v]\), where \(u<v\).
+Choose \(0<\rho<S\), \(0<R<S\), integers \(0\le d<M\), \(n\ge1\), and sample at
+\(w_j=\rho\e^{2\pi\ii j/M}\) and Lobatto times
+\(t_l=(u+v)/2+\Delta\cos(\pi l/n)\), \(\Delta=(v-u)/2\).
+Assume every sample error is at most \(\varepsilon_s\).
+Take its discrete Fourier coefficients through degree \(d\), then
+interpolate those spatial polynomials at the \(n+1\) time nodes.
+Call the resulting exact polynomial \(P(t,w)\).
+
+\begin{proposition}[Uniform tensor error]
+\label{prop:gt-tensor-error}
+For \(|w|\le R\), \(t\in[u,v]\), one has
+\(|\mathcal H_t(a+w)-P(t,w)|\le E(R)\), where
+\begin{align}
+ E(R)&:=(2n+1)\left[
+ \varepsilon_s\sum_{k=0}^d(R/\rho)^k
+ +M_S\frac{(\rho/S)^M}{1-(\rho/S)^M}
+                \sum_{k=0}^d(R/S)^k
+ +M_S\frac{(R/S)^{d+1}}{1-R/S}\right]\notag\\
+ &\quad+
+ \frac{M_S(2n+2)!}{(n+1)!(S-R)^{2n+2}}\,
+            2^{1-n}\Delta^{n+1}.
+ \label{eq:gt-tensor-error}
+\end{align}
+Coefficient rounding, if treated as exact values rather than enclosed
+balls, needs its own additive uniform payment.
+\end{proposition}
+\begin{proof}
+At a time node, write
+\(\mathcal H(a+w)=\sum_{k\ge0}a_kw^k\).
+Cauchy gives \(|a_k|\le M_S/S^k\).
+The root-of-unity sum for coefficient \(k<M\) equals
+\(\sum_{j\ge0}a_{k+jM}\rho^{k+jM}\).
+Consequently sample propagation, aliasing and discarded spatial powers
+give respectively the three bracketed terms.
+For Lobatto interpolation the discrete cosine coefficients have modulus
+at most twice the largest node value. The endpoint-half-weight cosine
+expansion and \(|T_k(x)|\le1\) give operator norm at most \(2n\);
+we use \(2n+1\).
+
+The remaining error interpolates the true field in time.
+Its heat equation implies
+\(\partial_t^{n+1}\mathcal H=(-1)^{n+1}\partial_z^{2n+2}\mathcal H\).
+Cauchy on radius \(S-R\) bounds this derivative by
+\(M_S(2n+2)!/(S-R)^{2n+2}\).
+The monic node product is
+\(2^{1-n}(x^2-1)U_{n-1}(x)\), of modulus at most \(2^{1-n}\)
+on \([-1,1]\). Scaling contributes \(\Delta^{n+1}\).
+The real interpolation remainder divided by \((n+1)!\) proves the
+last term; for complex values apply it to the real projection in the
+direction of the error. No heat equation is imposed on \(P\).
+\end{proof}
+
+The same polynomial can be used at several radii, provided each radius
+has its own \(E(R)\). With \(\rho=9/10\), \(S=5\), \(M=128\) and
+\(d=n=32\), this gives both the original collar radius \(21/20\)
+and the enlarged exclusion radius \(8/5\). The larger error belongs
+to the larger disk; the original smaller error remains available for
+the moment computation. This separation prevents a geometry extension
+from needlessly degrading the coordinate estimates.
+
+\subsection{Count, logarithm, coordinates and curvature}
+
+Let \(r_-<\rho<r_+\). Suppose one sign \(\sigma\in\{-1,1\}\)
+gives, on both entire boundary circles and every time,
+\begin{equation}
+ \Re\frac{\sigma\mathcal H_t(a+w)}{w^2}\ge m_\pm>0,\qquad
+ \left|\frac{\sigma\mathcal H_t(a+w)}{w^2}\right|\le M_\pm .
+ \label{eq:gt-half-plane}
+\end{equation}
+Polynomial interval bounds pay this condition after subtracting
+\(E(r_\pm)/r_\pm^2\) from a lower real-part bound and adding it to a
+modulus upper bound. Bounds over closed time cells and angular arcs,
+not just their midpoints, are required.
+
+The normalized boundary loop lies in the right half-plane and has
+winding zero, so \(\mathcal H_t\) has exactly two zeros inside each
+circle. Their equal counts exclude every zero in the annulus.
+The harmonic minimum principle preserves the positive real part there,
+giving a principal logarithm on an open collar. For a fixed real
+centering \(\ell_*\), set
+\[
+ \mathcal L_{\mathrm{ann}}(t,w)=
+ \operatorname{Log}\bigl(\sigma\mathcal H_t(a+w)/w^2\bigr)-\ell_*,
+ \quad
+ B_\pm^2=
+ \max\{|\log m_\pm-\ell_*|,|\log M_\pm-\ell_*|\}^2+\pi^2/4.
+\]
+Then \(|\mathcal L_{\mathrm{ann}}|\le B_\pm\) on the corresponding boundaries.
+Here \(\mathcal L_{\mathrm{ann}}\) denotes this local logarithm, not a Laguerre expression.
+
+For completeness, if \(V\) is analytic on a neighborhood of the annulus,
+with boundary bounds \(A_\pm\), its \(M\)-node angular mean on \(\rho\)
+differs from its exact mean by at most
+\begin{equation}
+ T_M(A_-,A_+)=
+ A_-\frac{(r_-/\rho)^M}{1-(r_-/\rho)^M}
+ +A_+\frac{(\rho/r_+)^M}{1-(\rho/r_+)^M}.
+ \label{eq:gt-annular-error}
+\end{equation}
+Indeed, expand \(V\) in Laurent powers. Cauchy controls positive powers
+from the outer circle and negative powers from the inner circle.
+Only multiples of \(M\) survive the discrete average, and summing them
+gives \eqref{eq:gt-annular-error}.
+
+Write \(w=z-a\), \(\gamma=c-a\), \(Q=(w-\gamma)^2-D\), and let brackets
+denote the normalized angular mean. Contour integration by parts gives
+\begin{equation}
+ p_j=-j\langle w^j\mathcal L_{\mathrm{ann}}\rangle,\quad
+ \gamma=p_1/2,\quad D=p_2/2-\gamma^2,\quad
+ K=\left\langle\frac{2w(w-\gamma)\mathcal L_{\mathrm{ann}}}{Q^2}\right\rangle.
+ \label{eq:gt-log-moments}
+\end{equation}
+For the last equality, the logarithmic derivative of the pair contributes
+\(\oint Q'/Q^2=0\); the term \(2/(wQ)\) also has zero contour integral,
+since all its poles are inside and it decays cubically at infinity.
+Integrate the remaining \(\mathcal L_{\mathrm{ann}}'/Q\) by parts. All exact means in
+\eqref{eq:gt-log-moments} annihilate a constant log centering.
+
+Apply \eqref{eq:gt-annular-error} to the moment integrands with
+\(A_\pm=j r_\pm^jB_\pm\). Enclose both moments on each time cell and
+propagate their intervals into \(\gamma,D\). If \(C_*\ge|\gamma|\),
+\(D_*\ge|D|\), a sufficient denominator bound on radius \(r>C_*\) is
+\[
+ |Q|\ge q_r=(r-C_*)^2-D_*>0.
+\]
+A sharper direct bound can replace it. The drift integrand then has
+boundary bounds
+\(A_\pm=2r_\pm(r_\pm+C_*)B_\pm/q_{r_\pm}^2\).
+Thus the actual coordinate intervals and the annular tail together
+enclose the drift, including when the gap interval contains zero.
+
+An approximate field with contour error \(\delta<m\), where \(m\)
+is its boundary modulus floor, also gives the aligned log error
+\(\ell=-\log(1-\delta/m)\). This follows from the convergent logarithm
+series on a collar. Adding angular errors \(q_1,q_2\) gives
+\[
+ |c-\widetilde c|\le e=\frac{\rho\ell+q_1}{2},\qquad
+ |D-\widetilde D|\le d=\rho^2\ell+q_2/2+2(\rho-b)e
+\]
+when both pairs have buffer \(b\). If only the true center is bounded,
+replace the last factor by \(2(\rho-b)+e\).
+For the drift estimate retain both pair buffers \(b\). With
+\(J_*=(4\rho-2b)e+d\), a centered approximate log bounded by
+\(\Lambda_*\) yields
+\begin{equation}
+ |K-\widetilde K|\le
+ \frac{2\rho\ell}{b^3}
+ +\rho\Lambda_*\left(\frac{2e}{b^4}
+       +\frac{4(2\rho-b)J_*}{b^6}\right)+q_K .
+ \label{eq:gt-value-transfer}
+\end{equation}
+To verify the kernel term, use \(|Q|,|\widetilde Q|\ge b^2\),
+\(|Q-\widetilde Q|\le J_*\) and
+\[
+ |(1/Q)'-(1/\widetilde Q)'|
+ \le2e/b^4+4(2\rho-b)J_*/b^6.
+\]
+The log-error term uses \(|(1/Q)'|\le2/b^3\).
+This proves \eqref{eq:gt-value-transfer} with no inverse internal gap.
+
+\subsection{Supporting evidence on one fixed tube}
+
+The recorded interval-arithmetic application uses the same complete-source
+array, the analytical bounds above and outward rounding
+\cite{gtcertificate,gtgeometry}. It gives the following enclosures;
+the distinct roles of terminal and whole-interval coordinates matter.
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.40\textwidth}p{0.51\textwidth}@{}}
+\toprule
+Quantity & Recorded conclusion on \(0\le t\le1/10\)\\
+\midrule
+Original geometry & Exactly two zeros inside \(3/4\), zero-free collar to \(21/20\).\\
+Full drift & \(-0.615518848\le K(t)\le-0.599329616\).\\
+Incoming gap & \(0.17873684703288\le D(1/10)<0.17873685811\).\\
+Signed passage margin using \(K\le-0.59\) & Greater than \(0.00058487578\).\\
+Direct endpoint & \(D(0)\in[0.00142117117778,\,0.00142118228384]\).\\
+Enlarged geometry & Exactly the same two zeros inside radius \(8/5\).\\
+New whole-interval coordinates & \(|c-a|<0.063763113\), \(|D|<0.179116620\).\\
+\bottomrule
+\end{tabular}
+\end{center}
+The enlarged geometry uses the same cached samples and evaluates no
+new drift. It instantiates the grouped-divisor sign theorem independently
+of the old measured drift band. More explicitly, at
+\(a=140101/10\), \(C=7/100\) and \(d=1/5\), the auxiliary radius
+\(8/5\) gives
+\[
+ X=\frac{\sqrt{39}}5-\frac7{100}>\frac{113}{100},
+ \qquad X^2>1+d.
+\]
+The same two occurrences also lie inside radius \(9/10\), since the
+original collar is zero-free. The older radius \(21/20\) gives only
+\(X=\sqrt{41}/20-7/100<1\), so it does not pay the sufficient
+disk-to-horizontal test. The reflected target pair contributes the
+lower allowance \(\kappa_0=5000/1962848636289\). At \(v=1/10\), its
+constant-interaction transport allowance satisfies
+\[
+ 2\int_0^v \e^{-4\kappa_0(v-t)}\,\dd t
+ \ge \frac15-\frac{\kappa_0}{25}>\frac{179}{1000},
+\]
+by \(\e^{-s}\ge1-s\). This exceeds the recorded terminal gap.
+The reflected group therefore proves a sign but does not by itself
+pay the useful cost threshold; other exterior mass can reduce the
+actual cost.
+
+A later supporting acquisition implements the real-bracket mechanism
+of Section~\ref{gt-source-curvature} \cite{gtbrackets}. All 176 fixed
+moving real brackets have opposite, nonzero boundary signs throughout
+\(0\le t\le1/10\). The boundary signs are enclosed using degree-12
+time interpolation with the full affine chain-rule remainder, complete
+source lattice and tails, and interval arithmetic. Same-time disjointness
+supplies at least one distinct real exterior occurrence per bracket on
+each slice; no singleton count, simplicity or persistent label is claimed.
+Independently replayed target coordinates on 512 time cells give
+\[
+ M(t)>0.5937558081007126288>0.59\qquad(0\le t\le1/10).
+\]
+Only the reflected target pair is separately retained; all other omitted
+conjugate groups are favorable. The same brackets with globally collapsed
+coordinate information gave lower allowances approximately
+\(0.559912322830\) and \(0.582325753776\), which did not reach the
+threshold. Those failed allowances are not upper bounds on actual mass.
+The successful certificate preserves time-local coordinate information.
+Its positive lower bound on \(D\) was already supplied independently,
+so the new result acquires exterior magnitude rather than new target
+reality. The earlier measured drift band is stronger. These are recorded
+supporting calculations, internally assessed with one cache replay; the
+present manuscript integration performs no new source evaluations.
+
+The absolute-value cost is at least \(2/10=1/5\), exceeding the incoming
+gap; the signed cost succeeds. More explicitly, \(K\le-0.59\)
+gives \(W(0)\le\e^{-0.236}<0.789780673932803\) in
+\eqref{eq:gt-backward-gap}, hence \(D(0)>0.00074055469\).
+The direct endpoint enclosure is stronger than this transported bound. Moreover \(K\in[-5/8,0]\) and the
+inner radius \(3/4\) give \(D'\ge19/32\), so the direct endpoint also
+encloses the interval minimum. All these numerical conclusions concern
+one fixed tube and retain their internal-review status. They supply no
+height-uniform source inequality, new global zero coverage or exclusive
+transport advantage.
+
+As an exact independent control, \(F_t(a+w)=w^2-2(t-1/20)\) passes
+the same count and logarithm conditions but has \(K=0\).
+Its terminal gap is \(1/10\), its full-interval cost is \(1/5\),
+and its strict margin is \(-1/10\). Thus the supporting procedure can
+accept geometry at a double while correctly rejecting passage.

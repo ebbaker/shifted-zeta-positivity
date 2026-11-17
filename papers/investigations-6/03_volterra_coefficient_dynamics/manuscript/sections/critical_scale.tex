@@ -1,0 +1,391 @@
+\section{Signed compensation near a fixed double zero}
+\label{sec:gt-critical-scale}
+
+Suppose that the physical field \(F_T\) has an isolated double zero
+at a real \(a\ne0\), with \(0<T<1/2\). Fix a circle of radius \(\rho\)
+about \(a\) whose closed disk avoids \(0\) and lies in \(|\Im z|<1\).
+Choose it small enough that \(F_T=(z-a)^2 A_T\) with \(A_T\)
+nonvanishing there. By fixing a smaller concentric circle and
+shrinking a compact time interval \(I\) about \(T\), both circles
+have boundary floors and the physical pair stays in the smaller
+disk. Set \(A_*=A_T(a)\ne0\) and \(Z_*=\max_\Gamma|z|\).
+All limits here are for this fixed event.
+
+\subsection{Signed event errors and the model double time}
+
+Write \(p_j(t)=h_j^*(t)/(2j)!\) in this section and
+\(\bar p_j=\sup_I p_j\). The phase bounds of
+\eqref{eq:gt-physical-error} and \eqref{eq:gt-residual-phase-bound}
+give \(E_{j,t}-1=O(\varepsilon_j)\),
+\(\Psi_{j,t}-1=O(\varepsilon_j)\) on the fixed disk and time range,
+where \(\varepsilon_j=\log^2(j+1)/j\). By
+\eqref{eq:coefficient-envelope}, \(p_j\le B_{j-1}^j/(2j)!\),
+so \(j^k\bar p_j M^{2j}\to0\) for any fixed \(M>0,k\ge0\).
+The norm identity \eqref{eq:hflow}, with the normalization by \(Z_t\),
+also gives
+\begin{equation}
+ (\log p_j)'=\beta_j+\beta_{j+1}-\beta_1,\qquad
+ \left|\log\frac{p_j(t)}{p_j(T)}\right|
+ \le (B_j+B_0)|t-T|.
+ \label{eq:gt-relative-norm}
+\end{equation}
+In \eqref{eq:gt-relative-norm} the prime is the time derivative.
+
+The field error \(O(p_j(t)Z_*^{2j})\) on \(\Gamma\) transfers
+both counts for all large degrees. Uniform convergence on a fixed
+slightly larger compact disk in the strip gives uniform bounds for
+the model spatial derivatives by Cauchy's estimate. Common boundary
+floors and an inner buffer then give \(K_j\to K\) uniformly by
+Proposition~\ref{prop:gt-transfer}. The coordinate and field
+estimates also give \(A_j-A=O(p_j(t)Z_*^{2j})\) on \(\Gamma\) by
+division by \(Q_j,Q\), and then on the disk by maximum modulus.
+The same boundary argument with the exact physical field at two
+times shows \(A(t,\cdot)-A_T=O(|t-T|)\) on the disk.
+
+Let \(e_j=D-D_j\), and write \(z_\pm=c\pm\sqrt D\) for the
+unordered physical pair. At fixed \(t\), use the two moment
+formulas with origin \(c(t)\). The first physical moment is zero.
+The collar log of \(G_{j,t}/F_t\) equals
+\(-\Delta_j/F_t+O(p_j(t)^2 Z_*^{4j})\) on \(\Gamma\), by the
+positive physical floor and the logarithm series there. Integration
+by parts gives \(c_j-c=O(p_j(t)Z_*^{2j})\) and
+\[
+ D_j-D=\left\langle (z-c)\frac{\Delta_j}{F_t}\right\rangle_\Gamma
+               +O(p_j(t)^2Z_*^{4j}).
+\]
+In particular the square of the center difference belongs to the
+quadratic remainder. Since
+\((z-c)/Q=\tfrac12[(z-z_+)^{-1}+(z-z_-)^{-1}]\), including at a
+double, this gives the first variation
+\begin{equation}
+ e_j(t)=-\frac12\sum_\pm\frac{\Delta_j(t,z_\pm)}{A(t,z_\pm)}
+               +O(p_j(t)^2Z_*^{4j}).
+ \label{eq:gt-gap-first-variation}
+\end{equation}
+The same half-sum identity in the exact defect
+\eqref{eq:gt-model-gap} gives
+\begin{equation}
+ r_N(t)=-\frac12\sum_\pm\frac{R_N(t,z_{\pm,N})}{A_N(t,z_{\pm,N})}.
+ \label{eq:gt-root-average-defect}
+\end{equation}
+
+\begin{proposition}[Fixed-event signed errors and uniqueness]
+\label{prop:gt-fixed-event}
+At the fixed event,
+\begin{align}
+ D_j(T)&\sim L_j(T,a)/A_* ,\notag\\
+ r_N(T)&\sim -R_N(T,a)/A_* ,\qquad
+ \frac{r_N(T)}{D_N(T)}
+       \sim\frac{(2N)(2N-1)}{a^2},\qquad
+ \frac{r_N(T)}{D_{N+1}(T)}
+       \sim-\frac{\Pi_N}{\beta_{N+1}(T)a^4}.
+ \label{eq:gt-fixed-ratios}
+\end{align}
+For all large \(N\), the model has one double time \(T_N\) on a
+sufficiently small fixed interval about \(T\), and
+\(T_N-T\sim-L_N(T,a)/(2A_*)\).
+\end{proposition}
+\begin{proof}
+At \(T\) the physical roots in \eqref{eq:gt-gap-first-variation}
+coincide at \(a\). Dividing the quadratic remainder by
+\(p_j(T)|a|^{2j}\) leaves
+\(O(p_j(T)(Z_*^2/|a|)^{2j})\), which tends to zero faster
+than every inverse power of \(j\). Thus the asymptotic is relative
+to the actual norm even when some links are small. For the residual
+at \(T\), in \eqref{eq:gt-model-gap} replace the center and the
+denominator by \(a,F_T\). The replacements cost
+\(O(p_N(T)Z_*^{2N}\sup_\Gamma|R_N|)\), and the remaining simple
+residue is \(-R_N(T,a)/A_*\). Division by
+\(h_N^*(T)|a|^{2N-2}/(2N-2)!\) again leaves a factorial-small
+relative remainder. Substituting the leading monomials proves the
+ratios. The model residual and \(D_N(T)\) have eventual sign
+\((-1)^N\operatorname{sgn}A_*\), and \(D_{N+1}(T)\) has its
+opposite. There is no degree-independent favorable sign here.
+
+The exact defect tends to zero uniformly on \(I\) by its contour
+formula, fixed floor, and the factorial bound for
+\(R_N=O(N^2\bar p_N Z_*^{2N-2})\). Together with \(D_N\to D\)
+and \(K_N\to K\), the two gap laws give \(D_N'\to D'\) uniformly.
+Since \(D(T)=0\), \(D'(T)=2\), choose the fixed interval so
+\(D'\ge1\) and its endpoint signs are opposite. Then \(D_N\)
+is strictly increasing with opposite endpoint signs for all large
+\(N\). The mean value theorem gives
+\(T_N-T=-D_N(T)/D_N'(\xi_N)\) with \(\xi_N\to T\), and
+\(D_N'(\xi_N)\to2\). This proves the asserted displacement and
+upgrades the existence statement of
+Proposition~\ref{prop:double-collision-resolution} under the
+additional uniform defect control.
+\end{proof}
+
+\subsection{The critical time scale}
+
+For a bounded real \(s\), put \(v=T+s/N^2\) and
+\[
+ \begin{gathered}
+ W_{N,v}(t)=\exp\!\left(4\int_t^v K_N(q)\,\dd q\right),\\
+ \mathfrak R_N(s)=\int_T^v W_{N,v}r_N\,\dd t,\qquad
+ \mathfrak H_N(s)=4\int_T^v W_{N,v}(K-K_N)D\,\dd t .
+ \end{gathered}
+\]
+These are oriented integrals for \(s<0\). Let \(e_0=e_N(T)\) and
+define the entire functions
+\[
+ \alpha=4/a^2,\qquad
+ C_a(s)=\sum_{m\ge0}\frac{(8s/a^2)^m}{(2m)!},\qquad
+ J_a(s)=\int_0^s C_a(q)\,\dd q,\qquad
+ H_a(s)=C_a(s)-1-\alpha J_a(s).
+\]
+
+\begin{theorem}[Joint signed profiles at a fixed event]
+\label{thm:gt-critical-profile}
+For the fixed event and contour above, \(e_0\ne0\) for all
+sufficiently large \(N\). Uniformly for \(s\) in a fixed compact
+real interval,
+\begin{align}
+ \frac{e_N(v)}{e_0}&=C_a(s)+O(\varepsilon_N),&
+ \frac{r_N(v)}{N^2e_0}&=-\alpha C_a(s)+O(\varepsilon_N),\notag\\
+ \frac{\mathfrak R_N(s)}{e_0}&=-\alpha J_a(s)
+                      +O(|s|\varepsilon_N),&
+ \frac{\mathfrak H_N(s)}{e_0}&=H_a(s)+O(\varepsilon_N).
+ \label{eq:gt-critical-profile}
+\end{align}
+The errors are absolute after the displayed normalization, including
+at zero profile values. The signed combination is exactly
+\begin{equation}
+ e_N(v)+\mathfrak R_N(s)-\mathfrak H_N(s)=W_{N,v}(T)e_0 .
+ \label{eq:gt-critical-combination}
+\end{equation}
+\end{theorem}
+\begin{proof}
+At \(t=T+s/N^2\), the law \eqref{eq:gt-gap-law} and bounded
+coordinate derivatives give \(c(t)=a+O(|t-T|)\) and
+\(D(t)=2(t-T)+O((t-T)^2)\). For real \(x,y\), with the square
+root chosen nonnegative real or positive imaginary,
+\(|\sqrt x-\sqrt y|\le\sqrt{|x-y|}\). Apply this to the
+factorial-small coordinate error, and use the expansion of \(D\)
+also at \(s=0\). For either the physical or model pair \(z_\pm^*\),
+\[
+ N(z_\pm^*-a)=\pm\sqrt{2s}+O(N^{-1}),\qquad
+ k\log(z_\pm^*/a)=\pm 2\sqrt{2s}/a+O(N^{-1})
+ \quad(k=2N,2N-2).
+\]
+The log here is the analytic branch near one. Thus the average of
+\((z_\pm^*/a)^k\) is \(C_a(s)+O(N^{-1})\), with bounded terms
+also when \(s<0\). The unit values at either pair are
+\(A_*+O(N^{-1})\). The norm ratio is
+\(1+O(\log^2(N+1)/N^2)\) by \eqref{eq:gt-relative-norm}.
+For \(j=N,N+1\) the quadratic remainder of
+\eqref{eq:gt-gap-first-variation}, divided by
+\(p_j(T)|a|^{2j}\), remains factorial-small. Inserting the phase,
+unit and power estimates into \eqref{eq:gt-gap-first-variation}
+and \eqref{eq:gt-root-average-defect}, and dividing by the
+event asymptotic of Proposition~\ref{prop:gt-fixed-event}, proves
+the first two profiles. The factor of the second profile is
+\(-\lim (2N)(2N-1)/(N^2a^2)=-\alpha\).
+
+On the oriented interval \(W_{N,v}=1+O(|s|/N^2)\)
+since \(K_N\) is uniformly bounded. Changing variables to
+\(q=N^2(t-T)\) in the residual integral gives its profile with
+the error \(O(|s|\varepsilon_N)\). Equation
+\eqref{eq:gt-joint-error} gives the exact signed combination in
+either orientation. It supplies the remaining integrated drift
+profile without differentiating any time-dependent phase bound.
+\end{proof}
+
+For \(s>0\), put \(u=\sqrt{8s}/|a|\). Then
+\(C_a=\cosh u\), \(\alpha J_a=u\sinh u-\cosh u+1\), and
+\(H_a=2(\cosh u-1)-u\sinh u<0\). The last inequality follows
+because \(u\sinh u-2(\cosh u-1)\) has value and first derivative
+zero at zero and second derivative \(u\sinh u>0\).
+For \(s<0\), put \(u=\sqrt{8|s|}/|a|\). The corresponding
+values are \(\cos u\), \(1-\cos u-u\sin u\), and
+\(2(\cos u-1)+u\sin u\). The limiting separate absolute total in
+units of the signed total of \eqref{eq:gt-critical-combination} is
+\(|C_a|+|\alpha J_a|+|H_a|\). On the positive side it is
+\(1+2\alpha J_a\) and can grow arbitrarily large as the fixed
+scaled endpoint increases. At \(s=-a^2\pi^2/8\) the three signed
+terms are \(-1,-2,4\) in units of \(e_0\), with separate total
+\(7\). Dividing by a profile at one of its zeros would require a
+finer estimate.
+
+\subsection{Direct calculation of the drift profile}
+\label{sec:gt-drift-kernel}
+
+There is also a spatial calculation of the drift difference.
+Set \(k=2/a\), \(d^2=2s\), and \(Q_d(x)=x^2-d^2\). On two fixed
+circles of radii \(\sqrt{2S}<R_0<R\), consider
+\(Y_\zeta=Q_d-\zeta\e^{kx}\) for \(|s|\le S\).
+For small complex \(\zeta\), the two counts transfer by Rouch\'e
+on both circles. Let \(P_\zeta\) be the monic pair polynomial
+and \(U_\zeta=Y_\zeta/P_\zeta\). Its coefficients, obtained by
+contour moments, are holomorphic in \(\zeta\) through collisions.
+The variation of the \(j\)-th moment at zero is
+\[
+ j\,\frac1{2\pi\ii}\oint_{|x|=R} x^{j-1}
+          \frac{\e^{kx}}{Q_d(x)}\,\dd x .
+\]
+This follows by differentiating the logarithm and integrating by
+parts. Inserting the first two moments into the pair polynomial
+gives \(\partial_\zeta P_\zeta|_0=-I_d(x)\), where
+\[
+ I_d(x)=\cosh(kd)+x\,\frac{\sinh(kd)}{d}.
+\]
+This interpolates the exponential at \(\pm d\), with the Hermite
+limit \(1+kx\) at \(d=0\). Set \(V_d=(\e^{kx}-I_d)/Q_d\), which
+is holomorphic at the roots. Then
+\(\partial_\zeta U_\zeta|_0=-V_d\). Since the unperturbed unit is
+constant, the drift variation is
+\(- (2\pi\ii)^{-1}\oint_{|x|=R} V_d'(x)/Q_d(x)\,\dd x\).
+At \(d=0\) this gives \(-V_0''(0)=-k^4/12\). An
+equivalent calculation from the full-field logarithmic derivative
+in \eqref{eq:gt-regular-drift} is
+\begin{align}
+ \kappa_a(s)
+   &=-\frac1{2\pi\ii}\oint_{|x|=R}
+             \frac{2x\e^{kx}}{(x^2-2s)^3}\,\dd x\notag\\
+   &=-\sum_{j\ge0}
+       \frac{(j+1)(j+2)(2s)^j k^{2j+4}}{(2j+4)!}
+    =\frac{C_a'(s)-k^2 C_a(s)}{8s}\quad(s\ne0).
+ \label{eq:gt-drift-kernel}
+\end{align}
+Indeed the additional term from the denominator variation is
+\(Q_d'I_d/Q_d^3\), rational with its poles inside and zero
+contour integral by decay at infinity. Integration by parts
+leaves the displayed integral. Expanding
+\((1-2s/x^2)^{-3}\) gives the series. Comparing coefficients
+with \(C_a(s)=\sum_{m\ge0}k^{2m}(2s)^m/(2m)!\) gives the last
+identity. The series makes the extension entire and gives
+\(\kappa_a(0)=-k^4/12=-4/(3a^4)\). It is negative for \(s\ge0\).
+For \(s<0\), its expression is
+\(k^4(\cos u-\sin u/u)/(4u^2)\), \(u=|k|\sqrt{-2s}\), and
+it alternates in sign at positive integer multiples of \(\pi\).
+For a polynomial perturbation of degree at most two, the
+deflated factor is constant and the drift variation vanishes.
+The interpolant above is therefore essential to the deflation.
+
+To pass to the physical problem take \(x=N(z-a)\),
+\(t=T+s/N^2\), and set
+\[
+ f_N(s,x)=N^2F_t(a+x/N)/A_* ,\qquad
+ g_N(s,x)=N^2G_{N,t}(a+x/N)/A_* ,\qquad
+ \zeta_N=N^2L_N(T,a)/A_*.
+\]
+The heat law gives \(\partial_tF_T(a)=-2A_*\).
+Taylor expansion in space at \(T\), followed by integration of
+the time derivative over the interval from \(T\) to \(t\), thus
+gives \(f_N\to Q_d\) uniformly on compact \(x\)-disks and bounded
+real \(s\)-intervals. By \eqref{eq:gt-physical-error},
+\(g_N=f_N-\zeta_N B_N^{\rm sc}\), where
+\[
+ B_N^{\rm sc}(s,x)=
+ \frac{h_N^*(t)}{h_N^*(T)}
+       (1+x/(aN))^{2N}E_{N,t}(a+x/N)\longrightarrow\e^{kx}.
+\]
+The convergence follows from \eqref{eq:gt-relative-norm}, the
+logarithm expansion of the monomial and the fixed-strip phase
+bound. Also \(\zeta_N\to0\) by the factorial bound.
+
+On a fixed sufficiently small complex \(\zeta\)-disk the
+fields \(f_N-\zeta B_N^{\rm sc}\) are uniformly close to
+\(Q_d\) on both contours, within their uniform boundary floors.
+Their pair polynomials converge to those of \(Y_\zeta\) by the
+moment formula. The denominators on the outer circle are bounded
+below by \((R-R_0)^2\), and Cauchy's estimate on a slightly larger
+disk in \(x\) gives uniform convergence of the spatial derivatives.
+The drift integral consequently converges uniformly and is
+holomorphic in \(\zeta\) on a common disk. Cauchy's formula there
+gives convergence of the first parameter variation and a uniform
+quadratic remainder. Hence the drift in the \(x\)-coordinate
+changes by \(\zeta_N(\kappa_a(s)+o(1))\) between \(f_N\) and \(g_N\).
+The counted roots in these auxiliary scaled disks belong to the
+same fixed physical pair, by the counts on both boundaries.
+A logarithmic derivative and a divided difference each contribute
+\(1/N\) under the spatial rescaling, so \(K_z=N^2 K_x\) for
+either field. Combining this with
+\(-\zeta_N/(N^2e_0)\to1\) gives
+\begin{equation}
+ \frac{(K-K_N)(T+s/N^2)}{N^4e_0}\longrightarrow\kappa_a(s)
+ \label{eq:gt-pointwise-transfer}
+\end{equation}
+uniformly on fixed compact real \(s\)-sets, through both mergers.
+This derivation uses no time derivative of the approximate error.
+
+\subsection{Shorter intervals and the adjacent head}
+
+For any real nonzero \(\tau_N=o(N^{-2})\), put \(s_N=N^2\tau_N\).
+By \eqref{eq:gt-critical-profile},
+\[
+ \mathfrak R_N(s_N)\sim\tau_N r_N(T),\qquad
+ \mathfrak R_N(s_N)/e_0\sim-\alpha s_N .
+\]
+For \(q\) between \(0\) and \(s_N\), use
+\(D(T+q/N^2)=2q/N^2+O(q^2/N^4)\) and
+\(W_{N,v}=1+O(|s_N|/N^2)\).
+The uniform additive kernel error in \eqref{eq:gt-pointwise-transfer}
+then makes the normalized drift integrand in the scaled time
+\(8q\kappa_a(0)+q\,o(1)\). Its oriented integral yields
+\[
+ \frac{\mathfrak H_N(s_N)}{e_0}\sim-\frac{16s_N^2}{3a^4},
+ \qquad \frac{\mathfrak H_N(s_N)}{\mathfrak R_N(s_N)}
+                  \sim\frac{4s_N}{3a^2}.
+\]
+This argument supplies a relative comparison even for intervals
+shrinking faster than the uniform additive error.
+
+The residual and the adjacent head share the first \(N\) link
+indices. Set \(b_N^*=\beta_{N+1}(T)a^2/[(2N+1)(2N+2)]>0\).
+The two actual event asymptotics and the physical leading ratio
+\eqref{eq:leading-ratio} give
+\[
+ \frac{e_{N+1}(T)}{e_0}=-b_N^*[1+O(\varepsilon_N)],\qquad
+ \frac{e_{N+1}(v)}{e_0}=-b_N^*[C_a(s)+O(\varepsilon_N)].
+\]
+For the second, apply Theorem~\ref{thm:gt-critical-profile} at
+degree \(N+1\) and scaled argument \((1+1/N)^2s\).
+No lower bound on the omitted link is needed. At the common
+target \(T\) the unweighted combination in
+\eqref{eq:gt-critical-combination}, divided by \(W_{N,v}(T)\),
+is exactly \(e_0\). Its ratio in magnitude to the next-head error
+is asymptotic to \(1/b_N^*\), at least of order
+\(N^2/\log^2(N+1)\). The separately signed residual gives
+\(b_N^*\mathfrak R_N(s)/e_{N+1}(T)
+=\alpha J_a(s)+O(|s|\varepsilon_N)\). In particular,
+\[
+ \frac{\mathfrak R_N(s_N)}{e_{N+1}(T)}
+     \sim\frac{\tau_N\Pi_N}{\beta_{N+1}(T)a^4}.
+\]
+At \(\tau_N=N^{-3}\) this is asymptotic to
+\(16N/(\beta_{N+1}(T)a^4)\), at least of order
+\(N/\log^2(N+1)\) in magnitude. In contrast, the absolute
+fixed-circle allowance of Section~\ref{sec:gt-signed-cost},
+using a fixed positive model floor \(m\), exceeds the
+absolute signed residual by a factor asymptotic to
+\(\rho(2\rho-b)|A_*|(Z_*/|a|)^{2N-2}/m\) on these shorter
+forward slabs. This follows from \eqref{eq:gt-relative-norm},
+the phase convergence, and
+\(Q_{\tau_N}(M)/\tau_N\to1\) for a bounded drift allowance.
+The statements compare a term, an explicit allowance, or an
+exact matched error as specified. None bounds the cost of
+acquiring a time slab from the cost of an endpoint snapshot.
+
+The local analytic statements apply to each fixed source sharing
+the stated norm and error hypotheses. The positive three- and
+four-weighted-square controls have the same local event laws on
+their own counted tubes. The score argument and the domination
+used in \eqref{eq:gt-physical-error} hold for these finite square
+sums on the half-line, with vanishing boundary term from the
+factor \(u\) in the integration by parts. Their full theta
+reflection and unit coefficients are absent, features unused
+in the proof. The quadratic heat field
+\((z-a)^2-2(t-T)\) gives \(D=2(t-T)\), \(K=0\) and exhausts
+its incoming cost at \(T\), while lacking the infinite positive
+Jacobi chain. The quantitative score and envelope hypotheses are
+substantive. For example the Euler-factor \(c=1/2,p=23\)
+control fails the stated \(B_0\) bound at time zero; this check
+says nothing about arbitrary interior event intervals. The
+reflected super-Gaussian fails the score confinement, and compact
+and finite-atomic controls require separate envelope or chain
+hypotheses. The canonical interior event considered here is
+conditional. These fixed-tube comparisons do not supply a
+whole-height collision exclusion or an exclusive advantage to
+a transport algorithm.

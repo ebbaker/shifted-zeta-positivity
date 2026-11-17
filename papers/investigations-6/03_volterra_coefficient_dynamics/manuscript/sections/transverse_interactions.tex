@@ -1,0 +1,610 @@
+\section{Transverse density and isolated-pair interactions}
+\label{sec:gt-transverse}
+
+The complete horizontal count in Section~\ref{sec:gt-height} also bounds
+the number of terms in broad transverse observables. Their evolution
+retains a dissipative contribution from conjugate zeros. This gives
+a heat-time estimate in addition to the bounds available from a single
+slice. Write all zero sums with multiplicity, use physical time
+\(0\le t\le1/2\), and use the canonical strip \(|\Im\rho|\le1\)
+throughout this interval.
+The growth proof preceding Proposition~\ref{gt-exterior-proposition}
+applies on this same slab with \(u^2/2\) in the source envelope.
+
+\subsection{A convex balance with conjugate dissipation}
+
+Write \(\mathcal L_t(z)=H_t'(z)/H_t(z)\), and take \(C_{\rm u}\ge1\)
+as a common constant in \eqref{gt-height-unit-count} and
+\begin{equation}
+ |\mathcal L_t(u+4\ii)|\le C_{\rm u}\log(2+|u|)
+ \qquad(u\in\R,\ 0\le t\le1/2).
+ \label{gt-safe-line}
+\end{equation}
+The latter estimate for positive time is the upper-line logarithmic
+derivative bound in the proof of Theorem~1.5(iv) of Polymath
+\cite[\S9, following (105), using Proposition~9.1(ii)]{polymath}.
+At time zero, the source formula gives locally uniform convergence of
+\(H_t,H_t'\). The line is zero-free throughout the closed heat slab,
+so for each \(u\) the same constant follows on taking \(t\downarrow0\).
+Reflection and compactness cover negative and bounded \(u\).
+
+Fix \(\chi\in C_c^2(\R)\), supported in \([-1,1]\), with
+\(0\le\chi\le1\) and \(\chi=1\) on \([-1/2,1/2]\). For \(U\ge8\) set
+\[
+ \psi_U(x)=\chi((x-3U/2)/U),\qquad
+ \mathcal C_U=\{j:U/4\le x_j\le11U/4\},\qquad L_U=\log U,
+\]
+where \(z_j=x_j+\ii y_j\) are the zeros of \(H_t\). The weight
+\(\psi_U\) is supported on \([U/2,5U/2]\) and equals one on \([U,2U]\).
+For an even convex \(g\in C^2([-1,1])\) with \(g(0)=0\), let
+\[
+ Q_{U,g}(t)=\sum_j\psi_U(x_j)g(y_j),\qquad
+ \mathcal D_{U,g}(t)=\sum_{j:y_j\ne0}\psi_U(x_j)\frac{g'(y_j)}{y_j},
+ \qquad G=\|g\|_\infty .
+\]
+Both quantities are nonnegative.
+
+\begin{proposition}[Broad convex balance]
+\label{gt-convex-balance}
+The function \(Q_{U,g}\) is absolutely continuous and, with
+\(D_\chi=C_{\rm u}^2(36\|\chi''\|_\infty+1200\|\chi'\|_\infty)\),
+\begin{equation}
+ Q_{U,g}(\beta)+\int_\alpha^\beta\mathcal D_{U,g}(t)\,\dd t
+ \le Q_{U,g}(\alpha)+D_\chi G(\beta-\alpha)L_U^3
+ \qquad(0\le\alpha\le\beta\le1/2).
+ \label{gt-convex-integrated}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+For \(z=x+\ii y\) in the support strip, put \(w=x+4\ii\). Its
+exterior force after removing the cluster \(\mathcal C_U\) is
+\begin{equation}
+ E_U(z)=\mathcal L_t(w)-\sum_{k\in\mathcal C_U}\frac1{w-z_k}
+     +\sum_{k\notin\mathcal C_U}
+        \left(\frac1{z-z_k}-\frac1{w-z_k}\right).
+ \label{gt-broad-exterior}
+\end{equation}
+Indeed, start with the opposite-paired logarithmic derivative of
+the even canonical product, as in the proof of
+Proposition~\ref{gt-exterior-proposition}. At a zero use its regular
+part after removing the self term. Subtract the value at \(w\) before
+passing to the full exterior series. For \(k\notin\mathcal C_U\), the
+horizontal distance is at least \(U/4\ge2\), so the difference in
+\eqref{gt-broad-exterior} has modulus at most \(5|x-x_k|^{-2}\).
+The complete unit bound gives at most
+\(2C_{\rm u}[\log(2+x)+\log(h+2)]\) occurrences in a shell
+\(h\le|x-x_k|<h+1\). Since \(\log(2+x)\le2L_U\), the difference
+series over \(|x-x_k|\ge m\), for integers \(m\ge2\), has bound
+\[
+ \frac{10C_{\rm u}}{m-1}[2L_U+\log(m+1)+1].
+\]
+This follows by integrating the decreasing shell majorant, and
+includes both horizontal tails. Taking \(m=\lfloor U/4\rfloor\)
+bounds the full difference series by \(640C_{\rm u}L_U/U\),
+using \(m-1\ge U/16\) and \(\log(m+1)+1\le2L_U\).
+
+The cluster occupies at most \(3U\) closed unit intervals, each with
+count at most \(2C_{\rm u}L_U\). For its finite sum at \(w\), each
+distance shell contains at most \(4C_{\rm u}L_U\) occurrences
+and each denominator has modulus at least \(\sqrt{h^2+9}\).
+The maximum shell index is at most \(\lceil9U/4\rceil\le3U\).
+Summing, and using \eqref{gt-safe-line} for the first term, gives
+\[
+ \begin{gathered}
+ \sum_{k\in\mathcal C_U}|w-z_k|^{-1}
+ \le4C_{\rm u}L_U[1/3+1+\log(3U)]\le12C_{\rm u}L_U^2,\\
+ \#\mathcal C_U\le6C_{\rm u}UL_U,\qquad |E_U(z)|\le100C_{\rm u}L_U^2 .
+ \end{gathered}
+\]
+
+At a simple zero the heat equation gives velocity \(H_t''/H_t'\),
+twice the regular part of \(\mathcal L_t\). To differentiate
+\(Q_{U,g}\), symmetrize the terms inside \(\mathcal C_U\).
+For two distinct endpoints, let \(p=x_j-x_k\), \(q=y_j-y_k\),
+and let \((x_s,y_s)\) be the chord from \(z_k\) to \(z_j\) with
+\(0\le s\le1\). The force pairs the gradient difference of
+\(f(x,y)=\psi_U(x)g(y)\) with \((p,-q)/(p^2+q^2)\). Integrating the
+gradient difference along the chord cancels the mixed derivatives.
+Thus
+\[
+ \begin{split}
+ \mathcal K_{jk}
+ &=\int_0^1
+   \frac{\psi_U(x_s)g''(y_s)q^2-\psi_U''(x_s)g(y_s)p^2}
+        {p^2+q^2}\,\dd s,\\
+ Q_{U,g}'
+ &=-2\sum_{j<k\in\mathcal C_U}\mathcal K_{jk}
+   +2\sum_{j\,\text{in support}}
+       [\psi_U'(x_j)g(y_j)\Re E_U(z_j)
+        +\psi_U(x_j)g'(y_j)\Im E_U(z_j)] .
+ \end{split}
+\]
+Only the contributing roots require velocities. Endpoints outside
+the support have zero gradient, with zero kernel for coincident
+inactive endpoints. The cluster is a partition of the force in this
+identity at each time.
+
+For each contributing conjugate pair \(x\pm\ii y\), \(y\ne0\), the chord
+is vertical and contributes
+\(-2\psi_U(x)[g'(y)-g'(-y)]/(2y)=-2\psi_U(x)g'(y)/y\)
+to \(Q_{U,g}'\). This is precisely the negative of the two corresponding
+terms in \(\mathcal D_{U,g}\). The other vertical interior terms
+are nonpositive by convexity. For the exterior imaginary part,
+the reciprocal terms converge absolutely by the square tail, and
+the cluster removal preserves conjugation symmetry. For a conjugate
+group with real part \(u\) and imaginary parts \(\pm v\), writing
+\(s=x-u\), the negative imaginary part of the two reciprocals is
+\[
+ \frac{2y(s^2+y^2-v^2)}
+      {[s^2+(y-v)^2][s^2+(y+v)^2]} .
+\]
+It has the sign of \(y\) by \(|s|\ge2,\ |v|\le1\). A real exterior
+root has the same sign property, with expression \(y/(s^2+y^2)\).
+Because \(yg'(y)\ge0\), the exterior vertical term is nonpositive.
+The exterior horizontal term still uses the full convention in
+\eqref{gt-broad-exterior}.
+
+The horizontal cost inside the cluster is bounded by
+\(\|\psi_U''\|_\infty G(\#\mathcal C_U)^2\), and the exterior
+horizontal cost by
+\(2\|\psi_U'\|_\infty G(6C_{\rm u}UL_U)(100C_{\rm u}L_U^2)\).
+These bounds prove \(Q'_{U,g}+\mathcal D_{U,g}\le D_\chi GL_U^3\)
+where the support roots are simple.
+
+For assembly, fix \(U,g\). Local zero-free boundaries and Rouch\'e
+continuity give continuity of the finite root multisets in a collar
+around the support, and hence of \(Q_{U,g}\). The multiple-root locus
+in the padded box \([U/2-1,5U/2+1]\times[-2,2]\) over the time slab
+is compact. At a root of multiplicity \(m\) at \((t_0,z_0)\), the heat
+equation gives the rescaled leading polynomial
+\[
+ |s|^{-m/2}H_{t_0+s}(z_0+\sqrt{|s|}\,\zeta)
+ \ longrightarrow\ 
+ \frac{H_{t_0}^{(m)}(z_0)}{m!}
+     \exp(-\operatorname{sgn}(s)\partial_\zeta^2)\zeta^m
+\]
+on bounded \(\zeta\) sets, on each side separately. In the convergent
+Taylor expansion, \(s^k(z-z_0)^j\) has weighted degree \(2k+j\),
+and its coefficient is determined by the \((2k+j)\)-th spatial
+derivative. Degrees below \(m\) vanish and degree \(m\) gives the
+displayed polynomial. Its zeros are distinct by the Hermite polynomial
+identity, with a rotation for \(s<0\)
+\cite[Proposition~3.1(ii)]{polymath}. Rouch\'e on disjoint small circles
+around these rescaled zeros, and on the original isolating disk,
+shows that all \(m\) roots are simple for nearby nonzero \(s\).
+Thus the multiple-root points in the compact locus are isolated and
+there are only finitely many event times.
+
+On the complementary intervals the absolute chord bound is
+\(\max(\|\psi_U\|_\infty\|g''\|_\infty,\|\psi_U''\|_\infty G)\).
+The active gradient and the field are bounded for fixed \(U,g\).
+These give a finite two-sided derivative bound, so continuity across
+the finite partition gives absolute continuity. With the summand set
+to zero at \(y=0\), \(\mathcal D_{U,g}\) is Borel under local enumeration,
+bounded by \(6C_{\rm u}UL_U\|g''\|_\infty\), and integrable. Integrating
+the one-sided inequality proves \eqref{gt-convex-integrated}. Its
+constant uses only \(G\), and the first derivative has no collision
+atom.
+\end{proof}
+
+\subsection{Uniform density and transverse moments}
+
+\begin{theorem}[Transverse density on the closed heat slab]
+\label{gt-transverse-density}
+For each fixed \(0<b<1/2\) there is \(B_b\) such that for \(U\ge8\),
+\(0<v<1\), and \(0\le t\le1/2\),
+\begin{equation}
+ N_t^\perp(U,v):=\#\{j: U\le x_j\le2U,\ |y_j|>v\}
+ \le B_b U L_U\e^{-bvL_U}.
+ \label{gt-density-dyadic}
+\end{equation}
+In particular, for every integer \(k\ge1\),
+\begin{equation}
+ \sum_{U\le x_j\le2U}|y_j|^k
+ \le \frac{k! B_b}{b^k}\frac{U}{L_U^{k-1}}.
+ \label{gt-transverse-moments}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+At time zero, \(H_0(z)=\xi((1+\ii z)/2)/8\). A zero \(x+\ii y\)
+corresponds to a zeta zero with real part \(1/2-y/2\) and
+ordinate \(x/2\). Choose \(c_0\in(2b,1)\), and put
+\(b_0=c_0/2\). The Selberg--Jutila bound as stated in Maples--Rodgers
+\cite[Theorem~2.4 and \S4, (18), arXiv v2]{maplesrodgers}
+bounds \(\#\{\beta_0>\sigma,\ 0<\gamma< V\}\) by
+\(D_{c_0}V\log V\,\e^{-c_0(\sigma-1/2)\log V}\), with one constant
+uniform in the threshold. On \([U/2,5U/2]\) the zeta ordinates
+are strictly between \(0\) and \(2U\). Critical-line reflection
+accounts for both signs of \(y\) with one doubling. Taking
+\(V=2U\) and \(\sigma=1/2+v/2\) gives a bound
+\(C_{c_0} U L_U\e^{-b_0vL_U}\) on the time-zero support population
+with \(|y|>v\), where we can use \(C_{c_0}=8D_{c_0}\).
+
+Use \(g_U(y)=\cosh(bL_Uy)-1\), which is convex and has sup norm
+at most \(U^b\). Integrating its derivative against the initial
+threshold count gives
+\[
+ Q_{U,g_U}(0)\le C_{c_0} U L_U
+     \int_0^\infty b\sinh(bw)\e^{-b_0 w}\,\dd w
+ =C_{c_0}\frac{b^2}{b_0^2-b^2}U L_U.
+\]
+The flux in \eqref{gt-convex-integrated} is at most
+\(D_\chi U^bL_U^3/2\), and
+\(U^{b-1}L_U^2\le4/[\e^2(1-b)^2]\). Consequently
+\(Q_{U,g_U}(t)\le K_b U L_U\), where
+\[
+ K_b=C_{c_0}\frac{b^2}{b_0^2-b^2}
+            +\frac{2D_\chi}{\e^2(1-b)^2}.
+\]
+For \(bvL_U\ge1\) each counted occurrence contributes at least
+\(\kappa\e^{bvL_U}\) on the plateau, where
+\(\kappa=(1-\e^{-1})^2/2\). For \(bvL_U<1\) use the
+ordinary population bound \(6C_{\rm u}UL_U\). This proves
+\eqref{gt-density-dyadic} with
+\(B_b=\max\{K_b/\kappa,6\e C_{\rm u}\}\). The layer-cake formula
+\(k\int_0^1 v^{k-1}N_t^\perp(U,v)\,\dd v\), bounded by the exponential
+integral over \([0,\infty)\), proves \eqref{gt-transverse-moments}.
+The strict transverse threshold includes \(|y|=1\) in this integral
+through thresholds below one.
+\end{proof}
+
+The starting density is arithmetic, while the convex balance uses the
+heat equation, strip and complete field. The latter remains available
+for an occupation estimate with a different test
+\cite{tnddensity,gttransverse}.
+
+\subsection{The radial comparison and its center average}
+
+Fix \(T\ge16\), \(L=\log T\), \(\ell=L^{-1}\), \(1\le a\le L\),
+and \(3\le R\le T/2\). The scale \(\ell\) is frozen throughout
+\([T,2T]\). At arbitrary real centers define the transverse sum
+\begin{equation}
+ \Xi_{a,R}(t,X)=\ell^2\!
+    \sum_{\substack{\rho:\,|\rho-X|\ge a\ell\\
+                             |\Re\rho-X|\le R}}
+    \frac{(\Im\rho)^2}{|\rho-X|^4}.
+ \label{gt-transverse-xi}
+\end{equation}
+
+\begin{proposition}[Radial comparison for an isolated pair]
+\label{gt-radial-bridge}
+Take a conjugation-invariant pair of occurrences \(z_\pm=c\pm\sqrt D\)
+with \(c,D\in\R\), \(|D|\le d\ell^2\) and an exterior collar
+\(|\rho-c|\ge a\ell\) for every exterior occurrence, where
+\(0\le d<a^2\). Write \(w=\rho-c=x+\ii y\), \(r=|w|\) and
+\(\delta=d/a^2\). The signed summand of \(M=-K\) is
+\begin{equation}
+ q(\rho)=\Re\frac1{w^2-D}
+ =\frac1{r^2-D}
+  -\frac{2y^2(r^2+D)}{(r^2-D)[(r^2-D)^2+4Dy^2]} .
+ \label{gt-radial-identity}
+\end{equation}
+With \(S_R=\sum_{\rho\,\mathrm{exterior},\,|x|\le R}q(\rho)\),
+\begin{equation}
+ \ell^2 S_R\ge
+ \ell^2\sum_{\substack{\rho\,\mathrm{exterior}\\|x|\le R}}
+    \frac1{r^2-D}-C_\delta\Xi_{a,R}(t,c),\qquad
+ C_\delta=\frac{2(1+\delta)}{(1-\delta)^3}.
+ \label{gt-radial-loss}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+In \eqref{gt-exterior-k} the two factors multiply to \(w^2-D\).
+The real numerator is \(r^2-D-2y^2\), and
+\(|w^2-D|^2=(r^2-D)^2+4Dy^2\). Subtracting from \((r^2-D)^{-1}\)
+gives the identity. For either sign of \(D\), the collar gives
+\(r^2\pm D\ge(1-\delta)r^2>0\) and
+\(|w^2-D|\ge(1-\delta)r^2\). Thus the correction is between zero
+and \(C_\delta y^2/r^4\). At a double it is exactly \(2y^2/r^4\).
+Both selected occurrences have radius \(\sqrt{|D|}<a\ell\).
+Every nearby exterior occurrence enters \(\Xi_{a,R}(t,c)\),
+including equality at either cutoff, and this proves the bound.
+\end{proof}
+
+\begin{theorem}[Center-averaged transverse correction]
+\label{gt-averaged-transverse}
+Uniformly in \(t,T,a,R\) in the stated domains, the mean of
+\eqref{gt-transverse-xi} satisfies
+\begin{equation}
+ \frac1T\int_T^{2T}\Xi_{a,R}(t,X)\,\dd X\le\frac{C_s}{a^3},
+ \qquad
+ \frac1T\int_T^{2T}\Xi_{a,R}(t,X)\,\dd X\le\frac{C_0}{a}
+       \quad\text{using only the complete count},
+ \label{gt-xi-means}
+\end{equation}
+where \(C_s=11\pi B_b/(3b^2)\) and \(C_0=3\pi C_{\rm u}\).
+\end{theorem}
+
+\begin{proof}
+For \(r_0>0\) define
+\[
+ I(y,r_0)=\int_{x^2+y^2\ge r_0^2}\frac{y^2}{(x^2+y^2)^2}\,\dd x .
+\]
+It is zero at \(y=0\), and for \(|y|\ge r_0\) integration over the
+whole line gives \(\pi/(2|y|)\). For \(s=|y|/r_0\in(0,1)\),
+integrating the two rays using
+\(x/[2(x^2+y^2)]+\arctan(x/|y|)/(2|y|)\) gives
+\[
+ I(y,r_0)=\frac{\arcsin s-s\sqrt{1-s^2}}{r_0s}.
+\]
+The numerator's derivative is \(2s^2/\sqrt{1-s^2}\), so its ratio to
+\(s^3\) equals \(2\int_0^1 v^2(1-s^2v^2)^{-1/2}\,\dd v\le\pi/2\),
+the value at \(s=1\). The cases therefore give
+\begin{equation}
+ I(y,r_0)\le\frac\pi2\min\{r_0^{-1},y^2r_0^{-3}\}.
+ \label{gt-one-zero-integral}
+\end{equation}
+
+Only zeros with real part in \(\mathcal B_T=[T/2,5T/2]\) enter the
+center average. This band lies in the closed dyadic bands at scales
+\(T/2,T,2T\). Since \(\log(T/2)\ge3L/4\), the sum of the three
+moment allowances in \eqref{gt-transverse-moments} for \(k=2\) is
+at most \((11/3)(2B_b/b^2)T/L\). The complete count over
+\(\mathcal B_T\) is at most \(6C_{\rm u}TL\) by the unit bound.
+With \(r_0=a\ell\), Tonelli and the substitution \(x=\Re\rho-X\)
+give an upper bound \(\ell^2 T^{-1}\sum_{\Re\rho\in\mathcal B_T}
+I(\Im\rho,r_0)\) by extending each center integral to the line
+while retaining the radial cutoff. The two choices in
+\eqref{gt-one-zero-integral} give the two stated constants.
+\end{proof}
+
+The powers in \eqref{gt-xi-means} refer to the same averaged observable.
+For \(a=L^\eta\), \(0<\eta<1\), the two upper bounds are
+\(O(L^{-3\eta})\) and \(O(L^{-\eta})\) while the physical radius
+tends to zero. At fixed \(a\) both bounds are \(O(1)\).
+For \(h>0\) the first upper bound gives Lebesgue measure
+at most \(C_sT/(a^3h)\) for \(\Xi_{a,R}>h\) on \([T,2T]\).
+The value at a designated center in \eqref{gt-radial-loss} still
+requires a pairwise estimate. A collar of the chosen radius is an
+independent premise of that application.
+
+\subsection{Packing and exceptional interactions on a slice}
+
+Now impose \(d\ge0\), \(\max(2,4\sqrt d)\le a\le L\), and
+\(3\le R\le T/4\), and put \(r_0=a\ell\). At time \(t\), let
+\(\mathcal P_t\) be the distinct unordered conjugation-invariant
+pairs of zero occurrences in Proposition~\ref{gt-radial-bridge}
+with \(c\in[T,2T]\) and the specified collar. A double counts as
+one pair. The two occurrences of any qualifying pair lie within
+\(\sqrt d\,\ell\le r_0/4\) of the center. If distinct pairs shared
+one occurrence, their centers would lie within \(2\sqrt d\,\ell\)
+of one another, and the other occurrence of the second pair would
+be exterior to the first at distance at most \(3r_0/4\) from its
+center. This contradicts the collar, and sharing both occurrences
+gives the same unordered pair. A member of one pair is therefore
+exterior to each other pair. It follows that
+\begin{equation}
+ |c_1-c_2|\ge(a-\sqrt d)\ell\ge3r_0/4,\qquad
+ \#\mathcal P_t\le1+\frac{4TL}{3a}.
+ \label{gt-pair-packing}
+\end{equation}
+
+\begin{theorem}[Negative interactions on a slice]
+\label{gt-pair-negative-count}
+Define \(N_-(t)=\#\{P\in\mathcal P_t:S_R(P)<0\}\) and
+\(N_M(t)=\#\{P\in\mathcal P_t:M(P)<0\}\), where \(M(P)\) is the
+complete exterior sum. For fixed \(0<b<1/2\),
+\begin{equation}
+ N_M(t)\le N_-(t)\le
+ 5B_b\left(\frac{31}{9}+\frac{8}{3ab}\right) TL\e^{-2ba/3}.
+ \label{gt-negative-slice}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The bound \(|w^2-D|\ge(15/16)|w|^2\) follows from
+\(d/a^2\le1/16\). The unit count in each horizontal shell
+\(n\le|x|<n+1\), \(n\ge1\), is
+\(O(C_{\rm u}[\log(2+c)+\log(n+2)])\).
+The resulting inverse-square tail is absolutely convergent,
+and \(|x|<1\) contains finitely many exterior occurrences.
+For the omitted terms \(|x|>R\) the numerator
+\(x^2-y^2-D\) is positive, since \(|y|\le1\), \(|D|\le1/16\)
+and \(R\ge3\). Thus \(M(P)\ge S_R(P)\).
+
+If \(q(\rho)<0\), then \(y^2>(r^2-D)/2\ge15r_0^2/32\), and
+hence \(|y|>v_0=2r_0/3\). Negativity also requires
+\[
+ |\Re\rho-c|<\sqrt{y^2+D}\le |y|+r_0/4 .
+\]
+By \eqref{gt-pair-packing}, such a window around a fixed occurrence
+contains at most \(5/3+8|y|/(3r_0)\) eligible centers.
+Each pair with \(S_R<0\) has at least one negative summand, and
+every such occurrence has real part in \(\mathcal B_T\). Consequently
+\begin{equation}
+ N_-(t)\le
+ \sum_{\substack{\Re\rho\in\mathcal B_T\\ |y|>v_0}}
+        \left(\frac53+\frac{8|y|}{3r_0}\right).
+ \label{gt-negative-incidences}
+\end{equation}
+This counts an occurrence at each center it can affect. Multiple
+incidences for one pair only increase the upper bound.
+
+For the three dyadic bands covering \(\mathcal B_T\), the ratios of
+\(U\log U\,\e^{-bv\log U}\) to \(TL\e^{-bvL}\) are bounded by
+\(2^{b-1},1,3\), respectively. Thus
+\[
+ N_t^\perp(v;\mathcal B_T):=\#\{\rho:\Re\rho\in\mathcal B_T,\ |y|>v\}
+ \le5B_b TL\e^{-bvL}\qquad(0<v<1).
+\]
+Layer cake gives the first moment over the strict threshold:
+\[
+ \begin{split}
+ \sum_{\substack{\Re\rho\in\mathcal B_T\\ |y|>v_0}}|y|
+ &=v_0N_t^\perp(v_0;\mathcal B_T)+\int_{v_0}^1N_t^\perp(v;\mathcal B_T)\,\dd v\\
+ &\le5B_b TL\e^{-bv_0L}\left(v_0+\frac1{bL}\right).
+ \end{split}
+\]
+Substituting these two bounds into \eqref{gt-negative-incidences}
+gives \eqref{gt-negative-slice}.
+\end{proof}
+
+\paragraph{A large transverse loss at a qualifying center.}
+The intervals \(I_c=[c-r_0/4,c+r_0/4]\) at the qualifying centers
+are disjoint by \eqref{gt-pair-packing}. Moving from \(c\) to
+\(X\in I_c\) shifts distances by at most \(r_0/4\).
+Every occurrence counted in \(\Xi_{a,R}(t,c)\) then has radial
+distance at least \(3r_0/4\) and horizontal distance at most
+\(R'=R+r_0/4\). Its new distance is no more than \(5/4\) times its
+old one. With \(\theta_*=(4/5)^4\), this gives
+\[
+ \Xi_{a/2,R'}(t,X)\ge\theta_*\Xi_{a,R}(t,c)\qquad(X\in I_c).
+\]
+All these intervals lie in \(J=[T-r_0/4,2T+r_0/4]\).
+For \(X\in J\) the enlarged horizontal cutoff places the contributing
+zeros in \([T-R-r_0/2,2T+R+r_0/2]\subseteq\mathcal B_T\), using
+\(R\le T/4\), \(r_0\le1\) and \(T\ge16\).
+Apply the same one-zero integral over \(J\) with radius \(r_0/2\).
+By \eqref{gt-one-zero-integral} and the population bounds used in
+Theorem~\ref{gt-averaged-transverse}, the integral is at most
+\(8C_sT/a^3\), or \(2C_0T/a\) using only the count.
+Each qualifying center with \(\Xi_{a,R}(t,c)\ge h>0\) contributes
+at least \(\theta_*h r_0/2\) on its interval. Thus the number
+of such centers is bounded by
+\begin{equation}
+ \frac{16C_s}{\theta_*}\frac{TL}{a^4h},\qquad
+ \frac{4C_0}{\theta_*}\frac{TL}{a^2h}
+     \quad\text{using only the complete count}.
+ \label{gt-xi-exceptions}
+\end{equation}
+Both allowances can be intersected with \eqref{gt-pair-packing}.
+Since \(C_\delta\le8704/3375\) in this class, either
+\(\ell^2 S_R\le-\epsilon\) or \(\ell^2M\le-\epsilon\) implies
+\(\Xi_{a,R}(t,c)\ge(3375/8704)\epsilon\), by
+\eqref{gt-radial-loss} and positivity of the tail.
+
+There is also a pointwise count-only bound
+\(\Xi_{a,R}(t,c)=O(L/a^2+1/L)\). For \(|x|\le1\) two unit windows
+supply at most \(4C_{\rm u}L\) terms, each at most \(a^{-2}\).
+In the other shells each term is at most \(\ell^2 n^{-4}\) by the
+strip, and summing the shell counts from the proof of
+Theorem~\ref{gt-pair-negative-count} gives \(O(1/L)\).
+Thus for a fixed threshold \(h\) and \(a/\sqrt L\to\infty\), the
+pointwise bound already excludes \(\Xi_{a,R}\ge h\) at sufficiently
+large height. A growing-radius example of the two-power gain in
+\eqref{gt-xi-exceptions} is \(a=L^\eta\) with \(0<\eta<1/2\).
+The sign count \eqref{gt-negative-slice} includes arbitrarily small
+negative interactions. Its allowance divided by \(TL\) decays
+exponentially in \(a\), while the count-only packing allowance
+has order \(1/a\) for \(a=L^\eta\), \(0<\eta<1\). At \(a=L\)
+the signed upper allowance still grows like \(T^{1-2b/3}L\).
+These are bounds with a denominator set by the height band.
+A fraction among qualifying pairs would require a lower bound
+on their number.
+
+\subsection{Pair-time occupation at a fixed collar}
+
+\begin{theorem}[Time occupation of negative interactions]
+\label{gt-pair-occupation}
+Assume \(T\ge64\) and the same slice class as in
+Theorem~\ref{gt-pair-negative-count}, with \(a,d,R,r_0\)
+fixed in time. For \(0\le\alpha\le\beta\le1/2\) and
+\(\tau=\beta-\alpha\),
+\begin{equation}
+ \begin{split}
+ \int_\alpha^\beta N_M(t)\,\dd t
+ &\le\int_\alpha^\beta N_-(t)\,\dd t\le
+ B_b\left(\frac{93}{b^2}+\frac{279}{ab^3}\right)\frac{T}{L}\
+ +\frac{32}{3}D_\chi
+    \left(\frac12+\frac{L}{3a}\right)\tau L^3 .
+ \end{split}
+ \label{gt-occupation-bound}
+\end{equation}
+The upper bound can also be intersected with \(\tau\) times each
+slice allowance in \eqref{gt-pair-packing} and
+\eqref{gt-negative-slice}.
+\end{theorem}
+
+\begin{proof}
+Use
+\[
+ g(y)=\frac{y^2}{2}+\frac{|y|^3}{3r_0},
+ \qquad \frac{g'(y)}{y}=1+\frac{|y|}{r_0}\ (y\ne0),\qquad
+ G=\frac12+\frac{L}{3a}.
+\]
+The function is even, \(C^2\) and convex. Let
+\(A_T=\psi_{T/2}+\psi_T+\psi_{2T}\) and write \(Q_A,\mathcal D_A\)
+for the corresponding sums of the three observables. The three
+plateaus cover \(\mathcal B_T\), so \(A_T\ge1\) there, and \(A_T\le3\)
+with support in \([T/4,5T]\). By \eqref{gt-negative-incidences}
+and the choice of \(g\), \(N_-(t)\le(8/3)\mathcal D_A(t)\).
+
+The five dyadic bands at scales \(T/4,T/2,T,2T,4T\) cover
+\([T/4,5T]\). Their scales sum to \(31T/4\) and each logarithm is
+at least \(2L/3\). For \(k=2,3\), equation
+\eqref{gt-transverse-moments} then bounds the sums of \(|y|^k\)
+on the support by \(93B_bT/(4b^2 L)\) and
+\(837B_bT/(8b^3L^2)\), respectively. Inserting the coefficients of
+\(g\) and the bound \(A_T\le3\) gives
+\[
+ Q_A(\alpha)\le\frac{B_b}{8}
+     \left(\frac{279}{b^2}+\frac{837}{ab^3}\right)\frac{T}{L}.
+\]
+Summing \eqref{gt-convex-integrated} over the three profiles and
+dropping \(Q_A(\beta)\ge0\) bounds the integral of
+\(\mathcal D_A\) by this allowance plus \(4D_\chi G\tau L^3\),
+since the three log cubes sum to \(3L^3+6L(\log2)^2\le4L^3\).
+Multiplying by \(8/3\) gives \eqref{gt-occupation-bound}.
+
+To justify the integrations, the slice conditions for the targets,
+collar, and \(S_R\) use a fixed padded finite band of roots.
+Off its finite multiple-event time set, local simple-root charts
+make the pair enumerations and all inequalities Borel. At event
+times the counts are defined directly on the finite multiset.
+Exhausting the full divisor by larger bounded bands gives \(M\)
+as a measurable limit on qualifying pairs, with a uniform
+inverse-square tail for \(c\in[T,2T]\). The charts are used only
+for measurability. Membership in \(\mathcal P_t\) is tested at
+each slice, including at \(D=0\).
+\end{proof}
+
+For fixed \(a,b\) and fixed positive \(\tau\), the occupation
+allowance divided by \(TL\) is
+\(O_{a,b}(L^{-2})+O_{a,\chi}(L^3/T)\).
+For variable positive \(\tau\), division by \(\tau TL\) gives
+the minimum of an \(O_{a,b}(1)\) slice allowance and the
+common-time allowance
+\(O_{a,b}((\tau L^2)^{-1})+O_{a,\chi}(L^3/T)\).
+The duration condition for decay of the latter bound at fixed
+\(a,b\) is \(\tau L^2\to\infty\). On a mean-spacing squared
+time scale the starting-moment allowance can still pay the entire
+slice scale. An exclusion for a particular pair would require a
+lower bound for its time in the counted class with negative
+interaction. At large height the allowance leaves room even for
+one pair on the entire slab. A signed transport bound also uses an
+independently supplied incoming value.
+
+\paragraph{Source dependence and matched comparison.}
+The same estimates are available to direct evaluation given the
+complete divisor, strip, density and pair geometry. The occupation
+gain uses the integrated heat identity as well. For a fixed-duration
+comparison, integrating the slice count gives only the
+\(O_{a,b}(1)\) normalized allowance. No evaluator-specific
+information enters that comparison.
+
+The opposite-sign fixed-slice examples from Section~\ref{sec:gt-height}
+can also obey the upper transverse density and moment bounds.
+The real insertions add zero transverse moment. For the nonreal
+insertion at \(T=c\), the two extra nonreal occurrences at positive
+height have \(|y|=2\sqrt3/\log c\). On every positive dyadic band
+\([U,2U]\), \(U\ge8\), entered by this pair, \(\log U\le\log(2c)\).
+Whenever the strict density threshold counts the pair,
+\(v\log U\) is therefore uniformly bounded. The two occurrences
+are absorbed by an enlarged density constant, and deleting
+occurrences reduces all nonnegative counts and moments. Their
+near sums \(S_3\) have exact opposite signs at the designated
+doubles with \(a=2\); the full interactions \(M\) have opposite
+signs for all sufficiently large \(c\). Along the unbounded choices
+with \(H_0(c)\ne0\), the modified functions differ from the original
+theta field. No common heat-time family is supplied by this
+fixed-slice construction.
+Quadratic and quartic heat controls can share the conjugate
+dissipation but lack the canonical growing count law. The
+weighted-square and finite-source controls change the full
+reflected theta expansion, and fractional profiles lack the
+integer divisor required by the incidence count. The separate
+premise screens specify the scope of the remaining controls
+\cite{gtcounts,gttransverse}.

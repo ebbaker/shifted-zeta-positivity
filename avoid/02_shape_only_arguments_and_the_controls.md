@@ -152,3 +152,55 @@ changes the next defect while preserving tails/envelope; its zeros are open.
 Keep the two preservation lists separate. Require a new signed estimate
 before promoting either bounded score error or finite commutation to a
 zero-sensitive induction; growing-degree compact confinement remains open.
+
+
+**Exact horizontal counts can still omit the interaction sign, 17 November 2026.**
+For Edward Baker with Codex assistance; lead settings unavailable, conceptual
+Astra/ultra and proof/review Sol6.1/ultra dispatches.
+[GT Note34](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/34_VCD_GT_E15_IDENTICAL_COUNTS_OPPOSITE_SIGNS_20261117.md)
+states: “The decisive difference is the exterior transverse mark.” Two
+fixed-slice real even order-one fields share the exact horizontal counting
+measure, strip and counted collar, but normalized interactions tend to
+1/2 and −1/16. [Assessment15](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/15_VCD_GT_E14_FAR_EXTERIOR_AND_COUNT_SCOPE_ASSESSMENT_20261117.md)
+accepts the scoped proof and requires wording that treats positive-source
+and common heat-time representations as outside the supplied data. This
+stops count-only sign recovery in that relaxed class, not canonical-source,
+legitimately all-real or dynamic estimates. Keep imaginary marks and the
+near signed sum when using the separately proved positive far-tail rate.
+
+
+**An actual-source aggregate bound need not distinguish a selected bad center,
+17 November 2026.** Prepared for Edward Baker with Codex assistance;
+root settings unavailable, conceptual Astra/ultra and proof/review
+Sol6.1/ultra dispatches. [VCD-GT Note38 §6](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/38_VCD_GT_E19_ISOLATED_PAIR_EXCEPTION_COUNT_20261117.md)
+states: “The time-zero density inequality also transfers to these fixed
+slices with an enlarged constant.” Its identical-count controls preserve
+the transverse second moment and exponential density while keeping an
+opposite selected interaction sign. The new mean and exceptional-pair
+counts remain valid; they do not exclude that one center. Test the
+*derived quantitative premise*, rather than treating changed theta
+identity as its failure. The controls supply no common heat tube and
+exclude no genuinely additional conditional or every-center source
+estimate. [Assessment17](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/17_VCD_GT_E18_SOURCE_AND_PAIR_COUNT_ASSESSMENT_20261117.md)
+accepts this scoped distinction internally.
+
+**Time occupation is not a selected-slice exclusion, 17 November 2026.**
+For Edward Baker with Codex assistance; root settings unavailable,
+Astra/ultra conceptual and Sol6.1/ultra proof/review dispatches.
+[VCD-GT Note41 §5](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/41_VCD_GT_E21_EXACT_INTERACTION_RICCATI_BOUND_20261117.md)
+states: “The tube length by itself supplies no such sign guarantee.”
+The accepted O(T/log T) fixed-duration occupation gain loses its benefit
+when divided by the available negative-visibility duration. Even granting
+negative visibility for a spacing-squared interval leaves an O(T log T)
+allowance. Keep eligibility, sign persistence and incoming data as distinct
+premises; a diverging upper allowance is not evidence that an exception
+exists. [Assessment19](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/19_VCD_GT_E22_FIXED_COLLAR_ASSESSMENT_20261117.md)
+accepts this scoped comparison. It closes this aggregate-to-snapshot
+inference, not other source-conditioned or joint signed estimates.
+
+The [17 November integrated manuscript record](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/43_VCD_GT_RECENT_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261117.md)
+preserves this distinction: “Dividing the occupation allowance by that
+duration loses its gain.” Its correction review also distinguishes a growing multiplier
+*upper allowance* from a growing actual multiplier. These are conditional
+bounds, not selected-pair sign statements. Prepared for Edward Baker with
+Codex assistance; root settings unavailable, Sol6.1/ultra helper dispatches.

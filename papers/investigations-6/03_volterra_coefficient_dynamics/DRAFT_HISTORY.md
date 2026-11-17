@@ -1,5 +1,29 @@
 # Volterra coefficient dynamics history
 
+- **17 November 2026 — shared manuscript / GT E23–E24 milestone, branch chat0006:**
+  [Integration43](01_cluster_gap_transport/notes/43_VCD_GT_RECENT_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261117.md)
+  develops the recent exterior-height, transverse-density, exceptional-pair,
+  occupation, interaction-dynamics and Fourier results systematically.
+  [Assessment20](01_cluster_gap_transport/reviews/20_VCD_GT_E24_ANALYTICAL_MANUSCRIPT_ASSESSMENT_20261117.md)
+  accepts within scope after corrections; the 75-page reading PDF is in
+  ignored output, with theory primary, numerical support in Appendix B,
+  and outstanding challenges in §19. For Edward Baker with Codex assistance;
+  root settings unavailable, fixed helpers Sol6.1/ultra, internal shared
+  premises. Parent B07/E25 and sibling ownership remain unchanged.
+
+- **16 November 2026 — shared manuscript / GT E10 milestone, branch chat0003:** [Integration25](01_cluster_gap_transport/notes/25_VCD_GT_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261116.md) develops the recent analytical gap, residual, critical-scale, exterior-source and Fourier-curvature results in the existing manuscript; numerical support is secondary and the main text ends with outstanding challenges. [GT Assessment11](01_cluster_gap_transport/reviews/11_VCD_GT_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261116.md) accepts within scope; [Record12](01_cluster_gap_transport/numerics/12_VCD_GT_MANUSCRIPT_INTEGRATION_RECORD_20261116.json) documents the 51-page clean build and rendered-page review. [Continuation26](01_cluster_gap_transport/notes/26_VCD_GT_RESEARCH_CONTINUATION_20261116.md) preserves the prior lower-mass plan and adds deflated Fourier grouping. For Edward Baker with Codex assistance; lead settings unavailable, helpers Sol6.1/ultra; internal shared-premise review. Parent B07/E25 unchanged; no new global theorem or investigation closure.
+
+- **16 November 2026 — cluster gap-transport setup, branch chat0001:**
+  completed the first collision branch's [overview and sustained-session plan](01_cluster_gap_transport/README.md),
+  [sole GT register](01_cluster_gap_transport/research-progress/01_VCD_GT_RESEARCH_PROGRESS_20261116.md)
+  and [research continuation](01_cluster_gap_transport/notes/02_VCD_GT_RESEARCH_CONTINUATION_20261116.md).
+  Edward requests ultra lead sessions with bounded Sol6.1 subtasks and
+  continued work across task boundaries. The branch history/assessment
+  holds details; parent B07/E25 and both siblings retain ownership/status.
+  For Edward Baker with Codex assistance; lead actual settings unavailable,
+  read-only support dispatched gpt-6.1-sol/ultra. Setup only, no new theorem
+  or scientific execution.
+
 - **16 November 2026 — three collision-route overviews, chat0004:** created README/overview pairs for [gap transport](01_cluster_gap_transport/README.md), [degree contraction](02_degree_nonreality_contraction/README.md), and [multiscale bounds](03_multiscale_collision_bounds/README.md), reusing [discussion28](notes/28_VCD_COLLISION_CONTROL_ROUTE_DISCUSSION_20261116.md). Edward selects gap transport first; its [continuation](01_cluster_gap_transport/notes/01_VCD_GT_SETUP_CONTINUATION_20261116.md) prepares the next session's plan/register setup. Plans and progress files are deferred by request; parent B07/E25 retain ownership/status. Organizational milestone only, no new theorem, research execution or numerical campaign. For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
 
 - **16 November 2026 — unresolved clusters and heat collisions, chat0004:** [note27](notes/27_VCD_CLUSTER_RESOLUTION_AND_HEAT_COLLISIONS_20261116.md) and manuscript §10.4 derive center/discriminant error bounds and fixed double-event resolution; §5.3 clarifies that polynomial phase does not count F zeros. [Assessment11](reviews/11_VCD_CLUSTER_RESOLUTION_ASSESSMENT_20261116.md), [build14](numerics/14_VCD_CLUSTER_RESOLUTION_MANUSCRIPT_BUILD_20261116.json); same-assistant checks, no numerical campaign or collision exclusion. Separately repaired the chat metadata mismatch and recovered the preceding reply ([receipt13](numerics/13_VCD_CHAT_CREATION_METADATA_REPAIR_20261116.json)). For Edward Baker with Codex assistance; actual model/effort unavailable.

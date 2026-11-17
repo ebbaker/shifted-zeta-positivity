@@ -1,0 +1,392 @@
+\section{The far exterior at growing height}
+\label{sec:gt-height}
+
+The finite lower-mass bounds use information about individual groups.
+At growing height a cumulative count can pay the contribution of the
+far groups together. We use physical time \(t=\lambda\), and write
+\(M=-K\), so the physical gap law is \(D'=2-4MD\). For a pair with
+real coordinates \(c=(z_1+z_2)/2\) and \(D=(z_1-z_2)^2/4\),
+Proposition~\ref{gt-exterior-proposition} expresses \(M\) through the
+complete exterior divisor, after removal of the two target occurrences.
+
+\subsection{Uniform counts, including time zero}
+
+The strip bound \eqref{gt-canonical-strip} holds on the full physical
+slab \(0\le t\le1/2\) by the same de Bruijn theorem. The order bound
+of Section~\ref{gt-source-curvature} also holds uniformly on this
+slab, since \(u^2/2\) in place of \(u^2/10\) is still absorbed by
+the double-exponential decay in \eqref{eq:tail}. The source integral
+has two further consequences. First, \(H_t(\ii y)>0\) for real
+\(y\), by positivity of the integrand \(W_t(u)\cosh(yu)\) on the
+half-line. Second, \(H_t\to H_0\) locally uniformly in \(z\) as
+\(t\downarrow0\). On compact \(z\)-sets the cosine factor is bounded
+by \(\e^{Bu}\) for a fixed \(B\), so the majorant
+\(\Phi(u)\e^{u^2/2+Bu}\) gives this convergence.
+
+Let \(\nu_t=\sum_\varrho\delta_{\Re\varrho}\) be the projection of the
+complete divisor of \(H_t\), with each occurrence counted, and put
+\(N_t(X)=\nu_t((0,X])\). For \(X\ge4\pi\), define
+\begin{equation}
+ G_t(X)=\frac{X}{4\pi}\log\frac{X}{4\pi}-\frac{X}{4\pi}
+        +\frac{11}{8}+\frac{t}{16}\log\frac{X}{4\pi},
+ \qquad E_t(X)=N_t(X)-G_t(X).
+ \label{gt-height-main-count}
+\end{equation}
+For \(0<t\le1/2\), the normalization in \eqref{eq:field} gives the
+count of Theorem~1.5(iv) of Polymath, arXiv v2, pp.~9--10, with proof
+on p.~61. It is a multiplicity count of all complex zeros with
+positive real part at most \(X\), with an absolute discrepancy
+bound \(C_0\log(2+X)\), allowing an absolute enlargement for the
+right-continuous convention. Part~(iv) applies throughout this range
+of \(X,t\). \cite[Theorem~1.5(iv)]{polymath}
+
+\begin{lemma}[Complete projected counts on the closed slab]
+\label{gt-height-count}
+There is an absolute constant \(C_0\) such that
+\begin{equation}
+ |E_t(X)|\le C_0\log(2+X)\qquad (X\ge4\pi,\ 0\le t\le1/2).
+ \label{gt-height-discrepancy}
+\end{equation}
+For an absolute \(C_{\rm u}\ge1\) one also has
+\begin{equation}
+ \nu_t([U,U+1])\le C_{\rm u}\log(2+|U|)
+ \qquad(U\in\R,\ 0\le t\le1/2).
+ \label{gt-height-unit-count}
+\end{equation}
+In particular \(N_t(X)\ll X\log(2+X)\) for \(X\ge4\pi\).
+\end{lemma}
+\begin{proof}
+Fix \(X>4\pi\) and choose a sequence \(\epsilon\downarrow0\) such that
+\(X-\epsilon>4\pi\) and \(X\pm\epsilon\) avoid the real coordinates
+of the \(H_0\) zeros. Local finiteness follows from the strip and
+isolated zeros. At each chosen endpoint \(Y=X\pm\epsilon\), take
+the rectangle with vertical sides at \(0,Y\) and horizontal sides
+at \(\Im z=\pm2\). The boundary is zero-free for \(H_0\). Local
+uniform convergence and Rouch\'e's theorem give the same count
+inside for all sufficiently small positive \(t\) at that \(Y\).
+By the strip and the zero-free vertical sides, this is equality
+of \(N_t(Y)\) and \(N_0(Y)\). Letting \(t\downarrow0\) at the two
+fixed endpoints uses \(G_t(Y)\to G_0(Y)\). Monotonicity then gives
+\[
+ \begin{aligned}
+ G_0(X-\epsilon)-C_0\log(2+X-\epsilon)
+ &\le N_0(X-\epsilon)\le N_0(X),\\
+ N_0(X)&\le N_0(X+\epsilon)
+    \le G_0(X+\epsilon)+C_0\log(2+X+\epsilon).
+ \end{aligned}
+\]
+Taking \(\epsilon\downarrow0\) bounds the full cumulative count even
+when \(X\) carries an atom. At \(X=4\pi\) use a bracket from above
+for the upper bound and \(N_0(4\pi)\ge0\) for the lower bound,
+enlarging the absolute constant.
+
+For \(X>4\pi\), the left limit \(E_t(X-)\) inherits
+\eqref{gt-height-discrepancy}, so the atom
+\(J_t(X)=\nu_t\{X\}=E_t(X)-E_t(X-)\) is \(O(\log(2+X))\).
+At \(X=4\pi\) it is bounded by \(N_t(4\pi)=O(1)\).
+For \(U>4\pi\), subtract \(N_t(U-)\) from \(N_t(U+1)\) and use
+the bound on the increment of \(G_t\), given by
+\[
+ G_t'(X)=\frac{1}{4\pi}\log\frac{X}{4\pi}+\frac{t}{16X}.
+\]
+For \(0\le U\le4\pi\) use \(N_t(4\pi+1)=O(1)\) and the absence
+of zeros with zero real part. Evenness gives the bound on negative
+intervals by reflecting all occurrences, and intervals straddling
+zero are in the bounded range. This proves \eqref{gt-height-unit-count},
+including both endpoints of each unit interval. The asserted upper
+bound on \(N_t\) follows directly from \eqref{gt-height-main-count}
+and \eqref{gt-height-discrepancy}.
+\end{proof}
+
+\subsection{The signed far-tail main term}
+
+\begin{theorem}[Uniform far exterior of a counted pair]
+\label{gt-height-far}
+At a slice of the canonical flow with \(0\le t\le1/2\), suppose a
+conjugation-invariant contour counts exactly the target pair and
+has a separately established zero-free collar. Assume \(c\ge16\pi\),
+\(|D|\le1\), and \(3\le R\le c/2\). For \(\varrho=c+x+\ii y\),
+use \(q(x,y,D)\) from \eqref{gt-conjugate-weight} and define
+\begin{equation}
+ S_R=\sum_{\varrho\ {\rm exterior},\,|x|\le R}q(x,y,D),
+ \qquad T_R=M-S_R .
+ \label{gt-height-signed-split}
+\end{equation}
+Each sum over zeros counts occurrences. All far weights are
+positive, and with \(B_c=\log(2+c)\),
+\begin{equation}
+ \left|T_R-\frac{\log(c/(4\pi))}{2\pi R}\right|
+ \le C\left(\frac{B_c}{R^2}+\frac{B_c}{R^3}+\frac{B_c}{c}\right).
+ \label{gt-height-tail-estimate}
+\end{equation}
+The constant is absolute and unevaluated. The estimate applies to
+positive, negative and zero \(D\). \cite{gtfar}
+\end{theorem}
+\begin{proof}
+In \eqref{gt-exterior-k} the reciprocal product has real part
+\(q(x,y,D)\). The sum is absolutely convergent and conjugation
+invariant, so a nonreal conjugate pair contributes two copies of
+this weight and a real occurrence contributes one. The same formula
+holds at a double. The roots satisfy
+\(|\Re z_j-c|\le1\), since \((z_j-c)^2=D\), so the strict far cut
+\(|x|>R\) already omits the target. Put \(h=y^2+D\). For
+\(|x|\ge3\) one has \(|h|\le2\) and \(x^2-h\ge(7/9)x^2\).
+Thus \(q>0\) there, and
+\begin{equation}
+ q(x,y,D)-x^{-2}
+ =\frac{(D-3y^2)x^2-h^2}{x^2\bigl((x^2-h)^2+4x^2y^2\bigr)}
+ =O(|x|^{-4}).
+ \label{gt-height-tail-kernel}
+\end{equation}
+The fourth-power error comes from taking the real part before
+approximation. Its numerator is \(O(x^2)\) and its denominator
+is at least a positive constant times \(x^6\).
+
+Write \(u=\Re\varrho\), \(\alpha=c/2\) and \(\beta=3c/2\).
+Each of the two parts of a shell
+\(R+j<|u-c|\le R+j+1\) intersected with \([\alpha,\beta]\)
+fits inside a closed unit interval with start of size \(O(c)\).
+The bound \eqref{gt-height-unit-count} therefore gives
+\[
+ \sum_{\substack{u\in[\alpha,\beta]\\ |u-c|>R}}
+     |u-c|^{-4} \ll B_c\sum_{j\ge0}(R+j)^{-4}
+ \ll B_c/R^3 .
+\]
+For \(p\in\{2,4\}\), the range \(0<u<\alpha\) costs
+\(O(B_c/c^{p-1})\) for the inverse-power sum, by
+\(|u-c|\ge c/2\) and \(N_t(\alpha)\ll cB_c\).
+For \(u>\beta\) one has \(u-c\ge u/3\), and the dyadic range
+\(2^j\beta<u\le2^{j+1}\beta\) contains
+\(O(2^jc(B_c+j))\) occurrences. Its weighted bounds sum to
+\(O(B_c/c^{p-1})\), since \(\sum_{j\ge0}2^{-(p-1)j}(1+j)<\infty\).
+For \(u=-s<0\), the weight is \((c+s)^{-p}\). By reflection the
+range \(0<s\le c\) has \(O(cB_c)\) occurrences, and dyadic ranges
+in \(s>c\) give the same bound as on the upper positive side.
+This includes the reflected target and all other negative-coordinate
+zeros. There is no occurrence with \(u=0\). Thus
+\eqref{gt-height-tail-kernel} and these bounds give
+\begin{equation}
+ T_R=\int_{[\alpha,\beta]\cap\{|u-c|>R\}}
+         \frac{\dd\nu_t(u)}{(u-c)^2}
+       +O(B_c/R^3+B_c/c).
+ \label{gt-height-tail-central}
+\end{equation}
+
+For \(R<c/2\), set \(a=c-R\), \(b=c+R\) and
+\(f(u)=(u-c)^{-2}\). The central domains are
+\([\alpha,a)\) and \((b,\beta]\).
+On these intervals \(\dd E_t=\dd\nu_t-G_t'(u)\,\dd u\).
+Stieltjes integration by parts with the specified endpoints gives
+\begin{align*}
+ \int_{[\alpha,a)} f\,\dd E_t
+  &= f(a)E_t(a-)-f(\alpha)E_t(\alpha-)
+      -\int_\alpha^a f'(u)E_t(u)\,\dd u,\\
+ \int_{(b,\beta]} f\,\dd E_t
+  &= f(\beta)E_t(\beta)-f(b)E_t(b)
+      -\int_b^\beta f'(u)E_t(u)\,\dd u .
+\end{align*}
+These formulas include atoms at \(\alpha,\beta\) and exclude
+atoms at \(a,b\), which belong to \(S_R\). Each excluded atom has
+inverse-square weight \(R^{-2}J_t(a)\) or \(R^{-2}J_t(b)\), both
+\(O(B_c/R^2)\). In the formulas all discrepancy values are
+\(O(B_c)\), the endpoint weights are at most \(R^{-2}\), and
+the variation of \(f\) on either interval is at most \(R^{-2}\).
+The cost of replacing \(\dd\nu_t\) by \(G_t'(u)\,\dd u\)
+in \eqref{gt-height-tail-central} is therefore \(O(B_c/R^2)\).
+At \(R=c/2\) both central intervals are empty and the coincident
+endpoints belong to \(S_R\).
+
+On the central band the derivative formula in the count lemma gives
+\[
+ G_t'(u)=\frac{\log(c/(4\pi))}{4\pi}
+          +O\!\left(\frac{|u-c|+1}{c}\right)
+\]
+by the mean-value theorem and \(u\ge c/2\). After weighting,
+the error is \(O(c^{-1}\int_R^{c/2}(s+1)s^{-2}\,\dd s)
+=O(B_c/c)\). The constant density contributes
+\[
+ \frac{\log(c/(4\pi))}{2\pi}\int_R^{c/2}\frac{\dd s}{s^2}
+ =\frac{\log(c/(4\pi))}{2\pi R}-\frac{\log(c/(4\pi))}{\pi c}.
+\]
+The final term is \(O(B_c/c)\), which proves
+\eqref{gt-height-tail-estimate} also at \(R=c/2\).
+\end{proof}
+
+For a fixed sufficiently large physical \(R\),
+Theorem~\ref{gt-height-far} gives \(T_R\asymp(\log c)/R\) as
+\(c\to\infty\). Relative to \((\log c)/R\) the error is
+\(O(R^{-1}+R^{-2}+R/c)\), so choosing \(R\) first and then
+increasing \(c\) gives the lower and upper bounds. For a frozen
+reference height \(T\), put \(L=\log T\), \(\ell=1/L\) and
+\(R=\sqrt L\). If \(T/2\le c\le2T\) and \(L\ge9\), the cutoff
+is admissible and \(\log(c/(4\pi))=L+O(1)\). Consequently
+\begin{equation}
+ T_R=\frac{\sqrt L}{2\pi}+O(1),\qquad
+ \ell^2 T_R=\frac{1}{2\pi L^{3/2}}+O(L^{-2}).
+ \label{gt-height-normalized-tail}
+\end{equation}
+The positive far interaction grows in physical units and tends to
+zero after normalization. The constants give an asymptotic range
+with unevaluated onset. As \(c\) moves, the two sharp-cutoff sums
+can change membership, exchanging equal and opposite weights.
+At a slice the total weight on the two cutoff lines is \(O(B_c/R^2)\)
+by \eqref{gt-height-tail-kernel} and the atom bound. The gap law
+uses the original regular sum \(M\).
+
+In the backward cost \eqref{eq:gt-backward-gap} the exponent is
+\(-4\int_t^v M(s)\,\dd s\). The far estimate bounds one component
+of this integral. To infer a positive gap on a new tube one still
+needs an enclosure of the signed \(S_R\) sufficient for the whole
+cost, and an independently obtained strict incoming margin at \(v\).
+Direct deflation on that tube uses the same count, collar and
+pair coordinates, the same signed near formula and far estimate,
+and the same near and incoming data when acquired.
+
+\subsection{Identical horizontal counts and opposite signs}
+
+The kernel \eqref{gt-conjugate-weight} changes sign with the
+imaginary offset of an exterior zero close to the center.
+The following fixed-slice example isolates the information lost
+by projecting the divisor to the real coordinate. It uses the
+time-zero counts from Lemma~\ref{gt-height-count}.
+
+\begin{proposition}[An exact-count obstruction at a double]
+\label{gt-height-exact-count}
+For each \(c\ge\e^4\), put \(\ell=1/\log c\) and \(r=2\ell\).
+There are two real even entire functions of order at most one and
+zero strip \(|\Im z|\le1\), with exactly the same complete projected
+counting measure. Both satisfy the time-zero cumulative law and
+closed unit upper counts with constants uniform in \(c\). They
+have an isolated double at \(c\), count two in \(|z-c|<\ell\)
+and a common zero-free collar \(\ell\le|z-c|\le3\ell/2\).
+For their complete deflated interactions \(M_+(c),M_-(c)\),
+\begin{equation}
+ \ell^2 M_+(c)=\frac12+O((\log c)^{-1}),\qquad
+ \ell^2 M_-(c)=-\frac1{16}+O((\log c)^{-1}).
+ \label{gt-height-count-signs}
+\end{equation}
+For \(r\le R\le3\) the normalized near sums equal \(1/2\) and
+\(-1/16\) exactly. \cite{gtcounts}
+\end{proposition}
+\begin{proof}
+Erase the full multiset \(\mathcal E_c\) of \(H_0\) zeros in
+the two closed bands \(|\Re z-c|\le3\) and \(|\Re z+c|\le3\).
+These disjoint bands contain \(O(\log c)\) occurrences by
+\eqref{gt-height-unit-count}, and the multiset is invariant
+under negation and conjugation. The quotient
+\[
+ B(z)=H_0(z)\Big/\prod_{\varrho\in\mathcal E_c}(z-\varrho)
+\]
+extends through every apparent pole with nonzero value because
+all multiplicities there have been divided out. It is real even,
+with exactly the remaining divisor. The quotient has order at
+most one because outside a sufficiently large disk, at fixed
+\(c\), each denominator factor has modulus at least one.
+Form the replacements
+\begin{align*}
+ F_+(z)&=B(z)(z^2-c^2)^2(z^2-(c+r)^2)^2,\\
+ F_-(z)&=B(z)(z^2-c^2)^2
+          \bigl((z-(c+r))^2+3r^2\bigr)
+          \bigl((z+(c+r))^2+3r^2\bigr).
+\end{align*}
+Polynomial multiplication preserves order at most one. Both
+functions are real even. Besides the doubles at \(\pm c\),
+\(F_+\) inserts real doubles at \(\pm(c+r)\), and \(F_-\)
+inserts conjugate pairs with the same real coordinates and
+imaginary coordinates \(\pm\sqrt3 r\). All the insertions
+lie in the strip, since \(r\le1/2\).
+The nearest exterior insertion to \(c\) is at distance \(r\)
+for \(F_+\) and \(2r\) for \(F_-\). Retained zeros have horizontal
+distance greater than three and the reflected insertions have
+distance at least \(2c\). Both disks and closed collars
+therefore have the stated geometry.
+
+The projected counting measures are exactly
+\[
+ \nu_\pm=\nu_0-\sum_{\varrho\in\mathcal E_c}\delta_{\Re\varrho}
+      +2\bigl(\delta_c+\delta_{-c}+\delta_{c+r}+\delta_{-(c+r)}\bigr).
+\]
+They agree on all Borel sets, including counts with either endpoint
+convention. Each unit interval has at most eight added occurrences,
+so \eqref{gt-height-unit-count} persists after absolute enlargement.
+For the cumulative positive count the correction is zero for
+\(X<c-3\), and otherwise is at most \(\#\mathcal E_c+8
+=O(\log c)=O(\log(2+X))\). Thus
+\(N_\pm(X)=G_0(X)+O(\log(2+X))\) for \(X\ge4\pi\), with uniform
+constants. The bound also holds on \(0\le X<4\pi\) by the unit
+counts and the continuous extension of \(G_0\) there.
+
+At \(D=0\), Proposition~\ref{gt-exterior-proposition} gives
+\(M_\pm(c)=\sum_{\varrho\ {\rm exterior}}(c-\varrho)^{-2}\).
+For the common retained divisor,
+\[
+ \sum_{\varrho\in Z(B)}|c-\varrho|^{-2}
+ \le 2C_{\rm u}\sum_{j=3}^\infty
+         \frac{\log(2+c)+\log(j+2)}{j^2}=O(\log c).
+\]
+Here the horizontal shell \(j\le|\Re\varrho-c|<j+1\) fits
+inside two closed unit intervals with starts of magnitude at
+most \(c+j+1\). The bound includes all retained negative-coordinate
+zeros. The double at \(-c\) contributes \(1/(2c^2)\), and the
+two occurrences with real part \(-(c+r)\) contribute at most
+\(2(2c+r)^{-2}\) in absolute value. The exterior insertions
+with real part \(c+r\) contribute \(2/r^2\) for \(F_+\) and
+\[
+ \frac{1}{(r+\ii\sqrt3 r)^2}+\frac{1}{(r-\ii\sqrt3 r)^2}
+       =-\frac{1}{4r^2}
+\]
+for \(F_-\). Multiplying by \(\ell^2=r^2/4\) gives
+\eqref{gt-height-count-signs}. Those two occurrences are
+the entire signed near sum for \(r\le R\le3\). For a larger
+cutoff the added subset of the retained divisor still costs
+at most \(O(\log c)\), and the reflected insertions at most
+\(O(c^{-2})\).
+\end{proof}
+
+In this fixed-slice analytic-divisor class the common count, strip,
+order and collar data cannot determine the sign of \(M\), or give
+an \(o(1)\) upper bound on the negative part of \(\ell^2S_R\)
+for the cutoffs in the proposition. Along unbounded \(c\) with
+\(H_0(c)\ne0\), each replacement differs from the unchanged theta
+field because it vanishes at \(c\). Positive Fourier-source
+representation and a common physical heat-time tube remain
+untested for these replacements. Source-specific, time-correlated
+and all-real-exterior estimates use additional information.
+With the complete fields, a direct evaluator has at the double
+\[
+ -(\log(F_\pm/(z-c)^2))''(c)
+  =\left(\frac{F_\pm'''(c)}{3F_\pm''(c)}\right)^2
+    -\frac{F_\pm''''(c)}{6F_\pm''(c)}
+  = M_\pm(c).
+\]
+The first equality follows by the Taylor series at \(c\).
+The jets distinguish the signs, and the shared projected data
+give the same ambiguity for direct evaluation and gap transport.
+
+For comparison, the finite polynomial controls and the finite-atom
+or compact finite-profile controls fail the canonical cumulative
+growth. In the compact-source cases exponential type gives a
+Jensen upper count \(O(X)\) inside \(|z|\le X+1\), which bounds
+the cumulative count under the strip premise. A nonconstant
+Euler-factor translate with multiplier \(1+\gamma\cos(az)\),
+\(0<\gamma<1\), \(a>0\), adds \(aX/\pi+O(1)\) occurrences
+at time zero. Its two roots per period \(2\pi/a\) have real
+coordinates \((2k+1)\pi/a\) and imaginary coordinates
+\(\pm\arcosh(1/\gamma)/a\), with multiplicities added at any
+common root of the product. This fails the logarithmic discrepancy
+even if the added width is at most one. The quadratic-exponential
+controls of order two and the reflected super-Gaussian controls
+fail the order premise. The documented endpoint-defective weighted-square,
+finite-source, finite-score and finite-prime changes fail the
+global strip as in Section~\ref{gt-source-curvature}. The damped
+smooth-shape and positive-primitive controls have untested strip
+and count premises. The normalized merger retains its RH hypothesis
+and untested cumulative count. Reflection rigidity identifies the
+unchanged weights within its polynomially weighted square-comb class.
+Varied observation kernels fail the literal cosine/Newman field
+equation, and fractional-profile measures lack an integer divisor.
+The exact-count controls above meet the count and collar premises
+of their fixed-slice class. The independent incoming condition in
+\eqref{eq:gt-backward-gap} remains necessary for a strict backward
+passage, as the even quartic illustrates despite positive exterior
+mass. \cite{gtjoint,gtfar,gtcounts}

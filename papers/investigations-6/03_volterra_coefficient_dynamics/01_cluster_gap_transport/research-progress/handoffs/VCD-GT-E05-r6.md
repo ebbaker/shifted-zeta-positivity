@@ -1,0 +1,25 @@
+# VCD-GT-E05-r6 frozen complete certificate assessment request
+
+16 November 2026, America/New_York. For Edward Baker with Codex assistance. E, fixed proof/code/replay/synthesis audit. Explicit gpt-6.1-sol/ultra dispatch; lead actual recorded settings unavailable, no backend attestation or specialist review. Same reviewer as r5 but no contribution to E09 or numerical implementation; shared oracle/source premises disclosed. Root owns shared navigation/history.
+
+Assess pinned E09 Note14, E04-r1 diagnostic and E04-r2 complete numerical enclosure, and synthesis16. Check M5 constants, DFT/time indexing, source/arithmetic/sample serialization error (midpoint/radius decimal reconstruction), spatial alias/truncation and real-time heat/Cauchy/Lobatto payment. Trace coefficient interval propagation, real/conjugate reduction, derivative-padded time/angular cover, RHP count/collar/log branch, centering and annular moment/K tails with actual interval coordinates/denominators. Ensure every true-field error is paid and no finite model is treated as a heat solution. Check exact constant K cost orientation, independent anchor, true endpoint normalization, direct comparison, published decimal outer bounds, quadratic through-double negative control, and all status/control/scoped claims.
+
+Run the certificate from the existing verified external fine cache using /private/tmp/vcd-gt-lehmer/venv/bin/python; output a new small replay record outside repo or own E05-r6 review record inside numerics if useful. No new xi campaign or widened precision/cell domain. Check both archive hashes, frozen code hash and exact predicates. Exercise missing/modified input fail-closed behavior on temporary copies only, never alter original cache. Do not equate replay agreement with an independent proof of imported analytical premises. Review the r1 source evaluator code where needed to verify source-gauge factors and original data provenance; its finite grids remain diagnostics until the new continuous-domain errors are applied.
+
+Own only reviews/08_VCD_GT_CANONICAL_GAP_CERTIFICATE_ASSESSMENT_20261116.md, research-progress/handoffs/VCD-GT-E05-r6-return.md, and an optional small numerics/E05-r6-review-record.json. Send material corrections early. Do not edit source notes/code/record, shared synthesis/register or chat history. Root will route corrections to owners and ask a bounded recheck with actual changed hashes if needed. Outcome accepted within scope, corrections required or located failed gate; do not silently broaden into global canonical-gap/RH/Newman claims. Scope is one canonical local signed-vs-absolute certificate and its same-oracle direct comparator.
+
+## Frozen inputs
+
+- `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/12_VCD_GT_E08_CANONICAL_XI_ORACLE_20261116.md`: `6a7282a6e6a80507a187189849dcadd5b65e357d2ddeb5e1d82c16be88ef5df3`
+- `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/13_VCD_GT_E04_LEHMER_DIAGNOSTIC_20261116.md`: `dad1ae6363bf50e73dd459c8f45a6435ff7cf8ce5f87452d3c7db3e33eaf201e`
+- `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/14_VCD_GT_E09_TENSOR_CERTIFICATE_BOUNDS_20261116.md`: `b090a8e0dc33eb26b3eb0395ba13a1a0677b275e73267b46884fbceabcb914f4`
+- `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/15_VCD_GT_E04_CERTIFIED_SIGNED_GAP_20261116.md`: `79b61039780aed3089ee81ab12f23d36c65b30080de689f4f836de05d34802bd`
+- `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/16_VCD_GT_CANONICAL_SIGNED_GAP_SYNTHESIS_20261116.md`: `00a40160d579bed10ebccb9e50b393aa27624a05a42e8e3096090169763d8895`
+- `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/numerics/vcd_gt_lehmer_diagnostic.py`: `9bce082219a61774f5984dcd800be2abc391067a752f3d4d89a0767b85adb7e0`
+- `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/numerics/vcd_gt_lehmer_certificate.py`: `549f3073e8783a10fba75ea160d67928f6fdcb9082d21e3e68500bf9a86138a2`
+- `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/numerics/04_VCD_GT_LEHMER_DIAGNOSTIC_20261116.json`: `beaaf824af68f4b4e8aa84705b6c6297ce3714321d62cec6ad5a2bbadd729eb5`
+- `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/numerics/05_VCD_GT_LEHMER_CERTIFICATE_20261116.json`: `c979ccf03098520983c625ae1988789ddcbb1414c459f9ce5e8f5ef148e1f7d3`
+- `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/07_VCD_GT_XI_ORACLE_ASSESSMENT_20261116.md`: `d40cf84b1102f853783fadd314ef01165b1fb14022510aad629de5ba034f6d84`
+- `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/ARCHIVES.md`: `cece934a7049a36b31513bbdad005a373fd5c4a70b44f4397ba955fe42239a61`
+
+Fine archive gzip SHA-256 `033f83cb4a8d6bd411e4861380a78e054ab70f7c60079b98a75bd159644a078a`, canonical content SHA-256 `508d0feec6655524f1927d5b2877b1171c92a5a553053b7ef428fc680eb6f816`, initial cache `/private/tmp/vcd-gt-lehmer/E04-r1-fine-fields.json.gz`.

@@ -180,3 +180,97 @@ ignored root output folder, sources and small build record in the investigation.
 **Fixed-zero follow-up, 16 November 2026:** [note26](../papers/investigations-6/03_volterra_coefficient_dynamics/notes/26_VCD_FIXED_ZERO_STABILIZATION_AND_PHASE_20261116.md) states “analytical corollary derived and incorporated; same-assistant checking only.” Manuscript Proposition 10.2 gives isolated-cluster stability; Corollary 10.3 gives an alternating displacement asymptotic at each fixed simple real limiting zero, with degree ratio O_r(log²(N+1)/N²). This supplies no uniform threshold over increasing zero index and does not imply reality of all limiting zeros. [Assessment10](../papers/investigations-6/03_volterra_coefficient_dynamics/reviews/10_VCD_FIXED_ZERO_COROLLARY_ASSESSMENT_20261116.md); for Edward Baker with Codex assistance, actual model/effort unavailable.
 
 **Unresolved clusters, 16 November 2026:** [note27](../papers/investigations-6/03_volterra_coefficient_dynamics/notes/27_VCD_CLUSTER_RESOLUTION_AND_HEAT_COLLISIONS_20261116.md) records “local analytical consequences derived and incorporated; same-assistant checking only.” Manuscript Propositions 10.4–10.6 make compact convergence uniform on compact heat-time intervals, bound pair center/discriminant errors from a contour margin, and derive shrinking uncertainty near a stipulated fixed double event. This survives loss of individual simplicity but neither asserts nor excludes a theta collision. [Assessment11](../papers/investigations-6/03_volterra_coefficient_dynamics/reviews/11_VCD_CLUSTER_RESOLUTION_ASSESSMENT_20261116.md); for Edward Baker with Codex assistance, actual model/effort unavailable.
+
+
+## Cluster-gap physical residual — 16 November 2026
+
+For Edward Baker with Codex assistance; lead recorded settings unavailable, proof/assessment dispatches Sol6.1/ultra. [GT synthesis07](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/07_VCD_GT_RESEARCH_SYNTHESIS_20261116.md) records the explicit physical-time phase extension, full coordinate transfer and exact Jacobi heat defect. [Note06](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/06_VCD_GT_E03_FIXED_EVENT_DEFECT_20261116.md) is **“Proved in-note conditional on one fixed isolated double event.”** It gives a unique nearby model double time and alternating leading displacement. On a slab of length N^-3, the actual signed defect integral's magnitude divided by the next-head discriminant error is asymptotic to 16N/(beta_(N+1)(T)a^4), at equal acquired coefficient input. The complete endpoint/transfer combination can still cancel. [E05 r3](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/05_VCD_GT_FIXED_EVENT_AND_SYNTHESIS_ASSESSMENT_20261116.md) accepts the proof without mathematical correction and the synthesis after a source-scope clarification; internal shared-premise review. No canonical event, signed gap margin or descent is acquired; this refines the fixed-event resolution entry above without asserting a collision exclusion.
+
+**Critical-scale continuation, 16 November 2026:** [Note09](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/09_VCD_GT_E03_CRITICAL_SCALE_COMPENSATION_20261116.md) remains **“Proved in-note conditional on one fixed isolated double event.”** It gives uniform joint error/residual/drift profiles at t=T+s/N². [Note10](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/10_VCD_GT_E07_DEFLATION_KERNEL_20261116.md) directly derives the normalized curvature kernel, with value −4/(3a⁴) at the event. [Synthesis11](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/11_VCD_GT_CRITICAL_SCALE_SYNTHESIS_AND_CONTINUATION_20261116.md) combines them to resolve the relative subcritical drift and quantifies separate-term overpayment, without a canonical margin or theta-specific distinction. [Assessment06](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/06_VCD_GT_CRITICAL_SCALE_ASSESSMENT_20261116.md) accepts within scope after exact target/weighting and source/cost clarification. For Edward Baker with Codex assistance; lead settings unavailable, helpers Sol6.1/ultra, internal shared-premise review.
+
+**Canonical local application, 16 November 2026:** [GT Note15](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/15_VCD_GT_E04_CERTIFIED_SIGNED_GAP_20261116.md) records **“Certified local enclosure”** on the fixed first-Lehmer-pair tube, t in [0,1/10]. Complete xi convolution, explicit source errors, tensor interpolation and annular contour payments acquire count/collar and K<=-0.59. The signed margin exceeds 0.00058487578; the absolute-cost margin is below -0.02126314189. [Synthesis16](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/16_VCD_GT_CANONICAL_SIGNED_GAP_SYNTHESIS_20261116.md) states: “Direct endpoint evaluation is cheaper and tighter on this input class.” The comparator receives the same paid geometry. [Assessment08](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/08_VCD_GT_CANONICAL_GAP_CERTIFICATE_ASSESSMENT_20261116.md) accepts proof/code/replay after wording clarifications, with quadratic collision and altered-input checks. This supplies one local canonical signed estimate, not a general source inequality, new zero coverage or Newman bound. For Edward Baker with Codex assistance; lead settings unavailable, helpers Sol6.1/ultra, internal shared-premise review.
+
+
+**B06 scoped follow-through, 16 November 2026:** [GT Note18](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/18_VCD_GT_E03_SOURCE_MODE_ALLOWANCE_20261116.md), **proved in-note under the stated local hypotheses**, states: “This rules out passing the chosen bound (3) with these \(r,R,B\).” The exact second Laurent coefficient plus the frozen separate Cauchy tail gives an upper allowance at least 63111/490, so it cannot certify K≤-59/100; this is no lower bound on actual K. [Note19](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/19_VCD_GT_E03_MATCHED_GAP_MINIMUM_20261116.md) proves D′≥19/32 from the existing certificate, identifying the fixed-tube minimum with its already enclosed D(0). [Assessment09](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/09_VCD_GT_B06_SOURCE_MODE_MINIMUM_ASSESSMENT_20261116.md) accepts both without required correction. No new source acquisition, general sign, total-cost theorem or universal transport exclusion. For Edward Baker with Codex assistance; lead settings unavailable, helpers Sol6.1/ultra, internal shared-premise review.
+
+
+**Joint exterior-sign continuation, 16 November 2026:** [GT Note21](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/21_VCD_GT_E03_JOINT_CONJUGATE_SOURCE_ESTIMATE_20261116.md), **“Proved in-note conditional on the stated enlarged geometry,”** groups conjugate divisor terms before estimation. [Note22](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/22_VCD_GT_E04_JOINT_STRIP_GEOMETRY_20261116.md) acquires that geometry on the fixed canonical tube using the same source cache. All omitted exterior groups are favorable; the reflected pair supplies K≤−5000/1962848636289. [Assessment10](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/10_VCD_GT_JOINT_SOURCE_ASSESSMENT_20261116.md) accepts the proof and bounded replay within scope. The mirror-only allowance cannot pay the useful cost threshold; an even quartic witnesses structural insufficiency in the stated analytic class. [Synthesis23](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/23_VCD_GT_JOINT_SOURCE_SYNTHESIS_AND_CONTINUATION_20261116.md) states the additional lower-mass gate. No all-real exterior premise, new source values, uniform height result or direct-method advantage. For Edward Baker with Codex assistance; lead settings unavailable, helpers Sol6.1/ultra; internal shared-premise review.
+
+
+**Analytical manuscript milestone, 16 November 2026:** the [integrated
+manuscript map](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/25_VCD_GT_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261116.md)
+connects the above results to normalized deflated Fourier curvature and its
+exact finite/continuous formulas. [E05 r9](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/11_VCD_GT_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261116.md)
+states: **“Accepted within scope as an analytical manuscript integration.”**
+The five-atom control has negative deflated curvature and fails width one;
+the four-atom positive undeflated Laguerre expression still admits nonreal
+zeros. No canonical Fourier magnitude, new numerical acquisition or global
+confinement follows. [Continuation26](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/26_VCD_GT_RESEARCH_CONTINUATION_20261116.md)
+keeps the exterior-mass and Fourier proposals distinct. For Edward Baker
+with Codex assistance; lead settings unavailable, helpers Sol6.1/ultra,
+internal shared-premise review.
+
+**Sharp exterior-weight feasibility, 16 November 2026:** [GT Note27](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/27_VCD_GT_E03_SHARP_EXTERIOR_MASS_20261116.md), **“Proved in-note for the stated rectangular information class,”** gives the exact four-corner minimum of the conjugate weight. At width one and |D|<=1/5, the old allowance cannot reach 0.59 with nine additional occurrences; the sharp rectangular allowance cannot with four. Ten and five are necessary counts, not sufficient canonical manifests. A paid conjugation-invariant singleton count instead forces its selected zero real. [Note28](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/28_VCD_GT_E03_FOURIER_GROUPING_SCREENS_20261116.md), **“Proved in-note for the two stated groupings,”** rejects the unchanged natural Fourier Gram matrix and the continuous constant-mode/absolute-remainder allowance; neither proves canonical negativity. [Assessment12](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/12_VCD_GT_SHARP_MASS_FOURIER_ASSESSMENT_20261116.md) accepts within scope after one status clarification, no mathematical correction, with exact arithmetic replay. [Synthesis29](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/29_VCD_GT_SHARP_MASS_SYNTHESIS_AND_CONTINUATION_20261116.md) retains the unpaid actual count/location gate. No new canonical source magnitude or acquisition. For Edward Baker with Codex assistance; actual settings unavailable, separate-agent internal shared-premise review.
+
+**Concrete exterior mass acquired, 16 November 2026:** [GT Synthesis32](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/32_VCD_GT_EXTERIOR_MASS_SYNTHESIS_AND_CONTINUATION_20261116.md) states **“Local exterior lower mass acquired and accepted within scope.”** All 176 explicit moving real brackets have full-time opposite endpoint signs on t in [0,1/10]. Their lower counts and locations, with independently replayed 512-cell target coordinates, supply -K>0.5937558081007126288>0.59 without measured K. [Assessment13](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/13_VCD_GT_EXTERIOR_MASS_CERTIFICATE_ASSESSMENT_20261116.md) accepts within scope; one replay matches every mathematical field and altered/missing identities reject. This supersedes the preceding entry's unpaid finite count/location gate. No exact singleton counts, new target reality, height-uniform theorem or cost advantage: positive D was already paid, and the old measured curvature is stronger. For Edward Baker with Codex assistance; actual settings unavailable, separate-agent internal shared-premise review.
+
+
+**Canonical far exterior and counted near-field scope, 17 November 2026.**
+For Edward Baker with Codex assistance; lead settings unavailable, conceptual
+Astra/ultra and proof/review Sol6.1/ultra dispatches. [GT Note33](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/33_VCD_GT_E12_UNIFORM_SIGNED_FAR_EXTERIOR_20261117.md)
+is **“Proved in-note”**: for the stated isolated canonical pair, t∈[0,1/2],
+c≥16π, |D|≤1 and 3≤R≤c/2, its full signed far sum is log(c/(4π))/(2πR) with
+error O(log(2+c)/R²+log(2+c)/R³+log(2+c)/c). Constants are unevaluated.
+[Note34](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/34_VCD_GT_E15_IDENTICAL_COUNTS_OPPOSITE_SIGNS_20261117.md)
+proves an identical-horizontal-count control with normalized interaction
+limits 1/2 and −1/16 in a fixed-slice analytic-divisor class; source/time
+hypotheses are not supplied. [Assessment15](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/15_VCD_GT_E14_FAR_EXTERIOR_AND_COUNT_SCOPE_ASSESSMENT_20261117.md)
+states: “Accept both mathematical proofs within the frozen scope.” It
+supersedes pending-review language after one synthesis scope clarification,
+without proof corrections. The canonical near field and incoming budget
+remain open; no new positivity region or specialist review.
+
+
+**Source-based nearby interaction and exceptional pairs, 17 November 2026.**
+Prepared for Edward Baker with Codex assistance; actual root settings
+unavailable, Astra/ultra conceptual and Sol6.1/ultra proof/review dispatches.
+[GT Note37](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/37_VCD_GT_E17_AVERAGED_TRANSVERSE_CORRECTION_20261117.md),
+**proved in-note**, contracts the inherited canonical transverse second
+moment to a center mean C/a^3, versus the matched count-only C0/a, with an
+exact both-D-sign radial correction. [Note38](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/38_VCD_GT_E19_ISOLATED_PAIR_EXCEPTION_COUNT_20261117.md)
+proves an O_b(T log(T) exp(-2ba/3)) count of independently isolated pairs
+with negative near/full interaction, plus an O(T log(T)/(a^4 h))
+large-transverse-loss count, within its stated collar/height domain and
+uniformly for 0<=t<=1/2. [Note36](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/36_VCD_GT_E16_COMPLETE_SOURCE_PHASE_ALLOWANCE_20261117.md)
+proves a negative limiting favorable-phase-only lower allowance, not
+negative actual curvature. [Assessment17](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/17_VCD_GT_E18_SOURCE_AND_PAIR_COUNT_ASSESSMENT_20261117.md)
+accepts all three proofs and the synthesis within scope, without required
+correction. Fixed-slice opposite-sign controls preserve both moment and
+density upper bounds. No every-pair sign, incoming cost, new reality
+region or specialist review follows.
+
+**Fixed-collar dynamic estimates, 17 November 2026.** For Edward Baker
+with Codex assistance; root settings unavailable, conceptual Astra/ultra
+and proof/review Sol6.1/ultra dispatches. [GT Note40](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/40_VCD_GT_E20_FIXED_COLLAR_TIME_OCCUPATION_20261117.md),
+**proved in-note**, retains conjugate dissipation to bound negative-pair
+time occupation by O(T/log T) plus boundary terms at fixed collar and
+fixed physical duration, improving the integrated O(T log T) slice
+allowance. [Note41](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/41_VCD_GT_E21_EXACT_INTERACTION_RICCATI_BOUND_20261117.md)
+proves M'=2M²-12S2-16DS3 for the complete canonical divisor and improves
+the normalized interior lower allowance to -O(sqrt(log T)) on a paid tube.
+It states: “The tube length by itself supplies no such sign guarantee.”
+[Assessment19](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/19_VCD_GT_E22_FIXED_COLLAR_ASSESSMENT_20261117.md)
+accepts both proofs and synthesis within scope without required correction.
+The improved integrated multiplier still diverges; the combined allowance
+does not exclude one exception or acquire a tube, incoming anchor or new
+reality region. Internal shared-premise assessment, no specialist review.
+
+**Analytical manuscript milestone, 17 November 2026.**
+[GT Integration43](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/43_VCD_GT_RECENT_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261117.md)
+states “E23 exposition milestone complete; accepted within scope by E24”
+after its recorded corrections. The existing manuscript derives the sharp
+weights, signed far tail, transverse means/counts, fixed-collar occupation,
+exact interaction law and scoped Fourier limits in dependency order.
+The scientific statuses above are unchanged; numerical evidence supports
+the theory in Appendix B. For Edward Baker with Codex assistance; root
+settings unavailable, Sol6.1/ultra helper dispatches, internal shared premises.

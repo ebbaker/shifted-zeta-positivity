@@ -1,0 +1,25 @@
+# VCD-GT-E03 r2 frozen request — Actual defect near a fixed double event
+
+16 November 2026, America/New_York. Prepared for Edward Baker with substantial OpenAI Codex LLM assistance. Lead recorded settings unavailable; helper explicitly gpt-6.1-sol/ultra.
+
+Type E; fixed asymptotic proof. B02 decision02 gives the exact contract. Read it in full and all pinned proofs below, plus root instructions and result/avoid indexes and controls12. E01/E02 are internally accepted; E03 r1 is complete, separately undergoing E05 r2 assessment. Prove or refute its use, do not treat it as specialist validation. Preserve E03 r1 and failed evidence.
+
+One fixed event (T,a) of the complete physical field, 0<T<1/2, a real and nonzero, local factor F_T=(z-a)^2 A_T with A_T(a) nonzero. Fix a small circle avoiding0 and lying inside |Im z|<1 and a compact time neighborhood with count two. This is a conditional event, not an acquired theta collision. The same argument may be stated for the precisely named even physical-source class with all moments, positive norms and the E01/E03 uniform laws/envelopes; do not universalize to arbitrary analytic fields.
+
+Execute B02's log/residue method to test D_N(T)~L_N(T,a)/A_T(a), r_N(T)~−R_N(T,a)/A_T(a), their signed ratio and the actual ratio to the next-head discriminant error. Prove relative remainders by factorial-small fixed-circle bounds; do not replace relative control with o(1) absolute control. Use the exact residual/model equation for C1 physical-time convergence, then prove/refute uniqueness and leading displacement of the nearby model event on one fixed sufficiently small interval. No assumption of a heat equation for G_N or a root-slope floor.
+
+Finish the authorized shrinking-time comparison: for tau_N>0, tau_N=o(N^-2), test whether r_N(t)/r_N(T)->1 uniformly on [T,T+tau_N] and whether the signed weighted integral is asymptotic to tau_N r_N(T). A proposed route is exact root-average r_N=−(g_N(r_+)+g_N(r_-))/2, g_N=R_N/A_N, with its regular equal-root limit; small-root offsets O(sqrt(t-T)) plus the factorial-small perturbation imply N|r_±−a|->0. Uniform unit convergence and (log h_N*)'=beta_N+beta_(N+1)−beta_1 pay the other ratios. Give the ratio to |D_(N+1)(T)| and tau_N=N^-3 as an explicit asymptotic rate, if proved. Compare actual signed term versus its absolute safety allowance and retain the possible cancellation with incoming error in E03 r1 (9)-(10).
+
+Controls: quadratic exact heat control exhausts its gap but lacks the infinite positive Jacobi source. Known weighted-square isolated double controls share the relevant phase/envelope at their stated events and can test the generic class; full theta arithmetic fails but that is unused. Keep local event vs finite threshold, endpoint reality vs simplicity and varying-source qualifications. Do not claim every control has the quantitative premises. State precisely what the result does not exclude: source-specific joint compensation, other signed contour estimators, or independent canonical information.
+
+Finite scope: this theorem and its quantitative comparator/control audit, no numerical acquisition, no new source inequality, no height-uniform limit or larger cluster. A failed relative/asymptotic step is a scoped return to B02. Own only notes/06_VCD_GT_E03_FIXED_EVENT_DEFECT_20261116.md and research-progress/handoffs/VCD-GT-E03-r2-return.md. Record date, author, actual available configuration distinctly from dispatch. Root manages shared records and chat capture. Send findings early; final result will be assessed separately.
+
+## Frozen input SHA-256
+
+- `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/brainstorm/notes/02_VCD_GT_B02_FIXED_EVENT_DECISION_20261116.md`: `8c27b9e8359f0e5dfe375f75b99e29b7d345ebfbc19c08a0e01e56d196fee712`
+- `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/03_VCD_GT_E01_PHYSICAL_TIME_SIGNED_ERROR_20261116.md`: `76f97cb49b1571b911e5bd3a9484a10802138ced63b1c4681bdbad79a5c999dd`
+- `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/04_VCD_GT_E02_COMPLETE_COORDINATE_TRANSFER_20261116.md`: `d18f272a3a87a0065beb11de3e28733f0d0541facb13b4ada3d19fbdb3b62a86`
+- `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/05_VCD_GT_E03_PHYSICAL_MODEL_DEFECT_20261116.md`: `9e5323bfbc564bc0451b78e1aea4aeee9fb9355b29047467f827f5ccb9a6a828`
+- `papers/investigations-6/03_volterra_coefficient_dynamics/notes/27_VCD_CLUSTER_RESOLUTION_AND_HEAT_COLLISIONS_20261116.md`: `83d0a9a90ceb9a767833ce6c47e6f12e50cb982c5f1a49467468870a4b93a3b8`
+- `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/02_VCD_GT_E01_TIME_EXTENSION_ASSESSMENT_20261116.md`: `1425f33ccf60c6046059bf67d64ce7c3139b2e64fa4724a0b8e27c3f5266d7c1`
+- `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/03_VCD_GT_E02_COORDINATE_TRANSFER_ASSESSMENT_20261116.md`: `c7ce6a7fcfef63a0fabd1a039a237b5ea0aa2604063d2158ccecc5afc667bd79`

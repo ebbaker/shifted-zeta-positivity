@@ -1329,3 +1329,46 @@ cost fairly: the next physical head uses the same extra coefficient as the
 monomial correction and has smaller actual error near zero. Neither this
 local comparison nor an approximation-error zero exclusion controls all
 zeros of the physical field.
+
+
+**Check the signed term and retain its joint correction, 16 November 2026.**
+For Edward Baker with Codex assistance; lead recorded settings unavailable, helpers dispatched Sol6.1/ultra. [GT Note06](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/06_VCD_GT_E03_FIXED_EVENT_DEFECT_20261116.md) proves a fixed-event comparison for the actual signed Jacobi defect, beyond its oversized absolute allowance, but states: “The residual can cancel in combination with the incoming error and transfer terms.” Its explicit N^-3-slab loss against the next head is conditional on one isolated double event; no universal transport obstruction or canonical event follows. [Assessment05](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/05_VCD_GT_FIXED_EVENT_AND_SYNTHESIS_ASSESSMENT_20261116.md) accepts that scope. Compare the whole signed combination and give both methods every acquired coefficient; even an actual large term cannot be substituted for a lower bound on the total correction.
+
+The [critical-scale follow-through](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/11_VCD_GT_CRITICAL_SCALE_SYNTHESIS_AND_CONTINUATION_20261116.md) makes that cancellation quantitative: “At the critical scale the transfer term is generally of leading order.” Its exact limiting signed example −1−2+4=1 has separate absolute total 7. [Assessment06](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/06_VCD_GT_CRITICAL_SCALE_ASSESSMENT_20261116.md) accepts the conditional fixed-event scope. Keep the full joint correction, compare the same target with the same weighting, and distinguish matching coefficient indices from acquisition or evaluation costs. This does not exclude other signed estimators. Added 16 November 2026 for Edward Baker with Codex assistance; lead settings unavailable, helpers Sol6.1/ultra.
+
+
+**One exact mode does not pay its separately bounded tail, 16 November 2026.** For Edward Baker with Codex assistance; lead settings unavailable, proof/review dispatch Sol6.1/ultra. [VCD-GT Note18](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/18_VCD_GT_E03_SOURCE_MODE_ALLOWANCE_20261116.md) states: “The actual remainder can be far smaller than \(T\)” With the fixed r=3/4, R=21/20 and B=1.737, exact signed a2 plus independent Cauchy bounds on the other modes cannot sign K, although the existing joint contour certificate already does. [Assessment09](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/09_VCD_GT_B06_SOURCE_MODE_MINIMUM_ASSESSMENT_20261116.md) accepts this scoped stop. Check the complete residual allowance before acquiring a proposed signed head; do not turn failure of that allowance into a lower bound for the actual remainder or a rejection of all joint estimates.
+
+
+**A favorable grouped tail still needs sufficient retained mass, 16 November 2026.** For Edward Baker with Codex assistance; lead settings unavailable, helpers Sol6.1/ultra. [GT Note21](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/21_VCD_GT_E03_JOINT_CONJUGATE_SOURCE_ESTIMATE_20261116.md) states: “The reflected pair pays the sign and falls short of the frozen magnitude.” The canonical strip and independently certified enlarged empty disk make conjugate exterior groups favorable, avoiding the previous separate absolute-tail payment. But the mirror contribution is only about 2.55×10⁻⁹; its constant cost allowance fails. The exact even quartic shares these structural hypotheses and fails strict passage, within the analytic polynomial class. [Assessment10](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/10_VCD_GT_JOINT_SOURCE_ASSESSMENT_20261116.md) accepts that scope. Check the quantitative retained lower mass after establishing a sign; neither this failed allowance nor the quartic is a canonical-theta failure.
+
+
+**Positive Fourier coefficients do not settle deflated curvature,
+16 November 2026.** [GT Integration25](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/25_VCD_GT_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261116.md)
+states: “Positive spectral coefficients alone do not control observation
+phases.” The exact five-atom double has a negative deflated numerator,
+while failing the stronger width-one premise. The [assessed manuscript
+§15](../papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/sections/fourier_curvature.tex)
+also distinguishes finite opposite-frequency atoms from a zero-measure
+diagonal for the continuous source. Match the actual frequencies, pay the
+signed remainder and normalize after deflation; generic Gram positivity
+does not pay this estimate. [Internal assessment](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/11_VCD_GT_MANUSCRIPT_INTEGRATION_ASSESSMENT_20261116.md).
+For Edward Baker with Codex assistance; lead settings unavailable, helpers
+Sol6.1/ultra. This limits the stated generic premises, not canonical Fourier
+groupings using additional source information.
+
+**Optimize the joint weight before buying counts, 16 November 2026.**
+For Edward Baker with Codex assistance; actual settings unavailable,
+separate-agent internal shared-premise review.
+[GT Note27](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/27_VCD_GT_E03_SHARP_EXTERIOR_MASS_20261116.md)
+states: “These are necessary-count tests, not an acquired canonical exterior
+manifest or magnitude theorem.” Exact joint minimization changes the
+restricted necessary count from ten to five; it supplies no actual locations
+or sufficient mass. [Note28](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/28_VCD_GT_E03_FOURIER_GROUPING_SCREENS_20261116.md)
+shows the continuum constant-mode/absolute-remainder allowance equals
+-3m2m4<0. Failure of that allowance or of the unchanged Fourier Gram matrix
+does not exclude other phase-correlated groupings. [Assessment12](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/12_VCD_GT_SHARP_MASS_FOURIER_ASSESSMENT_20261116.md)
+accepts these scopes. A favorable count threshold is a screening result,
+not a reason to launch an unplanned acquisition.
+
+**Retain time dependence and acquire only the count actually needed, 16 November 2026.** [GT Synthesis32](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/32_VCD_GT_EXTERIOR_MASS_SYNTHESIS_AND_CONTINUATION_20261116.md) states: “It also preserves time dependence that the failed global-coordinate allowances discarded.” Global-coordinate lower allowances for the same 176 brackets fall below 0.59, while 512-cell coordinates give >0.5937558081007126288. These failed allowances are not upper bounds on actual mass. Full-time opposite endpoint signs supply the required real lower counts without exact singletons or tracked root identities; sampled candidate matching is not proof. [Assessment13](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/13_VCD_GT_EXTERIOR_MASS_CERTIFICATE_ASSESSMENT_20261116.md) accepts the finite acquisition and replay within scope. The positive D input already pays reality; all information belongs to the direct comparator too. Do not promote a new magnitude calculation into new coverage or an unmeasured cost gain. For Edward Baker with Codex assistance; actual settings unavailable, internal shared-premise review.

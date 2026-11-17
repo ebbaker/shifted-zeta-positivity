@@ -1,0 +1,439 @@
+\section{The regular pair law in physical heat time}
+\label{sec:gt-gap-transport}
+
+Write \(t=\lambda\) for physical heat time throughout the remaining
+sections. A dot denotes \(\partial_t\), and a prime on a spatial field
+denotes \(\partial_z\). The time variation changes the heat-tilted
+measure in \eqref{eq:normalized-field}. The degree remains an independent
+parameter.
+
+\subsection{Jointly valid approximation and contour geometry}
+\label{sec:gt-physical-phase}
+
+For \(0\le t\le1/2\) the exact error law and the phase estimate take
+the form
+\begin{equation}
+ \begin{aligned}
+ \Delta_N(t,z)&:=F_t(z)-G_{N,t}(z)=L_N(t,z)E_{N,t}(z),\\
+ L_N(t,z)&=(-1)^N\frac{h_N^*(t)}{(2N)!}z^{2N},
+ \qquad |E_{N,t}(z)-1|\le\epsilon_N(|z|,Y).
+ \end{aligned}
+ \label{eq:gt-physical-error}
+\end{equation}
+for \(|\Im z|\le Y\le1\), with \(h_N^*=h_N/Z_t=\prod_{j=1}^N\beta_j\)
+and the same explicit \(\epsilon_N\) as in \eqref{eq:phase-bound}.
+Here the identity holds on the whole complex plane. To see why the
+allowance is uniform, perform the Gaussian quadrature and confluent
+interpolation of Theorem~\ref{thm:error-law} in \(\mu_t\) at each fixed
+time. The monic orthogonality systems are nonsingular since the
+density is positive on \(\R\), and all moments and the fixed-degree
+interpolation remainder are dominated on compact spatial disks by
+the source bound \eqref{eq:tail} with a multiplier
+\(\e^{u^2/2+R|u|}\) and a fixed polynomial. In the law of
+\eqref{eq:error-random-variable}, the source point has density
+\(P_N^2\,\dd\mu_t/h_N^*\); the remaining weights are the same simplex
+coordinates as at time zero. The two quantitative inputs in the proof
+of Theorem~\ref{thm:phase}, namely
+\(\mathbb E_{P_N^2\mu_t/h_N^*}\cosh(4U)\le 2N+12\) and
+\(\beta_j+\beta_{j+1}\le B_j\), are already uniform by
+\eqref{eq:weighted-cosh} and \eqref{eq:coefficient-envelope}.
+Thus \eqref{eq:node-allowances}, \eqref{eq:A-budget} and
+\eqref{eq:moment-budgets} apply unchanged. In particular, the real
+brackets \eqref{eq:real-sign} hold jointly in \(t\) on their stated
+range. The exact variance and fourth moment at degree \(N\) use
+links up to \(\beta_{N+1}\) and \(\beta_{N+2}\), respectively, in
+\eqref{eq:source-error-moments}. The explicit phase bound uses only
+\(N\). At \(t=0\) these are the original formulas.
+
+The signs and value sets in Section~\ref{sec:directed} therefore
+apply to each physical snapshot, with its own Jacobi prefix. There
+is a distinction between transfer of a boundary count and control
+of a ratio logarithm. Write \(\delta(t,z)\) for the separation in the
+original field values, namely
+\(\operatorname{dist}(-G_{N,t}(z),d_N(z)\mathcal U_N(z))\)
+using \eqref{eq:directed-set} at time \(t\).
+For \(z\ne0\) it is \(|d_N(z)|\) times the distance in
+\eqref{eq:contour-separation}. At zero the permitted error is
+\(\{0\}\) and the clearance is \(1\). If that separation is positive
+on an open collar of a chosen contour, put \(H_b=G_{N,t}+b\Delta_N\).
+The function
+\[
+ \mathcal L(t,z)=\int_0^1\frac{\Delta_N(t,z)}{H_b(t,z)}\,\dd b
+\]
+is holomorphic in \(z\) there and its exponential is \(F_t/G_{N,t}\),
+by integrating the logarithmic derivative along the parameter \(b\).
+The segment of errors \(b\Delta_N\) belongs to the permitted error set,
+so \(|\mathcal L|\le|\Delta_N|/\delta\). Uniform clearance on the
+chosen collar gives a quantitative logarithm bound. Alternatively,
+\(\sup_\Gamma|\Delta_N|<\inf_\Gamma|G_{N,t}|\) gives the bound from the
+series for \(\log(1+\Delta_N/G_{N,t})\), which extends to a collar by
+strictness. The boundary count and the inner root buffer must each
+be justified.
+
+\subsection{Regular drift and transfer of both pair coordinates}
+
+Use the circle \(\Gamma=\{|z-a|=\rho\}\) and pair coordinates from
+\eqref{eq:cluster-coordinates}. For each time in a real compact
+interval \([u,v]\), suppose \(F_t,G_{N,t}\) are holomorphic on the
+closed disk and a neighborhood, obey conjugation symmetry, and
+have exactly two counted zeros each with no boundary zeros. For the
+transfer estimates below both pairs lie in \(|z-a|\le\rho-b\) with
+a common \(b>0\). Suppress time in spatial formulas. Write
+\[
+ \begin{gathered}
+ Q=(z-c)^2-D,\qquad Q_N=(z-c_N)^2-D_N,\\
+ A=F_t/Q,\qquad A_N=G_{N,t}/Q_N,\qquad
+ \langle f\rangle_\Gamma=\frac{1}{2\pi\ii}\oint_\Gamma f(z)\,\dd z .
+ \end{gathered}
+\]
+Both units are holomorphic and nonzero in the closed disk. Define
+\begin{equation}
+ K=\left\langle\frac{A'/A}{Q}\right\rangle_\Gamma,\qquad
+ K_N=\left\langle\frac{A_N'/A_N}{Q_N}\right\rangle_\Gamma .
+ \label{eq:gt-regular-drift}
+\end{equation}
+These are divided differences of the unit logarithmic derivatives at
+the two roots, with the first derivative at a double. If either pair
+polynomial is used as the denominator, either unit logarithmic
+derivative can be replaced by the corresponding whole-field
+logarithmic derivative. The extra rational term has all poles
+inside \(\Gamma\) and decays as \(O(z^{-3})\) at infinity.
+Conjugation makes the resulting drift real. The formula uses no
+division by an internal gap.
+
+\begin{proposition}[Complete pair and drift transfer]
+\label{prop:gt-transfer}
+Suppose \(|\log(F_t/G_{N,t})|\le\ell_N\) on \(\Gamma\) for a
+single-valued holomorphic collar logarithm, and put
+\(M_N\ge\sup_\Gamma|G_{N,t}'/G_{N,t}|\). One may take the pointwise
+allowances
+\begin{align}
+ |c-c_N|&\le\eta_{c,N}=\rho\ell_N/2,\qquad
+ |D-D_N|\le\eta_{D,N}=\rho(2\rho-b)\ell_N,\notag\\
+ |K-K_N|&\le\kappa_N=
+ \frac{2\rho\ell_N}{b^3}
+ +\frac{\rho M_N}{b^4}\big((4\rho-2b)\eta_{c,N}+\eta_{D,N}\big).
+ \label{eq:gt-transfer}
+\end{align}
+Independently justified smaller coordinate allowances can replace
+\(\eta_{c,N},\eta_{D,N}\) in the second line.
+The same contour gives \(|K_N|\le\rho M_N/b^2\).
+\end{proposition}
+
+\begin{proof}
+The proof of Proposition~\ref{prop:pair-resolution} gives the moment
+differences \(k\rho^k\ell_N\) by integration by parts. In the
+discriminant subtraction, the difference of the center squares is
+at most \(2(\rho-b)\eta_{c,N}\) because both centers lie in the
+buffered disk. This proves the first line.
+
+Insert the mixed term
+\(\langle (G_{N,t}'/G_{N,t})/Q\rangle_\Gamma\).
+The first difference is
+\[
+ \left\langle \frac{(\log(F_t/G_{N,t}))'}{Q}\right\rangle_\Gamma
+ =-\left\langle \log(F_t/G_{N,t})(1/Q)'\right\rangle_\Gamma .
+\]
+The factorization of \(Q\) into two linear terms gives
+\(|(1/Q)'|\le2/b^3\). For the second difference, use
+\[
+ \frac1Q-\frac1{Q_N}=\frac{Q_N-Q}{QQ_N},\qquad
+ Q_N-Q=(c-c_N)(2z-c-c_N)+(D-D_N).
+\]
+On \(\Gamma\), both quadratics have modulus at least \(b^2\), and
+\(|2z-c-c_N|\le4\rho-2b\). The circle length is \(2\pi\rho\);
+these two bounds give the second line of \eqref{eq:gt-transfer}.
+\end{proof}
+
+\begin{proposition}[Physical and perturbed pair laws]
+\label{prop:gt-pair-law}
+If a field \(Y\) with a counted pair satisfies
+\((\partial_t+\partial_z^2+\beta_1)Y=R\), its pair satisfies
+\[
+ \dot D_Y=2+4K_YD_Y
+ -\left\langle (z-c_Y)\frac{R}{Y}\right\rangle_\Gamma .
+\]
+In particular, the physical field satisfies
+\begin{equation}
+ \dot D=2+4KD .
+ \label{eq:gt-gap-law}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Differentiate the two contour moments and integrate the time
+derivative of the logarithmic derivative by parts in \(z\).
+Their combination in \eqref{eq:cluster-coordinates} gives
+\(\dot D_Y=-\langle(z-c_Y)\dot Y/Y\rangle_\Gamma\).
+The scalar \(\beta_1\) integrates to zero. For \(Y=Q_YA_Y\), its
+second spatial derivative divided by \(Y\) is
+\(Q_Y''/Q_Y+2(Q_Y'/Q_Y)(A_Y'/A_Y)+A_Y''/A_Y\).
+The last term is holomorphic in the disk. The first contributes
+\(\langle Q_Y'/Q_Y\rangle_\Gamma=2\). The cross term uses
+\(2(z-c_Y)Q_Y'/Q_Y=4+4D_Y/Q_Y\), whose constant part also
+integrates to zero against \(A_Y'/A_Y\). This gives the law
+through a double, with \(R=0\) for \eqref{eq:normalized-heat}.
+\end{proof}
+
+\subsection{Exact finite Jacobi heat defect}
+\label{sec:gt-finite-defect}
+
+Set \(R_N=(\partial_t+\partial_z^2+\beta_1)G_{N,t}\).
+For \(N\ge2\), truncate the commutator of \eqref{eq:lax} to the
+\(N\)-by-\(N\) matrix, using the strict triangular parts of the
+finite \(J_N^2\). The surviving entry on edge \(j\) is
+\(\sqrt{\beta_j}(\beta_{j+1}-\beta_{j-1})/2\), with
+\(\beta_N=0\) in this finite commutator. Indeed the third
+off-diagonal terms involve the same three links and cancel.
+The physical \eqref{eq:volterra} restores the last-edge term
+\(\beta_N\beta_{N-1}\partial_{\beta_{N-1}}J_N\).
+Writing \(f=\e^{\ii zJ_N}\), differentiating in the commutator
+direction gives \([B,f]\), where \(B\) is the finite skew part of
+\eqref{eq:lax}. Its \(00\)-entry is
+\(\sqrt{\beta_1\beta_2}\,f_{20}\) for \(N\ge3\) and zero for \(N=2\).
+This cancels the off-diagonal contribution to
+\(- (J_N^2f)_{00}+\beta_1 f_{00}\). Hence
+\begin{equation}
+ R_N=\beta_N\beta_{N-1}\partial_{\beta_{N-1}}G_{N,t}
+ =\frac{h_N^*(t)}{2\pi\ii}\oint_\Sigma
+      \frac{w\e^{\ii zw}}{P_N(w)^2}\,\dd w .
+ \label{eq:gt-residual-contour}
+\end{equation}
+For the second equality use the spectral resolvent
+\(\mathcal R(w)=(w-J_N)^{-1}\) on a contour enclosing its spectrum,
+with \(P_N(w)=\det(w-J_N)\). The adjugate entries
+\[
+ \mathcal R_{0,N-1}
+   =\frac{\prod_{j=1}^{N-1}\sqrt{\beta_j}}{P_N(w)},\qquad
+ \mathcal R_{0,N-2}
+   =\frac{w\prod_{j=1}^{N-2}\sqrt{\beta_j}}{P_N(w)}
+\]
+come from the unique chain of off-diagonals and the trailing
+determinant of size zero or one. Differentiating the resolvent in
+the last edge gives
+\(\partial_{\beta_{N-1}}\mathcal R_{00}
+=\mathcal R_{0,N-2}\mathcal R_{0,N-1}/\sqrt{\beta_{N-1}}\).
+This proves the spectral integral. At \(N=1\) only the integral
+identity is used and gives \(R_1=\beta_1\), since \(P_1(w)=w\)
+and \(G_1=1\).
+
+Let \(V_N\) be the doubled-node simplex barycenter of
+\eqref{eq:beta-split}. The confluent exponential formula
+\eqref{eq:confluent-exponential}, applied to the \(2N\) doubled
+nodes, gives the integral without \(w\) in
+\eqref{eq:gt-residual-contour} as
+\((\ii z)^{2N-1}\chi_N(z)/(2N-1)!\), where
+\(\chi_N(z)=\mathbb E\e^{\ii zV_N}\). Equivalently expand the
+integrand at infinity and use \eqref{eq:dirichlet-moments}.
+Apply \(\partial_z/\ii\) to insert \(w\). The entire result is
+\begin{equation}
+ R_N(t,z)=(-1)^{N-1}\frac{h_N^*(t)z^{2N-2}}{(2N-2)!}\Psi_{N,t}(z),
+ \qquad \Psi_{N,t}(z)=\chi_N(z)+\frac{z\chi_N'(z)}{2N-1}.
+ \label{eq:gt-residual-phase}
+\end{equation}
+The doubled-node law has fourth moment
+\(12(T_2^2+T_4)/(2N)_4\) by the coefficient of degree four in
+\eqref{eq:dirichlet-moments}, with \(T_j=\operatorname{tr}J_N^j\).
+Subtract its zero mean in the exponential and in its first
+derivative. For \(|\Im z|\le Y\le1\), the respective errors are
+bounded by \(|z|^2 M_Y/2\) and \(|z|M_Y\) with
+\(M_Y=\mathbb E(V_N^2\e^{Y|V_N|})\).
+Cauchy--Schwarz, symmetry and \eqref{eq:node-exponential} give
+\begin{equation}
+ \begin{aligned}
+ |\Psi_{N,t}(z)-1|&\le\epsilon_N^R(|z|,Y),\\
+ \epsilon_N^R(|z|,Y)&=
+ |z|^2\left(\frac12+\frac1{2N-1}\right)
+ \left[
+ \frac{24((T_N^*)^2+\ell_N^2T_N^*)}{(2N)_4}
+ \exp\!\left(\frac{Y^2T_N^*}{N^2(1-Y^2\ell_N^2/N^2)}\right)
+ \right]^{1/2}.
+ \end{aligned}
+ \label{eq:gt-residual-phase-bound}
+\end{equation}
+Here \(T_N^*,\ell_N\) are as in \eqref{eq:node-allowances}.
+The right side is zero at \(N=1\), and is
+\(O(|z|^2\log^2(N+1)/N)\) uniformly on the physical slab.
+No \(t\)-derivative of the error phase is required.
+
+Proposition~\ref{prop:gt-pair-law} now gives the actual model law
+\begin{equation}
+ r_N=-\left\langle(z-c_N)\frac{R_N}{G_{N,t}}\right\rangle_\Gamma,
+ \qquad \dot D_N=2+4K_ND_N+r_N .
+ \label{eq:gt-model-gap}
+\end{equation}
+The same moment differentiation in the last link gives
+\(r_N=\beta_N\beta_{N-1}\partial_{\beta_{N-1}}D_N\) when the
+local model count is fixed. At \(N=2\), \(G_2=\cos(\sqrt{\beta_1}z)\)
+and \(R_2=-(\beta_2\sqrt{\beta_1}z/2)\sin(\sqrt{\beta_1}z)\).
+The residues of \(R_2/G_2\) at its zeros \(z_j\) are \(\beta_2z_j/2\),
+so \(r_2=-\beta_2D_2\). This matches the physical variation of the
+model roots, which scale as \(\beta_1^{-1/2}\).
+
+\subsection{Signed transport and matched comparisons}
+\label{sec:gt-signed-cost}
+
+Put \(W_k(x,y)=\exp(4\int_x^y k(s)\,\dd s)\) for a real integrable
+drift \(k\). The physical gap law has the exact forward and backward
+forms
+\begin{equation}
+ D(t)=W_K(u,t)D(u)+2\int_u^t W_K(s,t)\,\dd s,\qquad
+ W_K(t,v)D(t)=D(v)-2\int_t^v W_K(s,v)\,\dd s .
+ \label{eq:gt-backward-gap}
+\end{equation}
+In the backward identity an incoming lower value \(L_v\le D(v)\)
+strictly exceeding an upper value of the whole cost
+\(\mathcal C(u)=2\int_u^v W_K(s,v)\,\dd s\) proves \(D>0\) throughout
+\([u,v]\). Equality of the bounds allows \(D(u)=0\) and gives
+strict positivity later since the integrand is positive.
+
+Use the model weight \(W_N(t)=W_{K_N}(t,v)\), and define
+\[
+ \mathcal C_N(x)=2\int_x^v W_N(t)\,\dd t,\qquad
+ E_K(t)=4\int_t^v\kappa_N(s)\,\dd s .
+\]
+The inequalities \(W_N\e^{-E_K}\le W_K(\,\cdot\,,v)\le W_N\e^{E_K}\)
+give
+\[
+ |\mathcal C(x)-\mathcal C_N(x)|
+ \le \mathcal T_N^+(x)=2\int_x^v W_N(t)(\e^{E_K(t)}-1)\,\dd t .
+\]
+Writing \(\mathcal R_N(x)=\int_x^v W_N r_N\,\dd t\) and
+\(e_N=D-D_N\), the integrated equations give
+\begin{align}
+ W_N(x)D_N(x)&=D_N(v)-\mathcal C_N(x)-\mathcal R_N(x),\notag\\
+ W_N(x)e_N(x)&=e_N(v)+\mathcal R_N(x)
+       -4\int_x^v W_N(t)(K-K_N)(t)D(t)\,\dd t .
+ \label{eq:gt-joint-error}
+\end{align}
+The second follows by subtracting the two differential equations
+and differentiating \(W_N e_N\). The last integral has absolute
+bound \(4(\rho-b)^2\int_x^v W_N\kappa_N\,\dd t\).
+A sufficient strict incoming margin at \(u\) is
+\[
+ W_N(u)D_N(u)+L_v-D_N(v)+\mathcal R_N(u)-\mathcal T_N^+(u)>0 .
+\]
+It follows by substituting the first identity into \(L_v-\mathcal C(u)\).
+The direct same-data bound remains \(D_N-\eta_{D,N}\).
+
+The weights and signed integrals require continuous-time error
+enclosures. For instance, if an evaluator for \(K_N\) has pointwise
+error \(\eta_K\) and an evaluated primitive \(\widehat S_N\) has
+error \(\eta_S(t)\) relative to the evaluator's exact primitive, then
+\[
+ s(t)=\eta_S(t)+4\int_t^v\eta_K,\qquad
+ \widehat W(t)=\e^{\widehat S_N(t)},\qquad
+ |W_N-\widehat W|\le\widehat W(\e^s-1).
+\]
+A paid upper cost integrand is \(\widehat W\e^{s+E_K}\) and an
+evaluator \(\widetilde r_N\) with error \(\eta_r\) satisfies
+\[
+ |W_Nr_N-\widehat W\widetilde r_N|
+ \le \widehat W\big(\e^s\eta_r+(\e^s-1)|\widetilde r_N|\big).
+\]
+For the contour evaluation of \(r_N\), let the errors in \(c_N,R_N,G_N\)
+on the circle be \(\gamma_c,\gamma_R,\gamma_G\). Let \(\widetilde T\)
+bound the evaluated numerator, \(m\le\inf_\Gamma|G_N|\) with
+\(\gamma_G<m\), and \(g=2\rho-b\). Subtracting the products and
+reciprocals in \eqref{eq:gt-model-gap} gives
+\[
+ \eta_r=
+ \rho\left(\frac{g\gamma_R}{m}
+ +\frac{g\widetilde T\gamma_G}{m(m-\gamma_G)}
+ +\frac{\gamma_c\widetilde T}{m-\gamma_G}\right)+\eta_{\Gamma,r},
+\]
+where \(\eta_{\Gamma,r}\) encloses the contour integration error.
+Each nonnegative error integral needs an upper enclosure and each
+evaluated signed integral needs its time quadrature allowance.
+Direct endpoint comparison also needs an enclosed zero count and
+the endpoint logarithm. For a direct approximation of the normalized
+source \(F_t=J_t/Z_t\), let \(J_{\rm app}/Z_{\rm app}\) be the
+approximant, with holomorphic numerator and \(Z_{\rm app}>0\).
+If the numerator error is \(\epsilon_J\), the mass error is
+\(\epsilon_Z\), and \(Z_t\ge Z_{\min}>0\), subtraction gives a
+field error bound
+\((\epsilon_J+\|J_{\rm app}/Z_{\rm app}\|\epsilon_Z)/Z_{\min}\)
+on the contour. The same logarithm comparison then applies.
+
+The residual and \(G_{N+1,t}\) use the same first \(N\) actual
+links. On fixed compact subsets of \(|\Im z|\le1\) avoiding
+\(z=0\), \eqref{eq:gt-physical-error} and
+\eqref{eq:gt-residual-phase} give
+\[
+ \frac{|R_N(t,z)|}{|F_t(z)-G_{N+1,t}(z)|}
+ =\frac{\Pi_N}{\beta_{N+1}(t)|z|^4}
+     \frac{|\Psi_{N,t}(z)|}{|E_{N+1,t}(z)|},
+ \qquad \Pi_N=(2N-1)(2N)(2N+1)(2N+2).
+\]
+The last factor tends to one uniformly on these compacts and is
+enclosed by the two phase bounds as soon as both are smaller than
+one. Thus the pointwise residual is at least of order
+\(N^4/\log^2(N+1)\) times that field error. A contour comparison
+similarly distinguishes the particular absolute integration allowance
+from an actual signed error. Put \(Z_*=\max_\Gamma|z|\),
+\(H=\sup_I h_N^*\), \(\bar\beta\ge\sup_I\beta_{N+1}\), and
+\[
+ T_R=\frac{HZ_*^{2N-2}}{(2N-2)!}(1+\epsilon_N^R(Z_*,1)),\qquad
+ \delta_+=\frac{H\bar\beta Z_*^{2N+2}}{(2N+2)!}
+               (1+\epsilon_{N+1}(Z_*,1)).
+\]
+For positive model floors \(m_N,m_{N+1}\) on the same buffered
+circle, \(\eta=\delta_+/m_{N+1}<1\) and
+\(M\ge\sup_I K_N\), the absolute residual cost is bounded by
+\(\rho(2\rho-b)(T_R/m_N)Q_{v-u}(M)\) where
+\(Q_h(M)=\int_0^h\e^{4Ms}\,\dd s\). The direct next-head allowance
+is \(\rho(2\rho-b)[-\log(1-\eta)]\). Their ratio is
+\[
+ \frac{m_{N+1}}{m_N}Q_{v-u}(M)
+ \frac{\eta}{-\log(1-\eta)}
+ \frac{\Pi_N}{\bar\beta Z_*^4}
+ \frac{1+\epsilon_N^R(Z_*,1)}{1+\epsilon_{N+1}(Z_*,1)} .
+\]
+For comparable floors, bounded \(M\), fixed contour and
+\(0<\eta\le1/2\), this has the scale
+\((v-u)N^4/\log^2(N+1)\) when using \(\bar\beta=B_N\).
+It compares one absolute residual allowance with one direct
+allowance. The actual signed residual and the full correction
+in \eqref{eq:gt-joint-error} have different magnitudes in general.
+
+A drift band \(k_-\le K\le k_+\) is shared information. If
+\(0\le L_u\le D(u)\), the forward lower envelope substitutes
+\(W_{k_-}\) and \(L_u\) in the forward formula. For the backward
+envelope set \(N_+(t)=L_v-2\int_t^v W_{k_+}(s,v)\,\dd s\).
+If \(N_+\ge0\), division by the upper weight \(W_{k_+}(t,v)\)
+gives a lower bound. If \(N_+<0\), use the positive lower weight
+\(W_{k_-}(t,v)\). To see the sign requirement, take the scalar
+law with \(D(0)=1\), \(K=0\) on \([-1,0]\) and \(K=-1/4\) on
+\([-2,-1)\). Then \(D(-1)=-1\) and \(D(-2)=2-3\e<-3\), while
+substituting the upper drift zero in both positions gives \(-3\).
+For a constant \(k\) on a cell of oriented length \(h\), the map is
+\(y\mapsto \e^{4kh}y+(\e^{4kh}-1)/(2k)\), with additive term
+\(2h\) at \(k=0\). For sign-changing comparisons, the forward
+lower field uses \(2+4(k_-y_++k_+y_-)\) with \(y_\pm=\max(y,0)\),
+\(\min(y,0)\), respectively. In reverse time the lower field is
+\(-2-4(k_+y_++k_-y_-)\) with reversed time arguments. These are
+the pointwise minima over the drift band and comparison follows
+by applying the scalar Lipschitz inequality to the positive
+part of the difference. The direct and transport methods can both
+compose these cell maps and intersect the bounds with direct
+coordinate intervals. For fixed signs this uses a linear number
+of scalar map operations in the number of cells. The operation
+count leaves the cost of the shared underlying field and geometry
+enclosures to their own evaluation.
+
+\begin{proposition}[Minimum on the fixed Lehmer tube]
+\label{prop:gt-matched-minimum}
+For the fixed tube on \(0\le t\le1/10\) centered at \(a=140101/10\),
+the radius bound \(3/4\) and drift band certified in
+Appendix~\ref{sec:gt-source-certification},
+\(-5/8\le K\le0\) imply \(D'(t)\ge19/32\). The minimum of \(D\)
+is the direct endpoint value \(D(0)\).
+\end{proposition}
+\begin{proof}
+The radius bound gives \(|D|\le9/16\).
+For \(D\ge0\), \eqref{eq:gt-gap-law} yields
+\(D'\ge2-(5/2)(9/16)=19/32\).
+For \(D<0\), the product \(KD\) is nonnegative, so \(D'\ge2\).
+The already enclosed direct endpoint belongs to
+\([0.00142117117778,0.00142118228384]\). The same derivative
+inference is available to both methods.
+\end{proof}

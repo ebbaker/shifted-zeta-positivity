@@ -1,0 +1,72 @@
+# VCD-GT-E24 r1 — explicit Stage B input addendum
+
+17 November 2026. Prepared for Edward Baker with OpenAI Codex assistance.
+Root actual model/effort unavailable; separate reviewer dispatched
+gpt-6.1-sol/ultra, without serving attestation.
+
+Stage B is authorized on the exact files below. The original request
+is unchanged. Fourier's Stage A pin is explicitly superseded from
+e8a3a9f1551458eef2d121e67b067e28c83542ba6fbfeff84b6e41b0698cad8d
+to 3b073edaab506e92ffeb7d18cdc1b22d484fd87b00d35da78c2b8675a213c236:
+the stray comma in the mass-floor exponent was removed and the Fourier
+density renamed from nu to varpi. No mathematical estimate changed.
+These are the two Stage A required corrections; the initial exterior
+scope concern was retracted by the assessor.
+
+Review the completed manuscript as specified in the request, including
+all new source-specific estimates, endpoint/collision assembly,
+finite-to-canonical limits and scoped controls. The build has 74 pages
+and no unresolved references, citations or over/underfull boxes.
+External reading copy: /private/tmp/vcd-gt-e23-20261117-build/main.pdf.
+Root is performing all-page rendering and visual verification.
+Integration43 has pending status and Session24 a pending visual field.
+After review their administrative status and validation receipt will be
+updated, retaining reviewed/final identities. Report corrections before
+acceptance. Verify these pins before root amends the build record.
+
+| Repository-relative input | SHA-256 |
+| --- | --- |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/main.tex` | da20c01b51167da89bba978a1303de79d4c1cbadf70bbf063f96eea3cf279075 |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/sections/cluster_resolution.tex` | 87010b0149848e3f222234437a084523085e75d629937b39e94117933b95c9f7 |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/sections/critical_scale.tex` | cc078c6b4377383653dc492b613ce9a46dff8bd0722b21d4c0b4aac8d06c59dd |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/sections/directed_error.tex` | 049ca21e71f9ffd08aeffae84085915e1d531ceea06093bd5ee0db4a1a4f0c4e |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/sections/error_law.tex` | d0e7e7af355823776df6c9b38c8a1595c8a2afed378df01e37f7345a190032e0 |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/sections/exterior_height.tex` | 3eec5a9f70ba83bfedc27c121875e9c6884c906f55c915ee12f275fde00b830c |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/sections/fourier_curvature.tex` | 3b073edaab506e92ffeb7d18cdc1b22d484fd87b00d35da78c2b8675a213c236 |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/sections/gap_transport.tex` | a8c82eb7fed62dbee0695d4389e2b50b471b7ef9f5c7767c3064c9f39f795f1a |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/sections/interaction_dynamics.tex` | 56754a085d1a19c9ef8d48699e646cd63dfad972707714bec2b18f0bd4f904b9 |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/sections/memory.tex` | 1f9f9dd44a074e3e21df99963801ebf06a1ce378485940e6677d3500f8f06a92 |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/sections/outstanding_challenges.tex` | 5a7f881705b2e51e7624f131aa7709ed3e940f5eff39c24b13a384cf975961ad |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/sections/phase.tex` | 64fd2a24530d724a208847370a06a75812ccd29ad4296c4e0537532df4c77fdf |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/sections/readouts.tex` | 3a831cf1beed77756614b3c0901bfd93a0f6b13d3883e51dbdcafa4c614f44ee |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/sections/source_certification.tex` | feb6fa484ef97e25a0584d4422b87a3ea433a05125e19671f33c90fc2beb50a6 |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/sections/source_curvature.tex` | 507f30bc8ca78d1a4745cdb2e2d94840594dcaeb2593e5b54883e2c6f885b81c |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/sections/source_scope.tex` | 85a99c2e053e599f13ab5f71278775b749b75b210b50ac371a06daa99e991c36 |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/sections/transverse_interactions.tex` | c362d66979d22741f2416fb15f01743d07d6d95e622b6be3283575b81f04afaf |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/manuscript/sections/zero_geometry.tex` | 4cc2f38422bce99b62db90c4a36d42e0fba29faa8772bdaecacb3469983a38c0 |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/43_VCD_GT_RECENT_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261117.md` | db4fbbf4b5f293b788694644b35c5e3a248205a3b214f3215e55c3e459b9233e |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/numerics/24_VCD_GT_RECENT_ANALYTICAL_MANUSCRIPT_BUILD_20261117.json` | 179f4840288e6218481683d0d82445471a4e3554b3a3105f9d11015c497af642 |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/27_VCD_GT_E03_SHARP_EXTERIOR_MASS_20261116.md` | bf47dce60196c7cceb18d66559a1a4699491218afe64ae3d28fa80e1f45c8fc8 |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/28_VCD_GT_E03_FOURIER_GROUPING_SCREENS_20261116.md` | 79e8fe3e512f297407498329899e7edb84a6391eb73e0eb9b319fa617c09e94e |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/30_VCD_GT_E03_REAL_BRACKETS_AND_MOVING_BOUNDARIES_20261116.md` | 6ec2849f855e1ee4eeffd3fb26c955e1c1c357ebb5945d1fd3204c8bd78cc872 |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/31_VCD_GT_E04_EXTERIOR_BRACKET_CERTIFICATE_20261116.md` | c9cd38fc5846e8ce8dc8a4d1ece2b809f34e42a9c14be4d958779a006707e4a5 |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/32_VCD_GT_EXTERIOR_MASS_SYNTHESIS_AND_CONTINUATION_20261116.md` | 7d7bd4513e9ef525d7c2c57ab7645b8439fcb222240f93e18dc6e789d795e041 |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/33_VCD_GT_E12_UNIFORM_SIGNED_FAR_EXTERIOR_20261117.md` | cfe0e8bf97378a384758330031cc7c715cbfd360818e9d5448c98623771dafb7 |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/34_VCD_GT_E15_IDENTICAL_COUNTS_OPPOSITE_SIGNS_20261117.md` | d398589c8bae73dad530c8ffd9950fd778a0beabd0782b22a0efb7c37e06b2be |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/35_VCD_GT_B07_B08_SYNTHESIS_AND_CONTINUATION_20261117.md` | b374774ea36db7b27feae2b06ce64bff7dbdc5073c1a915d61e3ce4ff06d2aed |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/36_VCD_GT_E16_COMPLETE_SOURCE_PHASE_ALLOWANCE_20261117.md` | fa31227bc57ed8aa78fbec5231cabefb6c0508de80e6e6462a3ea2bfa5a589d4 |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/37_VCD_GT_E17_AVERAGED_TRANSVERSE_CORRECTION_20261117.md` | 8b78a4fc25dc8e671238210a61ea359c764427cd72a12f48ae2a38e1723f923b |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/38_VCD_GT_E19_ISOLATED_PAIR_EXCEPTION_COUNT_20261117.md` | c1614650cb46dbc19062746d5e2115aa233a1b1d37bc991b6aaae9f42d0b1485 |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/39_VCD_GT_B09_B10_SOURCE_ESTIMATE_SYNTHESIS_20261117.md` | c78928797aa19ba4eb962b8395aa3ed8923fb90c54a19bbca26e0d7643573f35 |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/40_VCD_GT_E20_FIXED_COLLAR_TIME_OCCUPATION_20261117.md` | 6655806f1bad772ee00ab5a515a59770ee7964a3e0d3835b4a0c0b53bdcbd4c1 |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/41_VCD_GT_E21_EXACT_INTERACTION_RICCATI_BOUND_20261117.md` | 04ea202c4e91527b7a24500c199e7a84459e2e2cd26f79520347284c7bf9060b |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/42_VCD_GT_B11_FIXED_COLLAR_SYNTHESIS_20261117.md` | aa7a55d83f0314af15a87d64513ac4b41703b7f67e6d331a934ea7cb3753e8bf |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/12_VCD_GT_SHARP_MASS_FOURIER_ASSESSMENT_20261116.md` | a207dfd8941b439094f5e754d24e96069d475bc1a4a3e06b0282e53050653c33 |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/13_VCD_GT_EXTERIOR_MASS_CERTIFICATE_ASSESSMENT_20261116.md` | 14061891fa5e5822537809600b1b3740edea883621c619317dc6434902e14a2a |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/15_VCD_GT_E14_FAR_EXTERIOR_AND_COUNT_SCOPE_ASSESSMENT_20261117.md` | 3ba222a496ad5965d9d7004f1f4456eaafe468547de637727fb7859ceceeefc7 |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/17_VCD_GT_E18_SOURCE_AND_PAIR_COUNT_ASSESSMENT_20261117.md` | 3742be18ee27258c57737f0d1f5c218cf19a34eabd0aafbf0379301b69800c7e |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/19_VCD_GT_E22_FIXED_COLLAR_ASSESSMENT_20261117.md` | ef2a1b9a1308091f53237f48b27be30fd3e51d374c643476af0fc8d042cc3d60 |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/references/06_VCD_GT_TRANSVERSE_MOMENT_SOURCE_USE_20261117.md` | 2484cb1535de12848598be67ac66db6bb4a5e1f16934d9741d2c6320b679f92e |
+| `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/references/05_VCD_GT_UNIFORM_COUNT_SOURCE_USE_20261117.md` | aad210cb4ccc042e5c26b2cafec8887ae7545facc1579141427faa2d2f13db90 |
+| `papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/notes/21_TND_O_E11_BROAD_WINDOW_TRANSVERSE_DENSITY_20261107.md` | ee94e5c08ee793d927ca5afad7fbc86ddda559f39ec87623051e6f6d9ad4ee68 |
+| `papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/reviews/07_TND_O_E13_ASSEMBLED_LOCALIZATION_ASSESSMENT_20261107.md` | 1d5b4babf1ddffc0d9ec0ec0c6e2cb6d1aa5eb8cd203bb91b95e7df495d89c66 |

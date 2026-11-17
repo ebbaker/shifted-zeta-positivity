@@ -1,16 +1,48 @@
 # Volterra coefficient dynamics
 
-**Three collision-control sub-investigations, 16 November 2026, chat0004:**
+**Shared manuscript milestone, 17 November 2026, GT chat0006:**
+[The reading guide](manuscript/README.md) now covers the accepted sharp
+exterior weights, growing-height far tail, transverse averages and pair
+counts, fixed-collar occupation, exact interaction evolution and scoped
+Fourier limitations. [Integration43](01_cluster_gap_transport/notes/43_VCD_GT_RECENT_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261117.md)
+records the 75-page analytical development and outstanding challenges;
+[Assessment20](01_cluster_gap_transport/reviews/20_VCD_GT_E24_ANALYTICAL_MANUSCRIPT_ASSESSMENT_20261117.md)
+accepts within scope after corrections. Numerical evidence is supporting.
+For Edward Baker with Codex assistance; root settings unavailable, fixed
+helpers Sol6.1/ultra, internal shared-premise review. Parent B07/E25 unchanged.
+
+**GT planning revision, 17 November 2026:** the existing cluster-gap branch
+now targets joint exterior counts, distances and signed interaction across
+height, beginning with multiplicity two. [Continuation14](01_cluster_gap_transport/brainstorm/notes/14_VCD_GT_CORRELATION_HEIGHT_CONTINUATION_20261117.md)
+implements brainstorm Notes10–13 and supersedes earlier GT next-action
+routing. Parent VCD-B07/E25 and sibling statuses are unchanged. This is
+setup, not a new theorem. For Edward Baker with Codex assistance; actual
+lead settings unavailable, bounded support dispatched GPT-6.1 Sol/ultra.
+
+
+**Shared manuscript milestone, 16 November 2026, GT chat0003:**
+[The analytical reading guide](manuscript/README.md) now includes the
+recent gap-transport, critical-scale, joint exterior and deflated Fourier
+results, with outstanding challenges and numerical support in an appendix.
+[GT Integration25](01_cluster_gap_transport/notes/25_VCD_GT_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261116.md)
+and [Continuation26](01_cluster_gap_transport/notes/26_VCD_GT_RESEARCH_CONTINUATION_20261116.md)
+record the coverage and next two source proposals. For Edward Baker with
+Codex assistance; lead settings unavailable, fixed helpers Sol6.1/ultra,
+internal shared-premise assessment. Parent B07/E25 remain unchanged.
+
+**Three collision-control sub-investigations, 16 November 2026:** opened
+in parent chat0004, with the first branch's setup completed in its chat0001;
 the routes from [discussion28](notes/28_VCD_COLLISION_CONTROL_ROUTE_DISCUSSION_20261116.md)
-now each have a README and research overview. Edward selects the first
-for initial setup; branch research plans and progress files are deferred
-until each investigation starts. Prepared for Edward Baker with OpenAI
+now each have a README and research overview. Edward selected the first
+for initial setup; its plan and sole register are now complete, with
+sustained ultra sessions and bounded Sol6.1 subtasks requested. The two
+sibling plans/progress files remain deferred. Prepared for Edward Baker with OpenAI
 Codex assistance; actual model/effort unavailable. Existing VCD-B07/E25
 retain their status and ownership.
 
 | Route | Entry point | Current stage |
 | --- | --- | --- |
-| 1. Signed gap transport in physical heat time | [Cluster gap transport](01_cluster_gap_transport/README.md) | First choice; [setup continuation](01_cluster_gap_transport/notes/01_VCD_GT_SETUP_CONTINUATION_20261116.md) ready |
+| 1. Signed gap transport in physical heat time | [Cluster gap transport](01_cluster_gap_transport/README.md) | GT-B07–B11 accepted within scope; analytical manuscript integrated; GT-B12 unactivated. [Sole GT register](01_cluster_gap_transport/research-progress/01_VCD_GT_RESEARCH_PROGRESS_20261116.md) and [current Synthesis42](01_cluster_gap_transport/notes/42_VCD_GT_B11_FIXED_COLLAR_SYNTHESIS_20261117.md) own routing |
 | 2. Contraction of nonreality under degree refinement | [Degree induction](02_degree_nonreality_contraction/README.md) | Overview only; individual planning deferred |
 | 3. Averaged bounds across resolution scales | [Multiscale collision bounds](03_multiscale_collision_bounds/README.md) | Overview only; individual planning deferred |
 

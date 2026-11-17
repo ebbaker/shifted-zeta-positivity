@@ -1,0 +1,316 @@
+\section{Exact evolution of the exterior interaction}
+\label{sec:gt-interaction}
+
+Fix \(T\ge64\), \(L=\log T\), and \(\ell=L^{-1}\). Take \(d\ge0\)
+and \(\max(2,4\sqrt d)\le a\le L\), and set \(r_0=a\ell\).
+On an independently enclosed count-two tube \(I=[t_0,t_1]\)
+in \(0\le t\le 1/2\), consider a continued conjugation-invariant
+pair of the complete \(H_t\). Its center is \(c\in[T,2T]\),
+its discriminant satisfies \(|D|\le d\ell^2\), and every exterior
+occurrence \(\rho_j\) has \(|\rho_j-c|\ge r_0\). The two
+selected occurrences are within \(r_0/4\) of \(c\). Define
+\[
+ w_j=\rho_j-c,\qquad m_j=(w_j^2-D)^{-1},\qquad
+ S_p=\sum_j m_j^p,\qquad M=S_1=-K .
+\]
+All sums count multiplicities. They are real by conjugation and
+absolute by the strip and the unit count \eqref{gt-height-unit-count}.
+In particular, \eqref{eq:gt-gap-law} reads \(D'=2-4MD\).
+
+\subsection{A contour law through multiple roots}
+
+\begin{theorem}[Interaction evolution]
+\label{gt-interaction-evolution}
+On the specified tube the symmetric interaction satisfies
+\begin{equation}
+ M'=2M^2-12S_2-16DS_3 .
+ \label{gt-interaction-law}
+\end{equation}
+The formula holds for both signs of \(D\), a target double, and
+multiple exterior roots. It also holds for a polynomial solving the
+same physical heat equation on a tube with a separate counted pair.
+\end{theorem}
+
+\begin{proof}
+Fix a time \(t_*\) and the circle \(\Gamma\) of radius \(r_0/2\)
+about \(c(t_*)\). Its count persists near \(t_*\) by Rouché's theorem.
+The source envelope \eqref{eq:tail} gives joint holomorphy in \(t,z\)
+on compact sets, since the double-exponential decay dominates heat,
+cosine, and derivative factors. For a field \(F\) with the same
+count near \(t_*\), the contour moments
+\[
+ J_k=\left\langle z^k F_z/F\right\rangle_\Gamma,\qquad
+ c=J_1/2,\quad D=J_2/2-c^2,\quad Q=(z-c)^2-D
+\]
+are locally analytic in \(t\). The quotient \(A=F/Q\) extends
+jointly holomorphically and is zero-free inside the circle.
+Indeed the singularities on each slice are removable by the
+counted multiplicities, and the Cauchy integral of its boundary
+values gives the joint extension.
+
+Put \(g=A_z/A\), \(u=z-c\), and \(\zeta^2=D\). For the physical
+heat equation \(\partial_t F=-F_{zz}\) the product rule gives
+\[
+ \frac{A_t}{A}=-(g_z+g^2)
+      +\frac{2uc'+D'-2-4u g(c+u)}{u^2-D}.
+\]
+The numerator of the fraction vanishes to the multiplicities of
+the roots of \(Q\). Thus the linear polynomial
+\((2uc'+D'-2)/4\) is the interpolant of \(h(u)=u g(c+u)\)
+at \(-\zeta,\zeta\). At \(\zeta=0\) the data are the value and
+first derivative. Writing \(z_\pm=c\pm\zeta\) gives
+\begin{align}
+ c'&=g(z_-)+g(z_+),&
+ D'&=2+4D\,g[z_-,z_+],\notag\\
+ \frac{A_t}{A}&=-(g_z+g^2)-4h[-\zeta,\zeta,u].
+ \label{gt-deflated-pde}
+\end{align}
+Here brackets denote ordinary or confluent divided differences.
+The identities use analytic interpolation along the real or vertical
+segment and give \(D'=2\) at a double.
+
+By \eqref{eq:gt-regular-drift} and Proposition~\ref{gt-exterior-proposition},
+the interaction is
+\[
+ M=-\left\langle \frac{F_z/F}{Q}\right\rangle_\Gamma .
+\]
+One can see the contribution \(m_j\) of each exterior pole by taking
+the residue at \(\rho_j\) of \(1/((z-\rho_j)Q(z))\), whose residue
+at infinity is zero. The term \(Q_z/Q^2=-(1/Q)_z\) from the two
+target poles integrates to zero. The formula also applies at a
+target double.
+
+First take a polynomial slice on which all roots are simple.
+At a root \(\rho\), implicit differentiation gives
+\(\rho'=F_{zz}(\rho)/F_z(\rho)=2\sum_{\eta\ne \rho}
+(\rho-\eta)^{-1}\), with \(\eta\) ranging over the other roots.
+Write \(P=\sum_j w_jm_j\), \(V=\sum_j w_jm_j^2\), with only
+exterior indices. The first identity of \eqref{gt-deflated-pde}
+gives \(c'=-2P\), and the two target contributions to each exterior
+velocity are \(4w_jm_j\). Consequently
+\[
+ w_j'=4w_jm_j+2P+2\sum_{k\ne j}(w_j-w_k)^{-1}.
+\]
+Differentiating \(m_j\), using \(w_j^2m_j=1+Dm_j\), and
+pairing the \(j,k\) and \(k,j\) terms yields
+\begin{align*}
+ M'={}&(2-4DM)S_2-8(S_2+DS_3)-4PV\\
+       &\quad-4\sum_{j<k}
+          \frac{w_jm_j^2-w_km_k^2}{w_j-w_k}.
+\end{align*}
+Subtracting \(w_jm_j-w_km_k\) first gives
+\((w_jm_j-w_km_k)/(w_j-w_k)=-(D+w_jw_k)m_jm_k\).
+Multiplying this quotient by \(m_j+m_k\) and subtracting \(m_jm_k\)
+gives
+\[
+ \frac{w_jm_j^2-w_km_k^2}{w_j-w_k}
+ =-m_jm_k-(D+w_jw_k)(m_j^2m_k+m_jm_k^2).
+\]
+In the sum over \(j<k\), the three products with factors \(1,D,w_jw_k\)
+on the right, before the minus signs, give respectively
+\[
+ \frac{M^2-S_2}{2},\qquad D(MS_2-S_3),\qquad PV-S_2-DS_3 .
+\]
+The last diagonal is \(\sum_j w_j^2m_j^3=S_2+DS_3\).
+Substitution cancels \(PV\) and \(DMS_2\) and gives
+\eqref{gt-interaction-law}.
+
+At a multiple-root polynomial slice, perturb its finitely many
+root factors to distinct locations while preserving the count on
+each side of \(\Gamma\). Give each perturbed slice its polynomial
+heat evolution. The contour formulas at the fixed time give
+\begin{align}
+ \partial_t(F_z/F)&=-F_{zzz}/F+F_zF_{zz}/F^2,\notag\\
+ M'&=-\left\langle
+      \frac{\partial_t(F_z/F)}{Q}
+        -\frac{(F_z/F)Q_t}{Q^2}
+      \right\rangle_\Gamma,\qquad
+ Q_t=-2(z-c)c'-D'.
+ \label{gt-interaction-contour-derivative}
+\end{align}
+The same first expression gives \(c',D'\) by differentiating the
+moments. The lower bounds for the denominators on \(\Gamma\)
+persist under the perturbation. Thus \(M'\) passes to the original
+slice, as do \(M,S_2,S_3\), since the exterior denominators there
+stay separated from zero. This proves the finite identity through
+both target and exterior multiplicities.
+
+For \(H_t\), the order argument preceding
+Proposition~\ref{gt-exterior-proposition} applies uniformly through
+\(t=1/2\) using \(u^2/2\) in its integrand bound. Also \(H_t(0)>0\).
+The strip and unit count give \(\sum_\rho|\rho|^{-2}<\infty\) by
+unit intervals on both tails. In the genus-one product at \(t_*\),
+opposite factors combine to \(1-z^2/\rho^2\). Their locally
+uniformly convergent product is even, so evenness of \(H_{t_*}\)
+forces the linear exponential in the Hadamard prefactor to be
+constant. Truncate this product at increasing moduli, with all
+opposite and conjugate factors and their multiplicities, keeping the
+constant prefactor \(H_{t_*}(0)\). Each truncation is the time slice
+of a polynomial heat solution, obtained by applying the terminating
+operator \(\exp(-(t-t_*)\partial_z^2)\).
+
+On the single slice \(t_*\), compact product convergence and
+Cauchy's formula give convergence of every spatial derivative,
+including on \(\Gamma\). The time derivatives of the logarithmic
+derivatives then converge by
+\eqref{gt-interaction-contour-derivative}. The contour moments give
+convergence of \(c,D,c',D'\), and the same contour derivative gives
+convergence of \(M'\). Once the target factors are present, each
+retained exterior summand at \(t_*\) already uses the canonical
+\(c,D\). Absolute convergence gives the limits of \(S_2,S_3\).
+Taking the limit proves \eqref{gt-interaction-law} at each \(t_*\).
+The polynomial time neighborhoods may depend on the truncation.
+\end{proof}
+
+\subsection{Complete shell estimates and Riccati comparison}
+
+Use the fixed normalization
+\(\sigma=(t-t_0)/\ell^2\), \(m=\ell^2 M\),
+\(\mu_j=\ell^2m_j\), and \(\delta=D/\ell^2\).
+Set \(q_0=16/15\). The collar gives
+\(|D|\le |w_j|^2/16\), hence
+\(|\mu_j|\le q_0 L^{-2}|w_j|^{-2}\). Let \(C_{\rm u}\ge1\)
+bound both the constant in \eqref{gt-height-unit-count} and
+the safe-line constant in \eqref{gt-safe-line}.
+Within \(|\Re w_j|<1\) the two closed unit intervals give at most
+\(4C_{\rm u}L\) occurrences, each with
+\(|\mu_j|\le q_0a^{-2}\). For \(n\ge1\) the shell
+\(n\le|\Re w_j|<n+1\) lies in unit intervals starting at
+\(c-n-1,c+n\). Both starts \(v\) satisfy
+\(2+|v|\le 3T(n+1)\), giving shell count at most
+\(2C_{\rm u}(2L+\log(n+1))\). Each summand there is bounded by
+\(|\mu_j|\le q_0 L^{-2}n^{-2}\). The integral bound for
+\(\sum_{n\ge1}n^{-2}\) is \(2\). Also \(\log(n+1)\le\sqrt n\),
+so \(\sum_{n\ge1}n^{-2p}\log(n+1)\le3\) for \(p\ge1\), by the
+integral bound for \(\sum_{n\ge1}n^{-3/2}\). Thus the shells with
+\(n\ge1\) contribute at most
+\(2C_{\rm u}q_0^p L^{-2p}(4L+3)\le10C_{\rm u}q_0^p L^{1-2p}\).
+Combining with the near band and using \(a\le L\) gives
+\begin{equation}
+ \sum_j|\mu_j|^p\le B_pL,\qquad
+ B_p=\frac{14C_{\rm u}q_0^p}{a^{2p}}\quad(p=1,2,3).
+ \label{gt-interaction-shell}
+\end{equation}
+
+The same shell counts also bound the deflated logarithmic derivative
+on \(|z-c|\le r_0/2\). At \(c+4\ii\), removing the target terms
+from \eqref{gt-safe-line} gives \(|g(c+4\ii)|\le2C_{\rm u}L+1\).
+Subtracting \(g(c+4\ii)\) cancels the regularizing constants in the
+logarithmic derivative and leaves the differences
+\((z-\rho_j)^{-1}-(c+4\ii-\rho_j)^{-1}\).
+The near differences are bounded by \(2/r_0+1/3\), using the
+strip and the collar. On shell \(n\ge1\) the two denominator
+factors are at least \(n/2,n\) and the numerator at most \(9/2\),
+so each difference is at most \(9/n^2\). The preceding sums give
+\[
+ |g(z)|\le 8C_{\rm u}L^2/a+95C_{\rm u}L
+ \qquad (|z-c|\le r_0/2).
+\]
+The exterior reciprocal-power sums for positive spatial derivatives
+also converge uniformly on that disk by the same shell counts.
+
+In the scaled time, \eqref{gt-interaction-law} becomes
+\begin{equation}
+ \frac{\dd m}{\dd\sigma}=2m^2-\mathcal F,\qquad
+ \mathcal F=12\sum_j\mu_j^2+16\delta\sum_j\mu_j^3 .
+ \label{gt-interaction-scaled}
+\end{equation}
+Write \(B=B_1\) and \(C_F=12B_2+16dB_3>0\).
+Then \(|m|\le BL\), \(|\mathcal F|\le C_FL\), and
+\(\dd m/\dd\sigma\ge 2m^2-C_FL\).
+
+\begin{corollary}[Lower barrier and integrated adverse interaction]
+\label{gt-riccati-barrier}
+Put \(h=\sqrt{C_FL/2}\), \(k=\max(BL/h,2)\), and
+\(u_0=\operatorname{arccoth}k\). Within the tube,
+\begin{align}
+ m(\sigma)&\ge-h\coth(2h\sigma+u_0)
+              \ge-h\coth(2h\sigma)\qquad(\sigma>0),
+ \label{gt-riccati-lower}\\
+ \int_0^s(-m)_+\,\dd\sigma
+    &\le \frac12\log\frac{\sinh(2hs+u_0)}{\sinh u_0}
+       \le hs+\frac12\log\frac{k+1}{2}.
+ \label{gt-riccati-cost}
+\end{align}
+\end{corollary}
+\begin{proof}
+The function \(v(\sigma)=-h\coth(2h\sigma+u_0)\) solves
+\(v'=2v^2-C_FL\) and \(v(0)=-hk\le m(0)\). The inequality
+\((m-v)'-2(m+v)(m-v)\ge0\) and its positive integrating factor
+imply \(m\ge v\). The second lower bound follows from monotonicity
+of \(\coth\). Integrating \(-v\) gives the logarithm in
+\eqref{gt-riccati-cost}. Bounding the numerator \(\sinh\) by half
+its positive exponential and using
+\(\e^{u_0}/(2\sinh u_0)=(k+1)/2\) gives the second inequality.
+\end{proof}
+
+At any fixed positive elapsed scaled-time buffer, the lower allowance
+is of order \(-\sqrt L\) for fixed \(a,d,C_{\rm u}\). Over a
+scaled interval of length \(s\) the multiplier in
+\eqref{eq:gt-backward-gap} is bounded by
+\begin{equation}
+ \exp\!\left(-4\int_{t_0}^{t_0+\ell^2s} M\,\dd t\right)
+ \le \e^{4hs}\left(\frac{k+1}{2}\right)^2
+ =O_{a,d,C_{\rm u}}(L)\exp\!\big(O_{a,d,C_{\rm u}}(s\sqrt L)\big).
+ \label{gt-riccati-multiplier}
+\end{equation}
+This uses \(\int M\,\dd t=\int m\,\dd\sigma\). Restarting the
+comparison at any interior time gives the same estimate for each
+kernel in the signed cost integral in \eqref{eq:gt-backward-gap}.
+The pointwise count alone gives \(\e^{4BLs}\). The improved bound
+still permits fixed negative normalized margins and growth of the
+multiplier at a fixed positive \(s\). Applying the gap equation
+also requires a separately enclosed value of \(D\) at the chosen
+anchor. The initial count bound used in the comparison concerns \(m\).
+
+\subsection{Negative visibility and conversion to a slice count}
+
+Write \(C_1=2B^2+C_F\). By \eqref{gt-interaction-scaled},
+\[
+ \left|\frac{\dd}{\dd t}(\ell^2M)\right|
+ \le L^2(2B^2L^2+C_FL)\le C_1L^4 .
+\]
+For a slice margin \(\ell^2M(t_*)\le-\epsilon\), \(\epsilon>0\),
+this guarantees \(\ell^2M\le-\epsilon/2\) on a chosen side of length
+\(\Delta=\epsilon/(2C_1L^4)\) when that interval lies in the
+independently enclosed tube. A strict sign without a margin allows
+the guaranteed length to shrink to zero.
+
+For \(n_\epsilon\) distinct qualifying pairs at a snapshot, take
+a common one-sided interval of length \(\Delta>0\) within all of
+their paid tubes on which each interaction stays negative. The
+continued pairs remain distinct there. If two coincide at a time,
+the same local counting contour fixes the unique continuation near
+that time. Coincidence is also closed by continuity and would then
+extend to the snapshot. Thus the \(n_\epsilon\) pairs contribute at
+least \(\Delta n_\epsilon\) to the negative pair-time occupation.
+By Theorem~\ref{gt-pair-occupation} applied on the common interval,
+\begin{equation}
+ n_\epsilon\le C_{a,b}\frac{T}{L\Delta}
+       +\frac{32D_\chi}{3}\left(\frac12+\frac{L}{3a}\right)L^3,
+ \qquad C_{a,b}=B_b\left(\frac{93}{b^2}+\frac{279}{ab^3}\right),
+ \label{gt-visibility-comparison}
+\end{equation}
+with the density and cutoff constants of that theorem. The
+modulus-guaranteed interval gives \(O(TL^3/\epsilon)+O(L^4)\)
+for fixed \(a,b,d\) and source constants. At fixed \(\epsilon\)
+its leading order exceeds the slice estimate in
+Theorem~\ref{gt-pair-negative-count} by two powers of \(L\).
+Even an independently guaranteed negative interval of length
+comparable to \(\ell^2\) gives only \(O(TL)+O(L^4)\).
+For every \(\Delta\le1/2\) the first term of the explicit allowance
+is at least \(2C_{a,b}T/L\). Hence this conversion cannot furnish an
+upper allowance below one at growing \(T\) with fixed collar parameter
+\(a\). These comparisons are between upper allowances for the
+specified pair class. They give no lower bound on actual exceptions
+or their lifetimes.
+
+The finite quadratic and even quartic heat fields obey
+\eqref{gt-interaction-law}, including on collars through a collision.
+Their finite divisors cannot supply the canonical growing population,
+though they can satisfy coarse unit upper counts. The canonical
+comparison above uses the complete source through the unit count
+and occupation estimates. A direct calculation with the same
+signed interaction, tube, source inputs, and independent anchor
+has the same comparison and the same visibility requirements
+\cite{gtdynamics}.
