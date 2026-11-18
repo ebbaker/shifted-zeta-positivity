@@ -1,0 +1,199 @@
+\section{Finite-block invariants and complete exterior flux}
+\label{sec:block}
+
+Fix a real time interval and a stationary simple positively oriented
+contour $\Gamma$ whose interior contains exactly $N$ zeros of a
+holomorphic heat solution, counted with multiplicity. Assume $H$
+does not vanish on a neighborhood of the contour throughout the
+interval. Denote the interior divisor by $x_1,\ldots,x_N$ and set
+\begin{equation}
+ Q(t,z)=\prod_{i=1}^N(z-x_i(t)),\qquad
+ R(t,z)=B(t,z)-\frac{Q_z(t,z)}{Q(t,z)}.
+ \label{eq:exterior}
+\end{equation}
+The whole interior divisor has been removed, so $R$ is holomorphic
+inside $\Gamma$. It includes the complete exterior and any analytic
+factor of $H$; it is not a finite exterior cutoff. Assume also that
+the interior contains the block's convex hull, so the center and all
+Taylor segments used below lie inside. A cleared enclosing circle
+is sufficient.
+
+At a simple interior root the logarithmic derivative has regular
+part $\sum_{j\ne i}(x_i-x_j)^{-1}+R(t,x_i)$, so
+\begin{equation}
+ x_i'=2\sum_{j\ne i}\frac1{x_i-x_j}+2R(t,x_i).
+ \label{eq:block-roots}
+\end{equation}
+Let $c,y_i,p_k$ be the block quantities \eqref{eq:center} and
+write $R_i=R(t,x_i)$. Pairwise cancellation, followed by subtraction
+of the center velocity, gives
+\begin{align}
+ c'&=\frac2N\sum_iR_i, \label{eq:center-flux}\\
+ p_2'&=2N(N-1)+4\sum_i y_iR_i,\notag\\
+ p_3'&=6\sum_i(y_i^2-p_2/N)R_i,\notag\\
+ p_4'&=4(2N-3)p_2+8\sum_i(y_i^3-p_3/N)R_i.
+ \label{eq:block-powers}
+\end{align}
+For example, the exterior part of $p_k'$ is
+$2k\sum_i(y_i^{k-1}-p_{k-1}/N)R_i$; the internal part is
+\eqref{eq:powers}. This proves all lines of
+\eqref{eq:block-powers}.
+
+\subsection{Fourth order and the curvature remainder}
+For $N\ge4$, retain the polynomial $C_4$ in \eqref{eq:C4} and put
+\begin{equation}
+ \beta=\frac{2N-3}{N(N-1)},\qquad
+ \psi_i=y_i^3-\beta p_2y_i-p_3/N.
+ \label{eq:psi}
+\end{equation}
+Differentiation with respect to a root gives
+\begin{equation}
+ \partial_{x_i}C_4=-\psi_i,\qquad
+ \sum_i\psi_i=0,\qquad \sum_i\psi_iy_i=-4C_4.
+ \label{eq:psi-identities}
+\end{equation}
+The first identity uses
+$\partial_{x_i}p_k=k(y_i^{k-1}-p_{k-1}/N)$; the last follows by
+substitution of \eqref{eq:C4}. Internal terms cancel in
+\eqref{eq:block-powers}, giving the exact balance
+\begin{equation}
+ C_4'=-2\sum_i\psi_iR_i.
+ \label{eq:C4flux}
+\end{equation}
+Now expand the complete exterior at the current mean:
+\begin{equation}
+ R(t,c+y)=a(t)+b(t)y+r(t,y),\quad
+ a=R(t,c),\quad b=R_z(t,c).
+ \label{eq:affine}
+\end{equation}
+The identities \eqref{eq:psi-identities} yield
+\begin{equation}
+ C_4'-8bC_4=\E_4,\qquad
+ \E_4=-2\sum_i\psi_i r(t,y_i).
+ \label{eq:affine-C4}
+\end{equation}
+In particular an exactly affine exterior gives the constant
+$e^{-8\int_{t_0}^t b(v)\dd v}C_4(t)$. For a general exterior,
+the same multiplier $\mu(t)$ gives the exact paid balance
+\begin{equation}
+ \mu(t)C_4(t)-C_4(t_0)=\int_{t_0}^t\mu(v)\E_4(v)\dd v.
+ \label{eq:integrated-C4}
+\end{equation}
+
+\begin{proposition}[A local curvature allowance]
+\label{prop:curvature}
+Suppose $|y_i|\le\rho$ and $|R_{zz}|\le C_2$ on every segment
+from $c$ to $x_i$. Then
+\begin{equation}
+ |\E_4|\le C_2\sum_i|\psi_i||y_i|^2\le4NC_2\rho^5.
+ \label{eq:curvature}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Taylor's integral remainder gives
+$r(t,y)=y^2\int_0^1(1-s)R_{zz}(t,c+sy)\dd s$, hence
+$|r(t,y)|\le C_2|y|^2/2$. Also
+\[
+ |\psi_i|\le\rho^3+\beta N\rho^3+\rho^3
+          =\left(4-\frac1{N-1}\right)\rho^3\le4\rho^3.
+\]
+Apply these bounds to \eqref{eq:affine-C4}.
+\end{proof}
+
+The fifth power is a local scale allowance. A near-conservation
+estimate over a time interval still needs bounds on the initial
+value, $b$, $C_2$ and $\rho$ throughout that interval.
+
+\subsection{The general homogeneous law}
+\begin{theorem}[Affine-corrected flux for a homogeneous heat integral]
+\label{thm:general-flux}
+Let $J(x_1,\ldots,x_N)$ be a symmetric polynomial, invariant under
+common translation and homogeneous of degree $m\ge1$. Assume it
+is an autonomous first integral of the isolated finite heat-root
+law \eqref{eq:finite-roots}. Write $J_i=\partial_{x_i}J$ and use
+the complete exterior \eqref{eq:exterior}. Then
+\begin{align}
+ J'&=2\sum_i J_iR_i, \label{eq:Jflux}\\
+ J'-2mbJ&=\E_J=2\sum_iJ_i r(t,y_i). \label{eq:Jaffine}
+\end{align}
+If $Z=z-c$, the single rational kernel
+\begin{equation}
+ K_J(z)=\sum_i\frac{J_i}{z-x_i}-\frac{mJ}{(z-c)^2}
+       =\frac1{Z^2}\sum_i\frac{J_i y_i^2}{Z-y_i}
+ \label{eq:Kgeneral}
+\end{equation}
+satisfies
+\begin{equation}
+ \E_J=2\av{B(t,z)K_J(z)}.
+ \label{eq:contour-general}
+\end{equation}
+All these symmetric statements extend through internal mergers
+while the count and outer clearance persist. For the integrals
+$J_j$ of Corollary~\ref{cor:homogeneous}, take $m=j$.
+\end{theorem}
+\begin{proof}
+The chain rule and the assumed isolated first-integral identity
+cancel the internal part of \eqref{eq:block-roots}, leaving
+\eqref{eq:Jflux}. Translation invariance and Euler's homogeneous
+identity give
+\begin{equation}
+ \sum_iJ_i=0,\qquad \sum_i y_iJ_i=mJ.
+ \label{eq:Euler}
+\end{equation}
+Substitution of \eqref{eq:affine} into \eqref{eq:Jflux} now proves
+\eqref{eq:Jaffine}. In particular a purely affine exterior gives
+the constant $e^{-2m\int b}J$.
+
+For $w$ inside the contour, Cauchy's formula and the complete
+subtraction in \eqref{eq:exterior} give
+\begin{equation}
+ R(t,w)=\av{\frac{B(t,z)}{z-w}},\qquad
+ R_z(t,c)=\av{\frac{B(t,z)}{(z-c)^2}}.
+ \label{eq:exterior-Cauchy}
+\end{equation}
+To verify that the interior poles do not add a term, integrate
+$(Q_z/Q)/(z-w)$: all its poles are inside, and it is $O(z^{-2})$
+at infinity, so their total residue is zero. The derivative
+formula follows by differentiating with respect to $w$. These
+statements remain true when $w$ coincides with a block root.
+Substitution in $2\sum_iJ_iR_i-2mbJ$ gives
+\eqref{eq:contour-general}. Finally,
+\[
+ \frac1{Z-y_i}=\frac1Z+\frac{y_i}{Z^2}
+                   +\frac{y_i^2}{Z^2(Z-y_i)}
+\]
+and \eqref{eq:Euler} prove the second equality in
+\eqref{eq:Kgeneral}. The $Z^{-1}$ and $Z^{-2}$ terms cancel exactly.
+
+For continuation, each raw power sum of the block is
+$\av{z^kB}$ and is holomorphic in time on a cleared contour.
+Newton identities recover the coefficients of $Q$, and hence every
+symmetric polynomial used above. The quotient $H/Q$ is nonvanishing
+inside, and its logarithmic derivative $R$ is holomorphic there
+and in time. Expressing $J$ as a polynomial in the raw power sums
+shows by differentiation that $J_i$ is a polynomial in $x_i$ with
+symmetric coefficient functions;
+therefore $\sum_iJ_iR(x_i)$ is a finite combination of holomorphic
+counted traces. Equivalently, at a multiple slice perturb the heat
+solution to $H+\epsilon$, which has simple block zeros for generic
+small $\epsilon$, preserves the boundary count and clearance, and
+converges with its derivatives there. All displayed symmetric
+quantities and first time derivatives converge by their contour
+formulas. Passing to the limit proves the identities at the merger,
+without assigning a singular individual velocity at that time.
+\end{proof}
+
+For $J=C_4$, $J_i=-\psi_i$ and $m=4$. Thus our sign convention
+is $K_{C_4}=-\sum_i\psi_i/(z-x_i)-4C_4/(z-c)^2$; it is the
+negative of the founding note's $K_4$. The flux
+$2\av{BK_{C_4}}$ is exactly the same $\E_4$.
+The separate curvature channel is also available from
+\begin{equation}
+ R_{zz}(t,w)=2\av{\frac{B(t,z)}{(z-w)^3}}.
+ \label{eq:Rzz}
+\end{equation}
+On a circle of radius $A_0$, a uniform source error $\epsilon$
+and a distance $\delta$ from $w$ to that circle contribute at most
+$2A_0\epsilon/\delta^3$ to this derivative. The next section
+retains the cancellations in the combined kernel before taking
+absolute values.

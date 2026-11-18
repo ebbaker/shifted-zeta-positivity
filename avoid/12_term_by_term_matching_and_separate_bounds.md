@@ -1499,3 +1499,64 @@ with direct joint propagation given the same source, observations and errors.
 [E32](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/17_VCD_GT_CM_E32_TWO_SIDED_MANUSCRIPT_ASSESSMENT_20261118.md)
 accepts this scoped identity and formulation, not a universal obstruction to
 recursive source acquisition or a strict canonical improvement theorem.
+
+**18 November 2026 — pay the source extension and retain the direct baseline.**
+For Edward Baker with Codex assistance; actual settings unavailable.
+[CM Note39](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/39_VCD_GT_CM_E34_EXTENDED_SOURCE_AND_FORCING_20261118.md)
+acquires the local retained-F premise through negative time with a new
+true-field remainder and enlarged polynomial derivative bounds. It states:
+“The useful new result is source/domain acquisition”. The same-source
+direct gap bound is stronger, so successful acquisition is not recursive
+superiority. [Note38](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/38_VCD_GT_CM_B10_R2_SOURCE_SELECTION_20261118.md)
+proves that the lower-gap adjoint allowance is already sharp for independent
+pointwise error boxes with nonnegative reference D; keeping the displayed
+quadratic signs alone cannot improve that relaxation. Correlated physical
+paths, two-end intersections and cheaper acquisition remain outside the
+screen. [E35](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/18_VCD_GT_CM_E35_EXTENDED_SOURCE_ASSESSMENT_20261118.md)
+is the separate internal shared-premise assessment. Do not reuse a
+nonnegative-time source error below zero or count a coordinate change as
+an advantage over a direct method given the newly acquired data.
+
+**18 November 2026 — isolate correlation gain against a sharp baseline.**
+For Edward Baker with Codex assistance; actual model/effort unavailable.
+[CM Note42](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/42_VCD_GT_CM_E36_CORRELATED_DISCRIMINANT_20261118.md)
+states: “A centered direct comparator must be the baseline for any subsequent
+claim using these same log boxes.” Retaining a shared log error gives
+>6.4031% narrower width than sharp independent moments. The larger >26.0920%
+reduction versus the old implementation also removes arithmetic wrapping;
+crediting it all to correlation would overstate the mechanism. Use a lower
+bound for the sharp baseline width when certifying a percentage reduction,
+and retain the complete nonlinear remainder. Equal source acquisition
+is not equal total runtime: the new assembly is slower. This is a measured
+improvement of a direct relaxation, not a recursive advantage over an
+already centered direct estimator or a reduction of the exact feasible set.
+[E37](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/19_VCD_GT_CM_E37_CORRELATION_ASSESSMENT_20261118.md)
+is the separate internal assessment; no universal impossibility is inferred.
+
+**18 November 2026 — a conserved block statistic still has exterior and coordinate costs.**
+For Edward Baker with OpenAI Codex assistance; actual model/effort unavailable.
+[CQ Note02](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/01_conservation_laws/notes/02_HOMOGENEOUS_FLUX_AND_ERROR_COMPARISON_20261118.md)
+states: “The radius factors compare the displayed allowances, not total
+canonical errors.” Its homogeneous-invariant kernel removes two affine
+terms before bounding a shared contour error, but uncertain coordinates,
+quadrature and whole-time control remain payable. Give direct evaluation
+the same combined kernel; the separate Cauchy allowance is not claimed
+sharp. A shifted quartic has C4>0 at an exact double event, so a conserved
+positive aggregate alone is not a minimum-gap barrier. The
+[manuscript](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/01_conservation_laws/manuscript/main.tex)
+and [same-assistant assessment](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/01_conservation_laws/reviews/01_MANUSCRIPT_SCOPE_AND_SETUP_REVIEW_20261118.md)
+retain these scopes; the finite-head exclusion separately requires freely
+variable tails and is not applied to the unchanged theta trajectory.
+
+**18 November 2026 — pay the affine term when crediting its small residual.**
+For Edward Baker with Codex assistance; root settings unavailable, E38/E39
+selected Sol6.1/ultra. [CM Note44 §3](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/44_VCD_GT_CM_CONSERVATION_TOOLS_AND_CARDINAL_SELECTION_20261118.md)
+states: “this split, with independent triangle bounds from the same
+uniform B-error, does not improve this direct allowance”. Its residual
+has a D² factor, but the separately paid affine uncertainty restores exactly
+the full direct allowance. [Review20](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/20_VCD_GT_CM_CONSERVATION_TOOL_ASSESSMENT_20261118.md)
+accepts that restricted screen, not a no-go for correlated or integrated
+methods. By contrast, [Note45](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/45_VCD_GT_CM_E38_CARDINAL_SOURCE_REFINEMENT_20261118.md)
+retains actual nodal dependence through the exact cardinal operator and
+measures >33.9494-fold width gain. Retain coefficient arithmetic and the
+true time remainder; do not count an intermediate radius factor as a net gain.

@@ -42,8 +42,8 @@ specifications or dated snapshots. Re-read this register before updates.
 | VCD-GT-CM-E13 | E / Sol6.1 ultra; fixed nonauthor manuscript assessment | Complete; review06 and correction check07 accept within original scope | One proof/scope/coherence pass plus one bounded correction check; no new research claim |
 | VCD-GT-CM-E14 | E / lead housekeeping; PDF and research-document reconciliation | Complete; clean 25-page PDF, visual QA and document reconciliation | Ignored output PDF, visual/layout checks, overview/plan/register updates, next-session continuation and build record |
 | VCD-GT-CM-E15 | E / Sol; fixed nonauthor B03 r2 assessment | Complete r1; accepted within identity, transfer and scoped-screen domains | Seven pins checked; no required mathematical correction; internal shared-premise assessment |
-| VCD-GT-CM-B05 | B / Astra; select controlled finite closure for the regular moment hierarchy | Complete r1 conceptual decision; finite-divisor benchmark selected | Note15 gives four boundary residuals and the scoped failure of independent positive-box propagation; finite polynomial heat reconstruction has a concrete proof route, not an accepted approximation theorem |
-| VCD-GT-CM-E16 | E / Sol; prove the selected common-time finite-divisor approximation | Ready r4 source rebind; independently optional, scientific task unchanged and unexecuted | Explicit field/jet/tube/moment/transport errors at fixed height from one canonical initialization; one proof pass and two local repairs maximum, then nonauthor assessment |
+| VCD-GT-CM-B05 | B / Astra; choose useful finite realization and conditioning budget | r1 complete; r2 ready conceptual continuation, unexecuted | E16/E40 pay fixed-input approximation; r2 selects one canonical consumer and total data/error budget, at most two strategies before any E acquisition |
+| VCD-GT-CM-E16 | E / Sol; prove the selected common-time finite-divisor approximation | Complete r4; E40 accepts fixed-input scope without mathematical correction | Notes47–48: explicit O(log N/N) field/jet/pair/fixed-moment/transport errors; one common initialization, supplied tube/data constants; no short-head closure or acquired signed gain |
 | VCD-GT-CM-B06 | B / Astra; qualify the author's closest-pair choice | Complete r1 discussion; local qualified use retained | Note16: existing collar already implies mutual nearest neighbors; global minima, admissibility, target coverage and switching need separate justification; E16 unchanged |
 | VCD-GT-CM-B07 | B / Astra; select statistical minimum-gap consumer | r1–r4 complete within scope | Joint V/K barrier overcomes the initial-M shrinking allowance on acquired positive slabs; compact forcing acquisition remains open |
 | VCD-GT-CM-B08 | B / Astra; author-proposed zero-indexed lattice | r1 assessed in E27; r2 complete, scoped screens and conditional F target accepted by E29 | Shared p,q moment rows, zero-index compatibility, complete gaps and collision/truncation scope |
@@ -59,13 +59,20 @@ specifications or dated snapshots. Re-read this register before updates.
 | VCD-GT-CM-E25 | E / Sol; fixed compact mechanism assessment | Complete; accepted without correction | Trial-coordinate transfer, stopped-box logic, canonical constant-floor duration cap and finite error/comparator audit |
 | VCD-GT-CM-E26 | E / Sol; systematic recent-result manuscript integration | Complete r1; corrected analytical source accepted by E27 | Full joint-time/canonical/lattice derivations; compact numerics supporting only |
 | VCD-GT-CM-E27 | E / Sol; nonauthor integrated manuscript assessment | Complete; accepted within scope after two clarifications | One proof/source/scope pass and bounded correction check |
-| VCD-GT-CM-B10 | B / Astra; author-proposed recursive or continuous two-sided refinement | r1 complete, accepted within E32 scope; r2 next strict-gain decision | At most two sound formulations preserving one common source, with monotonic-enclosure or residual identities and explicit unpaid strict-gain gate |
+| VCD-GT-CM-B10 | B / Astra; author-proposed recursive or continuous two-sided refinement | r1–r4 complete within scope; optional r5 unissued | Note45: >33.9494-fold narrower centered width from cardinal accounting; Note44 pair-flux screen accepted; no speed/recursive/global gain |
+| VCD-GT-CM-E34 | E / inherited helper; fixed source extension proof and finite replay | Complete r1; accepted within scope by E35 | Note39/record16: extended count-two tube, whole-time F>.4051 and min D>.00082146953; first 512-cell attempt, no repairs or new xi calls |
+| VCD-GT-CM-E35 | E / inherited helper; nonauthor fixed assessment | Complete r1; accepted within scope without correction | All 22 pins match; one replay matches every non-timing field; independent-box screen and local/direct scope accepted |
+| VCD-GT-CM-E36 | E / inherited helper; fixed correlation proof and finite comparison | Complete r1; accepted within scope by E37, one accounting-only repair | Same endpoint log boxes/tails, centered discriminant support with full square remainder; >=1% width gate, costs recorded separately, two correctness repairs maximum |
+| VCD-GT-CM-E37 | E / inherited helper; nonauthor comparison assessment | Complete r1; accepted within scope without required correction | Proof, sharp Cartesian comparator, same-source/cost scope, collision control and one replay; one correction check maximum |
 | VCD-GT-CM-E31 | E / Sol; fixed analytical integration of Notes32/34 and selected B10 formulation | Complete; E32 accepted corrected source | Full derivations, coherent manuscript ordering, supporting numerics in appendix; two bounded repairs maximum |
 | VCD-GT-CM-E32 | E / Sol; nonauthor integrated proof and scope assessment | Complete; accepted after three reference descriptors corrected | One proof/source/coherence pass and one correction check |
 | VCD-GT-CM-E33 | E / lead; PDF production and research routing | Complete; clean 81-page PDF, full visual QA and routing | Ignored reading PDF, complete visual QA, overview/plan/register and continuation |
 | VCD-GT-CM-E30 | E / Sol; fixed forward-statistics proof and census-inference assessment | Complete r1; accepted after one scope clarification | Note34 finite-census reality, forward contraction/minimum transport and exact initial-M round-trip scope; one pass and one correction check |
 | VCD-GT-CM-E29 | E / Sol; fixed nonauthor proof and rational arithmetic assessment | Complete r1; accepted without correction | Note32 identities, scoped screens, conditional forcing margin and full unpaid-source/comparator audit; one pass and one correction check |
 | VCD-GT-CM-E28 | E / lead; PDF production and research routing | Complete; clean 61-page PDF and reconciled research routing | Clean build, complete visual QA, overview/plan/register, continuation and guarded chat capture |
+| VCD-GT-CM-E38 | E / Sol; fixed Lobatto proof, implementation audit and bounded source replay | Complete r1; accepted within scope by E39, historical accounting qualification | Degree32, X=503/500, same source/224-bit precision/128 nodes/512-cell schedule; target >=10-fold whole-minimum width reduction from Record19; no new source calls, at most two correctness repairs |
+| VCD-GT-CM-E39 | E / Sol; nonauthor proof and final replay assessment | Complete r1; final replay matches all non-timing fields; no required mathematical correction | Check cardinal weights, complex errors, coefficient rounding, geometry, same-budget comparison, collisions and one replay; one correction check |
+| VCD-GT-CM-E40 | E / Sol6.1 ultra; nonauthor common-time approximation assessment | Complete r2; accepted within explicit fixed-input scope without mathematical correction | Review22/Record25; all14 pins match, one proof pass and zero correction checks, exact Gaussian/quadratic/strong-collar quartic controls; no source acquisition |
 
 ## 17 November 2026 sibling ownership crosswalk
 
@@ -700,3 +707,342 @@ replace the current handoff while retaining all earlier milestones.
 Prepared for Edward Baker with Codex assistance; actual model/effort
 unavailable, helper settings inherited. Current chat0004 capture uses the
 guarded recorder and an exact-turn deferred follow-up, not an assumed hook.
+
+## B10 r2 launch, 18 November 2026
+
+The author invokes Continuation37 in thread
+`01a1efdd-615b-7323-82db-41e2f7610531`, turn
+`01a1efdd-6410-76a2-8681-1216d1b5c96a`, actual title
+“Research two-sided manuscript continuation”. The guarded recorder
+registered CM chat0005 from its exact paginated source. Recorded model
+configurations are empty; actual model and effort are unavailable.
+Prepared for Edward Baker with OpenAI Codex assistance; adviser settings
+inherited. The lead owns this register and all chat capture.
+
+Exactly two read-only exploratory candidates are being screened: a common
+complete-source pair/forcing enclosure and the fixed-gap adjoint residual.
+The source audit distinguishes the inherited [0,.1] tube from the desired
+[-.0003,.1] extension. No archived nonnegative-time remainder will be
+extrapolated without a new true-field bound. The comparison uses the same
+source, physical duration, labels and errors for direct D/M and contour
+discriminant calculations. A finite source estimate or a strictly quantified
+relaxation improvement must precede E execution; otherwise record a scoped
+missing-premise disposition. E16 remains separately optional and unexecuted.
+
+### B10 r2 selection; E34 issued
+
+[Note38](../notes/38_VCD_GT_CM_B10_R2_SOURCE_SELECTION_20261118.md)
+freezes the one-pair interval, whole-time observables, source record,
+complete error gates, collision controls and same-information comparison.
+The real-shift Gaussian formula gives a credible new negative-time majorant;
+the enlarged interpolation error is small enough to justify the fixed
+source replay, without new xi samples. [E34 r1](handoffs/VCD-GT-CM-E34-r1.md)
+and its 14-input manifest bind that execution, finite schedules and repair
+cap. No extension is certified at issue time. E35 begins a read-only
+nonauthor premise preflight while the proof is authored.
+
+The second candidate gives sharp dangerous-side support for independently
+selectable adjoint error boxes. It does not exclude correlated physical
+paths or the full two-end intersection, and supplies no canonical gain.
+It receives no numerical campaign. The source task is selected for a
+new finite coverage/forcing estimate, not a promised recursive advantage.
+
+### E34 return; E35 final assessment issued
+
+[Note39](../notes/39_VCD_GT_CM_E34_EXTENDED_SOURCE_AND_FORCING_20261118.md)
+and [record16](../numerics/16_VCD_GT_CM_EXTENDED_SOURCE_CERTIFICATE_20261118.json)
+return a complete proof and first-attempt interval success on [-.0003,.1].
+The new field error is <.53; the complete signed forcing is >.40510908.
+Raw whole-cell D is >.00019500219; the same-source regular-law monotonicity
+and negative endpoint improve this to min D>.00082146953. The paid .3
+retained-F comparison gives only >.00016246209, identically for direct D/M.
+The direct source comparator is stronger. Quadratic collision control
+passes clearance and fails the strict gap/forcing gates. No larger domain,
+new xi samples, repairs or recursive advantage is claimed.
+
+[E35 r1](handoffs/VCD-GT-CM-E35-r1.md) and its22-file final manifest now
+freeze proof/code/record, Note38's independent-box screen and the new
+continuation for separate assessment and one bounded replay. All results
+remain pending that verdict; the manuscript and prior certificates are
+unchanged.
+
+## B10 r2 / E34–E35 closeout, 18 November 2026
+
+[Assessment18](../reviews/18_VCD_GT_CM_E35_EXTENDED_SOURCE_ASSESSMENT_20261118.md)
+and [E35 return](handoffs/VCD-GT-CM-E35-return-r1.md) accept within scope
+without correction. All 22 final pins match before/after review. One
+bounded [replay17](../numerics/17_VCD_GT_CM_E35_REPLAY_20261118.json)
+reproduces every non-timing field, with zero new xi calls, geometry 16-by-64
+and time 512. This is nonauthor internal shared-premise review, not
+specialist or claimed cross-model validation. The frozen author note's
+pending-assessment qualifier is superseded by this verdict; its scientific
+text and original binding remain unchanged.
+
+The accepted gain is a complete-source extension to [-.0003,.1] for one
+counted canonical pair and acquisition of the formerly missing F>=.3
+premise (actual certified lower bound >.40510908). Direct D/M matches the
+retained-F lower bound >.00016246209; same-source contour/monotonicity
+gives the stronger min D>.00082146953. The exact quadratic control
+retains its collision and fails both strict forcing/gap gates. The adjoint
+screen is confined to independent error boxes with nonnegative reference D.
+No recursive advantage, global reality, Newman upper bound or E16 result.
+
+[Continuation40](../notes/40_VCD_GT_CM_COMPACT_SOURCE_CONTINUATION_20261118.md)
+supersedes Continuation37's next routing. B10 r3 must supply a specific
+correlation/width estimate or cost saving against the same-information
+direct baseline before another execution. E16 r4 and all seven pins remain
+unchanged, independently optional and unexecuted. Overview/plan, concise
+milestone and result/avoid evidence are reconciled. The existing manuscript
+and PDF remain unchanged and predate this local acquisition. CM chat0005
+uses guarded refresh and bounded exact-turn deferred capture; actual
+model/effort unavailable, inherited helpers, no assumed native hook.
+
+## B10 r3 launch and E36 selection, 18 November 2026
+
+The author explicitly pursues Note40's B10 r3 in the same CM chat0005,
+turn `01a1f005-2e66-78f3-8f96-f66b1613d745`. Start-of-turn guarded refresh
+retains the preceding final and current public messages. Recorded model
+configurations remain empty; actual model/effort unavailable. Prepared for
+Edward Baker with OpenAI Codex assistance; helpers inherit settings.
+
+Exactly two read-only candidates were compared. Shared contour log errors
+can be retained in J_h=p2/2-h p1+h² before subtracting the full
+(gamma-h)² remainder. Coarse D/M monotonicity as a cost method is already
+direct; an adaptive D-only or direct-jet baseline cannot be charged the
+irrelevant full-F audit. That cost candidate has no derived advantage in
+this pass and receives no execution, without a universal exclusion.
+
+[Note41](../notes/41_VCD_GT_CM_B10_R3_CORRELATION_SELECTION_20261118.md)
+freezes the selected correlation theorem and quantitative gate: at least
+1% narrower enclosure of min_I D=D(-.0003), using the same source/log boxes
+and annular tails, versus both the sharp independent-moment Cartesian
+projection and the earlier strong direct endpoint. Whole-path monotonicity
+is the same inherited input for both. A centered direct method reproduces
+the candidate, so a success is improvement of this direct relaxation, not
+superiority over every direct method or exact feasible set.
+
+[E36 r1](handoffs/VCD-GT-CM-E36-r1.md) and its 28-file manifest bind the
+proof/finite computation, >=1% gate, same224-bit/128-node budget, 120-second
+cap, fixed short assembly timing and at most two correctness repairs.
+No new source calls, time cells or precision changes. Equal acquisition
+budget is distinguished from total runtime. E37 begins nonauthor preflight
+and will replay only the final bound sources. Previous results, manuscript,
+E16 and all earlier input bindings remain unchanged.
+
+## E36 return and E37 binding, 18 November 2026
+
+[E36 return](handoffs/VCD-GT-CM-E36-return-r1.md) records all frozen gates
+passed: width reduction >6.4031% versus sharp independent moments and
+>26.0920% versus the older interval, min D>.00082160722, same log boxes and
+source budgets, quadratic collision retained. Assembly was slower. One
+accounting-only repair added field construction/full common-preparation
+timing; the initial successful record is externally retained and bound.
+The repeated mathematical fields were identical, with no source/precision,
+formula or threshold change. Final proof/code/record/return are frozen.
+
+[E37](handoffs/VCD-GT-CM-E37-r1.md) is issued with its
+[35-file final manifest](handoffs/VCD-GT-CM-E37-inputs-r1.json), all pins
+checked. One independent execution and proof/comparator/control/cost review
+are active. Note43's current summary and proposed next interpolation
+contract are included for scope review, not execution of a new budget.
+
+## B10 r3 / E36–E37 closeout, 18 November 2026
+
+[Assessment19](../reviews/19_VCD_GT_CM_E37_CORRELATION_ASSESSMENT_20261118.md)
+states **“accepted within scope without required correction”**. Its
+[return](handoffs/VCD-GT-CM-E37-return-r1.md) binds the completed proof,
+code and comparator assessment. All35 final input pins match. One
+[replay20](../numerics/20_VCD_GT_CM_E37_CORRELATION_REPLAY_20261118.json)
+reproduces every field after excluding exactly the18 current timing
+entries listed in Assessment19; historical first-run timings remain
+included. A separate support calculation from the same exact log boxes
+also verifies the percentage, strict lower-endpoint and square-payment
+inequalities, without new source/log acquisition. This is nonauthor
+internal shared-premise review, not specialist or cross-model validation.
+
+The accepted milestone is >6.4031% narrower whole-minimum enclosure than
+the sharp independent-moment Cartesian relaxation, at identical source,
+node and log budgets. The stronger lower bound is min D>.00082160722 on
+I=[-.0003,.1]. The >26.0920% total reduction against the old E34 interval
+also includes ordinary wrapping removal and is not all correlation gain.
+Both runs show assembly overhead; no cost saving is established. The
+quadratic retains its collision. A centered direct method reproduces the
+new result, so no advantage over all direct methods, repeated-sweep gain,
+new coverage or global/Newman result is accepted.
+
+The frozen Note42/Record19 pending-assessment labels are historical and
+superseded by this disposition, without rewriting their bound contents.
+The one pre-freeze author repair was timing accounting only; no E37
+correction was required. The first successful attempt remains preserved
+and hash-bound outside Git, with unchanged mathematical results.
+
+[Continuation43](../notes/43_VCD_GT_CM_CORRELATION_GAIN_CONTINUATION_20261118.md)
+supersedes Note40's next routing. B10 r4 proposes verifying a sharper
+Lobatto-cardinal interpolation allowance below17 in place of1100 and
+separately replaying the resulting budget with matched centered direct
+comparators. That is a future proof/acquisition contract: no current
+certificate uses17, no tenfold width gain is acquired, and no E38 is
+issued. E16 r4 and all seven pins remain unchanged and unexecuted. The
+manuscript/PDF and old scientific bindings are preserved. Research indexes,
+overview/plan, milestone, result-summary and avoidance evidence are updated.
+CM chat0005 continues its guarded in-place refresh and bounded exact-turn
+final capture, without an assumed native hook or inferred model settings.
+
+## B10 r4 activation and bounded E38/E39 work, 18 November 2026
+
+Prepared for Edward Baker with OpenAI Codex assistance; root actual model/effort
+unavailable pending source metadata, requested helper settings recorded separately.
+The author requests reading Note43 and the conservation-laws manuscript,
+continuing the main line and preserving research/history records. This activates
+the bounded two-route comparison, the specified interpolation proof and, only
+after proof preflight, its fixed numerical comparison. Old notes, scripts, records,
+source archives and manuscript remain frozen. One lead owns this register and
+history; helpers receive disjoint new note/code/review outputs.
+
+The candidate milestone is a finite source-error/width gain, not a new
+RH-equivalent criterion. The fixed tenfold width gate is measured against
+Record19's centered estimator; independent-moment and centered estimators
+must both receive the new source budget. Keep all time-remainder, derivative,
+tail and coefficient arithmetic payments explicit. One primary run plus at most
+two bounded correctness repairs and one nonauthor replay; 1200 seconds per
+full geometry run, no source sampling or precision escalation. If the cardinal
+proof fails to match the actual reconstruction, stop dependent numerics and
+return to B10. Conservation-law review may identify tools and missing premises
+but does not authorize a new source campaign.
+
+## E38 proof preflight and mechanism selection, 18 November 2026
+
+[Note44](../notes/44_VCD_GT_CM_CONSERVATION_TOOLS_AND_CARDINAL_SELECTION_20261118.md)
+compares exactly two candidates. The conservation manuscript yields a forced
+pair-clock affine residual with a D² kernel; independent uniform-B allowances
+for the affine and residual parts sum exactly to the direct allowance. This
+scoped screen selects Note43's interpolation refinement for execution.
+
+[Note45](../notes/45_VCD_GT_CM_E38_CARDINAL_SOURCE_REFINEMENT_20261118.md)
+proves the actual reversed-node DCT-I norm <17, separates complex nodal error
+from ball coefficient arithmetic and keeps derivative/time payments fixed.
+E39 independently checked the proof and exact rational T32 inequality, then
+read the author's proof and all 11 [E38 input pins](handoffs/VCD-GT-CM-E38-inputs-r1.json):
+accepted within scope without mathematical correction. The [frozen request](handoffs/VCD-GT-CM-E38-r1.md)
+now proceeds to its one bounded numerical run. A final assessment/replay is
+still required; no width outcome is presumed. Root settings remain unavailable
+in CM chat0006; proof/review helpers selected gpt-6.1-sol/ultra.
+
+## B10 r4 / E38–E39 closeout, 18 November 2026
+
+Prepared for Edward Baker with OpenAI Codex assistance; root actual settings
+unavailable, E38/E39 helpers selected gpt-6.1-sol/ultra without separate serving
+attestation. [Review20](../reviews/20_VCD_GT_CM_CONSERVATION_TOOL_ASSESSMENT_20261118.md)
+accepts the eight-section conservation manuscript and Note44's pair affine-flux
+transfer/scoped split-error comparison without required mathematical correction.
+The residual is O(D²) under a paid exterior third-derivative bound, but separate
+affine and residual uniform-B allowances sum exactly to the direct allowance.
+No new conservation-based canonical gain is acquired.
+
+[Note45](../notes/45_VCD_GT_CM_E38_CARDINAL_SOURCE_REFINEMENT_20261118.md)
+and [Record22](../numerics/22_VCD_GT_CM_CARDINAL_SOURCE_REFINEMENT_20261118.json)
+complete the fixed cardinal refinement: actual DCT-I norm<17, unchanged time
+remainder/derivative and coefficient-ball arithmetic, source error<.008170448251.
+The whole-minimum width is<2.29767333e-8, >33.9494-fold narrower than Record19's
+centered baseline; min D>.00082198577. The same-new-budget residual correlation
+gain exceeds3.4637%. Geometry and both512-cell paths are freshly enclosed,
+D_t>1.5072 remains valid, and the quadratic retains its collision/fails strict
+path gates. No new source samples, precision, duration, population or coverage.
+
+[Review21](../reviews/21_VCD_GT_CM_E39_CARDINAL_ASSESSMENT_20261118.md)
+and [replay23](../numerics/23_VCD_GT_CM_E39_CARDINAL_REPLAY_20261118.json)
+accept within scope. All8 final pins match and exactly one final replay agrees
+with every non-timing Record22 field after28 explicitly listed current timing
+exclusions; historical primary timings remain compared. The two author repairs
+were accounting-only, with earlier successes externally preserved and mathematical
+outputs unchanged. A historical repair description says65 logs for an invocation
+that actually made130; the final133380-log total is correct. This qualification
+requires no further mathematical correction or run. No cost advantage or specialist
+review is claimed. Both author and replay show slower centered assembly.
+
+[Continuation46](../notes/46_VCD_GT_CM_CARDINAL_GAIN_AND_STRUCTURAL_CONTINUATION_20261118.md)
+supersedes Note43's future routing. Node-log and annular-tail width payments are
+now comparable; recommend the already frozen **E16 r4 / E / Sol** structural
+approximation proof next, still unexecuted. All7 E16 pins were rechecked unchanged.
+An optional B10 r5 must select a new total-error mechanism before more local
+computation. Both manuscripts and all previous scientific inputs stay unchanged.
+Current routing, milestone, summary and avoidance evidence are reconciled.
+CM chat0006 uses guarded capture and bounded exact-turn final follow-up.
+
+## E16 r4 activation, 18 November 2026
+
+The author requests continuation and explicitly permits Sol6.1/Ultra
+sub-investigations. All seven E16 r4 input pins match. E16 now executes
+the unchanged r1 scientific contract under the r4 source rebind. The old
+packets remain frozen. Type E, recommended Sol because approximation,
+Gaussian proof route, transfers and acceptance tests are fixed.
+
+Two disjoint Sol6.1/Ultra proof components are assigned: Note47 owns the
+initial product envelope, explicit common-time field/jet error and finite
+input-error accounting; Note48 owns counted-contour coordinate/moment and
+transport transfers using that field interface. E40 independently assesses
+both, with one proof pass and at most two bounded repairs of constants,
+domination or transfer. The root owns this register, synthesis and guarded
+chat history. Actual root model/effort remain unavailable; helper selections
+are recorded separately from serving attestation.
+
+No new source computation, zero census, physical-time extension or manuscript
+snapshot is activated. A changed source/approximation, limiting regime or
+new mathematical premise returns to B05 before dependent execution. The
+intended quantitative milestone is explicit error O(E_N), with E_N the
+complete opposite-pair inverse-square tail, at fixed height/time/moment order;
+its size and all contour/anchor constants must be paid. This is not an
+RH-equivalent criterion, a short-head closure or a signed-gap improvement.
+
+E40 r2 retains the fixed proof/repair scope and explicitly includes one
+already-completed source-free quartic preflight, b=96, h=1/1024, whose
+counted pair fits the strong collar while colliding. The original r1
+request remains frozen. No numerical source/zero campaign is added.
+
+
+## E16 r4 / E40 r2 closeout, 18 November 2026
+
+Prepared for Edward Baker with OpenAI Codex assistance; root actual settings
+unavailable, three helpers selected gpt-6.1-sol/ultra without independent
+serving attestation. [Note47](../notes/47_VCD_GT_CM_E16_COMMON_TIME_FIELD_APPROXIMATION_20261118.md)
+and [Note48](../notes/48_VCD_GT_CM_E16_COUNTED_MOMENT_AND_TRANSPORT_TRANSFER_20261118.md)
+complete the unchanged E16 scientific contract. One opposite-paired initial
+canonical product, evolved over the whole fixed interval, approximates the
+field, spatial jets through3, matching counted c,D, complete fixed S/T
+moments, forcing, every-subinterval log W and physical ell² transport cost
+with explicit error O(E_N)=O(log N/N). The initial telescoping remainder
+is r²G(r)E_N; Gaussian propagation is evaluated with explicit constants.
+
+[Review22](../reviews/22_VCD_GT_CM_E40_COMMON_TIME_APPROXIMATION_ASSESSMENT_20261118.md)
+states **“Accepted within the explicitly stated fixed-input scope, without
+mathematical correction.”** All14 final pins, including all7 original E16
+sources, match. [Record25](../numerics/25_VCD_GT_CM_E40_APPROXIMATION_CHECKS_20261118.json)
+contains fourteen exact monomial cases and the quadratic/quartic controls.
+The b96, h1/1024 quartic satisfies the generic strong collar and preserves
+both mergers exactly at E_N=0, N97. One proof pass and one pre-freeze
+supplied-data symmetry clarification; zero E40 correction checks. The
+[E16 return](handoffs/VCD-GT-CM-E16-return-r4.md) and [E40 return](handoffs/VCD-GT-CM-E40-return-r2.md)
+close both tasks. Historical pending/unexecuted labels in frozen packets
+and author proofs are superseded by this entry, without changing their bytes.
+
+The result is fixed-height/time/order and uses independently supplied
+finite initial data and tube floors. It acquires no canonical zeros,
+source values, new positive margin or coverage. It assumes neither global
+reality nor a global strip for the evolved polynomial. Finite coefficient
+realization is not arbitrary short-head closure. Constants may be large;
+no uniform conditioning, efficient algorithm or necessary complexity lower
+bound is proved. Direct residues receive the same signed sums and errors.
+The E38 negative-time certificate, both manuscripts and previous inputs
+are unchanged. The assessment is internal with shared premises.
+
+[Continuation49](../notes/49_VCD_GT_CM_COMMON_TIME_APPROXIMATION_AND_CONTINUATION_20261118.md)
+now owns dated future guidance. Default next is [B05 r2 / B / Astra](handoffs/VCD-GT-CM-B05-r2.md),
+a ready but unexecuted selection of one useful canonical consumer and a
+complete finite-data/conditioning budget. At most two strategies, one
+conceptual pass and one clarification; no source/zero campaign. A future
+E / Sol task needs a declared new result, exact tolerance, equal-information
+comparator and finite caps first. The current proof does not require B05
+repair; this is the next usefulness decision. Overview/plan, indexes,
+milestone, result summary and avoidance evidence are reconciled. Record26
+binds final artifacts and preservation checks. CM chat0006 retains guarded
+refresh and bounded exact-turn final capture; no native hook is assumed.

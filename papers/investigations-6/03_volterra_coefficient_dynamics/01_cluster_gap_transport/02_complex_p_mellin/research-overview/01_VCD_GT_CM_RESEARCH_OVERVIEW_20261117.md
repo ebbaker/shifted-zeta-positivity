@@ -11,8 +11,12 @@ coupled lattice, constrained by the same complete heat field. The revised
 [manuscript][manuscript] derives this compatibility before discussing finite
 approximation and quantitative gap protection. The new forward/backward
 proposal adds sound common-source enclosures and a continuous adjoint
-identity, with strict canonical improvement still open.
-[Continuation37][continuation] sets the next research gate; the
+identity, with strict recursive improvement still open. The later compact
+source extension pays the retained-F premise on one pair; direct source
+discrimination is stronger in that finite comparison. The later shared-log
+comparison narrows the sharp independent-moment direct interval by more
+than 6.40% at equal acquisition budget, with additional arithmetic cost.
+The cardinal refinement now narrows that improved direct width by more than 33.9494 times. [Continuation49][continuation] records the accepted fixed-input E16 theorem and the next finite-data/conditioning decision; the
 [sole progress register][register] owns
 live status. Historical notes, issued packets and predecessor manuscripts
 remain preserved.
@@ -27,6 +31,45 @@ comparisons and scoped consumer screens. It is not an RH-equivalent
 criterion or a new bound on Lambda. Numerical certificates illustrate one
 compact screen and a finite census in a supporting appendix; the main
 derivations retain their general analytical hypotheses.
+
+## Current source refinement and structural continuation
+
+[Note45](../notes/45_VCD_GT_CM_E38_CARDINAL_SOURCE_REFINEMENT_20261118.md)
+proves the exact implemented Lobatto cardinal norm<17, replacing1100 only
+in the nodal-error amplification. The unchanged-source counted pair on
+I=[-.0003,.1] has a newly enclosed whole-minimum interval inside
+[.00082198577,.00082200876], width<2.29767333e-8: more than 33.9494-fold
+narrower than Record19's centered direct estimator. The residual centered
+versus sharp independent-moment gain at the new budget is about 3.4638%.
+E39 and the sole register own the final replay/assessment disposition.
+All geometry/512-cell time payments and the quadratic collision control are
+retained. This is improved direct error accounting, not additional source
+observations, duration/coverage, a recursive theorem or a cost advantage.
+
+[Note44](../notes/44_VCD_GT_CM_CONSERVATION_TOOLS_AND_CARDINAL_SELECTION_20261118.md)
+and [Review20](../reviews/20_VCD_GT_CM_CONSERVATION_TOOL_ASSESSMENT_20261118.md)
+identify the child manuscript's useful affine exterior cancellation. For
+the pair it gives D'=2+4bD+E_D with a D² residual kernel. Separately paying
+the affine and residual uniform-B errors sums exactly to the direct
+allowance; a new joint or independently tighter source input is needed.
+The quartet C4 is neither this pair's invariant nor a standalone barrier.
+
+The current node-log and annular-tail width payments are comparable, so
+another source-only precision pass is not the default. E16 r4 now supplies
+an explicit O(log N/N) common-time finite-divisor approximation on its
+fixed positive-time canonical tube. Notes47–48 pay spatial jets through3,
+matched counted coordinates, complete fixed-order exterior moments and
+physical transport costs. E40 accepts the fixed-input scope without
+mathematical correction. The approximation preserves the exact quartic
+merger; it does not acquire canonical initial zeros, tube floors or signs.
+
+The next default is **B05 r2 / B / Astra**, selecting one useful canonical
+consumer and conditioning/data budget before a numerical realization.
+The explicit global envelope, inverse contour floors and degree-dependent
+data weights are sufficient allowances, not necessary complexity bounds.
+The conservation free-tail obstruction does not exclude this structured
+approximation. An optional B10 r5 correlation/annular route must first
+derive a strict total gain against the improved direct baseline.
 
 ## One field, three coupled indices
 
@@ -61,8 +104,10 @@ one independent error per row. Uncertain reciprocal gaps still require
 explicit payment. The block identity does not control the minimum gap:
 interior concentration remains possible without a new signed estimate.
 A shared finite-product heat reconstruction preserves these algebraic
-relations wherever its simple charts exist. Stable approximation over a
-common interval remains the independent E16 task. A merging pair's regular
+relations wherever its simple charts exist. E16 now proves approximation
+over a common fixed interval for the supplied counted-pair tube; a
+simultaneous block extension still needs all charts and errors paid.
+A merging pair's regular
 S/T chart does not make all neighboring edge charts regular.
 
 ## The analytical chain and its quantitative limits
@@ -137,7 +182,8 @@ S/T chart does not make all neighboring edge charts regular.
    retains the transient for constant K and regular physical F floors.
    The selected constant-K comparison still fails its compact target;
    the physical F>=.3 floor would pay a strict stop margin >.00006246,
-   with that floor and extended tube unacquired. Direct regular D/M gives
+   with that floor and extended tube unacquired at Note32's milestone;
+   Note39 subsequently pays them on the frozen local interval. Direct regular D/M gives
    the same comparison. For h=D/[2(1-DM)] on the stated D>0, M>=0,
    F>=0 domain, (h-t)_t=-2Fh²: forward reanchoring cannot improve the
    reached negative endpoint of this unchanged exact-initial-M consumer.
@@ -159,18 +205,24 @@ the other. The manuscript consistently states its time and normalization.
 
 ## Current research decision
 
-**B10 r2 is the default next conceptual gate.** The author's proposal is
-to repeat forward and backward refinements or express their pairing
-continuously. The object refined is an enclosure of one source-consistent
-path; the iteration index is not physical time. The next pass selects
-one finite common-source correlated enclosure or adjoint target and derives
-a strict gain over equally informed direct joint propagation. It must pay
-the common source/count tube, endpoints, regular charts and all stop/edge
-events, signed residuals, source/tail/quadrature/arithmetic errors and true
-whole-time coverage. Positive samples or nonworsening set bounds do not
-supply this gain. Fixed-relation sweeps cannot shrink the already retained
-full skeleton without new observations or refined transition information.
-No source execution is ready from the formulation alone.
+**B10 r2 supplies a new local source estimate; B10 r3 is the next gate.**
+[Note39](../notes/39_VCD_GT_CM_E34_EXTENDED_SOURCE_AND_FORCING_20261118.md)
+proves the negative-time Gaussian/tensor extension and encloses the unchanged
+complete source on [-.0003,.1]. Independent count/clearance and whole-time
+coordinates pay the complete F>.4051 estimate. The retained-F lower bound
+is now applicable on this tube, while the same-source direct calculation
+gives the stronger min D>.00082146953. E35 and the register own assessment
+status. This gains source coverage, not recursive superiority.
+
+The next theoretical selection must identify a specific loss of correlation
+in a stated representation and quantify its recovery, or prove a cost saving
+at fixed accuracy. Give direct D/M or discriminant calculation precisely
+the same information. Preserve whole-time source/count/coordinate errors
+and all exits. Fixed-relation sweeps still cannot shrink an exact full
+skeleton without new information. Note38 additionally proves sharpness
+of the lower adjoint allowance for independent error boxes with a
+nonnegative reference D; that screen does not exclude correlated paths
+or the full two-end intersection. No further computation is issued here.
 
 **B09 r2 remains a separate forward-acquisition alternative.**
 The author proposes starting from known t=0 information, acquiring better
@@ -196,24 +248,23 @@ forcing or neighboring-gap estimate to acquire forward and retain in the
 backward comparison, with all source/time/edge/count errors paid.
 
 The separate [Note32](../notes/32_VCD_GT_CM_FORCE_DISPERSION_AND_RETAINED_FORCING_20261118.md)
-provides a concrete retained-forcing target: F>=.3 would pay the frozen
-Lehmer duration .1003 with squared-gap stop margin >.00006246. Its source
-floor and negative-time collar/coordinate bounds remain unacquired; direct
-regular D/M gives exactly the same comparison. The fixed-stop unsigned
+provides the retained-forcing theorem: F>=.3 pays the frozen Lehmer duration
+.1003 with D-stop margin >.00006246. Note39 now acquires its formerly
+missing source floor and negative-time collar/coordinates on this one tube;
+direct regular D/M gives exactly the same comparison. The fixed-stop unsigned
 force-norm consumer permits <.0008, and the sharper constant-K model still
 fails that target. These precise screens do not exclude a joint source
 estimate. OC census constants at heights 988–2012 cannot be transferred
-to the Lehmer pair near 14010.1. Direct signed F acquisition is a separate
-B08 r3 alternative, not a second campaign to run automatically.
+to the Lehmer pair near 14010.1. The acquired local F floor does not pay
+the census's distinct source or statistical requirements.
 
-**E16 remains independently optional and unexecuted.** Its
-[r4 source rebind][e16-r4] changes only the framework roadmap after the
-new integration; the fixed common-time finite-divisor task is unchanged. It
-does not itself acquire a favorable sign or a simultaneous finite-block
-theorem. The sole register owns dispositions, with E29/E30 covering the
-scientific notes and E31–E33 the new integration/assessment/production.
-The continuation gives the next-input gate. No source acquisition packet is
-ready merely because a conditional scalar margin is positive.
+**E16's r4 proof is complete and assessed by E40.** The frozen
+[r4 source rebind][e16-r4] and r1 scientific method are unchanged; its
+historical unexecuted label is superseded by the execution return and
+sole register. The fixed-input theorem does not itself acquire a favorable
+sign or a simultaneous finite-block theorem. E29/E30 cover the earlier
+scientific notes, E31–E33 the manuscript production and E34/E35 the compact
+source result. Continuation49 gives the new finite-data/consumer gate.
 
 ## Manuscript and records
 
@@ -228,7 +279,7 @@ The new analytical source files are [section17][section17],
 supporting compact/census numerical records occupy separate appendices.
 The [build guide][guide] links the ignored PDF and current source map.
 E31–E33 own the new integration, separate internal assessment and
-production; [Integration36][integration] and [Continuation37][continuation]
+production; [Integration36][integration] and [Continuation37](../notes/37_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_CONTINUATION_20261118.md)
 record that handoff. The sole register owns their current disposition.
 Historical 25-, 38- and 61-page milestones remain in DRAFT_HISTORY; no
 snapshot folder is created and no recursive canonical gain is claimed.
@@ -236,8 +287,11 @@ snapshot folder is created and no recursive canonical gain is claimed.
 ## Control premises
 
 The [documented controls][controls] are screened at their actual premises,
-not numerically rerun. Quadratic/quartic heat fields lack the complete theta
-source and growing population; Euler translates change theta arithmetic
+not numerically rerun. For E16, the exact polynomial control is also checked:
+it lacks the complete theta source but can satisfy generic growth, upper
+count and local contour premises, so approximation preserves its merger.
+A growing population is not an E16 hypothesis. In source-specific routes,
+quadratic/quartic heat fields lack the complete theta source; Euler translates change theta arithmetic
 and endpoint discrepancy. Weighted-square and finite-source/score/prime
 controls fail full reflected unit-weight theta equality, and documented
 endpoint-defective subclasses fail the strip. Reflected super-Gaussians
@@ -264,7 +318,7 @@ every negative conclusion and in the manuscript discussion.
 [workflow]: ../../../../../../GPT_RESEARCH_MODEL_WORKFLOW.md
 [manuscript]: ../manuscript/main.tex
 [guide]: ../manuscript/README.md
-[continuation]: ../notes/37_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_CONTINUATION_20261118.md
+[continuation]: ../notes/49_VCD_GT_CM_COMMON_TIME_APPROXIMATION_AND_CONTINUATION_20261118.md
 [integration]: ../notes/36_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_INTEGRATION_20261118.md
 [forward]: ../notes/34_VCD_GT_CM_TIME_ZERO_FORWARD_STATISTICS_20261118.md
 [retained]: ../notes/32_VCD_GT_CM_FORCE_DISPERSION_AND_RETAINED_FORCING_20261118.md

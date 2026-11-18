@@ -1,0 +1,75 @@
+\section{The specialized finite Calogero matrix}
+\label{sec:calogero}
+
+The first-order law \eqref{eq:finite-roots} embeds into a second-order
+system, but its usual spectral quantities have a special value on this
+locus. This is a finite-dimensional assertion for distinct roots.
+
+\begin{proposition}[Acceleration and zero energy]
+If $s_i=\sum_{j\ne i}(x_i-x_j)^{-1}$ and $x_i'=2s_i$, then
+\begin{equation}
+ x_i''=-8\sum_{j\ne i}(x_i-x_j)^{-3},\qquad
+ \mathcal H=\frac12\sum_i(x_i')^2
+             -4\sum_{i<j}(x_i-x_j)^{-2}=0.
+ \label{eq:calogero-energy}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Put $d_{ij}=x_i-x_j$. Then
+\[
+ s_i-s_j=\frac2{d_{ij}}
+          -d_{ij}\sum_{k\ne i,j}\frac1{d_{ik}d_{jk}}.
+\]
+Differentiating the velocity gives
+\[
+ x_i''=-4\sum_{j\ne i}\frac{s_i-s_j}{d_{ij}^2}
+       =-8\sum_{j\ne i}d_{ij}^{-3}
+         +4\sum_{\substack{j,k\ne i\\j\ne k}}
+                      \frac1{d_{ij}d_{ik}d_{jk}}.
+\]
+The last double sum cancels under interchange of $j$ and $k$.
+In the expansion of $\sum_i s_i^2$, the squared terms contribute
+$2\sum_{i<j}d_{ij}^{-2}$. For each unordered triple of distinct
+nodes, the remaining contribution is twice
+\[
+ \frac1{(x_i-x_j)(x_i-x_k)}
+ +\frac1{(x_j-x_i)(x_j-x_k)}
+ +\frac1{(x_k-x_i)(x_k-x_j)}=0.
+\]
+Thus $\sum_i s_i^2=2\sum_{i<j}d_{ij}^{-2}$, proving the energy
+identity. For complex roots these are algebraic squares, not absolute
+squares; the identity does not assert positive kinetic energy.
+\end{proof}
+
+\begin{theorem}[Nilpotence on the heat-flow locus]
+\label{thm:nilpotence}
+For any $N$ distinct complex nodes, define
+\begin{equation}
+ L_{ii}=2s_i,\qquad L_{ij}=\frac2{x_i-x_j}\quad(i\ne j).
+ \label{eq:L}
+\end{equation}
+Then $L^N=0$ and $\tr L^k=0$ for every $k\ge1$.
+\end{theorem}
+\begin{proof}
+Let $Q(z)=\prod_i(z-x_i)$ and identify polynomials of degree less
+than $N$ with their values at the nodes. The cardinal polynomial at
+$x_j$ is $\ell_j(z)=Q(z)/[(z-x_j)Q'(x_j)]$. The matrix $A$ of
+differentiation in these value coordinates is therefore
+\[
+ A_{ii}=\ell_i'(x_i)=\frac{Q''(x_i)}{2Q'(x_i)}=s_i,
+ \qquad
+ A_{ij}=\ell_j'(x_i)=\frac{Q'(x_i)}{Q'(x_j)(x_i-x_j)}.
+\]
+Differentiating $N$ times annihilates every such polynomial, so
+$A^N=0$. With $W=\operatorname{diag}(Q'(x_i))$, which is invertible,
+$L=2W^{-1}AW$. Nilpotence and the vanishing traces follow.
+\end{proof}
+
+This proof gives the specialized matrix statement directly; related
+finite matrices appear on the checked slides 27--28 of
+\cite{Sokal2023HeatZeros}. No conjectural assertion from those slides is
+needed. Nilpotence does not eliminate the nonzero coefficient integrals
+of Theorem~\ref{thm:finite}; it says that these particular spectral
+powers are all zero. It also says nothing about a regularized trace of
+an infinite operator. Such a trace would need its own domain,
+convergence, differentiation and boundary-flux construction.

@@ -20,47 +20,47 @@ and [avoid][avoid], especially [classification01][class],
 closure count as representations. A quantitative milestone must supply a
 proved rate, constant, range or actual consumer margin beyond its inputs.
 
-## Priority 1: one strict common-source two-sided refinement
+## Default next task: a useful finite-data realization
 
-**B10 r2 / B / Astra, default next conceptual decision.**
-[Note35][two-sided] and the manuscript's recursive/continuous section
-define sound forward/backward state refinements and an exact continuous
-forward-error/backward-adjoint identity. The refinement index is distinct
-from physical time. Both directions retain one complete source record,
-the same integer labels and shared error parameters. These are proved
-representations and conditional enclosure mechanisms, not acquired strict
-canonical contraction, convergence or a stable finite closure.
+**B05 r2 / B / Astra, ready conceptual continuation.** E16/E40 now prove
+and assess the fixed-input common-time O(log N/N) approximation. Select
+one canonical consumer and a complete conditioning/data-error budget
+before any numerical realization. [The bounded B05 packet](../research-progress/handoffs/VCD-GT-CM-B05-r2.md)
+and [Continuation49][continuation] permit at most two strategies: the
+present explicit global envelope and one proposed tighter estimate for
+the same approximation. Pay the whole Gaussian path, finite input errors,
+count/clearance tests and transport tolerance. The direct comparator gets
+the same information. Name what new range/error/cost result a run would
+establish; known positivity alone is insufficient. One decision pass and
+one bounded clarification, with no source or zero acquisition. A separate
+E / Sol proof/acquisition follows only after a finite contract is justified.
+A precise scoped missing input is an admissible outcome.
 
-The strongest existing screen must guide the choice: for fixed transition
-relations, a full compatible skeleton is its own witness for every
-projection. With no new observations its full feasible set and exact
-joint-statistic bounds are unchanged. Sweeps may improve marginal outer
-enclosures that discarded compatibility; new sound observations or refined
-transition relations are required to shrink the already retained full
-skeleton. Exact flow followed by its exact inverse likewise adds no
-information. Neither statement excludes recovering lost correlations or
-acquiring stronger source information.
+## Completed finite gate and optional B10 continuation
 
-Select **one** finite common-source correlated enclosure or continuous
-adjoint target. Compare at most two source mechanisms, then freeze the
-pair/block, common physical interval, independently cleared counts and
-contours, valid charts including all relevant stop boundaries, endpoint
-observations, and a fixed joint statistic. If using the continuous
-identity, specify the reference path, reference forcing, adjoint, endpoint
-errors and the full signed quadratic/source residual. Do not define the
-admissible path set by assuming the positivity it is meant to prove.
+B10 r4 selected the actual degree 32 Lobatto cardinal estimate after the
+conservation manuscript review. [Note45](../notes/45_VCD_GT_CM_E38_CARDINAL_SOURCE_REFINEMENT_20261118.md)
+proves norm<17 and changes only the former1100 nodal amplification.
+The unchanged-source whole-minimum width is<2.29767333e-8, more than 33.9494
+times narrower than Record19's centered direct baseline. Geometry and 512-cell
+paths are re-enclosed; no new source data/precision or coverage. The
+residual correlation gain against sharp independent moments at the new
+budget is about 3.4638%. E39 and the sole register own final acceptance.
 
-Before an E execution, derive a strict proposed gain in whole-time margin,
-duration, coverage or measured cost against equally informed direct joint
-D/M or source-discriminant propagation. Pay complete source/tail,
-contour/quadrature, root/parameter, arithmetic, adjoint, residual and true
-time-uniform errors, retaining their correlations. Positive sample times
-are insufficient: use complete cell paths, paid interpolation or an
-independently valid first-exit argument. Statistical use also requires
-all eligible labels, crossing/boundary events and the finite integer
-exclusion threshold. Fix finite cell/refinement/runtime caps and a separate
-nonauthor check. If these inputs cannot be supplied, record that precise
-missing estimate rather than repeat a formal sweep or enlarge a scan.
+[Note44](../notes/44_VCD_GT_CM_CONSERVATION_TOOLS_AND_CARDINAL_SELECTION_20261118.md)
+proves a useful affine-corrected pair clock, but its independent uniform-B
+split adds exactly to the direct allowance. The conservation manuscript
+therefore supplies error-accounting tools, not an acquired canonical gain.
+The current centered width has roughly 52% node-log and 48% annular support;
+the same fixed tail payments block another tenfold source-only width gain.
+
+**B10 r5 / B / Astra, optional and unissued.** If a further local gain is
+chosen, compare at most two correlated affine/annular mechanisms, retain
+all source/coordinate/time errors, and derive a strict total gain before
+an E computation. The centered direct estimator gets identical information.
+Keep fixed transitions/exact-skeleton invariance from Note35 in force;
+projection alone adds no information. No added source/height/precision
+campaign or new physical-time domain is issued by this plan.
 
 ## Alternatives: forward acquisition or direct retained forcing
 
@@ -69,7 +69,8 @@ whether known t=0 properties can produce better positive-time statistics
 for a later backward step. Note34 gives finite starting geometry from the
 complete 388-cell census, conditional forward dispersion/minimum-tail
 estimates, and the exact initial-M round-trip screen. No positive-time
-source tube or signed exterior estimate has been acquired in this pass.
+source tube or signed exterior estimate has been acquired for that census
+population; the new Lehmer-pair certificate has a different scope.
 
 Choose one finite population and one joint statistic, with at most two
 source mechanisms compared. A force/velocity variance is not by itself a
@@ -99,35 +100,31 @@ The complete H_0 source can be propagated by the already documented
 Gaussian formula; real gap statistics alone do not provide that complex
 field or its tails.
 
-**B08 r3 / B / Astra, separate alternative:** source-specific acquisition of the
-complete physical F>=.3 floor on Note32's frozen Lehmer interval would
-pay strict margin >.00006246. Select it separately if the negative-time
-source/count/coordinate gates and signed error budget can be made concrete.
-It has no demonstrated advantage over identical direct regular D/M input.
-The OC finite census and this Lehmer target are different domains. Neither
-alternative issues a source campaign by itself; select one common source
-domain rather than transfer numerical constants between them.
+**Former B08 r3 source target, now paid locally by E34:** the complete
+physical F>=.3 floor and negative-time source/count/coordinate gates on
+Note32's frozen interval give margin >.00006246. No duplicate acquisition
+campaign is needed. Direct D/M matches the comparison and the shared-source
+discriminant is stronger. The OC finite census and this Lehmer target are
+different domains; its constants cannot be transferred to the census.
 
-## Priority 2: independent compatible finite approximation
+## Completed execution: compatible finite approximation E16
 
-**E16 / E / Sol, independently optional and unexecuted.** Use its
-[r4 source rebind][e16-r4] and the full unchanged r1 contract. Only the
-framework roadmap changed after manuscript integration; the scientific
-premises and work limits did not. It asks for a common-time
-field/jet/pair/moment error theorem at fixed height from one canonical
-finite-product initialization evolved by exact polynomial heat flow.
-One proof pass and at most two bounded local repairs, then nonauthor
-assessment. It is not a sign theorem or stable closure from arbitrary
-moments. The initial finite-divisor acquisition and cleared contour
-hypotheses remain explicit.
+**E16 r4 / E / Sol, complete; E40 accepted within fixed-input scope.**
+Notes47–48 prove field and spatial jets through3, matching counted-pair
+coordinates, every fixed complete exterior moment and physical transport
+errors from one initial canonical product. The rate is O(log N/N), with
+explicit constants and finite-data uncertainty. One proof pass and one
+pre-freeze symmetry clarification were used; E40 required no mathematical
+correction. All seven original pins and fourteen final review pins match.
 
-A common approximating field preserves zero-index overlap and flux
-identities where its simple charts exist. Applying approximation
-simultaneously to a finite block additionally requires all contours,
-label matching, denominators and summed reciprocal errors; the current
-single-pair task does not silently include that extension. An accepted
-E16 result could justify a later bounded block extension. Efficiency,
-uniform-height improvement and signed gain require separate comparisons.
+The polynomial coefficients form a finite realization with their complete
+moment hierarchy. This is not closure from an arbitrary short moment head.
+Target and exterior-exterior mergers are retained; no global polynomial
+strip is assumed. A simultaneous block extension still needs all contours,
+label matching, denominators and summed reciprocal errors. Finite canonical
+input acquisition, favorable signed margins, useful conditioning and
+uniform-height/order statements remain separate. No new numerical campaign
+or manuscript integration is issued by this closeout.
 
 ## Inherited results and dependencies
 
@@ -137,15 +134,17 @@ This is a source map, not a second live-status ledger.
 | --- | --- | --- |
 | B01–B04; E01–E11 | Complete complex-power law, branch/symmetry treatment, damped Cauchy formulas, matched absolute estimate, split and regular integer hierarchies | Fixed domains; no autonomous scalar law, finite stable closure or signed improvement |
 | B03 r2; E15 | Joint forcing, weighted gap energy, deflated derivative transfer and scoped scalar screens | Distinct source-specific signed acquisition required before reopening |
-| B05; E16 | Four-row finite-head residual and positive-box allowance screen; compatible field route selected | Common-time approximation unexecuted |
+| B05; E16/E40 | Four-row residual screen and accepted fixed-input common-time O(log N/N) field/jet/moment/transport approximation | Complete finite data, useful conditioning, signed gain and uniform-height/order limits unpaid |
 | B06/B07 r1; E17 | Qualified pair choice, backward three-gap comparison, weak minimum law and finite statistical consumer | Joint lower-tail input, zero-exception and global coverage unpaid |
 | B07 r2; E21/E22 | Complete high-height initial M and optimal unchanged allowance ~g²/4 | Fixed positive duration still fails for that consumer |
 | B07 r3; E23/E24 | V/K barrier and growing canonical head; source-jet and matched clock comparison | Positive-slab source already protects exterior; no new coverage |
 | B07 r4; E25 | Trial-coordinate source contours, stopped-region exit, complete error interface and compact screen | One constant-v target fails; time-varying consumers remain open |
 | B08 r1; E26/E27 | Zero-index rows, shared generator, overlap and block telescoping with full derivations | Individual-gap concentration and stable lattice approximation unpaid |
-| B08 r2; E29 | Force-dispersion and constant-K screens; conditional F>=.3 margin >.00006246 | Complete signed source floor and extended compact tube unpaid; direct D/M matches |
+| B08 r2; E29 | Force-dispersion and constant-K screens; conditional F>=.3 margin >.00006246 | Source premise subsequently paid locally by E34; direct D/M matches and direct source is stronger |
 | B09 r1; E30 | Finite-census reality inference, forward conditional tail/dispersion and exact initial-M round-trip identity | Joint forward acquisition and net backward gain unpaid |
-| B10 r1; E31/E32 | Common-source two-sided soundness, fixed-transition skeleton invariance and exact adjoint residual identity | Strict canonical refinement, convergence/cost and whole-time source gain unpaid; review disposition belongs to the register |
+| B10 r1; E31/E32 | Common-source two-sided soundness, fixed-transition skeleton invariance and exact adjoint residual identity | Strict recursive refinement and convergence/cost unpaid; E34 supplies a later local source result |
+| B10 r2; E34/E35 | New complete-source enclosure on [-.0003,.1], acquired local F>.4051 and direct min D>.00082146953; independent-box adjoint screen | Local source coverage only; direct comparator stronger, no recursive/cost or global gain; review disposition belongs to the register |
+| B10 r3; E36/E37 | Same-source shared-log correlation gives >6.4031% narrower width than sharp independent moments; min D>.00082160722 | Improved direct relaxation with extra arithmetic; no cost, all-direct, recursive or global superiority; register owns review disposition |
 | E12–E14; E18–E20; E26–E28 | Successive manuscript integration, separate internal assessment and ignored PDF production | Historical snapshots recorded in notes, no manuscript snapshot folders |
 | E31–E33 | Full forward-statistics, retained-forcing and two-sided analytical sections; supporting numerical appendix | Integration, separate assessment and production tracked solely in the register |
 
@@ -155,9 +154,10 @@ caps the selected constant-v allowance below .0896. This rejects that
 consumer even with exact inputs. Note32 separately rejects the sharp
 constant-K comparison retaining its initial transient for that same
 anchor/interval. Its retained physical-F comparison has a positive
-conditional margin, with the source floor still unacquired. Time-varying
-forcing and regular D/M remain open; higher precision does not repair
-either rejected fixed consumer.
+margin, whose source floor and extended tube are now acquired by E34.
+The same-source direct result is stronger. Higher precision does not
+repair either rejected fixed consumer, and this source success does not
+prove a recursive improvement.
 
 ## Acceptance and preservation
 
@@ -192,7 +192,7 @@ and immutable requests/returns in research-progress/handoffs/.
 The present analytical source additionally develops forward finite-block
 statistics in source section17, retained forcing and the exact return
 horizon in section18, and recursive/continuous two-sided refinement in
-section19. [Integration36][integration] and [Continuation37][continuation]
+section19. [Integration36][integration] and [Continuation37](../notes/37_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_CONTINUATION_20261118.md)
 are the lead-owned integration and handoff records; their completion and
 E31–E33 disposition belong to the sole register. Historical manuscript
 milestones and Continuation33 remain preserved.
@@ -220,7 +220,7 @@ trusted completion hook is actually verified. Do not hand-edit history.
 [workflow]: ../../../../../../GPT_RESEARCH_MODEL_WORKFLOW.md
 [manuscript]: ../manuscript/main.tex
 [guide]: ../manuscript/README.md
-[continuation]: ../notes/37_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_CONTINUATION_20261118.md
+[continuation]: ../notes/49_VCD_GT_CM_COMMON_TIME_APPROXIMATION_AND_CONTINUATION_20261118.md
 [integration]: ../notes/36_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_INTEGRATION_20261118.md
 [two-sided]: ../notes/35_VCD_GT_CM_RECURSIVE_TWO_SIDED_FORMULATION_20261118.md
 [e16-r4]: ../research-progress/handoffs/VCD-GT-CM-E16-r4.md

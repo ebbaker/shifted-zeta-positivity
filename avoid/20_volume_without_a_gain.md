@@ -263,3 +263,20 @@ milestone does not strengthen them into signed estimates or an efficient
 algorithm. The [current handoff](../papers/investigations-6/notes/10_ANALYTICAL_MANUSCRIPTS_CONTINUATION_AND_MODEL_HANDOFF_20261114.md)
 requires a named analytical consumer before further expansion. The internal
 review uses shared sources and includes JCH contributor overlap.
+
+
+**Explicit convergence is not acquired or efficient data, 18 November 2026.**
+For Edward Baker with Codex assistance; root settings unavailable, E16/E40
+helpers selected Sol6.1/ultra. The accepted CM fixed-input O(log N/N)
+approximation is a quantitative milestone, but its global amplitude,
+inverse contour floors and degree-dependent data weights remain in the
+total allowance. [Continuation49](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/49_VCD_GT_CM_COMMON_TIME_APPROXIMATION_AND_CONTINUATION_20261118.md)
+states: “The theorem's finite inputs have not been numerically acquired
+in this pass.” Require a named consumer, complete data-error budget and
+equal-information direct comparison before a numerical expansion. Large
+sufficient constants are not necessary complexity lower bounds. The
+[E40 assessment](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/22_VCD_GT_CM_E40_COMMON_TIME_APPROXIMATION_ASSESSMENT_20261118.md)
+also verifies a strong-collar quartic with exact zero approximation error
+at its merger: approximation and finite realization do not supply a gap
+sign. This is a scoped lesson, not an obstruction to tighter estimates or
+other useful finite-data methods; internal shared-premise review.

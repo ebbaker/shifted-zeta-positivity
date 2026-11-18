@@ -6,10 +6,13 @@ current guarded chat registry; current helpers inherited settings.
 Earlier requested configurations remain historical, not serving attestation.
 
 Store incremental analytical derivations and syntheses here. Start with the
-[current two-sided manuscript continuation](37_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_CONTINUATION_20261118.md)
-and [recursive/continuous formulation35](35_VCD_GT_CM_RECURSIVE_TWO_SIDED_FORMULATION_20261118.md).
-The default B10 r2 gate requires one strict common-source gain over equally
-informed direct joint propagation; the identities alone supply none.
+[current cardinal-gain and structural continuation](46_VCD_GT_CM_CARDINAL_GAIN_AND_STRUCTURAL_CONTINUATION_20261118.md).
+[Conservation selection44](44_VCD_GT_CM_CONSERVATION_TOOLS_AND_CARDINAL_SELECTION_20261118.md)
+gives the pair affine-flux transfer and its scoped total-error screen.
+[Cardinal proof45](45_VCD_GT_CM_E38_CARDINAL_SOURCE_REFINEMENT_20261118.md)
+reduces the nodal amplification from1100 to17 and reports a greater than33.9494-fold
+width gain on the same source tube; E39 and the sole register own disposition.
+The next default is the existing common-time finite-divisor proof E16 r4.
 The [BBGKY reconsideration](15_VCD_GT_CM_B05_BBGKY_TRUNCATION_RECONSIDERATION_20261118.md)
 and current [E16 r4 rebind](../research-progress/handoffs/VCD-GT-CM-E16-r4.md)
 retain the independently optional, unexecuted approximation task.
@@ -82,4 +85,31 @@ Edward Baker with Codex assistance; actual model/effort unavailable:
 
 - [Recursive/continuous formulation35](35_VCD_GT_CM_RECURSIVE_TWO_SIDED_FORMULATION_20261118.md): sound common-source refinement, fixed-transition full-skeleton invariance and the exact forward-error/backward-adjoint residual identity. No strict canonical improvement or convergence claim.
 - [Integration36](36_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_INTEGRATION_20261118.md): lead-owned source, assessment and production record for the full forward-statistics, retained-forcing and two-sided derivations in manuscript source files17–19; supporting numerics remain in Appendix B.
-- [Continuation37](37_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_CONTINUATION_20261118.md): current B10 r2 gate, complete error/comparator requirements, B09/B08 alternatives and independently optional E16 r4. Integration and assessment disposition belong to the sole register.
+- [Continuation37](37_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_CONTINUATION_20261118.md): historical B10 r2 launch gate; next routing superseded by Continuation40, with the error/comparator requirements and optional E16 r4 preserved.
+
+18 November 2026 compact source continuation, prepared for Edward Baker
+with Codex assistance; actual model/effort unavailable:
+
+- [Selection38](38_VCD_GT_CM_B10_R2_SOURCE_SELECTION_20261118.md): two-candidate decision, frozen common-source extension and sharp independent-box adjoint screen.
+- [Source proof39](39_VCD_GT_CM_E34_EXTENDED_SOURCE_AND_FORCING_20261118.md): negative-time Gaussian/tensor error, complete-product passage, acquired local F floor, whole-path direct comparison and collision control; E35 owns assessment.
+- [Continuation40](40_VCD_GT_CM_COMPACT_SOURCE_CONTINUATION_20261118.md): historical B10 r3 launch after source acquisition; next routing superseded by Continuation43. The sole register owns live status.
+
+18 November 2026 correlation milestone, prepared for Edward Baker with
+Codex assistance; actual model/effort unavailable:
+
+- [Selection41](41_VCD_GT_CM_B10_R3_CORRELATION_SELECTION_20261118.md): two-candidate decision, exact shared-log support and sharp independent-moment comparator, frozen 1% width gate and equal acquisition budget.
+- [Correlation proof42](42_VCD_GT_CM_E36_CORRELATED_DISCRIMINANT_20261118.md): full quadratic remainder, certified gain greater than 6.4031%, stronger whole-path minimum enclosure and measured arithmetic overhead; E37 assesses the scope.
+- [Continuation43](43_VCD_GT_CM_CORRELATION_GAIN_CONTINUATION_20261118.md): current result and limitations; proposed B10 r4 cardinal-interpolation bound with a separate proof/replay gate, not a changed E36 budget.
+
+18 November 2026 continuation for Edward Baker with Codex assistance; root
+actual settings unavailable, E38/E39 selected gpt-6.1-sol/ultra (serving
+attestation unavailable). Notes44–46 supersede Note43's future routing while
+preserving its historical proposal and the earlier evidence.
+
+
+18 November 2026 E16/E40 milestone, for Edward Baker with Codex assistance;
+root actual settings unavailable, proof/assessment selected Sol6.1/ultra:
+
+- [Field approximation47](47_VCD_GT_CM_E16_COMMON_TIME_FIELD_APPROXIMATION_20261118.md): explicit common-time Gaussian/product O(log N/N) error, jets through3 and finite-data sensitivity.
+- [Counted transfer48](48_VCD_GT_CM_E16_COUNTED_MOMENT_AND_TRANSPORT_TRANSFER_20261118.md): chart matching, complete moments, physical/normalized forcing and every-subinterval transport errors through permitted mergers.
+- [Continuation49](49_VCD_GT_CM_COMMON_TIME_APPROXIMATION_AND_CONTINUATION_20261118.md): assessed theorem, unacquired-data/conditioning boundary and default B05 r2 decision. Supersedes Note46's future routing; E40 accepts fixed-input scope without mathematical correction.

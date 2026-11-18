@@ -77,3 +77,30 @@ with Codex assistance; actual settings unavailable:
 - [E32 assessment](VCD-GT-CM-E32-r1.md), [28 source pins](VCD-GT-CM-E32-inputs-r1.json), [three descriptor corrections](VCD-GT-CM-E32-correction-r1.md), [final pins](VCD-GT-CM-E32-correction-inputs-r1.json), [return](VCD-GT-CM-E32-return-r1.md).
 - [E33 production return](VCD-GT-CM-E33-return-r1.md): ignored 81-page PDF, full visual review and reconciled routing.
 - [E16 r4](VCD-GT-CM-E16-r4.md), [seven pins](VCD-GT-CM-E16-inputs-r4.json): roadmap-only source rebind of the unchanged, independently optional, unexecuted approximation contract.
+
+18 November 2026 compact source milestone, for Edward Baker with Codex
+assistance; actual settings unavailable:
+
+- [E34 source contract](VCD-GT-CM-E34-r1.md), [14 frozen inputs](VCD-GT-CM-E34-inputs-r1.json), [proof/execution return](VCD-GT-CM-E34-return-r1.md): fixed negative-time source extension and matched forcing/direct comparison.
+- [E35 assessment contract](VCD-GT-CM-E35-r1.md), [22 frozen inputs](VCD-GT-CM-E35-inputs-r1.json), [assessment return](VCD-GT-CM-E35-return-r1.md): nonauthor proof/code/replay/control/scope check. The sole register owns live status.
+
+18 November 2026 correlation milestone, for Edward Baker with Codex
+assistance; actual model/effort unavailable:
+
+- [E36 correlation contract](VCD-GT-CM-E36-r1.md), [28 frozen inputs](VCD-GT-CM-E36-inputs-r1.json), [proof/execution return](VCD-GT-CM-E36-return-r1.md): fixed 1% width gate, common source/log boxes and sharp independent-moment comparator, with separate cost accounting.
+- [E37 assessment contract](VCD-GT-CM-E37-r1.md), [35 frozen inputs](VCD-GT-CM-E37-inputs-r1.json), [assessment return](VCD-GT-CM-E37-return-r1.md): nonauthor proof/support/replay/control/scope check. The sole register owns live status. Note43 proposes a future interpolation contract; no E38 is issued.
+
+18 November cardinal refinement, for Edward Baker with Codex assistance;
+root actual settings unavailable, proof/review selected Sol6.1/ultra:
+
+- [E38 r1](VCD-GT-CM-E38-r1.md), [11 input pins](VCD-GT-CM-E38-inputs-r1.json), [return](VCD-GT-CM-E38-return-r1.md): frozen cardinal proof and same-source factor-ten width gate.
+- [E39 r1](VCD-GT-CM-E39-r1.md), [8 final pins](VCD-GT-CM-E39-inputs-r1.json), [return](VCD-GT-CM-E39-return-r1.md): nonauthor proof and one final replay, with historical accounting qualification.
+- E16 r4 remains the existing unexecuted structural contract; all seven pins are unchanged. Continuation46 now recommends it as the default next task.
+
+
+18 November E16/E40 structural closeout, for Edward Baker with Codex
+assistance; root settings unavailable, three helpers selected Sol6.1/ultra:
+
+- [E16 r4 return](VCD-GT-CM-E16-return-r4.md): completes the previously unexecuted approximation contract; all seven original pins unchanged.
+- [E40 r1](VCD-GT-CM-E40-r1.md), [bounded r2 addition](VCD-GT-CM-E40-r2.md), [fourteen final pins](VCD-GT-CM-E40-inputs-r2.json) and [return](VCD-GT-CM-E40-return-r2.md): accepted fixed-input scope without mathematical correction, preserving the strong-collar collision control.
+- [B05 r2](VCD-GT-CM-B05-r2.md): default ready conceptual continuation; select one useful canonical consumer and conditioning/data budget before any future E acquisition. Earlier E16-unexecuted routing is historical; the sole register owns live status.

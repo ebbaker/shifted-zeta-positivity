@@ -1,0 +1,128 @@
+\section{A restricted obstruction for finite moment heads}
+\label{sec:obstruction}
+
+The integer hierarchy of \cite[Section 2, Integer moment evolution]{BakerExterior2026}
+is
+\begin{align}
+ S_n'={}&2n\sum_{k=1}^n S_kS_{n+1-k}
+    +2n\sum_{k=2}^n\bigl(T_kT_{n+2-k}+DS_kS_{n+2-k}\bigr)
+    \notag\\
+    &-4n(n+2)S_{n+1}-4n(n+3)DS_{n+2},\qquad n\ge1,
+    \label{eq:Shierarchy}\\
+ T_n'={}&2(2n-1)\sum_{k=2}^nT_kS_{n+1-k}
+    +4nD\sum_{k=2}^nT_kS_{n+2-k}
+    \notag\\
+    &-4(n^2+n-1)T_{n+1}-4n(n+3)DT_{n+2},\qquad n\ge2.
+    \label{eq:Thierarchy}
+\end{align}
+Empty sums vanish. The nonlinear terms in the $n$th row use indices
+at most $n$; the two higher indices occur linearly. This feature, with
+the pair law, is the only input needed for the obstruction below.
+
+For clarity about the inherited physical realization, at a finite
+simple polynomial slice one may temporarily use
+$P_1=\sum_j w_j/(w_j^2-D)$. The exterior velocities relative to the
+pair mean are
+\begin{equation}
+ w_j'=4w_jm_j+2P_1+2\sum_{k\ne j}(w_j-w_k)^{-1},
+ \qquad m_j=(w_j^2-D)^{-1}.
+ \label{eq:relative}
+\end{equation}
+Differentiate the weights in \eqref{eq:moments}, pair the last sums
+using divided differences, and subtract their diagonals. If
+$A=(u^2-D)^{-1}$, $C=(v^2-D)^{-1}$ and
+$L_h=\sum_{r=0}^{h-1}A^{h-1-r}C^r$ with $L_0=0$, the identities are
+\begin{equation}
+ \frac{A^h-C^h}{u-v}=-(u+v)AC L_h,\qquad
+ \frac{uA^h-vC^h}{u-v}=-AC L_{h-1}-(D+uv)AC L_h.
+ \label{eq:divdiff}
+\end{equation}
+The endpoints of the convolutions cancel every occurrence of $P_1$,
+leaving \eqref{eq:Shierarchy}--\eqref{eq:Thierarchy}. These rational
+divided differences also remain regular when two exterior nodes
+coincide away from the target collar. The parent's proof supplies the
+complete canonical passage using cleared-contour time jets of the
+opposite-paired polynomial cutoffs and the inverse-square tail; it
+does not assume absolute convergence of $P_1$ or arbitrary-sequence
+well-posedness. Those hypotheses remain in force here.
+
+\begin{theorem}[No nonconstant universal finite-head integral]
+\label{thm:nohead}
+Fix $P\ge1$. Let
+\[
+ I=I(t,D,S_1,\ldots,S_P,T_2,\ldots,T_P)
+\]
+be $C^1$ on an open real coordinate domain with $D\ne0$. Suppose
+the chain-rule derivative of $I$ vanishes under
+\eqref{eq:pair}, \eqref{eq:Shierarchy} and \eqref{eq:Thierarchy}
+for freely variable tails through order $P+2$. Then $I$ is locally
+constant. Here ``freely variable'' means that the relevant head and
+tail coordinates range through an open set, with no extra relation
+fixing the higher moments from the retained ones.
+\end{theorem}
+\begin{proof}
+In $\dd I/\dd t$, the coefficients of $S_{P+2}$ and $T_{P+2}$
+are respectively
+\begin{equation}
+ -4P(P+3)D I_{S_P},\qquad -4P(P+3)D I_{T_P}.
+ \label{eq:highest-tail}
+\end{equation}
+The odd term is absent when $P=1$. No lower row contains either
+highest coordinate, and the nonlinear terms contain neither.
+Independent variation and $D\ne0$ imply that these partial
+derivatives vanish. Locally remove those variables from $I$ and
+repeat the argument at $P-1$. Eventually $I=I(t,D)$ and its
+remaining equation is
+\[
+ I_t+(2-4DM)I_D=0.
+\]
+Variation of $M$ now forces $I_D=0$ and $I_t=0$. All first
+derivatives of $I$ vanish on the domain, so it is locally constant.
+\end{proof}
+
+A $C^1$ first integral on an open neighborhood crossing $D=0$ cannot
+acquire a nonconstant value only on that hypersurface: its derivatives
+vanish on the dense complement and hence there too. This does not
+exclude functions defined solely on the hypersurface, which is not an
+invariant flow domain since $D'=2$ there.
+
+\begin{proposition}[A finite polynomial realization of the free-tail premise]
+\label{prop:rank}
+At fixed real $D\ne0$, take $2P+3$ freely located real exterior
+roots in a strict collar complement. There exist configurations where
+the map from these roots to
+\[
+ (S_1,\ldots,S_{P+2},T_2,\ldots,T_{P+2})
+\]
+has full rank $2P+3$. Full rank persists on an open set and is generic
+in any connected analytic configuration region on which the resulting
+determinant is not identically zero.
+\end{proposition}
+\begin{proof}
+The moment kernels are $f_r(w)=(w^2-D)^{-r}$ for $1\le r\le P+2$
+and $g_r(w)=w(w^2-D)^{-r}$ for $2\le r\le P+2$. At infinity,
+\[
+ f_r'(w)=-2r w^{-2r-1}+O(w^{-2r-3}),\qquad
+ g_r'(w)=(1-2r)w^{-2r}+O(w^{-2r-2}).
+\]
+Their leading powers are all distinct. In any putative nontrivial
+linear relation, the least decaying nonzero term could not cancel.
+They are consequently linearly independent rational functions.
+Their evaluation vectors on an open real half-line outside the collar
+span $\R^{2P+3}$: otherwise one nonzero fixed linear functional
+would annihilate all evaluations, giving a rational identity there
+and everywhere. Select distinct points whose evaluation vectors form
+a basis. The moment Jacobian at those roots is precisely this
+nonsingular evaluation matrix. Continuity and analyticity give the
+stated open-set and generic conclusions.
+\end{proof}
+
+Each such initial divisor, together with the target pair, is a genuine
+polynomial initial slice and has its finite heat evolution. Thus the
+obstruction is not solely about fictitious independent sequences.
+It remains a statement about a freely variable polynomial exterior
+class. It does not establish free tails for the unchanged theta
+source, exclude an invariant along one prescribed canonical
+trajectory, treat an infinite functional, or cover a fixed small
+divisor whose moments satisfy algebraic relations. In particular it
+does not contradict Section~\ref{sec:finite}.

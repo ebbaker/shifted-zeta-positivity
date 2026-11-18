@@ -34,3 +34,16 @@ Store dated proof/domain/estimate assessments here with actual provenance and sh
 - [E30 assessment16](16_VCD_GT_CM_E30_FORWARD_STATISTICS_ASSESSMENT_20261118.md): Note34 finite-census inference, conditional forward estimates and initial-M round-trip scope.
 
 - [Assessment17](17_VCD_GT_CM_E32_TWO_SIDED_MANUSCRIPT_ASSESSMENT_20261118.md): E32 forward-statistics, retained-forcing and two-sided manuscript assessment; three theorem-reference descriptors corrected, formulas unchanged. Separate nonauthor internal shared-premise review, not specialist validation. Prepared for Edward Baker with Codex assistance, 18 November 2026; actual settings unavailable.
+
+- [Assessment18](18_VCD_GT_CM_E35_EXTENDED_SOURCE_ASSESSMENT_20261118.md): E35 negative-time source proof, finite interval code/replay, retained/direct comparison and Note38 independent-box adjoint screen. Separate nonauthor internal shared-premise review, not specialist or claimed cross-model validation. Prepared for Edward Baker with Codex assistance, 18 November 2026; actual model/effort unavailable. The assessment and sole register own the verdict.
+
+- [Assessment19](19_VCD_GT_CM_E37_CORRELATION_ASSESSMENT_20261118.md): E37 proof, sharp comparator, same-source arithmetic/replay, collision control and acquisition-versus-runtime scope. Separate nonauthor internal shared-premise review, not specialist or claimed cross-model validation. Prepared for Edward Baker with Codex assistance, 18 November 2026; actual model/effort unavailable. The assessment and sole register own the verdict.
+
+18 November 2026, prepared for Edward Baker with Codex assistance; root
+actual settings unavailable, E39 selected Sol6.1/ultra:
+
+- [Review20](20_VCD_GT_CM_CONSERVATION_TOOL_ASSESSMENT_20261118.md): all eight child manuscript sections and the pair-clock transfer/split-error screen; no required mathematical correction within scope.
+- [Review21](21_VCD_GT_CM_E39_CARDINAL_ASSESSMENT_20261118.md): separate cardinal proof/implementation/rounding/control/cost assessment and one final replay; final disposition belongs to the sole register.
+
+
+- [Review22](22_VCD_GT_CM_E40_COMMON_TIME_APPROXIMATION_ASSESSMENT_20261118.md), 18 November 2026: E40 accepts common-time approximation and complete coordinate/moment/transport transfer within the stated fixed-input scope, without mathematical correction. One nonauthor proof pass, zero correction checks; exact controls and fourteen input pins pass. For Edward Baker with Codex assistance, assessor selected Sol6.1/ultra; internal shared-premise assessment, no serving attestation or specialist claim.

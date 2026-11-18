@@ -35,3 +35,39 @@ B01 representation selection and E01 source audit, then E03/E05 only if a
 fixed proof contract imports the stated passage. No new theorem about the
 canonical field is proved by this source inspection. Preserve the distinction
 between a Mellin variable, a spatial contour and a heat/Gaussian scale.
+
+## Chebyshev normalization check, 18 November 2026
+
+Prepared for Edward Baker with Codex LLM assistance; actual root model and
+effort unavailable in CM chat0006. Selected primary passages inspected:
+[NIST DLMF 18.5.1](https://dlmf.nist.gov/18.5.E1),
+[18.5.2](https://dlmf.nist.gov/18.5.E2), and the normalization context in
+[Table18.3.1](https://dlmf.nist.gov/18.3). The online edition was retrieved
+on 18 November 2026; its release identifier was not recorded. No PDF was
+downloaded. The displayed first-kind formula is T_n(cos theta)=cos(n theta),
+with its equivalent Laurent form, and the second-kind formula is
+U_n(cos theta)=sin((n+1)theta)/sin theta (with continuous endpoint values).
+These check the standard normalization used in
+[Note45](../notes/45_VCD_GT_CM_E38_CARDINAL_SOURCE_REFINEMENT_20261118.md).
+The discrete endpoint weights, cardinal norm bound and actual reconstruction
+audit are proved in that note; they are not asserted to be theorems imported
+from these DLMF passages. This is selected-formula inspection, not a
+literature review or novelty claim. Canonical BibTeX key: NISTDLMFChebyshev.
+
+## Gaussian and polynomial-heat normalization check, 18 November 2026
+
+Prepared for Edward Baker with OpenAI Codex assistance; actual root model
+and effort unavailable in CM chat0006. Rechecked
+[DLMF5.9.1](https://dlmf.nist.gov/5.9.E1) with positive real Gaussian
+parameter, and inspected [18.12.15](https://dlmf.nist.gov/18.12.E15),
+the physicists' Hermite generating function exp(2xz-z²). The former has
+Re(nu)>0, mu>0 and Re(z)>0, with principal powers; mu=2 supplies the
+Gaussian absolute moments after the appropriate normalization. These are
+selected primary formula checks on the online edition, retrieved18 November
+2026; release identifier not recorded, no PDF downloaded.
+
+Consumers: CM E16 Notes47–48 and E40's finite polynomial sign/variance
+checks. The common-time product-tail estimate and contour transfers are
+proved in those notes; neither an uninspected heat-semigroup theorem nor
+a priority claim is imported from DLMF. Gamma bibliography ownership remains
+NISTDLMFZetaGamma; the Hermite convention uses NISTDLMFHermiteHeat.

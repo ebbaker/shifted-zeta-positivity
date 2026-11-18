@@ -43,3 +43,27 @@ statistics steering. It is registered from its exact paginated source.
 The guarded registry owns its actual title and all changing metadata;
 recorded model/effort are unavailable. Prepared for Edward Baker with
 Codex assistance. Routine capture retains the real final after completion.
+
+CM chat0005, thread `01a1efdd-615b-7323-82db-41e2f7610531`, actual title
+“Research two-sided manuscript continuation”, contains the 18 November
+Continuation37/B10 r2 pass. It is registered from its exact paginated
+source through the guarded recorder. Actual model and effort are absent
+from the recorded configurations; helper settings are inherited. The
+registry owns all changing capture metadata. Prepared for Edward Baker
+with OpenAI Codex assistance; real final capture uses the bounded
+exact-turn follow-up, without an inferred native hook activation.
+
+The same CM chat0005 also contains the author's Note40/B10 r3 request and
+the shared-error correlation research. It is refreshed in place, without
+another registration or changed first-capture provenance. Current model
+configurations remain unavailable; the registry owns all capture metadata.
+
+CM chat0006, thread `01a1f033-9a2c-73f2-ab17-747f36170c87`, actual title
+“Continue Volterra coefficient research”, contains the Note43 continuation,
+conservation-manuscript review and cardinal source refinement. Registered
+from its exact paginated source on18 November2026 with the guarded tool.
+Root model/effort configurations are unavailable; E38/E39 helper selections
+are recorded separately, without serving attestation. The registry owns
+changing capture counts/times/sizes/hashes. One lead records public text;
+the real final uses the bounded exact-turn follow-up. No native hook is
+assumed. Prepared for Edward Baker with OpenAI Codex assistance.

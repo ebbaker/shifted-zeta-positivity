@@ -1,0 +1,62 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,longtable,enumitem}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\hypersetup{pdftitle={Conservation laws and exterior flux for heat-zero hierarchies},pdfauthor={Edward Baker}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\av}[1]{\frac{1}{2\pi\ii}\oint_\Gamma #1\dd z}
+\newcommand{\F}{\mathcal F}
+\newcommand{\E}{\mathcal E}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\spec}{spec}
+\numberwithin{equation}{section}
+\setcounter{tocdepth}{1}
+\setlist{itemsep=3pt,topsep=5pt}
+\title{Conservation laws and exterior flux\protect\\for heat-zero hierarchies}
+\author{Edward Baker\thanks{Draft prepared for Edward Baker with substantial OpenAI Codex LLM assistance. Actual model and reasoning effort were unavailable in the guarded conversation metadata; none are inferred.}}
+\date{18 November 2026\\\small Working draft; same-assistant checks, no independent review}
+\begin{document}
+\maketitle
+\begin{abstract}
+We investigate conserved quantities in the exterior-moment hierarchy of
+the physical Newman heat equation $H_t=-H_{zz}$. Finite polynomial heat
+flows admit explicit coefficient integrals and autonomous symmetric
+integrals, including a centered fourth-order statistic. We derive these
+integrals, a restricted obstruction to universal finite-moment integrals,
+and the distinction between full-field heat pullback and a useful local
+estimate. For a counted block in a larger divisor, every homogeneous,
+translation-invariant polynomial heat integral has an exact exterior-flux
+law. Removing its affine exterior response yields one Cauchy kernel whose
+first two Laurent terms cancel. On an enclosing circle this gives a
+quadratic radius-factor reduction of a specified separate source-error
+allowance; a centered symmetric quartet has a cubic refinement. We also
+pay uncertain block coordinates explicitly. Exact finite examples retain
+both nonzero exterior flux and a collision with positive fourth-order
+invariant. The results supply identities and intermediate error estimates,
+not a canonical gap improvement or a collision-exclusion theorem.
+\end{abstract}
+\tableofcontents
+\clearpage
+\input{sections/01_context}
+\input{sections/02_finite_integrals}
+\input{sections/03_special_calogero}
+\input{sections/04_moment_obstruction}
+\input{sections/05_full_field}
+\input{sections/06_block_flux}
+\input{sections/07_error_comparison}
+\input{sections/08_controls_and_status}
+\bibliographystyle{plainurl}
+\bibliography{branch,references}
+\end{document}

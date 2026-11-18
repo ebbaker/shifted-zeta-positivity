@@ -1,0 +1,144 @@
+\section{Complete finite heat divisors}
+\label{sec:finite}
+
+Let $P(t,z)=\sum_{j=0}^N a_j(t)z^{N-j}$ be monic, with $a_0=1$,
+and suppose $P_t=-P_{zz}$. This section concerns the complete finite
+polynomial, with no omitted exterior. We allow complex coefficients
+and roots unless a reality condition is explicitly stated.
+
+\begin{theorem}[Coefficient integrals and a polynomial clock]
+\label{thm:finite}
+The coefficients satisfy
+\begin{equation}
+ a_j'=-(N-j+2)(N-j+1)a_{j-2},\qquad a_{-1}=a_{-2}=0.
+ \label{eq:coeff-law}
+\end{equation}
+Consequently
+\begin{equation}
+ I_j(t)=\sum_{r=0}^{\lfloor j/2\rfloor}
+ \frac{t^r}{r!}\frac{(N-j+2r)!}{(N-j)!}a_{j-2r}(t)=a_j(0).
+ \label{eq:explicit-integrals}
+\end{equation}
+For $N\ge2$, set $\theta=-a_2/[N(N-1)]$. Then $\theta'=1$ and
+every coefficient of
+\begin{equation}
+ Z(z)=e^{\theta\partial_z^2}P(t,z)
+ \label{eq:autonomous}
+\end{equation}
+is constant. Its coefficient of $z^{N-2}$ is zero. Its other $N-1$
+nonleading coefficients are independent autonomous integrals of the
+$N$-dimensional monic coefficient flow.
+\end{theorem}
+\begin{proof}
+Comparing powers in $P_t=-P_{zz}$ gives \eqref{eq:coeff-law}.
+The exponential of $\partial_z^2$ terminates on a polynomial and
+commutes with differentiation in time. Thus
+$\partial_t(e^{t\partial_z^2}P)=0$. Its $j$th coefficient is
+\eqref{eq:explicit-integrals}. Similarly,
+\[
+ \partial_t(e^{\theta\partial_z^2}P)
+ =(\theta'-1)\partial_z^2e^{\theta\partial_z^2}P=0.
+\]
+The $z^{N-2}$ coefficient of $Z$ is $a_2+N(N-1)\theta=0$.
+Conversely, an arbitrary monic $Z$ with that coefficient zero,
+together with an arbitrary $\theta$, recovers
+$P=e^{-\theta\partial_z^2}Z$. Its second coefficient is
+$-N(N-1)\theta$, so this is an inverse polynomial coordinate change.
+Independence and completeness of the $N-1$ constants follow.
+\end{proof}
+
+For simple roots, evaluation of the heat equation at $P(t,x_i(t))=0$
+gives
+\begin{equation}
+ x_i'=\frac{P_{zz}(t,x_i)}{P_z(t,x_i)}
+       =2\sum_{j\ne i}\frac1{x_i-x_j}.
+ \label{eq:finite-roots}
+\end{equation}
+Set
+\begin{equation}
+ c=\frac1N\sum_i x_i,\qquad y_i=x_i-c,\qquad p_k=\sum_i y_i^k.
+ \label{eq:center}
+\end{equation}
+Then $p_0=N$, $p_1=0$, and pairwise cancellation gives $c'=0$.
+For any integer $k\ge2$,
+\begin{equation}
+ p_k'=2k\sum_{i<j}\frac{y_i^{k-1}-y_j^{k-1}}{y_i-y_j}.
+ \label{eq:powers}
+\end{equation}
+In particular,
+\begin{equation}
+ p_2'=2N(N-1),\qquad p_3'=0,\qquad p_4'=4(2N-3)p_2.
+ \label{eq:low-powers}
+\end{equation}
+For the last identity, the unordered sum of $y_i^2+y_iy_j+y_j^2$
+is $(N-1)p_2-p_2/2=(N-3/2)p_2$. This proves every coefficient
+in \eqref{eq:low-powers}, including its sign.
+
+\begin{corollary}[Centered homogeneous integrals]
+\label{cor:homogeneous}
+Let $Q(t,y)=\prod_i(y-y_i)=\sum_{j=0}^N b_jy^{N-j}$, so $b_1=0$
+and $b_2=-p_2/2$. Define
+\begin{equation}
+ \vartheta=\frac{p_2}{2N(N-1)},\qquad
+ J_j=[y^{N-j}]\,e^{\vartheta\partial_y^2}Q,
+ \quad 3\le j\le N.
+ \label{eq:family}
+\end{equation}
+Each $J_j$ is a translation-invariant symmetric polynomial in the
+$x_i$, homogeneous of degree $j$, and a first integral of
+\eqref{eq:finite-roots}. The $N-2$ polynomials $J_3,\ldots,J_N$
+are independent in the centered coefficient variables. Along with
+the centroid they give $N-1$ independent autonomous integrals.
+\end{corollary}
+\begin{proof}
+The center is constant, so $Q_t=-Q_{yy}$ and $\vartheta'=1$.
+Theorem~\ref{thm:finite} applies to $Q$, and its inverse coordinate
+change now uses $\vartheta,J_3,\ldots,J_N$. Translation leaves every
+$y_i$ unchanged. Under $x\mapsto\lambda x$, the centered coefficient
+$b_{j-2r}$ has degree $j-2r$ and $\vartheta^r$ has degree $2r$.
+Every term in $J_j$ therefore has degree $j$. The coefficient formula
+also proves polynomiality and symmetry without selecting root labels.
+\end{proof}
+
+Newton identities give $J_3=b_3=-p_3/3$. For $N\ge4$ they give
+the useful fourth-order integral
+\begin{align}
+ C_4:=J_4
+ &=\frac{2N-3}{4N(N-1)}p_2^2-\frac14p_4 \label{eq:C4}\\
+ &=b_4-\frac{(N-2)(N-3)}{2N(N-1)}b_2^2.
+ \notag
+\end{align}
+Indeed $b_4=p_2^2/8-p_4/4$ and $b_2=-p_2/2$; substitution into
+\eqref{eq:family} proves \eqref{eq:C4}. It can also be verified
+directly from \eqref{eq:low-powers}. All these statements extend
+through collisions because they are polynomial coefficient identities.
+
+\subsection{A collision with positive conserved value}
+For $b>0$ and arbitrary real $T$, consider the exact heat polynomial
+\begin{equation}
+ P(t,z)=(z^2-b^2)^2-(t-T)(12z^2-4b^2)+12(t-T)^2.
+ \label{eq:quartic-control}
+\end{equation}
+Writing $\tau=t-T$, its coefficients are
+$a=-2b^2-12\tau$ and $d=b^4+4b^2\tau+12\tau^2$ in
+$P=z^4+az^2+d$. Direct differentiation verifies $P_t=-P_{zz}$,
+and \eqref{eq:C4} becomes
+\begin{equation}
+ C_4=d-a^2/12=2b^4/3>0.
+ \label{eq:positive-collision}
+\end{equation}
+Nevertheless $\pm b$ are double zeros at $t=T$.
+
+More generally, for a real centered even quartic $z^4+az^2+d$,
+$p_2=-2a$ and $d=C_4+p_2^2/48$. The discriminant in $z^2$ is
+\begin{equation}
+ \Delta_{z^2}=a^2-4d=p_2^2/6-4C_4.
+ \label{eq:quartic-discriminant}
+\end{equation}
+If $p_2>0$ and $C_4>0$, both $z^2$ roots have positive sum and
+positive product. Thus the four $z$ roots are real and simple exactly
+when $p_2^2>24C_4$. Equality gives the two nonzero double roots.
+This finite threshold uses the variance clock and the invariant jointly.
+It contains exactly the information of the direct quartic discriminant;
+no same-information advantage is asserted. Positivity of $C_4$ alone
+does not exclude a collision.

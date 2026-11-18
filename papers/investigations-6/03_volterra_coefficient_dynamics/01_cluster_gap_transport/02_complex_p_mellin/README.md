@@ -6,7 +6,7 @@ current guarded chat registry; helpers inherited settings. Earlier
 requested configurations remain in the historical records and are not
 serving attestation.
 
-**Complete contour formulas and integer hierarchy established within their domains; canonical signed bound still open.** This sibling
+**Complete contour formulas, integer hierarchy and fixed-input common-time approximation established within their domains; local retained forcing acquired, global and recursive improvement open.** This sibling
 investigation asks whether the evolution equation for the complete exterior
 interaction M can be expressed through a contour integral in the **complex
 power-index p plane**, and whether that integral can be bounded more usefully.
@@ -16,8 +16,11 @@ Analytical arguments must have an explicit route to the infinite divisor,
 unbounded contour height, or unbounded moment order relevant to the claim.
 The common-divisor lattice now also supports conditional forward gap
 statistics, retained-forcing comparisons and a precise recursive/continuous
-two-sided formulation. Strict canonical refinement and its source estimates
-remain open. Read the [result index](../../../../../result-summaries/README.md),
+two-sided formulation. A new complete-source enclosure pays the retained
+forcing target on one pair through t=-.0003; the same-source direct gap
+calculation is stronger. Retaining shared contour errors now narrows that
+direct independent-moment enclosure by more than 6.40% at the same source
+budget, with extra arithmetic cost. A sharper cardinal interpolation allowance now narrows the centered direct width by more than33.9494 times on that same tube; no new coverage or recursive gain follows. Read the [result index](../../../../../result-summaries/README.md),
 especially [cluster18](../../../../../result-summaries/18_tensor_approximation_and_coefficient_bounds.md),
 and the [avoid index](../../../../../avoid/README.md), especially
 [joint bounds12](../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md).
@@ -26,7 +29,11 @@ and the [avoid index](../../../../../avoid/README.md), especially
 - [Sustained B/E research plan](research-plan/01_VCD_GT_CM_RESEARCH_PLAN_20261117.md).
 - [Sole VCD-GT-CM progress register](research-progress/01_VCD_GT_CM_RESEARCH_PROGRESS_20261117.md).
 - [Analytical manuscript and build guide](manuscript/README.md).
-- [Current research continuation](notes/37_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_CONTINUATION_20261118.md).
+- [Conservation-laws child investigation](01_conservation_laws/README.md): separate analytical draft and exterior-flux estimates; parent task ownership is unchanged.
+- [Current research continuation](notes/49_VCD_GT_CM_COMMON_TIME_APPROXIMATION_AND_CONTINUATION_20261118.md).
+- [Common-time field approximation](notes/47_VCD_GT_CM_E16_COMMON_TIME_FIELD_APPROXIMATION_20261118.md) and [counted-moment/transport transfer](notes/48_VCD_GT_CM_E16_COUNTED_MOMENT_AND_TRANSPORT_TRANSFER_20261118.md).
+- [Shared-error discriminant gain](notes/42_VCD_GT_CM_E36_CORRELATED_DISCRIMINANT_20261118.md).
+- [Extended source and acquired forcing](notes/39_VCD_GT_CM_E34_EXTENDED_SOURCE_AND_FORCING_20261118.md).
 - [Recursive and continuous two-sided formulation](notes/35_VCD_GT_CM_RECURSIVE_TWO_SIDED_FORMULATION_20261118.md).
 - [BBGKY reconsideration and E16 route](notes/15_VCD_GT_CM_B05_BBGKY_TRUNCATION_RECONSIDERATION_20261118.md).
 - [B03 r2 continuation](notes/14_VCD_GT_CM_B03_R2_CONTINUATION_20261118.md).
@@ -138,7 +145,8 @@ conditional forward estimates and screens the unchanged initial-M return.
 [Note32](notes/32_VCD_GT_CM_FORCE_DISPERSION_AND_RETAINED_FORCING_20261118.md)
 retains a quantified conditional F>=.3 target and scoped consumer failures.
 The [historical continuation33](notes/33_VCD_GT_CM_RETAINED_FORCING_CONTINUATION_20261118.md)
-prioritized joint forward acquisition; source estimates remain unacquired.
+prioritized joint forward acquisition; source estimates were unacquired
+at that milestone. The later local acquisition is recorded below.
 Prepared for Edward Baker with Codex assistance; actual settings unavailable.
 
 **18 November recursive/continuous formulation and manuscript integration:**
@@ -160,12 +168,70 @@ route this milestone. E32 accepted after three reference-descriptor fixes;
 the clean 81-page PDF and all rendered pages were checked. The sole
 register owns E31–E33 disposition.
 
-The next default conceptual gate is **B10 r2**: select one finite correlated
-source enclosure or adjoint target and derive strict gain against equally
-informed direct joint propagation, paying whole-time coverage, source and
-boundary errors. B09 forward joint acquisition and B08 direct retained-F
-acquisition remain separate alternatives. [E16 r4](research-progress/handoffs/VCD-GT-CM-E16-r4.md)
-is a mechanical source rebind for the same independently optional,
-unexecuted approximation proof. For Edward Baker with Codex assistance;
-actual model/effort unavailable. No source campaign follows from these
-representations alone.
+**18 November B10 r2 source milestone:** [Note38](notes/38_VCD_GT_CM_B10_R2_SOURCE_SELECTION_20261118.md)
+selects a new negative-time source payment and screens independent adjoint
+error boxes. [Note39](notes/39_VCD_GT_CM_E34_EXTENDED_SOURCE_AND_FORCING_20261118.md)
+encloses the complete source on [-.0003,.1], independently counts/clears
+the pair, and acquires F>.4051. The retained-F theorem now applies locally;
+direct contour extraction with the same information gives the stronger
+whole-path D>.00082146953. [E35](reviews/18_VCD_GT_CM_E35_EXTENDED_SOURCE_ASSESSMENT_20261118.md)
+and the sole register own the assessment disposition. The 81-page
+manuscript is unchanged and predates this acquisition.
+
+[Historical Continuation40](notes/40_VCD_GT_CM_COMPACT_SOURCE_CONTINUATION_20261118.md)
+set **B10 r3**: prove a specific correlation/width or acquisition-cost gain
+against that direct baseline before another computation. No recursive
+advantage, all-height result or Newman upper bound is claimed. B09's
+different census population still lacks its common forward source tube.
+[E16 r4](research-progress/handoffs/VCD-GT-CM-E16-r4.md) remains an
+independently optional, unexecuted theoretical task. Prepared for Edward
+Baker with Codex assistance; actual model/effort unavailable.
+
+**18 November B10 r3 correlation milestone:** [Selection41](notes/41_VCD_GT_CM_B10_R3_CORRELATION_SELECTION_20261118.md)
+compares two candidates and freezes the shared-log support mechanism.
+[Note42](notes/42_VCD_GT_CM_E36_CORRELATED_DISCRIMINANT_20261118.md)
+gives a certified width reduction greater than 6.4031% against the sharp
+independent-moment Cartesian baseline, with the identical endpoint log
+boxes, tails and paid whole-path monotonicity. The improved bound is
+min D>.00082160722 on the same pair and interval. The reduction exceeding
+26.0920% against E34 also includes removed arithmetic wrapping. Assembly
+is slower; equal source acquisition is not a cost saving. This enhances
+the direct estimator itself, without an advantage over a centered direct
+method or a recursive/global result. [E37](reviews/19_VCD_GT_CM_E37_CORRELATION_ASSESSMENT_20261118.md)
+and the sole register own the assessment disposition.
+[Continuation43](notes/43_VCD_GT_CM_CORRELATION_GAIN_CONTINUATION_20261118.md)
+supersedes Note40's next routing with a proposed sharper interpolation
+error allowance for B10 r4, not an already accepted replacement budget.
+The manuscript and E16 remain unchanged. Prepared for Edward Baker with
+Codex assistance; actual model/effort unavailable, internal shared-premise review.
+
+**18 November cardinal-source refinement and conservation review:**
+[Note44](notes/44_VCD_GT_CM_CONSERVATION_TOOLS_AND_CARDINAL_SELECTION_20261118.md)
+adapts the child manuscript's affine cancellation to the pair clock and
+shows that separately bounded affine/residual errors recover the same direct
+allowance. [Review20](reviews/20_VCD_GT_CM_CONSERVATION_TOOL_ASSESSMENT_20261118.md)
+accepts that scoped transfer and the child manuscript's displayed claims.
+[Note45](notes/45_VCD_GT_CM_E38_CARDINAL_SOURCE_REFINEMENT_20261118.md)
+proves the actual cardinal norm<17 and gives min D>.00082198577 with width
+<2.29767333e-8, more than33.9494-fold narrower than Record19. Old source
+samples/precision are retained; geometry and512-cell paths are re-enclosed.
+E39 and the sole register own final numerical assessment. The
+[current continuation](notes/46_VCD_GT_CM_CARDINAL_GAIN_AND_STRUCTURAL_CONTINUATION_20261118.md)
+recommends E16 r4's existing structural proof next. Both manuscripts and
+previous evidence remain unchanged. Prepared for Edward Baker with Codex
+assistance; root actual settings unavailable, E38/E39 selected Sol6.1/ultra.
+
+
+**18 November E16/E40 structural milestone:** [Note47](notes/47_VCD_GT_CM_E16_COMMON_TIME_FIELD_APPROXIMATION_20261118.md)
+and [Note48](notes/48_VCD_GT_CM_E16_COUNTED_MOMENT_AND_TRANSPORT_TRANSFER_20261118.md)
+prove explicit O(log N/N) common-time field, jet, pair, complete fixed-moment
+and transport errors for one canonical finite-divisor initialization.
+[E40](reviews/22_VCD_GT_CM_E40_COMMON_TIME_APPROXIMATION_ASSESSMENT_20261118.md)
+accepts the fixed-input scope without mathematical correction. The exact
+quartic merger is preserved; finite canonical data, useful conditioning,
+signed improvement and uniform-height closure remain unpaid.
+[Continuation49](notes/49_VCD_GT_CM_COMMON_TIME_APPROXIMATION_AND_CONTINUATION_20261118.md)
+supersedes all earlier E16-unexecuted routing and recommends B05 r2's
+finite-data/consumer decision next. Both manuscripts remain unchanged.
+For Edward Baker with Codex assistance; root settings unavailable, three
+helpers selected Sol6.1/ultra; internal shared-premise assessment.

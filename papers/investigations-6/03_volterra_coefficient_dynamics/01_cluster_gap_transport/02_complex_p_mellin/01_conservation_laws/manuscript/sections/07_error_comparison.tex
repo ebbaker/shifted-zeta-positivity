@@ -1,0 +1,228 @@
+\section{One contour error comparison, with coordinate costs}
+\label{sec:errors}
+
+The bounded follow-up fixes one source-error model: a uniform
+pointwise error in $B$ on one cleared circle. It compares two
+explicit triangle/Cauchy allowances using the same data. It does
+not compare exact feasible sets, source-acquisition costs or
+canonical minimum-gap widths. Direct contour evaluation is
+allowed to use the same combined kernel.
+
+\begin{theorem}[Quadratic cancellation factor]
+\label{thm:quadratic}
+Use the exact block coordinates of Theorem~\ref{thm:general-flux}.
+Let $\Gamma$ be the circle $|z-c|=A$, where
+$|y_i|\le\rho<A$. Suppose $\widehat B$ satisfies
+$\sup_\Gamma|B-\widehat B|\le\epsilon$. For the linear functional
+$\E_J=2\av{BK_J}$, separate evaluation of the exterior values
+and $b$ gives the valid allowance
+\begin{equation}
+ B_{\rm sep}=2A\epsilon\sum_i\frac{|J_i|}{A-|y_i|}
+                      +\frac{2m|J|\epsilon}{A}.
+ \label{eq:Bsep}
+\end{equation}
+The combined kernel gives the valid allowance
+\begin{equation}
+ B_{\rm comb}=\frac{2\epsilon}{A}
+                  \sum_i\frac{|J_i||y_i|^2}{A-|y_i|},
+ \qquad
+ B_{\rm comb}\le\left(\frac\rho A\right)^2 B_{\rm sep}.
+ \label{eq:Bcomb}
+\end{equation}
+The inequality is meaningful without dividing by $B_{\rm sep}$,
+including cases where it is zero.
+\end{theorem}
+\begin{proof}
+The contour length is $2\pi A$. From
+\eqref{eq:exterior-Cauchy}, the error in each $R_i$ is bounded by
+$A\epsilon/(A-|y_i|)$ and the error in $b$ by $\epsilon/A$.
+Applying the triangle inequality to
+$2\sum_iJ_iR_i-2mJb$ proves \eqref{eq:Bsep}.
+The second form of \eqref{eq:Kgeneral} gives
+\[
+ \sup_\Gamma|K_J|\le\frac1{A^2}
+                   \sum_i\frac{|J_i||y_i|^2}{A-|y_i|}.
+\]
+Multiply by $2A\epsilon$ to obtain $B_{\rm comb}$. Replacing
+$|y_i|^2$ by $\rho^2$ proves
+\[
+ B_{\rm comb}\le(\rho/A)^2
+       \left(2A\epsilon\sum_i\frac{|J_i|}{A-|y_i|}\right)
+       \le(\rho/A)^2 B_{\rm sep}.
+\]
+\end{proof}
+
+This is a strict factor less than one whenever the separate
+allowance is positive and $\rho<A$. It is a comparison with the
+specific allowance \eqref{eq:Bsep}; the latter is not asserted
+to be the sharp independent-moment baseline. No superiority over
+a direct method using \eqref{eq:Kgeneral} follows. This distinction
+matches the parent's common-data comparison discipline
+\cite{BakerCorrelation2026}.
+
+\subsection{A quartet refinement and its asymmetry term}
+\begin{proposition}[The next cancellation for a symmetric quartet]
+\label{prop:cubic}
+For $N=4$ and $J=C_4$, let $q_2=\sum_iJ_i y_i^2$. Then
+\begin{equation}
+ q_2=-\frac16p_2p_3,\qquad
+ K_{C_4}(z)=\frac{q_2}{Z^3}
+          +\frac1{Z^3}\sum_i\frac{J_i y_i^3}{Z-y_i}.
+ \label{eq:cubic-kernel}
+\end{equation}
+Under Theorem~\ref{thm:quadratic}'s assumptions another valid
+source-error allowance is
+\begin{equation}
+ B_{\rm cubic+asym}=\frac{2\epsilon|q_2|}{A^2}
+       +\frac{2\epsilon}{A^2}
+             \sum_i\frac{|J_i||y_i|^3}{A-|y_i|}.
+ \label{eq:Bcubic}
+\end{equation}
+If the centered quartet is reflection-symmetric, $p_3=q_2=0$,
+and
+\begin{equation}
+ B_{\rm cubic}\le(\rho/A)^3 B_{\rm sep}.
+ \label{eq:cubic-factor}
+\end{equation}
+No parity condition is imposed on the source error $B-\widehat B$.
+\end{proposition}
+\begin{proof}
+Since $J_i=-y_i^3+\beta p_2y_i+p_3/N$,
+$q_2=-p_5+(\beta+1/N)p_2p_3$. For a centered quartet,
+Newton identities give
+$p_5=-b_2p_3-b_3p_2=5p_2p_3/6$, while
+$\beta+1/N=5/12+1/4=2/3$. This proves the first identity.
+Expanding one more term in \eqref{eq:Kgeneral} proves the second.
+The circle-length bound gives \eqref{eq:Bcubic}. When $p_3=0$,
+replace $|y_i|^3$ by $\rho^3$ and compare with the first term of
+\eqref{eq:Bsep}, as in Theorem~\ref{thm:quadratic}.
+\end{proof}
+
+Approximate symmetry alone cannot set $q_2$ to zero. The first
+term of \eqref{eq:Bcubic} is its explicit payment; even that
+allowance need not improve \eqref{eq:Bcomb} in every asymmetric
+configuration.
+
+\subsection{Uncertain block coordinates}
+The preceding factors keep the coordinates exact. A root enclosure
+must pay for the kernel's coordinate dependence as well. The
+following conservative bound supplies one such payment for $C_4$.
+
+\begin{proposition}[A coordinate allowance for the fourth-order kernel]
+\label{prop:coordinates}
+Let $x$ and $\widehat x$ be two labeled $N$-tuples, $N\ge4$, with
+$\max_i|x_i-\widehat x_i|\le e$. On the straight homotopy between
+them, assume every centered root has modulus at most $\rho$.
+Let one fixed circle $\Gamma$ have radius $A_0$. Suppose for every
+homotopy parameter and every $z\in\Gamma$ that
+\begin{equation}
+ |z-x_i|\ge\delta>0,\qquad |z-c|\ge\delta>0.
+ \label{eq:coordinate-clearance}
+\end{equation}
+For $K=K_{C_4}$,
+\begin{equation}
+ \sup_\Gamma|K(x)-K(\widehat x)|\le G,
+ \quad
+ G=Ne\left(\frac{20\rho^2}{\delta}
+          +\frac{20\rho^3}{\delta^2}
+          +\frac{6\rho^4}{\delta^3}\right).
+ \label{eq:G}
+\end{equation}
+If $|\widehat B|\le B_*$ and $|B-\widehat B|\le\epsilon$ on
+that circle, the corresponding exact contour functionals obey
+\begin{equation}
+ |\E_4(B,x)-\E_4(\widehat B,\widehat x)|
+ \le 2A_0\left[\epsilon\sup_\Gamma|K(\widehat x)|
+                         +(B_*+\epsilon)G\right].
+ \label{eq:joint-coordinate}
+\end{equation}
+Here $\E_4(B,x)$ denotes the functional in
+\eqref{eq:contour-general}; its identification with the physical
+flux uses the actual counted block $x$.
+\end{proposition}
+\begin{proof}
+Differentiating \eqref{eq:psi} in a coordinate gives
+\begin{equation}
+ \partial_{x_j}\psi_i
+  =(3y_i^2-\beta p_2)(\delta_{ij}-1/N)
+       -2\beta y_i y_j-\frac3N(y_j^2-p_2/N).
+ \label{eq:psi-jacobian}
+\end{equation}
+Since $\beta N<2$, the sums of absolute values of these three
+terms over $j$ are at most $10\rho^2$, $4\rho^2$ and
+$6\rho^2$, respectively. Thus
+$\sum_j|\partial_{x_j}\psi_i|\le20\rho^2$.
+Also $|J_i|=|\psi_i|\le4\rho^3$ and, from \eqref{eq:C4},
+$|C_4|\le3N\rho^4/4$. Along the homotopy, these imply
+\[
+ |\dot J_i|\le20\rho^2 e,\qquad
+ |\dot C_4|\le4N\rho^3 e,\qquad |\dot c|\le e.
+\]
+Differentiate
+$K=\sum_iJ_i/(z-x_i)-4C_4/(z-c)^2$ along the homotopy:
+\[
+ \dot K=\sum_i\left(\frac{\dot J_i}{z-x_i}
+                       +\frac{J_i\dot x_i}{(z-x_i)^2}\right)
+       -\frac{4\dot C_4}{(z-c)^2}
+       -\frac{8C_4\dot c}{(z-c)^3}.
+\]
+The four contributions are bounded by
+$20N\rho^2e/\delta$, $4N\rho^3e/\delta^2$,
+$16N\rho^3e/\delta^2$ and $6N\rho^4e/\delta^3$.
+Integrate over the unit homotopy interval to obtain \eqref{eq:G}.
+Finally use the exact splitting
+\[
+ BK(x)-\widehat B K(\widehat x)
+  =(B-\widehat B)K(\widehat x)+B\bigl(K(x)-K(\widehat x)\bigr)
+\]
+and $|B|\le B_*+\epsilon$ in the circle-length bound. This also
+pays the mixed field/coordinate error.
+\end{proof}
+
+If the fixed circle is centered at the nominal mean, the cancellation
+bounds apply to $K(\widehat x)$. Its distance to the actual mean
+and roots must still satisfy \eqref{eq:coordinate-clearance} along
+the whole homotopy. The term involving $G$ can erase the nominal
+source-error gain. A numerical contour quadrature introduces a
+separate error for the integrand actually integrated; arithmetic
+enclosures and any integration of \eqref{eq:integrated-C4} in time
+must be paid too. Counts, clearance, and between-time control are
+additional premises, not consequences of the radius factor.
+
+\subsection{Two fixed exact arithmetic checks}
+The bounded check uses two six-root polynomial initial slices,
+and no canonical source acquisition. For the block
+$(-2,-1,1,2)$ with exterior $(-5,5)$, exact rational evaluation gives
+\begin{equation}
+ C_4=\frac{23}{12},\quad C_4'=-\frac{55}{42},\quad
+ b=-\frac2{25},\quad \E_4=-\frac{29}{350}.
+ \label{eq:symmetric-example}
+\end{equation}
+The same block without the exterior has $C_4'=0$. At radius
+$A=4$ and unit source-error scale, the specified allowances are
+\begin{equation}
+ B_{\rm sep}=\frac{421}{18},\quad
+ B_{\rm comb}=\frac{31}{18},\quad
+ B_{\rm cubic}=\frac{43}{72}.
+ \label{eq:example-allowances}
+\end{equation}
+Thus their exact ratios to the separate allowance are $31/421$
+and $43/1684$. These are allowance ratios on exact finite geometry,
+not measured errors or canonical width reductions.
+
+For the asymmetric block $(-3,-1,2,5)$ with exterior $(-8,9)$,
+the center is $3/4$. At radius $A=6$ the roots have
+$\rho=17/4$, and exact arithmetic gives
+\begin{align}
+ p_2&=147/4,&p_3&=165/8,&C_4&=861/128,\notag\\
+ q_2&=-8085/64,&C_4'&=-6847/7280,&
+ \E_4&=7306487/13213200.
+ \label{eq:asymmetric-example}
+\end{align}
+This checks the nonzero asymmetry payment. The execution record
+\cite{BakerAffineChecks2026} contains both sets of allowance values
+and a quartic collision at $T=1/20$, $b=2$. In each six-root case
+it computes the derivative from all root velocities, the exterior
+balance, and the exterior residues of the combined contour kernel
+independently in exact rational arithmetic. These checks confirm
+the finite algebra; the general theorems rest on their proofs.

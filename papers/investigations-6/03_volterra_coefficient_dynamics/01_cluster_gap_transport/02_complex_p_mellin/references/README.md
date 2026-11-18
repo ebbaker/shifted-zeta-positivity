@@ -54,3 +54,7 @@ those in receipt04 and Note24, with Remark9.4 credited. Existing canonical
 catalog and external reading-copy provenance are retained; no PDF download
 or duplicate catalog was created. Prepared for Edward Baker with Codex
 assistance; actual model/effort unavailable.
+
+18 November cardinal refinement: the existing [DLMF passage record01](01_VCD_GT_CM_DLMF_CONTOUR_PASSAGES_20261117.md#chebyshev-normalization-check-18-november-2026) now includes the checked Chebyshev normalizations18.5.1–2 and Table18.3.1. Note45 proves its discrete norm estimate directly; no interpolation theorem is imported. Prepared for Edward Baker with Codex assistance; actual root settings unavailable.
+
+E16 continuation,18 November2026: [passage record01](01_VCD_GT_CM_DLMF_CONTOUR_PASSAGES_20261117.md#gaussian-and-polynomial-heat-normalization-check-18-november-2026) records selected Gaussian5.9.1 and Hermite18.12.15 convention checks. The common-time approximation is derived in Notes47–48; no external approximation theorem is imported. For Edward Baker with Codex assistance; root settings unavailable.

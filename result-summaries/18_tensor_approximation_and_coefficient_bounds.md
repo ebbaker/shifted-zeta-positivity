@@ -462,3 +462,96 @@ three reference descriptors changed, formulas unchanged. The 81-page draft
 integrates forward and retained-forcing results with supporting numerics
 only in Appendix B. This supersedes the 61-page production milestone,
 not its historical scientific verdict. Internal shared-premise assessment.
+
+**Compact source extension, 18 November 2026.** For Edward Baker with
+Codex assistance; actual model/effort unavailable, helpers inherited.
+[CM Note39](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/39_VCD_GT_CM_E34_EXTENDED_SOURCE_AND_FORCING_20261118.md)
+records **“proved in-note source extension and completed interval enclosure”**.
+A new real-shift Gaussian majorant and tensor error extend the unchanged
+complete-source record to [-.0003,.1]. Independent count-two clearance
+and whole-time coordinates acquire F>.4051, paying the formerly conditional
+.3 floor. Retained forcing gives D>.00016246209; direct same-source
+contour evaluation plus the regular-law monotonicity gives
+min D>.00082146953. The source states: “This is new local source coverage,
+not a strict recursive advantage”. [E35](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/18_VCD_GT_CM_E35_EXTENDED_SOURCE_ASSESSMENT_20261118.md)
+states **“accepted within scope without correction”**, with a matching
+nonauthor replay. The exact
+quadratic control retains its collision and fails the strict contract.
+[Note38](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/38_VCD_GT_CM_B10_R2_SOURCE_SELECTION_20261118.md)
+also proves sharp lower-adjoint support for independent error boxes with
+nonnegative reference D, not for coupled physical paths. No global reality,
+Newman upper bound, recursive advantage or E16 approximation result.
+This supersedes the local unacquired-floor boundary above only on this
+fixed pair and interval. Internal shared-premise review, no specialist claim.
+
+**Shared contour-error gain, 18 November 2026.** For Edward Baker with
+Codex assistance; actual model/effort unavailable, helpers inherited.
+[CM Note42](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/42_VCD_GT_CM_E36_CORRELATED_DISCRIMINANT_20261118.md)
+records **“proved in-note support comparison and completed interval
+calculation”**. The identical log boxes and tails give >6.4031% narrower
+width than their sharp independent-moment Cartesian relaxation, with the
+full square remainder retained and whole-path min D>.00082160722.
+The >26.0920% reduction versus E34 also removes arithmetic wrapping;
+only the first comparison isolates the shared-error gain. This improves
+the direct estimator itself. Source/node/log budgets are equal, assembly
+is slower, and no cost, all-direct, recursive or global superiority is
+established. The quadratic collision remains included.
+[E37](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/19_VCD_GT_CM_E37_CORRELATION_ASSESSMENT_20261118.md)
+states **“accepted within scope without required correction”**; one replay
+and a separate support calculation agree. This is internal shared-premise
+assessment. The next <17 interpolation allowance in Note43 is a proposed
+contract, not a changed source certificate.
+
+**Conservation-laws child manuscript, 18 November 2026.** For Edward Baker
+with OpenAI Codex assistance; actual model/effort unavailable.
+[CQ Note02](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/01_conservation_laws/notes/02_HOMOGENEOUS_FLUX_AND_ERROR_COMPARISON_20261118.md)
+records **“proved in this working draft, with exact finite algebra checks
+and same-assistant assessment”**. A homogeneous translation-invariant
+symmetric finite heat integral has an exact complete exterior flux inside
+a counted block. Removing its affine response cancels two contour-kernel
+terms; the displayed source-error allowance is at most (rho/A)^2 of the
+specified separate Cauchy allowance, with a cubic symmetric-quartet
+refinement and an explicit coordinate payment. The
+[draft](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/01_conservation_laws/manuscript/main.tex)
+also derives finite coefficient integrals, specialized nilpotence, a
+free-tail finite-head obstruction and full-field pullback. The source
+states: “The radius factors compare the displayed allowances, not total
+canonical errors.” A positive-C4 quartic still collides. No canonical
+source acquisition, total width/cost gain or RH consequence; direct
+evaluation may use the same kernel. [Review01](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/01_conservation_laws/reviews/01_MANUSCRIPT_SCOPE_AND_SETUP_REVIEW_20261118.md)
+is a same-assistant check, not independent review. Parent tasks remain
+separately owned; branch plan/progress files were expressly deferred.
+
+**Cardinal-source refinement and pair-flux screen, 18 November 2026.**
+For Edward Baker with Codex assistance; root settings unavailable, E38/E39
+selected Sol6.1/ultra. [CM Note45](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/45_VCD_GT_CM_E38_CARDINAL_SOURCE_REFINEMENT_20261118.md)
+records a proved actual DCT-I norm<17 and a completed interval calculation:
+>33.9494-fold narrower centered width on the same source tube, min D>.00082198577.
+It states: “This improves a centered direct estimator by sharper source-error
+accounting.” [E39](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/21_VCD_GT_CM_E39_CARDINAL_ASSESSMENT_20261118.md)
+accepts within scope with a historical accounting qualification; one replay
+matches all non-timing fields. This supersedes Note43's unacquired-budget
+boundary, not its historical record. [Note44](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/44_VCD_GT_CM_CONSERVATION_TOOLS_AND_CARDINAL_SELECTION_20261118.md)
+also gives an affine pair-clock residual proportional to D² and exact equality
+of its split/direct uniform-B allowances; [Review20](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/20_VCD_GT_CM_CONSERVATION_TOOL_ASSESSMENT_20261118.md)
+accepts within scope. No new source observations, coverage, recursive/global
+gain or E16 theorem; internal shared-premise assessment, no specialist review.
+
+**Common-time finite-divisor approximation, 18 November 2026.** For Edward
+Baker with Codex assistance; root settings unavailable, E16/E40 helpers
+selected Sol6.1/ultra without serving attestation.
+[CM Note47](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/47_VCD_GT_CM_E16_COMMON_TIME_FIELD_APPROXIMATION_20261118.md)
+and [Note48](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/48_VCD_GT_CM_E16_COUNTED_MOMENT_AND_TRANSPORT_TRANSFER_20261118.md)
+prove explicit O(log N/N) field/jet/counted-coordinate/complete-fixed-moment
+and transport errors for one initial finite canonical divisor evolved over
+a fixed interval. [E40](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/22_VCD_GT_CM_E40_COMMON_TIME_APPROXIMATION_ASSESSMENT_20261118.md)
+states: “Accepted within the explicitly stated fixed-input scope, without
+mathematical correction.” This supersedes the E16-unexecuted boundary above.
+The finite coefficient realization includes all its divisor moments;
+arbitrary short-head closure, uniform-height/order estimates, useful
+conditioning and canonical data acquisition remain unproved. An exact
+strong-collar quartic retains its merger with zero truncation error.
+Independent tube floors and anchors remain inputs; no new signed gap,
+coverage, computational saving or RH result. Separate nonauthor internal
+shared-premise assessment; [Continuation49](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/49_VCD_GT_CM_COMMON_TIME_APPROXIMATION_AND_CONTINUATION_20261118.md)
+routes the finite-data/consumer decision to B05 r2.

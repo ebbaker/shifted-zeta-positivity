@@ -1,0 +1,115 @@
+\section{Physical equation, provenance, and the pair balance}
+\label{sec:context}
+
+The parent manuscript \cite{BakerExterior2026} develops a complete
+exterior-moment hierarchy and counted-block transport for the Newman
+field. The base manuscript \cite{BakerVolterra2026} supplies its canonical
+source and Jacobi--Volterra realization. We use their normalization
+throughout:
+\begin{align}
+ r_k(u)&=\pi k^2e^{4u},&
+ \Phi(u)&=\sum_{k\ge1} e^u\bigl(2r_k(u)^2-3r_k(u)\bigr)e^{-r_k(u)},
+ \label{eq:source}\\
+ H(t,z)&=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\dd u,&
+ H_t&=-H_{zz},\qquad H(0,z)=\tfrac18\xi((1+\ii z)/2).
+ \label{eq:heat}
+\end{align}
+For $u\ge0$, the source is positive and decreases faster than
+$e^{-Cu^2-Cu}$ for every fixed $C>0$. Compact differentiation of
+\eqref{eq:heat} is therefore legitimate to every fixed order. For global
+divisor statements we use the parent's established even order-one
+canonical product, including its count, cutoff and complete
+regularization hypotheses. The local block results below need only a
+holomorphic heat solution and a fixed zero-free enclosing boundary.
+They do not require an all-real exterior.
+
+The founding exploration \cite{BakerConservationBrainstorm2026} contains
+the finite identities and fourth-order block balance developed here.
+The bounded extension in Sections~\ref{sec:block}--\ref{sec:errors}
+selects a general homogeneous class and compares explicit error
+allowances. The result is an identity and intermediate-estimate
+investigation in the terminology of the project's result and avoidance
+indices \cite{ProjectResults2026,ProjectAvoid2026}. A representation of
+initial data does not by itself supply a bound on that data. A negative
+result is always restricted to its displayed class. We make no priority
+claim for finite heat-pole integrability: the abstract of
+\cite{DeconinckKimuraSegur2007} reports conserved quantities for rational
+Burgers poles, and the checked passages of \cite{Sokal2023HeatZeros}
+discuss finite heat-zero dynamics and the specialized matrix in
+Section~\ref{sec:calogero}. All formulas used here are derived below;
+no uninspected external theorem or conjecture is imported.
+
+\subsection{Count and pair data}
+Put $B=H_z/H$. Off the divisor,
+\begin{equation}
+ B_t=-\partial_z(B_z+B^2).
+ \label{eq:burgers}
+\end{equation}
+If one stationary positively oriented contour $\Gamma$ remains zero-free,
+its integer count
+\begin{equation}
+ N=\av{B(t,z)}
+ \label{eq:count}
+\end{equation}
+is constant. This follows either from continuity and the argument
+principle, or by integrating the total derivative in
+\eqref{eq:burgers}. Two simple zeros becoming one double zero do not
+change the multiplicity count.
+
+For a counted pair write its roots as $c\pm s$, set $D=s^2$, and let
+$w_j=\rho_j-c$ for each exterior occurrence. The parent's complete
+collar assumptions make the following sums absolutely convergent:
+\begin{equation}
+ S_n=\sum_j(w_j^2-D)^{-n}\quad(n\ge1),\qquad
+ T_n=\sum_jw_j(w_j^2-D)^{-n}\quad(n\ge2).
+ \label{eq:moments}
+\end{equation}
+In particular, $T_1$ is not part of this convergent coordinate family.
+Writing $M=S_1$ and $\F=12S_2+16DS_3$, the regular pair equations are
+\begin{equation}
+ D'=2-4DM,\qquad M'=2M^2-\F.
+ \label{eq:pair}
+\end{equation}
+The first law follows by subtracting the two simple-root velocities;
+the mutual force contributes $2$ to $D'$, and each exterior root
+contributes $-4D/(w_j^2-D)$. The second is the $n=1$ row of the
+integer hierarchy displayed in Section~\ref{sec:obstruction}. The
+parent's counted-contour passage extends both laws through mergers.
+
+\begin{proposition}[An energy balance, not a general first integral]
+Define
+\begin{equation}
+ E=2M-2DM^2+D\F.
+ \label{eq:pair-energy}
+\end{equation}
+Then $E'=D\F'$. Also,
+\begin{equation}
+ (D')^2-2DD''+8\F D^2=4.
+ \label{eq:pair-identity}
+\end{equation}
+For a prescribed forcing $\F(t)$, \eqref{eq:pair} is the
+time-dependent Hamiltonian system $D'=E_M$, $M'=-E_D$, where partial
+derivatives hold $\F(t)$ fixed.
+\end{proposition}
+\begin{proof}
+Substitute \eqref{eq:pair} into
+\[
+ E'=2M'-2D'M^2-4DMM'+D'\F+D\F'.
+\]
+All terms except $D\F'$ cancel. Differentiating the first equation of
+\eqref{eq:pair} gives $D''=-8M+8DM^2+4D\F$, whose substitution
+proves \eqref{eq:pair-identity}. The two partial derivatives of
+\eqref{eq:pair-energy} give the asserted Hamilton equations.
+\end{proof}
+
+The physical hierarchy determines $\F'$ through higher moments, so
+constant forcing cannot be assumed. Subtracting $\int D\F'\dd t$
+formally produces a constant but still requires that entire flux.
+At a pair merger $D=0$, \eqref{eq:pair} gives $D'=2$, consistently
+with \eqref{eq:pair-identity}. On a chart where $D>0$, putting
+$r=\sqrt D$ gives
+\begin{equation}
+ r''=2\F r-r^{-3}.
+\end{equation}
+The inverse-cubic term is attractive. These formulas do not produce
+a positive barrier against a merger; the $r$ chart itself ends there.

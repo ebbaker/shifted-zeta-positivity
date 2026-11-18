@@ -1,0 +1,104 @@
+\section{Full-field constants and the Volterra boundary flux}
+\label{sec:fullfield}
+
+\begin{proposition}[Convergent heat pullback]
+\label{prop:pullback}
+For the canonical integral \eqref{eq:heat}, locally uniformly on
+$\C^2$ in $(t,z)$,
+\begin{equation}
+ \mathcal J(t,z)=\sum_{r=0}^\infty\frac{t^r}{r!}
+                       \partial_z^{2r}H(t,z)=H(0,z).
+ \label{eq:pullback}
+\end{equation}
+Any fixed additional spatial derivative may be taken termwise.
+\end{proposition}
+\begin{proof}
+After substituting the integral for $H$, the $r$th derivative adds
+$(-u^2)^r$. The sum of the absolute integrands is bounded by
+\[
+ e^{(\Re t+|t|)u^2+|\Im z|u}\Phi(u).
+\]
+This is integrable uniformly on compact $(t,z)$ sets by the decay
+of \eqref{eq:source}. A fixed extra derivative adds only a power
+of $u$. Absolute interchange is valid, and the inner series is
+$\sum_r(-tu^2)^r/r!=e^{-tu^2}$, which cancels the heat weight.
+\end{proof}
+
+For real $t$, $H(t,0)>0$. With $E_t(z)=H(t,z)/H(t,0)$,
+\begin{equation}
+ \frac{(e^{t\partial_z^2}E_t)(z)}{(e^{t\partial_z^2}E_t)(0)}
+       =\frac{H(0,z)}{H(0,0)},\qquad
+ (e^{t\partial_z^2}E_t)(0)=\frac{H(0,0)}{H(t,0)}>0.
+ \label{eq:normalized-pullback}
+\end{equation}
+The parent's normalized even canonical product determines $E_t$
+from the complete opposite-paired divisor. Thus
+\eqref{eq:normalized-pullback} can encode the initial normalized
+field using the full current divisor, without its amplitude.
+It uses an infinite jet and explicit time. It does not give a
+finite-head invariant or a paid truncation error, and it does not
+establish any favorable zero property of $H(0,\cdot)$.
+
+The positive-power sums of the full canonical divisor are not
+absolutely convergent: the infinite roots do not tend to zero, so
+even their terms in $\sum|\rho|^k$ fail the necessary condition
+for $k>0$. Finite polynomial top-degree coefficients likewise have
+no literal infinite-degree counterpart. Taking larger block or
+product cutoffs in \eqref{eq:C4} requires a new normalization and
+boundary-flux argument. Fixed-order convergence of the inverse
+moments in \eqref{eq:moments} does not supply that argument.
+
+\subsection{The Jacobi--Volterra realization}
+The base manuscript \cite{BakerVolterra2026} derives the monic
+orthogonal-polynomial recurrence for the even positive weight
+$w_t(u)=e^{tu^2}\Phi(|u|)$ on $\R$ and the chain
+\begin{equation}
+ \beta_n'=\beta_n(\beta_{n+1}-\beta_{n-1}),\qquad
+ \beta_0=0,\qquad \beta_n>0\ (n\ge1).
+ \label{eq:volterra}
+\end{equation}
+Its finite prefix has a precise boundary flux:
+\begin{equation}
+ \frac{\dd}{\dd t}\sum_{n=1}^K\beta_n=\beta_K\beta_{K+1}.
+ \label{eq:prefix}
+\end{equation}
+Indeed all internal products telescope in the sum of
+\eqref{eq:volterra}. Closing a finite chain by setting
+$\beta_{K+1}=0$ changes this physical law.
+
+\begin{proposition}[Full support is not a finite trace invariant]
+For each real $t$, the multiplication realization of the full Jacobi
+operator has spectrum $\R$. Moreover $\sum_{n\ge1}\beta_n$ is not
+finite. These statements require no bounded Lax propagator.
+\end{proposition}
+\begin{proof}
+The weight is strictly positive and has full support. Multiplication
+by $u$, on its natural domain in $L^2(w_t\dd u)$, is self-adjoint
+with spectrum equal to the closed essential range $\R$. For example,
+unit vectors supported in shrinking neighborhoods of any real
+$\lambda$ are approximate eigenvectors, whereas nonreal $\lambda$
+have bounded inverse multiplication by $(u-\lambda)^{-1}$.
+
+For completeness, the polynomial realization is not missing an
+orthogonal complement. If $f\in L^2(w_t\dd u)$ is orthogonal to all
+polynomials, Cauchy--Schwarz and all exponential moments of $w_t$
+make $\int f(u)w_t(u)e^{zu}\dd u$ entire. All derivatives at zero
+vanish. Its Fourier transform is consequently zero; uniqueness for
+the finite measure $f w_t\dd u$ gives $f=0$ almost everywhere.
+Polynomials are dense. They are also a core for multiplication:
+apply the same argument with weight $(1+u^2)w_t$ to its graph norm.
+Thus the complete Jacobi realization is unitarily equivalent to
+that unbounded multiplication operator.
+
+If $\sum_n\beta_n<\infty$, then $\sup_n\beta_n<\infty$.
+The Jacobi matrix with zero diagonal and off-diagonal
+$\sqrt{\beta_n}$ would extend to a bounded operator, with norm at
+most $2\sup_n\sqrt{\beta_n}$. Its closure could not equal the
+unbounded multiplication operator just obtained. This contradiction
+proves the assertion.
+\end{proof}
+
+The time-independent spectral set $\R$ is shared by many positive
+full-support weights. It does not determine the zeros of their
+Fourier readouts. Neither this spectral fact nor an unpaid infinite
+trace substitutes for a bound on the Newman divisor.

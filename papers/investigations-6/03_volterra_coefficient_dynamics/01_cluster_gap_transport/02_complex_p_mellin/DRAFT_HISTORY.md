@@ -153,3 +153,56 @@ helpers: **GPT-6.1 Sol/ultra**. Requested settings are not serving attestation.
   and unexecuted. No acquired strict recursive gain, new coverage, Lambda
   bound or snapshot folder. For Edward Baker with Codex assistance; actual
   settings unavailable, separate internal shared-premise review.
+
+- **18 November 2026 — compact source and forcing acquired:**
+  [Note39](notes/39_VCD_GT_CM_E34_EXTENDED_SOURCE_AND_FORCING_20261118.md)
+  proves a new negative-time source error and encloses the counted pair
+  on [-.0003,.1], with F>.4051 and direct whole-path D>.00082146953.
+  The now-paid retained-F comparison is weaker than direct source extraction.
+  [E35](reviews/18_VCD_GT_CM_E35_EXTENDED_SOURCE_ASSESSMENT_20261118.md)
+  accepts without correction; one replay matches all mathematical fields.
+  [Note38](notes/38_VCD_GT_CM_B10_R2_SOURCE_SELECTION_20261118.md) screens
+  independent adjoint error boxes. [Continuation40](notes/40_VCD_GT_CM_COMPACT_SOURCE_CONTINUATION_20261118.md)
+  sets the next correlation/cost gate. No recursive/global gain, manuscript
+  update or new snapshot. Prepared for Edward Baker with Codex assistance;
+  actual model/effort unavailable, nonauthor internal shared-premise review.
+
+- **18 November 2026 — shared-error discriminant gain:**
+  [Note42](notes/42_VCD_GT_CM_E36_CORRELATED_DISCRIMINANT_20261118.md)
+  certifies >6.4031% narrower width than sharp independent moments at the
+  same source/node/log budget, with min D>.00082160722. Assembly is slower;
+  the result improves the direct estimator, without recursive superiority.
+  [E37](reviews/19_VCD_GT_CM_E37_CORRELATION_ASSESSMENT_20261118.md)
+  accepts within scope without required correction; replay and an additional
+  support calculation agree. One prior accounting-only repair is preserved.
+  [Continuation43](notes/43_VCD_GT_CM_CORRELATION_GAIN_CONTINUATION_20261118.md)
+  proposes a separately assessed interpolation allowance; no new budget is
+  acquired. Manuscript/E16 unchanged. For Edward Baker with Codex assistance;
+  actual model/effort unavailable, internal shared-premise assessment.
+
+- **18 November 2026 — cardinal-source gain and conservation-tool review:**
+  [Note44](notes/44_VCD_GT_CM_CONSERVATION_TOOLS_AND_CARDINAL_SELECTION_20261118.md)
+  transfers affine cancellation to the pair clock and proves the scoped
+  split-error equality; Review20 accepts the manuscript and transfer.
+  [Note45](notes/45_VCD_GT_CM_E38_CARDINAL_SOURCE_REFINEMENT_20261118.md)
+  proves cardinal norm<17 and gives >33.9494-fold narrower centered width
+  with min D>.00082198577 on the unchanged tube. E39 accepts after one
+  matching replay, retaining a historical accounting-wording qualification;
+  two prior accounting repairs left mathematical outputs unchanged.
+  [Continuation46](notes/46_VCD_GT_CM_CARDINAL_GAIN_AND_STRUCTURAL_CONTINUATION_20261118.md)
+  recommends E16 r4's structural proof next. No new source data, coverage,
+  global claim or manuscript snapshot. For Edward Baker with Codex assistance;
+  root settings unavailable, E38/E39 selected Sol6.1/ultra; internal shared-premise review.
+
+
+- **18 November 2026 — common-time finite-divisor approximation:**
+  [Notes47](notes/47_VCD_GT_CM_E16_COMMON_TIME_FIELD_APPROXIMATION_20261118.md)
+  and [48](notes/48_VCD_GT_CM_E16_COUNTED_MOMENT_AND_TRANSPORT_TRANSFER_20261118.md)
+  prove fixed-input O(log N/N) field/jet/counted-moment/transport errors.
+  [E40](reviews/22_VCD_GT_CM_E40_COMMON_TIME_APPROXIMATION_ASSESSMENT_20261118.md)
+  accepts without mathematical correction; the exact strong-collar quartic
+  merger is retained. No canonical data acquisition, signed improvement or
+  uniform-height closure. [Continuation49](notes/49_VCD_GT_CM_COMMON_TIME_APPROXIMATION_AND_CONTINUATION_20261118.md)
+  recommends B05 r2's finite-data/conditioning decision. Manuscripts unchanged,
+  no snapshot. For Edward Baker with Codex assistance; root settings unavailable,
+  three helpers selected Sol6.1/ultra, internal shared-premise assessment.
