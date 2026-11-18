@@ -21,3 +21,16 @@ Store dated proof/domain/estimate assessments here with actual provenance and sh
 - [E17 regional statistics assessment](09_VCD_GT_CM_E17_REGIONAL_STATISTICS_ASSESSMENT_20261118.md): accepts the conditional local comparisons and statistical consumers after two scope/reference repairs; no formula correction or new Lambda bound. Separate-agent internal shared-premise review for Edward Baker with Codex assistance, 18 November; actual settings unavailable.
 
 - [E19 recent manuscript assessment](10_VCD_GT_CM_E19_RECENT_MANUSCRIPT_ASSESSMENT_20261118.md): accepts the identity, approximation-screen and conditional statistical domains after three definition/scope repairs; no formula change. Separate nonauthor internal shared-premise assessment, actual settings unavailable, for Edward Baker with Codex assistance, 18 November 2026.
+
+- [E22 canonical horizon assessment](11_VCD_GT_CM_E22_CANONICAL_HORIZON_ASSESSMENT_20261118.md): accepts the positive-slab complete-interaction asymptotic and scoped one-step comparison limitation; first pass required no mathematical correction, followed by one lead-requested control-scope wording check. Separate nonauthor internal shared-premise review for Edward Baker with Codex assistance, 18 November 2026; actual settings unavailable.
+
+- [E24 joint-time assessment](12_VCD_GT_CM_E24_JOINT_TIME_ASSESSMENT_20261118.md): accepts the joint barrier, canonical positive-slab acquisition and source-jet comparison after one rate-label clarification. Separate nonauthor internal shared-premise review for Edward Baker with Codex assistance, 18 November 2026; actual settings unavailable.
+
+- [E25 compact floor-screen assessment](13_VCD_GT_CM_E25_COMPACT_FLOOR_SCREEN_ASSESSMENT_20261118.md): separate nonauthor source/transfer/scope review; the assessment and sole register own its verdict. For Edward Baker with Codex assistance, 18 November 2026; actual settings unavailable.
+
+- [E27 integrated manuscript assessment14](14_VCD_GT_CM_E27_INTEGRATED_MANUSCRIPT_ASSESSMENT_20261118.md): accepted within scope after two bounded geometry/cross-reference clarifications; all 38 corrected pins checked. Non-author internal shared-premise assessment, no specialist claim. For Edward Baker with Codex assistance, 18 November 2026; actual settings unavailable.
+
+- [E29 assessment15](15_VCD_GT_CM_E29_FORCE_AND_TRANSIENT_ASSESSMENT_20261118.md): Note32 scoped screens and conditional retained-forcing comparison.
+- [E30 assessment16](16_VCD_GT_CM_E30_FORWARD_STATISTICS_ASSESSMENT_20261118.md): Note34 finite-census inference, conditional forward estimates and initial-M round-trip scope.
+
+- [Assessment17](17_VCD_GT_CM_E32_TWO_SIDED_MANUSCRIPT_ASSESSMENT_20261118.md): E32 forward-statistics, retained-forcing and two-sided manuscript assessment; three theorem-reference descriptors corrected, formulas unchanged. Separate nonauthor internal shared-premise review, not specialist validation. Prepared for Edward Baker with Codex assistance, 18 November 2026; actual settings unavailable.

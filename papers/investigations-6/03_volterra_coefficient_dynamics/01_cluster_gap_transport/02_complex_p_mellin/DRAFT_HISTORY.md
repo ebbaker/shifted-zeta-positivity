@@ -98,3 +98,58 @@ helpers: **GPT-6.1 Sol/ultra**. Requested settings are not serving attestation.
   the unchanged approximation task to the revised framework. No numerical
   campaign, new Lambda bound or snapshot folder. For Edward Baker with
   Codex assistance; actual settings unavailable, internal shared-premise review.
+
+- **18 November 2026 — B07 r2 canonical consumer disposition:** [Note21](notes/21_VCD_GT_CM_E21_CANONICAL_HEIGHT_HORIZON_20261118.md) proves complete high-height interaction DM→1/2 with full shell tails, giving initial-M horizon ~g²/4 versus two-neighbor ~g²/6. The unchanged fixed-step score fails at all sufficiently high pairs, even with exact initial data; this limits the comparison, not actual dynamics. [E22](reviews/11_VCD_GT_CM_E22_CANONICAL_HORIZON_ASSESSMENT_20261118.md) accepts within scope, with no mathematical correction and one final control-premise wording clarification. Polymath's common positive-slab exterior theorem is reused; no compact statistics, explicit cutoff or Lambda gain. [Continuation22](notes/22_VCD_GT_CM_B07_R2_SYNTHESIS_AND_CONTINUATION_20261118.md) and record09 retain the precise next-input gate. Manuscript and E16 source pins preserved; no numerical campaign or snapshot. For Edward Baker with Codex assistance; actual chat0003 settings unavailable, separate internal shared-premise assessment.
+
+- **18 November 2026 — stronger joint-time comparison:** [Note25](notes/25_VCD_GT_CM_E23_JOINT_BARRIER_AND_CANONICAL_HEAD_20261118.md) proves the V/K barrier and canonical growing-head acquisition, with relative gap-square loss O(Delta/log X) on each fixed positive slab. [E24](reviews/12_VCD_GT_CM_E24_JOINT_TIME_ASSESSMENT_20261118.md) accepts within scope after one gap-square rate-label repair. The source already covers the high exterior; compact acquisition and Lambda improvement remain open. [Continuation26](notes/26_VCD_GT_CM_JOINT_TIME_SYNTHESIS_AND_CONTINUATION_20261118.md) and [record10](numerics/10_VCD_GT_CM_B07_R3_JOINT_TIME_RECORD_20261118.json) retain the result. No manuscript edit or numerical campaign. For Edward Baker with Codex assistance; actual settings unavailable, separate internal shared-premise assessment.
+
+- **18 November 2026 — compact source/consumer screen:** [Note27](notes/27_VCD_GT_CM_COMPACT_CONTOUR_SELECTION_AND_FLOOR_SCREEN_20261118.md) selects complete-source contour acquisition and fixes a .1003 Lehmer descent. An inherited canonical log bound gives |K(0)|<.003, limiting the selected constant-floor allowance to <.0896. [E25](reviews/13_VCD_GT_CM_E25_COMPACT_FLOOR_SCREEN_ASSESSMENT_20261118.md) accepts without correction. No numerical acquisition, new coverage or Lambda bound; [Continuation28](notes/28_VCD_GT_CM_COMPACT_SCREEN_SYNTHESIS_AND_CONTINUATION_20261118.md). For Edward Baker with Codex assistance; actual settings unavailable, separate internal shared-premise assessment.
+
+- **18 November 2026 — author's coupled-lattice proposal:** [Note29](notes/29_VCD_GT_CM_ZERO_INDEXED_COUPLED_LATTICE_20261118.md) adds the adjacent-pair index to the existing p,q moments and records shared-zero/resolvent compatibility and a block force cancellation. Conceptual formulation with read-only advisory checks; no stable finite closure or individual-gap bound. This was the conceptual continuation, superseded by Continuation31 at the manuscript milestone; E16 remains optional. For Edward Baker with Codex assistance; actual settings unavailable.
+
+- **18 November 2026 — coupled-lattice analytical manuscript:**
+  [Integration30](notes/30_VCD_GT_CM_COUPLED_LATTICE_MANUSCRIPT_INTEGRATION_20261118.md)
+  systematically derives zero-index compatibility and block errors, joint
+  V/K comparison, complete canonical acquisition and compact stopped-region
+  transfer. [E27](reviews/14_VCD_GT_CM_E27_INTEGRATED_MANUSCRIPT_ASSESSMENT_20261118.md)
+  accepts within scope after two clarifications; formulas/constants unchanged.
+  Clean 61-page PDF under ignored output, all pages visually checked.
+  Numerics are a supporting appendix only. Overview/plan/register now
+  center the concentration question; [Continuation31](notes/31_VCD_GT_CM_COUPLED_LATTICE_MANUSCRIPT_CONTINUATION_20261118.md)
+  was current at this milestone (next routing superseded by Continuation33);
+  E16 r3 independently optional. No stable closure, new coverage,
+  Lambda bound or snapshot. For Edward Baker with Codex assistance; actual
+  settings unavailable, separate internal shared-premise assessment.
+
+- **18 November 2026 — concentration consumers and retained forcing:**
+  [Note32](notes/32_VCD_GT_CM_FORCE_DISPERSION_AND_RETAINED_FORCING_20261118.md)
+  derives common-force dispersion, rejects the frozen unsigned <.0008
+  allowance and sharper constant-K target, and proves conditional margin
+  >.00006246 from F>=.3. [E29](reviews/15_VCD_GT_CM_E29_FORCE_AND_TRANSIENT_ASSESSMENT_20261118.md)
+  accepts without correction; fixed rational replay retained. Complete
+  source floor and extended tube unacquired; direct D/M matches.
+
+- **18 November 2026 — author's forward-statistics proposal:**
+  [Note34](notes/34_VCD_GT_CM_TIME_ZERO_FORWARD_STATISTICS_20261118.md)
+  deduces finite real/simple labels from the existing complete census,
+  proves conditional forward contraction/minimum-tail estimates and the
+  exact initial-M round-trip limitation (h-t)'=-2Fh².
+  [E30](reviews/16_VCD_GT_CM_E30_FORWARD_STATISTICS_ASSESSMENT_20261118.md)
+  accepts after one clarification paying the two-neighbor omitted exterior. [Continuation33](notes/33_VCD_GT_CM_RETAINED_FORCING_CONTINUATION_20261118.md)
+  prioritizes retained joint acquisition. No new source certificate,
+  manuscript/PDF change or Lambda gain. Both entries prepared for Edward
+  Baker with Codex assistance; actual settings unavailable.
+
+- **18 November 2026 — recursive and continuous two-sided manuscript:**
+  [Note35](notes/35_VCD_GT_CM_RECURSIVE_TWO_SIDED_FORMULATION_20261118.md)
+  and [Integration36](notes/36_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_INTEGRATION_20261118.md)
+  develop sound common-source refinement, fixed-relation skeleton invariance
+  and exact forward-error/backward-adjoint pairing alongside forward
+  statistics and retained forcing. [E32](reviews/17_VCD_GT_CM_E32_TWO_SIDED_MANUSCRIPT_ASSESSMENT_20261118.md)
+  accepts within scope after three reference descriptors were repaired;
+  formulas unchanged. Clean 81-page ignored PDF, all pages visually checked;
+  numerics remain supporting Appendix B. [Continuation37](notes/37_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_CONTINUATION_20261118.md)
+  sets the strict common-source gain gate; E16 r4 stays independently optional
+  and unexecuted. No acquired strict recursive gain, new coverage, Lambda
+  bound or snapshot folder. For Edward Baker with Codex assistance; actual
+  settings unavailable, separate internal shared-premise review.

@@ -1,10 +1,10 @@
-# Complex powers and Mellin contours for interaction evolution
+# Exterior moments, coupled gaps and two-sided source refinement
 
-17 November 2026, America/New_York. Prepared for **Edward Baker** with
-OpenAI Codex LLM assistance. Actual lead model and effort unavailable in
-this chat's recorded configurations. Intended research effort: **ultra**;
-recommended conceptual lead: **Astra**; expressly authorized bounded
-helpers: **GPT-6.1 Sol/ultra**. Requested settings are not serving attestation.
+18 November 2026, America/New_York. Prepared for **Edward Baker** with
+OpenAI Codex LLM assistance. Actual model and effort unavailable in the
+current guarded chat registry; helpers inherited settings. Earlier
+requested configurations remain in the historical records and are not
+serving attestation.
 
 **Complete contour formulas and integer hierarchy established within their domains; canonical signed bound still open.** This sibling
 investigation asks whether the evolution equation for the complete exterior
@@ -14,12 +14,20 @@ The explicit [symmetry subgoal](notes/02_VCD_GT_CM_SYMMETRY_SUBGOAL_20261117.md)
 searches for identities of S(p), or controlled defects, that improve this bound.
 Analytical arguments must have an explicit route to the infinite divisor,
 unbounded contour height, or unbounded moment order relevant to the claim.
+The common-divisor lattice now also supports conditional forward gap
+statistics, retained-forcing comparisons and a precise recursive/continuous
+two-sided formulation. Strict canonical refinement and its source estimates
+remain open. Read the [result index](../../../../../result-summaries/README.md),
+especially [cluster18](../../../../../result-summaries/18_tensor_approximation_and_coefficient_bounds.md),
+and the [avoid index](../../../../../avoid/README.md), especially
+[joint bounds12](../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md).
 
 - [Scientific overview](research-overview/01_VCD_GT_CM_RESEARCH_OVERVIEW_20261117.md).
 - [Sustained B/E research plan](research-plan/01_VCD_GT_CM_RESEARCH_PLAN_20261117.md).
 - [Sole VCD-GT-CM progress register](research-progress/01_VCD_GT_CM_RESEARCH_PROGRESS_20261117.md).
 - [Analytical manuscript and build guide](manuscript/README.md).
-- [Current manuscript continuation](notes/19_VCD_GT_CM_REGIONAL_STATISTICS_MANUSCRIPT_CONTINUATION_20261118.md).
+- [Current research continuation](notes/37_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_CONTINUATION_20261118.md).
+- [Recursive and continuous two-sided formulation](notes/35_VCD_GT_CM_RECURSIVE_TWO_SIDED_FORMULATION_20261118.md).
 - [BBGKY reconsideration and E16 route](notes/15_VCD_GT_CM_B05_BBGKY_TRUNCATION_RECONSIDERATION_20261118.md).
 - [B03 r2 continuation](notes/14_VCD_GT_CM_B03_R2_CONTINUATION_20261118.md).
 - [B03 r2 joint transport and superzeta research](notes/13_VCD_GT_CM_B03_JOINT_TRANSPORT_AND_SUPERZETA_20261118.md).
@@ -32,7 +40,7 @@ unbounded contour height, or unbounded moment order relevant to the claim.
 - [Parent cluster gap transport](../README.md) and
   [Gaussian/resolvent sibling](../01_gaussian_resolvent_hierarchy/README.md).
 
-**Current results and continuation:** [Synthesis10](notes/10_VCD_GT_CM_SPLIT_POLE_SYNTHESIS_AND_CONTINUATION_20261118.md) answers the author's separate-pole proposal: the complete relative integer moments and D close componentwise in an infinite hierarchy. The equivalent even/odd S/T equations are regular through mergers and include the new T2 evolution. [E11](reviews/05_VCD_GT_CM_E11_INTEGER_CLOSURE_ASSESSMENT_20261118.md) accepts both proofs within their domains. Finite truncation, arbitrary-sequence well-posedness and a stronger canonical signed bound are not established. The [earlier synthesis](notes/07_VCD_GT_CM_SESSION_SYNTHESIS_AND_CONTINUATION_20261117.md) retains the assessed complex-power time law, branch corrections and damped contour formula, together with its scoped static comparison. All assessments are internal with shared premises.
+**Historical integer-closure synthesis (current routing superseded below):** [Synthesis10](notes/10_VCD_GT_CM_SPLIT_POLE_SYNTHESIS_AND_CONTINUATION_20261118.md) answers the author's separate-pole proposal: the complete relative integer moments and D close componentwise in an infinite hierarchy. The equivalent even/odd S/T equations are regular through mergers and include the new T2 evolution. [E11](reviews/05_VCD_GT_CM_E11_INTEGER_CLOSURE_ASSESSMENT_20261118.md) accepts both proofs within their domains. Finite truncation, arbitrary-sequence well-posedness and a stronger canonical signed bound are not established. The [earlier synthesis](notes/07_VCD_GT_CM_SESSION_SYNTHESIS_AND_CONTINUATION_20261117.md) retains the assessed complex-power time law, branch corrections and damped contour formula, together with its scoped static comparison. All assessments are internal with shared premises.
 
 CM owns complex powers, branch/sector organization and p-plane contour
 estimates. GR retains Gaussian localization and its signed evolution
@@ -97,6 +105,67 @@ residuals and their scoped propagation limitation, joint forcing/deflation,
 and backward regional gap statistics. [E19](reviews/10_VCD_GT_CM_E19_RECENT_MANUSCRIPT_ASSESSMENT_20261118.md)
 accepts the corrected analytical scope; the PDF is built and visually
 checked under ignored output. [Continuation19](notes/19_VCD_GT_CM_REGIONAL_STATISTICS_MANUSCRIPT_CONTINUATION_20261118.md)
-is the current handoff. Canonical three-gap statistics and uniform height
-coverage remain open; E16 r2 is a separate ready approximation task.
+was that manuscript handoff. Its original statistical acquisition questions
+are refined by B07 r2 below; E16 r2 is a separate ready approximation task.
 Prepared for Edward Baker with Codex assistance; actual settings unavailable.
+
+**B07 r2 source/consumer result, 18 November:** [Note21](notes/21_VCD_GT_CM_E21_CANONICAL_HEIGHT_HORIZON_20261118.md) and [E22](reviews/11_VCD_GT_CM_E22_CANONICAL_HORIZON_ASSESSMENT_20261118.md) establish the canonical high-height horizons g²/6 for two neighbors and g²/4 for complete initial interaction, with full tails and uniformity on positive slabs. The unchanged one-step comparison fails for every fixed positive duration at sufficiently high zeros, even with exact initial data. This is a limitation of that allowance, not actual dynamics. Polymath's common positive-slab exterior theorem is directly reusable; no compact gap-tail law or new Lambda bound is acquired. [Continuation22](notes/22_VCD_GT_CM_B07_R2_SYNTHESIS_AND_CONTINUATION_20261118.md) was the r2 handoff, now superseded by Continuation26. E16 r2 remains ready and unexecuted. Prepared for Edward Baker with Codex assistance; actual chat0003 settings unavailable, separate internal shared-premise assessment.
+
+**B07 r3 joint-time result, 18 November:** [Note25](notes/25_VCD_GT_CM_E23_JOINT_BARRIER_AND_CANONICAL_HEAD_20261118.md) proves a coupled gap/forcing barrier with canonical positive-slab inputs. Its relative gap-square loss is O(Delta/log X), overcoming the earlier shrinking allowance on each fixed admissible positive slab. [E24](reviews/12_VCD_GT_CM_E24_JOINT_TIME_ASSESSMENT_20261118.md) accepts the stated domains after one rate-label clarification. The source already protects this high exterior; compact acquisition and new Lambda bounds remain open. [Continuation26](notes/26_VCD_GT_CM_JOINT_TIME_SYNTHESIS_AND_CONTINUATION_20261118.md) was the r3 handoff. Prepared for Edward Baker with Codex assistance; actual chat0003 settings unavailable, internal shared-premise assessment.
+
+**B07 r4 compact selection, 18 November:** [Note27](notes/27_VCD_GT_CM_COMPACT_CONTOUR_SELECTION_AND_FLOOR_SCREEN_20261118.md) selects complete-source contour extraction on a stopped region. For a Lehmer descent from .1 to −.0003, the inherited canonical log certificate proves |K(0)|<.003; the one constant-floor consumer then permits less than .0896, below the required .1003. This rejects that allowance before numerical acquisition, not actual descent or time-varying comparison. [Continuation28](notes/28_VCD_GT_CM_COMPACT_SCREEN_SYNTHESIS_AND_CONTINUATION_20261118.md) records this screen; E25 accepts its scope without correction. For Edward Baker with Codex assistance; actual settings unavailable.
+
+**Historical author-proposed coupled lattice:** [Note29](notes/29_VCD_GT_CM_ZERO_INDEXED_COUPLED_LATTICE_20261118.md) indexes the split-pole moments by adjacent pair, makes the all-gap coupling and neighboring-row compatibility explicit, and retains a block boundary-force cancellation. Compatibility and aggregate cancellation do not yet protect an individual gap or establish stable finite closure. E16 remains independently optional. For Edward Baker with Codex assistance, 18 November 2026; actual settings unavailable, read-only advisory checks.
+
+**Historical 18 November coupled-lattice manuscript milestone:** the
+[61-page draft at that milestone](notes/30_VCD_GT_CM_COUPLED_LATTICE_MANUSCRIPT_INTEGRATION_20261118.md) systematically derives
+the zero-index compatibility, block cancellation, joint-time barrier,
+canonical source comparison and compact stopping theorem. Numerics appear
+only in a supporting inherited example. [E27](reviews/14_VCD_GT_CM_E27_INTEGRATED_MANUSCRIPT_ASSESSMENT_20261118.md)
+accepts within scope after two clarifications; the final PDF is built and
+visually checked. [Integration30](notes/30_VCD_GT_CM_COUPLED_LATTICE_MANUSCRIPT_INTEGRATION_20261118.md)
+and [Continuation31](notes/31_VCD_GT_CM_COUPLED_LATTICE_MANUSCRIPT_CONTINUATION_20261118.md)
+supersede earlier current handoffs without changing their historical
+scientific verdicts. The overview and plan now center the source-specific
+individual-gap concentration question. E16 r3 is independently optional;
+no stable closure, new coverage or Lambda gain. For Edward Baker with
+Codex assistance; actual settings unavailable, internal shared-premise review.
+
+**18 November forward-statistics continuation:** [Note34](notes/34_VCD_GT_CM_TIME_ZERO_FORWARD_STATISTICS_20261118.md)
+responds to the author's time-zero/forward/backward proposal. It deduces a
+finite real-simple population from the existing complete census, derives
+conditional forward estimates and screens the unchanged initial-M return.
+[Note32](notes/32_VCD_GT_CM_FORCE_DISPERSION_AND_RETAINED_FORCING_20261118.md)
+retains a quantified conditional F>=.3 target and scoped consumer failures.
+The [historical continuation33](notes/33_VCD_GT_CM_RETAINED_FORCING_CONTINUATION_20261118.md)
+prioritized joint forward acquisition; source estimates remain unacquired.
+Prepared for Edward Baker with Codex assistance; actual settings unavailable.
+
+**18 November recursive/continuous formulation and manuscript integration:**
+[Note35](notes/35_VCD_GT_CM_RECURSIVE_TWO_SIDED_FORMULATION_20261118.md)
+formalizes the author's repeated forward/backward idea as sound enclosures
+of one common-source path and an exact continuous adjoint residual identity.
+For fixed transitions and no new observations, a sweep leaves the full
+compatible skeleton and its exact joint bounds unchanged; tightening weaker
+marginal enclosures is distinct. No strict canonical contraction, convergence
+rate, stable finite closure or Lambda gain is proved. The manuscript now
+develops forward statistics, retained forcing and two-sided refinement in
+[source17](manuscript/sections/17_forward_statistics.tex),
+[source18](manuscript/sections/18_retained_forcing.tex) and
+[source19](manuscript/sections/19_two_sided_refinement.tex); numerical anchors
+and the finite census remain supporting Appendix B material.
+[Integration36](notes/36_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_INTEGRATION_20261118.md)
+and [Continuation37](notes/37_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_CONTINUATION_20261118.md)
+route this milestone. E32 accepted after three reference-descriptor fixes;
+the clean 81-page PDF and all rendered pages were checked. The sole
+register owns E31–E33 disposition.
+
+The next default conceptual gate is **B10 r2**: select one finite correlated
+source enclosure or adjoint target and derive strict gain against equally
+informed direct joint propagation, paying whole-time coverage, source and
+boundary errors. B09 forward joint acquisition and B08 direct retained-F
+acquisition remain separate alternatives. [E16 r4](research-progress/handoffs/VCD-GT-CM-E16-r4.md)
+is a mechanical source rebind for the same independently optional,
+unexecuted approximation proof. For Edward Baker with Codex assistance;
+actual model/effort unavailable. No source campaign follows from these
+representations alone.

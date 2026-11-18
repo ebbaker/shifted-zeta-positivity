@@ -1410,3 +1410,92 @@ signs and compatibility relations could matter to the actual solution.”
 [E19](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/10_VCD_GT_CM_E19_RECENT_MANUSCRIPT_ASSESSMENT_20261118.md)
 accepts that scoped screen. Do not infer either stable truncation from the
 small residual or actual instability from the growing absolute allowance.
+
+
+**18 November 2026 — exact initial mass does not repair a discarded time forcing.**
+For Edward Baker with Codex assistance; actual chat0003 settings unavailable.
+[CM Note21](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/21_VCD_GT_CM_E21_CANONICAL_HEIGHT_HORIZON_20261118.md) proves the canonical high-height horizon ~g²/4 for the
+initial-M Riccati comparison, even with exact initial data. It states:
+“The positive terms 12S2+16DS3 in M_u exactly balance 2M² here; dropping them causes the loss.”
+“Here” is the exact stationary cosine control, not a claimed stationary
+theta field. [E22](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/11_VCD_GT_CM_E22_CANONICAL_HORIZON_ASSESSMENT_20261118.md) accepts the scoped result. Better acquisition of the same
+initial lower bound cannot fix this comparison's all-height fixed-step
+failure; a joint-in-time consumer or independent exterior theorem is a
+different input. Do not read the allowance's failure as actual dynamics,
+or repeat the same acquisition campaign without changing that consumer.
+
+**18 November 2026 — retain the coupled quantity and pay its time input.**
+For Edward Baker with Codex assistance; actual settings unavailable.
+[CM Continuation26](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/26_VCD_GT_CM_JOINT_TIME_SYNTHESIS_AND_CONTINUATION_20261118.md)
+states: “A full-time hypothesis is not an acquired source estimate merely
+because it implies this inequality.” The assessed V/K barrier improves the
+initial-M allowance on canonical positive slabs, while the weaker ratio
+F/(2M²) comparison still amplifies positive deficits backward. Its
+cosine-plus-constant collision control fails the new whole-time K floor;
+this is no canonical obstruction. The source already protects the high
+exterior. Acquire a compact K floor without assuming the sought positivity,
+and give the direct comparator the same information before claiming new
+coverage or cost gain. [E24](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/12_VCD_GT_CM_E24_JOINT_TIME_ASSESSMENT_20261118.md)
+accepts these stated domains; separate internal shared-premise assessment.
+
+**18 November 2026 — a constant envelope can discard the useful transient.**
+For Edward Baker with Codex assistance; actual settings unavailable.
+[CM Note27](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/27_VCD_GT_CM_COMPACT_CONTOUR_SELECTION_AND_FLOOR_SCREEN_20261118.md)
+states: “A shorter interval, renewed anchors, a time-varying barrier, an
+integral comparison or regular coupled evolution is a different consumer
+and is not excluded by (18).” An actual small canonical K at one included
+time caps the selected constant-barrier allowance below .0896 against
+.1003. Better numerical precision cannot repair this consumer. Preserve
+its class when changing to correlated time/index information; a block
+aggregate alone also need not control an exceptional small gap.
+[E25](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/13_VCD_GT_CM_E25_COMPACT_FLOOR_SCREEN_ASSESSMENT_20261118.md)
+accepts the stated screen, not a universal dynamics obstruction.
+
+**18 November 2026 — block cancellation does not control concentration.**
+For Edward Baker with Codex assistance; actual settings unavailable.
+The [assessed coupled-lattice section](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/manuscript/sections/14_coupled_lattice.tex)
+states: “A block can preserve its total length while one interior gap
+decreases to zero.” Shared node-force errors cancel internally, but a
+minimum-gap estimate still needs concentration control; uncertain reciprocal
+gaps and exterior/boundary errors remain payable. Its direct common-source
+comparator has the same cancellation. Do not count compatibility as stable
+approximation or the aggregate allowance as individual-gap protection.
+[E27](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/14_VCD_GT_CM_E27_INTEGRATED_MANUSCRIPT_ASSESSMENT_20261118.md)
+accepts these scoped identities, not a new collision exclusion.
+
+**18 November 2026 — retain the physical forcing after a scalar screen.**
+For Edward Baker with Codex assistance; actual settings unavailable.
+[CM Note32](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/32_VCD_GT_CM_FORCE_DISPERSION_AND_RETAINED_FORCING_20261118.md)
+states: “The last inequality concerns the **comparison envelope**, not the actual
+canonical force dispersion.” Its unsigned fixed-stop allowance fails, as
+does the sharper constant-K model, while a physical F floor has a strict
+conditional margin. [E29](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/15_VCD_GT_CM_E29_FORCE_AND_TRANSIENT_ASSESSMENT_20261118.md)
+accepts these classes. Do not infer actual growth from the unsigned
+envelope or failure of constant F from small K=2D²F. The positive scalar
+margin still needs its signed complete-source floor and full error budget.
+
+**18 November 2026 — subtract the forward excursion in a backward claim.**
+For Edward Baker with Codex assistance; actual settings unavailable.
+[CM Note34](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/34_VCD_GT_CM_TIME_ZERO_FORWARD_STATISTICS_20261118.md)
+states: “The backward use must retain what the forward step learned.”
+The exact initial-M horizon obeys (h-t)'=-2Fh² under its stated sign
+hypotheses, so that unchanged consumer gains no earlier endpoint by
+forwarding exact data first. This does not exclude retained forcing or
+better acquisition than a weak initial bound. [E30](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/16_VCD_GT_CM_E30_FORWARD_STATISTICS_ASSESSMENT_20261118.md)
+also requires a paid omitted exterior before using two real neighbors as
+a lower bound for complete M. A forward upper M estimate is not the
+backward lower estimate, and small velocity variance is not a gap-tail law.
+
+**18 November 2026 — consistency sweeps do not create joint information.**
+For Edward Baker with Codex assistance; actual settings unavailable.
+[CM Note35](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/35_VCD_GT_CM_RECURSIVE_TWO_SIDED_FORMULATION_20261118.md)
+states: “Shrinking the full already-retained feasible set requires new
+observations or soundly refined transition relations.” For fixed relations,
+each old full skeleton witnesses its own neighboring projections. Sweeps
+can tighten a marginal relaxation but leave exact joint extrema unchanged
+without new observations. Likewise the exact adjoint identity needs a paid
+signed remainder before it gives a useful bound. Compare any claimed gain
+with direct joint propagation given the same source, observations and errors.
+[E32](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/17_VCD_GT_CM_E32_TWO_SIDED_MANUSCRIPT_ASSESSMENT_20261118.md)
+accepts this scoped identity and formulation, not a universal obstruction to
+recursive source acquisition or a strict canonical improvement theorem.

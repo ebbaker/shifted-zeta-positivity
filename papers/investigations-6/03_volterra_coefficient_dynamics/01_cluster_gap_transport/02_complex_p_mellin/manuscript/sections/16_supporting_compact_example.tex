@@ -1,0 +1,327 @@
+% Supporting inherited certificate only; not an input to the main theory.
+\section{An inherited compact certificate as a supporting example}
+\label{app:compact-example}
+
+This appendix applies the analytical screen of
+Proposition~\ref{cmp:small-slice} to an existing certificate. The source
+values are numerical supporting evidence, already obtained with complete
+source, interpolation, quadrature and arithmetic allowances in
+\cite{BakerGT15,BakerGT14}; no new source evaluation is performed here.
+The main contour, lattice and comparison theorems do not depend on them.
+The resulting arithmetic and scope were checked in \cite{BakerCM27}.
+
+The certificate follows the Lehmer pair near $a=14010.1$ on
+$0\le t\le0.1$. The gauged field $G=\e^{\pi a/8}H$ counts two zeros
+inside $|z-a|<3/4$ and has a cleared annulus out to radius $21/20$.
+Its centered annular logarithm has modulus less than $1.737$ on both
+boundaries and hence throughout the annulus. Its directly enclosed
+incoming values at $t_*=0.1$ imply the safe rounded bounds
+\begin{equation}
+ \begin{gathered}
+ 0.1787368\le D(t_*)\le0.1787369,\qquad
+ 0.6037742\le M(t_*)\le0.6037744,\\
+ V(0)\le1-2(0.1787368)(0.6037742)
+       =0.78416666313888.
+ \end{gathered}
+ \label{supp:incoming}
+\end{equation}
+The older certificate's drift symbol is $K_{\mathrm{GT}}=-M$; it is
+not the forcing $K=2D^2\mathcal F$ used in the present paper.
+Here $V(0)$ is at backward time zero, namely physical time $t_*$.
+
+Consider the proposed local descent to $t=-0.0003$, of duration
+$\Delta=0.1003$. With $d_{\mathrm{stop}}=0.0001$, a hypothetical
+$v\le0.89$ would leave the strict margin
+\[
+ 0.1787368-2(0.89)(0.1003)-0.0001=0.0001028>0,
+\]
+and would require the forcing floor $\kappa\ge1-0.89^2=0.2079$.
+The existing certificate ends at physical time zero: neither the
+negative-time source bounds nor the proposed floor are available from it.
+Even the favorable initial-$M$ scalar allowance is at most
+\[
+ \frac{0.1787369}{2(1-0.1787369\cdot0.6037744)}<0.100180,
+\]
+which does not reach the proposed duration.
+
+The already certified physical slice $t=0$ is enough to test the stronger
+constant-$v$ proposal. At that slice,
+\[
+ |c-a|<0.1,\qquad 0<D<0.002,\qquad
+ |\mathcal L-\mathcal L_{\mathrm{center}}|<7/4
+ \quad\text{on }|z-a|=0.9.
+\]
+There $|Q|>0.638>3/5$ and $|Q'|\le2$. The complete log kernel
+\eqref{cmp:log-kernel} gives
+\begin{align*}
+ |S_2|&\le 2(0.9)(7/4)2/(3/5)^3=175/6,\\
+ |S_3|&\le 3(0.9)(7/4)2/(3/5)^4=875/12,\\
+ |\mathcal F|&\le12|S_2|+16(0.002)|S_3|\le1057/3.
+\end{align*}
+Consequently the actual complete forcing satisfies
+\begin{equation}
+ |K(t=0)|<2(0.002)^2(1057/3)
+        =1057/375000<0.003.
+ \label{supp:small-K}
+\end{equation}
+This upper bound is not a failed lower enclosure. Any constant floor
+covering this slice has $\kappa<0.003$, and the selected constant
+parameter must obey $v>\sqrt{0.997}>0.998$. Even exact initial data and
+zero stop threshold therefore give only
+\[
+ \Delta<\frac{0.1787369}{2(0.998)}<0.0896<0.1003.
+\]
+Refining the numerical floor cannot make this particular consumer pass.
+The slice is inside the proposed stopping region, since its certified
+$D(t=0)>0.00142117>0.0001$. It is used to reject a new allowance, not to
+present already known positivity as new coverage.
+
+The conclusion concerns the one constant-$v$ barrier from this fixed
+anchor over an interval containing physical time zero. It proves no
+collision or failure of actual descent, and excludes neither a sharper
+transient comparison nor time-dependent or regular coupled evolution.
+The same-source direct endpoint estimate is stronger on the old interval;
+no method is certified here on the proposed negative-time extension.
+No global all-real start, practical all-height cutoff or improved bound
+on $\Lambda$ follows from this local supporting example.
+
+\subsection{An unsigned force envelope at the same anchor}
+\label{supp:force-envelope}
+
+The subsequent comparison in \cite{BakerCM32,BakerCMReview29} uses
+the same anchor to test a specific compression of the common node-force
+equation. For two nodes put $r_U=|PU|$, where $P$ subtracts the mean
+and $U_i=H_{zz}(x_i)/(2H_z(x_i))$. The exact common-label identity gives
+\[
+ g(u)=g(0)-2\int_0^u(U_1-U_0)\dd s
+       \ge g(0)-2\sqrt2\int_0^u r_U\dd s.
+\]
+In backward time the internal graph term is antidissipative. Replacing
+its gap denominator by the fixed stop
+$s=2\sqrt{d_{\rm stop}}=1/50$ and the exterior forcing by an
+independent nonnegative norm allowance gives the particular scalar
+envelope
+\[
+ \mathcal R'=10000\mathcal R+J_{\rm ext},\qquad
+ J_{\rm ext}\ge0,\qquad \mathcal R(0)\ge r_U(0).
+\]
+Even with zero exterior allowance and zero added errors,
+$\mathcal R(u)\ge r_U(0)\e^{10000u}$.
+This is a property of the envelope, not a lower growth estimate for
+the actual force norm.
+
+The safe incoming bounds in \eqref{supp:incoming} imply
+$g(0)<423/500$ and $M(0)<151/250$. The edge force identity therefore
+gives
+\[
+ U_1-U_0=\frac2{g(0)}-g(0)M(0)
+  >\frac{1000}{423}-\frac{423}{500}\frac{151}{250}
+  >\frac{37}{20}.
+\]
+Since $2\sqrt2r_U(0)=2|U_1-U_0|>37/10$, a positive margin from this
+unsigned envelope requires
+\begin{equation}
+ \Delta<10^{-4}\log\left(1+
+       \frac{10000(0.846-0.02)}{3.7}\right)
+       =10^{-4}\log\frac{82637}{37}<0.0008.
+ \label{supp:force-duration}
+\end{equation}
+The last strict comparison follows exactly from
+\[
+ \e^8>\sum_{k=0}^{10}\frac{8^k}{k!}
+       =\frac{3830591}{1575}>\frac{82637}{37}.
+\]
+This rejects the fixed-stop-denominator, unsigned-exterior scalar
+compression for the proposed $0.1003$ descent. It does not reject
+state-dependent denominators, signed exterior correlations, other blocks
+or the complete force dynamics.
+
+\subsection{The retained constant-\texorpdfstring{$K$}{K} transient still misses the endpoint}
+\label{supp:constant-K-transient}
+
+Theorem~\ref{rf:constant-K} retains more than the earlier constant-$v$
+barrier. It can nevertheless be screened using the same actual included
+slice \eqref{supp:small-K}. Give its scalar model the favorable data
+\[
+ d_+=0.1787369,\qquad b_+=0.6037744,\qquad
+ v_-=1-2d_+b_+,\qquad \kappa_*=1057/375000.
+\]
+The initial gap $2\sqrt D$ and initial backward velocity
+$-2/\sqrt D+4M\sqrt D$ are both increasing on the positive anchor
+rectangle. The stated upper endpoints therefore maximize both initial
+data. Increasing $\kappa$ likewise favors the cooperative comparison.
+Any constant floor covering the certified $t=0$ slice is less than
+$\kappa_*$, so these choices are favorable even to an exact-data use.
+
+Substitution of the rational values into
+\eqref{rf:constant-K-polynomial} gives the exact inequality
+\begin{equation}
+ d_+-2v_-\Delta+
+       \frac{v_-^2+\kappa_*-1}{d_+}\Delta^2
+       <-\frac{8239}{10^8}<0,
+ \qquad \Delta=1003/10000.
+ \label{supp:transient-failure}
+\end{equation}
+The model starts positive and has reached its first zero before this
+endpoint. Its negative polynomial value is not asserted as a
+positive-gap comparison after that zero. Equivalently, even the
+favorable endpoint requirement $d_\kappa(\Delta)>d_{\rm stop}$ would
+need
+\[
+ \kappa>
+ 1-v_-^2+\frac{d_+}{\Delta^2}
+       (d_{\rm stop}-d_++2v_-\Delta)
+ >0.00605917>\kappa_*.
+\]
+For a stopped-trial use, successful passage would put the actual included
+slice inside the trial region. If a lower stop occurred earlier, the
+proposed target would already have failed. The necessary screen therefore
+does not assume the desired whole-interval positivity.
+
+This strengthens the earlier allowance rejection to the sharp scalar
+constant-$K$ transient comparison from this anchor. It still excludes
+neither time-dependent $K$ nor a constant physical $\mathcal F$ floor.
+
+\subsection{A positive conditional margin for retained physical forcing}
+\label{supp:retained-F}
+
+Set
+\[
+ d=0.1787368,\qquad b=0.6037742,\qquad f=3/10,\qquad
+ \Delta=1003/10000.
+\]
+These are the incoming lower data and a proposed complete forcing floor,
+not a measured lower value of $\mathcal F$. The model of
+Theorem~\ref{rf:forcing-comparison} has a rigorously positive margin.
+Here is the exact rational calculation, as recorded in
+\cite{BakerCM32,BakerCMReview29}.
+
+Put $\lambda^2=2f=3/5$, $w=4\lambda^2\Delta^2$, $v=1-2db>0$ and
+\[
+ J=\frac d2+\frac{2db^2-2b}{\lambda^2}<0.
+\]
+Expanding \eqref{rf:physical-forcing-model} by double-angle identities
+gives
+\begin{equation}
+ d_f(\Delta)=d+J[\cosh(2\lambda\Delta)-1]
+                    -v\frac{\sinh(2\lambda\Delta)}{\lambda}.
+ \label{supp:F-expansion}
+\end{equation}
+The positive Taylor series have the rational upper bounds
+\begin{align*}
+ C_+&=\sum_{j=0}^4\frac{w^j}{(2j)!}
+       +\frac{w^5/10!}{1-w/(12\cdot11)},\\
+ S_+&=2\Delta\left[
+        \sum_{j=0}^4\frac{w^j}{(2j+1)!}
+        +\frac{w^5/11!}{1-w/(13\cdot12)}\right].
+\end{align*}
+Indeed, after the first omitted terms the successive ratios are at
+most $w/(12\cdot11)$ and $w/(13\cdot12)$, respectively; both are
+strictly below one. Thus
+$\cosh(2\lambda\Delta)\le C_+$ and
+$\sinh(2\lambda\Delta)/\lambda\le S_+$.
+The two coefficients $J$ and $-v$ in \eqref{supp:F-expansion} are
+negative, so exact rational substitution proves
+\begin{equation}
+ d_f(\Delta)\ge d+J(C_+-1)-vS_+
+       >\frac{16246}{10^8},\qquad
+ d_f(\Delta)-d_{\rm stop}>\frac{6246}{10^8}.
+ \label{supp:F-margin}
+\end{equation}
+All quantities in this comparison are rational; no sampling of the
+canonical source or fit to a time profile enters it. The inequalities
+$b>\sqrt{f/2}$ and $4bd<2$ hold for these data. Corollary
+\ref{rf:forcing-stop} therefore makes the endpoint the model's minimum
+on the full interval, so the second inequality is the strict lower-stop
+margin, conditional on the actual source hypotheses.
+
+For the same trial geometry $r=9/10$, $C=1/10$, $D_{\max}=1/5$ and
+$q=11/25$, \eqref{rf:source-errors} gives the exact amplification factors
+\[
+ E_{\mathcal F,B}\le\frac{119250}{1331}e_B,
+ \qquad
+ E_{\mathcal F,\mathcal L}\le\frac{14175000}{14641}e_{\mathcal L}.
+\]
+The complete source/time error, the signed lower floor
+$\mathcal F_\Gamma\ge3/10$, the negative-time contour clearance and
+the unconditional coordinate bounds are unacquired. The annular
+logarithm bound used earlier provides an absolute forcing bound, not
+this signed lower floor. Small $K=2D^2\mathcal F$ at $t=0$ is compatible
+with this proposed physical floor, but does not prove it. Direct regular
+$D/M$ evolution with identical data and errors gives precisely the
+same model and margin. Thus \eqref{supp:F-margin} is a conditional
+consumer calculation, not a new canonical certificate or a lattice
+advantage.
+
+\subsection{A distinct time-zero census and its forward constants}
+\label{fwd:census-example}
+
+The finite census used in \cite{BakerCM34,BakerCMReview30} lies at a
+different height from the Lehmer pair. Its constants are not transferred
+to that pair. The accepted source record \cite{BakerOCCensus22} encloses
+every zero in
+\[
+ \mathcal R=(988,2012)+\ii(-3/2,3/2)
+\]
+in 388 occupied cells, each of count one including multiplicity.
+Their horizontal projections are disjoint, their maximum horizontal
+width is $5/32768$, and successive projections have separation at
+least $5085/8192$. The common recorded imaginary interval is
+$[-3/32768,3/131072]$, which is not symmetric about zero.
+
+Reality follows from the complete census and conjugation, rather than
+from replacing these imaginary intervals by zero. The conjugate of a
+root in $\mathcal R$ is another root in the same symmetric outer
+rectangle, with the same real coordinate. Completeness puts it in an
+occupied cell; disjoint horizontal projections force that cell to be
+the original one. Its count one forces equality of the two roots and
+simple multiplicity. There are consequently 388 real simple nodes,
+387 internal consecutive gaps and 385 edges with both neighboring gaps
+inside the census. This deduction retains the inherited winding
+certificate's scope; it is not an independent replay of its source
+arithmetic.
+
+The initial squared-half-gap minimum and the finite-block coefficient are
+\begin{equation}
+ q_0=\frac{5085^2}{4\cdot8192^2}
+       =\frac{25857225}{268435456},\qquad
+ a_{388}=\frac{388}{194^2}=\frac1{97}.
+ \label{supp:census-constants}
+\end{equation}
+If a future common tube keeps the block diameter below $1024$, the
+force-dispersion contraction coefficient $2N/L_{\max}^2$ is
+$\gamma=97/131072$. Even with zero exterior norm forcing, its
+homogeneous envelope over the illustrative time $s=1/10$ decreases by
+a relative amount
+\[
+ 1-\e^{-\gamma s}<\gamma s=\frac{97}{1310720},
+\]
+about $0.0074$ percent. This is the reduction in that conservative
+envelope, not an upper bound on actual contraction. Continued
+confinement and zero exterior forcing have not been acquired.
+
+For a paid uniform upper exterior interaction $C\ge0$, the forward
+minimum envelope is
+\[
+ q(s)\ge\e^{-4Cs}q_0+
+          \frac{1-\e^{-4Cs}}{388C},
+\]
+with limit $q_0+s/97$ when $C=0$. Its lower bound exceeds $q_0$ exactly
+when
+\begin{equation}
+ C<\frac{a_{388}}{4q_0}
+   =\frac{268435456}{10032603300}.
+ \label{supp:census-exterior-target}
+\end{equation}
+No such whole-time exterior bound is supplied by the census. Both block
+ends must be included in its acquisition: the 12-unit buffers of the
+smaller observation window $[1000,2000]$ cannot be assigned to the
+outermost retained nodes. Likewise, selecting only interior eligible
+edges does not establish the cumulative-distance inequalities for the
+minimum over the complete block.
+
+This finite artifact supplies actual time-zero labels and gap geometry,
+not a positive-time source tube, an exterior-force bound, or an all-height
+gap law. The analytical forward comparisons remain conditional on their
+independent source and boundary payments, and Theorem~\ref{rf:horizon}
+still applies to any subsequent use of its specific backward consumer.

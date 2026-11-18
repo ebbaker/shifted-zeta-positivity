@@ -1,0 +1,294 @@
+% 18 November 2026; prepared for Edward Baker with OpenAI Codex assistance.
+% Actual model/effort unavailable. Source: CM Note27 and E25 assessment.
+\section{Compact source acquisition and a local stopping theorem}
+\label{sec:compact}
+
+The positive-time source of the preceding section supplies both a joint
+estimate and pre-existing exterior reality. A compact application has a
+different logical requirement: it must acquire the needed information
+without assuming that the target gap remains positive on the interval
+being tested. A separating contour gives such a source interface because
+its count may remain two through a target merger. We first derive that
+interface for trial pair coordinates, then state the stopping theorem and
+its full error requirements \cite{BakerCM27}.
+
+\subsection{Complete moments at trial coordinates}
+
+Fix a compact real time interval and a positively oriented circle
+$\Gamma=\{|z-a|=r\}$, with real $a$. Suppose $H$ is nonzero on a
+neighborhood of $\Gamma$ throughout the interval and counts exactly two
+occurrences inside. These hypotheses allow a double target or a conjugate
+nonreal pair. No assertion about exterior reality is made. The canonical
+order-one product and its locally uniform logarithmic derivative are
+used on this contour. Let $B=H_z/H$ and
+\[
+ A_j=\frac1{2\pi\ii}\oint_\Gamma(z-a)^jB(t,z)\dd z,
+ \qquad c=a+A_1/2,\qquad D=A_2/2-(A_1/2)^2.
+\]
+These are the actual coordinates. For separate trial real coordinates
+$(\widehat c,\widehat D)$ put
+$Q_{\!\widehat c,\widehat D}(z)=(z-\widehat c)^2-\widehat D$.
+Both roots of this trial quadratic are required to lie inside $\Gamma$;
+they need not coincide with the actual targets.
+
+\begin{proposition}[Trial-coordinate exterior traces]
+\label{cmp:trial}
+For every integer $p\ge1$,
+\begin{equation}
+ S_p^\Gamma(t;\widehat c,\widehat D)
+ =-\frac1{2\pi\ii}\oint_\Gamma
+       \frac{B(t,z)}{Q_{\!\widehat c,\widehat D}(z)^p}\dd z
+ =\sum_{\rho\text{ outside }\Gamma}
+       \bigl((\rho-\widehat c)^2-\widehat D\bigr)^{-p}.
+ \label{cmp:trace}
+\end{equation}
+The sum includes the complete exterior with multiplicity. It converges
+absolutely and locally uniformly on compact trial sets with strict
+contour separation. At the actual $(c,D)$ it equals $S_p$.
+\end{proposition}
+\begin{proof}
+Set $f=Q_{\!\widehat c,\widehat D}^{-p}$. All its poles are inside
+$\Gamma$, and $f=O(z^{-2p})$ at infinity. For an actual interior root
+$\rho$, the rational function $f(z)/(z-\rho)$ has all poles inside and
+decays as $O(z^{-2p-1})$, so its contour integral is zero. Coincident or
+multiple poles cause no difficulty. For an exterior root the residue
+outside is $f(\rho)$, and the same decay gives the interior integral
+$-f(\rho)$. The constant term and genus-one constant regularizers of the
+logarithmic derivative integrate to zero since $\oint f=0$.
+The complete product converges normally on the cleared contour. Its
+exterior contributions to \eqref{cmp:trace} are dominated by a multiple
+of $\sum_\rho(1+|\rho|)^{-2}$, finite for the order-one canonical divisor;
+compact trial sets permit the same dominating tail. Thus termwise
+contour passage gives the result. This argument extends the rational
+trace of Proposition~\ref{prop:trace} without identifying trial and actual
+pair coordinates.
+\end{proof}
+
+Define the complete signed trial forcing
+\begin{equation}
+ \begin{split}
+ \mathcal F_\Gamma&=12S_2^\Gamma+16\widehat D S_3^\Gamma,\\
+ K_\Gamma&=2\widehat D^2\mathcal F_\Gamma
+ =-\frac1{2\pi\ii}\oint_\Gamma
+ \left(\frac{24\widehat D^2}{Q^2}
+       +\frac{32\widehat D^3}{Q^3}\right)B(t,z)\dd z .
+ \end{split}
+ \label{cmp:forcing}
+\end{equation}
+Here and below $Q$ in a trial integral denotes the trial quadratic.
+Conjugation makes these quantities real for real trial coordinates.
+Unlike a positive-head estimate, \eqref{cmp:forcing} does not discard
+any possibly nonreal exterior terms.
+
+At the actual coordinates the local pair law and the first hierarchy
+row give, in backward time $u=t_*-t$,
+\begin{equation}
+ D_u=-2+4DM,\qquad M_u=-2M^2+\mathcal F,
+ \qquad \mathcal F=12S_2+16DS_3.
+ \label{cmp:local-system}
+\end{equation}
+The cancellation proof of Theorem~\ref{thm:hierarchy} uses finite rational
+identities before complete contour passage; neither step uses positivity
+of exterior summands. It therefore applies to the present strictly
+separating local tube, with its own compact contour bounds in place of
+the strong-collar constants. These hypotheses must hold on the interval
+at issue. An earlier positive-time certificate does not supply them on
+an enlarged negative-time interval.
+
+\subsection{Stopping without an assumed positive trajectory}
+
+Suppose unconditional contour information gives
+$|c(t)-a|\le C$ and $D(t)\le D_{\max}$ throughout the desired interval.
+Its lower enclosure for $D$ is allowed to cross zero. Choose
+$0<d_{\mathrm{stop}}<d_0$ and assume an independent initial enclosure
+$D(0)\ge d_0$, $V(0)\le v_0$, where $V=1-2DM$ uses backward time.
+
+\begin{theorem}[A conditional source bound prevents a lower exit]
+\label{cmp:stop}
+Assume the count-two contour and its clearance hold for
+$0\le u\le\Delta$. Suppose all trial quadratics with
+$|\widehat c-a|\le C$ and
+$d_{\mathrm{stop}}\le\widehat D\le D_{\max}$ lie inside the contour and
+\begin{equation}
+ K_\Gamma(t_* -u;\widehat c,\widehat D)\ge\kappa
+ \label{cmp:kfloor}
+\end{equation}
+uniformly on that trial set. Put
+\[
+ v=\max\{0,v_0,\sqrt{\max(0,1-\kappa)}\}.
+\]
+If
+\begin{equation}
+ d_0-2v\Delta-d_{\mathrm{stop}}>0,
+ \label{cmp:exit-margin}
+\end{equation}
+then the actual pair satisfies $D(u)>d_{\mathrm{stop}}$ throughout the
+interval. Exterior zeros need not be real.
+\end{theorem}
+\begin{proof}
+Until a first lower exit $D=d_{\mathrm{stop}}$, the actual coordinates
+belong to the trial set. Thus $K\ge\kappa$ there, and
+\eqref{cmp:local-system} gives
+$D_u=-2V$ and $V_u=(1-V^2-K)/D$. For $w=V-v$,
+\[
+ w_u+\frac{V+v}{D}w\le\frac{1-v^2-\kappa}{D}\le0.
+\]
+On every compact pre-exit interval the integrating factor is positive,
+so $V\le v$ and $D\ge d_0-2vu$. At a hypothetical first exit,
+\eqref{cmp:exit-margin} gives $D>d_{\mathrm{stop}}$, a contradiction.
+The other coordinate and contour exits are already excluded by the
+unconditional assumptions. No division by $D$ at a merger is used.
+\end{proof}
+
+The distinction between the trial statement and an unconditional positive
+forcing floor is substantive. On a regular counted tube $\mathcal F$
+is finite at a target merger, whereas $K=2D^2\mathcal F$ vanishes there.
+Hence an unconditional $K\ge k>0$ already excludes a merger by continuity
+from a positive start. Such a floor can be a valid source certificate,
+but is not a weaker substitute for the sought positivity. Theorem
+\ref{cmp:stop} instead proves the necessary interval of positivity from
+an estimate on a conditional trial region.
+
+\subsection{A complete analytic error contract}
+
+Let $G$ be any fixed nonzero scalar multiple of $H$. Suppose source
+approximants $h,h_1$ have uniform errors $e_0,e_1$ for $G,G_z$ on the
+whole time-contour cell, and $|h|\ge b_0>e_0$, $|h_1|\le b_1$. Then
+\begin{equation}
+ \left|B-\frac{h_1}{h}\right|
+ \le e_B:=\frac{e_1}{b_0-e_0}
+          +\frac{b_1e_0}{b_0(b_0-e_0)}.
+ \label{cmp:quotient-error}
+\end{equation}
+Indeed, subtract the quotients and bound the numerator error over $G$
+and the reciprocal-denominator error separately. If
+$|\widehat c-a|\le C$, $|\widehat D|\le D_{\max}$,
+$0\le C<r$, $D_{\max}\ge0$ and
+$q=(r-C)^2-D_{\max}>0$, integration around the circle gives the source
+parts of the moment and forcing errors:
+\begin{align}
+ E_M&\le re_B/q,&
+ E_{A_j}&\le r^{j+1}e_B,\notag\\
+ E_K&\le re_B\left(24D_{\max}^2/q^2+32D_{\max}^3/q^3\right).
+ \label{cmp:kernel-errors}
+\end{align}
+All parameter dependence belongs to the trial enclosure; discarding a
+proved time-state correlation by replacing it with independent boxes is
+an additional approximation, not part of these inequalities.
+
+An annular logarithm gives an alternative interface when
+$\mathcal L=\Log(G/(z-a)^2)$ is single valued on a cleared annulus.
+Since $B=\mathcal L_z+2/(z-a)$ and the rational second term has zero
+integral against $Q^{-p}$, integration by parts gives
+\begin{align}
+ S_p^\Gamma&=-\frac{p}{2\pi\ii}\oint_\Gamma
+                  \mathcal L\frac{Q'}{Q^{p+1}}\dd z,\notag\\
+ K_\Gamma&=-\frac1{2\pi\ii}\oint_\Gamma\mathcal L Q'
+              \left(\frac{48\widehat D^2}{Q^3}
+                    +\frac{96\widehat D^3}{Q^4}\right)\dd z.
+ \label{cmp:log-kernel}
+\end{align}
+A constant may be subtracted from $\mathcal L$ without changing either
+integral. A uniform log error $e_{\mathcal L}$ gives
+\begin{align}
+ E_M&\le 2r(r+C)e_{\mathcal L}/q^2,\notag\\
+ E_K&\le 2r(r+C)e_{\mathcal L}
+        \left(48D_{\max}^2/q^3+96D_{\max}^3/q^4\right).
+ \label{cmp:log-errors}
+\end{align}
+For matching log branches and $|G-h|\le e_0<b_0\le|h|$, the log increment
+has modulus at most $-\log(1-e_0/b_0)$ by its convergent power series.
+Branch matching and annular clearance remain explicit obligations.
+
+Finite contour quadrature has its own error. If the parameterized
+integrand is holomorphic for $|\Im\theta|\le s$ and bounded there by
+$A_s$, its normalized $N$-node trapezoidal error is at most
+\begin{equation}
+ \frac{2A_s}{\e^{Ns}-1}.
+ \label{cmp:trapezoid}
+\end{equation}
+To prove this, shift the Fourier coefficient contour to the appropriate
+strip edge, obtaining $|a_k|\le A_s\e^{-|k|s}$. The trapezoidal mean
+aliases only the coefficients $a_{jN}$; summing their geometric bound
+gives \eqref{cmp:trapezoid}. The source and every trial denominator must
+be cleared throughout that complex strip, not only at real nodes.
+
+The budgets $e_0,e_1$ must include complete source evaluation, source
+integration tails, lattice or quadrature errors, coefficient reconstruction,
+arithmetic, spatial approximation and whole-cell time variation. Time
+remainders may use $\partial_t^jG=(-1)^j\partial_z^{2j}G$ with actual
+Cauchy bounds. Time samples alone do not supply uniform estimates, and
+an asymptotic error cannot be differentiated without an analytic residual.
+The complete contour representation requires no separately omitted zero
+tail after the full source error has been paid.
+
+A negative-time source formula is available analytically. For $s\ge0$,
+\begin{equation}
+ H(-s,z)=\pi^{-1/2}\int_\R\e^{-y^2}
+                         H(0,z+2\sqrt{s}\,y)\dd y.
+ \label{cmp:negative-gaussian}
+\end{equation}
+Insert the complete Fourier representation of $H(0,\cdot)$; its positive
+source and fixed $\Im z$ dominate the double integral. The Gaussian
+Fourier integral supplies the multiplier $\e^{-s u^2}$, proving the
+formula by Fubini. The real spatial shift in \eqref{cmp:negative-gaussian}
+differs from the imaginary shift at positive heat time. Consequently an
+existing positive-time xi quadrature estimate cannot be extrapolated to
+negative time without new source and tail bounds.
+
+\subsection{What a constant barrier can and cannot retain}
+
+The stopping theorem preserves coupling in its source kernel, but its
+single constant $v$ still discards the temporal profile. The following
+screen quantifies that limitation independently of any numerical example.
+
+\begin{proposition}[A small included forcing value limits the constant barrier]
+\label{cmp:small-slice}
+Suppose the initial gap square satisfies $D(0)\le d_+$ and an included
+slice covered by the proposed forcing floor has $K\le k_*<1$. Every
+certificate using the constant parameter of Theorem~\ref{cmp:stop} then
+has $v\ge\sqrt{1-k_*}$ and can satisfy its strict margin only if
+\begin{equation}
+ \Delta<\frac{d_+}{2\sqrt{1-k_*}}.
+ \label{cmp:duration-cap}
+\end{equation}
+In particular, at a slice with $|D|\le\delta$ and
+$|\mathcal F|\le A$, one may take $k_*=2\delta^2 A<1$.
+\end{proposition}
+\begin{proof}
+A valid floor must have $\kappa\le K\le k_*$. The definition of $v$
+therefore gives the asserted lower bound. Dropping the positive stop
+threshold and enlarging the initial lower anchor to the actual initial
+value, then to $d_+$, can only enlarge the allowable duration. This gives
+\eqref{cmp:duration-cap}. The last statement is $|K|=2D^2|\mathcal F|$.
+\end{proof}
+
+This is a limitation of the displayed constant-$v$ consumer, not of all
+comparisons using a constant $K$ bound, and not of actual dynamics.
+Retaining the initial transient, using a time-varying barrier, renewing
+anchors or integrating the regular $(D,M)$ system changes the consumer.
+The supporting example in Appendix~\ref{app:compact-example} applies the
+proposition to inherited certified data; it is not needed for the theorem.
+
+An independent rectangular forcing floor can lose even the equilibrium
+advantage. At a start with $V_0=0$, suppose the chosen reduction uses
+$\mathcal F\ge f$ with $0\le f\le1/(2d_0^2)$ and
+$d_{\mathrm{stop}}=\alpha d_0$, $0<\alpha<1$. It replaces the trial
+forcing by $\kappa=2d_{\mathrm{stop}}^2f\le\alpha^2$, so
+$v\ge\sqrt{1-\alpha^2}$. The exit margin requires
+\begin{equation}
+ \Delta<\frac{d_0}{2}\sqrt{\frac{1-\alpha}{1+\alpha}}<\frac{d_0}{2}.
+ \label{cmp:rectangular-screen}
+\end{equation}
+Thus that independent reduction can be worse than the gap-only deadline.
+It does not exclude correlated trial regions or a source estimate for
+the combined kernel itself.
+
+Every proposed source acquisition must also supply the direct comparator
+with the same information: the centered discriminant, complete $M$
+transport and regular $(D,M)$ evolution. If those shared coordinates
+already prove positivity, computing $K$ adds a magnitude or cost
+comparison, not new zero coverage. Likewise the lattice block identity
+of Section~\ref{sec:lattice} does not by itself prevent concentration
+into a single small gap. These are distinct limitations of scalar and
+aggregate consumers, not reasons to discard the shared-source structure.

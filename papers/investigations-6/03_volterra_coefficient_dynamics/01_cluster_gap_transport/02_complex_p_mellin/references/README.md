@@ -42,3 +42,15 @@ on discovering relevant literature. Inspect exact primary passages before
 imports, record version/date and actual reading scope, and retain external
 PDF identity under [LARGE_FILES](../../../../../../LARGE_FILES.md). Link shared
 records instead of duplicating them or calling an inherited inspection new.
+
+18 November 2026, for Edward Baker with Codex assistance; actual chat0003 settings unavailable. [Positive-time source audit04](04_VCD_GT_CM_POSITIVE_TIME_SOURCE_AUDIT_20261118.md) checks Polymath v2 Theorem1.5 and its t-independent constants, distinguishes a common cutoff on t>=t0>0 from the unacquired endpoint-zero mechanism, and supplies the source inputs for E21. Existing external PDF identity and canonical bibliography are reused.
+
+18 November B07 r3 selected-passage use: [Note24](../notes/24_VCD_GT_CM_B07_R3_COMMON_TIME_CLOCK_ADVICE_20261118.md) checks Polymath v2 Proposition9.1, Lemma9.2, (100)–(103) and Remark9.4, whose velocity proof is left to the reader. It supplies the analytic-residual derivation and explicitly avoids differentiating the weaker displayed O error in (104). Same canonical article, bibliography and external reading copy; no new PDF or claim of literature priority. Prepared for Edward Baker with Codex assistance; actual settings unavailable.
+
+18 November 2026 manuscript use: the existing Polymath v2 record is now
+backfilled into the shared VCD bibliography as `Polymath2019DBN`; its
+primary arXiv metadata was rechecked. The selected mathematical uses remain
+those in receipt04 and Note24, with Remark9.4 credited. Existing canonical
+catalog and external reading-copy provenance are retained; no PDF download
+or duplicate catalog was created. Prepared for Edward Baker with Codex
+assistance; actual model/effort unavailable.

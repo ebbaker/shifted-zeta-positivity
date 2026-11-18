@@ -1,0 +1,439 @@
+% 18 November 2026. Prepared for Edward Baker with OpenAI Codex LLM assistance.
+% Actual model and effort unavailable; helper settings inherited.
+% E31 author A. Sources: CM Notes32/34, with E29/E30 scope retained.
+\section{Forward finite-block statistics from a counted initial slice}
+\label{sec:forward-statistics}
+
+Known information at time zero can be propagated forward before a
+backward comparison is attempted. The two operations require different
+estimates. Forward root repulsion can improve a lower bound for a block
+minimum, whereas backward protection needs a lower interaction or forcing
+bound. We first establish the forward statements, retaining the complete
+exterior in each one. The results of \cite{BakerCM32,BakerCM34}, assessed
+in \cite{BakerCMReview29,BakerCMReview30}, are conditional finite estimates;
+they do not supply a new time-wide canonical source certificate.
+
+\subsection{What a complete initial census can imply}
+
+\begin{lemma}[Reality from a complete singleton census]
+\label{fwd:singleton}
+Let $H(0,\overline z)=\overline{H(0,z)}$, and let $\Omega$ be a bounded
+conjugation-invariant region with zero-free boundary. Suppose a complete
+census of its zeros consists of finitely many cells whose horizontal
+projections are pairwise disjoint. If every occupied cell has count one,
+including multiplicity, every zero in $\Omega$ is real and simple.
+\end{lemma}
+\begin{proof}
+If $\rho$ is a zero in one cell, its conjugate is also in $\Omega$.
+Completeness places $\overline\rho$ in an occupied cell. Since the real
+coordinates agree, disjoint horizontal projections place both occurrences
+in the same cell. Its count one forces $\rho=\overline\rho$, and also
+forces multiplicity one. No replacement of an imaginary interval by its
+midpoint is used. The cells themselves need not be conjugation invariant.
+\end{proof}
+
+Thus a complete finite census may contain more useful information than
+one scalar subsequently evaluated from it. Ordered disjoint real cells
+give interval enclosures for all internal adjacent gaps and, away from the
+two end edges, for neighboring triples of gaps. The numerical census of
+\cite{BakerOCCensus22} illustrates this deduction in
+Appendix~\ref{app:compact-example}, at its inherited winding/count scope.
+The deduction supplies neither global reality at time zero nor a
+positive-time source or root-velocity bound.
+
+\subsection{A local forward interval without global reality}
+
+Fix a bounded conjugation-invariant domain $\Omega$ with a simple,
+piecewise smooth boundary $\Gamma$. Assume the complete heat field is
+nonzero on a neighborhood of $\Gamma$ for $0\le t\le s$ and has exactly
+$N\ge2$ zeros inside, counting multiplicity. All source regularity and
+clearance assumptions concern this whole interval. Initially suppose
+these $N$ zeros are real and simple. Exterior zeros may be nonreal.
+
+On a simple-root subinterval write the ordered interior labels as
+$x_1<\cdots<x_N$ and define the whole-block deflation
+\begin{equation}
+ R(t,z)=B(t,z)-\sum_{j=1}^{N}\frac1{z-x_j(t)},\qquad
+ U_i=\sum_{j\ne i}\frac1{x_i-x_j}+R(t,x_i),\qquad
+ x_i'=2U_i.
+ \label{fwd:deflation}
+\end{equation}
+The definition uses the same complete $B=H_z/H$ as
+Section~\ref{sec:lattice}. In particular $R$ retains all exterior poles
+and the regularizing terms of the complete field. It is analytic inside
+$\Gamma$ after the interior poles have been removed; no independent
+infinite first-power sum is introduced.
+
+\begin{proposition}[Forward preservation on a cleared finite domain]
+\label{fwd:preservation}
+Under the preceding hypotheses the $N$ interior zeros remain real and
+simple throughout $0\le t\le s$.
+\end{proposition}
+\begin{proof}
+A simple real zero continues as a real zero by conjugation and local
+uniqueness. Suppose there were a first loss of simplicity, and isolate
+one of the colliding clusters of $k\ge2$ real labels. Its limiting point
+is inside $\Omega$: the time-wide boundary clearance prevents escape or
+entry. Choose a small fixed circle separating this cluster from every
+other zero near the putative event. Removing all its poles gives an
+analytic regular part $R_{\rm cl}$, uniformly bounded near the cluster
+up to the event. For example, the monic polynomial of the enclosed roots
+has analytic symmetric coefficients obtained from the counted contour;
+the remaining factor is analytic and nonzero there.
+
+Set $\bar x=k^{-1}\sum_{i=1}^k x_i$ and
+$\mathcal V=\sum_{i=1}^k(x_i-\bar x)^2$. Since the centered coordinates
+sum to zero, the node law gives
+\begin{align}
+ \mathcal V'
+ &=4\sum_i(x_i-\bar x)
+       \left(\sum_{j\ne i}\frac1{x_i-x_j}+R_{\rm cl}(t,x_i)\right)
+       \notag\\
+ &=2k(k-1)+4\sum_i(x_i-\bar x)R_{\rm cl}(t,x_i).
+ \label{fwd:cluster-variance}
+\end{align}
+For the second equality, pair the two ordered contributions of each
+unordered pair: their quotient is
+$[(x_i-\bar x)-(x_j-\bar x)]/(x_i-x_j)=1$.
+At the proposed collapse the last term tends to zero, so
+$\mathcal V'>0$ sufficiently close to the event. A nonnegative
+$\mathcal V$ tending to zero from the left cannot have that property.
+This excludes every cluster size, including simultaneous disjoint
+collisions. The local continuation and the compact boundary clearance
+then cover the entire interval.
+\end{proof}
+
+For an isolated pair the same sign appears as $D'=2$ at $D=0$.
+Proposition~\ref{fwd:preservation} includes higher clusters and does not
+assume reality of the complete divisor. It is nevertheless conditional
+on the independent time-wide contour certificate. A time-zero census
+does not acquire that certificate, spatial buffers, or any numerical
+lower bound for the later gaps.
+
+\subsection{Dissipation of common node-force dispersion}
+
+Let $P=I-\mathbf1\mathbf1^{T}/N$ be the orthogonal projection onto
+mean-zero vectors. Define a positive weighted graph Laplacian by
+\begin{equation}
+ (Lv)_i=\sum_{j\ne i}\frac{v_i-v_j}{(x_i-x_j)^2},\qquad
+ h_i=(R_t+2U_iR_z)(t,x_i),\qquad
+ a=PU,\quad r_U=\lVert a\rVert_2.
+ \label{fwd:laplacian}
+\end{equation}
+The derivatives of $R$ are taken at a fixed spatial argument before
+evaluation at $x_i$. All external and block-boundary effects remain in
+$h$.
+
+\begin{proposition}[Force dispersion in the two time directions]
+\label{fwd:force-identity}
+On a common simple-root interval,
+\begin{align}
+ U_t&=-2LU+h,\notag\\
+ \frac{\dd}{\dd t}\frac{r_U^2}{2}
+ &=-2\sum_{i<j}\frac{(U_i-U_j)^2}{(x_i-x_j)^2}
+       +(PU)\mathbin{\cdot}(Ph).
+ \label{fwd:energy}
+\end{align}
+In backward time $u=t_*-t$, put
+$f_i=(R_u-2U_iR_z)(u,x_i)=-h_i(t_*-u)$. Then
+\begin{align}
+ U_u&=2LU+f,\notag\\
+ \frac{\dd}{\dd u}\frac{r_U^2}{2}
+ &=2\sum_{i<j}\frac{(U_i-U_j)^2}{(x_i-x_j)^2}
+       +(PU)\mathbin{\cdot}(Pf).
+ \label{fwd:backward-energy}
+\end{align}
+\end{proposition}
+\begin{proof}
+Differentiate each finite reciprocal in \eqref{fwd:deflation}, using
+$x_i'=2U_i$:
+\[
+ \frac{\dd}{\dd t}\frac1{x_i-x_j}
+ =-\frac{2(U_i-U_j)}{(x_i-x_j)^2}.
+\]
+The derivative of $R(t,x_i(t))$ is $h_i$, proving the vector equation.
+Since $L\mathbf1=0$, $a\cdot LU=a\cdot La$; pairing $i,j$ gives
+$a\cdot La=\sum_{i<j}(U_i-U_j)^2/(x_i-x_j)^2$.
+Taking the scalar product with $a$ proves \eqref{fwd:energy}.
+Reversing physical time proves \eqref{fwd:backward-energy}.
+\end{proof}
+
+The internal term is dissipative forward and antidissipative backward.
+Neither sign is a sign theorem for the complete derivative: the signed
+exterior term can reinforce or cancel it.
+
+\begin{corollary}[Conditional forward force contraction]
+\label{fwd:force-contraction}
+Suppose an independent spatial enclosure gives
+$x_N(t)-x_1(t)\le L_{\max}$ and $J(t)\ge\lVert Ph(t)\rVert_2$ on the
+whole interval. With $\gamma=2N/L_{\max}^2$,
+\begin{equation}
+ r_U(t)\le \e^{-\gamma t}r_U(0)
+       +\int_0^t\e^{-\gamma(t-v)}J(v)\dd v.
+ \label{fwd:contraction}
+\end{equation}
+\end{corollary}
+\begin{proof}
+Every internal weight is at least $L_{\max}^{-2}$, and for a mean-zero
+vector $\sum_{i<j}(a_i-a_j)^2=N\lVert a\rVert_2^2$. Thus
+\eqref{fwd:energy} gives
+$(r_U)_t\le-\gamma r_U+J$ wherever $r_U>0$.
+At $r_U=0$ the upper right derivative of the norm is at most $\lVert Ph\rVert_2$,
+so the same comparison holds in the upper-Dini sense. An integrating
+factor proves \eqref{fwd:contraction}.
+\end{proof}
+
+For a constant $J$, the upper envelope is
+$\e^{-\gamma t}r_U(0)+(J/\gamma)(1-\e^{-\gamma t})$.
+It improves the initial norm only if its source floor is sufficiently
+small. Without an acquired $J$, internal dissipation alone provides no
+canonical contraction rate. The corresponding backward unsigned bound is
+\begin{equation}
+ (r_U)_u\le2\lambda_{\max}(L)r_U+\lVert Pf\rVert_2.
+ \label{fwd:backward-norm}
+\end{equation}
+Replacing the denominators by one lower gap stop can make this scalar
+allowance large; the fixed compact screen in
+Appendix~\ref{app:compact-example} is scoped to that replacement and an
+unsigned exterior norm.
+
+Force dispersion is a velocity statistic. Indeed,
+\begin{equation}
+ g_i(t)-g_i(0)=2\int_0^t(U_{i+1}-U_i)\dd v,
+ \qquad |U_{i+1}-U_i|\le\sqrt2\,r_U.
+ \label{fwd:gap-integral}
+\end{equation}
+A small force dispersion need not imply a uniform gap profile: the
+exterior may balance a nonuniform configuration. Direct common-source
+node evolution retains the signed differences in
+\eqref{fwd:gap-integral}; given the same node-force path information, the
+norm replacement cannot improve that directional bound. No acquisition
+cost advantage is asserted.
+
+\subsection{A forward lower bound for the actual block minimum}
+
+Assume the real segment connecting the two endpoint nodes lies inside
+the independently cleared domain. Put
+\begin{equation}
+ g_i=x_{i+1}-x_i,\qquad D_i=g_i^2/4,\qquad
+ q(t)=\min_{1\le i<N}D_i(t).
+ \label{fwd:minimum}
+\end{equation}
+The minimum includes \emph{all} internal edges, including both end edges.
+Split the complete interaction into the other real nodes in this block
+and the complete exterior. Comparing \eqref{fwd:deflation} at two adjacent
+nodes with the gap law gives
+\begin{equation}
+ M_i=M_{{\rm int},i}+M_{{\rm ext},i},\qquad
+ M_{{\rm ext},i}=-\frac{R(t,x_{i+1})-R(t,x_i)}{g_i}
+       =-\int_0^1R_z(t,x_i+\theta g_i)\dd\theta.
+ \label{fwd:exterior}
+\end{equation}
+This is a complete signed exterior contribution. In particular,
+$|R_z|\le C$ on every connecting segment implies
+$M_{{\rm ext},i}\le C$, without exterior reality.
+
+\begin{theorem}[Forward transport of a finite-block minimum]
+\label{fwd:minimum-transport}
+Suppose $M_{{\rm ext},i}\le C$ for every internal edge throughout the
+forward interval, where $C\ge0$. Then, with
+\begin{equation}
+ a_N=\min_{1\le i<N}\left(\frac1i+\frac1{N-i}\right)
+     =\frac{N}{\lfloor N/2\rfloor\lceil N/2\rceil},
+ \label{fwd:finite-constant}
+\end{equation}
+the minimum obeys almost everywhere
+\begin{equation}
+ q_t\ge a_N-4Cq.
+ \label{fwd:minimum-law}
+\end{equation}
+Consequently
+\begin{equation}
+ q(t)\ge\Phi_t(q(0)),\qquad
+ \Phi_t(d)=
+ \begin{cases}
+ \e^{-4Ct}d+\dfrac{a_N}{4C}(1-\e^{-4Ct}),&C>0,\\[5pt]
+ d+a_Nt,&C=0.
+ \end{cases}
+ \label{fwd:minimum-bound}
+\end{equation}
+\end{theorem}
+\begin{proof}
+At an active minimizing edge $i$, every block gap is at least $g_i$.
+The $m$th retained node to the left or right of this pair is therefore
+at distance at least $mg_i$ from its nearer endpoint. The positive
+real-node terms in the interaction satisfy
+\begin{align}
+ M_{{\rm int},i}
+ &\le\frac1{g_i^2}\left(
+       \sum_{m=1}^{i-1}\frac1{m(m+1)}
+       +\sum_{m=1}^{N-1-i}\frac1{m(m+1)}\right)\notag\\
+ &=\frac1{g_i^2}\left(2-\frac1i-\frac1{N-i}\right).
+ \label{fwd:internal-bound}
+\end{align}
+The empty sums at the end edges have value zero, so this also covers
+$N=2$. Since $4D_i=g_i^2$, the physical pair law gives at an active edge
+\[
+ (D_i)_t=2-g_i^2M_i
+ \ge\frac1i+\frac1{N-i}-4CD_i.
+\]
+Each $D_i$ is continuously differentiable, and the minimum of finitely
+many such functions is locally Lipschitz. At almost every time its
+derivative is the derivative of an active edge. The preceding bound
+holds for every active edge, including ties, so it gives
+\eqref{fwd:minimum-law} without a fixed minimizing label. Multiplication
+by $\e^{4Ct}$ and integration proves \eqref{fwd:minimum-bound}.
+The expression in \eqref{fwd:finite-constant} is minimized at the central
+integer or integers, which gives the stated constant.
+\end{proof}
+
+For an acquired lower anchor $q(0)\ge d_0>0$, the scalar lower bound
+$\Phi_t(d_0)$ improves $d_0$ at every $t>0$ precisely when
+$C<a_N/(4d_0)$, with the stated continuous interpretation at $C=0$.
+This is a test of a proposed source bound, not its acquisition. The
+positive right side of \eqref{fwd:minimum-bound} can alternatively be used
+in a first-lower-exit argument on an independently acquired outer domain.
+
+The choice of minimum is essential. If only selected interior edges
+were minimized, an excluded boundary gap could be smaller than the active
+edge, invalidating the distance bound used in
+\eqref{fwd:internal-bound}. A smaller observational window does not
+automatically give its buffer to the outermost nodes of a larger census.
+One must use the complete block minimum or pay a different boundary
+comparison.
+
+\begin{corollary}[Empirical lower-tail transport]
+\label{fwd:empirical}
+For finitely many blocks with the same $N$ and a common paid $C$, sample
+the block index $X$ uniformly. For $C>0$,
+\begin{equation}
+ \mathbb P\{q_X(t)\le\xi\}
+ \le\mathbb P\left\{q_X(0)\le
+       \e^{4Ct}\xi-\frac{a_N}{4C}(\e^{4Ct}-1)\right\}.
+ \label{fwd:tail}
+\end{equation}
+For $C=0$ the threshold on the right is $\xi-a_Nt$.
+\end{corollary}
+\begin{proof}
+The increasing map $\Phi_t$ in \eqref{fwd:minimum-bound} gives the
+pointwise event inclusion
+$\{q_X(t)\le\xi\}\subseteq\{q_X(0)\le\Phi_t^{-1}(\xi)\}$.
+Counting the finite block indices proves the claim. No independence or
+random-matrix law is used.
+\end{proof}
+
+Different block sizes or exterior bounds use their respective maps
+$\Phi_t$. A global zero-exception conclusion additionally needs coverage
+of every eligible pair, including pairs crossing block boundaries, and
+the finite integer threshold of Section~\ref{sec:statistics}. A small
+empirical bad-block rate is not zero by itself; no varying-height or
+all-height law is inferred from this finite statement.
+
+\subsection{Complete-source acquisition of the exterior derivative}
+
+The exterior estimate in Theorem~\ref{fwd:minimum-transport} can be
+formulated on fixed trial locations, without assuming that the roots
+remain positive-distance apart. For $w$ inside $\Gamma$,
+\begin{equation}
+ R(t,w)=\frac1{2\pi\ii}\oint_\Gamma\frac{B(t,z)}{z-w}\dd z,
+ \qquad
+ R_z(t,w)=\frac1{2\pi\ii}\oint_\Gamma
+                         \frac{B(t,z)}{(z-w)^2}\dd z.
+ \label{fwd:source-traces}
+\end{equation}
+To prove these formulas, split $B$ into $R$ and its finite set of
+interior poles, with multiplicities. Cauchy's formula applies to $R$.
+For each interior pole $\rho$, the rational functions
+$[(z-\rho)(z-w)]^{-1}$ and
+$[(z-\rho)(z-w)^2]^{-1}$ have all poles inside and decay at least as
+$z^{-2}$ at infinity, so their contour integrals vanish. This remains
+true at $w=\rho$ by the same rational argument or by continuation.
+The count and full source determine the traces even if the interior
+configuration is temporarily multiple or nonreal.
+
+Suppose a circle of radius $r_\Gamma$ is used and every trial point $w$
+is at distance at least $\delta>0$ from it. A uniform complete-source
+error $e_B$ on the circle contributes at most
+\begin{equation}
+ E_R\le r_\Gamma e_B/\delta,\qquad
+ E_{R_z}\le r_\Gamma e_B/\delta^2.
+ \label{fwd:trace-error}
+\end{equation}
+These follow directly from contour length and the two kernels.
+The quotient estimate \eqref{cmp:quotient-error} supplies $e_B$ only
+after field, first-jet and positive contour-denominator errors are paid.
+One must add quadrature, arithmetic, trial-location and genuine time-cell
+errors; the angular-strip estimate \eqref{cmp:trapezoid} applies only
+when the full integrand is cleared and bounded on that strip. A bound
+for $|R_z|$ must hold on the whole trial segment containing all possible
+connecting edges, not just at sampled nodes. The complete source error
+already pays the exterior; no omitted zero tail is then silently set
+to zero. No such favorable time-wide $C$ is acquired by these identities.
+
+The force statistic has additional requirements. The fixed-coordinate
+time derivative of the first trace in \eqref{fwd:source-traces}, when
+its time-uniform source differentiation is justified, gives $R_t$ from
+$B_t$ on the same contour. Alternatively one can evaluate the complete
+source jets at simple roots. With a fixed scalar normalization $G$ of
+$H$, differentiation along a root gives
+\begin{equation}
+ U_i=\frac{G_{zz}}{2G_z}(t,x_i),\qquad
+ (U_i)_t=-\frac{G_{zzzz}}{2G_z}
+       +\frac{G_{zz}G_{zzz}}{G_z^2}
+       -\frac{G_{zz}^3}{2G_z^3}\quad\hbox{at }x_i.
+ \label{fwd:source-jets}
+\end{equation}
+Indeed $\dd G_z(t,x_i)/\dd t=-G_{zzz}+G_{zz}^2/G_z$ and
+$\dd G_{zz}(t,x_i)/\dd t=-G_{zzzz}+G_{zzz}G_{zz}/G_z$;
+the quotient rule proves the second formula.
+This route requires nonzero $G_z$ denominators and root-location errors.
+For approximate node jets $h_1,h_2$ with errors $e_1,e_2$ and
+$|h_1|\ge b_1>e_1$,
+\begin{equation}
+ \left|U-\frac{h_2}{2h_1}\right|
+ \le\frac{e_2}{2(b_1-e_1)}
+       +\frac{|h_2|e_1}{2b_1(b_1-e_1)}.
+ \label{fwd:node-error}
+\end{equation}
+Higher quotient products in \eqref{fwd:source-jets} require their own
+joint enclosure. If two exact and approximate positive node distances
+are both at least $d_*$ and differ by at most $e$, their inverse-square
+weights differ by at most $2e/d_*^3$. That error also enters a computed
+Laplacian. Neither the common field nor mean subtraction removes these
+reciprocal and boundary payments.
+
+\subsection{What the forward estimate can pay on returning backward}
+
+The internal estimate \eqref{fwd:internal-bound} is an \emph{upper}
+interaction bound. Backward gap protection needs a lower interaction or
+forcing bound, so it cannot reuse that inequality with its sign reversed.
+For example, a two-sided exterior bound $|M_{{\rm ext},i}|\le C$ gives
+only the coarse lower bound $M_i\ge-C$. On a paid backward interval it
+therefore gives $D_u\ge-2-4CD$. If this is composed with
+\eqref{fwd:minimum-bound} over equal forward and backward durations $s$,
+and $z=\e^{-4Cs}$, the resulting scalar allowance is
+\begin{equation}
+ \mathcal Q_{\rm return}:=z^2q(0)
+       +\frac{(1-z)(a_Nz-2)}{4C},\qquad C>0.
+ \label{fwd:coarse-return}
+\end{equation}
+Here $\mathcal Q_{\rm return}$ is the lower allowance supplied by this
+composition, not the actual return, which retraces the same trajectory.
+To obtain \eqref{fwd:coarse-return}, the backward integrating factor
+gives $D(s)\ge zD(0)-(1-z)/(2C)$; substitute the forward lower
+anchor $zq(0)+a_N(1-z)/(4C)$. Since $a_N\le2$, the displayed right
+side is at most $q(0)$. At $C=0$ the allowance is
+$q(0)+(a_N-2)s$, with the same conclusion. Thus this particular pair
+of scalar allowances does not turn a forward excursion into a better
+returned lower bound.
+
+The sharper comparison for the unchanged exact-initial-interaction
+horizon is proved in Theorem~\ref{rf:horizon}. It likewise separates
+an improved positive-time datum from an improved negative endpoint.
+A useful forward acquisition must preserve additional joint information
+for the backward consumer, such as the complete time-dependent forcing,
+and give the direct source or regular $D/M$ comparison the same data.
+The local forward theorem legitimately applies to noncanonical real
+blocks as well; such controls may collide at an earlier backward time.
+Its generic validity and the exact theta source identity are not, by
+themselves, a canonical backward forcing estimate.

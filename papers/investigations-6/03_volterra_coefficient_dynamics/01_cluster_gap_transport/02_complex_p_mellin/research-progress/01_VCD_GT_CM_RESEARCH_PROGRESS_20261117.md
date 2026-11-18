@@ -34,26 +34,38 @@ specifications or dated snapshots. Re-read this register before updates.
 | VCD-GT-CM-E07 | E / Sol6.1 ultra; optional fixed diagnostic | Reserved, unissued | Only a B-frozen falsifiable question with finite cases, dimensions, precision/refinement/runtime caps and full-source/tail payment; no infinite claim from samples |
 | VCD-GT-CM-E08 | E / Sol6.1 ultra; prove one fixed symmetry or explicit defect | Complete r1; accepted within frozen domains by E04 | One selected identity/defect for the complete exterior sum, branch/multiplicity scope, translation to Z and weighted integrand, relevant N/Y/P/T bounds; two local repairs maximum, structural change to B03. E04 assesses before quantitative use |
 | VCD-GT-CM-B03 | B / Astra; select an additional quantitative canonical input | r1 historical; r2 complete, scoped missing-premise disposition accepted by E15 | Two routes compared; exact joint remainder, scalar weighted-energy screen and deflated-derivative transfer; no improved canonical estimate or stronger-bound E contract |
-
 | VCD-GT-CM-B04 | B / Astra ultra; test the author's split-pole closure proposal | Complete r1; integer closure accepted within domains | Separate-pole integer hierarchy and collision-regular S/T description, with explicit closure meaning |
 | VCD-GT-CM-E09 | E / Sol6.1 ultra; fixed split-pole rational algebra and complete passage | Complete r1; accepted by E11 on nonzero-D charts | General integer recurrence on D!=0 charts, axes, multiplicities and complete tails; two local repairs maximum |
 | VCD-GT-CM-E10 | E / Sol6.1 ultra; fixed collision-regular rational basis | Complete r1; accepted by E11 through mergers | Infinite S/T closure, explicit T2 law, mixed-basis reduction and merger passage; two local repairs maximum |
 | VCD-GT-CM-E11 | E / Sol6.1 ultra; nonauthor proof and closure assessment | Complete r1; both proofs accepted within domains | One proof pass plus one correction check; distinguish infinite closure, finite truncation and quantitative gain |
-
 | VCD-GT-CM-E12 | E / Sol6.1 ultra section authors; fixed analytical manuscript integration | Complete; corrected analytical draft accepted by E13 | Coherent CM manuscript using established theory and cited predecessors; one production pass plus two local repairs |
 | VCD-GT-CM-E13 | E / Sol6.1 ultra; fixed nonauthor manuscript assessment | Complete; review06 and correction check07 accept within original scope | One proof/scope/coherence pass plus one bounded correction check; no new research claim |
 | VCD-GT-CM-E14 | E / lead housekeeping; PDF and research-document reconciliation | Complete; clean 25-page PDF, visual QA and document reconciliation | Ignored output PDF, visual/layout checks, overview/plan/register updates, next-session continuation and build record |
 | VCD-GT-CM-E15 | E / Sol; fixed nonauthor B03 r2 assessment | Complete r1; accepted within identity, transfer and scoped-screen domains | Seven pins checked; no required mathematical correction; internal shared-premise assessment |
 | VCD-GT-CM-B05 | B / Astra; select controlled finite closure for the regular moment hierarchy | Complete r1 conceptual decision; finite-divisor benchmark selected | Note15 gives four boundary residuals and the scoped failure of independent positive-box propagation; finite polynomial heat reconstruction has a concrete proof route, not an accepted approximation theorem |
-| VCD-GT-CM-E16 | E / Sol; prove the selected common-time finite-divisor approximation | Ready r2 source rebind; scientific task unchanged and unexecuted | Explicit field/jet/tube/moment/transport errors at fixed height from one canonical initialization; one proof pass and two local repairs maximum, then nonauthor assessment |
+| VCD-GT-CM-E16 | E / Sol; prove the selected common-time finite-divisor approximation | Ready r4 source rebind; independently optional, scientific task unchanged and unexecuted | Explicit field/jet/tube/moment/transport errors at fixed height from one canonical initialization; one proof pass and two local repairs maximum, then nonauthor assessment |
 | VCD-GT-CM-B06 | B / Astra; qualify the author's closest-pair choice | Complete r1 discussion; local qualified use retained | Note16: existing collar already implies mutual nearest neighbors; global minima, admissibility, target coverage and switching need separate justification; E16 unchanged |
-| VCD-GT-CM-B07 | B / Astra; select statistical minimum-gap consumer | Complete r1; three-gap score selected, conditional comparisons accepted by E17 | Compare regional minimum distribution with integer event-count exclusion; identify joint gap/environment and all-height payments, no presumed new constant bound |
-
+| VCD-GT-CM-B07 | B / Astra; select statistical minimum-gap consumer | r1–r4 complete within scope | Joint V/K barrier overcomes the initial-M shrinking allowance on acquired positive slabs; compact forcing acquisition remains open |
+| VCD-GT-CM-B08 | B / Astra; author-proposed zero-indexed lattice | r1 assessed in E27; r2 complete, scoped screens and conditional F target accepted by E29 | Shared p,q moment rows, zero-index compatibility, complete gaps and collision/truncation scope |
+| VCD-GT-CM-B09 | B / Astra; author-proposed time-zero-to-positive-time statistics | r1 complete, accepted by E30; r2 conditional next joint-acquisition decision | At most two forward acquisition routes, paid finite-block/exterior scope and matched backward round-trip test; no all-real time-zero assumption |
 | VCD-GT-CM-E17 | E / Sol; fixed nonauthor statistical-comparison assessment | Complete r1; accepted after two scope/reference repairs | Strict-isolation extension, backward three-gap margin, weak minimum law and exclusion scope; one pass plus one correction check |
-
 | VCD-GT-CM-E18 | E / Sol; fixed recent analytical manuscript integration | Complete r1; revised analytical manuscript accepted by E19 | Joint dynamics, finite-head limits, backward comparison and statistics with systematic proofs; E16 remains open |
 | VCD-GT-CM-E19 | E / Sol; fixed nonauthor manuscript assessment | Complete r1; accepted after three scope/definition repairs | One proof/scope/coherence pass plus one correction check |
 | VCD-GT-CM-E20 | E / lead; build, visual review and reconciliation | Complete; clean 38-page PDF, visual QA and continuation | Ignored PDF, build record, research documents and continuation |
+| VCD-GT-CM-E21 | E / Sol; fixed canonical asymptotic consumer proof | Complete r1; proved in-note, accepted by E22 | Uniform positive-time clock, complete interaction and exact one-step horizon constants |
+| VCD-GT-CM-E22 | E / Sol; nonauthor proof/source/scope assessment | Complete; accepted within scope after final wording clarification | One proof/source pass and one bounded wording check; no formula change |
+| VCD-GT-CM-E23 | E / Sol; fixed joint barrier and source-head transfer | Complete; accepted within E24 scope | Coupled normalized forcing barrier, exact finite-head deficit and canonical positive-slab acquisition |
+| VCD-GT-CM-E24 | E / Sol; nonauthor joint comparison assessment | Complete; accepted after one rate-label repair | One proof/source/scope pass and one correction check; no required correction remains |
+| VCD-GT-CM-E25 | E / Sol; fixed compact mechanism assessment | Complete; accepted without correction | Trial-coordinate transfer, stopped-box logic, canonical constant-floor duration cap and finite error/comparator audit |
+| VCD-GT-CM-E26 | E / Sol; systematic recent-result manuscript integration | Complete r1; corrected analytical source accepted by E27 | Full joint-time/canonical/lattice derivations; compact numerics supporting only |
+| VCD-GT-CM-E27 | E / Sol; nonauthor integrated manuscript assessment | Complete; accepted within scope after two clarifications | One proof/source/scope pass and bounded correction check |
+| VCD-GT-CM-B10 | B / Astra; author-proposed recursive or continuous two-sided refinement | r1 complete, accepted within E32 scope; r2 next strict-gain decision | At most two sound formulations preserving one common source, with monotonic-enclosure or residual identities and explicit unpaid strict-gain gate |
+| VCD-GT-CM-E31 | E / Sol; fixed analytical integration of Notes32/34 and selected B10 formulation | Complete; E32 accepted corrected source | Full derivations, coherent manuscript ordering, supporting numerics in appendix; two bounded repairs maximum |
+| VCD-GT-CM-E32 | E / Sol; nonauthor integrated proof and scope assessment | Complete; accepted after three reference descriptors corrected | One proof/source/coherence pass and one correction check |
+| VCD-GT-CM-E33 | E / lead; PDF production and research routing | Complete; clean 81-page PDF, full visual QA and routing | Ignored reading PDF, complete visual QA, overview/plan/register and continuation |
+| VCD-GT-CM-E30 | E / Sol; fixed forward-statistics proof and census-inference assessment | Complete r1; accepted after one scope clarification | Note34 finite-census reality, forward contraction/minimum transport and exact initial-M round-trip scope; one pass and one correction check |
+| VCD-GT-CM-E29 | E / Sol; fixed nonauthor proof and rational arithmetic assessment | Complete r1; accepted without correction | Note32 identities, scoped screens, conditional forcing margin and full unpaid-source/comparator audit; one pass and one correction check |
+| VCD-GT-CM-E28 | E / lead; PDF production and research routing | Complete; clean 61-page PDF and reconciled research routing | Clean build, complete visual QA, overview/plan/register, continuation and guarded chat capture |
 
 ## 17 November 2026 sibling ownership crosswalk
 
@@ -398,3 +410,293 @@ estimate is claimed. All work requested by this manuscript turn is complete.
 Prepared for Edward Baker with Codex assistance; actual settings unavailable,
 internal shared-premise assessment. Registered CM chat0002 is refreshed,
 with bounded exact-turn final capture arranged at delivery.
+
+
+## B07 r2 canonical acquisition launch, 18 November 2026
+
+The author invokes Continuation19 in CM chat0003, thread `01a1eecb-7917-7262-90a7-07067b76815f`, turn `01a1eecb-7b80-7bc3-a171-30313eff80f5`. The guarded recorder registered the exact paginated source under its actual recorded title. Model configurations are unavailable; none are inferred. [B07 r2](handoffs/VCD-GT-CM-B07-r2.md) fixes two mechanisms, checked uniform-positive-time sources, a quantitative physical-time consumer and separate assessment. Disjoint helpers audit the positive-time source and OC interface; the lead owns shared records. E16 remains independently ready, unexecuted. Earlier launch/continuation statements are historical snapshots.
+
+### B07 r2 source decision; E21 issued
+
+Polymath v2 Theorem1.5 explicitly has constants independent of t, giving a common high-height cutoff on every slab bounded away from zero. Its clock information suggests a concrete consumer test: even the exact complete initial interaction produces only an O(log(height)^−2) one-step allowance under Note17's Riccati comparison. [E21 r1](handoffs/VCD-GT-CM-E21-r1.md) freezes this canonical asymptotic proof, including a complete shell tail and exact leading constants. E22 will separately assess before acceptance. The OC audit also locates later finite scalar acquisitions; they are not misreported as an absent statistic, nor promoted to a three-gap law. No lower-tail campaign or E16 work is issued.
+
+### E21 returned; E22 issued
+
+[Note21](../notes/21_VCD_GT_CM_E21_CANONICAL_HEIGHT_HORIZON_20261118.md) proves uniform positive-slab asymptotics for complete initial interaction and strict comparison horizons g²/6 and g²/4. The exact-data score is maximal but negative at all sufficiently high pairs for any fixed positive step. This is a scoped comparison limitation, not a collision. [E22 r1](handoffs/VCD-GT-CM-E22-r1.md) pins this proof and both acquisition audits for nonauthor assessment. No manuscript change or new Lambda bound is claimed.
+
+### B07 r2 and E21/E22 complete, 18 November 2026
+
+[E22 assessment11](../reviews/11_VCD_GT_CM_E22_CANONICAL_HORIZON_ASSESSMENT_20261118.md) states: “accepted within the stated canonical positive-slab asymptotic and one-step comparison-limitation scope.” The first pass required no mathematical correction. One lead-requested final control-premise clarification and header routing check leaves every formula unchanged; the final note is bound separately, and all five other original E22 inputs remain unchanged.
+
+[Note21](../notes/21_VCD_GT_CM_E21_CANONICAL_HEIGHT_HORIZON_20261118.md) proves DM=1/2+O(1/L+L a^(−c t0)) for high canonical real-simple slices on fixed t0>0 slabs. Its full interaction horizon is ~g²/4, compared with ~g²/6 from two neighbors. Exact initial D,M maximize the unchanged score, yet every fixed positive step fails that score at sufficiently high pairs. This limits the one-step Riccati allowance, not actual canonical dynamics, renewed anchors or stronger time-dependent estimates.
+
+[Source audit04](../references/04_VCD_GT_CM_POSITIVE_TIME_SOURCE_AUDIT_20261118.md) verifies the common positive-slab high exterior theorem from Polymath's t-independent constants; no time-zero extension or numerical cutoff is acquired. [OC audit20](../notes/20_VCD_GT_CM_OC_ACQUISITION_INTERFACE_AUDIT_20261118.md) retains OC's later certified finite scalar/census while separating it from the open positive-time three-gap/void task. No compact statistical margin or improved Lambda bound follows.
+
+[Continuation22](../notes/22_VCD_GT_CM_B07_R2_SYNTHESIS_AND_CONTINUATION_20261118.md) is the current handoff, superseding Note19's launch routing. No further dependent statistical E task is justified; a new B choice needs a distinct compact acquisition or joint-in-time consumer. E16 r2 remains an independently ready, unexecuted optional proof. All seven E16 and fourteen current manuscript pins are preserved. [Record09](../numerics/09_VCD_GT_CM_B07_R2_CANONICAL_HORIZON_RECORD_20261118.json) records artifacts and checks. No manuscript edit, PDF rebuild, snapshot or numerical campaign. For Edward Baker with Codex assistance; actual chat0003 settings unavailable, separate internal shared-premise review. The guarded chat is refreshed and bounded exact-turn final capture is arranged at delivery.
+
+
+## B07 r3 joint-in-time launch, 18 November 2026
+
+The author explicitly asks to continue from Note22 and investigate a stronger comparison. [B07 r3](handoffs/VCD-GT-CM-B07-r3.md) freezes two routes: retained positive forcing/coupled defect, and common-time canonical clock comparison. The task seeks a nonshrinking physical-time consequence or a precise scoped bottleneck with quantitative rates, not a restatement of favorable time data. Prior B07 r2 and E21/E22 remain accepted in their stated class. CM chat0003 was refreshed at turn start; current turn `01a1eede-3fdf-7f00-8c2d-0c5dee61e413`, actual configurations unavailable. Helpers have disjoint analytical outputs; lead owns status/history. E16 and the manuscript remain unchanged.
+
+### B07 r3 mechanism selected; E23 issued
+
+Retaining only a near-equilibrium F/M² floor still amplifies a normalized gap deficit backward. The selected joint observable K=2D²F instead gives an upper barrier for V=1−2DM. The lattice K head has exact deficit (n+1)^−3; canonical clock localization on a logarithmically growing head supplies a concrete source route. [E23 r1](handoffs/VCD-GT-CM-E23-r1.md) freezes the barrier, complete initial-M tail and full-time K lower estimate before execution. A disjoint source adviser also derives the published Remark9.4 velocity consequence through an actual analytic residual and Cauchy bounds, without differentiating an O term. E24 will assess all new proof/source implications. This is no new exterior zero coverage or Lambda bound; E16 and the manuscript remain unchanged.
+
+### E23 returned; E24 issued
+
+[Note25](../notes/25_VCD_GT_CM_E23_JOINT_BARRIER_AND_CANONICAL_HEAD_20261118.md) gives the joint V/K barrier and its R=L² canonical head acquisition. Initial V is O(L^-3), the full-time K deficiency is O(L^-9+E), and the admissible fixed-slab margin loss is O(Delta/L) relative to the initial gap square. [Note23](../notes/23_VCD_GT_CM_B07_R3_RETAINED_FORCING_ADVICE_20261118.md) supplies robust finite-head constants and the exact noncanonical collision control; [Note24](../notes/24_VCD_GT_CM_B07_R3_COMMON_TIME_CLOCK_ADVICE_20261118.md) spells out the published source-jet velocity method and sharper same-source direct comparator. All are pinned for [E24](handoffs/VCD-GT-CM-E24-r1.md) before acceptance. The known exterior source coverage is not claimed as new, and no compact/time-zero or Lambda gain is inferred.
+
+### B07 r3 and E23/E24 complete, 18 November 2026
+
+[E24 assessment12](../reviews/12_VCD_GT_CM_E24_JOINT_TIME_ASSESSMENT_20261118.md) states: “accepted within the stated joint-barrier, canonical positive-slab acquisition and source-jet comparison domains.” One local wording repair identifies the quoted variation bound as a squared half-gap D bound; no formula changed. Reversing that phrase exactly recovers the original Note25 pin; the other six inputs are unchanged. This is a separate internal shared-premise assessment, not specialist validation.
+
+[Note25](../notes/25_VCD_GT_CM_E23_JOINT_BARRIER_AND_CANONICAL_HEAD_20261118.md) proves D>=D(0)−2vu from the acquired full-time K floor. The exact lattice-head deficit is (J+1)^−3; a canonical R=L² head with complete initial-M tails yields v=O(L^−3) and relative margin loss O(Delta/L). This overcomes the r2 shrinking-step comparison on fixed admissible positive slabs. [Note24](../notes/24_VCD_GT_CM_B07_R3_COMMON_TIME_CLOCK_ADVICE_20261118.md) supplies the published source-jet method and a sharper fixed-duration direct clock comparator. Existing source coverage is not new coverage; no compact/time-zero estimate, effective cutoff or Lambda bound follows.
+
+[Continuation26](../notes/26_VCD_GT_CM_JOINT_TIME_SYNTHESIS_AND_CONTINUATION_20261118.md) supersedes Note22's launch routing. The next conditional B decision is a distinct compact canonical K acquisition that does not assume target-gap positivity. No dependent task remains issued. E16 r2 remains ready and unexecuted. [Record10](../numerics/10_VCD_GT_CM_B07_R3_JOINT_TIME_RECORD_20261118.json) binds the new artifacts and preservation checks. The manuscript and prior scientific notes are unchanged; no build, snapshot or numerical campaign. Prepared for Edward Baker with Codex assistance; actual chat0003 settings unavailable. The guarded chat is refreshed, with bounded exact-turn capture arranged at delivery.
+
+
+## B07 r4 compact acquisition selection, 18 November 2026
+
+The author invokes Continuation26 in CM chat0003, turn
+`01a1eeeb-70f8-73d2-82ff-c58da5f7e4c4`. [B07 r4](handoffs/VCD-GT-CM-B07-r4.md)
+classifies the source-mechanism choice as B / recommended Astra before
+substantive execution. Read-only advisers inspect existing compact source
+acquisitions and collision-regular/stopped-box routes. The lead will fix
+a finite duration, strict margin, complete errors and same-information
+comparator before any E issuance. No numerical campaign or E16 execution
+is implied. Chat refreshed at turn start; actual configurations unavailable.
+
+### B07 r4 selected contour mechanism; E25 issued
+
+[Note27](../notes/27_VCD_GT_CM_COMPACT_CONTOUR_SELECTION_AND_FLOOR_SCREEN_20261118.md)
+selects complete-source contour extraction and fixes the Lehmer target
+from t=.1 to −.0003, duration .1003. Certified initial data pay V0<.784167
+and the proposed .89 barrier would leave strict margin .0001028. However,
+the inherited annular log bound proves actual |K(0)|<.003, forcing every
+one constant-floor allowance from this anchor below .0896. This rejects
+the chosen consumer before a new numerical run, not the actual descent.
+[E25](handoffs/VCD-GT-CM-E25-r1.md) is issued for separate assessment after
+source/target/error/comparator specification. No acquisition execution or
+negative-time source extension is issued; manuscript and E16 unchanged.
+
+### B07 r4 / E25 complete; author steers to a coupled lattice
+
+[E25 assessment13](../reviews/13_VCD_GT_CM_E25_COMPACT_FLOOR_SCREEN_ASSESSMENT_20261118.md)
+accepts Note27 within scope without required correction; all nine inputs
+are unchanged. The complete-source |K(0)|<.003 screen limits the selected
+constant-floor allowance to <.0896 against target .1003. No compact
+numerical acquisition, negative-time certificate or global conclusion.
+
+During this turn the author proposes an additional zero index for M(p,q,t).
+[B08 r1](handoffs/VCD-GT-CM-B08-r1.md) records the new bounded conceptual
+choice before dependent work. Note08 supplies the p,q convention. Two
+read-only advisers check shared-gap expressions and adjacent-row overlap;
+E16 remains independently optional. The original compact screen is
+preserved, not replaced by a claimed lattice gain. Actual settings remain
+unavailable; the same registered CM chat records the steering.
+
+### B08 r1 formulation complete, 18 November 2026
+
+[Note29](../notes/29_VCD_GT_CM_ZERO_INDEXED_COUPLED_LATTICE_20261118.md)
+uses edge-indexed M_n(p,q), exact shared-zero overlap, common-resolvent
+translation and the all-gap expression for M_n(1,1). Common node-force
+differences telescope across a fixed block, leaving two boundary errors;
+uncertain gaps and individual-gap concentration remain explicit payments.
+Two read-only advisers checked these elementary identities; no separate
+lattice approximation assessment, stable truncation or signed gain is
+claimed. Neighboring edge charts can lose their collars at another pair's
+collision; common symmetric cluster data are needed through such events.
+
+Note29 supersedes Note28 as the current conceptual continuation while
+preserving B07 r4/E25's accepted screen. The next conditional B08 r2 choice
+is a source-acquired lattice quantity that controls individual gaps, not
+only a block aggregate. No new execution packet or simulation is issued.
+E16 r2 remains unchanged and optional. [Record11](../numerics/11_VCD_GT_CM_COMPACT_FLOOR_SCREEN_RECORD_20261118.json)
+records this turn's analytical artifacts and source preservation. Chat
+capture includes the author's lattice steering; actual settings unavailable.
+
+## E26–E28 manuscript integration launch, 18 November 2026
+
+The author requests the recent results and coupled-lattice idea in the
+existing manuscript, analytical development first, numerics as supporting
+evidence, and the PDF under ignored output. The subsequent clarification
+explicitly requests overview, plan and progress reconciliation. [E26 r1](handoffs/VCD-GT-CM-E26-r1.md)
+fixes the reading order and disjoint authoring files; scientific inputs and
+pre-edit manuscript are pinned. E27 separately assesses, then E28 builds,
+visually checks and writes continuation31. Current turn
+`01a1eefb-d53a-73f1-90a1-9d8a1c69b7f5`; CM chat0003 refreshed at start;
+actual settings unavailable. E16 remains optional and scientifically
+unchanged, with an explicit source rebind if its pinned framework changes.
+
+### E26–E28 complete: coupled-lattice manuscript, 18 November 2026
+
+[Integration30](../notes/30_VCD_GT_CM_COUPLED_LATTICE_MANUSCRIPT_INTEGRATION_20261118.md)
+records the systematic analytical development. E26 incorporates Notes21,
+23–25,27,29, giving full lattice compatibility/flux, joint barrier,
+canonical head/tail/source-jet and compact stopping/error derivations.
+The inherited compact numbers appear only in a supporting appendix.
+The 18 pinned scientific inputs remain unchanged.
+
+[E27 review14](../reviews/14_VCD_GT_CM_E27_INTEGRATED_MANUSCRIPT_ASSESSMENT_20261118.md)
+and its return accept within scope after the one bounded correction check:
+explicit radius/center geometry for the contour error bound, and a
+section-limited statistics statement pointing to the positive-slab source
+result. No formula or constant changed; original and corrected 38-file
+bindings remain preserved. This is a nonauthor internal shared-premise
+assessment, not specialist or cross-model validation.
+
+E28 builds the final 61-page PDF under ignored output. Compilation has no
+errors, unresolved citations/references or overfull boxes; all pages were
+rendered and visually checked, including all four changed pages after the
+repairs. [Record12](../numerics/12_VCD_GT_CM_COUPLED_LATTICE_MANUSCRIPT_BUILD_RECORD_20261118.json)
+binds the sources and output. No predecessor manuscript or snapshot folder
+was changed/created. Overview and plan are systematically rewritten around
+the shared zero-index lattice and its missing individual-gap estimate.
+
+[Continuation31](../notes/31_VCD_GT_CM_COUPLED_LATTICE_MANUSCRIPT_CONTINUATION_20261118.md)
+is the current handoff. B08 r2 is a conditional next B/Astra selection of
+one source-acquired concentration quantity, not an issued proof or numeric
+campaign. E16 r3 rebinds only its changed framework source; the other six
+pins and the optional scientific task remain unchanged and unexecuted.
+The compact constant-v screen and all earlier scopes are preserved. Chat
+0003 uses the guarded refresh and exact-turn follow-up; actual settings
+remain unavailable.
+
+## B08 r2 launch, 18 November 2026
+
+The author invokes Continuation31 in thread
+`01a1ef0c-0ca3-7c31-a497-3593a07203d1`, turn
+`01a1ef0c-0f5f-7ed1-8bb0-063e1819e2ef`, actual title
+“Continue Volterra Mellin research”. The guarded recorder registers this as
+CM chat0004; its recorded model configurations are empty, so actual model
+and effort are unavailable. Prepared for Edward Baker with Codex LLM
+assistance; adviser settings inherited.
+
+**B08 r2 / B / Astra recommendation:** select at most two concrete
+common-source concentration consumers, comparing a finite-block force
+dispersion with retained time dependence in the individual-gap defect.
+Two read-only conceptual advisers have disjoint questions; the lead owns
+the decision and this register. Acceptance requires an exact identity,
+complete error/source dependencies, collision-premise screen and a fair
+direct comparator. A finite duration and strict paid margin must precede
+any acquisition E task. Otherwise close this bounded pass with the missing
+source estimate, preserving its class. No numerical campaign or E16
+execution is authorized by this launch; E16 r3 remains independently optional.
+
+### B08 r2 analytical selection; E29 assessment issued
+
+[Note32](../notes/32_VCD_GT_CM_FORCE_DISPERSION_AND_RETAINED_FORCING_20261118.md)
+compares exactly two candidates. The frozen uniform-denominator unsigned
+force dispersion permits <.0008; the sharper retained-transient constant-K
+model also fails the .1003 target. A complete physical F>=.3 would give
+strict squared-gap margin >.00006246, with the same result from direct D/M.
+This source floor and negative-time collar/coordinate acquisition remain
+unpaid. No source execution is issued. [E29 r1](handoffs/VCD-GT-CM-E29-r1.md)
+freezes a separate proof/scope and source-free rational arithmetic assessment.
+The prospective acquisition gate is not treated as passed by this review.
+
+## B09 r1 author steering: forward acquisition from t=0
+
+During the current turn, the author asks whether known t=0 information
+can be propagated forward to improve positive-time statistics and then
+used for backward propagation. This is a new B/Astra conceptual decision,
+not a replacement of B08 r2 or its pending E29 assessment. Compare at most
+two concrete routes: finite-block forward force dispersion and transport
+of an independently certified time-zero census/statistical observable.
+Pay real-label/count/outer-boundary and complete exterior hypotheses; no
+all-real t=0 premise may be imported as unconditional. The key acceptance
+test is a quantified forward improvement and an equally informed backward
+comparison showing exactly what survives. A matched contraction/amplification
+round trip alone is not a net gain. No new source campaign is issued.
+
+### E29 complete; B08 r2 scoped disposition accepted
+
+[Review15](../reviews/15_VCD_GT_CM_E29_FORCE_AND_TRANSIENT_ASSESSMENT_20261118.md)
+accepts Note32 without required correction; all eight pins unchanged.
+The exact source-free replay passes its fixed claims. The >.00006246
+margin remains conditional on F>=.3 and independent source/count/coordinate
+gates; direct D/M gives the identical comparison. Source acquisition stays
+unissued. The author's B09 time-zero/forward-statistics proposal now owns
+the active conceptual question; B08's quantitative target remains usable
+as a separate backward consumer.
+
+### B09 r1 analytical return; E30 issued
+
+[Note34](../notes/34_VCD_GT_CM_TIME_ZERO_FORWARD_STATISTICS_20261118.md)
+derives a real/simple starting population from the complete singleton OC
+census by conjugation, conditional finite-block forward force contraction
+and minimum-gap lower-tail transport, and the exact horizon identity
+h_t=1-2Fh². Under its stated F>=0 class, forwarding exact data cannot
+improve the endpoint of the unchanged initial-M backward consumer. This
+does not exclude retained forcing or joint source information. [E30 r1](handoffs/VCD-GT-CM-E30-r1.md)
+is issued for a bounded nonauthor assessment. No positive-time source tube
+or signed exterior bound is claimed acquired; no source campaign issued.
+
+### E30 complete; forward joint acquisition is the next conceptual gate
+
+[Review16](../reviews/16_VCD_GT_CM_E30_FORWARD_STATISTICS_ASSESSMENT_20261118.md)
+accepts Note34 after one clarification: a two-neighbor lower estimate must
+satisfy 0<=b3<=M with its omitted exterior paid; M>=0 alone is insufficient
+when exterior zeros may be nonreal. No formula or constant changed. The
+six corrected pins match; original bindings and correction history remain.
+The finite-census inference inherits its recorded winding scope, and all
+new forward source/time/outer-boundary estimates remain conditional.
+
+B09 r1 is complete. Default next **B09 r2 / B / Astra** selects one common
+finite time-zero source domain and a joint estimate whose information is
+retained in the backward consumer. Direct F>=.3 acquisition is a separate
+B08 r3 alternative; E16 r3 remains independently optional. None is an issued
+source campaign. [Continuation33](../notes/33_VCD_GT_CM_RETAINED_FORCING_CONTINUATION_20261118.md)
+incorporates the author's steering and supersedes Continuation31's next
+routing. Overview, plan, concise history and result/avoid entries are
+reconciled. This turn produces no new manuscript/PDF or global zero claim.
+
+## Recursive forward/backward proposal and manuscript launch, 18 November 2026
+
+The author proposes repeated forward statistical acquisition and backward
+bound improvement, possibly formulated continuously from both ends, and
+requests systematic theoretical manuscript integration with supporting
+numerics, ignored output PDF and updated research routing. This turn is
+`01a1ef39-1f61-73d2-8ebc-f4d032ef16e0` in the same guarded CM chat0004.
+The start refresh includes the preceding real final; recorded settings
+remain unavailable.
+
+B10 r1 is a bounded conceptual formulation, not an acquired improvement:
+compare at most two mathematically sound two-sided mechanisms, preserving
+one complete source/path and distinguishing enclosure refinement from
+reversible flow. E31 can integrate accepted Notes32/34 in parallel; its
+new B10 section waits for the lead's decision. E32 separately assesses the
+assembled text, then E33 builds and checks the PDF and continuation. No
+new source campaign or E16 execution is part of this request. The current
+scientific notes and pre-edit manuscript are hash-bound before integration.
+
+## 18 November 2026 — two-sided manuscript milestone, B10/E31–E33
+
+The author's recursive forward-statistics/backward-bounds proposal is
+formalized in Note35 and integrated with Notes32/34. The new analytical
+sections derive forward force/minimum transport, retained physical forcing,
+exact return-horizon loss, common-source enclosure soundness and an exact
+continuous forward-error/backward-adjoint identity. Fixed-relation sweeps
+preserve the full skeleton absent new observations; strict canonical gain
+remains unacquired. This is the substantive same-information refinement.
+
+[E32](../reviews/17_VCD_GT_CM_E32_TWO_SIDED_MANUSCRIPT_ASSESSMENT_20261118.md)
+accepts within scope after three Proposition-to-Theorem reference descriptors
+were repaired. Original/corrected 28-file manifests and unchanged four-source
+E31 inputs are preserved. No formula, hypothesis or constant changed.
+Clean 81-page PDF under ignored output; all pages rendered and visually
+reviewed, final changed pages59/64/69 rechecked. No new numerical acquisition,
+canonical coverage, stable finite closure or Lambda claim. Record15 binds
+production evidence; internal review is not specialist validation.
+
+Overview/plan now route B10 r2 to a strict finite common-source refinement
+or residual estimate against equally informed direct joint propagation.
+B09/B08 alternatives remain available. E16 r4 rebinds only the roadmap;
+its unchanged approximation proof remains ready and unexecuted.
+[Integration36](../notes/36_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_INTEGRATION_20261118.md)
+and [Continuation37](../notes/37_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_CONTINUATION_20261118.md)
+replace the current handoff while retaining all earlier milestones.
+Prepared for Edward Baker with Codex assistance; actual model/effort
+unavailable, helper settings inherited. Current chat0004 capture uses the
+guarded recorder and an exact-turn deferred follow-up, not an assumed hook.

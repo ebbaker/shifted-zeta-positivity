@@ -1,0 +1,11 @@
+# VCD-GT-CM-E21 r1 — Canonical initial-interaction horizon
+
+18 November 2026, America/New_York. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort unavailable in chat0003. Type **E / Sol recommended**: fixed asymptotic transfer and comparison algebra. Lead executes; nonauthor E22 assesses.
+
+B07 r2 decision: both candidate initial-data mechanisms feed Note17's same scalar Riccati comparison. Test that consumer on the actual canonical high-height divisor before requesting new lower-tail data. Primary passages checked at https://arxiv.org/html/1904.12438v2, Theorem1.5(i)–(iv), equation(26), absolute-constant convention and §9. Existing parent references05 supplies the count receipt. No numerical constants for the source's absolute C,c,A are asserted.
+
+Fixed domain: unchanged complete theta, physical H_t=-H_zz, 0<t0<=t<=t1<=1/2, all-real simple slices for positive M and Note17 consumers. Derive common high cutoff from published uniform constants, explicitly excluding endpoint zero. At a positive high adjacent pair (a,b), set g=b-a, D=g²/4, L=log(a/(4π)). Use the published clock and a unit-radius near/far split, preserving every occurrence and the complete tail.
+
+Target: g~4π/L; D times two-neighbor mass tends to 1/4; D times complete M tends to 1/2, with a uniform error O(1/L+L a^(-c t0)). Consequently the supremal strict comparison durations are asymptotic to g²/6 and g²/4 respectively. Prove exact initial D,M maximize the allowed score among every certified 0<d<=D,0<=b<=M. Distinguish failure of this one-step allowance for fixed positive physical duration from failure of the canonical heat flow. Show directly imported uniform exterior simplicity can instead cover the tail, leaving compact statistics and all boundary payments open.
+
+One proof note (Note21), no numerical campaign or E16 execution. One proof pass and two local repairs maximum. No manuscript edits. Include exact finite lattice and collision controls for algebra/scope only, plus family-by-family premise screen. Return to B for a changed dynamical lower bound, reanchoring scheme, time-zero endpoint or a different consumer. E22 independently checks all estimates, quantifiers, source use and scope before acceptance.

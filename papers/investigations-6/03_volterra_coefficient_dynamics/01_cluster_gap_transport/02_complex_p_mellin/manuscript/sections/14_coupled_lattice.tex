@@ -1,0 +1,377 @@
+% 18 November 2026. Prepared for Edward Baker with OpenAI Codex LLM assistance.
+% Actual model and effort unavailable; inherited helper settings. E26 source integration.
+\section{A coupled hierarchy indexed by the adjacent pair}
+\label{sec:lattice}
+
+The split-pole moments can be attached to every adjacent pair of the
+same divisor. This adds an index locating the pair, while imposing
+compatibility between rows that share a zero. The resulting description
+retains correlations which independent moment rows would discard.
+We develop the formulation proposed in \cite{BakerCM29}, using the
+single-pair identities of \cite{BakerCM08,BakerCM09}. The conclusions
+are exact representation and error identities. An estimate preventing
+concentration into an individual gap remains a separate requirement.
+
+\subsection{Edge coordinates and the complete gap interaction}
+
+First suppose the complete divisor is real and simple on the time
+interval under consideration, and order its zeros as $x_n(t)$,
+$n\in\mathbb Z$. The integer labels are continued locally in time.
+All infinite-lattice assertions below are componentwise; uniform
+estimates concern a fixed finite set of edges on a compact interval
+before the relevant loss of simplicity or separation. Define
+\begin{equation}
+ g_n=x_{n+1}-x_n>0,\qquad
+ c_n=\frac{x_n+x_{n+1}}2,\qquad D_n=\frac{g_n^2}{4},
+ \label{lat:coordinates}
+\end{equation}
+and, in the orientation of \eqref{split:def},
+\begin{equation}
+ M_n(p,q;t)=\sum_{k\ne n,n+1}
+       (x_k-x_{n+1})^{-p}(x_k-x_n)^{-q},
+ \quad p,q\ge0,\quad p+q\ge2.
+ \label{lat:moments}
+\end{equation}
+The index $n$ belongs to the edge $(x_n,x_{n+1})$. It does not
+specify a new exterior source. In particular,
+$M_n(1,1)$ is the interaction $M$ of that edge,
+$M_n(r,r)=S_r^{(n)}$, and
+$\bigl(M_n(r-1,r)+M_n(r,r-1)\bigr)/2=T_r^{(n)}$ for $r\ge2$.
+
+For these exact identities, a strictly separated count-two contour
+suffices at each edge; the stronger collar ratio in
+\eqref{eq:domain} is not imposed on a general adjacent-edge lattice.
+On a compact subinterval, a finite cover by such contours gives
+positive denominator bounds for each retained edge. The finite
+algebra in Proposition~\ref{split:prop} and its complete-product
+passage therefore apply with those bounds. Its recurrence
+\eqref{split:mixed}--\eqref{split:axes} holds at every $n$, replacing
+$P_{p,q}$ by $M_n(p,q)$ and $d_0$ by $g_n$. In particular, in
+forward physical time,
+\begin{equation}
+ g_n'=\frac4{g_n}-2g_nM_n(1,1),\qquad
+ D_n'=2-4D_nM_n(1,1).
+ \label{lat:gap-law}
+\end{equation}
+There is no additional nearest-neighbor term to append to the
+single-pair recurrence. Coupling in $n$ is already encoded by the
+common zeros and the identities derived below.
+
+The complete sums in \eqref{lat:moments} are absolute at their stated
+orders. For targets in a fixed compact spatial set and $N$ sufficiently
+large, the terms with $|\rho|>N$ are bounded by
+$C_{p,q}|\rho|^{-p-q}$. The unit-count bound
+\eqref{eq:count-safe} consequently gives the tail
+\begin{equation}
+ \sum_{|\rho|>N}
+ |\rho-x_{n+1}|^{-p}|\rho-x_n|^{-q}
+ =O_{p,q,I,\mathcal B}(N^{1-p-q}\log N),
+ \label{lat:tail}
+\end{equation}
+uniformly for a fixed finite edge block $\mathcal B$ with the stated
+clearances. Opposite and conjugate occurrences and all multiplicities
+are included. No uniformity in a growing block, height or moment order
+is inferred from this estimate.
+
+\begin{proposition}[All-gap expression]\label{lat:all-gap-prop}
+When the complete divisor is real and ordered, put
+\begin{equation}
+ L_{n,m}=\sum_{j=1}^{m}g_{n-j},\qquad
+ R_{n,m}=\sum_{j=1}^{m}g_{n+j},\qquad m\ge1.
+ \label{lat:distances}
+\end{equation}
+Then the complete interaction is
+\begin{equation}
+ M_n(1,1)=\sum_{m\ge1}
+ \left\{\frac1{L_{n,m}(L_{n,m}+g_n)}
+       +\frac1{R_{n,m}(R_{n,m}+g_n)}\right\}.
+ \label{lat:all-gap}
+\end{equation}
+Thus \eqref{lat:gap-law} and \eqref{lat:all-gap} describe a nonlocal
+evolution of the complete gap sequence. They do not specify the
+absolute translation coordinate.
+\end{proposition}
+
+\begin{proof}
+The left exterior zero $x_{n-m}$ has distances $-L_{n,m}$ and
+$-(L_{n,m}+g_n)$ from the left and right targets. The right exterior
+zero $x_{n+1+m}$ has distances $R_{n,m}+g_n$ and $R_{n,m}$.
+These exhaust the exterior divisor. Substitution in
+\eqref{lat:moments} proves the formula; absolute convergence from
+\eqref{lat:tail} permits the partition. The gap law has already
+eliminated the common center velocity, so it determines relative
+motion only.
+\end{proof}
+
+Every gap enters many rows through cumulative distances in
+\eqref{lat:distances}. This is a spatially nonlocal lattice, rather
+than a closed nearest-neighbor equation. For the stationary cosine
+control with every gap equal to $g$, each side of
+\eqref{lat:all-gap} is
+$g^{-2}\sum_{m\ge1}[m(m+1)]^{-1}=g^{-2}$. Hence
+$M_n(1,1)=2/g^2$ and $g_n'=0$, checking the physical normalization.
+This noncanonical control does not model the canonical population.
+
+If only a finite consecutive real block is known, use
+\eqref{lat:moments} with the remaining complete divisor, which may
+be nonreal. The part of \eqref{lat:all-gap} belonging to known real
+zeros is still valid, but the omitted contribution must be retained
+as a complete exterior interaction. Nonreal groups cannot be replaced
+by the positive real-gap terms of \eqref{lat:all-gap}. The row
+identities and the compatibility statements below remain valid on
+cleared charts of the real block in this setting.
+
+\subsection{Overlap identities and a common meromorphic field}
+
+\begin{proposition}[Adjacent-row compatibility]\label{lat:compat-prop}
+For every integer $r\ge2$,
+\begin{equation}
+ M_n(r,0)+(-g_n)^{-r}
+ =M_{n+1}(0,r)+g_{n+1}^{-r}.
+ \label{lat:overlap}
+\end{equation}
+Within a row, for $p,q\ge1$ and $p+q\ge3$,
+\begin{equation}
+ g_nM_n(p,q)=M_n(p,q-1)-M_n(p-1,q).
+ \label{lat:row-algebra}
+\end{equation}
+These are necessary constraints on rows arising from a common divisor.
+They are not asserted to characterize all realizable moment arrays.
+\end{proposition}
+
+\begin{proof}
+Both sides of \eqref{lat:overlap} equal
+$\sum_{k\ne n+1}(x_k-x_{n+1})^{-r}$, with any nonreal exterior
+occurrences also included. The left side restores $x_n$ to the
+sum for edge $n$, and the right side restores $x_{n+2}$ to the sum
+for edge $n+1$. All terms are absolute for $r\ge2$.
+For \eqref{lat:row-algebra}, set
+$X=\rho-x_{n+1}$, $Y=\rho-x_n=X+g_n$. The identity
+\[
+ X^{-p}Y^{-(q-1)}-X^{-(p-1)}Y^{-q}
+ =(Y-X)X^{-p}Y^{-q}
+\]
+can be summed absolutely in the stated range. At $(p,q)=(1,1)$,
+the same identity holds only as the common-cutoff difference of
+the first-power sums: its combined summand is $g_n/(XY)$ and
+decays quadratically. Separate absolute first-power sums are neither
+required nor introduced.
+\end{proof}
+
+The common generating object is the meromorphic logarithmic derivative
+$B(t,z)=H_z(t,z)/H(t,z)$. For edge $n$ remove its two target poles:
+\begin{equation}
+ R_n(t,z)=B(t,z)-\frac1{z-x_n(t)}-\frac1{z-x_{n+1}(t)}.
+ \label{lat:resolvent}
+\end{equation}
+The removed singularities are removable at these simple zeros.
+For three consecutive distinct labels, direct subtraction gives
+\begin{equation}
+ R_{n+1}(t,z)=R_n(t,z)+\frac1{z-x_n(t)}
+                         -\frac1{z-x_{n+2}(t)}.
+ \label{lat:resolvent-shift}
+\end{equation}
+This identity requires no reality assumption on the other zeros.
+The tail conventions are those of the same complete field $B$ on
+both sides; there is no independently chosen additive regularizer.
+
+The Taylor coefficients of $R_n$ at the two targets recover the
+pure-axis moments. For $r\ge2$,
+\begin{equation}
+ \frac{\partial_z^{r-1}R_n(t,x_{n+1})}{(r-1)!}
+       =-M_n(r,0),\qquad
+ \frac{\partial_z^{r-1}R_n(t,x_n)}{(r-1)!}
+       =-M_n(0,r).
+ \label{lat:axis-taylor}
+\end{equation}
+Indeed, differentiation of an exterior simple pole gives
+$(-1)^{r-1}(z-\rho)^{-r}$; at the target this is
+$-(\rho-z)^{-r}$. The derivatives remove the genus-one constant
+regularizers, and the remaining series is absolute.
+
+\begin{proposition}[Mixed generating function]\label{lat:generator-prop}
+Write $a=x_n$, $b=x_{n+1}$ at a fixed time. In sufficiently small
+cleared neighborhoods of the two targets,
+\begin{equation}
+ -\frac{R_n(b+u)-R_n(a+v)}{b-a+u-v}
+ =\sum_{p,q\ge1}M_n(p,q)u^{p-1}v^{q-1}.
+ \label{lat:generator}
+\end{equation}
+The quotient has its divided-difference interpretation when its
+two arguments coincide within the analytic domain of $R_n$.
+Moreover, off the zeros,
+\begin{equation}
+ B_t=-B_{zz}-2BB_z.
+ \label{lat:burgers}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+For one exterior pole,
+\[
+ -\frac{(b+u-\rho)^{-1}-(a+v-\rho)^{-1}}
+        {b-a+u-v}
+ =\frac1{(\rho-b-u)(\rho-a-v)}.
+\]
+The constant regularizers cancel in the difference. Choose the
+neighborhoods so that $|u|/|\rho-b|$ and $|v|/|\rho-a|$ are
+uniformly bounded by a number less than one for every exterior
+occurrence. Expanding the two geometric series gives
+\eqref{lat:generator}. Their absolute sum is bounded by a constant
+times $\sum_\rho|\rho-b|^{-1}|\rho-a|^{-1}$, which is finite by
+the fixed-order tail estimate and local clearance. This justifies
+the interchange of the two power series and the complete divisor.
+If the arguments coincide, the left side is $-R_n'$ by analytic
+continuation of the divided difference. Finally,
+$H_t/H=-(B_z+B^2)$ follows from the heat equation. Differentiate
+in $z$ to obtain \eqref{lat:burgers}.
+\end{proof}
+
+Equations \eqref{lat:resolvent-shift}--\eqref{lat:burgers} express
+all rows through one field. A Taylor translation cannot cross an
+unremoved neighboring pole: use overlapping cleared neighborhoods
+or remove the entire chosen block first. The meromorphic equation
+is another exact expression of the original heat evolution, not an
+additional estimate on its canonical solution. An arbitrary array
+of individually evolved or truncated moment rows need not satisfy
+these overlap identities or arise from any divisor.
+
+\subsection{Node forces, block cancellation and its error budget}
+
+At a simple root define the regular part
+\begin{equation}
+ U_n(t)=\lim_{z\to x_n}
+       \left(B(t,z)-\frac1{z-x_n}\right)
+       =\frac{H_{zz}(t,x_n)}{2H_z(t,x_n)}.
+ \label{lat:node-force}
+\end{equation}
+Taylor expansion of $H$ at $x_n$ gives the second equality. Implicit
+differentiation of $H(t,x_n(t))=0$ and $H_t=-H_{zz}$ gives
+$x_n'=2U_n$. This definition uses a finite part of the complete
+source, not an unregularized infinite first-power sum.
+
+\begin{proposition}[Block flux identity]\label{lat:flux-prop}
+For a fixed finite block of edges $n=a,\ldots,b$ on a common
+simple-root interval,
+\begin{align}
+ g_nM_n(1,1)&=\frac2{g_n}-(U_{n+1}-U_n),
+                         \label{lat:edge-flux}\\
+ \sum_{n=a}^{b}g_nM_n(1,1)
+ &=2\sum_{n=a}^{b}\frac1{g_n}-(U_{b+1}-U_a).
+                         \label{lat:block-flux}
+\end{align}
+The same formulas hold for a finite real block with nonreal exterior,
+provided the complete interactions and source finite parts are used.
+\end{proposition}
+
+\begin{proof}
+The node law gives $g_n'=2(U_{n+1}-U_n)$. Comparison with
+\eqref{lat:gap-law} proves \eqref{lat:edge-flux}. Summing the
+successive differences telescopes exactly, giving
+\eqref{lat:block-flux}. No positivity of exterior summands enters
+these two operations.
+\end{proof}
+
+The cancellation has a precise, limited consequence for error
+propagation. Put $A_{a,b}=\sum_{n=a}^b g_nM_n(1,1)$. If the
+gaps are exact and common approximations to the endpoint forces
+satisfy $|\widehat U_j-U_j|\le\varepsilon_j$ for
+$j=a,b+1$, reconstruct the aggregate by the right side of
+\eqref{lat:block-flux}. Then
+\begin{equation}
+ |\widehat A_{a,b}-A_{a,b}|
+ \le\varepsilon_a+\varepsilon_{b+1}.
+ \label{lat:exact-gap-error}
+\end{equation}
+For a uniform node error $\varepsilon$, this is $2\varepsilon$,
+independent of the number of edges. Bounding each edge-force
+difference separately and summing absolute allowances would pay
+up to $2(b-a+1)\varepsilon$. The smaller aggregate allowance uses
+the same approximated node at each shared endpoint, so its interior
+errors cancel before absolute values are taken.
+
+If the gaps are also approximated, assume $\widehat g_n>0$ and
+$g_n>0$, and define
+$\widehat A_{a,b}=2\sum_{n=a}^b\widehat g_n^{-1}
+-(\widehat U_{b+1}-\widehat U_a)$. The full bound is
+\begin{align}
+ |\widehat A_{a,b}-A_{a,b}|
+ &\le\varepsilon_a+\varepsilon_{b+1}
+       +2\sum_{n=a}^b
+          \frac{|\widehat g_n-g_n|}{\widehat g_n g_n}
+                                                        \notag\\
+ &\le\varepsilon_a+\varepsilon_{b+1}
+       +2\sum_{n=a}^b
+          \frac{|\widehat g_n-g_n|}
+               {\min(\widehat g_n,g_n)^2}.
+ \label{lat:uncertain-gap-error}
+\end{align}
+This follows from the exact difference of two reciprocals. Certified
+positive lower gap bounds may replace the denominators in the final
+allowance. Small gaps can make this payment large. These bounds
+concern an aggregate reconstructed by the identity; independently
+approximating each product $g_nM_n(1,1)$ requires its additional
+weight and moment errors.
+
+The same-information direct comparator has exactly the same
+cancellation. The block length satisfies
+\begin{equation}
+ \frac{\mathrm d}{\mathrm dt}(x_{b+1}-x_a)
+       =2(U_{b+1}-U_a)
+       =4\sum_{n=a}^b\frac1{g_n}-2A_{a,b}.
+ \label{lat:block-length}
+\end{equation}
+Thus \eqref{lat:exact-gap-error} is a correlated-error advantage
+over an independently summed allowance, not a demonstrated gain
+over direct common-source evolution. A block can preserve its total
+length while one interior gap decreases to zero. Neither
+\eqref{lat:block-flux} nor its endpoint-error bound protects the
+regional minimum. Such protection would need a further estimate
+that prevents concentration of the defect into one edge.
+
+\subsection{Compatible reconstruction and the collision boundary}
+
+One finite polynomial heat field produces all its roots and moment
+rows at once. Before the relevant collisions, its rows satisfy the
+gap, overlap, resolvent and block identities above exactly. This is
+the compatibility supplied by the shared finite-divisor construction
+of \cite{BakerCM15}, developed further in Section~\ref{sec:finite}.
+Its higher moments are those of the same finite divisor; they are
+not independently set to zero. Independent truncation in $(p,q)$
+at each edge is therefore a different construction, generally
+without a common underlying divisor.
+
+Compatibility alone does not establish approximation to the
+canonical field. The common-time finite-product theorem described
+in Section~\ref{sec:finite} remains a proof task. A finite-block
+application would require one initialization, one evolved
+polynomial, and a common field and jet error on a compact set
+containing all the relevant contours. Only after paying those
+errors and the minimum contour clearance could one transfer fixed
+moment orders uniformly across that fixed block. No uniformity
+as the block size, height or moment order grows is included. An
+index cutoff also leaves complete nonlocal exterior forces and
+boundary data; it cannot be implemented by dropping the omitted
+zeros without an error estimate.
+
+The adjacent-edge charts have a further limitation at mergers.
+If $x_n=x_{n+1}$, the symmetric $S/T$ coordinates of that target
+pair can remain regular, as in Section~\ref{sec:integer}. For the
+neighboring edge $(x_{n-1},x_n)$, however, the exterior occurrence
+$x_{n+1}$ meets a target; the analogous failure occurs for
+$(x_{n+1},x_{n+2})$. Their exterior separation is lost. It is
+therefore incorrect to infer that every adjacent split-pole chart
+extends regularly through the same merger. A shared polynomial,
+or suitable larger-cluster symmetric coefficients, can remain
+regular while these individual charts must stop or be replaced.
+
+Physical quadratic and cosine-plus-constant collision controls
+satisfy the applicable simple-root identities before collision.
+The lattice representation does not exclude those events. Its
+role is to preserve the common-divisor constraints and expose
+correlations such as \eqref{lat:block-flux}; it supplies neither
+a universal positivity principle nor stability of a finite
+closure. The next quantitative question is a common-source
+estimate controlling concentration into individual gaps over a
+specified physical interval, with complete exterior and boundary
+payments and the direct evolution given the same information.

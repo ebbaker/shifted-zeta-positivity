@@ -1,0 +1,305 @@
+% 18 November 2026. Prepared for Edward Baker with OpenAI Codex assistance.
+% Actual recorded model and effort unavailable. B10 formulation, E31 integration.
+\section{Recursive and continuous two-sided refinement}
+\label{sec:two-sided}
+
+The preceding sections suggest a more informative use of forward and
+backward propagation. A forward source calculation may constrain the
+environment of a small gap; a backward comparison may then reduce the
+admissible earlier configurations; the reduced configuration set may
+sharpen the next forward calculation. The object being refined is an
+\emph{enclosure of one source-consistent trajectory}, not the physical
+trajectory itself. We develop the formulation proposed in
+\cite{BakerCM35}. Its elementary soundness and residual identities are
+proved below. Strict improvement for the canonical source remains an
+additional quantitative question.
+
+There are two distinct parameters: physical Newman time $t$, and the
+iteration number $k$ of an enclosure calculation. Introducing $k$ does
+not reverse the physical heat equation, generate another divisor or
+supply a finite moment closure. The complete source, the label/count
+record and the errors must be shared by the two directions. In
+particular, Theorem~\ref{rf:horizon} continues to screen repetition
+of the unchanged initial-interaction consumer within its stated class.
+
+\subsection{Common-source state sets and sound refinement}
+
+Fix finite times $t_0<\cdots<t_m$ inside independently cleared counted
+contours. Write $\omega$ for a common complete-source record, including
+normalization, shared source-error parameters and count/label information.
+Let $z_i$ consist of regular observables at $t_i$. For a separated pair
+these may include $c,D,M$ and source traces; their admissible domain must
+allow both signs of $D$ if positivity is the desired conclusion. For an
+overlapping block, choose a valid common chart or larger-cluster symmetric
+coordinates when a neighboring edge chart fails. An unexcluded chart or
+boundary exit remains a possible failure; it cannot be discarded in the
+definition of the admissible set.
+
+Let $E_i^0$ be an outer set of augmented states $(\omega,z_i)$ containing
+the true $(\omega_*,z_i^*)$. A validated transition relation
+$\mathcal R_i$ contains the true transition and relates only states with
+the same source record:
+\begin{equation}
+ ((\omega,z_i),(\omega,z_{i+1}))\in\mathcal R_i.
+ \label{ts:transition}
+\end{equation}
+This relation may be an outer approximation. It is not asserted to
+characterize exactly which finite moment data arise from a canonical
+divisor. Define its two projections by
+\begin{align}
+ \operatorname{Post}_i(A)
+ &=\{v:\text{there is }u\in A\text{ with }(u,v)\in\mathcal R_i\},
+ \notag\\
+ \operatorname{Pre}_i(B)
+ &=\{u:\text{there is }v\in B\text{ with }(u,v)\in\mathcal R_i\}.
+ \label{ts:projections}
+\end{align}
+Any new observation set $O_i^k$ must independently contain the true
+augmented state. Take it to be the whole state space when no new source
+observation is available. One simultaneous sweep is
+\begin{equation}
+ E_i^{k+1}=E_i^k\cap O_i^k
+       \cap\operatorname{Post}_{i-1}(E_{i-1}^k)
+       \cap\operatorname{Pre}_{i}(E_{i+1}^k),
+ \label{ts:sweep}
+\end{equation}
+where nonexistent endpoint factors are omitted.
+
+\begin{proposition}[Sound two-sided refinement]\label{ts:sound}
+For every finite $k$, the sets in \eqref{ts:sweep} are nested and contain
+the true augmented states. Define the full skeleton set
+\begin{equation}
+ \mathcal P^k=\{(\omega,z_0,\ldots,z_m):
+       (\omega,z_i)\in E_i^k\text{ for every }i,
+       \ ((\omega,z_i),(\omega,z_{i+1}))\in\mathcal R_i
+                         \text{ for every }i<m\}.
+ \label{ts:skeleton}
+\end{equation}
+Then $\mathcal P^{k+1}\subseteq\mathcal P^k$, and every $\mathcal P^k$
+contains the true skeleton. For a fixed real statistic $Q$, wherever
+the bounds are finite,
+\begin{equation}
+ \inf_{\mathcal P^{k+1}}Q\ge\inf_{\mathcal P^k}Q,
+ \qquad
+ \sup_{\mathcal P^{k+1}}Q\le\sup_{\mathcal P^k}Q.
+ \label{ts:monotone-bounds}
+\end{equation}
+More precisely, for the fixed relations in \eqref{ts:transition},
+\begin{equation}
+ \mathcal P^{k+1}=\{p\in\mathcal P^k:
+           (\omega,z_i)\in O_i^k\text{ for every }i\}.
+ \label{ts:skeleton-invariance}
+\end{equation}
+Thus if all observation sets are universal, the full skeleton set and
+its exact statistic bounds are unchanged by a sweep.
+\end{proposition}
+
+\begin{proof}
+Assume the true states belong to all $E_i^k$. Their true neighboring
+transitions witness membership in both projections in
+\eqref{ts:sweep}, and soundness of $O_i^k$ supplies the remaining new
+factor. The intersection therefore retains the true state and is a
+subset of $E_i^k$. Induction starts at $k=0$. Substitution into
+\eqref{ts:skeleton} proves its corresponding containment and
+nonemptiness. Infima increase and suprema decrease when a nonempty
+feasible set is restricted, proving \eqref{ts:monotone-bounds}.
+For \eqref{ts:skeleton-invariance}, one inclusion follows from the
+definition. Conversely, each skeleton in $\mathcal P^k$ supplies its
+own neighboring witnesses for every projection in \eqref{ts:sweep}.
+If it also satisfies the new observations, all its nodes survive.
+\end{proof}
+
+The proposition proves nonworsening enclosures, not strict contraction,
+finite termination, a convergence rate or convergence to the exact
+feasible set. An implementable projection may use an outward hull of
+the exact image; intersecting that hull with the previous enclosure
+remains sound if the true image is retained. Projection sweeps alone can
+tighten marginal outer estimates by removing states without compatible
+neighbors, but cannot improve the exact joint bounds over the already
+retained skeleton. New observations or soundly refined transition
+relations are needed to shrink that full feasible set. Outward hulls can
+lose most of the marginal improvement. Similarly, discarding $\omega$ and choosing
+unrelated forcing values on successive cells loses the common-source
+constraint. Correlations across nodes and times belong in
+\eqref{ts:skeleton}, even when the final reported statistic is scalar.
+
+A statistic of a whole interval needs full admissible cell paths or a
+paid between-node interpolation bound. For example, a lower bound for
+$\min_{j,t}D_j(t)$ is not obtained from positive values at finitely many
+times. A failure-count statistic may include chart exits, block-boundary
+events and multiplicities; an upper bound below one then excludes those
+events only after the population covers every eligible failure. Neither
+random labeling nor a small average supplies this coverage.
+
+\subsection{What reversal alone cannot add}
+
+\begin{proposition}[Exact-flow consistency]\label{ts:inverse}
+For a prescribed comparison flow $\Phi_{b,a}$ on a domain where the
+forward and reverse solutions are unique,
+\begin{equation}
+ \Phi_{a,b}\bigl(\Phi_{b,a}(A)\bigr)=A
+ \label{ts:inverse-identity}
+\end{equation}
+for every initial set whose trajectories stay in that domain.
+\end{proposition}
+
+\begin{proof}
+Uniqueness identifies the reverse of each forward trajectory with its
+original trajectory. Thus the two maps compose to the identity on the
+stated initial set.
+\end{proof}
+
+This is a consistency test for an exact prescribed flow, not an
+impossibility theorem for source acquisition. A terminal set obtained
+only as the exact forward image of the initial set gives no extra
+constraint upon exact reversal. In contrast, interval propagation may
+have discarded dependencies which a second sweep recovers, or a later
+source calculation may supply an additional checked observation.
+Both are legitimate reasons for shrinking an outer set. They must be
+compared with direct joint propagation using the same information.
+No favorable stability of the inverse is implied by
+\eqref{ts:inverse-identity}.
+
+\subsection{An exact continuous forward--adjoint pairing}
+
+For a regular counted pair, retain physical forward time and write
+\begin{equation}
+ y=\binom D M,\qquad
+ y'=G_{\mathcal F}(t,y)
+   =\binom{2-4DM}{2M^2-\mathcal F(t)}.
+ \label{ts:pair}
+\end{equation}
+The function $\mathcal F(t)$ denotes the complete forcing along the
+\emph{same actual source-consistent path}. Equation~\eqref{ts:pair}
+does not say that two moments determine that forcing. Its dependence on
+the source, center and exterior remains in $\omega$ and must be acquired
+by the contour or hierarchy arguments already developed.
+
+Choose a $C^1$ reference path $\widehat y$ and continuous reference
+forcing $\widehat{\mathcal F}$. Put
+\begin{equation}
+ e=y-\widehat y,\quad
+ \delta\mathcal F=\mathcal F-\widehat{\mathcal F},\quad
+ r=\widehat y'-G_{\widehat{\mathcal F}}(t,\widehat y),\quad
+ \widehat A=
+ \begin{pmatrix}-4\widehat M&-4\widehat D\\0&4\widehat M\end{pmatrix}.
+ \label{ts:reference}
+\end{equation}
+The complete error equation is
+\begin{equation}
+ e'=\widehat A e+
+       \binom{-4e_De_M}{2e_M^2-\delta\mathcal F}-r.
+ \label{ts:error}
+\end{equation}
+Indeed, expanding $(\widehat D+e_D)(\widehat M+e_M)$ and
+$(\widehat M+e_M)^2$ gives every term displayed in
+\eqref{ts:error}. The quadratic remainder has not been dropped.
+
+\begin{proposition}[Two-sided adjoint residual identity]\label{ts:adjoint}
+On a compact regular interval $[a,b]$, fix $\tau\in[a,b]$ and a vector
+$\ell\in\R^2$. Let
+\begin{equation}
+ p'=-\widehat A^{\mathsf T}p,\qquad p(\tau)=\ell,
+ \qquad
+ \Psi=-4p_De_De_M+2p_Me_M^2-p_M\delta\mathcal F-p\cdot r.
+ \label{ts:adjoint-def}
+\end{equation}
+Then
+\begin{align}
+ \ell\cdot e(\tau)
+ &=p(a)\cdot e(a)+\int_a^\tau\Psi(t)\dd t\notag\\
+ &=p(b)\cdot e(b)-\int_\tau^b\Psi(t)\dd t.
+ \label{ts:two-sided}
+\end{align}
+The identity has no denominator $D$ and is valid through a target merger
+whenever the complete counted-pair tube and regular quantities remain
+defined.
+\end{proposition}
+
+\begin{proof}
+The continuous coefficient matrix gives a unique linear adjoint solution
+on the compact interval in both time directions. Apply the product rule
+to $p\cdot e$, substitute \eqref{ts:error} and
+\eqref{ts:adjoint-def}, and cancel the two linear terms. The result is
+$(p\cdot e)'=\Psi$. Integration separately from $a$ to $\tau$ and from
+$\tau$ to $b$, with $p(\tau)=\ell$, proves
+\eqref{ts:two-sided}. All expressions remain polynomial in the pair
+errors at $D=0$; contour separation, not division by $D$, is the domain
+condition here.
+\end{proof}
+
+Taking $\ell=(1,0)$ reads out the discriminant error. If paid enclosures
+of the two right sides are intervals $I_L(\tau)$ and $I_R(\tau)$, then
+\begin{equation}
+ D(\tau)\in\widehat D(\tau)+
+                  \bigl(I_L(\tau)\cap I_R(\tau)\bigr).
+ \label{ts:intersection}
+\end{equation}
+This supplies a continuous counterpart to the discrete sweep: a sound
+smaller state enclosure can be fed into the source residual and the
+quadratic terms, and the resulting two readouts can be intersected again.
+The intervals enclose two expressions for the same error. They are not
+independent measurements. Disjoint intervals mean that the asserted
+enclosures or their source assumptions are inconsistent; they do not
+prove positivity of an excluded canonical path.
+
+\subsection{Error payment, statistics and strict improvement}
+
+For transparent sufficient error payment, suppose
+$|e_D|\le E_D$, $|e_M|\le E_M$,
+$|\delta\mathcal F|\le E_{\mathcal F}$ and $|r_i|\le R_i$.
+Then
+\begin{equation}
+ |\Psi|\le
+ 4|p_D|E_DE_M+2|p_M|E_M^2+|p_M|E_{\mathcal F}
+                    +|p_D|R_D+|p_M|R_M.
+ \label{ts:absolute}
+\end{equation}
+This follows term by term from \eqref{ts:adjoint-def}. It is not a
+claim that separate absolute allowances are efficient. The signed
+correlation of the forcing error, reference defect and quadratic terms
+may be essential. The complete source contribution to
+$E_{\mathcal F}$ includes uncertain trial coordinates, with the kernel
+derivatives of Section~\ref{sec:retained-forcing}, together with source
+tails, contour/quadrature, arithmetic and whole-time remainders. Endpoint
+and adjoint-solution errors must also be included when those objects are
+computed rather than exact. Large adjoint coefficients can erase any
+apparent improvement.
+
+Fixed finite weighted sums of \eqref{ts:two-sided} give the corresponding
+identity for linear empirical error statistics, with all labels and the
+same source retained. They do not give a sharp bad-gap probability by
+themselves. A bad-event majorant needs its own derivative/resolution
+payment and complete population coverage; an integer zero-exception
+argument needs a bound below the appropriate integer threshold. An
+average over time can miss an isolated event. Whole-interval use of
+\eqref{ts:intersection} therefore requires a uniform bound for every
+$\tau$, paid interpolation on time cells, or a first-exit argument whose
+other exits are independently excluded.
+
+The two-sided construction distinguishes a possible route from an
+acquired gain. It preserves the physical forcing discarded by the
+initial-$M$ horizon and can preserve correlations lost by an unsigned
+force norm. It has not yet supplied a strict canonical intersection
+width, a better whole-time gap margin, a convergence rate or a lower
+acquisition cost. In particular it does not acquire the forcing floor
+used in Appendix~\ref{app:compact-example} merely by repeating a sweep.
+
+Before a quantitative execution, one must fix a common finite pair or
+block, physical interval, independently cleared source/count tube,
+regular charts, endpoint observations, reference path and complete
+signed residual budget. A proposed improvement must be strict and
+measured against direct regular $D/M$ or source-discriminant evolution
+with precisely the same information, including the elapsed forward
+excursion. Finite work and refinement limits and a separate check belong
+to that contract. The present section supplies the analytical interface,
+not its missing source estimate.
+
+Quadratic and cosine-based heat controls satisfy the local identities on
+their valid charts. A sound enclosure whose input admits their collision
+must retain that event. The canonical application uses the separate
+source-equality, order/count, physical-readout and integer-multiplicity
+premises summarized in Section~\ref{sec:discussion}; none is an automatic
+favorable residual bound. Thus the recursive and continuous descriptions
+are mathematically specified without being promoted to a proved recursive
+improvement of Newman bounds.

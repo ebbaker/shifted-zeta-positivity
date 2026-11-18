@@ -1,0 +1,7 @@
+# VCD-GT-CM-E22 r1 — Nonauthor canonical horizon assessment
+
+18 November 2026, America/New_York. Prepared for Edward Baker with OpenAI Codex LLM assistance; actual model/effort unavailable. Type **E / Sol recommended**: fixed proof/source/scope assessment, separate from E21 authorship.
+
+Read root instructions, result/avoid indexes and relevant controls/scope patterns, E21 r1 and pinned Note21, Note20 and source audit04. Independently assess the original canonical high-height statement from Polymath v2 Theorem1.5 and its constant convention (primary source), unit head/Taylor and complete far shell passage, uniformity and multiplicities, exact horizon constants, monotone optimality, first-collision limits and failure-class scope. Audit the OC claims against their cited existing sources, at least finite P_1000 and distinction from void/positive-time data. Check all application-premise controls. Review is internal with shared premises, not specialist independence.
+
+Outputs: reviews/11_VCD_GT_CM_E22_CANONICAL_HORIZON_ASSESSMENT_20261118.md and handoffs/VCD-GT-CM-E22-return-r1.md. One proof pass plus one correction check; at most two local proof repairs to E21 by its author. Do not edit inputs, shared register/history or manuscripts. Report required corrections explicitly; new mechanism/domain returns to B. Accept only precisely supported scope, preserving failed evidence and input hashes. No sampling as proof.

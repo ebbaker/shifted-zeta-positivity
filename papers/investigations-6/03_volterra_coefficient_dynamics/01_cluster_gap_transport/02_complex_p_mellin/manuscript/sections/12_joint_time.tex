@@ -1,0 +1,323 @@
+% 18 November 2026. Drafted for Edward Baker with OpenAI Codex assistance.
+% Actual model and effort unavailable; helper settings inherited.
+\section{A joint comparison in physical backward time}
+\label{sec:jointtime}
+
+The initial-environment comparison discards the positive forcing in the
+equation for $M$. This can lose a cancellation that persists throughout
+the evolution. Section~\ref{sec:canonicaltime} will show that, at high
+canonical zeros, even exact initial interaction data give that comparison
+only an $O(g^2)$ duration. We first develop a different interface: a lower
+bound for a combination of the evolving gap and its complete exterior
+moments. The comparison and its finite-head acquisition are from
+\cite{BakerCM23,BakerCM25}; the role of the source, rather than additional
+initial data alone, will be explicit.
+
+\subsection{The defect equation and its barrier}
+
+Use the physical backward variable $u=t_*-t$, and initially work in the
+stopped all-real simple regime of Section~\ref{sec:statistics}. For one
+adjacent pair define the physical forcing and two dimensionless quantities
+\begin{equation}
+ \mathcal F=12S_2+16DS_3,\qquad
+ V=1-2DM,\qquad
+ K=2D^2\mathcal F=24D^2S_2+32D^3S_3.
+ \label{jt:variables}
+\end{equation}
+Thus $\mathcal F$ differs by a factor $\ell^{-4}$ from the normalized
+forcing $F$ of Section~\ref{sec:joint}. All sums in
+\eqref{jt:variables} concern the same pair and the complete divisor.
+There is no moment cutoff in the following identities.
+
+\begin{proposition}[Joint defect equation]
+\label{jt:defect}
+Where $D>0$ and the complete pair laws hold,
+\begin{equation}
+ D_u=-2V,\qquad V_u=\frac{1-V^2-K}{D}.
+ \label{jt:system}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The first identity is the pair equation. Using
+$M_u=-2M^2+\mathcal F$ in the derivative of $V$ gives
+\[
+ V_u=-2(D_uM+DM_u)=4M-4DM^2-2D\mathcal F.
+\]
+Since $2DM=1-V$, the first two terms equal $(1-V^2)/D$,
+and the last equals $-K/D$.
+\end{proof}
+
+\begin{theorem}[Joint forcing barrier]
+\label{jt:barrier}
+Suppose the real complete pair laws hold on a stopped interval
+$0\le u<\tau$ with $D>0$, and suppose
+\begin{equation}
+ K(u)\ge1-\eta^2,\qquad V(0)\le v_0,
+ \qquad \eta\ge0.
+ \label{jt:barrier-input}
+\end{equation}
+For any $v\ge\max\{v_0,\eta\}$,
+\begin{equation}
+ V(u)\le v,\qquad D(u)\ge D(0)-2vu.
+ \label{jt:barrier-output}
+\end{equation}
+In particular, if $D(0)\ge d_0>0$ and
+\begin{equation}
+ 2v\Delta<d_0,
+ \label{jt:strict-margin}
+\end{equation}
+the selected pair cannot collide by $u=\Delta$ while the stipulated
+regime and inputs remain available up to a first event. When $v=0$,
+$D$ is nondecreasing on that regime.
+\end{theorem}
+
+\begin{proof}
+On a compact subinterval before the stop, $D$ has a positive minimum.
+For $w=V-v$, \eqref{jt:system} gives
+\[
+ w_u+\frac{V+v}{D}w
+ \le\frac{\eta^2-v^2}{D}\le0.
+\]
+The coefficient is continuous. Its integrating factor is positive,
+regardless of the sign of $V+v$, and $w(0)\le0$. Therefore $w\le0$.
+Integration of $D_u=-2V$ proves \eqref{jt:barrier-output}.
+Exhausting the stopped interval by compact subintervals preserves the
+bound. At a putative collision time $u_c\le\Delta$, continuity of the
+gap gives $D(u)\to0$, contradicting
+$D(u)\ge d_0-2v\Delta>0$. No division by $D$ is made at the event.
+\end{proof}
+
+For a gap with $D(0)\asymp L^{-2}$, sufficient rates for this comparison
+to pay a fixed available duration are
+\begin{equation}
+ V(0)_+=o(L^{-2}),\qquad
+ 1-K(u)\le\eta^2=o(L^{-4})\quad\hbox{uniformly in }u.
+ \label{jt:rates}
+\end{equation}
+The square root of the forcing deficiency is essential. A statement
+$K=1+o(1)$ alone does not give \eqref{jt:rates}. These are sufficient
+rates for the comparison, not necessary conditions for actual
+noncollision. In the global all-real application, a different earlier
+unprotected collision ends the sign regime; the theorem does not
+continue the argument past it.
+
+\begin{remark}[Local signed complete version]
+\label{jt:local-version}
+The proof of Theorem~\ref{jt:barrier} uses neither $M\ge0$ nor positivity
+of the individual exterior summands. It therefore applies to a
+conjugation-invariant count-two tube with a possibly nonreal exterior,
+provided its complete product, contour and first-time-jet passages have
+been paid on the stated time domain. To see the identity transfer,
+use the fixed cleared contour and the complete product as in
+Lemma~\ref{lem:slice-passage}. The finite polynomial identities for $D_u$
+and $M_u$ pass through uniform spatial jets on that contour and the
+absolute inverse-square tails. Reality follows from conjugation.
+Before the first local loss of $D>0$, the same integrating-factor proof
+then applies to a directly acquired signed complete bound for $K$.
+Positive omission of an exterior tail is not available in this version.
+Section~\ref{sec:compact} formulates its source acquisition on a stopped
+trial-coordinate domain, without assuming positivity on the desired
+whole interval. At a regular target merger $\mathcal F$ is finite and
+$K=2D^2\mathcal F=0$; thus an unconditional positive floor for $K$ on
+the whole tube would itself already exclude that merger.
+\end{remark}
+
+\subsection{Finite neighboring heads and an explicit perturbation bound}
+
+Consider first an equally spaced real divisor, a target pair $0,g$, and
+$J$ exterior zeros on each side. Put $D=g^2/4$. The $m$th exterior
+occurrence on either side has denominator $Q=m(m+1)g^2$. Denote the
+interaction subsum by $b_J$ and the forcing subsum by $K_J$.
+
+\begin{lemma}[Exact lattice head]
+\label{jt:lattice}
+For every integer $J\ge1$,
+\begin{equation}
+ 2Db_J=\frac{J}{J+1},\qquad K_J=1-\frac1{(J+1)^3}.
+ \label{jt:lattice-values}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The two occurrences at level $m$ contribute
+$2/[g^2m(m+1)]$ to $b_J$, so the first equality follows from
+$1/[m(m+1)]=1/m-1/(m+1)$. Their combined contribution to $K_J$ is
+\[
+ \frac3{m^2(m+1)^2}+\frac1{m^3(m+1)^3}
+ =\frac1{m^3}-\frac1{(m+1)^3},
+\]
+because $3m(m+1)+1=(m+1)^3-m^3$. Summing proves the second equality.
+\end{proof}
+
+For an all-real adjacent pair, omitted terms of $K$ and $M$ are
+nonnegative. A finite lower bound for $K$ therefore needs no subtraction
+of an unknown upper tail. This differs from a complete asymptotic
+equality for $M$, whose remaining tail must be bounded. The following
+version keeps explicit constants for a perturbed head.
+
+\begin{proposition}[Robust finite-head bounds]
+\label{jt:robust-head}
+At a real-simple slice, let the target gap be $g>0$, let $d>0$, and
+let $0\le e<1/3$. Suppose $g\ge(1-e)d$. For the $m$th selected
+exterior occurrence on each side, $1\le m\le J$, let $r$ be its
+distance to the nearer endpoint, and suppose
+\begin{equation}
+ r\le(1+2e)md,\qquad r+g\le(1+2e)(m+1)d.
+ \label{jt:head-distances}
+\end{equation}
+With $b_J$ the interaction of these selected occurrences,
+\begin{equation}
+ \begin{split}
+ K&\ge1-18e-(J+1)^{-3},\\
+ 1-2DM&\le1-2Db_J\le6e+(J+1)^{-1}.
+ \end{split}
+ \label{jt:robust-bounds}
+\end{equation}
+If the distance hypotheses hold with one $e_*$ throughout a stopped
+all-real interval, an admissible barrier parameter is
+\begin{equation}
+ v=\max\left\{6e_*+(J+1)^{-1},
+              \sqrt{18e_*+(J+1)^{-3}}\right\}.
+ \label{jt:head-barrier}
+\end{equation}
+Only the initial instance of the second inequality is needed here.
+\end{proposition}
+
+\begin{proof}
+Put $\gamma=(1-e)/(1+2e)\in[0,1]$. Since $Q=r(r+g)$,
+\[
+ \frac{D}{Q}\ge\frac{\gamma^2}{4m(m+1)}.
+\]
+The quadratic and cubic terms in $D/Q$ contributing to $K$ are at
+least $\gamma^4$ and $\gamma^6$ times the lattice terms. Both are at
+least $\gamma^6$ times those terms. Positivity of the omitted complete
+exterior and Lemma~\ref{jt:lattice} give
+\[
+ K\ge\gamma^6[1-(J+1)^{-3}],\qquad
+ 2DM\ge2Db_J\ge\gamma^2\frac{J}{J+1}.
+\]
+Now $1-\gamma\le3e$, so
+$1-\gamma^6\le18e$ and $1-\gamma^2\le6e$. This proves
+\eqref{jt:robust-bounds}. Insert its uniform forcing bound and its
+initial defect bound into Theorem~\ref{jt:barrier} to obtain
+\eqref{jt:head-barrier}.
+\end{proof}
+
+With exact lattice head inequalities, $e_*=0$ and
+$v=(J+1)^{-1}$. The strict duration becomes
+\begin{equation}
+ \Delta<\frac{g(0)^2(J+1)}8.
+ \label{jt:head-duration}
+\end{equation}
+The growing allowance uses control of the head throughout time. Adding
+the same neighbors only to the initial mass does not supply it. Nor is
+this a finite divisor evolution: the selected labels and $D$ are
+evaluated in the unchanged complete heat flow.
+
+\subsection{A ratio-forcing floor retains a different loss}
+
+To distinguish the joint quantity from a weaker datum, suppose $M>0$
+and write $\kappa=\mathcal F/(2M^2)$. Equation~\eqref{jt:system} becomes
+\begin{equation}
+ V_u=2M\{(1-\kappa)+(1+\kappa)V\},
+ \qquad K=(1-V)^2\kappa.
+ \label{jt:ratio-system}
+\end{equation}
+Even near $\kappa=1$, an upper comparison for a positive defect has
+coefficient approximately $4M$. The following exact integration records
+the resulting allowance, rather than asserting instability of the
+underlying heat flow.
+
+\begin{proposition}[Ratio-floor comparison]
+\label{jt:ratio-comparison}
+In the stopped all-real regime suppose
+$\mathcal F\ge2(1-\varepsilon)M^2$, where $0<\varepsilon<1$,
+and put $b=M(0)>0$ and $A(u)=1+2\varepsilon bu$. Then
+\begin{equation}
+ \begin{split}
+ M(u)&\ge b/A(u),\\
+ D(u)&\ge A(u)^{2/\varepsilon}
+ \left[D(0)-
+ \frac{1-A(u)^{-(2-\varepsilon)/\varepsilon}}
+      {b(2-\varepsilon)}\right].
+ \end{split}
+ \label{jt:ratio-bound}
+\end{equation}
+If $r=1-(2-\varepsilon)bD(0)>0$, positivity of this lower bound
+holds precisely while
+\begin{equation}
+ u<\frac{r^{-\varepsilon/(2-\varepsilon)}-1}
+          {2\varepsilon b}.
+ \label{jt:ratio-horizon}
+\end{equation}
+For $\varepsilon=0$ the corresponding lower bound is
+\begin{equation}
+ D(u)\ge\e^{4bu}
+       \left[D(0)-\frac{1-\e^{-4bu}}{2b}\right].
+ \label{jt:ratio-zero}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The hypothesis gives $M_u\ge-2\varepsilon M^2$. The same
+integrating-factor comparison as in
+Theorem~\ref{stat:backward-comparison} yields $M\ge b/A$.
+Before collision $D\ge0$, so multiplying
+$D_u\ge-2+4Db/A$ by $A^{-2/\varepsilon}$ and integrating gives
+\eqref{jt:ratio-bound}; explicitly,
+\[
+ 2\int_0^u A(v)^{-2/\varepsilon}\dd v
+ =\frac{1-A(u)^{-(2-\varepsilon)/\varepsilon}}
+       {b(2-\varepsilon)}.
+\]
+Solving the strict bracket inequality proves
+\eqref{jt:ratio-horizon}. When $\varepsilon=0$, $M\ge b$ and
+the integrating factor is $\e^{-4bu}$, giving
+\eqref{jt:ratio-zero} directly.
+\end{proof}
+
+For a positive initial defect $\delta=1-2bD(0)$, the last bound has
+horizon $\log(1/\delta)/(4b)$. At $bD(0)=1/2$,
+\eqref{jt:ratio-horizon} is asymptotic to
+$\log(2/\varepsilon)/(4b)$ as $\varepsilon\downarrow0$.
+Thus with $b\asymp L^2$, a conservative positive defect allowance of
+size $L^{-1}$ gives a duration of order $(\log L)/L^2$; an allowance
+of size $\e^{-cL}$ gives order $L^{-1}$. This particular absolute-defect
+comparison would require accuracy of order $\e^{-c_\Delta L^2}$
+to pay a fixed duration. A favorable proved sign or additional
+correlation is outside this limitation. No positive sign of the actual
+canonical defect, or lower bound on its actual error, is asserted.
+
+An exact heat control separates initial near-spacing from a whole-time
+forcing floor. For $k>0$ and $0<\alpha_0<1$, consider
+\begin{equation}
+ H(u,z)=\e^{-k^2u}\cos(kz)+\alpha_0,
+ \qquad H_u=H_{zz}.
+ \label{jt:cosine-control}
+\end{equation}
+This is an even finite positive atomic source, not theta. Initially all
+zeros are real and simple. Put $\alpha(u)=\alpha_0\e^{k^2u}$ and
+$\theta(u)=\arccos\alpha(u)$. The short pair around $\pi/k$ has
+\[
+ D(u)=\theta(u)^2/k^2,\qquad
+ V(u)=\frac{\theta(u)\alpha(u)}{\sqrt{1-\alpha(u)^2}},
+ \qquad u_c=k^{-2}\log(1/\alpha_0).
+\]
+These formulas follow by solving $\cos(kz)=-\alpha(u)$ and
+differentiating; in particular $D_u=-2V$. As $\alpha_0\downarrow0$,
+the initial gaps differ from $\pi/k$ by $O(\alpha_0/k)$ and
+$V(0)=(\pi/2)\alpha_0+O(\alpha_0^2)$. Choosing
+$\alpha_0=\e^{-ck}$ makes those errors exponentially small, yet
+$u_c=c/k$. For each fixed $k$, the other clusters stay separated from
+the selected pair at $u_c$, and their periodic inverse-power tails
+converge uniformly. Hence $S_2,S_3$ stay bounded while $D\to0$, giving
+$K\to0$. The near-unit whole-time forcing premise fails.
+
+The stationary cosine heat field has $V=0$, $K=1$ and is preserved
+exactly by the joint barrier. The quadratic collision field has
+$M=K=0$, $V=1$ and requires $\eta\ge1$, reproducing its gap-only
+lifetime. These controls satisfy the local equations but lack the
+unchanged canonical source and population. They test the hypotheses
+and strict endpoint interpretation, not the source-specific acquisition
+proved next.

@@ -344,7 +344,7 @@ The finite-minimum weak law needs joint exterior data; rare events require
 zero-exception and uniform height payments. No canonical gap-tail law or
 improved Lambda bound is acquired. Separate internal shared-premise review.
 
-**Recent CM manuscript integration, 18 November 2026.** For Edward Baker
+**Historical recent CM manuscript integration, 18 November 2026 (reading copy superseded by the lattice milestone below).** For Edward Baker
 with Codex assistance; actual settings unavailable, helpers inherited.
 [E19](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/10_VCD_GT_CM_E19_RECENT_MANUSCRIPT_ASSESSMENT_20261118.md)
 accepts the corrected [manuscript](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/manuscript/main.tex) within its
@@ -359,3 +359,106 @@ The ignored reading copy has 38 pages; no numerical evidence is needed for
 these proofs. Common-time approximation, canonical gap-tail acquisition and
 an improved Lambda bound remain open. [Integration18](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/18_VCD_GT_CM_RECENT_MANUSCRIPT_INTEGRATION_20261118.md).
 Internal shared-premise assessment, no specialist review.
+
+
+**Canonical initial-interaction horizon, 18 November 2026.** For Edward
+Baker with Codex assistance; actual chat0003 model/effort unavailable.
+[CM Note21](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/21_VCD_GT_CM_E21_CANONICAL_HEIGHT_HORIZON_20261118.md) is **proved in-note**;
+[E22](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/11_VCD_GT_CM_E22_CANONICAL_HORIZON_ASSESSMENT_20261118.md) accepts the stated positive-slab asymptotic and one-step
+comparison-limitation scope. At high canonical real-simple slices,
+DM=1/2+O(1/L+L a^(−c t0)), with L=log(a/(4π)) and t0>0, after the
+complete exterior tail is paid. The scalar initial-M comparison's best
+horizon is ~g²/4, versus ~g²/6 from two neighbors. Its fixed-positive-step
+score is eventually negative even with exact initial data. The source
+states: “The limitation concerns only Note17's one-step Riccati lower envelope
+from initial D,M; it does not concern the actual canonical evolution.”
+Polymath's common positive-slab exterior coverage is a reused source input;
+no numerical cutoff, compact gap-tail law, Lambda improvement or time-zero
+extension is acquired. Separate internal shared-premise assessment;
+[Continuation22](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/22_VCD_GT_CM_B07_R2_SYNTHESIS_AND_CONTINUATION_20261118.md) records scope and remaining acquisition.
+
+**Joint-time gap/forcing barrier, 18 November 2026.** For Edward Baker with
+Codex assistance; actual chat0003 settings unavailable.
+[CM Note25](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/25_VCD_GT_CM_E23_JOINT_BARRIER_AND_CANONICAL_HEAD_20261118.md) is **proved in-note**;
+[E24](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/12_VCD_GT_CM_E24_JOINT_TIME_ASSESSMENT_20261118.md) accepts within its joint-barrier, positive-slab acquisition and source-jet
+comparison domains. The coupled V=1−2DM, K=2D²F barrier gives
+D>=D(0)−2vu from K>=1−eta², v=max(V(0),eta). A canonical growing head
+pays v=O(log(X)^−3), so relative gap-square loss is O(Delta/log X).
+This overcomes the earlier shrinking allowance on fixed positive slabs.
+The source states: “This is a stronger acquired dynamical comparison on
+that known region, not new zero coverage or a Lambda bound.” The matched
+direct clock estimate is sharper at fixed duration. Compact acquisition,
+time-zero extension and an effective cutoff remain open.
+[Continuation26](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/26_VCD_GT_CM_JOINT_TIME_SYNTHESIS_AND_CONTINUATION_20261118.md) records the next source requirement. Separate internal shared-premise review.
+
+**Compact constant-floor screen, 18 November 2026.** For Edward Baker with
+Codex assistance; actual settings unavailable. [CM Note27](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/27_VCD_GT_CM_COMPACT_CONTOUR_SELECTION_AND_FLOOR_SCREEN_20261118.md)
+is **proved in-note**; [E25](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/13_VCD_GT_CM_E25_COMPACT_FLOOR_SCREEN_ASSESSMENT_20261118.md)
+accepts without correction. Complete contour extraction permits a local
+stopped-pair comparison without assuming exterior reality. The inherited
+Lehmer log certificate gives actual |K(0)|<1057/375000<.003. From t*=.1,
+the one constant-floor Note25 allowance is <.0896, below the fixed .1003
+target. The source states: “This does not show a collision, a failure of
+the contour source oracle, or failure of time-varying barriers or regular
+coupled evolution.” No new source samples, negative-time certificate or
+Lambda bound. Separate internal shared-premise assessment.
+
+**Coupled-lattice manuscript milestone, 18 November 2026.** For Edward
+Baker with Codex assistance; actual settings unavailable.
+[E27](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/research-progress/handoffs/VCD-GT-CM-E27-return-r1.md)
+states **“Accepted within scope after the one bounded correction check.”**
+The [lattice section](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/manuscript/sections/14_coupled_lattice.tex)
+derives shared-root overlap, a common meromorphic generator and block
+force telescoping. Exact-gap aggregate node errors pay two endpoints;
+uncertain reciprocals have an explicit additional sum. It states:
+“Compatibility alone does not establish approximation to the canonical
+field.” The 61-page draft systematically integrates the joint-time and
+canonical source results and the conditional compact stopping/error theorem;
+inherited numerical values support only an appendix. Stable approximation,
+individual-gap concentration and new coverage remain unproved.
+[Integration30](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/30_VCD_GT_CM_COUPLED_LATTICE_MANUSCRIPT_INTEGRATION_20261118.md)
+records two clarifications, source preservation and visual QA. Separate
+internal shared-premise assessment, no specialist validation.
+
+**Retained-forcing comparison, 18 November 2026.** For Edward Baker with
+Codex assistance; actual settings unavailable. [CM Note32](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/32_VCD_GT_CM_FORCE_DISPERSION_AND_RETAINED_FORCING_20261118.md),
+**proved in-note**, gives the backward common-force variance identity,
+a <.0008 cap for its frozen unsigned compression, and a sharper
+constant-K screen for the same .1003 compact target. A complete physical
+F>=.3 would instead give strict squared-gap margin >.00006246.
+[E29](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/15_VCD_GT_CM_E29_FORCE_AND_TRANSIENT_ASSESSMENT_20261118.md)
+accepts without required correction. The source states: “That floor,
+the extended contour and the time-wide coordinate bounds are **unacquired**.”
+Direct D/M reproduces the conditional comparison exactly. No source
+certificate, new coverage or lattice-specific gain; internal shared-premise
+review and source-free exact rational replay.
+
+**Time-zero forward-statistics pass, 18 November 2026.** For Edward Baker
+with Codex assistance; actual settings unavailable. [CM Note34](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/34_VCD_GT_CM_TIME_ZERO_FORWARD_STATISTICS_20261118.md),
+**proved in-note**, deduces 388 real/simple initial roots from the existing
+complete singleton census at its inherited winding scope. On independently
+cleared finite tubes it derives forward force contraction and
+q_t>=a_N-4Cq with a_N=N/[floor(N/2)ceil(N/2)]. For the unchanged initial-M
+horizon h=D/[2(1-DM)], (h-t)'=-2Fh² screens the forward/backward return
+under its stated nonnegative-M/F and positive-D hypotheses. The source
+states: “This does not exclude the retained-F consumer”
+[E30](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/16_VCD_GT_CM_E30_FORWARD_STATISTICS_ASSESSMENT_20261118.md)
+accepts after one omitted-exterior clarification. No new positive-time
+source certificate, all-height statistics or global reality; internal
+shared-premise assessment.
+
+**Two-sided analytical manuscript milestone, 18 November 2026.** For Edward
+Baker with Codex assistance; actual settings unavailable.
+[CM Note35](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/35_VCD_GT_CM_RECURSIVE_TWO_SIDED_FORMULATION_20261118.md)
+states **“proved elementary soundness and residual identities under explicit hypotheses”**.
+Common-source sweeps retain true paths; fixed transitions preserve the full
+skeleton except for new observations. An exact continuous adjoint pairing
+keeps the quadratic remainder and complete forcing error and supplies two
+endpoint bounds for the same target. No strict canonical refinement, rate,
+source acquisition or new coverage is established.
+[E32](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/17_VCD_GT_CM_E32_TWO_SIDED_MANUSCRIPT_ASSESSMENT_20261118.md)
+is **accepted within scope after the one bounded correction check**;
+three reference descriptors changed, formulas unchanged. The 81-page draft
+integrates forward and retained-forcing results with supporting numerics
+only in Appendix B. This supersedes the 61-page production milestone,
+not its historical scientific verdict. Internal shared-premise assessment.

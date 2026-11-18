@@ -1,0 +1,583 @@
+% 18 November 2026. Drafted for Edward Baker with OpenAI Codex assistance.
+% Actual model and effort unavailable; helper settings inherited.
+\section{Canonical comparisons on a fixed positive-time slab}
+\label{sec:canonicaltime}
+
+We now acquire the preceding inputs from the unchanged canonical source.
+There are three distinct conclusions. Complete initial interaction data
+quantify the finite allowance of Theorem~\ref{stat:backward-comparison};
+a growing head of evolving neighbors supplies the stronger joint barrier;
+and spatial source jets give a sharper estimate of the actual gap drift.
+All three use a fixed slab bounded away from zero. The published source
+theorem already proves that its sufficiently high zeros are real and
+simple throughout that slab. Consequently the conclusions refine the
+dynamical comparisons on this known exterior, without extending its
+coverage. We follow \cite{BakerCM21,BakerCM24,BakerCM25}, distinguishing
+the published inputs recorded in \cite{BakerCMSource04} from their
+moment and comparison consequences.
+
+\subsection{The source clock and common labels}
+
+Fix
+\begin{equation}
+ I=[t_0,t_*],\qquad 0<t_0\le t_*\le\tfrac12,
+ \qquad \Delta=t_*-t_0.
+ \label{ct:slab}
+\end{equation}
+The clock used below is
+\begin{equation}
+ G(x,t)=\frac{x}{4\pi}\log\frac{x}{4\pi}-\frac{x}{4\pi}
+       +\frac{11}{8}+\frac{t}{16}\log\frac{x}{4\pi},
+ \qquad G(q_n(t),t)=n.
+ \label{ct:clock}
+\end{equation}
+Theorem~1.5(i)--(iv) of \cite{Polymath2019DBN}, with its absolute-constant
+convention and the multiplicity count in its proof, supplies the following
+inputs. For $0<t\le1/2$, sufficiently high zeros are exhausted by one
+real simple occurrence $x_n(t)$ near each clock point, with
+\begin{equation}
+ x_n(t)=q_n(t)+O(q_n(t)^{-c_*t}).
+ \label{ct:source-position}
+\end{equation}
+Here $c_*>0$ and the error constants are absolute; choose $c_*$ small
+enough for both this localization and the source estimates used below.
+The height and index
+onsets are both exponential in $1/t$, and the theorem also supplies
+the complete unit-window occurrence bound used in
+\eqref{eq:count-safe}. We use the weaker displayed localization
+\eqref{ct:source-position}; the source proof contains a stronger
+displacement estimate. No numerical onset constant is extracted here.
+
+\begin{lemma}[One cutoff and fixed moving labels]
+\label{ct:labels}
+After a single sufficiently large choice of onset depending on $t_0$,
+the localization is uniform on $I$, the high labels are consecutive,
+and each $x_n(t)$ is one $C^1$ branch throughout $I$. With spatial
+buffers retained above that onset,
+\begin{equation}
+ q_n'(t)=-\frac{\pi}{4}
+       \left(1+\frac{\pi t}{4q_n(t)\log(q_n(t)/(4\pi))}\right)^{-1},
+ \qquad |q_n'(t)|\le\pi/4.
+ \label{ct:clock-velocity}
+\end{equation}
+The same exterior statement holds at negative heights by evenness.
+\end{lemma}
+
+\begin{proof}
+On $I$, the height threshold $\exp(C/t)$ is at most
+$\exp(C/t_0)$ and $x^{-c_*t}\le x^{-c_*t_0}$. Increase the onset
+to meet the index threshold as well: by \eqref{ct:clock}, an index at
+height $x$ has size comparable to $x\log x$. This is an index-to-height
+conversion, not an identification of the two thresholds. The same
+increase pays any fixed buffer used below.
+
+The source proof counts one occurrence in each sufficiently small disk
+of radius $c/\log q_n$ and exhausts all zeros in the high region.
+Clock separation is asymptotic to $4\pi/\log q_n$, so the disks are
+disjoint after a further uniform enlargement. A count of one with
+multiplicity proves simplicity; conjugation proves reality. Differentiating
+the explicit equation $G(q_n(t),t)=n$, using
+\[
+ G_x(x,t)=\frac1{4\pi}\log\frac{x}{4\pi}+\frac{t}{16x},
+ \qquad G_t(x,t)=\frac1{16}\log\frac{x}{4\pi},
+\]
+gives \eqref{ct:clock-velocity}. The moving disks are continuous and
+their simple roots patch by the implicit-function theorem. Uniqueness
+in each disk prevents a permutation of labels. Choosing the initial
+label with the motion bound and the later window buffers included keeps
+all disks in the source domain for the entire slab.
+\end{proof}
+
+This result does not assume reality of the low divisor. The later use
+of positive exterior summands will explicitly impose the globally real
+stopped regime. At $t_0=0$, the onset bound diverges and the error in
+\eqref{ct:source-position} ceases to decay; the argument gives no
+time-zero localization theorem, even though upper counts may remain
+available there.
+
+\subsection{Local geometry and the complete interaction}
+
+Choose a buffered high label $n$, and freeze
+\begin{equation}
+ X=q_n(t_*),\qquad L=\log\frac{X}{4\pi}.
+ \label{ct:scale}
+\end{equation}
+By Lemma~\ref{ct:labels}, $x_n(t)=X+O(1)$ on $I$. At a slice put
+$a=x_n(t)$, $b=x_{n+1}(t)$, $g=b-a$, $D=g^2/4$, and
+$d=1/G_x(a,t)$. In the next lemma take either $R=1$ or $R=L^2$, and set
+\begin{equation}
+ E_R=LX^{-c_*t_0}+\frac{R^2}{X}.
+ \label{ct:window-error}
+\end{equation}
+All constants are independent of $X$ and the slice in the fixed slab.
+They may depend on the stated source constants and slab. Every
+asymptotic assertion is for $X$ sufficiently large; the threshold is
+not evaluated numerically.
+
+\begin{lemma}[Clock head and complete tail]
+\label{ct:head-tail}
+Uniformly for every actual high neighbor satisfying
+$|x_{n+k}(t)-a|\le2R$,
+\begin{equation}
+ \frac{x_{n+k}(t)-a}{d}=k+e_k,
+ \qquad |e_k|\le C E_R,
+ \qquad e_0=0.
+ \label{ct:normalized-position}
+\end{equation}
+In particular, the target and its two neighboring gaps are
+$d(1+O(E_1))$, and $d\sim4\pi/L$.
+At a slice where the complete divisor is real and simple, its complete
+exterior interaction satisfies
+\begin{equation}
+ d^2M=2+O\left(E_R+\frac1{RL}\right),\qquad
+ 2DM=1+O\left(E_R+\frac1{RL}\right).
+ \label{ct:complete-mass}
+\end{equation}
+Every exterior occurrence, including negative and bounded-height zeros,
+is included in these estimates.
+\end{lemma}
+
+\begin{proof}
+Throughout the radius-$2R$ window, $R=o(X)$ and
+$G_x=O(L)$, $G_{xx}=O(1/X)$. Applying $G$ to
+\eqref{ct:source-position} therefore gives
+\[
+ G(x_{n+k}(t),t)=n+k+O(LX^{-c_*t_0}).
+\]
+Subtract the corresponding equation at $a$. Taylor expansion about
+$a$, with its full $O(R^2/X)$ curvature remainder, gives
+\eqref{ct:normalized-position}. This uses values of the source error,
+not derivatives of it. Consecutivity follows from source exhaustion;
+subtracting neighboring normalized positions proves the gap assertions.
+
+For the complete interaction, split the divisor at $|\rho-a|=R$,
+assigning equality to the far set. The near indices form an interval
+whose endpoints have magnitudes comparable to $RL$, with $0,1$ removed.
+Indeed $G_x\asymp L$ on the window, and
+\eqref{ct:normalized-position} has error $o(1)$. For such an exterior
+index,
+\begin{equation}
+ \frac{d^2}{(\rho-a)(\rho-b)}
+ =\frac1{(k+e_k)(k-1+e_k-e_1)}
+ =\frac{1+O(E_R)}{k(k-1)}.
+ \label{ct:head-summand}
+\end{equation}
+Both reference integer factors are nonzero and have magnitude at least
+one, so the relative estimate is uniform over the whole head. The
+positive reference sum and its two omitted tails are
+\[
+ \sum_{k\in\mathbb Z\setminus\{0,1\}}\frac1{k(k-1)}=2,
+ \qquad
+ \sum_{|k|>cRL}\frac1{|k(k-1)|}=O((RL)^{-1}).
+\]
+Consequently $d^2M_{\mathrm{near}}=2+O(E_R+(RL)^{-1})$.
+
+For the far set let $r=|\rho-a|\ge R$. Eventually $g<1/4$, and
+$|(\rho-a)(\rho-b)|\ge(3/4)r^2$. In each pair of unit shells
+$R+j\le r<R+j+1$, $j\ge0$, the complete count bounds the number
+of occurrences by $C\log(3+X+R+j)$. Hence
+\begin{equation}
+ |M_{\mathrm{far}}|
+ \le C\sum_{j\ge0}
+       \frac{\log(3+X+R+j)}{(R+j)^2}
+ \le C'\frac{L+\log(R+1)+1}{R}
+ =O(L/R).
+ \label{ct:tail-payment}
+\end{equation}
+The middle inequality follows by splitting the logarithm into a
+$\log(3+X)$ term and a $\log(1+R+j)$ term, and comparing the two
+sums with the integrals of $r^{-2}$ and $(\log(1+r))r^{-2}$.
+This accounts for every unbounded shell. If a shell crosses zero,
+split its unit intervals and use reflection; the change is only in
+the count constant. Boundary occurrences are retained by the stated
+near/far convention.
+
+Since $d^2=O(L^{-2})$, \eqref{ct:tail-payment} contributes
+$O((RL)^{-1})$ to the normalized mass. This proves the first part
+of \eqref{ct:complete-mass}; $g=d(1+O(E_R))$ and $2D=g^2/2$
+give the second.
+\end{proof}
+
+The passage from local spacing to complete $M$ is essential. Local
+clock data alone do not identify the complete interaction; the error
+in \eqref{ct:tail-payment} pays the rest of the divisor. Conversely,
+the positive lower-head argument for $K$ below will not claim an
+asymptotic equality by silently discarding its tail.
+
+\subsection{The exact initial-data allowance at high height}
+
+At an all-real simple slice in $I$, let $h_L,h_R$ be the two neighboring
+gaps and put
+\[
+ b_3=\frac1{h_L(h_L+g)}+\frac1{h_R(h_R+g)},\qquad
+ \eta_X=LX^{-c_*t_0}+X^{-1},\qquad
+ \varepsilon_X=L^{-1}+LX^{-c_*t_0}.
+\]
+The slice condition here is explicit: the following asymptotics are
+uniform over all such slices, without presuming reality of the entire
+slab.
+
+\begin{theorem}[Initial-mass horizon]
+\label{ct:initial-horizon}
+For high pairs at the stated slices,
+\begin{equation}
+ g=\frac{4\pi}{L}(1+O(\eta_X)),\qquad
+ DM=\frac12+O(\varepsilon_X),\qquad
+ Db_3=\frac14+O(\eta_X).
+ \label{ct:initial-asymptotics}
+\end{equation}
+Among all admissible initial lower data
+$0<d_0\le D$ and $0\le b_0\le M$, the largest score in
+\eqref{stat:strict-margin} is the exact-data score. Its strict duration
+and the two-neighbor duration satisfy
+\begin{equation}
+ \begin{split}
+ \tau_{\mathrm{full}}
+ &=\frac{D}{2(1-DM)}
+   =\frac{g^2}{4}(1+O(\varepsilon_X))
+   =\frac{4\pi^2}{L^2}(1+O(\varepsilon_X)),\\
+ \tau_3
+ &=\frac{D}{2(1-Db_3)}
+   =\frac{g^2}{6}(1+O(\eta_X))
+   =\frac{8\pi^2}{3L^2}(1+O(\eta_X)).
+ \end{split}
+ \label{ct:horizons}
+\end{equation}
+In particular, for every fixed $\Delta>0$, even the exact-data score
+is negative at all sufficiently high such pairs.
+\end{theorem}
+
+\begin{proof}
+Apply Lemma~\ref{ct:head-tail} with $R=1$. The replacement
+$d=(4\pi/L)(1+O(X^{-1}))$ is absorbed in $\eta_X$.
+The complete tail error is $O(L^{-1})$, giving the stated error for
+$DM$. The neighboring gaps are $d(1+O(\eta_X))$, so each term
+of $b_3$ is $(2d^2)^{-1}(1+O(\eta_X))$; this gives
+$Db_3=1/4+O(\eta_X)$.
+
+For fixed $\Delta\ge0$, the score
+$R(d_0,b_0;\Delta)=d_0(1+2b_0\Delta)-2\Delta$ is nondecreasing
+in both nonnegative lower inputs. Exact $D,M$ therefore maximize it
+in this information class. Eventually $DM<1$ and $Db_3<1$;
+solving the strict score inequalities and using
+\eqref{ct:initial-asymptotics} proves \eqref{ct:horizons}. More
+explicitly, at fixed positive $\Delta$,
+\begin{equation}
+ R(D,M;\Delta)=D-\Delta+O(\Delta\varepsilon_X)\longrightarrow-\Delta,
+ \qquad
+ R(D,b_3;\Delta)\longrightarrow-3\Delta/2.
+ \label{ct:score-limits}
+\end{equation}
+The errors are uniform over the stated slices.
+\end{proof}
+
+The full initial mass improves the asymptotic allowance by a factor
+$3/2$ over two neighbors, and by a factor $2$ over the gap-only
+$g^2/8$. Both improved durations still vanish as $L^{-2}$. Thus a
+nonempty finite block made entirely of sufficiently high eligible pairs
+is bad for the fixed-duration sufficient score with probability one
+under the finite block sampling of Section~\ref{sec:statistics}.
+This concerns the score event, not an actual collision event.
+
+The limitation is confined to the one-step Riccati lower envelope using
+initial $D,M$. It excludes neither new time-dependent information nor
+reinitialization, divided steps or direct source control. For an exact
+check, the field
+$H(t,z)=\e^{\pi^2t/g^2}\cos(\pi z/g)$ has stationary zeros,
+$D=g^2/4$, $M=2/g^2$ and $D_u=0$, while that same comparison stops
+at $g^2/4$. The discarded forcing balances $2M^2$ exactly. The field
+has linear zero count and is not the canonical theta source; its purpose
+is to distinguish an allowance from a dynamical lifetime.
+
+\subsection{A growing head pays the joint comparison}
+
+Return to the fixed common labels on $I$, let $u=t_*-t$, and suppose
+the complete divisor at $t_*$ is real and simple. For this subsection
+apply positive omission only on its globally real simple stopped part.
+Set
+\begin{equation}
+ R=L^2,\qquad
+ J=\left\lfloor\frac{RL}{64\pi}\right\rfloor,\qquad
+ E_X=LX^{-c_*t_0}+\frac{L^4}{X}.
+ \label{ct:growing-head}
+\end{equation}
+
+\begin{theorem}[Canonical acquisition of the joint barrier]
+\label{ct:joint-acquisition}
+There are constants $C_K,C_M$ such that, uniformly on that stopped
+regime,
+\begin{equation}
+ K\ge1-C_K(E_X+L^{-9}),\qquad
+ |V|\le C_M(E_X+L^{-3}).
+ \label{ct:acquired-inputs}
+\end{equation}
+Consequently, with
+\begin{equation}
+ \eta=\sqrt{C_K(E_X+L^{-9})},\qquad
+ v_X=\max\{C_M(E_X+L^{-3}),\eta\},
+ \label{ct:barrier-parameter}
+\end{equation}
+the joint comparison gives
+\begin{equation}
+ D(u)\ge D(0)-2v_Xu,\qquad
+ v_X=O(L^{-3}+\sqrt{E_X})=O(L^{-3}).
+ \label{ct:joint-output}
+\end{equation}
+Every fixed duration within the stipulated slab satisfies the strict
+margin eventually, since
+\begin{equation}
+ \frac{2v_X\Delta}{D(0)}=O(\Delta/L)\longrightarrow0.
+ \label{ct:relative-margin}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The fixed head contains labels $n-J,\ldots,n+J+1$. All lie within
+distance $R$ of $a=x_n(t)$ for every $t\in I$, after increasing $X$.
+Indeed $G_x\ge L/(8\pi)$ on the radius-$2R$ window, so a distance
+$R$ allows at least $RL/(8\pi)$ clock indices. This is much larger
+than $J+1$, and the source displacements are $o(1)$. The slack pays
+both the endpoint asymmetry and the moving spatial buffers. Also
+$J=O(L^3)=o(n)$, so the leftmost label still meets the source index
+onset. The same finite labels, rather than a moving cutoff, are
+therefore available throughout the slab.
+
+Lemma~\ref{ct:head-tail} supplies
+$(x_{n+k}-a)/d=k+e_k$ with $|e_k|\le CE_X$ for all these labels.
+It follows that $g\ge(1-e)d$ and the two endpoint-distance
+inequalities \eqref{jt:head-distances} hold with $e=C'E_X$:
+subtracting two normalized positions costs at most $2CE_X$, and
+each reference integer distance is at least one. Eventually $e<1/3$.
+Proposition~\ref{jt:robust-head}, together with $J\asymp L^3$,
+gives the first inequality in \eqref{ct:acquired-inputs}. Its omitted
+forcing terms are positive on the stopped regime. No upper tail
+subtraction or independent finite-divisor evolution has been used.
+
+For $M$, use the complete statement \eqref{ct:complete-mass} at
+$R=L^2$. It gives $2DM=1+O(E_X+L^{-3})$, including the unbounded
+tail payment \eqref{ct:tail-payment}, hence the second inequality
+in \eqref{ct:acquired-inputs}. Only its initial instance is needed
+for Theorem~\ref{jt:barrier}. That theorem gives
+\eqref{ct:joint-output}. At fixed $t_0>0$, $E_X$ is smaller than
+every fixed negative power of $L$, while
+$D(0)\sim4\pi^2/L^2$. These facts prove the last equality in
+\eqref{ct:joint-output} and \eqref{ct:relative-margin}.
+\end{proof}
+
+When $v_X>0$, the algebraic duration budget $D(0)/(2v_X)$ is at
+least a constant times $L$. This is a budget of the comparison; its
+inputs have only been established on the fixed slab \eqref{ct:slab}.
+It is not a claim of backward evolution for a time of order $L$.
+The change from the shrinking allowance in
+Theorem~\ref{ct:initial-horizon} is the acquired whole-time forcing
+floor, not a more accurate initial mass.
+
+The same-information comparison is already visible:
+\eqref{ct:acquired-inputs} also bounds $|V|$ at every time, so
+$|D_u|\le2C_M(E_X+L^{-3})$ follows directly, without taking the
+square root of a forcing error. More fundamentally, the clock theorem
+already proves exterior reality and simplicity independently of the
+low divisor. The barrier has a weaker data interface---a full-time
+lower $K$ bound plus initial $V$---but no cheaper acquisition or
+improved canonical onset is demonstrated here.
+
+\subsection{An analytic source residual and the velocity consequence}
+
+There is a sharper way to retain the common motion of neighboring
+zeros. Polymath's Remark~9.4 explicitly describes the spatial-jet
+method for a velocity asymptotic and leaves its details to the reader
+\cite{Polymath2019DBN}. The proof below supplies the local residual,
+Cauchy and denominator estimates needed for this application; the
+velocity method is not claimed as new.
+
+Let $q=q_n(t)$, $L_q=\log(q/(4\pi))$, and define
+\begin{equation}
+ \lambda_q=L_q/4,\qquad \kappa_0=\pi/8,\qquad
+ \epsilon_q=q^{-c_*t_0}+L_q/q.
+ \label{ct:jet-scale}
+\end{equation}
+Write $\mathfrak M_t$ for the nonvanishing carrier denoted $M_t$ in
+\cite{Polymath2019DBN}; it is not the exterior interaction $M$.
+Set $A_q=\mathfrak M_t((1+\ii q)/2)\ne0$.
+
+\begin{lemma}[Holomorphic local residual]
+\label{ct:analytic-residual}
+For a sufficiently small fixed $r>0$, uniformly for $t\in I$ and
+all sufficiently high clock labels,
+\begin{equation}
+ H(t,q+w)=A_q\e^{-\kappa_0w}
+          \{2\ii\sin(\lambda_qw)+E_{n,t}(w)\},
+ \quad |w|\le r/L_q,
+ \quad \sup|E_{n,t}|\le C\epsilon_q,
+ \label{ct:residual}
+\end{equation}
+where $E_{n,t}$ is an actual holomorphic function on the disk.
+\end{lemma}
+
+\begin{proof}
+Keep both analytic carrier terms in \cite[\S9, (102)]{Polymath2019DBN}.
+For $w=(x-q)+\ii y$, their exponents have leading parts
+\[
+ (-\ii w)(\lambda_q-\ii\kappa_0)
+       =-\ii\lambda_qw-\kappa_0w,
+ \qquad
+ (\ii w)(\lambda_q+\ii\kappa_0)
+       =\ii\lambda_qw-\kappa_0w.
+\]
+The corresponding multipliers are $\overline{A_q}$ and $A_q$.
+The relative errors in those two terms are $O(q^{-c_*t_0})$ on the
+disk, with the fixed small source exponent chosen above.
+Lemma~9.2 and (103) of that source give
+$\overline{A_q}/A_q=-1+O(L_q/q)$ at the clock point.
+The two exponentials have uniformly bounded modulus on
+$|w|\le r/L_q$. Divide the source approximation by
+$A_q\e^{-\kappa_0w}$: the leading terms combine to
+$\e^{\ii\lambda_qw}-\e^{-\ii\lambda_qw}$ and the remaining
+terms are bounded by $C\epsilon_q$.
+
+Define $E_{n,t}$ by the exact left side of \eqref{ct:residual}
+minus $2\ii\sin(\lambda_qw)$. The quotient uses a nonvanishing
+entire factor, so this definition proves holomorphy, and the source
+estimate proves its uniform bound. No derivative of a symbol $O(\cdot)$
+is taken. The leading frequency is deliberately $L_q/4$; the smaller
+time-dependent phase refinement is included in the stated error.
+The weaker display (104) in the source, with an allowance involving
+$|\Im w|\log q$, would not give a vanishing residual on this disk
+and is not used for the Cauchy step.
+\end{proof}
+
+\begin{proposition}[Source jets and the complete gap defect]
+\label{ct:velocity}
+For the common high labels on $I$, put
+$\epsilon_X=X^{-c_*t_0}+L/X$. Without an assumption that the low
+divisor is real,
+\begin{equation}
+ \begin{split}
+ |x_n'(t)+\pi/4|&\le C L\epsilon_X,\\
+ |g_t|&\le C L\epsilon_X,\qquad
+ |D_t|\le C\epsilon_X,\qquad
+ |1-2DM|\le C\epsilon_X.
+ \end{split}
+ \label{ct:velocity-bounds}
+\end{equation}
+Here $M$ is the complete exterior sum for the adjacent high pair.
+In particular, for $s,t\in I$,
+\begin{equation}
+ |g(t)-g(s)|\le C L\epsilon_X|t-s|,
+ \qquad |D(t)-D(s)|\le C\epsilon_X|t-s|.
+ \label{ct:integrated-jets}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Source localization puts the actual real root
+$w_n=x_n(t)-q_n(t)$ in $|w_n|\le r/(4L_q)$ for sufficiently large
+$q$, uniformly in $t$. Equation~\eqref{ct:residual} at that root
+implies $\sin(\lambda_qw_n)=O(\epsilon_q)$. On this fixed small
+real interval the sine is bounded below in modulus by a constant
+times its argument, so
+\begin{equation}
+ |w_n|\le C\epsilon_q/L_q.
+ \label{ct:sharpened-position}
+\end{equation}
+Cauchy's formula on the larger disk gives, in its inner half,
+\[
+ |E'_{n,t}|\le CL_q\epsilon_q,\qquad
+ |E''_{n,t}|\le CL_q^2\epsilon_q.
+\]
+Put $f(w)=2\ii\sin(\lambda_qw)+E_{n,t}(w)$. At the root,
+$\lambda_qw_n=O(\epsilon_q)$, and therefore
+\begin{equation}
+ f'(w_n)=2\ii\lambda_q(1+O(\epsilon_q)),\qquad
+ f''(w_n)=O(L_q^2\epsilon_q),\qquad
+ |f'(w_n)|\ge c_1L_q.
+ \label{ct:root-jets}
+\end{equation}
+The second bound uses the small sine at the root and the paid
+second derivative of the residual. Spatially differentiating the
+exact representation \eqref{ct:residual}, with $t,q,A_q$ fixed,
+and then setting $f(w_n)=0$ gives
+\[
+ \frac{H_{zz}(t,x_n)}{H_z(t,x_n)}
+ =\frac{f''(w_n)}{f'(w_n)}-2\kappa_0
+ =-\frac\pi4+O(L_q\epsilon_q).
+\]
+Implicit differentiation of $H(t,x_n(t))=0$ and $H_t=-H_{zz}$
+gives the exact physical velocity $x_n'=H_{zz}/H_z$.
+This proves its asserted bound. The leading velocity $-\pi/4$
+cancels for neighboring labels, so $g_t=O(L\epsilon_X)$;
+since $g=O(L^{-1})$, $D_t=gg_t/2=O(\epsilon_X)$.
+
+For completeness, this derivative estimate transfers to the complete
+$M$, not only to a local head. The high pair is strictly isolated;
+apply the finite-product pair identity at a reference time and pass
+through the cleared pair contour as in Lemma~\ref{lem:slice-passage}.
+Equivalently, subtract the two finite root-velocity sums before their
+complete opposite/conjugate-group limit. The exterior difference is
+\[
+ g_t=\frac4g-2g\sum_{\rho\ne a,b}
+                       \frac1{(\rho-a)(\rho-b)}.
+\]
+Every surviving tail term is inverse-square and hence absolutely
+summable by the complete strip and unit count. The nearby denominators
+are nonzero by strict isolation, including when lower zeros are
+nonreal. Thus $D_t=2-4DM=2V$ holds with the complete real sum,
+proving the last bound in \eqref{ct:velocity-bounds}. No separate
+nonabsolute first-power sum is estimated. Integration on the common
+label branches proves \eqref{ct:integrated-jets}.
+\end{proof}
+
+This proof uses complex spatial neighborhoods and the exact heat
+equation, not a complex-time source estimate or a time derivative of
+the localization error. Since $\epsilon_X L^2\to0$, its squared
+half-gap allowance pays every fixed duration in $I$ at sufficiently
+high labels. The corresponding allowance for the actual gap has the
+additional factor $L$ displayed in \eqref{ct:integrated-jets}.
+
+\subsection{The matched direct clock comparison}
+
+The same source information also encloses the gaps at each time.
+Let $h_n(t)=q_{n+1}(t)-q_n(t)$. From
+\eqref{ct:sharpened-position},
+\begin{equation}
+ |g_n(t)-h_n(t)|\le C\epsilon_X/L.
+ \label{ct:direct-enclosure}
+\end{equation}
+This is a common-time enclosure, not merely an initial-value estimate.
+Write $v(q,t)$ for the explicit clock velocity in
+\eqref{ct:clock-velocity}, and $L_q=\log(q/(4\pi))$. Differentiating
+this explicit function gives
+\[
+ v_q(q,t)=-\frac{\pi^2t(L_q+1)}{16q^2L_q^2}
+          \left(1+\frac{\pi t}{4qL_q}\right)^{-2}.
+\]
+Since $h_n=O(L^{-1})$, the mean-value theorem implies
+$|h_n'(t)|\le C/(X^2L^2)$. Combining two endpoint enclosures
+\eqref{ct:direct-enclosure} with this bound yields
+\begin{equation}
+ \begin{split}
+ |g_n(t)-g_n(s)|
+ &\le C\epsilon_X/L+C|t-s|/(X^2L^2),\\
+ |D_n(t)-D_n(s)|
+ &\le C\epsilon_X/L^2+C|t-s|/(X^2L^3).
+ \end{split}
+ \label{ct:matched-direct}
+\end{equation}
+For the second line, use $D=g^2/4$ and $g(t)+g(s)=O(L^{-1})$.
+Both endpoint source errors are included in the constants. For a fixed
+positive time separation this direct bound pays roughly $L^2$ less
+source error than the integrated squared half-gap bound. For very short
+times, \eqref{ct:integrated-jets} can be better because its allowance
+vanishes with $|t-s|$. The minimum of the two bounds is legitimate;
+neither dominates in every time regime.
+
+These comparisons locate the gain and its boundary. The original
+initial-$M$ envelope loses a cancellation; the acquired $K$ floor
+retains enough of it to pay a fixed slab, and the analytic source
+residual estimates it still more sharply. All source acquisitions
+remain in the exterior already covered by the published theorem.
+They give no numerical cutoff, no estimate uniform down to $t=0$,
+no new compact gap law, and no improved bound on $\Lambda$. Extending
+the useful domain requires new source information of the type considered
+in Section~\ref{sec:compact}, rather than repeated evaluation of this
+already protected high exterior.

@@ -1,0 +1,409 @@
+% 18 November 2026. Drafted for Edward Baker with OpenAI Codex assistance.
+% Actual model and effort unavailable; authoring-helper settings inherited.
+\section{Retained forcing and the exact backward return allowance}
+\label{sec:retained-forcing}
+
+A whole-time forcing estimate carries more information than an initial
+interaction or a constant upper bound for the defect. We now keep that
+information in two scalar comparisons and then identify exactly what is
+lost when a forward evolution is compressed back to its initial-$M$
+backward horizon. The derivations are from \cite{BakerCM32,BakerCM34},
+with the internal assessments \cite{BakerCMReview29,BakerCMReview30}.
+The numerical anchor tests are deferred to Appendix~\ref{app:compact-example}.
+All statements in this section are analytical and independent of those
+supporting values.
+
+Work first in physical backward time $u=t_*-t$ on a counted pair tube
+where the complete local equations hold. Write
+\begin{equation}
+ D_u=-2+4DM,\qquad M_u=-2M^2+\mathcal F,\qquad
+ \mathcal F=12S_2+16DS_3,\qquad K=2D^2\mathcal F.
+ \label{rf:pair-system}
+\end{equation}
+The pair is real and distinct while $D>0$. Its exterior may be nonreal:
+the complete signed quantities in \eqref{rf:pair-system} are then
+acquired through Section~\ref{sec:compact}, rather than by omitting an
+uncounted tail. With $V=1-2DM$, the identities
+\begin{equation}
+ D_u=-2V,\qquad V_u=\frac{1-V^2-K}{D},\qquad
+ \left(\frac{1-V^2}{D}\right)_u=4V\mathcal F
+                                  =-2\mathcal F D_u
+ \label{rf:transient-identity}
+\end{equation}
+follow from \eqref{rf:pair-system}. In the last identity,
+$(1-V^2)/D=4M(1-DM)$; differentiating this expression proves the
+formula without assigning separate bounds to its factors. We will not
+divide its signed integral by an uncertain minimum weight. The
+comparisons below use the differential equations directly.
+
+\subsection{The sharp scalar comparison for a constant \texorpdfstring{$K$}{K} floor}
+
+\begin{theorem}[Constant forcing floor with the initial transient retained]
+\label{rf:constant-K}
+Suppose \eqref{rf:pair-system} holds on a stopped interval with $D>0$,
+and suppose $K\ge\kappa$ for a constant $\kappa\le1$. Let $d>0$ and
+$v\in\R$ satisfy the two ordered initial conditions
+\begin{equation}
+ g(0)\ge2\sqrt d,\qquad
+ g_u(0)\ge-2v/\sqrt d,\qquad g=2\sqrt D.
+ \label{rf:ordered-data}
+\end{equation}
+Define
+\begin{equation}
+ d_\kappa(u)=d-2vu+\frac{v^2+\kappa-1}{d}u^2.
+ \label{rf:constant-K-polynomial}
+\end{equation}
+Then $D(u)\ge d_\kappa(u)$ before the first zero of $d_\kappa$ and
+before the stipulated pair tube ends. Equality holds for the scalar
+comparison with constant $K=\kappa$ and equal initial data. Thus this
+comparison retains the full initial transient of that scalar problem.
+\end{theorem}
+
+\begin{proof}
+Differentiate $g=2\sqrt D$ using \eqref{rf:transient-identity}. The
+terms quadratic in $V$ cancel and give
+\begin{equation}
+ g_{uu}=\frac{16(K-1)}{g^3}
+       \ge f_\kappa(g),\qquad
+ f_\kappa(g)=\frac{16(\kappa-1)}{g^3}.
+ \label{rf:gap-acceleration}
+\end{equation}
+For $\kappa\le1$, $f_\kappa$ is nondecreasing on $(0,\infty)$.
+Direct differentiation of $y=2\sqrt{d_\kappa}$ gives
+$y_{uu}=f_\kappa(y)$, $y(0)=2\sqrt d$ and
+$y_u(0)=-2v/\sqrt d$, on the initial interval where $d_\kappa>0$.
+
+For completeness, the comparison can be proved on any compact
+subinterval on which $g,y>0$. Put $a=g-y$ and $b=g_u-y_u$.
+Then $a_u=b$ and
+\[
+ b_u\ge f_\kappa(g)-f_\kappa(y)=c(u)a,
+\]
+where the divided difference $c(u)$ is continuous, nonnegative and
+bounded, using $f_\kappa'$ at equal arguments. The negative parts obey
+$(a_-)_u\le b_-$ and $(b_-)_u\le c(u)a_-$ almost everywhere.
+An integrating-factor inequality for $a_-+b_-$, initially zero, makes
+both negative parts zero. Hence $g\ge y$, and squaring proves the
+assertion. Exhaust the positive comparison interval by such compact
+subintervals. No comparison is continued through the first zero of
+$d_\kappa$ merely because its quadratic expression has values later.
+\end{proof}
+
+The initial conditions in \eqref{rf:ordered-data} are stated for both
+position and velocity deliberately. If $D(0)\ge d$ and $V(0)\le v$
+with $v\ge0$, they follow at once. A useful alternative uses
+$D(0)\ge d$ and $M(0)\ge b\ge0$. Indeed,
+\[
+ g_u(0)=-\frac2{\sqrt{D(0)}}+4M(0)\sqrt{D(0)}
+       \ge-\frac2{\sqrt d}+4b\sqrt d,
+\]
+because the last expression is increasing in $D$ and $M$ on that
+rectangle. Thus one may take $v=1-2db$, without requiring this $v$ to
+be nonnegative. These ordering checks also identify the favorable
+endpoints when screening an uncertain anchor.
+
+The equality claim is sharpness within the stated scalar differential
+comparison, not a claim that every constant-$K$ scalar trajectory is a
+canonical divisor. A strictly positive minimum of $d_\kappa-d_{\rm stop}$
+on a prescribed finite interval excludes a lower stop, once all other
+tube exits have been independently excluded. Conversely, a comparison
+that reaches zero before the requested endpoint cannot certify that
+endpoint by this theorem. It does not establish an actual collision.
+
+\subsection{A constant physical forcing floor}
+
+A constant floor for $\mathcal F$ is a different input from a constant
+floor for $K=2D^2\mathcal F$. In particular, a small $K$ near a small
+gap is compatible with a positive physical forcing. The regular
+$D/M$ equations retain this distinction without division by $D$.
+
+\begin{theorem}[Regular Riccati and gap comparison]
+\label{rf:forcing-comparison}
+Suppose \eqref{rf:pair-system} holds on a stopped positive-$D$ interval,
+with complete signed $\mathcal F\ge f\ge0$, $D(0)\ge d>0$ and
+$M(0)\ge b\ge0$. For $f>0$ put $\lambda=\sqrt{2f}$ and
+\begin{equation}
+ S(u)=\frac{\sinh(\lambda u)}{\lambda},\qquad
+ W(u)=\cosh(\lambda u)+2bS(u),\qquad
+ m(u)=\frac{W'(u)}{2W(u)}.
+ \label{rf:model-functions}
+\end{equation}
+For $f=0$ use the continuous limits $S(u)=u$,
+$W(u)=1+2bu$ and $m(u)=b/(1+2bu)$. In either case define
+\begin{equation}
+ d_f(u)=W(u)\bigl[dW(u)-2S(u)\bigr].
+ \label{rf:physical-forcing-model}
+\end{equation}
+Then $M(u)\ge m(u)\ge0$ and $D(u)\ge d_f(u)$ throughout the stopped
+interval. The direct regular $D/M$ comparison given the same
+$(d,b,f)$ produces exactly these same functions.
+\end{theorem}
+
+\begin{proof}
+For $u\ge0$, $W\ge1$ and $W'\ge0$. For $f>0$, $W''=2fW$;
+the same formula holds at $f=0$ with $W''=0$. Therefore
+\[
+ m_u=\frac{W''W-(W')^2}{2W^2}=f-2m^2,
+ \qquad m(0)=b.
+\]
+The complete forcing inequality gives
+\[
+ (M-m)_u+2(M+m)(M-m)\ge0.
+\]
+On each compact stopped subinterval an integrating factor is positive,
+irrespective of the sign of the continuous coefficient. Since
+$M(0)-m(0)\ge0$, this proves $M\ge m\ge0$; no exterior-summand
+positivity was used.
+
+The Wronskian identity $S'W-SW'=1$ follows directly from the hyperbolic
+formulas, and is also valid for $f=0$. Consequently
+\[
+ (S/W)'=W^{-2},\qquad
+ d_f=W^2\left[d-2\int_0^u W(s)^{-2}\dd s\right],\qquad
+ (d_f)_u=-2+4m d_f.
+\]
+Subtracting from the actual equation yields
+\[
+ (D-d_f)_u-4m(D-d_f)=4D(M-m)\ge0
+\]
+while $D>0$. A second integrating factor proves $D\ge d_f$.
+Both integrations use the regular pair system itself, which proves the
+same-information statement as well. No monotonicity of the actual
+$D$, and no sign of its actual $V$, is assumed.
+\end{proof}
+
+The formula covers the three Riccati regimes without a singular case
+distinction. For $f>0$ put $a=\sqrt{f/2}$. If $b>a$, then $m$ decreases
+to $a$; if $b=a$, it is constant; if $0\le b<a$, it increases to $a$.
+These assertions follow from $m_u=2(a^2-m^2)$ and uniqueness, or from
+\eqref{rf:model-functions}. For $f=0$, $m$ decreases to zero when
+$b>0$ and is identically zero when $b=0$. In particular,
+\begin{equation}
+ d_0(u)=(1+2bu)\bigl[d(1+2bu)-2u\bigr],
+ \label{rf:zero-forcing-limit}
+\end{equation}
+recovering the earlier initial-interaction comparison exactly.
+
+\begin{corollary}[A whole-interval lower-stop test]
+\label{rf:forcing-stop}
+In addition to the hypotheses of Theorem~\ref{rf:forcing-comparison},
+suppose an independently cleared count-two contour and unconditional
+coordinate enclosures exclude every other exit on $0\le u\le\Delta$.
+Acquire $\mathcal F_\Gamma\ge f$ on the corresponding stopped trial
+region $D\ge d_{\rm stop}>0$. If
+\begin{equation}
+ \min_{0\le u\le\Delta}d_f(u)>d_{\rm stop},
+ \label{rf:stop-margin}
+\end{equation}
+then the actual pair stays above that lower stop throughout the interval.
+Positivity of $d_f(\Delta)$ alone always implies positivity of $d_f$
+on $[0,\Delta]$. The stronger endpoint test
+$d_f(\Delta)>d_{\rm stop}$ implies \eqref{rf:stop-margin} whenever
+$b\ge\sqrt{f/2}$ and $4bd<2$.
+\end{corollary}
+
+\begin{proof}
+At a hypothetical first lower exit, the actual coordinates have stayed
+in the acquired trial region. Theorem~\ref{rf:forcing-comparison}
+therefore gives $D\ge d_f>d_{\rm stop}$ there, a contradiction.
+The normalized model satisfies
+\[
+ \frac{d_f(u)}{W(u)^2}=d-2S(u)/W(u),\qquad
+ \left(\frac{d_f}{W^2}\right)'=-2/W^2<0.
+\]
+Thus a positive endpoint makes the normalized model, and hence $d_f$,
+positive at every earlier time. For the stated stronger endpoint test,
+$0\le m\le b$. The positive model cannot cross its initial upper
+barrier $d$, since at such a crossing its derivative is at most
+$-2+4bd<0$. While positive it consequently satisfies
+$(d_f)_u\le-2+4bd<0$, so its minimum is its endpoint. In the other
+Riccati regimes this last monotonicity is not asserted; use the actual
+scalar minimum in \eqref{rf:stop-margin} instead.
+\end{proof}
+
+The count and coordinate assumptions in this corollary are the same
+independent gates as in Theorem~\ref{cmp:stop}. In particular, coordinate
+acquisition may permit negative $D$; the desired positive trajectory is
+not an input to it. For a finite family of pair charts the margin must
+hold for every covered label and every chart/boundary exit. Passing only
+one initially minimizing label does not protect an evolving block
+minimum. A regular merging-pair chart also does not regularize its
+neighboring edge charts.
+
+\subsection{Complete source acquisition and its error budget}
+
+The trial trace in Proposition~\ref{cmp:trial} gives the combined
+physical forcing directly:
+\begin{align}
+ \mathcal F_\Gamma(t;\widehat c,\widehat D)
+ &=-\frac1{2\pi\ii}\oint_\Gamma B(t,z)
+       \left(\frac{12}{Q^2}+\frac{16\widehat D}{Q^3}\right)\dd z,
+       \notag\\
+ &=-\frac1{2\pi\ii}\oint_\Gamma\mathcal L(t,z)Q'(z)
+       \left(\frac{24}{Q^3}+\frac{48\widehat D}{Q^4}\right)\dd z,
+ \label{rf:source-kernel}
+\end{align}
+where the second identity requires the matching cleared annular
+logarithm of \eqref{cmp:log-kernel}. All interior rational contributions
+cancel as in Section~\ref{sec:compact}; every exterior occurrence and
+its integer multiplicity remain. Conjugation makes the value real, but
+does not make the individual exterior summands nonnegative.
+
+Use the geometry of \eqref{cmp:kernel-errors}: $0\le C<r$,
+$|\widehat D|\le D_{\max}$ and $q=(r-C)^2-D_{\max}>0$.
+Uniform source errors on the circle give
+\begin{align}
+ E_{\mathcal F,B}
+ &\le re_B\left(\frac{12}{q^2}+\frac{16D_{\max}}{q^3}\right),
+       \notag\\
+ E_{\mathcal F,\mathcal L}
+ &\le2r(r+C)e_{\mathcal L}
+       \left(\frac{24}{q^3}+\frac{48D_{\max}}{q^4}\right).
+ \label{rf:source-errors}
+\end{align}
+The quotient estimate \eqref{cmp:quotient-error} pays $e_B$ from
+field/first-jet errors and a nonzero contour denominator. These inequalities
+follow by taking the modulus of the combined kernel and integrating the
+contour length. They need no reciprocal target gap.
+
+If trial coordinates are approximated rather than enclosed as parameters,
+suppose their errors are at most $e_c,e_D$ and all connecting parameter
+segments retain the same $q$. With $B_{\max}$ bounding the exact field
+$|B|$ on the contour, the additional error is at most
+\begin{equation}
+ \begin{split}
+ E_{\rm par}\le rB_{\max}\bigg[&
+ \left(\frac{48(r+C)}{q^3}
+             +\frac{96D_{\max}(r+C)}{q^4}\right)e_c\\
+ &+\left(\frac{40}{q^3}+\frac{48D_{\max}}{q^4}\right)e_D\bigg].
+ \end{split}
+ \label{rf:parameter-error}
+\end{equation}
+To verify the constants, differentiate
+$J=12Q^{-2}+16\widehat DQ^{-3}$, using
+$Q_{\widehat c}=-2(z-\widehat c)$ and $Q_{\widehat D}=-1$:
+\[
+ J_{\widehat c}=48(z-\widehat c)Q^{-3}
+                    +96\widehat D(z-\widehat c)Q^{-4},\qquad
+ J_{\widehat D}=40Q^{-3}+48\widehat DQ^{-4}.
+\]
+Integrate the parameter derivatives along the joining segments and then
+around the contour. Evaluating all parameters by a rigorous enclosure
+can instead include this payment directly, without adding it twice.
+
+The remaining requirements are precisely those of
+\eqref{cmp:trapezoid} and its following source ledger: quadrature on a
+cleared angular strip, complete theta/xi and integration tails, arithmetic,
+reconstruction, spatial uncertainty and a genuine whole-time remainder.
+Heat identities for time derivatives do not remove the remainder.
+A valid lower acquisition has the form
+\[
+ \inf\widehat{\mathcal F}_\Gamma
+ -E_{\rm source}-E_{\rm par}-E_{\rm quad}
+ -E_{\rm arithmetic}-E_{\rm time}-E_{\rm reconstruction}\ge f,
+\]
+with a nonoverlapping accounting of errors. It must cover the actual
+stopped coordinates and all needed time cells. A bound for
+$|\mathcal F|$ is not this signed lower estimate. A contour representation
+does not leave an unpaid zero-tail cutoff once the complete source error
+has been paid; a finite source implementation still has to pay that error.
+
+Replacing the contour by root jets requires a lower bound for $|H_z|$
+and root-location/reciprocal errors. Converting a $D$ error to a gap error
+on $D\ge d_{\rm stop}$ costs at most $1/\sqrt{d_{\rm stop}}$ times
+that error. Such denominators are not implicit in
+\eqref{rf:source-errors}. Negative-time source bounds likewise need
+their own domain verification as in \eqref{cmp:negative-gaussian}.
+All these inputs must be given equally to direct regular $D/M$ evolution
+or direct contour-discriminant acquisition. Theorem~\ref{rf:forcing-comparison}
+claims no additional margin or cost advantage over those methods.
+
+\subsection{Forward reanchoring and the initial-interaction horizon}
+
+Return to forward physical time $t$. This subsection concerns one
+specific consumer: at a starting slice, discard the positive forcing
+after retaining the exact initial $D,M$, and use
+\eqref{rf:zero-forcing-limit} backward. On $D>0$, $M\ge0$ and $DM<1$
+its strict positive-gap horizon is
+\begin{equation}
+ h(t)=\frac{D(t)}{2(1-D(t)M(t))}.
+ \label{rf:horizon-definition}
+\end{equation}
+This is an allowance, not the actual time remaining until a collision.
+The consumer remains conditional on its backward source/sign regime and
+coverage; an algebraic horizon alone does not acquire that regime.
+
+\begin{theorem}[Exact evolution of the initial-$M$ horizon]
+\label{rf:horizon}
+On a forward local interval suppose the complete pair equations hold,
+$D>0$, $M\ge0$ and $\mathcal F\ge0$. Assume $1-D(0)M(0)>0$.
+Then $1-DM>0$ throughout that interval, and
+\begin{equation}
+ h_t=1-2\mathcal Fh^2,\qquad
+ h(s)-s=h(0)-2\int_0^s\mathcal F(t)h(t)^2\dd t\le h(0).
+ \label{rf:horizon-identity}
+\end{equation}
+Consequently, forwarding to $s$ and applying the unchanged
+complete-initial-$M$ consumer there cannot reach an earlier endpoint
+than the same exact-input consumer at time zero.
+\end{theorem}
+
+\begin{proof}
+The forward equations are $D_t=2-4DM$ and
+$M_t=2M^2-\mathcal F$. Put $y=1-DM$. Direct differentiation gives
+\[
+ y_t=-D_tM-DM_t=-2My+D\mathcal F.
+\]
+On every compact forward subinterval, multiplying by
+$\exp(2\int_0^tM)$ proves $y(t)>0$ from $y(0)>0$, because
+$D\mathcal F\ge0$. Thus the denominator of $h=D/(2y)$ does not
+cross zero. Differentiating the quotient now gives
+\[
+ h_t=\frac{D_ty-Dy_t}{2y^2}
+     =\frac{2y^2-D^2\mathcal F}{2y^2}
+     =1-2\mathcal Fh^2.
+\]
+Integration proves \eqref{rf:horizon-identity}. The strict backward
+allowance from time $s$ reaches only times greater than $s-h(s)$,
+and the displayed identity gives $s-h(s)\ge-h(0)$.
+\end{proof}
+
+The hypothesis $M\ge0$ here is explicit throughout the forward
+interval. It is not inferred from $\mathcal F\ge0$: at $M=0$ the
+equation $M_t=-\mathcal F$ can point toward negative values. A complete
+all-real adjacent-pair regime supplies both signs, while a local tube
+with possibly nonreal exterior needs them separately. The raw quotient
+identity holds more generally whenever $D>0$ and $DM\ne1$; the theorem
+keeps the domain of the inherited nonnegative-initial-$M$ consumer.
+
+For any persistent finite family of eligible labels, apply
+\eqref{rf:horizon-identity} to each label. Every $h_j(t)-t$ is
+nonincreasing, so is their minimum on each fixed block, and the sets of
+block indices whose allowance exceeds a fixed deadline threshold can
+only shrink. Repeated exact reanchoring at increasing forward times
+within this same domain does not change that conclusion. A changed
+minimizing label creates no improvement, since the pointwise inequalities
+hold for all labels simultaneously. Coverage and outer-boundary exits
+are still separate hypotheses.
+
+The same ceiling applies to a nonnegative two-neighbor lower estimate
+$b_3(s)\le M(s)$ only when that inequality is actually paid. For fixed
+$D$, the horizon $D/[2(1-Db)]$ is increasing in $b$ on $Db<1$, so the
+corresponding horizon is at most $h(s)$. In a complete all-real regime,
+positive omission supplies this lower estimate. If the remaining exterior
+may be nonreal, nonnegative complete $M$ alone does not make a positive
+real-neighbor subsum a lower bound. Its omitted exterior must be paid.
+This comparison is with the \emph{complete exact} initial-$M$ allowance
+at time zero; it does not rule out improving a weaker or uncertain
+initial estimate.
+
+The quadratic heat collision has $\mathcal F=0$ and saturates the
+round-trip identity. For stationary cosine the divisor does not move,
+$h$ is constant and $h-t$ decreases: loss of an allowance is therefore
+not loss of the actual gap. The exclusion is restricted to the unchanged
+initial-$M$ consumer under the stated sign and common-label assumptions.
+Signed forcing, the retained-$\mathcal F$ comparison above, time-dependent
+joint evolution, and additional source information or acquisition-cost
+gains are outside it. The generic identities apply to appropriate
+changed-source controls; canonical use still requires the complete
+unchanged source and every count, time and error premise.

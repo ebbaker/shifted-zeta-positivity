@@ -1,192 +1,211 @@
-# Analytical research plan after regional gap transport
+# Research plan for coupled moments and two-sided source refinement
 
-18 November 2026, America/New_York. Prepared for **Edward Baker** with OpenAI Codex LLM assistance. Actual lead model and effort unavailable in the guarded chat registry. Earlier helpers were requested as **gpt-6.1-sol / ultra**; current revision helpers inherited settings. Independent serving attestation unavailable.
+18 November 2026, America/New_York. Prepared for **Edward Baker** with
+OpenAI Codex LLM assistance. Actual serving model and effort unavailable;
+current helpers inherited settings. Recommendations below are workflow
+routing, not assertions about actual serving configurations.
 
-Reconciled 18 November after the author's regional-statistics proposal and
-its systematic manuscript integration. This replaces stale setup routing; frozen issued packets and
-historical returns are unchanged. The [overview][overview] fixes objects
-and scope; the [sole register][register] owns live status. Follow the
-[B/E workflow][workflow]. The [next-session continuation][continuation]
-selects the default next decision, rather than restarting setup.
+The author's recursive forward/backward proposal organizes the next
+research decision, retaining the common source of the zero-index lattice.
+The [overview][overview] explains the analytical chain, the
+[continuation][continuation] gives the next-session handoff, and the
+[sole register][register] alone owns live status. This plan supersedes
+stale setup and pre-lattice routing while preserving all issued packets
+and previous proof statuses. Follow the [B/E workflow][workflow].
 
-Read [result summaries][results], [cluster18][cluster], [controls12][controls],
-and [avoid][avoid], particularly [classification01][class],
+Read [result summaries][results], [cluster18][cluster], [controls12][controls]
+and [avoid][avoid], especially [classification01][class],
 [premises02][premises], [coordinate changes03][coordinates],
-[scope07][scope] and [joint bounds12][joint]. Claims are judged by their
-proved constants, domain, rates or actual transport cost. Exact formulas
-are representations, and a componentwise infinite hierarchy is not a
-finite approximation theorem. Preserve the complete canonical source,
-physical heat sign, multiplicities, both signs of D, fixed ell and the
-independently established pair tube and gap anchors.
+[scope07][scope] and [joint bounds12][joint]. New coordinates and exact
+closure count as representations. A quantitative milestone must supply a
+proved rate, constant, range or actual consumer margin beyond its inputs.
 
-## Task crosswalk and bounded dependencies
+## Priority 1: one strict common-source two-sided refinement
 
-All IDs below have prefix **VCD-GT-CM-**. This is the dependency map, not
-a second live-status ledger; consult the register for current verdicts.
+**B10 r2 / B / Astra, default next conceptual decision.**
+[Note35][two-sided] and the manuscript's recursive/continuous section
+define sound forward/backward state refinements and an exact continuous
+forward-error/backward-adjoint identity. The refinement index is distinct
+from physical time. Both directions retain one complete source record,
+the same integer labels and shared error parameters. These are proved
+representations and conditional enclosure mechanisms, not acquired strict
+canonical contraction, convergence or a stable finite closure.
 
-| Task | Type / recommended model and reason | Fixed output and dependencies | Work boundary |
-| --- | --- | --- | --- |
-| E00 | E / Sol, fixed setup | Original structure, plan and setup assessment | Historical packet retained |
-| B01 / E01 | B / Astra selects route; E / Sol audits | Contour/branch selection and canonical input audit | Two routes, one bounded audit and local correction |
-| E02 / E08 / E03 | E / Sol, fixed proofs | Local complete time law; symmetry/defect; damped Cauchy representation, respectively | Frozen packets; two local repairs maximum each |
-| E04 | E / Sol, nonauthor assessment | Assessed complete N/X/Y passages and branch domains | One review and one correction check |
-| B02 / E05 / E06 | B / Astra selects comparison; E / Sol proves/checks | Same-information signed comparison, scoped static example and exact consumer | Two candidate bounds; one fixed proof and assessment |
-| E07 | E / Sol, optional fixed diagnostic | Only after a falsifiable B question with finite cases, caps and errors | Unissued; no numerical campaign inferred |
-| B03 r1 | B / Astra, scope disposition | Closes selected absolute-bound pass; canonical signed question remains open | Preserve r1; do not overwrite for a continuation |
-| B04 / E09 / E10 / E11 | B / Astra selects integer closure contract; E / Sol derives/checks | Split-pole hierarchy, collision-regular S/T hierarchy, nonauthor assessment | Fixed integer orders component by component; no all-order estimate inferred |
-| E12 | E / Sol section authors, lead integration | [Frozen manuscript contract][e12]; existing analytical proofs, base/GT/GR citations | One production pass plus two local consistency repairs; disjoint sections |
-| E13 | E / Sol, nonauthor manuscript assessment | Frozen assembled source and input manifest; theorem/proof/scope/coherence check | One pass and one bounded correction check; new mathematics returns to B |
-| E14 | E / lead housekeeping | PDF build, visual checks, overview/plan/register, notes/history/source records | Final delivery after E13; no new scientific estimate |
-| B03 r2 | B / Astra, additional-input selection | Joint hierarchy/integrated and source-specific completion comparison in Note13 | Two routes returned precise signed acquisition gaps; no improved canonical bound or research E contract |
-| E15 | E / Sol, fixed nonauthor assessment | Note13 algebra, normalization, complete passage, controls and scope | One assessment and at most one correction check; status belongs to the register |
-| B03 future revision | B / Astra, source-specific acquisition mechanism | A distinct canonical signed input with a concrete proof route and quantitative consumer | Conditional on a new proposed mechanism; no automatic scan or repeated representation |
-| B05 r1 | B / Astra, BBGKY-style finite closure selection | Compare explicit finite-head residual with compatible finite-divisor reconstruction | Note15 selects the latter as an approximation benchmark; no signed gain |
-| E16 r2 | E / Sol, fixed common-time approximation proof | Initial canonical finite product, exact polynomial heat flow, growth/Gaussian error estimate, cleared-tube transfer | Ready after an explicit source rebind; one proof pass and two local repairs, then assessment before acceptance |
-| B06 r1 | B / Astra, closest-pair selection check | Note16 qualifies minimum existence, admissibility, coverage and persistence; existing collar already implies mutual nearest neighbors | Discussion complete; no new execution packet or E16 premise change |
-| B07 r1 | B / Astra, statistical regional gap consumer | Three-gap safety score and minimum-envelope law, with integer and height coverage | Bounded decision complete; canonical lower-tail acquisition remains open |
-| E17 r1 | E / Sol, fixed comparison and scope assessment | Note17 and five pinned inputs, one correction check | Accepted within conditional local/statistical domains after two reference/slab repairs |
+The strongest existing screen must guide the choice: for fixed transition
+relations, a full compatible skeleton is its own witness for every
+projection. With no new observations its full feasible set and exact
+joint-statistic bounds are unchanged. Sweeps may improve marginal outer
+enclosures that discarded compatibility; new sound observations or refined
+transition relations are required to shrink the already retained full
+skeleton. Exact flow followed by its exact inverse likewise adds no
+information. Neither statement excludes recovering lost correlations or
+acquiring stronger source information.
 
-| E18 / E19 / E20 | E / Sol section/review work, lead integration and production | Recent analytical manuscript, separate source review, ignored PDF and continuation | Scientific inputs preserved; E16 remains unexecuted |
+Select **one** finite common-source correlated enclosure or continuous
+adjoint target. Compare at most two source mechanisms, then freeze the
+pair/block, common physical interval, independently cleared counts and
+contours, valid charts including all relevant stop boundaries, endpoint
+observations, and a fixed joint statistic. If using the continuous
+identity, specify the reference path, reference forcing, adjoint, endpoint
+errors and the full signed quadratic/source residual. Do not define the
+admissible path set by assuming the positivity it is meant to prove.
 
-The original route choice used Gaussian damping in p, distinct from the
-GR spatial-Gaussian hierarchy. E02/E08/E03 now have complete proofs and
-internal assessments; do not reissue them merely to recover context.
-The [integer proof][integer] and [split-pole proof][split] extend the input
-set for a new B03 revision without altering the earlier r1 disposition.
+Before an E execution, derive a strict proposed gain in whole-time margin,
+duration, coverage or measured cost against equally informed direct joint
+D/M or source-discriminant propagation. Pay complete source/tail,
+contour/quadrature, root/parameter, arithmetic, adjoint, residual and true
+time-uniform errors, retaining their correlations. Positive sample times
+are insufficient: use complete cell paths, paid interpolation or an
+independently valid first-exit argument. Statistical use also requires
+all eligible labels, crossing/boundary events and the finite integer
+exclusion threshold. Fix finite cell/refinement/runtime caps and a separate
+nonauthor check. If these inputs cannot be supplied, record that precise
+missing estimate rather than repeat a formal sweep or enlarge a scan.
 
-## Preferred next research decision
+## Alternatives: forward acquisition or direct retained forcing
 
-**Next: B07 new revision / B / Astra.** Select one actual canonical
-acquisition mechanism for the three-gap safety score and its regional
-lower tail, with a uniform high-height consumer. Compare at most two
-concrete mechanisms, reading the earlier OC profile/void results and the
-checked positive-time high-height sources before claiming they supply the
-needed uniformity. Quantify what would change in a gap allowance, event
-count or physical time interval. Repeating the minimum-law identity or
-assuming a random-matrix profile is not a new mechanism. Freeze a bounded
-E packet only after this source step is specified; otherwise give a precise
-scoped disposition. The [continuation][continuation] gives the complete
-launch context. E16 is independently ready for a fixed compatible
-approximation proof; it is not a prerequisite or a substitute for the
-statistical acquisition. No numerical campaign is presently specified.
+**B09 r2 / B / Astra, independent conceptual alternative.** The author asks
+whether known t=0 properties can produce better positive-time statistics
+for a later backward step. Note34 gives finite starting geometry from the
+complete 388-cell census, conditional forward dispersion/minimum-tail
+estimates, and the exact initial-M round-trip screen. No positive-time
+source tube or signed exterior estimate has been acquired in this pass.
 
-## B03 r2 disposition and future conceptual gate
+Choose one finite population and one joint statistic, with at most two
+source mechanisms compared. A force/velocity variance is not by itself a
+nearest-neighbor law. An upper M estimate in a forward minimum argument
+is not a lower M estimate for backward protection. Preserve the complete
+source, integer counts, labels and both block-end payments; a smaller
+eligible window cannot silently inherit the full-block minimum argument.
+Do not assume global all-real t=0 data or extrapolate a finite census in
+height. All quantities are deterministic; random block selection supplies
+bookkeeping, not an extra probability law.
 
-The bounded comparison specified below was performed in
-[Note13](../notes/13_VCD_GT_CM_B03_JOINT_TRANSPORT_AND_SUPERZETA_20261118.md).
-Its exact forcing derivative, weighted gap energy and deflated-derivative
-transfer supply no improved canonical estimate. The scalar weighted-energy
-screen is not a divisor counterexample. [Continuation14](../notes/14_VCD_GT_CM_B03_R2_CONTINUATION_20261118.md)
-locates the missing signed acquisition and nondegenerate transport payments.
-A new B03 revision requires a distinct proposed source-specific mechanism;
-no stronger-bound proof contract or numerical E07 follows from r2.
-Prepared for Edward Baker with Codex assistance, 18 November 2026;
-actual chat0002 model/effort unavailable, helpers inherited settings.
+Before an acquisition E packet, freeze a common physical time interval,
+source population/contours and independent count/coordinate buffers; a
+proved forward input with true time-uniform source/tail/quadrature/rounding
+errors; the retained joint backward consumer; and a strict **net** endpoint
+or cost gain after subtracting the forward excursion. Compare direct
+common-source D/M or discriminant evolution with the identical information.
+Specify finite cells, precision/refinement/runtime caps and a separate
+assessment. If a useful input cannot be supplied, preserve the scoped
+missing-premise disposition without a larger scan.
 
-The following comparison requirements remain the specification for any
-justified future revision, rather than an instruction to repeat r2:
+Do not feed improved data into the unchanged exact-initial-M horizon
+h=D/[2(1-DM)] and call its return a gain: where the stated nonnegative-M/F
+conditions hold, (h-t)_t=-2Fh²<=0. This limits that consumer, not joint-time
+methods or improved acquisition compared with weak initial lower bounds.
+The complete H_0 source can be propagated by the already documented
+Gaussian formula; real gap statistics alone do not provide that complex
+field or its tails.
 
-Compare at most two justified ways to use **new canonical dynamical
-information**, starting with a joint estimate from the complete S/T
-hierarchy. State the exact bound sought: an upper bound for
-`F=12Z(2)+16delta Z(3)` throughout the tube, or a bound for the complete
-transport multiplier/cost. Preserve the initial layer and independent
-gap/tube assumptions. The direct comparator receives the same signed
-moments, branch choices, source information and error bounds.
+**B08 r3 / B / Astra, separate alternative:** source-specific acquisition of the
+complete physical F>=.3 floor on Note32's frozen Lehmer interval would
+pay strict margin >.00006246. Select it separately if the negative-time
+source/count/coordinate gates and signed error budget can be made concrete.
+It has no demonstrated advantage over identical direct regular D/M input.
+The OC finite census and this Lehmer target are different domains. Neither
+alternative issues a source campaign by itself; select one common source
+domain rather than transfer numerical constants between them.
 
-A usable output specifies the additional input, the identity it enters,
-its complete-divisor and time-uniform proof route, the intended improvement
-in constants/rate/range, and a frozen E task. A source-specific completion
-of Z is an alternative only after its heat-time and branch transfer are
-checked; the inspected superzeta passages do not supply this automatically.
-If neither route has a checked premise, record the exact gap and stop that
-pass. Do not replace it with a larger calculation or repeat the contour
-absolute envelope.
+## Priority 2: independent compatible finite approximation
 
-## Author-proposed finite approximation continuation
+**E16 / E / Sol, independently optional and unexecuted.** Use its
+[r4 source rebind][e16-r4] and the full unchanged r1 contract. Only the
+framework roadmap changed after manuscript integration; the scientific
+premises and work limits did not. It asks for a common-time
+field/jet/pair/moment error theorem at fixed height from one canonical
+finite-product initialization evolved by exact polynomial heat flow.
+One proof pass and at most two bounded local repairs, then nonauthor
+assessment. It is not a sign theorem or stable closure from arbitrary
+moments. The initial finite-divisor acquisition and cleared contour
+hypotheses remain explicit.
 
-[B05 Note15](../notes/15_VCD_GT_CM_B05_BBGKY_TRUNCATION_RECONSIDERATION_20261118.md)
-revisits the earlier BBGKY/Jacobi-memory analogy using the new S/T laws.
-Its selected [E16 contract](../research-progress/handoffs/VCD-GT-CM-E16-r2.md)
-asks for a proof of finite-divisor approximation from one initialization over the
-independent tube, with complete errors. The objective is controlled
-reconstruction at fixed height, not a stronger sign or closure from an
-arbitrary short moment head. The finite initial divisor acquisition is
-an explicit input. No numerical campaign or memory-model import is ready.
-After the fixed proof and assessment, any claim of efficiency, uniform
-height gain or signed improvement requires its own justified comparison.
+A common approximating field preserves zero-index overlap and flux
+identities where its simple charts exist. Applying approximation
+simultaneously to a finite block additionally requires all contours,
+label matching, denominators and summed reciprocal errors; the current
+single-pair task does not silently include that extension. An accepted
+E16 result could justify a later bounded block extension. Efficiency,
+uniform-height improvement and signed gain require separate comparisons.
 
-## Acceptance requirements for any new execution
+## Inherited results and dependencies
 
-- Classify and register before substantive work. Record source versions,
-  exact target and finite work limits, allow routine algebra/dominating-
-  function corrections, and route a changed equation, observable, source,
-  domain or evidence standard to B before dependent execution.
-- For integer hierarchies, distinguish fixed-order passage from order
-  tending to infinity. A finite closure or approximation requires its own
-  controlled remainder and realizability hypotheses. Do not reintroduce
-  an absolute T_1 sum that cancelled in the finite algebra.
-- For complex powers, retain the local logarithms, finite transition
-  corrections, near clusters, multiplicities, full spatial h² term and
-  connectors. Do not infer a derivative bound from value convergence.
-- Keep zero cutoff N, spatial boundary cutoff X, contour height Y,
-  possible order P, physical height T and time interval separate. State
-  each uniformity and order of limits. Fixed positive damping and fixed
-  real edges are the existing theorem; new limits need new proofs.
-- Use an equally informed direct comparison, retaining joint signs before
-  taking estimates. Apply the [control premise screen][premises] and name
-  each failed premise, and scope exclusions to their proved class.
-- A nonauthor assessment may share inherited premises; report it as
-  internal, not specialist validation. Preserve failed evidence and
-  immutable issued requests. A correction gets an explicit revision or
-  correction note, not silent replacement of a reviewed proof.
+This is a source map, not a second live-status ledger.
 
+| Route | Proved or selected content | Remaining boundary |
+| --- | --- | --- |
+| B01–B04; E01–E11 | Complete complex-power law, branch/symmetry treatment, damped Cauchy formulas, matched absolute estimate, split and regular integer hierarchies | Fixed domains; no autonomous scalar law, finite stable closure or signed improvement |
+| B03 r2; E15 | Joint forcing, weighted gap energy, deflated derivative transfer and scoped scalar screens | Distinct source-specific signed acquisition required before reopening |
+| B05; E16 | Four-row finite-head residual and positive-box allowance screen; compatible field route selected | Common-time approximation unexecuted |
+| B06/B07 r1; E17 | Qualified pair choice, backward three-gap comparison, weak minimum law and finite statistical consumer | Joint lower-tail input, zero-exception and global coverage unpaid |
+| B07 r2; E21/E22 | Complete high-height initial M and optimal unchanged allowance ~g²/4 | Fixed positive duration still fails for that consumer |
+| B07 r3; E23/E24 | V/K barrier and growing canonical head; source-jet and matched clock comparison | Positive-slab source already protects exterior; no new coverage |
+| B07 r4; E25 | Trial-coordinate source contours, stopped-region exit, complete error interface and compact screen | One constant-v target fails; time-varying consumers remain open |
+| B08 r1; E26/E27 | Zero-index rows, shared generator, overlap and block telescoping with full derivations | Individual-gap concentration and stable lattice approximation unpaid |
+| B08 r2; E29 | Force-dispersion and constant-K screens; conditional F>=.3 margin >.00006246 | Complete signed source floor and extended compact tube unpaid; direct D/M matches |
+| B09 r1; E30 | Finite-census reality inference, forward conditional tail/dispersion and exact initial-M round-trip identity | Joint forward acquisition and net backward gain unpaid |
+| B10 r1; E31/E32 | Common-source two-sided soundness, fixed-transition skeleton invariance and exact adjoint residual identity | Strict canonical refinement, convergence/cost and whole-time source gain unpaid; review disposition belongs to the register |
+| E12–E14; E18–E20; E26–E28 | Successive manuscript integration, separate internal assessment and ignored PDF production | Historical snapshots recorded in notes, no manuscript snapshot folders |
+| E31–E33 | Full forward-statistics, retained-forcing and two-sided analytical sections; supporting numerical appendix | Integration, separate assessment and production tracked solely in the register |
 
-## Author-proposed regional statistics, 18 November 2026
+The compact example's proposed descent t=.1 to −.0003 has duration .1003.
+Its initial V budget is acquired, but the included canonical t=0 slice
+caps the selected constant-v allowance below .0896. This rejects that
+consumer even with exact inputs. Note32 separately rejects the sharp
+constant-K comparison retaining its initial transient for that same
+anchor/interval. Its retained physical-F comparison has a positive
+conditional margin, with the source floor still unacquired. Time-varying
+forcing and regular D/M remain open; higher precision does not repair
+either rejected fixed consumer.
 
-[B07 Note17](../notes/17_VCD_GT_CM_B07_REGIONAL_GAP_STATISTICS_AND_BACKWARD_COMPARISON_20261118.md) selects the joint three-consecutive-gap score
-as a concrete backward consumer. [E17](../reviews/09_VCD_GT_CM_E17_REGIONAL_STATISTICS_ASSESSMENT_20261118.md) accepted its
-strict-isolation extension, local comparison and statistical scope after
-two local reference/slab clarifications.
-A future B revision must propose an actual canonical lower-tail acquisition
-mechanism with zero-exception and uniform high-height payments; restating
-that requirement is not a new result. This conceptual pass specifies no statistical simulation and establishes
-no source estimate from a conjectural distribution. E16 remains
-ready under its unchanged finite-divisor approximation contract. Prepared
-for Edward Baker with Codex assistance; actual settings unavailable.
+## Acceptance and preservation
 
-## Optional numerics and supporting evidence
+- Preserve H_t=−H_zz, complete divisor multiplicities, actual time units,
+  normalization and all contour/tube assumptions. Local signed formulas
+  permit nonreal exterior zeros; positive omission does not.
+- Separate fixed-order hierarchy passage from growing-order approximation;
+  retain cancelled first-power sums in common-cutoff form. A merger-safe
+  pair chart does not imply merger-safe neighboring edge charts.
+- For complex powers retain local logs, finite branch transitions, near
+  clusters, nonlinear spatial terms and all independent cutoff errors.
+  Value convergence alone supplies no derivative estimate.
+- Give the direct comparator the same information. Record complete
+  collision controls with the premise each fails. Keep a negative result
+  confined to the class actually tested or proved.
+- Freeze source pins before a fixed proof/assessment; make repairs explicit.
+  Nonauthor review is internal and can share premises. Preserve failed
+  evidence; hashes bind source versions rather than mathematical validity.
+- Numerics are optional supporting evidence after a finite question,
+  precision/refinement/time caps, complete-source payments and stop rule
+  are specified. No infinite or zero-exception claim follows from samples.
 
-No new numeric packet is required for the manuscript: its quartic and
-static family are exact analytical examples. E07 remains conditional on a
-specified discriminating question. A future packet fixes cases, truncations,
-arithmetic, precision/refinement and time caps, source/tail payments and
-stop rule before implementation. Floating evidence, exact algebra and
-interval certification have different statuses. Assign fixed implementation
-to Sol; a wider campaign or changed question returns to B03.
+## Manuscript and research records
 
-## Manuscript, ownership and records
+Edit existing CM/manuscript sources; cite base VCD and GT/GR predecessors
+without changing them. Develop full analytical arguments before consumers;
+keep inherited numerical examples in supporting appendices. Build and
+render under ignored root output/pdf/vcd-complex-p-mellin/. Keep derivations
+in notes/, small execution records in numerics/, assessments in reviews/,
+and immutable requests/returns in research-progress/handoffs/.
 
-The author explicitly selected **CM/manuscript/** for editable sources.
-Use base VCD/manuscript and GT/GR predecessor folders as cited background.
-No new snapshot folders; no predecessor manuscript edits. The generated
-PDF and all build/render intermediates belong under ignored root
-`output/pdf/vcd-complex-p-mellin/`, with build instructions and a small
-record here. Research derivations go in `notes/`, code/small execution
-records in `numerics/`, assessments in `reviews/`, and bounded requests
-and returns in `research-progress/handoffs/`.
+The present analytical source additionally develops forward finite-block
+statistics in source section17, retained forcing and the exact return
+horizon in section18, and recursive/continuous two-sided refinement in
+section19. [Integration36][integration] and [Continuation37][continuation]
+are the lead-owned integration and handoff records; their completion and
+E31–E33 disposition belong to the sole register. Historical manuscript
+milestones and Continuation33 remain preserved.
 
-One writer owns each artifact. The lead owns the shared synthesis,
-register, milestone entries and chat capture; helpers have disjoint
-section or review outputs. Record date, Edward Baker as intended author,
-LLM assistance, actual available settings and honest unavailable metadata.
-Update DRAFT_HISTORY and concise result/avoid evidence at milestones.
-Follow root LARGE_FILES.md and REFERENCE_WORKFLOW.md; reuse the canonical
-VCD bibliography for checked external records, and keep third-party PDFs
-outside Git. Follow tools/CHAT_HISTORY.md: refresh the registered CM chat,
-then arrange a bounded exact-turn follow-up as the last tool action before
-reply unless a trusted completion hook is verified. Do not create a second
-history or rewrite registered JSON manually.
+The lead owns shared documents, register, milestone and chat updates;
+helpers have disjoint outputs. Include date, Edward Baker as intended
+author, LLM assistance and honest available/unavailable metadata. At a
+milestone update DRAFT_HISTORY, result-summary evidence and the relevant
+avoid lesson without upgrading source status words. Follow LARGE_FILES.md
+and REFERENCE_WORKFLOW.md; keep third-party PDFs outside Git. Refresh the
+registered chat with tools/refresh_chat_history.py and arrange its bounded
+exact-turn follow-up as the last tool action before replying, unless a
+trusted completion hook is actually verified. Do not hand-edit history.
 
 [register]: ../research-progress/01_VCD_GT_CM_RESEARCH_PROGRESS_20261117.md
 [results]: ../../../../../../result-summaries/README.md
@@ -201,7 +220,10 @@ history or rewrite registered JSON manually.
 [workflow]: ../../../../../../GPT_RESEARCH_MODEL_WORKFLOW.md
 [manuscript]: ../manuscript/main.tex
 [guide]: ../manuscript/README.md
-[continuation]: ../notes/19_VCD_GT_CM_REGIONAL_STATISTICS_MANUSCRIPT_CONTINUATION_20261118.md
+[continuation]: ../notes/37_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_CONTINUATION_20261118.md
+[integration]: ../notes/36_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_INTEGRATION_20261118.md
+[two-sided]: ../notes/35_VCD_GT_CM_RECURSIVE_TWO_SIDED_FORMULATION_20261118.md
+[e16-r4]: ../research-progress/handoffs/VCD-GT-CM-E16-r4.md
 [time]: ../notes/03_VCD_GT_CM_E02_COMPLEX_POWER_TIME_LAW_20261117.md
 [symmetry]: ../notes/04_VCD_GT_CM_E08_CONJUGATION_AND_BRANCH_DEFECT_20261117.md
 [cauchy]: ../notes/05_VCD_GT_CM_E03_DAMPED_CAUCHY_EVOLUTION_20261117.md

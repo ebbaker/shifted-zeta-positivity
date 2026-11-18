@@ -1,186 +1,237 @@
-# Exterior hierarchies, compatible approximation and regional gap transport
+# Coupled moments, forward statistics and two-sided refinement
 
-18 November 2026, America/New_York. Prepared for **Edward Baker** with OpenAI Codex LLM assistance. Actual lead model and effort unavailable in the guarded chat registry. Earlier section authors and assessors were requested as **gpt-6.1-sol / ultra**; current revision helpers inherited settings. Independent serving attestation unavailable.
+18 November 2026, America/New_York. Prepared for **Edward Baker** with
+OpenAI Codex LLM assistance. Actual model and effort are unavailable in
+this chat's guarded registry; current helpers inherited settings. Earlier
+requested settings remain in the historical records, not serving attestation.
 
-This overview reconciles the completed analytical results and the author's
-manuscript request. It supersedes the 17 November setup-only descriptions;
-issued requests, prior proofs and their historical statuses remain unchanged.
-The [sole progress register][register] owns live task status. The draft is
-in [CM/manuscript][manuscript], with [build and source guide][guide].
+The author's zero-index proposal remains the structural starting point:
+the moments M_n(p,q,t) for overlapping adjacent pairs are rows of one
+coupled lattice, constrained by the same complete heat field. The revised
+[manuscript][manuscript] derives this compatibility before discussing finite
+approximation and quantitative gap protection. The new forward/backward
+proposal adds sound common-source enclosures and a continuous adjoint
+identity, with strict canonical improvement still open.
+[Continuation37][continuation] sets the next research gate; the
+[sole progress register][register] owns
+live status. Historical notes, issued packets and predecessor manuscripts
+remain preserved.
 
 Read the [result index][results], especially [cluster18][cluster] and
 [collision controls12][controls], and the [avoid index][avoid], especially
 [classification01][class], [premise screening02][premises],
 [coordinate changes03][coordinates], [scoped exclusions07][scope] and
-[joint bounds12][joint]. The results below are exact representations,
-componentwise hierarchy identities, convergence estimates, a scoped static
-exclusion, finite-head residuals with a scoped comparison limitation, and
-conditional forward/backward quantitative consumers. They are not an
-RH criterion or a new collision-exclusion theorem.
+[joint bounds12][joint]. This milestone integrates exact representations,
+proved hierarchy and compatibility identities, conditional finite-time
+comparisons and scoped consumer screens. It is not an RH-equivalent
+criterion or a new bound on Lambda. Numerical certificates illustrate one
+compact screen and a finite census in a supporting appendix; the main
+derivations retain their general analytical hypotheses.
 
-## Fixed canonical problem
+## One field, three coupled indices
 
-Keep the unchanged complete theta field with physical `H_t=-H_zz` on an
-independently established count-two tube `I ⊂ [0,1/2]`. The target pair is
-`c ± sqrt(D)`, including a double at `D=0`; `c,D` are symmetric contour
-coordinates. Fix `T≥64`, `L=log T`, `ell=1/L`, `c∈[T,2T]`,
-`|D|≤d ell²`, `max(2,4sqrt(d))≤a≤L`, target radius at most `a ell/4`
-and exterior `|w_j|≥a ell`. Retain all exterior occurrences with integer
-multiplicity, the canonical width-one strip, unit count and safe-line
-bounds. The complete canonical product and local contour traces justify
-first time derivatives through target and exterior mergers.
+For consecutive real simple zeros a=x_n, b=x_(n+1), put g_n=b−a and
+D_n=g_n²/4. With every other zero occurrence included,
 
-Write `Q_j=w_j²-D`, `S_n=ΣQ_j^(-n)` for `n≥1`, and
-`T_n=Σw_j Q_j^(-n)` for `n≥2`, with `M=S_1`. The exact pair and first
-interaction laws are
+    M_n(p,q,t) = sum_{rho != a,b} (rho−b)^(-p)(rho−a)^(-q),
+    g_n' = 4/g_n − 2g_n M_n(1,1,t).
 
-    D' = 2−4DM,
-    M' = 2M²−12S_2−16DS_3.
+The p,q recurrence is the split-pole hierarchy of [Note08][split].
+[Note29](../notes/29_VCD_GT_CM_ZERO_INDEXED_COUPLED_LATTICE_20261118.md)
+and manuscript Section 4 add the zero-index compatibility. For r>=2,
 
-The prime is physical time. The normalized quantities are
-`m=ell²M`, `delta=D/ell²`, `sigma=(t−t0)/ell²`,
-`Z(p)=Σexp(p(2log ell−Log Q_j))`, so
+    M_n(r,0) + (−g_n)^(-r)
+      = M_(n+1)(0,r) + g_(n+1)^(-r).
 
-    m_sigma = 2m²−F,    F=12Z(2)+16delta Z(3),
-    delta_sigma = 2−4m delta.
+The complete meromorphic field B=H_z/H and its two-pole deflations generate
+all rows. It satisfies B_t=−B_zz−2BB_z. Neighboring row deflations differ
+by the poles removed and restored, so the rows cannot be assigned
+independently. These are exact identities, not a finite closure. All-gap
+positive formulas additionally need an all-real ordered divisor; complete
+resolvent formulas retain nonreal exterior occurrences.
 
-The signed consumer needs an **upper** bound for F throughout the tube,
-or a bound for the actual transport multiplier and inhomogeneous cost.
-The inherited absolute estimate is `|F|≤C_F L`; the initial layer,
-independent terminal/incoming gap, and tube remain inputs.
+At a simple zero let U_n=H_zz(x_n)/(2H_z(x_n)). Then
 
-## What is established
+    g_n M_n(1,1) = 2/g_n − (U_(n+1)−U_n),
+    sum_{n=l}^r g_n M_n(1,1)
+      = 2 sum_{n=l}^r 1/g_n − U_(r+1)+U_l.
 
-1. **Complete integer hierarchy.** [Note09][integer] proves explicit
-   polynomial evolution equations for all fixed `S_n,T_n`, together with
-   D. In particular
+Thus exact-gap aggregate force errors depend on two boundary errors, not
+one independent error per row. Uncertain reciprocal gaps still require
+explicit payment. The block identity does not control the minimum gap:
+interior concentration remains possible without a new signed estimate.
+A shared finite-product heat reconstruction preserves these algebraic
+relations wherever its simple charts exist. Stable approximation over a
+common interval remains the independent E16 task. A merging pair's regular
+S/T chart does not make all neighboring edge charts regular.
 
-       S_2' = 8MS_2−32S_3+4DS_2²−40DS_4+4T_2²,
-       T_2' = (6M+8DS_2)T_2−20T_3−40DT_4.
+## The analytical chain and its quantitative limits
 
-   The finite divided-difference derivation cancels the potentially
-   nonabsolute `T_1` before passing to the complete divisor at each time
-   slice. The identities are analytic in symmetric coordinates through
-   mergers. This is **componentwise infinite closure for the given heat
-   field**, not finite truncation, uniform order control, well-posedness
-   for arbitrary moment sequences, or determination of absolute center drift.
-2. **Separate-pole coordinates.** [Note08][split] gives every mixed and
-   axis recurrence for `P_pq=Σ(w−s)^(-p)(w+s)^(-q)`, `s²=D`,
-   integer `p,q≥0`, `p+q≥2`. All reduce algebraically to S/T.
-   `T_2=P_12+sP_22=P_21−sP_22`. Raw split coordinates are analytic on
-   the square-root cover and may have a cusp in time at a target merger;
-   the symmetric coordinates remove it. An exact even quartic tests
-   simultaneous target and exterior doubles. [Assessment05][review-integer]
-   accepts both notes within their domains without required mathematical
-   correction; this is internal shared-premise assessment.
-3. **Complex powers and time law.** [Note03][time] proves a local logarithm
-   atlas, holomorphy in `Re p>1/2`, merger-compatible traces and the full
-   time equation with the nonlinear spatial `h²` term. Independent
-   derivative domination, cleared spatial boundaries, connectors and
-   finite near clusters are retained. Branch transitions have explicit
-   finite corrections that vanish at integer p.
-4. **Symmetry and p contours.** [Note04][symmetry] proves Schwarz symmetry
-   with compatible logs and the exact all-`+pi` negative-axis defect.
-   [Note05][cauchy] derives Gaussian-damped Cauchy formulas with both
-   verticals: edges 1 and 4 for F, 3/4 and 3/2 for m. Complete N-cutoff,
-   contour-height Y and independent spatial-boundary X errors are explicit;
-   fixed positive damping and fixed real edges are essential to this proof.
-   [Assessment03][review-contour] accepts these stated domains.
-5. **Quantitative comparison and consumer.** [Note06][comparison] proves
-   that the displayed absolute contour estimates do not improve the same
-   grouped signed-residue norms. The complete static changed-divisor
-   family has holomorphic Schwarz-symmetric Z and convergent Gaussian
-   contours while `m≤−1/64` and `F/L→3/256`. This excludes a uniform
-   `o(L)` forcing bound only in its fixed enlarged-constant **static class**;
-   it is not a canonical time-law exclusion. The conditional Riccati and
-   exact gap-transport costs retain both anchors and equality at D=0.
-   [Assessment04][review-bound] accepts that scope.
+1. **Complete source and regular moments.** The physical field obeys
+   H_t=−H_zz. On an independently counted pair contour,
+   Q_j=(rho_j−c)²−D, S_k=sum Q_j^(−k), T_k=sum(rho_j−c)Q_j^(−k)
+   and M=S_1. The exact laws are D'=2−4DM and
+   M'=2M²−12S_2−16DS_3. [Note09][integer] gives the full fixed-order
+   polynomial S/T hierarchy through mergers. Strict contour separation
+   suffices for local rational algebra; the stronger quantitative collar
+   remains explicit where its bounds are used. Infinite componentwise
+   closure does not give a stable truncation or arbitrary-sequence dynamics.
+2. **Complex powers and contours.** The complete Z(p) is holomorphic for
+   Re p>1/2 on a local logarithm atlas. Its time law retains the nonlinear
+   spatial term. Schwarz symmetry has the stated branch defect. Fixed
+   Gaussian damping and fixed p edges give convergent Cauchy formulas,
+   with separate zero, spatial-boundary and contour-height errors.
+   The matched absolute contour envelope does not improve the same
+   grouped residue estimate. The changed-divisor static exclusion stays
+   in its proved static class, not the canonical time evolution.
+3. **Finite heads and signed transport.** Four residual rows have a
+   geometric bound; their independent positive-Jacobian error allowance
+   has factorial growth. This is a failure of that comparison, not proved
+   instability of actual truncation. The joint forcing derivative,
+   weighted gap energy and deflated-log expansion identify a signed
+   acquisition gap without solving it. The lattice records compatibility
+   that separate row allowances discard.
+4. **Initial interaction and shrinking steps.** The backward comparison
+   D(u)>=(1+2b0u)[d0(1+2b0u)−2u] gives g²/6 from two equal neighbors,
+   versus g²/8 from gap data alone. [Note21](../notes/21_VCD_GT_CM_E21_CANONICAL_HEIGHT_HORIZON_20261118.md)
+   pays the complete canonical high-height interaction: DM→1/2 and
+   Db3→1/4. Even exact initial data yield only ~g²/4 in this unchanged
+   one-step consumer. The fixed-duration score eventually fails; actual
+   dynamics, refreshed anchors and stronger joint-time consumers are
+   outside this negative conclusion.
+5. **Joint-in-time improvement.** With physical backward time u, define
+   V=1−2DM, Fphys=12S_2+16DS_3 and K=2D²Fphys. Then
+   D_u=−2V and V_u=(1−V²−K)/D. A complete-time K>=1−eta² and
+   initial V<=v0 give V<=v=max(0,v0,eta), hence D>=D0−2vu.
+   [Note25](../notes/25_VCD_GT_CM_E23_JOINT_BARRIER_AND_CANONICAL_HEAD_20261118.md)
+   acquires v=O(log(X)^−3) from a growing canonical head on each fixed
+   positive-time slab. The relative squared-gap loss is O(Delta/log X).
+   The source already protects that exterior; this is improved comparison
+   on an acquired domain, not new zero coverage or a time-zero extension.
+6. **Same-information source comparison.** An actual holomorphic residual,
+   Cauchy bounds and a root-derivative denominator bound implement the
+   source-jet method described in Polymath's Remark 9.4. They give
+   x_n'=−pi/4+O(L epsilon), |g_t|=O(L epsilon), |D_t|=O(epsilon).
+   A direct common-clock enclosure is sharper for fixed time separations
+   when given the same source information. Separate gap and squared-gap
+   errors are retained; the source velocity method is attributed.
+7. **Compact acquisition without assumed target positivity.**
+   [Note27](../notes/27_VCD_GT_CM_COMPACT_CONTOUR_SELECTION_AND_FLOOR_SCREEN_20261118.md)
+   extracts complete moments on arbitrary trial coordinates from a cleared
+   count-two contour. A K bound is needed only on a stopped D>=d_stop
+   region. Unconditional center/upper-D controls and the strict margin
+   d0−2v Delta−d_stop>0 then exclude the lower exit. This is a conditional
+   analytical theorem, not an acquired negative-time certificate. The
+   inherited compact example requires duration .1003 but caps the selected
+   constant-v allowance below .0896. Time-varying barriers, retained
+   transients and regular coupled evolution are not excluded.
+8. **Forward finite-block information.** [Note34][forward] deduces real
+   simplicity from a complete conjugation-symmetric singleton census with
+   disjoint horizontal cells. A separately cleared whole-time domain then
+   preserves its finite real labels forward. Complete exterior control
+   gives q_t>=a_N-4Cq, with a_N=N/[floor(N/2)ceil(N/2)], and an empirical
+   lower-tail transform. Common-force dispersion has a dissipative internal
+   term forward, but its signed exterior remainder remains payable. These
+   are conditional forward estimates, not an acquired positive-time law.
+9. **Retained forcing and a scoped return screen.** [Note32][retained]
+   retains the transient for constant K and regular physical F floors.
+   The selected constant-K comparison still fails its compact target;
+   the physical F>=.3 floor would pay a strict stop margin >.00006246,
+   with that floor and extended tube unacquired. Direct regular D/M gives
+   the same comparison. For h=D/[2(1-DM)] on the stated D>0, M>=0,
+   F>=0 domain, (h-t)_t=-2Fh²: forward reanchoring cannot improve the
+   reached negative endpoint of this unchanged exact-initial-M consumer.
+10. **Recursive and continuous two-sided formulation.** [Note35][two-sided]
+    proves sound nesting with one shared source record and an exact
+    forward-error/backward-adjoint residual identity, retaining every
+    quadratic term. For fixed transition relations, projection sweeps
+    leave the full compatible skeleton unchanged unless a new observation
+    restricts it; they can still tighten weaker marginal outer bounds.
+    Exact flow followed by its inverse supplies no new constraint.
+    These scoped identities establish neither strict canonical refinement
+    nor convergence, a cost gain or stable finite closure.
 
+The forward normalized forcing F=12Z(2)+16delta Z(3) differs from Fphys
+by ell^4, with fixed ell=1/log T, delta=D/ell² and sigma=(t−t0)/ell².
+Forward upper-forcing estimates and backward lower-K estimates are
+separate consumers; a sign appropriate to one cannot be imported into
+the other. The manuscript consistently states its time and normalization.
 
-6. **Joint forcing and deflated derivatives.** Note13 and E15 give the
-   complete `F_sigma−8mF=R`, weighted gap-energy identity and convergent
-   deflated-log-derivative expansion. The weighted allowance permits
-   exponential transport in its scalar consumer class. These results
-   locate a missing signed estimate without excluding canonical dynamics.
-7. **Finite-head error structure.** The new manuscript derives all four
-   boundary residual rows and their geometric bound. Its positive-box
-   matrix path gives a factorial lower bound on that specific independent
-   absolute error allowance, not on actual truncation error. Common-time
-   compatible finite-divisor approximation remains the separate E16 task.
-8. **Backward regional statistics.** Note17/E17 extend the interaction
-   identities to strictly isolated adjacent real pairs on `[0,1/2]`,
-   before the first global loss of the real regime. For physical backward
-   time u and initial lower data d0,b0,
-   `D(u)>=(1+2b0u)[d0(1+2b0u)−2u]`. Two neighboring gaps supply b0;
-   three equal gaps give duration `<g²/6` instead of `<g²/8`. Finite
-   regional minima satisfy a weak law even when their active pair changes.
-   A joint lower-tail estimate and zero-exception, whole-interval and
-   uniform-height coverage are still needed for an upper bound on Lambda.
+## Current research decision
 
-## Manuscript and source ownership
+**B10 r2 is the default next conceptual gate.** The author's proposal is
+to repeat forward and backward refinements or express their pairing
+continuously. The object refined is an enclosure of one source-consistent
+path; the iteration index is not physical time. The next pass selects
+one finite common-source correlated enclosure or adjoint target and derives
+a strict gain over equally informed direct joint propagation. It must pay
+the common source/count tube, endpoints, regular charts and all stop/edge
+events, signed residuals, source/tail/quadrature/arithmetic errors and true
+whole-time coverage. Positive samples or nonworsening set bounds do not
+supply this gain. Fixed-relation sweeps cannot shrink the already retained
+full skeleton without new observations or refined transition information.
+No source execution is ready from the formulation alone.
 
-The revised manuscript develops the source and counted pair, integer
-hierarchy and split poles, finite-head residuals, complex powers and
-contours, signed transport, joint dynamics, and finally backward regional
-statistics. Full derivations precede the statistical consumers. Contour
-constants remain in the appendix. The exact polynomial and static examples
-are analytical controls; numerical work is supporting evidence only.
-The base VCD and GT/GR manuscripts remain cited predecessors, unchanged.
-The reading PDF is under ignored `output/pdf/vcd-complex-p-mellin/`.
+**B09 r2 remains a separate forward-acquisition alternative.**
+The author proposes starting from known t=0 information, acquiring better
+positive-time statistics forward, and then propagating backward.
+[Note34](../notes/34_VCD_GT_CM_TIME_ZERO_FORWARD_STATISTICS_20261118.md)
+shows that the existing complete OC singleton census implies 388 real
+simple roots by conjugation, at its recorded finite winding scope. It
+provides actual initial gap geometry without global RH. On an independently
+cleared forward block tube, a complete exterior bound C gives
+q_t>=a_N-4Cq for the block minimum, a_N=N/[floor(N/2)ceil(N/2)], and an
+empirical lower-tail transfer. The shared-force variance has a dissipative
+internal term forward, with its exterior remainder still payable. Neither
+time-wide source input is acquired from the time-zero cells alone.
 
-E12--E14 are the historical first manuscript milestone. E18 integrated the
-recent analytical results, E19 accepted the corrected source, and E20
-completed the 38-page build, visual checks and document reconciliation. See the [sole register][register]
-for live status and [continuation19][continuation] for the next research
-handoff. No new manuscript snapshot folders are used.
+There is a precise return constraint: for the unchanged exact-initial-M
+backward horizon h=D/[2(1-DM)], (h-t)_t=-2Fh². On its stated nonnegative
+M/F and positive-D domain, forwarding exact data cannot improve the
+negative endpoint reached by that same consumer. This does not exclude
+retained forcing, joint information, improvements over weak initial
+acquisition, or cheaper future source evaluation. This alternative would
+choose one common finite source population and a joint
+forcing or neighboring-gap estimate to acquire forward and retain in the
+backward comparison, with all source/time/edge/count errors paid.
 
-## Limits and next quantitative decision
+The separate [Note32](../notes/32_VCD_GT_CM_FORCE_DISPERSION_AND_RETAINED_FORCING_20261118.md)
+provides a concrete retained-forcing target: F>=.3 would pay the frozen
+Lehmer duration .1003 with squared-gap stop margin >.00006246. Its source
+floor and negative-time collar/coordinate bounds remain unacquired; direct
+regular D/M gives exactly the same comparison. The fixed-stop unsigned
+force-norm consumer permits <.0008, and the sharper constant-K model still
+fails that target. These precise screens do not exclude a joint source
+estimate. OC census constants at heights 988–2012 cannot be transferred
+to the Lehmer pair near 14010.1. Direct signed F acquisition is a separate
+B08 r3 alternative, not a second campaign to run automatically.
 
-The current work proves neither a reflection functional equation in p
-nor continuation left of `Re p=1/2`, an epsilon-to-zero or growing-edge
-contour limit, a stable truncation error theorem uniform in moment order,
-a finite closure, nor a
-better canonical signed F bound. The complete time law is a field-based
-identity, not an autonomous scalar equation for Z alone. B03 r1 closed the
-selected absolute-contour pass; B04 completed the author's integer-closure
-proposal. Neither disposition closes the full canonical dynamical question.
+**E16 remains independently optional and unexecuted.** Its
+[r4 source rebind][e16-r4] changes only the framework roadmap after the
+new integration; the fixed common-time finite-divisor task is unchanged. It
+does not itself acquire a favorable sign or a simultaneous finite-block
+theorem. The sole register owns dispositions, with E29/E30 covering the
+scientific notes and E31–E33 the new integration/assessment/production.
+The continuation gives the next-input gate. No source acquisition packet is
+ready merely because a conditional scalar margin is positive.
 
-The [B03 r2 return][b03-r2] has now compared joint hierarchy/integrated
-transport with source-specific superzeta completion. Its forcing derivative
-has an unsigned joint remainder; its exact delta²-weighted energy allowance
-does not control transport in the scalar-consumer class. Exact deflation
-transfers the integer consumer to heat-deformed logarithmic derivatives,
-whose joint signed upper estimate remains unacquired. These findings do
-not exclude canonical source-specific dynamics. No stronger forcing/cost
-bound or research execution contract follows. [Continuation14](../notes/14_VCD_GT_CM_B03_R2_CONTINUATION_20261118.md)
-requires a distinct source-specific acquisition mechanism before reopening
-B03 (B / Astra). Replaying identities or growing a truncation is not a
-justified next step. E15 and the sole register own the assessment status.
+## Manuscript and records
 
-This 18 November update is prepared for Edward Baker with Codex assistance;
-actual chat0002 settings are unavailable, and helpers inherited settings
-without independent serving attestation.
-
-The author's subsequent BBGKY suggestion opens a distinct finite
-approximation question. [B05 Note15](../notes/15_VCD_GT_CM_B05_BBGKY_TRUNCATION_RECONSIDERATION_20261118.md)
-gives an explicit four-row truncation residual and scopes the failure of
-independent positive-box propagation. It selects a finite canonical-product
-polynomial evolved by exact heat flow, retaining compatible moments and
-integer divisor occurrences. [E16](../research-progress/handoffs/VCD-GT-CM-E16-r2.md)
-is a ready proof contract for common-time field/jet/pair/moment errors at
-fixed height. It has not been executed and supplies no improved signed
-bound. This remains an independent ready proof task; the B03 signed-input gate remains.
-
-
-The subsequent [closest-pair discussion16](../notes/16_VCD_GT_CM_B06_CLOSEST_PAIR_SELECTION_20261118.md)
-qualifies global minimum selection. The author's regional statistical
-refinement leads to [Note17](../notes/17_VCD_GT_CM_B07_REGIONAL_GAP_STATISTICS_AND_BACKWARD_COMPARISON_20261118.md): the minimum envelope survives
-switches, but its evolution needs the joint exterior interaction. In the
-stopped all-real regime, the exact hierarchy yields an initial three-gap
-safety margin, illustrated by g²/6 versus the gap-only g²/8. Statistics must
-control every eligible pair's margin and pay uniform height coverage before
-an upper bound on Lambda follows. These are conditional local comparisons;
-no canonical lower-tail law is acquired. [E17](../reviews/09_VCD_GT_CM_E17_REGIONAL_STATISTICS_ASSESSMENT_20261118.md) accepts the corrected proof on the inherited 0<=t<=1/2 slab.
+The revised reading order is source and rational hierarchy; split-pole
+rows and coupled lattice; finite approximation; complex powers and
+contours; signed transport; regional statistics; joint-time comparison;
+canonical source acquisition and fair comparison; compact stopped-region
+acquisition; forward finite-block statistics; retained forcing and the
+exact return horizon; recursive/continuous two-sided refinement; discussion.
+The new analytical source files are [section17][section17],
+[section18][section18] and [section19][section19]. Analytic constants and
+supporting compact/census numerical records occupy separate appendices.
+The [build guide][guide] links the ignored PDF and current source map.
+E31–E33 own the new integration, separate internal assessment and
+production; [Integration36][integration] and [Continuation37][continuation]
+record that handoff. The sole register owns their current disposition.
+Historical 25-, 38- and 61-page milestones remain in DRAFT_HISTORY; no
+snapshot folder is created and no recursive canonical gain is claimed.
 
 ## Control premises
 
@@ -213,7 +264,15 @@ every negative conclusion and in the manuscript discussion.
 [workflow]: ../../../../../../GPT_RESEARCH_MODEL_WORKFLOW.md
 [manuscript]: ../manuscript/main.tex
 [guide]: ../manuscript/README.md
-[continuation]: ../notes/19_VCD_GT_CM_REGIONAL_STATISTICS_MANUSCRIPT_CONTINUATION_20261118.md
+[continuation]: ../notes/37_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_CONTINUATION_20261118.md
+[integration]: ../notes/36_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_INTEGRATION_20261118.md
+[forward]: ../notes/34_VCD_GT_CM_TIME_ZERO_FORWARD_STATISTICS_20261118.md
+[retained]: ../notes/32_VCD_GT_CM_FORCE_DISPERSION_AND_RETAINED_FORCING_20261118.md
+[two-sided]: ../notes/35_VCD_GT_CM_RECURSIVE_TWO_SIDED_FORMULATION_20261118.md
+[e16-r4]: ../research-progress/handoffs/VCD-GT-CM-E16-r4.md
+[section17]: ../manuscript/sections/17_forward_statistics.tex
+[section18]: ../manuscript/sections/18_retained_forcing.tex
+[section19]: ../manuscript/sections/19_two_sided_refinement.tex
 [b03-r2]: ../notes/13_VCD_GT_CM_B03_JOINT_TRANSPORT_AND_SUPERZETA_20261118.md
 [time]: ../notes/03_VCD_GT_CM_E02_COMPLEX_POWER_TIME_LAW_20261117.md
 [symmetry]: ../notes/04_VCD_GT_CM_E08_CONJUGATION_AND_BRANCH_DEFECT_20261117.md

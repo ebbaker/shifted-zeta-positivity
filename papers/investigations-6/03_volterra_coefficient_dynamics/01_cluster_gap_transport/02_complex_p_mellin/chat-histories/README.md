@@ -34,3 +34,12 @@ first-capture provenance; use the shared lock, not a parallel legacy writer.
 Exclude private reasoning, tools and helper traffic. Do not hand-edit a
 registered history or infer missing model settings. The registry owns the
 current capture counts, times, sizes and hashes. Raw exports stay external.
+
+CM chat0003, thread `01a1eecb-7917-7262-90a7-07067b76815f`, is the 18 November 2026 Note19/B07 r2 continuation. It was registered under its actual full prompt title from its exact paginated source. The guarded registry owns its title, filename, changing counts/times/hashes and configurations; none are duplicated here. Public text is refreshed using the standing exact-turn workflow. Prepared for Edward Baker with Codex assistance; actual model/effort unavailable in its current recorded configurations.
+
+CM chat0004, thread `01a1ef0c-0ca3-7c31-a497-3593a07203d1`, contains the
+18 November Continuation31 research and the author’s time-zero forward-
+statistics steering. It is registered from its exact paginated source.
+The guarded registry owns its actual title and all changing metadata;
+recorded model/effort are unavailable. Prepared for Edward Baker with
+Codex assistance. Routine capture retains the real final after completion.
