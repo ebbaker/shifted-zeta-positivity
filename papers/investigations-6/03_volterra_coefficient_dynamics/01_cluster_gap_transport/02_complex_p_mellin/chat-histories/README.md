@@ -6,8 +6,10 @@ this chat's recorded configurations. Intended research effort: **ultra**;
 recommended conceptual lead: **Astra**; expressly authorized bounded
 helpers: **GPT-6.1 Sol/ultra**. Requested settings are not serving attestation.
 
-This folder is ready for new CM-only chats. No new chat or empty registry
-is manufactured by setup. This setup conversation is already GR chat0001,
+CM chat0001, “Continue complex-p Mellin research”, thread
+`01a1ecda-37ea-7363-a11a-d57e378e65db`, was registered from its exact
+paginated source at research launch. The guarded `index.json` owns all
+current counts, times, configurations and hashes. The setup conversation is already GR chat0001,
 [history guide](../../01_gaussian_resolvent_hierarchy/chat-histories/README.md),
 thread 01a1ec48-00e8-7163-ab1b-6008ad584039, actual title
 “Begin VCD-GT-GR-B01 follow-through”. Its unique home and provenance remain

@@ -1,0 +1,20 @@
+# VCD-GT-CM-E03 r1 — full damped Cauchy evolution and infinite tails
+
+17 November 2026, America/New_York. Prepared for Edward Baker with OpenAI Codex LLM assistance. Lead actual model/effort unavailable; fixed executor dispatch gpt-6.1-sol/ultra requested, separately from independent serving metadata.
+
+Type E, recommended Sol/ultra. E02 and E08 have returned proved in-note on their frozen domains, pending E04. Use B01's selected representation, E01's audited inputs and exactly these domains. This packet establishes the representation and tails; no improved forcing is presumed. At most two local repairs, structural change to B03. Read applicable instructions and control/classification rules.
+
+Fix epsilon>0; use F lines b=1, r=4 (general fixed 1/2<b<2<3<r may also be stated if useful). Kernel K_epsilon(p,delta)=12exp(epsilon(p-2)^2)/(p-2)+16delta exp(epsilon(p-3)^2)/(p-3). Prove F=(2pi i)^-1[upward right integral minus upward left integral] K_epsilon Z from a finite CCW rectangle, paying top/bottom edges. The complete Z is chartwise E02, all near branches and occurrences retained. Use E08 for compatible conjugation folding and explicit defect corrections. Prove branch transitions have zero complete residue contribution, not zero individual vertical-line correction. Keep nonlinear 2m^2 outside; M'=2M^2-ell^-4 F and m_sigma=2m^2-F. Give a separate damped p=1 evaluation (for example lines 3/4 and 3/2 with exp(epsilon(p-1)^2)/(p-1)).
+
+Give explicit vertical tail error in epsilon, Theta=3pi/2 (or tighter compatible cap), Y, a,d,C_u,L. E02 A_u and min real-part b supply the bound exp(-epsilon v^2+Theta|v|). An error like exp(-epsilon Y^2+Theta Y)/[Y(2epsilon Y-Theta)] is expected for Y>Theta/(2epsilon), with all constants paid. Include horizontal segments until the limit. Prove complete N cutoff/time differentiation interchanges, distinguishing E02 value cutoff N from independent spatial boundary cutoff X in (15a). State order of limits N then Y, or justify joint domination. Preserve full finite near terms and connectors via E02.
+
+For the divisor error, give both the direct dominated contour bound and the sharper exact-residue estimate 12|Z(2)-Z_N(2)|+16d|Z(3)-Z_N(3)| using E02 (7) at integers: complete signed remainder is evaluated before absolute values. This should retain O(ell^4 N^-3 log N + d ell^6 N^-5 log N) for N>4T+8, with explicit constants from E02. Do not claim differentiability of sharp N truncations. E02 (16) supplies time differentiation of the complete p integral on compact subcharts; include K_t from delta'=D'/ell^2. State finite-cover gluing of physical integer observables. There is no P limit or right-real-edge limit, nor epsilon->0 limit. Keep epsilon costs in every statement, fixed T/time domain, and no all-order or analytic continuation claim.
+
+Deliver only notes/05_VCD_GT_CM_E03_DAMPED_CAUCHY_EVOLUTION_20261117.md and research-progress/handoffs/VCD-GT-CM-E03-return-r1.md. Record pins, actual settings availability, proof status, corrections/deviations and exact usable bounds. Lead owns register/history/synthesis. E04 will assess all three proofs jointly before quantitative use.
+
+## Frozen input SHA-256
+
+- `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/brainstorm/notes/01_VCD_GT_CM_B01_DAMPED_CAUCHY_DECISION_20261117.md`: `ff5a11b56c07486773610bca297f6c411ff7d135cd4e0633053e358127cee8b8`
+- `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/02_VCD_GT_CM_E01_INPUT_AUDIT_20261117.md`: `bc4fa9f3e916c737f77cd2d97a57ba294b21d57b60b62f6264206d6ee4646522`
+- `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/03_VCD_GT_CM_E02_COMPLEX_POWER_TIME_LAW_20261117.md`: `266a33ee15cfc8a8383005508ceb086a65d5f6b41628f9217c882db9194429cc`
+- `papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/04_VCD_GT_CM_E08_CONJUGATION_AND_BRANCH_DEFECT_20261117.md`: `22dbde73daed6345a8824582e2b2d151481852ee861943d95f33b6134f9057b1`

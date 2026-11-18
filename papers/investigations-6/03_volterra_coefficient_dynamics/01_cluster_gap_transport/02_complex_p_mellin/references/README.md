@@ -20,6 +20,15 @@ This is a bounded setup backfill, not a full literature review. No PDF or
 large derived data was created. Canonical bibliographic keys include
 NISTDLMFMellinContours and the existing NISTDLMFZetaGamma.
 
+The [launch source-use record](02_VCD_GT_CM_LAUNCH_SOURCE_USE_20261117.md)
+records reinspection during the first research pass and the precise
+consumers; it preserves the setup record and its provenance.
+
+The [superzeta source screen](03_VCD_GT_CM_SUPERZETA_SOURCE_SCREEN_20261117.md)
+records selected Voros passages and related discovery-only records for
+the continuation decision, with versioned external PDF identities. No
+heat-uniform continuation theorem is imported from them.
+
 Cite [parent Note41](../../notes/41_VCD_GT_E21_EXACT_INTERACTION_RICCATI_BOUND_20261117.md)
 with [Assessment19](../../reviews/19_VCD_GT_E22_FIXED_COLLAR_ASSESSMENT_20261117.md)
 for the complete M equation, and [GR Note02](../../01_gaussian_resolvent_hierarchy/notes/02_VCD_GT_GR_E02_CANONICAL_MOMENTS_20261117.md)

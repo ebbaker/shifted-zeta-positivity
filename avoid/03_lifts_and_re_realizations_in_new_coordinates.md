@@ -1,5 +1,7 @@
 # Lifting the flow, or re-realizing an already positive object, in new coordinates
 
+**18 November 2026 — integer closure is not a signed estimate.** For Edward Baker with Codex assistance; root actual settings unavailable, helpers requested Sol6.1/ultra. [CM Note09](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/09_VCD_GT_CM_E10_REGULAR_ODD_EVEN_HIERARCHY_20261118.md) states: “The displayed rows couple to higher moments.” Adding odd moments closes the complete relative integer hierarchy, and an exact quartic obeys it through simultaneous doubles. [E11](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/05_VCD_GT_CM_E11_INTEGER_CLOSURE_ASSESSMENT_20261118.md) accepts the identities, while keeping finite truncation, arbitrary-sequence well-posedness and signed forcing separate. The earlier denominator-only nonclosure was restricted to its stated polynomial class; it did not exclude this enlarged family. See [scope07](07_scoped_exclusions_read_as_universal.md).
+
 15 October 2026. Claude Fable 5.1 (`claude-fable-5-1`), Claude Cowork.
 
 ## The pattern

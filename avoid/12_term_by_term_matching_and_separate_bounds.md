@@ -1,5 +1,7 @@
 # Term-by-term matching, separate absolute bounds, separately positive sectors, dropped small terms
 
+**17 November 2026 — convergent p contours do not provide a signed gain.** For Edward Baker with Codex assistance; root actual settings unavailable, helpers requested Sol6.1/ultra. [CM Note06](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/06_VCD_GT_CM_E05_SIGNED_FORCING_COMPARISON_20261117.md) states: “Retaining joint signs across groups is available on either side of (5).” Its complete contour absolute norms are at least the same grouped direct signed-residue norms. The extended static witness has complete p-holomorphy, Schwarz symmetry and Gaussian contour integrability while positive forcing remains linear in log T. [E06](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/04_VCD_GT_CM_E06_SIGNED_BOUND_ASSESSMENT_20261117.md) accepts the comparison within its fixed enlarged-constant static scope. This does not exclude the full canonical time law or all joint contour estimates; see [scope07](07_scoped_exclusions_read_as_universal.md).
+
 **13 November 2026 — actual phase alignment still needs enough mass.**
 For Edward Baker with Codex assistance; actual root model/effort unavailable.
 [B06 Note25](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/notes/25_GNP_BB_B06_SHORT_WINDOW_AND_ACTUAL_PACKET_20261113.md)
