@@ -1,217 +1,229 @@
-# Complex-p contour evolution: question, inherited inputs and infinite limits
+# Exterior hierarchies, compatible approximation and regional gap transport
 
-17 November 2026, America/New_York. Prepared for **Edward Baker** with
-OpenAI Codex LLM assistance. Actual lead model and effort unavailable in
-this chat's recorded configurations. Intended research effort: **ultra**;
-recommended conceptual lead: **Astra**; expressly authorized bounded
-helpers: **GPT-6.1 Sol/ultra**. Requested settings are not serving attestation.
+18 November 2026, America/New_York. Prepared for **Edward Baker** with OpenAI Codex LLM assistance. Actual lead model and effort unavailable in the guarded chat registry. Earlier section authors and assessors were requested as **gpt-6.1-sol / ultra**; current revision helpers inherited settings. Independent serving attestation unavailable.
 
-**Author-selected research question; no new contour estimate is claimed by
-setup.** Can the evolution of M be represented in the p plane and its full
-contour contribution bounded to improve signed interaction or gap transport?
-An explicit subgoal is to find symmetries or functional relations of S(p)
-that improve those contour bounds, including useful identities with a
-controlled defect. This is distinct from choosing a Gaussian spatial scale. Mellin transforms
-may connect them, but a Gaussian representation is not mandatory here.
+This overview reconciles the completed analytical results and the author's
+manuscript request. It supersedes the 17 November setup-only descriptions;
+issued requests, prior proofs and their historical statuses remain unchanged.
+The [sole progress register][register] owns live task status. The draft is
+in [CM/manuscript][manuscript], with [build and source guide][guide].
 
-Read [result summaries][results], especially [cluster18][cluster] and
-[controls12][controls], and [avoid][avoid], particularly
-[classification01][a01], [premises02][a02], [representations03][a03],
-[scope07][a07], [joint bounds12][a12] and [infinite-limit scope15][a15].
-A residue identity is a representation. A useful new estimate is an
-intermediate result measured by its constants, rates, range or integrated
-cost. A target-equivalent criterion is stated once and earns no validation
-from finite samples. The [sole register][register] owns live status.
+Read the [result index][results], especially [cluster18][cluster] and
+[collision controls12][controls], and the [avoid index][avoid], especially
+[classification01][class], [premise screening02][premises],
+[coordinate changes03][coordinates], [scoped exclusions07][scope] and
+[joint bounds12][joint]. The results below are exact representations,
+componentwise hierarchy identities, convergence estimates, a scoped static
+exclusion, finite-head residuals with a scoped comparison limitation, and
+conditional forward/backward quantitative consumers. They are not an
+RH criterion or a new collision-exclusion theorem.
 
-## Fixed canonical objects and consumer
+## Fixed canonical problem
 
-Use the unchanged complete theta field H, physical H_t=-H_zz, initially
-0<=t<=1/2. An independently established count-two tube supplies real center
-c and signed discriminant D, with target occurrences c+/-sqrt(D), including
-multiplicities and D=0. For every complete exterior occurrence put
-w_j=rho_j-c, a_j=w_j^2-D, S_n=sum_j a_j^(-n), M=S_1=-K.
-The [accepted parent law][n41] and [assessment19][a19] give
+Keep the unchanged complete theta field with physical `H_t=-H_zz` on an
+independently established count-two tube `I ⊂ [0,1/2]`. The target pair is
+`c ± sqrt(D)`, including a double at `D=0`; `c,D` are symmetric contour
+coordinates. Fix `T≥64`, `L=log T`, `ell=1/L`, `c∈[T,2T]`,
+`|D|≤d ell²`, `max(2,4sqrt(d))≤a≤L`, target radius at most `a ell/4`
+and exterior `|w_j|≥a ell`. Retain all exterior occurrences with integer
+multiplicity, the canonical width-one strip, unit count and safe-line
+bounds. The complete canonical product and local contour traces justify
+first time derivatives through target and exterior mergers.
 
-    D' = 2-4MD,       M' = 2M^2-12S_2-16DS_3.
+Write `Q_j=w_j²-D`, `S_n=ΣQ_j^(-n)` for `n≥1`, and
+`T_n=Σw_j Q_j^(-n)` for `n≥2`, with `M=S_1`. The exact pair and first
+interaction laws are
 
-Freeze T>=64, L=log T, ell=1/L, c in [T,2T], |D|<=d ell^2,
-max(2,4sqrt(d))<=a<=L, exterior |w_j|>=a ell, targets <=a ell/4.
-Use m=ell^2 M, delta=D/ell^2, sigma=(t-t0)/ell^2 and mu_j=ell^2/a_j.
-Then
+    D' = 2−4DM,
+    M' = 2M²−12S_2−16DS_3.
 
-    m_sigma = 2m^2-F,    F=12 sum mu_j^2+16delta sum mu_j^3.
+The prime is physical time. The normalized quantities are
+`m=ell²M`, `delta=D/ell²`, `sigma=(t−t0)/ell²`,
+`Z(p)=Σexp(p(2log ell−Log Q_j))`, so
 
-Both D signs and all exterior phases remain. The initial allowance is
-|F|<=C L, leading to an O(sqrt(L)) interior negative allowance after a
-fixed scaled buffer and O(L)exp(O(sqrt(L))) transport multiplier on a
-fixed scaled interval. The complete backward identity is
-W(x,y)delta(x)=delta(y)-2 integral_x^y W(u,y)du,
-W(x,y)=exp(-4 integral_x^y m). Keep the initial layer, independently paid
-tube and terminal/incoming gap. Equality can give delta(x)=0, including
-at time zero. A useful pointwise estimate has the **upper** forcing
-orientation; an integrated alternative must control the actual multiplier
-or its cost. No all-pair positivity or anchor is acquired here.
+    m_sigma = 2m²−F,    F=12Z(2)+16delta Z(3),
+    delta_sigma = 2−4m delta.
 
-## What the complex index presently supplies
+The signed consumer needs an **upper** bound for F throughout the tube,
+or a bound for the actual transport multiplier and inhomogeneous cost.
+The inherited absolute estimate is `|F|≤C_F L`; the initial layer,
+independent terminal/incoming gap, and tube remain inputs.
 
-[Parent Note44 §4][n44] and [GR E01 audit][gr01] accept on a fixed slice
-S(p,t)=sum exp(-p Log a_j), with branches chosen for finitely many near
-terms and the principal tail branch, for Re p>1/2. It is locally holomorphic
-in p. For normalized comparisons use
-Z(p,t)=sum exp(p(2 log ell-Log a_j)), so Z(n,t)=ell^(2n)S_n(t).
-Branch choices disappear at integer n. The collar excludes a_j=0 but does
-not put all a_j in a right half-plane. A complex-p sum need not be real,
-even when the desired integer combination is real.
+## What is established
 
-The positive-ray gamma formula requires Re a_j>0 and Re p>0; interchange
-with the complete sum adds convergence obligations. It works on an
-appropriate far sector, with the finitely many adverse terms retained.
-[DLMF passage record][dlmf] distinguishes this Laplace/Gaussian parameter
-integral from a contour in **p**. Global branch compatibility, behavior
-through mergers, p-plane continuation beyond the proved half-plane and
-uniform contour-tail estimates remain unproved for the intended consumer.
+1. **Complete integer hierarchy.** [Note09][integer] proves explicit
+   polynomial evolution equations for all fixed `S_n,T_n`, together with
+   D. In particular
 
-The [GR canonical moment law][gr02] is now proved in-note and internally
-accepted by [GR E05][gr05]. It contains the spatial term 4T2^2,
-T2=sum w_j/a_j^2. Its denominator-only finite-polynomial nonclosure examples
-remain in that finite class. Varying p does not by itself recover the sign
-of w_j or prove autonomous canonical closure. Retain a justified spatial
-companion or the full field if the time law requires it.
+       S_2' = 8MS_2−32S_3+4DS_2²−40DS_4+4T_2²,
+       T_2' = (6M+8DS_2)T_2−20T_3−40DT_4.
 
-## Two initial contour routes, with an honest benchmark
+   The finite divided-difference derivation cancels the potentially
+   nonabsolute `T_1` before passing to the complete divisor at each time
+   slice. The identities are analytic in symmetric coordinates through
+   mergers. This is **componentwise infinite closure for the given heat
+   field**, not finite truncation, uniform order control, well-posedness
+   for arbitrary moment sequences, or determination of absolute center drift.
+2. **Separate-pole coordinates.** [Note08][split] gives every mixed and
+   axis recurrence for `P_pq=Σ(w−s)^(-p)(w+s)^(-q)`, `s²=D`,
+   integer `p,q≥0`, `p+q≥2`. All reduce algebraically to S/T.
+   `T_2=P_12+sP_22=P_21−sP_22`. Raw split coordinates are analytic on
+   the square-root cover and may have a cusp in time at a target merger;
+   the symmetric coordinates remove it. An exact even quartic tests
+   simultaneous target and exterior doubles. [Assessment05][review-integer]
+   accepts both notes within their domains without required mathematical
+   correction; this is internal shared-premise assessment.
+3. **Complex powers and time law.** [Note03][time] proves a local logarithm
+   atlas, holomorphy in `Re p>1/2`, merger-compatible traces and the full
+   time equation with the nonlinear spatial `h²` term. Independent
+   derivative domination, cleared spatial boundaries, connectors and
+   finite near clusters are retained. Branch transitions have explicit
+   finite corrections that vanish at integer p.
+4. **Symmetry and p contours.** [Note04][symmetry] proves Schwarz symmetry
+   with compatible logs and the exact all-`+pi` negative-axis defect.
+   [Note05][cauchy] derives Gaussian-damped Cauchy formulas with both
+   verticals: edges 1 and 4 for F, 3/4 and 3/2 for m. Complete N-cutoff,
+   contour-height Y and independent spatial-boundary X errors are explicit;
+   fixed positive damping and fixed real edges are essential to this proof.
+   [Assessment03][review-contour] accepts these stated domains.
+5. **Quantitative comparison and consumer.** [Note06][comparison] proves
+   that the displayed absolute contour estimates do not improve the same
+   grouped signed-residue norms. The complete static changed-divisor
+   family has holomorphic Schwarz-symmetric Z and convergent Gaussian
+   contours while `m≤−1/64` and `F/L→3/256`. This excludes a uniform
+   `o(L)` forcing bound only in its fixed enlarged-constant **static class**;
+   it is not a canonical time-law exclusion. The conditional Riccati and
+   exact gap-transport costs retain both anchors and equality at D=0.
+   [Assessment04][review-bound] accepts that scope.
 
-B01 compares at most these two routes in one decision pass, then freezes
-one precise E contract. The scientific selection is not made by setup.
 
-1. **Cauchy representation followed by a controlled deformation.** For a
-   counterclockwise compact contour C in Re p>1/2, enclosing 2 and 3,
-   with Z holomorphic on its interior and boundary, the benchmark is
+6. **Joint forcing and deflated derivatives.** Note13 and E15 give the
+   complete `F_sigma−8mF=R`, weighted gap-energy identity and convergent
+   deflated-log-derivative expansion. The weighted allowance permits
+   exponential transport in its scalar consumer class. These results
+   locate a missing signed estimate without excluding canonical dynamics.
+7. **Finite-head error structure.** The new manuscript derives all four
+   boundary residual rows and their geometric bound. Its positive-box
+   matrix path gives a factorial lower bound on that specific independent
+   absolute error allowance, not on actual truncation error. Common-time
+   compatible finite-divisor approximation remains the separate E16 task.
+8. **Backward regional statistics.** Note17/E17 extend the interaction
+   identities to strictly isolated adjacent real pairs on `[0,1/2]`,
+   before the first global loss of the real regime. For physical backward
+   time u and initial lower data d0,b0,
+   `D(u)>=(1+2b0u)[d0(1+2b0u)−2u]`. Two neighboring gaps supply b0;
+   three equal gaps give duration `<g²/6` instead of `<g²/8`. Finite
+   regional minima satisfy a weak law even when their active pair changes.
+   A joint lower-tail estimate and zero-exception, whole-interval and
+   uniform-height coverage are still needed for an upper bound on Lambda.
 
-       F = (1/(2pi i)) integral_C [12/(p-2)+16delta/(p-3)] Z(p,t) dp.
+## Manuscript and source ownership
 
-   Thus M'=2M^2-ell^(-4) times that integral. A separate contour enclosing
-   1 gives m from Z(p)/(p-1). These are conditional Cauchy evaluations of
-   known integer values, not a new bound or a time-evolution theorem for Z.
-   E01 checks the normalization. The nontrivial route needs controlled
-   deformation, a useful joint contour estimate, and all residual edges.
-2. **A genuine Mellin-Barnes/inverse-Mellin representation.** Select a
-   kernel, contour and domain that reproduce the complete signed forcing,
-   possibly with an explicit near part or regularization correction.
-   A pure inverse power has no ordinary Mellin integral on all positive
-   scales with a nonempty convergence strip: the requirements at zero and
-   infinity oppose each other. Do not write a formal vertical integral
-   without supplying the kernel and any subtraction. The setup source
-   [DLMF 2.5][dlmf] is general transform guidance, not a theorem already
-   applicable to this divisor.
+The revised manuscript develops the source and counted pair, integer
+hierarchy and split poles, finite-head residuals, complex powers and
+contours, signed transport, joint dynamics, and finally backward regional
+statistics. Full derivations precede the statistical consumers. Contour
+constants remain in the appendix. The exact polynomial and static examples
+are analytical controls; numerical work is supporting evidence only.
+The base VCD and GT/GR manuscripts remain cited predecessors, unchanged.
+The reading PDF is under ignored `output/pdf/vcd-complex-p-mellin/`.
 
-The local nonlinear term 2m^2 is retained. If a representation moves it
-inside contour notation, retain the full double-contour or convolution
-cross terms and prove the needed interchange; no linear closure is assumed.
-Contours may be finite if their analytic bounds genuinely address the
-complete infinite object. An infinite p-contour is not a virtue by itself.
+E12--E14 are the historical first manuscript milestone. E18 integrated the
+recent analytical results, E19 accepted the corrected source, and E20
+completed the 38-page build, visual checks and document reconciliation. See the [sole register][register]
+for live status and [continuation19][continuation] for the next research
+handoff. No new manuscript snapshot folders are used.
 
-## Explicit symmetry subgoal
+## Limits and next quantitative decision
 
-B01 also selects at most two symmetry candidates per decision pass, with
-a proposed contour-bound use for each. Start with conjugation across the
-real p axis: test S(p,t)=conjugate(S(conjugate(p),t)) on the prescribed
-logarithms, or derive the exact branch defect. Pair complete exterior
-occurrences with multiplicities; specify both boundary arguments at
-negative-real denominators and restore all near terms. A slice identity
-needs separate time-chart and merger justification before use on a tube.
+The current work proves neither a reflection functional equation in p
+nor continuation left of `Re p=1/2`, an epsilon-to-zero or growing-edge
+contour limit, a stable truncation error theorem uniform in moment order,
+a finite closure, nor a
+better canonical signed F bound. The complete time law is a field-based
+identity, not an autonomous scalar equation for Z alone. B03 r1 closed the
+selected absolute-contour pass; B04 completed the author's integer-closure
+proposal. Neither disposition closes the full canonical dynamical question.
 
-A second candidate may be a relation under p -> kappa-p for an explicitly
-specified completion or regularization, but only with a proposed mechanism
-and common domain. Do not import the theta/xi functional equation as a
-functional equation in this power index. Spatial reflection must track
-the center and excluded target pair; it need not preserve the same
-centered exterior object. Distinguish symmetries from changes of branch,
-normalization or recurrence identities. No candidate is assumed true.
+The [B03 r2 return][b03-r2] has now compared joint hierarchy/integrated
+transport with source-specific superzeta completion. Its forcing derivative
+has an unsigned joint remainder; its exact delta²-weighted energy allowance
+does not control transport in the scalar-consumer class. Exact deflation
+transfers the integer consumer to heat-deformed logarithmic derivatives,
+whose joint signed upper estimate remains unacquired. These findings do
+not exclude canonical source-specific dynamics. No stronger forcing/cost
+bound or research execution contract follows. [Continuation14](../notes/14_VCD_GT_CM_B03_R2_CONTINUATION_20261118.md)
+requires a distinct source-specific acquisition mechanism before reopening
+B03 (B / Astra). Replaying identities or growing a truncation is not a
+justified next step. E15 and the sole register own the assessment status.
 
-The reserved E08 task proves one B01-selected identity or exact defect
-and its infinite-divisor scope. Translate it to Z, including scale factors,
-and then to the full weighted contour integrand, kernel and orientation.
-E04 assesses any identity used; B02/E05 test whether it improves a signed
-bound, contour tail or integrated cost against an equally informed direct
-comparison. Conjugate pairing or reality alone supplies no sign or decay
-estimate. A failed candidate is scoped to its stated branches and class;
-it does not close the contour program. See the [amendment note][symmetry].
+This 18 November update is prepared for Edward Baker with Codex assistance;
+actual chat0002 settings are unavailable, and helpers inherited settings
+without independent serving attestation.
 
-## Required infinite-index estimate structure
+The author's subsequent BBGKY suggestion opens a distinct finite
+approximation question. [B05 Note15](../notes/15_VCD_GT_CM_B05_BBGKY_TRUNCATION_RECONSIDERATION_20261118.md)
+gives an explicit four-row truncation residual and scopes the failure of
+independent positive-box propagation. It selects a finite canonical-product
+polynomial evolved by exact heat flow, retaining compatible moments and
+integer divisor occurrences. [E16](../research-progress/handoffs/VCD-GT-CM-E16-r2.md)
+is a ready proof contract for common-time field/jet/pair/moment errors at
+fixed height. It has not been executed and supplies no improved signed
+bound. This remains an independent ready proof task; the B03 signed-input gate remains.
 
-The emphasis is analytical and scalable. Every proof contract distinguishes:
-- the complete divisor limit (zero cutoff N to infinity), uniformly on the
-  stated time and p domain;
-- contour height Y to infinity for an unbounded vertical/deformed contour,
-  with explicit top/bottom/connector/near-term errors tending to zero;
-- moment/residue order P to infinity if an all-order hierarchy or expansion
-  is claimed, with a summable or otherwise justified remainder;
-- growing physical height T, independently of N,Y,P and the time interval.
 
-State the order of limits and prove any interchange. Uniformity on each
-compact p set is not a vertical-tail estimate; a proof at every fixed order
-is not a uniform all-order bound. Analytic continuation is not assumed
-beyond Re p>1/2. A branch or sector rotation pays its phase and any boundary
-jump. In p=u+iv, the factor exp(-p Log a) has magnitude
-|a|^(-u) exp(v arg a), so gamma decay must be compared against actual
-branch/sector growth, not used alone. [DLMF 5.11.9][dlmf] is uniform only
-for bounded real parts as stated; it is not a growing-order estimate.
+The subsequent [closest-pair discussion16](../notes/16_VCD_GT_CM_B06_CLOSEST_PAIR_SELECTION_20261118.md)
+qualifies global minimum selection. The author's regional statistical
+refinement leads to [Note17](../notes/17_VCD_GT_CM_B07_REGIONAL_GAP_STATISTICS_AND_BACKWARD_COMPARISON_20261118.md): the minimum envelope survives
+switches, but its evolution needs the joint exterior interaction. In the
+stopped all-real regime, the exact hierarchy yields an initial three-gap
+safety margin, illustrated by g²/6 versus the gap-only g²/8. Statistics must
+control every eligible pair's margin and pay uniform height coverage before
+an upper bound on Lambda follows. These are conditional local comparisons;
+no canonical lower-tail law is acquired. [E17](../reviews/09_VCD_GT_CM_E17_REGIONAL_STATISTICS_ASSESSMENT_20261118.md) accepts the corrected proof on the inherited 0<=t<=1/2 slab.
 
-At least one intermediate result should materially help the infinite
-problem: a uniform branch/sector theorem, a summable contour tail, an
-all-order remainder bound, or a better full signed forcing/cost estimate.
-Finite algebra and numerical checks are supporting diagnostics only. A
-numerical packet requires a falsifiable question and finite caps selected
-before dispatch; no scan or finite-order extrapolation is authorized.
+## Control premises
 
-## Shared input ownership and scoped controls
-
-[GR Session07][gr07] supplies finite-s Gaussian evolution and compact radial
-weak regularity, plus O(1/L) fixed-physical-scale forcing-complement error.
-It supplies no improved signed bound on the retained observable. Those
-proofs remain GR-owned inputs; CM need not adopt a Gaussian split.
-Its changed static-divisor and scalar-relaxation tests are not exclusions
-of full canonical complex-p dynamics. [GR E07][grreview] retains this scope.
-
-The existing [GR E01 premise screen][gr01] and [controls12][controls] are
-replayed documentarily at setup, not rerun as numerical certificates:
-
-| Control | Failed or untested premise for this canonical program |
-| --- | --- |
-| Quadratic/quartic heat fields | Complete theta source and growing divisor count absent; generic contour identities can still hold and permit collisions |
-| Euler-factor translates | Unchanged theta arithmetic and documented canonical endpoint count discrepancy fail |
-| Weighted-square, finite-source/score/prime controls | Full reflected unit-weight theta equality fails; documented endpoint-defective subclasses also fail the fixed strip |
-| Reflected super-Gaussian | Order-at-most-one product premise fails |
-| Smooth-shape and positive-primitive sources | Theta arithmetic changes; transfer of the complete strip/count/safe-line inputs is untested |
-| Atomic/finite-profile controls | Canonical growing population/full profile absent |
-| RH-conditional endpoint mergers | Ordinary Dirichlet arithmetic changes and RH remains an input |
-| Changed observations or fractional-profile relaxations | Physical cosine readout or integer divisor premise fails; complex powers of genuine occurrences do not authorize fractional zero multiplicities |
-| GR changed static slices | Source changes; no paid common-time canonical tube supplied |
-| GR scalar equilibrium | No realized complete divisor or full complex-p time law; negative terminal gap |
-
-A future estimate must name the quantitative premise it actually uses to
-distinguish controls. The source label alone is not such an estimate.
-Negative conclusions retain their tested class. No source/physical-law
-change, higher target cluster or shared-manuscript edit is authorized.
+The [documented controls][controls] are screened at their actual premises,
+not numerically rerun. Quadratic/quartic heat fields lack the complete theta
+source and growing population; Euler translates change theta arithmetic
+and endpoint discrepancy. Weighted-square and finite-source/score/prime
+controls fail full reflected unit-weight theta equality, and documented
+endpoint-defective subclasses fail the strip. Reflected super-Gaussians
+fail the order bound. Smooth positive/primitive controls change arithmetic
+and do not establish the complete strip/count/safe-line transfer. Atomic
+and finite-profile controls lack the canonical population or full profile.
+RH-conditional endpoint mergers change ordinary Dirichlet arithmetic and
+retain RH as an input. Changed observations/fractional profiles fail the
+physical readout/integer multiplicity premises. The static surgery changes
+the source and has no common established heat tube; a scalar equilibrium
+need not realize any divisor. These class distinctions are retained in
+every negative conclusion and in the manuscript discussion.
 
 [register]: ../research-progress/01_VCD_GT_CM_RESEARCH_PROGRESS_20261117.md
-[symmetry]: ../notes/02_VCD_GT_CM_SYMMETRY_SUBGOAL_20261117.md
 [results]: ../../../../../../result-summaries/README.md
 [cluster]: ../../../../../../result-summaries/18_tensor_approximation_and_coefficient_bounds.md
 [controls]: ../../../../../../result-summaries/12_collision_controls_and_screening.md
 [avoid]: ../../../../../../avoid/README.md
-[a01]: ../../../../../../avoid/01_restating_the_target.md
-[a02]: ../../../../../../avoid/02_shape_only_arguments_and_the_controls.md
-[a03]: ../../../../../../avoid/03_lifts_and_re_realizations_in_new_coordinates.md
-[a07]: ../../../../../../avoid/07_scoped_exclusions_read_as_universal.md
-[a12]: ../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md
-[a15]: ../../../../../../avoid/15_ignoring_sibling_results_and_unfinished_closures.md
-[n41]: ../../notes/41_VCD_GT_E21_EXACT_INTERACTION_RICCATI_BOUND_20261117.md
-[a19]: ../../reviews/19_VCD_GT_E22_FIXED_COLLAR_ASSESSMENT_20261117.md
-[n44]: ../../notes/44_VCD_GT_SCALE_AND_MOMENT_HIERARCHY_DISCUSSION_20261117.md#4-continuous-powers-and-the-connection-to-gaussian-transforms
-[gr01]: ../../01_gaussian_resolvent_hierarchy/reviews/02_VCD_GT_GR_E01_INPUT_AUDIT_20261117.md
-[gr02]: ../../01_gaussian_resolvent_hierarchy/notes/02_VCD_GT_GR_E02_CANONICAL_MOMENTS_20261117.md
-[gr05]: ../../01_gaussian_resolvent_hierarchy/reviews/03_VCD_GT_GR_E05_INITIAL_PROOFS_ASSESSMENT_20261117.md
-[gr07]: ../../01_gaussian_resolvent_hierarchy/notes/07_VCD_GT_GR_SESSION_SYNTHESIS_AND_CONTINUATION_20261117.md
-[grreview]: ../../01_gaussian_resolvent_hierarchy/reviews/05_VCD_GT_GR_E07_FORCING_AND_SCOPE_ASSESSMENT_20261117.md
-[dlmf]: ../references/01_VCD_GT_CM_DLMF_CONTOUR_PASSAGES_20261117.md
+[class]: ../../../../../../avoid/01_restating_the_target.md
+[premises]: ../../../../../../avoid/02_shape_only_arguments_and_the_controls.md
+[coordinates]: ../../../../../../avoid/03_lifts_and_re_realizations_in_new_coordinates.md
+[scope]: ../../../../../../avoid/07_scoped_exclusions_read_as_universal.md
+[joint]: ../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md
+[workflow]: ../../../../../../GPT_RESEARCH_MODEL_WORKFLOW.md
+[manuscript]: ../manuscript/main.tex
+[guide]: ../manuscript/README.md
+[continuation]: ../notes/19_VCD_GT_CM_REGIONAL_STATISTICS_MANUSCRIPT_CONTINUATION_20261118.md
+[b03-r2]: ../notes/13_VCD_GT_CM_B03_JOINT_TRANSPORT_AND_SUPERZETA_20261118.md
+[time]: ../notes/03_VCD_GT_CM_E02_COMPLEX_POWER_TIME_LAW_20261117.md
+[symmetry]: ../notes/04_VCD_GT_CM_E08_CONJUGATION_AND_BRANCH_DEFECT_20261117.md
+[cauchy]: ../notes/05_VCD_GT_CM_E03_DAMPED_CAUCHY_EVOLUTION_20261117.md
+[comparison]: ../notes/06_VCD_GT_CM_E05_SIGNED_FORCING_COMPARISON_20261117.md
+[split]: ../notes/08_VCD_GT_CM_E09_SPLIT_POLE_INTEGER_HIERARCHY_20261118.md
+[integer]: ../notes/09_VCD_GT_CM_E10_REGULAR_ODD_EVEN_HIERARCHY_20261118.md
+[review-contour]: ../reviews/03_VCD_GT_CM_E04_CONTOUR_PROOFS_ASSESSMENT_20261117.md
+[review-bound]: ../reviews/04_VCD_GT_CM_E06_SIGNED_BOUND_ASSESSMENT_20261117.md
+[review-integer]: ../reviews/05_VCD_GT_CM_E11_INTEGER_CLOSURE_ASSESSMENT_20261118.md
+[e12]: ../research-progress/handoffs/VCD-GT-CM-E12-r1.md
+[b03]: ../brainstorm/notes/03_VCD_GT_CM_B03_SCOPED_DISPOSITION_20261117.md
+[b04]: ../brainstorm/notes/04_VCD_GT_CM_B04_SPLIT_POLE_CLOSURE_CONTRACT_20261118.md

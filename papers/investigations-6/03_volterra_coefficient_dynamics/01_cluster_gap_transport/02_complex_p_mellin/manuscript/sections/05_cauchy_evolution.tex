@@ -1,0 +1,208 @@
+\section{Damped Cauchy evolution in the power index}
+\label{sec:cauchy}
+
+Fix \(\epsilon>0\). The normalized variables are
+\(\delta=D/\ell^2\), \(m=\ell^2M=Z(1,t)\), and
+\(\sigma=(t-t_0)/\ell^2\). The two residues contributing to the
+forcing are \(12Z(2,t)\) and \(16\delta Z(3,t)\). A separate
+contour evaluates \(m\). We treat the two kernels together
+\cite{BakerCM05,BakerCMReview}.
+
+Let
+\[
+ K(p,t)=\sum_{n\in\mathcal N}\frac{c_n(t)\exp(\epsilon(p-n)^2)}{p-n},
+ \qquad b\le \Re p\le r ,
+\]
+where \(\mathcal N\) is a finite set of residue indices. For
+\(F\) take \(K=K_\epsilon\), \(\mathcal N=\{2,3\}\),
+\(c_2=12,\ c_3=16\delta\) and \((b,r)=(1,4)\). For \(m\) take
+\(K=G_\epsilon=\exp(\epsilon(p-1)^2)/(p-1)\) and
+\((b,r)=(3/4,3/2)\). If \(\delta=0\), the term at \(3\) is
+absent. Set
+\[
+ \begin{array}{c|c|c}
+  K & C_\epsilon & \lambda\\ \hline
+  K_\epsilon & (12+16d)\exp(4\epsilon) & 1\\
+  G_\epsilon & \exp(\epsilon/4) & 1/4
+ \end{array}
+\]
+so \(|K(q+\ii v,t)|\le C_\epsilon\exp(-\epsilon v^2)/
+\sqrt{\lambda^2+v^2}\) for either \(q=b,r\).
+Along \(\Im p=\pm Y\) in the strip we have
+\begin{equation}
+ |K(p,t)|\le C_\epsilon\exp(-\epsilon Y^2)/Y,\qquad Y>0 .
+ \label{cau:kernel-bounds}
+\end{equation}
+Indeed \(\Re (p-n)^2=(\Re p-n)^2-(\Im p)^2\)
+and \(|\Re p-n|\ge\lambda\) on either vertical.
+
+For \(V_q(Y)\) upward from \(q-\ii Y\) to \(q+\ii Y\), use
+\(V_q\) for its infinite limit and
+\[
+ \mathcal V_{b,r}(B)=\frac1{2\pi\ii}\left(
+                      \int_{V_r} B(p)\dd p-\int_{V_b}B(p)\dd p\right).
+\]
+The counterclockwise rectangle uses the right upward line minus
+the left upward line, the lower edge directed rightward,
+and the upper edge directed leftward. Both real edges and
+\(\epsilon\) remain fixed.
+
+\begin{theorem}[Complete two-line formulas]\label{thm:damped-cauchy}
+Under the hypotheses of Theorem~\ref{thm:complex-time}, one has
+\begin{equation}
+ \begin{aligned}
+ F(t)&=\mathcal V_{1,4}(K_\epsilon Z)
+                  =12Z(2,t)+16\delta(t)Z(3,t)
+                  =\ell^4(12S_2+16DS_3),\\
+ m(t)&=\mathcal V_{3/4,3/2}(G_\epsilon Z)=Z(1,t),\\
+ M'&=2M^2-\ell^{-4}F,\qquad
+ \frac{\dd m}{\dd\sigma}=2m^2-F,\qquad
+ \frac{\dd\delta}{\dd\sigma}=2-4m\delta .
+ \end{aligned}
+ \label{eq:forcing-contour}
+\end{equation}
+The line integrals converge absolutely and allow physical time
+differentiation under the integral on each compact subchart. The
+two-line differences take the same values on chart overlaps.
+\end{theorem}
+
+\begin{proof}
+The value estimate \eqref{app:value-envelope} gives
+\(|Z(p,t)|\le A_b\exp(\Theta|\Im p|)\) on the strip. Multiply by
+\eqref{cau:kernel-bounds}. If
+\(\Phi_\theta(Y)=\exp(-\epsilon Y^2+\theta Y)\) and
+\(\kappa_\theta(Y)=2\epsilon Y-\theta\), the normalized sum of the
+two horizontal integrals is bounded by
+\((r-b)C_\epsilon A_b\Phi_\Theta(Y)/(\pi Y)\).
+For \(Y>\Theta/(2\epsilon)\), the absolute error in the vertical
+difference after cutting to \(|\Im p|\le Y\) is bounded by
+\begin{equation}
+ \frac{2C_\epsilon A_b}{\pi}
+            \frac{\Phi_\Theta(Y)}{Y\kappa_\Theta(Y)}.
+ \label{eq:vertical-tail}
+\end{equation}
+This follows from
+\(\Phi_\theta(v)\le\Phi_\theta(Y)
+\exp(-\kappa_\theta(Y)(v-Y))\) for \(v\ge Y\), bounding
+\(1/\sqrt{\lambda^2+v^2}\) by \(1/v\).
+Residues on the finite rectangle give the stated values since
+the damping equals one at its poles. The horizontal bounds and
+vertical tails give the two-line limit. The laws for \(M,m,\delta\)
+follow from \eqref{eq:pairlaw} and \eqref{eq:low-orders}, with the
+local \(2m^2\) outside the contour.
+
+On a compact chart and fixed real-part strip,
+\eqref{app:chart-time} gives
+\(|Z_t|\le C_Z(1+|p|)^2\exp(\Theta|\Im p|)\).
+The complete physical derivatives of the integrands are
+\begin{equation}
+ \begin{aligned}
+ \partial_t(K_\epsilon Z)&=K_\epsilon Z_t+
+          \frac{16(D'/\ell^2)\exp(\epsilon(p-3)^2)}{p-3}Z,\\
+ \partial_t(G_\epsilon Z)&=G_\epsilon Z_t .
+ \end{aligned}
+ \label{cau:kernel-time}
+\end{equation}
+The kernel bounds and Gaussian moments justify the interchange
+and the continuity of the derivative. The exact bounds on
+differentiated horizontal edges and vertical tails are in
+Appendix~\ref{app:cauchy-errors}.
+
+On an overlap the finite difference \eqref{cp:transition} and
+its time derivative vanish at the residue positions.
+Consequently \(K(Z_B-Z_A)\) has removable poles, and its
+physical derivative has removable poles as well. Their complete
+rectangle integrals vanish. Each bound used for \(KZ\), or
+its derivative, applies to the difference with the sum of the two
+chart constants. Passing to the vertical limits proves equality
+of the full right-minus-left values and their derivatives. In
+particular the integer evolution glues through the compact time
+cover.
+\end{proof}
+
+\subsection{Divisor cutoff and independent spatial boundary cutoff}
+
+For integer \(N>4T+8\), let \(Z_N\) retain \(|\rho_j|\le N\)
+with all ties and multiplicities. The estimates used to prove the
+theorem apply also to \(Z_N\). The strip-wide bound in
+Appendix~\ref{app:cauchy-errors} gives absolute convergence in
+the line integrals as \(N\to\infty\). The sharper error is the
+signed residue of \(Z-Z_N\). If \(F_N=\mathcal V_{1,4}(K_\epsilon Z_N)\)
+then
+\begin{equation}
+ \begin{aligned}
+ F-F_N&=12[Z(2)-Z_N(2)]+16\delta[Z(3)-Z_N(3)],\\
+ |F-F_N|&\le12R_2(N)+16d R_3(N),\\
+ R_n(N)&=2\Cu(\ell^2q_0)^n E_1(2n-1)3^{2n-1}
+                               N^{1-2n}\Lambda(N).
+ \end{aligned}
+ \label{cau:residue-error}
+\end{equation}
+Here \(q_0=16/15\), \(\Lambda(x)=\log(3+2T+|x|)\), and \(E_1\)
+is the explicit dyadic constant of \eqref{app:dyadic}.
+This follows by applying the residue argument to the whole
+difference before using \eqref{app:divisor-tail} at integer \(n\).
+The rates are \(\ell^4N^{-3}\log N\) and \(d\ell^6N^{-5}\log N\)
+at fixed \(T\). The separate \(m\) evaluation has error at most
+\(R_1(N)\). For truncated vertical integrals add
+\eqref{eq:vertical-tail} to these allowances.
+
+For a spatial cutoff \(X\ge7\), truncate only the horizontal rays
+of \eqref{cp:spatial-boundary} at \(|\Re w|=X\), retaining the
+finite connectors and circles. Its derivative uses
+\((f_p)_t h+f_p h_t\) from \eqref{eq:complex-time}. The
+integrated-by-parts form on the cut rays carries the primitive
+endpoint terms. The independent derivative errors
+\eqref{app:spatial-tails} and \eqref{app:weighted-spatial-tail}
+pay this cutoff. They are uniform at fixed height on compact
+time subcharts. The complete value limit may take \(N\) first
+on each finite rectangle and then \(Y\), or use the absolute
+bounds with \(N,Y\) tending to infinity together at fixed
+\(\epsilon,T\). For the time derivative one may take \(X\) first
+on finite rectangles and then \(Y\), or take \(X\to\infty\) in
+the full vertical difference. These distinct limits use the
+derivative of the spatial boundary formula and the values of
+the sharp divisor cutoff.
+
+\subsection{Folded integrals and branch corrections}
+
+For either kernel and real physical time, \(K^\sharp=K\).
+On the compatible charts \eqref{cp:schwarz} the weighted
+integrand \(B=KZ\) has \(B^\sharp=B\) and
+\begin{equation}
+ \mathcal V_{b,r}(B)=\frac1\pi\int_0^\infty
+              \Re\big[B(r+\ii v)-B(b+\ii v)\big]\dd v .
+ \label{cau:fold}
+\end{equation}
+On finite rectangles the two horizontal integrals still enter.
+To fold a full rectangle, split it into the upper arc from \(r\)
+to \(b\) and the lower arc from \(b\) to \(r\), including their
+horizontal edges. Reflection sends the upper arc to the reversed
+lower arc, while conjugation of \(1/(2\pi\ii)\) changes its sign.
+Thus for a Schwarz integrand the rectangle integral is twice the
+real part of the normalized upper-arc integral. In the defective
+case add the normalized lower-arc integral of
+\(B_+-B_+^\sharp\).
+For the \(+\pi\) slice prescription, the weighted defect of
+\(B_+=KZ_+\) is
+\[
+ \mathcal D_B=B_+-B_+^\sharp
+   =-2\ii K(p,t)\ell^{2p}\sin(\pi p)\sum_{j:Q_j<0}|Q_j|^{-p}.
+\]
+In fact \(B_+(q-\ii v)=\overline{B_+(q+\ii v)}+\mathcal D_B(q-\ii v)\).
+For an upward line this gives
+\begin{equation}
+ \frac1{2\pi\ii}\int_{V_q(Y)} B_+(p)\dd p
+ =\frac1{\pi}\int_0^Y\Re B_+(q+\ii v)\dd v
+  +\frac1{2\pi}\int_0^Y\mathcal D_B(q-\ii v)\dd v .
+ \label{cau:weighted-defect}
+\end{equation}
+The two-sided contour takes the right-minus-left difference
+of both terms. The removable singularities of \(\mathcal D_B\)
+at the integer residues give zero integral of the defect on a
+complete rectangle. Its horizontal limit is zero by the same
+Gaussian bound (the sum of the bounds for \(B_+\) and \(B_+^\sharp\)
+suffices). Thus the \emph{full} defect line integrals agree on
+the two lines. The lower-half defect integrals in
+\eqref{cau:weighted-defect} are kept in a folded formula.
+

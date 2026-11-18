@@ -1,0 +1,302 @@
+% 18 November 2026. Prepared for Edward Baker with OpenAI Codex assistance.
+% Actual model/effort unavailable; inherited helper settings, no attestation.
+\section{Joint forcing dynamics and deflated logarithmic derivatives}
+\label{sec:joint}
+
+The direct forcing bound in Section~\ref{sec:bounds} estimates each moment
+separately. The hierarchy permits a more structured question: what is the
+exact evolution of their forcing combination, and what does its coupling
+to the gap actually control? We first keep that combination intact, then
+identify an equivalent representation in derivatives of the pair-deflated
+field. The identities and the two scoped tests below develop
+\cite{BakerCM13}; they retain the strong-collar tube
+\eqref{eq:domain} throughout. They supply no additional canonical sign
+estimate.
+
+\subsection{An exact derivative formula for the forcing combination}
+
+Use the fixed normalized variables
+\begin{equation}
+ s_n=\ell^{2n}S_n=Z(n),\qquad
+ v_n=\ell^{2n-1}T_n,\qquad
+ m=s_1,\quad \delta=D/\ell^2,\quad
+ \sigma=(t-t_0)/\ell^2.
+ \label{joint:normalization}
+\end{equation}
+Here $s_n$ is a moment, whereas the unindexed $s$ in $z_\pm=c\pm s$
+remains a local square root of $D$. In this subsection and the next,
+primes denote $\sigma$ derivatives. The forcing and gap equations are
+\begin{equation}
+ F=12s_2+16\delta s_3,\qquad m'=2m^2-F,\qquad
+ \delta'=2-4m\delta.
+ \label{joint:system}
+\end{equation}
+
+\begin{proposition}[Joint forcing remainder]\label{joint:forcing-prop}
+On the complete tube, including mergers,
+\begin{align}
+ F'-8mF={}&\mathcal R,\label{joint:forcing-law}\\
+ \mathcal R={}&48v_2^2+192\delta v_2v_3+144\delta s_2^2
+       +192\delta^2s_2s_3\notag\\
+       &\quad-352s_3-1440\delta s_4-1152\delta^2s_5.
+       \label{joint:remainder}
+\end{align}
+Consequently, with the multiplier $W$ of \eqref{eq:transport-cost},
+\begin{equation}
+ F(y)=W(x,y)^{-2}F(x)
+       +\int_x^y W(u,y)^{-2}\mathcal R(u)\dd u.
+ \label{joint:forcing-integral}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The second and third even rows of Theorem~\ref{thm:hierarchy}, after the
+constant normalization \eqref{joint:normalization}, read
+\begin{align*}
+ s_2'&=8ms_2-32s_3+4\delta s_2^2-40\delta s_4+4v_2^2,\\
+ s_3'&=12ms_3+6s_2^2+12v_2v_3+12\delta s_2s_3
+                   -60s_4-72\delta s_5.
+\end{align*}
+Apply the product rule to $F$ and substitute $\delta'=2-4m\delta$.
+The terms involving $m$ are
+$96ms_2+(-64+192)m\delta s_3=8mF$.
+The coefficients of $s_3$, $\delta s_2^2$ and $\delta s_4$ are,
+respectively, $-384+32=-352$, $48+96=144$ and $-480-960=-1440$.
+The other terms give \eqref{joint:remainder}. Only five fixed even orders
+and two fixed odd orders occur; their analytic contour expressions and
+complete convergence were proved in Theorem~\ref{thm:hierarchy}.
+Thus no growing-order or differentiated sharp-cutoff passage is used.
+Finally the integrating factor for \eqref{joint:forcing-law} is
+$\exp(-8\int_x^\sigma m)=W(x,\sigma)^2$. Integrating and dividing by
+$W(x,y)^2$ gives \eqref{joint:forcing-integral}.
+\end{proof}
+
+This exact combination makes the missing estimate visible. If
+$u_j=w_j/\ell$ and $\mu_j=\ell^2/Q_j$, then
+$|u_j||\mu_j|^{1/2}\le\sqrt{q_0}$ and $|\mu_j|\le\gamma$.
+Therefore \eqref{eq:integer-bound} gives
+\begin{equation}
+ |v_n|\le\sqrt{q_0}\,\gamma^{n-3/2}\mathcal A_1
+          \le\sqrt{q_0}\,\gamma^{n-3/2}B_1L,
+ \qquad n\ge2.
+ \label{joint:odd-bound}
+\end{equation}
+At fixed collar parameters these separate bounds produce an $O(L^2)$
+allowance for $\mathcal R$, not a smaller forcing scale. This is a
+statement about that allowance, not a lower bound on the actual remainder.
+Nor is there a useful sign hidden in the first two terms: their completion
+is $48(v_2+2\delta v_3)^2-192\delta^2v_3^2$. A signed use of
+\eqref{joint:forcing-integral} must also control its entry value and
+weights; assuming the desired transport bound for those weights would
+not establish it.
+
+\begin{remark}[Exact local sign test]\label{joint:quartic-test}
+For a finite polynomial test only, take $\ell=1$ and initialize
+$P(0,z)=z^2(z^2+b^2)$, $b>0$. Its exact heat evolution is
+$P(0,z)-tP_{zz}(0,z)+t^2P_{zzzz}(0,z)/2$. A small time neighborhood
+isolates the two occurrences at the origin from the exterior roots
+$\pm\ii b$. At the initial double,
+\[
+ m=-2/b^2,\quad s_2=2/b^4,\quad s_3=-2/b^6,\quad v_2=0,
+ \qquad F=24/b^4,\quad \mathcal R=704/b^6.
+\]
+Initializing instead $z^2(z^2-b^2)$ changes the exterior roots to
+$\pm b$ and gives $\mathcal R=-704/b^6$. Thus the finite hierarchy,
+conjugation and local collar alone do not force $\mathcal R\le0$.
+These polynomials lack the unchanged theta source, its positive value at
+the origin and its growing complete population. They are local tests of
+the algebra, not counterexamples to a canonical estimate.
+\end{remark}
+
+\subsection{The regular gap-energy identity and its weight}
+
+A second way to retain the coupling is to eliminate $m$ from
+\eqref{joint:system}. Division by $\delta$ would introduce an artificial
+singularity at a merger. The following identity avoids it.
+
+\begin{proposition}[Signed weighted gap energy]\label{joint:energy-prop}
+On every closed scaled subinterval $[x,y]$ of the tube,
+\begin{align}
+ 2\delta\delta''-(\delta')^2+4&=8F\delta^2,
+       \label{joint:energy-point}\\
+ 8\int_x^yF\delta^2\dd u
+ &=2[\delta\delta']_x^y-3\int_x^y(\delta')^2\dd u+4(y-x)
+       \label{joint:energy-integral}\\
+ &\le2[\delta\delta']_x^y+4(y-x).\notag
+\end{align}
+These formulas hold through $\delta=0$.
+\end{proposition}
+
+\begin{proof}
+Differentiating the last equation of \eqref{joint:system} and substituting
+the other one gives
+$\delta''=8m^2\delta-8m+4F\delta$.
+Multiplication by $2\delta$ and subtraction of
+$(\delta')^2=(2-4m\delta)^2$ proves \eqref{joint:energy-point}.
+All terms are regular, including at a zero of $\delta$.
+Integrate and use
+$\int_x^y\delta\delta''=[\delta\delta']_x^y-
+\int_x^y(\delta')^2$ to obtain \eqref{joint:energy-integral}.
+Reality of $\delta'$ proves the inequality.
+\end{proof}
+
+The boundary value is $\delta\delta'=2\delta-4m\delta^2$ and hence
+still contains the interaction. The weight vanishes at mergers.
+Even on an interval where it is bounded below, an upper bound for a
+weighted \emph{signed} integral cannot be divided by the minimum weight
+to bound the unweighted integral without controlling its negative part.
+The exact transport cost in \eqref{eq:transport-cost} involves a different
+weight.
+
+\begin{proposition}[Limitation in the scalar consumer class]
+\label{joint:scalar-screen}
+The weighted allowance \eqref{joint:energy-integral}, together with the
+two scalar equations \eqref{joint:system}, does not bound $W$ or its
+inhomogeneous cost uniformly, even when $|\delta|\le d$ for fixed $d>0$.
+This conclusion concerns only scalar solutions of those two equations.
+\end{proposition}
+
+\begin{proof}
+For $h\ge1/(2d)$ set $m=-h$, $F=2h^2$ and $\delta=-1/(2h)$.
+Both equations hold identically. The weighted integral is
+$\int_x^yF\delta^2\dd u=(y-x)/2$, and
+\eqref{joint:energy-integral} is an equality independent of $h$.
+In contrast,
+\begin{equation}
+ W(x,y)=\e^{4h(y-x)},\qquad
+ 2\int_x^yW(u,y)\dd u=\frac{\e^{4h(y-x)}-1}{2h},
+ \label{joint:scalar-cost}
+\end{equation}
+which are unbounded as $h\to\infty$ at fixed $y-x>0$.
+\end{proof}
+
+No divisor or full-hierarchy realization of this scalar family is asserted.
+It therefore does not exclude an estimate using their additional structure.
+For comparison with the baseline $C_FL$ allowance, taking
+$h=\sqrt{C_FL/2}$ retains that forcing scale for large $L$ and the same
+exponential transport scale. The linearization
+$q=\exp(-2\int m)$, $q''=2Fq$ and $W(x,y)=[q(y)/q(x)]^2$ is equivalent
+to the scalar system and adds no signed information.
+
+\subsection{Deflation and an absolutely convergent derivative expansion}
+
+The same forcing also has a representation using only local derivatives
+of an entire function with the target pair removed. In the moving
+coordinate $w$, define
+\begin{equation}
+ G(t,w)=\frac{H(t,c(t)+w)}{w^2-D(t)},\qquad
+ U_n(t)=\sum_j w_j(t)^{-n},\quad n\ge2.
+ \label{joint:deflated-field}
+\end{equation}
+The quotient removes both target occurrences, also at $D=0$, and is
+entire in $w$. It is zero-free on $|w|<r_0$. Thus a holomorphic logarithm
+exists there; its derivatives of positive order do not depend on the
+chosen additive logarithm constant.
+
+\begin{proposition}[Deflated derivative transfer]\label{joint:deflation-prop}
+For $n\ge2$,
+\begin{equation}
+ U_n=-\frac{\partial_w^n\log G(t,0)}{(n-1)!}.
+ \label{joint:U-derivative}
+\end{equation}
+For each fixed integer $n\ge1$,
+\begin{align}
+ S_n&=\sum_{k\ge0}\binom{n+k-1}{k}D^kU_{2n+2k},
+       \label{joint:S-expansion}\\
+ F&=4\ell^4\sum_{k\ge0}(k+1)(2k+3)D^kU_{2k+4}.
+       \label{joint:F-expansion}
+\end{align}
+The series are absolutely convergent, uniformly on the established real
+time tube. Truncation of \eqref{joint:F-expansion} after $k=K$ has error
+at most
+\begin{equation}
+ 4\ell^4\left(\sum_j|w_j|^{-4}\right)
+       \sum_{k>K}(k+1)(2k+3)q^k,
+ \qquad q=|D|/r_0^2\le1/16.
+ \label{joint:deflation-tail}
+\end{equation}
+In particular, at a merger,
+\begin{equation}
+ F=12\ell^4U_4=-2\ell^4\partial_w^4\log G(t,0).
+ \label{joint:merger-derivative}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The deflated entire function has order at most one and precisely the
+exterior zeros $w_j$. Its genus-one logarithmic product has a possible
+affine prefactor and linear regularizers. Their derivatives vanish after
+two differentiations. Differentiating the remaining factors at $w=0$
+gives $-(n-1)!w_j^{-n}$, proving \eqref{joint:U-derivative}.
+The sum and its derivatives converge on smaller disks by the complete
+inverse-square tail and the exterior clearance.
+
+For each occurrence, the collar gives $|D/w_j^2|\le1/16$. Apply the
+binomial series to
+$Q_j^{-n}=w_j^{-2n}(1-D/w_j^2)^{-n}$.
+The absolute double sum is bounded by
+\[
+ \sum_j|w_j|^{-2n}
+       \sum_{k\ge0}\binom{n+k-1}{k}16^{-k}
+   =(1-1/16)^{-n}\sum_j|w_j|^{-2n}.
+\]
+The last sum is bounded uniformly on the fixed tube by the collar and
+unit count. This proves \eqref{joint:S-expansion} with the stated
+complete and time-uniform passage. Since
+$F=\ell^4(12S_2+16DS_3)$, the coefficient of $D^kU_{2k+4}$ is
+$12(k+1)+8k(k+1)=4(k+1)(2k+3)$, including $k=0$.
+This proves \eqref{joint:F-expansion}. Taking absolute values only in
+its omitted terms gives \eqref{joint:deflation-tail}. At $D=0$ retain
+$k=0$ and use $3!=6$ in \eqref{joint:U-derivative}.
+\end{proof}
+
+\subsection{The fixed-source superzeta correspondence}
+
+For clarity about the relation to classical superzeta functions, denote
+zeros of $\xi$ by $\varrho$ and write the first-kind integer sum as
+\[
+ \mathfrak Z(n\mid\tau)=\sum_{\varrho}
+              (1/2+\tau-\varrho)^{-n},\qquad n\ge2.
+\]
+This is the zero-based notation of \cite{Voros2014SuperzetaReview}; an
+irrelevant constant normalization of the completed function does not
+change it. If the independent pair tube contains $t=0$ and $D\ne0$, the
+normalization \eqref{eq:source} gives
+\begin{equation}
+ U_n(0)=(\ii/2)^n\mathfrak Z(n\mid-\ii c(0)/2)
+                     -s(0)^{-n}-(-s(0))^{-n}.
+ \label{joint:superzeta-transfer}
+\end{equation}
+Indeed, for a zero $z_j=c+w_j$ of $H(0,\cdot)$ and its corresponding
+$\varrho=(1-\ii z_j)/2$, one has
+$(1-\ii c)/2-\varrho=\ii w_j/2$. Summing over the complete divisor
+and removing the two target terms proves the formula. For even $n=2r$
+the removed term is $2D^{-r}$. These separate pieces become singular at
+a merger; the deflated expression \eqref{joint:U-derivative} is the
+regular combination. Separate absolute bounds for the pieces would lose
+that cancellation.
+
+The auxiliary translation $\tau$ in a fixed-source superzeta sum is not
+heat time. To see the distinction directly, put
+$\Xi_t(\zeta)=8H(t,\ii(2\zeta-1))$. The chain rule and
+\eqref{eq:heat} give
+\begin{equation}
+ \Xi_0=\xi,\qquad \partial_t\Xi_t=\tfrac14\partial_\zeta^2\Xi_t.
+ \label{joint:Xi-heat}
+\end{equation}
+Defining a superzeta for this heat-deformed field returns the same local
+derivatives in \eqref{joint:U-derivative}. The fixed-$\xi$ continuation
+formulas of \cite{Voros2014SuperzetaReview} do not themselves provide a
+signed estimate for these moving-center, pair-deflated derivatives on a
+heat interval. Moreover, the integer forcing
+\eqref{joint:F-expansion} already lies in the domain of absolute
+convergence; continuation to $\Re p\le1/2$ is unnecessary for this
+identity.
+
+Together, \eqref{joint:forcing-integral}, \eqref{joint:energy-integral}
+and \eqref{joint:F-expansion} distinguish three exact reorganizations
+of the same quantitative problem. A useful further estimate must control
+a signed remainder with its weights and entry value, a nondegenerate
+quantity that bounds the transport cost, or the joint deflated derivatives
+on the established tube. None of those estimates follows merely from the
+representations, and direct residues have access to the same information.

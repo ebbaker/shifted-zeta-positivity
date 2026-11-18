@@ -1,0 +1,79 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,longtable}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage{bookmark}
+\allowdisplaybreaks[2]
+\setlength{\emergencystretch}{2em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\e}{\mathrm e}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Cu}{C_{\mathrm u}}
+\DeclareMathOperator{\Log}{Log}
+\DeclareMathOperator{\Res}{Res}
+\newcommand{\cC}{\mathcal C}
+\newcommand{\repo}[1]{\texttt{\detokenize{#1}}}
+\title{Exterior moment hierarchies and gap transport\\in the Newman heat flow}
+\author{Edward Baker\thanks{Draft prepared for Edward Baker with OpenAI Codex LLM assistance in derivation, exposition and internal checking. The current revision's actual model and effort were unavailable in the recorded configuration; helper settings were inherited. The internal assessments are not specialist peer review.}}
+\date{18 November 2026\\\small Analytical working draft}
+\hypersetup{pdftitle={Exterior moment hierarchies and gap transport in the Newman heat flow},pdfauthor={Edward Baker}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study the interaction of a counted pair of zeros with the complete
+exterior divisor of the Newman heat field. Center and signed-discriminant
+coordinates yield an infinite hierarchy of even and odd rational moments,
+regular through mergers and algebraically equivalent to split-pole integer
+moments. Its finite heads have explicit geometrically small boundary
+residuals, but an independent absolute-Jacobian comparison can amplify
+them factorially; this limitation is confined to that error allowance.
+Local complex-power sums and damped Cauchy formulas provide complete
+evolution identities with separate divisor and contour errors. We derive
+the joint forcing equation, a weighted gap-energy identity, and a
+convergent expression in derivatives of the deflated field. Their signed
+quantitative inputs remain distinct from the identities themselves.
+In the all-real regime, the same interaction law gives a backward
+comparison from three consecutive initial gaps. Equal neighboring gaps
+of length $g$ improve the local first-collision allowance from $g^2/8$
+to $g^2/6$. A regional minimum obeys a weak evolution law despite switches
+of the minimizing pair; its law couples to the exterior interaction.
+Pair-count majorants and integer thresholds explain the additional
+zero-exception and uniform-height estimates required for global descent.
+The results distinguish exact hierarchy closure, compatible finite
+approximation and conditional collision exclusion. No finite-dimensional
+closure or improved bound on the de Bruijn--Newman constant is asserted.
+\end{abstract}
+\clearpage
+\tableofcontents
+\clearpage
+\input{sections/01_framework}
+\input{sections/02_integer_hierarchy}
+\input{sections/03_split_poles}
+\input{sections/10_finite_hierarchy}
+\input{sections/04_complex_powers}
+\input{sections/05_cauchy_evolution}
+\input{sections/06_bounds_transport}
+\input{sections/09_joint_dynamics}
+\input{sections/11_backward_statistics}
+\input{sections/07_discussion}
+\appendix
+\input{sections/08_analytic_constants}
+\bibliographystyle{plainurl}
+\bibliography{references,induction}
+\end{document}

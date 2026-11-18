@@ -1,0 +1,246 @@
+\section{The heat field and a counted pair}
+\label{sec:framework}
+
+The local interaction of a pair of zeros is determined by the entire
+exterior divisor, including nonreal zeros and their multiplicities.
+The useful coordinates for this interaction are the center $c$ and the
+signed discriminant $D$, rather than individually labelled target roots.
+Our starting point is the pair law established in the base manuscript
+and its cluster-transport development \cite{BakerBase,BakerGT41}.
+The present paper extends its rational moments to every integer order,
+relates them to split-pole moments, and then treats a complex exponent.
+The Gaussian-resolvent predecessor \cite{BakerGR02,BakerGR05,BakerGR07}
+supplies the first higher moment law and the quantitative comparison
+used in Section~\ref{sec:bounds}.
+
+The distinction between an identity and an estimate is essential to the
+development. An exact representation of the exterior interaction is
+valuable for organizing its evolution. A better gap estimate additionally
+requires a signed upper bound for a particular forcing, on a time interval
+whose zero count and separation have been established independently.
+The later all-real comparison uses an additional source of sign: each
+exterior denominator of an adjacent real pair is positive. This gives
+an explicit local backward allowance from neighboring gaps, while its
+statistical application still requires information about rare exceptions.
+
+The development has three stages. Sections~\ref{sec:integer}--\ref{sec:finite}
+establish rational closure, split-coordinate equivalence and the precise
+boundary error of a finite head. The complex exponent and contour
+representation then organize the complete forcing, with signed comparison
+and joint dynamics in Sections~\ref{sec:bounds}--\ref{sec:joint}.
+Section~\ref{sec:statistics} returns to adjacent real pairs and develops
+the backward and regional statistical consequences. Its hypotheses are
+stated separately: strict isolation there suffices for the identities,
+whereas the quantitative complex-power and truncation estimates retain
+the stronger collar fixed below.
+
+\subsection{Canonical normalization and hypotheses}
+
+For $u\ge0$, set
+\begin{equation}
+ r_k(u)=\pi k^2\e^{4u},\qquad
+ \Phi(u)=\sum_{k\ge1}\e^u(2r_k(u)^2-3r_k(u))\e^{-r_k(u)},\qquad
+ H(t,z)=\int_0^\infty\e^{tu^2}\Phi(u)\cos(zu)\dd u.
+ \label{eq:source}
+\end{equation}
+This is the unchanged complete theta source, with the normalization of
+\cite{BakerBase}; in particular $H(0,z)=\xi((1-\ii z)/2)/8$.
+Its positive half-line source gives $H(t,0)>0$ for real $t$.
+On compact sets in $(t,z)$ the integrand, including every fixed derivative,
+is dominated by a constant times a polynomial in $u$ times
+\[
+ \exp\{9u+\Re(t)u^2+|\Im z|u-\pi\e^{4u}\}.
+\]
+Consequently $H$ is jointly entire, real on the real plane, even in $z$,
+and satisfies the physical-time equation
+\begin{equation}
+ H_t=-H_{zz}.
+ \label{eq:heat}
+\end{equation}
+The sign of time in this equation is fixed throughout the paper.
+Maximizing $ru-(\pi/4)\e^{4u}$ after reserving an integrable part
+of the source bound gives
+$\log\max_{|z|\le r}|H(t,z)|=O(1+r\log(2+r))$
+uniformly for $0\le t\le1/2$. Thus its order is at most one.
+
+For the strong-collar results of Sections~\ref{sec:integer}--\ref{sec:joint},
+fix a compact real interval $I=[t_0,t_1]\subset[0,1/2]$ on which an independently
+established count-two tube isolates a conjugation-invariant pair. Freeze
+the height and collar parameters
+\begin{equation}
+ \begin{gathered}
+ T\ge64,\quad L=\log T,\quad \ell=L^{-1},\quad d\ge0,
+ \quad \max(2,4\sqrt d)\le a\le L,\quad r_0=a\ell,\\
+ c(t)\in[T,2T],\quad D(t)\in\R,\quad |D(t)|\le d\ell^2,\qquad
+ z_\pm=c\pm s,\quad s^2=D,\\
+ |z_\pm-c|\le r_0/4,\qquad
+ w_j=\rho_j-c,\quad |w_j|\ge r_0
+ \quad\text{for every exterior occurrence }\rho_j.
+ \end{gathered}
+ \label{eq:domain}
+\end{equation}
+An occurrence means a zero counted with its integer multiplicity.
+The two target occurrences coincide when $D=0$; $D<0$ describes
+a conjugate nonreal pair. The fixed scale $\ell$ is not differentiated.
+
+We use the complete strip, unit-count and safe-line bounds inherited
+from the canonical analysis in \cite{BakerBase,BakerGT41}. Specifically,
+the base manuscript gives the projected count in ``Uniform counts,
+including time zero'' and the safe-line estimate in ``A convex balance
+with conjugate dissipation.'' With one
+constant $\Cu\ge1$, enlarged to cover these inputs,
+\begin{equation}
+ \begin{gathered}
+ |\Im\rho|\le1,\qquad
+ \#\{\rho:v\le\Re\rho\le v+1\}\le\Cu\log(2+|v|),\\
+ \left|\frac{H_z}{H}(t,v\pm4\ii)\right|
+       \le\Cu\log(2+|v|),\qquad v\in\R,\quad t\in I.
+ \end{gathered}
+ \label{eq:count-safe}
+\end{equation}
+These are stated inputs, not conclusions of the moment identities.
+In particular, those identities do not create or prolong the tube.
+
+Write
+\begin{equation}
+ Q(t,w)=w^2-D(t),\quad Q_*(t,z)=(z-c(t))^2-D(t),\quad
+ Q_j=Q(t,w_j),\quad \mu_j=\frac{\ell^2}{Q_j},\quad q_0=\frac{16}{15}.
+ \label{eq:quadratic}
+\end{equation}
+The collar implies
+\begin{equation}
+ |Q_j|\ge\frac{15}{16}|w_j|^2,\qquad
+ |\mu_j|\le\gamma:=\frac{q_0}{a^2}<1.
+ \label{eq:collar-kernel}
+\end{equation}
+No right-half-plane condition is imposed on $Q_j$.
+
+\subsection{Symmetric coordinates and the pair equation}
+
+At a reference time $t_*$ choose the positive circle
+$\Gamma=\{|z-c(t_*)|=r_0/2\}$, fixed while differentiating in $t$.
+It has positive distance from all zeros. Its count remains two for
+nearby complex times. If $B=H_z/H$, the argument principle gives
+\begin{equation}
+ J_k=\frac1{2\pi\ii}\oint_\Gamma z^kB(t,z)\dd z,
+ \qquad c=J_1/2,\qquad D=J_2/2-c^2.
+ \label{eq:coordinates}
+\end{equation}
+These formulas define holomorphic coordinates even at a double zero.
+The factorization $H=Q_*A$ has $A$ jointly holomorphic and nonzero
+inside $\Gamma$. This follows either from division by the counted
+quadratic factor or from the Cauchy extension of the analytic boundary
+quotient. Put $g=A_z/A$ there. Inserting this factorization into
+\eqref{eq:heat}, with $w=z-c$, gives
+\begin{equation}
+ \frac{A_t}{A}=-(g_z+g^2)
+       +\frac{2wc'+D'-2-4wg(t,c+w)}{w^2-D}.
+ \label{eq:deflated}
+\end{equation}
+The numerator must vanish to the target multiplicities. Interpolating
+$h_0(w)=wg(t,c+w)$ at $\pm s$, with Hermite interpolation at $s=0$,
+therefore yields
+\begin{equation}
+ \begin{split}
+ c'&=g(t,c-s)+g(t,c+s),\\
+ D'&=2+4Dg[t;c-s,c+s]=2-4DM,\qquad
+ M:=-g[t;c-s,c+s],\\
+ \frac{A_t}{A}&=-(g_z+g^2)-4h_0[-s,s,w].
+ \end{split}
+ \label{eq:pairlaw}
+\end{equation}
+Divided differences are understood by analytic continuation at repeated
+nodes. At a merger $M=-g_z(t,c)$ and $D'=2$. Thus a collision creates
+no singularity in the signed discriminant equation.
+
+\subsection{Rational traces and the complete divisor}
+
+\begin{proposition}[Exterior traces]\label{prop:trace}
+For $n\ge1$ and $k\ge2$, respectively, the moments
+\begin{equation}
+ S_n=\sum_j Q_j^{-n},\qquad T_k=\sum_j w_jQ_j^{-k}
+ \label{eq:moments}
+\end{equation}
+are absolutely convergent and real on $I$. They have the local
+holomorphic contour expressions
+\begin{equation}
+ S_n=-\frac1{2\pi\ii}\oint_\Gamma Q_*^{-n}B\dd z,
+ \qquad
+ T_k=-\frac1{2\pi\ii}\oint_\Gamma(z-c)Q_*^{-k}B\dd z.
+ \label{eq:traces}
+\end{equation}
+In particular $M=S_1$. Their time derivatives exist through arbitrary
+exterior mergers and a double target.
+\end{proposition}
+
+\begin{proof}
+The unit count implies $\sum_\rho|\rho|^{-2}<\infty$.
+The order bound and evenness give the canonical product
+\begin{equation}
+ H(t,z)=H(t,0)\prod_{\{\rho,-\rho\}}
+              (1-z^2/\rho^2),
+ \label{eq:product}
+\end{equation}
+where opposite groups, their conjugates and multiplicities are retained.
+Indeed the genus-one factors of an opposite pair multiply to the displayed
+factor, and the only possible linear exponential prefactor is constant
+by evenness. The grouped logarithmic derivative converges locally away
+from the divisor. The finite collar and the unit count give absolute
+convergence of the moments; the slowest tails are $|\rho|^{-2}$
+and $|\rho|^{-3}$.
+
+For either kernel $R(w)=Q(w)^{-n}$ or $wQ(w)^{-k}$, the residue theorem
+for the rational function $R(z-c)/(z-\rho_j)$ gives
+\[
+ \frac1{2\pi\ii}\oint_\Gamma
+                 \frac{R(z-c)}{z-\rho_j}\dd z=-R(w_j).
+\]
+There is no residue at infinity. The genus-one additive constants
+integrate to zero because the sum of the residues of $R$ is zero.
+The same is true of the target contribution $R\,\partial_z Q_*/Q_*$:
+it has poles only at the targets and decays faster than $1/z$.
+Its combined target residue vanishes, even though the two residues
+need not vanish individually. Uniform convergence on $\Gamma$ now
+proves \eqref{eq:traces}. Taking $n=1$ also gives
+$S_1=-g[t;c-s,c+s]$. The fixed-circle formulas and
+\eqref{eq:coordinates} prove local analyticity without labelling
+individual exterior roots. Reality follows from conjugation.
+\end{proof}
+
+\begin{lemma}[Passage from polynomial identities at a time slice]
+\label{lem:slice-passage}
+Suppose an identity for a fixed finite collection of the moments
+\eqref{eq:moments}, $D$, and their first time derivatives is polynomial
+in absolutely convergent moments, after all nonabsolute terms have
+cancelled. If it holds for every finite polynomial heat field with an
+isolated target pair, it holds for $H$ under \eqref{eq:domain}--
+\eqref{eq:count-safe}, including multiple zeros.
+\end{lemma}
+
+\begin{proof}
+First, for a finite polynomial at $t_*$, perturb its roots to distinct
+ones preserving the count on $\Gamma$, and initialize its own polynomial
+heat evolution there. The derivative
+\begin{equation}
+ B_t=-\frac{H_{zzz}}H+\frac{H_zH_{zz}}{H^2}
+ \label{eq:log-time}
+\end{equation}
+and the fixed-circle coordinate and trace formulas depend continuously
+on the polynomial and its first three spatial derivatives. The contour
+denominators stay bounded away from zero. Thus an identity proved for
+simple roots passes to all finite multiplicities.
+
+Now truncate \eqref{eq:product} at increasing radii, retaining all ties,
+opposite groups and conjugates. Include the targets for all sufficiently
+large cutoffs. The product tail on a fixed compact set is
+$O(\log N/N)$ by the unit count. The polynomials and every fixed
+spatial derivative converge locally uniformly to $H(t_*,\cdot)$.
+Give each truncated polynomial its own heat evolution initialized at
+$t_*$. Formula \eqref{eq:log-time} and the trace formulas give convergence
+of the values and first time derivatives of the stated observables at
+that time. The remaining exterior sums converge absolutely. Passing
+the identity to the limit proves it at $t_*$; repeat at every time
+of $I$, with inward derivatives at its endpoints. This does not require
+a common time interval for the truncated heat evolutions, and gives
+no estimate uniform as the moment order tends to infinity.
+\end{proof}

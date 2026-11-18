@@ -1,0 +1,279 @@
+\section{Separate powers of the target poles}
+\label{sec:split}
+
+Choose an analytic square root \(s\) of \(D\) on a local chart where
+\(D\ne0\). Write \(z_\pm=c\pm s\), \(d_0=2s\), \(x_j=w_j-s\), and
+\(y_j=w_j+s=x_j+d_0\). The split-pole moments are
+\begin{equation}
+ P_{p,q}=\sum_j x_j^{-p}y_j^{-q},
+ \qquad p,q\in\mathbb Z_{\geq0},\quad p+q\geq2.
+ \label{split:def}
+\end{equation}
+Both \(\lvert x_j\rvert\) and \(\lvert y_j\rvert\) are at least
+\(3\lvert w_j\rvert/4\) by \eqref{eq:domain}. Thus all of
+\eqref{split:def}, including its pure powers, converge absolutely.
+
+The two moment families have an exact algebraic relation.
+For \(h=\max(p,q)\) one has
+\begin{equation}
+ \frac1{(w-s)^p(w+s)^q}
+    =\frac{(w-s)^{h-p}(w+s)^{h-q}}{(w^2-D)^h}.
+ \label{split:reduction}
+\end{equation}
+The numerator has degree at most \(2h-2\) in \(w\).
+Write an even power as \(w^{2k}=(Q+D)^k\) and an odd power as
+\(w^{2k+1}=w(Q+D)^k\), with \(Q=w^2-D\).
+Then \(k\leq h-1\) in the even terms and \(k\leq h-2\) in the
+odd terms. Expansion of the binomial gives only \(S_n\) with
+\(n\geq1\) and \(T_n\) with \(n\geq2\), with polynomial
+coefficients in \(s\) after \(D=s^2\). Conversely,
+\begin{equation}
+ S_n=P_{n,n}\quad(n\geq1),\qquad
+ T_n=\tfrac12(P_{n-1,n}+P_{n,n-1})\quad(n\geq2).
+ \label{split:inverse}
+\end{equation}
+In particular, since $w=(w-s)+s=(w+s)-s$,
+\begin{equation}
+ T_2=P_{1,2}+sP_{2,2}=P_{2,1}-sP_{2,2}.
+ \label{split:T2}
+\end{equation}
+This uses \(xy=Q\) and \(x+y=2w\). Both changes of expressions
+use the absolutely convergent index ranges.
+
+\begin{proposition}[Split-pole recurrence]\label{split:prop}
+For \(m,n\geq1\) write
+\begin{equation}
+ C_{m,n}=\sum_{i=2}^{m}P_{i,0}P_{m+1-i,n}
+            +\sum_{j=1}^{n-1}P_{m,j}P_{0,n+1-j}.
+ \label{split:convolution}
+\end{equation}
+On the axes use \(C_{m,0}=\sum_{i=2}^{m-1}P_{i,0}P_{m+1-i,0}\)
+and \(C_{0,n}=\sum_{j=2}^{n-1}P_{0,j}P_{0,n+1-j}\) for the
+respective index at least two. Let \(A_d=2/d_0-d_0M\).
+For \(p,q\geq1\), the complete hierarchy \cite{BakerCM08} is
+\begin{align}
+ P_{p,q}'={}&p\bigl(C_{p+1,q}-(p+3)P_{p+2,q}-(q+2)P_{p+1,q+1}
+                                  +A_dP_{p+1,q}\bigr)\notag\\
+   &+q\bigl(C_{p,q+1}-(p+2)P_{p+1,q+1}-(q+3)P_{p,q+2}
+                                  -A_dP_{p,q+1}\bigr).
+ \label{split:mixed}
+\end{align}
+The pure powers satisfy
+\begin{align}
+ P_{p,0}'&=p\bigl(C_{p+1,0}-(p+3)P_{p+2,0}-2P_{p+1,1}
+                                   +(2/d_0)P_{p+1,0}\bigr),
+       \qquad p\geq2,\notag\\
+ P_{0,q}'&=q\bigl(C_{0,q+1}-2P_{1,q+1}-(q+3)P_{0,q+2}
+                                   -(2/d_0)P_{0,q+1}\bigr),
+       \qquad q\geq2 .
+ \label{split:axes}
+\end{align}
+The separation obeys \(d_0'=4/d_0-2d_0M\). The equations
+are valid on the separated charts, including exterior multiplicities.
+\end{proposition}
+
+\begin{proof}
+At a finite simple-root slice define \(P_{1,0}\) and \(P_{0,1}\)
+as finite sums. The target velocities are
+\[
+ z_+'=2/d_0-2P_{1,0},\qquad z_-'=-2/d_0-2P_{0,1}.
+\]
+The identity \(x_j^{-1}-y_j^{-1}=d_0/Q_j\) gives
+\(P_{1,0}-P_{0,1}=d_0M\) and the stated equation for \(d_0'\).
+For the complete divisor this difference is the absolutely
+convergent series \(\sum_j d_0/Q_j\), or the limit of differences
+with a common cutoff.
+
+At an exterior root the contribution of the two targets to
+\(\rho_j'\) is \(2(x_j^{-1}+y_j^{-1})\).
+Subtracting \(z_+'\) for \(x_j'\) and \(z_-'\) for \(y_j'\), and
+differentiating the weight \(f_{p,q}(w)=(w-s)^{-p}(w+s)^{-q}\),
+gives the following two contributions to \(P_{p,q}'\):
+\begin{align*}
+ &p\bigl((2/d_0-2P_{1,0})P_{p+1,q}
+                    -2P_{p+2,q}-2P_{p+1,q+1}+U_{p+1,q}\bigr),\\
+ &q\bigl((-2/d_0-2P_{0,1})P_{p,q+1}
+                    -2P_{p+1,q+1}-2P_{p,q+2}+U_{p,q+1}\bigr).
+\end{align*}
+Omit a block with zero prefactor. Here the exterior pair term is
+\[
+ U_{m,n}=-2\sum_{j<k}
+        \frac{f_{m,n}(w_j)-f_{m,n}(w_k)}{w_j-w_k}.
+\]
+Splitting the difference between the two factors gives
+\begin{equation}
+ -\frac{f_{m,n}(u)-f_{m,n}(v)}{u-v}
+   =\sum_{i=1}^{m} f_{i,0}(u)f_{m+1-i,n}(v)
+     +\sum_{j=1}^{n} f_{m,j}(u)f_{0,n+1-j}(v).
+ \label{split:divdiff}
+\end{equation}
+For the first sum subtract \((u-s)^{-m}\) and \((v-s)^{-m}\)
+using the difference of reciprocal powers, with
+\((v+s)^{-n}\) held fixed. For the second use the corresponding
+reciprocal powers at \(-s\) with \((u-s)^{-m}\) fixed.
+The full kernel is symmetric in \(u,v\). Therefore \(U_{m,n}\)
+is the sum of the right side over ordered off-diagonal pairs.
+Subtracting the diagonal gives \(-mP_{m+1,n}\) and
+\(-nP_{m,n+1}\) in the two sums.
+
+When \(m,n\geq1\) the term \(i=1\) and the term \(j=n\) yield
+\((P_{1,0}+P_{0,1})P_{m,n}\). Their combination with the two
+moving-target blocks is \(-d_0MP_{p+1,q}\) and
+\(+d_0MP_{p,q+1}\), respectively. The other products form
+\eqref{split:convolution}. Adding the two target terms in each
+block to the diagonal subtractions gives the four coefficients
+in \eqref{split:mixed}. On the \(m\)-axis the two endpoints
+\(i=1,m\) give \(2P_{1,0}P_{m,0}\), and on the \(n\)-axis the
+endpoints \(j=1,n\) give \(2P_{0,1}P_{0,n}\). They cancel the
+first-power sums in the corresponding blocks. The diagonals
+here are \(-mP_{m+1,0}\) and \(-nP_{0,n+1}\). This proves
+\eqref{split:axes}. The cancellation precedes all limiting steps.
+
+The fixed physical circle \(\Gamma\) of Proposition~\ref{prop:trace}
+also gives the contour formula for the split weight
+\(k(z)=(z-z_+)^{-p}(z-z_-)^{-q}\).
+The integral of \(k\) vanishes by its decay \(O(z^{-p-q})\).
+The residue of \(k(z)/(z-\rho_j)\) at an exterior pole is
+\(k(\rho_j)\), so the integral on \(\Gamma\) gives its negative.
+In the convergent product logarithmic derivative each constant
+regularizer multiplies the zero integral of \(k\). Hence
+\begin{equation}
+ P_{p,q}=-\frac1{2\pi\ii}\oint_\Gamma
+                  k(z)\left(\frac{H_z}{H}-\frac{Q_{*,z}}{Q_*}\right)
+                   \,\dd z.
+ \label{split:trace}
+\end{equation}
+The \(Q_{*,z}/Q_*\) term accounts for both target poles.
+Its weighted integral vanishes since all poles of \(kQ_{*,z}/Q_*\)
+are enclosed and the decay is \(O(z^{-p-q-1})\).
+For \(p=2,q=0\) the individual target residues are
+\(-d_0^{-2}\) at \(z_+\) and \(+d_0^{-2}\) at \(z_-\).
+Separating the two pole contours would retain these two terms.
+For \(p=q\) the target term is the spatial derivative of
+\(-Q_*^{-p}/p\).
+
+Differentiate \eqref{split:trace} on the fixed circle, including
+\(k_t=k(p z_+'/(z-z_+)+q z_-'/ (z-z_-))\).
+The first contour jets converge by the argument of
+Lemma~\ref{lem:slice-passage}. At a finite multiple-root slice
+the root factors can be perturbed without changing the separated
+counts, then evolved from that slice. The derivatives of \(z_\pm\)
+come from the jets of \(c,D\) and \(s'=D'/(2s)\), with \(s\) bounded
+away from zero on each compact subchart. This also applies to
+the opposite-paired canonical product truncations there.
+The omitted occurrences in \eqref{split:def} contribute
+\(O(N^{1-p-q}\log N)\) at fixed orders, by the strip and unit count
+as in the proof of Theorem~\ref{thm:hierarchy}. Every term of the
+already canceled equations converges. This proves the complete
+laws. At an interval endpoint contained in the chart the derivatives
+are inward.
+\end{proof}
+
+For example, on the diagonal the identities
+\[
+ P_{n+1,n}-P_{n,n+1}=d_0 S_{n+1},\qquad
+ P_{n+2,n}+P_{n,n+2}=2S_{n+1}+d_0^2S_{n+2}
+\]
+give, directly from \eqref{split:mixed},
+\begin{align*}
+ S_n'={}&n(C_{n+1,n}+C_{n,n+1})-4n(n+2)S_{n+1}\\
+        &\quad-n(n+3)d_0^2S_{n+2}-nd_0^2MS_{n+1}.
+\end{align*}
+At \(n=1\) the convolution is \(M(2M+d_0^2 S_2)\).
+At \(n=2\) its five products are
+\[
+ S_2(P_{2,0}+P_{0,2})+P_{3,0}P_{1,2}+P_{2,1}P_{0,3}
+                       +P_{3,1}P_{0,2}+P_{2,0}P_{1,3}.
+\]
+Pair these products using \(x+y=2w\), \(y-x=d_0\), and \(xy=Q\).
+For the two crossed pairs use
+\begin{align*}
+ P_{3,0}+P_{0,3}&=2T_2+2d_0^2T_3,&
+ P_{3,0}-P_{0,3}&=d_0(3S_2+d_0^2S_3),\\
+ P_{3,1}+P_{1,3}&=2S_2+d_0^2S_3,&
+ P_{3,1}-P_{1,3}&=2d_0 T_3,\\
+ P_{2,0}+P_{0,2}&=2M+d_0^2 S_2,&
+ P_{2,0}-P_{0,2}&=2d_0 T_2,\\
+ P_{2,1}+P_{1,2}&=2T_2,&
+ P_{2,1}-P_{1,2}&=d_0 S_2 .
+\end{align*}
+The terms \(T_2T_3\) and \(d_0^4S_2S_3\) cancel, leaving
+\(4MS_2+2T_2^2+d_0^2MS_3+(d_0^2/2)S_2^2\).
+The two values of \(n\) reproduce \eqref{eq:low-orders} for \(S_1,S_2\).
+
+\subsection{Coalescing labels and an exact quartic}
+
+Changing \(s\) to \(-s\) swaps the two indices, and the right
+sides of the recurrence transform by the same exchange. At real
+times, conjugation fixes the moments for \(D>0\) and swaps the
+two indices for \(D<0\). At a merger the two raw labels have the
+same limit. In fact, \eqref{split:reduction} and the analytic
+rational moments give a decomposition
+\[
+ P_{p,q}(t)=A(t)+s(t)B(t)
+\]
+with \(A,B\) locally analytic in \(t\). They are obtained by
+separating the even and odd polynomial powers of \(s\) and
+substituting \(s^2=D(t)\). At a target merger \(t_*\), expansion of
+the summand in \(s\) at the nonzero exterior displacements gives
+\[
+ A(t_*)=\sum_j w_j(t_*)^{-p-q},\qquad
+ B(t_*)=(p-q)\sum_j w_j(t_*)^{-p-q-1}.
+\]
+Both sums converge absolutely. The symmetric combination and
+the divided antisymmetric combination recover \(A\) and \(B\).
+An individual coordinate has derivative asymptotic to \(B(t_*)/s\)
+if \(B(t_*)\ne0\), since \eqref{eq:pairlaw} gives \(D'(t_*)=2\).
+The condition on \(B(t_*)\) remains open at a canonical merger.
+
+The singularity occurs in a finite even quartic heat field.
+For \(b>0\) consider
+\begin{equation}
+ F(t,z)=(z^2-b^2)^2-t(12z^2-4b^2)+12t^2 .
+ \label{split:quartic}
+\end{equation}
+It satisfies \(F_t=-F_{zz}\) by differentiation. A fixed small
+circle around \(+b\) counts the two targets near \(t=0\). The
+exterior pair is their reflection, with center \(-c\) and the same
+\(D\). Setting \(u=z-b\) at \(t=0\), one has
+\[
+ \frac{F_t}{F}
+  =\frac{-8b^2-24bu-12u^2}{u^2(2b+u)^2}
+  =-2u^{-2}-\frac4b u^{-1}+O(1).
+\]
+Comparison with the derivative of the target quadratic gives
+\(D'(0)=2\), \(c'(0)=2/b\). The mean exterior displacement
+\(\bar w=-2c\) thus has value \(u_0=-2b\) and derivative \(8/u_0\).
+For a weight \(f(w,D)\) analytic near \((u_0,0)\), the trace over
+the exterior pair is
+\[
+ f(\bar w+s,D)+f(\bar w-s,D)
+    =2f(\bar w,D)+Df_{ww}(\bar w,D)+O(D^2).
+\]
+The derivative at the double is
+\((16/u_0) f_w+4f_D+2f_{ww}\), evaluated at \((u_0,0)\).
+For \(f=Q^{-n}\), the three contributions have coefficients
+\(-32n,4n,4n(2n+1)\) of \(u_0^{-2n-2}\). For \(f=wQ^{-n}\)
+they have coefficients \(16(1-2n),4n,-4n(1-2n)\) of
+\(u_0^{-2n-1}\). In particular
+\[
+ S_n'(0)=8n(n-3)u_0^{-2n-2},\qquad
+ T_n'(0)=8(n^2-4n+2)u_0^{-2n-1}.
+\]
+Independently, inserting \(S_n(0)=2u_0^{-2n}\),
+\(T_n(0)=2u_0^{1-2n}\), and \(D(0)=0\) in the regular equations
+gives the coefficients
+\[
+ 8n^2+8n(n-1)-8n(n+2),
+ \qquad
+ 8(2n-1)(n-1)-8(n^2+n-1),
+\]
+respectively. These reduce to the same derivatives.
+
+Here \(P_{2,0}=S_1+2DS_2+2sT_2\) by \eqref{split:reduction},
+and \(T_2(0)=2u_0^{-3}\ne0\). Thus the square-root term is
+nonzero on either label for \(t>0\) near zero, and the raw
+coordinate has no finite derivative through this double.
+This example is in the finite polynomial heat class. It
+exhibits the limitation of the split labels while the regular
+integer moments remain analytic.

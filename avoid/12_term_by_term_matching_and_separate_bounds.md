@@ -1387,3 +1387,26 @@ checks this within the changed-source fixed-slice class. A fixed-physical-scale
 O(1/L) error is separately proved; it does not bound the retained signed
 quantity. Keep the joint terms and the scale regime explicit. This excludes
 neither canonical time estimates nor other phase-sensitive Gaussian uses.
+
+**A degenerate signed weight does not pay transport, 18 November 2026.**
+Prepared for Edward Baker with Codex assistance; actual model/effort
+unavailable, helpers inherited settings. [CM Note13 §3](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/13_VCD_GT_CM_B03_JOINT_TRANSPORT_AND_SUPERZETA_20261118.md)
+states: “Its boundary value is `delta delta'=2delta−4m delta²` and is not
+free.” The exact upper allowance for the signed integral of `F delta²`
+is compatible with arbitrarily large exponential transport in the stated
+scalar consumer class. It cannot be unweighted across a merger; even away
+from zero, unknown negative contributions prevent dividing a signed
+integral bound by a minimum weight. [E15](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/08_VCD_GT_CM_B03_JOINT_TRANSPORT_ASSESSMENT_20261118.md)
+accepts this scoped screen. Pay the actual consumer, signed remainder and
+boundary data together. No canonical divisor or full-hierarchy obstruction
+follows from the scalar example.
+
+18 November 2026 — **Small hierarchy residual versus absolute propagation.**
+For Edward Baker with Codex assistance; actual settings unavailable.
+The [CM manuscript, Section 4](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/manuscript/sections/10_finite_hierarchy.tex)
+proves a geometrically small four-row residual but a factorial lower bound
+on its independent positive comparison allowance. It states: “The discarded
+signs and compatibility relations could matter to the actual solution.”
+[E19](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/10_VCD_GT_CM_E19_RECENT_MANUSCRIPT_ASSESSMENT_20261118.md)
+accepts that scoped screen. Do not infer either stable truncation from the
+small residual or actual instability from the growing absolute allowance.

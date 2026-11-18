@@ -1,0 +1,172 @@
+\section{Complete complex powers on local time charts}
+\label{sec:complex}
+
+The rational moments are regular at a merger. To extend the denominator
+power to a complex index, the logarithm must be chosen on a spatial
+neighborhood of each coalescing cluster. The two infinite ends of the
+divisor admit a common principal branch. We use the stated domain
+\eqref{eq:domain}, the strip and estimates \eqref{eq:count-safe}, and the
+frozen \(\ell\) throughout this section \cite{BakerBase,BakerGT41,BakerCM03}.
+
+Use \(w_j=\rho_j-c\), \(Q_j=Q(t,w_j)\) and
+\(\mu_j=\ell^2/Q_j\) from \eqref{eq:quadratic}, with every exterior
+occurrence counted. The collar gives \(|Q_j|\ge(15/16)|w_j|^2\).
+For a specified spatial logarithm of \(Q(t,w)\), put
+\[
+ f_p(t,w)=\exp\!\big(p(2\log\ell-\Log Q(t,w))\big),\qquad
+ h(t,w)=\frac{H_z(t,c(t)+w)}{H(t,c(t)+w)} .
+\]
+Here \(\log\ell\) is real. In a time chart, define
+\(Z(p,t)=\sum_j f_p(t,w_j)\). At positive integers \(n\) this agrees
+with \(\ell^{2n} S_n(t)\).
+
+\subsection{Spatial contours and the time law}
+
+At each reference time choose left and right centered cuts
+\(-R_-\in[-7,-6]\) and \(R_+\in[6,7]\) with no zero on their
+vertical connectors \(|\Im w|\le4\). These cuts remain cleared on
+a smaller real-time interval. Appendix~\ref{app:clearance} proves the
+choice from the unit count and gives the bounds needed to remove remote
+vertical closures. On the two closed half-strips beyond the cuts,
+\(\Re Q\ge(\Re w)^2/2\), so we use the principal log. This defines
+the power at every exterior occurrence beyond either cut.
+
+Inside the central rectangle, enclose each distinct reference
+exterior location in a small disk. The disks have disjoint closures
+and avoid the target and \(Q=0\). Their boundaries \(\gamma_C\) are
+zero-free. The argument principle preserves each count and the total
+central count on a smaller interval, so the disks account for all
+central exterior occurrences. At a disk center \(w_*\) and reference
+time \(t_*\) choose \(L_*\) with \(\exp L_*=Q_*=Q(t_*,w_*)\) and
+\(\Im L_*\in[-\pi,\pi]\). On the disk use
+\begin{equation}
+ \Log Q=L_*+\Log_{\rm pr}(Q/Q_*),\qquad |Q/Q_*-1|<1/2 .
+ \label{cp:local-log}
+\end{equation}
+Shrinking the disks and the time interval ensures the inequality on
+neighborhoods of their closures. These logs have
+\(|\Im\Log Q|\le\Theta=3\pi/2\). Each disk uses one log through any
+merger of its counted occurrences. The compact established interval admits a
+finite cover by such charts, with estimates on compact subintervals
+that still cover it.
+
+For an integrand \(B\) with the log prescribed on each piece, let
+\begin{equation}
+\begin{aligned}
+ \mathcal S(B)=\frac1{2\pi\ii}\Bigg(&
+   \sum_C\oint_{\gamma_C} B(w)\dd w
+   +\int_{R_+}^{\infty}\!\big[B(x-4\ii)-B(x+4\ii)\big]\dd x\\
+ &+\int_{-\infty}^{-R_-}\!\big[B(x-4\ii)-B(x+4\ii)\big]\dd x\\
+ &+\int_{R_++4\ii}^{R_+-4\ii} B(w)\dd w
+  +\int_{-R_--4\ii}^{-R_-+4\ii} B(w)\dd w\Bigg).
+\end{aligned}
+\label{cp:spatial-boundary}
+\end{equation}
+The circles are counterclockwise. Both lower rays go rightward and
+both upper rays leftward. The finite right connector goes down, and
+the finite left connector goes up.
+
+\begin{theorem}[Complete local complex-power law]\label{thm:complex-time}
+On each chart the complete sum \(Z\) is holomorphic in \(p\) for
+\(\Re p>1/2\) and is \(C^1\) in real physical time, with inward
+derivatives at the interval endpoints. With derivatives at fixed \(w\),
+\begin{equation}
+\begin{aligned}
+ Z&=\mathcal S(f_ph),\\
+ Z_t&=\mathcal S((f_p)_t h+f_ph_t)
+   =\mathcal S\big(\big[(f_p)_t-(f_p)_{ww}-c'(f_p)_w\big]h
+                                       +(f_p)_wh^2\big),\\
+ h_t&=-h_{ww}-2h h_w+c' h_w,\qquad (f_p)_t=pD'f_p/Q .
+\end{aligned}
+\label{eq:complex-time}
+\end{equation}
+The derivative is holomorphic on the same half-plane and continuous
+through target and exterior mergers on the chart.
+\end{theorem}
+
+\begin{proof}
+The complete value bound in Appendix~\ref{app:value-sums} gives normal
+convergence in \(p\). For the spatial formula, first close the two
+half-strips at distant cleared verticals, upward on the right and
+downward on the left. The residue of \(h\) is the zero multiplicity,
+and \(f_p\) is holomorphic in the region of each contour. Hence the
+finite contours count all their exterior occurrences. The remote
+edges vanish by \eqref{app:edge-bound}. The omitted divisor values
+tend to zero and the horizontal rays converge absolutely.
+
+The centered heat equation yields
+\(h_t=\partial_w(-H_{zz}/H)+c'h_w\). Substituting
+\(H_{zz}/H=h_w+h^2\) gives the last line of
+\eqref{eq:complex-time}. Differentiation under \(\mathcal S\) is
+justified independently of divisor truncation by the safe-line and
+finite-contour estimates in Appendix~\ref{app:time-bounds}. For the
+second derivative formula, the difference of the two integrands is
+the spatial derivative of
+\[
+ -f_ph_w+(f_p)_wh-f_ph^2+c'f_ph .
+\]
+The integral of this derivative vanishes on each circle. On each
+tail boundary the primitive agrees where the rays meet the finite
+connector and tends to zero at the infinite ends. The square of
+the full field \(h\) in \eqref{eq:complex-time} retains the
+spatial interaction in the integer law \eqref{eq:low-orders}.
+\end{proof}
+
+Two time charts use the same principal logs for \(|\Re w|\ge7\).
+Near each overlap time, refine the finitely many other assignments
+by small disks around the distinct affected locations, with fixed
+counts. In each refinement disk the two logs differ by a constant
+\(2\pi\ii k_C\), \(k_C\in\mathbb{Z}\). The branch difference is
+\begin{equation}
+ Z_B-Z_A=\sum_C\big(\exp(-2\pi\ii k_Cp)-1\big)Z_{A,C},
+ \label{cp:transition}
+\end{equation}
+where \(Z_{A,C}\) is the trace of the power in chart \(A\) over
+that disk. Its fixed circle proves validity also after one
+physical time differentiation. All these finite corrections
+vanish at integers, including their time derivatives. This is a
+local atlas for the noninteger powers.
+
+\subsection{Conjugation and the negative-axis defect}
+
+For a function of \(p\), write
+\(Z^\sharp(p,t)=\overline{Z(\bar p,t)}\). The field and selected
+pair are conjugation invariant at real time, so the central disks
+can be chosen in conjugate pairs, with self-conjugate disks at
+real centers. For real exterior \(w\) the denominator \(Q\) is
+positive. A negative-real \(Q\) can arise only at \(w=\ii y\ne0\)
+since \(\Im Q=2\Re w\,\Im w\). Its two conjugate locations are
+distinct. Choose opposite arguments \(+\pi,-\pi\) there and take
+conjugate \(L_*\) on all paired disks, with the real log at real
+centers. In \eqref{cp:local-log} the ratio log has argument of
+magnitude less than \(\pi/4\), so \(5\pi/4\) suffices for \(\Theta\)
+on these charts. Both far principal logs are conjugation
+compatible. Conjugation now permutes the entire occurrence
+list and conjugates the logs. Absolute convergence gives
+\begin{equation}
+ Z^\sharp=Z
+ \label{cp:schwarz}
+\end{equation}
+locally in real time, including mergers. This symmetry also holds
+for \(Z_t\) by Theorem~\ref{thm:complex-time}.
+
+At a fixed slice let \(Z_+\) have principal logs off the negative
+axis and argument \(+\pi\) at all negative-real \(Q_j\). Its exact
+defect is
+\begin{equation}
+ Z_+-Z_+^\sharp=-2\ii\,\ell^{2p}\sin(\pi p)
+                        \sum_{j:Q_j<0}|Q_j|^{-p}.
+ \label{cp:axis-defect}
+\end{equation}
+The sum is finite and includes both conjugate locations with
+all multiplicities. This follows by subtracting the two
+exponentials \(\exp(-\ii\pi p)\) and \(\exp(+\ii\pi p)\) at each
+such occurrence. Resetting to this slice prescription can cross
+a branch cut. The time law uses the continuations of the local logs.
+At that fixed slice the algebra of \eqref{cp:transition} compares this
+prescription with any chart: group the finitely many affected occurrences
+by their logarithm shifts. This value comparison does not assert that
+resetting to $Z_+$ defines an analytic time chart. The differentiated
+transition formula applies to pairs of local analytic charts
+\cite{BakerCM04,BakerCMReview}.
+

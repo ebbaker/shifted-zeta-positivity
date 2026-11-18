@@ -301,3 +301,61 @@ All assessments are internal with shared premises.
 
 
 **Split-pole integer hierarchy, 18 November 2026.** For Edward Baker with Codex assistance; root actual settings unavailable, helpers requested Sol6.1/ultra. [CM Note09](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/09_VCD_GT_CM_E10_REGULAR_ODD_EVEN_HIERARCHY_20261118.md), **proved in-note**, gives all-index polynomial equations for D, S_n (n>=1) and T_n (n>=2), including T2'=(6M+8DS2)T2-20T3-40DT4. [E11](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/05_VCD_GT_CM_E11_INTEGER_CLOSURE_ASSESSMENT_20261118.md) states **“B04 closure test satisfied.”** It accepts complete canonical passage and regularity through mergers, plus the equivalent split-pole recurrence on nonzero-D charts. The closure is componentwise and infinite; absolute midpoint drift, finite truncation, arbitrary-sequence well-posedness and signed bounds remain separate. An exact finite quartic verifies all orders at simultaneous doubles and exhibits an unsymmetrized split-coordinate singularity. [Synthesis10](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/10_VCD_GT_CM_SPLIT_POLE_SYNTHESIS_AND_CONTINUATION_20261118.md). Internal shared-premise assessment.
+
+
+**CM analytical manuscript milestone, 18 November 2026.** For Edward Baker
+with Codex assistance; root settings unavailable, helpers requested
+Sol6.1/ultra. [Correction check07](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/07_VCD_GT_CM_E13_CORRECTION_CHECK_20261118.md)
+states: “The corrected analytical manuscript is accepted within the scope
+of the original assessment.” The [draft](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/manuscript/README.md)
+derives the integer hierarchy, split-pole equivalence, complex-power time
+law and complete contour estimates, then the scoped signed comparison and
+conditional transport consumer. Its 25-page reading copy is ignored;
+[continuation12](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/12_VCD_GT_CM_MANUSCRIPT_CONTINUATION_20261118.md)
+retains the open canonical signed input. Scientific statuses above are
+unchanged; no new collision exclusion or finite closure. Internal
+shared-premise assessment, with separate source/build/layout checks.
+
+**CM joint transport/completion screen, 18 November 2026.** Prepared for
+Edward Baker with Codex assistance; actual chat0002 model/effort unavailable,
+helpers inherited settings. [Note13](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/13_VCD_GT_CM_B03_JOINT_TRANSPORT_AND_SUPERZETA_20261118.md)
+states **“Proved in-note: the identities and scoped scalar/polynomial screens
+below.”** It gives `F'−8mF=R`, the exact delta²-weighted gap-energy identity
+and a convergent deflated-log-derivative formula for F. Finite quartic
+controls give both signs of the merger remainder. The scalar consumer
+`m=−h, F=2h², delta=−1/(2h)` saturates the weighted allowance while its
+transport is exponential in h; no divisor realization is claimed.
+[E15](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/08_VCD_GT_CM_B03_JOINT_TRANSPORT_ASSESSMENT_20261118.md)
+accepts within the identity, transfer and scoped-screen domains. The checked
+fixed-xi superzeta passages supply no heat-interval signed estimate.
+No improved canonical forcing/transport bound follows. Internal shared-premise
+assessment; [continuation14](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/14_VCD_GT_CM_B03_R2_CONTINUATION_20261118.md)
+locates the missing acquisition input.
+
+**Regional three-gap comparison, 18 November 2026.** For Edward Baker with
+Codex assistance; actual settings unavailable, helpers inherited.
+[CM Note17](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/17_VCD_GT_CM_B07_REGIONAL_GAP_STATISTICS_AND_BACKWARD_COMPARISON_20261118.md) states **“proved in-note conditional local
+comparisons; statistical source acquisition open.”** On the inherited slab,
+strictly isolated adjacent real pairs satisfy the backward comparison
+`D(u)>=(1+2b0u)[d0(1+2b0u)-2u]`, with b0 supplied by the two adjacent
+exterior zeros. Three equal initial gaps g give duration <g²/6 instead of
+<g²/8. [E17](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/09_VCD_GT_CM_E17_REGIONAL_STATISTICS_ASSESSMENT_20261118.md) accepts the corrected conditional scope.
+The finite-minimum weak law needs joint exterior data; rare events require
+zero-exception and uniform height payments. No canonical gap-tail law or
+improved Lambda bound is acquired. Separate internal shared-premise review.
+
+**Recent CM manuscript integration, 18 November 2026.** For Edward Baker
+with Codex assistance; actual settings unavailable, helpers inherited.
+[E19](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/10_VCD_GT_CM_E19_RECENT_MANUSCRIPT_ASSESSMENT_20261118.md)
+accepts the corrected [manuscript](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/manuscript/main.tex) within its
+identity, approximation-screen and conditional statistical domains.
+Section 4 now fully proves and separately assesses the four-row finite-head
+residual and its geometric bound. Its independent positive-Jacobian allowance
+has lower bound `(B1 L/2)(P+2)(P+1)!(4 gamma tau)^P`; the manuscript states:
+“The conclusion concerns this independent constant-tail, absolute-Jacobian
+comparison, not the signed truncation error.” Sections 8--9 systematically
+derive the previously assessed joint and backward-statistical results.
+The ignored reading copy has 38 pages; no numerical evidence is needed for
+these proofs. Common-time approximation, canonical gap-tail acquisition and
+an improved Lambda bound remain open. [Integration18](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/18_VCD_GT_CM_RECENT_MANUSCRIPT_INTEGRATION_20261118.md).
+Internal shared-premise assessment, no specialist review.

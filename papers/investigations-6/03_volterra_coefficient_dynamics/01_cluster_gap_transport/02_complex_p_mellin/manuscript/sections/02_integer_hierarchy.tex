@@ -1,0 +1,201 @@
+\section{A collision-regular integer hierarchy}
+\label{sec:integer}
+
+On the tube \eqref{eq:domain}, set \(w_j=\rho_j-c\), \(Q_j=w_j^2-D\),
+and \(m_j=Q_j^{-1}\) for each exterior occurrence. The rational
+moments are
+\[
+ S_n=\sum_j m_j^n\quad(n\geq 1),\qquad
+ T_n=\sum_j w_jm_j^n\quad(n\geq 2),\qquad M=S_1 .
+\]
+They are real by conjugation. The collar gives
+\(\lvert Q_j\rvert\geq(15/16)\lvert w_j\rvert^2\). This bound and the
+unit count in \eqref{eq:count-safe} give absolute convergence in the
+indicated index ranges. In particular, the first odd moment is outside
+these ranges. The hierarchy extends the interaction law
+of \cite{BakerGT41} and the next even moment calculation of
+\cite{BakerGR02}, using the rational divided differences of
+\cite{BakerCM09}. Primes denote physical time derivatives.
+
+\begin{theorem}[Integer moment evolution]\label{thm:hierarchy}
+On the complete canonical tube, the regular moments satisfy
+\begin{align}
+ S_n'={}&2n\sum_{k=1}^{n}S_kS_{n+1-k}
+       +2n\sum_{k=2}^{n}\bigl(T_kT_{n+2-k}+DS_kS_{n+2-k}\bigr)
+       \notag\\[-1pt]
+       &\quad-4n(n+2)S_{n+1}-4n(n+3)DS_{n+2},
+       \qquad n\geq1, \label{eq:S-hierarchy}\\
+ T_n'={}&2(2n-1)\sum_{k=2}^{n}T_kS_{n+1-k}
+       +4nD\sum_{k=2}^{n}T_kS_{n+2-k}
+       \notag\\[-1pt]
+       &\quad-4(n^2+n-1)T_{n+1}-4n(n+3)DT_{n+2},
+       \qquad n\geq2. \label{eq:T-hierarchy}
+\end{align}
+Empty sums are zero. These equations and \(D'=2-4DM\) hold through
+target and exterior multiplicities, with inward derivatives at the
+interval endpoints. Each equation involves finitely many terms of the
+infinite relative moment family. The absolute midpoint \(c\) uses
+its counted contour law.
+\end{theorem}
+
+\begin{proof}
+First consider a polynomial satisfying the physical heat equation at
+a slice with simple roots. Factoring out a simple root gives
+\(\rho'=2\sum_{\eta\ne\rho}(\rho-\eta)^{-1}\). At this finite stage
+write \(P=\sum_j w_jm_j=T_1\). Adding the target velocities gives
+\(c'=-2P\). Multiplying their velocity difference by \(s\), where
+\(s^2=D\), gives \(D'\). The mutual target force contributes \(2\)
+to this derivative, and each exterior occurrence contributes
+\(-4Dm_j\). Thus \(D'=2-4DM\), as in \eqref{eq:pairlaw}.
+The contribution of the targets to the velocity at an exterior root
+is \(4w_jm_j\). Hence
+\begin{equation}
+ w_j'=4w_jm_j+2P+2\sum_{k\ne j}\frac{1}{w_j-w_k},
+ \label{int:relative}
+\end{equation}
+where the last sum ranges over exterior occurrences.
+
+For the symmetrization, let \(A=(u^2-D)^{-1}\), \(B=(v^2-D)^{-1}\),
+and \(L_h=\sum_{i=0}^{h-1}A^{h-1-i}B^i\) for \(h\geq1\), with
+\(L_0=0\). The two divided differences are
+\begin{align}
+ \mathcal E_h(u,v)&=\frac{A^h-B^h}{u-v}=-(u+v)AB L_h, \notag\\
+ \mathcal O_h(u,v)&=\frac{uA^h-vB^h}{u-v}
+              =-AB L_{h-1}-(D+uv)AB L_h. \label{int:divdiff}
+\end{align}
+Indeed \(A-B=-(u-v)(u+v)AB\), and
+\(uA-vB=-(u-v)(D+uv)AB\). The identity
+\(x^h=xL_h-AB L_{h-1}\) for \(x=A,B\) follows by cancellation of
+successive terms. It gives the second line of \eqref{int:divdiff}
+from the first-power difference. Both rational expressions on the
+right are regular at \(u=v\) away from zeros of the denominators.
+
+The product \(AB L_h\) is \(\sum_{k=1}^h A^k B^{h+1-k}\).
+The symmetric kernels in \eqref{int:divdiff} therefore give
+\begin{align}
+ -\sum_{i<j}\mathcal O_{n+1}(w_i,w_j)
+  ={}&\frac12\sum_{k=1}^{n}
+             \bigl(S_kS_{n+1-k}-S_{n+1}\bigr)\notag\\
+   &+\frac D2\sum_{k=1}^{n+1}
+             \bigl(S_kS_{n+2-k}-S_{n+2}\bigr)\notag\\
+   &+\frac12\sum_{k=1}^{n+1}
+             \bigl(T_kT_{n+2-k}-S_{n+1}-DS_{n+2}\bigr),
+     \label{int:odd-pairs}\\
+ -\sum_{i<j}\mathcal E_h(w_i,w_j)
+  ={}&\sum_{k=1}^{h}\bigl(T_kS_{h+1-k}-T_{h+1}\bigr).
+     \label{int:even-pairs}
+\end{align}
+The factor \(1/2\) in \eqref{int:odd-pairs} converts the ordered
+off-diagonal sum to the unordered sum. The three diagonal subtractions
+come from \(A^{n+1}\), \(DA^{n+2}\), and
+\(w^2 A^{n+2}=A^{n+1}+DA^{n+2}\), respectively.
+The two contributions from \(u+v\) in the even difference give the
+same ordered sum after \(k\) is reversed. Each diagonal contributes
+\(T_{h+1}\), and the two terms cancel the ordering factor \(1/2\).
+
+For the even weight \(f(w,D)=(w^2-D)^{-n}\),
+\(f_D=n(w^2-D)^{-n-1}\) and \(f_w=-2nw(w^2-D)^{-n-1}\).
+Differentiating along \eqref{int:relative} gives
+\begin{align}
+ S_n'={}&nD'S_{n+1}-8n(S_{n+1}+DS_{n+2})
+          -4nPT_{n+1}-4n\sum_{i<j}\mathcal O_{n+1}(w_i,w_j).
+ \label{int:even-before}
+\end{align}
+The \(k=1,n+1\) terms of the \(T\)-convolution in
+\eqref{int:odd-pairs} contribute \(4nPT_{n+1}\) in
+\eqref{int:even-before}. The same two endpoints of the \(D\)-weighted
+convolution contribute \(4nDMS_{n+1}\), which cancels the interaction
+term of \(nD'S_{n+1}\). The remaining coefficient of \(S_{n+1}\)
+is \(2n-8n-2n^2-2n(n+1)=-4n(n+2)\). The coefficient of
+\(DS_{n+2}\) is \(-8n-4n(n+1)=-4n(n+3)\). This yields
+\eqref{eq:S-hierarchy}.
+
+For the odd weight \(f(w,D)=w(w^2-D)^{-n}\) one has
+\[
+ f_D=nw(w^2-D)^{-n-1},\qquad
+ f_w=(1-2n)(w^2-D)^{-n}-2nD(w^2-D)^{-n-1}.
+\]
+Consequently
+\begin{align}
+ T_n'={}&nD'T_{n+1}+4(1-2n)T_{n+1}-8nDT_{n+2}\notag\\
+       &+2P\bigl((1-2n)S_n-2nDS_{n+1}\bigr)\notag\\
+       &+2(1-2n)\sum_{i<j}\mathcal E_n(w_i,w_j)
+          -4nD\sum_{i<j}\mathcal E_{n+1}(w_i,w_j).
+       \label{int:odd-before}
+\end{align}
+By \eqref{int:even-pairs}, the \(k=1\) terms cancel both terms
+proportional to \(P\). The \(k=n+1\) term of the \(D\)-weighted
+sum yields \(4nDMT_{n+1}\), canceling the interaction part of
+\(nD'T_{n+1}\). The other diagonal and direct terms give
+\(2n+4(1-2n)+2n(1-2n)=-4(n^2+n-1)\) for \(T_{n+1}\) and
+\(-8n-4n(n+1)=-4n(n+3)\) for \(DT_{n+2}\).
+The two surviving convolution ranges are \(2\leq k\leq n\).
+This proves \eqref{eq:T-hierarchy} at the finite simple slice.
+The arguments have eliminated every use of \(P\).
+
+For the complete passage, fix a reference slice \(\tau\) and a
+stationary positive physical circle \(\Gamma\) enclosing the two
+targets and excluding every exterior occurrence. Use
+\(u=z-c(t)\), \(Q_*(t,z)=u^2-D(t)\).
+For a weight \(f=Q_*^{-n}\) or \(f=uQ_*^{-n}\),
+Proposition~\ref{prop:trace} writes the exterior sum as
+\(-\langle f(H_z/H-Q_{*,z}/Q_*)\rangle_\Gamma\), where
+\(\langle g\rangle_\Gamma=(2\pi\ii)^{-1}\oint_\Gamma g(z)\,\dd z\).
+Both poles remain inside the fixed circle, including when they
+coalesce. The combined target term integrates to zero since
+\(fQ_{*,z}/Q_*=O(z^{-3})\) at infinity and all its poles are inside.
+It vanishes as an identity in time. Differentiation of the sum
+retains the full motion of the kernel, using \(u_t=-c'\) and
+\(Q_{*,t}=-2uc'-D'\), together with
+\[
+ \partial_t(H_z/H)=-H_{zzz}/H+H_zH_{zz}/H^2 .
+\]
+The contour expression is locally holomorphic in time.
+
+For a finite multiple-root slice, perturb the root factors at that
+slice and initialize a separate polynomial heat solution for each
+perturbation. The strict clearance keeps the target count. The
+spatial derivatives through order three converge on \(\Gamma\).
+The displayed heat derivative and the counted target moments then
+give convergence of the first contour jets, including \(c',D'\).
+The right sides of \eqref{eq:S-hierarchy} and \eqref{eq:T-hierarchy}
+are continuous finite sums of occurrence values, so the identities
+persist at polynomial multiples.
+
+For the canonical field, apply Lemma~\ref{lem:slice-passage} at
+\(\tau\) with modulus cutoff \(N\), keeping the entire opposite and
+conjugate groups and every tied occurrence. The truncated slice
+contains the exact targets for large \(N\). Its heat derivative at
+\(\tau\) is determined by its first three spatial derivatives on
+\(\Gamma\). The omitted inverse-square product tail
+\(O(\log N/N)\) gives uniform compact convergence of those
+derivatives by Cauchy's formula. Together with the strict clearance
+on the fixed circles, this gives convergence of the time jets of
+the rational moments and of \(c,D\) at the reference slice.
+
+For \(N>4T+8\), an omitted root has \(\lvert w_j\rvert\geq
+\lvert\rho_j\rvert/2\). A dyadic shell of radii comparable to
+\(2^kN\) contains \(O(\Cu\,2^kN\log(2^kN))\) roots by the strip
+and unit count. Summation against the decay powers \(2n\) and
+\(2n-1\) gives the respective moment errors
+\(O(N^{1-2n}\log N)\) and \(O(N^{2-2n}\log N)\).
+Thus all products in each fixed equation converge. A finite
+cover by cleared circles gives the jet passage uniformly on the
+compact established tube at fixed \(T\) and fixed orders. The argument
+proves the canonical equations using these reference-slice jets alone.
+\end{proof}
+
+In particular the first forcing moments and the first odd derivative are
+\begin{equation}
+ \begin{aligned}
+ S_1'&=2M^2-12S_2-16DS_3,\\
+ S_2'&=8MS_2-32S_3+4DS_2^2-40DS_4+4T_2^2,\\
+ T_2'&=(6M+8DS_2)T_2-20T_3-40DT_4 .
+ \end{aligned}
+ \label{eq:low-orders}
+\end{equation}
+The spatial term \(4T_2^2\) in \(S_2'\) has its inherited
+positive sign \cite{BakerGR02,BakerGR05}. The equations describe
+componentwise evolution for the given field. Arbitrary-sequence
+well-posedness, finite truncation, and a signed forcing estimate
+are separate questions.

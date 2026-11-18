@@ -1,0 +1,448 @@
+% 18 November 2026. Drafted for Edward Baker with OpenAI Codex assistance.
+% Actual model/effort unavailable; helper settings inherited.
+\section{Backward comparison and regional gap statistics}
+\label{sec:statistics}
+
+The preceding hierarchy describes the exterior of a specified pair. A
+statistical question instead asks how the smallest gap in a region evolves,
+allowing its minimizing pair to change. These viewpoints can be connected
+without assigning randomness to the zeros: choose a region at random,
+retain the complete deterministic evolution in each region, and average
+its observables. The essential additional information is the environment
+of a small gap. In the all-real regime the hierarchy gives that environment
+a useful sign, leading to a comparison determined by three initial gaps.
+We develop the local comparison before forming its statistical consumers,
+following the conditional results of \cite{BakerCM16,BakerCM17}.
+
+\subsection{What minimum selection does and does not provide}
+
+The strong collar already used in this paper makes the target occurrences
+strict mutual nearest neighbors. Indeed, under \eqref{eq:domain},
+\begin{equation}
+ |\rho_j-z_\pm|\ge r_0-|s|\ge\frac{3r_0}{4}
+ >\frac{r_0}{2}\ge |z_+-z_-|.
+ \label{stat:mutual-neighbors}
+\end{equation}
+This compares each endpoint with its exterior; it does not compare two
+exterior zeros. Nor does it require an attained global minimum.
+
+\begin{proposition}[Complete versus regional minima]
+\label{stat:minimum-selection}
+At a simple canonical slice in $0\le t\le1/2$, the infimum of distances
+between distinct zero occurrences is zero and is not attained. A finite
+set of at least two occurrences has a minimum; if its points are real and
+ordered, a minimizing pair is consecutive in that finite ordering.
+If a conjugation-invariant target $c\pm s$ is shortest among a specified
+comparison set and $s\ne0$, every compared exterior occurrence satisfies
+\begin{equation}
+ |w_j-s|,|w_j+s|\ge2|s|,
+ \qquad |Q_j|\ge4|D|,
+ \qquad |w_j|\ge\sqrt{3|D|}.
+ \label{stat:relative-collar}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The complete canonical count on the inherited slab is
+$N_t(X)\sim X\log X/(4\pi)$ for positive real parts, with all zeros in
+$|\Im z|\le1$; the closed-slab count passage is given in
+\cite{BakerGT33}. If all distinct zeros were separated by $g>0$, their
+open disks of radius $g/2$ would be disjoint. Disks centered at zeros with
+$0<\Re z\le X$ lie in a rectangle of area
+$(X+g)(2+g)$. Comparison of areas would give $N_t(X)=O_g(X)$,
+contrary to the count. Simplicity excludes an attained zero distance.
+Existence of a finite minimum is immediate. For real ordered points,
+a nonconsecutive distance is a sum of consecutive positive gaps and
+cannot be smaller than all of them. Finally, shortest-pair selection
+gives the first inequalities in \eqref{stat:relative-collar}; their
+product gives the bound for $Q_j$. Adding their squares gives
+$2|w_j|^2+2|s|^2\ge8|s|^2$, proving the last bound.
+\end{proof}
+
+The separation in \eqref{stat:relative-collar} vanishes with the target
+gap. It does not supply the independent collar in \eqref{eq:domain},
+which gives the stronger fixed estimate $|Q_j|\ge15r_0^2/16$.
+For a window minimum, the comparison says nothing about unexamined
+exterior occurrences. At a complex slice, a closest pair also need not be
+conjugation invariant: the points $\ii h,\varepsilon+\ii h,-\ii h,
+\varepsilon-\ii h$, with $0<\varepsilon<2h$, have horizontal closest
+pairs. Even an admissible closest pair need not detect all nonreality;
+$\{-\varepsilon,\varepsilon,-\ii,\ii\}$ with
+$0<\varepsilon<1/2$ has a real closest pair and a nonreal pair.
+These finite examples test selection alone and do not satisfy all the
+canonical hypotheses.
+
+For perspective, at an all-real ordered heat-flow slice satisfying the
+pair law, with an attained positive global minimum gap $g=2s$, the $k$th exterior zero on either side
+of that pair has center-distance at least $(2k+1)s$. Thus, with fewer
+terms allowed on a finite side,
+\begin{equation}
+ 0\le M\le2\sum_{k\ge1}\frac1{4k(k+1)D}=\frac1{2D},
+ \qquad D_t=2-4DM\ge0.
+ \label{stat:telescoping}
+\end{equation}
+This useful extremal calculation belongs to its stated class. The
+canonical simple divisor has no such attained global minimum, and
+forward nondecrease does not furnish a backward margin.
+
+\subsection{Adjacent real pairs require only strict isolation}
+
+We now change the pair domain explicitly. Fix
+\begin{equation}
+ 0\le t_*-\Delta\le t_*\le\tfrac12,
+ \qquad u=t_*-t.
+ \label{stat:slab}
+\end{equation}
+Here $u$ is \emph{physical backward time}, with no factor $\ell^2$.
+Suppose the complete divisor at $t_*$ is real and simple. Follow an
+adjacent pair $x_j(u)<x_{j+1}(u)$ on a common interval $0\le u<\tau$
+on which the complete divisor remains real and simple and the branches
+continue. This is a stopped regime, not a conclusion of initial reality
+at one time. Set
+\begin{equation}
+ \begin{gathered}
+ c_j=\frac{x_j+x_{j+1}}2,\qquad
+ D_j=\frac{(x_{j+1}-x_j)^2}{4},\\
+ Q_{j,\rho}=(\rho-c_j)^2-D_j
+             =(\rho-x_j)(\rho-x_{j+1}),\qquad
+ M_j=\sum_{\rho\ne x_j,x_{j+1}}Q_{j,\rho}^{-1},\qquad
+ S_{j,n}=\sum_{\rho\ne x_j,x_{j+1}}Q_{j,\rho}^{-n}.
+ \end{gathered}
+ \label{stat:real-moments}
+\end{equation}
+All sums include every exterior occurrence. The canonical product and
+inverse-square tails are still those of the complete source.
+We do not impose the factor-four collar or a prescribed height interval
+on the adjacent pair in this subsection.
+
+\begin{lemma}[Strict-isolation passage]
+\label{stat:strict-isolation}
+On every compact subinterval of the stopped regime,
+\begin{equation}
+ \frac{dD_j}{du}=-2+4D_jM_j,
+ \qquad
+ \frac{dM_j}{du}=-2M_j^2+12S_{j,2}+16D_jS_{j,3},
+ \qquad M_j,S_{j,2},S_{j,3}\ge0.
+ \label{stat:backward-system}
+\end{equation}
+These identities do not require the quantitative collar of
+\eqref{eq:domain}.
+\end{lemma}
+
+\begin{proof}
+At a reference time the pair is adjacent, so every exterior real zero
+has $|\rho-c_j|>\sqrt{D_j}$. Local finiteness supplies a radius
+\[
+ \sqrt{D_j}<R<\min_{\rho\ne x_j,x_{j+1}}|\rho-c_j|.
+\]
+The circle of radius $R$ about this reference center contains exactly
+the two target occurrences and is zero-free. Hold it fixed while
+differentiating in time. The argument-principle moments
+\eqref{eq:coordinates} define $c_j,D_j$ locally, and the deflated
+logarithmic derivative gives
+\[
+ M_j=-\frac1{2\pi\ii}\oint_\Gamma
+              \frac{H_z/H}{(z-c_j)^2-D_j}\dd z.
+\]
+To pass the finite polynomial identity to $H$, freeze this time and
+truncate the complete canonical product in opposite and conjugate groups,
+retaining the target and all its occurrences. Use each truncated product
+as initial data for its exact polynomial heat evolution and differentiate
+at the reference time. The products and all fixed spatial derivatives
+converge locally uniformly. On $\Gamma$,
+$H$ and the target denominator are bounded away from zero. Hence the
+logarithmic derivatives and their time derivatives converge, using
+\[
+ \partial_t(H_z/H)=-H_{zzz}/H+H_zH_{zz}/H^2.
+\]
+The contour moments and their derivatives consequently converge as well.
+The finitely many nearby exterior denominators are nonzero, while the
+remaining summands are $O(|\rho|^{-2n})$ and have convergent complete
+tails. Thus the finite identities for $D_t$ and $M_t$, obtained in
+\eqref{eq:pairlaw} and \eqref{eq:low-orders}, pass to the limit.
+Their polynomial derivation uses strict separation, not the factor-four
+ratio. Reversing time gives \eqref{stat:backward-system}. Finally,
+$Q_{j,\rho}>0$ because the exterior is real and lies outside the adjacent
+pair; this proves the signs. Finitely many local charts cover any compact
+pre-collision interval.
+\end{proof}
+
+Only the identities have been extended. None of the earlier quantitative
+collar estimates is asserted on this larger domain. The polynomial
+passage is made at a frozen time through spatial jets; it is not a
+common-time convergence theorem for finite polynomial heat evolutions.
+A uniform isolating circle need not survive to a multiple collision.
+The comparisons below approach such an event by continuity of the real
+gap, without differentiating its square-root labeling at the event.
+
+\subsection{A backward comparison from initial exterior mass}
+
+\begin{theorem}[Initial-environment comparison]
+\label{stat:backward-comparison}
+For one pair in the stopped real regime, suppose
+$0<d_0\le D(0)$ and $0\le b_0\le M(0)$. Put
+$a(u)=1+2b_0u$. Then
+\begin{equation}
+ M(u)\ge\frac{b_0}{1+2b_0u},\qquad
+ \boxed{D(u)\ge a(u)\bigl[d_0a(u)-2u\bigr]}
+ \quad(0\le u<\tau).
+ \label{stat:comparison}
+\end{equation}
+If
+\begin{equation}
+ d_0(1+2b_0\Delta)>2\Delta,
+ \label{stat:strict-margin}
+\end{equation}
+this pair cannot be a colliding pair at a first finite collision time
+$u_c\le\Delta$ up to which the stipulated all-real regime holds.
+\end{theorem}
+
+\begin{proof}
+Positivity in \eqref{stat:backward-system} gives $M_u\ge-2M^2$.
+The function $b(u)=b_0/(1+2b_0u)$ satisfies $b_u=-2b^2$, whence
+\[
+ (M-b)_u+2(M+b)(M-b)\ge0.
+\]
+Multiplying by its positive integrating factor, on each compact
+pre-collision interval, proves $M\ge b$. Since $D\ge0$ there,
+\[
+ (a^{-2}D)_u=a^{-2}(D_u-4bD)\ge-2a^{-2}.
+\]
+The exact integral $\int_0^u a(v)^{-2}\dd v=u/a(u)$, including $b_0=0$,
+gives \eqref{stat:comparison}. The bracket
+$d_0+(2b_0d_0-2)u$ is affine, positive at zero and, under
+\eqref{stat:strict-margin}, positive at $\Delta$. It is therefore
+strictly positive on the full interval. If the pair were to collide
+at $u_c\le\Delta$, its continuous gap would give $D(u)\to0$ as
+$u\uparrow u_c$, contradicting the strictly positive lower bound.
+\end{proof}
+
+When $b_0d_0<1$, the explicit sufficient duration is
+\begin{equation}
+ \Delta<\frac{d_0}{2(1-b_0d_0)}.
+ \label{stat:duration}
+\end{equation}
+When $b_0d_0\ge1$, the scalar inequality places no finite cap on
+$\Delta$; the stopped-regime and coverage hypotheses still apply.
+In particular, the theorem does not continue a pair's positivity
+argument past an earlier unprotected collision elsewhere.
+
+The same calculation bounds the exact backward transport cost. With
+$A(u)=\int_0^u M(v)\dd v$, integration of the first equation in
+\eqref{stat:backward-system} yields
+\begin{equation}
+ \begin{split}
+ D(u)&=\e^{4A(u)}
+       \left[D(0)-2\int_0^u\e^{-4A(v)}\dd v\right],\\
+ 2\int_0^u\e^{-4A(v)}\dd v
+     &\le2\int_0^u(1+2b_0v)^{-2}\dd v
+       =\frac{2u}{1+2b_0u}.
+ \end{split}
+ \label{stat:cost}
+\end{equation}
+Thus the environmental lower envelope is acquired from the initial
+interaction and the real hierarchy. It is not an assumed inequality
+throughout the desired time interval.
+
+\begin{corollary}[Three initial gaps]
+\label{stat:three-gaps}
+Let the target gap at $u=0$ be $g=x_{j+1}-x_j$, and let its two neighboring
+gaps be $h_L=x_j-x_{j-1}$ and $h_R=x_{j+2}-x_{j+1}$. Then admissible
+initial data for Theorem~\ref{stat:backward-comparison} are
+\begin{equation}
+ d_0=\frac{g^2}{4},\qquad
+ b_0=\frac1{h_L(h_L+g)}+\frac1{h_R(h_R+g)}.
+ \label{stat:neighbor-mass}
+\end{equation}
+Consequently the computable score
+\begin{equation}
+ R_j(\Delta)=\frac{g_j^2}{4}
+               \bigl(1+2b_{0,j}\Delta\bigr)-2\Delta
+ \label{stat:score}
+\end{equation}
+excludes this pair from a first collision through time $\Delta$ whenever
+$R_j(\Delta)>0$, subject to the stopped-regime hypotheses.
+\end{corollary}
+
+\begin{proof}
+For the exterior zero $x_{j-1}$,
+$Q=(x_{j-1}-x_j)(x_{j-1}-x_{j+1})=h_L(h_L+g)$.
+The right exterior zero contributes $1/[h_R(h_R+g)]$ in the same way.
+Every omitted exterior term is positive, so their sum is a lower bound
+for $M(0)$. Apply \eqref{stat:strict-margin}.
+\end{proof}
+
+One may omit an unavailable neighbor and retain the other positive term.
+If only enclosures of the gaps are known, bounds for
+\eqref{stat:neighbor-mass} must respect its monotonicities; arbitrary
+substitution of enclosure endpoints is not justified. For
+$h_L=h_R=g$, we obtain $b_0=1/g^2$, $b_0d_0=1/4$, and
+\begin{equation}
+ \Delta<\frac{g^2}{6},
+ \qquad\text{whereas }b_0=0\text{ gives }\Delta<\frac{g^2}{8}.
+ \label{stat:equal-gaps}
+\end{equation}
+The factor $4/3$ is a local comparison gain. If $g/h_L$ and $g/h_R$
+tend to zero, then $b_0d_0\to0$ and the relative gain tends to one.
+Thus the equal-gap illustration does not settle the exceptional case of
+an isolated narrow gap. Moreover, the smallest initial gap need not
+minimize the environment-adjusted score: every eligible pair must be
+covered.
+
+Strictness cannot be dropped. For the exact heat polynomial
+$H(t,z)=z^2-2(t-t_c)$, one has $D=2(t-t_c)$ and $M=0$.
+The comparison is exact and its margin vanishes at
+$\Delta=t_*-t_c$, precisely when collision occurs. This finite field
+lacks the canonical population but verifies the endpoint interpretation
+without numerical evidence.
+
+\subsection{The minimum envelope and its statistical evolution}
+
+Choose $K$ finite buffered blocks. In block $k$, fix a nonempty finite
+set $J_k$ of consecutive-pair labels at $u=0$ and follow those labels
+throughout the common stopped regime. Boundary-crossing pairs needed
+for a covering application must be included; labels are not silently
+reselected when zeros move through a window boundary. Set
+\begin{equation}
+ q_k(u)=\min_{j\in J_k}D_j(u),\qquad
+ \mathbb P(X=k)=\frac1K.
+ \label{stat:minimum-law}
+\end{equation}
+Only the block index $X$ is random. The $D_j$ and the canonical divisor
+are deterministic.
+
+\begin{proposition}[Weak evolution of the regional minimum]
+\label{stat:weak-evolution}
+On a compact subinterval of the stopped regime, every $q_k$ is locally
+Lipschitz. Choose an active minimizing label $j_k(u)$, with any fixed
+rule at ties. For a $C^1$ test function $\varphi$ on the relevant range,
+\begin{equation}
+ \frac{d}{du}\mathbb E\varphi(q_X(u))
+ =\mathbb E\!\left[
+    \varphi'(q_X(u))
+       \{-2+4q_X(u)M_{j_X(u)}(u)\}\right]
+ \quad\text{for almost every }u.
+ \label{stat:weak-law}
+\end{equation}
+Furthermore, throughout that interval,
+\begin{equation}
+ q_k(u)\ge q_k(0)-2u,
+ \qquad
+ \mathbb P(q_X(u)\le r)
+     \le\mathbb P(q_X(0)\le r+2u),\quad r\ge0.
+ \label{stat:tail-transfer}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+A finite minimum of $C^1$ functions is locally Lipschitz. At a time
+where the minimum is differentiable, its derivative equals that of
+an active branch; at almost every tie, all tied active derivatives
+agree. One can see the latter assertion by applying the elementary
+fact that a differentiable function has derivative zero at almost
+every point of its zero set to each difference $D_i-D_j$. The finite
+union of exceptional null sets remains null. The chain rule and
+\eqref{stat:backward-system} therefore give \eqref{stat:weak-law};
+the finite average requires no additional interchange assumption.
+Positivity gives $D_{j,u}\ge-2$, hence
+$D_j(u)\ge D_j(0)-2u$ for every eligible branch. Taking minima proves
+the first inequality in \eqref{stat:tail-transfer}. The event
+$q_X(u)\le r$ is consequently contained in
+$q_X(0)\le r+2u$, which proves the second.
+\end{proof}
+
+The minimum may switch branches without invalidating this envelope law.
+It does not become one persistent pair solution, and its old pair's
+contour, exterior moments and gap anchors do not transfer at a switch.
+Equation~\eqref{stat:weak-law} also displays the statistical closure
+problem: the minimum marginal depends on the joint law of the minimum
+and the complete exterior interaction of its active pair. This is the
+relevant BBGKY analogy. No independence or finite marginal closure has
+been assumed. Corollary~\ref{stat:three-gaps} identifies a more accessible
+initial statistic that bounds a sufficient margin: three consecutive
+gaps, with their adjacency conditions retained.
+
+\subsection{Pair counts, exceptional blocks and global coverage}
+
+A one-sided minimum-tail bound does not require the entire minimum law.
+At a fixed time let $C_k(r)$ count all unordered distinct-label pairs at
+distance at most $r$ in a finite real-zero window. Let $G_k$ be its minimum
+gap, with $G_k=+\infty$ when the window has fewer than two occurrences. Then
+\begin{equation}
+ \{G_k\le r\}=\{C_k(r)\ge1\},\qquad
+ \mathbb P(G_X\le r)\le\mathbb E C_X(r).
+ \label{stat:pair-majorant}
+\end{equation}
+The equality follows because a closest pair is consecutive; the inequality
+is the pointwise bound $\mathbf1_{\{C_k\ge1\}}\le C_k$.
+An exact minimum distribution needs absence-of-points, or void,
+information, whereas \eqref{stat:pair-majorant} can be bounded by a
+nonnegative two-point majorant. The three-gap score requires more:
+four ordered locations must also have no intervening zeros. An
+unrestricted four-point marginal cannot silently replace consecutive-gap
+data.
+
+The complete marked-pair theory in \cite{BakerOC17,BakerOCReview} gives
+time moduli at a fixed positive smoothing scale, retaining multiplicity
+and exterior tails. Those results provide neither an initial canonical
+profile nor a sharp near-zero gap tail. To use them for
+\eqref{stat:pair-majorant}, a smooth nonnegative majorant must control its
+resolution, smoothing, boundary and height errors. Their constants grow
+as the resolution shrinks, so a sharp-indicator limit is a separate
+estimate. Distinct labels at one multiple zero contribute a collision
+pair; deleting them as a diagonal would remove the event to be detected.
+
+For the initial score \eqref{stat:score}, define the conservative count
+\begin{equation}
+ B_\Delta=\#\left\{k:\min_{j\in J_k}R_j(\Delta)\le0\right\}.
+ \label{stat:bad-count}
+\end{equation}
+\begin{proposition}[Finite zero-exception threshold]
+\label{stat:integer-exclusion}
+If a proved estimate gives
+\begin{equation}
+ \mathbb P\!\left(\min_{j\in J_X}R_j(\Delta)\le0\right)<\frac1K,
+ \label{stat:integer-threshold}
+\end{equation}
+then every covered pair has a strictly positive score and cannot be a
+colliding pair at a first finite collision through backward time
+$\Delta$ under the common stopped-regime hypotheses.
+\end{proposition}
+
+\begin{proof}
+The probability in \eqref{stat:integer-threshold} equals $B_\Delta/K$.
+Since $B_\Delta$ is a nonnegative integer, the strict bound implies
+$B_\Delta=0$. Corollary~\ref{stat:three-gaps} then applies to every
+eligible pair.
+\end{proof}
+
+A small probability above this threshold permits exceptions. A continuous
+random-center formulation instead needs a proved positive lower measure
+of centers that see any bad event, including events near window edges.
+Likewise, averaging over observation times can miss an isolated collision;
+the event must concern the whole time interval, or carry a proved positive
+occupation contribution.
+
+To infer an upper bound $\Lambda\le t_*-\Delta$, these finite comparisons
+must be supplemented by a global continuation argument. Its inputs are
+a known simple all-real start, coverage of all potentially colliding
+pairs including block boundaries, and a uniform high-height exclusion or
+complete tail estimate preventing the first failure from escaping to
+infinity. An independently proved real/simple high-height statement
+uniform over the entire slab could reduce the remaining task to a
+buffered compact region. A different cutoff for each fixed time does
+not automatically supply this uniform premise. Neither this uniform height
+bound nor a canonical estimate strong enough for
+\eqref{stat:integer-threshold} is acquired here; density one is not
+zero exceptions.
+
+Rodgers and Tao \cite{RodgersTao2020Newman} provide a precedent for using
+averaged gap dynamics, but with a different conclusion. Under the
+contradictory assumption $\Lambda<0$, their nearly equal spacing
+consequence conflicts with a positive proportion of small gaps, proving
+$\Lambda\ge0$. Their negative-time motion theorem is not used to justify
+our positive-time identity; Lemma~\ref{stat:strict-isolation} supplies
+that passage on \eqref{stat:slab}. Here the proposed application is a
+lower \emph{upper bound}, obtained by uniform backward preservation of
+reality. The established gain is the explicit local comparison and its
+statistical consumer, not a new numerical bound on $\Lambda$.

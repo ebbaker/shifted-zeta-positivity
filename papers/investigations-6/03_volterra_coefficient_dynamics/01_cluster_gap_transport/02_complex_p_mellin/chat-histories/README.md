@@ -15,6 +15,13 @@ thread 01a1ec48-00e8-7163-ab1b-6008ad584039, actual title
 “Begin VCD-GT-GR-B01 follow-through”. Its unique home and provenance remain
 there; the new branch does not duplicate or relocate it.
 
+CM chat0002, “Continue complex p-Mellin research”, thread
+`01a1ed50-6670-7ca1-98eb-a1f870b05bee`, was registered on 18 November 2026
+from its exact paginated source for B03 r2. Its public research text is
+captured through the same guarded workflow. Model configurations are
+currently absent; do not infer model or effort. Prepared for Edward Baker
+with Codex LLM assistance. The registry owns all changing metadata.
+
 Use [tools/refresh_chat_history.py](../../../../../../tools/refresh_chat_history.py)
 and [CHAT_HISTORY](../../../../../../tools/CHAT_HISTORY.md). Register each
 new CM chat's actual thread id, title and exact source here. An already

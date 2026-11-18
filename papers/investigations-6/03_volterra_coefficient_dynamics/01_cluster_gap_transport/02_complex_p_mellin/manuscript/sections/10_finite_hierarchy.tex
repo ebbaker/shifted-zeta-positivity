@@ -1,0 +1,195 @@
+\section{Finite heads, boundary residuals and compatible approximation}
+\label{sec:finite}
+
+An infinite hierarchy is useful for approximation only when the error
+introduced at its boundary can be transported to the observables of
+interest. We now make that boundary explicit. This also separates two
+notions of finite approximation: truncating the list of moments, and
+evolving a finite divisor whose moments remain mutually compatible.
+The distinction was motivated by the earlier hierarchy discussion
+\cite{BakerCM15}; the calculations below are consequences of
+Theorem~\ref{thm:hierarchy}.
+
+\subsection{The four boundary rows}
+
+Freeze the scale $\ell$ from \eqref{eq:domain} and put
+\begin{equation}
+ \sigma=(t-t_0)/\ell^2,\qquad \delta=D/\ell^2,\qquad
+ s_n=\ell^{2n}S_n,\qquad v_n=\ell^{2n-1}T_n,\qquad m=s_1.
+ \label{fin:normalization}
+\end{equation}
+The equations \eqref{eq:S-hierarchy}--\eqref{eq:T-hierarchy} have the
+same coefficients after replacing $(D,S,T,t)$ by $(\delta,s,v,\sigma)$.
+Fix $P\ge3$ and retain
+$x_P=(\delta,s_1,\ldots,s_P,v_2,\ldots,v_P)$.
+Define the polynomial vector field $f_P$ by setting all indices above
+$P$ to zero in those equations. This defines an approximation, not an
+identity for the actual higher moments.
+
+\begin{proposition}[Boundary residual]\label{fin:residual}
+The actual canonical head satisfies $x_P'=f_P(x_P)+r_P$, where primes
+in this section denote $\sigma$ derivatives. Only four residual rows
+can be nonzero:
+\begin{align}
+ r_{s,P-1}&=-4(P-1)(P+2)\delta s_{P+1},\notag\\
+ r_{s,P}&=-4P(P+2)s_{P+1}-4P(P+3)\delta s_{P+2},\notag\\
+ r_{v,P-1}&=-4(P-1)(P+2)\delta v_{P+1},\notag\\
+ r_{v,P}&=-4(P^2+P-1)v_{P+1}-4P(P+3)\delta v_{P+2}.
+ \label{fin:four-rows}
+\end{align}
+With $\gamma=q_0/a^2<1$ and $B_1=14\Cu\gamma$,
+\begin{equation}
+ \|r_P\|_\infty\le
+ 4P(P+3)\sqrt{q_0}B_1L\gamma^{P-1/2}
+             \max\{d,1+d\gamma\}.
+ \label{fin:residual-bound}
+\end{equation}
+In particular the residual tends to zero geometrically at fixed height
+and collar parameters.
+\end{proposition}
+
+\begin{proof}
+Every nonlinear factor in row $n$ has index at most $n$. The only
+indices larger than $P$ therefore occur in the two linear higher-moment
+terms of rows $P-1$ and $P$, giving \eqref{fin:four-rows}.
+The shell bound used below in \eqref{eq:integer-bound} gives
+$\mathcal A_1=\sum_j|\mu_j|\le B_1L$; it follows directly from
+\eqref{eq:count-safe} and \eqref{eq:collar-kernel}. Thus
+\[
+ |s_n|\le B_1L\gamma^{n-1},\qquad
+ |v_n|\le\sqrt{q_0}B_1L\gamma^{n-3/2}\quad(n\ge2).
+\]
+For the odd estimate use
+$|w_j|/\sqrt{|Q_j|}\le\sqrt{q_0}$ and sum
+$|\mu_j|^{n-1/2}$. Apply these inequalities to the four rows,
+using $|\delta|\le d$, $P^2+P-1\le P(P+3)$ and $\gamma<1$.
+The $P-1$ rows contribute the separate factor $d$ in
+\eqref{fin:residual-bound}; they have no extra factor $\gamma$.
+\end{proof}
+
+\subsection{What an independent absolute error allowance loses}
+
+Suppose $y'=f_P(y)$ and a convex box contains both $x_P$ and $y$
+throughout $[0,\Sigma]$. If $K_P$ bounds the induced max-norm Jacobian
+of $f_P$ on that box and $\epsilon_P$ is the right side of
+\eqref{fin:residual-bound}, the usual differential inequality gives
+\begin{equation}
+ \|x_P(\tau)-y(\tau)\|_\infty
+ \le \e^{K_P\tau}\|x_P(0)-y(0)\|_\infty
+       +\epsilon_P\frac{\e^{K_P\tau}-1}{K_P}.
+ \label{fin:gronwall}
+\end{equation}
+At $K_P=0$ the quotient means $\tau$. The containing box is a
+premise of this bound. In the present unweighted coordinates,
+\[
+ \left|\frac{\partial (f_P)_{s,P-1}}{\partial s_P}\right|
+       =4(P^2-1),
+\]
+so a scalar Jacobian majorant grows at least quadratically with $P$.
+Combining that particular allowance with a geometrically small boundary
+residual does not prove convergence on a fixed positive duration.
+A componentwise version makes the source of this loss more precise.
+
+\begin{proposition}[A scoped positive-comparison limitation]
+\label{fin:positive-box}
+Let $A_P$ be a constant entrywise nonnegative absolute-Jacobian majorant
+on the containing box. Give its residual majorant an independent constant
+component
+\[
+ \bar r_{s,P}=4P(P+2)B_1L\gamma^P
+             +4P(P+3)dB_1L\gamma^{P+1},
+\]
+with all other components nonnegative. The comparison solution with
+zero initial error,
+$z(\tau)=\int_0^\tau\exp((\tau-u)A_P)\bar r\dd u$, satisfies
+\begin{equation}
+ z_m(\tau)\ge\frac{B_1L}{2}(P+2)(P+1)!(4\gamma\tau)^P.
+ \label{fin:path-lower}
+\end{equation}
+For fixed $\tau>0$, $L$ and $\gamma>0$, this allowance diverges as
+$P\to\infty$. The conclusion concerns this independent constant-tail,
+absolute-Jacobian comparison, not the signed truncation error.
+\end{proposition}
+
+\begin{proof}
+Row $s_n$ has derivative $-4n(n+2)$ with respect to $s_{n+1}$;
+its nonlinear terms do not contain that component. Hence the
+successive entries of $A_P$ along the path
+$s_P\to s_{P-1}\to\cdots\to s_1$ are at least $4n(n+2)$.
+Their product is
+\[
+ \prod_{n=1}^{P-1}4n(n+2)
+       =4^{P-1}(P-1)!(P+1)!/2.
+\]
+Every matrix power and every component of $\bar r$ is nonnegative.
+Keep this one path in the $(P-1)$st term of the exponential series
+and the first term of $\bar r_{s,P}$. Integrating
+$(\tau-u)^{P-1}/(P-1)!$ gives $\tau^P/P!$, proving
+\eqref{fin:path-lower}. The ratio of successive factorial-exponential
+terms tends to infinity, proving the stated divergence.
+\end{proof}
+
+The discarded signs and compatibility relations could matter to the
+actual solution. Proposition~\ref{fin:positive-box} neither proves
+instability of a moment truncation nor rules out a compatible closure.
+It explains why a small local residual is not by itself a useful
+fixed-duration error theorem. Shorter steps also need a controlled
+restart and accumulation argument.
+
+\subsection{Preserving the divisor and the intended error consumer}
+
+A different finite object is obtained by truncating the complete
+opposite-paired product at an initial time $t_0$, retaining conjugates,
+ties and multiplicities, and evolving the resulting polynomial $P_N$
+by the heat equation. Its higher moments are then determined by one
+actual divisor; they are not set independently to zero. At the purely
+polynomial level the evolution has the exact expression
+\begin{equation}
+ P_N(t_0+\tau,z)
+ =\exp(-\tau\partial_z^2)P_N(t_0,z)
+ =\mathbb E\,P_N(t_0,z+\ii\sqrt{2\tau}\,X),\qquad \tau\ge0,
+ \label{fin:polynomial-heat}
+\end{equation}
+where $X$ is standard normal. To verify the second identity, expand the
+polynomial in its finite Taylor series. Odd Gaussian moments vanish,
+and $\mathbb EX^{2k}=(2k)!/(2^kk!)$ converts the even terms exactly
+to $(-\tau)^k\partial_z^{2k}P_N/k!$.
+
+The source in \eqref{eq:source} gives the same Gaussian formula for $H$:
+expectation multiplies $\cos(zu)$ by $\exp(\tau u^2)$. Its
+super-exponential decay justifies Fubini for bounded real $\tau\ge0$
+and bounded complex $z$. What remains unproved here is a common-time
+error estimate for $P_N-H$ and the transfer to the selected pair and
+moments. The slice-jet passage used in Theorem~\ref{thm:hierarchy}
+reinitializes at each reference time and does not supply that estimate.
+A possible route is a common product growth envelope, the complete
+omitted inverse-square tail $O(\log N/N)$, Gaussian domination, and
+Cauchy and Rouch\'e estimates on the independently cleared tube.
+This is a specified approximation problem, not a theorem of the present
+paper. The cutoff $N$ is a divisor cutoff, distinct from the moment
+order $P$; initial canonical divisor data and its tail must be supplied.
+
+The error needed by transport is simple to state. Let $m_N$ be real,
+as for a conjugation-compatible approximation. If it satisfies $|m-m_N|\le\eta$ on a scaled interval of length $\Sigma$, then
+for every subinterval $[x,y]$,
+\begin{equation}
+ \left|\log\frac{W(x,y)}{W_N(x,y)}\right|
+ \le4(y-x)\eta\le4\Sigma\eta,
+ \qquad W(x,y)=\exp\left(-4\int_x^y m\dd\sigma\right).
+ \label{fin:transport-error}
+\end{equation}
+This follows by subtracting the two integrals. The same uniform
+subinterval control bounds the inhomogeneous cost multiplicatively;
+the physical cost retains its factor $\ell^2$. Forcing error must also
+retain the product in $12s_2+16\delta s_3$. None of these consequences
+supplies the independent tube or gap anchors.
+
+The analogy with BBGKY truncation is therefore organizational: it asks
+how unresolved information enters a retained hierarchy. The older
+Jacobi-chain memory variable was observation height, whereas the present
+variable is Newman time; the omitted moments here generally have nonzero
+initial data. Inter-level compatibility does not by itself imply stability
+or physical realizability, and an exact projection-memory formalism needs
+a specified state space and flow \cite{AkbariEtAl2012Hierarchy,ChorinHaldKupferman2000}.
+No density-matrix positivity, independence law or arbitrary-sequence
+well-posedness is assumed for these divisor moments.

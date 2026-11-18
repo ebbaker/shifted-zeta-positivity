@@ -1,0 +1,290 @@
+\section{Signed forcing and gap transport}
+\label{sec:bounds}
+
+The hierarchy and the complex-power formula describe the evolution
+exactly. Their quantitative use is governed by the real forcing
+\begin{equation}
+ F=12Z(2)+16\delta Z(3),\qquad
+ m_\sigma=2m^2-F,\qquad \delta_\sigma=2-4m\delta,
+ \label{eq:consumer-system}
+\end{equation}
+where $m=\ell^2M$, $\delta=D/\ell^2$ and
+$\sigma=(t-t_0)/\ell^2$. A lower bound for $m$ requires an
+\emph{upper} bound for $F$. Reality of $F$ alone does not provide it.
+We first compare the direct and contour estimates at the same information,
+then derive the conditional transport bound. The comparison and static
+example extend \cite{BakerGR05} as proved in \cite{BakerCM06}.
+
+\subsection{Absolute estimates and preservation of joint signs}
+
+The elementary shell count in \eqref{eq:count-safe} gives, for $n\ge1$,
+\begin{equation}
+ \mathcal A_n:=\sum_j|\mu_j|^n\le B_nL,
+ \qquad B_n=14\Cu\gamma^n,\qquad \gamma=q_0/a^2.
+ \label{eq:integer-bound}
+\end{equation}
+For completeness, the band $|\Re w|<1$ contains at most $4\Cu L$
+occurrences, and the shell $k\le|\Re w|<k+1$ contains at most
+$2\Cu(2L+\log(k+1))$. The kernel there is bounded by
+$q_0\ell^2/k^2$. Using
+$\sum k^{-2n}\le2$, $\sum k^{-2n}\log(k+1)\le3$ and $a\le L$
+bounds the far shells by $10\Cu\gamma^nL$ and proves
+\eqref{eq:integer-bound}.
+Since $|\mu_j|\le\gamma$, the direct estimate is
+\begin{equation}
+ |F|\le (12\gamma+16d\gamma^2)\mathcal A_1\le C_FL,
+ \qquad C_F=12B_2+16dB_3.
+ \label{eq:direct-forcing}
+\end{equation}
+
+Fix the damping $\epsilon>0$ of Section~\ref{sec:cauchy}. Write
+$C_\epsilon=(12+16d)\e^{4\epsilon}$ and let $\Theta$ be its branch
+argument bound. On the two verticals $q=1,4$,
+\[
+ |K_\epsilon(q+\ii v,\delta)Z(q+\ii v)|
+ \le C_\epsilon\mathcal A_1
+        \frac{\e^{-\epsilon v^2+\Theta|v|}}{\sqrt{1+v^2}}.
+\]
+The absolute two-line envelope is therefore bounded by
+\begin{equation}
+ \frac1{2\pi}\int_\R
+       (|K_\epsilon Z(4+\ii v)|+|K_\epsilon Z(1+\ii v)|)\dd v
+ \le C_{\rm env}\mathcal A_1,
+ \quad C_{\rm env}=\frac{2C_\epsilon}{\pi}
+       \sqrt{\frac\pi\epsilon}\e^{\Theta^2/(4\epsilon)}.
+ \label{eq:contour-envelope}
+\end{equation}
+Completing the square proves this estimate. At fixed collar parameters
+$a,d$ and fixed damping $\epsilon$, its height order is the same as
+\eqref{eq:direct-forcing}, and its displayed coefficient is
+larger: minimizing $\e^{4\epsilon}/\sqrt\epsilon$ gives
+$C_{\rm env}/(12+16d)\ge2\sqrt{8\e/\pi}>1$, whereas
+$12\gamma+16d\gamma^2<12+16d$.
+This comparison concerns these explicit envelopes, not every possible
+signed contour estimate.
+
+\begin{proposition}[Comparison for a fixed grouping]\label{prop:group-bound}
+Partition the exterior occurrences into prescribed finite groups $G$,
+and retain the assigned logarithms. Put
+\[
+ Z_G(p)=\sum_{j\in G}\mu_j^p,\quad
+ I_{q,G}(v)=K_\epsilon(q+\ii v,\delta)Z_G(q+\ii v),\quad
+ F_G=\sum_{j\in G}(12\mu_j^2+16\delta\mu_j^3),
+\]
+where the power notation uses those logarithms. Then
+\begin{equation}
+ F_G=\frac1{2\pi}\int_\R(I_{4,G}-I_{1,G})\dd v,
+ \qquad
+ |F_G|\le\frac1{2\pi}\int_\R|I_{4,G}-I_{1,G}|\dd v
+ \le\frac1{2\pi}\int_\R(|I_{4,G}|+|I_{1,G}|)\dd v.
+ \label{eq:group-bound}
+\end{equation}
+All group sums and integrals in these estimates interchange absolutely.
+Thus estimating each group by an absolute contour norm costs at least
+$\sum_G|F_G|$, the direct signed-residue norm for the same grouping.
+For groups closed under conjugation as occurrence multisets, with compatible
+logs, the same statement holds for the folded
+norm $\pi^{-1}\int_0^\infty|\Re(I_{4,G}-I_{1,G})|\dd v$.
+\end{proposition}
+
+\begin{proof}
+Apply the positive-rectangle residue formula to the finite entire
+sum $Z_G$. The horizontal edges tend to zero by Gaussian damping.
+The residues at $2$ and $3$ are independent of the assigned logarithms.
+The triangle inequalities give \eqref{eq:group-bound}. On either
+vertical, the sum over groups of the absolute integrands is bounded
+by the integrable majorant preceding \eqref{eq:contour-envelope}.
+The corresponding horizontal group sum is bounded by a constant times
+$\e^{-\epsilon Y^2+\Theta Y}/Y$. This proves all complete-divisor
+passages. For a compatible group, conjugation changes $v$ to $-v$,
+giving the folded expression and the same triangle inequality.
+\end{proof}
+
+Proposition~\ref{prop:group-bound} leaves joint signs between groups
+available on either side of the identity. Discarding them in the direct
+formula but retaining them in the contour formula would compare
+different information. The sharp zero-cutoff residue error in
+Section~\ref{sec:cauchy} likewise belongs to both evaluations.
+
+\subsection{A complete static example with linear forcing}
+
+The following construction tests what the slice hypotheses can force.
+It changes the canonical divisor and is not an example of its heat
+evolution. The explicit constants ensure that the class is fixed as
+$T$ grows.
+
+\begin{proposition}[Scope of a static forcing bound]\label{prop:static}
+There is a family of real-even entire functions of order one with a
+counted double target, collar $a=4,d=1$, width-one strip, growing zero
+count, unit-count and static safe-line bounds with fixed enlarged
+constants, whose complete complex-power sums are holomorphic on
+$\Re p>1/2$, have compatible Schwarz symmetry and admit the fixed-damping
+contours of Section~\ref{sec:cauchy}, but satisfy
+\begin{equation}
+ m=-\frac1{32}+O(L^{-1}),\qquad \frac FL\longrightarrow\frac3{256}>0.
+ \label{eq:static-asymptotic}
+\end{equation}
+In particular, this static class admits no uniform upper bound $F=o(L)$,
+even on the subclass with $m\le-1/64$.
+\end{proposition}
+
+\begin{proof}
+Take $c=T=\e^L$, $L\ge16$, $D=0$, $b=8$ and $J=\lfloor L\rfloor$.
+For this separate slice construction use the inherited strip, unit-count
+and safe-line bounds of the canonical field at time zero. The background
+bounds hold on the closed slab $[0,1/2]$ independently of whether the
+particular pair tube $I$ contains zero \cite{BakerBase,BakerGR05}.
+Remove from $H(0,z)$ every occurrence in the closed bands
+$|\Re\rho\mp c|\le3$ by division by their complete monic polynomial.
+Insert at $+c$ the double target and $J$ occurrences at each
+displacement $\pm b\ell$, and $J+1$ at each displacement
+$\pm\ii b\ell$. Reflect all insertions at $-c$. The division is
+entire, and conjugation and negation invariance make the resulting
+function real and even. Finite polynomial multiplication and division
+preserve the order bound; the retained growing count forces order one.
+The strip and the required collar hold, with the remaining background
+at horizontal distance greater than $3$.
+
+The inherited canonical growing count and its logarithmic discrepancy
+are the static inputs described in \cite[Section 3]{BakerGR05}.
+There are at most $12\Cu L$ removed occurrences per band and at most
+$4J+4\le5L$ insertions per band. Hence the unit-count constant can
+be enlarged to $\Cu+5$, and the cumulative-count discrepancy constant
+by $24\Cu+10$. The logarithmic derivative changes by a signed sum
+of at most $(24\Cu+10)L$ reciprocal distances. On the line $v+4\ii$,
+if $|v|\ge c/2$ use vertical distance at least $3$ and
+$\log(2+|v|)\ge L/2$; otherwise use horizontal distance at least
+$c/3$. The safe-line constant can be enlarged to
+$\Cu+5(24\Cu+10)$, uniformly in $c$.
+The corresponding lower safe line follows by conjugation.
+
+For the near core assign conjugate logarithms $\pm\pi$ to the negative
+values of $Q_j$ and real logarithms to the positive ones. Its complete
+contribution is
+\begin{equation}
+ Z_{\rm core}(p)=b^{-2p}\{2J+2(J+1)\cos(\pi p)\}.
+ \label{eq:static-core}
+\end{equation}
+All remaining occurrences are retained in a remainder $R$. The retained
+background and every opposite-band insertion, including the reflected
+double, satisfy $|\Re w|>3$, $|\Im w|\le1$. Hence
+$\Re(w^2)>8$, and we assign principal logs on the entire noncore.
+These are conjugation compatible and have argument magnitude less than
+$\pi/2$. Unit-shell counting, including the opposite insertions and
+opposite target, gives
+for $1\le u\le r<\infty$
+\begin{equation}
+ |R(u+\ii v)|\le (10\Cu+5)L^{1-2u}\e^{\pi|v|/2}.
+ \label{eq:static-tail}
+\end{equation}
+Indeed the physical absolute power sum of exponent $2u$ over the
+retained background is at most $10\Cu L$; the opposite insertions
+cost at most $5Lc^{-2u}$. Multiplication by $\ell^{2u}$ proves the
+bound. The same shell argument for any $u>1/2$ proves normal
+convergence on compact subsets of that half-plane. Compatible logs
+give Schwarz symmetry, and Gaussian damping pays the complete vertical
+integrals and vanishing horizontal edges. Evaluating
+\eqref{eq:static-core}--\eqref{eq:static-tail} at $1$ and $2$ gives
+\[
+ m=-2/b^2+R(1),\qquad
+ F=12(4J+2)/b^4+12R(2),
+\]
+which proves \eqref{eq:static-asymptotic} and the stated exclusion.
+\end{proof}
+
+The same construction retains the inherited broad transverse upper
+bounds with fixed enlarged constants \cite[Section 3]{BakerGR05}.
+If their original coefficient is $B_\beta$ for $0<\beta<1/2$, the
+added nonreal occurrences lie
+at height $8/L$ and number at most $3L$ per band. For every dyadic
+interval $[U,2U]$ meeting the positive inserted nonreal projection,
+$c\in[U,2U]$, including endpoint cuts, one has
+$L/2\le\log U\le2L$. The comparison
+$U\log U\,\e^{-\beta v\log U}\ge4L\e^{-16\beta}$ whenever
+$v<8/L$ allows coefficient $B_\beta+\e^{16\beta}$; deletion only
+reduces the counts. This is still a slice construction. It supplies
+neither the unchanged theta source nor a common independently established
+canonical time tube. In particular Proposition~\ref{prop:static} does
+not exclude a signed estimate using the full canonical time law.
+
+\subsection{A conditional Riccati comparison}
+
+\begin{theorem}[Forcing upper bound and transport cost]\label{thm:transport}
+Suppose $F(\sigma)\le Q$ on the entire established scaled tube
+$0\le\sigma\le\Sigma=(t_1-t_0)/\ell^2$, for a real constant $Q$
+that may depend on $T$.
+Set $A_0=B_1L$, $K_+=\max(Q,0)$ and $h=\sqrt{K_+/2}$. Define
+\begin{equation}
+ \begin{array}{ll}
+ f(\sigma)=\cosh(2h\sigma)+(A_0/h)\sinh(2h\sigma),&
+ g_{\rm tr}(\sigma)=\sinh(2h\sigma)/(2h),\quad h>0,\\[2pt]
+ f(\sigma)=1+2A_0\sigma,&g_{\rm tr}(\sigma)=\sigma,\quad h=0.
+ \end{array}
+ \label{eq:comparison-functions}
+\end{equation}
+Then, with primes here denoting scaled-time derivatives,
+\begin{equation}
+ m(\sigma)\ge-\frac{f'(\sigma)}{2f(\sigma)},\qquad
+ m(\sigma)\ge-h-\frac1{2\sigma}\quad(\sigma>0).
+ \label{eq:riccati-barrier}
+\end{equation}
+For $0\le x\le y\le\Sigma$, put
+$W(x,y)=\exp(-4\int_x^y m(u)\dd u)$. Then
+\begin{equation}
+ \begin{split}
+ W(x,y)&\le[f(y)/f(x)]^2,\\
+ \int_x^y W(u,y)\dd u&\le\frac{f(y)}{f(x)}g_{\rm tr}(y-x),\\
+ W(x,y)\delta(x)&=\delta(y)-2\int_x^y W(u,y)\dd u.
+ \end{split}
+ \label{eq:transport-cost}
+\end{equation}
+These bounds retain the finite initial layer at $\sigma=0$.
+\end{theorem}
+
+\begin{proof}
+The absolute count gives $m(0)\ge-A_0$, and
+$m'\ge2m^2-K_+$. The function $v=-f'/2f$ solves
+$v'=2v^2-K_+$ with $v(0)=-A_0$. Since
+$(m-v)'-2(m+v)(m-v)\ge0$, an integrating factor gives $m\ge v$.
+For $h>0$, $f'/2f\le h\coth(2h\sigma)\le h+1/(2\sigma)$;
+for $h=0$ use the displayed linear $f$. Integrating the first bound
+gives the multiplier bound in \eqref{eq:transport-cost}.
+
+Both $f$ and $g_{\rm tr}$ solve $u''=2K_+u$. Their Wronskian,
+with the second solution translated by $x$, is
+\[
+ f(u)g_{\rm tr}'(u-x)-f'(u)g_{\rm tr}(u-x)=f(x).
+\]
+Consequently integrating $(g_{\rm tr}(u-x)/f(u))'$ gives
+\[
+ f(y)^2\int_x^y\frac{\dd u}{f(u)^2}
+        =\frac{f(y)}{f(x)}g_{\rm tr}(y-x),
+\]
+which proves the cost bound. Finally
+$\partial_u[W(u,y)\delta(u)]=2W(u,y)$ by
+\eqref{eq:consumer-system}. Integrating proves the exact last identity.
+\end{proof}
+
+An independent terminal lower anchor
+$\delta(y)\ge2f(y)g_{\rm tr}(y-x)/f(x)$ suffices for
+$\delta(x)\ge0$. Equality with this upper allowance guarantees
+nonnegativity, including $x=0$. Equality with the exact cost
+$2\int_x^y W(u,y)\dd u$ gives $\delta(x)=0$, whereas strict
+separation of the terminal value from that actual cost gives strict
+positivity. The forward version uses an independent incoming
+$\delta(x)$ and yields
+\[
+ |\delta(y)|\le[f(y)/f(x)]^2|\delta(x)|
+                 +2f(y)g_{\rm tr}(y-x)/f(x).
+\]
+In physical variables $W$ integrates $M$ over physical time, and the
+inhomogeneous cost for $D$ carries the additional factor $\ell^2$.
+Neither the forcing estimate nor the initial moment bound supplies
+either gap anchor or the tube itself.
+
+Using only \eqref{eq:direct-forcing}, fixed collar parameters give
+$K_+=C_FL$, an $O(\sqrt L)$ interior negative allowance after a
+fixed positive scaled buffer, and an
+$O(L)\exp(O(\sqrt L))$ upper multiplier on a fixed scaled duration.
+The contour representations proved here do not improve this allowance
+by the absolute estimates in Proposition~\ref{prop:group-bound}.

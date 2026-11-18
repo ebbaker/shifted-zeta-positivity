@@ -1,0 +1,263 @@
+\section{Clearance and contour estimates}
+\label{app:estimates}
+
+We give explicit constants for the spatial and index contours in
+Sections~\ref{sec:complex} and \ref{sec:cauchy}. The source inputs
+are \eqref{eq:domain} and \eqref{eq:count-safe}
+\cite{BakerBase,BakerGT41}. Write \(q_0=16/15\) and
+\(\Lambda(x)=\log(3+2T+|x|)\).
+
+\subsection{Complete value sums}\label{app:value-sums}
+
+Let \(p=u+\ii v\), \(u>1/2\). The band \(|\Re w_j|<1\) has at
+most \(4\Cu L\) occurrences. Each pair of unit shells
+\(n\le|\Re w_j|<n+1\), \(n\ge1\), has at most
+\(2\Cu\Lambda(n)\), by translating their unit intervals into
+the physical variable. For \(\gamma>0\) and \(k=1,2\), put
+\begin{equation}
+ E_k(\gamma)=\sum_{j\ge0}2^{-j\gamma}(1+(j+1)\log 2)^k .
+ \label{app:dyadic}
+\end{equation}
+For every integer \(M_0\ge1\) and real \(X\ge1\), dyadic blocks
+give
+\begin{align*}
+ \sum_{n\ge M_0} n^{-2u}\Lambda(n)
+    &\le M_0^{1-2u}\Lambda(M_0) E_1(2u-1),\\
+ \int_X^\infty x^{-2u}\Lambda(x)^k\dd x
+    &\le X^{1-2u}\Lambda(X)^k E_k(2u-1).
+\end{align*}
+For blocks starting at \(s=2^jM_0\) or \(2^jX\), bound the
+number or length of the terms by \(s\), and use
+\(\Lambda(2^{j+1}x)\le\Lambda(x)+(j+1)\log2\) for \(x\ge1\).
+
+An occurrence of \(Z\) has modulus
+\(|\mu_j|^u\exp(v\Im\Log Q_j)\).
+The collar gives \(|\mu_j|\le q_0/a^2<1\), and on shell \(n\ge1\)
+one also has \(|\mu_j|\le q_0\ell^2/n^2\). Thus for
+\(1/2<b\le u\le r<\infty\),
+\begin{equation}
+\begin{split}
+ |Z(p,t)|&\le A_b \exp(\Theta|v|),\\
+ A_b&=4\Cu L(q_0/a^2)^b+
+        2\Cu(\ell^2q_0)^b E_1(2b-1)\Lambda(1).
+\end{split}
+\label{app:value-envelope}
+\end{equation}
+The right side bounds the sum of moduli. The shell bound gives
+normal convergence on compact subsets of \(u>1/2\) and uniform
+tails over the real tube at fixed \(T\). An omitted occurrence
+when \(N>4T+8\) satisfies \(|\Re w_j|>N-1-2T>N/2\) and has a
+principal log. With \(M_0=\lfloor N/2\rfloor\ge N/3\), this gives
+\begin{equation}
+ |Z-Z_N|\le 2\Cu(\ell^2q_0)^u E_1(2b-1)3^{2r-1}
+                N^{1-2u}\Lambda(N)\exp(\pi|v|/2).
+ \label{app:divisor-tail}
+\end{equation}
+For an individual integer \(u=n\) use \(E_1(2n-1)3^{2n-1}\) in
+this bound. The same constant without \(3^{2r-1}\) works for
+a centered shell cutoff with all \(|\Re w_j|<N\) retained,
+provided \(N\ge8\). Here \(\Lambda(N)=O(\log N)\) when \(N>4T+8\).
+
+\subsection{Safe cuts and removal of the remote connectors}\label{app:clearance}
+
+In a physical unit interval \([U,U+1]\), the zero projections
+in \([U-1,U+2]\) number at most \(N_U=3\Cu\log(4+|U|)\).
+Deleting the intervals of radius
+\(\eta_U=1/[4(1+N_U)]\) about them removes length at most \(1/2\).
+The remaining interval contains a cut \(v_0\) at distance at
+least \(\eta_U\) from all projected zeros, since projections
+outside the enlarged interval have distance at least one.
+Translating the finite cut windows at the reference time gives
+the cuts of Section~\ref{sec:complex}. Compactness of the
+connectors and continuity of \(H(t,c(t)+w)\) preserve clearance
+in a smaller time interval. For remote closures we need only
+a sequence of cuts at each slice.
+
+To estimate at such a cut put \(x=v_0-c(t)\) and
+\(\lambda_0=\log(3+|v_0|)\). The once-subtracted product
+logarithmic derivative gives
+\[
+ h(t,x+\ii y)-h(t,x+4\ii)
+  =\sum_\rho\left(\frac1{v_0+\ii y-\rho}-\frac1{v_0+4\ii-\rho}\right).
+\]
+The regularizers cancel before summation. For \(|y|\le4\)
+the near shell \(|\Re\rho-v_0|<1\) has
+\(2\Cu\lambda_0\) as a count bound. Its denominator factors
+have moduli at least \(\eta_U\) and \(3\), and the numerator is
+at most \(8\). On shell \(n\ge1\) both factors are at least \(n\)
+and the count is at most \(2\Cu(\lambda_0+\log(n+1))\).
+The sums \(\sum n^{-2}\le2\) and
+\(\sum n^{-2}\log(n+1)\le3\) bound the far part by
+\(32\Cu\lambda_0+48\Cu\). Since
+\(\eta_U^{-1}\le4+24\Cu\lambda_0\), the upper safe-line
+bound and the near term \(16\Cu\lambda_0/(3\eta_U)\) give
+\[
+ |h(t,x+\ii y)|\le240\Cu^2\lambda_0^2 .
+\]
+For \(|x|\ge6,\ |y|\le4\) the principal log has phase at most
+\(\pi/2\) and \(|Q|\ge x^2/2\), because \(|D|\le1/16\).
+The absolute integral of \(f_ph\dd w\) on the remote connector,
+before Cauchy normalization, is therefore at most
+\begin{equation}
+ 1920 \Cu^2(2\ell^2)^u |x|^{-2u}
+                      \Lambda(x)^2\exp(\pi|v|/2).
+ \label{app:edge-bound}
+\end{equation}
+This tends to zero for the \(u\) in Theorem~\ref{thm:complex-time}.
+
+\subsection{Time bounds for the spatial formula}\label{app:time-bounds}
+
+On either horizontal safe line the reciprocal-square and twice
+reciprocal-cube sums for \(h_w,h_{ww}\) are absolute. The divisor
+distance is at least \(3\) in the near shell and at least \(n\)
+in shell \(n\ge1\). Using the same count and elementary sums
+as above, including the safe-line bound for \(h\), gives
+\[
+ |h|,\ |h_w|,\ |h_{ww}|\le A\Lambda(x),\qquad A=24\Cu.
+\]
+Take \(C_c=\sup_I|c'|\) and \(C_D=\sup_I|D'|\), finite by the
+target contour. The inherited deflated-field and pair bounds
+give \(C_c\le16 \Cu L^2/a+190 \Cu L\) and
+\(C_D\le2+56d \Cu q_0 L/a^2\) \cite{BakerGT41,BakerCM03}.
+Then \(|h_t|\le C_h\Lambda(x)^2\) with
+\(C_h=A(1+C_c)+2A^2\). For \(J_p=1+|p|\) and \(|x|\ge6\),
+\[
+ \begin{aligned}
+ |f_p|&\le (2\ell^2)^u|x|^{-2u}\exp(\pi|v|/2),\\
+ |(f_p)_t|&\le 2C_D J_p|f_p|/x^2,\qquad
+ |(f_p)_w|\le 8J_p|f_p|/|x|,\qquad
+ |(f_p)_{ww}|\le 68J_p^2|f_p|/x^2.
+ \end{aligned}
+\]
+In fact \((f_p)_w=-2pw f_p/Q\) and
+\((f_p)_{ww}=(-2p/Q+4p(p+1)w^2/Q^2)f_p\).
+The displayed bounds follow using \(|w|\le2|x|\) and
+\(|Q|\ge x^2/2\). Either differentiated integrand of
+\eqref{eq:complex-time} is bounded on these lines by
+\(C_{\rm sl}J_p^2 |f_p|\Lambda(x)^2\), where
+\[
+ C_{\rm sl}=C_h+A(2C_D+68+8C_c)+8A^2 .
+\]
+For the value integrand use \(A|f_p|\Lambda(x)\).
+The spatial primitive in the proof of
+Theorem~\ref{thm:complex-time} tends to zero at the infinite
+endpoints by these same estimates.
+
+On a compact subchart let \(P_0\) be the total finite contour
+length, \(W_0=\max|w|\) and \(\kappa=\min|Q|>0\) there.
+Let \(A_0\ge1\) bound \(|h|,|h_w|,|h_{ww}|\) on these pieces
+over the subchart. Clearance makes each constant finite. Set
+\[
+\begin{split}
+ R_{b,r}&=\max_{q=b,r}(\ell^2/\kappa)^q,\\
+ C_{\rm ch}&=A_0(1+C_c+C_D/\kappa+2/\kappa+
+                     4W_0^2/\kappa^2+2C_cW_0/\kappa)
+                        +(2+2W_0/\kappa)A_0^2 .
+\end{split}
+\]
+The finite contribution to the value formula and each
+differentiated formula is at most
+\((P_0/(2\pi))R_{b,r} C_{\rm ch}J_p^2\exp(\Theta|v|)\),
+by the explicit derivatives of \(f_p,h\).
+Bounding the four full rays by the integrals over \(|x|\ge6\)
+then gives
+\begin{equation}
+\begin{split}
+ |Z_t| &\le C_Z J_p^2\exp(\Theta|v|),\\
+ C_Z &=\frac{P_0 R_{b,r} C_{\rm ch}}{2\pi}
+   +\frac{2 C_{\rm sl}}{\pi}\max_{q=b,r}((2\ell^2)^q6^{1-2q})
+                          E_2(2b-1)\Lambda(6)^2 .
+\end{split}
+\label{app:chart-time}
+\end{equation}
+The maximum arises because the scale factor is exponential in
+the real part \(u\). On the fixed finite pieces the integrands are
+\(C^1\) in physical time by clearance. On each safe-line point
+they are continuous in time and the displayed estimates
+give an integrable majorant on compact \(p\)-sets and compact
+time subcharts. This proves the asserted differentiation,
+continuity and holomorphy in Theorem~\ref{thm:complex-time}.
+The finite chart constants concern fixed physical height.
+
+For \(X\ge7\) let \(Z^{[X]}=\mathcal S^{[X]}(f_ph)\) with the
+finite pieces retained and the four rays stopped at \(|x|=X\).
+The dyadic integral estimates and \(2\ell^2<1\) give, on
+\(b\le u\le r\),
+\begin{equation}
+\begin{aligned}
+ |Z-Z^{[X]}|&\le U_0(X)\exp(\pi|v|/2),\\
+ |Z_t-Z_t^{[X]}|&\le U_1(X)J_p^2\exp(\pi|v|/2),\\
+ U_0(X)&=\frac{2A}{\pi}(2\ell^2)^b E_1(2b-1)
+                                X^{1-2b}\Lambda(X),\\
+ U_1(X)&=\frac{2C_{\rm sl}}{\pi}(2\ell^2)^b E_2(2b-1)
+                                X^{1-2b}\Lambda(X)^2 .
+\end{aligned}
+\label{app:spatial-tails}
+\end{equation}
+The derivative of the cut value uses the unintegrated
+derivative in \eqref{eq:complex-time}. The factor \(2/\pi\)
+accounts for the four rays. The bounds hold with \(u\) in
+the scale and power of \(X\) in place of \(b\), since the
+dyadic constants are decreasing in \(2u-1\). This gives the
+fixed-height \(X^{1-2u}\log X\) and \(X^{1-2u}\log^2 X\) rates
+for \(X>4T+8\).
+
+\subsection{Errors on the damped index contours}\label{app:cauchy-errors}
+
+For a fixed strip in Section~\ref{sec:cauchy}, set
+\[
+ B_N=2\Cu(\ell^2q_0)^b E_1(2b-1)3^{2r-1}
+                                           N^{1-2b}\Lambda(N).
+\]
+Then the divisor error is bounded by \(B_N\exp(\pi|v|/2)\)
+throughout the strip. On the complete vertical difference,
+\begin{equation}
+ |\mathcal V_{b,r}(K(Z-Z_N))|\le
+   \frac{2 C_\epsilon B_N}{\pi\lambda}
+                   \sqrt{\frac{\pi}{\epsilon}}\exp(\pi^2/(16\epsilon)).
+ \label{app:weighted-divisor-tail}
+\end{equation}
+Indeed \(\sqrt{\lambda^2+v^2}\ge\lambda\), and translating the
+Gaussian integral after completing the square pays the factor
+\(\exp(\pi^2/(16\epsilon))\).
+This rate concerns the whole strip. Evaluating the signed residue
+values gives the sharper \eqref{cau:residue-error}.
+
+Write \(U=1+r\) so that \(J_p\le U+|v|\), and set
+\(C_{\epsilon,t}=16C_D\ell^{-2}\exp(4\epsilon)\) for \(K_\epsilon\)
+and \(C_{\epsilon,t}=0\) for \(G_\epsilon\). Formula
+\eqref{cau:kernel-time} gives the same kernel bounds for \(K_t\)
+with this constant in place of \(C_\epsilon\). The total absolute
+bound for the differentiated horizontal integrals is
+\[
+ \frac{r-b}{\pi Y}\big[C_\epsilon C_Z(U+Y)^2+
+                         C_{\epsilon,t}A_b\big]\Phi_\Theta(Y).
+\]
+For \(Y>\Theta/(2\epsilon)\) the differentiated vertical tail is
+bounded by
+\[
+ \frac{2\Phi_\Theta(Y)}{\pi}\left[
+ C_\epsilon C_Z(1+U/Y)^2
+     \left(\frac{Y}{\kappa_\Theta(Y)}+\frac{1}{\kappa_\Theta(Y)^2}\right)
+ +\frac{C_{\epsilon,t}A_b}{Y\kappa_\Theta(Y)}
+ \right].
+\]
+Use \((U+v)^2/v\le(1+U/Y)^2v\) for \(v\ge Y\) and integrate
+against \(\exp(-\kappa_\Theta(Y)(v-Y))\). This pays both the
+complete derivative and the derivative of the finite rectangle
+as its height grows.
+
+Finally \eqref{app:spatial-tails} bounds the complete vertical
+derivative error due to cutting the independent spatial rays by
+\begin{equation}
+ \frac{2}{\pi\lambda}\int_0^\infty
+ \big[C_\epsilon U_1(X)(U+v)^2+C_{\epsilon,t}U_0(X)\big]
+               \exp(-\epsilon v^2+\pi v/2)\dd v .
+ \label{app:weighted-spatial-tail}
+\end{equation}
+For the value error replace the square bracket by
+\(C_\epsilon U_0(X)\). All Gaussian moments are finite at the
+stated fixed damping. A finite maximum of the compact chart
+constants suffices for the established real tube at each fixed \(T\).
+The estimates use real physical time and fixed residue indices.
+
