@@ -39,3 +39,32 @@ scope, hypotheses and consumer. New branch-specific records may live here,
 with a linked or maintained reusable bibliography. External reading
 copies follow [LARGE_FILES](../../../../../../LARGE_FILES.md), with provenance and
 hashes; hashes identify files, not mathematical validity.
+
+## B01 primary-passage reinspection, 17 November 2026
+
+Prepared for Edward Baker with OpenAI Codex assistance; actual lead settings
+unavailable. Reused canonical owners above, with no new PDF or catalog copy.
+The lead re-opened [DLMF 5.9.1](https://dlmf.nist.gov/5.9.E1): the
+positive-ray formula requires positive real parts of the exponential
+parameter and power, with principal fractional powers. This confirms why
+B01 selects integer moments and imports no adverse-sector Laplace formula.
+The lead also inspected [Polymath v2, Proposition 3.1 proof and Theorem 3.2](https://arxiv.org/html/1904.12438v2#S3):
+local uniform opposite-paired product convergence and the stated strip
+contraction. These support the inherited source-use03 normalization.
+This is selected-passage reinspection, not a new full-paper review; the
+E02/E03 consumer still has to pay every contour and derivative limit.
+
+For E08, the lead additionally inspected Proposition 3.1(ii) and its proof
+in the same pinned Polymath v2 HTML: near an m-fold zero the m nearby zeros
+have distinct Hermite leading terms at square-root time, with event-dependent
+remainders. This is the inherited local splitting input of parent Note40;
+it does not give a uniform event count or lifetime at growing height.
+
+## Complex-p sibling source division, 17 November 2026
+
+Prepared for Edward Baker with Codex assistance; actual lead settings
+unavailable. Complex-index contour imports now use the [CM source guide](../../02_complex_p_mellin/references/README.md)
+and its selected DLMF passage record. The canonical VCD bibliography and
+existing GT/GR source records remain shared in place. The Gaussian source
+and finite-s evolution evidence stay here; their use does not imply that
+a p-plane Mellin contour has been justified.

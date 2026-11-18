@@ -160,3 +160,12 @@ calculations from those full-field identities; no new external theorem,
 PDF download, bibliography duplicate or fresh full-chain validation is
 claimed. Prepared for Edward Baker with Codex assistance; root settings
 unavailable, analytical/review dispatch Sol6.1/ultra.
+
+## Complex-p/Mellin branch-use record, 17 November 2026
+
+Prepared for Edward Baker with OpenAI Codex assistance; actual lead settings
+unavailable. The [CM source guide](../02_complex_p_mellin/references/README.md)
+links the shared canonical bibliography and retains selected DLMF 2.5
+Mellin/contour and 5.11.9 vertical-gamma inspection in its branch-use note.
+The existing gamma-sector record here remains its original evidence. This
+is a bounded setup source inspection, not a new full-field transform theorem.

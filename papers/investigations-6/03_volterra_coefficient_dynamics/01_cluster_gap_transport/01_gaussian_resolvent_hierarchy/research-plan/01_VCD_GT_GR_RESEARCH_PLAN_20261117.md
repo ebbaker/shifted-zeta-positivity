@@ -15,6 +15,14 @@ owns live status; readiness below is the setup specification.
 [Continuation01](../notes/01_VCD_GT_GR_SETUP_CONTINUATION_20261117.md)
 contains the launch prompt. Setup executes documentation checks only.
 
+**Later author division, 17 November 2026:** complex powers, Mellin methods
+and p-plane contours for M evolution now belong to the
+[CM sibling](../../02_complex_p_mellin/README.md). GR retains Gaussian
+spatial-scale dynamics, with its accepted integer/resolvent/spatial laws
+shared in place. Read [Division08](../notes/08_VCD_GT_GR_SIBLING_DIVISION_AND_CONTINUATION_20261117.md)
+for current continuation and ownership; the earlier specification below
+retains its dated context. This split does not upgrade or retract any result.
+
 ## Sustained lead, bounded execution
 
 This plan implements the author's explicit modification of
@@ -257,3 +265,21 @@ files again before updates and preserve concurrent work. Save raw/bulk
 outputs outside Git under [LARGE_FILES](../../../../../../LARGE_FILES.md).
 Follow [chat-history policy](../chat-histories/README.md).
 Do not infer actual model settings from these recommendations.
+
+## Dated execution extension, 17 November 2026
+
+Prepared for Edward Baker with Codex assistance; actual lead settings
+unavailable, helper dispatch Sol6.1/ultra. The sole register owns status.
+E01's cusp justified early B03: Decision02 froze E08's compact radial weak
+law and E09 assessment without changing E03. B04/Decision04 then froze
+E10's exact scalar sufficiency test, assessed with E06 by E07. These
+requests preserve the source, target pair and evidence standard.
+
+B05 is the next unresolved conceptual gate, Astra/ultra recommended because
+it must select an additional signed canonical contraction, beyond the
+static and scalar bounds tested in this pass. Read Session07 §5 and all
+three assessments. Compare at most two explicit inequalities per pass;
+completion is a fixed source/domain/constant-or-rate/proof/consumer contract
+or a precisely scoped failure. A new E identity without such a consumer
+is not ready. Changed source, physical law or target cluster still requires
+a separate author scope decision. No new E request is issued by this entry.

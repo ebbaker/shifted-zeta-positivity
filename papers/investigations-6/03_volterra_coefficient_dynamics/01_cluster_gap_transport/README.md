@@ -6,18 +6,23 @@ time vary, beginning with isolated multiplicity-two clusters. Prepared for
 Edward Baker with OpenAI Codex assistance; actual lead model/effort
 unavailable. **VCD-GT-B11 is complete within scope:** fixed-collar time occupation
 and conditional interior-interaction bounds are internally accepted.
-The author-selected next research route is the new
-[Gaussian/resolvent sub-investigation](01_gaussian_resolvent_hierarchy/README.md),
-with its [sustained continuation](01_gaussian_resolvent_hierarchy/notes/01_VCD_GT_GR_SETUP_CONTINUATION_20261117.md).
-Parent **B12 / Astra ultra** remains an unactivated coordination gate;
-hierarchy development has its own child register. Every-pair positivity
-remains open.
+The author-selected analytical routes are the
+[Gaussian/resolvent investigation](01_gaussian_resolvent_hierarchy/README.md)
+and its [complex-p/Mellin sibling](02_complex_p_mellin/README.md).
+Use the [Gaussian continuation](01_gaussian_resolvent_hierarchy/notes/08_VCD_GT_GR_SIBLING_DIVISION_AND_CONTINUATION_20261117.md)
+or [complex-p contour continuation](02_complex_p_mellin/notes/01_VCD_GT_CM_SETUP_CONTINUATION_20261117.md).
+They share canonical and integer/spatial inputs in place and own separate
+registers. Parent **B12 / Astra ultra** remains an unactivated coordination
+gate. Every-pair positivity remains open.
 
 - [Current overview][overview], [active plan][plan] and [sole GT register][progress].
 - [Accepted synthesis42](notes/42_VCD_GT_B11_FIXED_COLLAR_SYNTHESIS_20261117.md); [historical setup prompt14][continuation].
 - [Gaussian scale and integer/resolvent development](01_gaussian_resolvent_hierarchy/README.md),
   [sole child register](01_gaussian_resolvent_hierarchy/research-progress/01_VCD_GT_GR_RESEARCH_PROGRESS_20261117.md)
-  and [launch prompt](01_gaussian_resolvent_hierarchy/notes/01_VCD_GT_GR_SETUP_CONTINUATION_20261117.md).
+  and [Gaussian prompt](01_gaussian_resolvent_hierarchy/notes/08_VCD_GT_GR_SIBLING_DIVISION_AND_CONTINUATION_20261117.md).
+- [Complex powers and Mellin/p-plane contours](02_complex_p_mellin/README.md),
+  [sole CM register](02_complex_p_mellin/research-progress/01_VCD_GT_CM_RESEARCH_PROGRESS_20261117.md)
+  and [CM prompt](02_complex_p_mellin/notes/01_VCD_GT_CM_SETUP_CONTINUATION_20261117.md).
 - Author's discussion: [progress10][b10], [threshold/cost/height11][b11],
   [correlation predecessors and double-cluster12][b12], [revision recommendation13][b13].
 - [Source ownership and predecessor-use guide][refs], [canonical bibliography][bib],
@@ -69,8 +74,8 @@ comparison. [Synthesis20][s20] retains the specified source-mode allowance
 failure and minimum comparison. [Note21][s21], [sharp weights27][s27] and
 [Fourier screens28][s28] retain their precise hypotheses and negative
 classes. Earlier continuations are historical routing; the parent register and
-Synthesis42 own the accepted baseline, while the child continuation owns
-the new hierarchy launch. The [existing manuscript][manuscript]
+Synthesis42 own the accepted baseline, while the two child continuations own
+their Gaussian and complex-p launches. The [existing manuscript][manuscript]
 now covers the accepted analytical results through Notes40–41 within the
 internal review scope above.
 
@@ -80,7 +85,7 @@ This branch owns physical-time cluster/exterior estimates. The [parent][parent]
 owns shared VCD tasks; [degree contraction][sibling2] and [multiscale bounds][sibling3]
 retain their separate questions. Parent VCD-B07/E25 and GT-E06 are not
 activated by this revision. This register owns other VCD-GT task IDs;
-the child is the sole live owner of VCD-GT-GR tasks. Existing setup
+the GR child owns VCD-GT-GR and the CM child owns VCD-GT-CM tasks. Existing setup
 chat0007 stays in this parent archive; future branch-only chats use the
 child history folder. The dated ownership crosswalk is in the child register.
 

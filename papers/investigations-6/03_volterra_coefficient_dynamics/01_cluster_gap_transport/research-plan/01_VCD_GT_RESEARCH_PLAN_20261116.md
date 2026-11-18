@@ -5,11 +5,11 @@ assistance; actual lead model/effort unavailable. This is the current
 specification at the existing live path. The [sole register][progress]
 owns status, the [overview][overview] owns the scientific setting, and
 [Synthesis42][continuation] supplies the accepted baseline. The
-[Gaussian/resolvent child continuation](../01_gaussian_resolvent_hierarchy/notes/01_VCD_GT_GR_SETUP_CONTINUATION_20261117.md)
-is the author-selected next research route as of 17 November. Its
-[sole register](../01_gaussian_resolvent_hierarchy/research-progress/01_VCD_GT_GR_RESEARCH_PROGRESS_20261117.md)
-owns VCD-GT-GR tasks; this plan retains the parent-owned B12 coordination
-gate without activating it. Readiness wording in earlier specifications is dated; the issued continuation
+[Gaussian continuation](../01_gaussian_resolvent_hierarchy/notes/08_VCD_GT_GR_SIBLING_DIVISION_AND_CONTINUATION_20261117.md)
+and [complex-p contour continuation](../02_complex_p_mellin/notes/01_VCD_GT_CM_SETUP_CONTINUATION_20261117.md)
+are the two author-selected child routes. Their separate registers own
+VCD-GT-GR and VCD-GT-CM tasks; this plan retains parent-owned B12 without
+activating it. Readiness wording in earlier specifications is dated; the issued continuation
 section and sole register record later activation and disposition.
 
 The author selected the broader positivity objective in [Discussion11][b11],
@@ -18,6 +18,15 @@ and revision of the existing investigation in [Recommendation13][b13],
 following the progress review in [Discussion10][b10]. This revision
 supersedes earlier *next-action routing*. Frozen scientific notes,
 requests, returns and historical task contracts remain evidence.
+
+**Later sibling routing, 17 November 2026:** the author now separates
+[Gaussian spatial-scale work](../01_gaussian_resolvent_hierarchy/notes/08_VCD_GT_GR_SIBLING_DIVISION_AND_CONTINUATION_20261117.md)
+from [complex-p/Mellin contour work](../02_complex_p_mellin/notes/01_VCD_GT_CM_SETUP_CONTINUATION_20261117.md).
+The second route explicitly targets the M evolution equation as a p-plane
+contour integral and an analytical bound with infinite-index potential.
+Earlier sole-GR launch wording below is superseded as routing only. Each
+child owns its own task IDs; canonical and integer/spatial evidence is
+shared by reference. Parent B12 stays unactivated and no parent result changes.
 
 ## 1. Sustained sessions with bounded subtasks
 

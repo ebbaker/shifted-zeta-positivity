@@ -3,12 +3,14 @@
 **Current phase, 17 November 2026:** exterior-count, distance and signed
 interaction bounds across height, beginning with isolated multiplicity-two
 clusters. This file remains the sole live register for parent **VCD-GT**
-tasks, excluding the child **VCD-GT-GR** family, whose
+tasks, excluding the child **VCD-GT-GR** and **VCD-GT-CM** families. GR's
 [sole register](../01_gaussian_resolvent_hierarchy/research-progress/01_VCD_GT_GR_RESEARCH_PROGRESS_20261117.md)
-owns its statuses. The [overview][overview], [active plan][plan] and
-[Synthesis42][continuation] govern the parent baseline. The new
-[child continuation](../01_gaussian_resolvent_hierarchy/notes/01_VCD_GT_GR_SETUP_CONTINUATION_20261117.md)
-is the next research route. Earlier continuation pointers below are historical.
+owns GR statuses; the [CM register](../02_complex_p_mellin/research-progress/01_VCD_GT_CM_RESEARCH_PROGRESS_20261117.md)
+owns CM statuses. The [overview][overview], [active plan][plan] and
+[Synthesis42][continuation] govern the parent baseline. The
+[Gaussian continuation](../01_gaussian_resolvent_hierarchy/notes/08_VCD_GT_GR_SIBLING_DIVISION_AND_CONTINUATION_20261117.md)
+and [CM continuation](../02_complex_p_mellin/notes/01_VCD_GT_CM_SETUP_CONTINUATION_20261117.md)
+own their separate research routes. Earlier continuation pointers below are historical.
 
 Prepared for Edward Baker with OpenAI Codex LLM assistance; current lead
 model/effort unavailable. The author requests sustained **ultra** sessions
@@ -49,7 +51,7 @@ E13 remains unissued; no numerical scan was needed.
 | VCD-GT-E20 | E / Sol6.1 ultra; fixed retained-dissipation proof | **Complete, proved in-note; accepted within scope** | [Frozen r1](handoffs/VCD-GT-E20-r1.md): negative-pair time occupation and boundary constants |
 | VCD-GT-E21 | E / Sol6.1 ultra; fixed signed-evolution proof | **Complete, proved in-note; accepted on paid tube** | [Frozen r1](handoffs/VCD-GT-E21-r1.md): exact interaction law, conditional Riccati bound and integrated cost |
 | VCD-GT-E22 | E / Sol6.1 ultra; fixed independent-agent claim/scope assessment | **Complete; accepted without required correction** | [Frozen r1](handoffs/VCD-GT-E22-r1.md): E20/E21, complete-divisor passage, constants, comparison and Synthesis42 |
-| VCD-GT-B12 | B / Astra ultra; parent coordination of a sign-sensitive forcing estimate | **Retained, unactivated; earlier next-action route superseded** | Hierarchy development is owned by the [Gaussian/resolvent child register](../01_gaussian_resolvent_hierarchy/research-progress/01_VCD_GT_GR_RESEARCH_PROGRESS_20261117.md); future parent consumption retains Synthesis42 premises and the original quantitative-gain/scoped-failure standard |
+| VCD-GT-B12 | B / Astra ultra; parent coordination of a sign-sensitive forcing estimate | **Retained, unactivated; earlier next-action route superseded** | Gaussian development is owned by the [GR register](../01_gaussian_resolvent_hierarchy/research-progress/01_VCD_GT_GR_RESEARCH_PROGRESS_20261117.md), complex-p contour development by the [CM register](../02_complex_p_mellin/research-progress/01_VCD_GT_CM_RESEARCH_PROGRESS_20261117.md); future parent consumption retains Synthesis42 premises and the original quantitative-gain/scoped-failure standard |
 | VCD-GT-E23 | E / Sol6.1 ultra; author-requested fixed analytical manuscript integration | **Complete; accepted within scope after bounded corrections** | [Frozen r1](handoffs/VCD-GT-E23-r1.md): accepted Notes27–42 in the existing parent manuscript, theory primary, numerics supporting |
 | VCD-GT-E24 | E / Sol6.1 ultra; separate integrated manuscript assessment | **Complete; accepted after correction check** | [Frozen r1](handoffs/VCD-GT-E24-r1.md): proof coverage, scope, coherence, challenges and document checks |
 
@@ -57,10 +59,11 @@ The author-requested **E23 manuscript integration** and E24 assessment
 are complete within scope; [Integration43](../notes/43_VCD_GT_RECENT_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261117.md)
 and [Assessment20](../reviews/20_VCD_GT_E24_ANALYTICAL_MANUSCRIPT_ASSESSMENT_20261117.md)
 record the coherent analytical development, bounded corrections and limitations.
-The author-selected next continuation is the
-[Gaussian/resolvent child launch](../01_gaussian_resolvent_hierarchy/notes/01_VCD_GT_GR_SETUP_CONTINUATION_20261117.md).
-Parent B12 stays unactivated; the child owns hierarchy formulation,
-derivations and their quantitative consumer under its own task IDs.
+The author-selected child routes are now the
+[Gaussian continuation](../01_gaussian_resolvent_hierarchy/notes/08_VCD_GT_GR_SIBLING_DIVISION_AND_CONTINUATION_20261117.md)
+and [complex-p contour continuation](../02_complex_p_mellin/notes/01_VCD_GT_CM_SETUP_CONTINUATION_20261117.md).
+Parent B12 stays unactivated; each child owns its research task IDs and
+quantitative consumer, sharing original inputs by reference.
 E20/E21 and Synthesis42 remain internally accepted by E22; no every-pair
 sign, tube acquisition or incoming anchor is paid. No blank E contract or
 numerical scan is issued.
@@ -580,3 +583,12 @@ remain authoritative and no native completion hook is asserted.
 [refs]: ../references/README.md
 [inputs]: handoffs/VCD-GT-E11-r1-inputs.json
 [record]: ../numerics/20_VCD_GT_RESEARCH_PHASE_REVISION_RECORD_20261117.json
+
+**17 November sibling setup:** the author splits complex-p/Mellin work into
+[CM](../02_complex_p_mellin/README.md), with its own sole register and
+continuation. GR retains Gaussian spatial-scale estimates; existing integer
+and spatial laws are shared in place. The [dated division](../01_gaussian_resolvent_hierarchy/notes/08_VCD_GT_GR_SIBLING_DIVISION_AND_CONTINUATION_20261117.md)
+supersedes earlier sole-child next-action routing, not scientific results.
+Parent B12 remains unactivated. This is document setup for Edward Baker with
+Codex assistance; actual lead settings unavailable. Current setup chat0001
+remains registered in GR; no parent or child chat is duplicated.

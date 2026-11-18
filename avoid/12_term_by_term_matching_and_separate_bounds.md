@@ -1372,3 +1372,16 @@ accepts these scopes. A favorable count threshold is a screening result,
 not a reason to launch an unplanned acquisition.
 
 **Retain time dependence and acquire only the count actually needed, 16 November 2026.** [GT Synthesis32](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/32_VCD_GT_EXTERIOR_MASS_SYNTHESIS_AND_CONTINUATION_20261116.md) states: “It also preserves time dependence that the failed global-coordinate allowances discarded.” Global-coordinate lower allowances for the same 176 brackets fall below 0.59, while 512-cell coordinates give >0.5937558081007126288. These failed allowances are not upper bounds on actual mass. Full-time opposite endpoint signs supply the required real lower counts without exact singletons or tracked root identities; sampled candidate matching is not proof. [Assessment13](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/reviews/13_VCD_GT_EXTERIOR_MASS_CERTIFICATE_ASSESSMENT_20261116.md) accepts the finite acquisition and replay within scope. The positive D input already pays reality; all information belongs to the direct comparator too. Do not promote a new magnitude calculation into new coverage or an unmeasured cost gain. For Edward Baker with Codex assistance; actual settings unavailable, internal shared-premise review.
+
+
+**Microscopic Gaussian complements can carry the cancellation, 17 November 2026.**
+For Edward Baker with Codex assistance; lead actual settings unavailable,
+helpers dispatched Sol6.1/ultra. [GR Note05 §4](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/01_gaussian_resolvent_hierarchy/notes/05_VCD_GT_GR_E06_FORCING_TRANSFER_AND_COST_20261117.md)
+states: “This is an actual cancellation on the changed slice”. Its full
+static divisor has a microscopic Gaussian forcing of order
+L^-4 exp(alpha L²/4), canceled by the retained complement, while the total
+is O(L^-3). [E07](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/01_gaussian_resolvent_hierarchy/reviews/05_VCD_GT_GR_E07_FORCING_AND_SCOPE_ASSESSMENT_20261117.md)
+checks this within the changed-source fixed-slice class. A fixed-physical-scale
+O(1/L) error is separately proved; it does not bound the retained signed
+quantity. Keep the joint terms and the scale regime explicit. This excludes
+neither canonical time estimates nor other phase-sensitive Gaussian uses.

@@ -9,13 +9,13 @@ B09/B10 now supply an accepted source-based transverse mean and an
 exponential count of isolated pairs with negative interaction. The
 fixed-collar every-pair sign remains open. B11 now supplies accepted
 time-occupation and conditional interior-interaction gains. The author
-now assigns Gaussian scale and integer/resolvent development together to
-the [new child investigation](../01_gaussian_resolvent_hierarchy/README.md).
+now assigns Gaussian scale development to the
+[GR child](../01_gaussian_resolvent_hierarchy/README.md), and complex-power
+p-plane contour evolution and bounds to the [CM sibling](../02_complex_p_mellin/README.md).
+Their shared integer/resolvent/spatial inputs stay at their existing paths.
 Use [Synthesis42](../notes/42_VCD_GT_B11_FIXED_COLLAR_SYNTHESIS_20261117.md)
-for the accepted baseline and the
-[child continuation](../01_gaussian_resolvent_hierarchy/notes/01_VCD_GT_GR_SETUP_CONTINUATION_20261117.md)
-for the next launch. Parent B12 remains an unactivated coordination gate,
-with hierarchy work owned by the child. The [active plan][plan] and
+for the parent baseline and the two child continuations linked below for
+new work. Parent B12 remains an unactivated coordination gate. The [active plan][plan] and
 [sole parent register][progress] retain other VCD-GT tasks; the
 [setup continuation][continuation] retains its dated routing history.
 
@@ -41,6 +41,15 @@ supporting computations in Appendix B, and §19 devoted to outstanding
 challenges. [Assessment20](../reviews/20_VCD_GT_E24_ANALYTICAL_MANUSCRIPT_ASSESSMENT_20261117.md)
 accepts it within scope after corrections. This exposition milestone
 does not activate B12 or strengthen the scientific conclusions.
+
+**Later sibling routing, 17 November 2026:** the author now separates
+[Gaussian spatial-scale work](../01_gaussian_resolvent_hierarchy/notes/08_VCD_GT_GR_SIBLING_DIVISION_AND_CONTINUATION_20261117.md)
+from [complex-p/Mellin contour work](../02_complex_p_mellin/notes/01_VCD_GT_CM_SETUP_CONTINUATION_20261117.md).
+The second route explicitly targets the M evolution equation as a p-plane
+contour integral and an analytical bound with infinite-index potential.
+Earlier sole-GR launch wording below is superseded as routing only. Each
+child owns its own task IDs; canonical and integer/spatial evidence is
+shared by reference. Parent B12 stays unactivated and no parent result changes.
 
 ## Question and ownership
 

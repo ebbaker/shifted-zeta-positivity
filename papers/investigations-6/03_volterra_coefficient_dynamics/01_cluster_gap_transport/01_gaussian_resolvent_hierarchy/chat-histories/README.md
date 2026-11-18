@@ -6,7 +6,10 @@ Requested research effort: ultra; conceptual recommendation: Astra;
 authorized bounded helper dispatch: GPT-6.1 Sol/ultra. Actual settings
 must be recorded separately when exposed.
 
-No chat is registered in this new folder during setup. The existing setup
+Chat0001, **Begin VCD-GT-GR-B01 follow-through**, thread
+01a1ec48-00e8-7163-ab1b-6008ad584039, is registered here. The guarded
+[index](index.json) owns current capture counts, hashes and metadata.
+No chat was registered here during setup. The existing setup
 conversation, **Review Volterra manuscript results**, thread
 01a1eb96-c257-77a3-96be-ee1cb0279757, is chat0007 in the
 [parent history](../../chat-histories/README.md). Its unique registration,
@@ -34,3 +37,8 @@ integrity, size, source-age and transaction guards; surface a failure while
 retaining prior verified history. The registry owns actual metadata and
 model configurations. No missing model/effort or active hook is inferred.
 Chat provenance does not validate mathematics.
+
+The 17 November complex-p/Mellin sibling setup was requested in this same
+chat0001 and remains archived here. [CM history guidance](../../02_complex_p_mellin/chat-histories/README.md)
+reserves its own folder for new CM-only chats; this split does not relocate
+or duplicate the existing conversation.

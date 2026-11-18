@@ -136,3 +136,12 @@
   mathematical evidence and parent B07/E25 ownership are unchanged.
 
 - **17 November 2026 — B09/B10 source-estimate milestone, chat0006 continuation:** [Synthesis39](notes/39_VCD_GT_B09_B10_SOURCE_ESTIMATE_SYNTHESIS_20261117.md) integrates the source-based a^-3 transverse center mean, matched a^-1 count bound, both-sign radial bridge, and exponential negative-interaction pair count O_b(T log(T) exp(-2ba/3)) under paid collars. The general transverse-loss count is O(T log(T)/(a^4 h)); the literal favorable-phase-only allowance has a proved negative limit. [E18 / Assessment17](reviews/17_VCD_GT_E18_SOURCE_AND_PAIR_COUNT_ASSESSMENT_20261117.md) accepts all three proofs and synthesis without required correction. Controls retain moment and density on fixed slices; no every-pair sign, incoming cost, new positivity region or manuscript change. [Session22](numerics/22_VCD_GT_B09_B10_RESEARCH_SESSION_20261117.json). For Edward Baker with Codex assistance; root settings unavailable, conceptual Astra/ultra and proof/review Sol6.1/ultra dispatches; shared-premise internal review.
+
+- **17 November 2026 — sibling complex-p/Mellin setup:** created
+  [02_complex_p_mellin](02_complex_p_mellin/README.md) for the author-selected
+  p-plane contour formulation and estimation of M evolution, with analytical
+  infinite-index limits and sustained Sol-assisted B/E sessions. GR retains
+  Gaussian localization; shared evidence stays in place. Parent B12 remains
+  unactivated. Prepared for Edward Baker with Codex assistance; actual lead
+  model/effort unavailable. [Division](01_gaussian_resolvent_hierarchy/notes/08_VCD_GT_GR_SIBLING_DIVISION_AND_CONTINUATION_20261117.md)
+  and [CM setup assessment](02_complex_p_mellin/reviews/01_VCD_GT_CM_SETUP_ASSESSMENT_20261117.md).

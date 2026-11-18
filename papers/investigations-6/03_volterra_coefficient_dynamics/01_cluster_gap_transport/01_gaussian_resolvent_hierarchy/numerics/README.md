@@ -9,3 +9,7 @@ must be recorded separately when exposed.
 Store authorized code and small execution records here. E04 requires a frozen falsifiable question and finite caps before execution. Setup record01 is documentation provenance, not a mathematical experiment. Large derived data stay outside Git under LARGE_FILES.md.
 
 [Plan](../research-plan/01_VCD_GT_GR_RESEARCH_PLAN_20261117.md) · [Sole register](../research-progress/01_VCD_GT_GR_RESEARCH_PROGRESS_20261117.md).
+
+[Session record02](02_VCD_GT_GR_SESSION_RECORD_20261117.json) records the
+17 November analytical pass, frozen-input checks and file checks. No
+scientific numerical experiment was run; the record is not a proof certificate.

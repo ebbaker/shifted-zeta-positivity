@@ -9,3 +9,13 @@ must be recorded separately when exposed.
 Store fixed-claim assessments here with actual reviewer/dispatch provenance, shared-premise limits and precise dispositions. E00 concerns setup consistency only; later scientific claims need their own assessment.
 
 [Plan](../research-plan/01_VCD_GT_GR_RESEARCH_PLAN_20261117.md) · [Sole register](../research-progress/01_VCD_GT_GR_RESEARCH_PROGRESS_20261117.md).
+
+## Research assessments — 17 November 2026
+
+Prepared for Edward Baker with Codex assistance; actual lead settings
+unavailable. Current dispositions belong to the sole progress register.
+
+- [VCD_GT_GR_E01_INPUT_AUDIT_20261117](02_VCD_GT_GR_E01_INPUT_AUDIT_20261117.md).
+- [VCD_GT_GR_E05_INITIAL_PROOFS_ASSESSMENT_20261117](03_VCD_GT_GR_E05_INITIAL_PROOFS_ASSESSMENT_20261117.md).
+- [VCD_GT_GR_E09_RADIAL_ASSESSMENT_20261117](04_VCD_GT_GR_E09_RADIAL_ASSESSMENT_20261117.md).
+- [VCD_GT_GR_E07_FORCING_AND_SCOPE_ASSESSMENT_20261117](05_VCD_GT_GR_E07_FORCING_AND_SCOPE_ASSESSMENT_20261117.md).

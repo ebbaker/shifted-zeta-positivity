@@ -274,3 +274,24 @@ exact interaction law and scoped Fourier limits in dependency order.
 The scientific statuses above are unchanged; numerical evidence supports
 the theory in Appendix B. For Edward Baker with Codex assistance; root
 settings unavailable, Sol6.1/ultra helper dispatches, internal shared premises.
+
+
+**Gaussian/resolvent pass, 17 November 2026.** For Edward Baker with Codex
+assistance; root actual settings unavailable, helpers dispatched Sol6.1/ultra.
+[GR Note05](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/01_gaussian_resolvent_hierarchy/notes/05_VCD_GT_GR_E06_FORCING_TRANSFER_AND_COST_20261117.md)
+(**proved in-note**) states: “The transfer is a quantified approximation on
+the paid canonical tube.” At fixed physical Gaussian scale it bounds the
+full normalized forcing complement by an explicit O(1/log T), with a
+conditional finite-initial-value Riccati/cost consumer. [E07](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/01_gaussian_resolvent_hierarchy/reviews/05_VCD_GT_GR_E07_FORCING_AND_SCOPE_ASSESSMENT_20261117.md)
+accepts its scoped comparisons and the separate scalar-equilibrium limit.
+[E05](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/01_gaussian_resolvent_hierarchy/reviews/03_VCD_GT_GR_E05_INITIAL_PROOFS_ASSESSMENT_20261117.md)
+accepts the complete canonical S2 law with spatial T2² and finite Gaussian
+contour evolution. [E09](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/01_gaussian_resolvent_hierarchy/reviews/04_VCD_GT_GR_E09_RADIAL_ASSESSMENT_20261117.md)
+accepts compact radial Lipschitz evolution with O((log T)²) modulus and
+exponentially small continuous far remainder; full uncut absolute continuity
+is unestablished. Changed static divisors allow linear forcing at negative
+interaction and exponential microscopic Gaussian cancellation; the scalar
+relaxation allows the sqrt(log T) transport exponent but realizes no divisor.
+No stronger canonical signed bound or reality coverage follows.
+[Session synthesis](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/01_gaussian_resolvent_hierarchy/notes/07_VCD_GT_GR_SESSION_SYNTHESIS_AND_CONTINUATION_20261117.md).
+All assessments are internal with shared premises.

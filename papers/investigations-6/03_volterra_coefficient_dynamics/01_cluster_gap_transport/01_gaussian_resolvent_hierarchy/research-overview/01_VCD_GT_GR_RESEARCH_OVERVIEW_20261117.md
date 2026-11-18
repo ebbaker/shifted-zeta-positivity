@@ -8,6 +8,14 @@ unavailable. Intended research effort: **ultra**; recommended conceptual
 lead: **Astra**; expressly authorized bounded helpers: **GPT-6.1 Sol/ultra**.
 Recommendations and dispatch settings are separate from actual metadata.
 
+**Later author division, 17 November 2026:** complex powers, Mellin methods
+and p-plane contours for M evolution now belong to the
+[CM sibling](../../02_complex_p_mellin/README.md). GR retains Gaussian
+spatial-scale dynamics, with its accepted integer/resolvent/spatial laws
+shared in place. Read [Division08](../notes/08_VCD_GT_GR_SIBLING_DIVISION_AND_CONTINUATION_20261117.md)
+for current continuation and ownership; the earlier specification below
+retains its dated context. This split does not upgrade or retract any result.
+
 ## Question and scope
 
 Can a joint description of the complete exterior interaction by distance
