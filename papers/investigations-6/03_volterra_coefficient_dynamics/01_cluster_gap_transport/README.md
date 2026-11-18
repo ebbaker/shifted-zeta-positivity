@@ -6,11 +6,18 @@ time vary, beginning with isolated multiplicity-two clusters. Prepared for
 Edward Baker with OpenAI Codex assistance; actual lead model/effort
 unavailable. **VCD-GT-B11 is complete within scope:** fixed-collar time occupation
 and conditional interior-interaction bounds are internally accepted.
-The next conceptual gate is **B12 / Astra ultra**, for a sign-sensitive
-estimate of the exact Riccati forcing. Every-pair positivity remains open.
+The author-selected next research route is the new
+[Gaussian/resolvent sub-investigation](01_gaussian_resolvent_hierarchy/README.md),
+with its [sustained continuation](01_gaussian_resolvent_hierarchy/notes/01_VCD_GT_GR_SETUP_CONTINUATION_20261117.md).
+Parent **B12 / Astra ultra** remains an unactivated coordination gate;
+hierarchy development has its own child register. Every-pair positivity
+remains open.
 
 - [Current overview][overview], [active plan][plan] and [sole GT register][progress].
-- [Current synthesis and continuation42](notes/42_VCD_GT_B11_FIXED_COLLAR_SYNTHESIS_20261117.md); [historical setup prompt14][continuation].
+- [Accepted synthesis42](notes/42_VCD_GT_B11_FIXED_COLLAR_SYNTHESIS_20261117.md); [historical setup prompt14][continuation].
+- [Gaussian scale and integer/resolvent development](01_gaussian_resolvent_hierarchy/README.md),
+  [sole child register](01_gaussian_resolvent_hierarchy/research-progress/01_VCD_GT_GR_RESEARCH_PROGRESS_20261117.md)
+  and [launch prompt](01_gaussian_resolvent_hierarchy/notes/01_VCD_GT_GR_SETUP_CONTINUATION_20261117.md).
 - Author's discussion: [progress10][b10], [threshold/cost/height11][b11],
   [correlation predecessors and double-cluster12][b12], [revision recommendation13][b13].
 - [Source ownership and predecessor-use guide][refs], [canonical bibliography][bib],
@@ -61,8 +68,9 @@ new reality region or direct-method cost improvement.
 comparison. [Synthesis20][s20] retains the specified source-mode allowance
 failure and minimum comparison. [Note21][s21], [sharp weights27][s27] and
 [Fourier screens28][s28] retain their precise hypotheses and negative
-classes. Earlier continuations are historical routing; the register and
-Synthesis42 are the current entry points. The [existing manuscript][manuscript]
+classes. Earlier continuations are historical routing; the parent register and
+Synthesis42 own the accepted baseline, while the child continuation owns
+the new hierarchy launch. The [existing manuscript][manuscript]
 now covers the accepted analytical results through Notes40–41 within the
 internal review scope above.
 
@@ -71,7 +79,10 @@ internal review scope above.
 This branch owns physical-time cluster/exterior estimates. The [parent][parent]
 owns shared VCD tasks; [degree contraction][sibling2] and [multiscale bounds][sibling3]
 retain their separate questions. Parent VCD-B07/E25 and GT-E06 are not
-activated by this revision. GT task IDs and status live in this branch only.
+activated by this revision. This register owns other VCD-GT task IDs;
+the child is the sole live owner of VCD-GT-GR tasks. Existing setup
+chat0007 stays in this parent archive; future branch-only chats use the
+child history folder. The dated ownership crosswalk is in the child register.
 
 Follow [setup guidance][setup], [reference workflow][refworkflow],
 [large-file rules][large], [result summaries][results] and [avoid index][avoid].

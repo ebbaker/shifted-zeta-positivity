@@ -1,5 +1,17 @@
 # Cluster gap transport history
 
+- **17 November 2026 — author-requested Gaussian/resolvent child setup, chat0007:**
+  created [01_gaussian_resolvent_hierarchy](01_gaussian_resolvent_hierarchy/README.md)
+  with a substantive overview, sustained ultra research plan, sole
+  VCD-GT-GR register and [continuation prompt](01_gaussian_resolvent_hierarchy/notes/01_VCD_GT_GR_SETUP_CONTINUATION_20261117.md).
+  Bounded Sol6.1/ultra subtasks support connected lead sessions. Hierarchy
+  development moves to the child; B12 remains unactivated, and existing
+  scientific inputs, issued packets and this chat's archive identity remain
+  intact. [Setup record](01_gaussian_resolvent_hierarchy/numerics/01_VCD_GT_GR_SETUP_RECORD_20261117.json).
+  Prepared for Edward Baker with Codex assistance; actual lead model/effort
+  unavailable. Documentation setup only; no new mathematical result,
+  numerical run, manuscript or snapshot.
+
 - **17 November 2026 — E23/E24 analytical manuscript milestone, chat0006:**
   [Integration43](notes/43_VCD_GT_RECENT_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261117.md)
   incorporates Notes27–42 into the existing shared manuscript: sharp mass,

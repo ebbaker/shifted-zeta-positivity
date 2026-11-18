@@ -11,6 +11,22 @@ Rodgers–Tao reading records remain in its [investigation catalog](../../../../
 with the VCD [zero-dynamics passage supplement](../../references/03_CANONICAL_SCORE_FOURIER_PASSAGES_20261116.md#fixed-cluster-discussion-supplement-16-november-2026-chat0004).
 No competing bibliography or duplicate article record is created.
 
+## Author scale proposal, 17 November 2026, chat0007
+
+Prepared for Edward Baker with OpenAI Codex assistance; actual model/effort
+unavailable. [Discussion22](../brainstorm/notes/22_VCD_GT_AUTHOR_SCALE_HIERARCHY_DISCUSSION_20261117.md)
+and [derivation44](../notes/44_VCD_GT_SCALE_AND_MOMENT_HIERARCHY_DISCUSSION_20261117.md)
+use Edward B. Baker III's *Notes on the continuum sigma limit*,
+22 November 2017, equations (5)–(11), pp.1–2. All nine supplied pages were
+visually read; the PDF matches the existing
+[canonical source manifest](../../../../investigations-2/active/20_constrained_operator_squares/SOURCE_DOCUMENTS.json).
+The [prior source review](../../../../investigations-2/active/20_constrained_operator_squares/reviews/THREE_SOURCE_NOTES_REVIEW_20261014.md)
+owns the distinction between valid scale/semigroup identities and later
+unfinished operator claims. Only the scale-decomposition seed is used
+here. No file was moved, copied into the repository or replaced.
+The [DLMF passage addendum](02_VCD_GT_XI_QUADRATURE_BOUND_SOURCES_20261116.md#gamma-transform-passage-17-november-2026-chat0007)
+records the newly checked gamma-transform domain.
+
 ## Correlation and height phase: inherited use, 17 November 2026
 
 Prepared for Edward Baker with OpenAI Codex assistance; actual lead

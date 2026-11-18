@@ -25,3 +25,19 @@ contour shifts and pays the finite lattice tails separately. The
 canonical pair article is recorded in
 [the branch's Lehmer source addendum](01_VCD_GT_LEHMER_SOURCE_USE_20261116.md)
 under its own scope.
+
+## Gamma-transform passage, 17 November 2026, chat0007
+
+Prepared for Edward Baker with OpenAI Codex assistance; actual model and
+effort unavailable. Reused the canonical DLMF record and inspected
+[5.9.1](https://dlmf.nist.gov/5.9.E1) and its displayed hypotheses online.
+With its exponent parameter set to one, it gives
+\(a^{-p}=\Gamma(p)^{-1}\int_0^\infty s^{p-1}e^{-as}\,ds\) for
+\(\Re a>0,\Re p>0\), with principal powers. The use in
+[hierarchy discussion44](../notes/44_VCD_GT_SCALE_AND_MOMENT_HIERARCHY_DISCUSSION_20261117.md)
+is a conditional connection between reciprocal interaction powers and
+Gaussian/Laplace scales. The nearby complex denominators need not have
+positive real part, and the complete sum needs its own convergence
+justification. No analytic continuation across that sector boundary or
+canonical sign estimate is imported. Passage inspection only; no PDF
+download, new release-version claim or full chapter audit.

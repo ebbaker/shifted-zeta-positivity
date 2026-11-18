@@ -12,6 +12,14 @@ output stays external with parameters, hashes and regeneration guidance.
 The [sole register](../research-progress/01_VCD_GT_RESEARCH_PROGRESS_20261116.md)
 owns task status.
 
+[Hierarchy discussion checks25](25_VCD_GT_HIERARCHY_DISCUSSION_CHECKS_20261117.json)
+and [checker](vcd_gt_hierarchy_discussion_checks.py), 17 November 2026,
+record exact rational checks of the next interaction-moment equation
+on polynomial heat fields. The same-assistant calculations include target
+doubles and a scoped nonclosure example; they use no canonical theta
+evaluations and establish no new signed estimate. Prepared for Edward
+Baker with OpenAI Codex assistance; actual model/effort unavailable.
+
 [Record03](03_VCD_GT_CRITICAL_SCALE_SESSION_RECORD_20261116.json) records the analytical critical-scale continuation, frozen/assessed versions, bounded corrections and document checks. This round ran no mathematical numerical campaign and produced no numerical certificate.
 
 The complete-source round adds [diagnostic04](04_VCD_GT_LEHMER_DIAGNOSTIC_20261116.json) and its [script](vcd_gt_lehmer_diagnostic.py), followed by [enclosure05](05_VCD_GT_LEHMER_CERTIFICATE_20261116.json) and its [replay](vcd_gt_lehmer_certificate.py). The two-level diagnostic alone has empirical contour/time errors; the separate tensor/collar proof pays them for the later enclosure. [ARCHIVES](../ARCHIVES.md) owns external fine/coarse grids, hashes and reconstruction. E05 r6 accepted the complete batch within scope; the historical execution record retains its run-time pre-review status. [Session record06](06_VCD_GT_CANONICAL_GAP_SESSION_RECORD_20261116.json) records final integration and provenance.

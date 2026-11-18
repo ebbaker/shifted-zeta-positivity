@@ -78,3 +78,19 @@ gains, the selected-pair limitation, the direction of the forcing bound,
 and a recommended standard for the next source estimate. Prepared
 17 November 2026 for Edward Baker with OpenAI Codex assistance; actual
 model/effort unavailable. Discussion only; B12 remains unactivated.
+
+[Pair and interaction equations discussion21](21_VCD_GT_PAIR_AND_INTERACTION_EQUATIONS_EXPLAINED_20261117.md)
+explains the signed squared half-gap, complete exterior interaction,
+physical and scaled evolution laws, current local and growing-height
+results, and the scope of the projected counts and transverse moments.
+Equation numbers are checked against the current integrated manuscript
+build. Prepared 17 November 2026 for Edward Baker with OpenAI Codex
+assistance; actual model/effort unavailable. Expository discussion only;
+B12 remains unactivated.
+
+[Author scale hierarchy discussion22](22_VCD_GT_AUTHOR_SCALE_HIERARCHY_DISCUSSION_20261117.md)
+records Edward's Gaussian/LMF scale proposal and continuous-power proposal,
+the notation and endpoint clarifications, and preliminary supporting
+algebra in Note44. Prepared 17 November 2026 for Edward Baker with OpenAI
+Codex assistance; actual model/effort unavailable. Discussion and
+same-assistant checks only; no canonical estimate or B12 activation.

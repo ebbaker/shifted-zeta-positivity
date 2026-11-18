@@ -8,9 +8,15 @@ exact-identical-count scope test are accepted within scope by E14.
 B09/B10 now supply an accepted source-based transverse mean and an
 exponential count of isolated pairs with negative interaction. The
 fixed-collar every-pair sign remains open. B11 now supplies accepted
-time-occupation and conditional interior-interaction gains; B12 is next.
-Use [Synthesis42](../notes/42_VCD_GT_B11_FIXED_COLLAR_SYNTHESIS_20261117.md),
-the [active plan][plan] and [sole VCD-GT register][progress]. The
+time-occupation and conditional interior-interaction gains. The author
+now assigns Gaussian scale and integer/resolvent development together to
+the [new child investigation](../01_gaussian_resolvent_hierarchy/README.md).
+Use [Synthesis42](../notes/42_VCD_GT_B11_FIXED_COLLAR_SYNTHESIS_20261117.md)
+for the accepted baseline and the
+[child continuation](../01_gaussian_resolvent_hierarchy/notes/01_VCD_GT_GR_SETUP_CONTINUATION_20261117.md)
+for the next launch. Parent B12 remains an unactivated coordination gate,
+with hierarchy work owned by the child. The [active plan][plan] and
+[sole parent register][progress] retain other VCD-GT tasks; the
 [setup continuation][continuation] retains its dated routing history.
 
 Prepared for **Edward Baker** with substantial OpenAI Codex LLM assistance.
@@ -234,8 +240,10 @@ still fails to exclude one exception; neither negative visibility nor a
 long tube is acquired from a snapshot. The equally informed direct method
 gets the same estimates. E22's separate internal assessment accepts within
 scope without required correction; source premises remain shared. The
-next B12 decision concerns a concrete sign-sensitive forcing estimate,
-with no E contract or all-pair sign claimed.
+earlier B12 next-action route is now assigned to the
+[Gaussian/resolvent child continuation](../01_gaussian_resolvent_hierarchy/notes/01_VCD_GT_GR_SETUP_CONTINUATION_20261117.md).
+The intended consumer remains a concrete sign-sensitive forcing estimate;
+parent B12 is unactivated, with no all-pair sign claimed.
 
 ## Height, time and higher-multiplicity obligations
 

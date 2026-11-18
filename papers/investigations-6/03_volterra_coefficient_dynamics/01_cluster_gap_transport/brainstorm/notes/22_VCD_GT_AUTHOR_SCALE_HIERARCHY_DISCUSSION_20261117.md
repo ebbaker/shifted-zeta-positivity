@@ -1,0 +1,127 @@
+# Author's scale hierarchy and continuous-moment proposals
+
+17 November 2026, America/New_York. Prepared for **Edward Baker** with
+OpenAI Codex LLM assistance. Chat0007, thread
+01a1eb96-c257-77a3-96be-ee1cb0279757, turn
+01a1ec23-2a18-7653-aca5-eb33ced7ef51. Actual recorded model and effort
+are unavailable. No collaborator was dispatched.
+
+**Discussion only; B12 remains unactivated.** Edward proposed a Gaussian
+partition of the exterior interaction inspired by his continuum-sigma/LMF
+work, and a continuous or complex extension of the interaction power index.
+These are his proposed directions. The [supporting derivation44][n44]
+records preliminary algebra and a finite polynomial calculation; no
+canonical signed estimate or accepted scientific milestone is claimed.
+
+Read the [result index][results], especially [cluster18][cluster] and
+[controls12][controls], and the [avoid index][avoid], especially
+[classification01][a01], [premises02][a02], [scope07][a07] and
+[joint bounds12][a12]. The representations are exploratory tools.
+Their value would be measured by a new quantitative bound using them.
+
+## Clarifications to discussion21
+
+1. The convention is \(M=-K\), equivalently \(K=-M\). Both notations
+   occur in the current manuscript: Section 12 uses the regular drift
+   \(K\); Section 15 explicitly changes to the exterior interaction
+   \(M=-K\). The conversation should make that conversion visible.
+2. The exact backward identity (12.9) already holds through \(D=0\),
+   and the following manuscript paragraph treats equality. Exact strict
+   positivity of its right side is equivalent to \(D(t)>0\), but the
+   reality objective permits \(D=0\). Strict separation of conservative
+   bounds is also stronger than exact positivity. Derivation44 (1)–(3)
+   writes the signed, nonnegative and collision-anchored cases explicitly,
+   including the undivided Volterra integral equation.
+3. The band is \([T,2T]\); \(c(t)\) is a center in that band. The fixed
+   \(T\) sets \(L=\log T\). The band supplies uniform constants and a
+   common scale across centers and time; it does not enter \(L\) by
+   integration. A moving scale adds the displayed chain-rule terms.
+4. Edward's expression is correct:
+   \(\mathcal F=12\ell^4S_2+16\delta\ell^6S_3
+   =\ell^4(12S_2+16DS_3)\).
+
+## The proposed scale description
+
+The author's 22 November 2017 *Notes on the continuum sigma limit*,
+equations (5)–(11), telescope smoothing cutoffs and pass to a continuum
+heat-kernel representation. The supplied nine-page PDF was visually
+read in full and matches the existing [manifest][manifest]. The
+[prior review][prior-review] preserves that exact seed while correcting
+later operator claims, which are not used here.
+
+Derivation44 gives a radial Gaussian partition of \(M\) into near,
+intermediate and complementary far terms, with nonnegative weights
+summing to one. A continuum scale integral also reconstructs \(M\).
+The literal holomorphic Gaussian remains a possible finite split, but
+can grow in the imaginary direction. The radial version avoids that
+growth and introduces nonholomorphic dependence, so time evolution
+through exterior mergers requires additional treatment. This is a
+design choice, not an exclusion of Gaussian methods.
+
+The intended benefit is a joint comparison across scales. Requiring
+every scale separately to be favorable, or taking absolute values of
+every cross-scale product, could lose the correlations being sought.
+
+## The proposed power description
+
+With locally chosen logarithms, the continuous-\(p\) series has the
+natural fixed-slice absolute-convergence domain \(\Re p>1/2\).
+Fractional powers introduce branch issues for near denominators on
+or across the negative real axis. The positive-ray gamma representation
+links reciprocal powers to exponential scales only in its appropriate
+right-half-plane sector. It cannot silently discard adverse near terms.
+
+A branch-free first version is the resolvent
+\[
+\mathcal R(\eta,t)=\sum_j\frac1{(\rho_j-c)^2-D-\eta}
+                 =M+\eta S_2+\eta^2S_3+\cdots .
+\]
+The preliminary finite-polynomial calculation gives
+\[
+S_2'=8MS_2-32S_3+4DS_2^2-40DS_4+4T_2^2,\qquad
+T_2=\sum_j\frac{\rho_j-c}{((\rho_j-c)^2-D)^2}.
+\]
+Thus additional spatial information appears at the next step.
+Derivation44 gives two generic polynomial configurations with identical
+full denominator multisets, hence identical continuous power sums, but
+different \(S_2'\). This scopes failure of autonomous closure using
+only those data to that class; larger or canonical hierarchies remain open.
+[Record25][record] contains same-assistant exact rational checks from
+the polynomial heat equation, including target doubles and a separate
+even-quartic multiple-root check.
+
+## Recommended discussion outcome
+
+Keep both proposals available as complementary descriptions. The Gaussian
+hierarchy resolves distance; the moment/resolvent hierarchy identifies
+observables generated by evolution. Complex \(p\) becomes useful if a
+transform or analytic estimate improves on the available integer moments;
+it need not be the first technical commitment.
+
+A focused next question is whether a scale-dependent joint bound,
+retaining spatial moments and cross-scale terms, improves the existing
+\(\mathcal F\le C_F\log T\) allowance or the integrated backward cost.
+Endpoint equality should remain allowed. The source estimate must still
+connect to the selected pair, its established tube and incoming data.
+This recommends a test of the ideas, without selecting an execution
+packet or imposing an unproved closure.
+
+Derivation44 Section 7 reapplies the repository controls and names their
+failed premises. The exact decompositions survive appropriate colliding
+controls, including the quadratic and even quartic. No sign gain is
+inferred from the decomposition alone. The current far-tail theorem remains
+useful, but does not settle every joint small-time/high-height regime or
+determine the nearby exterior.
+
+[n44]: ../../notes/44_VCD_GT_SCALE_AND_MOMENT_HIERARCHY_DISCUSSION_20261117.md
+[record]: ../../numerics/25_VCD_GT_HIERARCHY_DISCUSSION_CHECKS_20261117.json
+[manifest]: ../../../../../investigations-2/active/20_constrained_operator_squares/SOURCE_DOCUMENTS.json
+[prior-review]: ../../../../../investigations-2/active/20_constrained_operator_squares/reviews/THREE_SOURCE_NOTES_REVIEW_20261014.md
+[results]: ../../../../../../result-summaries/README.md
+[cluster]: ../../../../../../result-summaries/18_tensor_approximation_and_coefficient_bounds.md
+[controls]: ../../../../../../result-summaries/12_collision_controls_and_screening.md
+[avoid]: ../../../../../../avoid/README.md
+[a01]: ../../../../../../avoid/01_restating_the_target.md
+[a02]: ../../../../../../avoid/02_shape_only_arguments_and_the_controls.md
+[a07]: ../../../../../../avoid/07_scoped_exclusions_read_as_universal.md
+[a12]: ../../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md

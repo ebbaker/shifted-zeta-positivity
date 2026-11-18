@@ -4,8 +4,12 @@
 assistance; actual lead model/effort unavailable. This is the current
 specification at the existing live path. The [sole register][progress]
 owns status, the [overview][overview] owns the scientific setting, and
-[Synthesis42][continuation] is the current continuation. Readiness
-wording in the setup specifications below is dated; the issued continuation
+[Synthesis42][continuation] supplies the accepted baseline. The
+[Gaussian/resolvent child continuation](../01_gaussian_resolvent_hierarchy/notes/01_VCD_GT_GR_SETUP_CONTINUATION_20261117.md)
+is the author-selected next research route as of 17 November. Its
+[sole register](../01_gaussian_resolvent_hierarchy/research-progress/01_VCD_GT_GR_RESEARCH_PROGRESS_20261117.md)
+owns VCD-GT-GR tasks; this plan retains the parent-owned B12 coordination
+gate without activating it. Readiness wording in earlier specifications is dated; the issued continuation
 section and sole register record later activation and disposition.
 
 The author selected the broader positivity objective in [Discussion11][b11],
@@ -79,10 +83,13 @@ source input that is additional to generic heat/positivity information.
 
 ## 3. Current task specifications
 
-The routing table is a specification snapshot; [the register][progress]
-remains authoritative. B07 is the default first scientific task on use of
-the continuation prompt. Later E slots are **reserved**, not executable
-requests with missing mathematical inputs.
+This section preserves the earlier 17 November specification snapshot;
+its default B07 launch and then-reserved E slots describe that phase.
+The [parent register][progress] records their actual dispositions.
+Current next-session routing is the
+[Gaussian/resolvent child launch](../01_gaussian_resolvent_hierarchy/notes/01_VCD_GT_GR_SETUP_CONTINUATION_20261117.md),
+starting with child B01. These historical contracts do not reactivate B07
+or issue later requests with missing mathematical inputs.
 
 | ID | Type / recommended model and reason | Dependency | Deliverable |
 | --- | --- | --- | --- |
@@ -214,7 +221,7 @@ or to stop after the first B/E cycle when justified work remains.
 | GT-B01–B06 and completed GT-E00–E10 results | Preserved with existing statuses, source files and internal review limits; no reopening or renumbering |
 | B06 Decision09 / Synthesis32 | Fixed exterior acquisition completed; general problem remains open and now has B07's selected-pair priority |
 | GT-E06 finite composition | Reserved/unissued; the old interval already reaches zero. No artificial extra slabs are issued |
-| Earlier continuation Notes02/08/17/26/29/32 and historical plan text | Evidence and dated routing retained; Continuation14 supplies current next-session routing |
+| Earlier continuation Notes02/08/17/26/29/32, Continuation14 and historical plan text | Evidence and dated routing retained; current next-session routing is the Gaussian/resolvent child continuation linked above |
 | Parent VCD-B07/E25 and sibling investigations | No transfer, activation or duplicate status rows; their own registers remain authoritative |
 | Manuscript | Existing scope retained; planning revision adds no manuscript theorem or build |
 
@@ -299,7 +306,7 @@ moment and density must not be reissued as if they already supplied this
 input. A located scoped failure is valid. No blank E contract, scan,
 larger-cluster extension, new source family or sibling transfer is issued.
 
-## B11 completed and B12 next gate, 17 November 2026
+## B11 baseline and retained B12 coordination gate, 17 November 2026
 
 [Decision19](../brainstorm/notes/19_VCD_GT_B11_FIXED_COLLAR_DECISION_20261117.md)
 selected two common-time routes before issuing [E20](../research-progress/handoffs/VCD-GT-E20-r1.md)
@@ -313,7 +320,12 @@ accepts the fixed proofs and synthesis without required correction.
 The explicit combined allowance still permits one exception; tube survival
 does not pay negative visibility. No scan or manuscript revision occurred.
 
-**VCD-GT-B12 — B / Astra ultra**, next conceptual gate, unactivated.
+**VCD-GT-B12 — B / Astra ultra**, retained parent coordination gate,
+unactivated. Its earlier next-action route is superseded by the
+author-selected [Gaussian/resolvent child](../01_gaussian_resolvent_hierarchy/README.md).
+The following original contract is retained as the parent consumer;
+executing hierarchy work uses the child task IDs and sustained-session
+plan, not a duplicate B12 work stream. Child setup is not completion of B12.
 Dependency: accepted [Synthesis42](../notes/42_VCD_GT_B11_FIXED_COLLAR_SYNTHESIS_20261117.md),
 Notes40–41 and Assessment19. A consequential source/conditioning choice
 remains for the exact signed forcing F=12 sum(mu_j²)+16 delta sum(mu_j³),
