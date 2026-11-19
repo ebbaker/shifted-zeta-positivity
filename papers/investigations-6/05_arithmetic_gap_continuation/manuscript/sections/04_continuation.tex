@@ -1,0 +1,227 @@
+% 19 November 2026. Prepared for Edward Baker with Codex assistance.
+% Lead gpt-6-astra/max. Existing comparisons are rederived, not new claims.
+\section{What a backward estimate must control}
+\label{sec:continuation}
+
+\subsection{The cumulative drift budget}
+
+The pair law of Section~\ref{sec:pair-chain} reads
+\begin{equation}
+ D_t=2-4DM,\qquad
+ D_u=-\mathcal E,\qquad
+ \mathcal E=2-4DM=2-g^2M.
+ \label{cont:drift}
+\end{equation}
+The target is a time integral of the actual coupled quantity, not a
+sign inferred from the approximation $d^2M\approx2$. Even
+$g^2M=2+O(\varepsilon)$ does not select a sign for $D_u$; it selects
+an error scale whose accumulated effect must be compared with the
+initial squared gap.
+
+\begin{proposition}[Cumulative continuation margin]
+\label{cont:cumulative}
+Suppose a counted pair satisfies \eqref{cont:drift} on a stopped path
+$0\le u<\tau$, $D>0$, and $D(0)\ge d_0>0$. If an integrable real
+function $\varepsilon$ satisfies $\mathcal E(u)\le\varepsilon(u)$,
+then
+\begin{equation}
+ D(u)\ge d_0-\int_0^u\varepsilon(v)\dd v.
+ \label{cont:integral}
+\end{equation}
+If the supplied inputs persist up to a possible first target merger
+and
+\begin{equation}
+ \sup_{0\le s\le\Delta}\int_0^s\varepsilon(v)\dd v<d_0,
+ \label{cont:strict}
+\end{equation}
+that merger cannot occur by $\Delta$. For a nonnegative allowance it
+suffices to check the integral at $\Delta$.
+\end{proposition}
+
+\begin{proof}
+Integrate \eqref{cont:drift}. The proposed first merger has $D\to0$,
+whereas \eqref{cont:strict} leaves a uniform positive lower bound.
+No differential equation is divided by $D$ at the event.
+\end{proof}
+
+This elementary comparison specifies a quantitative task. It does not
+supply $\varepsilon$, a root-count tube, or coverage of other gaps.
+When the allowance is signed, checking only its final cumulative value
+could miss an earlier exhaustion; the supremum in
+\eqref{cont:strict} is essential. At height $X$, with
+$L=\log(X/(4\pi))$ and $D(0)$ of order $L^{-2}$, even a small
+absolute drift error must be integrated on that scale.
+
+\subsection{What initial interaction alone buys}
+
+In an all-real simple configuration, exterior terms for an adjacent
+pair are positive. Put
+\begin{equation}
+ \mathcal F=12S_2+16DS_3.
+ \label{cont:F}
+\end{equation}
+The first moment equation gives
+$M_u=-2M^2+\mathcal F\ge-2M^2$.
+If $b_0=M(0)\ge0$, comparison with the scalar Riccati solution gives
+$M(u)\ge b_0/(1+2b_0u)$. Retaining this lower bound in
+$D_u=-2+4DM$ and using the factor $(1+2b_0u)^{-2}$ yields
+\begin{equation}
+ D(u)\ge(1+2b_0u)
+       \{D(0)-2[1-b_0D(0)]u\}.
+ \label{cont:initial-mass}
+\end{equation}
+The comparison is valid before its all-real stopped regime ends.
+When $b_0D(0)<1$, its strict positive duration is
+\begin{equation}
+ u<\frac{D(0)}{2[1-b_0D(0)]}.
+ \label{cont:initial-horizon}
+\end{equation}
+This derivation also covers $b_0=0$ by continuity. For an initial
+near-clock configuration with $b_0D(0)\to1/2$, the duration approaches
+$D(0)=g(0)^2/4$. It still vanishes at high height. This is the allowance
+of this particular comparison, not a dynamical prediction of collision
+\cite[\S\S13--15]{VCDCMManuscript}.
+
+For example, an exact cosine heat field has stationary equally spaced
+zeros, $M=2/g^2$ and $D=g^2/4$. It survives indefinitely, while
+\eqref{cont:initial-horizon} stops at $g^2/4$. The forcing discarded
+in the Riccati comparison balances $2M^2$ exactly. This comparison
+control has uniform density; the canonical reference in
+Section~\ref{sec:pair-chain} remains logarithmically height dependent.
+
+\subsection{Keeping the joint forcing}
+
+Define
+\begin{equation}
+ V=1-2DM,\qquad K=2D^2\mathcal F
+                      =24D^2S_2+32D^3S_3.
+ \label{cont:VK}
+\end{equation}
+These quantities combine gap size and exterior moments before an
+inequality discards their dependence. Direct differentiation gives
+\begin{equation}
+ D_u=-2V,\qquad V_u=\frac{1-V^2-K}{D}.
+ \label{cont:VK-law}
+\end{equation}
+Indeed $V_u=4M-4DM^2-2D\mathcal F$, and substitution of
+$2DM=1-V$ gives the second equation. This is a regular calculation
+for $D>0$; the comparison below is stopped before a merger.
+
+\begin{theorem}[Joint forcing barrier]
+\label{cont:barrier}
+Suppose the real complete pair laws hold on a stopped path with $D>0$,
+$V(0)\le v_0$, and $K(u)\ge1-\eta^2$ for a constant $\eta\ge0$.
+For $v\ge\max\{v_0,\eta\}$,
+\begin{equation}
+ V(u)\le v,\qquad D(u)\ge D(0)-2vu.
+ \label{cont:barrier-bound}
+\end{equation}
+A positive initial lower bound $d_0$ protects the target pair through
+$\Delta$ if $2v\Delta<d_0$ and the stipulated inputs persist up to
+a first event.
+\end{theorem}
+
+\begin{proof}
+On each compact pre-event interval the coefficient below is continuous.
+For $w=V-v$, \eqref{cont:VK-law} implies
+\[
+ w_u+\frac{V+v}{D}w
+ \le\frac{\eta^2-v^2}{D}\le0.
+\]
+A positive integrating factor and $w(0)\le0$ prove $w\le0$.
+Integrate $D_u=-2V$, then exhaust the stopped path by compact
+subintervals. A first merger contradicts the resulting strictly positive
+lower bound as in Proposition~\ref{cont:cumulative}.
+\end{proof}
+
+The proof itself needs no positive summands: a signed complete bound
+for $K$ in a conjugation-invariant counted tube also suffices. Positive
+omission of a tail, however, requires the all-real adjacent-pair regime.
+If another pair collides first and ends that regime, it ends that use of
+positivity. Protection of one pair is not protection of the complete
+population.
+
+For $D(0)\asymp L^{-2}$, sufficient rates to pay a fixed duration are
+\begin{equation}
+ V(0)_+=o(L^{-2}),\qquad
+ \sup_u(1-K(u))_+=o(L^{-4}).
+ \label{cont:rates}
+\end{equation}
+The square root of the forcing deficiency explains the stronger second
+rate. These are sufficient requirements of this barrier, not necessary
+conditions for actual noncollision.
+
+\subsection{Finite heads: an exact comparison and its perturbation}
+
+For an equally spaced comparison configuration with target endpoints
+$0,g$, the $m$th exterior occurrence on either side has
+$Q_m=m(m+1)g^2$. With $D=g^2/4$ and $J$ such occurrences on each side,
+let $M_J,K_J$ denote their contributions. Telescoping gives
+\begin{equation}
+ 2DM_J=\frac{J}{J+1},\qquad
+ K_J=1-\frac1{(J+1)^3}.
+ \label{cont:lattice-head}
+\end{equation}
+For the second identity the contribution from both sides is
+\[
+ \frac3{m^2(m+1)^2}+\frac1{m^3(m+1)^3}
+   =\frac1{m^3}-\frac1{(m+1)^3}.
+\]
+These exact formulas are local comparison tools, not a uniform-density
+model of the complete zeta divisor.
+
+They have a useful robust version. In the all-real adjacent-pair stopped
+regime, suppose the actual target gap obeys
+$g\ge(1-e)d$, $0\le e<1/3$, and the $m$th selected exterior zero
+on each side is at distance $r$ from the nearer endpoint, with
+\begin{equation}
+ r\le(1+2e)md,\qquad r+g\le(1+2e)(m+1)d,
+ \quad 1\le m\le J.
+ \label{cont:head-input}
+\end{equation}
+Writing $\gamma=(1-e)/(1+2e)$ gives
+$D/[r(r+g)]\ge\gamma^2/[4m(m+1)]$.
+Since the quadratic and cubic powers in $K$ are nonnegative,
+\begin{equation}
+ K\ge1-18e-(J+1)^{-3},\qquad
+ V\le6e+(J+1)^{-1}.
+ \label{cont:head-bounds}
+\end{equation}
+To check the constants, use $1-\gamma\le3e$,
+$1-\gamma^6\le18e$ and $1-\gamma^2\le6e$ in
+\eqref{cont:lattice-head}, and omit only positive exterior terms.
+A uniform version of the first bound and the initial instance of the
+second supply Theorem~\ref{cont:barrier}. Adding more initial neighbors
+alone does not provide the whole-time first bound.
+
+\subsection{What the existing canonical acquisition already uses}
+
+The source analysis in \cite[\S15]{VCDCMManuscript}, based on
+\cite[Theorem 1.5 and \S9]{Polymath2019}, works on a fixed slab
+$0<t_0\le t\le t_*\le1/2$. The height onset depends exponentially
+on $1/t_0$. The positive-head acquisition is restricted to the globally
+all-real simple stopped portion, begun from an all-real simple configuration. On that same slab it first locates individual consecutive
+zeros near the source clock; it then estimates complete $M$ and a
+neighboring head for $K$. With $L=\log(X/(4\pi))$, a head of
+order $L^3$ neighbors and its tail payment give
+\[
+ |V|=O(L^{-3}),\qquad (1-K)_+=O(L^{-9})+o(L^{-m})
+\]
+for each fixed $m$, after the sufficiently large height is chosen.
+The error terms inherited from localization are smaller than every
+fixed inverse power of $L$ on this fixed positive slab. They do not
+have that property uniformly as its lower time tends to zero.
+
+For completeness, the mechanism is the preceding head calculation.
+On a spatial radius $L^2$ the clock geometry has normalized error
+$O(LX^{-c t_0}+L^4/X)$; hence \eqref{cont:head-bounds} with
+$J\asymp L^3$ gives the forcing floor. The complete inverse-square
+exterior contributes $O(L^{-3})$ to the normalized interaction.
+Inserting these quantities into \eqref{cont:barrier-bound} gives a
+relative loss $O(\Delta/L)$ for fixed $\Delta$ within the supplied
+slab. The localization theorem already guarantees reality and simplicity
+in that exterior. Consequently this acquisition explains the dynamics
+and the available rates, but does not extend the zero-free/collision-free
+coverage beyond the imported theorem. The new question is precisely
+how to acquire useful inputs after that localization estimate ceases
+to provide them.

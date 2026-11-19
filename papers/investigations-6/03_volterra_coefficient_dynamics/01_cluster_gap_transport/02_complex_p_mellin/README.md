@@ -25,12 +25,23 @@ especially [cluster18](../../../../../result-summaries/18_tensor_approximation_a
 and the [avoid index](../../../../../avoid/README.md), especially
 [joint bounds12](../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md).
 
+**Current manuscript milestone, 18 November 2026:** the
+[107-page analytical draft](manuscript/README.md) integrates one-initialization
+common-time approximation, counted transport, complete-path conditioning
+and cardinal/shared-log/annular error refinement. Numerical evidence is
+supporting Appendix B. [Integration54](notes/54_VCD_GT_CM_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261118.md)
+records E47's scoped internal acceptance and clean all-page PDF production.
+The final main section develops the outstanding challenges. E44's new
+endpoint artifact remains unexecuted; earlier manuscript milestones below
+are historical.
+
 - [Scientific overview](research-overview/01_VCD_GT_CM_RESEARCH_OVERVIEW_20261117.md).
 - [Sustained B/E research plan](research-plan/01_VCD_GT_CM_RESEARCH_PLAN_20261117.md).
 - [Sole VCD-GT-CM progress register](research-progress/01_VCD_GT_CM_RESEARCH_PROGRESS_20261117.md).
 - [Analytical manuscript and build guide](manuscript/README.md).
 - [Conservation-laws child investigation](01_conservation_laws/README.md): separate analytical draft and exterior-flux estimates; parent task ownership is unchanged.
-- [Current research continuation](notes/49_VCD_GT_CM_COMMON_TIME_APPROXIMATION_AND_CONTINUATION_20261118.md).
+- [Current research continuation](notes/55_VCD_GT_CM_ANALYTICAL_MANUSCRIPT_CONTINUATION_20261118.md).
+- [Common-time approximation synthesis](notes/49_VCD_GT_CM_COMMON_TIME_APPROXIMATION_AND_CONTINUATION_20261118.md) (historical routing).
 - [Common-time field approximation](notes/47_VCD_GT_CM_E16_COMMON_TIME_FIELD_APPROXIMATION_20261118.md) and [counted-moment/transport transfer](notes/48_VCD_GT_CM_E16_COUNTED_MOMENT_AND_TRANSPORT_TRANSFER_20261118.md).
 - [Shared-error discriminant gain](notes/42_VCD_GT_CM_E36_CORRELATED_DISCRIMINANT_20261118.md).
 - [Extended source and acquired forcing](notes/39_VCD_GT_CM_E34_EXTENDED_SOURCE_AND_FORCING_20261118.md).
@@ -216,7 +227,7 @@ proves the actual cardinal norm<17 and gives min D>.00082198577 with width
 <2.29767333e-8, more than33.9494-fold narrower than Record19. Old source
 samples/precision are retained; geometry and512-cell paths are re-enclosed.
 E39 and the sole register own final numerical assessment. The
-[current continuation](notes/46_VCD_GT_CM_CARDINAL_GAIN_AND_STRUCTURAL_CONTINUATION_20261118.md)
+[historical continuation](notes/46_VCD_GT_CM_CARDINAL_GAIN_AND_STRUCTURAL_CONTINUATION_20261118.md)
 recommends E16 r4's existing structural proof next. Both manuscripts and
 previous evidence remain unchanged. Prepared for Edward Baker with Codex
 assistance; root actual settings unavailable, E38/E39 selected Sol6.1/ultra.
@@ -235,3 +246,44 @@ supersedes all earlier E16-unexecuted routing and recommends B05 r2's
 finite-data/consumer decision next. Both manuscripts remain unchanged.
 For Edward Baker with Codex assistance; root settings unavailable, three
 helpers selected Sol6.1/ultra; internal shared-premise assessment.
+
+
+**18 November B05 r2 conditioning decision:** [Note50](notes/50_VCD_GT_CM_FINITE_DATA_CONDITIONING_DECISION_20261118.md)
+derives a strong-collar tube on [0,1/1024], h_G=35625 and a log-W accuracy
+target of 1e-6 from the existing canonical certificate. The full [0,.1]
+tube fails E16's target-size premise. The unchanged global count-tail
+allowance needs log N>48,000,000; local calibration with that same global
+Gaussian complement also fails under N<=2^40. These are scoped failures
+of sufficient estimates, not necessary complexity or actual-error bounds.
+[E41](reviews/23_VCD_GT_CM_E41_CONDITIONING_ASSESSMENT_20261118.md) accepts within scope without correction; the sole register owns disposition. B05 r3 must pay a centered
+whole-path estimate or park this realization; no numerical acquisition
+is issued. Note50 supersedes Note49's future routing; manuscripts and
+prior evidence remain unchanged. For Edward Baker with Codex assistance;
+actual model/effort unavailable, inherited helpers and shared premises.
+
+
+**18 November B05 r3 centered-path result and scoped stop:**
+[Note51](notes/51_VCD_GT_CM_CENTERED_PATH_BOUND_AND_SCOPED_STOP_20261118.md)
+pays the complete centered Gaussian path using the existing xi majorant,
+with evaluated O(E_N) constants and a suppressible far radial remainder.
+The integrated absolute core allowance still defeats the actual Note48
+log-W budget under N<=2^40. E42 accepts after one premise-wording clarification; no formula correction. The tested finite
+realization is parked, without an acquisition E or B05 r4; this is not a
+lower bound on actual error or all methods. Optional broader continuation
+is existing B10 r5's joint affine/annular comparison. Note51 supersedes
+Note50's future routing; old proofs, certificates and manuscripts remain
+unchanged. For Edward Baker with Codex assistance; actual settings
+unavailable, internal shared-premise assessment.
+
+**18 November B10 r5 joint-annular result:**
+[Note52](notes/52_VCD_GT_CM_JOINT_ANNULAR_ALIAS_DECISION_20261118.md)
+proves at least5% less annular allowance and >2.4% less complete width
+for the outward-parsed Record22 interval, with every other payment
+retained. [E43](reviews/25_VCD_GT_CM_E43_JOINT_ANNULAR_ASSESSMENT_20261118.md)
+accepts within analytic-annular and inherited-certificate scope without
+correction. This is an analytical refinement of the direct estimator,
+not a newly executed endpoint certificate or recursive advantage.
+**Next: E44 r1 / E / Sol**, the pinned exact-rational transformation
+with a2% gate and subsequent E45 assessment. This supersedes Note51's
+optional B10 routing; B05 remains parked. For Edward Baker with Codex
+assistance; actual settings unavailable, shared-premise internal review.

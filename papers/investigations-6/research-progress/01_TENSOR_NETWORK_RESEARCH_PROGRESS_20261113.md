@@ -223,3 +223,11 @@ record compilation, visual inspection and input preservation. No new
 numerical experiment or manuscript snapshot. [Return](handoffs/TN6-E04-r1-return.md)
 and [continuation](../notes/10_ANALYTICAL_MANUSCRIPTS_CONTINUATION_AND_MODEL_HANDOFF_20261114.md)
 complete this request and propose a bounded analytical choice next.
+
+## Navigation addition, 19 November 2026
+
+[AGC](../05_arithmetic_gap_continuation/README.md) is a separate direct-child
+investigation with its own [sole register](../05_arithmetic_gap_continuation/research-progress/01_AGC_RESEARCH_PROGRESS_20261119.md).
+It imports VCD-GT-CM background and owns arithmetic backward-gap acquisition.
+No TN6 task is created, transferred or completed by this navigation entry.
+Prepared for Edward Baker with OpenAI Codex assistance; recorded gpt-6-astra/max.

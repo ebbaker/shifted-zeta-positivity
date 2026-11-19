@@ -1,5 +1,5 @@
 % Supporting inherited certificate only; not an input to the main theory.
-\section{An inherited compact certificate as a supporting example}
+\section{Supporting compact certificates and conditioning screens}
 \label{app:compact-example}
 
 This appendix applies the analytical screen of
@@ -36,8 +36,10 @@ $v\le0.89$ would leave the strict margin
  0.1787368-2(0.89)(0.1003)-0.0001=0.0001028>0,
 \]
 and would require the forcing floor $\kappa\ge1-0.89^2=0.2079$.
-The existing certificate ends at physical time zero: neither the
-negative-time source bounds nor the proposed floor are available from it.
+The original incoming certificate ends at physical time zero, so these
+anchor data alone do not supply negative-time source bounds or the proposed
+normalized floor. Section~\ref{supp:extended-source} supplies a later
+complete-source extension, with a physical forcing floor instead.
 Even the favorable initial-$M$ scalar allowance is at most
 \[
  \frac{0.1787369}{2(1-0.1787369\cdot0.6037744)}<0.100180,
@@ -182,7 +184,7 @@ This strengthens the earlier allowance rejection to the sharp scalar
 constant-$K$ transient comparison from this anchor. It still excludes
 neither time-dependent $K$ nor a constant physical $\mathcal F$ floor.
 
-\subsection{A positive conditional margin for retained physical forcing}
+\subsection{A retained physical-forcing margin}
 \label{supp:retained-F}
 
 Set
@@ -190,8 +192,10 @@ Set
  d=0.1787368,\qquad b=0.6037742,\qquad f=3/10,\qquad
  \Delta=1003/10000.
 \]
-These are the incoming lower data and a proposed complete forcing floor,
-not a measured lower value of $\mathcal F$. The model of
+These are the incoming lower data and a conservative target floor.
+The complete-source bound in Section~\ref{supp:extended-source} exceeds
+this target; the following exact comparison calculation is independent
+of that acquisition. The model of
 Theorem~\ref{rf:forcing-comparison} has a rigorously positive margin.
 Here is the exact rational calculation, as recorded in
 \cite{BakerCM32,BakerCMReview29}.
@@ -242,16 +246,210 @@ $q=11/25$, \eqref{rf:source-errors} gives the exact amplification factors
  \qquad
  E_{\mathcal F,\mathcal L}\le\frac{14175000}{14641}e_{\mathcal L}.
 \]
-The complete source/time error, the signed lower floor
-$\mathcal F_\Gamma\ge3/10$, the negative-time contour clearance and
-the unconditional coordinate bounds are unacquired. The annular
-logarithm bound used earlier provides an absolute forcing bound, not
-this signed lower floor. Small $K=2D^2\mathcal F$ at $t=0$ is compatible
-with this proposed physical floor, but does not prove it. Direct regular
-$D/M$ evolution with identical data and errors gives precisely the
-same model and margin. Thus \eqref{supp:F-margin} is a conditional
-consumer calculation, not a new canonical certificate or a lattice
-advantage.
+The source statement must pay these amplifications together with the
+whole-time remainders, negative-time count and unconditional coordinate
+bounds. The extension below does so on its fixed tube. An absolute
+annular-log bound alone would not give the signed forcing floor.
+Direct regular $D/M$ evolution with identical data and errors gives
+precisely the same retained-forcing model and margin, and direct
+source discrimination on those data is stronger.
+
+\subsection{The acquired complete-source extension}
+\label{supp:extended-source}
+
+The subsequent enclosure in \cite{BakerCM39,BakerCMReview35} retains
+the same complete source array, normalization, degree and contour nodes,
+and pays the extension to
+\[
+ I=[-3/10000,1/10],\qquad
+ (r_-,\rho,r_+)=(3/4,9/10,21/20),\qquad x_*=140101/10.
+\]
+The two occurrences are counted independently on both boundary circles;
+conjugation gives real symmetric coordinates without assuming that every
+zero of the complete divisor is real. Proposition~\ref{pair:compact-time}
+pays the required complete product and rational-trace identities without
+extending a positive-time strip hypothesis.
+
+For completeness, the analytical source majorant used in the extension
+can be reconstructed from \cite{BakerGT12}. In the radius-nine time-zero
+disk, reflection of $s=(1+\ii(x_*+w))/2$ gives
+$1/4\le\Re(s/2)\le5/2$, $3500<|\Im(s/2)|<3505$,
+$|s/2|<3508$ and $|s|<7016$. The inherited Binet/Euler bounds
+\[
+ |\Gamma(s/2)|\e^{\pi|\Im(s/2)|/2}
+ \le\sqrt{2\pi}|s/2|^{\Re(s/2)-1/2}\e^{1/(12\Re(s/2))},
+ \qquad |\zeta(s)|\le3|s|
+\]
+give, with the completion factor $s(s-1)/16$,
+\[
+ |G(0,x_*+w)|\le M_9=\frac{81\cdot27}{32}7016^3 3508^2
+                    <3\cdot10^{20}\quad(|w|\le9).
+\]
+For $0\le s\le3/10000$ and $|z-x_*|\le5$, the real-shift
+formula \eqref{pair:negative-Gaussian} remains inside that disk when
+$|r|\le100$. On its complement positivity of the source gives
+$|H(0,z+\text{real})|\le H(0,5\ii)=3\zeta(3)/(16\pi)<1$.
+Since the gauge exponent is less than $5504$, the Gaussian complement
+is less than $\e^{-4496}/(100\sqrt\pi)<1$. Together with the
+previous positive-time majorant this yields the single valid bound
+\[
+ |G(t,x_*+w)|<M_*=4\cdot10^{20}\quad(|w|\le5,\ t\in I).
+\]
+This is an analytic majorant, not newly sampled source data.
+
+The change of time coordinate $x=20t-1$ gives
+$-503/500\le x\le1$. Spatial Cauchy and the heat equation bound
+$|\partial_t^{33}G|$ by $66!M_* /(5-21/20)^{66}$.
+The degree32 Lobatto node product is
+$2^{-31}(x^2-1)U_{31}(x)$, whose modulus is below $2\cdot2^{-31}$
+on the enlarged interval. Thus the genuine time remainder is at most
+\[
+ E_{\rm time}
+ =\frac{M_*66!}{33!(5-21/20)^{66}}2^{-31}20^{-33}\,2
+ <1.146\cdot10^{-15}.
+\]
+The complex-valued remainder follows by projecting onto the direction
+of its error and applying the real scalar interpolation theorem.
+The spatial/sample error at the original nonnegative time nodes retains
+its original majorant. Applying the cardinal proof of
+Section~\ref{sec:correlated-enclosures} gives
+$E<17E_{\rm node}+E_{\rm time}<0.008170448251$.
+Outward coefficient and evaluation arithmetic remain separate payments.
+Angular and time-cell derivatives use $T_k(503/500)$ and
+$kU_{k-1}(503/500)$, not their smaller interior-interval bounds.
+
+The resulting complete interval enclosure, assessed in
+\cite{BakerCM45,BakerCMReview39}, pays all 512 time cells and gives
+\[
+ 0<M<0.616,\quad D<0.2,\quad \mathcal F>0.4051,\quad
+ D_t>942/625\qquad(t\in I).
+\]
+The source allows either sign of $D$ during acquisition; the positive
+conclusion follows from the enclosure. The retained floor $3/10$ is
+therefore available, and \eqref{supp:F-margin} gives its lower-stop
+margin. The direct same-source result is stronger:
+\begin{equation}
+ \min_{t\in I}D(t)=D(-3/10000)
+ \in[0.00082198577,\ 0.00082200876].
+ \label{supp:refined-minimum}
+\end{equation}
+Monotonicity, independently paid over the whole interval, justifies the
+equality; endpoint samples alone would not. This finite negative-time
+source tube does not enlarge the positive-time domain of the separate
+common-initialization approximation theorem.
+
+\subsection{Distinct improvements in the direct error budget}
+\label{supp:widths}
+
+The theoretical mechanisms of Section~\ref{sec:correlated-enclosures}
+should be separated from their numerical illustrations.
+With the original source allowance, keeping the common node-log errors
+narrowed the sharp independent-moment interval by more than 6.4031 percent
+\cite{BakerCM42,BakerCMReview37}. Replacing only the pre-time cardinal
+amplification $1100$ by $17$ then narrowed that centered interval by
+more than 33.9494 times, to width below $2.29767333\cdot10^{-8}$.
+At the latter common source budget, the remaining centered versus
+independent-moment gain is about 3.4638 percent. These are different
+comparisons; their percentages must not be combined as one effect.
+No new source observations, physical coverage or runtime advantage is
+claimed for either error-accounting refinement.
+
+For the archived endpoint, the exact reference $h$ lies in
+$(0.063,0.064)$. Its node-log width contribution is about
+$1.18700482\cdot10^{-8}$, the annular contribution about
+$1.11066850\cdot10^{-8}$, and the full shifted-square contribution
+about $3.37\cdot10^{-17}$. Both boundary ratios $|h|/r_\pm$
+lie in $(3/50,1)$. The joint alias proof therefore permits replacing
+the annular radius $A$ alone by $19A/20$.
+For exact outward parsing of the archived values,
+\[
+ 2A_{\rm lo}>111/10^{10},\qquad
+ U_{\rm old}^{+}-L_{\rm old}^{-}<23/10^9.
+\]
+The saved complete width is $A_{\rm lo}/10>5.55\cdot10^{-10}$,
+whereas 2.4 percent of the old parsed width is below
+$5.52\cdot10^{-10}$. Thus the analytical improvement exceeds 2.4 percent
+\cite{BakerCM52,BakerCMReview43}. All other payments are retained.
+The numerical transformation producing the new endpoint interval has
+\emph{not} been executed in this manuscript revision. In particular,
+\eqref{supp:refined-minimum} is still the earlier certified interval.
+An equally informed direct method receives the same new analytic bound.
+
+The exact zero-centered quadratic control retains $D=0$ and fails the
+strict full-path positive-gap and forcing gates. Its $h/r$ range does
+not satisfy the numerical $19/20$ premise, so that contraction cannot
+be applied blindly to it. A shifted colliding quadratic can satisfy the
+premise; the sound full-square estimate still encloses its exact zero.
+The generic interpolation, support and alias inequalities are not
+collision barriers.
+
+\subsection{A short-tube conditioning screen}
+\label{supp:conditioning}
+
+The common-time approximation has a different numerical consumer:
+every-subinterval logarithmic transport error below $10^{-6}$ on
+$[0,1/1024]$. Its strong collar is paid from the same source certificate,
+not assumed on the full interval $[0,.1]$ \cite{BakerCM50,BakerCMReview41}.
+Put $r_0=4/5$, $T=14000$, $\ell=1/\log T$ and
+$d=(\log T)^2/64$. Since $D_t<2$ and
+$D(-.0003)<.000823$,
+\[
+ D(t)<.000823+2(t+.0003)\le.003376125<1/64
+ \quad(0\le t\le1/1024).
+\]
+The exterior is at least $.986>r_0$ from the pair center. Its drift
+from $c(0)$ is below $.00427<r_0/32$. Deflating the outer source disk
+and applying the maximum principle to the reciprocal of its zero-free
+factor gives the contour floor $h_G=35625$ on the new radii $.3$ and $.4$.
+Indeed on the old radius $1.05$ one has
+$\Re(G/w^2)>1160000$, $|G/w^2|<4670000$ and
+$|Q|<1.244996$, so $|G/Q|>10^6$ throughout that disk.
+The inner quadratic floor is $.035625$. Cauchy on radius $1/2$ also gives
+$K_1=10400000$ from $|G|<5200000$.
+In contrast $D(.1)>.151994>1/16$, exceeding what the strong-collar
+hypotheses allow; those hypotheses cannot be imported onto the whole
+longer interval.
+
+For the short-tube consumer, sufficient normalized errors are
+$\varepsilon_0/h_G\le10^{-11}$ and
+$\varepsilon_1/h_G\le10^{-8}$. The transfer yields
+$b_1\le2.6\cdot10^{-8}$, $e_M<6000b_1$ and
+$4\Delta e_M<6.09375\cdot10^{-7}$, leaving a separately payable
+integration/evaluation reserve. These gates are sufficient, not necessary.
+
+The global allowance \eqref{cond:global-screen} would require
+$\log N>48{,}000{,}000$ before its first contour test. The centered
+complete-path estimate is sharper. On the padded observation disk take
+$d_0=.5265$, $R=14011$, $v=1/16$, $u_0=8$ and
+$B_c=5200000$. The assessed source oracle supplies
+\[
+ C=10^{13},\qquad \alpha=9999/10000,\qquad\beta=131/100
+\]
+in \eqref{cond:source-majorants}, on the larger domain
+$|z-x_*|\le2$, $0\le t\le.1$ and all real shifts
+\cite{BakerGT12,BakerCM51,BakerCMReview42}.
+Its far correction is fully paid by \eqref{cond:complete-constants}.
+Nevertheless, for the specified count-tail allowance and $N\le2^{40}$,
+$c_0>19000$ and \eqref{cond:core-floor} give
+\[
+ \varepsilon_{\mathrm{core}}
+ >\frac23\,5200000\cdot19000\cdot\frac{10}{2^{40}}>\frac12.
+\]
+When that allowance exceeds the permitted small-tail threshold, the
+contract is already unavailable. In the remaining cases, either the
+contour/denominator gate fails, or the actual transfer budget satisfies
+\[
+ b_1>\varepsilon_0/128>1/256,\qquad
+ e_M>7/256,\qquad4\Delta e_M>7/65536>10^{-6}.
+\]
+Here $K_1/h_G^2>1/128$ and $2r/q_\Gamma>7$ at
+$r=.4$, $q_\Gamma=.100625$. Even zero derivative, finite-data and
+other error payments cannot repair this positive budget. This is a
+lower bound on the tested \emph{allowance}, not on the actual error or
+necessary complexity. That finite-realization acquisition is therefore
+not supported by this budget. No new zero acquisition or precision
+campaign is inferred from the convergence theorem.
+
 
 \subsection{A distinct time-zero census and its forward constants}
 \label{fwd:census-example}

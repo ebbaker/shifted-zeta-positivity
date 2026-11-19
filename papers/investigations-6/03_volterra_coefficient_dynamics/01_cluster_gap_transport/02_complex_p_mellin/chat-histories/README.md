@@ -67,3 +67,31 @@ are recorded separately, without serving attestation. The registry owns
 changing capture counts/times/sizes/hashes. One lead records public text;
 the real final uses the bounded exact-turn follow-up. No native hook is
 assumed. Prepared for Edward Baker with OpenAI Codex assistance.
+
+
+CM chat0007, thread `01a1f06a-23b6-7501-81cb-a67a4226846a`, actual title
+“Continue Mellin continuation research”, contains Note49/B05 r2's
+18 November 2026 finite-data conditioning decision. Registered from its
+exact paginated source using the guarded recorder. Actual root/helper
+model and effort are unavailable; helpers inherited settings. The registry
+owns changing metadata. Final capture uses the bounded exact-turn worker;
+no native hook activation is presumed. Prepared for Edward Baker with
+OpenAI Codex LLM assistance.
+
+
+The same CM chat0007 also contains the author's explicit B05 r3
+continuation and Note51's centered-path/scoped-stop result. Refreshes
+preserve its original registration and preceding real final; the registry
+owns all changing metadata. No separate or duplicate history is created.
+
+The same CM chat0007 records the author's B10 r5 continuation, Note52's
+joint-annular proof, E43 assessment and frozen E44 follow-through. This
+continues the registered chat; no second history entry is created. Read
+current capture counts/hashes from the guarded registry. Final capture
+is queued for the exact completed turn, not fabricated before the reply.
+
+CM chat0007 subsequently records the author's analytical-manuscript
+integration request and E46–E48. It remains the same registered chat.
+The public record distinguishes the reviewed analytical revision from
+the still-unexecuted E44 numerical endpoint task. Refresh and exact-turn
+final capture use the guarded recorder; no native hook is presumed.

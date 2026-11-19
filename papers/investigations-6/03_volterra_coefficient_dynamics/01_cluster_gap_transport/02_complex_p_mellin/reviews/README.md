@@ -47,3 +47,21 @@ actual settings unavailable, E39 selected Sol6.1/ultra:
 
 
 - [Review22](22_VCD_GT_CM_E40_COMMON_TIME_APPROXIMATION_ASSESSMENT_20261118.md), 18 November 2026: E40 accepts common-time approximation and complete coordinate/moment/transport transfer within the stated fixed-input scope, without mathematical correction. One nonauthor proof pass, zero correction checks; exact controls and fourteen input pins pass. For Edward Baker with Codex assistance, assessor selected Sol6.1/ultra; internal shared-premise assessment, no serving attestation or specialist claim.
+
+
+- [E41 conditioning assessment](23_VCD_GT_CM_E41_CONDITIONING_ASSESSMENT_20261118.md), 18 November 2026: accepts Note50's inherited short tube, consumer budget and two scoped sufficient-allowance failures without mathematical correction. Internal nonauthor shared-premise review for Edward Baker with Codex assistance; actual settings unavailable. No source replay or acquisition.
+
+
+- [E42 centered-path assessment](24_VCD_GT_CM_E42_CENTERED_PATH_ASSESSMENT_20261118.md), 18 November 2026: accepts Note51's full path bound and actual-consumer allowance failure after one control-premise wording clarification, without formula correction. Prior E41-assessor overlap and shared premises; no source replay. For Edward Baker with Codex assistance; actual settings unavailable.
+
+- [E43 joint-annular assessment](25_VCD_GT_CM_E43_JOINT_ANNULAR_ASSESSMENT_20261118.md), 18 November 2026: accepts Note52 within analytic-annular/inherited-certificate scope without required correction; complete parsed-width gain, endpoint rounding and control guard checked. Prior E41/E42 assessor overlap,18 rational checks,13 pins; no new D interval or source replay. For Edward Baker with Codex assistance; actual settings unavailable.
+
+
+18 November 2026 manuscript milestone for Edward Baker, with OpenAI Codex
+assistance; actual model/effort unavailable, assessor inherited settings:
+
+- [E47 analytical manuscript assessment26](26_VCD_GT_CM_E47_ANALYTICAL_MANUSCRIPT_ASSESSMENT_20261118.md):
+  accepted within fixed-input, counted-chart and inherited-certificate
+  scope after one bounded clarification and production correction round.
+  One nonauthor full pass plus one correction check; E41–E43 overlap and
+  shared premises disclosed. No specialist or cross-model validation claim.

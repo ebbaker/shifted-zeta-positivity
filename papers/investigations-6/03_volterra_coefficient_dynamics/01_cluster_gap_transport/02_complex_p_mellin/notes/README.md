@@ -5,20 +5,18 @@ OpenAI Codex LLM assistance. Actual model and effort unavailable in the
 current guarded chat registry; current helpers inherited settings.
 Earlier requested configurations remain historical, not serving attestation.
 
-Store incremental analytical derivations and syntheses here. Start with the
-[current cardinal-gain and structural continuation](46_VCD_GT_CM_CARDINAL_GAIN_AND_STRUCTURAL_CONTINUATION_20261118.md).
-[Conservation selection44](44_VCD_GT_CM_CONSERVATION_TOOLS_AND_CARDINAL_SELECTION_20261118.md)
-gives the pair affine-flux transfer and its scoped total-error screen.
-[Cardinal proof45](45_VCD_GT_CM_E38_CARDINAL_SOURCE_REFINEMENT_20261118.md)
-reduces the nodal amplification from1100 to17 and reports a greater than33.9494-fold
-width gain on the same source tube; E39 and the sole register own disposition.
-The next default is the existing common-time finite-divisor proof E16 r4.
-The [BBGKY reconsideration](15_VCD_GT_CM_B05_BBGKY_TRUNCATION_RECONSIDERATION_20261118.md)
-and current [E16 r4 rebind](../research-progress/handoffs/VCD-GT-CM-E16-r4.md)
-retain the independently optional, unexecuted approximation task.
-The [B03 r2 continuation](14_VCD_GT_CM_B03_R2_CONTINUATION_20261118.md)
-preserves the prior signed-estimate disposition. The sole progress register
-owns status; a setup note is not a scientific result.
+Store incremental analytical derivations and syntheses here. Start with
+[current manuscript continuation55](55_VCD_GT_CM_ANALYTICAL_MANUSCRIPT_CONTINUATION_20261118.md)
+and [integration54](54_VCD_GT_CM_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261118.md).
+The analytical draft is integrated and internally assessed;
+[decision52](52_VCD_GT_CM_JOINT_ANNULAR_ALIAS_DECISION_20261118.md) retains the
+fully paid >2.4% proof. E44/Sol remains its bounded endpoint-transformation
+follow-through after E43. Note53 is reserved for that unexecuted task.
+The [sole progress register](../research-progress/01_VCD_GT_CM_RESEARCH_PROGRESS_20261117.md)
+owns current assessment and readiness. Earlier continuation routing below
+is historical. Notes47–48/E40 established the fixed-input common-time
+approximation; Note51/E42 parked its tested finite realization. Neither
+result is reopened by the annular refinement.
 
 - [Symmetry subgoal amendment](02_VCD_GT_CM_SYMMETRY_SUBGOAL_20261117.md): explicit B01/E08 routing and quantitative contour-bound consumer.
 
@@ -113,3 +111,14 @@ root actual settings unavailable, proof/assessment selected Sol6.1/ultra:
 - [Field approximation47](47_VCD_GT_CM_E16_COMMON_TIME_FIELD_APPROXIMATION_20261118.md): explicit common-time Gaussian/product O(log N/N) error, jets through3 and finite-data sensitivity.
 - [Counted transfer48](48_VCD_GT_CM_E16_COUNTED_MOMENT_AND_TRANSPORT_TRANSFER_20261118.md): chart matching, complete moments, physical/normalized forcing and every-subinterval transport errors through permitted mergers.
 - [Continuation49](49_VCD_GT_CM_COMMON_TIME_APPROXIMATION_AND_CONTINUATION_20261118.md): assessed theorem, unacquired-data/conditioning boundary and default B05 r2 decision. Supersedes Note46's future routing; E40 accepts fixed-input scope without mathematical correction.
+
+
+18 November 2026 B05 r2 conditioning decision, for Edward Baker with Codex
+assistance; actual root/helper settings unavailable, helpers inherited:
+
+- [Decision50](50_VCD_GT_CM_FINITE_DATA_CONDITIONING_DECISION_20261118.md): inherited short strong collar and contour floors, log-W error target 1e-6, global allowance cutoff screen and calibrated core/global-tail failure. E41 owns assessment; next B05 r3 addresses the centered whole path or parks this realization. Supersedes Note49's future routing, not E16's theorem.
+
+
+- [Centered path and scoped stop51](51_VCD_GT_CM_CENTERED_PATH_BOUND_AND_SCOPED_STOP_20261118.md), 18 November 2026: complete centered Gaussian estimate from the inherited xi majorant; absolute core fails the actual Note48 consumer under N<=2^40. E42 assesses; B05 realization parked, optional broader continuation B10 r5. For Edward Baker with Codex assistance; actual settings unavailable.
+
+- [Joint annular decision52](52_VCD_GT_CM_JOINT_ANNULAR_ALIAS_DECISION_20261118.md), 18 November 2026: two-candidate B10 r5 decision, Parseval tail proof and complete >2.4% width margin; E43 assessment and E44 execution packet. For Edward Baker with Codex assistance; actual settings unavailable.

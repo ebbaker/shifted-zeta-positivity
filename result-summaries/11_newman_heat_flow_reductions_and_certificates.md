@@ -7,6 +7,18 @@ LLM assistance: **gpt-6-astra (Codex)**, reasoning effort **ultra**.
 
 ## Summary
 
+- **Arithmetic gap continuation setup and draft (Investigation6/05,
+  19 November 2026).** For Edward Baker with Codex assistance; lead
+  recorded gpt-6-astra/max, bounded helpers dispatched Sol6.1/ultra.
+  The [integration note](../papers/investigations-6/05_arithmetic_gap_continuation/notes/03_AGC_MANUSCRIPT_INTEGRATION_20261119.md)
+  calls this an “analytical background and conditional-interface draft,
+  with separate internal LLM assessment.” The [manuscript](../papers/investigations-6/05_arithmetic_gap_continuation/manuscript/README.md)
+  derives the pair/chain, Mellin, arithmetic residual and complete contour
+  interfaces and distinguishes the Polymath/PT/Gomila inputs. The
+  [assessment](../papers/investigations-6/05_arithmetic_gap_continuation/reviews/01_AGC_ANALYTICAL_DRAFT_ASSESSMENT_20261119.md)
+  retains shared-premise scope. No new canonical estimate or coverage;
+  the sustained research sequence begins with unactivated AGC-B01.
+
 - **Boundary-bootstrap B06 packet test (Investigation5/09/02,
   13 November 2026).** [Note25](../papers/investigations-5/09_green_potentials_newman_flow/02_height_time_boundary_bootstrap/notes/25_GNP_BB_B06_SHORT_WINDOW_AND_ACTUAL_PACKET_20261113.md):
   “proved in-note from E09's accepted localization and the direct

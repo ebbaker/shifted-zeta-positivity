@@ -134,3 +134,17 @@
 - **15 November 2026 — Volterra and dyadic deep dive:** Added [degree-induction and conditional-mass explanations](brainstorm/notes/05_VOLTERRA_INDUCTION_AND_DYADIC_REFINEMENT_20261115.md), following Edward Baker's preference to study Volterra first and exact dyadic products second. Distinguished source-dependent coefficient closure from generic recurrences; no manuscript change, new result status or execution task. Preserved a separate native public-text excerpt while canonical capture remains blocked. Prepared for Edward Baker with OpenAI Codex assistance; actual model and effort unavailable.
 
 - **15 November 2026 — branch brainstorming continuations:** At Edward Baker's request, saved open-ended notes in the [Volterra](03_volterra_coefficient_dynamics/brainstorm/notes/02_VCD_OPEN_BRAINSTORM_CONTINUATION_20261115.md) and [dyadic](04_exact_infinite_tensor_products/brainstorm/notes/02_ITP_OPEN_BRAINSTORM_CONTINUATION_20261115.md) brainstorm folders. Preserved Volterra as his likely first focus and exploratory discussion in both programs; no fixed next target or task activation. Prepared for Edward Baker with OpenAI Codex assistance; actual model and effort unavailable.
+
+- **19 November 2026 — arithmetic gap continuation direct child:** Created
+  [Investigation05](05_arithmetic_gap_continuation/README.md) with its own
+  overview, sustained multi-step plan, sole AGC register and continuation
+  prompt. Its [32-page analytical draft](05_arithmetic_gap_continuation/manuscript/README.md)
+  supplies self-contained pair/chain, Mellin and arithmetic-residual
+  background and conditional interfaces. The separate internal assessment
+  accepted it within that scope; no new canonical estimate or coverage.
+  The [integration record](05_arithmetic_gap_continuation/notes/03_AGC_MANUSCRIPT_INTEGRATION_20261119.md)
+  links the reading PDF in ignored root `output/`, production checks and
+  future AGC-B01. Existing TN6/VCD task ownership and the founding chat's
+  home are unchanged. For Edward Baker with OpenAI Codex assistance;
+  lead recorded gpt-6-astra/max, bounded helpers dispatched Sol6.1/ultra;
+  author-requested future continuation effort ultra.

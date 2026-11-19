@@ -1,0 +1,351 @@
+% 19 November 2026. Drafted for Edward Baker with OpenAI Codex assistance.
+% Helper explicitly dispatched as gpt-6.1-sol, reasoning effort ultra;
+% independent serving-backend attestation was not available to the helper.
+\section{The full arithmetic reference and its useful domain}
+\label{sec:arithmetic-source}
+
+The arithmetic input to a backward continuation need not be reduced to
+the two leading carriers that produce an asymptotic clock.  At a positive
+time the finite Riemann--Siegel approximation retains many arithmetic
+terms, with their phases, before its error is estimated.  The question
+for this program is whether those terms can supply effective gap data
+where the two-carrier argument no longer does so.  This is a question
+about an additional quantitative estimate.  The approximation and the
+identities below do not themselves extend the known all-real region.
+We use the published approximation of \cite{Polymath2019} and the
+selected-source analysis in \cite{VCDCMDiscussion11,VCDCMDiscussion12}.
+
+\subsection{A holomorphic finite reference}
+
+To avoid confusing an arithmetic carrier with the complete exterior
+interaction of a zero pair, write $\mathfrak M_t$ for the function called
+$M_t$ in \cite{Polymath2019}.  On
+$\mathcal D=\C\setminus(-\infty,1]$, use the principal logarithms to set
+\begin{align}
+ L_0(s)&=\operatorname{Log}s+\operatorname{Log}(s-1)
+       -\frac{s}{2}\log\pi+\log\frac{\sqrt{2\pi}}{16}
+       +\left(\frac{s}{2}-\frac12\right)
+           \operatorname{Log}\frac{s}{2}-\frac{s}{2},
+       \label{as:carrier-log}\\
+ \mathfrak M_0(s)&=\exp L_0(s),\qquad
+ \alpha(s)=L_0'(s)
+       =\frac{1}{2s}+\frac{1}{s-1}
+         +\frac12\operatorname{Log}\frac{s}{2\pi},
+       \label{as:alpha}\\
+ \mathfrak M_t(s)&=\mathfrak M_0(s)
+                  \exp\left(\frac{t}{4}\alpha(s)^2\right).
+       \label{as:carrier}
+\end{align}
+These carriers are nonvanishing on $\mathcal D$.  The logarithm in
+\eqref{as:carrier-log} fixes an actual analytic function, rather than a
+pointwise choice of argument.  For $n\in\N$ define
+\begin{align}
+ \ell_n(s)&=L_0(s)-s\log n,\qquad
+ a_n(s)=\ell_n'(s)=\alpha(s)-\log n,\\
+ p_n(t,s)&=\exp\left(\ell_n(s)+\frac{t}{4}a_n(s)^2\right).
+       \label{as:pn}
+\end{align}
+Expanding the square gives the useful exact identity
+\begin{equation}
+ p_n(t,s)=\mathfrak M_t(s)\,
+     \exp\left(\frac{t}{4}\log^2 n\right)
+     n^{-s-(t/2)\alpha(s)}.
+ \label{as:pn-dirichlet}
+\end{equation}
+In particular, the $n=1$ term is $\mathfrak M_t(s)$, and all the terms
+with $2\le n\le N$ remain part of the reference.
+
+Put
+\begin{equation}
+ s_+(z)=\frac{1+\ii z}{2},\qquad
+ s_-(z)=\frac{1-\ii z}{2},\qquad
+ P_N(t,z)=\sum_{n=1}^N\{p_n(t,s_+(z))+p_n(t,s_-(z))\}.
+ \label{as:PN}
+\end{equation}
+For a fixed integer $N$, this is holomorphic in $z$ on the right
+half-plane.  Indeed $\Re z>0$ places the two $s$-arguments in opposite
+open half-planes, away from the cut of $L_0$.  For real $t$ it satisfies
+$P_N(t,\overline z)=\overline{P_N(t,z)}$ there.  It therefore has the
+local conjugation symmetry required of a reference for a real zero pair.
+This assertion about its definition is separate from the domain of a
+published error bound.
+
+For $z=x+\ii y$ with $x\ge200$ and $0\le y\le1$, the convenient
+nonvanishing normalizer is
+\begin{equation}
+ \mathcal B_t(z)=\mathfrak M_t(s_-(z)),\qquad
+ \gamma_t(z)=\frac{\mathfrak M_t(s_+(z))}
+                  {\mathfrak M_t(s_-(z))},\qquad
+ b_n^t=\exp\left(\frac{t}{4}\log^2 n\right).
+ \label{as:normalizer}
+\end{equation}
+Consequently the normalized full reference is
+\begin{equation}
+ f_{t,N}(z)=\frac{P_N(t,z)}{\mathcal B_t(z)}
+   =\sum_{n=1}^N\frac{b_n^t}{n^{s_-(z)+(t/2)\alpha(s_-(z))}}
+    +\gamma_t(z)\sum_{n=1}^N
+       \frac{b_n^t}{n^{s_+(z)+(t/2)\alpha(s_+(z))}}.
+ \label{as:full-f}
+\end{equation}
+This form makes holomorphy visible.  A formula written using $x,y$ and
+complex conjugates must first be rewritten in this form before complex
+spatial differentiation is justified; see \cite[\S8, (92)]{Polymath2019}.
+
+\subsection{The exact arithmetic terms behind the approximation}
+
+The finite reference comes from an exact expansion, rather than an
+independent model of the zero divisor.  Define
+\begin{equation}
+ K(s)=\frac{s(s-1)}{16}\pi^{-s/2}\Gamma(s/2),\qquad
+ r_{0,n}(s)=K(s)n^{-s}.
+ \label{as:exact-initial-term}
+\end{equation}
+For nonreal $s$ and $t>0$ the Gaussian evolution of this term is
+\begin{equation}
+ r_n(t,s)=\frac1{\sqrt\pi}\int_{\R}
+          r_{0,n}(s+\sqrt t\,v)e^{-v^2}\,\dd v.
+ \label{as:exact-term}
+\end{equation}
+The horizontal integration line avoids the poles of the meromorphic
+factor $K$.  On compact sets separated from the real $s$-axis, its
+growth along that line is slower than a Gaussian, so the integral and
+the differentiations used below converge locally uniformly.
+
+For completeness, the exact Riemann--Siegel remainder before Gaussian
+evolution is
+\begin{equation}
+ R_{0,N}(s)=K(s)\int_{N\swarrow N+1}
+       \frac{w^{-s}e^{\pi\ii w^2}}
+            {e^{\pi\ii w}-e^{-\pi\ii w}}\,\dd w.
+ \label{as:exact-RS-remainder}
+\end{equation}
+Here the oriented diagonal line has direction $e^{5\pi\ii/4}$ and
+crosses the real axis between $N$ and $N+1$; the conventional logarithm
+along the Riemann--Siegel contour is understood.  Let $R_N(t,s)$ be its
+Gaussian evolution as in \eqref{as:exact-term}, and write
+$F^*(s)=\overline{F(\overline s)}$.  The exact decomposition is
+\begin{align}
+ H_t(z)={}&\sum_{n=1}^N r_n(t,s_+(z))
+        +\sum_{n=1}^N r_n^*(t,s_-(z))\notag\\
+        &+R_N(t,s_+(z))+R_N^*(t,s_-(z)).
+ \label{as:exact-finite-expansion}
+\end{align}
+It holds for every fixed nonnegative integer $N$, $t>0$, and
+$\Re z\ne0$; this is the Gaussian form of the Riemann--Siegel identity
+in \cite[\S4]{Polymath2019}.  The star is retained to display the
+reflection in the exact formula.  The coefficients and the Gaussian
+kernel are real under conjugation, so that $r_n^*=r_n$ on the two
+nonreal components.  Replacing each exact $r_n$ by \eqref{as:pn} gives
+\eqref{as:PN}; neither replacement removes the complete remainder.
+
+The approximation of an individual term has an explicit, relative
+source bound.  With $s=\sigma+\ii T$, $T>10$, and $0<t\le1/2$, one may
+write
+\begin{equation}
+ r_n(t,s)=p_n(t,s)(1+\delta_n(t,s)),\qquad
+ |\delta_n(t,s)|\le
+ \exp\left(
+ \frac{(t^2/8)|\alpha(s)-\log n|^2+t/4+1/6}{T-3.33}
+ \right)-1.
+ \label{as:term-source-bound}
+\end{equation}
+The corresponding lower-half-plane statement follows by conjugation.
+This is the term estimate of \cite[Proposition 6.1]{Polymath2019}; its
+error is relative to an individual carrier term, rather than to $H_t$
+near one of its zeros.  Summing it and paying the Riemann--Siegel
+remainder supplies the complete approximation error.
+
+The standard cutoff in that complete bound is
+\begin{equation}
+ N(t,x)=\left\lfloor\sqrt{\frac{x}{4\pi}+\frac{t}{16}}\right\rfloor.
+ \label{as:natural-cutoff}
+\end{equation}
+Theorem 1.3 of \cite{Polymath2019} gives, throughout
+\begin{equation}
+ 0<t\le\tfrac12,\qquad x\ge200,\qquad 0\le y\le1,
+ \label{as:source-domain}
+\end{equation}
+the complete bound
+\begin{equation}
+ H_t(z)=P_{N(t,x)}(t,z)+E_0(t,z),\qquad
+ |E_0(t,z)|\le |\mathcal B_t(z)|
+             \{e_A(t,z)+e_B(t,z)+e_{C,0}(t,z)\}.
+ \label{as:source-value-bound}
+\end{equation}
+The three $e$'s in this display denote the explicit positive budgets of
+that theorem, with its definitions (71)--(74); they are a named imported
+input, not quantities bounded in this manuscript.  The first two pay
+the term replacements and the last pays the whole remainder when its
+leading correction is omitted.  No numerical conclusion below requires
+an unevaluated choice of these budgets.  An application must use their
+actual formulas, with the same normalization and domain.  Bounds below
+the real axis can be supplied by conjugating the physical approximation.
+
+Two qualifications matter when using \eqref{as:source-value-bound} in
+a differential argument.  First, the theorem does not impose
+$x\ge\exp(C/t)$.  Its domain is larger than the clock regime.  Second,
+the natural cutoff jumps.  One must use a time and spatial cell on
+which \eqref{as:natural-cutoff} has one value, or keep a fixed $N$ and
+explicitly transfer the omitted or added terms to the error.  For example,
+at the same $(t,z)$,
+\begin{equation}
+ P_{N+1}(t,z)-P_N(t,z)
+       =p_{N+1}(t,s_+(z))+p_{N+1}(t,s_-(z)).
+ \label{as:cutoff-jump}
+\end{equation}
+This is a known change of reference.  It must be included in a seam
+payment if a cell crosses a cutoff surface.  Differentiating the floor
+in \eqref{as:natural-cutoff} as if it were constant would instead lose
+that payment.
+
+\subsection{What the two-carrier clock discards}
+
+On the real axis put $L=\log(x/(4\pi))$ and $m=\log n$.
+Directly from \eqref{as:alpha},
+$\Re\alpha((1-\ii x)/2)=L/2+O(x^{-2})$.  Therefore the magnitude of
+an individual normalized term in the first sum of \eqref{as:full-f} is
+\begin{equation}
+ \left|b_n^t n^{-s_--(t/2)\alpha(s_-)}\right|
+   =n^{-1/2}
+      \exp\left\{-\frac{t}{4}m(L-m)+O(tm/x^2)\right\}.
+ \label{as:clock-term-decay}
+\end{equation}
+For $n\le N(t,x)$, one has
+$m\le L/2+O(t/x)$.  When $tL$ is sufficiently large, summing
+\eqref{as:clock-term-decay} over $n\ge2$ gives a negative power of
+$x$ with exponent proportional to $t$, after decreasing the absolute
+constant in that exponent.  The same is true for the reflected sum.
+The essential large parameter for this dominance is $t\log x$.
+Accordingly a uniform small-tail argument has an onset of the form
+$x\ge\exp(C/t)$, with an absolute constant that has to be large enough
+for all the other estimates as well.
+
+The coefficient $t/4$ in \eqref{as:clock-term-decay} follows from the
+definitions by expanding a square.  It is not replaced here by the
+$t/2$ coefficient appearing in an intermediate display of the source's
+\S9; the discrepancy and its source check are recorded in
+\cite{VCDCMDiscussion11}.  We extract no numerical onset constant from
+this qualitative summation argument.
+
+In the dominance region the reference reduces to
+\begin{equation}
+ P_N(t,z)\simeq\mathfrak M_t(s_+(z))+
+                      \mathfrak M_t(s_-(z)).
+ \label{as:two-carriers}
+\end{equation}
+Cancellation of these two carriers yields the clock
+\begin{equation}
+ G(x,t)=\frac{x}{4\pi}\log\frac{x}{4\pi}
+       -\frac{x}{4\pi}+\frac{11}{8}
+       +\frac{t}{16}\log\frac{x}{4\pi},\qquad
+ G(q_n(t),t)=n.
+ \label{as:clock}
+\end{equation}
+Theorem 1.5 of \cite{Polymath2019} supplies actual real simple zeros
+near these clock points above its height and index onsets.  The existing
+analysis \cite{VCDCMManuscript} uses one buffered onset on a slab
+$0<t_0\le t\le t_*\le1/2$, and hence one set of common labels.
+The distinction between a height onset and an index onset is preserved;
+both must be met before those labels can be used.
+
+The full reference \eqref{as:PN} remains available when the $n\ge2$
+terms cannot be treated as a vanishing tail.  They can then change the
+phase, location, and separation of its zeros.  They belong in the
+reference field being followed.  Treating them as a new small error
+without a bound would simply reintroduce the clock hypothesis.  On the
+other hand, retaining them does not prove that their own divisor is
+real and simple, or that the source error is smaller than a gap margin.
+The useful initial datum is an enclosure of an \emph{actual} gap
+$g=b-a$, or of $D=g^2/4$, with isolation and completeness paid.  A mean
+spacing $4\pi/L$ becomes such a datum only after localization errors
+are smaller than the relevant separation.  This is why a source formula
+with a wider domain is an opportunity for continuation, rather than an
+already acquired continuation theorem.
+
+\subsection{The strip certificate and the existing upper bounds}
+
+A global upper bound for $\Lambda$ has another consumer besides a list
+of separated real pairs.  We recall the exact domains of the criterion
+being compared.  In the nontrivial regime $0<t_0<1/2$, $X>0$ and
+$0<y_0<\sqrt{1-2t_0}$, the three inputs of
+\cite[Theorem 1.2]{Polymath2019} are the following zero exclusions:
+\begin{align}
+ &\zeta(\sigma+\ii T)\ne0
+ &&\left(\frac{1+y_0}{2}\le\sigma\le1,
+                       \quad0\le T\le X/2\right),
+                       \label{as:strip-initial}\\
+ &H_{t_0}(x+\ii y)\ne0
+ &&\left(x\ge X+\sqrt{1-y_0^2},
+                   \quad y_0\le y\le\sqrt{1-2t_0}\right),
+                       \label{as:strip-final}\\
+ &H_t(x+\ii y)\ne0
+ &&\left\{\begin{aligned}
+       &X\le x\le X+\sqrt{1-y_0^2},\quad0\le t\le t_0,\\
+       &\sqrt{y_0^2+2(t_0-t)}\le y\le\sqrt{1-2t}.
+       \end{aligned}\right.
+                       \label{as:strip-barrier}
+\end{align}
+Together they give
+\begin{equation}
+ \Lambda\le t_0+\frac{y_0^2}{2}.
+ \label{as:strip-output}
+\end{equation}
+These parameter restrictions keep the displayed regions meaningful
+and include the applications discussed below. The last two inputs
+are nonvanishing problems for the complete source, so finite arithmetic
+lower bounds and their full error budgets can be useful without resolving
+every real gap.
+
+The extra $y_0^2/2$ is the payment for contracting a global zero strip
+to the real axis.  In particular, \eqref{as:strip-final} and
+\eqref{as:strip-barrier} do not assert that all zeros are already real
+at $t_0$.  A real-pair backward argument beginning at $t_0$ cannot use
+that strip statement as an all-real, separated initial divisor.  A later
+all-real slice and the quantitative separation needed by its chosen
+comparison are additional data.  Even a global all-real statement by
+itself is not a numerical lower bound for every gap.
+
+Platt and Trudgian prove finite RH verification through
+$T_{\rm PT}=3\,000\,175\,332\,800$.  Their Corollary 2 obtains
+$\Lambda\le0.2$ by applying the existing Polymath parameter table to
+that verified height \cite{PlattTrudgian2021}.  The conversion is $X=2T$.
+The result supplies complete finite zero exclusion at time zero, rather
+than the fine individual gap enclosures proposed here.
+
+At the pinned revision of Gomila's proof package, the reported row is
+\begin{equation}
+ X=6\,000\,000\,185\,827,\qquad t_0=\frac{129}{800},\qquad
+ y_0^2=\frac{87677}{2500000}.
+ \label{as:gomila-row}
+\end{equation}
+Its claimed computer-assisted unconditional result, awaiting peer
+review, is $\Lambda\le0.1787854$ \cite{Gomila2026Proof}.  The exact
+parameter arithmetic is
+\begin{equation}
+ t_0+\frac{y_0^2}{2}=0.16125+0.0175354=0.1787854,
+ \qquad
+ T_{\rm PT}-\frac X2=\frac{350479773}{2}>0.
+ \label{as:gomila-arithmetic}
+\end{equation}
+Thus the exact verified endpoint covers the requested initial height.
+Using the rounded headline $3\cdot10^{12}$ would obscure that reserve.
+This check is parameter bookkeeping, not an independent replay of the
+proof package.  Its finite arithmetic lower bounds, infinite-tail
+argument, and barrier over the intervening time interval are separate
+certificate obligations.  The repository audit has a stated partial
+replay scope \cite{NewmanCertificateAudit}; neither that audit nor the
+present exposition upgrades the external package's review status.
+
+The live explanatory page \cite{Gomila2026Blog} also reports a later
+0.1782354 calculation at the same verified height, with its mathematical
+review still pending. That separate research report is not a bound
+verified by this investigation and is not substituted for the pinned
+package compared here.
+
+These comparisons specify what a future gain must accomplish.  A local
+improvement in a gap continuation margin can be useful, but it is not
+yet an improvement of \eqref{as:strip-output}.  The latter also needs
+complete height coverage and the correct initial, final, and barrier
+interfaces.  Conversely a better strip certificate need not supply the
+separated all-real starting data of a gap program.  The two objectives
+share arithmetic source information and pay different final margins.

@@ -1,0 +1,524 @@
+% 18 November 2026. Prepared for Edward Baker with OpenAI Codex LLM
+% assistance. Actual inherited serving model and effort unavailable.
+\section{Counted coordinates, complete moments and transport errors}
+\label{sec:counted-transfer}
+
+Field convergence becomes an observable estimate only after contour
+counts, positive field floors and changing rational denominators have
+been paid. We now carry out that transfer for the single polynomial of
+Section~\ref{sec:common-time}, following \cite{BakerCM48} and its
+assessment \cite{BakerCMReview40}. In particular, the polynomial pair
+must agree on overlapping charts; unrelated count-two contours would
+not identify one pair throughout the interval.
+
+\subsection{Two contours per chart and one polynomial pair}
+
+Retain the independently established canonical tube
+\eqref{eq:domain} on the whole fixed $I$. Continuity of $c$ and
+compactness provide finitely many closed subintervals $I_\alpha$ whose
+relative interiors cover $I$, with reference times $t_\alpha$, such that
+\begin{equation}
+ \zeta_\alpha=c(t_\alpha),\qquad
+ |c(t)-\zeta_\alpha|\le r_0/32\quad(t\in I_\alpha).
+ \label{ctr:chart-drift}
+\end{equation}
+Use time-independent positively oriented circles
+\begin{equation}
+ \Gamma_\alpha^-:\ |z-\zeta_\alpha|=3r_0/8,
+ \qquad
+ \Gamma_\alpha:\ |z-\zeta_\alpha|=r,\quad r=r_0/2.
+ \label{ctr:two-circles}
+\end{equation}
+The finite input constants are
+\begin{equation}
+ \begin{split}
+ h_\alpha&=\min_{I_\alpha\times(\Gamma_\alpha^-\cup\Gamma_\alpha)}|H|>0,\\
+ K_{j,\alpha}&=\max_{I_\alpha\times\Gamma_\alpha}|\partial_z^jH|,
+                       \qquad 1\le j\le3.
+ \end{split}
+ \label{ctr:contour-inputs}
+\end{equation}
+Their existence is not a numerical acquisition of their values.
+Let $R$ contain all these contours, and suppose that consistent total
+field errors satisfy
+\begin{equation}
+ \sup_{\substack{t\in I\\|z|\le R}}
+ |\partial_z^j(P_N-H)(t,z)|\le\epsilon_j,
+                       \qquad 0\le j\le3.
+ \label{ctr:field-interface}
+\end{equation}
+Theorem~\ref{cta:field-theorem} supplies $\epsilon_j=C_jE_N$ for exact
+data. The arguments below first use arbitrary supplied $\epsilon_j$;
+the finite-data terms are added in \eqref{ctr:total-data-error}.
+
+\begin{lemma}[Counted matching on the entire interval]
+\label{ctr:matching}
+If $\epsilon_0\le h_\alpha/2$ for every chart, both circles in
+\eqref{ctr:two-circles} enclose exactly two polynomial occurrences.
+These pairs agree on overlaps and define a single selected pair of
+$P_N$ on $I$. Its symmetric coordinates $c_N,D_N$ are real and
+continuous, including at a double target. No global strip for $P_N$
+or labelled square root of $D_N$ is required.
+\end{lemma}
+
+\begin{proof}
+Every canonical target lies within $9r_0/32$ of $\zeta_\alpha$;
+every exterior occurrence is at least $31r_0/32$ away. Both circles
+therefore enclose exactly the same two canonical occurrences and are
+uniformly zero-free. Rouch\'e's theorem applies on each because
+$|P_N-H|\le h_\alpha/2<|H|$. The polynomial pair inside the outer
+circle is consequently already inside its companion inner circle.
+If two charts overlap, \eqref{ctr:chart-drift} gives
+$|\zeta_\alpha-\zeta_\beta|\le r_0/16$; the $\alpha$ inner disk
+lies strictly inside the $\beta$ outer disk because
+$3r_0/8+r_0/16=7r_0/16<r_0/2$. Its two polynomial occurrences exhaust
+the other disk's count. Hence the pairs agree.
+
+The fixed contour power sums define continuous symmetric coordinates,
+locally holomorphic in time while the contour stays cleared. Division
+by the full counted quadratic gives
+\begin{equation}
+ H=Q_*A,\qquad P_N=Q_{*,N}A_N,\qquad
+ Q_{*,N}=(z-c_N)^2-D_N,
+ \label{ctr:factorization}
+\end{equation}
+with both remaining factors analytic and nonzero in the outer disk.
+Since $P_N$ has real coefficients and each disk is conjugation
+invariant, its counted pair is conjugation invariant. Thus $c_N,D_N$
+are real, whether the pair is real, conjugate nonreal or double.
+\end{proof}
+
+\subsection{Quotient, coordinate and denominator errors}
+
+Suppress the chart index temporarily, and write
+$B=H_z/H$, $B_N=(P_N)_z/P_N$,
+$\langle f\rangle=(2\pi\ii)^{-1}\oint_\Gamma f(z)\dd z$.
+The integral satisfies $|\langle f\rangle|\le r\sup_\Gamma|f|$.
+Set
+\begin{equation}
+ b_j=\frac{\epsilon_j}{h-\epsilon_0}
+       +\frac{K_j\epsilon_0}{h(h-\epsilon_0)},\qquad
+ K_B=K_1/h,\qquad 1\le j\le3.
+ \label{ctr:quotient-errors}
+\end{equation}
+
+\begin{proposition}[Symmetric-coordinate transfer]
+\label{ctr:coordinate-transfer}
+Under Lemma~\ref{ctr:matching}, one has $|B_N-B|\le b_1$ and
+\begin{equation}
+ \begin{split}
+ |c_N-c|&\le e_c:=r^2b_1/2,\\
+ |D_N-D|&\le e_D:=r^3b_1/2+(r_0/16)e_c+e_c^2.
+ \end{split}
+ \label{ctr:coordinate-errors}
+\end{equation}
+On the outer circle put
+\begin{equation}
+ u_*:=17r_0/32,\qquad q:=161r_0^2/1024,
+ \qquad e_Q:=2u_*e_c+e_c^2+e_D.
+ \label{ctr:quadratic-errors}
+\end{equation}
+Then $|Q_*|\ge q$ and $|Q_{*,N}-Q_*|\le e_Q$. If
+$e_Q\le q/2$, the two quadratics and every straight interpolation
+between them have modulus at least $q/2$ on the outer circle.
+\end{proposition}
+
+\begin{proof}
+Since $|P_N|\ge h-\epsilon_0$, subtracting the quotients
+$\partial_z^jP_N/P_N$ and $\partial_z^jH/H$ proves
+\eqref{ctr:quotient-errors}; $j=1$ gives the stated bound for $B$.
+Use local coordinates $u=z-\zeta$ and let $I_k=\langle u^kB\rangle$.
+The argument principle gives
+\[
+ c=\zeta+I_1/2,\qquad D=I_2/2-(c-\zeta)^2,
+ \qquad |I_{k,N}-I_k|\le r^{k+1}b_1.
+\]
+Because $|c-\zeta|\le r_0/32$, the difference of the last squares
+is at most $(r_0/16)e_c+e_c^2$. This proves
+\eqref{ctr:coordinate-errors} without an unnecessary height factor.
+On the outer circle,
+$15r_0/32\le|z-c|\le17r_0/32$ and $|D|\le r_0^2/16$.
+Subtracting the latter allowance from $(15r_0/32)^2$ gives $q$.
+Expanding $(z-c_N)^2-(z-c)^2$ gives the bound $e_Q$.
+Finally $|Q_*+\theta(Q_{*,N}-Q_*)|\ge q-e_Q$ for $0\le\theta\le1$.
+The inner circle similarly has canonical quadratic floor
+$57r_0^2/1024$; rational integration below uses only the outer circle.
+\end{proof}
+
+The same interface also pays the first time derivatives. Define
+\begin{equation}
+ A_j=K_j/h,\qquad A_{j,N}=(K_j+\epsilon_j)/(h-\epsilon_0),\qquad
+ b_t=b_3+A_{2,N}b_1+A_1b_2.
+ \label{ctr:time-quotient}
+\end{equation}
+The two heat equations and \eqref{eq:log-time} imply
+$|(B_N)_t-B_t|\le b_t$. Differentiating the fixed contour formulas gives
+\begin{equation}
+ \begin{split}
+ |c_N'-c'|&\le e_{c'}:=r^2b_t/2,\qquad
+ |c'|\le C_{c'}:=r^2(A_3+A_1A_2)/2,\\
+ |D_N'-D'|&\le r^3b_t/2+(r_0/16)e_{c'}
+                           +2e_c(C_{c'}+e_{c'}).
+ \end{split}
+ \label{ctr:time-coordinate-errors}
+\end{equation}
+For the last line, expand the derivative of $(c-\zeta)^2$ and use
+$|c_N'|\le C_{c'}+e_{c'}$. These estimates remain valid at either
+discriminant zero; they make no Lipschitz assertion for individual roots.
+
+\begin{corollary}[An explicit cutoff threshold]
+\label{ctr:threshold}
+For exact-data errors $\epsilon_j=C_jE_N$, define on each chart
+\begin{equation}
+ \begin{gathered}
+ b=2C_1/h+2K_1C_0/h^2,\qquad A_c=r^2b/2,\\
+ A_D=r^3b/2+(r_0/16)A_c+A_c^2,\qquad
+ A_Q=2u_*A_c+A_c^2+A_D,\\
+ E_*^{(\alpha)}=\min\{1,h/(2C_0),q/(2A_Q)\}.
+ \end{gathered}
+ \label{ctr:linear-threshold}
+\end{equation}
+A zero denominator constant imposes no restriction. If
+$E_N\le\min_\alpha E_*^{(\alpha)}$, all preceding count and
+denominator tests hold, and $b_1\le bE_N$, $e_c\le A_cE_N$,
+$e_D\le A_DE_N$, $e_Q\le A_QE_N$. In particular the explicit
+sufficient test is
+\begin{equation}
+ \frac{2K\{\log(2+N)+1\}}N\le\min_\alpha E_*^{(\alpha)}.
+ \label{ctr:cutoff-test}
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+The second restriction in \eqref{ctr:linear-threshold} gives
+$h-\epsilon_0\ge h/2$, hence the asserted linear bound for $b_1$.
+Use $E_N^2\le E_N$ in \eqref{ctr:coordinate-errors} and
+\eqref{ctr:quadratic-errors}; the third restriction then gives
+$e_Q\le q/2$. Equation~\eqref{cta:tail-bound} proves
+\eqref{ctr:cutoff-test}.
+\end{proof}
+
+\subsection{Complete rational traces and fixed-moment rates}
+
+Define $S_{n,N}$ and $T_{k,N}$ using \emph{every} polynomial occurrence
+outside the selected pair, with its actual multiplicity. The canonical
+quantities still use every canonical exterior occurrence. Neither
+collection is an unmentioned cutoff of an evolved exterior divisor.
+
+\begin{theorem}[Complete exterior-moment transfer]
+\label{ctr:moment-transfer}
+Assume the count and denominator tests above. Put
+\begin{equation}
+ U_n=(2/q)^n,\qquad V_n=n(2/q)^{n+1}.
+ \label{ctr:kernel-constants}
+\end{equation}
+For every fixed $n\ge1$ and $k\ge2$, the uniform errors on a chart are
+\begin{align}
+ |S_{n,N}-S_n|&\le e_{S_n}:=r(U_nb_1+K_BV_ne_Q),
+ \label{ctr:even-error}\\
+ |T_{k,N}-T_k|&\le e_{T_k}:=
+ r\{(u_*+e_c)U_kb_1+K_B(e_cU_k+u_*V_ke_Q)\}.
+ \label{ctr:odd-error}
+\end{align}
+For the exact-data threshold of Corollary~\ref{ctr:threshold}, explicit
+linear constants are
+\begin{equation}
+ \begin{split}
+ C_{S_n}^{(\alpha)}&=r(U_nb+K_BV_nA_Q),\\
+ C_{T_k}^{(\alpha)}&=
+ r\{(u_*+A_c)U_kb+K_B(A_cU_k+u_*V_kA_Q)\}.
+ \end{split}
+ \label{ctr:moment-linear-constants}
+\end{equation}
+Taking maxima over the finite cover gives errors $C_{S_n}E_N$ and
+$C_{T_k}E_N$ on all of $I$, hence $O(\log N/N)$ at each fixed order.
+\end{theorem}
+
+\begin{proof}
+First identify the traces with the \emph{complete} exterior moments.
+For either $R(z)=Q_*^{-n}$ or $R(z)=(z-c)Q_*^{-k}$, all kernel poles
+are enclosed targets and $R=O(z^{-2})$ or $O(z^{-3})$ at infinity.
+For an exterior occurrence $\rho$, the rational function
+$R(z)/(z-\rho)$ has zero residue at infinity and exactly one pole
+outside the contour, at $\rho$. Thus
+\begin{equation}
+ \left\langle\frac{R(z)}{z-\rho}\right\rangle=-R(\rho).
+ \label{ctr:individual-residue}
+\end{equation}
+Also $\langle R\rangle=0$. The combined contribution of the counted
+targets is $\langle RQ_*'/Q_*\rangle=0$, because this rational
+function has only enclosed poles and decays faster than $1/z$.
+This includes a double target; individual simple target residues need
+not vanish separately.
+
+For $P_N$, complete partial fractions and
+\eqref{ctr:individual-residue} prove the traces immediately.
+For $H$, use its complete even order-at-most-one product
+\eqref{eq:product}. The regularized logarithmic derivative converges
+normally on the fixed circle; its additive constants integrate to zero
+against $R$. The inverse-square tail pays this passage, and the
+resulting exterior sums converge absolutely. Therefore
+\begin{equation}
+ S_n=-\langle Q_*^{-n}B\rangle,\qquad
+ T_k=-\langle(z-c)Q_*^{-k}B\rangle,
+ \label{ctr:complete-traces}
+\end{equation}
+and the same formulas hold with every object indexed by $N$.
+Only individual rational functions were evaluated at infinity; no
+uncontrolled outer contour for the full logarithmic derivative has
+been discarded. Local nonvanishing of the deflated factor alone would
+not identify its derivatives with these complete sums.
+
+The straight interpolation of Proposition~\ref{ctr:coordinate-transfer}
+gives
+$|Q_{*,N}^{-n}-Q_*^{-n}|\le V_ne_Q$, while each inverse power is
+bounded by $U_n$. Subtract the two even traces, using the perturbed
+kernel with $B_N-B$ and the kernel difference with $B$, to obtain
+\eqref{ctr:even-error}. For the odd kernel, additionally use
+$|z-c_N|\le u_*+e_c$ and
+\[
+ |(z-c_N)Q_{*,N}^{-k}-(z-c)Q_*^{-k}|
+       \le e_cU_k+u_*V_ke_Q.
+\]
+This proves \eqref{ctr:odd-error}. Finally apply
+Corollary~\ref{ctr:threshold} and $E_N\le1$ to obtain
+\eqref{ctr:moment-linear-constants}.
+\end{proof}
+
+Exterior--exterior mergers remain outside the fixed circles and cause
+no singularity in these formulas. Internal target mergers are handled
+by the quadratic kernel. A target--exterior merger would destroy the
+supplied collar and is outside the theorem. The same fixed-contour
+formulas, \eqref{ctr:time-coordinate-errors} and differentiation of
+their rational kernels also give first-time-jet passage at fixed
+moment orders. Constants depend on those orders and the contour floors;
+no simultaneous height/order limit follows.
+
+\subsection{Forcing and every-subinterval transport}
+
+Let all errors below denote their maxima over the finite chart cover.
+Distinguish the physical forcing from its scaled version:
+\begin{equation}
+ \begin{gathered}
+ M=S_1,\qquad \mathcal F=12S_2+16DS_3,\qquad
+ M_t=2M^2-\mathcal F,\qquad D_t=2-4DM,\\
+ \sigma=(t-t_0)/\ell^2,\quad \delta=D/\ell^2,\quad
+ s_n=\ell^{2n}S_n,\quad v_k=\ell^{2k-1}T_k,\quad m=\ell^2M,\\
+ F=\ell^4\mathcal F=12s_2+16\delta s_3.
+ \end{gathered}
+ \label{ctr:physical-normalized}
+\end{equation}
+Use identical definitions for the polynomial. If
+$A_3^{\rm mom}\ge\sup_I|S_3|$ is a supplied canonical moment or
+contour bound, then
+\begin{equation}
+ e_M=e_{S_1},\qquad
+ |\mathcal F_N-\mathcal F|\le e_{\mathcal F}:=
+ 12e_{S_2}+16\{d\ell^2e_{S_3}
+                    +e_D(A_3^{\rm mom}+e_{S_3})\}.
+ \label{ctr:forcing-error}
+\end{equation}
+Indeed write $D_NS_{3,N}-DS_3=D(S_{3,N}-S_3)+(D_N-D)S_{3,N}$.
+This retains the product of errors. Consequently
+$|m_N-m|\le\eta:=\ell^2e_M$, $|F_N-F|\le\ell^4e_{\mathcal F}$,
+$|\delta_N-\delta|\le e_D/\ell^2$, and the even and odd scaled
+moment errors are respectively $\ell^{2n}e_{S_n}$ and
+$\ell^{2k-1}e_{T_k}$. A proved polynomial forcing inequality may be
+transferred using these errors; the error theorem itself supplies no
+improved forcing sign.
+
+\begin{theorem}[Every-subinterval multiplier and physical cost]
+\label{ctr:transport-theorem}
+Put $\Sigma=\Delta/\ell^2$. For every $0\le x\le y\le\Sigma$,
+let
+\begin{equation}
+ W(x,y)=\exp\left(-4\int_x^y m(v)\dd v\right),\qquad
+ W_N(x,y)=\exp\left(-4\int_x^y m_N(v)\dd v\right).
+ \label{ctr:multipliers}
+\end{equation}
+Then both multipliers are positive and
+\begin{equation}
+ \begin{gathered}
+ |\log W(x,y)-\log W_N(x,y)|\le4\eta(y-x),\\
+ \e^{-4\eta(y-x)}W_N(x,y)\le W(x,y)
+                 \le\e^{4\eta(y-x)}W_N(x,y),\\
+ |W(x,y)-W_N(x,y)|\le(\e^{4\eta(y-x)}-1)W_N(x,y).
+ \end{gathered}
+ \label{ctr:multiplier-error}
+\end{equation}
+The physical discriminant cost is
+\begin{equation}
+ \mathcal C_D(x,y)=2\ell^2\int_x^yW(v,y)\dd v,
+ \qquad
+ \mathcal C_{D,N}(x,y)=2\ell^2\int_x^yW_N(v,y)\dd v.
+ \label{ctr:physical-cost}
+\end{equation}
+It satisfies
+\begin{equation}
+ \begin{split}
+ |\mathcal C_D-\mathcal C_{D,N}|
+ &\le2\ell^2\int_x^y
+             (\e^{4\eta(y-v)}-1)W_N(v,y)\dd v\\
+ &\le(\e^{4\eta(y-x)}-1)\mathcal C_{D,N}(x,y).
+ \end{split}
+ \label{ctr:cost-error}
+\end{equation}
+At exact fixed inputs these are $O(E_N)=O(\log N/N)$ errors,
+uniformly over all subintervals.
+\end{theorem}
+
+\begin{proof}
+Reality of the two selected pairs and their complete conjugation-invariant
+exterior divisors makes $m,m_N$ real. Integrating the uniform bound
+$|m-m_N|\le\eta$ proves the logarithmic estimate. Exponentiation gives
+the two-sided multiplier inequalities and their absolute consequence.
+The variation-of-constants formula for the physical equation is
+\begin{equation}
+ D(t_0+\ell^2y)
+   =W(x,y)D(t_0+\ell^2x)+\mathcal C_D(x,y).
+ \label{ctr:variation-constants}
+\end{equation}
+Here $\partial_\sigma D=2\ell^2-4mD$, explaining the indispensable
+factor $\ell^2$ in \eqref{ctr:physical-cost}. Apply the multiplier
+bound separately on every $[v,y]$ and integrate to obtain
+\eqref{ctr:cost-error}. For fixed inputs, $e_M=O(E_N)$ and $m$ is
+bounded; hence $m_N$ and the displayed costs are uniformly bounded
+for all sufficiently large $N$. This proves the stated linear rate.
+\end{proof}
+
+For an explicit absolute bound, any supplied $|m|\le A_m$ gives
+$|m_N|\le A_m+\eta=:A_N^{\rm abs}$. Define
+$\Psi(b,h)=\int_0^h\e^{bv}\dd v$, with its continuous value $h$
+at $b=0$. With $h=y-x$, \eqref{ctr:cost-error} implies
+\begin{equation}
+ |\mathcal C_D-\mathcal C_{D,N}|
+ \le2\ell^2\{
+ \Psi(4(A_N^{\rm abs}+\eta),h)-\Psi(4A_N^{\rm abs},h)\}.
+ \label{ctr:absolute-cost-error}
+\end{equation}
+The normalized $\delta$ cost is $\mathcal C_D/\ell^2$.
+In physical time the logarithmic multiplier error is
+$4e_M(v-u)$ on every $[u,v]\subset I$.
+
+Independent anchors remain necessary for a sign consumer. If an incoming
+anchor has error $\alpha_x$, subtraction in
+\eqref{ctr:variation-constants} gives the additional allowance
+\[
+ W(x,y)\alpha_x+|W-W_N|\,|D_N(t_0+\ell^2x)|
+                   +|\mathcal C_D-\mathcal C_{D,N}|.
+\]
+A supplied terminal lower anchor $A_y$ implies a nonnegative incoming
+$D$ if it exceeds $\mathcal C_{D,N}$ plus the upper cost error, because
+$W>0$. Approximation acquires neither that anchor nor the tube; equality
+and discriminant-zero cases remain included.
+
+\subsection{Finite input errors and the scope of the realization}
+
+\begin{proposition}[Weighted finite-data propagation]
+\label{ctr:data-proposition}
+Suppose the supplied real-even initial polynomial has coefficient errors
+$|\widehat a_{2k}-a_{2k}|\le\xi_k$, $0\le k\le J_N$, and evolves
+by the same terminating heat exponential. Then, for $0\le j\le3$,
+\begin{equation}
+ \epsilon_j^{\rm data}\le
+ \sum_{k=0}^{J_N}\xi_k
+ \sum_{r=0}^{\lfloor(2k-j)/2\rfloor}
+  \frac{\Delta^r}{r!}\frac{(2k)!}{(2k-2r-j)!}R^{2k-2r-j}.
+ \label{ctr:coefficient-data-error}
+\end{equation}
+A negative upper summation limit means zero, and $0^0=1$.
+All preceding estimates apply to the supplied polynomial with
+\begin{equation}
+ \epsilon_j=C_jE_N+\epsilon_j^{\rm data},
+ \label{ctr:total-data-error}
+\end{equation}
+provided the count and denominator tests hold for these total errors.
+\end{proposition}
+
+\begin{proof}
+Apply $\partial_z^j\exp(-\tau\partial_z^2)$ to each error monomial
+$\delta a_{2k}z^{2k}$. Its finite expansion is
+\[
+ \delta a_{2k}\sum_{r=0}^{\lfloor(2k-j)/2\rfloor}
+ \frac{(-\tau)^r}{r!}\frac{(2k)!}{(2k-2r-j)!}z^{2k-2r-j}.
+\]
+Taking absolute values and using $\tau\le\Delta$, $|z|\le R$
+proves \eqref{ctr:coefficient-data-error}. Add the canonical truncation
+error from Theorem~\ref{cta:field-theorem}. The resulting polynomial
+has the same real symmetry required in Lemma~\ref{ctr:matching}, so
+every subsequent estimate applies with the total error interface.
+\end{proof}
+
+Location enclosures can be converted into these coefficient budgets,
+but only after the finite occurrences have been correctly matched.
+If $|\widehat\rho_\nu-\rho_\nu|\le e_\nu<|\rho_\nu|$, put
+\begin{equation}
+ b_\nu=|\rho_\nu|^{-2},\qquad
+ d_\nu=\frac{e_\nu(2|\rho_\nu|+e_\nu)}
+               {|\rho_\nu|^2(|\rho_\nu|-e_\nu)^2}.
+ \label{ctr:root-data-error}
+\end{equation}
+The difference-of-inverse-squares identity gives
+$|\widehat\rho_\nu^{-2}-\rho_\nu^{-2}|\le d_\nu$.
+If the normalization error is at most $e_a$, a sufficient coefficient
+allowance is
+\begin{equation}
+ \xi_k=e_a e_k(b+d)+h_0\{e_k(b+d)-e_k(b)\},
+ \label{ctr:symmetric-data-error}
+\end{equation}
+where $e_k$ is the elementary symmetric polynomial and $e_0=1$.
+To see this, expand the two finite products in inverse squares. The
+normalization difference contributes the first term; expansion of the
+remaining difference and telescoping bounds every mixed term by the
+corresponding positive term of $e_k(b+d)-e_k(b)$.
+
+An alternative matched-factor budget, directly suited to Gaussian
+propagation, uses $\alpha_\nu=\rho_\nu^{-2}$ and
+$w_\nu=\max(|\alpha_\nu|,|\widehat\alpha_\nu|)$:
+\begin{equation}
+ |\widehat P_N(t_0,z)-P_N(t_0,z)|
+ \le\left[e_a+h_0|z|^2\sum_{\nu\le J_N}
+                  |\widehat\alpha_\nu-\alpha_\nu|\right]
+                    \prod_{\nu\le J_N}(1+|z|^2w_\nu).
+ \label{ctr:factor-data-error}
+\end{equation}
+Finite telescoping proves this inequality. Its whole Gaussian expectation
+is an explicit finite polynomial in $R$ and $\sqrt{2\Delta}$, with
+Gaussian absolute moments $\mu_0=1$, $\mu_1=\sqrt{2/\pi}$ and
+$\mu_j=(j-1)\mu_{j-2}$. Cauchy then pays its spatial jets on a padded
+disk. Likewise a supplied initial uncertainty
+$\delta f_0(z)=\int_0^\infty\delta\psi_0(u)\cos(zu)\dd u$
+has a valid whole-time error budget
+\begin{equation}
+ V(R,\Delta)=\int_0^\infty|\delta\psi_0(u)|
+                          \e^{\Delta u^2+Ru}\dd u<\infty.
+ \label{ctr:weighted-source-error}
+\end{equation}
+The Fubini argument of Theorem~\ref{cta:field-theorem} yields the
+evolved source representation with weight $\e^{\tau u^2}$; its
+absolute value is bounded by $V$. On a disk padded by $p>0$, the
+corresponding order-$j$ jet budget is
+$j!p^{-j}V(R+p,\Delta)$. If the initial uncertainty is the sum of a
+polynomial error and such a source error, add their budgets. These are
+uncertainty budgets for the unchanged target, not a change of physical source.
+
+The degree-dependent weights are part of the result. Fixed unweighted
+coefficient accuracy does not imply a uniform conditioning theorem as
+$N$ grows. Wrong multiplicities, omitted factors or uncertain cutoff
+completeness are not small matched location errors. Exact real even
+symmetry must also be retained: a small complex perturbation alone does
+not give real $m_N$ or the positive costs used above.
+
+Finally, the direct polynomial method with the same input divisor can
+evaluate exactly the same complete signed rational sums as
+\eqref{ctr:complete-traces}; it receives every error bound above.
+Avoiding exterior root labels is not a proved speed advantage. Generic
+finite polynomial controls initialized with a nonzero value at the
+origin retain their mergers: after their entire initial divisor is
+included, $E_N=0$ and all exact-data errors vanish.
+In particular the assessed separated quartic control has simultaneous
+target and exterior double zeros while its counted transfer is exact
+\cite{BakerCMReview40}. Thus finite realization and approximation do
+not provide a strict gap sign. The canonical result is a fixed-input
+common-time approximation, distinct from short-head closure, acquired
+canonical data, a uniform-height limit or a new Newman bound.

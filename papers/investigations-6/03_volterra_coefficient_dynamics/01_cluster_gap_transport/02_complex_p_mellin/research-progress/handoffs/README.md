@@ -104,3 +104,44 @@ assistance; root settings unavailable, three helpers selected Sol6.1/ultra:
 - [E16 r4 return](VCD-GT-CM-E16-return-r4.md): completes the previously unexecuted approximation contract; all seven original pins unchanged.
 - [E40 r1](VCD-GT-CM-E40-r1.md), [bounded r2 addition](VCD-GT-CM-E40-r2.md), [fourteen final pins](VCD-GT-CM-E40-inputs-r2.json) and [return](VCD-GT-CM-E40-return-r2.md): accepted fixed-input scope without mathematical correction, preserving the strong-collar collision control.
 - [B05 r2](VCD-GT-CM-B05-r2.md): default ready conceptual continuation; select one useful canonical consumer and conditioning/data budget before any future E acquisition. Earlier E16-unexecuted routing is historical; the sole register owns live status.
+
+
+18 November B05 r2/E41 closeout, for Edward Baker with Codex assistance;
+actual root/helper settings unavailable, internal shared-premise assessment:
+
+- [B05 r2 return](VCD-GT-CM-B05-return-r2.md): completes the two-strategy selection with paid short-tube constants and a scoped missing-budget outcome.
+- [E41 request](VCD-GT-CM-E41-r1.md), [thirteen input pins](VCD-GT-CM-E41-inputs-r1.json), [return](VCD-GT-CM-E41-return-r1.md): accepts within scope without mathematical correction.
+- [B05 r3](VCD-GT-CM-B05-r3.md): default next B/Astra decision, one centered whole-path estimate or park this realization; no acquisition E is issued. Note50 supersedes Note49's future routing.
+
+
+18 November B05 r3/E42 closeout, for Edward Baker with Codex assistance;
+actual settings unavailable, internal shared-premise assessment:
+
+- [B05 r3 return](VCD-GT-CM-B05-return-r3.md): centered whole-path bound completed; actual Note48 allowance still fails, so the tested realization is parked. No B05 r4 or acquisition E.
+- [E42 request](VCD-GT-CM-E42-r1.md), [original pins](VCD-GT-CM-E42-inputs-r1.json), [one wording correction](VCD-GT-CM-E42-inputs-correction1.json), [return](VCD-GT-CM-E42-return-r1.md): accepted after a control-premise clarification, formulas unchanged and original identity recoverable. Note51 supplies optional broader B10 r5 guidance without activating it.
+
+18 November B10 r5 / E43 closeout, for Edward Baker with Codex assistance;
+actual model/effort unavailable:
+
+- [B10 r5 request](VCD-GT-CM-B10-r5.md) and [return](VCD-GT-CM-B10-return-r5.md): joint annular mechanism selected; >2.4% analytical complete parsed-width gain.
+- [E43 request](VCD-GT-CM-E43-r1.md), [13 pins](VCD-GT-CM-E43-inputs-r1.json), [return](VCD-GT-CM-E43-return-r1.md): accepted within scope without required correction.
+- **Default next:** [E44 r1 / E / Sol](VCD-GT-CM-E44-r1.md), [16 frozen pins](VCD-GT-CM-E44-inputs-r1.json): one rational endpoint transformation,2% complete-width gate and inherited control guard. Subsequent E45 assessment precedes promotion; no new source run. The sole register owns readiness.
+
+
+## 18 November 2026 analytical manuscript integration
+
+Prepared for Edward Baker with OpenAI Codex assistance; actual model/effort
+unavailable, helpers inherited settings.
+
+- [E46 request](VCD-GT-CM-E46-r1.md), [pre-edit source identities](VCD-GT-CM-E46-before-r1.json)
+  and [return](VCD-GT-CM-E46-return-r1.md): systematic integration of
+  accepted analytical results in the existing manuscript.
+- [E47 request](VCD-GT-CM-E47-r1.md), [original47 inputs](VCD-GT-CM-E47-inputs-r1.json),
+  [final48 inputs and reversible correction](VCD-GT-CM-E47-inputs-correction1.json)
+  and [return](VCD-GT-CM-E47-return-r1.md): scoped internal nonauthor
+  acceptance after one bounded clarification and production correction round.
+- [E48 return](VCD-GT-CM-E48-return-r1.md): clean 107-page ignored PDF,
+  all-page visual QA and research-document reconciliation.
+- [Continuation55](../../notes/55_VCD_GT_CM_ANALYTICAL_MANUSCRIPT_CONTINUATION_20261118.md):
+  E44 r1 remains the next bounded task, then E45; source proof and new
+  endpoint artifact remain distinct. The sole register owns live status.

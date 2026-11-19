@@ -1,0 +1,163 @@
+% 19 November 2026. Prepared for Edward Baker with OpenAI Codex assistance.
+% Lead recorded gpt-6-astra/max. Inherited results retain their source scope.
+\section{The source, the time direction and the question}
+\label{sec:source}
+
+\subsection{A distinct use of the existing hierarchy}
+
+The present investigation begins with a concrete question. Suppose a
+source theorem certifies separated zeros at a positive heat time. Can
+arithmetic information about the error in their evolution preserve that
+separation at an earlier time where the initial localization theorem
+no longer applies? The question concerns the usefulness of a quantitative
+estimate along the intervening path. A formula for the velocity at one
+time, or a more accurate description of an already protected region,
+is not yet that estimate.
+
+Our starting framework is the exterior-moment manuscript
+\cite{VCDCMManuscript}. That work develops exact pair dynamics,
+compatible common-time approximation and direct contour enclosures.
+Here we select and rederive the background needed to connect those
+identities to the arithmetic approximation of Polymath
+\cite{Polymath2019}. The motivating discussion
+\cite{VCDCMDiscussion08,VCDCMDiscussion09,VCDCMDiscussion10,
+VCDCMDiscussion11,VCDCMDiscussion12} supplies three guiding distinctions:
+actual gaps versus a reference density, a joint drift versus separate
+moment errors, and approximation error versus the final inequality
+which protects a zero configuration. The new program is organized around
+these distinctions rather than around another representation alone.
+
+\subsection{The literal theta field}
+
+For a source coordinate $v\ge0$ put
+\begin{equation}
+ \Phi(v)=\sum_{n=1}^{\infty}
+ \left(2\pi^2n^4e^{9v}-3\pi n^2e^{5v}\right)
+ e^{-\pi n^2e^{4v}},
+ \qquad \Phi(-v)=\Phi(v).
+ \label{src:phi}
+\end{equation}
+For real physical time $t$, and then by analytic continuation, define
+\begin{equation}
+ H(t,z)=\int_0^{\infty}e^{tv^2}\Phi(v)\cos(zv)\dd v
+       =\frac12\int_{\R}e^{tv^2}\Phi(v)e^{\ii zv}\dd v.
+ \label{src:H}
+\end{equation}
+The source and observation kernel remain fixed throughout this paper.
+With the usual completion
+\[
+ \xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s),
+\]
+the theta Mellin representation gives
+\begin{equation}
+ H(0,z)=\frac18\xi\!\left(\frac{1+\ii z}{2}\right).
+ \label{src:xi}
+\end{equation}
+This normalization is the one used in
+\cite{Polymath2019,VCDCMManuscript}. In particular Newman height $x$
+is twice the corresponding absolute zeta height, not the zeta height
+itself. The functional equation and evenness make either sign of $\ii z$
+in \eqref{src:xi} equivalent.
+
+\begin{proposition}[Analyticity and heat law]
+\label{src:heat}
+The field $H$ is jointly entire in $(t,z)$, even in $z$, and real for
+real $t,z$. It obeys
+\begin{equation}
+ H_t=-H_{zz}.
+ \label{src:heat-law}
+\end{equation}
+For every compact real time interval $J$, $H(t,0)$ has a strictly
+positive minimum and the spatial zero divisor satisfies uniformly
+\begin{equation}
+ n_t(R)=O(R\log(2+R)),\qquad
+ \sum_{|\rho|>R}|\rho|^{-2}
+       =O\!\left(\frac{\log(2+R)}R\right).
+ \label{src:count}
+\end{equation}
+Zeros in the sum are counted with multiplicity.
+\end{proposition}
+
+\begin{proof}
+Each term of \eqref{src:phi} is positive on $v\ge0$, since
+$2\pi n^2e^{4v}-3>0$. The defining series and each fixed derivative
+have a bound by a polynomial in $e^v$ times
+$\exp(-c e^{4v})$ for some $c>0$. On compact $(t,z)$ sets this
+majorizes the integrand and its derivatives after multiplication by
+$\exp(\Re(t)v^2+|\Im z|v)$. Differentiation under the integral
+proves the analytic assertions and \eqref{src:heat-law}. Positivity,
+continuity and compactness give the lower bound at zero.
+
+To control spatial growth, reserve half the double-exponential decay
+for integrability. The supremum of $rv-c e^{4v}$ is
+$O(r\log(2+r))$; the time factor contributes only a lower-order
+$O((\log(2+r))^2)$ at that maximizing scale, uniformly for $t\in J$.
+Thus $\log\max_{|z|\le r}|H(t,z)|=O(1+r\log(2+r))$.
+Jensen's formula, using the positive lower bound at zero and the
+maximum on $|z|=2R$, proves the count. Stieltjes summation by parts
+bounds the inverse-square tail by a constant times
+$\int_R^\infty \log(2+s)s^{-2}\dd s$.
+\end{proof}
+
+The growth is of order at most one. Evenness therefore pairs the
+canonical factors for opposite zeros, removing their linear
+exponentials. Proposition~\ref{src:heat} supplies the complete tail
+needed for the rational traces below. It does not locate zeros,
+separate them, or impose a positive sign on an arbitrary exterior
+interaction.
+
+\subsection{Backward time is a forward heat equation}
+
+Fix a reference time $t_*$ and put $u=t_*-t$. Then
+\begin{equation}
+ \partial_u H=H_{zz}.
+ \label{src:backward}
+\end{equation}
+The words ``backward continuation'' refer to decreasing physical Newman
+time. They do not mean reversing the usual positive-diffusion equation
+in the real spatial coordinate. For $u\ge0$ the exact field satisfies
+\begin{equation}
+ H(t_*-u,z)=\frac1{\sqrt\pi}\int_{\R}
+ e^{-r^2}H(t_*,z+2\sqrt u\,r)\dd r.
+ \label{src:gaussian}
+\end{equation}
+To verify this formula, insert \eqref{src:H}, interchange integrals
+using the absolute source bound, and evaluate the Gaussian transform
+$\pi^{-1/2}\int e^{-r^2}e^{2\ii\sqrt u\,rv}\dd r=e^{-uv^2}$.
+This is a whole-line identity. Restricting the initial data to a small
+interval without paying the complement does not preserve it.
+
+The de Bruijn--Newman constant $\Lambda$ is characterized by the
+all-real-zero regime $t\ge\Lambda$; the Riemann hypothesis is equivalent
+to $\Lambda\le0$. The result $\Lambda\ge0$ of Rodgers and Tao
+\cite{RodgersTao2020} supplies context, not an estimate used in the local
+arguments. Our aim is a useful source-specific continuation estimate;
+no assertion about the value of $\Lambda$ follows from the setup.
+
+\subsection{Notation and evidence}
+
+\begin{center}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.18\textwidth}
+                >{\raggedright\arraybackslash}p{0.73\textwidth}}
+\toprule
+Symbol & Meaning \\
+\midrule
+$t,u$ & Physical Newman time and reversed time $u=t_*-t$. \\
+$a,b,c,g,D$ & Pair endpoints, center, actual gap $g=b-a$, and discriminant $D=g^2/4$. \\
+$Q_j,M$ & Exterior denominator $(\rho_j-c)^2-D$ and complete interaction $\sum_j Q_j^{-1}$. \\
+$d,\ell$ & Height-dependent reference spacing and a separately frozen normalization scale. Neither is an actual gap by definition. \\
+$p,q$ & Nonnegative integer split-pole exponents unless explicitly extended. A single complex exponent later acts on the combined denominator. \\
+$S_n,T_n$ & Even and odd complete exterior moments. \\
+$\mathcal E,V,K$ & Gap drift, its half-defect, and the dimensionless joint forcing. \\
+$P,E,\mathcal R$ & Arithmetic reference field, error $E=H-P$, and heat defect $\mathcal R=P_t+P_{zz}$. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+A local identity is proved under explicit product and chart assumptions.
+A continuation theorem requires inequalities along a stopped time path.
+A canonical acquisition proves those inequalities for the unchanged theta
+source. An improved global bound additionally requires complete coverage.
+The manuscript keeps these four levels distinct. Its derivations are
+internal LLM-assisted work built on the cited sources; publication or
+independent specialist review is not asserted.

@@ -1,4 +1,4 @@
-# References for the conservation brainstorm
+# References for the brainstorm
 
 18 November 2026, America/New_York. Prepared for Edward Baker with OpenAI
 Codex LLM assistance. Actual model and effort are unavailable in this
@@ -43,3 +43,33 @@ size or hash is invented.
 Both records support the [conservation note](../notes/05_CONSERVED_QUANTITIES_FEASIBILITY_20261118.md).
 Reusable entries are in [references.bib](references.bib). No priority
 claim is made for the elementary identities rederived in that note.
+
+## Localization and the two-pole observable
+
+The [Pestun reading record](01_PESTUN_LOCALIZATION_READING_20261118.md)
+records the exact version and selected passages checked for the author's
+localization suggestion on 18 November 2026. It links the earlier
+repository discussion and distinguishes a known localization mechanism
+from a still-unconstructed application to the current hierarchy.
+Prepared for Edward Baker with OpenAI Codex assistance; actual recorded
+model and effort unavailable.
+
+The [height-density receipt](02_HEIGHT_DENSITY_SOURCE_CHECK_20261119.md)
+records the selected Rodgers–Tao and Polymath passages rechecked for
+Discussion09 on 19 November. Existing bibliography and reading-copy
+ownership are retained; no new PDF is stored here. Prepared for
+Edward Baker with OpenAI Codex assistance; actual model and effort unavailable.
+
+The same [source receipt](02_HEIGHT_DENSITY_SOURCE_CHECK_20261119.md) now
+records the error-structure passages checked for Discussion11, the existing
+PDF's rechecked identity, and a factor-two caution in an intermediate §9
+display. The explicit definitions, rather than that display, own the
+derived coefficients. Prepared for Edward Baker with OpenAI Codex assistance,
+19 November 2026; recorded gpt-6-astra/max. Selected-passage reading only.
+
+The [Platt–Trudgian/Gomila receipt](03_PLATT_TRUDGIAN_GOMILA_METHOD_COMPARISON_20261119.md)
+records the versioned paper, existing PDF identity, inspected public proof
+revision and the earlier local audit. It distinguishes the pinned claim
+from the blog's later research report. Selected-source comparison for
+Discussion12, 19 November 2026; prepared for Edward Baker with OpenAI Codex
+assistance, recorded gpt-6-astra/max.

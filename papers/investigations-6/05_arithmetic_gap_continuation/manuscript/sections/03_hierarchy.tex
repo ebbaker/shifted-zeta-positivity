@@ -1,0 +1,456 @@
+% 19 November 2026. Drafted for Edward Baker with OpenAI Codex assistance.
+% AGC-E02; dispatched configuration gpt-6.1-sol, effort ultra.
+% Dispatch metadata is recorded, not independently attested backend metadata.
+\section{Integer pole powers and a single complex exponent}
+\label{sec:hierarchy}
+
+The natural indices of the rational hierarchy are nonnegative integers
+attached separately to the two target poles. Their finite algebra is
+proved first. A different construction later extends the exponent of
+the \emph{combined} quadratic denominator to one complex variable.
+The distinction is essential: no recurrence with two independently
+complex split indices is established here
+\cite{VCDCMManuscript,VCDCMDiscussion08}.
+
+\subsection{Rational traces and a legitimate infinite-limit passage}
+
+On a counted pair chart use $w_j=\rho_j-c$, $Q_j=w_j^2-D$ for
+each exterior occurrence. Strict exterior separation on compact
+subcharts, together with \eqref{agc:pair-count}, makes
+\begin{equation}
+ S_n=\sum_jQ_j^{-n}\quad(n\ge1),\qquad
+ T_n=\sum_jw_jQ_j^{-n}\quad(n\ge2),\qquad M=S_1
+ \label{agc:hier-ST}
+\end{equation}
+absolute. Their respective large-$|\rho|$ tails at fixed orders are
+$O(N^{1-2n}\log N)$ and $O(N^{2-2n}\log N)$.
+The first odd order $T_1$ is deliberately absent.
+
+For either weight $k(z)=Q_*^{-n}$ or
+$k(z)=(z-c)Q_*^{-n}$ in these ranges,
+\begin{equation}
+ \sum_j k(\rho_j)=-\frac1{2\pi\ii}
+                       \oint_\Gamma k(z)B(t,z)\,\dd z.
+ \label{agc:hier-trace}
+\end{equation}
+Indeed, for one exterior pole $k(z)/(z-\rho)$ the sum of residues
+at the target poles is $-k(\rho)$, since there is no residue at
+infinity. Product regularizer constants multiply $\oint k=0$.
+The target contribution $kQ_{*,z}/Q_*$ has all its poles enclosed
+and decays faster than $z^{-1}$, so its combined residue also vanishes.
+This proves \eqref{agc:hier-trace} by locally uniform product
+convergence. The contour must enclose both targets; separating their
+residues can introduce nonzero terms which cancel only in the sum.
+
+Here is the precise passage used for the hierarchy. At a reference
+slice, truncate the opposite-paired product with all conjugates,
+ties and multiplicities retained, and include the target pair. Give
+each resulting polynomial its own heat evolution initialized at that
+slice. Its spatial jets converge on the cleared contour. Its first
+time logarithmic jet is determined there by
+\begin{equation}
+ B_t=-\frac{H_{zzz}}H+\frac{H_zH_{zz}}{H^2}
+     =-B_{zz}-2BB_z.
+ \label{agc:hier-Burgers}
+\end{equation}
+Differentiating the fixed-contour coordinate and trace formulas,
+including the moving kernels, therefore passes their first time jets
+to the limit. At a finite multiple-root slice one first perturbs the
+factors to simple roots and uses the same contour argument. Thus a
+finite polynomial identity passes to the complete field once every
+nonabsolute first-power sum has cancelled and only fixed-order
+absolute moment products remain. This slice argument asserts no
+common time interval for the polynomial approximants and no
+uniformity as their moment order grows.
+
+\subsection{The integer split recurrence}
+
+Where $D\ne0$ choose a local analytic $s=\sqrt D$, and put
+$h=2s$, $X_j=w_j-s$, $Y_j=w_j+s=X_j+h$. Define
+\begin{equation}
+ P_{p,q}=\sum_jX_j^{-p}Y_j^{-q},\qquad
+ p,q\in\mathbb Z_{\ge0},\quad p+q\ge2.
+ \label{agc:hier-P}
+\end{equation}
+These are absolute even on the axes. Their tails are
+$O(N^{1-p-q}\log N)$ at fixed indices and fixed cleared targets.
+For $m,n\ge1$ write
+\[
+ C_{m,n}=\sum_{i=2}^{m}P_{i,0}P_{m+1-i,n}
+          +\sum_{j=1}^{n-1}P_{m,j}P_{0,n+1-j},
+\]
+and on an axis use
+$C_{m,0}=\sum_{i=2}^{m-1}P_{i,0}P_{m+1-i,0}$ and
+$C_{0,n}=\sum_{j=2}^{n-1}P_{0,j}P_{0,n+1-j}$.
+An empty sum is zero. With $A_h=2/h-hM$, the recurrence is
+\begin{align}
+ P_{p,q}'={}&p\{C_{p+1,q}-(p+3)P_{p+2,q}
+                  -(q+2)P_{p+1,q+1}+A_hP_{p+1,q}\}\notag\\
+ &+q\{C_{p,q+1}-(p+2)P_{p+1,q+1}
+                  -(q+3)P_{p,q+2}-A_hP_{p,q+1}\},
+          &&p,q\ge1, \label{agc:hier-mixed}\\
+ P_{p,0}'={}&p\{C_{p+1,0}-(p+3)P_{p+2,0}-2P_{p+1,1}
+                                     +(2/h)P_{p+1,0}\},
+          &&p\ge2, \label{agc:hier-axis-one}\\
+ P_{0,q}'={}&q\{C_{0,q+1}-2P_{1,q+1}-(q+3)P_{0,q+2}
+                                     -(2/h)P_{0,q+1}\},
+          &&q\ge2. \label{agc:hier-axis-two}
+\end{align}
+Also $h'=4/h-2hM$. These identities hold through exterior
+multiplicities on separated target charts.
+
+\begin{proof}
+Work first with finitely many simple roots. The target velocities are
+$z_+'=2/h-2P_{1,0}$, $z_-'=-2/h-2P_{0,1}$, where the first-order
+symbols are used only at this finite stage. Since
+$X_j^{-1}-Y_j^{-1}=h/Q_j$, their difference gives $h'$.
+An exterior root receives the target force
+$2(X_j^{-1}+Y_j^{-1})$. For
+$f_{m,n}(w)=(w-s)^{-m}(w+s)^{-n}$, the exterior--exterior force
+contributes
+\[
+ U_{m,n}=-2\sum_{j<k}
+             \frac{f_{m,n}(w_j)-f_{m,n}(w_k)}{w_j-w_k}
+\]
+to the block multiplied by $p$ or $q$ after differentiating its
+weight. Reciprocal-power subtraction gives the finite identity
+\begin{equation}
+ -\frac{f_{m,n}(u)-f_{m,n}(v)}{u-v}
+ =\sum_{i=1}^{m}f_{i,0}(u)f_{m+1-i,n}(v)
+   +\sum_{j=1}^{n}f_{m,j}(u)f_{0,n+1-j}(v).
+ \label{agc:hier-split-DD}
+\end{equation}
+To verify it, subtract the first factors while holding
+$(v+s)^{-n}$ fixed, then subtract the second factors while
+holding $(u-s)^{-m}$ fixed. The full left side is symmetric in
+$u,v$, although this decomposition need not look symmetric.
+Thus $U_{m,n}$ is the ordered off-diagonal sum on the right.
+Its diagonal subtractions are $-mP_{m+1,n}-nP_{m,n+1}$.
+For $m,n\ge1$, its two endpoint products are
+$(P_{1,0}+P_{0,1})P_{m,n}$, and its remaining products are $C_{m,n}$.
+
+The differentiated first block is
+\[
+ p\{(2/h-2P_{1,0})P_{p+1,q}
+                  -2P_{p+2,q}-2P_{p+1,q+1}+U_{p+1,q}\};
+\]
+the second is the same expression with prefactor $q$, target
+velocity $-2/h-2P_{0,1}$, and raised second index. Adding the
+off-diagonal formulas cancels the common first-order sums; their
+remaining difference is $P_{1,0}-P_{0,1}=hM$. The diagonals and
+the two explicit target-force terms give exactly
+\eqref{agc:hier-mixed}. On an axis both endpoint products contain
+the same first-order sum and cancel it completely, leaving
+\eqref{agc:hier-axis-one}--\eqref{agc:hier-axis-two}.
+After these cancellations every surviving series is absolute.
+The weight in \eqref{agc:hier-P} has the same fixed-contour trace
+as \eqref{agc:hier-trace}. The preceding slice-jet passage therefore
+proves the complete equations, including exterior multiplicities.
+\end{proof}
+
+Rows attached to different adjacent edges are constrained by their
+shared divisor. If $P_{p,q}^{(n)}$ denotes \eqref{agc:hier-P} for
+$(x_n,x_{n+1})$, restoring the omitted shared neighbor gives, for $r\ge2$,
+\begin{equation}
+ P_{r,0}^{(n)}+(-g_n)^{-r}
+       =P_{0,r}^{(n+1)}+g_{n+1}^{-r}.
+ \label{agc:hier-overlap}
+\end{equation}
+Both sides equal $\sum_{k\ne n+1}(x_k-x_{n+1})^{-r}$.
+Within one row, $Y-X=h$ also gives
+$hP_{p,q}=P_{p,q-1}-P_{p-1,q}$ for $p,q\ge1$,
+$p+q\ge3$. At $(1,1)$ the difference must be combined before
+summation. These necessary compatibility identities do not assert
+that an arbitrary moment array comes from one divisor.
+
+\subsection{Symmetric variables and their collision-regular evolution}
+
+The split labels exchange when $s$ is replaced by $-s$. Their
+regular symmetric form is \eqref{agc:hier-ST}, since
+\begin{equation}
+ S_n=P_{n,n},\qquad
+ T_n=\tfrac12(P_{n-1,n}+P_{n,n-1}).
+ \label{agc:hier-change}
+\end{equation}
+Conversely, put $r=\max(p,q)$ and write
+\[
+ X^{-p}Y^{-q}
+     =\frac{(w-s)^{r-p}(w+s)^{r-q}}{(w^2-D)^r}.
+\]
+Its numerator has degree at most $2r-2$. Replacing even powers
+$w^{2k}$ by $(Q+D)^k$ and odd powers by $w(Q+D)^k$ expresses
+the result using only $S_n$ for $n\ge1$ and $T_n$ for $n\ge2$,
+with polynomial coefficients in $s$. This proves equivalence of the
+integer descriptions in their convergent ranges.
+
+The collision-regular equations are
+\begin{align}
+ S_n'={}&2n\sum_{k=1}^{n}S_kS_{n+1-k}
+       +2n\sum_{k=2}^{n}(T_kT_{n+2-k}+DS_kS_{n+2-k})\notag\\
+       &-4n(n+2)S_{n+1}-4n(n+3)DS_{n+2},&&n\ge1,
+                                                  \label{agc:hier-S}\\
+ T_n'={}&2(2n-1)\sum_{k=2}^{n}T_kS_{n+1-k}
+       +4nD\sum_{k=2}^{n}T_kS_{n+2-k}\notag\\
+       &-4(n^2+n-1)T_{n+1}-4n(n+3)DT_{n+2},&&n\ge2.
+                                                  \label{agc:hier-T}
+\end{align}
+
+For completeness, the symmetrization giving these coefficients can
+be checked without manipulating a singular split label. At a finite
+simple slice put $P=T_1=\sum_jw_j/Q_j$. The relative root equation is
+\begin{equation}
+ w_j'=4w_j/Q_j+2P+2\sum_{k\ne j}(w_j-w_k)^{-1}.
+ \label{agc:hier-relative}
+\end{equation}
+For $A=(u^2-D)^{-1}$, $B_0=(v^2-D)^{-1}$, and
+$L_r=\sum_{i=0}^{r-1}A^{r-1-i}B_0^i$ with $L_0=0$, elementary
+subtraction gives
+\begin{equation}
+ \begin{split}
+ \frac{A^r-B_0^r}{u-v}&=-(u+v)AB_0L_r,\\
+ \frac{uA^r-vB_0^r}{u-v}
+       &=-AB_0L_{r-1}-(D+uv)AB_0L_r.
+ \end{split}
+ \label{agc:hier-regular-DD}
+\end{equation}
+Here $AB_0L_r=\sum_{k=1}^r A^kB_0^{r+1-k}$. Summing over
+unordered exterior pairs and subtracting the diagonals therefore gives
+\begin{align*}
+ -\sum_{i<j}\frac{w_iQ_i^{-n-1}-w_jQ_j^{-n-1}}{w_i-w_j}
+ ={}&\frac12\sum_{k=1}^{n}(S_kS_{n+1-k}-S_{n+1})\\
+ &+\frac D2\sum_{k=1}^{n+1}(S_kS_{n+2-k}-S_{n+2})\\
+ &+\frac12\sum_{k=1}^{n+1}
+                (T_kT_{n+2-k}-S_{n+1}-DS_{n+2}),\\
+ -\sum_{i<j}\frac{Q_i^{-r}-Q_j^{-r}}{w_i-w_j}
+ ={}&\sum_{k=1}^r(T_kS_{r+1-k}-T_{r+1}).
+\end{align*}
+In these two finite identities only, $T_1=P$ is allowed.
+Differentiating $Q^{-n}$ using \eqref{agc:hier-relative} gives
+\[
+ nD'S_{n+1}-8n(S_{n+1}+DS_{n+2})-4nPT_{n+1}
+       -4n\sum_{i<j}\frac{w_iQ_i^{-n-1}-w_jQ_j^{-n-1}}{w_i-w_j}.
+\]
+The $k=1,n+1$ odd endpoint products cancel $P$, and the
+$D$-weighted endpoints cancel $-4nDMS_{n+1}$ from $nD'S_{n+1}$.
+The diagonal coefficients left are $-4n(n+2)$ and $-4n(n+3)$,
+proving \eqref{agc:hier-S}. For the odd weight use
+\[
+ (wQ^{-n})_w=(1-2n)Q^{-n}-2nDQ^{-n-1},\qquad
+ (wQ^{-n})_D=nwQ^{-n-1}.
+\]
+The second divided-difference sum then cancels both terms involving
+$P$; its $D$-weighted last endpoint cancels the interaction in
+$nD'T_{n+1}$. The remaining direct and diagonal coefficients are
+$-4(n^2+n-1)$ and $-4n(n+3)$, giving \eqref{agc:hier-T}.
+The fixed-order slice passage proves both complete laws, through
+target and exterior multiplicities.
+
+In particular,
+\begin{equation}
+ \begin{split}
+ M'&=2M^2-12S_2-16DS_3,\\
+ S_2'&=8MS_2-32S_3+4DS_2^2-40DS_4+4T_2^2,\\
+ T_2'&=(6M+8DS_2)T_2-20T_3-40DT_4.
+ \end{split}
+ \label{agc:hier-low}
+\end{equation}
+The spatial term $4T_2^2$ has a positive sign. All signs refer to
+forward physical time; backward transport must reverse the time
+derivative of the whole equation. These are componentwise identities
+of the given complete field. They do not prove well-posedness for
+arbitrary moment arrays or stability after a finite-order closure.
+
+At a target merger the regular moments remain analytic, but a raw
+split coordinate generally has the form $A(t)+s(t)C(t)$, with
+$A,C$ analytic. Its coefficient at the double is
+$C(t_*)=(p-q)\sum_jw_j(t_*)^{-p-q-1}$.
+Since $D'(t_*)=2$, a nonzero coefficient produces a derivative of
+order $1/s$. Thus collision regularity belongs to the symmetric
+description, not to each separately labelled pole coordinate.
+
+\subsection{The full inverse-power family and its Mellin meaning}
+
+Choose a fixed length $\ell>0$. For each exterior occurrence select
+a spatial logarithm of $Q(t,w)=w^2-D(t)$ near its location and set
+\begin{equation}
+ f_p(t,w)=\exp\{p(2\log\ell-\operatorname{Log}Q(t,w))\},\qquad
+ Z(p,t)=\sum_j f_p(t,w_j),\qquad \Re p>\tfrac12.
+ \label{agc:hier-Z}
+\end{equation}
+Then $Z(n,t)=\ell^{2n}S_n(t)$ for integer $n\ge1$.
+The infinite inverse-power family retains all denominator scales;
+increasing a real order emphasizes smaller exterior denominators.
+For positive $Q_1<Q_2$, the ratio of their order-$n$ contributions
+is $(Q_2/Q_1)^n$. This compares contributions within one order,
+not dimensionful values of different moments. Nonreal denominators
+carry phases and need not provide a positive moment sequence.
+
+When every $Q_j>0$, define the denominator heat trace
+$\Theta(v,t)=\sum_j\exp(-vQ_j/\ell^2)$ for $v>0$. The gamma
+integral gives the genuine Mellin representation
+\begin{equation}
+ Z(p,t)=\frac1{\Gamma(p)}\int_0^\infty
+                         v^{p-1}\Theta(v,t)\,\dd v,
+                         \qquad \Re p>\tfrac12.
+ \label{agc:hier-Mellin}
+\end{equation}
+Indeed, for $a=\Re p>1/2$, the integral of the sum of absolute
+values is $\Gamma(a)\sum_j(\ell^2/Q_j)^a<\infty$.
+Tonelli followed by Fubini proves the formula. It also holds with
+the compatible logarithm if all $Q_j$ lie in a common closed sector
+$\Re Q_j\ge\eta|Q_j|>0$, since the same argument uses
+$(\Re Q_j)^{-a}$. A general complex exterior need not satisfy this
+sector condition. In that case \eqref{agc:hier-Z} is the primary
+complex-power trace; an unrotated positive-ray Laplace integral
+must not be asserted for it.
+
+\subsection{Local logarithms and the complete complex-time law}
+
+For this analytic extension work at real times with a
+conjugation-invariant pair, so $c,D$ are real. Assume, in addition to the complete
+product, a fixed strip $|\Im\rho|\le A_0$, the projected unit count
+$\#\{\rho:v\le\Re\rho\le v+1\}\le C\log(2+|v|)$,
+and safe-line bounds
+$|B(t,x\pm\ii Y)|\le C\log(2+|x|)$ with $Y>A_0$.
+These are explicit source inputs, not consequences of a moment
+recurrence. Keep $c,D$ in a compact counted chart and choose a large
+centered cutoff $R_0$ so that $\Re(w^2-D)\ge(\Re w)^2/2$ for
+$|\Re w|\ge R_0$, $|\Im w|\le Y$. Use the principal logarithm
+on those two half-strips. Enclose the finitely many central exterior
+clusters by disjoint cleared disks avoiding $Q=0$. On each disk
+choose one analytic logarithm of $Q$ and continue it in time;
+shrinking the chart makes this possible even through an exterior
+merger. There is a chart constant $\Theta_0$ bounding the absolute
+imaginary parts of these logarithms.
+
+Let $\mathcal S$ denote $(2\pi\ii)^{-1}$ times integration over
+the positive central disk boundaries and the boundaries of the two
+infinite half-strips. On the latter the lower rays run rightward,
+the upper rays leftward, the finite right connector downward and
+the finite left connector upward. The central target pair is excluded.
+For $h(t,w)=B(t,c(t)+w)$, the residue theorem gives
+\begin{equation}
+ \begin{split}
+ Z&=\mathcal S(f_ph),\\
+ Z_t&=\mathcal S((f_p)_t h+f_ph_t)\\
+    &=\mathcal S\big(\{(f_p)_t-(f_p)_{ww}-c'(f_p)_w\}h
+                                      +(f_p)_wh^2\big),\\
+ h_t&=-h_{ww}-2hh_w+c'h_w,\qquad
+ (f_p)_t=pD'f_p/Q.
+ \end{split}
+ \label{agc:hier-complex-time}
+\end{equation}
+The derivatives of $f_p,h$ here hold $w$ fixed.
+
+We give the convergence details because a formal sum of zero
+velocities at infinitely many multiple roots would not justify this
+law. At fixed $1/2<b\le\Re p\le r$, counting and the chosen phases give
+\begin{equation}
+ |Z(p,t)|\le C_{b,r}\exp(\Theta_0|\Im p|),\qquad
+ |Z_t(p,t)|\le C_{b,r}(1+|p|)^2\exp(\Theta_0|\Im p|)
+ \label{agc:hier-p-envelope}
+\end{equation}
+on compact subcharts. For the value estimate, the tails are bounded
+by $\sum_{n\ge1}n^{-2b}\log(2+n)$; central terms are finite and
+separated. On the safe rays the absolute reciprocal-square and
+reciprocal-cube sums yield $|h_w|+|h_{ww}|=O(\log(2+|x|))$.
+Thus $h_t=O(\log^2(2+|x|))$ by \eqref{agc:hier-complex-time}.
+Moreover
+\[
+ (f_p)_w=-2pw f_p/Q,\qquad
+ (f_p)_{ww}=\{-2p/Q+4p(p+1)w^2/Q^2\}f_p.
+\]
+Both differentiated integrands consequently have an integrable
+majorant $C(1+|p|)^2|x|^{-2b}\log^2(2+|x|)
+\exp(\Theta_0|\Im p|)$. Cleared finite pieces have bounded
+spatial jets and a positive $|Q|$ floor, giving the same exponent
+envelope with a finite constant.
+
+To remove the distant vertical closures, choose their real projections
+in successive unit intervals at distance at least
+$c/\log(2+|x|)$ from all zero projections. Such cuts exist by
+deleting the short forbidden intervals and using the unit count.
+Comparing $h$ on each cut with its value on the upper safe line
+via the once-subtracted logarithmic derivative gives
+$h=O(\log^2(2+|x|))$ there: the near unit shell pays inverse
+projection clearance and the far shells have inverse-square decay.
+The bounded-length connector integral is therefore
+$O(|x|^{-2b}\log^2(2+|x|))$ and tends to zero. This proves the
+spatial residue formula. The displayed majorants justify time
+differentiation and normal convergence in $p$ for $\Re p>1/2$.
+Finally, the difference between the two time integrands in
+\eqref{agc:hier-complex-time} is the spatial derivative of
+$-f_ph_w+(f_p)_wh-f_ph^2+c'f_ph$. Its circle integrals vanish,
+its connector endpoint values cancel, and its values at infinite
+ray endpoints tend to zero. Integration by parts proves the last
+representation, including the full interaction term $(f_p)_wh^2$.
+
+Two analytic time charts can differ on finitely many central clusters
+by logarithm shifts $2\pi\ii k_C$. On their overlap,
+\begin{equation}
+ Z_B-Z_A=\sum_C(e^{-2\pi\ii k_Cp}-1)Z_{A,C}.
+ \label{agc:hier-branch-transition}
+\end{equation}
+The same relation differentiates in time on the local cluster
+contours. All corrections and their time derivatives vanish at
+integer $p$. When real exterior denominators are positive, as for
+a count-two disk containing the target segment, conjugate clusters
+can be assigned conjugate logs, including opposite arguments
+$+\pi,-\pi$ at nonreal conjugate locations with negative-real $Q$. This gives
+$Z(p)=\overline{Z(\bar p)}$. If instead every negative-real
+$Q_j$ is assigned $+\pi$ on a single slice, the exact defect is
+\[
+ Z_+(p)-\overline{Z_+(\bar p)}
+   =-2\ii\ell^{2p}\sin(\pi p)\sum_{Q_j<0}|Q_j|^{-p}.
+\]
+The exceptional sum is finite. Resetting arguments at every time
+need not define an analytic time chart. These branch restrictions
+are essential away from the integer hierarchy.
+
+\subsection{Damped recovery of the forcing}
+
+The complex representation recovers the inherited forcing exactly.
+Set $\delta=D/\ell^2$, $m=\ell^2M$, $\sigma=(t-t_0)/\ell^2$,
+fix $\epsilon>0$, and use
+\[
+ K_\epsilon(p,t)=\frac{12e^{\epsilon(p-2)^2}}{p-2}
+              +\frac{16\delta(t)e^{\epsilon(p-3)^2}}{p-3},
+ \qquad G_\epsilon(p)=\frac{e^{\epsilon(p-1)^2}}{p-1}.
+\]
+For upward vertical lines $V_q$, define the two-line difference
+$\mathcal V_{b,r}(F)=(2\pi\ii)^{-1}
+(\int_{V_r}F\,\dd p-\int_{V_b}F\,\dd p)$. Then
+\begin{equation}
+ \begin{split}
+ F(t)&=\mathcal V_{1,4}(K_\epsilon Z)
+       =12Z(2,t)+16\delta Z(3,t)
+       =\ell^4(12S_2+16DS_3),\\
+ m(t)&=\mathcal V_{3/4,3/2}(G_\epsilon Z)=Z(1,t),\\
+ \frac{\dd m}{\dd\sigma}&=2m^2-F,\qquad
+ \frac{\dd\delta}{\dd\sigma}=2-4m\delta.
+ \end{split}
+ \label{agc:hier-forcing-contour}
+\end{equation}
+To prove this, close a counterclockwise rectangle between the chosen
+verticals. The damping equals one at each residue and has modulus
+$e^{\epsilon((\Re p-n)^2-(\Im p)^2)}$.
+The horizontal integrals therefore vanish as their height tends
+to infinity by \eqref{agc:hier-p-envelope}; the vertical integrals
+are absolutely convergent. The same Gaussian dominates the time
+derivative, including
+$16(D'/\ell^2)e^{\epsilon(p-3)^2}Z/(p-3)$ from differentiating
+the kernel. Residues give the first two formulas, and
+\eqref{agc:pair-law}, \eqref{agc:hier-low} give the last two.
+On a branch overlap the correction \eqref{agc:hier-branch-transition}
+vanishes at the residue indices. The apparent poles of its product
+with either kernel are removable, so the complete two-line values
+and their derivatives agree across charts.
+
+These contours reorganize the complete forcing. They provide neither
+its sign nor an estimate stronger than evaluating the same integer
+moments from the same information. In particular one cannot replace
+the integer upper limits in \eqref{agc:hier-mixed} or
+\eqref{agc:hier-S} by arbitrary complex indices. The single-complex-$p$
+law \eqref{agc:hier-complex-time} is the proved analytic extension;
+the independent canonical input needed to use the forcing for
+continuation is considered next.

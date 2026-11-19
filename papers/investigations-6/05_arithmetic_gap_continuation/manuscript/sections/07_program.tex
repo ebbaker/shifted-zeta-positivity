@@ -1,0 +1,230 @@
+% 19 November 2026. Prepared for Edward Baker with OpenAI Codex assistance.
+% Lead recorded gpt-6-astra/max. Program statements are prospective.
+\section{Synthesis, controls and outstanding challenges}
+\label{sec:program}
+
+\subsection{The analytical information being carried forward}
+
+The pair coordinates compress a local divisor without discarding its
+complete exterior. The gap chain makes this exterior geometric: nearby
+gaps strongly influence the response, while distant zeros enter through
+summable dipole tails. The integer hierarchy keeps the shared divisor
+constraints; the complex Mellin extension supplies another representation
+with its own convergence and branch requirements. These are compatible
+views of one physical field. An arbitrary vector of moments need not
+come from that field, and evolving a truncated head without its boundary
+rows need not preserve that compatibility.
+
+The earlier manuscript proves a common-time approximation by initializing
+one finite paired product and evolving it with the polynomial heat
+operator \cite[\S\S6--8]{VCDCMManuscript}. Its fixed-input convergence,
+counted-contour transfer and conditioning qualifications are relevant
+background. The present program uses the arithmetic approximation as a
+more structured candidate reference, rather than assuming that generic
+product convergence already supplies a useful relative error at large
+height. Both require a count, a denominator floor and a complete path.
+
+The normalization issue has two different manifestations. If
+$H=AQ$ locally with $A$ analytic and nonzero, a contour integral of
+$\partial_z\log A$ contributes no divisor count. But
+\[
+ \frac{H_{zz}}{H_z}(a)
+   =\frac{Q_{zz}}{Q_z}(a)+2\frac{A_z}{A}(a)
+\]
+at a simple zero $a$ of $Q$. Thus the same factor affects zero velocity
+under the heat law. A spatially constant multiplier cancels from that
+ratio; an evolving reference with such a multiplier still has to pay
+its time defect. These observations explain the earlier localization
+analogy without constructing a localization or index-theoretic proof.
+A count of two is the same before and at a double zero, so count
+invariance alone cannot protect a gap
+\cite{VCDCMDiscussion07,VCDCMDiscussion08}.
+
+\subsection{A common contour makes the comparison explicit}
+
+A short derivation specifies how a field estimate becomes a gap estimate.
+Let a positively oriented contour $\Gamma$ contain exactly two zeros,
+with multiplicity, of each of two holomorphic fields $H$ and $P$, and
+no zeros on $\Gamma$. Write their centers and discriminants as
+$c_H,D_H$ and $c_P,D_P$. Suppose $H/P$ has a single-valued analytic
+logarithm $h$ on a neighborhood of the contour, for example because
+$|H-P|<|P|$ throughout that neighborhood. For the power sums
+\[
+ A_j(H)=\frac1{2\pi\ii}\oint_\Gamma z^j\frac{H_z}{H}\dd z,
+ \quad c_H=A_1(H)/2,\quad D_H=A_2(H)/2-c_H^2,
+\]
+integration by parts gives
+\begin{equation}
+ A_j(H)-A_j(P)=-\frac{j}{2\pi\ii}
+                 \oint_\Gamma z^{j-1}h(z)\dd z.
+ \label{prog:log-moments}
+\end{equation}
+If
+$I_0=(2\pi\ii)^{-1}\oint h\dd z$ and
+$I_c=(2\pi\ii)^{-1}\oint(z-c_P)h\dd z$, then
+\begin{equation}
+ c_H-c_P=-\tfrac12 I_0,\qquad
+ D_H-D_P=-I_c-\tfrac14 I_0^2.
+ \label{prog:centered-error}
+\end{equation}
+To verify the second equality, substitute
+$A_2(H)-A_2(P)=-2(2\pi\ii)^{-1}\oint zh\dd z$ and expand
+$c_H^2=(c_P-I_0/2)^2$. The shared logarithm and full square remain.
+Separately maximizing their contributions may give a valid but weaker
+outer bound. A constant $h$ gives $I_0=I_c=0$ exactly.
+
+Together with the joint quotient identity of
+Section~\ref{sec:residual-transport}, this gives a concrete paired
+comparison: direct contour evaluation and time-integrated drift must
+use the same source information and maintain the same correlations.
+These identities rederive the relevant transfer principle in
+\cite[\S\S7,19--20]{VCDCMManuscript}. They are not evidence that an
+iteration of the same constraints adds information.
+
+\subsection{What a first research result should accomplish}
+
+The first comparison should fix one reference field, one parameter domain
+and one target functional before numerical refinement. For a real pair,
+that functional may be the cumulative drift in
+Proposition~\ref{cont:cumulative}. An alternative is the whole-time
+forcing floor in Theorem~\ref{cont:barrier}. Their acquisition requirements
+are different, and an estimate for one must not be silently substituted
+for the other.
+
+There are three connected analytical possibilities. First, estimate the
+joint residual numerator directly so that common multiplicative errors
+cancel before an absolute value is taken. Second, use the forced heat
+representation or its adjoint to weight only those residual components
+which reach the selected contour functional, while paying the full
+spatial complement and boundary data. Third, retain the phases of the
+arithmetic correction and its reference sum so that the corrected center
+is bounded as one expression. These are proposed mechanisms, not acquired
+canonical bounds. A mollifier that improves a value bound is not
+automatically a stable reference for a derivative or time-dependent
+quantity.
+
+A successful finite result would be a smaller complete error allowance
+or a longer certified interval for the fixed consumer, compared with
+a direct method using the same information. A failure could also be
+useful if it identifies the particular discarded correlation or growing
+constant that prevents improvement. Such a failure is scoped to that
+comparison. It cannot justify a universal claim that dynamics, different
+mollifiers or other arithmetic decompositions are incapable of progress.
+
+\subsection{Collision controls and failed premises}
+
+The collision controls in \cite{RepositoryControls} distinguish a valid
+transfer from an unjustified source-specific conclusion. The following
+is an analytical premise screen, not a numerical replay of the control
+certificates.
+
+The simplest exact test is
+\begin{equation}
+ H(t,z)=P(t,z)=z^2-2(t-T),\qquad T>0.
+ \label{prog:quadratic}
+\end{equation}
+It has zero approximation error and zero heat defect, but its real pair
+merges at $t=T$. Here $M=K=0$, $V=1$ and
+$D(u)=2(t_*-T)-2u$. The cumulative allowance is exhausted exactly at the
+merger; the strict margin fails. Thus a sound residual theorem preserves
+the event. Perfect approximation of a colliding reference is not
+protection against collision.
+
+An initial almost regular chain also need not provide a whole-time
+forcing floor. For $k>0$ and $0<\alpha_0<1$, the exact backward heat
+field
+\begin{equation}
+ F(u,z)=e^{-k^2u}\cos(kz)+\alpha_0
+ \label{prog:cosine-control}
+\end{equation}
+has $F_u=F_{zz}$. Put $\alpha(u)=\alpha_0e^{k^2u}$ and
+$\theta(u)=\arccos\alpha(u)$. Its short pair about $\pi/k$ has
+\[
+ D(u)=\theta(u)^2/k^2,\qquad
+ V(u)=\frac{\theta(u)\alpha(u)}{\sqrt{1-\alpha(u)^2}},\qquad
+ u_c=k^{-2}\log(1/\alpha_0).
+\]
+The formulas follow by solving $\cos(kz)=-\alpha(u)$ and differentiating.
+As $\alpha_0\to0$, the initial gaps approach $\pi/k$ and
+$V(0)\to0$, yet a merger occurs at $u_c$. For fixed $k$ the exterior
+of the selected cluster stays separated there; its inverse powers
+remain summable, so $K\to0$ as $D\to0$. The whole-time near-unit
+forcing premise fails. This is a finite positive atomic source, not
+theta, and serves only as a control on inference from initial geometry.
+
+The remaining source controls fail different canonical premises:
+\begin{itemize}
+\item Euler-factor translates and weighted-square, finite-source,
+finite-score and finite-prime perturbations alter the full normalized
+theta arithmetic. Preserved finite measurements do not restore its
+complete source identity. Documented endpoint-defective subclasses also
+lack the imported strip.
+\item Reflected super-Gaussian sources fail the order-one product input
+used here as well as literal theta identification. Smooth shape and
+positive-primitive controls lack that complete arithmetic identification;
+positivity alone supplies no missing gap margin.
+\item Atomic and finite-profile constructions fail the full theta profile.
+Their event does not refute a theorem that uses the actual profile, but
+it must survive any generic approximation theorem whose hypotheses they
+satisfy.
+\item RH-conditional endpoint constructions change ordinary Dirichlet
+arithmetic and assume RH in their construction. Their escaping event
+heights do not provide a fixed-compact obstruction.
+\item Changed observation kernels fail the physical cosine/Newman
+readout; fractional profiles fail integer divisor multiplicities; static
+divisor surgery supplies no common source heat path. Strong-collar and
+annular polynomial controls still test local algebra and the full square.
+\end{itemize}
+Identifying a missing canonical premise is not proof that a proposed
+coarse estimate uses that premise effectively. Every future quantitative
+claim must identify where the unchanged arithmetic actually enters.
+
+\subsection{Outstanding analytical challenges}
+
+The remaining work has a definite dependency order.
+
+\begin{enumerate}
+\item \emph{Acquire a useful reference and initial gap.}
+The full arithmetic approximation is available beyond first-term clock
+dominance, but its small remainder does not locate its own zeros.
+A counted contour, initial separation and a compatible correction center
+must be established without assuming the desired continuation.
+
+\item \emph{Control the residual in the norm the gap uses.}
+The forced error equation needs time-uniform spatial derivatives and
+complete tail or boundary data. Its inverse denominator and center
+errors must be paid. The main question is whether the common numerator,
+its weighted time integral, or arithmetic phase information produces a
+useful improvement after all of those costs.
+
+\item \emph{Keep the changing environment coupled.}
+The Mellin hierarchy organizes higher moments but is not a finite closure.
+A source-constrained realization or direct source estimate must retain
+shared zeros, moving gaps and complete exterior forces. At a regular
+merger $K=2D^2\mathcal F$ vanishes, so assuming a whole-path positive
+floor without acquiring it would already assume event exclusion.
+
+\item \emph{Extend the source domain, not just its precision.}
+At fixed positive time the favorable moment estimates inherit individual
+clock separation. A new result must state exactly which time/height
+domain it adds or which complete comparison it improves. The onset
+$x\ge\exp(C/t)$ is a sufficient source threshold; its divergence at zero
+is not removed by substituting an unevaluated constant or taking a
+nonuniform limit.
+
+\item \emph{Assemble local information into a global statement.}
+A protected pair or finite block must be joined to compact and high-height
+regions with no omitted gaps, interfaces or exits. If the Polymath strip
+criterion is the eventual consumer, its initial, exterior and
+intermediate-time barrier hypotheses and its $y_0^2/2$ time payment
+remain. A local real-gap estimate cannot replace those obligations
+without a new proved bridge.
+\end{enumerate}
+
+The purpose of the new track is to resolve these analytical dependencies
+in sustained research sequences: derive a candidate estimate, test its
+premises, compare its complete consequence, and use the result to choose
+the next step. Numerical work supports those decisions through fixed
+algebraic checks or explicitly certified examples. The unresolved
+mathematical task is a source-specific estimate whose useful margin
+persists beyond the information already supplied by direct localization.

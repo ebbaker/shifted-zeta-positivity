@@ -1560,3 +1560,14 @@ methods. By contrast, [Note45](../papers/investigations-6/03_volterra_coefficien
 retains actual nodal dependence through the exact cardinal operator and
 measures >33.9494-fold width gain. Retain coefficient arithmetic and the
 true time remainder; do not count an intermediate radius factor as a net gain.
+
+**19 November 2026 — a joint quotient still needs its complete gap transfer.**
+For Edward Baker with Codex assistance; lead recorded gpt-6-astra/max,
+bounded helpers dispatched Sol6.1/ultra. The [AGC draft, Section 6](../papers/investigations-6/05_arithmetic_gap_continuation/manuscript/sections/06_residual_transport.tex)
+retains `P E_zz-P_zz E` but also pays the center difference, contour
+denominators and reference heat defect. It states: “Perfect approximation
+has not protected a colliding reference.” The zero-error quadratic fails
+the strict continuation margin; this screens an incomplete generic
+transfer, not source-specific arithmetic cancellation. The
+[internal assessment](../papers/investigations-6/05_arithmetic_gap_continuation/reviews/01_AGC_ANALYTICAL_DRAFT_ASSESSMENT_20261119.md)
+accepts the conditional interface only. No new canonical gain is claimed.

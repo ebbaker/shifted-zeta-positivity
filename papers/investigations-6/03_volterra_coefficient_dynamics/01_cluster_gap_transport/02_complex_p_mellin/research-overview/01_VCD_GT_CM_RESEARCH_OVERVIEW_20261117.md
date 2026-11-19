@@ -16,7 +16,7 @@ source extension pays the retained-F premise on one pair; direct source
 discrimination is stronger in that finite comparison. The later shared-log
 comparison narrows the sharp independent-moment direct interval by more
 than 6.40% at equal acquisition budget, with additional arithmetic cost.
-The cardinal refinement now narrows that improved direct width by more than 33.9494 times. [Continuation49][continuation] records the accepted fixed-input E16 theorem and the next finite-data/conditioning decision; the
+The cardinal refinement now narrows that improved direct width by more than 33.9494 times. [Decision51](../notes/51_VCD_GT_CM_CENTERED_PATH_BOUND_AND_SCOPED_STOP_20261118.md) pays the centered Gaussian path and records the remaining absolute-core consumer failure; the
 [sole progress register][register] owns
 live status. Historical notes, issued packets and predecessor manuscripts
 remain preserved.
@@ -63,13 +63,40 @@ physical transport costs. E40 accepts the fixed-input scope without
 mathematical correction. The approximation preserves the exact quartic
 merger; it does not acquire canonical initial zeros, tube floors or signs.
 
-The next default is **B05 r2 / B / Astra**, selecting one useful canonical
-consumer and conditioning/data budget before a numerical realization.
-The explicit global envelope, inverse contour floors and degree-dependent
-data weights are sufficient allowances, not necessary complexity bounds.
-The conservation free-tail obstruction does not exclude this structured
-approximation. An optional B10 r5 correlation/annular route must first
-derive a strict total gain against the improved direct baseline.
+[Decision50](../notes/50_VCD_GT_CM_FINITE_DATA_CONDITIONING_DECISION_20261118.md) derives the canonical strong-collar tube on
+[0,1/1024], h_G=35625 and sufficient total errors for every-subinterval
+log-W accuracy 1e-6 from the existing certificate. The full [0,.1]
+restriction fails E16's target-size premise. The published count-tail/global
+allowance requires log N>48,000,000 before its contour gate; local fixed
+calibration improves the central estimate but its inherited global
+Gaussian complement still fails under N<=2^40. These are failures of
+specific sufficient allowances, not actual-error or complexity lower bounds.
+[E41](../reviews/23_VCD_GT_CM_E41_CONDITIONING_ASSESSMENT_20261118.md) accepts within scope without mathematical correction; the sole register owns disposition.
+
+[Decision51](../notes/51_VCD_GT_CM_CENTERED_PATH_BOUND_AND_SCOPED_STOP_20261118.md) reuses the already assessed centered xi
+majorant to pay the full Gaussian path. The main O(E_N) coefficient no
+longer contains the origin-height quadratic exponential; the radial
+constant is confined to a far tail with an explicit growing-cutoff test.
+Even the integrated absolute core allowance still exceeds 1/2 under
+N<=2^40, forcing the actual Note48 log-W allowance above 7/65536>1e-6.
+This concerns the displayed count-tail/absolute-envelope transfer, not
+actual approximation error or all conditioning methods. E42 accepts after one premise-wording clarification; no formula correction.
+
+**B05's tested finite realization remains parked.** The subsequently
+author-requested **B10 r5** selects the joint annular alias estimate in
+[Note52][annular]. Parseval retains the common analytic logarithm
+across the two moment tails. The annular allowance falls by at least5%,
+proving more than2.4% complete-width reduction with node, square, source,
+time, coordinate and rounding payments unchanged. This analytical
+consequence does not yet constitute a newly executed endpoint certificate.
+The joint affine split supplies the same functional as the equally informed
+direct kernel; no representation-specific gain is assigned to it.
+
+The default continuation is **E44 r1 / E / Sol**, the frozen exact-rational
+Record22 transformation, with a2% gate and subsequent E45 assessment.
+E43 assesses the proof; the sole register owns its disposition and E44
+readiness. No new source or recursive advantage is claimed. Reopening B05
+still requires changed quantitative input.
 
 ## One field, three coupled indices
 
@@ -264,25 +291,28 @@ historical unexecuted label is superseded by the execution return and
 sole register. The fixed-input theorem does not itself acquire a favorable
 sign or a simultaneous finite-block theorem. E29/E30 cover the earlier
 scientific notes, E31–E33 the manuscript production and E34/E35 the compact
-source result. Continuation49 gives the new finite-data/consumer gate.
+source result. Decision50 supplies the short-tube consumer; Decision51 pays the centered path and records the remaining scoped core failure.
 
 ## Manuscript and records
 
-The revised reading order is source and rational hierarchy; split-pole
-rows and coupled lattice; finite approximation; complex powers and
-contours; signed transport; regional statistics; joint-time comparison;
-canonical source acquisition and fair comparison; compact stopped-region
-acquisition; forward finite-block statistics; retained forcing and the
-exact return horizon; recursive/continuous two-sided refinement; discussion.
-The new analytical source files are [section17][section17],
-[section18][section18] and [section19][section19]. Analytic constants and
-supporting compact/census numerical records occupy separate appendices.
-The [build guide][guide] links the ignored PDF and current source map.
-E31–E33 own the new integration, separate internal assessment and
-production; [Integration36][integration] and [Continuation37](../notes/37_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_CONTINUATION_20261118.md)
-record that handoff. The sole register owns their current disposition.
-Historical 25-, 38- and 61-page milestones remain in DRAFT_HISTORY; no
-snapshot folder is created and no recursive canonical gain is claimed.
+The analytical manuscript now integrates the accepted common-time
+approximation, counted-moment/transport transfer, conditioning and direct
+correlated-enclosure results. Its order is exact source/hierarchy/lattice;
+finite-head screen followed by one-initialization approximation and
+contour transfer; complete-path conditioning; existing complex-power,
+transport and forward/backward comparisons; then cardinal/shared-log/
+annular error refinement and outstanding challenges. Numerical source
+bounds, finite ratios and consumer failures are supporting Appendix B.
+
+[Integration54](../notes/54_VCD_GT_CM_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261118.md)
+and [Continuation55](../notes/55_VCD_GT_CM_ANALYTICAL_MANUSCRIPT_CONTINUATION_20261118.md)
+record E46–E48, the internal assessment and ignored PDF production.
+The [build guide][guide] gives the current reading map; the sole register
+owns disposition. Integration36/E31–E33 and the earlier 25-,38-,61-,81-page
+milestones remain historical. No new manuscript snapshot is made.
+The proof of the annular gain is integrated, while E44's new finite
+endpoint artifact remains unexecuted. Default research continuation
+therefore remains the frozen E44/Sol task.
 
 ## Control premises
 
@@ -318,7 +348,7 @@ every negative conclusion and in the manuscript discussion.
 [workflow]: ../../../../../../GPT_RESEARCH_MODEL_WORKFLOW.md
 [manuscript]: ../manuscript/main.tex
 [guide]: ../manuscript/README.md
-[continuation]: ../notes/49_VCD_GT_CM_COMMON_TIME_APPROXIMATION_AND_CONTINUATION_20261118.md
+[continuation]: ../notes/55_VCD_GT_CM_ANALYTICAL_MANUSCRIPT_CONTINUATION_20261118.md
 [integration]: ../notes/36_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_INTEGRATION_20261118.md
 [forward]: ../notes/34_VCD_GT_CM_TIME_ZERO_FORWARD_STATISTICS_20261118.md
 [retained]: ../notes/32_VCD_GT_CM_FORCE_DISPERSION_AND_RETAINED_FORCING_20261118.md
@@ -340,3 +370,5 @@ every negative conclusion and in the manuscript discussion.
 [e12]: ../research-progress/handoffs/VCD-GT-CM-E12-r1.md
 [b03]: ../brainstorm/notes/03_VCD_GT_CM_B03_SCOPED_DISPOSITION_20261117.md
 [b04]: ../brainstorm/notes/04_VCD_GT_CM_B04_SPLIT_POLE_CLOSURE_CONTRACT_20261118.md
+
+[annular]: ../notes/52_VCD_GT_CM_JOINT_ANNULAR_ALIAS_DECISION_20261118.md

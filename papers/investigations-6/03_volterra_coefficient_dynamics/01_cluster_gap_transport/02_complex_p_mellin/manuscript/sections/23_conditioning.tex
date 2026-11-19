@@ -1,0 +1,300 @@
+\section{Conditioning the finite realization}
+\label{sec:conditioning}
+
+The approximation theorem separates existence of convergence from the
+size of a useful error budget. Its constants are explicit, but an
+absolute product envelope centered at the origin can be expensive when
+the observed pair has large real part. We first identify that loss,
+then derive a centered estimate for the \emph{same} initialized
+polynomial. The complete Gaussian path, the calibration and the
+eventual transport consumer are all retained
+\cite{BakerCM50,BakerCM51}. The fixed numerical instance is deferred to
+Appendix~\ref{supp:conditioning}; no numerical constant below is needed
+for the approximation theorem.
+
+\subsection{A limitation of the global absolute allowance}
+
+Write $h_0=H(t_0,0)>0$, and let $h_H>0$ be a common floor on the
+counted contours. Each circle meets the real axis, where positivity of
+the source gives $|H(t_0,x)|\le h_0$. Thus $h_H\le h_0$.
+The Gaussian constant of Section~\ref{sec:common-time}, with
+$\lambda=[8(1+\Delta)]^{-1}$, contains the positive contribution
+\[
+ 2M_\lambda R^2\sqrt{1+\Delta}
+       \exp\!\left(\frac{R^2}{4(1+\Delta)}\right),
+ \qquad M_\lambda\ge h_0.
+\]
+Here the origin-centered disk of radius $R$ contains the contours.
+When the omitted tail is replaced by the count allowance
+\[
+ \overline E_N=\frac{2K\{\log(2+N)+1\}}{N},
+ \qquad K=5C_{\mathrm u}\ge5,
+\]
+the resulting global allowance $\varepsilon_{\rm glob}$ satisfies
+\begin{equation}
+ \frac{\varepsilon_{\rm glob}}{h_H}
+ \ge \frac{20R^2\sqrt{1+\Delta}}{N}
+          \exp\!\left(\frac{R^2}{4(1+\Delta)}\right).
+ \label{cond:global-screen}
+\end{equation}
+Consequently this particular allowance can meet
+$\varepsilon_{\rm glob}\le h_H/2$ only if
+\[
+ N\ge40R^2\sqrt{1+\Delta}
+          \exp\!\left(\frac{R^2}{4(1+\Delta)}\right).
+\]
+This lower-bounds a cutoff required by the \emph{displayed sufficient
+allowance}; it does not lower-bound the actual approximation error or
+the necessary complexity of a finite realization. Multiplying both
+fields by one fixed positive scalar multiplies their error and floor
+equally and does not change this ratio.
+
+\subsection{A fixed scalar calibration}
+
+We now specialize the initialization to $t_0=0$ and put
+$\widetilde H=gH$ for a fixed $g>0$. Let the observation disk be
+$|z-x_*|\le d_0$, with $x_*>0$, and choose
+$R\ge\max(1,x_*+d_0)$. Assume $0<\Delta\le1/2$ and put
+$v=2\sqrt{\Delta}$. For $N>2R+1$, define
+\begin{equation}
+ F_N(w)=\prod_{|\rho_\nu|>N}(1-w^2/\rho_\nu^2),\quad
+ A_N=F_N(x_*),\quad
+ L_N=\frac{N/2-R}{v},\quad E=E_N.
+ \label{cond:calibration}
+\end{equation}
+The product and tail use one representative per opposite occurrence,
+as in Section~\ref{sec:common-time}; all ties and conjugates remain.
+
+\begin{lemma}[Calibrated omitted-product estimate]\label{cond:ratio}
+The scalar $A_N$ is real and satisfies
+\begin{equation}
+ 0<A_N\le1,\qquad
+ |1-A_N|\le-\log A_N\le\frac43x_*^2E.
+ \label{cond:scalar}
+\end{equation}
+For $0\le t\le\Delta$, $|z-x_*|\le d_0$ and $|r|\le L_N$,
+put $w=z+2\ii\sqrt t\,r$. Then
+\begin{align}
+ |\log F_N(w)-\log F_N(x_*)|&\le E p(|r|),\notag\\
+ p(u)&=c_0+c_1u+c_2u^2,\notag\\
+ c_0&=\tfrac43d_0(2x_*+d_0),\quad
+ c_1=\tfrac83(x_*+d_0)v,\quad c_2=\tfrac43v^2.
+ \label{cond:local-ratio}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+Both $w$ and $x_*$ lie in $|w|\le N/2$. Along the straight segment
+between their squares every omitted factor has denominator at least
+$3/4$ in modulus. The convergent logarithmic series therefore gives
+\[
+ |\log F_N(w)-\log F_N(x_*)|
+ \le \tfrac43E|w^2-x_*^2|
+ \le\tfrac43E(d_0+v|r|)(2x_*+d_0+v|r|).
+\]
+For an omitted zero the strip implies
+$\Re(\rho_\nu^2)=|\rho_\nu|^2-2(\Im\rho_\nu)^2>N^2-2$.
+In particular $2\Re(\rho_\nu^2)>x_*^2$, so
+$|1-x_*^2/\rho_\nu^2|<1$. Conjugate factors pair positively, and
+the real factors are positive because $|\rho_\nu|>N>x_*$.
+The absolutely convergent real logarithm proves $A_N>0$, while
+termwise moduli give $A_N\le1$. Finally,
+\[
+ -\log A_N\le\sum_\nu
+       \frac{x_*^2/|\rho_\nu|^2}{1-x_*^2/N^2}
+       \le\tfrac43x_*^2E .
+\]
+The inequality $1-A_N\le-\log A_N$ completes the proof.
+\end{proof}
+
+Calibration changes no zero, rational moment or heat evolution:
+the comparison polynomial is $\widetilde P_N=gA_NP_N$, with one
+constant multiplier for all times and all spatial derivatives. At the
+initial time the exact identity
+\begin{equation}
+ \widetilde H(0,w)-gA_NP_N(0,w)
+ =\widetilde H(0,w)
+    \{1-\exp(\log F_N(x_*)-\log F_N(w))\}
+ \label{cond:exact-ratio}
+\end{equation}
+does not divide by a retained factor. It remains valid at retained
+zeros. In particular separate calibrations for the field and derivative
+would not be legitimate inputs to a logarithmic-derivative quotient.
+
+\subsection{Evaluating the complete Gaussian path}
+
+Assume the following independently supplied source bounds, for some
+$u_0>0$ and positive $B_c,C,\alpha$:
+\begin{align}
+ |\widetilde H(0,w)|&\le B_c
+       &&(|w-x_*|\le d_0+vu_0),\notag\\
+ |\e^{-r^2}\widetilde H(0,z+2\ii\sqrt t\,r)|
+     &\le C\e^{-\alpha r^2+\beta|r|}
+       &&(|z-x_*|\le d_0,\ 0\le t\le\Delta,\ r\in\R).
+ \label{cond:source-majorants}
+\end{align}
+Here $\beta\ge0$, and we require $L_N>u_0$.
+Choose a fixed $E_*>0$ such that
+$1-E_*c_2>0$ and $\alpha-E_*c_2>0$.
+Define the explicit Gaussian integrals
+\begin{align}
+ J(A,B;l)
+ &=\frac{\sqrt\pi}{2\sqrt A}
+       \e^{B^2/(4A)}
+       \operatorname{erfc}\!\left(\sqrt A\,l-\frac B{2\sqrt A}\right),
+       \qquad A>0,\notag\\
+ I_0&=J,\qquad
+ I_1(A,B;l)=\frac{\e^{-Al^2+Bl}+BJ(A,B;l)}{2A},\notag\\
+ I_2(A,B;l)&=\frac{l\e^{-Al^2+Bl}+J(A,B;l)+BI_1(A,B;l)}{2A}.
+ \label{cond:gaussian-integrals}
+\end{align}
+Completing the square gives $J=\int_l^\infty\e^{-Au^2+Bu}\dd u$.
+Integration by parts then identifies $I_j$ with the same integral
+weighted by $u^j$, for $j=1,2$.
+
+\begin{proposition}[Centered complete-path bound]\label{cond:path}
+Let $\mathcal G(s)$ be the absolute-product envelope from
+Section~\ref{sec:common-time}, and choose $M_\lambda$ there so that
+$\mathcal G(s)\le M_\lambda\e^{\lambda s^2}$, where
+$\lambda=[8(1+\Delta)]^{-1}$ and
+$b=1-8\lambda\Delta=(1+\Delta)^{-1}$.
+For $0\le E\le E_*$,
+\begin{equation}
+ \sup_{\substack{0\le t\le\Delta\\|z-x_*|\le d_0}}
+ |\widetilde H(t,z)-gA_NP_N(t,z)|
+ \le \mathcal A_{\rm cent}(E)+E K_{\rm far}(N),
+ \label{cond:complete-bound}
+\end{equation}
+where
+\begin{align}
+ \mathcal A_{\rm cent}(E)
+ &=\frac{2B_c}{\sqrt\pi}
+      \{\e^{Ec_0}J(1-Ec_2,Ec_1;0)-J(1,0;0)\}\notag\\
+ &\quad+\frac{2C}{\sqrt\pi}
+      \{\e^{Ec_0}J(\alpha-Ec_2,\beta+Ec_1;u_0)
+                        -J(\alpha,\beta;u_0)\},\notag\\
+ K_{\rm far}(N)
+ &=gM_\lambda\e^{2\lambda R^2}
+   \{(2R^2+\tfrac43x_*^2)J_0(b,L_N)+2v^2J_2(b,L_N)\},\notag\\
+ J_0(b,L)&=b^{-1/2}\operatorname{erfc}(\sqrt b\,L),\notag\\
+ J_2(b,L)&=\frac{L\e^{-bL^2}}{\sqrt\pi b}
+            +\frac{\operatorname{erfc}(\sqrt b\,L)}{2b^{3/2}} .
+ \label{cond:complete-constants}
+\end{align}
+The near-path term is at most $E K_{\rm cent}$, with
+\begin{align}
+ K_{\rm cent}
+ =\frac{2\e^{E_*c_0}}{\sqrt\pi}\bigg\{&
+ B_c\sum_{j=0}^2 c_j I_j(1-E_*c_2,E_*c_1;0)\notag\\
+ &+C\sum_{j=0}^2 c_j
+       I_j(\alpha-E_*c_2,\beta+E_*c_1;u_0)\bigg\}.
+ \label{cond:linear-constant}
+\end{align}
+\end{proposition}
+
+\begin{proof}
+Use the exact imaginary Gaussian formula for both fields.
+On $|r|\le u_0$ apply the first bound in
+\eqref{cond:source-majorants}; on $u_0<|r|\le L_N$ apply its second.
+Equations~\eqref{cond:local-ratio}--\eqref{cond:exact-ratio} bound the
+respective integrands by
+$B_c\e^{-r^2}(\e^{Ep(|r|)}-1)$ and
+$C\e^{-\alpha r^2+\beta|r|}(\e^{Ep(|r|)}-1)$.
+Extend these \emph{nonnegative majorant integrals} to $[0,\infty)$
+and $[u_0,\infty)$, respectively. Their evaluated values are
+$\mathcal A_{\rm cent}(E)$. Neither source bound nor the product-ratio
+identity is thereby asserted outside its original domain.
+The inequality $\e^{Ep}-1\le Ep\e^{E_*p}$ gives
+\eqref{cond:linear-constant}.
+
+On $|r|>L_N$ no logarithmic expansion is used. Telescoping the
+uncalibrated product and then using \eqref{cond:scalar} gives
+\[
+ |\widetilde H(0,w)-gA_NP_N(0,w)|
+ \le gE(|w|^2+\tfrac43x_*^2)\mathcal G(|w|).
+\]
+Since $|w|^2\le2R^2+2v^2r^2$, multiplication by $\e^{-r^2}$
+and integration of $1$ and $r^2$ over the two Gaussian tails gives
+exactly $E K_{\rm far}(N)$. This includes the calibration mismatch.
+\end{proof}
+
+The large radial exponential has not been discarded. It occurs only
+in the tail beginning at $L_N\to\infty$. To quantify its suppression,
+put
+\[
+ B=\log(gM_\lambda)+2\lambda R^2,\qquad
+ D_f=\frac{2R^2+\frac43x_*^2+v^2/b+2v^2}{\sqrt\pi b}.
+\]
+For $L\ge1$, the elementary bound
+$\operatorname{erfc}(\sqrt bL)\le
+\e^{-bL^2}/(\sqrt{\pi b}L)$ implies
+$K_{\rm far}(N)\le D_fL_N\e^{B-bL_N^2}$.
+Because $b\ge2/3$, $\log L\le bL^2/2$ for $L\ge8$.
+Thus the explicit sufficient test
+\begin{equation}
+ L_N\ge
+ \max\!\left\{u_0,8,
+       \sqrt{\frac2b\max(0,B+\log D_f)}\right\},
+ \qquad L_N>u_0,
+ \label{cond:far-test}
+\end{equation}
+ensures $K_{\rm far}(N)\le1$. Fixed supplied inputs therefore give
+a complete $(K_{\rm cent}+1)E_N$ allowance eventually in $N$.
+Its main coefficient no longer contains the origin-height quadratic
+exponential, but its absolute amplitude cost may remain unfavorable.
+
+On a padded observation disk, analytic finite-data error is added to
+\eqref{cond:complete-bound}. Cauchy's formula supplies the derivative
+payment $j!\eta^{-j}\varepsilon_{\rm pad}$ at padding $\eta$.
+Arbitrary pointwise evaluation roundoff is paid separately; it is not
+an analytic function to which Cauchy's estimate can be applied.
+If a represented scalar $\widehat A_N$ replaces $A_N$, add
+$|\widehat A_N-A_N|$ times a bound for the entire evolved polynomial
+and each required derivative. Exact latent calibration changes no
+divisor, but uncertainty in acquired coefficients still carries the
+weights of Section~\ref{sec:counted-transfer}.
+
+\subsection{The consumer can fail after the tail is repaired}
+
+The positive central allowance itself has the lower estimate
+\begin{equation}
+ \frac{B_c}{\sqrt\pi}\int_{-u_0}^{u_0}
+       \e^{-r^2}(\e^{E p(|r|)}-1)\dd r
+ \ge B_cc_0E\,\operatorname{erf}(u_0).
+ \label{cond:core-floor}
+\end{equation}
+Indeed $\e^x-1\ge x$ for $x\ge0$, and $p\ge c_0$.
+For $u_0\ge1$ this is greater than $(2/3)B_cc_0E$:
+integrating $\e^{-r^2}\ge1-r^2$ on $[-1,1]$ and using
+$\sqrt\pi<2$ gives the stated Gaussian mass.
+If one inserts the \emph{upper allowance} $\overline E_N$ in this
+formula and restricts $N\le N_{\max}$, the chosen central allowance
+is therefore greater than
+$4KB_cc_0/(3N_{\max})$. This is not a lower bound on $E_N$ or on
+the signed Gaussian error.
+
+To see how this matters to an actual consumer, let $h$ be a contour
+field floor, $K_1$ an upper derivative bound, $r$ its radius and
+$q_\Gamma$ a positive quadratic floor. The transfer of
+Section~\ref{sec:counted-transfer} includes the nonnegative terms
+\[
+ b_1\ge\frac{K_1\varepsilon_0}{h(h-\varepsilon_0)}
+       \ge\frac{K_1}{h^2}\varepsilon_0,\qquad
+ e_M\ge\frac{2r}{q_\Gamma}b_1.
+\]
+When $\varepsilon_0\ge h/2$ the first contour test is already
+unavailable. Otherwise the \emph{sufficient} every-subinterval
+logarithmic transport budget is at least
+\begin{equation}
+ 4\Delta e_M\ge
+       \frac{8\Delta rK_1}{q_\Gamma h^2}\varepsilon_0 .
+ \label{cond:consumer-floor}
+\end{equation}
+If the quadratic-denominator test fails, the transfer is unavailable
+for that separate reason. If it passes, \eqref{cond:core-floor} and
+\eqref{cond:consumer-floor} may already exceed a chosen tolerance,
+even after granting zero derivative, data and complementary errors.
+No precision increase cancels positive terms in this specified budget.
+The conclusion is limited to this absolute-envelope/count-tail/quotient
+allowance. Relative errors, correlated contour data, acquired tail
+information and the actual approximation error remain different questions.

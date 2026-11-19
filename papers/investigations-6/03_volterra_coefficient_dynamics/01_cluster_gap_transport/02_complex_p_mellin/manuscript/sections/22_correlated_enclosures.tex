@@ -1,0 +1,520 @@
+% 18 November 2026. Prepared for Edward Baker with OpenAI Codex assistance.
+% Actual model and effort unavailable; helper configuration inherited.
+% E46 r1 integration of assessed Notes42,45,52; no new numerical execution.
+\section{Correlated errors in complete-source discriminant enclosures}
+\label{sec:correlated-enclosures}
+
+The contour identities provide exact observables of one complete source.
+Their useful accuracy depends on retaining that common source when errors
+are propagated. Three distinct improvements are available: apply the actual
+interpolation operator to nodal errors, combine the two moment readouts
+before taking their rectangular support, and retain a common analytic
+constraint on their annular aliases. We develop these analytical steps
+from \cite{BakerCM42,BakerCM45,BakerCM52}; their internal assessments are
+\cite{BakerCMReview37,BakerCMReview39,BakerCMReview43}. Numerical source
+budgets and the inherited canonical example are supporting material in
+Appendix~\ref{app:compact-example}.
+
+These estimates refine a direct contour enclosure. They do not create an
+additional observation or shrink the exact common-source feasible set in
+Proposition~\ref{ts:sound}. A direct method given the same correlations
+receives the same bounds. Throughout this section $m$ denotes an
+interpolation degree and $n_\Gamma$ a contour node count; neither is a
+finite-divisor cutoff.
+
+\subsection{The exact interpolation operator and its error ledger}
+
+Let $m\ge1$, let $T_k$ be the Chebyshev polynomial of the first kind, and
+use the ascending Lobatto nodes and endpoint weights
+\begin{equation}
+ x_j=\cos\frac{(m-j)\pi}{m},\qquad
+ d_0=d_m=\frac12,\quad d_j=1\ (0<j<m).
+ \label{ce:nodes}
+\end{equation}
+The endpoint-weighted cosine transform defines the exact interpolant
+$I_m y(x)=\sum_{k=0}^m a_kT_k(x)=\sum_{j=0}^m\ell_j(x)y_j$, where
+\begin{align}
+ a_k&=\frac{2d_k}{m}\sum_{j=0}^m d_jy_jT_k(x_j),\notag\\
+ \ell_j(x)&=\frac{2d_j}{m}\sum_{k=0}^m d_kT_k(x_j)T_k(x).
+ \label{ce:cardinals}
+\end{align}
+The weights of both the endpoint nodes and endpoint modes are present.
+
+\begin{theorem}[A cardinal norm with an exact exterior value]
+\label{ce:cardinal-norm}
+The functions in \eqref{ce:cardinals} are the Lagrange cardinal
+polynomials for \eqref{ce:nodes}. Their real operator norm satisfies
+\begin{equation}
+ \sum_{j=0}^m|\ell_j(x)|\le\sqrt{2m}\quad(-1\le x\le1),
+ \qquad
+ \sum_{j=0}^m|\ell_j(x)|=T_m(|x|)\quad(|x|\ge1).
+ \label{ce:cardinal-bound}
+\end{equation}
+Consequently, for $X\ge1$ and complex errors $|e_j|\le E_{\rm node}$,
+\begin{equation}
+ \sup_{-X\le x\le1}|I_m e(x)|
+ \le\Lambda_m(X)E_{\rm node},\qquad
+ \Lambda_m(X):=\max\{\sqrt{2m},T_m(X)\}.
+ \label{ce:nodal-propagation}
+\end{equation}
+The interior estimate need not be sharp.
+\end{theorem}
+
+\begin{proof}
+The endpoint-half-weighted cosine sum is half the real sum over the
+$2m$th roots of unity. The product-to-sum formula therefore gives
+\begin{equation}
+ \sum_{j=0}^m d_jT_k(x_j)T_l(x_j)
+ =\delta_{kl}\frac{m}{2d_k},\qquad 0\le k,l\le m.
+ \label{ce:orthogonality}
+\end{equation}
+Reversing the usual cosine grid multiplies its $k$th vector by
+$(-1)^k$ and leaves this orthogonality unchanged. The square transform
+is invertible, so \eqref{ce:cardinals} has
+$\ell_j(x_i)=\delta_{ij}$. Applying \eqref{ce:orthogonality} once more
+gives
+\[
+ \sum_{j=0}^m\frac{\ell_j(x)^2}{d_j}
+ =\frac2m\sum_{k=0}^m d_kT_k(x)^2.
+\]
+Since $\sum d_j=m$ and $|T_k(x)|\le1$ on $[-1,1]$, weighted
+Cauchy--Schwarz proves the first bound in \eqref{ce:cardinal-bound}.
+
+For $x>1$, the Lagrange product has sign
+$\operatorname{sgn}\ell_j(x)=(-1)^{m-j}=T_m(x_j)$.
+For $x<-1$ its sign is $(-1)^j=(-1)^mT_m(x_j)$.
+Exact interpolation of $T_m$ now gives respectively $T_m(x)$ and
+$(-1)^mT_m(x)=T_m(|x|)$ for the sum of absolute values. Continuity
+includes the endpoints. Finally $T_m(u)=\cosh(m\operatorname{arcosh}u)$
+is increasing for $u\ge1$, and triangle inequality applies to arbitrary
+complex $e_j$, proving \eqref{ce:nodal-propagation}.
+\end{proof}
+
+\begin{corollary}[The degree-$32$ continuation factor]
+\label{ce:degree32}
+On $[-503/500,1]$, the degree-$32$ operator in
+\eqref{ce:cardinals} has norm strictly below $17$.
+\end{corollary}
+\begin{proof}
+The interior bound is $8$. The recurrence
+\[
+ A_0=1,\quad A_1=503,\quad
+ A_{k+1}=1006A_k-250000A_{k-1}
+\]
+gives $T_k(503/500)=A_k/500^k$. Its exact integer comparison
+$A_{32}<17\cdot500^{32}$, recorded with numerator and denominator in
+\cite{BakerCM45,BakerCMReview39}, proves the other part of the maximum
+in \eqref{ce:nodal-propagation}. This is a finite rational inequality,
+not an estimate inferred from a source sample.
+\end{proof}
+
+To apply this operator, fix a nonzero constant real multiple $G$ of $H$,
+a real spatial reference $x_*$, and a real time map $t=t_c+b x$, $b>0$.
+Let $P_j(w)$ be one exact spatial polynomial at each time node $t_j$.
+Suppose the complete nodal error on a spatial disk is paid as
+\begin{equation}
+ |G(t_j,x_*+w)-P_j(w)|\le E_{\rm node},\qquad
+ E_{\rm node}=E_{\rm sample}+E_{\rm alias}+E_{\rm spatial}.
+ \label{ce:source-ledger}
+\end{equation}
+Here the first term includes source quadrature, its complete integration
+tails and the input sample radii; the other two pay spatial aliasing and
+spatial truncation. These meanings refer to the specified construction of
+$P_j$, not to an arbitrary list of errors with the same names.
+For $P(t,w)=I_m[P_j(w)](x)$, the exact decomposition
+\[
+ G(t,x_*+w)-P(t,w)
+ =G(t,x_*+w)-I_m[G(t_j,x_*+w)](x)
+   +I_m[G(t_j,x_*+w)-P_j(w)](x)
+\]
+and Theorem~\ref{ce:cardinal-norm} yield
+\begin{equation}
+ |G-P|\le E_{\rm time}+\Lambda_m(X)E_{\rm node}.
+ \label{ce:complete-field-error}
+\end{equation}
+
+The true-field time remainder is a separate term. If
+$|G(t,x_*+w)|\le M_R$ on $|w|\le R$ and on the convex hull of all time
+nodes and evaluation times, then, for $|w|\le r<R$,
+\begin{equation}
+ E_{\rm time}\le
+ \frac{b^{m+1}(2m+2)!M_R}{(m+1)!(R-r)^{2m+2}}
+ \sup_{x\in[-X,1]}|\omega_m(x)|,
+ \qquad
+ \omega_m(x)=2^{1-m}(x^2-1)U_{m-1}(x).
+ \label{ce:time-remainder}
+\end{equation}
+Indeed, $\omega_m=\prod_{j=0}^m(x-x_j)$, the heat equation gives
+$\partial_t^{m+1}G=(-1)^{m+1}\partial_z^{2m+2}G$, and spatial
+Cauchy estimates pay the displayed derivative. For complex $G$, project
+the interpolation error at the chosen point onto its own complex
+direction and apply the real scalar interpolation remainder; its
+derivative is bounded by the same complex modulus. The time interval in
+this argument includes any extrapolated real times. A positive-time
+majorant alone does not pay a negative-time extension.
+
+The exact polynomial in \eqref{ce:complete-field-error} must also be
+distinguished from its arithmetic enclosure. Conversion of input numbers,
+transform coefficients and polynomial evaluation must enclose that same
+$P$. If coefficient balls and outward evaluation already contain those
+errors, their radii are not added a second time to $E_{\rm node}$.
+A midpoint-only implementation instead owes an explicit additional
+arithmetic allowance. Neither the derivative weights of the polynomial
+nor $E_{\rm time}$ are reduced merely by improving $\Lambda_m(X)$.
+Differentiating a scalar error estimate requires an analytic remainder
+bound on a larger spatial domain, as in the preceding approximation
+sections. The quotient and branch-matched logarithm estimates in
+Section~\ref{sec:compact} then convert the complete field ledger into
+contour data. Every floor and count must hold on whole time-contour
+cells before a downstream sign test.
+
+\subsection{One logarithm and the sharp rectangular comparison}
+
+Fix a time in an independently counted two-zero tube, put $w=z-x_*$,
+and suppose the annulus $r_-\le|w|\le r_+$ contains no zeros, with
+exactly the target pair inside its inner circle. Assume the same function
+$\sigma G(t,x_*+w)/w^2$, for a fixed $\sigma\in\{1,-1\}$, has
+strictly positive real part on both boundary circles. The harmonic
+minimum principle extends this property to the annulus. Thus
+\begin{equation}
+ \mathcal L(w)=\Log\frac{\sigma G(t,x_*+w)}{w^2}-\kappa,
+ \qquad \kappa\in\R,
+ \qquad |\mathcal L|\le M_\pm\quad(|w|=r_\pm)
+ \label{ce:annular-log}
+\end{equation}
+is one analytic centered logarithm, continuous on the boundaries. The
+boundary constants must include the full field and arithmetic ledger;
+they do not describe independently chosen analytic functions.
+
+Let $r_-<\rho<r_+$ and define exact and discrete angular means by
+\begin{equation}
+ \mathsf T_0 f=\frac1{2\pi}\int_0^{2\pi}f(\rho\e^{\ii\theta})\dd\theta,
+ \qquad
+ \mathsf T_{n_\Gamma}f=
+ \frac1{n_\Gamma}\sum_{j=0}^{n_\Gamma-1}f(w_j),
+ \quad w_j=\rho\e^{2\pi\ii j/n_\Gamma}.
+ \label{ce:means}
+\end{equation}
+Take the integer $n_\Gamma>2$. The target power sums relative to $x_*$
+and their symmetric coordinates obey
+\begin{equation}
+ p_k=-k\,\mathsf T_0(w^k\mathcal L)\quad(k=1,2),
+ \qquad \gamma=c-x_*=\frac{p_1}{2},\qquad
+ D=\frac{p_2}{2}-\gamma^2.
+ \label{ce:power-sums}
+\end{equation}
+To see the normalization, use $G_z/G=\mathcal L_z+2/w$ in the
+argument-principle formula for $p_k$ and integrate the first term by
+parts. The $2/w$ term integrates to zero for $k\ge1$.
+Conjugation invariance makes these power sums real; no sign of $D$ is
+assumed.
+
+On a set $\mathcal J$ of conjugation representatives, write the enclosed
+node values as
+\begin{equation}
+ \mathcal L(w_j)=\lambda_j+e_j,\qquad
+ |\Re e_j|\le\alpha_j,\quad |\Im e_j|\le\beta_j.
+ \label{ce:node-boxes}
+\end{equation}
+The symmetry weight $\nu_j$ is two for a nonreal conjugate pair and one
+for a real node, so $\sum_{j\in\mathcal J}\nu_j=n_\Gamma$.
+For a conjugation-compatible kernel $K$, define
+\begin{equation}
+ \mathcal S(K)=\frac1{n_\Gamma}\sum_{j\in\mathcal J}\nu_j
+ \bigl(|\Re K(w_j)|\alpha_j+|\Im K(w_j)|\beta_j\bigr).
+ \label{ce:box-support}
+\end{equation}
+This is the exact support of the absolute real kernel sum over the
+rectangular relaxation \eqref{ce:node-boxes}: choosing each component
+endpoint according to the sign of its real linear coefficient attains
+the positive extreme, and reversing every choice attains its negative.
+The true source errors need not fill this relaxation. Exactness of its
+support is not physical independence of source perturbations.
+
+Let $\epsilon_1,\epsilon_2$ be chosen positive annular quadrature
+allowances for $p_1,p_2$. With the symmetry-weighted discrete means,
+\begin{align}
+ p_1&=-\Re\mathsf T_{n_\Gamma}(w\lambda)
+      -\Re\mathsf T_{n_\Gamma}(we)+\eta_1,
+ &|\eta_1|&\le\epsilon_1,\notag\\
+ \frac{p_2}{2}&=-\Re\mathsf T_{n_\Gamma}(w^2\lambda)
+      -\Re\mathsf T_{n_\Gamma}(w^2e)+\frac{\eta_2}{2},
+ &|\eta_2|&\le\epsilon_2.
+ \label{ce:moment-errors}
+\end{align}
+For the initial comparison the two $\eta$ intervals are independent
+outer allowances. Put
+\begin{align}
+ \gamma_0&=-\tfrac12\Re\mathsf T_{n_\Gamma}(w\lambda),
+ &s_{20}&=-\Re\mathsf T_{n_\Gamma}(w^2\lambda),\notag\\
+ r_\gamma&=\tfrac12\{\mathcal S(w)+\epsilon_1\},
+ &r_2&=\mathcal S(w^2)+\epsilon_2/2.
+ \label{ce:marginals}
+\end{align}
+These give the sharp individual projections
+$\Gamma=[\gamma_0-r_\gamma,\gamma_0+r_\gamma]$ and
+$p_2/2\in[s_{20}-r_2,s_{20}+r_2]$ of that error relaxation.
+
+\begin{proposition}[Sharp separate-moment baseline]
+\label{ce:separate}
+On the Cartesian product of those two marginal intervals, the exact
+range of $D$ is obtained by subtracting the full real square range
+$\Gamma^2$ from $[s_{20}-r_2,s_{20}+r_2]$.
+If $\gamma_0>r_\gamma\ge0$, its endpoints and width are
+\begin{align}
+ L_{\rm sep}&=s_{20}-r_2-(\gamma_0+r_\gamma)^2,\notag\\
+ U_{\rm sep}&=s_{20}+r_2-(\gamma_0-r_\gamma)^2,
+ &W_{\rm sep}&=2r_2+4\gamma_0r_\gamma.
+ \label{ce:separate-range}
+\end{align}
+\end{proposition}
+\begin{proof}
+The Cartesian product makes the second moment and $\gamma$ independently
+selectable. The extrema therefore select the two endpoints of the
+second-moment interval and the opposite extrema of $\gamma^2$.
+On a positive $\Gamma$, squaring is increasing, giving
+\eqref{ce:separate-range}. If $\Gamma$ crosses zero, its square has
+minimum zero; the general square-range statement still applies.
+\end{proof}
+
+The separate projections can be individually sharp while their extreme
+choices are mutually incompatible as images of the same node errors.
+It is this particular loss of information, rather than gratuitous
+rounding of a comparator, that the following centering addresses.
+
+\subsection{A centered discriminant with its complete square}
+
+Choose any fixed exact real $h$ and set
+\begin{equation}
+ J_h=\frac{p_2}{2}-hp_1+h^2=D+(\gamma-h)^2,
+ \qquad
+ J_0=s_{20}-2h\gamma_0+h^2.
+ \label{ce:centered-identity}
+\end{equation}
+The shared node-error kernel is $w(w-h)$, not two independent
+moment kernels. Define
+\begin{equation}
+ S=\mathcal S\bigl(w(w-h)\bigr),\qquad
+ A=\epsilon_2/2+|h|\epsilon_1,
+ \qquad [q_{\rm lo},q_{\rm hi}]=\operatorname{range}(\Gamma-h)^2.
+ \label{ce:centered-budget}
+\end{equation}
+
+\begin{theorem}[Complete centered enclosure]
+\label{ce:centered}
+Under the preceding source, count and error hypotheses,
+\begin{equation}
+ D\in[J_0-S-A-q_{\rm hi},\ J_0+S+A-q_{\rm lo}].
+ \label{ce:centered-range}
+\end{equation}
+If $h=\gamma_0$ and $\Gamma$ is exactly the symmetric interval in
+\eqref{ce:marginals}, its width is $2(S+A)+r_\gamma^2$.
+Under the same choice $h=\gamma_0$ and symmetric $\Gamma$, if
+$\gamma_0>r_\gamma$, a sufficient strict improvement over
+\eqref{ce:separate-range} is
+\begin{equation}
+ 2\{r_2+2\gamma_0r_\gamma-S-A\}>r_\gamma^2.
+ \label{ce:centered-gain}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Substitute \eqref{ce:moment-errors} into
+\eqref{ce:centered-identity}. The common node error is
+$-\Re\mathsf T_{n_\Gamma}(w(w-h)e)$, bounded by $S$; the remaining
+tail is $\eta_2/2-h\eta_1$, bounded by $A$. Subtract the entire real
+range of $(\gamma-h)^2$ to obtain \eqref{ce:centered-range}.
+For $h=\gamma_0$, that range is $[0,r_\gamma^2]$.
+Subtracting the resulting width from \eqref{ce:separate-range} proves
+\eqref{ce:centered-gain}.
+\end{proof}
+
+For an implemented reference choose an exact representable $h$, for
+example the midpoint of an enclosing nominal-center interval. Its
+displacement from $\gamma_0$ then remains in $\Gamma-h$; it is not
+declared zero. Kernel, nominal and square arithmetic must all use that
+same $h$ and be outward enclosed. If $h$ is instead supplied as an
+uncertain interval, every occurrence must be bounded over its full
+range. The square minimum is zero only when $0\in\Gamma-h$;
+otherwise both endpoint magnitudes enter the minimum as well as the
+maximum. A small square payment may not be discarded.
+
+The theorem need not improve every input box. Moreover it bounds $J_h$
+and its square remainder separately, so it does not claim the exact
+range on the full joint source set. Applying the same centering twice
+does not create further information. Direct extraction with the same
+kernel is precisely this estimator.
+
+\subsection{A joint annular alias estimate}
+
+The preceding allowance $A$ still lets the two moment tails vary
+independently. Analyticity of the common logarithm imposes a constraint
+that survives without new source observations. Write its Laurent series
+as $\mathcal L(w)=\sum_{k\in\mathbb Z}l_kw^k$ and put
+\begin{equation}
+ q_-=(r_-/\rho)^{n_\Gamma},\qquad
+ q_+=(\rho/r_+)^{n_\Gamma},\qquad 0<q_\pm<1.
+ \label{ce:alias-ratios}
+\end{equation}
+
+\begin{theorem}[Common-log Parseval bound]
+\label{ce:joint-alias}
+For $n_\Gamma>2$ and real $h$, the combined alias error satisfies
+\begin{align}
+ \left|(\mathsf T_{n_\Gamma}-\mathsf T_0)
+                  \bigl((w^2-hw)\mathcal L\bigr)\right|
+ &\le A_{\rm joint},\notag\\
+ A_{\rm joint}
+ &:=\sum_{\sigma\in\{-,+\}}M_\sigma r_\sigma
+        \sqrt{r_\sigma^2+h^2}\,
+        \frac{q_\sigma}{\sqrt{1-q_\sigma^2}}.
+ \label{ce:joint-alias-bound}
+\end{align}
+In particular this bounds $|\eta_2/2-h\eta_1|$ in
+\eqref{ce:moment-errors}, with its existing moment normalizations.
+\end{theorem}
+\begin{proof}
+The discrete angular mean selects exactly the Laurent indices divisible
+by $n_\Gamma$. Absolute convergence on the interior circle gives
+\begin{equation}
+ (\mathsf T_{n_\Gamma}-\mathsf T_0)
+          \bigl((w^2-hw)\mathcal L\bigr)
+ =\sum_{j\ne0}(l_{jn_\Gamma-2}-h l_{jn_\Gamma-1})
+                    \rho^{jn_\Gamma}.
+ \label{ce:alias-identity}
+\end{equation}
+The constant centering in \eqref{ce:annular-log} contributes no alias
+because $n_\Gamma>2$. There is no extra factor two: the relevant
+moments are $p_2/2$ and $hp_1$ in \eqref{ce:power-sums}.
+
+On either boundary Parseval and \eqref{ce:annular-log} give
+\begin{equation}
+ \sum_{k\in\mathbb Z}|l_k|^2r^{2k}
+ =\frac1{2\pi}\int_0^{2\pi}|\mathcal L(r\e^{\ii\theta})|^2\dd\theta
+ \le M_r^2.
+ \label{ce:parseval}
+\end{equation}
+For $j\ge1$ use $r=r_+$ in \eqref{ce:alias-identity}. The two
+coefficient sequences in the normalized vector $(l_kr_+^k)_k$ have
+weights $r_+^2q_+^j$ and $-hr_+q_+^j$. Their indices are disjoint:
+an overlap would require a nonzero multiple of $n_\Gamma$ to equal
+one. Their squared weight norm is therefore
+\[
+ (r_+^4+h^2r_+^2)\sum_{j\ge1}q_+^{2j}
+ =(r_+^4+h^2r_+^2)\frac{q_+^2}{1-q_+^2}.
+\]
+For $j\le-1$, use the inner boundary and the analogous weights
+$r_-^2q_-^{|j|}$ and $-hr_-q_-^{|j|}$. Cauchy--Schwarz on each
+boundary and triangle inequality between the two contributions prove
+\eqref{ce:joint-alias-bound}. Taking a real part or changing the common
+sign only reduces the modulus.
+\end{proof}
+
+This proof retains a common boundary $L^2$ constraint across the aliased
+coefficients. It does not make them independently realizable. The inner
+and outer contributions are still bounded separately, so the result is
+not asserted to be sharp for a single analytic function on the annulus.
+
+For comparison, separate Cauchy coefficient bounds and geometric sums
+give the unrounded allowance
+\begin{equation}
+ A_{\rm raw}=\sum_{\sigma\in\{-,+\}}M_\sigma
+ r_\sigma(r_\sigma+|h|)\frac{q_\sigma}{1-q_\sigma}.
+ \label{ce:raw-tail}
+\end{equation}
+When $\epsilon_1,\epsilon_2$ are upward enclosures of the corresponding
+individual moment allowances, $A_{\rm raw}\le A$ in
+\eqref{ce:centered-budget}. Stored allowances must not be identified
+with exact physical errors or silently rounded downward.
+
+\begin{corollary}[A uniform fractional tail reduction]
+\label{ce:fractional-tail}
+If $3/50\le |h|/r_\sigma\le1$ on both boundaries, then
+\begin{equation}
+ A_{\rm joint}<\frac{19}{20}A_{\rm raw}\le\frac{19}{20}A,
+ \label{ce:tail-reduction}
+\end{equation}
+provided $A_{\rm raw}>0$.
+\end{corollary}
+\begin{proof}
+For $x\in[0,1]$, the ratio $\sqrt{1+x^2}/(1+x)$ is decreasing.
+For $x\ge3/50$ it is at most $\sqrt{2509}/53<19/20$, where the
+strict inequality is the integer comparison $400\cdot2509<361\cdot2809$.
+The ratio of the geometric factors is
+$(1-q)/\sqrt{1-q^2}<1$ for $0<q<1$. Compare each nonzero positive
+summand in \eqref{ce:joint-alias-bound} and \eqref{ce:raw-tail}.
+\end{proof}
+
+The ratio condition is part of this corollary, not a universal property
+of a centered discriminant. Theorem~\ref{ce:joint-alias} remains valid
+when it fails, including at $h=0$.
+
+\subsection{Complete width and conservative endpoint translation}
+
+\begin{theorem}[A retained-budget width improvement]
+\label{ce:complete-width}
+Keep the same $J_0,S,\Gamma,h$ and full square range in
+\eqref{ce:centered-range}. Suppose the common annular information proves
+$|\eta_2/2-h\eta_1|\le\vartheta A$ for a fixed $0\le\vartheta<1$.
+Then replacing only $A$ by $\vartheta A$ gives a sound discriminant
+enclosure whose exact displayed width is smaller by
+\begin{equation}
+ 2(1-\vartheta)A.
+ \label{ce:width-saving}
+\end{equation}
+Suppose $L^-,U^+$ are outward enclosures of the old displayed endpoints,
+including all previous nominal, kernel and endpoint arithmetic, and
+$0\le A_{\rm lo}\le A$ is a proved lower bound for the chosen old
+allowance. Then the conservative translated interval
+\begin{equation}
+ \bigl[L^-+(1-\vartheta)A_{\rm lo},\quad
+       U^+-(1-\vartheta)A_{\rm lo}\bigr]
+ \label{ce:translated-endpoints}
+\end{equation}
+is also sound. Its width saving relative to $[L^-,U^+]$ is exactly
+$2(1-\vartheta)A_{\rm lo}$ before any new display rounding.
+\end{theorem}
+\begin{proof}
+The proof of Theorem~\ref{ce:centered} uses only a valid bound for the
+combined tail; substitute $\vartheta A$. Each ideal endpoint moves
+inward by $(1-\vartheta)A$, while the entire square range and node
+support stay unchanged. This proves \eqref{ce:width-saving}.
+The old lower endpoint enclosure is no larger than the ideal old lower
+endpoint. Adding at most $(1-\vartheta)A$ therefore keeps it below the
+ideal improved lower endpoint. The upper endpoint follows with the
+opposite inequality. This proves \eqref{ce:translated-endpoints} without
+discarding or reconstructing the old rounding slack.
+\end{proof}
+
+For serialized interval data, parse the old lower endpoint downward and
+the old upper endpoint upward. Parse the positive allowance components
+downward only to form $A_{\rm lo}$; these lower bounds are used for the
+\emph{amount of justified inward movement}, not as error upper bounds.
+Exact rational translation then preserves all inherited payments.
+If a relative saving is claimed, compare a proved saving lower bound
+with an upper bound for the old parsed width; a fresh rounded interval
+requires its own outward rounding and comparison in the appropriate
+directions. The condition $A_{\rm lo}>0$ gives strict inward movement.
+
+The first-moment allowance inside $\Gamma$ is unchanged. In particular,
+an improvement of the linear combination does not justify reducing
+either moment marginal or its square range. Source integration tails,
+spatial and time approximation, coefficient arithmetic, branch clearance,
+uncertain coordinates and all whole-time estimates also remain paid.
+An endpoint enclosure bounds a whole-path minimum only when an
+independent whole-time premise, such as $D_t>0$ on the complete interval,
+identifies that minimum with the endpoint. No derivative-width comparison
+can replace this premise.
+
+These theorems are generic analytic and error-set statements. A shifted
+quadratic with a double target has $p_1=2b$, $p_2=2b^2$ and
+$J_h=(b-h)^2$ at its event; retaining the full square returns $D=0$.
+It can satisfy the ratio condition of Corollary~\ref{ce:fractional-tail}
+and still collide. The canonical applications therefore retain the
+separate source, count, branch and time hypotheses summarized in
+Section~\ref{sec:discussion}. The estimates themselves do not distinguish
+theta from every colliding control. Their established benefit is a
+smaller specified enclosure with matched information, not a new
+collision barrier, added height coverage, recursive contraction or a
+cost-saving theorem. The inherited analytical width consequence and the
+still-unexecuted rational endpoint transformation are distinguished in
+the supporting appendix.

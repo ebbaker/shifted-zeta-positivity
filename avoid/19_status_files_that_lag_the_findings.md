@@ -181,3 +181,15 @@ now record the 17/81 range with the explicit block cutoff. The
 [outstanding tasks](../papers/investigations-5/09_green_potentials_newman_flow/manuscript/sections/16_outstanding.tex)
 identify moving-time persistence or a maximum-to-average estimate as
 possible ways to obtain further information at exceptional centers.
+
+
+**18 November 2026 — integrate proofs without inventing execution.** For
+Edward Baker with Codex assistance; actual settings unavailable.
+[CM Integration54](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/54_VCD_GT_CM_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261118.md)
+states: “No new source computation or discriminant endpoint was produced.”
+The 107-page manuscript now incorporates the accepted common-time,
+conditioning and direct-refinement proofs, while its supporting appendix
+distinguishes historical certificates from the still-unexecuted E44
+endpoint. Reconcile current reading maps and the sole register; preserve
+earlier source identities as historical evidence. A polished manuscript
+does not upgrade an analytical comparison into a new numerical artifact.

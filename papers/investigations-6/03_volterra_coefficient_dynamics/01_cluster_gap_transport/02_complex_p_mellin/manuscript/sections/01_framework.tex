@@ -7,8 +7,12 @@ The useful coordinates for this interaction are the center $c$ and the
 signed discriminant $D$, rather than individually labelled target roots.
 Our starting point is the pair law established in the base manuscript
 and its cluster-transport development \cite{BakerBase,BakerGT41}.
-The present paper extends its rational moments to every integer order,
-relates them to split-pole moments, and then treats a complex exponent.
+The present paper takes the nonnegative integer split-pole exponents
+$p,q$ as its main hierarchy coordinates. They retain the separate
+target poles $c\pm\sqrt D$ and are algebraically equivalent to the
+regular even/odd moment tower. A later analytic extension complexifies
+the exponent of the combined quadratic denominator; it does not
+establish two independently complex split-pole indices.
 The Gaussian-resolvent predecessor \cite{BakerGR02,BakerGR05,BakerGR07}
 supplies the first higher moment law and the quantitative comparison
 used in Section~\ref{sec:bounds}.
@@ -29,7 +33,11 @@ and \ref{sec:split} derive the integer hierarchy and its split-pole
 coordinates. Section~\ref{sec:lattice} places those rows on the same zero
 lattice and proves their overlap and block-flux identities. This gives the
 compatibility question in Section~\ref{sec:finite} a concrete spatial
-meaning. Complex exponents, contours and signed forcing then lead to the
+meaning. Sections~\ref{sec:common-time}--\ref{sec:counted-transfer}
+then construct one finite divisor over a common time interval and transfer
+its explicit errors through counted contours; Section~\ref{sec:conditioning}
+examines the quantitative limits of those allowances.
+Complex exponents, contours and signed forcing then lead to the
 joint dynamics in Sections~\ref{sec:bounds}--\ref{sec:joint}.
 
 The second stage concerns quantitative use. The backward and regional
@@ -44,8 +52,10 @@ direction. Section~\ref{sec:retained-forcing} retains the physical forcing
 in the backward comparison and computes the exact cost of an unchanged
 forward--backward excursion. These results motivate the common-source
 two-sided refinement in Section~\ref{sec:two-sided}: a discrete enclosure
-construction and a continuous residual identity, with their unacquired
-strict-gain requirement stated explicitly. Supporting certificate-based
+construction and a continuous residual identity.
+Section~\ref{sec:correlated-enclosures} next proves direct error-width
+refinements using the same complete source information. They do not
+establish a separate recursive advantage. Supporting certificate-based
 examples are deferred to Appendix~\ref{app:compact-example}; none of the
 general theorems depends on those numerical values.
 
@@ -87,6 +97,51 @@ $\Re(t)u^2$ is absorbed by the reserved double-exponential decay; at the
 maximizing scale it contributes only $O((\log(2+r))^2)$. Thus the order
 is at most one on every such interval. This does not extend any later
 positive-time localization or numerical error constant to negative time.
+
+\begin{proposition}[Complete product passage on compact real-time intervals]
+\label{pair:compact-time}
+For every compact real interval $J$, the literal source has order at
+most one, $\inf_{t\in J}H(t,0)>0$, and the uniform radial estimates
+\[
+ n_t(R)=O(R\log(2+R)),\qquad
+ \sum_{|\rho|>R}|\rho|^{-2}=O(\log(2+R)/R).
+\]
+Its opposite-paired canonical product and fixed spatial logarithmic
+jets converge locally away from the divisor. These assertions do not
+require an extension of the positive-time strip to negative time.
+Moreover, for real $t$, $s\ge0$ and complex $z$,
+\begin{equation}
+ H(t-s,z)=\frac1{\sqrt\pi}\int_\R
+          \e^{-r^2}H(t,z+2\sqrt{s}\,r)\dd r.
+ \label{pair:negative-Gaussian}
+\end{equation}
+\end{proposition}
+\begin{proof}
+The preceding complete-source growth estimate is uniform on $J$.
+Positivity and continuity give the stated positive lower bound at zero.
+Jensen's formula on radius $2R$ therefore bounds the count on radius
+$R$ by $C R\log(2+R)$, uniformly in $t$. Summation by parts gives the
+inverse-square tail. Hadamard factorization, evenness and $H(t,0)>0$
+then pair the genus-one factors as $1-z^2/\rho^2$; the remaining linear
+exponential coefficient is $H_z(t,0)/H(t,0)=0$. Absolute inverse-square
+tails give local uniform convergence and Cauchy's formula gives every
+fixed spatial jet away from the zeros. Finally insert the complete
+Fourier source into the right side of \eqref{pair:negative-Gaussian}.
+Its modulus is bounded by the product of $\e^{-r^2}$ and the integrable
+source envelope $\e^{tu^2}\Phi(u)\e^{|\Im z|u}$.
+Fubini applies, and the real-shift Gaussian integral supplies
+$\e^{-su^2}$. This proves the formula with the correct heat-time sign.
+\end{proof}
+
+On any independently cleared counted contour in $J$, this radial tail
+also pays the complete rational-trace passage. The pair laws follow
+reference slice by reference slice: initialize a paired product at that
+slice, pass its spatial jets through the contour, and identify its first
+time jet with minus the second spatial jet. This observation extends the
+local complete-divisor identities when no strip is available; it does
+not by itself propagate one finite polynomial over a time interval.
+The latter is the separate theorem of Section~\ref{sec:common-time},
+with its explicitly stated positive-time inputs.
 
 For the quantitative strong-collar estimates,
 fix a compact real interval $I=[t_0,t_1]\subset[0,1/2]$ on which an independently
@@ -177,6 +232,72 @@ therefore yields
 Divided differences are understood by analytic continuation at repeated
 nodes. At a merger $M=-g_z(t,c)$ and $D'=2$. Thus a collision creates
 no singularity in the signed discriminant equation.
+
+
+\subsection{Affine cancellation without losing the pair clock}
+\label{pair:affine}
+
+The pair law also separates a local affine exterior response from a
+higher-order remainder \cite{BakerCM44}. This is useful for preserving
+cancellation, provided the uncertainty in the affine part is retained.
+Write $Z=z-c$, $Q=Z^2-D$ and
+$R=B-Q_z/Q$, the holomorphic exterior logarithmic derivative, and set
+$b=R_z(c)$. Choose a fixed cleared contour whose interior contains the convex hull
+of the counted pair, hence its center and both center-to-root segments.
+The counted circle already constructed has this property. Write $\langle f\rangle=(2\pi\ii)^{-1}\oint f\dd z$.
+
+\begin{proposition}[Complete affine pair flux]\label{pair:affine-flux}
+On a counted pair chart, including an internal merger,
+\begin{align}
+ D'&=2+4bD+E_D,\notag\\
+ b&=\langle B/Z^2\rangle,\qquad
+ E_D=4D^2\left\langle\frac{B}{Z^2(Z^2-D)}\right\rangle.
+ \label{pair:affine-law}
+\end{align}
+If $|R_{zzz}|\le C_3$ on the two center-to-root segments, then
+$|E_D|\le(2/3)C_3|D|^2$.
+\end{proposition}
+\begin{proof}
+For distinct targets the pair equation gives
+$D'=2+2s\{R(c+s)-R(c-s)\}$, with $s^2=D$.
+Cauchy's formula gives
+\[
+ R(c+s)-R(c-s)
+ =\left\langle\frac{2sB}{Z^2-D}\right\rangle,
+ \qquad R_z(c)=\langle B/Z^2\rangle.
+\]
+Replacing $R$ by $B$ in these integrals adds only rational functions
+whose total residues inside the contour vanish: they have all their
+poles inside and decay at least quadratically at infinity. Now use
+$1/(Z^2-D)=1/Z^2+D/[Z^2(Z^2-D)]$.
+All resulting quantities are holomorphic symmetric functions of the
+counted roots, so the identities extend to $D=0$, where $D'=2$.
+Taylor expansion of $R(c\pm s)$ through degree two leaves two
+remainders of modulus at most $C_3|s|^3/6$; multiplying their
+difference by $2s$ gives the asserted bound.
+\end{proof}
+
+For exact $c,D$, $|D|<A^2$, and uniform source error
+$|B-\widehat B|\le\epsilon$ on $|Z|=A$, the separate allowances are
+\[
+ \frac{4\epsilon|D|}{A}
+ +\frac{4\epsilon|D|^2}{A(A^2-|D|)}
+ =\frac{4A\epsilon|D|}{A^2-|D|}.
+\]
+They sum exactly to the direct full-kernel allowance. More generally,
+\begin{equation}
+ \frac{4D}{Z^2}+\frac{4D^2}{Z^2(Z^2-D)}
+       =\frac{4D}{Z^2-D}
+ \label{pair:joint-kernel}
+\end{equation}
+pointwise, so their \emph{joint} support on any identical admissible
+source/coordinate set equals the direct support. This includes
+correlations; separating them on only one side changes the comparison.
+An integrating factor $\mu=\exp(-4\int b)$ yields the exact balance
+$(\mu D)'=\mu(2+E_D)$, but uncertainty in $b$ affects both factors.
+The split is not a new autonomous pair invariant or a positive barrier.
+A better endpoint estimate must pay the same initial anchor, source
+path and coordinate errors; a smaller residual term alone is insufficient.
 
 \subsection{Rational traces and the complete divisor}
 

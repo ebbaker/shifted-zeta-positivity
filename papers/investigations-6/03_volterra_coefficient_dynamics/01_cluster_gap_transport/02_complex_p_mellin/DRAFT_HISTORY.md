@@ -206,3 +206,69 @@ helpers: **GPT-6.1 Sol/ultra**. Requested settings are not serving attestation.
   recommends B05 r2's finite-data/conditioning decision. Manuscripts unchanged,
   no snapshot. For Edward Baker with Codex assistance; root settings unavailable,
   three helpers selected Sol6.1/ultra, internal shared-premise assessment.
+
+
+- **18 November 2026 — finite-data conditioning decision:**
+  [Note50](notes/50_VCD_GT_CM_FINITE_DATA_CONDITIONING_DECISION_20261118.md)
+  derives a short strong collar and h_G=35625 from Record22, selects
+  log-W accuracy 1e-6, and proves scoped failures of the global and
+  calibrated-core/global-complement allowances under N<=2^40. The full
+  [0,.1] tube fails E16's target-size premise. [E41](reviews/23_VCD_GT_CM_E41_CONDITIONING_ASSESSMENT_20261118.md)
+  accepts within scope without correction; source-free rational checks
+  pass. No new source/zero acquisition, actual-error complexity barrier,
+  manuscript change or snapshot. B05 r3 addresses the centered whole
+  path or parks this realization. For Edward Baker with Codex assistance;
+  actual root/helper settings unavailable, internal shared-premise review.
+
+
+- **18 November 2026 — centered path paid; finite realization parked:**
+  [Note51](notes/51_VCD_GT_CM_CENTERED_PATH_BOUND_AND_SCOPED_STOP_20261118.md)
+  reuses the inherited centered xi majorant for a complete evaluated
+  O(E_N) Gaussian-path bound with a suppressible far radial remainder.
+  Its absolute core still fails the actual Note48 log-W budget under
+  N<=2^40. [E42](reviews/24_VCD_GT_CM_E42_CENTERED_PATH_ASSESSMENT_20261118.md)
+  accepts after one control-premise wording clarification; formulas
+  unchanged, initial evidence preserved. B05 is parked within this
+  estimating class; no acquisition E, B05 r4, manuscript or snapshot.
+  Optional broader continuation is existing B10 r5. For Edward Baker
+  with Codex assistance; actual settings unavailable, internal shared-
+  premise review with prior assessor overlap.
+
+- **18 November 2026 — B10 r5 joint annular proof:**
+  [Note52](notes/52_VCD_GT_CM_JOINT_ANNULAR_ALIAS_DECISION_20261118.md)
+  retains the common-log Fourier constraints, proves a5% annular saving
+  and >2.4% complete parsed-width gain with all other errors paid.
+  [E43](reviews/25_VCD_GT_CM_E43_JOINT_ANNULAR_ASSESSMENT_20261118.md)
+  accepts within scope without correction;18 rational checks and13 pins.
+  E44/Sol is ready with16 pins and a2% finite execution gate; no new
+  D certificate, source campaign or manuscript change in this pass.
+  For Edward Baker with Codex assistance; actual settings unavailable.
+
+
+## 18 November 2026 — Analytical integration after B05 r3 and B10 r5
+
+Prepared for Edward Baker with OpenAI Codex assistance; actual model/effort
+unavailable, helpers inherited settings. E46–E48 integrate common-time
+approximation, counted transport, complete-path conditioning and direct
+error refinements into the existing manuscript. Supporting numerics are
+in Appendix B; the closing section develops five outstanding analytical
+challenges. [E47/Review26](reviews/26_VCD_GT_CM_E47_ANALYTICAL_MANUSCRIPT_ASSESSMENT_20261118.md)
+accepts within its stated scope after one bounded clarification and
+production correction round. [Record31](numerics/31_VCD_GT_CM_ANALYTICAL_MANUSCRIPT_BUILD_RECORD_20261118.json)
+binds the clean 107-page ignored PDF and all-page visual checks.
+[Notes54–55](notes/55_VCD_GT_CM_ANALYTICAL_MANUSCRIPT_CONTINUATION_20261118.md)
+preserve integration and continuation; no snapshot or new source run.
+E44 remains ready and unexecuted, B05 parked. Internal shared-premise
+assessment is not specialist validation.
+
+## 18 November 2026 — Integer p,q emphasis clarification
+
+At the author's request, foregrounded the integer split-pole hierarchy in
+the abstract and introduction, distinguishing the later single complex
+exponent. Equations and theorem statements unchanged; no new scientific
+milestone. [Brainstorm Discussion08](brainstorm/notes/08_VCD_GT_CM_GAP_CHAIN_DIPOLE_AND_HEAT_FACTOR_DISCUSSION_20261118.md)
+records the chain/dipole and local-factor explanation; the
+[editorial build record](brainstorm/numerics/03_INTEGER_PQ_EDITORIAL_BUILD_20261118.json)
+binds the current 107-page reading copy and selected-page inspection.
+Prepared for Edward Baker with OpenAI Codex LLM assistance; actual
+recorded model and effort unavailable. E47's original binding is retained.

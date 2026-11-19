@@ -220,3 +220,15 @@ The [crosswalk](../notes/02_BRANCH_SOURCE_CROSSWALK_20261113.md) records
 source ownership and the user-directed workflow adaptation. References
 remain in their [canonical catalog](../references/README.md), and the
 founding chat retains its existing unique archive.
+
+## Subsequent arithmetic continuation investigation, 19 November 2026
+
+The author added [05 — arithmetic gap continuation](../05_arithmetic_gap_continuation/README.md)
+as a direct child of this collection to avoid further nesting. Its
+[overview](../05_arithmetic_gap_continuation/research-overview/01_AGC_RESEARCH_OVERVIEW_20261119.md)
+uses the gap/chain/Mellin results developed under VCD as background and
+asks for a source-specific whole-time arithmetic error estimate. Its
+[AGC register](../05_arithmetic_gap_continuation/research-progress/01_AGC_RESEARCH_PROGRESS_20261119.md)
+owns those tasks. The four original representation programs and their
+historical scope above remain intact. For Edward Baker with OpenAI Codex
+assistance; setup lead recorded gpt-6-astra/max, continuation requested ultra.

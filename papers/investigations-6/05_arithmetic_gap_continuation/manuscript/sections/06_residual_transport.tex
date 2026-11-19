@@ -1,0 +1,408 @@
+% 19 November 2026. Drafted for Edward Baker with OpenAI Codex assistance.
+% Helper explicitly dispatched as gpt-6.1-sol, reasoning effort ultra;
+% independent serving-backend attestation was not available to the helper.
+\section{The forced residual and the joint gap readout}
+\label{sec:residual-transport}
+
+We next distinguish an exact heat evolution from its explicit arithmetic
+approximation.  This distinction determines which error may be
+propagated.  All calculations in this section use a fixed cutoff, or
+one cell on which the cutoff is constant.  They are elementary
+consequences of the source representation and the physical equation
+$H_t=-H_{zz}$.  They supply an interface for a quantitative estimate;
+no such new canonical estimate is asserted here.
+
+\subsection{The exact term evolves by heat; the explicit term has a defect}
+
+For the exact Gaussian term \eqref{as:exact-term}, differentiation and
+integration by parts give
+\begin{align}
+ \partial_t r_n(t,s)
+  &=\frac1{2\sqrt{\pi t}}\int_{\R}
+       v\,r_{0,n}'(s+\sqrt t\,v)e^{-v^2}\,\dd v\notag\\
+  &=\frac1{4\sqrt\pi}\int_{\R}
+       r_{0,n}''(s+\sqrt t\,v)e^{-v^2}\,\dd v
+    =\frac14\partial_s^2r_n(t,s).
+ \label{rt:exact-term-heat}
+\end{align}
+The sub-Gaussian growth described after \eqref{as:exact-term} kills
+the boundary term and justifies the differentiations on compact
+nonreal $s$-sets and positive-time intervals.  The same calculation
+applies to the exact remainder where its Gaussian formula is used.
+
+There is no corresponding exact heat assertion for $p_n$.  Suppress
+the index $n$, and write
+\begin{equation}
+ a=\alpha-\log n,\qquad b=\alpha',\qquad c=\alpha'',\qquad
+ p=\exp(\ell_n+ta^2/4).
+ \label{rt:abc}
+\end{equation}
+These are functions of $s$; explicitly
+\[
+ b(s)=-\frac1{2s^2}-\frac1{(s-1)^2}+\frac1{2s},\qquad
+ c(s)=\frac1{s^3}+\frac2{(s-1)^3}-\frac1{2s^2}.
+\]
+Differentiating this actual exponential, rather than a remainder
+symbol, gives
+\begin{align}
+ \frac{p_t}{p}&=\frac{a^2}{4},\qquad
+ \frac{p_s}{p}=a+\frac t2ab,\notag\\
+ \frac{p_{ss}}p&=\left(a+\frac t2ab\right)^2
+                   +b+\frac t2(b^2+ac).
+ \label{rt:pn-jets}
+\end{align}
+Subtracting one fourth of the last expression from the first gives
+the exact defect
+\begin{equation}
+ \mathcal R_n(t,s):=\left(\partial_t-\frac14\partial_s^2\right)p_n(t,s)
+ =-\frac{p_n(t,s)}4
+   \left\{b+ta^2b+\frac t2(b^2+ac)
+                       +\frac{t^2}{4}a^2b^2\right\}.
+ \label{rt:term-defect}
+\end{equation}
+For the additive term error $d_n=r_n-p_n$ this implies
+\begin{equation}
+ \left(\partial_t-\frac14\partial_s^2\right)d_n=-\mathcal R_n.
+ \label{rt:term-error-equation}
+\end{equation}
+The term $b$ in \eqref{rt:term-defect} is present even at $t=0$:
+the explicit expression has replaced both the gamma factor and its
+Gaussian evolution by an approximation.  A small value of the defect
+is not a bound for the solution of \eqref{rt:term-error-equation}
+until its data and domain are specified.
+
+Because $\partial_z^2p_n(t,s_\pm(z))=-p_{n,ss}(t,s_\pm(z))/4$,
+the physical fixed-$N$ reference has defect
+\begin{equation}
+ \mathcal R_N(t,z):=\partial_tP_N(t,z)+\partial_z^2P_N(t,z)
+   =\sum_{n=1}^N\{\mathcal R_n(t,s_+(z))
+                      +\mathcal R_n(t,s_-(z))\}.
+ \label{rt:physical-defect}
+\end{equation}
+Define the actual error by $E=H-P_N$.  Then, exactly,
+\begin{equation}
+ E_t+E_{zz}=-\mathcal R_N.
+ \label{rt:physical-error}
+\end{equation}
+For backward physical time $u=t_*-t$, with every quantity evaluated
+at $t_*-u$, this becomes the forward forced heat equation
+\begin{equation}
+ E_u=E_{zz}+\mathcal R_N.
+ \label{rt:backward-error}
+\end{equation}
+The sign and coefficient here follow from both changes of variables:
+$s_\pm=(1\pm\ii z)/2$ and $u=t_*-t$.  There is no missing factor of
+four in the physical equation.
+
+Using the sum of the exact $r_n$ terms as the reference would instead
+give zero defect, by \eqref{rt:exact-term-heat}; its full remainder
+would still need to be controlled.  Using the explicit $p_n$ terms
+gives a directly differentiable formula and the known forcing
+\eqref{rt:physical-defect}.  These are two different acquisition
+interfaces, not a reason to discard the remainder in either one.
+
+\subsection{What is required to propagate the residual}
+
+Equation \eqref{rt:backward-error} on a bounded spatial neighborhood
+does not determine an effective error enclosure there from a local
+initial bound alone.  For example, for $A>0$ the entire functions
+\[
+ E_K(u,z)=\varepsilon\exp\{K(z-A)+K^2u\},\qquad K>0,
+\]
+satisfy $E_u=E_{zz}$ and
+$\sup_{-A\le x\le A}|E_K(0,x)|\le\varepsilon$, whereas
+$E_K(u,A)=\varepsilon e^{K^2u}$.  Thus the same local initial upper
+bound permits arbitrarily large later values.  The uncontrolled
+growth outside the interval is exactly what prevents a uniform
+conclusion.  This example concerns the information in a local heat
+bound, not the canonical source.
+
+One possible propagation statement is the following deliberately
+conditional version.  Its strong global hypotheses are displayed
+because they have not been acquired for the arithmetic reference.
+
+\begin{proposition}[A whole-strip residual bound]
+\label{rt:duhamel}
+Let $0\le u\le U$ and $h>0$.  Suppose that $E$ and $R$ are
+holomorphic in $z$ on a neighborhood of the closed horizontal strip
+$|\Im z|\le h$, continuous in time, and that $E$ is a classical
+solution of $E_u=E_{zz}+R$ there.  Suppose that $E$ is uniformly
+bounded on this whole time-strip, that
+\begin{equation}
+ \sup_{x\in\R,\,|\eta|\le h}|E(0,x+\ii\eta)|\le\varepsilon_0,
+ \qquad
+ \sup_{x\in\R,\,|\eta|\le h}|R(v,x+\ii\eta)|\le r(v),
+ \label{rt:global-data}
+\end{equation}
+where $r$ is integrable.  Assume the usual continuity needed to take
+these bounded classical solutions to their initial data.  Then
+\begin{equation}
+ \sup_{x\in\R,\,|\eta|\le h}|E(u,x+\ii\eta)|
+       \le\varepsilon(u):=\varepsilon_0+\int_0^u r(v)\,\dd v.
+ \label{rt:duhamel-bound}
+\end{equation}
+For $0<h'<h$, Cauchy's estimate also gives
+\begin{equation}
+ \sup_{x\in\R,\,|\eta|\le h'}|E_{zz}(u,x+\ii\eta)|
+       \le\frac{2\varepsilon(u)}{(h-h')^2}.
+ \label{rt:duhamel-jets}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+For each fixed $\eta$, put
+$G_u(q)=(4\pi u)^{-1/2}\exp(-q^2/(4u))$.  The bounded whole-line
+heat solution has the Duhamel representation
+\begin{align*}
+ E(u,x+\ii\eta)={}&\int_{\R}G_u(x-\xi)E(0,\xi+\ii\eta)\,\dd\xi\\
+ &+\int_0^u\int_{\R}G_{u-v}(x-\xi)
+                      R(v,\xi+\ii\eta)\,\dd\xi\,\dd v.
+\end{align*}
+The heat kernel has integral one and is nonnegative on the real line.
+Taking absolute values proves \eqref{rt:duhamel-bound}, uniformly in
+$\eta$.  The representation follows by the fundamental solution and
+uniqueness in the bounded classical class; it can also be verified by
+regularizing in time and passing to the bounded initial data.  Apply
+Cauchy's formula on disks of radius smaller than $h-h'$ and then take
+their radius to $h-h'$ to obtain \eqref{rt:duhamel-jets}.
+\end{proof}
+
+The hypotheses include every real $x$, not just the part of the strip
+where a zero pair is enclosed.  In particular this proposition is not
+automatically applicable to the branch-defined reference $P_N$ of
+\eqref{as:PN}, which was defined on a right half-plane.  A genuine use
+must provide an admissible extension and the whole-line bounds, or use
+a bounded-domain heat problem with certified lateral boundary data.
+If a Gaussian integral is truncated, its tails must be paid as well.
+For example, a global bound $M$ on its initial integrand pays at most
+$M\operatorname{erfc}(A/(2\sqrt u))$ outside $|x-\xi|\le A$;
+without such a bound, the displayed tail allowance has no premise.
+
+Normalization does not remove this obligation.  If $H=\mathcal B F$
+with a nonvanishing analytic factor, then $F$ satisfies
+\begin{equation}
+ F_t+F_{zz}+2\frac{\mathcal B_z}{\mathcal B}F_z
+       +\frac{\mathcal B_t+\mathcal B_{zz}}{\mathcal B}F=0.
+ \label{rt:normalized-equation}
+\end{equation}
+Thus a bound for the normalized error $H/\mathcal B-f$ cannot be
+propagated by the plain unit-coefficient heat kernel while ignoring
+the two additional coefficients.  Moreover a small absolute physical
+error can be large relative to $H$ near a zero.  The contour denominator
+needed next is a separate quantitative datum.
+
+\subsection{A two-zero contour retains a joint error}
+
+Let $\Gamma$ be a positively oriented piecewise smooth simple closed
+contour, fixed over the time cell.  Assume that $H$ and the reference
+$P$ are holomorphic on a neighborhood of its closed interior, nonzero
+on a neighborhood of $\Gamma$, and each has exactly two zeros inside,
+counted with multiplicity.  In this subsection
+$P$ can be $P_N$ or another explicitly specified analytic reference.
+The exact heat law is imposed on $H$, while
+\begin{equation}
+ R=P_t+P_{zz},\qquad E=H-P
+ \label{rt:general-reference}
+\end{equation}
+is retained for $P$.  Counts and contour clearance must hold throughout
+the cell; they are not inferred from a sampled value.
+
+For $F=H$ or $P$, define
+\begin{equation}
+ A_j^F=\frac1{2\pi\ii}\oint_\Gamma z^j\frac{F_z}{F}\,\dd z,
+ \qquad c_F=\frac{A_1^F}{2},\qquad
+ D_F=\frac{A_2^F}{2}-\frac{(A_1^F)^2}{4}.
+ \label{rt:pair-moments}
+\end{equation}
+If the two zeros are $a,b$, the argument principle gives
+$c_F=(a+b)/2$ and $D_F=(b-a)^2/4$.  These contour expressions remain
+defined when the two occurrences merge.  For a conjugation-invariant
+pair, $D_F$ is real; it is positive for distinct real zeros and
+negative for a distinct nonreal conjugate pair.
+
+Differentiate the logarithmic derivative of $H$ and integrate by parts:
+\begin{equation}
+ (A_j^H)_t=\frac{j}{2\pi\ii}\oint_\Gamma
+                          z^{j-1}\frac{H_{zz}}H\,\dd z,
+ \qquad
+ (D_H)_t=\frac1{2\pi\ii}\oint_\Gamma
+                          (z-c_H)\frac{H_{zz}}H\,\dd z.
+ \label{rt:exact-gap-readout}
+\end{equation}
+For example,
+$\partial_t(H_z/H)=\partial_z(H_t/H)
+=-\partial_z(H_{zz}/H)$, which proves the first formula.  Substitution
+in the definition of $D_H$ proves the second.  This is an exact readout
+of the pair law, including at a merger, rather than a new exclusion
+criterion.
+
+On the cleared contour, elementary algebra gives
+\begin{equation}
+ \frac{H_{zz}}H-\frac{P_{zz}}P
+       =\frac{P E_{zz}-P_{zz}E}{P(P+E)}.
+ \label{rt:joint-quotient}
+\end{equation}
+The two error terms in the numerator share the same residual.  For a
+spatially constant multiplier $E=\lambda(t)P$, the numerator vanishes
+exactly.  Separate bounds for $P E_{zz}$ and $P_{zz}E$ lose that
+dependence.  This identity identifies a possible place to retain
+arithmetic cancellation, but it proves no bound for that cancellation
+in the canonical source.
+
+There are two further payments.  The actual center in
+\eqref{rt:exact-gap-readout} is $c_H$, not $c_P$.  Also $P_{zz}/P$
+alone does not give the time motion of the zeros of $P$.  Repeating
+the preceding calculation with $P_t=-P_{zz}+R$ gives
+\begin{equation}
+ (D_P)_t=\frac1{2\pi\ii}\oint_\Gamma
+                   (z-c_P)\left(\frac{P_{zz}}P-\frac RP\right)\,\dd z.
+ \label{rt:reference-gap-readout}
+\end{equation}
+Subtracting it from \eqref{rt:exact-gap-readout} yields the full identity
+\begin{align}
+ (D_H-D_P)_t=\frac1{2\pi\ii}\oint_\Gamma
+ \bigg\{&(z-c_H)\frac{P E_{zz}-P_{zz}E}{P(P+E)}
+       +(c_P-c_H)\frac{P_{zz}}P\notag\\
+       &+(z-c_P)\frac RP\bigg\}\,\dd z.
+ \label{rt:full-gap-error}
+\end{align}
+In particular, paying only \eqref{rt:joint-quotient} and calling its
+integral the error in $(D_P)_t$ would omit both a center error and the
+known heat defect.
+
+The center can itself be enclosed without differentiating a value
+error.  Suppose $|E/P|\le q<1$ on a neighborhood of $\Gamma$.
+The convergent branch $\log(1+E/P)$ is then single-valued there.
+Integration by parts along the contour gives
+\begin{equation}
+ c_H-c_P=-\frac1{4\pi\ii}\oint_\Gamma
+                          \log(1+E/P)\,\dd z,
+ \qquad
+ |c_H-c_P|\le\frac{|\Gamma|}{4\pi}\{-\log(1-q)\}.
+ \label{rt:center-bound}
+\end{equation}
+Here $|\Gamma|$ is the contour length.  No logarithm is asserted through
+the interior zeros of $H$ or $P$; only the collar of the contour is used.
+The same smallness condition, together with the two-zero count for $P$,
+also supplies the count for $H$ by Rouch\'e's theorem.
+
+For a concrete bound on \eqref{rt:full-gap-error}, set on each slice
+\begin{gather*}
+ m=\inf_\Gamma|P|,\quad \varepsilon=\sup_\Gamma|E|<m,\quad
+ J=\sup_\Gamma|P E_{zz}-P_{zz}E|,\\
+ Q=\sup_\Gamma|P_{zz}/P|,\quad W=\sup_\Gamma|R/P|,\quad
+ B_H=\sup_\Gamma|z-c_H|,\quad B_P=\sup_\Gamma|z-c_P|.
+\end{gather*}
+Then
+\begin{equation}
+ |(D_H-D_P)_t|\le\mathcal A(t):=
+ \frac{|\Gamma|}{2\pi}
+ \left\{\frac{B_HJ}{m(m-\varepsilon)}
+              +|c_H-c_P|Q+B_PW\right\}.
+ \label{rt:gap-error-bound}
+\end{equation}
+The $J$ bound may be obtained directly from a coupled enclosure, or
+estimated less sharply from paid separate jets.  The latter is a valid
+fallback, with no promised gain from correlation.  Every denominator
+floor is displayed.  Integrating in backward time gives the conditional
+comparison
+\begin{equation}
+ |D_H(u)-D_P(u)|\le |D_H(0)-D_P(0)|
+                      +\int_0^u\mathcal A(t_*-v)\,\dd v.
+ \label{rt:integrated-gap-error}
+\end{equation}
+To use this for continuation, the right side must be smaller than an
+available positive lower bound for $D_P(u)$, with the counts, reality
+symmetry, and all-time contour clearance retained.  Alternatively one
+can bound the exact drift in \eqref{rt:exact-gap-readout} directly and
+feed its integrated shrinking allowance to Section~\ref{sec:continuation}.
+Neither use is supplied by a small residual norm in isolation.
+
+\subsection{The center of a corrected approximation must also change}
+
+The leading Riemann--Siegel correction gives two different value
+approximations.  Schematically, with the source normalizer,
+\begin{equation}
+ \frac{H_t}{\mathcal B_t}=f_{t,N}+e_0,
+ \qquad
+ \frac{H_t}{\mathcal B_t}
+       =\left(f_{t,N}-\frac{C_t}{\mathcal B_t}\right)+e_1.
+ \label{rt:corrected-centers}
+\end{equation}
+The published bound for $e_1$ replaces the omitted-correction budget
+$e_{C,0}$ by the smaller retained-correction budget $e_C$
+\cite[\S6, (69)--(70)]{Polymath2019}.  A lower bound $|f_{t,N}|\ge L$
+therefore does not automatically consume the $e_1$ allowance.  It needs
+a lower bound for $|f_{t,N}-C_t/\mathcal B_t|$.  The unconditional
+reverse-triangle transfer pays
+\begin{equation}
+ \left|f_{t,N}-\frac{C_t}{\mathcal B_t}\right|
+          \ge L-\left|\frac{C_t}{\mathcal B_t}\right|,
+ \label{rt:correction-payment}
+\end{equation}
+which can spend the margin recovered in the remainder.  This was the
+applicability issue for the triangle estimate examined in
+\cite{NewmanCertificateAudit}.  It is scoped to that estimate and its
+information: it does not exclude phase-sensitive lower bounds or a
+different arithmetic reorganization.
+
+There is an additional analytic issue for a contour consumer.  A
+displayed correction written in terms of $x,y$, a real part, and a
+floor-valued cutoff is a value formula.  Before taking its complex
+derivatives, one must establish a holomorphic representative on the
+chosen neighborhood or use a different analytic reference with a
+separately paid correction.  Simply assigning a smaller value error
+to $P_N-C_t$ does not establish that reference's analyticity or heat
+defect.  If such a reference is supplied, all of
+\eqref{rt:physical-defect}--\eqref{rt:gap-error-bound} must use that
+same reference, its center, and its actual defect.
+
+Arithmetic mollifiers illustrate another legitimate cancellation that
+requires a transfer.  For a finite Dirichlet polynomial
+$A(s)=\sum_{n\le N}a_n n^{-s}$ and
+$m(s)=\sum_{d\le D}\lambda_d d^{-s}$, exact multiplication gives
+\begin{equation}
+ m(s)A(s)=\sum_{r\le DN}
+           \left(\sum_{dn=r}\lambda_d a_n\right)r^{-s}.
+ \label{rt:mollifier-convolution}
+\end{equation}
+One can combine the coefficients in the inner sum before taking
+absolute values.  If a full calculation establishes $|m f|\ge Q>0$
+and $|m|\le M$, then $m\ne0$ and
+\begin{equation}
+ |f|\ge Q/M.
+ \label{rt:mollifier-transfer}
+\end{equation}
+Gomila's finite-sum binding applies this type of arithmetic
+reorganization to the two pieces of the normalized approximation and
+returns a bound for the original $f_t$
+\cite{Gomila2026Binding,VCDCMDiscussion12}.  The convolution and division
+are mathematical steps with their own positive-margin hypotheses.
+
+For a moving gap, multiplication is not a free change of the physical
+equation.  If $P$ has defect $R$ and $m=m(t,z)$ is a nonvanishing
+analytic factor on the relevant region, then
+\begin{equation}
+ (mP)_t+(mP)_{zz}
+      =mR+(m_t+m_{zz})P+2m_zP_z.
+ \label{rt:factor-defect}
+\end{equation}
+The factor preserves the enclosed zero divisor when it has no zeros
+there, but it changes the heat defect and the second-logarithmic
+quotient.  The zero dynamics are invariant only when these extra terms
+are retained in the full readout.  Thus the static success of a
+mollifier lower bound does not imply that the multiplied field solves
+the same Newman heat equation.
+
+Finally the generic residual interface must preserve actual collisions.
+For the exact control $H=P=z^2-2(t-T)$ one has $E=R=0$, while the two
+real zeros merge at $t=T$.  Here $D=2(t-T)$, so an integrated backward
+shrinking allowance reaches the initial $D$ exactly at the merger;
+the strict continuation margin fails.  Perfect approximation has not
+protected a colliding reference.  The more detailed premise screen in
+Section~\ref{sec:program} distinguishes the complete canonical
+theta source from the colliding source controls.  No generic error
+identity above supplies that distinction.  The open arithmetic task is
+to acquire a complete, source-specific bound at the final gap or strip
+consumer, and to compare it with direct evaluation using the same
+information and error payments.

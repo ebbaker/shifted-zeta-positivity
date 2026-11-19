@@ -20,23 +20,26 @@ and [avoid][avoid], especially [classification01][class],
 closure count as representations. A quantitative milestone must supply a
 proved rate, constant, range or actual consumer margin beyond its inputs.
 
-## Default next task: a useful finite-data realization
+## B05 scoped stop and selected B10 continuation
 
-**B05 r2 / B / Astra, ready conceptual continuation.** E16/E40 now prove
-and assess the fixed-input common-time O(log N/N) approximation. Select
-one canonical consumer and a complete conditioning/data-error budget
-before any numerical realization. [The bounded B05 packet](../research-progress/handoffs/VCD-GT-CM-B05-r2.md)
-and [Continuation49][continuation] permit at most two strategies: the
-present explicit global envelope and one proposed tighter estimate for
-the same approximation. Pay the whole Gaussian path, finite input errors,
-count/clearance tests and transport tolerance. The direct comparator gets
-the same information. Name what new range/error/cost result a run would
-establish; known positivity alone is insufficient. One decision pass and
-one bounded clarification, with no source or zero acquisition. A separate
-E / Sol proof/acquisition follows only after a finite contract is justified.
-A precise scoped missing input is an admissible outcome.
+**B05 r3 has returned its scoped stop; no acquisition E or B05 r4 is
+issued.** [Decision51](../notes/51_VCD_GT_CM_CENTERED_PATH_BOUND_AND_SCOPED_STOP_20261118.md) reuses the assessed centered source
+majorant to give a complete evaluated Gaussian-path O(E_N) allowance.
+Its far radial constant is suppressible at a growing cutoff. The retained
+integrated absolute core allowance still exceeds 1/2 for N<=2^40; the
+actual Note48 transfer, even granting zero derivative/data/outer error,
+then gives a log-W allowance >7/65536>1e-6. This is a limitation of the
+specified count-tail, absolute-envelope and quotient budget, not the
+actual error or a general finite-method obstruction. E42 accepts after one premise-wording clarification; the sole register owns disposition.
 
-## Completed finite gate and optional B10 continuation
+Keep this tested realization parked. Reopening requires a changed
+relative/derivative/correlated estimate or sharper fully paid tail input;
+more precision or merely raising the analytical cutoff is not recommended.
+The approximation theorem, earlier canonical certificates and manuscripts
+remain unchanged. The author subsequently activated **B10 r5 / B / Astra**;
+its selected annular refinement is described below.
+
+## Completed finite gate and selected annular refinement
 
 B10 r4 selected the actual degree 32 Lobatto cardinal estimate after the
 conservation manuscript review. [Note45](../notes/45_VCD_GT_CM_E38_CARDINAL_SOURCE_REFINEMENT_20261118.md)
@@ -54,13 +57,27 @@ therefore supplies error-accounting tools, not an acquired canonical gain.
 The current centered width has roughly 52% node-log and 48% annular support;
 the same fixed tail payments block another tenfold source-only width gain.
 
-**B10 r5 / B / Astra, optional and unissued.** If a further local gain is
-chosen, compare at most two correlated affine/annular mechanisms, retain
-all source/coordinate/time errors, and derive a strict total gain before
-an E computation. The centered direct estimator gets identical information.
-Keep fixed transitions/exact-skeleton invariance from Note35 in force;
-projection alone adds no information. No added source/height/precision
-campaign or new physical-time domain is issued by this plan.
+**B10 r5 / B / Astra selected the joint annular mechanism.**
+[Note52][annular] proves a Parseval/Cauchy--Schwarz alias bound for
+one centered moment kernel. Its conservative factor19/20 reduces the
+annular allowance by at least5%; with every other payment retained,
+the complete Record22 width improves by more than2.4%. This is a proved
+consequence of inherited bounds, not a newly executed endpoint certificate.
+The competing joint affine split equals the direct kernel support under
+identical information; this does not assert sharpness of Record22.
+
+The resulting **default E44 r1 / E / Sol** is a single exact-rational
+endpoint transformation with a conservative2% width gate and strict
+lower-endpoint improvement. It depends on E43's fixed nonauthor proof
+assessment and final input pins; the [packet](../research-progress/handoffs/VCD-GT-CM-E44-r1.md)
+freezes one canonical case, an inherited quadratic guard, at most two
+local correctness repairs and120 seconds per run. After E44, E45 assesses
+the new finite artifact before promotion. The sole register owns readiness.
+
+The centered direct estimator gets the same analytic correlations and
+therefore the same refinement. Fixed-transition/exact-skeleton invariance
+from Note35 remains in force. No source/log/time replay, added source,
+height/precision campaign, new domain, recursive claim or B05 reopening.
 
 ## Alternatives: forward acquisition or direct retained forcing
 
@@ -189,13 +206,20 @@ render under ignored root output/pdf/vcd-complex-p-mellin/. Keep derivations
 in notes/, small execution records in numerics/, assessments in reviews/,
 and immutable requests/returns in research-progress/handoffs/.
 
-The present analytical source additionally develops forward finite-block
-statistics in source section17, retained forcing and the exact return
-horizon in section18, and recursive/continuous two-sided refinement in
-section19. [Integration36][integration] and [Continuation37](../notes/37_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_CONTINUATION_20261118.md)
-are the lead-owned integration and handoff records; their completion and
-E31–E33 disposition belong to the sole register. Historical manuscript
-milestones and Continuation33 remain preserved.
+The author-requested E46 integration adds fully derived common-time
+approximation and counted transfer (source sections20–21), complete-path
+conditioning (section23), and cardinal/shared-log/annular error refinements
+(section22). The framework gains the compact-real-time passage and affine
+pair flux; the supporting appendix distinguishes accepted certificates
+from the still-unexecuted E44 endpoint artifact. The final main section
+states useful conditioning, stable constrained closure, joint-time gain,
+block concentration and global continuation as the outstanding challenges.
+
+[Integration54](../notes/54_VCD_GT_CM_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261118.md)
+and [Continuation55](../notes/55_VCD_GT_CM_ANALYTICAL_MANUSCRIPT_CONTINUATION_20261118.md)
+record the E46–E48 source, internal assessment and ignored PDF.
+Integration36/Continuation37 and E31–E33 remain historical. E44 and its
+subsequent E45 retain their existing task identities and scope.
 
 The lead owns shared documents, register, milestone and chat updates;
 helpers have disjoint outputs. Include date, Edward Baker as intended
@@ -220,7 +244,7 @@ trusted completion hook is actually verified. Do not hand-edit history.
 [workflow]: ../../../../../../GPT_RESEARCH_MODEL_WORKFLOW.md
 [manuscript]: ../manuscript/main.tex
 [guide]: ../manuscript/README.md
-[continuation]: ../notes/49_VCD_GT_CM_COMMON_TIME_APPROXIMATION_AND_CONTINUATION_20261118.md
+[continuation]: ../notes/55_VCD_GT_CM_ANALYTICAL_MANUSCRIPT_CONTINUATION_20261118.md
 [integration]: ../notes/36_VCD_GT_CM_TWO_SIDED_MANUSCRIPT_INTEGRATION_20261118.md
 [two-sided]: ../notes/35_VCD_GT_CM_RECURSIVE_TWO_SIDED_FORMULATION_20261118.md
 [e16-r4]: ../research-progress/handoffs/VCD-GT-CM-E16-r4.md
@@ -238,3 +262,5 @@ trusted completion hook is actually verified. Do not hand-edit history.
 [b04]: ../brainstorm/notes/04_VCD_GT_CM_B04_SPLIT_POLE_CLOSURE_CONTRACT_20261118.md
 
 [overview]: ../research-overview/01_VCD_GT_CM_RESEARCH_OVERVIEW_20261117.md
+
+[annular]: ../notes/52_VCD_GT_CM_JOINT_ANNULAR_ALIAS_DECISION_20261118.md

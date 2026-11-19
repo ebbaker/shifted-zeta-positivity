@@ -53,3 +53,28 @@ assistance; root actual settings unavailable, assessor selected Sol6.1/ultra:
 
 - [Record25](25_VCD_GT_CM_E40_APPROXIMATION_CHECKS_20261118.json): fourteen frozen-input checks, exact degree0–6 Gaussian cases at two times, quadratic and strong-collar quartic mergers; no canonical source computation.
 - [Research record26](26_VCD_GT_CM_COMMON_TIME_APPROXIMATION_RECORD_20261118.json): final proof/review/return identities, preservation, link and size checks. Metadata only; not canonical acquisition or a claim of capturing the unsent final.
+
+
+18 November 2026 B05 conditioning decision, for Edward Baker with Codex
+assistance; actual root/assessor settings unavailable:
+
+- [Exact check script](vcd_gt_cm_b05_conditioning_checks.py) and [Record27](27_VCD_GT_CM_B05_CONDITIONING_CHECKS_20261118.json): rational import/geometry/floor/consumer/exponent checks and unchanged input identities for Note50/E41. No new source or zero computation; not an independent replay of Record22 or an actual-error lower bound.
+
+
+- [Centered-path checker](vcd_gt_cm_centered_path_checks.py) and [Record28](28_VCD_GT_CM_CENTERED_PATH_CHECKS_20261118.json), 18 November 2026: exact-rational Gaussian-domain/coefficient/core-consumer checks, final input pins and reversible wording-correction verification. [Initial script](vcd_gt_cm_centered_path_checks_initial.py) and [initial record](28_VCD_GT_CM_CENTERED_PATH_INITIAL_CHECKS_20261118.json) preserve the first successful check. No source calls, numerical Gaussian quadrature or feasibility scan. For Edward Baker with Codex assistance; actual settings unavailable.
+
+18 November 2026 B10 r5/E43, for Edward Baker with Codex assistance;
+actual model/effort unavailable:
+
+- [Exact rational checks](vcd_gt_cm_joint_annular_checks.py) and [Record29](29_VCD_GT_CM_JOINT_ANNULAR_CHECKS_20261118.json):18 inherited-premise/identity checks,13 unchanged pins, no new D enclosure or source evaluations. These support Note52's analytic proof; they do not replay the source certificate.
+- E44 is the separate ready exact-rational endpoint transformation. Its script/Record30 are not yet produced; do not confuse E43 premise checking with E44 execution.
+
+
+18 November 2026 manuscript production for Edward Baker with OpenAI Codex
+assistance; actual model/effort unavailable:
+
+- [Analytical manuscript build record31](31_VCD_GT_CM_ANALYTICAL_MANUSCRIPT_BUILD_RECORD_20261118.json):
+  final 107-page ignored PDF, clean build, 48 final source pins, original47
+  recovered, E44's16 pins unchanged and complete visual QA. Production only;
+  no new source evaluation or endpoint artifact. Record30 remains reserved
+  for E44's unexecuted endpoint transformation.

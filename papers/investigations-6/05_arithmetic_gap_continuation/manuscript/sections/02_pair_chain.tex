@@ -1,0 +1,265 @@
+% 19 November 2026. Drafted for Edward Baker with OpenAI Codex assistance.
+% AGC-E02; dispatched configuration gpt-6.1-sol, effort ultra.
+% Dispatch metadata is recorded, not independently attested backend metadata.
+\section{A counted pair and its place in the gap chain}
+\label{sec:pair-chain}
+
+We derive the local laws directly from the physical equation
+$H_t=-H_{zz}$, with the normalization of Section~\ref{sec:source}.
+The derivation also specifies which information is lost when a pair is
+viewed in isolation. These are inherited structural identities, rederived
+from \cite{VCDCMManuscript,VCDCMDiscussion08}; their validity does not
+constitute a new estimate preventing a collision.
+
+\subsection{Complete products and finite parts}
+
+The complete-divisor statements below use the following properties on a
+compact real-time interval $J$. The field is real and even in $z$,
+$H(t,0)\ne0$, and its even order-at-most-one product is
+\begin{equation}
+ H(t,z)=H(t,0)\prod_{\{\rho,-\rho\}}
+                  \left(1-\frac{z^2}{\rho(t)^2}\right).
+ \label{agc:pair-product}
+\end{equation}
+Every zero occurrence, including multiplicity, is retained; one factor
+represents two opposite occurrences. The canonical growth estimates give,
+uniformly on $J$,
+\begin{equation}
+ n_t(R)=O_J(R\log(2+R)),\qquad
+ \sum_{|\rho|>R}|\rho|^{-2}=O_J(\log(2+R)/R).
+ \label{agc:pair-count}
+\end{equation}
+The second assertion follows from the first by partial summation.
+It gives locally uniform product convergence, and Cauchy's formula gives
+convergence of every fixed spatial derivative. Evenness removes the linear
+exponential in the order-one Hadamard product. This restriction matters:
+the divisor alone does not determine logarithmic jets of an arbitrary
+entire function with an unrestricted zero-free exponential factor.
+
+Write $B=H_z/H$. At a simple zero $x(t)$, implicit differentiation gives
+\begin{equation}
+ x'=\frac{H_{zz}(t,x)}{H_z(t,x)}=2U_x,
+ \qquad
+ U_x=\lim_{z\to x}\left(B(t,z)-\frac1{z-x}\right).
+ \label{agc:pair-node}
+\end{equation}
+For a finite polynomial the same equation reads
+$x'=2\sum_{\rho\ne x}(x-\rho)^{-1}$, by differentiating its
+factorization. For the complete field the finite part in
+\eqref{agc:pair-node}, or the product grouping in
+\eqref{agc:pair-product}, is the definition. Separate unregularized
+first-power sums need not converge absolutely.
+
+\subsection{Symmetric coordinates through a double zero}
+
+Suppose a fixed positively oriented contour $\Gamma$ is zero-free and
+counts exactly two zeros at a reference time. On a sufficiently small
+time chart this remains so. With
+\[
+ J_k(t)=\frac1{2\pi\ii}\oint_\Gamma z^k B(t,z)\,\dd z,
+ \qquad c=\frac{J_1}{2},\qquad D=\frac{J_2}{2}-c^2,
+\]
+the counted quadratic and local factorization are
+\begin{equation}
+ Q_*(t,z)=(z-c)^2-D,\qquad H(t,z)=Q_*(t,z)A(t,z),
+ \qquad R(t,z)=\frac{A_z}{A}.
+ \label{agc:pair-deflation}
+\end{equation}
+Here $A$ is jointly holomorphic and nonzero inside the contour. The
+argument-principle formulas show that $c,D$ are holomorphic even when
+the counted zeros merge. For a conjugation-invariant pair at real time,
+$c,D$ are real. Write $z_\pm=c\pm s$, $s^2=D$, on a separated local
+chart. Then $D>0$ describes two real roots, $D<0$ a conjugate pair,
+and $D=0$ a double root. On a real adjacent edge the gap is
+$g=z_+-z_-=2s>0$, so $D=g^2/4$.
+
+\begin{proposition}[Pair law with the complete exterior]
+\label{agc:pair-law-prop}
+Let $R[a,b]=(R(b)-R(a))/(b-a)$, continued as $R_z(a)$ at
+$a=b$, and set $M=-R[c-s,c+s]$. Then
+\begin{equation}
+ c'=R(t,c-s)+R(t,c+s),\qquad
+ D'=2-4DM.
+ \label{agc:pair-law}
+\end{equation}
+Under \eqref{agc:pair-product}--\eqref{agc:pair-count},
+\begin{equation}
+ M=\sum_{\rho\ \mathrm{exterior}}
+       \frac1{(\rho-c)^2-D}.
+ \label{agc:pair-M}
+\end{equation}
+This sum is absolute, includes every exterior occurrence, and continues
+through exterior multiplicities and a double target while the contour
+remains cleared. At a target double, $M=-R_z(t,c)$ and $D'=2$.
+\end{proposition}
+
+\begin{proof}
+At a simple target, differentiating $H=Q_*A$ twice in space gives
+\[
+ z_+'=\frac1s+2R(t,c+s),\qquad
+ z_-'=-\frac1s+2R(t,c-s).
+\]
+Taking the mean gives $c'$. Since $D=s^2$,
+$D'=s(z_+'-z_-')=2+2s(R(c+s)-R(c-s))$, which is
+\eqref{agc:pair-law}. These symmetric expressions extend holomorphically
+to $s=0$ by the counted coordinates.
+For an exterior occurrence, its logarithmic pole contributes
+\[
+ -\frac1{2s}\left(\frac1{c+s-\rho}-\frac1{c-s-\rho}\right)
+       =\frac1{(\rho-c)^2-D}.
+\]
+The product regularizers are constant in space and cancel in this
+difference. The resulting summand is $O(|\rho|^{-2})$ at infinity,
+so \eqref{agc:pair-count} justifies summation and passage to the limit.
+Alternatively, for $Q_*=(z-c)^2-D$ the same expression is
+\begin{equation}
+ M=-\frac1{2\pi\ii}\oint_\Gamma Q_*^{-1}B\,\dd z.
+ \label{agc:pair-M-contour}
+\end{equation}
+For each exterior pole the integral is minus its rational weight;
+the target contribution has total residue zero because all its poles
+are inside $\Gamma$ and it decays as $z^{-3}$ at infinity.
+The fixed contour proves holomorphy at all allowed multiplicities.
+\end{proof}
+
+The analytic exterior factor is invisible to polynomial-weighted count
+integrals: $\oint_\Gamma z^kR\,\dd z=0$ for $k\ge0$.
+Nevertheless its values at the targets enter their velocities through
+the product rule. Identical current target positions can therefore have
+different subsequent motion when their complete exteriors differ.
+This is a local statement about deflation, not permission to change
+the canonical field by an arbitrary analytic multiplier.
+
+The first spatial variation of this analytic field can be retained
+without discarding its effect on the clock. Put $Z=z-c$ and
+$b=R_z(t,c)$. On a cleared contour enclosing the pair and its center,
+Cauchy's formula and
+$1/(Z^2-D)=1/Z^2+D/[Z^2(Z^2-D)]$ give
+\begin{equation}
+ \begin{split}
+ D'&=2+4bD+E_D,\\
+ b&=\frac1{2\pi\ii}\oint_\Gamma\frac{B}{Z^2}\,\dd z,\qquad
+ E_D=\frac{4D^2}{2\pi\ii}\oint_\Gamma
+                         \frac{B}{Z^2(Z^2-D)}\,\dd z.
+ \end{split}
+ \label{agc:pair-affine}
+\end{equation}
+Replacing $R$ by $B$ is valid since the added target rational functions
+have all poles inside and total residue zero. If $|R_{zzz}|\le C_3$
+on both center-to-root segments, Taylor's formula with integral
+remainder gives $|E_D|\le(2/3)C_3|D|^2$.
+The constant exterior response affects $c'$, while the affine slope
+$b$ affects $D'$ already at order $D$. A small $E_D$ alone supplies
+no bound on the uncertainty in $b$; the full rational kernel is exactly
+$4D/Z^2+4D^2/[Z^2(Z^2-D)]=4D/(Z^2-D)$.
+
+\subsection{Cumulative distances and the dipole response}
+
+Now assume the \emph{complete} divisor is real and simple on an interval,
+and label its ordered roots $x_n$, $n\in\mathbb Z$. Define
+$g_n=x_{n+1}-x_n>0$, $c_n=(x_n+x_{n+1})/2$,
+$D_n=g_n^2/4$, and let $M_n$ be \eqref{agc:pair-M} for this edge.
+For $m\ge1$, put
+\[
+ L_{n,m}=\sum_{j=1}^m g_{n-j},\qquad
+ R_{n,m}=\sum_{j=1}^m g_{n+j}.
+\]
+The left exterior root $x_{n-m}$ is at distances $-L_{n,m}$ and
+$-(L_{n,m}+g_n)$ from the two targets. The right root
+$x_{n+1+m}$ is at distances $R_{n,m}+g_n$ and $R_{n,m}$.
+They exhaust the exterior, so absolute convergence proves
+\begin{equation}
+ \begin{split}
+ M_n&=\sum_{m\ge1}\left\{
+ \frac1{L_{n,m}(L_{n,m}+g_n)}+
+ \frac1{R_{n,m}(R_{n,m}+g_n)}\right\},\\
+ g_n'&=\frac4{g_n}-2g_nM_n.
+ \end{split}
+ \label{agc:pair-chain-law}
+\end{equation}
+This is a nonlocal equation: a gap enters many rows through cumulative
+distances. It determines relative motion, leaving the common translation
+coordinate to the node or center law. If only a finite real block is
+known, only its actual terms have this positive-gap form. Every omitted
+real or nonreal occurrence must remain in the complete interaction.
+
+For targets $a,b=a+g$ and an exterior $\rho$,
+\begin{equation}
+ \frac1{(\rho-b)(\rho-a)}
+   =\frac1g\left(\frac1{\rho-b}-\frac1{\rho-a}\right),\qquad
+ M=-\frac{R(b)-R(a)}g=-\frac1g\int_a^b R_z(z)\,\dd z.
+ \label{agc:pair-dipole}
+\end{equation}
+Thus the dipole interpretation is an exact difference of reciprocal
+fields. At $w=\rho-(a+b)/2$ it is
+$w^{-2}(1+O(g^2/w^2))$ as $|w|/g\to\infty$; the common far
+response cancels before summation. $M$ is the complete response per
+unit separation, not a population average.
+
+There is also an exact spatial cancellation across edges. From
+$x_n'=2U_n$ and \eqref{agc:pair-chain-law},
+\begin{equation}
+ \begin{split}
+ g_nM_n&=\frac2{g_n}-(U_{n+1}-U_n),\\
+ \sum_{n=a}^{b}g_nM_n
+   &=2\sum_{n=a}^{b}\frac1{g_n}-(U_{b+1}-U_a).
+ \end{split}
+ \label{agc:pair-block}
+\end{equation}
+The proof is subtraction of the two node velocities followed by finite
+telescoping. Shared interior force errors cancel if the same node
+approximation is used on both edges. The identity controls a block
+aggregate; it does not stop that aggregate from concentrating into a
+single small gap. At a merger, the regular chart of the merging pair
+may survive, but its neighboring edge charts lose exterior separation
+because a formerly exterior occurrence meets a target.
+
+\subsection{Changing density and local fluctuations}
+
+The canonical chain has a varying logarithmic mean scale
+\cite{VCDCMDiscussion09,VCDCMDiscussion10}. In the normalization
+$x=2\gamma$ at $t=0$, the smooth counting main term and its derivative are
+\begin{equation}
+ \overline N(X)=\frac{X}{4\pi}\left(\log\frac{X}{4\pi}-1\right),
+ \qquad \nu(X)=\frac1{4\pi}\log\frac{X}{4\pi},\qquad
+ d_X=\nu(X)^{-1}.
+ \label{agc:pair-density}
+\end{equation}
+Here $\nu$ differentiates the smooth main term, not the discrete
+counting staircase or its error. The complete counting law alone
+does not make the divisor real or give each real gap a lower bound.
+
+Freeze a positive reference length $d$ near a chosen height and put
+$\alpha_n=g_n/d$, $\mu_n=d^2M_n$, and
+$\tau=(t-t_*)/d^2$. Rescaling the cumulative distances in
+\eqref{agc:pair-chain-law} yields its exact dimensionless version, and
+\begin{equation}
+ D_n'=2-\alpha_n^2\mu_n,\qquad
+ \frac{\dd\alpha_n}{\dd\tau}=\frac4{\alpha_n}-2\alpha_n\mu_n.
+ \label{agc:pair-unfolded}
+\end{equation}
+Both the target fluctuation $\alpha_n$ and the environmental response
+$\mu_n$ matter. A bound $d^2M_n\simeq2$ does not imply near cancellation
+unless $g_n/d$ is controlled too. If $d$ instead varies with time,
+$Y=D/d(t)^2$ obeys $Y'=D'/d^2-2Yd'/d$.
+The logarithmic scale therefore cannot be inserted as a moving unit
+without its derivative payment.
+
+In the existing positive-time canonical acquisition, individual zeros
+are first localized near a nonuniform clock; that input already gives
+the target gap a positive lower bound. Only then are the nearby terms
+compared with reference cumulative distances and the complete distant
+tail paid to obtain $d^2M\simeq2$ \cite{VCDCMDiscussion10}.
+The downstream interaction estimate is therefore not a derivation of
+individual separation from smooth counting density alone. Extending
+its domain requires additional canonical information.
+
+As a normalization control only, a uniform infinite chain with gap $g$
+has $M=2g^{-2}\sum_{m\ge1}[m(m+1)]^{-1}=2/g^2$ and $g'=0$.
+Its telescoping sum checks the factors in the physical law; it is not
+a canonical model of the height-dependent fluctuations.
+Even the isolated quadratic heat field $z^2-2(t-T)$ obeys
+\eqref{agc:pair-law}, with $M=0$, and has a double at $t=T$.
+Such controls fail the literal theta-source premise, not this local
+algebra. The next section organizes the complete exterior response;
+the source estimate needed for continuation remains additional input.

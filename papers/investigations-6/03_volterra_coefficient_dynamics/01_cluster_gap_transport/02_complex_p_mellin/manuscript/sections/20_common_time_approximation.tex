@@ -1,0 +1,266 @@
+% 18 November 2026. Prepared for Edward Baker with OpenAI Codex LLM
+% assistance. Actual inherited serving model and effort unavailable.
+\section{One initialized divisor on a common time interval}
+\label{sec:common-time}
+
+The compatible polynomial construction in Section~\ref{sec:finite}
+admits an explicit approximation theorem on a fixed time interval.
+The essential point is that the polynomial is initialized once: it is
+not replaced by a new truncation of the canonical divisor at each time.
+We give the proof from \cite{BakerCM47}, assessed within its fixed-input
+scope in \cite{BakerCMReview40}. Its quantitative conclusion is an
+$O(\log N/N)$ field error with specified constants. A useful numerical
+realization additionally needs those constants and finite input errors
+to satisfy the contour tests in Section~\ref{sec:counted-transfer}.
+
+\subsection{Initialization and the omitted opposite-pair tail}
+
+Fix $I=[t_0,t_1]\subset[0,1/2]$, put $\Delta=t_1-t_0$, and retain
+the complete canonical source and initial count assumptions of
+Section~\ref{sec:framework}. Let $h_0=H(t_0,0)>0$ and
+$H_0(z)=H(t_0,z)$. Choose one representative $\rho_\nu$ for each
+opposite pair of zero \emph{occurrences} at $t_0$. Thus multiplicity
+$m$ at each of $\rho,-\rho$ contributes $m$ factors. The multiset of
+squares $\rho_\nu^2$ is conjugation invariant, and
+\begin{equation}
+ H_0(z)=h_0\prod_\nu(1-z^2/\rho_\nu^2).
+ \label{cta:initial-product}
+\end{equation}
+For a divisor cutoff $N\ge1$, retain every modulus tie, opposite pair,
+conjugate and multiplicity, and define
+\begin{equation}
+ \begin{split}
+ J_N&=\#\{\nu:|\rho_\nu|\le N\},\\
+ P_N(t_0,z)&=h_0\prod_{|\rho_\nu|\le N}(1-z^2/\rho_\nu^2),\\
+ P_N(t_0+\tau,z)&=\exp(-\tau\partial_z^2)P_N(t_0,z),
+       \qquad 0\le\tau\le\Delta,\\
+ E_N&=\sum_{|\rho_\nu|>N}|\rho_\nu|^{-2}
+     =\frac12\sum_{\substack{\rho\text{ an occurrence}\\|\rho|>N}}
+                    |\rho|^{-2}.
+ \end{split}
+ \label{cta:initialization}
+\end{equation}
+The exponential terminates. Throughout these two sections $N$ is a
+divisor radius; the moment-head order $P$ in Section~\ref{sec:finite}
+is a different parameter. No global strip or reality assertion for
+the evolved polynomial is part of the construction.
+
+\begin{lemma}[A common absolute-product envelope]
+\label{cta:envelope}
+Set $K=5\Cu$ and supply the finite near-origin data
+\begin{equation}
+ q_{<1}=\#\{\nu:|\rho_\nu|<1\},\qquad
+ C_{<1}=\prod_{|\rho_\nu|<1}\max(1,|\rho_\nu|^{-2}).
+ \label{cta:near-data}
+\end{equation}
+With an empty product equal to one, define
+\begin{equation}
+ g_0=h_0C_{<1},\qquad A=2q_{<1}+8K,\qquad
+ G(r)=g_0\exp\{A(1+r)\log(2+r)\}.
+ \label{cta:envelope-definition}
+\end{equation}
+Then the full absolute product and every partial absolute product obey
+\begin{equation}
+ h_0\prod_\nu(1+r^2/|\rho_\nu|^2)\le G(r),\qquad r\ge0,
+ \label{cta:absolute-product}
+\end{equation}
+and, for $N\ge1$,
+\begin{equation}
+ J_N\le KN\log(2+N),\qquad
+ E_N\le\frac{2K\{\log(2+N)+1\}}N.
+ \label{cta:tail-bound}
+\end{equation}
+The envelope is independent of $N$.
+\end{lemma}
+
+\begin{proof}
+Let $A_*(x)=\#\{\nu:|\rho_\nu|\le x\}$. Covering the projected
+interval $[-x,x]$ by integer unit bands and applying
+\eqref{eq:count-safe} gives, for $x\ge1$,
+\[
+ A_*(x)\le\tfrac12(2x+3)\Cu\log(3+x)
+          \le Kx\log(2+x).
+\]
+The factor $1/2$ counts opposite occurrences exactly. It uses neither a
+lower population bound nor a zero-count asymptotic. The factors of
+modulus below one contribute at most $C_{<1}(1+r)^{2q_{<1}}$.
+For all remaining factors, the positive integral identity for
+$\log(1+r^2/s^2)$ and interchange of nonnegative sums give
+\begin{equation}
+ \sum_{|\rho_\nu|\ge1}\log(1+r^2/|\rho_\nu|^2)
+ \le2Kr^2\int_1^\infty\frac{\log(2+u)}{u^2+r^2}\dd u.
+ \label{cta:layer-cake}
+\end{equation}
+Factors of modulus one are included by this integral identity.
+For $r\ge1$, split the integral at $r$. The lower and upper pieces
+are at most $2Kr\log(2+r)$ and $2Kr\{\log(2+r)+1\}$, since
+\begin{equation}
+ \int_b^\infty\frac{\log(2+u)}{u^2}\dd u
+ =\frac{\log(2+b)}b+\frac12\log(1+2/b)
+ \le\frac{\log(2+b)+1}b.
+ \label{cta:tail-integral}
+\end{equation}
+Their sum is at most $6Kr\log(2+r)$. For $0\le r\le1$, the right
+side of \eqref{cta:layer-cake} is at most
+$2Kr^2(\log3+1)<5Kr^2$. These bounds and the near-origin factors
+prove \eqref{cta:absolute-product} with the larger common constant
+in \eqref{cta:envelope-definition}.
+
+Finally, again interchanging nonnegative terms,
+\[
+ E_N=\int_N^\infty2u^{-3}
+              \#\{\nu:N<|\rho_\nu|\le u\}\dd u
+ \le2K\int_N^\infty\frac{\log(2+u)}{u^2}\dd u.
+\]
+Equation~\eqref{cta:tail-integral} proves the tail assertion; the
+count assertion is the bound for $A_*(N)$.
+\end{proof}
+
+\begin{lemma}[Initial field error without division by a factor]
+\label{cta:telescoping}
+For every $z\in\C$ and $N\ge1$,
+\begin{equation}
+ |H_0(z)-P_N(t_0,z)|\le |z|^2G(|z|)E_N.
+ \label{cta:initial-error}
+\end{equation}
+The alternative estimate
+$|H_0-P_N(t_0,\cdot)|\le G(|z|)(\exp(|z|^2E_N)-1)$ also holds.
+\end{lemma}
+
+\begin{proof}
+At a larger complete finite cutoff, add the omitted factors one at a
+time. The change on adding $1-z^2/\rho_\nu^2$ is $-z^2/\rho_\nu^2$
+times a partial product. Its absolute value, including $h_0$, is at
+most $|z|^2|\rho_\nu|^{-2}G(|z|)$ by
+Lemma~\ref{cta:envelope}. Summing and passing to the convergent
+canonical product proves \eqref{cta:initial-error}. No possibly
+vanishing factor was divided out, so the estimate holds also at simple
+and multiple zeros. For the alternative bound, factor the retained
+product from the omitted product and use
+$|\prod(1+a_\nu)-1|\le\exp(\sum|a_\nu|)-1$.
+\end{proof}
+
+\subsection{An evaluated Gaussian propagation constant}
+
+\begin{theorem}[Common-time field and spatial-jet approximation]
+\label{cta:field-theorem}
+Keep the fixed initial inputs above. Define
+\begin{equation}
+ \begin{gathered}
+ \lambda=\frac1{8(1+\Delta)},\qquad
+ \varepsilon_\lambda=\frac{\lambda}{2A},\qquad
+ b_\lambda=2\varepsilon_\lambda-1-\log\varepsilon_\lambda,\\
+ B_\lambda=A b_\lambda+
+       \frac{A^2(\varepsilon_\lambda+b_\lambda)^2}{2\lambda},
+ \qquad M_\lambda=g_0\e^{B_\lambda},\\
+ \mathcal C(R,\Delta)=M_\lambda\e^{2\lambda R^2}
+       \left\{2R^2\sqrt{1+\Delta}
+                     +4\Delta(1+\Delta)^{3/2}\right\}.
+ \end{gathered}
+ \label{cta:gaussian-constant}
+\end{equation}
+For every fixed $R\ge0$ and every $N\ge1$,
+\begin{equation}
+ \sup_{\substack{t\in I\\|z|\le R}}
+       |H(t,z)-P_N(t,z)|\le\mathcal C(R,\Delta)E_N.
+ \label{cta:field-error}
+\end{equation}
+For each padding $p>0$ and $0\le j\le3$, a common jet bound is
+\begin{equation}
+ \sup_{\substack{t\in I\\|z|\le R}}
+       |\partial_z^j(H-P_N)(t,z)|\le C_jE_N,
+ \qquad C_j=\frac{j!}{p^j}\mathcal C(R+p,\Delta).
+ \label{cta:jet-error}
+\end{equation}
+For $j=0$ the constant in \eqref{cta:field-error} is slightly sharper.
+All these errors are $O(\log N/N)$ at the fixed inputs. No small-tail
+condition is needed for the field estimate.
+\end{theorem}
+
+\begin{proof}
+For a standard normal real variable $X$, the terminating Taylor series
+and $\mathbb E X^{2k}=(2k)!/(2^kk!)$ give
+\begin{equation}
+ P_N(t_0+\tau,z)
+   =\mathbb E P_N(t_0,z+\ii\sqrt{2\tau}X).
+ \label{cta:polynomial-gaussian}
+\end{equation}
+The term of order $2k$ is precisely
+$(-\tau)^k\partial_z^{2k}P_N(t_0,z)/k!$, with the required negative
+heat sign. For the canonical field this formula must be justified
+separately from the literal source. For $u\ge0$,
+\[
+ \mathbb E|\cos((z+\ii\sqrt{2\tau}X)u)|
+ \le \e^{|\Im z|u}\mathbb E\e^{\sqrt{2\tau}|X|u}
+ \le2\e^{|\Im z|u+\tau u^2}.
+\]
+After multiplication by $\e^{t_0u^2}\Phi(u)$, the source decay in
+\eqref{eq:source} gives an integrable majorant, uniformly on the fixed
+compact spatial set and $0\le\tau\le\Delta$. Fubini and the Gaussian
+exponential expectation therefore prove
+\begin{equation}
+ H(t_0+\tau,z)=\mathbb E H_0(z+\ii\sqrt{2\tau}X).
+ \label{cta:canonical-gaussian}
+\end{equation}
+This does not assert backward-heat existence for an arbitrary entire
+initial product.
+
+To evaluate a dominating constant, use
+$\log y\le\varepsilon_\lambda y-1-\log\varepsilon_\lambda$.
+It implies $\log(2+r)\le\varepsilon_\lambda r+b_\lambda$ and hence
+\[
+ A(1+r)\log(2+r)
+ \le\tfrac\lambda2r^2+A(\varepsilon_\lambda+b_\lambda)r+A b_\lambda
+ \le\lambda r^2+B_\lambda.
+\]
+The last step is $ur\le\lambda r^2/2+u^2/(2\lambda)$.
+Thus $G(r)\le M_\lambda\e^{\lambda r^2}$.
+For $|z|\le R$ and $0\le\tau\le\Delta$, set
+$r=R+\sqrt{2\Delta}|X|$. Then
+$r^2\le2R^2+4\Delta X^2$ and
+$1-8\lambda\Delta=(1+\Delta)^{-1}$. Direct Gaussian integration gives
+\[
+ \mathbb E\e^{4\lambda\Delta X^2}=\sqrt{1+\Delta},\qquad
+ \mathbb E X^2\e^{4\lambda\Delta X^2}=(1+\Delta)^{3/2}.
+\]
+Consequently $\mathbb E[r^2G(r)]\le\mathcal C(R,\Delta)$.
+Apply Lemma~\ref{cta:telescoping} inside
+\eqref{cta:polynomial-gaussian}--\eqref{cta:canonical-gaussian} to obtain
+\eqref{cta:field-error}. This evaluates the whole Gaussian path,
+including its tails. Finally, Cauchy's formula on a circle of radius
+$p$ about each $|z|\le R$ proves \eqref{cta:jet-error}.
+\end{proof}
+
+Both fields satisfy the same heat equation, so the estimates for orders
+two and three also pay $\partial_t(H-P_N)$ and
+$\partial_t\partial_z(H-P_N)$. The theorem concerns fixed height,
+time interval and derivative order. Its constants can be large; their
+explicit finiteness proves neither affordable acquisition nor a uniform
+height or simultaneous order/cutoff limit.
+
+\subsection{The finite coefficient realization}
+
+Write $J=J_N$ and $P_N(t,z)=\sum_{k=0}^J a_{2k}(t)z^{2k}$.
+Coefficient comparison in the heat equation gives
+\begin{equation}
+ a_{2k}'=-(2k+2)(2k+1)a_{2k+2},\qquad a_{2J}'=0,
+ \label{cta:coefficient-flow}
+\end{equation}
+and repeated differentiation, or the terminating exponential, gives
+\begin{equation}
+ a_{2k}(t_0+\tau)=\sum_{r=0}^{J-k}
+ \frac{(-\tau)^r}{r!}\frac{(2k+2r)!}{(2k)!}a_{2k+2r}(t_0).
+ \label{cta:coefficient-solution}
+\end{equation}
+This is a closed system of $J+1$ real coefficients. Real even symmetry,
+degree and the leading coefficient are preserved, including at mergers.
+All higher moments of this polynomial are determined by its divisor;
+they have not been assigned independent zero values above a moment head.
+
+The required finite input is the complete initial divisor through $N$,
+its ties and multiplicities, and its normalization, or equivalent
+coefficient data. The complete count/tail input, near-origin factors and
+source identity are additional analytical inputs. Lemma~\ref{cta:envelope}
+bounds the number of required coefficients; it does not acquire them.
+Section~\ref{sec:counted-transfer} pays their uncertainty and the
+independent contour information needed for the intended observables.

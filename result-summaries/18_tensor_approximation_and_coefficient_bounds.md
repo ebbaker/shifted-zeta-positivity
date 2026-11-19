@@ -555,3 +555,63 @@ Independent tube floors and anchors remain inputs; no new signed gap,
 coverage, computational saving or RH result. Separate nonauthor internal
 shared-premise assessment; [Continuation49](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/49_VCD_GT_CM_COMMON_TIME_APPROXIMATION_AND_CONTINUATION_20261118.md)
 routes the finite-data/consumer decision to B05 r2.
+
+
+**Finite-data conditioning screen, 18 November 2026.** For Edward Baker
+with Codex assistance; actual root/helper settings unavailable.
+[CM Note50](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/50_VCD_GT_CM_FINITE_DATA_CONDITIONING_DECISION_20261118.md)
+is **proved in-note from the cited certificate**: the short interval
+[0,1/1024] inherits E16's strong collar and h_G=35625, with explicit gates
+for log-W error 1e-6. Its global count-tail allowance requires log N>48,000,000;
+a calibrated local core with that same global complement also fails under
+N<=2^40. The source states: “This is a lower bound on the cutoff required
+by **formula (9)**.” These are sufficient-allowance failures, not actual
+error or complexity lower bounds. [E41](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/23_VCD_GT_CM_E41_CONDITIONING_ASSESSMENT_20261118.md)
+accepts within inherited-certificate scope without correction. No new
+canonical acquisition, signed gain or direct-method advantage; internal
+shared-premise assessment. This resolves B05 r2's decision, not the
+remaining centered whole-path payment.
+
+
+**Centered-path allowance and scoped stop, 18 November 2026.** For Edward
+Baker with Codex assistance; actual settings unavailable.
+[CM Note51](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/51_VCD_GT_CM_CENTERED_PATH_BOUND_AND_SCOPED_STOP_20261118.md)
+is **proved in-note from the cited inputs**: GT's existing centered xi
+majorant pays a complete evaluated O(E_N) Gaussian-path allowance with
+an explicitly suppressible far radial remainder. This resolves the
+whole-path estimate left above, but its absolute core still forces the
+specified Note48 log-W allowance above7/65536>1e-6 under N<=2^40.
+The source states: “This is a lower bound on the chosen positive error
+allowance, not on |G-g A_N P_N|.” [E42](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/24_VCD_GT_CM_E42_CENTERED_PATH_ASSESSMENT_20261118.md)
+accepts after one control-premise wording clarification; formulas unchanged.
+B05's tested realization is parked, with no acquisition or general
+complexity obstruction. Internal shared-premise review with prior-assessor
+overlap; earlier approximation and source results remain intact.
+
+
+**Joint annular alias refinement, 18 November 2026.** For Edward Baker
+with Codex assistance; actual settings unavailable.
+[CM Note52](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/52_VCD_GT_CM_JOINT_ANNULAR_ALIAS_DECISION_20261118.md)
+is **proved in-note from inherited certificates**: the common-log Fourier
+constraint saves at least5% of the annular allowance and >2.4% of the
+complete outward-parsed Record22 width. It states: “This is an analytical
+consequence of Record22, not a new numerical run.”
+[E43](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/25_VCD_GT_CM_E43_JOINT_ANNULAR_ASSESSMENT_20261118.md)
+accepts within analytic-annular/inherited-certificate scope without
+required correction. E44 will materialize the new endpoint interval.
+This refines the direct estimator; joint affine splitting equals its
+direct kernel on identical information. No new source, recursive/global
+result or cost claim; internal shared-premise review.
+
+
+**Analytical manuscript integration, 18 November 2026.** For Edward Baker
+with Codex assistance; actual settings unavailable.
+[CM Review26](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/26_VCD_GT_CM_E47_ANALYTICAL_MANUSCRIPT_ASSESSMENT_20261118.md)
+states: “Accepted as an analytical manuscript within the stated fixed-input,
+counted-chart and inherited-certificate scope, after one bounded
+clarification and production correction round.”
+[Integration54](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/54_VCD_GT_CM_ANALYTICAL_MANUSCRIPT_INTEGRATION_20261118.md)
+records the systematic proofs, supporting-only numerics and 107-page
+ignored PDF. Earlier manuscript milestones are historical, not withdrawn.
+This is internal shared-premise nonauthor assessment, not new source
+evidence or specialist validation. E44's new endpoint remains unexecuted.

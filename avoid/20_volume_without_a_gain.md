@@ -280,3 +280,44 @@ also verifies a strong-collar quartic with exact zero approximation error
 at its merger: approximation and finite realization do not supply a gap
 sign. This is a scoped lesson, not an obstruction to tighter estimates or
 other useful finite-data methods; internal shared-premise review.
+
+
+**A local core cannot hide its global complement, 18 November 2026.**
+For Edward Baker with Codex assistance; actual root/helper settings
+unavailable. [CM Note50](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/50_VCD_GT_CM_FINITE_DATA_CONDITIONING_DECISION_20261118.md)
+pays an inherited short tube and improves the calibrated core, but its
+specified global Gaussian complement still fails under N<=2^40. It states:
+“Core localization and common scalar rescaling alone do not pay it.”
+[E41](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/23_VCD_GT_CM_E41_CONDITIONING_ASSESSMENT_20261118.md)
+accepts within scope. Screen the complete allowance before acquisition;
+separate fixed calibration can improve a core while common rescaling
+cannot change an existing error/floor ratio. Do not turn this failure
+into a lower bound on actual error or all finite methods. No source
+campaign or manuscript expansion followed; internal shared-premise review.
+
+
+**A repaired tail can leave the consumer unchanged, 18 November 2026.**
+For Edward Baker with Codex assistance; actual settings unavailable.
+[CM Note51](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/51_VCD_GT_CM_CENTERED_PATH_BOUND_AND_SCOPED_STOP_20261118.md)
+pays the previously missing centered whole path but shows that its
+absolute core alone defeats the actual consumer budget. It states:
+“Park this finite-realization candidate; no acquisition E is issued.”
+[E42](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/24_VCD_GT_CM_E42_CENTERED_PATH_ASSESSMENT_20261118.md)
+accepts after one premise-wording clarification. Test the complete
+consumer after repairing a component, and honor a declared stop rather
+than generating another automatic revision. This stop concerns the
+specified allowance, not true error or all methods; no source campaign
+or manuscript expansion followed. Internal shared-premise assessment.
+
+
+**Prove a total saving before another run, 18 November 2026.** For Edward
+Baker with Codex assistance; actual settings unavailable.
+[CM Note52](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/notes/52_VCD_GT_CM_JOINT_ANNULAR_ALIAS_DECISION_20261118.md)
+states: “This is a modest refinement of the existing direct relaxation.”
+Its joint annular estimate pays the unchanged square, coordinates, source
+and rounding before proving >2.4% complete parsed-width improvement.
+[E43](../papers/investigations-6/03_volterra_coefficient_dynamics/01_cluster_gap_transport/02_complex_p_mellin/reviews/25_VCD_GT_CM_E43_JOINT_ANNULAR_ASSESSMENT_20261118.md)
+accepts within scope. The numerical factor has an explicit h/r premise;
+it cannot be blindly applied to the zero-centered collision control.
+The justified next E is a bounded record transformation, not a source
+campaign. Equally informed direct methods receive the same refinement.

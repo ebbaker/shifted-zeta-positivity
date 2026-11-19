@@ -28,8 +28,9 @@ literal field and expose manageable coefficients, transport laws or
 transfer estimates that might support new proofs.
 
 The [program research overview](research-overview/01_TENSOR_NETWORK_PROGRAM_OVERVIEW_20261113.md)
-explains the common source, the distinct roles of the four branches and
-the open mathematical questions. Approximation and exact representation
+explains the common source, the distinct roles of the four original
+representation branches and the open mathematical questions. The later
+arithmetic gap continuation track is linked below. Approximation and exact representation
 are complementary parts of the program: finite QTT constructions explore
 rank and accuracy, while the other branches study exact infinite chains,
 their coefficient dynamics and convergent tensor products.
@@ -40,6 +41,7 @@ their coefficient dynamics and convergent tensor products.
 | [02 — Jacobi-chain height flow](02_jacobi_chain_height_flow/README.md) | Can an exact infinite chain generate a useful continuous family of wavefunctions and describe propagation toward higher heights? | [Jacobi-chain overview](02_jacobi_chain_height_flow/research-overview/01_JACOBI_CHAIN_RESEARCH_OVERVIEW_20261113.md) |
 | [03 — Volterra coefficient dynamics](03_volterra_coefficient_dynamics/README.md) | Can source-constrained tail responses support degree induction with a Fourier-zero consequence? | [Current induction overview](03_volterra_coefficient_dynamics/research-overview/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_OVERVIEW_20261116.md) |
 | [04 — Exact infinite tensor products](04_exact_infinite_tensor_products/README.md) | Can factors approaching identity provide a manageable exact recursive network, including growing-height and full-source limits? | [Infinite-product overview](04_exact_infinite_tensor_products/research-overview/01_INFINITE_PRODUCTS_RESEARCH_OVERVIEW_20261113.md) |
+| [05 — Arithmetic gap continuation](05_arithmetic_gap_continuation/README.md) | Can arithmetic residuals and coupled gap dynamics extend a certified backward interval beyond direct localization? | [AGC overview](05_arithmetic_gap_continuation/research-overview/01_AGC_RESEARCH_OVERVIEW_20261119.md) |
 
 The exact single-excitation MPS and height-propagation questions belong to
 branch 02; theta coefficient relations belong to 03; recursive scale
@@ -74,6 +76,7 @@ frozen requests and actual dependency checks.
 | 02 — Jacobi chain | [JCH plan](02_jacobi_chain_height_flow/research-plan/01_JACOBI_CHAIN_RESEARCH_PLAN_20261113.md) | [JCH progress](02_jacobi_chain_height_flow/research-progress/01_JACOBI_CHAIN_RESEARCH_PROGRESS_20261113.md) |
 | 03 — Volterra coefficients | [VCD plan](03_volterra_coefficient_dynamics/research-plan/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_PLAN_20261116.md) | [Sole VCD progress](03_volterra_coefficient_dynamics/research-progress/02_VCD_TAIL_CLOSURE_INDUCTION_RESEARCH_PROGRESS_20261116.md) |
 | 04 — Infinite products | [ITP plan](04_exact_infinite_tensor_products/research-plan/01_INFINITE_PRODUCTS_RESEARCH_PLAN_20261113.md) | [ITP progress](04_exact_infinite_tensor_products/research-progress/01_INFINITE_PRODUCTS_RESEARCH_PROGRESS_20261113.md) |
+| 05 — Arithmetic gap continuation | [AGC plan](05_arithmetic_gap_continuation/research-plan/01_AGC_RESEARCH_PLAN_20261119.md) | [Sole AGC progress](05_arithmetic_gap_continuation/research-progress/01_AGC_RESEARCH_PROGRESS_20261119.md) |
 
 - [Shared continuation note and branch prompts](notes/01_BRANCH_OVERVIEWS_AND_CONTINUATION_20261113.md).
 - [Source and ownership crosswalk](notes/02_BRANCH_SOURCE_CROSSWALK_20261113.md).
@@ -100,3 +103,15 @@ the author's parent-plan location and subsequent branch-planning request above, 
 [avoid index](../../avoid/README.md). The
 [program overview](research-overview/01_TENSOR_NETWORK_PROGRAM_OVERVIEW_20261113.md)
 links the applicable control and classification rules.
+
+## Arithmetic continuation track, 19 November 2026
+
+At Edward Baker's request, [05](05_arithmetic_gap_continuation/README.md)
+is a direct child of this collection and uses VCD-GT-CM as an analytical
+input. Its [self-contained draft](05_arithmetic_gap_continuation/manuscript/README.md)
+and [sustained continuation prompt](05_arithmetic_gap_continuation/notes/01_AGC_CONTINUATION_AND_PROMPT_20261119.md)
+are separate from the original four representation plans. AGC alone owns
+its new tasks; no TN6/VCD task changes status through this setup. Future
+research is configured for ultra with bounded Sol 6.1/ultra helpers and
+multi-step lead continuation. Setup lead recorded gpt-6-astra/max;
+prepared for Edward Baker with OpenAI Codex assistance.
