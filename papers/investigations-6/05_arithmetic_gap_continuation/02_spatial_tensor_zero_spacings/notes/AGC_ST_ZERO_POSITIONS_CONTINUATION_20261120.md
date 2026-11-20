@@ -2,7 +2,7 @@
 
 20 November 2026, America/New_York. Prepared for Edward Baker with OpenAI Codex LLM assistance. The planning chat's actual model and effort are unrecorded. This dated handoff points to the [sole AGC-ST-Z register](../research-progress/02_AGC_ST_ZERO_POSITIONS_RESEARCH_PROGRESS_20261120.md).
 
-**Research update, 20 November 2026.** The sequence below was the opening assignment. The [position results and current continuation](13_AGC_ST_Z_POSITION_MILESTONE_AND_CONTINUATION_20261120.md) give the two forecasts, the comparison and the next interior-pair question. The live task states remain in the linked register.
+**Routing update, 20 November 2026.** The table and prompt below document the completed opening position assignment. The [position milestone](13_AGC_ST_Z_POSITION_MILESTONE_AND_CONTINUATION_20261120.md) records its forecasts. Start new work with [B06 and its current starting instruction](../research-progress/02_AGC_ST_ZERO_POSITIONS_RESEARCH_PROGRESS_20261120.md#current-continuation). The block and exterior time equations take priority over the deferred interior-pair test. Update prepared for Edward Baker with OpenAI Codex assistance, recorded gpt-6.2-astra/max.
 
 | Next work | Type and recommended model | Dependency | Expected output |
 | --- | --- | --- | --- |
@@ -17,6 +17,8 @@
 Read the [branch home](../README.md), [revised overview](../research-overview/02_AGC_ST_ZERO_POSITIONS_RESEARCH_OVERVIEW_20261120.md), [revised plan](../research-plan/02_AGC_ST_ZERO_POSITIONS_RESEARCH_PLAN_20261120.md), [reference guide](../references/README.md), and [gap work and handoffs](../research-progress/01_AGC_ST_RESEARCH_PROGRESS_20261119.md). The [result index](../../../../../result-summaries/README.md), especially [cluster 18](../../../../../result-summaries/18_tensor_approximation_and_coefficient_bounds.md) and [collision controls](../../../../../result-summaries/12_collision_controls_and_screening.md), and [patterns index](../../../../../avoid/README.md), especially [01](../../../../../avoid/01_restating_the_target.md), [02](../../../../../avoid/02_shape_only_arguments_and_the_controls.md), [03](../../../../../avoid/03_lifts_and_re_realizations_in_new_coordinates.md) and [07](../../../../../avoid/07_scoped_exclusions_read_as_universal.md), govern interpretation.
 
 ## Pasteable research prompt
+
+Historical opening assignment for the position milestone.
 
 > Continue the spatial-tree investigation at papers/investigations-6/05_arithmetic_gap_continuation/02_spatial_tensor_zero_spacings in the shifted-zeta-positivity repository. Work for Edward Baker under AGENTS.md, INVESTIGATION_SETUP_WORKFLOW.md, GPT_RESEARCH_MODEL_WORKFLOW.md, REFERENCE_WORKFLOW.md, LARGE_FILES.md and tools/CHAT_HISTORY.md. Read the 20 November zero-position overview, plan, sole AGC-ST-Z progress register and references. Recheck the active gap-family register for reusable results and respect its ownership of existing packets.
 >

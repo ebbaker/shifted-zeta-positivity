@@ -1,0 +1,59 @@
+\section{One counted gap from time 1000 to time 999}\label{sec:finite}
+At \(T=1000\) the complete-source calculation in \cite[\S6]{Founding08} encloses \(x_1=1.17089695713064698\ldots\), \(x_2=3.51269056449018386\ldots\), and \(x_{40}=92.49456351756309795\ldots\). The first two satisfy \(8.7369418009258\times10^{-8}<1-x_2/(3x_1)<8.7369418009259\times10^{-8}\). The errors below are outward upper bounds in the physical zero position. The finite complex inverse disk was checked for indices 1 and 2. At index 40 a direct real phase count verifies the truncated expressions.
+\begin{center}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Approximation at \(T=1000\)&\(x_1\)&\(x_2\)&\(x_{40}\)\\
+\midrule
+Mean lattice \(q_k/a\)&\(1.28\,10^{-8}\)&\(3.46\,10^{-7}\)&\(6.298\,10^{-3}\)\\
+First four logarithm residues&\(9.32\,10^{-20}\)&\(2.97\,10^{-16}\)&---\\
+Closed cubic \(Y_3/a\)&\(2.09\,10^{-15}\)&\(5.06\,10^{-13}\)&\(6.390\,10^{-6}\)\\
+Inverse through degree seven&\(3.34\,10^{-28}\)&\(6.58\,10^{-24}\)&\(3.990\,10^{-11}\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{A uniform bound from finite data at one time}
+Take the first positive edge, \(X=4\), \(s=1000-t\in[0,1]\), and \(b=671/500\). Write \(P=U-b,\ W=U^2-b^2\), and let \(\E_0\) here denote expectation at the upper anchor \(1000\). Tilting this one source gives the moments
+\begin{equation}
+ d_j(s)=\frac{\E_0[P^je^{-sW}]}{\E_0[e^{-sW}]},\quad d_0=1,\quad
+ \mu=b+d_1,\quad \sigma^2=d_2-d_1^2. \label{eq:tilt}
+\end{equation}
+The numerator for each \(0\le j\le6\) is enclosed by a cubic polynomial with absolute remainder
+\begin{equation}
+ \left|\E_0[P^je^{-sW}]
+    -\sum_{m=0}^3\frac{(-s)^m}{m!}\E_0[P^jW^m]\right|
+ \le\frac{s^4e^{b^2}}{24}\sqrt{\E_0[P^{2j}W^8]} . \label{eq:tiltrest}
+\end{equation}
+Indeed \((-sW)_+\le b^2\), and Taylor's integral remainder followed by Cauchy--Schwarz gives \eqref{eq:tiltrest}. Since \(W=P(2b+P)\), all source integrals are anchor moments through degree 28. The two-copy law gives, for \(p=2,4\),
+\begin{equation}
+ m_p^*=\frac1\mu\sum_{i=0}^p(-1)^i\binom pi d_i
+                    \{b\,d_{p-i}+d_{p-i+1}\}. \label{eq:certmom}
+\end{equation}
+This expands \(\E[U(U-U')^p]/\mu\), using the exchange symmetry for even \(p\).
+
+All moments were evaluated by outward Arb arithmetic at 224 bits, using the original anchor integrator and its complete theta tail allowance. It integrates the first square mode on \([1,2]\), bounds the higher square modes there by geometric comparison, and bounds the two omitted half-line intervals by the saddle estimates in \cite[\S6]{Founding08}. Its absolute allowance is below \(2.353\,10^{-107}\) in each peak-scaled integral for functions bounded by \((u+2)^7e^{16(u+2)}\). This covers \(|P|^{28}\) and all lower powers, since \(21\log(u+2)\le (21/e)(u+2)\). It also covers the real trigonometric endpoint tests below.
+
+Evaluate \eqref{eq:tiltrest} on 16 equal closed subintervals of \(s\). Each tilted mass has a positive lower bound. On every subinterval \(j(t,x)>0.99817\) throughout \([0,4]\). Also \(\left|\E e^{\ii x(U-\mu)}-1\right|\le x^2\sigma^2/2\); the checked inequality \(\mu X-\arcsin(X^2\sigma^2/2)>3\pi/2\) places both labelled zeros inside the interval. The centered transform remains in the corresponding disk around one, which fixes the argument from zero. These are whole-cell inequalities.
+
+\Needspace{9\baselineskip}
+\begin{proposition}[Finite signed descent]\label{prop:check}
+For \(999\le t\le1000\) the first positive edge satisfies
+\begin{equation}
+ 0.0002270493<-\dot g(t)/g(t)<0.0002300072.
+\end{equation}
+Its anchor value is \(D(1000)=1.3709993248674981982\ldots\).
+Integrating the cell-specific bounds in Proposition~\ref{prop:finite} gives
+\begin{equation}
+ 1.37162235<D(999)<1.37162972. \label{eq:number}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Apply \eqref{eq:certmom} on each cell, check \(b_*>0,l>0\), and multiply the anchor \(D\) by the interval exponentials in \eqref{eq:slab}. The cell widths are exact dyadics. The program, precision, sign tests and outward endpoints are recorded alongside the manuscript \cite{FiniteRecord}.
+\end{proof}
+An equally informed endpoint calculation uses the same \(d_0,\ldots,d_6\) at \(s=1\). At real \(x\) evaluate
+\[
+ \sum_{j=0}^5\frac{x^jd_j}{j!}\cos(bx+j\pi/2)
+ \quad\hbox{with error at most } |x|^6 d_6/720 .
+\]
+Signs on opposite sides and the common phase count enclose each root. This gives \(1.3716257900<D(999)<1.3716262696\), width below \(4.80\,10^{-7}\), versus \(7.36\,10^{-6}\) for transport. Direct quadrature of the complete upper-anchor field with the multiplier \(e^{b^2-U^2}\), using separate endpoint signs and the same count, gives \(D(999)=1.37162603031689388115504\ldots\). It shares source and tail code with the moment calculation. The path estimate establishes strict widening at every intermediate time. For the endpoint alone the finite Taylor comparison is tighter.

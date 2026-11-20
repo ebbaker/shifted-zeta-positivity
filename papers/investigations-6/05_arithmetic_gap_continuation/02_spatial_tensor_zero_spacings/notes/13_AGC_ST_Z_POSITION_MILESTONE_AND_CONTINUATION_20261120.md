@@ -2,7 +2,9 @@
 
 20 November 2026, America/New_York. Prepared for Edward Baker with OpenAI Codex LLM assistance. The coordinating turn recorded gpt-6.2-astra, effort ultra. Conceptual collaborator gpt-6.2-astra/ultra, execution and separate internal assessment gpt-6.2-sol/ultra by explicit selection. [Position register](../research-progress/02_AGC_ST_ZERO_POSITIONS_RESEARCH_PROGRESS_20261120.md) · [Source passages](../references/README.md).
 
-| Next task | Type and recommended model | Dependency | Deliverable |
+**Routing update, 20 November 2026.** The interior-pair proposal and its prompt below are deferred. The [current register](../research-progress/02_AGC_ST_ZERO_POSITIONS_RESEARCH_PROGRESS_20261120.md#current-continuation) starts with B06 on the general equations determining the tree and its time evolution. Update prepared for Edward Baker with OpenAI Codex assistance, recorded gpt-6.2-astra/max.
+
+| Earlier proposed follow-up | Type and recommended model | Original dependency | Deliverable |
 | --- | --- | --- | --- |
 | AGC-ST-Z-B05 | B · Astra/ultra for choosing a useful accuracy and paying for clearance | After this position milestone | Decide whether two fixed probes can resolve the signed displacement and tangent remainder of the neighboring interior pair. Specify the contour, probe floors, and equal-information comparison. |
 | AGC-ST-Z-E07 | E · Sol 6.2/ultra for one bounded certificate | Reserved until B05 freezes a contract | Predict both interior positions from anchors, record the complete new count and source observations, and measure the widths against a direct calculation. |

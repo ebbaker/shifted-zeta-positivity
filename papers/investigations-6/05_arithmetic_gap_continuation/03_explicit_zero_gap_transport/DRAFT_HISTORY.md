@@ -1,0 +1,3 @@
+# Explicit zero and gap transport history
+
+**20 November 2026 — investigation setup and first analytical draft.** Prepared for Edward Baker with OpenAI Codex assistance, recorded gpt-6.2-astra/max. The [draft](manuscript/README.md) integrates the founding loop and inverse, the complete current-to-gap identities and signed large-time propagation. The [finite return](research-progress/handoffs/AGC_EZ_E01_E02_RETURN_R1_20261120.md) gives \(1.37162235<D(999)<1.37162972\) from the time-1000 first edge. The [assessment](reviews/01_EZ_OPENING_ASSESSMENT_20261120.md) retains the tighter matched endpoint comparison. The [research program](research-plan/01_EZ_RESEARCH_PLAN_20261120.md) and [continuation](notes/01_EZ_CONTINUATION_20261120.md) carry the fourth-cumulant question.

@@ -1,0 +1,101 @@
+\section{Exact data at the large-time anchor}\label{sec:anchors}
+The source and the half-integer lattice fix every quantity in the following expansions \cite{Founding07,Founding08}. At time \(t=T\), take the large positive saddle and its curvature
+\begin{equation}
+ 4\pi e^{4L}=2TL+9,\qquad \kappa=8TL-2T+36,\qquad S=\kappa+2T,\qquad \ell=a\sqrt\kappa .
+ \label{eq:saddle}
+\end{equation}
+In particular \(L=-W_{-1}(-8\pi e^{-18/T}/T)/4-9/(2T)\), \(L\sim(\log T)/4\), and \(\kappa\sim 8TL\). The normalized field at \(z=w/L\) tends to \(\cos w\) on compact sets \cite[positive-time saddle and Appendix A]{Saddle}.
+
+\subsection{Evaluating the individual loops}
+Put \(f(w)=H(T,w/L)/Z(T)\), \(d(w)=f(w)-\cos w\), \(q=q_k\), \(e=\sin q\), and \(r=1/2\). Require \(|d|<\sin r\) on the closed disks of radius \(r\) about the first \(k\) positive cosine zeros and on the uncovered parts of \([0,q+r]\). On each circle \(|\cos w|\ge\sin r\). Rouché and conjugation give one simple real zero there, and the real inequalities fix its index. These conditions hold for each fixed \(k\) eventually.
+\begin{proposition}\label{prop:loop}
+On the counterclockwise circle about \(q\), with \(\partial=\partial_w\),
+\begin{equation}
+ Lx_k-q=-\frac1{2\pi\ii}\oint\log(1+d/\cos w)\dd w
+ =\sum_{n\ge1}\frac{e^n}{n!}\left[P_{n-1}(\partial)d(w)^n\right]_{w=q},
+ \label{eq:loop}
+\end{equation}
+where \(P_0=1,\ P_1(X)=X,\ P_{n+1}=(X^2+n^2)P_{n-1}\). At \(\eta=\max|d|/\sin r<1\) on the circle the tail after term \(m\) is bounded by \(r\eta^{m+1}/[(m+1)(1-\eta)]\).
+\end{proposition}
+\begin{proof}
+Integrate the difference of logarithmic derivatives times \(w\) and integrate by parts on the circle, where the ratio lies in the disk about one of radius \(\eta\). With \(h=w-q\) the denominator is \((-e\sin h)^n\). The first two residues of \(J(h)/\sin^n h\) are \(J(0)\) and \(J'(0)\). Twice integrating by parts in a residue and using
+\((\partial_h^2+n^2)\csc^n h=n(n+1)\csc^{n+2}h\)
+gives the recursion. Summing the absolute logarithm tail on the circle gives the stated bound. In particular the residue of \(e^{\ii v h}\csc^n h\) is \(i^{n-1}\prod_{j=1}^{n-1}(v+n-2j)/(n-1)!\).
+\end{proof}
+A first regrouping puts \(A(w)=\arcsin(e\,d(w))\) on its zero branch. The quotient \(f(q+h)/\cos(q+h)\) equals \(1-A(q+h)/h\) times a holomorphic unit. Indeed the unit is \(\cos((h+A)/2)\operatorname{sinc}((h-A)/2)/\operatorname{sinc} h\). Since \(\max|A|\le\arcsin(\max|d|)<r\), integrating the logarithm gives \(\sum_{m\ge0}[\partial^m A^{m+1}]_{q}/(m+1)!\) for the same displacement. Cauchy's estimate bounds its \(m\)-th term by \(r(\max|A|/r)^{m+1}/(m+1)\).
+
+\subsection{The inverse series shared by the zeros}
+Let \(\gamma_j=\partial_v^j\log\E_T e^{vU}|_{v=0}\) be the half-line cumulants. In a centered logarithm disk define
+\begin{equation}
+ K_0(y)=\log\E_T e^{\ii y(U-a)/a},\quad
+ \Psi(y)=-\frac{K_0(y)-K_0(-y)}{2\ii}
+      =\sum_{j\ge1}c_j y^{2j+1},\quad
+ c_j=\frac{(-1)^{j+1}\gamma_{2j+1}}{(2j+1)!\,a^{2j+1}} .
+ \label{eq:odd}
+\end{equation}
+Write \(y=az\) and \(\theta(y)=y-\Psi(y)\). The complex factorization on this disk is
+\[
+ \frac{H(T,z)}{Z(T)}=\exp\!\left(\frac{K_0(y)+K_0(-y)}2\right)
+ \cos\theta(y),\qquad
+ \cos\theta(y)=\prod_{k\ge1}\left(1-\frac{\theta(y)^2}{q_k^2}\right).
+\]
+The cosine product is classical \cite[4.22.2]{DLMF}. The amplitude has a logarithm on this disk. On the increasing real branch the individual zero solves \(\theta(y)=q_k\).
+
+\begin{theorem}\label{thm:inverse}
+The inverse \(Y\) through zero has the expansion
+\begin{align}
+ a x_k=Y(q_k),\qquad
+ Y(q)&=\sum_{N\ge0}\frac{q^{2N+1}}{2N+1}
+ [u^{2N}]\left(1-\sum_{j\ge1}c_j u^{2j}\right)^{-(2N+1)} .\label{eq:inverse}
+\end{align}
+In particular the coefficients of \(q^3,q^5,q^7\) are \(c_1,\ 3c_1^2+c_2,\ 12c_1^3+8c_1c_2+c_3\). For any fixed \(C>0\), the series is absolutely convergent for \(q_k\le C\ell\) at sufficiently large time depending on \(C\).
+\end{theorem}
+\begin{proof}
+Apply Lagrange inversion to \(y-\Psi(y)=q\) \cite[\S1.10(vii)]{DLMF}. An effective disk test takes \(R>0\),
+\[
+ \delta=\frac{R^2}{2a^2}\E_T[(U-a)^2e^{R|U-a|/a}]<1,\quad
+ b=-\log(1-\delta)/6,\quad Q=R/2-b>0 .
+\]
+The centered exponential Taylor remainder bounds \(|e^{K_0}-1|\le\delta\) on the disk of radius \(R\). Cauchy's estimate bounds \(\sum|c_j|(R/2)^{2j+1}\le b\). On \(|y|=R/2\), Rouché counts exactly one preimage for each \(|q|<Q\). It varies analytically and its real derivative is positive by continuation from zero. Replacing all \(c_j\) by their absolute values yields a majorant with displacement at most \(b\). Its tail after \(N=N_0\) is bounded by \(b(|q|/Q)^{2N_0+3}/(1-(|q|/Q)^2)\). For the larger asymptotic range use \eqref{eq:complex-saddle} below on \(|y|\le4C\ell\). The odd part has supremum \(O_C(\kappa^{-1/2})\) there. The same half-radius and majorant argument gives \(Q\ge2C\ell-O_C(\kappa^{-1/2})\).
+\end{proof}
+For \(h=-c_1>0\), all powers of the third cumulant alone sum explicitly to the branch
+\[
+ Y_3(q)=\frac{2}{\sqrt{3h}}\sinh\!\left(\frac13\operatorname{arsinh}
+                          \frac{3\sqrt{3h}\,q}{2}\right),\qquad Y_3+hY_3^3=q .
+\]
+The remaining terms can be summed by the number of higher cumulants they contain. With \(I(y)=\Psi(y)-c_1y^3\), they give
+\[
+ Y=Y_3+\sum_{m\ge1}\frac{\partial_q^{m-1}}{m!}
+                \{Y_3'(q)\,I(Y_3(q))^m\}.
+\]
+Insert a parameter \(\lambda\) multiplying \(I\) and invert at \(\lambda=0\). On every strict majorant disk above the one-root comparison persists for \(|\lambda|\le1+\epsilon\) at fixed \(q\), justifying evaluation at one.
+
+The coefficients can themselves be expressed without quadrature. With \(b_n=\pi n^2\), \(J_b(v)=b^{-v}\Gamma(v,b)\), set
+\[
+ P(s)=\tfrac14\sum_{n\ge1}\!\left[2b_n^2J_{b_n}((9+s)/4)
+               -3b_nJ_{b_n}((5+s)/4)\right],\qquad
+ P_T(s)=\sum_{m\ge0}\frac{T^m P^{(2m)}(s)}{m!}.
+\]
+Substitute \(b_ne^{4u}\) in \eqref{eq:field} at \(T=0\), then expand the heat weight. The double-exponential tails justify absolute convergence on compact \(s,T\) sets, and \(\gamma_j=(\log P_T)^{(j)}(0)\) \cite[8.2.2]{DLMF}. An algebraic inverse germ in the continuous variable \(q\) is excluded at finite \(T\). Indeed put \(m(s)=\E_Te^{sU}\). At \(z=-\ii s\) the physical phase continues as \(-\ii s b(s)\), \(b(s)=\log(m(s)/m(-s))/(2s)\), because both transforms are positive there. Unbounded support gives \(b(s)\to\infty\); the density at zero gives \(m(-s)\gg_T1/s\), and the complete tail gives \(\log m(s)=O_T(s\log(2+s))\) by splitting at a sufficiently large multiple of \(\log(2+s)\). Hence \(b(s)=O_T(\log s)\). In a polynomial relation between argument and phase, divide by \(s^d\) at highest total degree \(d\). The leading homogeneous part is a nonzero polynomial in \(b(s)\), while every lower-degree term tends to zero. This contradiction concerns the continuous germ. A discrete-index or transcendental expression remains possible.
+
+\subsection{The full set of factors}
+At an all-real anchor the paired order-one product is \(H(T,z)/Z(T)=\prod_{i\ge1}(1-b_i z^2)\), \(b_i=x_i^{-2}\), counted with multiplicity \cite[\S2]{AGC}. Every individual factor can also be recovered as a limit from even moments \(m_j=\E_T U^j\), without a local inverse condition. Put
+\[
+ p_n=-n[v^n]\log\!\sum_{j\ge0}\frac{(-1)^jm_{2j}v^j}{(2j)!},\quad
+ E_{0,n}=1,\quad E_{j,n}=\frac1j\sum_{h=1}^j(-1)^{h-1}p_{hn}E_{j-h,n}.
+\]
+Here \(p_n=\sum_i b_i^n\) and \(E_{j,n}\) sums the \(n\)-th powers of all products of \(j\) distinct indexed \(b_i\). Their sum at \(n=1\) is finite, so \(E_{j,n}^{1/n}\to b_1\cdots b_j\). Consequently \(x_k=\lim_n(E_{k-1,n}/E_{k,n})^{1/(2n)}\). High-order moment conditioning matters in using this identity.
+
+For \(P_m(z)=\prod_{i\le m}(1-b_i z^2)\), Gaussian convolution gives the exact earlier field
+\begin{equation}
+ \frac{H(T-s,z)}{Z(T)}
+   =\E_T[e^{-sU^2}\cos(zU)]
+   =\lim_{m\to\infty}\sum_{j=0}^m\frac{s^j}{j!}\partial_z^{2j}P_m(z).
+ \label{eq:whole}
+\end{equation}
+Indeed \(|P_m(w)|\le H(T,\ii|w|)/Z(T)\); its log growth is \(O_T(1+|w|\log(2+|w|))\). Dominated convergence against the translated Gaussian therefore holds locally uniformly. By contrast, the mass loss of the single frozen cosine with the exact initial curvature has the explicit size
+\[
+ \log\frac{Z(T-s)}{Z(T)e^{-s\E_T U^2}}
+   =\int_0^s(s-v)\Var_{T-v}(U^2)\dd v .
+\]
+This follows by differentiating \(\log Z\) twice. Since \(\Var_T(U^2)\sim4L^2/\kappa\), the loss tends to one in logarithmic units at \(s=2\sqrt{T/L}\) \cite[\S4]{Founding07}. The local current below retains the variation responsible for actual gap motion.

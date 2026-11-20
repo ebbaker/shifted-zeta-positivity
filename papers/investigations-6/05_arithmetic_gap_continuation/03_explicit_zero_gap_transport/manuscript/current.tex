@@ -1,0 +1,76 @@
+\section{The phase velocity and the complete exterior}\label{sec:current}
+On a real interval with \(B\ne0\), take a continuous argument \(\Theta\) of \(B\) and write \(B=e^{p+\ii\Theta}\). At the origin \(\Theta=0\). Define the current and its normalization by
+\begin{equation}
+ J(t,x)=\Imag(\overline{B(t,x)}B_x(t,x))=|B(t,x)|^2\Theta_x(t,x),
+ \qquad j(t,x)=J(t,x)/(Z(t)^2a_t).
+ \label{eq:current}
+\end{equation}
+The complete source determines the current even where the real part \(H\) vanishes. A positive current on \([0,X]\) gives a nonvanishing \(B\) and strictly increasing phase there. To include a labelled edge one must also reach its upper level \(q_{k+1}\).
+
+\begin{theorem}[Velocity, interaction and joint forcing]\label{thm:velocity}
+On a common increasing phase chart define \(v=(\log j)_x\) and
+\(\mathcal A=(v(t,x_+)-v(t,x_-))/g\). Then
+\begin{align}
+ \dot x_\pm&=v(t,x_\pm),&
+ (\log g)^{\displaystyle\cdot}&=\mathcal A
+   =\frac1g\int_{x_-}^{x_+}(\log j)_{xx}\dd x, \label{eq:velocity}\\
+ M&=\frac1{2D}-\frac{\mathcal A}{2},&
+ \mathcal F&=\frac1{2D^2}+\frac12(\dot{\mathcal A}+\mathcal A^2).
+ \label{eq:forcing}
+\end{align}
+The same \(v\) advances every edge in the chart. In the parent's normalization \(V=1-2DM=D\mathcal A\) and \(K=2D^2\mathcal F=1+D^2\ddot g/g\).
+\end{theorem}
+\begin{proof}
+The imaginary part of \(B_t/B=-B_{xx}/B\) gives
+\(\Theta_t=-\Theta_{xx}-2p_x\Theta_x\). Differentiating
+\(\Theta(t,x_\pm(t))=q_{k},q_{k+1}\), respectively, yields
+\(\dot x=2p_x+\Theta_{xx}/\Theta_x=(\log J)_x\). Its difference proves \eqref{eq:velocity}. Thus \(\dot D=2D\mathcal A\); substituting in both equations of \eqref{eq:parent} gives \eqref{eq:forcing}, including the cancellation of the two terms linear in \(\mathcal A/D\).
+\end{proof}
+For the forcing there is also an endpoint expression free of separate exterior sums. With \(b_v=v_t+v v_x\), one has
+\begin{equation}
+ K-1=\frac{D^2}{g}\{b_v(t,x_+)-b_v(t,x_-)\}.
+ \label{eq:acceleration}
+\end{equation}
+Differentiate the two velocity evaluations along their actual paths. The time derivative of \(v\) is \(\partial_x(J_t/J)\). The unnormalized double-source formula below computes \(J_t\) by inserting \(u^2+u'^2\) in the same integral. A signed bound for this difference could therefore feed the parent's joint forcing barrier directly. A bound on \(\mathcal A\) alone does not bound its time derivative.
+
+\subsection{A positive source for spatial curvature}
+Take independent copies \(U,U'\) under \(\E_t\), and use the probability weight \((U+U')/(2a)\) on their joint law. Write \(\E_*\) for this weighted expectation and \(\Delta=U-U'\). Symmetrizing \(\overline B B_x\) proves
+\begin{align}
+ j(t,x)&=\E_*\cos(x\Delta),&
+ w&=\E_*\Delta^2
+ =\frac{\E U^3-a\E U^2}{a}=\frac{\dot a}{a},&
+ m_4^*&=\E_*\Delta^4 . \label{eq:difference}
+\end{align}
+The transform \(j\) is even and entire, and \(j(0)=1\). The small frequency in this integral is the difference of the two source frequencies. In particular the quadratic term of \(\log j\) is exactly \(-wx^2/2\).
+
+\begin{proposition}[A finite two-sided gap estimate]\label{prop:finite}
+At each time in a common counted chart with endpoints in \([0,X]\), put
+\[
+ b_* =1-X^2 w/2,\qquad
+ l=w-X^2m_4^*/2,\qquad u=w/b_*+X^2w^2/b_*^2 .
+\]
+If \(b_*>0,\ l\ge0\), then \(l\le-\mathcal A\le u\).
+Consequently for \(t\le T\) with these inputs throughout,
+\begin{equation}
+ D(T)\exp\!\left(2\int_t^T l(r)\dd r\right)
+ \ \le D(t)\le\
+ D(T)\exp\!\left(2\int_t^T u(r)\dd r\right).
+ \label{eq:slab}
+\end{equation}
+\end{proposition}
+\begin{proof}
+On \(0\le x\le X\) one has \(b_*\le j\le1\), \(|j'|\le xw\), and
+\(-w\le j''\le-w+x^2m_4^*/2\), using \(\cos y\ge1-y^2/2\).
+Insert these signed bounds into \(j''/j-(j'/j)^2\), then integrate \eqref{eq:velocity}. The condition \(l\ge0\) permits division of the negative upper bound by \(j\le1\).
+\end{proof}
+
+\subsection{The higher exterior moments from one deflated field}
+At a fixed counted pair put \(Q(z)=(z-c)^2-D\) and
+\(R=\partial_z\log(H/Q)\), analytic near the target segment in a cleared chart. Set \(r^2=D+\xi\), with \(\xi\) small enough that the probes \(c\pm r\) stay in that chart and \(|\xi|<\inf_{\rho\ {\rm ext}}|Q_\rho|\). The parent's complete rational traces \cite[\S3]{AGC} then give
+\begin{align}
+ \sum_{n\ge0}S_{n+1}\xi^n
+ &=-\frac{R(c+r)-R(c-r)}{2r}, \label{eq:Sgen}\\
+ \sum_{n\ge0}T_{n+2}\xi^n
+ &=-\frac{R(c+r)+R(c-r)-R(c+\sqrt D)-R(c-\sqrt D)}{2\xi},\label{eq:Tgen}
+\end{align}
+where \(T_n=\sum_{\rho\ {\rm ext}}(\rho-c)Q_\rho^{-n}\) for \(n\ge2\). Quotients take their removable values where necessary. In fact an exterior pole at \(c+d\) contributes \((d^2-r^2)^{-1}\) to \eqref{eq:Sgen}. The symmetric sum in \eqref{eq:Tgen} before subtraction contributes \(-2d/(d^2-r^2)\); its subtraction at \(\xi=0\) removes the first-order ambiguity. The resulting series converge absolutely by the parent's reciprocal-square tail bound. This is a fixed-time generating formula for the whole moment hierarchy. Controlling its coefficients at lower time requires a positive radius and a bound on the same deflated field.

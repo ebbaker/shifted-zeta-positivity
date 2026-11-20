@@ -1,0 +1,9 @@
+# Return on the upper-anchor calculation
+
+20 November 2026. Prepared for Edward Baker with OpenAI Codex assistance. Actual lead computation and drafting gpt-6.2-astra/max; no separate implementer. Inputs are those in the [frozen request](AGC_EZ_E01_E02_REQUEST_R1_20261120.md).
+
+E01 derives \(v=\partial_x\log J,\ \dot g/g=\mathcal A,\ M=1/(2D)-\mathcal A/2,\ K=1+D^2(\dot{\mathcal A}+\mathcal A^2)\). On the common large-time phase window the integrated law is \(D(t)=D(T)(L_T/L_t)^2\exp(O_C(\int_t^T\kappa_r^{-2}\,dr))\). Removing the source mean gives a bound \(O_C(\int_t^T X_r^2\kappa_r^{-3}\,dr)\) on the logarithmic distortion of \(a g\). The two-variable deflated evaluations also generate the full regular integer moments at a fixed time. An earlier-time quantitative bound on \(K\) remains open. [Current and moment proof](../../manuscript/current.tex) · [Uniform descent](../../manuscript/transport.tex)
+
+E02 used 16 dyadic time cells and anchor polynomial moments through order 28. On the entire first-edge chart the lower bound on \(-\dot g/g\) exceeds 0.0002270493. The endpoint transport width is below \(7.36\times10^{-6}\); the matched endpoint width is below \(4.80\times10^{-7}\). Full-source evaluation confirms both enclosures. Direct endpoint measurements alone leave the intermediate sign undetermined. [Finite derivation](../../manuscript/finite.tex) · [Replayable outward intervals](../../numerics/01_BACKWARD_GAP_999_1000_20261120.json)
+
+**Decision.** Keep the signed path result. Improving the endpoint estimate requires pricing the signed fourth cumulant after removing the mean-spacing change and paying the endpoint mean ratio. AGC-EZ-B02 is next. The [opening assessment](../../reviews/01_EZ_OPENING_ASSESSMENT_20261120.md) describes shared premises and the two controls.

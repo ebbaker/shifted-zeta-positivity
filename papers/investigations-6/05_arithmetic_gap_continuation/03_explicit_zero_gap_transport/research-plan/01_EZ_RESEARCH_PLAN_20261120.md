@@ -1,0 +1,28 @@
+# Analytical program for explicit zero and gap transport
+
+20 November 2026. For Edward Baker with OpenAI Codex assistance, recorded gpt-6.2-astra/max. The [register](../research-progress/01_EZ_RESEARCH_PROGRESS_20261120.md) owns status. Task numbers below specify work and dependencies.
+
+## Order of work
+
+First derive a bound for a complete gap, drift or forcing over time. Then use a small calculation to decide between analytic estimates. A new family of indices, a different source observation or an earlier interval needs a named decision and a comparison against the strongest available direct use of the same information. The objective is the earliest included time with a strict marked-pair margin, and a narrow full-gap enclosure on shared coverage.
+
+| Task and recommended model | Dependency and mathematical question | Finite work, evidence and decision |
+| --- | --- | --- |
+| AGC-EZ-B01 · B · Astra/ultra | Choose a bridge from the upper inverse to the parent pair law | Compare differentiated endpoints with the complex phase current. Fix one signed observation, one matched comparator and one marked edge. [Decision](../brainstorm/notes/01_CURRENT_AND_GAP_CHOICE_20261120.md) |
+| AGC-EZ-E01 · E · Sol 6.2/ultra | B01 and the complete saddle lemma. Derive \(M,K\), the spatial moment resolvents and a uniform large-time backward law | One symbolic proof and sign/constant audit on a fixed multiple of the growing phase window. Deliver complete hypotheses and integrated remainder. Leave the force sign open without a bound on its time derivative |
+| AGC-EZ-E02 · E · Sol 6.2/ultra | B01, the two-copy curvature inequality and the pinned anchor. Can it sign the widening on \([999,1000]\)? | One 16-cell, 224-bit certificate plus one replay; compare direct endpoint with identical tilted moment data. Fixed inputs and acceptance are in the [frozen packet](../research-progress/handoffs/AGC_EZ_E01_E02_REQUEST_R1_20261120.md) |
+| AGC-EZ-B02 · B · Astra/ultra | E01/E02. Decide how to bound the fourth cumulant and the sixth derivative in the exact mean-normalized gap law | Compare two analytic estimates on the same first edge: a signed Taylor remainder for the log current and the common zero-level divided difference. Price the endpoint mean ratio and every cumulative error; allow one revision. Freeze E03 only with a sign/width test and a budget |
+| AGC-EZ-E03 · E · Sol 6.2/ultra | A frozen B02 choice | Derive and check the chosen bound on the same closed cell with the existing anchor moment budget. One proof and at most one fixed validation plus replay. Return the full \(D\) width versus \(4.80\times10^{-7}\), the actual matched width, and which input accounts for any loss. A scoped failure is an acceptable return |
+| AGC-EZ-B03 · B · Astra/ultra | Assessed E03 or B02's documented obstruction | Choose one continuation route. If curvature remains affordable, extend or re-anchor on overlapping counted charts; if only joint forcing is affordable, choose \(K\) via the material derivative; if the phase floor fails, choose the parent's regular contour. Compare one candidate and one fallback. Specify where the new information enters |
+| AGC-EZ-E04 · E · Sol 6.2/ultra | B03 supplies source, time interval, index, count, comparator and signed consumer | Reserve one proof with one specified interval or indexed family. Prove the whole stopped-path margin, including any join and far-source allowance, or return the first failed inequality and its cost |
+| AGC-EZ-E05 · E · Sol 6.2/ultra | A written E03/E04 result | One separate assessment when available, one replay of its prescribed check and one integration pass. Check sign, domains, omitted terms, comparator and controls. Attribute reviewer overlap and retain the failed case |
+
+The B tasks require choosing an observable, cancellation or a time/contour continuation. The E tasks have fixed laws and acceptance tests at issue. Conventional algebra, equivalent contour parameters, quadrature subdivisions within a frozen budget and typography are routine. Changing exponent, index family, observation, source information or comparison class returns to B. Candidate E03/E04 work stays reserved until its conceptual prerequisites are settled.
+
+## Three quantities that decide whether to continue
+
+- **Cumulative gap.** Carry an upper anchor \(D_T\), geometric identity of its two roots and a certified pathwise bound on \(\dot g/g\). Check every partial descent; a final positive interval alone cannot exclude an intervening failure.
+- **Complete forcing.** For \(K=1+D^2(\dot{\mathcal A}+\mathcal A^2)\) a signed bound must control the time derivative at moving endpoints. Differentiating a big-O estimate in time is insufficient. Prefer a direct source covariance or a jointly estimated material acceleration difference. [Parent barrier](../../manuscript/sections/04_continuation.tex)
+- **Moment data.** Use the resolvent of the deflated field for several \(S_n,T_n\) only if a common disk or a signed combination reduces the gap cost. Compare with direct evaluation of the same moments and count. [Parent hierarchy](../../manuscript/sections/03_hierarchy.tex)
+
+A continued research session is led by Astra/ultra. Edward Baker's workflow expressly authorizes bounded gpt-6.2-sol/ultra derivations, checks and assessments. The lead continues through ready dependencies, changed in-scope B decisions, failed comparisons and integration until an assessed substantive milestone or genuine blocker. No unrelated parent or sibling task is activated. [Setup workflow](../../../../../INVESTIGATION_SETUP_WORKFLOW.md) · [Source practice](../../../../../REFERENCE_WORKFLOW.md)

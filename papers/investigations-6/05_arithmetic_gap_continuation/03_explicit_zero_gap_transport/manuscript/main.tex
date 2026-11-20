@@ -1,0 +1,72 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=1.02in,headheight=14pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,needspace}
+\usepackage{xcolor,fancyhdr}
+\definecolor{teal}{HTML}{175463}
+\usepackage[colorlinks=true,linkcolor=teal,citecolor=teal,urlcolor=teal]{hyperref}
+\usepackage{bookmark}
+\hypersetup{pdftitle={Explicit large-time zeros and backward transport of gaps in the Newman heat flow},pdfauthor={Drafted for Edward Baker}}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small Explicit large-time zeros and backward gap transport}
+\fancyhead[R]{\small Working draft}
+\fancyfoot[C]{\thepage}
+\setlength{\headsep}{16pt}
+\setlength{\emergencystretch}{1.5em}
+\raggedbottom
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\E}{\mathbb E}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Real}{\operatorname{Re}}
+\newcommand{\Imag}{\operatorname{Im}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Res}{\operatorname{Res}}
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+{\small\scshape Analytical working draft}\\[8pt]
+{\LARGE\bfseries Explicit large-time zeros and backward transport\\[3pt]
+of gaps in the Newman heat flow}\\[9pt]
+{\large Drafted for Edward Baker}\\[3pt]
+20 November 2026
+\end{center}
+\begin{abstract}
+The positive half of the theta source gives an exact inverse-phase series for individual zeros in the crystallization range. We evaluate every residue of the original logarithm and identify its full sum in odd source cumulants. To propagate the zeros, we introduce the real current of the complex half-line transform. Its logarithmic curvature averaged along an edge gives the signed drift of that gap and recovers the complete first exterior moment. On each fixed multiple of the growing saddle window the curvature is \(-2/\kappa_t+O(\kappa_t^{-2})\). This yields a multiplicative backward estimate for a marked gap and proves widening throughout that high-time regime. With finite anchor data at \(T=1000\) we enclose the squared half-gap of the first two positive zeros at \(t=999\) between \(1.37162235\) and \(1.37162972\), with widening on the intervening path. A direct endpoint evaluation using the same moment data gives a tighter endpoint enclosure. The lower-time continuation problem is to retain the signed curvature, or the parent's complete joint forcing, as the saddle estimate loses accuracy.
+\end{abstract}
+\section{The field and the gap to be transported}\label{sec:source}
+Use the physical normalization of Polymath \cite[introduction]{Polymath2019} and of the parent investigation \cite[\S\S1--4]{AGC}. With \(u\ge0\), put
+\begin{align}
+ \Phi(u)&=\sum_{n\ge1}(2\pi^2n^4 e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2 e^{4u}},\nonumber\\
+ B(t,z)&=\int_0^\infty e^{tu^2}\Phi(u)e^{\ii zu}\dd u,\qquad
+ H(t,z)=\tfrac12\{B(t,z)+B(t,-z)\},\quad Z(t)=H(t,0). \label{eq:field}
+\end{align}
+Thus \(H(0,z)=\xi((1+\ii z)/2)/8\), \(B_t=-B_{zz}\) and \(H_t=-H_{zz}\). The double-exponential tail permits the required derivatives and complex arguments. The probability law of \(U\ge0\) is \(e^{tu^2}\Phi(u)\dd u/Z(t)\). Write \(a=a_t=\E_t U\). On the real line \(H=\Real B\).
+
+Label the positive zeros from the origin on a counted real chart. Put
+\[
+ q_k=(k-\tfrac12)\pi,\quad x_-=x_k,\quad x_+=x_{k+1},\quad
+ g=x_+-x_-,\quad c=(x_++x_-)/2,\quad D=g^2/4 .
+\]
+Throughout, a dot denotes physical time \(t\). A descent of length \(s\) from \(T\) ends at \(t=T-s\). Parent Sections 2--4 give the complete interaction and first moment laws
+\begin{equation}
+ Q_\rho=(\rho-c)^2-D,\quad M=S_1,\quad S_n=\sum_{\rho\ {\rm exterior}}Q_\rho^{-n},
+ \qquad \dot D=2-4DM,\qquad \dot M=2M^2-\mathcal F,
+ \label{eq:parent}
+\end{equation}
+where \(\mathcal F=12S_2+16DS_3\). Every exterior occurrence is counted, including multiplicity. The regular contour definitions extend through a target double while the two-zero boundary remains clear \cite[\S\S2--3]{AGC}. Our use of individual endpoints requires a simple real pair. The parent’s cumulative drift test applies on a common path up to the first failure of its inputs.
+
+Sections~\ref{sec:anchors} and \ref{sec:current} connect an explicit anchor to the complete interaction. Section~\ref{sec:transport} derives a signed law from the literal source. Section~\ref{sec:finite} reports the interval comparison, and Section~\ref{sec:frontier} specifies what a lower-time extension must improve.
+\input{anchors}
+\input{current}
+\input{transport}
+\input{finite}
+\input{frontier}
+\paragraph{Acknowledgment.} This working draft was prepared for Edward Baker with substantial OpenAI Codex LLM assistance. The recorded drafting configuration was gpt-6.2-astra at max reasoning effort. The checks and mathematical assessment are internal.
+\bibliographystyle{plain}
+\bibliography{branch,references}
+\end{document}

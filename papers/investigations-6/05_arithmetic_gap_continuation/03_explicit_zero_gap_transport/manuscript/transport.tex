@@ -1,0 +1,83 @@
+\section{Backward transport in the crystallization window}\label{sec:transport}
+We first record the large-time source estimate with its complex uniformity. The use of a complex neighborhood will justify differentiating in space; the time derivatives in Section~\ref{sec:current} came from the heat equation itself.
+
+\begin{lemma}[Centered source at the positive saddle]\label{lem:saddle}
+At each time \(t\) use \eqref{eq:saddle} with \(T=t\), and set \(\alpha=2S/(3\kappa^{3/2})\). For every fixed disk in complex \(\zeta\), with uniform error on it,
+\begin{equation}
+ K_0(\ell\zeta)=-\zeta^2/2+\ii\alpha\zeta^3+O_C(\kappa^{-1}).
+ \label{eq:complex-saddle}
+\end{equation}
+The branch of the logarithm is continued from zero. In particular
+\(\gamma_3=-4S/\kappa^3+O(\kappa^{-5/2})\) and \(a=L-2S/\kappa^2+O(\kappa^{-3/2})\).
+\end{lemma}
+\begin{proof}
+Write the source as \(2\pi^2e^{p_t(u)}b(u)\), where \(p_t(u)=tu^2+9u-\pi e^{4u}\). The bounded positive complete factor
+\(b(u)=\sum_{n\ge1}(n^4-3n^2e^{-4u}/(2\pi))e^{-\pi(n^2-1)e^{4u}}\)
+tends to one. For \(W=\sqrt\kappa(U-L)\), \(|W|\le\kappa^{1/12}\), Taylor expansion at the saddle gives unnormalized density, up to a constant,
+\[
+ e^{-w^2/2}\{1-\alpha w^3+O((1+w^4+w^6)/\kappa)\}.
+\]
+Indeed \(p_t'''(L)=-4S\); the next exponent term is \(O(w^4/\kappa)\), and \(b=1+O(1/\kappa)\) on this interval. On \(u\ge L-1/4\) the remaining tail is dominated by \(C_1e^{-c_1w^2}\). The part \(0\le u<L-1/4\) costs a polynomial times \(e^{-c_2\kappa+C L\sqrt\kappa}\) even with the complex weight \(e^{C|w|}\), which is negligible because \(L=o(\sqrt\kappa)\). These complete-source majorants are established in \cite[Appendix A, complete saddle bounds]{Saddle}; see also \cite[\S4]{Founding08}.
+Gaussian integration gives \(\E W=-3\alpha+O(\kappa^{-1})\). The Fourier transform of \(w^3\) times the normalized Gaussian is \(\ii(3\zeta-\zeta^3)e^{-\zeta^2/2}\). Centering by the actual mean cancels its linear term. The limiting transform is bounded away from zero on each fixed complex disk, so the logarithm and Cauchy coefficient estimates give the assertions.
+\end{proof}
+For \(q=q_k\le C\ell\) the same estimate gives
+\begin{equation}
+ ax_k=q-\alpha(q/\ell)^3+O_C(\kappa^{-1}(q/\ell)^3),\qquad
+ |ax_k-Y_3(q)|=O_C(\kappa^{-1}(q/\ell)^5). \label{eq:distort}
+\end{equation}
+Indeed the odd remainder after the displayed saddle cubic vanishes to order three. After removal of the exact cubic coefficient it vanishes to order five. Divide by the corresponding power on a larger disk and apply the maximum principle. The inverse equation gives \(|Y|\le2|q|\) eventually, and the real cubic \(y\mapsto y+hy^3\) has derivative at least one. In particular for each fixed \(k\ge2\),
+\begin{equation}
+ \lim_{T\to\infty}L^3\kappa^2
+ \left(1-\frac{x_k(T)}{(2k-1)x_1(T)}\right)=\frac{2\pi^2}{3}k(k-1).
+ \label{eq:shape}
+\end{equation}
+Use \(c_1=\gamma_3/(6a^3)\) in \eqref{eq:inverse}, the order-five bound in \eqref{eq:distort}, \(q_k^2-q_1^2=\pi^2 k(k-1)\), and \(a/L,S/\kappa\to1\). A common change of frequency cancels from this ratio.
+
+For a fixed index the first shift can also be expressed in \(T,k\) alone. Substituting Lemma~\ref{lem:saddle} for \(a\) in \eqref{eq:distort} gives
+\[
+ x_k(T)=\frac{q_k}{L-2S/\kappa^2}
+          +O_k\!\left(\frac1{L^2\kappa^{3/2}}\right).
+\]
+The two-site Jacobi reference in the founding calculation has frequency
+\(\sqrt{\beta_1}\), where \(\beta_1=\E U^2\) and \(\beta_1\beta_2=\Var(U^2)\).
+Put \(\sigma^2=\Var U\), \(\epsilon=\sigma/a\), \(d_J=\beta_2/\beta_1\).
+Expanding \(U^2=(a+(U-a))^2\) using the centered moment bounds gives
+\(d_J=4\epsilon^2+O(\epsilon^3)\). Since \(\sqrt{\beta_1}/a=\sqrt{1+\epsilon^2}\)
+and \(ax_k=q_k+O_k(\epsilon^3)\), subtracting consecutive zeros and squaring yields
+\[
+ \frac{D}{\pi^2/(4\beta_1)}=1+\frac{d_J}{4}+O_k(d_J^{3/2}).
+\]
+This is the large-time displacement relative to that particular Jacobi reference \cite[\S2]{Founding07}.
+
+\begin{theorem}[Signed backward transfer]\label{thm:transfer}
+Fix \(C>0\). There is a time \(t_C\) such that, for \(T\ge t\ge t_C\) and a marked edge satisfying \(q_{k+1}\le C\inf_{t\le r\le T}\ell_r\), the same two positive phase levels are simple throughout. Uniformly on that family,
+\begin{align}
+ (\log g)^{\displaystyle\cdot}&=-2/\kappa_r+O_C(\kappa_r^{-2})<0,
+ &M&=\frac1{2D}+\frac1{\kappa_r}+O_C(\kappa_r^{-2}),\label{eq:asymM}\\
+ D(t)&=D(T)(L_T/L_t)^2
+           \exp\!\left(O_C\!\left(\int_t^T\kappa_r^{-2}\dd r\right)\right).
+ \label{eq:asymD}
+\end{align}
+For any \(X_r\) containing the endpoints in \([0,X_r]\) and satisfying \(X_r\le C'\sqrt{\kappa_r}\), there is also a mean-normalized bound
+\begin{equation}
+ \left|\log\frac{a_t g(t)}{a_Tg(T)}\right|
+ \le C''\int_t^T X_r^2\kappa_r^{-3}\dd r. \label{eq:meanD}
+\end{equation}
+The constants depend only on the fixed window. The asymptotic theorem gives existence of \(t_C\); Section~\ref{sec:finite} treats a specific interval independently.
+\end{theorem}
+\begin{proof}
+At a physical spatial argument \(x=\sqrt\kappa\,\zeta\), the analytic continuation of the normalized current \eqref{eq:current} is
+\[
+ j(t,\sqrt\kappa\,\zeta)
+ =\exp\{K_0(\ell\zeta)+K_0(-\ell\zeta)\}\,[1-\Psi'(\ell\zeta)].
+\]
+This follows on the real axis from the amplitude and phase in \eqref{eq:odd} and then by continuation. The odd cubic in \eqref{eq:complex-saddle} cancels from the exponential. Cauchy's estimate on a slightly larger disk gives \(\Psi'(\ell\zeta)=O_C(1/(\ell\sqrt\kappa))\). Hence on every fixed complex disk, for large enough \(t\),
+\begin{equation}
+ \log j(t,\sqrt\kappa\,\zeta)=-\zeta^2+O_C(\kappa^{-1}).\label{eq:logj}
+\end{equation}
+The branch is real at zero. Two spatial derivatives give
+\((\log j)_{xx}=-2/\kappa+O_C(\kappa^{-2})\). The inverse theorem places the full real edge in a fixed multiple of \([0,\sqrt\kappa]\) and identifies its index at each time; uniqueness and simplicity give the same moving endpoints. Average the curvature in \eqref{eq:velocity} and use \eqref{eq:forcing}. From \eqref{eq:saddle}, \(\dot L=2L/\kappa\). Integrating the estimate for \(2\mathcal A\) gives \eqref{eq:asymD}. The integrated remainder is \(O_C(1/[t(\log t)^2])\) even if the upper time tends to infinity.
+
+Four spatial derivatives of \eqref{eq:logj} give \((\log j)_{xxxx}=O_C(\kappa^{-3})\). Evenness and \eqref{eq:difference} give \((\log j)_{xxx}(0)=0\) and \((\log j)_{xx}(0)=-\dot a/a\). Two real integrations therefore give \(|(\log j)_{xx}+\dot a/a|\ll_C x^2/\kappa^3\). Average over the edge and integrate in time, proving \eqref{eq:meanD}. For fixed \(k\), \(X_r=O_k(1/a_r)\) is allowed and the last integral is \(O_k(1/[t^2(\log t)^5])\).
+\end{proof}
+These are estimates on the complete interaction and the signed drift of the actual edge. The individual source expansions also localize its endpoints throughout the same high-time domain. The estimate establishes direction of motion and its integrated size there. Extending it to an earlier region requires additional source information on the intervening path.

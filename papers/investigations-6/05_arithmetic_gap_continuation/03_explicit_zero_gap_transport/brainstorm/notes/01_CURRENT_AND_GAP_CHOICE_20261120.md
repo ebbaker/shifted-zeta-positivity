@@ -1,0 +1,9 @@
+# From the inverse phase to the signed gap
+
+20 November 2026. For Edward Baker with OpenAI Codex assistance. Recorded turn configuration gpt-6.2-astra, max effort.
+
+**AGC-EZ-B01.** Use the current of the complex half-line transform \(B(t,x)=\int_0^\infty e^{tu^2}\Phi(u)e^{ixu}\,du\). The real part is the observed field. On an increasing phase interval \(J=\Im(\overline B B_x)>0\). The backward heat equation for \(B\) gives the physical velocity \(v=(\log J)_x\) on every phase level. Hence \((\log g)_t\) on an edge is the spatial average of \((\log J)_{xx}\). This field can be bounded from the law of the difference of two independent source frequencies, with the positive weight given by their mean. The subtraction removes the large common mean before an estimate.
+
+The current identity is a representation. The gains to test are a signed uniform large-time law and a strictly positive finite widening computed from one anchor. A count and a common time path are required. Compare the finite endpoint with a cosine calculation using the same tilted moment allowances. If the current loses positivity or the comparison is wider, retain the loss and price a signed curvature remainder before moving the time boundary. The parent’s regular two-zero contour remains available through a failed phase chart. [Parent gap and exterior](../../../manuscript/sections/02_pair_chain.tex) · [Parent stopped-path budget](../../../manuscript/sections/04_continuation.tex) · [Collision controls](../../../../../../result-summaries/12_collision_controls_and_screening.md)
+
+The founding notes and certificate remain in their original Jacobi branch as cited sources. This branch owns their development into backward gap estimates. The Jacobi degree and spatial tensor programs keep their own questions and records.
