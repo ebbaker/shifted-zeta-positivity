@@ -19,11 +19,33 @@ For example, suppressing \(k\) on the right and left, an axis entry satisfies
  S_{2,0}'=2\left(S_{2,0}^2-5S_{4,0}-2S_{3,1}+\frac{2}{g_k}S_{3,0}\right).
 \]
 The array is closed under differentiation when all orders and the gap are retained.
-The entry needed for the first derivative of the gap has just two endpoint factors,
+At a simple zero \(x_i\), differentiating \(H(t,x_i(t))=0\) gives
+\(\dot x_i=H_{zz}/H_z\). Deflate its linear factor and differentiate
+the paired product \eqref{eq:all-real-product}. This gives twice the
+sum of \((x_i-\rho)^{-1}\) over the remaining zeros, paired by reflection.
+In the difference of the two velocities the marked endpoints contribute
+\(4/g_k\). Each common exterior occurrence contributes
+\(-2g_k/((\rho-x_+)(\rho-x_-))\), and this difference is absolutely
+summable. Consequently
 \begin{equation}\label{eq:exterior-gap}
  M_k=S_{k,1,1},\qquad
- g_k'=\frac{4}{g_k}-2g_kM_k,\qquad D_k'=2-g_k^2M_k .
+ g_k'=\frac{4}{g_k}-2g_k M_k,\qquad D_k'=2-g_k^2M_k .
 \end{equation}
+
+Write \(Q_\rho=(\rho-c)^2-D=(\rho-x_-)(\rho-x_+)\) and
+\(S_j=S_{k,j,j}=\sum_{\rho\ {\rm exterior}}Q_\rho^{-j}\) for the
+diagonal traces. Thus \(M=S_1\) when the pair index is suppressed.
+Differentiating the first mixed entry by the parent hierarchy
+\cite[\S3, first diagonal row]{AGC} gives
+\begin{equation}
+ \dot D=2-4DM,\qquad
+ \dot M=2M^2-\mathcal F,\qquad \mathcal F=12S_2+16D S_3 .
+ \label{eq:parent}
+\end{equation}
+In particular the first derivative of the gap requires \(M\) and its
+second derivative already involves higher exterior orders. We now give
+a way to enclose these quantities from counted positions and source
+moments at one time.
 
 \paragraph{Completing the exterior from a counted head.}
 Suppose the first \(K\ge k+1\) positive zeros are counted, and
@@ -85,15 +107,37 @@ first radial tail. Using \(\sum_{i\ge1}q_i^{-2}=1/2\) gives
    =\frac{\Var_T U}{a^2}
       -2\sum_{i\le K}(y_i^{-2}-q_i^{-2}).
 \]
-The inverse controls each counted separation. After comparison of the
-head and the higher tail terms, the variance contributes
-\(\pi^2\Var_T U/a^2\) to \(g_k^2M_k-2\).
-The saddle estimate \(\kappa\Var_T U=1+O(\kappa^{-1/2})\) gives the
-coefficient in \eqref{eq:exterior-signed}. The detailed remainder
-estimates are in \cite{EZMixedAnchor}.
+To bound the three errors in this identity and the mixed sum, set
+\(\beta=(\sqrt\kappa\,\ell^3)^{-1}\). On a disk of radius a fixed
+multiple of \(\ell\), the inverse differs from the identity by
+\(O(\kappa^{-1/2})\) and that difference vanishes to third order.
+Cauchy's estimate on a smaller disk gives
+\(|Y'(q)-1|\ll\beta |q|^2\). Extend the indices by
+\(y_{1-j}=-y_j\). Integration between two levels now compares
+their separation with its lattice value with relative error
+\(O(\beta(q_i^2+q_j^2))\). In particular the positive radial head in
+the last display contributes \(O(\beta K)\). The difference of the two
+dimensionless mixed heads is bounded by
+\[
+ C\beta\!\!\sum_{\substack{1-K\le j\le K\\j\ne k,k+1}}
+ \frac{j^2+(k+1)^2+1}{|j-k|\,|j-k-1|}
+ \ll\beta(K+(k+1)^2).
+\]
+For the terms of positive degree in each reflected tail use
+\(y_K\asymp K\), \(y_{k+1}=O(k+1)\), and
+\(\sum_{j>K}y_j^{-2}=O(K^{-1})\). The last bound follows by
+subtracting the counted head from the exact second trace as above,
+using \(\sum_{j>K}q_j^{-2}=O(K^{-1})\) and \(\Var_T U/a^2=O(\ell^{-2})\).
+The fourth-power tail is consequently \(O(K^{-3})\). Summing the even
+degrees starting at two in \eqref{eq:exterior-tail} costs
+\(O((k+1)^2 K^{-3})\) for each tail, since \(y_{k+1}/y_K<1/2\)
+eventually. Finally \(a g_k=\pi(1+O(\beta(k+1)^2))\).
+The only surviving term at scale \(\ell^{-2}\) for \(k+1=o(\sqrt\ell)\)
+is \(\pi^2\Var_T U/a^2\). Substitution of
+\(\kappa\Var_T U=1+O(\kappa^{-1/2})\) gives \eqref{eq:exterior-signed}.
 
 Thus \(\ell^2(g_k^2M_k-2)\to\pi^2\) and \(D_k'<0\) uniformly on any
-family \(k+1=o(\sqrt\ell)\) at sufficiently large \(T\). Appendix~\ref{sec:transport}
+family \(k+1=o(\sqrt\ell)\) at sufficiently large \(T\). Section~\ref{sec:transport}
 recovers the same leading drift on a wider large-time window by a phase estimate.
 On a common large-time interval \([t,T]\), if \(t\to\infty\) and
 \(\sup_{t\le s\le T}(k+1)^2/\ell_s\to0\), integration gives
@@ -101,7 +145,19 @@ On a common large-time interval \([t,T]\), if \(t\to\infty\) and
  D_k(t)-D_k(T)
      =(\pi^2+o(1))\int_t^T\frac{\dd s}{\ell_s^2}.
 \]
-This uses localization at every time in the interval. Propagation from
-data at one time \(T\) still requires control of the higher rows and
-their remainders along the path, together with a count that persists
-to the proposed lower time.
+This integration uses localization at each time in the interval. To obtain a time remainder from a single anchor we return to the field itself.
+
+\subsection{The same data under backward evolution}
+For \(s>0\) and \(P_m(z)=\prod_{i\le m}(1-b_i z^2)\), Gaussian convolution gives the exact earlier field
+\begin{equation}
+ \frac{H(T-s,z)}{Z(T)}
+   =\E_T[e^{-sU^2}\cos(zU)]
+   =\lim_{m\to\infty}\sum_{j=0}^m\frac{s^j}{j!}\partial_z^{2j}P_m(z).
+ \label{eq:whole}
+\end{equation}
+Here \(b_i=x_i(T)^{-2}\) as in Section~\ref{sec:comparison}. Indeed \(|P_m(w)|\le H(T,\ii|w|)/Z(T)\); its log growth is \(O_T(1+|w|\log(2+|w|))\). Dominated convergence against the translated Gaussian therefore holds locally uniformly. The mass loss of the single frozen cosine with the exact initial curvature has the explicit size
+\[
+ \log\frac{Z(T-s)}{Z(T)e^{-s\E_T U^2}}
+   =\int_0^s(s-v)\Var_{T-v}(U^2)\dd v .
+\]
+This follows by differentiating \(\log Z\) twice. Since \(\Var_T(U^2)\sim4L^2/\kappa\), the loss tends to one in logarithmic units at \(s=2\sqrt{T/L}\) \cite[\S4]{Founding07}. Equation~\eqref{eq:whole} gives a direct comparison for any backward estimate built from the same anchor data. Using a finite set of factors in that comparison requires a bound for the omitted product.

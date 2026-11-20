@@ -1,11 +1,55 @@
-\section{What sharper locations would give}\label{sec:frontier}
-For the cubic approximation in \eqref{eq:shared-residual}, the first question is how much of its position error is shared between neighboring roots. The same source mean and odd cumulants enter both predictions. A useful estimate would preserve that dependence when taking the difference, and give a uniform error in units of the local spacing. Its comparison is the best bound obtained by differencing or differentiating the existing inverse remainder with the same source data. A separate way to gain height would be to quantify the onset of the inverse as the window constant grows. The complete source must then keep the centered transform away from zero on the chosen complex disk and preserve the count of its inverse.
+\section{Outstanding challenges}\label{sec:frontier}
 
-At one specified all-real \(T\), the product formula supplies a second route to high labels. The finite-order inequalities \eqref{eq:factor-interval} give starting bounds on an individual zero. The question is how the required moment order and precision grow with \(k\) to put two consecutive zeros in intervals narrower than their local spacing. At \(T=1/2\), Section~\ref{sec:comparison} provides a direct comparison with a published counted approximation. Any information from that count used to initialize a product calculation must enter the comparison on both sides.
+\paragraph{Make the two height ranges meet.}
+The growing inverse prefix in Theorem~\ref{thm:growing-window} has an
+asymptotic size as \(T\to\infty\). The high-rank estimates of
+Section~\ref{sec:comparison} have an onset depending on the chosen
+\(T\). To bring them onto the same numerical scale, start at \(T=1000\),
+where the fortieth positive zero has an independent count. Seek a
+computable height \(X_0\) above which a fixed-time estimate of the
+physical field isolates \emph{every} subsequent root. This requires a
+lower bound on its approximating field along the counting contours
+that exceeds the full error there. Match one such contour to an absolute
+rank by \eqref{eq:moment-circle-error}. If a finite interval separates the
+two counts, the same polynomial test can certify its intervening ranks.
+The quantities to report are the first common rank, the uncertainty as a
+fraction of its spacing, and the moment order and precision used. If the
+asymptotic contour inequality has an unevaluated constant, identifying
+that constant takes precedence over extending the finite table.
 
-For a counted family at \(T\), Section~\ref{sec:exterior} makes the accuracy required of a location estimate visible in \(g_k^2 M_k-2\). The leading lattice terms cancel. The error in the complete expression, including zeros outside the located family, must be smaller than the surviving term to establish its sign. A backward estimate from this single time would then have to control
-\[
- D_k(T-s)=D_k(T)-\int_0^s
-       \bigl(2-g_k(T-u)^2S_{k,1,1}(T-u)\bigr)\dd u
-\]
-at every partial time, with a common count isolating the same pair. Repeated time differentiation of the mixed moments raises their orders. A usable time remainder must bound those higher orders and all unlocated zeros as the time interval lengthens. The Gaussian evolution of the same upper-time product in \eqref{eq:whole} supplies a direct comparison. A conclusion about all zeros would also require the central pair, the intervening heights and a count excluding nonreal zeros. For the bound in Section~\ref{sec:comparison}, the question is which zero-free region this information establishes at stronger parameters.
+\paragraph{Determine the acquisition cost at high rank.}
+Theorem~\ref{thm:high-rank-direct} bounds the order of the input moments
+and the precision per normalized coefficient. At a specified time the
+work also depends on the expense of enclosing the moments, finding the
+counting radii and resolving the minimum modulus there. The factor and
+field methods use the same coefficients, so comparing actual cost
+requires charging both for those steps and comparing the intervals at
+equal absolute rank and spacing accuracy. An effective lower bound
+for the field between successive zeros would serve both this comparison
+and the preceding height problem.
+
+\paragraph{Lengthen the descent from the same source.}
+Theorem~\ref{thm:anchored-curvature} controls every partial time up to
+\(s_*=\sqrt\kappa/(2L)=o(T)\). For a longer descent the central question
+is how far the upper law can be tilted while the two endpoint transforms
+remain nonzero and their phase stays invertible on a common spatial
+domain. The analytic remainder must be small after one spatial and two
+time differentiations, at the scale of \(D_* L/\kappa^2\) in physical
+curvature. Any argument that advances in several steps must carry the
+original ranks, the full exterior uncertainty and the error at each
+intermediate step. Direct evolution \eqref{eq:whole} with that same
+source gives a comparison at each proposed endpoint.
+
+\paragraph{Cover the zeros relevant to the Newman constant.}
+The counted positive gaps leave the central pair, intervening heights
+and possible nonreal zeros at lower times to be controlled. Polymath's
+Theorem~1.2 gives a precise target. At common parameters \(X,t_0,y_0\)
+it requires an initial finite-height exclusion for \(\zeta\), a high-strip
+exclusion for \(H(t_0,\cdot)\), and a zero-free barrier near \(X\) at
+every time from \(0\) to \(t_0\). A separate one-mode estimate gives a
+normalized field floor exceeding \(3/4\) for \(0<\tau\le t\le1/2\),
+\(1/5\le\Imag z\le1\), \(\log(\Real z/(4\pi))\ge32/\tau\)
+\cite{EZStrip}. Its lower height cutoff and the intervening barrier
+still have to meet the initial count. Improving the published bound by
+this route requires all three conditions with \(t_0+y_0^2/2<0.2\)
+\cite[Theorem~1.2]{Polymath2019}\cite[Corollary~2]{PlattTrudgian2021}.

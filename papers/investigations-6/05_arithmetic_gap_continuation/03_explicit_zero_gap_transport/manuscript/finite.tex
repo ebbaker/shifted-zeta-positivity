@@ -1,60 +1,57 @@
-\section{A finite comparison for the first gap}\label{sec:finite}
-\subsection{A uniform bound from finite data at one time}
-Take the first positive edge, \(X=4\), \(s=1000-t\in[0,1]\), and \(b=671/500\). Write \(P=U-b,\ W=U^2-b^2\), and let \(\E_0\) here denote expectation at the upper anchor \(1000\). Tilting this one source gives the moments
-\begin{equation}
- d_j(s)=\frac{\E_0[P^je^{-sW}]}{\E_0[e^{-sW}]},\quad d_0=1,\quad
- \mu=b+d_1,\quad \sigma^2=d_2-d_1^2. \label{eq:tilt}
-\end{equation}
-The numerator for each \(0\le j\le6\) is enclosed by a cubic polynomial with absolute remainder
-\begin{equation}
- \left|\E_0[P^je^{-sW}]
-    -\sum_{m=0}^3\frac{(-s)^m}{m!}\E_0[P^jW^m]\right|
- \le\frac{s^4e^{b^2}}{24}\sqrt{\E_0[P^{2j}W^8]} . \label{eq:tiltrest}
-\end{equation}
-Indeed \((-sW)_+\le b^2\), and Taylor's integral remainder followed by Cauchy--Schwarz gives \eqref{eq:tiltrest}. Since \(W=P(2b+P)\), all source integrals are anchor moments through degree 28. The two-copy law gives, for \(p=2,4\),
-\begin{equation}
- m_p^*=\frac1\mu\sum_{i=0}^p(-1)^i\binom pi d_i
-                    \{b\,d_{p-i}+d_{p-i+1}\}. \label{eq:certmom}
-\end{equation}
-This expands \(\E[U(U-U')^p]/\mu\), using the exchange symmetry for even \(p\).
+\section{Supporting numerical evidence}\label{sec:finite}
 
-All moments were evaluated by outward Arb arithmetic at 224 bits, using the original anchor integrator and its complete theta tail allowance. It integrates the first square mode on \([1,2]\), bounds the higher square modes there by geometric comparison, and bounds the two omitted half-line intervals by the saddle estimates in \cite[\S6]{Founding08}. Its absolute allowance is below \(2.353\,10^{-107}\) in each peak-scaled integral for functions bounded by \((u+2)^7e^{16(u+2)}\). This covers \(|P|^{28}\) and all lower powers, since \(21\log(u+2)\le (21/e)(u+2)\). It also covers the real trigonometric endpoint tests below.
+The two checks below use the complete source at \(T=1000\). One compares
+truncations of the fixed-time formula. The other follows a single
+identified gap through a finite interval. Each has its own count
+and remainder bounds.
 
-Evaluate \eqref{eq:tiltrest} on 16 equal closed subintervals of \(s\). Each tilted mass has a positive lower bound. On every subinterval \(j(t,x)>0.99817\) throughout \([0,4]\). Also \(\left|\E e^{\ii x(U-\mu)}-1\right|\le x^2\sigma^2/2\); the checked inequality \(\mu X-\arcsin(X^2\sigma^2/2)>3\pi/2\) places both labelled zeros inside the interval. The centered transform remains in the corresponding disk around one, which fixes the argument from zero. These are whole-cell inequalities.
+\input{position_check}
 
-\Needspace{9\baselineskip}
-\begin{proposition}[Finite signed descent]\label{prop:check}
-For \(999\le t\le1000\) the first positive edge satisfies
+\subsection{A signed descent of the first gap}
+
+For \(s=1000-t\in[0,1]\) put \(b_0=671/500\),
+\(P=U-b_0\), \(W=U^2-b_0^2\), and let \(\E_0\) denote expectation at
+the upper time in this subsection. The tilted centered moments are
 \begin{equation}
- 0.0002270493<-\dot g(t)/g(t)<0.0002300072.
+ d_j(s)=\frac{\E_0[P^je^{-sW}]}{\E_0[e^{-sW}]},\qquad
+ \mu=b_0+d_1,\quad \sigma^2=d_2-d_1^2 .\label{eq:tilt}
 \end{equation}
-Its anchor value is \(D(1000)=1.3709993248674981982\ldots\).
-Integrating the cell-specific bounds in Proposition~\ref{prop:finite} gives
-\begin{equation}
- 1.37162235<D(999)<1.37162972. \label{eq:number}
-\end{equation}
-\end{proposition}
-\begin{proof}
-Apply \eqref{eq:certmom} on each cell, check \(b_*>0,l>0\), and multiply the anchor \(D\) by the interval exponentials in \eqref{eq:slab}. The cell widths are exact dyadics. The program, precision, sign tests and outward endpoints are recorded alongside the manuscript \cite{FiniteRecord}.
-\end{proof}
-An equally informed endpoint calculation uses the same \(d_0,\ldots,d_6\) at \(s=1\). At real \(x\) evaluate
+For \(0\le j\le6\), expand each numerator through degree three in \(s\).
+The absolute Taylor remainder is bounded by
 \[
- \sum_{j=0}^5\frac{x^jd_j}{j!}\cos(bx+j\pi/2)
- \quad\hbox{with error at most } |x|^6 d_6/720 .
+ \frac{s^4e^{b_0^2}}{24}\sqrt{\E_0[P^{2j}W^8]}.
 \]
-Signs on opposite sides and the common phase count enclose each root. This gives \(1.3716257900<D(999)<1.3716262696\), width below \(4.80\,10^{-7}\), versus \(7.36\,10^{-6}\) for transport. Direct quadrature of the complete upper-anchor field with the multiplier \(e^{b^2-U^2}\), using separate endpoint signs and the same count, gives \(D(999)=1.37162603031689388115504\ldots\). It shares source and tail code with the moment calculation. The path estimate establishes strict widening at every intermediate time. For the endpoint alone the finite Taylor comparison is tighter.
+Indeed \((-sW)_+\le b_0^2\), and Cauchy--Schwarz bounds the expected
+absolute fourth remainder. Since \(W=P(2b_0+P)\), moments through
+degree 28 suffice. For \(p=2,4\) the moments of the two-copy current in
+\eqref{eq:difference} are
+\[
+ m_p^*=\mu^{-1}\sum_{i=0}^p(-1)^i\binom pi d_i
+                 (b_0d_{p-i}+d_{p-i+1}).
+\]
+Expanding the even difference \((U-U')^p\) under the size-biased
+two-copy law gives this formula directly.
 
-\subsection{Removing the change in mean spacing}
-On a counted chart let \(h=\log j\) and let angle brackets denote spatial averaging along the edge. From \eqref{eq:difference} and evenness,
-\begin{equation}
- \frac{\dd}{\dd t}\log(a g)
- =\left\langle\int_0^x(x-y)h^{(4)}(t,y)\dd y\right\rangle,\qquad
- h^{(4)}(t,0)=m_4^*-3w^2 . \label{eq:quartic}
-\end{equation}
-The superscript denotes spatial differentiation. Freezing the last derivative at zero gives the explicit edge term
-\((m_4^*-3w^2)(x_-^2+x_-x_++x_+^2)/6\).
-If \(\sup_{[0,X]}|h^{(6)}|\le B_6\), evenness and Taylor's theorem bound the error by \(B_6 X^4/24\). Thus a shared signed fourth cumulant and a controlled sixth derivative can replace separate absolute payments for \(j''\) and \((j')^2\). A later calculation with the same 28 upper-time moments carried this comparison to \(t=984\) for the first edge. Direct evaluation gave a tighter endpoint interval. Both methods certified widening along this already large-time path \cite{EZJoined}.
-
-The material acceleration on this chart satisfies \eqref{eq:acceleration}. A bound on \(K\) together with initial \(D,V\) enters the parent's stopped-path barrier \cite[\S4]{AGC}. The divided differences \eqref{eq:Sgen}--\eqref{eq:Tgen} give a separate way of comparing that forcing with fixed-order exterior moments. Through a loss of the phase chart the parent's count-two contour \cite[\S\S2,6]{AGC} still requires a complete boundary floor and a paid error for its center and discriminant. Relabelling a new pair at the end of a step would invalidate the comparison.
-
-A simple control tests these hypotheses. For \(H(t,x)=e^t\cos x+c\), \(c>1\), a positive half-line lift is \(B=e^{t+\ii x}+c\). Its current is \(e^{2t}+ce^t\cos x\). At \(ce^{-t}=1/2\), the first two roots are \(2\pi/3,4\pi/3\), and their physical gap velocity is \(2/\sqrt3>0\). The current is positive there, but \(m_4^*=w=1/3\); any \(X\ge4\pi/3\) fails \(w-X^2m_4^*/2>0\). At \(t=\log c,\ x=\pi\) the current vanishes as the two roots meet. The single-cosine control has constant positive current, \(w=0\), and stationary gaps. Both satisfy the representation identities. The signed theta estimate uses quantitative source concentration. Weighted-square and finite-prime controls change the normalized theta weights, reflected smooth controls lack the integer-square expansion, and altered observations change the cosine readout. The source and count assumptions for the additional controls are detailed in \cite{EZPhaseScope,EZMixedAnchor}. The finite computation is inside a previously all-real regime. Lower-time and all-edge coverage remain open.
+The outward interval calculation used 224-bit arithmetic, the complete
+theta tail, and 16 closed time cells \cite{FiniteRecord}. On each cell
+the tilted mass is positive, \(j(t,x)>0.99817\) for \(0\le x\le4\),
+and \(4\mu-\arcsin(4^2\sigma^2/2)>3\pi/2\).
+The last inequality uses
+\(|\E_t e^{\ii x(U-\mu)}-1|\le x^2\sigma^2/2\) and ensures that the
+increasing phase reaches the second positive zero. Thus
+Proposition~\ref{prop:finite} applies along the same edge. It gives
+\[
+ 0.0002270493<-\dot g(t)/g(t)<0.0002300072,\qquad
+ 1.37162235<D(999)<1.37162972 .
+\]
+The second interval integrates the individual cell bounds from
+\(D(1000)=1.3709993248674981982\ldots\).
+Using the same six tilted moments at \(s=1\), the degree-five cosine
+sum has error at most \(|x|^6d_6/720\). Endpoint signs and the same count
+then give \(1.3716257900<D(999)<1.3716262696\). Direct upper-source
+quadrature gives \(D(999)=1.37162603031689388115504\ldots\) and shares
+the source and tail evaluations with the moment calculation. The signed
+velocity controls the entire path. The direct endpoint enclosure is
+narrower at its final time. A subsequent calculation using the same 28
+initial moments and the fourth derivative of \(\log j\) certified
+widening of this first gap down to \(t=984\) \cite{EZJoined}.

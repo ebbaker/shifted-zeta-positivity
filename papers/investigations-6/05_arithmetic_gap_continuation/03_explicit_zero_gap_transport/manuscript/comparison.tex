@@ -1,61 +1,421 @@
-\section{High zeros at fixed time and the Newman bound}
-\label{sec:comparison}
+\section{High ranks at a fixed all-real time}\label{sec:comparison}
 
-The product and inverse formulas of Section~\ref{sec:anchors} have different ranges in
-time and height.  At an independently established all-real time, the
-product formula recovers each fixed positive zero \(x_k\) in the limit
-of increasing moment order.  Its practical reach at large \(k\) depends
-on the finite-order error in units of the local spacing and on the accuracy
-required of the input moments.  The odd-cumulant inverse gives an expansion
-uniformly for \(q_k\le C\ell\) at sufficiently large \(T\), for each
-fixed \(C\).  Its onset can depend on \(C\).  This range leaves open the
-fixed-time, unbounded-height problem.
-
-For \(0<t\le 1/2\), Polymath gives an explicit approximation with error bounds
-for the normalized field at \(z=x+\ii y\), \(x\ge200\), \(0\le y\le1\)
-\cite[Theorem~1.3]{Polymath2019}.  The high-zero theorem uses the clock
+Fix \(T>0\) at which the full divisor is known to be real. Set
 \[
- G_t(x)=\frac{x}{4\pi}\log\frac{x}{4\pi}-\frac{x}{4\pi}
-          +\frac{11}{8}+\frac{t}{16}\log\frac{x}{4\pi},
+ F(z)=H(T,z)/Z(T),\qquad e_m=\frac{\E_T U^{2m}}{(2m)!},\qquad
+ G(v)=\sum_{m\ge0}(-1)^m e_m v^m .
+\]
+Thus \(F(z)=G(z^2)\). We compare two uses of these same coefficients. The
+first estimates an individual factor from symmetric functions. The second
+counts polynomial zeros on circles where the full field has a margin
+\cite{Founding07,EZHighRank}.
+
+\subsection{The complete product and fixed-time spacing}
+
+For \(u\ge0\), the source in \eqref{eq:field} is positive and is bounded
+above by \(C e^{9u-\pi e^{4u}}\). Indeed, after factoring out the first
+exponential, the sum of the upper bounds \(2\pi^2 n^4 e^{-\pi(n^2-1)}\)
+is finite. For \(|z|\le r\), use \(|\cos(zu)|\le e^{ru}\).
+Maximizing \(ru-\pi e^{4u}/2\) on the half line bounds it above by
+\(O(r\log(2+r))\). The integral with the remaining factor
+\(e^{Tu^2+9u-\pi e^{4u}/2}\) is finite. Hence the logarithm of the
+maximum modulus is \(O_T(1+r\log(2+r))\), and Jensen's formula gives
+\(O_T(r\log(2+r))\) zeros in the disk of radius \(r\) for \(r\ge2\).
+In particular \(\sum_i x_i^{-2}<\infty\), counting positive zeros with
+multiplicity. The entire function has order at most one, so Hadamard
+factorization pairs the genus-one factors at \(\pm x_i\). Evenness removes
+the linear exponential, and \(F(0)=1\) fixes the constant. Therefore
+\begin{equation}\label{eq:all-real-product}
+ F(z)=\prod_{i\ge1}(1-b_i z^2),\qquad
+ G(v)=\prod_{i\ge1}(1-b_i v),\qquad b_i=x_i^{-2}.
+\end{equation}
+The products converge locally uniformly. In particular \(e_m\) is the
+\(m\)-th elementary symmetric sum of the complete sequence \((b_i)\).
+
+Ki, Kim and Lee's Theorems 1.3--1.4 give the simple real tail and its
+asymptotic spacing at each fixed positive time \cite{KiKimLee2009}.
+Their normalization is \(\Xi_\mu(w)=8H(4\mu,2w)\), so in physical
+coordinates \(\Delta_i\log x_i\to4\pi\), where
+\(\Delta_i=x_{i+1}-x_i\). The all-real assumption identifies this tail
+with the positive product ranks up to a finite shift. Applying the
+mean-value theorem to \(x\log x-x\) across each such gap gives increments
+converging to \(4\pi\), since \(\Delta_i/x_i\to0\).
+Telescoping and inverting gives
+\begin{equation}\label{eq:high-rank-geometry}
+ x_i\sim\frac{4\pi i}{\log i},\qquad
+ \Delta_i\sim\frac{4\pi}{\log i},\qquad
+ \sum_{i>j}b_i\ll_T\frac{\log^2(2j)}{j}.
+\end{equation}
+The tail-sum bound follows by comparison with
+\(\int_j^\infty \log^2(2v)\,\dd v/v^2\). The onset of this spacing
+regime at the chosen time is unevaluated.
+
+\input{factors}
+
+\subsection{Direct evaluation from the moments}
+
+Use the polynomial \(P_N(z)=\sum_{m=0}^N(-1)^m e_m z^{2m}\).
+For real \(x\), Taylor's theorem through order \(2N+1\) inside the
+positive cosine integral gives
+\begin{equation}\label{eq:moment-real-error}
+ |F(x)-P_N(x)|\le e_{N+1}|x|^{2N+2}.
+\end{equation}
+If \(\widetilde P_N\) uses coefficient centers with radii \(d_m\), add
+\(\sum_{m=0}^N d_m X^{2m}\) on \(|x|\le X\) and use an upper
+endpoint for \(e_{N+1}\). A numerical evaluation must also enclose its
+arithmetic error.
+
+The defining source gives refinable coefficient intervals at any fixed
+\(T\). For example, let \(J_m=\int_0^\infty u^{2m}e^{Tu^2}\Phi(u)\dd u\).
+To truncate at \(U_0\ge1\), set
+\[
+ p_m(u)=Tu^2+9u+2m\log u-\pi e^{4u},\qquad
+ A=-p_m'(U_0)>0,qquad 16\pi e^{4U_0}\ge2T .
+\]
+These conditions hold for all sufficiently large \(U_0\).
+Concavity on \([U_0,\infty)\) gives
+\(p_m(u)\le p_m(U_0)-A(u-U_0)\). Hence the omitted integral is
+at most \(2\pi^2 C_\Phi e^{p_m(U_0)}/A\), where
+\(C_\Phi=\sum_{n\ge1}n^4 e^{-\pi(n^2-1)}\).
+On \([0,U_0]\), truncating the square modes at \(n=M\) costs at most
+\[
+ 2\pi^2 U_0^{2m+1} e^{TU_0^2+9U_0}
+       \sum_{n>M}n^4 e^{-\pi(n^2-1)} .
+\]
+The displayed sums admit geometric upper bounds, for instance by
+\(n^2-1\ge n-1\) and the power series for \(\sum n^4 q^{n-1}\) at
+\(q=e^{-\pi}\). On the remaining compact integral, upper and lower
+interval sums converge as the mesh tends to zero since the finite
+integrand is continuously differentiable. Divide the resulting
+enclosures as \(e_m=J_m/((2m)!J_0)\) using a positive lower endpoint
+for \(J_0\). This gives a finite error allowance for generation of the
+inputs. The order and precision estimates below concern the moments
+supplied to the polynomial.
+
+\begin{lemma}[Field bounds on circles near a high zero]\label{lem:high-rank-circle}
+For every \(r\ge0\), \(\min_{|z|=r}|F(z)|=|F(r)|\).
+There is a fixed \(d>0\) such that, for all sufficiently large
+\(k\) and each fixed \(A>0\),
+\begin{equation}\label{eq:direct-growth}
+\begin{aligned}
+ |F(r)|&\ge e^{-C_T k}\frac{|r-x_k|}{k\Delta_k}
+             && (|r-x_k|\le d\Delta_k),\\
+ F(2\ii X)&\le e^{C_{T,A}k}
+             && (0\le X\le A k/\log k).
+\end{aligned}
+\end{equation}
+\end{lemma}
+\begin{proof}
+On \(|z|=r\), the modulus of each factor in \eqref{eq:all-real-product}
+is at least \(|1-b_i r^2|\), with equality for real \(z\). This
+passes to the full product. The factor at \(i=k\) has magnitude
+\(|r-x_k|(r+x_k)/x_k^2\gg_T |r-x_k|/(k\Delta_k)\).
+For \(\lfloor k/2\rfloor\le i\le2k\), the gaps are uniformly at
+least a fixed multiple of \(\Delta_k\) by \eqref{eq:high-rank-geometry}.
+Take \(d\) below half this multiple. Then for \(i\ne k\),
+\(|r-x_i|\gg_T |i-k|\Delta_k\) and
+\(|1-r^2/x_i^2|\ge c_T |i-k|/k\), using \(x_i\ll_T k\Delta_k\)
+and \(r+x_i\ge x_i\). The product of these bounds is
+\(\ge e^{-C_T k}\) by \(m!\ge(m/e)^m\) on the two sides of \(k\).
+Below \(\lfloor k/2\rfloor\) each factor has magnitude at least one
+eventually, since \(x_{\lfloor k/2\rfloor}/x_k\to1/2\).
+Above \(2k\), the quantities \(r^2/x_i^2\) are bounded away
+from one since \(x_{2k}/x_k\to2\). Their sum is \(O_T(k)\) by
+\eqref{eq:high-rank-geometry}, so the logarithm of the tail product
+is bounded below by \(-C_T k\).
+
+For the last assertion, split
+\(\log F(2\ii X)=\sum_i\log(1+4X^2/x_i^2)\) at \(2k\).
+The head satisfies \(X/x_i\le C_{T,A}k/i\) there by
+\eqref{eq:high-rank-geometry}, with the comparison constant enlarged
+to cover the finite prefix. For \(i\le2k\), \(1+4X^2/x_i^2\le
+C_{T,A}'(2k/i)^2\). The head logarithm is \(O_{T,A}(k)\) by the
+factorial bound. The tail logarithm is at most
+\(4X^2\sum_{i>2k} b_i=O_{T,A}(k)\).
+\end{proof}
+
+\paragraph{Finite polynomial count.}
+On \(|z|\le X\) a bound on the exact omitted tail is
+\(4^{-(N+1)}F(2\ii X)\), obtained by extracting \(4^{-(N+1)}\)
+from the positive coefficient sum at \(2\ii X\). There is also an
+a posteriori test using a single extra coefficient. The \(e_m\)
+are log-concave. To see this, for a finite product
+\(f(v)=\prod_i(1+b_i v)\), let \(p=f^{(m-1)}\). Rolle's theorem
+and the real roots of \(p\) give \((p')^2-pp''\ge0\), by
+differentiating \(p'/p\) away from the roots and then using continuity.
+At zero this gives \((m!e_m)^2\ge (m-1)!(m+1)!e_{m-1}e_{m+1}\)
+for the finite coefficients. Pass to the locally uniform product limit.
+For \(N\ge1\), the decreasing ratios yield
+\begin{equation}\label{eq:moment-circle-error}
+ \sup_{|z|\le X}|F(z)-\widetilde P_N(z)|
+ \le \sum_{m=0}^N d_m X^{2m}
+       +\frac{\overline e_{N+1}X^{2N+2}}{1-\bar\eta},
+ \qquad
+ \bar\eta=\frac{X^2\overline e_{N+1}}{\underline e_N}<1 ,
+\end{equation}
+where the lower coefficient endpoint must be positive. To justify a
+strict comparison at a circle of radius \(r\le X\), bound
+\(\min_{|z|=r}|\widetilde P_N(z)|\) below by a value larger than
+\eqref{eq:moment-circle-error}. This can be certified by covering the
+circle with sufficiently small arcs and bounding variation using the
+polynomial derivative. Rouch\'e transfers its root count to \(F\).
+The polynomial count can be determined by finite winding arithmetic
+on the same circle. Its value is twice the number of positive zeros
+inside, with multiplicity, since the full divisor is real and even.
+Counts \(2(k-1)\) and \(2k\) on two radii place the simple \(x_k\)
+strictly between them.
+
+\begin{theorem}[Sufficient direct input budget]\label{thm:high-rank-direct}
+At each fixed positive all-real \(T\), for sufficiently large \(k\) and
+\(0<\varepsilon\le1/4\), the finite polynomial test can bracket
+\(x_k\) to width \(O_T(\varepsilon\Delta_k)\) using
+\(O_T(k+\log(1/\varepsilon))\) as both the maximum even moment order
+and a sufficient relative precision in bits per normalized coefficient.
+\end{theorem}
+\begin{proof}
+Choose \(X=8\pi k/\log k\) so that \(x_k\) is interior to the search
+interval \([X/4,X]\) for all sufficiently large \(k\). A grid
+of mesh \(c\varepsilon/\log k\) with small fixed \(c>0\) has points
+on both sides of \(x_k\) between one and three mesh widths away
+and within \(d\Delta_k\). At each of those radii the minimum
+modulus of \(F\) is at least \(e^{-C_T k}\varepsilon/(C_T k)\)
+by Lemma~\ref{lem:high-rank-circle}. The two exact counts there
+are \(2(k-1)\) and \(2k\).
+
+The true ratio in \eqref{eq:moment-circle-error} satisfies
+\(X^2 e_{N+1}/e_N\le(e_N X^{2N})^{1/N}
+\le 4^{-1}\exp(C_T k/N)\), because the earlier ratios have
+product \(e_N X^{2N}\) and \(e_0=1\). For \(N\ge C'_T k\)
+with sufficiently large \(C'_T\), small relative coefficient radii
+keep \(\bar\eta\) bounded strictly below one. The resulting
+geometric tail bound is \(O(4^{-(N+1)}e^{C_T k})\).
+Uniform relative radii \(\delta\) in the lower coefficients
+contribute at most \(\delta F(\ii X)\le\delta e^{C_T k}\).
+Taking \(N\) and \(\log(1/\delta)\) each a sufficiently large
+multiple of \(k+\log(1/\varepsilon)\) makes the sum smaller than a
+quarter of the circle margin. The polynomial minimum therefore
+exceeds the sum at both chosen radii, and sufficiently refined
+interval arithmetic certifies these strict tests. The input order
+is \(2N+2\).
+\end{proof}
+
+The finite test also applies at a specified lower rank without a
+spacing theorem. Enumerate rational radii, moment orders and
+precisions, interleaving the boundary checks. For a fixed radius
+avoiding the divisor, compact convergence gives a positive margin
+eventually. The ratio bound eventually succeeds because the series
+is entire with positive coefficients and decreasing ratios.
+Thus every specified simple root can be bracketed to arbitrarily
+small width. Two such adjacent brackets give a positive lower
+bound on their separation and can be refined to a prescribed
+fraction of that bound. The theorem gives an asymptotic input budget
+and leaves search, polynomial arithmetic and moment generation costs
+to be quantified.
+
+\subsection{Matching the absolute clock rank at \texorpdfstring{\(t=1/2\)}{t=1/2}}
+
+For \(0<t\le1/2\), Polymath's Theorem~1.3 bounds the error of
+the normalized approximation to \(H(t,x+\ii y)\) for \(x\ge200\),
+\(0\le y\le1\) \cite{Polymath2019}. Its high-zero theorem uses
+\[
+ G_t(x)=\frac{x}{4\pi}\left(\log\frac{x}{4\pi}-1\right)
+           +\frac{11}{8}+\frac{t}{16}\log\frac{x}{4\pi},
  \qquad G_t(u_j)=j .
 \]
-For \(x\ge\exp(C/t)\) every zero of real part \(x\) is real.  Here \(C\) is a sufficiently large absolute constant and \(c>0\) a sufficiently small one. For
-\(j\ge\exp(C/t)\) the disk of radius \(c/\log u_j\) about \(u_j\) contains
-exactly one zero.  At sufficiently high labels let \(r_j\) denote this zero
-and \(s_j=u_{j+1}-u_j\).  The proof gives
+Theorem~1.5(i)--(ii) gives one simple real zero \(r_j\) in each
+disk of radius \(c/\log u_j\) for \(j\ge\exp(C/t)\). Every zero
+with real part \(x\ge\exp(C/t)\) is real and is within
+\(O(x^{-ct})\) of a clock center.
+Here \(C\) is a sufficiently large absolute constant and
+\(c>0\) a sufficiently small one.
+The \href{https://arxiv.org/html/1904.12438v2\#S9.E104}{proof after (104)} gives
+\begin{equation}\label{eq:clock-error}
+ |r_j-u_j|\ll\frac{u_j^{-ct}}{\log u_j},\qquad
+ s_j=u_{j+1}-u_j\sim\frac{4\pi}{\log(u_j/(4\pi))}.
+\end{equation}
+The spacing follows by differentiation of \(G_t\). Theorem~1.5(iii)
+gives \(N_t(X)=G_t(X)+O(1)\), where \(N_t\) counts zeros from the
+imaginary axis by real part, with multiplicity. At an all-real
+time this count is the positive rank from the origin
+\cite[Theorem~1.5 and \S9]{Polymath2019}.
+
+\begin{proposition}[Absolute clock rank]\label{prop:clock-rank}
+At \(t=1/2\), \(r_j=x_j\) for all sufficiently large \(j\).
+\end{proposition}
+\begin{proof}
+The divisor at \(t=1/2\) is all real by de Bruijn's upper bound
+\cite[\S1]{Polymath2019}. The windows in \eqref{eq:clock-error}
+are disjoint and ordered for large \(j\). Consequently for
+\(x\ge b\), with \(b\) fixed sufficiently large and in a gap
+between the windows, one has
 \[
- |r_j-u_j|\ll \frac{u_j^{-ct}}{\log u_j},
- \qquad
- s_j\sim\frac{4\pi}{\log(u_j/(4\pi))},\qquad
- \frac{|(r_{j+1}-r_j)-s_j|}{s_j}\ll u_j^{-ct}.
+ N_t(x)=\lfloor G_t(x)\rfloor+d_0+\rho(x)
 \]
-The position estimate comes from the \href{https://arxiv.org/html/1904.12438v2\#S9}{argument following (104)}.
-The spacing follows from \(G_t'\), and the gap error follows by differencing
-adjacent position bounds \cite[Theorem~1.5 and \S9]{Polymath2019}.
-Comparing a particular \(x_k\) to \(r_j\) requires an exact count to match
-one clock label to the rank from the origin.  The estimate
-\(N_t(X)=G_t(X)+O(1)\) leaves that integer offset undetermined.
+for an integer \(d_0\). The error satisfies \(|\rho|\le1\), and
+apart from interval endpoints its support lies between each clock
+center and the corresponding root. Each dyadic interval \([R,2R]\)
+contains \(O(R\log R)\) clock centers. By \eqref{eq:clock-error}
+the integral of \(|\rho(x)|/x\) on that interval is
+\(O(R^{-ct})\). Thus \(\rho\) is integrable against \(\dd x/x\)
+on \([b,\infty)\).
 
-The published upper bound on \(\Lambda\) ensures reality of the full divisor at \(t=1/2\). There the product formula and the Polymath clock apply at the same
-time.  A first comparison would enclose \(x_k\) and \(x_{k+1}\) at finite
-moment order, account for any count or clock information used as input,
-and compare the resulting position and gap widths to the displayed bounds
-as \(k\) grows.  An advantage in precision or input requirements remains
-open.  For the large-\(T\) cumulant expansion the corresponding comparison
-is to direct zero counts and location bounds obtained from the same source
-estimates at \(T\).
+On the imaginary axis use the complete product at time \(t\).
+For \(Y>0\), integrate
+\(K_Y(x)=2Y^2/[x(x^2+Y^2)]\) above each positive root.
+The integral for root \(x_i\) is \(\log(1+Y^2/x_i^2)\).
+Positivity permits summation under the integral, giving
+\[
+ \log\frac{H(t,\ii Y)}{Z(t)}
+   =\int_0^\infty K_Y(x)N_t(x)\dd x .
+\]
+The finite head contributes \(O(1)\) as \(Y\to\infty\), since
+\(K_Y(x)\le2/x\) and there is no zero near the origin.
+The error \(\rho\) also costs \(O(1)\).
+The function \(p(s)=\lfloor s\rfloor-s+1/2\) has a bounded
+primitive by its zero mean on each period. Since \(G_t'\)
+is eventually positive and \(G_t''(x)=1/(4\pi x)-t/(16x^2)\),
+we may choose \(b\) so that \(G_t'\) is increasing there.
+With \(s=G_t(x)\), the weight for \(p(s)\)
+is \(K_Y(x)/G_t'(x)\), decreasing to zero and bounded at
+\(b\) uniformly in \(Y\). Integration by parts shows that
+this term is \(O(1)\). It remains to integrate
+\(G_t(x)+d_0-1/2\) over \([b,\infty)\).
 
-At time zero, \(H(0,z)=\xi((1+\ii z)/2)/8\), so the coordinate of a
-critical-line zero of ordinate \(\gamma\) is \(x=2\gamma\).
-Platt and Trudgian certify the first \(12\,363\,153\,437\,138\) zeros of
-positive ordinate on that line, through \(\gamma=3\,000\,175\,332\,800\),
-or \(x=6\,000\,350\,665\,600\) here.  Polymath obtained \(\Lambda\le0.22\)
-\cite[Theorem~1.1]{Polymath2019}.  Combined with Polymath's estimates,
-the larger finite verification gives \(\Lambda\le0.2\)
-by \href{https://arxiv.org/pdf/2004.09765v1\#page=5}{Corollary~2} of \cite{PlattTrudgian2021}.
-Polymath's criterion yields \(\Lambda\le t_0+y_0^2/2\) from a finite-height
-zeta verification at time zero, a zero-free region above \(y_0\) at high
-\(x\) at time \(t_0\), and a zero-free barrier throughout the intervening
-times \cite[Theorem~1.2]{Polymath2019}.  To sharpen this bound by that
-route, an improvement in real-zero locations or gaps would have to supply
-one of these hypotheses at parameters with \(t_0+y_0^2/2<0.2\) while the other two still hold.
+The term in \(x(\log(x/(4\pi))-1)/(4\pi)\) can be extended
+down to zero with an \(O(1)\) error. Substitute \(x=Yu\).
+The integral of \((1+u^2)^{-1}\) is \(\pi/2\), and its
+integral against \(\log u\) vanishes by \(u\mapsto1/u\).
+The resulting contribution is
+\(Y(\log(Y/(4\pi))-1)/4\). The constant \(7/8+d_0\)
+is multiplied by \(\log(1+Y^2/b^2)=2\log Y+O(1)\).
+For the remaining logarithmic term, replacing \(K_Y(x)\)
+by \(2\mathbf 1_{x\le Y}/x\) gives \(\log^2(Y/(4\pi))+O(1)\)
+as its integral against \(\log(x/(4\pi))\). The difference
+uses the weight
+\[
+ W(u)=\frac2u\left(\frac{1}{1+u^2}-\mathbf 1_{u\le1}\right)
+\]
+in the scaled variable. Its integral is zero by inversion,
+its absolute logarithmic moment is finite, and its integral
+in absolute value on \([0,b/Y]\) is \(O(Y^{-2})\).
+Thus the replacement costs \(O(1)\) even after multiplication
+by \(\log(Y/(4\pi))+\log u\). Altogether,
+\begin{equation}\label{eq:clock-count-growth}
+ \log H(t,\ii Y)
+ =\frac{Y}{4}\left(\log\frac{Y}{4\pi}-1\right)
+   +\frac{t}{16}\log^2\frac{Y}{4\pi}
+   +\left(\frac74+2d_0\right)\log Y+O(1).
+\end{equation}
+
+To evaluate the same logarithm from the source, put
+\(F_0(Y)=H(0,\ii Y)\).
+By evenness and the zero-time normalization,
+\(F_0(Y)=\xi((1+Y)/2)/8\) for \(Y>0\). At
+\(s=(1+Y)/2\), Stirling's formula and \(\zeta(s)=1+o(1)\)
+give \((s/2)\log(s/(2\pi))-s/2+(3/2)\log s+O(1)\)
+for \(\log F_0(Y)\). Substituting \(s\) gives
+\[
+ \log F_0(Y)=P(Y)+O(1),\qquad
+ P(Y)=\frac{Y}{4}\left(\log\frac{Y}{4\pi}-1\right)
+                       +\frac74\log Y .
+\]
+In particular the shift \(Y+1\) contributes \(\tfrac14\log Y\).
+For a centered Gaussian \(V\) of variance \(2t\), the positive
+source integral gives \(H(t,\ii Y)=\E F_0(Y+V)\).
+Indeed the Gaussian average of \(\cosh((Y+V)u)\) is
+\(e^{tu^2}\cosh(Yu)\), with interchange justified by positivity.
+
+Write \(A_Y=P'(Y)=\tfrac14\log(Y/(4\pi))+7/(4Y)\).
+On \(|v|\le Y^{1/4}\), Taylor's theorem gives
+\(P(Y+v)=P(Y)+A_Yv+O(Y^{-1/2})\). Multiplying the
+Gaussian density by \(e^{A_Yv}\) gives a shifted density of
+mean \(2tA_Y=O(\log Y)\) times the factor \(e^{tA_Y^2}\).
+The shifted Gaussian probability of the central interval tends
+to one. On \(Y^{1/4}<|v|\le Y/2\), the bound
+\(F_0(Y+v)\ll e^{P(Y)+C|v|\log Y}\) follows from the
+estimate for \(P'\). The quadratic Gaussian exponent
+dominates the linear term and gives a contribution of
+\(O(e^{P(Y)-c_tY^{1/2}})\). On \(|v|>Y/2\),
+evenness and the Stirling bound give
+\(\log F_0(Y+v)=O((1+|v|)\log(2+|v|))\) since
+\(|Y+v|\le3|v|\). This range contributes
+\(O(e^{-c_tY^2})\). It follows that
+\[
+ \log H(t,\ii Y)=P(Y)+tA_Y^2+O(1)
+               =P(Y)+\frac{t}{16}\log^2\frac{Y}{4\pi}+O(1).
+\]
+Comparison with \eqref{eq:clock-count-growth} forces \(d_0=0\).
+The point with \(G_t(X)=j+1/2\) is eventually outside the
+windows and has exactly \(j\) positive zeros through it.
+This gives the asserted rank.
+\end{proof}
+
+The full published displacement at these matched ranks gives
+position and gap errors \(O(u_k^{-ct})\) in units of \(s_k\).
+For the gap, subtract the two displacements in
+\eqref{eq:clock-error} and use \(u_{k+1}/u_k\to1\) and the
+displayed spacing. This calibration leaves the height onset
+unevaluated. A finite alternative at a cutoff in a proved clock
+gap is an exact prefix count, for example by the finite
+polynomial count above. If the adjacent clock labels there are
+\(j,j+1\), subtract \(j\) from that count to obtain the offset.
+
+For refinement with moments at \(t=1/2\), the matched clock
+gives a short real interval containing just \(x_k\), for
+example \([u_k-d's_k,u_k+d's_k]\) for small fixed \(d'>0\).
+By \eqref{eq:clock-error} the whole interval eventually lies
+within the neighborhood in Lemma~\ref{lem:high-rank-circle}.
+Its endpoints have opposite signs and magnitudes
+\(\gg e^{-Ck}/k\). With coefficient and arithmetic errors
+small compared with \(e^{-Ck}\varepsilon/k\), the real error
+bound \eqref{eq:moment-real-error} can be used to bisect this
+interval. If a test interval contains zero, the modulus of the
+true field is at most twice the certified radius, and the
+lower bound in Lemma~\ref{lem:high-rank-circle} puts the test
+point within \(O(\varepsilon s_k)\) of the root. Otherwise the
+sign selects the next half-interval. The same moment order and
+sufficient precision as in Theorem~\ref{thm:high-rank-direct}
+meet this error allowance by \eqref{eq:direct-growth}.
+
+With the same coarse geometry, Theorem~\ref{thm:high-rank-direct}
+uses a shorter moment prefix at large rank than the sufficient
+budget in Theorem~\ref{thm:high-rank-exchange}. If the full
+clock displacement is available, it already supplies the
+displayed localization accuracy at \(t=1/2\) without acquiring
+moments. For an additional prescribed refinement the theorems
+give sufficient orders and precision with either construction.
+Subtracting the neighboring root intervals gives gap uncertainty
+\(O_T(\varepsilon\Delta_k)\) since successive spacings are
+asymptotically equal.
+They leave the onset and arithmetic work unevaluated, as well as
+the height overlap with the large-time inverse in
+Section~\ref{sec:anchors} at a common \(T\).
+
+\subsection{The published time-zero benchmark}
+
+The identity \(H(0,z)=\xi((1+\ii z)/2)/8\) gives \(x=2\gamma\)
+for a critical-line zero of ordinate \(\gamma\). Platt and
+Trudgian certify that the first \(12\,363\,153\,437\,138\) zeros
+of positive ordinate through \(\gamma=3\,000\,175\,332\,800\)
+lie on the line, corresponding to \(x=6\,000\,350\,665\,600\)
+\cite[Theorem~1 and \S2]{PlattTrudgian2021}. Their sign-change
+count with Turing's method certifies completeness at time zero.
+A positive-time count at a specified vertical boundary also
+requires accounting for boundary crossings or counting at that time.
+
+Polymath proved \(\Lambda\le0.22\)
+\cite[Theorem~1.1]{Polymath2019}. The second row of its
+Table~1 uses an ordinate verification above \(2.51\cdot10^{12}\),
+so the larger Platt--Trudgian verification gives \(\Lambda\le0.2\)
+by \href{https://arxiv.org/pdf/2004.09765v1\#page=5}{Corollary~2}
+of \cite{PlattTrudgian2021}. The criterion giving
+\(\Lambda\le t_0+y_0^2/2\) combines a time-zero verification
+through ordinate \(X/2\), final-time nonvanishing for
+\(x\ge X+\sqrt{1-y_0^2}\) and \(y_0\le y\le\sqrt{1-2t_0}\),
+and an intermediate-time barrier on
+\(X\le x\le X+\sqrt{1-y_0^2}\) above
+\(\sqrt{y_0^2+2(t_0-t)}\) up to \(\sqrt{1-2t}\)
+\cite[Theorem~1.2]{Polymath2019}. An improvement by this
+criterion requires these conditions at parameters satisfying
+\(t_0+y_0^2/2<0.2\). The factor and circle estimates concern
+one independently established all-real time.

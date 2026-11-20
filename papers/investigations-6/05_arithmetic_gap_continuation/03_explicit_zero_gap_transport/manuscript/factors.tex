@@ -1,0 +1,184 @@
+\subsection{Recovering individual factors}
+
+Let \(B_j=\prod_{i\le j} b_i\), \(B_0=1\), and let \(E_{j,h}\) be
+the \(j\)-th elementary symmetric sum of the sequence \((b_i^h)_i\)
+for integer \(h\ge1\). In particular \(E_{0,h}=1\). The logarithm
+of \eqref{eq:all-real-product} near zero and Newton's identities give
+\[
+ p_n=-n[v^n]\log G(v)=\sum_i b_i^n,qquad
+ E_{j,h}=\frac1j\sum_{n=1}^j(-1)^{n-1}p_{nh} E_{j-n,h} .
+\]
+The recurrence follows first for a finite head and then by absolute
+convergence. Each \(E_{j,h}\) uses even moments through order \(2jh\).
+Since \(B_j\) is the largest indexed product in \(E_{j,1}\),
+\(B_j^h\le E_{j,h}\le B_j^{h-1}E_{j,1}\).
+For \(h>1\) define
+\(\underline B_{j,h}=(E_{j,h}/E_{j,1})^{1/(h-1)}\) and
+\(\overline B_{j,h}=E_{j,h}^{1/h}\), with both equal to one at \(j=0\).
+Then
+\begin{equation}\label{eq:factor-interval}
+ \sqrt{\frac{\underline B_{k-1,h}}{\overline B_{k,h}}}
+ \le x_k\le
+ \sqrt{\frac{\overline B_{k-1,h}}{\underline B_{k,h}}}.
+\end{equation}
+In particular \(x_k=\lim_{h\to\infty}(E_{k-1,h}/E_{k,h})^{1/(2h)}\)
+for each fixed rank, including multiplicities. For finite input
+intervals the alternating recurrence requires certified coefficient
+errors before dividing by positive lower endpoints.
+
+If the preceding factors are known, a separate estimate uses
+\(s_h^{(k)}=p_h-\sum_{i<k}b_i^h\). The ratio
+\(s_{h+1}^{(k)}/s_h^{(k)}\) is a weighted average of the factors
+from index \(k\) onward. Subtract the average divided by \(b_k\)
+from one, then use \(s_h^{(k)}\ge b_k^h\) and bound each
+\((b_i/b_k)^{h-1}\) for \(i>k\) by the first such term. This gives
+\[
+ 0\le 1-\frac{s_{h+1}^{(k)}}{b_k s_h^{(k)}}
+ \le (b_{k+1}/b_k)^{h-1}\sum_{i>k} b_i/b_k .
+\]
+Strict separation gives geometric decay after the tail is bounded.
+The subtraction also requires precision on the preceding factors
+\cite[\S3]{Founding07}.
+
+\paragraph{Exchanges across one rank.}
+For \(b_{j+1}\le\theta_j\le b_j\), write
+\[
+ A_j=\sum_{i\le j}(\theta_j/b_i)^h,qquad
+ C_j=\sum_{i>j}(b_i/\theta_j)^h .
+\]
+A term in \(E_{j,h}/B_j^h\) removes and inserts the same number of
+indices across the cut at \(j\). All powers of \(\theta_j\)
+therefore cancel. Writing \(e_r(\cdot)\) for an elementary symmetric
+function here gives
+\begin{equation}\label{eq:exchange-bound}
+\begin{aligned}
+ 1\le \frac{E_{j,h}}{B_j^h}
+ &=\sum_{r=0}^j e_r(((\theta_j/b_i)^h)_{i\le j})
+                  e_r(((b_i/\theta_j)^h)_{i>j})\\
+ &\le\sum_{r=0}^{\infty}\frac{(A_jC_j)^r}{(r!)^2}
+ \le e^{A_jC_j}.
+\end{aligned}
+\end{equation}
+The symmetric sums are bounded by the indicated powers divided by
+\(r!\) on each side, by expanding the powers and counting the terms
+with distinct indices. The tail sums converge by \(\sum_i b_i<\infty\).
+
+If \(D_j\ge A_j C_j\) and \(0<L_j\le E_{j,h}\le U_j\), then
+\begin{equation}\label{eq:exchange-interval}
+ \left(\frac{L_{k-1}e^{-D_{k-1}}}{U_k}\right)^{1/(2h)}
+ \le x_k\le
+ \left(\frac{U_{k-1}e^{D_k}}{L_k}\right)^{1/(2h)} .
+\end{equation}
+Use \(D_0=0\) and \(L_0=U_0=1\).
+Indeed, \(B_j^h\) lies between \(L_j e^{-D_j}\) and \(U_j\), and
+\(x_k^{2h}=B_{k-1}^h/B_k^h\). The logarithm of the ratio of its two
+endpoints is
+\[
+ \frac{D_{k-1}+D_k+\log(U_k/L_k)+\log(U_{k-1}/L_{k-1})}{2h}.
+\]
+A finite counted head through \(J\ge j+1\) supplies \(D_j\) if a
+threshold can be chosen between the upper bound for \(b_{j+1}\) and
+the lower bound for \(b_j\). Bound the known weights by interval
+endpoints. For the rest, if \(b_{J+1}\le\beta\le\theta_j\) and
+\(\sum_{i>J}b_i\le S\), the remaining contribution to \(C_j\)
+is at most \((\beta/\theta_j)^{h-1}S/\theta_j\). The upper
+endpoint for \(b_J\) can supply \(\beta\), and
+\(\sum_i b_i=e_1\) supplies \(S\) after subtracting a lower
+bound on the head sum. If both nearest threshold ratios are at
+most \(q<1\), then \(A_j\le jq^h\) and
+\(C_j\le q^{h-1}\sum_{i>j}b_i/\theta_j\). This gives geometric
+decay for fixed \(j\). At a repeated factor \eqref{eq:factor-interval}
+still applies.
+
+At high ranks the spacing gives a uniform allowance for each fixed
+\(T\). Take \(\theta_j=(b_j b_{j+1})^{1/2}\).
+For \(\lfloor j/2\rfloor\le i\le 2j\), the adjacent differences
+\(\log b_i-\log b_{i+1}=2\log(1+\Delta_i/x_i)\) are at least
+\(c_T/j\) by \eqref{eq:high-rank-geometry}. The nearest weights on
+each side of the cut thus cost half a step, and each subsequent
+weight at least one additional step. On this range either sum is at
+most \(e^{-c_T h/(2j)}/(1-e^{-c_T h/j})\).
+On the far head, each base \(\theta_j/b_i\) is at most a fixed
+\(q_0<1\) since \(x_{\lfloor j/2\rfloor}/x_j\to1/2\).
+On the far tail each base \(b_i/\theta_j\) is also at most
+\(q_0<1\) after increasing \(q_0\), since \(x_{2j}/x_j\to2\).
+The head costs at most \(j q_0^h\), and the tail costs at most
+\(q_0^{h-1}\theta_j^{-1}\sum_{i>2j}b_i=O_T(jq_0^{h-1})\).
+For \(h\ge j\) these far bounds and both near sums are
+\(O_T(e^{-c'_T h/j})\) with some \(c'_T>0\). For example,
+one can absorb the factor \(j\) into half the exponential decay
+in \(h\). We can therefore take \(D_j=C_Te^{-c_T'' h/j}\)
+in \eqref{eq:exchange-interval} for sufficiently large \(j\)
+and all \(h\ge j\).
+
+\paragraph{Uncertainty in the symmetric coefficients.}
+For \(\omega=e^{2\pi\ii/h}\), multiplying the rotated products gives
+\[
+ \prod_{l=0}^{h-1}G(\omega^l v)=\prod_i(1-b_i^h v^h),
+ \qquad
+ (-1)^j E_{j,h}=[v^{jh}]\prod_{l=0}^{h-1}G(\omega^l v).
+\]
+The product is locally absolutely convergent, and for \(j\le k\)
+only the coefficients through \(kh\) are used. Equip these
+truncated polynomials with
+\(\|P\|_R=\sum_m |[v^m]P|R^m\), for \(R>0\).
+The norm is submultiplicative and rotations are isometries.
+Let \(\widetilde G\) be the center polynomial and \(d_R\) the
+weighted sum of its coefficient radii in this norm. Put
+\(U_R=\|\widetilde G\|_R+d_R\). Replacing the rotated factors
+one at a time gives a telescoping sum. Taking its norm and then
+extracting degree \(jh\) gives
+\begin{equation}\label{eq:exchange-coefficient-error}
+ |\widetilde E_{j,h}-E_{j,h}|
+ \le h U_R^{h-1}d_R/R^{jh}.
+\end{equation}
+Enclose any arithmetic error separately.
+
+Write \(M_R=G(-R)=F(\ii\sqrt R)\). The exact truncated norm is
+at most \(M_R\). If \(d_R\le\eta M_R\), then
+\(U_R\le(1+2\eta)M_R\). Since \(E_{j,h}\ge B_j^h\),
+the relative error in \eqref{eq:exchange-coefficient-error} is at most
+\[
+ h\eta(1+2\eta)^{h-1}
+ \left(\frac{M_R}{R^j B_j}\right)^h.
+\]
+Take \(R=(4\pi k/\log k)^2\). For \(j=k-1,k\),
+\begin{equation}\label{eq:exchange-coefficient-growth}
+ \frac{M_R}{R^j B_j}
+ =\prod_{i\le j}(1+x_i^2/R)\prod_{i>j}(1+R/x_i^2)
+ \le e^{C_T k}.
+\end{equation}
+Every head factor is bounded by a constant since \(x_j^2\asymp R\).
+The tail logarithm is at most \(R\sum_{i>j}b_i=O_T(k)\).
+Thus coefficient radii \(2^{-p} e_m\) through degree \(kh\)
+are sufficient for relative output errors \(O(\tau)\) if
+\(p\ge C_T'kh+\log_2(h/\tau)+C_T''\), with constants large enough
+to absorb the factor \((1+2\eta)^{h-1}\) and the passage from
+radii to endpoints.
+
+\begin{theorem}[Sufficient product input budget]\label{thm:high-rank-exchange}
+For each fixed positive all-real \(T\), at sufficiently large rank
+\(k\), \(h\ge k\) and relative coefficient enclosure radii at most
+\(\tau\le1/4\) for \(E_{k-1,h},E_{k,h}\), the width of
+\eqref{eq:exchange-interval} in units of \(\Delta_k\) is
+\[
+ O_T\!\left(\frac{k}{h}(e^{-c_T h/k}+\tau)\right).
+\]
+In particular, \(h\asymp_T k(1+\log(1/\varepsilon))\) with a
+sufficiently large constant and \(\tau\asymp\varepsilon\)
+give width \(O_T(\varepsilon\Delta_k)\). The sufficient even
+moment order is \(2kh\), and the sufficient input precision per
+normalized coefficient is \(O_T(kh+\log(h/\tau))\) bits.
+\end{theorem}
+\begin{proof}
+Substitute the high-rank bound for \(D_j\) into the logarithmic
+width of \eqref{eq:exchange-interval}. Each log coefficient
+ratio is \(O(\tau)\). The logarithmic width is \(O_T(1/h)\),
+so exponentiating and using \(x_k/\Delta_k\asymp k\) proves
+the width estimate. The precision bound follows from
+\eqref{eq:exchange-coefficient-error}--\eqref{eq:exchange-coefficient-growth}.
+\end{proof}
+The sufficient asymptotic constants come from the spacing theorem.
+At a specified rank one can use the certified head and tail
+allowance above. The symmetric coefficients themselves are evaluated
+directly from the moments.

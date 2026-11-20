@@ -1,24 +1,26 @@
 # Explicit zero locations in the Newman heat flow
 
-Working manuscript prepared for Edward Baker with OpenAI Codex assistance, 20 November 2026. The opening draft recorded gpt-6.2-astra/max. The desktop chat records gpt-6.2-astra/ultra for this revision.
+**Counted positions, high ranks, and backward gap curvature.** Analytical working manuscript drafted for Edward Baker, 20 November 2026, with OpenAI Codex assistance. The opening manuscript recorded gpt-6.2-astra/max. The current revision records gpt-6.2-astra/ultra and gpt-6.2-sol/ultra. The project assessments are internal.
 
-[Read the manuscript](../../../../../output/pdf/explicit-zero-gap-transport/explicit_zero_gap_transport.pdf) · [Editable LaTeX](main.tex) · [Reference passages and provenance](../references/README.md) · [Build and checks](../numerics/05_ZERO_LOCATIONS_MANUSCRIPT_BUILD_20261120.json)
+[Read the PDF](../../../../../output/pdf/explicit-zero-gap-transport/explicit_zero_gap_transport.pdf) · [Editable manuscript](main.tex) · [Build record](../numerics/06_INTEGRATED_MANUSCRIPT_BUILD_20261120.json) · [Sources and passage provenance](../references/README.md)
 
-| Section | Question | Source |
+| Section | Development | Source |
 | --- | --- | --- |
-| 1 | What constitutes a counted position at one time, and which errors matter for a gap? | [Field and notation](main.tex) |
-| 2 | Which roots do the residue, inverse and full-product formulas locate? What finite error can each one certify? | [Formulas and error estimates](anchors.tex) · [One-time truncation check](position_check.tex) |
-| 3 | Where can the estimates be compared with Polymath and Platt–Trudgian? | [Published comparisons](comparison.tex) |
-| 4 | How do counted positions and the unlocated exterior determine \(S_{k,p,q}\), then \(D_k'\)? | [Mixed hierarchy](exterior.tex) |
-| 5 | What position, count and time estimates are still needed? | [Continuation](frontier.tex) |
-| A–C | How much of the high-time gap motion can the phase current explain, and what limits its use? | [Phase and its domain](current.tex) · [Large-time transport and direct product evolution](transport.tex) · [Finite comparison](finite.tex) |
+| 1 | Physical field and time, positive rank, and squared half-gap | [Field and notation](main.tex) |
+| 2 | Contour displacement, one inverse for consecutive positions, growing count, and the error after differencing | [Contour and inverse](anchors.tex) · [Growing window and finite input bounds](window.tex) |
+| 3 | High ranks at fixed positive all-real time, sufficient moment budgets, circle counts, and absolute calibration of Polymath's clock at one-half | [Fixed-time reconstruction and clock proof](comparison.tex) · [Individual factor reconstruction](factors.tex) |
+| 4 | Exact gap velocity, complete exterior traces, and the signed residual after lattice cancellation | [Exterior interaction and full product evolution](exterior.tex) |
+| 5 | A common time and space estimate at one upper anchor, its positive gap curvature, and the finite precision for initial data | [Backward curvature](curvature.tex) |
+| 6 | A second derivation of gap velocity on a counted phase interval, its domain, and its mean-spacing correction | [Current](current.tex) · [Time-dependent estimates](transport.tex) |
+| 7 | Supporting enclosures of individual positions and the first gap | [Position table](position_check.tex) · [Finite descent](finite.tex) |
+| 8 | Effective overlap at one specified time, acquisition of moments and longer descent | [Outstanding challenges](frontier.tex) · [Research handoff](../notes/16_EZ_ASSESSED_ANCHOR_CONTINUATION_20261120.md) |
 
-The [founding contour calculation](../../brainstorm/notes/08_SUMMING_THE_LARGE_TIME_ZERO_LOOP_20261120.md) and [full-product recovery](../../01_jacobi_integer_hierarchy/brainstorm/notes/07_LARGE_TIME_FACTORIZATION_AND_BACKWARD_PROPAGATION_20261120.md) supply the position formulas. The [mixed-moment derivation](../notes/09_EZ_COMPLETE_ANCHOR_FROM_ZERO_FORMULAS_20261120.md) and its [internal assessment](../reviews/04_EZ_MIXED_MOMENT_ANCHOR_ASSESSMENT_20261120.md) give the signed anchor estimate. The [research handoff](../notes/10_EZ_ZERO_LOCATIONS_CONTINUATION_20261120.md) identifies the first open position comparison.
+The research notes give the original statements, status and separate internal assessments. [Growing inverse](../notes/11_EZ_GROWING_INVERSE_WINDOW_20261120.md) · [High-rank factors](../notes/12_EZ_FINITE_PRODUCT_AT_HIGH_RANK_20261120.md) · [Absolute clock rank](../notes/13_EZ_CLOCK_RANK_20261120.md) · [Direct moments](../notes/14_EZ_DIRECT_MOMENTS_AT_HIGH_RANK_20261120.md) · [Single-anchor curvature](../notes/15_EZ_SINGLE_ANCHOR_GAP_CURVATURE_20261120.md)
 
-Run the following command from this directory with Python 3, latexmk, pdfLaTeX and BibTeX installed.
+Run the following command in this directory with Python 3, latexmk, pdfLaTeX and BibTeX installed.
 
 ~~~sh
 python3 build.py
 ~~~
 
-The [builder](build.py) uses the branch and parent bibliographies and replaces the reading copy on success. The [original production record](../numerics/02_DRAFT_BUILD_AND_CHECK_20261120.json) identifies the opening draft. The [finite arithmetic records](../numerics/README.md) document the numerical checks separately. [Large-file policy](../../../../../LARGE_FILES.md)
+The [builder](build.py) replaces the reading copy in the ignored output directory on success. The [earlier production record](../numerics/05_ZERO_LOCATIONS_MANUSCRIPT_BUILD_20261120.json) identifies the preceding revision. [Numerical evidence](../numerics/README.md) · [Large-file policy](../../../../../LARGE_FILES.md)

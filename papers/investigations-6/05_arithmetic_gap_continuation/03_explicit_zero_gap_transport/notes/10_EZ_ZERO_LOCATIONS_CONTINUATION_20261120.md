@@ -1,5 +1,7 @@
 # Continue with the explicit zero formulas
 
+**Historical handoff, executed 20 November 2026.** The [current register](../research-progress/02_EZ_ZERO_LOCATIONS_RESEARCH_PROGRESS_20261120.md) records the returns. See the [new continuation](16_EZ_ASSESSED_ANCHOR_CONTINUATION_20261120.md) for the next research session.
+
 20 November 2026. Handoff prepared for Edward Baker with OpenAI Codex assistance. The desktop thread records gpt-6.2-astra/ultra, without a separate per-turn configuration. The [02 progress register](../research-progress/02_EZ_ZERO_LOCATIONS_RESEARCH_PROGRESS_20261120.md) owns live status. [Branch](../README.md) · [Overview](../research-overview/02_EZ_ZERO_LOCATIONS_RESEARCH_OVERVIEW_20261120.md) · [Plan](../research-plan/02_EZ_ZERO_LOCATIONS_RESEARCH_PLAN_20261120.md) · [References](../references/README.md)
 
 | Handoff snapshot | Routing and reason | Dependency and return |

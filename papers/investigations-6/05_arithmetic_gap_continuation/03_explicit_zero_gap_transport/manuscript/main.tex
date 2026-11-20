@@ -16,6 +16,7 @@
 \setlength{\emergencystretch}{1.5em}
 \raggedbottom
 \numberwithin{equation}{section}
+\setcounter{tocdepth}{1}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{lemma}[theorem]{Lemma}
@@ -31,15 +32,21 @@
 \begin{center}
 {\small\scshape Analytical working draft}\\[8pt]
 {\LARGE\bfseries Explicit zero locations in the Newman heat flow}\\[5pt]
-{\large Fixed-time formulas and their consequences for gaps}\\[9pt]
+{\large Counted positions, high ranks, and backward gap curvature}\\[9pt]
 {\large Drafted for Edward Baker}\\[3pt]
 20 November 2026
 \end{center}
 \begin{abstract}
-How accurately can one locate consecutive zeros of the Newman heat flow from the theta source at one specified time \(T\)?
-We compare a contour expansion around a counted cosine zero, an inverse series shared by a growing family of zeros at large \(T\), and recovery of an individual factor from the even moments at an all-real time. The inverse isolates a cubic distortion that survives in ratios of zero locations. For the product, the outstanding question is the finite moment precision needed to resolve a local spacing as the height increases at fixed \(T\). We give Polymath's fixed-time estimate as a benchmark. We then show how a counted family of locations and radial sums over the remaining zeros determine the generalized exterior moments for each marked pair. Their first mixed entry gives the sign and leading size of backward widening on a growing range of labels at large time. Extending that control from one upper time to the times and heights needed for an improved bound on the de Bruijn--Newman constant remains open.
+We derive estimates for consecutive zeros of the Newman heat flow from the theta source at one time. As the time \(T\) grows, a single inverse phase counts a prefix of order \(\sqrt T(\log T)^2\). Differentiating its cubic remainder gains a factor of order the reciprocal rank in the spacing error as the rank grows. At a fixed positive time with an independently all-real divisor, the same even moments admit two reconstructions of a high zero. Direct polynomial evaluation with a circle count gives sufficient moment order and relative coefficient precision \(O_T(k+\log(1/\epsilon))\) for accuracy \(\epsilon\) in units of the \(k\)-th spacing. An imaginary-axis growth comparison identifies the absolute ranks in Polymath's eventual clock at \(T=1/2\).
+
+For the time evolution we first express the gap velocity through a sum over all other zeros. We then tilt the complete source at the upper time. On an interior portion of the growing prefix the squared half-gap widens backward and has positive second derivative throughout a time interval of length \(\sqrt\kappa/(2L)\), where \(L\) is the upper saddle and \(\kappa\) its curvature. The leading curvature comes from the cubic asymmetry of the saddle. The remaining problems are to connect the height ranges at a specified time and to propagate counted gaps toward lower time.
 \end{abstract}
-\section{Locating consecutive zeros at one time}\label{sec:source}
+\begingroup
+\small
+\tableofcontents
+\endgroup
+\clearpage
+\section{The field, its zeros and the two limits}\label{sec:source}
 Fix an upper physical time \(T\). We seek a formula for the \(k\)-th positive zero \(x_k(T)\) whose error can be compared with the spacing to its neighbor. A common error in two predicted positions can largely cancel in their difference. This makes the dependence of the error on \(k\) as important for gaps as its magnitude at a single root. An estimate for fixed \(k\) as \(T\to\infty\), an estimate uniform for \(k\le K(T)\), and an estimate as \(k\to\infty\) at one fixed \(T\) answer distinct questions.
 
 In the normalization of Polymath \cite[\S1]{Polymath2019}, the physical field and its source are
@@ -57,17 +64,21 @@ We count positive zeros from the origin. For a counted, simple, adjacent pair us
  g_k=x_+-x_-,\quad c=(x_++x_-)/2,\quad D_k=g_k^2/4 .
 \]
 A dot denotes physical time \(t\). We suppress \(k\) when the pair is fixed. A descent of length \(s\) from \(T\) ends at \(T-s\).
-Section~\ref{sec:anchors} gives the position formulas and Section~\ref{sec:comparison} compares their domains with published bounds. Section~\ref{sec:exterior} estimates the interaction from the locations of the zeros before using the gap equation. Section~\ref{sec:frontier} identifies which positional and time estimates would strengthen that conclusion. The appendices compare this route with the high-time phase calculation and its finite checks.
+The two limits require different information. At large \(T\) the source concentrates near one saddle. Its odd cumulants deform the zeros of a single cosine, and a common inverse preserves the dependence between neighbors (Section~\ref{sec:anchors}). At fixed \(T\) one can instead use the full even product and high-zero spacing to measure the precision needed to recover an absolute rank (Section~\ref{sec:comparison}).
+
+For motion, knowing two positions leaves their relative velocity undetermined because every other zero enters it. Section~\ref{sec:exterior} completes that exterior from radial traces. Section~\ref{sec:anchored-curvature} obtains the signed second derivative from one upper source, including the influence of the unlocated zeros throughout the descent. Section~\ref{sec:current} derives a complementary velocity formula on intervals of increasing phase. The finite checks in Section~\ref{sec:finite} illustrate the error scales. Section~\ref{sec:frontier} states what would connect these results at a common height and extend them to lower time.
 \input{anchors}
-\input{position_check}
 \input{comparison}
 \input{exterior}
-\input{frontier}
-\appendix
+\input{curvature}
 \input{current}
 \input{transport}
 \input{finite}
-\paragraph{Acknowledgment.} Prepared for Edward Baker with substantial OpenAI Codex LLM assistance. The opening draft recorded gpt-6.2-astra at max effort. The desktop chat records gpt-6.2-astra at ultra effort for this revision. The mathematical assessments are internal.
+\input{frontier}
+\paragraph{Acknowledgment.} Drafted for Edward Baker with substantial OpenAI Codex LLM assistance. The opening draft recorded gpt-6.2-astra at max effort. The present analytical revision used gpt-6.2-astra and gpt-6.2-sol at ultra effort. The cited project assessments are internal.
+\begingroup
+\small
 \bibliographystyle{plain}
 \bibliography{branch,references}
+\endgroup
 \end{document}

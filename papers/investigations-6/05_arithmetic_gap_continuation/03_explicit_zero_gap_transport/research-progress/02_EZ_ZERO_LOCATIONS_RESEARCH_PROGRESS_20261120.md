@@ -1,8 +1,8 @@
 # Progress on explicit zero locations and backward gap control
 
-20 November 2026. Prepared for Edward Baker with OpenAI Codex assistance. The desktop thread records gpt-6.2-astra/ultra. **This is the sole current progress register for the AGC-EZ task family.** [Overview](../research-overview/02_EZ_ZERO_LOCATIONS_RESEARCH_OVERVIEW_20261120.md) · [Plan and work limits](../research-plan/02_EZ_ZERO_LOCATIONS_RESEARCH_PLAN_20261120.md) · [Continuation prompt](../notes/10_EZ_ZERO_LOCATIONS_CONTINUATION_20261120.md)
+20 November 2026. Prepared for Edward Baker with OpenAI Codex assistance. The desktop thread records gpt-6.2-astra/ultra. **This is the sole current progress register for the AGC-EZ task family.** [Overview](../research-overview/02_EZ_ZERO_LOCATIONS_RESEARCH_OVERVIEW_20261120.md) · [Plan and work limits](../research-plan/02_EZ_ZERO_LOCATIONS_RESEARCH_PLAN_20261120.md) · [Executed handoff](../notes/10_EZ_ZERO_LOCATIONS_CONTINUATION_20261120.md) · [Current continuation](../notes/16_EZ_ASSESSED_ANCHOR_CONTINUATION_20261120.md)
 
-## Starting state
+## Historical starting state before Note 10 was executed
 
 **Setup complete. B07 is ready for a research session.** The first return is a formula-by-formula account of validity and finite-input precision, followed by a selection of one improvement to prove. The two requested papers have been checked for their relevant theorems, coordinate conventions and error ranges. Formal setup has issued no E packet. [Checked passages](../references/README.md#published-comparisons-for-the-fixed-time-zero-formulas)
 
@@ -15,15 +15,17 @@
 
 ## Task register
 
-| Task | Model and reason | State, dependency and expected return |
+| Task | Disposition on 20 November | Evidence and dependency |
 | --- | --- | --- |
-| AGC-EZ-B07 | B · Astra/ultra, select the useful positional simplification | **Ready, unactivated.** Compare the counted contour, inverse/cubic and full-product formula. Select a shared position-error estimate or a wider quantified range. Write the first decision in `brainstorm/notes/`. |
-| AGC-EZ-E10 | E · Sol 6.2/ultra, derive the chosen analytic remainder | Reserved for a frozen B07 specification. Return the position and adjacent-difference errors, count, source budget and matched comparison, or the exact failed inequality. |
-| AGC-EZ-B08 | B · Astra/ultra, choose how to reach higher ranks at fixed time | Follows B07/E10's range and limiting estimate. Select finite-order factor recovery or a counted high-index reference. Identify a possible overlap and the data needed to match ranks. |
-| AGC-EZ-E11 | E · Sol 6.2/ultra, bound the specified high-index approximation | Reserved for B08. Deliver a quantitative fixed-time range/precision result or a scoped failure, with a comparison against Polymath when both apply. |
-| AGC-EZ-E12 | E · Sol 6.2/ultra, check position estimates and comparator | Reserved after a written E10 or E11 return. Record a dated assessment for each substantive position milestone. Include the extent of any remaining fixed-time height gap. |
-| AGC-EZ-B06 | B · Astra/ultra, choose which signed time remainder to control | Deferred until the position stage has been assessed, including the fixed-time reach question and exterior errors. Reuse its earlier hierarchy question with the resulting anchor data. |
-| AGC-EZ-E09 | E · Sol 6.2/ultra, propagate a bounded hierarchy remainder | Reserved for the subsequent B06 decision and issued specification. Return a counted backward interval, range and gap margin or a quantified obstruction. |
+| B07 · Astra/ultra | Complete. Selected a growing inverse disk after comparing the four position formulas and direct localization. | [Decision and input table](../brainstorm/notes/05_EZ_B07_GROWING_DISK_20261120.md) |
+| E10 · Sol 6.2/ultra | Proved in-note and assessed. The consecutive prefix ends at \(q_k\le a\sqrt{\kappa\log\kappa}/8\) for sufficiently large \(T\). The finite test prices the complete source, count, cubic and shared gap error. | [Proof](../notes/11_EZ_GROWING_INVERSE_WINDOW_20261120.md) · [Return](handoffs/AGC_EZ_E10_RETURN_R1_20261120.md) |
+| B08 · Astra/ultra | Complete. Selected finite factor recovery, full pricing of coefficient cancellation, and an absolute rank calibration. | [Decision](../brainstorm/notes/06_EZ_B08_PRICING_THE_PRODUCT_20261120.md) |
+| E11 · Sol 6.2/ultra with lead's direct comparator | Proved in-note and assessed. At \(t=1/2\) the eventual clock offset is zero. At each fixed positive all-real time, prescribed spacing accuracy \(\epsilon\) has sufficient moment order \(O_T(k^2(1+\log(1/\epsilon)))\) by the product and \(O_T(k+\log(1/\epsilon))\) by direct evaluation and count. | [Product](../notes/12_EZ_FINITE_PRODUCT_AT_HIGH_RANK_20261120.md) · [Rank](../notes/13_EZ_CLOCK_RANK_20261120.md) · [Direct](../notes/14_EZ_DIRECT_MOMENTS_AT_HIGH_RANK_20261120.md) · [Return](handoffs/AGC_EZ_E11_RETURN_R1_20261120.md) |
+| E12 · Sol 6.2/ultra | Complete. Separate internal assessments accepted the position milestones within their domains. They distinguish a computable individual certificate from a numerical high-rank onset. | [Review 05](../reviews/05_EZ_GROWING_WINDOW_ASSESSMENT_20261120.md) · [Review 06](../reviews/06_EZ_HIGH_RANK_ASSESSMENT_20261120.md) · [Return](handoffs/AGC_EZ_E12_RETURN_R1_20261120.md) |
+| B06 · Astra/ultra | Complete. Chose the joint upper-source estimate of the signed mixed-hierarchy time remainder. | [Decision](../brainstorm/notes/07_EZ_B06_ANCHORED_TIME_CURVATURE_20261120.md) |
+| E09 · Sol 6.2/ultra | Proved in-note and internally assessed. For \(q_{n+1}\le L\sqrt{\kappa\log\kappa}/16\) and all \(0\le s\le\sqrt\kappa/(2L)\), the counted gap widens backward and \(D_n''/D_*\sim32L/\kappa^2>0\) uniformly. | [Proof and anchor input budget](../notes/15_EZ_SINGLE_ANCHOR_GAP_CURVATURE_20261120.md) · [Return](handoffs/AGC_EZ_E09_RETURN_R1_20261120.md) · [Review 07](../reviews/07_EZ_TIME_CURVATURE_ASSESSMENT_20261120.md) |
+| **B09 · Astra/ultra** | **Next decision.** At \(T=1000\) choose a uniform, effective high-tail clearance and assess the finite rank interval needed to join the counted head. | [Bounded objective and decision test](../notes/16_EZ_ASSESSED_ANCHOR_CONTINUATION_20261120.md) |
+| E13 · Sol 6.2/ultra | Reserved. One bounded overlap calculation after B09 fixes the inputs and comparison. | [Continuation](../notes/16_EZ_ASSESSED_ANCHOR_CONTINUATION_20261120.md) |
 
 ## Change of ownership and priorities · 20 November 2026
 
@@ -32,3 +34,13 @@ The [01 register](01_EZ_RESEARCH_PROGRESS_20261120.md) is the historical record.
 Update this register after each decision, proof or scoped failure with the date, input versions, measured domain and error, strongest matched baseline, review and next dependency. For a numerical check, also record which analytical decision its outcome changes. The first unresolved quantity is the gain obtainable from the shared inverse before any time evolution.
 
 **Manuscript revision, 20 November 2026.** The [working draft](../manuscript/README.md) now gives the physical neighboring-error identity, the finite-order product interval, the fixed-time published comparison, and the signed exterior estimate in that order. This integrates existing results. B07 remains ready to select a sharper estimate or a larger counted range. [Build record](../numerics/05_ZERO_LOCATIONS_MANUSCRIPT_BUILD_20261120.json)
+
+**Activated, 20 November, branch chat 0002.** Recorded lead gpt-6.2-astra/ultra for Edward Baker with OpenAI Codex assistance. [B07](../brainstorm/notes/05_EZ_B07_GROWING_DISK_20261120.md) selected a growing inverse disk. [E10 R1](handoffs/AGC_EZ_E10_REQUEST_R1_20261120.md) issued to gpt-6.2-sol/ultra. The preceding entries document the setup at issue.
+
+**B08 decision.** E10's strict interior disk returns a growing counted prefix. [B08](../brainstorm/notes/06_EZ_B08_PRICING_THE_PRODUCT_20261120.md) selects a finite-$h$ product estimate and an exact clock-rank check at physical time one half. [E11 R1](handoffs/AGC_EZ_E11_REQUEST_R1_20261120.md) issued with disjoint derivation and rank-check ownership.
+
+**Position returns and B06, 20 November.** E10 and E11 have written returns. E12a accepted the expanded complex disk and E12b checked the product, absolute rank and direct coefficient comparator, including the fixed-time spacing result of Ki–Kim–Lee. The effective overlap between finite low and asymptotic high ranks at a specified large time is open. [E12 request](handoffs/AGC_EZ_E12_REQUEST_R1_20261120.md) · [B06 decision](../brainstorm/notes/07_EZ_B06_ANCHORED_TIME_CURVATURE_20261120.md). [E09 R1](handoffs/AGC_EZ_E09_REQUEST_R1_20261120.md) issued on a strict interior of the large-time prefix.
+
+**Assessed milestone, 20 November.** E09 gives a strict counted backward interval and positive curvature from one upper anchor. The finite-input supplement pays for the radial subtraction and head acquisition through the curvature rows. The direct source evolution gives the same order. No new numerical run was needed. B09 is the next conceptual decision, with \(T=1000\) selected for its existing counted fortieth root. [E09 assessment](../reviews/07_EZ_TIME_CURVATURE_ASSESSMENT_20261120.md) · [Continuation and stopping test](../notes/16_EZ_ASSESSED_ANCHOR_CONTINUATION_20261120.md) · [Branch chat 0002](../chat-histories/0002_2026-11-20T17-01-41Z_continue-explicit-zero-gap-research.json).
+
+**Manuscript milestone, 20 November.** The proofs from Notes 11–15 now appear together in Sections 2–5. Section 7 contains the supporting finite comparisons, and Section 8 develops B09 and the longer-descent question. B09 remains the next research decision. Prepared for Edward Baker with OpenAI Codex assistance, gpt-6.2-astra/ultra and gpt-6.2-sol/ultra. [Manuscript](../manuscript/README.md) · [Build and verification](../numerics/06_INTEGRATED_MANUSCRIPT_BUILD_20261120.json)

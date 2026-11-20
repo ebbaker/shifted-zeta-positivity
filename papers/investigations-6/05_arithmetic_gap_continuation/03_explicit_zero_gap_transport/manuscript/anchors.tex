@@ -1,9 +1,6 @@
-\section{Locating the indexed zeros at a fixed time}\label{sec:anchors}
-At a chosen time \(T\) the inputs are the complete theta source and the known levels
-\(q_k=(k-\tfrac12)\pi\). The contour formula gives the displacement from a particular
-level, the inverse series evaluates an entire counted family from shared source
-cumulants, and the product recovers each ordered zero at an all-real time from
-even source moments \cite{Founding07,Founding08}. The large positive saddle \(L\)
+\section{A counted inverse at large time}\label{sec:anchors}
+We first locate a zero near an individual cosine zero, then construct one inverse from shared source cumulants for all the levels in a counted interval \cite{Founding07,Founding08}.
+The large positive saddle \(L\)
 and its curvature \(\kappa\) set the scales
 \begin{equation}
  4\pi e^{4L}=2TL+9,\qquad \kappa=8TL-2T+36,\qquad S=\kappa+2T,\qquad \ell=a\sqrt\kappa .
@@ -46,117 +43,68 @@ Write \(y=az\) and \(\theta(y)=y-\Psi(y)\). The complex factorization on this di
  \cos\theta(y),\qquad
  \cos\theta(y)=\prod_{k\ge1}\left(1-\frac{\theta(y)^2}{q_k^2}\right).
 \]
-The cosine product is classical \cite[4.22.2]{DLMF}. The amplitude has a logarithm on this disk. Following \(\theta\) continuously from \(\theta(0)=0\) labels the zeros wherever
-the factor is nonzero and the phase increases. The positive crossings there occur
-in the order \(q_1,q_2,\ldots\). This is a way of evaluating positions at this time.
+The cosine product is classical \cite[4.22.2]{DLMF}. On the real interval the exponential factor is positive. If the phase
+increases from zero, its crossings of \(q_k=(k-\tfrac12)\pi\) give the
+positive zero indices from the origin.
 
-\begin{theorem}\label{thm:inverse}
-The inverse \(Y\) through zero has the expansion
-\begin{align}
- a x_k=Y(q_k),\qquad
- Y(q)&=\sum_{N\ge0}\frac{q^{2N+1}}{2N+1}
- [u^{2N}]\left(1-\sum_{j\ge1}c_j u^{2j}\right)^{-(2N+1)} .\label{eq:inverse}
-\end{align}
-The coefficient of \(q^{2N+1}\) uses odd cumulants through order \(2N+1\) and the mean \(a\).
-In particular the coefficients of \(q^3,q^5,q^7\) are \(c_1,\ 3c_1^2+c_2,\ 12c_1^3+8c_1c_2+c_3\). For each fixed \(C>0\) there exists \(T_0(C)\) such that the series converges absolutely and labels every zero with \(q_k\le C\ell\) for \(T\ge T_0(C)\).
+\begin{theorem}[Counted phase inverse]\label{thm:inverse}
+Suppose \(K_0\) is holomorphic on the closed disk \(|y|\le R\) and
+\(|\Psi|\le M\) there. Set
+\[
+ b_R=M/6,\qquad Q=R/2-b_R,
+\]
+and suppose \(Q>0\). The inverse branch through zero exists for \(|q|<Q\).
+On this disk \(|Y(q)-q|\le b_R\), and
+\begin{equation}
+ ax_k=Y(q_k)\quad(q_k<Q),\qquad
+ Y(q)=\sum_{N\ge0}\frac{q^{2N+1}}{2N+1}
+ [u^{2N}]\left(1-\sum_{j\ge1}c_j u^{2j}\right)^{-(2N+1)} .
+ \label{eq:inverse}
+\end{equation}
+The first identity counts all positive zeros through each indicated
+\(x_k\), and they are simple. The series converges absolutely, including
+after expanding its coefficients into individual monomials in the \(c_j\).
+The coefficient of \(q^{2N+1}\) uses the mean and odd cumulants through
+order \(2N+1\). For \(q^3,q^5,q^7\) the coefficients are
+\(c_1,\ 3c_1^2+c_2,\ 12c_1^3+8c_1c_2+c_3\).
 \end{theorem}
 \begin{proof}
-Apply Lagrange inversion to \(y-\Psi(y)=q\) \cite[\S1.10(vii)]{DLMF}. An effective disk test takes \(R>0\),
-\[
- \delta=\frac{R^2}{2a^2}\E_T[(U-a)^2e^{R|U-a|/a}]<1,\quad
- b=-\log(1-\delta)/6,\quad Q=R/2-b>0 .
-\]
-The centered exponential Taylor remainder bounds \(|e^{K_0}-1|\le\delta\) on the disk of radius \(R\). Cauchy's estimate bounds \(\sum|c_j|(R/2)^{2j+1}\le b\). On \(|y|=R/2\), Rouché counts exactly one preimage for each \(|q|<Q\). The preimage is simple and varies analytically. On the real interval its derivative has the positive sign it has at zero. Its image therefore contains the full segment from zero to \(Y(q_k)\), which gives the rank count from the factorization. Replacing all \(c_j\) by their absolute values yields a majorant with displacement at most \(b\). After \(N=N_0\) the corresponding tail bound for the physical position is \(b(|q|/Q)^{2N_0+3}/[a(1-(|q|/Q)^2)]\). For the larger asymptotic range use \eqref{eq:complex-saddle} below on \(|y|\le4C\ell\). The odd part has supremum \(O_C(\kappa^{-1/2})\) there. The same half-radius and majorant argument gives \(Q\ge2C\ell-O_C(\kappa^{-1/2})\).
+Cauchy's estimate gives
+\(\sum_{j\ge1}|c_j|(R/2)^{2j+1}\le M\sum_{j\ge1}2^{-2j-1}=b_R\).
+On \(|y|=R/2\), \(|y-q|>b_R\) for \(|q|<Q\). Rouch\'e's theorem
+counts exactly one preimage with multiplicity, so it is simple and
+depends holomorphically on \(q\). Its displacement is \(\Psi(Y)\).
+Conjugation makes \(Y\) real on the real interval. There its derivative
+cannot change sign and is one at zero. The positive image segment is
+therefore counted by the factorization. Lagrange inversion gives
+\eqref{eq:inverse} \cite[\S1.10(vii)]{DLMF}. The same preimage count for
+the phase with coefficients \(|c_j|\) gives a convergent majorant, since
+the formal coefficient polynomials in \eqref{eq:inverse} have
+nonnegative coefficients.
 \end{proof}
-Thus at a specified \(T\) the disk test gives a counted prefix from \(a,\delta,R\).
-In the asymptotic assertion its length is
-\[
- K_C(T)=\left\lfloor C a\sqrt{\kappa}/\pi+\tfrac12\right\rfloor .
-\]
-The endpoint has physical height \(x_{K_C(T)}\sim C\sqrt{\kappa}\) as \(T\to\infty\)
-with \(C\) fixed, by \eqref{eq:distort} below. The threshold \(T_0(C)\) in this
-assertion is unspecified. Extending the prefix at one chosen \(T\) requires
-controlling the source remainder and the count for the new range of levels.
 
-\subsection{The cubic approximation and its error across a gap}
-For \(h=-c_1>0\), all powers of the third cumulant alone sum explicitly to the branch
+One finite disk test uses the centered exponential Taylor remainder. If
+\[
+ \delta=\frac{R^2}{2a^2}\E_T[(U-a)^2e^{R|U-a|/a}]<1,
+\]
+then \(|e^{K_0}-1|\le\delta\) on the disk. The logarithm series gives
+\(M=-\log(1-\delta)\). The saddle calculation below covers a larger disk by estimating the transform relative to a Gaussian.
+
+For \(h=-c_1>0\) the cubic branch through zero can be written as
 \[
  Y_3(q)=\frac{2}{\sqrt{3h}}\sinh\!\left(\frac13\operatorname{arsinh}
                           \frac{3\sqrt{3h}\,q}{2}\right),\qquad Y_3+hY_3^3=q .
 \]
-The remaining terms can be summed by the number of higher cumulants they contain. With \(I(y)=\Psi(y)-c_1y^3\), they give
+With \(I(y)=\Psi(y)-c_1y^3\), regrouping by the number of higher cumulant
+factors gives
 \[
  Y=Y_3+\sum_{m\ge1}\frac{\partial_q^{m-1}}{m!}
                 \{Y_3'(q)\,I(Y_3(q))^m\}.
 \]
-Insert a parameter \(\lambda\) multiplying \(I\) and invert at \(\lambda=0\). On every strict majorant disk above the one-root comparison persists for \(|\lambda|\le1+\epsilon\) at fixed \(q\), justifying evaluation at one.
-
-\begin{lemma}[Centered source at the positive saddle]\label{lem:saddle}
-At each time \(t\) use \eqref{eq:saddle} with \(T=t\), and set \(\alpha=2S/(3\kappa^{3/2})\). For every fixed disk in complex \(\zeta\), with uniform error on it,
-\begin{equation}
- K_0(\ell\zeta)=-\zeta^2/2+\ii\alpha\zeta^3+O_C(\kappa^{-1}).
- \label{eq:complex-saddle}
-\end{equation}
-The branch of the logarithm is continued from zero. In particular
-\(\gamma_3=-4S/\kappa^3+O(\kappa^{-5/2})\) and \(a=L-2S/\kappa^2+O(\kappa^{-3/2})\).
-\end{lemma}
-\begin{proof}
-Write the source as \(2\pi^2e^{p_t(u)}b(u)\), where \(p_t(u)=tu^2+9u-\pi e^{4u}\). The bounded positive complete factor
-\(b(u)=\sum_{n\ge1}(n^4-3n^2e^{-4u}/(2\pi))e^{-\pi(n^2-1)e^{4u}}\)
-tends to one. For \(W=\sqrt\kappa(U-L)\), \(|W|\le\kappa^{1/12}\), Taylor expansion at the saddle gives unnormalized density, up to a constant,
-\[
- e^{-w^2/2}\{1-\alpha w^3+O((1+w^4+w^6)/\kappa)\}.
-\]
-Indeed \(p_t'''(L)=-4S\); the next exponent term is \(O(w^4/\kappa)\), and \(b=1+O(1/\kappa)\) on this interval. On \(u\ge L-1/4\) the remaining tail is dominated by \(C_1e^{-c_1w^2}\). The part \(0\le u<L-1/4\) costs a polynomial times \(e^{-c_2\kappa+C L\sqrt\kappa}\) even with the complex weight \(e^{C|w|}\), which is negligible because \(L=o(\sqrt\kappa)\). These complete-source majorants are established in \cite[Appendix A, complete saddle bounds]{Saddle}; see also \cite[\S4]{Founding08}.
-Gaussian integration gives \(\E W=-3\alpha+O(\kappa^{-1})\). The Fourier transform of \(w^3\) times the normalized Gaussian is \(\ii(3\zeta-\zeta^3)e^{-\zeta^2/2}\). Centering by the actual mean cancels its linear term. The limiting transform is bounded away from zero on each fixed complex disk, so the logarithm and Cauchy coefficient estimates give the assertions.
-\end{proof}
-For \(q=q_k\le C\ell\) the same estimate gives
-\begin{equation}
- ax_k=q-\alpha(q/\ell)^3+O_C(\kappa^{-1}(q/\ell)^3),\qquad
- |ax_k-Y_3(q)|=O_C(\kappa^{-1}(q/\ell)^5). \label{eq:distort}
-\end{equation}
-Indeed the odd remainder after the displayed saddle cubic vanishes to order three. After removal of the exact cubic coefficient it vanishes to order five. Divide by the corresponding power on a larger disk and apply the maximum principle. The inverse equation gives \(|Y|\le2|q|\) eventually, and the real cubic \(y\mapsto y+hy^3\) has derivative at least one.
-
-For a gap with \(q=q_k\) and \(q+\pi\le C\ell\), write \(R_T(q)=Y(q)-Y_3(q)\).
-The positional and neighboring errors in physical units are exactly
-\begin{equation}
- x_k-\frac{Y_3(q)}a=\frac{R_T(q)}a,\qquad
- g-\frac{Y_3(q+\pi)-Y_3(q)}a
-   =\frac{R_T(q+\pi)-R_T(q)}a .
- \label{eq:shared-residual}
-\end{equation}
-In units of the reference spacing \(\pi/a\), the absolute gap error is therefore
-\(|R_T(q+\pi)-R_T(q)|/\pi\). Adding the two bounds in \eqref{eq:distort}
-gives at most \(O_C(\kappa^{-1}((q+\pi)/\ell)^5)\) in these units.
-A common error can cancel in the difference. A comparison using the same analytic
-data follows from Cauchy's estimate. If \(|R_T|\le B\) on disks of radius \(d\) about every
-point of \([q,q+\pi]\), then \(|R_T(q+\pi)-R_T(q)|/\pi\le B/d\).
-A proposed refinement must specify the counted interval, the complex margin and
-the uncertainty of any estimated common mean or cubic coefficient.
-
-For each fixed \(k\ge2\),
-\begin{equation}
- \lim_{T\to\infty}L^3\kappa^2
- \left(1-\frac{x_k(T)}{(2k-1)x_1(T)}\right)=\frac{2\pi^2}{3}k(k-1).
- \label{eq:shape}
-\end{equation}
-Use \(c_1=\gamma_3/(6a^3)\) in \eqref{eq:inverse}, the order-five bound in \eqref{eq:distort}, \(q_k^2-q_1^2=\pi^2 k(k-1)\), and \(a/L,S/\kappa\to1\). A common change of frequency cancels from this ratio.
-
-For a fixed index the first shift can also be expressed in \(T,k\) alone. Substituting Lemma~\ref{lem:saddle} for \(a\) in \eqref{eq:distort} gives
-\[
- x_k(T)=\frac{q_k}{L-2S/\kappa^2}
-          +O_k\!\left(\frac1{L^2\kappa^{3/2}}\right).
-\]
-The two-site Jacobi reference in the founding calculation has frequency
-\(\sqrt{\beta_1}\), where \(\beta_1=\E U^2\) and \(\beta_1\beta_2=\Var(U^2)\).
-Put \(\sigma^2=\Var U\), \(\epsilon=\sigma/a\), \(d_J=\beta_2/\beta_1\).
-Expanding \(U^2=(a+(U-a))^2\) using the centered moment bounds gives
-\(d_J=4\epsilon^2+O(\epsilon^3)\). Since \(\sqrt{\beta_1}/a=\sqrt{1+\epsilon^2}\)
-and \(ax_k=q_k+O_k(\epsilon^3)\), subtracting consecutive zeros and squaring yields
-\[
- \frac{D}{\pi^2/(4\beta_1)}=1+\frac{d_J}{4}+O_k(d_J^{3/2}).
-\]
-This is the large-time displacement relative to that particular Jacobi reference \cite[\S2]{Founding07}.
+Indeed the equation \(Y-c_1Y^3=q+\lambda I(Y)\) becomes a Lagrange
+inversion in \(\lambda\) after writing \(Y=Y_3(w)\). For each strict
+\(|q|<Q\) the same boundary majorant persists for \(|\lambda|\) in a disk
+of radius greater than one, which justifies evaluating the expansion at one.
 
 \subsection{Source coefficients and the continuous inverse}
 The coefficients can themselves be expressed without quadrature. With \(b_n=\pi n^2\), \(J_b(v)=b^{-v}\Gamma(v,b)\), set
@@ -167,44 +115,4 @@ The coefficients can themselves be expressed without quadrature. With \(b_n=\pi 
 \]
 Substitute \(b_ne^{4u}\) in \eqref{eq:field} at \(T=0\), then expand the heat weight. The double-exponential tails justify absolute convergence on compact \(s,T\) sets, and \(\gamma_j=(\log P_T)^{(j)}(0)\) \cite[8.2.2]{DLMF}. An algebraic inverse germ in the continuous variable \(q\) is excluded at finite \(T\). Indeed put \(m(s)=\E_Te^{sU}\). At \(z=-\ii s\) the physical phase continues as \(-\ii s b(s)\), \(b(s)=\log(m(s)/m(-s))/(2s)\), because both transforms are positive there. Unbounded support gives \(b(s)\to\infty\); the density at zero gives \(m(-s)\gg_T1/s\), and the complete tail gives \(\log m(s)=O_T(s\log(2+s))\) by splitting at a sufficiently large multiple of \(\log(2+s)\). Hence \(b(s)=O_T(\log s)\). In a polynomial relation between argument and phase, divide by \(s^d\) at highest total degree \(d\). The leading homogeneous part is a nonzero polynomial in \(b(s)\), while every lower-degree term tends to zero. This contradiction concerns the continuous germ. A discrete-index or transcendental expression remains possible.
 
-\subsection{Arbitrary fixed ranks from the all-real product}
-At an all-real anchor the paired order-one product is \(H(T,z)/Z(T)=\prod_{i\ge1}(1-b_i z^2)\), \(b_i=x_i^{-2}\), counted with multiplicity \cite[\S2]{AGC}. Every individual factor can also be recovered as a limit from even moments \(m_j=\E_T U^j\), without a local inverse condition. Put
-\[
- p_n=-n[v^n]\log\!\sum_{j\ge0}\frac{(-1)^jm_{2j}v^j}{(2j)!},\quad
- E_{0,n}=1,\quad E_{j,n}=\frac1j\sum_{h=1}^j(-1)^{h-1}p_{hn}E_{j-h,n}.
-\]
-Here \(p_n=\sum_i b_i^n\) and \(E_{j,n}\) sums the \(n\)-th powers of all products of \(j\) distinct indexed \(b_i\). Order them so \(b_1\ge b_2\ge\cdots>0\), and put \(B_j=\prod_{i=1}^j b_i\), \(B_0=1\). This is the largest product in the sum. For every integer \(h>1\),
-\[
- B_j^h\le E_{j,h}\le B_j^{h-1}E_{j,1}.
-\]
-The sum \(E_{j,1}\) is finite. Thus \(E_{j,h}^{1/h}\to B_j\) for each fixed \(j\), and at the same fixed all-real \(T\),
-\[
- x_k=\lim_{h\to\infty}(E_{k-1,h}/E_{k,h})^{1/(2h)} .
-\]
-Multiplicity is included in the ordering. The same inequality gives finite-order bounds. Define
-\(\underline B_{j,h}=(E_{j,h}/E_{j,1})^{1/(h-1)}\) and
-\(\overline B_{j,h}=E_{j,h}^{1/h}\), with both equal to one at \(j=0\). Since \(x_k^2=B_{k-1}/B_k\),
-\begin{equation}
- \sqrt{\frac{\underline B_{k-1,h}}{\overline B_{k,h}}}
- \ \le\ x_k\ \le\
- \sqrt{\frac{\overline B_{k-1,h}}{\underline B_{k,h}}}.
- \label{eq:factor-interval}
-\end{equation}
-This enclosure uses moments through order \(2kh\). The recurrence for \(E_{j,h}\)
-involves alternating sums, so errors in the supplied moments must be propagated
-before dividing by a certified positive lower endpoint. For each fixed rank the
-two bounds converge with exact source data. Their width in units of the local
-spacing as \(k\to\infty\) at one \(T\) remains to be controlled, together with
-the required growth in \(h\) and in input precision \cite[\S3]{Founding07}.
-
-There is a second finite-order estimate if the preceding factors are known.
-Put \(s_h^{(k)}=p_h-\sum_{i<k}b_i^h\). The ratio
-\(s_{h+1}^{(k)}/s_h^{(k)}\) is a weighted average of \(b_i\) for \(i\ge k\).
-Using \(s_h^{(k)}\ge b_k^h\) gives, for \(h\ge1\),
-\[
- 0\le 1-\frac{s_{h+1}^{(k)}}{b_k s_h^{(k)}}
- \le \left(\frac{b_{k+1}}{b_k}\right)^{h-1}\sum_{i>k}\frac{b_i}{b_k}.
-\]
-A certified separation \(b_{k+1}/b_k<1\) gives geometric decay in \(h\)
-once the tail is bounded. The subtraction in \(s_h^{(k)}\) also requires
-precision on each of the preceding factors \cite[\S3]{Founding07}.
+\input{window}

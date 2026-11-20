@@ -1,5 +1,5 @@
-\section{Gap transport in the large-time saddle window}\label{sec:transport}
-The same centered source estimate that locates the zeros in Section~\ref{sec:anchors} gives a comparison for their motion throughout a high-time interval. This calculation uses the phase velocity of Appendix~\ref{sec:current}.
+\subsection{A comparison from the source at each time}\label{sec:transport}
+The same centered source estimate that locates the zeros in Section~\ref{sec:anchors} gives a comparison for their motion throughout a high-time interval. This calculation uses the phase velocity of Section~\ref{sec:current}.
 
 \begin{theorem}[Signed backward transfer]\label{thm:transfer}
 Fix \(C>0\). There is a time \(t_C\) such that, for \(T\ge t\ge t_C\) and a marked edge satisfying \(q_{k+1}\le C\inf_{t\le r\le T}\ell_r\), the same two positive phase levels are simple throughout. Uniformly on that family,
@@ -15,7 +15,7 @@ For any \(X_r\) containing the endpoints in \([0,X_r]\) and satisfying \(X_r\le 
  \left|\log\frac{a_t g(t)}{a_Tg(T)}\right|
  \le C''\int_t^T X_r^2\kappa_r^{-3}\dd r. \label{eq:meanD}
 \end{equation}
-The constants depend only on the fixed window. The asymptotic theorem gives existence of \(t_C\); Appendix~\ref{sec:finite} treats a specific interval independently.
+The constants depend only on the fixed window. The asymptotic theorem gives existence of \(t_C\); Section~\ref{sec:finite} treats a specific interval independently.
 \end{theorem}
 \begin{proof}
 At a physical spatial argument \(x=\sqrt\kappa\,\zeta\), the analytic continuation of the normalized current \eqref{eq:current} is
@@ -34,17 +34,18 @@ Four spatial derivatives of \eqref{eq:logj} give \((\log j)_{xxxx}=O_C(\kappa^{-
 \end{proof}
 These are estimates on the complete interaction and the signed drift of the actual edge. The individual source expansions also localize its endpoints throughout the same high-time domain. The estimate establishes direction of motion and its integrated size there. Extending it to an earlier region requires additional source information on the intervening path.
 
-\subsection{Direct evolution from the full product}
-For \(s>0\) and \(P_m(z)=\prod_{i\le m}(1-b_i z^2)\), Gaussian convolution gives the exact earlier field
+\paragraph{The correction after removing the mean spacing.}
+Let \(h=\log j\) and denote spatial averaging over the marked interval by
+angle brackets. Combining \eqref{eq:velocity} with \(h_{xx}(t,0)=-\dot a/a\)
+and \(h_{xxx}(t,0)=0\) gives the exact identity
 \begin{equation}
- \frac{H(T-s,z)}{Z(T)}
-   =\E_T[e^{-sU^2}\cos(zU)]
-   =\lim_{m\to\infty}\sum_{j=0}^m\frac{s^j}{j!}\partial_z^{2j}P_m(z).
- \label{eq:whole}
+ \frac{\dd}{\dd t}\log(ag)=
+  \left\langle\int_0^x(x-y)\,\partial_y^4h(t,y)\dd y\right\rangle,
+ \qquad \partial_x^4h(t,0)=m_4^*-3w^2 .\label{eq:quartic}
 \end{equation}
-Here \(b_i=x_i(T)^{-2}\) as in Section~\ref{sec:anchors}. Indeed \(|P_m(w)|\le H(T,\ii|w|)/Z(T)\); its log growth is \(O_T(1+|w|\log(2+|w|))\). Dominated convergence against the translated Gaussian therefore holds locally uniformly. The mass loss of the single frozen cosine with the exact initial curvature has the explicit size
-\[
- \log\frac{Z(T-s)}{Z(T)e^{-s\E_T U^2}}
-   =\int_0^s(s-v)\Var_{T-v}(U^2)\dd v .
-\]
-This follows by differentiating \(\log Z\) twice. Since \(\Var_T(U^2)\sim4L^2/\kappa\), the loss tends to one in logarithmic units at \(s=2\sqrt{T/L}\) \cite[\S4]{Founding07}. Equation~\eqref{eq:whole} gives a direct comparison for any backward estimate built from the same anchor data. Using a finite set of factors in that comparison requires a bound for the omitted product.
+Freezing the fourth derivative at zero yields
+\((m_4^*-3w^2)(x_-^2+x_-x_++x_+^2)/6\).
+If \(|\partial_x^6 h|\le B_6\) on \([0,X]\), evenness gives an
+absolute error at most \(B_6 X^4/24\). This retains the cancellation between
+the fourth moment and the squared variance when one compares a change
+of gap with the change of its natural mean spacing.

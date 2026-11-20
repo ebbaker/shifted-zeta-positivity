@@ -1,4 +1,7 @@
-\section{Phase velocity on a counted interval}\label{sec:current}
+\section{Gap motion from the phase current}\label{sec:current}
+The upper-anchor curvature theorem controls a time interval by a single complex tilt. A different identity computes the instantaneous gap velocity from the spatial curvature of a real current. It also determines where this phase coordinate can be used.
+
+\subsection{The current and its domain}
 On a real interval with \(B\ne0\), take a continuous argument \(\Theta\) of \(B\) and write \(B=e^{p+\ii\Theta}\). At the origin \(\Theta=0\). Define the current and its normalization by
 \begin{equation}
  J(t,x)=\Imag(\overline{B(t,x)}B_x(t,x))=|B(t,x)|^2\Theta_x(t,x),
@@ -7,26 +10,27 @@ On a real interval with \(B\ne0\), take a continuous argument \(\Theta\) of \(B\
 \end{equation}
 The complete source determines the current even where the real part \(H\) vanishes. A positive current on \([0,X]\) gives a nonvanishing \(B\) and strictly increasing phase there. To include a labelled edge one must also reach its upper level \(q_{k+1}\).
 
-The range of this coordinate matters. For this particular half-line transform,
-\(\Imag B(t,x)>0\) for \(x>0\) whenever \(0\le t\le1/2\).
-At any two distinct positive zeros of \(H\) the argument in the upper
-half-plane therefore takes the same value, \(\pi/2\). Between adjacent
-zeros it departs from and returns to that value, so \(J\) takes both
-signs. At any fixed time the same obstruction also holds sufficiently
-far out, since \(\Imag B(t,x)=\Phi(0)/x+O_t(x^{-2})\) by integrating
-by parts. The low-time sign follows from concavity of \(v\mapsto\log\Phi(\sqrt v)\), the derivative at \(v=0\), and positivity of the sine transform of the resulting strictly decreasing weight. See \href{https://doi.org/10.1007/BF02075457}{Csordas and Varga, Theorem 2.1}, and the deduction for this transform in \cite{EZPhaseScope}.
-The position-to-moment construction of Section~\ref{sec:exterior}
-requires its own zero counts and separation bounds.
-
-For comparison with the mixed hierarchy, write its diagonal at the marked pair as
-\(S_j=S_{k,j,j}=\sum_{\rho\ {\rm exterior}} Q_\rho^{-j}\),
-where \(Q_\rho=(\rho-c)^2-D\) and \(M=S_1\). The parent identities
-\cite[\S\S2--4]{AGC} give
-\begin{equation}
- \dot D=2-4DM,\qquad \dot M=2M^2-\mathcal F,\qquad
- \mathcal F=12S_2+16DS_3 .
- \label{eq:parent}
-\end{equation}
+For this particular lift one can identify a whole time range where the
+coordinate fails between two positive real zeros. Put
+\(t_{\rm m}=-\Phi''(0)/(2\Phi(0))>5/2\), where the last inequality
+uses \(\Phi''(0)<-10\) and \(0<\Phi(0)<2\) \cite{EZPhaseScope}.
+By \href{https://doi.org/10.1007/BF02075457}{Csordas and Varga, Theorem 2.1},
+\(v\mapsto\log\Phi(\sqrt v)\) is strictly concave and its right derivative at
+zero is \(-t_{\rm m}\). Hence \(f_t(u)=e^{tu^2}\Phi(u)\) is strictly
+decreasing for \(u>0\) when \(t\le t_{\rm m}\). For \(x>0\), put \(h=\pi/x\).
+Pairing half-periods gives
+\[
+ \Imag B(t,x)=\sum_{j\ge0}\int_0^h
+ \{f_t(2jh+u)-f_t((2j+1)h+u)\}\sin(xu)\dd u>0 .
+\]
+The upper-half-plane argument consequently takes the value \(\pi/2\) at
+both real zeros. It is nonconstant between them by analyticity of \(H\)
+and \(H(t,0)>0\). Thus \(J\) takes both signs between the endpoints.
+At any fixed time the same obstruction applies to sufficiently high positive
+zeros, since integration by parts gives
+\(\Imag B(t,x)=\Phi(0)/x+O_t(x^{-2})\).
+The argument concerns the half-line lift. The exterior calculation in
+Section~\ref{sec:exterior} uses its own zero counts and separation bounds.
 
 \begin{theorem}[Velocity, interaction and joint forcing]\label{thm:velocity}
 On a common increasing phase chart define \(v=(\log j)_x\) and

@@ -1,0 +1,301 @@
+\section{Gap curvature from one upper time}\label{sec:anchored-curvature}
+
+The exterior at \(T\) gives the exact initial slope in \eqref{eq:exterior-gap}.
+To control the error of extrapolating this slope, tilt the complete law at
+\(T\) by \(e^{-sU^2}\), as in \eqref{eq:whole}. Throughout, the saddle
+parameters \(L,\kappa,S\) of \eqref{eq:saddle} are evaluated at \(T\).
+Set
+\[
+ \lambda=L\sqrt\kappa,\quad r=\tfrac12\sqrt{\log\kappa},\quad
+ \gamma=2L/\sqrt\kappa,\quad b=\gamma s,\quad
+ D_*=\pi^2/(4L^2),\quad \eta=\kappa^{-3/4} .
+\]
+Here \(s\) is elapsed backward physical time, and \(y=Lx\) is the scaled
+spatial argument. A joint complex estimate in \(b\) and \(y\) controls the
+difference of the two inverse positions before time differentiation
+\cite{EZCurvature}.
+
+\Needspace{8\baselineskip}
+\begin{theorem}[Signed remainder on a backward interval]\label{thm:anchored-curvature}
+For all sufficiently large \(T\), the marked zeros for each \(k\ge1\) with
+\(q_{k+1}\le\lambda r/8\) stay simple, adjacent and separated from the rest
+of the divisor throughout \(0\le s\le s_*:=\gamma^{-1}\). Uniformly over
+these pairs and times, with primes denoting derivatives in physical time,
+\begin{align}
+ \frac{D_k'(T-s)}{D_*}
+   &=-\frac4\kappa\{1+b/\lambda+6\alpha b+O(\eta)\}<0,
+      \qquad \alpha=\frac{2S}{3\kappa^{3/2}},\label{eq:anchored-slope}\\
+ \frac{D_k''(T-s)}{D_*}
+   &=\frac8{\kappa^2}+\frac{32LS}{\kappa^3}+O(L\kappa^{-9/4})
+     \sim\frac{32L}{\kappa^2}.\label{eq:anchored-curvature}
+\end{align}
+In particular, the exact anchor slope \(E_k=D_k'(T)=2-g_k(T)^2M_k(T)\)
+gives the signed estimate
+\begin{equation}\label{eq:anchored-linear}
+ \frac{D_k(T-s)-D_k(T)+sE_k}{D_*}
+   =s^2\left\{\frac4{\kappa^2}+\frac{16LS}{\kappa^3}
+                  +O(L\kappa^{-9/4})\right\} .
+\end{equation}
+It is strictly positive for every \(0<s\le s_*\).
+For each Taylor degree \(m\ge2\) the bound with exact coefficients is
+\begin{equation}\label{eq:anchored-taylor}
+ \frac{\bigl|D_k(T-s)-\sum_{j=0}^m(-s)^j D_k^{(j)}(T)/j!\bigr|}{D_*}
+ \le \frac{C\eta}{\lambda}\,\frac{(|b|/2)^{m+1}}{1-|b|/2}
+ \qquad (0\le s\le s_*).
+\end{equation}
+The constant \(C\) is independent of the pair, Taylor degree and partial time.
+\end{theorem}
+
+\begin{proof}
+\emph{The joint transform.}
+Write \(W=\sqrt\kappa(U-L)\) and \(\zeta=y/\lambda\). Removing the scalar
+\(e^{-sL^2}\) leaves the tilt \(e^{-bW-bW^2/(2\lambda)}\).
+Use the unnormalized density \(F\) of Lemma~\ref{lem:saddle}, extended by
+zero for \(w<-\lambda\), and the Gaussian model
+\(\varphi(w)=e^{-w^2/2}/\sqrt{2\pi}\). Define
+\[
+ a_\pm=-b\pm\ii\zeta,\qquad v_b=A_b^{-1},\qquad A_b=1+b/\lambda,
+\]
+\[
+ J_\pm=\int_{\mathbb R} F(w)e^{a_\pm w-bw^2/(2\lambda)}\dd w,
+ \qquad I_\pm=v_b^{1/2}e^{v_ba_\pm^2/2},\qquad m_\pm=v_b a_\pm .
+\]
+Up to the removed scalar and a common nonzero anchor constant, the field is
+\((e^{\ii y}J_++e^{-\ii y}J_-)/2\).
+The integral with \(\varphi\) in place of \(F\) is \(I_\pm\), with its square
+root continued from \(v_b=1\). Three derivatives in \(a_\pm\) show that
+the Gaussian integral with the cubic correction in Lemma~\ref{lem:saddle}
+is \(I_\pm\{1-\alpha(m_\pm^3+3v_bm_\pm)\}\).
+
+For \(|b|\le3,\ |\zeta|\le r\), complete the real square in the absolute
+central error integral on \(|w|\le w_0=\kappa^{1/12}\). Its tilted polynomial
+moment is \(O(1+(r+3)^6)\). Division by \(|I_\pm|\) leaves a bounded
+prefactor and the exponential of
+\[
+ \frac{(\Real a_\pm)^2}{2\Real A_b}-\frac12\Real(v_ba_\pm^2)
+ =\frac12(\Imag a_\pm)^2+O((r+3)^2/\lambda).
+\]
+The resulting relative central error is \(O(\eta)\), since the density
+error supplies \(\kappa^{-1}\) and the exponential costs at most
+\(\kappa^{1/8+o(1)}\). The complete source on \(w\ge-\sqrt\kappa/4\)
+outside the central interval is bounded by \(Ce^{-cw^2}\). The tilt
+costs at most \(e^{(r+3)|w|+3w^2/(2\lambda)}\), leaving a fixed Gaussian
+exponent beyond \(w_0\). The Gaussian model tails obey the same estimate,
+including beyond the source's left endpoint. On
+\(-\lambda\le w<-\sqrt\kappa/4\) the source is \(O(e^{-c\kappa})\) and
+the integrated tilt costs at most
+\(\lambda e^{(r+3)\lambda+3\lambda/2}=e^{o(\kappa)}\).
+Thus all tail errors are smaller than any inverse power of \(\kappa\)
+even after division by \(|I_\pm|\).
+
+It follows that \(J_\pm/I_\pm=1-\alpha(m_\pm^3+3v_bm_\pm)+O(\eta)\). The deviation
+from one is \(o(1)\) and its square is \(o(\eta)\), so
+\begin{equation}\label{eq:anchored-log}
+ \log J_\pm=\tfrac12\log v_b+\tfrac12 v_ba_\pm^2
+                  -\alpha(m_\pm^3+3v_bm_\pm)+O(\eta).
+\end{equation}
+The integrals are holomorphic jointly by the same dominating bounds on
+the complex disks. The remainder in \eqref{eq:anchored-log} is therefore
+jointly holomorphic in the interiors and uniformly bounded by \(C\eta\).
+
+\emph{The counted phase and its inverse.}
+The field factors as a nonvanishing amplitude times \(\cos\Theta_b(y)\), where
+\begin{equation}\label{eq:anchored-phase}
+ \Theta_b(y)=y+\frac{\log J_+-\log J_-}{2\ii}
+ =v_b y-\alpha\{(3v_b^3 b^2+3v_b^2)\zeta-v_b^3\zeta^3\}+O(\eta).
+\end{equation}
+The Gaussian part uses \(1-v_b b/\lambda=v_b\). The phase is odd in
+\(y\), by exchange of \(J_+\) and \(J_-\), and real for real \(b,y\).
+In the coordinate \(p=v_by\), the correction to \(p\) has size
+\(O(\alpha(1+r^3)+\eta)\) on \(|p|\le3\lambda r/4\).
+Rouché on \(|p|=\lambda r/2\) gives a unique simple inverse
+\(y=Y_b(q)\) for \(|q|\le\lambda r/4\), jointly holomorphic with room at
+the \(q\)-boundary. Cauchy's estimate on the larger \(p\)-disk gives
+slope \(1+o(1)\) in \(p\) on the real segment through these inverses.
+Thus \(\Theta_b(0)=0\) and the factorization count every positive zero
+through \(Y_b(\lambda r/4)/L\) for real \(0\le b\le1\). In particular
+the marked endpoints are \(Y_b(q_k)/L,Y_b(q_{k+1})/L\).
+
+The inverse equation first gives \(p-q=O(\alpha(1+r^3)+\eta)\).
+Replacing \(p\) by \(q\) in the cubic correction costs at most
+\(O(\alpha(1+r^2)|p-q|/\lambda)=o(\eta)\). Replacing \(v_b\) by one
+in that correction costs \(O(\alpha(1+r^3)/\lambda)=o(\eta)\). Hence
+\begin{equation}\label{eq:anchored-inverse}
+ Y_b(q)=q/v_b+\alpha\{(3b^2+3)q/\lambda-(q/\lambda)^3\}+R_Y(b,q),
+ \qquad |R_Y|\le C\eta .
+\end{equation}
+Cauchy in \(q\) gives \(|\partial_q R_Y|\le C\eta/(\lambda r)\) on
+\([0,\lambda r/8]\), uniformly in the time disk. Subtract
+\eqref{eq:anchored-inverse} at the two adjacent levels before squaring.
+In units of \(D_*\) the resulting holomorphic squared gap is
+\begin{align}
+ \mathcal D_k(b)&=\left(\frac{Y_b(q_{k+1})-Y_b(q_k)}{\pi}\right)^2
+                   =P_k(b)+R_k(b),\label{eq:anchored-model}\\
+ P_k(b)&=(1+b/\lambda)^2+\frac{2\alpha}{\lambda}
+      \left(3b^2+3-\frac{q_{k+1}^3-q_k^3}{\pi\lambda^2}\right),
+      \qquad |R_k(b)|\le C\eta/\lambda\quad (|b|\le3).\notag
+\end{align}
+The cross correction from replacing \(1/v_b\) by one in the order-\(\alpha\)
+term after squaring costs \(O(\alpha(1+r^2)/\lambda^2)\). The square
+of the gap correction costs \(O(\alpha^2(1+r^2)^2/\lambda^2)\).
+Both fit the remainder along with the adjacent difference of \(R_Y\).
+
+\emph{Physical time and clearance.}
+For real \(s\) the squared gap satisfies \(D_k(T-s)=D_*\mathcal D_k(b)\).
+The first two \(b\)-derivatives of \(R_k\) are \(O(\eta/\lambda)\) on
+\(0\le b\le1\) by Cauchy. Using \(\mathrm d/\mathrm dt=-\gamma\,\mathrm d/\mathrm db\)
+gives \eqref{eq:anchored-slope} and \eqref{eq:anchored-curvature}.
+The two curvature terms come from the Gaussian part and the cubic source
+correction, respectively. Their sum also equals the relative curvature
+at \(T\) of the instantaneous lattice value \(\pi^2/(4L_t^2)\), by
+\(L_t'=2L_t/\kappa_t\) and \eqref{eq:saddle}. Integration against \((s-u)\dd u\) for
+\(0\le u\le s\) proves \eqref{eq:anchored-linear}. Subtracting the degree-\(m\)
+Taylor polynomial of \(\mathcal D_k\) leaves only the Taylor tail of \(R_k\)
+when \(m\ge2\). Its radius-two Cauchy bound gives \eqref{eq:anchored-taylor}.
+
+The slope and \eqref{eq:anchored-model} give \(D_k(T-s)\ge D_k(T)>D_*/2\).
+The outer level \(q_{k+2}\) lies within \(\lambda r/4\) eventually.
+The next zero on the left is counted there as well, with the reflected
+first zero used for \(k=1\). The uniform \(o(1)\) displacement from \(q/v_b\)
+in \eqref{eq:anchored-inverse} gives adjacent spacings
+\((\pi/L)(1+o(1))\). The field is all real at these large physical times
+\cite{Polymath2019}, so a circle of radius \(g_k\) about the real midpoint
+contains exactly the pair and stays clear of the other zeros.
+\end{proof}
+
+\subsection{The anchor coefficients and their precision}
+The complete hierarchy identifies the derivatives in
+\eqref{eq:anchored-taylor} on the separated chart. With the pair index
+suppressed, combine \eqref{eq:exterior-gap} with the diagonal equation
+in \eqref{eq:parent} to give
+\begin{equation}\label{eq:anchored-polynomial}
+ D''=-8M+8DM^2+48D S_{2,2}+64D^2 S_{3,3} .
+\end{equation}
+The unreduced integer split recurrence raises the largest total pole
+order of a row by at most two per differentiation. Applied to \(D'=2-4DM\),
+it uses rows of order at most \(2m\) for the Taylor jet of degree \(m\).
+The diagonal reduction in \eqref{eq:anchored-polynomial} uses an order-six
+row \cite[\S3]{AGC}. The joint disk bounds the resulting scalar gap. An
+enclosure for an individual evolving row requires its own analytic estimate.
+
+For the finite anchor calculation use \(y_i=Lx_i(T)\) and take the head
+through \(q_K\le\lambda r/4\) with \(K\) maximal. The marked endpoints have
+an upper bound \(A\) and the unknown positive roots a lower bound \(R\),
+with \(R\asymp K\) and \(A/R\le2/3\) eventually by \eqref{eq:anchored-inverse}.
+Apply \eqref{eq:exterior-tail} in these coordinates, with
+\(W_j^{(y)}=\sum_{i>K} y_i^{-2j}\) and moments \(\nu_j=\E_T(U/L)^j\).
+For any fixed row of order \(h=p+q\), retaining degrees \(d<N\) uses
+moments through order at most \(h+N-1\). Each known exterior occurrence
+in that row is evaluated with positive lower distances \(l_+,l_-\).
+For position errors \(e_i,e_+,e_-\) its error is at most
+\[
+ \frac{p(e_i+e_+)}{l_+^{p+1}l_-^q}
+   +\frac{q(e_i+e_-)}{l_+^p l_-^{q+1}},
+\]
+with terms of zero numerator omitted. The same endpoint enclosures enter
+each row and the gap. Widths from the radial-power subtractions and
+the target coefficients in the retained tail must be propagated as well.
+
+Here is a sufficient acquisition budget for the slope and curvature
+\cite[finite-precision supplement]{EZCurvature}. In the scaled variables
+\(D_y=L^2D\), \(M_y=M/L^2\) and \(S_{p,q}^{(y)}=S_{p,q}/L^{p+q}\), use
+\(\sigma=5/6\) in the bound following \eqref{eq:exterior-tail} and choose
+\(N=O(\log\lambda)\) with \((4/5)^N\le\lambda^{-6}\). The omitted tail
+at orders \(h=2,4,6\) is \(O(\lambda^{-6})\), since
+\(W_1^{(y)}\le\nu_2/2=O(1)\) and \(R^{2-h}\le1\) eventually. The retained
+degrees need moments through order \(N+5\).
+
+On the unit disk the truncated radial cosine polynomial lies within
+\(3/4\) of one, with strict clearance for sufficiently accurate input
+enclosures, since the corresponding full positive coefficient sum tends
+to \(\cosh 1-1\). This limit follows by the weighted saddle bounds. If
+\(\delta\) is the sum of absolute errors in its normalized coefficients,
+Cauchy's estimate for the perturbed logarithm gives an error
+\(O(j\delta)\) in the full \(j\)-th radial power. A common position radius
+\(e_{\rm pos}\) for the scaled head gives an additional \(O(je_{\rm pos})\)
+in the head subtracted from it, using \(y_i-e_{\rm pos}\ge i\) and summing
+the derivative bounds for \(y_i^{-2j}\). The retained coefficients satisfy
+\(|h_d|\le\binom{h+d-1}{d}A^d\), so the summed error from these radial
+subtractions is at most
+\begin{equation}\label{eq:anchored-input-width}
+ O\big((\delta+e_{\rm pos})N^7\max(1,A)^N\big).
+\end{equation}
+With the exact radial powers held fixed, the endpoint errors in the tail
+cost \(O(e_{\rm pos})\) by differentiating the convergent reflected sums
+under the radial clearance. The counted exterior head has the same bound
+from its separated spacings and summable reciprocal products.
+
+Thus \(\delta,e_{\rm pos}\ll\lambda^{-6}/(N^7\max(1,A)^N)\) suffice,
+which calls for \(O(\log^2\lambda)\) absolute bits in these scaled data.
+The inputs of the polynomial for \(D''/L^2\) in
+\eqref{eq:anchored-polynomial} are bounded in the scaled coordinates.
+Errors \(O(\lambda^{-6})\) persist at that order in the polynomial and in
+\(E_k=2-(Lg_k)^2M_y\). The curvature signal at the anchor is
+\(D''/L^2\sim8\pi^2L/\lambda^4\), which dominates this error.
+
+The full odd phase also gives the head to the required precision. In
+\(y\), its linear coefficient is \(a/L\). The remaining odd part is bounded
+by \(M_{\rm ph}=O(\alpha(1+r^3)+\eta)\) on \(|y|\le\lambda r\), by
+\eqref{eq:anchored-phase} at \(b=0\) and Cauchy for the linear term.
+On \(|y|\le X:=\lambda r/2\), its Taylor tail past degree \(P\) is
+\(O(M_{\rm ph}2^{-P})\). Take \(P=O(\log^2\lambda)\) to make the tail
+smaller than \(e_{\rm pos}\). The coefficients are obtained from the log
+of the truncated moment generating polynomial for \(U/L\). On the disk
+of radius \(1/4\), the positive coefficient sum excluding the constant
+tends to \(e^{1/4}-1<1/2\) when all moments are included. Thus an error
+\(\delta_{\rm ph}\) in the sum of coefficient radii weighted at \(1/4\)
+costs \(O(4^j\delta_{\rm ph})\) in the \(j\)-th log coefficient. It suffices
+that \(\delta_{\rm ph}\ll e_{\rm pos}(4X)^{-P}\). The true phase slope
+is bounded below and the counted head lies strictly inside \([0,X]\), so
+the resulting \(O(e_{\rm pos})\) phase error bounds the positional error.
+This gives a sufficient moment order \(O(\log^2\lambda)\) and
+\(O(\log^3\lambda)\) absolute bits in the stated weighted coefficient norm,
+including acquisition of the head. These are asymptotic tolerances.
+An application at a specified \(T\) requires checking the inequalities
+with the actual input enclosures.
+
+For a finite Taylor calculation write \(d_j\) for the absolute error
+in \((-1)^j D_k^{(j)}(T)/(D_*\gamma^j j!)\), allowing for scale uncertainty
+and rounding. Add \(\sum_{j=0}^m d_j|b|^j\) to \eqref{eq:anchored-taylor}.
+For example, \(\sum_{j=2}^m d_j=O(\eta/\lambda)\) adds a normalized
+error \(O((\eta/\lambda)b^2)\) for \(|b|\le1\).
+In \eqref{eq:anchored-linear} inexact anchor values add physical errors
+\(|\delta D_k(T)|+s|\delta E_k|\). Resolving its signed quadratic increment
+at a specified \(b>0\) requires \(d_0+d_1|b|\) small compared with
+\((\alpha/\lambda)b^2\). Exact shared anchor values yield the \(s^2\)
+vanishing down to \(s=0\). The finite coefficient budget is for the
+anchor data, while \eqref{eq:anchored-model} supplies the complete analytic
+time allowance from the source.
+
+\subsection{Count, scope and comparison}
+The proof counts \(K=\lfloor\lambda r/(4\pi)+1/2\rfloor\) positive zeros
+through \(Y_b(\lambda r/4)/L\). The retained pairs number
+\(\lfloor\lambda r/(8\pi)+1/2\rfloor-1\), of order
+\(\sqrt{T}(\log T)^2\), on a physical interval of length
+\(s_*\sim2\sqrt{2T/\log T}=o(T)\). The onset in \(T\) is unevaluated.
+The current estimate of Section~\ref{sec:transport} treats a fixed multiple
+of the saddle window using bounds along the interval. The present estimate
+uses one upper law and a time disk on a growing window. A separate spatial
+estimate treats sufficiently high labels on a fixed slab in \((0,1/2]\),
+with its own direct two-time comparison \cite[\S5 and references there]{EZCurvature}.
+A backward path from the present upper anchor to a fixed lower time
+requires different bounds.
+
+Direct evolution by \eqref{eq:whole} uses the same complete law. Integrating
+\(\Theta_b'\) between the two counted roots gives \(\pi\), so the direct
+phase calculation with the same spatial Cauchy estimate and time disk
+recovers \eqref{eq:anchored-model} and the same curvature and Taylor
+bounds. The shared analytic error provides the gain over separate endpoint
+intervals, whose widths can persist as \(s\) decreases to zero.
+The anchor estimate identifies these bounds with the derivatives from
+the exterior hierarchy.
+
+The sign uses the quantitative tilted theta expansion. For example, a
+stationary cosine has zero gap curvature and its atomic law lacks the cubic
+saddle correction. Arithmetic and profile modifications change the complete
+source, and changed-observation controls fail the literal heat-cosine tilt.
+The tail identity \eqref{eq:exterior-tail} requires a complete all-real
+divisor with integer multiplicities. Controls with nonreal zeros or relaxed
+divisor weights fail this premise. Finally, a backward collision of the
+atomic field \(e^t\cos x+c\) destroys the separated chart
+\cite[\S5 and references there]{EZCurvature}.

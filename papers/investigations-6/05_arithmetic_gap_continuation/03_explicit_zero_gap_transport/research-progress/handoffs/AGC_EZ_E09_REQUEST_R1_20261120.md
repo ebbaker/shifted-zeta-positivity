@@ -1,0 +1,13 @@
+# E09 · Anchored time remainder for the complete mixed forcing
+
+Issued 20 November 2026 for Edward Baker by OpenAI Codex, actual lead gpt-6.2-astra/ultra. Bounded Sol gpt-6.2-sol/ultra derivation and distinct internal check. [B06](../../brainstorm/notes/07_EZ_B06_ANCHORED_TIME_CURVATURE_20261120.md) · [Register](../02_EZ_ZERO_LOCATIONS_RESEARCH_PROGRESS_20261120.md).
+
+Freeze Notes 09 and 11, parent Note 08 §4, and parent integer recurrence §3. Set \(\lambda=L\sqrt\kappa,\ r=\sqrt{\log\kappa}/2,\ b=2sL/\sqrt\kappa,\ \zeta=x/\sqrt\kappa,\ D_*=\pi^2/(4L^2)\). Target real \(0\le b\le1,\ q_{n+1}\le\lambda r/8\); use complex \(|b|\le3,\ |\zeta|\le r\) for Cauchy margins. Count from the origin. Use only the law at \(T\). Multiply the density of \(W=\sqrt\kappa(U-L)\) by \(\exp(-bW-bW^2/(2\lambda)\pm i\zeta W)\). Use the exact Gaussian integral with \(v=(1+b/\lambda)^{-1}\), Gaussian mean \(m_\pm=v(-b\pm i\zeta)\); its log correction is \(-\alpha(m_\pm^3+3v m_\pm)\). Prove a joint Gaussian-relative remainder \(O(\kappa^{-3/4})\) or another \(o(\kappa^{-1/2})\), preserving the far-left endpoint for complex \(b\). Invert the resulting phase on a strict subdisk, using Cauchy on \(q\) for gap differences. To first order in \(\alpha/\lambda\), test
+\[
+ D_n(T-s)/D_*=(1+b/\lambda)^2+
+ \frac{2\alpha}{\lambda}\{3b^2+3-(q_{n+1}^3-q_n^3)/(\pi\lambda^2)\}
+ +O(\kappa^{-3/4}/\lambda)
+\]
+on an interior complex \(b\) disk (a fixed polylogarithmic loss is permitted). Check signs, units and constants. If it closes, differentiate the shared remainder by Cauchy. Target the uniform positive curvature \(D_n''/D_*\sim32L/\kappa^2\), the signed second-order Taylor estimate anchored with \(D_n(T), E_n(T)\), the first derivative and strict real path margin. State any surviving error at partial time \(s\) including \(s=0\). Give the dependence of the time Taylor tail on order or first failed radius; the parent identities identify those jets with the complete coupled hierarchy. Pay for the unlocated exterior at finite order by Note 09. The full-source disk bounds higher orders jointly; never infer bounds for individual rows from this scalar readout. Include a same-input direct comparison, the spatial sibling's time domain, and any finite-data precision required in anchor coefficients.
+
+One derivation and correction or scoped failed bound. No independent lower-time samples or numerical scans. Save notes/15_EZ_SINGLE_ANCHOR_GAP_CURVATURE_20261120.md and E09 return. A different mechanism, source or reaching fixed low time requires a new B decision. Subsequent reviewer saves reviews/07_EZ_TIME_CURVATURE_ASSESSMENT_20261120.md; reviews cannot assume the candidate display.

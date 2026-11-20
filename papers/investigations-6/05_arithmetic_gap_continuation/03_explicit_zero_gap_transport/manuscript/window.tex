@@ -1,0 +1,358 @@
+\subsection{A Gaussian-relative bound for the complete source}
+
+Set \(p(u)=Tu^2+9u-\pi e^{4u}\), \(W=\sqrt{\kappa}(U-L)\) and
+\(\alpha=2S/(3\kappa^{3/2})\). In the \(w\)-coordinate the unnormalized
+density, with a convenient constant, is
+\[
+ F(w)=\frac{e^{p(u)-p(L)}}{\sqrt{2\pi}}\,b(u),\qquad
+ u=L+\frac{w}{\sqrt\kappa},\qquad
+ b(u)=\sum_{n\ge1}\left(n^4-\frac{3n^2e^{-4u}}{2\pi}\right)
+                         e^{-\pi(n^2-1)e^{4u}} .
+\]
+Extend \(F\) by zero for \(w<-L\sqrt\kappa\) and put
+\(\varphi(w)=e^{-w^2/2}/\sqrt{2\pi}\).
+
+\begin{lemma}[Centered source on fixed and growing disks]\label{lem:saddle}
+For each fixed \(r>0\), and also for \(r=\tfrac12\sqrt{\log\kappa}\), the
+logarithm from zero satisfies, for all sufficiently large \(T\),
+\begin{equation}
+ \sup_{|\zeta|\le r}
+ \left|K_0(\ell\zeta)+\frac{\zeta^2}{2}-\ii\alpha\zeta^3\right|
+ \le E,\qquad
+ E=O\!\left(\frac{(1+r^6)e^{r^2/2}}{\kappa}\right).
+ \label{eq:window-log}
+\end{equation}
+In particular the fixed-disk estimate is
+\begin{equation}
+ K_0(\ell\zeta)=-\zeta^2/2+\ii\alpha\zeta^3+O_r(\kappa^{-1}).
+ \label{eq:complex-saddle}
+\end{equation}
+The exact mean and third cumulant satisfy
+\(a=L-2S/\kappa^2+O(\kappa^{-3/2})\) and
+\(\gamma_3=-4S/\kappa^3+O(\kappa^{-5/2})\).
+\end{lemma}
+\begin{proof}
+The following majorants give a finite test as well as the asymptotic
+estimate \cite{EZWindow}. Put \(w_0=\kappa^{1/12}\) and require
+\(w_0\le\sqrt\kappa/4\), \(L\ge1/4\) and
+\[
+ c_*=\frac{S/e-2T}{2\kappa}>0,\qquad
+ \Delta=\min\{p(L)-p(0),c_*\kappa/16\}>0 .
+\]
+For \(u\ge L-1/4\), \(p''(u)\le-2\kappa c_*\), giving
+\(p(u)-p(L)\le-c_* w^2\). Since \(p''\) decreases, any convex part to the
+left of \(L-1/4\) attains its maximum at an endpoint, and the concave
+part increases up to \(L\). Thus \(p(u)-p(L)\le-\Delta\) for
+\(0\le u<L-1/4\).
+
+For all \(u\ge0\), \(0<b(u)\le b_*=(1-16e^{-3\pi})^{-1}\).
+On the central interval \(|w|\le w_0\), use
+\[
+ v_b=16e^{-3S/(16e)}<1,\qquad b_{\rm err}=\frac{24e}{S}+\frac{v_b}{1-v_b}.
+\]
+Here \(\pi e^{4u}\ge S/(16e)\) and the first summand differs from one
+by at most \(24e/S\). The tail follows from \(n^4\le16^{n-1}\) and
+\(n^2-1\ge3(n-1)\). These give \(|b-1|\le b_{\rm err}\).
+Since \(p'''(L)=-4S\) and \(|p^{(4)}|\le16eS\) on the central
+interval, the exponent is \(-w^2/2-\alpha w^3\) with error at most
+\(\beta w^4/\kappa\), where \(\beta=2eS/(3\kappa)\). It follows that
+\[
+ |F(w)-\varphi(w)(1-\alpha w^3)|
+ \le \frac{A}{\kappa}\varphi(w)(1+w^4+w^6),\qquad
+ A=e^{\alpha w_0^3+\beta w_0^4/\kappa}
+        \max\{\kappa b_{\rm err},\beta,\kappa\alpha^2/2\}.
+\]
+Indeed changing the exponent costs at most the exponential factor
+in \(A\) times the exponent error. The quadratic remainder of
+\(e^{-\alpha w^3}\) and the factor \(b-1\) give the other two terms.
+
+Let \(\mathcal F(\zeta)=\int_{\mathbb R}F(w)e^{\ii\zeta w}\dd w\).
+The Gaussian model has transform
+\(e^{-\zeta^2/2}\{1+\ii\alpha(\zeta^3-3\zeta)\}\). For
+\(\zeta=\xi+\ii\eta\), completing the Gaussian square in the central
+error under \(e^{-\eta w}\) costs \(e^{\eta^2/2}\). Division by the
+modulus of the Gaussian transform leaves \(e^{\xi^2/2}\). The shifted
+moment of \(1+w^4+w^6\) is \(19+51\eta^2+16\eta^4+\eta^6\).
+Together with both source tails and the Gaussian model tail this gives
+the following bound on the relative unnormalized error for \(|\zeta|\le s\):
+\begin{align}
+ A_s=e^{s^2/2}\Bigg[&
+  \frac{A}{\kappa}(19+51s^2+16s^4+s^6)\nonumber\\
+ &+\int_{|w|>w_0}e^{s|w|}
+    \left(\frac{b_*}{\sqrt{2\pi}}e^{-c_* w^2}
+                     +\varphi(w)(1+\alpha|w|^3)\right)\dd w \nonumber\\
+ &+\frac{b_*}{\sqrt{2\pi}}L\sqrt\kappa\,e^{-\Delta+sL\sqrt\kappa}\Bigg].
+ \label{eq:window-source-test}
+\end{align}
+Write \(P=\alpha(r^3+3r)\). If \(A_0<1\), normalization by
+\(\mathcal F(0)\) adds at most the amount charged in
+\[
+ \epsilon=\frac{A_r+(1+P)A_0}{1-A_0},\qquad v=P+\epsilon .
+\]
+For \(v<1\), the normalized relative transform lies in the logarithm
+disk about one. Its logarithm differs from \(\ii\alpha(\zeta^3-3\zeta)\)
+by at most \(\epsilon+v^2/[2(1-v)]\), by the logarithm series.
+Centering subtracts the actual linear coefficient. Cauchy's estimate
+bounds the subtraction of the linear term of the residual on
+\(|\zeta|\le r\) by one more copy of that residual. This proves the finite
+version of \eqref{eq:window-log} with
+\begin{equation}
+ E=2\left(\epsilon+\frac{v^2}{2(1-v)}\right).
+ \label{eq:window-error-test}
+\end{equation}
+
+Eventually \(S/\kappa\to1\), \(c_*\to1/(2e)\), \(A=O(1)\), and
+\((p(L)-p(0))/\kappa\to\infty\). For either radius in the statement,
+\(r=o(w_0)\) absorbs the weighted Gaussian tails into quadratic
+decay, and \(rL\sqrt\kappa=o(\kappa)\) leaves exponential decay in
+the far-left tail. Thus \(A_0=O(\kappa^{-1})\) and
+\(A_r=O((1+r^6)e^{r^2/2}/\kappa)\), including the factor from
+division by the Gaussian. These bounds imply \(v=o(1)\) and the
+stated error bound. For a fixed radius the first uncentered
+logarithmic coefficient gives \(\E_T W=-3\alpha+O(\kappa^{-1})\).
+The cubic coefficient of \eqref{eq:complex-saddle} gives
+\(\gamma_3=-6\alpha/\kappa^{3/2}+O(\kappa^{-5/2})\).
+\end{proof}
+
+\subsection{The count and the position and gap errors}
+
+For the disk in \eqref{eq:window-log} put
+\(R=\ell r\), \(M=\alpha r^3+E\), \(b_R=M/6\) and \(Q=R/2-b_R\).
+The odd part of \eqref{eq:window-log} gives
+\[
+ \sup_{|y|\le R}|\Psi(y)+\alpha(y/\ell)^3|\le E,\qquad
+ \sup_{|y|\le R}|\Psi(y)|\le M .
+\]
+If \(M\le R/4\), Theorem~\ref{thm:inverse} supplies both the true and
+cubic inverse branches in \(|q|<Q\), since even the full coefficient
+majorant on the boundary is \(b_R\). On \(|y|\le R/2\),
+Cauchy's estimate gives \(|\Psi'(y)|\le2M/R\le1/2\).
+For \(q=q_k\) and \(q'=q_{k+1}\), define the common residual
+\(\mathcal R(q)=Y(q)-Y_3(q)\). In physical units the errors are
+\begin{equation}
+ x_k-Y_3(q)/a=\mathcal R(q)/a,\qquad
+ g_k-\{Y_3(q')-Y_3(q)\}/a
+      =\{\mathcal R(q')-\mathcal R(q)\}/a .
+ \label{eq:shared-residual}
+\end{equation}
+
+\Needspace{8\baselineskip}
+\begin{theorem}[Growing counted window]\label{thm:growing-window}
+With \(r=\tfrac12\sqrt{\log\kappa}\), the tests above, including
+\(M\le R/4\), hold for all sufficiently large \(T\). There are exactly
+\begin{equation}
+ K(T)=\left\lfloor\frac{\ell\sqrt{\log\kappa}}{8\pi}+\frac12\right\rfloor
+ \sim\frac{\sqrt{2}}{32\pi}\sqrt T(\log T)^2
+ \label{eq:growing-count}
+\end{equation}
+positive zeros through \(Y(R/4)/a\). All are simple, including a
+crossing at the endpoint when it occurs. Uniformly for \(q\le R/4\)
+in position and \(q'\le R/4\) in a gap,
+\begin{align}
+ |x_k-Y_3(q)/a|
+ &\le\frac{E}{a}\left(\frac{q}{Q}\right)^5,\nonumber\\
+ \left|g_k-\frac{Y_3(q')-Y_3(q)}{a}\right|
+ &\le \frac{7\pi E}{aQ}\left(\frac{q'}{Q}\right)^4 .
+ \label{eq:growing-errors}
+\end{align}
+The last zero has height \(x_{K(T)}\sim(\sqrt{2}/8)\sqrt T\log T\)
+and \(g_k=(\pi/a)(1+O(\kappa^{-1}))\) throughout the counted window.
+\end{theorem}
+\begin{proof}
+The inverse count gives exactly the levels \(q_k\le R/4\).
+The physical height uses \(x_k=q_k/a+O(M/a)\),
+\(a\sim L\sim(\log T)/4\) and \(\kappa\sim2T\log T\).
+The spacing bound follows from \(Y'=1/(1-\Psi'(Y))\) and
+\(M/R=O(\kappa^{-1})\) at the growing radius.
+
+Cauchy's bound for the cubic coefficient gives
+\(\lvert c_1\ell^3+\alpha\rvert\le E/r^3\), so \(c_1<0\) eventually.
+The analytic function \(I(y)=\Psi(y)-c_1y^3\) vanishes to order five
+and has supremum at most \(2E\) on \(|y|\le R\). Divide by \(y^5\)
+to obtain \(|I(y)|\le2E(|y|/R)^5\). Subtract the inverse equations:
+\[
+ \mathcal R(q)\{1-c_1(Y^2+YY_3+Y_3^2)\}=I(Y).
+\]
+The brace has modulus at least \(1-3M/(4R)\ge13/16\).
+Since \(|Y|<R/2\), this gives \(|\mathcal R|\le E\) on \(|q|<Q\);
+the difference vanishes to order five. For any holomorphic \(f\) on
+\(|q|<Q\), bounded by \(H_*\) and vanishing to order \(m\), the maximum
+principle and Cauchy's estimate for \(f/q^m\) give, for \(0<z<Q\),
+\[
+ |f(z)|\le H_*(z/Q)^m,\qquad
+ |f'(z)|\le \frac{H_*}{Q}(z/Q)^{m-1}\left(m+\frac{z}{Q-z}\right).
+\]
+Here \(Q\ge3R/8\), so the factor in parentheses is at most seven for
+\(m=5\) and \(z\le R/4\). Integrate the derivative over \([q,q']\)
+and use \eqref{eq:shared-residual}.
+\end{proof}
+
+At the growing radius, \(E=O(\kappa^{-7/8}(\log\kappa)^3)\).
+At the outer scale the errors in \eqref{eq:growing-errors} are
+\(O(\kappa^{-7/8}(\log\kappa)^2)\) for a physical position and
+\(O(\kappa^{-11/8}(\log\kappa)^{3/2})\) for a gap in units of \(\pi/a\).
+
+\subsection{Sharper errors on fixed scaled windows}
+
+For fixed \(C>0\), repeat the argument with \(r=4C\).
+Then \(Q\ge2C\ell-O_C(\kappa^{-1/2})\), \(E=O_C(\kappa^{-1})\),
+and the counted interval \(q_k\le C\ell\) has length
+\(\lfloor C\ell/\pi+1/2\rfloor\) and last height asymptotic to
+\(C\sqrt\kappa\). Since the odd saddle residual vanishes to order
+three, \(|Y-q|=O_C(\kappa^{-1/2}(q/\ell)^3)\), using \(|Y|\le2q\).
+Replacing \(Y\) by \(q\) in the saddle cubic then gives
+\begin{equation}
+ ax_k=q-\alpha(q/\ell)^3+O_C(\kappa^{-1}(q/\ell)^3),\qquad
+ |ax_k-Y_3(q)|=O_C(\kappa^{-1}(q/\ell)^5).
+ \label{eq:distort}
+\end{equation}
+For \(q'\le C\ell\), the corresponding normalized gap error is
+\begin{equation}
+ \frac{|\mathcal R(q')-\mathcal R(q)|}{\pi}
+   =O_C\!\left(\frac{1}{\kappa\ell}
+                    \left(\frac{q'}{\ell}\right)^4\right).
+ \label{eq:fixed-gap}
+\end{equation}
+
+For each fixed \(k\ge2\),
+\begin{equation}
+ \lim_{T\to\infty}L^3\kappa^2
+ \left(1-\frac{x_k(T)}{(2k-1)x_1(T)}\right)
+  =\frac{2\pi^2}{3}k(k-1).
+ \label{eq:shape}
+\end{equation}
+In the ratio the common factor \(1/a\) cancels. The leading distortion
+comes from \(c_1 q^3\) in \eqref{eq:inverse}, with
+\(q_k^2-q_1^2=\pi^2k(k-1)\) and \(a/L,S/\kappa\to1\).
+The remaining terms are smaller by \eqref{eq:distort} and
+\(Y_3-q-c_1q^3=O_k(c_1^2)\).
+For fixed \(k\), the leading shift of the common frequency gives
+\[
+ x_k(T)=\frac{q_k}{L-2S/\kappa^2}
+       +O_k\!\left(\frac{1}{L^2\kappa^{3/2}}\right).
+\]
+The two-site Jacobi reference has frequency \(\sqrt{\beta_1}\) with
+\(\beta_1=\E_T U^2\) and \(\beta_1\beta_2=\Var_T(U^2)\).
+Put \(\epsilon_*=\sqrt{\Var_T(U)}/a\) and \(d_J=\beta_2/\beta_1\).
+The centered moment estimates at the saddle give
+\(d_J=4\epsilon_*^2+O(\epsilon_*^3)\). Since
+\(\sqrt{\beta_1}/a=\sqrt{1+\epsilon_*^2}\) and
+\(ax_k=q_k+O_k(\epsilon_*^3)\), the squared half-gap satisfies
+\[
+ \frac{D_k}{\pi^2/(4\beta_1)}=1+\frac{d_J}{4}+O_k(d_J^{3/2})
+ \qquad\text{for fixed }k .
+\]
+This compares the gap with the one from that Jacobi reference
+\cite[\S2]{Founding07}.
+
+\subsection{Finite source data and direct phase localization}
+\label{sec:inverse-data}
+
+At a specified \(T\), evaluate \eqref{eq:window-source-test} and
+\eqref{eq:window-error-test} with enclosed saddle and source quantities,
+check the stated inequalities, and retain levels with
+\(q_k\le R/4\) using a lower bound for \(R\). The tails in
+\eqref{eq:window-source-test} reduce to elementary Gaussian integrals.
+The asymptotic theorem leaves the numerical onset in \(T\) unevaluated.
+
+With the exact \(a\), truncate \eqref{eq:inverse} at degree \(2N+1\).
+Set \(m=2N+3\) and \(s=q/Q\). Cauchy's coefficients for \(Y-q\)
+bound the physical position tail by \((b_R/a)s^m/(1-s^2)\).
+For the adjacent difference, differentiate the geometric majorant. At
+\(s=q'/Q\) the bound is
+\begin{equation}
+ \frac{\pi b_R}{aQ}
+  \left(\frac{m s^{m-1}}{1-s^2}
+                       +\frac{2s^{m+1}}{(1-s^2)^2}\right).
+ \label{eq:inverse-tail}
+\end{equation}
+If the coefficient of \(q^{2j+1}\) has absolute error at most \(d_j\),
+add \(a^{-1}\sum_{j=1}^N d_j q^{2j+1}\) in position and
+\((\pi/a)\sum_{j=1}^N(2j+1)d_j(q')^{2j}\) in spacing. The polynomial
+expressions in \eqref{eq:inverse} propagate the input cumulant intervals
+to these coefficient errors.
+
+To compare with direct localization from identical data, take the phase
+polynomial \(\Psi_N=\sum_{j=1}^N c_j y^{2j+1}\), \(N\ge1\).
+With exact coefficients, Cauchy's estimate on the saddle residual
+in \eqref{eq:window-log} gives
+\[
+ \sup_{|y|\le R/2}|\Psi(y)-\Psi_N(y)|
+ \le \delta_N=\tfrac43 E\,2^{-m}.
+\]
+The truncated polynomial uses the same boundary majorant \(b_R\);
+its inverse \(Y_N\) lies in the same disk through the retained levels.
+Subtract the two inverse equations. The true phase perturbation
+\(\Psi\) has derivative bounded by \(1/2\) on the convex disk
+\(|y|\le R/2\), so \(|Y-Y_N|\le2\delta_N\) on \(|q|<Q\).
+The residual vanishes to order \(m\) at zero. The position and gap
+bounds from the quotient and its derivative are respectively
+\[
+ \frac{2\delta_N}{a}(q/Q)^m,\qquad
+ \frac{2\pi\delta_N(m+2)}{aQ}(q'/Q)^{m-1}.
+\]
+On the real interval, values of \(y-\Psi_N(y)-q_k\) below
+\(-\delta_N\) and above \(\delta_N\) give signed brackets for the
+same true crossings. At \(N=1\), the phase polynomial is inverted by
+the closed cubic \(Y_3\).
+A direct sign test of the field itself pays the amplitude as well:
+on \(|y|\le R/2\) the real exponential factor in the field is at least
+\(e^{-r^2/8-E}\) by \eqref{eq:window-log}. Thus the two approaches share
+the count and the analytic error for direct use of the same cubic.
+The inverse series supplies reusable coefficients for all ranks in the
+window.
+
+A common perturbation analysis prices inexact phase coefficients. At
+the exact coordinates, coefficient errors \(\varepsilon_j\) cost
+\(\sum_j\varepsilon_j(R/2)^{2j+1}\) on the boundary; include any omitted
+tail in the total bound \(\delta_*\). If
+\(Q_*:=R/2-b_R-\delta_*>R/4\), Rouch\'e's theorem keeps the
+perturbed inverse in \(|y|<R/2\) for \(|q|<Q_*\). Subtraction of the
+equations again bounds the displacement by \(2\delta_*\).
+Cauchy's estimate gives physical adjacent error at most
+\(2\pi\delta_*/[a(Q_*-R/4)]\).
+For an error \(|\widehat c_1-c_1|\le d_c\) in the cubic alone, take
+\(\delta_*=d_c(R/2)^3\). If \(\delta_*\le R/16\) then
+\(Q_*\ge5R/16\), and the cubic difference vanishes to order three.
+The same quotient bounds give \(O(d_c q^3/a)\) in position and
+\(O(\pi d_c(q')^2/a)\) in the gap. Converting with
+\(|\widehat a-a|\le d_a\le a/2\) adds
+\(O(d_a q/a^2)\) and \(O(\pi d_a/a^2)\), respectively. Indeed the
+perturbed inverse is \(O(q)\) with bounded slope on the retained
+segment by its strict radius and its zero at the origin. The
+coefficient budget must include uncertainty in \(a\) when forming
+\(\widehat c_1\). At the outer scale \(q\asymp R\), the orders
+\(d_c=O(E/R^3)\), \(d_a=O(aE/R)\) preserve the errors in
+\eqref{eq:growing-errors}. Near the origin the respective powers of
+\(q\) in these bounds determine the smaller admissible errors.
+
+The analytic envelope adds information beyond any finite list of
+moments in the class of unrestricted positive half-line densities.
+To see this, add to the positive density of \(U\) a nonnegative
+bump translated to \(u=H_*\) with mass \(H_*^{-m-1}\). Its first \(m+1\)
+moments, starting with degree zero, are \(O(H_*^{-1})\). Choose \(m+1\)
+fixed interior bumps with an invertible moment matrix by taking small
+supports about distinct positive points. Subtract their linear
+combination with matching moment vector. The coefficients tend to
+zero, so positivity and all the specified moments are preserved.
+The exponential moment at each fixed positive rate tends to infinity.
+The inverse remainder proved here therefore uses the analytic envelope
+as an additional input. The individual contour formula \eqref{eq:loop}
+also requires a whole-circle error and real clearance in addition to
+the derivatives at its center.
+
+These estimates use the normalized complete theta expansion for the
+source envelope and the literal cosine for the zero count. Euler-factor
+changes alter the complete source coefficients. Weighted-square and
+finite-prime perturbations change the unit weights and full
+reflection. Reflected, smooth, and primitive-compatible controls lack
+the canonical square expansion. Atomic threshold controls have a
+different support, and finite-profile and finite-tail variants change
+the complete source even when selected observations agree. The
+normalized endpoint perturbations change Dirichlet series arithmetic.
+A changed observation kernel loses the cosine factorization used here
+\cite{EZWindow}. A control with its own verified envelope
+can use the same inverse argument on the corresponding disk.
+The gain for the theta field is a larger counted family and a
+derivative bound for the shared gap error at one time. The count ends
+at the proved height.
