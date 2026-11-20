@@ -615,3 +615,73 @@ records the systematic proofs, supporting-only numerics and 107-page
 ignored PDF. Earlier manuscript milestones are historical, not withdrawn.
 This is internal shared-premise nonauthor assessment, not new source
 evidence or specialist validation. E44's new endpoint remains unexecuted.
+
+**AGC finite arithmetic allowance gain, 19 November 2026.** For Edward
+Baker with Codex assistance; actual lead settings unavailable, helpers
+explicitly Sol6.1/ultra. [AGC Note08](../papers/investigations-6/05_arithmetic_gap_continuation/notes/08_AGC_E13_LOG_DISK_ALLOWANCE_20261119.md)
+is **proved in-note**: recenter the relative-error logarithm disk and
+couple its two negative modes, retaining the center square. Its specified
+complete allowance strictly improves the prior bound; the centered
+q=1/2 example saves >32%. [Note07](../papers/investigations-6/05_arithmetic_gap_continuation/notes/07_AGC_E12_FIXED_CELL_COMPARISON_20261119.md)
+and [Record03](../papers/investigations-6/05_arithmetic_gap_continuation/numerics/03_AGC_FIXED_CELL_COMPARISON_20261119.json)
+are **interval-certified** on |z−14010.1|=.9, .09<=t<=.1: identical
+P33/source/count data change a negative sufficient lower bound to
+D_H>.0054147 throughout, with >11% reduction of the worst evaluated
+transfer allowance. The source states: “This is an improvement of a shared
+local estimator inside earlier canonical coverage.”
+[Analytical assessment](../papers/investigations-6/05_arithmetic_gap_continuation/reviews/02_AGC_CONTINUATION_ESTIMATES_ASSESSMENT_20261119.md)
+and [separate code assessment/replay](../papers/investigations-6/05_arithmetic_gap_continuation/reviews/04_AGC_FIXED_CELL_NUMERICAL_ASSESSMENT_20261119.md)
+retain internal/shared-source scope. Bounded heat includes both lateral
+terms, but this scalar supremum implementation loses. No new coverage,
+Newman bound, optimality, or advantage over the equally refined direct
+consumer; earlier CM results keep their own statuses.
+
+
+**AGC retained-correction milestone, 19 November 2026.** For Edward Baker
+with Codex assistance; actual lead settings unavailable, helpers explicitly
+Sol6.1/ultra. [Note10](../papers/investigations-6/05_arithmetic_gap_continuation/notes/10_AGC_E13_R2_HOLOMORPHIC_CORRECTION_20261119.md)
+is **proved in-note** with [Review05](../papers/investigations-6/05_arithmetic_gap_continuation/reviews/05_AGC_CORRECTED_REFERENCE_ASSESSMENT_20261119.md):
+local holomorphic correction, explicit derivative/defect/mismatch payments,
+and changed-denominator count transfer. [Note11](../papers/investigations-6/05_arithmetic_gap_continuation/notes/11_AGC_E12_R2_CORRECTED_COMPARISON_20261119.md)
+records the complete interval result D_H>.1493308659 on the unchanged cell,
+after reacquiring Q's divisor data, versus the prior .0054147305 lower
+bound. It states: “This is a paid finite gain from retaining new correction
+information, inside already known coverage.” [Review06](../papers/investigations-6/05_arithmetic_gap_continuation/reviews/06_AGC_CORRECTED_COMPARISON_ASSESSMENT_20261119.md)
+accepts and replays it. Direct Q shares the gain; no new coverage, Newman
+bound or uniform family. Internal shared-source assessment only; r1 remains valid.
+
+
+**AGC full-phase pointwise comparison, 19 November 2026.** Prepared for Edward Baker with Codex assistance; root settings unavailable, B03 Astra/ultra and proof/assessment Sol6.1/ultra explicit dispatches. [Note14](../papers/investigations-6/05_arithmetic_gap_continuation/notes/14_AGC_E14_UNIFORM_CORRECTION_AND_STRIP_COMPARISON_20261119.md) is **proved in-note**, accepted with Section10 by [Review07](../papers/investigations-6/05_arithmetic_gap_continuation/reviews/07_AGC_UNIFORM_CORRECTION_ASSESSMENT_20261119.md): removable full-phase poles, uniform derivative/mismatch bounds and paid cutoff jumps on x>=14000, .09<=t<=.1, |y|<=1. Exact retained-value lower allowances satisfy m_val>m_om+3L/40; the separately triangle-paid holomorphic pointwise allowance is dominated by the equally informed direct value allowance. This limitation concerns that information/consumer class, not heat, contours, correlated errors or costs. The source states: “It acquires no positive strip floor, zero exclusion, new coverage or Newman bound.” Internal shared-source LLM assessment; no numerical campaign. Prior finite certificates remain valid and unchanged. [Milestone15](../papers/investigations-6/05_arithmetic_gap_continuation/notes/15_AGC_UNIFORM_MILESTONE_AND_CONTINUATION_20261119.md) identifies the independent normalized arithmetic lower bound still needed.
+
+**AGC three-prime obstruction, 19 November 2026.** For Edward Baker with Codex assistance; root unavailable, B04 Astra/ultra and E16 proof/assessment Sol6.1/ultra dispatches. [Note17](../papers/investigations-6/05_arithmetic_gap_continuation/notes/17_AGC_E16_THREE_PRIME_ELLIPSE_OBSTRUCTION_20261119.md) is **proved in-note**, accepted with Section11 by [Review08](../papers/investigations-6/05_arithmetic_gap_continuation/reviews/08_AGC_ARITHMETIC_FLOOR_ASSESSMENT_20261119.md): fixed {2,3,5}, anchor1, individual paired-ellipse radii and separate payments give ell_E,m_E<−1/400 on t=.1,y=.2,14000+sqrt(24/25)<=x<=30000, including both cutoff sides. Eight exact rational prime contributions have mass>21/20. The source states: “This is an upper bound on this **lower allowance**, not an upper bound on the actual reference or field magnitude.” No failure of the exact direct margin, new coverage or universal phase obstruction. Shared-source internal assessment; prior results unchanged. [Continuation18](../papers/investigations-6/05_arithmetic_gap_continuation/notes/18_AGC_ARITHMETIC_OBSTRUCTION_AND_CONTINUATION_20261119.md) identifies the missing cross-index phase input.
+
+
+**AGC common dyadic envelope, 19 November 2026.** For Edward Baker with
+Codex assistance; root settings unavailable, B05 Astra/ultra and E17
+proof/assessment Sol6.1/ultra dispatches. [Note20](../papers/investigations-6/05_arithmetic_gap_continuation/notes/20_AGC_E17_DYADIC_GROUP_OBSTRUCTION_20261119.md)
+is **proved in-note**, accepted with Section12 by [Review09](../papers/investigations-6/05_arithmetic_gap_continuation/reviews/09_AGC_PHASE_GROUP_ASSESSMENT_20261119.md).
+Odd-core dyadic groups retain one common phase before a full-circle
+supremum. Finite Fourier averaging preserves the eight-prime cost, so
+m_E<=m_dyad<=m_dir yet ell_dyad,m_dyad<−1/400 on the same F0,
+including all cutoff sides. The source states: “A lower bound on a circle
+mean or on its supremum is not a lower bound on the value at `u(x)`.”
+This extends only the fixed multiplier/separate-anchor/relaxed-core/
+full-circle/separate-payment exclusion. Actual-phase estimates and signed
+anchor coupling remain open. No new numerical run, coverage or Newman
+bound. Internal review shares a convexity preflight contribution and
+source premises; the earlier narrower result is preserved.
+
+**AGC actual dyadic-phase recurrence, 19 November 2026.** For Edward
+Baker with Codex assistance; root settings unavailable, B06 Astra/ultra
+and E18 proof/assessment Sol6.1/ultra dispatches. [Note23](../papers/investigations-6/05_arithmetic_gap_continuation/notes/23_AGC_E18_ACTUAL_PHASE_RECURRENCE_20261119.md)
+is **proved in-note**, accepted with Section13 by [Review10](../papers/investigations-6/05_arithmetic_gap_continuation/reviews/10_AGC_ACTUAL_PHASE_ASSESSMENT_20261119.md).
+Carrier phase speed and paid coefficient variation force ell_act,m_act
+<−1/800 at some actual height in every length19 interval contained in
+one natural-cutoff chart of F0. The source states: “It converts a frozen
+auxiliary mean into existence at actual heights.” This resolves E17's
+previously undecided actual-u-only cost; independently relaxed core
+rotations and separate payments still define the class. It is not
+pointwise failure, a physical zero or failure of exact direct evaluation.
+Mutual core/anchor phases and signed aggregates remain open. Internal
+shared-source assessment; no numerical campaign, new coverage or Newman
+bound. Earlier results remain valid.

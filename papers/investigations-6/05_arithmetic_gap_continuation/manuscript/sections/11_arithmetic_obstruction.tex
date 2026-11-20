@@ -1,0 +1,232 @@
+% 19 November 2026. Drafted for Edward Baker with OpenAI Codex assistance.
+% Root settings unavailable; B04 Astra/ultra and E16 Sol6.1/ultra dispatches.
+% Assessment and source hashes are recorded in Review08.
+\section{A quantified limitation of a three-prime lower allowance}
+\label{sec:arithmetic-obstruction}
+
+We now test an independent arithmetic reduction for the missing strip
+margin. The finite Euler multiplier of \cite[Section~8.5]{Polymath2019}
+cancels selected coefficients before taking absolute values. A paired
+ellipse retains additional dependence between the two principal sums.
+Even this stronger reduction has a negative complete allowance on an
+included boundary segment. This is a limitation of the specified
+estimator, not a zero of the theta field or an exclusion of all arithmetic
+methods.
+
+\subsection{Exact finite convolution and the paid allowance}
+
+Fix $t=1/10$ and use the normalized quantities of Section~5:
+\begin{align}
+ s_0&=(1+y-\ii x)/2,& s&=s_0+\alpha(s_0)/20=\sigma+\ii\tau,
+ &b_n&=\exp(\log^2 n/40),\notag\\
+ N&=\left\lfloor\sqrt{x/(4\pi)+1/160}\right\rfloor,&
+ S&=\sum_{n\le N}b_n n^{-s},&
+ T&=\sum_{n\le N}b_n n^{y-s}.
+ \label{af:definitions}
+\end{align}
+Thus $f=P_N/\mathcal B=S+\gamma\sum_{n\le N}b_n
+n^{y-\bar s-\kappa}$. Put $c=C_{\rm val,N}/\mathcal B$,
+$q=Q_{\rm val,N}/\mathcal B=f-c$ and
+$v=\mathcal V_N/|\mathcal B|$, with both full term-error sums and
+the entire retained delta remainder in $\mathcal V_N$. In particular
+$|H/\mathcal B-q|\le v$.
+
+The chosen multiplier and its exact coefficients are
+\begin{align}
+ E&=\prod_{p\in\{2,3,5\}}(1-b_p p^{-s})
+   =\sum_{d\mid30}\lambda_d d^{-s},&
+ \lambda_d&=\prod_{p\mid d}(-b_p),\notag\\
+ \beta_m&=\sum_{\substack{d\mid(m,30)\\m/d\le N}}
+                  \lambda_d b_{m/d},&
+ a_m&=\sum_{\substack{d\mid(m,30)\\m/d\le N}}
+                  \lambda_d(m/d)^y b_{m/d}.
+ \label{af:convolution}
+\end{align}
+For $1\le m\le30N$ these are real, with $\beta_1=a_1=1$,
+$ES=\sum_m\beta_m m^{-s}$ and $ET=\sum_m a_m m^{-s}$.
+The cutoff indicator includes all edge terms beyond $N$; the heat weights
+are not assumed multiplicative. Equal-frequency cancellation uses the
+actual identity $(dn)^{-\ii\tau}=d^{-\ii\tau}n^{-\ii\tau}$.
+
+Let $g=|\gamma|<1$ and suppose $E\ne0$. The kappa replacement costs
+\begin{equation}
+ D_\kappa=g\sum_{n\le N}b_n n^{y-\sigma}
+                    \bigl(e^{|\kappa|\log n}-1\bigr),
+ \qquad |f-(S+\gamma\overline T)|\le D_\kappa.
+ \label{af:kappa}
+\end{equation}
+Define
+\begin{align}
+ h_m&=\max\left\{|\beta_m-ga_m|,
+          \frac{1-g}{1+g}|\beta_m+ga_m|\right\},\notag\\
+ K&=1-g-\sum_{m=2}^{30N}h_m m^{-\sigma},\notag\\
+ \ell_E&=\frac{K}{|E|}-D_\kappa-|c|,
+ &m_E&=\ell_E-v.
+ \label{af:allowance}
+\end{align}
+
+\begin{lemma}[Paired-ellipse modulus estimate]
+The quantities in \eqref{af:allowance} satisfy
+$\ell_E\le|q|$ and
+\begin{equation}
+ m_E\le m_{\rm dir}:=|f-c|-v\le|H/\mathcal B|.
+ \label{af:direct}
+\end{equation}
+These signed inequalities also hold when $K<0$.
+\end{lemma}
+
+\begin{proof}
+Put $U=ES$, $V=ET$ and $\rho=\gamma E/\bar E=g e^{\ii\theta}$.
+Then $E(S+\gamma\bar T)=U+\rho\bar V$.
+After rotation by $e^{-\ii\theta/2}$, its $m$th pair is
+\[
+ m^{-\sigma}\bigl\{(\beta_m+ga_m)\cos\phi_m
+                 +\ii(\beta_m-ga_m)\sin\phi_m\bigr\},
+ \qquad \phi_m=-\tau\log m-\theta/2.
+\]
+Use the norm
+$\|w\|_g^2=(\Re w/(1+g))^2+(\Im w/(1-g))^2$.
+The constant pair has norm one; the other pairs have norm at most
+$h_m m^{-\sigma}/(1-g)$. Since $|w|\ge(1-g)\|w\|_g$,
+the reverse triangle inequality gives $|U+\rho\bar V|\ge K$.
+Pay \eqref{af:kappa}, divide by the exact $|E|$, and pay $|c|$.
+This gives $\ell_E\le|f-c|$; the complete source enclosure gives
+\eqref{af:direct}. Negative lower allowances cause no sign reversal
+because the divisor remains the exact positive $|E|$.
+\end{proof}
+
+The ellipse preserves within-index dependence but its triangle sum
+discards the relations among different phases $\tau\log m$. Paying
+$|c|$ separately is another explicit restriction of this estimator.
+Direct evaluation receives the same coefficients, phases and complete
+payments, and can use the same ellipse estimate. No computational-cost
+or universal interval-implementation comparison follows.
+
+\subsection{Eight surviving primes force a negative allowance}
+
+\begin{theorem}[Scoped three-prime obstruction]
+On the boundary segment
+\begin{equation}
+ \mathcal F_0:\quad t=1/10,\quad y=1/5,\quad
+ x_0:=14000+\sqrt{24/25}\le x\le30000,
+ \label{af:segment}
+\end{equation}
+the exact allowance \eqref{af:allowance} satisfies
+\begin{equation}
+ \boxed{\ell_E<-1/400,\qquad m_E<-1/400.}
+ \label{af:negative}
+\end{equation}
+Both one-sided cutoff references satisfy the same conclusion at each
+seam in this segment. The theorem concerns the fixed multiplier
+$\{2,3,5\}$, anchor one, individual paired-ellipse radii and separate
+kappa, correction and source payments.
+\end{theorem}
+
+\begin{proof}
+First $N\ge33$ since $x>14000$ and $\pi<22/7$.
+Writing $T_0=x/2$, the exact alpha formula gives
+\begin{align*}
+ \Re\alpha(3/5-\ii T_0)-\tfrac12\log(T_0/(2\pi))
+ &=\frac{3/10}{T_0^2+9/25}-\frac{2/5}{T_0^2+4/25}
+      +\tfrac14\log\bigl(1+9/(25T_0^2)\bigr)\\
+ &\le\frac{39/100}{T_0^2}-\frac{2/5}{T_0^2+4/25}<0.
+\end{align*}
+Also $x/(4\pi)<2500<e^8$, using $\pi>3$ and $e>8/3$.
+Hence $\sigma<3/5+8/40=4/5$. A lower bound
+\[
+ \Re\alpha(3/5-\ii T_0)>
+ \tfrac12\log(T_0/(2\pi))-\frac{2}{5T_0^2}>0
+\]
+gives $\sigma>3/5$. Here $T_0>7000$ and $T_0/(2\pi)>1000$.
+The general source bound \cite[(20)]{Polymath2019} yields
+\[
+ 0<g\le e^{1/250}\bigl(x/(4\pi)\bigr)^{-1/10}<3/5:
+ \qquad 1000^{1/10}>9/5,\quad e^{1/250}<27/25.
+\]
+The last estimates follow from $(9/5)^{10}<1000$ and
+$e^u\le(1-u)^{-1}$ for $0<u<1$. For $p=2,3,5$,
+$0<\log p<2$ and $\sigma>3/5$ imply
+$b_p p^{-\sigma}<1$. Thus $0<|E|<8$.
+
+Let $\mathcal P=\{7,11,13,17,19,23,29,31\}$ and
+$P_j(u)=\sum_{h=0}^j u^h/h!$. The following rational table provides
+$\log p>r$, $r/5+r^2/40>v_p$ and $P_4(v_p)/p>k_p/1000$:
+\begin{center}
+\begin{tabular}{rrrrr}
+\toprule
+$p$&$r$&$v_p$&$k_p$&$(a,j)$\\
+\midrule
+7&$19/10$&$47/100$&228&$(2,1)$\\
+11&$23/10$&$59/100$&163&$(3,2)$\\
+13&$5/2$&$13/20$&147&$(3,2)$\\
+17&$14/5$&$3/4$&124&$(3,1)$\\
+19&$29/10$&$79/100$&115&$(3,1)$\\
+23&$31/10$&$43/50$&102&$(4,3)$\\
+29&$33/10$&$93/100$&87&$(4,2)$\\
+31&$17/5$&$193/200$&84&$(4,2)$\\
+\bottomrule
+\end{tabular}
+\end{center}
+For verification, $e<P_6(1)+1/4410<68/25$, and each row satisfies
+$(68/25)^a/P_j(a-r)<p$, proving $e^r<p$.
+The remaining columns are rational polynomial inequalities.
+Consequently
+\begin{equation}
+ \sum_{p\in\mathcal P} b_p p^{-4/5}
+ =\sum_{p\in\mathcal P}p^{-1}
+       e^{\log p/5+\log^2p/40}
+ >\frac{\sum_p k_p}{1000}=\frac{21}{20}.
+ \label{af:prime-mass}
+\end{equation}
+All eight primes lie below $N$ and are coprime to 30, so
+$\beta_p=b_p$ and $a_p=p^{1/5}b_p\ge b_p$. The second branch of the
+maximum therefore gives $h_p\ge(1-g)b_p$. Using $\sigma<4/5$,
+\[
+ K<1-g-\frac{21}{20}(1-g)
+   =-\frac{1-g}{20}<-\frac1{50}.
+\]
+The already-defined signed quotient then satisfies
+$K/|E|<-1/(50|E|)<-1/400$. The three remaining payments are
+nonnegative, proving \eqref{af:negative}. The upper bound eight is
+used only to bound a negative allowance from above, not to replace
+its denominator in a lower-bound formula.
+\end{proof}
+
+\subsection{Coverage, controls and the next missing information}
+
+At $x_j=4\pi j^2-\pi/40$, apply \eqref{af:convolution} separately
+with indices $j-1$ and $j$. Both are at least 33 at every seam in
+\eqref{af:segment}; the same eight-prime witness applies.
+The old endpoint is a one-sided limit and the new index owns the
+natural endpoint. Transferring a fixed reference still requires the
+signed jump and full error payment in \eqref{uc:seams}.
+
+This failure includes the required strip's lower endpoint. Moving a
+finite-height/tail join cannot make this estimator certify the whole
+strip. An effective tail onset and paid overlap remain independent
+unacquired inputs to any successful replacement; eventual classical
+two-carrier coverage is not new. The initial verification and full
+intermediate barrier remain separate obligations as in
+\eqref{uc:consumer}. No tail computation or phase scan supports this
+analytical obstruction.
+
+The collision controls distinguish literal theta arithmetic from
+selected multiplicative identities. Finite-prime and finite-source
+perturbations can preserve some identities while changing the full
+coefficients, reflection and source remainder. Shape, primitive and
+reflected controls do not supply that complete source premise; conditional
+escaping controls retain their hypothesis and location qualifications.
+Changed observation kernels pay their actual forcing. At any included
+zero, a valid complete enclosure forces every valid $\ell-v\le0$.
+For example $H=Q=(z-x_c)^2-2(t-1/4)$, $\mathcal B=1$, $v=0$ has
+the zero $z=x_c+\ii\sqrt{3/10}$ at $t=1/10$, within the selected
+strip when $x_c\ge x_0$. It has perfect approximation but does not
+have theta's arithmetic.
+
+The theorem excludes neither larger or adaptive multipliers nor signed
+groups, height-phase constraints, joint correction/remainder estimates
+or contour methods. The specific next acquisition is control of a
+phase-preserving group by an independent quantitative input. Simply
+shrinking correction constants cannot repair a cost already exceeding
+the anchor before those payments are included. No positive strip floor,
+new zero-free region or improved Newman bound is obtained here.

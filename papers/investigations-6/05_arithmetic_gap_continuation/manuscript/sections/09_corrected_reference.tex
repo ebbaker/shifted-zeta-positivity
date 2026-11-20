@@ -1,0 +1,220 @@
+% 19 November 2026. Drafted for Edward Baker with OpenAI Codex assistance.
+% Lead actual backend/effort unavailable; helpers explicitly Sol6.1/ultra.
+% Analytical integration accepted in Review05; numerical integration assessed separately.
+\section{Retaining the arithmetic correction on the fixed cell}
+\label{sec:corrected-reference}
+
+The correction in Section~6 changes the approximation center. We now
+make that change on the same cell as \eqref{le:pilot-cell}, paying the
+difference between the published value formula and a holomorphic reference.
+This is a source-acquisition refinement. Direct evaluation of the corrected
+reference receives the same information and complete allowance.
+
+\subsection{A local holomorphic reference and its derivative bounds}
+
+Put $k=\pi/8$, $w=z/2+kt$ and
+\begin{align}
+ p(w)&=1-2\bigl(\sqrt{w/(2\pi)}-N\bigr),\notag\\
+ C_0(p)&=\frac{e^{\pi\ii(p^2/2+3/8)}-\ii\sqrt2\cos(\pi p/2)}
+                   {2\cos(\pi p)},\qquad
+ C_0^\sharp(p)=\overline{C_0(\bar p)},\notag\\
+ A_N(w)&=\frac{\sqrt w}{2}
+       \bigl\{(w+\ii)C_0(p(w))+(w-\ii)C_0^\sharp(p(w))\bigr\},\notag\\
+ J_N(t,z)&=(-1)^{N+1}\frac{\sqrt\pi}{4}e^{-kz-k^2t},\qquad
+ C_{\rm hol}(t,z)=J_N(t,z)A_N(w),\qquad Q_N=P_N-C_{\rm hol}.
+ \label{cr:reference}
+\end{align}
+The square roots are principal. All assertions in this section concern
+$N=33$, $|\Re z-14010.1|\le2$, $|\Im z|\le1$ and
+$9/100\le t\le1/10$; no global continuation of the displayed quotient
+is needed.
+
+\begin{proposition}[Explicit correction bounds]
+\label{cr:bounds}
+On this rectangle the reference is holomorphic in $z$ and respects
+conjugation. Its slow profile satisfies
+\begin{equation}
+ |A_N|<1060000,\qquad |A_N'|<24000,\qquad |A_N''|<1400.
+ \label{cr:profile-bounds}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The rational bounds $157/50<\pi<22/7$ give
+$7004<\Re w<7006.09$, $|\Im w|\le1/2$ and $|w|<7007$.
+Writing $\sqrt{w/(2\pi)}=a+\ii b$ and using
+$a^2=(|w|+\Re w)/(4\pi)$ and $2ab=\Im w/(2\pi)$ gives
+\begin{equation}
+ \frac9{50}<\Re p<\frac6{25},\qquad |\Im p|<\frac1{400},
+ \qquad |p|<\frac14,\qquad |\cos(\pi p)|>\frac7{10}.
+ \label{cr:p-domain}
+\end{equation}
+The last inequality follows from
+$|\cos(u+\ii v)|^2=\cos^2u+\sinh^2v$ and
+$\cos(6\pi/25)>7/10$. Thus all denominators and branches remain
+clear on a neighborhood of the closed rectangle.
+
+For completeness, set $n=e^{\pi\ii(p^2/2+3/8)}-
+\ii\sqrt2\cos(\pi p/2)$ and $d=2\cos(\pi p)$.
+On \eqref{cr:p-domain}, the exponential has modulus less than
+$1003/1000$ and $\cosh(\pi|\Im p|)<1001/1000$. Using
+$|\sin z|\le|z|\cosh|\Im z|$ and $\sqrt2<10/7$ gives
+$|n|<5/2$, $|n'|<7/4$, $|n''|<15/2$,
+$|d'|<5$, $|d''|<20$ and $|d|>7/5$. Thus
+$|C_0|<9/5$, $|C_0'|<8$ and $|C_0''|<90$;
+the quotient identities are
+\[
+ C_0'=\frac{n'-d'C_0}{d},\qquad
+ C_0''=\frac{n''-2d'C_0'-d''C_0}{d},\qquad d''=-\pi^2d.
+\]
+The same bounds hold for $C_0^\sharp$. Write $A_N=gB$, where
+$g=\sqrt w/2$ and $B$ is the expression in braces in
+\eqref{cr:reference}. Then
+\[
+ |g|<42,\quad |g'|<\frac1{4\cdot83},\quad
+ |g''|<\frac1{8\cdot83^3},\quad
+ |p'|<\frac1{200},\quad |p''|<\frac1{2800000}.
+\]
+Since $|w\pm\ii|<7008$, product and chain rules give
+\begin{align*}
+ |B|&<2\cdot7008\cdot\frac95,\\
+ |B'|&<\frac{18}5+2\cdot7008\cdot\frac8{200},\\
+ |B''|&<\frac{32}{200}
+   +2\cdot7008\left(\frac{90}{200^2}
+                        +\frac8{2800000}\right).
+\end{align*}
+Substitution into $A_N'=g'B+gB'$ and
+$A_N''=g''B+2g'B'+gB''$ proves \eqref{cr:profile-bounds}.
+Finally $p(\bar w)=\overline{p(w)}$ and the paired sharp terms give
+$A_N(\bar w)=\overline{A_N(w)}$. This also proves the claimed
+physical conjugation symmetry.
+\end{proof}
+
+Let $T'=x/2+kt$ and let $C_{\rm val}$ denote the correction in
+Corollary~6.4 of \cite{Polymath2019}. Substituting the principal-branch
+formula for $\mathfrak M_0$ and the source's phase
+$U(T')=\exp[-\ii\{(T'/2)\log(T'/(2\pi))-T'/2-\pi/8\}]$
+gives exactly
+\begin{equation}
+ \mathfrak M_0(\ii T')U(T')e^{\pi\ii/8}
+ =-\frac{\sqrt\pi}{8}e^{-\pi T'/4}\sqrt{T'}(T'+\ii),
+ \qquad C_{\rm val}(t,x+\ii y)=J_N(t,x+\ii y)A_N(T').
+ \label{cr:phase}
+\end{equation}
+Consequently the real-axis corrections agree. Off-axis their difference
+is the vertical integral of $A_N'$, which is paid below. Differentiating
+the holomorphic reference, with $w_t=k$, $w_z=1/2$, gives the exact
+cancellations
+\begin{equation}
+ (\partial_t+\partial_z^2)C_{\rm hol}
+       =\frac14J_NA_N''(w),\qquad
+ \mathcal R_Q=\mathcal R_N-\frac14J_NA_N''(w).
+ \label{cr:defect}
+\end{equation}
+The $A_N$ and $A_N'$ terms cancel. In backward time the corrected
+error satisfies $(H-Q)_u=(H-Q)_{zz}+\mathcal R_Q$.
+
+\subsection{The complete allowance and its final consumer}
+
+Define the positive leading payment
+\begin{equation}
+ L(t,x)=e^{k^2t}|\mathfrak M_0(\ii T')|
+       =\frac{\sqrt\pi}{8}e^{-kx-k^2t}
+                              \sqrt{T'}\sqrt{T'^2+1}.
+ \label{cr:leading}
+\end{equation}
+Write $\mathcal V_P$ for \eqref{le:source-value}. Corollary~6.4,
+together with the vertical mismatch, supplies the complete bound
+\begin{equation}
+ |H-Q_N|\le\mathcal V_Q
+ :=\mathcal V_P-L+\Delta,\qquad
+ \Delta=|J_N(t,z)|\frac{|y|}{2}\,24000.
+ \label{cr:source}
+\end{equation}
+Both summand errors and the entire retained $\delta_-+\delta_+$
+remainder remain in $\mathcal V_P-L$. Equations
+\eqref{cr:profile-bounds} and \eqref{cr:leading} give
+\begin{equation}
+ \frac{\Delta}{L}<\frac{24000}{83\cdot7004}<\frac1{24},
+ \qquad \frac{|C_{\rm hol}|}{L}
+       <\frac{2\cdot1060000}{83\cdot7004}<4.
+ \label{cr:saving}
+\end{equation}
+Thus more than $23/24$ of the \emph{leading omitted payment} is saved.
+This fraction is not a percentage improvement of the complete gap bound.
+
+There is also a concrete count transfer. The previous certificate has
+$\mathcal V_P/|P_N|<1/6$ on the circle. Hence
+$|C_{\rm hol}/P_N|<2/3$, and Rouch\'e transfers the count two to $Q_N$.
+Pointwise, putting $q_P=\mathcal V_P/|P_N|$, one obtains
+\begin{equation}
+ \frac{\mathcal V_Q}{|Q_N|}
+ \le\frac{\mathcal V_P-(23/24)L}{|P_N|-4L}<q_P,
+ \quad\text{since }4q_P<23/24.
+ \label{cr:relative}
+\end{equation}
+These inequalities do not supply $Q_N$'s center or discriminant. A final
+comparison must acquire them and evaluate
+$D_Q-r^2F(\operatorname{arctanh}q_Q,|c_Q-X|/r)$ with every numerical
+payment. No $P_N$ denominator or center is reused as though it belonged
+to $Q_N$. Direct $Q_N$ evaluation receives the same source information.
+
+The collision controls remain consistent. For an exact colliding
+reference the error may vanish while its discriminant reaches zero;
+the strict final margin then fails. Modified theta coefficients cannot
+import \eqref{cr:source} unchanged, and a changed observation kernel
+fails the physical heat equation. These premise failures do not assert
+that every collision-free box of a control must fail. The present local
+branch and cutoff conditions do not establish an all-height family,
+a passage through cutoff changes, or new canonical coverage.
+
+\subsection{The complete corrected comparison}
+
+The second calculation keeps exactly the previous $192$-bit arithmetic,
+$64$ closed time cells, $512$ closed arcs and three radii. It evaluates
+$Q_{33}$ directly and reacquires its count, denominator and annular
+logarithm from $\Re(Q_{33}(z)/(z-X)^2)>0$ on every boundary arc.
+The two logarithmic moments use the same fully paid Laurent alias formula
+\eqref{le:aliases}; interval time variation is included. Both term errors,
+the retained remainder and $12000|J_N||y|$ enter the local-arc ratio.
+The old $P_{33}$ clearance and moments are not substituted for $Q_{33}$'s.
+
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Quantity over the entire fixed interval & Outward summary\\
+\midrule
+Corrected relative-error allowance $q_Q$ & $<0.015234762$\\
+Corrected reference discriminant $D_Q$ & $>0.1617006119$\\
+Refined corrected transfer allowance & $<0.012369746$\\
+E10 complete lower bound at $Q$ & $>0.1491891639$\\
+Refined complete lower bound at $Q$ & $>0.1493308659$\\
+Previous refined complete lower bound at $P$ & $>0.0054147305$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The refined corrected lower bound exceeds the previous evaluated lower
+bound in every one of the $64$ closed time cells. In particular
+\begin{equation}
+ D_H(t)>0.1493308659\qquad(9/100\le t\le1/10)
+ \label{cr:pilot-margin}
+\end{equation}
+on the same counted circle. The real pair has gap greater than $0.7728$,
+since $(0.7728)^2/4=0.14930496<0.1493308659$.
+This is a stronger sufficient lower bound for the same canonical pair;
+the zeros have not changed. The gain uses retained correction information,
+and is shared by direct evaluation with the same information. It does not
+show an advantage of a time-integrated representation.
+
+The scaled complete source allowance is below $21410.476$ and the
+corrected denominator exceeds $941112.53$. Their independent ratio is
+not used in place of the sharper local-arc ratios. The complete corrected
+defect is conservatively bounded by $|\mathcal R_N|+350|J_N|$;
+its scaled contour bound is below $357.797450$. This is an upper
+triangle estimate, not an evaluation of the signed corrected defect.
+No second scalar heat-propagation comparison is claimed.
+The code, full record, separate assessment and sole scratch replay are
+saved in the investigation. They retain the imported source theorem and
+internal LLM-review limits. The fixed cell remains inside known coverage;
+no new height/time region or improved de Bruijn--Newman bound follows.

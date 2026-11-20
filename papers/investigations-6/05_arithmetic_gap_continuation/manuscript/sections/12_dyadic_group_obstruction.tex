@@ -1,0 +1,174 @@
+% 19 November 2026. Drafted for Edward Baker with OpenAI Codex assistance.
+% E17 helper explicitly dispatched gpt-6.1-sol/ultra; backend unattested.
+\section{A common dyadic phase still leaves an envelope obstruction}
+\label{sec:dyadic-group-obstruction}
+
+We strengthen Section~\ref{sec:arithmetic-obstruction} by grouping all
+frequencies with the same odd core and retaining their common dyadic
+phase across groups. The remaining full-circle envelope still has a
+negative complete allowance. All source quantities $q=f-c$, $v$,
+$D_\kappa$, $E$, $\beta_m,a_m$, $h_m$ and the segment $\mathcal F_0$
+are exactly those of \eqref{af:definitions}--\eqref{af:segment}.
+In particular, both full term-error sums and both retained delta payments
+remain in $v$, and $|H/\mathcal B-q|\le v$. No new source estimate is
+imported.
+
+\subsection{Exact dyadic groups and their allowance}
+
+Write $\rho=\gamma E/\bar E=g e^{\ii\theta}$ as before. Let
+$\mathcal R_N$ be the positive odd integers at most $30N$, and put
+\[
+ I_1=\{j\ge1:2^j\le30N\},\qquad
+ I_r=\{j\ge0:r2^j\le30N\}\quad(r\ge3\text{ odd}).
+\]
+For real auxiliary phases define the finite polynomials and groups
+\begin{align}
+ B_r(u)&=\sum_{j\in I_r}\beta_{r2^j}2^{-j\sigma}e^{\ii ju},&
+ A_r(u)&=\sum_{j\in I_r}a_{r2^j}2^{-j\sigma}e^{\ii ju},\notag\\
+ G_r(\eta,u)&=r^{-\sigma}
+    \bigl(e^{\ii\eta}B_r(u)+g e^{-\ii\eta}\overline{A_r(u)}\bigr).
+ \label{dg:groups}
+\end{align}
+With $F=S+\gamma\bar T$, the exact finite convolution gives
+\begin{equation}
+ e^{-\ii\theta/2}EF=Z_0+
+ \sum_{r\in\mathcal R_N}G_r(\eta_r,u),\qquad
+ Z_0=e^{-\ii\theta/2}+g e^{\ii\theta/2},\quad
+ u=-\tau\log2,\quad\eta_r=-\tau\log r-\theta/2.
+ \label{dg:identity}
+\end{equation}
+Every $m\ge2$ has its unique dyadic representation; the excluded
+$r=1,j=0$ term is the displayed anchor. All cutoff terms through $30N$
+are retained, without assuming multiplicativity of $b_n$.
+
+Use $\|w\|_g^2=(\Re w/(1+g))^2+(\Im w/(1-g))^2$.
+Its anchor norm is one and $|w|\ge(1-g)\|w\|_g$. Set
+\begin{align}
+ R_r(u)&=(1-g)\sup_{\eta\in[0,2\pi]}\|G_r(\eta,u)\|_g,\notag\\
+ C_{\rm dyad}&=\sup_{u\in[0,2\pi]}\sum_rR_r(u),&
+ C_{\rm sep}&=\sum_r\sup_{u\in[0,2\pi]}R_r(u),\notag\\
+ K_{\rm dyad}&=1-g-C_{\rm dyad},&
+ \ell_{\rm dyad}&=K_{\rm dyad}/|E|-D_\kappa-|c|,\qquad
+ m_{\rm dyad}=\ell_{\rm dyad}-v.
+ \label{dg:allowance}
+\end{align}
+The coefficients, $N,\sigma,g$ are frozen at the actual observation
+while these auxiliary suprema are taken. Only the core rotations are
+independent; the same $u$ is retained across all groups.
+
+For a real matrix, $\|\cdot\|_2$ denotes its Euclidean operator norm.
+Direct expansion of $G_r$ in $\cos\eta,\sin\eta$ gives
+\begin{equation}
+ M_r(u)=\begin{pmatrix}
+ \dfrac{\Re B_r+g\Re A_r}{1+g}&
+       -\dfrac{\Im B_r+g\Im A_r}{1+g}\\[4pt]
+ \dfrac{\Im B_r-g\Im A_r}{1-g}&
+        \dfrac{\Re B_r-g\Re A_r}{1-g}
+ \end{pmatrix},\qquad
+ R_r(u)=(1-g)r^{-\sigma}\|M_r(u)\|_2.
+ \label{dg:matrix}
+\end{equation}
+Indeed the scaled real coordinates are
+$r^{-\sigma}M_r(u)(\cos\eta,\sin\eta)^{\mathsf T}$, whose supremum
+is exactly that operator norm. Reverse triangle in \eqref{dg:identity}
+therefore gives $|EF|\ge1-g-\sum_rR_r(u)\ge K_{\rm dyad}$.
+Paying \eqref{af:kappa} and $|c|$ proves $\ell_{\rm dyad}\le|q|$,
+including when $K_{\rm dyad}<0$. The divisor remains the exact $|E|$.
+
+Each $j$th matrix coefficient in \eqref{dg:matrix} is a diagonal
+matrix followed by rotation through $ju$, with norm
+$2^{-j\sigma}h_{r2^j}/(1-g)$. Its triangle inequality and the unique
+dyadic partition imply
+\begin{equation}
+ C_{\rm dyad}\le C_{\rm sep}\le
+ C_{\rm ind}:=\sum_{m=2}^{30N}h_m m^{-\sigma},\qquad
+ m_E\le m_{\rm dyad}\le m_{\rm dir}=|f-c|-v.
+ \label{dg:comparison}
+\end{equation}
+Direct evaluation receives every polynomial, actual phase and complete
+payment and may use this same grouping. No cost advantage is asserted.
+
+\subsection{A Fourier mean forces the same negative constant}
+
+\begin{theorem}[Scoped common-phase envelope obstruction]
+On $\mathcal F_0$ in \eqref{af:segment}, including both one-sided cutoff
+references, $\ell_{\rm dyad}<-1/400$ and $m_{\rm dyad}<-1/400$.
+The scope is the fixed three-prime multiplier, anchor one, odd-core
+dyadic groups, independent core rotations, one common full-circle
+dyadic-phase envelope, and separate kappa, correction and source costs.
+\end{theorem}
+
+\begin{proof}
+Write $\langle\cdot\rangle=(2\pi)^{-1}\int_0^{2\pi}(\cdot)\,du$.
+For odd $r\ge3$, the real constant coefficients of the finite
+polynomials give
+\[
+ \langle M_r\rangle=\operatorname{diag}
+ \left(\frac{\beta_r+ga_r}{1+g},
+       \frac{\beta_r-ga_r}{1-g}\right).
+\]
+The integral triangle inequality, applied to $M_r$ on each unit vector,
+proves $\|\langle M_r\rangle\|_2\le\langle\|M_r\|_2\rangle$.
+Thus \eqref{dg:matrix} implies
+\[
+ \langle R_r\rangle\ge h_r r^{-\sigma},\qquad
+ C_{\rm dyad}\ge\left\langle\sum_rR_r\right\rangle
+ \ge\sum_{\substack{r\ge3\ {\rm odd}\\r\le30N}}h_r r^{-\sigma}.
+\]
+The core $r=1$ has zero mean matrix and nonnegative cost. No limiting
+argument or nonvanishing assumption enters these finite norm identities.
+
+Section~\ref{sec:arithmetic-obstruction} proves uniformly on
+$\mathcal F_0$ that $N\ge33$, $3/5<\sigma<4/5$, $0<g<3/5$,
+$0<|E|<8$, and the eight-prime mass \eqref{af:prime-mass} exceeds
+$21/20$. Each prime there is an odd core with
+$\beta_p=b_p$, $a_p=p^{1/5}b_p$, hence $h_p\ge(1-g)b_p$.
+Consequently
+\[
+ C_{\rm dyad}>\frac{21}{20}(1-g),\qquad
+ K_{\rm dyad}<-\frac{1-g}{20}<-\frac1{50},\qquad
+ \frac{K_{\rm dyad}}{|E|}<-\frac1{50|E|}<-\frac1{400}.
+\]
+The three remaining payments are nonnegative. The bound eight is used
+only to upper-bound this already-defined negative allowance.
+\end{proof}
+
+For this estimator a positive complete allowance would require exactly
+\[
+ C_{\rm dyad}<1-g-|E|(D_\kappa+|c|+v)\le1-g,
+\]
+which the mean bound prevents. Clipping $\ell_{\rm dyad}$ to zero
+cannot beat $v\ge0$ strictly. These statements upper-bound a lower
+allowance, not $|q|$ or $|H/\mathcal B|$.
+The smaller actual-phase cost $\sum_rR_r(u(x))$ also gives a valid
+allowance, whose sign is undetermined here. A circle mean is not a
+pointwise lower bound at $u(x)$, and no adverse maximizing phases are
+claimed to occur at one physical height.
+
+\subsection{Interfaces and the information still missing}
+
+The bounds $25/8<\pi<22/7$ and $x_0<14001$ give
+$x_{33}<14000<x_0<x_{34}$ and $x_{48}<30000<x_{49}$, where
+$x_j=4\pi j^2-\pi/40$. Thus the natural indices are $33,\ldots,48$,
+with internal seams $j=34,\ldots,48$. Apply each finite formula on
+its half-open natural cell and old one-sided limit; the new index owns
+the seam and $30000$ is included with $N=48$. Both references retain
+all eight primes. A fixed-reference transfer still pays the exact
+signed jump and full error in \eqref{uc:seams}; no floor derivative
+or unpaid gluing is used.
+
+Failure at the included $x_0$ cannot be repaired by moving a tail join.
+The rest of the two-dimensional finite strip, effective tail onset and
+overlap, initial verification and full intermediate barrier remain
+unacquired. The collision screen in Section~\ref{sec:arithmetic-obstruction}
+also applies: selected arithmetic or dyadic identities do not supply the
+complete literal theta source or a strict margin. Under any honest
+enclosure an included zero forces $\ell-v\le0$; the displayed quadratic
+control has perfect approximation but lacks theta arithmetic.
+
+This exclusion leaves actual-height joint phase restrictions, correlations
+among cores or with the anchor and correction, other groupings and
+products, and contour or heat arguments open. Such an escape needs an
+independently checked bound crossing the full paid threshold, with
+coefficient variation and every cutoff included and an equally informed
+direct comparator. No positive strip floor or Newman bound is acquired.

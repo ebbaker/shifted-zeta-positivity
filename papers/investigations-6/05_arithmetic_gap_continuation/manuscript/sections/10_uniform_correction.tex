@@ -1,0 +1,251 @@
+% 19 November 2026. Drafted for Edward Baker with OpenAI Codex assistance.
+% Root settings unavailable; B03 Astra/ultra and E14 Sol6.1/ultra dispatches.
+% Integration of the E14 proof; assessment status is recorded in Review07.
+\section{Full-phase correction and the pointwise strip consumer}
+\label{sec:uniform-correction}
+
+The fixed-cell gain raises two different questions: whether the correction
+can be controlled through the whole Riemann--Siegel phase range, and whether
+the resulting approximation proves a positive final margin. We resolve
+the first and compare complete pointwise allowances for the second.
+The comparison retains an explicit unacquired arithmetic lower bound;
+it proves no new zero-free region.
+
+\subsection{One family and removable apparent poles}
+
+Keep \eqref{cr:reference}, now with the natural index and the family
+\begin{equation}
+ \frac9{100}\le t\le\frac1{10},\qquad x\ge14000,\qquad |y|\le1,
+ \quad W=\frac{x}{2}+\frac{\pi t}{8},\quad
+ w=W+\frac{\ii y}{2},\quad
+ N=\left\lfloor\sqrt{\frac W{2\pi}}\right\rfloor.
+ \label{uc:family}
+\end{equation}
+For clarity distinguish the published value correction and its lift:
+\begin{align}
+ C_{\rm val,N}&=J_N A_N(W),& Q_{\rm val,N}&=P_N-C_{\rm val,N},\\
+ C_{\rm hol,N}&=J_N A_N(w),& Q_{\rm hol,N}&=P_N-C_{\rm hol,N}.
+ \label{uc:two-references}
+\end{align}
+Only the second reference with a \emph{fixed} index is holomorphic.
+The natural-index patchwork is not asserted to be holomorphic across
+cutoff seams. The value reference is sufficient for a pointwise
+nonvanishing test, which takes no spatial derivative.
+
+\begin{lemma}[Full-phase analytic bounds]
+The functions $C_0$ and $C_0^\sharp$ in \eqref{cr:reference} extend to
+entire even functions. On
+$|\Re p|\le101/100$, $|\Im p|\le1/100$ they satisfy
+\begin{equation}
+ |C_0|<4,\qquad |C_0'|<20,\qquad |C_0''|<200,
+ \label{uc:C-bounds}
+\end{equation}
+and the same bounds hold for the sharp function. Every natural phase
+and its vertical continuation in \eqref{uc:family} lies in this patch.
+\end{lemma}
+
+\begin{proof}
+At $p=j+1/2$, the exponential in the numerator is
+$\ii(-1)^{j(j+1)/2}$, while
+$\sqrt2\cos(\pi j/2+\pi/4)=(-1)^{j(j+1)/2}$.
+The numerator therefore vanishes at every simple zero of the
+denominator. Removal of these singularities proves entire extension;
+evenness is inherited from the original quotient.
+
+On the boundary of $|\Re p|\le5/4$, $|\Im p|\le1/4$, the denominator
+has modulus at least $\sqrt2$: this follows on vertical sides from
+$|\cos(a+\ii b)|^2=\cos^2a+\sinh^2b$, and on horizontal sides from
+$2\sinh(\pi/4)>\sqrt2$. The numerator has modulus below
+$e^{5\pi/16}+\sqrt2\cosh(\pi/8)<5$. Hence the quotient is below
+$5/\sqrt2<4$, including the interior by the maximum principle.
+Cauchy disks of radius $1/5$ centered on the smaller rectangle remain
+inside the larger one, proving the derivative bounds.
+
+On the vertical segment through $W\ge7000$,
+$|p_N'|\le1/\sqrt{2\pi W}$. Its phase displacement from the real
+phase is at most $1/(2\sqrt{2\pi W})<1/100$.
+The real natural phase lies in $(-1,1]$, with $-1$ included by
+one-sided limits. This proves the asserted full phase coverage, without
+excluding neighborhoods of $\pm1/2$.
+\end{proof}
+
+\subsection{Derivative, mismatch and complete source payments}
+
+\begin{proposition}[Uniform correction payments]
+Throughout \eqref{uc:family}, with primes denoting derivatives in $w$,
+\begin{equation}
+ |A_N|<5W^{3/2},\qquad |A_N'|<9W,\qquad
+ |A_N''|<40\sqrt W.
+ \label{uc:A-bounds}
+\end{equation}
+For fixed $N$, the complete heat defect is
+\begin{equation}
+ R_{Q_{\rm hol,N}}=R_{P_N}-\frac{J_N A_N''}{4},\qquad
+ |R_{Q_{\rm hol,N}}|\le |R_{P_N}|+10\sqrt W\,|J_N|.
+ \label{uc:defect}
+\end{equation}
+The value-to-lift mismatch is bounded by
+\begin{equation}
+ |C_{\rm hol,N}-C_{\rm val,N}|\le M_N
+ :=\frac92 W|y||J_N|,\qquad
+ \frac{M_N}{L}\le\frac{9|y|}{\sqrt W}\le\frac9{\sqrt{7000}}<\frac19,
+ \quad L=\frac{|J_N|}{2}\sqrt W\sqrt{W^2+1}.
+ \label{uc:mismatch}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Put $B=((w+\ii)C_0+(w-\ii)C_0^\sharp)/2$, so $A_N=\sqrt w B$.
+Writing $d=(2\pi W)^{-1/2}$, the full product and chain rules give
+\begin{align*}
+ |B|&\le4(W+3/2),\\
+ |B'|&\le4+20(W+3/2)d,\\
+ |B''|&\le40d+(W+3/2)\{200d^2+10d/W\}.
+\end{align*}
+Use $|\sqrt w|\le\sqrt{W+1/2}$,
+$|(\sqrt w)'|\le1/(2\sqrt W)$ and
+$|(\sqrt w)''|\le1/(4W^{3/2})$.
+Substitution into $A_N'=(\sqrt w)'B+\sqrt w B'$ and
+$A_N''=(\sqrt w)''B+2(\sqrt w)'B'+\sqrt w B''$
+gives \eqref{uc:A-bounds}; for explicit overpayments one can use
+$\sqrt W>80$, $d<(5/12)/\sqrt W$,
+$W+3/2<(1001/1000)W$ and
+$\sqrt{W+1/2}<(1001/1000)\sqrt W$.
+All terms, including $p_N''$, are retained in the displayed bounds.
+
+The $A_N$ and $A_N'$ terms cancel in $\partial_t+\partial_{zz}$
+exactly as in \eqref{cr:defect}, giving \eqref{uc:defect}.
+Integration along the vertical segment gives the mismatch.
+Finally $W^2+1\ge W^2$ and $7000>81^2$ prove the last comparison.
+This is a triangle defect bound, with no assumed signed cancellation.
+\end{proof}
+
+Let $\mathcal V_N=S_N+L(\delta_-+\delta_+)$ denote the complete
+retained source budget from \eqref{cr:source}, using the natural $N$ in
+both summand-error sums and the full retained remainder. The source
+estimate of \cite[Corollary 6.4]{Polymath2019} and
+\eqref{uc:mismatch} give
+\begin{align}
+ |H-P_N|&\le V_{\rm om}:=\mathcal V_N+L,\notag\\
+ |H-Q_{\rm val,N}|&\le V_{\rm val}:=\mathcal V_N,\notag\\
+ |H-Q_{\rm hol,N}|&\le V_{\rm hol}:=\mathcal V_N+M_N.
+ \label{uc:budgets}
+\end{align}
+In particular $V_{\rm om}-V_{\rm hol}>8L/9$. This saves a fraction
+of the omitted leading payment, not of the entire error or final margin.
+
+\subsection{A quantitative comparison of complete pointwise allowances}
+
+\begin{theorem}[Retained-value improvement and the direct comparator]
+On \eqref{uc:family} define
+\[
+ m_{\rm om}=|P_N|-V_{\rm om},\qquad
+ m_{\rm val}=|Q_{\rm val,N}|-V_{\rm val},\qquad
+ m_{\rm hol}=|Q_{\rm hol,N}|-V_{\rm hol}.
+\]
+These are lower bounds for $|H|$, and
+\begin{equation}
+ \boxed{m_{\rm val}>m_{\rm om}+\frac3{40}L,
+ \qquad m_{\rm hol}\le m_{\rm val}.}
+ \label{uc:complete-comparison}
+\end{equation}
+Both comparisons remain true after division by the same positive
+carrier modulus. Neither asserts that $m_{\rm val}$ is positive.
+\end{theorem}
+
+\begin{proof}
+For real $p\in[-1,1]$, \cite[(58)]{Polymath2019} gives $|C_0(p)|\le1/2$.
+There is also the elementary bound
+$0<\Re C_0(p)\le\cos(\pi/8)/2$. To prove it, put
+$q=|p|$, $a=q-1/2$ and $b=(q+1/2)/2$. Cancellation in the real part gives
+\[
+ \Re C_0(p)=\frac{\sin(\pi ab)}{2\sin(\pi a)}.
+\]
+The expression is interpreted continuously at $a=0$.
+For $u=\pi|a|\in[0,\pi/2]$ and $b\in[1/4,3/4]$,
+$\sin(bu)/\sin u$ increases in both arguments. Its $u$ derivative has
+the sign of $b\cot(bu)-\cot u$, which is positive because $v\cot v$
+decreases on $(0,\pi/2]$. The maximum is therefore
+$\sin(3\pi/8)=\cos(\pi/8)$.
+
+Since $A_N(W)=\sqrt W\{W\Re C_0-\Im C_0\}$,
+\[
+ \frac{|C_{\rm val,N}|}{L}
+ \le\frac{W\cos(\pi/8)+1}{\sqrt{W^2+1}}
+ \le\cos(\pi/8)+\frac1W<\frac{37}{40}.
+\]
+For the last rational bound use $\cos(\pi/8)<231/250$ and
+$1/W\le1/7000<1/1000$. The reverse triangle inequality now gives
+$m_{\rm val}-m_{\rm om}\ge L-|C_{\rm val,N}|>3L/40$.
+Finally $Q_{\rm hol,N}-Q_{\rm val,N}=C_{\rm val,N}-C_{\rm hol,N}$,
+so $|Q_{\rm hol,N}|\le|Q_{\rm val,N}|+M_N$, proving the second claim.
+\end{proof}
+
+The first comparison retains correction information that the omitted
+budget discards. The second gives that same information to the direct
+consumer. It is restricted to exact pointwise reference values and a
+separately paid vertical triangle allowance. It does not compare arbitrary
+interval implementations, computational costs, correlated residuals,
+counted-pair functionals or heat propagation. In particular it does not
+withdraw the fixed-cell discriminant gain of Section~9.
+
+\subsection{Cutoff seams and the remaining arithmetic input}
+
+At $W=2\pi j^2$, equivalently $x=4\pi j^2-\pi t/4$, the old index is
+$j-1$ and the new one is $j$. Put
+$d_j=p_j(t,s_+)+p_j(t,s_-)$, as in \eqref{as:cutoff-jump}.
+Since $J_{j-1}=-J_j$ and the real seam phases are $-1,+1$,
+evenness gives the exact signed jumps
+\begin{align}
+ \Delta Q_{\rm val}&=d_j-2J_jA_j(W),\notag\\
+ \Delta Q_{\rm hol}&=d_j-J_j\{A_j(w)+A_{j-1}(w)\}.
+ \label{uc:seams}
+\end{align}
+The two profiles in the second line are not identified off the real axis.
+Both one-sided source estimates apply at the seam by continuity; hence
+$|\Delta Q|\le V_{\rm old}+V_{\rm new}$ for each type of reference,
+with its own complete budgets. A change of reference transfers the error
+by $E_{\rm new}=E_{\rm old}-\Delta Q$, including the jump payment.
+Pointwise coverage uses the natural half-open cells and their endpoints.
+Differentiating the floor, or treating the patchwork as a single heat
+solution without seam terms, is not justified by these formulas.
+
+The chosen final consumer is precisely \eqref{as:strip-final} with
+\begin{equation}
+ t_0=1/10,\quad y_0=1/5,\quad X=14000,\qquad
+ x\ge14000+\sqrt{24/25},\quad 1/5\le y\le\sqrt{4/5}.
+ \label{uc:consumer}
+\end{equation}
+The nonvanishing carrier $\mathcal B_{t_0}$ in
+\eqref{as:normalizer} permits the normalized statement. What remains
+unacquired is an independently proved lower function
+\[
+ \ell(x,y)\le
+ \left|\frac{Q_{\rm val,N}(t_0,x+\ii y)}{\mathcal B_{t_0}(x+\ii y)}\right|,
+ \qquad
+ \ell(x,y)>\frac{\mathcal V_N(t_0,x+\ii y)}
+ {|\mathcal B_{t_0}(x+\ii y)|}
+\]
+at every point of \eqref{uc:consumer}, with a complete finite-height/tail
+split and all cutoff interfaces. A positive unscaled infimum over
+unbounded height is not requested. Defining $\ell$ from the desired
+positivity would not acquire it.
+
+The family includes the finite interval
+$[14000,14000+\sqrt{24/25})$, but acquires no positivity there.
+It supplies neither the initial verification \eqref{as:strip-initial}
+nor the barrier \eqref{as:strip-barrier} down to time zero. Only if
+all three criterion inputs were established would the parameter
+arithmetic yield $\Lambda\le1/10+1/50=3/25$; this is not a new bound.
+
+The collision screens retain their precise failed premises. The
+Euler-factor, weighted-square, finite-prime and reflected/positive-primitive
+controls do not inherit the literal theta source budget. That failure
+does not turn a small approximation error into a zero-sensitive margin:
+at a zero, any valid complete allowance gives $|Q|-V\le0$.
+The quadratic $H=Q=(z-X)^2-2(t-T)$ has zero approximation error and
+still collides. Finite-source controls lack the required all-real anchor;
+RH-conditional escaping controls keep their hypothesis and location
+qualifiers; changed observation kernels pay their actual forcing.
+Thus the complete comparison is useful, while final positivity remains
+an arithmetic acquisition problem.

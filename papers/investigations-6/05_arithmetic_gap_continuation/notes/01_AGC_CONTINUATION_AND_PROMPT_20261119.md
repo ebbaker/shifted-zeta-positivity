@@ -2,6 +2,8 @@
 
 19 November 2026, America/New_York. Prepared for **Edward Baker** with OpenAI Codex LLM assistance. Founding-chat lead configuration: **gpt-6-astra, reasoning effort max**. Author-requested continuation effort: **ultra**; bounded **gpt-6.1-sol/ultra** subtasks expressly authorized. Requested future settings and observed lead provenance are distinct.
 
+**Historical opening snapshot:** activated and superseded for next-task routing by [Milestone09](09_AGC_RESEARCH_MILESTONE_AND_CONTINUATION_20261119.md). The original prompt is retained below.
+
 This is a dated handoff snapshot; the
 [sole progress register](../research-progress/01_AGC_RESEARCH_PROGRESS_20261119.md)
 remains authoritative. Setup and the self-contained analytical background

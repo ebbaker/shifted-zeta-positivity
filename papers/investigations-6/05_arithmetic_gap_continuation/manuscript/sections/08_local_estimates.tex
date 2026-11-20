@@ -1,0 +1,376 @@
+% 19 November 2026. Drafted for Edward Baker with OpenAI Codex assistance.
+% Lead actual backend/effort unavailable; helpers explicitly Sol6.1/ultra.
+\section{Finite-cell propagation and a sharper complete allowance}
+\label{sec:local-estimates}
+
+The first continuation fixes the physical reference $P_N$ of
+\eqref{as:PN} and compares two ways to acquire its residual on one
+counted contour. The signed endpoint identity \eqref{prog:centered-error}
+is inherited. The new estimates below fill in the lateral boundary
+payment and sharpen the complete value-to-discriminant allowance. They
+are finite estimates, not an RH-equivalent reformulation. Their arithmetic
+application must still acquire the count, clearance and positive margin.
+
+\subsection{One fixed arithmetic cell}
+
+Let $0<U<t_*\le1/2$, $0<h\le1$, $X-A\ge200$, and require
+\begin{equation}
+ N^2\le\frac{X-A}{4\pi}+\frac{t_*-U}{16},\qquad
+ \frac{X+A}{4\pi}+\frac{t_*}{16}<(N+1)^2.
+ \label{le:cutoff}
+\end{equation}
+The natural cutoff is then the same integer throughout
+$0\le u\le U$, $|\Re z-X|\le A$, $|\Im z|\le h$, with
+$t=t_*-u$. This avoids a seam payment without discarding arithmetic terms.
+It permits an interval of centers precisely when
+$2A<4\pi(2N+1)-\pi U/4$, before imposing $X-A\ge200$.
+Use the fixed circle $\Gamma:|z-X|=r<\min(A,h)$.
+Neither its two-zero count nor a real positive reference discriminant is
+assumed to follow from the cutoff inequalities.
+
+For clarity, the complete published value budget can be written without
+the normalizer. Put $T=x/2$, $\eta=|y|$, $\sigma_\pm=(1\pm\eta)/2$,
+$w_\pm=\sigma_\pm+\ii T$, $T'=T+\pi t/8$, and
+$a_{\rm RS}=\sqrt{T'/(2\pi)}$. Define
+\begin{align}
+ \epsilon_n(t,w)&=\exp\left(
+ \frac{(t^2/8)|\alpha(w)-\log n|^2+t/4+1/6}{T-3.33}
+ \right)-1,\notag\\
+ \delta_\sigma(t,T)&=
+ \left(\frac{0.397\,9^\sigma}{a_{\rm RS}-0.865}
+                 +\frac5{3(T-6)}\right)
+                 \exp\left(\frac{3.49}{T-4}\right).
+ \label{le:source-errors}
+\end{align}
+Then Corollary~6.5 of \cite{Polymath2019} gives
+\begin{align}
+ |H_t(z)-P_N(t,z)|\le\mathcal V_N(t,x,\eta)
+ :={}&\sum_{n=1}^N\sum_{\nu\in\{-,+\}}
+                 |p_n(t,w_\nu)|\epsilon_n(t,w_\nu)\notag\\
+ &+e^{t\pi^2/64}|\mathfrak M_0(\ii T')|
+                   (1+\delta_{\sigma_-}+\delta_{\sigma_+}).
+ \label{le:source-value}
+\end{align}
+The $1$ in the second line pays the leading omitted correction. It is
+not replaced by the smaller retained-correction error. The source domain
+is $0<t\le1/2$, $x\ge200$, $|y|\le1$ and $N=\lfloor a_{\rm RS}\rfloor$;
+\eqref{le:cutoff} enforces this throughout the cell. The source's branch
+names differ from ours; the explicit upper-half-plane arguments $w_\pm$
+and conjugation fix that convention. The formula supplies initial and
+lateral data as well as a direct endpoint envelope. The full finite
+forcing remains \eqref{rt:physical-defect}, with its complex sum retained
+before taking a modulus whenever it is evaluated jointly.
+
+\subsection{Bounded-domain heat propagation with both boundaries}
+
+Write $x_-=X-A$, $x_+=X+A$, $I=(x_-,x_+)$ and $L=2A$.
+For every fixed $y\in[-h,h]$, $e(u,x)=E(u,x+\ii y)$ satisfies
+$e_u=e_{xx}+\mathcal R_N$. Suppose the data and forcing are continuous,
+and $E$ is $C^1$ in time, $C^2$ in $x$ and holomorphic on a neighborhood
+of the closed rectangle, locally uniformly in time. These hypotheses
+hold for the fixed finite reference and canonical field on this cell.
+There is no whole-line extension premise.
+
+Let $K(\tau;x,\xi)$ be the Dirichlet heat kernel on $I$:
+\begin{equation}
+ K(\tau;x,\xi)=\frac2L\sum_{n\ge1}e^{-(n\pi/L)^2\tau}
+  \sin\frac{n\pi(x-x_-)}L\sin\frac{n\pi(\xi-x_-)}L,
+ \qquad \tau>0.
+ \label{le:kernel}
+\end{equation}
+It is nonnegative. Put
+$k_-=\partial_\xi K|_{\xi=x_-}$ and
+$k_+=-\partial_\xi K|_{\xi=x_+}$, both nonnegative. With
+$f_y(\xi)=E(0,\xi+\ii y)$ and $g_\pm(v,y)=E(v,x_\pm+\ii y)$,
+the exact formula is
+\begin{align}
+ E(u,x+\ii y)={}&\int_I K(u;x,\xi)f_y(\xi)\dd\xi\notag\\
+ &+\int_0^u\int_I K(u-v;x,\xi)
+             \mathcal R_N(t_*-v,\xi+\ii y)\dd\xi\dd v\notag\\
+ &+\int_0^u\{k_-(u-v;x)g_-(v,y)
+                    +k_+(u-v;x)g_+(v,y)\}\dd v.
+ \label{le:bounded-duhamel}
+\end{align}
+Indeed, differentiate $\int_I K(u-v;x,\xi)E(v,\xi+\ii y)\dd\xi$.
+Green's identity yields the boundary term
+$[K E_\xi-K_\xi E]_{x_-}^{x_+}$ and the forcing integral. Integration
+in $v$, followed by the approximate-identity limit at $u$, proves
+\eqref{le:bounded-duhamel}. The variable $y$ is a parameter, so no top
+or bottom boundary integral enters this one-dimensional heat problem.
+
+Set $S(\tau,x)=\int_I K(\tau;x,\xi)\dd\xi$ and
+$Q_\pm(\tau,x)=\int_0^\tau k_\pm(s;x)\dd s$. Applying the formula to
+the constant solution gives
+\begin{equation}
+ S+Q_-+Q_+=1.
+ \label{le:mass}
+\end{equation}
+The maximum principle, comparing the boundary responses with the
+half-line heat solution, gives
+\begin{equation}
+ 1-S(\tau,x)\le\min\left\{1,
+ \operatorname{erfc}\frac{x-x_-}{2\sqrt\tau}
+ +\operatorname{erfc}\frac{x_+-x}{2\sqrt\tau}\right\}.
+ \label{le:boundary}
+\end{equation}
+The sum is an even convex function of $x-X$ in $|x-X|<A$.
+Thus on the circle it is at most
+\begin{equation}
+ \beta_\Gamma(\tau)=\min\left\{1,
+ \operatorname{erfc}\frac{A-r}{2\sqrt\tau}
+ +\operatorname{erfc}\frac{A+r}{2\sqrt\tau}\right\},
+ \qquad \beta_\Gamma(0)=0.
+ \label{le:beta}
+\end{equation}
+
+If $|f_y|\le\varepsilon_0$, $|g_\pm|\le M_b$ and
+$|\mathcal R_N(t_*-v,\xi+\ii y)|\le\rho(v)$ over their full domains,
+positivity gives the paid pointwise bound
+\begin{equation}
+ |E(u,x+\ii y)|\le\varepsilon_0S(u,x)+M_b(1-S(u,x))
+                +\int_0^u\rho(v)S(u-v,x)\dd v.
+ \label{le:mass-bound}
+\end{equation}
+In particular, when $M_b\ge\varepsilon_0$,
+\begin{equation}
+ \sup_\Gamma|E(u,z)|\le\varepsilon_0+
+          (M_b-\varepsilon_0)\beta_\Gamma(u)+\int_0^u\rho(v)\dd v.
+ \label{le:scalar-heat}
+\end{equation}
+For $M_b<\varepsilon_0$ keep \eqref{le:mass-bound}, or discard the
+negative boundary correction. Inserting an upper bound for $1-S$ into
+a negative multiple would be invalid. Spatially varying data may instead
+be integrated in \eqref{le:bounded-duhamel}; the scalar suprema are only
+one relaxation. The equally informed direct calculation receives this
+propagated envelope too, and can intersect it with \eqref{le:source-value}.
+
+\subsection{Recenter the logarithm before bounding the divisor}
+
+The next elementary estimate concerns the full value-error disk, not
+the quadrature aliases treated in the parent manuscript's common-log
+Parseval estimate \cite[\S22]{VCDCMManuscript}. It uses the same principle
+of retaining shared Fourier information.
+
+\begin{lemma}[A centered logarithm disk]\label{le:log-disk}
+For $0\le q<1$ and $|w|\le q$, define
+\[
+ \lambda=-\log(1-q),\qquad
+ \kappa=\tfrac12\log(1-q^2),\qquad
+ \eta=\operatorname{arctanh}q.
+\]
+The principal logarithm obeys
+$|\log(1+w)-\kappa|\le\eta$. For $q>0$, $\eta<\lambda$.
+\end{lemma}
+\begin{proof}
+The case $q=0$ is immediate. Put $v=(1+w)/\sqrt{1-q^2}$.
+Its disk has center $\cosh\eta$ and radius $\sinh\eta$.
+The Cayley map $\xi=(v-1)/(v+1)$ sends this disk onto
+$|\xi|\le\tanh(\eta/2)$. The identity
+$\log v=2\operatorname{arctanh}\xi$, on the branch containing $v=1$,
+and the absolutely convergent odd power series give
+$|\log v|\le2\operatorname{arctanh}|\xi|\le\eta$.
+The disk lies in the right half-plane, so this is precisely the
+principal logarithm in the statement. Finally,
+$\lambda-\eta=-\tfrac12\log(1-q^2)>0$.
+\end{proof}
+
+\begin{theorem}[A complete coupled circle allowance]\label{le:gap-bound}
+Let $H,P$ be holomorphic on a neighborhood of $|z-X|\le r$, have
+exactly two zeros there counted with multiplicity, and be nonzero on
+the circle. Suppose $|H/P-1|\le q<1$ on it. Define $c_P,D_P,c_H,D_H$
+by the contour moments, and put $d=|c_P-X|/r$. Then
+\begin{equation}
+ |D_H-D_P|\le r^2 F(\eta,d),\qquad
+ F(\eta,d)=\max_{0\le x\le\eta}
+       \left\{\sqrt{\eta^2-x^2}+dx+\frac{x^2}{4}\right\}.
+ \label{le:F}
+\end{equation}
+Here $F(0,d)=0$. Useful explicit upper bounds are
+\begin{align}
+ F(\eta,d)&\le\eta\sqrt{1+d^2}+\eta^2/4,
+                                                        \label{le:cauchy}\\
+ F(\eta,d)&\le\eta+\frac{\eta d^2}{2-\eta}\quad(0<\eta<2).
+                                                        \label{le:parabolic}
+\end{align}
+For the centered subcase,
+\begin{equation}
+ F(\eta,0)=
+ \begin{cases}\eta,&0\le\eta\le2,\\1+\eta^2/4,&\eta\ge2.
+ \end{cases}
+ \label{le:centered}
+\end{equation}
+The maximum $F$ optimizes the displayed two-coefficient relaxation;
+the Cauchy and parabolic bounds are further upper relaxations. No
+sharpness over physical heat fields is asserted.
+\end{theorem}
+\begin{proof}
+Let $\ell=\log(H/P)$ on the circle collar and write
+$\ell(X+re^{\ii\theta})-\kappa=\sum_{j\in\mathbb Z}a_j e^{\ii j\theta}$.
+The strict relative clearance supplies the collar branch. Bessel's
+inequality and Lemma~\ref{le:log-disk} give
+$|a_{-1}|^2+|a_{-2}|^2\le\eta^2$. Constants have zero contour moments.
+Substituting the two Fourier coefficients into
+\eqref{prog:centered-error} gives exactly
+\begin{equation}
+ D_H-D_P=-r^2a_{-2}+(c_P-X)r a_{-1}-\frac{r^2}{4}a_{-1}^2.
+ \label{le:two-modes}
+\end{equation}
+The square is a complex square, not a squared modulus. Taking absolute
+values only after this identity, and putting $x=|a_{-1}|$, proves
+\eqref{le:F}. To check attainment in the abstract coefficient ball,
+write $(c_P-X)/r=de^{\ii\phi}$ and choose
+$a_{-1}=-xe^{\ii\phi}$ and
+$a_{-2}=\sqrt{\eta^2-x^2}\,e^{2\ii\phi}$; all three terms then
+have the same phase. For $d=0$ any $\phi$ works.
+Cauchy--Schwarz bounds the first two terms of its maximum
+by $\eta\sqrt{1+d^2}$, proving \eqref{le:cauchy}.
+Also $\sqrt{\eta^2-x^2}\le\eta-x^2/(2\eta)$.
+Maximizing the resulting concave quadratic over the real line proves
+\eqref{le:parabolic}. When $d=0$, set $y=x^2$ and maximize
+$\sqrt{\eta^2-y}+y/4$ on $[0,\eta^2]$.
+Its maximum is at $y=0$ for $\eta\le2$ and at $y=\eta^2-4$ otherwise,
+which proves \eqref{le:centered}.
+\end{proof}
+
+The same source and geometry previously give the convenient bound
+\begin{equation}
+ B_{\rm old}=r^2\{\lambda\sqrt{1+d^2}+\lambda^2/4\}.
+ \label{le:old}
+\end{equation}
+To see this directly, apply $|\ell|\le\lambda$ to the linear contour
+moment, use the angular Cauchy--Schwarz bound
+$\langle|re^{\ii\theta}+X-c_P|\rangle_\theta
+\le r\sqrt{1+d^2}$, and retain the complete center-square payment.
+For $q>0$, \eqref{le:cauchy} is strictly below \eqref{le:old}, because
+$\eta<\lambda$. This is a strict improvement of that specified complete
+allowance; it is not a comparison with an optimal direct estimator.
+At $q=1/2,d=0$ the new allowance is $r^2\log(3)/2$, whereas
+\eqref{le:old} is $r^2(\log2+(\log2)^2/4)$.
+The ratio is less than $17/25$: more than $32\%$ of this full allowance
+is saved. For an exact check, the positive $\operatorname{arctanh}$
+series gives $\log2>56/81>69/100$ and
+\[
+ \tfrac12\log3
+ =\operatorname{arctanh}(1/2)
+ <\frac12+\frac1{24}+\frac1{160}
+       +\frac1{7}\sum_{n=3}^{\infty}2^{-(2n+1)}
+ =\frac12+\frac1{24}+\frac1{160}+\frac1{672}<\frac{11}{20}.
+\]
+Meanwhile $(17/25)(69/100+(69/100)^2/4)=0.550137>11/20$.
+This finite constant example is not a canonical error sample.
+
+\subsection{What the improved allowance does and does not protect}
+
+For real conjugation-symmetric fields and a fixed counted circle, a
+validated lower bound
+\begin{equation}
+ D_P(u)-r^2F(\eta(u),d(u))>0\quad\hbox{for every }0\le u\le U
+ \label{le:margin}
+\end{equation}
+protects the enclosed real pair. Every error used to acquire $q$, the
+count, $c_P$ and $D_P$ must be included. An endpoint instance alone
+does not supply \eqref{le:margin}. Nor may the centered subcase be used
+by silently moving the fixed circle to $c_P(u)$; the offset $d(u)$ pays
+that distinction on the original contour.
+
+If $H/P$ extends as a nonvanishing holomorphic function through the
+interior, its logarithm is holomorphic there and both negative modes
+vanish. The exact gap error is zero, even though a separate bound on the
+joint second-derivative quotient need not vanish for a spatially varying
+multiplier. In the full signed-time readout the center and heat-defect
+terms supply the cancellation. Integrating that full identity gives
+exactly the difference of the endpoint functional
+\eqref{prog:centered-error}. Thus identical admissible source paths give
+identical exact ranges for full transport and direct endpoint evaluation.
+This is a scoped representation equality. Time-correlated data or a
+useful heat acquisition may sharpen either calculation; no cost or
+universal no-go claim follows.
+
+For the exact control $H=P=(z-X)^2-2(t-T)$, $q=0$ and all new allowances
+vanish, yet $D_P=2(t-T)$ reaches zero at its collision. The strict margin
+\eqref{le:margin} fails. The remaining controls in Section~\ref{sec:program}
+retain the generic heat/logarithm estimates with their own data. Changed
+theta coefficients prevent importing \eqref{le:source-value} unchanged;
+changed observation kernels fail the physical heat equation. Naming these
+source failures does not establish a positive arithmetic margin. The
+allowance improvement itself is generic and does not distinguish theta
+from a colliding control.
+
+\subsection{A finite arithmetic comparison inside known coverage}
+\label{le:pilot}
+
+The bounded pilot fixes
+\begin{equation}
+ X=140101/10,\quad A=2,\quad h=1,\quad r=9/10,\quad
+ N=33,\quad 9/100\le t\le1/10.
+ \label{le:pilot-cell}
+\end{equation}
+All fields and errors are multiplied by the same positive constant
+$\exp(\pi X/8)$, independent of $z,t$. It changes neither the physical
+heat equation nor the relative error or divisor. The cutoff inequalities
+are verified on the entire rectangle. The final calculation uses
+192-bit Arb/Acb arithmetic, 64 closed time cells and 512 closed angular
+arcs. It proves $\Re(P_N(z)/(z-X)^2)>0$ on the count circle and the
+annular boundary circles of radii $4/5$ and $1$, after the common scaling.
+Thus the reference has count two and a single annular logarithm throughout
+the time interval. The full source budget \eqref{le:source-value} is
+included, and $q$ is the maximum of the local source/denominator ratios
+on the \emph{same} arcs. Independent global suprema give a weaker bound
+and are not used on one side of the comparison alone.
+
+The reference moments are evaluated by the 512-node Laurent trapezoid
+rule. If $M_-,M_+$ bound the annular logarithm on $r_-=4/5,r_+=1$,
+the paid alias allowance for the weighted coefficient of order $k=1,2$ is
+\begin{equation}
+ M_+ r_+^k\frac{(r/r_+)^{512}}{1-(r/r_+)^{512}}
+ +M_- r_-^k\frac{(r_-/r)^{512}}{1-(r_-/r)^{512}}.
+ \label{le:aliases}
+\end{equation}
+This follows by bounding the positive and negative Laurent coefficient
+ladders separately. Both complete allowances include these aliases,
+interval time variation, reference-center uncertainty and arithmetic.
+The largest coefficient alias is below $5.787\cdot10^{-23}$.
+No exterior zero sum is truncated; the full field defines the contour
+moments.
+
+\begin{center}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Quantity on the entire pilot interval & Outward summary \\
+\midrule
+Complete relative-error allowance $q$ & $<0.166454$ \\
+Reference discriminant lower bound & $>0.1418896$ \\
+E10 transfer allowance \eqref{le:old} & $<0.1545636$ \\
+Refined transfer allowance & $<0.1364749$ \\
+Worst E10 complete lower bound (approximately) & $-0.0126739660$ \\
+Refined complete all-time lower bound & $>0.0054147$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The comparison uses identical acquired $q,c_P,D_P$, source data and
+numerical payments. The old sufficient lower bound is negative; this
+says nothing adverse about the actual zeros. The new bound is positive
+on every time cell and so protects this counted pair. Its transfer
+allowance is smaller by more than $11\%$ in the worst-cell summary.
+The separate centered $q=1/2$ example's $32\%$ is not the percentage of
+this arithmetic pilot. The code, complete small record, method and
+nonauthor replay are saved in the investigation's numerics, notes and
+reviews folders. They constitute internal certificate checking with a
+published source theorem as input, not independent specialist review.
+
+This is a finite improvement of the specified direct estimator inside
+an already verified canonical region. It gives no new height/time
+coverage and no improved bound on the de Bruijn--Newman constant. Full
+signed transport equals the same refined direct endpoint consumer on
+identical information.
+
+The scalar heat acquisition also has a definite scoped outcome. In the
+same scaled units, its paid uniform bound is above $327656$, while the
+raw direct contour allowance is below $196588$. The initial supremum is
+already above $327394$; the lateral boundary probability at $U=1/100$
+is below $7.358\cdot10^{-15}$. Thus this particular separate-supremum
+heat estimate loses to the direct envelope. It does not show that the
+actual residual is large, or exclude spatially weighted, signed or
+correction-aware acquisitions. The two predeclared refinements and the
+failed earlier enclosure are retained in the execution record.

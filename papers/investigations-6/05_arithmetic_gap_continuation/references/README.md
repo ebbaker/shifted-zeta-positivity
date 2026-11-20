@@ -50,3 +50,28 @@ production/certificate examples are deliberately not reproduced: they are
 supporting evidence, not the analytical mechanism of this track. The new
 manuscript derives the pair, chain, hierarchy, drift, residual and transfer
 formulas needed to follow the program without that repeated cross-reference.
+
+## AGC continuation source check, 19 November 2026
+
+Prepared for Edward Baker with OpenAI Codex assistance; actual lead settings unavailable, source helper explicitly dispatched gpt-6.1-sol/ultra. [Note06](../notes/06_AGC_E11_SOURCE_ALLOWANCE_20261119.md) spells out the unnormalized complete value budget from the same Polymath v2. The helper and lead reopened Proposition6.1 (44), Proposition6.3 (59), and Corollaries6.4–6.5/(68)–(74), checking the full omitted-correction payment and natural-cutoff domain. [Lead check](../reviews/03_AGC_SOURCE_ALLOWANCE_LEAD_CHECK_20261119.md) records the elementary carrier/defect proof and selected-source check. No new version, PDF copy, full-paper audit or external certificate replay is claimed. The log-disk and bounded-interval heat estimates are proved directly in the new notes; no novelty assertion is made for their elementary ingredients.
+
+**Retained-correction continuation, 19 November 2026.** Prepared for Edward Baker with Codex assistance; actual lead settings unavailable, derivation and assessment helpers explicitly dispatched Sol6.1/ultra. The lead and separate assessor rechecked Polymath v2 (7), (52), (53), (68), Corollary 6.4 and its full retained remainder, with Corollary 6.5 as the omitted-correction comparator. [Note10](../notes/10_AGC_E13_R2_HOLOMORPHIC_CORRECTION_20261119.md) proves the local phase cancellation, holomorphic lift and explicit derivative payments. The exact displayed source correction is a value formula; holomorphy and its off-axis mismatch are established separately. This is selected-passage inspection of the existing version, without a new reading copy or a full-paper audit.
+
+**Full-phase continuation, 19 November 2026.** Prepared for Edward Baker with Codex assistance; root settings unavailable, conceptual Astra/ultra and proof/assessment Sol6.1/ultra explicit dispatches. The lead, B03 author, E14 author and separate assessor reopened selected Polymath v2 passages, especially (53), (58), (59), Corollary6.4/(68), and Theorem1.2. [Note14](../notes/14_AGC_E14_UNIFORM_CORRECTION_AND_STRIP_COMPARISON_20261119.md) supplies its own entire-extension, derivative, real-part and complete-comparator proofs; [Review07](../reviews/07_AGC_UNIFORM_CORRECTION_ASSESSMENT_20261119.md) checks the imports and their scope. No new reference version, PDF download or full-paper audit is claimed.
+
+**Three-prime continuation, 19 November 2026.** Prepared for Edward Baker with Codex assistance; root settings unavailable, B04 Astra/ultra and E16 proof/assessment Sol6.1/ultra explicit dispatches. Selected [Polymath v2](https://arxiv.org/html/1904.12438v2) definitions(9)–(22), retained Corollary6.4, Section8.5/Lemma8.5, Proposition9.1 and Theorem1.2 were rechecked. The new generalized ellipse modulus estimate is derived directly; none of Section8.5's numerical constants at t=.2 is imported at t=.1. The exact finite convolution includes its cutoff indicator, and the heat weight uses t/4, preserving Section5's warning about the stronger intermediate exponent in Section9. No new reading copy, source version, full-paper audit or novelty claim.
+
+**Dyadic-group continuation, 19 November 2026.** Prepared for Edward
+Baker with Codex assistance; root settings unavailable, B05 Astra/ultra
+and E17 proof/assessment Sol6.1/ultra explicit dispatches. Selected
+[Polymath v2](https://arxiv.org/html/1904.12438v2) passages were reopened:
+Theorem1.2, definitions(9)–(22), Corollary6.4/(68)–(73), and
+Section8.5/Lemma8.5. The inherited literal source, two complete term
+errors and both retained delta payments are unchanged. The new dyadic
+mean argument uses finite Fourier averaging and convexity of a real
+matrix norm, proved locally; no new external theorem, t=.2 numerical
+constant at t=.1, source version, reading copy or full-paper audit is
+imported. The reviewer contributed a convexity preflight observation;
+its assessment is internal and shares that strategy and source premises.
+
+**Actual-phase continuation, 19 November 2026.** Prepared for Edward Baker with Codex LLM assistance, 19 November 2026; root actual settings unavailable, B06 Astra/ultra and E18 proof/assessment Sol6.1/ultra explicit dispatches. The lead and separate assessor reopened selected [Polymath v2](https://arxiv.org/html/1904.12438v2) source passages; the assessment records Theorem1.2, definitions(6)–(10), Corollary6.4/(68)–(74), Proposition6.6 and Section8.5. Note23 derives the new explicit carrier derivatives and matrix-norm variation bounds locally, reusing the accepted finite Fourier mean and eight-prime witness. No new external theorem, source version, reading copy, t=.2 numerical constant at t=.1 or full-paper audit is imported.

@@ -1571,3 +1571,65 @@ the strict continuation margin; this screens an incomplete generic
 transfer, not source-specific arithmetic cancellation. The
 [internal assessment](../papers/investigations-6/05_arithmetic_gap_continuation/reviews/01_AGC_ANALYTICAL_DRAFT_ASSESSMENT_20261119.md)
 accepts the conditional interface only. No new canonical gain is claimed.
+
+**AGC full-margin comparison, 19 November 2026.** Prepared for Edward
+Baker with Codex assistance; actual lead settings unavailable, helpers
+explicitly Sol6.1/ultra. [AGC Note07](../papers/investigations-6/05_arithmetic_gap_continuation/notes/07_AGC_E12_FIXED_CELL_COMPARISON_20261119.md)
+retains the same source/count/center data while coupling the logarithm
+moments, changing a negative sufficient lower bound to a positive one.
+Its scalar heat allowance still loses,327656 versus196588, because the
+initial rectangle supremum was taken before spatial propagation. The
+source scopes this lesson: “This loss concerns these uniform rectangle
+data and this conservative positive-kernel reduction.”
+[Review04](../papers/investigations-6/05_arithmetic_gap_continuation/reviews/04_AGC_FIXED_CELL_NUMERICAL_ASSESSMENT_20261119.md)
+checks and replays the finite comparison. Preserve the complete margin,
+correct center and identical comparator inputs; do not call a smaller
+intermediate remainder new coverage or a failed scalar allowance large
+actual error. The new estimator also belongs to the direct method.
+
+
+**AGC correction-center payment, 19 November 2026.** For Edward Baker
+with Codex assistance; actual lead settings unavailable, helpers explicitly
+Sol6.1/ultra. [Note10](../papers/investigations-6/05_arithmetic_gap_continuation/notes/10_AGC_E13_R2_HOLOMORPHIC_CORRECTION_20261119.md)
+warns: “The center and discriminant still change.” Its smaller retained
+remainder pays the off-axis mismatch and belongs to Q=P−C_hol.
+[Note11](../papers/investigations-6/05_arithmetic_gap_continuation/notes/11_AGC_E12_R2_CORRECTED_COMPARISON_20261119.md)
+reacquires Q's own denominator and moments before improving the complete
+lower bound to .1493308659; [Review06](../papers/investigations-6/05_arithmetic_gap_continuation/reviews/06_AGC_CORRECTED_COMPARISON_ASSESSMENT_20261119.md)
+checks and replays it. The >23/24 saving concerns the leading source payment,
+not a full-gap percentage. No smaller error is spent at the old center,
+and no new coverage or transport advantage is inferred.
+
+
+**Compare the value correction with the equally informed pointwise consumer, 19 November 2026.** Prepared for Edward Baker with Codex assistance; root settings unavailable, B03 Astra/ultra and proof/assessment Sol6.1/ultra explicit dispatches. [AGC Note14](../papers/investigations-6/05_arithmetic_gap_continuation/notes/14_AGC_E14_UNIFORM_CORRECTION_AND_STRIP_COMPARISON_20261119.md) proves a >3L/40 complete retained-value allowance gain, while a separately triangle-paid holomorphic lift is dominated by that direct value allowance. The [continuation](../papers/investigations-6/05_arithmetic_gap_continuation/notes/15_AGC_UNIFORM_MILESTONE_AND_CONTINUATION_20261119.md) states: “No positive strip margin is acquired here.” Do not withhold the published value correction from a pointwise comparator or confuse a uniform source saving with acquired positivity. [Review07](../papers/investigations-6/05_arithmetic_gap_continuation/reviews/07_AGC_UNIFORM_CORRECTION_ASSESSMENT_20261119.md) accepts only this exact pointwise/separate-payment scope; counted contours, heat transport, joint residuals and implementation costs remain outside the limitation.
+
+**A paired estimate can still discard decisive phase information, 19 November 2026.** For Edward Baker with Codex assistance; root unavailable, B04 Astra/ultra and E16 proof/assessment Sol6.1/ultra dispatches. [AGC Note17](../papers/investigations-6/05_arithmetic_gap_continuation/notes/17_AGC_E16_THREE_PRIME_ELLIPSE_OBSTRUCTION_20261119.md) states: “No claim is made that all these individual worst phases can occur simultaneously at any actual height.” Its fixed three-prime/individual-ellipse allowance is <−1/400 on the specified boundary segment; eight surviving primes already exceed its anchor before source/correction costs. [Review08](../papers/investigations-6/05_arithmetic_gap_continuation/reviews/08_AGC_ARITHMETIC_FLOOR_ASSESSMENT_20261119.md) accepts this scoped failure. Do not turn a negative lower allowance into an actual zero or universal phase obstruction, or expect smaller error constants to repair a loss present before their payment.
+
+
+**A common phase can still be lost in a full-circle envelope, 19 November 2026.**
+Prepared for Edward Baker with Codex assistance; root settings unavailable,
+B05 Astra/ultra and E17 proof/assessment Sol6.1/ultra dispatches.
+[AGC Note20](../papers/investigations-6/05_arithmetic_gap_continuation/notes/20_AGC_E17_DYADIC_GROUP_OBSTRUCTION_20261119.md)
+proves that common-phase dyadic grouping improves or matches individual
+radii, yet Fourier averaging retains enough constant prime coefficients
+to force the complete envelope allowance below−1/400 on F0. It warns:
+“A lower bound on a circle mean or on its supremum is not a lower bound
+on the value at `u(x)`.” [Review09](../papers/investigations-6/05_arithmetic_gap_continuation/reviews/09_AGC_PHASE_GROUP_ASSESSMENT_20261119.md)
+accepts within this relaxed-core/full-circle/separate-payment class and
+discloses shared proof-strategy input. Do not equate preserving one
+formal phase with controlling its actual height-dependent value, or
+upgrade this obstruction to signed anchor coupling or all phase methods.
+
+**A physical phase needs a paid physical traversal, 19 November 2026.**
+For Edward Baker with Codex assistance; root settings unavailable,
+B06 Astra/ultra and E18 proof/assessment Sol6.1/ultra dispatches.
+[AGC Note23](../papers/investigations-6/05_arithmetic_gap_continuation/notes/23_AGC_E18_ACTUAL_PHASE_RECURRENCE_20261119.md)
+transfers the auxiliary mean only after bounding phase speed and actual
+coefficient variation. It states: “It converts a frozen auxiliary mean
+into existence at actual heights.” [Review10](../papers/investigations-6/05_arithmetic_gap_continuation/reviews/10_AGC_ACTUAL_PHASE_ASSESSMENT_20261119.md)
+accepts some failing actual height in each length19 fixed-chart interval,
+not failure everywhere or at a prescribed endpoint. The core rotations
+are still independently relaxed; never promote this actual-u result to
+joint core realizability, signed anchor coupling or the actual field.
+The preceding mean-versus-value caution remains valid; E18 supplies the
+additional transport proof for this explicitly scoped specialization.
