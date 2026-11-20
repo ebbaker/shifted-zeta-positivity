@@ -118,3 +118,5 @@
   no research sequence, numerical campaign or manuscript is activated.
   Parent B07/E19 and the current chat's unique parent history home remain
   unchanged. No new mathematical result or manuscript snapshot.
+
+- **19 November 2026 — spatial tensor gap dynamics sub-investigation setup.** Prepared for Edward Baker with OpenAI Codex LLM assistance, actual lead configuration unavailable. The [new branch](02_spatial_tensor_zero_spacings/README.md) studies spatial merge equations, time evolution and analytical reductions for the complete gap drift and moment forcing. The [continuation](02_spatial_tensor_zero_spacings/notes/01_AGC_ST_CONTINUATION_AND_PROMPT_20261119.md) starts with the choice of block and exterior data. The [original shared brainstorm](../brainstorm/notes/06_SPATIAL_TTN_ZERO_SPACING_20261119.md) records the author's change in priority.

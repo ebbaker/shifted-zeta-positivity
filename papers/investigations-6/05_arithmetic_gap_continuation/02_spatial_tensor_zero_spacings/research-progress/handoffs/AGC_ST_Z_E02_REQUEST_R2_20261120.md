@@ -1,0 +1,5 @@
+# AGC-ST-Z-E02 · r2 · outer opposite pairs
+
+20 November 2026. For Edward Baker with OpenAI Codex assistance. Coordinating turn and conceptual decision gpt-6.2-astra/ultra, execution gpt-6.2-sol/ultra. This is the single analytical refinement of [r1](AGC_ST_Z_E02_REQUEST_R1_20261120.md), issued after its verified preliminary proof. The r1 proof and return keep their identity.
+
+On exactly the r1 domain with the full even product, cutoff by the common modulus of each ±ρ orbit, R≥max(2A,R₀,2) and uniform occurrence count C u log(2+u), pair the two cube terms at each endpoint before taking absolute values. The orbit identity has numerator 2x(x²+3ρ²) and denominator (x²−ρ²)³. Prove or correct the explicit acceleration tail (6656/81) A C (log(2R)+1/3)/R³, paying the half count for two occurrences per orbit. State the time-integrated effect and the same grouped direct comparator. One proof, no numerical experiment. Append a clearly labeled r2 addendum to Note 09 after r1's body and write E02_RETURN_R2 separately. Consumer E03, and any later purely exterior acquisition. This refines only the truncation allowance. A failed constant is recorded and corrected once.

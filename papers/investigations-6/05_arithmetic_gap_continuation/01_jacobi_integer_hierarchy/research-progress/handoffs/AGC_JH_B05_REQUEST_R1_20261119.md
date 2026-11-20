@@ -1,0 +1,15 @@
+# B05 r1 — can the 24-to-26 increment predict the complete correction?
+
+19 November 2026, America/New_York. Prepared for Edward Baker with OpenAI Codex LLM assistance. Type B, recommended Astra/ultra. Actual lead settings unavailable. This decision packet follows [E08](AGC_JH_E08_RETURN_R1_20261119.md) and its [matched review](../../reviews/04_AGC_JH_SLAB_ASSESSMENT_20261119.md).
+
+Retain the complete theta source, normalized cosine observation, true moving canonical heads, integer hierarchy, physical time [0, 0.0001] and circle centered at 36 of radius 9. The target remains the complete correction relative to degree 24. Determine whether just the finite increment from 24 to 26 and an independently bounded residual can certify its sign using less complete-source information than E08. Keep the complete E08 numerator and signed result for validation outside the acquisition proof. List exactly which previously acquired count, floor and interval data are shared and the cost of acquiring any new ones. Raw numerical agreement with E08 cannot pay for the residual.
+
+Let \(q_0=(G_{26}-G_{24})/G_{24}\). Acquire the finite increment from the finite readouts or [the prefix formula](../../notes/03_AGC_JH_DEGREE_TIME_INTERFACE_20261119.md). Real-time order ten for the 26-site readout would reach anchor link 35 and moment order 70. Price that extension and its analytic remainder if using the E08 method. Give a bound \(e\) on \(\lvert F-G_{26}\rvert/\lvert G_{24}\rvert\) on the circle and a bound \(\eta<1\) for the true quotient \(\lvert F-G_{24}\rvert/\lvert G_{24}\rvert\) on the collar using only the listed inputs. Candidates for pricing the residual include a canonical quadrature remainder with its complex spatial growth paid, and a centered moment expansion of that residual with an independently bounded tail. The existing strip-height-one estimate cannot be applied to this circle without a further argument. Recheck any root counts and clearances newly consumed.
+
+Use the signed linear functional \(J_0\) for \(q_0\), and \(K=-\log(1-\eta)\). The [target gate](../../notes/04_AGC_JH_SIGNED_GAP_REMAINDER_20261119.md) is
+\[
+ \sup_t\{J_0(t)+153e+153(K-\eta)+81K^2/4\}<0 .
+\]
+If the new computed first variation and nonlinear allowance stay near their E08 values, the normalized residual must be below approximately \(3.2\times10^{-10}\) for this gate. Recompute the allowance for the actual new inputs. Give the direct method every acquired real and complex bound, including the same finite readouts and residual error. It may enclose real roots with those data or evaluate the same contour estimate. Compare strict sign, widths and source requirements even if one or both methods are inconclusive.
+
+One decision pass and one correction. Freeze a bounded E09 only if an affordable route covers these obligations. Otherwise report the first unmet bound or excess source requirement numerically. Only this degree step and the E08 slab are in scope. Leave a general degree induction open.

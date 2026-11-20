@@ -12,6 +12,8 @@ setup does not change any row below. Existing VCD,
 VCD-GT-CM and TN6 task status stays with its existing owner. Setup tasks
 were classified before execution; this is their completed disposition.
 
+Within the spatial child, the [zero-position program register](../02_spatial_tensor_zero_spacings/research-progress/02_AGC_ST_ZERO_POSITIONS_RESEARCH_PROGRESS_20261120.md) owns the revised AGC-ST-Z sequence. The [gap-work register](../02_spatial_tensor_zero_spacings/research-progress/01_AGC_ST_RESEARCH_PROGRESS_20261119.md) owns its original AGC-ST task family and issued packets.
+
 | ID | Type / recommended model | State | Dependencies and deliverable |
 | --- | --- | --- | --- |
 | AGC-B00 | B / Astra: scope and research sequence | Complete | [Scope decision](../brainstorm/notes/01_AGC_SCOPE_AND_CONTINUATION_DECISION_20261119.md); direct-child ownership and sustained-turn policy fixed. |

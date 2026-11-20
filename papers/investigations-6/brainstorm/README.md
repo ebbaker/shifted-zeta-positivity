@@ -1,5 +1,7 @@
 # Shared Investigations 6 brainstorm
 
+**19 November 2026.** Edward Baker’s [spatial tensor tree for zero spacings](notes/06_SPATIAL_TTN_ZERO_SPACING_20261119.md) connects QTT field evaluation with the counted gaps in the arithmetic continuation manuscript. The [new AGC sub-investigation](../05_arithmetic_gap_continuation/02_spatial_tensor_zero_spacings/README.md) gives priority to equations for spatial assembly and time evolution, with explicit examples serving the analytical framework.
+
 **15 November 2026:** Open-ended continuation notes now live in the
 [Volterra brainstorm](../03_volterra_coefficient_dynamics/brainstorm/notes/02_VCD_OPEN_BRAINSTORM_CONTINUATION_20261115.md)
 and [dyadic brainstorm](../04_exact_infinite_tensor_products/brainstorm/notes/02_ITP_OPEN_BRAINSTORM_CONTINUATION_20261115.md).

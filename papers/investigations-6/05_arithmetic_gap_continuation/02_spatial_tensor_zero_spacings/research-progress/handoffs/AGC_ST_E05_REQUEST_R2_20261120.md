@@ -1,0 +1,9 @@
+# AGC-ST-E05 r2 · spatial estimate and physical-time limit
+
+20 November 2026. Prepared for Edward Baker with OpenAI Codex assistance. Coordinating chat configuration unavailable. A separate gpt-6.2-sol/ultra assessor checks the proof author's returns.
+
+**Frozen assessment in two stages.** Read [E03 r1](AGC_ST_E03_RETURN_R1_20261120.md), Note 04 SHA-256 `4bcf6c6a6ad82aaa0e1b221925e913b5d3bbc14ba4e040936a56c99cfa7f2c8f`. Once B03 issues its canonical growing-head contract and E04 returns, review the dated Note 05 against that contract. Record inspected versions. One review and one correction check. No new numerical experiment.
+
+Independently derive the inverse-cube kernel, convexity remainder, collective signed span coefficient and the favorable complex sector. Verify the balanced control, orientation, sharpness class, and every omitted-root payment. For E04 check both primary-source onsets, inverse-clock derivatives, normalization by the actual gap, actual versus nominal paired label errors, growing-head comparability, the complete tail of both signs and the orders of limits. Check time uniformity on a fixed positive slab, the distinction between time integration and differentiating a truncation, and the quantitative AGC consequence. Compare spatial and direct estimates on identical data, including stronger existing direct observations if invoked. Check each claimed improvement against its named hypothesis or weaker estimator. Distinguish collision controls that violate premises from those for which an inequality was never tested.
+
+Return the verdict and any corrections to the relevant authors promptly. Write the final review to reviews/03_AGC_ST_SPATIAL_FORCING_ASSESSMENT_20261120.md and its disposition to AGC_ST_E05_RETURN_R2_20261120.md here. State what is accepted, conditional or open and whether the proof has specialist review. A later finite certificate has a separate assessment.

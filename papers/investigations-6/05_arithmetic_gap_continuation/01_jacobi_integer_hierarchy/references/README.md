@@ -57,3 +57,22 @@ Earlier manuscript/note assessments remain internal LLM checks with their
 original scopes. A setup helper's review checks this plan and its use of
 sources; it does not independently validate the inherited mathematics.
 
+
+## First research milestone, 19 November 2026
+
+[Selected passage record](01_AGC_JH_PASSAGES_INSPECTED_20261119.md) records the bounded internal-source reread and actual DLMF log/quadrature passage inspection. New Notes02–05 derive the forced interface, finite two-degree readout, complete signed remainder and scoped compact-source parity control. Canonical reference ownership and inherited review qualifications remain as above.
+
+## Sources used for E07, 19 November 2026
+
+Prepared for Edward Baker with Codex assistance. Lead configuration unavailable. The program uses the exact time-zero normalized xi field on a single spatial circle.
+
+- [VCD-GT Note12 §1](../../../03_volterra_coefficient_dynamics/01_cluster_gap_transport/notes/12_VCD_GT_E08_CANONICAL_XI_ORACLE_20261116.md) derives the literal Fourier identity and xi completion, including the factor 1/8. [VCD-GT passage03 §1](../../../03_volterra_coefficient_dynamics/01_cluster_gap_transport/references/03_VCD_GT_STRIP_PRODUCT_SOURCE_USE_20261116.md) records the critical-strip scaling at time zero. These are the inherited internal source and normalization checks.
+- [HDC Note13 §§1–2](../../../../investigations-4/12_height_dependent_heat_contours/notes/13_COMPLETE_THETA_WALL_AND_COEFFICIENT_CERTIFICATE_20261023.md), its attached code and certificate supply the independent time-zero rectangle count. The [RT Note03 pilot](../../../../investigations-5/02_heat_flow_rh_applications/rodgers_tao/notes/03_CANONICAL_TWO_ROOT_MARGINS_AND_FORCE_BUDGET_20261026.md) identifies the same local band at small positive times. Its endpoint gap is not an E07 input.
+- [TN6 Note06](../../../notes/06_TN6_E02_CERTIFIED_COEFFICIENT_ACQUISITION_20261114.md) and its acquired coefficient certificate were inspected for their actual time, degree, normalization and readout domain. The parity-split Gram calculation transfers to a newly acquired time-zero moment table. The stored half-time links do not.
+- The Python-FLINT 0.9.0 reference documents truncated complex series, including gamma and zeta series and the coefficient cutoff. Selected online API passages inspected 19 November 2026, with the observed runtime version recorded in the certificate. The Cauchy-tail and finite-matrix remainder estimates are supplied in Note07. [Official acb_series reference](https://python-flint.readthedocs.io/en/latest/acb_series.html).
+
+## E08 source passages, 19 November 2026
+
+Prepared for Edward Baker with OpenAI Codex assistance. The normalized source and complete tail envelope come from the HDC and VCD passages above. The moving canonical link law was reread in [VCD main, coefficient evolution](../../../03_volterra_coefficient_dynamics/manuscript/main.tex) and checked against Van Assche's already catalogued primary exposition. In §2.3, immediately after Theorem 2.4, the symmetric quadratic tilt gives the squared-link evolution with the zero left boundary. This fixes the physical time scale and the sign used by the Taylor recursion. [Van Assche, arXiv:2202.11017v1, §2.3](https://arxiv.org/html/2202.11017v1#S2.SS3).
+
+NIST DLMF §1.10(i), (iv) and (v) were inspected for Taylor expansion, strict boundary count transfer and the maximum-modulus step on a cleared annulus. The project derives the quantitative Gram and matrix bounds and computes the strict inequalities separately. [NIST DLMF §1.10](https://dlmf.nist.gov/1.10).

@@ -1,0 +1,328 @@
+\section{The two-degree increment and physical-time transport}
+\label{sec:degree}
+
+Write \(G_-=G_N(t,z)\) and \(G_+=G_{N+2}(t,z)\), with \(N\ge2\). For any
+quantity evaluated in the two fields, let \(\Delta X=X_+-X_-\).
+The two-degree numerator \(d_G=G_+-G_-\) is determined by a finite
+coefficient prefix at each time. Its comparison with the heat residual
+requires the next link. The finite formula and the argument on a common
+Fourier zero contour follow the degree and time identities in \cite{jh03}.
+
+\subsection{A shared finite numerator}
+
+\begin{theorem}[Two-degree resolvent and simplex formula]
+\label{d:finite-numerator}
+Suppress \(t\) and write \(P_j(\xi)=\det(\xi I-J_j)\) and
+\(s_j(\xi)=((\xi I-J_j)^{-1})_{00}\). As in
+\eqref{eq:full-phase}, \(L_j=h_j(iz)^{2j}/(2j)!\) with
+\(h_j=\prod_{k=1}^j\beta_k\).
+Then
+\begin{equation}
+ s_{N+2}(\xi)-s_N(\xi)=
+       \frac{h_N\xi}{P_N(\xi)P_{N+2}(\xi)}.
+ \label{d:resolvent}
+\end{equation}
+Let \(x_1,\ldots,x_m\), \(m=2N+2\), be the combined list of spectral
+nodes of \(J_N,J_{N+2}\), with every occurrence retained. Set
+\(X=\sum_{i=1}^m u_i x_i\) for \(u\) uniformly distributed on the
+probability simplex and let \(\chi(z)=\mathbb E e^{izX}\).
+For a positively oriented spectral contour \(\Sigma\) enclosing the nodes,
+\begin{align}
+ d_G(t,z)
+ &=\frac{h_N}{2\pi i}\oint_\Sigma
+           \frac{\xi e^{iz\xi}}{P_N(\xi)P_{N+2}(\xi)}\,d\xi
+ \label{d:contour-numerator}\\
+ &=L_N\left(\chi(z)+\frac{z\chi'(z)}{2N+1}\right).
+ \label{d:simplex-numerator}
+\end{align}
+In particular, the parenthesized factor is entire, including at
+\(z=0\). For \(y_*\ge|\operatorname{Im}z|\) and
+\(K\ge\|J_{N+2}\|\), its deviation from \(1\) satisfies
+\begin{equation}
+ \left|\chi+\frac{z\chi'}{2N+1}-1\right|
+ \le |z|^2\left(\frac12+\frac1{2N+1}\right)
+     \sigma^2 e^{y_*K},
+ \qquad
+ \sigma^2=
+ \frac{\operatorname{tr}J_N^2+\operatorname{tr}J_{N+2}^2}
+      {(2N+2)(2N+3)} .
+ \label{d:simplex-bound}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Set \(C_j(\xi)=\xi I-J_j\) and write \(a_j=\sqrt{\beta_j}\).
+Appending the last site changes the \(00\) resolvent entry by
+\[
+ \frac{\beta_j(C_j^{-1})_{0,j-1}^{\,2}}
+      {\xi-\beta_j(C_j^{-1})_{j-1,j-1}}.
+\]
+The endpoint cofactor gives
+\((C_j^{-1})_{0,j-1}=\prod_{k=1}^{j-1}a_k/P_j\).
+The determinant formula for the Schur complement gives the denominator
+\(P_{j+1}/P_j\). Hence \(s_{j+1}-s_j=h_j/(P_jP_{j+1})\).
+Adding consecutive differences and expanding the last row and column of
+\(P_{N+2}\) gives \(P_{N+2}+\beta_{N+1}P_N=\xi P_{N+1}\), which
+proves \eqref{d:resolvent} as a rational identity. Integrating the
+scalar resolvents against \(e^{iz\xi}\), or applying Cauchy's formula
+in an eigenbasis, gives \eqref{d:contour-numerator}.
+
+For the simplex factor put \(p=m-1\), and integrate in the \(p\) free
+coordinates \(u_i\ge0\), \(\sum_{i=1}^{p}u_i\le1\), with
+\(u_m=1-\sum_{i=1}^p u_i\). The volume is \(1/p!\). For a multi-index
+\(\alpha\) with \(|\alpha|=k\), successive beta integrals give
+\(\mathbb E\prod_i u_i^{\alpha_i}=p!\prod_i\alpha_i!/(p+k)!\).
+Consequently the multinomial formula gives
+\(\mathbb E X^k=k!p!H_k(x)/(p+k)!\), where
+\(H_k(x)=\sum_{|\alpha|=k}\prod_i x_i^{\alpha_i}\).
+On a large circle the Laurent expansion
+\(\prod_i(\xi-x_i)^{-1}=\xi^{-m}\sum_{k\ge0}H_k(x)\xi^{-k}\)
+therefore gives the Hermite--Genocchi formula
+\[
+ \frac1{2\pi i}\oint_\Sigma
+      \frac{f(\xi)}{\prod_i(\xi-x_i)}\,d\xi
+ =\frac{1}{p!}\mathbb E f^{(p)}(X).
+\]
+Indeed both sides give \(H_k(x)\) for \(f(\xi)=\xi^{p+k}\), and zero
+for monomials of degree less than \(p\). The formula follows for entire
+\(f\) by locally uniform Taylor expansion and contour deformation.
+This proof also covers repeated nodes. For \(f(\xi)=e^{iz\xi}\), the
+right side is \((iz)^p\chi(z)/p!\). Applying \(i^{-1}\partial_z\)
+inserts the numerator \(\xi\) and gives \eqref{d:simplex-numerator}.
+
+The node lists have zero sum, so \(\mathbb E X=0\). The simplex
+second moments are \((1+\mathbf 1_{i=j})/[m(m+1)]\), giving the stated
+variance. Compression and convexity give \(|X|\le K\). Taylor's
+integral remainders, using \(\mathbb E X=0\), give
+\[
+ |\chi-1|\le \tfrac12 |z|^2\mathbb E[X^2e^{y_*|X|}],
+ \qquad
+ |\chi'|\le |z|\mathbb E[X^2e^{y_*|X|}],
+\]
+which imply \eqref{d:simplex-bound}.
+\end{proof}
+
+The poles of the resolvents in \(\xi\) are nodes of the finite source
+quadratures. We count zeros of the entire Fourier readouts on a
+separate contour in \(z\). Formulas \eqref{d:contour-numerator}
+and \eqref{d:simplex-bound} use links through \(\beta_{N+1}\).
+By \eqref{eq:finite-defect}, the two normalized heat residuals use
+through \(\beta_{N+2}\).
+
+The full-source error laws \eqref{eq:full-phase} give a second
+expression for \(d_G\). Put
+\(A_j=\beta_{j+1}z^2/[(2j+1)(2j+2)]\), so \(L_{j+1}=-A_jL_j\).
+Subtraction at the two degrees gives
+\begin{equation}
+ d_G=L_N(E_N-A_NA_{N+1}E_{N+2}).
+ \label{d:source-numerator}
+\end{equation}
+An enclosure of \(E_j-1\) by a disk of radius \(e_j\) puts the
+parenthesized factor in the disk with center \(1-A_NA_{N+1}\) and
+radius \(e_N+|A_NA_{N+1}|e_{N+2}\). The explicit coefficients in
+\eqref{d:source-numerator} use through \(\beta_{N+2}\). Evaluating
+each exact \(E_j\) requires the full source. The inherited phase
+enclosures use their own strip and time hypotheses
+\cite{vcd,jh03,jh04}.
+
+\subsection{A single logarithm for both counted coordinates}
+
+Fix \(\Gamma:|z-a|=r\) with real \(a\), oriented positively. On a
+compact time interval \(I\), assume each field has two zeros inside
+\(\Gamma\), with multiplicities, and the fields share a zero-free
+annular collar. Assume both pairs lie in \(|z-a|\le r-b\), where
+\(0<b\le r\). Write \(B_j=G_{j,z}/G_j\), \(w_j=z-c_j\),
+\(Q_j=w_j^2-D_j\), \(j\in\{-,+\}\). On \(\Gamma\) the individual
+root distances are at least \(b\). Thus
+\[
+ |Q_j|\ge b^2,\qquad |w_j|\le g:=2r-b,\qquad
+ |D_j|\le (r-b)^2.
+\]
+Equal counts give zero winding for \(G_+/G_-\) on the collar, so it
+has a holomorphic logarithm \(\ell\). A choice at one time continues
+in \(I\) by integration of the time logarithmic derivative on the
+collar. All the contour identities are independent of the constant
+branch choice.
+
+\begin{proposition}[Logarithmic coordinate difference]
+\label{d:log-coordinates-prop}
+With \(\bar c=(c_++c_-)/2\),
+\begin{equation}
+ \Delta c=-\tfrac12\langle\ell\rangle,\qquad
+ \Delta D=-\langle(z-c_-)\ell\rangle-(\Delta c)^2
+         =-\langle(z-\bar c)\ell\rangle.
+ \label{d:coordinate-log}
+\end{equation}
+If \(L\ge\sup_\Gamma|\ell|\) for some branch, then
+\(|\Delta c|\le rL/2\) and \(|\Delta D|\le rgL\).
+The formulas extend through a double zero inside the contour.
+\end{proposition}
+
+\begin{proof}
+For \(p_{k,j}=\langle(z-a)^kB_j\rangle\), the argument principle
+gives \(c_j=a+p_{1,j}/2\), \(D_j=p_{2,j}/2-p_{1,j}^2/4\).
+Since \(\Delta B=\ell_z\), integration by parts gives
+\(\Delta p_k=-k\langle(z-a)^{k-1}\ell\rangle\). Substitution for
+\(k=1,2\) gives \eqref{d:coordinate-log}. The norm of a contour
+integral is bounded by \(r\) times the supremum on \(\Gamma\), and
+\(|z-\bar c|\le g\). Both formulas use counted moments that are analytic
+in time on the cleared chart.
+\end{proof}
+
+For example, if \(\sup_\Gamma|d_G/G_-|\le\eta<1\), the series
+branch of \(\log(1+d_G/G_-)\) gives \(L=-\log(1-\eta)\).
+If the straight interpolation \(G_-+s d_G\), \(0\le s\le1\), has
+positive clearance on the circle, its log integral in \(s\) gives
+\(L=\sup_\Gamma |d_G|/\inf_{s,\Gamma}|G_-+s d_G|\).
+These estimates require the indicated denominator floors.
+
+The exterior trace \(M_j=S_{1,j}=-\langle Q_j^{-1}B_j\rangle\)
+also changes with degree. More generally, for a fixed-order trace
+\(X_j=-\langle k_j B_j\rangle\) of the pair-dependent kernel \(k_j\),
+\begin{equation}
+ \Delta X=\langle k_{+,z}\ell\rangle
+           -\langle(k_+-k_-)B_-\rangle .
+ \label{d:kernel-difference}
+\end{equation}
+This follows by subtracting the two trace integrals and integrating
+\(\ell_z\) by parts. For \(M\), the change of the kernel is given by
+\[
+ Q_+^{-1}-Q_-^{-1}
+   =\frac{(2z-c_--c_+)\Delta c+\Delta D}{Q_+Q_-}.
+\]
+In particular, if \(a_c,a_D\) bound \(|\Delta c|,|\Delta D|\),
+then
+\begin{equation}
+ |\Delta M|\le
+ r\left(\frac{2L}{b^3}
+        +\frac{(2g a_c+a_D)\sup_\Gamma|B_-|}{b^4}\right).
+ \label{d:delta-m-bound}
+\end{equation}
+Here \(|(Q_+^{-1})_z|\le 2/b^3\) by differentiating its two
+linear factors. Both denominators in the kernel change have their
+own floors. Formula \eqref{d:kernel-difference} retains the correlation
+with \eqref{d:coordinate-log} before taking absolute values.
+
+\subsection{Residuals and endpoint transport}
+
+Let \(f_j=R_j/G_j\), \(V_j=G_{j,zz}/G_j\), and
+\(r_j=-\langle w_jf_j\rangle\), the gap force denoted by \(\delta\)
+in \eqref{h:pair}.
+The common scalar \(\beta_1\) cancels from the time logarithmic
+derivative. The two-field heat identity on the collar is
+\begin{align}
+ \ell_t+\ell_{zz}+(B_++B_-)\ell_z
+  &=\Delta f
+   =\frac{\Delta R-f_-d_G}{G_+},
+ \label{d:two-field-heat}\\
+ \ell_t&=\Delta f-\Delta V
+   =\frac{\Delta R-d_{G,zz}-(f_--V_-)d_G}{G_+}.
+ \label{d:log-time}
+\end{align}
+Indeed \(V_j=B_{j,z}+B_j^2\) and
+\(G_{j,t}/G_j=f_j-V_j-\beta_1\). In the numerator of
+\eqref{d:log-time},
+\(\Delta R-d_{G,zz}=(\partial_t+\beta_1)d_G\) vanishes to
+order at least \(2N\) at the origin by \eqref{d:simplex-numerator}.
+This cancellation concerns the Taylor order at \(z=0\).
+The residual difference also includes the changed center.
+\begin{equation}
+ \Delta r=-\langle w_+\Delta f\rangle+\Delta c\,\langle f_-\rangle.
+ \label{d:residual-difference}
+\end{equation}
+Given a floor \(m_+\le\inf_\Gamma|G_+|\) with \(m_+>0\),
+\eqref{d:two-field-heat} gives
+\(\|\Delta f\|_\Gamma\le(\|\Delta R\|_\Gamma+
+\|f_-\|_\Gamma\|d_G\|_\Gamma)/m_+\), where \(\|\cdot\|_\Gamma\)
+denotes the circle supremum. Thus
+\(|\Delta r|\le r(g\|\Delta f\|_\Gamma+a_c\|f_-\|_\Gamma)\).
+
+For a differentiable collar test \(k\), integration by parts in
+\eqref{d:two-field-heat} gives
+\[
+ \langle k\,\Delta f\rangle
+ =\frac{d}{dt}\langle k\ell\rangle
+ -\big\langle\big[k_t-k_{zz}+(k(B_++B_-))_z\big]\ell\big\rangle .
+\]
+The interior contribution is part of the time integral of the residual.
+For the complete gap difference the two center terms combine to give
+\begin{equation}
+ (\Delta D)'=-4\Delta(DM)+\Delta r
+   =-\langle (z-\bar c)\ell_t\rangle
+           +\bar c'\langle\ell\rangle .
+ \label{d:raw-gap}
+\end{equation}
+The first equality is the difference of the pair equations
+\eqref{h:pair}. The second is differentiation of
+\eqref{d:coordinate-log}. Both are regular when either \(D_j=0\).
+
+\begin{theorem}[Complete relative forcing on a time subinterval]
+\label{d:transport}
+For \(u\le v\) in \(I\), set
+\[
+ W_j(t;v)=\exp\left(-4\int_t^v M_j(s)\,ds\right)
+ \qquad(j\in\{-,+\}, t\in[u,v]).
+\]
+The traces \(M_j\) are real by conjugation symmetry, so both weights
+are positive. The full forcing satisfies
+\begin{equation}
+ \int_u^v W_-(t;v)\,[\Delta r-4D_+\Delta M](t)\,dt
+   =\Delta D(v)-W_-(u;v)\Delta D(u).
+ \label{d:weighted-gap}
+\end{equation}
+For \(u<v\), division by \(\int_u^v W_-(t;v)\,dt>0\) gives the
+weighted mean of the full forcing on that subinterval. If
+\(a_D(t)\ge|\Delta D(t)|\), the absolute value of the integral in
+\eqref{d:weighted-gap} is at most \(a_D(v)+W_-(u;v)a_D(u)\).
+\end{theorem}
+
+\begin{proof}
+Expand \(\Delta(DM)=M_-\Delta D+D_+\Delta M\), so
+\((\Delta D)'+4M_-\Delta D=\Delta r-4D_+\Delta M\).
+Since \(\partial_t W_-=4M_-W_-\), the integrand in
+\eqref{d:weighted-gap} equals \(\partial_t(W_-\Delta D)\).
+Evaluation at the endpoints proves the equality, and positivity
+of \(W_-\) gives the stated bound.
+\end{proof}
+
+The corresponding formulas with each field's own weight are
+\[
+ \int_u^v W_j(t;v)(2+r_j(t))\,dt=D_j(v)-W_j(u;v)D_j(u).
+\]
+Subtracting them yields
+\(\Delta D(v)-W_+(u;v)\Delta D(u)
+ -(W_+-W_-)(u;v)D_-(u)\).
+For \(u<v\), each weight at \(u\) is the exponential of \(-4(v-u)\)
+times the respective mean of \(M_j\) on \([u,v]\).
+For \(a_M\ge|\Delta M|\), the weight difference satisfies
+\[
+ |W_+(t;v)-W_-(t;v)|
+ \le W_-(t;v)\left(\exp\left(4\int_t^v a_M(s)\,ds\right)-1\right).
+\]
+There is also a complete endpoint identity for the \(M\) row.
+Write \(\mathcal F_j=12S_{2,j}+16D_jS_{3,j}\) and denote its
+residual contribution in the equation for \(M_j\) by \(\varepsilon_{M,j}\).
+The row \(M_j'=2M_j^2-\mathcal F_j+\varepsilon_{M,j}\) in
+\eqref{h:low} gives, for
+\(A(t)=\exp(-2\int_u^t(M_++M_-))\),
+\[
+ \int_u^v A(t)(\Delta\varepsilon_M-\Delta\mathcal F)(t)\,dt
+   = A(v)\Delta M(v)-\Delta M(u).
+\]
+Here \(\Delta\mathcal F=12\Delta S_2+
+16(D_+\Delta S_3+S_{3,-}\Delta D)\) retains the full change
+in the higher traces and in the moving gap.
+
+The absolute bound in Theorem~\ref{d:transport} applies after
+integration of the signed sum. Numerical use still requires count
+and clearance on the selected chart, bounds for the endpoint log
+functionals and enclosure of the weight integral. For example, an
+error \(e_P\) in an evaluated integral of \(M_-\) contributes at
+most \(\widetilde W_-(e^{4e_P}-1)\) to the error of the evaluated
+weight. A direct contour evaluation furnished with the same
+logarithm, endpoint data and weight can use the same cancellation.
+For comparison with the complete theta field, the logarithm and time
+identities still apply on its common counted chart, with \(R_F=0\).
+That comparison requires source-error and clearance estimates for
+the complete field. A sign conclusion requires an additional signed
+estimate on the selected chart.

@@ -324,3 +324,17 @@ inspection scope are in [references](../references/README.md).
 AGC-JH owns the coupled interface and its consumers; VCD-NC's general
 fixed-time degree question and parent AGC-B07/E19 remain unchanged.
 
+
+## First milestone update, 19 November 2026
+
+[Notes02–06 and their assessment](../notes/06_AGC_JH_FIRST_RESEARCH_MILESTONE_20261119.md) now supply the forced integer interface and a complete signed first-variation remainder. The finite two-degree difference has a source-node simplex formula using only the acquired prefix, and its complete relative time forcing reduces to endpoint corrections. Direct contour evaluation with the same inputs can do the same. An explicit continuous compact positive source has infinitely many positive and negative counted-gap increments on each parity; this rejects a generic eventual-monotonicity inference, not a theta-specific induction. At this first milestone the canonical signed functional, count/floor data and seed remained unpaid, leading to B03 r2. The second milestone below supplies the signed correction on one chart.
+
+## Second milestone, 19 November 2026
+
+[Note07](../notes/07_AGC_JH_CANONICAL_SIGNED_CONTOUR_20261119.md) supplies the first measured canonical signed correction in this branch, at physical time zero and N=24. It uses an independently counted low band. Both complete-source and finite-head error enter, and direct bracketing gives a tighter correction. [Review03](../reviews/03_AGC_JH_CANONICAL_ACQUISITION_ASSESSMENT_20261119.md) assesses this fixed scope. At the second milestone, physical-time persistence on one already counted slab was the open extension.
+
+## Third milestone, 19 November 2026
+
+[Note08](../notes/08_AGC_JH_PHYSICAL_TIME_SLAB_20261119.md) settles that extension for degree 24 on [0, 0.0001]. At every time the head overestimates the squared half-gap by at least 4.956734690e−8. The matched direct interval is narrower, and the endpoint change resolves a small decrease in the magnitude of the error. The inputs include anchor moments through order 66 and a new model of the complete source on the wide collar. [Review04](../reviews/04_AGC_JH_SLAB_ASSESSMENT_20261119.md) describes shared premises and the replay. [B05 r1](../research-progress/handoffs/AGC_JH_B05_REQUEST_R1_20261119.md) asks if a finite degree increment can reduce the source information needed.
+
+**First manuscript, 20 November 2026.** The [working draft](../manuscript/README.md) develops the fixed source, integer hierarchy, finite-step comparison, signed allowance and parity obstruction in order. Its final section sets out the outstanding analytical challenges. [Assessment05](../reviews/05_AGC_JH_FIRST_MANUSCRIPT_ASSESSMENT_20261120.md).

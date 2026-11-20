@@ -155,3 +155,18 @@ The same bounded continuation's [E07 assessment](../papers/investigations-5/08_t
 **6 November 2026 — TND-O-E03 distinguishes field regularity from singular collision coordinates.** For Edward Baker with substantial LLM assistance, **gpt-6-astra/max**. [Production Review02](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/reviews/02_TND_O_E03_ANALYTICAL_MANUSCRIPT_PRODUCTION_CHECK_20261106.md) states: “The singular local quotient is compatible with regular global field energy.” The [manuscript](../papers/investigations-5/08_theta_observables_newman_dynamics/03_operator_imaginary_time_evolution/manuscript/main.tex) derives both behaviors and exhibits an admissible colliding control. Root velocities and a normalized shrinking-lobe quotient do not by themselves supply a canonical collision margin. This same-author synthesis preserves the exact scalar baseline and existing evidence levels; source-specific estimates and other constructions remain eligible.
 
 **A joint midpoint split can be exactly the same model, 16 November 2026.** For Edward Baker with Codex assistance; lead settings unavailable, proofs/assessment dispatched Sol6.1/ultra. [VCD E15](../papers/investigations-6/03_volterra_coefficient_dynamics/notes/13_VCD_E15_SHARED_MEMORY_EQUIVALENCE_20261116.md) proves that sharing any entire scalar memory between retained midpoint amplitudes and the omitted double integral reproduces its direct full-height Volterra response. It explicitly preserves the scope: “Distinct joint models fall outside the comparison.” [E14](../papers/investigations-6/03_volterra_coefficient_dynamics/reviews/06_VCD_E14_MIDPOINT_SESSION_ASSESSMENT_20261116.md) accepts this and the companion finite-calibration proofs within scope. Extra finite midpoint/score data leave local freedom, yet their conditional error allowance can shrink geometrically; neither is a zero theorem. Compare the actual approximants and retain joint errors before counting a new representation as an improvement.
+
+
+**Two-degree parity does not provide a gap sign, 19 November 2026.**
+Prepared for Edward Baker with Codex assistance; lead settings unavailable,
+helpers dispatched Sol6.2/ultra. [JH Note05](../papers/investigations-6/05_arithmetic_gap_continuation/01_jacobi_integer_hierarchy/notes/05_AGC_JH_PARITY_OSCILLATION_CONTROL_20261119.md)
+proves for an explicit continuous compact positive source: “Both signs of
+the degree increment therefore occur infinitely often on each parity.”
+Removing the real leading-error parity does not remove the complex-root
+phase in the counted gap. This defeats eventual two-degree monotonicity
+inferred from those generic source premises; it does not exclude
+theta-specific or error-paid contraction estimates. [Review02](../papers/investigations-6/05_arithmetic_gap_continuation/01_jacobi_integer_hierarchy/reviews/02_AGC_JH_INTERFACE_AND_PARITY_ASSESSMENT_20261119.md)
+accepts the scoped control internally. The [same round](../papers/investigations-6/05_arithmetic_gap_continuation/01_jacobi_integer_hierarchy/notes/06_AGC_JH_FIRST_RESEARCH_MILESTONE_20261119.md)
+also keeps the complete degree/time correlation, while recognizing that
+an equally informed direct contour method has the same endpoint bound.
+Acquire a canonical signed input before claiming a restoring mechanism.

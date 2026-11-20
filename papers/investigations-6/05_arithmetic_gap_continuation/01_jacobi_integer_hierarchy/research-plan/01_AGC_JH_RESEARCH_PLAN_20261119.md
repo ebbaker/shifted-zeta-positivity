@@ -254,7 +254,25 @@ Only the recorder writes registered histories. Follow
 [REFERENCE_WORKFLOW](../../../../../REFERENCE_WORKFLOW.md) from the first
 new import and [LARGE_FILES](../../../../../LARGE_FILES.md) for all outputs.
 
-The initial research prompt is in
+The current research continuation prompt is in
 [Continuation01](../notes/01_AGC_JH_CONTINUATION_AND_PROMPT_20261119.md).
 No parent AGC, VCD, VCD-NC, GT or CM task is activated by this plan.
 
+
+## First milestone continuation, 19 November 2026 (superseded by the second acquisition below)
+
+The opening sequence has now been executed and internally assessed; historical setup descriptions above retain their dated meaning. [Synthesis06](../notes/06_AGC_JH_FIRST_RESEARCH_MILESTONE_20261119.md) and the sole register own the outcome and live status. B03 r1 issued E03 r2 for a fixed compact-source parity control after the signed canonical input remained unpaid. [B03 r2](../research-progress/handoffs/AGC_JH_B03_REQUEST_R2_20261119.md) is the next ready conceptual task: at most two sourced chart candidates, one selected canonical input and a complete acquisition budget. AGC-JH-E07 is reserved as E / Sol6.2 ultra for that fixed acquisition only after its request is frozen; acceptance, degree/cell/precision limits and source-count-floor payments must be set first. No E07 execution is implied. The prior B04 extension still requires a useful acquired canonical gain.
+
+## Second acquisition contract, 19 November 2026
+
+B03 r2 selected the time-zero circle in the HDC low band. [E07 r1](../research-progress/handoffs/AGC_JH_E07_REQUEST_R1_20261119.md) fixes the signed complete-source numerator, independent count, finite budgets and matched direct test before dispatch. E05 r2 assesses the resulting work and E06 r2 integrates it.
+
+E07 passed on the first level, and E05/E06 r2 assessed and integrated the actual result. [B04 r1](../research-progress/handoffs/AGC_JH_B04_REQUEST_R1_20261119.md) is the next decision. E08 is reserved for one uniform time slab only if B04 identifies a feasible complete budget.
+
+## B04 activation, 19 November 2026
+
+[Decision06](../brainstorm/notes/06_AGC_JH_B04_SLAB_DECISION_20261119.md) selects joint time Taylor evaluation. [E08 r1](../research-progress/handoffs/AGC_JH_E08_REQUEST_R1_20261119.md) fixes the source, true moving head, complete signed/direct comparison and two-level stop rule before execution. E05 r3 assesses the result and E06 integrates it.
+
+## After the physical-time milestone, 19 November 2026
+
+[E08](../research-progress/handoffs/AGC_JH_E08_RETURN_R1_20261119.md) and [E05 r3](../research-progress/handoffs/AGC_JH_E05_RETURN_R3_20261119.md) resolved the uniform sign on the selected slab. E06 r3 integrates [Note08](../notes/08_AGC_JH_PHYSICAL_TIME_SLAB_20261119.md). The next decision is [B05 r1](../research-progress/handoffs/AGC_JH_B05_REQUEST_R1_20261119.md) on the 24-to-26 increment, its residual source cost and the same-input direct gate. E09 depends on that decision.

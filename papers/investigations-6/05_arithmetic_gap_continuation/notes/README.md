@@ -4,6 +4,8 @@
 
 Analytical derivations and continuation records. Begin with the [continuation prompt](01_AGC_CONTINUATION_AND_PROMPT_20261119.md), [source/status crosswalk](02_AGC_SOURCE_AND_STATUS_CROSSWALK_20261119.md) and [manuscript integration record](03_AGC_MANUSCRIPT_INTEGRATION_20261119.md).
 
+The [shared Investigations 6 brainstorm on spatial tensor trees](../../brainstorm/notes/06_SPATIAL_TTN_ZERO_SPACING_20261119.md) discusses fixed-time spacings and the proposed relationship with AGC and QTT.
+
 
 Previous finite entry: [corrected milestone and continuation12](12_AGC_CORRECTED_MILESTONE_AND_CONTINUATION_20261119.md), supported by [holomorphic correction10](10_AGC_E13_R2_HOLOMORPHIC_CORRECTION_20261119.md) and [complete corrected comparison11](11_AGC_E12_R2_CORRECTED_COMPARISON_20261119.md). The [first milestone09](09_AGC_RESEARCH_MILESTONE_AND_CONTINUATION_20261119.md) remains historical. New derivations: [contour04](04_AGC_E10_CONTOUR_ENDPOINT_20261119.md), [bounded heat05](05_AGC_E10_BOUNDED_HEAT_20261119.md), [source allowance06](06_AGC_E11_SOURCE_ALLOWANCE_20261119.md), [finite comparison07](07_AGC_E12_FIXED_CELL_COMPARISON_20261119.md), and [sharper log allowance08](08_AGC_E13_LOG_DISK_ALLOWANCE_20261119.md). Notes01–03 retain the historical setup.
 

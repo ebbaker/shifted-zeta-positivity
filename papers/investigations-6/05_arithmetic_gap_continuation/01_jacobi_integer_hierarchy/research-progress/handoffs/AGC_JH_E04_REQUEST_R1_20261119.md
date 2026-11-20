@@ -1,0 +1,13 @@
+# AGC-JH-E04 request r1 (immutable): exact algebra checks
+
+19 November 2026, America/New_York. Prepared for Edward Baker with OpenAI Codex assistance. Actual lead settings unavailable; authorized helper dispatch gpt-6.2-sol/ultra.
+
+Type E, fixed exact-rational/symbolic verification. Parent B02/B03, inputs written Notes02/03 and E03 r1 formulas. No source acquisition, degree sweep or floating canonical certificate. One implementation and correction pass. Only numerics/check_agc_jh_interface_20261119.py, numerics/03_AGC_JH_EXACT_CHECKS_20261119.json and research-progress/handoffs/AGC_JH_E04_RETURN_R1_20261119.md writable. No shared files/history edits. Keep records small, include source hashes, environment, measured runtime and checks actually run.
+
+A. Verify the finite Weyl N to N+2 identity from Note03 at N=2,3,4, with beta_j=j/(j+1), through symbolic rational functions or exact polynomial cross multiplication. Check the first two nonzero Fourier Taylor coefficients of the increment against the mixed-node simplex formula and exact variance (through degree 2N+2). No scan beyond these three N.
+
+B. Nontrivial forced hierarchy check with six simple roots at t=0, using even polynomial Y=[(z-c)^2-D][(z+c)^2-D](z²-E), c(t)=1+t/5,D(t)=1/9+t/7,E(t)=9+t/11, scalar normalization b(t)=0. Target roots c±sqrt(D); exterior roots −c±sqrt(D), ±sqrt(E). All roots and velocities at zero are rational. For each root r_j, residue f_j of f=(Y_t+Y_zz)/Y is −r_j'+2 sum_(k!=j)1/(r_j-r_k). Compute gamma,delta from target residues. To integrate k_z f around target pair use minus sum over exterior residues k_z(r_j)f_j (all poles counted, no infinity residue). Verify D,M,S2,T2 forced rows and selected split rows (1,1),(2,1),(1,2),(2,0),(0,2) against direct differentiation of finite exterior sums. Check the unforced parts separately where possible, and do not drop the moving-kernel terms. A deliberately omitted forcing or reversed-sign variant must fail at least one row, recorded as a sensitivity check. Root count is exactly two on |z−1|=1/2 at this slice, with a small time neighborhood by continuity. This is an algebra control, not a physical theta source.
+
+C. Verify the signed gap first-variation quadratic remainder with the exact polynomial example in Note04 if written; otherwise no extra case is needed. No numeric recurrence for the new compact parity control is required; its infinite sign changes are an analytic theorem.
+
+Acceptance: exact residual zero in all specified identities and nonzero sensitivity residual, or report the precise disagreement. Corrections to notes are returned to lead/author, not silently made. Stop rather than widen cases or introduce new scientific input.

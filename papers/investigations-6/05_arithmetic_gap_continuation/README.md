@@ -25,7 +25,8 @@ proved interfaces; its task register and manuscript keep their ownership.
 - [Analytical draft](manuscript/README.md): self-contained source, pair/chain, integer and complex Mellin, continuation and arithmetic-residual development.
 - [Current continuation and pasteable prompt](notes/24_AGC_ACTUAL_PHASE_MILESTONE_AND_CONTINUATION_20261119.md); [historical opening prompt](notes/01_AGC_CONTINUATION_AND_PROMPT_20261119.md).
 - [Source crosswalk](notes/02_AGC_SOURCE_AND_STATUS_CROSSWALK_20261119.md), [references](references/README.md), [assessment](reviews/README.md) and [milestones](DRAFT_HISTORY.md).
-- [Jacobi truncation and the integer hierarchy](01_jacobi_integer_hierarchy/README.md): new sub-investigation, with its own AGC-JH register and sustained ultra continuation. It connects finite Jacobi dynamics to integer p,q/S/T transport and tests an induction in N. Setup only; parent B07/E19 and the earlier VCD degree-contraction branch retain their statuses.
+- [Jacobi truncation and the integer hierarchy](01_jacobi_integer_hierarchy/README.md) connects finite Jacobi dynamics to integer p,q/S/T transport and tests an induction in N. Its [own register](01_jacobi_integer_hierarchy/research-progress/01_AGC_JH_RESEARCH_PROGRESS_20261119.md) tracks its analytical and certified results.
+- [Spatial tensor trees for zero positions and spacings](02_spatial_tensor_zero_spacings/README.md) asks whether the signed motion of a marked pair's center and its complete gap dynamics can predict the individual zeros. See the [revised analytical plan](02_spatial_tensor_zero_spacings/research-plan/02_AGC_ST_ZERO_POSITIONS_RESEARCH_PLAN_20261120.md), [position register](02_spatial_tensor_zero_spacings/research-progress/02_AGC_ST_ZERO_POSITIONS_RESEARCH_PROGRESS_20261120.md) and [original gap tasks](02_spatial_tensor_zero_spacings/research-progress/01_AGC_ST_RESEARCH_PROGRESS_20261119.md).
 
 
 

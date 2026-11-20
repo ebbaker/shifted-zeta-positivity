@@ -1,0 +1,329 @@
+\section{The forced integer hierarchy}\label{sec:hierarchy}
+
+\subsection{A counted pair and its exterior traces}
+
+Let \(Y\) be \(F\) or a moving head \(G_N\) with \(N\ge2\), and set
+\(R=(\partial_t+\partial_z^2+\beta_1)Y\).
+On a fixed positively oriented circle \(\Gamma:|z-a|=r\) with
+\(a\in\mathbb R\), assume a cleared collar and a count of two with
+multiplicity. On compact portions of the chart take a buffer \(b>0\)
+so the two occurrences lie in \(|z-a|\le r-b\). We use
+\(\langle g\rangle=(2\pi i)^{-1}\oint_\Gamma g(z)\,dz\) and write
+\begin{equation}\label{h:coordinates}
+\begin{gathered}
+ B=Y_z/Y,\qquad c=\tfrac12\langle zB\rangle,\qquad
+ D=\tfrac12\langle z^2B\rangle-c^2,\qquad
+ w=z-c,\qquad Q=w^2-D,\\
+ A=Y/Q,\qquad U=A_z/A,\qquad f=R/Y .
+\end{gathered}
+\end{equation}
+The argument principle makes \(c\) the mean and \(D\) the squared
+half-difference of the two zeros. Both are real at real time.
+The unit \(A\) extends holomorphically and is zero-free on the disk
+and a collar. Each enclosed factor has modulus at least \(b\) on
+\(\Gamma\), so \(|Q|\ge b^2\) there, also at \(D=0\). The
+coordinates and the traces below are locally analytic in time for
+the canonical fields, by the contour formulas and analyticity of
+the source and finite moment construction.
+
+For any rational weight \(k\) with poles only at the counted pair and
+\(k(z)=O(|z|^{-2})\), put
+\begin{equation}\label{h:trace}
+ \tau[k]= -\langle kB\rangle=-\langle kU\rangle
+        =\sum_{\rho\ \mathrm{exterior}} k(\rho).
+\end{equation}
+Every exterior zero is included with multiplicity. For the complete
+field we use the even product and zero count \(O(x\log(2+x))\)
+from \cite[Section~2]{agc}. Conjugating \(J_N\) by the alternating
+diagonal sign matrix proves evenness of the head. The positive
+spectral weights give \(|G_N(z)|\le e^{K_N|\operatorname{Im}z|}\), where
+\(K_N=\sup_t\|J_N(t)\|\) on the compact time interval of the chart.
+Jensen's formula at radius \(2x\) and \(G_N(0)=1\) give
+\(n_N(x)\le 2K_Nx/\log 2\).
+Hadamard factorization at order at most one pairs opposite factors
+as \(1-z^2/\rho^2\). Evenness removes the possible linear exponential
+and normalization fixes the constant. These products thus have locally
+uniformly convergent logarithmic derivatives on the cleared collar
+when summed in opposite pairs. Both zero counts give absolute
+inverse-square summability. To prove \eqref{h:trace}, one exterior
+pole contributes \(-k(\rho)\) to \(\langle kB\rangle\), by summing
+the residues of \(k(z)/(z-\rho)\) over the counted poles and using
+its vanishing residue at infinity. The rational target contribution
+\(kQ_z/Q\) has all its poles inside \(\Gamma\) and zero total residue.
+Any constant regularizer likewise integrates to zero.
+
+The regular traces are
+\begin{equation}\label{h:st}
+ S_n=\tau[Q^{-n}]\quad(n\ge1),\qquad
+ T_n=\tau[wQ^{-n}]\quad(n\ge2),\qquad M=S_1.
+\end{equation}
+Where \(D\ne0\), take a local square root \(s^2=D\) and put
+\(z_\pm=c\pm s\), \(h=2s\), \(X=z-z_+\), and \(Z=z-z_-\).
+The split traces, including both axes, are
+\begin{equation}\label{h:split}
+ k_{p,q}=X^{-p}Z^{-q},\qquad
+ P_{p,q}=\tau[k_{p,q}],\qquad
+ p,q\in\mathbb Z_{\ge0},\quad p+q\ge2 .
+\end{equation}
+All these weights have the required decay, as do their spatial and
+coordinate derivatives on the respective charts.
+
+\subsection{Motion of the pair and differentiation of a trace}
+
+A dot denotes forward physical time. The normalized equation gives
+\(Y_t/Y=-Y_{zz}/Y-\beta_1+f\) on the collar and hence
+\begin{equation}\label{h:burgers}
+ \dot B=-B_{zz}-2BB_z+f_z .
+\end{equation}
+Differentiating the counted moments gives
+\(\dot c=-\langle Y_t/Y\rangle/2\) and
+\(\dot D=-\langle wY_t/Y\rangle\). In \(Y_{zz}/Y\), write the
+quadratic contribution as \(2/Q+2(Q_z/Q)U\) and the holomorphic
+contribution as \(A_{zz}/A\). Since
+\(\langle1/Q\rangle=0\), \(\langle w/Q\rangle=1\), and
+\(wQ_z/Q=2+2D/Q\), the pair equations are
+\begin{equation}\label{h:pair}
+ \begin{gathered}
+ \dot c=\langle (Q_z/Q)U\rangle+\gamma,\qquad
+ \dot D=2-4DM+\delta,\\
+ \gamma=-\tfrac12\langle f\rangle,\qquad
+ \delta=-\langle wf\rangle .
+ \end{gathered}
+\end{equation}
+The center term before \(\gamma\) is \(U(z_+)+U(z_-)\), with value
+\(2U(c)\) at a double. At a double \(f=(R/A)/w^2\), so
+\(\gamma=-\tfrac12(R/A)_z(c)\) and \(\delta=-(R/A)(c)\).
+In particular \(\dot D=2\) at a double of the complete field.
+
+\begin{proposition}[Full trace derivative]\label{h:forceprop}
+For a kernel \(k(z;c,D)\) whose coordinate derivatives satisfy
+the conditions in \eqref{h:trace}, the full derivative is
+\begin{equation}\label{h:force}
+ \begin{split}
+ \frac{d}{dt}\tau[k]
+   &=\langle k(B_{zz}+2BB_z)\rangle
+               +\dot c\,\tau[k_c]+\dot D\,\tau[k_D]+\langle k_z f\rangle,\\
+ \varepsilon[k]
+   &=\langle k_z f\rangle+\gamma\tau[k_c]+\delta\tau[k_D]\\
+   &=\big\langle\big(k_z-\tfrac12\tau[k_c]-w\tau[k_D]\big)f\big\rangle .
+ \end{split}
+\end{equation}
+Here \(\varepsilon[k]\) is the part contributed by the residual
+\(R\). For a holomorphic field variation with first derivative \(V\)
+on the counted chart, the differentials of \(c,D\) and the contour
+trace are \(\gamma,\delta,\varepsilon[k]\) with \(f\) replaced by \(V/Y\).
+\end{proposition}
+\begin{proof}
+Differentiate \(-\langle kB\rangle\) on the fixed circle and insert
+\eqref{h:burgers}. The identity
+\(-\langle k f_z\rangle=\langle k_z f\rangle\) follows by
+integration of \((kf)_z\). The first variation uses
+\(dB=(V/Y)_z\) and the same integration by parts for the counted
+moments. The formulas keep both changes of the kernel, even when
+\(V/Y\) has a holomorphic part on the disk.
+\end{proof}
+
+For a head, \eqref{eq:finite-defect} shows that these residual terms are
+\(\beta_N\beta_{N-1}\) times the derivatives in the last-link
+direction, with the other links fixed. For \(F\), all three vanish.
+The gap gradient \(-\langle wV/Y\rangle\) supplies the signed first
+variation in Section~\ref{sec:signed}. The finite change in each
+kernel enters the degree comparison in Section~\ref{sec:degree}.
+
+\subsection{Split rows and axes}
+
+When \(D\ne0\) the parts of \(\dot z_\pm\) contributed by \(R\) are
+\(v_\pm=\gamma\pm\delta/h\), and
+\begin{equation}\label{h:split-gap}
+ \dot h=4/h-2hM+2\delta/h .
+\end{equation}
+For a split weight the residual part of \eqref{h:force} is
+\begin{equation}\label{h:split-force}
+ \begin{split}
+ \varepsilon_{p,q}={}&p\big(v_+P_{p+1,q}-\langle k_{p+1,q}f\rangle\big)\\
+                    &+q\big(v_-P_{p,q+1}-\langle k_{p,q+1}f\rangle\big).
+ \end{split}
+\end{equation}
+A summand with vanishing prefactor is omitted. For \(m,n\ge1\) set
+\[
+ C_{m,n}=\sum_{i=2}^m P_{i,0}P_{m+1-i,n}
+         +\sum_{j=1}^{n-1}P_{m,j}P_{0,n+1-j}.
+\]
+On the axes put
+\(C_{m,0}=\sum_{i=2}^{m-1}P_{i,0}P_{m+1-i,0}\) and
+\(C_{0,n}=\sum_{j=2}^{n-1}P_{0,j}P_{0,n+1-j}\).
+An empty sum is zero.
+
+\begin{theorem}[Forced split recurrence]\label{h:splitthm}
+Write \(A_h=2/h-hM\). The mixed rows \((p,q\ge1)\) satisfy
+\begin{equation}\label{h:mixed}
+\begin{split}
+ \dot P_{p,q}={}&p\{C_{p+1,q}-(p+3)P_{p+2,q}
+                   -(q+2)P_{p+1,q+1}+A_hP_{p+1,q}\}\\
+ &+q\{C_{p,q+1}-(p+2)P_{p+1,q+1}
+                   -(q+3)P_{p,q+2}-A_hP_{p,q+1}\}
+   +\varepsilon_{p,q}.
+\end{split}
+\end{equation}
+The two axes have \(p\ge2\) and \(q\ge2\), respectively, and satisfy
+\begin{equation}\label{h:axes}
+ \begin{split}
+ \dot P_{p,0}&=p\{C_{p+1,0}-(p+3)P_{p+2,0}-2P_{p+1,1}
+                          +(2/h)P_{p+1,0}\}+\varepsilon_{p,0},\\
+ \dot P_{0,q}&=q\{C_{0,q+1}-2P_{1,q+1}-(q+3)P_{0,q+2}
+                          -(2/h)P_{0,q+1}\}+\varepsilon_{0,q}.
+ \end{split}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+We give a contour derivation of the heat terms of
+\cite[Eqs.~(3.5)--(3.7)]{agc} and the moving-head corrections of
+\cite{jh02}. Set \(B_Q=Q_z/Q\) and
+\(\mathcal I[k]=\langle kU^2\rangle\).
+With \(B=B_Q+U\), move the derivatives in the heat term of
+\eqref{h:force} onto \(k\) by integration by parts to obtain
+\begin{equation}\label{h:heat-term}
+ \langle k(B_{zz}+2BB_z)\rangle
+     =-\tau[k_{zz}-2B_Qk_z]-\mathcal I[k_z].
+\end{equation}
+The terms containing only \(B_Q\) are rational, have all their
+poles enclosed and decay at infinity with zero residue.
+
+For the quadratic term, integrate the divided difference
+\(-[k(u)-k(v)]/(u-v)\) against \(U(u)U(v)\), with \(u\) on
+\(\Gamma\) and \(v\) on a smaller circle still enclosing the pair.
+Both integrals are normalized by \((2\pi i)^{-1}\).
+The \(k(u)\) term vanishes by the inner Cauchy integral. Integrating
+the \(k(v)\) term first in \(u\) gives \(\mathcal I[k]\).
+For \(k=k_{m,n}\), subtracting each reciprocal power gives
+\begin{equation}\label{h:split-dd}
+ -\frac{k_{m,n}(u)-k_{m,n}(v)}{u-v}
+   =\sum_{i=1}^{m} k_{i,0}(u)k_{m+1-i,n}(v)
+    +\sum_{j=1}^{n} k_{m,j}(u)k_{0,n+1-j}(v).
+\end{equation}
+Products integrate as products of the two linear functionals
+\(-\langle kU\rangle\). For a first-power factor these functionals
+are \(-U(z_+)\) or \(-U(z_-)\). Thus for mixed \(m,n\),
+\(\mathcal I[k_{m,n}]=C_{m,n}-(U(z_+)+U(z_-))P_{m,n}\).
+When \(m\ge3,n=0\) its two endpoint terms instead give
+\(-2U(z_+)P_{m,0}\). The opposite axis gives
+\(-2U(z_-)P_{0,n}\) for \(n\ge3\).
+
+In \eqref{h:heat-term} use
+\(\partial_z k_{p,q}=-p k_{p+1,q}-q k_{p,q+1}\).
+In the block with weight \(l=k_{p+1,q}\), for example, the
+expression in braces is
+\(\tau[l_z-2B_Ql]+\mathcal I[l]+\dot z_+\tau[l]
+ -\langle lf\rangle\).
+The full velocity at a simple target is
+\(\dot z_+=2/h+2U(z_+)+v_+\), and the other is
+\(\dot z_-=-2/h+2U(z_-)+v_-\).
+These follow from \eqref{h:pair} using
+\(U(z_+)-U(z_-)=-hM\), itself the residue identity for
+\(-\langle U/Q\rangle\). The two endpoint terms therefore give
+\(\pm A_h\) in mixed blocks and \(\pm2/h\) on the axes.
+The linear terms follow from \(B_Q=1/X+1/Z\).
+This proves the formulas without differentiating any exterior
+zero, and so also covers exterior multiplicities.
+\end{proof}
+
+\subsection{Regular rows through a collision}
+
+\begin{theorem}[Forced symmetric recurrence]\label{h:regularthm}
+In the ranges in \eqref{h:st}, the equations on the full counted
+chart are
+\begin{align}
+ \dot S_n={}&2n\sum_{j=1}^n S_jS_{n+1-j}
+   +2n\sum_{j=2}^n\big(T_jT_{n+2-j}+DS_jS_{n+2-j}\big)\notag\\
+ &-4n(n+2)S_{n+1}-4n(n+3)DS_{n+2}+\varepsilon^S_n ,
+ \label{h:S-row}\\
+ \dot T_n={}&2(2n-1)\sum_{j=2}^n T_jS_{n+1-j}
+    +4nD\sum_{j=2}^n T_jS_{n+2-j}\notag\\
+ &-4(n^2+n-1)T_{n+1}-4n(n+3)DT_{n+2}+\varepsilon^T_n .
+ \label{h:T-row}
+\end{align}
+The residual terms are
+\begin{equation}\label{h:ST-force}
+\begin{split}
+ \varepsilon^S_n={}&-2n\langle wQ^{-n-1}f\rangle
+                      +2n\gamma T_{n+1}+n\delta S_{n+1},\\
+ \varepsilon^T_n={}&\langle ((1-2n)Q^{-n}-2nDQ^{-n-1})f\rangle\\
+                  &+\gamma\big((2n-1)S_n+2nDS_{n+1}\big)
+                      +n\delta T_{n+1}.
+\end{split}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Both kernels satisfy \(k_c=-k_z\). The even kernel has
+\(k_z=-2nwQ^{-n-1}\), \(k_D=nQ^{-n-1}\), and the odd kernel has
+\(k_z=(1-2n)Q^{-n}-2nDQ^{-n-1}\), \(k_D=nwQ^{-n-1}\).
+This yields \eqref{h:ST-force}.
+
+To use the nested-circle identity from the split proof, write
+\(\alpha=Q(u)^{-1}\), \(\lambda=Q(v)^{-1}\) and
+\(L_j=\sum_{i=0}^{j-1}\alpha^{j-1-i}\lambda^i\) with \(L_0=0\).
+The negative divided differences of \(Q^{-j}\) and \(wQ^{-j}\)
+are respectively
+\[
+ (w(u)+w(v))\alpha\lambda L_j,\qquad
+ \alpha\lambda L_{j-1}+
+   (D+w(u)w(v))\alpha\lambda L_j .
+\]
+These follow from \(Q(u)-Q(v)=(u-v)(w(u)+w(v))\).
+For this computation only write \(T_1=-\langle wU/Q\rangle\).
+Then
+\begin{align*}
+ \mathcal I[Q^{-j}]&=2\sum_{i=1}^{j} T_iS_{j+1-i},\\
+ \mathcal I[wQ^{-j}]&=\sum_{i=1}^{j-1} S_iS_{j-i}
+             +\sum_{i=1}^{j}(T_iT_{j+1-i}+DS_iS_{j+1-i}).
+\end{align*}
+The center speed before adding \(\gamma\) is \(-2T_1\). In the
+even row this cancels the two \(T_1\) endpoints from
+\(2n\mathcal I[wQ^{-n-1}]\). In the odd row it cancels
+the \(T_1\) terms of
+\((2n-1)\mathcal I[Q^{-n}]+2nD\mathcal I[Q^{-n-1}]\).
+The \(-4DM\) part of the gap speed cancels the \(DS_1\) endpoint
+products in the even row and the \(T_{n+1}S_1\) term in the
+\(D\)-weighted odd sum. The remaining linear terms come from
+\(-\tau[k_{zz}-2B_Q k_z]+2\tau[k_D]\). For \(Q^{-n}\) the first
+operator inside \(\tau\), before the minus sign, has coefficients
+\(2n(2n+5)\) on \(Q^{-n-1}\) and \(4n(n+3)D\) on \(Q^{-n-2}\).
+For \(wQ^{-n}\) they are \(2(n+2)(2n-1)\) on \(wQ^{-n-1}\)
+and \(4n(n+3)D\) on \(wQ^{-n-2}\).
+Adding the \(2\tau[k_D]\) part gives exactly
+\eqref{h:S-row}--\eqref{h:T-row}. The auxiliary \(T_1\) was a
+contour value and cancels from the recurrences. Setting \(f=0\)
+recovers \cite[Eqs.~(3.11)--(3.12)]{agc}.
+\end{proof}
+
+The lowest rows, which enter the degree and signed gap comparisons, are
+\begin{equation}\label{h:low}
+ \begin{split}
+ \dot M &=2M^2-12S_2-16DS_3+\varepsilon^S_1,\\
+ \dot S_2 &=8MS_2+4T_2^2+4DS_2^2-32S_3-40DS_4+\varepsilon^S_2,\\
+ \dot T_2 &=(6M+8DS_2)T_2-20T_3-40DT_4+\varepsilon^T_2 .
+ \end{split}
+\end{equation}
+Here \(\varepsilon^S_1=-2\langle wQ^{-2}f\rangle
++2\gamma T_2+\delta S_2\). In particular, comparing \(\dot M\)
+requires the change of \(12S_2+16DS_3\) along with the change
+of this entire residual term.
+
+For \(D\ne0\), \(S_n=P_{n,n}\) and
+\(T_n=(P_{n-1,n}+P_{n,n-1})/2\) for \(n\ge2\).
+Conversely, for \(m=\max(p,q)\), the numerator of
+\(k_{p,q}=(w-s)^{m-p}(w+s)^{m-q}/Q^m\) has degree at most
+\(2m-2\) in \(w\). Reducing by \(w^2=Q+D\) expresses each split
+trace in admissible \(S,T\) with coefficients polynomial in \(s\).
+Near a double \(t_*\), this gives \(P_{p,q}=a_{p,q}(t)+s(t)b_{p,q}(t)\)
+with analytic coefficients. Differentiating the kernel at \(s=0\)
+gives
+\[
+ b_{p,q}(t_*)=(p-q)\sum_{\rho\ \mathrm{exterior}}
+      (\rho(t_*)-c(t_*))^{-p-q-1}.
+\]
+If \(b_{p,q}(t_*)\dot D(t_*)\ne0\), the split derivative has a
+term of order \(1/s\). The symmetric rows retain all higher
+traces and stay regular at \(D=0\) by the contour buffer.

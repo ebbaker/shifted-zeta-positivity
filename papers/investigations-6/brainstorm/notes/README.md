@@ -5,6 +5,8 @@ actual model and effort unavailable in recorded configurations.
 
 This directory is reserved for dated cross-branch conceptual decisions.
 
+- [Spatial tensor trees for zero spacings, 19 November 2026](06_SPATIAL_TTN_ZERO_SPACING_20261119.md) gives the gap readout, the original fixed-window proposal, and the adopted analytical direction under AGC.
+
 - [Volterra induction and dyadic refinement, 15 November 2026](05_VOLTERRA_INDUCTION_AND_DYADIC_REFINEMENT_20261115.md):
   coefficient meaning, the two recursions, a classical closure example,
   conditional source masses and the scope of exactness; Volterra first

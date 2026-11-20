@@ -1,0 +1,71 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[letterpaper,textwidth=6.15in,top=0.96in,bottom=0.98in,headheight=15pt,headsep=18pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs}
+\usepackage[table]{xcolor}
+\definecolor{inkblue}{HTML}{194D60}
+\usepackage{fancyhdr,needspace}
+\usepackage[colorlinks=true,linkcolor=inkblue,citecolor=inkblue,urlcolor=inkblue]{hyperref}
+\usepackage{bookmark}
+\usepackage{xurl}
+\hypersetup{pdftitle={Jacobi truncation and the motion of a counted zero pair},pdfauthor={Draft prepared for Edward Baker},pdfsubject={Integer exterior moments, physical-time forcing and signed gap estimates in the Newman heat flow}}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\footnotesize Jacobi truncation and a counted zero pair}
+\fancyhead[R]{\footnotesize Edward Baker}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.25pt}
+\setlength{\emergencystretch}{1.3em}
+\allowdisplaybreaks[2]
+\raggedbottom
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+{\small\scshape Analytical working draft\par}
+\vspace{9pt}
+{\LARGE\bfseries Jacobi truncation and the motion\\[3pt] of a counted zero pair\par}
+\vspace{7pt}
+{\large Integer exterior moments and signed gap estimates\\ in the Newman heat flow\par}
+\vspace{10pt}
+{\large Edward Baker\par}
+\vspace{2pt}
+{\small 20 November 2026\par}
+\end{center}
+\begin{abstract}
+A finite Jacobi matrix gives a Gaussian quadrature for the theta measure in the Newman heat flow. As the measure evolves, the first omitted Jacobi link determines the heat defect of this quadrature. We follow that defect to a pair of Fourier zeros isolated by a contour. It acts on every integer exterior moment through the variation of the field and the motion of the two poles of the moment kernel. The resulting equations remain regular at coalescence in symmetric coordinates. A resolvent difference then gives the exact change of the finite field when two sites are added. For the corresponding change of squared half-gap, we isolate a signed linear contour integral and bound its full nonlinear remainder, including the displacement of the pair center. An explicit compact positive density yields increments of both signs infinitely often on each degree parity. For the canonical theta source, a separate interval certificate resolves a negative degree-24 correction on one physical-time interval. The sharper direct enclosure on that same interval identifies the remaining question of how much complete-source information a finite degree step can replace.
+\end{abstract}
+\vspace{0.35em}
+\setcounter{tocdepth}{1}
+{\small\tableofcontents}
+\clearpage
+
+\section{The approximation problem}\label{sec:intro}
+Consider two zeros of an entire function inside a disk centered on the real axis that contains no other zeros. Their center and their squared half-difference are analytic functions of the coefficients as long as the boundary stays clear. This remains true when the zeros meet. For a field real on the real line, the squared half-difference is positive for a distinct real pair, zero for a double root, and negative for a conjugate pair off the line. A signed estimate for the error in this one quantity is therefore more informative than a bound on the distances traveled by the individual zeros.
+
+In the Newman heat flow, the pair also has an exact equation of motion. Its complete exterior moments were developed in \cite{cm}, and a direct signed contour comparison on an earlier cluster appears in \cite{gt}. If \(D\) denotes its squared half-gap and \(M\) the first exterior moment of all the other zeros, the parent investigation gives
+\begin{equation}
+ \dot D=2-4MD . \label{eq:intro-clock}
+\end{equation}
+The constant is the contribution from the two zeros to one another. The product \(MD\) accounts for the rest of the divisor. Equation~\eqref{eq:intro-clock} and the contour formula for \(M\) are equations (2.5)--(2.7) of Baker~\cite{agc}. In that work the approximation is made on the arithmetic side of the heat flow. Here we approximate its positive source measure by Gaussian quadrature. This choice leaves the Fourier observation fixed and allows us to vary physical time at fixed degree and to add sites at fixed time.
+
+Two formulas describe the link between the source and the pair. If \(G_N\) is the finite Fourier transform and \(\beta_j\) the squared Jacobi links, its heat defect is \(\beta_N\beta_{N-1}\partial_{\beta_{N-1}}G_N\). If a target field has relative error \(q\) against this head on a circle enclosing the pair, the linear change of \(D\) is the contour moment of \(-(z-c)q\), with \(c\) the reference pair center. Only the accuracy of that signed moment enters to first order. Theorem~\ref{th:signed} gives the constants in the quadratic remainder and includes the case where the enclosed zeros coincide.
+
+The two operations answer different questions. Varying time exposes a boundary term in the finite Jacobi chain. Increasing the degree reveals an exactly computable correction from two finite chains. Neither operation alone determines the difference from the complete field. We follow the boundary term through the integer hierarchy in Section~\ref{sec:hierarchy}, compute the finite degree difference in Section~\ref{sec:degree}, and convert relative field information into a signed gap estimate in Section~\ref{sec:signed}. The compact-source theorem of Section~\ref{sec:parity} explains why positivity of the quadrature weights cannot supply the missing sign. Sections~\ref{sec:time} and~\ref{sec:evidence} show how analytic time bounds turn the estimate into a uniform statement on one canonical chart. Section~\ref{sec:open} records the outstanding challenges.
+
+\input{sections/source}
+\input{sections/hierarchy}
+\input{sections/degree}
+\input{sections/signed}
+\input{sections/parity}
+\input{sections/time}
+\input{sections/evidence}
+\input{sections/challenges}
+\input{sections/references}
+\end{document}

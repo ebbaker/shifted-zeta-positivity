@@ -1,0 +1,62 @@
+\section{Uniform control over physical time}\label{sec:time}
+To apply Theorem~\ref{th:signed} on a closed time interval, one needs a joint approximation to \(F-G_N\). The two fields move by amounts which can be much larger than their difference. Their Taylor coefficients may be subtracted before taking the range over time. We give the analytic justification for this procedure, since the dependence of the last retained link on the omitted links is essential.
+
+\subsection{The complete field}
+Anchor at \(t=0\), put \(t=Ts\) with \(0\le s\le1\), and write \(w=z-a\). With \(c_m=[w^m]F(0,a+w)\), let \(U(t,z)=H(t,z)/H(0,0)\) and \(g(t)=U(t,0)\). By the heat equation the coefficients of \(U\) and its mass are
+\begin{align}
+ [s^kw^m]U(Ts,a+w)&=\frac{(-T)^k(m+2k)!}{k!\,m!}\,c_{m+2k}, \notag\\
+ [s^k]g(Ts)&=T^km_{2k}(0)/k! . \label{eq:taylor-source}
+\end{align}
+Since \(g(0)=1\), formal division determines the coefficients of \(F=U/g\). The xi identity in \eqref{eq:source} and the text following it supplies both sets of coefficients at the anchor.
+
+Here is one way to justify truncation. Fix \(\rho>T\), a source disk \(|w|\le R_0\) and a working disk \(|w|\le R<R_0\). A sufficient condition for the chosen \(\rho\) is a strict upper bound below one for \(|g(t)-1|\) on \(|t|\le\rho\). It can be tested by integrating \((e^{\rho u^2}-1)\,d\mu_0\), and the numerator can be bounded by integrating \(e^{\rho u^2}\cosh(R_0u)\,d\mu_0\). A lower bound for \(|g|\) then gives a common upper bound \(M_F\) for \(|F|\) on the polydisk. Both integrals can be bounded without dropping a theta mode. For \(u\ge0\), \(n^4\le16^{n-1}\) and \(n^2-1\ge3(n-1)\) give
+\[
+ \Phi(u)\le \frac{2\pi^2}{1-16e^{-3\pi}}\exp(9u-\pi e^{4u}).
+\]
+Below \(u=1\) the untilted cosh integral is bounded by the full value \(F(0,iR_0)\), and the tilt factor costs at most \(e^\rho\). Above that point the displayed envelope dominates the tilted integrand explicitly. With \(\theta=T/\rho\), \(\lambda=R/R_0\), retention of \(0\le k\le K\) and \(0\le m<L\) gives a total remainder at most
+\begin{equation}
+ M_F\left\{\frac{\theta^{K+1}}{1-\theta}
+        +\frac{\lambda^L}{(1-\lambda)(1-\theta)}\right\}.
+ \label{eq:source-tail}
+\end{equation}
+The first term bounds the whole time tail by Cauchy's estimate at each fixed spatial point. The second sums the spatial tail of the retained time coefficients by Cauchy's estimate in both variables.
+
+\subsection{Analytic continuation of the moving head}
+The complex time remainder of \(G_N\) requires a disk on which the \emph{true} Jacobi coefficients are analytic. Define a tilted Gram matrix in the orthonormal basis at the anchor,
+\[
+ C_{ij}(t)=\int p_i(u;0)p_j(u;0)e^{tu^2}\,d\mu_0(u),\qquad
+             0\le i,j<N .
+\]
+Thus \(C(0)=I\), and the entries are analytic in \(t\). The polynomials in both factors are fixed and real. This bilinear integral is its analytic continuation when \(t\) leaves the real axis.
+
+\begin{proposition}[A Gram bound for the moving head]\label{prop:complex-head}
+Suppose \(\|C(t)-I\|_2\le\epsilon<1/2\) throughout \(|t|\le\rho\).
+Let \(L_0\) bound the maximum absolute row sum of \(J_N(0)\), let \(\sigma=\epsilon/(1-\epsilon)\), and set \(d=L_0\sigma/(1-\sigma)\). The physical links extend analytically to the disk with their positive values at zero, and
+\begin{align}
+ \|J_N(t)-J_N(0)\|_2&\le d,\notag\\
+ |G_N(t,z)|&\le \exp\{|\Im z|L_0+|z|d\}. \label{eq:duh}
+\end{align}
+\end{proposition}
+\begin{proof}
+Each leading principal block obeys the same perturbation bound. For its last Schur pivot \(S_j\), the diagonal perturbation is bounded by \(\epsilon\), each off-diagonal block by \(\epsilon\), and the inverse of the preceding leading block by \(1/(1-\epsilon)\). Thus \(|S_j-1|\le\epsilon+\epsilon^2/(1-\epsilon)=\sigma<1\). The pivot equals the ratio of the tilted unnormalized monic norm of degree \(j\) to its time-zero value. Indeed the Schur complement subtracts the projection on lower degrees, and a triangular change of basis preserves the leading coefficient. The scalar mass normalization cancels when consecutive norms are divided. Hence
+\[
+ \frac{a_j(t)}{a_j(0)}
+  =\exp\!\left(\tfrac12(\log S_j-\log S_{j-1})\right),\qquad 1\le j<N .
+\]
+The logarithms are analytic around \(1\) and have modulus at most \(-\log(1-\sigma)\). The change in this ratio has modulus at most \(\sigma/(1-\sigma)\). The absolute row and column sums of the matrix change are each bounded by \(d\), which proves the first inequality. For \(0\le v\le1\), expand \(e^{ivzJ_N(t)}\) by variation of constants about \(J_N(0)\). Along the reference evolution its norm is bounded by \(e^{v|\Im z|L_0}\) by self-adjointness at the anchor. Grönwall's inequality gives~\eqref{eq:duh} at \(v=1\).
+\end{proof}
+
+The hypothesis itself can be acquired from the complete source. On \(|u|\le1\), Cauchy--Schwarz and orthonormality bound the operator change by \(e^\rho-1\). On the complement bound it by the integral of \(e^{\rho u^2}\sum_{j<N}|p_j(u;0)|^2\) against \(d\mu_0\), using \(|e^{tu^2}-1|\le e^{\rho u^2}-1\). The roots of \(P_j(\cdot;0)\) are the eigenvalues of a leading compression and have magnitude at most \(L_0\). For \(|u|\ge1\) this gives
+\[
+ \sum_{j<N}|p_j(u;0)|^2\le
+ \frac{N(1+L_0)^{2N-2}}{\min_{j<N}h_j(0)}\,|u|^{2N-2}.
+\]
+The theta envelope controls the remaining integral. This use of source eigenvalues imposes no ordering of Fourier zeros.
+
+Finally, iteration of~\eqref{eq:volterra} shows by induction that order \(k\) of \(\beta_j(Ts)\) needs initial links only through \(\beta_{j+k}(0)\): each differentiation reaches at most one neighbor farther along the chain. The order-\(K\) head therefore uses anchor moments through \(2(N-1+K)\). Taylor coefficients in \(s\) of the first \(P\) spatial exponential terms follow by multiplying tridiagonal matrices, or by summing paths, modulo \(s^{K+1}\). For \(|z-a|\le R\) put \(Z_0=|a|+R\), \(v=Z_0(L_0+d)\). The absolute joint remainder is at most
+\begin{equation}
+ e^{RL_0+Z_0d}\frac{\theta^{K+1}}{1-\theta}
+       +\frac{e^{v}v^P}{P!(1-\theta)} .
+ \label{eq:head-tail}
+\end{equation}
+The first term is Cauchy's time estimate for the full matrix readout. The exponential tail is bounded by \(e^vv^P/P!\) throughout the complex time disk. Projecting that tail onto the retained time orders costs at most \(1/(1-\theta)\), giving the second term. Subtracting the two coefficient arrays for \(F\) and \(G_N\) at a common \(s,w\) preserves their cancellations. Their complete remainder bounds add. A radius margin of one between these working disks and a smaller disk also bounds the first spatial derivative of each remainder there by Cauchy's formula.

@@ -1,0 +1,191 @@
+\section{An obstruction to monotonicity on either parity}
+\label{sec:parity}
+
+At a fixed nonreal zero the leading quadrature error has a rotating
+complex phase. Its projection onto the imaginary part of the root
+displacement determines the signed change of the counted discriminant
+\(D\) \cite[\S 2.2, Eq.~(2.4)]{agc}. The compact-source construction
+below uses this phase to test monotonicity in the truncation
+degree \cite{jh05}.
+
+\Needspace{15\baselineskip}
+\begin{proposition}[Displacement for a compact source]
+\label{p:displacement}
+Let \(\mu\) be an even probability measure with infinite support in
+\([-K,K]\), and take \(F(z)=\int e^{izu}\,d\mu(u)\) and its
+\(N\)-site Jacobi readout \(G_N\). Suppose a fixed circle centered on
+the real axis encloses exactly two zeros of \(F\), a simple pair
+\(\zeta=x+iy\) and \(\bar\zeta\) with \(x,y>0\), and that its boundary contains no zero.
+For all sufficiently large \(N\), it encloses a simple pair
+\(\zeta_N,\bar\zeta_N\) of \(G_N\), with \(\zeta_N\to\zeta\)
+and a common zero-free collar about the circle. Put
+\[
+ A_N=\frac{h_N^*|\zeta|^{2N}}{(2N)!},\qquad
+ \theta=\arg\zeta,\qquad D_N=-(\operatorname{Im}\zeta_N)^2 .
+\]
+Then the displacement and the two-degree increment are
+\begin{align}
+ \zeta_N-\zeta
+   &=\frac{(-1)^N h_N^*\zeta^{2N}}{(2N)!\,F'(\zeta)}
+     +O(A_N/N), \label{p:root-shift}\\
+ \frac{D_{N+2}-D_N}{A_N}
+   &=2y(-1)^N\operatorname{Im}
+      \left(\frac{e^{2iN\theta}}{F'(\zeta)}\right)+O(N^{-1}).
+      \label{p:degree-sign}
+\end{align}
+The implied constants are uniform in \(N\) with the source and
+circle fixed.
+\end{proposition}
+
+\begin{proof}
+The moment Gram matrices are positive definite by infinite support.
+Multiplication by \(u\) on \(L^2(\mu)\) has norm at most \(K\), so
+its finite Jacobi compressions satisfy \(\|J_N\|\le K\) and the
+off-diagonal links satisfy \(0<\beta_j\le K^2\). In particular
+\(0<h_N^*=\prod_{j=1}^N\beta_j\le K^{2N}\).
+
+All interpolation knots lie in \([-K,K]\), so the Gaussian quadrature
+error representation \eqref{eq:full-phase} applies on every fixed
+complex disk. Write
+\[
+ H_N(z):=F(z)-G_N(z)=L_N(z)E_N(z),\qquad
+ L_N(z)=(-1)^N\frac{h_N^*z^{2N}}{(2N)!},
+ \qquad E_N(z)=\mathbb E e^{izX_N}.
+\]
+Here \(X_N\) is a uniform simplex average of the doubled Gauss
+nodes and an independent source point \(U\) of law
+\(P_N(u)^2\,d\mu(u)/h_N^*\), where \(P_N\) is monic. Reflection
+makes \(X_N\) symmetric and \(|X_N|\le K\).
+For the \(m=2N+1\) simplex coordinates \(S_j\), the identity
+\(\mathbb E(S_j S_k)=(1+\mathbf 1_{j=k})/[m(m+1)]\) gives
+\[
+ \mathbb E X_N^2
+   =\frac{2(\mathbb E U^2+\operatorname{tr} J_N^2)}{(2N+1)(2N+2)}
+   \le \frac{K^2}{2N+1},
+\]
+since the doubled nodes sum to zero and have total squared sum
+\(2\operatorname{tr}J_N^2\) \cite[\S 7, second moment]{vcd}.
+Taylor's integral remainder, with
+\(\mathbb E X_N=0\), now yields
+\begin{equation}
+ |E_N(z)-1|
+ \le \frac{K^2|z|^2 e^{K|\operatorname{Im} z|}}{2(2N+1)},\qquad
+ \sup_{|z|\le R}|H_N(z)|
+ \le U_N(R):=\frac{e^{KR}h_N^*R^{2N}}{(2N)!}.
+ \label{p:compact-bound}
+\end{equation}
+
+Choose disjoint closed isolating disks around the two zeros inside
+the circle, arranged in conjugate positions. Choose \(R\) to
+cover the circle, a closed zero-free collar of \(F\) and a fixed
+positive margin around the disks. Since \(U_N(R)\to0\), Rouch\'e's
+theorem gives counts \(2,1,1\) on these three circles, and uniform
+convergence gives the common cleared collar. Let \(d_N=\zeta_N-\zeta\).
+The positive minimum of \(|F(z)/(z-\zeta)|\) on the upper disk
+gives \(d_N=O(U_N(R))\), using
+\(F(\zeta_N)=H_N(\zeta_N)\). The fixed margin and Cauchy's
+estimate bound \(H_N'\) on the disk by a constant times \(U_N(R)\).
+Taylor expansion of \(F\) and integration of \(H_N'\) along the
+displacement therefore give
+\[
+ F'(\zeta)d_N=L_N(\zeta)E_N(\zeta)+O(U_N(R)^2).
+\]
+The absolute disk bound retains the squared norm \(h_N^*\).
+After division by the root scale it gives
+\[
+ \frac{U_N(R)^2}{A_N}
+   =\frac{e^{2KR}h_N^*}{(2N)!}
+       \left(\frac{R^2}{|\zeta|}\right)^{2N}
+   \le \frac{e^{2KR}}{(2N)!}
+       \left(\frac{KR^2}{|\zeta|}\right)^{2N}
+   =o(N^{-1}).
+\]
+Together with \eqref{p:compact-bound} this proves
+\eqref{p:root-shift}. Expanding \(D_N=-(y+\operatorname{Im}d_N)^2\)
+and using \(A_N=o(N^{-1})\) gives
+\[
+ D_N+y^2=-2y(-1)^N A_N\operatorname{Im}
+   \left(\frac{e^{2iN\theta}}{F'(\zeta)}\right)+O(A_N/N).
+\]
+Furthermore,
+\[
+ \frac{A_{N+2}}{A_N}
+  =\frac{\beta_{N+1}\beta_{N+2}|\zeta|^4}
+   {(2N+1)(2N+2)(2N+3)(2N+4)}
+  \le \frac{K^4|\zeta|^4}{(2N+1)(2N+2)(2N+3)(2N+4)} .
+\]
+Thus \(D_{N+2}+y^2=O(A_NN^{-4})\), which proves
+\eqref{p:degree-sign} and fixes the sign of its leading term.
+\end{proof}
+
+\begin{theorem}[Both signs occur on both parities]
+\label{p:oscillation}
+Set \(T(u)=(1-|u|)_+\) and take the continuous even density
+\begin{equation}
+ d\mu(u)=\frac{T(u)+[T(u-1)+T(u+1)]/4}{3/2}\,du .
+ \label{p:density}
+\end{equation}
+Let \(D_N\) be the discriminant of the Jacobi pair counted inside
+\(\lvert z-\pi\rvert=3/2\) for all sufficiently large \(N\). Put
+\(a=\operatorname{arcosh}2\) and
+\(A_N=h_N^*(\pi^2+a^2)^N/(2N)!\). For each \(p\in\{0,1\}\),
+\begin{align}
+ \limsup_{\substack{N\to\infty\\N\equiv p\pmod 2}}
+     \frac{D_{N+2}-D_N}{A_N}
+   &\ge \frac{a(\pi^2+a^2)}{2\sqrt{3}}, \notag\\
+ \liminf_{\substack{N\to\infty\\N\equiv p\pmod 2}}
+     \frac{D_{N+2}-D_N}{A_N}
+   &\le -\frac{a(\pi^2+a^2)}{2\sqrt{3}} .
+ \label{p:limbounds}
+\end{align}
+Consequently each parity contains infinitely many strict increases
+and infinitely many strict decreases of \(D_N\).
+\end{theorem}
+
+\begin{proof}
+Each tent has integral one. The density is positive on \((-2,2)\)
+and has support \([-2,2]\). Integrating the central tent and
+translating the two others gives
+\[
+ F(z)=\left[\frac{\sin(z/2)}{z/2}\right]^2
+       \frac{1+\cos(z)/2}{3/2}.
+\]
+The squared sinc has zeros at the nonzero multiples of \(2\pi\).
+The other factor has simple zeros at \((2k+1)\pi\pm ia\),
+\(k\in\mathbb Z\). Since
+\(\cosh(3/2)>1+(3/2)^2/2>2\), the two zeros
+\(\zeta=\pi+ia\) and \(\bar\zeta\) lie strictly inside the
+circle. Each other zero has horizontal distance at least \(\pi\)
+from its center. In particular Proposition~\ref{p:displacement}
+applies and \(0<4\theta=4\arctan(a/\pi)<\pi\).
+
+At \(\zeta\), \(\sin\zeta=-i\sqrt{3}\) and
+\(\sin^2(\zeta/2)=\cosh^2(a/2)=3/2\), giving
+\(F'(\zeta)=2i\sqrt{3}/\zeta^2\). Formula \eqref{p:degree-sign}
+becomes
+\[
+ \frac{D_{N+2}-D_N}{A_N}
+   =-(-1)^N\frac{a(\pi^2+a^2)}{\sqrt{3}}
+      \cos\bigl(2(N+1)\theta\bigr)+O(N^{-1}).
+\]
+On \(N=p+2j\) the normalized leading term divided by
+\(a(\pi^2+a^2)/\sqrt{3}\) is a sinusoid \(b_j\) with angular step
+\(4\theta\). Its first two Ces\`aro moments are \(0\) and \(1/2\).
+Indeed the finite geometric sums at frequencies \(4\theta\) and
+\(8\theta\) are bounded because neither frequency is a multiple of
+\(2\pi\). For \(B=\limsup b_j\) and \(\epsilon>0\), eventually
+\((b_j+1)(B+\epsilon-b_j)\ge0\), so
+\[
+ b_j^2\le B+\epsilon+(B+\epsilon-1)b_j .
+\]
+Taking Ces\`aro means and letting \(\epsilon\) decrease to zero
+gives \(B\ge1/2\). The same argument for \(-b_j\) gives
+\(\liminf b_j\le-1/2\). This proves \eqref{p:limbounds}
+for both parities, with \(A_N>0\).
+\end{proof}
+
+The example excludes an eventual monotonicity inference based on
+positivity, evenness, the cosine observation and a fixed count-two
+chart for continuous compactly supported sources at time zero. The
+canonical problem retains the full theta profile and its square
+arithmetic \cite[\S 1.2, Eq.~(1.1)]{agc}.

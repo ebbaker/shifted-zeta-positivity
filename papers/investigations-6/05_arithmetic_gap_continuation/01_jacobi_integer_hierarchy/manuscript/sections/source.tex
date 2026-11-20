@@ -1,0 +1,77 @@
+\section{The moving Jacobi approximation}\label{sec:source}
+\subsection{One source and two evolutions}
+With the physical time convention of Polymath~\cite{polymath} and
+\cite[(1.1)--(1.5)]{agc}, let
+\begin{align}
+ \Phi(u)&=\sum_{n\ge1}(2\pi^2 n^4 e^{9u}-3\pi n^2 e^{5u})
+                       e^{-\pi n^2 e^{4u}},\qquad u\ge0, \notag\\
+ H(t,z)&=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\,du,\qquad
+ F(t,z)=H(t,z)/H(t,0). \label{eq:source}
+\end{align}
+Extend \(\Phi\) by reflection. Each summand is positive on the half-line and the full source decays doubly exponentially. Differentiation under the integral gives \(H_t=-H_{zz}\). At \(t=0\), \(8H(0,z)=\xi((1+iz)/2)\) with the usual completed Riemann xi function. For real \(t\),
+\[
+ d\mu_t(u)=\frac{e^{tu^2}\Phi(|u|)}{2H(t,0)}\,du,\qquad
+ F(t,z)=\int_{\mathbb R}e^{izu}\,d\mu_t(u).
+\]
+The cosine and exponential forms agree by parity. Write \(m_k(t)=\int u^k\,d\mu_t\). Differentiation of the normalization yields
+\begin{equation}
+ \partial_t d\mu_t=(u^2-m_2)d\mu_t,\qquad
+ (\partial_t+\partial_z^2+m_2)F=0 . \label{eq:norm-heat}
+\end{equation}
+
+Let \(P_j(u;t)\) be monic orthogonal polynomials and \(h_j=\int P_j^2\,d\mu_t\), so \(h_0=1\). Parity cancels the diagonal coefficient of the three-term recurrence. With \(P_{-1}=0\), \(P_0=1\), it reads
+\begin{equation}
+ uP_j=P_{j+1}+\beta_jP_{j-1},\qquad
+ \beta_0=0,\quad \beta_j=h_j/h_{j-1}\ (j\ge1).
+ \label{eq:monic}
+\end{equation}
+In particular, \(\beta_1=m_2\) and \(h_j=h_j^*:=\prod_{k=1}^j\beta_k\).
+In the orthonormal basis \(p_j=P_j/\sqrt{h_j}\), multiplication by \(u\) has off-diagonal entries \(a_j=\sqrt{\beta_j}\) between sites \(j-1\) and \(j\). Its first \(N\) rows and columns define the real symmetric matrix \(J_N(t)\). We call it the \emph{head of degree \(N\)} and observe it through
+\begin{equation}
+ G_N(t,z)=(e^{izJ_N(t)})_{00}=\sum_{\nu=1}^N\omega_\nu(t)e^{izx_\nu(t)} .
+ \label{eq:G}
+\end{equation}
+Here \(x_\nu\) are the eigenvalues, the roots of \(P_N\), and \(\omega_\nu\) are the squared first coordinates of normalized eigenvectors. The vector at site zero is cyclic since all the links are positive. Thus the nodes are simple, the weights are positive and their sum is one. No closed walk from site zero can visit site \(N\) and return in fewer than \(2N\) steps. Therefore \(m_k=(J_N^k)_{00}\) for \(k<2N\), the Gaussian quadrature identity \cite[\S3.5(v)--(vi)]{dlmf}. The nodes are points in the source coordinate \(u\). The zero pairs studied below belong to the entire function \(z\mapsto G_N(t,z)\).
+
+\begin{proposition}[The boundary term in physical time]\label{prop:defect}
+The squared links and the moving readout of degree \(N\ge2\) satisfy
+\begin{align}
+ \dot\beta_j&=\beta_j(\beta_{j+1}-\beta_{j-1}), \label{eq:volterra}\\
+ R_N:=(\partial_t+\partial_z^2+\beta_1)G_N
+     &=\beta_N\beta_{N-1}\,\partial_{\beta_{N-1}}G_N .
+ \label{eq:finite-defect}
+\end{align}
+In the last derivative the remaining entries of the link vector are held fixed.
+\end{proposition}
+\begin{proof}
+Because \(\partial_t P_j\) has degree less than \(j\), its inner product with \(P_j\) vanishes. Equations~\eqref{eq:norm-heat} and~\eqref{eq:monic} give
+\[
+ (\log h_j)'=h_j^{-1}\|uP_j\|_{\mu_t}^2-\beta_1
+            =\beta_{j+1}+\beta_j-\beta_1.
+\]
+Subtract consecutive equations to obtain~\eqref{eq:volterra}, the symmetric quadratic-tilt flow \cite[\S2.3]{vanassche}.
+
+To see what truncation does, fix a time \(t_0\) and take the \(N\)-node quadrature measure at that instant. Tilt its own weights by \(e^{(t-t_0)u^2}\) and renormalize. At \(t_0\) its Jacobi links agree with the original links through \(N-1\) by Gaussian exactness. Its next monic polynomial vanishes at every node, so its squared link \(\beta_N\) is zero. The same norm differentiation applies to the positive norms through \(h_{N-1}\). The two velocities therefore differ only in \(\dot\beta_{N-1}\), by \(\beta_{N-1}\beta_N\). The Fourier transform of the tilted finite measure obeys~\eqref{eq:norm-heat}; its value, spatial derivatives and scalar \(\beta_1\) at \(t_0\) are those of \(G_N\). The chain rule in the positive link coordinates gives~\eqref{eq:finite-defect}. This proof also covers \(N=2\).
+\end{proof}
+
+The defect can be evaluated without differentiating zero locations. Write \(\mathcal R(\xi)=(\xi-J_N)^{-1}\). Cofactors along the unique chain of off-diagonal entries give
+\[
+ \mathcal R_{0,N-1}=\frac{a_1\cdots a_{N-1}}{P_N(\xi)},\qquad
+ \mathcal R_{0,N-2}=\frac{\xi a_1\cdots a_{N-2}}{P_N(\xi)} .
+\]
+Resolvent differentiation gives \(\partial_{\beta_{N-1}}\mathcal R_{00}=
+\mathcal R_{0,N-2}\mathcal R_{0,N-1}/a_{N-1}\). For a positive contour \(\Sigma\) enclosing the source nodes, functional calculus in~\eqref{eq:finite-defect} gives
+\begin{equation}
+ R_N(t,z)=\frac{h_N}{2\pi i}\oint_\Sigma
+                \frac{\xi e^{iz\xi}}{P_N(\xi)^2}\,d\xi . \label{eq:sr}
+\end{equation}
+The extra link in \(h_N\) is the first one omitted by the readout itself \cite{vcd}.
+
+\subsection{The complete quadrature error}
+A second identity measures the field error at a fixed time and explains the factorial scale that enters the degree analysis. Let \(U\) have law \(P_N(u)^2\,d\mu_t(u)/h_N\). Independently choose weights uniformly on the simplex of \(2N+1\) nonnegative coordinates summing to one. Let \(X_N\) be the corresponding convex combination of \(U\) and two copies of each node \(x_\nu\). Then
+\begin{equation}
+ F(t,z)-G_N(t,z)=L_N(z)E_N(z),\qquad
+ L_N(z)=\frac{(-1)^Nh_Nz^{2N}}{(2N)!},\quad E_N(z)=\mathbb E e^{izX_N}.
+ \label{eq:full-phase}
+\end{equation}
+Indeed, interpolate \(u\mapsto e^{izu}\) with its first derivative at every node by a polynomial of degree at most \(2N-1\). Gaussian exactness cancels the polynomial. The remainder at \(u\) is \(P_N(u)^2\) times the divided difference on the doubled node list and \(u\). Iterating the fundamental theorem of calculus on the divided difference gives the simplex integral of the \(2N\)-th derivative, including coincident nodes by continuity. The simplex volume is \(1/(2N)!\). Integrating with respect to \(d\mu_t\) gives~\eqref{eq:full-phase}. All interchanges follow from the doubly exponential source tail. This identity, including the law of the phase variable, is derived in \cite{vcd}. It holds for the compactly supported measures used in Section~\ref{sec:parity} as well. Its leading factor is finite-link data. Evaluation of its expectation in general still involves the full measure.

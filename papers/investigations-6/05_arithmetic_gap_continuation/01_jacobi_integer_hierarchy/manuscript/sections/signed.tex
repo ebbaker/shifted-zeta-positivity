@@ -1,0 +1,75 @@
+\section{A signed first variation of the squared half-gap}\label{sec:signed}
+We now compare a reference field \(Y=G_N\) with either the complete field \(Z=F\) or the next head \(Z=G_{N+2}\). The argument applies to any two holomorphic fields with the stated geometry. Fix a positive circle \(\Gamma=\{|z-a|=r\}\), \(a\in\mathbb R\), and use \(\langle g\rangle=(2\pi i)^{-1}\oint_\Gamma g(z)\,dz\). Each field has two zeros in the disk, counted with multiplicity, both in \(|z-a|\le r-b\) for \(0<b\le r\). Write \(c_Y,D_Y\) and \(c_Z,D_Z\) for the two centers and squared half-gaps. Assume both fields are real under complex conjugation, and define on a zero-free collar
+\begin{equation}
+ q=(Z-Y)/Y,\qquad \|q\|_{\infty}\le\eta<1,\qquad K=-\log(1-\eta).
+ \label{eq:q}
+\end{equation}
+The ratio measures the field error relative to the available boundary size. A smaller absolute field error on a near-zero boundary can give a larger \(q\).
+
+\Needspace{14\baselineskip}
+\begin{theorem}[Signed change on a counted circle]\label{th:signed}
+Let \(q_0\) be a continuous approximation to \(q\) on \(\Gamma\) with \(\|q-q_0\|_{\infty,\Gamma}\le e\). Set
+\[
+ J=-\langle(z-c_Y)q_0\rangle,\qquad
+ \mathcal A=r(2r-b)\{e+K-\eta\}+\tfrac14 r^2K^2 .
+\]
+Then
+\begin{equation}
+ |D_Z-D_Y-J|\le\mathcal A . \label{eq:signed}
+\end{equation}
+In particular, for \(0\le\eta\le1/4\),
+\begin{equation}
+ \mathcal A\le r(2r-b)e+
+          \left(\frac{16r^2}{9}-\frac{2rb}{3}\right)\eta^2 .
+ \label{eq:signed-small}
+\end{equation}
+The estimate includes a double zero of either field.
+\end{theorem}
+\begin{proof}
+The series for \(\ell=\log(1+q)\) gives a single-valued holomorphic logarithm on the collar. The argument principle gives \(c_Y=\tfrac12\langle zY_z/Y\rangle\) and \(D_Y=\tfrac12\langle z^2Y_z/Y\rangle-c_Y^2\). Subtract the corresponding equations for \(Z\), using \(Z_z/Z-Y_z/Y=\ell_z\), and integrate by parts:
+\begin{align}
+ \Delta c&=-\tfrac12\langle\ell\rangle,\notag\\[-2pt]
+ \Delta D&=-\langle(z-c_Y)\ell\rangle-\tfrac14\langle\ell\rangle^2 .
+ \label{eq:center-squared}
+\end{align}
+The square is the change induced by recentering the quadratic moment. In particular, the first variation is precisely \(-\langle(z-c_Y)q\rangle\). Equation~\eqref{eq:center-squared} is the centered-error identity in \cite[(7.2)]{agc}. On a circle it is also the two-Fourier-coefficient identity of \cite[(8.15)]{agc}. Here we retain the signed first variation even when its input is approximate.
+
+The logarithm series gives \(\|\ell-q\|\le K-\eta\) and \(\|\ell\|\le K\). The pair buffer gives \(|c_Y-a|\le r-b\), hence \(|z-c_Y|\le2r-b\) on \(\Gamma\). Apply \(|\langle g\rangle|\le r\|g\|\) to the two terms of \(\Delta D-J\). This proves~\eqref{eq:signed}. For the quadratic bound use
+\(K-\eta\le\eta^2/[2(1-\eta)]\le 2\eta^2/3\) and \(K\le4\eta/3\). All formulas use symmetric moments of the two occurrences.
+\end{proof}
+
+For a real sign decision one can take the real part of \(J\), or choose \(q_0\) with real symmetry so that \(J\) is real. If \(\Re J+\mathcal A<0\), the reference gap statistic exceeds the target's. A sufficient condition for a distinct real target pair is instead \(D_Y+\Re J-\mathcal A>0\). These tests answer different mathematical questions. Count and clearance enter both. A boundary ratio below one transfers a reference count by Rouché's theorem. To infer a common buffer from counts one must also localize the roots, for example by counting both on an inner circle. Count equality on the outer boundary alone leaves open how close a root comes to it.
+
+\paragraph{Which source information gives \(J\)?}
+If the complete numerator is available, take \(q_0=q\) and \(e=0\). For a cheaper reference to the physical field, \eqref{eq:full-phase} suggests \(q_0=L_N/G_N\): any proved \(|E_N-1|\le\epsilon_N\) on the circle allows the choice \(e=\sup_\Gamma |L_N|\epsilon_N/|G_N|\), with a separate collar bound for \(\eta\). The existing explicit theta phase estimates in \cite{vcd} use \(|\Im z|\le1\) on their physical-time range. A wider circle requires a new bound there. Alternatively use \(q_0=(G_{N+2}-G_N)/G_N\), supplied by Section~\ref{sec:degree}. For a finite-to-finite comparison this is the exact quotient. For a finite-to-complete comparison it still leaves the error
+\begin{equation}
+ e\ \ge\ \sup_{\Gamma}\frac{|F-G_{N+2}|}{|G_N|}.
+ \label{eq:remaining}
+\end{equation}
+Thus a finite increment acquires one signed part of the comparison while specifying exactly which residual must still be estimated.
+
+\paragraph{An endpoint bound for the time integral.}
+Write \(\Delta D=D_Z-D_Y\), \(M_Y\) for the reference exterior moment, and \(r_Y=-\langle(z-c_Y)R_Y/Y\rangle\), with the analogous definition for \(r_Z\). In the notation of~\eqref{d:weighted-gap}, let
+\(\mathcal P=r_Z-r_Y-4(M_Z-M_Y)D_Z\) and \(W(u,v)=\exp(-4\int_u^v M_Y)\).
+On a common counted time interval, application of the theorem at each endpoint gives
+\begin{align}
+ &\left|\int_u^v W(s,v)\mathcal P(s)\,ds-
+             \{J(v)-W(u,v)J(u)\}\right| \notag\\
+ &\hspace{40mm}\le \mathcal A(v)+W(u,v)\mathcal A(u).
+ \label{eq:endpoint}
+\end{align}
+Indeed the exact weighted integral is \(\Delta D(v)-W(u,v)\Delta D(u)\). If an enclosure \(|W-\widehat W|\le\omega\), \(\widehat W\ge0\), is used, the error for \(J(v)-\widehat WJ(u)\) is at most
+\(\mathcal A(v)+(\widehat W+\omega)\mathcal A(u)+\omega|J(u)|\).
+This bound holds on every subinterval without differentiating the approximate signed input. The complete moment \(M_Y\), including its exterior contributions, is needed for the weight. Direct contour evaluation supplied with the same \(q_0,e,\eta,W\) can use the same bound.
+
+\paragraph{A direct comparison when the roots are simple and real.}
+Write \(x_1<x_2\) for the target roots, \(y_1<y_2\) for the reference roots, \(h=(y_2-y_1)/2\) and \(B_0=Z-Y\). For the exact quotient, the residue theorem gives
+\begin{equation}
+ J=-h\left\{\frac{B_0(y_2)}{Y_z(y_2)}
+                  -\frac{B_0(y_1)}{Y_z(y_1)}\right\}. \label{eq:residue}
+\end{equation}
+The same numerator also allows a direct evaluation. For \(d_i=x_i-y_i\), the mean value theorem gives \(d_i=-B_0(y_i)/Z_z(\xi_i)\) for some point on the segment joining the two roots, provided its derivative is bounded away from zero there. A coincident root then gives zero displacement. Writing \(d=d_2-d_1\) and squaring the two half-gaps yields exactly
+\begin{equation}
+ D_Z-D_Y=d(h+d/4). \label{eq:direct}
+\end{equation}
+Both formulas use the same small difference \(B_0\). The first needs the reference slopes at its two roots, and the second needs target slopes along the connecting segments. The symmetric contour theorem retains its meaning even where those derivative divisions cease to be available.
