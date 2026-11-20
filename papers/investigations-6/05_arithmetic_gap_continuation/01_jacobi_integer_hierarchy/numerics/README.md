@@ -17,4 +17,4 @@ First research milestone, 19 November 2026: [Exact check record03](03_AGC_JH_EXA
 
 [Build record07](07_AGC_JH_MANUSCRIPT_BUILD_20261120.json) identifies the 20 November 2026 manuscript reading copy, editable sources and PDF checks.
 
-[Large-time loop record 08](08_LARGE_TIME_LOOP_RESUMMATION_20261120.json) gives full-source brackets for positive zeros 1, 2 and 40 at time 1000 and errors in the residue and cumulant sums. Run [the check](check_large_time_resummation.py) with python-flint 0.9.0. The [brainstorm note](../brainstorm/notes/08_SUMMING_THE_LARGE_TIME_ZERO_LOOP_20261120.md) gives the tail bounds, counts and asymptotic derivation.
+[Large-time loop record 08](08_LARGE_TIME_LOOP_RESUMMATION_20261120.json) gives full-source brackets for positive zeros 1, 2 and 40 at time 1000 and errors in the residue and cumulant sums. Run [the check](check_large_time_resummation.py) with python-flint 0.9.0. The [brainstorm note](../../brainstorm/notes/08_SUMMING_THE_LARGE_TIME_ZERO_LOOP_20261120.md) gives the tail bounds, counts and asymptotic derivation.

@@ -1,4 +1,4 @@
-\section{The phase velocity and the complete exterior}\label{sec:current}
+\section{Phase velocity on a counted interval}\label{sec:current}
 On a real interval with \(B\ne0\), take a continuous argument \(\Theta\) of \(B\) and write \(B=e^{p+\ii\Theta}\). At the origin \(\Theta=0\). Define the current and its normalization by
 \begin{equation}
  J(t,x)=\Imag(\overline{B(t,x)}B_x(t,x))=|B(t,x)|^2\Theta_x(t,x),
@@ -6,6 +6,27 @@ On a real interval with \(B\ne0\), take a continuous argument \(\Theta\) of \(B\
  \label{eq:current}
 \end{equation}
 The complete source determines the current even where the real part \(H\) vanishes. A positive current on \([0,X]\) gives a nonvanishing \(B\) and strictly increasing phase there. To include a labelled edge one must also reach its upper level \(q_{k+1}\).
+
+The range of this coordinate matters. For this particular half-line transform,
+\(\Imag B(t,x)>0\) for \(x>0\) whenever \(0\le t\le1/2\).
+At any two distinct positive zeros of \(H\) the argument in the upper
+half-plane therefore takes the same value, \(\pi/2\). Between adjacent
+zeros it departs from and returns to that value, so \(J\) takes both
+signs. At any fixed time the same obstruction also holds sufficiently
+far out, since \(\Imag B(t,x)=\Phi(0)/x+O_t(x^{-2})\) by integrating
+by parts. The low-time sign follows from concavity of \(v\mapsto\log\Phi(\sqrt v)\), the derivative at \(v=0\), and positivity of the sine transform of the resulting strictly decreasing weight. See \href{https://doi.org/10.1007/BF02075457}{Csordas and Varga, Theorem 2.1}, and the deduction for this transform in \cite{EZPhaseScope}.
+The position-to-moment construction of Section~\ref{sec:exterior}
+requires its own zero counts and separation bounds.
+
+For comparison with the mixed hierarchy, write its diagonal at the marked pair as
+\(S_j=S_{k,j,j}=\sum_{\rho\ {\rm exterior}} Q_\rho^{-j}\),
+where \(Q_\rho=(\rho-c)^2-D\) and \(M=S_1\). The parent identities
+\cite[\S\S2--4]{AGC} give
+\begin{equation}
+ \dot D=2-4DM,\qquad \dot M=2M^2-\mathcal F,\qquad
+ \mathcal F=12S_2+16DS_3 .
+ \label{eq:parent}
+\end{equation}
 
 \begin{theorem}[Velocity, interaction and joint forcing]\label{thm:velocity}
 On a common increasing phase chart define \(v=(\log j)_x\) and
@@ -73,4 +94,4 @@ At a fixed counted pair put \(Q(z)=(z-c)^2-D\) and
  \sum_{n\ge0}T_{n+2}\xi^n
  &=-\frac{R(c+r)+R(c-r)-R(c+\sqrt D)-R(c-\sqrt D)}{2\xi},\label{eq:Tgen}
 \end{align}
-where \(T_n=\sum_{\rho\ {\rm ext}}(\rho-c)Q_\rho^{-n}\) for \(n\ge2\). Quotients take their removable values where necessary. In fact an exterior pole at \(c+d\) contributes \((d^2-r^2)^{-1}\) to \eqref{eq:Sgen}. The symmetric sum in \eqref{eq:Tgen} before subtraction contributes \(-2d/(d^2-r^2)\); its subtraction at \(\xi=0\) removes the first-order ambiguity. The resulting series converge absolutely by the parent's reciprocal-square tail bound. This is a fixed-time generating formula for the whole moment hierarchy. Controlling its coefficients at lower time requires a positive radius and a bound on the same deflated field.
+where \(T_n=\sum_{\rho\ {\rm ext}}(\rho-c)Q_\rho^{-n}\) for \(n\ge2\). Quotients take their removable values where necessary. In fact an exterior pole at \(c+d\) contributes \((d^2-r^2)^{-1}\) to \eqref{eq:Sgen}. The symmetric sum in \eqref{eq:Tgen} before subtraction contributes \(-2d/(d^2-r^2)\); its subtraction at \(\xi=0\) removes the first-order ambiguity. The resulting series converge absolutely by the parent's reciprocal-square tail bound. These series generate the indicated diagonal and midpoint-weighted traces at a fixed pair. Section~\ref{sec:exterior} uses both endpoint exponents independently. Controlling its coefficients at lower time requires a positive radius and a bound on the same deflated field.

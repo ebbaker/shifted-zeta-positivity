@@ -11,4 +11,4 @@
 
 [Large-time factorization and backward propagation](07_LARGE_TIME_FACTORIZATION_AND_BACKWARD_PROPAGATION_20261120.md) derives an exact phase on a growing interval, gives a convergent propagation formula for the global zero product, and quantifies the loss from propagating a single cosine.
 
-[Summing the zero loop](08_SUMMING_THE_LARGE_TIME_ZERO_LOOP_20261120.md) evaluates every logarithm residue, sums the odd-cumulant contributions on a growing interval, and derives the first deviation of each fixed higher zero from the odd multiple of the first. Full-source interval checks at time 1000 cover indices 1, 2 and 40.
+Parent [brainstorm Note 08, Summing the zero loop](../../../brainstorm/notes/08_SUMMING_THE_LARGE_TIME_ZERO_LOOP_20261120.md) evaluates every logarithm residue, sums the odd-cumulant contributions on a growing interval, and derives the first deviation of each fixed higher zero from the odd multiple of the first. Full-source interval checks at time 1000 cover indices 1, 2 and 40.

@@ -7,9 +7,9 @@
 \definecolor{teal}{HTML}{175463}
 \usepackage[colorlinks=true,linkcolor=teal,citecolor=teal,urlcolor=teal]{hyperref}
 \usepackage{bookmark}
-\hypersetup{pdftitle={Explicit large-time zeros and backward transport of gaps in the Newman heat flow},pdfauthor={Drafted for Edward Baker}}
+\hypersetup{pdftitle={Explicit zero locations in the Newman heat flow},pdfauthor={Drafted for Edward Baker}}
 \pagestyle{fancy}\fancyhf{}
-\fancyhead[L]{\small Explicit large-time zeros and backward gap transport}
+\fancyhead[L]{\small Explicit zero locations in the Newman heat flow}
 \fancyhead[R]{\small Working draft}
 \fancyfoot[C]{\thepage}
 \setlength{\headsep}{16pt}
@@ -30,43 +30,44 @@
 \thispagestyle{plain}
 \begin{center}
 {\small\scshape Analytical working draft}\\[8pt]
-{\LARGE\bfseries Explicit large-time zeros and backward transport\\[3pt]
-of gaps in the Newman heat flow}\\[9pt]
+{\LARGE\bfseries Explicit zero locations in the Newman heat flow}\\[5pt]
+{\large Fixed-time formulas and their consequences for gaps}\\[9pt]
 {\large Drafted for Edward Baker}\\[3pt]
 20 November 2026
 \end{center}
 \begin{abstract}
-The positive half of the theta source gives an exact inverse-phase series for individual zeros in the crystallization range. We evaluate every residue of the original logarithm and identify its full sum in odd source cumulants. To propagate the zeros, we introduce the real current of the complex half-line transform. Its logarithmic curvature averaged along an edge gives the signed drift of that gap and recovers the complete first exterior moment. On each fixed multiple of the growing saddle window the curvature is \(-2/\kappa_t+O(\kappa_t^{-2})\). This yields a multiplicative backward estimate for a marked gap and proves widening throughout that high-time regime. With finite anchor data at \(T=1000\) we enclose the squared half-gap of the first two positive zeros at \(t=999\) between \(1.37162235\) and \(1.37162972\), with widening on the intervening path. A direct endpoint evaluation using the same moment data gives a tighter endpoint enclosure. The lower-time continuation problem is to retain the signed curvature, or the parent's complete joint forcing, as the saddle estimate loses accuracy.
+How accurately can one locate consecutive zeros of the Newman heat flow from the theta source at one specified time \(T\)?
+We compare a contour expansion around a counted cosine zero, an inverse series shared by a growing family of zeros at large \(T\), and recovery of an individual factor from the even moments at an all-real time. The inverse isolates a cubic distortion that survives in ratios of zero locations. For the product, the outstanding question is the finite moment precision needed to resolve a local spacing as the height increases at fixed \(T\). We give Polymath's fixed-time estimate as a benchmark. We then show how a counted family of locations and radial sums over the remaining zeros determine the generalized exterior moments for each marked pair. Their first mixed entry gives the sign and leading size of backward widening on a growing range of labels at large time. Extending that control from one upper time to the times and heights needed for an improved bound on the de Bruijn--Newman constant remains open.
 \end{abstract}
-\section{The field and the gap to be transported}\label{sec:source}
-Use the physical normalization of Polymath \cite[introduction]{Polymath2019} and of the parent investigation \cite[\S\S1--4]{AGC}. With \(u\ge0\), put
+\section{Locating consecutive zeros at one time}\label{sec:source}
+Fix an upper physical time \(T\). We seek a formula for the \(k\)-th positive zero \(x_k(T)\) whose error can be compared with the spacing to its neighbor. A common error in two predicted positions can largely cancel in their difference. This makes the dependence of the error on \(k\) as important for gaps as its magnitude at a single root. An estimate for fixed \(k\) as \(T\to\infty\), an estimate uniform for \(k\le K(T)\), and an estimate as \(k\to\infty\) at one fixed \(T\) answer distinct questions.
+
+In the normalization of Polymath \cite[\S1]{Polymath2019}, the physical field and its source are
 \begin{align}
  \Phi(u)&=\sum_{n\ge1}(2\pi^2n^4 e^{9u}-3\pi n^2e^{5u})e^{-\pi n^2 e^{4u}},\nonumber\\
- B(t,z)&=\int_0^\infty e^{tu^2}\Phi(u)e^{\ii zu}\dd u,\qquad
- H(t,z)=\tfrac12\{B(t,z)+B(t,-z)\},\quad Z(t)=H(t,0). \label{eq:field}
+ H(t,z)&=\int_0^\infty e^{tu^2}\Phi(u)\cos(zu)\dd u,\qquad Z(t)=H(t,0).
+ \label{eq:field}
 \end{align}
-Thus \(H(0,z)=\xi((1+\ii z)/2)/8\), \(B_t=-B_{zz}\) and \(H_t=-H_{zz}\). The double-exponential tail permits the required derivatives and complex arguments. The probability law of \(U\ge0\) is \(e^{tu^2}\Phi(u)\dd u/Z(t)\). Write \(a=a_t=\E_t U\). On the real line \(H=\Real B\).
+Thus \(H(0,z)=\xi((1+\ii z)/2)/8\) and \(H_t=-H_{zz}\). Let \(U\ge0\) have probability law \(e^{tu^2}\Phi(u)\dd u/Z(t)\), and write \(a=a_t=\E_t U\).
+The complex transform \(B(t,z)=Z(t)\E_t e^{\ii zU}\) packages the source cumulants. Its even part is \(H\), and \(H=\Real B\) on the real axis. The double-exponential tail permits differentiation and complex arguments in these formulas.
 
-Label the positive zeros from the origin on a counted real chart. Put
+We count positive zeros from the origin. For a counted, simple, adjacent pair use
 \[
  q_k=(k-\tfrac12)\pi,\quad x_-=x_k,\quad x_+=x_{k+1},\quad
- g=x_+-x_-,\quad c=(x_++x_-)/2,\quad D=g^2/4 .
+ g_k=x_+-x_-,\quad c=(x_++x_-)/2,\quad D_k=g_k^2/4 .
 \]
-Throughout, a dot denotes physical time \(t\). A descent of length \(s\) from \(T\) ends at \(t=T-s\). Parent Sections 2--4 give the complete interaction and first moment laws
-\begin{equation}
- Q_\rho=(\rho-c)^2-D,\quad M=S_1,\quad S_n=\sum_{\rho\ {\rm exterior}}Q_\rho^{-n},
- \qquad \dot D=2-4DM,\qquad \dot M=2M^2-\mathcal F,
- \label{eq:parent}
-\end{equation}
-where \(\mathcal F=12S_2+16DS_3\). Every exterior occurrence is counted, including multiplicity. The regular contour definitions extend through a target double while the two-zero boundary remains clear \cite[\S\S2--3]{AGC}. Our use of individual endpoints requires a simple real pair. The parent’s cumulative drift test applies on a common path up to the first failure of its inputs.
-
-Sections~\ref{sec:anchors} and \ref{sec:current} connect an explicit anchor to the complete interaction. Section~\ref{sec:transport} derives a signed law from the literal source. Section~\ref{sec:finite} reports the interval comparison, and Section~\ref{sec:frontier} specifies what a lower-time extension must improve.
+A dot denotes physical time \(t\). We suppress \(k\) when the pair is fixed. A descent of length \(s\) from \(T\) ends at \(T-s\).
+Section~\ref{sec:anchors} gives the position formulas and Section~\ref{sec:comparison} compares their domains with published bounds. Section~\ref{sec:exterior} estimates the interaction from the locations of the zeros before using the gap equation. Section~\ref{sec:frontier} identifies which positional and time estimates would strengthen that conclusion. The appendices compare this route with the high-time phase calculation and its finite checks.
 \input{anchors}
+\input{position_check}
+\input{comparison}
+\input{exterior}
+\input{frontier}
+\appendix
 \input{current}
 \input{transport}
 \input{finite}
-\input{frontier}
-\paragraph{Acknowledgment.} This working draft was prepared for Edward Baker with substantial OpenAI Codex LLM assistance. The recorded drafting configuration was gpt-6.2-astra at max reasoning effort. The checks and mathematical assessment are internal.
+\paragraph{Acknowledgment.} Prepared for Edward Baker with substantial OpenAI Codex LLM assistance. The opening draft recorded gpt-6.2-astra at max effort. The desktop chat records gpt-6.2-astra at ultra effort for this revision. The mathematical assessments are internal.
 \bibliographystyle{plain}
 \bibliography{branch,references}
 \end{document}

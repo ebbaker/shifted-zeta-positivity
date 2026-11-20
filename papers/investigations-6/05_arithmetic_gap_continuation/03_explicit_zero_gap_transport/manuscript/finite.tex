@@ -1,18 +1,4 @@
-\section{One counted gap from time 1000 to time 999}\label{sec:finite}
-At \(T=1000\) the complete-source calculation in \cite[\S6]{Founding08} encloses \(x_1=1.17089695713064698\ldots\), \(x_2=3.51269056449018386\ldots\), and \(x_{40}=92.49456351756309795\ldots\). The first two satisfy \(8.7369418009258\times10^{-8}<1-x_2/(3x_1)<8.7369418009259\times10^{-8}\). The errors below are outward upper bounds in the physical zero position. The finite complex inverse disk was checked for indices 1 and 2. At index 40 a direct real phase count verifies the truncated expressions.
-\begin{center}
-\begin{tabular}{@{}lrrr@{}}
-\toprule
-Approximation at \(T=1000\)&\(x_1\)&\(x_2\)&\(x_{40}\)\\
-\midrule
-Mean lattice \(q_k/a\)&\(1.28\,10^{-8}\)&\(3.46\,10^{-7}\)&\(6.298\,10^{-3}\)\\
-First four logarithm residues&\(9.32\,10^{-20}\)&\(2.97\,10^{-16}\)&---\\
-Closed cubic \(Y_3/a\)&\(2.09\,10^{-15}\)&\(5.06\,10^{-13}\)&\(6.390\,10^{-6}\)\\
-Inverse through degree seven&\(3.34\,10^{-28}\)&\(6.58\,10^{-24}\)&\(3.990\,10^{-11}\)\\
-\bottomrule
-\end{tabular}
-\end{center}
-
+\section{A finite comparison for the first gap}\label{sec:finite}
 \subsection{A uniform bound from finite data at one time}
 Take the first positive edge, \(X=4\), \(s=1000-t\in[0,1]\), and \(b=671/500\). Write \(P=U-b,\ W=U^2-b^2\), and let \(\E_0\) here denote expectation at the upper anchor \(1000\). Tilting this one source gives the moments
 \begin{equation}
@@ -57,3 +43,18 @@ An equally informed endpoint calculation uses the same \(d_0,\ldots,d_6\) at \(s
  \quad\hbox{with error at most } |x|^6 d_6/720 .
 \]
 Signs on opposite sides and the common phase count enclose each root. This gives \(1.3716257900<D(999)<1.3716262696\), width below \(4.80\,10^{-7}\), versus \(7.36\,10^{-6}\) for transport. Direct quadrature of the complete upper-anchor field with the multiplier \(e^{b^2-U^2}\), using separate endpoint signs and the same count, gives \(D(999)=1.37162603031689388115504\ldots\). It shares source and tail code with the moment calculation. The path estimate establishes strict widening at every intermediate time. For the endpoint alone the finite Taylor comparison is tighter.
+
+\subsection{Removing the change in mean spacing}
+On a counted chart let \(h=\log j\) and let angle brackets denote spatial averaging along the edge. From \eqref{eq:difference} and evenness,
+\begin{equation}
+ \frac{\dd}{\dd t}\log(a g)
+ =\left\langle\int_0^x(x-y)h^{(4)}(t,y)\dd y\right\rangle,\qquad
+ h^{(4)}(t,0)=m_4^*-3w^2 . \label{eq:quartic}
+\end{equation}
+The superscript denotes spatial differentiation. Freezing the last derivative at zero gives the explicit edge term
+\((m_4^*-3w^2)(x_-^2+x_-x_++x_+^2)/6\).
+If \(\sup_{[0,X]}|h^{(6)}|\le B_6\), evenness and Taylor's theorem bound the error by \(B_6 X^4/24\). Thus a shared signed fourth cumulant and a controlled sixth derivative can replace separate absolute payments for \(j''\) and \((j')^2\). A later calculation with the same 28 upper-time moments carried this comparison to \(t=984\) for the first edge. Direct evaluation gave a tighter endpoint interval. Both methods certified widening along this already large-time path \cite{EZJoined}.
+
+The material acceleration on this chart satisfies \eqref{eq:acceleration}. A bound on \(K\) together with initial \(D,V\) enters the parent's stopped-path barrier \cite[\S4]{AGC}. The divided differences \eqref{eq:Sgen}--\eqref{eq:Tgen} give a separate way of comparing that forcing with fixed-order exterior moments. Through a loss of the phase chart the parent's count-two contour \cite[\S\S2,6]{AGC} still requires a complete boundary floor and a paid error for its center and discriminant. Relabelling a new pair at the end of a step would invalidate the comparison.
+
+A simple control tests these hypotheses. For \(H(t,x)=e^t\cos x+c\), \(c>1\), a positive half-line lift is \(B=e^{t+\ii x}+c\). Its current is \(e^{2t}+ce^t\cos x\). At \(ce^{-t}=1/2\), the first two roots are \(2\pi/3,4\pi/3\), and their physical gap velocity is \(2/\sqrt3>0\). The current is positive there, but \(m_4^*=w=1/3\); any \(X\ge4\pi/3\) fails \(w-X^2m_4^*/2>0\). At \(t=\log c,\ x=\pi\) the current vanishes as the two roots meet. The single-cosine control has constant positive current, \(w=0\), and stationary gaps. Both satisfy the representation identities. The signed theta estimate uses quantitative source concentration. Weighted-square and finite-prime controls change the normalized theta weights, reflected smooth controls lack the integer-square expansion, and altered observations change the cosine readout. The source and count assumptions for the additional controls are detailed in \cite{EZPhaseScope,EZMixedAnchor}. The finite computation is inside a previously all-real regime. Lower-time and all-edge coverage remain open.

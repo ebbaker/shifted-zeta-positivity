@@ -1,10 +1,29 @@
-# Analytical program for explicit zero and gap transport
+# Analytical plan for explicit zero positions and backward gap transport
 
-20 November 2026. For Edward Baker with OpenAI Codex assistance, recorded gpt-6.2-astra/max. The [register](../research-progress/01_EZ_RESEARCH_PROGRESS_20261120.md) owns status. Task numbers below specify work and dependencies.
+**Historical plan, 20 November 2026.** The [current plan](02_EZ_ZERO_LOCATIONS_RESEARCH_PLAN_20261120.md) puts the indexed zero formulas and their published comparisons first. Its [progress register](../research-progress/02_EZ_ZERO_LOCATIONS_RESEARCH_PROGRESS_20261120.md) carries the disposition of the unissued dynamics tasks.
 
-## Order of work
+20 November 2026. For Edward Baker with OpenAI Codex assistance. Opening recorded gpt-6.2-astra/max. The current desktop thread records gpt-6.2-astra/ultra, with no separate per-turn setting. The [earlier register](../research-progress/01_EZ_RESEARCH_PROGRESS_20261120.md) records the task statuses at this stage.
 
-First derive a bound for a complete gap, drift or forcing over time. Then use a small calculation to decide between analytic estimates. A new family of indices, a different source observation or an earlier interval needs a named decision and a comparison against the strongest available direct use of the same information. The objective is the earliest included time with a strict marked-pair margin, and a narrow full-gap enclosure on shared coverage.
+## Research sequence at this stage
+
+Use the parent [explicit position formulas](../../brainstorm/notes/08_SUMMING_THE_LARGE_TIME_ZERO_LOOP_20261120.md) to estimate the mixed rows \(S_{n,p,q}=P^{(n)}_{p,q}\) and predict the gap from \(M_n=S_{n,1,1}\). The principal open task is to propagate those data from a single upper time with an independently bounded remainder at all orders that feed into the gap. A useful result must state its physical time, pair-index range, exterior coverage and signed gap error. [Hierarchy](../../manuscript/sections/03_hierarchy.tex) · [Derivation and next test](../notes/07_EZ_ZERO_FORMULAS_AND_MIXED_HIERARCHY_CONTINUATION_20261120.md)
+
+| Stage | Analytical question and acceptance test |
+| --- | --- |
+| Initialize the complete hierarchy | At a counted all-real anchor, propagate errors in the indexed zero formulas into the finite head. Sum the complementary positive and negative occurrences using radial source traces. Give an order-dependent remainder and identify the range where it is uniform in \(n\). [Fixed-order asymptotic](../notes/08_EZ_LOCALIZATION_TO_MIXED_MOMENTS_20261120.md) · [Complete tail and signed drift](../notes/09_EZ_COMPLETE_ANCHOR_FROM_ZERO_FORMULAS_20261120.md) |
+| AGC-EZ-B06 · choose the time estimate | Use the mixed recurrence to bound the joint time derivative of \(E_n=2-g_n^2M_n\) from the upper-time data and a source-controlled time remainder. Try subtracting the equally spaced reference before bounding the terms. Specify the order weights or analytic radius, the physical time interval and the count propagation. A quantitative failure identifies the first remainder that exceeds the signed signal. |
+| AGC-EZ-E09 · evaluate the chosen estimate | Once those inputs are fixed, derive a signed gap enclosure on every partial time of the same path. Compare it with the strongest direct estimate from identical information, including known high-time signed transport on its domain. Report the earliest protected time, relative gap error and uniform range in \(n\), or the term that prevents a gain. |
+| Join to arbitrary heights and relevant times | Compare with the spatial sibling's [common-time high-label estimates, (8)–(11)](../../02_spatial_tensor_zero_spacings/notes/05_AGC_ST_E04_CANONICAL_FORCING_20261120.md). To claim progress toward a bound on \(\Lambda\), supply a quantitative extension or join, identify the remaining finite and central coverage, and handle any possible nonreal exterior. The parent's \(t=1/10\) gives a concrete benchmark. |
+
+Use numerical checks only when their outcome changes a named analytical inequality or its selection. An upper-time anchor asymptotic, an all-height estimate at a specified time and a path from one anchor to that time are distinct results. The [source and control screen](../notes/07_EZ_ZERO_FORMULAS_AND_MIXED_HIERARCHY_CONTINUATION_20261120.md) fixes the relevant comparison.
+
+## Historical phase and strip tasks
+
+B04/E06 tested the range of the phase current. E07 derived a far-strip estimate. The proposed strip transport B05 and its dependent E08 were superseded before execution. Their [earlier rationale](../notes/06_EZ_ANALYTICAL_CONTINUATION_20261120.md) remains available. The original first-pair tasks below are historical specifications.
+
+## Historical opening proof and diagnostic program
+
+The opening program first sought a bound for a complete gap, drift or forcing over time, then used a finite calculation to compare estimates. A new family of indices, a different source observation or an earlier interval needs a named decision and a comparison against the strongest available direct use of the same information. For the opening local test the measurements are the earliest included time, a strict marked-pair margin and both full-gap widths. Their significance for the program is determined by the analytical priority above.
 
 | Task and recommended model | Dependency and mathematical question | Finite work, evidence and decision |
 | --- | --- | --- |
@@ -17,12 +36,4 @@ First derive a bound for a complete gap, drift or forcing over time. Then use a 
 | AGC-EZ-E04 · E · Sol 6.2/ultra | B03 supplies source, time interval, index, count, comparator and signed consumer | Reserve one proof with one specified interval or indexed family. Prove the whole stopped-path margin, including any join and far-source allowance, or return the first failed inequality and its cost |
 | AGC-EZ-E05 · E · Sol 6.2/ultra | A written E03/E04 result | One separate assessment when available, one replay of its prescribed check and one integration pass. Check sign, domains, omitted terms, comparator and controls. Attribute reviewer overlap and retain the failed case |
 
-The B tasks require choosing an observable, cancellation or a time/contour continuation. The E tasks have fixed laws and acceptance tests at issue. Conventional algebra, equivalent contour parameters, quadrature subdivisions within a frozen budget and typography are routine. Changing exponent, index family, observation, source information or comparison class returns to B. Candidate E03/E04 work stays reserved until its conceptual prerequisites are settled.
-
-## Three quantities that decide whether to continue
-
-- **Cumulative gap.** Carry an upper anchor \(D_T\), geometric identity of its two roots and a certified pathwise bound on \(\dot g/g\). Check every partial descent; a final positive interval alone cannot exclude an intervening failure.
-- **Complete forcing.** For \(K=1+D^2(\dot{\mathcal A}+\mathcal A^2)\) a signed bound must control the time derivative at moving endpoints. Differentiating a big-O estimate in time is insufficient. Prefer a direct source covariance or a jointly estimated material acceleration difference. [Parent barrier](../../manuscript/sections/04_continuation.tex)
-- **Moment data.** Use the resolvent of the deflated field for several \(S_n,T_n\) only if a common disk or a signed combination reduces the gap cost. Compare with direct evaluation of the same moments and count. [Parent hierarchy](../../manuscript/sections/03_hierarchy.tex)
-
-A continued research session is led by Astra/ultra. Edward Baker's workflow expressly authorizes bounded gpt-6.2-sol/ultra derivations, checks and assessments. The lead continues through ready dependencies, changed in-scope B decisions, failed comparisons and integration until an assessed substantive milestone or genuine blocker. No unrelated parent or sibling task is activated. [Setup workflow](../../../../../INVESTIGATION_SETUP_WORKFLOW.md) · [Source practice](../../../../../REFERENCE_WORKFLOW.md)
+The proposed B06/E09 sequence is recorded in the [historical continuation](../notes/07_EZ_ZERO_FORMULAS_AND_MIXED_HIERARCHY_CONTINUATION_20261120.md). [Setup workflow](../../../../../INVESTIGATION_SETUP_WORKFLOW.md) · [Source practice](../../../../../REFERENCE_WORKFLOW.md)

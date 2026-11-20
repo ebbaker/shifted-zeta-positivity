@@ -1,6 +1,6 @@
 # Continue the explicit zero and gap investigation
 
-20 November 2026. Handoff prepared for Edward Baker with OpenAI Codex assistance. Recorded opening configuration gpt-6.2-astra/max. The [live register](../research-progress/01_EZ_RESEARCH_PROGRESS_20261120.md) owns subsequent status.
+20 November 2026. Handoff prepared for Edward Baker with OpenAI Codex assistance. Recorded opening configuration gpt-6.2-astra/max. The [live register](../research-progress/02_EZ_ZERO_LOCATIONS_RESEARCH_PROGRESS_20261120.md) owns subsequent status.
 
 | Task | Type and recommended model | Readiness and expected return |
 | --- | --- | --- |
@@ -13,7 +13,9 @@ The [draft and PDF](../manuscript/README.md) give the inverse series and its gro
 
 A positive current by itself permits a gap that shrinks backward. The atomic control in the draft exhibits it explicitly. For an improved estimate judge the full \(D\) interval or a rigorously longer path with the same edge and source information. [Result index](../../../../../result-summaries/README.md) · [Heat-flow results](../../../../../result-summaries/11_newman_heat_flow_reductions_and_certificates.md) · [Collision controls](../../../../../result-summaries/12_collision_controls_and_screening.md) · [Patterns index](../../../../../avoid/README.md) · [Target classification](../../../../../avoid/01_restating_the_target.md) · [Common-source payments](../../../../../avoid/12_term_by_term_matching_and_separate_bounds.md) · [Scoped exclusions](../../../../../avoid/07_scoped_exclusions_read_as_universal.md)
 
-## Pasteable continuation prompt
+**Historical handoff.** B02 through E05 have since returned. For the current height-uniform and Newman-time problem, use the [zero-location continuation](10_EZ_ZERO_LOCATIONS_CONTINUATION_20261120.md).
+
+## Opening continuation prompt
 
 > Continue AGC-EZ-B02 in papers/investigations-6/05_arithmetic_gap_continuation/03_explicit_zero_gap_transport. Lead with Astra/ultra. I expressly authorize bounded gpt-6.2-sol/ultra subtasks for fixed derivations, checks and assessments. Read AGENTS.md, INVESTIGATION_SETUP_WORKFLOW.md, REFERENCE_WORKFLOW.md and LARGE_FILES.md, then the branch overview, plan, sole progress register, opening manuscript, E01/E02 request and return, and finite interval record. Refresh or register this chat under the applicable rules in tools/CHAT_HISTORY.md. A new branch-only chat belongs in the new branch's chat-histories. An existing registered chat keeps its unique home.
 >

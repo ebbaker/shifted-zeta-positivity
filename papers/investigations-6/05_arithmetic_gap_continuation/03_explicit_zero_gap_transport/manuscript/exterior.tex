@@ -1,0 +1,107 @@
+\section{From zero locations to the exterior interaction}\label{sec:exterior}
+
+At a time \(T\) with a known all-real divisor, let \(x_-=x_k\) and
+\(x_+=x_{k+1}\) be consecutive simple positive zeros. Write
+\(g_k=x_+-x_-\) and \(D_k=g_k^2/4\). For integers \(p,q\ge0\) with
+\(m=p+q\ge2\), the parent hierarchy uses
+\[
+ S_{k,p,q}=\sum_{\rho\ {\rm exterior}}
+       (\rho-x_+)^{-p}(\rho-x_-)^{-q}.
+\]
+The sum counts multiplicities and omits just the two marked occurrences.
+Thus the denominators are the displacements from the midpoint shifted by
+the two signs of \(\sqrt{D_k}\). In the parent's notation
+\(S_{k,p,q}=P^{(k)}_{p,q}\). On a separated real path the time derivative
+of each entry uses the gap and finitely many entries of the same array,
+including higher orders \cite[\S3, integer split recurrence]{AGC}.
+For example, suppressing \(k\) on the right and left, an axis entry satisfies
+\[
+ S_{2,0}'=2\left(S_{2,0}^2-5S_{4,0}-2S_{3,1}+\frac{2}{g_k}S_{3,0}\right).
+\]
+The array is closed under differentiation when all orders and the gap are retained.
+The entry needed for the first derivative of the gap has just two endpoint factors,
+\begin{equation}\label{eq:exterior-gap}
+ M_k=S_{k,1,1},\qquad
+ g_k'=\frac{4}{g_k}-2g_kM_k,\qquad D_k'=2-g_k^2M_k .
+\end{equation}
+
+\paragraph{Completing the exterior from a counted head.}
+Suppose the first \(K\ge k+1\) positive zeros are counted, and
+\(x_+\le A<R\le x_i\) for every \(i>K\). Sum the contributions of the
+first \(K\) reflected pairs directly, retaining \(-x_-\) and \(-x_+\).
+For interval enclosures, each difference used with a positive exponent
+must have a positive lower bound on its absolute value after allowing for
+errors in both zeros. For the remaining pairs put
+\[
+ W_j=\sum_{i>K}x_i^{-2j},\qquad
+ h_d=[v^d](1-x_+v)^{-p}(1-x_-v)^{-q}.
+\]
+The even product gives \(W_j\) by subtracting the counted head from the
+full radial trace \(p_j\). In particular
+\(W_1=\E_T U^2/2-\sum_{i\le K}x_i^{-2}\)
+\cite{Founding07,EZMixedAnchor}. The complete tail of \(S_{k,p,q}\) equals
+\begin{equation}\label{eq:exterior-tail}
+ 2\sum_{\substack{d\ge0\\m+d\ {\rm even}}} h_d W_{(m+d)/2}.
+\end{equation}
+Indeed reflection cancels terms of odd total degree. Since
+\(0\le h_d\le \binom{m+d-1}{d} A^d\), for \(A/R<\sigma<1\)
+the terms with \(d\ge L\) contribute at most
+\[
+  \frac{2R^{2-m} W_1}{(1-\sigma)^m}
+       \left(\frac{A}{R\sigma}\right)^L .
+\]
+This bounds the truncation for any fixed row, including the axes.
+An enclosure must also propagate the widths of the radial traces and
+the head through their subtraction. For \(M_k\) the first tail term is
+\(2W_1\).
+
+\paragraph{A signed large-time readout.}
+Set \(y_i=a x_i\), \(q_i=(i-\tfrac12)\pi\), and
+\(\ell=a\sqrt{\kappa}\). Take \(K\asymp\ell\) inside a fixed multiple
+of the large-time inverse window \cite{Founding08}. At fixed \(p,q\)
+and \(0<\theta<1\), for \(k+1\le\theta K\) the counted separations and
+the absolute tail bound give \cite{EZMixedAnchor}
+\[
+ a^{-m} S_{k,p,q}
+ =\pi^{-m}\sum_{r\in\mathbb Z\setminus\{0,1\}}(r-1)^{-p}r^{-q}
+    + O\!\left((\ell\sqrt{\kappa})^{-1}+K^{1-m}\right).
+\]
+For \(p=q=1\) the leading lattice interaction cancels the constant in
+\eqref{eq:exterior-gap}. The more precise radial comparison of
+\cite{EZMixedAnchor} gives, as \(T\to\infty\), uniformly for
+\(k+1\le\sqrt{\ell}\),
+\begin{equation}\label{eq:exterior-signed}
+ \ell^2(g_k^2M_k-2)
+   =\pi^2+O\!\left(\kappa^{-1/2}+\frac{(k+1)^2}{\ell}\right).
+\end{equation}
+The constants depend on the fixed window and the bounds on \(K/\ell\),
+and in the general row estimate also on \(p,q,\theta\).
+On the comparison lattice,
+\(\sum_{r\in\mathbb Z\setminus\{0,1\}}1/[r(r-1)]=2\).
+The correction that survives this cancellation can be read from the
+first radial tail. Using \(\sum_{i\ge1}q_i^{-2}=1/2\) gives
+\[
+ 2\sum_{i>K}(y_i^{-2}-q_i^{-2})
+   =\frac{\Var_T U}{a^2}
+      -2\sum_{i\le K}(y_i^{-2}-q_i^{-2}).
+\]
+The inverse controls each counted separation. After comparison of the
+head and the higher tail terms, the variance contributes
+\(\pi^2\Var_T U/a^2\) to \(g_k^2M_k-2\).
+The saddle estimate \(\kappa\Var_T U=1+O(\kappa^{-1/2})\) gives the
+coefficient in \eqref{eq:exterior-signed}. The detailed remainder
+estimates are in \cite{EZMixedAnchor}.
+
+Thus \(\ell^2(g_k^2M_k-2)\to\pi^2\) and \(D_k'<0\) uniformly on any
+family \(k+1=o(\sqrt\ell)\) at sufficiently large \(T\). Appendix~\ref{sec:transport}
+recovers the same leading drift on a wider large-time window by a phase estimate.
+On a common large-time interval \([t,T]\), if \(t\to\infty\) and
+\(\sup_{t\le s\le T}(k+1)^2/\ell_s\to0\), integration gives
+\[
+ D_k(t)-D_k(T)
+     =(\pi^2+o(1))\int_t^T\frac{\dd s}{\ell_s^2}.
+\]
+This uses localization at every time in the interval. Propagation from
+data at one time \(T\) still requires control of the higher rows and
+their remainders along the path, together with a count that persists
+to the proposed lower time.
