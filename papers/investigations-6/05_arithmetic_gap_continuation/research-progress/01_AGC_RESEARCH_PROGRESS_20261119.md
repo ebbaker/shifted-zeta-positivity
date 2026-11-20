@@ -5,7 +5,10 @@ Codex LLM assistance. Lead configuration recorded in the founding chat:
 gpt-6-astra, reasoning effort max. Author-requested continuation: ultra,
 with bounded gpt-6.1-sol/ultra subtasks explicitly authorized.
 
-This file is the **sole current register for AGC tasks**. Existing VCD,
+This file is the **sole current register for AGC tasks**. The new
+[AGC-JH child register](../01_jacobi_integer_hierarchy/research-progress/01_AGC_JH_RESEARCH_PROGRESS_20261119.md)
+owns the separate Jacobi–integer-hierarchy task family; its 19 November
+setup does not change any row below. Existing VCD,
 VCD-GT-CM and TN6 task status stays with its existing owner. Setup tasks
 were classified before execution; this is their completed disposition.
 

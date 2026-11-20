@@ -2,6 +2,13 @@
 
 6 November 2026, America/New_York. Prepared for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort ultra**. Investigation08 chat0003.
 
+**19 November 2026 revision, requested by Edward Baker:** make sustained
+multi-step research sessions the default, led by **Astra/ultra**, with
+express authorization for bounded **gpt-6.2-sol/ultra** subtasks. Prepared
+with OpenAI Codex LLM assistance; actual revision lead model and effort
+are unavailable in canonical public-history metadata. These requested
+defaults do not change the recorded provenance of earlier work.
+
 **Standing setup guidance requested by Edward Baker.** Apply this workflow whenever creating a new investigation, whether it is one folder at a specified location or several numbered branches beneath an existing investigation. The same scientific, reference, progress and continuation requirements apply in both cases.
 
 This document governs organization and handoff. [AGENTS.md](AGENTS.md), [GPT_RESEARCH_MODEL_WORKFLOW.md](GPT_RESEARCH_MODEL_WORKFLOW.md), [REFERENCE_WORKFLOW.md](REFERENCE_WORKFLOW.md), [LARGE_FILES.md](LARGE_FILES.md) and [tools/CHAT_HISTORY.md](tools/CHAT_HISTORY.md) remain authoritative for their respective subjects. Do not edit generated AGENTS.md files or synced sources while setting up an investigation.
@@ -52,7 +59,7 @@ The roles are:
 | --- | --- |
 | README | Short purpose, current entry points, parent/sibling links and ownership |
 | research-overview | Scientific background, question, inherited evidence, mechanisms and unresolved premises |
-| research-plan | Bounded task specifications and dependencies |
+| research-plan | Sustained research sequence with bounded B/E work units and dependencies |
 | research-progress | Sole live task-status register for its declared task family |
 | research-progress/handoffs | Issued requests, exact input versions, returns and model-change packets |
 | notes | Incremental derivations, research records and continuation notes |
@@ -65,7 +72,7 @@ The roles are:
 
 For a multi-branch parent, keep shared notes, reference records and cross-branch history there. Link to shared material from each branch rather than moving it or duplicating its evidence. Existing arrangements with an integrated overview/plan can be retained; new investigations normally get the separate overview and plan shown above.
 
-## 3. Write a substantive overview and bounded plan
+## 3. Write a substantive overview and sustained research plan
 
 An overview should identify the concrete question, fixed objects and normalization, relevant parameter/index domains, known baseline, what is inherited or conditional, candidate mechanisms, and the precise unresolved decisions. Separate a physical interpretation, representation identity, diagnostic, intermediate estimate and target-equivalent reformulation. Explain the intended consequence without asserting an unproved gain.
 
@@ -79,9 +86,63 @@ Classify tasks **before execution**, following GPT_RESEARCH_MODEL_WORKFLOW.md. E
 - A finite work limit, permitted routine choices and named conceptual escalation trigger.
 - The source, equation, observation, domain, inputs and proof/computation method whenever an executable request is issued.
 
-Use **B / Astra** for consequential choices of mechanism, physical construction or target; use **E / Sol** for a fixed derivation, implementation, calculation or assessment. Record actual model/effort from metadata, separately from recommendations; mark unavailable settings as unavailable. The author chooses model, effort and continuation order.
+Use **Astra/ultra** as the default research lead and for **B** decisions
+about mechanisms, physical constructions, targets and proof strategies.
+Use **Sol 6.2/ultra** for **E** work with a fixed route, including bounded
+calculations, derivations, implementation, numerical checks and assessments.
+The author expressly authorizes the lead to create these bounded
+gpt-6.2-sol/ultra subtasks during an activated research session.
+Record actual model/effort from metadata separately from recommendations;
+mark unavailable settings as unavailable. A later explicit author choice
+overrides these defaults; do not silently change the selected lead model
+or rewrite historical dispatch records.
 
-Do not manufacture an executable packet while its source, generator, observable or success test remains open. Reserve the E task and name the B decision it needs. A plan can stop after one useful result; do not pad it with a compulsory sequence of future research.
+Do not manufacture an executable packet while its source, generator,
+observable or success test remains open. Reserve the E task and name the
+B decision it needs. Build a useful dependent sequence, including how the
+lead continues after an unfavorable estimate. Do not pad the plan with
+tasks that add no information.
+
+### Sustained execution and bounded subtasks
+
+Each research continuation should do substantial work through a coherent
+sequence of decisions, derivations, checks, comparisons, revisions and
+integration. **A bounded task is a work unit inside the session, not the
+default limit of the whole prompt.** Completing one task or receiving one
+helper return does not by itself end the lead's turn.
+
+Once a task returns, record its result, inspect the next dependencies and
+continue ready work without renewed permission. A failed estimate should
+lead to the next useful declared alternative or a recorded in-scope B
+decision, followed by a newly frozen E request. The lead may make these
+in-scope conceptual decisions and issue further bounded subtasks in the
+same session. Preserve failed evidence and explain what new information
+justifies a revised attempt. Do not repeat an exhausted estimating class
+without a changed premise.
+
+Every helper receives a concrete question, exact input versions, source,
+equations, domain, observable, evidence standard, finite work/refinement
+limits, permitted routine choices, escalation trigger and assigned output
+files. Independent tasks may run in parallel; dependent work waits for
+its prerequisites. Helpers stop at their packet boundary and return to
+the lead. The lead continues the research chain and alone owns shared
+register/index integration. A bounded numerical packet may not silently
+grow into a larger campaign.
+
+End a research turn at a substantial, assessed and integrated milestone
+with a concrete continuation; an actual external dependency or necessary
+author decision that blocks useful in-scope work; an author stop; or a
+genuine execution limit. A single completed packet, a first failed bound
+or context compaction is not an automatic stopping condition. There is
+no fixed number of packets per prompt and no requirement to invent work
+after the intended objective is achieved.
+
+Writing a setup or prompt does not activate research. When the author
+starts a research continuation, this policy authorizes its sustained
+in-scope sequence and bounded helpers. It does not create user-owned
+chats, message other chats, schedule recurring research, authorize
+unattended campaigns or activate unrelated investigations. An explicit
+request for one bounded task retains that narrower scope.
 
 ## 4. Give every task one live status owner
 
@@ -127,17 +188,23 @@ The continuation note must contain:
 - A brief outcome and unresolved question for each branch, with its current evidence level.
 - A routing table near the start: task ID, B/E type, recommended model/reason, readiness/dependencies and expected output. The live register remains authoritative; date the note as a handoff snapshot.
 - Links to the exact destination, overview, plan, sole progress register, source/return records, reference index and relevant controls.
-- One pasteable prompt per branch, naming its repository-relative path, next task and scope, inputs, output location, success/stop condition, reference workflow and chat-history destination rules.
+- One pasteable prompt per branch, naming its repository-relative path, next task and scope, inputs, output location, success/stop condition, reference workflow and chat-history destination rules. It must specify Astra/ultra leadership, express permission for bounded Sol 6.2/ultra subtasks, and continuation through ready dependencies and useful in-scope revisions within the same session.
 - Any shared dependency, status-ownership boundary and execution limits. Say whether the task may execute now or merely decide/freeze a request.
 
-Prompts should stand alone in a new chat, without relying on “the folder above” or inaccessible conversation context. Use the chosen task IDs and current specifications; do not activate later tasks by wording a continuation prompt. Include a default next task only when priority is settled; otherwise preserve the author's choice among branches.
+Prompts should stand alone in a new chat, without relying on “the folder
+above” or inaccessible conversation context. Use the chosen task IDs and
+current specifications. Saving a prompt activates no task; when used to
+start research, it should authorize the sustained sequence through ready
+dependencies, without bypassing unresolved prerequisites or widening an
+issued packet. Include a default next task only when priority is settled;
+otherwise preserve the author's choice among branches.
 
 ## 8. Check and link the completed setup
 
-Check local links, task-ID ownership, dependency consistency, input provenance and file sizes. Verify that no source, issued request or existing chat identity was silently changed. No mathematical tests or numerical runs are required merely for directory/document setup.
+Check local links, task-ID ownership, dependency consistency, input provenance and file sizes. Check that the README, plan, register and continuation agree on the sustained-session policy and current model defaults, while historical provenance stays unchanged. Verify that no source, issued request or existing chat identity was silently changed. No mathematical tests or numerical runs are required merely for directory/document setup.
 
 Link the new location from its parent/index, and link this workflow when helpful for future sessions. Record a concise setup milestone and provide the user with links to the new entry points and continuation note. Report any incomplete reference backfill accurately. Leave all unactivated research tasks unactivated.
 
 ## Reusable setup request
 
-> Read AGENTS.md, INVESTIGATION_SETUP_WORKFLOW.md, GPT_RESEARCH_MODEL_WORKFLOW.md, REFERENCE_WORKFLOW.md, LARGE_FILES.md and tools/CHAT_HISTORY.md. Create [the named numbered branches under PARENT / one new investigation at EXACT_LOCATION], using the stated scientific questions and inherited evidence. Prepare the standard folder structure, substantive overview, bounded B/E research plan and sole progress register for each task family, with parent navigation and a dated task crosswalk where needed. Establish reference ownership and point-of-use citation practice, reusing canonical records and backfilling only the sources actually needed. Preserve evidence, issued requests and existing chat identities. Finish with a saved continuation note containing a self-contained pasteable prompt for each new branch/investigation. Record actual model/effort, check links and file sizes, and continue chat-history capture. Setup alone must not execute research or numerics or alter external statuses.
+> Read AGENTS.md, INVESTIGATION_SETUP_WORKFLOW.md, GPT_RESEARCH_MODEL_WORKFLOW.md, REFERENCE_WORKFLOW.md, LARGE_FILES.md and tools/CHAT_HISTORY.md. Create [the named numbered branches under PARENT / one new investigation at EXACT_LOCATION], using the stated scientific questions and inherited evidence. Prepare the standard folder structure, substantive overview, sustained B/E research plan and sole progress register for each task family, with parent navigation and a dated task crosswalk where needed. Set up substantial multi-step research prompts led by Astra/ultra, with express authorization to create bounded gpt-6.2-sol/ultra subtasks for calculations, derivations, numerical checks and assessments. Individual packet limits bound each assignment; the lead continues through ready dependencies and useful in-scope revisions without renewed permission until a substantial integrated milestone or genuine stopping condition. Establish reference ownership and point-of-use citation practice, reusing canonical records and backfilling only the sources actually needed. Preserve evidence, issued requests, historical model provenance and existing chat identities. Finish with a saved continuation note containing a self-contained pasteable sustained-research prompt for each new branch/investigation. Record actual model/effort, check consistency, links and file sizes, and continue chat-history capture. Setup alone must not execute research or numerics or alter external statuses.

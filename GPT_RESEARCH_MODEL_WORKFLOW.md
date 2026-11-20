@@ -2,17 +2,30 @@
 
 28 October 2026, America/New_York. Revised for **Edward Baker** with substantial LLM assistance, **gpt-6-astra (Codex), actual recorded effort max**, Investigation05 chat0008. The original 24 October guidance and its Sol-first revision were prepared with gpt-6-astra, at the recorded efforts max and xhigh respectively.
 
+**19 November 2026 policy update, requested by Edward Baker:** align with
+[INVESTIGATION_SETUP_WORKFLOW.md](INVESTIGATION_SETUP_WORKFLOW.md).
+The default is sustained **Astra/ultra** research with expressly
+authorized bounded **gpt-6.2-sol/ultra** subtasks. Prepared with OpenAI
+Codex LLM assistance; actual revision lead model/effort unavailable in
+canonical public-history metadata. Earlier model/effort records remain
+historical provenance.
+
 This is the canonical GPT research-model guidance for the repository. Edward Baker now asks that upcoming work be divided into conceptual tasks and straightforward execution **when the research plan is written**, so he can choose Astra or Sol before starting. The current model must not keep ownership merely because it has the context. This supersedes routing decided only after a research session. Straightforward analytical work remains suitable for Sol.
 
 ## Two task types
 
 | Shorthand | Meaning | Default recommendation |
 | --- | --- | --- |
-| **B — brainstorm** | A consequential conceptual choice remains: selecting or changing a mechanism, equation, observable, proof strategy, or research direction; resolving a difficult structural bottleneck. The output is a mathematical decision, argument, or a usable contract for further work. | **Astra** for these open or difficult decisions; state the actual conceptual difficulty. A bounded, modest comparison can be explicitly assigned to Sol before it starts. |
-| **E — execution** | The objective, mathematical route, inputs and completion test are specified. Includes routine analytical derivations, algebra, implementing a fixed formula, bounded numerics, debugging, error accounting, checking a stated proof, and integrating accepted results. | **Sol**. A task does not become B merely because it contains a proof, analysis, or careful verification. |
+| **B — brainstorm** | A consequential conceptual choice remains: selecting or changing a mechanism, equation, observable, proof strategy, or research direction; resolving a difficult structural bottleneck. The output is a mathematical decision, argument, or a usable contract for further work. | **Astra/ultra** for these open or difficult decisions; state the actual conceptual difficulty. A bounded, modest comparison can be explicitly assigned to Sol before it starts. |
+| **E — execution** | The objective, mathematical route, inputs and completion test are specified. Includes routine analytical derivations, algebra, implementing a fixed formula, bounded numerics, debugging, error accounting, checking a stated proof, and integrating accepted results. | **Sol 6.2/ultra**. A task does not become B merely because it contains a proof, analysis, or careful verification. |
 | **Author decision** | Selecting the actual model, effort and chat, or overriding a recommendation. | **Edward Baker**. Record an override without changing what the task type means. |
 
-Use the available GPT-6 Astra and GPT-6.1 Sol choices for these recommendations. The labels describe the work; they are not a claim that either model is incapable of the other type. A mixed task should normally become a B decision followed by a separately identified E task, with its dependency recorded. Do not label an unresolved design choice E just because it ends in a computation.
+Use Astra/ultra for the lead and GPT-6.2 Sol/ultra for bounded execution
+subtasks, unless the author specifies otherwise. The labels describe the
+work; they are not a claim that either model is incapable of the other
+type. A mixed task should normally become a B decision followed by a
+separately identified E task, with its dependency recorded. Do not label
+an unresolved design choice E just because it ends in a computation.
 
 OpenAI's [model-selection guidance](https://learn.chatgpt.com/docs/model-selection), consulted 28 October 2026, describes Astra for ambiguous and deep analytical work and Sol for complex work with time and cost constraints. The B/E split here is the author's research policy, not an official product taxonomy or a measured savings claim. Preserve the user-selected effort; this policy does not change model settings.
 
@@ -36,9 +49,25 @@ Reclassification requires a dated reason tied to new evidence: what conceptual c
 
 Once a B task supplies a tractable contract, list its E follow-through and recommend Sol immediately. Do not keep numerical coding, debugging, routine derivations or manuscript production attached to the B task to preserve the current model's ownership. Numerical implementation and execution are assigned to Sol; ordinary document edits, hashes and chat capture remain housekeeping available to either model.
 
-Once an E task meets its completion condition, record its result and stop at that boundary. An unfavorable measurement or a precise failed bound can complete an E task. It does not authorize a wider scan, a new PDE, a revised observable or a larger campaign. Follow a previously declared E dependency when authorized, or identify the B decision needed next.
+Once an E task meets its completion condition, record its result and end
+that packet; a helper returns to the lead. **This is not an automatic end
+to the lead's research turn.** An unfavorable measurement or a precise
+failed bound can complete an E task. It does not authorize silently
+widening that packet's scan, PDE, observable or campaign. During a
+sustained continuation, follow the next ready dependency or resolve a
+recorded in-scope B decision and freeze its next E request, without
+renewed permission. Preserve the evidence from the preceding attempt.
 
 Sol may close an E task and assess its routine evidence without mandatory Astra approval. A numerical discrepancy first gets bounded implementation diagnosis within the packet; an unresolved mathematical premise is a B escalation. A model change is not independent specialist review.
+
+Sustained research prompts should carry a substantial coherent sequence
+through decisions, derivations, bounded checks, comparison, revision and
+integration. End at an assessed integrated milestone with a concrete
+continuation, an external dependency or necessary author decision blocking
+useful work, an author stop, or a genuine execution limit. A single packet
+boundary, first failed bound or context compaction is not sufficient.
+An explicit author request for only one bounded task remains narrower.
+See the setup workflow for the complete operating contract.
 
 ## Continuation notes and final recommendations
 
@@ -46,14 +75,23 @@ Put a small routing table near the start of every continuation note:
 
 | Next task | Type | Recommended model | Ready or dependency | Expected output |
 | --- | --- | --- | --- | --- |
-| Named bounded task | E — execution | Sol | Ready | Concrete measured or calculated return |
-| Named conceptual decision | B — brainstorm | Astra, with reason | Ready or named input | Decision, proof route or frozen contract |
+| Named bounded task | E — execution | Sol 6.2/ultra | Ready | Concrete measured or calculated return |
+| Named conceptual decision | B — brainstorm | Astra/ultra, with reason | Ready or named input | Decision, proof route or frozen contract |
 
 Select one default next task when the priority is clear. Label alternatives explicitly. Explain the next unresolved decision, not merely that more research is needed. Link the existing task specification or a bounded packet and give a short pasteable prompt.
 
-At the end of a research reply use, when further work is warranted, **Next: [B] TASK — Astra** or **Next: [E] TASK — Sol**, with the deliverable. Use the classification already recorded in the plan. Do not invent an additional task to justify keeping the session active, and do not silently reroute based on the current model. If no further work is warranted, say so.
+At the end of a research reply use, when further work is warranted, **Next: [B] TASK — Astra/ultra** or **Next: [E] TASK — Sol 6.2/ultra**, with the deliverable. Use the classification already recorded in the plan. Do not invent an additional task to justify keeping the session active, and do not silently reroute based on the current model. If no further work is warranted, say so.
 
-This is a manual workflow. It does not authorize creating chats, dispatching agents, messaging other chats, scheduling research or changing models. Edward Baker chooses when and where to continue. Claude's responsibilities remain governed by the author's separate assignments. Existing [chat capture](tools/CHAT_HISTORY.md) continues.
+Edward Baker chooses when and where to start or continue research.
+Once a research session is activated, his standing instruction expressly
+authorizes bounded gpt-6.2-sol/ultra subtasks for calculations, derivations,
+numerical checks and assessments, with fixed packets and disjoint output
+ownership. The lead continues in-scope work after their returns. This
+authorization does not create user-owned chats, message other chats,
+schedule recurring research, authorize unattended campaigns, change the
+selected lead model or activate unrelated investigations. Claude's
+responsibilities remain governed by the author's separate assignments.
+Existing [chat capture](tools/CHAT_HISTORY.md) continues.
 
 ## One live register and a bounded request
 
@@ -94,6 +132,12 @@ Record actual model and effort from available session metadata; do not infer the
 The current investigation's [conservative-flow progress register](papers/investigations-5/05_radial_theta_collision_geometry/research-progress/04_CONSERVATIVE_THETA_FLOW_RESEARCH_PROGRESS_20261028.md) is an initial application. Other investigations retain their current mathematical statuses and history; apply the classification to their next planned tasks.
 
 ## Short prompts for the author
+
+**Sustained research (default):**
+
+> Continue the investigation under INVESTIGATION_SETUP_WORKFLOW.md with Astra/ultra leadership and expressly authorized bounded gpt-6.2-sol/ultra subtasks. Read the sole register, begin with its next ready task, and continue through useful dependent decisions, derivations, checks, comparisons, revisions and integration. Freeze each E packet before execution; a helper return or one failed estimate is not the lead's turn boundary. End at a substantial integrated milestone or genuine stopping condition, preserving evidence and a concrete continuation.
+
+The following prompts may instead be used for an explicitly task-only assignment:
 
 **Execution:**
 

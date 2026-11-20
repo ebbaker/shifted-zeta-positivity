@@ -103,3 +103,18 @@
   final all-page visual checks and unchanged 45 prior scientific pins.
   [Continuation24](notes/24_AGC_ACTUAL_PHASE_MILESTONE_AND_CONTINUATION_20261119.md) prepares B07's mutual core/anchor
   phase or signed-aggregate decision. No new manuscript snapshot.
+
+- **19 November 2026 — Jacobi–integer-hierarchy sub-investigation setup.**
+  Prepared for Edward Baker with OpenAI Codex LLM assistance; actual lead
+  model/effort unavailable. Added
+  [01_jacobi_integer_hierarchy](01_jacobi_integer_hierarchy/README.md)
+  with overview, sustained multi-step plan, sole AGC-JH register,
+  reference ownership and a pasteable continuation. The branch tests
+  the joint Jacobi degree/heat-time interface with integer p,q/S/T,
+  including a possible N-to-N+2 induction. Its
+  [setup decision](01_jacobi_integer_hierarchy/brainstorm/notes/01_AGC_JH_SETUP_DECISION_20261119.md)
+  retains VCD-NC's antecedent and all existing task ownership. Setup
+  assessment uses an explicitly dispatched gpt-6.1-sol/ultra helper;
+  no research sequence, numerical campaign or manuscript is activated.
+  Parent B07/E19 and the current chat's unique parent history home remain
+  unchanged. No new mathematical result or manuscript snapshot.
